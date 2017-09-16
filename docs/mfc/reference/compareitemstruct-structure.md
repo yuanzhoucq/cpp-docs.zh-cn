@@ -1,74 +1,92 @@
 ---
-title: "COMPAREITEMSTRUCT 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COMPAREITEMSTRUCT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COMPAREITEMSTRUCT 结构"
+title: COMPAREITEMSTRUCT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COMPAREITEMSTRUCT
+dev_langs:
+- C++
+helpviewer_keywords:
+- COMPAREITEMSTRUCT structure [MFC]
 ms.assetid: 4b7131a5-5c7d-4e98-aac7-e85650262b52
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# COMPAREITEMSTRUCT 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ca1c8370a64667578092bb3ad0046cdcc0d2cf1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`COMPAREITEMSTRUCT` 结构提供标识符和为已排序的，所有者绘制的列表框或组合框两项应用程序所提供的数据。  
+---
+# <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT Structure
+The `COMPAREITEMSTRUCT` structure supplies the identifiers and application-supplied data for two items in a sorted, owner-drawn list box or combo box.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagCOMPAREITEMSTRUCT {  
-    UINT   CtlType;  
-    UINT   CtlID;  
-    HWND   hwndItem;  
-    UINT   itemID1;  
-    DWORD  itemData1;  
-    UINT   itemID2;  
-    DWORD  itemData2;  
+typedef struct tagCOMPAREITEMSTRUCT {  
+    UINT CtlType;  
+    UINT CtlID;  
+    HWND hwndItem;  
+    UINT itemID1;  
+    DWORD itemData1;  
+    UINT itemID2;  
+    DWORD itemData2;  
 } COMPAREITEMSTRUCT;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- **ODT\_LISTBOX** \(指定所有者描述列表框\) 或 **ODT\_COMBOBOX** \(指定所有者描述组合框\) 。  
+ **ODT_LISTBOX** (which specifies an owner-draw list box) or **ODT_COMBOBOX** (which specifies an owner-draw combo box).  
   
  `CtlID`  
- 列表框或组合框的控件 ID。  
+ The control ID for the list box or combo box.  
   
  `hwndItem`  
- 控件的窗口句柄。  
+ The window handle of the control.  
   
  *itemID1*  
- 相比较的列表框或组合框的第一项索引。  
+ The index of the first item in the list box or combo box being compared.  
   
  *itemData1*  
- 为进行比较的第一项的应用程序所提供的数据。  此值在添加到组合框或列表框的项的调用中传递。  
+ Application-supplied data for the first item being compared. This value was passed in the call that added the item to the combo or list box.  
   
  *itemID2*  
- 被比较的列表框或组合框中第二项的索引。  
+ Index of the second item in the list box or combo box being compared.  
   
  *itemData2*  
- 为进行比较的第二项的应用程序所提供的数据。  此值在添加到组合框或列表框的项的调用中传递。  
+ Application-supplied data for the second item being compared. This value was passed in the call that added the item to the combo or list box.  
   
-## 备注  
- 无论什么时候一个应用程序在使用 **CBS\_SORT** 或 **LBS\_SORT** 样式创建的所有者描绘的列表框或组合框上添加一个新项时，Windows 发送所有者一个 `WM_COMPAREITEM` 消息。  消息的 `lParam` 参数包含指向 `COMPAREITEMSTRUCT` 结构长整型的指针。  依据收到的消息，所有者比较两个项并返回值指示前面的一项。  
+## <a name="remarks"></a>Remarks  
+ Whenever an application adds a new item to an owner-drawn list box or combo box created with the **CBS_SORT** or **LBS_SORT** style, Windows sends the owner a `WM_COMPAREITEM` message. The `lParam` parameter of the message contains a long pointer to a `COMPAREITEMSTRUCT` structure. Upon receiving the message, the owner compares the two items and returns a value indicating which item sorts before the other.  
   
-## 要求  
- **头文件：** 指令  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::OnCompareItem](../Topic/CWnd::OnCompareItem.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)
+
+

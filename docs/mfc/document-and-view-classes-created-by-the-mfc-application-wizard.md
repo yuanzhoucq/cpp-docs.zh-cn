@@ -1,35 +1,54 @@
 ---
-title: "MFC 应用程序向导创建的文档和视图类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序向导 [C++], 创建的文档/视图类"
-  - "文档类"
-  - "文档类, 由应用程序向导创建"
-  - "视图类, 由应用程序向导创建"
+title: Document and View Classes Created by the MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document classes [MFC]
+- document classes [MFC], created by application wizards
+- application wizards [MFC], document/view classes created
+- view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 应用程序向导创建的文档和视图类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0e9dfa01e51a5f35fff079c37abd3d6dc80648f2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 应用程序向导将创建您的骨骼文档和视图类提供了在开发程序的提供了一个良好的开端。  可以 [命令、消息映射到这些类](../mfc/reference/mapping-messages-to-functions.md) 和使用 Visual C\+\+ 源代码编辑器编写它们的成员函数。  
+---
+# <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Document and View Classes Created by the MFC Application Wizard
+The MFC Application Wizard gives you a head start on your program development by creating skeletal document and view classes for you. You can then [map commands and messages to these classes](../mfc/reference/mapping-messages-to-functions.md) and use the Visual C++ source code editor to write their member functions.  
   
- MFC 应用程序向导"创建的文档从类派生。[CDocument](../mfc/reference/cdocument-class.md) 视图类从派生。[CView](../mfc/reference/cview-class.md) 名称应用程序向导产生包含这些类和文件基于您在向导"提供的应用程序项目名称。  在应用程序向导，可以使用生成的类的页修改默认名称。  
+ The document class created by the MFC Application Wizard is derived from class [CDocument](../mfc/reference/cdocument-class.md). The view class is derived from [CView](../mfc/reference/cview-class.md). The names that the Application Wizard gives these classes and the files that contain them are based on the project name you supply in the Application Wizard dialog box. In the Application Wizard, you can use the Generated Classes page to alter the default names.  
   
- 一些应用程序可能需要多个类文档、视图类或框架窗口类。  有关更多信息，请参见 [多文档类型、视图和框架窗口](../mfc/multiple-document-types-views-and-frame-windows.md)。  
+ Some applications might need more than one document class, view class, or frame-window class. For more information, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## 请参阅  
- [文档\/视图体系结构](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

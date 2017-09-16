@@ -1,5 +1,5 @@
 ---
-title: "CMFCFilterChunkValueImpl 类 |Microsoft 文档"
+title: CMFCFilterChunkValueImpl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCFilterChunkValueImpl class
+- CMFCFilterChunkValueImpl [MFC], CMFCFilterChunkValueImpl
+- CMFCFilterChunkValueImpl [MFC], Clear
+- CMFCFilterChunkValueImpl [MFC], CopyChunk
+- CMFCFilterChunkValueImpl [MFC], CopyFrom
+- CMFCFilterChunkValueImpl [MFC], GetChunkGUID
+- CMFCFilterChunkValueImpl [MFC], GetChunkPID
+- CMFCFilterChunkValueImpl [MFC], GetChunkType
+- CMFCFilterChunkValueImpl [MFC], GetString
+- CMFCFilterChunkValueImpl [MFC], GetValue
+- CMFCFilterChunkValueImpl [MFC], GetValueNoAlloc
+- CMFCFilterChunkValueImpl [MFC], IsValid
+- CMFCFilterChunkValueImpl [MFC], SetBoolValue
+- CMFCFilterChunkValueImpl [MFC], SetDwordValue
+- CMFCFilterChunkValueImpl [MFC], SetFileTimeValue
+- CMFCFilterChunkValueImpl [MFC], SetInt64Value
+- CMFCFilterChunkValueImpl [MFC], SetIntValue
+- CMFCFilterChunkValueImpl [MFC], SetLongValue
+- CMFCFilterChunkValueImpl [MFC], SetSystemTimeValue
+- CMFCFilterChunkValueImpl [MFC], SetTextValue
+- CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
 caps.latest.revision: 25
 author: mikeblome
@@ -54,227 +73,227 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8de3cba19a60b8022df96a9edafd13677fa3fecb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df02b6a6b6ac7e0683dbd75f45a77dd6cb5bd06d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 类
-这是一个类，这样可以简化区块和属性值对逻辑。  
+# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl Class
+This is a class which simplifies both chunk and property value pair logic.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs 对象。|  
-|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|构造对象。|  
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs the object.|  
+|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Constructs the object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::Clear](#clear)|清除 ChunkValue。|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|将此文本块复制到一种结构描述的特征的块。|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|初始化此块值从另一个的值。|  
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|检索块区 GUID。|  
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|检索块区 PID (属性 ID)。|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|获取消息类型的分块。|  
-|[CMFCFilterChunkValueImpl::GetString](#getstring)|检索字符串值。|  
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|为已分配 propvariant 检索的值。|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|返回一个未分配的非 （内部值） 的值。|  
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|检查此属性的值是否为有效。|  
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|已重载。 将属性设置为布尔值的密钥。|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|通过指向 DWORD 键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|由一个 filetime 的关键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|通过为 int64 键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|通过键给整型变量设置的属性|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|通过为长整型键设置的属性。|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|将属性设置成 SystemTime 的密钥。|  
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|通过为 Unicode 字符串的键设置的属性。|  
+|[CMFCFilterChunkValueImpl::Clear](#clear)|Clears the ChunkValue.|  
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Copies this chunk to a structure describing the characteristics of a chunk.|  
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Initializes this chunk value from the other value.|  
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Retrieves the chunk GUID.|  
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Retrieves the chunk PID (property ID).|  
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Gets chunk type.|  
+|[CMFCFilterChunkValueImpl::GetString](#getstring)|Retrieves the the string value.|  
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Retrieves the value as an allocated propvariant.|  
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Returns non-allocated (internal value) value.|  
+|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Checks whether this property value is valid or not.|  
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Overloaded. Sets the property by key to a Boolean.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Sets the property by key to a DWORD.|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Sets the property by key to a filetime.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Sets the property by key to an int64.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Sets the property by key to an int.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Sets the property by key to a LONG.|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Sets the property by key to a SystemTime.|  
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Sets the property by key to a Unicode string.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|一个设置分块的通用属性的帮助器函数。|  
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|A helper function that sets the chunk's common properties.|  
   
-## <a name="remarks"></a>备注  
- 若要使用，您只需创建正确类型的 CMFCFilterChunkValueImpl 类  
+## <a name="remarks"></a>Remarks  
+ To use, you simply create a CMFCFilterChunkValueImpl class of the right kind  
   
- 示例:  
+ Example:  
   
- CMFCFilterChunkValueImpl 块;  
+ CMFCFilterChunkValueImpl chunk;  
   
- hr = 块区。SetBoolValue(PKEY_IsAttachment, true);  
+ hr = chunk.SetBoolValue(PKEY_IsAttachment, true);  
   
- 或  
+ or  
   
- hr = 块区。SetFileTimeValue (PKEY_ItemDate，ftLastModified);  
+ hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `ATL::IFilterChunkValue`  
   
  [CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="clear"></a>CMFCFilterChunkValueImpl::Clear  
- 清除 ChunkValue。  
+##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear  
+ Clears the ChunkValue.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
- 构造对象。  
+##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl  
+ Constructs the object.  
   
 ```  
 CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl  
- Destructs 对象。  
+##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl  
+ Destructs the object.  
   
 ```  
 virtual ~CMFCFilterChunkValueImpl();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk  
- 将此文本块复制到一种结构描述的特征的块。  
+##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
+ Copies this chunk to a structure describing the characteristics of a chunk.  
   
 ```  
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pStatChunk`  
- 指向目标值，描述在块区的特征的指针。  
+ A pointer to destination value describing the characteristics of the chunk.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom  
- 初始化此块值从另一个的值。  
+##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
+ Initializes this chunk value from the other value.  
   
 ```  
 void CopyFrom (IFilterChunkValue* pValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pValue`  
- 指定要从复制的源值。  
+ Specifies the source value to copy from.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID  
- 检索块区 GUID。  
+##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID  
+ Retrieves the chunk GUID.  
   
 ```  
 REFGUID GetChunkGUID() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对标识区块的 GUID 的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to a GUID identifying the chunk.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID  
- 检索块区 PID (属性 ID)。  
+##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
+ Retrieves the chunk PID (property ID).  
   
 ```  
 DWORD GetChunkPID() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- DWORD 值，该值包含属性 id。  
+### <a name="return-value"></a>Return Value  
+ A DWORD value containing the property ID.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType  
- 检索的消息块类型。  
+##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType  
+ Retrieves the chunk type.  
   
 ```  
 CHUNKSTATE GetChunkType() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- CHUNKSTATE 枚举值，指定当前块是文本类型属性或值类型属性。  
+### <a name="return-value"></a>Return Value  
+ A CHUNKSTATE enumerated value, which specifies whether the current chunk is a text-type property or a value-type property.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getstring"></a>CMFCFilterChunkValueImpl::GetString  
- 检索字符串值。  
+##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString  
+ Retrieves the string value.  
   
 ```  
 CString &GetString();
 ```  
   
-### <a name="return-value"></a>返回值  
- 包含文本块值的字符串。  
+### <a name="return-value"></a>Return Value  
+ A string containing the chunk value.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue  
- 为已分配 propvariant 检索的值。  
+##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue  
+ Retrieves the value as an allocated propvariant.  
   
 ```  
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ppPropVariant`  
- 当函数返回时，此参数将包含文本块值。  
+ When the function returns, this parameter contains the chunk value.  
   
-### <a name="return-value"></a>返回值  
- 如果已成功分配 PROPVARIANT 并已成功将区块值复制到，则为 S_OK `ppPropVariant`; 否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if PROPVARIANT was allocated successfully and the chunk value was successfully copied to `ppPropVariant`; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc  
- 返回未分配的非 （内部值） 值。  
+##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
+ Returns the non-allocated (internal value) value.  
   
 ```  
 PROPVARIANT GetValueNoAlloc ();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回当前块值。  
+### <a name="return-value"></a>Return Value  
+ Returns the current chunk value.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid  
- 检查此属性的值是否为有效。  
+##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid  
+ Checks whether this property value is valid or not.  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前的区块值有效，则为否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current chunk value is valid; otherwise `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue  
- 已重载。 将属性设置为布尔值的密钥。  
+##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue  
+ Overloaded. Sets the property by key to a Boolean.  
   
 ```  
 HRESULT SetBoolValue(
@@ -297,35 +316,35 @@ HRESULT SetBoolValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `bVal`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk  
- 一个设置分块的通用属性的帮助器函数。  
+##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
+ A helper function that sets the chunk's common properties.  
   
 ```  
 HRESULT SetChunk(
@@ -337,32 +356,32 @@ HRESULT SetChunk(
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue  
- 通过指向 DWORD 键设置的属性。  
+##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
+ Set the property by key to a DWORD.  
   
 ```  
 HRESULT SetDwordValue(
@@ -375,35 +394,35 @@ HRESULT SetDwordValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `dwVal`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue  
- 将属性设置为 filetime 的密钥。  
+##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
+ Set the property by key to a filetime.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -416,35 +435,35 @@ HRESULT SetFileTimeValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `dtVal`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value  
- 通过为 int64 键设置的属性。  
+##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
+ Set the property by key to an int64.  
   
 ```  
 HRESULT SetInt64Value(
@@ -457,35 +476,35 @@ HRESULT SetInt64Value(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `nVal`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue  
- 将属性设置为 int。 密钥  
+##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
+ Set the property by key to an int.  
   
 ```  
 HRESULT SetIntValue(
@@ -498,35 +517,35 @@ HRESULT SetIntValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `nVal`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue  
- 将属性设置为长整型的密钥。  
+##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
+ Set the property by key to a LONG.  
   
 ```  
 HRESULT SetLongValue(
@@ -539,35 +558,35 @@ HRESULT SetLongValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `lVal`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue  
- 将属性设置成 SystemTime 的密钥。  
+##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
+ Sets the property by key to a SystemTime.  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -580,35 +599,35 @@ HRESULT SetSystemTimeValue(
     CHUNK_BREAKTYPE chunkBreakType=CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `systemTime`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue  
- 通过为 Unicode 字符串的键设置的属性。  
+##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue  
+ Sets the property by key to a Unicode string.  
   
 ```  
 HRESULT SetTextValue(
@@ -621,33 +640,33 @@ HRESULT SetTextValue(
     CHUNK_BREAKTYPE chunkBreakType = CHUNK_NO_BREAK);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pkey`  
- 指定一个属性键。  
+ Specifies a property key.  
   
  `pszValue`  
- 指定要设置的块区值。  
+ Specifies the chunk value to set.  
   
  `chunkType`  
- 标志指示此消息块是否包含文本类型或值类型属性。 标志值取自 CHUNKSTATE 枚举。  
+ Flags indicate whether this chunk contains a text-type or a value-type property. Flag values are taken from the CHUNKSTATE enumeration.  
   
  `locale`  
- 与的文本块相关联的子语言和语言。 区块的区域设置是文档的索引器用于执行正确的断字的文本。 如果分块是既不文本类型，也不具有数据类型为 VT_LPWSTR、 VT_LPSTR 或 VT_BSTR 的值类型，则忽略此字段。  
+ The language and sublanguage associated with a chunk of text. Chunk locale is used by document indexers to perform proper word breaking of text. If the chunk is neither text-type nor a value-type with data type VT_LPWSTR, VT_LPSTR, or VT_BSTR, this field is ignored.  
   
  `cwcLenSource`  
- 以字符为单位从中派生当前文本块的源文本的长度。 零值表示字符的字符的源文本和派生的文本之间的对应关系。 一个非零值表示没有这种直接的对应关系，存在。  
+ The length in characters of the source text from which the current chunk was derived. A zero value signifies character-by-character correspondence between the source text and the derived text. A nonzero value means that no such direct correspondence exists.  
   
  `cwcStartSource`  
- 从中派生的文本块的源文本开始在源块区中的偏移量。  
+ The offset from which the source text for a derived chunk starts in the source chunk.  
   
  `chunkBreakType`  
- 将与当前块区分开的上一个块区的分页符的类型。 值为从 CHUNK_BREAKTYPE 枚举。  
+ The type of break that separates the previous chunk from the current chunk. Values are from the CHUNK_BREAKTYPE enumeration.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则为 S_OK否则为错误代码。  
+### <a name="return-value"></a>Return Value  
+ S_OK if successful; otherwise an error code.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

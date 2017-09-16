@@ -1,5 +1,5 @@
 ---
-title: "is_nothrow_copy_assignable 类 | Microsoft Docs"
+title: is_nothrow_copy_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_nothrow_copy_assignable
 - type_traits/std::is_nothrow_copy_assignable
 dev_langs:
 - C++
@@ -34,38 +33,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 64502f44f46280317028fc2e7092e28cfc75f343
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3515b7c881d55df77724c093d66f5870ec2e185f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable 类
-测试类型是否具有编译器已知不会引发的复制赋值运算符。  
+# <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable Class
+Tests whether type has a copy assignment operator that is known to the compiler not to throw.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_nothrow_copy_assignable;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果可引用类型 `T` 的 `is_nothrow_assignable<T&, const T&>` 为 true，则类型谓词的实例为 true；否则为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true for a referenceable type `T` where `is_nothrow_assignable<T&, const T&>` holds true; otherwise it holds false.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_nothrow_assignable 类](../standard-library/is-nothrow-assignable-class.md)   
+ [is_nothrow_assignable Class](../standard-library/is-nothrow-assignable-class.md)   
 
 
 

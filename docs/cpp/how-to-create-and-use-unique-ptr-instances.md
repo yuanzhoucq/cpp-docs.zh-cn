@@ -1,59 +1,76 @@
 ---
-title: "如何：创建和使用 unique_ptr 实例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use unique_ptr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 如何：创建和使用 unique_ptr 实例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: e1dbcea010f4dfde35a604bfc640fb9cb3a792c3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-[unique\_ptr](../standard-library/unique-ptr-class.md) 不共享它的指针。  它无法复制到其他 `unique_ptr`，无法通过值传递到函数，也无法用于需要副本的任何标准模板库 \(STL\) 算法。  只能移动 `unique_ptr`。  这意味着，内存资源所有权将转移到另一 `unique_ptr`，并且原始 `unique_ptr` 不再拥有此资源。  我们建议你将对象限制为由一个所有者所有，因为多个所有权会使程序逻辑变得复杂。  因此，当需要智能指针用于纯 C\+\+ 对象时，可使用 `unique_ptr`，而当构造 `unique_ptr` 时，可使用 [make\_unique](../Topic/make_unique.md) Helper 函数。  
+---
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>How to: Create and Use unique_ptr Instances
+A [unique_ptr](../standard-library/unique-ptr-class.md) does not share its pointer. It cannot be copied to another `unique_ptr`, passed by value to a function, or used in any C++ Standard Library algorithm that requires copies to be made. A `unique_ptr` can only be moved. This means that the ownership of the memory resource is transferred to another `unique_ptr` and the original `unique_ptr` no longer owns it. We recommend that you restrict an object to one owner, because multiple ownership adds complexity to the program logic. Therefore, when you need a smart pointer for a plain C++ object, use `unique_ptr`, and when you construct a `unique_ptr`, use the [make_unique](../standard-library/memory-functions.md#make_unique) helper function.  
   
- 下图演示了两个 `unique_ptr` 实例之间的所有权转换。  
+ The following diagram illustrates the transfer of ownership between two `unique_ptr` instances.  
   
- ![转移 unique&#95;ptr 的所有权](../cpp/media/unique_ptr.png "unique\_ptr")  
+ ![Moving the ownership of a unique&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` 在 STL 的 `<memory>` 标头中定义。  它与原始指针一样有效，并可用于 STL 容器。  将 `unique_ptr` 实例添加到 STL 容器很有效，因为通过 `unique_ptr` 的移动构造函数，不再需要进行复制操作。  
+ `unique_ptr` is defined in the `<memory>` header in the C++ Standard Library. It is exactly is efficient as a raw pointer and can be used in C++ Standard Library containers. The addition of `unique_ptr` instances to C++ Standard Library containers is efficient because the move constructor of the `unique_ptr` eliminates the need for a copy operation.  
   
-## 示例  
- 以下示例演示如何创建 `unique_ptr` 实例并在函数之间传递这些实例。  
+## <a name="example"></a>Example  
+ The following example shows how to create `unique_ptr` instances and pass them between functions.  
   
  [!code-cpp[stl_smart_pointers#210](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_1.cpp)]  
   
- 这些示例说明了 `unique_ptr` 的基本特征：可移动，但不可复制。“移动”将所有权转移到新 `unique_ptr` 并重置旧 `unique_ptr`。  
+ These examples demonstrate this basic characteristic of `unique_ptr`: it can be moved, but not copied. "Moving" transfers ownership to a new `unique_ptr` and resets the old `unique_ptr`.  
   
-## 示例  
- 以下示例演示如何创建 `unique_ptr` 实例并在向量中使用这些实例。  
+## <a name="example"></a>Example  
+ The following example shows how to create `unique_ptr` instances and use them in a vector.  
   
  [!code-cpp[stl_smart_pointers#211](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_2.cpp)]  
   
- 在 range for 循环中，注意 `unique_ptr` 通过引用来传递。  如果你尝试通过此处的值传递，由于删除了 `unique_ptr` 复制构造函数，编译器将引发错误。  
+ In the range for  loop, notice that the `unique_ptr` is passed by reference. If you try to pass by value here, the compiler will throw an error because the `unique_ptr` copy constructor is deleted.  
   
-## 示例  
- 以下示例演示如何初始化类成员 `unique_ptr`。  
+## <a name="example"></a>Example  
+ The following example shows how to initialize a `unique_ptr` that is a class member.  
   
  [!code-cpp[stl_smart_pointers#212](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]  
   
-## 示例  
- 可使用 [make\_unique](../Topic/make_unique.md) 将 `unique_ptr` 创建到数组，但无法使用 `make_unique` 初始化数组元素。  
+## <a name="example"></a>Example  
+ You can use [make_unique](../standard-library/memory-functions.md#make_unique) to create a `unique_ptr` to an array, but you cannot use `make_unique` to initialize the array elements.  
   
  [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]  
   
- 有关更多示例，请参见[make\_unique](../Topic/make_unique.md)。  
+ For more examples, see [make_unique](../standard-library/memory-functions.md#make_unique).  
   
-## 请参阅  
- [智能指针](../cpp/smart-pointers-modern-cpp.md)   
- [make\_unique](../Topic/make_unique.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)   
+ [make_unique](../standard-library/memory-functions.md#make_unique)

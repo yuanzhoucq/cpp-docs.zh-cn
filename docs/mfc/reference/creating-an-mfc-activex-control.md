@@ -1,52 +1,71 @@
 ---
-title: "创建 MFC ActiveX 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.activex.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 创建"
-  - "MFC ActiveX 控件 [C++], 创建"
+title: Creating an MFC ActiveX Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.activex.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 创建 MFC ActiveX 控件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d17052296be743ecf8099fe689974fae1c60d9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控件程序是旨在为父应用程序提供特定功能类型的模块化程序。  例如，可以创建诸如在对话框中使用的按钮或在网页中使用的工具栏这样的控件。  
+---
+# <a name="creating-an-mfc-activex-control"></a>Creating an MFC ActiveX Control
+ActiveX control programs are modular programs designed to give a specific type of functionality to a parent application. For example, you can create a control such as a button for use in a dialog, or toolbar for use in a Web page.  
   
- 创建 MFC ActiveX 控件的最容易方法是使用 [MFC ActiveX 控件向导](../../mfc/reference/mfc-activex-control-wizard.md)。  
+ The easiest way to create an MFC ActiveX control is to use the [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md).  
   
-### 使用 MFC ActiveX 控件向导创建 MFC ActiveX 控件  
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>To create an MFC ActiveX Control using the MFC ActiveX Control Wizard  
   
-1.  按照帮助主题[用 Visual C\+\+ 应用程序向导创建项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)中的说明进行操作。  
+1.  Follow the instructions in the help topic [Creating a Project with a Visual C++ Application Wizard](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  在**“新建项目”**对话框中，选择“模板”窗格中的**“MFC ActiveX 控件”**图标以打开 MFC ActiveX 控件向导。  
+2.  In the **New Project** dialog box, select the **MFC ActiveX Control** icon in the Templates pane to open the MFC ActiveX Control Wizard.  
   
-3.  使用 MFC ActiveX 控件向导定义[应用程序设置](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)、[控件名称](../../mfc/reference/control-names-mfc-activex-control-wizard.md)和[控件设置](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)。  
+3.  Define your [application settings](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [control names](../../mfc/reference/control-names-mfc-activex-control-wizard.md), and [control settings](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) using the MFC ActiveX Control Wizard.  
   
     > [!NOTE]
-    >  跳过此步骤可保留向导的默认设置。  
+    >  Skip this step to keep the wizard default settings.  
   
-4.  单击“完成”关闭向导并在开发环境中打开新项目。  
+4.  Click **Finish** to close the wizard and open your new project in the development environment.  
   
- 创建项目后，可以在**解决方案资源管理器**中查看所创建的文件。  有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。  有关文件类型的更多信息，请参见[为 Visual C\+\+ 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
+ After you have created your project, you can view the files created in **Solution Explorer**. For more information about the files the wizard creates for your project, see the project-generated file ReadMe.txt. For more information about the file types, see [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md).  
   
- 创建了项目后，可以使用代码向导添加[函数](../../ide/add-member-function-wizard.md)、[变量](../../ide/add-member-variable-wizard.md)、[事件](../../ide/add-event-wizard.md)、[属性](../../ide/names-add-property-wizard.md)和[方法](../../ide/add-method-wizard.md)。  有关自定义 ActiveX 控件的更多信息，请参见 [MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)。  
+ After you have created your project, you can use the code wizards to add [functions](../../ide/add-member-function-wizard.md), [variables](../../ide/add-member-variable-wizard.md), [events](../../ide/add-event-wizard.md), [properties](../../ide/names-add-property-wizard.md), and [methods](../../ide/add-method-wizard.md). For more information about customizing your ActiveX control, see [MFC ActiveX Controls](../../mfc/mfc-activex-controls.md).  
   
-## 请参阅  
- [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [属性页](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/zh-cn/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+
+

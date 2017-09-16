@@ -1,15 +1,14 @@
 ---
-title: "modulus 结构 | Microsoft Docs"
+title: modulus Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- modulus
 - xfunctional/std::modulus
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 430f1f9c0fcc58e3b4bfef167356960eb132b3f7
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5b3adc45ac78031df95a668f5c8e01a7e566acdf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="modulus-struct"></a>modulus 结构
-对其自变量执行模数除法运算 (`operator%`) 的预定义函数对象。  
+# <a name="modulus-struct"></a>modulus Struct
+A predefined function object that performs the modulus division operation ( `operator%`) on its arguments.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct modulus<void>
 };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支持 `operator%` 接受指定或推断类型的操作数的任何类型。  
+ Any type that supports an `operator%` that takes operands of the specified or inferred types.  
   
  `Left`  
- 取模运算的左操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。  
+ The left operand of the modulus operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 取模运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。  
+ The right operand of the modulus operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>返回值  
- `Left``%``Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator%` 返回的类型。  
+## <a name="return-value"></a>Return Value  
+ The result of `Left % Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator%`.  
   
-## <a name="remarks"></a>备注  
- `modulus` 函子被限制为基本数据类型的整型类型，或限制为实现 `operator%` 的用户定义的类型。  
+## <a name="remarks"></a>Remarks  
+ The `modulus` functor is restricted to integral types for the basic data types, or to user-defined types that implement `operator%`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_modulus.cpp  
@@ -136,14 +136,14 @@ The element-wise remainders of the modular division
  */  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

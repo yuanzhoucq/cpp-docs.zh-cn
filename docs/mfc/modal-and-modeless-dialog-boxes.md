@@ -1,48 +1,67 @@
 ---
-title: "模式和无模式对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 对话框, 有模式"
-  - "MFC 对话框, 无模式"
-  - "有模式对话框"
-  - "无模式对话框"
+title: Modal and Modeless Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], modeless
+- modeless dialog boxes [MFC]
+- MFC dialog boxes [MFC], modal
+- modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 模式和无模式对话框
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85bddb463705b83332bd16dc19fcbd627ffc3063
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以使用 [CDialog](../mfc/reference/cdialog-class.md) 类管理两个对话框：  
+---
+# <a name="modal-and-modeless-dialog-boxes"></a>Modal and Modeless Dialog Boxes
+You can use class [CDialog](../mfc/reference/cdialog-class.md) to manage two kinds of dialog boxes:  
   
--   *模式对话框*，要求用户在继续之前响应程序  
+-   *Modal dialog boxes*, which require the user to respond before continuing the program  
   
--   *无模式对话框*，在屏幕上并保持随时可供使用，但允许其他用户活动  
+-   *Modeless dialog boxes*, which stay on the screen and are available for use at any time but permit other user activities  
   
- 创建的对话框模板资源编辑和方法相同模式和无模式对话框中。  
+ The resource editing and procedures for creating a dialog template are the same for modal and modeless dialog boxes.  
   
- 创建程序的对话框需要以下步骤：  
+ Creating a dialog box for your program requires the following steps:  
   
-1.  使用 [对话框编辑器](../mfc/dialog-editor.md) 设计对话框和创建自己的对话框模板资源。  
+1.  Use the [dialog editor](../windows/dialog-editor.md) to design the dialog box and create its dialog-template resource.  
   
-2.  创建对话框类。  
+2.  Create a dialog class.  
   
-3.  连接对话框类中的 [对话框的消息处理程序的资源管理](../mfc/adding-event-handlers-for-dialog-box-controls.md)。  
+3.  Connect the [dialog resource's controls to message handlers](../windows/adding-event-handlers-for-dialog-box-controls.md) in the dialog class.  
   
-4.  将数据成员与对话框的控件和控件指定和 [对话框数据交换](../mfc/dialog-data-exchange.md)[对话框数据验证](../mfc/dialog-data-validation.md)。  
+4.  Add data members associated with the dialog box's controls and to specify [dialog data exchange](../mfc/dialog-data-exchange.md) and [dialog data validations](../mfc/dialog-data-validation.md) for the controls.  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

@@ -1,15 +1,14 @@
 ---
-title: "less 结构 | Microsoft Docs"
+title: less Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- less
 - xfunctional/std::less
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: ff9530d08066cf0cf9b9421ac8b1b72d1a229bbe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: df98d62f094ef8ead680a2d184355ea312cdf436
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="less-struct"></a>less 结构
-一个二元谓词，该谓词对其参数执行小于运算 ( `operator<`)。  
+# <a name="less-struct"></a>less Struct
+A binary predicate that performs the less-than operation ( `operator<`) on its arguments.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct less<void>
  };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支持 `operator<` 接受指定或推断类型的操作数的任何类型。  
+ Any type that supports an `operator<` that takes operands of the specified or inferred types.  
   
  `Left`  
- 小于运算的左操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。  
+ The left operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 小于运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。  
+ The right operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>返回值  
- `Left``<``Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator<` 返回的类型。  
+## <a name="return-value"></a>Return Value  
+ The result of `Left < Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator<`.  
   
-## <a name="remarks"></a>备注  
- 二元谓词 `less`< `Type`> 向等价类提供类型为 `Type` 的一组元素值的严格弱排序（在且仅在此类型满足如此进行排序的标准数学要求时）。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。  
+## <a name="remarks"></a>Remarks  
+ The binary predicate `less`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_less.cpp  
@@ -125,20 +125,20 @@ cout << Iter1->m_i << " ";
  }  
 ```  
   
-## <a name="output"></a>输出  
+## <a name="output"></a>Output  
   
 ```
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

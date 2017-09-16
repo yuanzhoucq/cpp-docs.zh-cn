@@ -1,5 +1,5 @@
 ---
-title: "enable_if 类 | Microsoft 文档"
+title: enable_if Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- enable_if
 - type_traits/std::enable_if
 dev_langs:
 - C++
@@ -35,47 +34,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: febf80876856eb8f27ccb00310f9ceece30c2047
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 773882e76efa464d7770779bdfa1fd86272ee048
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="enableif-class"></a>enable_if 类
-有条件地为 SFINAE 重载决策设置类型的实例。 当且仅当 `enable_if<Condition,Type>::type` 是 `Type` 时，嵌套的 typedef `Condition` 才存在（并且是 `true` 的同义词）。  
+# <a name="enableif-class"></a>enable_if Class
+Conditionally makes an instance of a type for SFINAE overload resolution. The nested typedef `enable_if<Condition,Type>::type` exists—and is a synonym for `Type`—if and only if `Condition` is `true`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <bool B, class T = void>
 struct enable_if;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `B`  
- 确定存在产生的类型的值。  
+ The value that determines the existence of the resulting type.  
   
  `T`  
- `B` 为 true 时要实例化的类型。  
+ The type to instantiate if `B` is true.  
   
-## <a name="remarks"></a>备注  
- 如果 `B` 为 true，则 `enable_if<B, T>` 具有名为“type”的嵌套 typedef（它是 `T` 的同义词）。  
+## <a name="remarks"></a>Remarks  
+ If `B` is true, `enable_if<B, T>` has a nested typedef named "type" that's a synonym for `T`.  
   
- 如果 `B` 为 false，则 `enable_if<B, T>` 不具有名为“type”的嵌套 typedef。  
+ If `B` is false, `enable_if<B, T>` doesn't have a nested typedef named "type".  
   
- 提供此别名模板：  
+ This alias template is provided:  
   
 ```cpp  
 template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- 在 C++ 中，模板参数的替换失败不是其本身的错误，这称为 *SFINAE*（替换失败不是错误）。 通常，`enable_if` 用于从重载决策中删除候选项（即剔除重载集），以便为了支持一个定义而拒绝另一个定义。 这符合 SFINAE 行为。 有关 SFINAE 的详细信息，请参阅 Wikipedia 上的[替换失败不是错误](http://go.microsoft.com/fwlink/LinkId=394798)。  
+ In C++, substitution failure of template parameters is not an error in itself—this is referred to as *SFINAE* (substitution failure is not an error). Typically, `enable_if` is used to remove candidates from overload resolution—that is, it culls the overload set—so that one definition can be rejected in favor of another. This conforms to SFINAE behavior. For more information about SFINAE, see [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) on Wikipedia.  
   
- 以下是四种示例方案：  
+ Here are four example scenarios:  
   
--   方案 1：包装函数的返回类型：  
+-   Scenario 1: Wrapping the return type of a function:  
   
  ```cpp  
     template <your_stuff>  
@@ -89,7 +88,7 @@ yourfunction(args) {// ...
  }
 ```  
   
--   方案 2：添加具有默认参数的函数参数：  
+-   Scenario 2: Adding a function parameter that has a default argument:  
   
  ```cpp  
     template <your_stuff>  
@@ -98,14 +97,14 @@ your_return_type_if_present
  }
 ```  
   
--   方案 3：添加具有默认参数的模板参数：  
+-   Scenario 3: Adding a template parameter that has a default argument:  
   
  ```cpp  
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>  
 rest_of_function_declaration_goes_here
 ```  
   
--   方案 4：如果你的函数具有非模板化的参数，你可以包装其类型：  
+-   Scenario 4: If your function has a non-templated argument, you can wrap its type:  
   
  ```cpp  
     template <typename T>  
@@ -115,9 +114,9 @@ s) {// ...
  }
 ```  
   
- 方案 1 不能使用构造函数和转换运算符，因为它们没有返回类型。  
+ Scenario 1 doesn't work with constructors and conversion operators because they don't have return types.  
   
- 方案 2 可使参数处于未命名状态。 你可以假定 `::type Dummy = BAR`，但与名称 `Dummy` 无关，而且向其提供一个名称很可能会触发“未引用的参数”警告。 你必须选择 `FOO` 函数参数类型和 `BAR` 默认参数。  你可以假定 `int` 和 `0`，但随后你的代码用户可能会不小心将被忽略的多余整数传递给函数。 因此，我们建议你使用 `void **` 和 `0` 或 `nullptr`，因为它们几乎都无法转换为 `void **`：  
+ Scenario 2 leaves the parameter unnamed. You could say `::type Dummy = BAR`, but the name `Dummy` is irrelevant, and giving it a name is likely to trigger an "unreferenced parameter" warning. You have to choose a `FOO` function parameter type and `BAR` default argument.  You could say `int` and `0`, but then users of your code could accidentally pass to the function an extra integer that would be ignored. Instead, we recommend that you use `void **` and either `0` or `nullptr` because almost nothing is convertible to `void **`:  
   
 ```cpp  
 template <your_stuff>  
@@ -126,22 +125,22 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 }
 ```  
   
- 方案 2 也适用于普通构造函数。  但是，它不适用于转换运算符，因为它们无法采用多余的参数。  它也不适用于 [variadic](../cpp/ellipses-and-variadic-templates.md) 构造函数，因为添加多余的参数会使函数参数打包非导出上下文，从而与使用 `enable_if` 的初衷背道而驰。  
+ Scenario 2 also works for ordinary constructors.  However, it doesn't work for conversion operators because they can't take extra parameters.  It also doesn't work for [variadic](../cpp/ellipses-and-variadic-templates.md) constructors because adding extra parameters makes the function parameter pack a non-deduced context and thereby defeats the purpose of `enable_if`.  
   
- 方案 3 可使用名称 `Dummy`，但是它是可选的。 仅“`typename = typename`”可用，但是如果你认为它看起来太怪异，则可以使用“虚拟”名，只是不要使用还可能会在函数定义中使用的名称。 如果你未向 `enable_if` 提供类型，则它默认为 void，这是完全合理的，因为你不在乎 `Dummy` 的具体内容。 这适用于所有情况，包括转换运算符和 [variadic](../cpp/ellipses-and-variadic-templates.md) 构造函数。  
+ Scenario 3 uses the name `Dummy`, but it's optional. Just " `typename = typename`" would work, but if you think that looks weird, you can use a "dummy" name—just don't use one that might also be used in the function definition. If you don't give a type to `enable_if`, it defaults to void, and that's perfectly reasonable because you don't care what `Dummy` is. This works for everything, including conversion operators and [variadic](../cpp/ellipses-and-variadic-templates.md) constructors.  
   
- 方案 4 在不具有返回类型的构造函数中可用，因此可解决方案 1 的包装限制问题。  但是，方案 4 受限于并非始终可用的非模板化的函数参数。  （在模板化的函数参数上使用方案 4 可以阻止模板参数导入在其上运行。）  
+ Scenario 4 works in constructors that don't have return types, and thereby solves the wrapping limitation of Scenario 1.  However, Scenario 4 is limited to non-templated function arguments, which aren't always available.  (Using Scenario 4 on a templated function argument prevents template argument deduction from working on it.)  
   
- `enable_if` 功能强大，但是如果误用也会很危险。  因为其用途是使候选项在重载决策之前消失，如果误用它，产生的结果可能很容易让人产生混淆。  下面是一些建议：  
+ `enable_if` is powerful, but also dangerous if it's misused.  Because its purpose is to make candidates vanish before overload resolution, when it's misused, its effects can be very confusing.  Here are some recommendations:  
   
--   编译时，请不要使用 `enable_if` 在实现之间作出选择。 请永远都不要为 `enable_if` 编写一个 `CONDITION` 并为 `!CONDITION` 编写另一个 enable_if。  请改为使用*标记调度*模式，例如，一种根据所提供的迭代器的优点选择实现的算法。  
+-   Do not use `enable_if` to select between implementations at compile-time. Don't ever write one `enable_if` for `CONDITION` and another for `!CONDITION`.  Instead, use a *tag dispatch* pattern—for example, an algorithm that selects implementations depending on the strengths of the iterators they're given.  
   
--   请不要使用 `enable_if` 强制执行要求。  如果要验证模板参数，并且如果验证失败，引发错误，而未选择其他实现，请使用 [static_assert](../cpp/static-assert.md)。  
+-   Do not use `enable_if` to enforce requirements.  If you want to validate template parameters, and if the validation fails, cause an error instead of selecting another implementation, use [static_assert](../cpp/static-assert.md).  
   
--   如果你拥有会使其他好的代码变得不明确的重载集，则请使用 `enable_if`。  通常，这种情况发生在隐式转换构造函数中。  
+-   Use `enable_if` when you have an overload set that makes otherwise good code ambiguous.  Most often, this occurs in implicitly converting constructors.  
   
-## <a name="example"></a>示例  
- 此示例说明了 C++ 标准库模板函数 [std::make_pair()](../standard-library/utility-functions.md#make_pair) 如何利用 `enable_if`。  
+## <a name="example"></a>Example  
+ This example explains how the C++ Standard Library template function [std::make_pair()](../standard-library/utility-functions.md#make_pair) takes advantage of `enable_if`.  
   
 ```cpp  
 void func(const pair<int, int>&);
@@ -151,16 +150,16 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```  
   
-  在本示例中，`make_pair("foo", "bar")` 将返回 `pair<const char *, const char *>`。 重载决策必须确定你想要的 `func()`。 `pair<A, B>` 具有 `pair<X, Y>` 中的隐式转换构造函数。  这不是新内容，它在 C++98 中出现过。 但是，在 C++98/03 中，隐式转换构造函数的签名始终存在，即使它是 `pair<int, int>(const pair<const char *, const char *>&)` 也是如此。  重载决策不介意实例化该构造函数的企图严重瓦解，因为 `const char *` 不可隐式转换为 `int`；在实例化函数定义之前，它只是在查看签名。  因此，示例代码是不明确的，因为存在可将 `pair<const char *, const char *>` 转换为 `pair<int, int>` 和 `pair<string, string>` 的签名。  
+  In this example, `make_pair("foo", "bar")` returns `pair<const char *, const char *>`. Overload resolution has to determine which `func()` you want. `pair<A, B>` has an implicitly converting constructor from `pair<X, Y>`.  This isn't new—it was in C++98. However, in C++98/03, the implicitly converting constructor's signature always exists, even if it's `pair<int, int>(const pair<const char *, const char *>&)`.  Overload resolution doesn't care that an attempt to instantiate that constructor explodes horribly because `const char *` isn't implicitly convertible to `int`; it's only looking at signatures, before function definitions are instantiated.  Therefore, the example code is ambiguous, because signatures exist to convert `pair<const char *, const char *>` to both `pair<int, int>` and `pair<string, string>`.  
   
- C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A` 且 `const Y&` 可隐式转换为 `B` 时 `pair<A, B>(const pair<X, Y>&)` 才存在，来解决此多义性问题。  这允许重载决策确定 `pair<const char *, const char *>` 不可转换为 `pair<int, int>`，以及采用 `pair<string, string>` 的重载可行。  
+ C++11 solved this ambiguity by using `enable_if` to make sure `pair<A, B>(const pair<X, Y>&)` exists **only** when `const X&` is implicitly convertible to `A` and `const Y&` is implicitly convertible to `B`.  This allows overload resolution to determine that `pair<const char *, const char *>` is not convertible to `pair<int, int>` and that the overload that takes `pair<string, string>` is viable.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

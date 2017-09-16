@@ -1,5 +1,5 @@
 ---
-title: "CMemoryState 结构 |Microsoft 文档"
+title: CMemoryState Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMemoryState structure
-- memory leaks, detecting
-- detecting memory leaks
+- CMemoryState structure [MFC]
+- memory leaks [MFC], detecting
+- detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 caps.latest.revision: 19
 author: mikeblome
@@ -35,94 +35,94 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 5485a3cf8107dd9b245cb2d3fff6982f31279abe
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1d754a95cab9849bbca3ac625095d6d49160c72
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmemorystate-structure"></a>CMemoryState 结构
-提供一种简便方式检测你的程序中的内存泄漏。  
+# <a name="cmemorystate-structure"></a>CMemoryState Structure
+Provides a convenient way to detect memory leaks in your program.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CMemoryState  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemoryState::CMemoryState](#cmemorystate)|构造控制内存检查点以类似于类的结构。|  
+|[CMemoryState::CMemoryState](#cmemorystate)|Constructs a class-like structure that controls memory checkpoints.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemoryState::Checkpoint](#checkpoint)|获取当前的内存状态的快照 （检查点）。|  
-|[CMemoryState::Difference](#difference)|计算类型的两个对象之间的差`CMemoryState`。|  
-|[Cmemorystate:: Dumpallobjectssince](#dumpallobjectssince)|自上一个检查点以来转储所有当前分配的对象的摘要。|  
-|[CMemoryState::DumpStatistics](#dumpstatistics)|打印内存分配的统计信息`CMemoryState`对象。|  
+|[CMemoryState::Checkpoint](#checkpoint)|Obtains a snapshot (checkpoint) of the current memory state.|  
+|[CMemoryState::Difference](#difference)|Computes the difference between two objects of type `CMemoryState`.|  
+|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|Dumps a summary of all currently allocated objects since a previous checkpoint.|  
+|[CMemoryState::DumpStatistics](#dumpstatistics)|Prints memory allocation statistics for a `CMemoryState` object.|  
   
-## <a name="remarks"></a>备注  
- `CMemoryState`是一种结构，并且没有基类。  
+## <a name="remarks"></a>Remarks  
+ `CMemoryState` is a structure and does not have a base class.  
   
- 对象的内存是堆中分配但未释放不再需要时，会出现"内存泄漏"。 此类内存泄漏可能最终导致内存不足错误。 有多种方式来分配和释放在程序中的内存︰  
+ A "memory leak" occurs when memory for an object is allocated on the heap but not deallocated when it is no longer required. Such memory leaks can eventually lead to out-of-memory errors. There are several ways to allocate and deallocate memory in your program:  
   
--   使用`malloc` / **免费**系列的函数的运行时库。  
+-   Using the `malloc`/ **free** family of functions from the run-time library.  
   
--   使用 Windows API 内存管理函数， **LocalAlloc**/ **LocalFree**和**GlobalAlloc**/ **GlobalFree**。  
+-   Using the Windows API memory management functions, **LocalAlloc**/ **LocalFree** and **GlobalAlloc**/ **GlobalFree**.  
   
--   使用 c + +**新**和**删除**运算符。  
+-   Using the C++ **new** and **delete** operators.  
   
- `CMemoryState`诊断仅帮助检测内存泄漏时使用的内存分配导致**新**运算符会释放使用**删除**。 内存管理函数中的其他两个组适用于非 c + + 程序，并将它们与混合**新**和**删除**不建议在同一个程序。 其他的宏， `DEBUG_NEW`，用于替换**新**运算符时你需要文件和行号的内存分配的跟踪。 `DEBUG_NEW`你通常应使用时，需要使用**新**运算符。  
+ The `CMemoryState` diagnostics only help detect memory leaks caused when memory allocated using the **new** operator is not deallocated using **delete**. The other two groups of memory-management functions are for non-C++ programs, and mixing them with **new** and **delete** in the same program is not recommended. An additional macro, `DEBUG_NEW`, is provided to replace the **new** operator when you need file and line-number tracking of memory allocations. `DEBUG_NEW` is used whenever you would normally use the **new** operator.  
   
- 与其他诊断`CMemoryState`诊断程序仅在程序的调试版本中可用。 必须具有的调试版本**_DEBUG**定义常量。  
+ As with other diagnostics, the `CMemoryState` diagnostics are only available in debug versions of your program. A debug version must have the **_DEBUG** constant defined.  
   
- 如果你怀疑你的程序有内存泄漏，则可以使用`Checkpoint`，**差异**，和`DumpStatistics`函数以在程序执行两个不同时间点上发现的内存状态 （分配的对象） 之间的差异。 此信息可以用于确定是否将函数清理其所分配的所有对象。  
+ If you suspect your program has a memory leak, you can use the `Checkpoint`, **Difference**, and `DumpStatistics` functions to discover the difference between the memory state (objects allocated) at two different points in program execution. This information can be useful in determining whether a function is cleaning up all the objects it allocates.  
   
- 如果只需知道在分配和解除分配这种不平衡的出现位置未提供足够的信息，则可以使用`DumpAllObjectsSince`函数转储所有对象分配到在上一个调用`Checkpoint`。 此转储演示的分配、 源文件和已分配的对象的行顺序 (如果你使用`DEBUG_NEW`分配)，和派生类型的对象，它的地址以及其大小。 `DumpAllObjectsSince`此外会调用每个对象的`Dump`函数提供有关其当前状态信息。  
+ If simply knowing where the imbalance in allocation and deallocation occurs does not provide enough information, you can use the `DumpAllObjectsSince` function to dump all objects allocated since the previous call to `Checkpoint`. This dump shows the order of allocation, the source file and line where the object was allocated (if you are using `DEBUG_NEW` for allocation), and the derivation of the object, its address, and its size. `DumpAllObjectsSince` also calls each object's `Dump` function to provide information about its current state.  
   
- 有关如何使用`CMemoryState`和其他诊断，请参阅[调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。  
+ For more information about how to use `CMemoryState` and other diagnostics, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
   
 > [!NOTE]
->  类型的对象的声明`CMemoryState`和对成员函数的调用应通过括起来`#if defined(_DEBUG)/#endif`指令。 这会导致内存诊断，包括仅在调试程序的版本。  
+>  Declarations of objects of type `CMemoryState` and calls to member functions should be bracketed by `#if defined(_DEBUG)/#endif` directives. This causes memory diagnostics to be included only in debugging builds of your program.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CMemoryState`  
   
-## <a name="requirements"></a>要求  
- **标头：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="checkpoint"></a>CMemoryState::Checkpoint  
- 拍摄快照的内存的摘要，并将其存储在此`CMemoryState`对象。  
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint  
+ Takes a snapshot summary of memory and stores it in this `CMemoryState` object.  
   
 ```  
 void Checkpoint();
 ```  
   
-### <a name="remarks"></a>备注  
- `CMemoryState`成员函数[差异](#difference)和[DumpAllObjectsSince](#dumpallobjectssince)使用此快照数据。  
+### <a name="remarks"></a>Remarks  
+ The `CMemoryState` member functions [Difference](#difference) and [DumpAllObjectsSince](#dumpallobjectssince) use this snapshot data.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMemoryState](#cmemorystate)构造函数。  
+### <a name="example"></a>Example  
+  See the example for the [CMemoryState](#cmemorystate) constructor.  
   
-##  <a name="cmemorystate"></a>CMemoryState::CMemoryState  
- 构造一个空`CMemoryState`对象必须由填写[检查点](#checkpoint)或[差异](#difference)成员函数。  
+##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState  
+ Constructs an empty `CMemoryState` object that must be filled in by the [Checkpoint](#checkpoint) or [Difference](#difference) member function.  
   
 ```  
 CMemoryState();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities # 18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
-##  <a name="difference"></a>CMemoryState::Difference  
- 比较两个`CMemoryState`对象，然后将存储到此差异`CMemoryState`对象。  
+##  <a name="difference"></a>  CMemoryState::Difference  
+ Compares two `CMemoryState` objects, then stores the difference into this `CMemoryState` object.  
   
 ```  
 BOOL Difference(
@@ -130,24 +130,24 @@ BOOL Difference(
     const CMemoryState& newState);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *oldState*  
- 按照定义的初始内存状态`CMemoryState`检查点。  
+ The initial memory state as defined by a `CMemoryState` checkpoint.  
   
  *newState*  
- 通过定义新的内存状态`CMemoryState`检查点。  
+ The new memory state as defined by a `CMemoryState` checkpoint.  
   
-### <a name="return-value"></a>返回值  
- 如果这两个内存状态不同; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the two memory states are different; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- [检查点](#checkpoint)必须为每个两个内存状态参数调用。  
+### <a name="remarks"></a>Remarks  
+ [Checkpoint](#checkpoint) must have been called for each of the two memory-state parameters.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMemoryState](#cmemorystate)构造函数。  
+### <a name="example"></a>Example  
+  See the example for the [CMemoryState](#cmemorystate) constructor.  
   
-##  <a name="dumpallobjectssince"></a>Cmemorystate:: Dumpallobjectssince  
- 调用`Dump`函数的所有对象类型的派生自类`CObject`，已分配了 （和仍分配） 自上次操作后[检查点](#checkpoint)调用此`CMemoryState`对象。  
+##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince  
+ Calls the `Dump` function for all objects of a type derived from class `CObject` that were allocated (and are still allocated) since the last [Checkpoint](#checkpoint) call for this `CMemoryState` object.  
   
 ```  
 void DumpAllObjectsSince() const;
@@ -155,14 +155,14 @@ void DumpAllObjectsSince() const;
  
 ```  
   
-### <a name="remarks"></a>备注  
- 调用`DumpAllObjectsSince`使用未初始化`CMemoryState`对象将转储当前在内存中的所有对象。  
+### <a name="remarks"></a>Remarks  
+ Calling `DumpAllObjectsSince` with an uninitialized `CMemoryState` object will dump out all objects currently in memory.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CMemoryState](#cmemorystate)构造函数。  
+### <a name="example"></a>Example  
+  See the example for the [CMemoryState](#cmemorystate) constructor.  
   
-##  <a name="dumpstatistics"></a>CMemoryState::DumpStatistics  
- 输出中的简洁内存统计信息报告`CMemoryState`对象由填写[差异](#difference)成员函数。  
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics  
+ Prints a concise memory statistics report from a `CMemoryState` object that is filled by the [Difference](#difference) member function.  
   
 ```  
 void DumpStatistics() const;
@@ -170,44 +170,44 @@ void DumpStatistics() const;
  
 ```  
   
-### <a name="remarks"></a>备注  
- 报表打印[afxDump](diagnostic-services.md#afxdump)设备，显示以下︰  
+### <a name="remarks"></a>Remarks  
+ The report, which is printed on the [afxDump](diagnostic-services.md#afxdump) device, shows the following:  
   
- 示例报表提供了有关的数 （或量） 信息︰  
+ A sample report gives information on the number (or amount) of:  
   
--   可用块  
+-   free blocks  
   
--   正常的块  
+-   normal blocks  
   
--   CRT 块  
+-   CRT blocks  
   
--   忽略块  
+-   ignore blocks  
   
--   客户端块  
+-   client blocks  
   
--   在任何时候 （以字节为单位） 的程序所使用的最大内存  
+-   maximum memory used by the program at any one time (in bytes)  
   
--   当前使用的程序 （以字节为单位） 的总内存  
+-   total memory currently used by the program (in bytes)  
   
- 可用块是指次数时，已延迟释放的块`afxMemDF`已设置为**delayFreeMemDF**。 有关详细信息，请参阅[afxMemDF](diagnostic-services.md#afxmemdf)，"MFC 宏和全局"部分中。 请参阅[调试堆上类型的块](http://msdn.microsoft.com/en-us/db2e7f62-0679-4b39-a23f-26f2c2f407c5)详细信息，这些块类型。  
+ Free blocks are the number of blocks whose deallocation was delayed if `afxMemDF` was set to **delayFreeMemDF**. For more information, see [afxMemDF](diagnostic-services.md#afxmemdf), in the "MFC Macros and Globals" section. See [Types of Blocks on the Debug Heap](http://msdn.microsoft.com/en-us/db2e7f62-0679-4b39-a23f-26f2c2f407c5) for more information on these block types.  
   
-### <a name="example"></a>示例  
-  应将以下代码放置在*projname*app.cpp。 定义以下全局变量︰  
+### <a name="example"></a>Example  
+  The following code should be placed in *projname*App.cpp. Define the following global variables:  
   
- [!code-cpp[NVC_MFC_Utilities # 40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]  
   
- 在`InitInstance`函数中，添加行︰  
+ In the `InitInstance` function, add the line:  
   
- [!code-cpp[NVC_MFC_Utilities # 41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]  
   
- 添加的处理程序`ExitInstance`函数，并使用以下代码︰  
+ Add a handler for the `ExitInstance` function and use the following code:  
   
- [!code-cpp[NVC_MFC_Utilities # 42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]  
   
- 你现在可以运行该程序在调试模式下，若要查看的输出`DumpStatistics`函数。  
+ You can now run the program in Debug mode to see the output of the `DumpStatistics` function.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

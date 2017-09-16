@@ -1,5 +1,5 @@
 ---
-title: "raw_storage_iterator 类 | Microsoft Docs"
+title: raw_storage_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,14 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- raw_storage_iterator
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
 dev_langs:
 - C++
 helpviewer_keywords:
-- raw_storage_iterator class
+- std::raw_storage_iterator [C++]
+- std::raw_storage_iterator [C++], element_type
+- std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
 caps.latest.revision: 17
 author: corob-msft
@@ -36,97 +37,97 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 46bfc6bc42e09348d0760f7d03d70c816fde31ed
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5a513b9b27c72c36f831eba839538910914d4057
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rawstorageiterator-class"></a>raw_storage_iterator 类
-一种所提供的适配器类，使算法能够将它们的结果存储到未初始化的内存中。  
+# <a name="rawstorageiterator-class"></a>raw_storage_iterator Class
+An adaptor class that is provided to enable algorithms to store their results into uninitialized memory.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class OutputIterator, class Type>  
 class raw_storage_iterator
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `OutputIterator`  
- 为正被存储的对象指定输出迭代器。  
+ Specifies the output iterator for the object being stored.  
   
- *类型*  
- 正为其分配存储的对象的类型。  
+ *Type*  
+ The type of object for which storage is being allocated.  
   
-## <a name="remarks"></a>备注  
- 此类描述一个输出迭代器，该迭代器在它生成的序列中构造 **Type** 类型的对象。 类 `raw_storage_iterator`\< **ForwardIterator**, **Type**> 的对象通过构造该对象时指定的 **ForwardIterator** 类的向前迭代器对象来访问存储。 对于类 **ForwardIterator** 的第一个对象，表达式 **&\*first** 必须为生成序列中的下一个对象（属于 **Type** 类型）指定未构造的存储。  
+## <a name="remarks"></a>Remarks  
+ The class describes an output iterator that constructs objects of type **Type** in the sequence it generates. An object of class `raw_storage_iterator`\< **ForwardIterator**, **Type**> accesses storage through a forward iterator object, of class **ForwardIterator**, that you specify when you construct the object. For an object first of class **ForwardIterator**, the expression **&\*first** must designate unconstructed storage for the next object (of type **Type**) in the generated sequence.  
   
- 在需要分隔内存分配和对象构造时使用此适配器类。 `raw_storage_iterator` 可用于将对象复制到未初始化的存储中，如使用 `malloc` 函数分配的内存。  
+ This adaptor class is used when it is necessary to separate memory allocation and object construction. The `raw_storage_iterator` can be used to copy objects into uninitialized storage, such as memory allocated using the `malloc` function.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[raw_storage_iterator](#raw_storage_iterator)|使用指定的基础输出迭代器构造原始存储迭代器。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|提供一种类型，该类型描述要存储在原始存储迭代器中的元素。|  
-|[iter_type](#iter_type)|提供了一种类型，该类型描述原始存储迭代器所基于的迭代器。|  
+|[raw_storage_iterator](#raw_storage_iterator)|Constructs a raw storage iterator with a specified underlying output iterator.|  
   
-### <a name="operators"></a>运算符  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|用于实现输出迭代器表达式 * `ii` = `x` 的取消引用运算符。|  
-|[operator=](#op_eq)|用于实现原始存储迭代器表达式 * `i` = `x` 以便在内存中进行存储的赋值运算符。|  
-|[operator++](#op_add_add)|原始存储迭代器的前置递增和后置递增运算符。|  
+|[element_type](#element_type)|Provides a type that describes an element to be stored a raw storage iterator.|  
+|[iter_type](#iter_type)|Provides a type that describes an iterator that underlies a raw storage iterator.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<memory>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|A dereferencing operator used to implement the output iterator expression * `ii` = `x`.|  
+|[operator=](#op_eq)|An assignment operator used to implement the raw storage iterator expression * `i` = `x` for storing in memory.|  
+|[operator++](#op_add_add)|Preincrement and postincrement operators for raw storage iterators.|  
   
-##  <a name="element_type"></a>raw_storage_iterator::element_type  
- 提供一种类型，该类型描述要存储在原始存储迭代器中的元素。  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
+  
+##  <a name="element_type"></a>  raw_storage_iterator::element_type  
+ Provides a type that describes an element to be stored a raw storage iterator.  
   
 ```
 typedef Type element_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 raw_storage_iterator 类模板参数 **Type** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the raw_storage_iterator class template parameter **Type**.  
   
-##  <a name="iter_type"></a>raw_storage_iterator::iter_type  
- 提供了一种类型，该类型描述原始存储迭代器所基于的迭代器。  
+##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
+ Provides a type that describes an iterator that underlies a raw storage iterator.  
   
 ```
 typedef ForwardIterator iter_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **ForwardIterator** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **ForwardIterator**.  
   
-##  <a name="op_star"></a>raw_storage_iterator::operator*  
- 用于实现原始存储迭代器表达式 \* *ii* = *x* 的取消引用运算符。  
+##  <a name="op_star"></a>  raw_storage_iterator::operator*  
+ A dereferencing operator used to implement the raw storage iterator expression \* *ii* = *x*.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对原始存储迭代器的引用  
+### <a name="return-value"></a>Return Value  
+ A reference to the raw storage iterator  
   
-### <a name="remarks"></a>备注  
- 对 **ForwardIterator** 的要求是原始存储迭代器必须满足：仅要求表达式 \* *ii* = *t* 有效，且其本身不提及 **operator** 或 `operator=`。 此实现中的成员运算符返回 **\*this**，以便 [operator=](#op_eq)( **constType**&) 可以在表达式（例如 \* *ptr* = `val`）中执行实际存储。  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** are that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid and that it says nothing about the **operator** or the `operator=` on their own. The member operators in this implementation returns **\*this**, so that [operator=](#op_eq)( **constType**&) can perform the actual store in an expression, such as \* *ptr* = `val`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_deref.cpp  
@@ -177,27 +178,27 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="op_eq"></a>raw_storage_iterator::operator=  
- 用于实现原始存储迭代器表达式 \* *i* = *x* 以便在内存中进行存储的赋值运算符。  
+##  <a name="op_eq"></a>  raw_storage_iterator::operator=  
+ Assignment operator used to implement the raw storage iterator expression \* *i* = *x* for storing in memory.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `val`  
- 要插入到内存的 **Type** 类型的对象的值。  
+ The value of the object of type **Type** to be inserted into memory.  
   
-### <a name="return-value"></a>返回值  
- 运算符会将 `val` 插入到内存，然后向原始存储迭代器返回引用。  
+### <a name="return-value"></a>Return Value  
+ The operator inserts `val` into memory, and then returns a reference to the raw storage iterator.  
   
-### <a name="remarks"></a>备注  
- **ForwardIterator** 的要求是原始存储迭代器必须满足仅要求表达式 \* *ii* = *t* 有效，并且未提及 **operator** 或 `operator=`。 这些成员运算符返回 **\*this**。  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** state that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid, and that it says nothing about the **operator** or the `operator=` on their own. These member operators return **\*this**.  
   
- 赋值运算符通过计算放置 new 表达式 **new** ( ( `void` \*)&\* **first**) **Type**( `val`)，首先使用存储的迭代器值在输出序列中构造下一个对象。  
+ The assignment operator constructs the next object in the output sequence using the stored iterator value first, by evaluating the placement new expression **new** ( ( `void` \*)&\* **first**) **Type**( `val`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_assign.cpp  
@@ -246,8 +247,8 @@ Constructing 5
 *\  
 ```  
   
-##  <a name="op_add_add"></a>raw_storage_iterator::operator++  
- 原始存储迭代器的前置递增和后置递增运算符。  
+##  <a name="op_add_add"></a>  raw_storage_iterator::operator++  
+ Preincrement and postincrement operators for raw storage iterators.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator++();
@@ -255,19 +256,19 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```  
   
-### <a name="return-value"></a>返回值  
- 原始存储迭代器或对原始存储迭代器的引用。  
+### <a name="return-value"></a>Return Value  
+ An raw storage iterator or a reference to an raw storage iterator.  
   
-### <a name="remarks"></a>备注  
- 第一个运算符最终尝试从关联的输入流提取和存储 **CharType** 类型的对象。 第二个运算符生成对象的副本，递增对象，然后返回副本。  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
- 第一个前置递增运算符递增存储的输出迭代器对象，然后返回 **\*this**。  
+ The first preincrement operator increments the stored output iterator object, and then returns **\*this**.  
   
- 第二个后置递增运算符生成 **\*this** 的副本，递增存储的输出迭代器对象，然后返回副本。  
+ The second postincrement operator makes a copy of **\*this**, increments the stored output iterator object, and then returns the copy.  
   
- 构造函数将 **first** 存储为输出迭代器对象。  
+ The constructor stores **first** as the output iterator object.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_incr.cpp  
@@ -299,18 +300,18 @@ array 4 = 8
 *\  
 ```  
   
-##  <a name="raw_storage_iterator"></a>raw_storage_iterator::raw_storage_iterator  
- 使用指定的基础输出迭代器构造原始存储迭代器。  
+##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
+ Constructs a raw storage iterator with a specified underlying output iterator.  
   
 ```
 explicit raw_storage_iterator(ForwardIterator first);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 前向迭代器，是正在构造的 `raw_storage_iterator` 对象的基础。  
+ The forward iterator that is to underlie the `raw_storage_iterator` object being constructed.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_ctor.cpp  
@@ -390,8 +391,8 @@ array 3 = 4
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

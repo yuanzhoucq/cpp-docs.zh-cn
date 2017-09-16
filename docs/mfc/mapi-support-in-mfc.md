@@ -1,73 +1,92 @@
 ---
-title: "MFC 中的 MAPI 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument 类, 和 MAPI"
-  - "MFC 中的 MAPI 支持"
-  - "MAPI, MFC"
-  - "MFC, MAPI 支持"
-  - "OnFileSendMail 方法"
-  - "OnUpdateFileSendMail 方法"
+title: MAPI Support in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, MAPI support
+- MAPI support in MFC
+- CDocument class [MFC], and MAPI
+- OnUpdateFileSendMail method [MFC]
+- MAPI, MFC
+- OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# MFC 中的 MAPI 支持
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0325f0e28d80946ab68d26559292c18083b8e0a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC Microsoft 消息应用程序结口 \(MAPI\) 子集的支持。类提供 **CDocument**。  具体来说，**CDocument** 具有确定的成员函数邮件支持是否呈现在最终用户的计算机上，并且，如果是这样，启用标准命令 ID 是 **ID\_FILE\_SEND\_MAIL**的邮件发送命令。  此命令的 MFC 函数处理程序允许用户通过电子邮件发送文档。  
+---
+# <a name="mapi-support-in-mfc"></a>MAPI Support in MFC
+MFC supplies support for a subset of the Microsoft Messaging Application Program Interface (MAPI) in class **CDocument**. Specifically, **CDocument** has member functions that determine whether mail support is present on the end-user's machine and, if so, enable a Send Mail command whose standard command ID is **ID_FILE_SEND_MAIL**. The MFC handler function for this command allows the user to send a document through electronic mail.  
   
 > [!TIP]
->  虽然 MFC 不封装整个 MAPI 函数集，则仍可以直接调用 MAPI 函数，如同可以调用 Win32 API 函数直接从 MFC 程序。  
+>  Although MFC does not encapsulate the entire MAPI function set, you can still call MAPI functions directly, just as you can call Win32 API functions directly from MFC programs.  
   
- 提供在应用程序中非常简单。命令发送邮件  提供 MFC 包装实现文档 \(即 **CDocument**派生的对象\) 作为和作为邮件附件发送它。  附件此与保存的文件保存命令是等效的 \(序列化\) 文档内容到邮件。  此实现需要用户计算机的邮件客户为用户提供机会处理邮件并添加用户和文本到邮件。  用户看到它们的熟悉邮件应用程序的用户界面。  两个 **CDocument** 成员函数提供此功能：`OnFileSendMail` 和 `OnUpdateFileSendMail`。  
+ Providing the Send Mail command in your application is very easy. MFC provides the implementation to package a document (that is, a **CDocument**-derived object) as an attachment and send it as mail. This attachment is equivalent to a File Save command that saves (serializes) the document's contents to the mail message. This implementation calls upon the mail client on the user's machine to give the user the opportunity to address the mail and to add subject and message text to the mail message. Users see their familiar mail application's user interface. This functionality is supplied by two **CDocument** member functions: `OnFileSendMail` and `OnUpdateFileSendMail`.  
   
- MAPI 需要读取发送文件附件。  如果应用程序数据文件将保持其打开在 `OnFileSendMail` 函数调用中，打开文件需要具有允许多个进程访问文件共享模式。  
+ MAPI needs to read the file to send the attachment. If the application keeps its data file open during an `OnFileSendMail` function call, the file needs to be opened with a share mode that allows multiple processes to access the file.  
   
 > [!NOTE]
->  `OnFileSendMail` 的重写版本类的 `COleDocument` 正确处理复合文档。  
+>  An overriding version of `OnFileSendMail` for class `COleDocument` correctly handles compound documents.  
   
-#### 若要实现命令发送邮件中使用 MFC  
+#### <a name="to-implement-a-send-mail-command-with-mfc"></a>To implement a Send Mail command with MFC  
   
-1.  使用 Visual C\+\+ 编辑器添加菜单命令 ID 为 **ID\_FILE\_SEND\_MAIL**的菜单项。  
+1.  Use the Visual C++ menu editor to add a menu item whose command ID is **ID_FILE_SEND_MAIL**.  
   
-     此命令 ID 由在 AFXRES.H. 的框架提供。  命令可添加到全部菜单，但是，通常会添加到 **文件** 菜单。  
+     This command ID is provided by the framework in AFXRES.H. The command can be added to any menu, but it is usually added to the **File** menu.  
   
-2.  手动将以下添加到文档的消息映射：  
+2.  Manually add the following to your document's message map:  
   
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/CPP/mapi-support-in-mfc_1.cpp)]  
+     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]  
   
     > [!NOTE]
-    >  此消息映射为 **CDocument** 或 **COleDocument** 的文档中都起作用 \(在任何情况下其选取正确的基类，即使信息映射文档，在派生的类。  
+    >  This message map works for a document derived from either **CDocument** or **COleDocument** — it picks up the correct base class in either case, even though the message map is in your derived document class.  
   
-3.  生成应用程序。  
+3.  Build your application.  
   
- 如果邮件支持可用，MFC 将具有 `OnUpdateFileSendMail` 的菜单项与后面处理 `OnFileSendMail`的命令关联。  如果无法联系邮件支持，MFC 自动移除菜单项，因此用户不会看到它。  
+ If mail support is available, MFC enables your menu item with `OnUpdateFileSendMail` and subsequently processes the command with `OnFileSendMail`. If mail support is not available, MFC automatically removes your menu item so the user will not see it.  
   
 > [!TIP]
->  而不是前面所述手动添加消息映射项，可以使用类的属性窗口消息到映射函数。  有关更多信息，请参见[将消息映射到函数](../mfc/reference/mapping-messages-to-functions.md)。  
+>  Rather than manually adding message map entries as previously described, you can use the class Properties window to map messages to functions. For more information, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md).  
   
- 有关相关信息，请参见 [MAPI](../mfc/mapi.md) 概述。  
+ For related information, see the [MAPI](../mfc/mapi.md) overview.  
   
- 有关启用 MAPI 的 **CDocument** 成员函数的更多信息，请参见：  
+ For more information about the **CDocument** member functions that enable MAPI, see:  
   
--   [CDocument::OnFileSendMail](../Topic/CDocument::OnFileSendMail.md)  
+-   [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)  
   
--   [CDocument::OnUpdateFileSendMail](../Topic/CDocument::OnUpdateFileSendMail.md)  
+-   [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)  
   
--   [COleDocument::OnFileSendMail](../Topic/COleDocument::OnFileSendMail.md)  
+-   [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [MAPI](../mfc/mapi.md)
+
+

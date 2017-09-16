@@ -1,49 +1,68 @@
 ---
-title: "文档/视图结构的优点 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文档/视图体系结构, 优点"
-  - "视图, 优点"
+title: Advantages of the Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], advantages
+- document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 文档/视图结构的优点
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6aa61689c72a35cad051b525b7ff4a243a4b4d9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-要使用 MFC 文档\/视图结构的主要优点是体系结构有很好支持同一文档的多个视图。\(如果不需要多个视图，并且开销小文档\/视图是在额外的应用程序，则您可以避开体系结构。  [Alternatives to the Document\/View Architecture](../mfc/alternatives-to-the-document-view-architecture.md).\)  
+---
+# <a name="advantages-of-the-documentview-architecture"></a>Advantages of the Document/View Architecture
+The key advantage to using the MFC document/view architecture is that the architecture supports multiple views of the same document particularly well. (If you don't need multiple views and the small overhead of document/view is excessive in your application, you can avoid the architecture. [Alternatives to the Document/View Architecture](../mfc/alternatives-to-the-document-view-architecture.md).)  
   
- 假定应用程序允许用户查看数据的数字电子表格形式或为图表形式。  用户可能希望同时查看原始数据，采用电子表格形式该图表数据的结果。  您可以显示各个单独视图在框架窗口或在一个窗口中的拆分器窗格。  现在假设用户可以编辑该电子表格的数据以及查看立即反映的更改在关系图上。  
+ Suppose your application lets users view numerical data either in spreadsheet form or in chart form. A user might want to see simultaneously both the raw data, in spreadsheet form, and a chart that results from the data. You display these separate views in separate frame windows or in splitter panes within a single window. Now suppose the user can edit the data in the spreadsheet and see the changes instantly reflected in the chart.  
   
- 在 MFC 中，电子表格视图和图表视图基于 CView 派生的不同类。  两个视图将与单文件对象。  文档存储数据 \(可能或获取其从数据库\)。  它们从其检索的两个视图访问文档并显示数据。  
+ In MFC, the spreadsheet view and the chart view would be based on different classes derived from CView. Both views would be associated with a single document object. The document stores the data (or perhaps obtains it from a database). Both views access the document and display the data they retrieve from it.  
   
- 在用户更新某个视图时，该视图对象调用 `CDocument::UpdateAllViews`。  从文档使用，的最新数据函数通知所有文档的视图以及每个视图将相应更新。  为 `UpdateAllViews` 的单个调用同步不同的视图。  
+ When a user updates one of the views, that view object calls `CDocument::UpdateAllViews`. That function notifies all of the document's views, and each view updates itself using the latest data from the document. The single call to `UpdateAllViews` synchronizes the different views.  
   
- 特别是，如果视图存储数据，而数据的分离，视图的此方案难以代码。  文档\/视图，非常容易。  框架为您完成大部分的协调工作。  
+ This scenario would be difficult to code without the separation of data from view, particularly if the views stored the data themselves. With document/view, it's easy. The framework does most of the coordination work for you.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [选择文档\/视图](../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to document/view](../mfc/alternatives-to-the-document-view-architecture.md)  
   
 -   [CDocument](../mfc/reference/cdocument-class.md)  
   
 -   [CView](../mfc/reference/cview-class.md)  
   
--   [CDocument::UpdateAllViews](../Topic/CDocument::UpdateAllViews.md)  
+-   [CDocument::UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)  
   
--   [CView::GetDocument](../Topic/CView::GetDocument.md)  
+-   [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)  
   
-## 请参阅  
- [文档\/视图体系结构](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

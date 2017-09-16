@@ -1,5 +1,5 @@
 ---
-title: "CMFCTasksPaneTaskGroup 类 |Microsoft 文档"
+title: CMFCTasksPaneTaskGroup Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTasksPaneTaskGroup class
+- CMFCTasksPaneTaskGroup [MFC], CMFCTasksPaneTaskGroup
+- CMFCTasksPaneTaskGroup [MFC], SetACCData
+- CMFCTasksPaneTaskGroup [MFC], m_bIsBottom
+- CMFCTasksPaneTaskGroup [MFC], m_bIsCollapsed
+- CMFCTasksPaneTaskGroup [MFC], m_bIsSpecial
+- CMFCTasksPaneTaskGroup [MFC], m_lstTasks
+- CMFCTasksPaneTaskGroup [MFC], m_rect
+- CMFCTasksPaneTaskGroup [MFC], m_rectGroup
+- CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
 caps.latest.revision: 33
 author: mikeblome
@@ -43,76 +51,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 405a69a0c7d8c4179b36e1beec09fdfa7acd2d7b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a7c7503acf4deed60ab86eac6c91c64f746c8a09
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 类
-`CMFCTasksPaneTaskGroup`类是使用一个帮助器类[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。  
+# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup Class
+The `CMFCTasksPaneTaskGroup` class is a helper class used by the [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Objects of type `CMFCTasksPaneTaskGroup` represent a *task group*. The task group is a list of items that the framework displays in a separate box that has a collapse button. The box can have an optional caption (group name). If a group is collapsed, the list of tasks is not visible.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTasksPaneTaskGroup : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|构造 `CMFCTasksPaneTaskGroup` 对象。|  
-|`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|析构函数。|  
+|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Constructs a `CMFCTasksPaneTaskGroup` object.|  
+|`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|确定当前的任务组的可访问性数据。|  
+|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determines the accessibility data for the current task group.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|确定是否将任务组对齐到任务窗格控件的底部。|  
-|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|确定任务组处于折叠状态。|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|确定任务组是否为*特殊。* 框架显示特殊的标题以不同的颜色。|  
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|包含任务的内部列表。|  
-|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|指定的组标题的边框。|  
-|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|指定组的边框。|  
-|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|指定组的名称。|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determines whether the task group is aligned to the bottom of the task pane control.|  
+|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determines whether the task group is collapsed.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determines whether the task group is *special.* The framework displays special captions in a different color.|  
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contains the internal list of tasks.|  
+|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Specifies the bounding rectangle of the group caption.|  
+|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Specifies the bounding rectangle of the group.|  
+|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Specifies the name of the group.|  
   
-## <a name="remarks"></a>备注  
- 下图显示展开的任务组︰  
+## <a name="remarks"></a>Remarks  
+ The following illustration shows an expanded task group:  
   
- ![展开的任务组](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![Task group, expanded](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- 下图显示了一个已折叠的任务组︰  
+ The following illustration shows a collapsed task group:  
   
- ![已折叠的任务组](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
+ ![Collapsed task group](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
- 下图显示不带标题的任务组︰  
+ The following illustration shows a task group without a caption:  
   
- ![无标题的任务组](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
+ ![Task group without a caption](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- 下图显示两个任务组。 通过设置的标记的第一个任务组特殊`m_bIsSpecial`标记，用于`TRUE`，而第二个任务组并不特殊。 请注意，第一个任务组的标题是比第二个任务组暗︰  
+ The following illustration shows two task groups. The first task group is marked as special by setting the `m_bIsSpecial` flag to `TRUE`, while the second task group is not special. Note how the caption for the first task group is darker than the second task group:  
   
- ![特殊任务组](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
+ ![Special task group](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxTasksPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
- 构造 `CMFCTasksPaneTaskGroup` 对象。  
+##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+ Constructs a `CMFCTasksPaneTaskGroup` object.  
   
 ```  
 CMFCTasksPaneTaskGroup(
@@ -124,99 +132,99 @@ CMFCTasksPaneTaskGroup(
     HICON hIcon=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指定的组标题中的组的名称。  
+ Specifies the name of the group in the group caption.  
   
  `bIsBottom`  
- 指定是否将组对齐到任务窗格控件的底部。  
+ Specifies whether the group is aligned to the bottom of the task pane control.  
   
  `bIsSpecial`  
- 指定组被指定为*特殊*因此，是否将填充的组标题与另一种颜色。  
+ Specifies whether the group is designated as *special* and thus, whether the group caption is filled with a different color.  
   
  `bIsCollapsed`  
- 指定组处于折叠状态。  
+ Specifies whether the group is collapsed.  
   
  `pPage`  
- 指定此任务组所属的属性页。  
+ Specifies the property page that this task group belongs to.  
   
  `hIcon`  
- 指定在组标题中显示的图标。  
+ Specifies the icon that displays in the group caption.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
- 确定是否将任务组对齐到任务窗格控件的底部。  
+##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
+ Determines whether the task group is aligned to the bottom of the task pane control.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
-### <a name="remarks"></a>备注  
- 只有一个组可以向任务窗格控件底部对齐。 必须将上一次添加此任务组。 有关详细信息，请参阅[CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
+### <a name="remarks"></a>Remarks  
+ Only one group can be aligned to the bottom of the task pane control. This task group must be added last. For more information, see [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
- 确定任务组处于折叠状态。  
+##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+ Determines whether the task group is collapsed.  
   
 ```  
 BOOL m_bIsCollapsed;  
 ```  
   
-### <a name="remarks"></a>备注  
- 您可以启用或禁用能够通过调用上任务窗格中的折叠组[CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)。  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable the ability to collapse groups on the task pane by calling [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
- 确定任务组是否为*特殊*并是否应由另一种颜色标识特殊任务组的标题。  
+##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
+ Determines whether the task group is *special* and whether the caption for a special task group should be identified by a different color.  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果应用程序正在使用 Windows XP 可视主题和`m_bIsSpecial`是`FALSE`，框架将调用`DrawThemeBackground`与`EBP_NORMALGROUPBACKGROUND`标志。 如果`m_bIsSpecial`是`TRUE`，框架将调用`DrawThemeBackground`与`EBP_SPECIALGROUPBACKGROUND`标志。  
+### <a name="remarks"></a>Remarks  
+ If your application is using the Windows XP visual theme and `m_bIsSpecial` is `FALSE`, the framework calls `DrawThemeBackground` with the `EBP_NORMALGROUPBACKGROUND` flag. If `m_bIsSpecial` is `TRUE`, the framework calls `DrawThemeBackground` with the `EBP_SPECIALGROUPBACKGROUND` flag.  
   
-##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
- 包含任务的内部列表。  
+##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
+ Contains the internal list of tasks.  
   
 ```  
 CObList m_lstTasks;  
 ```  
   
-### <a name="remarks"></a>备注  
- 若要填充此列表，请调用[CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask)。  
+### <a name="remarks"></a>Remarks  
+ To fill this list, call [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
- 指定的组标题的边框。  
+##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
+ Specifies the bounding rectangle of the group caption.  
   
 ```  
 CRect m_rect;  
 ```  
   
-### <a name="remarks"></a>备注  
- 由框架自动计算此值。  
+### <a name="remarks"></a>Remarks  
+ This value is automatically calculated by the framework.  
   
-##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
- 指定组的边框。  
+##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
+ Specifies the bounding rectangle of the group.  
   
 ```  
 CRect m_rectGroup;  
 ```  
   
-### <a name="remarks"></a>备注  
- 由框架自动计算此值。  
+### <a name="remarks"></a>Remarks  
+ This value is calculated automatically by the framework.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
- 指定组的名称。  
+##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
+ Specifies the name of the group.  
   
 ```  
 CString m_strName;  
 ```  
   
-### <a name="remarks"></a>备注  
- 如果此值为空，不显示组标题，并且不能折叠组。  
+### <a name="remarks"></a>Remarks  
+ If this value is empty, the group caption is not displayed and the group cannot be collapsed.  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
- 确定当前的任务组的可访问性数据。  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
+ Determines the accessibility data for the current task group.  
   
 ```  
 virtual BOOL SetACCData(
@@ -224,21 +232,21 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- 表示当前的任务组的父窗口。  
+ Represents the parent window of the current task group.  
   
  [out] `data`  
- 类型的对象`CAccessibilityData`并且填充了当前的任务组的可访问性数据。  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current task group.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果`data`参数已成功地填充了当前的任务组的可访问性数据; 否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current task group; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCTasksPane 类](../../mfc/reference/cmfctaskspane-class.md)   
- [CMFCTasksPaneTask 类](../../mfc/reference/cmfctaskspanetask-class.md)   
- [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CObject 类](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCTasksPane Class](../../mfc/reference/cmfctaskspane-class.md)   
+ [CMFCTasksPaneTask Class](../../mfc/reference/cmfctaskspanetask-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

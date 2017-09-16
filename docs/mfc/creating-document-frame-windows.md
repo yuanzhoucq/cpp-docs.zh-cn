@@ -1,48 +1,67 @@
 ---
-title: "创建文档框架窗口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文档框架窗口, 创建"
-  - "文档模板, 和文档框架窗口"
-  - "框架窗口 [C++], 创建"
-  - "MFC [C++], 框架窗口"
-  - "运行时类, 和文档框架窗口创建"
-  - "运行时, 类信息"
-  - "窗口 [C++], 创建"
+title: Creating Document Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], creating
+- document templates [MFC], and document frame windows
+- windows [MFC], creating
+- runtime, class information
+- run-time class [MFC], and document frame window creation
+- document frame windows [MFC], creating
+- MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 创建文档框架窗口
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29ebf0ad002170a6ab06f06d23abd20d1ed298e1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-查看[文档\/视图创建](../mfc/document-view-creation.md) [CDocTemplate](../mfc/reference/cdoctemplate-class.md) 对象如何安排创建框架窗口、文档及视图和一起连接它们全部。  给 `CDocTemplate` 构造函数的参数指定三 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) 框架窗口，文档，并且显示文档模板动态创建根据用户命令 \(如在"文件"菜单上的新命令或 MDI 窗口"菜单上的"新建窗口"命令的类。  在创建视图和文档的，则一框架窗口、文档模板将此信息存储以供将来使用。  
+---
+# <a name="creating-document-frame-windows"></a>Creating Document Frame Windows
+[Document/View Creation](../mfc/document-view-creation.md) shows how the [CDocTemplate](../mfc/reference/cdoctemplate-class.md) object orchestrates creating the frame window, document, and view and connecting them all together. Three [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) arguments to the `CDocTemplate` constructor specify the frame window, document, and view classes that the document template creates dynamically in response to user commands such as the New command on the File menu or the New Window command on an MDI Window menu. The document template stores this information for later use when it creates a frame window for a view and document.  
   
- 为了使变换正确工作 [RUNTIME\_CLASS](../Topic/RUNTIME_CLASS.md) 的机制，必须声明派生的框架窗口类与 [DECLARE\_DYNCREATE](../Topic/DECLARE_DYNCREATE.md) 宏。  这是因为，需要文档框架创建框架窗口使用类 `CObject`的构造动态机制。  
+ For the [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) mechanism to work correctly, your derived frame-window classes must be declared with the [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. This is because the framework needs to create document frame windows using the dynamic construction mechanism of class `CObject`.  
   
- 在用户选择创建文档的命令时，框架要求文档模板创建文档对象、其视图和查看视图的框架窗口。  在创建文档框架窗口时，文档模板创建适当的类 \(从 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 从派生的应用程序 [CFrameWnd](../mfc/reference/cframewnd-class.md) 的 SDI 或类的对象负责 MDI 应用程序。  框架将调用框架窗口对象的成员函数 [LoadFrame](../Topic/CFrameWnd::LoadFrame.md) 从资源获取创建消息创建窗口和窗口。  框架附加窗口句柄到框架窗口对象。  然后它创建视图，文档框架窗口的子窗口。  
+ When the user chooses a command that creates a document, the framework calls upon the document template to create the document object, its view, and the frame window that will display the view. When it creates the document frame window, the document template creates an object of the appropriate class — a class derived from [CFrameWnd](../mfc/reference/cframewnd-class.md) for an SDI application or from [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) for an MDI application. The framework then calls the frame-window object's [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) member function to get creation information from resources and to create the Windows window. The framework attaches the window handle to the frame-window object. Then it creates the view as a child window of the document frame window.  
   
- 请在 [时初始化](../mfc/when-to-initialize-cwnd-objects.md) 决定 `CWnd`派生的对象。  
+ Use caution in deciding [when to initialize](../mfc/when-to-initialize-cwnd-objects.md) your `CWnd`-derived object.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [从派生类 CObject \(其动态创建机制\)](../mfc/deriving-a-class-from-cobject.md)  
+-   [Deriving a Class from CObject (its dynamic creation mechanism)](../mfc/deriving-a-class-from-cobject.md)  
   
--   [文档\/视图创建 \(模板和框架窗口创建\)](../mfc/document-view-creation.md)  
+-   [Document/View Creation (templates and frame window creation)](../mfc/document-view-creation.md)  
   
--   [销毁框架窗口](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
-## 请参阅  
- [使用框架窗口](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

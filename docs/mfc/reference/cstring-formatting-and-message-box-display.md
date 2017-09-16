@@ -1,5 +1,5 @@
 ---
-title: "CString 格式设置和消息框显示 |Microsoft 文档"
+title: CString Formatting and Message-Box Display | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CString objects, formatting and message boxes
+- CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
 author: mikeblome
@@ -33,32 +33,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 356562dc61971aa7a74ce9e9be94fc34af58f6f9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: abe0ce15f9fdf83c4cd15156916779e112ab72a8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstring-formatting-and-message-box-display"></a>CString 格式设置和消息框显示
-提供的许多功能进行格式化和分析`CString`对象。 每当你操作时，可以使用这些函数`CString`对象，但它们都将出现在消息框文本的字符串设置格式特别有用。  
+# <a name="cstring-formatting-and-message-box-display"></a>CString Formatting and Message-Box Display
+A number of functions are provided to format and parse `CString` objects. You can use these functions whenever you have to manipulate `CString` objects, but they are particularly useful for formatting strings that will appear in message-box text.  
   
- 此组的函数还包括用于显示一个消息框的全局例程。  
+ This group of functions also includes a global routine for displaying a message box.  
   
-### <a name="cstring-functions"></a>CString 函数  
+### <a name="cstring-functions"></a>CString Functions  
   
 |||  
 |-|-|  
-|[AfxExtractSubString](#afxextractsubstring)|提取子字符串从给定的源字符串的单个字符分隔。|  
-|[AfxFormatString1](#afxformatstring1)|替换字符串中的格式字符"%1"的给定的字符串包含在字符串表中。|  
-|[AfxFormatString2](#afxformatstring2)|替换两个字符串的格式字符"%1"和"%2"在字符串中包含字符串表中。|  
-|[AfxMessageBox](#afxmessagebox)|显示消息框。|  
+|[AfxExtractSubString](#afxextractsubstring)|Extracts substrings separated by a single character from a given source string.|  
+|[AfxFormatString1](#afxformatstring1)|Substitutes a given string for the format characters "%1" in a string contained in the string table.|  
+|[AfxFormatString2](#afxformatstring2)|Substitutes two strings for the format characters "%1" and "%2" in a string contained in the string table.|  
+|[AfxMessageBox](#afxmessagebox)|Displays a message box.|  
   
-### <a name="requirements"></a>要求  
-  **标头**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
- 此全局函数可用来从给定的源字符串中提取子字符串。  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
+ This global function can be used to extract a substring from a given source string.  
   
 ```   
 BOOL AFXAPI AfxExtractSubString (
@@ -68,35 +68,35 @@ BOOL AFXAPI AfxExtractSubString (
     TCHAR chSep  = '\n'); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *rString*  
- -   引用[CString](../../atl-mfc-shared/using-cstring.md)将接收单个子字符串的对象。  
+ -   Reference to a [CString](../../atl-mfc-shared/using-cstring.md) object that will receive an individual substring.  
   
  *lpszFullString*  
- -   包含要提取的字符串的完整文本的字符串。  
+ -   String containing the full text of the string to extract from.  
   
  *iSubString*  
- -   要从提取的子字符串的从零开始索引*lpszFullString*。  
+ -   Zero-based index of the substring to extract from *lpszFullString*.  
   
  *chSep*  
- -   用于分隔子字符串的分隔符字符。  
+ -   Separator character used to delimit substrings.  
   
-### <a name="return-value"></a>返回值  
- **TRUE**如果函数成功提取的子字符串在提供的索引; 否则为**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the function successfully extracted the substring at the provided index; otherwise, **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 此函数可用于从源字符串提取的多个子时已知的单个字符用于分隔每个子字符串。 此函数将搜索从开始处`lpszFullString`参数每次调用时。  
+### <a name="remarks"></a>Remarks  
+ This function is useful for extracting multiple substrings from a source string when a known single character separates each substring. This function searches from the beginning of the `lpszFullString` parameter each time it is called.  
   
- 此函数将返回 FALSE，如果任一`lpszFullString`设置为**NULL**或函数到达末尾`lpszFullString`没有找到`iSubString`+ 1 个指定的分隔符字符。 `rString`如果参数将不从其原始值会修改`lpszFullString`已设置为**NULL**; 否则为`rString`参数设置为空字符串，如果指定的索引，无法提取子字符串。  
+ This function will return FALSE if either `lpszFullString` is set to **NULL** or the function reaches the end of `lpszFullString` without finding `iSubString`+1 occurrences of the specified separator character. The `rString` parameter will not be modified from its original value if `lpszFullString` was set to **NULL**; otherwise, the `rString` parameter is set to the empty string if the substring could not be extracted for the specified index.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities # 48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
- 将 `lpsz1` 指向的字符串替换为 `nIDS` 标识的模板字符串资源中的字符“%1”的任何实例。  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1" in the template string resource identified by `nIDS`.  
   
 ```  
 void  AfxFormatString1(
@@ -105,29 +105,29 @@ void  AfxFormatString1(
     LPCTSTR lpsz1); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 对在执行替换后将包含生成字符串的 `CString` 对象的引用。  
+ A reference to a `CString` object that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- 将对其执行替换的模板字符串的资源 ID。  
+ The resource ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- 将替换模板字符串中的格式字符串“%1”的字符串。  
+ A string that will replace the format characters "%1" in the template string.  
   
-### <a name="remarks"></a>备注  
- 新构成的字符串存储在 `rString` 中。 例如，如果字符串表中的字符串为“未找到文件 %1”，并且 `lpsz1` 等效于“C:\MYFILE.TXT”，则 `rString` 将包含字符串“未找到文件 C:\MYFILE.TXT”。 此函数对为发送到消息框和其他窗口的字符串设置格式很有用。  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found", and `lpsz1` is equal to "C:\MYFILE.TXT", then `rString` will contain the string "File C:\MYFILE.TXT not found". This function is useful for formatting strings sent to message boxes and other windows.  
   
- 如果格式字符“%1”多次出现在字符串中，则将执行多次替换。  
+ If the format characters "%1" appear in the string more than once, multiple substitutions will be made.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities # 25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
- 替换字符串的指向`lpsz1`字符"%1"，并通过指向的任何的字符串实例`lpsz2`所标识的模板字符串资源中的字符"%2"的任何实例`nIDS`。  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1", and the string pointed to by `lpsz2` for any instances of the characters "%2", in the template string resource identified by `nIDS`.  
   
 ```   
 void AfxFormatString2(
@@ -137,32 +137,32 @@ void AfxFormatString2(
     LPCTSTR lpsz2); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 对引用`CString`执行替换后将包含生成的字符串。  
+ A reference to the `CString` that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- 将对其执行替换的模板字符串的字符串表 ID。  
+ The string table ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- 将替换模板字符串中的格式字符串“%1”的字符串。  
+ A string that will replace the format characters "%1" in the template string.  
   
  `lpsz2`  
- 将替换格式的字符串的模板字符串中字符"%2"。  
+ A string that will replace the format characters "%2" in the template string.  
   
-### <a name="remarks"></a>备注  
- 新构成的字符串存储在 `rString` 中。 例如，如果字符串表中的字符串为"文件目录 %2 中找不到 %1"，`lpsz1`指向"MYFILE。TXT"、 和`lpsz2`然后指向"C:\MYDIR"`rString`将包含字符串"File MYFILE。TXT 目录 C:\MYDIR 中未找到"  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found in directory %2", `lpsz1` points to "MYFILE.TXT", and `lpsz2` points to "C:\MYDIR", then `rString` will contain the string "File MYFILE.TXT not found in directory C:\MYDIR"  
   
- 如果格式字符"%1"或"%2"多次出现在字符串中，将进行多个替换项。 它们无需按数字顺序。  
+ If the format characters "%1" or "%2" appear in the string more than once, multiple substitutions will be made. They do not have to be in numerical order.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities # 26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
- 在屏幕上显示一个消息框。  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
+ Displays a message box on the screen.  
   
 ```  
 int AfxMessageBox(
@@ -176,49 +176,49 @@ int AFXAPI AfxMessageBox(
     UINT nIDHelp = (UINT) -1); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 指向`CString`对象或包含在消息框中显示的消息的以 null 结尾的字符串。  
+ Points to a `CString` object or null-terminated string containing the message to be displayed in the message box.  
   
  `nType`  
- 在消息框样式。 应用任何[消息框样式](../../mfc/reference/message-box-styles.md)在框中。  
+ The style of the message box. Apply any of the [message-box styles](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) to the box.  
   
  `nIDHelp`  
- 消息; 的帮助上下文 ID0 指示将使用应用程序的默认帮助上下文。  
+ The Help context ID for the message; 0 indicates the application's default Help context will be used.  
   
  `nIDPrompt`  
- 用来引用字符串表中的字符串的唯一 ID。  
+ A unique ID used to reference a string in the string table.  
   
-### <a name="return-value"></a>返回值  
- 如果没有足够的内存来显示消息框中; 则为零否则，返回以下值之一︰  
+### <a name="return-value"></a>Return Value  
+ Zero if there is not enough memory to display the message box; otherwise, one of the following values is returned:  
   
-- **IDABORT**选择中止按钮。  
+- **IDABORT** The Abort button was selected.  
   
-- **IDCANCEL**选择了取消按钮。  
+- **IDCANCEL** The Cancel button was selected.  
   
-- **IDIGNORE**已选择忽略按钮。  
+- **IDIGNORE** The Ignore button was selected.  
   
-- **IDNO**选择否按钮。  
+- **IDNO** The No button was selected.  
   
-- **IDOK**选择确定按钮。  
+- **IDOK** The OK button was selected.  
   
-- **IDRETRY**选择重试按钮。  
+- **IDRETRY** The Retry button was selected.  
   
-- **IDYES**选择是按钮。  
+- **IDYES** The Yes button was selected.  
   
- 如果一个消息框具有取消按钮， **IDCANCEL**将返回值，如果按 ESC 键，或者选择取消按钮。 如果消息框没有取消按钮，按 ESC 键不起作用。  
+ If a message box has a Cancel button, the **IDCANCEL** value will be returned if either the ESC key is pressed or the Cancel button is selected. If the message box has no Cancel button, pressing the ESC key has no effect.  
   
- 函数[AfxFormatString1](#afxformatstring1)和[AfxFormatString2](#afxformatstring2)中设置文本框中显示一个消息框文本的格式会很有用。  
+ The functions [AfxFormatString1](#afxformatstring1) and [AfxFormatString2](#afxformatstring2) can be useful in formatting text that appears in a message box.  
   
-### <a name="remarks"></a>备注  
- 第一种形式的此重载函数显示的文本字符串指向`lpszText`消息框并使用`nIDHelp`来描述帮助上下文。 帮助上下文用于当用户按下的帮助按钮 (通常 F1) 跳转到关联的帮助主题。  
+### <a name="remarks"></a>Remarks  
+ The first form of this overloaded function displays a text string pointed to by `lpszText` in the message box and uses `nIDHelp` to describe a Help context. The Help context is used to jump to an associated Help topic when the user presses the Help key (typically F1).  
   
- 函数的第二种形式的字符串资源使用 ID`nIDPrompt`在消息框中显示一条消息。 关联的帮助页找到的值通过`nIDHelp`。 如果默认值的`nIDHelp`为使用 (-1)，字符串资源 ID， `nIDPrompt`，用于帮助上下文。 有关定义帮助上下文的详细信息，请参阅[技术注意 28](../../mfc/tn028-context-sensitive-help-support.md)。  
+ The second form of the function uses the string resource with the ID `nIDPrompt` to display a message in the message box. The associated Help page is found through the value of `nIDHelp`. If the default value of `nIDHelp` is used (-1), the string resource ID, `nIDPrompt`, is used for the Help context. For more information about defining Help contexts, see [Technical Note 28](../../mfc/tn028-context-sensitive-help-support.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)   
- [CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md)
 

@@ -1,33 +1,50 @@
 ---
-title: "容器：客户端项状态 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "客户端项和 OLE 容器"
-  - "生存期, 生命周期状态和 OLE 容器客户端项"
-  - "OLE 容器, 客户端项状态"
-  - "states, OLE 容器客户端项"
+title: 'Containers: Client-Item States | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE containers [MFC], client-item states
+- states, OLE container client-item
+- lifetime, lifetime states and OLE container client items
+- client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 容器：客户端项状态
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ba2e8fc0ad0f57ec6c964d592442033a63ebb67f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明客户项在其生存传递的不同状态。  
+---
+# <a name="containers-client-item-states"></a>Containers: Client-Item States
+This article explains the different states a client item passes through in its lifetime.  
   
- 在创建的，则激活，修改，并将其保存项，客户通过若干状态。  每次项的状态转换，框架调用的 `OLE_CHANGED_STATE` 通知的 [COleClientItem::OnChange](../Topic/COleClientItem::OnChange.md)。  第二个参数是从 **COleClientItem::ItemState** 枚举的值。  它可以为下列之一：  
+ A client item passes through several states as it is created, activated, modified, and saved. Each time the item's state changes, the framework calls [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) with the `OLE_CHANGED_STATE` notification. The second parameter is a value from the **COleClientItem::ItemState** enumeration. It can be one of the following:  
   
 -   **COleClientItem::emptyState**  
   
@@ -39,17 +56,18 @@ caps.handback.revision: 5
   
 -   **COleClientItem::activeUIState**  
   
- 在空状态项，客户端不完全是项。  内存为其分配，但是，它未初始化与 OLE 项的数据。  这就是客户端中的项的状态在通过指向，但尚未进行典型的两步创建的第二步的 **new** 的调用创建。  
+ In the empty state, a client item is not yet completely an item. Memory has been allocated for it, but it has not yet been initialized with the OLE item's data. This is the state a client item is in when it has been created through a call to **new** but has not yet undergone the second step of the typical two-step creation.  
   
- 在第二个步骤中，可以通过调用 `COleClientItem::CreateFromFile` 或其他*xxxx***CreateFrom**函数，项完全创建。  OLE 数据 \(来自文件或其他源，例如剪贴板\) 与 `COleClientItem`派生的对象。  现在项在加载状态。  
+ In the second step, performed through a call to `COleClientItem::CreateFromFile` or another **CreateFrom***xxxx* function, the item is completely created. The OLE data (from a file or some other source, such as the Clipboard) has been associated with the `COleClientItem`-derived object. Now the item is in the loaded state.  
   
- 当项在服务器的文档容器窗口就地在中打开。而不是打开，则在打开 \(或完全打开状态\)。  在此状态中，跨阴影线通常通过绘制项的表示在容器的窗口指示项是其他地方的活动。  
+ When an item has been opened in the server's window rather than opened in place in the container's document, it is in the open (or fully open) state. In this state, a cross-hatch usually is drawn over the representation of the item in the container's window to indicate that the item is active elsewhere.  
   
- 当项时，它激活就地，通常只简单，通过活动状态。  随后访问 UI 活动状态中，服务器将其菜单、工具栏和其他用户界面具有这些组件的容器。  这些用户界面组件出现与活动状态区分使用 UI 活动状态。  否则，活动状态类似于 UI 活动状态。  如果服务器需要服务器支持保留撤消 OLE 项的撤消状态信息，直到其达到加载或打开状态。  
+ When an item has been activated in place, it passes, usually only briefly, through the active state. It then enters the UI active state, in which the server has merged its menus, toolbars, and other user-interface components with those of the container. The presence of these user-interface components distinguishes the UI active state from the active state. Otherwise, the active state resembles the UI active state. If the server supports Undo, the server is required to retain the OLE item's undo-state information until it reaches the loaded or open state.  
   
-## 请参阅  
- [容器](../mfc/containers.md)   
- [激活](../mfc/activation-cpp.md)   
- [容器：客户端项通知](../mfc/containers-client-item-notifications.md)   
- [跟踪器](../mfc/trackers.md)   
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Containers: Client-Item Notifications](../mfc/containers-client-item-notifications.md)   
+ [Trackers](../mfc/trackers.md)   
  [CRectTracker Class](../mfc/reference/crecttracker-class.md)
+

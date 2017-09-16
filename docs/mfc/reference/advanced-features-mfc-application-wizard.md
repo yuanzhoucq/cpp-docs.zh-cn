@@ -1,5 +1,5 @@
 ---
-title: "高级功能，MFC 应用程序向导 |Microsoft 文档"
+title: Advanced Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,62 +33,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 9a291af4641742cd9b771c80a7ea0770fab6de06
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a476f56ef4119065884a152f475fa86bfb9a090
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="advanced-features-mfc-application-wizard"></a>MFC 应用程序向导的高级功能
-本主题列出了应用程序的附加功能选项，如帮助、打印支持等。 在每个部分中，指定这些高级功能的附加支持。  
+# <a name="advanced-features-mfc-application-wizard"></a>Advanced Features, MFC Application Wizard
+This topic lists options for additional features for your application, such as Help, printing support, and so on. In each section, specify additional support for these advanced features.  
   
- **上下文相关帮助 (HTML)**  
- 生成一组帮助文件的上下文相关帮助，可通过使用 F1 和帮助菜单上，或通过单击**帮助**出现在对话框中的按钮。 帮助支持需要帮助编译器。 如果没有帮助编译器，可以通过运行安装程序来安装它。  
+ **Context-sensitive help (HTML)**  
+ Generates a set of help files for context-sensitive help, available by using F1 and a Help menu, or by clicking a **Help** button on a dialog box. Help support requires the help compiler. If you do not have the help compiler, you can install it by rerunning Setup.  
   
- 请参阅[HTML 帮助︰ 程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)和[帮助文件 （HTML 帮助）](../../ide/help-files-html-help.md)有关详细信息。  
+ See [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) and [Help Files (HTML Help)](../../ide/help-files-html-help.md) for more information.  
   
- **打印和打印预览**  
- 生成用于处理打印、 打印设置和打印预览命令通过调用成员函数中的代码[CView 类](../../mfc/reference/cview-class.md)从 MFC 库。 该向导也会向应用程序的菜单添加这些函数的命令。 仅对指定的应用程序提供了打印支持**文档/视图体系结构支持**中[应用程序类型、 MFC 应用程序向导](../../mfc/reference/application-type-mfc-application-wizard.md)向导页。 默认情况下，文档/视图应用程序具有打印支持。  
+ **Printing and print preview**  
+ Generates the code to handle the print, print setup and print preview commands by calling member functions in the [CView Class](../../mfc/reference/cview-class.md) from the MFC library. The wizard also adds commands for these functions to the application's menu. Printing support is available only for applications that specify **Document/view architecture support** in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the wizard. By default, document/view applications have printing support.  
   
- **自动化**  
- 指定应用程序可以处理在另一个应用程序中实现的对象，或者向自动化客户端公开应用程序。  
+ **Automation**  
+ Specifies that the application can handle objects that are implemented in another application, or exposes the application to Automation clients.  
   
- **ActiveX 控件**  
- 支持 ActiveX 控件（默认值）。 如果你不选择此选项和以后想要向项目中插入 ActiveX 控件，必须添加对的调用[AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer)应用程序中[CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)成员函数。  
+ **ActiveX controls**  
+ Supports ActiveX controls (default). If you do not select this option and later want to insert ActiveX controls into your project, you must add a call to [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) in your application's [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) member function.  
   
- **MAPI (消息传递 API)**  
- 指定应用程序可以创建、操作、传输和存储邮件。  
+ **MAPI (Messaging API)**  
+ Specifies that the application can create, manipulate, transfer, and store mail messages.  
   
- **Windows 套接字**  
- 支持 Windows 套接字，可以使用这些套接字编写通过 TCP/IP 网络进行通信的应用程序。  
+ **Windows sockets**  
+ Supports Windows sockets, which you can use to write applications that communicate over TCP/IP networks.  
   
  **Active Accessibility**  
- 添加了对支持[IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466)到[CWnd](../../mfc/reference/cwnd-class.md)-派生类，可以使用自定义与辅助功能客户端更好的交互的用户界面。  
+ Adds support for [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) to [CWnd](../../mfc/reference/cwnd-class.md)-derived classes, which you can use to customize the user interface for better interaction with accessibility clients.  
   
- **公共控件清单**  
- 默认情况下启用。 生成应用程序清单以启用 Microsoft Windows XP 或更新版本操作系统附带的公共控件 DLL。  
+ **Common Control Manifest**  
+ Enabled by default. Generates an application manifest to enable the Common Control DLL that is included with Microsoft Windows XP and newer operating systems.  
   
- 第 6 版公共控件 DLL 不自动更新现有应用程序所使用的早期版本的公共控件。 若要使用第 6 版公共控件 DLL，你必须创建一个指示应用程序加载 DLL 的应用程序清单。 此公共控件 DLL 还支持 Windows XP 主题。  
+ Version 6 of the Common Control DLL does not automatically update the earlier version of the Common Controls that your existing applications use. To use version 6 of the Common Control DLL, you must create an application manifest that directs your application to load the DLL. This Common Control DLL also supports the Windows XP themes.  
   
- 应用程序清单还可指定应用程序需要的其他 DLL 和版本。 有关应用程序清单的详细信息，请参阅[独立应用程序和通过并行程序集](http://msdn.microsoft.com/library/dd408052)中[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
+ An application manifest can also specify other DLLs and versions that your application needs. For more information about application manifests, see [Isolated Applications and Side-by-Side Assemblies](http://msdn.microsoft.com/library/dd408052) in the Windows SDK.  
   
- **支持重新启动管理器**  
- 添加了对支持[Windows 重新启动管理器](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx)。 此视频演示如何使用 MFC 中重新启动管理器︰[如何︰ 使用新的重新启动管理器](http://msdn.microsoft.com/vstudio/ee886407)。  
+ **Support Restart Manager**  
+ Adds support for the [Windows Restart Manager](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). This video shows how to use the Restart Manager from MFC: [How Do I: Use the New Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
   
- **高级的框架窗格**  
- |选项|描述|  
+ **Advanced frame panes**  
+ |Option|Description|  
 |------------|-----------------|  
-|**资源管理器停靠窗格**|创建一个类似于 Visual Studio 的停靠窗格**解决方案资源管理器**主框架窗口的左侧。|  
-|**输出停靠框架**|创建一个类似于 Visual Studio 的停靠窗格**输出**位于主框架窗口下的窗格。|  
-|**属性停靠窗格**|创建一个类似于 Visual Studio 的停靠窗格**属性**主框架窗口右侧的窗格。|  
-|**导航窗格中**|在主框架窗口的左侧创建一个类似于 Outlook 导航栏的停靠窗格。|  
-|**标题栏**|在主框架窗口的上方创建一个 Office 样式的标题栏。|  
+|**Explorer docking pane**|Creates a docking pane that resembles the Visual Studio **Solution Explorer** to the left of the main frame window.|  
+|**Output docking frame**|Creates a docking pane that resembles the Visual Studio **Output** pane that is located under the main frame window.|  
+|**Properties docking pane**|Creates a docking pane that resembles the Visual Studio **Properties** pane to the right of the main frame window.|  
+|**Navigation pane**|Creates a docking pane that resembles the Outlook navigation bar and is located to the left of the main frame window.|  
+|**Caption bar**|Creates an Office-style caption bar above the main frame window.|  
   
- **近期文件列表上的文件数量**  
- 指定要在最近使用的列表中列出的文件数。 默认数是 4。  
+ **Number of files on recent file list**  
+ Specifies the number of files to be listed on the most recently used list. The default number is 4.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

@@ -1,76 +1,95 @@
 ---
-title: "从 CObject 派生类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject 类, 派生自"
-  - "CObject 类, 派生可序列化类"
-  - "DECLARE_DYNAMIC 宏"
-  - "DECLARE_DYNCREATE 宏"
-  - "DECLARE_SERIAL 宏"
-  - "派生类, 从 CObject"
-  - "宏 [C++], 序列化"
-  - "序列化 [C++], 宏"
+title: Deriving a Class from CObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- DECLARE_DYNCREATE macro [MFC]
+- DECLARE_SERIAL macro [MFC]
+- macros [MFC], serialization
+- serialization [MFC], macros
+- DECLARE_DYNAMIC macro [MFC]
+- derived classes [MFC], from CObject
+- CObject class [MFC], deriving serializable classes
+- CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 从 CObject 派生类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e4313f4c84ede76206fb64ffb55cf5e9ba6e87f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这篇文章描述必须的最小的步骤来从[CObject](../mfc/reference/cobject-class.md)中继承类。  其他 `CObject` 类文章介绍的必要步骤来利用特定 `CObject` 功能，如序列化诊断和调试支持。  
+---
+# <a name="deriving-a-class-from-cobject"></a>Deriving a Class from CObject
+This article describes the minimum steps necessary to derive a class from [CObject](../mfc/reference/cobject-class.md). Other `CObject` class articles describe the steps needed to take advantage of specific `CObject` features, such as serialization and diagnostic debugging support.  
   
- 在开展 `CObject`的讨论中，术语“连接”文件，并且经常受到使用。“实现文件”。  接口文件 \(通常称为头文件。H 文件\) 包含必要的类声明和其他信息使用类。  实现文件 \(.cpp 或文件\) 包含类定义并实现类成员函数的代码。  例如，对于，类名为 `CPerson`，通常会创建一个名为 PERSON.H 的接口文件和实现文件名为 PERSON.CPP。  但是，对于不会在应用程序中共享这些小的类，将接口和实现到单个 .cpp 文件有时是更容易。  
+ In the discussions of `CObject`, the terms "interface file" and "implementation file" are used frequently. The interface file (often called the header file, or .H file) contains the class declaration and any other information needed to use the class. The implementation file (or .CPP file) contains the class definition as well as the code that implements the class member functions. For example, for a class named `CPerson`, you would typically create an interface file named PERSON.H and an implementation file named PERSON.CPP. However, for some small classes that will not be shared among applications, it is sometimes easier to combine the interface and implementation into a single .CPP file.  
   
- 可以从四层功能选择，当从 `CObject`派生类：  
+ You can choose from four levels of functionality when deriving a class from `CObject`:  
   
--   基本功能：支持的运行时类信息或序列化，但不包括诊断内存管理。  
+-   Basic functionality: No support for run-time class information or serialization but includes diagnostic memory management.  
   
--   基本功能和支持的运行时类信息。  
+-   Basic functionality plus support for run-time class information.  
   
--   基本功能和支持的运行时类信息和动态创建。  
+-   Basic functionality plus support for run-time class information and dynamic creation.  
   
--   基本功能和支持的运行时类信息和动态创建。  
+-   Basic functionality plus support for run-time class information, dynamic creation, and serialization.  
   
- 为后将用作基类\) 的重用的类 \(这些应至少包含运行时和类支持序列化支持，因此，如果任何将来的序列化需要预期。  
+ Classes designed for reuse (those that will later serve as base classes) should at least include run-time class support and serialization support, if any future serialization need is anticipated.  
   
- 您选择级别功能通过在您从 `CObject`派生该类的声明和实现的特定宏声明和实现。  
+ You choose the level of functionality by using specific declaration and implementation macros in the declaration and implementation of the classes you derive from `CObject`.  
   
- 下表显示了使用的宏。中的关系。支持序列化和运行时信息。  
+ The following table shows the relationship among the macros used to support serialization and run-time information.  
   
-### 用于序列化和运行时信息的宏  
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Macros Used for Serialization and Run-Time Information  
   
-|使用的宏。|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator\>\><br /><br /> CArchive::operator\<\<|  
-|-----------|-----------------------|--------------------------------------|-------------------------------------------------------|  
-|基本的 `CObject` 功能|否|否|否|  
-|`DECLARE_DYNAMIC`|是|否|否|  
-|`DECLARE_DYNCREATE`|是|是|否|  
-|`DECLARE_SERIAL`|是|是|是|  
+|Macro used|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator>><br /><br /> CArchive::operator<<|  
+|----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
+|Basic `CObject` functionality|No|No|No|  
+|`DECLARE_DYNAMIC`|Yes|No|No|  
+|`DECLARE_DYNCREATE`|Yes|Yes|No|  
+|`DECLARE_SERIAL`|Yes|Yes|Yes|  
   
-#### 使用基本的 CObject 功能  
+#### <a name="to-use-basic-cobject-functionality"></a>To use basic CObject functionality  
   
-1.  使用常规 C\+\+ 语法从 `CObject` 派生类 \(或从 `CObject`派生的类\)。  
+1.  Use the normal C++ syntax to derive your class from `CObject` (or from a class derived from `CObject`).  
   
-     下面的示例显示最简单的情况，一个从 `CObject`派生的类：  
+     The following example shows the simplest case, the derivation of a class from `CObject`:  
   
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/CPP/deriving-a-class-from-cobject_1.h)]  
+     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- 通常，但是，您也可能想重写某些 `CObject` 成员函数来处理新类的特定。  例如，您通常可能要重写 `CObject` 的 `Dump` 函数。类的内容提供调试输出。  有关如何重写 `Dump`的详细信息，请参见 [诊断：转储对象内容](http://msdn.microsoft.com/zh-cn/727855b1-5a83-44bd-9fe3-f1d535584b59)文章。  可能还要重写 `CObject` 的 `AssertValid` 函数提供自定义的测试验证类对象数据成员的一致性。  有关阐释如何重写 `AssertValid`，请参见 [MFC ASSERT\_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/zh-cn/7654fb75-9e9a-499a-8165-0a96faf2d5e6)。  
+ Normally, however, you may want to override some of `CObject`'s member functions to handle the specifics of your new class. For example, you may usually want to override the `Dump` function of `CObject` to provide debugging output for the contents of your class. For details on how to override `Dump`, see the article [Diagnostics: Dumping Object Contents](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59). You may also want to override the `AssertValid` function of `CObject` to provide customized testing to validate the consistency of the data members of class objects. For a description of how to override `AssertValid`, see [MFC ASSERT_VALID and CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
   
- 文章 [指定级别功能](../mfc/specifying-levels-of-functionality.md) 介绍如何指定其他级别功能，包括运行时信息类、动态对象创建并序列化。  
+ The article [Specifying Levels of Functionality](../mfc/specifying-levels-of-functionality.md) describes how to specify other levels of functionality, including run-time class information, dynamic object creation, and serialization.  
   
-## 请参阅  
- [使用 CObject](../mfc/using-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Using CObject](../mfc/using-cobject.md)
+
+

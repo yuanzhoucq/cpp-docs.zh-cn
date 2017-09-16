@@ -1,5 +1,5 @@
 ---
-title: "codecvt_utf8_utf16 | Microsoft 文档"
+title: codecvt_utf8_utf16 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- codecvt_utf8_utf16
 - codecvt/std::cvt_utf8_utf16
 dev_langs:
 - C++
@@ -34,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: e628eb145b52cd3ab9b1e36770363c34099c6cb4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4f733e9eb6d5ebafe2c01fe1d7cc801fef6f7e3a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
-表示在编码为 UTF-16 的宽字符和编码为 UTF-8 的字节流之间转换的 [locale](../standard-library/locale-class.md) facet。
+Represents a [locale](../standard-library/locale-class.md) facet that converts between wide characters encoded as UTF-16 and a byte stream encoded as UTF-8.
 
 ```
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
 class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>Parameters
 
 `Elem`  
-宽字符元素类型。  
+The wide-character element type.  
 `Maxcode`  
-区域设置 facet 的最大字符数。  
+The maximum number of characters for the locale facet.  
 `Mode`  
-配置区域设置 facet 的信息。  
+Configuration information for the locale facet.  
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>Remarks
 
-字节流可以写入二进制文件或文本文件。  
+The byte stream can be written to either a binary file or a text file.  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>Requirements
 
-标头：<codecvt> Namespace: std
+Header: <codecvt> Namespace: std
 

@@ -1,46 +1,65 @@
 ---
-title: "创建对话框资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对话框资源"
-  - "对话框模板, 创建对话框资源"
-  - "MFC 对话框, 创建"
-  - "MFC 对话框, 对话框资源"
-  - "资源 [MFC], 创建对话框"
-  - "模板, 创建"
+title: Creating the Dialog Resource | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog resources
+- MFC dialog boxes [MFC], creating
+- dialog templates [MFC], creating dialog resource
+- templates [MFC], creating
+- resources [MFC], creating dialog boxes
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 创建对话框资源
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af33a71f914e5e7545d9719bf2f620f3feb4faa7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要设计和 [对话框](../mfc/dialog-boxes.md) 创建对话框资源，可以使用 [对话框编辑器](../mfc/dialog-editor.md)。  在对话框编辑器中，可以：  
+---
+# <a name="creating-the-dialog-resource"></a>Creating the Dialog Resource
+To design the [dialog box](../mfc/dialog-boxes.md) and create the dialog resource, you use the [dialog editor](../windows/dialog-editor.md). In the dialog editor, you can:  
   
--   调整大小和位置，对话框将在何时出现。  
+-   Adjust the size and location your dialog box will have when it appears.  
   
--   将各个类型从调色板控件的控件并将它们在对话框的所需位置后。  
+-   Drag various kinds of controls from a controls palette and drop them where you want them in the dialog box.  
   
--   确定了对齐在工具栏按钮的控件。  
+-   Position the controls with alignment buttons on the toolbar.  
   
--   通过模拟它在程序将具有的外观和行为测试对话框。  在测试模式中，可以通过在文本框中键入的文本操作对话框的控件，单击按钮，等等。  
+-   Test your dialog box by simulating the appearance and behavior it will have in your program. In Test mode, you can manipulate the dialog box's controls by typing text in text boxes, clicking pushbuttons, and so on.  
   
- 当您完成时，对话框模板资源位于应用程序的资源脚本文件中。  如果需要可以编辑后它。  有关完整说明如何创建和编辑对话框资源，请参见 [对话框编辑器](../mfc/dialog-editor.md) 主题。  该技术也用于创和 [CFormView](../mfc/reference/cformview-class.md) [CRecordView](../mfc/reference/crecordview-class.md) 类的对话框模板资源。  
+ When you finish, your dialog-template resource is stored in your application's resource script file. You can edit it later if needed. For a full description of how to create and edit dialog resources, see the [dialog editor](../windows/dialog-editor.md) topics. This technique is also used to create the dialog-template resources for [CFormView](../mfc/reference/cformview-class.md) and [CRecordView](../mfc/reference/crecordview-class.md) classes.  
   
- 当对话框的外观与您时，请创建一对话框类并其消息，如 [创建带有代码向导的对话框类](../mfc/creating-a-dialog-class-with-code-wizards.md)所述。  
+ When the dialog box's appearance suits you, create a dialog class and map its messages, as discussed in [Creating a Dialog Class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md).  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

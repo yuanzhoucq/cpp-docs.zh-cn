@@ -1,5 +1,5 @@
 ---
-title: "CMFCListCtrl 类 |Microsoft 文档"
+title: CMFCListCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCListCtrl class
+- CMFCListCtrl [MFC], EnableMarkSortedColumn
+- CMFCListCtrl [MFC], EnableMultipleSort
+- CMFCListCtrl [MFC], GetHeaderCtrl
+- CMFCListCtrl [MFC], IsMultipleSort
+- CMFCListCtrl [MFC], OnCompareItems
+- CMFCListCtrl [MFC], OnGetCellBkColor
+- CMFCListCtrl [MFC], OnGetCellFont
+- CMFCListCtrl [MFC], OnGetCellTextColor
+- CMFCListCtrl [MFC], RemoveSortColumn
+- CMFCListCtrl [MFC], SetSortColumn
+- CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 caps.latest.revision: 29
 author: mikeblome
@@ -45,50 +55,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3a4c67b2d7ea2a5356f7c053403edf414319a928
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6270fa413b67b3237ee923d10217b168f0ddc33e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfclistctrl-class"></a>CMFCListCtrl 类
-`CMFCListCtrl`类扩展的功能[CListCtrl 类](../../mfc/reference/clistctrl-class.md)通过支持的高级标头控件功能的类[CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)。  
+# <a name="cmfclistctrl-class"></a>CMFCListCtrl Class
+The `CMFCListCtrl` class extends the functionality of [CListCtrl Class](../../mfc/reference/clistctrl-class.md) class by supporting the advanced header control functionality of the [CMFCHeaderCtrl Class](../../mfc/reference/cmfcheaderctrl-class.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCListCtrl : public CListCtrl  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|使能够将标记已的排序列具有不同的背景色。|  
-|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|启用多个排序模式。|  
-|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|返回对带下划线的标头控件的引用。|  
-|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|检查列表控件是否在多个排序模式。|  
-|[CMFCListCtrl::OnCompareItems](#oncompareitems)|它必须比较两个列表控件项时，由框架调用。|  
-|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|由框架调用时它必须确定单个单元格的背景色。|  
-|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|它必须获取所绘制的单元格的字体时由框架调用。|  
-|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|它必须确定单个单元格的文本颜色时由框架调用。|  
-|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|从排序的列的列表中删除列排序。|  
-|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|设置当前排的序列和排序顺序。|  
-|[CMFCListCtrl::Sort](#sort)|对排序列表控件。|  
+|[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Enables the ability to mark a sorted column with a different background color.|  
+|[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Enables multiple sort mode.|  
+|[CMFCListCtrl::GetHeaderCtrl](#getheaderctrl)|Returns a reference to the underlined header control.|  
+|[CMFCListCtrl::IsMultipleSort](#ismultiplesort)|Checks if the list control is in multiple sort mode.|  
+|[CMFCListCtrl::OnCompareItems](#oncompareitems)|Called by the framework when it must compare two list control items.|  
+|[CMFCListCtrl::OnGetCellBkColor](#ongetcellbkcolor)|Called by the framework when it must determine the background color of an individual cell.|  
+|[CMFCListCtrl::OnGetCellFont](#ongetcellfont)|Called by the framework when it must obtain the font for the cell being drawn.|  
+|[CMFCListCtrl::OnGetCellTextColor](#ongetcelltextcolor)|Called by the framework when it must determine the text color of an individual cell.|  
+|[CMFCListCtrl::RemoveSortColumn](#removesortcolumn)|Removes a sort column from the list of sorted columns.|  
+|[CMFCListCtrl::SetSortColumn](#setsortcolumn)|Sets the current sorted column and the sort order.|  
+|[CMFCListCtrl::Sort](#sort)|Sorts the list control.|  
   
-## <a name="remarks"></a>备注  
- `CMFCListCtrl`提供了两个增强功能到[CListCtrl 类](../../mfc/reference/clistctrl-class.md)类。 首先，它指示列排序是可用的选项通过自动在标头中绘制排序箭头。 其次，它支持同时对多个列进行排序的数据。  
+## <a name="remarks"></a>Remarks  
+ `CMFCListCtrl` offers two enhancements to [CListCtrl Class](../../mfc/reference/clistctrl-class.md) class. First, it indicates that column sorting is an available option by automatically drawing a sort arrow on the header. Second, it supports data sorting on multiple columns at the same time.  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCListCtrl`类。 该示例演示如何创建一个列表控件、 插入列、 插入项、 设置项的文本和设置列表控件的字体。 此代码段属于[Visual Studio 演示示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCListCtrl` class. The example shows how to create a list control, insert columns, insert items, set the text of an item, and set the font of the list control. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&25;](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_VisualStudioDemo #&26;](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -99,11 +109,11 @@ class CMFCListCtrl : public CListCtrl
   
  [CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxlistctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
- 将标记与不同的背景色排序的列。  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
+ Marks the sorted columns with a different background color.  
   
 ```  
 void EnableMarkSortedColumn(
@@ -111,58 +121,58 @@ void EnableMarkSortedColumn(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bMark`  
- 一个布尔型参数，用于确定是否启用不同的背景色。  
+ A Boolean parameter that determines whether to enable a different background color.  
   
  [in] `bRedraw`  
- 一个布尔型参数，用于确定是否要立即重绘控件。  
+ A Boolean parameter that determines whether to redraw the control immediately.  
   
-### <a name="remarks"></a>备注  
- `EnableMarkSortedColumn`使用方法`CDrawingManager::PixelAlpha`计算要使用的颜色已排序的列。 选取颜色取决于正则背景色。  
+### <a name="remarks"></a>Remarks  
+ `EnableMarkSortedColumn` uses the method `CDrawingManager::PixelAlpha` to calculate what color to use for sorted columns. The color picked is based upon the regular background color.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
- 启用按多个列进行排序的列表控件中的数据行。  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
+ Enables sorting the rows of data in the list control by multiple columns.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 一个布尔值，指定是否启用多个列排序模式。  
+ A Boolean that specifies whether to enable multiple column sort mode.  
   
-### <a name="remarks"></a>备注  
- 当您启用排序基于多个列时，列不必层次结构。 第一次将按主列排序的数据行。 任何等效值然后将通过每个后续的专栏基于优先级进行排序。  
+### <a name="remarks"></a>Remarks  
+ When you enable sorting based on multiple columns, the columns do have a hierarchy. The rows of data will first be sorted by the primary column. Any equivalent values are then sorted by each subsequent column based on priority.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
- 返回对标头控件的引用。  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
+ Returns a reference to the header control.  
   
 ```  
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对基础的引用[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)对象。  
+### <a name="return-value"></a>Return Value  
+ A reference to the underlying [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) object.  
   
-### <a name="remarks"></a>备注  
- 列表控件的标头控件是包含列标题的窗口。 它通常位于正上方的列。  
+### <a name="remarks"></a>Remarks  
+ The header control for a list control is the window that contains the titles for the columns. It is usually positioned directly above the columns.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
- 检查是否列表控件当前支持对多个列进行排序。  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
+ Checks whether the list control currently supports sorting on multiple columns.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果列表控件支持多个排序;`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the list control supports multiple sort; `FALSE` otherwise.  
   
-### <a name="remarks"></a>备注  
- 当[CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)支持多个排序，用户可以按多个列排序列表控件中的数据。 若要启用多个排序，请调用[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)。  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md) supports multiple sorting, the user can sort the data in the list control by multiple columns. To enable multiple sorting, call [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort).  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
- 比较两个项目时，框架将调用此方法。  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
+ The framework calls this method when it compares two items.  
   
 ```  
 virtual int OnCompareItems(
@@ -171,24 +181,24 @@ virtual int OnCompareItems(
     int iColumn);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lParam1`  
- 要比较的第一项。  
+ The first item to compare.  
   
  [in] `lParam2`  
- 要比较的第二项。  
+ The second item to compare.  
   
  [in] `iColumn`  
- 此方法进行排序的列的索引。  
+ The index of the column that this method is sorting.  
   
-### <a name="return-value"></a>返回值  
- 一个整数，指示两个项的相对位置。 负值表示第一项应在第二个之前放置、 正值表示第一项应遵循第二个零意味着将这两项是等效。  
+### <a name="return-value"></a>Return Value  
+ An integer that indicates the relative position of the two items. A negative value indicates that the first item should precede the second, positive value indicates that the first item should follow the second, and zero means that the two items are equivalent.  
   
-### <a name="remarks"></a>备注  
- 默认实现始终返回 0。 必须重写此函数可提供一种排序算法。  
+### <a name="remarks"></a>Remarks  
+ The default implementation always returns 0. You must override this function to provide a sorting algorithm.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
- 它必须确定单个单元格的背景色时，框架将调用此方法。  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
+ The framework calls this method when it must determine the background color of an individual cell.  
   
 ```  
 virtual COLORREF OnGetCellBkColor(
@@ -196,21 +206,21 @@ virtual COLORREF OnGetCellBkColor(
     int nColumn);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- 相关的单元的行。  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- 相关的单元的列。  
+ The column of the cell in question.  
   
-### <a name="return-value"></a>返回值  
- 一个`COLOREF`值，该值指定该单元格的背景色。  
+### <a name="return-value"></a>Return Value  
+ A `COLOREF` value that specifies the background color of the cell.  
   
-### <a name="remarks"></a>备注  
- 默认实现`OnGetCellBkColor`不使用所提供的输入的参数，而是只需调用`GetBkColor`。 因此，默认情况下，整个列表控件将具有相同的背景色。 您可以重写`OnGetCellBkColor`在派生类来标记使用不同的背景颜色的各个单元格。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of `OnGetCellBkColor` does not use the supplied input parameters and instead simply calls `GetBkColor`. Therefore, by default, the whole list control will have the same background color. You can override `OnGetCellBkColor` in a derived class to mark individual cells with a separate background color.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
- 获取单个单元格的字体时，框架将调用此方法。  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
+ The framework calls this method when it obtains the font for an individual cell.  
   
 ```  
 virtual HFONT OnGetCellFont(
@@ -219,24 +229,24 @@ virtual HFONT OnGetCellFont(
     DWORD dwData = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- 相关的单元的行。  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- 相关的单元的列。  
+ The column of the cell in question.  
   
  [in] `dwData`  
- 用户定义的数据。 默认实现不使用此参数。  
+ User-defined data. The default implementation does not use this parameter.  
   
-### <a name="return-value"></a>返回值  
- 指向用于对当前单元格的字体的句柄。  
+### <a name="return-value"></a>Return Value  
+ A handle to the font that is used for the current cell.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法返回`NULL`。 所有列表控件中的单元格都有相同的字体。 要为不同的单元格提供不同的字体，重写此方法。  
+### <a name="remarks"></a>Remarks  
+ By default, this method returns `NULL`. All of the cells in a list control have the same font. Override this method in order to provide different fonts for different cells.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
- 它必须确定单个单元格的文本颜色时，框架将调用此方法。  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
+ The framework calls this method when it must determine the text color of an individual cell.  
   
 ```  
 virtual COLORREF OnGetCellTextColor(
@@ -244,35 +254,35 @@ virtual COLORREF OnGetCellTextColor(
     int nColumn);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nRow`  
- 相关的单元的行。  
+ The row of the cell in question.  
   
  [in] `nColumn`  
- 相关的单元的列。  
+ The column of the cell in question.  
   
-### <a name="return-value"></a>返回值  
- 一个`COLOREF`值，该值指定该单元格的文本颜色。  
+### <a name="return-value"></a>Return Value  
+ A `COLOREF` value that specifies the text color of the cell.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法调用`GetTextColor`而不考虑输入参数。 整个列表控件将具有相同的文本颜色。 您可以重写`OnGetCellTextColor`派生的类将用单独的文本颜色的单个单元格标记中。  
+### <a name="remarks"></a>Remarks  
+ By default, this method calls `GetTextColor` regardless of input parameters. The whole list control will have the same text color. You can override `OnGetCellTextColor` in a derived class to mark individual cells with a separate text color.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
- 从排序的列的列表中删除列排序。  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
+ Removes a sort column from the list of sorted columns.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 要删除的列。  
+ The column to remove.  
   
-### <a name="remarks"></a>备注  
- 此方法从标头控件中删除列排序。 它将调用[CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)。  
+### <a name="remarks"></a>Remarks  
+ This method removes a sort column from the header control. It calls [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn).  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
- 设置当前排的序列和排序顺序。  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
+ Sets the current sorted column and the sort order.  
   
 ```  
 void SetSortColumn(
@@ -281,21 +291,21 @@ void SetSortColumn(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 要排序的列。  
+ The column to sort.  
   
  [in] `bAscending`  
- 一个布尔值，指定的排序顺序。  
+ A Boolean that specifies the sort order.  
   
  [in] `bAdd`  
- 一个布尔值，指定是否该方法将添加所指出的列`iColumn`到对列进行排序的列表。  
+ A Boolean that specifies whether the method adds the column indicated by `iColumn` to the list of sort columns.  
   
-### <a name="remarks"></a>备注  
- 此方法将传递输入的参数给标头控件使用的方法[CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)。  
+### <a name="remarks"></a>Remarks  
+ This method passes the input parameters to the header control by using the method [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
- 对排序列表控件。  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
+ Sorts the list control.  
   
 ```  
 virtual void Sort(
@@ -304,18 +314,18 @@ virtual void Sort(
     BOOL bAdd = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 要排序的列。  
+ The column to sort.  
   
  [in] `bAscending`  
- 一个布尔值，指定的排序顺序。  
+ A Boolean that specifies the sort order.  
   
  [in] `bAdd`  
- 一个布尔值，指定是否此方法中添加所指出的列`iColumn`到对列进行排序的列表。  
+ A Boolean that specifies whether this method adds the column indicated by `iColumn` to the list of sort columns.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CListCtrl 类](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

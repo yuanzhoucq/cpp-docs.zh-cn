@@ -1,108 +1,127 @@
 ---
-title: "MFC ActiveX 控件：本地化 ActiveX 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LocaleID"
-  - "AfxOleRegisterTypeLib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LocaleID ambient 属性"
-  - "本地化, ActiveX 控件"
-  - "LOCALIZE 示例 [MFC]"
-  - "MFC ActiveX 控件, 本地化"
+title: 'MFC ActiveX Controls: Localizing an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LocaleID
+- AfxOleRegisterTypeLib
+dev_langs:
+- C++
+helpviewer_keywords:
+- localization, ActiveX controls
+- MFC ActiveX controls [MFC], localizing
+- LocaleID ambient property [MFC]
+- LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC ActiveX 控件：本地化 ActiveX 控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b223ad97ce18882a5333a4f5d07501709796f4f0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文讨论本地化的 ActiveX 控件接口方法。  
+---
+# <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX Controls: Localizing an ActiveX Control
+This article discusses procedures for localizing ActiveX control interfaces.  
   
- 如果您想要为 ActiveX 控件的一种国际市场，可能需要本地化控件。  除了默认英语，包括、、法语和瑞典语，窗口支持多种语言。  如果其接口只，在英语控件便可能存在的问题。  
+ If you want to adapt an ActiveX control to an international market, you may want to localize the control. Windows supports many languages in addition to the default English, including German, French, and Swedish. This can present problems for the control if its interface is in English only.  
   
- 通常，ActiveX 控件总是应基于其区域设置 LocaleID 环境属性。  有三种方法可以实现此操作：  
+ In general, ActiveX controls should always base their locale on the ambient LocaleID property. There are three ways to do this:  
   
--   加载资源，始终按需，基于环境 LocaleID 属性的当前值。  MFC ActiveX 工具控件使用此策略。[本地化](../top/visual-cpp-samples.md)  
+-   Load resources, always on demand, based on the current value of the ambient LocaleID property. The MFC ActiveX controls sample [LOCALIZE](../visual-cpp-samples.md) uses this strategy.  
   
--   在第一个控件 LocaleID 基于环境属性是实例，并且，对于其他实例时，使用这些资源不加载资源。  本文演示此策略。  
-  
-    > [!NOTE]
-    >  如果将来的实例具有不同区域设置，这在某些情况下不会正确工作。  
-  
--   使用 **OnAmbientChanged** 函数通知动态加载容器的区域设置适当的资源。  
+-   Load resources when the first control is instanced, based on the ambient LocaleID property, and use these resources for all other instances. This article demonstrates this strategy.  
   
     > [!NOTE]
-    >  这对控件是有效，但运行时，DLL 将无法动态地更新其特定资源，在环境 LocaleID 属性更改。  此外，ActiveX 控件的运行时程 DLL 使用线程区域设置决定对其资源的区域设置。  
+    >  This will not work correctly in some cases, if future instances have different locales.  
   
- 本文的其余部分将介绍两本地化的策略。  第一种策略 [本地化控件的可编程接口](#_core_localizing_your_control.92.s_programmability_interface) \(属性、方法和事件的名称。\)  使用容器的环境 LocaleID 属性的第二个策略，[本地化控件的用户界面](#_core_localizing_the_control.92.s_user_interface)。  有关控件的本地化演示，请参见 [本地化](../top/visual-cpp-samples.md)。工具 MFC ActiveX 控件  
+-   Use the **OnAmbientChanged** notification function to dynamically load the proper resources for the container's locale.  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> 本地化控件的可编程接口  
- 在本地化控件的可编程接口 \(使用接口的程序员编写使用控件\) 的应用程序时，必须在控件 \(.idl 文件生成的控件类型的脚本库\) 修改生成每种要支持的语言。  这是需要本地化控件属性名的位置。  
+    > [!NOTE]
+    >  This will work for the control, but the run-time DLL will not dynamically update its own resources when the ambient LocaleID property changes. In addition, run-time DLLs for ActiveX controls use the thread locale to determine the locale for its resources.  
   
- 当您开发一个本地化的控件，包括区域设置 ID 为在类型库级别的特性。  例如，在中，如果要提供类型库以法语本地化的属性名称，请将复制 SAMPLE.IDL 文件，并将它 SAMPLEFR.IDL。  添加区域设置 ID 特性。文件 \(法语的区域设置 ID 0x040c 为\)，如下所示：  
+ The rest of this article describes two localizing strategies. The first strategy [localizes the control's programmability interface](#_core_localizing_your_control.92.s_programmability_interface) (names of properties, methods, and events). The second strategy [localizes the control's user interface](#_core_localizing_the_control.92.s_user_interface), using the container's ambient LocaleID property. For a demonstration of control localization, see the MFC ActiveX controls sample [LOCALIZE](../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_AxLoc#1](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_1.idl)]  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localizing the Control's Programmability Interface  
+ When localizing the control's programmability interface (the interface used by programmers writing applications that use your control), you must create a modified version of the control .IDL file (a script for building the control type library) for each language you intend to support. This is the only place you need to localize the control property names.  
   
- 将 SAMPLEFR.IDL 的属性命名为其等效的法语，然后使用 MKTYPLIB.EXE 生产法国类型库，SAMPLEFR.TLB。  
+ When you develop a localized control, include the locale ID as an attribute at the type library level. For example, if you want to provide a type library with French localized property names, make a copy of your SAMPLE.IDL file, and call it SAMPLEFR.IDL. Add a locale ID attribute to the file (the locale ID for French is 0x040c), similar to the following:  
   
- 若要创建多个本地化的类型库可以将所有本地化的 .idl 文件添加到项目，并会自动生成。  
+ [!code-cpp[NVC_MFC_AxLoc#1](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_1.idl)]  
   
-#### 将.IDL file添加到 MFC ActiveX 控件项目  
+ Change the property names in SAMPLEFR.IDL to their French equivalents, and then use MKTYPLIB.EXE to produce the French type library, SAMPLEFR.TLB.  
   
-1.  使控制项目打开，在**Project** 菜单，单击 **Add Existing Item**。  
+ To create multiple localized type libraries you can add any localized .IDL files to the project and they will be built automatically.  
   
-     将出现**“添加现有项”**对话框。  
+#### <a name="to-add-an-idl-file-to-your-activex-control-project"></a>To add an .IDL file to your ActiveX control project  
   
-2.  如果需要，选择驱动器和目录所示。  
+1.  With your control project open, on the **Project** menu, click **Add Existing Item**.  
   
-3.  在**“文件类型”**框中，选择**“所有文件\(\*.\*\)”**。  
+     The **Add Existing Item** dialog box appears.  
   
-4.  在文件列表框中，双击要插入到项目的 .idl 文件。  
+2.  If necessary, select the drive and directory to view.  
   
-5.  在添加了所有必需的 .idl 文件时，单击 **打开**。  
+3.  In the **Files of Type** box, select **All Files (\*.\*)**.  
   
- 由于文件添加到项目中，则将生成，在项目的其余生成。  本地化的类型库。当前 ActiveX 控件项目目录中。  
+4.  In the file list box, double-click the .IDL file you want to insert into the project.  
   
- 在代码内 \(通常，在英语\) 始终使用内部属性名而决不本地化。  这包括控件映射属性，调度交换函数和属性页数据交换的代码。  
+5.  Click **Open** when you have added all necessary .IDL files.  
   
- 只有一类型库 \(.tlb\) 文件能绑定到控件 \(实现 .ocx\) 文件中。  这通常与的标准化 \(通常，英语\) 名称的版本。  交付您需要支持 .ocx \(已绑定到的默认版本 .tlb\) 控件的本地化版本和相应的 .tlb 的区域设置。  这意味着只 .ocx 为英文版是必需的，因为正确的 .tlb 已绑定到它。  对于其他区域设置，还必须使用本地化的类型库。.ocx。  
+ Because the files have been added to the project, they will be built when the rest of the project is built. The localized type libraries are located in the current ActiveX control project directory.  
   
- 若要确保控件的客户可以找到本地化的类型库，请注册区域设置特定的 .tlb 文件的 Windows 系统注册表的 TypeLib 节下面。  为此提供第三个形参 \(通常可选\) [AfxOleRegisterTypeLib](../Topic/AfxOleRegisterTypeLib.md) 函数。  下面的示例注册 ActiveX 控件的、类型库：  
+ Within your code, the internal property names (usually in English) are always used and are never localized. This includes the control dispatch map, the property exchange functions, and your property page data exchange code.  
   
- [!code-cpp[NVC_MFC_AxLoc#2](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_2.cpp)]  
+ Only one type library (.TLB) file may be bound into the resources of the control implementation (.OCX) file. This is usually the version with the standardized (typically, English) names. To ship a localized version of your control you need to ship the .OCX (which has already been bound to the default .TLB version) and the .TLB for the appropriate locale. This means that only the .OCX is needed for English versions, since the correct .TLB has already been bound to it. For other locales, the localized type library also must be shipped with the .OCX.  
   
- 当控件注册时，`AfxOleRegisterTypeLib` 函数会自动找到目录中指定的 .tlb 文件与控件相同并注册它在 Windows 注册数据库。  如果 .tlb 文件未找到，函数不起作用。  
+ To ensure that clients of your control can find the localized type library, register your locale-specific .TLB file(s) under the TypeLib section of the Windows system registry. The third parameter (normally optional) of the [AfxOleRegisterTypeLib](../mfc/reference/registering-ole-controls.md#afxoleregistertypelib) function is provided for this purpose. The following example registers a French type library for an ActiveX control:  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a> 本地化控件的用户界面  
- 若要本地化控件的用户界面，请将所有控件的用户可见的资源 \(例如页属性和错误消息\) 为特定语言的资源 DLL。  然后可以使用容器的环境 LocaleID 属性选择用户的区域设置进行相应的 DLL。  
+ [!code-cpp[NVC_MFC_AxLoc#2](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_2.cpp)]  
   
- 下面的代码示例演示一种方法定位和加载特定区域设置的资源 DLL。  此成员函数，调用该示例的 `GetLocalizedResourceHandle`，可以为 ActiveX 控件类的成员函数：  
+ When your control is registered, the `AfxOleRegisterTypeLib` function automatically looks for the specified .TLB file in the same directory as the control and registers it in the Windows registration database. If the .TLB file is not found, the function has no effect.  
   
- [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_3.cpp)]  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> Localizing the Control's User Interface  
+ To localize a control's user interface, place all of the control's user-visible resources (such as property pages and error messages) into language-specific resource DLLs. You then can use the container's ambient LocaleID property to select the appropriate DLL for the user's locale.  
   
- 注意子语言 ID 能签入开关语句中每种情况，提供专用的本地化。  有关此函数的用途，请参见在 MFC ActiveX 工具控件示例 [本地化](../top/visual-cpp-samples.md)的 `GetResourceHandle` 函数。  
+ The following code example demonstrates one approach to locate and load the resource DLL for a specific locale. This member function, called `GetLocalizedResourceHandle` for this example, can be a member function of your ActiveX control class:  
   
- 在控件第一个将其本身加载到容器时，它可以调用 [COleControl::AmbientLocaleID](../Topic/COleControl::AmbientLocaleID.md) 检索区域设置 ID.  控件可以将返回的区域设置 ID 的值传递到 `GetLocalizedResourceHandle` 函数，加载合适的资源库。  控件应将生成的处理，如果存在，到 [AfxSetResourceHandle](../Topic/AfxSetResourceHandle.md):  
+ [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]  
   
- [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
+ Note that the sublanguage ID could be checked in each case of the switch statement, to provide more specialized localization. For a demonstration of this function, see the `GetResourceHandle` function in the MFC ActiveX controls sample [LOCALIZE](../visual-cpp-samples.md).  
   
- 将上面代码示例为控件的成员函数，例如 [COleControl::OnSetClientSite](../Topic/COleControl::OnSetClientSite.md)重写。  此外，`m_hResDLL` 应该是控件类中的成员变量。  
+ When the control first loads itself into a container, it can call [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) to retrieve the locale ID. The control can then pass the returned locale ID value to the `GetLocalizedResourceHandle` function, which loads the proper resource library. The control should pass the resulting handle, if any, to [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):  
   
- 可以为本地化控件的属性页使用类似的逻辑。  若要本地化属性页，请添加代码类似于下面的示例。实现属性页 \(文件在 [COlePropertyPage::OnSetPageSite](../Topic/COlePropertyPage::OnSetPageSite.md)重写\):  
+ [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/CPP/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
+ Place the code sample above into a member function of the control, such as an override of [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). In addition, `m_hResDLL` should be a member variable of the control class.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+ You can use similar logic for localizing a control's property page. To localize the property page, add code similar to the following sample to your property page's implementation file (in an override of [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
+  
+ [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

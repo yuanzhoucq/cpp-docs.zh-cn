@@ -1,5 +1,5 @@
 ---
-title: "uniform_int_distribution 类 | Microsoft Docs"
+title: uniform_int_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- uniform_int_distribution
 - random/std::uniform_int_distribution
 - random/std::uniform_int_distribution::reset
 - random/std::uniform_int_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- uniform_int_distribution class
+- std::uniform_int_distribution [C++]
+- std::uniform_int_distribution [C++], reset
+- std::uniform_int_distribution [C++], a
+- std::uniform_int_distribution [C++], b
+- std::uniform_int_distribution [C++], param
+- std::uniform_int_distribution [C++], min
+- std::uniform_int_distribution [C++], max
+- std::uniform_int_distribution [C++], param_type
+- std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
 caps.latest.revision: 20
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0555c6562ee987eab9eebc2e9e178a31cdf684e9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e06538cdd811df58e61d75c4fd2c5ff0fa4a4dcc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="uniformintdistribution-class"></a>uniform_int_distribution 类
-在包含起始值和结束值的输出范围中生成均匀的（每个值的概率都均等）整数分布。  
+# <a name="uniformintdistribution-class"></a>uniform_int_distribution Class
+Generates a uniform (every value is equally probable) integer distribution within an output range that is inclusive-inclusive.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class IntType = int>
    class uniform_int_distribution {
@@ -87,31 +94,31 @@ public:
    result_type max() const;
 };  
 ```  
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *IntType*  
-整数结果类型，默认为 `int`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>备注  
-模板类描述了包含起始值和结束值的分布，该分布使用某个分布产生用户指定的整型值，以便每个值的概率都均等。 下表链接到有关各个成员的文章。  
+## <a name="remarks"></a>Remarks  
+The template class describes an inclusive-inclusive distribution that produces values of a user-specified integral type with a distribution so that every value is equally probable. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
 |`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
-属性成员 `a()` 将返回分布当前存储的下限，而 `b()` 将返回当前存储的上限。 对于此分布类，这些最小值和最大值与常用属性函数 `min()` 和 `max()` 返回的值相同。  
+The property member `a()` returns the currently stored minimum bound of the distribution, while `b()` returns the currently stored maximum bound. For this distribution class, these minimum and maximum values are the same as those returned by the common property functions `min()` and `max()`.  
   
-属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 和 `max()` 成员函数将分别返回最小可能结果和最大可能结果。  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 成员函数将放弃所有缓存的值，使下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -189,13 +196,13 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
-构造分布。  
+Constructs the distribution.  
   
 ```  
 explicit uniform_int_distribution(
@@ -203,25 +210,25 @@ explicit uniform_int_distribution(
 explicit uniform_int_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *a*  
-随机值的下限（包含下限）。  
+The lower bound for random values, inclusive.  
   
 *b*  
-随机值的上限（包含上限）。  
+The upper bound for random values, inclusive.  
   
 *parm*  
-用于构造分布的 `param_type` 结构。  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>备注  
-**前提条件：**`a ≤ b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `a ≤ b`  
   
-第一个构造函数将构造一个对象，该对象存储的 `a` 值保留值 a，并且存储的 `b` 值保留值 b。  
+The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
   
-第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
-##  <a name="param_type"></a>uniform_int_distribution::param_type  
- 存储分布的参数。  
+##  <a name="param_type"></a>  uniform_int_distribution::param_type  
+ Stores the parameters of the distribution.  
 ```cpp  
 struct param_type {  
    typedef uniform_int_distribution<result_type> distribution_type;  
@@ -235,22 +242,22 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *a*  
-随机值的下限（包含下限）。  
+The lower bound for random values, inclusive.  
   
 *b*  
-随机值的上限（包含上限）。  
+The upper bound for random values, inclusive.  
   
 *right*  
-要与它进行比较的 `param_type` 对象。  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>备注  
-**前置条件：**`a ≤ b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `a ≤ b`  
   
-在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,52 +1,71 @@
 ---
-title: "ActiveX 控件容器：查看和修改控件属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件容器 [C++], 查看和修改属性"
-  - "ActiveX 控件 [C++], 属性"
-  - "控件 [MFC], 属性"
-  - "属性 [MFC], 查看和修改"
-  - "资源编辑器, 查看和修改 ActiveX 控件"
+title: 'ActiveX Control Containers: Viewing and Modifying Control Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], viewing and modifying
+- ActiveX control containers [MFC], viewing and modifying properties
+- resource editors, viewing and modifying ActiveX controls
+- ActiveX controls [MFC], properties
+- controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 控件容器：查看和修改控件属性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f147544230d135b89f208eef2aba8db9a31468f8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在插入 ActiveX 控件到项目时，查看和更改支持 ActiveX 控件的属性是很有用的。  本文讨论如何使用 Visual C\+\+ 资源编辑器执行此操作。  
+---
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX Control Containers: Viewing and Modifying Control Properties
+When you insert an ActiveX control into a project, it is useful to view and change the properties supported by the ActiveX control. This article discusses how to use the Visual C++ resource editor to do this.  
   
- 如果 ActiveX 控件容器应用程序使用嵌入的控件，当在资源编辑器中时可以查看和修改控件的属性。  在设计时，您可以使用资源编辑器设置属性值。  资源编辑器自动保存在项目资源文件的这些值。  控件的所有实例将使其属性初始化为这些值。  
+ If your ActiveX control container application uses embedded controls, you can view and modify the control's properties while in the resource editor. You can also use the resource editor to set property values during design time. The resource editor then automatically saves these values in the project's resource file. Any instance of the control will then have its properties initialized to these values.  
   
- 此过程假定，插入控件到项目中。  有关信息，请参见 [ActiveX 控件容器：插入一个控件表列控件容器应用程序](../mfc/inserting-a-control-into-a-control-container-application.md)。  
+ This procedure assumes that you have inserted a control into your project. For information, see [ActiveX Control Containers: Inserting a Control Into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md).  
   
- 演示控件的属性的第一步是将控件实例添加到项目的对话框模板。  
+ The first step in viewing the control's properties is to add an instance of the control to the project's dialog template.  
   
-### 演示用户控件的属性  
+### <a name="to-view-the-properties-of-a-control"></a>To view the properties of a control  
   
-1.  在资源视图中，打开 **对话框** 文件夹。  
+1.  In Resource View, open the **Dialog** folder.  
   
-2.  打开主对话框模板。  
+2.  Open your main dialog box template.  
   
-3.  使用 **插入 ActiveX 控件** 对话框插入 ActiveX 控件。  有关更多信息，请参见 [显示和 ActiveX 控件添加到对话框](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
+3.  Insert an ActiveX control using the **Insert ActiveX Control** dialog box. For more information, see [Viewing and Adding ActiveX Controls to a Dialog Box](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
-4.  选择对话框上的控件。  
+4.  Select the ActiveX control in the dialog box.  
   
-5.  在属性窗口中，单击 **属性**按钮。  
+5.  From the Properties window, click the **Properties** button.  
   
- 使用**属性** 对话框立即修改和测试新属性。  
+ Use the **Properties** dialog box to modify and test new properties immediately.  
   
-## 请参阅  
- [ActiveX 控件容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

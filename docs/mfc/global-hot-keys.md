@@ -1,36 +1,55 @@
 ---
-title: "全局热键 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "访问键 [C++], 热键"
-  - "CHotKeyCtrl 类, 全局热键"
-  - "全局热键"
-  - "键盘快捷键 [C++], 热键"
+title: Global Hot Keys | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard shortcuts [MFC], hot keys
+- CHotKeyCtrl class [MFC], global hot keys
+- access keys [MFC], hot keys
+- global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 全局热键
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f6c5a5f8a3a13b0d75d7d20c8d3ce20c564880fc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-全局热键与特定 nonchild 窗口。  它允许用户激活该系统的任何部分的窗口。  应用程序 [WM\_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) 通过发送消息设置特定窗口的全局热键到该窗口。  例如，在中，如果 `m_HotKeyCtrl` 为 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) 对象，`pMainWnd` 是指向窗口中激活，则这些热键按下时，可以使用以下代码将指定控件中的热键与 Windows 指向的 `pMainWnd`。  
+---
+# <a name="global-hot-keys"></a>Global Hot Keys
+A global hot key is associated with a particular nonchild window. It allows the user to activate the window from any part of the system. An application sets a global hot key for a particular window by sending the [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) message to that window. For instance, if `m_HotKeyCtrl` is the [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) object and `pMainWnd` is a pointer to the window to be activated when the hot key is pressed, you could use the following code to associate the hot key specified in the control with the window pointed to by `pMainWnd`.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/CPP/global-hot-keys_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]  
   
- 每当用户按全局热键，指定的窗口收到指定 **SC\_HOTKEY** 作为命令类型的消息。[WM\_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) 接收到此消息还可以激活的窗口。  由于此消息不包括有关按下的确切键的任何信息，使用该方法不允许区分可以附加到同一窗口的区别热键之间。  热键仍保持有效直至发送 **WM\_SETHOTKEY** 退出的应用程序。  
+ Whenever the user presses a global hot key, the window specified receives a [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) message that specifies **SC_HOTKEY** as the type of the command. This message also activates the window that receives it. Because this message does not include any information on the exact key that was pressed, using this method does not allow distinguishing between different hot keys that may be attached to the same window. The hot key remains valid until the application that sent **WM_SETHOTKEY** exits.  
   
-## 请参阅  
- [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

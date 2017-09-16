@@ -1,5 +1,5 @@
 ---
-title: "&lt;string&gt; 函数 | Microsoft Docs"
+title: '&lt;string&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,14 +24,27 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 41a8dd5345b1e857abbd1cd5586a1fabd400eca4
+helpviewer_keywords:
+- std::getline [C++]
+- std::stod [C++]
+- std::stof [C++]
+- std::stoi [C++]
+- std::stol [C++]
+- std::stold [C++]
+- std::stoll [C++]
+- std::stoul [C++]
+- std::stoull [C++]
+- std::swap [C++]
+- std::to_string [C++]
+- std::to_wstring [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 19db8720226e00c48aa433af963f67b2ae655c7a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltstringgt-functions"></a>&lt;string&gt; 函数
+# <a name="ltstringgt-functions"></a>&lt;string&gt; functions
 ||||  
 |-|-|-|  
 |[getline](#getline)|[stod](#stod)|[stof](#stof)|  
@@ -40,7 +53,7 @@ ms.lasthandoff: 04/29/2017
 |[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|  
   
 ##  <a name="getline"></a>  getline  
- 将字符串从输入流中一行一行地提取出来。  
+ Extract strings from the input stream line-by-line.  
   
 ```  
 // (1) delimiter as parameter  
@@ -71,44 +84,44 @@ basic_istream<Allocator, Traits>& getline(
     basic_string<Allocator, Traits, Allocator>& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `is`  
- 要从其中提取字符串的输入流。  
+ The input stream from which a string is to be extracted.  
   
  `str`  
- 从输入流读取的字符将放入的字符串。  
+ The string into which are read the characters from the input stream.  
   
  `delim`  
- 行分隔符。  
+ The line delimiter.  
   
-### <a name="return-value"></a>返回值  
- 输入流 `is`。  
+### <a name="return-value"></a>Return Value  
+ The input stream `is`.  
   
-### <a name="remarks"></a>备注  
- 标记为 `(1)` 的一对函数签名从 `is` 中提取字符，直到找到 `delim`，同时将它们存储在 `str` 中。  
+### <a name="remarks"></a>Remarks  
+ The pair of function signatures marked `(1)` extract characters from `is` until `delim` is found, storing them in `str`.  
   
- 这对标记为 `(2)` 的函数签名使用换行符作为默认行分隔符，并且像 **getline**(`is`、`str`、`is` 那样执行。 `widen`(' `\n`')).  
+ The pair of function signatures marked `(2)` use newline as the default line delimiter and behave as **getline**( `is`, `str`, `is`. `widen`(' `\n`')).  
   
- 每对函数中的第二个函数是第一个的模拟，它的作用是支持 [rvalue 引用](../cpp/lvalues-and-rvalues-visual-cpp.md)。  
+ The second function of each pair is an analog to the first one to support [rvalue references](../cpp/lvalues-and-rvalues-visual-cpp.md).  
   
- 发生下列情况之一时，提取将停止：  
+ Extraction stops when one of the following occurs:  
   
--   在文件尾的情况下，`is` 的内部状态标志被设置为 `ios_base::eofbit`。  
+-   At end-of-file, in which case the internal state flag of `is` is set to `ios_base::eofbit`.  
   
--   函数提取了与 **delim** 比较相等的元素后，既不放回该元素，也不会将它追加到受控序列。  
+-   After the function extracts an element that compares equal to **delim**, in which case the element is neither put back nor appended to the controlled sequence.  
   
--   函数提取了 `str.`[max_size](../standard-library/basic-string-class.md#max_size) 元素后，`is` 的内部状态标志被设置为 `ios_base::failbit`。  
+-   After the function extracts `str.`[max_size](../standard-library/basic-string-class.md#max_size) elements, in which case the internal state flag of `is` is set to `ios_base::failbit`.  
   
--   除了前面所列的错误，在其他错误情况下，`is` 被设置为 `ios_base::badbit`  
+-   Some other error other than those previously listed, in which case the internal state flag of `is` is set to `ios_base::badbit`  
   
- 有关内部状态标志的信息，请参阅 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
+ For information about internal state flags, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
- 如果函数没有提取任何元素，则 `is` 的内部状态标志被设置为 `ios_base::failbit`。 在任何情况下，`getline` 返回 `is`。  
+ If the function extracts no elements, the internal state flag of `is` is set to `ios_base::failbit`. In any case, `getline` returns `is`.  
   
- 如果引发了异常，`is` 和 `str` 将处于异常状态。  
+ If an exception is thrown, `is` and `str` are left in a valid state.  
   
-### <a name="example"></a>示例  
-  以下代码演示两种模式下的 `getline()`：第一种使用默认分隔符（换行），第二种使用空格作为分隔符。 文件尾字符（键盘上的 CTRL-Z）用于控制 while 循环的终止。 这会将 `cin` 的内部状态标志设置为 `eofbit`，后者必须使用 [basic_ios::clear()](../standard-library/basic-ios-class.md#clear) 进行消除，这样第二个 while 循环才能正确运行。  
+### <a name="example"></a>Example  
+  The following code demonstrates `getline()` in two modes: first with the default delimiter (newline) and second with a whitespace as delimiter. The end-of-file character (CTRL-Z on the keyboard) is used to control termination of the while loops. This sets the internal state flag of `cin` to `eofbit`, which must be cleared with [basic_ios::clear()](../standard-library/basic-ios-class.md#clear) before the second while loop will work properly.  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -151,7 +164,7 @@ int main()
 ```  
   
 ##  <a name="stod"></a>  stod  
- 将字符序列转换为 `double`。  
+ Converts a character sequence to a `double`.  
   
 ```  
 double stod(
@@ -164,21 +177,21 @@ double stod(
 ;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
   
-### <a name="return-value"></a>返回值  
- `double` 值。  
+### <a name="return-value"></a>Return Value  
+ The `double` value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `double`，就像通过调用 `strtod( str.c_str(), _Eptr)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `double` as if by calling `strtod( str.c_str(), _Eptr)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
 ##  <a name="stof"></a>  stof  
- 将字符序列转换为浮动的。  
+ Converts a character sequence to a float.  
   
 ```  
 float stof(
@@ -190,21 +203,21 @@ float stof(
     size_t* idx = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
   
-### <a name="return-value"></a>返回值  
- 浮动值。  
+### <a name="return-value"></a>Return Value  
+ The float value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `float`，就像通过调用 `strtof( str.c_str(), _Eptr)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `float` as if by calling `strtof( str.c_str(), _Eptr)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
 ##  <a name="stoi"></a>  stoi  
- 将字符序列转换为整数。  
+ Converts a character sequence to an integer.  
   
 ```  
 int stoi(
@@ -218,26 +231,26 @@ int stoi(
     int base = 10);
 ```  
   
-### <a name="return-value"></a>返回值  
- 整数值。  
+### <a name="return-value"></a>Return Value  
+ The integer value.  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|返回时包含首个未转换字符的索引。|  
-|`base`|要使用的号码基。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|Contains the index of the first unconverted character on return.|  
+|`base`|The number base to use.|  
   
-### <a name="remarks"></a>备注  
- 函数 `stoi` 将 `str` 中字符的序列转换为 `int` 类型的值并返回该值。 例如，在传递字符序列“10”时，`stoi` 返回的值为整数 10.  
+### <a name="remarks"></a>Remarks  
+ The function `stoi` converts the sequence of characters in `str` to a value of type `int` and returns the value. For example, when passed a character sequence "10", the value returned by `stoi` is the integer 10.  
   
- 当以 `stoi` 方式调用时，`strtol` 的行为方式与针对单字节字符的 `strtol( str.c_str(), _Eptr, idx)` 函数相似，其中，`_Eptr` 是函数的内部对象；而当以类似的方式 `wcstol` 调用时，其行为与针对宽字符的 `wcstol(Str.c_str(), _Eptr, idx)` 相似。 有关详细信息，请参阅 [strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)。  
+ `stoi` behaves similarly to the function `strtol` for single-byte characters when it is called in the manner `strtol( str.c_str(), _Eptr, idx)`, where `_Eptr` is an object internal to the function; or `wcstol` for wide characters, when it is called in similar manner, `wcstol(Str.c_str(), _Eptr, idx)`. For more information, see [strtol, wcstol, _strtol_l, _wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md).  
   
- 如果`str.c_str() == *_Eptr`，`stoi`引发类型的对象`invalid_argument`。 如果此类调用将设置 `errno`，或者如果返回值无法表示为 `int` 类型的对象，则它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr - str.c_str()` 存储在 `*idx` 中。  
+ If `str.c_str() == *_Eptr`, `stoi` throws an object of type `invalid_argument`. If such a call would set `errno`, or if the returned value cannot be represented as an object of type `int`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr - str.c_str()` in `*idx`.  
   
 ##  <a name="stol"></a>  stol  
- 将字符序列转换为 `long`。  
+ Converts a character sequence to a `long`.  
   
 ```  
 long stol(
@@ -251,22 +264,22 @@ long stol(
     int base = 10);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
-|`base`|要使用的号码基。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
+|`base`|The number base to use.|  
   
-### <a name="return-value"></a>返回值  
- 长整数的值。  
+### <a name="return-value"></a>Return Value  
+ The long-integer value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `long`，就像通过调用 `strtol( str.c_str(), _Eptr, idx)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `long` as if by calling `strtol( str.c_str(), _Eptr, idx)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
 ##  <a name="stold"></a>  stold  
- 将字符序列转换为 `long double`。  
+ Converts a character sequence to a `long double`.  
   
 ```  
 double stold(
@@ -278,21 +291,21 @@ double stold(
     size_t* idx = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
   
-### <a name="return-value"></a>返回值  
- `long double` 值。  
+### <a name="return-value"></a>Return Value  
+ The `long double` value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `long double`，就像通过调用 `strtold( str.c_str(), _Eptr)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `long double` as if by calling `strtold( str.c_str(), _Eptr)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
 ##  <a name="stoll"></a>  stoll  
- 将字符序列转换为 `long long`。  
+ Converts a character sequence to a `long long`.  
   
 ```  
 long long stoll(
@@ -306,22 +319,22 @@ long long stoll(
     int base = 10);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
-|`base`|要使用的号码基。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
+|`base`|The number base to use.|  
   
-### <a name="return-value"></a>返回值  
- `long long` 值。  
+### <a name="return-value"></a>Return Value  
+ The `long long` value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `long long`，就像通过调用 `strtoll( str.c_str(), _Eptr, idx)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `long long` as if by calling `strtoll( str.c_str(), _Eptr, idx)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
 ##  <a name="stoul"></a>  stoul  
- 将字符序列转换为无符号长整数。  
+ Converts a character sequence to an unsigned long.  
   
 ```  
 unsigned long stoul(
@@ -335,22 +348,22 @@ unsigned long stoul(
     int base = 10);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
-|`base`|要使用的号码基。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
+|`base`|The number base to use.|  
   
-### <a name="return-value"></a>返回值  
- 无符号长整数的值。  
+### <a name="return-value"></a>Return Value  
+ The unsigned long-integer value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `unsigned long`，就像通过调用 `strtoul( str.c_str(), _Eptr, idx)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `unsigned long` as if by calling `strtoul( str.c_str(), _Eptr, idx)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
 ##  <a name="stoull"></a>  stoull  
- 将字符序列转换为 `unsigned long long`。  
+ Converts a character sequence to an `unsigned long long`.  
   
 ```  
 unsigned long long stoull(
@@ -364,39 +377,39 @@ unsigned long long stoull(
     int base = 10);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`str`|要转换的字符序列。|  
-|`idx`|首个未转换字符的索引值。|  
-|`base`|要使用的号码基。|  
+|`str`|The character sequence to be converted.|  
+|`idx`|The index value of the first unconverted character.|  
+|`base`|The number base to use.|  
   
-### <a name="return-value"></a>返回值  
- `unsigned long long` 值。  
+### <a name="return-value"></a>Return Value  
+ The `unsigned long long` value.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `str` 中元素的序列转换为类型 `val` 的值 `unsigned long long`，就像通过调用 `strtoull( str.c_str(), _Eptr, idx)` 实现一样，其中，`_Eptr` 是该函数的内部对象。 如果 ` str.c_str() == *_Eptr`，它将引发 `invalid_argument` 类型的对象。 如果此类调用将设置 `errno`，它将引发 `out_of_range` 类型的对象。 否则，如果 `idx` 不是 null 指针，该函数会将 `*_Eptr -  str.c_str()` 存储在 `*idx` 中并返回 `val`。  
+### <a name="remarks"></a>Remarks  
+ The function converts the sequence of elements in `str` to a value `val` of type `unsigned long long` as if by calling `strtoull( str.c_str(), _Eptr, idx)`, where `_Eptr` is an object internal to the function. If ` str.c_str() == *_Eptr` it throws an object of type `invalid_argument`. If such a call would set `errno`, it throws an object of type `out_of_range`. Otherwise, if `idx` is not a null pointer, the function stores `*_Eptr -  str.c_str()` in `*idx` and returns `val`.  
   
-##  <a name="swap"></a>swap  
- 交换两个字符串的字符数组。  
+##  <a name="swap"></a>  swap  
+ Exchanges the arrays of characters of two strings.  
   
 ```  
 template <class Traits, class Allocator>  
 void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要与另一个字符串交换元素的字符串。  
+ One string whose elements are to be swapped with those of another string.  
   
  `right`  
- 要与第一个字符串交换元素的另一个字符串。  
+ The other string whose elements are to be swapped with the first string.  
   
-### <a name="remarks"></a>备注  
- 该模板函数执行专用的成员函数*左*。[交换](../standard-library/basic-string-class.md#swap)(*右*) 字符串，可保证恒定的复杂性。  
+### <a name="remarks"></a>Remarks  
+ The template function executes the specialized member function *left*.[swap](../standard-library/basic-string-class.md#swap)(*right*) for strings, which guarantees constant complexity.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_swap.cpp  
@@ -432,7 +445,7 @@ The basic_string s2 = Tweedledee.
 ```  
   
 ##  <a name="to_string"></a>  to_string  
- 将一个值转换为 `string`。  
+ Converts a value to a `string`.  
   
 ```  
 string to_string(int Val);
@@ -446,38 +459,38 @@ string to_string(double Val);
 string to_string(long double Val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Val`|要转换的值。|  
+|`Val`|The value to be converted.|  
   
-### <a name="return-value"></a>返回值  
- 表示该值的 `string`。  
+### <a name="return-value"></a>Return Value  
+ The `string` that represents the value.  
   
-### <a name="remarks"></a>备注  
- 此函数可将 `Val` 转换为存储在函数内部数组对象 `Buf` 中的元素序列，就像调用 `sprintf(Buf, Fmt, Val)` 一样，其中 `Fmt` 是  
+### <a name="remarks"></a>Remarks  
+ The function converts `Val` to a sequence of elements stored in an array object `Buf` internal to the function as if by calling `sprintf(Buf, Fmt, Val)`, where `Fmt` is  
   
-- `"%d"`，如果 `Val` 具有类型 `int`  
+- `"%d"` if `Val` has type `int`  
   
-- `"%u"`，如果 `Val` 具有类型 `unsigned int`  
+- `"%u"` if `Val` has type `unsigned int`  
   
-- `"%ld"`，如果 `Val` 具有类型 `long`  
+- `"%ld"` if `Val` has type `long`  
   
-- `"%lu"`，如果 `Val` 具有类型 `unsigned long`  
+- `"%lu"` if `Val` has type `unsigned long`  
   
-- `"%lld"`，如果 `Val` 具有类型 `long long`  
+- `"%lld"` if `Val` has type `long long`  
   
-- `"%llu"`，如果 `Val` 具有类型 `unsigned long long`  
+- `"%llu"` if `Val` has type `unsigned long long`  
   
-- `"%f"`，如果 `Val` 具有类型 `float` 或 `double`  
+- `"%f"` if `Val` has type `float` or `double`  
   
-- `"%Lf"`，如果 `Val` 具有类型 `long double`  
+- `"%Lf"` if `Val` has type `long double`  
   
- 该函数返回 `string(Buf)`。  
+ The function returns `string(Buf)`.  
   
 ##  <a name="to_wstring"></a>  to_wstring  
- 将一个值转换为宽字符串。  
+ Converts a value to a wide string.  
   
 ```  
 wstring to_wstring(int Val);
@@ -491,37 +504,37 @@ wstring to_wstring(double Val);
 wstring to_wstring(long double Val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Val`|要转换的值。|  
+|`Val`|The value to be converted.|  
   
-### <a name="return-value"></a>返回值  
- 表示该值的宽字符串。  
+### <a name="return-value"></a>Return Value  
+ The wide string that represents the value.  
   
-### <a name="remarks"></a>备注  
- 此函数可将 `Val` 转换为存储在函数内部数组对象 `Buf` 中的元素序列，就像调用 `swprintf(Buf, Len, Fmt, Val)` 一样，其中 `Fmt` 是  
+### <a name="remarks"></a>Remarks  
+ The function converts `Val` to a sequence of elements stored in an array object `Buf` internal to the function as if by calling `swprintf(Buf, Len, Fmt, Val)`, where `Fmt` is  
   
-- `L"%d"`，如果 `Val` 具有类型 `int`  
+- `L"%d"` if `Val` has type `int`  
   
-- `L"%u"`，如果 `Val` 具有类型 `unsigned int`  
+- `L"%u"` if `Val` has type `unsigned int`  
   
-- `L"%ld"`，如果 `Val` 具有类型 `long`  
+- `L"%ld"` if `Val` has type `long`  
   
-- `L"%lu"`，如果 `Val` 具有类型 `unsigned long`  
+- `L"%lu"` if `Val` has type `unsigned long`  
   
-- `L"%lld"`，如果 `Val` 具有类型 `long long`  
+- `L"%lld"` if `Val` has type `long long`  
   
-- `L"%llu"`，如果 `Val` 具有类型 `unsigned long long`  
+- `L"%llu"` if `Val` has type `unsigned long long`  
   
-- `L"%f"`，如果 `Val` 具有类型 `float` 或 `double`  
+- `L"%f"` if `Val` has type `float` or `double`  
   
-- `L"%Lf"`，如果 `Val` 具有类型 `long double`  
+- `L"%Lf"` if `Val` has type `long double`  
   
- 该函数返回 `wstring(Buf)`。  
+ The function returns `wstring(Buf)`.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)
 
 

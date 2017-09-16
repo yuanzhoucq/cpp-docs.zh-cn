@@ -1,5 +1,5 @@
 ---
-title: "创建 Web 浏览器样式的 MFC 应用程序 |Microsoft 文档"
+title: Creating a Web Browser-Style MFC Application | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - MFC, Web applications
 - Web browsers, creating from MFC architecture
 - Web browsers
-- Web applications, creating
+- Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
 caps.latest.revision: 9
 author: mikeblome
@@ -36,36 +36,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: da53bdff088c336b0e7eb33c49025ec0a48675f2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f653db3b9423e88fa1071d936e6dd6656a9e743d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
-Web 浏览器样式的应用程序可以在本地文件系统中和网络上从 （如 HTML 或活动文档） Internet 或 intranet，以及文件夹访问信息。 通过派生从应用程序的视图类[CHtmlView](../../mfc/reference/chtmlview-class.md)，从而有效 Web 浏览器视图提供 WebBrowser 控件使应用程序。  
+# <a name="creating-a-web-browser-style-mfc-application"></a>Creating a Web Browser-Style MFC Application
+A Web browser-style application can access information from the Internet (such as HTML or active documents) or an intranet, as well as folders in the local file system and on a network. By deriving the application's view class from [CHtmlView](../../mfc/reference/chtmlview-class.md), effectively you make the application a Web browser by providing the view with the WebBrowser control.  
   
-### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>创建 Web 浏览器应用程序基于 MFC 文档/视图体系结构  
+### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>To create a Web browser application based on the MFC document/view architecture  
   
-1.  按照中的说明[创建 MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)。  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  在 MFC 应用程序向导[应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md)页上，确保**文档/视图体系结构**框为选中状态。 (你可以任选一个**单个文档**或**多个文档**，但不是**对话框基于**。)  
+2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, make certain that the **Document/view architecture** box is selected. (You can choose either **Single document** or **Multiple documents**, but not **Dialog based**.)  
   
-3.  上[查看生成的类](../../mfc/reference/generated-classes-mfc-application-wizard.md)页上，使用**基类**下拉列表菜单选择`CHtmlView`。  
+3.  On the [Review Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page, use the **Base class** drop-down menu to select `CHtmlView`.  
   
-4.  选择任何其他所需的选项内置主干应用程序。  
+4.  Select any other options you want built into the skeleton application.  
   
-5.  单击 **“完成”**。  
+5.  Click **Finish**.  
   
- WebBrowser 控件支持 Web 浏览的超链接和统一资源定位器 (URL) 导航。 控件维护历史记录列表，用户可以浏览向前和向后通过以前浏览站点、 文件夹和文档。 该控件直接处理导航、 超链接、 历史记录列表、 收藏夹以及安全。 应用程序可以使用 web 浏览器控件作为对主机活动文档的活动文档容器。 因此，将在了格式丰富的文档，如 Microsoft Excel 电子表格或 Word 文档打开和编辑在 WebBrowser 控件中从位置。 WebBrowser 控件也是可以承载任何 ActiveX 控件的 ActiveX 控件容器。  
+ The WebBrowser control supports Web browsing through hyperlinks and Uniform Resource Locator (URL) navigation. The control maintains a history list that allows the user to browse forward and backward through previously browsed sites, folders, and documents. The control directly handles the navigation, hyperlinks, history lists, favorites, and security. Applications can use the WebBrowser control as an active document container to host active documents as well. Thus, richly formatted documents such as Microsoft Excel spreadsheets or Word documents can be opened and edited in place from within the WebBrowser control. The WebBrowser control is also an ActiveX control container that can host any ActiveX control.  
   
 > [!NOTE]
->  WebBrowser ActiveX 控件 (因此`CHtmlView`) 仅供的 Internet Explorer 4.0 版的 Windows 版本下运行的应用程序或更高版本已安装。  
+>  The WebBrowser ActiveX control (and therefore `CHtmlView`) is available only to applications running under Windows versions in which Internet Explorer 4.0 or later has been installed.  
   
- 因为`CHtmlView`只需实现 Microsoft Web 浏览器控件，它的支持，用于打印不像其他[CView](../../mfc/reference/cview-class.md)-派生类。 相反，web 浏览器控件实现的打印机用户界面和打印。 因此，`CHtmlView`未不支持打印预览，和 framework 不提供其他打印支持函数︰ 例如， [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)， [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)，和[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)，这是其他 MFC 应用程序中可用。  
+ Because `CHtmlView` simply implements the Microsoft Web browser control, its support for printing is not like other [CView](../../mfc/reference/cview-class.md)-derived classes. Rather, the WebBrowser control implements the printer user interface and printing. As a result, `CHtmlView` does not support print preview, and the framework does not provide for other printing support functions: for example, [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), and [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), which are available in other MFC applications.  
   
- `CHtmlView`作为为 Web 浏览器控件，这将使你的应用程序到 Web 或 HTML 页的视图的包装。 该向导创建的重写[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)在视图类中，提供到 Microsoft Visual c + + Web 站点的导航链接的函数︰  
+ `CHtmlView` acts as a wrapper for the Web browser control, which gives your application a view onto a Web or an HTML page. The wizard creates an override to the [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) function in the view class, providing a navigational link to the Microsoft Visual C++ Web site:  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -80,7 +80,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
- 您可以使用你自己的替换此站点，或者可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成员函数以打开位于项目的资源脚本作为视图的默认内容一个 HTML 页。 例如:   
+ You can replace this site with one of your own, or you can use the [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) member function to open an HTML page that resides in the project's resource script as the default content for the view. For example:  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -93,12 +93,12 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 MFCIE](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
- [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
- [使用项目属性](../../ide/working-with-project-properties.md)   
- [属性页](../../ide/property-pages-visual-cpp.md)   
- [使用项目属性](../../ide/working-with-project-properties.md)   
- [部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MFCIE](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Working with Project Properties](../../ide/working-with-project-properties.md)   
+ [Property Pages](../../ide/property-pages-visual-cpp.md)   
+ [Working with Project Properties](../../ide/working-with-project-properties.md)   
+ [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 
 

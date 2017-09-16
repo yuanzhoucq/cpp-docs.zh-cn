@@ -1,5 +1,5 @@
 ---
-title: "discard_block_engine 类 | Microsoft 文档"
+title: discard_block_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discard_block_engine
 - random/std::discard_block_engine
 dev_langs:
 - C++
@@ -34,51 +33,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: b770c9b353f126939a1d70c195b9cc421cb2e06e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f98da1248f00e34f3660f613e5a95b8ffc101c56
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discardblockengine-class"></a>discard_block_engine 类
-通过丢弃由其基引擎返回的值，生成随机序列。  
+# <a name="discardblockengine-class"></a>discard_block_engine Class
+Generates a random sequence by discarding values returned by its base engine.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Engine, size_t P, size_t R>  
 class discard_block_engine;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Engine`  
- 基引擎类型。  
+ The base engine type.  
   
  `P`  
- **块大小**。 每个块中的值数。  
+ **Block size**. The number of values in each block.  
   
  `R`  
- **已使用的块**。 已使用的每个块中的值数。 丢弃剩余部分 ( `P` - `R`)。 **前提条件**：`0 < R ≤ P`  
+ **Used block**. The number of values in each block that are used. The rest are discarded ( `P` - `R`). **Precondition**: `0 < R ≤ P`  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|  
 |`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|  
   
- 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>备注  
- 此模板类描述了通过弃用由其基引擎返回的一些值来产生值的引擎适配器。  
+## <a name="remarks"></a>Remarks  
+ This template class describes an engine adaptor that produces values by discarding some of the values returned by its base engine.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

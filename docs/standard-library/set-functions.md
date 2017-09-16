@@ -1,5 +1,5 @@
 ---
-title: "&lt;set&gt; 函数 | Microsoft Docs"
+title: '&lt;set&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,69 +12,69 @@ f1_keywords:
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6c26128064b2f20a55ab1b9d1c013829e72523e0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2590e6add10e367b708c295ceedd6570ef611b59
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsetgt-functions"></a>&lt;set&gt; 函数
+# <a name="ltsetgt-functions"></a>&lt;set&gt; functions
 |||  
 |-|-|  
 |[swap (map)](#swap)|[swap (multiset)](#swap_multiset)|  
   
-##  <a name="swap"></a>swap (map)
- 交换两个集的元素。  
+##  <a name="swap"></a>  swap  (map)
+ Exchanges the elements of two sets.  
   
 ```
 template <class Key, class Traits, class Allocator>  
 void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 提供要交换元素的集，或其元素将与集 `left` 的元素交换的集。  
+ The set providing the elements to be swapped, or the set whose elements are to be exchanged with those of the set `left`.  
   
  `left`  
- 其元素将与集 `right` 的元素交换的集。  
+ The set whose elements are to be exchanged with those of the set `right`.  
   
-### <a name="remarks"></a>备注  
- 模板函数是容器类上专用化的算法，用以执行成员函数 `left``.`[swap](../standard-library/set-class.md#swap)( `right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class set to execute the member function `left.`[swap](../standard-library/set-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
- 在此算法中，类按赋值进行工作，这是一种慢速操作。 每个容器中的专用化版本速度快很多，因为专用化版本可适用于容器类的内部表示形式。  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
-### <a name="example"></a>示例  
-  有关使用 `swap` 模板函数的示例，请参阅成员类 [set::swap](../standard-library/set-class.md#swap) 的代码示例。  
+### <a name="example"></a>Example  
+  See the code example for the member class [set::swap](../standard-library/set-class.md#swap) for an example of the use of the template version of `swap`.  
   
-##  <a name="swap_multiset"></a>  swap (multiset)
- 交换两个多重集的元素。  
+##  <a name="swap_multiset"></a>  swap  (multiset)
+ Exchanges the elements of two multisets.  
   
 ```
 template <class Key, class Traits, class Allocator>  
 void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 多重集提供要交换的元素或其元素要与多重集 `left` 的元素进行交换的多重集。  
+ The multiset providing the elements to be swapped, or the multiset whose elements are to be exchanged with those of the multiset `left`.  
   
  `left`  
- 其元素将与多重集 `right` 的元素进行交换的多重集。  
+ The multiset whose elements are to be exchanged with those of the multiset `right`.  
   
-### <a name="remarks"></a>备注  
- 模板函数是容器类多重集上专用化的算法，用以执行成员函数 `left``.`[swap](../standard-library/multiset-class.md#swap)(`right`)。 这是由编译器进行的函数模板偏序实例。 模板函数以此种方式重载时，模板与函数调用的匹配并不唯一，随后编译器会选择此模板函数的最专用化版本。 模板函数的通用版本  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class multiset to execute the member function `left.`[swap](../standard-library/multiset-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
  `template` \< **classT**> **void swap**( **T&**, **T&**)  
   
- 在此算法中，类按赋值进行工作，这是一种慢速操作。 每个容器中的专用化版本速度快很多，因为专用化版本可适用于容器类的内部表示形式。  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
-### <a name="example"></a>示例  
-  有关使用 `swap` 的模板函数的示例，请参阅成员类 [multiset::swap](../standard-library/multiset-class.md#swap) 的代码示例。  
+### <a name="example"></a>Example  
+  See the code example for the member class [multiset::swap](../standard-library/multiset-class.md#swap)for an example of the use of the template version of `swap`.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<set>](../standard-library/set.md)
 
 

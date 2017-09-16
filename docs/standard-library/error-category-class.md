@@ -1,5 +1,5 @@
 ---
-title: "error_category 类 | Microsoft 文档"
+title: error_category Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - system_error/std::error_category
-- error_category
 - system_error/std::error_category::value_type
 - system_error/std::error_category::default_error_condition
 - system_error/std::error_category::equivalent
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- error_category class
+- std::error_category
+- std::error_category::value_type
+- std::error_category::default_error_condition
+- std::error_category::equivalent
+- std::error_category::message
+- std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
 caps.latest.revision: 15
 author: corob-msft
@@ -39,73 +43,73 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8a2a37464e5edb5a5fde1def70d2f0728524fad2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 297d126e12536d8792977769bd6dd40e50b3ca68
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="errorcategory-class"></a>error_category 类
-表示描述错误代码类别的对象的抽象、公用基。  
+# <a name="errorcategory-class"></a>error_category Class
+Represents the abstract, common base for objects that describes a category of error codes.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class error_category;
 ```  
   
-## <a name="remarks"></a>备注  
- 两个预定义的对象实现 `error_category`：[generic_category](../standard-library/system-error-functions.md#generic_category) 和 [system_category](../standard-library/system-error-functions.md#system_category)。  
+## <a name="remarks"></a>Remarks  
+ Two predefined objects implement `error_category`: [generic_category](../standard-library/system-error-functions.md#generic_category) and [system_category](../standard-library/system-error-functions.md#system_category).  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|表示存储的错误代码值的类型。|  
+|[value_type](#value_type)|A type that represents the stored error code value.|  
   
-### <a name="member-functions"></a>成员函数  
-  
-|||  
-|-|-|  
-|[default_error_condition](#default_error_condition)|存储错误条件对象的错误代码值。|  
-|[equivalent](#equivalent)|返回指定错误对象是否相等的值。|  
-|[message](#message)|返回指定错误代码的名称。|  
-|[name](#name)|返回类别名称。|  
-  
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator==](#op_eq_eq)|测试各 `error_category` 对象是否相等。|  
-|[operator!=](#op_neq)|测试各 `error_category` 对象是否不相等。|  
-|[operator<](#op_lt)|测试 [error_category](../standard-library/error-category-class.md) 对象是否小于要比较的传入 `error_category` 对象。|  
+|[default_error_condition](#default_error_condition)|Stores the error code value for an error condition object.|  
+|[equivalent](#equivalent)|Returns a value that specifies whether error objects are equivalent.|  
+|[message](#message)|Returns the name of the specified error code.|  
+|[name](#name)|Returns the name of the category.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<system_error>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator==](#op_eq_eq)|Tests for equality between `error_category` objects.|  
+|[operator!=](#op_neq)|Tests for inequality between `error_category` objects.|  
+|[operator<](#op_lt)|Tests if the [error_category](../standard-library/error-category-class.md) object is less than the `error_category` object passed in for comparison.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<system_error>  
+  
+ **Namespace:** std  
   
 ##  <a name="default_error_condition"></a>  error_category::default_error_condition  
- 存储错误条件对象的错误代码值。  
+ Stores the error code value for an error condition object.  
   
 ```
 virtual error_condition default_error_condition(int _Errval) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Errval`|要存储在 [error_condition](../standard-library/error-condition-class.md) 中的错误代码值。|  
+|`_Errval`|The error code value to store in the [error_condition](../standard-library/error-condition-class.md).|  
   
-### <a name="return-value"></a>返回值  
- 返回 `error_condition(_Errval, *this)`。  
+### <a name="return-value"></a>Return Value  
+ Returns `error_condition(_Errval, *this)`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="equivalent"></a>  error_category::equivalent  
- 返回指定错误对象是否相等的值。  
+ Returns a value that specifies whether error objects are equivalent.  
   
 ```
 virtual bool equivalent(value_type _Errval,
@@ -115,120 +119,120 @@ virtual bool equivalent(const error_code& _Code,
     value_type _Errval) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Errval`|要比较的错误代码值。|  
-|`_Cond`|要比较的 [error_condition](../standard-library/error-condition-class.md) 对象。|  
-|`_Code`|要比较的 [error_code](../standard-library/error-code-class.md) 对象。|  
+|`_Errval`|The error code value to compare.|  
+|`_Cond`|The [error_condition](../standard-library/error-condition-class.md) object to compare.|  
+|`_Code`|The [error_code](../standard-library/error-code-class.md) object to compare.|  
   
-### <a name="return-value"></a>返回值  
- 如果类别和值相等则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the category and value are equal; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数返回 `*this == _Cond.category() && _Cond.value() == _Errval`。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns `*this == _Cond.category() && _Cond.value() == _Errval`.  
   
- 第二个成员函数返回 `*this == _Code.category() && _Code.value() == _Errval`。  
+ The second member function returns `*this == _Code.category() && _Code.value() == _Errval`.  
   
 ##  <a name="message"></a>  error_category::message  
- 返回指定错误代码的名称。  
+ Returns the name of the specified error code.  
   
 ```
 virtual string message(error_code::value_type val) const = 0;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|要描述的错误代码值。|  
+|`val`|The error code value to describe.|  
   
-### <a name="return-value"></a>返回值  
- 为类别返回错误代码 `val` 的描述性名称。  
+### <a name="return-value"></a>Return Value  
+ Returns a descriptive name of the error code `val` for the category.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="name"></a>  error_category::name  
- 返回类别名称。  
+ Returns the name of the category.  
   
 ```
 virtual const char *name() const = 0;
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回作为以 null 结尾的字节字符串的类别名称。  
+### <a name="return-value"></a>Return Value  
+ Returns the name of the category as a null-terminated byte string.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="op_eq_eq"></a>  error_category::operator==  
- 测试各 `error_category` 对象是否相等。  
+ Tests for equality between `error_category` objects.  
   
 ```
 bool operator==(const error_category& right) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|要测试是否相等的对象。|  
+|`right`|The object to be tested for equality.|  
   
-### <a name="return-value"></a>返回值  
- 如果对象相等，则为 **true**；如果对象不相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the objects are equal; **false** if the objects are not equal.  
   
-### <a name="remarks"></a>备注  
- 此成员运算符将返回 `this == &right`。  
+### <a name="remarks"></a>Remarks  
+ This member operator returns `this == &right`.  
   
 ##  <a name="op_neq"></a>  error_category::operator!=  
- 测试各 `error_category` 对象是否不相等。  
+ Tests for inequality between `error_category` objects.  
   
 ```
 bool operator!=(const error_category& right) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|要测试是否不相等的对象。|  
+|`right`|The object to be tested for inequality.|  
   
-### <a name="return-value"></a>返回值  
- 如果 `error_category` 对象不等于 `right` 中的传入对象 `error_category`，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the `error_category` object is not equal to the `error_category` object passed in `right`; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 该成员运算符将返回 `(!*this == right)`。  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `(!*this == right)`.  
   
 ##  <a name="op_lt"></a>  error_category::operator&lt;  
- 测试 [error_category](../standard-library/error-category-class.md) 对象是否小于要比较的传入 `error_category` 对象。  
+ Tests if the [error_category](../standard-library/error-category-class.md) object is less than the `error_category` object passed in for comparison.  
   
 ```
 bool operator<(const error_category& right) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|要比较的 `error_category` 对象。|  
+|`right`|The `error_category` object to be compared.|  
   
-### <a name="return-value"></a>返回值  
- 如果 `error_category` 对象小于要比较的传入对象 `error_category`，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the `error_category` object is less than the `error_category` object passed in for comparison; Otherwise, **false**.  
   
-### <a name="remarks"></a>备注  
- 该成员运算符将返回 `this < &right`。  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `this < &right`.  
   
 ##  <a name="value_type"></a>  error_category::value_type  
- 表示存储的错误代码值的类型。  
+ A type that represents the stored error code value.  
   
 ```
 typedef int value_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 此类型定义是 `int` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ This type definition is a synonym for `int`.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<system_error>](../standard-library/system-error.md)
 
 

@@ -1,57 +1,76 @@
 ---
-title: "在视图中绘制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "设备上下文, 屏幕绘图"
-  - "绘图, 在视图中"
-  - "视图类中的绘制消息"
-  - "打印 [MFC], 视图"
-  - "打印视图"
-  - "视图, 打印"
-  - "视图, 呈现"
-  - "视图, 更新"
+title: Drawing in a View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- drawing [MFC], in views
+- views [MFC], printing
+- views [MFC], updating
+- printing [MFC], views
+- views [MFC], rendering
+- printing views [MFC]
+- paint messages in view class [MFC]
+- device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 在视图中绘制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e06b65ad11b5a71fe3d950e08a8880a6df3829c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-几乎在应用程序中的任何绘图在视图的 `OnDraw` 成员函数时，在视图类必须重写。\(例外是鼠标绘制，讨论\)。[通过视图解释用户输入](../mfc/interpreting-user-input-through-a-view.md)重写 `OnDraw` :  
+---
+# <a name="drawing-in-a-view"></a>Drawing in a View
+Nearly all drawing in your application occurs in the view's `OnDraw` member function, which you must override in your view class. (The exception is mouse drawing, discussed in [Interpreting User Input Through a View](../mfc/interpreting-user-input-through-a-view.md).) Your `OnDraw` override:  
   
-1.  通过调用提供的文档成员函数获取数据。  
+1.  Gets data by calling the document member functions you provide.  
   
-2.  通过调用设备上下文对象的成员函数来显示数据该框架将为 `OnDraw`。  
+2.  Displays the data by calling member functions of a device-context object that the framework passes to `OnDraw`.  
   
- 在文档数据的某种方式更改时，必须重绘视图反映更改。  通常，通过视图，当用户进行更改。文档，这发生。  在这种情况下，调用文档的成员函数 [UpdateAllViews](../Topic/CDocument::UpdateAllViews.md) 视图通知在同一文档的所有视图的更新。  `UpdateAllViews` 每调用视图的成员函数。[更新时](../Topic/CView::OnUpdate.md) `OnUpdate` 的默认实现无效视图的整个工作区。  可以重写其无效映射到文档中修改的部分工作区的这些区域。  
+ When a document's data changes in some way, the view must be redrawn to reflect the changes. Typically, this happens when the user makes a change through a view on the document. In this case, the view calls the document's [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) member function to notify all views on the same document to update themselves. `UpdateAllViews` calls each view's [OnUpdate](../mfc/reference/cview-class.md#onupdate) member function. The default implementation of `OnUpdate` invalidates the view's entire client area. You can override it to invalidate only those regions of the client area that map to the modified portions of the document.  
   
- 类 **CDocument** 的 `UpdateAllViews` 成员函数和 `CView` 类的 `OnUpdate` 成员函数可传递信息描述已修改文档的内容部分。  此“提示”机制可以限制视图必须重绘的区域。  `OnUpdate` 采用两“提示”参数。  第一，`lHint`，**LPARAM**类型，可以将您喜欢的任何数据，即，而第二个终结点，`pHint`，类型 `CObject`\*，可以将指针从 `CObject`派生的任何对象。  
+ The `UpdateAllViews` member function of class **CDocument** and the `OnUpdate` member function of class `CView` let you pass information describing what parts of the document were modified. This "hint" mechanism lets you limit the area that the view must redraw. `OnUpdate` takes two "hint" arguments. The first, `lHint`, of type **LPARAM**, lets you pass any data you like, while the second, `pHint`, of type `CObject`*, lets you pass a pointer to any object derived from `CObject`.  
   
- 在视图变为无效时，Windows 将其发送 `WM_PAINT` 消息。  视图中处理 [OnPaint](../Topic/CWnd::OnPaint.md) 函数响应消息通过创建类 [CPaintDC](../mfc/reference/cpaintdc-class.md) 设备上下文对象并调用视图的 `OnDraw` 成员函数。  通常不必编写的重写 `OnPaint` 处理程序函数。  
+ When a view becomes invalid, Windows sends it a `WM_PAINT` message. The view's [OnPaint](../mfc/reference/cwnd-class.md#onpaint) handler function responds to the message by creating a device-context object of class [CPaintDC](../mfc/reference/cpaintdc-class.md) and calls your view's `OnDraw` member function. You do not normally have to write an overriding `OnPaint` handler function.  
   
- [设备上下文](../mfc/device-contexts.md) 是包含有关一个设备绘图特性的信息如显示或打印机的 Windows 数据结构。  所有绘制调用通过设备上下文对象调用。  有关绘制屏幕上，`OnDraw` 将 `CPaintDC` 对象。  有关绘制在打印机，将向其传递对当前设置打印机的 [CDC](../mfc/reference/cdc-class.md) 对象。  
+ A [device context](../mfc/device-contexts.md) is a Windows data structure that contains information about the drawing attributes of a device such as a display or a printer. All drawing calls are made through a device-context object. For drawing on the screen, `OnDraw` is passed a `CPaintDC` object. For drawing on a printer, it is passed a [CDC](../mfc/reference/cdc-class.md) object set up for the current printer.  
   
- 绘制的代码视图中先检索指向文档，然后通过设备上下文进行的调用。  下面的简单示例声明 `OnDraw` 过程：  
+ Your code for drawing in the view first retrieves a pointer to the document, then makes drawing calls through the device context. The following simple `OnDraw` example illustrates the process:  
   
- [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/CPP/drawing-in-a-view_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/cpp/drawing-in-a-view_1.cpp)]  
   
- 在此示例中，应定义 `GetData` 函数，则派生类的成员，因此的文档。  
+ In this example, you would define the `GetData` function as a member of your derived document class.  
   
- 示例打印所有字符串将从文档中获取，在视图中居中  如果 `OnDraw` 调用是为屏幕绘制，在传递 `pDC` 的 `CDC` 对象在构造函数已经调用 `BeginPaint`的 `CPaintDC`。  绘制到函数的调用通过设备上下文指针调用。  有关设备上下文以及绘图调用的信息，请参见和" *MFC 参考*[与 Window 对象一起使用](../mfc/working-with-window-objects.md)[CDC](../mfc/reference/cdc-class.md) 的类。  
+ The example prints whatever string it gets from the document, centered in the view. If the `OnDraw` call is for screen drawing, the `CDC` object passed in `pDC` is a `CPaintDC` whose constructor has already called `BeginPaint`. Calls to drawing functions are made through the device-context pointer. For information about device contexts and drawing calls, see class [CDC](../mfc/reference/cdc-class.md) in the *MFC Reference* and [Working with Window Objects](../mfc/working-with-window-objects.md).  
   
- 有关更多有关如何编写 `OnDraw`，请参见 [MFC 示例](../top/visual-cpp-samples.md)。  
+ For more examples of how to write `OnDraw`, see the [MFC Samples](../visual-cpp-samples.md).  
   
-## 请参阅  
- [使用视图](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

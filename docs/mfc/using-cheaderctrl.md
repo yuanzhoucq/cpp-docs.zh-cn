@@ -1,62 +1,81 @@
 ---
-title: "使用 CHeaderCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CHeaderCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl 类"
-  - "标题控件, using"
+title: Using CHeaderCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CHeaderCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], using
+- CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CHeaderCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b0d6b19847a3ebc366676a1c3f4816941d919f8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-一个使用 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)类标题控件，由一柱状列表，显示的列标题。  例如，标题控件为实现栏控件很有用。在电子表格。  
+---
+# <a name="using-cheaderctrl"></a>Using CHeaderCtrl
+Use a header control, represented by class [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), to display column headers for a columnar list. For example, a header control would be useful for implementing column controls in a spreadsheet.  
   
- 标题控件通常分为部件，调用“标题”列轴承每个项、文本关联的标题或数字。  根据样式设置，您可以为用户提供大量的直接方式操作标题项。  
+ The header control is usually divided into parts, called "header items," each bearing a title for the associated column of text or numbers. Depending on the styles you set, you can provide a number of direct ways for users to manipulate the header items.  
   
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) 提供嵌入的标题控件，并且，[CListView](../mfc/reference/clistview-class.md) MFC 封装在类的 `CListCtrl`。  通常，请考虑使用 `CHeaderCtrl`。商标目录要绘制。  
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) provides an embedded header control, and [CListView](../mfc/reference/clistview-class.md) encapsulates `CListCtrl` in an MFC class. In general, think of using `CHeaderCtrl` to label lists that you intend to draw yourself.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [标题控件列表和控件](../mfc/header-control-and-list-control.md)  
+-   [Header Control and List Control](../mfc/header-control-and-list-control.md)  
   
--   [标题控件的示例](../mfc/header-control-examples.md)  
+-   [Header Control Examples](../mfc/header-control-examples.md)  
   
--   [在标头控件的标题项](../mfc/header-items-in-a-header-control.md)  
+-   [Header Items in a Header Control](../mfc/header-items-in-a-header-control.md)  
   
--   [自定义标题项的外观](../mfc/customizing-the-header-item-s-appearance.md)  
+-   [Customizing the Header Item's Appearance](../mfc/customizing-the-header-item-s-appearance.md)  
   
--   [提供的拖放支持标题项](../mfc/providing-drag-and-drop-support-for-header-items.md)  
+-   [Providing Drag-and-Drop Support for Header Items](../mfc/providing-drag-and-drop-support-for-header-items.md)  
   
--   [使用与标题控件图像的列表](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using Image Lists with Header Controls](../mfc/using-image-lists-with-header-controls.md)  
   
--   [对所有者绘制的标题控件](../mfc/making-owner-drawn-header-controls.md)  
+-   [Making Owner-Drawn Header Controls](../mfc/making-owner-drawn-header-controls.md)  
   
--   [与标题控件一起使用](../mfc/working-with-a-header-control.md)  
+-   [Working with a Header Control](../mfc/working-with-a-header-control.md)  
   
--   [创建标题控件](../mfc/creating-the-header-control.md)  
+-   [Creating the Header Control](../mfc/creating-the-header-control.md)  
   
--   [标题控件添加项。](../mfc/adding-items-to-the-header-control.md)  
+-   [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md)  
   
--   [顺序标题控件的项](../mfc/ordering-items-in-the-header-control.md)  
+-   [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md)  
   
--   [处理标题控件通知](../mfc/processing-header-control-notifications.md)  
+-   [Processing Header-Control Notifications](../mfc/processing-header-control-notifications.md)  
   
-## 请参阅  
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

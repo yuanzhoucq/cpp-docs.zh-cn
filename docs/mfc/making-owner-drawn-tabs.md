@@ -1,32 +1,51 @@
 ---
-title: "定义所有者描述的选项卡 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 类, 所有者描述的选项卡"
-  - "绘图, 选项卡"
-  - "所有者描述的选项卡"
-  - "选项卡, 所有者描述的"
+title: Making Owner-Drawn Tabs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- owner-drawn tabs [MFC]
+- tabs [MFC], owner-drawn
+- CTabCtrl class [MFC], owner-drawn tabs
+- drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 定义所有者描述的选项卡
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1225ad6e29bde551cde3ab0df29c70fd4681bb9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以定义选项卡控件 \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) 的各项为一个所有者绘制的项。  有关更多信息，请参见[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中的  [Owner\-Drawn Tabs](http://msdn.microsoft.com/library/windows/desktop/bb760550)。  
+---
+# <a name="making-owner-drawn-tabs"></a>Making Owner-Drawn Tabs
+You can define individual items of a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) to be owner-drawn items. For more information, see [Owner-Drawn Tabs](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## 请参阅  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

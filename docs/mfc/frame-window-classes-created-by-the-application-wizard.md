@@ -1,49 +1,66 @@
 ---
-title: "应用程序向导创建的框架窗口类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CMainFrame"
-  - "CMainFrame::PreCreateWindow"
-  - "CMainFrame.PreCreateWindow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序向导 [C++], 框架窗口类创建者"
-  - "CFrameWnd 类, 框架窗口"
-  - "类 [C++], 框架窗口"
-  - "CMainFrame 类"
-  - "CMDIChildWnd 类, 框架窗口"
-  - "CMDIFrameWnd 类, 框架窗口"
-  - "框架窗口类, 由应用程序向导创建"
-  - "窗口类"
-  - "窗口类, 框架"
+title: Frame-Window Classes Created by the Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CMainFrame
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], frame window classes created by
+- window classes [MFC]
+- classes [MFC], frame-window
+- CMDIFrameWnd class [MFC], frame windows
+- window classes [MFC], frame
+- CFrameWnd class [MFC], frame windows
+- CMDIChildWnd class [MFC], frame windows
+- frame window classes [MFC], created by application wizards
+- CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 应用程序向导创建的框架窗口类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19de6bdd291126933c5a1f893c37c99824ccd062
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-除了应用程序、文档和视图类之外时，可以使用 [应用程序向导](../ide/creating-desktop-projects-by-using-application-wizards.md) 创建主干应用程序，否则，应用程序向导创建应用程序主框架窗口的派生的框架窗口类。  类默认情况下，调用 `CMainFrame`，并包含测试的文件名为 MAINFRM.H 和 MAINFRM.CPP。  
+---
+# <a name="frame-window-classes-created-by-the-application-wizard"></a>Frame-Window Classes Created by the Application Wizard
+When you use the [Application Wizard](../ide/creating-desktop-projects-by-using-application-wizards.md) to create a skeleton application, in addition to application, document, and view classes, the Application Wizard creates a derived frame-window class for your application's main frame window. The class is called `CMainFrame` by default, and the files that contain it are named MAINFRM.H and MAINFRM.CPP.  
   
- 如果应用程序是 SDI，`CMainFrame` 类是从类派生。[CFrameWnd](../mfc/reference/cframewnd-class.md)  
+ If your application is SDI, your `CMainFrame` class is derived from class [CFrameWnd](../mfc/reference/cframewnd-class.md).  
   
- 如果应用程序比较 MDI，`CMainFrame` 从类派生。[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) 在 `CMainFrame` 实现主框架，持有菜单、工具栏和状态栏。  应用程序向导不派生您的新文档框架窗口类。  相反，在 [CMDIChildWnd 类](../mfc/reference/cmdichildwnd-class.md)使用默认实现。  MFC 框架创建子窗口包含可为 `CScrollView`类型，`CEditView`，`CTreeView`，`CListView`的每视图 \(，等\) 应用程序要求。  如果需要自定义文档框架窗口关联，可以创建一个新的文档框架窗口类 \(请参见 [添加类](../ide/adding-a-class-visual-cpp.md)\)。  
+ If your application is MDI, `CMainFrame` is derived from class [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md). In this case `CMainFrame` implements the main frame, which holds the menu, toolbar, and status bars. The Application Wizard does not derive a new document frame-window class for you. Instead, it uses the default implementation in [CMDIChildWnd Class](../mfc/reference/cmdichildwnd-class.md). The MFC framework creates a child window to contain each view (which can be of type `CScrollView`, `CEditView`, `CTreeView`, `CListView`, and so on) that the application requires. If you need to customize your document frame window, you can create a new document frame-window class (see [Adding a Class](../ide/adding-a-class-visual-cpp.md)).  
   
- 如果选择支持工具栏，类还具有和 [CStatusBar](../mfc/reference/cstatusbar-class.md) [CToolBar](../mfc/reference/ctoolbar-class.md) 初始化类型的成员变量和 `OnCreate` 消息处理函数的两 [控件条](../mfc/control-bars.md)。  
+ If you choose to support a toolbar, the class also has member variables of type [CToolBar](../mfc/reference/ctoolbar-class.md) and [CStatusBar](../mfc/reference/cstatusbar-class.md) and an `OnCreate` message-handler function to initialize the two [control bars](../mfc/control-bars.md).  
   
- 这些框架窗口类按创建，但是，引发其功能，必须将变量成员和成员函数。  可能还需要用于排列窗口的其他类处理窗口消息。  有关更多信息，请参见 [更改 MFC 创建窗口的样式](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
+ These frame-window classes work as created, but to enhance their functionality, you must add member variables and member functions. You may also want to have your window classes handle other Windows messages. For more information, see [Changing the Styles of a Window Created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
   
-## 请参阅  
- [框架窗口类](../mfc/frame-window-classes.md)   
- [MFC 程序或控件的源文件和头文件](../ide/mfc-program-or-control-source-and-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Frame-Window Classes](../mfc/frame-window-classes.md)   
+ [MFC Program or Control Source and Header Files](../ide/mfc-program-or-control-source-and-header-files.md)
+
+

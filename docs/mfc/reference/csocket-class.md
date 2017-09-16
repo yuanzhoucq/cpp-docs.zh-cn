@@ -1,5 +1,5 @@
 ---
-title: "CSocket 类 |Microsoft 文档"
+title: CSocket Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,10 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WinSock CSocket class
-- CSocket class
-- SOCKET handle
-- sockets classes
+- CSocket [MFC], CSocket
+- CSocket [MFC], Attach
+- CSocket [MFC], CancelBlockingCall
+- CSocket [MFC], Create
+- CSocket [MFC], FromHandle
+- CSocket [MFC], IsBlocking
+- CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 caps.latest.revision: 30
 author: mikeblome
@@ -44,120 +47,120 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 451ea100dbf02e365204fe4fdf1c380e855d8231
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de2adfa1ade231b08c0e66e0fd5e40a1fa620060
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csocket-class"></a>CSocket 类
-派生自`CAsyncSocket`，继承的 Windows 套接字 API，它封装，代表比更高级别的抽象`CAsyncSocket`对象。  
+# <a name="csocket-class"></a>CSocket Class
+Derives from `CAsyncSocket`, inherits its encapsulation of the Windows Sockets API, and represents a higher level of abstraction than that of a `CAsyncSocket` object.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSocket : public CAsyncSocket  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSocket::CSocket](#csocket)|构造 `CSocket` 对象。|  
+|[CSocket::CSocket](#csocket)|Constructs a `CSocket` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|将附加**套接字**的句柄`CSocket`对象。|  
-|[CSocket::CancelBlockingCall](#cancelblockingcall)|取消当前正在进行一个阻塞调用。|  
-|[CSocket::Create](#create)|创建的套接字。|  
-|[CSocket::FromHandle](#fromhandle)|返回一个指向`CSocket`给定对象**套接字**处理。|  
-|[CSocket::IsBlocking](#isblocking)|确定是否正在执行阻止调用。|  
+|[CSocket::Attach](#attach)|Attaches a **SOCKET** handle to a `CSocket` object.|  
+|[CSocket::CancelBlockingCall](#cancelblockingcall)|Cancels a blocking call that is currently in progress.|  
+|[CSocket::Create](#create)|Creates a socket.|  
+|[CSocket::FromHandle](#fromhandle)|Returns a pointer to a `CSocket` object, given a **SOCKET** handle.|  
+|[CSocket::IsBlocking](#isblocking)|Determines whether a blocking call is in progress.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSocket::OnMessagePending](#onmessagepending)|在等待一个阻塞调用完成时调用以待处理消息的处理。|  
+|[CSocket::OnMessagePending](#onmessagepending)|Called to process pending messages while waiting for a blocking call to complete.|  
   
-## <a name="remarks"></a>备注  
- `CSocket`类一起工作`CSocketFile`和`CArchive`来管理发送和接收数据。  
+## <a name="remarks"></a>Remarks  
+ `CSocket` works with classes `CSocketFile` and `CArchive` to manage the sending and receiving of data.  
   
- 一个`CSocket`对象还提供了阻止，这是至关重要的同步操作`CArchive`。 阻塞函数，如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(从所有继承`CAsyncSocket`)，不会返回`WSAEWOULDBLOCK`中的错误`CSocket`。 相反，这些函数等待，直到操作完成。 此外，原始调用将终止并出现错误`WSAEINTR`如果`CancelBlockingCall`在阻止了这些函数之一时调用。  
+ A `CSocket` object also provides blocking, which is essential to the synchronous operation of `CArchive`. Blocking functions, such as `Receive`, `Send`, `ReceiveFrom`, `SendTo`, and `Accept` (all inherited from `CAsyncSocket`), do not return a `WSAEWOULDBLOCK` error in `CSocket`. Instead, these functions wait until the operation completes. Additionally, the original call will terminate with the error `WSAEINTR` if `CancelBlockingCall` is called while one of these functions is blocking.  
   
- 若要使用`CSocket`对象，请调用构造函数中，然后调用`Create`创建基础`SOCKET`处理 (类型`SOCKET`)。 默认参数`Create`创建流套接字，但是，如果您没有使用与套接字`CArchive`对象，可指定的参数，而是创建数据报套接字或绑定到特定端口来创建服务器套接字。 连接到客户端套接字使用`Connect`在客户端和`Accept`在服务器端。 然后创建`CSocketFile`对象，并将关联到`CSocket`对象在`CSocketFile`构造函数。 接下来，创建`CArchive`发送的对象，另一个用于接收数据 （如需要），然后将它们关联与`CSocketFile`对象在`CArchive`构造函数。 当通信都完成后时，销毁`CArchive`， `CSocketFile`，和`CSocket`对象。 `SOCKET`文章中介绍的数据类型[Windows 套接字︰ 背景](../../mfc/windows-sockets-background.md)。  
+ To use a `CSocket` object, call the constructor, then call `Create` to create the underlying `SOCKET` handle (type `SOCKET`). The default parameters of `Create` create a stream socket, but if you are not using the socket with a `CArchive` object, you can specify a parameter to create a datagram socket instead, or bind to a specific port to create a server socket. Connect to a client socket using `Connect` on the client side and `Accept` on the server side. Then create a `CSocketFile` object and associate it to the `CSocket` object in the `CSocketFile` constructor. Next, create a `CArchive` object for sending and one for receiving data (as needed), then associate them with the `CSocketFile` object in the `CArchive` constructor. When communications are complete, destroy the `CArchive`, `CSocketFile`, and `CSocket` objects. The `SOCKET` data type is described in the article [Windows Sockets: Background](../../mfc/windows-sockets-background.md).  
   
- 当您使用`CArchive`与`CSocketFile`和`CSocket`，可能会遇到的情况其中`CSocket::Receive`进入一个循环 (通过`PumpMessages(FD_READ)`) 等待请求的字节量。 这是因为 Windows 套接字让每个 FD_READ 通知只有一个接收调用，但`CSocketFile`和`CSocket`允许每个 FD_READ 的多个接收调用。 如果没有要读取的数据时获取 FD_READ，请将挂起该应用程序。 如果您永远不会收到另一台 FD_READ，该应用程序将停止通过套接字进行通信。  
+ When you use `CArchive` with `CSocketFile` and `CSocket`, you might encounter a situation where `CSocket::Receive` enters a loop (by `PumpMessages(FD_READ)`) waiting for the requested amount of bytes. This is because Windows sockets allow only one recv call per FD_READ notification, but `CSocketFile` and `CSocket` allow multiple recv calls per FD_READ. If you get an FD_READ when there is no data to read, the application hangs. If you never get another FD_READ, the application stops communicating over the socket.  
   
- 您可以解决此问题，如下所示。 在`OnReceive`您套接字类方法，调用`CAsyncSocket::IOCtl(FIONREAD, ...)`之前调用`Serialize`消息类时所需的数据等待从套接字读取超过一个 TCP 数据包 （最大传输单位的网络中，通常至少 1096 字节） 的大小的方法。 如果在可用数据的大小小于所需，等待要接收和只有此时才开始读取的操作的所有数据。  
+ You can resolve this problem as follows. In the `OnReceive` method of your socket class, call `CAsyncSocket::IOCtl(FIONREAD, ...)` before you call the `Serialize` method of your message class when the expected data to be read from the socket exceeds the size of one TCP packet (maximum transmission unit of the network medium, usually at least 1096 bytes). If the size of the available data is less than needed, wait for all the data to be received and only then start the read operation.  
   
- 在下面的示例中，`m_dwExpected`是近似的用户期望接收的字节数。 假定，您将其声明在其他地方在代码中。  
+ In the following example, `m_dwExpected` is the approximate number of bytes that the user expects to receive. It is assumed that you declare it elsewhere in your code.  
   
- [!code-cpp[NVC_MFCSocketThread #&4;](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]  
+ [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]  
   
 > [!NOTE]
->  在静态链接的 MFC 应用程序中的辅助线程中使用 MFC 套接字时，您必须在使用套接字的每个线程中调用 `AfxSocketInit` 来初始化套接字库。 默认情况下，仅在主线程中调用 `AfxSocketInit`。  
+>  When using MFC sockets in secondary threads in a statically linked MFC application, you must call `AfxSocketInit` in each thread that uses sockets to initialize the socket libraries. By default, `AfxSocketInit` is called only in the primary thread.  
   
- 有关详细信息，请参阅[MFC 中的 Windows 套接字](../../mfc/windows-sockets-in-mfc.md)， [Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)， [Windows 套接字︰ 如何存档工作的套接字](../../mfc/windows-sockets-how-sockets-with-archives-work.md)， [Windows 套接字︰ 操作的序列](../../mfc/windows-sockets-sequence-of-operations.md)， [Windows 套接字︰ 套接字的使用存档示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。  
+ For more information, see [Windows Sockets in MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets: How Sockets with Archives Work](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets: Sequence of Operations](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets: Example of Sockets Using Archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAsyncSocket](../../mfc/reference/casyncsocket-class.md)  
   
  `CSocket`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxsock.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
- 调用此成员函数可将附加`hSocket`的句柄`CSocket`对象。  
+##  <a name="attach"></a>  CSocket::Attach  
+ Call this member function to attach the `hSocket` handle to a `CSocket` object.  
   
 ```  
 BOOL Attach(SOCKET hSocket);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- 包含为套接字的句柄。  
+ Contains a handle to a socket.  
   
-### <a name="return-value"></a>返回值  
- 如果函数运行成功，则为非零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful.  
   
-### <a name="remarks"></a>备注  
- **套接字**句柄存储在该对象的[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)数据成员。  
+### <a name="remarks"></a>Remarks  
+ The **SOCKET** handle is stored in the object's [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) data member.  
   
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSocketThread #&1;](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSocketThread#1](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
   
- [!code-cpp[NVC_MFCSocketThread #&2;](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  
+ [!code-cpp[NVC_MFCSocketThread#2](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  
   
- [!code-cpp[NVC_MFCSocketThread #&3;](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
+ [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
- 调用该成员函数以取消当前正在进行阻止调用。  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
+ Call this member function to cancel a blocking call currently in progress.  
   
 ```  
 void CancelBlockingCall();
 ```  
   
-### <a name="remarks"></a>备注  
- 此函数将取消此套接字的任何未完成的阻止操作。 原始的阻止调用将尽快终止并出现错误**WSAEINTR**。  
+### <a name="remarks"></a>Remarks  
+ This function cancels any outstanding blocking operation for this socket. The original blocking call will terminate as soon as possible with the error **WSAEINTR**.  
   
- 在阻塞的情况下**连接**操作，因为可行的但是它可能不是可能的套接字资源，直到该连接已完成 （并被重置然后） 发布，Windows 套接字实现将终止阻止的调用或超时。 这是，可能需要明显仅当应用程序会立即尝试以打开新的套接字中，（如果有任何套接字），或连接到同一对等方。  
+ In the case of a blocking **Connect** operation, the Windows Sockets implementation will terminate the blocking call as soon as possible, but it may not be possible for the socket resources to be released until the connection has completed (and then been reset) or timed out. This is likely to be noticeable only if the application immediately tries to open a new socket (if no sockets are available), or to connect to the same peer.  
   
- 取消以外的任何操作**接受**可能使处于不确定状态的套接字。 如果应用程序取消阻止套接字上的操作，该应用程序可以依赖于能够的套接字上执行的唯一操作是对的调用**关闭**，但其他操作可能在某些 Windows 套接字实现中工作。 如果你需要为您的应用程序的最大的可移植性，您必须小心，不要依赖于在取消按钮之后执行的操作。  
+ Canceling any operation other than **Accept** can leave the socket in an indeterminate state. If an application cancels a blocking operation on a socket, the only operation that the application can depend on being able to perform on the socket is a call to **Close**, although other operations may work on some Windows Sockets implementations. If you desire maximum portability for your application, you must be careful not to depend on performing operations after a cancel.  
   
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="create"></a>CSocket::Create  
- 调用**创建**后构造套接字对象创建 Windows 套接字并将其附加的成员函数。  
+##  <a name="create"></a>  CSocket::Create  
+ Call the **Create** member function after constructing a socket object to create the Windows socket and attach it.  
   
 ```  
 BOOL Create(
@@ -166,95 +169,95 @@ BOOL Create(
     LPCTSTR lpszSocketAddress = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nSocketPort`  
- 如果想要选择的端口的 MFC 套接字或 0 开头使用一个特定端口。  
+ A particular port to be used with the socket, or 0 if you want MFC to select a port.  
   
  `nSocketType`  
- **SOCK_STREAM**或**SOCK_DGRAM**。  
+ **SOCK_STREAM** or **SOCK_DGRAM**.  
   
  `lpszSocketAddress`  
- 指向一个包含连接的套接字，一个以点分隔的数字，如"128.56.22.8"的网络地址的字符串的指针。 传递**NULL**字符串为此参数指示**CSocket**实例应侦听的所有网络接口上的客户端活动。  
+ A pointer to a string containing the network address of the connected socket, a dotted number such as "128.56.22.8". Passing the **NULL** string for this parameter indicates the **CSocket** instance should listen for client activity on all network interfaces.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则非零值否则为 0 和特定错误代码可以检索通过调用`GetLastError`。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0, and a specific error code can be retrieved by calling `GetLastError`.  
   
-### <a name="remarks"></a>备注  
- **创建**然后调用**绑定**将套接字绑定到指定的地址。 支持以下的套接字类型︰  
+### <a name="remarks"></a>Remarks  
+ **Create** then calls **Bind** to bind the socket to the specified address. The following socket types are supported:  
   
-- **SOCK_STREAM**进行序列化，提供可靠、 双向、 基于连接的字节流。 使用传输控制协议 (TCP) 为 Internet 地址族。  
+- **SOCK_STREAM** Provides sequenced, reliable, two-way, connection-based byte streams. Uses Transmission Control Protocol (TCP) for the Internet address family.  
   
-- **SOCK_DGRAM**支持数据报，即无连接的、 不可靠的固定 （通常很小） 的最大长度的缓冲区。 使用用户数据报协议 (UDP) 为 Internet 地址族。 若要使用此选项，必须未使用与套接字`CArchive`对象。  
+- **SOCK_DGRAM** Supports datagrams, which are connectionless, unreliable buffers of a fixed (typically small) maximum length. Uses User Datagram Protocol (UDP) for the Internet address family. To use this option, you must not use the socket with a `CArchive` object.  
   
     > [!NOTE]
-    >  **接受**成员函数会将新的空的引用`CSocket`对象作为其参数。 您必须在调用之前先构造此对象**接受**。 请记住，如果此套接字对象超出范围，该连接将关闭。 不要调用**创建**为此新的套接字对象。  
+    >  The **Accept** member function takes a reference to a new, empty `CSocket` object as its parameter. You must construct this object before you call **Accept**. Keep in mind that if this socket object goes out of scope, the connection closes. Do not call **Create** for this new socket object.  
   
- 有关流和数据报套接字的详细信息，请参阅文章[Windows 套接字︰ 背景](../../mfc/windows-sockets-background.md)， [Windows 套接字︰ 端口和套接字地址](../../mfc/windows-sockets-ports-and-socket-addresses.md)，和[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information about stream and datagram sockets, see the articles [Windows Sockets: Background](../../mfc/windows-sockets-background.md), [Windows Sockets: Ports and Socket Addresses](../../mfc/windows-sockets-ports-and-socket-addresses.md), and [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="csocket"></a>CSocket::CSocket  
- 构造 `CSocket` 对象。  
+##  <a name="csocket"></a>  CSocket::CSocket  
+ Constructs a `CSocket` object.  
   
 ```  
 CSocket();
 ```  
   
-### <a name="remarks"></a>备注  
- 完成构造后，必须调用**创建**成员函数。  
+### <a name="remarks"></a>Remarks  
+ After construction, you must call the **Create** member function.  
   
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
- 返回一个指向`CSocket`对象。  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
+ Returns a pointer to a `CSocket` object.  
   
 ```  
 static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hSocket`  
- 包含为套接字的句柄。  
+ Contains a handle to a socket.  
   
-### <a name="return-value"></a>返回值  
- 一个指向`CSocket`对象，或**NULL**是否存在任何`CSocket`对象附加到`hSocket`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CSocket` object, or **NULL** if there is no `CSocket` object attached to `hSocket`.  
   
-### <a name="remarks"></a>备注  
- 在给定**套接字**处理，如果`CSocket`对象未附加到该句柄，成员函数将返回**NULL**并且不创建临时对象。  
+### <a name="remarks"></a>Remarks  
+ When given a **SOCKET** handle, if a `CSocket` object is not attached to the handle, the member function returns **NULL** and does not create a temporary object.  
   
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
- 调用该成员函数以确定一个阻塞调用是否正在进行。  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
+ Call this member function to determine if a blocking call is in progress.  
   
 ```  
 BOOL IsBlocking();
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果阻止套接字。否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the socket is blocking; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
- 重写该成员函数以从 Windows 寻找的特定邮件并在您的套接字对它们做出响应。  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
+ Override this member function to look for particular messages from Windows and respond to them in your socket.  
   
 ```  
 virtual BOOL OnMessagePending();
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果该消息已处理;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message was handled; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 这是一个高级可重写。  
+### <a name="remarks"></a>Remarks  
+ This is an advanced overridable.  
   
- 框架将调用`OnMessagePending`时套接字正在抽取窗口消息，以便您有机会使用来处理您的应用程序感兴趣的消息。 有关如何使用的示例`OnMessagePending`，请参阅文章[Windows 套接字︰ 从套接字类派生](../../mfc/windows-sockets-deriving-from-socket-classes.md)。  
+ The framework calls `OnMessagePending` while the socket is pumping Windows messages to give you an opportunity to deal with messages of interest to your application. For examples of how you might use `OnMessagePending`, see the article [Windows Sockets: Deriving from Socket Classes](../../mfc/windows-sockets-deriving-from-socket-classes.md).  
   
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-## <a name="see-also"></a>另请参阅  
- [CAsyncSocket 类](../../mfc/reference/casyncsocket-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CAsyncSocket 类](../../mfc/reference/casyncsocket-class.md)   
- [CSocketFile 类](../../mfc/reference/csocketfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CAsyncSocket Class](../../mfc/reference/casyncsocket-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CAsyncSocket Class](../../mfc/reference/casyncsocket-class.md)   
+ [CSocketFile Class](../../mfc/reference/csocketfile-class.md)
 

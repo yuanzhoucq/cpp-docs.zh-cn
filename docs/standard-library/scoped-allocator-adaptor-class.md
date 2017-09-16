@@ -1,5 +1,5 @@
 ---
-title: "scoped_allocator_adaptor 类 | Microsoft Docs"
+title: scoped_allocator_adaptor Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
 - scoped_allocator/std::scoped_allocator_adaptor::allocate
@@ -23,7 +22,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- scoped_allocator_adaptor Class
+- std::scoped_allocator_adaptor
+- std::scoped_allocator_adaptor::allocate
+- std::scoped_allocator_adaptor::construct
+- std::scoped_allocator_adaptor::deallocate
+- std::scoped_allocator_adaptor::destroy
+- std::scoped_allocator_adaptor::inner_allocator
+- std::scoped_allocator_adaptor::max_size
+- std::scoped_allocator_adaptor::outer_allocator
+- std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 caps.latest.revision: 10
 author: corob-msft
@@ -43,110 +50,110 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3fa8c1304da253183c7f201811238f14d0da3193
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cbf58ee13f1eab65f7fe76996cb7840c88059a85
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 类
-表示分配器嵌套。  
+# <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor Class
+Represents a nest of allocators.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Outer, class... Inner>  
 class scoped_allocator_adaptor;  
 ```  
   
-## <a name="remarks"></a>备注  
- 模板类可封装一个或多个分配器的嵌套。 每个这样的类都具有一个类型为 `outer_allocator_type` 的最外层分配器，该类型也即 `Outer`，是 `scoped_allocator_adaptor` 对象的公共基类。 `Outer` 可用于分配容器要使用的内存。 通过调用 `outer_allocator` 可获取对此分配器基对象的引用。  
+## <a name="remarks"></a>Remarks  
+ The template class encapsulates a nest of one or more allocators. Each such class has an outermost allocator of type `outer_allocator_type`, a synonym for `Outer`, which is a public base of the `scoped_allocator_adaptor` object. `Outer` is used to allocate memory to be used by a container. You can obtain a reference to this allocator base object by calling `outer_allocator`.  
   
- 嵌套的其余部分具有 `inner_allocator_type` 类型。 内部分配器用于为容器中的元素分配内存。 通过调用 `inner_allocator` 可获取对此类型的存储对象的引用。 如果 `Inner...` 不为空，则 `inner_allocator_type` 将具有类型 `scoped_allocator_adaptor<Inner...>`，`inner_allocator` 指示成员对象。 否则，`inner_allocator_type` 将具有类型 `scoped_allocator_adaptor<Outer>`，`inner_allocator` 指示整个对象。  
+ The remainder of the nest has type `inner_allocator_type`. An inner allocator is used to allocate memory for elements within a container. You can obtain a reference to the stored object of this type by calling `inner_allocator`. If `Inner...` is not empty, `inner_allocator_type` has type `scoped_allocator_adaptor<Inner...>`, and `inner_allocator` designates a member object. Otherwise, `inner_allocator_type` has type `scoped_allocator_adaptor<Outer>`, and `inner_allocator` designates the entire object.  
   
- 嵌套的表现行为好像可以具有任意深度，可根据需要复制其最里层的封装分配器。  
+ The nest behaves as if it has arbitrary depth, replicating its innermost encapsulated allocator as needed.  
   
- 可借助界面中不可见的几个概念来帮助理解此模板类的行为。 最外层分配器，可协调对构造和销毁方法的所有调用。 它实际上是由递归函数 `OUTERMOST(X)` 定义的，其中 `OUTERMOST(X)` 是以下项之一。  
+ Several concepts that are not a part of the visible interface aid in describing the behavior of this template class. An *outermost allocator* mediates all calls to the construct and destroy methods. It is effectively defined by the recursive function `OUTERMOST(X)`, where `OUTERMOST(X)` is one of the following.  
   
--   如果 `X.outer_allocator()` 的格式正确，则 `OUTERMOST(X)` 为 `OUTERMOST(X.outer_allocator())`。  
+-   If `X.outer_allocator()` is well formed, then `OUTERMOST(X)` is `OUTERMOST(X.outer_allocator())`.  
   
--   否则 `OUTERMOST(X)` 为 `X`。  
+-   Otherwise, `OUTERMOST(X)` is `X`.  
   
- 需要定义三种类型以便进行展示：  
+ Three types are defined for the sake of exposition:  
   
-|类型|描述|  
+|Type|Description|  
 |----------|-----------------|  
-|`Outermost`|`OUTERMOST(*this)` 的类型。|  
+|`Outermost`|The type of `OUTERMOST(*this)`.|  
 |`Outermost_traits`|`allocator_traits<Outermost>`|  
 |`Outer_traits`|`allocator_traits<Outer>`|  
   
-### <a name="constructors"></a>构造函数  
+### <a name="constructors"></a>Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|构造 `scoped_allocator_adaptor` 对象。|  
+|[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Constructs a `scoped_allocator_adaptor` object.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Typedefs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`const_pointer`|此类型是 `const_pointer`（与分配器 `Outer` 关联）的同义词。|  
-|`const_void_pointer`|此类型是 `const_void_pointer`（与分配器 `Outer` 关联）的同义词。|  
-|`difference_type`|此类型是 `difference_type`（与分配器 `Outer` 关联）的同义词。|  
-|`inner_allocator_type`|此类型是嵌套适配器 `scoped_allocator_adaptor<Inner...>` 类型的同义词。|  
-|`outer_allocator_type`|此类型是基本分配器 `Outer` 类型的同义词。|  
-|`pointer`|此类型是 `pointer`（与分配器 `Outer` 关联）的同义词。|  
-|`propagate_on_container_copy_assignment`|仅当 `Outer_traits::propagate_on_container_copy_assignment` 或 `inner_allocator_type::propagate_on_container_copy_assignment` 为 true 时，该类型才为 true。|  
-|`propagate_on_container_move_assignment`|仅当 `Outer_traits::propagate_on_container_move_assignment` 或 `inner_allocator_type::propagate_on_container_move_assignment` 为 true 时，该类型才为 true。|  
-|`propagate_on_container_swap`|仅当 `Outer_traits::propagate_on_container_swap` 或 `inner_allocator_type::propagate_on_container_swap` 为 true 时，该类型才为 true。|  
-|`size_type`|此类型是 `size_type`（与分配器 `Outer` 关联）的同义词。|  
-|`value_type`|此类型是 `value_type`（与分配器 `Outer` 关联）的同义词。|  
-|`void_pointer`|此类型是 `void_pointer`（与分配器 `Outer` 关联）的同义词。|  
+|`const_pointer`|This type is a synonym for the `const_pointer` that is associated with the allocator `Outer`.|  
+|`const_void_pointer`|This type is a synonym for the `const_void_pointer` that is associated with the allocator `Outer`.|  
+|`difference_type`|This type is a synonym for the `difference_type` that is associated with the allocator `Outer`.|  
+|`inner_allocator_type`|This type is a synonym for the type of the nested adaptor `scoped_allocator_adaptor<Inner...>`.|  
+|`outer_allocator_type`|This type is a synonym for the type of the base allocator `Outer`.|  
+|`pointer`|This type is a synonym for the `pointer` associated with the allocator `Outer`.|  
+|`propagate_on_container_copy_assignment`|The type holds true only if `Outer_traits::propagate_on_container_copy_assignment` holds true or `inner_allocator_type::propagate_on_container_copy_assignment` holds true.|  
+|`propagate_on_container_move_assignment`|The type holds true only if `Outer_traits::propagate_on_container_move_assignment` holds true or `inner_allocator_type::propagate_on_container_move_assignment` holds true.|  
+|`propagate_on_container_swap`|The type holds true only if `Outer_traits::propagate_on_container_swap` holds true or `inner_allocator_type::propagate_on_container_swap` holds true.|  
+|`size_type`|This type is a synonym for the `size_type` associated with the allocator `Outer`.|  
+|`value_type`|This type is a synonym for the `value_type` associated with the allocator `Outer`.|  
+|`void_pointer`|This type is a synonym for the `void_pointer` associated with the allocator `Outer`.|  
   
-### <a name="structs"></a>结构  
+### <a name="structs"></a>Structs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[scoped_allocator_adaptor::rebind 结构](#rebind_struct)|将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。|  
+|[scoped_allocator_adaptor::rebind Struct](#rebind_struct)|Defines the type `Outer::rebind\<Other>::other` as a synonym for `scoped_allocator_adaptor\<Other, Inner...>`.|  
   
-### <a name="methods"></a>方法  
+### <a name="methods"></a>Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[allocate](#allocate)|通过使用 `Outer` 分配器分配内存。|  
-|[construct](#construct)|构造对象。|  
-|[deallocate](#deallocate)|通过使用外部分配器释放对象。|  
-|[destroy](#destroy)|销毁指定的对象。|  
-|[inner_allocator](#inner_allocator)|检索对类型为 `inner_allocator_type` 的存储对象的引用。|  
-|[max_size](#max_size)|确定可通过外部分配器分配的对象的最大数目。|  
-|[outer_allocator](#outer_allocator)|检索对类型为 `outer_allocator_type` 的存储对象的引用。|  
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。|  
+|[allocate](#allocate)|Allocates memory by using the `Outer` allocator.|  
+|[construct](#construct)|Constructs an object.|  
+|[deallocate](#deallocate)|Deallocates objects by using the outer allocator.|  
+|[destroy](#destroy)|Destroys a specified object.|  
+|[inner_allocator](#inner_allocator)|Retrieves a reference to the stored object of type `inner_allocator_type`.|  
+|[max_size](#max_size)|Determines the maximum number of objects that can be allocated by the outer allocator.|  
+|[outer_allocator](#outer_allocator)|Retrieves a reference to the stored object of type `outer_allocator_type`.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Creates a new `scoped_allocator_adaptor` object with each stored allocator object initialized by calling `select_on_container_copy_construction` for each corresponding allocator.|  
   
-## <a name="requirements"></a>要求  
- **标头：** \<scoped_allocator 1>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<scoped_allocator>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="allocate"></a>scoped_allocator_adaptor:: allocate
- 通过使用 `Outer` 分配器分配内存。  
+##  <a name="allocate"></a>  scoped_allocator_adaptor::allocate
+ Allocates memory by using the `Outer` allocator.  
   
 ```cpp  
 pointer allocate(size_type count);pointer allocate(size_type count, const_void_pointer hint);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要分配足够大的存储空间的元素数。  
+ The number of elements for which sufficient storage is to be allocated.  
   
  `hint`  
- 通过定位在请求之前分配的对象地址，指针可能对分配器对象有所帮助。  
+ A pointer that might assist the allocator object by locating the address of an object allocated prior to the request.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数返回 `Outer_traits::allocate(outer_allocator(), count)`。 第二个成员函数返回 `Outer_traits::allocate(outer_allocator(), count, hint)`。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns `Outer_traits::allocate(outer_allocator(), count)`. The second member function returns `Outer_traits::allocate(outer_allocator(), count, hint)`.  
   
-##  <a name="construct"></a>scoped_allocator_adaptor:: construct
- 构造对象。  
+##  <a name="construct"></a>  scoped_allocator_adaptor::construct
+ Constructs an object.  
   
 ```cpp  
 template <class Ty, class... Atypes>  
@@ -171,113 +178,113 @@ template <class Ty1, class Ty2, class Uy1, class Uy2>
 void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 指向要构造对象的内存位置的指针。  
+ A pointer to the memory location where the object is to be constructed.  
   
  `args`  
- 参数列表。  
+ A list of arguments.  
   
  `first`  
- 属于一对中第一种类型的对象。  
+ An object of the first type in a pair.  
   
  `second`  
- 属于一对中第二种类型的对象。  
+ An object of the second type in a pair.  
   
  `right`  
- 要移动或复制的现有对象。  
+ An existing object to be moved or copied.  
   
-### <a name="remarks"></a>备注  
- 第一种方法通过调用 `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)` 在 `ptr` 处构造对象，其中 `xargs...` 是以下项之一。  
+### <a name="remarks"></a>Remarks  
+ The first method constructs the object at `ptr` by calling `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, where `xargs...` is one of the following.  
   
--   如果 `uses_allocator<Ty, inner_allocator_type>` 为 false，则 `xargs...` 为 `args...`。  
+-   If `uses_allocator<Ty, inner_allocator_type>` holds false, then `xargs...` is `args...`.  
   
--   如果 `uses_allocator<Ty, inner_allocator_type>` 为 true 且 `is_constructible<Ty, allocator_arg_t, inner_allocator_type, args...>` 为 true，则 `xargs...` 为 `allocator_arg, inner_allocator(), args...`。  
+-   If `uses_allocator<Ty, inner_allocator_type>` holds true, and `is_constructible<Ty, allocator_arg_t, inner_allocator_type, args...>` holds true, then `xargs...` is `allocator_arg, inner_allocator(), args...`.  
   
--   如果 `uses_allocator<Ty, inner_allocator_type>` 为 true 且 `is_constructible<Ty, args..., inner_allocator()>` 为 true，则 `xargs...` 为 `args..., inner_allocator()`。  
+-   If `uses_allocator<Ty, inner_allocator_type>` holds true, and `is_constructible<Ty, args..., inner_allocator()>` holds true, then `xargs...` is `args..., inner_allocator()`.  
   
- 第二种方法通过调用 `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)` 和 `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)` 在 `ptr` 处构造对对象，其中 `xargs...` 在上述列表中是 `first...` 被修改的，而 `xargs...` 在上述列表中是 `second...` 被修改的。  
+ The second method constructs the pair object at `ptr` by calling `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, where `xargs...` is `first...` modified as in the above list, and `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, where `xargs...` is `second...` modified as in the above list.  
   
- 第三种方法的行为与 `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)` 相同。  
+ The third method behaves the same as `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.  
   
- 第四种方法的行为与 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(first), forward_as_tuple(std::forward<Uy2>(second))` 相同。  
+ The fourth method behaves the same as `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(first), forward_as_tuple(std::forward<Uy2>(second))`.  
   
- 第五种方法的行为与 `this->construct(ptr, piecewise_construct, forward_as_tuple(right.first), forward_as_tuple(right.second))` 相同。  
+ The fifth method behaves the same as `this->construct(ptr, piecewise_construct, forward_as_tuple(right.first), forward_as_tuple(right.second))`.  
   
- 第六种方法的行为与 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))` 相同。  
+ The sixth method behaves the same as `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.  
   
-##  <a name="deallocate"></a>scoped_allocator_adaptor:: deallocate
- 通过使用外部分配器释放对象。  
+##  <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
+ Deallocates objects by using the outer allocator.  
   
 ```cpp  
 void deallocate(pointer ptr, size_type count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 指向要释放对象的起始位置的指针。  
+ A pointer to the starting location of the objects to be deallocated.  
   
  `count`  
- 要释放的对象数。  
+ The number of objects to deallocate.  
   
-##  <a name="destroy"></a>scoped_allocator_adaptor:: destroy
- 销毁指定的对象。  
+##  <a name="destroy"></a>  scoped_allocator_adaptor::destroy
+ Destroys a specified object.  
   
 ```cpp  
 template <class Ty>  
 void destroy(Ty* ptr)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 指向要销毁对象的指针。  
+ A pointer to the object to be destroyed.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="inner_allocator"></a>scoped_allocator_adaptor:: inner_allocator
- 检索对类型为 `inner_allocator_type` 的存储对象的引用。  
+##  <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator
+ Retrieves a reference to the stored object of type `inner_allocator_type`.  
   
 ```cpp  
 inner_allocator_type& inner_allocator() noexcept;  
 const inner_allocator_type& inner_allocator() const noexcept;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对类型为 `inner_allocator_type` 的存储对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the stored object of type `inner_allocator_type`.  
   
-##  <a name="max_size"></a>scoped_allocator_adaptor:: max_size
- 确定可通过外部分配器分配的对象的最大数目。  
+##  <a name="max_size"></a>  scoped_allocator_adaptor::max_size
+ Determines the maximum number of objects that can be allocated by the outer allocator.  
   
 ```cpp  
 size_type max_size();
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="outer_allocator"></a>scoped_allocator_adaptor:: outer_allocator
- 检索对类型为 `outer_allocator_type` 的存储对象的引用。  
+##  <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
+ Retrieves a reference to the stored object of type `outer_allocator_type`.  
   
 ```cpp  
 outer_allocator_type& outer_allocator() noexcept;  
 const outer_allocator_type& outer_allocator() const noexcept;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对类型为 `outer_allocator_type` 的存储对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the stored object of type `outer_allocator_type`.  
   
-##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind 结构  
- 将 `Outer::rebind\<Other>::other` 类型定义为 `scoped_allocator_adaptor\<Other, Inner...>` 的同义词。  
+##  <a name="rebind_struct"></a>  scoped_allocator_adaptor::rebind Struct  
+ Defines the type `Outer::rebind\<Other>::other` as a synonym for `scoped_allocator_adaptor\<Other, Inner...>`.  
   
-重新绑定结构 {  
+struct rebind{  
    typedef Other_traits::rebind\<Other>  
    Other_alloc;  
    typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other;  
    };  
   
-##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 构造函数  
- 构造 `scoped_allocator_adaptor` 对象。  
+##  <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor Constructor  
+ Constructs a `scoped_allocator_adaptor` object.  
   
 ```cpp  
 scoped_allocator_adaptor();
@@ -294,31 +301,31 @@ scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 现有 `scoped_allocator_adaptor`。  
+ An existing `scoped_allocator_adaptor`.  
   
  `al`  
- 要用作外部分配器的现有分配器。  
+ An existing allocator to be used as the outer allocator.  
   
  `rest`  
- 要用作内部分配器的分配器列表。  
+ A list of allocators to be used as the inner allocators.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数默认构造其存储分配器对象。 后面的三个构造函数中的每一个都会从 `right` 中的相应对象构造其存储分配器对象。 最后一个构造函数从参数列表中相应参数构造其存储分配器对象。  
+### <a name="remarks"></a>Remarks  
+ The first constructor default constructs its stored allocator objects. Each of the next three constructors constructs its stored allocator objects from the corresponding objects in `right`. The last constructor constructs its stored allocator objects from the corresponding arguments in the argument list.  
   
-##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor:: select_on_container_copy_construction
- 创建一个新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用每个相应分配器的 `select_on_container_copy_construction` 进行初始化。  
+##  <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
+ Creates a new `scoped_allocator_adaptor` object with each stored allocator object initialized by calling `select_on_container_copy_construction` for each corresponding allocator.  
   
 ```cpp  
 scoped_allocator_adaptor select_on_container_copy_construction();
 ```  
   
-### <a name="return-value"></a>返回值  
- 实际上，此方法将返回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 结果为新的 `scoped_allocator_adaptor` 对象，其中每个存储分配器对象都可通过调用相应分配器 `al` 的 `al.select_on_container_copy_construction()` 进行初始化。  
+### <a name="return-value"></a>Return Value  
+ This method effectively returns `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. The result is a new `scoped_allocator_adaptor` object with each stored allocator object initialized by calling `al.select_on_container_copy_construction()` for the corresponding allocator `al`.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

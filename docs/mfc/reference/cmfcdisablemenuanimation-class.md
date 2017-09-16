@@ -1,5 +1,5 @@
 ---
-title: "CMFCDisableMenuAnimation 类 |Microsoft 文档"
+title: CMFCDisableMenuAnimation Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDisableMenuAnimation class
+- CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 caps.latest.revision: 22
 author: mikeblome
@@ -35,76 +35,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ea0be944ca70d6f8317fd4bc60fdd50ecc714438
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e3c4dae9f7d1082cb90fd022b15b4adc43f3d764
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 类
-禁用弹出菜单动画。  
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Class
+Disables pop-up menu animation.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDisableMenuAnimation  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
-  
-|||  
-|-|-|  
-|名称|描述|  
-|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|构造 `CMFCDisableMenuAnimation` 对象。|  
-|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|析构函数。|  
-  
-### <a name="public-methods"></a>公共方法  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名称|说明|  
-|[CMFCDisableMenuAnimation::Restore](#restore)|还原前一框架用于显示一个弹出菜单的动画。|  
+|Name|Description|  
+|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Constructs a `CMFCDisableMenuAnimation` object.|  
+|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destructor.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名称|描述|  
-|`CMFCDisableMenuAnimation::m_animType`|存储以前的弹出菜单动画类型。|  
+|Name|Description|  
+|[CMFCDisableMenuAnimation::Restore](#restore)|Restores the previous animation that the framework used to display a pop-up menu.|  
   
-### <a name="remarks"></a>备注  
- 使用此帮助器类来临时禁用弹出菜单动画 （例如，当处理鼠标或键盘命令）。  
+### <a name="data-members"></a>Data Members  
   
- 一个`CMFCDisableMenuAnimation`对象禁用弹出菜单动画在其生存期内。 构造函数将存储在当前的弹出菜单动画类型`m_animType`字段并将当前的动画类型到设置`CMFCPopupMenu::NO_ANIMATION`。 析构函数将还原以前的动画类型。  
+|||  
+|-|-|  
+|Name|Description|  
+|`CMFCDisableMenuAnimation::m_animType`|Stores the previous pop-up menu animation type.|  
   
- 您可以创建`CMFCDisableMenuAnimation`禁用整个单一函数的弹出菜单动画在堆栈上的对象。 如果你想要禁用函数之间的弹出菜单动画，创建`CMFCDisableMenuAnimation`对象在堆上，当你想要还原的弹出菜单动画，然后删除它。  
+### <a name="remarks"></a>Remarks  
+ Use this helper class to temporarily disable pop-up menu animation (for example, when you process mouse or keyboard commands).  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用堆栈来临时禁用菜单动画。  
+ A `CMFCDisableMenuAnimation` object disables pop-up menu animation during its lifetime. The constructor stores the current pop-up menu animation type in the `m_animType` field and sets the current animation type to `CMFCPopupMenu::NO_ANIMATION`. The destructor restores the previous animation type.  
   
- [!code-cpp[NVC_MFC_Misc #&1;](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+ You can create a `CMFCDisableMenuAnimation` object on the stack to disable pop-up menu animation throughout a single function. If you want to disable popup menu animation between functions, create a `CMFCDisableMenuAnimation` object on the heap and then delete it when you want to restore pop-up menu animation.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="example"></a>Example  
+ The following example shows how to use the stack to temporarily disable menu animation.  
+  
+ [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxpopupmenu.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpopupmenu.h  
   
-##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
- 还原前一框架用于显示一个弹出菜单的动画。  
+##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore  
+ Restores the previous animation that the framework used to display a pop-up menu.  
   
 ```  
 void Restore ();
 ```  
   
-### <a name="remarks"></a>备注  
- 此方法由`CMFCDisableMenuAnimation`析构函数以还原上一个动画的框架用于显示一个弹出菜单。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the `CMFCDisableMenuAnimation` destructor to restore the previous animation that the framework used to display a pop-up menu.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md)
 

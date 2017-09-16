@@ -1,73 +1,90 @@
 ---
-title: "活动文档容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "活动文档容器 [C++]"
-  - "活动文档 [C++], 容器"
-  - "容器 [C++], 活动文档"
-  - "MFC COM [C++], 活动文档包容"
+title: Active Document Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- active document containers [MFC]
+- containers [MFC], active document
+- MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 活动文档容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a6d09ae7dc4e81051c8ea78106f8327a1c7103b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-活动文档容器，例如 Microsoft Office 活页夹或 Internet Explorer，可以使用不同的应用程序类型的多个文档。使用单个帧中 \(而不是强制您为每个文档类型创建和使用不同应用程序框架\)。  
+---
+# <a name="active-document-containers"></a>Active Document Containers
+An active document container, such as Microsoft Office Binder or Internet Explorer, allows you to work with several documents of different application types within a single frame (instead of forcing you to create and use multiple application frames for each document type).  
   
- MFC 提供 `COleDocObjectItem` 类中的活动文档容器提供完全支持。  可以使用 MFC 应用程序向导。选择在 MFC 应用程序向导的 **复合文档支持** 页的 **活动文档容器 \(D\)** 复选框以创建活动文档容器。  有关更多信息，请参见 [创建活动文档容器应用程序](../mfc/creating-an-active-document-container-application.md)。  
+ MFC provides full support for active document containers in the `COleDocObjectItem` class. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** check box on the **Compound Document Support** page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
- 有关活动文档容器的更多信息，请参见：  
+ For more information about active document containers, see:  
   
--   [容器要求](#container_requirements)  
+-   [Container Requirements](#container_requirements)  
   
--   [文档网站对象](#document_site_objects)  
+-   [Document Site Objects](#document_site_objects)  
   
--   [网站对象视图](#view_site_objects)  
+-   [View Site Objects](#view_site_objects)  
   
--   [帧对象](#frame_object)  
+-   [Frame Object](#frame_object)  
   
--   [帮助菜单合并](../mfc/help-menu-merging.md)  
+-   [Help Menu Merging](../mfc/help-menu-merging.md)  
   
--   [编程打印](../mfc/programmatic-printing.md)  
+-   [Programmatic Printing](../mfc/programmatic-printing.md)  
   
--   [命令目标](../mfc/message-handling-and-command-targets.md)  
+-   [Command Targets](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a> 容器要求  
- 在活动文档的活动文档容器支持暗指更多与接口实现：它还需要一包含的接口对象的知识。  同样适用于活动文档容器扩展，还必须将使用活动文档的某些扩展接口。  
+##  <a name="container_requirements"></a> Container Requirements  
+ Active document support in an active document container implies more than just interface implementations: it also requires knowledge of using the interfaces of a contained object. The same applies to active document extensions, where the container must also know how to use those extension interfaces on the active documents themselves.  
   
- 集成活动文档的活动文档容器必须：  
+ An active document container that integrates active documents must:  
   
--   能够处理对象存储通过 **IPersistStorage** 接口，即，它必须提供 `IStorage` 实例为每个活动文档。  
+-   Be capable of handling object storage through the **IPersistStorage** interface, that is, it must provide an `IStorage` instance to each active document.  
   
--   支持 OLE 文档基础的嵌入功能，需要“网站”对象 \(每个嵌入文档或\) 实现 **IOleClientSite** 和 **IAdviseSink**。  
+-   Support the basic embedding features of OLE documents, necessitating "site" objects (one per document or embedding) that implement **IOleClientSite** and **IAdviseSink**.  
   
--   嵌入对象或活动文档支持就地激活。  容器的网站对象必须实现 `IOleInPlaceSite`，并且该容器的帧对象必须提供 **IOleInPlaceFrame**。  
+-   Support in-place activation of embedded objects or active documents. The container's site objects must implement `IOleInPlaceSite` and the container's frame object must provide **IOleInPlaceFrame**.  
   
--   通过实现 `IOleDocumentSite` 来提供机制活动文档容器支持的扩展与文档可用。  或者，可以实现活动文档容器接口 `IOleCommandTarget` 和 `IContinueCallback` 包含简单命令 \(如打印或保存。  
+-   Support the active documents' extensions by implementing `IOleDocumentSite` to provide the mechanism for the container to talk to the document. Optionally, the container can implement the active document interfaces `IOleCommandTarget` and `IContinueCallback` to pick up simple commands such as printing or saving.  
   
- 帧、对象和视图对象容器对象可以选择实现 **IOleCommandTarget** 某些支持命令安排，如 [命令目标](../mfc/message-handling-and-command-targets.md)所述。  视图和容器对象还可以实现 `IPrint` 和 `IContinueCallback`，则支持的编程打印，如 [编程打印](../mfc/programmatic-printing.md)所述。  
+ The frame object, the view objects, and the container object can optionally implement **IOleCommandTarget** to support the dispatch of certain commands, as discussed in [Command Targets](../mfc/message-handling-and-command-targets.md). View and container objects can also optionally implement `IPrint` and `IContinueCallback`, to support programmatic printing, as discussed in [Programmatic Printing](../mfc/programmatic-printing.md).  
   
- 下图显示容器及其组件之间关系的概念 \(左侧\) 和活动文档及其视图。\(右侧\)。  活动文档管理存储和数据，并显示视图，或选择数据的打印。  在粗体的接口是活动文档。参与是必需的；一些粗体和斜体是可选的。  需要的其他接口。  
+ The following figure shows the conceptual relationships between a container and its components (at left), and the active document and its views (at right). The active document manages storage and data, and the view displays or optionally prints that data. Interfaces in bold are those required for active document participation; those bold and italic are optional. All other interfaces are required.  
   
- ![活动文档容器接口](../mfc/media/vc37gj1.png "vc37gj1")  
+ ![Active document container interfaces](../mfc/media/vc37gj1.gif "vc37gj1")  
   
- 只支持单一文档的视图来实现视图和文档组件 \(即它的对应接口\) 在一台物理类别。  此外，一次只支持一视图的容器可将网站文档网站和站点视图到单个站点特定类。  容器的帧对象，但是，必须保持标记，并且，容器文档组件仅包含此处为体系结构的完整样式；不影响的受活动文档包容结构的。  
+ A document that supports only a single view can implement both the view and document components (that is, their corresponding interfaces) on a single concrete class. In addition, a container site that only supports one view at a time can combine the document site and the view site into a single concrete site class. The container's frame object, however, must remain distinct, and the container's document component is merely included here to give a complete picture of the architecture; it is not affected by the active document containment architecture.  
   
-##  <a name="document_site_objects"></a> 文档网站对象  
- 在活动文档包容结构中，文档网站与在 OLE 文档的客户端网站对象添加了 `IOleDocument` 接口相同的：  
+##  <a name="document_site_objects"></a> Document Site Objects  
+ In the active document containment architecture, a document site is the same as a client site object in OLE Documents with the addition of the `IOleDocument` interface:  
   
  `interface IOleDocumentSite : IUnknown`  
   
@@ -77,17 +94,19 @@ caps.handback.revision: 6
   
  `}`  
   
- 文档网站从概念上讲是一个或多个“视图的”对象的容器。  每个视图的网站对象与网站管理文档的文档的各个视图对象。  如果容器只支持单个视图每个文档网站，则可以实现网站文档和视图站点具有唯一物理类别的。  
+ The document site is conceptually the container for one or more "view site" objects. Each view site object is associated with individual view objects of the document managed by the document site. If the container only supports a single view per document site, then it can implement the document site and the view site with a single concrete class.  
   
-##  <a name="view_site_objects"></a> 网站对象视图  
- 网站管理文档容器的视图对象的特定视图的显示空间。  除了标准支持 `IOleInPlaceSite` 接口外，网站通常视图还实现编程打印控件的 `IContinueCallback`。\(视图对象。`IContinueCallback` 从查询的注释，因此对容器所需\) 的所有对象的实际实现  
+##  <a name="view_site_objects"></a> View Site Objects  
+ A container's view site object manages the display space for a particular view of a document. In addition to supporting the standard `IOleInPlaceSite` interface, a view site also generally implements `IContinueCallback` for programmatic printing control. (Note that the view object never queries for `IContinueCallback` so it can actually be implemented on any object the container desires.)  
   
- 支持多视图的容器必须能够在创建文档网站内的多个视图的网站对象。  这提供每个视图。单独激活与停用服务根据通过提供 `IOleInPlaceSite`。  
+ A container that supports multiple views must be able to create multiple view site objects within the document site. This provides each view with separate activation and deactivation services as provided through `IOleInPlaceSite`.  
   
-##  <a name="frame_object"></a> 帧对象  
- 容器的帧对象是，大多，对于就地激活在 OLE 文档，即，一个用于处理菜单和工具栏协商相同的帧。  对象视图对此的帧对象通过 **IOleInPlaceSite::GetWindowContext**，也提供对表示文档容器 \(的容器对象可以处理级别和协商窗格工具栏包含的对象枚举\)。  
+##  <a name="frame_object"></a> Frame Object  
+ The container's frame object is, for the most part, the same frame that is used for in-place activation in OLE Documents, that is, the one that handles menu and toolbar negotiation. A view object has access to this frame object through **IOleInPlaceSite::GetWindowContext**, which also provides access to the container object representing the container document (which can handle pane-level toolbar negotiation and contained object enumeration).  
   
- 活动文档容器可以通过将 `IOleCommandTarget`增加帧。  这使它可以接收的方式与自在活动文档的用户界面的命令此接口可以允许发送相同容器命令 \(如 **File New**，**打开**，**打印**; **另存为**，**Edit Copy**、**粘贴**，**撤消**和其他一些函数\) 到活动文档。  有关更多信息，请参见 [命令目标](../mfc/message-handling-and-command-targets.md)。  
+ An active document container can augment the frame by adding `IOleCommandTarget`. This allows it to receive commands that originate in the active document's user interface in the same way that this interface can allow a container to send the same commands (such as **File New**, **Open**, **Save As**, **Print**; **Edit Copy**, **Paste**, **Undo**, and others) to an active document. For more information, see [Command Targets](../mfc/message-handling-and-command-targets.md).  
   
-## 请参阅  
- [活动文档包容](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonMainPanel 类 |Microsoft 文档"
+title: CMFCRibbonMainPanel Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonMainPanel class
+- CMFCRibbonMainPanel [MFC], Add
+- CMFCRibbonMainPanel [MFC], AddRecentFilesList
+- CMFCRibbonMainPanel [MFC], AddToBottom
+- CMFCRibbonMainPanel [MFC], AddToRight
+- CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
 caps.latest.revision: 23
 author: mikeblome
@@ -39,78 +43,78 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3fc37a953e62e6ea90de8402b7f2912b06967e13
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fdd58b252d3e5031fa64af714b2b52ada1402dde
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 类
-实现在单击时显示的功能区面板[而 CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。  
+# <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel Class
+Implements a ribbon panel that displays when you click the [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonMainPanel : public CMFCRibbonPanel  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|默认构造函数。|  
-|`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|析构函数。|  
+|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Default constructor.|  
+|`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonMainPanel::Add](#add)|将功能区元素添加到应用程序按钮面板的左窗格中。 (重写[CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)。)|  
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|将文本字符串添加到新的文件列表菜单。|  
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|将功能区元素添加到功能区应用程序面板的底部窗格中。|  
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|将功能区元素添加到应用程序按钮面板的右窗格中。|  
-|`CMFCRibbonMainPanel::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|返回表示功能区的主面板的区域的矩形。|  
-|`CMFCRibbonMainPanel::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
+|[CMFCRibbonMainPanel::Add](#add)|Adds a ribbon element to the left pane of the application button panel. (Overrides [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|  
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Adds a text string to the recent files list menu.|  
+|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Adds a ribbon element to the bottom pane of the ribbon application panel.|  
+|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Adds a ribbon element to the right pane of the application button panel.|  
+|`CMFCRibbonMainPanel::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Returns a rectangle that represents the area of the ribbon main panel.|  
+|`CMFCRibbonMainPanel::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>备注  
- 框架显示`CMFCRibbonMainPanel`当打开应用程序面板。 它包含三个窗格︰  
+## <a name="remarks"></a>Remarks  
+ The framework displays the `CMFCRibbonMainPanel` when you open the application panel. It contains three panes:  
   
--   左的窗格包含与命令相关联的文件，如**打开**，**保存**，**打印**，和**关闭**。 若要将命令添加到此窗格中，调用[CMFCRibbonMainPanel::Add](#add)。  
+-   The left pane contains commands associated with files, such as **Open**, **Save**, **Print**, and **Close**. To add a command to this pane, call [CMFCRibbonMainPanel::Add](#add).  
   
--   右窗格中包含修改的左窗格中单击该命令的选项。 例如，如果您单击**另存为**从左窗格中，右窗格中可以显示可用的文件类型。 若要将某项添加到此窗格中，调用[CMFCRibbonMainPanel::AddToRight](#addtoright)。  
+-   The right pane contains options that modify the command that you click in the left pane. For example, if you click **Save As** from the left pane, the right pane can display available file types. To add an item to this pane, call [CMFCRibbonMainPanel::AddToRight](#addtoright).  
   
--   底部窗格中包含允许您更改应用程序的设置并退出程序的按钮。 若要将某项添加到此窗格中，调用[CMFCRibbonMainPanel::AddToBottom](#addtobottom)。  
+-   The bottom pane contains buttons that allow you to change the application's settings and to exit the program. To add an item to this pane, call [CMFCRibbonMainPanel::AddToBottom](#addtobottom).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)  
   
  [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxRibbonMainPanel.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonMainPanel.h  
   
-##  <a name="add"></a>CMFCRibbonMainPanel::Add  
- 将功能区元素添加到应用程序按钮面板的左窗格中。  
+##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
+ Adds a ribbon element to the left pane of the application button panel.  
   
 ```  
 virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>参数  
- [in][out]`pElem`  
- 指向要向主面板中添加的功能区元素的指针。  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pElem`  
+ A pointer to the ribbon element to add to the main panel.  
   
-### <a name="remarks"></a>备注  
- 向面板中添加功能区元素。 使用此方法添加的元素将位于左侧列的主面板中。  
+### <a name="remarks"></a>Remarks  
+ Adds a ribbon element to the panel. Elements added using this method will be located in the left column of the main panel.  
   
-##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
- 将文本字符串添加到新的文件列表菜单。  
+##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
+ Adds a text string to the recent files list menu.  
   
 ```  
 void AddRecentFilesList(
@@ -118,30 +122,30 @@ void AddRecentFilesList(
     int nWidth = 300);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszLabel`  
- 指定要添加到最近的文件列表的字符串。  
+ Specifies the string to add to the recent files list.  
   
  `nWidth`  
- 指定以像素为单位的最新的文件列表面板的宽度。  
+ Specifies the width, in pixels, of the recent files list panel.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
- 将功能区元素添加到功能区应用程序面板的底部窗格中。  
+##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
+ Adds a ribbon element to the bottom pane of the ribbon application panel.  
   
 ```  
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
-### <a name="parameters"></a>参数  
- [in][out]`pElem`  
- 指向要添加到的主面板底部的功能区元素的指针。  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pElem`  
+ A pointer to the ribbon element to add to the bottom of the main panel.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
- 将功能区元素添加到应用程序按钮面板的右窗格中。  
+##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
+ Adds a ribbon element to the right pane of the application button panel.  
   
 ```  
 void AddToRight(
@@ -149,28 +153,28 @@ void AddToRight(
     int nWidth = 300);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pElem`  
- 指向要添加到主面板右侧的功能区元素的指针。  
+ A pointer to a ribbon element to be added to the right side of the main panel.  
   
  `nWidth`  
- 指定以像素为单位的右侧面板的宽度。  
+ Specifies the width, in pixels, of the right panel.  
   
-### <a name="remarks"></a>备注  
- 此函数用于将功能区元素添加到的右侧面板。 右侧面板中通常会显示最新的文件列表中，但您可以添加以下任何其他功能区元素。  
+### <a name="remarks"></a>Remarks  
+ Use this function to add a ribbon element to the right panel. The right panel typically displays the recent files list, but you can add any other ribbon element here.  
   
-##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
- 返回表示功能区的主面板的区域的矩形。  
+##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
+ Returns a rectangle that represents the area of the ribbon main panel.  
   
 ```  
 CRect GetCommandsFrame() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个表示功能区的主面板的区域的矩形。  
+### <a name="return-value"></a>Return Value  
+ A rectangle that represents the area of the ribbon main panel.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonPanel 类](../../mfc/reference/cmfcribbonpanel-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonPanel Class](../../mfc/reference/cmfcribbonpanel-class.md)
 

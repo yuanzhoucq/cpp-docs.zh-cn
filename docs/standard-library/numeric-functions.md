@@ -1,5 +1,5 @@
 ---
-title: "&lt;numeric&gt; 函数 | Microsoft Docs"
+title: '&lt;numeric&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,21 +15,27 @@ f1_keywords:
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: d194bebeb13d9a5e4648a7c74192047fe093576d
+helpviewer_keywords:
+- std::accumulate [C++]
+- std::adjacent_difference [C++]
+- std::inner_product [C++]
+- std::iota [C++]
+- std::partial_sum [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5d356585509e7398da3f697f935c866e393b2c42
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函数
+# <a name="ltnumericgt-functions"></a>&lt;numeric&gt; functions
 ||||  
 |-|-|-|  
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
 |[iota](#iota)|[partial_sum](#partial_sum)|  
   
-##  <a name="accumulate"></a>accumulate  
- 通过计算连续部分总和来计算指定范围（包括一些初始值）中所有元素的和，或计算通过指定的二元运算（而不是求和运算）获得的类似的连续部分结果的结果。  
+##  <a name="accumulate"></a>  accumulate  
+ Computes the sum of all the elements in a specified range including some initial value by computing successive partial sums or computes the result of successive partial results similarly obtained from using a specified binary operation other than the sum.  
   
 ```  
 template <class InputIterator, class Type>  
@@ -43,26 +49,26 @@ Type accumulate(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>参数   
+### <a name="parameters"></a>Parameters   
  `first`  
- 输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现第一个元素。  
+ An input iterator addressing the first element in the range to be summed or combined according to a specified binary operation.  
   
  `last`  
- 输入迭代器，此迭代器在要求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。  
+ An input iterator addressing the last element in the range to be summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.  
   
  `val`  
- 向其依次添加每个元素或根据指定二元运算合并每个元素的初始值。  
+ An initial value to which each element is in turn added or combined with according to a specified binary operation.  
   
  `binary_op`  
- 要应用于指定范围内每个元素的二元运算及其上一应用的结果。  
+ The binary operation that is to be applied to the each element in the specified range and the result of its previous applications.  
   
-### <a name="return-value"></a>返回值  
- `val` 与指定范围内第一个模板函数的所有元素或第二个模板函数的所有元素的总和，将指定的二元运算替代求和运算，应用于 ( *PartialResult, \*Iter*) 的结果，其中 *PartialResult* 是该运算的上一应用的结果，`Iter` 是指向范围内的元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ The sum of `val` and all the elements in the specified range for the first template function, or, for the second template function, the result of applying the binary operation specified, instead of the sum operation, to ( *PartialResult, \*Iter*), where *PartialResult* is the result of previous applications of the operation and `Iter` is an iterator pointing to an element in the range.  
   
-### <a name="remarks"></a>备注  
- 初始值确保当范围为空时具有明确定义的结果，在这种情况下，将返回 `val`。 二元运算不需要具有关联性或可交换性。 将结果初始化为初始值 `val`，然后以迭代方式计算范围内的 *result* = `binary_op` ( *result*, **\***`Iter`)，其中 `Iter` 是指向范围内连续元素的迭代器。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。  
+### <a name="remarks"></a>Remarks  
+ The initial value insures that there will be a well-defined result when the range is empty, in which case `val` is returned. The binary operation does not need to be associative or commutative. The result is initialized to the initial value `val` and then *result* = `binary_op` ( *result*, **\***`Iter`) is calculated iteratively through the range, where `Iter` is an iterator pointing to successive element in the range. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_accum.cpp  
@@ -162,7 +168,7 @@ The vector of partial products is:
 ```  
   
 ##  <a name="adjacent_difference"></a>  adjacent_difference  
- 计算输入范围中每个元素与其前一元素之间的连续差值，并将结果输出到目标范围，或计算将差值运算替换为其他指定二元运算的一般化程序的结果。  
+ Computes the successive differences between each element and its predecessor in an input range and outputs the results to a destination range or computes the result of a generalized procedure where the difference operation is replaced by another, specified binary operation.  
   
 ```  
 template <class InputIterator, class OutIterator>  
@@ -179,32 +185,32 @@ OutputIterator adjacent_difference(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现第一个元素。  
+ An input iterator addressing the first element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.  
   
  `last`  
- 输入迭代器，此迭代器在其中元素与各自前一元素不同的输入范围内或从中通过其他指定二元运算来操作值对的输入范围内发现最后一个元素。  
+ An input iterator addressing the last element in the input range whose elements are to be differenced with their respective predecessors or where the pair of values is to be operated on by another specified binary operation.  
   
  `result`  
- 输出迭代器，此迭代器在存储一系列差值或指定运算结果的目标范围内发现第一个元素。  
+ An output iterator addressing the first element a destination range where the series of differences or the results of the specified operation is to be stored.  
   
  `binary_op`  
- 在用于替换差分程序中减法运算的通用运算中应用的二元运算。  
+ The binary operation that is to be applied in the generalized operation replacing the operation of subtraction in the differencing procedure.  
   
-### <a name="return-value"></a>返回值  
- 发现目标范围末尾的输出迭代器：`result` + ( `last` - `first`)。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the end of the destination range: `result` + ( `last` - `first`).  
   
-### <a name="remarks"></a>备注  
- 输出迭代器 _*结果*可以是相同的迭代器的输入迭代器作为 * 首先，*，以便`adjacent_difference`可能就地计算 s。  
+### <a name="remarks"></a>Remarks  
+ The output iterator _ *result* is allowed to be the same iterator as the input iterator * first,* so that `adjacent_difference`s may be computed in place.  
   
- 值的序列1， 2， 3，输入范围，第一个模板函数中的存储连续**partial_difference**s 1， 2- 1，a3- 2，目标范围内的。  
+ For a sequence of values *a*1, *a*2, *a*3, in an input range, the first template function stores successive **partial_difference**s *a*1, *a*2 - *a*1, a3 - *a*2, in the destination range.  
   
- 对于输入范围中的值序列 *a*1, *a*2, *a*3，第二个模板函数将在目标范围中存储连续的 **partial_difference**：*a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2。  
+ For a sequence of values *a*1, *a*2, *a*3, in an input range, the second template function stores successive **partial_difference**s *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, in the destination range.  
   
- 二元运算 `binary_op` 无需具有关联性或可交换性，因为应用的运算顺序是完全指定的。  
+ The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_adj_diff.cpp  
@@ -266,7 +272,7 @@ int main( )
 ```  
   
 ##  <a name="inner_product"></a>  inner_product  
- 计算两个范围的逐元素集乘积的总和并将总和添加到指定初始值，或计算将求和与乘积二元运算替换为其他指定二元运算的一般化程序的结果。  
+ Computes the sum of the element-wise product of two ranges and adds it to a specified initial value or computes the result of a generalized procedure where the sum and product binary operations are replaced by other specified binary operations.  
   
 ```  
 template <class InputIterator1, class InputIterator2, class Type>  
@@ -286,42 +292,42 @@ Type inner_product(
     BinaryOperation2  binary_op2);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 一个输入迭代器，该迭代器发现第一个范围内的第一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。  
+ An input iterator addressing the first element in the first range whose inner product or generalized inner product with the second range is to be computed.  
   
  `last1`  
- 一个输入迭代器，该迭代器发现第一个范围内的最后一个元素，该范围与第二个范围的内部乘积或一般化内部乘积将进行计算。  
+ An input iterator addressing the last element in the first range whose inner product or generalized inner product with the second range is to be computed.  
   
  `first2`  
- 一个输入迭代器，该迭代器发现第二个范围内的第一个元素，该范围与第一个范围的内部乘积或一般化内部乘积将进行计算。  
+ An input iterator addressing the first element in the second range whose inner product or generalized inner product with the first range is to be computed.  
   
  `val`  
- 一个初始值，将对该值添加两个范围间的内部乘积或一般化内部乘积。  
+ An initial value to which the inner product or generalized inner product between the ranges is to be added.  
   
  *binary_op1*  
- 在一般化内部乘积中，替换应用于逐元素乘积的内部乘积求和运算的二元运算。  
+ The binary operation that replaces the inner product operation of sum applied to the element-wise products in the generalization of the inner product.  
   
  *binary_op2*  
- 在一般化内部乘积中，替换内部乘积逐元素乘积运算的二元运算。  
+ The binary operation that replaces the inner product element-wise operation of multiply in the generalization of the inner product.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数返回逐元素集乘积的总和，并向其添加指定的初始值。 因此，对于值 *a*i 和 *b*i 的范围，它将返回：  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the sum of the element-wise products and adds to it the specified initial value. So for ranges of values *a*i and *b*i, it returns:  
   
- `val`+ ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
+ `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
- 通过以迭代方式将`val`与`val`+ ( 我\* *b*我)。  
+ by iteratively replacing `val` with `val` + ( *a*i \* *b*i ).  
   
- 第二个成员函数返回：  
+ The second member function returns:  
   
- `val`*binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ...*binary_op1* ( *a*n *binary_op2* *b*n )  
+ `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
   
- 通过以迭代方式将`val`与`val` *binary_op1* ( 我*binary_op2* *b*我)。  
+ by iteratively replacing `val` with `val` *binary_op1* ( *a*i *binary_op2* *b*i ).  
   
-### <a name="remarks"></a>备注  
- 初始值确保当范围为空时具有明确定义的结果，在这种情况下，将返回 `val`。 二元运算不需要具有关联性或可交换性。 该范围必须有效，并且其复杂度与该范围的大小呈线性关系。 二元运算符的返回类型必须可转换为 **Type**，以确保在迭代期间闭包。  
+### <a name="remarks"></a>Remarks  
+ The initial value ensures that there will be a well-defined result when the range is empty, in which case `val` is returned. The binary operations do not need to be associative or commutative. The range must be valid and the complexity is linear with the size of the range. The return type of the binary operator must be convertible to **Type** to ensure closure during the iteration.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_inner_prod.cpp  
@@ -412,27 +418,27 @@ int main()
 ```  
   
 ##  <a name="iota"></a>  iota  
- 存储一个起始值，从第一个元素开始，在间隔 `[ first,  last)` 内的每个元素中填充此值的连续递增值 (` value++`)。  
+ Stores a starting value, beginning with the first element and filling with successive increments of that value ( ` value++`) in each of the elements in the interval `[ first,  last)`.  
   
 ```  
 template <class ForwardIterator, class Type>  
 void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 发现范围中要填充的第一个元素的输入迭代器。  
+ An input iterator that addresses the first element in the range to be filled.  
   
  `last`  
- 发现范围中要填充的最后一个元素的输入迭代器。  
+ An input iterator that addresses the last element in the range to be filled.  
   
  `value`  
- 要存储在第一个元素中并连续增加后续元素的起始值。  
+ The starting value to store in the first element and to successively increment for subsequent elements.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>示例  
-  以下示例通过填充整数[列表](../standard-library/list.md)，然后通过 `list` 填充[向量](../standard-library/vector.md)演示了 `iota` 函数的一些用途，以便使用 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 函数。  
+### <a name="example"></a>Example  
+  The following example demonstrates some uses for the `iota` function by filling a [list](../standard-library/list.md) of integers and then filling a [vector](../standard-library/vector.md) with the `list` so that the [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) function can be used.  
   
 ```cpp  
 // compile by using: cl /EHsc /nologo /W4 /MTd  
@@ -473,7 +479,7 @@ int main(void)
 ```  
   
 ##  <a name="partial_sum"></a>  partial_sum  
- 计算输入范围中从第一个元素到第 *i* 个元素的一系列总和，并在目标范围的第 *i* 个元素中存储此类每个总和的结果，或计算将求和运算替换为其他指定二元运算的一般化程序的结果。  
+ Computes a series of sums in an input range from the first element through the *i*th element and stores the result of each such sum in the *i*th element of a destination range or computes the result of a generalized procedure where the sum operation is replaced by another specified binary operation.  
   
 ```  
 template <class InputIterator, class OutIt>  
@@ -490,32 +496,32 @@ OutputIterator partial_sum(
     BinaryOperation binary_op);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现第一个元素。  
+ An input iterator addressing the first element in the range to be partially summed or combined according to a specified binary operation.  
   
  `last`  
- 输入迭代器，此迭代器在要部分求和或根据指定二元运算合并的范围内发现最后一个元素，即迭代累计中实际包含的最后一个元素之外的一个位置。  
+ An input iterator addressing the last element in the range to be partially summed or combined according to a specified binary operation that is one position beyond the final element actually included in the iterated accumulation.  
   
  `result`  
- 输出迭代器，此迭代器在存储一系列部分和或指定运算结果的目标范围内发现第一个元素。  
+ An output iterator addressing the first element a destination range where the series of partial sums or the results of the specified operation is to be stored.  
   
  `binary_op`  
- 在用于替换部分求和程序中求和运算的通用运算中应用的二元运算。    
+ The binary operation that is to be applied in the generalized operation replacing the operation of sum in the partial sum procedure.    
   
-### <a name="return-value"></a>返回值  
- 发现目标范围末尾的输出迭代器：`result` + ( `last` - `first`),  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the end of the destination range: `result` + ( `last` - `first`),  
   
-### <a name="remarks"></a>备注  
- 输出迭代器 `result` 可以与输入迭代器 `first` 相同，因此可就地计算部分和。  
+### <a name="remarks"></a>Remarks  
+ The output iterator `result` is allowed to be the same iterator as the input iterator `first`, so that partial sums may be computed in place.  
   
- 对于输入范围中的 *a*1, *a*2, *a*3 值序列，第一个模板函数在目标范围中存储连续部分和，其中第 *i* 个元素通过 ( ( (*a*1 + *a*2) + *a*3) *a*i) 给定。  
+ For a sequence of values *a*1, *a*2, *a*3,  in an input range, the first template function stores successive partial sums in the destination range, where the *i*th element is given by (  ( ( *a*1 + *a*2) + *a*3) *a*i).  
   
- 值的序列1， 2， 3，在输入的范围中第二个模板函数将存储在目标范围，其中第 i 个元素指定的连续部分和 ((( 1 `binary_op` 2) `binary_op` 3) 我)。  
+ For a sequence of values *a*1, *a*2, *a*3,  in an input range, the second template function stores successive partial sums in the destination range, where the ith element is given by (  ( ( *a*1 `binary_op` *a*2 ) `binary_op` *a*3 ) *a*i).  
   
- 二元运算 `binary_op` 无需具有关联性或可交换性，因为应用的运算顺序是完全指定的。  
+ The binary operation `binary_op` is not required to be either associative or commutative, because the order of operations applies is completely specified.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_partial_sum.cpp  
@@ -575,7 +581,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<numeric>](../standard-library/numeric.md)
 
 

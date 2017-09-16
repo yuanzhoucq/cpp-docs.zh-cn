@@ -1,72 +1,91 @@
 ---
-title: "Win32 Internet 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.win32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Internet 类"
-  - "Win32 [C++], Internet 类"
-  - "Windows API [C++], Internet 类"
-  - "WinInet 类, 类"
+title: Win32 Internet Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.win32
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet classes [MFC]
+- WinInet classes [MFC], classes
+- Win32 [MFC], Internet classes
+- Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Win32 Internet 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 768e3a7fb3563fd8b43b7d96a2aa65999a8445d5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 包装 Win32 Internet \(WinInet\) 和 ActiveX 技术使 Internet 编程变得更容易。  
+---
+# <a name="win32-internet-classes"></a>Win32 Internet Classes
+MFC wraps the Win32 Internet (WinInet) and ActiveX technology to make Internet programming easier.  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- 创建并初始化一 Internet 会话或多个同时会话，Internet 并且，如果需要，描述为代理服务器的连接。  
+ Creates and initializes one Internet session or several simultaneous Internet sessions and, if necessary, describes the connection to a proxy server.  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
- 管理与 Internet 服务器的连接。  
+ Manages your connection to an Internet server.  
   
  [CInternetFile](../mfc/reference/cinternetfile-class.md)  
- 此类及其派生类可以对文件的访问权限。使用 Internet 协议的远程系统。  
+ This class and its derived classes allow access to files on remote systems that use Internet protocols.  
   
  [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
- 管理与 HTTP 服务器的连接。  
+ Manages your connection to an HTTP server.  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
- 提供功能查找并读取在 HTTP 服务器的文件。  
+ Provides the functionality to find and read files on an HTTP server.  
   
  [CGopherFile](../mfc/reference/cgopherfile-class.md)  
- 提供查找和读取 Gopher 服务器上文件的功能。  
+ Provides the functionality to find and read files on a gopher server.  
   
  [CFtpConnection](../mfc/reference/cftpconnection-class.md)  
- 管理与 FTP 服务器的连接。  
+ Manages your connection to an FTP server.  
   
  [CGopherConnection](../mfc/reference/cgopherconnection-class.md)  
- 管理对地鼠服务器的连接。  
+ Manages your connection to a gopher server.  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
- 执行本机和 Internet 搜索文件。  
+ Performs local and Internet file searches.  
   
  [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
- 辅助 FTP 服务器的 Internet 文件搜索。  
+ Aids in Internet file searches of FTP servers.  
   
  [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)  
- 辅助 Gopher 服务器的 Internet 文件搜索。  
+ Aids in Internet file searches of gopher servers.  
   
  [CGopherLocator](../mfc/reference/cgopherlocator-class.md)  
- 从 Gopher 服务器获取 Gopher“定位器”，确定定位器的类型，并使定位器可用于 `CGopherFileFind`。  
+ Gets a gopher "locator" from a gopher server, determines the locator's type, and makes the locator available to `CGopherFileFind`.  
   
  [CInternetException](../mfc/reference/cinternetexception-class.md)  
- 表示与 Internet 操作相关的异常条件。  
+ Represents an exception condition related to an Internet operation.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

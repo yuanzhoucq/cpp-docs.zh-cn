@@ -1,43 +1,61 @@
 ---
-title: "橡皮筋和跟踪器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRectTracker 类, 实现跟踪器"
-  - "OLE 对象, 选择"
-  - "橡皮筋"
-  - "跟踪器"
-  - "WM_LBUTTONDOWN"
+title: Rubber-Banding and Trackers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- trackers [MFC]
+- CRectTracker class [MFC], implementing trackers
+- OLE objects [MFC], selecting
+- rubber banding [MFC]
+- WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 橡皮筋和跟踪器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3bf323ef1cd887b1f4dbc6129568249733000310
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-其他功能提供追踪器是“橡皮筋”的选择，允许用户通过拖动尺寸矩形选择多种 OLE 项在要选择的项附近。  用户松开鼠标左键后，在用户选定区域中选择项并可由用户操作。  例如，用户可以选择拖动到另一个容器应用程序。  
+---
+# <a name="rubber-banding-and-trackers"></a>Rubber-Banding and Trackers
+Another feature supplied with trackers is the "rubber-band" selection, which allows a user to select multiple OLE items by dragging a sizing rectangle around the items to be selected. When the user releases the left mouse button, items within the region selected by the user are selected and can be manipulated by the user. For instance, the user might drag the selection into another container application.  
   
- 在应用程序 `WM_LBUTTONDOWN` 处理程序函数中实现此功能需要一些附加代码。  
+ Implementing this feature requires some additional code in your application's `WM_LBUTTONDOWN` handler function.  
   
- 下面的代码示例实现橡胶带选择和其他功能。  
+ The following code sample implements rubber-band selection and additional features.  
   
- [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/CPP/rubber-banding-and-trackers_1.cpp)]  
+ [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]  
   
- 在橡皮筋方法期间，如果要允许 TRACKER 的可逆方向，您应调用使用第三个参数中的 [CRectTracker::TrackRubberBand](../Topic/CRectTracker::TrackRubberBand.md) 设置为 **TRUE**。  记住允许可逆方向有时将导致[CRectTracker::m\_rect](../Topic/CRectTracker::m_rect.md)反向。  这可以通过调用[CRect::NormalizeRect](../Topic/CRect::NormalizeRect.md)来更正。  
+ If you want to allow reversible orientation of the tracker during rubber-banding, you should call [CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) with the third parameter set to **TRUE**. Remember that allowing reversible orientation will sometimes cause [CRectTracker::m_rect](../mfc/reference/crecttracker-class.md#m_rect) to become inverted. This can be corrected by a call to [CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect).  
   
- 有关更多信息，请参见 [容器客户项](../mfc/containers-client-items.md) 和 [自定义拖放](../mfc/drag-and-drop-customizing.md)。  
+ For more information, see [Container Client Items](../mfc/containers-client-items.md) and [Customizing Drag and Drop](../mfc/drag-and-drop-customizing.md).  
   
-## 请参阅  
- [跟踪器：在您的 OLE 应用程序内实现跟踪器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
+## <a name="see-also"></a>See Also  
+ [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)   
  [CRectTracker Class](../mfc/reference/crecttracker-class.md)
+

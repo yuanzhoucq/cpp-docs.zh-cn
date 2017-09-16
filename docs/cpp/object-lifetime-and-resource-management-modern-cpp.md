@@ -1,39 +1,55 @@
 ---
-title: "对象生存期和资源管理（现代 C++） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Object Lifetime And Resource Management (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 对象生存期和资源管理（现代 C++）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 3582447033a364472a42455bd52df9e298b0a2ac
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-与托管 C\+\+ 语言，没有垃圾回收 \(GC\)，自动释放非使用长的内存资源，当程序运行。  在 C\+\+ 中，直接管理资源与对象生存期。  文档描述影响 C\+\+ 中的对象生存期和如何管理它的因素。  
+---
+# <a name="object-lifetime-and-resource-management-modern-c"></a>Object Lifetime And Resource Management (Modern C++)
+Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs. In C++, resource management is directly related to object lifetime. This document describes the factors that affect object lifetime in C++ and how to manage it.  
   
- Main，因为它不会处理非内存资源，C\+\+ 没有 GC。  类似这些的仅确定性的析构函数在 C\+\+ 中平均处理内存和非内存资源。  GC 还有其他问题，类似更高的开销。内存和 CPU 使用率和位置。  但是，一些不能通过"智能的优化在缓解的基本问题。  
+ C++ doesn’t have GC primarily because it doesn't handle non-memory resources. Only deterministic destructors like those in C++ can handle memory and non-memory resources equally. GC also has other problems, like higher overhead in memory and CPU consumption, and locality. But universality is a fundamental problem that can't be mitigated through clever optimizations.  
   
-## 概念  
- 在对象生存期管理的一个要点是封装用户的对象不使用必须知道资源的对象拥有，或者如何释放它们，或者它是否拥有任何资源。  它必须只销毁对象。  C\+\+ 语言。核心构造反向顺序，即设计，确保对象销毁的正确时间块退出。  当销毁对象时，其基本和成员在特定订单被销毁。除非进行诸如新，堆分配或的位置的特定操作语言自动销毁对象。例如，[智能的指针](../cpp/smart-pointers-modern-cpp.md) 喜欢 `unique_ptr` 以及 `shared_ptr`和标准模板库 \(STL\) \(STL\) 容器，如 `vector`，该参数封装 `new`\/`delete` 和 `new[]`\/对象中`delete[]`，有析构函数。  因此使用的聪明指针、STL 容器很重要。  
+## <a name="concepts"></a>Concepts  
+ An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all. It just has to destroy the object. The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction. When an object is destroyed, its bases and members are destroyed in a particular order.  The language automatically destroys objects, unless you do special things like heap allocation or placement new.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate `new`/`delete` and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.  
   
- 在生存期管理的另一个重要概念：析构函数。  析构函数封装资源的释放。\(常用的助记键是 RRID，资源的释放是销毁。\)资源是您从“System”获取并稍后必须归还的操作。内存是最常见的资源，但文件，还有、套接字、纹理和其他非内存资源。“拥有”resources 这意味着您可以使用，在需要时，还必须将其释放，则在您完成使用它。当销毁对象时，其析构函数释放它拥有的资源。  
+ Another important concept in lifetime management: destructors. Destructors encapsulate resource release.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources. "Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.  When an object is destroyed, its destructor releases the resources that it owned.  
   
- 最终概念是 DAG \(处理的非循环性的图\)。所有权结构程序中的窗体 DAG。  对象不能自己本质上无意义的自身的不仅不可能，而且。  但是，这两个对象可以共享第三个对象的所有权。多个链接。可以在类似于 DAG:是的成员 B \(拥有 A，B\) C 上存有 `vector<D>` \(C\#\) 的每个电子 D 元素\)，存储 `shared_ptr<F>` \(共享所有权 E F，可以使用其他对象\)，依此类推。只要不周期，并且在 DAG 的每个链接由具有析构函数的对象表示形式 \(而非的原始指针、句柄或其他机制，\)，然后资源泄露是不可能的，因为阻止这些语言。  资源的释放，在不再需要它们后，垃圾回收器，没有运行。  生存期。跟踪堆栈大小、基本、Member 和相关参数是开销空闲，和可以小的 `shared_ptr`。  
+ The final concept is the DAG (Directed Acyclic Graph).  The structure of ownership in a program forms a DAG. No object can own itself—that's not only impossible but also inherently meaningless. But two objects can share ownership of a third object.  Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a `vector<D>` (C owns each D element), E stores a `shared_ptr<F>` (E shares ownership of F, possibly with other objects), and so forth.  As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them. Resources are released immediately after they're no longer needed, without a garbage collector running. The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for `shared_ptr`.  
   
-### 基于堆的生存期  
- 对于堆对象生存期，请使用 [智能的指针](../cpp/smart-pointers-modern-cpp.md)。  使用 `shared_ptr` 和 `make_shared` 作为默认指针和分布程序。  使用 `weak_ptr` 循环中断，执行缓存，并观察对象，不会影响或假定任何有关它们自己的生存期。  
+### <a name="heap-based-lifetime"></a>Heap-based lifetime  
+ For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Use `shared_ptr` and `make_shared` as the default pointer and allocator. Use `weak_ptr` to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.  
   
 ```cpp  
 void func() {  
@@ -46,13 +62,13 @@ p->draw();
   
 ```  
   
- 对于唯一所有权使用 `unique_ptr`，例如，在 *pimpl* 思路。（请参见[用于编译时封装的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)。）使 `unique_ptr` 的主要目标所有显式 `new` 表达式。  
+ Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit `new` expressions.  
   
 ```cpp  
 unique_ptr<widget> p(new widget());  
 ```  
   
- 可以为非所有权和查看使用的原始指针。  非指针可能拥有的对，但是，它不会泄漏。  
+ You can use raw pointers for non-ownership and observation. A non-owning pointer may dangle, but it can’t leak.  
   
 ```cpp  
 class node {  
@@ -65,34 +81,33 @@ node::node() : parent(...) { children.emplace_back(new node(...) ); }
   
 ```  
   
- 当需要时性能优化，可能需要使用 *封装* 自己指针和显式调用删除。  例如，在实现自己低数据结构时。  
+ When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. An example is when you implement your own low-level data structure.  
   
-### 基于堆栈的生存期  
- 在现代 C\+\+，*基于堆栈的大小* 是一个强大的方法编写可靠的代码中，因为将自动 *堆栈生存期*，并使用最有效跟踪生存期的 *数据成员生存期* 实质上是自由开销。  尤其是在您处理的原始指针时，堆对象生存期要求工作手动管理，也可以是资源泄露和效率低下的问题源。  考虑此代码，演示基于堆栈的大小：  
+### <a name="stack-based-lifetime"></a>Stack-based lifetime  
+ In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers. Consider this code, which demonstrates stack-based scope:  
   
 ```cpp  
 class widget {  
 private:  
-  gadget g;   // lifetime automatically tied to enclosing object  
+    gadget g;   // lifetime automatically tied to enclosing object  
 public:  
-  void draw();  
+    void draw();  
 };  
   
 void functionUsingWidget () {  
-  widget w;   // lifetime automatically tied to enclosing scope  
-              // constructs w, including the w.g gadget member  
-  …  
-  w.draw();  
-  …  
+    widget w;   // lifetime automatically tied to enclosing scope  
+                // constructs w, including the w.g gadget member  
+    // ...
+    w.draw();  
+    // ...
 } // automatic destruction and deallocation for w and w.g  
   // automatic exception safety,   
   // as if "finally { w.dispose(); w.g.dispose(); }"  
-  
 ```  
   
- 慎重使用静态的生存期 \(全局静态函数，局部静态\)，因为问题可能出现。  当全局对象的构造函数引发异常，则发生什么情况？  通常，应用在出错难以调试的方法。  构造排序为静态的生存期对象是有问题的，并且不是并发安全的。  不仅对象构造问题，析构排序可能会很复杂，特别是多态性是包含在中的位置。  即使对象或变量不是多态的，并且不具有排序复杂性的构造\/销毁的，仍然存在线程安全并发问题。  一个多线程应用无法安全地修改在静态对象的数据不具有线程本地存储、锁定资源和其他特殊注意事项。  
+ Use static lifetime sparingly (global static, function local static) because problems can arise. What happens when the constructor of a global object throws an exception? Typically, the app faults in a way that can be difficult to debug. Construction order is problematic for static lifetime objects, and is not concurrency-safe. Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved. Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency. A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.  
   
-## 请参阅  
- [欢迎回到 C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 语言参考](../cpp/cpp-language-reference.md)   
- [C\+\+ 标准库](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

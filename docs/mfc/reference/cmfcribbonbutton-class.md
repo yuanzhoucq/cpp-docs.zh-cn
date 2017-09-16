@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonButton 类 |Microsoft 文档"
+title: CMFCRibbonButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -68,7 +68,60 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonButton class
+- CMFCRibbonButton [MFC], CMFCRibbonButton
+- CMFCRibbonButton [MFC], AddSubItem
+- CMFCRibbonButton [MFC], CanBeStretched
+- CMFCRibbonButton [MFC], CleanUpSizes
+- CMFCRibbonButton [MFC], ClosePopupMenu
+- CMFCRibbonButton [MFC], DrawBottomText
+- CMFCRibbonButton [MFC], DrawImage
+- CMFCRibbonButton [MFC], DrawRibbonText
+- CMFCRibbonButton [MFC], FindSubItemIndexByID
+- CMFCRibbonButton [MFC], GetCommandRect
+- CMFCRibbonButton [MFC], GetCompactSize
+- CMFCRibbonButton [MFC], GetIcon
+- CMFCRibbonButton [MFC], GetImageIndex
+- CMFCRibbonButton [MFC], GetImageSize
+- CMFCRibbonButton [MFC], GetIntermediateSize
+- CMFCRibbonButton [MFC], GetMenu
+- CMFCRibbonButton [MFC], GetMenuRect
+- CMFCRibbonButton [MFC], GetRegularSize
+- CMFCRibbonButton [MFC], GetSubItems
+- CMFCRibbonButton [MFC], GetTextRowHeight
+- CMFCRibbonButton [MFC], GetToolTipText
+- CMFCRibbonButton [MFC], HasCompactMode
+- CMFCRibbonButton [MFC], HasIntermediateMode
+- CMFCRibbonButton [MFC], HasLargeMode
+- CMFCRibbonButton [MFC], HasMenu
+- CMFCRibbonButton [MFC], IsAlwaysDrawBorder
+- CMFCRibbonButton [MFC], IsAlwaysLargeImage
+- CMFCRibbonButton [MFC], IsApplicationButton
+- CMFCRibbonButton [MFC], IsCommandAreaHighlighted
+- CMFCRibbonButton [MFC], IsDefaultCommand
+- CMFCRibbonButton [MFC], IsDefaultPanelButton
+- CMFCRibbonButton [MFC], IsDrawTooltipImage
+- CMFCRibbonButton [MFC], IsLargeImage
+- CMFCRibbonButton [MFC], IsMenuAreaHighlighted
+- CMFCRibbonButton [MFC], IsMenuOnBottom
+- CMFCRibbonButton [MFC], IsPopupDefaultMenuLook
+- CMFCRibbonButton [MFC], IsRightAlignMenu
+- CMFCRibbonButton [MFC], IsSingleLineText
+- CMFCRibbonButton [MFC], OnCalcTextSize
+- CMFCRibbonButton [MFC], OnDrawBorder
+- CMFCRibbonButton [MFC], OnDraw
+- CMFCRibbonButton [MFC], OnFillBackground
+- CMFCRibbonButton [MFC], RemoveAllSubItems
+- CMFCRibbonButton [MFC], RemoveSubItem
+- CMFCRibbonButton [MFC], SetACCData
+- CMFCRibbonButton [MFC], SetAlwaysLargeImage
+- CMFCRibbonButton [MFC], SetDefaultCommand
+- CMFCRibbonButton [MFC], SetDescription
+- CMFCRibbonButton [MFC], SetImageIndex
+- CMFCRibbonButton [MFC], SetMenu
+- CMFCRibbonButton [MFC], SetParentCategory
+- CMFCRibbonButton [MFC], SetRightAlignMenu
+- CMFCRibbonButton [MFC], SetText
+- CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
 caps.latest.revision: 42
 author: mikeblome
@@ -88,102 +141,102 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 08672f10cf67a773f2af8d12130c4e3f5b497e11
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3fa31a9415e2a50a49467802a2f180b02451d53d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 类
-`CMFCRibbonButton` 类实现可放置在功能区栏元素（例如面板、快速访问工具栏和弹出菜单）上的按钮。  
+# <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton Class
+The `CMFCRibbonButton` class implements buttons that you can position on ribbon bar elements such as panels, Quick Access Toolbars, and pop-up menus.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonButton : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|构造一个功能区按钮对象。|  
+|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Constructs a ribbon button object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonButton::AddSubItem](#addsubitem)|将菜单项添加到与按钮相关联的弹出菜单。|  
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(重写[CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched)。)|  
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(重写[CMFCRibbonBaseElement::CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes)。)|  
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(重写[CMFCRibbonBaseElement::ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu)。)|  
+|[CMFCRibbonButton::AddSubItem](#addsubitem)|Adds a menu item to the pop-up menu that is associated with the button.|  
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Overrides [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|  
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Overrides [CMFCRibbonBaseElement::CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|  
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Overrides [CMFCRibbonBaseElement::ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|  
 |[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||  
-|[CMFCRibbonButton::DrawImage](#drawimage)|(重写[CMFCRibbonBaseElement::DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage)。)|  
+|[CMFCRibbonButton::DrawImage](#drawimage)|(Overrides [CMFCRibbonBaseElement::DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|  
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||  
-|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|返回与指定的命令 ID 相关联的弹出菜单项的索引。|  
+|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Returns the index of a pop-up menu item that is associated with the specified command ID.|  
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||  
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|返回功能区元素的压缩大小。 (重写[CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize)。)|  
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Returns the compact size of the ribbon element. (Overrides [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|  
 |[CMFCRibbonButton::GetIcon](#geticon)||  
-|[CMFCRibbonButton::GetImageIndex](#getimageindex)|返回与按钮相关联的图像的索引。|  
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|返回功能区元素的图像大小。 (重写[CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|  
-|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|返回处于中间状态的功能区元素的大小。 (重写[CMFCRibbonBaseElement::GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize)。)|  
-|[CMFCRibbonButton::GetMenu](#getmenu)|将一个句柄返回给一个分配给功能区按钮的 Windows 菜单。|  
+|[CMFCRibbonButton::GetImageIndex](#getimageindex)|Returns the index of the image that is associated with the button.|  
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Returns the image size of the ribbon element. (Overrides [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Returns the size of the ribbon element in its intermediate state. (Overrides [CMFCRibbonBaseElement::GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|  
+|[CMFCRibbonButton::GetMenu](#getmenu)|Returns a handle to a Windows menu that is assigned to the ribbon button.|  
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||  
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|返回功能区元素的常规大小。 (重写[CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|  
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element. (Overrides [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||  
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||  
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|返回功能区元素的工具提示文本。 (重写[CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext)。)|  
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|指定功能区元素是否有压缩模式。 (重写[CMFCRibbonBaseElement::HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode)。)|  
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|指定功能区元素是否有中间模式。 (重写[CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode)。)|  
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|确定功能区元素是否有大型模式。 (重写[CMFCRibbonBaseElement::HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode)。)|  
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(重写[CMFCRibbonBaseElement::HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu)。)|  
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Returns tooltip text of the ribbon element. (Overrides [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|  
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Specifies whether the ribbon element has a compact mode. (Overrides [CMFCRibbonBaseElement::HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|  
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Specifies whether the ribbon element has an intermediate mode. (Overrides [CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|  
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Determines whether the ribbon element has a large mode. (Overrides [CMFCRibbonBaseElement::HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|  
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(Overrides [CMFCRibbonBaseElement::HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|  
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||  
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(重写[CMFCRibbonBaseElement::IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage)。)|  
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Overrides [CMFCRibbonBaseElement::IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|  
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||  
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||  
-|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|确定是否已启用功能区按钮的默认命令。|  
+|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Determines whether you have enabled the default command for a ribbon button.|  
 |[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||  
 |[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||  
 |[CMFCRibbonButton::IsLargeImage](#islargeimage)||  
 |[CMFCRibbonButton::IsMenuAreaHighlighted](#ismenuareahighlighted)||  
 |[CMFCRibbonButton::IsMenuOnBottom](#ismenuonbottom)||  
 |[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||  
-|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|确定菜单是否为右对齐。|  
+|[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Determines whether the menu is right-aligned.|  
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||  
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(重写[CMFCRibbonBaseElement::OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize)。)|  
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Overrides [CMFCRibbonBaseElement::OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|  
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||  
-|[CMFCRibbonButton::OnDraw](#ondraw)|由框架调用以绘制功能区元素。 (重写[CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|  
+|[CMFCRibbonButton::OnDraw](#ondraw)|Called by the framework to draw the ribbon element. (Overrides [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||  
-|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|从弹出菜单中删除所有菜单项。|  
-|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|从弹出菜单中删除一个菜单项。|  
-|[CMFCRibbonButton::SetACCData](#setaccdata)|(重写[CMFCRibbonBaseElement::SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata)。)|  
-|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|指定当用户折叠按钮时，按钮显示大图像还是小图像。|  
-|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|启用功能区按钮的默认命令。|  
-|[CMFCRibbonButton::SetDescription](#setdescription)|设置功能区元素的说明。 (重写[CMFCRibbonBaseElement::SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription)。)|  
-|[CMFCRibbonButton::SetImageIndex](#setimageindex)|将索引分配给按钮的图像。|  
-|[CMFCRibbonButton::SetMenu](#setmenu)|将弹出菜单分配给功能区按钮。|  
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(重写[CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)。)|  
-|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|使弹出菜单与按钮的右侧对齐。|  
-|[CMFCRibbonButton::SetText](#settext)|设置功能区元素的文本。 (重写[CMFCRibbonBaseElement::SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext)。)|  
+|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Removes all menu items from the pop-up menu.|  
+|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Removes a menu item from the pop-up menu.|  
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Overrides [CMFCRibbonBaseElement::SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|  
+|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Specifies whether the button displays a large or a small image when the user collapses the button.|  
+|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Enables the default command for the ribbon button.|  
+|[CMFCRibbonButton::SetDescription](#setdescription)|Sets the description for the ribbon element. (Overrides [CMFCRibbonBaseElement::SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|  
+|[CMFCRibbonButton::SetImageIndex](#setimageindex)|Assigns an index to the image of the button.|  
+|[CMFCRibbonButton::SetMenu](#setmenu)|Assigns a pop-up menu to the ribbon button.|  
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Overrides [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|  
+|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Aligns the pop-up menu to the right of the button.|  
+|[CMFCRibbonButton::SetText](#settext)|Sets the text for the ribbon element. (Overrides [CMFCRibbonBaseElement::SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonButton::OnClick](#onclick)|当用户单击按钮时，由框架调用。|  
+|[CMFCRibbonButton::OnClick](#onclick)|Called by the framework when the user clicks the button.|  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用 `CMFCRibbonButton` 类中的各种方法。 该示例展示如何构造 `CMFCRibbonButton` 类的对象，将弹出菜单分配给功能区按钮，设置按钮的说明，从弹出菜单中删除一个菜单项，然后使弹出菜单与按钮的边缘右对齐。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use the various methods in the `CMFCRibbonButton` class. The example shows how to construct an object of the `CMFCRibbonButton` class, assign a pop-up menu to the ribbon button, set the description of the button, remove a menu item from the pop-up menu, and right align the pop-up menu to the edge of the button.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&7;](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
-## <a name="remarks"></a>备注  
- 若要在应用程序中使用的功能区按钮，构造按钮对象并将其添加到相应的功能区[面板](../../mfc/reference/cmfcribbonpanel-class.md)。  
+## <a name="remarks"></a>Remarks  
+ To use a ribbon button in an application, construct the button object and add it to the appropriate ribbon [panel](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
@@ -205,18 +258,18 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_COPY, _T("Copy"), 2));
 pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 ```  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头：** afxribbonbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonbutton.h  
   
-##  <a name="addsubitem"></a>CMFCRibbonButton::AddSubItem  
- 将菜单项添加到与按钮相关联的弹出菜单。  
+##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem  
+ Adds a menu item to the pop-up menu that is associated with the button.  
   
 ```  
 void AddSubItem(
@@ -224,44 +277,44 @@ void AddSubItem(
     int nIndex=-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pSubItem`  
- 指定指向要添加的新元素的指针。  
+ Specifies a pointer to the new element to add.  
   
  [in] `nIndex`  
- 指定用于将元素添加到的菜单项的按钮，则数组的索引为-1 的菜单项的数组的末尾添加元素。  
+ Specifies the index at which to add the element to the array of menu items of the button; -1 to add the element at the end of the array of menu items.  
   
-##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
   
 ```  
 virtual BOOL CanBeStretched();
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
+##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes  
 
   
 ```  
 virtual void CleanUpSizes();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
+##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu  
 
   
 ```  
 virtual void ClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton  
- 构造一个功能区按钮对象。  
+##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton  
+ Constructs a ribbon button object.  
   
 ```  
 CMFCRibbonButton(
@@ -281,28 +334,28 @@ CMFCRibbonButton(
     BOOL bAlphaBlendIcon=FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 指定按钮的命令 ID。  
+ Specifies the command ID of the button.  
   
  [in] `lpszText`  
- 指定按钮的文本标签。  
+ Specifies the text label of the button.  
   
  [in] `nSmallImageIndex`  
- 指定父类别的图像列表中的按钮的小图像的从零开始索引。  
+ Specifies a zero-based index of the button's small image in the image list of the parent category.  
   
  [in] `nLargeImageIndex`  
- 指定父类别的图像列表中的按钮的大图像的从零开始索引。  
+ Specifies a zero-based index of the button's large image in the image list of the parent category.  
   
  [in] `hIcon`  
- 指定应用程序用作按钮的图像的图标的句柄。  
+ Specifies a handle to the icon that the application uses as the button's image.  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何构造`CMFCRibbonButton`对象。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCRibbonButton` object.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&6;](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
   
-##  <a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText  
+##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText  
 
   
 ```  
@@ -311,15 +364,15 @@ CSize DrawBottomText(
     BOOL bCalcOnly);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `bCalcOnly`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="drawimage"></a>CMFCRibbonButton::DrawImage  
+##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage  
 
   
 ```  
@@ -329,14 +382,14 @@ virtual void DrawImage(
     CRect rectImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `type`  
  [in] `rectImage`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
+##  <a name="drawribbontext"></a>  CMFCRibbonButton::DrawRibbonText  
 
   
 ```  
@@ -348,452 +401,452 @@ virtual int DrawRibbonText(
     COLORREF clrText = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
  [in] `strText`  
  [in] `rectText`  
  [in] `uiDTFlags`  
  [in] `clrText`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID  
- 返回与指定的命令 ID 相关联的弹出菜单项的索引。  
+##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID  
+ Returns the index of a pop-up menu item that is associated with the specified command ID.  
   
 ```  
 int FindSubItemIndexByID(UINT uiID) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 指定弹出菜单项的命令 ID。  
+ Specifies the command ID of the pop-up menu item.  
   
-### <a name="return-value"></a>返回值  
- 与之关联的子项的从零开始索引`uiID`。 如果没有此类子项目，则为-1。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the sub-item that is associated with the `uiID`. -1 if there is no such sub-item.  
   
-##  <a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect  
+##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
   
 ```  
 CRect GetCommandRect() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize  
 
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="geticon"></a>CMFCRibbonButton::GetIcon  
+##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon  
 
   
 ```  
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bLargeIcon`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex  
- 返回与按钮相关联的图像的索引。  
+##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex  
+ Returns the index of the image that is associated with the button.  
   
 ```  
 int GetImageIndex(BOOL bLargeImage) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bLargeImage`  
- 如果`TRUE`，返回包含大型图像; 否则返回的图像索引包含较小的图像的图像列表中的图像列表中的图像索引。  
+ If `TRUE`, returns the image index in the image list that contains the large images; otherwise returns the image index in the image list that contains the small images.  
   
-### <a name="return-value"></a>返回值  
- 在关联的图像列表中的按钮的图像的索引。  
+### <a name="return-value"></a>Return Value  
+ The index of the button's image in the associated image list.  
   
-##  <a name="getimagesize"></a>CMFCRibbonButton::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize  
 
   
 ```  
 virtual CSize GetImageSize(RibbonImageType type) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `type`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize  
 
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getmenu"></a>CMFCRibbonButton::GetMenu  
- 将一个句柄返回给一个分配给功能区按钮的 Windows 菜单。  
+##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu  
+ Returns a handle to a Windows menu that is assigned to the ribbon button.  
   
 ```  
 HMENU GetMenu() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 分配给按钮; 一个 Windows 菜单句柄`NULL`如果没有分配任何菜单。  
+### <a name="return-value"></a>Return Value  
+ A handle to a Windows menu assigned to the button; `NULL` if there is no menu assigned.  
   
-##  <a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect  
+##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
   
 ```  
 CRect GetMenuRect() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize  
 
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
+##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems  
 
   
 ```  
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
+##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight  
 
   
 ```  
 int GetTextRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
+##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText  
 
   
 ```  
 virtual CString GetToolTipText() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
+##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode  
 
   
 ```  
 virtual BOOL HasCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
+##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode  
 
   
 ```  
 virtual BOOL HasIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
+##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode  
 
   
 ```  
 virtual BOOL HasLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu  
 
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
+##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder  
 
   
 ```  
 virtual BOOL IsAlwaysDrawBorder() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage  
 
   
 ```  
 virtual BOOL IsAlwaysLargeImage() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
+##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton  
 
   
 ```  
 virtual BOOL IsApplicationButton() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
+##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted  
 
   
 ```  
 virtual BOOL IsCommandAreaHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand  
- 指定是否启用的功能区按钮的默认命令。  
+##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand  
+ Specifies whether the default command for a ribbon button is enabled.  
   
 ```  
 BOOL IsDefaultCommand() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已启用的功能区按钮; 默认命令`FALSE`否则为。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if you have enabled the default command for a ribbon button; `FALSE` otherwise.  
   
-##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton  
+##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
   
 ```  
 virtual BOOL IsDefaultPanelButton() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage  
 
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
+##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage  
 
   
 ```  
 BOOL IsLargeImage() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
+##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted  
 
   
 ```  
 virtual BOOL IsMenuAreaHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
+##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom  
 
   
 ```  
 BOOL IsMenuOnBottom() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
+##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook  
 
   
 ```  
 virtual BOOL IsPopupDefaultMenuLook() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu  
- 指定菜单中是否为右对齐。  
+##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu  
+ Specifies whether the menu is right-aligned.  
   
 ```  
 BOOL IsRightAlignMenu() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果菜单为右对齐;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if menu is right-aligned; otherwise `FALSE`.  
   
-##  <a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText  
+##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
   
 ```  
 BOOL IsSingleLineText() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
+##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize  
 
   
 ```  
 virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclick"></a>CMFCRibbonButton::OnClick  
- 当用户单击按钮时，由框架调用。  
+##  <a name="onclick"></a>  CMFCRibbonButton::OnClick  
+ Called by the framework when the user clicks the button.  
   
 ```  
 virtual void OnClick(CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 指定鼠标单击的位置。  
+ Specifies the position of the mouse click.  
   
-### <a name="remarks"></a>备注  
- 重写此方法在派生类中的，如果你想要处理此事件。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want to handle this event.  
   
-##  <a name="ondraw"></a>CMFCRibbonButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw  
 
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder  
 
   
 ```  
 virtual void OnDrawBorder(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground  
 
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems  
- 从弹出菜单中删除所有菜单项。  
+##  <a name="removeallsubitems"></a>  CMFCRibbonButton::RemoveAllSubItems  
+ Removes all menu items from the pop-up menu.  
   
 ```  
 void RemoveAllSubItems();
 ```  
   
-##  <a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem  
- 从弹出菜单中删除一个菜单项。  
+##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem  
+ Removes a menu item from the pop-up menu.  
   
 ```  
 BOOL RemoveSubItem(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定你想要删除的菜单项的从零开始索引。  
+ Specifies the zero-based index of the menu item that you want to remove.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果已成功，则删除指定的项否则为`FALSE`如果`nIndex`为负或超过的弹出菜单中的菜单项的数目。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item has been removed successfully; otherwise `FALSE` if `nIndex` is negative or exceeds the number of menu items in the pop-up menu.  
   
-##  <a name="setaccdata"></a>CMFCRibbonButton::SetACCData  
- 设置功能区按钮的辅助功能数据。  
+##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
+ Sets the accessibility data for the ribbon button.  
   
 ```  
 virtual BOOL SetACCData(
@@ -801,57 +854,57 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParent`  
- 功能区元素的父窗口。  
+ The parent window for the ribbon element.  
   
  `data`  
- 功能区元素的可访问性数据。  
+ The accessibility data for the ribbon element.  
   
-### <a name="return-value"></a>返回值  
- 如果成功则返回 `TRUE` ；否则返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if successful; otherwise FALSE.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage  
- 指定当用户折叠按钮时，按钮显示大图像还是小图像。  
+##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage  
+ Specifies whether the button displays a large or a small image when the user collapses the button.  
   
 ```  
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- 如果`TRUE`，按钮将显示一个大图像。 否则，该按钮显示的小图像。  
+ If `TRUE`, the button displays a large image. Otherwise, the button displays a small image.  
   
-##  <a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand  
- 启用功能区按钮的默认命令。  
+##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
+ Enables the default command for the ribbon button.  
   
 ```  
 void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- 如果`TRUE`，按钮可以执行其默认命令。 如果`FALSE`，按钮不能执行其默认命令。  
+ If `TRUE`, the button can execute its default command. If `FALSE`, the button cannot execute its default command.  
   
-### <a name="remarks"></a>备注  
- `bSet`仅当按钮具有一个菜单时才是相关。 如果`bSet`是`TRUE`按钮可以执行其默认命令，仅当用户单击该按钮的右边缘的箭头，则显示已分配的弹出菜单。 否则为按钮不能执行其默认的命令，并弹出菜单显示在用户单击而不考虑按钮的区域。  
+### <a name="remarks"></a>Remarks  
+ `bSet` is relevant only when the button has a menu. If `bSet` is `TRUE`, the button can execute its default command and the assigned pop-up menu appears only when a user clicks the arrow at the right edge of the button. Otherwise, the button cannot execute its default command, and the pop-up menu appears regardless of which area of the button the user clicks.  
   
-##  <a name="setdescription"></a>CMFCRibbonButton::SetDescription  
+##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
   
 ```  
 virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex  
- 将索引分配给按钮的图像。  
+##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex  
+ Assigns an index to the image of the button.  
   
 ```  
 void SetImageIndex(
@@ -859,15 +912,15 @@ void SetImageIndex(
     BOOL bLargeImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定的图像索引。  
+ Specifies the image index.  
   
  [in] `bLargeImage`  
- 如果`TRUE`，指定的索引引用了大图像列表。 否则，索引引用的较小的图像列表。  
+ If `TRUE`, the specified index refers to the list of large images. Otherwise, the index refers to the list of the small images.  
   
-##  <a name="setmenu"></a>CMFCRibbonButton::SetMenu  
- 将弹出菜单分配给功能区按钮。  
+##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
+ Assigns a pop-up menu to the ribbon button.  
   
 ```  
 void SetMenu(
@@ -881,58 +934,58 @@ void SetMenu(
     BOOL bRightAlign=FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hMenu`  
- Windows 菜单句柄。  
+ A handle to a Windows menu.  
   
  `bIsDefaultCommand`  
- 如果`TRUE`，按钮可以执行其默认命令; 否则，按钮将显示一个弹出菜单。  
+ If `TRUE`, the button can execute its default command; otherwise, the button displays a pop-up menu.  
   
  `bRightAlign`  
- 如果`TRUE`，菜单是右对齐。 否则，菜单是左对齐。  
+ If `TRUE`, the menu is right-aligned. Otherwise, the menu is left-aligned.  
   
  `uiMenuResID`  
- 菜单上的资源 id。  
+ A menu resource ID.  
   
-### <a name="remarks"></a>备注  
- 当应用程序将分配给按钮的菜单上时，按钮将显示在其右侧的箭头。 如果`bIsDefaultCommand`是`TRUE`，仅当用户单击箭头将显示的菜单。 如果用户单击按钮时，将执行其默认命令。 如果`bIsDefaultCommand`是`FALSE`，通过单击任意位置的按钮将显示的菜单。  
+### <a name="remarks"></a>Remarks  
+ When the application assigns the menu to the button, the button displays an arrow on its right side. If `bIsDefaultCommand` is `TRUE`, the menu appears only when the user clicks the arrow. If the user clicks the button, its default command is executed. If `bIsDefaultCommand` is `FALSE`, the menu appears by clicking anywhere on the button.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu  
- 将弹出菜单按钮的边缘对齐。  
+##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu  
+ Aligns the pop-up menu to the edge of the button.  
   
 ```  
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- 如果`TRUE`，菜单是右对齐。 否则，菜单是左对齐  
+ If `TRUE`, the menu is right-aligned. Otherwise, the menu is left-aligned  
   
-##  <a name="settext"></a>CMFCRibbonButton::SetText  
+##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,56 +1,74 @@
 ---
-title: "剪贴板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪贴板"
-  - "剪贴板, 编程"
-  - "复制数据"
-  - "剪切和复制数据"
-  - "传输数据"
+title: Clipboard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cutting and copying data
+- copying data
+- Clipboard
+- Clipboard, programming
+- transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 剪贴板
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7ecf2044ecfa659b8ab372d72ce71930e430dc8b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-支持的 MFC 应用程序此系列文章介绍如何实现 Windows 剪贴板。  Windows 剪贴板用于两种方法：  
+---
+# <a name="clipboard"></a>Clipboard
+This family of articles explains how to implement support for the Windows Clipboard in MFC applications. The Windows Clipboard is used in two ways:  
   
--   实现标准"编辑"菜单命令，如剪切，复制，然后粘贴。  
+-   Implementing standard Edit menu commands, such as Cut, Copy, and Paste.  
   
--   实现具有 OLE 拖放 \(统一\) 的数据传输。  
+-   Implementing uniform data transfer with drag and drop (OLE).  
   
- 剪贴板是转移数据标准 Windows 方法在源和目标之间建立的。  也可能是很有用在 OLE 操作。  随着 OLE 的显示，在两个窗口中的剪贴板机制。  标准 Windows 剪贴板 API 可用，但是，它用 OLE 数据传输机制添加。  OLE 统一数据传输 \(UDT\) 支持剪切、复制、粘贴和与剪贴板和拖放。  
+ The Clipboard is the standard Windows method of transferring data between a source and a destination. It can also be very useful in OLE operations. With the advent of OLE, there are two Clipboard mechanisms in Windows. The standard Windows Clipboard API is still available, but it has been supplemented with the OLE data transfer mechanism. OLE uniform data transfer (UDT) supports Cut, Copy, and Paste with the Clipboard and drag and drop.  
   
- 剪贴板是整个 Windows 会话共享系统服务，因此，它没有句柄或自己的级别。  通过 [CWnd](../mfc/reference/cwnd-class.md)剪贴板管理类的成员函数。  
+ The Clipboard is a system service shared by the entire Windows session, so it does not have a handle or class of its own. You manage the Clipboard through member functions of class [CWnd](../mfc/reference/cwnd-class.md).  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [剪贴板：何时使用每一剪贴板机制](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
+-   [When to use each Clipboard mechanism](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
   
--   [使用传统 Windows 剪贴板 API](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the traditional Windows Clipboard API](../mfc/clipboard-using-the-windows-clipboard.md)  
   
--   [使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Using the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [添加其他格式](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [\<caps:sentence id\="tgt18" sentenceid\="1bc8aafd7da110d0b343b54cffa169d9" class\="tgtSentence"\>Windows 剪贴板\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms648709)  
+-   [The Windows Clipboard](https://msdn.microsoft.com/library/ms648709)  
   
--   [实现拖放和拖放 \(OLE\)](../mfc/drag-and-drop-ole.md)  
+-   [Implementing drag and drop (OLE)](../mfc/drag-and-drop-ole.md)  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

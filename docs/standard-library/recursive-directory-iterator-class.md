@@ -1,5 +1,5 @@
 ---
-title: "recursive_directory_iterator 类 | Microsoft Docs"
+title: recursive_directory_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,47 +31,47 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 0d4325fbe8d4f336f4ca1ac6afe4ba5a96a7172d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7665a5ab7e8cae85de867eae6f2444126c42ce5a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 类
-描述一个输入迭代器，它对目录中的文件名进行排序，可能以递归方式降序到子目录。 对于迭代器 X，表达式 *X 计算到 directory_entry 类对文件名及与其状态有关的任何信息进行包装的对象。  
+# <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator Class
+describes an input iterator that sequences through the filenames in a directory, possibly descending into subdirectories recursively. For an iterator X, the expression *X evaluates to an object of class directory_entry that wraps the filename and anything known about its status.  
   
- 有关详细信息和代码示例，请参阅[文件系统导航 (C++)](../standard-library/file-system-navigation.md)。  
+ For more information and code examples, see [File System Navigation (C++)](../standard-library/file-system-navigation.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class recursive_directory_iterator;  
 ```  
   
-## <a name="remarks"></a>备注  
- 模板类存储以下内容：  
+## <a name="remarks"></a>Remarks  
+ The template class stores:  
   
-1.  类型 stack<pair\<directory_iterator, path>> 的对象（此处出于阐述目的称为 mystack），它表示待排序的一套目录  
+1.  an object of type stack<pair\<directory_iterator, path>>, called mystack here for the purposes of exposition, which represents the nest of directories to be sequenced  
   
-2.  directory_entry 类型的对象（此处称为 myentry），它表示目录序列中的当前文件名  
+2.  an object of type directory_entry called myentry here, which represents the current filename in the directory sequence  
   
-3.  bool 类型对象（此处称为 no_push），它记录是否禁用以递归方式降序到子目录  
+3.  an object of type bool, called no_push here, which records whether recursive descent into subdirectories is disabled  
   
-4.  directory_options 类型的对象（此处称为 myoptions），它记录在构造时建立的选项  
+4.  an object of type directory_options, called myoptions here, which records the options established at construction  
   
- 默认构造的 recursive_directory_entry 类型对象在 mystack.top().first 处具有序列末迭代器并表示该序列末迭代器。例如，给定具有条目 def（一个目录）、def/ghi 和 jkl 的目录 abc，则该代码：  
+ A default constructed object of type recursive_directory_entry has an end-of-sequence iterator at mystack.top().first and represents the end-of-sequence iterator.For example, given the directory abc with entries def (a directory), def/ghi, and jkl, the code:  
   
 ```  
 for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)  
     visit(next->path());
 ```  
   
- 将使用参数 `path("abc/def/ghi") and path("abc/jkl").`发起访问 可使用以下两种方式，通过目录子树限定排序：  
+ will call visit with the arguments `path("abc/def/ghi") and path("abc/jkl").`You can qualify sequencing through a directory subtree in two ways:  
   
-1.  仅当构造值为 directory_options::follow_directory_symlink 的 recursive_directory_iterator with a directory_options 参数时，才会扫描目录符号链接。  
+1.  A directory symlink will be scanned only if you construct a recursive_directory_iterator with a directory_options argument whose value is directory_options::follow_directory_symlink.  
   
-2.  如果调用 disable_recursion_pending，则不会以递归方式扫描在增量过程中遇到的后续目录。  
+2.  If you call disable_recursion_pending then a subsequent directory encountered during an increment will not be recursively scanned.  
   
 ## <a name="recursivedirectoryiteratordepth"></a>recursive_directory_iterator::depth  
   
@@ -79,7 +79,7 @@ for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
 int depth() const;
 ```  
   
- 返回 mystack.size() - 1，因此 pval 深度为零。  
+ Returns mystack.size() - 1, so pval is at depth zero.  
   
 ## <a name="recursivedirectoryiteratordisablerecursionpending"></a>recursive_directory_iterator::disable_recursion_pending  
   
@@ -87,7 +87,7 @@ int depth() const;
 void disable_recursion_pending();
 ```  
   
- 成员函数在 no_push 中存储为 true。  
+ The member function stores true in no_push.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator!=  
   
@@ -95,7 +95,7 @@ void disable_recursion_pending();
 bool operator!=(const recursive_directory_iterator& right) const;
 ```  
   
- 该成员运算符返回 !(*this == right)。  
+ The member operator returns !(*this == right).  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator=  
   
@@ -104,7 +104,7 @@ recursive_directory_iterator& operator=(const recursive_directory_iterator&) = d
 recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept = default;  
 ```  
   
- 默认成员赋值运算符的行为符合预期。  
+ The defaulted member assignment operators behave as expected.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator==  
   
@@ -112,7 +112,7 @@ recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept
 bool operator==(const recursive_directory_iterator& right) const;
 ```  
   
- 仅当 *this 和 right 均为序列末迭代器或均不为序列末迭代器时，此成员运算符才返回 true。  
+ The member operator returns true only if both *this and right are end-of-sequence iterators or both are not end-of-sequence-iterators.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator*  
   
@@ -120,7 +120,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```  
   
- 该成员运算符将返回 myentry。  
+ The member operator returns myentry.  
   
 ## <a name="recursivedirectoryiteratoroperator-"></a>recursive_directory_iterator::operator->  
   
@@ -128,7 +128,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```  
   
- 返回 &**this。  
+ Returns &**this.  
   
 ## <a name="recursivedirectoryiteratoroperator"></a>recursive_directory_iterator::operator++  
   
@@ -138,7 +138,7 @@ recursive_directory_iterator& operator++();
 recursive_directory_iterator& operator++(int);
 ```  
   
- 第一个成员函数调用 increment()，然后返回 *this。 第二个成员函数复制该对象，并调用 increment()，然后返回副本。  
+ The first member function calls increment(), then returns *this. The second member function makes a copy of the object, calls increment(), then returns the copy.  
   
 ## <a name="recursivedirectoryiteratoroptions"></a>recursive_directory_iterator::options  
   
@@ -146,7 +146,7 @@ recursive_directory_iterator& operator++(int);
 directory_options options() const;
 ```  
   
- 返回 myoptions。  
+ Returns myoptions.  
   
 ## <a name="recursivedirectoryiteratorpop"></a>recursive_directory_iterator::pop  
   
@@ -154,7 +154,7 @@ directory_options options() const;
 void pop();
 ```  
   
- 如果 depth() == 0，则该对象成为序列末迭代器。 否则，该成员函数将终止当前（最深）目录的扫描，并在下一较浅深度继续扫描。  
+ If depth() == 0 the object becomes an end-of-sequence iterator. Otherwise, the member function terminates scanning of the current (deepest) directory and resumes at the next lower depth.  
   
 ## <a name="recursivedirectoryiteratorrecursionpending"></a>recursive_directory_iterator::recursion_pending  
   
@@ -162,7 +162,7 @@ void pop();
 bool recursion_pending() const;
 ```  
   
- 返回 !no_push。  
+ Returns !no_push.  
   
 ## <a name="recursivedirectoryiteratorrecursivedirectoryiterator"></a>recursive_directory_iterator::recursive_directory_iterator  
   
@@ -182,9 +182,9 @@ recursive_directory_iterator(const recursive_directory_iterator&) = default;
 recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;  
 ```  
   
- 第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数在 myoptions 中的 no_push and directory_options::none 中存储为 false，然后尝试将 pval 作为目录打开和读取。 如果成功，则它们将初始化 mystack 和 myentry 以指定嵌套序列中的第一个非目录文件名；否则它们将生成一个序列末迭代器。  
+ The first constructor produces an end-of-sequence iterator. The second and third constructors store false in no_push and directory_options::none in myoptions, then attempt to open and read pval as a directory. If successful, they initialize mystack and myentry to designate the first non-directory filename in the nested sequence; otherwise they produce an end-of-sequence iterator.  
   
- 第四个和第五个构造函数的行为与第二个和第三个类似，只不过它们首先将 opt 存储在 myoptions 中。 默认构造函数的行为符合预期。  
+ The fourth and fifth constructors behave the same as the second and third, except that they first store opts in myoptions. The defaulted construtors behave as expected.  
   
 ## <a name="recursivedirectoryiteratorincrement"></a>recursive_directory_iterator::increment  
   
@@ -192,16 +192,16 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 recursive_directory_iterator& increment(error_code& ec) noexcept;  
 ```  
   
- 该函数尝试推进到嵌套序列中的下一个文件名。 如果成功，它会将该文件名存储在 myentry 中；否则它会生成一个序列末迭代器。  
+ The function attempts to advance to the next filename in the nested sequence. If successful, it stores that filename in myentry; otherwise it produces an end-of-sequence iterator.  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<文件系统 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<filesystem>  
   
- **命名空间：** std::tr2::sys  
+ **Namespace:** std::tr2::sys  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [文件系统导航 (C++)](../standard-library/file-system-navigation.md)
+ [File System Navigation (C++)](../standard-library/file-system-navigation.md)
 
 

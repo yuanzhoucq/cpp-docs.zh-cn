@@ -1,5 +1,5 @@
 ---
-title: "标准对话框数据交换例程 |Microsoft 文档"
+title: Standard Dialog Data Exchange Routines | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,42 +31,42 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 86491a06a81f5b0ddf0c91c9c5f2b5f23261b49b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f2ca5979646139a88c994cd6b6f100fbd202f50
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
-本主题列出在常见的 MFC 对话框控件使用的标准对话框数据交换 (DDX) 例程。  
+# <a name="standard-dialog-data-exchange-routines"></a>Standard Dialog Data Exchange Routines
+This topic lists the standard dialog data exchange (DDX) routines used for common MFC dialog controls.  
   
 > [!NOTE]
->  标头文件 afxdd_.h 中定义的标准对话框数据交换例程。 但是，应用程序应包括 afxwin.h。  
+>  The standard dialog data exchange routines are defined in the header file afxdd_.h. However, applications should include afxwin.h.  
   
-### <a name="ddx-functions"></a>DDX 函数  
+### <a name="ddx-functions"></a>DDX Functions  
   
 |||  
 |-|-|  
-|[DDX_CBIndex](#ddx_cbindex)|初始化或检索的当前选择的组合框控件的索引。|  
-|[DDX_CBString](#ddx_cbstring)|初始化或检索的组合框控件的编辑字段的当前内容。|  
-|[DDX_CBStringExact](#ddx_cbstringexact)|初始化或检索的组合框控件的编辑字段的当前内容。|  
-|[DDX_Check](#ddx_check)|初始化或检索的复选框控件的当前状态。|  
-|[DDX_Control](#ddx_control)|子类对话框中的给定的控件。|  
-|[DDX_DateTimeCtrl](#ddx_datetimectrl)|初始化或检索日期和时间选取器控件的日期和/或时间数据。|  
-|[DDX_IPAddress](#ddx_ipaddress)|初始化或检索的 IP 地址控件的当前值。|  
-|[DDX_LBIndex](#ddx_lbindex)|初始化或检索的当前选择的列表框控件的索引。|  
-|[DDX_LBString](#ddx_lbstring)|初始化或检索的列表框控件中当前所选内容。|  
-|[DDX_LBStringExact](#ddx_lbstringexact)|初始化或检索的列表框控件中当前所选内容。|
-|[DDX_ManagedControl](#ddx_managedcontrol)|创建.NET 控件匹配控件的资源 id。|  
-|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|初始化或检索月历控件的当前值。|  
-|[DDX_Radio](#ddx_radio)|初始化或检索的单选控件组中当前选中的单选控件的基于 0 的索引。|  
-|[DDX_Scroll](#ddx_scroll)|初始化或检索滚动控件的滚动块的当前位置。|  
-|[DDX_Slider](#ddx_slider)|初始化或检索滑块控件的滚动块的当前位置。|  
-|[DDX_Text](#ddx_text)|初始化或检索一个编辑控件的当前值。|  
+|[DDX_CBIndex](#ddx_cbindex)|Initializes or retrieves the index of the current selection of a combo box control.|  
+|[DDX_CBString](#ddx_cbstring)|Initializes or retrieves the current contents of the edit field of a combo box control.|  
+|[DDX_CBStringExact](#ddx_cbstringexact)|Initializes or retrieves the current contents of the edit field of a combo box control.|  
+|[DDX_Check](#ddx_check)|Initializes or retrieves the current state of a check box control.|  
+|[DDX_Control](#ddx_control)|Subclasses a given control within a dialog box.|  
+|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Initializes or retrieves date and/or time data of a date and time picker control.|  
+|[DDX_IPAddress](#ddx_ipaddress)|Initializes or retrieves the current value of an IP address control.|  
+|[DDX_LBIndex](#ddx_lbindex)|Initializes or retrieves the index of the current selection of a list box control.|  
+|[DDX_LBString](#ddx_lbstring)|Initializes or retrieves the current selection within a list box control.|  
+|[DDX_LBStringExact](#ddx_lbstringexact)|Initializes or retrieves the current selection within a list box control.|
+|[DDX_ManagedControl](#ddx_managedcontrol)|Creates a .NET control matching the control's resource ID.|  
+|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Initializes or retrieves the current value of a month calendar control.|  
+|[DDX_Radio](#ddx_radio)|Initializes or retrieves the 0-based index of the radio control that is currently checked within a radio control group.|  
+|[DDX_Scroll](#ddx_scroll)|Initializes or retrieves the current position of a scroll control's thumb.|  
+|[DDX_Slider](#ddx_slider)|Initializes or retrieves the current position of a slider control's thumb.|  
+|[DDX_Text](#ddx_text)|Initializes or retrieves the current value of an edit control.|  
   
-##  <a name="ddx_cbindex"></a>DDX_CBIndex  
- `DDX_CBIndex`函数管理的传输`int`在对话框中，组合框控件之间的数据窗体视图或控件视图对象和一个`int`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex  
+ The `DDX_CBIndex` function manages the transfer of `int` data between a combo box control in a dialog box, form view, or control view object and a `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_CBIndex(
@@ -75,26 +75,26 @@ void AFXAPI DDX_CBIndex(
     int& index);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 组合框控件的控件属性关联的资源 ID。  
+ The resource ID of the combo box control associated with the control property.  
   
- *索引*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *index*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_CBIndex`调用时，*索引*设置为当前的组合框选择的索引。 如果未不选定任何项，*索引*设置为 0。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_CBIndex` is called, *index* is set to the index of the current combo box selection. If no item is selected, *index* is set to 0.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>DDX_CBString  
- `DDX_CBString`函数管理的传输`CString`之间的组合框控件在对话框中，编辑控件的数据窗体视图或控件视图对象和一个`CString`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_cbstring"></a>  DDX_CBString  
+ The `DDX_CBString` function manages the transfer of `CString` data between the edit control of a combo box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_CBString(
@@ -103,29 +103,29 @@ void AFXAPI DDX_CBString(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 组合框控件的控件属性关联的资源 ID。  
+ The resource ID of the combo box control associated with the control property.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_CBString`调用时，*值*设置为当前的组合框选择。 如果未不选定任何项，*值*设置为长度为零的字符串。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_CBString` is called, *value* is set to the current combo box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  如果组合框下拉列表框中，交换的值仅限于 255 个字符。  
+>  If the combo box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
- `DDX_CBStringExact`函数管理的传输`CString`之间的组合框控件在对话框中，编辑控件的数据窗体视图或控件视图对象和一个`CString`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact  
+ The `DDX_CBStringExact` function manages the transfer of `CString` data between the edit control of a combo box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_CBStringExact(
@@ -134,29 +134,29 @@ void AFXAPI DDX_CBStringExact(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 组合框控件的控件属性关联的资源 ID。  
+ The resource ID of the combo box control associated with the control property.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_CBStringExact`调用时，*值*设置为当前的组合框选择。 如果未不选定任何项，*值*设置为长度为零的字符串。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_CBStringExact` is called, *value* is set to the current combo box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  如果组合框下拉列表框中，交换的值仅限于 255 个字符。  
+>  If the combo box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_check"></a>DDX_Check  
- `DDX_Check`函数管理的传输`int`之间复选框控件在对话框中，数据窗体视图或控件视图对象和一个`int`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_check"></a>  DDX_Check  
+ The `DDX_Check` function manages the transfer of `int` data between a check box control in a dialog box, form view, or control view object and a `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Check(
@@ -165,26 +165,26 @@ void AFXAPI DDX_Check(
     int& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 与控件属性关联的复选框控件资源 ID。  
+ The resource ID of the check box control associated with the control property.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_Check`调用时，*值*设置为复选框控件的当前状态。 有关可能状态的值的列表，请参阅[BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Check` is called, *value* is set to the current state of the check box control. For a list of the possible state values, see [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) in the Windows SDK.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_control"></a>DDX_Control  
- `DDX_Control`函数指定的控件的子类`nIDC`、 对话框、 窗体视图或控件视图对象。  
+##  <a name="ddx_control"></a>  DDX_Control  
+ The `DDX_Control` function subclasses the control, specified by `nIDC`, of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Control(
@@ -193,26 +193,26 @@ void AFXAPI DDX_Control(
     CWnd& rControl);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `nIDC`  
- 要子类化控件资源 ID。  
+ The resource ID of the control to be subclassed.  
   
  *rControl*  
- 对对话框、 窗体视图或与指定控件的控件视图对象的成员变量的引用。  
+ A reference to a member variable of the dialog box, form view, or control view object related to the specified control.  
   
-### <a name="remarks"></a>备注  
- `pDX`框架通过提供对象时`DoDataExchange`调用函数。 因此，`DDX_Control`仅应在重写中调用`DoDataExchange`。  
+### <a name="remarks"></a>Remarks  
+ The `pDX` object is supplied by the framework when the `DoDataExchange` function is called. Therefore, `DDX_Control` should only be called within your override of `DoDataExchange`.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
- `DDX_DateTimeCtrl`函数管理之间的日期和时间选取器控件的日期和/或时间数据传输 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 对话框框中或窗体视图对象，也可能[CTime](../../atl-mfc-shared/reference/ctime-class.md)或[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对话框框中或窗体视图对象的数据成员。  
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl  
+ The `DDX_DateTimeCtrl` function manages the transfer of date and/or time data between a date and time picker control ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) in a dialog box or form view object and either a [CTime](../../atl-mfc-shared/reference/ctime-class.md) or a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) data member of the dialog box or form view object.  
   
 ```  
 void AFXAPI DDX_DateTimeCtrl(
@@ -231,33 +231,33 @@ void AFXAPI DDX_DateTimeCtrl(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。 你不需要删除此对象。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction. You don't need to delete this object.  
   
  `nIDC`  
- 与成员变量关联的日期和时间选取器控件资源 ID。  
+ The resource ID of the date and time picker control associated with the member variable.  
   
- *值*  
- 在前两个版本中，对引用`CTime`或`COleDateTime`成员变量、 对话框、 窗体视图或控件视图对象与其交换数据。 在第三个版本中，对引用`CString`数据成员控件视图对象。  
+ *value*  
+ In the first two versions, a reference to a `CTime` or `COleDateTime` member variable, dialog box, form view, or control view object with which data is exchanged. In the third version, a reference to a `CString` data member control view object.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_DateTimeCtrl`调用时，*值*设置为当前的日期和时间选取器控件或控件的状态设置为*值*，取决于 exchange 的方向。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_DateTimeCtrl` is called, *value* is set to the current state of the date and time picker control, or the control is set to *value*, depending on the direction of the exchange.  
   
- 在更高版本，第三个版本`DDX_DateTimeCtrl`管理的传输`CString`日期之间的数据时间控件和[CString](../../atl-mfc-shared/reference/cstringt-class.md)的控件视图对象的数据成员。 字符串格式都是使用当前区域设置的规则用于格式化日期和时间。  
+ In the third version above, `DDX_DateTimeCtrl` manages the transfer of `CString` data between a date time control and a [CString](../../atl-mfc-shared/reference/cstringt-class.md) data member of the control view object. The string is formatted using the current locale's rules for formatting dates and times.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
 
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
-创建.NET 控件匹配控件的资源 id。  
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
+Creates a .NET control matching the control's resource ID.  
    
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   ```  
 template <typename T>  
 void DDX_ManagedControl(  
@@ -265,32 +265,32 @@ void DDX_ManagedControl(
      int nIDC,   
      CWinFormsControl<T>& control );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange 类](cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange Class](cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 与控件属性关联的控件的资源 ID。  
+ The resource ID of the control associated with the control property.  
   
  `control`  
- 对引用[CWinFormsControl 类](cwinformscontrol-class.md)对象。  
+ A reference to a [CWinFormsControl Class](cwinformscontrol-class.md) object.  
    
-### <a name="remarks"></a>备注  
- `DDX_ManagedControl`调用[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)创建控件匹配资源控件 id。 使用`DDX_ManagedControl`若要从资源 Id 创建控件[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)。 对于数据交换，不需要使用 Windows 窗体控件与 DDX/DDV 函数。  
+### <a name="remarks"></a>Remarks  
+ `DDX_ManagedControl` calls [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) to create a control matching the resource control ID. Use `DDX_ManagedControl` to create controls from resource IDs in [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). For data exchange, you do not need to use the DDX/DDV functions with Windows Forms controls.  
   
- 有关详细信息，请参阅[如何︰ 使用 Windows 窗体执行 DDX/DDV 数据绑定](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。  
+ For more information, see [How to: Do DDX/DDV Data Binding with Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxwinforms.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>See Also  
  [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)   
  [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
  
 
   
-##  <a name="ddx_ipaddress"></a>DDX_IPAddress  
- `DDX_IPAddress`函数管理 IP 地址控件和控件视图对象的数据成员之间的数据传输。  
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress  
+ The `DDX_IPAddress` function manages the transfer of data between an IP Address control and a data member of the control view object.  
   
 ```  
 void AFXAPI DDX_IPAddress(
@@ -299,35 +299,35 @@ void AFXAPI DDX_IPAddress(
     DWORD& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 与控件属性关联的 IP 地址控件资源 ID。  
+ The resource ID of the IP Address control associated with the control property.  
   
- *值*  
- 对引用`DWORD`包含四个字段的值的 IP 地址控件。 字段被填充，或阅读，如下所示。  
+ *value*  
+ A reference to the `DWORD` containing the four-field value of the IP Address control. The fields are filled or read as follows.  
   
-|字段|包含的字段值的位|  
+|Field|Bits containing the field value|  
 |-----------|-------------------------------------|  
-|3|0 到 7|  
-|2|8 到 15|  
-|1|16 至 23|  
-|0|24 到 31 之间|  
+|3|0 through 7|  
+|2|8 through 15|  
+|1|16 through 23|  
+|0|24 through 31|  
   
- 使用 Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)以读取值，或使用[IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)以填充值。 这些消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Use the Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) to read the value, or use [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) to fill the value. These messages are described in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_IPAddress`称为，*值*或者从 IP 地址控件中，读取或*值*写入到该控件，具体取决于 exchange 的方向。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_IPAddress` is called, *value* is either read from the IP Address control, or *value* is written to the control, depending on the direction of the exchange.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>DDX_LBIndex  
- `DDX_LBIndex`函数管理的传输`int`在对话框中，列表框控件之间的数据窗体视图或控件视图对象和`int`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex  
+ The `DDX_LBIndex` function manages the transfer of `int` data between a list box control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_LBIndex(
@@ -336,26 +336,26 @@ void AFXAPI DDX_LBIndex(
     int& index);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 列表框控件的控件属性关联的资源 ID。  
+ The resource ID of the list box control associated with the control property.  
   
- *索引*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *index*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_LBIndex`调用时，*索引*设置的当前列表框中选择的索引。 如果未不选定任何项，*索引*设置为-1。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_LBIndex` is called, *index* is set to the index of the current list box selection. If no item is selected, *index* is set to -1.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>DDX_LBString  
- `DDX_LBString`函数管理的传输`CString`在对话框中，列表框控件之间的数据窗体视图或控件视图对象和一个`CString`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_lbstring"></a>  DDX_LBString  
+ The `DDX_LBString` function manages the transfer of `CString` data between a list box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_LBString(
@@ -364,31 +364,31 @@ void AFXAPI DDX_LBString(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 列表框控件的控件属性关联的资源 ID。  
+ The resource ID of the list box control associated with the control property.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_LBString`调用以将数据传输到一个列表框控件，其开头与匹配的控件中的第一项*值*选择。 (若要匹配的整个项而不是只需前缀，使用[DDX_LBStringExact](#ddx_lbstringexact)。)如果没有匹配项，没有选择项目。 匹配不区分大小写。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_LBString` is called to transfer data to a list box control, the first item in the control whose beginning matches *value* is selected. (To match the entire item rather than just a prefix, use [DDX_LBStringExact](#ddx_lbstringexact).) If there are no matches, no items are selected. The matching is case-insensitive.  
   
- 当`DDX_LBString`调用以将数据从一个列表框控件，传输*值*设置为当前的列表框中选择。 如果未不选定任何项，*值*设置为长度为零的字符串。  
+ When `DDX_LBString` is called to transfer data from a list box control, *value* is set to the current list box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  如果列表框中，一个下拉列表框交换的值仅限于 255 个字符。  
+>  If the list box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
- `DDX_CBStringExact`函数管理的传输`CString`之间的列表框控件在对话框中，编辑控件的数据窗体视图或控件视图对象和一个`CString`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact  
+ The `DDX_CBStringExact` function manages the transfer of `CString` data between the edit control of a list box control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_LBStringExact(
@@ -397,31 +397,31 @@ void AFXAPI DDX_LBStringExact(
     CString& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 列表框控件的控件属性关联的资源 ID。  
+ The resource ID of the list box control associated with the control property.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_LBStringExact`调用以将数据传输到一个列表框控件，与匹配的控件中的第一项*值*选择。 (若要匹配只需前缀而不是整个项，使用[DDX_LBString](#ddx_lbstring)。)如果没有匹配项，没有选择项目。 匹配不区分大小写。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_LBStringExact` is called to transfer data to a list box control, the first item in the control that matches *value* is selected. (To match just a prefix rather than the entire item, use [DDX_LBString](#ddx_lbstring).) If there are no matches, no items are selected. The matching is case-insensitive.  
   
- 当`DDX_CBStringExact`调用以将数据从一个列表框控件，传输*值*设置为当前的列表框中选择。 如果未不选定任何项，*值*设置为长度为零的字符串。  
+ When `DDX_CBStringExact` is called to transfer data from a list box control, *value* is set to the current list box selection. If no item is selected, *value* is set to a string of zero length.  
   
 > [!NOTE]
->  如果列表框中，一个下拉列表框交换的值仅限于 255 个字符。  
+>  If the list box is a drop-down list box, the value exchanged is limited to 255 characters.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
- `DDX_MonthCalCtrl`函数管理月历控件之间的日期数据传输 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 对话框中，窗体视图或控件视图对象，也可能[CTime](../../atl-mfc-shared/reference/ctime-class.md)或[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl  
+ The `DDX_MonthCalCtrl` function manages the transfer of date data between a month calendar control ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) in a dialog box, form view, or control view object and either a [CTime](../../atl-mfc-shared/reference/ctime-class.md) or a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_MonthCalCtrl(
@@ -435,30 +435,30 @@ void AFXAPI DDX_MonthCalCtrl(
     COleDateTime& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。 你不需要删除此对象。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction. You don't need to delete this object.  
   
  `nIDC`  
- 与成员变量时，月历控件的资源 ID 相关联。  
+ The resource ID of the month calendar control associated with the member variable.  
   
- *值*  
- 对引用`CTime`或`COleDateTime`的对话框、 窗体视图或与其交换数据的控件视图对象的成员变量。  
+ *value*  
+ A reference to a `CTime` or `COleDateTime` member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  控件管理日期值。 时对象中的时间字段将设置为反映控件窗口的创建时间或通过调用控件中设置的任意时间`CMonthCalCtrl::SetCurSel`。  
+>  The control manages a date value only. The time fields in the time object are set to reflect the creation time of the control window, or whatever time was set in the control with a call to `CMonthCalCtrl::SetCurSel`.  
   
- 当`DDX_MonthCalCtrl`称为，*值*设置为月历控件的当前状态。  
+ When `DDX_MonthCalCtrl` is called, *value* is set to the current state of the month calendar control.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_radio"></a>DDX_Radio  
- `DDX_Radio`函数管理的传输`int`对话框中中的单选控件组之间的数据窗体视图或控件视图对象和一个`int`的对话框、 窗体视图或控件视图对象的数据成员。 值`int`确定数据成员时根据的单选按钮组内的处于选中状态。  
+##  <a name="ddx_radio"></a>  DDX_Radio  
+ The `DDX_Radio` function manages the transfer of `int` data between a radio control group in a dialog box, form view, or control view object and a `int` data member of the dialog box, form view, or control view object. The value of the `int` data member is determined according to which radio button within the group is selected.  
   
 ```  
 void AFXAPI DDX_Radio(
@@ -467,28 +467,28 @@ void AFXAPI DDX_Radio(
     int& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 组中的第一个单选控件资源 ID。  
+ The resource ID of the first radio control in the group.  
   
- *值*  
- 对对话框、 窗体视图或与其交换数据的控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_Radio`称为，*值*设置为单选按钮控件组的当前状态。 值设置为当前选中的单选控件基于 0 的索引或-1，如果没有单选控件进行检查。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Radio` is called, *value* is set to the current state of the radio control group. The value is set as a 0-based index of the radio control that is currently checked, or -1 if no radio controls are checked.  
   
- 例如，在第一个单选按钮组中的情况下选中的值的 （带有 WS_GROUP 样式的按钮）`int`成员为 0，依此类推。  
+ For example, in case that the first radio button in the group is checked (the button with WS_GROUP style) the value of the `int` member is 0 and so on.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>DDX_Scroll  
- `DDX_Scroll`函数管理的传输`int`之间滚动条控件在对话框中，数据窗体视图或控件视图对象和`int`的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_scroll"></a>  DDX_Scroll  
+ The `DDX_Scroll` function manages the transfer of `int` data between a scroll-bar control in a dialog box, form view, or control view object and an `int` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Scroll(
@@ -497,26 +497,26 @@ void AFXAPI DDX_Scroll(
     int& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 与控件属性关联的滚动条控件资源 ID。  
+ The resource ID of the scroll-bar control associated with the control property.  
   
- *值*  
- 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。  
+ *value*  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_Scroll`调用时，*值*设置为控件的滚动块的当前位置。 关联控件的滚动块的当前位置的值的详细信息，请参阅[GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Scroll` is called, *value* is set to the current position of the control's thumb. For more information on the values associated with the current position of the control's thumb, see [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) in the Windows SDK.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_slider"></a>DDX_Slider  
- `DDX_Slider`函数管理的传输`int`对话框框中或窗体视图中的滑块控件之间的数据和`int`对话框框中或窗体视图对象的数据成员。  
+##  <a name="ddx_slider"></a>  DDX_Slider  
+ The `DDX_Slider` function manages the transfer of `int` data between a slider control in a dialog box or form view and an `int` data member of the dialog box or form view object.  
   
 ```  
 void AFXAPI DDX_Slider(
@@ -525,26 +525,26 @@ void AFXAPI DDX_Slider(
     int& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 滑块控件的资源 ID。  
+ The resource ID of the slider control.  
   
- *值*  
- 对要进行交换的值的引用。 此参数包含，或设置滑块控件的当前位置。  
+ *value*  
+ A reference to the value to be exchanged. This parameter holds or sets the slider control's current position.  
   
-### <a name="remarks"></a>备注  
- 当`DDX_Slider`称为，*值*设置为控件的滚动块的当前位置或值接收到的位置，具体取决于 exchange 的方向。  
+### <a name="remarks"></a>Remarks  
+ When `DDX_Slider` is called, *value* is set to the current position of the control's thumb, or the value receives the position, depending on the direction of the exchange.  
   
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For information about slider controls, see [Using CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text  
- `DDX_Text`函数管理的传输`int`， **UINT**，**长**， `DWORD`， `CString`， **float**，或**double**之间在对话框中，编辑控件的数据窗体视图，或控件视图和[CString](../../atl-mfc-shared/reference/cstringt-class.md)的对话框、 窗体视图或控件视图对象的数据成员。  
+##  <a name="ddx_text"></a>  DDX_Text  
+ The `DDX_Text` function manages the transfer of `int`, **UINT**, **long**, `DWORD`, `CString`, **float**, or **double** data between an edit control in a dialog box, form view, or control view and a [CString](../../atl-mfc-shared/reference/cstringt-class.md) data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_Text(
@@ -603,23 +603,23 @@ void AFXAPI DDX_Text(
     COleDateTime& value);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向的指针[CDataExchange](../../mfc/reference/cdataexchange-class.md)对象。 框架提供了此对象以建立数据交换的上下文，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 编辑控件在对话框、 窗体视图或控件视图对象的 ID。  
+ The ID of an edit control in the dialog box, form view, or control view object.  
   
- *值*  
- 对对话框、 窗体视图或控件视图对象中的数据成员的引用。 数据类型*值*依赖于其中的重载版本`DDX_Text`你使用。  
+ *value*  
+ A reference to a data member in the dialog box, form view, or control view object. The data type of *value* depends on which of the overloaded versions of `DDX_Text` you use.  
   
-### <a name="remarks"></a>备注  
- 有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>要求  
-  **标头**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
 
-## <a name="see-also"></a>另请参阅  
- [标准对话框数据验证例程](../../mfc/reference/standard-dialog-data-validation-routines.md)   
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Standard Dialog Data Validation Routines](../../mfc/reference/standard-dialog-data-validation-routines.md)   
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

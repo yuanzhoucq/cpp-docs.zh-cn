@@ -1,5 +1,5 @@
 ---
-title: "COleBusyDialog 类 |Microsoft 文档"
+title: COleBusyDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,9 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Server Not Responding dialog box
-- Server Busy dialog box
-- COleBusyDialog class
+- COleBusyDialog [MFC], COleBusyDialog
+- COleBusyDialog [MFC], DoModal
+- COleBusyDialog [MFC], GetSelectionType
+- COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
 caps.latest.revision: 22
 author: mikeblome
@@ -40,54 +41,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0c3ed264cdb83bc97337f13279a20f26b21d454b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a985c969c47fe0cac2bcc62f2c88a2ae5f85c86
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colebusydialog-class"></a>COleBusyDialog 类
-用于 OLE“服务器未响应”或“服务器忙”对话框。  
+# <a name="colebusydialog-class"></a>COleBusyDialog Class
+Used for the OLE Server Not Responding or Server Busy dialog boxes.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleBusyDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::COleBusyDialog](#colebusydialog)|构造 `COleBusyDialog` 对象。|  
+|[COleBusyDialog::COleBusyDialog](#colebusydialog)|Constructs a `COleBusyDialog` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::DoModal](#domodal)|显示 OLE 服务器忙对话框。|  
-|[COleBusyDialog::GetSelectionType](#getselectiontype)|确定在该对话框中所做的选择。|  
+|[COleBusyDialog::DoModal](#domodal)|Displays the OLE Server Busy dialog box.|  
+|[COleBusyDialog::GetSelectionType](#getselectiontype)|Determines the choice made in the dialog box.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|类型的结构**OLEUIBUSY**控制对话框中的行为。|  
+|[COleBusyDialog::m_bz](#m_bz)|Structure of type **OLEUIBUSY** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>备注  
- 创建类的对象`COleBusyDialog`当你想要调用这些对话框。 之后`COleBusyDialog`构造对象，则可以使用[m_bz](#m_bz)结构初始化的值或在对话框中的控件的状态。 `m_bz`结构属于类型**OLEUIBUSY**。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleBusyDialog` when you want to call these dialog boxes. After a `COleBusyDialog` object has been constructed, you can use the [m_bz](#m_bz) structure to initialize the values or states of controls in the dialog box. The `m_bz` structure is of type **OLEUIBUSY**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  应用程序向导生成的容器代码使用此类。  
+>  Application Wizard-generated container code uses this class.  
   
- 有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
- 特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ For more information on OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,11 +103,11 @@ class COleBusyDialog : public COleDialog
   
  `COleBusyDialog`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
- 此函数只构造`COleBusyDialog`对象。  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
+ This function only constructs a `COleBusyDialog` object.  
   
 ```  
 explicit COleBusyDialog(
@@ -116,63 +117,63 @@ explicit COleBusyDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *htaskBusy*  
- 正在使用中的服务器任务的句柄。  
+ Handle to the server task that is busy.  
   
  *bNotResponding*  
- 如果**TRUE**，调用而不是服务器忙对话框中的未响应对话框。 未响应对话框中的用语是中服务器忙对话框中的用语略有不同，禁用取消按钮。  
+ If **TRUE**, call the Not Responding dialog box instead of the Server Busy dialog box. The wording in the Not Responding dialog box is slightly different than the wording in the Server Busy dialog box, and the Cancel button is disabled.  
   
  `dwFlags`  
- 创建标记。 可以包含零个或多个与按位或运算符结合使用以下值︰  
+ Creation flag. Can contain zero or more of the following values combined with the bitwise-OR operator:  
   
-- **BZ_DISABLECANCELBUTTON**时调用对话框中禁用取消按钮。  
+- **BZ_DISABLECANCELBUTTON** Disable the Cancel button when calling the dialog box.  
   
-- **BZ_DISABLESWITCHTOBUTTON**时调用对话框中禁用切换到按钮。  
+- **BZ_DISABLESWITCHTOBUTTON** Disable the Switch To button when calling the dialog box.  
   
-- **BZ_DISABLERETRYBUTTON**时调用对话框中禁用重试按钮。  
+- **BZ_DISABLERETRYBUTTON** Disable the Retry button when calling the dialog box.  
   
  `pParentWnd`  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框对象的父窗口设置为主应用程序窗口中。  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog object is set to the main application window.  
   
-### <a name="remarks"></a>备注  
- 若要显示对话框中，调用[DoModal](#domodal)。  
+### <a name="remarks"></a>Remarks  
+ To display the dialog box, call [DoModal](#domodal).  
   
- 有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
- 调用此函数可显示 OLE 服务器忙或服务器未响应对话框。  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
+ Call this function to display the OLE Server Busy or Server Not Responding dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对话框中的完成状态。 以下值之一：  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK**如果成功显示的对话框。  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL**如果用户已取消对话框。  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT**是否发生了错误。 如果**IDABORT**是返回，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能出现的错误的列表，请参阅[OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) ，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) function in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 如果您想要通过设置成员的初始化各种对话框控件[m_bz](#m_bz)结构中，应执行此操作，然后再调`DoModal`，但在构造对话框对象之后。  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_bz](#m_bz) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- 如果`DoModal`返回**IDOK**，可调用其他成员函数来检索的设置或由用户输入的对话框中的信息。  
+ If `DoModal` returns **IDOK**, you can call other member functions to retrieve the settings or information that was input by the user into the dialog box.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
- 调用此函数可获取用户在服务器忙对话框中选择的所选内容类型。  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
+ Call this function to get the selection type chosen by the user in the Server Busy dialog box.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 所做选择的类型。  
+### <a name="return-value"></a>Return Value  
+ Type of selection made.  
   
-### <a name="remarks"></a>备注  
- 返回类型值都由指定**选择**枚举类型中声明`COleBusyDialog`类。  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COleBusyDialog` class.  
   
 ```  
 enum Selection {
@@ -182,28 +183,28 @@ enum Selection {
     };
 ```  
   
- 请按照这些值的简短说明︰  
+ Brief descriptions of these values follow:  
   
-- **COleBusyDialog::switchTo**按下了切换到按钮。  
+- **COleBusyDialog::switchTo** Switch To button was pressed.  
   
-- **COleBusyDialog::retry**按下了重试按钮。  
+- **COleBusyDialog::retry** Retry button was pressed.  
   
-- **COleBusyDialog::callUnblocked**调用以激活服务器现在就是未被阻止。  
+- **COleBusyDialog::callUnblocked** Call to activate the server is now unblocked.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
- 类型的结构**OLEUIBUSY**用来控制服务器忙对话框中的行为。  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
+ Structure of type **OLEUIBUSY** used to control the behavior of the Server Busy dialog box.  
   
 ```  
 OLEUIBUSY m_bz;  
 ```  
   
-### <a name="remarks"></a>备注  
- 直接或通过成员函数，则可以修改此结构的成员。  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified directly or through member functions.  
   
- 有关详细信息，请参阅[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) structure in the Windows SDK.  
   
-## <a name="see-also"></a>另请参阅  
- [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleDialog 类](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

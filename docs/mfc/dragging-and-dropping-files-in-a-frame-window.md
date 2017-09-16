@@ -1,36 +1,55 @@
 ---
-title: "拖放框架窗口中的文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "拖放 [C++], 文件管理器"
-  - "拖放 [C++], 文件"
-  - "拖放 [C++], Windows Explorer"
-  - "文件管理器拖放支持"
-  - "文件 [C++], 拖放"
-  - "框架窗口 [C++], 拖放文件"
-  - "Windows 资源管理器 [C++]"
+title: Dragging and Dropping Files in a Frame Window | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- drag and drop [MFC], files
+- drag and drop [MFC], File Manager
+- Windows Explorer [MFC]
+- File Manager drag and drop support [MFC]
+- files [MFC], drag and drop
+- frame windows [MFC], dragging and dropping files in
+- drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 拖放框架窗口中的文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 337a191a27737b428ddea4bce9d21d3487c18942
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-框架窗口管理用于文件管理器或文件管理器的关系。  
+---
+# <a name="dragging-and-dropping-files-in-a-frame-window"></a>Dragging and Dropping Files in a Frame Window
+The frame window manages a relationship with File Explorer or File Manager.  
   
- 通过将 `CWinApp` 成员函数 `InitInstance`的替代数组初始化的调用按 [CWinApp:应用程序类](../mfc/cwinapp-the-application-class.md)所描述的，因此，可以间接在框架窗口将文件资源管理器或文件管理器和删除的框架窗口打开文件。  参见 [文件管理器拖放](../mfc/special-cwinapp-services.md)。  
+ By adding a few initializing calls in your override of the `CWinApp` member function `InitInstance`, as described in [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md), you can have your frame window indirectly open files dragged from File Explorer or File Manager and dropped in the frame window. See [File Manager Drag and Drop](../mfc/special-cwinapp-services.md).  
   
-## 请参阅  
- [使用框架窗口](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

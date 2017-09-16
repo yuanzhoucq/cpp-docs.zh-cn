@@ -1,37 +1,56 @@
 ---
-title: "在 Rich Edit 控件中打印 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 类, 打印"
-  - "打印 [MFC], CRichEditCtrl"
-  - "Rich Edit 控件, 打印"
+title: Printing in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC], CRichEditCtrl
+- rich edit controls [MFC], printing
+- CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 在 Rich Edit 控件中打印
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9924723e2f304ea6d76f5fd767b6515595d88949
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以了解一个丰富的编辑控件 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 呈现它的指定设备的输出，如打印机。  也可以指定一 Rich Edit 控件设置其文本的输出设备。  
+---
+# <a name="printing-in-rich-edit-controls"></a>Printing in Rich Edit Controls
+You can tell a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to render its output for a specified device, such as a printer. You can also specify the output device for which a rich edit control formats its text.  
   
- 若要设置一部分丰富的编辑控件内容的特定的设备，可以使用 [FormatRange](../Topic/CRichEditCtrl::FormatRange.md) 成员函数。  [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) 结构对该函数指定文本范围的格式以及目标设备的设备上下文 \(DC\)。  
+ To format part of the contents of a rich edit control for a specific device, you can use the [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) member function. The [FORMATRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787911) structure used with this function specifies the range of text to format as well as the device context (DC) for the target device.  
   
- 使用 [DisplayBand](../Topic/CRichEditCtrl::DisplayBand.md) 成员函数，在格式输出设备的文本后，可以将输出发送到设备。  使用 `FormatRange` 和 `DisplayBand`，通过重复，打印的应用程序的丰富的编辑控件的内容可以实现双层。分级 \(出于打印目的是输出的除法成更小的部件。\)  
+ After formatting text for an output device, you can send the output to the device by using the [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) member function. By repeatedly using `FormatRange` and `DisplayBand`, an application that prints the contents of a rich edit control can implement banding. (Banding is division of output into smaller parts for printing purposes.)  
   
- 可以使用 [SetTargetDevice](../Topic/CRichEditCtrl::SetTargetDevice.md) 成员函数中指定了丰富的格式文本编辑控件其的目标设备。  此函数在 WYSIWYG \(所看到位于所捕获\) 格式设置非常有用，但应用程序确定文本使用默认打印机的字体规格而不是屏幕的。  
+ You can use the [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) member function to specify the target device for which a rich edit control formats its text. This function is useful for WYSIWYG (what you see is what you get) formatting, in which an application positions text using the default printer's font metrics instead of the screen's.  
   
-## 请参阅  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

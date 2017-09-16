@@ -1,5 +1,5 @@
 ---
-title: "COleLinksDialog 类 |Microsoft 文档"
+title: COleLinksDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,10 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Edit Links dialog box
-- COleLinksDialog class
-- dialog boxes, OLE
-- OLE Edit Links dialog box
+- COleLinksDialog [MFC], COleLinksDialog
+- COleLinksDialog [MFC], DoModal
+- COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
 caps.latest.revision: 22
 author: mikeblome
@@ -40,53 +39,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed256b3a4d3236863e3dcccb7614949f650f058b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa51351bf888268c1bddf0f4b1247216de9e2e4d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colelinksdialog-class"></a>COleLinksDialog 类
-用于 OLE“编辑链接”对话框。  
+# <a name="colelinksdialog-class"></a>COleLinksDialog Class
+Used for the OLE Edit Links dialog box.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleLinksDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|构造 `COleLinksDialog` 对象。|  
+|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Constructs a `COleLinksDialog` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::DoModal](#domodal)|显示 OLE 编辑链接对话框。|  
+|[COleLinksDialog::DoModal](#domodal)|Displays the OLE Edit Links dialog box.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|类型的结构**OLEUIEDITLINKS**控制对话框中的行为。|  
+|[COleLinksDialog::m_el](#m_el)|A structure of type **OLEUIEDITLINKS** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>备注  
- 创建类的对象`COleLinksDialog`当你想要调用此对话框。 之后`COleLinksDialog`构造对象，则可以使用[m_el](#m_el)结构初始化的值或在对话框中的控件的状态。 `m_el`结构属于类型**OLEUIEDITLINKS**。 有关使用此对话框类的详细信息，请参阅[DoModal](#domodal)成员函数。  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleLinksDialog` when you want to call this dialog box. After a `COleLinksDialog` object has been constructed, you can use the [m_el](#m_el) structure to initialize the values or states of controls in the dialog box. The `m_el` structure is of type **OLEUIEDITLINKS**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  应用程序向导生成的容器代码使用此类。  
+>  Application Wizard-generated container code uses this class.  
   
- 有关详细信息，请参阅[OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure in the Windows SDK.  
   
- 有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,30 +100,30 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
- 显示 OLE 编辑链接对话框。  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
+ Displays the OLE Edit Links dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对话框中的完成状态。 以下值之一：  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK**如果成功显示的对话框。  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL**如果用户已取消对话框。  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT**是否发生了错误。 如果**IDABORT**是返回，调用`COleDialog::GetLastError`成员函数以获取有关发生的错误类型的详细信息。 有关可能出现的错误的列表，请参阅[OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) ，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) function in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 如果您想要通过设置成员的初始化各种对话框控件[m_el](#m_el)结构中，您应该这么做，然后再调`DoModal`，但在构造对话框对象之后。  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_el](#m_el) structure, you should do it before calling `DoModal`, but after the dialog object is constructed.  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
- 构造 `COleLinksDialog` 对象。  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
+ Constructs a `COleLinksDialog` object.  
   
 ```  
 COleLinksDialog (
@@ -134,36 +133,36 @@ COleLinksDialog (
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 指向包含要编辑的链接的 OLE 文档。  
+ Points to the OLE document that contains the links to be edited.  
   
  `pView`  
- 与当前视图中的点数`pDoc`。  
+ Points to the current view on `pDoc`.  
   
  `dwFlags`  
- 创建标记，其中包含 0 或**ELF_SHOWHELP**指定对话框中显示时是否将显示帮助按钮。  
+ Creation flag, which contains either 0 or **ELF_SHOWHELP** to specify whether the Help button will be displayed when the dialog box is displayed.  
   
  `pParentWnd`  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口设置为主应用程序窗口中。  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box is set to the main application window.  
   
-### <a name="remarks"></a>备注  
- 此函数只构造`COleLinksDialog`对象。 若要显示对话框中，调用[DoModal](#domodal)函数。  
+### <a name="remarks"></a>Remarks  
+ This function constructs only a `COleLinksDialog` object. To display the dialog box, call the [DoModal](#domodal) function.  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
- 类型的结构**OLEUIEDITLINKS**用来控制编辑链接对话框中的行为。  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
+ Structure of type **OLEUIEDITLINKS** used to control the behavior of the Edit Links dialog box.  
   
 ```  
 OLEUIEDITLINKS m_el;  
 ```  
   
-### <a name="remarks"></a>备注  
- 直接或通过成员函数，则可以修改此结构的成员。  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified either directly or through member functions.  
   
- 有关详细信息，请参阅[OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492)结构中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure in the Windows SDK.  
   
-## <a name="see-also"></a>另请参阅  
- [COleDialog 类](../../mfc/reference/coledialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleDialog 类](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "运行时对象模型服务 |Microsoft 文档"
+title: Run-Time Object Model Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,46 +33,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d1433042bb0f1d01ba5a8fa78e1ffc0cccaa38e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="run-time-object-model-services"></a>运行时对象模型服务
-类[CObject](../../mfc/reference/cobject-class.md)和[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封装多个对象服务，包括对运行时类信息、 序列化和动态对象创建的访问。 所有派生自 `CObject` 的类都继承此功能。  
+# <a name="run-time-object-model-services"></a>Run-Time Object Model Services
+The classes [CObject](../../mfc/reference/cobject-class.md) and [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) encapsulate several object services, including access to run-time class information, serialization, and dynamic object creation. All classes derived from `CObject` inherit this functionality.  
   
- 能够访问运行时类信息可让您在运行时确定有关对象的类的信息。 当需要对函数参数进行额外的类型检查以及必须基于对象的类编写专用代码时很有用，能够在运行时确定对象的类很有用。 C++ 语言不直接支持运行时类信息。  
+ Access to run-time class information enables you to determine information about an object's class at run time. The ability to determine the class of an object at run time is useful when you need extra type-checking of function arguments and when you must write special-purpose code based on the class of an object. Run-time class information is not supported directly by the C++ language.  
   
- 序列化是在文件中写入或读取对象内容的过程。 当应用程序退出后，可以使用序列化来存储对象的内容。 对象随后可在应用程序重新启动时从文件中读取。 此类数据对象被称为“永久对象”。  
+ Serialization is the process of writing or reading an object's contents to or from a file. You can use serialization to store an object's contents even after the application exits. The object can then be read from the file when the application is restarted. Such data objects are said to be "persistent."  
   
- 动态对象创建支持在运行时创建指定类的对象。 例如，文档、视图和框架对象必须支持动态创建，因为框架需要以动态方式创建这些内容。  
+ Dynamic object creation enables you to create an object of a specified class at run time. For example, document, view, and frame objects must support dynamic creation because the framework needs to create them dynamically.  
   
- 下表列出了支持运行时类信息、序列化和动态创建的 MFC 宏。  
+ The following table lists the MFC macros that support run-time class information, serialization, and dynamic creation.  
   
- 有关这些运行时对象服务和序列化的详细信息，请参阅文章[CObject 类︰ 访问运行时类信息](../../mfc/accessing-run-time-class-information.md)。  
+ For more information on these run-time object services and serialization, see the article [CObject Class: Accessing Run-Time Class Information](../../mfc/accessing-run-time-class-information.md).  
   
-### <a name="run-time-object-model-services-macros"></a>运行时对象模型服务宏  
+### <a name="run-time-object-model-services-macros"></a>Run-Time Object Model Services Macros  
   
 
 
 |||  
 |-|-|  
-|[DECLARE_DYNAMIC](#declare_dynamic)|支持访问运行时类信息（必须在类声明中使用）。|  
-|[DECLARE_DYNCREATE](#declare_dyncreate)|支持动态创建和访问运行时类信息（必须在类声明中使用）。|  
-|[DECLARE_SERIAL](#declare_serial)|支持序列化和访问运行时类信息（必须在类声明中使用）。|  
-|[IMPLEMENT_DYNAMIC](#implement_dynamic)|支持访问运行时类信息（必须在类实现中使用）。|  
-|[IMPLEMENT_DYNCREATE](#implement_dyncreate)|支持动态创建和访问运行时类信息（必须在类实现中使用）。|  
-|[IMPLEMENT_SERIAL](#implement_serial)|允许序列化和访问运行时类信息（必须在类实现中使用）。|  
-|[RUNTIME_CLASS](#runtime_class)|返回与命名类对应的 `CRuntimeClass` 结构。|  
+|[DECLARE_DYNAMIC](#declare_dynamic)|Enables access to run-time class information (must be used in the class declaration).|  
+|[DECLARE_DYNCREATE](#declare_dyncreate)|Enables dynamic creation and access to run-time class information (must be used in the class declaration).|  
+|[DECLARE_SERIAL](#declare_serial)|Enables serialization and access to run-time class information (must be used in the class declaration).|  
+|[IMPLEMENT_DYNAMIC](#implement_dynamic)|Enables access to run-time class information (must be used in the class implementation).|  
+|[IMPLEMENT_DYNCREATE](#implement_dyncreate)|Enables dynamic creation and access to run-time information (must be used in the class implementation).|  
+|[IMPLEMENT_SERIAL](#implement_serial)|Permits serialization and access to run-time class information (must be used in the class implementation).|  
+|[RUNTIME_CLASS](#runtime_class)|Returns the `CRuntimeClass` structure that corresponds to the named class.|  
 
 
- OLE 通常要求在运行时动态创建对象。 例如，OLE 服务器应用程序必须能够动态创建 OLE 项以响应来自客户端的请求。 同样，自动化服务器必须能够创建项以响应来自自动化客户端的请求。  
+ OLE frequently requires the dynamic creation of objects at run time. For example, an OLE server application must be able to create OLE items dynamically in response to a request from a client. Similarly, an automation server must be able to create items in response to requests from automation clients.  
   
- Microsoft 基础类库提供了两个特定于 OLE 的宏。  
+ The Microsoft Foundation Class Library provides two macros specific to OLE.  
   
-### <a name="dynamic-creation-of-ole-objects"></a>OLE 对象的动态创建  
+### <a name="dynamic-creation-of-ole-objects"></a>Dynamic Creation of OLE Objects  
 
  
 
@@ -83,431 +83,429 @@ ms.lasthandoff: 04/12/2017
 
 |||  
 |-|-|  
-|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|确定公共控件库是否实现了指定的 API。|
-|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|确定公共控件库是否实现了指定的 API。|
-|[DECLARE_OLECREATE](#declare_olecreate)|支持通过 OLE 自动化创建对象。|  
-|[DECLARE_OLECTLTYPE](#declare_olectltype)|声明**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。|
-|[DECLARE_PROPPAGEIDS](#declare_proppageids)|声明 OLE 控件提供的属性页以显示其属性的列表。|
-|[IMPLEMENT_OLECREATE](#implement_olecreate)|支持由 OLE 系统创建对象。|  
-|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|实现**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。|  
-|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|任一此宏或[IMPLEMENT_OLECREATE](#implement_olecreate)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。 |
+|[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Determines whether the Common Controls library implements the specified API.|
+|[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Determines whether the Common Controls library implements the specified API.|
+|[DECLARE_OLECREATE](#declare_olecreate)|Enables objects to be created through OLE automation.|  
+|[DECLARE_OLECTLTYPE](#declare_olectltype)|Declares the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.|
+|[DECLARE_PROPPAGEIDS](#declare_proppageids)|Declares that the OLE control provides a list of property pages to display its properties.|
+|[IMPLEMENT_OLECREATE](#implement_olecreate)|Enables objects to be created by the OLE system.|  
+|[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Implements the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.|  
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Either this macro or [IMPLEMENT_OLECREATE](#implement_olecreate) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`. |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
-确定公共控件库是否实现了指定的 API。  
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
+Determines whether the Common Controls library implements the specified API.  
    
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   ```  
 AFX_COMCTL32_IF_EXISTS(  proc );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `proc`  
- 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。  
+ Pointer to a null-terminated string containing the function name, or specifies the function's ordinal value. If this parameter is an ordinal value, it must be in the low-order word; the high-order word must be zero. This parameter must be in Unicode.  
    
-### <a name="remarks"></a>备注  
- 使用此宏来确定是否公共控件库函数指定`proc`(而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。  
+### <a name="remarks"></a>Remarks  
+ Use this macro to determine whether the Common Controls library the function specified by `proc` (instead of calling [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212).  
    
-### <a name="requirements"></a>要求  
- afxcomctl32.h，afxcomctl32.inl  
+### <a name="requirements"></a>Requirements  
+ afxcomctl32.h, afxcomctl32.inl  
    
-### <a name="see-also"></a>另请参阅  
- [隔离 MFC 公共控件库](../isolation-of-the-mfc-common-controls-library.md)
- [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
+### <a name="see-also"></a>See Also  
+ [Isolation of the MFC Common Controls Library](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
-确定公共控件库是否实现指定的 API (这是 Unicode 版的[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists))。  
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
+Determines whether the Common Controls library implements the specified API (this is the Unicode version of [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```  
 AFX_COMCTL32_IF_EXISTS2( proc );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `proc`  
- 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。  
+ Pointer to a null-terminated string containing the function name, or specifies the function's ordinal value. If this parameter is an ordinal value, it must be in the low-order word; the high-order word must be zero. This parameter must be in Unicode.  
    
-### <a name="remarks"></a>备注  
- 使用此宏来确定是否公共控件库函数指定`proc`(而不是调用[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)。 此宏是 Unicode 版本的`AFX_COMCTL32_IF_EXISTS`。  
+### <a name="remarks"></a>Remarks  
+ Use this macro to determine whether the Common Controls library the function specified by `proc` (instead of calling [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212). This macro is the Unicode version of `AFX_COMCTL32_IF_EXISTS`.  
    
-### <a name="requirements"></a>要求  
- afxcomctl32.h，afxcomctl32.inl  
+### <a name="requirements"></a>Requirements  
+ afxcomctl32.h, afxcomctl32.inl  
    
-### <a name="see-also"></a>另请参阅  
- [隔离 MFC 公共控件库](../isolation-of-the-mfc-common-controls-library.md)
- [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
+### <a name="see-also"></a>See Also  
+ [Isolation of the MFC Common Controls Library](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
- 添加了派生类时访问的对象类的运行时信息的功能`CObject`。  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
+ Adds the ability to access run-time information about an object's class when deriving a class from `CObject`.  
   
 ```
 DECLARE_DYNAMIC(class_name) 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
-### <a name="remarks"></a>备注  
- 添加`DECLARE_DYNAMIC`宏为的标头 (.h) 模块的类，然后将该模块包含在需要访问此类的对象的所有.cpp 模块。  
+### <a name="remarks"></a>Remarks  
+ Add the `DECLARE_DYNAMIC` macro to the header (.h) module for the class, then include that module in all .cpp modules that need access to objects of this class.  
   
- 如果你使用**DECLARE**_**动态**和`IMPLEMENT_DYNAMIC`宏所述，你可以然后使用`RUNTIME_CLASS`宏和`CObject::IsKindOf`函数来确定在运行时中的对象的类。  
+ If you use the **DECLARE**_ **DYNAMIC** and `IMPLEMENT_DYNAMIC` macros as described, you can then use the `RUNTIME_CLASS` macro and the `CObject::IsKindOf` function to determine the class of your objects at run time.  
   
- 如果`DECLARE_DYNAMIC`包括在类声明中，然后`IMPLEMENT_DYNAMIC`必须包含在类实现。  
+ If `DECLARE_DYNAMIC` is included in the class declaration, then `IMPLEMENT_DYNAMIC` must be included in the class implementation.  
   
- 有关详细信息`DECLARE_DYNAMIC`宏，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+ For more information on the `DECLARE_DYNAMIC` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>示例  
- 请参阅示例[IMPLEMENT_DYNAMIC](#implement_dynamic)。  
+### <a name="example"></a>Example  
+ See the example for [IMPLEMENT_DYNAMIC](#implement_dynamic).  
 
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
- 支持的对象`CObject`-派生类，以在运行时动态创建。  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
+ Enables objects of `CObject`-derived classes to be created dynamically at run time.  
   
 ```
 DECLARE_DYNCREATE(class_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
-### <a name="remarks"></a>备注  
- 框架将使用此功能动态创建新对象。 例如，新创建的视图时打开一个新文档。 文档、 视图和框架类应支持动态创建，因为框架需要以动态方式创建它们。  
+### <a name="remarks"></a>Remarks  
+ The framework uses this ability to create new objects dynamically. For example, the new view created when you open a new document. Document, view, and frame classes should support dynamic creation because the framework needs to create them dynamically.  
   
- 添加`DECLARE_DYNCREATE`类，.h 模块中的宏然后将该模块包含在需要访问此类的对象的所有.cpp 模块。  
+ Add the `DECLARE_DYNCREATE` macro in the .h module for the class, then include that module in all .cpp modules that need access to objects of this class.  
   
- 如果`DECLARE_DYNCREATE`包括在类声明中，然后`IMPLEMENT_DYNCREATE`必须包含在类实现。  
+ If `DECLARE_DYNCREATE` is included in the class declaration, then `IMPLEMENT_DYNCREATE` must be included in the class implementation.  
   
- 有关详细信息`DECLARE_DYNCREATE`宏，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+ For more information on the `DECLARE_DYNCREATE` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
 > [!NOTE]
->  `DECLARE_DYNCREATE`宏包含的所有功能`DECLARE_DYNAMIC`。  
+>  The `DECLARE_DYNCREATE` macro includes all the functionality of `DECLARE_DYNAMIC`.  
   
-### <a name="example"></a>示例  
- 请参阅示例[IMPLEMENT_DYNCREATE](#implement_dyncreate)。  
+### <a name="example"></a>Example  
+ See the example for [IMPLEMENT_DYNCREATE](#implement_dyncreate).  
 
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
  
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
-声明**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。  
+Declares the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_OLECTLTYPE( class_name )  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 控件类的名称。  
+ The name of the control class.  
    
-### <a name="remarks"></a>备注  
- **GetUserTypeNameID**和`GetMiscStatus`是纯虚函数，在中声明`COleControl`。 因为这些函数是纯虚拟的它们必须被重写控件类中。 除了**DECLARE_OLECTLTYPE**，必须添加`IMPLEMENT_OLECTLTYPE`向控件类声明的宏。  
+### <a name="remarks"></a>Remarks  
+ **GetUserTypeNameID** and `GetMiscStatus` are pure virtual functions, declared in `COleControl`. Because these functions are pure virtual, they must be overridden in your control class. In addition to **DECLARE_OLECTLTYPE**, you must add the `IMPLEMENT_OLECTLTYPE` macro to your control class declaration.  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>See Also  
  [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
  
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
-声明 OLE 控件提供的属性页以显示其属性的列表。  
+Declares that the OLE control provides a list of property pages to display its properties.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_PROPPAGEIDS( class_name )  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 拥有属性页的控件类名称。  
+ The name of the control class that owns the property pages.  
    
-### <a name="remarks"></a>备注  
- 使用`DECLARE_PROPPAGEIDS`宏在类声明的末尾。 然后，在定义类的成员函数的.cpp 文件，使用`BEGIN_PROPPAGEIDS`宏，为每个控件的属性页中，宏项和`END_PROPPAGEIDS`宏声明属性页列表的末尾。  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_PROPPAGEIDS` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_PROPPAGEIDS` macro, macro entries for each of your control's property pages, and the `END_PROPPAGEIDS` macro to declare the end of the property page list.  
   
- 属性页的详细信息，请参阅文章[ActiveX 控件︰ 属性页](../mfc-activex-controls-property-pages.md)。  
+ For more information on property pages, see the article [ActiveX Controls: Property Pages](../mfc-activex-controls-property-pages.md).  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>另请参阅   
+### <a name="see-also"></a>See Also   
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
- 生成必需的 c + + 标头代码`CObject`-派生可序列化的类。  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
+ Generates the C++ header code necessary for a `CObject`-derived class that can be serialized.  
   
 ```
 DECLARE_SERIAL(class_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
-### <a name="remarks"></a>备注  
- 序列化是从文件写入或读取与对象的内容的过程。  
+### <a name="remarks"></a>Remarks  
+ Serialization is the process of writing or reading the contents of an object to and from a file.  
   
- 使用`DECLARE_SERIAL`宏在.h 模块中，然后将该模块包含需要访问此类的对象的所有.cpp 模块中。  
+ Use the `DECLARE_SERIAL` macro in an .h module, and then include that module in all .cpp modules that need access to objects of this class.  
   
- 如果`DECLARE_SERIAL`包括在类声明中，然后`IMPLEMENT_SERIAL`必须包含在类实现。  
+ If `DECLARE_SERIAL` is included in the class declaration, then `IMPLEMENT_SERIAL` must be included in the class implementation.  
   
- `DECLARE_SERIAL`宏包含的所有功能`DECLARE_DYNAMIC`和`DECLARE_DYNCREATE`。  
+ The `DECLARE_SERIAL` macro includes all the functionality of `DECLARE_DYNAMIC` and `DECLARE_DYNCREATE`.  
   
- 你可以使用**AFX_API**宏来自动导出`CArchive`提取运算符的类使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`宏。 尖括号 （位于.h 文件中） 替换为以下代码的类声明︰  
+ You can use the **AFX_API** macro to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Bracket the class declarations (located in the .h file) with the following code:  
   
- [!code-cpp[NVC_MFCCObjectSample # 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
- 有关详细信息`DECLARE_SERIAL`宏，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+ For more information on the `DECLARE_SERIAL` macro, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCObjectSample # 21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC  
- 生成为动态所需的 c + + 代码`CObject`-派生的类名称和层次结构中的位置与运行时访问的类。  
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC  
+ Generates the C++ code necessary for a dynamic `CObject`-derived class with run-time access to the class name and position within the hierarchy.  
   
 ```
 IMPLEMENT_DYNAMIC(class_name, base_class_name)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
  `base_class_name`  
- 基本类的名称。  
+ The name of the base class.  
   
-### <a name="remarks"></a>备注  
- 使用`IMPLEMENT_DYNAMIC`.cpp 模块，然后链接生成的对象一次代码中的宏。  
+### <a name="remarks"></a>Remarks  
+ Use the `IMPLEMENT_DYNAMIC` macro in a .cpp module, and then link the resulting object code only once.  
   
- 有关详细信息，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+ For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCObjectSample # 2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample # 3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
- 支持的对象`CObject`-派生类，以在运行，都会动态创建时间一起使用时`DECLARE_DYNCREATE`宏。  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
+ Enables objects of `CObject`-derived classes to be created dynamically at run time when used with the `DECLARE_DYNCREATE` macro.  
   
 ```
 IMPLEMENT_DYNCREATE(class_name, base_class_name)   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
  `base_class_name`  
- 基本类的实际名称。  
+ The actual name of the base class.  
   
-### <a name="remarks"></a>备注  
- 框架将使用此功能时，创建新对象动态，例如，在序列化过程从磁盘读取对象。 添加`IMPLEMENT_DYNCREATE`类实现文件中的宏。 有关详细信息，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+### <a name="remarks"></a>Remarks  
+ The framework uses this ability to create new objects dynamically, for example, when it reads an object from disk during serialization. Add the `IMPLEMENT_DYNCREATE` macro in the class implementation file. For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
- 如果你使用`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`宏，你可以然后使用`RUNTIME_CLASS`宏和`CObject::IsKindOf`成员函数以在运行时确定对象的类。  
+ If you use the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` macros, you can then use the `RUNTIME_CLASS` macro and the `CObject::IsKindOf` member function to determine the class of your objects at run time.  
   
- 如果`DECLARE_DYNCREATE`包括在类声明中，然后`IMPLEMENT_DYNCREATE`必须包含在类实现。  
+ If `DECLARE_DYNCREATE` is included in the class declaration, then `IMPLEMENT_DYNCREATE` must be included in the class implementation.  
   
- 请注意，此宏定义将调用你的类的默认构造函数。 如果由类显式实现非普通构造函数，它必须还可以显式实现默认构造函数。 默认构造函数可以添加到类的**私有**或**保护**以防止它被调用从外部类实现的成员部分。  
+ Note that this macro definition will invoke the default constructor for your class. If a non-trivial constructor is explicitly implemented by the class, it must also explicitly implement the default constructor as well. The default constructor can be added to the class's **private** or **protected** member sections to prevent it from being called from outside the class implementation.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCObjectSample # 22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample # 23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
-任一此宏或[IMPLEMENT_OLECREATE](#implement_olecreate)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
+Either this macro or [IMPLEMENT_OLECREATE](#implement_olecreate) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags, 
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
   
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
  *external_name*  
- 向其他应用程序 （用引号引起来） 公开的对象名称。  
+ The object name exposed to other applications (enclosed in quotation marks).  
   
  `nFlags`  
- 包含一个或多个以下的标志︰  
+ Contains one or more of the following flags:  
   
--   `afxRegInsertable`允许在 OLE 对象的插入对象对话框中显示控件。    
--   `afxRegApartmentThreading`ThreadingModel 到注册表中设置线程模型 = 单元。    
--   **afxRegFreeThreading** ThreadingModel 到注册表中设置线程模型 = 免费。  
+-   `afxRegInsertable` Allows the control to appear in the Insert Object dialog box for OLE objects.    
+-   `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel=Apartment.    
+-   **afxRegFreeThreading** Sets the threading model in the registry to ThreadingModel=Free.  
   
-     你可以组合两个标志`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)线程处理模型注册的详细信息的 Windows SDK 中。    
+     You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in the Windows SDK for more information on threading model registration.    
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
- 类的组件**CLSID**。  
+ Components of the class's **CLSID**.  
    
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  如果你使用`IMPLEMENT_OLECREATE_FLAGS`，你可以指定通过使用支持你的对象的线程模型`nFlags`参数。 如果你想要支持仅单线程模型，使用`IMPLEMENT_OLECREATE`。  
+>  If you use `IMPLEMENT_OLECREATE_FLAGS`, you can specify which threading model your object supports by using the `nFlags` parameter. If you want to support only the single-treading model, use `IMPLEMENT_OLECREATE`.  
   
- 外部名称是公开给其他应用程序的标识符。 客户端应用程序使用的外部名称从自动化服务器请求的此类对象。  
+ The external name is the identifier exposed to other applications. Client applications use the external name to request an object of this class from an automation server.  
   
- OLE 类 ID 是对象的唯一 128 位标识符。 它由一个**长**、 两个**WORD**和八**字节**s，由表示*l*， *w1*， *w2*，和*b1*通过*b8*语法说明中。 应用程序向导和代码向导根据需要为你创建唯一的 OLE 类 Id。  
+ The OLE class ID is a unique 128-bit identifier for the object. It consists of one **long**, two **WORD**s, and eight **BYTE**s, as represented by *l*, *w1*, *w2*, and *b1* through *b8* in the syntax description. The Application Wizard and code wizards create unique OLE class IDs for you as required.  
    
-### <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
- [CLSID 项](http://msdn.microsoft.com/library/windows/desktop/ms691424)
+ [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
-实现**GetUserTypeNameID**和`GetMiscStatus`控件类的成员函数。  
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
+Implements the **GetUserTypeNameID** and `GetMiscStatus` member functions of your control class.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 控件类的名称。  
+ The name of the control class.  
   
  *idsUserTypeName*  
- 包含控件的外部名称的字符串资源 ID。  
+ The resource ID of a string containing the external name of the control.  
   
  *dwOleMisc*  
- 包含一个或多个标志一个枚举。 此枚举的详细信息，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ An enumeration containing one or more flags. For more information on this enumeration, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) in the Windows SDK.  
    
-### <a name="remarks"></a>备注  
- 除了`IMPLEMENT_OLECTLTYPE`，必须添加**DECLARE_OLECTLTYPE**向控件类声明的宏。  
+### <a name="remarks"></a>Remarks  
+ In addition to `IMPLEMENT_OLECTLTYPE`, you must add the **DECLARE_OLECTLTYPE** macro to your control class declaration.  
   
- **GetUserTypeNameID**成员函数将返回标识你的控件类的资源字符串。 `GetMiscStatus`返回**OLEMISC** bits 为您的控件。 此枚举指定设置说明杂项特征的控件的集合。 有关完整说明**OLEMISC**设置，请参阅[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ The **GetUserTypeNameID** member function returns the resource string that identifies your control class. `GetMiscStatus` returns the **OLEMISC** bits for your control. This enumeration specifies a collection of settings describing miscellaneous characteristics of your control. For a full description of the **OLEMISC** settings, see [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) in the Windows SDK.  
   
 > [!NOTE]
->  使用 ActiveX 控件向导的默认设置是︰ **OLEMISC_ACTIVATEWHENVISIBLE**， **OLEMISC_SETCLIENTSITEFIRST**， **OLEMISC_INSIDEOUT**， **OLEMISC_CANTLINKINSIDE**，和**OLEMISC_RECOMPOSEONRESIZE**。  
+>  The default settings used by the ActiveX ControlWizard are: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, and **OLEMISC_RECOMPOSEONRESIZE**.  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxctl.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
- 生成为动态所需的 c + + 代码`CObject`-派生的类名称和层次结构中的位置与运行时访问的类。  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
+ Generates the C++ code necessary for a dynamic `CObject`-derived class with run-time access to the class name and position within the hierarchy.  
   
 ```
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
  `base_class_name`  
- 基本类的名称。  
+ The name of the base class.  
   
  *wSchema*  
- A **UINT** "版本号"将以启用反序列化程序识别并处理所创建的数据的存档编码前面程序版本。 类的架构数字不能为-1。  
+ A **UINT** "version number" that will be encoded in the archive to enable a deserializing program to identify and handle data created by earlier program versions. The class schema number must not be -1.  
   
-### <a name="remarks"></a>备注  
- 使用`IMPLEMENT_SERIAL`.cpp 模块; 中的宏然后一次将链接生成对象代码。  
+### <a name="remarks"></a>Remarks  
+ Use the `IMPLEMENT_SERIAL` macro in a .cpp module; then link the resulting object code only once.  
   
- 你可以使用**AFX_API**宏来自动导出`CArchive`提取运算符的类使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`宏。 尖括号 （位于.h 文件中） 替换为以下代码的类声明︰  
+ You can use the **AFX_API** macro to automatically export the `CArchive` extraction operator for classes that use the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros. Bracket the class declarations (located in the .h file) with the following code:  
   
- [!code-cpp[NVC_MFCCObjectSample # 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
- 有关详细信息，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+ For more information, see the [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCObjectSample # 24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
- 从 c + + 类的名称获取运行时类结构。  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
+ Gets the run-time class structure from the name of a C++ class.  
   
 ```
 RUNTIME_CLASS(class_name)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- （未用引号引起来） 类的实际名称。  
+ The actual name of the class (not enclosed in quotation marks).  
   
-### <a name="remarks"></a>备注  
- `RUNTIME_CLASS`返回一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)指定的类结构*class_name*。 仅`CObject`-派生类使用声明`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`将返回指向`CRuntimeClass`结构。  
+### <a name="remarks"></a>Remarks  
+ `RUNTIME_CLASS` returns a pointer to a [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure for the class specified by *class_name*. Only `CObject`-derived classes declared with `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, or `DECLARE_SERIAL` will return pointers to a `CRuntimeClass` structure.  
   
- 有关详细信息，请参阅[CObject 类主题](../../mfc/using-cobject.md)。  
+ For more information, see [CObject Class Topics](../../mfc/using-cobject.md).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCCObjectSample # 25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>要求  
- **标头：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
- 支持的对象`CCmdTarget`-派生类，以通过 OLE 自动化创建。  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
+ Enables objects of `CCmdTarget`-derived classes to be created through OLE automation.  
   
 ```
 DECLARE_OLECREATE(class_name) 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
-### <a name="remarks"></a>备注  
- 此宏允许其他 OLE 启用应用程序创建此类型的对象。  
+### <a name="remarks"></a>Remarks  
+ This macro enables other OLE-enabled applications to create objects of this type.  
   
- 添加`DECLARE_OLECREATE`类，.h 模块中的宏然后将该模块包含需要访问此类的对象的所有.cpp 模块中。  
+ Add the `DECLARE_OLECREATE` macro in the .h module for the class, and then include that module in all .cpp modules that need access to objects of this class.  
   
- 如果`DECLARE_OLECREATE`包括在类声明中，然后`IMPLEMENT_OLECREATE`必须包含在类实现。 类声明使用`DECLARE_OLECREATE`还必须使用`DECLARE_DYNCREATE`或`DECLARE_SERIAL`。  
+ If `DECLARE_OLECREATE` is included in the class declaration, then `IMPLEMENT_OLECREATE` must be included in the class implementation. A class declaration using `DECLARE_OLECREATE` must also use `DECLARE_DYNCREATE` or `DECLARE_SERIAL`.  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- 任一此宏或[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)必须出现在使用任何类的实现文件`DECLARE_OLECREATE`。  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
+ Either this macro or [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) must appear in the implementation file for any class that uses `DECLARE_OLECREATE`.  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 类的实际名称。  
+ The actual name of the class.  
   
  *external_name*  
- 向其他应用程序 （用引号引起来） 公开的对象名称。  
+ The object name exposed to other applications (enclosed in quotation marks).  
   
  *l*, *w1*, *w2*, *b1*, *b2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
- 类的组件**CLSID**。  
+ Components of the class's **CLSID**.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  如果你使用`IMPLEMENT_OLECREATE`，默认情况下，支持的单个线程处理模型。 如果你使用`IMPLEMENT_OLECREATE_FLAGS`，你可以指定通过使用支持你的对象的线程模型`nFlags`参数。  
+>  If you use `IMPLEMENT_OLECREATE`, by default, you support only the single threading model. If you use `IMPLEMENT_OLECREATE_FLAGS`, you can specify which threading model your object supports by using the `nFlags` parameter.  
   
- 外部名称是公开给其他应用程序的标识符。 客户端应用程序使用的外部名称从自动化服务器请求的此类对象。  
+ The external name is the identifier exposed to other applications. Client applications use the external name to request an object of this class from an automation server.  
   
- OLE 类 ID 是对象的唯一 128 位标识符。 它由一个**长**、 两个**WORD**和八**字节**s，由表示*l*， *w1*， *w2*，和*b1*通过*b8*语法说明中。 应用程序向导和代码向导根据需要为你创建唯一的 OLE 类 Id。  
+ The OLE class ID is a unique 128-bit identifier for the object. It consists of one **long**, two **WORD**s, and eight **BYTE**s, as represented by *l*, *w1*, *w2*, and *b1* through *b8* in the syntax description. The Application Wizard and code wizards create unique OLE class IDs for you as required.  
 
-### <a name="requirements"></a>要求  
- **标头**: afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header**: afxdisp.h 
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
 

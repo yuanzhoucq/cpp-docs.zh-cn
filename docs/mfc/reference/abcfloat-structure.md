@@ -1,58 +1,76 @@
 ---
-title: "ABCFLOAT 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ABCFLOAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ABCFLOAT 结构"
+title: ABCFLOAT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ABCFLOAT
+dev_langs:
+- C++
+helpviewer_keywords:
+- ABCFLOAT structure [MFC]
 ms.assetid: 338e7e15-9d2c-42d0-aa80-273acfde5cc5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# ABCFLOAT 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 92ba0e9b1f578d50d3d6dcd61ed9f8647fc8bc8e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`ABCFLOAT` 结构包含字体字符" A、B 和 C的宽度。  
+---
+# <a name="abcfloat-structure"></a>ABCFLOAT Structure
+The `ABCFLOAT` structure contains the A, B, and C widths of a font character.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct _ABCFLOAT { /* abcf */  
-   FLOAT abcfA;  
-   FLOAT abcfB;  
-   FLOAT abcfC;  
+typedef struct _ABCFLOAT { /* abcf */  
+    FLOAT abcfA;  
+    FLOAT abcfB;  
+    FLOAT abcfC;  
 } ABCFLOAT;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>Parameters  
  *abcfA*  
- 指定字符的一个时间间隔。  A 间隔是添加到当前位置的距离在绘制字符标志符号。  
+ Specifies the A spacing of the character. The A spacing is the distance to add to the current position before drawing the character glyph.  
   
  *abcfB*  
- 指定字符的B空间。  B 空间是字符标志的绘制的宽度。  
+ Specifies the B spacing of the character. The B spacing is the width of the drawn portion of the character glyph.  
   
  *abcfC*  
- 指定字符的C空间。  C空间是添加到当前位置的距离来提供空白字符到字符字形的右边。  
+ Specifies the C spacing of the character. The C spacing is the distance to add to the current position to provide white space to the right of the character glyph.  
   
-## 备注  
- A、B 和 C。宽度测量沿字体的基线对齐。行。  字符始终递增 \(宽度\) 字符为从 A、B 和 C空间的总和。  A或C空间可以是负值来指示 下挂 或上挂。  
+## <a name="remarks"></a>Remarks  
+ The A, B, and C widths are measured along the base line of the font. The character increment (total width) of a character is the sum of the A, B, and C spaces. Either the A or the C space can be negative to indicate underhangs or overhangs.  
   
-## 要求  
- "头部：" wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetCharABCWidths](../Topic/CDC::GetCharABCWidths.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
+
+

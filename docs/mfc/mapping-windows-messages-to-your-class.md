@@ -1,45 +1,64 @@
 ---
-title: "将 Windows 消息映射到您的类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "映射, 消息到对话框类"
-  - "消息映射 [C++], 在对话框类中"
-  - "消息映射 [C++], 将 Windows 消息映射到类"
-  - "消息到对话框类"
-  - "消息到对话框类, 映射"
-  - "MFC 对话框, Windows 消息"
-  - "Windows 消息 [C++], 在对话框类中映射"
+title: Mapping Windows Messages to Your Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], Windows messages
+- message maps [MFC], in dialog class
+- Windows messages [MFC], mapping in dialog classes
+- messages to dialog class [MFC]
+- mappings [MFC]], messages to dialog class [MFC]
+- message maps [MFC], mapping Windows messages to classes
+- messages to dialog class [MFC], mapping
 ms.assetid: a4c6fd1f-1d33-47c9-baa0-001755746d6d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 将 Windows 消息映射到您的类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d1b5e151bcd5c36647849100b50161752878bf7d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果需要处理对话框窗口消息，请重写适当处理程序函数。  为此，请使用"属性"窗口设置为 [消息映射](../mfc/reference/mapping-messages-to-functions.md) 到对话框类。  这编写每个消息的消息映射项并将消息处理程序添加成员函数添加到该类。  使用 Visual C\+\+ 源代码编辑器编写在消息处理程序的代码。  
+---
+# <a name="mapping-windows-messages-to-your-class"></a>Mapping Windows Messages to Your Class
+If you need your dialog box to handle Windows messages, override the appropriate handler functions. To do so, use the Properties window to [map the messages](../mfc/reference/mapping-messages-to-functions.md) to the dialog class. This writes a message-map entry for each message and adds the message-handler member functions to the class. Use the Visual C++ source code editor to write code in the message handlers.  
   
- 还可以重写，特别是为 [CWnd](../mfc/reference/cwnd-class.md)[CDialog](../mfc/reference/cdialog-class.md) 及其基类的成员函数。  
+ You can also override member functions of [CDialog](../mfc/reference/cdialog-class.md) and its base classes, especially [CWnd](../mfc/reference/cwnd-class.md).  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [消息处理和映射](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [经常重写的成员函数](../mfc/commonly-overridden-member-functions.md)  
+-   [Commonly overridden member functions](../mfc/commonly-overridden-member-functions.md)  
   
--   [经常添加的成员函数](../mfc/commonly-added-member-functions.md)  
+-   [Commonly added member functions](../mfc/commonly-added-member-functions.md)  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

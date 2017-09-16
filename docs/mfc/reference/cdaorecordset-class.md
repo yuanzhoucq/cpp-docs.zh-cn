@@ -1,11 +1,11 @@
 ---
-title: "CDaoRecordset 类 |Microsoft 文档"
+title: CDaoRecordset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -94,9 +94,86 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- recordsets, types
-- CDaoRecordset class
-- records, CDaoRecordSet
+- CDaoRecordset [MFC], CDaoRecordset
+- CDaoRecordset [MFC], AddNew
+- CDaoRecordset [MFC], CanAppend
+- CDaoRecordset [MFC], CanBookmark
+- CDaoRecordset [MFC], CancelUpdate
+- CDaoRecordset [MFC], CanRestart
+- CDaoRecordset [MFC], CanScroll
+- CDaoRecordset [MFC], CanTransact
+- CDaoRecordset [MFC], CanUpdate
+- CDaoRecordset [MFC], Close
+- CDaoRecordset [MFC], Delete
+- CDaoRecordset [MFC], DoFieldExchange
+- CDaoRecordset [MFC], Edit
+- CDaoRecordset [MFC], FillCache
+- CDaoRecordset [MFC], Find
+- CDaoRecordset [MFC], FindFirst
+- CDaoRecordset [MFC], FindLast
+- CDaoRecordset [MFC], FindNext
+- CDaoRecordset [MFC], FindPrev
+- CDaoRecordset [MFC], GetAbsolutePosition
+- CDaoRecordset [MFC], GetBookmark
+- CDaoRecordset [MFC], GetCacheSize
+- CDaoRecordset [MFC], GetCacheStart
+- CDaoRecordset [MFC], GetCurrentIndex
+- CDaoRecordset [MFC], GetDateCreated
+- CDaoRecordset [MFC], GetDateLastUpdated
+- CDaoRecordset [MFC], GetDefaultDBName
+- CDaoRecordset [MFC], GetDefaultSQL
+- CDaoRecordset [MFC], GetEditMode
+- CDaoRecordset [MFC], GetFieldCount
+- CDaoRecordset [MFC], GetFieldInfo
+- CDaoRecordset [MFC], GetFieldValue
+- CDaoRecordset [MFC], GetIndexCount
+- CDaoRecordset [MFC], GetIndexInfo
+- CDaoRecordset [MFC], GetLastModifiedBookmark
+- CDaoRecordset [MFC], GetLockingMode
+- CDaoRecordset [MFC], GetName
+- CDaoRecordset [MFC], GetParamValue
+- CDaoRecordset [MFC], GetPercentPosition
+- CDaoRecordset [MFC], GetRecordCount
+- CDaoRecordset [MFC], GetSQL
+- CDaoRecordset [MFC], GetType
+- CDaoRecordset [MFC], GetValidationRule
+- CDaoRecordset [MFC], GetValidationText
+- CDaoRecordset [MFC], IsBOF
+- CDaoRecordset [MFC], IsDeleted
+- CDaoRecordset [MFC], IsEOF
+- CDaoRecordset [MFC], IsFieldDirty
+- CDaoRecordset [MFC], IsFieldNull
+- CDaoRecordset [MFC], IsFieldNullable
+- CDaoRecordset [MFC], IsOpen
+- CDaoRecordset [MFC], Move
+- CDaoRecordset [MFC], MoveFirst
+- CDaoRecordset [MFC], MoveLast
+- CDaoRecordset [MFC], MoveNext
+- CDaoRecordset [MFC], MovePrev
+- CDaoRecordset [MFC], Open
+- CDaoRecordset [MFC], Requery
+- CDaoRecordset [MFC], Seek
+- CDaoRecordset [MFC], SetAbsolutePosition
+- CDaoRecordset [MFC], SetBookmark
+- CDaoRecordset [MFC], SetCacheSize
+- CDaoRecordset [MFC], SetCacheStart
+- CDaoRecordset [MFC], SetCurrentIndex
+- CDaoRecordset [MFC], SetFieldDirty
+- CDaoRecordset [MFC], SetFieldNull
+- CDaoRecordset [MFC], SetFieldValue
+- CDaoRecordset [MFC], SetFieldValueNull
+- CDaoRecordset [MFC], SetLockingMode
+- CDaoRecordset [MFC], SetParamValue
+- CDaoRecordset [MFC], SetParamValueNull
+- CDaoRecordset [MFC], SetPercentPosition
+- CDaoRecordset [MFC], Update
+- CDaoRecordset [MFC], m_bCheckCacheForDirtyFields
+- CDaoRecordset [MFC], m_nFields
+- CDaoRecordset [MFC], m_nParams
+- CDaoRecordset [MFC], m_pDAORecordset
+- CDaoRecordset [MFC], m_pDatabase
+- CDaoRecordset [MFC], m_strFilter
+- CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 caps.latest.revision: 26
 author: mikeblome
@@ -116,425 +193,426 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bd211f55e2a07ef2d0c61e039df526fc2cd654f4
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 089a9910e4950a2ecfbdc85355e8f5d4b0600f36
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorecordset-class"></a>CDaoRecordset 类
-表示从数据源选择的一组记录。  
+# <a name="cdaorecordset-class"></a>CDaoRecordset Class
+Represents a set of records selected from a data source.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoRecordset : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordset::CDaoRecordset](#cdaorecordset)|构造 `CDaoRecordset` 对象。|  
+|[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Constructs a `CDaoRecordset` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordset::AddNew](#addnew)|准备用于添加新记录。 调用[更新](#update)完成添加。|  
-|[CDaoRecordset::CanAppend](#canappend)|返回非零，如果可以将新记录添加到记录集通过[AddNew](#addnew)成员函数。|  
-|[CDaoRecordset::CanBookmark](#canbookmark)|返回非零，如果记录集支持书签。|  
-|[CDaoRecordset::CancelUpdate](#cancelupdate)|取消任何挂起的更新，由于[编辑](#edit)或[AddNew](#addnew)操作。|  
-|[CDaoRecordset::CanRestart](#canrestart)|返回非零如果[Requery](#requery)可以调用以进行重新运行记录集的查询。|  
-|[CDaoRecordset::CanScroll](#canscroll)|返回非零，如果可以滚动显示记录。|  
-|[CDaoRecordset::CanTransact](#cantransact)|返回非零，如果数据源支持事务。|  
-|[CDaoRecordset::CanUpdate](#canupdate)|返回非零，如果可以更新记录集 （你可以添加、 更新或删除记录）。|  
-|[CDaoRecordset::Close](#close)|关闭记录集。|  
-|[CDaoRecordset::Delete](#delete)|从记录集删除当前记录。 你必须显式滚动到另一条记录后删除。|  
-|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|调用以 （在两个方向） 和之间交换数据的记录集的字段数据成员的数据源上相应的记录。 实现 DAO 记录字段交换 (DFX)。|  
-|[CDaoRecordset::Edit](#edit)|准备对当前记录的更改。 调用**更新**以完成编辑。|  
-|[CDaoRecordset::FillCache](#fillcache)|填充所有或本地缓存中，以便包含从 ODBC 数据源的数据的记录集对象的一部分。|  
-|[CDaoRecordset::Find](#find)|查找第一个下, 一步，在满足指定的条件，使该记录的当前记录成为动态集类型记录集特定字符串的上一个或最后一个位置。|  
-|[CDaoRecordset::FindFirst](#findfirst)|动态集类型或满足指定的条件，使该记录的当前记录成为的快照类型记录集中查找第一条记录。|  
-|[CDaoRecordset::FindLast](#findlast)|动态集类型或满足指定的条件，使该记录的当前记录成为的快照类型记录集中查找最后一条记录。|  
-|[CDaoRecordset::FindNext](#findnext)|动态集类型或满足指定的条件，使该记录的当前记录成为的快照类型记录集中查找下一条记录。|  
-|[CDaoRecordset::FindPrev](#findprev)|动态集类型或满足指定的条件，使该记录的当前记录成为的快照类型记录集中查找前一条记录。|  
-|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|返回一个记录集对象的当前记录的记录号。|  
-|[CDaoRecordset::GetBookmark](#getbookmark)|返回一个值，表示记录上的书签。|  
-|[CDaoRecordset::GetCacheSize](#getcachesize)|返回一个值，指定动态集类型的记录集包含本地缓存从 ODBC 数据源数据中的记录数。|  
-|[CDaoRecordset::GetCacheStart](#getcachestart)|返回一个值，指定在为缓存的记录集的第一条记录的书签。|  
-|[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|返回`CString`最近包含索引的名称的索引，表类型上使用`CDaoRecordset`。|  
-|[CDaoRecordset::GetDateCreated](#getdatecreated)|返回的日期和时间基表基础`CDaoRecordset`创建对象|  
-|[CDaoRecordset::GetDateLastUpdated](#getdatelastupdated)|返回的日期和时间的基表基础的设计所做的最新更改`CDaoRecordset`对象。|  
-|[CDaoRecordset::GetDefaultDBName](#getdefaultdbname)|返回默认数据源的名称。|  
-|[CDaoRecordset::GetDefaultSQL](#getdefaultsql)|调用以获取要执行的默认 SQL 字符串。|  
-|[CDaoRecordset::GetEditMode](#geteditmode)|返回一个值，该值指示当前记录的编辑状态。|  
-|[CDaoRecordset::GetFieldCount](#getfieldcount)|返回一个值，表示在记录集中的字段数。|  
-|[CDaoRecordset::GetFieldInfo](#getfieldinfo)|在记录集中返回特定类型的字段的信息。|  
-|[CDaoRecordset::GetFieldValue](#getfieldvalue)|在记录集中返回的字段的值。|  
-|[CDaoRecordset::GetIndexCount](#getindexcount)|检索下一个记录集的表中的索引数。|  
-|[CDaoRecordset::GetIndexInfo](#getindexinfo)|返回各种类型的有关索引的信息。|  
-|[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|用于确定最最近添加或更新记录。|  
-|[CDaoRecordset::GetLockingMode](#getlockingmode)|返回一个值，该值指示编辑过程实际上是锁定的类型。|  
-|[CDaoRecordset::GetName](#getname)|返回`CString`包含记录集的名称。|  
-|[CDaoRecordset::GetParamValue](#getparamvalue)|检索存储在基础 DAOParameter 对象中指定参数的当前值。|  
-|[CDaoRecordset::GetPercentPosition](#getpercentposition)|返回的记录总数的百分比当前记录的位置。|  
-|[CDaoRecordset::GetRecordCount](#getrecordcount)|返回记录集对象中访问的记录的数。|  
-|[CDaoRecordset::GetSQL](#getsql)|获取用于选择记录的记录集的 SQL 字符串。|  
-|[CDaoRecordset::GetType](#gettype)|调用以确定记录集的类型︰ 表类型、 动态集类型或快照的类型。|  
-|[CDaoRecordset::GetValidationRule](#getvalidationrule)|返回`CString`包含用于验证数据，因为它字段中输入的值。|  
-|[CDaoRecordset::GetValidationText](#getvalidationtext)|检索验证规则不满足时显示的文本。|  
-|[CDaoRecordset::IsBOF](#isbof)|返回非零，如果在第一条记录之前定位位置记录集。 没有最新记录。|  
-|[CDaoRecordset::IsDeleted](#isdeleted)|返回非零，如果记录集定位在已删除的记录上。|  
-|[CDaoRecordset::IsEOF](#iseof)|返回非零，如果在最后一条记录后定位位置记录集。 没有最新记录。|  
-|[CDaoRecordset::IsFieldDirty](#isfielddirty)|返回非零，如果已更改的当前记录中的指定的字段。|  
-|[CDaoRecordset::IsFieldNull](#isfieldnull)|返回非零，如果当前记录中的指定的字段为 Null （无任何值）。|  
-|[CDaoRecordset::IsFieldNullable](#isfieldnullable)|返回非零，如果当前记录中的指定的字段可以设置为 Null （无任何值）。|  
-|[CDaoRecordset::IsOpen](#isopen)|返回非零如果[打开](#open)已被调用过。|  
-|[CDaoRecordset::Move](#move)|将记录集到指定的记录数置于从中两个方向的当前记录。|  
-|[CDaoRecordset::MoveFirst](#movefirst)|在记录集中的第一个记录置于当前记录。|  
-|[CDaoRecordset::MoveLast](#movelast)|在记录集中的最后一个记录置于当前记录。|  
-|[CDaoRecordset::MoveNext](#movenext)|定位上记录集的下一个记录，当前记录。|  
-|[CDaoRecordset::MovePrev](#moveprev)|在上一记录的记录集上定位的当前记录。|  
-|[Cdaorecordset:: Open](#open)|从表、 动态集或快照创建新的记录集。|  
-|[CDaoRecordset::Requery](#requery)|运行记录集的查询，再次以刷新选定的记录。|  
-|[CDaoRecordset::Seek](#seek)|在满足指定的条件的当前索引并使该记录的当前记录成为某个索引的表类型记录集对象中找到的记录。|  
-|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|设置记录集对象的当前记录的记录数。|  
-|[CDaoRecordset::SetBookmark](#setbookmark)|定位上包含指定的书签的记录，记录集。|  
-|[CDaoRecordset::SetCacheSize](#setcachesize)|设置一个值，指定动态集类型的记录集包含本地缓存从 ODBC 数据源数据中的记录数。|  
-|[CDaoRecordset::SetCacheStart](#setcachestart)|设置一个值，指定在为缓存的记录集的第一条记录的书签。|  
-|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|调用以在表类型记录集上设置索引。|  
-|[CDaoRecordset::SetFieldDirty](#setfielddirty)|将当前记录中的指定的字段标记为已更改。|  
-|[CDaoRecordset::SetFieldNull](#setfieldnull)|设置为 Null （无任何值） 的当前记录中的指定字段的值。|  
-|[CDaoRecordset::SetFieldValue](#setfieldvalue)|在记录集中设置字段的值。|  
-|[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|设置在记录集中为 Null 的字段的值。 （具有任何值）。|  
-|[CDaoRecordset::SetLockingMode](#setlockingmode)|设置一个值，该值指示锁定，以编辑过程放入效果的类型。|  
-|[CDaoRecordset::SetParamValue](#setparamvalue)|设置存储在基础 DAOParameter 对象中指定参数的当前值|  
-|[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|将指定的参数的当前值设置为 Null （无任何值）。|  
-|[CDaoRecordset::SetPercentPosition](#setpercentposition)|将当前记录的位置设置为对应的在记录集中的记录总数的百分比的位置。|  
-|[CDaoRecordset::Update](#update)|完成`AddNew`或**编辑**通过将新的或编辑数据保存在数据源上的操作。|  
+|[CDaoRecordset::AddNew](#addnew)|Prepares for adding a new record. Call [Update](#update) to complete the addition.|  
+|[CDaoRecordset::CanAppend](#canappend)|Returns nonzero if new records can be added to the recordset via the [AddNew](#addnew) member function.|  
+|[CDaoRecordset::CanBookmark](#canbookmark)|Returns nonzero if the recordset supports bookmarks.|  
+|[CDaoRecordset::CancelUpdate](#cancelupdate)|Cancels any pending updates due to an [Edit](#edit) or [AddNew](#addnew) operation.|  
+|[CDaoRecordset::CanRestart](#canrestart)|Returns nonzero if [Requery](#requery) can be called to run the recordset's query again.|  
+|[CDaoRecordset::CanScroll](#canscroll)|Returns nonzero if you can scroll through the records.|  
+|[CDaoRecordset::CanTransact](#cantransact)|Returns nonzero if the data source supports transactions.|  
+|[CDaoRecordset::CanUpdate](#canupdate)|Returns nonzero if the recordset can be updated (you can add, update, or delete records).|  
+|[CDaoRecordset::Close](#close)|Closes the recordset.|  
+|[CDaoRecordset::Delete](#delete)|Deletes the current record from the recordset. You must explicitly scroll to another record after the deletion.|  
+|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Called to exchange data (in both directions) between the field data members of the recordset and the corresponding record on the data source. Implements DAO record field exchange (DFX).|  
+|[CDaoRecordset::Edit](#edit)|Prepares for changes to the current record. Call **Update** to complete the edit.|  
+|[CDaoRecordset::FillCache](#fillcache)|Fills all or a part of a local cache for a recordset object that contains data from an ODBC data source.|  
+|[CDaoRecordset::Find](#find)|Locates the first, next, previous, or last location of a particular string in a dynaset-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindFirst](#findfirst)|Locates the first record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindLast](#findlast)|Locates the last record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindNext](#findnext)|Locates the next record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::FindPrev](#findprev)|Locates the previous record in a dynaset-type or snapshot-type recordset that satisfies the specified criteria and makes that record the current record.|  
+|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Returns the record number of a recordset object's current record.|  
+|[CDaoRecordset::GetBookmark](#getbookmark)|Returns a value that represents the bookmark on a record.|  
+|[CDaoRecordset::GetCacheSize](#getcachesize)|Returns a value that specifies the number of records in a dynaset-type recordset containing data to be locally cached from an ODBC data source.|  
+|[CDaoRecordset::GetCacheStart](#getcachestart)|Returns a value that specifies the bookmark of the first record in the recordset to be cached.|  
+|[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Returns a `CString` containing the name of the index most recently used on an indexed, table-type `CDaoRecordset`.|  
+|[CDaoRecordset::GetDateCreated](#getdatecreated)|Returns the date and time the base table underlying a `CDaoRecordset` object was created|  
+|[CDaoRecordset::GetDateLastUpdated](#getdatelastupdated)|Returns the date and time of the most recent change made to the design of a base table underlying a `CDaoRecordset` object.|  
+|[CDaoRecordset::GetDefaultDBName](#getdefaultdbname)|Returns the name of the default data source.|  
+|[CDaoRecordset::GetDefaultSQL](#getdefaultsql)|Called to get the default SQL string to execute.|  
+|[CDaoRecordset::GetEditMode](#geteditmode)|Returns a value that indicates the state of editing for the current record.|  
+|[CDaoRecordset::GetFieldCount](#getfieldcount)|Returns a value that represents the number of fields in a recordset.|  
+|[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Returns specific kinds of information about the fields in the recordset.|  
+|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Returns the value of a field in a recordset.|  
+|[CDaoRecordset::GetIndexCount](#getindexcount)|Retrieves the number of indexes in a table underlying a recordset.|  
+|[CDaoRecordset::GetIndexInfo](#getindexinfo)|Returns various kinds of information about an index.|  
+|[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Used to determine the most recently added or updated record.|  
+|[CDaoRecordset::GetLockingMode](#getlockingmode)|Returns a value that indicates the type of locking that is in effect during editing.|  
+|[CDaoRecordset::GetName](#getname)|Returns a `CString` containing the name of the recordset.|  
+|[CDaoRecordset::GetParamValue](#getparamvalue)|Retrieves the current value of the specified parameter stored in the underlying DAOParameter object.|  
+|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Returns the position of the current record as a percentage of the total number of records.|  
+|[CDaoRecordset::GetRecordCount](#getrecordcount)|Returns the number of records accessed in a recordset object.|  
+|[CDaoRecordset::GetSQL](#getsql)|Gets the SQL string used to select records for the recordset.|  
+|[CDaoRecordset::GetType](#gettype)|Called to determine the type of a recordset: table-type, dynaset-type, or snapshot-type.|  
+|[CDaoRecordset::GetValidationRule](#getvalidationrule)|Returns a `CString` containing the value that validates data as it is entered into a field.|  
+|[CDaoRecordset::GetValidationText](#getvalidationtext)|Retrieves the text that is displayed when a validation rule is not satisfied.|  
+|[CDaoRecordset::IsBOF](#isbof)|Returns nonzero if the recordset has been positioned before the first record. There is no current record.|  
+|[CDaoRecordset::IsDeleted](#isdeleted)|Returns nonzero if the recordset is positioned on a deleted record.|  
+|[CDaoRecordset::IsEOF](#iseof)|Returns nonzero if the recordset has been positioned after the last record. There is no current record.|  
+|[CDaoRecordset::IsFieldDirty](#isfielddirty)|Returns nonzero if the specified field in the current record has been changed.|  
+|[CDaoRecordset::IsFieldNull](#isfieldnull)|Returns nonzero if the specified field in the current record is Null (having no value).|  
+|[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Returns nonzero if the specified field in the current record can be set to Null (having no value).|  
+|[CDaoRecordset::IsOpen](#isopen)|Returns nonzero if [Open](#open) has been called previously.|  
+|[CDaoRecordset::Move](#move)|Positions the recordset to a specified number of records from the current record in either direction.|  
+|[CDaoRecordset::MoveFirst](#movefirst)|Positions the current record on the first record in the recordset.|  
+|[CDaoRecordset::MoveLast](#movelast)|Positions the current record on the last record in the recordset.|  
+|[CDaoRecordset::MoveNext](#movenext)|Positions the current record on the next record in the recordset .|  
+|[CDaoRecordset::MovePrev](#moveprev)|Positions the current record on the previous record in the recordset.|  
+|[CDaoRecordset::Open](#open)|Creates a new recordset from a table, dynaset, or snapshot.|  
+|[CDaoRecordset::Requery](#requery)|Runs the recordset's query again to refresh the selected records.|  
+|[CDaoRecordset::Seek](#seek)|Locates the record in an indexed table-type recordset object that satisfies the specified criteria for the current index and makes that record the current record.|  
+|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Sets the record number of a recordset object's current record.|  
+|[CDaoRecordset::SetBookmark](#setbookmark)|Positions the recordset on a record containing the specified bookmark.|  
+|[CDaoRecordset::SetCacheSize](#setcachesize)|Sets a value that specifies the number of records in a dynaset-type recordset containing data to be locally cached from an ODBC data source.|  
+|[CDaoRecordset::SetCacheStart](#setcachestart)|Sets a value that specifies the bookmark of the first record in the recordset to be cached.|  
+|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Called to set an index on a table-type recordset.|  
+|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Marks the specified field in the current record as changed.|  
+|[CDaoRecordset::SetFieldNull](#setfieldnull)|Sets the value of the specified field in the current record to Null (having no value).|  
+|[CDaoRecordset::SetFieldValue](#setfieldvalue)|Sets the value of a field in a recordset.|  
+|[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Sets the value of a field in a recordset to Null. (having no value).|  
+|[CDaoRecordset::SetLockingMode](#setlockingmode)|Sets a value that indicates the type of locking to put into effect during editing.|  
+|[CDaoRecordset::SetParamValue](#setparamvalue)|Sets the current value of the specified parameter stored in the underlying DAOParameter object|  
+|[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|Sets the current value of the specified parameter to Null (having no value).|  
+|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Sets the position of the current record to a location corresponding to a percentage of the total number of records in a recordset.|  
+|[CDaoRecordset::Update](#update)|Completes an `AddNew` or **Edit** operation by saving the new or edited data on the data source.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cdaorecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|包含一个标志，指示是否字段自动标记为已更改。|  
-|[CDaoRecordset::m_nFields](#m_nfields)|包含记录集类中的字段数据成员的数目和选定数据源的记录集的列数。|  
-|[CDaoRecordset::m_nParams](#m_nparams)|包含的记录集类中的参数数据成员数-与记录集的查询一起传递的参数数目|  
-|[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|指向基础记录集对象的 DAO 接口的指针。|  
-|[CDaoRecordset::m_pDatabase](#m_pdatabase)|该结果集的源数据库。 包含指向的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。|  
-|[CDaoRecordset::m_strFilter](#m_strfilter)|包含用于构造 SQL 字符串**其中**语句。|  
-|[CDaoRecordset::m_strSort](#m_strsort)|包含用于构造 SQL 字符串**ORDER BY**语句。|  
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contains a flag indicating whether fields are automatically marked as changed.|  
+|[CDaoRecordset::m_nFields](#m_nfields)|Contains the number of field data members in the recordset class and the number of columns selected by the recordset from the data source.|  
+|[CDaoRecordset::m_nParams](#m_nparams)|Contains the number of parameter data members in the recordset class — the number of parameters passed with the recordset's query|  
+|[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|A pointer to the DAO interface underlying the recordset object.|  
+|[CDaoRecordset::m_pDatabase](#m_pdatabase)|Source database for this result set. Contains a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object.|  
+|[CDaoRecordset::m_strFilter](#m_strfilter)|Contains a string used to construct a SQL **WHERE** statement.|  
+|[CDaoRecordset::m_strSort](#m_strsort)|Contains a string used to construct a SQL **ORDER BY** statement.|  
   
-## <a name="remarks"></a>备注  
- 名为"记录集，"`CDaoRecordset`对象可在以下三个窗体中︰  
+## <a name="remarks"></a>Remarks  
+ Known as "recordsets," `CDaoRecordset` objects are available in the following three forms:  
   
--   表类型记录集表示可用于检查、 添加、 更改或删除单个数据库表中的记录的基表。  
+-   Table-type recordsets represent a base table that you can use to examine, add, change, or delete records from a single database table.  
   
--   动态集类型记录集是查询的可以具有可更新的记录的结果。 这些记录集是一组可用于检查、 添加、 更改或从基础数据库表或表中删除记录的记录。 动态集类型记录集可包含从数据库中的一个或多个表的字段。  
+-   Dynaset-type recordsets are the result of a query that can have updateable records. These recordsets are a set of records that you can use to examine, add, change, or delete records from an underlying database table or tables. Dynaset-type recordsets can contain fields from one or more tables in a database.  
   
--   快照类型记录集是一组可用于查找数据或生成报表的记录的静态副本。 这些记录集可包含从数据库中的一个或多个表的字段，但无法更新。  
+-   Snapshot-type recordsets are a static copy of a set of records that you can use to find data or generate reports. These recordsets can contain fields from one or more tables in a database but cannot be updated.  
   
- 记录集的每个窗体表示一组固定的打开记录集的记录。 时滚动到中的表类型记录集或动态集类型记录的记录时，它会反映其他用户或其他应用程序中的记录集打开记录集之后对记录所做的更改。 （不能更新快照类型记录集）。你可以使用`CDaoRecordset`直接或派生从一个应用程序特定的记录集类`CDaoRecordset`。 然后，你可以︰  
+ Each form of recordset represents a set of records fixed at the time the recordset is opened. When you scroll to a record in a table-type recordset or a dynaset-type recordset, it reflects changes made to the record after the recordset is opened, either by other users or by other recordsets in your application. (A snapshot-type recordset cannot be updated.) You can use `CDaoRecordset` directly or derive an application-specific recordset class from `CDaoRecordset`. You can then:  
   
--   滚动记录。  
+-   Scroll through the records.  
   
--   设置索引，然后使用记录快速查找[Seek](#seek) （仅记录的表类型集）。  
+-   Set an index and quickly look for records using [Seek](#seek) (table-type recordsets only).  
   
--   查找记录基于字符串比较:"<",></",>\<="，"="、"1> ="，或"1>"（动态集类型和快照类型记录集）。  
+-   Find records based on a string comparison: "<", "\<=", "=", ">=", or ">" (dynaset-type and snapshot-type recordsets).  
   
--   更新的记录并指定锁定模式 （除非快照类型记录集）。  
+-   Update the records and specify a locking mode (except snapshot-type recordsets).  
   
--   筛选为约束从提供的那些数据源选择哪些记录的记录集。  
+-   Filter the recordset to constrain which records it selects from those available on the data source.  
   
--   对记录集进行排序。  
+-   Sort the recordset.  
   
--   参数化记录集使用直到运行时才知道的信息自定义的所选内容。  
+-   Parameterize the recordset to customize its selection with information not known until run time.  
   
- 类`CDaoRecordset`提供类似于类接口`CRecordset`。 主要区别是该类`CDaoRecordset`访问通过数据访问对象 (DAO) 基于 OLE 的数据。 类`CRecordset`访问 DBMS 通过开放式数据库连接 (ODBC) 和 ODBC 驱动程序为该 DBMS。  
+ Class `CDaoRecordset` supplies an interface similar to that of class `CRecordset`. The main difference is that class `CDaoRecordset` accesses data through a Data Access Object (DAO) based on OLE. Class `CRecordset` accesses the DBMS through Open Database Connectivity (ODBC) and an ODBC driver for that DBMS.  
   
 > [!NOTE]
->  DAO 数据库类有别于基于开放式数据库连接 (ODBC) 的 MFC 数据库类。 DAO 数据库类的所有名称都具有"CDao"前缀。 你仍可以访问 ODBC 数据源对于 DAO 类;DAO 类通常提供高级功能，因为它们是特定于 Microsoft Jet 数据库引擎。  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes; the DAO classes generally offer superior capabilities because they are specific to the Microsoft Jet database engine.  
   
- 你可以使用`CDaoRecordset`直接或从派生类`CDaoRecordset`。 若要在任一情况下使用记录集类，打开数据库，并构造记录集对象，向构造函数传递一个指向你`CDaoDatabase`对象。 此外可以构造`CDaoRecordset`对象，并允许创建一个临时的 MFC`CDaoDatabase`为你的对象。 然后调用记录集的[打开](#open)成员函数，该值指示对象是否为表类型记录集、 动态集类型的记录集或快照类型记录集。 调用**打开**从数据库中选择数据，并检索第一条记录。  
+ You can either use `CDaoRecordset` directly or derive a class from `CDaoRecordset`. To use a recordset class in either case, open a database and construct a recordset object, passing the constructor a pointer to your `CDaoDatabase` object. You can also construct a `CDaoRecordset` object and let MFC create a temporary `CDaoDatabase` object for you. Then call the recordset's [Open](#open) member function, specifying whether the object is a table-type recordset, a dynaset-type recordset, or a snapshot-type recordset. Calling **Open** selects data from the database and retrieves the first record.  
   
- 使用对象的成员函数和数据成员滚动显示记录并对它们进行操作。 可执行的操作取决于该对象是表类型记录集、 动态集类型的记录集或快照类型的记录集，以及它是否可更新或只读的这取决于数据库或开放式数据库连接 (ODBC) 数据源的功能。 若要刷新记录可能已更改或添加自**打开**调用，调用对象的[Requery](#requery)成员函数。 调用对象的**关闭**成员函数，并使用它完成后销毁对象。  
+ Use the object's member functions and data members to scroll through the records and operate on them. The operations available depend on whether the object is a table-type recordset, a dynaset-type recordset, or a snapshot-type recordset, and whether it is updateable or read-only — this depends on the capability of the database or Open Database Connectivity (ODBC) data source. To refresh records that may have been changed or added since the **Open** call, call the object's [Requery](#requery) member function. Call the object's **Close** member function and destroy the object when you finish with it.  
   
- `CDaoRecordset`使用 DAO 记录字段交换 (DFX) 来支持读取和更新记录的字段的类型安全的 c + + 成员通过你`CDaoRecordset`或`CDaoRecordset`-派生类。 你还可以实现动态绑定列的数据库中不使用 DFX 机制使用[GetFieldValue](#getfieldvalue)和[SetFieldValue](#setfieldvalue)。  
+ `CDaoRecordset` uses DAO record field exchange (DFX) to support reading and updating of record fields through type-safe C++ members of your `CDaoRecordset` or `CDaoRecordset`-derived class. You can also implement dynamic binding of columns in a database without using the DFX mechanism using [GetFieldValue](#getfieldvalue) and [SetFieldValue](#setfieldvalue).  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"记录集对象"。  
+ For related information, see the topic "Recordset Object" in DAO Help.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDaoRecordset`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="addnew"></a>CDaoRecordset::AddNew  
- 调用此成员函数可将一条新记录添加到表类型或动态集类型的记录集。  
+##  <a name="addnew"></a>  CDaoRecordset::AddNew  
+ Call this member function to add a new record to a table-type or dynaset-type recordset.  
   
 ```  
 virtual void AddNew();
 ```  
   
-### <a name="remarks"></a>备注  
- 记录的字段均最初为空。 (在数据库术语中，Null 表示"having 没有值"，并且不能与相同**NULL** c + + 中。)若要完成该操作，必须调用[更新](#update)成员函数。 **更新**将所做的更改保存到数据源。  
+### <a name="remarks"></a>Remarks  
+ The record's fields are initially Null. (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) To complete the operation, you must call the [Update](#update) member function. **Update** saves your changes to the data source.  
   
 > [!CAUTION]
->  如果编辑记录的虚拟机和模板，然后向下滚动到另一个记录，而不调用**更新**，所做的更改都将丢失而不发出警告。  
+>  If you edit a record and then scroll to another record without calling **Update**, your changes are lost without warning.  
   
- 如果你将添加一条记录到动态集类型的记录集通过调用[AddNew](#addnew)，该记录是记录集内可见的且包含在其中它将显示出来到任何新的基础表`CDaoRecordset`对象。  
+ If you add a record to a dynaset-type recordset by calling [AddNew](#addnew), the record is visible in the recordset and included in the underlying table where it becomes visible to any new `CDaoRecordset` objects.  
   
- 新的记录的位置取决于的记录集类型︰  
+ The position of the new record depends on the type of recordset:  
   
--   动态集类型中不保证记录集，插入新记录的位置。 使用 Microsoft Jet 3.0 的性能和并发原因更改此行为。 如果你的目标是要使当前记录的新添加的记录，获取最新的已修改记录书签并移动到该书签︰  
+-   In a dynaset-type recordset, where the new record is inserted is not guaranteed. This behavior changed with Microsoft Jet 3.0 for reasons of performance and concurrency. If your goal is to make the newly added record the current record, get the bookmark of the last modified record and move to that bookmark:  
   
- [!code-cpp[NVC_MFCDatabase # 1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#1](../../mfc/codesnippet/cpp/cdaorecordset-class_1.cpp)]  
   
--   在为其指定索引的表类型的记录集的情况下，会在它们在排序顺序的正确位置返回记录。 如果已指定没有索引，则会在记录集的末尾返回新的记录。  
+-   In a table-type recordset for which an index has been specified, records are returned in their proper place in the sort order. If no index has been specified, new records are returned at the end of the recordset.  
   
- 使用之前的当前记录`AddNew`仍然是当前记录。 如果你想要使新的记录当前和记录集支持书签、 调用[SetBookmark](#setbookmark)到由 LastModified 属性设置的基础的 DAO 记录集对象的书签。 这样可用于确定添加记录中的计数器 （自动递增） 字段的值。 有关详细信息，请参阅[GetLastModifiedBookmark](#getlastmodifiedbookmark)。  
+ The record that was current before you used `AddNew` remains current. If you want to make the new record current and the recordset supports bookmarks, call [SetBookmark](#setbookmark) to the bookmark identified by the LastModified property setting of the underlying DAO recordset object. Doing so is useful for determining the value for counter (auto-increment) fields in an added record. For more information, see [GetLastModifiedBookmark](#getlastmodifiedbookmark).  
   
- 如果数据库支持事务，则可以使你`AddNew`调用事务的一部分。 有关事务的详细信息，请参阅类[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 请注意，应调用[CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)之前调用`AddNew`。  
+ If the database supports transactions, you can make your `AddNew` call part of a transaction. For more information about transactions, see class [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). Note that you should call [CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans) before calling `AddNew`.  
   
- 它是非法调用`AddNew`为记录集其[打开](#open)不调用成员函数。 A`CDaoException`如果调用引发`AddNew`为无法追加的记录集。 你可以确定记录集是否可更新通过调用[CanAppend](#canappend)。  
+ It is illegal to call `AddNew` for a recordset whose [Open](#open) member function has not been called. A `CDaoException` is thrown if you call `AddNew` for a recordset that cannot be appended. You can determine whether the recordset is updateable by calling [CanAppend](#canappend).  
   
- Framework 标记更改字段数据成员，以确保它们要写入到数据源上的记录由 DAO 记录字段交换 (DFX) 机制。 更改字段的值通常设置为字段脏自动，因此你将很少需要调用[SetFieldDirty](#setfielddirty)你自己，但你有时可能想要确保，列将显式更新或插入无论什么样的值是在字段数据成员中。 DFX 机制还使用了使用**伪 NULL**。 有关详细信息，请参阅[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the DAO record field exchange (DFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call [SetFieldDirty](#setfielddirty) yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member. The DFX mechanism also employs the use of **PSEUDO NULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
- 如果未使用双缓冲机制，然后将更改字段的值不会不自动将字段设置为脏。 在这种情况下，将需要显式将字段设置已更新。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
+ If the double-buffering mechanism is not being used, then changing the value of the field does not automatically set the field as dirty. In this case, it will be necessary to explicitly set the field dirty. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
 > [!NOTE]
->  如果记录双缓冲 （即，自动字段启用检查），调用`CancelUpdate`将还原到之前所具有的值的成员变量`AddNew`或**编辑**调用。  
+>  If records are double-buffered (that is, automatic field checking is enabled), calling `CancelUpdate` will restore the member variables to the values they had before `AddNew` or **Edit** was called.  
   
- 有关相关信息，请参阅主题的"AddNew 方法"、"正在执行方法"、"上次更改时间属性"和 DAO 帮助中的"EditMode 属性"。  
+ For related information, see the topics "AddNew Method", "CancelUpdate Method", "LastModified Property", and "EditMode Property" in DAO Help.  
   
-##  <a name="canappend"></a>CDaoRecordset::CanAppend  
- 调用此成员函数可确定是否以前已打开记录集可用于添加新记录通过调用[AddNew](#addnew)成员函数。  
+##  <a name="canappend"></a>  CDaoRecordset::CanAppend  
+ Call this member function to determine whether the previously opened recordset allows you to add new records by calling the [AddNew](#addnew) member function.  
   
 ```  
 BOOL CanAppend() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果是记录集允许添加新记录; 则为非 0否则为 0。 `CanAppend`如果你打开记录集持久化为只读的则将返回 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset allows adding new records; otherwise 0. `CanAppend` will return 0 if you opened the recordset as read-only.  
   
-### <a name="remarks"></a>备注  
- 有关相关信息，请参阅主题 DAO 帮助中的"追加方法"。  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Append Method" in DAO Help.  
   
-##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
- 调用此成员函数可确定是否以前已打开记录集允许你将使用书签的记录逐个标记。  
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark  
+ Call this member function to determine whether the previously opened recordset allows you to individually mark records using bookmarks.  
   
 ```  
 BOOL CanBookmark();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果记录集支持书签，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset supports bookmarks, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果你使用的完全基于 Microsoft Jet 数据库引擎表的记录集，书签使用除了在快照类型记录集标记为只进滚动记录集上。 其他数据库产品 （外部 ODBC 数据源） 可能不支持书签。  
+### <a name="remarks"></a>Remarks  
+ If you are using recordsets based entirely on Microsoft Jet database engine tables, bookmarks can be used except on snapshot-type recordsets flagged as forward-only scrolling recordsets. Other database products (external ODBC data sources) may not support bookmarks.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"Bookmarkable 属性"。  
+ For related information, see the topic "Bookmarkable Property" in DAO Help.  
   
-##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
- `CancelUpdate`成员函数取消任何挂起的更新，由于[编辑](#edit)或[AddNew](#addnew)操作。  
+##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate  
+ The `CancelUpdate` member function cancels any pending updates due to an [Edit](#edit) or [AddNew](#addnew) operation.  
   
 ```  
 virtual void CancelUpdate();
 ```  
   
-### <a name="remarks"></a>备注  
- 例如，如果应用程序调用**编辑**或`AddNew`成员函数，并具有不称为[更新](#update)，`CancelUpdate`取消后所做的任何更改**编辑**或`AddNew`调用。  
+### <a name="remarks"></a>Remarks  
+ For example, if an application calls the **Edit** or `AddNew` member function and has not called [Update](#update), `CancelUpdate` cancels any changes made after **Edit** or `AddNew` was called.  
   
 > [!NOTE]
->  如果记录双缓冲 （即，自动字段启用检查），调用`CancelUpdate`将还原到之前所具有的值的成员变量`AddNew`或**编辑**调用。  
+>  If records are double-buffered (that is, automatic field checking is enabled), calling `CancelUpdate` will restore the member variables to the values they had before `AddNew` or **Edit** was called.  
   
- 如果没有任何**编辑**或`AddNew`操作挂起，`CancelUpdate`导致 MFC 引发异常。 调用[GetEditMode](#geteditmode)成员函数以确定是否可以取消一个挂起操作。  
+ If there is no **Edit** or `AddNew` operation pending, `CancelUpdate` causes MFC to throw an exception. Call the [GetEditMode](#geteditmode) member function to determine if there is a pending operation that can be canceled.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"正在执行方法"。  
+ For related information, see the topic "CancelUpdate Method" in DAO Help.  
   
-##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
- 调用此成员函数可确定记录集是否允许通过调用重启 （若要刷新其记录） 其查询**Requery**成员函数。  
+##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
+ Call this member function to determine whether the recordset allows restarting its query (to refresh its records) by calling the **Requery** member function.  
   
 ```  
 BOOL CanRestart();
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零如果**Requery**可以调用以进行运行记录集的一次查询，否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if **Requery** can be called to run the recordset's query again, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 不支持表类型记录集**Requery**。  
+### <a name="remarks"></a>Remarks  
+ Table-type recordsets do not support **Requery**.  
   
- 如果**Requery**是不受支持，调用[关闭](#close)然后[打开](#open)刷新数据。 你可以调用**Requery**更新记录集对象的基本参数查询后已更改的参数值。  
+ If **Requery** is not supported, call [Close](#close) then [Open](#open) to refresh the data. You can call **Requery** to update a recordset object's underlying parameter query after the parameter values have been changed.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"可重启属性"。  
+ For related information, see the topic "Restartable Property" in DAO Help.  
   
-##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
- 调用此成员函数来确定记录集是否允许滚动。  
+##  <a name="canscroll"></a>  CDaoRecordset::CanScroll  
+ Call this member function to determine whether the recordset allows scrolling.  
   
 ```  
 BOOL CanScroll() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果可以滚动浏览记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if you can scroll through the records, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果调用[打开](#open)与**dbForwardOnly**，记录集可以仅向前滚动。  
+### <a name="remarks"></a>Remarks  
+ If you call [Open](#open) with **dbForwardOnly**, the recordset can only scroll forward.  
   
- 有关相关信息，请参阅"定位记录用 DAO 当前指针"DAO 帮助中的主题。  
+ For related information, see the topic "Positioning the Current Record Pointer with DAO" in DAO Help.  
   
-##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
- 调用此成员函数来确定记录集是否允许事务。  
+##  <a name="cantransact"></a>  CDaoRecordset::CanTransact  
+ Call this member function to determine whether the recordset allows transactions.  
   
 ```  
 BOOL CanTransact();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果基础数据源支持事务，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the underlying data source supports transactions, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 有关相关信息，请参阅主题 DAO 帮助中的"事务属性"。  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Transactions Property" in DAO Help.  
   
-##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
- 调用此成员函数可确定是否可以更新记录集。  
+##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate  
+ Call this member function to determine whether the recordset can be updated.  
   
 ```  
 BOOL CanUpdate() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果可以更新记录集则为非 0 （添加、 更新和删除记录），否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset can be updated (add, update, and delete records), otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 记录集可能是只读的如果基础数据源是只读的或你指定**dbReadOnly**为`nOptions`当调用[打开](#open)为记录集。  
+### <a name="remarks"></a>Remarks  
+ A recordset might be read-only if the underlying data source is read-only or if you specified **dbReadOnly** for `nOptions` when you called [Open](#open) for the recordset.  
   
- 有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
+ For related information, see the topics "AddNew Method", "Edit Method", "Delete Method", "Update Method", and "Updatable Property" in DAO Help.  
   
-##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
- 构造 `CDaoRecordset` 对象。  
+##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset  
+ Constructs a `CDaoRecordset` object.  
   
 ```  
 CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDatabase`  
- 包含指向的[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象或值**NULL**。 如果不是**NULL**和`CDaoDatabase`对象的**打开**成员函数不调用以将其连接到数据源，记录集尝试自己期间为您打开它[打开](#open)调用。 如果你通过**NULL**、`CDaoDatabase`对象进行构造并为你使用你指定如果派生从记录集类的数据源信息连接`CDaoRecordset`。  
+ Contains a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object or the value **NULL**. If not **NULL** and the `CDaoDatabase` object's **Open** member function has not been called to connect it to the data source, the recordset attempts to open it for you during its own [Open](#open) call. If you pass **NULL**, a `CDaoDatabase` object is constructed and connected for you using the data source information you specified if you derived your recordset class from `CDaoRecordset`.  
   
-### <a name="remarks"></a>备注  
- 你可以使用`CDaoRecordset`直接派生从应用程序特定类或`CDaoRecordset`。 可以使用 ClassWizard 派生记录集类。  
+### <a name="remarks"></a>Remarks  
+ You can either use `CDaoRecordset` directly or derive an application-specific class from `CDaoRecordset`. You can use ClassWizard to derive your recordset classes.  
   
 > [!NOTE]
->  如果你是派生`CDaoRecordset`类，派生类必须提供其自己的构造函数。 在派生类的构造函数调用的构造函数`CDaoRecordset::CDaoRecordset`，将沿适当的参数传递给它。  
+>  If you derive a `CDaoRecordset` class, your derived class must supply its own constructor. In the constructor of your derived class, call the constructor `CDaoRecordset::CDaoRecordset`, passing the appropriate parameters along to it.  
   
- 传递**NULL**到记录集构造函数，以具有`CDaoDatabase`对象构造并为你自动连接。 这是不需要你构造和连接的有用快捷方式`CDaoDatabase`之前构造记录集对象。 如果`CDaoDatabase`对象未打开， [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)还将为你使用默认工作区创建对象。 有关详细信息，请参阅[CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)。  
+ Pass **NULL** to your recordset constructor to have a `CDaoDatabase` object constructed and connected for you automatically. This is a useful shortcut that does not require you to construct and connect a `CDaoDatabase` object prior to constructing your recordset. If the `CDaoDatabase` object is not open, a [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) object will also be created for you that uses the default workspace. For more information, see [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
   
-##  <a name="close"></a>CDaoRecordset::Close  
- 关闭`CDaoRecordset`对象移除它关联的数据库中的打开记录集的集合中。  
+##  <a name="close"></a>  CDaoRecordset::Close  
+ Closing a `CDaoRecordset` object removes it from the collection of open recordsets in the associated database.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>备注  
- 因为**关闭**不会销毁`CDaoRecordset`对象，您可以通过调用重新使用该对象**打开**上相同的数据源或其他数据源。  
+### <a name="remarks"></a>Remarks  
+ Because **Close** does not destroy the `CDaoRecordset` object, you can reuse the object by calling **Open** on the same data source or a different data source.  
   
- 所有挂起的[AddNew](#addnew)或[编辑](#edit)语句被取消，并且所有挂起的事务将回滚。 如果你想要保留挂起的添加件或编辑，调用[更新](#update)之前调用**关闭**为每个记录集。  
+ All pending [AddNew](#addnew) or [Edit](#edit) statements are canceled, and all pending transactions are rolled back. If you want to preserve pending additions or edits, call [Update](#update) before you call **Close** for each recordset.  
   
- 你可以调用**打开**在调用后再次**关闭**。 这样就可以重复使用记录集对象。 一个更好的替代方法是调用[Requery](#requery)如果可能。  
+ You can call **Open** again after calling **Close**. This lets you reuse the recordset object. A better alternative is to call [Requery](#requery), if possible.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"Close 方法"。  
+ For related information, see the topic "Close Method" in DAO Help.  
   
-##  <a name="delete"></a>CDaoRecordset::Delete  
- 调用此成员函数以删除打开的动态集类型或表类型记录集对象中的当前记录。  
+##  <a name="delete"></a>  CDaoRecordset::Delete  
+ Call this member function to delete the current record in an open dynaset-type or table-type recordset object.  
   
 ```  
 virtual void Delete();
 ```  
   
-### <a name="remarks"></a>备注  
- 在成功删除之后, 记录集的字段数据成员设置为 Null 值，并且你必须显式调用其中一个记录集导航成员函数 ([移动](#move)， [Seek](#seek)， [SetBookmark](#setbookmark)，依次类推) 若要离开已删除的记录。 当从一个记录集删除记录时，必须有当前记录的记录集然后才能调用**删除**; 否则为则 MFC 会引发异常。  
+### <a name="remarks"></a>Remarks  
+ After a successful deletion, the recordset's field data members are set to a Null value, and you must explicitly call one of the recordset navigation member functions ( [Move](#move), [Seek](#seek), [SetBookmark](#setbookmark), and so on) in order to move off the deleted record. When you delete records from a recordset, there must be a current record in the recordset before you call **Delete**; otherwise, MFC throws an exception.  
   
- **删除**删除当前记录并使它成为不可访问。 虽然无法编辑或使用已删除的记录，但它仍当前记录。 一旦您移动到另一条记录，但是，你不能设为已删除的记录当前试。  
+ **Delete** removes the current record and makes it inaccessible. Although you cannot edit or use the deleted record, it remains current. Once you move to another record, however, you cannot make the deleted record current again.  
   
 > [!CAUTION]
->  记录集必须是可更新，且必须具有有效记录的记录集当前在调用时**删除**。 例如，如果你删除一条记录，但你在调用之前不将其滚动到一条新记录**删除**再次，**删除**引发[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
+>  The recordset must be updatable and there must be a valid record current in the recordset when you call **Delete**. For example, if you delete a record but do not scroll to a new record before you call **Delete** again, **Delete** throws a [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
- 如果您使用事务并且你调用，你可以取消删除一条记录[CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback)成员函数。 如果基表是主表中的级联删除关系，删除当前记录可能也会删除外部表中的一个或多个记录。 有关详细信息，请参阅 DAO 帮助中的定义"级联删除"。  
+ You can undelete a record if you use transactions and you call the [CDaoWorkspace::Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback) member function. If the base table is the primary table in a cascade delete relationship, deleting the current record may also delete one or more records in a foreign table. For more information, see the definition "cascade delete" in DAO Help.  
   
- 与不同`AddNew`和**编辑**，调用**删除**对的调用后面不接**更新**。  
+ Unlike `AddNew` and **Edit**, a call to **Delete** is not followed by a call to **Update**.  
   
- 有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
+ For related information, see the topics "AddNew Method", "Edit Method", "Delete Method", "Update Method", and "Updatable Property" in DAO Help.  
   
-##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
- 框架调用此成员函数以自动交换字段数据成员的记录集对象和数据源上的当前记录的相应列之间的数据。  
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange  
+ The framework calls this member function to automatically exchange data between the field data members of your recordset object and the corresponding columns of the current record on the data source.  
   
 ```  
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- 包含指向的`CDaoFieldExchange`对象。 框架将已安装了此对象以便字段交换操作为指定上下文。  
+ Contains a pointer to a `CDaoFieldExchange` object. The framework will already have set up this object to specify a context for the field exchange operation.  
   
-### <a name="remarks"></a>备注  
- 它还会将绑定参数数据成员，如果有的话，到记录集的选择的 SQL 语句字符串中的参数占位符。 字段数据，调用 DAO 记录字段交换 (DFX) 的交换的工作方式在两个方向︰ 从数据源上的记录的字段的记录集对象的字段数据成员和记录集对象的数据源上的记录。 若要动态绑定列，不需要实现`DoFieldExchange`。  
+### <a name="remarks"></a>Remarks  
+ It also binds your parameter data members, if any, to parameter placeholders in the SQL statement string for the recordset's selection. The exchange of field data, called DAO record field exchange (DFX), works in both directions: from the recordset object's field data members to the fields of the record on the data source, and from the record on the data source to the recordset object. If you are binding columns dynamically, you are not required to implement `DoFieldExchange`.  
   
- 您通常必须执行以便实现的唯一操作`DoFieldExchange`为派生记录集类是与 ClassWizard 创建类并指定的字段数据成员的名称和数据类型。 此外可能将代码添加到 ClassWizard 写入指定的参数数据成员。 如果所有字段都是要动态绑定，此函数将处于非活动状态，除非你指定的参数数据成员。  
+ The only action you must normally take to implement `DoFieldExchange` for your derived recordset class is to create the class with ClassWizard and specify the names and data types of the field data members. You might also add code to what ClassWizard writes to specify parameter data members. If all fields are to be bound dynamically, this function will be inactive unless you specify parameter data members.  
   
- 在声明 ClassWizard 你派生的记录集类时，向导会将写入的重写`DoFieldExchange`，类似于下面的示例︰  
+ When you declare your derived recordset class with ClassWizard, the wizard writes an override of `DoFieldExchange` for you, which resembles the following example:  
   
- [!code-cpp[NVC_MFCDatabase # 2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="edit"></a>CDaoRecordset::Edit  
- 调用此成员函数，以允许对当前记录的更改。  
+##  <a name="edit"></a>  CDaoRecordset::Edit  
+ Call this member function to allow changes to the current record.  
   
 ```  
 virtual void Edit();
 ```  
   
-### <a name="remarks"></a>备注  
- 一旦调用**编辑**成员函数，对当前记录的字段所做的更改复制到复制缓冲区。 对记录进行所需的更改后，调用**更新**以保存所做的更改。 **编辑**将保存记录集的数据成员的值。 如果调用**编辑**，进行更改，然后调用**编辑**再次，记录的值都将还原到它们早于第一个是**编辑**调用。  
+### <a name="remarks"></a>Remarks  
+ Once you call the **Edit** member function, changes made to the current record's fields are copied to the copy buffer. After you make the desired changes to the record, call **Update** to save your changes. **Edit** saves the values of the recordset's data members. If you call **Edit**, make changes, then call **Edit** again, the record's values are restored to what they were before the first **Edit** call.  
   
 > [!CAUTION]
->  如果编辑记录，然后执行任何操作都将移到另一条记录，而无需首先调用**更新**，所做的更改都将丢失而不发出警告。 此外，如果你关闭记录集或的父数据库，你已编辑的记录被丢弃而不发出警告。  
+>  If you edit a record and then perform any operation that moves to another record without first calling **Update**, your changes are lost without warning. In addition, if you close the recordset or the parent database, your edited record is discarded without warning.  
   
- 在某些情况下，你可能想要通过使 Null （不包含任何数据） 中更新列。 为此，请调用`SetFieldNull`其中参数**TRUE**标记字段为 Null。 这也会导致要更新的列。 如果你想要写入到数据源中，即使其值未更改，请调用的字段`SetFieldDirty`其中参数**TRUE**。 之所以即使字段具有 Null 值。  
+ In some cases, you may want to update a column by making it Null (containing no data). To do so, call `SetFieldNull` with a parameter of **TRUE** to mark the field Null; this also causes the column to be updated. If you want a field to be written to the data source even though its value has not changed, call `SetFieldDirty` with a parameter of **TRUE**. This works even if the field had the value Null.  
   
- Framework 标记更改字段数据成员，以确保它们要写入到数据源上的记录由 DAO 记录字段交换 (DFX) 机制。 更改字段的值通常设置为字段脏自动，因此你将很少需要调用[SetFieldDirty](#setfielddirty)你自己，但你有时可能想要确保，列将显式更新或插入无论什么样的值是在字段数据成员中。 DFX 机制还使用了使用**伪 NULL**。 有关详细信息，请参阅[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the DAO record field exchange (DFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call [SetFieldDirty](#setfielddirty) yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member. The DFX mechanism also employs the use of **PSEUDO NULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
- 如果未使用双缓冲机制，然后将更改字段的值不会不自动将字段设置为脏。 在这种情况下，将需要显式将字段设置已更新。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
+ If the double-buffering mechanism is not being used, then changing the value of the field does not automatically set the field as dirty. In this case, it will be necessary to explicitly set the field dirty. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
- 记录当记录集对象保守式锁定在多用户环境中时，保持锁定状态从时间**编辑**完成更新之前使用。 如果乐观锁定记录集，该记录已被锁定，在数据库中更新之前，将与预编辑的记录进行比较。 如果记录已更改，因为你调用**编辑**、**更新**操作失败且 MFC 引发异常。 您可以更改与锁定模式`SetLockingMode`。  
+ When the recordset object is pessimistically locked in a multiuser environment, the record remains locked from the time **Edit** is used until the updating is complete. If the recordset is optimistically locked, the record is locked and compared with the pre-edited record just before it is updated in the database. If the record has changed since you called **Edit**, the **Update** operation fails and MFC throws an exception. You can change the locking mode with `SetLockingMode`.  
   
 > [!NOTE]
->  外部数据库格式，如 ODBC 和可安装 ISAM 上始终使用乐观锁定。  
+>  Optimistic locking is always used on external database formats, such as ODBC and installable ISAM.  
   
- 当前记录后，仍当前调用**编辑**。 若要调用**编辑**，必须有当前记录。 如果没有当前记录或记录集未引用的打开的表类型或动态集类型记录集对象，则会发生异常。 调用**编辑**导致`CDaoException`以下情况下引发︰  
+ The current record remains current after you call **Edit**. To call **Edit**, there must be a current record. If there is no current record or if the recordset does not refer to an open table-type or dynaset-type recordset object, an exception occurs. Calling **Edit** causes a `CDaoException` to be thrown under the following conditions:  
   
--   没有最新记录。  
+-   There is no current record.  
   
--   记录集的数据库是只读的。  
+-   The database or recordset is read-only.  
   
--   记录中的任何字段不是可更新的。  
+-   No fields in the record are updatable.  
   
--   记录集的数据库由其他用户打开以供独占使用。  
+-   The database or recordset was opened for exclusive use by another user.  
   
--   其他用户锁定了包含您的记录的页面。  
+-   Another user has locked the page containing your record.  
   
- 如果数据源支持事务，则你可以**编辑**调用事务的一部分。 请注意，应调用`CDaoWorkspace::BeginTrans`之前调用**编辑**和之后打开记录集。 此外请注意，调用`CDaoWorkspace::CommitTrans`不能用于调用代替**更新**完成**编辑**操作。 有关事务的详细信息，请参阅类`CDaoWorkspace`。  
+ If the data source supports transactions, you can make the **Edit** call part of a transaction. Note that you should call `CDaoWorkspace::BeginTrans` before calling **Edit** and after the recordset has been opened. Also note that calling `CDaoWorkspace::CommitTrans` is not a substitute for calling **Update** to complete the **Edit** operation. For more information about transactions, see class `CDaoWorkspace`.  
   
- 有关相关信息，请参阅主题的"AddNew 方法"、"编辑方法"、"Delete 方法"、"更新方法"和 DAO 帮助中的"可更新属性"。  
+ For related information, see the topics "AddNew Method", "Edit Method", "Delete Method", "Update Method", and "Updatable Property" in DAO Help.  
   
-##  <a name="fillcache"></a>CDaoRecordset::FillCache  
- 调用此成员函数可缓存的指定从记录集中的记录数。  
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache  
+ Call this member function to cache a specified number of records from the recordset.  
   
 ```  
 void FillCache(
@@ -542,28 +620,28 @@ void FillCache(
     COleVariant* pBookmark = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pSize`  
- 指定要在缓存中填充行的数。 如果省略此参数的值是由基础的 DAO 对象 CacheSize 属性设置决定。  
+ Specifies the number of rows to fill in the cache. If you omit this parameter, the value is determined by the CacheSize property setting of the underlying DAO object.  
   
  `pBookmark`  
- A [COleVariant](../../mfc/reference/colevariant-class.md)指定书签。 此书签所指定的记录从开始填充缓存。 如果省略此参数时，从基础的 DAO 对象的 CacheStart 属性所指定的记录开始填充缓存。  
+ A [COleVariant](../../mfc/reference/colevariant-class.md) specifying a bookmark. The cache is filled starting from the record indicated by this bookmark. If you omit this parameter, the cache is filled starting from the record indicated by the CacheStart property of the underlying DAO object.  
   
-### <a name="remarks"></a>备注  
- 缓存提高的性能的应用程序中检索，或者提取，从远程服务器的数据。 缓存是在本地保存最近从服务器提取假定，数据将可能再次请求对象时运行该应用程序的数据的内存中的空间。 请求数据时，Microsoft Jet 数据库引擎的数据会首先检查缓存而不是提取在服务器上，这需要花费更多的时间。 使用非 ODBC 数据源上的缓存的数据无任何影响，因为不在缓存中保存的数据。  
+### <a name="remarks"></a>Remarks  
+ Caching improves the performance of an application that retrieves, or fetches, data from a remote server. A cache is space in local memory that holds the data most recently fetched from the server on the assumption that the data will probably be requested again while the application is running. When data is requested, the Microsoft Jet database engine checks the cache for the data first rather than fetching it from the server, which takes more time. Using data caching on non-ODBC data sources has no effect as the data is not saved in the cache.  
   
- 而不是等待缓存记录它们提取要填充的您可以显式缓存在任何时候调用来填充`FillCache`成员函数。 这是因为填充缓存较快方式`FillCache`提取一次而不是一次一个地的多个记录。 例如，显示每一满屏记录时，你可以让你的应用程序调用`FillCache`提取的下一步满屏记录。  
+ Rather than waiting for the cache to be filled with records as they are fetched, you can explicitly fill the cache at any time by calling the `FillCache` member function. This is a faster way to fill the cache because `FillCache` fetches several records at once instead of one at a time. For example, while each screenful of records is being displayed, you can have your application call `FillCache` to fetch the next screenful of records.  
   
- 通过记录集对象访问的任何 ODBC 数据库可以具有本地缓存。 若要创建缓存，请从远程数据源中，打开记录集对象，然后调用`SetCacheSize`和`SetCacheStart`记录集的成员函数。 如果`lSize`和*lBookmark*创建地址范围，则指定的范围之外的部分或完全`SetCacheSize`和`SetCacheStart`，此范围之外的记录集的部分将忽略，并且不会加载到缓存。 如果`FillCache`请求比的更多记录保留在远程数据源中、 仅剩下的记录，提取出来后，且不引发异常。  
+ Any ODBC database accessed with recordset objects can have a local cache. To create the cache, open a recordset object from the remote data source, and then call the `SetCacheSize` and `SetCacheStart` member functions of the recordset. If `lSize` and *lBookmark* create a range that is partly or wholly outside the range specified by `SetCacheSize` and `SetCacheStart`, the portion of the recordset outside this range is ignored and is not loaded into the cache. If `FillCache` requests more records than remain in the remote data source, only the remaining records are fetched, and no exception is thrown.  
   
- 从缓存提取的记录不能反映由其他用户对源数据同时进行的更改。  
+ Records fetched from the cache do not reflect changes made concurrently to the source data by other users.  
   
- `FillCache`提取仅尚未缓存的记录。 若要强制所有缓存的数据更新，请调用`SetCacheSize`成员函数时`lSize`参数等于 0，调用`SetCacheSize`试`lSize`参数等于在缓存的大小，你最初请求，，然后调用`FillCache`。  
+ `FillCache` fetches only records not already cached. To force an update of all the cached data, call the `SetCacheSize` member function with an `lSize` parameter equal to 0, call `SetCacheSize` again with the `lSize` parameter equal to the size of the cache you originally requested, and then call `FillCache`.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"FillCache 方法"。  
+ For related information, see the topic "FillCache Method" in DAO Help.  
   
-##  <a name="find"></a>CDaoRecordset::Find  
- 调用此成员函数以在动态集或快照类型记录集中使用比较运算符查找特定字符串。  
+##  <a name="find"></a>  CDaoRecordset::Find  
+ Call this member function to locate a particular string in a dynaset- or snapshot-type recordset using a comparison operator.  
   
 ```  
 virtual BOOL Find(
@@ -571,394 +649,394 @@ virtual BOOL Find(
     LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lFindType*  
- 一个值，该值指示查找操作所需的类型。 可能的值为：  
+ A value indicating the type of Find operation desired. The possible values are:  
   
-- **AFX_DAO_NEXT**查找匹配的字符串的下一个位置。  
+- **AFX_DAO_NEXT** Find the next location of a matching string.  
   
-- **AFX_DAO_PREV**查找匹配的字符串的上一位置。  
+- **AFX_DAO_PREV** Find the previous location of a matching string.  
   
-- **AFX_DAO_FIRST**查找匹配的字符串的第一个位置。  
+- **AFX_DAO_FIRST** Find the first location of a matching string.  
   
-- **AFX_DAO_LAST**查找匹配的字符串的最后一个位置。  
+- **AFX_DAO_LAST** Find the last location of a matching string.  
   
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。 例如:   
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record. For example:  
   
- [!code-cpp[NVC_MFCDatabase # 3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
   
-### <a name="return-value"></a>返回值  
- 如果找到匹配的记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 你可以找到第一个下, 一步上, 一个或最后一个的字符串实例。 **查找**是虚函数，因此你可以重写此方法并添加您自己的实现。 `FindFirst`， `FindLast`， `FindNext`，和`FindPrev`成员函数都调用**查找**成员函数，因此你可以使用**查找**来控制的所有查找操作的行为。  
+### <a name="remarks"></a>Remarks  
+ You can find the first, next, previous, or last instance of the string. **Find** is a virtual function, so you can override it and add your own implementation. The `FindFirst`, `FindLast`, `FindNext`, and `FindPrev` member functions call the **Find** member function, so you can use **Find** to control the behavior of all Find operations.  
   
- 若要查找中的表类型记录集的记录，调用[Seek](#seek)成员函数。  
+ To locate a record in a table-type recordset, call the [Seek](#seek) member function.  
   
 > [!TIP]
->  记录你有多个有效的越小套**查找**将。 通常，和尤其是在具有 ODBC 数据，则最好创建新的查询，以检索所需的记录。  
+>  The smaller the set of records you have, the more effective **Find** will be. In general, and especially with ODBC data, it is better to create a new query that retrieves just the records you want.  
   
- 有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
- 调用此成员函数以查找与指定的条件匹配的第一个记录。  
+##  <a name="findfirst"></a>  CDaoRecordset::FindFirst  
+ Call this member function to find the first record that matches a specified condition.  
   
 ```  
 BOOL FindFirst(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>返回值  
- 如果找到匹配的记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `FindFirst`成员函数开始从记录集的开始其搜索和搜索到记录集的末尾。  
+### <a name="remarks"></a>Remarks  
+ The `FindFirst` member function begins its search from the beginning of the recordset and searches to the end of the recordset.  
   
- 如果你想要包括所有记录 （而不仅仅是满足特定条件的那些） 在搜索中使用移动操作之一来记录之间移动。 若要查找中的表类型记录集的记录，调用`Seek`成员函数。  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- 如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindFirst`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项，依次类推。  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindFirst` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence, and so on.  
   
 > [!CAUTION]
->  如果编辑当前记录，请务必保存所做的更改，通过调用**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  If you edit the current record, be sure to save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- **查找**成员函数搜索的位置和下表中指定的方向︰  
+ The **Find** member functions search from the location and in the direction specified in the following table:  
   
-|查找操作|开始|搜索方向|  
+|Find operations|Begin|Search direction|  
 |---------------------|-----------|----------------------|  
-|`FindFirst`|记录集的开头|记录集的结尾|  
-|`FindLast`|记录集的结尾|记录集的开头|  
-|`FindNext`|当前记录|记录集的结尾|  
-|**FindPrevious**|当前记录|记录集的开头|  
+|`FindFirst`|Beginning of recordset|End of recordset|  
+|`FindLast`|End of recordset|Beginning of recordset|  
+|`FindNext`|Current record|End of recordset|  
+|**FindPrevious**|Current record|Beginning of recordset|  
   
 > [!NOTE]
->  当调用`FindLast`，Microsoft Jet 数据库引擎完全填充记录集中在开始搜索之前, 如果这不已完成了。 第一次搜索可能需要超过后续搜索。  
+>  When you call `FindLast`, the Microsoft Jet database engine fully populates your recordset before beginning the search, if this has not already been done. The first search may take longer than subsequent searches.  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- 使用查找操作时，请记住以下︰  
+ Keep the following in mind when using the Find operations:  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   不能使用只进滚动快照类型记录集查找操作。  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定索引的记录的对象。  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- 有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findlast"></a>CDaoRecordset::FindLast  
- 调用此成员函数以查找与指定的条件匹配的最后一个记录。  
+##  <a name="findlast"></a>  CDaoRecordset::FindLast  
+ Call this member function to find the last record that matches a specified condition.  
   
 ```  
 BOOL FindLast(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>返回值  
- 如果找到匹配的记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `FindLast`成员函数开始记录集的末尾其搜索和记录集的开始，从向后搜索。  
+### <a name="remarks"></a>Remarks  
+ The `FindLast` member function begins its search at the end of the recordset and searches backward towards the beginning of the recordset.  
   
- 如果你想要包括所有记录 （而不仅仅是满足特定条件的那些） 在搜索中使用移动操作之一来记录之间移动。 若要查找中的表类型记录集的记录，调用`Seek`成员函数。  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- 如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindLast`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项后第一个匹配项，依次类推。  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindLast` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence after the first occurrence, and so on.  
   
 > [!CAUTION]
->  如果编辑当前记录，请确保通过调用保存所做的更改**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  If you edit the current record, be sure you save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- 使用查找操作时，请记住以下︰  
+ Keep the following in mind when using the Find operations:  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   不能使用只进滚动快照类型记录集查找操作。  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定索引的记录的对象。  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- 有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findnext"></a>CDaoRecordset::FindNext  
- 调用此成员函数以查找与指定的条件匹配的下一个记录。  
+##  <a name="findnext"></a>  CDaoRecordset::FindNext  
+ Call this member function to find the next record that matches a specified condition.  
   
 ```  
 BOOL FindNext(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>返回值  
- 如果找到匹配的记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `FindNext`成员函数开始处的当前记录其搜索，一直搜索到记录集的末尾。  
+### <a name="remarks"></a>Remarks  
+ The `FindNext` member function begins its search at the current record and searches to the end of the recordset.  
   
- 如果你想要包括所有记录 （而不仅仅是满足特定条件的那些） 在搜索中使用移动操作之一来记录之间移动。 若要查找中的表类型记录集的记录，调用`Seek`成员函数。  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- 如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindNext`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项，依次类推。  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindNext` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence, and so on.  
   
 > [!CAUTION]
->  如果编辑当前记录，请确保通过调用保存所做的更改**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  If you edit the current record, be sure you save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- 使用查找操作时，请记住以下︰  
+ Keep the following in mind when using the Find operations:  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   不能使用只进滚动快照类型记录集查找操作。  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定索引的记录的对象。  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- 有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="findprev"></a>CDaoRecordset::FindPrev  
- 调用此成员函数以查找与指定的条件匹配的上一条记录。  
+##  <a name="findprev"></a>  CDaoRecordset::FindPrev  
+ Call this member function to find the previous record that matches a specified condition.  
   
 ```  
 BOOL FindPrev(LPCTSTR lpszFilter);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFilter`  
- 字符串表达式 (如**其中**不带有单词 SQL 语句中的子句**其中**) 用来定位该记录。  
+ A string expression (like the **WHERE** clause in a SQL statement without the word **WHERE**) used to locate the record.  
   
-### <a name="return-value"></a>返回值  
- 如果找到匹配的记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `FindPrev`成员函数开始处的当前记录其搜索，并开始，从记录集的向后搜索。  
+### <a name="remarks"></a>Remarks  
+ The `FindPrev` member function begins its search at the current record and searches backward towards the beginning of the recordset.  
   
- 如果你想要包括所有记录 （而不仅仅是满足特定条件的那些） 在搜索中使用移动操作之一来记录之间移动。 若要查找中的表类型记录集的记录，调用`Seek`成员函数。  
+ If you want to include all the records in your search (not just those that meet a specific condition) use one of the Move operations to move from record to record. To locate a record in a table-type recordset, call the `Seek` member function.  
   
- 如果未找到与条件匹配的记录了，当前记录指针是不确定，和`FindPrev`返回零。 如果记录集包含满足的条件的多个记录`FindFirst`查找第一个匹配项，`FindNext`查找下一个匹配项，依次类推。  
+ If a record matching the criteria is not located, the current record pointer is undetermined, and `FindPrev` returns zero. If the recordset contains more than one record that satisfies the criteria, `FindFirst` locates the first occurrence, `FindNext` locates the next occurrence, and so on.  
   
 > [!CAUTION]
->  如果编辑当前记录，请确保通过调用保存所做的更改**更新**成员函数之前将移到另一条记录。 如果你不将移至另一条记录更新，所做的更改都将丢失而不发出警告。  
+>  If you edit the current record, be sure you save the changes by calling the **Update** member function before you move to another record. If you move to another record without updating, your changes are lost without warning.  
   
- 使用一个查找操作不是调用相同**MoveFirst**或`MoveNext`，但是，这只是将第一个或下一步记录当前而无需指定一个条件。 你可以按照与移动操作查找操作。  
+ Using one of the Find operations is not the same as calling **MoveFirst** or `MoveNext`, however, which simply makes the first or next record current without specifying a condition. You can follow a Find operation with a Move operation.  
   
- 使用查找操作时，请记住以下︰  
+ Keep the following in mind when using the Find operations:  
   
--   如果**查找**返回非零值，未定义的当前记录。 在这种情况下，你必须在此位置回有效记录的当前记录指针。  
+-   If **Find** returns nonzero, the current record is not defined. In this case, you must position the current record pointer back to a valid record.  
   
--   不能使用只进滚动快照类型记录集查找操作。  
+-   You cannot use a Find operation with a forward-only scrolling snapshot-type recordset.  
   
--   应使用美国日期格式 （月-日-年） 时就搜索字段包含日期，即使你不使用 Microsoft Jet 数据库引擎; 的美国版本否则，匹配记录可能找到。  
+-   You should use the U.S. date format (month-day-year) when you search for fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, matching records may not be found.  
   
--   在使用 ODBC 数据库和大型动态记录集，你可能发现使用查找操作时，是速度很慢，尤其是处理大型记录集。 你可以通过使用 SQL 查询来提高性能自定义**ORDERBY**或**其中**子句、 参数的查询或**CDaoQuerydef**检索特定索引的记录的对象。  
+-   When working with ODBC databases and large dynasets, you may discover that using the Find operations is slow, especially when working with large recordsets. You can improve performance by using SQL queries with customized **ORDERBY** or **WHERE** clauses, parameter queries, or **CDaoQuerydef** objects that retrieve specific indexed records.  
   
- 有关相关信息，请参阅主题"FindFirst，执行 FindLast，FindNext，FindPrevious 方法"DAO 帮助中。  
+ For related information, see the topic "FindFirst, FindLast, FindNext, FindPrevious Methods" in DAO Help.  
   
-##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
- 返回一个记录集对象的当前记录的记录号。  
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition  
+ Returns the record number of a recordset object's current record.  
   
 ```  
 long GetAbsolutePosition();
 ```  
   
-### <a name="return-value"></a>返回值  
- 从 0 到记录集内的记录数的整数。 对应于记录集中的当前记录的序号位置。  
+### <a name="return-value"></a>Return Value  
+ An integer from 0 to the number of records in the recordset. Corresponds to the ordinal position of the current record in the recordset.  
   
-### <a name="remarks"></a>备注  
- 基础的 DAO 对象的 AbsolutePosition 属性值是从零开始;设置为 0 是指在记录集中的第一个记录。 可以通过调用中确定的记录集填充记录数[GetRecordCount](#getrecordcount)。 调用`GetRecordCount`可能需要一些时间，因为它必须访问所有记录，以确定计数。  
+### <a name="remarks"></a>Remarks  
+ The AbsolutePosition property value of the underlying DAO object is zero-based; a setting of 0 refers to the first record in the recordset. You can determine the number of populated records in the recordset by calling [GetRecordCount](#getrecordcount). Calling `GetRecordCount` may take some time because it must access all records to determine the count.  
   
- 如果没有当前记录，作为在记录集中，不记录时-返回 1。 如果删除该当前记录，不定义 AbsolutePosition 属性值，并且如果正在引用则 MFC 会引发异常。 动态集类型的记录集，新的记录会添加到序列的末尾。  
-  
-> [!NOTE]
->  此属性不应作为代理项记录编号。 仍然建议书签保留并返回到给定位置，而且这是在所有类型的记录集对象之间定位当前记录的唯一方式。 具体而言，当其前面的记录将被删除时，将更改给定的记录的位置。 此外还有，给定的记录将具有相同的绝对位置，如果重新因为不能保证在记录集内的单个记录的顺序，除非它使用 SQL 语句中使用创建再次创建记录集不保证**ORDERBY**子句。  
+ If there is no current record, as when there are no records in the recordset, - 1 is returned. If the current record is deleted, the AbsolutePosition property value is not defined, and MFC throws an exception if it is referenced. For dynaset-type recordsets, new records are added to the end of the sequence.  
   
 > [!NOTE]
->  此成员函数是仅对动态集类型和快照类型记录集有效。  
+>  This property is not intended to be used as a surrogate record number. Bookmarks are still the recommended way of retaining and returning to a given position and are the only way to position the current record across all types of recordset objects. In particular, the position of a given record changes when record(s) preceding it are deleted. There is also no assurance that a given record will have the same absolute position if the recordset is re-created again because the order of individual records within a recordset is not guaranteed unless it is created with a SQL statement using an **ORDERBY** clause.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"AbsolutePosition 属性"。  
+> [!NOTE]
+>  This member function is valid only for dynaset-type and snapshot-type recordsets.  
   
-##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
- 调用此成员函数可获取特定的记录中的书签值。  
+ For related information, see the topic "AbsolutePosition Property" in DAO Help.  
+  
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark  
+ Call this member function to obtain the bookmark value in a particular record.  
   
 ```  
 COleVariant GetBookmark();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回一个值，表示当前记录上的书签。  
+### <a name="return-value"></a>Return Value  
+ Returns a value representing the bookmark on the current record.  
   
-### <a name="remarks"></a>备注  
- 创建或打开记录集对象后，每个其记录已具有一个唯一的书签它支持它们。 调用`CanBookmark`确定记录集是否支持书签。  
+### <a name="remarks"></a>Remarks  
+ When a recordset object is created or opened, each of its records already has a unique bookmark if it supports them. Call `CanBookmark` to determine whether a recordset supports bookmarks.  
   
- 你可以通过将分配到书签的值保存当前记录的书签`COleVariant`对象。 若要快速返回到该记录移到另一条记录之后，任何时候，调用`SetBookmark`带参数的值相对应`COleVariant`对象。  
+ You can save the bookmark for the current record by assigning the value of the bookmark to a `COleVariant` object. To quickly return to that record at any time after moving to a different record, call `SetBookmark` with a parameter corresponding to the value of that `COleVariant` object.  
   
 > [!NOTE]
->  调用[Requery](#requery)更改 DAO 书签。  
+>  Calling [Requery](#requery) changes DAO bookmarks.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"书签属性"。  
+ For related information, see the topic "Bookmark Property" in DAO Help.  
   
-##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
- 调用此成员函数可获取的缓存的记录数。  
+##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize  
+ Call this member function to obtain the number of records cached.  
   
 ```  
 long GetCacheSize();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个值，指定动态集类型的记录集包含本地缓存从 ODBC 数据源数据中的记录数。  
+### <a name="return-value"></a>Return Value  
+ A value that specifies the number of records in a dynaset-type recordset containing data to be locally cached from an ODBC data source.  
   
-### <a name="remarks"></a>备注  
- 数据缓存提高从通过动态集类型记录集对象的远程服务器中检索数据的应用程序的性能。 缓存在本地保存最近的事件中运行应用程序时将再次请求数据从服务器检索的数据的内存空间。 请求数据时，Microsoft Jet 数据库引擎所请求数据的缓存会首先检查而不是检索在服务器上，这需要花费更多的时间。 不是来自 ODBC 数据源的数据不保存在缓存中。  
+### <a name="remarks"></a>Remarks  
+ Data caching improves the performance of an application that retrieves data from a remote server through dynaset-type recordset objects. A cache is a space in local memory that holds the data most recently retrieved from the server in the event that the data will be requested again while the application is running. When data is requested, the Microsoft Jet database engine checks the cache for the requested data first rather than retrieving it from the server, which takes more time. Data that does not come from an ODBC data source is not saved in the cache.  
   
- 任何 ODBC 数据源，例如一个附加的表，可以本地缓存。  
+ Any ODBC data source, such as an attached table, can have a local cache.  
   
- 有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
+ For related information, see the topic "CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
- 调用此成员函数可获取为缓存的记录集的第一个记录的书签值。  
+##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart  
+ Call this member function to obtain the bookmark value of the first record in the recordset to be cached.  
   
 ```  
 COleVariant GetCacheStart();
 ```  
   
-### <a name="return-value"></a>返回值  
- A `COleVariant` ，它指定的第一条记录书签中为缓存的记录集。  
+### <a name="return-value"></a>Return Value  
+ A `COleVariant` that specifies the bookmark of the first record in the recordset to be cached.  
   
-### <a name="remarks"></a>备注  
- Microsoft Jet 数据库引擎从缓存中，请求缓存范围内的记录并从服务器请求到的缓存范围外的记录。  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Jet database engine requests records within the cache range from the cache, and it requests records outside the cache range from the server.  
   
 > [!NOTE]
->  从缓存中检索的记录不能反映其他用户对源数据同时进行的更改。  
+>  Records retrieved from the cache do not reflect changes made concurrently to the source data by other users.  
   
- 有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
+ For related information, see the topic "CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
- 调用此成员函数可确定当前正在使用中索引的表类型索引`CDaoRecordset`对象。  
+##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex  
+ Call this member function to determine the index currently in use in an indexed table-type `CDaoRecordset` object.  
   
 ```  
 CString GetCurrentIndex();
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CString`包含当前正在使用的表类型记录集的索引的名称。 如果已设置没有索引，则返回空字符串。  
+### <a name="return-value"></a>Return Value  
+ A `CString` containing the name of the index currently in use with a table-type recordset. Returns an empty string if no index has been set.  
   
-### <a name="remarks"></a>备注  
- 此索引是在表类型记录集中，排序记录的基础，并可用于通过[Seek](#seek)成员函数来查找记录。  
+### <a name="remarks"></a>Remarks  
+ This index is the basis for ordering records in a table-type recordset, and is used by the [Seek](#seek) member function to locate records.  
   
- A`CDaoRecordset`对象可以有多个索引，但可以使用一次只有一个索引 (尽管[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)对象可能具有在其上定义的多个索引)。  
+ A `CDaoRecordset` object can have more than one index but can use only one index at a time (although a [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) object may have several indexes defined on it).  
   
- 有关相关信息，请参阅主题"索引对象"，并定义 DAO 帮助中的"当前索引"。  
+ For related information, see the topic "Index Object" and the definition "current index" in DAO Help.  
   
-##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
- 调用此成员函数可检索的日期和时间创建基表。  
+##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated  
+ Call this member function to retrieve the date and time a base table was created.  
   
 ```  
 COleDateTime GetDateCreated();
 ```  
   
-### <a name="return-value"></a>返回值  
- A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含的日期和时间创建基表。  
+### <a name="return-value"></a>Return Value  
+ A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object containing the date and time the base table was created.  
   
-### <a name="remarks"></a>备注  
- 日期和时间设置均源自在其创建基础表的计算机。  
+### <a name="remarks"></a>Remarks  
+ Date and time settings are derived from the computer on which the base table was created.  
   
- 有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
+ For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
-##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
- 调用此成员函数可检索的日期和时间，上次更新架构。  
+##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated  
+ Call this member function to retrieve the date and time the schema was last updated.  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
-### <a name="return-value"></a>返回值  
- A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)对象，其中包含的日期和时间，上次更新基表结构 （架构）。  
+### <a name="return-value"></a>Return Value  
+ A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object containing the date and time the base table structure (schema) was last updated.  
   
-### <a name="remarks"></a>备注  
- 日期和时间设置均源自基表结构 （架构） 的上次更新的计算机。  
+### <a name="remarks"></a>Remarks  
+ Date and time settings are derived from the computer on which the base table structure (schema) was last updated.  
   
- 有关相关信息，请参阅 DAO 帮助中的主题"时间，上次更新属性"。  
+ For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
-##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
- 调用此成员函数可确定该记录集的数据库的名称。  
+##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName  
+ Call this member function to determine the name of the database for this recordset.  
   
 ```  
 virtual CString GetDefaultDBName();
 ```  
   
-### <a name="return-value"></a>返回值  
- A `CString` ，包含的路径和从中派生该记录集的数据库名称。  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the path and name of the database from which this recordset is derived.  
   
-### <a name="remarks"></a>备注  
- 如果没有指针创建记录集[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)，然后记录集使用此路径来打开的默认数据库。 默认情况下，此函数返回一个空字符串。 当 ClassWizard 派生新的记录集从`CDaoRecordset`，它将为你创建此函数。  
+### <a name="remarks"></a>Remarks  
+ If a recordset is created without a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md), then this path is used by the recordset to open the default database. By default, this function returns an empty string. When ClassWizard derives a new recordset from `CDaoRecordset`, it will create this function for you.  
   
- 下面的示例演示如何使用双反斜杠 (\\\\) 在字符串中，按原样需要才能正确解释的字符串。  
+ The following example illustrates the use of the double backslash (\\\\) in the string, as is required for the string to be interpreted correctly.  
   
- [!code-cpp[NVC_MFCDatabase # 4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
- 框架调用此成员函数可获取记录集所基于的默认 SQL 语句。  
+##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL  
+ The framework calls this member function to get the default SQL statement on which the recordset is based.  
   
 ```  
 virtual CString GetDefaultSQL();
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CString`包含默认的 SQL 语句。  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the default SQL statement.  
   
-### <a name="remarks"></a>备注  
- 这可能是一个表名或 SQL**选择**语句。  
+### <a name="remarks"></a>Remarks  
+ This might be a table name or a SQL **SELECT** statement.  
   
- 间接通过声明与 ClassWizard，记录集类定义默认的 SQL 语句，ClassWizard 为你执行此任务。  
+ You indirectly define the default SQL statement by declaring your recordset class with ClassWizard, and ClassWizard performs this task for you.  
   
- 如果传递的 null SQL 字符串[打开](#open)，然后调用此函数可确定记录集的表名或 SQL。  
+ If you pass a null SQL string to [Open](#open), then this function is called to determine the table name or SQL for your recordset.  
   
-##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
- 调用此成员函数可确定状态的编辑，这是以下值之一︰  
+##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode  
+ Call this member function to determine the state of editing, which is one of the following values:  
   
 ```  
 short GetEditMode();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回一个值，该值指示当前记录的编辑状态。  
+### <a name="return-value"></a>Return Value  
+ Returns a value that indicates the state of editing for the current record.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
-|**dbEditNone**|任何编辑操作不正在进行。|  
-|**dbEditInProgress**|**编辑**已调用。|  
-|**dbEditAdd**|`AddNew`已调用。|  
+|**dbEditNone**|No editing operation is in progress.|  
+|**dbEditInProgress**|**Edit** has been called.|  
+|**dbEditAdd**|`AddNew` has been called.|  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"EditMode 属性"。  
+ For related information, see the topic "EditMode Property" in DAO Help.  
   
-##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
- 调用此成员函数可检索的记录集内定义的字段 （列） 数。  
+##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount  
+ Call this member function to retrieve the number of fields (columns) defined in the recordset.  
   
 ```  
 short GetFieldCount();
 ```  
   
-### <a name="return-value"></a>返回值  
- 在记录集中的字段数。  
+### <a name="return-value"></a>Return Value  
+ The number of fields in the recordset.  
   
-### <a name="remarks"></a>备注  
- 有关相关信息，请参阅主题 DAO 帮助中的"计数属性"。  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Count Property" in DAO Help.  
   
-##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
- 调用此成员函数以获取有关在记录集中的字段的信息。  
+##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo  
+ Call this member function to obtain information about the fields in a recordset.  
   
 ```  
 void GetFieldInfo(
@@ -973,34 +1051,34 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 记录集的字段集合，按索引查找中的预定义字段的从零开始的索引。  
+ The zero-based index of the predefined field in the recordset's Fields collection, for lookup by index.  
   
  `fieldinfo`  
- 对引用[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。  
+ A reference to a [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.  
   
  `dwInfoOptions`  
- 指定有关要检索的记录集的信息的选项。 可用选项以及它们会导致函数返回此处列出。 为了获得最佳性能，检索仅您需要的信息的级别︰  
+ Options that specify which information about the recordset to retrieve. The available options are listed here along with what they cause the function to return. For best performance, retrieve only the level of information you need:  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称、 类型、 大小属性  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Type, Size, Attributes  
   
-- `AFX_DAO_SECONDARY_INFO`主要的信息，加上︰ 序号位置，需要，允许零长度，排序规则顺序外的名称，源字段，源表  
+- `AFX_DAO_SECONDARY_INFO` Primary information, plus: Ordinal Position, Required, Allow Zero Length, Collating Order, Foreign Name, Source Field, Source Table  
   
-- `AFX_DAO_ALL_INFO`主要和辅助信息，加上︰ 默认值，验证规则验证文本  
+- `AFX_DAO_ALL_INFO` Primary and secondary information, plus: Default Value, Validation Rule, Validation Text  
   
  `lpszName`  
- 字段的名称。  
+ The name of the field.  
   
-### <a name="remarks"></a>备注  
- 一个版本的函数，可按索引查找字段。 另一个版本中，可以按名称查找字段。  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a field by index. The other version lets you look up a field by name.  
   
- 返回的信息的说明，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ For a description of the information returned, see the [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
- 调用此成员函数以检索在记录集中的数据。  
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue  
+ Call this member function to retrieve data in a recordset.  
   
 ```  
 virtual void GetFieldValue(
@@ -1016,48 +1094,48 @@ virtual COleVariant GetFieldValue(LPCTSTR lpszName);
 virtual COleVariant GetFieldValue(int nIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指向包含的字段名称的字符串的指针。  
+ A pointer to a string that contains the name of a field.  
   
  `varValue`  
- 对引用`COleVariant`将存储的字段值的对象。  
+ A reference to a `COleVariant` object that will store the value of a field.  
   
  `nIndex`  
- 记录集的字段集合，按索引查找中的字段一个从零开始索引。  
+ A zero-based index of the field in the recordset's Fields collection, for lookup by index.  
   
-### <a name="return-value"></a>返回值  
- 两个版本`GetFieldValue`的返回值返回[COleVariant](../../mfc/reference/colevariant-class.md)对象，其中包含字段的值。  
+### <a name="return-value"></a>Return Value  
+ The two versions of `GetFieldValue` that return a value return a [COleVariant](../../mfc/reference/colevariant-class.md) object that contains the value of a field.  
   
-### <a name="remarks"></a>备注  
- 你可以查找字段，按名称或序号位置。  
+### <a name="remarks"></a>Remarks  
+ You can look up a field by name or by ordinal position.  
   
 > [!NOTE]
->  调用了采用该成员函数的版本的一个更高效`COleVariant`对象引用为一个参数，而不是调用返回的版本`COleVariant`对象。 为了向后兼容保留此函数后一种版本。  
+>  It is more efficient to call one of the versions of this member function that takes a `COleVariant` object reference as a parameter, rather than calling a version that returns a `COleVariant` object. The latter versions of this function are kept for backward compatibility.  
   
- 使用`GetFieldValue`和[SetFieldValue](#setfieldvalue)将字段动态绑定在运行的时而不是静态绑定列使用[DoFieldExchange](#dofieldexchange)机制。  
+ Use `GetFieldValue` and [SetFieldValue](#setfieldvalue) to dynamically bind fields at run time rather than statically binding columns using the [DoFieldExchange](#dofieldexchange) mechanism.  
   
- `GetFieldValue`与`DoFieldExchange`机制可结合使用来提高性能。 例如，使用`GetFieldValue`检索一个值，你需要仅按需，并将分配到接口中的"详细信息"按钮该调用。  
+ `GetFieldValue` and the `DoFieldExchange` mechanism can be combined to improve performance. For example, use `GetFieldValue` to retrieve a value that you need only on demand, and assign that call to a "More Information" button in the interface.  
   
- 有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
+ For related information, see the topics "Field Object" and "Value Property" in DAO Help.  
   
-##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
- 调用此成员函数可确定对表类型记录集可用的索引数。  
+##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount  
+ Call this member function to determine the number of indexes available on the table-type recordset.  
   
 ```  
 short GetIndexCount();
 ```  
   
-### <a name="return-value"></a>返回值  
- 中的表类型记录集的索引数。  
+### <a name="return-value"></a>Return Value  
+ The number of indexes in the table-type recordset.  
   
-### <a name="remarks"></a>备注  
- `GetIndexCount`可用于循环访问中的记录集的所有索引。 出于这个目的，使用`GetIndexCount`结合[GetIndexInfo](#getindexinfo)。 如果你对动态集类型或快照类型记录集调用此成员函数，则 MFC 会引发异常。  
+### <a name="remarks"></a>Remarks  
+ `GetIndexCount` is useful for looping through all indexes in the recordset. For that purpose, use `GetIndexCount` in conjunction with [GetIndexInfo](#getindexinfo). If you call this member function on dynaset-type or snapshot-type recordsets, MFC throws an exception.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
- 调用此成员函数来获取各种类型的基的基础记录集的表中定义的索引有关的信息。  
+##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo  
+ Call this member function to obtain various kinds of information about an index defined in the base table underlying a recordset.  
   
 ```  
 void GetIndexInfo(
@@ -1072,612 +1150,612 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 表的索引集合，按数字位置查找中的从零开始索引。  
+ The zero-based index in the table's Indexes collection, for lookup by numerical position.  
   
  `indexinfo`  
- 对引用[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。  
+ A reference to a [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure.  
   
  `dwInfoOptions`  
- 指定要检索的索引有关的信息的选项。 可用选项以及它们会导致函数返回此处列出。 为了获得最佳性能，检索仅您需要的信息的级别︰  
+ Options that specify which information about the index to retrieve. The available options are listed here along with what they cause the function to return. For best performance, retrieve only the level of information you need:  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称，字段信息字段  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Field Info, Fields  
   
-- `AFX_DAO_SECONDARY_INFO`主要的信息，加上︰ 主、 唯一、 聚集、 IgnoreNulls，所需，外部  
+- `AFX_DAO_SECONDARY_INFO` Primary information, plus: Primary, Unique, Clustered, IgnoreNulls, Required, Foreign  
   
-- `AFX_DAO_ALL_INFO`主要和辅助信息，加上︰ 非重复计数  
+- `AFX_DAO_ALL_INFO` Primary and secondary information, plus: Distinct Count  
   
  `lpszName`  
- 指向按名称查找的名称的索引对象的指针。  
+ A pointer to the name of the index object, for lookup by name.  
   
-### <a name="remarks"></a>备注  
- 该函数的一个版本，可以通过在集合中的位置的索引查找。 另一个版本中，可以按名称查找索引。  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a index by its position in the collection. The other version lets you look up an index by name.  
   
- 返回的信息的说明，请参阅[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ For a description of the information returned, see the [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"特性属性"。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
- 调用此成员函数可检索最近添加或更新记录的书签。  
+##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark  
+ Call this member function to retrieve the bookmark of the most recently added or updated record.  
   
 ```  
 COleVariant GetLastModifiedBookmark();
 ```  
   
-### <a name="return-value"></a>返回值  
- A`COleVariant`包含该书签用于指示最近添加或更改记录。  
+### <a name="return-value"></a>Return Value  
+ A `COleVariant` containing a bookmark that indicates the most recently added or changed record.  
   
-### <a name="remarks"></a>备注  
- 创建或打开记录集对象后，每个其记录已具有一个唯一的书签它支持它们。 调用[GetBookmark](#getbookmark)来确定记录集是否支持书签。 如果记录集不支持书签，`CDaoException`引发。  
+### <a name="remarks"></a>Remarks  
+ When a recordset object is created or opened, each of its records already has a unique bookmark if it supports them. Call [GetBookmark](#getbookmark) to determine if the recordset supports bookmarks. If the recordset does not support bookmarks, a `CDaoException` is thrown.  
   
- 添加一条记录时，它将出现在记录集，末尾，并不是当前记录。 若要使新的记录当前，调用`GetLastModifiedBookmark`，然后调用`SetBookmark`要返回到新添加的记录。  
+ When you add a record, it appears at the end of the recordset, and is not the current record. To make the new record current, call `GetLastModifiedBookmark` and then call `SetBookmark` to return to the newly added record.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"上次更改时间属性"。  
+ For related information, see the topic "LastModified Property" in DAO Help.  
   
-##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
- 调用此成员函数可确定实际上锁定记录集的类型。  
+##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode  
+ Call this member function to determine the type of locking in effect for the recordset.  
   
 ```  
 BOOL GetLockingMode();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果锁定的类型是保守式的则不为开放式记录锁定否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the type of locking is pessimistic, otherwise 0 for optimistic record locking.  
   
-### <a name="remarks"></a>备注  
- 只要你调用保守式锁定时实际上，包含正在编辑的记录的数据页锁定[编辑](#edit)成员函数。 在调用时，该页是解锁[更新](#update)或[关闭](#close)成员函数或任何移动或查找操作。  
+### <a name="remarks"></a>Remarks  
+ When pessimistic locking is in effect, the data page containing the record you are editing is locked as soon as you call the [Edit](#edit) member function. The page is unlocked when you call the [Update](#update) or [Close](#close) member function or any of the Move or Find operations.  
   
- 仅当与正在更新记录时，才时乐观锁定实际上是锁定包含记录的数据页**更新**成员函数。  
+ When optimistic locking is in effect, the data page containing the record is locked only while the record is being updated with the **Update** member function.  
   
- 当使用 ODBC 数据源，锁定模式始终是开放式的。  
+ When working with ODBC data sources, the locking mode is always optimistic.  
   
- 有关相关信息，请参阅"LockEdits 属性"和"锁定行为在多用户应用程序"DAO 帮助中的主题。  
+ For related information, see the topics "LockEdits Property" and "Locking Behavior in Multiuser Applications" in DAO Help.  
   
-##  <a name="getname"></a>CDaoRecordset::GetName  
- 调用此成员函数可检索的记录集名称。  
+##  <a name="getname"></a>  CDaoRecordset::GetName  
+ Call this member function to retrieve the name of the recordset.  
   
 ```  
 CString GetName();
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CString`包含记录集的名称。  
+### <a name="return-value"></a>Return Value  
+ A `CString` containing the name of the recordset.  
   
-### <a name="remarks"></a>备注  
- 记录集的名称必须以字母开头，并且可以包含最多 40 个字符。 它可以包含数字和下划线字符，但不能包含标点或空格。  
+### <a name="remarks"></a>Remarks  
+ The name of the recordset must start with a letter and can contain a maximum of 40 characters. It can include numbers and underscore characters but can't include punctuation or spaces.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ For related information, see the topic "Name Property" in DAO Help.  
   
-##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
- 调用此成员函数可检索基础 DAOParameter 对象中存储的指定参数的当前值。  
+##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue  
+ Call this member function to retrieve the current value of the specified parameter stored in the underlying DAOParameter object.  
   
 ```  
 virtual COleVariant GetParamValue(int nIndex);  
 virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 基础 DAOParameter 对象中的参数的数字位置。  
+ The numerical position of the parameter in the underlying DAOParameter object.  
   
  `lpszName`  
- 参数所需其值的名称。  
+ The name of the parameter whose value you want.  
   
-### <a name="return-value"></a>返回值  
- 类的对象[COleVariant](../../mfc/reference/colevariant-class.md) ，其中包含参数的值。  
+### <a name="return-value"></a>Return Value  
+ An object of class [COleVariant](../../mfc/reference/colevariant-class.md) that contains the parameter's value.  
   
-### <a name="remarks"></a>备注  
- 按名称或集合中其数字位置，你可以访问参数。  
+### <a name="remarks"></a>Remarks  
+ You can access the parameter either by name or by its numerical position in the collection.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"参数对象"。  
+ For related information, see the topic "Parameter Object" in DAO Help.  
   
-##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
- 如果调用处理动态集类型或快照类型记录集时`GetPercentPosition`完全填充记录集之前, 移动的量是相对于访问由调用的记录数[GetRecordCount](#getrecordcount)。  
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition  
+ When working with a dynaset-type or snapshot-type recordset, if you call `GetPercentPosition` before fully populating the recordset, the amount of movement is relative to the number of records accessed as indicated by calling [GetRecordCount](#getrecordcount).  
   
 ```  
 float GetPercentPosition();
 ```  
   
-### <a name="return-value"></a>返回值  
- 0 到 100 之间的数字指示基于百分比的中记录集的记录的记录集对象中的当前记录的近似位置。  
+### <a name="return-value"></a>Return Value  
+ A number between 0 and 100 that indicates the approximate location of the current record in the recordset object based on a percentage of the records in the recordset.  
   
-### <a name="remarks"></a>备注  
- 你可以通过将移动到最后一个记录调用[MoveLast](#movelast)到完整填充所有记录集，但这可能需要很长的时间。  
+### <a name="remarks"></a>Remarks  
+ You can move to the last record by calling [MoveLast](#movelast) to complete the population of all recordsets, but this may take a significant amount of time.  
   
- 你可以调用`GetPercentPosition`上所有三种类型的记录集对象，包括没有索引的表。 但是，不能调用`GetPercentPosition`只进滚动快照，或打开从外部数据库针对的传递查询的记录集。 如果没有当前记录，或其当前记录已被删除，`CDaoException`引发。  
+ You can call `GetPercentPosition` on all three types of recordset objects, including tables without indexes. However, you cannot call `GetPercentPosition` on forward-only scrolling snapshots, or on a recordset opened from a pass-through query against an external database. If there is no current record, or he current record has been deleted, a `CDaoException` is thrown.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"PercentPosition 属性"。  
+ For related information, see the topic "PercentPosition Property" in DAO Help.  
   
-##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
- 调用此成员函数以找出已访问在记录集中的多少条记录。  
+##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount  
+ Call this member function to find out how many records in a recordset have been accessed.  
   
 ```  
 long GetRecordCount();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回记录集对象中访问的记录的数。  
+### <a name="return-value"></a>Return Value  
+ Returns the number of records accessed in a recordset object.  
   
-### <a name="remarks"></a>备注  
- `GetRecordCount`不表示多少条记录包含动态集类型或快照类型记录集中，直到已访问的所有记录。 此成员函数调用可能需要占用大量的时间才能完成。  
+### <a name="remarks"></a>Remarks  
+ `GetRecordCount` does not indicate how many records are contained in a dynaset-type or snapshot-type recordset until all records have been accessed. This member function call may take a significant amount of time to complete.  
   
- 后的最新记录已被访问，则返回值指示记录集内的未删除记录的总数。 若要强制进行访问的最后一个记录，请调用`MoveLast`或`FindLast`记录集的成员函数。 SQL 计数还可用于确定你的查询将返回的记录的大致数目。  
+ Once the last record has been accessed, the return value indicates the total number of undeleted records in the recordset. To force the last record to be accessed, call the `MoveLast` or `FindLast` member function for the recordset. You can also use a SQL Count to determine the approximate number of records your query will return.  
   
- 你的应用程序删除记录集中的动态集类型记录的返回值`GetRecordCount`会降低。 但是，删除其他用户的记录不反映通过`GetRecordCount`直到当前记录位于到已删除的记录。 如果执行影响的记录计数的事务并随后回滚事务，`GetRecordCount`将不会反映剩余的记录的实际数目。  
+ As your application deletes records in a dynaset-type recordset, the return value of `GetRecordCount` decreases. However, records deleted by other users are not reflected by `GetRecordCount` until the current record is positioned to a deleted record. If you execute a transaction that affects the record count and subsequently roll back the transaction, `GetRecordCount` will not reflect the actual number of remaining records.  
   
- 值`GetRecordCount`从快照类型记录集不受基础表中的更改。  
+ The value of `GetRecordCount` from a snapshot-type recordset is not affected by changes in the underlying tables.  
   
- 值`GetRecordCount`从表类型记录集反映表中的记录的大致数目和添加和删除表记录时立即影响。  
+ The value of `GetRecordCount` from a table-type recordset reflects the approximate number of records in the table and is affected immediately as table records are added and deleted.  
   
- 具有未记录的记录集返回值为 0。 使用附加的表或 ODBC 数据库时`GetRecordCount`始终返回-1。 调用**Requery**对记录集的成员函数的值重置`GetRecordCount`就像查询已重新执行。  
+ A recordset with no records returns a value of 0. When working with attached tables or ODBC databases, `GetRecordCount` always returns - 1. Calling the **Requery** member function on a recordset resets the value of `GetRecordCount` just as if the query were re-executed.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"RecordCount 属性"。  
+ For related information, see the topic "RecordCount Property" in DAO Help.  
   
-##  <a name="getsql"></a>CDaoRecordset::GetSQL  
- 调用此成员函数可获取用于选择记录集的记录已打开状态时的 SQL 语句。  
+##  <a name="getsql"></a>  CDaoRecordset::GetSQL  
+ Call this member function to get the SQL statement that was used to select the recordset's records when it was opened.  
   
 ```  
 CString GetSQL() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CString`包含 SQL 语句。  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the SQL statement.  
   
-### <a name="remarks"></a>备注  
- 通常，这将是 SQL**选择**语句。  
+### <a name="remarks"></a>Remarks  
+ This will generally be a SQL **SELECT** statement.  
   
- 返回的字符串`GetSQL`通常不同于你可能会传递到记录集在任何字符串`lpszSQL`参数[打开](#open)成员函数。 这是因为该记录集构造一个完整的 SQL 语句，基于传递给**打开**ClassWizard，使用指定的内容，你可能具有指定的内容中[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)数据成员。  
+ The string returned by `GetSQL` is typically different from any string you may have passed to the recordset in the `lpszSQL` parameter to the [Open](#open) member function. This is because the recordset constructs a full SQL statement based on what you passed to **Open**, what you specified with ClassWizard, and what you may have specified in the [m_strFilter](#m_strfilter) and [m_strSort](#m_strsort) data members.  
   
 > [!NOTE]
->  在调用后才调用此成员函数**打开**。  
+>  Call this member function only after calling **Open**.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"SQL 属性"。  
+ For related information, see the topic "SQL Property" in DAO Help.  
   
-##  <a name="gettype"></a>CDaoRecordset::GetType  
- 打开要确定记录集对象的类型的记录集后调用此成员函数。  
+##  <a name="gettype"></a>  CDaoRecordset::GetType  
+ Call this member function after opening the recordset to determine the type of the recordset object.  
   
 ```  
 short GetType();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指示记录集的类型的以下值之一︰  
+### <a name="return-value"></a>Return Value  
+ One of the following values that indicates the type of a recordset:  
   
-- **dbOpenTable**表类型的记录集  
+- **dbOpenTable** Table-type recordset  
   
-- **dbOpenDynaset**动态集类型的记录集  
+- **dbOpenDynaset** Dynaset-type recordset  
   
-- **dbOpenSnapshot**快照类型的记录集  
+- **dbOpenSnapshot** Snapshot-type recordset  
   
-### <a name="remarks"></a>备注  
- 有关相关信息，请参阅主题 DAO 帮助中的"类型属性"。  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "Type Property" in DAO Help.  
   
-##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
- 调用此成员函数以确定用于验证数据的规则。  
+##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule  
+ Call this member function to determine the rule used to validate data.  
   
 ```  
 CString GetValidationRule();
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CString`对象，其中包含一个值，验证记录中的数据，因为它已更改或添加到表中。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing a value that validates the data in a record as it is changed or added to a table.  
   
-### <a name="remarks"></a>备注  
- 此规则是基于文本的并且将应用每次更改基础表。 如果数据不是合法的则 MFC 会引发异常。 返回的错误消息是表达式的基础字段对象，如果指定，有效性文本属性的文本或由基础的字段对象的有效性规则属性指定的文本。 你可以调用[GetValidationText](#getvalidationtext)以获取错误消息的文本。  
+### <a name="remarks"></a>Remarks  
+ This rule is text-based, and is applied each time the underlying table is changed. If the data is not legal, MFC throws an exception. The returned error message is the text of the ValidationText property of the underlying field object, if specified, or the text of the expression specified by the ValidationRule property of the underlying field object. You can call [GetValidationText](#getvalidationtext) to obtain the text of the error message.  
   
- 例如，需要每月的某一记录中的字段可能具有验证规则例如"天 BETWEEN 1 到 31。"  
+ For example, a field in a record that requires the day of the month might have a validation rule such as "DAY BETWEEN 1 AND 31."  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"有效性规则属性"。  
+ For related information, see the topic "ValidationRule Property" in DAO Help.  
   
-##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
- 调用此成员函数可检索基础的字段对象的有效性文本属性的文本。  
+##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText  
+ Call this member function to retrieve the text of the ValidationText property of the underlying field object.  
   
 ```  
 CString GetValidationText();
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CString`对象，其中包含的消息如果字段的值不符合验证规则的基础字段对象显示的文本。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing the text of the message that is displayed if the value of a field does not satisfy the validation rule of the underlying field object.  
   
-### <a name="remarks"></a>备注  
- 有关相关信息，请参阅主题 DAO 帮助中的"有效性文本属性"。  
+### <a name="remarks"></a>Remarks  
+ For related information, see the topic "ValidationText Property" in DAO Help.  
   
-##  <a name="isbof"></a>CDaoRecordset::IsBOF  
- 从记录滚动到记录以了解是否你进入之前记录集的第一条记录之前，请调用此成员函数。  
+##  <a name="isbof"></a>  CDaoRecordset::IsBOF  
+ Call this member function before you scroll from record to record to learn whether you have gone before the first record of the recordset.  
   
 ```  
 BOOL IsBOF() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果记录集不包含任何记录，或具有第一个记录; 之前向后滚动否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled backward before the first record; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 你还可以调用`IsBOF`连同`IsEOF`来确定记录集是否包含任何记录，或为空。 立即调用后**打开**，如果记录集不包含任何记录，`IsBOF`返回非零值。 打开一个包含至少一个记录记录集时，第一条记录是当前记录和`IsBOF`返回 0。  
+### <a name="remarks"></a>Remarks  
+ You can also call `IsBOF` along with `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsBOF` returns nonzero. When you open a recordset that has at least one record, the first record is the current record and `IsBOF` returns 0.  
   
- 如果第一条记录的当前记录，并且你调用`MovePrev`，`IsBOF`随后将返回非零值。 如果`IsBOF`返回非零，并且你调用`MovePrev`，将引发异常。 如果`IsBOF`返回非零，当前记录是不确定，并且需要当前记录的任何操作会导致引发异常。  
+ If the first record is the current record and you call `MovePrev`, `IsBOF` will subsequently return nonzero. If `IsBOF` returns nonzero and you call `MovePrev`, an exception is thrown. If `IsBOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an exception.  
   
- 上的特定方法的效果`IsBOF`和`IsEOF`设置︰  
+ Effect of specific methods on `IsBOF` and `IsEOF` settings:  
   
--   调用**打开**内部通过可使第一条记录中记录集的当前记录调用**MoveFirst**。 因此，调用**打开**上记录的原因的空集`IsBOF`和`IsEOF`若要返回非零值。 (请参阅下表中的失败的行为**MoveFirst**或`MoveLast`调用。)  
+-   Calling **Open** internally makes the first record in the recordset the current record by calling **MoveFirst**. Therefore, calling **Open** on an empty set of records causes `IsBOF` and `IsEOF` to return nonzero. (See the following table for the behavior of a failed **MoveFirst** or `MoveLast` call.)  
   
--   已成功找到一条记录的所有移动操作会都导致同时`IsBOF`和`IsEOF`返回 0。  
+-   All Move operations that successfully locate a record cause both `IsBOF` and `IsEOF` to return 0.  
   
--   `AddNew`调用跟**更新**成功插入一条新记录的调用将导致`IsBOF`返回 0，但仅当`IsEOF`已为非零值。 状态`IsEOF`将始终保持不变。 定义由 Microsoft Jet 数据库引擎，空的记录集的当前记录指针是在文件末尾，因此任何新记录插入后的当前记录。  
+-   An `AddNew` call followed by an **Update** call that successfully inserts a new record will cause `IsBOF` to return 0, but only if `IsEOF` is already nonzero. The state of `IsEOF` will always remain unchanged. As defined by the Microsoft Jet database engine, the current record pointer of an empty recordset is at the end of a file, so any new record is inserted after the current record.  
   
--   任何**删除**调用，即使从记录集的唯一的剩余记录中删除不会更改的值`IsBOF`或`IsEOF`。  
+-   Any **Delete** call, even if it removes the only remaining record from a recordset, will not change the value of `IsBOF` or `IsEOF`.  
   
- 下表显示哪些移动操作允许使用的不同组合`IsBOF` /  `IsEOF`。  
+ This table shows which Move operations are allowed with different combinations of `IsBOF`/ `IsEOF`.  
   
-||MoveFirst MoveLast|MovePrev，<br /><br /> 移动< 0></ 0>|Move 0|MoveNext，<br /><br /> Move 1> 0|  
+||MoveFirst, MoveLast|MovePrev,<br /><br /> Move < 0|Move 0|MoveNext,<br /><br /> Move > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|  
-|`IsBOF`=0,<br /><br /> `IsEOF`= 则为非 0|Allowed|Allowed|例外|例外|  
-|同时则为非 0|例外|例外|例外|例外|  
-|这两个 0|Allowed|Allowed|Allowed|Allowed|  
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|  
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Exception|Exception|  
+|Both nonzero|Exception|Exception|Exception|Exception|  
+|Both 0|Allowed|Allowed|Allowed|Allowed|  
   
- 允许在移动操作并不意味着该操作将成功找到一条记录。 它只是表示尝试执行指定的移动操作允许，不会生成异常。 值`IsBOF`和`IsEOF`成员函数可能会因所尝试的移动而更改。  
+ Allowing a Move operation does not mean that the operation will successfully locate a record. It merely indicates that an attempt to perform the specified Move operation is allowed and will not generate an exception. The value of the `IsBOF` and `IsEOF` member functions may change as a result of the attempted move.  
   
- 找不到一条记录的值的移动操作的效果`IsBOF`和`IsEOF`下表中显示设置。  
+ The effect of Move operations that do not locate a record on the value of `IsBOF` and `IsEOF` settings is shown in the following table.  
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**，`MoveLast`|非零|非零|  
-|**移动**0|无更改|无更改|  
-|`MovePrev`, **Move**< 0></ 0>|非零|无更改|  
-|`MoveNext`, **Move** > 0|无更改|非零|  
+|**MoveFirst**, `MoveLast`|Nonzero|Nonzero|  
+|**Move** 0|No change|No change|  
+|`MovePrev`, **Move** < 0|Nonzero|No change|  
+|`MoveNext`, **Move** > 0|No change|Nonzero|  
   
- 有关相关信息，请参阅主题"BOF，EOF 属性"DAO 帮助中。  
+ For related information, see the topic "BOF, EOF Properties" in DAO Help.  
   
-##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
- 调用此成员函数可确定当前记录是否已被删除。  
+##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted  
+ Call this member function to determine whether the current record has been deleted.  
   
 ```  
 BOOL IsDeleted() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 记录集放在已删除的记录; 如果非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset is positioned on a deleted record; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果到一条记录滚动和`IsDeleted`返回**TRUE** （非零），然后你必须向下滚动到另一个记录才能执行记录集的任何其他操作。  
+### <a name="remarks"></a>Remarks  
+ If you scroll to a record and `IsDeleted` returns **TRUE** (nonzero), then you must scroll to another record before you can perform any other recordset operations.  
   
 > [!NOTE]
->  你不需要检查记录集中的快照或表类型记录的已删除的状态。 因为无法从快照中删除记录，所以，并且无需调用`IsDeleted`。 为表类型的记录集，已删除的记录从记录集中实际上已删除。 后一条记录已被删除，由你、 其他用户时，或在另一个记录集，你不能向下滚动到相应的记录。 因此，没有无需调用`IsDeleted`。  
+>  You don't need to check the deleted status for records in a snapshot or table-type recordset. Because records cannot be deleted from a snapshot, there is no need to call `IsDeleted`. For table-type recordsets, deleted records are actually removed from the recordset. Once a record has been deleted, either by you, another user, or in another recordset, you cannot scroll back to that record. Therefore, there is no need to call `IsDeleted`.  
   
- 当从动态集删除一条记录时，则会从记录集删除，你不能向下滚动到相应的记录。 但是，如果中的记录动态集删除由另一个用户或在另一个记录集对同一个表，基于`IsDeleted`将返回**TRUE**更高版本滚动时到相应的记录。  
+ When you delete a record from a dynaset, it is removed from the recordset and you cannot scroll back to that record. However, if a record in a dynaset is deleted either by another user or in another recordset based on the same table, `IsDeleted` will return **TRUE** when you later scroll to that record.  
   
- 有关相关信息，请参阅"删除方法"、"上次更改时间属性"和 DAO 帮助中的"EditMode 属性"的主题。  
+ For related information, see the topics "Delete Method", "LastModified Property", and "EditMode Property" in DAO Help.  
   
-##  <a name="iseof"></a>CDaoRecordset::IsEOF  
- 调用此成员函数，如从记录滚动到记录以了解是否你已超出最后一个记录集的记录。  
+##  <a name="iseof"></a>  CDaoRecordset::IsEOF  
+ Call this member function as you scroll from record to record to learn whether you have gone beyond the last record of the recordset.  
   
 ```  
 BOOL IsEOF() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果记录集不包含任何记录，或已超出最后一条记录; 滚动否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset contains no records or if you have scrolled beyond the last record; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 你还可以调用`IsEOF`来确定记录集是否包含任何记录，或为空。 立即调用后**打开**，如果记录集不包含任何记录，`IsEOF`返回非零值。 打开一个包含至少一个记录记录集时，第一条记录是当前记录和`IsEOF`返回 0。  
+### <a name="remarks"></a>Remarks  
+ You can also call `IsEOF` to determine whether the recordset contains any records or is empty. Immediately after you call **Open**, if the recordset contains no records, `IsEOF` returns nonzero. When you open a recordset that has at least one record, the first record is the current record and `IsEOF` returns 0.  
   
- 在调用时如果最后一条记录是当前记录`MoveNext`，`IsEOF`随后将返回非零值。 如果`IsEOF`返回非零，并且你调用`MoveNext`，将引发异常。 如果`IsEOF`返回非零，当前记录是不确定，并且需要当前记录的任何操作会导致引发异常。  
+ If the last record is the current record when you call `MoveNext`, `IsEOF` will subsequently return nonzero. If `IsEOF` returns nonzero and you call `MoveNext`, an exception is thrown. If `IsEOF` returns nonzero, the current record is undefined, and any action that requires a current record will result in an exception.  
   
- 上的特定方法的效果`IsBOF`和`IsEOF`设置︰  
+ Effect of specific methods on `IsBOF` and `IsEOF` settings:  
   
--   调用**打开**内部通过可使第一条记录中记录集的当前记录调用**MoveFirst**。 因此，调用**打开**上记录的原因的空集`IsBOF`和`IsEOF`若要返回非零值。 (请参阅下表中的失败的行为**MoveFirst**调用。)  
+-   Calling **Open** internally makes the first record in the recordset the current record by calling **MoveFirst**. Therefore, calling **Open** on an empty set of records causes `IsBOF` and `IsEOF` to return nonzero. (See the following table for the behavior of a failed **MoveFirst** call.)  
   
--   已成功找到一条记录的所有移动操作会都导致同时`IsBOF`和`IsEOF`返回 0。  
+-   All Move operations that successfully locate a record cause both `IsBOF` and `IsEOF` to return 0.  
   
--   `AddNew`调用跟**更新**成功插入一条新记录的调用将导致`IsBOF`返回 0，但仅当`IsEOF`已为非零值。 状态`IsEOF`将始终保持不变。 定义由 Microsoft Jet 数据库引擎，空的记录集的当前记录指针是在文件末尾，因此任何新记录插入后的当前记录。  
+-   An `AddNew` call followed by an **Update** call that successfully inserts a new record will cause `IsBOF` to return 0, but only if `IsEOF` is already nonzero. The state of `IsEOF` will always remain unchanged. As defined by the Microsoft Jet database engine, the current record pointer of an empty recordset is at the end of a file, so any new record is inserted after the current record.  
   
--   任何**删除**调用，即使从记录集的唯一的剩余记录中删除不会更改的值`IsBOF`或`IsEOF`。  
+-   Any **Delete** call, even if it removes the only remaining record from a recordset, will not change the value of `IsBOF` or `IsEOF`.  
   
- 下表显示哪些移动操作允许使用的不同组合`IsBOF` /  `IsEOF`。  
+ This table shows which Move operations are allowed with different combinations of `IsBOF`/ `IsEOF`.  
   
-||MoveFirst MoveLast|MovePrev，<br /><br /> 移动< 0></ 0>|Move 0|MoveNext，<br /><br /> Move 1> 0|  
+||MoveFirst, MoveLast|MovePrev,<br /><br /> Move < 0|Move 0|MoveNext,<br /><br /> Move > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
-|`IsBOF`= 非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|  
-|`IsBOF`=0,<br /><br /> `IsEOF`= 则为非 0|Allowed|Allowed|例外|例外|  
-|同时则为非 0|例外|例外|例外|例外|  
-|这两个 0|Allowed|Allowed|Allowed|Allowed|  
+|`IsBOF`=nonzero,<br /><br /> `IsEOF`=0|Allowed|Exception|Exception|Allowed|  
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|Exception|Exception|  
+|Both nonzero|Exception|Exception|Exception|Exception|  
+|Both 0|Allowed|Allowed|Allowed|Allowed|  
   
- 允许在移动操作并不意味着该操作将成功找到一条记录。 它只是表示尝试执行指定的移动操作允许，不会生成异常。 值`IsBOF`和`IsEOF`成员函数可能会因所尝试的移动而更改。  
+ Allowing a Move operation does not mean that the operation will successfully locate a record. It merely indicates that an attempt to perform the specified Move operation is allowed and will not generate an exception. The value of the `IsBOF` and `IsEOF` member functions may change as a result of the attempted Move.  
   
- 找不到一条记录的值的移动操作的效果`IsBOF`和`IsEOF`下表中显示设置。  
+ The effect of Move operations that do not locate a record on the value of `IsBOF` and `IsEOF` settings is shown in the following table.  
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**，`MoveLast`|非零|非零|  
-|**移动**0|无更改|无更改|  
-|`MovePrev`, **Move**< 0></ 0>|非零|无更改|  
-|`MoveNext`, **Move** > 0|无更改|非零|  
+|**MoveFirst**, `MoveLast`|Nonzero|Nonzero|  
+|**Move** 0|No change|No change|  
+|`MovePrev`, **Move** < 0|Nonzero|No change|  
+|`MoveNext`, **Move** > 0|No change|Nonzero|  
   
- 有关相关信息，请参阅主题"BOF，EOF 属性"DAO 帮助中。  
+ For related information, see the topic "BOF, EOF Properties" in DAO Help.  
   
-##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
- 调用此成员函数，以确定是否尚未标记为"脏"的指定的字段数据成员的动态集 （更改）。  
+##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty  
+ Call this member function to determine whether the specified field data member of a dynaset has been flagged as "dirty" (changed).  
   
 ```  
 BOOL IsFieldDirty(void* pv);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 指向字段数据成员你想要检查，其状态的指针或**NULL**以确定其中任何一个字段是否已更新。  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are dirty.  
   
-### <a name="return-value"></a>返回值  
- 如果指定的字段数据成员标记为脏; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member is flagged as dirty; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 所有已更新字段数据成员中的数据将传输到记录在数据源上的当前记录更新通过调用时**更新**成员函数`CDaoRecordset`(到调用**编辑**或`AddNew`)。 了解这一点，你可能需要进一步的步骤，如取消标记以将标记列，以便它不会写到数据源的字段数据成员。  
+### <a name="remarks"></a>Remarks  
+ The data in all dirty field data members will be transferred to the record on the data source when the current record is updated by a call to the **Update** member function of `CDaoRecordset` (following a call to **Edit** or `AddNew`). With this knowledge, you can take further steps, such as unflagging the field data member to mark the column so it will not be written to the data source.  
   
- `IsFieldDirty`通过实现`DoFieldExchange`。  
+ `IsFieldDirty` is implemented through `DoFieldExchange`.  
   
-##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
- 调用此成员函数来确定记录集的指定的字段数据成员是否已标记为 Null。  
+##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull  
+ Call this member function to determine whether the specified field data member of a recordset has been flagged as Null.  
   
 ```  
 BOOL IsFieldNull(void* pv);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 指向字段数据成员你想要检查，其状态的指针或**NULL**以确定其中任何一个字段是否为 Null。  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are Null.  
   
-### <a name="return-value"></a>返回值  
- 如果指定的字段数据成员标记为 Null; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member is flagged as Null; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- (在数据库术语中，Null 表示"having 没有值"，并且不能与相同**NULL** c + + 中。)如果字段数据成员标记为 Null，则将它解释为没有值的当前记录的列。  
-  
-> [!NOTE]
->  在某些情况下，使用`IsFieldNull`可能效率很低，如下面的代码示例所示︰  
-  
- [!code-cpp[NVC_MFCDatabase # 5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]  
+### <a name="remarks"></a>Remarks  
+ (In database terminology, Null means "having no value" and is not the same as **NULL** in C++.) If a field data member is flagged as Null, it is interpreted as a column of the current record for which there is no value.  
   
 > [!NOTE]
->  如果使用动态记录绑定，但不使用派生自`CDaoRecordset`，请务必使用**VT_NULL**中示例所示。  
+>  In certain situations, using `IsFieldNull` can be inefficient, as the following code example illustrates:  
   
-##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
- 调用以确定是否可以指定的字段数据成员为"null"（可以是设置为一个 Null 值; 如果该成员函数C + + **NULL**不同时，则为 Null，这在数据库术语中，意味着"having 没有值")。  
+ [!code-cpp[NVC_MFCDatabase#5](../../mfc/codesnippet/cpp/cdaorecordset-class_5.cpp)]  
+  
+> [!NOTE]
+>  If you are using dynamic record binding, without deriving from `CDaoRecordset`, be sure to use **VT_NULL** as shown in the example.  
+  
+##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable  
+ Call this member function to determine whether the specified field data member is "nullable" (can be set to a Null value; C++ **NULL** is not the same as Null, which, in database terminology, means "having no value").  
   
 ```  
 BOOL IsFieldNullable(void* pv);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 指向字段数据成员你想要检查，其状态的指针或**NULL**以确定其中任何一个字段是否为 Null。  
+ A pointer to the field data member whose status you want to check, or **NULL** to determine if any of the fields are Null.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果指定的字段数据成员可设置为 Null。否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified field data member can be made Null; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 不能为 Null 的字段必须具有一个值。 如果你尝试将此类字段设置为 Null，在添加或更新记录时，数据源拒绝添加或更新，和**更新**将引发异常。 在调用时，则会发生异常**更新**，在调用时不`SetFieldNull`。  
+### <a name="remarks"></a>Remarks  
+ A field that cannot be Null must have a value. If you attempt to set such a field to Null when adding or updating a record, the data source rejects the addition or update, and **Update** will throw an exception. The exception occurs when you call **Update**, not when you call `SetFieldNull`.  
   
-##  <a name="isopen"></a>CDaoRecordset::IsOpen  
- 调用此成员函数可确定记录集是否打开。  
+##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
+ Call this member function to determine if the recordset is open.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果非零的记录集对象**打开**或**Requery**以前调用成员函数和记录集未被关闭; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the recordset object's **Open** or **Requery** member function has previously been called and the recordset has not been closed; otherwise 0.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bcheckcachefordirtyfields"></a>Cdaorecordset:: M_bcheckcachefordirtyfields  
- 包含一个标志，指示是否缓存的字段自动标记为脏页 （更改） 和 Null。  
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields  
+ Contains a flag indicating whether cached fields are automatically marked as dirty (changed) and Null.  
   
-### <a name="remarks"></a>备注  
- 标志默认为**TRUE**。 此数据成员中的设置控制的整个双缓冲机制。 如果将标志设置为**TRUE**，你可以将关闭使用 DFX 机制的字段的基础上缓存。 如果将标志设置为**FALSE**，必须调用`SetFieldDirty`和`SetFieldNull`自己。  
+### <a name="remarks"></a>Remarks  
+ The flag defaults to **TRUE**. The setting in this data member controls the entire double-buffering mechanism. If you set the flag to **TRUE**, you can turn off the caching on a field-by-field basis using the DFX mechanism. If you set the flag to **FALSE**, you must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
- 设置此数据成员之前调用**打开**。 此机制是主要用于易用性。 性能可能会降低由于双缓冲的字段进行更改时。  
+ Set this data member before calling **Open**. This mechanism is primarily for ease-of-use. Performance may be slower because of the double-buffering of fields as changes are made.  
   
-##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
- 包含记录集类中的字段数据成员的数目和选定数据源的记录集的列数。  
+##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
+ Contains the number of field data members in the recordset class and the number of columns selected by the recordset from the data source.  
   
-### <a name="remarks"></a>备注  
- 记录集类的构造函数必须初始化`m_nFields`与正确的静态绑定的字段数。 时用于声明记录集类，ClassWizard 将写入此初始化时。 你还可以编写它手动。  
+### <a name="remarks"></a>Remarks  
+ The constructor for the recordset class must initialize `m_nFields` with the correct number of statically bound fields. ClassWizard writes this initialization for you when you use it to declare your recordset class. You can also write it manually.  
   
- 框架将使用此数字管理字段数据成员与数据源上的当前记录的相应列之间的交互。  
-  
-> [!NOTE]
->  此数字必须与对应的注册中的输出列数`DoFieldExchange`后调用`SetFieldType`与参数**CDaoFieldExchange::outputColumn**。  
-  
- 你可以将列绑定动态的方式的`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`。 如果这样做，你不需要递增中的计数`m_nFields`以反映调用 DFX 函数次数你`DoFieldExchange`成员函数。  
-  
-##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
- 包含的记录集类中的参数数据成员数-与记录集的查询一起传递的参数数目。  
-  
-### <a name="remarks"></a>备注  
- 如果你记录集的类具有任何参数数据成员，必须初始化类的构造函数`m_nParams`与正确的数目。 值`m_nParams`默认值为 0。 如果添加的参数数据成员-你必须手动执行该操作 — 您必须在类构造函数，以反映参数的数目也手动添加初始化 (它必须是至少一样大的数字的形式 ' 中的占位符你**m_strFilter**或`m_strSort`字符串)。  
-  
- 它对参数化记录集的查询时，框架将使用此数字。  
+ The framework uses this number to manage interaction between the field data members and the corresponding columns of the current record on the data source.  
   
 > [!NOTE]
->  此数字必须与对应"params"中注册的数`DoFieldExchange`后调用`SetFieldType`与参数**CFieldExchange::param**。  
+>  This number must correspond to the number of output columns registered in `DoFieldExchange` after a call to `SetFieldType` with the parameter **CDaoFieldExchange::outputColumn**.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"参数对象"。  
+ You can bind columns dynamically by way of `CDaoRecordset::GetFieldValue` and `CDaoRecordset::SetFieldValue`. If you do so, you do not need to increment the count in `m_nFields` to reflect the number of DFX function calls in your `DoFieldExchange` member function.  
   
-##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
- 包含指向 DAO 记录集对象基础的 OLE 接口的`CDaoRecordset`对象。  
+##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams  
+ Contains the number of parameter data members in the recordset class — the number of parameters passed with the recordset's query.  
   
-### <a name="remarks"></a>备注  
- 如果你需要直接访问 DAO 接口，请使用此指针。  
+### <a name="remarks"></a>Remarks  
+ If your recordset class has any parameter data members, the constructor for the class must initialize `m_nParams` with the correct number. The value of `m_nParams` defaults to 0. If you add parameter data members — which you must do manually — you must also manually add an initialization in the class constructor to reflect the number of parameters (which must be at least as large as the number of '' placeholders in your **m_strFilter** or `m_strSort` string).  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"记录集对象"。  
+ The framework uses this number when it parameterizes the recordset's query.  
   
-##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
- 包含指向的`CDaoDatabase`通过该记录集连接到数据源的对象。  
+> [!NOTE]
+>  This number must correspond to the number of "params" registered in `DoFieldExchange` after a call to `SetFieldType` with the parameter **CFieldExchange::param**.  
   
-### <a name="remarks"></a>备注  
- 两种方式设置此变量。 通常情况下，将指针传递到已打开`CDaoDatabase`对象构造记录集对象时。 如果你通过**NULL**相反， **CDaoRecordset**创建`CDaoDatabase`为你的对象并将其打开。 在任一情况下，`CDaoRecordset`将指针存储在此变量。  
+ For related information, see the topic "Parameter Object" in DAO Help.  
   
- 通常不直接需要使用存储在指针**m_pDatabase**。 如果你编写自己的扩展到`CDaoRecordset`，但是，你可能需要使用该指针。 例如，你可能需要指针如果引发了自己`CDaoException`(s)。  
+##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset  
+ Contains a pointer to the OLE interface for the DAO recordset object underlying the `CDaoRecordset` object.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"数据库对象"。  
+### <a name="remarks"></a>Remarks  
+ Use this pointer if you need to access the DAO interface directly.  
   
-##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
- 包含用于构造字符串**其中**SQL 语句子句。  
+ For related information, see the topic "Recordset Object" in DAO Help.  
   
-### <a name="remarks"></a>备注  
- 它不包括保留的字**其中**来筛选记录集。 使用此数据成员不是适用于表类型记录集。 使用**m_strFilter**打开记录集使用时，不起`CDaoQueryDef`指针。  
+##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase  
+ Contains a pointer to the `CDaoDatabase` object through which the recordset is connected to a data source.  
   
- 使用美国日期格式 （月-日-年） 时您筛选字段包含日期，即使未使用 Microsoft Jet 数据库引擎; 的美国版本否则，不可能按预期筛选数据。  
+### <a name="remarks"></a>Remarks  
+ This variable is set in two ways. Typically, you pass a pointer to an already open `CDaoDatabase` object when you construct the recordset object. If you pass **NULL** instead, **CDaoRecordset** creates a `CDaoDatabase` object for you and opens it. In either case, `CDaoRecordset` stores the pointer in this variable.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"筛选器属性"。  
+ Normally you will not directly need to use the pointer stored in **m_pDatabase**. If you write your own extensions to `CDaoRecordset`, however, you might need to use the pointer. For example, you might need the pointer if you throw your own `CDaoException`(s).  
   
-##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
- 包含一个字符串，包含**ORDERBY**而无需保留字的 SQL 语句子句**ORDERBY**。  
+ For related information, see the topic "Database Object" in DAO Help.  
   
-### <a name="remarks"></a>备注  
- 你可以按动态集和快照类型记录集对象进行排序。  
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter  
+ Contains a string that is used to construct the **WHERE** clause of a SQL statement.  
   
- 无法对表类型记录集对象进行排序。 若要确定表类型记录集的排序顺序，请调用[SetCurrentIndex](#setcurrentindex)。  
+### <a name="remarks"></a>Remarks  
+ It does not include the reserved word **WHERE** to filter the recordset. The use of this data member is not applicable to table-type recordsets. The use of **m_strFilter** has no effect when opening a recordset using a `CDaoQueryDef` pointer.  
   
- 使用`m_strSort`打开记录集使用时，不起`CDaoQueryDef`指针。  
+ Use the U.S. date format (month-day-year) when you filter fields containing dates, even if you are not using the U.S. version of the Microsoft Jet database engine; otherwise, the data may not be filtered as you expect.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"排序属性"。  
+ For related information, see the topic "Filter Property" in DAO Help.  
   
-##  <a name="move"></a>CDaoRecordset::Move  
- 调用此成员函数以定位该记录集`lRows`从当前记录的记录。  
+##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort  
+ Contains a string containing the **ORDERBY** clause of a SQL statement without the reserved words **ORDERBY**.  
+  
+### <a name="remarks"></a>Remarks  
+ You can sort on dynaset- and snapshot-type recordset objects.  
+  
+ You cannot sort table-type recordset objects. To determine the sort order of a table-type recordset, call [SetCurrentIndex](#setcurrentindex).  
+  
+ The use of `m_strSort` has no effect when opening a recordset using a `CDaoQueryDef` pointer.  
+  
+ For related information, see the topic "Sort Property" in DAO Help.  
+  
+##  <a name="move"></a>  CDaoRecordset::Move  
+ Call this member function to position the recordset `lRows` records from the current record.  
   
 ```  
 virtual void Move(long lRows);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lRows`  
- 要向前或向后移动的记录数。 正值表示向前，移动记录集的一端。 值为负时，开始向后移动。  
+ The number of records to move forward or backward. Positive values move forward, toward the end of the recordset. Negative values move backward, toward the beginning.  
   
-### <a name="remarks"></a>备注  
- 您可以移动向前或向后。 `Move( 1 )`等效于`MoveNext`，和`Move( -1 )`等效于`MovePrev`。  
+### <a name="remarks"></a>Remarks  
+ You can move forward or backward. `Move( 1 )` is equivalent to `MoveNext`, and `Move( -1 )` is equivalent to `MovePrev`.  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  如果你使用滚动条滚动过去的开头或末尾的记录集 (`IsBOF`或`IsEOF`返回非零)，调用**移动**引发`CDaoException`。  
+>  If you have scrolled past the beginning or end of the recordset ( `IsBOF` or `IsEOF` returns nonzero), a call to **Move** throws a `CDaoException`.  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 当调用**移动**上只进滚动快照，`lRows`参数必须是一个正整数，书签不允许使用，因此你可以继续仅。  
+ When you call **Move** on a forward-only scrolling snapshot, the `lRows` parameter must be a positive integer and bookmarks are not allowed, so you can move forward only.  
   
- 若要使第一个，最后，接下来，或上一个记录在记录集中的当前记录，调用**MoveFirst**， `MoveLast`， `MoveNext`，或`MovePrev`成员函数。  
+ To make the first, last, next, or previous record in a recordset the current record, call the **MoveFirst**, `MoveLast`, `MoveNext`, or `MovePrev` member function.  
   
- 有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
- 调用此成员函数要第一条记录中的记录集 （如果有） 的当前记录。  
+##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst  
+ Call this member function to make the first record in the recordset (if any) the current record.  
   
 ```  
 void MoveFirst();
 ```  
   
-### <a name="remarks"></a>备注  
- 无需调用**MoveFirst**后立即打开记录集。 此时，第一条记录 （如果有） 将自动当前记录。  
+### <a name="remarks"></a>Remarks  
+ You do not have to call **MoveFirst** immediately after you open the recordset. At that time, the first record (if any) is automatically the current record.  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- 如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- 如果调用`MoveLast`对基于 SQL 查询或 querydef 记录集对象，该查询强制完成并完全填充的记录集对象。  
+ If you call `MoveLast` on a recordset object based on a SQL query or querydef, the query is forced to completion and the recordset object is fully populated.  
   
- 不能调用**MoveFirst**或`MovePrev`成员函数时只进的滚动快照。  
+ You cannot call the **MoveFirst** or `MovePrev` member function with a forward-only scrolling snapshot.  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- 有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="movelast"></a>CDaoRecordset::MoveLast  
- 在记录集中的当前记录调用此成员函数，以使最后一条记录 （如果有）。  
+##  <a name="movelast"></a>  CDaoRecordset::MoveLast  
+ Call this member function to make the last record (if any) in the recordset the current record.  
   
 ```  
 void MoveLast();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- 如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- 如果调用`MoveLast`对基于 SQL 查询或 querydef 记录集对象，该查询强制完成并完全填充的记录集对象。  
+ If you call `MoveLast` on a recordset object based on a SQL query or querydef, the query is forced to completion and the recordset object is fully populated.  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- 有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="movenext"></a>CDaoRecordset::MoveNext  
- 调用此成员函数以使记录集的当前记录中的下一步的记录。  
+##  <a name="movenext"></a>  CDaoRecordset::MoveNext  
+ Call this member function to make the next record in the recordset the current record.  
   
 ```  
 void MoveNext();
 ```  
   
-### <a name="remarks"></a>备注  
- 建议您调用`IsBOF`尝试将移到上一条记录之前。 调用`MovePrev`将引发`CDaoException`如果`IsBOF`返回非零值，指示，你已使用滚动条滚动在第一条记录之前或没有记录已选择的记录集。  
+### <a name="remarks"></a>Remarks  
+ It is recommended that you call `IsBOF` before you attempt to move to the previous record. A call to `MovePrev` will throw a `CDaoException` if `IsBOF` returns nonzero, indicating either that you have already scrolled before the first record or that no records were selected by the recordset.  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- 如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- 有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
- 调用此成员函数，使上一记录中记录集的当前记录。  
+##  <a name="moveprev"></a>  CDaoRecordset::MovePrev  
+ Call this member function to make the previous record in the recordset the current record.  
   
 ```  
 void MovePrev();
 ```  
   
-### <a name="remarks"></a>备注  
- 建议您调用`IsBOF`尝试将移到上一条记录之前。 调用`MovePrev`将引发`CDaoException`如果`IsBOF`返回非零值，指示，你已使用滚动条滚动在第一条记录之前或没有记录已选择的记录集。  
+### <a name="remarks"></a>Remarks  
+ It is recommended that you call `IsBOF` before you attempt to move to the previous record. A call to `MovePrev` will throw a `CDaoException` if `IsBOF` returns nonzero, indicating either that you have already scrolled before the first record or that no records were selected by the recordset.  
   
 > [!CAUTION]
->  调用的任何**移动**函数将引发异常，如果记录集不具有任何记录。 一般情况下，请同时调用`IsBOF`和`IsEOF`之前移动操作，以确定是否记录集的任何记录。 调用后**打开**或**Requery**，调用`IsBOF`或`IsEOF`。  
+>  Calling any of the **Move** functions throws an exception if the recordset has no records. In general, call both `IsBOF` and `IsEOF` before a Move operation to determine whether the recordset has any records. After you call **Open** or **Requery**, call either `IsBOF` or `IsEOF`.  
   
 > [!NOTE]
->  如果你调用任意**移动**函数时的当前记录正在更新或添加，更新都将丢失而不发出警告。  
+>  If you call any of the **Move** functions while the current record is being updated or added, the updates are lost without warning.  
   
- 使用**移动**记录之间移动而不应用条件的函数。 使用查找操作查找记录中的动态集类型或满足特定条件的快照类型的记录集对象。 若要在一个表类型记录集对象中查找一条记录，调用`Seek`。  
+ Use the **Move** functions to move from record to record without applying a condition. Use the Find operations to locate records in a dynaset-type or snapshot-type recordset object that satisfy a certain condition. To locate a record in a table-type recordset object, call `Seek`.  
   
- 如果记录集引用的表类型记录集，则移动遵循表的当前索引。 可以通过使用基础的 DAO 对象的索引属性设置的当前索引。 如果未设置的当前索引，则返回的记录的顺序不确定。  
+ If the recordset refers to a table-type recordset, movement follows the table's current index. You can set the current index by using the Index property of the underlying DAO object. If you do not set the current index, the order of returned records is undefined.  
   
- 不能调用**MoveFirst**或`MovePrev`成员函数时只进的滚动快照。  
+ You cannot call the **MoveFirst** or `MovePrev` member function with a forward-only scrolling snapshot.  
   
- 若要移动特定条记录向前或向后记录集对象中记录当前的位置，调用**移动**。  
+ To move the position of the current record in a recordset object a specific number of records forward or backward, call **Move**.  
   
- 有关相关信息，请参阅主题"Move 方法"和"MoveFirst，MoveLast，MoveNext，MovePrevious 方法"DAO 帮助中。  
+ For related information, see the topics "Move Method" and "MoveFirst, MoveLast, MoveNext, MovePrevious Methods" in DAO Help.  
   
-##  <a name="open"></a>Cdaorecordset:: Open  
- 必须调用该成员函数以检索记录集的记录。  
+##  <a name="open"></a>  CDaoRecordset::Open  
+ You must call this member function to retrieve the records for the recordset.  
   
 ```  
 virtual void Open(
@@ -1698,136 +1776,136 @@ virtual void Open(
     int nOptions = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nOpenType`  
- 以下值之一：  
+ One of the following values:  
   
-- **dbOpenDynaset**具有双向滚动的动态集类型记录集。 这是默认设置。  
+- **dbOpenDynaset** A dynaset-type recordset with bidirectional scrolling. This is the default.  
   
-- **dbOpenTable**具有双向滚动的表类型记录集。  
+- **dbOpenTable** A table-type recordset with bidirectional scrolling.  
   
-- **dbOpenSnapshot**而双向滚动快照类型的记录集。  
+- **dbOpenSnapshot** A snapshot-type recordset with bidirectional scrolling.  
   
  `lpszSQL`  
- 字符串指针，包含以下项之一︰  
+ A string pointer containing one of the following:  
   
--   A **NULL**指针。  
+-   A **NULL** pointer.  
   
--   一个或多个 tabledefs 和/或 querydefs （以逗号分隔） 的名称。  
+-   The name of one or more tabledefs and/or querydefs (comma-separated).  
   
--   SQL**选择**语句 (根据需要使用 SQL**其中**或**ORDERBY**子句)。  
+-   A SQL **SELECT** statement (optionally with a SQL **WHERE** or **ORDERBY** clause).  
   
--   传递的查询。  
+-   A pass-through query.  
   
  `nOptions`  
- 一个或多个下面列出的选项。 默认值为 0。 可能的值如下：  
+ One or more of the options listed below. The default value is 0. Possible values are as follows:  
   
-- **dbAppendOnly**可以仅追加新记录 （仅记录动态集类型集）。 此选项的字面意思是，可能仅追加记录。 MFC ODBC 数据库类具有一个允许检索和追加的记录的仅限附加的选项。  
+- **dbAppendOnly** You can only append new records (dynaset-type recordset only). This option means literally that records may only be appended. The MFC ODBC database classes have an append-only option that allows records to be retrieved and appended.  
   
-- **dbForwardOnly**记录集是只进滚动快照。  
+- **dbForwardOnly** The recordset is a forward-only scrolling snapshot.  
   
-- **dbSeeChanges**如果另一个用户正在更改正在编辑的数据生成异常。  
+- **dbSeeChanges** Generate an exception if another user is changing data you are editing.  
   
-- **dbDenyWrite**其他用户不能修改或添加记录。  
+- **dbDenyWrite** Other users cannot modify or add records.  
   
-- **dbDenyRead**其他用户无法查看记录 （仅记录的表类型集）。  
+- **dbDenyRead** Other users cannot view records (table-type recordset only).  
   
-- **dbReadOnly**你只可以查看记录; 其他用户可以修改它们。  
+- **dbReadOnly** You can only view records; other users can modify them.  
   
-- **dbInconsistent** （仅记录动态集类型集） 允许不一致的更新。  
+- **dbInconsistent** Inconsistent updates are allowed (dynaset-type recordset only).  
   
-- **dbConsistent**仅允许一致的更新 （仅记录动态集类型集）。  
+- **dbConsistent** Only consistent updates are allowed (dynaset-type recordset only).  
   
 > [!NOTE]
->  常量**dbConsistent**和**dbInconsistent**是互相排斥。 你可以使用一个或另一个，但不要同时中的给定实例**打开**。  
+>  The constants **dbConsistent** and **dbInconsistent** are mutually exclusive. You can use one or the other, but not both in a given instance of **Open**.  
   
  *pTableDef*  
- 指向的指针[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)对象。 此版本是仅对表类型记录集有效。 使用此选项时`CDaoDatabase`指针用于构造`CDaoRecordset`未使用; 相反，将使用 tabledef 所在的数据库。  
+ A pointer to a [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) object. This version is valid only for table-type recordsets. When using this option, the `CDaoDatabase` pointer used to construct the `CDaoRecordset` is not used; rather, the database in which the tabledef resides is used.  
   
  *pQueryDef*  
- 指向的指针[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)对象。 此版本是仅对动态集类型和快照类型记录集有效。 使用此选项时`CDaoDatabase`指针用于构造`CDaoRecordset`未使用; 相反，将使用此 querydef 所在的数据库。  
+ A pointer to a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) object. This version is valid only for dynaset-type and snapshot-type recordsets. When using this option, the `CDaoDatabase` pointer used to construct the `CDaoRecordset` is not used; rather, the database in which the querydef resides is used.  
   
-### <a name="remarks"></a>备注  
- 之前调用**打开**，您必须先构造的记录集对象。 有若干方法可实现此操作：  
+### <a name="remarks"></a>Remarks  
+ Before calling **Open**, you must construct the recordset object. There are several ways to do this:  
   
--   如果你构造的记录集对象，将传递指向的指针`CDaoDatabase`已打开的对象。  
+-   When you construct the recordset object, pass a pointer to a `CDaoDatabase` object that is already open.  
   
--   如果你构造的记录集对象，将传递指向的指针`CDaoDatabase`未打开的对象。 记录集打开`CDaoDatabase`对象，但不是会关闭它，记录集对象关闭时。  
+-   When you construct the recordset object, pass a pointer to a `CDaoDatabase` object that is not open. The recordset opens a `CDaoDatabase` object, but will not close it when the recordset object closes.  
   
--   如果你构造的记录集对象，则将传递**NULL**指针。 记录集对象调用`GetDefaultDBName`若要获取的 Microsoft Access 的名称。要打开的 MDB 文件。 记录集然后打开`CDaoDatabase`对象并使它打开，只要记录集处于打开状态。 当调用**关闭**对记录集，`CDaoDatabase`对象也将关闭。  
+-   When you construct the recordset object, pass a **NULL** pointer. The recordset object calls `GetDefaultDBName` to get the name of the Microsoft Access .MDB file to open. The recordset then opens a `CDaoDatabase` object and keeps it open as long as the recordset is open. When you call **Close** on the recordset, the `CDaoDatabase` object is also closed.  
   
     > [!NOTE]
-    >  记录集打开时`CDaoDatabase`对象，它以非独占方式访问以打开数据源。  
+    >  When the recordset opens the `CDaoDatabase` object, it opens the data source with nonexclusive access.  
   
- 版本的**打开**使用`lpszSQL`参数，记录集处于打开状态后你可以检索几种方式之一中的记录。 第一个选项是在中拥有 DFX 函数你`DoFieldExchange`。 第二个选项是通过调用使用动态绑定`GetFieldValue`成员函数。 单独或组合，可以实现这些选项。 如果合并，你将需要传递的 SQL 语句中自行调用**打开**。  
+ For the version of **Open** that uses the `lpszSQL` parameter, once the recordset is open you can retrieve records in one of several ways. The first option is to have DFX functions in your `DoFieldExchange`. The second option is to use dynamic binding by calling the `GetFieldValue` member function. These options can be implemented separately or in combination. If they are combined, you will have to pass in the SQL statement yourself on the call to **Open**.  
   
- 如果你使用的第二个版本**打开**你传入`CDaoTableDef`对象，生成的列将可供你可通过将绑定`DoFieldExchange`和 DFX 机制，和/或动态通过绑定`GetFieldValue`。  
-  
-> [!NOTE]
->  你只能调用**打开**使用`CDaoTableDef`表类型记录集的对象。  
-  
- 如果你使用的第三个版本**打开**你传入`CDaoQueryDef`对象，将执行查询，并生成的列将可供你可通过将绑定`DoFieldExchange`和 DFX 机制，和/或动态通过绑定`GetFieldValue`。  
+ When you use the second version of **Open** where you pass in a `CDaoTableDef` object, the resulting columns will be available for you to bind via `DoFieldExchange` and the DFX mechanism, and/or bind dynamically via `GetFieldValue`.  
   
 > [!NOTE]
->  你只能调用**打开**使用`CDaoQueryDef`动态集类型和快照类型记录集对象。  
+>  You can only call **Open** using a `CDaoTableDef` object for table-type recordsets.  
   
- 第一个版本的**打开**使用`lpszSQL`参数，记录则下表中所示的所选基于的条件。  
+ When you use the third version of **Open** where you pass in a `CDaoQueryDef` object, that query will be executed, and the resulting columns will be available for you to bind via `DoFieldExchange` and the DFX mechanism, and/or bind dynamically via `GetFieldValue`.  
   
-|`lpszSQL` 参数的值|由确定所选记录|示例|  
+> [!NOTE]
+>  You can only call **Open** using a `CDaoQueryDef` object for dynaset-type and snapshot-type recordsets.  
+  
+ For the first version of **Open** that uses the `lpszSQL` parameter, records are selected based on criteria shown in the following table.  
+  
+|Value of the `lpszSQL` parameter|Records selected are determined by|Example|  
 |--------------------------------------|----------------------------------------|-------------|  
-|**NULL**|返回的字符串`GetDefaultSQL`。||  
-|以逗号分隔的一个或多个 tabledefs 和/或 querydef 名称列表。|在中的所有列都表示`DoFieldExchange`。|`"Customer"`|  
-|**选择**列列表**FROM**表列表|从指定的 tabledef(s) 和/或 querydef(s) 指定的列。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
+|**NULL**|The string returned by `GetDefaultSQL`.||  
+|A comma-separated list of one or more tabledefs and/or querydef names.|All columns represented in the `DoFieldExchange`.|`"Customer"`|  
+|**SELECT** column-list **FROM** table-list|The specified columns from the specified tabledef(s) and/or querydef(s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
- 常规步骤是将传递**NULL**到**打开**; 在这种情况下，**打开**调用`GetDefaultSQL`，ClassWizard 生成时创建的可重写成员函数`CDaoRecordset`-派生类。 此值使你在 ClassWizard 中指定的 tabledef(s) 和/或 querydef 名称。 您可以指定中的其他信息`lpszSQL`参数。  
+ The usual procedure is to pass **NULL** to **Open**; in that case, **Open** calls `GetDefaultSQL`, an overridable member function that ClassWizard generates when creating a `CDaoRecordset`-derived class. This value gives the tabledef(s) and/or querydef name(s) you specified in ClassWizard. You can instead specify other information in the `lpszSQL` parameter.  
   
- 你传递的任何**打开**构造查询的最终 SQL 字符串 (字符串可能具有 SQL**其中**和**ORDERBY**子句追加到`lpszSQL`你传递的字符串) 并执行查询。 你可以通过调用检查构造的字符串`GetSQL`之后调用**打开**。  
+ Whatever you pass, **Open** constructs a final SQL string for the query (the string may have SQL **WHERE** and **ORDERBY** clauses appended to the `lpszSQL` string you passed) and then executes the query. You can examine the constructed string by calling `GetSQL` after calling **Open**.  
   
- 记录集类的字段数据成员将绑定到所选的数据的列。 如果返回任何记录，第一条记录成为当前记录。  
+ The field data members of your recordset class are bound to the columns of the data selected. If any records are returned, the first record becomes the current record.  
   
- 如果你想要设置为记录集，如筛选或排序，选项设置`m_strSort`或**m_strFilter**构造的记录集对象之后但在调用之前**打开**。 如果你想要刷新的记录后记录集中的记录集已打开，请调用**Requery**。  
+ If you want to set options for the recordset, such as a filter or sort, set `m_strSort` or **m_strFilter** after you construct the recordset object but before you call **Open**. If you want to refresh the records in the recordset after the recordset is already open, call **Requery**.  
   
- 如果调用**打开**上动态集类型或快照类型的记录集，或者如果数据源引用的 SQL 语句或 tabledef 对象，表示附加的表，不能使用**dbOpenTable**为类型参数; 如果这样做，则 MFC 会引发异常。 若要确定 tabledef 对象是否表示附加的表，创建[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)对象并调用其[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成员函数。  
+ If you call **Open** on a dynaset-type or snapshot-type recordset, or if the data source refers to a SQL statement or a tabledef that represents an attached table, you cannot use **dbOpenTable** for the type argument; if you do, MFC throws an exception. To determine whether a tabledef object represents an attached table, create a [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) object and call its [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) member function.  
   
- 使用**dbSeeChanges**标志如果你想要捕获编辑或删除同一记录时，由另一个用户或计算机上的另一个程序所做的更改。 例如，如果两个用户开始编辑同一个记录，若要调用的第一个用户**更新**成员函数成功。 当**更新**由第二个用户，调用`CDaoException`引发。 同样，如果第二个用户尝试调用**删除**删除记录，并已更改第一个用户，通过`CDaoException`时发生。  
+ Use the **dbSeeChanges** flag if you wish to trap changes made by another user or another program on your machine when you are editing or deleting the same record. For example, if two users start editing the same record, the first user to call the **Update** member function succeeds. When **Update** is called by the second user, a `CDaoException` is thrown. Similarly, if the second user tries to call **Delete** to delete the record, and it has already been changed by the first user, a `CDaoException` occurs.  
   
- 通常情况下，如果用户获取此`CDaoException`更新时，你的代码应刷新字段的内容和检索最近修改的值。 如果删除的过程中发生异常，你的代码无法向用户和一条消息指出的数据已最近更改显示新的记录数据。 此时，你的代码可以请求用户仍想要删除的记录一条确认消息。  
+ Typically, if the user gets this `CDaoException` while updating, your code should refresh the contents of the fields and retrieve the newly modified values. If the exception occurs in the process of deleting, your code could display the new record data to the user and a message indicating that the data has recently changed. At this point, your code can request a confirmation that the user still wants to delete the record.  
   
 > [!TIP]
->  使用只进滚动选项 ( **dbForwardOnly**) 以提高性能，当你的应用程序进行单个传递通过记录集打开从 ODBC 数据源。  
+>  Use the forward-only scrolling option ( **dbForwardOnly**) to improve performance when your application makes a single pass through a recordset opened from an ODBC data source.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"OpenRecordset 方法"。  
+ For related information, see the topic "OpenRecordset Method" in DAO Help.  
   
-##  <a name="requery"></a>CDaoRecordset::Requery  
- 调用此成员函数以重新生成 （刷新） 记录集。  
+##  <a name="requery"></a>  CDaoRecordset::Requery  
+ Call this member function to rebuild (refresh) a recordset.  
   
 ```  
 virtual void Requery();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果返回任何记录，第一条记录成为当前记录。  
+### <a name="remarks"></a>Remarks  
+ If any records are returned, the first record becomes the current record.  
   
- 为了使为反映的添加和删除您或其他用户对数据源的记录集，必须重新记录集生成通过调用**Requery**。 如果记录集是动态集，它会自动反映你或其他用户对其现有记录 （但不是添加件） 进行的更新。 如果记录集是快照，则必须调用**Requery**以反映编辑由其他用户，以及添加和删除。  
+ In order for the recordset to reflect the additions and deletions that you or other users are making to the data source, you must rebuild the recordset by calling **Requery**. If the recordset is a dynaset, it automatically reflects updates that you or other users make to its existing records (but not additions). If the recordset is a snapshot, you must call **Requery** to reflect edits by other users as well as additions and deletions.  
   
- 对于动态集或快照中，调用**Requery**任何你想要重新生成使用参数值的记录集的时间。 通过设置来设置新的筛选器或排序[m_strFilter](#m_strfilter)和[m_strSort](#m_strsort)之前调用**Requery**。 通过将新值分配给之前调用的参数数据成员设置新的参数**Requery**。  
+ For either a dynaset or a snapshot, call **Requery** any time you want to rebuild the recordset using parameter values. Set the new filter or sort by setting [m_strFilter](#m_strfilter) and [m_strSort](#m_strsort) before calling **Requery**. Set new parameters by assigning new values to parameter data members before calling **Requery**.  
   
- 如果重新生成该记录集的尝试失败，已关闭记录集。 在调用之前**Requery**，你可以确定是否可以通过调用重新记录集的查询[CanRestart](#canrestart)成员函数。 `CanRestart`不能保证**Requery**将会成功。  
+ If the attempt to rebuild the recordset fails, the recordset is closed. Before you call **Requery**, you can determine whether the recordset can be requeried by calling the [CanRestart](#canrestart) member function. `CanRestart` does not guarantee that **Requery** will succeed.  
   
 > [!CAUTION]
->  调用**Requery**仅具有调用后**打开**。  
+>  Call **Requery** only after you have called **Open**.  
   
 > [!NOTE]
->  调用[Requery](#requery)更改 DAO 书签。  
+>  Calling [Requery](#requery) changes DAO bookmarks.  
   
- 不能调用**Requery**动态集类型或快照类型的记录集如果调用上`CanRestart`返回 0，也无法使用它在表类型记录集上。  
+ You can't call **Requery** on a dynaset-type or snapshot-type recordset if calling `CanRestart` returns 0, nor can you use it on a table-type recordset.  
   
- 如果这两个`IsBOF`和`IsEOF`后你调用返回非零**Requery**，查询未返回任何记录和记录集将包含任何数据。  
+ If both `IsBOF` and `IsEOF` return nonzero after you call **Requery**, the query didn't return any records and the recordset will contain no data.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"Requery 方法"。  
+ For related information, see the topic "Requery Method" in DAO Help.  
   
-##  <a name="seek"></a>CDaoRecordset::Seek  
- 调用此成员函数以满足指定的条件的当前索引，并确保记录当前记录索引的表类型记录集对象中找到的记录。  
+##  <a name="seek"></a>  CDaoRecordset::Seek  
+ Call this member function to locate the record in an indexed table-type recordset object that satisfies the specified criteria for the current index and make that record the current record.  
   
 ```  
 BOOL Seek(
@@ -1843,161 +1921,161 @@ BOOL Seek(
     WORD nKeys);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszComparison`  
- 以下字符串表达式之一:"<",></",>\<="，"="、"1> ="，或"1>"。  
+ One of the following string expressions: "<", "\<=", "=", ">=", or ">".  
   
  `pKey1`  
- 指向的指针[COleVariant](../../mfc/reference/colevariant-class.md)其值对应于索引中的第一个字段。 必需。  
+ A pointer to a [COleVariant](../../mfc/reference/colevariant-class.md) whose value corresponds to the first field in the index. Required.  
   
  *pKey2*  
- 指向的指针`COleVariant`其值对应于第二个字段在索引中，如果有的话。 默认为**NULL**。  
+ A pointer to a `COleVariant` whose value corresponds to the second field in the index, if any. Defaults to **NULL**.  
   
  *pKey3*  
- 指向的指针`COleVariant`其值对应于第三个字段在索引中，如果有的话。 默认为**NULL**。  
+ A pointer to a `COleVariant` whose value corresponds to the third field in the index, if any. Defaults to **NULL**.  
   
  *pKeyArray*  
- 指向 variant 数组的指针。 数组大小对应于索引中的字段数。  
+ A pointer to an array of variants. The array size corresponds to the number of fields in the index.  
   
  *nKeys*  
- 对应于数组，它是在索引中的字段数的大小的整数。  
+ An integer corresponding to the size of the array, which is the number of fields in the index.  
   
 > [!NOTE]
->  不要在项中指定通配符。 通配符将导致`Seek`返回相匹配的记录。  
+>  Do not specify wildcards in the keys. Wildcards will cause `Seek` to return no matching records.  
   
-### <a name="return-value"></a>返回值  
- 如果找到匹配的记录，否则为 0，则为非 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if matching records are found, otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 使用第二个 （数组） 版本`Seek`要处理的四个字段的索引或以上。  
+### <a name="remarks"></a>Remarks  
+ Use the second (array) version of `Seek` to handle indexes of four fields or more.  
   
- `Seek`使搜索表类型记录集上的高性能索引。 必须通过调用设置的当前索引`SetCurrentIndex`之前调用`Seek`。 如果索引标识了非唯一的键字段或字段，`Seek`查找满足的条件的第一个记录。 如果未设置索引，将引发异常。  
+ `Seek` enables high-performance index searching on table-type recordsets. You must set the current index by calling `SetCurrentIndex` before calling `Seek`. If the index identifies a nonunique key field or fields, `Seek` locates the first record that satisfies the criteria. If you do not set an index, an exception is thrown.  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ Note that if you are not creating a UNICODE recordset, the `COleVariant` objects must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- 当调用`Seek`，你将一个或多个密钥值和比较运算符传递 ("<",></",>\<="，"="、"1> ="，或"1>")。 `Seek`搜索指定的键字段，并找到满足指定的条件的第一个记录`lpszComparison`和`pKey1`。 一次找到，`Seek`返回非零值，并将该记录当前。 如果`Seek`无法找到匹配项，`Seek`返回零，而且当前记录是不确定。 当直接使用 DAO，则必须显示检查 NoMatch 属性。  
+ When you call `Seek`, you pass one or more key values and a comparison operator ("<", "\<=", "=", ">=", or ">"). `Seek` searches through the specified key fields and locates the first record that satisfies the criteria specified by `lpszComparison` and `pKey1`. Once found, `Seek` returns nonzero, and makes that record current. If `Seek` fails to locate a match, `Seek` returns zero, and the current record is undefined. When using DAO directly, you must explicitly check the NoMatch property.  
   
- 如果`lpszComparison`是"="、"1> ="，或"1>"，`Seek`开始的索引开始。 如果`lpszComparison`是"<" or=""> </"> <=",> </=",> `Seek`开始索引末尾、 向后搜索，除非末尾有重复的索引条目。 在这种情况下，`Seek`从索引末尾重复的索引条目中的任意项开始。  
+ If `lpszComparison` is "=", ">=", or ">", `Seek` starts at the beginning of the index. If `lpszComparison` is "<" or "<=", `Seek` starts at the end of the index and searches backward unless there are duplicate index entries at the end. In this case, `Seek` starts at an arbitrary entry among the duplicate index entries at the end of the index.  
   
- 那里没有为当前记录，当你使用`Seek`。  
+ There does not have to be a current record when you use `Seek`.  
   
- 若要查找动态集类型或满足特定条件的快照类型记录集中的记录，请使用查找操作。 若要包含的所有记录，而不仅仅是那些满足特定条件，用于移动操作记录之间移动。  
+ To locate a record in a dynaset-type or snapshot-type recordset that satisfies a specific condition, use the Find operations. To include all records, not just those that satisfy a specific condition, use the Move operations to move from record to record.  
   
- 不能调用`Seek`上附加任何的表类型，因为必须作为动态集类型或快照类型记录集打开附加的表。 但是，如果调用`CDaoDatabase::Open`若要直接打开可安装的 ISAM 数据库，可以调用`Seek`表在该数据库中，尽管性能可能会降低。  
+ You cannot call `Seek` on an attached table of any type because attached tables must be opened as dynaset-type or snapshot-type recordsets. However, if you call `CDaoDatabase::Open` to directly open an installable ISAM database, you can call `Seek` on tables in that database, although the performance may be slow.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"查找方法"。  
+ For related information, see the topic "Seek Method" in DAO Help.  
   
-##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
- 设置记录集对象的当前记录的相对的记录数。  
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition  
+ Sets the relative record number of a recordset object's current record.  
   
 ```  
 void SetAbsolutePosition(long lPosition);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lPosition*  
- 对应于记录集中的当前记录的序号位置。  
+ Corresponds to the ordinal position of the current record in the recordset.  
   
-### <a name="remarks"></a>备注  
- 调用`SetAbsolutePosition`使您能够将当前记录指针定位到特定记录根据其动态集类型或快照类型记录集中的序号位置。 您还可以通过调用来确定当前记录号[GetAbsolutePosition](#getabsoluteposition)。  
-  
-> [!NOTE]
->  此成员函数是仅对动态集类型和快照类型记录集有效。  
-  
- 基础的 DAO 对象的 AbsolutePosition 属性值是从零开始;设置为 0 是指在记录集中的第一个记录。 设置一个值大于填充的记录原因 MFC 引发异常数。 可以通过调用中确定的记录集填充记录数`GetRecordCount`成员函数。  
-  
- 如果删除该当前记录，不定义 AbsolutePosition 属性值，并且如果正在引用则 MFC 会引发异常。 新记录添加到序列的末尾。  
+### <a name="remarks"></a>Remarks  
+ Calling `SetAbsolutePosition` enables you to position the current record pointer to a specific record based on its ordinal position in a dynaset-type or snapshot-type recordset. You can also determine the current record number by calling [GetAbsolutePosition](#getabsoluteposition).  
   
 > [!NOTE]
->  此属性不应作为代理项记录编号。 仍然建议书签保留并返回到给定位置，而且这是在所有类型的支持书签的记录集对象之间定位当前记录的唯一方式。 具体而言，当其前面的记录将被删除时，将更改给定的记录的位置。 此外还有，给定的记录将具有相同的绝对位置，如果重新因为不能保证在记录集内的单个记录的顺序，除非它使用 SQL 语句中使用创建再次创建记录集不保证**ORDERBY**子句。  
+>  This member function is valid only for dynaset-type and snapshot-type recordsets.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"AbsolutePosition 属性"。  
+ The AbsolutePosition property value of the underlying DAO object is zero-based; a setting of 0 refers to the first record in the recordset. Setting a value greater than the number of populated records causes MFC to throw an exception. You can determine the number of populated records in the recordset by calling the `GetRecordCount` member function.  
   
-##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
- 调用此成员函数可置于包含指定的书签记录的记录集。  
+ If the current record is deleted, the AbsolutePosition property value is not defined, and MFC throws an exception if it is referenced. New records are added to the end of the sequence.  
+  
+> [!NOTE]
+>  This property is not intended to be used as a surrogate record number. Bookmarks are still the recommended way of retaining and returning to a given position and are the only way to position the current record across all types of recordset objects that support bookmarks. In particular, the position of a given record changes when record(s) preceding it are deleted. There is also no assurance that a given record will have the same absolute position if the recordset is re-created again because the order of individual records within a recordset is not guaranteed unless it is created with a SQL statement using an **ORDERBY** clause.  
+  
+ For related information, see the topic "AbsolutePosition Property" in DAO Help.  
+  
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark  
+ Call this member function to position the recordset on the record containing the specified bookmark.  
   
 ```  
 void SetBookmark(COleVariant varBookmark);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- A [COleVariant](../../mfc/reference/colevariant-class.md)包含特定记录的书签值对象。  
+ A [COleVariant](../../mfc/reference/colevariant-class.md) object containing the bookmark value for a specific record.  
   
-### <a name="remarks"></a>备注  
- 创建或打开记录集对象后，每个其记录已有一个唯一的书签。 你可以通过调用来检索当前记录的书签`GetBookmark`和保存到的值`COleVariant`对象。 更高版本可以通过调用返回到该记录`SetBookmark`使用已保存的书签值。  
+### <a name="remarks"></a>Remarks  
+ When a recordset object is created or opened, each of its records already has a unique bookmark. You can retrieve the bookmark for the current record by calling `GetBookmark` and saving the value to a `COleVariant` object. You can later return to that record by calling `SetBookmark` using the saved bookmark value.  
   
 > [!NOTE]
->  调用[Requery](#requery)更改 DAO 书签。  
+>  Calling [Requery](#requery) changes DAO bookmarks.  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ Note that if you are not creating a UNICODE recordset, the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- 有关相关信息，请参阅"书签属性"和 Bookmarkable 属性的主题"DAO 帮助中。  
+ For related information, see the topics "Bookmark Property" and Bookmarkable Property" in DAO Help.  
   
-##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
- 调用此成员函数可设置要缓存的记录数。  
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize  
+ Call this member function to set the number of records to be cached.  
   
 ```  
 void SetCacheSize(long lSize);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lSize`  
- 指定记录的数。 一个典型值为 100。 设置为 0 表示关闭缓存。 设置必须介于 5 和 1200年记录。 缓存可能会使用相当多的内存。  
+ Specifies the number of records. A typical value is 100. A setting of 0 turns off caching. The setting must be between 5 and 1200 records. The cache may use a considerable amount of memory.  
   
-### <a name="remarks"></a>备注  
- 缓存在本地保存最近的事件中运行应用程序时将再次请求数据从服务器检索的数据的内存空间。 数据缓存提高从通过动态集类型记录集对象的远程服务器中检索数据的应用程序的性能。 请求数据时，Microsoft Jet 数据库引擎所请求数据的缓存会首先检查而不是检索在服务器上，这需要花费更多的时间。 不是来自 ODBC 数据源的数据不保存在缓存中。  
+### <a name="remarks"></a>Remarks  
+ A cache is a space in local memory that holds the data most recently retrieved from the server in the event that the data will be requested again while the application is running. Data caching improves the performance of an application that retrieves data from a remote server through dynaset-type recordset objects. When data is requested, the Microsoft Jet database engine checks the cache for the requested data first rather than retrieving it from the server, which takes more time. Data that does not come from an ODBC data source is not saved in the cache.  
   
- 任何 ODBC 数据源，例如一个附加的表，可以本地缓存。 若要创建缓存，可从远程数据源，调用打开记录集对象`SetCacheSize`和`SetCacheStart`成员函数，然后调用`FillCache`成员函数或逐句通过移动操作的记录。 `lSize`参数`SetCacheSize`成员函数可以基于你的应用程序可以使用一次的记录数。 例如，如果你使用记录集作为数据源显示在屏幕上，你可以将`SetCacheSize``lSize`参数作为 20 以一次显示 20 的记录。  
+ Any ODBC data source, such as an attached table, can have a local cache. To create the cache, open a recordset object from the remote data source, call the `SetCacheSize` and `SetCacheStart` member functions, and then call the `FillCache` member function or step through the records by using one of the Move operations. The `lSize` parameter of the `SetCacheSize` member function can be based on the number of records your application can work with at one time. For example, if you are using a recordset as the source of the data to be displayed on screen, you could pass the `SetCacheSize` `lSize` parameter as 20 to display 20 records at one time.  
   
- 有关相关信息，请参阅 DAO 帮助中的主题"CacheSize，CacheStart 属性"。  
+ For related information, see the topic "CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
- 调用此成员函数可在记录集缓存中指定的第一条记录的书签。  
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart  
+ Call this member function to specify the bookmark of the first record in the recordset to be cached.  
   
 ```  
 void SetCacheStart(COleVariant varBookmark);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `varBookmark`  
- A [COleVariant](../../mfc/reference/colevariant-class.md) ，它指定的第一条记录书签中为缓存的记录集。  
+ A [COleVariant](../../mfc/reference/colevariant-class.md) that specifies the bookmark of the first record in the recordset to be cached.  
   
-### <a name="remarks"></a>备注  
- 你可以使用任何记录书签值`varBookmark`参数`SetCacheStart`成员函数。 使你想要与当前记录启动缓存，建立该记录使用的书签的记录[SetBookmark](#setbookmark)，并将书签值作为参数传递`SetCacheStart`成员函数。  
+### <a name="remarks"></a>Remarks  
+ You can use the bookmark value of any record for the `varBookmark` parameter of the `SetCacheStart` member function. Make the record you want to start the cache with the current record, establish a bookmark for that record using [SetBookmark](#setbookmark), and pass the bookmark value as the parameter for the `SetCacheStart` member function.  
   
- Microsoft Jet 数据库引擎从缓存中，请求缓存范围内的记录并从服务器请求到的缓存范围外的记录。  
+ The Microsoft Jet database engine requests records within the cache range from the cache, and it requests records outside the cache range from the server.  
   
- 从缓存中检索的记录不能反映其他用户对源数据同时进行的更改。  
+ Records retrieved from the cache do not reflect changes made concurrently to the source data by other users.  
   
- 若要强制所有缓存的数据更新，请将传递`lSize`参数`SetCacheSize`为 0，调用`SetCacheSize`再次缓存的大小与你最初请求，，然后调用`FillCache`成员函数。  
+ To force an update of all the cached data, pass the `lSize` parameter of `SetCacheSize` as 0, call `SetCacheSize` again with the size of the cache you originally requested, and then call the `FillCache` member function.  
   
- 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ Note that if you are not creating a UNICODE recordset, the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- 有关相关信息，请参阅主题 CacheSize，CacheStart 属性 DAO 帮助中。  
+ For related information, see the topic CacheSize, CacheStart Properties" in DAO Help.  
   
-##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
- 调用此成员函数以在表类型记录集上设置索引。  
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex  
+ Call this member function to set an index on a table-type recordset.  
   
 ```  
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszIndex`  
- 一个指针，它包含要设置的索引的名称。  
+ A pointer containing the name of the index to be set.  
   
-### <a name="remarks"></a>备注  
- 基表中的记录不存储在任何特定的顺序。 设置索引更改从数据库中返回的记录的顺序，但它不会影响的记录存储的顺序。 必须已定义指定的索引。 如果你尝试使用索引对象不存在，或如果在调用时，不设置索引[Seek](#seek)，则 MFC 会引发异常。  
+### <a name="remarks"></a>Remarks  
+ Records in base tables are not stored in any particular order. Setting an index changes the order of records returned from the database, but it does not affect the order in which the records are stored. The specified index must already be defined. If you try to use an index object that does not exist, or if the index is not set when you call [Seek](#seek), MFC throws an exception.  
   
- 你可以通过调用创建新的索引的表[CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex)并将新的索引追加到基础 tabledef 索引集合中，通过调用[CDaoTableDef::Append](../../mfc/reference/cdaotabledef-class.md#append)，然后重新打开记录集。  
+ You can create a new index for the table by calling [CDaoTableDef::CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) and appending the new index to the Indexes collection of the underlying tabledef by calling [CDaoTableDef::Append](../../mfc/reference/cdaotabledef-class.md#append), and then reopening the recordset.  
   
- 从表类型记录集返回的记录可仅通过为基础 tabledef 定义的索引进行排序。 若要对其他顺序排序的记录进行排序，可以打开动态集类型或快照类型记录集使用的 SQL **ORDERBY**子句存储在[CDaoRecordset::m_strSort](#m_strsort)。  
+ Records returned from a table-type recordset can be ordered only by the indexes defined for the underlying tabledef. To sort records in some other order, you can open a dynaset-type or snapshot-type recordset using a SQL **ORDERBY** clause stored in [CDaoRecordset::m_strSort](#m_strsort).  
   
- 有关相关信息，请参阅主题"索引对象"，并定义 DAO 帮助中的"当前索引"。  
+ For related information, see the topic "Index Object" and the definition "current index" in DAO Help.  
   
-##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
- 调用此成员函数来标记的字段数据成员的记录集持久化为已更改或为不变。  
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty  
+ Call this member function to flag a field data member of the recordset as changed or as unchanged.  
   
 ```  
 void SetFieldDirty(
@@ -2005,39 +2083,39 @@ void SetFieldDirty(
     BOOL bDirty = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 包含在记录集中的字段数据成员的地址或**NULL**。 如果**NULL**，标记在记录集中的所有字段数据成员。 (C + + **NULL**不同时，为 Null，在数据库术语中，这意味着"having 没有值。")  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bDirty`  
- **TRUE**字段数据成员是否会被标记为"脏"（更改）。 否则为**FALSE**字段数据成员是否会被标记为"清理"（未更改）。  
+ **TRUE** if the field data member is to be flagged as "dirty" (changed). Otherwise **FALSE** if the field data member is to be flagged as "clean" (unchanged).  
   
-### <a name="remarks"></a>备注  
- 将标记为未更改的字段，可确保该字段不会更新。  
+### <a name="remarks"></a>Remarks  
+ Marking fields as unchanged ensures the field is not updated.  
   
- Framework 标记更改字段数据成员，以确保它们要写入到数据源上的记录由 DAO 记录字段交换 (DFX) 机制。 更改字段的值通常设置为字段脏自动，因此你将很少需要调用`SetFieldDirty`你自己，但你有时可能想要确保，列将显式更新或插入无论什么样的值是在字段数据成员中。 DFX 机制还使用了使用**PSEUDONULL**。 有关详细信息，请参阅[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。  
+ The framework marks changed field data members to ensure they will be written to the record on the data source by the DAO record field exchange (DFX) mechanism. Changing the value of a field generally sets the field dirty automatically, so you will seldom need to call `SetFieldDirty` yourself, but you might sometimes want to ensure that columns will be explicitly updated or inserted regardless of what value is in the field data member. The DFX mechanism also employs the use of **PSEUDONULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
- 如果未使用双缓冲机制，然后将更改字段的值不会不自动将字段设置为脏。 在这种情况下，将需要显式将字段设置为脏。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
+ If the double-buffering mechanism is not being used, then changing the value of the field does not automatically set the field as dirty. In this case, it will be necessary to explicitly set the field as dirty. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
 > [!NOTE]
->  只有具有调用之后才调用此成员函数[编辑](#edit)或[AddNew](#addnew)。  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- 使用**NULL**函数的第一个参数将函数应用到所有**outputColumn**字段，不**param**中的字段`CDaoFieldExchange`。 例如，调用  
+ Using **NULL** for the first argument of the function will apply the function to all **outputColumn** fields, not **param** fields in `CDaoFieldExchange`. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase # 6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]  
   
- 将仅设置**outputColumn**字段设置为**NULL**;**param**字段不会受到影响。  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
- 若要在**param**，你必须提供个人的实际地址**param**你想要使用，如︰  
+ To work on a **param**, you must supply the actual address of the individual **param** you want to work on, such as:  
   
- [!code-cpp[NVC_MFCDatabase # 7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]  
   
- 这意味着您不能设置所有**param**字段设置为**NULL**，如可以按照与**outputColumn**字段。  
+ This means you cannot set all **param** fields to **NULL**, as you can with **outputColumn** fields.  
   
- `SetFieldDirty`通过实现`DoFieldExchange`。  
+ `SetFieldDirty` is implemented through `DoFieldExchange`.  
   
-##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
- 调用此成员函数来标记的字段数据成员的记录集为 Null （专门具有任何值） 或为非 Null。  
+##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull  
+ Call this member function to flag a field data member of the recordset as Null (specifically having no value) or as non-Null.  
   
 ```  
 void SetFieldNull(
@@ -2045,35 +2123,35 @@ void SetFieldNull(
     BOOL bNull = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pv`  
- 包含在记录集中的字段数据成员的地址或**NULL**。 如果**NULL**，标记在记录集中的所有字段数据成员。 (C + + **NULL**不同时，为 Null，在数据库术语中，这意味着"having 没有值。")  
+ Contains the address of a field data member in the recordset or **NULL**. If **NULL**, all field data members in the recordset are flagged. (C++ **NULL** is not the same as Null in database terminology, which means "having no value.")  
   
  `bNull`  
- 如果字段数据成员均被标记为不具有任何值 (Null)，则为非 0。 如果字段数据成员是被标记为非 Null 则否则为 0。  
+ Nonzero if the field data member is to be flagged as having no value (Null). Otherwise 0 if the field data member is to be flagged as non-Null.  
   
-### <a name="remarks"></a>备注  
- `SetFieldNull`用于绑定中的字段，`DoFieldExchange`机制。  
+### <a name="remarks"></a>Remarks  
+ `SetFieldNull` is used for fields bound in the `DoFieldExchange` mechanism.  
   
- 当你将一条新记录添加到记录集时，所有字段数据成员最初设置为 Null 值的并标记为"脏"（更改）。 当从数据源检索一条记录时，其列已具有值，或者为 Null。 如果不合适，若要使字段为 Null， [CDaoException](../../mfc/reference/cdaoexception-class.md)引发。  
+ When you add a new record to a recordset, all field data members are initially set to a Null value and flagged as "dirty" (changed). When you retrieve a record from a data source, its columns either already have values or are Null. If it is not appropriate to make a field Null, a [CDaoException](../../mfc/reference/cdaoexception-class.md) is thrown.  
   
- 如果你使用双缓冲机制，例如，如果你明确想要将当前记录的字段指定为不具有一个值，调用`SetFieldNull`与`bNull`设置为**TRUE**标记为 Null。 如果字段以前已标记为 Null，并且现在想要为其提供一个值，只需将其新值设置。 不需要删除与 Null 标志`SetFieldNull`。 若要确定是否允许该字段为 Null，调用[IsFieldNullable](#isfieldnullable)。  
+ If you are using the double-buffering mechanism, for example, if you specifically wish to designate a field of the current record as not having a value, call `SetFieldNull` with `bNull` set to **TRUE** to flag it as Null. If a field was previously marked Null and you now want to give it a value, simply set its new value. You do not have to remove the Null flag with `SetFieldNull`. To determine whether the field is allowed to be Null, call [IsFieldNullable](#isfieldnullable).  
   
- 如果你未使用双缓冲机制，然后将更改字段的值不会自动设置字段作为脏和非 Null。 具体而言，必须设置字段，脏和非 Null。 中包含的标志[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)控制此自动字段检查。  
+ If you are not using the double-buffering mechanism, then changing the value of the field does not automatically set the field as dirty and non-Null. You must specifically set the fields dirty and non-Null. The flag contained in [m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields) controls this automatic field checking.  
   
- DFX 机制采用使用**PSEUDONULL**。 有关详细信息，请参阅[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)。  
+ The DFX mechanism employs the use of **PSEUDONULL**. For more information, see [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation).  
   
 > [!NOTE]
->  只有具有调用之后才调用此成员函数[编辑](#edit)或[AddNew](#addnew)。  
+>  Call this member function only after you have called [Edit](#edit) or [AddNew](#addnew).  
   
- 使用**NULL**为函数的第一个参数将该函数仅适用于**outputColumn**字段，不**param**中的字段`CDaoFieldExchange`。 例如，调用  
+ Using **NULL** for the first argument of the function will apply the function only to **outputColumn** fields, not **param** fields in `CDaoFieldExchange`. For instance, the call  
   
- [!code-cpp[NVC_MFCDatabase # 8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]  
   
- 将仅设置**outputColumn**字段设置为**NULL**;**param**字段不会受到影响。  
+ will set only **outputColumn** fields to **NULL**; **param** fields will be unaffected.  
   
-##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
- 调用此成员函数以设置字段的值，按序号位置或通过更改字符串的值。  
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue  
+ Call this member function to set the value of a field, either by ordinal position or by changing the value of the string.  
   
 ```  
 virtual void SetFieldValue(
@@ -2096,70 +2174,70 @@ void SetFieldValue(
     LPCTSTR lpszValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指向包含的字段名称的字符串的指针。  
+ A pointer to a string containing the name of a field.  
   
  `varValue`  
- 对引用[COleVariant](../../mfc/reference/colevariant-class.md)对象包含的值的字段的内容。  
+ A reference to a [COleVariant](../../mfc/reference/colevariant-class.md) object containing the value of the field's contents.  
   
  `nIndex`  
- 一个整数，表示记录集的字段集合 （从零开始） 中的字段的序号位置。  
+ An integer that represents the ordinal position of the field in the recordset's Fields collection (zero-based).  
   
  `lpszValue`  
- 指向包含该字段的内容的值的字符串的指针。  
+ A pointer to a string containing the value of the field's contents.  
   
-### <a name="remarks"></a>备注  
- 使用`SetFieldValue`和[GetFieldValue](#getfieldvalue)将字段动态绑定在运行的时而不是静态绑定列使用[DoFieldExchange](#dofieldexchange)机制。  
+### <a name="remarks"></a>Remarks  
+ Use `SetFieldValue` and [GetFieldValue](#getfieldvalue) to dynamically bind fields at run time rather than statically binding columns using the [DoFieldExchange](#dofieldexchange) mechanism.  
   
- 请注意，是否你不在创建 UNICODE 记录集，你必须使用一种形式的`SetFieldValue`不包含`COleVariant`参数，或`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ Note that if you are not creating a UNICODE recordset, you must either use a form of `SetFieldValue` that does not contain a `COleVariant` parameter, or the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
- 有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
+ For related information, see the topics "Field Object" and "Value Property" in DAO Help.  
   
-##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
- 调用此成员函数可将字段设置为 Null 值。  
+##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull  
+ Call this member function to set the field to a Null value.  
   
 ```  
 void SetFieldValueNull(int nIndex);  
 void SetFieldValueNull(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 中的记录集，由从零开始的索引查找的字段的索引。  
+ The index of the field in the recordset, for lookup by zero-based index.  
   
  `lpszName`  
- 按名称查找记录集中的字段名称。  
+ The name of the field in the recordset, for lookup by name.  
   
-### <a name="remarks"></a>备注  
- C + + **NULL**不同时，则为 Null，这在数据库术语中，意味着"having 没有值。"  
+### <a name="remarks"></a>Remarks  
+ C++ **NULL** is not the same as Null, which, in database terminology, means "having no value."  
   
- 有关相关信息，请参阅"字段对象"和"值属性"DAO 帮助中的主题。  
+ For related information, see the topics "Field Object" and "Value Property" in DAO Help.  
   
-##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
- 调用此成员函数以设置锁定记录集的类型。  
+##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode  
+ Call this member function to set the type of locking for the recordset.  
   
 ```  
 void SetLockingMode(BOOL bPessimistic);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bPessimistic*  
- 一个标志，指示锁定的类型。  
+ A flag that indicates the type of locking.  
   
-### <a name="remarks"></a>备注  
- 只要你调用保守式锁定时实际上，包含正在编辑的记录 2k 页锁定**编辑**成员函数。 在调用时，该页是解锁**更新**或**关闭**成员函数或任何移动或查找操作。  
+### <a name="remarks"></a>Remarks  
+ When pessimistic locking is in effect, the 2K page containing the record you are editing is locked as soon as you call the **Edit** member function. The page is unlocked when you call the **Update** or **Close** member function or any of the Move or Find operations.  
   
- 仅当与正在更新记录时，才时乐观锁定实际上是锁定 2k 页面，其中包含记录**更新**成员函数。  
+ When optimistic locking is in effect, the 2K page containing the record is locked only while the record is being updated with the **Update** member function.  
   
- 如果页面被锁定，没有其他用户可以编辑的同一页面上的记录。 如果调用`SetLockingMode`和传递一个非零值和其他用户已锁定的页中，在调用时，将引发异常**编辑**。 其他用户可以从锁定的页读取数据。  
+ If a page is locked, no other user can edit records on the same page. If you call `SetLockingMode` and pass a nonzero value and another user already has the page locked, an exception is thrown when you call **Edit**. Other users can read data from locked pages.  
   
- 如果调用`SetLockingMode`具有零值及更高版本调用**更新**时由另一个用户锁定页，则会发生异常。 若要查看其他用户向您的记录所做的更改 （并放弃所做的更改），调用`SetBookmark`具有当前记录的书签值的成员函数。  
+ If you call `SetLockingMode` with a zero value and later call **Update** while the page is locked by another user, an exception occurs. To see the changes made to your record by another user (and lose your changes), call the `SetBookmark` member function with the bookmark value of the current record.  
   
- 当使用 ODBC 数据源，锁定模式始终是开放式的。  
+ When working with ODBC data sources, the locking mode is always optimistic.  
   
-##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
- 调用此成员函数以在运行时在记录集设置参数的值。  
+##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue  
+ Call this member function to set the value of a parameter in the recordset at run time.  
   
 ```  
 virtual void SetParamValue(
@@ -2172,89 +2250,89 @@ virtual void SetParamValue(
     const COleVariant& varValue);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Querydef 的参数集合中的参数的数字位置。  
+ The numerical position of the parameter in the querydef's Parameters collection.  
   
  `var`  
- 要设置; 的值请参阅备注。  
+ The value to set; see Remarks.  
   
  `lpszName`  
- 参数要设置其值的名称。  
+ The name of the parameter whose value you want to set.  
   
-### <a name="remarks"></a>备注  
- 参数必须已建立作为记录集的 SQL 字符串的一部分。 按名称或在集合中的索引位置，你可以访问参数。  
+### <a name="remarks"></a>Remarks  
+ The parameter must already have been established as part of the recordset's SQL string. You can access the parameter either by name or by its index position in the collection.  
   
- 指定的值将设置为`COleVariant`对象。 有关设置的所需的值和中的类型信息你`COleVariant`对象，请参阅类[COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果你不在创建 UNICODE 记录集，则`COleVariant`对象必须显式声明 ANSI。 这可以通过使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**窗体的构造函数`vtSrc`设置为`VT_BSTRT`(ANSI) 或通过使用**COleVariant**函数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**与`vtSrc`设置为`VT_BSTRT`。  
+ Specify the value to set as a `COleVariant` object. For information about setting the desired value and type in your `COleVariant` object, see class [COleVariant](../../mfc/reference/colevariant-class.md). Note that if you are not creating a UNICODE recordset, the `COleVariant` object must be explicitly declared ANSI. This can be done by using the [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc`**,** `vtSrc` **)** form of constructor with `vtSrc` set to `VT_BSTRT` (ANSI) or by using the **COleVariant** function [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc`**,** `vtSrc` **)** with `vtSrc` set to `VT_BSTRT`.  
   
-##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
- 调用此成员函数可将参数设置为 Null 值。  
+##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
+ Call this member function to set the parameter to a Null value.  
   
 ```  
 void SetParamValueNull(int nIndex);  
 void SetParamValueNull(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 中的记录集，由从零开始的索引查找的字段的索引。  
+ The index of the field in the recordset, for lookup by zero-based index.  
   
  `lpszName`  
- 按名称查找记录集中的字段名称。  
+ The name of the field in the recordset, for lookup by name.  
   
-### <a name="remarks"></a>备注  
- C + + **NULL**不同时，则为 Null，这在数据库术语中，意味着"having 没有值。"  
+### <a name="remarks"></a>Remarks  
+ C++ **NULL** is not the same as Null, which, in database terminology, means "having no value."  
   
-##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
- 调用此成员函数可设置一个值，更改基于百分比的中记录集的记录的记录集对象中的当前记录的近似位置。  
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition  
+ Call this member function to set a value that changes the approximate location of the current record in the recordset object based on a percentage of the records in the recordset.  
   
 ```  
 void SetPercentPosition(float fPosition);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *fPosition*  
- 一个介于 0 和 100 之间的数字。  
+ A number between 0 and 100.  
   
-### <a name="remarks"></a>备注  
- 在使用动态集类型或快照类型的记录集，首先记录集填充通过移动到最后一个记录，然后才能调用`SetPercentPosition`。 如果调用`SetPercentPosition`完全填充记录集之前, 移动的量是相对于访问的值所述的记录数[GetRecordCount](#getrecordcount)。 你可以通过将移动到最后一个记录调用`MoveLast`。  
+### <a name="remarks"></a>Remarks  
+ When working with a dynaset-type or snapshot-type recordset, first populate the recordset by moving to the last record before you call `SetPercentPosition`. If you call `SetPercentPosition` before fully populating the recordset, the amount of movement is relative to the number of records accessed as indicated by the value of [GetRecordCount](#getrecordcount). You can move to the last record by calling `MoveLast`.  
   
- 一旦调用`SetPercentPosition`，与该值对应的近似位置处的记录将成为当前。  
+ Once you call `SetPercentPosition`, the record at the approximate position corresponding to that value becomes current.  
   
 > [!NOTE]
->  调用`SetPercentPosition`移动到特定记录在记录集中的当前记录不建议。 调用[SetBookmark](#setbookmark)成员函数。  
+>  Calling `SetPercentPosition` to move the current record to a specific record in a recordset is not recommended. Call the [SetBookmark](#setbookmark) member function instead.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"PercentPosition 属性"。  
+ For related information, see the topic "PercentPosition Property" in DAO Help.  
   
-##  <a name="update"></a>CDaoRecordset::Update  
- 在调用后调用此成员函数`AddNew`或**编辑**成员函数。  
+##  <a name="update"></a>  CDaoRecordset::Update  
+ Call this member function after a call to the `AddNew` or **Edit** member function.  
   
 ```  
 virtual void Update();
 ```  
   
-### <a name="remarks"></a>备注  
- 完成所需的此调用`AddNew`或**编辑**操作。  
+### <a name="remarks"></a>Remarks  
+ This call is required to complete the `AddNew` or **Edit** operation.  
   
- 同时`AddNew`和**编辑**准备保存到数据源在其中放置添加或编辑的数据的编辑缓冲区。 **更新**将数据保存。 更新仅这些字段标记或检测到为已更改。  
+ Both `AddNew` and **Edit** prepare an edit buffer in which the added or edited data is placed for saving to the data source. **Update** saves the data. Only those fields marked or detected as changed are updated.  
   
- 如果数据源支持事务，则你可以**更新**调用 (和其对应`AddNew`或**编辑**调用) 事务的一部分。  
+ If the data source supports transactions, you can make the **Update** call (and its corresponding `AddNew` or **Edit** call) part of a transaction.  
   
 > [!CAUTION]
->  如果调用**更新**但未事先调用`AddNew`或**编辑**，**更新**引发`CDaoException`。 如果调用`AddNew`或**编辑**，必须调用**更新**之前调用[MoveNext](#movenext)或关闭记录集或数据源连接。 否则，所做的更改都将丢失而不另行通知。  
+>  If you call **Update** without first calling either `AddNew` or **Edit**, **Update** throws a `CDaoException`. If you call `AddNew` or **Edit**, you must call **Update** before you call [MoveNext](#movenext) or close either the recordset or the data source connection. Otherwise, your changes are lost without notification.  
   
- 记录当记录集对象保守式锁定在多用户环境中时，保持锁定状态从时间**编辑**完成更新之前使用。 如果乐观锁定记录集，该记录已被锁定，在数据库中更新之前，将与预编辑的记录进行比较。 如果记录已更改，因为你调用**编辑**、**更新**操作失败且 MFC 引发异常。 您可以更改与锁定模式`SetLockingMode`。  
+ When the recordset object is pessimistically locked in a multiuser environment, the record remains locked from the time **Edit** is used until the updating is complete. If the recordset is optimistically locked, the record is locked and compared with the pre-edited record just before it is updated in the database. If the record has changed since you called **Edit**, the **Update** operation fails and MFC throws an exception. You can change the locking mode with `SetLockingMode`.  
   
 > [!NOTE]
->  外部数据库格式，如 ODBC 和可安装 ISAM 上始终使用乐观锁定。  
+>  Optimistic locking is always used on external database formats, such as ODBC and installable ISAM.  
   
- 有关相关信息，请参阅主题的"AddNew 方法"、"正在执行方法"、"Delete 方法"、"上次更改时间属性"、"更新方法"和 DAO 帮助中的"EditMode 属性"。  
+ For related information, see the topics "AddNew Method", "CancelUpdate Method", "Delete Method", "LastModified Property", "Update Method", and "EditMode Property" in DAO Help.  
   
-## <a name="see-also"></a>另请参阅  
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CDaoTableDef 类](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoWorkspace 类](../../mfc/reference/cdaoworkspace-class.md)   
- [CDaoDatabase 类](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoQueryDef 类](../../mfc/reference/cdaoquerydef-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)
 

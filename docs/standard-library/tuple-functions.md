@@ -1,5 +1,5 @@
 ---
-title: "&lt;tuple&gt; 函数 | Microsoft Docs"
+title: '&lt;tuple&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,20 +18,27 @@ dev_langs:
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: acf980e3bcd491eb08dee0c87ee1762dc25b417b
+helpviewer_keywords:
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8853217b74474559ea00fe0819ec819bde5f9a3d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函数
+# <a name="lttuplegt-functions"></a>&lt;tuple&gt; functions
 ||||  
 |-|-|-|  
 |[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|  
   
 ##  <a name="get"></a>  get
- 按索引或类型（在 C++14 中）从 `tuple` 对象获取元素。  
+ Gets an element from a `tuple` object, by index or (in C++14) by type.  
   
 ```  
 // by index:
@@ -61,25 +68,25 @@ template <class T, class... Types>
    constexpr T&& get(tuple<Types...>&& Tuple) noexcept;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Index`  
- 要获取的元素的索引。  
+ The index of the element to get.  
   
  `Types`  
- 元组中声明的序列顺序，按声明顺序排列。  
+ The sequence of types declared in the tuple, in declaration order.  
   
  `T`  
- 要获取的元素的类型。  
+ The type of the element to get.  
   
  `Tuple`  
- 包含任意数目元素的 std::tuple。  
+ A std::tuple that contains any number of elements.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回对索引 `Index`处的值或 `T` 对象中类型为 `tuple` 的值的引用。  
+### <a name="remarks"></a>Remarks  
+ The template functions return a reference to the value at index `Index`, or of type `T` in the `tuple` object.  
   
- 如果元组中包含的 T 类型元素的个数不为一个，则调用 `get<T>(Tuple)` 将生成编译器错误。  
+ Calling `get<T>(Tuple)` will produce a compiler error if Tuple contains more or less than one element of type T.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -108,27 +115,27 @@ int main() {
 0 1.42 Call me Tuple  
 ```  
   
-##  <a name="make_tuple"></a>make_tuple
- 从元素值中生成一个 `tuple`。  
+##  <a name="make_tuple"></a>  make_tuple
+ Makes a `tuple` from element values.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
    tuple<V1, V2, ..., VN> make_tuple(const T1& t1, const T2& t2, ..., const TN& tN);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `TN`  
- 第 N 个函数参数的类型。  
+ The type of the Nth function parameter.  
   
  `tN`  
- 第 N 个函数参数的值。  
+ The value of the Nth function parameter.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回 `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`，如果对应类型 `Ti` 是 `cv` `reference_wrapper<X>`，则每个类型 `Vi` 都为 `X&`；否则为 `Ti`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, where each type `Vi` is `X&` when the corresponding type `Ti` is `cv` `reference_wrapper<X>`; otherwise, it is `Ti`.  
   
- `make_tuple` 的优势之一在于要存储的对象类型由编译器自动确定，而不必显式指定。 使用 `make_tuple<int, int>(1, 2)` 时请不要使用显式模板参数（如 `make_tuple`），因为它冗长而多余并会增加复杂的右值引用问题，可能会导致编译失败。  
+ One advantage of `make_tuple` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `make_tuple<int, int>(1, 2)` when you use `make_tuple` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__make_tuple.cpp   
@@ -165,22 +172,22 @@ int main() {
  4 5 6 7  
 ```  
   
-##  <a name="tie"></a>平分
- 从元素引用中生成一个 `tuple`。  
+##  <a name="tie"></a>  tie
+ Makes a `tuple` from element references.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
 tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `TN`  
- 第 N 个元组元素的基类型。  
+ The base type of the Nth tuple element.  
   
-### <a name="remarks"></a>备注  
- 此模板函数返回 `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__tie.cpp   
@@ -221,7 +228,7 @@ int main() {
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)
 
 

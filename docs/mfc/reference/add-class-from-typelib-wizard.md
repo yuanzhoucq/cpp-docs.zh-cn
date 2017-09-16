@@ -1,71 +1,90 @@
 ---
-title: "从类型库添加类向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.typelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "从类型库向导添加类 [C++]"
-  - "COM 接口, 添加类"
+title: Add Class from Typelib Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.typelib
+dev_langs:
+- C++
+helpviewer_keywords:
+- Add Class from TypeLib Wizard [MFC]
+- COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 从类型库添加类向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9622a818e6334caad172f31f717eddc7e1230965
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用该向导从可用的类型库添加 MFC 类。  该向导为从选定的类型库添加的每个接口创建类。  
+---
+# <a name="add-class-from-typelib-wizard"></a>Add Class from Typelib Wizard
+Use this wizard to add an MFC class from an available type library. The wizard creates a class for each interface you add from the selected type library.  
   
- **从以下来源添加类：**  
- 指定类型库的位置，将从该位置创建类。  
+ **Add class from**  
+ Specifies the location of the type library, from which the class is created.  
   
-|选项|说明|  
-|--------|--------|  
-|**注册表**|类型库已在系统中注册。  已注册的类型库在“可用的类型库”中列出。|  
-|**文件**|类型库不一定在系统中注册，但包含在文件中。  必须在“位置”中提供文件的位置。|  
+|Option|Description|  
+|------------|-----------------|  
+|**Registry**|The type library is registered in the system. Registered type libraries are listed in **Available type libraries**.|  
+|**File**|The type library is not necessarily registered in the system but is contained in a file. You must provide the file location in **Location**.|  
   
- **可用的类型库**  
- 列出系统中当前注册的类型库。  从此列表中选定一个类型库，在“接口”列表中显示它的接口。  
+ **Available type libraries**  
+ Lists the type libraries currently registered in the system. Select a type library from this list to display its interfaces in the **Interfaces** list.  
   
- 有关注册类型库的更多信息，请参见 MSDN Library 中的“分布式 COM 的内部：类型库和语言集成”。  
+ See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information about registering type libraries.  
   
- **位置**  
- 指定类型库的位置。  如果单击**“从以下来源添加类”**下的**“文件”**，则可以提供包含类型库的文件的位置。  若要浏览文件的位置，请单击省略号按钮。  
+ **Location**  
+ Specifies the location of the type library. If you click **File** under **Add Class From**, you can provide the location of the file containing the type library. To browse to the location of the file, click the ellipsis button.  
   
- **接口**  
- 列出“可用的类型库”列表中当前选定的类型库中的接口。  
+ **Interfaces**  
+ Lists the interfaces in the type library currently selected in the **Available type libraries** list.  
   
-|传输按钮|说明|  
-|----------|--------|  
-|**\>**|添加“接口”列表中当前选定的接口。  如果没有选定接口则无效。|  
-|**\>\>**|添加“可用的类型库”列表中当前选定的类型库中的所有接口。|  
-|**\<**|移除“生成的类”列表中当前选定的类。  如果“生成的类”列表中没有当前选定的类则无效。|  
-|**\<\<**|移除“生成的类”列表中的所有类。  如果“生成的类”列表为空则无效。|  
+|Transfer button|Description|  
+|---------------------|-----------------|  
+|**>**|Adds the interface currently selected in the **Interfaces** list. Dimmed if no interface is selected.|  
+|**>>**|Adds all the interfaces in the type library currently selected in the **Available type libraries** list.|  
+|**<**|Removes the class currently selected in the **Generated classes** list. Dimmed if no class is currently selected in the **Generated classes** list.|  
+|**<\<**|Removes all the classes in the **Generated classes** list. Dimmed if the **Generated classes** list is empty.|  
   
- **生成的类**  
- 指定要从使用 **\>** 或**\>\>** 按钮添加的接口生成的类名。  可以单击此框选择类，然后使用向上或向下键在列表中滚动，查看单击“完成”时，向导在“类”\(`Class`\) 框中生成的每个类名和在“文件”框中生成的每个文件名。  在该框中，一次只能选择一个类。  
+ **Generated classes**  
+ Specifies the class names to be generated from the interfaces added using the **>** or **>>** button. You can click this box to select a class, and then use the up or down keys to scroll through the list, viewing each class name in the `Class` box and file name in the **File** box that the wizard generates when you click **Finish**. You can select only one class at a time in this box.  
   
- 在该列表中选择一个类并单击 **\<**可以移除该类。  不需要通过在“生成的类”框中选定类来移除所有的类；通过单击**\<\<**, 便可以移除“生成的类”框中的所有类**Generated classes** 。  
+ You can remove a class by selecting it in this list and clicking **<**. You do not need to select a class in the Generated classes box to remove all classes; by clicking **<<**, you remove all classes in the **Generated classes** box.  
   
  `Class`  
- 指定在单击“完成”时向导添加的“生成的类”框中选定的类名。  可以在“类”\(`Class`\) 框中编辑该名称。  
+ Specifies the name of the class selected in the **Generated classes** box that the wizard adds when you click **Finish**. You can edit the name in the `Class` box.  
   
- **文件**  
- 设置新类的头文件名。  默认情况下，此名称基于在“生成的类”中提供的名称。  单击省略号按钮将该文件名保存到所选位置，或将类声明追加到现有文件。  如果选择现有文件，则直到在向导中单击“完成”时，向导才将其保存到所选位置。  
+ **File**  
+ Sets the name of the header file for the new class. By default, this name is based on the name you provide in **Generated classes**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- 向导不覆盖文件。  如果选择现有文件的名称，则单击“完成”时，向导会提示您指出是否应向该文件的内容中追加类声明。  单击**“是”**追加该文件；单击**“否”**返回到向导并指定另一个文件名。  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
-## 请参阅  
- [类型库中的 MFC 类](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
- [自动化客户端：使用类型库](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class from a Type Library](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

@@ -1,15 +1,14 @@
 ---
-title: "ctype 类 | Microsoft 文档"
+title: ctype Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ctype
 - xlocale/std::ctype
 - locale/std::ctype::char_type
 - locale/std::ctype::do_is
@@ -29,7 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ctype class
+- std::ctype [C++]
+- std::ctype [C++], char_type
+- std::ctype [C++], do_is
+- std::ctype [C++], do_narrow
+- std::ctype [C++], do_scan_is
+- std::ctype [C++], do_scan_not
+- std::ctype [C++], do_tolower
+- std::ctype [C++], do_toupper
+- std::ctype [C++], do_widen
+- std::ctype [C++], is
+- std::ctype [C++], narrow
+- std::ctype [C++], scan_is
+- std::ctype [C++], scan_not
+- std::ctype [C++], tolower
+- std::ctype [C++], toupper
+- std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 caps.latest.revision: 19
 author: corob-msft
@@ -49,119 +63,119 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bc317befaaea6c504d97738fe29afc2478ff0042
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ctype-class"></a>ctype 类
-一种提供一个 facet 的类，此 facet 用于对字符进行分类、转换大写和小写以及在本机字符集与区域设置使用的字符集之间进行转换。  
+# <a name="ctype-class"></a>ctype Class
+A class that provides a facet that is used to classify characters, convert from upper and lower cases, and convert between the native character set and that set used by the locale.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class ctype : public ctype_base;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 在程序中用于对字符进行编码的类型。  
+ The type used within a program to encode characters.  
   
-## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **id** 中存储唯一的正值。 对基类 ctype_base 中的嵌套位掩码类型提供了分类条件。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.** Classification criteria are provided a nested bitmask type in the base class ctype_base.  
   
- C++ 标准库定义了此模板类的两个显式专用化：  
+ The C++ Standard Library defines two explicit specializations of this template class:  
   
-- [ctype](../standard-library/ctype-char-class.md)< `char`>，此显式专用化的不同之处将单独说明。  
+- [ctype](../standard-library/ctype-char-class.md)< `char`>, an explicit specialization whose differences are described separately.  
   
-- **ctype**< `wchar_t`>，将元素视为宽字符。  
+- **ctype**< `wchar_t`>, which treats elements as wide characters.  
   
- 模板类 **ctype**\< **CharType**> 的其他专用化：  
+ Other specializations of template class **ctype**\< **CharType**>:  
   
--   使用表达式 ( `char`) **ch** 将 **CharType** 类型的值 ***ch*** 转换为 `char` 类型的值。  
+-   Convert a value ***ch*** of type **CharType** to a value of type `char` with the expression ( `char`) **ch**.  
   
--   使用表达式 **CharType** ( **byte**) 将 `char` 类型的值 ***byte*** 转换为 **CharType** 类型的值。  
+-   Convert a value ***byte*** of type `char` to a value of type **CharType** with the expression **CharType** ( **byte**).  
   
- 对 `char` 值执行所有其他操作的方式与显式专用化 **ctype**< `char`>相同。  
+ All other operations are performed on `char` values in the same way as for the explicit specialization **ctype**< `char`>.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[ctype](#ctype)|`ctype` 类对象的构造函数，该类可用作字符的区域设置 facet。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|一种类型，此类型描述区域设置使用的字符。|  
+|[ctype](#ctype)|Constructor for objects of class `ctype` that serve as locale facets for characters.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[do_is](#do_is)|一种虚拟函数，通过调用此函数可测试单个字符是否具有特定属性，或者为某个范围内的每个字符的属性进行分类并将属性存储在数组中。|  
-|[do_narrow](#do_narrow)|一种虚拟函数，通过调用此函数可将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 `char` 类型的相应字符。|  
-|[do_scan_is](#do_scan_is)|一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码匹配的第一个字符。|  
-|[do_scan_not](#do_scan_not)|一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码不匹配的第一个字符。|  
-|[do_tolower](#do_tolower)|一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为小写。|  
-|[do_toupper](#do_toupper)|一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为大写。|  
-|[do_widen](#do_widen)|一种虚拟函数，通过调用此函数可将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
-|[is](#is)|测试单个字符是否具有特定属性，或者对某个范围内的每个字符的属性进行分类并将属性存储在数组中。|  
-|[narrow](#narrow)|将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 char 类型的相应字符。|  
-|[scan_is](#scan_is)|查找某个范围内与指定掩码匹配的第一个字符。|  
-|[scan_not](#scan_not)|查找某个范围内与指定掩码不匹配的第一个字符。|  
-|[tolower](#tolower)|将一个或一些列字符转换为小写。|  
-|[toupper](#toupper)|将一个或一些列字符转换为大写。|  
-|[widen](#widen)|将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
+|[char_type](#char_type)|A type that describes a character used by a locale.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<locale>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[do_is](#do_is)|A virtual function called to test whether a single character has a particular attribute, or classify the attributes of each character in a range and stores them in an array.|  
+|[do_narrow](#do_narrow)|A virtual function called to convert a character of type `CharType` used by a locale to the corresponding character of type `char` in the native character set.|  
+|[do_scan_is](#do_scan_is)|A virtual function called to locate the first character in a range that matches a specified mask.|  
+|[do_scan_not](#do_scan_not)|A virtual function called to locate the first character in a range that does not match a specified mask.|  
+|[do_tolower](#do_tolower)|A virtual function called to convert a character or a range of characters to their lower case.|  
+|[do_toupper](#do_toupper)|A virtual function called to convert a character or a range of characters to upper case.|  
+|[do_widen](#do_widen)|A virtual function called to converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.|  
+|[is](#is)|Tests whether a single character has a particular attribute, or classifies the attributes of each character in a range and stores them in an array.|  
+|[narrow](#narrow)|Converts a character of type `CharType` used by a locale to the corresponding character of type char in the native character set.|  
+|[scan_is](#scan_is)|Locates the first character in a range that matches a specified mask.|  
+|[scan_not](#scan_not)|Locates the first character in a range that does not match a specified mask.|  
+|[tolower](#tolower)|Converts a character or a range of characters to lower case.|  
+|[toupper](#toupper)|Converts a character or a range of characters to upper case.|  
+|[widen](#widen)|Converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  ctype::char_type  
- 一种类型，此类型描述区域设置使用的字符。  
+ A type that describes a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>示例  
-  有关将 `char_type` 用作返回值的示例，请参阅成员函数 [widen](#widen)。  
+### <a name="example"></a>Example  
+  See the member function [widen](#widen) for an example that uses `char_type` as a return value.  
   
 ##  <a name="ctype"></a>  ctype::ctype  
- ctype 类对象的构造函数，该类可用作字符的区域设置 facet。  
+ Constructor for objects of class ctype that serve as locale facets for characters.  
   
 ```  
 explicit ctype(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 用于指定对象的内存管理类型的整数值。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>备注  
- `_Refs` 参数可能的值及其含义：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：对象的生存期由包含该对象的区域设置管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：必须手动管理对象的生存期。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定义这些值。  
+-   \> 1: These values are not defined.  
   
- 由于该析构函数受到保护，可能没有直接的示例。  
+ No direct examples are possible, because the destructor is protected.  
   
- 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其 `locale::facet` 基对象。  
+ The constructor initializes its `locale::facet` base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="do_is"></a>  ctype::do_is  
- 一种虚拟函数，通过调用此函数可测试单个字符是否具有特定属性，或者为某个范围内的每个字符的属性进行分类并将属性存储在数组中。  
+ A virtual function called to test whether a single character has a particular attribute, or classify the attributes of each character in a range and stores them in an array.  
   
 ```  
 virtual bool do_is(
@@ -175,35 +189,35 @@ virtual const CharType *do_is(
     mask* dest) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 要为其测试字符的掩码值。  
+ The mask value for which the character is to be tested.  
   
  `ch`  
- 要测试其属性的字符。  
+ The character whose attributes are to be tested.  
   
  `first`  
- 指向范围内要对其属性进行分类的第一个字符的指针。  
+ A pointer to the first character in the range whose attributes are to be classified.  
   
  `last`  
- 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range whose attributes are to be classified.  
   
  `dest`  
- 指向数组开头的指针，描述每个字符属性特征的掩码值存储在该数组中。  
+ A pointer to the beginning of the array where the mask values characterizing the attributes of each of the characters are to be stored.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数将返回一个布尔值，如果测试的字符具有掩码值描述的属性，则为 **true**；如果它不具有此属性，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns a Boolean value that is **true** if the character tested has the attribute described by the mask value; **false** if it fails to have the attribute.  
   
- 第二个成员函数返回一个数组，其中包含描述范围内每个字符属性特征的掩码值。  
+ The second member function returns an array containing the mask values characterizing the attributes of each of the characters in the range.  
   
-### <a name="remarks"></a>备注  
- [ctype_base](../standard-library/ctype-base-class.md) 类提供了对字符属性进行分类的掩码值，从中派生 ctype。 第一个成员函数可以接受其第一个参数的表达式，该参数被称为位掩码，由逻辑按位运算符 (&#124; , & , ^ , ~) 组成的掩码值构成。  
+### <a name="remarks"></a>Remarks  
+ The mask values classifying the attributes of the characters are provided by the class [ctype_base](../standard-library/ctype-base-class.md), from which ctype derives. The first member function can accept expressions for its first parameter referred to as bitmasks and formed from the combination of mask values by the logical bitwise operators (&#124; , & , ^ , ~).  
   
-### <a name="example"></a>示例  
-  请参阅 [is](#is) 的示例，它调用 `do_is`。  
+### <a name="example"></a>Example  
+  See the example for [is](#is), which calls `do_is`.  
   
 ##  <a name="do_narrow"></a>  ctype::do_narrow  
- 一种虚拟函数，通过调用此函数可将区域设置使用的 `CharType` 类型的字符转换为本机字符集中 `char` 类型的相应字符。  
+ A virtual function called to convert a character of type `CharType` used by a locale to the corresponding character of type `char` in the native character set.  
   
 ```  
 virtual char do_narrow(
@@ -218,35 +232,35 @@ virtual const CharType* do_narrow(
     char* dest) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ch`  
- `Chartype` 类型的字符由区域设置用于转换。  
+ The character of type `Chartype` used by the locale to be converted.  
   
  `default`  
- 由成员函数分配给 `CharType` 类型的字符的默认值不具有 `char` 类型的对应字符。  
+ The default value to be assigned by the member function to characters of type `CharType` that do not have counterpart characters of type `char`.  
   
  `first`  
- 指向要转换的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 指向目标范围内类型为 `char` 的第一个字符的常量指针，该目标范围存储经过转换的字符范围。  
+ A const pointer to the first character of type `char` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>返回值  
- 第一个受保护的成员函数返回 char 类型的本机字符，如果未定义任何对应项，则该类型字符与 `CharType` 或 `default` 类型的参数字符对应。  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the native character of type char that corresponds to the parameter character of type `CharType` or `default` if no counterpart is defined.  
   
- 第二个受保护的成员函数返回一个指针，指向从 `CharType` 类型的字符转换的本机字符的目标范围。  
+ The second protected member function returns a pointer to the destination range of native characters converted from characters of type `CharType`.  
   
-### <a name="remarks"></a>备注  
- 第二个受保护成员中的模板函数存储`dest`[ `I`] 值`do_narrow`( `first` [ `I`]， `default`)，为`I`中间隔 [0， `last`  -  `first`)。  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function stores in `dest`[ `I`] the value `do_narrow`( `first` [ `I`], `default`), for `I` in the interval [0, `last` - `first`).  
   
-### <a name="example"></a>示例  
-  请参阅 [narrow](#narrow) 的示例，它调用 `do_narrow`。  
+### <a name="example"></a>Example  
+  See the example for [narrow](#narrow), which calls `do_narrow`.  
   
-##  <a name="do_scan_is"></a>ctype:: do_scan_is  
- 一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码匹配的第一个字符。  
+##  <a name="do_scan_is"></a>  ctype::do_scan_is  
+ A virtual function called to locate the first character in a range that matches a specified mask.  
   
 ```  
 virtual const CharType *do_scan_is(
@@ -255,27 +269,27 @@ virtual const CharType *do_scan_is(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 要通过字符匹配的掩码值。  
+ The mask value to be matched by a character.  
   
  `first`  
- 指向要扫描的范围内的第一个字符的指针。  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>返回值  
- 指向某个范围内与指定掩码匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last.`  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that does match a specified mask. If no such value exists, the function returns `last.`  
   
-### <a name="remarks"></a>备注  
- 受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#do_is)( `maskVal`,* `ptr`) 为 true。  
+### <a name="remarks"></a>Remarks  
+ The protected member function returns the smallest pointer `ptr` in the range [ `first`, `last`) for which [do_is](#do_is)( `maskVal`, * `ptr`) is true.  
   
-### <a name="example"></a>示例  
-  请参阅 [scan_is](#scan_is) 的示例，它调用 `do_scan_is`。  
+### <a name="example"></a>Example  
+  See the example for [scan_is](#scan_is), which calls `do_scan_is`.  
   
 ##  <a name="do_scan_not"></a>  ctype::do_scan_not  
- 一种虚拟函数，通过调用此函数可查找某个范围内与指定掩码不匹配的第一个字符。  
+ A virtual function called to locate the first character in a range that does not match a specified mask.  
   
 ```  
 virtual const CharType *do_scan_not(
@@ -284,27 +298,27 @@ virtual const CharType *do_scan_not(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 不通过字符匹配的掩码值。  
+ The mask value not to be matched by a character.  
   
  `first`  
- 指向要扫描的范围内的第一个字符的指针。  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>返回值  
- 指向某个范围内与指定掩码不匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that doesn't match a specified mask. If no such value exists, the function returns `last`.  
   
-### <a name="remarks"></a>备注  
- 受保护的成员函数返回范围 [ `first`, `last`) 内最小的指针 `ptr`，对于该范围，[do_is](#do_is)( `maskVal`, * `ptr`) 为 false。  
+### <a name="remarks"></a>Remarks  
+ The protected member function returns the smallest pointer `ptr` in the range [ `first`, `last`) for which [do_is](#do_is)( `maskVal`, * `ptr`) is false.  
   
-### <a name="example"></a>示例  
-  请参阅 [scan_not](#scan_not) 的示例，它调用 `do_scan_not`。  
+### <a name="example"></a>Example  
+  See the example for [scan_not](#scan_not), which calls `do_scan_not`.  
   
-##  <a name="do_tolower"></a>ctype:: do_tolower  
- 一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为小写。  
+##  <a name="do_tolower"></a>  ctype::do_tolower  
+ A virtual function called to convert a character or a range of characters to lower case.  
   
 ```  
 virtual CharType do_tolower(CharType ch) const;
@@ -315,27 +329,27 @@ virtual const CharType *do_tolower(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要转换为小写的字符。  
+ The character to be converted to lower case.  
   
  `first`  
- 指向要转换大小写的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>返回值  
- 第一个受保护的成员函数返回 `ch` 参数的小写形式。 如果没有小写形式存在，则它将返回 `ch`。 第二个受保护的成员函数返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the lowercase form of the parameter `ch`. If no lowercase form exists, it returns `ch`. The second protected member function returns `last`.  
   
-### <a name="remarks"></a>备注  
- 第二个受保护的成员模板函数替换每个元素`first`[ `I`]，有关`I`中间隔 [0， `last`  -  `first`)，与`do_tolower`( `first` [ `I`])。  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function replaces each element `first` [ `I`], for `I` in the interval [0, `last` - `first`), with `do_tolower`( `first` [ `I`]).  
   
-### <a name="example"></a>示例  
-  请参阅 [tolower](#tolower) 的示例，它调用 `do_tolower`。  
+### <a name="example"></a>Example  
+  See the example for [tolower](#tolower), which calls `do_tolower`.  
   
-##  <a name="do_toupper"></a>ctype:: do_toupper  
- 一种虚拟函数，通过调用此函数可将一个字符或一系列字符转换为大写。  
+##  <a name="do_toupper"></a>  ctype::do_toupper  
+ A virtual function called to convert a character or a range of characters to upper case.  
   
 ```  
 virtual CharType do_toupper(CharType ch) const;
@@ -346,27 +360,27 @@ virtual const CharType *do_toupper(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要转换为大写的字符。  
+ The character to be converted to upper case.  
   
  `first`  
- 指向要转换大小写的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 指向要转换大小写的字符范围内的第一个字符之后紧跟的字符的指针。  
+ A pointer to character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>返回值  
- 第一个受保护的成员函数返回 `ch` 参数的大写形式。 如果没有大写形式存在，则它将返回 `ch`。 第二个受保护的成员函数返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the uppercase form of the parameter `ch`. If no uppercase form exists, it returns `ch`. The second protected member function returns `last`.  
   
-### <a name="remarks"></a>备注  
- 第二个受保护的成员模板函数替换每个元素`first`[ `I`]，有关`I`中间隔 [0， `last`  -  `first`)，与`do_toupper`( `first` [ `I`])。  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function replaces each element `first` [ `I`], for `I` in the interval [0, `last` - `first`), with `do_toupper`( `first` [ `I`]).  
   
-### <a name="example"></a>示例  
-  请参阅 [toupper](#toupper) 的示例，它调用 `do_toupper`。  
+### <a name="example"></a>Example  
+  See the example for [toupper](#toupper), which calls `do_toupper`.  
   
 ##  <a name="do_widen"></a>  ctype::do_widen  
- 一种虚拟函数，通过调用此函数可将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。  
+ A virtual function called to converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.  
   
 ```  
 virtual CharType do_widen(char byte) const;
@@ -378,32 +392,32 @@ virtual const char *do_widen(
     CharType* dest) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `byte`  
- 要转换的本机字符集中的 `char` 类型字符。  
+ The character of type `char` in the native character set to be converted.  
   
  `first`  
- 指向要转换的字符范围内第一个字符的指针。  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 指向目标范围内 `CharType` 类型的第一个字符的指针，该范围存储经过转换的字符范围。  
+ A pointer to the first character of type `CharType` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>返回值  
- 第一个受保护的成员函数返回 `CharType` 类型的字符，该类型字符与 `char` 本机类型的参数字符对应。  
+### <a name="return-value"></a>Return Value  
+ The first protected member function returns the character of type `CharType` that corresponds to the parameter character of native type `char`.  
   
- 第二个受保护的成员函数返回一个指针，指向 `CharType` 类型字符的目标范围，从 `char` 类型的本机字符转换而来的区域设置使用该类型的字符。  
+ The second protected member function returns a pointer to the destination range of characters of type `CharType` used by a locale converted from native characters of type `char`.  
   
-### <a name="remarks"></a>备注  
- 第二个受保护的成员模板函数将 `I` 的值 `do_widen`( `first` [ `I`]) 存储在 `dest`[ `I`] 值 ，间隔为 [0, `last` - `first`)。  
+### <a name="remarks"></a>Remarks  
+ The second protected member template function stores in `dest`[ `I`] the value `do_widen`( `first`[ `I`]), for `I` in the interval [0, `last` - `first`).  
   
-### <a name="example"></a>示例  
-  请参阅 [widen](#widen) 的示例，它调用 `do_widen`。  
+### <a name="example"></a>Example  
+  See the example for [widen](#widen), which calls `do_widen`.  
   
 ##  <a name="is"></a>  ctype::is  
- 测试单个字符是否具有特定属性，或者对某个范围内的每个字符的属性进行分类并将属性存储在数组中。  
+ Tests whether a single character has a particular attribute or classifies the attributes of each character in a range and stores them in an array.  
   
 ```  
 bool is(mask maskVal, CharType ch) const;
@@ -415,31 +429,31 @@ const CharType *is(
     mask* dest) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 要为其测试字符的掩码值。  
+ The mask value for which the character is to be tested.  
   
  `ch`  
- 要测试其属性的字符。  
+ The character whose attributes are to be tested.  
   
  `first`  
- 指向范围内要对其属性进行分类的第一个字符的指针。  
+ A pointer to the first character in the range whose attributes are to be classified.  
   
  `last`  
- 指向范围内要对其属性进行分类的最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range whose attributes are to be classified.  
   
  `dest`  
- 指向数组开头的指针，描述每个字符属性特征的掩码值存储在该数组中。  
+ A pointer to the beginning of the array where the mask values characterizing the attributes of each of the characters are to be stored.  
   
-### <a name="return-value"></a>返回值  
- 如果测试的字符具有掩码值描述的属性，则第一个成员函数将返回 `true`；如果它不具有此属性，则返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns `true` if the character tested has the attribute described by the mask value; `false` if it fails to have the attribute.  
   
- 第二个成员函数返回一个指针，指向范围内要对其属性进行分类的最后一个字符。  
+ The second member function returns a pointer to the last character in the range whose attributes are to be classified.  
   
-### <a name="remarks"></a>备注  
- [ctype_base Class](../standard-library/ctype-base-class.md) 类提供了对字符属性进行分类的掩码值，从中派生 ctype。 第一个成员函数可以接受其第一个参数的表达式，该参数被称为位掩码，由逻辑按位运算符 (&#124; , & , ^ , ~) 组成的掩码值构成。  
+### <a name="remarks"></a>Remarks  
+ The mask values classifying the attributes of the characters are provided by the class [ctype_base Class](../standard-library/ctype-base-class.md), from which ctype derives. The first member function can accept expressions for its first parameter referred to as bitmasks and formed from the combination of mask values by the logical bitwise operators (&#124; , & , ^ , ~).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_is.cpp  
@@ -479,7 +493,7 @@ int main() {
 ```  
   
 ##  <a name="narrow"></a>  ctype::narrow  
- 将区域设置使用的 `CharType` 类型字符转换为本机字符集中相应的 `char` 类型字符。  
+ Converts characters of type `CharType` used by a locale to the corresponding characters of type `char` in the native character set.  
   
 ```  
 char narrow(CharType ch, char default = '\0') const;
@@ -492,31 +506,31 @@ const CharType* narrow(
     char* dest) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ch`  
- `Chartype` 类型的字符由区域设置用于转换。  
+ The character of type `Chartype` used by the locale to be converted.  
   
  `default`  
- 由成员函数分配给 `CharType` 类型的字符的默认值不具有 `char` 类型的对应字符。  
+ The default value to be assigned by the member function to characters of type `CharType` that do not have counterpart characters of type `char`.  
   
  `first`  
- 指向要转换的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 指向目标范围内类型为 `char` 的第一个字符的常量指针，该目标范围存储经过转换的字符范围。  
+ A const pointer to the first character of type `char` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数返回 `char` 类型的本机字符，如果未定义任何对应项，则该类型字符与 `CharType``default` 类型的参数字符对应。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the native character of type `char` that corresponds to the parameter character of type `CharType default` if not counterpart is defined.  
   
- 第二个成员函数返回一个指针，指向从 `CharType` 类型的字符转换的本机字符的目标范围。  
+ The second member function returns a pointer to the destination range of native characters converted from characters of type `CharType`.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_narrow](#do_narrow)( `ch`, `default`)。 第二个成员函数返回 [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`)。 只有基本的源字符才能保证在 `narrow` 之下存在唯一的反向映像 `CharType`。 对于这些基本的源字符，包含以下不变式：`narrow` ([widen](#widen) ( **c** ), 0 ) == **c**。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_narrow](#do_narrow)( `ch`, `default`). The second member function returns [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`). Only the basic source characters are guaranteed to have a unique inverse image `CharType` under `narrow`. For these basic source characters, the following invariant holds: `narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_narrow.cpp  
@@ -543,7 +557,7 @@ Xhello everyone
 ```  
   
 ##  <a name="scan_is"></a>  ctype::scan_is  
- 查找某个范围内与指定掩码匹配的第一个字符。  
+ Locates the first character in a range that matches a specified mask.  
   
 ```  
 const CharType *scan_is(
@@ -552,23 +566,23 @@ const CharType *scan_is(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 要通过字符匹配的掩码值。  
+ The mask value to be matched by a character.  
   
  `first`  
- 指向要扫描的范围内的第一个字符的指针。  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>返回值  
- 指向某个范围内与指定掩码匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last.`  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that does match a specified mask. If no such value exists, the function returns `last.`  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_scan_is.cpp  
@@ -595,7 +609,7 @@ The first punctuation is "," at position: 5
 ```  
   
 ##  <a name="scan_not"></a>  ctype::scan_not  
- 查找某个范围内与指定掩码不匹配的第一个字符。  
+ Locates the first character in a range that does not match a specified mask.  
   
 ```  
 const CharType *scan_not(
@@ -604,23 +618,23 @@ const CharType *scan_not(
     const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `maskVal`  
- 不通过字符匹配的掩码值。  
+ The mask value not to be matched by a character.  
   
  `first`  
- 指向要扫描的范围内的第一个字符的指针。  
+ A pointer to the first character in the range to be scanned.  
   
  `last`  
- 指向要扫描的范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range to be scanned.  
   
-### <a name="return-value"></a>返回值  
- 指向某个范围内与指定掩码不匹配的第一个字符的指针。 如果此类值不存在，则该函数返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first character in a range that does not match a specified mask. If no such value exists, the function returns `last`.  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_scan_not.cpp  
@@ -647,7 +661,7 @@ First nonalpha character is "," at position: 5
 ```  
   
 ##  <a name="tolower"></a>  ctype::tolower  
- 将一个或一些列字符转换为小写。  
+ Converts a character or a range of characters to lower case.  
   
 ```  
 CharType tolower(CharType ch) const;
@@ -656,25 +670,25 @@ CharType tolower(CharType ch) const;
 const CharType *tolower(CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要转换为小写的字符。  
+ The character to be converted to lower case.  
   
  `first`  
- 指向要转换大小写的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数返回 `ch` 参数的小写形式。 如果没有小写形式存在，则它将返回 `ch`。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the lowercase form of the parameter `ch`. If no lowercase form exists, it returns `ch`.  
   
- 第二个成员函数返回 `last`。  
+ The second member function returns `last`.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_tolower](#do_tolower)( `ch`)。 第二个成员函数返回 [do_tolower](#do_tolower)( `first`, `last`)。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_tolower](#do_tolower)( `ch`). The second member function returns [do_tolower](#do_tolower)( `first`, `last`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_tolower.cpp  
@@ -700,32 +714,32 @@ The lowercase string is: hello, my name is john
 ```  
   
 ##  <a name="toupper"></a>  ctype::toupper  
- 将一个或一些列字符转换为大写。  
+ Converts a character or a range of characters to upper case.  
   
 ```  
 CharType toupper(CharType ch) const; 
 const CharType *toupper(CharType* first, const CharType* last) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要转换为大写的字符。  
+ The character to be converted to uppercase.  
   
  `first`  
- 指向要转换大小写的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters whose cases are to be converted.  
   
  `last`  
- 指向要转换大小写的字符范围内第一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters whose cases are to be converted.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数返回 `ch` 参数的大写形式。 如果没有大写形式存在，则它将返回 `ch`。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the uppercase form of the parameter `ch`. If no uppercase form exists, it returns `ch`.  
   
- 第二个成员函数返回 `last`。  
+ The second member function returns `last`.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_toupper](#do_toupper)( `ch`)。 第二个成员函数返回 [do_toupper](#do_toupper)( `first`、`last`)。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_toupper](#do_toupper)( `ch`). The second member function returns [do_toupper](#do_toupper)( `first`, `last`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_toupper.cpp  
@@ -751,35 +765,35 @@ The uppercase string is: HELLO, MY NAME IS JOHN
 ```  
   
 ##  <a name="widen"></a>  ctype::widen  
- 将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。  
+ Converts a character of type `char` in the native character set to the corresponding character of type `CharType` used by a locale.  
   
 ```  
 CharType widen(char byte) const; 
 const char *widen(const char* first, const char* last, CharType* dest) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `byte`  
- 要转换的本机字符集中的 char 类型字符。  
+ The character of type char in the native character set to be converted.  
   
  `first`  
- 指向要转换的字符范围内的第一个字符的指针。  
+ A pointer to the first character in the range of characters to be converted.  
   
  `last`  
- 指向要转换的字符范围内最后一个字符之后紧跟的字符的指针。  
+ A pointer to the character immediately following the last character in the range of characters to be converted.  
   
  `dest`  
- 指向目标范围内 `CharType` 类型的第一个字符的指针，该范围存储经过转换的字符范围。  
+ A pointer to the first character of type `CharType` in the destination range that stores the converted range of characters.  
   
-### <a name="return-value"></a>返回值  
- 第一个成员函数返回 `CharType` 类型的字符，该类型字符与 `char` 本机类型的参数字符对应。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the character of type `CharType` that corresponds to the parameter character of native type `char`.  
   
- 第二个成员函数返回一个指针，指向 `CharType` 类型字符的目标范围，从 `char` 类型的本机字符转换而来的区域设置使用该类型的字符。  
+ The second member function returns a pointer to the destination range of characters of type `CharType` used by a locale converted from native characters of type `char`.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数返回 [do_widen](#do_widen)( `byte`)。 第二个成员函数返回 [do_widen](#do_widen)( `first`, `last`, `dest`)。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [do_widen](#do_widen)( `byte`). The second member function returns [do_widen](#do_widen)( `first`, `last`, `dest`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ctype_widen.cpp  
@@ -809,8 +823,8 @@ Hello everyone!
 Hello everyone!  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

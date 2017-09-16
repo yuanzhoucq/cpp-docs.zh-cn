@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonSeparator 类 |Microsoft 文档"
+title: CMFCRibbonSeparator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonSeparator class
-- GetThisClass method
-- CreateObject method
+- CMFCRibbonSeparator [MFC], CMFCRibbonSeparator
+- CMFCRibbonSeparator [MFC], AddToListBox
+- CMFCRibbonSeparator [MFC], CopyFrom
+- CMFCRibbonSeparator [MFC], GetRegularSize
+- CMFCRibbonSeparator [MFC], IsSeparator
+- CMFCRibbonSeparator [MFC], IsTabStop
+- CMFCRibbonSeparator [MFC], OnDraw
+- CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
 caps.latest.revision: 21
 author: mikeblome
@@ -44,56 +49,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 98a58d43b5e6299f26521d873caec06d4581f7b3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9dbf1f41e811d44abe8d763d18f2de6634aeec87
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 类
-实现功能区分隔符。  
+# <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator Class
+Implements the ribbon separator.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonSeparator : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
-  
-|||  
-|-|-|  
-|名称|描述|  
-|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|构造 `CMFCRibbonSeparator` 对象。|  
-  
-### <a name="public-methods"></a>公共方法  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名称|说明|  
-|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|添加到分隔符**命令**列入**自定义**对话框。 (重写[CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。)|  
-|`CMFCRibbonSeparator::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonSeparator::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
+|Name|Description|  
+|[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Constructs a `CMFCRibbonSeparator` object.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名称|说明|  
-|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|从另一个对象设置分隔符的成员变量的复制方法。|  
-|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|返回一个分隔符的大小。|  
-|[CMFCRibbonSeparator::IsSeparator](#isseparator)|指示这是否是一个分隔符。|  
-|[CMFCRibbonSeparator::IsTabStop](#istabstop)|指示这是否是一个制表位。|  
-|[CMFCRibbonSeparator::OnDraw](#ondraw)|系统会在功能区或快速访问工具栏上绘制分隔符的调用。|  
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|由系统上绘制分隔符调用**命令**列表。|  
+|Name|Description|  
+|[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Adds a separator to the **Commands** list in the **Customize** dialog box. (Overrides [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
+|`CMFCRibbonSeparator::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonSeparator::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>备注  
- 功能区分隔符为垂直或水平行，在逻辑上将功能区元素。 可以在功能区控件、 主应用程序菜单、 功能区状态栏和快速访问工具栏上绘制一个分隔符。  
+### <a name="protected-methods"></a>Protected Methods  
   
- 若要在您的应用程序中使用分隔符，构造新的对象，并将其添加到的主应用程序菜单，如下所示︰  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCRibbonSeparator::CopyFrom](#copyfrom)|A copy method that sets a separator's member variables from another object.|  
+|[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Returns the size of a separator.|  
+|[CMFCRibbonSeparator::IsSeparator](#isseparator)|Indicates whether this is a separator.|  
+|[CMFCRibbonSeparator::IsTabStop](#istabstop)|Indicates whether this is a tab stop.|  
+|[CMFCRibbonSeparator::OnDraw](#ondraw)|Called by the system to draw the separator on either the ribbon or the Quick Access Toolbar.|  
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|Called by the system to draw the separator on the **Commands** list.|  
+  
+## <a name="remarks"></a>Remarks  
+ A ribbon separator is a vertical or horizontal line that logically separates ribbon elements. A separator can be drawn on the ribbon control, the main application menu, the ribbon status bar, and the Quick Access Toolbar.  
+  
+ To use a separator in your application, construct the new object and add it to the main application menu as shown here:  
   
 ```  
 CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu"),
@@ -103,20 +108,20 @@ CMFCRibbonMainPanel* pMainPanel = m_wndRibbonBar.AddMainCategory(_T("Main Menu")
 ...  
 pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ```  
-调用[CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator)来将分隔条添加到功能区面板。 分配和内部添加分隔符`AddSeparator`方法。  
+Call [CMFCRibbonPanel::AddSeparator](../../mfc/reference/cmfcribbonpanel-class.md#addseparator) to add separators to ribbon panels. The separators are allocated and added internally by the `AddSeparator` method.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头：** afxbaseribbonelement.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
- 添加到分隔符**命令**列入**自定义**对话框。  
+##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
+ Adds a separator to the **Commands** list in the **Customize** dialog box.  
   
 ```  
 virtual int AddToListBox(
@@ -124,96 +129,96 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pWndListBox`  
- 一个指向**命令**分隔符将添加的列表。  
+ A pointer to the **Commands** list where the separator is added.  
   
  [in] `bDeep`  
- 已忽略。  
+ Ignored.  
   
-### <a name="return-value"></a>返回值  
- 为指定的列表框中字符串的从零开始索引`pWndListBox`。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index to the string in the list box specified by `pWndListBox`.  
   
-##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
- 构造 `CMFCRibbonSeparator` 对象。  
+##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
+ Constructs a `CMFCRibbonSeparator` object.  
   
 ```  
 CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bIsHoriz`  
- 如果`TRUE`，该分隔符是水平; 如果`FALSE`，分隔符是垂直的。  
+ If `TRUE`, the separator is horizontal; if `FALSE`, the separator is vertical.  
   
-### <a name="remarks"></a>备注  
- 在应用程序菜单中使用水平分隔符。 在工具栏中使用垂直分隔符。  
+### <a name="remarks"></a>Remarks  
+ Horizontal separators are used in application menus. Vertical separators are used in toolbars.  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何构造的对象`CMFCRibbonSeparator`类。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonSeparator` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&19;](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
- 从另一个对象设置分隔符的成员变量的复制方法。  
+##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
+ A copy method that sets a separator's member variables from another object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `Src`  
- 要从复制的源功能区元素。  
+ The source ribbon element to copy from.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
- 返回一个分隔符的大小。  
+##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
+ Returns the size of a separator.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备内容的指针。  
+ A pointer to a device content.  
   
-### <a name="return-value"></a>返回值  
- 在给定的设备上下文的分隔符的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the separator on the given device context.  
   
-##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
- 指示这是否是一个分隔符。  
+##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
+ Indicates whether this is a separator.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终`TRUE`此类。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE` for this class.  
   
-##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
- 指示这是否是一个制表位。  
+##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
+ Indicates whether this is a tab stop.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 始终`FALSE`此类。  
+### <a name="return-value"></a>Return Value  
+ Always `FALSE` for this class.  
   
-### <a name="remarks"></a>备注  
- 功能区分隔符不是一个制表位。  
+### <a name="remarks"></a>Remarks  
+ A ribbon separator is not a tab stop.  
   
-##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
- 系统会在功能区或快速访问工具栏上绘制分隔符的调用。  
+##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
+ Called by the system to draw the separator on either the ribbon or the Quick Access Toolbar.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
- 由系统上绘制分隔符调用**命令**列表。  
+##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
+ Called by the system to draw the separator on the **Commands** list.  
   
 ```  
 virtual void OnDrawOnList(
@@ -225,19 +230,19 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `pDC`|一个指向设备上下文的指针。|  
-|[in] `strText`|在列表中显示的文本。|  
-|[in] `nTextOffset`|文本和边框的左侧之间的间距。|  
-|[in] `rect`|指定的绑定矩形。|  
-|[in] `bIsSelected`|已忽略。|  
-|[in] `bHighlighted`|已忽略。|  
+|Parameter|Description|  
+|[in] `pDC`|A pointer to a device context.|  
+|[in] `strText`|Text displayed on the list.|  
+|[in] `nTextOffset`|Spacing between the text and the left side of the bounding rectangle.|  
+|[in] `rect`|Specifies the bounding rectangle.|  
+|[in] `bIsSelected`|Ignored.|  
+|[in] `bHighlighted`|Ignored.|  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

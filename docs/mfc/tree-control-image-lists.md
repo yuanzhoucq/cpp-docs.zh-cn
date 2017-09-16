@@ -1,41 +1,60 @@
 ---
-title: "树控件图像列表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 类, 图像列表"
-  - "图像 [C++], 树控件中的列表"
-  - "树控件, 图像列表"
+title: Tree Control Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- images [MFC], lists in tree controls
+- tree controls [MFC], image lists
+- CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 树控件图像列表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bcc246de7a4a0d403129589a9af1495f6f9084cb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在树控件 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 的每一项都能具有对位图的图像与它。  图像在项标签的左侧显示。  图像显示，在选择项时，同时，其他显示，当项未被选定时。  例如，打开一项可能显示文件夹，当控件选定和已关闭"时，如果未选择时。  
+---
+# <a name="tree-control-image-lists"></a>Tree Control Image Lists
+Each item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a pair of bitmapped images associated with it. The images appear on the left side of an item's label. One image is displayed when the item is selected, and the other is displayed when the item is not selected. For example, an item might display an open folder when it is selected and a closed folder when it is not selected.  
   
- 若要使用项的图像，必须通过 [CImageList](../mfc/reference/cimagelist-class.md) 构造对象并使用 [CImageList::Create](../Topic/CImageList::Create.md) 函数生成将图像列表生成图像列表。  使用 [SetImageList](../Topic/CTreeCtrl::SetImageList.md) 成员函数，然后添加预期位图到列表，并将使用树控件列表。  默认情况下，所有项显示在图像列表的第一幅图选择和 nonselected 状态的。  通过指定选择和 nonselected 图像的索引更改特定项的默认行为，并添加到控件树使用 [InsertItem](../Topic/CTreeCtrl::InsertItem.md) 成员函数。  使用 [SetItemImage](../Topic/CTreeCtrl::SetItemImage.md) 成员函数，则可以在添加项后更改索引。  
+ To use item images, you must create an image list by constructing a [CImageList](../mfc/reference/cimagelist-class.md) object and using the [CImageList::Create](../mfc/reference/cimagelist-class.md#create) function to create the associated image list. Then add the desired bitmaps to the list, and associate the list with the tree control by using the [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) member function. By default, all items display the first image in the image list for both the selected and nonselected states. You can change the default behavior for a particular item by specifying the indexes of the selected and nonselected images when adding the item to the tree control using the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. You can change the indexes after adding an item by using the [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) member function.  
   
- 树的控件图像列表还包含会覆盖图像，在项图像设计会覆盖。  该位 8 至 11 的非零值树控件项的状态指定的覆盖图像从一开始的索引 \(0 指示没有覆盖图像\)。  由于，基于的索引使用 4 位，覆盖图像必须是在图像列表的前 15 图像中  有关树的详细信息请控制项状态，请参见本主题前面的 [树控件项要求概述](../mfc/tree-control-item-states-overview.md)。  
+ A tree control's image lists can also contain overlay images, which are designed to be superimposed on item images. A nonzero value in bits 8 through 11 of a tree control item's state specifies the one-based index of an overlay image (0 indicates no overlay image). Because a 4-bit, one-based index is used, overlay images must be among the first 15 images in the image lists. For more information about tree control item states, see [Tree Control Item States Overview](../mfc/tree-control-item-states-overview.md) earlier in this topic.  
   
- 如果状态图像指定列表，在每个项的左侧图标的树控件保留空间状态的图像。  应用程序可以使用状态图像，如检查和清除的复选框，指示应用程序定义的项的状态。  该位 12 至 15 的非零值指定状态图像的基于的索引 \(0 指示无状态图像\)。  
+ If a state image list is specified, a tree control reserves space to the left of each item's icon for a state image. An application can use state images, such as checked and cleared check boxes, to indicate application-defined item states. A nonzero value in bits 12 through 15 specifies the one-based index of a state image (0 indicates no state image).  
   
- 通过指定而非图像的索引的 **I\_IMAGECALLBACK** 值，您可以延迟指定选中的内容或 nonselected 项，直到图像将绘制。  **I\_IMAGECALLBACK** 处理树控件来发送通知消息针对 [TVN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) 查询索引的应用程序。  
+ By specifying the **I_IMAGECALLBACK** value instead of the index of an image, you can delay specifying the selected or nonselected image until the item is about to be redrawn. **I_IMAGECALLBACK** directs the tree control to query the application for the index by sending the [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) notification message.  
   
- [GetImageList](../Topic/CTreeCtrl::GetImageList.md) 成员函数检索树控件的图像列表的句柄。  如果需要将多个图像。列表，此功能很有用。  有关图像列表的更多信息，请参见、[使用 CImageList](../mfc/using-cimagelist.md)[CImageList](../mfc/reference/cimagelist-class.md) " *MFC 参考*[图像列表](http://msdn.microsoft.com/library/windows/desktop/bb761389) 和 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中。  
+ The [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) member function retrieves the handle of a tree control's image list. This function is useful if you need to add more images to the list. For more information about image lists, see [Using CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference*, and [Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb761389) in the Windows SDK.  
   
-## 请参阅  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

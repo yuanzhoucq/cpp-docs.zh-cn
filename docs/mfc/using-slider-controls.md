@@ -1,39 +1,58 @@
 ---
-title: "使用滑块控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl 类, using"
-  - "滑块控件"
-  - "滑块控件, using"
+title: Using Slider Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], using
+- slider controls
+- slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用滑块控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27b4b5b8bb454a5b4bee0fdd09b6ff8698651761
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-Slider 控件的典型用法遵循以下模式：  
+---
+# <a name="using-slider-controls"></a>Using Slider Controls
+Typical usage of an slider control follows the pattern below:  
   
--   创建控件。  如果控件在对话框模板指定的，则该控件在对话框创建时自动创建。\(您应具有对话框类的一个 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) 成员对应于相应的slider控件。\) 或者，可以使用 [创建](../Topic/CSliderCtrl::Create.md) 成员函数来创建控件作为所有窗口的一个子窗口。  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CSliderCtrl](../mfc/reference/csliderctrl-class.md) member in your dialog class that corresponds to the slider control.) Alternatively, you can use the [Create](../mfc/reference/csliderctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   调用的各种集合成员函数设置控件的值。  更改可包括设置slider空间的 Min 和 Max 位置，绘制刻度线，设置选择范围，和重新定位slider。  若要在对话框的控件，执行这的好时机是在对话框的 [OnInitDialog](../Topic/CDialog::OnInitDialog.md)函数中。  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the minimum and maximum positions for the slider, drawing tick marks, setting a selection range, and repositioning the slider. For controls in a dialog box, a good time to do this is in the dialog's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   当用户与控件交互，将发送的不同通知消息。  您可以通过调用 [GetPos](../Topic/CSliderCtrl::GetPos.md) 成员函数从slider控件的抽取值。  
+-   As the user interacts with the control, it will send various notification messages. You can extract the slider value from the control by calling the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function.  
   
--   当您用完成控件使用时，请确保正确销毁它。  如果slider控件在对话框中，它和 `CSliderCtrl` 对象将被自动销毁。  否则，您需要确保正确销毁控件和 `CSliderCtrl` 对象。  
+-   When you're done with the control, you need to make sure it's properly destroyed. If the slider control is in a dialog box, it and the `CSliderCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CSliderCtrl` object are properly destroyed.  
   
-## 请参阅  
- [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

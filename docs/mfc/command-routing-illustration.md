@@ -1,42 +1,61 @@
 ---
-title: "命令传送示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令处理, 传送命令"
-  - "命令传送, OnCmdMsg 处理程序"
-  - "MFC, 命令传送"
+title: Command Routing Illustration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 命令传送示例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17f5b5930936f1c7839b5f435eafbeae611d39fd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-为了说明，从 MDI 应用程序的编辑菜单上的清除所有菜单项考虑命令消息。  假设此命令的处理程序函数恰好是应用程序的文档类的成员函数。  这里演示该在用户选择菜单项后命令如何达到其处理程序：  
+---
+# <a name="command-routing-illustration"></a>Command Routing Illustration
+To illustrate, consider a command message from a Clear All menu item in an MDI application's Edit menu. Suppose the handler function for this command happens to be a member function of the application's document class. Here's how that command reaches its handler after the user chooses the menu item:  
   
-1.  主框架窗口首先收到命令消息。  
+1.  The main frame window receives the command message first.  
   
-2.  主 MDI 框架窗口赋予当前活动的 MDI 子窗口机会来处理命令。  
+2.  The main MDI frame window gives the currently active MDI child window a chance to handle the command.  
   
-3.  MDI 子框架窗口中的标准路由在检查其自己的消息映射之前赋予其视图一个此命令的机会。  
+3.  The standard routing of an MDI child frame window gives its view a chance at the command before checking its own message map.  
   
-4.  视图没有首先检查其自己的消息映射，然后，如果未处理则将命令路由到与其关联的文档。  
+4.  The view checks its own message map first and, finding no handler, next routes the command to its associated document.  
   
-5.  文档检查其消息映射并找到一处理程序。  文档成员函数调用并终止路由。  
+5.  The document checks its message map and finds a handler. This document member function is called and the routing stops.  
   
- 如果文档没有处理程序，则将命令路由到其文档模板。  然后命令将返回视图然后返回框架窗口。  最后，框架窗口中检查其消息映射。  如果此检查也失败，命令将路由回主 MDI 框架窗口然后到应用程序对象 \- 未处理命令的最终目标。  
+ If the document did not have a handler, it would next route the command to its document template. Then the command would return to the view and then the frame window. Finally, the frame window would check its message map. If that check failed as well, the command would be routed back to the main MDI frame window and then to the application object — the ultimate destination of unhandled commands.  
   
-## 请参阅  
- [框架如何调用处理程序](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

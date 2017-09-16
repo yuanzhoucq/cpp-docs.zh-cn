@@ -1,5 +1,5 @@
 ---
-title: "&lt;chrono&gt; | Microsoft 文档"
+title: '&lt;chrono&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- chrono/std::chrono::nanoseconds
-- chrono/std::chrono::minutes
-- chrono/std::chrono::seconds
-- <chrono>
-- chrono/std::chrono::hours
-- chrono/std::chrono::milliseconds
-- chrono/std::chrono::microseconds
+- chrono/std::chrono::nanoseconds", "chrono/std::chrono::minutes", "chrono/std::chrono::seconds", "<chrono>", "chrono/std::chrono::hours", "chrono/std::chrono::milliseconds", "chrono/std::chrono::microseconds
 dev_langs:
 - C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
@@ -37,106 +31,106 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c91a494644e2d8d12259c3ee6cd23333eb9bae9e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2917c7927904cafe4f69f4ed2f1e168614e1df66
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
-包括标准标头 \< chrono > 来定义表示和操作持续时间及时刻的类和函数。  
+Include the standard header \<chrono> to define classes and functions that represent and manipulate time durations and time instants.  
   
- 开始在 Visual Studio 2015 中，实现`steady_clock`已更改，以满足 c + + 标准对稳定性和单一性的需求。 `steady_clock` 现在基于 QueryPerformanceCounter()，且 `high_resolution_clock` 现在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中，`steady_clock::time_point` 现在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他实现不一定是这种情况。  
+ Beginning in Visual Studio 2015, the implementation of `steady_clock` has changed to meet the C++ Standard requirements for steadiness and monotonicity. `steady_clock` is now based on QueryPerformanceCounter() and `high_resolution_clock` is now a typedef for `steady_clock`. As a result, in Visual C++ `steady_clock::time_point` is now a typedef for `chrono::time_point<steady_clock>`; however, this is not necessarily the case for other implementations.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <chrono>  
 ```  
 
-### <a name="classes"></a>类  
+### <a name="classes"></a>Classes  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[duration 类](../standard-library/duration-class.md)|描述保持时间间隔的类型。|  
-|[time_point 类](../standard-library/time-point-class.md)|描述表示时间点的类型。|  
+|[duration Class](../standard-library/duration-class.md)|Describes a type that holds a time interval.|  
+|[time_point Class](../standard-library/time-point-class.md)|Describes a type that represents a point in time.|  
   
-### <a name="structs"></a>结构  
+### <a name="structs"></a>Structs  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[common_type 结构](../standard-library/common-type-structure.md)|介绍有关 `duration` 和 `time_point` 实例化的 [common_type](../standard-library/common-type-class.md) 模板类的专用化。|  
-|[duration_values 结构](../standard-library/duration-values-structure.md)|提供 `duration` 模板参数 `Rep` 的特定值。|  
-|[steady_clock 结构](../standard-library/steady-clock-struct.md)|表示 `steady` 时钟。|  
-|[system_clock 结构](../standard-library/system-clock-structure.md)|表示基于系统实时时钟的*时钟类型*。|  
-|[treat_as_floating_point 结构](../standard-library/treat-as-floating-point-structure.md)|指定是否可将一种类型视为浮点类型。|  
+|[common_type Structure](../standard-library/common-type-structure.md)|Describes specializations of template class [common_type](../standard-library/common-type-class.md) for instantiations of `duration` and `time_point`.|  
+|[duration_values Structure](../standard-library/duration-values-structure.md)|Provides specific values for the `duration` template parameter `Rep`.|  
+|[steady_clock struct](../standard-library/steady-clock-struct.md)|Represents a `steady` clock.|  
+|[system_clock Structure](../standard-library/system-clock-structure.md)|Represents a *clock type* that is based on the real-time clock of the system.|  
+|[treat_as_floating_point Structure](../standard-library/treat-as-floating-point-structure.md)|Specifies whether a type can be treated as a floating-point type.|  
   
-### <a name="functions"></a>函数  
+### <a name="functions"></a>Functions  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|将 `duration` 对象转换为指定类型。|  
-|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|将 `time_point` 对象转换为指定类型。|  
+|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Casts a `duration` object to a specified type.|  
+|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Casts a `time_point` object to a specified type.|  
   
-### <a name="operators"></a>运算符  
+### <a name="operators"></a>Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[operator-](../standard-library/chrono-operators.md#operator-)|用于对 `duration` 和 `time_point` 对象进行减法或求反运算的运算符。|  
-|[operator!=](../standard-library/chrono-operators.md#op_neq)|与 `duration` 或 `time_point` 对象一起使用的不等运算符。|  
-|[operator modulo](../standard-library/chrono-operators.md#op_modulo)|用于对 `duration` 对象进行取模操作的运算符。|  
-|[operator*](../standard-library/chrono-operators.md#op_star)|`duration` 对象的乘法运算符。|  
-|[operator/](../standard-library/chrono-operators.md#op_div)|`duration` 对象的除法运算符。|  
-|[operator+](../standard-library/chrono-operators.md#op_add)|将 `duration` 和 `time_point` 对象相加。|  
-|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|确定一个 `duration` 或 `time_point` 对象是否小于另一个 `duration` 或 `time_point` 对象。|  
-|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|确定一个 `duration` 或 `time_point` 对象是否小于或等于另一个 `duration` 或 `time_point` 对象。|  
-|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|确定两个 `duration` 对象是否表示相同长度的时间间隔，或两个 `time_point` 对象是否表示相同的时间点。|  
-|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|确定一个 `duration` 或 `time_point` 对象是否大于另一个 `duration` 或 `time_point` 对象。|  
-|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|确定一个 `duration` 或 `time_point` 对象是否大于或等于另一个 `duration` 或 `time_point` 对象。|  
+|[operator-](../standard-library/chrono-operators.md#operator-)|Operator for subtraction or negation of `duration` and `time_point` objects.|  
+|[operator!=](../standard-library/chrono-operators.md#op_neq)|Inequality operator that is used with `duration` or `time_point` objects.|  
+|[operator modulo](../standard-library/chrono-operators.md#op_modulo)|Operator for modulo operations on `duration` objects.|  
+|[operator*](../standard-library/chrono-operators.md#op_star)|Multiplication operator for `duration` objects.|  
+|[operator/](../standard-library/chrono-operators.md#op_div)|Division operator for `duration` objects.|  
+|[operator+](../standard-library/chrono-operators.md#op_add)|Adds `duration` and `time_point` objects.|  
+|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Determines whether one `duration` or `time_point` object is less than another `duration` or `time_point` object.|  
+|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Determines whether one `duration` or `time_point` object is less than or equal to another `duration` or `time_point` object.|  
+|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Determines whether two `duration` objects represent time intervals that have the same length, or whether two `time_point` objects represent the same point in time.|  
+|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Determines whether one `duration` or `time_point` object is greater than another `duration` or `time_point` object.|  
+|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Determines whether one `duration` or `time_point` object is greater than or equal to another `duration` or `time_point` object.|  
   
-### <a name="predefined-duration-types"></a>预定义的持续时间类型  
- 有关在以下 typedefs 中使用的比率类型的详细信息，请参阅 [\<ratio>](../standard-library/ratio.md)。  
+### <a name="predefined-duration-types"></a>Predefined Duration Types  
+ For more information about ratio types that are used in the following typedefs, see [\<ratio>](../standard-library/ratio.md).  
   
-|Typedef|描述|  
+|Typedef|Description|  
 |-------------|-----------------|  
-|`typedef duration<long long, nano> nanoseconds;`|时钟周期为一纳秒的 `duration` 类型的同义词。|  
-|`typedef duration<long long, micro> microseconds;`|时钟周期为一微秒的 `duration` 类型的同义词。|  
-|`typedef duration<long long, milli> milliseconds;`|时钟周期为一毫秒的 `duration` 类型的同义词。|  
-|`typedef duration<long long> seconds;`|时钟周期为一秒的 `duration` 类型的同义词。|  
-|`typedef duration<int, ratio<60> > minutes;`|时钟周期为一分钟的 `duration` 类型的同义词。|  
-|`typedef duration<int, ratio<3600> > hours;`|时钟周期为一小时的 `duration` 类型的同义词。|  
+|`typedef duration<long long, nano> nanoseconds;`|Synonym for a `duration` type that has a tick period of one nanosecond.|  
+|`typedef duration<long long, micro> microseconds;`|Synonym for a `duration` type that has a tick period of one microsecond.|  
+|`typedef duration<long long, milli> milliseconds;`|Synonym for a `duration` type that has a tick period of one millisecond.|  
+|`typedef duration<long long> seconds;`|Synonym for a `duration` type that has a tick period of one second.|  
+|`typedef duration<int, ratio<60> > minutes;`|Synonym for a `duration` type that has a tick period of one minute.|  
+|`typedef duration<int, ratio<3600> > hours;`|Synonym for a `duration` type that has a tick period of one hour.|  
   
-### <a name="literals"></a>文本  
- **(C++11)** \<chrono> 标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md)，利用这些文本，可更方便地使用代码、增大代码类型的安全性和提高代码的可维护性。 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。  
+### <a name="literals"></a>Literals  
+ **(C++11)**The \<chrono> header defines the following [user-defined literals](../cpp/user-defined-literals-cpp.md) that you can use for greater convenience, type-safety and maintainability of your code. These literals are defined in the `literals::chrono_literals` inline namespace and are in scope when std::chrono is in scope.  
   
-|Literal|描述|  
+|Literal|Description|  
 |-------------|-----------------|  
-|chrono::hours operator "" h(unsigned long long Val)|指定整数值形式的小时数。|  
-|chrono:: duration\<双比率\<3600 >> 运算符""h (长双精度 Val)|指定浮点值形式的小时数。|  
-|chrono::minutes (operator "" min)(unsigned long long Val)|指定整数值形式的分钟数。|  
-|chrono:: duration\<双比率\<60 >> (运算符""最小值) （长双精度型 Val）|指定浮点值形式的分钟数。|  
-|chrono::seconds operator "" s(unsigned long long Val)|指定整数值形式的分钟数。|  
-|chrono::duration\<double> operator "" s(long double Val)|指定浮点值形式的描述。|  
-|chrono::milliseconds operator "" ms(unsigned long long Val)|指定整数值形式的毫秒数。|  
-|chrono::duration\<double, milli> operator "" ms(long double Val)|指定浮点值形式的毫秒数。|  
-|chrono::microseconds operator "" us(unsigned long long Val)|指定整数值形式的微秒数。|  
-|chrono::duration\<double, micro> operator "" us(long double Val)|指定浮点值形式的微秒数。|  
-|chrono::nanoseconds operator "" ns(unsigned long long Val)|指定整数值形式的纳秒数。|  
-|chrono::duration\<double, nano> operator "" ns(long double Val)|指定浮点值形式的纳秒数。|  
+|chrono::hours operator "" h(unsigned long long Val)|Specifies hours as an integral value.|  
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|Specifies hours as a floating-point value.|  
+|chrono::minutes (operator "" min)(unsigned long long Val)|Specifies minutes as an integral value.|  
+|chrono::duration\<double, ratio\<60> > (operator "" min)( long double Val)|Specifies minutes as a floating-point value.|  
+|chrono::seconds operator "" s(unsigned long long Val)|Specifies minutes as an integral value.|  
+|chrono::duration\<double> operator "" s(long double Val)|Specifies seconds as a floating-point value.|  
+|chrono::milliseconds operator "" ms(unsigned long long Val)|Specifies milliseconds as an integral value.|  
+|chrono::duration\<double, milli> operator "" ms(long double Val)|Specifies milliseconds as a floating-point value.|  
+|chrono::microseconds operator "" us(unsigned long long Val)|Specifies microseconds as an integral value.|  
+|chrono::duration\<double, micro> operator "" us(long double Val)|Specifies microseconds as a floating-point value.|  
+|chrono::nanoseconds operator "" ns(unsigned long long Val)|Specifies nanoseconds as an integral value.|  
+|chrono::duration\<double, nano> operator "" ns(long double Val)|Specifies nanoseconds as a floating-point value.|  
 |||  
   
-下面的示例演示如何使用 chrono 文本。  
+The following examples show how to use the chrono literals.  
   
 ```  
 constexpr auto day = 24h;  
 constexpr auto week = 24h* 7;  
 constexpr auto my_duration_unit = 108ms;  
 ```  
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

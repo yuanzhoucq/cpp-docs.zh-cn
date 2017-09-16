@@ -1,59 +1,77 @@
 ---
-title: "&lt;strstream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<strstream>"
-  - "std::<strstream>"
-  - "<strstream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strstream 标头"
+title: '&lt;strstream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::<strstream>", "<strstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;strstream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: dfd5120f518a1de5bc035537d99dfa725686be1b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
-定义支持存储于 `char` 对象的分配数组中的序列上的 iostreams 操作的几个类。  这类序列可轻松地转换为 C 字符串或者从 C 字符串进行转换。  
+---
+# <a name="ltstrstreamgt"></a>&lt;strstream&gt;
+Defines several classes that support iostreams operations on sequences stored in an allocated array of `char` object. Such sequences are easily converted to and from C strings.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <strstream>  
   
 ```  
   
-## 备注  
- 类型 `strstream` 的对象使用作为 C 字符串的 `char` \*。  使用 [\<sstream\>](../standard-library/sstream.md)，以使用类型 [basic\_string](../standard-library/basic-string-class.md) 的对象。  
+## <a name="remarks"></a>Remarks  
+ Objects of type `strstream` work with `char` *, which are C strings. Use [\<sstream>](../standard-library/sstream.md) to work with objects of type [basic_string](../standard-library/basic-string-class.md).  
   
 > [!NOTE]
->  `<strstream>` 中的类已弃用。  请考虑转而使用 `<sstream>` 中的类。  
+>  The classes in `<strstream>` are deprecated. Consider using the classes in `<sstream>` instead.  
   
-### 类  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[strstreambuf 类](../standard-library/strstreambuf-class.md)|此类描述了一种流缓冲区，它对向存储在 `char` 数组对象中的元素序列传输元素和从该序列传输出元素进行控制。|  
-|[istrstream 类](../standard-library/istrstream-class.md)|此类描述了一种对象，它控制从 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区提取元素和编码对象。|  
-|[ostrstream 类](../standard-library/ostrstream-class.md)|此类描述了控制元素和编码对象插入 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区中的对象。|  
-|[strstream 类](../standard-library/strstream-class.md)|此类描述了一种对象，该对象使用 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区控制元素和编码对象的插入和提取。|  
+|[strstreambuf Class](../standard-library/strstreambuf-class.md)|The class describes a stream buffer that controls the transmission of elements to and from a sequence of elements stored in a `char` array object.|  
+|[istrstream Class](../standard-library/istrstream-class.md)|The class describes an object that controls extraction of elements and encoded objects from a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).|  
+|[ostrstream Class](../standard-library/ostrstream-class.md)|The class describes an object that controls insertion of elements and encoded objects into a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).|  
+|[strstream Class](../standard-library/strstream-class.md)|The class describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).|  
   
-## 请参阅  
- [\<strstream\>](../standard-library/strstream.md)   
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C\+\+ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 编程](../standard-library/iostream-programming.md)   
- [iostreams 约定](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [\<strstream>](../standard-library/strstream.md)   
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
+
+
+
+

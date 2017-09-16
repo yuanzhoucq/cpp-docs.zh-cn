@@ -1,39 +1,58 @@
 ---
-title: "使用选项卡控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 类, using"
-  - "选项卡控件, using"
-  - "选项卡控件, 处理"
+title: Working with a Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTabCtrl class [MFC], using
+- tab controls [MFC], working with
+- tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用选项卡控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ab06d599c81b9c91b7c6e5aa87013daa1c78506
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-简单方法使用选项卡控件 \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) 是添加到的对话框编辑器中的对话框模板资源。  可以单独或使用控制标题。  您的 MFC 调用 **InitCommonControls**。  关键任务如下所示：  
+---
+# <a name="working-with-a-tab-control"></a>Working with a Tab Control
+The easiest way to use a tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) is by adding it to a dialog template resource with the dialog editor. You can also use a tab control by itself. MFC calls **InitCommonControls** for you. The key tasks are as follows:  
   
--   [创建选项卡控件](../mfc/creating-the-tab-control.md)  
+-   [Creating the tab control](../mfc/creating-the-tab-control.md)  
   
--   [向选项卡控件添加选项卡](../mfc/adding-tabs-to-a-tab-control.md)  
+-   [Adding tabs to a tab control](../mfc/adding-tabs-to-a-tab-control.md)  
   
--   [处理选项卡控件通知消息](../mfc/processing-tab-control-notification-messages.md)  
+-   [Processing tab control notification messages](../mfc/processing-tab-control-notification-messages.md)  
   
- 如果可以对选项卡控件对象在父视图或在对话框类嵌入，破坏控件，则销毁时父。  
+ If the tab control object is embedded in a parent view or dialog class, the control is destroyed when the parent is destroyed.  
   
-## 请参阅  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

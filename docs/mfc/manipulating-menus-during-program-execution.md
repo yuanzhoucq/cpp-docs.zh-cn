@@ -1,34 +1,53 @@
 ---
-title: "在程序执行过程中操作菜单 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMenu 类, 在执行过程中操作菜单"
-  - "执行过程中的菜单"
-  - "执行过程中的菜单, 删除"
-  - "菜单, 执行过程中进行编辑"
-  - "菜单, 在执行过程中操作"
+title: Manipulating Menus During Program Execution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], editing during execution
+- menus during execution [MFC], deleting
+- CMenu class [MFC], manipulating menus during execution
+- menus [MFC], manipulating during execution
+- menus during execution
 ms.assetid: 722c7c00-4be2-4967-877d-f96aaa604396
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 在程序执行过程中操作菜单
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aef857f9d6d59626d5fa152ef311adbac61050ef
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-类 `CMenu` 使用即时操作菜单和菜单项。  `CMenu` 封装 Windows `HMENU` 句柄并提供菜单提供工作的成员函数。  
+---
+# <a name="manipulating-menus-during-program-execution"></a>Manipulating Menus During Program Execution
+Use class `CMenu` to manipulate menus and menu items on the fly. `CMenu` encapsulates a Windows `HMENU` handle and supplies member functions for working with menus.  
   
- 为 [CMenu](../mfc/reference/cmenu-class.md) 参见类概述。有关详细信息。  
+ See the overview for class [CMenu](../mfc/reference/cmenu-class.md) for details.  
   
-## 请参阅  
- [菜单](../mfc/menus-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Menus](../mfc/menus-mfc.md)
+
+

@@ -1,130 +1,149 @@
 ---
-title: "类库概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类库"
-  - "类库, MFC"
-  - "类 [C++], MFC"
-  - "对 MFC 类进行分组"
-  - "MFC, 类库"
+title: Class Library Overview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- grouping MFC classes
+- MFC, class library
+- classes [MFC], MFC
+- class libraries, MFC
+- class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 类库概述
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 26efe50ba629114bf880d0cc409a9efe834f5e54
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本概述对 Microsoft 基础选件类库 \(MFC\) 9.0 版中的选件类进行了分类和描述。  MFC 中的选件类合并起来，可构成一个应用程序框架 — 为 Windows API 编写的应用程序的框架。  您的编程任务是填充特定于您的应用程序的代码。  
+---
+# <a name="class-library-overview"></a>Class Library Overview
+This overview categorizes and describes the classes in the Microsoft Foundation Class Library (MFC) version 9.0. The classes in MFC, taken together, constitute an application framework — the framework of an application written for the Windows API. Your programming task is to fill in the code that is specific to your application.  
   
- 库的选件类在此按以下类别显示：  
+ The library's classes are presented here in the following categories:  
   
--   [根类：CObject](../mfc/root-class-cobject.md)  
+-   [Root Class: CObject](../mfc/root-class-cobject.md)  
   
--   [MFC 应用程序体系结构类](../mfc/mfc-application-architecture-classes.md)  
+-   [MFC Application Architecture Classes](../mfc/mfc-application-architecture-classes.md)  
   
-    -   [应用程序和线程支持类](../mfc/application-and-thread-support-classes.md)  
+    -   [Application and Thread Support Classes](../mfc/application-and-thread-support-classes.md)  
   
-    -   [命令传送类](../mfc/command-routing-classes.md)  
+    -   [Command Routing Classes](../mfc/command-routing-classes.md)  
   
-    -   [文档类](../mfc/document-classes.md)  
+    -   [Document Classes](../mfc/document-classes.md)  
   
-    -   [视图类（体系结构）](../mfc/view-classes-architecture.md)  
+    -   [View Classes (Architecture)](../mfc/view-classes-architecture.md)  
   
-    -   [框架窗口类（体系结构）](../mfc/frame-window-classes-architecture.md)  
+    -   [Frame Window Classes (Architecture)](../mfc/frame-window-classes-architecture.md)  
   
-    -   [文档\-模板类](../mfc/document-template-classes.md)  
+    -   [Document-Template Classes](../mfc/document-template-classes.md)  
   
--   [窗口、对话框和控件类](../mfc/window-dialog-and-control-classes.md)  
+-   [Window, Dialog, and Control Classes](../mfc/window-dialog-and-control-classes.md)  
   
-    -   [框架窗口类 \(Windows\)](../mfc/frame-window-classes-windows.md)  
+    -   [Frame Window Classes (Windows)](../mfc/frame-window-classes-windows.md)  
   
-    -   [视图类 \(Windows\)](../mfc/view-classes-windows.md)  
+    -   [View Classes (Windows)](../mfc/view-classes-windows.md)  
   
-    -   [对话框类](../mfc/dialog-box-classes.md)  
+    -   [Dialog Box Classes](../mfc/dialog-box-classes.md)  
   
-    -   [控件类](../mfc/control-classes.md)  
+    -   [Control Classes](../mfc/control-classes.md)  
   
-    -   [控件滚动条类](../mfc/control-bar-classes.md)  
+    -   [Control Bar Classes](../mfc/control-bar-classes.md)  
   
--   [绘图和打印类](../mfc/drawing-and-printing-classes.md)  
+-   [Drawing and Printing Classes](../mfc/drawing-and-printing-classes.md)  
   
-    -   [输出（设备上下文）类](../mfc/output-device-context-classes.md)  
+    -   [Output (Device Context) Classes](../mfc/output-device-context-classes.md)  
   
-    -   [绘图工具类](../mfc/drawing-tool-classes.md)  
+    -   [Drawing Tool Classes](../mfc/drawing-tool-classes.md)  
   
--   [简单数据类型类](../mfc/simple-data-type-classes.md)  
+-   [Simple Data Type Classes](../mfc/simple-data-type-classes.md)  
   
--   [数组、列表和映射类](../mfc/array-list-and-map-classes.md)  
+-   [Array, List, and Map Classes](../mfc/array-list-and-map-classes.md)  
   
-    -   [数组的模板选件类、列表和映射](../mfc/template-classes-for-arrays-lists-and-maps.md)  
+    -   [Template Classes for Arrays, Lists, and Maps](../mfc/template-classes-for-arrays-lists-and-maps.md)  
   
-    -   [使用就绪数组类](../mfc/ready-to-use-array-classes.md)  
+    -   [Ready-to-Use Array Classes](../mfc/ready-to-use-array-classes.md)  
   
-    -   [使用就绪列表类](../mfc/ready-to-use-list-classes.md)  
+    -   [Ready-to-Use List Classes](../mfc/ready-to-use-list-classes.md)  
   
-    -   [使用就绪映射类](../mfc/ready-to-use-map-classes.md)  
+    -   [Ready-to-Use Map Classes](../mfc/ready-to-use-map-classes.md)  
   
--   [文件和数据库类](../mfc/file-and-database-classes.md)  
+-   [File and Database Classes](../mfc/file-and-database-classes.md)  
   
-    -   [文件 I\/O 类](../mfc/file-i-o-classes.md)  
+    -   [File I/O Classes](../mfc/file-i-o-classes.md)  
   
-    -   [DAO 类](../mfc/dao-classes.md)  
+    -   [DAO Classes](../mfc/dao-classes.md)  
   
-    -   [ODBC 类](../mfc/odbc-classes.md)  
+    -   [ODBC Classes](../mfc/odbc-classes.md)  
   
-    -   [OLE DB 类](../mfc/ole-db-classes.md)  
+    -   [OLE DB Classes](../mfc/ole-db-classes.md)  
   
--   [Internet 和联网类](../mfc/internet-and-networking-classes.md)  
+-   [Internet and Networking Classes](../mfc/internet-and-networking-classes.md)  
   
-    -   [Windows 套接字类](../mfc/windows-sockets-classes.md)  
+    -   [Windows Sockets Classes](../mfc/windows-sockets-classes.md)  
   
-    -   [Win32 Internet 类](../mfc/win32-internet-classes.md)  
+    -   [Win32 Internet Classes](../mfc/win32-internet-classes.md)  
   
--   [OLE 类](../mfc/ole-classes.md)  
+-   [OLE Classes](../mfc/ole-classes.md)  
   
-    -   [OLE 容器类](../mfc/ole-container-classes.md)  
+    -   [OLE Container Classes](../mfc/ole-container-classes.md)  
   
-    -   [OLE 服务器类](../mfc/ole-server-classes.md)  
+    -   [OLE Server Classes](../mfc/ole-server-classes.md)  
   
-    -   [OLE 拖放和数据传输类](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
+    -   [OLE Drag-and-Drop and Data Transfer Classes](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)  
   
-    -   [OLE 通用对话框类](../mfc/ole-common-dialog-classes.md)  
+    -   [OLE Common Dialog Classes](../mfc/ole-common-dialog-classes.md)  
   
-    -   [OLE 自动化类](../mfc/ole-automation-classes.md)  
+    -   [OLE Automation Classes](../mfc/ole-automation-classes.md)  
   
-    -   [OLE 控件类](../mfc/ole-control-classes.md)  
+    -   [OLE Control Classes](../mfc/ole-control-classes.md)  
   
-    -   [活动文档类](../mfc/active-document-classes.md)  
+    -   [Active Document Classes](../mfc/active-document-classes.md)  
   
-    -   [与 OLE 相关的类](../mfc/ole-related-classes.md)  
+    -   [OLE-Related Classes](../mfc/ole-related-classes.md)  
   
--   [调试和异常类](../mfc/debugging-and-exception-classes.md)  
+-   [Debugging and Exception Classes](../mfc/debugging-and-exception-classes.md)  
   
-    -   [调试支持类](../mfc/debugging-support-classes.md)  
+    -   [Debugging Support Classes](../mfc/debugging-support-classes.md)  
   
-    -   [异常类](../mfc/exception-classes.md)  
+    -   [Exception Classes](../mfc/exception-classes.md)  
   
- [泛型选件类设计原则](../mfc/general-class-design-philosophy.md)这一节阐释了 MFC 库是如何进行设计的。  
+ The section [General Class Design Philosophy](../mfc/general-class-design-philosophy.md) explains how the MFC Library was designed.  
   
- 有关框架的概述，请参见[使用类编写 Windows 应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)。  上面列出的一些类是通用类，可以在框架外使用且提供有用的抽象，例如集合、异常、文件和字符串。  
+ For an overview of the framework, see [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md). Some of the classes listed above are general-purpose classes that can be used outside of the framework and provide useful abstractions such as collections, exceptions, files, and strings.  
   
- 若要查看类的继承，请使用[类层次结构表图](../mfc/hierarchy-chart.md)。  
+ To see the inheritance of a class, use the [Class Hierarchy Chart](../mfc/hierarchy-chart.md).  
   
- 除本概述中列出的类之外，MFC 库还包含许多全局函数、全局变量和宏。  在主题 [MFC 宏和全局](../mfc/reference/mfc-macros-and-globals.md)中有关于这些问题的概述和详细的列表，按照字母顺序参考 MFC 选件类。  
+ In addition to the classes listed in this overview, the MFC Library contains a number of global functions, global variables, and macros. There is an overview and detailed listing of these in the topic [MFC Macros and Globals](../mfc/reference/mfc-macros-and-globals.md), which follows the alphabetical reference to the MFC classes.  
   
-## 请参阅  
- [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)
+## <a name="see-also"></a>See Also  
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)
+
+

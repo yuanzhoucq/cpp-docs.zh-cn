@@ -1,5 +1,5 @@
 ---
-title: "MFC 使用的结构 |Microsoft 文档"
+title: Structures Used by MFC | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,45 +34,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d26b374e233326ac5acc97486edc8d38e6bf5d81
-ms.openlocfilehash: 68c5119715516a4a35af56bc8dd7ce4d9176ee97
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e3cdc1f69aa5b710ecdd29bd0917cf1eb0266541
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="structures-used-by-mfc"></a>MFC 使用的结构
-下表列出了从各成员函数调用的结构。 有关各个结构用法的详细信息，请参阅每个结构“另请参阅”列表中记录的类和成员函数。  
+# <a name="structures-used-by-mfc"></a>Structures Used by MFC
+The following table lists structures that are called from various member functions. For further information on individual structure usage, refer to the classes and member functions noted in the See Also list for each structure.  
   
-|[ABC 结构](../../mfc/reference/abc-structure.md)|[HSE_VERSION_INFO 结构](../../mfc/reference/hse-version-info-structure.md)|  
+|[ABC Structure](../../mfc/reference/abc-structure.md)|[HSE_VERSION_INFO Structure](../../mfc/reference/hse-version-info-structure.md)|  
 |--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|  
-|[ABCFLOAT 结构](../../mfc/reference/abcfloat-structure.md)|[LINGER 结构](../../mfc/reference/linger-structure.md)|  
-|[AFX_EXTENSION_MODULE 结构](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH 结构](../../mfc/reference/logbrush-structure.md)|  
-|[BITMAP 结构](../../mfc/reference/bitmap-structure.md)|[LOGPEN 结构](../../mfc/reference/logpen-structure.md)|  
-|[BITMAPINFO 结构](../../mfc/reference/bitmapinfo-structure.md)|[MEASUREITEMSTRUCT 结构](../../mfc/reference/measureitemstruct-structure.md)|  
-|[CDaoDatabaseInfo 结构](../../mfc/reference/cdaodatabaseinfo-structure.md)|[MINMAXINFO 结构](../../mfc/reference/minmaxinfo-structure.md)|  
-|[CDaoErrorInfo 结构](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG 结构](../../mfc/reference/msg-structure1.md)|  
-|[CDaoFieldInfo 结构](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS 结构](../../mfc/reference/nccalcsize-params-structure.md)|  
-|[CDaoIndexFieldInfo 结构](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT 结构](../../mfc/reference/paintstruct-structure.md)|  
-|[CDaoIndexInfo 结构](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT 结构](../../mfc/reference/point-structure1.md)|  
-|[CDaoParameterInfo 结构](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT 结构](../../mfc/reference/rect-structure1.md)|  
-|[CDaoQueryDefInfo 结构](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA 结构](../../mfc/reference/rgndata-structure.md)|  
-|[CDaoRelationFieldInfo 结构](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR 结构](../../mfc/reference/sockaddr-structure.md)|  
-|[CDaoRelationInfo 结构](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN 结构](../../mfc/reference/sockaddr-in-structure.md)|  
-|[CDaoTableDefInfo 结构](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME 结构](systemtime-structure1.md)
-|[CDaoWorkspaceInfo 结构](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT 结构](../../mfc/reference/windowplacement-structure.md)|  
-|[CODBCFieldInfo 结构](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS 结构](../../mfc/reference/windowpos-structure1.md)  
-|[COLORADJUSTMENT 结构](../../mfc/reference/coloradjustment-structure.md)|[WSADATA 结构](../../mfc/reference/wsadata-structure.md)|  
-|[COMPAREITEMSTRUCT 结构](../../mfc/reference/compareitemstruct-structure.md)|[XFORM 结构](../../mfc/reference/xform-structure.md)|  
-|[CREATESTRUCT 结构](../../mfc/reference/createstruct-structure.md)||  
-|[DELETEITEMSTRUCT 结构](../../mfc/reference/deleteitemstruct-structure.md)||  
-|[DEVNAMES 结构](../../mfc/reference/devnames-structure.md)||  
-|[DHtmlUrlEventMapEntry 结构](../../mfc/reference/dhtmlurleventmapentry-structure.md)||  
-|[DRAWITEMSTRUCT 结构](../../mfc/reference/drawitemstruct-structure.md)||  
-|**EXTENSION_CONTROL_BLOCK 结构**||  
-|[FILETIME 结构](../../mfc/reference/filetime-structure.md)  
+|[ABCFLOAT Structure](../../mfc/reference/abcfloat-structure.md)|[LINGER Structure](../../mfc/reference/linger-structure.md)|  
+|[AFX_EXTENSION_MODULE Structure](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH Structure](../../mfc/reference/logbrush-structure.md)|  
+|[BITMAP Structure](../../mfc/reference/bitmap-structure.md)|[LOGPEN Structure](../../mfc/reference/logpen-structure.md)|  
+|[BITMAPINFO Structure](../../mfc/reference/bitmapinfo-structure.md)|[MEASUREITEMSTRUCT Structure](../../mfc/reference/measureitemstruct-structure.md)|  
+|[CDaoDatabaseInfo Structure](../../mfc/reference/cdaodatabaseinfo-structure.md)|[MINMAXINFO Structure](../../mfc/reference/minmaxinfo-structure.md)|  
+|[CDaoErrorInfo Structure](../../mfc/reference/cdaoerrorinfo-structure.md)|[MSG Structure](../../mfc/reference/msg-structure1.md)|  
+|[CDaoFieldInfo Structure](../../mfc/reference/cdaofieldinfo-structure.md)|[NCCALCSIZE_PARAMS Structure](../../mfc/reference/nccalcsize-params-structure.md)|  
+|[CDaoIndexFieldInfo Structure](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT Structure](../../mfc/reference/paintstruct-structure.md)|  
+|[CDaoIndexInfo Structure](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT Structure](../../mfc/reference/point-structure1.md)|  
+|[CDaoParameterInfo Structure](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT Structure](../../mfc/reference/rect-structure1.md)|  
+|[CDaoQueryDefInfo Structure](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA Structure](../../mfc/reference/rgndata-structure.md)|  
+|[CDaoRelationFieldInfo Structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR Structure](../../mfc/reference/sockaddr-structure.md)|  
+|[CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN Structure](../../mfc/reference/sockaddr-in-structure.md)|  
+|[CDaoTableDefInfo Structure](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME Structure](systemtime-structure1.md)
+|[CDaoWorkspaceInfo Structure](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[WINDOWPLACEMENT Structure](../../mfc/reference/windowplacement-structure.md)|  
+|[CODBCFieldInfo Structure](../../mfc/reference/codbcfieldinfo-structure.md)|[WINDOWPOS Structure](../../mfc/reference/windowpos-structure1.md)  
+|[COLORADJUSTMENT Structure](../../mfc/reference/coloradjustment-structure.md)|[WSADATA Structure](../../mfc/reference/wsadata-structure.md)|  
+|[COMPAREITEMSTRUCT Structure](../../mfc/reference/compareitemstruct-structure.md)|[XFORM Structure](../../mfc/reference/xform-structure.md)|  
+|[CREATESTRUCT Structure](../../mfc/reference/createstruct-structure.md)||  
+|[DELETEITEMSTRUCT Structure](../../mfc/reference/deleteitemstruct-structure.md)||  
+|[DEVNAMES Structure](../../mfc/reference/devnames-structure.md)||  
+|[DHtmlUrlEventMapEntry Structure](../../mfc/reference/dhtmlurleventmapentry-structure.md)||  
+|[DRAWITEMSTRUCT Structure](../../mfc/reference/drawitemstruct-structure.md)||  
+|**EXTENSION_CONTROL_BLOCK Structure**||  
+|[FILETIME Structure](../../mfc/reference/filetime-structure.md)  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 

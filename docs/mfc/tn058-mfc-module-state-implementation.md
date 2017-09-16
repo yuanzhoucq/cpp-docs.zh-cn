@@ -1,177 +1,201 @@
 ---
-title: "TN058：MFC 模块状态实现 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.implementation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], 模块状态"
-  - "MFC [C++], 管理状态数据"
-  - "模块状态 [C++], 管理状态数据"
-  - "模块状态 [C++], 切换"
-  - "进程状态 [C++]"
-  - "线程状态 [C++]"
-  - "TN058"
+title: 'TN058: MFC Module State Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.implementation
+dev_langs:
+- C++
+helpviewer_keywords:
+- thread state [MFC]
+- module states [MFC], managing state data
+- TN058
+- MFC, managing state data
+- module states [MFC], switching
+- DLLs [MFC], module states
+- process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# TN058：MFC 模块状态实现
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9da6f59763f67397a8cf008f9016a561df1d94b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn058-mfc-module-state-implementation"></a>TN058: MFC Module State Implementation
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此技术声明介绍 MFC“模块状态”构造的实现。  使用模块状态执行的了解这一点十分重要的。使用来自 \(DLL 或 OLE 进程内服务器\) 共享 MFC 的 DLL。  
+ This technical note describes the implementation of MFC "module state" constructs. An understanding of the module state implementation is critical for using the MFC shared DLLs from a DLL (or OLE in-process server).  
   
- 在读取此注释前，请参见“管理 MFC 模块的状态数据”中的 [创建新的文档、窗口和视图](../mfc/creating-new-documents-windows-and-views.md)。  本文包含关键用法信息和概述有关此主题。  
+ Before reading this note, refer to "Managing the State Data of MFC Modules" in [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md). This article contains important usage information and overview information on this subject.  
   
-## 概述  
- 有三个 MFC 状态信息：模块状态、线程处理状态和状态。  有时这些状态类型可以合并。  例如，MFC 的句柄映射是模块本机和线程本地变量。  允许这两个模块在不同的映射它们的每个线程。  
+## <a name="overview"></a>Overview  
+ There are three kinds of MFC state information: Module State, Process State, and Thread State. Sometimes these state types can be combined. For example, MFC's handle maps are both module local and thread local. This allows two different modules to have different maps in each of their threads.  
   
- 处理状态和线程状态类似。  这些数据项是传统上是全局变量的事物，但需要特定于特定进程或线程适当的 Win32s 支持的或不适宜的多线程支持的。  哪个类别特定数据项成为依赖于该项及其所需的语义与进程和线程边界。  
+ Process State and Thread State are similar. These data items are things that have traditionally been global variables, but have need to be specific to a given process or thread for proper Win32s support or for proper multithreading support. Which category a given data item fits in depends on that item and its desired semantics with regard to process and thread boundaries.  
   
- 模块状态的独特之处在于它可以包含正确处理本机或线程本机或声明全局状态。  此外，它可以快速切换。  
+ Module State is unique in that it can contain either truly global state or state that is process local or thread local. In addition, it can be switched quickly.  
   
-## 模块状态切换  
- 每线程包含指针为“当前”或“活动”状态模块 \(毫不为奇，因为指针是 MFC 线程本地状态的一部分\)。  更改，当执行线程边界时模块传递，如应用程序调入一个 OLE 控件或 DLL 或一个 OLE 控件的回调入该指针应用程序。  
+## <a name="module-state-switching"></a>Module State Switching  
+ Each thread contains a pointer to the "current" or "active" module state (not surprisingly, the pointer is part of MFC's thread local state). This pointer is changed when the thread of execution passes a module boundary, such as an application calling into an OLE Control or DLL, or an OLE Control calling back into an application.  
   
- 当前模块状态通过调用 **AfxSetModuleState**开关。  在很大程度上，不直接处理 API。  MFC，大多数情况下，它将在您 \(OLE、WinMain 入口点、**AfxWndProc**等\)。这将在通过了解的静态链接中编写特殊的 **WndProc**中的任何组件执行和特定 `WinMain` \(或 `DllMain`\) 的模块状态应当前。  可以通过查看 DLLMODUL.CPP 或 APPMODUL.CPP 看到此代码在 MFC \\SRC 目录。  
+ The current module state is switched by calling **AfxSetModuleState**. For the most part, you will never deal directly with the API. MFC, in many cases, will call it for you (at WinMain, OLE entry-points, **AfxWndProc**, etc.). This is done in any component you write by statically linking in a special **WndProc**, and a special `WinMain` (or `DllMain`) that knows which module state should be current. You can see this code by looking at DLLMODUL.CPP or APPMODUL.CPP in the MFC\SRC directory.  
   
- 很少见要设置模块状态并将其设置为。  大多数时间要“按下”拥有模块状态作为当前消息，在执行后，然后“剩余”原始上下文返回。  这由宏 [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) 和特殊类 **AFX\_MAINTAIN\_STATE**完成。  
+ It is rare that you want to set the module state and then not set it back. Most of the time you want to "push" your own module state as the current one and then, after you are done, "pop" the original context back. This is done by the macro [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) and the special class **AFX_MAINTAIN_STATE**.  
   
- `CCmdTarget` 具有支持的模块状态切换特殊功能。  具体而言，`CCmdTarget` 是用于 OLE 自动化 COM 和 OLE 入口点类的根。  与公开的其他入口点对系统，这些入口点必须设置正确的模块状态。  特定 `CCmdTarget` 如何知道“右”模块状态应可接受？  回答是“记忆”哪些“当前”模块状态是构造，这样它将当前模块的状态设置为 DLL“记忆”值，则之后调用时。  因此，给定的 `CCmdTarget` 对象关联的模块状态是当前的模块状态，当在构造对象了。  将加载 INPROC 服务器，创建对象并调用其方法的简单示例。  
+ `CCmdTarget` has special features for supporting module state switching. In particular, a `CCmdTarget` is the root class used for OLE automation and OLE COM entry points. Like any other entry point exposed to the system, these entry points must set the correct module state. How does a given `CCmdTarget` know what the "correct" module state should be The answer is that it "remembers" what the "current" module state is when it is constructed, such that it can set the current module state to that "remembered" value when it is later called. As a result, the module state that a given `CCmdTarget` object is associated with is the module state that was current when the object was constructed. Take a simple example of loading an INPROC server, creating an object, and calling its methods.  
   
-1.  使用 **LoadLibrary**，DLL 由 OLE 加载。  
+1.  The DLL is loaded by OLE using **LoadLibrary**.  
   
-2.  首先调用**RawDllMain**。  将模块状态到 DLL 的已知静态的模块状态。  因此 **RawDllMain** 静态链接到 DLL。  
+2. **RawDllMain** is called first. It sets the module state to the known static module state for the DLL. For this reason **RawDllMain** is statically linked to the DLL.  
   
-3.  工厂的类构造函数与我们的对象调用。  `COleObjectFactory` 从 `CCmdTarget` 派生，因此，和在哪模块状态确保其实例化。  这很重要\)，以便类工厂创建请求对象时，现在它知道使当前的模块状态。  
+3.  The constructor for the class factory associated with our object is called. `COleObjectFactory` is derived from `CCmdTarget` and as a result, it remembers in which module state it was instantiated. This is important — when the class factory is asked to create objects, it knows now what module state to make current.  
   
-4.  调用`DllGetClassObject` 以获取类工厂。  MFC 类工厂搜索列表与此模块并将其返回。  
+4. `DllGetClassObject` is called to obtain the class factory. MFC searches the class factory list associated with this module and returns it.  
   
-5.  **COleObjectFactory::XClassFactory2::CreateInstance** 调用。  在创建对象并返回值之前，此函数将为当前模块状态在第 3 步中的模块状态 \(当前的版本，当 `COleObjectFactory` 实例化。\)  这会在 [METHOD\_PROLOGUE](../Topic/METHOD_PROLOGUE.md)中。  
+5. **COleObjectFactory::XClassFactory2::CreateInstance** is called. Before creating the object and returning it, this function sets the module state to the module state that was current in step 3 (the one that was current when the `COleObjectFactory` was instantiated). This is done inside of [METHOD_PROLOGUE](com-interface-entry-points.md).  
   
-6.  在创建对象时，也是确保的模块状态为活动的 `CCmdTarget` 派生对象和类似地，`COleObjectFactory`，因此执行此新的对象。  了解对象现在开关的哪模块状态，只要该调用。  
+6.  When the object is created, it too is a `CCmdTarget` derivative and in the same way `COleObjectFactory` remembered which module state was active, so does this new object. Now the object knows which module state to switch to whenever it is called.  
   
-7.  客户端调用 COM 对象在接收 `CoCreateInstance` 从其调用 OLE 的函数。  当调用对象时它使用 `METHOD_PROLOGUE` 开关状态模块，如 `COleObjectFactory`。  
+7.  The client calls a function on the OLE COM object it received from its `CoCreateInstance` call. When the object is called it uses `METHOD_PROLOGUE` to switch the module state just like `COleObjectFactory` does.  
   
- 您可以看到，模块状态从对象传送到对象，当创建它们。  重要的 let 模块状态正确设置。  如果未设置，DLL 或 COM 对象可以使用调用它的 MFC 应用程序的性能进行交互，或者可能无法找到它的资源可能会失败或其他凄惨的方式。  
+ As you can see, the module state is propagated from object to object as they are created. It is important to have the module state set appropriately. If it is not set, your DLL or COM object may interact poorly with an MFC application that is calling it, or may be unable to find its own resources, or may fail in other miserable ways.  
   
- 注意某些 DLL 类型，“MFC 扩展”DLL 专门切换其 **RawDllMain** 的模块状态 \(实际上，他们甚至通常没有 **RawDllMain**\)。  这是因为，它们旨在行为“，就像”them 实际上在使用它们的应用程序。  它们是，和是这些修改视图运行的应用程序的全局状态应用程序的一部分。  
+ Note that certain kinds of DLLs, specifically "MFC Extension" DLLs do not switch the module state in their **RawDllMain** (actually, they usually don't even have a **RawDllMain**). This is because they are intended to behave "as if" they were actually present in the application that uses them. They are very much a part of the application that is running and it is their intention to modify that application's global state.  
   
- OLE 控件和其他 DLL 是截然不同。  他们不想修改调用应用程序的状态；调用这些过程的应用程序可能甚至不是 MFC 应用程序并因此无法在不修改状态。  这是原因模块状态切换时开发的。  
+ OLE Controls and other DLLs are very different. They do not want to modify the calling application's state; the application that is calling them may not even be an MFC application and so there may be no state to modify. This is the reason that module state switching was invented.  
   
- 如果从一个DLL中导出函数，例如启动在 DLL 的对话框的一个，需要以下代码添加到函数的开头：  
+ For exported functions from a DLL, such as one that launches a dialog box in your DLL, you need to add the following code to the beginning of the function:  
   
 ```  
-AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
+AFX_MANAGE_STATE(AfxGetStaticModuleState())  
 ```  
   
- 这将交换当前模块状态，从[AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md)状态返回到当前作用域结束。  
+ This swaps the current module state with the state returned from [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate) until the end of the current scope.  
   
- 如果`AFX_MODULE_STATE`宏没有使用会发生资源DLL中存在的问题。  默认情况下，MFC 使用主应用的资源句柄加载资源模板。  此模板实际存储在 DLL 。  根本原因是MFC的模块状态信息还没有被 `AFX_MODULE_STATE` 宏切换。  资源句柄从 MFC 的模块状态恢复。  不使转换模块状态导致使用错误的资源句柄。  
+ Problems with resources in DLLs will occur if the `AFX_MODULE_STATE` macro is not used. By default, MFC uses the resource handle of the main application to load the resource template. This template is actually stored in the DLL. The root cause is that MFC's module state information has not been switched by the `AFX_MODULE_STATE` macro. The resource handle is recovered from MFC's module state. Not switching the module state causes the wrong resource handle to be used.  
   
- `AFX_MODULE_STATE` 不需要放置到DLL的每个函数。  例如，`InitInstance` 可由应用程序的 MFC 代码调用，而无需 `AFX_MODULE_STATE`，因为在 `InitInstance`之前 MFC自动切换模块状态然后切回在 `InitInstance` 返回之后。  上述情况同样适用于所有消息映射处理程序。  规则DLL实际上有一个特殊的主窗口过程在路由的任何消息之前自动切换模块状态。  
+ `AFX_MODULE_STATE` does not need to be put in every function in the DLL. For example, `InitInstance` can be called by the MFC code in the application without `AFX_MODULE_STATE` because MFC automatically shifts the module state before `InitInstance` and then switches it back after `InitInstance` returns. The same is true for all message map handlers. Regular MFC DLLs actually have a special master window procedure that automatically switches the module state before routing any message.  
   
-## 处理本地数据  
- 处理本地数据不是这样若优先没有 Win32s DLL 模型方面。  在 Win32s 所有 DLL 共享，全局数据中，即使由加载多个应用程序。  这非常不同“实际”Win32 DLL 数据模型不同，每个 DLL 在每个进程的数据获取空间单独副本附加到 DLL。  若要添加到复杂，在 Win32s DLL 堆分配的数据事实上是处理特定 \(至少，只要所有权为\)。  考虑以下数据和代码：  
+## <a name="process-local-data"></a>Process Local Data  
+ Process local data would not be of such great concern had it not been for the difficulty of the Win32s DLL model. In Win32s all DLLs share their global data, even when loaded by multiple applications. This is very different from the "real" Win32 DLL data model, where each DLL gets a separate copy of its data space in each process that attaches to the DLL. To add to the complexity, data allocated on the heap in a Win32s DLL is in fact process specific (at least as far as ownership goes). Consider the following data and code:  
   
 ```  
 static CString strGlobal; // at file scope  
-  
+ 
 __declspec(dllexport)   
 void SetGlobalString(LPCTSTR lpsz)  
 {  
-   strGlobal = lpsz;  
+    strGlobal = lpsz;  
 }  
-  
+ 
 __declspec(dllexport)  
-void GetGlobalString(LPCTSTR lpsz, size_t cb)  
+void GetGlobalString(LPCTSTR lpsz,
+    size_t cb)  
 {  
-   StringCbCopy(lpsz, cb, strGlobal);  
+    StringCbCopy(lpsz,
+    cb,
+    strGlobal);
+
 }  
 ```  
   
- 先想想发生了什么事，如果上面的代码在 DLL 中，该 DLL 由两个进程加载 \(A 和 B，事实上，它可以是同一应用程序的两个实例。\)  调用 `SetGlobalString("Hello from A")`。  因此，内存为 `CString` 分配数据上下文 A. 进程中。  记住 `CString` 全局和可见为 A 和 B。  现在将调用 `GetGlobalString(sz, sizeof(sz))`。  B 中找到该设置的。的数据。  这是因为，Win32s 不提供进程间 \(如 Win32 的保护。  这是第一问题；在大多数情况下都视为由不同的应用程序拥有的应用程序会影响全局数据是不理想。  
+ Consider what happens if the above code is in located in a DLL and that DLL is loaded by two processes A and B (it could, in fact, be two instances of the same application). A calls `SetGlobalString("Hello from A")`. As a result, memory is allocated for the `CString` data in the context of process A. Keep in mind that the `CString` itself is global and is visible to both A and B. Now B calls `GetGlobalString(sz, sizeof(sz))`. B will be able to see the data that A set. This is because Win32s offers no protection between processes like Win32 does. That is the first problem; in many cases it is not desirable to have one application affect global data that is considered to be owned by a different application.  
   
- 有其他问题。  假定 A 立即退出。  当退出 A 时，'`strGlobal`' 使用的字符串的内存可用于系统，即分配的所有内存处理 A 由操作系统自动释放。  因为 `CString` 析构函数调用，则不会发布；尚未调用。  它将被释放，因为分配该应用程序退出的区域。  现在，如果 B 调用 `GetGlobalString(sz, sizeof(sz))`，它可能无法获取有效数据。  其他应用程序可能以其他使用了该内存。  
+ There are additional problems as well. Let's say that A now exits. When A exits, the memory used by the '`strGlobal`' string is made available for the system — that is, all memory allocated by process A is freed automatically by the operating system. It is not freed because the `CString` destructor is being called; it hasn't been called yet. It is freed simply because the application which allocated it has left the scene. Now if B called `GetGlobalString(sz, sizeof(sz))`, it may not get valid data. Some other application may have used that memory for something else.  
   
- 显然存在问题。  MFC 3.x 使用名为线程本地存储的技术 \(TLS\)。  MFC 3.x 将分配 Win32s 实际上是进程。下本地存储索引的 TLS，索引，即使未将该调用引用基于该 TLS 索引的所有数据。  这类似于用于存储上的 Win32 线程本地数据的索引 \(TLS 下面参见有关该主题的更多信息。\)  这使每 MFC DLL 使用每进程至少两 TLS 索引。  当您考虑多加载的 DLL \(OCXs OLE 控件\)，您很快就会用完所有索引 \(TLS 只有 64 可用\)。  此外，MFC 都必须在一个地方放置所有这些数据，一个结构中。  它不非常易于扩展并不是所需的实例与使用索引 \(它的使用。  
+ Clearly a problem exists. MFC 3.x used a technique called thread-local storage (TLS). MFC 3.x would allocate a TLS index that under Win32s really acts as a process-local storage index, even though it is not called that and then would reference all data based on that TLS index. This is similar to the TLS index that was used to store thread-local data on Win32 (see below for more information on that subject). This caused every MFC DLL to utilize at least two TLS indices per process. When you account for loading many OLE Control DLLs (OCXs), you quickly run out of TLS indices (there are only 64 available). In addition, MFC had to place all this data in one place, in a single structure. It was not very extensible and was not ideal with regard to its use of TLS indices.  
   
- MFC 4.x 解决此与一组您可以“在数据环绕”应为处理本机类模板。  例如，上述问题可以通过编写解决：  
+ MFC 4.x addresses this with a set of class templates you can "wrap" around the data that should be process local. For example, the problem mentioned above could be fixed by writing:  
   
 ```  
 struct CMyGlobalData : public CNoTrackObject  
 {  
-   CString strGlobal;  
+    CString strGlobal;  
 };  
 CProcessLocal<CMyGlobalData> globalData;  
-  
+ 
 __declspec(dllexport)   
 void SetGlobalString(LPCTSTR lpsz)  
 {  
-   globalData->strGlobal = lpsz;  
+    globalData->strGlobal = lpsz;  
 }  
-  
+ 
 __declspec(dllexport)  
 void GetGlobalString(LPCTSTR lpsz, size_t cb)  
 {  
-   StringCbCopy(lpsz, cb, globalData->strGlobal);  
+    StringCbCopy(lpsz, cb, globalData->strGlobal);
+
 }  
 ```  
   
- MFC 实现这一点。两个步骤。  首先，则层在仅使用两个索引的每个进程 \(Win32 API **Tls\*** \(**TlsAlloc**、**TlsSetValue**、**TlsGetValue**、\) 的顶部，即，而不论涉及多少 DLL 有。  接下来，提供模板 `CProcessLocal` 访问此数据。  它重写\> 的运算符是。可以看到上面的语法直观。  由 `CProcessLocal` 包装的对象必须派生自 `CNoTrackObject`。  为自`CNoTrackObject` 分配器 \(**LocalAlloc**\/**LocalFree**\) 和虚析构函数的 MFC 可自动销毁处理本地对象，在进程停止时。  如果需要，这些对象可以具有自定义析构函数的额外清除。  因为编译器将生成默认析构函数销毁嵌入在其中的 `CString` 对象，上面示例不需要。  
+ MFC implements this in two steps. First, there is a layer on top of the Win32 **Tls\*** APIs (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**, etc.) which use only two TLS indexes per process, no matter how many DLLs you have. Second, the `CProcessLocal` template is provided to access this data. It overrides operator-> which is what allows the intuitive syntax you see above. All objects that are wrapped by `CProcessLocal` must be derived from `CNoTrackObject`. `CNoTrackObject` provides a lower-level allocator (**LocalAlloc**/**LocalFree**) and a virtual destructor such that MFC can automatically destroy the process local objects when the process is terminated. Such objects can have a custom destructor if additional cleanup is required. The above example doesn't require one, since the compiler will generate a default destructor to destroy the embedded `CString` object.  
   
- 有其他有趣的优势。此方法。  不仅自动销毁所有 `CProcessLocal` 对象，则不会构造之前，他们需要的。  速度将实例化`CProcessLocal::operator->` 对象关联，首次调用，而不是。  在上面的示例中，该 '`strGlobal`' 意味着字符串第一次不会构造直到调用 **SetGlobalString** 或 **GetGlobalString**。  在某些情况下，这有助于减小 DLL 启动时间。  
+ There are other interesting advantages to this approach. Not only are all `CProcessLocal` objects destroyed automatically, they are not constructed until they are needed. `CProcessLocal::operator->` will instantiate the associated object the first time it is called, and no sooner. In the example above, that means that the '`strGlobal`' string will not be constructed until the first time **SetGlobalString** or **GetGlobalString** is called. In some instances, this can help decrease DLL startup time.  
   
-## 线程本地数据  
- 当数据必须是本地的。特定线程时，类似于处理本地数据，线程本地数据。  即需要数据的单独实例用于访问该数据的每个线程。  这可能多次代替大量同步机制。  如果不需要数据被多个线程共享，这样的机制可能非常昂贵和不必要的。  假设有一个 `CString` 对象 \(就像上例\)。  我们可以将它使其成为线程本地使用 `CThreadLocal` 模板：  
+## <a name="thread-local-data"></a>Thread Local Data  
+ Similar to process local data, thread local data is used when the data must be local to a given thread. That is, you need a separate instance of the data for each thread that accesses that data. This can many times be used in lieu of extensive synchronization mechanisms. If the data does not need to be shared by multiple threads, such mechanisms can be expensive and unnecessary. Suppose we had a `CString` object (much like the sample above). We can make it thread local by wrapping it with a `CThreadLocal` template:  
   
 ```  
 struct CMyThreadData : public CNoTrackObject  
 {  
-   CString strThread;  
+    CString strThread;  
 };  
 CThreadLocal<CMyThreadData> threadData;  
-  
+ 
 void MakeRandomString()  
-{  
-   // a kind of card shuffle (not a great one)  
-   CString& str = threadData->strThread;  
-   str.Empty();  
-   while (str.GetLength() != 52)  
-   {  
-      unsigned int randomNumber;  
-      errno_t randErr;  
-      randErr = rand_s( &randomNumber );  
-      if ( randErr == 0 )  
-      {  
-         TCHAR ch = randomNumber % 52 + 1;  
-         if (str.Find(ch) < 0)  
-            str += ch; // not found, add it  
-      }  
-   }  
+{ *// a kind of card shuffle (not a great one)  
+    CString& str = threadData->strThread;  
+    str.Empty();
+while (str.GetLength() != 52)  
+ {  
+    unsigned int randomNumber;  
+    errno_t randErr;  
+    randErr = rand_s(&randomNumber);
+
+    if (randErr == 0)  
+ {  
+    TCHAR ch = randomNumber % 52 + 1;  
+    if (str.Find(ch) <0)  
+    str += ch; // not found, add it  
+ }  
+ }  
 }  
 ```  
   
- 如果 `MakeRandomString` 同时从不同线程调用，其中每个“将随机选择”字符串不同的方式，而不干扰。  这是因为，每个线程实际上有一个 `strThread` 实例而非全局实例。  
+ If `MakeRandomString` was called from two different threads, each would "shuffle" the string in different ways without interfering with the other. This is because there is actually a `strThread` instance per thread instead of just one global instance.  
   
- 说明如何一次引用用于捕获 `CString` 地址而不是一次每个循环迭代。  循环可以编写程序使用在 `threadData->strThread` '`str`' 使用，但是，代码是慢在执行。  当这种引用循环中时，会缓存对数据的引用是最佳的。  
+ Note how a reference is used to capture the `CString` address once instead of once per loop iteration. The loop code could have been written with `threadData->strThread` everywhere '`str`' is used, but the code would be much slower in execution. It is best to cache a reference to the data when such references occur in loops.  
   
- `CThreadLocal` 类模板使用相同的机制和 `CProcessLocal` 执行同样实现方法。  
+ The `CThreadLocal` class template uses the same mechanisms that `CProcessLocal` does and the same implementation techniques.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,15 +1,14 @@
 ---
-title: "forward_list 类 | Microsoft 文档"
+title: forward_list Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- forward_list
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
 - forward_list/std::forward_list::const_iterator
@@ -51,7 +50,44 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- forward_list class
+- std::forward_list
+- std::forward_list::allocator_type
+- std::forward_list::const_iterator
+- std::forward_list::const_pointer
+- std::forward_list::const_reference
+- std::forward_list::difference_type
+- std::forward_list::iterator
+- std::forward_list::pointer
+- std::forward_list::reference
+- std::forward_list::size_type
+- std::forward_list::value_type
+- std::forward_list::assign
+- std::forward_list::before_begin
+- std::forward_list::begin
+- std::forward_list::cbefore_begin
+- std::forward_list::cbegin
+- std::forward_list::cend
+- std::forward_list::clear
+- std::forward_list::emplace_after
+- std::forward_list::emplace_front
+- std::forward_list::empty
+- std::forward_list::end
+- std::forward_list::erase_after
+- std::forward_list::front
+- std::forward_list::get_allocator
+- std::forward_list::insert_after
+- std::forward_list::max_size
+- std::forward_list::merge
+- std::forward_list::pop_front
+- std::forward_list::push_front
+- std::forward_list::remove
+- std::forward_list::remove_if
+- std::forward_list::resize
+- std::forward_list::reverse
+- std::forward_list::sort
+- std::forward_list::splice_after
+- std::forward_list::swap
+- std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 caps.latest.revision: 25
 author: corob-msft
@@ -71,17 +107,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: cde111871667e754f629fd69562a6aa4aeb07b94
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0301f86f42d08f06655b9285745108987af08f48
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="forwardlist-class"></a>forward_list 类
-描述用于控制变长元素序列的对象。 序列存储为节点的单向链接列表，其中每个节点都包含 `Type` 类型的成员。  
+# <a name="forwardlist-class"></a>forward_list Class
+Describes an object that controls a varying-length sequence of elements. The sequence is stored as a singly-linked list of nodes, each containing a member of type `Type`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type,   
@@ -89,99 +125,99 @@ template <class Type,
 class forward_list   
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|要存储在 forward_list 中的元素数据类型。|  
-|`Allocator`|存储的分配器对象，用于封装有关 forward_list 的内存分配和解除分配的详细信息。 此参数可选。 默认值为 allocator< `Type`>。|  
+|`Type`|The element data type to be stored in the forward_list.|  
+|`Allocator`|The stored allocator object that encapsulates details about the  forward_list allocation and deallocation of memory. This parameter is optional. The default value is allocator< `Type`>.|  
   
-## <a name="remarks"></a>备注  
- `forward_list` 对象通过 `Allocator` 类的存储对象（基于 [allocator 类](../standard-library/allocator-class.md)，通常称为 `std::allocator)`）分配和释放它所控制序列的存储。 有关详细信息，请参阅[分配器](../standard-library/allocators.md)。 分配器对象必须与 `allocator` 模板类的对象具有相同的外部接口。  
+## <a name="remarks"></a>Remarks  
+ A `forward_list` object allocates and frees storage for the sequence it controls through a stored object of class `Allocator` that is based on [allocator Class](../standard-library/allocator-class.md) (commonly known as `std::allocator)`. For more information, see [Allocators](../standard-library/allocators.md). An allocator object must have the same external interface as an object of template class `allocator`.  
   
 > [!NOTE]
->  分配容器对象时，不会复制存储的分配器对象。  
+>  The stored allocator object is not copied when the container object is assigned.  
   
- 通过 `forward_list` 擦除迭代器、指针和引用所控制序列的元素时，这些迭代器、指针和引用可能失效。 通过 `forward_list` 对受控序列执行插入和接合操作不会使迭代器失效。  
+ Iterators, pointers and references might become invalid when elements of their controlled sequence are erased through `forward_list`. Insertions and splices performed on the controlled sequence through `forward_list` do not invalidate iterators.  
   
- 调用 [forward_list::insert_after](#insert_after)（它是可调用构造函数 `Type(const  T&)` 的唯一成员函数）时，可能会添加受控序列。 `forward_list` 也可能调用移动构造函数。 如果此类表达式引发异常，则容器对象不插入任何新元素，并重新引发该异常。 因此，发生这类异常时，模板类 `forward_list` 的对象仍处于已知状态。  
+ Additions to the controlled sequence might occur by calls to [forward_list::insert_after](#insert_after), which is the only member function that calls the constructor `Type(const  T&)`. `forward_list` might also call move constructors. If such an expression throws an exception, the container object inserts no new elements and rethrows the exception. Thus, an object of template class `forward_list` is left in a known state when such exceptions occur.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[forward_list](#forward_list)|构造 `forward_list` 类型的对象。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|一种类型，用于表示转发列表对象的分配器类。|  
-|[const_iterator](#const_iterator)|一种类型，用于为转发列表提供常量迭代器。|  
-|[const_pointer](#const_pointer)|一种类型，用于提供指向转发列表中的 `const` 元素的指针。|  
-|[const_reference](#const_reference)|一种类型，用于提供对转发列表中元素的常量引用。|  
-|[difference_type](#difference_type)|一种有符号整数类型，可用于表示转发列表中某个范围类迭代器所指向元素之间的元素数目。|  
-|[Iterator](#iterator)|一种类型，用于为转发列表提供迭代器。|  
-|[pointer](#pointer)|一种类型，用于提供指向转发列表中元素的指针。|  
-|[reference](#reference)|一种类型，用于提供对转发列表中元素的引用。|  
-|[size_type](#size_type)|一种类型，用于表示两个元素之间的无符号距离。|  
-|[value_type](#value_type)|一种类型，用于表示转发列表中存储的元素的类型。|  
+|[forward_list](#forward_list)|Constructs an object of type `forward_list`.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[assign](#assign)|清除转发列表中的元素，并将一组新的元素复制到目标转发列表。|  
-|[before_begin](#before_begin)|返回寻址转发列表中第一个元素之前的位置的迭代器。|  
-|[begin](#begin)|返回寻址转发列表中第一个元素的迭代器。|  
-|[cbefore_begin](#cbefore_begin)|返回寻址转发列表中第一个元素之前的位置的常量迭代器。|  
-|[cbegin](#cbegin)|返回寻址转发列表中第一个元素的常量迭代器。|  
-|[cend](#cend)|返回寻址转发列表中最后一个元素之后的位置的常量迭代器。|  
-|[clear](#clear)|清除转发列表中的所有元素。|  
-|[emplace_after](#emplace_after)|在指定位置之后移动构造新元素。|  
-|[emplace_front](#emplace_front)|在列表的起始位置添加一个就地构造的元素。|  
-|[empty](#empty)|测试转发列表是否为空。|  
-|[end](#end)|返回寻址转发列表中最后一个元素之后的位置的迭代器。|  
-|[erase_after](#erase_after)|删除转发列表中指定位置之后的元素。|  
-|[front](#front)|返回对转发列表中第一个元素的引用。|  
-|[get_allocator](#get_allocator)|返回用于构造转发列表的分配器对象的一个副本。|  
-|[insert_after](#insert_after)|在转发列表中的指定位置之后添加元素。|  
-|[max_size](#max_size)|返回转发列表的最大长度。|  
-|[merge](#merge)|将元素从参数列表中删除，将它们插入目标转发列表，将新的组合元素集以升序或其他指定顺序排序。|  
-|[pop_front](#pop_front)|删除转发列表起始处的一个元素。|  
-|[push_front](#push_front)|在转发列表起始处添加一个元素。|  
-|[remove](#remove)|清除转发列表中与指定值匹配的元素。|  
-|[remove_if](#remove_if)|将满足指定谓词的元素从转发列表中清除。|  
-|[resize](#resize)|为转发列表指定新的大小。|  
-|[reverse](#reverse)|颠倒转发列表中元素的顺序。|  
-|[sort](#sort)|按升序或按谓词指定的顺序排列元素。|  
-|[splice_after](#splice_after)|重新联结节点间的链接。|  
-|[swap](#swap)|交换两个转发列表的元素。|  
-|[unique](#unique)|删除通过了指定测试的相邻元素。|  
+|[allocator_type](#allocator_type)|A type that represents the allocator class for a forward list object.|  
+|[const_iterator](#const_iterator)|A type that provides a constant iterator for the forward list.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a forward list.|  
+|[const_reference](#const_reference)|A type that provides a constant reference to an element in the forward list.|  
+|[difference_type](#difference_type)|A signed integer type that can be used to represent the number of elements of a forward list in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A type that provides an iterator for the forward list.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in the forward list.|  
+|[reference](#reference)|A type that provides a reference to an element in the forward list.|  
+|[size_type](#size_type)|A type that represents the unsigned distance between two elements.|  
+|[value_type](#value_type)|A type that represents the type of element stored in a forward list.|  
   
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|将转发列表的元素替换为另一个转发列表的副本。|  
+|[assign](#assign)|Erases elements from a forward list and copies a new set of elements to a target forward list.|  
+|[before_begin](#before_begin)|Returns an iterator addressing the position before the first element in a forward list.|  
+|[begin](#begin)|Returns an iterator addressing the first element in a forward list.|  
+|[cbefore_begin](#cbefore_begin)|Returns a const iterator addressing the position before the first element in a forward list.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in a forward list.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a forward list.|  
+|[clear](#clear)|Erases all the elements of a forward list.|  
+|[emplace_after](#emplace_after)|Move constructs a new element after a specified position.|  
+|[emplace_front](#emplace_front)|Adds an element constructed in place to the beginning of the list.|  
+|[empty](#empty)|Tests whether a forward list is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a forward list.|  
+|[erase_after](#erase_after)|Removes elements from the forward list after a specified position.|  
+|[front](#front)|Returns a reference to the first element in a forward list.|  
+|[get_allocator](#get_allocator)|Returns a copy of the allocator object used to construct a forward list.|  
+|[insert_after](#insert_after)|Adds elements to the forward list after a specified position.|  
+|[max_size](#max_size)|Returns the maximum length of a forward list.|  
+|[merge](#merge)|Removes the elements from the argument list, inserts them into the target forward list, and orders the new, combined set of elements in ascending order or in some other specified order.|  
+|[pop_front](#pop_front)|Deletes the element at the beginning of a forward list.|  
+|[push_front](#push_front)|Adds an element to the beginning of a forward list.|  
+|[remove](#remove)|Erases elements in a forward list that matches a specified value.|  
+|[remove_if](#remove_if)|Erases elements from a forward list for which a specified predicate is satisfied.|  
+|[resize](#resize)|Specifies a new size for a forward list.|  
+|[reverse](#reverse)|Reverses the order in which the elements occur in a forward list.|  
+|[sort](#sort)|Arranges the elements in ascending order or with an order specified by a predicate.|  
+|[splice_after](#splice_after)|Restitches links between nodes.|  
+|[swap](#swap)|Exchanges the elements of two forward lists.|  
+|[unique](#unique)|Removes adjacent elements that pass a specified test.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<forward_list>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Replaces the elements of the forward list with a copy of another forward list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<forward_list>  
+  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  forward_list::allocator_type  
- 一种类型，用于表示转发列表对象的分配器类。  
+ A type that represents the allocator class for a forward list object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `allocator_type` 是模板参数 Allocator 的同义词。  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter Allocator.  
   
 ##  <a name="assign"></a>  forward_list::assign  
- 清除转发列表中的元素，并将一组新的元素复制到目标转发列表。  
+ Erases elements from a forward list and copies a new set of elements to a target forward list.  
   
 ```  
 void assign(
@@ -195,76 +231,76 @@ template <class InputIterator>
 void assign(InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`first`|替换范围的起始处。|  
-|`last`|替换范围的结束处。|  
-|`count`|要分配的元素数。|  
-|`val`|要分配每个元素的值。|  
-|`Type`|值的类型。|  
-|`IList`|要复制的 initializer_list。|  
+|`first`|The beginning of the replacement range.|  
+|`last`|The end of the replacement range.|  
+|`count`|The number of elements to assign.|  
+|`val`|The value to assign each element.|  
+|`Type`|The type of the value.|  
+|`IList`|The initializer_list to copy.|  
   
-### <a name="remarks"></a>备注  
- 如果 forward_list 是整数类型，则第一个成员函数的行为与 `assign((size_type)First, (Type)Last)` 相同。 否则，第一个成员函数将 `*this` 控制的序列替换为序列 [ `First, Last)`，该序列不能与初始控制序列重叠。  
+### <a name="remarks"></a>Remarks  
+ If the forward_list is an integer type, the first member function behaves the same as `assign((size_type)First, (Type)Last)`. Otherwise, the first member function replaces the sequence controlled by `*this` with the sequence [ `First, Last)`, which must not overlap the initial controlled sequence.  
   
- 第二个成员函数将 `*this` 控制的序列替换为值 `Val` 的重复 `Count` 元素。  
+ The second member function replaces the sequence controlled by `*this` with a repetition of `Count` elements of value `Val`.  
   
- 第三个成员函数将 initializer_list 的元素复制到 forward_list 中。  
+ The third member function copies the elements of the initializer_list into the forward_list.  
   
 ##  <a name="before_begin"></a>  forward_list::before_begin  
- 返回寻址转发列表中第一个元素之前的位置的迭代器。  
+ Returns an iterator addressing the position before the first element in a forward list.  
   
 ```  
 const_iterator before_begin() const;
 iterator before_begin();
 ```  
   
-### <a name="return-value"></a>返回值  
- 恰好指向序列的第一个元素之前位置（或恰好在空序列末尾的位置之前）的正向迭代器。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points just before the first element of the sequence (or just before the end of an empty sequence).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="begin"></a>  forward_list::begin  
- 返回寻址转发列表中第一个元素的迭代器。  
+ Returns an iterator addressing the first element in a forward list.  
   
 ```  
 const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向序列第一个元素（或刚超出空序列末尾的位置）的正向迭代器。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cbefore_begin"></a>  forward_list::cbefore_begin  
- 返回寻址转发列表中第一个元素之前的位置的常量迭代器。  
+ Returns a const iterator addressing the position before the first element in a forward list.  
   
 ```  
 const_iterator cbefore_begin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 恰好指向序列的第一个元素之前位置（或恰好在空序列末尾的位置之前）的正向迭代器。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points just before the first element of the sequence (or just before the end of an empty sequence).  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cbegin"></a>  forward_list::cbegin  
- 返回确定范围中第一个元素地址的 `const` 迭代器。  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- `const` 前向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>备注  
- 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的 (non- `const`) 任何类型的容器。  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -274,19 +310,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  forward_list::cend  
- 返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向恰好超出范围末尾位置的向前访问迭代器。  
+### <a name="return-value"></a>Return Value  
+ A forward-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>备注  
- `cend` 用于测试迭代器是否超过了其范围的末尾。  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -296,148 +332,148 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- 不应对 `cend` 返回的值取消引用。  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  forward_list::clear  
- 清除转发列表中的所有元素。  
+ Erases all the elements of a forward list.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用 `erase_after(before_begin(), end()).`  
+### <a name="remarks"></a>Remarks  
+ This member function calls `erase_after(before_begin(), end()).`  
   
 ##  <a name="const_iterator"></a>  forward_list::const_iterator  
- 一种类型，用于为转发列表提供常量迭代器。  
+ A type that provides a constant iterator for the forward list.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_iterator` 描述为可用作受控序列的常量向前迭代器的对象。 在此处描述为实现定义的类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ `const_iterator` describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for an implementation-defined type.  
   
 ##  <a name="const_pointer"></a>  forward_list::const_pointer  
- 一种类型，用于提供指向转发列表中的 `const` 元素的指针。  
+ A type that provides a pointer to a `const` element in a forward list.  
   
 ```  
 typedef typename Allocator::const_pointer  
     const_pointer; 
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="const_reference"></a>  forward_list::const_reference  
- 一种类型，用于提供对转发列表中元素的常量引用。  
+ A type that provides a constant reference to an element in the forward list.  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="difference_type"></a>  forward_list::difference_type  
- 一种有符号整数类型，可用于表示转发列表中某个范围类迭代器所指向元素之间的元素数目。  
+ A signed integer type that can be used to represent the number of elements of a forward list in a range between elements pointed to by iterators.  
   
 ```  
 typedef typename Allocator::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `difference_type` 描述一个对象，可以表示受控序列中任意两个元素的地址之间的差异。  
+### <a name="remarks"></a>Remarks  
+ `difference_type` describes an object that can represent the difference between the addresses of any two elements in the controlled sequence.  
   
 ##  <a name="emplace_after"></a>  forward_list::emplace_after  
- 在指定位置之后移动构造新元素。  
+ Move constructs a new element after a specified position.  
   
 ```  
 template <class T>  
 iterator emplace_after(const_iterator Where, Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Where`|目标转发列表中构造新元素的位置。|  
-|`val`|构造函数参数。|  
+|`Where`|The position in the target forward list where the new element is constructed.|  
+|`val`|The constructor argument.|  
   
-### <a name="return-value"></a>返回值  
- 指定新插入元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator that designates the newly inserted element.  
   
-### <a name="remarks"></a>备注  
- 此成员函数紧跟受控序列中 `Where` 指向的元素之后插入具有构造函数参数 `val` 的元素。 否则，其行为与 [forward_list :: insert_after](#insert_after) 相同。  
+### <a name="remarks"></a>Remarks  
+ This member function inserts an element with the constructor arguments `val` just after the element pointed to by `Where` in the controlled sequence. Its behavior is otherwise the same as [forward_list::insert_after](#insert_after).  
   
 ##  <a name="emplace_front"></a>  forward_list::emplace_front  
- 在列表的起始位置添加一个就地构造的元素。  
+ Adds an element constructed in place to the beginning of the list.  
   
 ```  
 template <class Type>  
 void emplace_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|添加到转发列表开头的元素。|  
+|`val`|The element added to the beginning of the forward list.|  
   
-### <a name="remarks"></a>备注  
- 此成员函数在受控序列末尾插入具有构造函数参数 `_ val` 的元素。  
+### <a name="remarks"></a>Remarks  
+ This member function inserts an element with the constructor arguments `_ val` at the end of the controlled sequence.  
   
- 如果引发了异常，该容器将保持不变，并重新引发该异常。  
+ If an exception is thrown, the container is left unaltered and the exception is rethrown.  
   
 ##  <a name="empty"></a>  forward_list::empty  
- 测试转发列表是否为空。  
+ Tests whether a forward list is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果转发列表为空，则为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the forward list is empty; otherwise, `false`.  
   
 ##  <a name="end"></a>  forward_list::end  
- 返回寻址转发列表中最后一个元素之后的位置的迭代器。  
+ Returns an iterator that addresses the location succeeding the last element in a forward list.  
   
 ```  
 const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向刚超出序列末尾位置的正向迭代器。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator that points just beyond the end of the sequence.  
   
 ##  <a name="erase_after"></a>  forward_list::erase_after  
- 删除转发列表中指定位置之后的元素。  
+ Removes elements from the forward list after a specified position.  
   
 ```  
 iterator erase_after(const_iterator Where);
 iterator erase_after(const_iterator first, const_iterator last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Where`|目标转发列表中擦除元素的位置。|  
-|`first`|要擦除范围的起始处。|  
-|`last`|要擦除范围的结尾处。|  
+|`Where`|The position in the target forward list where the element is erased.|  
+|`first`|The beginning of the range to erase.|  
+|`last`|The end of the range to erase.|  
   
-### <a name="return-value"></a>返回值  
- 一个迭代器，它指定已删除的任何元素之外保留的第一个元素或 [forward_list::end](#end)（若此类元素不存在）。  
+### <a name="return-value"></a>Return Value  
+ An iterator that designates the first element remaining beyond any elements removed, or [forward_list::end](#end) if no such element exists.  
   
-### <a name="remarks"></a>备注  
- 第一个成员函数将删除 `Where` 之后的受控序列的元素。  
+### <a name="remarks"></a>Remarks  
+ The first member function removes the element of the controlled sequence just after `Where`.  
   
- 第二个成员函数将删除 `( first,  last)` 范围中受控序列的元素（不包括任一终点）。  
+ The second member function removes the elements of the controlled sequence in the range `( first,  last)` (neither end point is included).  
   
- 擦除 `N` 元素会导致调用 `N` 析构函数。 发生[重新分配](../standard-library/forward-list-class.md)，因此迭代器和引用对已清除元素无效。  
+ Erasing `N` elements causes `N` destructor calls. [Reallocation](../standard-library/forward-list-class.md) occurs, so iterators and references become invalid for the erased elements.  
   
- 成员函数从不引发异常。  
+ The member functions never throw an exception.  
   
 ##  <a name="forward_list"></a>  forward_list::forward_list  
- 构造 `forward_list` 类型的对象。  
+ Constructs an object of type `forward_list`.  
   
 ```  
 forward_list();
@@ -456,56 +492,56 @@ template <class InputIterator>
 forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Al`|要用于此对象的分配器类。|  
-|`Count`|所构造列表中元素的数目。|  
-|`Val`|构造的列表中的元素值。|  
-|`Right`|所构造列表要作为其副本的列表。|  
-|`First`|要复制的范围元素中的第一个元素的位置。|  
-|`Last`|要复制的元素范围以外的第一个元素的位置。|  
-|`IList`|要复制的 initializer_list。|  
+|`Al`|The allocator class to use with this object.|  
+|`Count`|The number of elements in the list constructed.|  
+|`Val`|The value of the elements in the list constructed.|  
+|`Right`|The list of which the constructed list is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list to copy.|  
   
-### <a name="remarks"></a>备注  
- 所有构造函数都存储[分配器](../standard-library/allocator-class.md)并初始化受控序列。 分配器对象是参数 `Al`（如果存在）。 对于复制构造函数，则为 ` right.get_allocator()`。 否则，它是 `Allocator()`。  
+### <a name="remarks"></a>Remarks  
+ All constructors store an [allocator](../standard-library/allocator-class.md) and initialize the controlled sequence. The allocator object is the argument `Al`, if present. For the copy constructor, it is ` right.get_allocator()`. Otherwise, it is `Allocator()`.  
   
- 前两个构造函数指定一个空的初始受控序列。  
+ The first two constructors specify an empty initial controlled sequence.  
   
- 第三个构造函数指定值为 `Type()` 的 `Count` 个元素的重复元素。  
+ The third constructor specifies a repetition of `Count` elements of value `Type()`.  
   
- 第四个和第五个构造函数指定值为 `Val` 的 `Count` 个元素的重复元素。  
+ The fourth and fifth constructors specify a repetition of `Count` elements of value `Val`.  
   
- 第六个构造函数指定通过 `Right` 控制的序列的副本。 如果 `InputIterator` 是整数类型，则接下来的两个构造函数指定 `(size_type)First` 元素的重复元素，元素的值为 `(Type)Last`。 否则，接下来两个构造函数指定序列 `[First, Last)`。  
+ The sixth constructor specifies a copy of the sequence controlled by `Right`. If `InputIterator` is an integer type, the next two constructors specify a repetition of `(size_type)First` elements of value `(Type)Last`. Otherwise, the next two constructors specify the sequence `[First, Last)`.  
   
- 第九个和第十个构造函数与第六个构造函数相同，但它具有 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 引用。  
+ The ninth and tenth constructors are the same as the sixth, but with an [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) reference.  
   
- 最后一个构造函数指定具有类 `initializer_list<Type>` 的对象的初始受控序列。  
+ The last constructor specifies the initial controlled sequence with an object of class `initializer_list<Type>`.  
   
 ##  <a name="front"></a>  forward_list::front  
- 返回对转发列表中第一个元素的引用。  
+ Returns a reference to the first element in a forward list.  
   
 ```  
 reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 对受控序列的第一个元素的引用，必须为非空。  
+### <a name="return-value"></a>Return Value  
+ A reference to the first element of the controlled sequence, which must be non-empty.  
   
 ##  <a name="get_allocator"></a>  forward_list::get_allocator  
- 返回用于构造转发列表的分配器对象的一个副本。  
+ Returns a copy of the allocator object used to construct a forward list.  
   
 ```  
 allocator_type get_allocator() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 存储的 [allocator](../standard-library/allocator-class.md) 对象。  
+### <a name="return-value"></a>Return Value  
+ The stored [allocator](../standard-library/allocator-class.md) object.  
   
 ##  <a name="insert_after"></a>  forward_list::insert_after  
- 在转发列表中的指定位置之后添加元素。  
+ Adds elements to the forward list after a specified position.  
   
 ```  
 iterator insert_after(const_iterator Where, const Type& Val);
@@ -516,61 +552,61 @@ template <class InputIterator>
 void insert_after(const_iterator Where, InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Where`|目标转发列表中插入第一个元素的位置。|  
-|`Count`|要插入的元素数。|  
-|`First`|插入范围的起始处。|  
-|`Last`|插入范围的结束处。|  
-|`Val`|添加到转发列表的元素。|  
-|`IList`|要插入的 initializer_list。|  
+|`Where`|The position in the target forward list where the first element is inserted.|  
+|`Count`|The number of elements to insert.|  
+|`First`|The beginning of the insertion range.|  
+|`Last`|The end of the insertion range.|  
+|`Val`|The element added to the forward list.|  
+|`IList`|The initializer_list to insert.|  
   
-### <a name="return-value"></a>返回值  
- 一个迭代器，指定新插入的元素（仅限第一个和最后一个成员函数）。  
+### <a name="return-value"></a>Return Value  
+ An iterator that designates the newly inserted element (first and last member functions only).  
   
-### <a name="remarks"></a>备注  
- 每个成员函数紧跟受控序列中 `Where` 指向的元素之后插入由剩余操作数指定的序列。  
+### <a name="remarks"></a>Remarks  
+ Each of the member functions inserts—just after the element pointed to by `Where` in the controlled sequence—a sequence that' specified by the remaining operands.  
   
- 第一个成员函数插入一个值为 `Val` 的元素，并返回一个指定新插入的元素的迭代器。  
+ The first member function inserts an element that has value `Val` and returns an iterator that designates the newly inserted element.  
   
- 第二个成员函数插入 `Count` 元素的重复元素，值为 `Val`。  
+ The second member function inserts a repetition of `Count` elements of value `Val`.  
   
- 如果 `InputIterator` 是整数类型，则第三个成员函数的行为与 `insert(it, (size_type)First, (Type)Last)` 相同。 否则，它插入序列 `[First, Last)`，该序列不能与初始受控序列重叠。  
+ If `InputIterator` is an integer type, the third member function behaves the same as `insert(it, (size_type)First, (Type)Last)`. Otherwise, it inserts the sequence `[First, Last)`, which must not overlap the initial controlled sequence.  
   
- 第四个成员函数插入由类 `initializer_list<Type>` 的对象指定的序列。  
+ The fourth member function inserts the sequence that's specified by an object of class `initializer_list<Type>`.  
   
- 最后一个成员函数与第一个成员函数相同，但前者具有 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 引用。  
+ The last member function is the same as the first, but with an [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) reference.  
   
- 插入 `N` 元素会导致调用 `N` 构造函数。 发生[重新分配](../standard-library/forward-list-class.md)，但没有迭代器或引用变为无效。  
+ Inserting `N` elements causes `N` constructor calls. [Reallocation](../standard-library/forward-list-class.md) occurs, but no iterators or references become invalid.  
   
- 如果在一个或多个元素插入过程中引发异常，则容器将保持不变并重新引发异常。  
+ If an exception is thrown during the insertion of one or more elements, the container is left unaltered and the exception is rethrown.  
   
 ##  <a name="iterator"></a>  forward_list::iterator  
- 一种类型，用于为转发列表提供迭代器。  
+ A type that provides an iterator for the forward list.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `iterator` 描述为可用作受控序列的前向迭代器的对象。 在此处描述为实现定义的类型的同义词。  
+### <a name="remarks"></a>Remarks  
+ `iterator` describes an object that can serve as a forward iterator for the controlled sequence. It is described here as a synonym for an implementation-defined type.  
   
 ##  <a name="max_size"></a>  forward_list::max_size  
- 返回转发列表的最大长度。  
+ Returns the maximum length of a forward list.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 该对象可控制的最长序列的长度。  
+### <a name="return-value"></a>Return Value  
+ The length of the longest sequence that the object can control.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="merge"></a>  forward_list::merge  
- 将两个排序序列合并为一个以线性时间排序的序列。 将元素从参数列表中删除，并将它们插入此 `forward_list`。 调用 `merge` 之前，这两个列表应该按相同的比较函数对象排序。 合并的列表将按该比较函数对象进行排序。  
+ Combines two sorted sequences into a single sorted sequence in linear time. Removes the elements from the argument list, and inserts them into this `forward_list`. The two lists should be sorted by the same compare function object before the call to `merge`. The combined list will be sorted by that compare function object.  
   
 ```  
 void merge(forward_list& right);
@@ -578,24 +614,24 @@ template <class Predicate>
 void merge(forward_list& right, Predicate comp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|要从其开始合并的转发列表。|  
-|`comp`|用于对元素进行排序的比较函数对象。|  
+|`right`|The forward list to merge from.|  
+|`comp`|The compare function object that is used to sort elements.|  
   
-### <a name="remarks"></a>备注  
- `forward_list::merge` 将元素从 `forward_list``right``,` 中删除，并将它们插入此 `forward_list`。 这两个序列必须由相同的谓词进行排序，如下所述。 合并的序列也可按该比较函数对象进行排序。  
+### <a name="remarks"></a>Remarks  
+ `forward_list::merge` removes the elements from the `forward_list` `right`, and inserts them into this `forward_list`. Both sequences must be ordered by the same predicate, described below. The combined sequence is also ordered by that compare function object.  
   
- 对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序进行排序。）第二个成员函数每当 `i < j` 时采用顺序 `! comp(*Pj, *Pi)`。  
+ For the iterators `Pi` and `Pj` designating elements at positions `i` and `j`, the first member function imposes the order `!(*Pj < *Pi)` whenever `i < j`. (The elements are sorted in `ascending` order.) The second member function imposes the order `! comp(*Pj, *Pi)` whenever `i < j`.  
   
- 原始受控序列中没有元素对在所生成的受控序列中反向。 如果所生成的受控序列中的一对元素经比较相等 (`!(*Pi < *Pj) && !(*Pj < *Pi)`)，则来自原始受控序列的元素在来自由 `right` 控制的序列的元素之前显示。  
+ No pairs of elements in the original controlled sequence are reversed in the resulting controlled sequence. If a pair of elements in the resulting controlled sequence compares equal ( `!(*Pi < *Pj) && !(*Pj < *Pi)`), an element from the original controlled sequence appears before an element from the sequence controlled by `right`.  
   
- 仅当 `comp` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的顺序保留，并重新引发异常。  
+ An exception occurs only if `comp` throws an exception. In that case, the controlled sequence is left in unspecified order and the exception is rethrown.  
   
 ##  <a name="op_eq"></a>  forward_list::operator=  
- 将转发列表的元素替换为另一个转发列表的副本。  
+ Replaces the elements of the forward list with a copy of another forward list.  
   
 ```  
 forward_list& operator=(const forward_list& right);
@@ -603,143 +639,143 @@ forward_list& operator=(initializer_list<Type> IList);
 forward_list& operator=(forward_list&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|要复制到转发列表的转发列表。|  
-|`IList`|一个用括号括起来的初始化表达式列表，其行为类似于类型 `Type` 的元素的序列。|  
+|`right`|The forward list being copied into the forward list.|  
+|`IList`|A brace-enclosed initializer list, which behaves just like a sequence of elements of type `Type`.|  
   
-### <a name="remarks"></a>备注  
- 第一个成员运算符使用 `right` 控制的序列的副本替换受控序列。  
+### <a name="remarks"></a>Remarks  
+ The first member operator replaces the controlled sequence with a copy of the sequence controlled by `right`.  
   
- 第二个成员操作符从类 `initializer_list<Type>` 的对象替换受控序列。  
+ The second member operator replaces the controlled sequence from an object of class `initializer_list<Type>`.  
   
- 第三个成员运算符与第一个成员运算符相同，但前者具有 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 引用。  
+ The third member operator is the same as the first, but with an [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) reference.  
   
 ##  <a name="pointer"></a>  forward_list::pointer  
- 一种类型，用于提供指向转发列表中元素的指针。  
+ A type that provides a pointer to an element in the forward list.  
   
 ```  
 typedef typename Allocator::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pop_front"></a>  forward_list::pop_front  
- 删除转发列表起始处的一个元素。  
+ Deletes the element at the beginning of a forward list.  
   
 ```  
 void pop_front();
 ```  
   
-### <a name="remarks"></a>备注  
- 转发列表的第一个元素必须为非空。  
+### <a name="remarks"></a>Remarks  
+ The first element of the forward list must be non-empty.  
   
- 成员函数从不引发异常。  
+ The member function never throws an exception.  
   
 ##  <a name="push_front"></a>  forward_list::push_front  
- 在转发列表起始处添加一个元素。  
+ Adds an element to the beginning of a forward list.  
   
 ```  
 void push_front(const Type& val);
 void push_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|添加到转发列表开头的元素。|  
+|`val`|The element added to the beginning of the forward list.|  
   
-### <a name="remarks"></a>备注  
- 如果引发了异常，该容器将保持不变，并重新引发该异常。  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the container is left unaltered and the exception is rethrown.  
   
 ##  <a name="reference"></a>  forward_list::reference  
- 一种类型，用于提供对转发列表中元素的引用。  
+ A type that provides a reference to an element in the forward list.  
   
 ```  
 typedef typename Allocator::reference reference;  
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="remove"></a>  forward_list::remove  
- 清除转发列表中与指定值匹配的元素。  
+ Erases elements in a forward list that matches a specified value.  
   
 ```  
 void remove(const Type& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`val`|一个值，如果某个元素包含该值，则会导致从列表中删除该元素。|  
+|`val`|The value which, if held by an element, will result in that element's removal from the list.|  
   
-### <a name="remarks"></a>备注  
- 成员函数从受控序列删除由迭代器 `P` 指定的所有元素，其中 `*P ==  val`。  
+### <a name="remarks"></a>Remarks  
+ The member function removes from the controlled sequence all elements, designated by the iterator `P`, for which `*P ==  val`.  
   
- 成员函数从不引发异常。  
+ The member function never throws an exception.  
   
 ##  <a name="remove_if"></a>  forward_list::remove_if  
- 将满足指定谓词的元素从转发列表中清除。  
+ Erases elements from a forward list for which a specified predicate is satisfied.  
   
 ```  
 template <class Predicate>  
 void remove_if(Predicate pred);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`pred`|一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。|  
+|`pred`|The unary predicate which, if satisfied by an element, results in the deletion of that element from the list.|  
   
-### <a name="remarks"></a>备注  
- 成员函数从受控序列删除由迭代器 `P` 指定的所有元素，其中 ` pred(*P)` 为 true。  
+### <a name="remarks"></a>Remarks  
+ The member function removes from the controlled sequence all elements, designated by the iterator `P`, for which ` pred(*P)` is true.  
   
- 仅当 `pred` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的状态保留，并重新引发异常。  
+ An exception occurs only if `pred` throws an exception. In that case, the controlled sequence is left in an unspecified state and the exception is rethrown.  
   
 ##  <a name="resize"></a>  forward_list::resize  
- 为转发列表指定新的大小。  
+ Specifies a new size for a forward list.  
   
 ```  
 void resize(size_type _Newsize);
 void resize(size_type _Newsize, const Type& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Newsize`|调整大小后的转发列表中的元素数。|  
-|`val`|要用于填充的值。|  
+|`_Newsize`|The number of elements in the resized forward list.|  
+|`val`|The value to use for padding.|  
   
-### <a name="remarks"></a>备注  
- 两个成员函数都可确保此后列表中的元素数为 `_Newsize`。 如果它必须使受控序列更长，则第一个成员函数追加具有值 `Type()` 的元素，而第二个成员函数追加具有值 `val` 的元素。 若要使受控序列更短，两个成员函数可有效地调用 `erase_after(begin() + _Newsize - 1, end())`。  
+### <a name="remarks"></a>Remarks  
+ The member functions both ensure that the number of elements in the list henceforth is `_Newsize`. If it must make the controlled sequence longer, the first member function appends elements with value `Type()`, while the second member function appends elements with value `val`. To make the controlled sequence shorter, both member functions effectively call `erase_after(begin() + _Newsize - 1, end())`.  
   
 ##  <a name="reverse"></a>  forward_list::reverse  
- 颠倒转发列表中元素的顺序。  
+ Reverses the order in which the elements occur in a forward list.  
   
 ```  
 void reverse();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="size_type"></a>  forward_list::size_type  
- 一种类型，用于表示两个元素之间的无符号距离。  
+ A type that represents the unsigned distance between two elements.  
   
 ```  
 typedef typename Allocator::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 无符号的整数类型描述可表示任何受控序列长度的对象。  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence.  
   
 ##  <a name="sort"></a>  forward_list::sort  
- 按升序或按谓词指定的顺序排列元素。  
+ Arranges the elements in ascending order or with an order specified by a predicate.  
   
 ```  
 void sort();
@@ -747,21 +783,21 @@ template <class Predicate>
 void sort(Predicate pred);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`pred`|排序谓词。|  
+|`pred`|The ordering predicate.|  
   
-### <a name="remarks"></a>备注  
- 两个成员函数通过谓词对受控序列中的元素排序，如下所述。  
+### <a name="remarks"></a>Remarks  
+ Both member functions order the elements in the controlled sequence by a predicate, described below.  
   
- 对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序进行排序。）成员模板函数每当 `i < j` 时采用顺序 `! pred(*Pj, *Pi)`。 原始受控序列中没有排序的元素对在所生成的受控序列中反向。 （排序是稳定的。）  
+ For the iterators `Pi` and `Pj` designating elements at positions `i` and `j`, the first member function imposes the order `!(*Pj < *Pi)` whenever `i < j`. (The elements are sorted in `ascending` order.) The member template function imposes the order `! pred(*Pj, *Pi)` whenever `i < j`. No ordered pairs of elements in the original controlled sequence are reversed in the resulting controlled sequence. (The sort is stable.)  
   
- 仅当 `pred` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的顺序保留，并重新引发异常。  
+ An exception occurs only if `pred` throws an exception. In that case, the controlled sequence is left in unspecified order and the exception is rethrown.  
   
 ##  <a name="splice_after"></a>  forward_list::splice_after  
- 从源 forward_list 中删除元素并将其插入到目标 forward_list 中。  
+ Removes elements from a source forward_list and inserts them into a destination forward_list.  
   
 ```  
 // insert the entire source forward_list  
@@ -786,34 +822,34 @@ void splice_after(
     const_iterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Where`  
- 目标 forward_list 中要在其后面进行插入的位置。  
+ The position in the destination forward_list after which to insert.  
   
  `Source`  
- 要插入目标 forward_list 中的源 forward_list。  
+ The source forward_list that is to be inserted into the destination forward_list.  
   
  `Iter`  
- 要从源 forward_list 中进行插入的元素。  
+ The element to be inserted from the source forward_list.  
   
  `First`  
- 要从源 forward_list 中进行插入的范围中的第一个元素。  
+ The first element in the range to be inserted from source forward_list.  
   
  `Last`  
- 要从源 forward_list 中进行插入的范围之外的第一个位置。  
+ The first position beyond the range to be inserted from the source forward_list.  
   
-### <a name="remarks"></a>备注  
- 第一对成员函数将由 `Source` 控制的序列正好插入 `Where` 所指向的控制序列中的元素之后。 它还会删除 `Source` 中的所有元素。 （`&Source` 不能等于 `this`。）  
+### <a name="remarks"></a>Remarks  
+ The first pair of member functions inserts the sequence controlled by `Source` just after the element in the controlled sequence pointed to by `Where`. It also removes all elements from `Source`. ( `&Source` must not equal `this`.)  
   
- 第二对成员函数删除由 `Iter` 控制的序列中正好位于 `Source` 之后的元素，并将其正好插入到 `Where` 所指向的控制序列中的元素之后。 （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）  
+ The second pair of member functions removes the element just after `Iter` in the sequence controlled by `Source` and inserts it just after the element in the controlled sequence pointed to by `Where`. (If `Where == Iter || Where == ++Iter`, no change occurs.)  
   
- 第三对成员函数（范围接合）将由 `(First, Last)` 控制的序列中的 `Source` 指定的子范围正好插入 `Where` 所指向的控制序列中的元素之后。 它还会删除由 `Source` 控制的序列中的原始子范围。 （如果 `&Source == this`，则范围 `(First, Last)` 不得包含 `Where` 所指向的元素。）  
+ The third pair of member functions (ranged splice) inserts the subrange designated by `(First, Last)` from the sequence controlled by `Source` just after the element in the controlled sequence pointed to by `Where`. It also removes the original subrange from the sequence controlled by `Source`. (If `&Source == this`, the range `(First, Last)` must not include the element pointed to by `Where`.)  
   
- 如果范围接合插入 `N` 个元素和 `&Source != this`，则类 [iterator](#iterator) 的对象会递增 `N` 次。  
+ If the ranged splice inserts `N` elements, and `&Source != this`, an object of class [iterator](#iterator) is incremented `N` times.  
   
- 任何迭代器、指针或指定接合的元素的引用都不会变得无效。  
+ No iterators, pointers, or references that designate spliced elements become invalid.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // forward_list_splice_after.cpp  
@@ -888,23 +924,23 @@ Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40
 ```  
   
 ##  <a name="swap"></a>  forward_list::swap  
- 交换两个转发列表的元素。  
+ Exchanges the elements of two forward lists.  
   
 ```  
 void swap(forward_list& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|提供要交换的元素的转发列表。|  
+|`right`|The forward list providing the elements to be exchanged.|  
   
-### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right` 之间的受控序列。 如果 `get_allocator() ==  right.get_allocator()`，它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. If `get_allocator() ==  right.get_allocator()`, it does so in constant time, it throws no exceptions, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
 ##  <a name="unique"></a>  forward_list::unique  
- 删除来自每个连续的相等元素组的第一个元素之外的所有元素。  
+ Eliminates all but the first element from every consecutive group of equal elements.  
   
 ```  
 void unique();
@@ -912,32 +948,32 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate comp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`comp`|用于比较连续元素的二元谓词。|  
+|`comp`|The binary predicate used to compare successive elements.|  
   
-### <a name="remarks"></a>备注  
- 保留每个唯一元素的第一个元素，并删除其余元素。 元素必须进行排序，以使具有相等值的元素在列表中相邻。  
+### <a name="remarks"></a>Remarks  
+ Keeps the first of each unique element, and removes the rest. The elements must be sorted so that elements of equal value are adjacent in the list.  
   
- 第一个成员函数从受控序列删除经比较等于其前一个元素的每个元素。 对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第二个成员函数删除其中 `i + 1 == j &&  comp(*Pi, *Pj)` 的每个元素。  
+ The first member function removes from the controlled sequence every element that compares equal to its preceding element. For the iterators `Pi` and `Pj` designating elements at positions `i` and `j`, the second member function removes every element for which `i + 1 == j &&  comp(*Pi, *Pj)`.  
   
- 对于长度为 `N` (> 0) 的受控序列，计算谓词 ` comp(*Pi, *Pj)` `N - 1` 次。  
+ For a controlled sequence of length `N` (> 0), the predicate ` comp(*Pi, *Pj)` is evaluated `N - 1` times.  
   
- 仅当 `comp` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的状态保留，并重新引发异常。  
+ An exception occurs only if `comp` throws an exception. In that case, the controlled sequence is left in an unspecified state and the exception is rethrown.  
   
 ##  <a name="value_type"></a>  forward_list::value_type  
- 一种类型，用于表示转发列表中存储的元素的类型。  
+ A type that represents the type of element stored in a forward list.  
   
 ```  
 typedef typename Allocator::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 _ `Ty` 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter _ `Ty`.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<forward_list>](../standard-library/forward-list.md)
 
 

@@ -1,63 +1,82 @@
 ---
-title: "Windows 套接字：阻止 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "阻止模式套接字"
-  - "套接字 [C++], 不同 Windows 平台上的行为"
-  - "套接字 [C++], 阻止模式"
-  - "Windows 套接字 [C++], 阻止模式"
-  - "Windows 套接字 [C++], Windows 平台"
+title: 'Windows Sockets: Blocking | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], blocking mode
+- Windows Sockets [MFC], Windows platforms
+- Windows Sockets [MFC], blocking mode
+- sockets [MFC], behavior on different Windows platforms
+- blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Windows 套接字：阻止
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6f327f551e238f644962b47c26c60632dd0aaf67
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文和两指南手册演示 Windows Sockets 编程的一些问题。  本文包含锁。  文章中介绍的其他问题：[Windows Sockets：字节顺序](../mfc/windows-sockets-byte-ordering.md) 和 [Windows Sockets：转换字符串](../mfc/windows-sockets-converting-strings.md)。  
+---
+# <a name="windows-sockets-blocking"></a>Windows Sockets: Blocking
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers blocking. The other issues are covered in the articles: [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) and [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- 如果使用或派生自类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，将需要管理这些问题。  如果使用或派生自类[CSocket](../mfc/reference/csocket-class.md)，MFC 为您管理这些。  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## 阻塞  
- 套接字可以在“锁定模式”或“非阻止性模式”中。套接字的函数在锁定 \(或同步\) 模式中不返回直到它们可以完成它们的操作。  这会阻止调用是因为该函数调用的套接字无法执行任何操作\) 阻止 \- 该调用返回。  为 **Receive** 成员函数的调用，如，可能需要一个随机长时间完成，它在等待发送的应用程序发送 \(这是，如果您使用 `CSocket`，或用于锁的 `CAsyncSocket` \)。  如果 `CAsyncSocket` 对象处于非阻碍模式（异步操作），调用立即返回，当前错误代码可检索 [获得最后一个错误](../Topic/CAsyncSocket::GetLastError.md) 成员的函数，它是 **WSAEWOULDBLOCK**，由于模式指示调用将会阻塞位置不立即返回。\(`CSocket` 不返回 **WSAEWOULDBLOCK**。  该类为您管理锁。\)  
+## <a name="blocking"></a>Blocking  
+ A socket can be in "blocking mode" or "nonblocking mode." The functions of sockets in blocking (or synchronous) mode do not return until they can complete their action. This is called blocking because the socket whose function was called cannot do anything — is blocked — until the call returns. A call to the **Receive** member function, for example, might take an arbitrarily long time to complete as it waits for the sending application to send (this is if you are using `CSocket`, or using `CAsyncSocket` with blocking). If a `CAsyncSocket` object is in nonblocking mode (operating asynchronously), the call returns immediately and the current error code, retrievable with the [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) member function, is **WSAEWOULDBLOCK**, indicating that the call would have blocked had it not returned immediately because of the mode. (`CSocket` never returns **WSAEWOULDBLOCK**. The class manages blocking for you.)  
   
- 套接字行为在 32 位和 64 位操作系统下 \(如 Windows 95 或 Windows 98\) 对比在 16 位操作系统下 \(如 Windows 3.1\)将有所不同。  与 16 位操作系统不同，在 32 位和 64 位操作系统使用抢先多任务并提供多线程处理。  在 32 位和 64 位操作系统下，在单独的辅助线程中放置套接字。  应用程序中在线程的套接字可以阻止，而不会干扰其他活动，在阻塞上也不会花费计算时间。  有关多线程编程的信息，请参见知识库文章 [多线程处理](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+ The behavior of sockets is different under 32-bit and 64-bit operating systems (such as Windows 95 or Windows 98) than under 16-bit operating systems (such as Windows 3.1). Unlike 16-bit operating systems, the 32-bit and 64-bit operating systems use preemptive multitasking and provide multithreading. Under the 32-bit and 64-bit operating systems, you can put your sockets in separate worker threads. A socket in a thread can block without interfering with other activities in your application and without spending compute time on the blocking. For information on multithreaded programming, see the article [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
 > [!NOTE]
->  在多线程应用，可以使用 `CSocket` 的锁定特性简化编程，而不影响的用户界面响应速度。  通过在主线程处理用户交互以及在替换线程处理`CSocket` 进程，可以分隔这些逻辑操作。  在非多线程应用程序中，必须结合这两种活动并将它们作为单个线程处理，通常意味着使用 `CAsyncSocket`，因此可以处理通信请求按需或重写 `CSocket::OnMessagePending` 处理用户操作，在长期同步活动期间。  
+>  In multithreaded applications, you can use the blocking nature of `CSocket` to simplify your program's design without affecting the responsiveness of the user interface. By handling user interactions in the main thread and `CSocket` processing in alternate threads, you can separate these logical operations. In an application that is not multithreaded, these two activities must be combined and handled as a single thread, which usually means using `CAsyncSocket` so you can handle communications requests on demand, or overriding `CSocket::OnMessagePending` to handle user actions during lengthy synchronous activity.  
   
- 余下讨论为面向 16 位操作系统的程序员：  
+ The rest of this discussion is for programmers targeting 16-bit operating systems:  
   
- 通常，如果您使用 `CAsyncSocket`，应避免使用锁定操作而是用异步操作。  例如，在异步操作中，从在调用 **Receive**后接收 **WSAEWOULDBLOCK** 错误代码的点处，直到 `OnReceive` 成员函数调用通知您可以再次阅读。  异步调用通过调用套接字的相应通知回调函数调用，例如 [OnReceive](../Topic/CAsyncSocket::OnReceive.md)。  
+ Normally, if you are using `CAsyncSocket`, you should avoid using blocking operations and operate asynchronously instead. In asynchronous operations, from the point at which you receive a **WSAEWOULDBLOCK** error code after calling **Receive**, for example, you wait until your `OnReceive` member function is called to notify you that you can read again. Asynchronous calls are made by calling back your socket's appropriate callback notification function, such as [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
   
- 在 Windows 下，阻止调用视为错误约定。  默认情况下， [CAsyncSocket](../mfc/reference/casyncsocket-class.md) 支持异步调用，必须使用回调通知管理锁。  另一方面，[CSocket](../mfc/reference/csocket-class.md)类是同步的。  它正在发送 Windows 消息和管理您的锁定。  
+ Under Windows, blocking calls are considered bad practice. By default, [CAsyncSocket](../mfc/reference/casyncsocket-class.md) supports asynchronous calls, and you must manage the blocking yourself using callback notifications. Class [CSocket](../mfc/reference/csocket-class.md), on the other hand, is synchronous. It pumps Windows messages and manages blocking for you.  
   
- 有关阻塞的更多信息，请参见 Windows Sockets 规范。  有关" on "函数的更多信息，请参见 [Windows Sockets：套接字通知](../mfc/windows-sockets-socket-notifications.md) 和 [Windows Sockets：派生自套接字类](../mfc/windows-sockets-deriving-from-socket-classes.md)。  
+ For more information about blocking, see the Windows Sockets specification. For more information about "On" functions, see [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md) and [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md).  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows 套接字：背景](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 请参阅  
- [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)   
- [CAsyncSocket::OnSend](../Topic/CAsyncSocket::OnSend.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
+
+

@@ -1,76 +1,95 @@
 ---
-title: "OLE 后台 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE, 关于 OLE"
+title: OLE Background | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# OLE 后台
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 244f05988d52d980a94692c473767651a73a1904
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-OLE 是允许用户创建和编辑用于包含项或“对象”文档创建的各种应用程序的机制。  
+---
+# <a name="ole-background"></a>OLE Background
+OLE is a mechanism that allows users to create and edit documents containing items or "objects" created by multiple applications.  
   
 > [!NOTE]
->  OLE 最初是对象链接与嵌入的首字母缩写词。  但是，它现在指向 OLE。  OLE 的部分不相关链接和嵌入现在是 Active 技术的一部分。  
+>  OLE was originally an acronym for Object Linking and Embedding. However, it is now referred to as OLE. Parts of OLE not related to linking and embedding are now part of Active technology.  
   
- OLE 文档，以前称为组合文档数据无缝集成，或组件的各种类型。  声音剪辑、电子表格和位图是在 OLE 文档中的组件的典型示例。  支持在应用程序的" OLE 允许用户使用 OLE 文档，而不用担心不同应用程序之间交换；OLE 执行您交换。  
+ OLE documents, historically called compound documents, seamlessly integrate various types of data, or components. Sound clips, spreadsheets, and bitmaps are typical examples of components found in OLE documents. Supporting OLE in your application allows your users to use OLE documents without worrying about switching between the different applications; OLE does the switching for you.  
   
- 使用容器创建复合应用程序文档和服务器应用或组件应用程序文档创建容器中的项。  已编写的任何应用程序可以是容器，和\/或服务器。  
+ You use a container application to create compound documents and a server application or component application to create the items within the container document. Any application you write can be a container, a server, or both.  
   
- OLE 将许多不同的概念所有若要实现无缝的交互目标应用程序之间的。  这些区域包括：  
+ OLE incorporates many different concepts that all work toward the goal of seamless interaction between applications. These areas include the following:  
   
- 链接和嵌入  
- 链接和嵌入是存储在其他应用程序创建的两个方法创建一项在 OLE 文档中。  关于二者之间的差异的常规信息，请参见 [OLE 背景：链接和嵌入](../mfc/ole-background-linking-and-embedding.md)文章。  有关详细信息，请参见和文章 [容器](../mfc/containers.md) [服务器](../mfc/servers.md)。  
+ Linking and Embedding  
+ Linking and embedding are the two methods for storing items created inside an OLE document that were created in another application. For general information on the differences between the two, see the article [OLE Background: Linking and Embedding](../mfc/ole-background-linking-and-embedding.md). For more detailed information, see the articles [Containers](../mfc/containers.md) and [Servers](../mfc/servers.md).  
   
- 就地激活 \(可视化编辑对象\)  
- 激活在文档中的嵌入项容器调用就地激活或可视化编辑。  容器应用程序的接口更改合并创建嵌入项组件应用程序的功能。  链接的项永远不激活就地，因为项的实际数据在一个单独的文件中，移出包含链接的应用程序的上下文之外。  有关就地激活的更多信息，请参见知识库文章 [激活](../mfc/activation-cpp.md)。  
-  
-> [!NOTE]
->  链接嵌入和就地激活和提供主要功能 OLE 可视化编辑。  
-  
- 自动化  
- 自动化使一驱动应用程序其他应用程序。  驱动的应用程序称为的自动化客户端，并且，驱动的应用程序称为的自动化或自动化服务器组件。  有关自动化的更多信息，请参见和文章 [自动化客户](../mfc/automation-clients.md) [自动化服务器](../mfc/automation-servers.md)。  
+ In-Place Activation (Visual Editing)  
+ Activating an embedded item in the context of the container document is called in-place activation or visual editing. The container application's interface changes to incorporate the features of the component application that created the embedded item. Linked items are never activated in place because the actual data for the item is contained in a separate file, out of the context of the application containing the link. For more information on in-place activation, see the article [Activation](../mfc/activation-cpp.md).  
   
 > [!NOTE]
->  在 OLE 自动化和 Active 技术上下文工作。  可以自动基于 COM 的对象。  
+>  Linking and embedding and in-place activation provide the main features of OLE visual editing.  
   
- 复合文件  
- 复合文件提供简化结构化存储 OLE 应用程序成分文档标准的文件格式。  在复合文件中，存储目录有许多功能，然后流具有文件的许多功能。  该技术也称为结构化存储。  有关复合文件的更多信息，请参见知识库文章 [容器：复合文件](../mfc/containers-compound-files.md)。  
+ Automation  
+ Automation allows one application to drive another application. The driving application is known as an automation client, and the application being driven is known as an automation server or automation component. For more information on automation, see the articles [Automation Clients](../mfc/automation-clients.md) and [Automation Servers](../mfc/automation-servers.md).  
   
- 统一传输数据  
- 统一数据传输 \(UDT\) 是允许数据发送和接收的标准方式的一组接口，无论选择的实际方法传输数据。  UDT 由窗体中拖放数据传输的基础。  UDT 现在作为基础现有 Windows 数据传输，例如剪贴板和的动态数据交换 \(DDE\) \(DDE\)。  UDT 有关的更多信息，请参见知识库文章 [数据对象与数据源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)。  
+> [!NOTE]
+>  Automation works in both OLE and Active technology contexts. You can automate any object based on COM.  
   
- 拖放  
- 拖放属于一种易用，技术直接处理在应用程序之间传输数据，包括在应用程序内的 Windows 中，甚至在应用程序中作为单一窗口中。  将要传输的数据选择并拖到所需目标。  拖放基于统一数据传输。  有关拖放的更多信息，请参见知识库文章 [拖放](../mfc/drag-and-drop-ole.md)。  
+ Compound Files  
+ Compound files provide a standard file format that simplifies structured storing of compound documents for OLE applications. Within a compound file, storages have many features of directories and streams have many features of files. This technology is also called structured storage. For more information on compound files, see the article [Containers: Compound Files](../mfc/containers-compound-files.md).  
   
- 组件对象模型  
- 当 OLE 对象彼此通信时，组件对象模型 \(COM\) \(COM\) 提供使用的基础结构。  MFC OLE 类简化程序员的 COM。  因为基础 COM 对象，COM 和 OLE Active 技术是 Active 技术的一部分。  有关 COM 的更多信息，请参见 [活动模板库 \(ATL\) \(ATL\)](../atl/active-template-library-atl-concepts.md) 主题。  
+ Uniform Data Transfer  
+ Uniform Data Transfer (UDT) is a set of interfaces that allow data to be sent and received in a standard fashion, regardless of the actual method chosen to transfer the data. UDT forms the basis for data transfers by drag and drop. UDT now serves as the basis for existing Windows data transfer, such as the Clipboard and dynamic data exchange (DDE). For more information on UDT, see the article [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md).  
   
- 一些更重要的 OLE 主题。下列文章包括：  
+ Drag and Drop  
+ Drag and drop is an easy-to-use, direct-manipulation technique to transfer data among applications, among windows within an application, or even within a single window in an application. The data to be transferred is selected and dragged to the desired destination. Drag and drop is based on uniform data transfer. For more information on drag and drop, see the article [Drag and Drop](../mfc/drag-and-drop-ole.md).  
   
--   [OLE 后台：链接和嵌入](../mfc/ole-background-linking-and-embedding.md)  
+ Component Object Model  
+ The Component Object Model (COM) provides the infrastructure used when OLE objects communicate with each other. The MFC OLE classes simplify COM for the programmer. COM is part of Active technology, because COM objects underlie both OLE and Active technology. For more information about COM, see the [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md) topics.  
   
--   [OLE 后台：容器和服务器](../mfc/ole-background-containers-and-servers.md)  
+ Some of the more important OLE topics are covered in the following articles:  
   
--   [OLE 后台：实现策略](../mfc/ole-background-implementation-strategies.md)  
+-   [OLE Background: Linking and Embedding](../mfc/ole-background-linking-and-embedding.md)  
   
--   [OLE 后台：MFC 实现](../mfc/ole-background-mfc-implementation.md)  
+-   [OLE Background: Containers and Servers](../mfc/ole-background-containers-and-servers.md)  
   
- 对于上述文章找不到的通用 OLE 信息，OLE 的搜索 MSDN。  
+-   [OLE Background: Implementation Strategies](../mfc/ole-background-implementation-strategies.md)  
   
-## 请参阅  
+-   [OLE Background: MFC Implementation](../mfc/ole-background-mfc-implementation.md)  
+  
+ For general OLE information not found in the above articles, search for OLE in MSDN.  
+  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)
+
+

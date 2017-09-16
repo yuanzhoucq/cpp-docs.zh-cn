@@ -1,38 +1,57 @@
 ---
-title: "树控件项位置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 类, 项位置"
-  - "树控件中的项位置"
-  - "位置, CTreeCtrl 项"
-  - "树控件, 项位置"
+title: Tree Control Item Position | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], item position
+- item position in tree controls
+- tree controls [MFC], item position
+- position, CTreeCtrl items
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 树控件项位置
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27c4c7366f4935464369639d2bd46989912bf617
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-项的初始位置设置，在将项添加为树控件 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 时使用 `InsertItem` 函数。成员，  成员函数调用指定父项的处理以及句柄后，新的项会插入。  第二处理必须标识任何子项给定父或一个值：`TVI_FIRST`、`TVI_LAST`或 `TVI_SORT`。  
+---
+# <a name="tree-control-item-position"></a>Tree Control Item Position
+An item's initial position is set when the item is added to the tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) by using the `InsertItem` member function. The member function call specifies the handle of the parent item and the handle of the item after which the new item is to be inserted. The second handle must identify either a child item of the given parent or one of these values: `TVI_FIRST`, `TVI_LAST`, or `TVI_SORT`.  
   
- 在 `TVI_FIRST` 或 `TVI_LAST` 中指定树，控件首先将新项或结尾。子项给定父项的列表。  如果指定 `TVI_SORT`，则树控件按字母顺序插入新项到子项列表基于项标签的文本。  
+ When `TVI_FIRST` or `TVI_LAST` is specified, the tree control places the new item at the beginning or end of the given parent item's list of child items. When `TVI_SORT` is specified, the tree control inserts the new item into the list of child items in alphabetical order based on the text of the item labels.  
   
- 可以将子项父项列表到字母顺序通过调用成员函数。[SortChildren](../Topic/CTreeCtrl::SortChildren.md) 此函数由指定的实所有级别删除给定的父项的子项是否还按字母顺序排序。  
+ You can put a parent item's list of child items into alphabetical order by calling the [SortChildren](../mfc/reference/ctreectrl-class.md#sortchildren) member function. This function includes a parameter that specifies whether all levels of child items descending from the given parent item are also sorted in alphabetical order.  
   
- [SortChildrenCB](../Topic/CTreeCtrl::SortChildrenCB.md) 成员函数可以排序基于您定义的标准的子项。  当您调用此函数时，需要指定树控件可以调用的应用程序中定义回调的函数，当两个子项相对顺序需要决定。  指定，则在调用 `SortChildrenCB`时的回调函数接收比较项的两个 32 位应用程序定义的值和第三个 32 位值。  
+ The [SortChildrenCB](../mfc/reference/ctreectrl-class.md#sortchildrencb) member function allows you to sort child items based on criteria that you define. When you call this function, you specify an application-defined callback function that the tree control can call whenever the relative order of two child items needs to be decided. The callback function receives two 32-bit application-defined values for the items being compared and a third 32-bit value that you specify when calling `SortChildrenCB`.  
   
-## 请参阅  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,7 +1,7 @@
 ---
-title: "stdext 命名空间 | Microsoft Docs"
+title: stdext Namespace | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 09/06/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -35,27 +35,29 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 213b760a134a645a0b6552e4c3600fc4762b0bb2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 77d6ee6c4ce675b8994dcb04470d8c736653838b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="stdext-namespace"></a>stdext 命名空间
-[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 头文件的成员当前不是 ISO C++ 标准的一部分。 因此，这些类型和成员已从 `std` 命名空间移动到命名空间 `stdext`以保持符合 C++ 标准。  
-  
- 当使用默认的 [/Ze](../build/reference/za-ze-disable-language-extensions.md) 进行编译时，该编译器将针对 <hash_map> 和 <hash_set> 头文件的成员警告 `std` 的使用。 若要禁用该警告，请使用[警告](../preprocessor/warning.md)杂注。  
-  
- 若要在针对 <hash_map> 和 <hash_set> 头文件的成员使用 `std` 时让编译器生成错误和 **/Ze**，则在包括任何 C++ 标准库头文件之前添加以下指令。  
-  
-```  
+# <a name="stdext-namespace"></a>stdext Namespace
+
+Members of the [\<hash_map>](../standard-library/hash-map.md) and [\<hash_set>](../standard-library/hash-set.md) header files are not currently part of the ISO C++ standard. Therefore, these types and members have been moved from the `std` namespace to namespace `stdext`, to remain conformant with the C++ standard.
+
+When compiling with [/Ze](../build/reference/za-ze-disable-language-extensions.md), which is the default, the compiler warns on the use of `std` for members of the \<hash_map> and \<hash_set> header files. To disable the warning, use the [warning](../preprocessor/warning.md) pragma.
+
+To have the compiler generate an error for the use of `std` for members of the \<hash_map> and \<hash_set> header files with **/Ze**, add the following directive before you `#include` any C++ Standard Library header files.
+
+```cpp  
 #define _DEFINE_DEPRECATED_HASH_CLASSES 0  
 ```  
-  
- 使用 **/Za**进行编译时，该编译器将生成一个错误。  
-  
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
+
+When compiling with **/Za**, the compiler generates an error.  
+
+## <a name="see-also"></a>See Also
+
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)
 
 

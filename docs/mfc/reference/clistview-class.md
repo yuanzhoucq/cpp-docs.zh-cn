@@ -1,5 +1,5 @@
 ---
-title: "CListView 类 |Microsoft 文档"
+title: CListView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,8 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- views, and common controls
-- CListView class
+- CListView [MFC], CListView
+- CListView [MFC], GetListCtrl
+- CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
 caps.latest.revision: 24
 author: mikeblome
@@ -38,46 +39,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ebf6c93aa6d88d1942af4ecb9e3373fa57d84b65
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 233e002ba49348b4542e5d24e3961d46da730262
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="clistview-class"></a>CListView 类
-简化了使用列表控件和[CListCtrl](../../mfc/reference/clistctrl-class.md)，封装列表控件功能，与 MFC 文档视图体系结构的类。  
+# <a name="clistview-class"></a>CListView Class
+Simplifies use of the list control and of [CListCtrl](../../mfc/reference/clistctrl-class.md), the class that encapsulates list-control functionality, with MFC's document-view architecture.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CListView : public CCtrlView  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CListView::CListView](#clistview)|构造 `CListView` 对象。|  
+|[CListView::CListView](#clistview)|Constructs a `CListView` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CListView::GetListCtrl](#getlistctrl)|返回与视图关联的列表控件。|  
+|[CListView::GetListCtrl](#getlistctrl)|Returns the list control associated with the view.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CListView::RemoveImageList](#removeimagelist)|从列表视图中移除指定的图像列表。|  
+|[CListView::RemoveImageList](#removeimagelist)|Removes the specified image list from the list view.|  
   
-## <a name="remarks"></a>备注  
- 这种体系结构的详细信息，请参阅概述[CView](../../mfc/reference/cview-class.md)类和引用存在交叉引用。  
+## <a name="remarks"></a>Remarks  
+ For more information on this architecture, see the overview for the [CView](../../mfc/reference/cview-class.md) class and the cross-references cited there.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -90,43 +91,43 @@ class CListView : public CCtrlView
   
  `CListView`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxcview.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcview.h  
   
-##  <a name="clistview"></a>CListView::CListView  
- 构造 `CListView` 对象。  
+##  <a name="clistview"></a>  CListView::CListView  
+ Constructs a `CListView` object.  
   
 ```  
 CListView();
 ```  
   
-##  <a name="getlistctrl"></a>CListView::GetListCtrl  
- 调用该成员函数以获取对列表控件与视图关联的引用。  
+##  <a name="getlistctrl"></a>  CListView::GetListCtrl  
+ Call this member function to get a reference to the list control associated with the view.  
   
 ```  
 CListCtrl& GetListCtrl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对列表控件与视图关联的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the list control associated with the view.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCListView #&7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="removeimagelist"></a>CListView::RemoveImageList  
- 从列表视图中移除指定的图像列表。  
+##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
+ Removes the specified image list from the list view.  
   
 ```  
 void RemoveImageList(int nImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImageList`  
- 要删除的图像的从零开始的索引。  
+ The zero-based index of the image to remove.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 ROWLIST](../../visual-cpp-samples.md)   
- [CCtrlView 类](../../mfc/reference/cctrlview-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CCtrlView 类](../../mfc/reference/cctrlview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample ROWLIST](../../visual-cpp-samples.md)   
+ [CCtrlView Class](../../mfc/reference/cctrlview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CCtrlView Class](../../mfc/reference/cctrlview-class.md)
 

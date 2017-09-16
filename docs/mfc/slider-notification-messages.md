@@ -1,48 +1,67 @@
 ---
-title: "滑块通知消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl 类, 通知"
-  - "消息, 通知"
-  - "通知, CSliderCtrl"
-  - "滑块控件, 通知消息"
+title: Slider Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], notifications
+- slider controls [MFC], notification messages
+- messages, notification
+- notifications [MFC], CSliderCtrl
 ms.assetid: b9121104-3889-4a10-92bf-f3723f1af9d0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 滑块通知消息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2d6a14233d3db646a6536bd11f276dbcf1aea937
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-滑块控件通过发送父 `WM_HSCROLL` 或 `WM_VSCROLL` 消息通知其父窗口用户操作，具体取决于滑块控件的方向。  若要处理这些消息，请添加 `WM_HSCROLL` 和 `WM_VSCROLL` 消息的处理程序。父窗口。  [OnHScroll](../Topic/CWnd::OnHScroll.md)[OnVScroll](../Topic/CWnd::OnVScroll.md) 和成员函数将通知代码传递、滑块的位置及其指向 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) 对象。  您会注意到指针是 **CScrollBar \*** 类型，即使它指向 `CSliderCtrl` 对象。  如果需要，操作滑块控件，则可能需要将角色分配该指针。  
+---
+# <a name="slider-notification-messages"></a>Slider Notification Messages
+A slider control notifies its parent window of user actions by sending the parent `WM_HSCROLL` or `WM_VSCROLL` messages, depending on the orientation of the slider control. To handle these messages, add handlers for the `WM_HSCROLL` and `WM_VSCROLL` messages to the parent window. The [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) and [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) member functions will be passed a notification code, the position of the slider, and a pointer to the [CSliderCtrl](../mfc/reference/csliderctrl-class.md) object. Note that the pointer is of type **CScrollBar \*** even though it points to a `CSliderCtrl` object. You may need to typecast this pointer if you need to manipulate the slider control.  
   
- 使用滚动条通知代码，而不是，滑块控件发送的不同通知代码组。  滑块控件发送 **TB\_BOTTOM**，**TB\_LINEDOWN**，**TB\_LINEUP**，而且，**TB\_TOP** 通知代码使用键盘时，只有在用户使用滑块控件交互。  它在用户使用鼠标时，**TB\_THUMBPOSITION** 和 **TB\_THUMBTRACK** 只发送通知消息。  **TB\_ENDTRACK**、**TB\_PAGEDOWN**和 **TB\_PAGEUP** 代码通知在这两种情况下发送。  
+ Rather than using the scroll bar notification codes, slider controls send a different set of notification codes. A slider control sends the **TB_BOTTOM**, **TB_LINEDOWN**, **TB_LINEUP**, and **TB_TOP** notification codes only when the user interacts with a slider control by using the keyboard. The **TB_THUMBPOSITION** and **TB_THUMBTRACK** notification messages are only sent when the user is using the mouse. The **TB_ENDTRACK**, **TB_PAGEDOWN**, and **TB_PAGEUP** notification codes are sent in both cases.  
   
- 下表列出滑块控件通知消息和事件 \(虚拟键代码或鼠标事件\) 会导致将发送的通知。\(对于标准虚拟键代码列表，请参见 Winuser.h。\)  
+ The following table lists the slider control notification messages and the events (virtual key codes or mouse events) that cause the notifications to be sent. (For a list of standard virtual key codes, see Winuser.h.)  
   
-|通知消息|使发送通知的事件|  
-|----------|--------------|  
-|**TB\_BOTTOM**|**VK\_END**|  
-|**TB\_ENDTRACK**|`WM_KEYUP` \(用户松开发送相关虚拟键代码\) 的密钥|  
-|**TB\_LINEDOWN**|**VK\_RIGHT** 或 **VK\_DOWN**|  
-|**TB\_LINEUP**|**VK\_LEFT** 或 **VK\_UP**|  
-|**TB\_PAGEDOWN**|**VK\_NEXT** \(用户单击通道的下方或单击滑块右侧下\)|  
-|**TB\_PAGEUP**|**VK\_PRIOR** \(在或通道滑块在左侧\) 中用户单击|  
-|**TB\_THUMBPOSITION**|`WM_LBUTTONUP` 在 **TB\_THUMBTRACK** 通知消息之后|  
-|**TB\_THUMBTRACK**|滑块移动 \(用户拖动滑块\)|  
-|**TB\_TOP**|**VK\_HOME**|  
+|Notification message|Event causing notification to be sent|  
+|--------------------------|-------------------------------------------|  
+|**TB_BOTTOM**|**VK_END**|  
+|**TB_ENDTRACK**|`WM_KEYUP` (the user released a key that sent a relevant virtual key code)|  
+|**TB_LINEDOWN**|**VK_RIGHT** or **VK_DOWN**|  
+|**TB_LINEUP**|**VK_LEFT** or **VK_UP**|  
+|**TB_PAGEDOWN**|**VK_NEXT** (the user clicked the channel below or to the right of the slider)|  
+|**TB_PAGEUP**|**VK_PRIOR** (the user clicked the channel above or to the left of the slider)|  
+|**TB_THUMBPOSITION**|`WM_LBUTTONUP` following a **TB_THUMBTRACK** notification message|  
+|**TB_THUMBTRACK**|Slider movement (the user dragged the slider)|  
+|**TB_TOP**|**VK_HOME**|  
   
-## 请参阅  
- [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

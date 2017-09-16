@@ -1,56 +1,76 @@
 ---
-title: "命令传送 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 命令传送"
-  - "命令处理, 传送命令"
-  - "处理程序"
-  - "处理程序, 命令"
-  - "命令传送"
+title: Command Routing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- handlers [MFC]
+- handlers, command [MFC]
+- command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 命令传送
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9b8b2c0deef88405b15d1b04dcd02fa09960bc1d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-你使用命令的职责限于在命令及其处理程序函数间建立消息映射连接，也是你使用“属性”窗口的任务。 还必须编写大部分命令处理程序。  
+---
+# <a name="command-routing"></a>Command Routing
+Your responsibility in working with commands is limited to making message-map connections between commands and their handler functions, a task for which you use the Properties window. You must also write most command handlers.  
   
- Windows 消息通常发送到主框架窗口中，但命令消息则传送到其他对象。 框架通过命令目标对象的标准顺序传送命令，这些对象中应包含命令的处理程序。 每个命令目标对象检查其消息映射，看看是否能处理传入的消息。  
+ Windows messages are usually sent to the main frame window, but command messages are then routed to other objects. The framework routes commands through a standard sequence of command-target objects, one of which is expected to have a handler for the command. Each command-target object checks its message map to see if it can handle the incoming message.  
   
- 不同的命令目标类检查其自身不同时间的消息映射。 通常情况下，类将命令传送到其他某些对象，让对象首次尝试处理命令。 如果没有对象处理该命令，原始类将检查其自己的消息映射。 然后，如果它自己无法提供处理程序，则可将命令传送到更多的命令目标。 下表[标准命令传送](#_core_standard_command_route)显示了每个类如何构成此顺序。 命令目标传送命令的一般顺序是：  
+ Different command-target classes check their own message maps at different times. Typically, a class routes the command to certain other objects to give them first chance at the command. If none of those objects handles the command, the original class checks its own message map. Then, if it can't supply a handler itself, it may route the command to yet more command targets. The table [Standard Command Route](#_core_standard_command_route) below shows how each of the classes structures this sequence. The general order in which a command target routes a command is:  
   
-1.  到其当前活动子命令目标对象。  
+1.  To its currently active child command-target object.  
   
-2.  到自身。  
+2.  To itself.  
   
-3.  到其他命令目标。  
+3.  To other command targets.  
   
- 传送机制的费用如何？ 相较于处理程序对命令的响应，传送的费用较低。 请记住，仅当用户与用户界面对象交互时，框架才生成命令。  
+ How expensive is this routing mechanism Compared to what your handler does in response to a command, the cost of the routing is low. Bear in mind that the framework generates commands only when the user interacts with a user-interface object.  
   
-### 标准命令传送  
+### <a name="_core_standard_command_route"></a> Standard Command Route  
   
-|当此类型的对象收到命令时。 。 。|它给自身和其他命令目标对象一个机会以此顺序处理命令：|  
-|-----------------------|--------------------------------|  
-|MDI 框架窗口 \(`CMDIFrameWnd`\)|1.  活动 `CMDIChildWnd`<br />2.  此框架窗口<br />3.  应用程序（`CWinApp` 对象）|  
-|文档框架窗口（`CFrameWnd`、`CMDIChildWnd`）|1.  活动视图<br />2.  此框架窗口<br />3.  应用程序（`CWinApp` 对象）|  
-|视图|1.  此视图<br />2.  附加到视图的文档|  
-|Document|1.  此文档<br />2.  附加到文档的文档模板|  
-|对话框|1.  此对话框<br />2.  拥有对话框的窗口<br />3.  应用程序（`CWinApp` 对象）|  
+|When an object of this type receives a command . . .|It gives itself and other command-target objects a chance to handle the command in this order:|  
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
+|MDI frame window  (`CMDIFrameWnd`)|1.  Active `CMDIChildWnd`<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|Document frame window  (`CFrameWnd`, `CMDIChildWnd`)|1.  Active view<br />2.  This frame window<br />3.  Application (`CWinApp` object)|  
+|View|1.  This view<br />2.  Document attached to the view|  
+|Document|1.  This document<br />2.  Document template attached to the document|  
+|Dialog box|1.  This dialog box<br />2.  Window that owns the dialog box<br />3.  Application (`CWinApp` object)|  
   
- 如果前述表第二列中带编号的项提到其他对象（例如文档），请参见第一列中相应的项。 例如，当你在第二列中看到视图将命令转发到其文档，则参阅第一列中的“文档”项了解进一步的传送。  
+ Where numbered entries in the second column of the preceding table mention other objects, such as a document, see the corresponding item in the first column. For instance, when you read in the second column that the view forwards a command to its document, see the "Document" entry in the first column to follow the routing further.  
   
-## 请参阅  
- [框架如何调用处理程序](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

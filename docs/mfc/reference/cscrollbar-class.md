@@ -1,5 +1,5 @@
 ---
-title: "CScrollBar 类 |Microsoft 文档"
+title: CScrollBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,11 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CScrollBar class
-- SCROLLBAR window class
-- scroll bars
-- Windows common controls [C++], CScrollBar
-- controls [MFC], scroll bar
+- CScrollBar [MFC], CScrollBar
+- CScrollBar [MFC], Create
+- CScrollBar [MFC], EnableScrollBar
+- CScrollBar [MFC], GetScrollBarInfo
+- CScrollBar [MFC], GetScrollInfo
+- CScrollBar [MFC], GetScrollLimit
+- CScrollBar [MFC], GetScrollPos
+- CScrollBar [MFC], GetScrollRange
+- CScrollBar [MFC], SetScrollInfo
+- CScrollBar [MFC], SetScrollPos
+- CScrollBar [MFC], SetScrollRange
+- CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
 caps.latest.revision: 21
 author: mikeblome
@@ -50,60 +57,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 84b59f041f1a6cf73843c303e1a6b71adffc2101
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3686af908abc199f878576aea22b30b1952c2183
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cscrollbar-class"></a>CScrollBar 类
-提供 Windows 滚动条控件功能。  
+# <a name="cscrollbar-class"></a>CScrollBar Class
+Provides the functionality of a Windows scroll-bar control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CScrollBar : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollBar::CScrollBar](#cscrollbar)|构造 `CScrollBar` 对象。|  
+|[CScrollBar::CScrollBar](#cscrollbar)|Constructs a `CScrollBar` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollBar::Create](#create)|创建 Windows 滚动条，并将其附加到`CScrollBar`对象。|  
-|[CScrollBar::EnableScrollBar](#enablescrollbar)|启用或禁用滚动条的一个或两个箭头。|  
-|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|检索的滚动条使用有关的信息`SCROLLBARINFO`结构。|  
-|[CScrollBar::GetScrollInfo](#getscrollinfo)|检索有关滚动条的信息。|  
-|[CScrollBar::GetScrollLimit](#getscrolllimit)|检索的滚动条的限制|  
-|[CScrollBar::GetScrollPos](#getscrollpos)|检索滚动框的当前位置。|  
-|[CScrollBar::GetScrollRange](#getscrollrange)|检索给定的滚动条的当前最小值和最大的滚动条位置。|  
-|[CScrollBar::SetScrollInfo](#setscrollinfo)|设置有关滚动条的信息。|  
-|[CScrollBar::SetScrollPos](#setscrollpos)|设置滚动框的当前位置。|  
-|[CScrollBar::SetScrollRange](#setscrollrange)|设置给定滚动条的最小和最大位置值。|  
-|[CScrollBar::ShowScrollBar](#showscrollbar)|显示或隐藏滚动条。|  
+|[CScrollBar::Create](#create)|Creates the Windows scroll bar and attaches it to the `CScrollBar` object.|  
+|[CScrollBar::EnableScrollBar](#enablescrollbar)|Enables or disables one or both arrows of a scroll bar.|  
+|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Retrieves information about the scroll bar using a `SCROLLBARINFO` structure.|  
+|[CScrollBar::GetScrollInfo](#getscrollinfo)|Retrieves information about the scroll bar.|  
+|[CScrollBar::GetScrollLimit](#getscrolllimit)|Retrieves the limit of the scroll bar|  
+|[CScrollBar::GetScrollPos](#getscrollpos)|Retrieves the current position of a scroll box.|  
+|[CScrollBar::GetScrollRange](#getscrollrange)|Retrieves the current minimum and maximum scroll-bar positions for the given scroll bar.|  
+|[CScrollBar::SetScrollInfo](#setscrollinfo)|Sets information about the scroll bar.|  
+|[CScrollBar::SetScrollPos](#setscrollpos)|Sets the current position of a scroll box.|  
+|[CScrollBar::SetScrollRange](#setscrollrange)|Sets minimum and maximum position values for the given scroll bar.|  
+|[CScrollBar::ShowScrollBar](#showscrollbar)|Shows or hides a scroll bar.|  
   
-## <a name="remarks"></a>备注  
- 在两个步骤中创建的滚动条控件。 首先，调用构造函数`CScrollBar`构造`CScrollBar`对象，然后调用[创建](#create)成员函数来创建 Windows 滚动条控件和将其附加到`CScrollBar`对象。  
+## <a name="remarks"></a>Remarks  
+ You create a scroll-bar control in two steps. First, call the constructor `CScrollBar` to construct the `CScrollBar` object, then call the [Create](#create) member function to create the Windows scroll-bar control and attach it to the `CScrollBar` object.  
   
- 如果您创建`CScrollBar`（通过对话框资源） 的对话框内的对象`CScrollBar`用户关闭对话框时自动销毁。  
+ If you create a `CScrollBar` object within a dialog box (through a dialog resource), the `CScrollBar` is automatically destroyed when the user closes the dialog box.  
   
- 如果您创建`CScrollBar`对象在窗口中，您可能还需要将其销毁。  
+ If you create a `CScrollBar` object within a window, you may also need to destroy it.  
   
- 如果您创建`CScrollBar`对象在堆栈上，自动被销毁。 如果您创建`CScrollBar`使用堆上的对象**新**函数，则必须调用**删除**对象销毁它时在用户终止 Windows 滚动条上。  
+ If you create the `CScrollBar` object on the stack, it is destroyed automatically. If you create the `CScrollBar` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user terminates the Windows scroll bar.  
   
- 如果分配任何内存`CScrollBar`对象，请重写`CScrollBar`析构函数释放的分配。  
+ If you allocate any memory in the `CScrollBar` object, override the `CScrollBar` destructor to dispose of the allocations.  
   
- 有关使用的相关信息`CScrollBar`，请参阅[控件](../../mfc/controls-mfc.md)。  
+ For related information about using `CScrollBar`, see [Controls](../../mfc/controls-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,11 +119,11 @@ class CScrollBar : public CWnd
   
  `CScrollBar`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
- 创建 Windows 滚动条，并将其附加到`CScrollBar`对象。  
+##  <a name="create"></a>  CScrollBar::Create  
+ Creates the Windows scroll bar and attaches it to the `CScrollBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -126,95 +133,95 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定滚动栏的样式。 应用的任意组合[滚动条样式](../../mfc/reference/scroll-bar-styles.md)到滚动条。  
+ Specifies the scroll bar's style. Apply any combination of [scroll-bar styles](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) to the scroll bar.  
   
  `rect`  
- 指定滚动条的大小和位置。 可以是`RECT`结构或`CRect`对象。  
+ Specifies the scroll bar's size and position. Can be either a `RECT` structure or a `CRect` object.  
   
  `pParentWnd`  
- 指定滚动栏的父窗口，通常`CDialog`对象。 它不能**NULL**。  
+ Specifies the scroll bar's parent window, usually a `CDialog` object. It must not be **NULL**.  
   
  `nID`  
- Scroll bar 控件 id。  
+ The scroll bar's control ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 您构造`CScrollBar`两个步骤中的对象。 首先，调用构造函数构造`CScrollBar`对象; 然后，调用**创建**，它创建和初始化关联的 Windows 滚动条，并将其附加到`CScrollBar`对象。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CScrollBar` object in two steps. First, call the constructor, which constructs the `CScrollBar` object; then call **Create**, which creates and initializes the associated Windows scroll bar and attaches it to the `CScrollBar` object.  
   
- 将应用以下[窗口样式](../../mfc/reference/window-styles.md)到滚动条︰  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a scroll bar:  
   
-- **WS_CHILD**始终  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED**很少  
+- **WS_DISABLED** Rarely  
   
-- **WS_GROUP**控件组合  
+- **WS_GROUP** To group controls  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CScrollBar #&1;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
- 构造 `CScrollBar` 对象。  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
+ Constructs a `CScrollBar` object.  
   
 ```  
 CScrollBar();
 ```  
   
-### <a name="remarks"></a>备注  
- 在构造该对象之后, 调用**创建**成员函数来创建和初始化 Windows 滚动条。  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, call the **Create** member function to create and initialize the Windows scroll bar.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CScrollBar #&2;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
- 启用或禁用滚动条的一个或两个箭头。  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
+ Enables or disables one or both arrows of a scroll bar.  
   
 ```  
 BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nArrowFlags`  
- 指定的滚动箭头是启用还是禁用和启用或禁用的箭头。 此参数可以是下列值之一︰  
+ Specifies whether the scroll arrows are enabled or disabled and which arrows are enabled or disabled. This parameter can be one of the following values:  
   
-- **ESB_ENABLE_BOTH**使这两个滚动条的滚动箭头。  
+- **ESB_ENABLE_BOTH** Enables both arrows of a scroll bar.  
   
-- **ESB_DISABLE_LTUP**禁用水平滚动条向左的箭头或垂直滚动条的向上箭头。  
+- **ESB_DISABLE_LTUP** Disables the left arrow of a horizontal scroll bar or the up arrow of a vertical scroll bar.  
   
-- **ESB_DISABLE_RTDN**禁用水平滚动条向右箭头或垂直滚动条的向下箭头。  
+- **ESB_DISABLE_RTDN** Disables the right arrow of a horizontal scroll bar or the down arrow of a vertical scroll bar.  
   
-- **ESB_DISABLE_BOTH**禁用这两个滚动条的滚动箭头。  
+- **ESB_DISABLE_BOTH** Disables both arrows of a scroll bar.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果启用或禁用指定; 箭头否则为 0，它表示箭头尚在请求的状态或出现错误。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the arrows are enabled or disabled as specified; otherwise 0, which indicates that the arrows are already in the requested state or that an error occurred.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CScrollBar::SetScrollRange](#setscrollrange)。  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
- 检索的信息， **SCROLLBARINFO**结构维护有关滚动条。  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
+ Retrieves the information that the **SCROLLBARINFO** structure maintains about a scroll bar.  
   
 ```  
 BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pScrollInfo*  
- 一个指向[SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535)结构。  
+ A pointer to the [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) structure.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 此成员函数模拟的功能[SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545)消息，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) message, as described in the Windows SDK.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
- 检索 `SCROLLINFO` 结构维护的有关滚动条的信息。  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
+ Retrieves the information that the `SCROLLINFO` structure maintains about a scroll bar.  
   
 ```  
 BOOL GetScrollInfo(
@@ -222,57 +229,57 @@ BOOL GetScrollInfo(
     UINT nMask = SIF_ALL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpScrollInfo`  
- 一个指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。 请参阅[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关此结构的详细信息。  
+ A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure. See the Windows SDK for more information about this structure.  
   
  `nMask`  
- 指定要检索的滚动栏参数。 典型的用法，SIF_ALL，指定 SIF_PAGE、 SIF_POS、 SIF_TRACKPOS 和 SIF_RANGE 的组合。 请参阅`SCROLLINFO`nMask 值的详细信息。  
+ Specifies the scroll bar parameters to retrieve. Typical usage, SIF_ALL, specifies a combination of SIF_PAGE, SIF_POS, SIF_TRACKPOS, and SIF_RANGE. See `SCROLLINFO` for more information on the nMask values.  
   
-### <a name="return-value"></a>返回值  
- 如果消息检索到的任何值，则返回值**TRUE**。 否则，它就是**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ If the message retrieved any values, the return is **TRUE**. Otherwise, it is **FALSE**.  
   
-### <a name="remarks"></a>备注  
- `GetScrollInfo`允许应用程序使用 32 位滚动位置。  
+### <a name="remarks"></a>Remarks  
+ `GetScrollInfo` enables applications to use 32-bit scroll positions.  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构包含有关滚动条，包括最小值和最大滚动位置、 页大小和滚动框 （缩略图） 的位置信息。 请参阅`SCROLLINFO`结构中的主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关更改结构的默认值的详细信息。  
+ The [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the `SCROLLINFO` structure topic in the Windows SDK for more information about changing the structure defaults.  
   
- MFC 窗口消息处理程序指示滚动条位置[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)，提供只有 16 位的位置数据。 `GetScrollInfo`和`SetScrollInfo`提供 32 位的滚动条位置的数据。 因此，应用程序可以调用`GetScrollInfo`处理任何一个时`CWnd::OnHScroll`或`CWnd::OnVScroll`以获取 32 位滚动条位置的数据。  
+ The MFC Windows message handlers that indicate scroll bar position, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), provide only 16 bits of position data. `GetScrollInfo` and `SetScrollInfo` provide 32 bits of scroll bar position data. Thus, an application can call `GetScrollInfo` while processing either `CWnd::OnHScroll` or `CWnd::OnVScroll` to obtain 32-bit scroll bar position data.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
- 检索滚动滚动条的位置的最大值。  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
+ Retrieves the maximum scrolling position of the scroll bar.  
   
 ```  
 int GetScrollLimit();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指定如果成功，则一个滚动条的最大位置否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Specifies the maximum position of a scroll bar if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
- 检索滚动框的当前位置。  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
+ Retrieves the current position of a scroll box.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指定如果成功，则滚动框的当前位置否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Specifies the current position of the scroll box if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 当前位于取决于当前的滚动范围的相对值。 例如，如果滚动框位于中间栏的滚动范围是 100 到 200 个，当前的位置为 150。  
+### <a name="remarks"></a>Remarks  
+ The current position is a relative value that depends on the current scrolling range. For example, if the scrolling range is 100 to 200 and the scroll box is in the middle of the bar, the current position is 150.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
- 将给定的滚动条的当前最小值和最大的滚动条位置复制到由指定的位置`lpMinPos`和`lpMaxPos`。  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
+ Copies the current minimum and maximum scroll-bar positions for the given scroll bar to the locations specified by `lpMinPos` and `lpMaxPos`.  
   
 ```  
 void GetScrollRange(
@@ -280,21 +287,21 @@ void GetScrollRange(
     LPINT lpMaxPos) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpMinPos`  
- 指向将接收的最小位置的整数变量。  
+ Points to the integer variable that is to receive the minimum position.  
   
  `lpMaxPos`  
- 指向将接收的最大位置的整数变量。  
+ Points to the integer variable that is to receive the maximum position.  
   
-### <a name="remarks"></a>备注  
- 滚动条控件的默认范围为空 （这两个值都为 0）。  
+### <a name="remarks"></a>Remarks  
+ The default range for a scroll-bar control is empty (both values are 0).  
   
-### <a name="example"></a>示例  
-  请参阅示例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
- 设置的信息`SCROLLINFO`结构维护有关滚动条。  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
+ Sets the information that the `SCROLLINFO` structure maintains about a scroll bar.  
   
 ```  
 BOOL SetScrollInfo(
@@ -302,26 +309,26 @@ BOOL SetScrollInfo(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpScrollInfo`  
- 一个指向[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构。  
+ A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure.  
   
  `bRedraw`  
- 指定是否重绘的滚动条，以反映新的信息。 如果`bRedraw`是**TRUE**，在重绘的滚动条。 如果它是**FALSE**，没有重绘。 默认情况下，重绘的滚动条。  
+ Specifies whether the scroll bar should be redrawn to reflect the new information. If `bRedraw` is **TRUE**, the scroll bar is redrawn. If it is **FALSE**, it is not redrawn. The scroll bar is redrawn by default.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则返回值**TRUE**。 否则，它就是**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the return is **TRUE**. Otherwise, it is **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 您必须提供所需的值`SCROLLINFO`结构参数，其中包括标志值。  
+### <a name="remarks"></a>Remarks  
+ You must provide the values required by the `SCROLLINFO` structure parameters, including the flag values.  
   
- `SCROLLINFO`结构包含有关滚动条，包括最小值和最大滚动位置、 页大小和滚动框 （缩略图） 的位置信息。 请参阅[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)结构中的主题[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关更改结构的默认值的详细信息。  
+ The `SCROLLINFO` structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure topic in the Windows SDK for more information about changing the structure defaults.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CScrollBar #&3;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
- 将滚动框的当前位置设置为指定的`nPos`并且，如果指定，将重新绘制的滚动条以反映新的位置。  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
+ Sets the current position of a scroll box to that specified by `nPos` and, if specified, redraws the scroll bar to reflect the new position.  
   
 ```  
 int SetScrollPos(
@@ -329,24 +336,24 @@ int SetScrollPos(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 指定滚动框的新位置。 它必须在滚动范围内。  
+ Specifies the new position for the scroll box. It must be within the scrolling range.  
   
  `bRedraw`  
- 指定是否重绘的滚动条，以反映新的位置。 如果`bRedraw`是**TRUE**，在重绘的滚动条。 如果它是**FALSE**，没有重绘。 默认情况下，重绘的滚动条。  
+ Specifies whether the scroll bar should be redrawn to reflect the new position. If `bRedraw` is **TRUE**, the scroll bar is redrawn. If it is **FALSE**, it is not redrawn. The scroll bar is redrawn by default.  
   
-### <a name="return-value"></a>返回值  
- 指定如果成功，则滚动框的前一个位置否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Specifies the previous position of the scroll box if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 设置`bRedraw`到**FALSE**将只要在给另一个函数的后续调用，以避免让两次在短的时间间隔内重绘的滚动条的重绘的滚动条。  
+### <a name="remarks"></a>Remarks  
+ Set `bRedraw` to **FALSE** whenever the scroll bar will be redrawn by a subsequent call to another function to avoid having the scroll bar redrawn twice within a short interval.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CScrollBar::SetScrollRange](#setscrollrange)。  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
- 设置给定滚动条的最小和最大位置值。  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
+ Sets minimum and maximum position values for the given scroll bar.  
   
 ```  
 void SetScrollRange(
@@ -355,53 +362,53 @@ void SetScrollRange(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMinPos`  
- 指定的滚动位置的最小。  
+ Specifies the minimum scrolling position.  
   
  `nMaxPos`  
- 指定的滚动位置的最大值。  
+ Specifies the maximum scrolling position.  
   
  `bRedraw`  
- 指定是否重绘的滚动条，以反映更改。 如果`bRedraw`是**TRUE**，滚动条在重绘; 如果**FALSE**，没有重绘。 默认情况下重绘。  
+ Specifies whether the scroll bar should be redrawn to reflect the change. If `bRedraw` is **TRUE**, the scroll bar is redrawn; if **FALSE**, it is not redrawn. It is redrawn by default.  
   
-### <a name="remarks"></a>备注  
- 设置`nMinPos`和`nMaxPos`为 0 以隐藏标准滚动条。  
+### <a name="remarks"></a>Remarks  
+ Set `nMinPos` and `nMaxPos` to 0 to hide standard scroll bars.  
   
- 请勿调用此函数可在处理滚动条通知消息时隐藏滚动条。  
+ Do not call this function to hide a scroll bar while processing a scroll-bar notification message.  
   
- 如果调用`SetScrollRange`紧随调用`SetScrollPos`成员函数设置`bRedraw`中`SetScrollPos`为 0，以防止两次重绘的滚动条。  
+ If a call to `SetScrollRange` immediately follows a call to the `SetScrollPos` member function, set `bRedraw` in `SetScrollPos` to 0 to prevent the scroll bar from being redrawn twice.  
   
- 指定的值之间的差异`nMinPos`和`nMaxPos`不得大于 32767。 滚动条控件的默认范围为空 (同时`nMinPos`和`nMaxPos`均为 0)。  
+ The difference between the values specified by `nMinPos` and `nMaxPos` must not be greater than 32,767. The default range for a scroll-bar control is empty (both `nMinPos` and `nMaxPos` are 0).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CScrollBar #&4;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
- 显示或隐藏滚动条。  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
+ Shows or hides a scroll bar.  
   
 ```  
 void ShowScrollBar(BOOL bShow = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- 指定的滚动条是显示还是隐藏。 如果此参数为**TRUE**，显示滚动条，否则隐藏起来而已。  
+ Specifies whether the scroll bar is shown or hidden. If this parameter is **TRUE**, the scroll bar is shown; otherwise it is hidden.  
   
-### <a name="remarks"></a>备注  
- 应用程序不应调用此函数可在处理滚动条通知消息时隐藏滚动条。  
+### <a name="remarks"></a>Remarks  
+ An application should not call this function to hide a scroll bar while processing a scroll-bar notification message.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CScrollBar::Create](#create)。  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::Create](#create).  
   
-## <a name="see-also"></a>另请参阅  
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [CButton 类](../../mfc/reference/cbutton-class.md)   
- [CComboBox 类](../../mfc/reference/ccombobox-class.md)   
- [CEdit 类](../../mfc/reference/cedit-class.md)   
- [CListBox 类](../../mfc/reference/clistbox-class.md)   
- [CStatic 类](../../mfc/reference/cstatic-class.md)   
- [CDialog 类](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

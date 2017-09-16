@@ -1,5 +1,5 @@
 ---
-title: "CD2DPathGeometry 类 |Microsoft 文档"
+title: CD2DPathGeometry Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DPathGeometry class
+- CD2DPathGeometry [MFC], CD2DPathGeometry
+- CD2DPathGeometry [MFC], Attach
+- CD2DPathGeometry [MFC], Create
+- CD2DPathGeometry [MFC], Destroy
+- CD2DPathGeometry [MFC], Detach
+- CD2DPathGeometry [MFC], GetFigureCount
+- CD2DPathGeometry [MFC], GetSegmentCount
+- CD2DPathGeometry [MFC], Open
+- CD2DPathGeometry [MFC], Stream
+- CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
 caps.latest.revision: 17
 author: mikeblome
@@ -44,50 +53,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1c1158e55bf12d44f34896dd6752c9b8706db636
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de29f4ee2e53d552de99908085839f38902aa5fe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 类
-ID2D1PathGeometry 包装器。  
+# <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry Class
+A wrapper for ID2D1PathGeometry.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DPathGeometry : public CD2DGeometry;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|构造 CD2DPathGeometry 对象。|  
+|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Constructs a CD2DPathGeometry object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPathGeometry::Attach](#attach)|附加现有的资源的对象的接口|  
-|[CD2DPathGeometry::Create](#create)|创建 CD2DPathGeometry。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DPathGeometry::Destroy](#destroy)|销毁 CD2DPathGeometry 对象。 (重写[CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy)。)|  
-|[CD2DPathGeometry::Detach](#detach)|分离对象中的资源接口|  
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|检索路径几何图形中的图形的数量。|  
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|检索路径几何图形中的段数。|  
-|[CD2DPathGeometry::Open](#open)|检索用于填充路径几何图形中的与图形和线段的几何接收器。|  
-|[CD2DPathGeometry::Stream](#stream)|将路径几何图形中的内容复制到指定 ID2D1GeometrySink。|  
+|[CD2DPathGeometry::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DPathGeometry::Create](#create)|Creates a CD2DPathGeometry. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DPathGeometry::Destroy](#destroy)|Destroys a CD2DPathGeometry object. (Overrides [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|  
+|[CD2DPathGeometry::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Retrieves tthe number of figures in the path geometry.|  
+|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Retrieves the number of segments in the path geometry.|  
+|[CD2DPathGeometry::Open](#open)|Retrieves the geometry sink that is used to populate the path geometry with figures and segments.|  
+|[CD2DPathGeometry::Stream](#stream)|Copies the contents of the path geometry to the specified ID2D1GeometrySink.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|指向 ID2D1PathGeometry 的指针。|  
+|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|A pointer to an ID2D1PathGeometry.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -96,22 +105,22 @@ class CD2DPathGeometry : public CD2DGeometry;
   
  `CD2DPathGeometry`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CD2DPathGeometry::Attach  
- 附加现有的资源的对象的接口  
+##  <a name="attach"></a>  CD2DPathGeometry::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1PathGeometry* pResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 现有资源的接口。 不能为 NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
- 构造 CD2DPathGeometry 对象。  
+##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
+ Constructs a CD2DPathGeometry object.  
   
 ```  
 CD2DPathGeometry(
@@ -119,95 +128,95 @@ CD2DPathGeometry(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
  `bAutoDestroy`  
- 指示所有者 (pParentTarget) 将销毁该对象。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DPathGeometry::Create  
- 创建 CD2DPathGeometry。  
+##  <a name="create"></a>  CD2DPathGeometry::Create  
+ Creates a CD2DPathGeometry.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
- 销毁 CD2DPathGeometry 对象。  
+##  <a name="destroy"></a>  CD2DPathGeometry::Destroy  
+ Destroys a CD2DPathGeometry object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DPathGeometry::Detach  
- 分离对象中的资源接口  
+##  <a name="detach"></a>  CD2DPathGeometry::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1PathGeometry* Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向已分离的资源接口指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
- 检索路径几何图形中的图形的数量。  
+##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount  
+ Retrieves tthe number of figures in the path geometry.  
   
 ```  
 int GetFigureCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回路径几何图形中的图形数。  
+### <a name="return-value"></a>Return Value  
+ Returns the number of figures in the path geometry.  
   
-##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
- 检索路径几何图形中的段数。  
+##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount  
+ Retrieves the number of segments in the path geometry.  
   
 ```  
 int GetSegmentCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回路径几何图形中的段数。  
+### <a name="return-value"></a>Return Value  
+ Returns the number of segments in the path geometry.  
   
-##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
- 指向 ID2D1PathGeometry 的指针。  
+##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry  
+ A pointer to an ID2D1PathGeometry.  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="open"></a>CD2DPathGeometry::Open  
- 检索用于填充路径几何图形中的与图形和线段的几何接收器。  
+##  <a name="open"></a>  CD2DPathGeometry::Open  
+ Retrieves the geometry sink that is used to populate the path geometry with figures and segments.  
   
 ```  
 ID2D1GeometrySink* Open();
 ```  
   
-### <a name="return-value"></a>返回值  
- 用于填充与图形和线段路径几何图形 ID2D1GeometrySink 指向的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ID2D1GeometrySink that is used to populate the path geometry with figures and segments.  
   
-##  <a name="stream"></a>CD2DPathGeometry::Stream  
- 将路径几何图形中的内容复制到指定 ID2D1GeometrySink。  
+##  <a name="stream"></a>  CD2DPathGeometry::Stream  
+ Copies the contents of the path geometry to the specified ID2D1GeometrySink.  
   
 ```  
 BOOL Stream(ID2D1GeometrySink* geometrySink);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `geometrySink`  
- 路径几何图形的内容复制到接收器。 修改此接收器不会更改此路径几何图形中的内容。  
+ The sink to which the path geometry's contents are copied. Modifying this sink does not change the contents of this path geometry.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

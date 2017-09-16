@@ -1,5 +1,5 @@
 ---
-title: "CArchive 类 |Microsoft 文档"
+title: CArchive Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,11 +37,29 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- I/O [MFC], archiving objects
-- CArchive class
-- serialization [C++], CArchive class
-- storage [C++], CArchive class
-- data storage [C++], CArchive class
+- CArchive [MFC], CArchive
+- CArchive [MFC], Abort
+- CArchive [MFC], Close
+- CArchive [MFC], Flush
+- CArchive [MFC], GetFile
+- CArchive [MFC], GetObjectSchema
+- CArchive [MFC], IsBufferEmpty
+- CArchive [MFC], IsLoading
+- CArchive [MFC], IsStoring
+- CArchive [MFC], MapObject
+- CArchive [MFC], Read
+- CArchive [MFC], ReadClass
+- CArchive [MFC], ReadObject
+- CArchive [MFC], ReadString
+- CArchive [MFC], SerializeClass
+- CArchive [MFC], SetLoadParams
+- CArchive [MFC], SetObjectSchema
+- CArchive [MFC], SetStoreParams
+- CArchive [MFC], Write
+- CArchive [MFC], WriteClass
+- CArchive [MFC], WriteObject
+- CArchive [MFC], WriteString
+- CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 caps.latest.revision: 21
 author: mikeblome
@@ -61,111 +79,111 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3269aa447502b9581dd1238fbe972bef3a0ccde4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8794778d9d37c70c6608ad49a2396ad3ec0b69cc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="carchive-class"></a>CArchive 类
-可以将复杂的网络的对象保存在仍然存在这些对象在被删除后永久二进制格式 （通常为磁盘存储）。  
+# <a name="carchive-class"></a>CArchive Class
+Allows you to save a complex network of objects in a permanent binary form (usually disk storage) that persists after those objects are deleted.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CArchive  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArchive::CArchive](#carchive)|创建一个 `CArchive` 对象。|  
+|[CArchive::CArchive](#carchive)|Creates a `CArchive` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArchive::Abort](#abort)|关闭而不引发异常的存档。|  
-|[CArchive::Close](#close)|刷新未写入的数据，并断开`CFile`。|  
-|[CArchive::Flush](#flush)|从存档缓冲区刷新未写入的数据。|  
-|[CArchive::GetFile](#getfile)|获取`CFile`该存档文件的对象指针。|  
-|[CArchive::GetObjectSchema](#getobjectschema)|从调用`Serialize`函数来确定要反序列化对象的版本。|  
-|[CArchive::IsBufferEmpty](#isbufferempty)|确定是否已在 Windows 套接字期间清空缓冲区接收进程。|  
-|[CArchive::IsLoading](#isloading)|确定是否正在加载存档。|  
-|[CArchive::IsStoring](#isstoring)|确定是否存储存档。|  
-|[CArchive::MapObject](#mapobject)|将对象放在代码图，不序列化到文件中，但可供个子对象来引用。|  
-|[Carchive:: Read](#read)|读取原始字节。|  
-|[CArchive::ReadClass](#readclass)|读取使用以前存储的类引用`WriteClass`。|  
-|[CArchive::ReadObject](#readobject)|调用对象的`Serialize`加载的函数。|  
-|[CArchive::ReadString](#readstring)|读取单个文本行。|  
-|[CArchive::SerializeClass](#serializeclass)|读取或写入到的类引用`CArchive`对象，具体取决于的方向`CArchive`。|  
-|[CArchive::SetLoadParams](#setloadparams)|设置负载数组是增长的大小。 加载任何对象之前或之前必须调用`MapObject`或`ReadObject`称为。|  
-|[CArchive::SetObjectSchema](#setobjectschema)|设置存档对象中存储该对象架构。|  
-|[CArchive::SetStoreParams](#setstoreparams)|设置哈希表大小和用于在序列化过程中标识唯一对象的映射的块大小。|  
-|[Carchive:: Write](#write)|写入原始字节。|  
-|[CArchive::WriteClass](#writeclass)|将引用写入`CRuntimeClass`到`CArchive`。|  
-|[CArchive::WriteObject](#writeobject)|调用对象的`Serialize`用于存储的函数。|  
-|[CArchive::WriteString](#writestring)|写入单个文本行。|  
+|[CArchive::Abort](#abort)|Closes an archive without throwing an exception.|  
+|[CArchive::Close](#close)|Flushes unwritten data and disconnects from the `CFile`.|  
+|[CArchive::Flush](#flush)|Flushes unwritten data from the archive buffer.|  
+|[CArchive::GetFile](#getfile)|Gets the `CFile` object pointer for this archive.|  
+|[CArchive::GetObjectSchema](#getobjectschema)|Called from the `Serialize` function to determine the version of the object that is being deserialized.|  
+|[CArchive::IsBufferEmpty](#isbufferempty)|Determines whether the buffer has been emptied during a Windows Sockets receive process.|  
+|[CArchive::IsLoading](#isloading)|Determines whether the archive is loading.|  
+|[CArchive::IsStoring](#isstoring)|Determines whether the archive is storing.|  
+|[CArchive::MapObject](#mapobject)|Places objects in the map that are not serialized to the file, but that are available for subobjects to reference.|  
+|[CArchive::Read](#read)|Reads raw bytes.|  
+|[CArchive::ReadClass](#readclass)|Reads a class reference previously stored with `WriteClass`.|  
+|[CArchive::ReadObject](#readobject)|Calls an object's `Serialize` function for loading.|  
+|[CArchive::ReadString](#readstring)|Reads a single line of text.|  
+|[CArchive::SerializeClass](#serializeclass)|Reads or writes the class reference to the `CArchive` object depending on the direction of the `CArchive`.|  
+|[CArchive::SetLoadParams](#setloadparams)|Sets the size to which the load array grows. Must be called before any object is loaded or before `MapObject` or `ReadObject` is called.|  
+|[CArchive::SetObjectSchema](#setobjectschema)|Sets the object schema stored in the archive object.|  
+|[CArchive::SetStoreParams](#setstoreparams)|Sets the hash table size and the block size of the map used to identify unique objects during the serialization process.|  
+|[CArchive::Write](#write)|Writes raw bytes.|  
+|[CArchive::WriteClass](#writeclass)|Writes a reference to the `CRuntimeClass` to the `CArchive`.|  
+|[CArchive::WriteObject](#writeobject)|Calls an object's `Serialize` function for storing.|  
+|[CArchive::WriteString](#writestring)|Writes a single line of text.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArchive::operator&lt;&lt;](#operator_lt_lt)|存储对象和到存档的基元类型。|  
-|[CArchive::operator&gt;&gt;](#operator_gt_gt)|从存档中加载的对象和基元类型。|  
+|[CArchive::operator &lt;&lt;](#operator_lt_lt)|Stores objects and primitive types to the archive.|  
+|[CArchive::operator &gt;&gt;](#operator_gt_gt)|Loads objects and primitive types from the archive.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
 |[CArchive::m_pDocument](#m_pdocument)||  
   
-## <a name="remarks"></a>备注  
- `CArchive`没有基类。  
+## <a name="remarks"></a>Remarks  
+ `CArchive` does not have a base class.  
   
- 稍后你可以从持久性存储区，将其重建在内存中加载对象。 使数据持久的此过程称为"序列化。"  
+ Later you can load the objects from persistent storage, reconstituting them in memory. This process of making data persistent is called "serialization."  
   
- 你可以将存档对象作为一种类型的二进制流。 输入/输出流，如存档与文件关联，并允许缓冲的写入和读取的数据传入和传出存储。 输入/输出流处理 ASCII 字符的序列，但存档处理高效、 非冗余格式的二进制对象数据。  
+ You can think of an archive object as a kind of binary stream. Like an input/output stream, an archive is associated with a file and permits the buffered writing and reading of data to and from storage. An input/output stream processes sequences of ASCII characters, but an archive processes binary object data in an efficient, nonredundant format.  
   
- 你必须创建[CFile](../../mfc/reference/cfile-class.md)对象，然后你可以创建`CArchive`对象。 此外，你必须确保对存档的负载/存储状态与文件的打开模式兼容。 你仅限于每个文件的一个活动的存档。  
+ You must create a [CFile](../../mfc/reference/cfile-class.md) object before you can create a `CArchive` object. In addition, you must ensure that the archive's load/store status is compatible with the file's open mode. You are limited to one active archive per file.  
   
- 构造时`CArchive`对象，将其附加到类的对象`CFile`（或派生的类），表示打开的文件。 你还指定是否存档将用于加载或存储。 A`CArchive`基元类型不仅对象的对象可以处理[CObject](../../mfc/reference/cobject-class.md)-派生类用于序列化。 可序列化类通常具有`Serialize`成员函数，而且它通常使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏，在类下面所述`CObject`。  
+ When you construct a `CArchive` object, you attach it to an object of class `CFile` (or a derived class) that represents an open file. You also specify whether the archive will be used for loading or storing. A `CArchive` object can process not only primitive types but also objects of [CObject](../../mfc/reference/cobject-class.md)-derived classes designed for serialization. A serializable class usually has a `Serialize` member function, and it usually uses the [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) and [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macros, as described under class `CObject`.  
   
- 重载的提取 ( **>>**) 和插入 ( **<<**) 运算符是支持这两种基元类型的方便存档编程接口和`CObject`-派生类。  
+ The overloaded extraction ( **>>**) and insertion ( **<<**) operators are convenient archive programming interfaces that support both primitive types and `CObject`-derived classes.  
   
- `CArchive`此外支持使用 MFC Windows 套接字类编程[CSocket](../../mfc/reference/csocket-class.md)和[CSocketFile](../../mfc/reference/csocketfile-class.md)。 [IsBufferEmpty](#isbufferempty)成员函数支持该用法。  
+ `CArchive` also supports programming with the MFC Windows Sockets classes [CSocket](../../mfc/reference/csocket-class.md) and [CSocketFile](../../mfc/reference/csocketfile-class.md). The [IsBufferEmpty](#isbufferempty) member function supports that usage.  
   
- 有关详细信息`CArchive`，请参阅文章[序列化](../../mfc/serialization-in-mfc.md)和[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information on `CArchive`, see the articles [Serialization](../../mfc/serialization-in-mfc.md) and [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CArchive`  
   
-## <a name="requirements"></a>要求  
- **标头：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="abort"></a>CArchive::Abort  
- 调用此函数以关闭而不引发异常的存档。  
+##  <a name="abort"></a>  CArchive::Abort  
+ Call this function to close the archive without throwing an exception.  
   
 ```  
 void Abort ();
 ```  
   
-### <a name="remarks"></a>备注  
- **CArchive**将通常会调用析构函数**关闭**，这将刷新不保存任何数据到关联`CFile`对象。 这会导致异常。  
+### <a name="remarks"></a>Remarks  
+ The **CArchive** destructor will normally call **Close**, which will flush any data that has not been saved to the associated `CFile` object. This can cause exceptions.  
   
- 如果捕捉这些异常，它是一个好办法使用**中止**，以便 destructing`CArchive`对象不会导致进一步异常。 当处理异常、`CArchive::Abort`将不引发异常，失败原因与[CArchive::Close](#close)，**中止**忽略失败。  
+ When catching these exceptions, it is a good idea to use **Abort**, so that destructing the `CArchive` object doesn't cause further exceptions. When handling exceptions, `CArchive::Abort` will not throw an exception on failures because, unlike [CArchive::Close](#close), **Abort** ignores failures.  
   
- 如果你使用**新**分配`CArchive`对象在堆上，则你必须在关闭该文件之后删除它。  
+ If you used **new** to allocate the `CArchive` object on the heap, then you must delete it after closing the file.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CArchive::WriteClass](#writeclass)。  
+### <a name="example"></a>Example  
+  See the example for [CArchive::WriteClass](#writeclass).  
   
-##  <a name="carchive"></a>CArchive::CArchive  
- 构造`CArchive`对象，并指定是否它将用于加载或存储对象。  
+##  <a name="carchive"></a>  CArchive::CArchive  
+ Constructs a `CArchive` object and specifies whether it will be used for loading or storing objects.  
   
 ```  
 CArchive(
@@ -175,188 +193,188 @@ CArchive(
     void* lpBuf = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFile`  
- 指向的指针`CFile`ultimate 源或目标的持久性数据的对象。  
+ A pointer to the `CFile` object that is the ultimate source or destination of the persistent data.  
   
  `nMode`  
- 一个标志，指定是否将从加载或存储存档到对象。 `nMode`参数必须具有以下值之一︰  
+ A flag that specifies whether objects will be loaded from or stored to the archive. The `nMode` parameter must have one of the following values:  
   
-- **CArchive::load**从存档加载数据。 仅要求`CFile`读取权限。  
+- **CArchive::load** Loads data from the archive. Requires only `CFile` read permission.  
   
-- **CArchive::store**将数据保存到存档。 需要`CFile`写入权限。  
+- **CArchive::store** Saves data to the archive. Requires `CFile` write permission.  
   
-- **CArchive::bNoFlushOnDelete**防止存档自动调用`Flush`存档析构函数调用时。 如果设置此标志，你有责任显式调用**关闭**调用的析构函数之前。 如果不这样做，将损坏你的数据。  
+- **CArchive::bNoFlushOnDelete** Prevents the archive from automatically calling `Flush` when the archive destructor is called. If you set this flag, you are responsible for explicitly calling **Close** before the destructor is called. If you do not, your data will be corrupted.  
   
  `nBufSize`  
- 一个整数，以字节为单位指定内部文件缓冲区的大小。 请注意默认缓冲区大小为 4,096 个字节。 如果你定期存档大型对象，则将提高性能，如果你使用的是文件缓冲区大小的倍数的更大的缓冲区大小。  
+ An integer that specifies the size of the internal file buffer, in bytes. Note that the default buffer size is 4,096 bytes. If you routinely archive large objects, you will improve performance if you use a larger buffer size that is a multiple of the file buffer size.  
   
  `lpBuf`  
- 指向用户提供的缓冲区大小的可选指针`nBufSize`。 如果不指定此参数，存档分配从本地堆缓冲区，并在对象被销毁时释放它。 存档不会释放的用户提供的缓冲区。  
+ An optional pointer to a user-supplied buffer of size `nBufSize`. If you do not specify this parameter, the archive allocates a buffer from the local heap and frees it when the object is destroyed. The archive does not free a user-supplied buffer.  
   
-### <a name="remarks"></a>备注  
- 创建存档后，无法更改此规范。  
+### <a name="remarks"></a>Remarks  
+ You cannot change this specification after you have created the archive.  
   
- 不能使用`CFile`操作更改的文件的状态，直到关闭存档。 此类操作将损坏的存档的完整性。 可以随时在序列化过程中访问的文件指针的位置通过获取从存档的文件对象[GetFile](#getfile)成员函数，然后使用[CFile::GetPosition](../../mfc/reference/cfile-class.md#getposition)函数。 应调用[CArchive::Flush](#flush)之前获取的文件指针的位置。  
+ You may not use `CFile` operations to alter the state of the file until you have closed the archive. Any such operation will damage the integrity of the archive. You may access the position of the file pointer at any time during serialization by obtaining the archive's file object from the [GetFile](#getfile) member function and then using the [CFile::GetPosition](../../mfc/reference/cfile-class.md#getposition) function. You should call [CArchive::Flush](#flush) before obtaining the position of the file pointer.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 12](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#12](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="close"></a>CArchive::Close  
- 刷新缓冲区中剩余的任何数据、 关闭存档，并断开与该文件的连接存档。  
+##  <a name="close"></a>  CArchive::Close  
+ Flushes any data remaining in the buffer, closes the archive, and disconnects the archive from the file.  
   
 ```  
 void Close();
 ```  
   
-### <a name="remarks"></a>备注  
- 允许使用存档没有进一步的操作。 关闭存档后，可以创建相同文件的另一个存档，或者你可以关闭该文件。  
+### <a name="remarks"></a>Remarks  
+ No further operations on the archive are permitted. After you close an archive, you can create another archive for the same file or you can close the file.  
   
- 成员函数**关闭**可确保所有数据将从存档都传输到该文件，并可存档不可用。 若要完成从文件传输到存储媒体，必须首先使用[CFile::Close](../../mfc/reference/cfile-class.md#close)然后销毁`CFile`对象。  
+ The member function **Close** ensures that all data is transferred from the archive to the file, and it makes the archive unavailable. To complete the transfer from the file to the storage medium, you must first use [CFile::Close](../../mfc/reference/cfile-class.md#close) and then destroy the `CFile` object.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CArchive::WriteString](#writestring)。  
+### <a name="example"></a>Example  
+  See the example for [CArchive::WriteString](#writestring).  
   
-##  <a name="flush"></a>CArchive::Flush  
- 强制写入到文件的存档缓冲区中剩余的所有数据。  
+##  <a name="flush"></a>  CArchive::Flush  
+ Forces any data remaining in the archive buffer to be written to the file.  
   
 ```  
 void Flush();
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数`Flush`可确保所有数据将从存档都传输到该文件。 必须调用[CFile::Close](../../mfc/reference/cfile-class.md#close)无法完成从文件传输到存储介质。  
+### <a name="remarks"></a>Remarks  
+ The member function `Flush` ensures that all data is transferred from the archive to the file. You must call [CFile::Close](../../mfc/reference/cfile-class.md#close) to complete the transfer from the file to the storage medium.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 13](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#13](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="getfile"></a>CArchive::GetFile  
- 获取`CFile`该存档文件的对象指针。  
+##  <a name="getfile"></a>  CArchive::GetFile  
+ Gets the `CFile` object pointer for this archive.  
   
 ```  
 CFile* GetFile() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 常量指针`CFile`中使用的对象。  
+### <a name="return-value"></a>Return Value  
+ A constant pointer to the `CFile` object in use.  
   
-### <a name="remarks"></a>备注  
- 您必须刷新之前使用存档`GetFile`。  
+### <a name="remarks"></a>Remarks  
+ You must flush the archive before using `GetFile`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 14](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#14](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
- 调用此函数从`Serialize`函数来确定当前反序列化对象的版本。  
+##  <a name="getobjectschema"></a>  CArchive::GetObjectSchema  
+ Call this function from the `Serialize` function to determine the version of the object that is currently being deserialized.  
   
 ```  
 UINT GetObjectSchema();
 ```  
   
-### <a name="return-value"></a>返回值  
- 在反序列化，正在读取的对象的版本。  
+### <a name="return-value"></a>Return Value  
+ During deserialization, the version of the object being read.  
   
-### <a name="remarks"></a>备注  
- 调用此函数时才有效`CArchive`正在加载对象 ( [CArchive::IsLoading](#isloading)返回非零)。 它应该是中的第一个调用`Serialize`函数和调用一次。 返回值 ( **UINT**)-1 指示的版本号为未知。  
+### <a name="remarks"></a>Remarks  
+ Calling this function is only valid when the `CArchive` object is being loaded ( [CArchive::IsLoading](#isloading) returns nonzero). It should be the first call in the `Serialize` function and called only once. A return value of ( **UINT**)-1 indicates that the version number is unknown.  
   
- A `CObject`-派生的类可以使用**VERSIONABLE_SCHEMA**组合 (使用按位`OR`) 本身的架构版本 (在`IMPLEMENT_SERIAL`宏) 创建一个"无版本冲突对象，对象"，即对象其`Serialize`成员函数可以读取多个版本。 默认 framework 功能 (而无需**VERSIONABLE_SCHEMA**) 是版本不匹配时引发异常。  
+ A `CObject`-derived class may use **VERSIONABLE_SCHEMA** combined (using bitwise `OR`) with the schema version itself (in the `IMPLEMENT_SERIAL` macro) to create a "versionable object," that is, an object whose `Serialize` member function can read multiple versions. The default framework functionality (without **VERSIONABLE_SCHEMA**) is to throw an exception when the version is mismatched.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
- 调用此成员函数来确定存档对象的内部缓冲区是否为空。  
+##  <a name="isbufferempty"></a>  CArchive::IsBufferEmpty  
+ Call this member function to determine whether the archive object's internal buffer is empty.  
   
 ```  
 BOOL IsBufferEmpty() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果存档的缓冲区为空，则为非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the archive's buffer is empty; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 提供此函数来支持与 MFC Windows 套接字类编程`CSocketFile`。 不需要将其用于与关联存档`CFile`对象。  
+### <a name="remarks"></a>Remarks  
+ This function is supplied to support programming with the MFC Windows Sockets class `CSocketFile`. You do not need to use it for an archive associated with a `CFile` object.  
   
- 使用的原因`IsBufferEmpty`以与关联存档`CSocketFile`对象是存档的缓冲区可能包含多个消息或记录。 接收一条消息后，你应使用`IsBufferEmpty`来控制循环将继续接收数据，直到缓冲区为空。 有关详细信息，请参阅[接收](../../mfc/reference/casyncsocket-class.md#receive)类的成员函数`CAsyncSocket`，其中说明了如何使用`IsBufferEmpty`。  
+ The reason for using `IsBufferEmpty` with an archive associated with a `CSocketFile` object is that the archive's buffer might contain more than one message or record. After receiving one message, you should use `IsBufferEmpty` to control a loop that continues receiving data until the buffer is empty. For more information, see the [Receive](../../mfc/reference/casyncsocket-class.md#receive) member function of class `CAsyncSocket`, which shows how to use `IsBufferEmpty`.  
   
- 有关详细信息，请参阅[Windows 套接字︰ 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
+ For more information, see [Windows Sockets: Using Sockets with Archives](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isloading"></a>CArchive::IsLoading  
- 确定存档是否正在加载数据。  
+##  <a name="isloading"></a>  CArchive::IsLoading  
+ Determines whether the archive is loading data.  
   
 ```  
 BOOL IsLoading() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果存档当前正用于加载; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the archive is currently being used for loading; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用`Serialize`存档类的函数。  
+### <a name="remarks"></a>Remarks  
+ This member function is called by the `Serialize` functions of the archived classes.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 16](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#16](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="isstoring"></a>CArchive::IsStoring  
- 确定存档是否正在存储数据。  
+##  <a name="isstoring"></a>  CArchive::IsStoring  
+ Determines whether the archive is storing data.  
   
 ```  
 BOOL IsStoring() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果存档当前正用于存储; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the archive is currently being used for storing; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此成员函数调用`Serialize`存档类的函数。  
+### <a name="remarks"></a>Remarks  
+ This member function is called by the `Serialize` functions of the archived classes.  
   
- 如果`IsStoring`的存档的状态不为零，则其`IsLoading`状态为 0，反之亦然。  
+ If the `IsStoring` status of an archive is nonzero, then its `IsLoading` status is 0, and vice versa.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 17](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#17](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="mapobject"></a>CArchive::MapObject  
- 调用此成员函数将不会真正序列化到文件中，映射中的对象，但可供个子对象来引用。  
+##  <a name="mapobject"></a>  CArchive::MapObject  
+ Call this member function to place objects in the map that are not really serialized to the file, but that are available for subobjects to reference.  
   
 ```  
 void MapObject(const CObject* pOb);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pOb`  
- 指向要存储的对象的常量指针。  
+ A constant pointer to the object being stored.  
   
-### <a name="remarks"></a>备注  
- 例如，你可能不序列化文档，但将序列化文档的一部分的项。 通过调用`MapObject`，允许这些项或个子对象，若要引用的文档。 此外，序列化的子项可以序列化其`m_pDocument`后向指针。  
+### <a name="remarks"></a>Remarks  
+ For example, you might not serialize a document, but you would serialize the items that are part of the document. By calling `MapObject`, you allow those items, or subobjects, to reference the document. Also, serialized subitems can serialize their `m_pDocument` back pointer.  
   
- 你可以调用`MapObject`时将存储到和从加载`CArchive`对象。 `MapObject`将指定的对象添加到由维护的内部数据结构`CArchive`对象在序列化和反序列化期间，但与不同[ReadObject](#readobject)和[WriteObject](#writeobject)**，**它未调用在对象上序列化。  
+ You can call `MapObject` when you store to and load from the `CArchive` object. `MapObject` adds the specified object to the internal data structures maintained by the `CArchive` object during serialization and deserialization, but unlike [ReadObject](#readobject) and [WriteObject](#writeobject)**,** it does not call serialize on the object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  
   
- [!code-cpp[NVC_MFCSerialization # 19](../../mfc/codesnippet/cpp/carchive-class_8.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#19](../../mfc/codesnippet/cpp/carchive-class_8.cpp)]  
   
- [!code-cpp[NVC_MFCSerialization # 20](../../mfc/codesnippet/cpp/carchive-class_9.h)]  
+ [!code-cpp[NVC_MFCSerialization#20](../../mfc/codesnippet/cpp/carchive-class_9.h)]  
   
- [!code-cpp[NVC_MFCSerialization # 21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="m_pdocument"></a>CArchive::m_pDocument  
- 设置为**NULL**默认情况下，此指向**CDocument**可以设置为任何内容的用户`CArchive`实例需要。  
+##  <a name="m_pdocument"></a>  CArchive::m_pDocument  
+ Set to **NULL** by default, this pointer to a **CDocument** can be set to anything the user of the `CArchive` instance wants.  
   
 ```  
 CDocument* m_pDocument;  
 ```  
   
-### <a name="remarks"></a>备注  
- This 指针的常见用法是传达有关正在序列化的所有对象的序列化过程的其他信息。 这通过初始化与该文档的指针 ( **CDocument**-派生类)，它正在序列，如有必要，在文档内的对象可以访问该文档的方式。 此指针也可由`COleClientItem`在序列化过程的对象。  
+### <a name="remarks"></a>Remarks  
+ A common usage of this pointer is to convey additional information about the serialization process to all objects being serialized. This is achieved by initializing the pointer with the document (a **CDocument**-derived class) that is being serialized, in such a way that objects within the document can access the document if necessary. This pointer is also used by `COleClientItem` objects during serialization.  
   
- 框架集`m_pDocument`到正在序列化，当用户发出一个文件的文档打开或保存命令。 如果序列化原因而不而文件打开或保存的对象链接和嵌入 (OLE) 容器文档，您必须显式设置`m_pDocument`。 例如，在序列化到剪贴板的容器文档时将执行此操作。  
+ The framework sets `m_pDocument` to the document being serialized when a user issues a File Open or Save command. If you serialize an Object Linking and Embedding (OLE) container document for reasons other than File Open or Save, you must explicitly set `m_pDocument`. For example, you would do this when serializing a container document to the Clipboard.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
- 存储指定的对象或基元类型设置为存档。  
+##  <a name="operator_lt_lt"></a>  CArchive::operator &lt;&lt;  
+ Stores the indicated object or primitive type to the archive.  
   
 ```  
 friend CArchive& operator<<(
@@ -405,28 +423,28 @@ CArchive& operator<<(ULONGLONG dwdw);
 CArchive& operator<<(LONGLONG dwdw);
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CArchive`使在单独的行的多个插入操作员的引用。  
+### <a name="return-value"></a>Return Value  
+ A `CArchive` reference that enables multiple insertion operators on a single line.  
   
-### <a name="remarks"></a>备注  
- 上面的最后两个版本是专门用于存储 64 位整数。  
+### <a name="remarks"></a>Remarks  
+ The last two versions above are specifically for storing 64-bit integers.  
   
- 如果你使用`IMPLEMENT_SERIAL`宏在类实现中，则为重载插入运算符`CObject`调用受保护**WriteObject**。 此函数，反过来，将调用`Serialize`类函数。  
+ If you used the `IMPLEMENT_SERIAL` macro in your class implementation, then the insertion operator overloaded for `CObject` calls the protected **WriteObject**. This function, in turn, calls the `Serialize` function of the class.  
   
- [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)插入运算符 (<) supports diagnostic dumping and storing to an archive. supports="" diagnostic="" dumping="" and="" storing="" to="" an=""></) supports diagnostic dumping and storing to an archive.>  
+ The [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) insertion operator (<<) supports diagnostic dumping and storing to an archive.  
   
-### <a name="example"></a>示例  
- 此示例演示如何使用`CArchive`插入运算符< with="" the="">`int`和`long`类型。  
+### <a name="example"></a>Example  
+ This example demonstrates the use of the `CArchive` insertion operator << with the `int` and `long` types.  
   
- [!code-cpp[NVC_MFCSerialization # 31](../../mfc/codesnippet/cpp/carchive-class_12.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#31](../../mfc/codesnippet/cpp/carchive-class_12.cpp)]  
   
-### <a name="example"></a>示例  
- 2 此示例演示如何使用`CArchive`插入运算符< with="" the="">`CStringT`类型。  
+### <a name="example"></a>Example  
+ This example 2 demonstrates the use of the `CArchive` insertion operator << with the `CStringT` type.  
   
- [!code-cpp[NVC_MFCSerialization # 32](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#32](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
- 从存档中加载的指定的对象或基元类型。  
+##  <a name="operator_gt_gt"></a>  CArchive::operator &gt;&gt;  
+ Loads the indicated object or primitive type from the archive.  
   
 ```  
 friend CArchive& operator>>(
@@ -487,53 +505,53 @@ CArchive& operator>>(ULONGLONG& dwdw);
 CArchive& operator>>(LONGLONG& dwdw);
 ```  
   
-### <a name="return-value"></a>返回值  
- A`CArchive`使在单独的行的多个提取操作员的引用。  
+### <a name="return-value"></a>Return Value  
+ A `CArchive` reference that enables multiple extraction operators on a single line.  
   
-### <a name="remarks"></a>备注  
- 上面的最后两个版本是专门用于加载 64 位整数。  
+### <a name="remarks"></a>Remarks  
+ The last two versions above are specifically for loading 64-bit integers.  
   
- 如果你使用`IMPLEMENT_SERIAL`宏在类实现中，则为重载提取运算符`CObject`调用受保护**ReadObject** （用一个非零的运行时类的指针） 的函数。 此函数，反过来，将调用`Serialize`类函数。  
+ If you used the `IMPLEMENT_SERIAL` macro in your class implementation, then the extraction operators overloaded for `CObject` call the protected **ReadObject** function (with a nonzero run-time class pointer). This function, in turn, calls the `Serialize` function of the class.  
   
- [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)提取运算符 (>) 支持从存档加载。  
+ The [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) extraction operator (>>) supports loading from an archive.  
   
-### <a name="example"></a>示例  
- 此示例演示如何使用`CArchive`提取运算符 >> 与`int`类型。  
+### <a name="example"></a>Example  
+ This example demonstrates the use of the `CArchive` extraction operator >> with the `int` type.  
   
- [!code-cpp[NVC_MFCSerialization # 33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]  
   
-### <a name="example"></a>示例  
- 此示例演示如何使用`CArchive`插入和提取运算符\<和 >> 与`CStringT`类型。  
+### <a name="example"></a>Example  
+ This example demonstrates the use of the `CArchive` insertion and extraction operators <\< and >> with the `CStringT` type.  
   
- [!code-cpp[NVC_MFCSerialization # 34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="read"></a>Carchive:: Read  
- 从存档中读取指定的数目的字节。  
+##  <a name="read"></a>  CArchive::Read  
+ Reads a specified number of bytes from the archive.  
   
 ```  
 UINT Read(void* lpBuf, UINT nMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 指向将接收从存档读取的数据的用户提供的缓冲区的指针。  
+ A pointer to a user-supplied buffer that is to receive the data read from the archive.  
   
  `nMax`  
- 无符号的整数，指定的字节数从存档读取。  
+ An unsigned integer specifying the number of bytes to be read from the archive.  
   
-### <a name="return-value"></a>返回值  
- 一个包含实际读取的字节数的无符号的整数。 如果返回值小于请求的数目，已达到文件结尾。 不引发异常的文件尾条件。  
+### <a name="return-value"></a>Return Value  
+ An unsigned integer containing the number of bytes actually read. If the return value is less than the number requested, the end of file has been reached. No exception is thrown on the end-of-file condition.  
   
-### <a name="remarks"></a>备注  
- 存档不解释字节。  
+### <a name="remarks"></a>Remarks  
+ The archive does not interpret the bytes.  
   
- 你可以使用**读取**成员函数中的你`Serialize`用于读取对象中包含的普通结构函数。  
+ You can use the **Read** member function within your `Serialize` function for reading ordinary structures that are contained in your objects.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="readclass"></a>CArchive::ReadClass  
- 调用此成员函数以读取对以前存储与类的引用[WriteClass](#writeclass)。  
+##  <a name="readclass"></a>  CArchive::ReadClass  
+ Call this member function to read a reference to a class previously stored with [WriteClass](#writeclass).  
   
 ```  
 CRuntimeClass* ReadClass(
@@ -542,263 +560,263 @@ CRuntimeClass* ReadClass(
     DWORD* pObTag = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pClassRefRequested`  
- 指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对应于请求的类引用的结构。 可以是**NULL**。  
+ A pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure that corresponds to the class reference requested. Can be **NULL**.  
   
  `pSchema`  
- 指向的架构的以前存储的运行时类的指针。  
+ A pointer to a schema of the run-time class previously stored.  
   
  `pObTag`  
- 对象的唯一标记是指一个数字。 实现内部使用[ReadObject](#readobject)。 公开高级编程仅;`pObTag`通常应为**NULL**。  
+ A number that refers to an object's unique tag. Used internally by the implementation of [ReadObject](#readobject). Exposed for advanced programming only; `pObTag` normally should be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure.  
   
-### <a name="remarks"></a>备注  
- 如果`pClassRefRequested`不**NULL**，`ReadClass`验证的已存档的类信息适用于运行时类。 如果不兼容，`ReadClass`将引发[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If `pClassRefRequested` is not **NULL**, `ReadClass` verifies that the archived class information is compatible with your runtime class. If it is not compatible, `ReadClass` will throw a [CArchiveException](../../mfc/reference/carchiveexception-class.md).  
   
- 运行时类必须使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); 否则为`ReadClass`将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ Your runtime class must use [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) and [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); otherwise, `ReadClass` will throw a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 如果`pSchema`是**NULL**，可通过调用检索存储的类的架构相[CArchive::GetObjectSchema](#getobjectschema); 否则为**\*** `pSchema`将包含以前存储的运行时类的架构。  
+ If `pSchema` is **NULL**, the schema of the stored class can be retrieved by calling [CArchive::GetObjectSchema](#getobjectschema); otherwise, **\***`pSchema` will contain the schema of the run-time class that was previously stored.  
   
- 你可以使用[SerializeClass](#serializeclass)而不是`ReadClass`，可处理读取和写入的类引用。  
+ You can use [SerializeClass](#serializeclass) instead of `ReadClass`, which handles both reading and writing of the class reference.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CArchive::WriteClass](#writeclass)。  
+### <a name="example"></a>Example  
+  See the example for [CArchive::WriteClass](#writeclass).  
   
-##  <a name="readobject"></a>CArchive::ReadObject  
- 从存档读取对象数据并构造相应的类型的对象。  
+##  <a name="readobject"></a>  CArchive::ReadObject  
+ Reads object data from the archive and constructs an object of the appropriate type.  
   
 ```  
 CObject* ReadObject(const CRuntimeClass* pClass);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pClass`  
- 常量指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对应于你预计将读取的对象的结构。  
+ A constant pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure that corresponds to the object you expect to read.  
   
-### <a name="return-value"></a>返回值  
- A [CObject](../../mfc/reference/cobject-class.md)必须安全地转换为正确的指针使用派生类[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)。  
+### <a name="return-value"></a>Return Value  
+ A [CObject](../../mfc/reference/cobject-class.md) pointer that must be safely cast to the correct derived class by using [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof).  
   
-### <a name="remarks"></a>备注  
- 通常调用此函数`CArchive`提取 ( **>>**) 的重载运算符[CObject](../../mfc/reference/cobject-class.md)指针。 **ReadObject**，反过来，调用`Serialize`存档类的函数。  
+### <a name="remarks"></a>Remarks  
+ This function is normally called by the `CArchive` extraction ( **>>**) operator overloaded for a [CObject](../../mfc/reference/cobject-class.md) pointer. **ReadObject**, in turn, calls the `Serialize` function of the archived class.  
   
- 如果提供非零`pClass`参数，它通过获取[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)宏，则该函数验证已存档的对象的运行时类。 这里假定你已使用`IMPLEMENT_SERIAL`类的实现中的宏。  
+ If you supply a nonzero `pClass` parameter, which is obtained by the [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) macro, then the function verifies the run-time class of the archived object. This assumes you have used the `IMPLEMENT_SERIAL` macro in the implementation of the class.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CArchive::WriteObject](#writeobject)。  
+### <a name="example"></a>Example  
+  See the example for [CArchive::WriteObject](#writeobject).  
   
-##  <a name="readstring"></a>CArchive::ReadString  
- 调用此成员函数以文本数据读入的缓冲区与关联的文件从`CArchive`对象。  
+##  <a name="readstring"></a>  CArchive::ReadString  
+ Call this member function to read text data into a buffer from the file associated with the `CArchive` object.  
   
 ```  
 BOOL ReadString(CString& rString); 
 LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)读取从与 CArchive 对象关联的文件后将包含生成的字符串。  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) that will contain the resultant string after it is read from the file associated with the CArchive object.  
   
  `lpsz`  
- 指定指向用户提供将接收的以 null 结尾的文本字符串的缓冲区的指针。  
+ Specifies a pointer to a user-supplied buffer that will receive a null-terminated text string.  
   
  `nMax`  
- 指定的最大读取的字符数。 应为一个小于的大小*lpsz*缓冲区。  
+ Specifies the maximum number of characters to read. Should be one less than the size of the *lpsz* buffer.  
   
-### <a name="return-value"></a>返回值  
- 返回的版本中**BOOL**， **TRUE**如果成功，则**FALSE**否则为。  
+### <a name="return-value"></a>Return Value  
+ In the version that returns **BOOL**, **TRUE** if successful; **FALSE** otherwise.  
   
- 返回的版本中`LPTSTR`，指向包含文本数据中; 的缓冲区的指针**NULL**如果已到达文件尾。  
+ In the version that returns an `LPTSTR`, a pointer to the buffer containing the text data; **NULL** if end-of-file was reached.  
   
-### <a name="remarks"></a>备注  
- 使用成员函数的版本中`nMax`参数，缓冲区将保存最多的限制`nMax`-1 个字符。 读取已停止由回车换行符对。 始终删除尾随的换行符。 在任一情况下将追加 null 字符 (\0)。  
+### <a name="remarks"></a>Remarks  
+ In the version of the member function with the `nMax` parameter, the buffer will hold up to a limit of `nMax` - 1 characters. Reading is stopped by a carriage return-linefeed pair. Trailing newline characters are always removed. A null character ('\0') is appended in either case.  
   
- [Carchive:: Read](#read)有也可用的文本模式下输入，但它不会终止回车换行符对上。  
+ [CArchive::Read](#read) is also available for text-mode input, but it does not terminate on a carriage return-linefeed pair.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CArchive::WriteString](#writestring)。  
+### <a name="example"></a>Example  
+  See the example for [CArchive::WriteString](#writestring).  
   
-##  <a name="serializeclass"></a>CArchive::SerializeClass  
- 当你想要存储和加载的基类的版本信息，请调用此成员函数。  
+##  <a name="serializeclass"></a>  CArchive::SerializeClass  
+ Call this member function when you want to store and load the version information of a base class.  
   
 ```  
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pClassRef`  
- 指向基类的运行时类对象的指针。  
+ A pointer to a run-time class object for the base class.  
   
-### <a name="remarks"></a>备注  
- `SerializeClass`读取或写入到类中，以便引用`CArchive`对象，具体取决于的方向`CArchive`。 使用`SerializeClass`代替了[ReadClass](#readclass)和[WriteClass](#writeclass)作为一种简便方式序列化基类对象;`SerializeClass`需要更少的代码和较少的参数。  
+### <a name="remarks"></a>Remarks  
+ `SerializeClass` reads or writes the reference to a class to the `CArchive` object, depending on the direction of the `CArchive`. Use `SerializeClass` in place of [ReadClass](#readclass) and [WriteClass](#writeclass) as a convenient way to serialize base-class objects; `SerializeClass` requires less code and fewer parameters.  
   
- 如`ReadClass`，`SerializeClass`验证的已存档的类信息适用于运行时类。 如果不兼容，`SerializeClass`将引发[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
+ Like `ReadClass`, `SerializeClass` verifies that the archived class information is compatible with your runtime class. If it is not compatible, `SerializeClass` will throw a [CArchiveException](../../mfc/reference/carchiveexception-class.md).  
   
- 运行时类必须使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); 否则为`SerializeClass`将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ Your runtime class must use [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) and [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); otherwise, `SerializeClass` will throw a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 使用[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)宏要检索其值`pRuntimeClass`参数。 基类必须已使用[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)宏。  
+ Use the [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) macro to retrieve the value for the `pRuntimeClass` parameter. The base class must have used the [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="setloadparams"></a>CArchive::SetLoadParams  
- 调用`SetLoadParams`时要读取的大量`CObject`-派生对象从存档。  
+##  <a name="setloadparams"></a>  CArchive::SetLoadParams  
+ Call `SetLoadParams` when you are going to read a large number of `CObject`-derived objects from an archive.  
   
 ```  
 void SetLoadParams(UINT nGrowBy = 1024);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nGrowBy`  
- 要分配如果大小增加是必需的元素插槽中最小的数。  
+ The minimum number of element slots to allocate if a size increase is necessary.  
   
-### <a name="remarks"></a>备注  
- `CArchive`使用负载数组解析对存储在存档中的对象的引用。 `SetLoadParams`使用此选项可以设置负载数组是增长的大小。  
+### <a name="remarks"></a>Remarks  
+ `CArchive` uses a load array to resolve references to objects stored in the archive. `SetLoadParams` allows you to set the size to which the load array grows.  
   
- 您不能调用`SetLoadParams`加载任何对象之后，或在[MapObject](#mapobject)或[ReadObject](#readobject)称为。  
+ You must not call `SetLoadParams` after any object is loaded, or after [MapObject](#mapobject) or [ReadObject](#readobject) is called.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
- 调用此成员函数可设置为存档对象中存储的对象架构`nSchema`。  
+##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema  
+ Call this member function to set the object schema stored in the archive object to `nSchema`.  
   
 ```  
 void SetObjectSchema(UINT nSchema);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nSchema`  
- 指定对象的架构。  
+ Specifies the object's schema.  
   
-### <a name="remarks"></a>备注  
- 下次调用[GetObjectSchema](#getobjectschema)将返回中存储的值`nSchema`。  
+### <a name="remarks"></a>Remarks  
+ The next call to [GetObjectSchema](#getobjectschema) will return the value stored in `nSchema`.  
   
- 使用`SetObjectSchema`高级版本控制; 例如，如果想要强制在要读取的特定版本`Serialize`派生类的函数。  
+ Use `SetObjectSchema` for advanced versioning; for example, when you want to force a particular version to be read in a `Serialize` function of a derived class.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 27](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#27](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
- 使用`SetStoreParams`存储的数量大时`CObject`-派生的存档中的对象。  
+##  <a name="setstoreparams"></a>  CArchive::SetStoreParams  
+ Use `SetStoreParams` when storing a large number of `CObject`-derived objects in an archive.  
   
 ```  
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nHashSize*  
- 将映射的接口指针的哈希表的大小。 应为质数。  
+ The size of the hash table for interface pointer maps. Should be a prime number.  
   
  `nBlockSize`  
- 指定扩展参数的内存分配粒度。 应以实现最佳性能的 2 的幂。  
+ Specifies the memory-allocation granularity for extending the parameters. Should be a power of 2 for the best performance.  
   
-### <a name="remarks"></a>备注  
- `SetStoreParams`可以设置的哈希表大小和用于在序列化过程中标识唯一对象的映射的块大小。  
+### <a name="remarks"></a>Remarks  
+ `SetStoreParams` allows you to set the hash table size and the block size of the map used to identify unique objects during the serialization process.  
   
- 您不能调用`SetStoreParams`存储的任何对象之后，或在[MapObject](#mapobject)或[WriteObject](#writeobject)调用。  
+ You must not call `SetStoreParams` after any objects are stored, or after [MapObject](#mapobject) or [WriteObject](#writeobject) is called.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="write"></a>Carchive:: Write  
- 将指定的数目的字节写入存档。  
+##  <a name="write"></a>  CArchive::Write  
+ Writes a specified number of bytes to the archive.  
   
 ```  
 void Write(const void* lpBuf, INT nMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpBuf`  
- 指向包含要写入到存档的数据的用户提供的缓冲区的指针。  
+ A pointer to a user-supplied buffer that contains the data to be written to the archive.  
   
  `nMax`  
- 一个整数，指定要写入到存档的字节数。  
+ An integer that specifies the number of bytes to be written to the archive.  
   
-### <a name="remarks"></a>备注  
- 存档不会格式化字节。  
+### <a name="remarks"></a>Remarks  
+ The archive does not format the bytes.  
   
- 你可以使用**编写**成员函数中的你`Serialize`函数可以编写普通结构包含在你的对象。  
+ You can use the **Write** member function within your `Serialize` function to write ordinary structures that are contained in your objects.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="writeclass"></a>CArchive::WriteClass  
- 使用`WriteClass`存储的版本和类信息的基类在派生类的序列化过程。  
+##  <a name="writeclass"></a>  CArchive::WriteClass  
+ Use `WriteClass` to store the version and class information of a base class during serialization of the derived class.  
   
 ```  
 void WriteClass(const CRuntimeClass* pClassRef);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pClassRef`  
- 指向的指针[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对应于请求的类引用的结构。  
+ A pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) structure that corresponds to the class reference requested.  
   
-### <a name="remarks"></a>备注  
- `WriteClass`将引用写入[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)到基类`CArchive`。 使用[CArchive::ReadClass](#readclass)来检索引用。  
+### <a name="remarks"></a>Remarks  
+ `WriteClass` writes a reference to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) for the base class to the `CArchive`. Use [CArchive::ReadClass](#readclass) to retrieve the reference.  
   
- `WriteClass`验证已存档的类信息适用于运行时类。 如果不兼容，`WriteClass`将引发[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
+ `WriteClass` verifies that the archived class information is compatible with your runtime class. If it is not compatible, `WriteClass` will throw a [CArchiveException](../../mfc/reference/carchiveexception-class.md).  
   
- 运行时类必须使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); 否则为`WriteClass`将引发[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ Your runtime class must use [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) and [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); otherwise, `WriteClass` will throw a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 你可以使用[SerializeClass](#serializeclass)而不是`WriteClass`，可处理读取和写入的类引用。  
+ You can use [SerializeClass](#serializeclass) instead of `WriteClass`, which handles both reading and writing of the class reference.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 28](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#28](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="writeobject"></a>CArchive::WriteObject  
- 将存储指定`CObject`至存档。  
+##  <a name="writeobject"></a>  CArchive::WriteObject  
+ Stores the specified `CObject` to the archive.  
   
 ```  
 void WriteObject(const CObject* pOb);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pOb`  
- 指向要存储的对象的常量指针。  
+ A constant pointer to the object being stored.  
   
-### <a name="remarks"></a>备注  
- 通常调用此函数`CArchive`插入 ( **<<**) 的重载运算符`CObject`。 **WriteObject**，反过来，调用`Serialize`存档类的函数。  
+### <a name="remarks"></a>Remarks  
+ This function is normally called by the `CArchive` insertion ( **<<**) operator overloaded for `CObject`. **WriteObject**, in turn, calls the `Serialize` function of the archived class.  
   
- 必须使用`IMPLEMENT_SERIAL`宏，以启用存档。 **WriteObject** ASCII 类名写入存档。 更高版本的加载过程中验证此类名称。 特殊的编码方案可防止不必要的类的多个对象的类名称重复。 此方案还可以防止冗余存储的目标的多个指针的对象。  
+ You must use the `IMPLEMENT_SERIAL` macro to enable archiving. **WriteObject** writes the ASCII class name to the archive. This class name is validated later during the load process. A special encoding scheme prevents unnecessary duplication of the class name for multiple objects of the class. This scheme also prevents redundant storage of objects that are targets of more than one pointer.  
   
- 编码 （包括 ASCII 类名称存在） 的方法的确切对象是实现详细信息，并可以更改在将来版本的库。  
+ The exact object encoding method (including the presence of the ASCII class name) is an implementation detail and could change in future versions of the library.  
   
 > [!NOTE]
->  完成创建、 删除和更新你的所有对象，然后再开始将它们存档。 如果混合使用对象修改存档将损坏您的存档。  
+>  Finish creating, deleting, and updating all your objects before you begin to archive them. Your archive will be corrupted if you mix archiving with object modification.  
   
-### <a name="example"></a>示例  
- 有关的类定义`CAge`，请参阅示例[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)。  
+### <a name="example"></a>Example  
+ For a definition of the class `CAge`, see the example for [CObList::CObList](../../mfc/reference/coblist-class.md#coblist).  
   
- [!code-cpp[NVC_MFCSerialization # 29](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#29](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="writestring"></a>CArchive::WriteString  
- 使用此成员函数以将数据从缓冲区写入到与关联的文件`CArchive`对象。  
+##  <a name="writestring"></a>  CArchive::WriteString  
+ Use this member function to write data from a buffer to the file associated with the `CArchive` object.  
   
 ```  
 void WriteString(LPCTSTR lpsz);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpsz`  
- 指定指向包含一个以 null 结尾的文本字符串的缓冲区的指针。  
+ Specifies a pointer to a buffer containing a null-terminated text string.  
   
-### <a name="remarks"></a>备注  
- 终止 null 字符 (\0) 不会写入该文件;也不会换行符自动写入。  
+### <a name="remarks"></a>Remarks  
+ The terminating null character ('\0') is not written to the file; nor is a newline automatically written.  
   
- `WriteString`响应多个条件，包括磁盘已满条件，则会引发异常。  
+ `WriteString` throws an exception in response to several conditions, including the disk-full condition.  
   
- **编写**也是可用，但它可以而不是终止 null 字符，来将文件写入请求的字节数。  
+ **Write** is also available, but rather than terminating on a null character, it writes the requested number of bytes to the file.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCSerialization # 30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CFile 类](../../mfc/reference/cfile-class.md)   
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [CSocket 类](../../mfc/reference/csocket-class.md)   
- [CSocketFile 类](../../mfc/reference/csocketfile-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFile Class](../../mfc/reference/cfile-class.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [CSocket Class](../../mfc/reference/csocket-class.md)   
+ [CSocketFile Class](../../mfc/reference/csocketfile-class.md)
 

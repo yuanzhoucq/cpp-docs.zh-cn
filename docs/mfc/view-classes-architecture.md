@@ -1,79 +1,98 @@
 ---
-title: "视图类（体系结构） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控件视图"
-  - "窗体和记录视图"
-  - "视图类"
-  - "视图类, 体系结构"
+title: View Classes (Architecture) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.view
+dev_langs:
+- C++
+helpviewer_keywords:
+- form and record views [MFC]
+- view classes [MFC]
+- control views [MFC]
+- view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 视图类（体系结构）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7534d6cccebca8186a3e7d8b11f425fb4375d136
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`CView` 及其派生类是指框架窗口的工作区内的子窗口。  视图显示数据并接受文档的输入。  
+---
+# <a name="view-classes-architecture"></a>View Classes (Architecture)
+`CView` and its derived classes are child windows that represent the client area of a frame window. Views show data and accept input for a document.  
   
- 使用文档模板对象，类视图与文档框架窗口类和类。  
+ A view class is associated with a document class and a frame window class using a document-template object.  
   
  [CView](../mfc/reference/cview-class.md)  
- 文档数据的特定视图的基类。  视图显示数据并接受编辑或选择数据的用户输入。  从 `CView`派生的类。  
+ The base class for application-specific views of a document's data. Views display data and accept user input to edit or select the data. Derive your view class(es) from `CView`.  
   
  [CScrollView](../mfc/reference/cscrollview-class.md)  
- 视图的基类提供滚动功能。  从视图的自动滚动的 `CScrollView` 派生类。  
+ The base class for views with scrolling capabilities. Derive your view class from `CScrollView` for automatic scrolling.  
   
-## 窗体和记录视图  
- 窗体视图还滚动视图。  它们基于对话框模板。  
+## <a name="form-and-record-views"></a>Form and Record Views  
+ Form views are also scrolling views. They are based on a dialog box template.  
   
- 记录视图窗体视图从派生。  除了对话框模板之外，还有与数据库的连接。  
+ Record views are derived from form views. In addition to the dialog box template, they also have a connection to a database.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- 布局是在对话框模板定义的滚动视图。  从 `CFormView` 派生的类来实现基于对话框模板的用户界面。  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- 提供直接连接的一个窗体向视图数据访问对象 \(DAO\) \(DAO\) 记录集对象。  同所有窗体视图中，`CDaoRecordView` 基于对话框模板。  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CHtmlView](../mfc/reference/chtmlview-class.md)  
- 若要支持浏览在 Web 应用程序中的控件。  MFC 控件支持中的动态 HTML。  
+ Supports a control for Web browsing within an application. The control supports dynamic HTML in MFC.  
   
  [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)  
- 对于 Forms 视图提供 MFC OLE DB 支持。  
+ Provides MFC OLE DB support for form views.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- 提供直接连接的一个窗体向视图开放式数据库连接 \(ODBC\) 记录集对象。  同所有窗体视图中，`CRecordView` 基于对话框模板。  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
-## 控件视图  
- 控件视图中显示控件与它们的视图。  
+## <a name="control-views"></a>Control Views  
+ Control views display a control as their view.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- 所有基的类演示与 Windows 控件。  根据视图控件的下面。  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- 包含一个标准 Windows 编辑控件的视图 \(参见 [CEdit](../mfc/reference/cedit-class.md)\)。  编辑控件编辑，搜索和替换，滚动功能的文本支持。  
+ A view that contains a Windows standard edit control (see [CEdit](../mfc/reference/cedit-class.md)). Edit controls support text editing, searching, replacing, and scrolling capabilities.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Rich Edit 控件视图包含一个窗口 \(请参见\)。[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) 除了编辑控件的功能之外，Rich Edit 控件支持字体、颜色、段落格式和嵌入的 OLE 对象。  
+ A view that contains a Windows rich edit control (see [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). In addition to the capabilities of an edit control, rich edit controls support fonts, colors, paragraph formatting, and embedded OLE objects.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Windows 包含一个列表控件 \(视图参见 [CListCtrl](../mfc/reference/clistctrl-class.md)\)。  列表控件显示图标和字符串与类似文件资源管理器右窗格。  
+ A view that contains a Windows list control (see [CListCtrl](../mfc/reference/clistctrl-class.md)). A list control displays icons and strings in a manner similar to the right pane of File Explorer.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- 窗口包含一个树控件 \(视图参见 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)\)。  树控件以层次结构和位置的字符串显示图标文件类似于资源管理器左窗格。  
+ A view that contains a Windows tree control (see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). A tree control displays icons and strings arranged in a hierarchy in a manner similar to the left pane of File Explorer.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

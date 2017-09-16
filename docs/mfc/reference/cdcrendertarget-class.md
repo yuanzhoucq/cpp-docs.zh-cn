@@ -1,5 +1,5 @@
 ---
-title: "CDCRenderTarget 类 |Microsoft 文档"
+title: CDCRenderTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDCRenderTarget class
+- CDCRenderTarget [MFC], CDCRenderTarget
+- CDCRenderTarget [MFC], Attach
+- CDCRenderTarget [MFC], BindDC
+- CDCRenderTarget [MFC], Create
+- CDCRenderTarget [MFC], Detach
+- CDCRenderTarget [MFC], GetDCRenderTarget
+- CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
 caps.latest.revision: 16
 author: mikeblome
@@ -41,75 +47,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2bbd62b06f4287904fce49f8a6ce9900476b07c0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c3cb0ea9b9b745004c337e6edd508c3a4bcbe786
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdcrendertarget-class"></a>CDCRenderTarget 类
-ID2D1DCRenderTarget 包装器。  
+# <a name="cdcrendertarget-class"></a>CDCRenderTarget Class
+A wrapper for ID2D1DCRenderTarget.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDCRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|构造 CDCRenderTarget 对象。|  
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Constructs a CDCRenderTarget object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::Attach](#attach)|附加现有的呈现器目标接口的对象|  
-|[CDCRenderTarget::BindDC](#binddc)|将该呈现器目标绑定到它发出的绘图命令的设备上下文|  
-|[CDCRenderTarget::Create](#create)|创建 CDCRenderTarget。|  
-|[CDCRenderTarget::Detach](#detach)|分离对象中的呈现器目标接口|  
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|返回 ID2D1DCRenderTarget 接口|  
+|[CDCRenderTarget::Attach](#attach)|Attaches existing render target interface to the object|  
+|[CDCRenderTarget::BindDC](#binddc)|Binds the render target to the device context to which it issues drawing commands|  
+|[CDCRenderTarget::Create](#create)|Creates a CDCRenderTarget.|  
+|[CDCRenderTarget::Detach](#detach)|Detaches render target interface from the object|  
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Returns ID2D1DCRenderTarget interface|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|返回 ID2D1DCRenderTarget 接口|  
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Returns ID2D1DCRenderTarget interface|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|指向 ID2D1DCRenderTarget 对象的指针。|  
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|A pointer to an ID2D1DCRenderTarget object.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CDCRenderTarget::Attach  
- 附加现有的呈现器目标接口的对象  
+##  <a name="attach"></a>  CDCRenderTarget::Attach  
+ Attaches existing render target interface to the object  
   
 ```  
 void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- 现有的呈现器目标接口。 不能为 NULL  
+ Existing render target interface. Cannot be NULL  
   
-##  <a name="binddc"></a>CDCRenderTarget::BindDC  
- 将该呈现器目标绑定到它发出的绘图命令的设备上下文  
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
+ Binds the render target to the device context to which it issues drawing commands  
   
 ```  
 BOOL BindDC(
@@ -117,74 +123,74 @@ BOOL BindDC(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dc`  
- 呈现器目标发出绘图命令在设备上下文  
+ The device context to which the render target issues drawing commands  
   
  `rect`  
- 设备上下文 (HDC) 呈现器目标绑定到的句柄的维度  
+ The dimensions of the handle to a device context (HDC) to which the render target is bound  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
- 构造 CDCRenderTarget 对象。  
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
+ Constructs a CDCRenderTarget object.  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="create"></a>CDCRenderTarget::Create  
- 创建 CDCRenderTarget。  
+##  <a name="create"></a>  CDCRenderTarget::Create  
+ Creates a CDCRenderTarget.  
   
 ```  
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `props`  
- 呈现模式、 像素格式、 远程处理选项、 DPI 信息和硬件呈现所需的最低 DirectX 支持。  
+ The rendering mode, pixel format, remoting options, DPI information, and the minimum DirectX support required for hardware rendering.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="detach"></a>CDCRenderTarget::Detach  
- 分离对象中的呈现器目标接口  
+##  <a name="detach"></a>  CDCRenderTarget::Detach  
+ Detaches render target interface from the object  
   
 ```  
 ID2D1DCRenderTarget* Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向分离呈现器目标接口。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached render target interface.  
   
-##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
- 返回 ID2D1DCRenderTarget 接口  
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
+ Returns ID2D1DCRenderTarget interface  
   
 ```  
 ID2D1DCRenderTarget* GetDCRenderTarget();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1DCRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1DCRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
- 指向 ID2D1DCRenderTarget 对象的指针。  
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
+ A pointer to an ID2D1DCRenderTarget object.  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
- 返回 ID2D1DCRenderTarget 接口  
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget*  
+ Returns ID2D1DCRenderTarget interface  
   
 ```  
 operator ID2D1DCRenderTarget*();
 ```   
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1DCRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1DCRenderTarget interface or NULL if object is not initialized yet.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

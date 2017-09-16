@@ -1,130 +1,152 @@
 ---
-title: "TN030：自定义打印和打印预览 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.print"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自定义打印和打印预览"
-  - "打印预览, 自定义"
-  - "打印 [MFC], 视图"
-  - "打印视图"
-  - "TN030"
+title: 'TN030: Customizing Printing and Print Preview | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.print
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN030
+- customizing printing and print preview
+- printing [MFC], views
+- printing views [MFC]
+- print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN030：自定义打印和打印预览
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 614925379b4a3b7399d4603082e01ba959c163fe
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Customizing Printing and Print Preview
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释说明自定义打印和打印预览过程介绍在 `CView` 的回调例程和回调例程的目的和 **CPreviewView**的成员函数。  
+ This note describes the process of customizing printing and print preview and describes the purposes of the callback routines used in `CView` and the callback routines and member functions of **CPreviewView**.  
   
-## 问题  
- MFC 为大多数打印和打印预览需要提供了完整的解决方案。  在许多情况下，需要一个额外代码可能的视图和打印预览。  但是，在需要大量成就在部分开发人员的情况下打印优化，并且，某些应用程序确实需要将特定用户界面元素到打印预览模式。  
+## <a name="the-problem"></a>The Problem  
+ MFC provides a complete solution for most printing and print preview needs. In most cases, little additional code is required to have a view able to print and preview. However, there are ways to optimize printing that require significant effort on the part of the developer, and some applications need to add specific user interface elements to the print preview mode.  
   
-## 高效的打印  
- 当通过标准方法的 MFC 应用程序打印，窗口处理任何图形设备接口 \(GDI\) 输出对内存图元文件。  调用 `EndPage` 时，一次播放 Windows 元文件需要打印机打印一页上的每个物理带的。  在呈现期间，GDI 频繁查询中止过程确定是否应继续。  通常中止过程允许消息处理，以便使用打印对话框，用户能中止打印作业。  
+## <a name="efficient-printing"></a>Efficient Printing  
+ When an MFC application prints using the standard methods, Windows directs all Graphical Device Interface (GDI) output calls to an in-memory metafile. When `EndPage` is called, Windows plays the metafile once for each physical band that the printer requires to print one page. During this rendering, GDI frequently queries the Abort Procedure to determine if it should continue. Typically the abort procedure allows messages to be processed so that the user may abort the print job using a printing dialog.  
   
- 遗憾的是，这会降低晒印方法。  如果应用程序快速打印的绑定使用的标准方法，可以比实现，则必须实现手动分级。  
+ Unfortunately, this can slow the printing process. If the printing in your application must be faster than can be achieved using the standard technique, you must implement manual banding.  
   
-## 打印分级  
- 手动耦合，必须关于实现打印循环调用每页这样 `OnPrint` 的多次 \(一次每个带区\)。  打印循环在 viewprnt.cpp **OnFilePrint** 函数的实现。  在 `CView`派生类，则重载此函数，以便处理的打印"命令消息映射项调用打印功能。  复制并 **OnFilePrint** 例程更改打印循环实现分级。  您可能还需要将分级矩形到打印函数，以便优化基于打印的页面节的绘图。  
+## <a name="print-banding"></a>Print Banding  
+ In order to manually band, you must re implement the print loop such that `OnPrint` is called multiple times per page (once per band). The print loop is implemented in the **OnFilePrint** function in viewprnt.cpp. In your `CView`-derived class, you overload this function so that the message map entry for handling the print command calls your print function. Copy the **OnFilePrint** routine and change the print loop to implement banding. You will probably also want to pass the banding rectangle to your printing functions so that you can optimize drawing based on the section of the page being printed.  
   
- 接下来，必须频繁调用 `QueryAbort`，则绘制带时。  否则，中止过程调用不会接收，用户无法取消打印作业。  
+ Second, you must frequently call `QueryAbort` while drawing the band. Otherwise, the Abort Procedure will not get called and the user will be unable to cancel the print job.  
   
-## 打印预览：有用户界面的电子音乐纸张  
- 打印预览，实际上，显示的尝试将转换为打印机的模拟。  默认情况下，主窗口的工作区用于完整地显示两页在窗口中。  用户可以放大的页面区域更详细地查看它。  如果发生其他支持，用户可能更不允许编辑在预览模式的文档。  
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Print Preview: Electronic Paper with User Interface  
+ Print Preview, in essence, tries to turn the display into an emulation of a printer. By default, the client area of the main window is used to display one or two pages fully within the window. The user is able to zoom in on an area of the page to see it in more detail. With additional support, the user may even be allowed to edit the document in preview mode.  
   
-## 自定义打印预览  
- 此注释只修改处理的打印预览一个特性：添加 UI 为预览模式。  其他修改是可能的，但此更改，是超出此讨论的大小。  
+## <a name="customizing-print-preview"></a>Customizing Print Preview  
+ This note only deals with one aspect of modifying print preview: Adding UI to preview mode. Other modifications are possible, but such changes are out of the scope of this discussion.  
   
-## 添加 UI 为预览模式  
+## <a name="to-add-ui-to-the-preview-mode"></a>To add UI to the preview mode  
   
-1.  从 **CPreviewView**派生一视图类。  
+1.  Derive a view class from **CPreviewView**.  
   
-2.  添加您所需 UI 的特性的命令处理程序。  
+2.  Add command handlers for the UI aspects you desire.  
   
-3.  如果添加可视方面为显示，请重写 `OnDraw` 并在调用 **CPreviewView::OnDraw.**之后执行绘制  
+3.  If you are adding visual aspects to the display, override `OnDraw` and perform your drawing after calling **CPreviewView::OnDraw.**  
   
-## OnFilePrintPreview  
- 这是打印预览的命令处理程序。  它的默认实现为：  
+## <a name="onfileprintpreview"></a>OnFilePrintPreview  
+ This is the command handler for print preview. Its default implementation is:  
   
 ```  
 void CView::OnFilePrintPreview()  
-{  
-    // In derived classes, implement special window handling here  
-    // Be sure to Unhook Frame Window close if hooked.  
-  
-    // must not create this on the frame. Must outlive this function  
+{ *// In derived classes,
+    implement special window handling here *// Be sure to Unhook Frame Window close if hooked.  
+ *// must not create this on the frame. Must outlive this function  
     CPrintPreviewState* pState = new CPrintPreviewState;  
-  
-    if (!DoPrintPreview(AFX_IDD_PREVIEW_TOOLBAR, this,  
-                RUNTIME_CLASS(CPreviewView), pState))  
-    {  
-        // In derived classes, reverse special window handling  
-        // here for Preview failure case  
-  
-        TRACE0("Error: DoPrintPreview failed");  
-        AfxMessageBox(AFX_IDP_COMMAND_FAILURE);  
-        delete pState;      // preview failed to initialize,   
-                    // delete State now  
-    }  
+ 
+    if (!DoPrintPreview(AFX_IDD_PREVIEW_TOOLBAR,
+    this,  
+    RUNTIME_CLASS(CPreviewView),
+    pState))  
+ { *// In derived classes,
+    reverse special window handling *// here for Preview failure case  
+ 
+    TRACE0("Error: DoPrintPreview failed");
+
+    AfxMessageBox(AFX_IDP_COMMAND_FAILURE);
+
+ delete pState;      // preview failed to initialize, *// delete State now  
+ }  
 }  
 ```  
   
- **DoPrintPreview** 会将隐藏应用程序主窗格。  控件条，如状态栏，可以通过指定它们在 pState\-\>**dwStates** 成员 \(这是位掩码，各个控件条位由 **AFX\_CONTROLBAR\_MASK**\(AFX\_IDW\_MYBAR\) 定义。  窗口 pState\-\>**nIDMainPane** 是自动隐藏和 reshown 的窗口。  **DoPrintPreview** 将创建一个预览标准 UI 的按钮栏   如果特定的窗口处理需要的，如隐藏或显示其他窗口，应执行，在调用 **DoPrintPreview** 之前。  
+ **DoPrintPreview** will hide the main pane of the application. Control Bars, such as the status bar, can be retained by specifying them in the pState->**dwStates** member (This is a bit mask and the bits for individual control bars are defined by **AFX_CONTROLBAR_MASK**( AFX_IDW_MYBAR)). The window pState->**nIDMainPane** is the window that will be automatically hidden and reshown. **DoPrintPreview** will then create a button bar for the standard Preview UI. If special window handling is needed, such as to hide or show other windows, that should be done before **DoPrintPreview** is called.  
   
- 默认情况下，当完成打印预览控件条时，它返回到其原始状态并且主窗格为可见。  如果特定的处理是必需的，它在 **EndPrintPreview.**重写应完成如果 **DoPrintPreview** 失败，也提供特殊处理。  
+ By default, when print preview finishes, it returns the control bars to their original states and the main pane to visible. If special handling is needed, it should be done in an override of **EndPrintPreview.** If **DoPrintPreview** fails, also provide special handling.  
   
- DoPrintPreview 调用的：  
+ DoPrintPreview is called with:  
   
--   对话框模板的资源 ID 预览工具栏的。  
+-   The Resource ID of the dialog template for the preview toolbar.  
   
--   对执行打印预览中打印视图的指针。  
+-   A pointer to the view to perform the printing for the print preview.  
   
--   预览视图类的运行时类。  这 将在 DoPrintPreview中动态创建。  
+-   The run-time class of the Preview View class. This will be dynamically created in DoPrintPreview.  
   
--   CPrintPreviewState 指针。  请注意框架上*不*可以创建 CPrintPreviewState 结构 \(或派生的结构，则应用程序需要更多的状态保留\)。  DoPrintPreview 非模式，并且此结构必须生存直到 EndPrintPreview 调用。  
+-   The CPrintPreviewState pointer. Note that the CPrintPreviewState structure (or the derived structure if the application needs more state preserved) must *not* be created on the frame. DoPrintPreview is modeless and this structure must survive until EndPrintPreview is called.  
   
     > [!NOTE]
-    >  如果单独视图或视图类支持打印的需要，应传递对该对象的指针作为第二个参数。  
+    >  If a separate view or view class is needed for printing support, a pointer to that object should be passed as the second parameter.  
   
-## EndPrintPreview  
- 这称为以打印预览模式。  移动到上次在打印预览中显示的文档页通常是需要的。  **EndPrintPreview** 是应用程序的可能性执行此操作。  pInfo\-\>`m_nCurPage` 成员是上显示的页 \(最左边，如果两页中显示出来\)，并且指针是页面上用户感兴趣的提示。  因为应用程序的视图结构未知到框架，则必须提供代码以移动到选择的点。  
+## <a name="endprintpreview"></a>EndPrintPreview  
+ This is called to terminate the print preview mode. It is often desirable to move to the page in the document that was last displayed in print preview. **EndPrintPreview** is the application's chance to do that. The pInfo->`m_nCurPage` member is the page that was last displayed (leftmost if two pages were displayed), and the pointer is a hint as to where on the page the user was interested. Since the structure of the application's view is unknown to the framework, then you must provide the code to move to the chosen point.  
   
- 应在调用 **CView::EndPrintPreview**前运行大多数操作。  此调用 Undo **DoPrintPreview** 的效果和删除 pView、pDC 和 pInfo。  
+ You should perform most actions before calling **CView::EndPrintPreview**. This call reverses the effects of **DoPrintPreview** and deletes pView, pDC, and pInfo.  
   
 ```  
 // Any further cleanup should be done here.  
-CView::EndPrintPreview(pDC, pInfo, point, pView);  
+CView::EndPrintPreview(pDC,
+    pInfo,
+    point,
+    pView);
 ```  
   
-## CWinApp::OnFilePrintSetup  
- 必须为打印设置菜单项映射此操作。  在大多数情况下，不必重写实现的。  
+## <a name="cwinapponfileprintsetup"></a>CWinApp::OnFilePrintSetup  
+ This must be mapped for the Print Setup menu item. In most cases, it is not necessary to override the implementation.  
   
-## 页命名法  
- 另一议题是页码和排序。  对于简单的字处理器类型应用程序，这是一个直接的问题。  大多数系统将认为方法，打印预览每个打印的页对应的文档中的一页。  
+## <a name="page-nomenclature"></a>Page Nomenclature  
+ Another issue is that of page numbering and order. For simple word processor type applications, this is a straightforward issue. Most print preview systems assume that each printed page corresponds to one page in the document.  
   
- 在尝试提供通用解决方案，需要考虑几个问题。  假设一种计算机辅助设计系统。  用户具有包含多 E 范围表的绘图。  E 在大小 \(或小，缩放\) 绘图仪上，页码在简单的情况。  但在激光打印机上，打印每页16 A\-大小的单子，打印预览如何考虑一个“内容页”?  
+ In trying to provide a generalized solution, there are several things to consider. Imagine a CAD system. The user has a drawing that covers several E-size sheets. On an E-size (or a smaller, scaled) plotter, page numbering would be as in the simple case. But on a laser printer, printing 16 A-size pages per sheet, what does print preview consider a "page"  
   
- 作为介绍性段落状态，如打印机打印预览操作。  因此，用户将看到从选择的特殊的打印机的输出。  将由视图来确定每个页面上打印的图像。  
+ As the introductory paragraph states, Print Preview is acting like a printer. Therefore, the user will see what would come out of the particular printer that is selected. It is up to the view to determine what image is printed on each page.  
   
- 在 `CPrintInfo` 配置的页面描述字符串的方法向用户显示页码，则可表示为每页一个数字 \(“Page 1 "或“1\-2 页”\)。此字符串用于**CPreviewView::OnDisplayPageNumber**的默认实现。  如果不同的显示是必需的，一个可能重写此虚函数提供，Sheet1 部分，例如，“A，B”。  
+ The page description string in the `CPrintInfo` structure provides a means of displaying the page number to the user if it can be represented as one number per page (as in "Page 1" or "Pages 1-2"). This string is used by the default implementation of **CPreviewView::OnDisplayPageNumber**. If a different display is needed, one may override this virtual function to provide, for example, "Sheet1, Sections A, B".  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

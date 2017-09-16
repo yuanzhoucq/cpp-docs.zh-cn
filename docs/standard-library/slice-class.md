@@ -1,5 +1,5 @@
 ---
-title: "slice 类 | Microsoft Docs"
+title: slice Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - valarray/std::slice
-- slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
 dev_langs:
 - C++
 helpviewer_keywords:
-- slice class
+- std::slice [C++]
+- std::slice [C++], size
+- std::slice [C++], start
+- std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 caps.latest.revision: 23
 author: corob-msft
@@ -37,59 +39,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1732814d42a3c20e9c0248d61bd93f830c073bd9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2fb661edd99dba7d187988ee0e3401f3fc784724
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="slice-class"></a>slice 类
-valarray 的实用程序类，用于定义父级 valarray 的一维子集。 如果 valarray 被视为一个其所有元素都在一个数组中的二维矩阵，则切片会将一个维度中的向量从二维数组中提取出来。  
+# <a name="slice-class"></a>slice Class
+A utility class to valarray that is used to define one-dimensional subsets of a parent valarray. If a valarray is regarded as a two-dimensional matrix with all elements in an array, then the slice extracts a vector in one dimension out of the two-dimensional array.  
   
-## <a name="remarks"></a>备注  
- 该类存储了将 [slice_array](../standard-library/slice-array-class.md) 类型的对象特征化的参数。当类切片显示为 [valarray](../standard-library/valarray-class.md#op_at)**\<Type** 类的对象的自变量时，会间接构造 valarray 的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：  
+## <a name="remarks"></a>Remarks  
+ The class stores the parameters that characterize an object of type [slice_array](../standard-library/slice-array-class.md) The subset of a valarray is indirectly constructed when an object of class slice appears as an argument for an object of class [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. The stored values that specify the subset selected from the parent valarray include:  
   
--   valarray 中的起始索引。  
+-   A starting index in the valarray.  
   
--   总长度或切片中的元素数目。  
+-   A total length, or number of elements in the slice.  
   
--   跨距，或 valarray 中元素的后续索引之间的距离。  
+-   A stride, or distance between subsequent indices of elements in the valarray.  
   
- 如果由切片定义的集为常量 valarray 的子集，则该切片将是新的 valarray。 如果由切片定义的集为非常量 valarray 的子集，则该切片将具有对原始 valarray 的引用语义。 非常量 valarray 的评估机制节省了时间和内存。  
+ If the set defined by a slice is the subset of a constant valarray, then the slice is a new valarray. If the set defined by a slice is the subset of a nonconstant valarray, then the slice has reference semantics to the original valarray. The evaluation mechanism for nonconstant valarrays saves time and memory.  
   
- 仅当由切片定义的源和目标子集都是不重复的并且所有索引都是有效的，才可以保证对 valarray 的操作。  
+ Operations on valarrays are guaranteed only if the source and destination subsets defined by the slices are distinct and all indices are valid.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[slice](#slice)|定义 `valarray` 的一个子集，该 valarray 包含一些等距分隔的元素，并且在指定的元素开始。|  
-  
-### <a name="member-functions"></a>成员函数  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[size](#size)|查找 `valarray` 的切片中的元素数目。|  
-|[start](#start)|查找 `valarray` 的切片的起始索引。|  
-|[stride](#stride)|查找 `valarray` 的切片中元素之间的距离。|  
+|[slice](#slice)|Defines a subset of a `valarray` that consists of a number of elements that are an equal distance apart and that start at a specified element.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<valarray>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[size](#size)|Finds the number of elements in a slice of a `valarray`.|  
+|[start](#start)|Finds the starting index of a slice of a `valarray`.|  
+|[stride](#stride)|Finds the distance between elements in a slice of a `valarray`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
+  
+ **Namespace:** std  
   
 ##  <a name="size"></a>  slice::size  
- 查找 valarray 切片中的元素数。  
+ Finds the number of elements in a slice of a valarray.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- valarray 切片中的元素数。  
+### <a name="return-value"></a>Return Value  
+ The number of elements in a slice of a valarray.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_size.cpp  
@@ -142,7 +144,7 @@ The size of slice vaSlice is: 6.
 ```  
   
 ##  <a name="slice"></a>  slice::slice  
- 定义 valarray 的一个子集，该 valarray 包含许多等距分隔的元素，并且从指定的元素开始。  
+ Defines a subset of a valarray that consists of a number of elements that are an equal distance apart and that start at a specified element.  
   
 ```  
 slice();
@@ -153,23 +155,23 @@ slice(
     size_t stride);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_StartIndex`  
- 子集中第一个元素的 valarray 索引。  
+ The valarray index of the first element in the subset.  
   
  `_Len`  
- 子集中的元素数。  
+ The number of elements in the subset.  
   
  `stride`  
- 子集中元素间的距离。  
+ The distance between elements in the subset.  
   
-### <a name="return-value"></a>返回值  
- 默认构造函数对于起始索引、总长度和 stride 都存储为零。 第二个构造函数对于起始索引存储为 `_StartIndex`，对于总长度存储为 `_Len`，对于跨距存储为 `stride`。  
+### <a name="return-value"></a>Return Value  
+ The default constructor stores zeros for the starting index, total length, and stride. The second constructor stores `_StartIndex` for the starting index, `_Len` for the total length, and `stride` for the stride.  
   
-### <a name="remarks"></a>备注  
- 跨距可为负数。  
+### <a name="remarks"></a>Remarks  
+ The stride may be negative.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_ctor.cpp  
@@ -211,16 +213,16 @@ va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```  
   
 ##  <a name="start"></a>  slice::start  
- 查找 valarray 切片的起始索引。  
+ Finds the starting index of a slice of a valarray.  
   
 ```  
 size_t start() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- valarray 切片的起始索引。  
+### <a name="return-value"></a>Return Value  
+ The starting index of a slice of a valarray.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_start.cpp  
@@ -267,16 +269,16 @@ The start index of slice vaSlice is: 3.
 ```  
   
 ##  <a name="stride"></a>  slice::stride  
- 查找 valarray 切片中元素之间的距离。  
+ Finds the distance between elements in a slice of a valarray.  
   
 ```  
 size_t stride() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- valarray 切片中元素之间的距离。  
+### <a name="return-value"></a>Return Value  
+ The distance between elements in a slice of a valarray.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_stride.cpp  
@@ -322,7 +324,7 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

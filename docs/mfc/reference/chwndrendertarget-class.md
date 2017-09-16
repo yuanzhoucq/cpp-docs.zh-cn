@@ -1,5 +1,5 @@
 ---
-title: "CHwndRenderTarget 类 |Microsoft 文档"
+title: CHwndRenderTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHwndRenderTarget class
+- CHwndRenderTarget [MFC], CHwndRenderTarget
+- CHwndRenderTarget [MFC], Attach
+- CHwndRenderTarget [MFC], CheckWindowState
+- CHwndRenderTarget [MFC], Create
+- CHwndRenderTarget [MFC], Detach
+- CHwndRenderTarget [MFC], GetHwnd
+- CHwndRenderTarget [MFC], GetHwndRenderTarget
+- CHwndRenderTarget [MFC], ReCreate
+- CHwndRenderTarget [MFC], Resize
+- CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
 caps.latest.revision: 17
 author: mikeblome
@@ -44,186 +53,186 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1af6795e89c995ba6b5a7b094f06b0aea776f561
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7758d32bbf6fb0ba7d1402cd0890d7eb8cf3d741
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chwndrendertarget-class"></a>CHwndRenderTarget 类
-ID2D1HwndRenderTarget 包装器。  
+# <a name="chwndrendertarget-class"></a>CHwndRenderTarget Class
+A wrapper for ID2D1HwndRenderTarget.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHwndRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|构造 CHwndRenderTarget 对象与 HWND。|  
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Constructs a CHwndRenderTarget object from HWND.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::Attach](#attach)|附加现有的呈现器目标接口的对象|  
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|指示是否封闭的与此呈现器目标相关联的 HWND。|  
-|[CHwndRenderTarget::Create](#create)|创建与窗口关联的呈现器目标|  
-|[CHwndRenderTarget::Detach](#detach)|分离对象中的呈现器目标接口|  
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|返回与此相关的 HWND 呈现器目标。|  
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|返回 ID2D1HwndRenderTarget 接口。|  
-|[CHwndRenderTarget::ReCreate](#recreate)|重新创建与窗口关联的呈现器目标|  
-|[CHwndRenderTarget::Resize](#resize)|呈现器目标的大小更改为指定的像素大小|  
+|[CHwndRenderTarget::Attach](#attach)|Attaches existing render target interface to the object|  
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Indicates whether the HWND associated with this render target is occluded.|  
+|[CHwndRenderTarget::Create](#create)|Creates a render target associated with the window|  
+|[CHwndRenderTarget::Detach](#detach)|Detaches render target interface from the object|  
+|[CHwndRenderTarget::GetHwnd](#gethwnd)|Returns the HWND associated with this render target.|  
+|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Returns ID2D1HwndRenderTarget interface.|  
+|[CHwndRenderTarget::ReCreate](#recreate)|Re-creates a render target associated with the window|  
+|[CHwndRenderTarget::Resize](#resize)|Changes the size of the render target to the specified pixel size|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|返回 ID2D1HwndRenderTarget 接口。|  
+|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Returns ID2D1HwndRenderTarget interface.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|指向 ID2D1HwndRenderTarget 对象的指针。|  
+|[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|A pointer to an ID2D1HwndRenderTarget object.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CHwndRenderTarget::Attach  
- 附加现有的呈现器目标接口的对象  
+##  <a name="attach"></a>  CHwndRenderTarget::Attach  
+ Attaches existing render target interface to the object  
   
 ```  
 void Attach(ID2D1HwndRenderTarget* pTarget);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- 现有的呈现器目标接口。 不能为 NULL  
+ Existing render target interface. Cannot be NULL  
   
-##  <a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
- 指示是否封闭的与此呈现器目标相关联的 HWND。  
+##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
+ Indicates whether the HWND associated with this render target is occluded.  
   
 ```  
 D2D1_WINDOW_STATE CheckWindowState() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个值，该值指示是否与此相关的 HWND 呈现目标被封闭。  
+### <a name="return-value"></a>Return Value  
+ A value that indicates whether the HWND associated with this render target is occluded.  
   
-##  <a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
- 构造 CHwndRenderTarget 对象与 HWND。  
+##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget  
+ Constructs a CHwndRenderTarget object from HWND.  
   
 ```  
 CHwndRenderTarget(HWND hwnd = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hwnd`  
- 与此相关的 HWND 呈现器目标  
+ The HWND associated with this render target  
   
-##  <a name="create"></a>CHwndRenderTarget::Create  
- 创建与窗口关联的呈现器目标  
+##  <a name="create"></a>  CHwndRenderTarget::Create  
+ Creates a render target associated with the window  
   
 ```  
 BOOL Create(HWND hWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hWnd`  
- 与此相关的 HWND 呈现器目标  
+ The HWND associated with this render target  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE  
   
-##  <a name="detach"></a>CHwndRenderTarget::Detach  
- 分离对象中的呈现器目标接口  
+##  <a name="detach"></a>  CHwndRenderTarget::Detach  
+ Detaches render target interface from the object  
   
 ```  
 ID2D1HwndRenderTarget* Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向分离呈现器目标接口。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached render target interface.  
   
-##  <a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
- 返回与此相关的 HWND 呈现器目标。  
+##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd  
+ Returns the HWND associated with this render target.  
   
 ```  
 HWND GetHwnd() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 与此相关的 HWND 呈现器目标。  
+### <a name="return-value"></a>Return Value  
+ The HWND associated with this render target.  
   
-##  <a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
- 返回 ID2D1HwndRenderTarget 接口。  
+##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget  
+ Returns ID2D1HwndRenderTarget interface.  
   
 ```  
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1HwndRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1HwndRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
- 指向 ID2D1HwndRenderTarget 对象的指针。  
+##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget  
+ A pointer to an ID2D1HwndRenderTarget object.  
   
 ```  
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
- 返回 ID2D1HwndRenderTarget 接口。  
+##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget*  
+ Returns ID2D1HwndRenderTarget interface.  
   
 ```  
 operator ID2D1HwndRenderTarget*();
 ```   
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1HwndRenderTarget 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1HwndRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="recreate"></a>CHwndRenderTarget::ReCreate  
- 重新创建与窗口关联的呈现器目标  
+##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate  
+ Re-creates a render target associated with the window  
   
 ```  
 BOOL ReCreate(HWND hWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hWnd`  
- 与此相关的 HWND 呈现器目标  
+ The HWND associated with this render target  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="resize"></a>CHwndRenderTarget::Resize  
- 呈现器目标的大小更改为指定的像素大小  
+##  <a name="resize"></a>  CHwndRenderTarget::Resize  
+ Changes the size of the render target to the specified pixel size  
   
 ```  
 BOOL Resize(const CD2DSizeU& size);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `size`  
- 新的大小以设备像素为单位的呈现器目标  
+ The new size of the render target in device pixels  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

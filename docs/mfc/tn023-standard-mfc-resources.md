@@ -1,111 +1,130 @@
 ---
-title: "TN023：标准 MFC 资源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.resources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "资源 [MFC]"
-  - "标准资源"
-  - "TN023"
+title: 'TN023: Standard MFC Resources | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.resources
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC]
+- TN023
+- standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# TN023：标准 MFC 资源
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7eb5865f96cb7308159a2035c051f470e8d8143c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此注释说明 MFC 库提供和所需的标准资源。  
+---
+# <a name="tn023-standard-mfc-resources"></a>TN023: Standard MFC Resources
+This note describes the standard resources provided with and needed by the MFC library.  
   
-## TN023：标准 MFC 资源  
- MFC 提供可在应用程序中使用预定义资源的两类：CLIPART 资源和标准框架资源。  
+## <a name="standard-resources"></a>Standard Resources  
+ MFC offers two categories of predefined resources that you can use in your application: clip-art resources and standard framework resources.  
   
- CLIPART 资源是附加资源可能需要向应用程序的用户界面中以框架不确定，但是。  CLIPART 以下资源示例 [CLIPART](../top/visual-cpp-samples.md)包含该泛型：  
+ Clip-art resources are additional resources that the framework does not depend on, but which you might want to add to your application's user interface. The following clip-art resources are contained in the MFC General sample [CLIPART](../visual-cpp-samples.md):  
   
--   Common.rc:包含资源的单个文件：  
+-   Common.rc: A single file of resources that contains:  
   
-    -   代表各种业务和数据操作任务图标的大型集合。  
+    -   A large collection of icons that represent a variety of business and data-processing tasks.  
   
-    -   若干常用 Afxres.rc 光标 \(请参见\)。  
+    -   Several common cursors (see also Afxres.rc).  
   
-    -   包含多个工具栏按钮的工具栏位图。  
+    -   A toolbar bitmap that contains several toolbar buttons.  
   
-    -   使用 Commdlg.dll 的位图和图标资源。  
+    -   The bitmap and icon resources that are used by Commdlg.dll.  
   
--   Indicate.rc:状态栏包含键状态指示器的字符串资源，如“”和 Caps Lock 的。  
+-   Indicate.rc: Contains string resources for the status-bar key-state indicators, such as "CAP" for Caps Lock.  
   
--   Prompts.rc:包含菜单提示每个预定义命令的字符串资源，例如“创建新文档”的 `ID_FILE_NEW`。  
+-   Prompts.rc: Contains menu-prompt string resources for each predefined command, such as "Create a new document" for `ID_FILE_NEW`.  
   
--   Commdlg.rc:包含标准 COMMDLG 对话框模板的 Visual C\+\+ 兼容 .rc 文件。  
+-   Commdlg.rc: A Visual C++ compatible .rc file that contains the standard COMMDLG dialog templates.  
   
- 标准框架资源与 AFX 定义的资源 ID 的框架为内部实现依赖于。  基本上不需要更改这些 AFX 定义的资源。  如果，则应按本主题后面所述的过程。  
+ Standard framework resources are resources with AFX-defined IDs that the framework depends on for internal implementations. You will rarely need to change these AFX-defined resources. If you do, you should follow the procedure outlined later in this topic.  
   
- 以下资源包含\\INCLUDE MFC 框架在目录：  
+ The following framework resources are contained in the MFC\INCLUDE directory:  
   
--   Afxres.rc:框架使用的通用资源。  
+-   Afxres.rc: Common resources used by the framework.  
   
--   Afxprint.rc:资源特定对打印。  
+-   Afxprint.rc: Resources specific to printing.  
   
--   Afxolecl.rc:OLE 资源特定于客户端应用程序。  
+-   Afxolecl.rc: Resources specific to OLE client applications.  
   
--   Afxolev.rc:资源特定于完整的 OLE 服务器应用程序。  
+-   Afxolev.rc: Resources specific to full OLE server applications.  
   
-## CLIPART 使用资源  
+## <a name="using-clip-art-resources"></a>Using Clip-Art Resources  
   
-#### CLIPART 使用二进制资源  
+#### <a name="to-use-a-clip-art-binary-resource"></a>To use a clip-art binary resource  
   
-1.  打开在 Visual C\+\+ 应用程序中的资源文件。  
+1.  Open your application's resource file in Visual C++.  
   
-2.  打开 Common.rc。  此文件包含在任何二进制剪贴画资源。  因为 Common.rc 文件编译，这可能需要一些时间。  
+2.  Open Common.rc. This file contains all the binary clip-art resources. This may take some time because the Common.rc file is compiled.  
   
-3.  按住 Ctrl，在您拖动要从 Common.rc 使用到应用程序资源文件中的资源。  
+3.  Hold down CTRL while you drag the resources that you want to use from Common.rc to your application's resource file.  
   
- 若要使用其他剪贴画资源，请执行相同的步骤。  唯一的差别是您打开相应的 .rc 文件而不是 Common.rc。  
+ To use other clip-art resources, follow the same steps. The only difference is that you will open the appropriate .rc file instead of Common.rc.  
   
 > [!NOTE]
->  注意不永久无意中将资源从 Common.rc 外部。  如果按住 Ctrl 键，同时将资源时，您会创建副本。  如果不使保持 Ctrl 下，在您拖动时，资源将移动。  如果担心您可能偶尔对 Common.rc 文件的更改，请单击“不”，则会询问是否保存对 Common.rc 的更改时。  
+>  Be careful not to unintentionally move resources out of Common.rc permanently. If you hold the CTRL key while you drag resources, you will create a copy. If you do not hold CTRL down while you drag, the resources will be moved. If you are concerned that you might have accidentally made changes to the Common.rc file, click "No" when you are asked whether to save the changes to Common.rc.  
   
 > [!NOTE]
->  .rc 资源文件与特定资源 `TEXTINCLUDE` 将防止您意外保存 .rc 文件的顶部位于标准它们。  
+>  The .rc resource files have a special `TEXTINCLUDE` resource in them that will prevent you from accidentally saving on top of the standard .rc files.  
   
-### 自定义标准 Framework 资源  
- 通过在应用程序的资源文件，中的 \#include 命令标准框架资源位于应用程序通常包括。  AppWizard 将生成一个资源文件。  此文件包含相应的标准框架资源，AppWizard 选项您选择。  可以查看，添加或移除的资源更改编译时指令中。  若要执行此操作，请打开 **资源** 菜单并选择 **包括文本**。  查看“编译时指令”编辑项。  例如：  
+### <a name="customizing-standard-framework-resources"></a>Customizing Standard Framework Resources  
+ Standard framework resources are usually included in an application by using the #include command in an application's resource file. AppWizard will generate a resource file. This file includes the appropriate standard framework resources, depending on which AppWizard options you select. You can review, add, or remove which resources are included by changing the compile-time directives. To do this, open the **Resource** menu and select **Set Includes**. Look at the "Compile-Time Directives" edit item. For example:  
   
 ```  
 #include "afxres.rc"  
 #include "afxprint.rc"  
 ```  
   
- 最常见的情况上自定义标准框架资源添加或移除其他与打印，OLE 的客户和 OLE 支持服务器中。  
+ The most common case of customizing standard framework resources is adding or removing additional includes for printing, OLE Client, and OLE Server support.  
   
- 在某些少见的情况下您可能希望自定义标准框架特定资源的内容应用程序，而不只是添加和删除整个文件。  按步骤显示可如何限制包括的资源：  
+ In some rare cases you might want to customize the contents of the standard framework resources for your particular application, not just add and remove the entire file. The followings steps show how you can limit the resources that are included:  
   
-##### 自定义标准资源文件的内容  
+##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>To customize the contents of a standard resource file  
   
-1.  打开在 Visual C\+\+ 资源的文件。  
+1.  Open the resource file in Visual C++.  
   
-2.  使用"资源包括命令，移除要自定义标准的 .rc 文件的 `#include`。  例如，打印预览自定义工具栏，请移除 `#include "afxprint.rc"` 行。  
+2.  Using the Resource Set Includes command, remove the `#include` for the standard .rc file that you want to customize. For example, to customize the print-preview toolbar, remove the `#include "afxprint.rc"` line.  
   
-3.  打开在\\INCLUDE 的相应的标准 MFC 资源文件。  在示例稍后在本主题前面，适当的是 MFC \\Include\\Aafxprint .rc 文件  
+3.  Open the appropriate standard resources files in MFC\INCLUDE. Following the example earlier in this topic, the appropriate file is MFC\Include\Aafxprint.rc  
   
-4.  复制所有资源从标准 .rc 文件添加到应用程序资源文件内。  
+4.  Copy all the resources from the standard .rc file to your application resource file.  
   
-5.  修改标准资源的副本将应用程序资源的文件。  
+5.  Modify the copy of the standard resources in your application resource file.  
   
 > [!NOTE]
->  请勿修改资源直接在标准 .rc 文件。  执行此操作将修改资源可以在每个应用程序使用，而不仅仅是在当前工作的文件。  
+>  Do not modify the resources directly in the standard .rc files. Doing so will modify the resources available in every application, not just in the one you are currently working on.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

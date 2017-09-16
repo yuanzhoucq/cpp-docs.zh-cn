@@ -1,74 +1,93 @@
 ---
-title: "Internet 上的异步名字对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 异步"
-  - "异步名字对象 [C++]"
-  - "下载 Internet 资源和异步名字对象"
-  - "Internet [C++], 异步下载"
-  - "MFC [C++], 异步名字对象"
-  - "优化 [C++], 跨 Internet 异步下载"
-  - "Web 应用程序 [C++], 异步"
+title: Asynchronous Monikers on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], asynchronous
+- MFC, asynchronous monikers
+- asynchronous monikers [MFC]
+- Web applications [MFC], asynchronous
+- downloading Internet resources and asynchronous monikers
+- optimization [MFC], asynchronous downloading across Internet
+- Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Internet 上的异步名字对象
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fded09fa7a92cc6a13baaa926b1dcc95c870f904
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-由于其网络访问的速度慢， Internet 需要新的方法为应用程序设计。  应用程序应执行异步网络访问避免停止用户界面。  MFC 类 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 为下载文件提供了异步支持。  
+---
+# <a name="asynchronous-monikers-on-the-internet"></a>Asynchronous Monikers on the Internet
+The Internet requires new approaches to application design because of its slow network access. Applications should perform network access asynchronously to avoid stalling the user interface. The MFC class [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) provides asynchronous support for downloading files.  
   
- 使用异步修饰，可以扩展 COM 应用程序在 Internet 上异步下载和对大对象，例如位图和 VRML 对象，提供进度呈现 。  异步修饰使得在 Internet 上下载 ActiveX 控件属性或文件，不阻塞用户界面 \(UI\) 的响应。  
+ With asynchronous monikers, you can extend your COM application to download asynchronously across the Internet and to provide progressive rendering of large objects such as bitmaps and VRML objects. Asynchronous monikers enable an ActiveX control property or a file on the Internet to be downloaded without blocking the response of the user interface.  
   
-## 异步修饰的优点  
- 可使用异步修饰于：  
+## <a name="advantages-of-asynchronous-monikers"></a>Advantages of Asynchronous Monikers  
+ You can use asynchronous monikers to:  
   
--   下载代码和文件不阻塞。  
+-   Download code and files without blocking.  
   
--   下载ActiveX 控件的属性不阻塞。  
+-   Download properties in ActiveX controls without blocking.  
   
--   接收下载进度的通知。  
+-   Receive notifications of downloading progress.  
   
--   跟踪进度和就绪状态信息。  
+-   Track progress and ready state information.  
   
--   提供用户有关进度的状态信息。  
+-   Provide status information to the user about progress.  
   
--   允许用户可以随时取消下载。  
+-   Allow the user to cancel a download at any time.  
   
-## MFC 类的异步修饰  
- [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 派生自 [CMonikerFile](../mfc/reference/cmonikerfile-class.md)，而后者派生自 [COleStreamFile](../mfc/reference/colestreamfile-class.md)。  `COleStreamFile` 对象表示数据流；`CMonikerFile` 对象使用 `IMoniker` 获取数据，而 `CAsyncMonikerFile` 对象异步获取。  
+## <a name="mfc-classes-for-asynchronous-monikers"></a>MFC Classes for Asynchronous Monikers  
+ [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) is derived from [CMonikerFile](../mfc/reference/cmonikerfile-class.md), which in turn is derived from [COleStreamFile](../mfc/reference/colestreamfile-class.md). A `COleStreamFile` object represents a stream of data; a `CMonikerFile` object uses an `IMoniker` to obtain the data, and a `CAsyncMonikerFile` object does so asynchronously.  
   
- 异步修饰主要用于在 Internet 启用的应用程序和 ActiveX 控件，以便文件传输过程提供具有响应能力的用户界面。  这种情况的一个极好示例是使用 [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) 为 ActiveX 控件提供异步的属性。  
+ Asynchronous monikers are used primarily in Internet-enabled applications and ActiveX controls to provide a responsive user interface during file transfers. A prime example of this is the use of [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) to provide asynchronous properties for ActiveX controls.  
   
-## 针对 ActiveX 控件中数据路径的 MFC 类  
- MFC 类 `CDataPathProperty` 和 [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) 实现 ActiveX 控件的属性使其可以异步加载。  异步的属性在同步的启动后加载。  异步的 ActiveX 控件重复调用回调指示在长时间的属性交换过程中新的数据的可用性。  
+## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>MFC Classes for Data Paths in ActiveX Controls  
+ The MFC classes `CDataPathProperty` and [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) implement ActiveX control properties that can be loaded asynchronously. Asynchronous properties are loaded after synchronous initiation. Asynchronous ActiveX controls repeatedly invoke a callback to indicate availability of new data during a lengthy property exchange process.  
   
- `CDataPathProperty` 是从 `CAsyncMonikerFile` 中派生的。  `CCachedDataPathProperty` 是从 `CDataPathProperty` 中派生的。  在 ActiveX 控件中实现异步属性，从 `CDataPathProperty` 或 `CCachedDataPathProperty` 派生一个类并重写 [Ondataavailable](../Topic/CAsyncMonikerFile::OnDataAvailable.md) 和其它希望接收的通知。  
+ `CDataPathProperty` is derived from `CAsyncMonikerFile`. `CCachedDataPathProperty` is derived from `CDataPathProperty`. To implement asynchronous properties in your ActiveX controls, derive a class from `CDataPathProperty` or `CCachedDataPathProperty`, and override [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) and other notifications you wish to receive.  
   
-#### 使用异步修饰下载文件  
+#### <a name="to-download-a-file-using-asynchronous-monikers"></a>To download a file using asynchronous monikers  
   
-1.  声明类派生自 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)  
+1.  Declare a class derived from [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
-2.  重写 [Ondataavailable](../Topic/CAsyncMonikerFile::OnDataAvailable.md) 来显示数据。  
+2.  Override [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) to display the data.  
   
-3.  重写其他成员函数，包括 [OnProgress](../Topic/CAsyncMonikerFile::OnProgress.md)[OnStartBinding](../Topic/CAsyncMonikerFile::OnStartBinding.md) 和 [OnStopBinding](../Topic/CAsyncMonikerFile::OnStopBinding.md)。  
+3.  Override other member functions, including [OnProgress](../mfc/reference/casyncmonikerfile-class.md#onprogress), [OnStartBinding](../mfc/reference/casyncmonikerfile-class.md#onstartbinding), and [OnStopBinding](../mfc/reference/casyncmonikerfile-class.md#onstopbinding).  
   
-4.  声明此类的实例并使用它打开 URLs。  
+4.  Declare an instance of this class and use it to open URLs.  
   
- 有关在 ActiveX 控件中异步下载的更多信息，请参见 [Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)。  
+ For information about downloading asynchronously in an ActiveX control, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
-## 请参阅  
- [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)   
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

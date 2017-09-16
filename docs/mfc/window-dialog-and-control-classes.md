@@ -1,33 +1,52 @@
 ---
-title: "窗口、对话框和控件类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "窗口 [C++], 对话框和控件类"
+title: Window, Dialog, and Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], dialog and control classes
 ms.assetid: b3610da6-9644-49b7-adbf-0e04f0d6d2b5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 窗口、对话框和控件类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40fbb5c18fb91f6b62ffe3e37dbb9387ad867cf3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-`CWnd` 类，它派生类封装 `HWND`，一个窗口的句柄。  `CWnd` 可以使用单独或作为的基础。派生新类。  类库提供的派生类表示各种窗口。  
+---
+# <a name="window-dialog-and-control-classes"></a>Window, Dialog, and Control Classes
+Class `CWnd` and its derived classes encapsulate an `HWND`, a handle to a Windows window. `CWnd` can be used by itself or as a base for deriving new classes. The derived classes supplied by the class library represent various kinds of windows.  
   
  [CWnd](../mfc/reference/cwnd-class.md)  
- 所有窗口的基类。  可以使用从 `CWnd` 派生的某个类直接或从中派生自己的类。  
+ The base class for all windows. You can use one of the classes derived from `CWnd` or derive your own classes directly from it.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

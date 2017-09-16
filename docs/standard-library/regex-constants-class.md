@@ -1,5 +1,5 @@
 ---
-title: "regex_constants 类 | Microsoft Docs"
+title: regex_constants Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,63 +9,34 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_constants
 - regex/std::regex_constants
-- error_collate
 - regex/std::regex_constants::error_collate
-- error_ctype
 - regex/std::regex_constants::error_ctype
-- error_escape
 - regex/std::regex_constants::error_escape
-- error_backref
 - regex/std::regex_constants::error_backref
-- error_brack
 - regex/std::regex_constants::error_brack
-- error_paren
 - regex/std::regex_constants::error_paren
-- error_brace
 - regex/std::regex_constants::error_brace
-- error_badbrace
 - regex/std::regex_constants::error_badbrace
-- error_range
 - regex/std::regex_constants::error_range
-- error_space
 - regex/std::regex_constants::error_space
-- error_badrepeat
 - regex/std::regex_constants::error_badrepeat
-- error_complexity
 - regex/std::regex_constants::error_complexity
-- error_stack
 - regex/std::regex_constants::error_stack
-- error_parse
 - regex/std::regex_constants::error_parse
-- error_syntax
 - regex/std::regex_constants::error_syntax
-- match_default
 - regex/std::regex_constants::match_default
-- match_not_bol
 - regex/std::regex_constants::match_not_bol
-- match_not_eol
 - regex/std::regex_constants::match_not_eol
-- match_not_bow
 - regex/std::regex_constants::match_not_bow
-- match_not_eow
 - regex/std::regex_constants::match_not_eow
-- match_any
 - regex/std::regex_constants::match_any
-- match_not_null
 - regex/std::regex_constants::match_not_null
-- match_continuous
 - regex/std::regex_constants::match_continuous
-- match_prev_avail
 - regex/std::regex_constants::match_prev_avail
-- format_default
 - regex/std::regex_constants::format_default
-- format_sed
 - regex/std::regex_constants::format_sed
-- format_no_copy
 - regex/std::regex_constants::format_no_copy
-- format_first_only
 - regex/std::regex_constants::format_first_only
 - regex/std::regex_constants::ECMAScript
 - regex/std::regex_constants::basic
@@ -80,7 +51,45 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- regex_constants class
+- std::regex_constants [C++]
+- std::regex_constants [C++], error_collate
+- std::regex_constants [C++], error_ctype
+- std::regex_constants [C++], error_escape
+- std::regex_constants [C++], error_backref
+- std::regex_constants [C++], error_brack
+- std::regex_constants [C++], error_paren
+- std::regex_constants [C++], error_brace
+- std::regex_constants [C++], error_badbrace
+- std::regex_constants [C++], error_range
+- std::regex_constants [C++], error_space
+- std::regex_constants [C++], error_badrepeat
+- std::regex_constants [C++], error_complexity
+- std::regex_constants [C++], error_stack
+- std::regex_constants [C++], error_parse
+- std::regex_constants [C++], error_syntax
+- std::regex_constants [C++], match_default
+- std::regex_constants [C++], match_not_bol
+- std::regex_constants [C++], match_not_eol
+- std::regex_constants [C++], match_not_bow
+- std::regex_constants [C++], match_not_eow
+- std::regex_constants [C++], match_any
+- std::regex_constants [C++], match_not_null
+- std::regex_constants [C++], match_continuous
+- std::regex_constants [C++], match_prev_avail
+- std::regex_constants [C++], format_default
+- std::regex_constants [C++], format_sed
+- std::regex_constants [C++], format_no_copy
+- std::regex_constants [C++], format_first_only
+- std::regex_constants [C++], ECMAScript
+- std::regex_constants [C++], basic
+- std::regex_constants [C++], extended
+- std::regex_constants [C++], awk
+- std::regex_constants [C++], grep
+- std::regex_constants [C++], egrep
+- std::regex_constants [C++], icase
+- std::regex_constants [C++], nosubs
+- std::regex_constants [C++], optimize
+- std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 caps.latest.revision: 18
 author: corob-msft
@@ -100,17 +109,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 83cf6d3c8b6c571898bf6d1f2aeeefbc930dd573
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 88a553e1c9a29a1057af91ff096b16547e266ce0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regexconstants-class"></a>regex_constants 类
-正则表达式标志的命名空间。  
+# <a name="regexconstants-class"></a>regex_constants Class
+Namespace for regular expression flags.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace regex_constants {  
@@ -120,16 +129,16 @@ namespace regex_constants {
  }  
 ```  
   
-## <a name="remarks"></a>备注  
- 命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。  
+## <a name="remarks"></a>Remarks  
+ The namespace `regex_constants` encapsulates several flag types and their associated flag values.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<regex 1>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="error_type"></a>regex_constants::error_type  
- 用于报告正则表达式语法错误的标志。  
+##  <a name="error_type"></a>  regex_constants::error_type  
+ Flags for reporting regular expression syntax errors.  
   
 ```  
 enum error_type
@@ -152,43 +161,43 @@ enum error_type
     };  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是一个枚举类型，它描述可保留错误标志的对象。 非重复的标志值为：  
+### <a name="remarks"></a>Remarks  
+ The type is an enumerated type that describes an object that can hold error flags. The distinct flag values are:  
   
- `error_backref` - 表达式中包含无效的向后引用  
+ `error_backref` -- the expression contained an invalid back reference  
   
- `error_badbrace` - 表达式在 { } 表达式中包含无效计数  
+ `error_badbrace` -- the expression contained an invalid count in a { } expression  
   
- `error_badrepeat` - 重复表达式（在大多数上下文中为“*”、“?”、“+”、“{”之一）后没有表达式  
+ `error_badrepeat` -- a repeat expression (one of '*', '', '+', '{' in most contexts) was not preceded by an expression  
   
- `error_brace` - 表达式中包含不匹配的“'{”或“}”  
+ `error_brace` -- the expression contained an unmatched '{' or '}'  
   
- `error_brack` - 表达式中包含不匹配的“[”或“]”  
+ `error_brack` -- the expression contained an unmatched '[' or ']'  
   
- `error_collate` - 表达式中包含无效的排序规则元素名  
+ `error_collate` -- the expression contained an invalid collating element name  
   
- `error_complexity` - 尝试匹配失败，因为它太复杂  
+ `error_complexity` -- an attempted match failed because it was too complex  
   
- `error_ctype` - 表达式中包含无效的字符类名  
+ `error_ctype` -- the expression contained an invalid character class name  
   
- `error_escape` - 表达式包含无效转义序列  
+ `error_escape` -- the expression contained an invalid escape sequence  
   
- `error_paren` - 表达式中包含不匹配的“(”或“)”  
+ `error_paren` -- the expression contained an unmatched '(' or ')'  
   
- `error_parse` - 表达式解析失败  
+ `error_parse` -- the expression failed to parse  
   
- `error_range` - 表达式中包含无效的字符范围说明符  
+ `error_range` -- the expression contained an invalid character range specifier  
   
- `error_space` - 分析正则表达式失败，因为没有足够的资源  
+ `error_space` -- parsing a regular expression failed because there were not enough resources available  
   
- `error_stack` - 所尝试匹配失败，因为没有足够的内存  
+ `error_stack` -- an attempted match failed because there was not enough memory available  
   
- `error_syntax` - 分析因语法错误失败  
+ `error_syntax` -- parsing failed on a syntax error  
   
- `error_backref` - 表达式中包含无效的向后引用  
+ `error_backref` -- the expression contained an invalid back reference  
   
 ##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- 正则表达式匹配选项的标志。  
+ Flags for regular expression matching options.  
   
 ```  
 enum match_flag_type 
@@ -210,41 +219,41 @@ enum match_flag_type
     };  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是位掩码类型，用于描述针对替换文本时使用的正则表达式和格式标志匹配文本序列时使用的选项。 可与 `|`组合使用的选项。  
+### <a name="remarks"></a>Remarks  
+ The type is a bitmask type that describes options to be used when matching a text sequence against a regular expression and format flags to be used when replacing text. Options can be combined with `|`.  
   
- 匹配选项包括：  
+ The match options are:  
   
  `match_default`  
   
- `match_not_bol` - 不将目标序列中的第一个位置视为行首  
+ `match_not_bol` -- do not treat the first position in the target sequence as the beginning of a line  
   
- `match_not_eol` - 不将目标序列中超过末尾的位置视为行尾  
+ `match_not_eol` -- do not treat the past-the-end position in the target sequence as the end of a line  
   
- `match_not_bow` - 不将目标序列中的第一个位置视为单词的开头  
+ `match_not_bow` -- do not treat the first position in the target sequence as the beginning of a word  
   
- `match_not_eow` - 不将目标序列中超过末尾的位置视为单词的结尾  
+ `match_not_eow` -- do not treat the past-the-end position in the target sequence as the end of a word  
   
- `match_any` - 如果有多个匹配，任何匹配都是可接受的  
+ `match_any` -- if more than one match is possible any match is acceptable  
   
- `match_not_null` - 不要将空的子序列视为匹配项  
+ `match_not_null` -- do not treat an empty subsequence as a match  
   
- `match_continuous` - 不搜索除目标序列开头位置之外的匹配项  
+ `match_continuous` -- do not search for matches other than at the beginning of the target sequence  
   
- `match_prev_avail` --  是有效的迭代器，请忽略 `--first``match_not_bol` 和 `match_not_bow`（如果已设置）  
+ `match_prev_avail` -- `--first` is a valid iterator; ignore `match_not_bol` and `match_not_bow` if set  
   
- 格式标志包括：  
+ The format flags are:  
   
- `format_default` -- 使用 ECMAScript 格式规则  
+ `format_default` -- use ECMAScript format rules  
   
- `format_sed` -- 使用 sed 格式规则  
+ `format_sed` -- use sed format rules  
   
- `format_no_copy` -- 不复制与正则表达式不匹配的文本  
+ `format_no_copy` -- do not copy text that does not match the regular expression  
   
- `format_first_only` - 不搜索第一个匹配项之后的匹配项  
+ `format_first_only` -- do not search for matches after the first one  
   
 ##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- 用于选择语法选项的标志。  
+ Flags for selecting syntax options.  
   
 ```  
 enum syntax_option_type
@@ -264,40 +273,40 @@ enum syntax_option_type
     };  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型为位掩码类型，用于描述编译正则表达式时要使用的语言说明符和语法修饰符。 可与 `|`组合使用的选项。 一次不能使用多于一个语言说明符。  
+### <a name="remarks"></a>Remarks  
+ The type is a bitmask type that describes language specifiers and syntax modifiers to be used when compiling a regular expression. Options can be combined with `|`. No more than one language specifier should be used at a time.  
   
- 语言说明符有：  
+ The language specifiers are:  
   
- `ECMAScript` -- 编译为 ECMAScript  
+ `ECMAScript` -- compile as ECMAScript  
   
- `basic` -- 编译为 BRE  
+ `basic` -- compile as BRE  
   
- `extended` -- 编译为 ERE  
+ `extended` -- compile as ERE  
   
- `awk` -- 编译为 awk  
+ `awk` -- compile as awk  
   
- `grep` -- 编译为 grep  
+ `grep` -- compile as grep  
   
- `egrep` -- 编译为 egrep  
+ `egrep` -- compile as egrep  
   
- 语法修饰符有：  
+ The syntax modifiers are:  
   
- `icase` -- 匹配不区分大小写  
+ `icase` -- make matches case-insensitive  
   
- `nosubs` -- 实现不需要跟踪捕获组的内容  
+ `nosubs` -- the implementaton need not keep track of the contents of capture groups  
   
- `optimize` -- 实现应强调匹配的速度而非正则表达式编译的速度  
+ `optimize` -- the implementation should emphasize speed of matching rather than speed of regular expression compilation  
   
- `collate` -- 进行区分区域设置的匹配  
+ `collate` -- make matches locale-sensitive  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_error 类](../standard-library/regex-error-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
 [\<regex> functions](../standard-library/regex-functions.md)  
-[regex_iterator 类](../standard-library/regex-iterator-class.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
 [\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 类](../standard-library/regex-traits-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
 

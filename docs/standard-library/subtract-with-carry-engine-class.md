@@ -1,5 +1,5 @@
 ---
-title: "subtract_with_carry_engine 类 | Microsoft Docs"
+title: subtract_with_carry_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- subtract_with_carry_engine
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
 - random/std::subtract_with_carry_engine::discard
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- subtract_with_carry_engine class
+- std::subtract_with_carry_engine [C++]
+- std::subtract_with_carry_engine [C++], default_seed
+- std::subtract_with_carry_engine [C++], discard
+- std::subtract_with_carry_engine [C++], min
+- std::subtract_with_carry_engine [C++], max
+- std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 caps.latest.revision: 20
 author: corob-msft
@@ -39,69 +43,69 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c73401963b231883d26aa45590a9cad305b13875
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b686e174e483e619dd7b45c54eef9ce3244ad4ba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 类
-通过带进位减法（滞后型斐波那契）算法生成随机序列。  
+# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine Class
+Generates a random sequence by the subtract-with-carry (lagged Fibonacci) algorithm.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType, size_t W, size_t S, size_t R>  
 class subtract_with_carry_engine;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **字大小**。 状态序列的每个字的大小（以字节为单位）。 **前置条件**：`0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `S`  
- **短滞后**。 整数值数。 **前置条件**：`0 < S < R`  
+ **Short lag**. Number of integer values. **Precondition**: `0 < S < R`  
   
  `R`  
- **长滞后**。 确定生成的系列中的重复。  
+ **Long lag**. Determines recurrence in the series generated.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|  
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|  
-|`default_seed` 是定义为 `19780503u` 且用作 `subtract_with_carry_engine::seed` 和单个值的构造函数的默认参数值的成员常量。|||  
+|`default_seed` is a member constant, defined as `19780503u`, used as the default parameter value for `subtract_with_carry_engine::seed` and the single value constructor.|||  
   
- 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>备注  
- `substract_with_carry_engine` 模板类是基于 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) 的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。  
+## <a name="remarks"></a>Remarks  
+ The `substract_with_carry_engine` template class is an improvement over the [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Neither for these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- 此引擎使用重复关系（*周期*）`x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`产生用户指定的无符号整型值，其中如果 `cy(i)`，则 `1` 包含值 `x(i - S) - x(i - R) - cy(i - 1) < 0`；如果 `0`，则 `M` 包含 `2`<sup>W</sup>。引擎状态是进位指示器加上 `R` 值。 如果已调用 `R` 至少 `operator()` 次，则这些值将包含返回的最后 `R` 个值，否则包含已返回的 `N` 个值和种子的最后 `R - N` 个值。  
+ This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, where `cy(i)` has the value `1` if `x(i - S) - x(i - R) - cy(i - 1) < 0`, otherwise `0`, and `M` has the value `2`<sup>W</sup>. The engine's state is a carry indicator plus `R` values. These values consist of the last `R` values returned if `operator()` has been called at least `R` times, otherwise the `N` values that have been returned and the last `R - N` values of the seed.  
   
- 模板参数 `UIntType` 必须大到足以保留最多 `M - 1` 个值。  
+ The template argument `UIntType` must be large enough to hold values up to `M - 1`.  
   
- 虽然可以从此引擎直接构造生成器，但也可以使用预定义的 typedef 之一：  
+ Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs:  
   
- `ranlux24_base`：用作 `ranlux24` 的基础。                   
+ `ranlux24_base`: Used as a base for `ranlux24`.                   
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
- `ranlux48_base`：用作 `ranlux48` 的基础。                   
+ `ranlux48_base`: Used as a base for `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- 有关带进位减法引擎算法的详细信息，请参阅 Wikipedia 文章 [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/LinkId=402445)（滞后斐波纳契生成器）。  
+ For detailed information about the subract with carry engine algorithm, see the Wikipedia article [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/LinkId=402445).  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;regex&gt; 函数 | Microsoft Docs"
+title: '&lt;regex&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -7,11 +7,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_match
 - regex/std::regex_match
-- regex_replace
 - regex/std::regex_replace
-- regex_search
 - regex/std::regex_search
 - regex/std::swap
 - regex/std::swap
@@ -20,21 +17,27 @@ dev_langs:
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+helpviewer_keywords:
+- std::regex_match [C++]
+- std::regex_replace [C++]
+- std::regex_search [C++]
+- std::swap [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cfac3b7d414af28d81aca98d0e2dd28f1357447a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltregexgt-functions"></a>&lt;regex&gt; 函数
+# <a name="ltregexgt-functions"></a>&lt;regex&gt; functions
 ||||  
 |-|-|-|  
 |[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
 |[swap](#swap)|  
   
-##  <a name="regex_match"></a>regex_match
- 测试正则表达式是否与整个目标字符串相匹配。  
+##  <a name="regex_match"></a>  regex_match
+ Tests whether a regular expression matches the entire target string.  
   
 ```  
  
@@ -90,57 +93,57 @@ bool regex_match(
     match_flag_type flags = match_default);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 子匹配项的迭代器类型。 一般情况下，此类型为 string::const_iterator、wstring::const_iterator、const char* 或 const wchar_t\* 之一。  
+ The iterator type for submatches. For common cases this one of string::const_iterator, wstring::const_iterator, const char* or const wchar_t\*.  
   
  `Alloc`  
- 匹配结果分配器类。  
+ The match results allocator class.  
   
  `Elem`  
- 要匹配的元素的类型。 一般情况下，此类型为 string、wstring、char* 或 wchar_t\*。  
+ The type of elements to match. For common cases this is string, wstring, char* or wchar_t\*.  
   
  `RXtraits`  
- 元素的特征类。  
+ Traits class for elements.  
   
  `Alloc2`  
- 正则表达式分配器类。  
+ The regular expression allocator class.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `IOalloc`  
- 字符串分配器类。  
+ The string allocator class.  
   
  `flags`  
- 匹配标志。  
+ Flags for matches.  
   
  `first`  
- 要匹配的序列的开头。  
+ Beginning of sequence to match.  
   
  `last`  
- 要匹配的序列的结尾。  
+ End of sequence to match.  
   
  `match`  
- 匹配结果。 对应于 Elem 类型：[smatch](../standard-library/regex-typedefs.md#smatch) 匹配 string、[wsmatch](../standard-library/regex-typedefs.md#wsmatch) 匹配 wstring、[cmatch](../standard-library/regex-typedefs.md#cmatch) 匹配 char* 或 [wcmatch](../standard-library/regex-typedefs.md#wcmatch) 匹配 wchar_t\*。  
+ The match results. Corresponds to Elem type: [smatch](../standard-library/regex-typedefs.md#smatch) for string, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) for wstring, [cmatch](../standard-library/regex-typedefs.md#cmatch) for char* or [wcmatch](../standard-library/regex-typedefs.md#wcmatch) for wchar_t\*.  
   
  `ptr`  
- 指向要匹配的序列开头的指针。 如果 ptr 是 char*，则使用 cmatch 和 regex。 如果 ptr 是 wchar_t\*，则使用 wcmatch 和 wregex。  
+ Pointer to beginning of sequence to match. If ptr is char*, then use cmatch and regex. If ptr is wchar_t\* then use wcmatch and wregex.  
   
  `re`  
- 要匹配的正则表达式。 对于 string 和 char*，请键入 `regex`，或者对于 wstring 和 wchar_t*\*，请键入 `wregex`。  
+ The regular expression to match. Type `regex` for string and char*, or `wregex` for wstring and wchar_t\*.  
   
  `str`  
- 要匹配的字符串。 对应于 Elem 类型。  
+ String to match. Corresponds to the type of Elem.  
   
-### <a name="remarks"></a>备注  
- 每个模板函数仅在整个操作数序列 `str` 与正则表达式参数 `re` 完全匹配时才返回 true。 请使用 [regex_search](../standard-library/regex-functions.md#regex_search) 匹配目标序列中的子字符串，并使用 regex_iterator 查找多个匹配。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。  
+### <a name="remarks"></a>Remarks  
+ Each template function returns true only if the entire operand sequence `str` exactly matches the regular expression argument `re`. Use [regex_search](../standard-library/regex-functions.md#regex_search) to match a substring within a target sequence and regex_iterator to find multiple matches. The functions that take a `match_results` object set its members to reflect whether the match succeeded and if so what the various capture groups in the regular expression captured.  
   
- 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。  
+ The functions that take a `match_results` object set its members to reflect whether the match succeeded and if so what the various capture groups in the regular expression captured.  
   
  **(1):**  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include "stdafx.h"  
@@ -193,8 +196,8 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="regex_replace"></a>regex_replace
- 替换匹配正则表达式。  
+##  <a name="regex_replace"></a>  regex_replace
+ Replaces matched regular expressions.  
   
 ```  
 template <class OutIt, class BidIt, class RXtraits, class Alloc, class Elem>  
@@ -214,49 +217,49 @@ basic_string<Elem> regex_replace(
     match_flag_type flags = match_default);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `OutIt`  
- 替换内容的迭代器类型。  
+ The iterator type for replacements.  
   
  `BidIt`  
- 子匹配项的迭代器类型。  
+ The iterator type for submatches.  
   
  `RXtraits`  
- 元素的特征类。  
+ Traits class for elements.  
   
  `Alloc`  
- 正则表达式分配器类。  
+ The regular expression allocator class.  
   
  `Elem`  
- 要匹配的元素的类型。  
+ The type of elements to match.  
   
  `flags`  
- 匹配标志。  
+ Flags for matches.  
   
  `first`  
- 要匹配的序列的开头。  
+ Beginning of sequence to match.  
   
  `fmt`  
- 替换内容的格式。  
+ The format for replacements.  
   
  `last`  
- 要匹配的序列的结尾。  
+ End of sequence to match.  
   
  `out`  
- 输出迭代器。  
+ The output iterator.  
   
  `re`  
- 要匹配的正则表达式。  
+ The regular expression to match.  
   
  `str`  
- 要匹配的字符串。  
+ String to match.  
   
-### <a name="remarks"></a>备注  
- 第一个函数构造 [regex_iterator 类](../standard-library/regex-iterator-class.md)对象 `iter(first, last, re, flags)`，然后使用该对象将其输入范围 `[first, last)` 拆分为一系列的子序列  `T0M0T1M1...TN-1MN-1TN`，其中 `Mn` 是迭代器检测到的 `nth` 匹配项。 如果找不到任何匹配项，`T0` 则为整个输入范围且 `N` 为零。 如果 `(flags & format_first_only) != 0`，则仅使用第一个匹配项，`T1` 是匹配项后跟的全部输入文本，且 `N` 为 1。 对于 `[0, N)` 范围内的每个 `i`，如果 `(flags & format_no_copy) == 0`，则它会将 `Ti` 范围内的文本复制到迭代器 `out`。 然后它调用 `m.format(out, fmt, flags)`，其中 `m` 是迭代器对象 `iter` 为子序列 `Mi` 返回的 `match_results` 对象。 最后，如果 `(flags & format_no_copy) == 0`，它将范围 `TN` 内的文本复制到迭代器 `out`。 该函数返回 `out`。  
+### <a name="remarks"></a>Remarks  
+ The first function constructs a [regex_iterator Class](../standard-library/regex-iterator-class.md) object `iter(first, last, re, flags)` and uses it to split its input range `[first, last)` into a series of subsequences `T0M0T1M1...TN-1MN-1TN`, where `Mn` is the `nth` match detected by the iterator. If no matches are found, `T0` is the entire input range and `N` is zero. If `(flags & format_first_only) != 0` only the first match is used, `T1` is all of the input text that follows the match, and `N` is 1. For each `i` in the range `[0, N)`, if `(flags & format_no_copy) == 0` it copies the text in the range `Ti` to the iterator `out`. It then calls `m.format(out, fmt, flags)`, where `m` is the `match_results` object returned by the iterator object `iter` for the subsequence `Mi`. Finally, if `(flags & format_no_copy) == 0` it copies the text in the range `TN` to the iterator `out`. The function returns `out`.  
   
- 第二个函数构造 `basic_string<charT>` 类型的本地变量 `result` 并调用 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`。 它将返回 `result`。  
+ The second function constructs a local variable `result` of type `basic_string<charT>` and calls `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. It returns `result`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_replace.cpp   
@@ -299,8 +302,8 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="regex_search"></a>regex_search
- 搜索正则表达式匹配项。  
+##  <a name="regex_search"></a>  regex_search
+ Searches for a regular expression match.  
   
 ```  
 template <class BidIt, class Alloc, class Elem, class RXtraits, class Alloc2>  
@@ -345,53 +348,53 @@ bool regex_search(
     match_flag_type flags = match_default);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `BidIt`  
- 子匹配项的迭代器类型。  
+ The iterator type for submatches.  
   
  `Alloc`  
- 匹配结果分配器类。  
+ The match results allocator class.  
   
  `Elem`  
- 要匹配的元素的类型。  
+ The type of elements to match.  
   
  `RXtraits`  
- 元素的特征类。  
+ Traits class for elements.  
   
  `Alloc2`  
- 正则表达式分配器类。  
+ The regular expression allocator class.  
   
  `IOtraits`  
- 字符串特征类。  
+ The string traits class.  
   
  `IOalloc`  
- 字符串分配器类。  
+ The string allocator class.  
   
  `flags`  
- 匹配标志。  
+ Flags for matches.  
   
  `first`  
- 要匹配的序列的开头。  
+ Beginning of sequence to match.  
   
  `last`  
- 要匹配的序列的结尾。  
+ End of sequence to match.  
   
  `match`  
- 匹配结果。  
+ The match results.  
   
  `ptr`  
- 指向要匹配的序列开头的指针。  
+ Pointer to beginning of sequence to match.  
   
  `re`  
- 要匹配的正则表达式。  
+ The regular expression to match.  
   
  `str`  
- 要匹配的字符串。  
+ String to match.  
   
-### <a name="remarks"></a>备注  
- 仅在其操作数序列中成功搜索到其正则表达式 `re` 时，每个模板函数才返回 true。 采用 `match_results` 对象的函数将其成员设置为反映搜索是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。  
+### <a name="remarks"></a>Remarks  
+ Each template function returns true only if a search for its regular expression argument `re` in its operand sequence succeeds. The functions that take a `match_results` object set its members to reflect whether the search succeeded and if so what the various capture groups in the regular expression captured.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_search.cpp   
@@ -449,7 +452,7 @@ search(string, "abc") == true
 ```  
   
 ##  <a name="swap"></a>  swap
- 交换两个 basic_regex 或 match_results 对象。  
+ Swaps two basic_regex or match_results objects.  
   
 ```  
 template <class Elem, class RXtraits>  
@@ -463,17 +466,17 @@ void swap(
     match_results<BidIt, Alloc>& right) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Elem`  
- 要匹配的元素的类型。  
+ The type of elements to match.  
   
  `RXtraits`  
- 元素的特征类。  
+ Traits class for elements.  
   
-### <a name="remarks"></a>备注  
- 模板函数在常量时间内交换各自参数的内容，并且不会引发异常。  
+### <a name="remarks"></a>Remarks  
+ The template functions swap the contents of their respective arguments in constant time and do not throw exceptions.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__swap.cpp   
@@ -509,14 +512,14 @@ length == 3
 string == aaa  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 类](../standard-library/regex-constants-class.md)  
-[regex_error 类](../standard-library/regex-error-class.md)  
-[regex_iterator 类](../standard-library/regex-iterator-class.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
 [\<regex> operators](../standard-library/regex-operators.md)  
-[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 类](../standard-library/regex-traits-class.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 

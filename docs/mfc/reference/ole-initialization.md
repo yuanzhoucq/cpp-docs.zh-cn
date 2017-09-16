@@ -1,5 +1,5 @@
 ---
-title: "OLE 初始化 |Microsoft 文档"
+title: OLE Initialization | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,65 +34,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c598a2c78e92725e656de82397418f1635d4f92d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5e756feff21f498129b0a077309b7784fd810212
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ole-initialization"></a>OLE 初始化
-必须先初始化 OLE 系统并验证 DLL 是否是正确版本，然后应用程序才能使用 OLE 系统服务。 **AfxOleInit**函数初始化 OLE 系统 Dll。  
+# <a name="ole-initialization"></a>OLE Initialization
+Before an application can use OLE system services, it must initialize the OLE system DLLs and verify that the DLLs are the correct version. The **AfxOleInit** function initializes the OLE system DLLs.  
   
-### <a name="ole-initialization"></a>OLE 初始化  
+### <a name="ole-initialization"></a>OLE Initialization  
   
 |||  
 |-|-|  
-|[AfxOleInit](#afxoleinit)|初始化 OLE 库。| 
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|在应用程序对象的 `InitInstance` 函数中调用此函数以启用对包含 OLE 控件的支持。| 
+|[AfxOleInit](#afxoleinit)|Initializes the OLE libraries.| 
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Call this function in your application object's `InitInstance` function to enable support for containment of OLE controls.| 
 
 
-## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
-在应用程序对象的 `InitInstance` 函数中调用此函数以启用对包含 OLE 控件的支持。  
+## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
+Call this function in your application object's `InitInstance` function to enable support for containment of OLE controls.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
 void AfxEnableControlContainer( );  
 ```  
    
-### <a name="remarks"></a>备注  
- 有关 OLE 控件 （现在称为 ActiveX 控件） 的详细信息，请参阅[ActiveX 控件主题](../mfc-activex-controls.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about OLE controls (now called ActiveX controls), see [ActiveX Control Topics](../mfc-activex-controls.md).  
    
-### <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
   
-##  <a name="afxoleinit"></a>AfxOleInit  
- 初始化 OLE 应用程序的支持。  
+##  <a name="afxoleinit"></a>  AfxOleInit  
+ Initializes OLE support for the application.  
   
 ``` 
 BOOL AFXAPI AfxOleInit(); 
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零如果初始化失败，可能是因为安装了不正确版本的 OLE 系统 Dll，则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if initialization fails, possibly because incorrect versions of the OLE system DLLs are installed.  
   
-### <a name="remarks"></a>备注  
- 调用此函数用于初始化 OLE 支持为 MFC 应用程序。 当调用此函数时，会执行下列操作︰  
+### <a name="remarks"></a>Remarks  
+ Call this function to initialize the OLE support for an MFC application. When this function is called, the following actions occur:  
   
--   初始化 COM 库调用应用程序的当前单元上。 有关详细信息，请参阅[OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134)。  
+-   Initializes the COM library on the current apartment of the calling application. For more information, see [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
   
--   创建消息筛选器对象，实现[IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740)接口。 此消息筛选器可以访问通过调用[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)。  
-  
-> [!NOTE]
->  如果**AfxOleInit**称为从 MFC DLL，则调用将失败。 出现故障，因为此函数假设，如果从 DLL 调用它时，OLE 系统以前初始化由调用应用程序。  
+-   Creates a message filter object, implementing the [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) interface. This message filter can be accessed with a call to [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
->  MFC 应用程序必须初始化为单线程单元 (STA)。 如果调用[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中你`InitInstance`重写时，请指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 有关详细信息，请参阅 PRB: MFC 应用程序停止响应时初始化为多线程单元 （828643） 在应用程序[http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
+>  If **AfxOleInit** is called from an MFC DLL, the call will fail. The failure occurs because the function assumes that, if it is called from a DLL, the OLE system was previously initialized by the calling application.  
+  
+> [!NOTE]
+>  MFC applications must be initialized as single threaded apartment (STA). If you call [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in your `InitInstance` override, specify `COINIT_APARTMENTTHREADED` (rather than `COINIT_MULTITHREADED`). For more information, see PRB: MFC Application Stops Responding When You Initialize the Application as a Multithreaded Apartment (828643) at [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
-### <a name="requirements"></a>要求  
- **标头：** afxdisp.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

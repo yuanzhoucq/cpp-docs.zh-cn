@@ -1,45 +1,64 @@
 ---
-title: "使用 CToolBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl 类"
-  - "工具栏控件 [MFC], 创建"
+title: Using CToolBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolBarCtrl class [MFC]
+- toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 使用 CToolBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 856893014c79c71262e1442ef5707bb83dd72dc7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-可以使用工具栏控件 \([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)\) 创建包含按钮和可选空间的控制窗口。  在工具栏控件窗口的每个按钮发送命令信息到父窗口，当用户选择它时。  通常，在工具栏的按钮对应于应用程序的菜单项，提供附加和更直接方式用于用户访问应用程序的命令。  
+---
+# <a name="using-ctoolbarctrl"></a>Using CToolBarCtrl
+You can use the toolbar control ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) to create a control window containing buttons and optional spaces. Each button in the toolbar control window sends a command message to the parent window as the user chooses it. Typically, the buttons in a toolbar correspond to items in the application's menu, providing an additional and more direct way for the user to access an application's commands.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [创建工具栏的方法](../mfc/methods-of-creating-a-toolbar.md)  
+-   [Methods of Creating a Toolbar](../mfc/methods-of-creating-a-toolbar.md)  
   
--   [工具栏控件的设置](../mfc/settings-for-the-toolbar-control.md)  
+-   [Settings for the Toolbar Control](../mfc/settings-for-the-toolbar-control.md)  
   
--   [创建 CToolBarCtrl 对象](../mfc/creating-a-ctoolbarctrl-object.md)  
+-   [Creating a CToolBarCtrl Object](../mfc/creating-a-ctoolbarctrl-object.md)  
   
--   [在工具栏控件中使用图像列表](../mfc/using-image-lists-in-a-toolbar-control.md)  
+-   [Using Image Lists in a Toolbar Control](../mfc/using-image-lists-in-a-toolbar-control.md)  
   
--   [在工具栏按钮中使用下拉按钮](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
+-   [Using Drop-Down Buttons in a Toolbar Control](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
   
--   [自定义工具栏控件的外观](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
+-   [Customizing the Appearance of a Toolbar Control](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   
-## 请参阅  
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

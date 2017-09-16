@@ -1,50 +1,69 @@
 ---
-title: "Windows 套接字：从套接字类派生 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "派生类, 从套接字类"
-  - "套接字 [C++], 从套接字类派生"
-  - "Windows 套接字 [C++], 从套接字类派生"
+title: 'Windows Sockets: Deriving from Socket Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- derived classes [MFC], from socket classes
+- Windows Sockets [MFC], deriving from socket classes
+- sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows 套接字：从套接字类派生
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 796e65a7e54f1b98ea57b3682a6ef94db3e95524
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文描述了可以通过从某套接字类派生自己的类来获取某些功能。  
+---
+# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Deriving from Socket Classes
+This article describes some of the functionality you can gain by deriving your own class from one of the socket classes.  
   
- 您可以从 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)或[CSocket](../mfc/reference/csocket-class.md) 派生自己的类来添加自定义的功能。  具体说来，这些类提供大量可以重写的虚成员函数。  这些函数包括 [OnReceive](../Topic/CAsyncSocket::OnReceive.md)，[OnSend](../Topic/CAsyncSocket::OnSend.md)，[OnAccept](../Topic/CAsyncSocket::OnAccept.md)，[OnConnect](../Topic/CAsyncSocket::OnConnect.md)和[OnClose](../Topic/CAsyncSocket::OnClose.md)。  您可以重写在派生的套接字类的函数，利用它们提供的网络事件发生的通知。  框架调用这些通知回调函数通知重要套接字事件，例如可以开始阅读接收的数据。  有关通知函数的更多信息，请参见 [Windows 套接字：套接字通知](../mfc/windows-sockets-socket-notifications.md)。  
+ You can derive your own socket classes from either [CAsyncSocket](../mfc/reference/casyncsocket-class.md) or [CSocket](../mfc/reference/csocket-class.md) to add your own functionality. In particular, these classes supply a number of virtual member functions that you can override. These functions include [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), and [OnClose](../mfc/reference/casyncsocket-class.md#onclose). You can override the functions in your derived socket class to take advantage of the notifications they provide when network events occur. The framework calls these notification callback functions to notify you of important socket events, such as the receipt of data that you can begin reading. For more information about notification functions, see [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md).  
   
- 此外，`CSocket` 类提供成员函数 [OnMessagePending](../Topic/CSocket::OnMessagePending.md) \(高级可重写\)。  当套接字发送 Windows 消息时，MFC 调用此函数。  可以重写 `OnMessagePending` ,查找从窗口的特定信息和响应这些事件。  
+ Additionally, class `CSocket` supplies the [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) member function (an advanced overridable). MFC calls this function while the socket is pumping Windows-based messages. You can override `OnMessagePending` to look for particular messages from Windows and respond to them.  
   
- 当等待锁时调用完成时，`CSocket`提供的`OnMessagePending` 的默认版本检查 `WM_PAINT` 消息的消息队列。  分配绘制消息以提高显示质量。  除执行一些有用的操作以外，这也说明了一种可以重写函数的方式。  请考虑使用以下任务`OnMessagePending` 作为另一个示例。  当等待网络事务完成时，假定显示无模式对话框中。  对话框包含用户可用来取消阻塞事务的取消按钮。  `OnMessagePending` 的重写可能发送与此无模式对话框相关的消息。  
+ The default version of `OnMessagePending` supplied in class `CSocket` examines the message queue for `WM_PAINT` messages while waiting for a blocking call to complete. It dispatches paint messages to improve display quality. Aside from doing something useful, this illustrates one way you might override the function yourself. As another example, consider using `OnMessagePending` for the following task. Suppose you display a modeless dialog box while waiting for a network transaction to complete. The dialog box contains a Cancel button that the user can use to cancel blocking transactions that take too long. Your `OnMessagePending` override might pump messages related to this modeless dialog box.  
   
- 在 `OnMessagePending` 重写中，返回 **TRUE** 或返回从 `OnMessagePending`的基类版本的调用。  如果执行仍需执行的工作，请调用的基类版本。  
+ In your `OnMessagePending` override, return either **TRUE** or the return from a call to the base-class version of `OnMessagePending`. Call the base-class version if it performs work that you still want done.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [Windows 套接字：对存档使用套接字](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows 套接字：阻止](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md)  
   
--   [Windows 套接字：字节排序](../mfc/windows-sockets-byte-ordering.md)  
+-   [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows 套接字：转换字符串](../mfc/windows-sockets-converting-strings.md)  
+-   [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)  
   
-## 请参阅  
- [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

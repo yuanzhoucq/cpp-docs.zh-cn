@@ -1,5 +1,5 @@
 ---
-title: "CD2DLinearGradientBrush 类 |Microsoft 文档"
+title: CD2DLinearGradientBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DLinearGradientBrush class
+- CD2DLinearGradientBrush [MFC], CD2DLinearGradientBrush
+- CD2DLinearGradientBrush [MFC], Attach
+- CD2DLinearGradientBrush [MFC], Create
+- CD2DLinearGradientBrush [MFC], Destroy
+- CD2DLinearGradientBrush [MFC], Detach
+- CD2DLinearGradientBrush [MFC], Get
+- CD2DLinearGradientBrush [MFC], GetEndPoint
+- CD2DLinearGradientBrush [MFC], GetStartPoint
+- CD2DLinearGradientBrush [MFC], SetEndPoint
+- CD2DLinearGradientBrush [MFC], SetStartPoint
+- CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
+- CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
 caps.latest.revision: 17
 author: mikeblome
@@ -46,59 +57,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: dd288478a751d921cc4d9fcd9433e391275cee66
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eea300f4a4cc479dbc433d8e8586bb6294647d43
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 类
-ID2D1LinearGradientBrush 包装器。  
+# <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush Class
+A wrapper for ID2D1LinearGradientBrush.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DLinearGradientBrush : public CD2DGradientBrush;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|构造 CD2DLinearGradientBrush 对象。|  
-|[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|析构函数。 当 D2D 线性渐变画笔对象被销毁时调用。|  
+|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Constructs a CD2DLinearGradientBrush object.|  
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|The destructor. Called when a D2D linear gradient brush object is being destroyed.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DLinearGradientBrush::Attach](#attach)|附加现有的资源的对象的接口|  
-|[CD2DLinearGradientBrush::Create](#create)|创建 CD2DLinearGradientBrush。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DLinearGradientBrush::Destroy](#destroy)|销毁 CD2DLinearGradientBrush 对象。 (重写[CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy)。)|  
-|[CD2DLinearGradientBrush::Detach](#detach)|分离对象中的资源接口|  
-|[CD2DLinearGradientBrush::Get](#get)|返回 ID2D1LinearGradientBrush 接口|  
-|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|检索线性渐变的终止坐标|  
-|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|检索线性渐变的起始坐标|  
-|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|集的线性渐变画笔的坐标空间中的终止坐标|  
-|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|集的线性渐变画笔的坐标空间中的起始坐标|  
+|[CD2DLinearGradientBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DLinearGradientBrush::Create](#create)|Creates a CD2DLinearGradientBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DLinearGradientBrush::Destroy](#destroy)|Destroys a CD2DLinearGradientBrush object. (Overrides [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|  
+|[CD2DLinearGradientBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DLinearGradientBrush::Get](#get)|Returns ID2D1LinearGradientBrush interface|  
+|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|Retrieves the ending coordinates of the linear gradient|  
+|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Retrieves the starting coordinates of the linear gradient|  
+|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|Sets the ending coordinates of the linear gradient in the brush's coordinate space|  
+|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|Sets the starting coordinates of the linear gradient in the brush's coordinate space|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|返回 ID2D1LinearGradientBrush 接口|  
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|Returns ID2D1LinearGradientBrush interface|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|起点和终点的渐变。|  
-|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|指向 ID2D1LinearGradientBrush 的指针。|  
+|[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|The start and end points of the gradient.|  
+|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|A pointer to an ID2D1LinearGradientBrush.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -109,29 +120,29 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
  `CD2DLinearGradientBrush`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dlineargradientbrush"></a>CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush  
- 析构函数。 当 D2D 线性渐变画笔对象被销毁时调用。  
+##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush  
+ The destructor. Called when a D2D linear gradient brush object is being destroyed.  
   
 ```  
 virtual ~CD2DLinearGradientBrush();
 ```  
   
-##  <a name="attach"></a>CD2DLinearGradientBrush::Attach  
- 附加现有的资源的对象的接口  
+##  <a name="attach"></a>  CD2DLinearGradientBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 现有资源的接口。 不能为 NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dlineargradientbrush"></a>CD2DLinearGradientBrush::CD2DLinearGradientBrush  
- 构造 CD2DLinearGradientBrush 对象。  
+##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
+ Constructs a CD2DLinearGradientBrush object.  
   
 ```  
 CD2DLinearGradientBrush(
@@ -145,138 +156,138 @@ CD2DLinearGradientBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
  `gradientStops`  
- 指向一个 D2D1_GRADIENT_STOP 结构数组的指针。  
+ A pointer to an array of D2D1_GRADIENT_STOP structures.  
   
  `gradientStopsCount`  
- 一个值大于或等于 1，gradientStops 数组中指定的渐变停止点的数目。  
+ A value greater than or equal to 1 that specifies the number of gradient stops in the gradientStops array.  
   
  `LinearGradientBrushProperties`  
- 起点和终点的渐变。  
+ The start and end points of the gradient.  
   
  `colorInterpolationGamma`  
- 在哪种颜色执行内插的渐变停止点之间的空间。  
+ The space in which color interpolation between the gradient stops is performed.  
   
  `extendMode`  
- [0，1] 的规范化范围之外的渐变的行为。  
+ The behavior of the gradient outside the [0,1] normalized range.  
   
  `pBrushProperties`  
- 一个指向不透明度和画笔的转换。  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- 指示所有者 (pParentTarget) 将销毁该对象。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DLinearGradientBrush::Create  
- 创建 CD2DLinearGradientBrush。  
+##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
+ Creates a CD2DLinearGradientBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DLinearGradientBrush::Destroy  
- 销毁 CD2DLinearGradientBrush 对象。  
+##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy  
+ Destroys a CD2DLinearGradientBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DLinearGradientBrush::Detach  
- 分离对象中的资源接口  
+##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1LinearGradientBrush* Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向已分离的资源接口指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DLinearGradientBrush::Get  
- 返回 ID2D1LinearGradientBrush 接口  
+##  <a name="get"></a>  CD2DLinearGradientBrush::Get  
+ Returns ID2D1LinearGradientBrush interface  
   
 ```  
 ID2D1LinearGradientBrush* Get();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1LinearGradientBrush 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1LinearGradientBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getendpoint"></a>CD2DLinearGradientBrush::GetEndPoint  
- 检索线性渐变的终止坐标  
+##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint  
+ Retrieves the ending coordinates of the linear gradient  
   
 ```  
 CD2DPointF GetEndPoint() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 线性渐变画笔的坐标空间中的二维终止坐标  
+### <a name="return-value"></a>Return Value  
+ The ending two-dimensional coordinates of the linear gradient, in the brush's coordinate space  
   
-##  <a name="getstartpoint"></a>CD2DLinearGradientBrush::GetStartPoint  
- 检索线性渐变的起始坐标  
+##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint  
+ Retrieves the starting coordinates of the linear gradient  
   
 ```  
 CD2DPointF GetStartPoint() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 线性渐变画笔的坐标空间中二维起始坐标  
+### <a name="return-value"></a>Return Value  
+ The starting two-dimensional coordinates of the linear gradient, in the brush's coordinate space  
   
-##  <a name="m_lineargradientbrushproperties"></a>CD2DLinearGradientBrush::m_LinearGradientBrushProperties  
- 起点和终点的渐变。  
+##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties  
+ The start and end points of the gradient.  
   
 ```  
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;  
 ```  
   
-##  <a name="m_plineargradientbrush"></a>CD2DLinearGradientBrush::m_pLinearGradientBrush  
- 指向 ID2D1LinearGradientBrush 的指针。  
+##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush  
+ A pointer to an ID2D1LinearGradientBrush.  
   
 ```  
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;  
 ```  
   
-##  <a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *  
- 返回 ID2D1LinearGradientBrush 接口  
+##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*  
+ Returns ID2D1LinearGradientBrush interface  
   
 ```  
 operator ID2D1LinearGradientBrush*();
 ```   
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1LinearGradientBrush 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1LinearGradientBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setendpoint"></a>CD2DLinearGradientBrush::SetEndPoint  
- 集的线性渐变画笔的坐标空间中的终止坐标  
+##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint  
+ Sets the ending coordinates of the linear gradient in the brush's coordinate space  
   
 ```  
 void SetEndPoint(CD2DPointF point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `point`  
- 线性渐变画笔的坐标空间中的二维终止坐标  
+ The ending two-dimensional coordinates of the linear gradient, in the brush's coordinate space  
   
-##  <a name="setstartpoint"></a>CD2DLinearGradientBrush::SetStartPoint  
- 集的线性渐变画笔的坐标空间中的起始坐标  
+##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
+ Sets the starting coordinates of the linear gradient in the brush's coordinate space  
   
 ```  
 void SetStartPoint(CD2DPointF point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `point`  
- 线性渐变画笔的坐标空间中二维起始坐标  
+ The starting two-dimensional coordinates of the linear gradient, in the brush's coordinate space  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

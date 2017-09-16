@@ -1,5 +1,5 @@
 ---
-title: "CLinkCtrl 类 |Microsoft 文档"
+title: CLinkCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,11 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CLinkCtrl class
-- Web pages, link control
-- controls [MFC], links
-- links [C++], link control
-- SysLink control
+- CLinkCtrl [MFC], CLinkCtrl
+- CLinkCtrl [MFC], Create
+- CLinkCtrl [MFC], CreateEx
+- CLinkCtrl [MFC], GetIdealHeight
+- CLinkCtrl [MFC], GetIdealSize
+- CLinkCtrl [MFC], GetItem
+- CLinkCtrl [MFC], GetItemID
+- CLinkCtrl [MFC], GetItemState
+- CLinkCtrl [MFC], GetItemUrl
+- CLinkCtrl [MFC], HitTest
+- CLinkCtrl [MFC], SetItem
+- CLinkCtrl [MFC], SetItemID
+- CLinkCtrl [MFC], SetItemState
+- CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
 caps.latest.revision: 23
 author: mikeblome
@@ -52,56 +61,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 710fef79306c906e13e99beac15401835422ecbe
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 08b9d812c3e753c96b4618f9ba84dc1685b92c55
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="clinkctrl-class"></a>CLinkCtrl 类
-提供 Windows 公共 SysLink 控件的功能。  
+# <a name="clinkctrl-class"></a>CLinkCtrl Class
+Provides the functionality of the Windows common SysLink control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CLinkCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinkCtrl::CLinkCtrl](#clinkctrl)|构造 `CLinkCtrl` 对象。|  
+|[CLinkCtrl::CLinkCtrl](#clinkctrl)|Constructs a `CLinkCtrl` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CLinkCtrl::Create](#create)|创建链接控件，并将其附加到`CLinkCtrl`对象。|  
-|[CLinkCtrl::CreateEx](#createex)|创建具有扩展样式的链接控件并将其附加到`CLinkCtrl`对象。|  
-|[CLinkCtrl::GetIdealHeight](#getidealheight)|检索链接控件的理想高度。|  
-|[CLinkCtrl::GetIdealSize](#getidealsize)|计算当前的链接控件，具体取决于指定的宽度的链接的链接文本的首选的高度。|  
-|[CLinkCtrl::GetItem](#getitem)|检索状态和链接控件项的特性。|  
-|[CLinkCtrl::GetItemID](#getitemid)|检索的链接控件项的 ID。|  
-|[CLinkCtrl::GetItemState](#getitemstate)|检索链接控件项的状态。|  
-|[CLinkCtrl::GetItemUrl](#getitemurl)|检索由链接控件项的 URL。|  
-|[CLinkCtrl::HitTest](#hittest)|确定用户是否单击指定的链接。|  
-|[CLinkCtrl::SetItem](#setitem)|设置的状态和链接控件项的特性。|  
-|[CLinkCtrl::SetItemID](#setitemid)|设置的链接控件项的 ID。|  
-|[CLinkCtrl::SetItemState](#setitemstate)|设置链接控件项的状态。|  
-|[CLinkCtrl::SetItemUrl](#setitemurl)|设置由链接控件项的 URL。|  
+|[CLinkCtrl::Create](#create)|Creates a link control and attaches it to a `CLinkCtrl` object.|  
+|[CLinkCtrl::CreateEx](#createex)|Creates a link control with extended styles and attaches it to a `CLinkCtrl` object.|  
+|[CLinkCtrl::GetIdealHeight](#getidealheight)|Retrieves the ideal height of the link control.|  
+|[CLinkCtrl::GetIdealSize](#getidealsize)|Calculates the preferred height of the link text for the current link control, depending on the specified width of the link.|  
+|[CLinkCtrl::GetItem](#getitem)|Retrieves the states and attributes of a link control item.|  
+|[CLinkCtrl::GetItemID](#getitemid)|Retrieves the ID of a link control item.|  
+|[CLinkCtrl::GetItemState](#getitemstate)|Retrieves the state of the link control item.|  
+|[CLinkCtrl::GetItemUrl](#getitemurl)|Retrieves the URL represented by the link control item.|  
+|[CLinkCtrl::HitTest](#hittest)|Determines whether the user clicked the specified link.|  
+|[CLinkCtrl::SetItem](#setitem)|Sets the states and attributes of a link control item.|  
+|[CLinkCtrl::SetItemID](#setitemid)|Sets the ID of a link control item.|  
+|[CLinkCtrl::SetItemState](#setitemstate)|Sets the state of the link control item.|  
+|[CLinkCtrl::SetItemUrl](#setitemurl)|Sets the URL represented by the link control item.|  
   
-## <a name="remarks"></a>备注  
- "链接控制"可以方便地在窗口中嵌入超文本链接。 实际控件是呈现标记向上文本，并在用户单击嵌入的链接时启动适当的应用程序的窗口。 多个链接在一个控件内支持，并可以通过从零开始的索引访问。  
+## <a name="remarks"></a>Remarks  
+ A "link control" provides a convenient way to embed hypertext links in a window. The actual control is a window that renders marked-up text and launches appropriate applications when the user clicks an embedded link. Multiple links are supported within one control and can be accessed by a zero-based index.  
   
- 此控件 (并因此`CLinkCtrl`类) 仅适用于运行在 Windows XP 及更高版本的程序。  
+ This control (and therefore the `CLinkCtrl` class) is available only to programs running under Windows XP and later.  
   
- 有关详细信息，请参阅[SysLink 控件](http://msdn.microsoft.com/library/windows/desktop/bb760706)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [SysLink Control](http://msdn.microsoft.com/library/windows/desktop/bb760706) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -110,18 +119,18 @@ class CLinkCtrl : public CWnd
   
  `CLinkCtrl`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
- 构造 `CLinkCtrl` 对象。  
+##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl  
+ Constructs a `CLinkCtrl` object.  
   
 ```  
 CLinkCtrl();
 ```  
   
-##  <a name="create"></a>CLinkCtrl::Create  
- 创建链接控件，并将其附加到`CLinkCtrl`对象。  
+##  <a name="create"></a>  CLinkCtrl::Create  
+ Creates a link control and attaches it to a `CLinkCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -138,42 +147,42 @@ virtual BOOL Create(DWORD dwStyle,
     UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszLinkMarkup`  
- 指向包含要显示的文本标记的内容以零结尾的字符串指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件的概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)中[MSDN Library](http://go.microsoft.com/fwlink/linkid=556)。  
+ Pointer to a zero-terminated string that contains the marked up text to display. For more information, see the section "Markup and Link Access" in the topic [Overview of SysLink Controls](http://msdn.microsoft.com/library/windows/desktop/bb760706) in the [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
   
  `dwStyle`  
- 指定链接控件的样式。 应用控件样式的任意组合。 请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中`Windows SDK`有关详细信息。  
+ Specifies the link control's style. Apply any combination of control styles. See [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the `Windows SDK` for more information.  
   
  `rect`  
- 指定链接控件的大小和位置。 它可为[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
+ Specifies the link control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 指定链接控件的父窗口。 它不能`NULL`。  
+ Specifies the link control's parent window. It must not be `NULL`.  
   
  `nID`  
- 指定链接控件的 id。  
+ Specifies the link control's ID.  
   
-### <a name="return-value"></a>返回值  
- `true`如果初始化成功，则否则为`false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if initialization was successful; otherwise `false`.  
   
-### <a name="remarks"></a>备注  
- 您构造`CLinkCtrl`两个步骤中的对象。 首先，调用构造函数，然后调用`Create`，它创建的链接控件并将其附加到`CLinkCtrl`对象。 如果您想要扩展的窗口样式用于您的控件，调用[CLinkCtrl::CreateEx](#createex)而不是`Create`。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CLinkCtrl` object in two steps. First, call the constructor and then call `Create`, which creates the link control and attaches it to the `CLinkCtrl` object. If you want to use extended windows styles with your control, call [CLinkCtrl::CreateEx](#createex) instead of `Create`.  
   
- 第二种形式的`Create`方法已弃用。 使用指定的第一个窗体`lpszLinkMarkup`参数。  
+ The second form of the `Create` method is deprecated. Use the first form that specifies the `lpszLinkMarkup` parameter.  
   
-### <a name="example"></a>示例  
- 下面的代码示例定义两个变量，名为`m_Link1`和`m_Link2`，，用于访问两个链接控件。  
+### <a name="example"></a>Example  
+ The following code example defines two variables, named `m_Link1` and `m_Link2`, that are used to access two link controls.  
   
- [!code-cpp[NVC_MFC_CLinkCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CLinkCtrl_s1#2](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]  
   
-### <a name="example"></a>示例  
- 下面的代码示例创建一个基于另一个链接控件的位置的链接控件。 当您的应用程序启动时，资源加载程序创建的第一个链接控件。 当您的应用程序进入 OnInitDialog 方法时，您将创建第二个链接控件相对于第一个链接控件的位置。 然后您调整大小以适合文本，它将显示第二个链接控件。  
+### <a name="example"></a>Example  
+ The following code example creates one link control based on the location of another link control. The resource loader creates the first link control when your application starts. When your application enters the OnInitDialog method, you create the second link control relative to the position of the first link control. Then you resize the second link control to fit the text that it displays.  
   
- [!code-cpp[NVC_MFC_CLinkCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CLinkCtrl::CreateEx  
- 创建具有扩展样式的链接控件并将其附加到`CLinkCtrl`对象。  
+##  <a name="createex"></a>  CLinkCtrl::CreateEx  
+ Creates a link control with extended styles and attaches it to a `CLinkCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -192,48 +201,48 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
     UINT  nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszLinkMarkup`  
- 指向包含要显示的文本标记的内容以零结尾的字符串指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件的概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)中[MSDN Library](http://go.microsoft.com/fwlink/linkid=556)。  
+ Pointer to a zero-terminated string that contains the marked up text to display. For more information, see the section "Markup and Link Access" in the topic [Overview of SysLink Controls](http://msdn.microsoft.com/library/windows/desktop/bb760706) in the [MSDN Library](http://go.microsoft.com/fwlink/linkid=556).  
   
  `dwExStyle`  
- 指定链接控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the link control. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定链接控件的样式。 应用控件样式的任意组合。 有关详细信息，请参阅[常见控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the link control's style. Apply any combination of control styles. For more information, see [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK.  
   
  `rect`  
- 指定链接控件的大小和位置。 它可为[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT](../../mfc/reference/rect-structure1.md)结构。  
+ Specifies the link control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 指定链接控件的父窗口。 它不能`NULL`。  
+ Specifies the link control's parent window. It must not be `NULL`.  
   
  `nID`  
- 指定链接控件的 id。  
+ Specifies the link control's ID.  
   
-### <a name="return-value"></a>返回值  
- `true`如果初始化成功，则否则为`false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if initialization was successful; otherwise `false`.  
   
-### <a name="remarks"></a>备注  
- 使用`CreateEx`而不是[创建](#create)应用扩展的窗口样式常量。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows style constants.  
   
- 第二种形式的`CreateEx`方法已弃用。 使用指定的第一个窗体`lpszLinkMarkup`参数。  
+ The second form of the `CreateEx` method is deprecated. Use the first form that specifies the `lpszLinkMarkup` parameter.  
   
-##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight  
- 检索链接控件的理想高度。  
+##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
+ Retrieves the ideal height of the link control.  
   
 ```  
 int GetIdealHeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 该控件，以像素为单位的理想高度。  
+### <a name="return-value"></a>Return Value  
+ The ideal height of the control, in pixels.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716), as described in the Windows SDK.  
   
-##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize  
- 计算当前的链接控件，具体取决于指定的宽度的链接的链接文本的首选的高度。  
+##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
+ Calculates the preferred height of the link text for the current link control, depending on the specified width of the link.  
   
 ```  
 int GetIdealSize(
@@ -241,40 +250,40 @@ int GetIdealSize(
     SIZE* pSize) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|该链接，以像素为单位的最大宽度。|  
-|[out 一个] *`pSize`|一个指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时，`cy`的成员`SIZE`结构包含由指定的链接文本宽度的理想之选链接文本高度`cxMaxWidth`。 `cx`结构中的成员包含实际需要的链接文本宽度。|  
+|[in] `cxMaxWidth`|The maximum width of the link, in pixels.|  
+|[out] * `pSize`|A pointer to a Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure. When this method returns, the `cy` member of the `SIZE` structure contains the ideal link text height for the link text width that is specified by `cxMaxWidth`. The `cx` member of the structure contains the link text width that is actually needed.|  
   
-### <a name="return-value"></a>返回值  
- 链接文本，以像素为单位的首选的高度。 返回值是相同的值`cy`的成员`SIZE`结构。  
+### <a name="return-value"></a>Return Value  
+ The preferred height of the link text, in pixels. The return value is the same as the value of the `cy` member of the `SIZE` structure.  
   
-### <a name="remarks"></a>备注  
- 以举例说明`GetIdealSize`方法，请参阅中的示例[CLinkCtrl::Create](#create)。  
+### <a name="remarks"></a>Remarks  
+ For an example of the `GetIdealSize` method, see the example in [CLinkCtrl::Create](#create).  
   
- 此方法可发送[LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718)消息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) message, which is described in the Windows SDK.  
   
-##  <a name="getitem"></a>CLinkCtrl::GetItem  
- 检索状态和链接控件项的特性。  
+##  <a name="getitem"></a>  CLinkCtrl::GetItem  
+ Retrieves the states and attributes of a link control item.  
   
 ```  
 BOOL GetItem(PLITEM pItem) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 一个指向[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构接收项的信息。  
+ A pointer to a [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure to receive item information.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720), as described in the Windows SDK.  
   
-##  <a name="getitemid"></a>CLinkCtrl::GetItemID  
- 检索的链接控件项的 ID。  
+##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
+ Retrieves the ID of a link control item.  
   
 ```  
 BOOL GetItemID(
@@ -287,30 +296,30 @@ BOOL GetItemID(
     UINT cchID) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 链接控件项的索引。  
+ The index of a link control item.  
   
  *strID*  
- 一个[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含指定项的 ID。  
+ A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) object containing the ID of the specified item.  
   
  *szID*  
- 以 null 结尾的字符串，其中包含指定项的 ID。  
+ A null-terminated string containing the ID of the specified item.  
   
  *cchID*  
- 以字符为单位的大小*szID*缓冲区。  
+ The size in characters of the *szID* buffer.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
 > [!NOTE]
->  此函数也会返回**FALSE**如果的缓冲区*szID 或 strID*小于**MAX_LINKID_TEXT**。  
+>  This function also returns **FALSE** if the buffer of *szID or strID* is smaller than **MAX_LINKID_TEXT**.  
   
-### <a name="remarks"></a>备注  
- 检索特定链接控件项的 ID。 有关详细信息，请参阅的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Retrieves the ID of a specific link control item. For more information, see the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in the Windows SDK.  
   
-##  <a name="getitemstate"></a>CLinkCtrl::GetItemState  
- 检索链接控件项的状态。  
+##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
+ Retrieves the state of the link control item.  
   
 ```  
 BOOL GetItemState(
@@ -319,24 +328,24 @@ BOOL GetItemState(
     UINT stateMask = LIS_FOCUSED | LIS_ENABLED | LIS_VISITED) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 链接控件项的索引。  
+ The index of a link control item.  
   
  `pnState`  
- 指定的状态项的值。  
+ The value of the specified state item.  
   
  `stateMask`  
- 描述要获取的状态项的标志的组合。 值的列表，请参阅的说明**状态**中的成员[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构。 允许的项目是与中允许使用的相同**状态**。  
+ Combination of flags describing which state item to get. For a list of values, see the description of the **state** member in the [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Allowable items are identical to those allowed in **state**.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 检索指定的状态项中的特定链接控件项的值。 有关详细信息，请参阅的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Retrieves the value of the specified state item of a specific link control item. For more information, see the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in the Windows SDK.  
   
-##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl  
- 检索由链接控件项的 URL。  
+##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
+ Retrieves the URL represented by the link control item.  
   
 ```  
 BOOL GetItemUrl(
@@ -349,64 +358,64 @@ BOOL GetItemUrl(
     UINT cchUrl) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 链接控件项的索引。  
+ The index of a link control item.  
   
  `strUrl`  
- 一个[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含由指定的项的 URL  
+ A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) object containing the URL represented by the specified item  
   
  `szUrl`  
- 以 null 结尾的字符串，包含由指定的项的 URL  
+ A null-terminated string containing the URL represented by the specified item  
   
  *cchUrl*  
- 以字符为单位的大小*szURL*缓冲区。  
+ The size in characters of the *szURL* buffer.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
 > [!NOTE]
->  此函数也会返回**FALSE**如果的缓冲区*szUrl 或 strUrl*小于**MAX_LINKID_TEXT**。  
+>  This function also returns **FALSE** if the buffer of *szUrl or strUrl* is smaller than **MAX_LINKID_TEXT**.  
   
-### <a name="remarks"></a>备注  
- 检索由指定的链接控件项的 URL。 有关详细信息，请参阅的 Win32 消息[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Retrieves the URL represented by the specified link control item. For more information, see the Win32 message [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) in the Windows SDK.  
   
-##  <a name="hittest"></a>CLinkCtrl::HitTest  
- 确定用户是否单击指定的链接。  
+##  <a name="hittest"></a>  CLinkCtrl::HitTest  
+ Determines if the user clicked the specified link.  
   
 ```  
 BOOL HitTest(PLHITTESTINFO phti) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *phti*  
- 指向**LHITTESTINFO**结构，它包含有关链接用户单击的任何信息。  
+ Pointer to a **LHITTESTINFO** structure containing any information about the link the user clicked.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722), as described in the Windows SDK.  
   
-##  <a name="setitem"></a>CLinkCtrl::SetItem  
- 设置的状态和链接控件项的特性。  
+##  <a name="setitem"></a>  CLinkCtrl::SetItem  
+ Sets the states and attributes of a link control item.  
   
 ```  
 BOOL SetItem(PLITEM pItem);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- 一个指向[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构，它包含要设置的信息。  
+ A pointer to a [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure containing the information to set.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 此成员函数实现的行为的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)，如中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724), as described in the Windows SDK.  
   
-##  <a name="setitemid"></a>CLinkCtrl::SetItemID  
- 检索的链接控件项的 ID。  
+##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
+ Retrieves the ID of a link control item.  
   
 ```  
 BOOL SetItemID(
@@ -414,21 +423,21 @@ BOOL SetItemID(
     LPCWSTR szID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 链接控件项的索引。  
+ The index of a link control item.  
   
  *szID*  
- 以 null 结尾的字符串，其中包含指定项的 ID。  
+ A null-terminated string containing the ID of the specified item.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 设置特定链接控件项的 ID。 有关详细信息，请参阅的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Sets the ID of a specific link control item. For more information, see the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in the Windows SDK.  
   
-##  <a name="setitemstate"></a>CLinkCtrl::SetItemState  
- 检索链接控件项的状态。  
+##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
+ Retrieves the state of the link control item.  
   
 ```  
 BOOL SetItemState(
@@ -437,24 +446,24 @@ BOOL SetItemState(
     UINT stateMask = LIS_FOCUSED | LIS_ENABLED | LIS_VISITED);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 链接控件项的索引。  
+ The index of a link control item.  
   
  `pnState`  
- 设置指定的状态项的值。  
+ The value of the specified state item being set.  
   
  `stateMask`  
- 描述要设置的状态项的标志的组合。 值的列表，请参阅的说明**状态**中的成员[LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)结构。 允许的项目是与中允许使用的相同**状态**。  
+ Combination of flags describing the state item being set. For a list of values, see the description of the **state** member in the [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) structure. Allowable items are identical to those allowed in **state**.  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 设置指定的状态项中的特定链接控件项的值。 有关详细信息，请参阅的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Sets the value of the specified state item of a specific link control item. For more information, see the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in the Windows SDK.  
   
-##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl  
- 设置由链接控件项的 URL。  
+##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
+ Sets the URL represented by the link control item.  
   
 ```  
 BOOL SetItemUrl(
@@ -462,20 +471,20 @@ BOOL SetItemUrl(
     LPCWSTR szUrl);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `iLink`  
- 链接控件项的索引。  
+ The index of a link control item.  
   
  `szUrl`  
- 以 null 结尾的字符串，包含由指定的项的 URL  
+ A null-terminated string containing the URL represented by the specified item  
   
-### <a name="return-value"></a>返回值  
- 返回**TRUE**成功时， **FALSE**失败。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>备注  
- 设置由指定的链接控件项的 URL。 有关详细信息，请参阅的 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Sets the URL represented by the specified link control item. For more information, see the Win32 message [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) in the Windows SDK.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;new&gt; 函数 | Microsoft Docs"
+title: '&lt;new&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,49 +12,49 @@ f1_keywords:
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 53a31f533ee777dbbcc486283034094481ab0c31
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0f796dc89314f9f6ac6da5c54f9afd16604fd1f6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-functions"></a>&lt;new&gt; 函数
+# <a name="ltnewgt-functions"></a>&lt;new&gt; functions
 |||  
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
 ##  <a name="nothrow"></a>  nothrow  
- 提供一个对象，用作 **new** 和 **delete** 的 `nothrow` 版本的自变量。  
+ Provides an object to be used as an argument for the `nothrow` versions of **new** and **delete**.  
   
 ```  
 extern const std::nothrow_t nothrow;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该对象用作与参数类型 [std::nothrow_t](../standard-library/nothrow-t-structure.md) 匹配的函数自变量。  
+### <a name="remarks"></a>Remarks  
+ The object is used as a function argument to match the parameter type [std::nothrow_t](../standard-library/nothrow-t-structure.md).  
   
-### <a name="example"></a>示例  
-  有关如何将 `std::nothrow_t` 用作函数参数的示例，请参阅[运算符 new](../standard-library/new-operators.md#op_new) 和[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) and [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of how `std::nothrow_t` is used as a function parameter.  
   
 ##  <a name="set_new_handler"></a>  set_new_handler  
- 安装一个用户函数，当 `operator new` 尝试分配内存失败时会调用该函数。  
+ Installs a user function that is to be called when `operator new` fails in its attempt to allocate memory.  
   
 ```  
 new_handler set_new_handler(new_handler Pnew) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Pnew`  
- 要安装的 new_handler。  
+ The new_handler to be installed.  
   
-### <a name="return-value"></a>返回值  
- 第一次调用时为 0，后续调用时为上一个 `new_handler`。  
+### <a name="return-value"></a>Return Value  
+ 0 on the first call and the previous `new_handler` on subsequent calls.  
   
-### <a name="remarks"></a>备注  
- 该函数将 `Pnew` 存储于其维护的静态[新处理程序](../standard-library/new-typedefs.md#new_handler)指针中，然后返回以前存储在指针中的值。 此新处理程序由[运算符 new](../standard-library/new-operators.md#op_new)( **size_t**) 使用。  
+### <a name="remarks"></a>Remarks  
+ The function stores `Pnew` in a static [new handler](../standard-library/new-typedefs.md#new_handler) pointer that it maintains, then returns the value previously stored in the pointer. The new handler is used by [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_set_new_handler.cpp  
@@ -117,7 +117,7 @@ The new_handler is called:
 bad allocation  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 

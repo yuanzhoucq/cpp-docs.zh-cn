@@ -1,5 +1,5 @@
 ---
-title: "is_pointer 类 | Microsoft Docs"
+title: is_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_pointer
 - type_traits/std::is_pointer
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 3bb2597b11ed4b5ebafac0e8548f9ddc18ac5fc4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e1553b6d2c77e3fc0f026817cb6e42b7eb8f2695
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ispointer-class"></a>is_pointer 类
-测试类型是否为指针。  
+# <a name="ispointer-class"></a>is_pointer Class
+Tests if type is a pointer.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_pointer;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 是指向 `void` 的指针、指向对象的指针、指向函数的指针或是其中之一的 `cv-qualified` 形式，类型谓词的实例将为 true，否则为 false。 请注意，如果 `Ty` 是指向成员的指针或指向成员函数的指针，则 `is_pointer` 为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a pointer to `void`, a pointer to an object, or a pointer to a function, or a `cv-qualified` form of one of them, otherwise it holds false. Note that `is_pointer` holds false if `Ty` is a pointer to member or a pointer to member function.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_pointer.cpp   
@@ -98,13 +97,13 @@ is_pointer<int> == false
 is_pointer<int *> == true  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_member_pointer 类](../standard-library/is-member-pointer-class.md)   
- [is_reference 类](../standard-library/is-reference-class.md)
+ [is_member_pointer Class](../standard-library/is-member-pointer-class.md)   
+ [is_reference Class](../standard-library/is-reference-class.md)
 

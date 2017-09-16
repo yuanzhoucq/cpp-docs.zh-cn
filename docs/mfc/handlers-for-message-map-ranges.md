@@ -1,154 +1,172 @@
 ---
-title: "消息映射范围的处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令处理, 命令更新处理程序"
-  - "命令 ID, 消息映射"
-  - "命令传送, 命令更新处理程序"
-  - "命令更新处理程序"
-  - "控件通知消息"
-  - "控件 [MFC], 通知"
-  - "处理函数"
-  - "处理函数, 声明"
-  - "处理函数, 消息映射范围"
-  - "处理程序"
-  - "处理程序, 消息映射范围"
-  - "映射, 消息范围"
-  - "消息处理程序"
-  - "消息处理, 消息处理程序函数"
-  - "消息映射, 消息处理程序函数"
-  - "消息映射, 范围"
-  - "消息范围"
-  - "消息范围, 映射"
-  - "消息映射范围"
+title: Handlers for Message-Map Ranges | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- handlers [MFC], message-map ranges
+- message maps [MFC]], message handler functions
+- message maps [MFC]], ranges
+- control-notification messages [MFC]
+- command IDs [MFC], message mapping
+- message-map ranges [MFC]
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- mappings [MFC]], message ranges
+- command handling [MFC], command update handlers
+- controls [MFC], notifications
+- handler functions [MFC], message-map ranges
+- handler functions [MFC]
+- command update handlers [MFC]
+- command routing [MFC], command update handlers
+- message ranges [MFC]
+- handler functions [MFC], declaring
+- message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 消息映射范围的处理程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0fe020931bc63084b3b7bfa640cec95afae0108
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明映射范围消息添加到一条消息处理程序 \(函数代替为仅一的函数映射。消息\)。  
+---
+# <a name="handlers-for-message-map-ranges"></a>Handlers for Message-Map Ranges
+This article explains how to map a range of messages to a single message handler function (instead of mapping one message to only one function).  
   
- 当需要相同时，处理多个消息或控件通知有时间。  在此时间，您可能希望映射任何消息到单个处理程序函数。  消息映射范围允许这样做一连续范围的消息：  
+ There are times when you need to process more than one message or control notification in exactly the same way. At such times, you might wish to map all of the messages to a single handler function. Message-map ranges allow you to do this for a contiguous range of messages:  
   
--   可以映射范围命令 ID:  
+-   You can map ranges of command IDs to:  
   
-    -   命令处理程序函数。  
+    -   A command handler function.  
   
-    -   命令更新处理程序函数。  
+    -   A command update handler function.  
   
--   可以映射范围的控件通知消息控件 ID 到消息处理函数。  
+-   You can map control-notification messages for a range of control IDs to a message handler function.  
   
- 本文涵盖的主题包括：  
+ Topics covered in this article include:  
   
--   [编写消息映射项](#_core_writing_the_message.2d.map_entry)  
+-   [Writing the message-map entry](#_core_writing_the_message.2d.map_entry)  
   
--   [声明处理程序函数](#_core_declaring_the_handler_function)  
+-   [Declaring the handler function](#_core_declaring_the_handler_function)  
   
--   [范围的示例命令 ID](#_core_example_for_a_range_of_command_ids)  
+-   [Example for a range of command IDs](#_core_example_for_a_range_of_command_ids)  
   
--   [范围的示例控件 ID](#_core_example_for_a_range_of_control_ids)  
+-   [Example for a range of control IDs](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a> 编写消息映射项  
- 如下面的示例所示在 .cpp 文件，添加消息映射项，例如：  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Writing the Message-Map Entry  
+ In the .CPP file, add your message-map entry, as shown in the following example:  
   
- [!CODE [NVC_MFCMessageHandling#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#6)]  
+ [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
   
- 消息映射项包括以下项：  
+ The message-map entry consists of the following items:  
   
--   消息映射范围宏：  
+-   The message-map range macro:  
   
-    -   [ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)  
+    -   [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)  
   
-    -   [ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)  
+    -   [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
   
-    -   [ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)  
+    -   [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)  
   
--   至宏的参数：  
+-   Parameters to the macro:  
   
-     前两宏采用三个参数：  
+     The first two macros take three parameters:  
   
-    -   开始范围的命令 ID  
+    -   The command ID that starts the range  
   
-    -   结束范围的命令 ID  
+    -   The command ID that ends the range  
   
-    -   消息处理程序函数的名称  
+    -   The name of the message handler function  
   
-     范围命令 ID 必须连续的。  
+     The range of command IDs must be contiguous.  
   
-     第三，宏 `ON_CONTROL_RANGE`，它采用一个第一个参数：一控件通知消息，例如 **EN\_CHANGE**。  
+     The third macro, `ON_CONTROL_RANGE`, takes an additional first parameter: a control-notification message, such as **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a> 声明处理程序函数  
- 将处理程序的函数声明。H 文件。  下面的代码演示这可能如何查找，如下所示：  
+##  <a name="_core_declaring_the_handler_function"></a> Declaring the Handler Function  
+ Add your handler function declaration in the .H file. The following code shows how this might look, as shown below:  
   
- [!CODE [NVC_MFCMessageHandling#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#7)]  
+ [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- 单个命令的处理程序函数通常不采用参数。  除了更新处理程序函数以外，消息映射范围的处理程序函数需要一个额外的参数，即 `nID`，**UINT**类型。  此参数是第一个参数。  额外的参数满足需要额外的命令 ID 指定命令用户实际上并选择。  
+ Handler functions for single commands normally take no parameters. With the exception of update handler functions, handler functions for message-map ranges require an extra parameter, `nID`, of type **UINT**. This parameter is the first parameter. The extra parameter accommodates the extra command ID needed to specify which command the user actually chose.  
   
- 有关更新处理程序函数的参数要求的更多信息，请参见 [范围的示例命令 ID](#_core_example_for_a_range_of_command_ids)。  
+ For more information about parameter requirements for updating handler functions, see [Example for a Range of Command IDs](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a> 范围的示例命令 ID  
- 何时可以使用范围？  一个示例在类似的命令处理缩放在 MFC 示例 [HIERSVR](../top/visual-cpp-samples.md)。  此命令缩放视图时，缩放将在 25% 和 300% 之间。为其正常大小  HIERSVR 的视图类使用值域处理类似的消息映射项的缩放命令：  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Example for a Range of Command IDs  
+ When might you use ranges One example is in handling commands like the Zoom command in the MFC sample [HIERSVR](../visual-cpp-samples.md). This command zooms the view, scaling it between 25% and 300% of its normal size. HIERSVR's view class uses a range to handle the Zoom commands with a message-map entry resembling this:  
   
- [!CODE [NVC_MFCMessageHandling#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#8)]  
+ [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
   
- 当您写入消息映射项时，指定：  
+ When you write the message-map entry, you specify:  
   
--   两个命令 ID、开始和结束连续的范围。  
+-   Two command IDs, beginning and ending a contiguous range.  
   
-     下面是这些 `ID_VIEW_ZOOM25` 和 `ID_VIEW_ZOOM300`。  
+     Here they are `ID_VIEW_ZOOM25` and `ID_VIEW_ZOOM300`.  
   
--   命令的处理程序函数的名称。  
+-   The name of the handler function for the commands.  
   
-     下面是其 `OnZoom`。  
+     Here it's `OnZoom`.  
   
- 函数声明将类似于：  
+ The function declaration would resemble this:  
   
- [!CODE [NVC_MFCMessageHandling#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#9)]  
+ [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- 用例更新处理程序函数的 flavor 和可能很有用。  相当常见的写许多命令的 `ON_UPDATE_COMMAND_UI` 处理程序并发现自己文本，或者复制，反复相同的代码。  解决方案会映射范围命令 ID 对更新处理程序函数使用 `ON_UPDATE_COMMAND_UI_RANGE` 宏。  命令 ID 必须构成一连续的范围。  有关示例，请参见 **OnUpdateZoom** 处理程序及其 `ON_UPDATE_COMMAND_UI_RANGE` 消息映射项在 HIERSVR 示例中视图类。  
+ The case of update handler functions is similar, and likely to be more widely useful. It's quite common to write `ON_UPDATE_COMMAND_UI` handlers for a number of commands and find yourself writing, or copying, the same code over and over. The solution is to map a range of command IDs to one update handler function using the `ON_UPDATE_COMMAND_UI_RANGE` macro. The command IDs must form a contiguous range. For an example, see the **OnUpdateZoom** handler and its `ON_UPDATE_COMMAND_UI_RANGE` message-map entry in the HIERSVR sample's view class.  
   
- 更新单个命令的处理程序函数通常采用单个参数，`pCmdUI`，**CCmdUI\***类型。  与不同处理程序函数，更新消息映射范围的处理程序函数不需要一个额外的参数，即 `nID`，**UINT**类型。  命令 ID，需要的指定命令用户实际上并选择，在 `CCmdUI` 对象中。  
+ Update handler functions for single commands normally take a single parameter, `pCmdUI`, of type **CCmdUI\***. Unlike handler functions, update handler functions for message-map ranges do not require an extra parameter, `nID`, of type **UINT**. The command ID, which is needed to specify which command the user actually chose, is found in the `CCmdUI` object.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a> 示例控件 ID的例子  
- 另一个有趣大小写映射范围的控件通知消息控件 ID。一个处理程序。  假设用户可单击按钮 10 中的\)。  所有映射到 10 个按钮一个处理程序，如下所示：消息映射项：  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Example for a Range of Control IDs  
+ Another interesting case is mapping control-notification messages for a range of control IDs to a single handler. Suppose the user can click any of 10 buttons. To map all 10 buttons to one handler, your message-map entry would look like this:  
   
- [!CODE [NVC_MFCMessageHandling#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#10)]  
+ [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
   
- 在中编写消息映射中，`ON_CONTROL_RANGE` 宏指定：  
+ When you write the `ON_CONTROL_RANGE` macro in your message map, you specify:  
   
--   特定控件通知消息。  
+-   A particular control-notification message.  
   
-     此处的为 **BN\_CLICKED**。  
+     Here it's **BN_CLICKED**.  
   
--   控件 ID 值与相邻范围的控件。  
+-   The control ID values associated with the contiguous range of controls.  
   
-     它们是 `IDC_BUTTON1` 和 `IDC_BUTTON10`。  
+     Here these are `IDC_BUTTON1` and `IDC_BUTTON10`.  
   
--   消息处理程序函数的名称。  
+-   The name of the message handler function.  
   
-     下面是其 `OnButtonClicked`。  
+     Here it's `OnButtonClicked`.  
   
- 当您编写处理程序函数，如下面的所示，请指定附加的 **UINT** 参数，例如：  
+ When you write the handler function, specify the extra **UINT** parameter, as shown in the following:  
   
- [!CODE [NVC_MFCMessageHandling#11](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#11)]  
+ [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]  
   
- 单个 **BN\_CLICKED** 消息的 `OnButtonClicked` 处理程序未采用任何参数。  范围内的同一按钮处理程序接受一个 **UINT**。  额外的参数允许标识特定控件负责生成 **BN\_CLICKED** 消息。  
+ The `OnButtonClicked` handler for a single **BN_CLICKED** message takes no parameters. The same handler for a range of buttons takes one **UINT**. The extra parameter allows for identifying the particular control responsible for generating the **BN_CLICKED** message.  
   
- 示例中显示的代码是典型的：转换值传递给。消息大小和断言内的 `int` 是这样。  然后可以采取按钮单击的一些附加操作。  
+ The code shown in the example is typical: converting the value passed to an `int` within the message range and asserting that this is the case. Then you might take some different action depending on which button was clicked.  
   
-## 请参阅  
- [声明消息处理程序函数](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

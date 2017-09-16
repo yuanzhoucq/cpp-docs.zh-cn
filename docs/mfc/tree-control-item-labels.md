@@ -1,37 +1,56 @@
 ---
-title: "树控件项标签 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 类, 项标签"
-  - "项标签"
-  - "项标签, 树控件"
-  - "标签, CTreeCtrl 项"
-  - "树控件, 项标签"
+title: Tree Control Item Labels | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], item labels
+- labels, CTreeCtrl items
+- CTreeCtrl class [MFC], item labels
+- item labels, tree controls
+- item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 树控件项标签
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f81e05ccda98bca47c810f1e948b51652c187017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-通常指定项标签的文本，在将项添加为树控件 \(\)。[CTreeCtrl](../mfc/reference/ctreectrl-class.md) `InsertItem` 成员函数来传递定义项的一个属性 [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) 结构，包括包含的标签文本的字符串。  `InsertItem` 可以调用使用参数的各种组合的一些重载。  
+---
+# <a name="tree-control-item-labels"></a>Tree Control Item Labels
+You typically specify the text of an item's label when adding the item to the tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). The `InsertItem` member function can pass a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that defines the item's properties, including a string containing the text of the label. `InsertItem` has several overloads that can be called with various combinations of parameters.  
   
- 树控件的每个项分配存储内存；项的标签文本将占用此内存的重要的一部分。  如果应用程序维护字符串的副本在树控件中，您可以通过指定 **LPSTR\_TEXTCALLBACK** 值。`TV_ITEM` 的 **pszText** 成员或 `lpszItem` 参数的控件降低内存要求而不是传递实际字符串为树控件。  使用 **LPSTR\_TEXTCALLBACK** 会导致树从控制应用程序检索项标签的文本项，当需要重新绘制。  若要检索文本，该树控件发送通知消息，包括 [TVN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518)[NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) 结构的地址。  必须通过设置包括结构的相应成员的响应。  
+ A tree control allocates memory for storing each item; the text of the item labels takes up a significant portion of this memory. If your application maintains a copy of the strings in the tree control, you can decrease the memory requirements of the control by specifying the **LPSTR_TEXTCALLBACK** value in the **pszText** member of `TV_ITEM` or the `lpszItem` parameter instead of passing actual strings to the tree control. Using **LPSTR_TEXTCALLBACK** causes the tree control to retrieve the text of an item's label from the application whenever the item needs to be redrawn. To retrieve the text, the tree control sends a [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) notification message, which includes the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. You must respond by setting the appropriate members of the included structure.  
   
- 树控件使用从创建树控件的过程堆分配的内存。  项的最大页数。基于树控件的内存量。堆中可用。  每个项都采用 64 字节。  
+ A tree control uses memory allocated from the heap of the process that creates the tree control. The maximum number of items in a tree control is based on the amount of memory available in the heap. Each item takes 64 bytes.  
   
-## 请参阅  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

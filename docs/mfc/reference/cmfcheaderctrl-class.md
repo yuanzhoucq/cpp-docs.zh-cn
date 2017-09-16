@@ -1,5 +1,5 @@
 ---
-title: "CMFCHeaderCtrl 类 |Microsoft 文档"
+title: CMFCHeaderCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCHeaderCtrl class
+- CMFCHeaderCtrl [MFC], CMFCHeaderCtrl
+- CMFCHeaderCtrl [MFC], EnableMultipleSort
+- CMFCHeaderCtrl [MFC], GetColumnState
+- CMFCHeaderCtrl [MFC], GetSortColumn
+- CMFCHeaderCtrl [MFC], IsAscending
+- CMFCHeaderCtrl [MFC], IsDialogControl
+- CMFCHeaderCtrl [MFC], IsMultipleSort
+- CMFCHeaderCtrl [MFC], RemoveSortColumn
+- CMFCHeaderCtrl [MFC], SetSortColumn
+- CMFCHeaderCtrl [MFC], OnDrawItem
+- CMFCHeaderCtrl [MFC], OnDrawSortArrow
+- CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 caps.latest.revision: 29
 author: mikeblome
@@ -46,62 +57,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c49ee61b6441e79a0c3c4c1aa133b4bce1578103
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 294d624d9b95bc927a419268e71953a04a27182d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcheaderctrl-class"></a>CListCtrl
-`CMFCHeaderCtrl`类支持对标头控件中的多个列进行排序。  
+# <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
+The `CMFCHeaderCtrl` class supports sorting multiple columns in a header control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCHeaderCtrl : public CHeaderCtrl  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|构造 `CMFCHeaderCtrl` 对象。|  
-|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|析构函数。|  
+|[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Constructs a `CMFCHeaderCtrl` object.|  
+|`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|启用或禁用*多列排序*当前标头控件的模式。|  
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|指示某一列未排序，还是在升序或降序进行排序。|  
-|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|检索标头控件中第一个排序的列的从零开始索引。|  
-|`CMFCHeaderCtrl::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCHeaderCtrl::IsAscending](#isascending)|指示标头控件中的任何列按升序排序。|  
-|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|表示当前标头控件的父窗口是否是一个对话框。|  
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|该值指示当前的标头控件是否处于*多列排序*模式。|  
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|从对列进行排序的列表中移除指定的列。|  
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|标头控件中设置指定列的排序顺序。|  
+|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Enables or disables *multiple column sort* mode for the current header control.|  
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indicates whether a column is not sorted, or is sorted in ascending or descending order.|  
+|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Retrieves the zero-based index of the first sorted column in the header control.|  
+|`CMFCHeaderCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Indicates whether any column in the header control is sorted in ascending order.|  
+|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indicates whether the parent window of the current header control is a dialog box.|  
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indicates whether the current header control is in *multiple column sort* mode.|  
+|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Removes the specified column from the list of sort columns.|  
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Sets the sort order of a specified column in a header control.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|由框架用于绘制标头控件列调用。|  
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|由框架用于绘制排序箭头调用。|  
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|由框架来填充标头控件列的背景调用。|  
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Called by the framework to draw a header control column.|  
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Called by the framework to draw the sort arrow.|  
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Called by the framework to fill the background of a header control column.|  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何构造的对象`CMFCHeaderCtrl`类，以及如何启用*多列排序*当前标头控件的模式。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCHeaderCtrl` class, and how to enable *multiple column sort* mode for the current header control.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&24;](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
   
-## <a name="remarks"></a>备注  
- `CMFCHeaderCtrl`类绘制排序箭头对标头控件列来指示对列进行排序。 使用*多列排序*模式下，如果一组的父级列表控件中的列 ( [CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)) 可以在同一时间进行排序。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCHeaderCtrl` class draws a sort arrow on a header control column to indicate that the column is sorted. Use *multiple column sort* mode if a set of columns in the parent list control ( [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)) can be sorted at the same time.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,20 +123,20 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
  [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxheaderctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxheaderctrl.h  
   
-##  <a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl  
- 构造 `CMFCHeaderCtrl` 对象。  
+##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl  
+ Constructs a `CMFCHeaderCtrl` object.  
   
 ```  
 CMFCHeaderCtrl::CMFCHeaderCtrl()  
 ```  
   
-### <a name="remarks"></a>备注  
- 此构造函数初始化为指定值的以下成员变量︰  
+### <a name="remarks"></a>Remarks  
+ This constructor initializes the following member variables to the specified values:  
   
-|成员变量|值|  
+|Member variable|Value|  
 |---------------------|-----------|  
 |`m_bIsMousePressed`|`FALSE`|  
 |`m_bMultipleSort`|`FALSE`|  
@@ -135,93 +146,93 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bIsDlgControl`|`FALSE`|  
 |`m_hFont`|`NULL`|  
   
-##  <a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort  
- 启用或禁用*多列排序*当前标头控件的模式。  
+##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
+ Enables or disables *multiple column sort* mode for the current header control.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用多个列排序模式;`FALSE`禁用多个列排序模式以及从排序的列的列表中删除任何列。 默认值为 `TRUE`。  
+ `TRUE` to enable multiple column sort mode; `FALSE` to disable multiple column sort mode and to remove any columns from the list of sorted columns. The default value is `TRUE`.  
   
-### <a name="remarks"></a>备注  
- 此方法用于启用或禁用多个列排序模式。 如果标头控件是在多个列排序模式中两个或多个列可以参与排序。  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
   
-##  <a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState  
- 指示列是否是未排序，或者按升序或降序排序。  
+##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
+ Indicates whether a column is unsorted, or is sorted in ascending or descending order.  
   
 ```  
 int GetColumnState(int iColumn) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 列的从零开始的索引。  
+ The zero-based index of a column.  
   
-### <a name="return-value"></a>返回值  
- 一个值，指示指定的列的排序状态。 下表列出了可能的值︰  
+### <a name="return-value"></a>Return Value  
+ A value that indicate the sort status of the specified column. The following table lists the possible values:  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
-|-1|按降序排序。|  
-|0|不进行排序。|  
-|1|按升序排序。|  
+|-1|Sorted in descending order.|  
+|0|Not sorted.|  
+|1|Sorted in ascending order.|  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn  
- 检索标头控件中第一个排序的列的从零开始索引。  
+##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn  
+ Retrieves the zero-based index of the first sorted column in the header control.  
   
 ```  
 int GetSortColumn() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 排的序列，则为-1 如果找到未排序的列的索引。  
+### <a name="return-value"></a>Return Value  
+ The index of a sorted column, or -1 if no sorted column is found.  
   
-### <a name="remarks"></a>备注  
- 如果标头控件位于*多列排序*模式，并且您编译该应用程序在调试模式下，此方法断言，并建议您在使用[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)方法相反。 如果标头控件处于多个列排序模式，并且编译该应用程序以发布模式，则此方法返回-1。  
+### <a name="remarks"></a>Remarks  
+ If the header control is in *multiple column sort* mode and you compiled the application in debug mode, this method asserts and advises you to use the [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) method instead. If the header control is in multiple column sort mode and you compiled the application in retail mode, this method returns -1.  
   
-##  <a name="isascending"></a>CMFCHeaderCtrl::IsAscending  
- 指示标头控件中的任何列按升序排序。  
+##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
+ Indicates whether any column in the header control is sorted in ascending order.  
   
 ```  
 BOOL IsAscending() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果标头控件中的任何列按升序排序。否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if any column in the header control is sorted in ascending order; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此方法返回的值用于在标题控件项上显示相应的排序箭头。 使用[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)方法设置的排序顺序。  
+### <a name="remarks"></a>Remarks  
+ The value that this method returns is used to display the appropriate sort arrow on the header control item. Use the [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) method to set the sort order.  
   
-##  <a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl  
- 表示当前标头控件的父窗口是否是一个对话框。  
+##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
+ Indicates whether the parent window of the current header control is a dialog box.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果当前的标头控件的父窗口对话框;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent window of the current header control is a dialog box; otherwise, `FALSE`.  
   
-##  <a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort  
- 该值指示当前的标头控件是否处于*多列排序*模式。  
+##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
+ Indicates whether the current header control is in *multiple column sort* mode.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果启用了多个列排序模式;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if multiple column sort mode is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)方法来启用或禁用多个列排序模式。 如果标头控件是在多个列排序模式中两个或多个列可以参与排序。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) method to enable or disable multiple column sort mode. Two or more columns can participate in a sort if the header control is in multiple column sort mode.  
   
-##  <a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem  
- 由框架用于绘制标头控件列调用。  
+##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
+ Called by the framework to draw a header control column.  
   
 ```  
 virtual void OnDrawItem(
@@ -232,24 +243,24 @@ virtual void OnDrawItem(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `iItem`  
- 要绘制的项的从零开始的索引。  
+ The zero-based index of the item to draw.  
   
  [in] `rect`  
- 要绘制的项的边框。  
+ The bounding rectangle of the item to draw.  
   
  [in] `bIsPressed`  
- `TRUE`若要绘制项处于按下状态;否则为`FALSE`。  
+ `TRUE` to draw the item in pressed state; otherwise, `FALSE`.  
   
  [in] `bIsHighlighted`  
- `TRUE`若要绘制突出显示的状态; 中的项否则为`FALSE`。  
+ `TRUE` to draw the item in highlighted state; otherwise, `FALSE`.  
   
-##  <a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow  
- 由框架用于绘制排序箭头调用。  
+##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
+ Called by the framework to draw the sort arrow.  
   
 ```  
 virtual void OnDrawSortArrow(
@@ -257,39 +268,39 @@ virtual void OnDrawSortArrow(
     CRect rectArrow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
  [in] `rectArrow`  
- 排序箭头的边框。  
+ The bounding rectangle of the sort arrow.  
   
-##  <a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground  
- 由框架来填充标头控件列的背景调用。  
+##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
+ Called by the framework to fill the background of a header control column.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 一个指向设备上下文的指针。  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn  
- 从对列进行排序的列表中移除指定的列。  
+##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
+ Removes the specified column from the list of sort columns.  
   
 ```  
 void RemoveSortColumn(int iColumn);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 要删除的列的从零开始的索引。  
+ The zero-based index of the column to remove.  
   
-##  <a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn  
- 标头控件中设置指定列的排序顺序。  
+##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
+ Sets the sort order of a specified column in a header control.  
   
 ```  
 void SetSortColumn(
@@ -298,27 +309,27 @@ void SetSortColumn(
     BOOL bAdd=FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `iColumn`  
- 标头控件列的从零开始索引。 如果此参数也不可小于零，此方法从对列进行排序的列表中删除所有列。  
+ The zero-based index of a header control column. If this parameter is less than zero, this method removes all columns from the list of sort columns.  
   
  [in] `bAscending`  
- 指定列的排序顺序，`iColumn`参数指定。 `TRUE`若要设置升序顺序;`FALSE`设置降序排序。 默认值为 `TRUE`。  
+ Specifies the sort order of the column that the `iColumn` parameter specifies. `TRUE` to set ascending order; `FALSE` to set descending order. The default value is `TRUE`.  
   
  [in] `bAdd`  
- `TRUE`对列的排序顺序设置`iColumn`参数指定。  
+ `TRUE` to set the sort order of the column that the `iColumn` parameter specifies.  
   
- 如果当前的标头控件位于*多列排序*模式下，此方法将指定的列添加到对列进行排序的列表。 使用[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)来设置多个列排序模式。  
+ If the current header control is in *multiple column sort* mode, this method adds the specified column to the list of sort columns. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) to set multiple column sort mode.  
   
- 如果未设置多个列排序模式并且以调试模式编译此方法，该方法断言。 如果未设置多个列排序模式并且以发布模式编译此方法，此方法首先从排序的列的列表中删除所有列，然后将指定的列添加到列表。  
+ If multiple column sort mode is not set and this method is compiled in debug mode, this method asserts. If multiple column sort mode is not set and this method is compiled in retail mode, this method first removes all columns from the list of sort columns, and then adds the specified column to the list.  
   
- `FALSE`为第一个从排序的列的列表中删除所有列，然后添加到列表的指定的列。 默认值为 `FALSE`。  
+ `FALSE` to first remove all columns from the list of sort columns, and then add the specified column to the list. The default value is `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此方法用于设置列的排序顺序。 如有必要，此方法会将列添加到对列进行排序的列表。 标头控件使用的排序顺序绘制点上移或下移一个排序箭头。  
+### <a name="remarks"></a>Remarks  
+ Use this method to set the sort order of a column. If necessary, this method adds the column to the list of sort columns. The header control uses the sort order to draw a sort arrow that points up or down.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCListCtrl 类](../../mfc/reference/cmfclistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)
 

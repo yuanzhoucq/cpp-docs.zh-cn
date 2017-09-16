@@ -1,5 +1,5 @@
 ---
-title: "auto_ptr 类 | Microsoft 文档"
+title: auto_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- auto_ptr
 - memory/std::auto_ptr
 - memory/std::auto_ptr::element_type
 - memory/std::auto_ptr::get
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- auto_ptr class
+- std::auto_ptr [C++]
+- std::auto_ptr [C++], element_type
+- std::auto_ptr [C++], get
+- std::auto_ptr [C++], release
+- std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
 caps.latest.revision: 26
 author: corob-msft
@@ -38,21 +41,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 320dbc4d09bfcc65fce8471ce23e127f28deb6b9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a60c75b2bf00ef780e08682eb82b6c8218bc5f0f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="autoptr-class"></a>auto_ptr 类
-在资源周围包装智能指针，确保在块失去控制权时自动销毁该资源。  
+# <a name="autoptr-class"></a>auto_ptr Class
+Wraps a smart pointer around a resource that ensures the resource is destroyed automatically when control leaves a block.  
   
- 功能更强大的 `unique_ptr` 类可取代 `auto_ptr`。 有关详细信息，请参阅 [unique_ptr 类](../standard-library/unique-ptr-class.md)。  
+ The more capable `unique_ptr` class supersedes `auto_ptr`. For more information, see [unique_ptr Class](../standard-library/unique-ptr-class.md).  
   
- 有关 `throw()` 和异常处理的详细信息，请参阅[异常规范（引发）](../cpp/exception-specifications-throw-cpp.md)。  
+ For more information about `throw()` and exception handling, see [Exception Specifications (throw)](../cpp/exception-specifications-throw-cpp.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
  ```   
 class auto_ptr {
 public:
@@ -75,57 +78,57 @@ public:
     void reset(Type* ptr = 0);
 };
 ```  
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `right`  
- 可从中获取现有资源的 `auto_ptr`。  
+ The `auto_ptr` from which to get an existing resource.  
   
  `ptr`  
- 指定用于替换已存储指针的指针。  
+ The pointer specified to replace the stored pointer.  
   
-## <a name="remarks"></a>备注  
- 此模板类描述调用的智能指针`auto_ptr`，指向已分配对象。 指针必须为 Null 或指定 `new` 所分配的对象。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。 （它在与 Null 指针进行转移后替换存储值。）`auto_ptr<Type>` 的析构函数将删除已分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。  
+## <a name="remarks"></a>Remarks  
+ The template class describes a smart pointer, called an `auto_ptr`, to an allocated object. The pointer must be either null or designate an object allocated by `new`. The `auto_ptr` transfers ownership if its stored value is assigned to another object. (It replaces the stored value after a transfer with a null pointer.) The destructor for `auto_ptr<Type>` deletes the allocated object. The `auto_ptr<Type>` ensures that an allocated object is automatically deleted when control leaves a block, even through a thrown exception. You should not construct two `auto_ptr<Type>` objects that own the same object.  
   
- 可以将 `auto_ptr<Type>` 对象作为函数调用的参数按值传递。 `auto_ptr` 不能是任何标准库容器的元素。 你无法使用 C++ 标准库容器可靠地管理一系列 `auto_ptr<Type>` 对象。  
+ You can pass an `auto_ptr<Type>` object by value as an argument to a function call. An `auto_ptr` cannot be an element of any Standard Library container. You cannot reliably manage a sequence of `auto_ptr<Type>` objects with a C++ Standard Library container.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[auto_ptr](#auto_ptr)|`auto_ptr` 类型的对象的构造函数。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|该类型是模板参数 `Type` 的同义词。|  
+|[auto_ptr](#auto_ptr)|The constructor for objects of type `auto_ptr`.|  
   
-### <a name="member-functions"></a>成员函数  
-  
-|||  
-|-|-|  
-|[get](#get)|该成员函数将返回存储的指针 `myptr`。|  
-|[release](#release)|该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。|  
-|[reset](#reset)|此成员函数对表达式 `delete myptr` 进行求值，但仅在存储的指针值 `myptr` 因函数调用而更改时进行。 然后它将存储的指针替换为 `ptr`。|  
-  
-### <a name="operators"></a>运算符  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|一个赋值运算符，用于将所有权从一个 `auto_ptr` 对象转移到到其他对象。|  
-|[operator*](#op_star)|`auto_ptr` 类型的对象的取消引用运算符。|  
-|[operator->](#operator-_gt)|允许成员访问的运算符。|  
-|[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|将某种 `auto_ptr` 强制转换为另一种 `auto_ptr`。|  
-|[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|将 `auto_ptr` 强制转换为 `auto_ptr_ref`。|  
+|[element_type](#element_type)|The type is a synonym for the template parameter `Type`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<memory>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[get](#get)|The member function returns the stored pointer `myptr`.|  
+|[release](#release)|The member replaces the stored pointer `myptr` with a null pointer and returns the previously stored pointer.|  
+|[reset](#reset)|The member function evaluates the expression `delete myptr`, but only if the stored pointer value `myptr` changes as a result of function call. It then replaces the stored pointer with `ptr`.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator=](#op_eq)|An assignment operator that transfers ownership from one `auto_ptr` object to another.|  
+|[operator*](#op_star)|The dereferencing operator for objects of type `auto_ptr`.|  
+|[operator->](#operator-_gt)|The operator for allowing member access.|  
+|[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Casts from one kind of `auto_ptr` to another kind of `auto_ptr`.|  
+|[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Casts from an `auto_ptr` to an `auto_ptr_ref`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
   
 ##  <a name="auto_ptr"></a>  auto_ptr::auto_ptr  
- `auto_ptr` 类型的对象的构造函数。  
+ The constructor for objects of type `auto_ptr`.  
   
 ```   
 explicit auto_ptr(Type* ptr  = 0) throw();
@@ -138,21 +141,21 @@ template <class Other>
 auto _ptr(auto _ptr<Other>& right) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 指向 `auto_ptr` 封装的对象的指针。  
+ The pointer to the object that `auto_ptr` encapsulates.  
   
  `right`  
- 由构造函数复制的 `auto_ptr` 对象。  
+ The `auto_ptr` object to be copied by the constructor.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数将 `ptr` 存储在 **myptr** 中，存储的指针指向已分配对象。 第二个构造函数通过存储 `right` 转移 `right` 中存储的指针的所有权。 **myptr** 中的 [release](#release)。  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores `ptr` in **myptr**, the stored pointer to the allocated object. The second constructor transfers ownership of the pointer stored in `right`, by storing `right`. [release](#release) in **myptr**.  
   
- 第三个构造函数的行为与第二个相同，只不过它存储 **right**。 `ref`。 **myptr** 中的 **release**，其中 `ref` 是 `right` 中存储的引用。  
+ The third constructor behaves the same as the second, except that it stores **right**. `ref`. **release** in **myptr**, where `ref` is the reference stored in `right`.  
   
- 模板构造函数与第二个构造函数的行为相同，前提是指向 **Other** 的指针可以隐式转换为指向 **Type** 的指针。  
+ The template constructor behaves the same as the second constructor, provided that a pointer to **Other** can be implicitly converted to a pointer to **Type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_auto_ptr.cpp  
@@ -212,7 +215,7 @@ Destructing 00311AF8
 ```  
   
 ##  <a name="element_type"></a>  auto_ptr::element_type  
- 该类型是模板参数 **Type** 的同义词。  
+ The type is a synonym for the template parameter **Type**.  
   
 ```  
  
@@ -220,16 +223,16 @@ typedef Type element  _type;
 ```  
   
 ##  <a name="get"></a>  auto_ptr::get  
- 该成员函数将返回存储指针 **myptr**。  
+ The member function returns the stored pointer **myptr**.  
   
 ```   
 Type *get() const throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- 存储指针 **myptr**。  
+### <a name="return-value"></a>Return Value  
+ The stored pointer **myptr**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_get.cpp  
@@ -277,7 +280,7 @@ Destructing 00311B88 Value: 6
 ```  
   
 ##  <a name="op_eq"></a>  auto_ptr::operator=  
- 一个赋值运算符，用于将所有权从一个 `auto_ptr` 对象转移到到其他对象。  
+ An assignment operator that transfers ownership from one `auto_ptr` object to another.  
   
 ```  
 template <class Other>  
@@ -286,63 +289,63 @@ auto_ptr<Type>& operator=(auto_ptr<Type>& right) throw();
 auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 一个 `auto_ptr` 类型的对象。  
+ An object of type `auto_ptr`.  
   
-### <a name="return-value"></a>返回值  
- 对类型为 `auto_ptr`\< **Type**>. 的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to an object of type `auto_ptr`\< **Type**>.  
   
-### <a name="remarks"></a>备注  
- 赋值将对表达式 **delete myptr** 进行求值，但是仅存储指针 **myptr** 因赋值而更改时才进行。 然后，它通过存储 \_ *Right* 转移存储在 _ *Right* 中的指针的所有权。 **myptr** 中的 [release](#release)。 该函数返回 **\*this**。  
+### <a name="remarks"></a>Remarks  
+ The assignment evaluates the expression **delete myptr**, but only if the stored pointer **myptr** changes as a result of the assignment. It then transfers ownership of the pointer stored in _ *Right*, by storing \_ *Right*. [release](#release) in **myptr**. The function returns **\*this**.  
   
-### <a name="example"></a>示例  
-  有关成员运算符的用法的示例，请参阅 [auto_ptr:: auto_ptr](#auto_ptr)。  
+### <a name="example"></a>Example  
+  For an example of the use of the member operator, see [auto_ptr::auto_ptr](#auto_ptr).  
   
 ##  <a name="op_star"></a>  auto_ptr::operator*  
- `auto_ptr` 类型的对象的取消引用运算符。  
+ The dereferencing operator for objects of type `auto_ptr`.  
   
 ```   
 Type& operator*() const throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对指针所拥有的类型 **Type** 的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to an object of type **Type** that the pointer owns.  
   
-### <a name="remarks"></a>备注  
- 间接运算符返回 `*`[get](#get)。 因此，存储的指针不能为空。  
+### <a name="remarks"></a>Remarks  
+ The indirection operator returns `*`[get](#get). Hence, the stored pointer must not be null.  
   
-### <a name="example"></a>示例  
-  有关如何使用成员函数的示例，请参阅 [auto_ptr:: auto_ptr](#auto_ptr)。  
+### <a name="example"></a>Example  
+  For an example of how to use the member function, see [auto_ptr::auto_ptr](#auto_ptr).  
   
 ##  <a name="auto_ptr__operator-_gt"></a>  auto_ptr::operator-&gt;  
- 允许成员访问的运算符。  
+ The operator for allowing member access.  
   
 ```   
 Type * operator->() const throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- **auto_ptr** 所拥有的对象的成员。  
+### <a name="return-value"></a>Return Value  
+ A member of the object that **auto_ptr** owns.  
   
-### <a name="remarks"></a>备注  
- 选择运算符返回 [get](#get)`( )`，以便让表达式 *ap*-> **member** 的行为与 ( *ap* 相同。 **get**( ) )-> **member**，其中 *ap* 是类 `auto_ptr`\< **Type**> 的对象。 因此，存储的指针不能为空且 **Type** 必须是类、结构或成员为 **member** 的联合类型。  
+### <a name="remarks"></a>Remarks  
+ The selection operator returns [get](#get)`( )`, so that the expression *ap*-> **member** behaves the same as ( *ap*. **get**( ) )-> **member**, where *ap* is an object of class `auto_ptr`\< **Type**>. Hence, the stored pointer must not be null, and **Type** must be a class, struct, or union type with a **member** member.  
   
-### <a name="example"></a>示例  
-  有关如何使用成员函数的示例，请参阅 [auto_ptr:: auto_ptr](#auto_ptr)。  
+### <a name="example"></a>Example  
+  For an example of how to use the member function, see [auto_ptr::auto_ptr](#auto_ptr).  
   
 ##  <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;Other&gt;  
- 将某种 `auto_ptr` 强制转换为另一种 `auto_ptr`。  
+ Casts from one kind of `auto_ptr` to another kind of `auto_ptr`.  
   
 ```   
 template <class Other>  
 operator auto _ptr<Other>() throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- 该类型强制转换运算符返回 `auto_ptr` \< **Other**>( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The type cast operator returns `auto_ptr` \< **Other**>( **\*this**).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_op_auto_ptr.cpp  
@@ -360,17 +363,17 @@ int main()
 ```  
   
 ##  <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;  
- 将 `auto_ptr` 强制转换为 **auto_ptr_ref**。  
+ Casts from an `auto_ptr` to an **auto_ptr_ref**.  
   
 ```   
 template <class Other>  
 operator auto _ptr  _ref<Other>() throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- 该类型强制转换运算符返回 **auto_ptr_ref**\< **Other**>( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The type cast operator returns **auto_ptr_ref**\< **Other**>( **\*this**).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_op_auto_ptr_ref.cpp  
@@ -419,19 +422,19 @@ main exiting
 ```  
   
 ##  <a name="release"></a>  auto_ptr::release  
- 该成员将存储指针 **myptr** 替换为 Null 指针，并返回以前存储的指针。  
+ The member replaces the stored pointer **myptr** with a null pointer and returns the previously stored pointer.  
   
 ```   
 Type *release() throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- 以前存储的指针。  
+### <a name="return-value"></a>Return Value  
+ The previously stored pointer.  
   
-### <a name="remarks"></a>备注  
- 该成员将存储指针 **myptr** 替换为 Null 指针，并返回以前存储的指针。  
+### <a name="remarks"></a>Remarks  
+ The member replaces the stored pointer **myptr** with a null pointer and returns the previously stored pointer.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_release.cpp  
@@ -478,17 +481,17 @@ Destructing 00311B88 Value: 6
 ```  
   
 ##  <a name="reset"></a>  auto_ptr::reset  
- 成员函数的计算结果表达式**删除** **myptr**，但是只有当存储的指针值**myptr**因函数调用而更改。 然后它将存储的指针替换为 **ptr**。  
+ The member function evaluates the expression **delete** **myptr**, but only if the stored pointer value **myptr** changes as a result of a function call. It then replaces the stored pointer with **ptr**.  
   
 ```   
 void reset(Type* ptr = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 指定用于替换已存储指针 **myptr** 的指针。  
+ The pointer specified to replace the stored pointer **myptr**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // auto_ptr_reset.cpp  
@@ -535,8 +538,8 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [unique_ptr 类](../standard-library/unique-ptr-class.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [unique_ptr Class](../standard-library/unique-ptr-class.md)
 
 

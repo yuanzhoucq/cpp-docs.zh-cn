@@ -1,61 +1,80 @@
 ---
-title: "文档类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.document"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文档类"
+title: Document Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.document
+dev_langs:
+- C++
+helpviewer_keywords:
+- document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 文档类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e93e195b4cd2648b2e860e061e3e4d2a59809d59
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-文档对象类，由文档模板对象创建，来管理应用程序数据。  您将从这些类之一为您的文档派生类。  
+---
+# <a name="document-classes"></a>Document Classes
+Document class objects, created by document-template objects, manage the application's data. You will derive a class for your documents from one of these classes.  
   
- 文档类对象与视图对象交互。  视图对象表示窗口的工作区，显示文档的数据，并允许用户与之交互。  文档和视图由文档模板对象创建。  
+ Document class objects interact with view objects. View objects represent the client area of a window, display a document's data, and allow users to interact with it. Documents and views are created by a document-template object.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- 应用程序特定文档的基类。  从 **CDocument**派生一个或多个文档类。  
+ The base class for application-specific documents. Derive your document class or classes from **CDocument**.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
- 用于复合文档的实现，与基本容器中支持的一样。  作为从 [CDocItem](../mfc/reference/cdocitem-class.md) 派生的类的容器使用，  此类可用作容器文档的基类并且是 `COleServerDoc` 的基类。  
+ Used for compound document implementation, as well as basic container support. Serves as a container for classes derived from [CDocItem](../mfc/reference/cdocitem-class.md). This class can be used as the base class for container documents and is the base class for `COleServerDoc`.  
   
  [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- 从 `COleDocument` 中派生的类提供链接的基础结构。  如果希望它们支持到嵌入对象的连接，您应从此类派生应用程序的文档容器类 ，而不是从 `COleDocument` 。  
+ A class derived from `COleDocument` that provides the infrastructure for linking. You should derive the document classes for your container applications from this class instead of from `COleDocument` if you want them to support links to embedded objects.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- 保持 OLE 项的客户项列表在富编辑控件中。  使用 [CRichEditView](../mfc/reference/cricheditview-class.md) 和 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)。  
+ Maintains the list of OLE client items that are in the rich edit control. Used with [CRichEditView](../mfc/reference/cricheditview-class.md) and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 用作基类、服务器应用程序类的文档。  `COleServerDoc` 对象通过与 [COleServerItem](../mfc/reference/coleserveritem-class.md) 对象交互提供大多数服务器支持。  使用类库的文档\/视图结构，编辑功能的可视化对象提供。  
+ Used as the base class for server-application document classes. `COleServerDoc` objects provide the bulk of server support through interactions with [COleServerItem](../mfc/reference/coleserveritem-class.md) objects. Visual editing capability is provided using the class library's document/view architecture.  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
- 规定，利用 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)， Web 浏览器 HTML 编辑平台的功能在 MFC 文档视图体系结构上下文中提供 。  
+ Provides, with [CHtmlEditView](../mfc/reference/chtmleditview-class.md), the functionality of the WebBrowser HTML editing platform within the context of the MFC document-view architecture.  
   
-## 相关类  
- 记录类对象可以是持久性的 \(也就是说，它们可以在存储介质写入其状态和读取它）。  MFC 提供 `CArchive` 类帮助实现文档数据到存储介质的转移。  
+## <a name="related-classes"></a>Related Classes  
+ Document class objects can be persistent — in other words, they can write their state to a storage medium and read it back. MFC provides the `CArchive` class to facilitate transferring the document's data to a storage medium.  
   
  [CArchive](../mfc/reference/carchive-class.md)  
- 与 [CFile](../mfc/reference/cfile-class.md) 对象协作通过序列化实现对象的持久性存储 \(请参见 [CObject::Serialize](../Topic/CObject::Serialize.md)\)。  
+ Cooperates with a [CFile](../mfc/reference/cfile-class.md) object to implement persistent storage for objects through serialization (see [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- 文档还可包含 OLE 对象。  `CDocItem` 是服务器和客户端项的基类。  
+ Documents can also contain OLE objects. `CDocItem` is the base class of the server and client items.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- “COleClientItem” [](../mfc/reference/coleclientitem-class.md "COleClientItem Class") 和 [COleServerItem](../mfc/reference/coleserveritem-class.md) 的抽象基类。  从 `CDocItem` 派生的类对象表示文档的一部分。  
+ Abstract base class of [COleClientItem](../mfc/reference/coleclientitem-class.md) and [COleServerItem](../mfc/reference/coleserveritem-class.md). Objects of classes derived from `CDocItem` represent parts of documents.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

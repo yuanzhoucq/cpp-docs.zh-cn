@@ -1,5 +1,5 @@
 ---
-title: "DAO 数据库引擎初始化和终止 |Microsoft 文档"
+title: DAO Database Engine Initialization and Termination | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,25 +34,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b6119279234558998fad1f220239a29618c69cc5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46bacd608c5cf37b148c7ea4b9096fa63681d1d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dao-database-engine-initialization-and-termination"></a>DAO 数据库引擎初始化和终止
-使用 MFC DAO 对象时，必须先初始化 DAO 数据库引擎然后终止，您的应用程序或 DLL 才能退出。 `AfxDaoInit` 和 `AfxDaoTerm` 这两个函数将执行这些任务。  
+# <a name="dao-database-engine-initialization-and-termination"></a>DAO Database Engine Initialization and Termination
+When using MFC DAO objects, the DAO database engine must first be initialized and then terminated before your application or DLL quits. Two functions, `AfxDaoInit` and `AfxDaoTerm`, perform these tasks.  
   
-### <a name="dao-database-engine-initialization-and-termination"></a>DAO 数据库引擎初始化和终止  
+### <a name="dao-database-engine-initialization-and-termination"></a>DAO Database Engine Initialization and Termination  
   
 |||  
 |-|-|  
-|[AfxDaoInit](#afxdaoinit)|初始化 DAO 数据库引擎。|  
-|[AfxDaoTerm](#afxdaoterm)|终止 DAO 数据库引擎。|  
+|[AfxDaoInit](#afxdaoinit)|Initializes the DAO database engine.|  
+|[AfxDaoTerm](#afxdaoterm)|Terminates the DAO database engine.|  
   
-##  <a name="afxdaoinit"></a>AfxDaoInit  
- 此函数将初始化 DAO 数据库引擎。  
+##  <a name="afxdaoinit"></a>  AfxDaoInit  
+ This function initializes the DAO database engine.  
   
 ```  
  
@@ -61,32 +61,32 @@ void AfxDaoInit();
 throw(CDaoException*);  
 ```  
   
-### <a name="remarks"></a>备注  
- 在大多数情况下，您不需要调用`AfxDaoInit`因为应用程序将自动调用它时需要它。  
+### <a name="remarks"></a>Remarks  
+ In most cases, you don't need to call `AfxDaoInit` because the application automatically calls it when it is needed.  
   
- 有关相关信息，并以举例说明如何调用`AfxDaoInit`，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
+ For related information, and for an example of calling `AfxDaoInit`, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
   
-##  <a name="afxdaoterm"></a>AfxDaoTerm  
- 此函数将终止 DAO 数据库引擎。  
+##  <a name="afxdaoterm"></a>  AfxDaoTerm  
+ This function terminates the DAO database engine.  
   
 ```  
  
 void AfxDaoTerm();  
 ```  
   
-### <a name="remarks"></a>备注  
- 通常情况下，只需调用此函数的规则 DLL; 中应用程序将自动调用`AfxDaoTerm`需要时。  
+### <a name="remarks"></a>Remarks  
+ Typically, you only need to call this function in a regular MFC DLL; an application will automatically call `AfxDaoTerm` when it is needed.  
   
- 在规则 Dll 中，调用`AfxDaoTerm`之前`ExitInstance`函数，但在所有 MFC DAO 对象被都销毁后。  
+ In regular MFC DLLs, call `AfxDaoTerm` before the `ExitInstance` function, but after all MFC DAO objects have been destroyed.  
   
- 有关相关信息，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
+ For related information, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
 
-### <a name="requirements"></a>要求  
-  **标头**afxdao.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdao.h  
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

@@ -1,76 +1,96 @@
 ---
-title: "TN025：文档、视图和框架创建 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.creation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文档, 视图和框架创建"
-  - "TN025"
+title: 'TN025: Document, View, and Frame Creation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.creation
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], view and frame creation
+- TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN025：文档、视图和框架创建
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2464f927450319b2b649d5601a157f4269993ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Document, View, and Frame Creation
 > [!NOTE]
->  以下技术说明在首次包括在联机文档中后未更新。  因此，某些过程和主题可能已过时或不正确。  要获得最新信息，建议你在联机文档索引中搜索热点话题。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 此注释说明 WinApps、DocTemplates、文档、框架和视图的创建和公开问题。  
+ This note describes the creation and ownership issues for WinApps, DocTemplates, Documents, Frames and Views.  
   
-## WinApp  
- 有一个 `CWinApp` 对象在系统中。  
+## <a name="winapp"></a>WinApp  
+ There is one `CWinApp` object in the system.  
   
- 它被 `WinMain`的框架实现的内部静态构造和初始化。  必须从 `CWinApp` 派生执行有用的任何内容 \(异常：扩展 DLL 不应具有 `CWinApp` 实例 \- 初始化在 `DllMain` 完成\)。  
+ It is statically constructed and initialized by the framework's internal implementation of `WinMain`. You must derive from `CWinApp` to do anything useful (exception: MFC extension DLLs should not have a `CWinApp` instance — initialization is done in `DllMain` instead).  
   
- 这个 `CWinApp` 对象列表的文档模板 \( `CPtrList`\)。  有一个或多个文档模板每个应用程序。  DocTemplates 从资源文件 \(即字符串数组\) 通常在加载 `CWinApp::InitInstance`。  
+ The one `CWinApp` object owns a list of document templates (a `CPtrList`). There is one or more document template per application. DocTemplates are usually loaded from the resource file (that is, a string array) in `CWinApp::InitInstance`.  
   
 ```  
-pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);  
-AddDocTemplate(pTemplate);  
+pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
+
+AddDocTemplate(pTemplate);
 ```  
   
- 这个 `CWinApp` 对象拥有在应用程序的任何框架窗口。  **CWinApp::m\_pMainWnd**应在存储应用程序的主框架窗口；通常在 `InitInstance` 实现的 `m_pMainWnd`，如果没有允许 AppWizard 执行断点。  对于单文档界面 \(SDI\) \(SDI\) 这是主应用作为框架窗口以及唯一的文档框架窗口的 `CFrameWnd`。  对于多文档界面 \(MDI\) \(MDI\) 这是 MDI 框架 \(类 `CMDIFrameWnd`\)。作为包含任何子 `CFrameWnd`的 . 的主要应用框架窗口。  每个子窗口可能是类 `CMDIChildWnd` \(从 `CFrameWnd`派生\) 和用作许多文档框架窗口之一。  
+ The one `CWinApp` object owns all frame windows in the application. The main frame window for the application should be stored in **CWinApp::m_pMainWnd**; usually you set `m_pMainWnd` in the `InitInstance` implementation if you have not let AppWizard do it for you. For single document interface (SDI) this is one `CFrameWnd` that serves as the main application frame window as well as the only document frame window. For multiple document interface (MDI) this is an MDI-Frame (class `CMDIFrameWnd`) that serves as the main application frame window that contains all the child `CFrameWnd`s. Each child window is of class `CMDIChildWnd` (derived from `CFrameWnd`) and serves as one of potentially many document frame windows.  
   
-## DocTemplates  
- `CDocTemplate` 是记录的创建者和管理器。  它拥有它创建的文档。  如果应用程序使用下面基于资源的方法，不需要从 `CDocTemplate`派生。  
+## <a name="doctemplates"></a>DocTemplates  
+ The `CDocTemplate` is the creator and manager of documents. It owns the documents that it creates. If your application uses the resource-based approach described below, it will not need to derive from `CDocTemplate`.  
   
- 对于 SDI 应用程序，`CSingleDocTemplate` 类记录一个打开文档。  在 MDI 应用程序，`CMultiDocTemplate` 类保留一个列表 \( `CPtrList`从该模板创建的\) 所有当前打开的文档。  `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 提供添加或删除文档提供对虚拟成员函数从模板。  `CDocTemplate` 是 **CDocument** 的友元，因此我们可以将保护 **CDocument::m\_pDocTemplate** 返回的指针指向回创建文档的文档模板。  
+ For an SDI application, the class `CSingleDocTemplate` keeps track of one open document. For an MDI application, the class `CMultiDocTemplate` keeps a list (a `CPtrList`) of all the currently open documents created from that template. `CDocTemplate::AddDocument` and `CDocTemplate::RemoveDocument` provide the virtual member functions for adding or removing a document from the template. `CDocTemplate` is a friend of **CDocument** so we can set the protected **CDocument::m_pDocTemplate** back pointer to point back to the doc template that created the document.  
   
- `CWinApp` 处理默认 `OnFileOpen` 实现，fprintf 又会查询所有文档模板。  实现包含查找已打开文档并确定新打开的文档的格式。  
+ `CWinApp` handles the default `OnFileOpen` implementation, which will in turn query all the doc templates. The implementation includes looking for already open documents and deciding what format to open new documents in.  
   
- `CDocTemplate` 管理绑定对于文档和框架的用户界面。  
+ `CDocTemplate` manages the UI binding for documents and frames.  
   
- `CDocTemplate` 保留未命名的文档数目的计数。  
+ `CDocTemplate` keeps a count of the number of unnamed documents.  
   
-## CDocument  
- **CDocument** 由 `CDocTemplate`拥有。  
+## <a name="cdocument"></a>CDocument  
+ A **CDocument** is owned by a `CDocTemplate`.  
   
- 文档有当前打开的视图列表 \(从 `CView`派生\) 显示文档 \( `CPtrList`\)。  
+ Documents have a list of currently open views (derived from `CView`) that are viewing the document (a `CPtrList`).  
   
- 文档不创建\/销毁视图，但它们相互附加，在创建之后。  在文档关闭 \(即通过文件\/关闭\)，所有连接的视图将关闭。  在关闭文档的最后一个视图 \(例如窗口\/关闭\) 文档将关闭。  
+ Documents do not create/destroy the views, but they are attached to each other after they are created. When a document is closed (that is, through File/Close), all attached views will be closed. When the last view on a document is closed (that is, Window/Close) the document will be closed.  
   
- `CDocument::AddView`接口，`RemoveView` 用于在列表视图。  **CDocument** 是 `CView` 的友元，因此我们可以设置 **CView::m\_pDocument** 返回一个指针。  
+ The `CDocument::AddView`, `RemoveView` interface is used to maintain the view list. **CDocument** is a friend of `CView` so we can set the **CView::m_pDocument** back pointer.  
   
-## CFrameWnd  
- `CFrameWnd` \(也称为\) 帧播放角色与 MFC 1.0，但是，`CFrameWnd` 类现在设计在许多情况下，使用而派生新类。  派生类 `CMDIFrameWnd` 和 `CMDIChildWnd` 还会引发许多标准命令已实现。  
+## <a name="cframewnd"></a>CFrameWnd  
+ A `CFrameWnd` (also known as a frame) plays the same role as in MFC 1.0, but now the `CFrameWnd` class is designed to be used in many cases without deriving a new class. The derived classes `CMDIFrameWnd` and `CMDIChildWnd` are also enhanced so many standard commands are already implemented.  
   
- `CFrameWnd` 负责创建帧在的工作区窗口中运行。  通常有填充的工作区框架的主窗口。  
+ The `CFrameWnd` is responsible for creating windows in the client area of the frame. Normally there is one main window filling the client area of the frame.  
   
- 在 MDI 框架窗口，工作区由随后是所有 MDI 子框架窗口的父 MDICLIENT 控件。  SDI 对于框架窗口或 MDI 子框架窗口，工作区窗口通常用 `CView`派生的对象。  对于 `CSplitterWnd`，视图的工作区窗口由 `CSplitterWnd` 对象和 `CView`派生的每个拆分窗格的窗口对象 \(一个\) 会创建为 `CSplitterWnd`的子窗口。  
+ For an MDI-Frame window, the client area is filled with the MDICLIENT control which is in turn the parent of all the MDI-Child frame windows. For an SDI-Frame window or an MDI-Child frame window, the client area is usually filled with a `CView`-derived window object. In the case of `CSplitterWnd`, the client area of the view is filled with the `CSplitterWnd` window object, and the `CView`-derived window objects (one per split pane) are created as child windows of the `CSplitterWnd`.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

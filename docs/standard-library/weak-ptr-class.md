@@ -1,15 +1,14 @@
 ---
-title: "weak_ptr 类 | Microsoft Docs"
+title: weak_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- weak_ptr
 - memory/std::weak_ptr
 - memory/std::weak_ptr::element_type
 - memory/std::weak_ptr::expired
@@ -29,7 +28,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- weak_ptr class
+- std::weak_ptr [C++]
+- std::weak_ptr [C++], element_type
+- std::weak_ptr [C++], expired
+- std::weak_ptr [C++], lock
+- std::weak_ptr [C++], owner_before
+- std::weak_ptr [C++], reset
+- std::weak_ptr [C++], swap
+- std::weak_ptr [C++], use_count
+- std::weak_ptr [C++], element_type
+- std::weak_ptr [C++], expired
+- std::weak_ptr [C++], lock
+- std::weak_ptr [C++], owner_before
+- std::weak_ptr [C++], reset
+- std::weak_ptr [C++], swap
+- std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
 caps.latest.revision: 22
 author: corob-msft
@@ -49,17 +62,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f7e4ff26f4d98dc677483f8526c17474aecc81dc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a91ed147575c5041070e5826eeee9ffc34b09d4f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="weakptr-class"></a>weak_ptr 类
-回绕弱链接指针。  
+# <a name="weakptr-class"></a>weak_ptr Class
+Wraps a weakly linked pointer.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
 ```    
 template<class _Ty>
    class weak_ptr {  
@@ -83,61 +96,61 @@ public:
    shared_ptr<Ty> lock() const;
    };  
 ```    
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 由弱指针控制的类型。  
+ The type controlled by the weak pointer.  
   
-## <a name="remarks"></a>备注  
- 此模板类描述了一个对象，此对象指向由一个或多个 [shared_ptr 类](../standard-library/shared-ptr-class.md)对象管理的资源的。 指向某个资源的 `weak_ptr` 对象不会影响资源的引用计数。 因此，当最后一个管理该资源 `shared_ptr` 的对象被销毁时，则即使存在指向该资源的 `weak_ptr` 对象，该资源也将被释放。 这对于避免数据结构中的循环至关重要。  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that points to a resource that is managed by one or more [shared_ptr Class](../standard-library/shared-ptr-class.md) objects. The `weak_ptr` objects that point to a resource do not affect the resource's reference count. Thus, when the last `shared_ptr` object that manages that resource is destroyed the resource will be freed, even if there are `weak_ptr` objects pointing to that resource. This is essential for avoiding cycles in data structures.  
   
- 在以下情况下 `weak_ptr` 对象将指向某个资源：如果该对象是从拥有该资源的 `shared_ptr` 对象构造而成；如果是从指向该资源的 `weak_ptr` 对象构造而成；或者使用 [operator=](#op_eq) 将该资源分配到了该对象。 `weak_ptr` 对象不提供直接访问其所指向的资源的权限。 需要使用该资源的代码可通过一个 `shared_ptr` 对象来执行该操作，该对象通过调用成员函数 [lock](#lock) 创建并拥有该资源。 `weak_ptr` 对象在其所指向的资源被释放时已过期，因为所有拥有该资源的 `shared_ptr` 对象已被销毁。 调用已过期的 `weak_ptr` 对象上的 `lock` 将创建一个空 shared_ptr 对象。  
+ A `weak_ptr` object points to a resource if it was constructed from a `shared_ptr` object that owns that resource, if it was constructed from a `weak_ptr` object that points to that resource, or if that resource was assigned to it with [operator=](#op_eq). A `weak_ptr` object does not provide direct access to the resource that it points to. Code that needs to use the resource does so through a `shared_ptr` object that owns that resource, created by calling the member function [lock](#lock). A `weak_ptr` object has expired when the resource that it points to has been freed because all of the `shared_ptr` objects that own the resource have been destroyed. Calling `lock` on a `weak_ptr` object that has expired creates an empty shared_ptr object.  
   
- 空 weak_ptr 对象不会指向任何资源，而且没有控制块。 其成员函数 `lock` 将返回一个空 shared_ptr 对象。  
+ An empty weak_ptr object does not point to any resources and has no control block. Its member function `lock` returns an empty shared_ptr object.  
   
- 当两个或多个由 `shared_ptr` 对象控制的资源保留有相互引用的 `shared_ptr` 对象时，会发生循环。 例如，具有三个元素的循环的链接列表有一个头节点 `N0`；该节点保留有一个拥有下一个节点 `N1` 的 `shared_ptr` 对象；该节点保留有一个拥有下一个节点 `N2` 的 `shared_ptr` 对象；反过来，该节点保留有一个拥有头节点 `N0` 的 `shared_ptr` 对象，由此形成闭合循环。 在此情况下，没有引用计数将变为零，并且不会释放循环中的节点。 若要消除循环，最后一个节点 `N2` 应保留指向 `N0` 的 `weak_ptr` 对象，而不是 `shared_ptr` 对象。 由于 `weak_ptr` 对象不拥有 `N0`，因此不会影响 `N0` 的引用计数，并且销毁该程序对头节点的最后一个引用时，也将销毁列表中的节点。  
+ A cycle occurs when two or more resources controlled by `shared_ptr` objects hold mutually referencing `shared_ptr` objects. For example, a circular linked list with three elements has a head node `N0`; that node holds a `shared_ptr` object that owns the next node, `N1`; that node holds a `shared_ptr` object that owns the next node, `N2`; that node, in turn, holds a `shared_ptr` object that owns the head node, `N0`, closing the cycle. In this situation, none of the reference counts will ever become zero, and the nodes in the cycle will not be freed. To eliminate the cycle, the last node `N2` should hold a `weak_ptr` object pointing to `N0` instead of a `shared_ptr` object. Since the `weak_ptr` object does not own `N0` it doesn't affect `N0`'s reference count, and when the program's last reference to the head node is destroyed the nodes in the list will also be destroyed.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[weak_ptr](#weak_ptr)|构造一个 `weak_ptr`。|  
-  
-### <a name="methods"></a>方法  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|元素的类型。|  
-|[expired](#expired)|测试所属权是否已过期。|  
-|[lock](#lock)|获取资源的独占所属权。|  
-|[owner_before](#owner_before)|如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。|  
-|[reset](#reset)|释放所拥有的资源。|  
-|[swap](#swap)|交换两个 `weak_ptr` 对象。|  
-|[use_count](#use_count)|指定 `shared_ptr` 对象的计数。|  
+|[weak_ptr](#weak_ptr)|Constructs a `weak_ptr`.|  
   
-### <a name="operators"></a>运算符  
+### <a name="methods"></a>Methods  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|替换所拥有的资源。|  
+|[element_type](#element_type)|The type of the element.|  
+|[expired](#expired)|Tests if ownership has expired.|  
+|[lock](#lock)|Obtains exclusive ownership of a resource.|  
+|[owner_before](#owner_before)|Returns `true` if this `weak_ptr` is ordered before (or less than) the provided pointer.|  
+|[reset](#reset)|Releases owned resource.|  
+|[swap](#swap)|Swaps two `weak_ptr` objects.|  
+|[use_count](#use_count)|Counts number of designated `shared_ptr` objects.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<memory>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Replaces owned resource.|  
   
-##  <a name="element_type"></a>element_type  
- 元素的类型。  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
+  
+##  <a name="element_type"></a>  element_type  
+ The type of the element.  
   
 ```  
 typedef Ty element_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Ty`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Ty`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_element_type.cpp   
@@ -162,17 +175,17 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="expired"></a>expired  
- 测试所属权是否已过期。  
+##  <a name="expired"></a>  expired  
+ Tests if ownership has expired.  
   
 ```  
 bool expired() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 如果 `*this` 已过期，则成员函数返回 `true`；否则将返回 `false`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `true` if `*this` has expired, otherwise `false`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_expired.cpp   
@@ -218,17 +231,17 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="lock"></a>lock  
- 获取资源的独占所属权。  
+##  <a name="lock"></a>  lock  
+ Obtains exclusive ownership of a resource.  
   
 ```  
 shared_ptr<Ty> lock() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 如果 `*this` 已过期，则成员函数返回一个空的 shared_ptr 对象；否则它将返回拥有 `*this` 指向的资源的 [shared_ptr 类](../standard-library/shared-ptr-class.md)`<Ty>`对象。  
+### <a name="remarks"></a>Remarks  
+ The member function returns an empty shared_ptr object if `*this` has expired; otherwise it returns a [shared_ptr Class](../standard-library/shared-ptr-class.md)`<Ty>` object that owns the resource that `*this` points to.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_lock.cpp   
@@ -274,8 +287,8 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="op_eq"></a>operator=  
- 替换所拥有的资源。  
+##  <a name="op_eq"></a>  operator=  
+ Replaces owned resource.  
   
 ```  
 weak_ptr& operator=(const weak_ptr& wp);
@@ -287,20 +300,20 @@ template <class Other>
 weak_ptr& operator=(const shared_ptr<Other>& sp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 由参数共享/弱指针控制的类型。  
+ The type controlled by the argument shared/weak pointer.  
   
  `wp`  
- 要复制的弱指针。  
+ The weak pointer to copy.  
   
  `sp`  
- 要复制的共享指针。  
+ The shared pointer to copy.  
   
-### <a name="remarks"></a>备注  
- 这些运算符均会释放 `*this` 当前指向的资源，并将操作数序列命名的资源所有权分配给 `*this`。 如果运算符操作失败，则不会改变 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The operators all release the resource currently pointed to by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_operator_as.cpp   
@@ -333,8 +346,8 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="owner_before"></a>owner_before  
- 如果此 `weak_ptr` 排在提供的指针之前（或小于该指针），则返回 `true`。  
+##  <a name="owner_before"></a>  owner_before  
+ Returns `true` if this `weak_ptr` is ordered before (or less than) the provided pointer.  
   
 ```  
 template <class Other>  
@@ -344,24 +357,24 @@ template <class Other>
 bool owner_before(const weak_ptr<Other>& ptr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 对 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 引用。  
+ An `lvalue` reference to either a `shared_ptr` or a `weak_ptr`.  
   
-### <a name="remarks"></a>备注  
- 如果 `*this` 为 `ordered before``ptr`，则模板成员函数返回 `true`。  
+### <a name="remarks"></a>Remarks  
+ The template member function returns `true` if `*this` is `ordered before` `ptr`.  
   
-##  <a name="reset"></a>reset  
- 释放所拥有的资源。  
+##  <a name="reset"></a>  reset  
+ Releases owned resource.  
   
 ```  
 void reset();
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员函数将释放 `*this` 指向的资源，并将 `*this` 转换到空的 weak_ptr 对象。  
+### <a name="remarks"></a>Remarks  
+ The member function releases the resource pointed to by `*this` and converts `*this` to an empty weak_ptr object.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_reset.cpp   
@@ -392,21 +405,21 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="swap"></a>swap  
- 交换两个 `weak_ptr` 对象。  
+##  <a name="swap"></a>  swap  
+ Swaps two `weak_ptr` objects.  
   
 ```  
 void swap(weak_ptr& wp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `wp`  
- 要交换的弱指针。  
+ The weak pointer to swap with.  
   
-### <a name="remarks"></a>备注  
- 成员函数将保留最初由 `*this` 指向且随后由 `wp` 指向的资源，以及最初由 `wp` 指向且随后由 `*this` 指向的资源。 此函数不会更改两个资源的引用计数，也不会引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ The member function leaves the resource originally pointed to by `*this` subsequently pointed to by `wp`, and the resource originally pointed to by `wp` subsequently pointed to by `*this`. The function does not change the reference counts for the two resources and it does not throw any exceptions.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_swap.cpp   
@@ -460,17 +473,17 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="use_count"></a>use_count  
- 指定 `shared_ptr` 对象的计数。  
+##  <a name="use_count"></a>  use_count  
+ Counts number of designated `shared_ptr` objects.  
   
 ```  
 long use_count() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回拥有 `*this` 指向的资源的 `shared_ptr` 对象数量。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of `shared_ptr` objects that own the resource pointed to by `*this`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_use_count.cpp   
@@ -499,8 +512,8 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="weak_ptr"></a>weak_ptr  
- 构造一个 `weak_ptr`。  
+##  <a name="weak_ptr"></a>  weak_ptr  
+ Constructs a `weak_ptr`.  
   
 ```  
 weak_ptr();
@@ -514,20 +527,20 @@ template <class Other>
 weak_ptr(const shared_ptr<Other>& sp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 由参数共享/弱指针控制的类型。  
+ The type controlled by the argument shared/weak pointer.  
   
  `wp`  
- 要复制的弱指针。  
+ The weak pointer to copy.  
   
  `sp`  
- 要复制的共享指针。  
+ The shared pointer to copy.  
   
-### <a name="remarks"></a>备注  
- 每个构造函数都将构造指向由操作数序列命名的资源的对象。  
+### <a name="remarks"></a>Remarks  
+ The constructors each construct an object that points to the resource named by the operand sequence.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__weak_ptr_construct.cpp   
@@ -561,7 +574,7 @@ wp0.expired() == true
 *wp2.lock() == 5  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [shared_ptr 类](../standard-library/shared-ptr-class.md)
+## <a name="see-also"></a>See Also  
+ [shared_ptr Class](../standard-library/shared-ptr-class.md)
 
 

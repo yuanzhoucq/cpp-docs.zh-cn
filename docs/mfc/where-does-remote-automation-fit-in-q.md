@@ -1,40 +1,57 @@
 ---
-title: "远程自动化的适用条件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "远程自动化, DCOM"
+title: Where Does Remote Automation Fit In? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 远程自动化的适用条件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 005dc04f96136ac53dd0b06605d348d8c3414c0b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-DCOM 在 1996 年发布并且仅用于 32 位和 64 位平台。  Microsoft Visual Basic 团队始终了解了 Visual Basic 使用自动化允许其组件通信。  缺少分布式版本严重限制了这些功能在企业环境中的使用，因此，该团队开发的 Visual Basic 4.0 Enterprise Edition 决定调查其自己的一系列的针对 OLE 和 COM 的自动化部件创建的远程处理组件。  显然，一主要目标是确保结果兼容并且当可用时，可以由 DCOM 替换。  它们并继续实现 16 位和 32 位 Windows 平台的远程自动化 \(RA\)。  
+---
+# <a name="where-does-remote-automation-fit-in"></a>Where Does Remote Automation Fit In?
+DCOM was released in 1996 and is available with 32-bit and 64-bit platforms only. The Visual Basic team at Microsoft has always seen Visual Basic as using Automation to allow its components to communicate. The lack of a distributed version severely limited the use of these capabilities in enterprise environments, so the team developing Visual Basic 4.0 Enterprise Edition decided to investigate the creation of its own set of remoting components for the Automation parts of OLE and COM. Clearly, a major goal was to ensure that the result would be compatible with and could be replaced by DCOM when it became available. They then proceeded to implement Remote Automation (RA) for both 16-bit and 32-bit Windows platforms.  
   
- 远程自动化不依赖于任何特定语言，但是，直到 Visual C\+\+ 4.2 Enterprise Edition 版本发布，仅迁移 Visual Basic 4.0。  意识到远程自动化由 DCOM 整个包含。  如果您有机会在应用程序中使用 DCOM 而不是远程的自动化，您应执行此操作。  但是，有一些场景更适合远程自动化：  
+ Remote Automation is not tied to any specific language, but until the release of Visual C++ 4.2 Enterprise Edition, it was shipped only with Visual Basic 4.0. Be aware that Remote Automation is wholly subsumed by DCOM. If you have the opportunity to use DCOM instead of Remote Automation in your applications, you should do so. Nevertheless, there are scenarios where Remote Automation is more appropriate:  
   
--   客户端为16 位。  
+-   Wherever you have 16-bit clients.  
   
--   如果您的组织还没有铺开 Windows NT 或 Windows 95 的 DCOM 适用版本。  
+-   If your organization has not rolled out a DCOM-enabled version of Windows NT or Windows 95 yet.  
   
--   如果使用以使用 C\+\+ 组件替代一个或多个 Visual Basic 组件的远程自动化升级现有应用程序套件。  
+-   If you are upgrading an existing application suite that uses Remote Automation to use C++ components in place of one or more Visual Basic components.  
   
- 使用远程自动化创建程序与使用 DCOM 自动化创建程序之间的没有差异，并且配置工具包能够非常简单操作远程自动化和 DCOM 之间的切换。  因而，基础结构配置好后，就地升级将应用程序从远程自动化升级到 DCOM 并不困难。  
+ There need be no difference between programs created to use Remote Automation and those created to use Automation over DCOM, and the configuration utilities make it very simple to switch operation between Remote Automation and DCOM. Consequently, it is not difficult to upgrade an application from Remote Automation to DCOM once the infrastructure is in place.  
   
-## 请参阅  
- [远程自动化提供什么？](../mfc/what-does-remote-automation-provide-q.md)   
- [DCOM 历史记录](../mfc/history-of-dcom.md)
+## <a name="see-also"></a>See Also  
+ [What Does Remote Automation Provide](what-does-remote-automation-provide-q.md)   
+ [History of DCOM](../mfc/history-of-dcom.md)
+

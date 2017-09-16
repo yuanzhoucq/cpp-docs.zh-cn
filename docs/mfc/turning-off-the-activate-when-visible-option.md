@@ -1,37 +1,56 @@
 ---
-title: "关闭“可见时激活”选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控件 [C++]，激活选项"
-  - "“可见时激活”选项"
+title: Turning off the Activate When Visible Option | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], activate options
+- Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 关闭“可见时激活”选项
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 09ad4e1e219e52033006c83dfd249ac7b51c0510
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-控件有两种基本状态：活动和非活动。  传统上，这些状态通过控件是否具有窗口来区分。  一个活动控件具有一个窗口；非活动控件没有。  通过引入无窗口激活，这种区别不再通用，但仍适用于许多控件。  
+---
+# <a name="turning-off-the-activate-when-visible-option"></a>Turning off the Activate When Visible Option
+A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
- 比较 ActiveX 控件通常执行的初始化的其他窗口中，为一个非常大的操作。  理论上，控件将延迟创建其到绝对必要的窗口。  
+ Compared with the rest of the initialization typically performed by an ActiveX control, the creation of a window is an extremely expensive operation. Ideally, a control would defer creating its window until absolutely necessary.  
   
- 在可见在容器中，许多控件不需要是活动的。  通常，控件可以在活动状态保持，直至用户执行例如需要成为活动的操作 \(使用鼠标，单击或按 Tab 键\)。  若要导致控件保持活动容器之前激活它，从控件的其他标志来移除 **OLEMISC\_ACTIVATEWHENVISIBLE** 标志：  
+ Many controls do not need to be active the entire time they are visible in a container. Often, a control can remain in the inactive state until the user performs an operation that requires it to become active (for example, clicking with the mouse or pressing the TAB key). To cause a control to remain inactive until the container needs to activate it, remove the **OLEMISC_ACTIVATEWHENVISIBLE** flag from the control's miscellaneous flags:  
   
- [!code-cpp[NVC_MFC_AxOpt#9](../mfc/codesnippet/CPP/turning-off-the-activate-when-visible-option_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#9](../mfc/codesnippet/cpp/turning-off-the-activate-when-visible-option_1.cpp)]  
   
- **OLEMISC\_ACTIVATEWHENVISIBLE** 标志自动省略，如果关闭在 MFC ActiveX 控件向导"的 [控件设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 页中的 **Activate When Visible** 选项，当您创建控件时。  
+ The **OLEMISC_ACTIVATEWHENVISIBLE** flag is automatically omitted if you turn off the **Activate When Visible** option in the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard when you create your control.  
   
-## 请参阅  
- [MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

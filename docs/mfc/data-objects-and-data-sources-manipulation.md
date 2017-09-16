@@ -1,102 +1,120 @@
 ---
-title: "数据对象和数据源：操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪贴板 [C++], 确定可用格式"
-  - "剪贴板 [C++], 传递格式信息"
-  - "数据对象 [C++], 操作"
-  - "数据源 [C++], 数据操作"
-  - "数据源 [C++], 确定可用格式"
-  - "数据源 [C++], 插入数据"
-  - "延迟的呈现 [C++]"
-  - "OLE [C++], 数据对象"
-  - "OLE [C++], 数据源"
+title: 'Data Objects and Data Sources: Manipulation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data objects [MFC], manipulating
+- data sources [MFC], data operations
+- data sources [MFC], inserting data
+- Clipboard [MFC], determining available formats
+- OLE [MFC], data objects
+- Clipboard [MFC], passing format information
+- data sources [MFC], determining available formats
+- delayed rendering [MFC]
+- OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 数据对象和数据源：操作
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a05a745f1a023ce36ca7edc5b9a42890f94a121f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在数据对象或创建数据源之后，可以对数据执行的常见操作，如插入，并移除的数据，如何枚举格式化数据等等。  本文描述必需的最常见技术来完成的操作。  主题包括：  
+---
+# <a name="data-objects-and-data-sources-manipulation"></a>Data Objects and Data Sources: Manipulation
+After a data object or data source has been created, you can perform a number of common operations on the data, such as inserting and removing data, enumerating the formats the data is in, and more. This article describes the techniques necessary to complete the most common operations. Topics include:  
   
--   [插入到数据源中的数据](#_core_inserting_data_into_a_data_source)  
+-   [Inserting data into a data source](#_core_inserting_data_into_a_data_source)  
   
--   [确定格式可用在数据对象](#_core_determining_the_formats_available_in_a_data_object)  
+-   [Determining the formats available in a data object](#_core_determining_the_formats_available_in_a_data_object)  
   
--   [从数据对象检索数据](#_core_retrieving_data_from_a_data_object)  
+-   [Retrieving data from a data object](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a> 插入到数据源中的数据  
- 数据如何插入数据源确定是否提供数据立即或在需要时，然后在其中进行媒体提供。  可能性如下所示。  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Inserting Data into a Data Source  
+ How data is inserted into a data source depends on whether the data is supplied immediately or on demand, and in which medium it is supplied. The possibilities are as follows.  
   
-### 提供的数据立即 \(立即呈现\)  
+### <a name="supplying-data-immediately-immediate-rendering"></a>Supplying Data Immediately (Immediate Rendering)  
   
--   所提供数据的每剪贴板格式的重复调用 `COleDataSource::CacheGlobalData`。  将剪贴板格式被使用的句柄，内存中的数据，因此，可选择，描述数据的结构 **FORMATETC**。  
+-   Call `COleDataSource::CacheGlobalData` repeatedly for every Clipboard format in which you are supplying data. Pass the Clipboard format to be used, a handle to the memory containing the data and, optionally, a **FORMATETC** structure describing the data.  
   
-     \- 或 \-  
+     -or-  
   
--   如果要直接使用 **STGMEDIUM** 结构。使用，则调用 `COleDataSource::CacheData` 而不是单击上半部分的 `COleDataSource::CacheGlobalData` 选项。  
+-   If you want to work directly with **STGMEDIUM** structures, you call `COleDataSource::CacheData` instead of `COleDataSource::CacheGlobalData` in the option above.  
   
-### 提供的数据按需 \(延迟\) 的呈现  
- 这是一个高级主题。  
+### <a name="supplying-data-on-demand-delayed-rendering"></a>Supplying Data on Demand (Delayed Rendering)  
+ This is an advanced topic.  
   
--   所提供数据的每剪贴板格式的重复调用 `COleDataSource::DelayRenderData`。  将剪贴板格式被使用，且中，选择，描述数据的结构 **FORMATETC**。  当数据请求，框架调用 `COleDataSource::OnRenderData`，您必须重写此方法。  
+-   Call `COleDataSource::DelayRenderData` repeatedly for every Clipboard format in which you are supplying data. Pass the Clipboard format to be used and, optionally, a **FORMATETC** structure describing the data. When the data is requested, the framework will call `COleDataSource::OnRenderData`, which you must override.  
   
-     \- 或 \-  
+     -or-  
   
--   如果使用 `CFile` 对象提供数据，请调用 `COleDataSource::DelayRenderFileData` 而不是前面的 `COleDataSource::DelayRenderData` 选项。  当数据请求，框架调用 `COleDataSource::OnRenderFileData`，您必须重写此方法。  
+-   If you use a `CFile` object to supply the data, call `COleDataSource::DelayRenderFileData` instead of `COleDataSource::DelayRenderData` in the previous option. When the data is requested, the framework will call `COleDataSource::OnRenderFileData`, which you must override.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> 确定格式可用在数据对象  
- 在应用程序允许用户将该数据粘贴到之前，需要知道是否对该剪贴板中可以处理的格式。  若要执行此，应用程序应执行以下操作：  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Determining the Formats Available in a Data Object  
+ Before an application allows the user to paste data into it, it needs to know if there are formats on the Clipboard that it can handle. To do this, your application should do the following:  
   
-1.  创建 `COleDataObject` 对象并 **FORMATETC** 结构。  
+1.  Create a `COleDataObject` object and a **FORMATETC** structure.  
   
-2.  调用数据对象的 `AttachClipboard` 成员函数关联数据对象与剪贴板上的数据。  
+2.  Call the data object's `AttachClipboard` member function to associate the data object with the data on the Clipboard.  
   
-3.  执行下列操作之一：  
+3.  Do one of the following:  
   
-    -   调用数据对象的 `IsDataAvailable` 成员函数中是否只有所需的数据格式。  在剪贴板上的数据比应用程序的情况下，支持更格式这将节省时间。  
+    -   Call the data object's `IsDataAvailable` member function if there are only one or two formats you need. This will save you time in cases where the data on the Clipboard supports significantly more formats than your application.  
   
-         \- 或 \-  
+         -or-  
   
-    -   调用数据对象的 `BeginEnumFormats` 成员函数开始枚举格式可用剪贴板上。  然后调用 `GetNextFormat`，直到返回剪贴板格式应用程序或支持目的格式。  
+    -   Call the data object's `BeginEnumFormats` member function to start enumerating the formats available on the Clipboard. Then call `GetNextFormat` until the Clipboard returns a format your application supports or there are no more formats.  
   
- 如果您使用 `ON_UPDATE_COMMAND_UI`，您现在可以使用，因此，粘贴可能，粘贴在"编辑"菜单上的特定项。  为此，请调用 `CMenu::EnableMenuItem` 或 `CCmdUI::Enable`。  有关要完成工作的更多信息容器应用程序应执行与菜单项，并且，如果为，请参见 [菜单和资源：容器添加](../mfc/menus-and-resources-container-additions.md)。  
+ If you are using `ON_UPDATE_COMMAND_UI`, you can now enable the Paste and, possibly, Paste Special items on the Edit menu. To do this, call either `CMenu::EnableMenuItem` or `CCmdUI::Enable`. For more information about what container applications should do with menu items and when, see [Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a> 从数据对象检索数据  
- 一旦确定的数据格式，任何仍是从数据对象检索数据。  为此，该用户决定在何处放置数据，并且，应用程序会调用适当的函数。  数据在下列媒介之一中可用：  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Retrieving Data from a Data Object  
+ Once you have decided on a data format, all that remains is to retrieve the data from the data object. To do this, the user decides where to put the data, and the application calls the appropriate function. The data will be available in one of the following mediums:  
   
-|中|调用函数|  
-|-------|----------|  
-|共用内存 \(`HGLOBAL`\)|`COleDataObject::GetGlobalData`|  
-|文件 \(`CFile`\)|`COleDataObject::GetFileData`|  
-|**STGMEDIUM** 结构 \(`IStorage`\)|`COleDataObject::GetData`|  
+|Medium|Function to call|  
+|------------|----------------------|  
+|Global Memory (`HGLOBAL`)|`COleDataObject::GetGlobalData`|  
+|File (`CFile`)|`COleDataObject::GetFileData`|  
+|**STGMEDIUM** structure (`IStorage`)|`COleDataObject::GetData`|  
   
- 通常，由媒体与其一起将剪贴板格式指定。  例如，**CF\_EMBEDDEDSTRUCT** 对象需要一个始终位于 **STGMEDIUM** 结构媒体的 `IStorage`。  因此，使用 `GetData`，因为它能接受 **STGMEDIUM** 结构中只有一个这些函数。  
+ Commonly, the medium will be specified along with its Clipboard format. For example, a **CF_EMBEDDEDSTRUCT** object is always in an `IStorage` medium that requires an **STGMEDIUM** structure. Therefore, you would use `GetData` because it is the only one of these functions that can accept an **STGMEDIUM** structure.  
   
- 对剪贴板格式在 `IStream` 或 `HGLOBAL` 媒体的情况，框架可提供引用数据的 `CFile` 指针。  应用程序然后可以使用读取文件获取数据，方法与可能导入数据文件的方式。  实质上，这样是客户端界面到数据源中 `OnRenderData` 和 `OnRenderFileData` 例程。  
+ For cases where the Clipboard format is in an `IStream` or `HGLOBAL` medium, the framework can provide a `CFile` pointer that references the data. The application can then use file read to get the data in much the same way as it might import data from a file. Essentially, this is the client-side interface to the `OnRenderData` and `OnRenderFileData` routines in the data source.  
   
- 用户现在可以将数据插入文档与在同一格式的其他数据。  
+ The user can now insert data into the document just like for any other data in the same format.  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [拖放](../mfc/drag-and-drop-ole.md)  
+-   [Drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [Clipboard](../mfc/clipboard.md)  
   
-## 请参阅  
- [数据对象和数据源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

@@ -1,48 +1,67 @@
 ---
-title: "滑块控件成员函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl 类, 方法"
-  - "滑块控件, 成员函数"
+title: Slider Control Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], methods
+- slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 滑块控件成员函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 440f9a20c1d73bc7f7b125867216d356251d4a08
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-应用程序可以调用滑块控件的成员函数检索有关滑块控件 \([CSliderCtrl](../mfc/reference/csliderctrl-class.md)\) 的信息和更改其特性。  
+---
+# <a name="slider-control-member-functions"></a>Slider Control Member Functions
+An application can call the slider control's member functions to retrieve information about the slider control ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) and to change its characteristics.  
   
- 若要检索滑块 \(即用户选择\) 的值的位置，请使用 [GetPos](../Topic/CSliderCtrl::GetPos.md) 成员函数。  若要设置滑块的位置，请使用 [SetPos](../Topic/CSliderCtrl::SetPos.md) 成员函数。  随时都可以使用 `VerifyPos` 成员确保函数，滑块在最小值和最大值之间。  
+ To retrieve the position of the slider (that is, the value the user has chosen), use the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function. To set the position of the slider, use the [SetPos](../mfc/reference/csliderctrl-class.md#setpos) member function. At any time you can use the `VerifyPos` member function to make sure that the slider is between the minimum and maximum values.  
   
- Slider 控件的范围是滑块控件能够表示的组连续的值。  则首次创建时，大多数应用程序使用 [SetRange](../Topic/CSliderCtrl::SetRange.md) 成员函数设置滑块控件的范围。  使用 [SetRangeMax](../Topic/CSliderCtrl::SetRangeMax.md)[SetRangeMin](../Topic/CSliderCtrl::SetRangeMin.md) 和成员函数，应用程序可以在滑块控件之后动态修改范围创建。  允许范围动态特性更改的应用程序检索最终范围设置，当用户完成与滑块控件时。  若要检索这些设置，请使用 [GetRange](../Topic/CSliderCtrl::GetRange.md)[GetRangeMax](../Topic/CSliderCtrl::GetRangeMax.md)[GetRangeMin](../Topic/CSliderCtrl::GetRangeMin.md)、和成员函数。  
+ The range of a slider control is the set of contiguous values that the slider control can represent. Most applications use the [SetRange](../mfc/reference/csliderctrl-class.md#setrange) member function to set the range of a slider control when it is first created. Applications can dynamically alter the range after the slider control has been created by using the [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) and [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) member functions. An application that allows the range to be changed dynamically typically retrieves the final range settings when the user has finished working with the slider control. To retrieve these settings, use the [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), and [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) member functions.  
   
- 应用程序可以使用 `TBS_AUTOTICKS` 样式将自动显示的滑块控件的刻度线。  如果应用程序确实需要控制位置或刻度线的频率，但是，可以使用很多的成员函数。  
+ An application can use the `TBS_AUTOTICKS` style to have a slider control's tick marks displayed automatically. If an application needs to control the position or frequency of the tick marks, however, a number of member functions can be used.  
   
- 若要设置一个刻度线的位置，则应用程序可以使用 [SetTic](../Topic/CSliderCtrl::SetTic.md) 成员函数。  [SetTicFreq](../Topic/CSliderCtrl::SetTicFreq.md) 成员函数允许应用程序设置定期显示滑块控件范围的刻度线。  例如，应用程序只能使用该成员函数在某一范围内显示刻度 10 行 1 到 100。  
+ To set the position of a tick mark, an application can use the [SetTic](../mfc/reference/csliderctrl-class.md#settic) member function. The [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) member function allows an application to set tick marks that appear at regular intervals in the slider control's range. For example, the application can use this member function to display only 10 tick marks in a range of 1 through 100.  
   
- 若要检索在范围的索引对应于刻度一行对应，请使用 [GetTic](../Topic/CSliderCtrl::GetTic.md) 成员函数。  [GetTicArray](../Topic/CSliderCtrl::GetTicArray.md) 成员函数检索这些数组索引。  若要检索一个刻度线的位置，在坐标，请使用 [GetTicPos](../Topic/CSliderCtrl::GetTicPos.md) 成员函数。  使用 [GetNumTics](../Topic/CSliderCtrl::GetNumTics.md) 成员函数，应用程序便可以检索的刻度线数量。  
+ To retrieve the index in the range corresponding to a tick mark, use the [GetTic](../mfc/reference/csliderctrl-class.md#gettic) member function. The [GetTicArray](../mfc/reference/csliderctrl-class.md#getticarray) member function retrieves an array of these indices. To retrieve the position of a tick mark, in client coordinates, use the [GetTicPos](../mfc/reference/csliderctrl-class.md#getticpos) member function. An application can retrieve the number of tick marks by using the [GetNumTics](../mfc/reference/csliderctrl-class.md#getnumtics) member function.  
   
- [ClearTics](../Topic/CSliderCtrl::ClearTics.md) 成员函数中移除所有滑块控件的刻度线。  
+ The [ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) member function removes all of a slider control's tick marks.  
   
- 如果应用程序收到 **TB\_LINEDOWN** 或 **TB\_LINEUP** 通知消息时，滑块控制行范围边缘多远确定滑块移动。  同样，页大小确定对 **TB\_PAGEDOWN** 和 **TB\_PAGEUP** 消息通知的响应。  使用 [GetLineSize](../Topic/CSliderCtrl::GetLineSize.md)[SetLineSize](../Topic/CSliderCtrl::SetLineSize.md)[GetPageSize](../Topic/CSliderCtrl::GetPageSize.md)[SetPageSize](../Topic/CSliderCtrl::SetPageSize.md)、、和成员函数，应用程序便可以检索和设置行和页大小的值。  
+ A slider control's line size determines how far the slider moves when an application receives a **TB_LINEDOWN** or **TB_LINEUP** notification message. Similarly, the page size determines the response to the **TB_PAGEDOWN** and **TB_PAGEUP** notification messages. Applications can retrieve and set the line and page size values by using the [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), and [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) member functions.  
   
- 应用程序可使用成员函数检索滑块控件的尺寸。  [GetThumbRect](../Topic/CSliderCtrl::GetThumbRect.md) 成员函数检索滑块的边框。  [GetChannelRect](../Topic/CSliderCtrl::GetChannelRect.md) 成员函数检索控制通道滑块的边框。通道 \(是滑块移动，并突出显示包含的区域，则范围选择。\)  
+ An application can use member functions to retrieve the dimensions of a slider control. The [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) member function retrieves the bounding rectangle for the slider. The [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) member function retrieves the bounding rectangle for the slider control's channel. (The channel is the area over which the slider moves and which contains the highlight when a range is selected.)  
   
- 如果滑块控件都有 `TBS_ENABLESELRANGE` 样式，用户还可以选择值域从该的连续值。  允许选择范围动态调整许多的成员函数。  [SetSelection](../Topic/CSliderCtrl::SetSelection.md) 成员函数设置选择的开始位置和结束位置。  当用户完成选择设置范围时，可以使用 [GetSelection](../Topic/CSliderCtrl::GetSelection.md) 成员函数，应用程序便可以检索设置。  若要清除用户的选择，请使用 [ClearSel](../Topic/CSliderCtrl::ClearSel.md) 成员函数。  
+ If a slider control has the `TBS_ENABLESELRANGE` style, the user can select a range of contiguous values from it. A number of member functions allow the selection range to be adjusted dynamically. The [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) member function sets the starting and ending positions of a selection. When the user has finished setting a selection range, an application can retrieve the settings by using the [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) member function. To clear a user's selection, use the [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) member function.  
   
-## 请参阅  
- [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

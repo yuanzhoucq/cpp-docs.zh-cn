@@ -1,5 +1,5 @@
 ---
-title: "CEditView 类 |Microsoft 文档"
+title: CEditView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,11 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- text editors, CEditView class
-- text editors
-- edit controls, classes
-- views, classes
-- CEditView class
+- CEditView [MFC], CEditView
+- CEditView [MFC], FindText
+- CEditView [MFC], GetBufferLength
+- CEditView [MFC], GetEditCtrl
+- CEditView [MFC], GetPrinterFont
+- CEditView [MFC], GetSelectedText
+- CEditView [MFC], LockBuffer
+- CEditView [MFC], PrintInsideRect
+- CEditView [MFC], SerializeRaw
+- CEditView [MFC], SetPrinterFont
+- CEditView [MFC], SetTabStops
+- CEditView [MFC], UnlockBuffer
+- CEditView [MFC], OnFindNext
+- CEditView [MFC], OnReplaceAll
+- CEditView [MFC], OnReplaceSel
+- CEditView [MFC], OnTextNotFound
+- CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 caps.latest.revision: 25
 author: mikeblome
@@ -55,93 +67,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 688a6c0e871a9456b85a8ed02ce43d7fa9ca8180
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b61ac9f32276c5d2962206e975b5335ed9991c64
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ceditview-class"></a>CEditView 类
-视图类的类型，提供 Windows 编辑控件功能并可用于实现简单的文本编辑器功能。  
+# <a name="ceditview-class"></a>CEditView Class
+A type of view class that provides the functionality of a Windows edit control and can be used to implement simple text-editor functionality.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CEditView : public CCtrlView  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEditView::CEditView](#ceditview)|构造 `CEditView` 类型的对象。|  
+|[CEditView::CEditView](#ceditview)|Constructs an object of type `CEditView`.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEditView::FindText](#findtext)|搜索文本中的字符串。|  
-|[CEditView::GetBufferLength](#getbufferlength)|获取字符缓冲区的长度。|  
-|[CEditView::GetEditCtrl](#geteditctrl)|提供对访问`CEdit`部分`CEditView`（Windows 编辑控件） 的对象。|  
-|[CEditView::GetPrinterFont](#getprinterfont)|检索当前的打印机字体。|  
-|[CEditView::GetSelectedText](#getselectedtext)|检索当前选定文本。|  
-|[CEditView::LockBuffer](#lockbuffer)|锁定缓冲区。|  
-|[CEditView::PrintInsideRect](#printinsiderect)|将呈现在给定的矩形内的文本。|  
-|[CEditView::SerializeRaw](#serializeraw)|将序列化为`CEditView`为磁盘上原始文本的对象。|  
-|[CEditView::SetPrinterFont](#setprinterfont)|将新的打印机字体设置。|  
-|[CEditView::SetTabStops](#settabstops)|设置制表屏幕显示和打印。|  
-|[CEditView::UnlockBuffer](#unlockbuffer)|对缓冲区进行解锁。|  
+|[CEditView::FindText](#findtext)|Searches for a string within the text.|  
+|[CEditView::GetBufferLength](#getbufferlength)|Obtains the length of the character buffer.|  
+|[CEditView::GetEditCtrl](#geteditctrl)|Provides access to the `CEdit` portion of a `CEditView` object (the Windows edit control).|  
+|[CEditView::GetPrinterFont](#getprinterfont)|Retrieves the current printer font.|  
+|[CEditView::GetSelectedText](#getselectedtext)|Retrieves the current text selection.|  
+|[CEditView::LockBuffer](#lockbuffer)|Locks the buffer.|  
+|[CEditView::PrintInsideRect](#printinsiderect)|Renders text inside a given rectangle.|  
+|[CEditView::SerializeRaw](#serializeraw)|Serializes a `CEditView` object to disk as raw text.|  
+|[CEditView::SetPrinterFont](#setprinterfont)|Sets a new printer font.|  
+|[CEditView::SetTabStops](#settabstops)|Sets tab stops for both screen display and printing.|  
+|[CEditView::UnlockBuffer](#unlockbuffer)|Unlocks the buffer.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEditView::OnFindNext](#onfindnext)|查找下一个匹配项的文本字符串。|  
-|[CEditView::OnReplaceAll](#onreplaceall)|使用新的字符串来替换给定字符串的所有匹配项。|  
-|[CEditView::OnReplaceSel](#onreplacesel)|将替换当前所选内容。|  
-|[CEditView::OnTextNotFound](#ontextnotfound)|当查找操作没有找到匹配的任何进一步的文本时调用。|  
+|[CEditView::OnFindNext](#onfindnext)|Finds next occurrence of a text string.|  
+|[CEditView::OnReplaceAll](#onreplaceall)|Replaces all occurrences of a given string with a new string.|  
+|[CEditView::OnReplaceSel](#onreplacesel)|Replaces current selection.|  
+|[CEditView::OnTextNotFound](#ontextnotfound)|Called when a find operation fails to match any further text.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|默认类型的对象的样式**CEditView。**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|Default style for objects of type **CEditView.**|  
   
-## <a name="remarks"></a>备注  
- `CEditView`类提供以下附加功能︰  
+## <a name="remarks"></a>Remarks  
+ The `CEditView` class provides the following additional functions:  
   
--   打印。  
+-   Print.  
   
--   查找和替换。  
+-   Find and replace.  
   
- 因为类`CEditView`由派生类`CView`，类的对象`CEditView`可以用于文档和文档模板。  
+ Because class `CEditView` is a derivative of class `CView`, objects of class `CEditView` can be used with documents and document templates.  
   
- 每个`CEditView`控件的文本就会保留在其自己的全局内存的对象。 您的应用程序可以有任意数量的`CEditView`对象。  
+ Each `CEditView` control's text is kept in its own global memory object. Your application can have any number of `CEditView` objects.  
   
- 创建类型的对象`CEditView`如果您希望编辑窗口与以上所列的额外功能或要简单文本编辑器的功能。 一个`CEditView`对象可能会处于窗口的整个客户端区域。 派生您自己的类从`CEditView`添加或修改的基本功能，或声明可以添加到文档模板的类。  
+ Create objects of type `CEditView` if you want an edit window with the added functionality listed above, or if you want simple text-editor functionality. A `CEditView` object can occupy the entire client area of a window. Derive your own classes from `CEditView` to add or modify the basic functionality, or to declare classes that can be added to a document template.  
   
- 类的默认实现`CEditView`处理以下命令︰ **ID_EDIT_SELECT_ALL**， **ID_EDIT_FIND**， **ID_EDIT_REPLACE**， **ID_EDIT_REPEAT**，和**ID_FILE_PRINT**。  
+ The default implementation of class `CEditView` handles the following commands: **ID_EDIT_SELECT_ALL**, **ID_EDIT_FIND**, **ID_EDIT_REPLACE**, **ID_EDIT_REPEAT**, and **ID_FILE_PRINT**.  
   
- 默认字符限制`CEditView`是 (1024年\*1024年-1 = 1048575)。 这可以通过调用更改**EM_LIMITTEXT** edit 控件中的基础功能。 但是，限制为操作系统而异，并且的一种编辑控件 （一个或多行）。 有关这些限制的详细信息，请参阅[EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607)。  
+ The default character limit for `CEditView` is (1024 \* 1024 - 1 = 1048575). This can be changed by calling the **EM_LIMITTEXT** function of the underlying edit control. However, the limits are different depending on the operating system and the type of edit control (single or multiline). For more information on these limits, see [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607).  
   
- 若要更改控件中的此限制，请重写`OnCreate()`函数为您`CEditView`类，并插入以下代码行︰  
+ To change this limit in your control, override the `OnCreate()` function for your `CEditView` class and insert the following line of code:  
   
- [!code-cpp[NVC_MFCDocView #&65;](../../mfc/codesnippet/cpp/ceditview-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#65](../../mfc/codesnippet/cpp/ceditview-class_1.cpp)]  
   
- 类型的对象`CEditView`(或派生的类型的`CEditView`) 具有以下限制︰  
+ Objects of type `CEditView` (or of types derived from `CEditView`) have the following limitations:  
   
-- `CEditView`未实现 true 所见即所得 (WYSIWYG) 编辑。 在屏幕上的可读性和匹配的打印的输出之间没有一个选择`CEditView`选取屏幕可读性。  
+- `CEditView` does not implement true what you see is what you get (WYSIWYG) editing. Where there is a choice between readability on the screen and matching printed output, `CEditView` opts for screen readability.  
   
-- `CEditView`可以在仅一种字体显示文本。 尚无特殊字符格式设置支持。 请参见类[CRichEditView](../../mfc/reference/cricheditview-class.md)的更强大的功能。  
+- `CEditView` can display text in only a single font. No special character formatting is supported. See class [CRichEditView](../../mfc/reference/cricheditview-class.md) for greater capabilities.  
   
--   文本量`CEditView`可以包含限制。 限制为相同`CEdit`控件。  
+-   The amount of text a `CEditView` can contain is limited. The limits are the same as for the `CEdit` control.  
   
- 有关详细信息`CEditView`，请参阅[派生视图类在 MFC 中提供](../../mfc/derived-view-classes-available-in-mfc.md)。  
+ For more information on `CEditView`, see [Derived View Classes Available in MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -154,31 +166,31 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="ceditview"></a>CEditView::CEditView  
- 构造 `CEditView` 类型的对象。  
+##  <a name="ceditview"></a>  CEditView::CEditView  
+ Constructs an object of type `CEditView`.  
   
 ```  
 CEditView();
 ```  
   
-### <a name="remarks"></a>备注  
- 构造该对象，则必须调用[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函数之前使用编辑控件。 如果您从派生类`CEditView`并将其添加到模板使用`CWinApp::AddDocTemplate`，框架将调用这两个此构造函数和**创建**函数。  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, you must call the [CWnd::Create](../../mfc/reference/cwnd-class.md#create) function before the edit control is used. If you derive a class from `CEditView` and add it to the template using `CWinApp::AddDocTemplate`, the framework calls both this constructor and the **Create** function.  
   
-##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
- 包含的默认样式`CEditView`对象。  
+##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
+ Contains the default style of the `CEditView` object.  
   
 ```  
 static const DWORD dwStyleDefault;  
 ```  
   
-### <a name="remarks"></a>备注  
- 将传递作为此静态成员`dwStyle`参数**创建**函数来获取的默认样式为`CEditView`对象。  
+### <a name="remarks"></a>Remarks  
+ Pass this static member as the `dwStyle` parameter of the **Create** function to obtain the default style for the `CEditView` object.  
   
-##  <a name="findtext"></a>CEditView::FindText  
- 调用`FindText`函数要搜索`CEditView`对象的文本缓冲区。  
+##  <a name="findtext"></a>  CEditView::FindText  
+ Call the `FindText` function to search the `CEditView` object's text buffer.  
   
 ```  
 BOOL FindText(
@@ -187,91 +199,91 @@ BOOL FindText(
     BOOL bCase = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFind`  
- 要找的文本。  
+ The text to be found.  
   
  `bNext`  
- 指定搜索方向。 如果**TRUE**，搜索方向将是朝向缓冲区的末尾。 如果**FALSE**，搜索方向将是朝向该缓冲区的开头。  
+ Specifies the direction of the search. If **TRUE**, the search direction is toward the end of the buffer. If **FALSE**, the search direction is toward the beginning of the buffer.  
   
  `bCase`  
- 指定该搜索是否区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
+ Specifies whether the search is case sensitive. If **TRUE**, the search is case sensitive. If **FALSE**, the search is not case sensitive.  
   
-### <a name="return-value"></a>返回值  
- 如果找到搜索文本，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the search text is found; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数在指定的文本的缓冲区中搜索的文本`lpszFind`中指定的方向的当前选定处开始， `bNext`，并由指定的大小写区分功能与`bCase`。 如果找到了文本，它将所选内容设置为所找到文本，并返回一个非零值。 如果未找到文本，该函数将返回 0。  
+### <a name="remarks"></a>Remarks  
+ This function searches the text in the buffer for the text specified by `lpszFind`, starting at the current selection, in the direction specified by `bNext`, and with case sensitivity specified by `bCase`. If the text is found, it sets the selection to the found text and returns a nonzero value. If the text is not found, the function returns 0.  
   
- 通常不需要调用`FindText`函数，除非您重写`OnFindNext`，后者调用`FindText`。  
+ You normally do not need to call the `FindText` function unless you override `OnFindNext`, which calls `FindText`.  
   
-##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
- 调用该成员函数以获取当前在编辑控件的缓冲区中不包括 null 终止符的字符数。  
+##  <a name="getbufferlength"></a>  CEditView::GetBufferLength  
+ Call this member function to obtain the number of characters currently in the edit control's buffer, not including the null terminator.  
   
 ```  
 UINT GetBufferLength() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 缓冲区中字符串的长度。  
+### <a name="return-value"></a>Return Value  
+ The length of the string in the buffer.  
   
-##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
- 调用`GetEditCtrl`以获取对使用编辑视图的编辑控件的引用。  
+##  <a name="geteditctrl"></a>  CEditView::GetEditCtrl  
+ Call `GetEditCtrl` to get a reference to the edit control used by the edit view.  
   
 ```  
 CEdit& GetEditCtrl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对 `CEdit` 对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to a `CEdit` object.  
   
-### <a name="remarks"></a>备注  
- 此控件是类型[CEdit](../../mfc/reference/cedit-class.md)，因此您可以操作 Windows 编辑控件直接使用`CEdit`成员函数。  
+### <a name="remarks"></a>Remarks  
+ This control is of type [CEdit](../../mfc/reference/cedit-class.md), so you can manipulate the Windows edit control directly using the `CEdit` member functions.  
   
 > [!CAUTION]
->  使用`CEdit`对象可以将更改状态的基础 Windows 编辑控件。 例如，不应更改使用的选项卡上设置[CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops)正常，因为`CEditView`缓存使用编辑控件中，又可以在打印中的这些设置。 请改用[CEditView::SetTabStops](#settabstops)。  
+>  Using the `CEdit` object can change the state of the underlying Windows edit control. For example, you should not change the tab settings using the [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops) function because `CEditView` caches these settings for use both in the edit control and in printing. Instead, use [CEditView::SetTabStops](#settabstops).  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&66;](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
- 调用`GetPrinterFont`以获取指向[CFont](../../mfc/reference/cfont-class.md)对象，用于描述当前打印机字体。  
+##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont  
+ Call `GetPrinterFont` to get a pointer to a [CFont](../../mfc/reference/cfont-class.md) object that describes the current printer font.  
   
 ```  
 CFont* GetPrinterFont() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个指向`CFont`对象，它指定当前的打印机字体;**NULL**如果尚未设置打印机字体。 该指针可能是暂时的，不应存储起来供将来使用。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CFont` object that specifies the current printer font; **NULL** if the printer font has not been set. The pointer may be temporary and should not be stored for later use.  
   
-### <a name="remarks"></a>备注  
- 如果打印机字体尚未设置，默认打印行为`CEditView`类是使用用于显示的相同字体进行打印。  
+### <a name="remarks"></a>Remarks  
+ If the printer font has not been set, the default printing behavior of the `CEditView` class is to print using the same font used for display.  
   
- 使用此函数可确定当前的打印机字体。 如果它不是所需的打印机字体，使用[CEditView::SetPrinterFont](#setprinterfont)以更改它。  
+ Use this function to determine the current printer font. If it is not the desired printer font, use [CEditView::SetPrinterFont](#setprinterfont) to change it.  
   
-##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
- 调用`GetSelectedText`要复制到所选的文本`CString`对象，直至选定内容或选定内容中前面的第一个回车符的字符的字符的末尾。  
+##  <a name="getselectedtext"></a>  CEditView::GetSelectedText  
+ Call `GetSelectedText` to copy the selected text into a `CString` object, up to the end of the selection or the character preceding the first carriage-return character in the selection.  
   
 ```  
 void GetSelectedText(CString& strResult) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `strResult`  
- 对引用`CString`是否要接收选定的文本的对象。  
+ A reference to the `CString` object that is to receive the selected text.  
   
-##  <a name="lockbuffer"></a>CEditView::LockBuffer  
- 调用该成员函数以获取指向缓冲区的指针。 不应修改缓冲区。  
+##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
+ Call this member function to obtain a pointer to the buffer. The buffer should not be modified.  
   
 ```  
 LPCTSTR LockBuffer() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向编辑控件的缓冲区的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the edit control's buffer.  
   
-##  <a name="onfindnext"></a>CEditView::OnFindNext  
- 搜索指定的文本的缓冲区中的文本`lpszFind`，在指定的方向`bNext`，与由指定的大小写区分功能`bCase`。  
+##  <a name="onfindnext"></a>  CEditView::OnFindNext  
+ Searches the text in the buffer for the text specified by `lpszFind`, in the direction specified by `bNext`, with case sensitivity specified by `bCase`.  
   
 ```  
 virtual void OnFindNext(
@@ -280,23 +292,23 @@ virtual void OnFindNext(
     BOOL bCase);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFind`  
- 要找的文本。  
+ The text to be found.  
   
  `bNext`  
- 指定搜索方向。 如果**TRUE**，搜索方向将是朝向缓冲区的末尾。 如果**FALSE**，搜索方向将是朝向该缓冲区的开头。  
+ Specifies the direction of the search. If **TRUE**, the search direction is toward the end of the buffer. If **FALSE**, the search direction is toward the beginning of the buffer.  
   
  `bCase`  
- 指定该搜索是否区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
+ Specifies whether the search is case sensitive. If **TRUE**, the search is case sensitive. If **FALSE**, the search is not case sensitive.  
   
-### <a name="remarks"></a>备注  
- 搜索当前所选内容的开头开始，并通过调用来实现[FindText](#findtext)。 在默认实现中，`OnFindNext`调用[OnTextNotFound](#ontextnotfound)如果没有找到文本。  
+### <a name="remarks"></a>Remarks  
+ The search starts at the beginning of the current selection and is accomplished through a call to [FindText](#findtext). In the default implementation, `OnFindNext` calls [OnTextNotFound](#ontextnotfound) if the text is not found.  
   
- 重写`OnFindNext`更改的方式`CEditView`-派生的对象中搜索文本。 `CEditView`调用`OnFindNext`当用户在标准的查找对话框中选择查找下一个按钮。  
+ Override `OnFindNext` to change the way a `CEditView`-derived object searches text. `CEditView` calls `OnFindNext` when the user chooses the Find Next button in the standard Find dialog box.  
   
-##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
- `CEditView`调用`OnReplaceAll`当用户在标准替换对话框中选择全部替换按钮。  
+##  <a name="onreplaceall"></a>  CEditView::OnReplaceAll  
+ `CEditView` calls `OnReplaceAll` when the user selects the Replace All button in the standard Replace dialog box.  
   
 ```  
 virtual void OnReplaceAll(
@@ -305,25 +317,25 @@ virtual void OnReplaceAll(
     BOOL bCase);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFind`  
- 要找的文本。  
+ The text to be found.  
   
  `lpszReplace`  
- 要替换搜索文本的文本。  
+ The text to replace the search text.  
   
  `bCase`  
- 指定搜索是否区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
+ Specifies whether search is case sensitive. If **TRUE**, the search is case sensitive. If **FALSE**, the search is not case sensitive.  
   
-### <a name="remarks"></a>备注  
- `OnReplaceAll`搜索指定的文本的缓冲区中的文本`lpszFind`，与由指定的大小写区分功能`bCase`。 在当前所选内容的开头开始搜索。 每次找到搜索文本，则此函数会将该出现的文本替换与指定的文本`lpszReplace`。 搜索通过调用[FindText](#findtext)。 在默认实现中， [OnTextNotFound](#ontextnotfound)如果没有找到文本，则调用。  
+### <a name="remarks"></a>Remarks  
+ `OnReplaceAll` searches the text in the buffer for the text specified by `lpszFind`, with case sensitivity specified by `bCase`. The search starts at the beginning of the current selection. Each time the search text is found, this function replaces that occurrence of the text with the text specified by `lpszReplace`. The search is accomplished through a call to [FindText](#findtext). In the default implementation, [OnTextNotFound](#ontextnotfound) is called if the text is not found.  
   
- 如果当前所选内容不匹配`lpszFind`，所选内容更新为指定的文本的第一个匹配项`lpszFind`并且不执行替换操作。 这允许用户以确认这是他们想要选择与要替换的文本不匹配时执行的操作。  
+ If the current selection does not match `lpszFind`, the selection is updated to the first occurrence of the text specified by `lpszFind` and a replace is not performed. This allows the user to confirm that this is what they want to do when the selection does not match the text to be replaced.  
   
- 重写`OnReplaceAll`更改的方式`CEditView`-派生的对象替换文本。  
+ Override `OnReplaceAll` to change the way a `CEditView`-derived object replaces text.  
   
-##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
- `CEditView`调用`OnReplaceSel`当用户在标准替换对话框中选择替换按钮。  
+##  <a name="onreplacesel"></a>  CEditView::OnReplaceSel  
+ `CEditView` calls `OnReplaceSel` when the user selects the Replace button in the standard Replace dialog box.  
   
 ```  
 virtual void OnReplaceSel(
@@ -333,37 +345,37 @@ virtual void OnReplaceSel(
     LPCTSTR lpszReplace);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFind`  
- 要找的文本。  
+ The text to be found.  
   
  `bNext`  
- 指定搜索方向。 如果**TRUE**，搜索方向将是朝向缓冲区的末尾。 如果**FALSE**，搜索方向将是朝向该缓冲区的开头。  
+ Specifies the direction of the search. If **TRUE**, the search direction is toward the end of the buffer. If **FALSE**, the search direction is toward the beginning of the buffer.  
   
  `bCase`  
- 指定该搜索是否区分大小写。 如果**TRUE**，搜索不区分大小写。 如果**FALSE**，搜索不区分大小写。  
+ Specifies whether the search is case sensitive. If **TRUE**, the search is case sensitive. If **FALSE**, the search is not case sensitive.  
   
  `lpszReplace`  
- 要替换所找到的文本的文本。  
+ The text to replace the found text.  
   
-### <a name="remarks"></a>备注  
- 替换之后所选内容，此函数搜索的文本中指定的文本的下一个匹配项的缓冲区`lpszFind`，在指定的方向`bNext`，与由指定的大小写区分功能`bCase`。 搜索通过调用[FindText](#findtext)。 如果未找到文本， [OnTextNotFound](#ontextnotfound)调用。  
+### <a name="remarks"></a>Remarks  
+ After replacing the selection, this function searches the text in the buffer for the next occurrence of the text specified by `lpszFind`, in the direction specified by `bNext`, with case sensitivity specified by `bCase`. The search is accomplished through a call to [FindText](#findtext). If the text is not found, [OnTextNotFound](#ontextnotfound) is called.  
   
- 重写`OnReplaceSel`更改的方式`CEditView`-派生的对象替换选定的文本。  
+ Override `OnReplaceSel` to change the way a `CEditView`-derived object replaces the selected text.  
   
-##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
- 重写此函数可更改默认实现中，将调用 Windows 函数**MessageBeep**。  
+##  <a name="ontextnotfound"></a>  CEditView::OnTextNotFound  
+ Override this function to change the default implementation, which calls the Windows function **MessageBeep**.  
   
 ```  
 virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszFind`  
- 要找的文本。  
+ The text to be found.  
   
-##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
- 调用`PrintInsideRect`以在指定的矩形中打印文本*rectLayout*。  
+##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
+ Call `PrintInsideRect` to print text in the rectangle specified by *rectLayout*.  
   
 ```  
 UINT PrintInsideRect(
@@ -373,93 +385,93 @@ UINT PrintInsideRect(
     UINT nIndexStop);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向打印机设备上下文指针。  
+ Pointer to the printer device context.  
   
  *rectLayout*  
- 引用[CRect](../../atl-mfc-shared/reference/crect-class.md)对象或[RECT 结构](../../mfc/reference/rect-structure1.md)指定是用来呈现文本的矩形。  
+ Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or [RECT structure](../../mfc/reference/rect-structure1.md) specifying the rectangle in which the text is to be rendered.  
   
  `nIndexStart`  
- 要呈现的第一个字符缓冲区中的索引。  
+ Index within the buffer of the first character to be rendered.  
   
  `nIndexStop`  
- 在后面要呈现的最后一个字符的字符缓冲区中的索引。  
+ Index within the buffer of the character following the last character to be rendered.  
   
-### <a name="return-value"></a>返回值  
- 要打印的下一个字符的索引 （也就是说，呈现的最后一个字符后面的字符的字符）。  
+### <a name="return-value"></a>Return Value  
+ The index of the next character to be printed (that is, the character following the last character rendered).  
   
-### <a name="remarks"></a>备注  
- 如果`CEditView`控件不具有该样式**ES_AUTOHSCROLL**，呈现矩形内文本换行。 如果该控件没有样式**ES_AUTOHSCROLL**，文本将被剪裁的矩形的右边缘。  
+### <a name="remarks"></a>Remarks  
+ If the `CEditView` control does not have the style **ES_AUTOHSCROLL**, text is wrapped within the rendering rectangle. If the control does have the style **ES_AUTOHSCROLL**, the text is clipped at the right edge of the rectangle.  
   
- **Rect.bottom**元素*rectLayout*对象进行更改，因此该矩形的尺寸定义原始文本所占用的矩形的一部分。  
+ The **rect.bottom** element of the *rectLayout* object is changed so that the rectangle's dimensions define the part of the original rectangle that is occupied by the text.  
   
-##  <a name="serializeraw"></a>CEditView::SerializeRaw  
- 调用`SerializeRaw`能够`CArchive`对象读取或写入的文本`CEditView`对象传递给一个文本文件。  
+##  <a name="serializeraw"></a>  CEditView::SerializeRaw  
+ Call `SerializeRaw` to have a `CArchive` object read or write the text in the `CEditView` object to a text file.  
   
 ```  
 void SerializeRaw(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ar`  
- 引用`CArchive`对象，它存储序列化的文本。  
+ Reference to the `CArchive` object that stores the serialized text.  
   
-### <a name="remarks"></a>备注  
- `SerializeRaw`不同于`CEditView`的内部实现`Serialize`在于它读取和写入纯文本，而无需前面对象说明数据。  
+### <a name="remarks"></a>Remarks  
+ `SerializeRaw` differs from `CEditView`'s internal implementation of `Serialize` in that it reads and writes only the text, without preceding object-description data.  
   
-##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
- 调用`SetPrinterFont`到由指定的字体设置的打印机字体`pFont`。  
+##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
+ Call `SetPrinterFont` to set the printer font to the font specified by `pFont`.  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFont`  
- 指向类型的对象的指针`CFont`。 如果**NULL**，用于打印的字体开始算起的显示字体。  
+ A pointer to an object of type `CFont`. If **NULL**, the font used for printing is based on the display font.  
   
-### <a name="remarks"></a>备注  
- 如果您想让视图始终使用特定字体进行打印，包括对`SetPrinterFont`在您的类`OnPreparePrinting`函数。 此调用虚函数之前打印发生，因此字体更改发生之前打印视图的内容。  
+### <a name="remarks"></a>Remarks  
+ If you want your view to always use a particular font for printing, include a call to `SetPrinterFont` in your class's `OnPreparePrinting` function. This virtual function is called before printing occurs, so the font change takes place before the view's contents are printed.  
   
-##  <a name="settabstops"></a>CEditView::SetTabStops  
- 调用此函数可设置用于显示和打印的制表位。  
+##  <a name="settabstops"></a>  CEditView::SetTabStops  
+ Call this function to set the tab stops used for display and printing.  
   
 ```  
 void SetTabStops(int nTabStops);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nTabStops`  
- 每个制表位，对话框单位的宽度。  
+ Width of each tab stop, in dialog units.  
   
-### <a name="remarks"></a>备注  
- 支持只是一个单一的制表位宽度。 (`CEdit`对象支持多个选项卡宽度。)宽度是字体的采用对话框单位等于&1; /&4; 的打印或显示时所用的平均字符宽度 （基于大写和小写字母字符）。 不应使用`CEdit::SetTabStops`因为`CEditView`必须缓存的制表位值。  
+### <a name="remarks"></a>Remarks  
+ Only a single tab-stop width is supported. ( `CEdit` objects support multiple tab widths.) Widths are in dialog units, which equal one-fourth of the average character width (based on uppercase and lowercase alphabetic characters only) of the font used at the time of printing or displaying. You should not use `CEdit::SetTabStops` because `CEditView` must cache the tab-stop value.  
   
- 此函数修改仅为其调用的对象的选项卡。 若要更改选项卡停止每个`CEditView`对象在您的应用程序，请调用每个对象的`SetTabStops`函数。  
+ This function modifies only the tabs of the object for which it is called. To change the tab stops for each `CEditView` object in your application, call each object's `SetTabStops` function.  
   
-### <a name="example"></a>示例  
- 此代码段通过仔细测量该控件使用的字体对每个第四个字符控件中设置制表位。  
+### <a name="example"></a>Example  
+ This code fragment sets the tab stops in the control to every fourth character by carefully measuring the font the control uses.  
   
- [!code-cpp[NVC_MFCDocView #&67;](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
- 调用该成员函数以解锁缓冲区。  
+##  <a name="unlockbuffer"></a>  CEditView::UnlockBuffer  
+ Call this member function to unlock the buffer.  
   
 ```  
 void UnlockBuffer() const;  
 ```  
   
-### <a name="remarks"></a>备注  
- 调用`UnlockBuffer`使用返回的指针完后[LockBuffer](#lockbuffer)。  
+### <a name="remarks"></a>Remarks  
+ Call `UnlockBuffer` after you have finished using the pointer returned by [LockBuffer](#lockbuffer).  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 SUPERPAD](../../visual-cpp-samples.md)   
- [CCtrlView 类](../../mfc/reference/cctrlview-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CEdit 类](../../mfc/reference/cedit-class.md)   
- [CDocument 类](../../mfc/reference/cdocument-class.md)   
- [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)   
- [CCtrlView 类](../../mfc/reference/cctrlview-class.md)   
- [CRichEditView 类](../../mfc/reference/cricheditview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample SUPERPAD](../../visual-cpp-samples.md)   
+ [CCtrlView Class](../../mfc/reference/cctrlview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CCtrlView Class](../../mfc/reference/cctrlview-class.md)   
+ [CRichEditView Class](../../mfc/reference/cricheditview-class.md)
 

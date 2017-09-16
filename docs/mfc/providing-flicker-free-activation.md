@@ -1,38 +1,57 @@
 ---
-title: "提供无闪烁激活 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "激活 [C++], 无闪烁"
-  - "闪烁, MFC ActiveX 控件"
-  - "MFC ActiveX 控件 [C++], 无闪烁"
+title: Providing Flicker-Free Activation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], flicker-free
+- flicker, MFC ActiveX controls
+- activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 提供无闪烁激活
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3a0fa52ddc550194c4ebd968742236ef404ab0d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果控件处于活动和活动绘制相同状态 \(和不使用无窗口中激活\)，可以消除通常发生，当在停用以及活动状态之间进行过渡的绘图操作及随附的视觉闪烁。  为此，在组的 **noFlickerActivate** 标志。[COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md)返回。  例如：  
+---
+# <a name="providing-flicker-free-activation"></a>Providing Flicker-Free Activation
+If your control draws itself identically in the inactive and active states (and does not use windowless activation), you can eliminate the drawing operations and the accompanying visual flicker that normally occur when making the transition between the inactive and active states. To do this, include the **noFlickerActivate** flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/providing-flicker-free-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/CPP/providing-flicker-free-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/providing-flicker-free-activation_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]  
   
- 为包含此标记的代码自动生成，则选择 [控件设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 页中的 **无闪烁激活 \(V\)** 选项，当创建具有 MFC ActiveX 控件向导时控件。  
+ The code to include this flag is automatically generated if you select the **Flicker-Free activation** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page when creating your control with the MFC ActiveX Control Wizard.  
   
- 如果使用无窗口的激活，此优化不起作用。  
+ If you are using windowless activation, this optimization has no effect.  
   
-## 请参阅  
- [MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

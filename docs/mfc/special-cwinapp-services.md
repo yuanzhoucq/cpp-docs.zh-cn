@@ -1,90 +1,107 @@
 ---
-title: "特殊 CWinApp 服务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LoadStdProfileSettings"
-  - "EnableShellOpen"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序对象 [C++], 服务"
-  - "CWinApp 类, 文件管理器拖放"
-  - "CWinApp 类, 初始化 GDI+"
-  - "CWinApp 类, 最近使用的文档"
-  - "CWinApp 类, 服务"
-  - "CWinApp 类, shell 注册"
-  - "拖放 [C++], 文件"
-  - "DragAcceptFiles 方法"
-  - "EnableShellOpen 方法"
-  - "文件 [C++], 拖放"
-  - "文件 [C++], 最近使用的"
-  - "GDI+, 针对 MFC 初始化"
-  - "GDI+, 取消后台线程 [MFC]"
-  - "LoadStdProfileSettings 方法"
-  - "MFC [C++], 文件操作"
-  - "MFC [C++], 最近使用的文件列表"
-  - "MFC [C++], shell 注册"
-  - "MRU 列表"
-  - "注册文件类型"
-  - "RegisterShellFileTypes 方法"
-  - "注册 [C++], shell"
-  - "注册表 [C++], 最近使用的文件"
-  - "服务, 由 CWinApp 提供"
-  - "shell, 注册文件类型"
+title: Special CWinApp Services | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LoadStdProfileSettings
+- EnableShellOpen
+dev_langs:
+- C++
+helpviewer_keywords:
+- files [MFC], most recently used
+- DragAcceptFiles method [MFC]
+- MRU lists
+- GDI+, initializing for MFC
+- GDI+, suppressing background thread [MFC]
+- CWinApp class [MFC], shell registration
+- application objects [MFC], services
+- CWinApp class [MFC], initializing GDI+
+- MFC, shell registration
+- CWinApp class [MFC], File Manager drag and drop
+- LoadStdProfileSettings method [MFC]
+- MFC, most-recently-used file list
+- RegisterShellFileTypes method [MFC]
+- drag and drop [MFC], files
+- registering file types
+- Shell, registering file types
+- services, provided by CWinApp
+- CWinApp class [MFC], recently used documents
+- CWinApp class [MFC], services
+- files [MFC], drag and drop
+- EnableShellOpen method [MFC]
+- registry [MFC], most recently used files
+- MFC, file operations
+- registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 特殊 CWinApp 服务
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 09e61d2091a8873e73f1e06a95e84c9cef4596f5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-除了运行消息外请循环，您可以利用这一机会初始化应用程序和。后清理，[CWinApp](../mfc/reference/cwinapp-class.md) 提供若干其他服务。  
+---
+# <a name="special-cwinapp-services"></a>Special CWinApp Services
+Besides running the message loop and giving you an opportunity to initialize the application and clean up after it, [CWinApp](../mfc/reference/cwinapp-class.md) provides several other services.  
   
-##  <a name="_core_shell_registration"></a> Shell 注册  
- 默认情况下， MFC 应用程序向导"使您能够为用户到数据文件应用程序通过双击控件来创建文件资源管理器或文件管理器。  如果应用程序比较 MDI 应用程序，而您为应用程序创建的文件指定扩展名，MFC 应用程序向导添加调用 [RegisterShellFileTypes](../Topic/CWinApp::RegisterShellFileTypes.md) [EnableShellOpen](../Topic/CWinApp::EnableShellOpen.md) [CWinApp](../mfc/reference/cwinapp-class.md) 的成员，并且函数对 `InitInstance` 的重写它为您编写。  
+##  <a name="_core_shell_registration"></a> Shell Registration  
+ By default, the MFC Application Wizard makes it possible for the user to open data files that your application has created by double-clicking them in File Explorer or File Manager. If your application is an MDI application and you specify an extension for the files your application creates, the MFC Application Wizard adds calls to the [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) and [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) member functions of [CWinApp](../mfc/reference/cwinapp-class.md) to the `InitInstance` override that it writes for you.  
   
- `RegisterShellFileTypes` 注册文件管理器或文件管理器的应用程序关联的文档类型。  函数输入添加到 Windows 注册数据库的维护。  输入注册每个文档类型，将文件扩展名的文件类型，指定打开命令行应用程序，并指定一个动态数据交换 \(DDE\) \(DDE\) 命令打开相应类型的文档。  
+ `RegisterShellFileTypes` registers your application's document types with File Explorer or File Manager. The function adds entries to the registration database that Windows maintains. The entries register each document type, associate a file extension with the file type, specify a command line to open the application, and specify a dynamic data exchange (DDE) command to open a document of that type.  
   
- `EnableShellOpen` 方法允许应用程序完成过程接收文件管理器或文件管理器的 DDE 命令打开用户选定的文件。  
+ `EnableShellOpen` completes the process by allowing your application to receive DDE commands from File Explorer or File Manager to open the file chosen by the user.  
   
- `CWinApp` 中自动的不再需要此注册支持提供与应用程序的一 .reg 文件或完成特定安装工作。  
+ This automatic registration support in `CWinApp` eliminates the need to ship a .reg file with your application or to do special installation work.  
   
- 如果要初始化应用程序的 GDI\+ \(通过调用在 [InitInstance](../Topic/CWinApp::InitInstance.md) 函数的 [GdiplusStartup](_gdiplus_FUNC_GdiplusStartup_token_input_output_) \)，您必须禁止 GDI\+ 后台线程。  
+ If you want to initialize GDI+ for your application (by calling [GdiplusStartup]--brokenlink--(_gdiplus_FUNC_GdiplusStartup_token_input_output_) in your [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) function), you have to suppress the GDI+ background thread.  
   
- 您可以通过 [GdiplusStartupInput](_gdiplus_STRUC_GdiplusStartupInput) 设置结构的 **SuppressBackgroundThread** 成员执行为 **TRUE**。  当取消 GDI\+ 后台线程时，应在进入和退出应用程序的消息循环之前调用 **NotificationHook** 和 **NotificationUnhook** 调用 \(请参见 [GdiplusStartupOutput](_gdiplus_STRUC_GdiplusStartupOutput)\)。  因此，适合放置调用 **GdiplusStartup** 的和通知挂钩函数在虚拟函数 [CWinApp::Run](../Topic/CWinApp::Run.md)的重写，如下所示：  
+ You can do this by setting the **SuppressBackgroundThread** member of the [GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) structure to **TRUE**. When suppressing the GDI+ background thread, the **NotificationHook** and **NotificationUnhook** calls (see [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) should be made just prior to entering and exiting the application's message loop. Therefore, a good place to call **GdiplusStartup** and the hook notification functions would be in an override of the virtual function [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), as shown below:  
   
- [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/CPP/special-cwinapp-services_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   
- 如果不显示后台 GDI\+ 线程，DDE 命令可以提前地发出到应用程序，它在主窗口之前创建的。  shell 发出的 DDE 命令可以提前地被中止，导致错误消息。  
+ If you do not suppress the background GDI+ thread, DDE commands can be prematurely issued to the application before its main window has been created. The DDE commands issued by the shell can be prematurely aborted, resulting in error messages.  
   
-##  <a name="_core_file_manager_drag_and_drop"></a> 文件管理器的拖放  
- 文件可从文件中的文件或文件管理器窗口资源管理器拖动到应用程序的窗口。  可能，例如，用于启用要拖动的一个或多个文件到 MDI 应用程序的主窗口，则应用程序可以检索文件名并打开这些文件的 MDI 子窗口。  
+##  <a name="_core_file_manager_drag_and_drop"></a> File Manager Drag and Drop  
+ Files can be dragged from the file view window in File Manager or File Explorer to a window in your application. You might, for example, enable one or more files to be dragged to an MDI application's main window, where the application could retrieve the file names and open MDI child windows for those files.  
   
- 若要在应用程序中使用的文件拖放，MFC 应用程序向导编写对 [CWnd](../mfc/reference/cwnd-class.md) 成员函数 [DragAcceptFiles](../Topic/CWnd::DragAcceptFiles.md) 在 `InitInstance`的主框架窗口。  如果不想实现拖放功能，则可以移除该调用。  
+ To enable file drag and drop in your application, the MFC Application Wizard writes a call to the [CWnd](../mfc/reference/cwnd-class.md) member function [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) for your main frame window in your `InitInstance`. You can remove that call if you do not want to implement the drag-and-drop feature.  
   
 > [!NOTE]
->  您还可以实现更为一般性的拖放功能将的数据之间文档或中与 OLE。  有关信息，请参见 [拖放 \(OLE\)](../mfc/drag-and-drop-ole.md)文章。  
+>  You can also implement more general drag-and-drop capabilities—dragging data between or within documents—with OLE. For information, see the article [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> 记录最新使用过的文档  
- 因为用户打开和关闭文件，应用程序对象记录四最近使用的文件。  这些文件名称添加到"菜单并更新它们发生更改。  当应用程序启动时，框架将这些文件名在注册表中或 .ini 文件，名称与项目同名并从磁盘读取文件。  MFC 应用程序向导为您创建的 `InitInstance` 重写包括对包括最新使用的文件名的 [CWinApp](../mfc/reference/cwinapp-class.md) 成员函数 [LoadStdProfileSettings](../Topic/CWinApp::LoadStdProfileSettings.md)，从注册表或 .ini 文件加载信息。  
+##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a> Keeping Track of the Most Recently Used Documents  
+ As the user opens and closes files, the application object keeps track of the four most recently used files. The names of these files are added to the File menu and updated when they change. The framework stores these file names in either the registry or in the .ini file, with the same name as your project and reads them from the file when your application starts up. The `InitInstance` override that the MFC Application Wizard creates for you includes a call to the [CWinApp](../mfc/reference/cwinapp-class.md) member function [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), which loads information from the registry or .ini file, including the most recently used file names.  
   
- 这些输入存储方式如下：  
+ These entries are stored as follows:  
   
--   在 Windows NT 中，Windows 2000，然后再存储，值写入注册表项。  
+-   In Windows NT, Windows 2000, and later, the value is stored to a registry key.  
   
--   在 Windows 3.x，可以在 WIN.INI 文件中。  
+-   In Windows 3.x, the value is stored in the WIN.INI file.  
   
--   在 Windows 95 和更高版本，可以在 WIN.INI 一缓存版本的存储。  
+-   In Windows 95 and later, the value is stored in a cached version of WIN.INI.  
   
-## 请参阅  
- [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)
+## <a name="see-also"></a>See Also  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)

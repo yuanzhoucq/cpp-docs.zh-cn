@@ -1,50 +1,69 @@
 ---
-title: "使用代码向导创建对话框类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "代码向导"
-  - "对话框, 创建"
-  - "对话框类, 创建"
-  - "MFC 对话框, 创建"
+title: Creating a Dialog Class with Code Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], creating
+- MFC dialog boxes, creating
+- code wizards
+- dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用代码向导创建对话框类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eebbf99c5379bac838071c36258b48e73ed99247
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-代码向导。下表列出对话框相关的任务可以帮助您管理。  
+---
+# <a name="creating-a-dialog-class-with-code-wizards"></a>Creating a Dialog Class with Code Wizards
+The following table lists dialog-related tasks that Code Wizards help you manage.  
   
-### 对话框相关任务  
+### <a name="dialog-related-tasks"></a>Dialog-Related Tasks  
   
-|任务|应用于..|  
-|--------|-----------|  
-|管理此对话框的[新建 CDialog 派生的类](../mfc/creating-your-dialog-class.md)。|每个对话框。|  
-|向对话框类的[窗口消息映射](../mfc/handling-windows-messages-in-your-dialog-box.md)。|您希望处理的每条消息。|  
-|声明类成员变量代表在对话框的控件。|提供文本或数值的每个控件。若要从程序访问。|  
-|指定在控件和成员变量之间的 [数据进行交换](../mfc/dialog-data-exchange-and-validation.md)。|希望从程序访问的每个控件。|  
-|为成员变量指定。[验证规则](../mfc/dialog-data-exchange-and-validation.md)|如果需要每个控件提供文本或数值。|  
+|Task|Apply to . . .|  
+|----------|--------------------|  
+|[Create a new CDialog-derived class](../mfc/creating-your-dialog-class.md) to manage your dialog box.|Each dialog box.|  
+|[Map Windows messages](../mfc/handling-windows-messages-in-your-dialog-box.md) to your dialog class.|Each message you want handled.|  
+|Declare class member variables to represent the controls in the dialog box.|Each control that yields a text or numeric value you want to access from your program.|  
+|Specify [how data is to be exchanged](../mfc/dialog-data-exchange-and-validation.md) between the controls and the member variables.|Each control you want to access from your program.|  
+|Specify [validation rules](../mfc/dialog-data-exchange-and-validation.md) for the member variables.|Each control that yields a text or numeric value, if desired.|  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [创建自己的对话框类](../mfc/creating-your-dialog-class.md)  
+-   [Creating your dialog class](../mfc/creating-your-dialog-class.md)  
   
--   [处理您对话框中的 Windows 消息](../mfc/handling-windows-messages-in-your-dialog-box.md)  
+-   [Handling Windows messages in your dialog box](../mfc/handling-windows-messages-in-your-dialog-box.md)  
   
--   [对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange and validation](../mfc/dialog-data-exchange-and-validation.md)  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CDaoWorkspace 类 |Microsoft 文档"
+title: CDaoWorkspace Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,27 +42,34 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DAO workspaces [C++]
-- transaction spaces [C++], DAO workspace
-- ODBC classes [C++], vs. DAO classes
-- default workspaces [C++], DAO
-- workspaces [C++], DAO
-- sessions [C++], DAO workspace
-- Workspace class
-- CDaoWorkspace class
-- workspaces [C++], interface to database engine
-- Workspaces collection
-- persistence [C++], DAO workspace
-- workspaces [C++], default
-- defaults [C++], workspaces
-- DAO workspaces [C++], CDaoWorkspace class
-- security [MFC], DAO workspaces
-- security [MFC]
-- database engine [C++], accessing via workspace
-- transaction spaces [C++]
-- DDLs [C++]
-- workspaces [C++], persistence
-- default workspaces [C++]
+- CDaoWorkspace [MFC], CDaoWorkspace
+- CDaoWorkspace [MFC], Append
+- CDaoWorkspace [MFC], BeginTrans
+- CDaoWorkspace [MFC], Close
+- CDaoWorkspace [MFC], CommitTrans
+- CDaoWorkspace [MFC], CompactDatabase
+- CDaoWorkspace [MFC], Create
+- CDaoWorkspace [MFC], GetDatabaseCount
+- CDaoWorkspace [MFC], GetDatabaseInfo
+- CDaoWorkspace [MFC], GetIniPath
+- CDaoWorkspace [MFC], GetIsolateODBCTrans
+- CDaoWorkspace [MFC], GetLoginTimeout
+- CDaoWorkspace [MFC], GetName
+- CDaoWorkspace [MFC], GetUserName
+- CDaoWorkspace [MFC], GetVersion
+- CDaoWorkspace [MFC], GetWorkspaceCount
+- CDaoWorkspace [MFC], GetWorkspaceInfo
+- CDaoWorkspace [MFC], Idle
+- CDaoWorkspace [MFC], IsOpen
+- CDaoWorkspace [MFC], Open
+- CDaoWorkspace [MFC], RepairDatabase
+- CDaoWorkspace [MFC], Rollback
+- CDaoWorkspace [MFC], SetDefaultPassword
+- CDaoWorkspace [MFC], SetDefaultUser
+- CDaoWorkspace [MFC], SetIniPath
+- CDaoWorkspace [MFC], SetIsolateODBCTrans
+- CDaoWorkspace [MFC], SetLoginTimeout
+- CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 caps.latest.revision: 24
 author: mikeblome
@@ -82,214 +89,214 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 72fcabd7db70050ba95f142bea92e69f441dd717
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a2de24a383161f791b9866f138aba1c5502ac2b4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
-管理单个用户从登录到注销的已命名并受密码保护的数据库会话。  
+# <a name="cdaoworkspace-class"></a>CDaoWorkspace Class
+Manages a named, password-protected database session from login to logoff, by a single user.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoWorkspace : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|构造工作区对象。 然后，调用**创建**或**打开**。|  
+|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Constructs a workspace object. Afterwards, call **Create** or **Open**.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoWorkspace::Append](#append)|将新创建的工作区追加到数据库引擎的工作区集合。|  
-|[CDaoWorkspace::BeginTrans](#begintrans)|开始新事务，这适用于工作区中打开的所有数据库。|  
-|[CDaoWorkspace::Close](#close)|关闭工作区和所有包含的对象。 挂起的事务将回滚。|  
-|[CDaoWorkspace::CommitTrans](#committrans)|完成当前的事务并保存更改。|  
-|[CDaoWorkspace::CompactDatabase](#compactdatabase)|压缩 （或复制） 数据库。|  
-|[CDaoWorkspace::Create](#create)|创建新的 DAO 工作区对象。|  
-|[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|工作区中的数据库集合中返回 DAO 数据库对象的数。|  
-|[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|返回有关指定 DAO 数据库工作区中的数据库集合中定义的信息。|  
-|[CDaoWorkspace::GetIniPath](#getinipath)|返回 Windows 注册表中引擎的初始化设置 Microsoft Jet 数据库的位置。|  
-|[CDaoWorkspace::GetIsolateODBCTrans](#getisolateodbctrans)|返回一个值，该值指示是否通过隔离，则涉及相同的 ODBC 数据源的多个事务强制数据源的多个连接。|  
-|[CDaoWorkspace::GetLoginTimeout](#getlogintimeout)|返回当用户尝试登录到 ODBC 数据库时，将发生错误之前等待的秒数。|  
-|[CDaoWorkspace::GetName](#getname)|返回的工作区中对象的用户定义名称。|  
-|[CDaoWorkspace::GetUserName](#getusername)|返回创建工作区时指定的用户名。 这是工作区所有者的名称。|  
-|[CDaoWorkspace::GetVersion](#getversion)|返回一个字符串，包含与工作区关联的数据库引擎的版本。|  
-|[CDaoWorkspace::GetWorkspaceCount](#getworkspacecount)|数据库引擎的工作区集合中返回 DAO 工作区中对象的数。|  
-|[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|返回有关数据库引擎的工作区集合中定义的指定 DAO 工作区的信息。|  
-|[CDaoWorkspace::Idle](#idle)|允许数据库引擎，以执行后台任务。|  
-|[CDaoWorkspace::IsOpen](#isopen)|返回非零的工作区是否打开。|  
-|[CDaoWorkspace::Open](#open)|显式打开与 DAO 的默认工作区关联的工作区对象。|  
-|[CDaoWorkspace::RepairDatabase](#repairdatabase)|尝试修复损坏的数据库。|  
-|[CDaoWorkspace::Rollback](#rollback)|结束当前的事务并不保存所做的更改。|  
-|[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|设置数据库引擎时不使用特定密码创建一个工作区中对象所使用的密码。|  
-|[CDaoWorkspace::SetDefaultUser](#setdefaultuser)|设置时没有特定的用户名称创建一个工作区中对象的数据库引擎使用的用户名。|  
-|[CDaoWorkspace::SetIniPath](#setinipath)|Windows 注册表中设置的位置的 Microsoft Jet 数据库引擎的初始化设置。|  
-|[CDaoWorkspace::SetIsolateODBCTrans](#setisolateodbctrans)|指定是否通过强制多个连接到数据源独立涉及相同的 ODBC 数据源的多个事务。|  
-|[CDaoWorkspace::SetLoginTimeout](#setlogintimeout)|设置当用户尝试登录到 ODBC 数据源时，将发生错误之前等待的秒数。|  
+|[CDaoWorkspace::Append](#append)|Appends a newly created workspace to the database engine's Workspaces collection.|  
+|[CDaoWorkspace::BeginTrans](#begintrans)|Begins a new transaction, which applies to all databases open in the workspace.|  
+|[CDaoWorkspace::Close](#close)|Closes the workspace and all of the objects it contains. Pending transactions are rolled back.|  
+|[CDaoWorkspace::CommitTrans](#committrans)|Completes the current transaction and saves the changes.|  
+|[CDaoWorkspace::CompactDatabase](#compactdatabase)|Compacts (or duplicates) a database.|  
+|[CDaoWorkspace::Create](#create)|Creates a new DAO workspace object.|  
+|[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|Returns the number of DAO database objects in the workspace's Databases collection.|  
+|[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|Returns information about a specified DAO database defined in the workspace's Databases collection.|  
+|[CDaoWorkspace::GetIniPath](#getinipath)|Returns the location of the Microsoft Jet database engine's initialization settings in the Windows registry.|  
+|[CDaoWorkspace::GetIsolateODBCTrans](#getisolateodbctrans)|Returns a value that indicates whether multiple transactions that involve the same ODBC data source are isolated via forced multiple connections to the data source.|  
+|[CDaoWorkspace::GetLoginTimeout](#getlogintimeout)|Returns the number of seconds before an error occurs when the user attempts to log in to an ODBC database.|  
+|[CDaoWorkspace::GetName](#getname)|Returns the user-defined name for the workspace object.|  
+|[CDaoWorkspace::GetUserName](#getusername)|Returns the user name specified when the workspace was created. This is the name of the workspace owner.|  
+|[CDaoWorkspace::GetVersion](#getversion)|Returns a string that contains the version of the database engine associated with the workspace.|  
+|[CDaoWorkspace::GetWorkspaceCount](#getworkspacecount)|Returns the number of DAO workspace objects in the database engine's Workspaces collection.|  
+|[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|Returns information about a specified DAO workspace defined in the database engine's Workspaces collection.|  
+|[CDaoWorkspace::Idle](#idle)|Allows the database engine to perform background tasks.|  
+|[CDaoWorkspace::IsOpen](#isopen)|Returns nonzero if the workspace is open.|  
+|[CDaoWorkspace::Open](#open)|Explicitly opens a workspace object associated with DAO's default workspace.|  
+|[CDaoWorkspace::RepairDatabase](#repairdatabase)|Attempts to repair a damaged database.|  
+|[CDaoWorkspace::Rollback](#rollback)|Ends the current transaction and does not save the changes.|  
+|[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|Sets the password that the database engine uses when a workspace object is created without a specific password.|  
+|[CDaoWorkspace::SetDefaultUser](#setdefaultuser)|Sets the user name that the database engine uses when a workspace object is created without a specific user name.|  
+|[CDaoWorkspace::SetIniPath](#setinipath)|Sets the location of the Microsoft Jet database engine's initialization settings in the Windows registry.|  
+|[CDaoWorkspace::SetIsolateODBCTrans](#setisolateodbctrans)|Specifies whether multiple transactions that involve the same ODBC data source are isolated by forcing multiple connections to the data source.|  
+|[CDaoWorkspace::SetLoginTimeout](#setlogintimeout)|Sets the number of seconds before an error occurs when the user attempts to log in to an ODBC data source.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|指向基础 DAO 工作区对象。|  
+|[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Points to the underlying DAO workspace object.|  
   
-## <a name="remarks"></a>备注  
- 在大多数情况下，你不需要多个工作区，并且你将不需要创建显式工作区中的对象;当你打开数据库和记录集对象，它们使用 DAO 的默认工作区。 但是，如果需要你可以运行多个会话一次通过创建额外的工作区对象。 每个工作区对象可以包含其自己的数据库集合中的多个打开的数据库对象。 在 MFC 中，工作区是主要的事务管理器，打开数据库的一组指定所有在同一个"事务空间。"  
+## <a name="remarks"></a>Remarks  
+ In most cases, you will not need multiple workspaces, and you will not need to create explicit workspace objects; when you open database and recordset objects, they use DAO's default workspace. However, if needed, you can run multiple sessions at a time by creating additional workspace objects. Each workspace object can contain multiple open database objects in its own Databases collection. In MFC, a workspace is primarily a transaction manager, specifying a set of open databases all in the same "transaction space."  
   
 > [!NOTE]
->  DAO 数据库类有别于基于开放式数据库连接 (ODBC) 的 MFC 数据库类。 所有 DAO 数据库类名称都具有"CDao"前缀。 通常情况下，基于 DAO 的 MFC 类是比基于 ODBC 的 MFC 类的功能更强大。 基于 DAO 的类通过 Microsoft Jet 数据库引擎，包括 ODBC 驱动程序访问数据。 它们还支持数据定义语言 (DDL) 操作，如创建数据库和添加表和字段的类，而无需直接调用 DAO。  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have a "CDao" prefix. In general, the MFC classes based on DAO are more capable than the MFC classes based on ODBC. The DAO-based classes access data through the Microsoft Jet database engine, including ODBC drivers. They also support Data Definition Language (DDL) operations, such as creating databases and adding tables and fields via the classes, without having to call DAO directly.  
   
-## <a name="capabilities"></a>功能  
- 类`CDaoWorkspace`提供了以下︰  
+## <a name="capabilities"></a>Capabilities  
+ Class `CDaoWorkspace` provides the following:  
   
--   显式访问权限，如果需要到默认工作区，创建的初始化数据库引擎。 通常您使用 DAO 的默认工作区隐式通过创建数据库和记录集对象。  
+-   Explicit access, if needed, to a default workspace, created by initializing the database engine. Usually you use DAO's default workspace implicitly by creating database and recordset objects.  
   
--   在工作区中打开事务应用于所有数据库的事务空间。 你可以创建其他工作区来管理单独的事务空格。  
+-   A transaction space in which transactions apply to all databases open in the workspace. You can create additional workspaces to manage separate transaction spaces.  
   
--   基础的 Microsoft Jet 数据库引擎的很多属性的接口 （请参阅静态成员函数）。 打开或创建一个工作区，或调用静态成员函数之前打开或创建，初始化数据库引擎。  
+-   An interface to many properties of the underlying Microsoft Jet database engine (see the static member functions). Opening or creating a workspace, or calling a static member function before open or create, initializes the database engine.  
   
--   对数据库引擎的工作区集合，用于存储所有已追加到它的活动工作区的访问。 你还可以创建和使用工作区，而无需将其追加到集合。  
+-   Access to the database engine's Workspaces collection, which stores all active workspaces that have been appended to it. You can also create and work with workspaces without appending them to the collection.  
   
-## <a name="security"></a>安全性  
- MFC DAO，用于安全控制在不执行的用户和组的集合。 如果你需要的 DAO 这些方面的问题，你必须编写的程序它们自己通过直接调用 DAO 接口。 有关信息，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
+## <a name="security"></a>Security  
+ MFC does not implement the Users and Groups collections in DAO, which are used for security control. If you need those aspects of DAO, you must program them yourself via direct calls to DAO interfaces. For information, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-## <a name="usage"></a>用法  
- 你可以使用类`CDaoWorkspace`到︰  
+## <a name="usage"></a>Usage  
+ You can use class `CDaoWorkspace` to:  
   
--   显式打开默认工作区。  
+-   Explicitly open the default workspace.  
   
-     你使用默认工作区通常是隐式-当你打开新[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)对象。 但你可能需要显式访问-例如，若要访问数据库引擎属性或工作区集合。 请参阅下面的"隐式使用的默认工作区"。  
+     Usually your use of the default workspace is implicit — when you open new [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) or [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objects. But you might need to access it explicitly — for example, to access database engine properties or the Workspaces collection. See "Implicit Use of the Default Workspace" below.  
   
--   创建新的工作区。 调用[追加](#append)如果你想要将它们添加到工作区集合。  
+-   Create new workspaces. Call [Append](#append) if you want to add them to the Workspaces collection.  
   
--   打开工作区集合中的现有工作区。  
+-   Open an existing workspace in the Workspaces collection.  
   
- 创建新的工作区尚不存在集合的下描述的工作区中[创建](#create)成员函数。 以任何方式数据库引擎会话之间不保留工作区对象。 如果你的应用程序静态链接 MFC，结束应用程序取消初始化数据库引擎。 如果你的应用程序动态链接 mfc，则数据库引擎未初始化，MFC DLL 卸载时。  
+ Creating a new workspace that does not already exist in the Workspaces collection is described under the [Create](#create) member function. Workspace objects do not persist in any way between datababase engine sessions. If your application links MFC statically, ending the application uninitializes the database engine. If your application links with MFC dynamically, the database engine is uninitialized when the MFC DLL is unloaded.  
   
- 显式打开默认工作区中，或打开现有工作区中工作区集合中，做了介绍[打开](#open)成员函数。  
+ Explicitly opening the default workspace, or opening an existing workspace in the Workspaces collection, is described under the [Open](#open) member function.  
   
- 通过关闭工作区来结束工作区会话[关闭](#close)成员函数。 **关闭**关闭您未关闭以前，回滚任何未提交的事务的任何数据库。  
+ End a workspace session by closing the workspace with the [Close](#close) member function. **Close** closes any databases you have not closed previously, rolling back any uncommitted transactions.  
   
-## <a name="transactions"></a>事务  
- DAO 管理级别的工作区; 事务因此，具有多个打开的数据库的工作区上的事务适用于所有数据库。 例如，如果两个数据库有未提交的更新和你调用[CommitTrans](#committrans)，所有更新都已提交。 如果你想要限制到单个数据库的事务，则它需要一个单独的工作区对象。  
+## <a name="transactions"></a>Transactions  
+ DAO manages transactions at the workspace level; hence, transactions on a workspace with multiple open databases apply to all of the databases. For example, if two databases have uncommitted updates and you call [CommitTrans](#committrans), all of the updates are committed. If you want to limit transactions to a single database, you need a separate workspace object for it.  
   
-## <a name="implicit-use-of-the-default-workspace"></a>默认工作区的隐式使用  
- MFC 使用隐式在以下情况下的 DAO 的默认工作区︰  
+## <a name="implicit-use-of-the-default-workspace"></a>Implicit Use of the Default Workspace  
+ MFC uses DAO's default workspace implicitly under the following circumstances:  
   
--   如果你创建一个新`CDaoDatabase`对象但不是这样做通过现有`CDaoWorkspace`对象，MFC 临时工作区对象为你创建，这对应于 DAO 的默认工作区。 如果多个数据库执行此操作，所有数据库对象都与默认工作区相关联。 您可以访问数据库的工作区通过`CDaoDatabase`数据成员。  
+-   If you create a new `CDaoDatabase` object but do not do so through an existing `CDaoWorkspace` object, MFC creates a temporary workspace object for you, which corresponds to DAO's default workspace. If you do so for multiple databases, all of the database objects are associated with the default workspace. You can access a database's workspace through a `CDaoDatabase` data member.  
   
--   同样，如果你创建`CDaoRecordset`对象未提供指向的情况下`CDaoDatabase`对象，MFC 将创建一个临时数据库对象，并通过扩展，临时工作区对象。 可以通过访问记录集的数据库和间接其工作区中，`CDaoRecordset`数据成员。  
+-   Similarly, if you create a `CDaoRecordset` object without supplying a pointer to a `CDaoDatabase` object, MFC creates a temporary database object and, by extension, a temporary workspace object. You can access a recordset's database, and indirectly its workspace, through a `CDaoRecordset` data member.  
   
-## <a name="other-operations"></a>其他操作  
- 此外提供了这其他数据库操作，如修复数据库已损坏或压缩的数据库。  
+## <a name="other-operations"></a>Other Operations  
+ Other database operations are also provided, such as repairing a corrupted database or compacting a database.  
   
- 有关调用 DAO 直接和 DAO 安全有关的信息，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
+ For information about calling DAO directly and about DAO security, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDaoWorkspace`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="append"></a>CDaoWorkspace::Append  
- 调用此成员函数调用之后[创建](#create)。  
+##  <a name="append"></a>  CDaoWorkspace::Append  
+ Call this member function after you call [Create](#create).  
   
 ```  
 virtual void Append();
 ```  
   
-### <a name="remarks"></a>备注  
- **追加**将新创建的工作区对象追加到数据库引擎的工作区集合。 数据库引擎会话; 之间不保留工作区它们存储在内存中，不在磁盘上。 无需追加工作区中;如果不这样做，则你仍然可以使用它。  
+### <a name="remarks"></a>Remarks  
+ **Append** appends a newly created workspace object to the database engine's Workspaces collection. Workspaces do not persist between database engine sessions; they are stored only in memory, not on disk. You do not have to append a workspace; if you do not, you can still use it.  
   
- 追加的工作区中保留在工作区集合，活动，在打开状态，直到你调用其[关闭](#close)成员函数。  
+ An appended workspace remains in the Workspaces collection, in an active, open state, until you call its [Close](#close) member function.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"追加方法"。  
+ For related information, see the topic "Append Method" in DAO Help.  
   
-##  <a name="begintrans"></a>CDaoWorkspace::BeginTrans  
- 调用此成员函数以启动事务。  
+##  <a name="begintrans"></a>  CDaoWorkspace::BeginTrans  
+ Call this member function to initiate a transaction.  
   
 ```  
 void BeginTrans();
 ```  
   
-### <a name="remarks"></a>备注  
- 调用后**BeginTrans**，对您数据或数据库的结构进行的更新时提交该事务会生效。 因为工作区中定义单个事务空间，所以事务将适用于工作区中的所有打开的数据库。 有两种方法完成事务︰  
+### <a name="remarks"></a>Remarks  
+ After you call **BeginTrans**, updates you make to your data or database structure take effect when you commit the transaction. Because the workspace defines a single transaction space, the transaction applies to all open databases in the workspace. There are two ways to complete the transaction:  
   
--   调用[CommitTrans](#committrans)成员函数以提交事务，然后将更改保存到数据源。  
+-   Call the [CommitTrans](#committrans) member function to commit the transaction and save changes to the data source.  
   
--   或调用[回滚](#rollback)成员函数以取消该事务。  
+-   Or call the [Rollback](#rollback) member function to cancel the transaction.  
   
- 关闭工作区中对象或数据库对象在事务执行过程挂起回滚所有挂起的事务。  
+ Closing the workspace object or a database object while a transaction is pending rolls back all pending transactions.  
   
- 如果你需要隔离开来上另一个 ODBC 数据源的一个 ODBC 数据源上的事务，请参阅[SetIsolateODBCTrans](#setisolateodbctrans)成员函数。  
+ If you need to isolate transactions on one ODBC data source from those on another ODBC data source, see the [SetIsolateODBCTrans](#setisolateodbctrans) member function.  
   
-##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
- 构造 `CDaoWorkspace` 对象。  
+##  <a name="cdaoworkspace"></a>  CDaoWorkspace::CDaoWorkspace  
+ Constructs a `CDaoWorkspace` object.  
   
 ```  
 CDaoWorkspace();
 ```  
   
-### <a name="remarks"></a>备注  
- 构造 c + + 对象之后, 你将有两个选项︰  
+### <a name="remarks"></a>Remarks  
+ After constructing the C++ object, you have two options:  
   
--   调用对象的[打开](#open)打开默认工作区或打开工作区集合中的现有对象的成员函数。  
+-   Call the object's [Open](#open) member function to open the default workspace or to open an existing object in the Workspaces collection.  
   
--   或调用对象的[创建](#create)成员函数来创建新的 DAO 工作区对象。 这将显式启动新的工作区会话，您可以通过参考`CDaoWorkspace`对象。 在调用**创建**，可以调用[追加](#append)如果你想要将工作区添加到数据库引擎的工作区集合。  
+-   Or call the object's [Create](#create) member function to create a new DAO workspace object. This explicitly starts a new workspace session, which you can refer to via the `CDaoWorkspace` object. After calling **Create**, you can call [Append](#append) if you want to add the workspace to the database engine's Workspaces collection.  
   
- 请参阅类概述[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)了解何时需要显式创建`CDaoWorkspace`对象。 通常情况下，使用工作区打开时隐式创建[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象而无需指定工作区或当你打开[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)而无需指定的数据库对象的对象。 在这种方式中创建的 MFC DAO 对象使用 DAO 的默认工作区中，这是创建一次并且重复使用。  
+ See the class overview for [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) for information about when you need to explicitly create a `CDaoWorkspace` object. Usually, you use workspaces created implicitly when you open a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object without specifying a workspace or when you open a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object without specifying a database object. MFC DAO objects created in this way use DAO's default workspace, which is created once and reused.  
   
- 若要释放工作区和及其包含的对象，调用该工作区中对象的[关闭](#close)成员函数。  
+ To release a workspace and its contained objects, call the workspace object's [Close](#close) member function.  
   
-##  <a name="close"></a>CDaoWorkspace::Close  
- 调用此成员函数以关闭工作区对象。  
+##  <a name="close"></a>  CDaoWorkspace::Close  
+ Call this member function to close the workspace object.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>备注  
- 关闭打开的工作区对象释放基础的 DAO 对象并的工作区集合中，成员的工作区是否从集合中移除它。 调用**关闭**是良好的编程做法。  
+### <a name="remarks"></a>Remarks  
+ Closing an open workspace object releases the underlying DAO object and, if the workspace is a member of the Workspaces collection, removes it from the collection. Calling **Close** is good programming practice.  
   
 > [!CAUTION]
->  关闭工作区对象关闭工作区中任何打开的数据库。 这将导致关闭的数据库中的任何记录集打开，并且任何挂起编辑均或更新将回滚。 有关相关信息，请参阅[CDaoDatabase::Close](../../mfc/reference/cdaodatabase-class.md#close)， [CDaoRecordset::Close](../../mfc/reference/cdaorecordset-class.md#close)， [CDaoTableDef::Close](../../mfc/reference/cdaotabledef-class.md#close)，和[CDaoQueryDef::Close](../../mfc/reference/cdaoquerydef-class.md#close)成员函数。  
+>  Closing a workspace object closes any open databases in the workspace. This results in any recordsets open in the databases being closed as well, and any pending edits or updates are rolled back. For related information, see the [CDaoDatabase::Close](../../mfc/reference/cdaodatabase-class.md#close), [CDaoRecordset::Close](../../mfc/reference/cdaorecordset-class.md#close), [CDaoTableDef::Close](../../mfc/reference/cdaotabledef-class.md#close), and [CDaoQueryDef::Close](../../mfc/reference/cdaoquerydef-class.md#close) member functions.  
   
- 工作区中的对象不是永久的;它们仅对其的引用存在时存在。 这意味着，数据库引擎会话结束时，工作区中和其数据库集合不保留。 你必须重新创建它们的下一个会话通过重新打开工作区和数据库。  
+ Workspace objects are not permanent; they only exist while references to them exist. This means that when the database engine session ends, the workspace and its Databases collection do not persist. You must re-create them for the next session by opening your workspace and database(s) again.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"Close 方法"。  
+ For related information, see the topic "Close Method" in DAO Help.  
   
-##  <a name="committrans"></a>CDaoWorkspace::CommitTrans  
- 调用此成员函数以提交事务 — 将一组编辑和更新保存到工作区中的一个或多个数据库。  
+##  <a name="committrans"></a>  CDaoWorkspace::CommitTrans  
+ Call this member function to commit a transaction — save a group of edits and updates to one or more databases in the workspace.  
   
 ```  
 void CommitTrans();
 ```  
   
-### <a name="remarks"></a>备注  
- 事务由的数据库的数据或从通过调用其结构发生更改的一系列[BeginTrans](#begintrans)。 在完成事务后，请提交它或回滚它 （取消所做的更改） 与[回滚](#rollback)。 默认情况下，如果事务，不记录的更新将被立即提交。 调用**BeginTrans**导致的更新的承诺，直到你调用会延迟**CommitTrans**。  
+### <a name="remarks"></a>Remarks  
+ A transaction consists of a series of changes to the database's data or its structure, beginning with a call to [BeginTrans](#begintrans). When you complete the transaction, either commit it or roll it back (cancel the changes) with [Rollback](#rollback). By default, without transactions, updates to records are committed immediately. Calling **BeginTrans** causes commitment of updates to be delayed until you call **CommitTrans**.  
   
 > [!CAUTION]
->  在一个工作区中，事务是始终对工作区全局性的并不局限于只有一个数据库或记录集。 如果你执行在多个数据库或在工作区事务中的记录集上的操作**CommitTrans**所有挂起的更新，提交和**回滚**还原这些数据库和记录集上的所有操作。  
+>  Within one workspace, transactions are always global to the workspace and are not limited to only one database or recordset. If you perform operations on more than one database or recordset within a workspace transaction, **CommitTrans** commits all pending updates, and **Rollback** restores all operations on those databases and recordsets.  
   
- 当你关闭的数据库或挂起的事务与工作区中时，这些事务全部回滚。  
+ When you close a database or workspace with pending transactions, the transactions are all rolled back.  
   
 > [!NOTE]
->  这不是一个两阶段提交机制。 如果无法提交一个更新，其他用户仍将提交。  
+>  This is not a two-phase commit mechanism. If one update fails to commit, others still will commit.  
   
-##  <a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase  
- 调用此成员函数以压缩指定的 Microsoft Jet (。MDB) 数据库。  
+##  <a name="compactdatabase"></a>  CDaoWorkspace::CompactDatabase  
+ Call this member function to compact a specified Microsoft Jet (.MDB) database.  
   
 ```  
 static void PASCAL CompactDatabase(
@@ -307,82 +314,82 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszPassword);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszSrcName`  
- 已关闭的数据库的现有的名称。 它可以是完整路径和文件名，如"c:\\\MYDB。MDB"。 如果文件名的扩展名，则必须指定它。 如果你的网络支持的统一命名约定 (UNC)，你还可以指定网络路径，如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠必需的路径字符串中的因为"\\"c + + 转义符。)  
+ The name of an existing, closed database. It can be a full path and filename, such as "C:\\\MYDB.MDB". If the filename has an extension, you must specify it. If your network supports the uniform naming convention (UNC), you can also specify a network path, such as "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB.MDB". (Double backslashes are required in the path strings because "\\" is the C++ escape character.)  
   
  `lpszDestName`  
- 要创建压缩的数据库的完整路径。 你还可以指定与将网络路径作为`lpszSrcName`。 不能使用`lpszDestName`自变量以指定与相同的数据库文件`lpszSrcName`。  
+ The full path of the compacted database that you are creating. You can also specify a network path as with `lpszSrcName`. You cannot use the `lpszDestName` argument to specify the same database file as `lpszSrcName`.  
   
  `lpszPassword`  
- 密码，你想要压缩受密码保护的数据库时使用。 请注意，如果你使用的版本`CompactDatabase`采用密码，则必须提供所有参数。 此外，由于这是连接的参数，它需要特殊格式设置，，如下所示:;PWD= `lpszPassword`. 例如:;PWD ="高兴"。 （前面的分号是必需的。）  
+ A password, used when you want to compact a password-protected database. Note that if you use the version of `CompactDatabase` that takes a password, you must supply all parameters. Also, because this is a connect parameter, it requires special formatting, as follows: ;PWD= `lpszPassword`. For example: ;PWD="Happy". (The leading semicolon is required.)  
   
  `lpszLocale`  
- 用来指定用于创建的排序规则顺序的字符串表达式`lpszDestName`。 如果省略此参数接受的默认值**dbLangGeneral** （见下文），新数据库的区域设置是与旧的数据库中的相同。 可能的值有：  
+ A string expression used to specify collating order for creating `lpszDestName`. If you omit this argument by accepting the default value of **dbLangGeneral** (see below), the locale of the new database is the same as that of the old database. Possible values are:  
   
-- **dbLangGeneral**英语、 德语、 法语、 葡萄牙语、 意大利语和现代西班牙语  
+- **dbLangGeneral** English, German, French, Portuguese, Italian, and Modern Spanish  
   
-- **dbLangArabic**阿拉伯语  
+- **dbLangArabic** Arabic  
   
-- **dbLangCyrillic**俄语  
+- **dbLangCyrillic** Russian  
   
-- **dbLangCzech**捷克语  
+- **dbLangCzech** Czech  
   
-- **dbLangDutch**荷兰语  
+- **dbLangDutch** Dutch  
   
-- **dbLangGreek**希腊语  
+- **dbLangGreek** Greek  
   
-- **dbLangHebrew**希伯来语  
+- **dbLangHebrew** Hebrew  
   
-- **dbLangHungarian**匈牙利语  
+- **dbLangHungarian** Hungarian  
   
-- **dbLangIcelandic**冰岛  
+- **dbLangIcelandic** Icelandic  
   
-- **dbLangNordic**北欧语言 （Microsoft Jet 数据库引擎版本 1.0 仅）  
+- **dbLangNordic** Nordic languages (Microsoft Jet database engine version 1.0 only)  
   
-- **dbLangNorwdan**挪威语和丹麦语  
+- **dbLangNorwdan** Norwegian and Danish  
   
-- **dbLangPolish**波兰语  
+- **dbLangPolish** Polish  
   
-- **dbLangSpanish**传统西班牙语  
+- **dbLangSpanish** Traditional Spanish  
   
-- **dbLangSwedfin**瑞典语和芬兰语  
+- **dbLangSwedfin** Swedish and Finnish  
   
-- **dbLangTurkish**土耳其语  
+- **dbLangTurkish** Turkish  
   
  `nOptions`  
- 指示为目标数据库中，一个或多个选项`lpszDestName`。 如果省略此参数接受默认值，通过`lpszDestName`将具有相同的加密和与相同的版本`lpszSrcName`。 你可以组合**dbEncrypt**或**dbDecrypt**选项与使用按位 OR 运算符的版本选项之一。 可能的值，指定数据库格式，没有数据库引擎版本为︰  
+ Indicates one or more options for the target database, `lpszDestName`. If you omit this argument by accepting the default value, the `lpszDestName` will have the same encryption and the same version as `lpszSrcName`. You can combine the **dbEncrypt** or **dbDecrypt** option with one of the version options using the bitwise-OR operator. Possible values, which specify a database format, not a database engine version, are:  
   
-- **dbEncrypt**在压缩时加密数据库。  
+- **dbEncrypt** Encrypt the database while compacting.  
   
-- **dbDecrypt**压缩时解密该数据库。  
+- **dbDecrypt** Decrypt the database while compacting.  
   
-- **dbVersion10**创建压缩时使用 Microsoft Jet 数据库引擎版本 1.0 的数据库。  
+- **dbVersion10** Create a database that uses the Microsoft Jet database engine version 1.0 while compacting.  
   
-- **dbVersion11**创建压缩时使用 Microsoft Jet 数据库引擎版本 1.1 的数据库。  
+- **dbVersion11** Create a database that uses the Microsoft Jet database engine version 1.1 while compacting.  
   
-- **dbVersion20**创建压缩时使用 Microsoft Jet 数据库引擎版本 2.0 的数据库。  
+- **dbVersion20** Create a database that uses the Microsoft Jet database engine version 2.0 while compacting.  
   
-- **dbVersion30**创建压缩时使用 Microsoft Jet 数据库引擎版本 3.0 的数据库。  
+- **dbVersion30** Create a database that uses the Microsoft Jet database engine version 3.0 while compacting.  
   
- 你可以使用**dbEncrypt**或**dbDecrypt**在 options 参数来指定是否加密或解密该数据库，因为它才会压缩。 如果省略加密常量，或如果你同时包含这两者**dbDecrypt**和**dbEncrypt**，`lpszDestName`将具有相同加密作为`lpszSrcName`。 你可以使用版本常量之一在 options 参数以指定的压缩的数据库的数据格式版本。 此常量影响仅的数据格式版本`lpszDestName`。 你可以指定只有一个版本常量。 如果省略版本常量，`lpszDestName`将具有与相同的版本`lpszSrcName`。 您可以压缩`lpszDestName`仅为相同的版本或更高版本比`lpszSrcName`。  
-  
-> [!CAUTION]
->  如果数据库不会加密，则可能，即使你实现用户/密码安全性，以直接读取构成数据库的二进制文件磁盘文件。  
-  
-### <a name="remarks"></a>备注  
- 当你更改数据库中的数据，数据库文件将会变得零碎，并使用比实际需要的更多磁盘空间。 我们会定期应压缩数据库进行碎片整理数据库文件。 压缩的数据库是通常较小。 你还可以选择时复制和压缩数据库更改的排列顺序、 加密或数据格式的版本。  
+ You can use **dbEncrypt** or **dbDecrypt** in the options argument to specify whether to encrypt or to decrypt the database as it is compacted. If you omit an encryption constant or if you include both **dbDecrypt** and **dbEncrypt**, `lpszDestName` will have the same encryption as `lpszSrcName`. You can use one of the version constants in the options argument to specify the version of the data format for the compacted database. This constant affects only the version of the data format of `lpszDestName`. You can specify only one version constant. If you omit a version constant, `lpszDestName` will have the same version as `lpszSrcName`. You can compact `lpszDestName` only to a version that is the same or later than that of `lpszSrcName`.  
   
 > [!CAUTION]
->  `CompactDatabase`成员函数不会正确将转换完成 Microsoft Access 数据库从一个版本到另一个。 仅数据格式将转换。 Microsoft 访问权限定义对象，例如窗体和报表，不能转换。 但是，数据正确转换。  
+>  If a database is not encrypted, it is possible, even if you implement user/password security, to directly read the binary disk file that constitutes the database.  
+  
+### <a name="remarks"></a>Remarks  
+ As you change data in a database, the database file can become fragmented and use more disk space than necessary. Periodically, you should compact your database to defragment the database file. The compacted database is usually smaller. You can also choose to change the collating order, the encryption, or the version of the data format while you copy and compact the database.  
+  
+> [!CAUTION]
+>  The `CompactDatabase` member function will not correctly convert a complete Microsoft Access database from one version to another. Only the data format is converted. Microsoft Access-defined objects, such as forms and reports, are not converted. However, the data is correctly converted.  
   
 > [!TIP]
->  你还可以使用`CompactDatabase`若要将数据库文件复制。  
+>  You can also use `CompactDatabase` to copy a database file.  
   
- 压缩数据库有关的详细信息，请参阅主题 DAO 帮助中的"CompactDatabase 方法"。  
+ For more information about compacting databases, see the topic "CompactDatabase Method" in DAO Help.  
   
-##  <a name="create"></a>CDaoWorkspace::Create  
- 调用此成员函数可创建一个新的 DAO 工作区对象并将其与 MFC 关联`CDaoWorkspace`对象。  
+##  <a name="create"></a>  CDaoWorkspace::Create  
+ Call this member function to create a new DAO workspace object and associate it with the MFC `CDaoWorkspace` object.  
   
 ```  
 virtual void Create(
@@ -391,42 +398,42 @@ virtual void Create(
     LPCTSTR lpszPassword);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 最多 14 个字符的字符串，唯一名称的新的工作区对象。 必须提供名称。 有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ A string with up to 14 characters that uniquely names the new workspace object. You must supply a name. For related information, see the topic "Name Property" in DAO Help.  
   
  *lpszUserName*  
- 工作区的所有者的用户名。 有关要求，请参阅`lpszDefaultUser`参数[SetDefaultUser](#setdefaultuser)成员函数。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。  
+ The user name of the workspace's owner. For requirements, see the `lpszDefaultUser` parameter to the [SetDefaultUser](#setdefaultuser) member function. For related information, see the topic "UserName Property" in DAO Help.  
   
  `lpszPassword`  
- 新的工作区中对象的密码。 密码长度最多 14 个字符，并且可以包含除 ASCII 0 (null) 之外的任何字符。 密码是区分大小写。 有关相关信息，请参阅主题 DAO 帮助中的"密码属性"。  
+ The password for the new workspace object. A password can be up to 14 characters long and can contain any character except ASCII 0 (null). Passwords are case-sensitive. For related information, see the topic "Password Property" in DAO Help.  
   
-### <a name="remarks"></a>备注  
- 整个的创建过程是︰  
+### <a name="remarks"></a>Remarks  
+ The overall creation process is:  
   
-1.  构造[CDaoWorkspace](#cdaoworkspace)对象。  
+1.  Construct a [CDaoWorkspace](#cdaoworkspace) object.  
   
-2.  调用对象的**创建**成员函数来创建基础 DAO 工作区。 必须指定工作区名称。  
+2.  Call the object's **Create** member function to create the underlying DAO workspace. You must specify a workspace name.  
   
-3.  （可选） 调用[追加](#append)如果你想要将工作区添加到数据库引擎的工作区集合。 您可以使用工作区而无需将其追加。  
+3.  Optionally call [Append](#append) if you want to add the workspace to the database engine's Workspaces collection. You can work with the workspace without appending it.  
   
- 后**创建**调用，工作区对象是处于打开状态，可供使用。 不调用**打开**后**创建**。 不调用**创建**如果工作区中已存在于工作区集合。 **创建**初始化数据库引擎，如果它已尚未初始化你的应用程序。  
+ After the **Create** call, the workspace object is in an open state, ready for use. You do not call **Open** after **Create**. You do not call **Create** if the workspace already exists in the Workspaces collection. **Create** initializes the database engine if it has not already been initialized for your application.  
   
-##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
- 调用此成员函数可检索的工作区中的数据库集合中的 DAO 数据库对象数 — 工作区中打开数据库的数目。  
+##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount  
+ Call this member function to retrieve the number of DAO database objects in the workspace's Databases collection — the number of open databases in the workspace.  
   
 ```  
 short GetDatabaseCount();
 ```  
   
-### <a name="return-value"></a>返回值  
- 工作区中打开数据库的数目。  
+### <a name="return-value"></a>Return Value  
+ The number of open databases in the workspace.  
   
-### <a name="remarks"></a>备注  
- `GetDatabaseCount`如果需要循环访问工作区中的数据库集合中的所有定义数据库，很有用。 若要获取有关给定的数据库集合中的信息，请参阅[GetDatabaseInfo](#getdatabaseinfo)。 典型用法就是调用`GetDatabaseCount`为打开的数据库的数目，然后使用该号码作为循环索引重复调用`GetDatabaseInfo`。  
+### <a name="remarks"></a>Remarks  
+ `GetDatabaseCount` is useful if you need to loop through all defined databases in the workspace's Databases collection. To obtain information about a given database in the collection, see [GetDatabaseInfo](#getdatabaseinfo). Typical usage is to call `GetDatabaseCount` for the number of open databases, then use that number as a loop index for repeated calls to `GetDatabaseInfo`.  
   
-##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
- 调用此成员函数来获取各种类型的工作区中打开的数据库有关的信息。  
+##  <a name="getdatabaseinfo"></a>  CDaoWorkspace::GetDatabaseInfo  
+ Call this member function to obtain various kinds of information about a database open in the workspace.  
   
 ```  
 void GetDatabaseInfo(
@@ -441,139 +448,139 @@ void GetDatabaseInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 工作区中的数据库集合，按索引查找中的数据库对象的从零开始的索引。  
+ The zero-based index of the database object in the workspace's Databases collection, for lookup by index.  
   
  `dbinfo`  
- 对引用[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)返回请求的信息的对象。  
+ A reference to a [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) object that returns the information requested.  
   
  `dwInfoOptions`  
- 指定要检索的数据库有关的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项︰  
+ Options that specify which information about the database to retrieve. The available options are listed here along with what they cause the function to return:  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称，可更新事务  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Updatable, Transactions  
   
-- `AFX_DAO_SECONDARY_INFO`主要信息加号︰ 版本，排序规则顺序查询超时值  
+- `AFX_DAO_SECONDARY_INFO` Primary information plus: Version, Collating Order, Query Timeout  
   
-- `AFX_DAO_ALL_INFO`主要和次要信息加号︰ 连接  
+- `AFX_DAO_ALL_INFO` Primary and secondary information plus: Connect  
   
  `lpszName`  
- 按名称查找的数据库对象的名称。 名称是唯一命名新的工作区对象带有最多 14 个字符的字符串。  
+ The name of the database object, for lookup by name. The name is a string with up to 14 characters that uniquely names the new workspace object.  
   
-### <a name="remarks"></a>备注  
- 一个版本的函数，可按索引查找数据库。 另一个版本中，可以按名称查找数据库。  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a database by index. The other version lets you look up a database by name.  
   
- 有关在中返回的信息的说明`dbinfo`，请参阅[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，可以为任何以前的级别的信息。  
+ For a description of the information returned in `dbinfo`, see the [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
-##  <a name="getinipath"></a>CDaoWorkspace::GetIniPath  
- 调用此成员函数可获取 Windows 注册表中的引擎的初始化设置的 Microsoft Jet 数据库的位置。  
+##  <a name="getinipath"></a>  CDaoWorkspace::GetIniPath  
+ Call this member function to obtain the location of the Microsoft Jet database engine's initialization settings in the Windows registry.  
   
 ```  
 static CString PASCAL GetIniPath();
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)包含注册表位置。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the registry location.  
   
-### <a name="remarks"></a>备注  
- 位置可用于获取有关数据库引擎的设置的信息。 返回的信息是实际的注册表子项的名称。  
+### <a name="remarks"></a>Remarks  
+ You can use the location to obtain information about settings for the database engine. The information returned is actually the name of a registry subkey.  
   
- 有关相关信息，请参阅"IniPath 属性"和"自定义 Windows 注册表设置的数据访问"DAO 帮助中的主题。  
+ For related information, see the topics "IniPath Property" and "Customizing Windows Registry Settings for Data Access" in DAO Help.  
   
-##  <a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
- 调用此成员函数可获取工作区的 DAO IsolateODBCTrans 属性的当前值。  
+##  <a name="getisolateodbctrans"></a>  CDaoWorkspace::GetIsolateODBCTrans  
+ Call this member function to get the current value of the DAO IsolateODBCTrans property for the workspace.  
   
 ```  
 BOOL GetIsolateODBCTrans();
 ```  
   
-### <a name="return-value"></a>返回值  
- ODBC 事务是独立的; 如果非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if ODBC transactions are isolated; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 在某些情况下，你可能需要对同一个 ODBC 数据库具有挂起的多个同时进行的事务所。 若要执行此操作，你需要打开单独的工作区中，每个事务。 请记住，尽管每个工作区可有其自己的 ODBC 连接到数据库，这会降低系统性能。 因为事务隔离不是正常情况下必需的默认情况下共享从多个由同一用户打开的工作区中对象的 ODBC 连接。  
+### <a name="remarks"></a>Remarks  
+ In some situations, you might need to have multiple simultaneous transactions pending on the same ODBC database. To do this, you need to open a separate workspace for each transaction. Keep in mind that although each workspace can have its own ODBC connection to the database, this slows system performance. Because transaction isolation is not normally required, ODBC connections from multiple workspace objects opened by the same user are shared by default.  
   
- 某些 ODBC 服务器，例如 Microsoft SQL Server，不允许同时进行的事务所允许在单个连接上。 如果你需要有一次挂起对此类数据库的多个事务，将 IsolateODBCTrans 属性设置为**TRUE**上每个工作区，就会立即打开它。 这将强制每个工作区单独的 ODBC 连接。  
+ Some ODBC servers, such as Microsoft SQL Server, do not allow simultaneous transactions on a single connection. If you need to have more than one transaction at a time pending against such a database, set the IsolateODBCTrans property to **TRUE** on each workspace as soon as you open it. This forces a separate ODBC connection for each workspace.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"IsolateODBCTrans 属性"。  
+ For related information, see the topic "IsolateODBCTrans Property" in DAO Help.  
   
-##  <a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
- 调用此成员函数可获取工作区的 DAO LoginTimeout 属性的当前值。  
+##  <a name="getlogintimeout"></a>  CDaoWorkspace::GetLoginTimeout  
+ Call this member function to get the current value of the DAO LoginTimeout property for the workspace.  
   
 ```  
 static short PASCAL GetLoginTimeout();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当您尝试登录到 ODBC 数据库时，将发生错误之前等待的秒数。  
+### <a name="return-value"></a>Return Value  
+ The number of seconds before an error occurs when you attempt to log in to an ODBC database.  
   
-### <a name="remarks"></a>备注  
- 此值表示当您尝试登录到 ODBC 数据库时，将发生错误之前等待的秒数。 默认 LoginTimeout 设置为 20 秒。 当 LoginTimeout 设置为 0 时，无超时会发生，并且与数据源的通信可能会停止响应。  
+### <a name="remarks"></a>Remarks  
+ This value represents the number of seconds before an error occurs when you attempt to log in to an ODBC database. The default LoginTimeout setting is 20 seconds. When LoginTimeout is set to 0, no timeout occurs and the communication with the data source might stop responding.  
   
- 当你尝试登录到 ODBC 数据库，例如 Microsoft SQL Server 时连接可能会失败发生网络错误或者是因为服务器未运行。 而不是等待默认值为 20 秒连接，你可以指定它会生成错误之前，数据库引擎的等到多长时间。 登录到服务器的大量不同的事件，如在外部服务器数据库上运行查询的一部分隐式发生。  
+ When you are attempting to log in to an ODBC database, such as Microsoft SQL Server, the connection may fail as a result of network errors or because the server is not running. Rather than waiting for the default 20 seconds to connect, you can specify how long the database engine waits before it produces an error. Logging in to the server happens implicitly as part of a number of different events, such as running a query on an external server database.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"LoginTimeout 属性"。  
+ For related information, see the topic "LoginTimeout Property" in DAO Help.  
   
-##  <a name="getname"></a>CDaoWorkspace::GetName  
- 调用此成员函数可获取 DAO 工作区对象基础的用户定义名称`CDaoWorkspace`对象。  
+##  <a name="getname"></a>  CDaoWorkspace::GetName  
+ Call this member function to get the user-defined name of the DAO workspace object underlying the `CDaoWorkspace` object.  
   
 ```  
 CString GetName();
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)包含 DAO 工作区中对象的用户定义名称。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the user-defined name of the DAO workspace object.  
   
-### <a name="remarks"></a>备注  
- 名称可用于按名称访问该数据库引擎的工作区集合中的 DAO 工作区对象。  
+### <a name="remarks"></a>Remarks  
+ The name is useful for accessing the DAO workspace object in the database engine's Workspaces collection by name.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ For related information, see the topic "Name Property" in DAO Help.  
   
-##  <a name="getusername"></a>CDaoWorkspace::GetUserName  
- 调用此成员函数可获取工作区的所有者的名称。  
+##  <a name="getusername"></a>  CDaoWorkspace::GetUserName  
+ Call this member function to obtain the name of the owner of the workspace.  
   
 ```  
 CString GetUserName();
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，表示工作区中对象的所有者。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) that represents the owner of the workspace object.  
   
-### <a name="remarks"></a>备注  
- 若要获取或设置工作区所有者的权限，请调用 DAO 直接要检查的权限属性设置;这将确定哪些权限该用户具有。 若要使用的权限，你需要一个系统。MDA 文件。  
+### <a name="remarks"></a>Remarks  
+ To get or set the permissions for the workspace owner, call DAO directly to check the Permissions property setting; this determines what permissions that user has. To work with permissions, you need a SYSTEM.MDA file.  
   
- 有关调用 DAO 直接，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。  
+ For information about calling DAO directly, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md). For related information, see the topic "UserName Property" in DAO Help.  
   
-##  <a name="getversion"></a>CDaoWorkspace::GetVersion  
- 调用此成员函数可确定在使用 Microsoft Jet 数据库引擎的版本。  
+##  <a name="getversion"></a>  CDaoWorkspace::GetVersion  
+ Call this member function to determine the version of the Microsoft Jet database engine in use.  
   
 ```  
 static CString PASCAL GetVersion();
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，该值指示与对象关联的数据库引擎的版本。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) that indicates the version of the database engine associated with the object.  
   
-### <a name="remarks"></a>备注  
- 返回的值表示窗体"major.minor"; 中的版本号例如，"3.0。" 产品的版本号 (例如，3.0) 组成的版本号 (3)、 句点和发行版号 (0)。  
+### <a name="remarks"></a>Remarks  
+ The value returned represents the version number in the form "major.minor"; for example, "3.0". The product version number (for example, 3.0) consists of the version number (3), a period, and the release number (0).  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"版本属性"。  
+ For related information, see the topic "Version Property" in DAO Help.  
   
-##  <a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
- 调用此成员函数可检索的 DAO 数据库引擎的工作区集合中的工作区中对象数。  
+##  <a name="getworkspacecount"></a>  CDaoWorkspace::GetWorkspaceCount  
+ Call this member function to retrieve the number of DAO workspace objects in the database engine's Workspaces collection.  
   
 ```  
 short GetWorkspaceCount();
 ```  
   
-### <a name="return-value"></a>返回值  
- 工作区集合中打开工作区数。  
+### <a name="return-value"></a>Return Value  
+ The number of open workspaces in the Workspaces collection.  
   
-### <a name="remarks"></a>备注  
- 此计数不包括任何打开的工作区，不会追加到集合。 `GetWorkspaceCount`如果需要循环访问工作区集合中的所有定义工作区，很有用。 若要获取有关给定的工作区集合中的信息，请参阅[GetWorkspaceInfo](#getworkspaceinfo)。 典型用法就是调用`GetWorkspaceCount`的打开的工作区数，然后使用该号码作为循环索引重复调用`GetWorkspaceInfo`。  
+### <a name="remarks"></a>Remarks  
+ This count does not include any open workspaces not appended to the collection. `GetWorkspaceCount` is useful if you need to loop through all defined workspaces in the Workspaces collection. To obtain information about a given workspace in the collection, see [GetWorkspaceInfo](#getworkspaceinfo). Typical usage is to call `GetWorkspaceCount` for the number of open workspaces, then use that number as a loop index for repeated calls to `GetWorkspaceInfo`.  
   
-##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
- 调用此成员函数来获取各种类型的有关工作区打开的会话中的信息。  
+##  <a name="getworkspaceinfo"></a>  CDaoWorkspace::GetWorkspaceInfo  
+ Call this member function to obtain various kinds of information about a workspace open in the session.  
   
 ```  
 void GetWorkspaceInfo(
@@ -588,249 +595,249 @@ void GetWorkspaceInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 中的工作区集合，按索引查找的数据库对象的从零开始的索引。  
+ The zero-based index of the database object in the Workspaces collection, for lookup by index.  
   
  `wkspcinfo`  
- 对引用[CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)返回请求的信息的对象。  
+ A reference to a [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) object that returns the information requested.  
   
  `dwInfoOptions`  
- 指定有关要检索的工作区的信息的选项。 以及它们会导致要返回的函数，下面列出了可用的选项︰  
+ Options that specify which information about the workspace to retrieve. The available options are listed here along with what they cause the function to return:  
   
-- `AFX_DAO_PRIMARY_INFO`（默认值）名称  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name  
   
-- `AFX_DAO_SECONDARY_INFO`主要信息加号︰ 用户名称  
+- `AFX_DAO_SECONDARY_INFO` Primary information plus: User Name  
   
-- `AFX_DAO_ALL_INFO`主要和次要信息加号︰ 隔离 ODBCTrans  
+- `AFX_DAO_ALL_INFO` Primary and secondary information plus: Isolate ODBCTrans  
   
  `lpszName`  
- 按名称查找的工作区中对象的名称。 名称是唯一命名新的工作区对象带有最多 14 个字符的字符串。  
+ The name of the workspace object, for lookup by name. The name is a string with up to 14 characters that uniquely names the new workspace object.  
   
-### <a name="remarks"></a>备注  
- 有关在中返回的信息的说明`wkspcinfo`，请参阅[CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)结构。 此结构具有对应于上面列出的说明中的信息的项的成员`dwInfoOptions`。 当请求在一个级别的信息时，你将获取以及以前级别的信息。  
+### <a name="remarks"></a>Remarks  
+ For a description of the information returned in `wkspcinfo`, see the [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for prior levels as well.  
   
-##  <a name="idle"></a>CDaoWorkspace::Idle  
- 调用**空闲**，为数据库引擎提供机会来执行后台任务，可能不是最新由于密集数据处理。  
+##  <a name="idle"></a>  CDaoWorkspace::Idle  
+ Call **Idle** to provide the database engine with the opportunity to perform background tasks that may not be up-to-date because of intense data processing.  
   
 ```  
 static void PASCAL Idle(int nAction = dbFreeLocks);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nAction`  
- 要在空闲处理期间采取的操作。 目前，唯一有效的操作**dbFreeLocks**。  
+ An action to take during the idle processing. Currently the only valid action is **dbFreeLocks**.  
   
-### <a name="remarks"></a>备注  
- 这通常是在多用户，在其中没有足够的后台处理时间，若要保留在记录集中的所有记录当前的多任务环境 true。  
+### <a name="remarks"></a>Remarks  
+ This is often true in multiuser, multitasking environments in which there is not enough background processing time to keep all records in a recordset current.  
   
 > [!NOTE]
->  调用**空闲**与使用 Microsoft Jet 数据库引擎的版本 3.0 创建的数据库不需要。 使用**空闲**仅对使用早期版本创建的数据库。  
+>  Calling **Idle** is not necessary with databases created with version 3.0 of the Microsoft Jet database engine. Use **Idle** only for databases created with earlier versions.  
   
- 通常情况下，仅当不发生的任何其他操作 （包括鼠标移动） 时，才会取消的读取锁定，被更新本地动态集类型记录集对象中的数据。 如果定期调用**空闲**，你提供时间，以便保持同步释放来处理任务的背景上的数据库引擎不需要读取锁。 指定**dbFreeLocks**作为自变量的常量延迟处理直到所有读取的锁被释放为止。  
+ Usually, read locks are removed and data in local dynaset-type recordset objects is updated only when no other actions (including mouse movements) are occurring. If you periodically call **Idle**, you provide the database engine with time to catch up on background processing tasks by releasing unneeded read locks. Specifying the **dbFreeLocks** constant as an argument delays processing until all read locks are released.  
   
- 在单用户环境中不需要此成员函数，除非运行的应用程序的多个实例。 **空闲**成员函数可提高在多用户环境中的性能，因为它会强制数据库引擎将数据刷新到磁盘，释放内存的锁定。 你可以通过将操作的事务的一部分来释放读的锁定。  
+ This member function is not needed in single-user environments unless multiple instances of an application are running. The **Idle** member function may increase performance in a multiuser environment because it forces the database engine to flush data to disk, releasing locks on memory. You can also release read locks by making operations part of a transaction.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"空闲方法"。  
+ For related information, see the topic "Idle Method" in DAO Help.  
   
-##  <a name="isopen"></a>CDaoWorkspace::IsOpen  
- 调用此成员函数可确定是否`CDaoWorkspace`对象已打开-即，是否 MFC 对象已初始化通过调用[打开](#open)或调用[创建](#create)。  
+##  <a name="isopen"></a>  CDaoWorkspace::IsOpen  
+ Call this member function to determine whether the `CDaoWorkspace` object is open — that is, whether the MFC object has been initialized by a call to [Open](#open) or a call to [Create](#create).  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果工作区对象已打开，则非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the workspace object is open; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 你可以调用任何成员函数的工作区，处于打开状态。  
+### <a name="remarks"></a>Remarks  
+ You can call any of the member functions of a workspace that is in an open state.  
   
-##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
- 指向基础 DAO 工作区中对象的指针。  
+##  <a name="m_pdaoworkspace"></a>  CDaoWorkspace::m_pDAOWorkspace  
+ A pointer to the underlying DAO workspace object.  
   
-### <a name="remarks"></a>备注  
- 如果您需要直接访问基础的 DAO 对象，请使用此数据成员。 你可以调用通过此指针的 DAO 对象的接口。  
+### <a name="remarks"></a>Remarks  
+ Use this data member if you need direct access to the underlying DAO object. You can call the DAO object's interfaces through this pointer.  
   
- 有关直接访问 DAO 对象的信息，请参阅[技术注意 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
+ For information about accessing DAO objects directly, see [Technical Note 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).  
   
-##  <a name="open"></a>CDaoWorkspace::Open  
- 显式打开与 DAO 的默认工作区关联的工作区对象。  
+##  <a name="open"></a>  CDaoWorkspace::Open  
+ Explicitly opens a workspace object associated with DAO's default workspace.  
   
 ```  
 virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 要打开的 DAO 工作区中对象的名称-最多 14 个字符的唯一名称的工作区中的字符串。 接受默认值**NULL**以显式打开默认工作区。 有关命名要求，请参阅`lpszName`参数[创建](#create)。 有关相关信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ The name of the DAO workspace object to open — a string with up to 14 characters that uniquely names the workspace. Accept the default value **NULL** to explicitly open the default workspace. For naming requirements, see the `lpszName` parameter for [Create](#create). For related information, see the topic "Name Property" in DAO Help.  
   
-### <a name="remarks"></a>备注  
- 后构造`CDaoWorkspace`对象，请调用此成员函数以执行下列操作之一︰  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CDaoWorkspace` object, call this member function to do one of the following:  
   
--   显式打开默认工作区。 Pass **NULL** for `lpszName`.  
+-   Explicitly open the default workspace. Pass **NULL** for `lpszName`.  
   
--   打开现有`CDaoWorkspace`对象，该工作区集合，按名称的成员。 将传递现有工作区中对象的有效名称。  
+-   Open an existing `CDaoWorkspace` object, a member of the Workspaces collection, by name. Pass a valid name for an existing workspace object.  
   
- **打开**将工作区对象放入打开状态，如果它已尚未初始化你的应用程序还会初始化数据库引擎。  
+ **Open** puts the workspace object into an open state and also initializes the database engine if it has not already been initialized for your application.  
   
- 尽管许多`CDaoWorkspace`函数仅在打开工作区后调用的成员，以下成员函数，它们对数据库引擎的操作后提供构造的 c + + 对象，但在调用之前,**打开**:  
+ Although many `CDaoWorkspace` member functions can only be called after the workspace has been opened, the following member functions, which operate on the database engine, are available after construction of the C++ object but before a call to **Open**:  
   
 ||||  
 |-|-|-|  
-|[创建](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|  
-|[GetIniPath](#getinipath)|[空闲](#idle)|[SetIniPath](#setinipath)|  
+|[Create](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|  
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|  
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|  
   
-##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
- 如果你需要以尝试修复访问 Microsoft Jet 数据库引擎的数据库已损坏，请调用此成员函数。  
+##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase  
+ Call this member function if you need to attempt to repair a corrupted database that accesses the Microsoft Jet database engine.  
   
 ```  
 static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 路径和文件名现有 Microsoft Jet 引擎数据库文件。 如果省略路径，搜索仅的当前目录。 如果你的系统支持的统一命名约定 (UNC)，你还可以指定网络路径，如:"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (双反斜杠需要路径字符串中，因为"\\"c + + 转义符。)  
+ The path and filename for an existing Microsoft Jet engine database file. If you omit the path, only the current directory is searched. If your system supports the uniform naming convention (UNC), you can also specify a network path, such as: "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB.MDB". (Double backslashes are required in the path string because "\\" is the C++ escape character.)  
   
-### <a name="remarks"></a>备注  
- 您必须关闭指定的数据库`lpszName`修复它之前。 在多用户环境中，其他用户不能具有`lpszName`时要修复它打开。 如果`lpszName`未关闭或不可用以供独占使用，就会出错。  
+### <a name="remarks"></a>Remarks  
+ You must close the database specified by `lpszName` before you repair it. In a multiuser environment, other users cannot have `lpszName` open while you are repairing it. If `lpszName` is not closed or is not available for exclusive use, an error occurs.  
   
- 此成员函数尝试修复的不完整的写操作中被标记为可能已损坏的数据库。 如果使用 Microsoft Jet 数据库引擎的应用程序意外关闭由于电源中断或计算机硬件的问题便会出现此问题。 如果完成的操作和调用[关闭](../../mfc/reference/cdaodatabase-class.md#close)成员函数，或退出该应用程序在通常的方式，数据库不会被标记为可能已损坏。  
+ This member function attempts to repair a database that was marked as possibly corrupt by an incomplete write operation. This can occur if an application using the Microsoft Jet database engine is closed unexpectedly because of a power outage or computer hardware problem. If you complete the operation and call the [Close](../../mfc/reference/cdaodatabase-class.md#close) member function or you quit the application in a usual way, the database will not be marked as possibly corrupt.  
   
 > [!NOTE]
->  在修复数据库之后, 它也是压缩它使用一个好办法[CompactDatabase](#compactdatabase)成员函数可对文件进行碎片整理并恢复磁盘空间。  
+>  After repairing a database, it is also a good idea to compact it using the [CompactDatabase](#compactdatabase) member function to defragment the file and to recover disk space.  
   
- 有关修复数据库的详细信息，请参阅主题 DAO 帮助中的"RepairDatabase 方法"。  
+ For more information about repairing databases, see the topic "RepairDatabase Method" in DAO Help.  
   
-##  <a name="rollback"></a>CDaoWorkspace::Rollback  
- 调用此成员函数以结束当前的事务并将工作区中的所有数据库都还原为其状态，该事务已开始之前。  
+##  <a name="rollback"></a>  CDaoWorkspace::Rollback  
+ Call this member function to end the current transaction and restore all databases in the workspace to their condition before the transaction was begun.  
   
 ```  
 void Rollback();
 ```  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  一个工作区对象中，事务是始终对工作区全局性的并不局限于只有一个数据库或记录集。 如果你执行在多个数据库或在工作区事务中的记录集上的操作**回滚**还原上对所有这些数据库和记录集的所有操作。  
+>  Within one workspace object, transactions are always global to the workspace and are not limited to only one database or recordset. If you perform operations on more than one database or recordset within a workspace transaction, **Rollback** restores all operations on all of those databases and recordsets.  
   
- 如果在关闭工作区对象而不保存或回滚任何挂起的事务，则这些事务是工作自动回滚。 如果调用[CommitTrans](#committrans)或**回滚**而无需首先调用[BeginTrans](#begintrans)，发生错误。  
+ If you close a workspace object without saving or rolling back any pending transactions, the transactions are automatically rolled back. If you call [CommitTrans](#committrans) or **Rollback** without first calling [BeginTrans](#begintrans), an error occurs.  
   
 > [!NOTE]
->  当开始一个事务时，数据库引擎保留由 TEMP 环境变量在工作站上指定的目录中的文件中记录其操作。 如果事务日志文件耗尽 TEMP 驱动器上的可用存储，数据库引擎将导致 MFC 引发`CDaoException`（DAO 错误 2004年）。 此时，如果调用**CommitTrans**、 不确定数目的操作已提交但未完成的剩余操作将会丢失，并已操作必须重新启动。 调用**回滚**释放事务日志并回滚事务中的所有操作。  
+>  When you begin a transaction, the database engine records its operations in a file kept in the directory specified by the TEMP environment variable on the workstation. If the transaction log file exhausts the available storage on your TEMP drive, the database engine will cause MFC to throw a `CDaoException` (DAO error 2004). At this point, if you call **CommitTrans**, an indeterminate number of operations are committed but the remaining uncompleted operations are lost, and the operation has to be restarted. Calling **Rollback** releases the transaction log and rolls back all operations in the transaction.  
   
-##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
- 调用此成员函数可将数据库引擎使用时不使用特定密码创建一个工作区中对象的默认密码设置。  
+##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword  
+ Call this member function to set the default password that the database engine uses when a workspace object is created without a specific password.  
   
 ```  
 static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszPassword`  
- 默认密码。 密码长度最多 14 个字符，并且可以包含除 ASCII 0 (null) 之外的任何字符。 密码是区分大小写。  
+ The default password. A password can be up to 14 characters long and can contain any character except ASCII 0 (null). Passwords are case-sensitive.  
   
-### <a name="remarks"></a>备注  
- 默认密码设置适用于在调用后创建的新工作区。 当创建后续的工作区时，不需要指定中的密码[创建](#create)调用。  
+### <a name="remarks"></a>Remarks  
+ The default password that you set applies to new workspaces you create after the call. When you create subsequent workspaces, you do not need to specify a password in the [Create](#create) call.  
   
- 若要使用此成员函数︰  
+ To use this member function:  
   
-1.  构造`CDaoWorkspace`对象但不是调用**创建**。  
+1.  Construct a `CDaoWorkspace` object but do not call **Create**.  
   
-2.  调用`SetDefaultPassword`并且，如果您愿意， [SetDefaultUser](#setdefaultuser)。  
+2.  Call `SetDefaultPassword` and, if you like, [SetDefaultUser](#setdefaultuser).  
   
-3.  调用**创建**对于此工作区中对象或其他条件，而不指定密码。  
+3.  Call **Create** for this workspace object or subsequent ones, without specifying a password.  
   
- 默认情况下，DefaultUser 属性设置为"admin"和 DefaultPassword 属性设置为一个空字符串 ("")。  
+ By default, the DefaultUser property is set to "admin" and the DefaultPassword property is set to an empty string ("").  
   
- 有关安全的详细信息，请参阅主题 DAO 帮助中的"权限属性"。 有关相关信息，请参阅"DefaultPassword 属性"和"DefaultUser Property"DAO 帮助中的主题。  
+ For more about security, see the topic "Permissions Property" in DAO Help. For related information, see the topics "DefaultPassword Property" and "DefaultUser Property" in DAO Help.  
   
-##  <a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
- 调用此成员函数可设置在没有特定的用户名称创建一个工作区对象时，将使用数据库引擎的默认用户名称。  
+##  <a name="setdefaultuser"></a>  CDaoWorkspace::SetDefaultUser  
+ Call this member function to set the default user name that the database engine uses when a workspace object is created without a specific user name.  
   
 ```  
 static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszDefaultUser`  
- 默认用户名。 用户名称是 1-20 个字符，包括字母字符、 重音的字符、 数字、 空格和符号除外:"（引号） / （正斜杠），\ （反斜杠） \[ \] （括号）: （冒号） |（管道）， \< (较少-号)，1> (更高版本-号)，（加号） + = （等于登录）、;（分号），（逗号），（问号） * （星号），前导空格和控制字符 (ASCII 00 到 ASCII 31)。 有关相关信息，请参阅主题 DAO 帮助中的"用户名属性"。  
+ The default user name. A user name can be 1 - 20 characters long and include alphabetic characters, accented characters, numbers, spaces, and symbols except for: " (quotation marks), / (forward slash), \ (backslash), \[ \] (brackets), : (colon), &#124; (pipe), \< (less-than sign), > (greater-than sign), + (plus sign), = (equal sign), ; (semicolon), , ( comma),  (question mark), * (asterisk), leading spaces, and control characters (ASCII 00 to ASCII 31). For related information, see the topic "UserName Property" in DAO Help.  
   
-### <a name="remarks"></a>备注  
- 你设置的默认用户名称适用于在调用后创建的新工作区。 当创建后续的工作区时，不需要指定用户名，[创建](#create)调用。  
+### <a name="remarks"></a>Remarks  
+ The default user name that you set applies to new workspaces you create after the call. When you create subsequent workspaces, you do not need to specify a user name in the [Create](#create) call.  
   
- 若要使用此成员函数︰  
+ To use this member function:  
   
-1.  构造`CDaoWorkspace`对象但不是调用**创建**。  
+1.  Construct a `CDaoWorkspace` object but do not call **Create**.  
   
-2.  调用`SetDefaultUser`并且，如果您愿意， [SetDefaultPassword](#setdefaultpassword)。  
+2.  Call `SetDefaultUser` and, if you like, [SetDefaultPassword](#setdefaultpassword).  
   
-3.  调用**创建**对于此工作区中对象或其他条件，而不指定用户名。  
+3.  Call **Create** for this workspace object or subsequent ones, without specifying a user name.  
   
- 默认情况下，DefaultUser 属性设置为"admin"和 DefaultPassword 属性设置为一个空字符串 ("")。  
+ By default, the DefaultUser property is set to "admin" and the DefaultPassword property is set to an empty string ("").  
   
- 有关相关信息，请参阅"DefaultUser 属性"和"DefaultPassword Property"DAO 帮助中的主题。  
+ For related information, see the topics "DefaultUser Property" and "DefaultPassword Property" in DAO Help.  
   
-##  <a name="setinipath"></a>CDaoWorkspace::SetIniPath  
- 调用此成员函数以指定 Microsoft Jet 数据库引擎的 Windows 注册表设置的位置。  
+##  <a name="setinipath"></a>  CDaoWorkspace::SetIniPath  
+ Call this member function to specify the location of Windows registry settings for the Microsoft Jet database engine.  
   
 ```  
 static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpszRegistrySubkey*  
- 包含一个用于 Microsoft Jet 数据库引擎设置或所需的可安装 ISAM 数据库参数的位置的 Windows 注册表子项的名称的字符串。  
+ A string containing the name of a Windows registry subkey for the location of Microsoft Jet database engine settings or parameters needed for installable ISAM databases.  
   
-### <a name="remarks"></a>备注  
- 调用`SetIniPath`只有在你需要指定特殊的设置。 有关详细信息，请参阅主题 DAO 帮助中的"IniPath 属性"。  
+### <a name="remarks"></a>Remarks  
+ Call `SetIniPath` only if you need to specify special settings. For more information, see the topic "IniPath Property" in DAO Help.  
   
 > [!NOTE]
->  调用`SetIniPath`应用程序在安装期间，不应用程序运行时。 `SetIniPath`在打开任何工作区、 数据库或记录集; 之前必须调用否则，则 MFC 会引发异常。  
+>  Call `SetIniPath` during application installation, not when the application runs. `SetIniPath` must be called before you open any workspaces, databases, or recordsets; otherwise, MFC throws an exception.  
   
- 此机制可用于使用用户提供的注册表设置来配置数据库引擎。 此属性的作用域将仅限于你的应用程序，并且不能更改无需重新启动你的应用程序。  
+ You can use this mechanism to configure the database engine with user-provided registry settings. The scope of this attribute is limited to your application and cannot be changed without restarting your application.  
   
-##  <a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
- 调用此成员函数可设置工作区的 DAO IsolateODBCTrans 属性的值。  
+##  <a name="setisolateodbctrans"></a>  CDaoWorkspace::SetIsolateODBCTrans  
+ Call this member function to set the value of the DAO IsolateODBCTrans property for the workspace.  
   
 ```  
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bIsolateODBCTrans*  
- 传递**TRUE**如果你想要开始隔离 ODBC 事务。 传递**FALSE**如果你想要停止隔离 ODBC 事务。  
+ Pass **TRUE** if you want to begin isolating ODBC transactions. Pass **FALSE** if you want to stop isolating ODBC transactions.  
   
-### <a name="remarks"></a>备注  
- 在某些情况下，你可能需要对同一个 ODBC 数据库具有挂起的多个同时进行的事务所。 若要执行此操作，你需要打开单独的工作区中，每个事务。 尽管每个工作区可有其自己的 ODBC 连接到数据库，这会降低系统性能。 因为事务隔离不是正常情况下必需的默认情况下共享从多个由同一用户打开的工作区中对象的 ODBC 连接。  
+### <a name="remarks"></a>Remarks  
+ In some situations, you might need to have multiple simultaneous transactions pending on the same ODBC database. To do this, you need to open a separate workspace for each transaction. Although each workspace can have its own ODBC connection to the database, this slows system performance. Because transaction isolation is not normally required, ODBC connections from multiple workspace objects opened by the same user are shared by default.  
   
- 某些 ODBC 服务器，例如 Microsoft SQL Server，不允许同时进行的事务所允许在单个连接上。 如果你需要有一次挂起对此类数据库的多个事务，将 IsolateODBCTrans 属性设置为**TRUE**上每个工作区，就会立即打开它。 这将强制每个工作区单独的 ODBC 连接。  
+ Some ODBC servers, such as Microsoft SQL Server, do not allow simultaneous transactions on a single connection. If you need to have more than one transaction at a time pending against such a database, set the IsolateODBCTrans property to **TRUE** on each workspace as soon as you open it. This forces a separate ODBC connection for each workspace.  
   
-##  <a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
- 调用此成员函数可设置工作区的 DAO LoginTimeout 属性的值。  
+##  <a name="setlogintimeout"></a>  CDaoWorkspace::SetLoginTimeout  
+ Call this member function to set the value of the DAO LoginTimeout property for the workspace.  
   
 ```  
 static void PASCAL SetLoginTimeout(short nSeconds);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nSeconds`  
- 当您尝试登录到 ODBC 数据库时，将发生错误之前等待的秒数。  
+ The number of seconds before an error occurs when you attempt to log in to an ODBC database.  
   
-### <a name="remarks"></a>备注  
- 此值表示当您尝试登录到 ODBC 数据库时，将发生错误之前等待的秒数。 默认 LoginTimeout 设置为 20 秒。 当 LoginTimeout 设置为 0 时，无超时会发生，并且与数据源的通信可能会停止响应。  
+### <a name="remarks"></a>Remarks  
+ This value represents the number of seconds before an error occurs when you attempt to log in to an ODBC database. The default LoginTimeout setting is 20 seconds. When LoginTimeout is set to 0, no timeout occurs and the communication with the data source might stop responding.  
   
- 当你尝试登录到 ODBC 数据库，例如 Microsoft SQL Server 时连接可能会失败发生网络错误或者是因为服务器未运行。 而不是等待默认值为 20 秒连接，你可以指定它会生成错误之前，数据库引擎的等到多长时间。 登录到服务器上的大量不同的事件，如在外部服务器数据库上运行查询的一部分隐式发生。 超时值确定由 LoginTimeout 属性的当前设置。  
+ When you are attempting to log in to an ODBC database, such as Microsoft SQL Server, the connection may fail as a result of network errors or because the server is not running. Rather than waiting for the default 20 seconds to connect, you can specify how long the database engine waits before it produces an error. Logging on to the server happens implicitly as part of a number of different events, such as running a query on an external server database. The timeout value is determined by the current setting of the LoginTimeout property.  
   
- 有关相关信息，请参阅主题 DAO 帮助中的"LoginTimeout 属性"。  
+ For related information, see the topic "LoginTimeout Property" in DAO Help.  
   
-## <a name="see-also"></a>另请参阅  
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CDaoDatabase 类](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoRecordset 类](../../mfc/reference/cdaorecordset-class.md)   
- [CDaoTableDef 类](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoQueryDef 类](../../mfc/reference/cdaoquerydef-class.md)   
- [CDaoException 类](../../mfc/reference/cdaoexception-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoException Class](../../mfc/reference/cdaoexception-class.md)
 

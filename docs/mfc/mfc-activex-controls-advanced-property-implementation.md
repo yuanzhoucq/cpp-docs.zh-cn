@@ -1,82 +1,100 @@
 ---
-title: "MFC ActiveX 控件：高级属性实现 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控件, 错误代码"
-  - "MFC ActiveX 控件, 属性"
-  - "属性 [MFC], ActiveX 控件"
+title: 'MFC ActiveX Controls: Advanced Property Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], error codes
+- properties [MFC], ActiveX controls
+- MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# MFC ActiveX 控件：高级属性实现
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b23dd1b02a9a8e7e7584574429439c8334151fa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文在 ActiveX 控件相关主题介绍实现高级属性：  
+---
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX Controls: Advanced Property Implementation
+This article describes topics related to implementing advanced properties in an ActiveX control:  
   
--   [只读和只写属性。](#_core_read2donly_and_write2donly_properties)  
+-   [Read-only and write-only properties](#_core_read2donly_and_write2donly_properties)  
   
--   [从属性中返回错误代码](#_core_returning_error_codes_from_a_property)  
+-   [Returning error codes from a property](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a> 只读和只写属性。  
- 添加属性向导提供一个快速、更简单的方法实现控件的只读或只写属性。  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Read-Only and Write-Only Properties  
+ The Add Property Wizard provides a quick and easy method to implement read-only or write-only properties for the control.  
   
-#### 实现一只读或只写属性  
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>To implement a read-only or write-only property  
   
-1.  加载控件的项目。  
+1.  Load your control's project.  
   
-2.  在"类视图，展开控件的库节点。  
+2.  In Class View, expand the library node of your control.  
   
-3.  右击控件 \(库节点的第二个节点接口节点\) 打开快捷菜单。  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  从快捷菜单中单击 **添加**，然后单击 **添加属性**。  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     这会打开 [添加属性向导](../ide/names-add-property-wizard.md)。  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  在 **属性名** 框，键入属性的名称。  
+5.  In the **Property Name** box, type the name of your property.  
   
-6.  对于 **Implementation Type**，单击 **Get\/Set Methods**。  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  在 **属性类型** 框中，选择属性的适当类型。  
+7.  In the **Property Type** box, select the proper type for the property.  
   
-8.  如果需要一只读属性，请清除集合函数名称。  如果需要一只写属性，请清除获取函数名。  
+8.  If you want a read-only property, clear the Set function name. If you want a write-only property, clear the Get function name.  
   
-9. 单击**“完成”**。  
+9. Click **Finish**.  
   
- 此时，"添加属性向导替换常规设置或获取函数位置插入在计划映射项的函数 `SetNotSupported` 或 `GetNotSupported`。  
+ When you do this, the Add Property Wizard inserts the function `SetNotSupported` or `GetNotSupported` in the dispatch map entry in place of a normal Set or Get function.  
   
- 如果要更改现有属性的只读或只写，可以手动编辑计划映射并从控件类中移除不必要的设置或获取函数。  
+ If you want to change an existing property to be read-only or write-only, you can edit the dispatch map manually and remove the unnecessary Set or Get function from the control class.  
   
- 如果希望属性按条件只读或只写 \(例如，控件处于特定模式，只有运行\)，只要适用就可以提供设置或获取函数，用作常规，并调用 `SetNotSupported` 或 `GetNotSupported` 函数。  例如：  
+ If you want a property to be conditionally read-only or write-only (for example, only when your control is operating in a particular mode), you can provide the Set or Get function, as normal, and call the `SetNotSupported` or `GetNotSupported` function where appropriate. For example:  
   
- [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
- 如果是 `m_bReadOnlyMode` 数据成员 **TRUE**，此代码示例改为调用 `SetNotSupported`。  如果 **FALSE**，随后的属性设置为新值。  
+ This code sample calls `SetNotSupported` if the `m_bReadOnlyMode` data member is **TRUE**. If **FALSE**, then the property is set to the new value.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a> 从属性返回的错误代码  
- 指示发生错误，如果尝试获取或设置属性，请使用 `COleControl::ThrowError` 函数，它采用 `SCODE` \(状态代码\) 作为参数。  可以使用预定义的 `SCODE` 还是定义一个拥有。  有关预定义的 `SCODE`s 和指令列表自定义的 `SCODE`，请参见在 ActiveX 控件的文章 [在 ActiveX 控件中的错误处理](../mfc/mfc-activex-controls-advanced-topics.md) :高级主题。  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Returning Error Codes From a Property  
+ To indicate that an error has occurred while attempting to get or set a property, use the `COleControl::ThrowError` function, which takes an `SCODE` (status code) as a parameter. You can use a predefined `SCODE` or define one of your own. For a list of predefined `SCODE`s and instructions for defining custom `SCODE`s, see [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX controls: Advanced Topics.  
   
- 帮助程序函数。常见预定义的 `SCODE`。最存在，如 [COleControl::SetNotSupported](../Topic/COleControl::SetNotSupported.md)[COleControl::GetNotSupported](../Topic/COleControl::GetNotSupported.md)[COleControl::SetNotPermitted](../Topic/COleControl::SetNotPermitted.md)、和。  
+ Helper functions exist for the most common predefined `SCODE`s, such as [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), and [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError` 被视为是只能作为返回错误的方法从的属性获取或设置函数或自动化方法内。  这是仅有的时间相应的异常处理程序会存在于堆栈。  
+>  `ThrowError` is meant to be used only as a means of returning an error from within a property's Get or Set function or an automation method. These are the only times that the appropriate exception handler will be present on the stack.  
   
- 有关在代码的其他区域的异常报告的更多信息，请参见 [COleControl::FireError](../Topic/COleControl::FireError.md) 和节中的 [在 ActiveX 控件中的错误处理](../mfc/mfc-activex-controls-advanced-topics.md) 文章 ActiveX 控件：高级主题。  
+ For more information on reporting exceptions in other areas of the code, see [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) and the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX Controls: Advanced Topics.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)   
- [MFC ActiveX 控件：方法](../mfc/mfc-activex-controls-methods.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

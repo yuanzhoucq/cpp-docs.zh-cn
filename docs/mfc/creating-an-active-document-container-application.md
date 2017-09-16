@@ -1,74 +1,93 @@
 ---
-title: "创建活动文档容器应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "活动文档容器 [C++], 创建"
-  - "活动文档 [C++], 容器"
-  - "应用程序 [MFC], 活动文档容器"
-  - "容器 [C++], 活动文档"
-  - "MFC COM [C++], 活动文档包容"
+title: Creating an Active Document Container Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- containers [MFC], active document
+- active document containers [MFC], creating
+- MFC COM, active document containment
+- applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 创建活动文档容器应用程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2122ea2436491734b819ae48e16a743f2c98aedc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-最简单且建议的方法到创建活动文档容器应用程序是创建 EXE MFC 容器应用程序，使用 MFC 应用程序向导，然后修改应用程序支持包容活动文档。  
+---
+# <a name="creating-an-active-document-container-application"></a>Creating an Active Document Container Application
+The simplest and most recommended way to create an active document container application is to create an MFC EXE container application using the MFC Application Wizard, then modify the application to support active document containment.  
   
-#### 创建活动文档容器应用程序  
+#### <a name="to-create-an-active-document-container-application"></a>To create an active document container application  
   
-1.  从 **文件** 菜单中，从**新建** 子菜单上单击**项目** 。  
+1.  From the **File** menu, click **Project**from the **New** submenu.  
   
-2.  从左窗格中，单击 **Visual C\+\+** 项目类型。  
+2.  From the left pane, click **Visual C++** project type.  
   
-3.  从右窗格中选择 **MFC 应用程序**。  
+3.  Select **MFC Application** from the right pane.  
   
-4.  将该项目命名为 `MyProj`，单击 **OK**。  
+4.  Name the project `MyProj`, click **OK**.  
   
-5.  选择 **复合文档支持** 页。  
+5.  Select the **Compound Document Support** page.  
   
-6.  选择 **容器** 或 **Container\/Full\-server** 选项。  
+6.  Select the **Container** or **Container/Full-server** option.  
   
-7.  选择 **活动文档容器**  复选框。  
+7.  Select the **Active document container** check box.  
   
-8.  单击**“完成”**。  
+8.  Click **Finish**.  
   
-9. 当MFC 应用程序向导完成应用生成时，使用解决方案资源管理器打开下列文件：  
+9. When the MFC Application Wizard finishes generating the application, open the following files using Solution Explorer:  
   
     -   MyProjview.cpp  
   
-10. 在 MyProjview.cpp，请进行以下更改：  
+10. In MyProjview.cpp, make the following changes:  
   
-    -   在 `CMyProjView::OnPreparePrinting`中，用下列代码替换文件的内容：  
+    -   In `CMyProjView::OnPreparePrinting`, replace the function contents with the following code:  
   
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/CPP/creating-an-active-document-container-application_1.cpp)]  
+         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]  
   
-     `OnPreparePrinting` 提供打印支持。  此代码替换 `DoPreparePrinting`，这是默认打印准备。  
+     `OnPreparePrinting` provides printing support. This code replaces `DoPreparePrinting`, which is the default print preparation.  
   
-     活动文档包容提供了改进的打印方案：  
+     Active document containment provides an improved printing scheme:  
   
-    -   通过其 `IPrint`接口可以在首次调用活动文档并将其打印。  这与前 OLE 包容不同，容器必须呈现包含图像的项到打印机 `CDC`对象上。  
+    -   You can first call the active document through its `IPrint` interface and tell it to print itself. This is different from previous OLE containment, in which the container had to render an image of the contained item onto the printer `CDC` object.  
   
-    -   如果失败，请通知包含的项通过其 `IOleCommandTarget`接口打印  
+    -   If that fails, tell the contained item to print itself through its `IOleCommandTarget` interface  
   
-    -   如果失败，使项自行呈现。  
+    -   If that fails, make your own rendering of the item.  
   
-     如前面代码中实现的，静态成员函数 `COleDocObjectItem::OnPrint` 和 `COleDocObjectItem::OnPreparePrinting`处理改进的打印方案。  
+     The static member functions `COleDocObjectItem::OnPrint` and `COleDocObjectItem::OnPreparePrinting`, as implemented in the previous code, handle this improved printing scheme.  
   
-11. 添加所有自己的并生成应用程序。  
+11. Add any implementation of your own and build the application.  
   
-## 请参阅  
- [活动文档包容](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

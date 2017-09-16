@@ -1,48 +1,67 @@
 ---
-title: "MFC 应用程序向导的生成的类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 应用程序向导，生成的类"
+title: Generated Classes, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# MFC 应用程序向导的生成的类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2c57a0297648b05928ad6d1fecb2abb0b103d87
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本主题列出了项目生成的基类和文件的名称。  默认情况下，名称基于在**“新建项目”**对话框中指定的项目名称。  您可以更改其中的大部分名称，如下所述：  
+---
+# <a name="generated-classes-mfc-application-wizard"></a>Generated Classes, MFC Application Wizard
+This topic lists the names of base classes and files that your project generates. By default, the names are based on the project name that you specified in the **New Project Dialog Box**. You can change most of these names, as described here:  
   
- **生成的类**  
- 为项目创建的类的名称。  默认情况下，名称基于项目名称。  默认 MFC 项目创建 C\+\+ 类、C*ProjName*. 视图 .*ProjName*.*ProjName*CMainFrame App 类、C\+\+ 文档类、类和 CChildFrame 类。  此页中的所有其他值都包含有关**“生成的类”**列表中当前选定的类的信息。  
+ **Generated classes**  
+ The names of the classes created for the project. By default, the names are based on the project name. The default MFC project creates a C*ProjName*View class, a C*ProjName*App class, a C*ProjName*Doc class, a CMainFrame class, and a CChildFrame class. All other values on this page contain information about the class currently selected in the **Generated classes** list.  
   
- 若要更改类名，请使用**“类名”**文本框。  
+ To change a class name, use the **Class Name** text box.  
   
- **类名**  
- **“生成的类”**列表中当前选定的类的名称。  如果此框是活动的，则可以更改类名。  改变**“类名”**框中的焦点时，选定类名的任何更改都将显示在**“生成的类”**列表中。  
+ **Class name**  
+ The name of the class that is currently selected in the **Generated classes** list. If the box is active, you can change the class name. When you change the focus from the **Class Name** box, any change to the selected class name appears in the **Generated classes** list.  
   
- **.h 文件**  
- **“生成的类”**列表中当前选定的类的头文件名称。  如果此文本框是活动的，则可以更改头文件的名称。  
+ **.h file**  
+ The name of the header file of the class that is currently selected in the **Generated classes** list. If the text box is active, you can change the name of the header file.  
   
- **基类**  
- **“生成的类”**列表中当前选定的类的基类名称。  如果此框是活动的，则可以从列表中为基类选择另一个类。  
+ **Base class**  
+ The name of the base class of the currently selected class in the **Generated classes** list. If the box is active, you can select from the list another class for the base class.  
   
- **.cpp 文件**  
- 与选定的类相关联的源代码文件的名称。  如果此文本框是活动的，则可以更改实现文件的名称。  
+ **.cpp file**  
+ The name of the source code file that is associated with the selected class. If the text box is active, you can change the name of the implementation file.  
   
-## 请参阅  
- [MFC 应用程序向导的高级功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
- [为 Visual C\+\+ 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [Advanced Features, MFC Application Wizard](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
+
+

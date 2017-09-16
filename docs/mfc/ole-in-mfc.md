@@ -1,87 +1,106 @@
 ---
-title: "MFC 中的 OLE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序 [OLE], 关于 OLE"
-  - "MFC [C++], OLE 和"
-  - "OLE [C++]"
-  - "OLE 应用程序 [C++], 关于 OLE"
-  - "OLE 组件对象模型 (COM)"
-  - "OLE 容器, 关于 OLE"
-  - "OLE 项"
+title: OLE in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, OLE and
+- OLE items
+- OLE applications [MFC], about OLE
+- OLE [MFC]
+- OLE containers [MFC], about OLE
+- applications [OLE], about OLE
+- OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC 中的 OLE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3346c3f6d1c2fd02d8a3cd21230d66dd13e0b9be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这些情景描述编程使用 MFC 的 OLE 的基本知识。  MFC 提供简便方法写入使用 OLE 的程序：  
+---
+# <a name="ole-in-mfc"></a>OLE in MFC
+These articles explain the fundamentals of OLE programming using MFC. MFC provides the easiest way to write programs that use OLE:  
   
--   使用 OLE 可视编辑对象 （就地激活）。  
+-   To use OLE visual editing (in-place activation).  
   
--   作为工作 OLE 容器或服务器。  
+-   To work as OLE containers or servers.  
   
--   实现拖放功能。  
+-   To implement drag-and-drop functionality.  
   
--   使用日期和时间数据时使用。  
+-   To work with date and time data.  
   
--   管理 MFC 模块的状态数据，包括导出的 DLL 函数入口点，OLE\/COM 接口入口点和窗口过程的入口点。  
+-   To manage the state data of MFC modules, including exported DLL function entry points, OLE/COM interface entry points, and window procedure entry points.  
   
- 还可以使用 [自动化 \(U\)](../mfc/automation.md) 或从 [远程的自动化](../mfc/remote-automation.md) 程序运行其他程序。  
+ You can also use [Automation](../mfc/automation.md) or [Remote Automation](../mfc/remote-automation.md) to operate another program from your program.  
   
 > [!NOTE]
->  OLE 术语表示技术与链接和 OLE 嵌入，包括容器、OLE 服务器、OLE 项、编辑 \(或就地激活的可视化对象\)，TRACKER，拖放和菜单合并。  术语激活应用于组件对象模型 \(COM\) \(COM\) 和基于 COM 的对象 \(如 ActiveX 控件。  OLE 自动化现在调用自动化。  
+>  The term OLE denotes the technologies associated with linking and embedding, including OLE containers, OLE servers, OLE items, in-place activation (or visual editing), trackers, drag and drop, and menu merging. The term Active applies to the Component Object Model (COM) and COM-based objects such as ActiveX controls. OLE Automation is now called Automation.  
   
-## 本节内容  
- [OLE 后台](../mfc/ole-background.md)  
- 讨论 OLE 并提供有关它如何的概念性信息有效。  
+## <a name="in-this-section"></a>In This Section  
+ [OLE Background](../mfc/ole-background.md)  
+ Discusses OLE and provides conceptual information about how it works.  
   
- [激活](../mfc/activation-cpp.md)  
- 在编辑活动描述角色 OLE 项。  
+ [Activation](../mfc/activation-cpp.md)  
+ Describes the role of activation in editing OLE items.  
   
- [容器](../mfc/containers.md)  
- 提供指向使用容器在 OLE。  
+ [Containers](../mfc/containers.md)  
+ Provides links to using containers in OLE.  
   
- [数据对象和数据源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)  
- 提供指向讨论的主题使用 `COleDataObject` 和 `COleDataSource` 类。  
+ [Data Objects and Data Sources](../mfc/data-objects-and-data-sources-ole.md)  
+ Provides links to topics discussing the use of the `COleDataObject` and `COleDataSource` classes.  
   
- [拖放](../mfc/drag-and-drop-ole.md)  
- 使用 OLE 讨论使用复制和粘贴。  
+ [Drag and Drop](../mfc/drag-and-drop-ole.md)  
+ Discusses using copying and pasting with OLE.  
   
- [菜单和资源 \(OLE\)](../mfc/menus-and-resources-ole.md)  
- 解释使用菜单和资源的使用。MFC OLE 文档应用程序。  
+ [OLE Menus and Resources](../mfc/menus-and-resources-ole.md)  
+ Explains the use of menus and resources in MFC OLE document applications.  
   
- [注册](../mfc/registration.md)  
- 讨论服务器安装和初始化。  
+ [Registration](../mfc/registration.md)  
+ Discusses server installation and initialization.  
   
- [服务器](../mfc/servers.md)  
- 描述如何创建 OLE 项 \(或组件\) 给容器应用程序。  
+ [Servers](../mfc/servers.md)  
+ Describes how to create OLE items (or components) for use by container applications.  
   
- [跟踪器](../mfc/trackers.md)  
- 提供有关 `CRectTracker` 类的信息，该编译器提供了一个图形界面使用户与 OLE 项客户端交互。  
+ [Trackers](../mfc/trackers.md)  
+ Provides information about the `CRectTracker` class, which provides a graphical interface to enable users to interact with OLE client items.  
   
-## 相关章节  
- [连接点](../mfc/connection-points.md)  
- 介绍如何实现连接点 \(原来称作 OLE 连接点\) 使用 MFC 类，`CCmdTarget` 和 `CConnectionPoint`。  
+## <a name="related-sections"></a>Related Sections  
+ [Connection Points](../mfc/connection-points.md)  
+ Explains how to implement connection points (formerly known as OLE connection points) using the MFC classes `CCmdTarget` and `CConnectionPoint`.  
   
- [服务器\/容器 COM 组件](../mfc/containers-advanced-features.md)  
- 描述所需步骤中合并选项高级功能到现有的容器应用程序中。  
+ [Container/Server COM Components](../mfc/containers-advanced-features.md)  
+ Describes the steps necessary to incorporate optional advanced features into existing container applications.  
   
- [组件对象模型 \(COM\)](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- 描述使用 OLE，未使用 MFC。  
+ [The Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ Describes using OLE without MFC.  
   
-## 请参阅  
- [概念](../mfc/mfc-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)
+
+

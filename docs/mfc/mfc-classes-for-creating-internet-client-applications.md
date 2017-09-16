@@ -1,34 +1,51 @@
 ---
-title: "用于创建 Internet 客户端应用程序的 MFC 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类 [C++], MFC"
-  - "Internet 应用程序, MFC"
-  - "Internet 客户端应用程序, MFC"
-  - "MFC, WinInet 类"
-  - "WinInet 类, 类"
+title: MFC Classes for Creating Internet Client Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, WinInet classes
+- WinInet classes [MFC], classes
+- classes [MFC], MFC
+- Internet client applications [MFC], MFC
+- Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 用于创建 Internet 客户端应用程序的 MFC 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4d1bf2c587c8a80547ee6793433f83a94945937e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 提供 Internet 编写客户端应用程序提供下列类和全局函数。  缩进指示类从上面的 unindented 类派生。  例如，`CGopherFile`和`CHttpFile` 派生自  `CInternetFile`。  这些类和全局函数在 AFXINET.H 声明，不过 `CFileFind`除外，在 AFX.H. 声明。  
+---
+# <a name="mfc-classes-for-creating-internet-client-applications"></a>MFC Classes for Creating Internet Client Applications
+MFC provides the following classes and global functions for writing Internet client applications. Indentation indicates a class is derived from the unindented class above it. `CGopherFile` and `CHttpFile` derive from `CInternetFile`, for example. These classes and global functions are declared in AFXINET.H, except `CFileFind`, which is declared in AFX.H.  
   
-## 类  
+## <a name="classes"></a>Classes  
   
 -   [CInternetSession](../mfc/reference/cinternetsession-class.md)  
   
@@ -56,15 +73,16 @@ MFC 提供 Internet 编写客户端应用程序提供下列类和全局函数。
   
 -   [CInternetException](../mfc/reference/cinternetexception-class.md)  
   
-## 全局函数  
+## <a name="global-functions"></a>Global Functions  
   
--   [AfxParseURL](../Topic/AfxParseURL.md)  
+-   [AfxParseURL](reference/internet-url-parsing-globals.md#afxparseurl)  
   
--   [AfxGetInternetHandleType](../Topic/AfxGetInternetHandleType.md)  
+-   [AfxGetInternetHandleType](reference/internet-url-parsing-globals.md#afxgetinternethandletype)  
   
--   [AfxThrowInternetException](../Topic/AfxThrowInternetException.md)  
+-   [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)  
   
-## 请参阅  
- [Win32 Internet 扩展 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Internet 客户端类的必备条件](../mfc/prerequisites-for-internet-client-classes.md)   
- [使用 MFC WinInet 类编写 Internet 客户端应用程序](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

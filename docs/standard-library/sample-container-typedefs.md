@@ -1,5 +1,5 @@
 ---
-title: Sample Container Typedef | Microsoft Docs
+title: Sample Container Typedefs | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs:
 - C++
-f1_keywords: []
 ms.assetid: 9fc02c4c-d835-4266-a391-f12b40ba43fa
 caps.latest.revision: 8
 author: corob-msft
@@ -30,13 +29,13 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4999d4d1a1ccf3f998eb836cb91ee0b1f05d2fe3
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7ea9c3860de461516a59a57894873c667ecec326
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sample-container-typedefs"></a>Sample Container Typedefs
-有关 sample container 类中 typedef 的详细信息，请参阅 [ 类](../standard-library/sample-container-class.md)
+For more information about the typedefs in the sample container class, see [Sample Container Class](../standard-library/sample-container-class.md)
 

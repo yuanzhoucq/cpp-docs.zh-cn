@@ -1,56 +1,73 @@
 ---
-title: "省略号和可变参数模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Ellipses and Variadic Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 省略号和可变参数模板
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: cd760bb7b3d5c91ac0fccd92866043cda70d9967
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-本文演示了如何借助 C\+\+ 可变参数模板使用省略号 \(`...`\)。  省略号在 C 和 C\+\+ 中具有[许多用途](../misc/ellipsis-dot-dot-dot.md)。  这些包括函数的变量参数列表。  C 运行库的 `printf()` 函数是一种最常见的示例。  
+---
+# <a name="ellipses-and-variadic-templates"></a>Ellipses and Variadic Templates
+This article shows how to use the ellipsis (`...`) with C++ variadic templates. The ellipsis has had many uses in C and C++. These include variable argument lists for functions. The `printf()` function from the C Runtime Library is one of the most well-known examples.  
   
- *variadic 模板*是支持任意数量的参数的类或函数模板。  此机制对 C\+\+ 库开发人员尤其有用，因为您可以将其应用于类模板和函数模板，从而提供一系列类型安全和重要功能以及灵活性。  
+ A *variadic template* is a class or function template that supports an arbitrary number of arguments. This mechanism is especially useful to C++ library developers because you can apply it to both class templates and function templates, and thereby provide a wide range of type-safe and non-trivial functionality and flexibility.  
   
-## 语法  
- 可变参数模板用两种方法使用省略号。  参数名称的左侧表示*参数包*，参数名称的右侧将参数包扩展为单独的名称。  
+## <a name="syntax"></a>Syntax  
+ An ellipsis is used in two ways by variadic templates. To the left of the parameter name, it signifies a *parameter pack*, and to the right of the parameter name, it expands the parameter packs into separate names.  
   
- 以下是*可变参数模板类*定义语法的基本示例：  
+ Here's a basic example of *variadic template class* definition syntax:  
   
 ```cpp  
 template<typename... Arguments> class classname;  
 ```  
   
- 如以下示例所示，对于参数装箱和展开，可以根据您的喜好在省略号周围添加空白，例如：  
+ For both parameter packs and expansions, you can add whitespace around the ellipsis, based on your preference, as shown in these examples:  
   
 ```cpp  
 template<typename ...Arguments> class classname;  
 ```  
   
- 或为：  
+ Or this:  
   
 ```cpp  
 template<typename ... Arguments> class classname;  
 ```  
   
- 请注意本文使用的是显示在第一个例子中约定\(该省略号附加于`typename`\).  
+ Notice that this article uses the convention that's shown in the first example (the ellipsis is attached to `typename`).  
   
- 在前面的示例中，`Arguments` 是参数包。  类 `classname` 可以接受参数数目可变，例如以下示例：  
+ In the preceding examples, `Arguments` is a parameter pack. The class `classname` can accept a variable number of arguments, as in these examples:  
   
 ```cpp  
-  
 template<typename... Arguments> class vtclass;  
   
 vtclass< > vtinstance1;  
@@ -60,22 +77,22 @@ vtclass<long, std::vector<int>, std::string> vtinstance4;
   
 ```  
   
- 通过使用可变参数模板类定义，您还可以要求至少一个参数。  
+ By using a variadic template class definition, you can also require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
   
 ```  
   
- 以下是*可变参数模板函数*语法的基本示例：  
+ Here's a basic example of *variadic template function* syntax:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- 如下一节“**了解可变参数模板**”所示，`Arguments` 参数包展开使用。  
+ The `Arguments` parameter pack is then expanded for use, as shown in the next section, **Understanding variadic templates**.  
   
- variadic 模板函数语法还可能有其他形式，包括不限制于：  
+ Other forms of variadic template function syntax are possible—including, but not limited to, these examples:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments&... args);   
@@ -83,27 +100,27 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- 还允许使用类似 `const` 的说明符：  
+ Specifiers like `const` are also allowed:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
   
 ```  
   
- 按照可变参数模板类的定义，您可以创建需要至少一个参数的函数：  
+ As with variadic template class definitions, you can make functions that require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
   
 ```  
   
- 可变模板使用 `sizeof...()` 运算符（与更早的 `sizeof()` 运算符不相关）：  
+ Variadic templates use the `sizeof...()` operator (unrelated to the older `sizeof()` operator):  
   
 ```cpp  
 template<typename... Arguments>  
 void tfunc(const Arguments&... args)  
 {  
-    const unsigned numargs = sizeof...(Arguments);  
+    constexpr auto numargs{ sizeof...(Arguments) };  
   
     X xobj[numargs]; // array of some previously defined type X  
   
@@ -112,15 +129,14 @@ void tfunc(const Arguments&... args)
   
 ```  
   
-## 更多有关省略号位置  
- 过去，本文介绍了定义参数装箱和展开“在参数名称左侧的省略号位置，它表示参数，包，并在参数名称右侧，其展开参数装箱到单独的名称”。  这是技术上为 true，但可能会费一番功夫在转换代码。  请考虑：  
+## <a name="more-about-ellipsis-placement"></a>More about ellipsis placement  
+ Previously, this article described ellipsis placement that defines parameter packs and expansions as "to the left of the parameter name, it signifies a parameter pack, and to the right of the parameter name, it expands the parameter packs into separate names". This is technically true but can be confusing in translation to code. Consider:  
   
--   模板参数列表\(`template <parameter-list>`\), `typename...` 介绍了模板参数包。  
+-   In a template-parameter-list (`template <parameter-list>`), `typename...` introduces a template parameter pack.  
   
--   在参数声明语句\(`func(parameter-list)`\)，“顶层”省略号介绍函数参数包，并且该省略号地位是很重要的  
+-   In a parameter-declaration-clause (`func(parameter-list)`), a "top-level" ellipsis introduces a function parameter pack, and the ellipsis positioning is important:  
   
     ```cpp  
-  
     // v1 is NOT a function parameter pack:  
     template <typename... Types> void func1(std::vector<Types...> v1);   
   
@@ -128,10 +144,10 @@ void tfunc(const Arguments&... args)
     template <typename... Types> void func2(std::vector<Types>... v2);   
     ```  
   
--   如果省略号在参数名之后出现，则具有参数 pack 展开。  
+-   Where the ellipsis appears immediately after a parameter name, you have a parameter pack expansion.  
   
-## 示例  
- 一种阐明 variadic 模板功能框架的好方法是在 `printf` 一些功能的重新写入中使用：  
+## <a name="example"></a>Example  
+ A good way to illustrate the variadic template function mechanism is to use it in a re-write of some of the functionality of `printf`:  
   
 ```cpp  
 #include <iostream>  
@@ -165,7 +181,7 @@ int main()
   
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
   
@@ -176,7 +192,6 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  合并变参数模板函数的大多数实现使用某种形式的递归，但是它与传统递归稍有不同。传统递归涉及使用与函数相同的签名调用函数。（可以重载或模板化，但每次都要选择相同的签名。）可变递归使用不同（几乎总是减少）数目的参数调用可变函数模板，因此每次都抹去不同的签名。  仍需要“基用例”，但是，递归性质是不同的。  
+>  Most implementations that incorporate variadic template functions use recursion of some form, but it's slightly different from traditional recursion.  Traditional recursion involves a function calling itself by using the same signature. (It may be overloaded or templated, but the same signature is chosen each time.) Variadic recursion involves calling a variadic function template by using differing (almost always decreasing) numbers of arguments, and thereby stamping out a different signature every time. A "base case" is still required, but the nature of the recursion is different.  
   
-## 请参阅  
- [省略号 \(...\)](../misc/ellipsis-dot-dot-dot.md)
+

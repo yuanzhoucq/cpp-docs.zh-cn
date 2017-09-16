@@ -1,68 +1,85 @@
 ---
-title: "菜单和资源：菜单合并 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "协调菜单布局"
-  - "菜单 [C++], OLE 文档应用程序"
-  - "合并工具栏和状态栏"
-  - "OLE 容器, 菜单和资源"
-  - "状态栏, OLE 文档应用程序"
-  - "工具栏 [C++], OLE 文档应用程序"
-  - "可视化编辑, 应用程序菜单和资源"
+title: 'Menus and Resources: Menu Merging | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars [MFC], OLE document applications
+- visual editing [MFC], application menus and resources
+- coordinating menu layouts [MFC]
+- OLE containers [MFC], menus and resources
+- toolbars [MFC], OLE document applications
+- merging toolbar and status bar [MFC]
+- menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 菜单和资源：菜单合并
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eba298c25c4be89d83913ff35f2f4d0af9e9f91d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文详细步骤所需的 OLE 文档应用程序可以相应处理可视化编辑和就地激活。  就地激活窗体容器和服务器组件 \(\) 应用程序一个挑战。  用户在同一窗口保持在文档容器 \(帧的上下文中\)，而实际运行其他应用程序 \(服务器\)。  这要求在容器的资源和服务器应用之间的协调。  
+---
+# <a name="menus-and-resources-menu-merging"></a>Menus and Resources: Menu Merging
+This article details the steps necessary for OLE document applications to handle visual editing and in-place activation properly. In-place activation poses a challenge for both container and server (component) applications. The user remains in the same frame window (within the context of the container document) but is actually running another application (the server). This requires coordination between the resources of the container and server applications.  
   
- 本文涵盖的主题包括：  
+ Topics covered in this article include:  
   
--   [菜单布局](#_core_menu_layouts)  
+- [Menu Layouts](#_core_menu_layouts)  
   
--   [工具栏和状态栏](#_core_toolbars_and_status_bars)  
+- [Toolbars and Status Bars](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a> 菜单布局  
- 第一步将协调菜单布局。  有关更多信息，请参见 [菜单编程的注意事项](https://msdn.microsoft.com/en-us/library/ms647557.aspx) 的 **Menu Creation** 部分 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中。  
+##  <a name="_core_menu_layouts"></a> Menu Layouts  
+ The first step is to coordinate menu layouts. For more information, see the **Menu Creation** section in [Menu Programming Considerations](https://msdn.microsoft.com/library/ms647557.aspx) in the Windows SDK.  
   
- 在嵌入项发生，则活动容器应用程序应使用的新菜单。  在最小值，此菜单应包括以下内容，在列出的顺序：  
+ Container applications should create a new menu to be used only when embedded items are activated in place. At the minimum, this menu should consist of the following, in the order listed:  
   
-1.  菜单为使用相同的版本文件时打开。\(其他菜单项没有在下一个项目通常前面放置。\)  
+1.  File menu identical to the one used when files are open. (Usually no other menu items are placed before the next item.)  
   
-2.  两个连续的分隔符。  
+2.  Two consecutive separators.  
   
-3.  窗口菜单为使用相同的版本文件时打开 \(，仅在 MDI 应用程序的容器应用程序\)。  一些应用程序可能具有其他菜单，如菜单选项，本组中属于，在菜单，则嵌入的项仍存在时激活。  
+3.  Window menu identical to the one used when files are open (only if the container application in an MDI application). Some applications may have other menus, such as an Options menu, that belong in this group, which remains on the menu when an embedded item is activated in place.  
   
     > [!NOTE]
-    >  可能会影响文档容器的视图的其他菜单，如进行缩放。  这些容器菜单此菜单资源都会出现在两分隔符之间。  
+    >  There may be other menus that affect the view of the container document, such as Zoom. These container menus appear between the two separators in this menu resource.  
   
- 服务器组件 \(\) 应用程序还应专门创建新菜单就地激活的。  它应当与使用的菜单，当文件打开时，但没有操作，服务器文档而不是数据的菜单项，如文件和窗口。  通常，此菜单包括：  
+ Server (component) applications should also create a new menu specifically for in-place activation. It should be like the menu used when files are open, but without menu items, such as File and Window that manipulate the server document instead of the data. Typically, this menu consists of the following:  
   
-1.  编辑菜单为使用相同的版本文件时打开。  
+1.  Edit menu identical to the one used when files are open.  
   
-2.  分隔符。  
+2.  Separator.  
   
-3.  编辑 Menu，例如 Scribble 示例应用程序的 Pen 菜单的对象。  
+3.  Object editing menus, such as the Pen menu in the Scribble sample application.  
   
-4.  分隔符。  
+4.  Separator.  
   
-5.  “帮助”菜单  
+5.  Help menu.  
   
- 对于示例，查看某些示例就地菜单布局容器和服务器。  移除每个菜单项详细信息使示例更清晰。  容器的就地菜单中包含以下项：  
+ For an example, look at the layout of some sample in-place menus for a container and a server. The details of each menu item have been removed to make the example clearer. The container's in-place menu has the following entries:  
   
 ```  
 IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE   
@@ -76,7 +93,7 @@ BEGIN
 END  
 ```  
   
- 连续的分隔符标记服务器的菜单的第一部分应转到。  现在请查看服务器的就地菜单：  
+ The consecutive separators indicate where the first part of the server's menu should go. Now look at the server's in-place menu:  
   
 ```  
 IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE   
@@ -89,7 +106,7 @@ BEGIN
 END  
 ```  
   
- 此处分隔符标记容器菜单项的第二组应转到。  出现的菜单结构，当从该服务器的对象是用于激活的就地此容器中如下所示：  
+ The separators here indicate where the second group of container menu items should go. The resulting menu structure when an object from this server is activated in place inside this container looks like this:  
   
 ```  
 BEGIN  
@@ -103,19 +120,21 @@ BEGIN
 END  
 ```  
   
- 您可以看到，分隔符为每个应用程序菜单不同的组替换。  
+ As you can see, the separators have been replaced with the different groups of each application's menu.  
   
- 应由服务器应用程序也提供快捷键表与就地菜单。  容器将合并到其自己的快捷键对应表中。  
+ Accelerator tables associated with the in-place menu should also be supplied by the server application. The container will incorporate them into its own accelerator tables.  
   
- 当嵌入项的就地激活时，框架加载就地菜单。  然后它请求其菜单的服务器应用就地激活并将其插入分隔符的位置。  这是菜单如何合并。  您从操作的菜单在容器获取文件和将窗口，因此，可以从服务器上获取操作的菜单项。  
+ When an embedded item is activated in place, the framework loads the in-place menu. It then asks the server application for its menu for in-place activation and inserts it where the separators are. This is how the menus combine. You get menus from the container for operating on the file and window placement, and you get menus from the server for operating on the item.  
   
-##  <a name="_core_toolbars_and_status_bars"></a> 工具栏和状态栏  
- 服务器应用应创建新工具栏和存储其在单独文件中的位图。  应用程序向导生成的应用程序存储在称为 ITOOLBAR.BMP 文件的该位图。  新的工具栏为容器应用程序的工具栏，当服务器上的项仍存在时激活，并应包含项和工具栏，但移除相同，对文件和 Windows 菜单项的图标。  
+##  <a name="_core_toolbars_and_status_bars"></a> Toolbars and Status Bars  
+ Server applications should create a new toolbar and store its bitmap in a separate file. The application wizard-generated applications store this bitmap in a file called ITOOLBAR.BMP. The new toolbar replaces the container application's toolbar when your server's item is activated in place, and should contain the same items as your normal toolbar, but remove icons representing items on the File and Window menus.  
   
- 此工具栏在 `COleIPFrameWnd`派生类加载，创建可由应用程序向导。  状态栏按容器应用程序处理。  有关就地框架窗口实现的更多信息，请参见 [服务器：实现服务器](../mfc/servers-implementing-a-server.md)。  
+ This toolbar is loaded in your `COleIPFrameWnd`-derived class, created for you by the application wizard. The status bar is handled by the container application. For more information on the implementation of in-place frame windows, see [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md).  
   
-## 请参阅  
- [菜单和资源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [激活](../mfc/activation-cpp.md)   
- [服务器](../mfc/servers.md)   
- [容器](../mfc/containers.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)
+
+

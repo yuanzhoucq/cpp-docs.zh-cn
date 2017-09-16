@@ -1,45 +1,64 @@
 ---
-title: "剪贴板：何时使用每一剪贴板机制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序 [OLE], 剪贴板"
-  - "剪贴板 [C++], 格式"
-  - "剪贴板 [C++], 机制"
-  - "格式 [C++], OLE 剪贴板"
-  - "OLE 剪贴板, 格式"
-  - "OLE 剪贴板, 指南"
+title: 'Clipboard: When to Use Each Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard, guidelines
+- Clipboard [MFC], mechanisms
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
+- Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 剪贴板：何时使用每一剪贴板机制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af3b8582086255077892ee3c243bccde7b1130be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-遵循使用了剪贴板的准则：  
+---
+# <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Clipboard: When to Use Each Clipboard Mechanism
+Follow these guidelines in using the Clipboard:  
   
--   现在使用 OLE 剪贴板机制在以后启用新功能。  当标准剪贴板 API 将维护时，OLE 机制是将来数据传输。  
+-   Use the OLE Clipboard mechanism now to enable new capabilities in the future. While the standard Clipboard API will be maintained, the OLE mechanism is the future of data transfer.  
   
--   使用 OLE 剪贴板机制，则编写 OLE 应用程序或需要任何 OLE 拖放功能，如。  
+-   Use the OLE Clipboard mechanism if you are writing an OLE application or you want any of the OLE features, such as drag and drop.  
   
--   如果提供 OLE 格式，请使用 OLE 剪贴板机制。  
+-   Use the OLE Clipboard mechanism if you are providing OLE formats.  
   
-## 你希望做什么？  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Use the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [使用 Windows 剪贴板机制](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Use the Windows Clipboard mechanism](../mfc/clipboard-using-the-windows-clipboard.md)  
   
-## 请参阅  
- [剪贴板](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

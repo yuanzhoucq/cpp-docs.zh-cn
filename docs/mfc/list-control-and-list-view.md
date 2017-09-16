@@ -1,51 +1,70 @@
 ---
-title: "列表控件和列表视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 类, 和 CListView"
-  - "CListView 类, 和 CListCtrl"
-  - "列表控件, 列表视图"
-  - "列表视图"
-  - "视图, 列表和列表控件"
+title: List Control and List View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListView class [MFC], and CListCtrl
+- views [MFC], list and list control
+- CListCtrl class [MFC], and CListView
+- list views [MFC]
+- list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 列表控件和列表视图
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a60bf5c088c3914f9ed73a34a1dfa40f58bb1a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-为方便起见，MFC 封装列表控件的两种方式。  可使用列表控件：  
+---
+# <a name="list-control-and-list-view"></a>List Control and List View
+For convenience, MFC encapsulates the list control in two ways. You can use list controls:  
   
--   直接通过嵌入，对话框类中的一个对象。[CListCtrl](../mfc/reference/clistctrl-class.md)  
+-   Directly, by embedding a [CListCtrl](../mfc/reference/clistctrl-class.md) object in a dialog class.  
   
--   间接，使用类，[CListView](../mfc/reference/clistview-class.md)。  
+-   Indirectly, by using class [CListView](../mfc/reference/clistview-class.md).  
   
- 在 [CEditView](../mfc/reference/ceditview-class.md) 一编辑控件，`CListView` 可以轻松集成带有 MFC 文档\/视图结构的列表，控件封装了控件：控件以 MFC 视图的整个外围应用。\(视图 *是* 控件，被转换为 `CListView`。\)  
+ `CListView` makes it easy to integrate a list control with the MFC document/view architecture, encapsulating the control much as [CEditView](../mfc/reference/ceditview-class.md) encapsulates an edit control: the control fills the entire surface area of an MFC view. (The view *is* the control, cast to `CListView`.)  
   
- `CListView` 对象从 [CCtrlView](../mfc/reference/cctrlview-class.md) 及其基类继承并添加成员函数检索基础列表控件。  使用视图成员与视图中用作视图。  使用 [GetListCtrl](../Topic/CListView::GetListCtrl.md) 成员函数为列表控件的成员函数的访问。  使用这些成员：  
+ A `CListView` object inherits from [CCtrlView](../mfc/reference/cctrlview-class.md) and its base classes and adds a member function to retrieve the underlying list control. Use view members to work with the view as a view. Use the [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) member function to gain access to the list control's member functions. Use these members to:  
   
--   添加删除，或者操作“Item”列表中。  
+-   Add, delete, or manipulate "items" in the list.  
   
--   集合或者获取列表控件特性。  
+-   Set or get list control attributes.  
   
- 若要获取对基础 `CListView`的 `CListCtrl` 引用，请调用从列表视图类的 `GetListCtrl` :  
+ To obtain a reference to the `CListCtrl` underlying a `CListView`, call `GetListCtrl` from your list view class:  
   
- [!CODE [NVC_MFCListView#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCListView#4)]  
+ [!code-cpp[NVC_MFCListView#4](../atl/reference/codesnippet/cpp/list-control-and-list-view_1.cpp)]  
   
- 本主题介绍两种使用列表控件。  
+ This topic describes both ways to use the list control.  
   
-## 请参阅  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,43 +1,62 @@
 ---
-title: "使用动画控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "动画控件 [C++]"
-  - "CAnimateCtrl 类, 动画控件"
-  - "控件 [MFC], 动画"
+title: Using an Animation Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], animation
+- CAnimateCtrl class [MFC], animation controls
+- animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用动画控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7555102fdfdb3cbe1405b23a1acde25178567bb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-animation 控件的典型用法遵循以下模式：  
+---
+# <a name="using-an-animation-control"></a>Using an Animation Control
+Typical usage of an animation control follows the pattern below:  
   
--   创建控件。  如果控件在对话框模板指定的，则该控件在对话框创建时自动创建。\(您应具有对话框类的一个 [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) 成员对应于相应的animation控件。\) 或者，可以使用 [创建](../Topic/CAnimateCtrl::Create.md) 成员函数来创建控件作为所有窗口的一个子窗口。  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) member in your dialog class that corresponds to the animation control.) Alternatively, you can use the [Create](../mfc/reference/canimatectrl-class.md#create) member function to create the control as a child window of any window.  
   
--   加载一 AVI 剪辑到动画控件通过调用成员函数。[打开](../Topic/CAnimateCtrl::Open.md) 如果动画控件对话框中，为此的适合放置在对话框类的函数 [OnInitDialog](../Topic/CDialog::OnInitDialog.md)。  
+-   Load an AVI clip into the animation control by calling the [Open](../mfc/reference/canimatectrl-class.md#open) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   通过调用 [播放](../Topic/CAnimateCtrl::Play.md) 成员函数播放剪辑。  如果动画控件对话框中，为此的适合放置在对话框类的函数 **OnInitDialog**。  调用 **播放** 不需要动画的控件是否将 `ACS_AUTOPLAY` 样式。  
+-   Play the clip by calling the [Play](../mfc/reference/canimatectrl-class.md#play) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's **OnInitDialog** function. Calling **Play** is not necessary if the animation control has the `ACS_AUTOPLAY` style set.  
   
--   如果要剪辑显示的部分或由帧播放该帧，请使用 `Seek` 成员函数。  若要停止播放的剪辑，请使用 `Stop` 成员函数。  
+-   If you want to display portions of the clip or play it frame by frame, use the `Seek` member function. To stop a clip that is playing, use the `Stop` member function.  
   
--   如果不立即销毁控件，从内存中移除。通过调用 **关闭** 成员函数。  
+-   If you are not going to destroy the control right away, remove the clip from memory by calling the **Close** member function.  
   
--   如果animation控件在对话框中，它和 `CAnimateCtrl` 对象将被自动销毁。  否则，您需要确保正确销毁控件和 `CAnimateCtrl` 对象。  销毁控件自动关闭 AVI 剪辑。  
+-   If the animation control is in a dialog box, it and the `CAnimateCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CAnimateCtrl` object are properly destroyed. Destroying the control automatically closes the AVI clip.  
   
-## 请参阅  
- [使用 CAnimateCtrl](../mfc/using-canimatectrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CAnimateCtrl](../mfc/using-canimatectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "discrete_distribution 类 | Microsoft 文档"
+title: discrete_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discrete_distribution
 - random/std::discrete_distribution
 - random/std::discrete_distribution::reset
 - random/std::discrete_distribution::probabilities
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- discrete_distribution class
+- std::discrete_distribution [C++]
+- std::discrete_distribution [C++], reset
+- std::discrete_distribution [C++], probabilities
+- std::discrete_distribution [C++], param
+- std::discrete_distribution [C++], min
+- std::discrete_distribution [C++], max
+- std::discrete_distribution [C++], param_type
+- std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
 caps.latest.revision: 21
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2118eb841d1faf4f137ac30889443768ab6d0d89
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discretedistribution-class"></a>discrete_distribution 类
-生成包含以等概率分布在每个区间中的等宽区间的离散型整数分布。  
+# <a name="discretedistribution-class"></a>discrete_distribution Class
+Generates a discrete integer distribution that has uniform-width intervals with uniform probability in each interval.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -90,25 +96,25 @@ public:
    result_type max() const;
    };  
 ```   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
- 整数结果类型，默认为 `int`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+ The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>备注  
- 此示例分布包含以等概率分布在每个区间中的等宽区间。 有关其他示例分布的信息，请参阅 [piecewise_linear_distribution 类](../standard-library/piecewise-linear-distribution-class.md)和 [piecewise_constant_distribution 类](../standard-library/piecewise-constant-distribution-class.md)。  
+## <a name="remarks"></a>Remarks  
+ This sampling distribution has uniform-width intervals with uniform probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md).  
   
- 下表链接到有关各个成员的文章：  
+ The following table links to articles about individual members:  
   
 |||  
 |-|-|  
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
 |`discrete_distribution::operator()`|[param_type](#param_type)|  
   
- 属性函数 `vector<double> probabilities()` 将返回每个生成的整数的各自概率。  
+ The property function `vector<double> probabilities()` returns the individual probabilities for each integer generated.  
   
- 有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -187,13 +193,13 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::    
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
- 构造分布。  
+ Constructs the distribution.  
   
 ```  
 // default constructor  
@@ -214,46 +220,46 @@ discrete_distribution(size_t count, double low, double high, UnaryOperation weig
 explicit discrete_distribution(const param_type& parm);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- 从中构造分布的列表中的第一个迭代器。  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- 从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- 从中构造分布的 [initializer_list](../cpp/initializers.md)。  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- 分布范围中的元素数。 如果 `count==0`，则等效于默认构造函数（始终生成零）。  
+ The number of elements in the distribution range. If `count==0`, equivalent to the default constructor (always generates zero).  
   
 *low*  
- 分布范围中的最低值。  
+ The lowest value in the distribution range.  
   
 *high*  
- 分布范围中的最高值。  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- 表示分布的概率函数的对象。 参数和返回值都必须可转换为 `double`。  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *parm*  
- 用于构造分布的 `param_type` 结构。  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>备注  
-默认构造函数构造其存储的概率值仅具有附带值 1 的一个元素的对象。 这将产生始终生成零的分布。  
+### <a name="remarks"></a>Remarks  
+The default constructor constructs an object whose stored probability value has one element with value 1. This will result in a distribution that always generates a zero.  
   
-包含 *firstW* 和 *lastW* 参数的迭代器范围构造函数使用通过区间序列 [*firstW*, *lastW*) 的迭代器中获取的加权值构造分布对象。  
+The iterator range constructor that has parameters *firstW* and *lastW* constructs a distribution object by using weight values taken from the iterators over the interval sequence [*firstW*, *lastW*).  
   
-包含 *weightlist* 参数的初始化表达式列表构造函数使用初始化表达式列表 *weightlist* 中的加权值构造分步对象。  
+The initializer list constructor that has a *weightlist* parameter constructs a distribution object with weights from the intializer list *weightlist*.  
   
-包含 *count*、*low*、*high*、和 *weightfunc* 参数的构造函数基于以下规则构造初始化的分布对象：  
--  如果 *count* < 1，则 **n** = 1，并且等效于默认构造函数（始终生成零）。  
--  如果 *count* > 0，则 **n** = *count*。 Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
+The constructor that has *count*, *low*, *high*, and *weightfunc* parameters constructs a distribution object initialized based on these rules:  
+-  If *count* < 1, **n** = 1, and as such is equivalent to the default constructor, always generating zero.  
+-  If *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
-包含 `param_type` 参数 *parm* 的构造函数将 *parm* 用作存储的参数结构来构造分布对象。  
+The constructor that has a `param_type` parameter *parm* constructs a distribution object using *parm* as the stored parameter structure.  
   
 ##  <a name="param_type"></a>  discrete_distribution::param_type  
- 存储分布的所有参数。  
+ Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -277,35 +283,35 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- 从中构造分布的列表中的第一个迭代器。  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- 从中构造分布的列表中的最后一个迭代器（不包含此迭代器，因为迭代器末尾使用空元素）。  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- 从中构造分布的 [initializer_list](../cpp/initializers.md)。  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- 分布范围中的元素数。 如果 *count* 为 0，则等效于默认构造函数（始终生成零）。  
+ The number of elements in the distribution range. If *count* is 0, this is equivalent to the default constructor (always generates zero).  
   
 *low*  
- 分布范围中的最低值。  
+ The lowest value in the distribution range.  
   
 *high*  
- 分布范围中的最高值。  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- 表示分布的概率函数的对象。 参数和返回值都必须可转换为 `double`。  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *right*  
- 要与它进行比较的 `param_type` 对象。  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>备注  
- 此参数包可传递给 `operator()` 以生成返回值。  
+### <a name="remarks"></a>Remarks  
+ This parameter package can be passed to `operator()` to generate the return value.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

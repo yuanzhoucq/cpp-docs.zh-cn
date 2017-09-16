@@ -1,41 +1,60 @@
 ---
-title: "视图在打印中的作用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CView 类, 打印中的角色"
-  - "OnDraw 方法, 和打印"
-  - "打印 [MFC], OnDraw 方法"
-  - "打印 [MFC], 视图"
-  - "打印视图"
-  - "视图, 打印"
+title: Role of the View in Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], printing
+- OnDraw method [MFC], and printing
+- printing [MFC], OnDraw method [MFC]
+- printing [MFC], views
+- CView class [MFC], role in printing
+- printing views [MFC]
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 视图在打印中的作用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28d18718ca992c77d20416e63adb24c24cc6a647
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-视图中打印其关联文档还模拟两个重要的影响。  
+---
+# <a name="role-of-the-view-in-printing"></a>Role of the View in Printing
+Your view also plays two important roles in printing its associated document.  
   
- 视图：  
+ The view:  
   
--   在打印机使用同一 [OnDraw](../Topic/CView::OnDraw.md) 代码绘制。在屏幕绘制。  
+-   Uses the same [OnDraw](../mfc/reference/cview-class.md#ondraw) code to draw on the printer as to draw on the screen.  
   
--   管理划分文档打印到的页面。  
+-   Manages dividing the document into pages for printing.  
   
- 有关打印的更多信息以及打印视图的效果，请参见 [打印和打印预览](../mfc/printing-and-print-preview.md)。  
+ For more information about printing and about the view's role in printing, see [Printing and Print Preview](../mfc/printing-and-print-preview.md).  
   
-## 请参阅  
- [使用视图](../mfc/using-views.md)
+## <a name="see-also"></a>See Also  
+ [Using Views](../mfc/using-views.md)
+
+

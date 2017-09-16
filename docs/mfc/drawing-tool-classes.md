@@ -1,53 +1,72 @@
 ---
-title: "绘图工具类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "绘图, 工具类"
-  - "输出类"
-  - "屏幕输出类"
+title: Drawing Tool Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.drawing
+dev_langs:
+- C++
+helpviewer_keywords:
+- drawing [MFC], tool classes
+- screen output classes [MFC]
+- output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 绘图工具类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d7b9378bacf343d02d204a679afc7295792c6d8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-类封装在这些设备上下文用于绘制的图形工具。  
+---
+# <a name="drawing-tool-classes"></a>Drawing Tool Classes
+These classes encapsulate drawing tools that are used to draw on a device context.  
   
  [CGdiObject](../mfc/reference/cgdiobject-class.md)  
- GDI 绘制工具的基类。  
+ The base class for GDI drawing tools.  
   
  [CBrush](../mfc/reference/cbrush-class.md)  
- 封装可以选择作为当前画笔在设备上下文的 GDI 画笔。  画笔用于填充绘制的对象内部使用。  
+ Encapsulates a GDI brush that can be selected as the current brush in a device context. Brushes are used for filling interiors of objects being drawn.  
   
  [CPen](../mfc/reference/cpen-class.md)  
- 封装可选择为当前在笔设备上下文的 GDI 钢笔。  该钢笔用于绘制的边界线对象使用。  
+ Encapsulates a GDI pen that can be selected as the current pen in a device context. Pens are used for drawing the border lines of objects.  
   
  [CFont](../mfc/reference/cfont-class.md)  
- 封装可以选择作为当前字体在设备上下文的 GDI 字体。  
+ Encapsulates a GDI font that can be selected as the current font in a device context.  
   
  [CBitmap](../mfc/reference/cbitmap-class.md)  
- 封装 GDI 位图，提供了接口。操作的位图。  
+ Encapsulates a GDI bitmap, providing an interface for manipulating bitmaps.  
   
  [CPalette](../mfc/reference/cpalette-class.md)  
- 封装在 GDI 调色板用作应用程序以及一个输出设备颜色之间接口 \(显示。  
+ Encapsulates a GDI color palette for use as an interface between the application and a color output device such as a display.  
   
- [种 CRectTracker](../mfc/reference/crecttracker-class.md)  
- 显示和句柄调整和移动矩形对象的用户界面。  
+ [CRectTracker](../mfc/reference/crecttracker-class.md)  
+ Displays and handles the user interface for resizing and moving rectangular objects.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

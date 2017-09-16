@@ -1,42 +1,61 @@
 ---
-title: "活动文档服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "活动文档服务器 [C++]"
-  - "活动文档 [C++], 服务器"
-  - "服务器 [C++], 活动文档"
+title: Active Document Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], servers
+- servers [MFC], active document
+- active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 活动文档服务器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1dc80f4c1a84b17248df1e25dbcef7c85806c1f3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-活动文档服务器 ，如称为本地文档的其他应用程序类型的 Word、Excel或PowerPoint主机文档。  与 OLE 嵌入对象不同（简略显示其他文档的页面），活动文档提供整接口并完成创建这些服务器应用程序的原有功能。  用户使用它们收藏夹应用程序的全功能创建文档 \(如果它们处于活动文档\)，因此，可以将产生的项目作为一个实体。  
+---
+# <a name="active-document-servers"></a>Active Document Servers
+Active document servers such as Word, Excel, or PowerPoint host documents of other application types called active documents. Unlike OLE embedded objects (which are simply displayed within the page of another document), Active documents provide the full interface and complete native functionality of the server application that creates them. Users can create documents using the full power of their favorite applications (if they are active document enabled), yet can treat the resulting project as a single entity.  
   
- 活动文档中有多页并始终处于就地活动状态。  用户的界面活动文档控件部件，将其菜单与容器的 **文件** 和 **帮助**菜单合并。  它们占据整个容器的编辑区域、控件视图和打印机页 \(边距，页脚，等等\)。  
+ Active documents can have more than one page and are always in-place active. Active documents control part of the user interface, merging their menus with the **File** and **Help** menus of the container. They occupy the entire editing area of the container and control the views and the layout of the printer page (margins, footers, and so on).  
   
- MFC 实现带有文档\/视图接口、命令映射计划、打印、菜单和管理注册表管理的活动文档服务器。  在[活动文档](../mfc/active-documents.md)中讨论特定的编程要求。  
+ MFC implements active document servers with document/view interfaces, command dispatch maps, printing, menu management, and registry management. Specific programming requirements are discussed in [active documents](../mfc/active-documents.md).  
   
- MFC 支持与 [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) 类的活动文档，派生自 [CCmdTarget](../mfc/reference/ccmdtarget-class.md), [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)派生自[COleServerItem](../mfc/reference/coleserveritem-class.md).  MFC 支持带有 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) 类的活动文档容器，派生自 [COleClientItem](../mfc/reference/coleclientitem-class.md)。  
+ MFC supports active documents with the [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) class, derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md), and [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), derived from [COleServerItem](../mfc/reference/coleserveritem-class.md). MFC supports active document containers with the [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) class, derived from [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer` 映射活动文档界面 \(MDI\) 和初始化以及激活活动文档。  MFC 还提供对宏以处理在活动文档的路由命令。  在应用程序中使用活动文档，包括 StdAfx.h 文件中的 AfxDocOb.h。  
+ `CDocObjectServer` maps the active document interfaces and initializes and activates an active document. MFC also provides macros to handle command routing in ACTIVE documents. To use active documents in your application, include AfxDocOb.h in your StdAfx.h file.  
   
- 标准 MFC 服务器联接自己的 `COleServerItem`\-派生类。  如果选择了 **Mini\-server** 或 **Full\-server** 复选框提供应用程序服务器复合文档支持，MFC 应用程序向导为您生成此类。  如果也选中 **活动文档服务器 \(A\)** 复选框，MFC 应用程序向导生成一个从 `CDocObjectServerItem` 派生的类。  
+ A regular MFC server hooks up its own `COleServerItem`-derived class. The MFC Application Wizard generates this class for you if you select the **Mini-server** or **Full-server** check box to give your application server compound document support. If you also select the **Active document server** check box, the MFC Application Wizard generates a class derived from `CDocObjectServerItem` instead.  
   
- `COleDocObjectItem` 类允许OLE容器成为活动文档容器。  可以使用 MFC 应用程序向导通过在 MFC 应用程序向导的组合文档支持页的 **活动文档容器 \(D\)** 复选框以创建活动文档容器。  有关更多信息，请参见 [创建活动文档容器应用程序](../mfc/creating-an-active-document-container-application.md)。  
+ The `COleDocObjectItem` class allows an OLE container to become an active document container. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** checkbox in the Compound Document Support page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
-## 请参阅  
- [活动文档包容](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

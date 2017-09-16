@@ -1,5 +1,5 @@
 ---
-title: "complex&lt;long double&gt; | Microsoft 文档"
+title: complex&lt;long double&gt; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::complex<long double>
-- complex<long double>
-- std.complex<long double>
+- std::complex<long double>", "complex<long double>", "std.complex<long double>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 75e4e8bc79cb972c19e200a4d8fc1340535cd297
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4433a4904bf903f59de746cf1f185a91a4b02ee3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
-描述一个对象，该对象存储两个都为 `long double` 类型的有序对象对，该有序对中的第一个对象表示复数的实部，第二个对象表示复数虚部。  
+Describes an object that stores an ordered pair of objects both of type `long double`, the first representing the real part of a complex number and the second representing the imaginary part.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
@@ -61,25 +59,25 @@ complex(
 };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `_RealVal`  
- 正在构造的复数实部的 **long double** 类型值。  
+ The value of type **long double** for the real part of the complex number being constructed.  
   
  `_ImagVal`  
- 正在构造的复数虚部的 `long double` 类型值。  
+ The value of type `long double` for the imaginary part of the complex number being constructed.  
   
  `complexNum`  
- 类型为 **double** 或 **float** 的复数，其实部和虚部用于初始化正在构造的 `long double` 类型的复数。  
+ The complex number of type **double** or of type **float** whose real and imaginary parts are used to initialize a complex number of type `long double` being constructed.  
   
-## <a name="return-value"></a>返回值  
- `long double` 类型的复数。  
+## <a name="return-value"></a>Return Value  
+ A complex number of type `long double`.  
   
-## <a name="remarks"></a>备注  
- 模板类 complex 显式专用化为 `long double` 类型的 complex 类仅与它所定义构造函数中的模板类不同。 从 `long double` 到 **float** 类型的转换可以是隐式，但从 **double** 到 `long double` 的转换必须是**显式**的。 使用**显式**转换可排除使用赋值语法启动类型转换。  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization of the template class complex to a complex class of type `long double` differs from the template class only in the constructors it defines. The conversion from `long double` to **float** is allowed to be implicit, but the conversion from **double** to `long double` is required to be **explicit**. The use of **explicit** rules out the initiation with type conversion using assignment syntax.  
   
- 有关 `complex` 模板类的详细信息，请参阅 [complex 类](../standard-library/complex-class.md)。 有关 `complex` 模板类的成员列表，请参阅。  
+ For more information on the template class `complex`, see [complex Class](../standard-library/complex-class.md). For a list of members of the template class `complex`, see .  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // complex_comp_ld.cpp  
@@ -134,14 +132,14 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头**：\<complex>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [complex 类](../standard-library/complex-class.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Class](../standard-library/complex-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

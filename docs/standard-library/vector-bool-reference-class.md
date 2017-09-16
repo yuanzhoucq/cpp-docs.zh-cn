@@ -1,5 +1,5 @@
 ---
-title: "vector&lt;bool&gt;::reference 类 | Microsoft Docs"
+title: vector&lt;bool&gt;::reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vector<bool>::reference
+- vector/vector<bool>::reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,18 +33,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0a4ec7d943ab478ba36a48e8b44ac915ba1c3893
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fe5ce0fa142c7d881db249d4c5905549eae5d8e6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference 类
-`vector<bool>::reference` 类是 [vector\<bool> 类](../standard-library/vector-bool-class.md) 为模拟 `bool&` 而提供的一种代理类。  
+# <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference Class
+The `vector<bool>::reference` class is a proxy class provided by the [vector\<bool> Class](../standard-library/vector-bool-class.md) to simulate `bool&`.  
   
-## <a name="remarks"></a>备注  
- 必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，因为无法采用 `vector<bool>::reference` 对象的地址，所以下列使用 [vector\<bool>::operator[]](http://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) 的代码是错误的：  
+## <a name="remarks"></a>Remarks  
+ A simulated reference is required because C++ does not natively allow direct references to bits. `vector<bool>` uses only one bit per element, which can be referenced by using this proxy class. However, the reference simulation is not complete because certain assignments are not valid. For example, because the address of the `vector<bool>::reference` object cannot be taken, the following code that uses [vector\<bool>::operator&#91;&#93;](http://msdn.microsoft.com/Library/97738633-690d-4069-b2d9-8c54104fbfdd) is not correct:  
   
 ```cpp  
 vector<bool> vb;  
@@ -53,22 +53,22 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use  
 ```  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[flip](../standard-library/vector-bool-reference-flip.md)|反转向量元素的布尔值。|  
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|提供从 `vector<bool>::reference` 到 `bool` 的隐式转换。|  
-|[operator=](../standard-library/vector-bool-reference-operator-assign.md)|将布尔值赋给一个位，或将引用的元素所保存的值赋给一个位。|  
+|[flip](../standard-library/vector-bool-reference-flip.md)|Inverts the Boolean value of a vector element.|  
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Provides an implicit conversion from `vector<bool>::reference` to `bool`.|  
+|[operator=](../standard-library/vector-bool-reference-operator-assign.md)|Assigns a Boolean value to a bit, or the value held by a referenced element to a bit.|  
   
-## <a name="requirements"></a>要求  
- **标头**：\<vector>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<vector>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<vector>](../standard-library/vector.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

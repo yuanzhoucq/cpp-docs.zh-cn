@@ -1,53 +1,71 @@
 ---
-title: "经常重写的成员函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialog 类, 成员"
-  - "对话框类, 经常重写的成员函数"
-  - "MFC 对话框, 重写成员函数"
-  - "OnCancel 函数"
-  - "OnInitDialog 函数"
-  - "OnOK 函数"
-  - "重写, 对话框类成员"
+title: Commonly Overridden Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDialog class [MFC], members
+- OnInitDialog function
+- dialog classes [MFC], commonly overridden member functions
+- OnCancel function
+- overriding, dialog class members
+- OnOK function
+- MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 经常重写的成员函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21a29ea120266909ab40473276efb317a482643f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-下表列出在 `CDialog`派生类可能重写成员函数。  
+---
+# <a name="commonly-overridden-member-functions"></a>Commonly Overridden Member Functions
+The following table lists the most likely member functions to override in your `CDialog`-derived class.  
   
-### 通常 CDialog 类重写的成员函数  
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Commonly Overridden Member Functions of Class CDialog  
   
-|成员函数|该响应的信息|重载的用途。|  
-|----------|------------|------------|  
-|`OnInitDialog`|**WM\_INITDIALOG**|初始化对话框的控件。|  
-|`OnOK`|按钮的 **IDOKBN\_CLICKED**|当用户单击"确定"按钮，则响应。|  
-|`OnCancel`|按钮的 **IDCANCELBN\_CLICKED**|当用户单击"取消"按钮，则响应。|  
+|Member function|Message it responds to|Purpose of the override|  
+|---------------------|----------------------------|-----------------------------|  
+|`OnInitDialog`|**WM_INITDIALOG**|Initialize the dialog box's controls.|  
+|`OnOK`|**BN_CLICKED** for button **IDOK**|Respond when the user clicks the OK button.|  
+|`OnCancel`|**BN_CLICKED** for button **IDCANCEL**|Respond when the user clicks the Cancel button.|  
   
- `OnInitDialog`、`OnOK`和 `OnCancel` 都是虚函数。  使用 [属性窗口](../Topic/Properties%20Window.md)，若要重写，也声明在派生的对话框类中的重写函数。  
+ `OnInitDialog`, `OnOK`, and `OnCancel` are virtual functions. To override them, you declare an overriding function in your derived dialog class using the [Properties window](/visualstudio/ide/reference/properties-window).  
   
- 在显示对话框之前，将调用`OnInitDialog`。  必须调用从重写的默认 `OnInitDialog` \(通常在处理程序作为处理程序的第一个操作。  默认情况下，`OnInitDialog` 将返回 **TRUE** 指示应设置为焦点在对话框第一个控件。  
+ `OnInitDialog` is called just before the dialog box is displayed. You must call the default `OnInitDialog` handler from your override — usually as the first action in the handler. By default, `OnInitDialog` returns **TRUE** to indicate that the focus should be set to the first control in the dialog box.  
   
- `OnOK` 不为非模式，而不是模式对话框通常重写。  如果重写模式对话框的此处理程序中，调用该重写 \- 确保调用 `EndDialog` \) 或调用 `EndDialog` 的基类版本。  
+ `OnOK` is typically overridden for modeless but not modal dialog boxes. If you override this handler for a modal dialog box, call the base class version from your override — to ensure that `EndDialog` is called — or call `EndDialog` yourself.  
   
- `OnCancel` 用于非模式对话框通常重写。  
+ `OnCancel` is usually overridden for modeless dialog boxes.  
   
- 有关这些成员函数的更多信息，请参见类 [CDialog](../mfc/reference/cdialog-class.md) " *MFC 参考* 和讨论有关中 [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)。  
+ For more information about these member functions, see class [CDialog](../mfc/reference/cdialog-class.md) in the *MFC Reference* and the discussion on [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md).  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [经常添加的成员函数](../mfc/commonly-added-member-functions.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Commonly Added Member Functions](../mfc/commonly-added-member-functions.md)
+

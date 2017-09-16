@@ -1,42 +1,61 @@
 ---
-title: "调试支持类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.debug"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "调试 [MFC], 用于调试的类"
-  - "调试 [MFC], 内存泄漏"
-  - "调试内存泄漏, MFC"
-  - "动态内存分配"
-  - "内存分配, 动态调试"
-  - "内存分配, 调试动态分配"
-  - "内存泄漏, MFC 调试类"
+title: Debugging Support Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.debug
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging memory leaks, MFC
+- memory allocation, debugging dynamic
+- debugging [MFC], classes for debugging
+- memory allocation, debugging dynamic allocation
+- dynamic memory allocation
+- debugging [MFC], memory leaks
+- memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 调试支持类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e37423fd132b87d667952e67c579a191d3253d6c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 提供了以下类可以帮助调试动态内存分配问题。  
+---
+# <a name="debugging-support-classes"></a>Debugging Support Classes
+MFC provides the following classes to help you debug dynamic memory allocation problems.  
   
  [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- 为诊断转储提供一个目标。  
+ Provides a destination for diagnostic dumps.  
   
  [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- 结构提供内存使用快照。  也用来比较早期和最新内存快照。  
+ Structure that provides snapshots of memory use. Also used to compare earlier and later memory snapshots.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

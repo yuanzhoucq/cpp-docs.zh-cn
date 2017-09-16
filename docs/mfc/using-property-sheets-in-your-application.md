@@ -1,73 +1,92 @@
 ---
-title: "在您的应用程序中使用属性表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddPage 方法"
-  - "CPropertyPage 类, 样式"
-  - "Create 方法 [C++], 属性表"
-  - "对话框资源"
-  - "对话框模板, 属性表"
-  - "DoModal 方法属性表"
-  - "属性页, 属性表"
-  - "属性表, 关于属性表"
+title: Using Property Sheets in Your Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog templates [MFC], property sheets
+- dialog resources
+- property pages [MFC], property sheets
+- DoModal method property sheets
+- AddPage method [MFC]
+- property sheets, about property sheets
+- Create method [MFC], property sheets
+- CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 在您的应用程序中使用属性表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45c1c305309c7136dc3b749bb1489c818764479b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-若要在应用程序中使用属性表，请完成以下步骤：  
+---
+# <a name="using-property-sheets-in-your-application"></a>Using Property Sheets in Your Application
+To use a property sheet in your application, complete the following steps:  
   
-1.  为每页属性页创建对话框模板资源。  记住用户可能从一页切换到另一个，因此，尽量一致布置致每个页。  
+1.  Create a dialog template resource for each property page. Keep in mind that the user may be switching from one page to another, so lay out each page as consistently as possible.  
   
-     所有页的对话框模板不必具有相同的大小。  框架使用最大的页的大小确定在属性页的属性表分配的空格数。  
+     The dialog templates for all pages do not have to be the same size. The framework uses the size of the largest page to determine how much space to allocate in the property sheet for the property pages.  
   
-     当你为资源页面创建对话框模板资源时，必须在对话框属性表必须指定以下样式：  
+     When you create the dialog template resource for a property page, you must specify the following styles in the Dialog Properties property sheet:  
   
-    -   设置 **标题** 编辑框在 **常规** 页到希望显示此页上的选项卡的文本。  
+    -   Set the **Caption** edit box on the **General** page to the text you wish to appear in the tab for this page.  
   
-    -   设置 **样式** 列表框在 **样式** 页 **Child**。  
+    -   Set the **Style** list box on the **Styles** page to **Child**.  
   
-    -   将在 **样式** 页上的 **边框** 列表框设置为 **细**。  
+    -   Set the **Border** list box on the **Styles** page to **Thin**.  
   
-    -   确保选上了在 **样式** 页中的 **Titlebar** 复选框。  
+    -   Ensure that the **Titlebar** check box on the **Styles** page is selected.  
   
-    -   确保选上了在 **更多样式** 页中的 **Disabled** 复选框。  
+    -   Ensure that the **Disabled** check box on the **More Styles** page is selected.  
   
-2.  创建一个 [CPropertyPage](../mfc/reference/cpropertypage-class.md)对应于每个属性页对话框模板的派生类。  参阅 [添加类](../ide/adding-a-class-visual-cpp.md)。  选择 `CPropertyPage` 作为基类。  
+2.  Create a [CPropertyPage](../mfc/reference/cpropertypage-class.md)-derived class corresponding to each property page dialog template. See [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose `CPropertyPage` as the base class.  
   
-3.  创建成员变量表示此属性页的值。  增加成员变量到属性页上的进程与添加成员变量到对话框是一样的，因为一个属性页面是一个特定的对话框。  有关更多信息，请参见 [定义对话框控件的成员变量](../mfc/defining-member-variables-for-dialog-controls.md)。  
+3.  Create member variables to hold the values for this property page. The process for adding member variables to a property page is exactly the same as adding member variables to a dialog box, because a property page is a specialized dialog box. For more information, see [Defining Member Variables for Dialog Controls](../windows/defining-member-variables-for-dialog-controls.md).  
   
-4.  在源代码中构造一个 [CPropertySheet](../mfc/reference/cpropertysheet-class.md) 对象。  通常，在命令的处理程序中构造 `CPropertySheet` 对象显示属性表。  此对象表示整个属性表。  如果创建带有 [DoModal](../Topic/CPropertySheet::DoModal.md) 函数的模式属性表，框架提供三个命令按钮默认方法：好，取消，和应用。  框架创建用 [创建](../Topic/CPropertySheet::Create.md) 函数创建的无模式属性表的命令按钮。  不需要从 `CPropertySheet` 派生一个类，除非希望添加其他控件 \(如窗口预览\) 或显示无模式属性表。  此步骤为非模式属性表是必需的，因为这些可能不包含用于关闭属性表的任何默认控件。  
+4.  Construct a [CPropertySheet](../mfc/reference/cpropertysheet-class.md) object in your source code. Usually, you construct the `CPropertySheet` object in the handler for the command that displays the property sheet. This object represents the entire property sheet. If you create a modal property sheet with the [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) function, the framework supplies three command buttons by default: OK, Cancel, and Apply. The framework creates no command buttons for modeless property sheets created with the [Create](../mfc/reference/cpropertysheet-class.md#create) function. You do not need to derive a class from `CPropertySheet` unless you want to either add other controls (such as a preview window) or display a modeless property sheet. This step is necessary for modeless property sheets because they do not contain any default controls that could be used to close the property sheet.  
   
-5.  对于将添加到属性表的每个页，请执行以下操作：  
+5.  For each page to be added to the property sheet, do the following:  
   
-    -   在此过程前面创建，为每个 `CPropertyPage` 派生类构造一个对象。  
+    -   Construct one object for each `CPropertyPage`-derived class that you created earlier in this process.  
   
-    -   为每页调用 [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md)。  
+    -   Call [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) for each page.  
   
-     通常，创建 `CPropertySheet` 对象在该步骤中也创建 `CPropertyPage` 对象。  但是，如果要实现一个 `CPropertySheet`派生类，则可以将 `CPropertySheet` 对象嵌入在 `CPropertyPage` 对象并从 `CPropertySheet`派生类构造函数调用每页的 `AddPage` 。  `AddPage` 向页的属性列表添加 `CPropertyPage` 对象，但实际上不为该页创建窗口。  因此，直到属性表窗口创建调用 `AddPage`，等待才是有必须的；您可以从属性表的构造函数调用 `AddPage`。  
+     Typically, the object that creates the `CPropertySheet` also creates the `CPropertyPage` objects in this step. However, if you implement a `CPropertySheet`-derived class, you can embed the `CPropertyPage` objects in the `CPropertySheet` object and call `AddPage` for each page from the `CPropertySheet`-derived class constructor. `AddPage` adds the `CPropertyPage` object to the property sheet's list of pages but does not actually create the window for that page. Therefore, it is not necessary to wait until creation of the property sheet window to call `AddPage`; you can call `AddPage` from the property sheet's constructor.  
   
-     默认情况下，如果属性表比属性表的单个行具有更多选项卡，则选项卡将多行堆叠。  禁用堆叠，使用参数的调用 [CPropertySheet::EnableStackedTabs](../Topic/CPropertySheet::EnableStackedTabs.md) 将其设置为 **FALSE**。  当创建表属性时，必须调用 `EnableStackedTabs`。  
+     By default, if a property sheet has more tabs than will fit in a single row of the property sheet, the tabs will stack in multiple rows. To disable stacking, call [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) with the parameter set to **FALSE**. You must call `EnableStackedTabs` when you create the property sheet.  
   
-6.  调用 [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) 或 [创建](../Topic/CPropertySheet::Create.md) 显示属性表。  调用 `DoModal` 创建属性表作为模式对话框。  调用 **创建** 创建属性表用作无模式对话框。  
+6.  Call [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) or [Create](../mfc/reference/cpropertysheet-class.md#create) to display the property sheet. Call `DoModal` to create a property sheet as a modal dialog box. Call **Create** to create the property sheet as a modeless dialog box.  
   
-7.  在属性页和属性表的所有者的之间交换数据。  这将在文章 [交换数据](../mfc/exchanging-data.md) 中解释。  
+7.  Exchange data between property pages and the owner of the property sheet. This is explained in the article [Exchanging Data](../mfc/exchanging-data.md).  
   
- 有关如何使用属性表的示例，请参阅 MFC 泛型示例 [PROPDLG](../top/visual-cpp-samples.md)。  
+ For an example of how to use property sheets, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## 请参阅  
- [属性表](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

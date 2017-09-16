@@ -1,5 +1,5 @@
 ---
-title: "&lt;limits&gt; 枚举 | Microsoft Docs"
+title: '&lt;limits&gt; enums | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 519cc2c696b5dcb67fed79fd04c3e7d66e7d0ad9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 29eb4488b4bfc3768145ca970fa21dbf0b6130a7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 枚举
+# <a name="ltlimitsgt-enums"></a>&lt;limits&gt; enums
 |||  
 |-|-|  
 |[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|  
   
-##  <a name="float_denorm_style"></a>float_denorm_style 枚举  
- 此枚举描述实现可以选择用于表示非标准化浮点值的各种方法，这种浮点值由于太小而无法表示为规范化值：  
+##  <a name="float_denorm_style"></a>  float_denorm_style Enumeration  
+ The enumeration describes the various methods that an implementation can choose for representing a denormalized floating-point value — one too small to represent as a normalized value:  
   
 ```
 enum float_denorm_style {
@@ -34,20 +34,20 @@ enum float_denorm_style {
     denorm_present = 1    };
 ```  
   
-### <a name="return-value"></a>返回值  
- 此枚举返回：  
+### <a name="return-value"></a>Return Value  
+ The enumeration returns:  
   
-- 如果转换时不能确定是否存在非规范化窗体，则为 **denorm_indeterminate**。  
+- **denorm_indeterminate** if the presence or absence of denormalized forms cannot be determined at translation time.  
   
-- 如果不存在非规范化窗体，则为 **denorm_absent**。  
+- **denorm_absent** if denormalized forms are absent.  
   
-- 如果存在非规范化窗体，则为 **denorm_present**。  
+- **denorm_present** if denormalized forms are present.  
   
-### <a name="example"></a>示例  
-  有关可访问此枚举的值的示例，请参阅 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)。  
+### <a name="example"></a>Example  
+  See [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) for an example in which the values of this enumeration may be accessed.  
   
-##  <a name="float_round_style"></a>float_round_style 枚举  
- 此枚举描述实现可以选择用于将浮点值舍入为整数值的各种方法。  
+##  <a name="float_round_style"></a>  float_round_style Enumeration  
+ The enumeration describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.  
   
 ```
 enum float_round_style {    
@@ -58,23 +58,23 @@ enum float_round_style {
     round_toward_neg_infinity = 3    };
 ```  
   
-### <a name="return-value"></a>返回值  
- 此枚举返回：  
+### <a name="return-value"></a>Return Value  
+ The enumeration returns:  
   
-- 如果无法确定舍入方法，则为 **round_indeterminate**。  
+- **round_indeterminate** if the rounding method cannot be determined.  
   
-- 如果向零舍入，则为 **round_toward_zero**。  
+- **round_toward_zero** if the round toward zero.  
   
-- 如果舍入到最近整数，则为 **round_to_nearest**。  
+- **round_to_nearest** if the round to nearest integer.  
   
-- 如果向远离零的方向舍入，则为 **round_toward_infinity**。  
+- **round_toward_infinity** if the round away from zero.  
   
-- 如果舍入到更小的负整数，则为 **round_toward_neg_infinity**。  
+- **round_toward_neg_infinity** if the round to more negative integer.  
   
-### <a name="example"></a>示例  
-  有关可访问此枚举的值的示例，请参阅 [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style)。  
+### <a name="example"></a>Example  
+  See [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) for an example in which the values of this enumeration may be accessed.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<limits>](../standard-library/limits.md)
 
 

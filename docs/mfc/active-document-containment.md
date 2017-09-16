@@ -1,50 +1,69 @@
 ---
-title: "活动文档包容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "活动文档容器 [C++], 关于活动文档容器"
-  - "活动文档 [C++], 容器"
-  - "容器 [C++], 活动文档"
-  - "MFC [C++], COM 支持"
-  - "MFC COM [C++], 活动文档包容"
+title: Active Document Containment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- containers [MFC], active document
+- MFC, COM support
+- active document containers [MFC], about active document containers
+- MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 活动文档包容
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c35d1da52fab535036eb931f8ae0b3a916a7cc0c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-包容是活动文档提供单个帧与文档，而不是强制您创建和使用不同应用程序为每个文档类型配置的方法。  与该 OLE 的基本技术不同的 OLE 在内容仅单个可以是活动的文档中嵌入复合对象一起使用。  活动文档包容，您在单个帧的上下文内激活整个文档 \(即整个应用程序，包括关联的菜单，工具栏，等等\)。  
+---
+# <a name="active-document-containment"></a>Active Document Containment
+Active document containment is a technology that provides a single frame in which to work with documents, instead of forcing you to create and use multiple application frames for each document type. It differs from basic OLE technology in that OLE works with embedded objects within a compound document in which only a single piece of content can be active. With active document containment, you activate an entire document (that is, an entire application, including associated menus, toolbars, and so on) within the context of a single frame.  
   
- 活动文档包容技术最初开发针对 Microsoft Office 可以实现 Office 活页夹。  不过，其他 Office 和 Office 兼容应用程序外，方法是不够灵活支持的活动文档容器。Office 活页夹外，并且可支持文档服务器。  
+ The active document containment technology was originally developed for Microsoft Office to implement Office Binder. However, the technology is flexible enough to support active document containers other than Office Binder and can support document servers other than Office and Office-compatible applications.  
   
- 应用程序承载活动文档调用 [活动文档容器](../mfc/active-document-containers.md)。  示例这样的容器是 Microsoft Office 活页夹或 Microsoft Internet Explorer。  
+ The application that hosts active documents is called an [active document container](../mfc/active-document-containers.md). Examples of such containers are the Microsoft Office Binder or Microsoft Internet Explorer.  
   
- 活动文档包容实现，即一组对 OLE 文档的扩展组合，OLE 文档技术。  扩展是一些可就地嵌入，对象表示整个文档而不是嵌入内容单个的其他接口。  带有 OLE 文档，对活动文档包容用于活动文档的显示空间中为活动文档的用户界面和功能处理的容器和服务器。  
+ Active document containment is implemented as a set of extensions to OLE documents, the compound document technology of OLE. The extensions are additional interfaces that allow an embeddable, in-place object to represent an entire document instead of a single piece of embedded content. As with OLE documents, active document containment uses a container that provides the display space for active documents, and servers that provide the user interface and manipulation capabilities for the active documents themselves.  
   
- [活动文档服务器](../mfc/active-document-servers.md) 是该的应用程序 \(比如 Word、Excel、PowerPoint\) 支持一个或多个活动类文档，其中每个对象来支持中相应容器允许对象激活的扩展接口。  
+ An [active document server](../mfc/active-document-servers.md) is an application (such as Word, Excel, or PowerPoint) that supports one or more active document classes, where each object itself supports the extension interfaces that allow the object to be activated in a suitable container.  
   
- [活动文档](../mfc/active-documents.md) \(提供从活动文档服务器 \(如 Word 或 Excel\) 实质上是形式嵌入在另一个活动文档容器中的一个对象全部，常规文档。  与嵌入对象，对活动文档对这些页的完全控制，并且，应用程序的全部接口 \(与所有其基本命令和工具\) 提供用户编辑控件。  
+ An [active document](../mfc/active-documents.md) (provided from an active document server such as Word or Excel) is essentially a full-scale, conventional document that is embedded as an object within another active document container. Unlike embedded objects, active documents have complete control over their pages, and the full interface of the application (with all its underlying commands and tools) is available to the user to edit them.  
   
- 活动文档转换通过区分开来了解与标准 OLE 嵌入对象。  在 OLE 约定之后，嵌入对象是在文档页中显示所在的一个，并且，文档受 OLE 容器管理。  容器存储嵌入对象的数据。文档的其余部分。  但是，利用嵌入对象限制不控制它们出现的页。  
+ An active document is best understood by distinguishing it from a standard OLE embedded object. Following the OLE convention, an embedded object is one that is displayed within the page of the document that owns it, and the document is managed by an OLE container. The container stores the embedded object's data with the rest of the document. However, embedded objects are limited in that they do not control the page on which they appear.  
   
- 活动文档容器应用程序的用户可以在创建活动文档 \(调用在 Office 活页夹的节中\) 使用用户喜爱的应用程序 \(这些应用提供程序处于活动文档\)，可以管理用户，生成的项目，在单个实体，可以唯一地命名，保存，打印，依此类推。  因此，Internet 浏览器的用户可以处理整个网络，以及本地文件系统，为单个文件存储实体能够浏览该存储的文档从一个位置。  
+ Users of an active document container application can create active documents (called sections in Office Binder) using their favorite applications (provided these applications are active document enabled), yet the users can manage the resulting project as a single entity, which can be uniquely named, saved, printed, and so on. In the same way, a user of an Internet browser can treat the entire network, as well as local file systems, as a single document storage entity with the ability to browse the documents in that storage from a single location.  
   
-## 示例程序  
+## <a name="sample-programs"></a>Sample Programs  
   
--   [MFCBIND](../top/visual-cpp-samples.md) 示例阐释活动文档容器应用程序的实现。  
+-   The [MFCBIND](../visual-cpp-samples.md) sample illustrates the implementation of an active document container application.  
   
-## 请参阅  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+

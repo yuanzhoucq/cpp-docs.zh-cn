@@ -1,73 +1,92 @@
 ---
-title: "创建基于窗体的 MFC 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfcforms.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序 [MFC], 基于窗体"
-  - "基于窗体的应用程序"
+title: Creating a Forms-Based MFC Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfcforms.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC], forms-based
+- forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 创建基于窗体的 MFC 应用程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b23cd8d4c90f9d2e5dfc7cc63e622123b31305c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-窗体是一个对话框，包含允许用户访问数据（可能还允许更改数据）的控件。  可能需要开发一个用户可从窗体选项中进行选择的应用程序。  通常，基于应用程序的窗体允许用户通过单击 **文件**菜单中的“新建”来访问。  基于对话框的应用程序不允许用户访问**“文件”**菜单中的**“新建”**选项，但也视为是基于窗体的应用程序。  
+---
+# <a name="creating-a-forms-based-mfc-application"></a>Creating a Forms-Based MFC Application
+A form is a dialog box with controls that let a user access and possibly change data. You may want to develop an application in which the user selects from a selection of forms. Commonly, a forms-based application lets the user access forms by click **New** from the **File** menu. A dialog-based application, which does not give users access to a **New** option in the **File** menu, is also considered a forms-based application.  
   
- 单文档界面 \(SDI\) 基于窗体的应用程序一次只允许具体某个窗体的一个实例运行。  通过从**“文件”**菜单的**“新建”**选项中选择一个新窗体，可以同时从基于 SDI 窗体的应用程序运行其他窗体。  
+ A single document interface (SDI), forms-based application allows only one instance of a particular form to run at a time. It is possible to run different forms at the same time from an SDI forms-based application by selecting a new form from the **New** option in the **File** menu.  
   
- 如果创建多文档界面 \(MDI\) 基于窗体的应用程序，该应用程序将能够支持同一窗体的多个实例。  
+ If you create a multiple document interface (MDI), forms-based application, the application will be able to support multiple instances of the same form.  
   
- 如果创建具有多顶级文档支持的应用程序，则桌面是文档的隐式父级，而且文档的框架不局限为该应用程序的工作区。  可以打开文档的多个实例，每个实例有自己的框架、菜单和任务栏图标。  可以逐个关闭文档的后续实例，但是如果从初始实例的**文件**菜单中选择`Exit`选项，则应用程序将关闭所有实例。  
+ If you create an application with multiple top-level document support, the desktop is the implicit parent for the document and the document's frame is not restricted to the client area of the application. You can open multiple instances of the document, each with its own frame, menu, and task bar icon. You can close subsequent instances of documents individually, but if you select the `Exit` option from the **File** menu of the initial instance, the application closes all instances.  
   
- SDI、MDI 和多顶级文档应用程序都基于窗体并且使用文档\/视图结构。  
+ SDI, MDI, and multiple top-level document applications are all forms based and use the document/view architecture.  
   
- 根据定义，任何基于对话框的应用程序都基于窗体。  基于对话框的应用程序不使用文档\/视图结构，因此您必须为自己的附加窗体管理创建和访问方法。  
+ Any dialog-based application, by definition, is forms based. A dialog-based application does not use the document/view architecture, so you must manage the creation and access methods for your own additional forms.  
   
- 基于窗体的应用程序的基类是 [CFormView](../../mfc/reference/cformview-class.md)。  如果应用程序具有数据库支持，则也可以选择任何从 `CFormView` 导出的类。  窗体是任何从 `CFormView` 导出或从继承自 `CFormView` 的任何类导出的窗口。  
+ The base class for form-based applications is [CFormView](../../mfc/reference/cformview-class.md). If your application has database support, then you can also select any class that derives from `CFormView`. A form is any window derived from `CFormView` or from any class that inherits from `CFormView`.  
   
- 即使使用基类（如 [CView](../../mfc/reference/cview-class.md)），也可以在以后通过[添加 MFC 类](../../mfc/reference/adding-an-mfc-class.md)（从 `CFormView` 导出）并在 [MFC 类向导](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md)中选中“生成 DocTemplate 资源”复选项，使应用程序基于窗体。  
+ Even if you use a base class such as [CView](../../mfc/reference/cview-class.md), you can later make your applications forms-based by [adding an MFC class](../../mfc/reference/adding-an-mfc-class.md) derived from `CFormView` and checking the **Generate DocTemplate resources** checkbox in the [MFC Class Wizard](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
- 完成了向导后，项目打开，如果选择了 `CFormView`（或从 `CFormView` 继承的类）作为基类或者如果创建了基于对话框的应用程序，Visual C\+\+ 将打开对话框编辑器。  这时，准备设计第一个窗体。  
+ Once you finish with the wizard, your project opens, and if you selected `CFormView` (or a class that inherits from `CFormView`) as your base class or if you created a dialog-based application, Visual C++ opens the dialog editor. At this point, you are ready to design your first form.  
   
-### 开始创建基于窗体的 MFC 可执行文件  
+### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>To begin creating a forms-based MFC executable  
   
-1.  按照[创建 MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)中的指导操作。  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  在 MFC 应用程序向导的[应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md)页中，选择“文档\/视图结构支持”复选框。  
+2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, select the **Document/view architecture support** check box.  
   
-3.  选择“单文档”、“多文档”或“多顶级文档”。  
+3.  Select **Single document**, **Multiple documents**, or **Multiple top-level documents**.  
   
     > [!NOTE]
-    >  如果选择了 SDI、MDI 或多顶级文档界面应用程序，则默认情况下，`CView` 在向导的 [生成的类](../../mfc/reference/generated-classes-mfc-application-wizard.md) 页中被设置成应用程序视图的基类。  若要创建基于窗体的应用程序，必须选择 `CFormView` 作为应用程序视图的基类。  注意向导对基于窗体的应用程序不提供打印支持。  
+    >  If you chose a SDI, MDI, or multiple top-level document interface application, by default, `CView` is set as the base class for your application's view in the [Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard. To create a forms-based application, you must select `CFormView` as the base class for the application's view. Note that the wizard provides no printing support for a forms-based application.  
   
-4.  在其他向导页中设置所需的任何其他项目选项。  
+4.  Set any other project options you want on the other pages of the wizard.  
   
-5.  单击“完成”生成主干应用程序。  
+5.  Click **Finish** to generate the skeleton application.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [派生的视图类](../../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived View Classes](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [文档\/视图结构的替换选项](../../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to the Document/View Architecture](../../mfc/alternatives-to-the-document-view-architecture.md)  
   
--   [应用程序设计选择](../../mfc/application-design-choices.md)  
+-   [Application Design Choices](../../mfc/application-design-choices.md)  
   
-## 请参阅  
- [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
- [窗体视图](../../mfc/form-views-mfc.md)   
- [创建文件资源管理器样式的 MFC 应用程序](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
- [创建 Web 浏览器样式的 MFC 应用程序](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Form Views](../../mfc/form-views-mfc.md)   
+ [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
+ [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+
+

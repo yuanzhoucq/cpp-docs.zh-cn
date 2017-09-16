@@ -1,5 +1,5 @@
 ---
-title: "MFC ActiveX 控件向导控件设置 |Microsoft 文档"
+title: Control Settings, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,82 +33,82 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 35ec579e6f777a3dffd87adc5a86af2ea38b30f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a2d6f7e2db8002a276e5304301399c84182dffbb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控件向导控件设置
-使用向导的此页可以指定希望该控件的行为方式。 例如，可以基于标准 Windows 控件类型上的控件、 优化其行为和外观，或指示该控件可以作为其他控件的容器。  
+# <a name="control-settings-mfc-activex-control-wizard"></a>Control Settings, MFC ActiveX Control Wizard
+Use this page of the wizard to specify how you want the control to behave. For example, you can base the control on standard Windows control types, optimize its behavior and appearance, or indicate that the control can act as a container for other controls.  
   
- 有关如何选择此页上的选项，以使该控件的效率最大化的详细信息，请参阅[MFC ActiveX 控件︰ 优化](../../mfc/mfc-activex-controls-optimization.md)。  
+ For more information about how to select options on this page to maximize the efficiency of the control, see [MFC ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).  
   
-## <a name="uielement-list"></a>UIElement 列表  
- **创建基于控件**  
- 在此列表中，您可以选择的控件应从中继承的控件的种类。 列表是可用于的控件类的一个子集`CreateWindowEx`和 commctrl.h 中指定的其他常用控件。 你的选择确定在控件的样式`PreCreateWindow`，此功能在*ProjName*Ctrl.cpp 文件。 有关详细信息，请参阅[MFC ActiveX 控件︰ 子类化 Windows 控件](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
+## <a name="uielement-list"></a>UIElement List  
+ **Create control based on**  
+ On this list, you can select the kind of control from which your control should inherit. The list is a subset of the control classes that are available for `CreateWindowEx` and additional common controls that are specified in commctrl.h. Your selection determines the style of the control in the `PreCreateWindow` function in the *ProjName*Ctrl.cpp file. For more information, see [MFC ActiveX Controls: Subclassing a Windows Control](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-|控件|描述|  
+|Control|Description|  
 |-------------|-----------------|  
-|**按钮**|Windows 按钮控件|  
-|**组合框**|Windows 组合框控件|  
-|**编辑**|Windows 编辑框控件|  
-|**列表框**|Windows 列表框控件|  
-|**滚动条**|Windows 滚动条控件|  
-|**静态**|Windows 静态控件|  
-|**msctls_hotkey32**|热键公共控件|  
-|**msctls_progress32**|进度栏公共控件|  
-|**msctls_statusbar32**|状态栏公共控件|  
-|**msctls_trackbar32**|跟踪栏公共控件|  
-|**msctls_updown32**|数值调节按钮 （或向上向下） 公共控件|  
-|**SysAnimate32**|动画公共控件|  
-|**SysHeader32**|标头的公共控件|  
-|**SysListView32**|列表视图公共控件|  
-|**SysTabControl32**|选项卡上的公共控件|  
-|**SysTreeView32**|树视图公共控件|  
+|**BUTTON**|A Windows button control|  
+|**COMBOBOX**|A Windows combo box control|  
+|**EDIT**|A Windows edit box control|  
+|**LISTBOX**|A Windows list box control|  
+|**SCROLLBAR**|A Windows scroll bar control|  
+|**STATIC**|A Windows static control|  
+|**msctls_hotkey32**|A hot key common control|  
+|**msctls_progress32**|A progress bar common control|  
+|**msctls_statusbar32**|A status bar common control|  
+|**msctls_trackbar32**|A track bar common control|  
+|**msctls_updown32**|A spin button (or up-down) common control|  
+|**SysAnimate32**|An animation common control|  
+|**SysHeader32**|A header common control|  
+|**SysListView32**|A list view common control|  
+|**SysTabControl32**|A tab common control|  
+|**SysTreeView32**|A tree view common control|  
   
- **可见时激活**  
- 指定在访问时，在为控件创建一个窗口。 默认情况下，**可见时激活**选择选项。 如果您想要控件激活延迟到容器需要 （例如，当用户单击鼠标），则清除此选项。 此功能关闭时，控件将不会产生窗口创建的费用直到需要为止。 有关详细信息，请参阅[关闭激活时可见选项](../../mfc/turning-off-the-activate-when-visible-option.md)。  
+ **Activates when visible**  
+ Specifies that a window is created for the control when it is accessed. By default, the **Activates when visible** option is selected. If you want to defer control activation until the container requires it (for example, when a user clicks the mouse), clear this option. When this feature is off, the control does not incur the expense of window creation until it is required. For more information, see [Turning off the Activate When Visible Option](../../mfc/turning-off-the-activate-when-visible-option.md).  
   
- **在运行时不可见**  
- 指定控件在运行时有没有用户界面。 计时器是控件的一种可能想要不可见。  
+ **Invisible at run time**  
+ Specifies that the control has no user interface at run time. A timer is a kind of control that you might want to be invisible.  
   
- **具有一个关于框中对话框**  
- 指定该控件具有标准的 Windows**有关**对话框中，后者会显示版本号和版权信息。  
+ **Has an About box dialog**  
+ Specifies that the control has the standard Windows **About** dialog box, which displays version number and copyright information.  
   
 > [!NOTE]
->  用户如何访问控件的帮助取决于帮助的实现方式以及是否有与容器帮助集成控件帮助。 有关如何集成帮助，请在详细信息[MSDN Library](http://go.microsoft.com/fwlink/linkid=150542)网站中搜索"将上下文相关帮助添加到 MFC ActiveX 控件"。  
+>  How the user accesses help for the control depends on how you have implemented the help and whether you have integrated the control help with the container help. For more information about how to integrate help, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Adding Context-Sensitive Help to an MFC ActiveX Control".  
   
- 当选择此选项时，它将插入`AboutBox`控制项目控件类中的方法 (C*ProjName*Ctrl.cpp) 并将 aboutbox 添加到项目调度映射。 默认情况下，该选项是选中的。  
+ When you select this option, it inserts the `AboutBox` control method in the project control class (C*ProjName*Ctrl.cpp) and adds AboutBox to the project dispatch map. By default, this option is selected.  
   
- **优化绘制代码**  
- 指定容器还原原始的 GDI 对象自动毕竟容器控件中，绘制到相同设备上下文，绘制完。 有关此功能的详细信息，请参阅[优化控件绘制](../../mfc/optimizing-control-drawing.md)。  
+ **Optimized drawing code**  
+ Specifies that the container restores the original GDI objects automatically after all the container controls, which are drawn to the same device context, have been drawn. For more information about this feature, see [Optimizing Control Drawing](../../mfc/optimizing-control-drawing.md).  
   
- **无窗口激活**  
- 指定该控件不会被激活时生成一个窗口。 对于非矩形或透明控件，允许无窗口激活，无窗口控件需要更少的系统开销比有窗口控件需要。 无窗口控件不允许为剪辑的设备上下文或无闪烁激活。 1996 年以前创建的容器不支持无窗口激活。 有关如何使用此选项的详细信息，请参阅[提供无窗口激活](../../mfc/providing-windowless-activation.md)。  
+ **Windowless activation**  
+ Specifies that the control does not produce a window when it is activated. Windowless activation allows for nonrectangular or transparent controls, and a windowless control requires less system overhead than a control that has a window requires. A windowless control does not allow for an unclipped device context or flicker-free activation. Containers that were created before 1996 do not support windowless activation. For more information about how to use this option, see [Providing Windowless Activation](../../mfc/providing-windowless-activation.md).  
   
- **剪辑的设备上下文**  
- 重写[COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags)中控制标头 (*projname*ctrl.h) 若要禁用对调用`IntersectClipRect`所做的`COleControl`。 当选择此选项时，它提供了一个小的速度优势。 如果您选择**无窗口激活**，此功能将不可用。 有关详细信息，请参阅[使用未剪辑的设备上下文](../../mfc/using-an-unclipped-device-context.md)。  
+ **Unclipped device context**  
+ Overrides [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) in the control header (*projname*ctrl.h) to disable the call to `IntersectClipRect` made by `COleControl`. When you select this option, it provides a small speed advantage. If you select **Windowless activation**, this feature is not available. For more information, see [Using an Unclipped Device Context](../../mfc/using-an-unclipped-device-context.md).  
   
- **无闪烁激活**  
- 消除了绘图操作和伴随的可视闪烁控件的活动和非活动状态之间发生。 如果您选择**无窗口激活**，此功能将不可用。 当设置此选项，`noFlickerActivate`标志是一个由返回的标志[COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags)。 有关详细信息，请参阅[提供无闪烁激活](../../mfc/providing-flicker-free-activation.md)。  
+ **Flicker-free activation**  
+ Eliminates the drawing operations and the accompanying visual flicker that occur between the active and inactive states of the control. If you select **Windowless activation**, this feature is not available. When you set this option, the `noFlickerActivate` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information, see [Providing Flicker-Free Activation](../../mfc/providing-flicker-free-activation.md).  
   
- **可在插入对象对话框**  
- 指定该控件可在**插入对象**已启用容器的对话框。 当选择此选项，`afxRegInsertable`标志是一个由返回的标志`AfxOleRegisterControlClass`。 通过使用**插入对象**对话框中，则用户可以插入新创建或现有的对象到复合文档。  
+ **Available in Insert Object dialog**  
+ Specifies that the control will be available in the **Insert Object** dialog box for enabled containers. When you select this option, the `afxRegInsertable` flag is one of the flags that are returned by `AfxOleRegisterControlClass`. By using the **Insert Object** dialog box, a user can insert newly created or existing objects into a compound document.  
   
- **当非活动状态时，鼠标指针发送通知**  
- 使处理鼠标指针通知，该控件是否控件处于活动状态。 当选择此选项，`pointerInactive`标志是一个由返回的标志[COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags)。 有关如何使用此选项的详细信息，请参阅[提供鼠标交互时处于非活动状态](../../mfc/providing-mouse-interaction-while-inactive.md)。  
+ **Mouse pointer notifications when inactive**  
+ Enables the control to process mouse pointer notifications, whether control is active or not. When you select this option, the `pointerInactive` flag is one of the flags that are returned by [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). For more information about how to use this option, see [Providing Mouse Interaction While Inactive](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
- **作为简单框架控件**  
- 指定控件通过设置为其他控件的容器`OLEMISC_SIMPLEFRAME`位控件。 有关详细信息上, [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542)网站中搜索"简单框架站点包容"。  
+ **Acts as a simple frame control**  
+ Specifies that the control is a container for other controls by setting the `OLEMISC_SIMPLEFRAME` bit for the control. For more information, on the [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) website, search for "Simple Frame Site Containment".  
   
- **以异步方式加载属性**  
- 允许所有以前的异步数据重置并启动新的加载该控件的异步属性。  
+ **Loads properties asynchronously**  
+ Enables a reset of any previous asynchronous data and initiates a new load of the asynchronous property of the control.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC ActiveX 控件向导](../../mfc/reference/mfc-activex-control-wizard.md)   
- [MFC ActiveX 控件向导的应用程序设置](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [MFC ActiveX 控件向导的控件名称](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Names, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
 
 

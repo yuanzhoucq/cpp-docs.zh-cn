@@ -1,67 +1,86 @@
 ---
-title: "标准命令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令 ID, 标准命令"
-  - "命令 [C++], 标准"
-  - "编辑菜单标准命令"
-  - "“文件”菜单"
-  - "帮助, 菜单"
-  - "标识符 [C++], 命令 ID"
-  - "OLE 命令"
-  - "程序员定义的 ID [C++]"
-  - "标准命令 ID"
-  - "标准命令"
-  - "“视图”菜单命令"
-  - "“窗口”菜单命令"
+title: Standard Commands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- identifiers [MFC], command IDs
+- command IDs, standard commands
+- OLE commands
+- commands [MFC], standard
+- standard command IDs
+- Window menu commands
+- standard commands
+- View menu commands
+- Edit menu standard commands
+- Help [MFC], menus
+- programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 标准命令
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 092d67376a9384ab9470d2d3bd6b1dcb12ad37a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-框架定义许多标准命令消息。  这些命令的 ID 通常采用形式：  
+---
+# <a name="standard-commands"></a>Standard Commands
+The framework defines many standard command messages. The IDs for these commands typically take the form:  
   
- **ID\_** *Source*\_*Item*  
+ **ID_** *Source*_*Item*  
   
- 其中*源*通常是一个菜单名和*项目*是一个菜单项。  例如，新的命令 ID " File "菜单上有 `ID_FILE_NEW`。  标准命令 ID。粗体显示文档。  程序员定义的 ID。与周围文本不同的字体显示。  
+ where *Source* is usually a menu name and *Item* is a menu item. For example, the command ID for the New command on the File menu is `ID_FILE_NEW`. Standard command IDs are shown in bold type in the documentation. Programmer-defined IDs are shown in a font that is different from the surrounding text.  
   
- 下面是的某些列表支持的最重要的命令：  
+ The following is a list of some of the most important commands supported:  
   
- *“文件”菜单命令*  
- 新，打开，请关闭，保存，另存为页、设置、打印设置、打印、打印预览、退出和最近使用的文件。  
+ *File Menu Commands*  
+ New, Open, Close, Save, Save As, Page Setup, Print Setup, Print, Print Preview, Exit, and most-recently-used files.  
   
- *编辑菜单命令*  
- 清晰，清除所有，复制个，剪切，找到，粘贴，重复，替换，其中选、撤消和重做。  
+ *Edit Menu Commands*  
+ Clear, Clear All, Copy, Cut, Find, Paste, Repeat, Replace, Select All, Undo, and Redo.  
   
- *“视图”菜单命令*  
- 工具栏和状态栏  
+ *View Menu Commands*  
+ Toolbar and Status Bar.  
   
- *“窗口”菜单命令*  
- 新，请安排，级联，平铺，水平平铺类别和拆分。  
+ *Window Menu Commands*  
+ New, Arrange, Cascade, Tile Horizontal, Tile Vertical, and Split.  
   
- *“帮助”菜单命令*  
- 使用帮助索引和关于。  
+ *Help Menu Commands*  
+ Index, Using Help, and About.  
   
- *OLE编辑菜单命令*  
- 插入新的对象，编辑链接，将链接粘贴，特定 *类型* 对象 \(和谓词命令\)。  
+ *OLE Commands (Edit Menu)*  
+ Insert New Object, Edit Links, Paste Link, Paste Special, and *typename* Object (verb commands).  
   
- 框架使用这些命令提供不同级别的支持。  而其他支持的彻底的实现，这些支持命令，仅当定义命令 ID。  例如，框架通过创建新文档对象，显示一个"打开"对话框然后打开并读取文件实现在"文件"菜单中打开命令。  相反，必须实现在"编辑"菜单上的命令，因为与 **ID\_EDIT\_COPY** 的命令取决于要复制的数据的性质。  
+ The framework provides varying levels of support for these commands. Some commands are supported only as defined command IDs, while others are supported with thorough implementations. For example, the framework implements the Open command on the File menu by creating a new document object, displaying an Open dialog box, and opening and reading the file. In contrast, you must implement commands on the Edit menu yourself, since commands like **ID_EDIT_COPY** depend on the nature of the data you are copying.  
   
- 有关命令支持的和实现的更多信息，请参见级别提供的 [技术说明 22](../mfc/tn022-standard-commands-implementation.md)。  标准命令文件中 AFXRES.H. 定义。  
+ For more information about the commands supported and the level of implementation provided, see [Technical Note 22](../mfc/tn022-standard-commands-implementation.md). The standard commands are defined in the file AFXRES.H.  
   
-## 请参阅  
- [用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

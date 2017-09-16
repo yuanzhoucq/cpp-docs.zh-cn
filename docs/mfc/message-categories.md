@@ -1,54 +1,73 @@
 ---
-title: "消息类别 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令消息 [C++]"
-  - "控件通知消息"
-  - "控件 [MFC], 通知"
-  - "消息处理 [C++], 消息类型"
-  - "消息 [C++], 类别"
-  - "消息 [C++], Windows"
-  - "Windows 消息 [C++], 类别"
+title: Message Categories | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], categories
+- control-notification messages [MFC]
+- Windows messages [MFC], categories
+- controls [MFC], notifications
+- command messages [MFC]
+- messages [MFC], Windows
+- message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 消息类别
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eddd5d0e35bd76f3efbff916ce541bb840ca4936
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-哪种消息的是您编写处理程序？  有三种主要类别：  
+---
+# <a name="message-categories"></a>Message Categories
+What kinds of messages do you write handlers for There are three main categories:  
   
-1.  Windows 消息  
+1.  Windows messages  
   
-     这包括以 **WM\_** 前缀开头的这些主消息，除了 **WM\_COMMAND**。  窗口消息由窗口和视图的各个处理。  这些消息通常具有用于确定如何处理消息的参数。  
+     This includes primarily those messages beginning with the **WM_** prefix, except for **WM_COMMAND**. Windows messages are handled by windows and views. These messages often have parameters that are used in determining how to handle the message.  
   
-2.  控件通知  
+2.  Control notifications  
   
-     这包括来自控件和其他子窗口的 **WM\_COMMAND** 通知消息到其父窗口。  例如，编辑控件发送其父控件通知包含 **EN\_CHANGE** 代码的 **WM\_COMMAND** 消息，当用户执行了可能修改了编辑控件的文本操作。  消息的窗口处理程序响应通知消息用某个适当方式，如检索控件中的文本。  
+     This includes **WM_COMMAND** notification messages from controls and other child windows to their parent windows. For example, an edit control sends its parent a **WM_COMMAND** message containing the **EN_CHANGE** control-notification code when the user has taken an action that may have altered text in the edit control. The window's handler for the message responds to the notification message in some appropriate way, such as retrieving the text in the control.  
   
-     框架发送与其他 **WM\_** 消息相似的的控件通知消息。  但是，在用户单击它们时，引发异常，该按钮发送的 **BN\_CLICKED** 控件通知信息。  此消息为专门将命令发送消息并与任何其他命令。  
+     The framework routes control-notification messages like other **WM_** messages. One exception, however, is the **BN_CLICKED** control-notification message sent by buttons when the user clicks them. This message is treated specially as a command message and routed like other commands.  
   
-3.  命令消息  
+3.  Command messages  
   
-     这包括从用户界面对象的 **WM\_COMMAND** 通知消息：菜单、工具栏按钮和快捷键。  框架处理命令与其他消息不同，并且，它们可以通过更多对象处理，如 [命令目标](../mfc/command-targets.md)说明。  
+     This includes **WM_COMMAND** notification messages from user-interface objects: menus, toolbar buttons, and accelerator keys. The framework processes commands differently from other messages, and they can be handled by more kinds of objects, as explained in [Command Targets](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> 窗口消息和控件通知消息  
- 在类别 1 和 2 的消息 \- Windows 消息和通知控件 \- 由窗口操作：从类派生类的对象 `CWnd`。  这包括 `CFrameWnd`，`CMDIFrameWnd`，`CMDIChildWnd`，`CView`，`CDialog`，并拥有这些基类派生的类。  这样的对象封装 `HWND`，一个窗口的句柄。  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Windows Messages and Control-Notification Messages  
+ Messages in categories 1 and 2 — Windows messages and control notifications — are handled by windows: objects of classes derived from class `CWnd`. This includes `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, and your own classes derived from these base classes. Such objects encapsulate an `HWND`, a handle to a Windows window.  
   
-##  <a name="_core_command_messages"></a> 命令消息  
- 在类别 3 的消息 \- 命令 \- 可由对象的处理：文档、文档模板和应用程序对象以及窗口和视图之外。  当命令直接影响一些特定对象时，对象处理命令很有意义。  例如，在"文件"菜单中打开命令与应用程序相结合：应用程序打开指定文档时将收到命令。  由于打开命令的处理程序为应用程序类的成员函数。  有关更多有关命令和它们路由到对象的信息，请参见 [Framework 如何通知处理程序](../mfc/how-the-framework-calls-a-handler.md)。  
+##  <a name="_core_command_messages"></a> Command Messages  
+ Messages in category 3 — commands — can be handled by a wider variety of objects: documents, document templates, and the application object itself in addition to windows and views. When a command directly affects some particular object, it makes sense to have that object handle the command. For example, the Open command on the File menu is logically associated with the application: the application opens a specified document upon receiving the command. So the handler for the Open command is a member function of the application class. For more about commands and how they are routed to objects, see [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md).  
   
-## 请参阅  
- [框架中的消息和命令](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

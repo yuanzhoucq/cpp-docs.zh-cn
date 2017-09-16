@@ -1,35 +1,54 @@
 ---
-title: "响应动态数据交换 (DDE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DDE（动态数据交换）, 框架窗口"
-  - "框架窗口 [C++], 动态数据交换 (DDE)"
-  - "框架窗口 [C++], shell 注册"
-  - "注册, shell"
-  - "注册表, 最近使用的文件"
-  - "响应动态数据交换 (DDE)"
-  - "shell, 注册文件类型"
-  - "窗口 [C++], 和动态数据交换"
+title: Responding to Dynamic Data Exchange (DDE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- registry [MFC], most recently used files
+- frame windows [MFC], dynamic data exchange (DDE)
+- DDE (Dynamic Data Exchange), frame windows
+- registration [MFC], shell
+- Shell [MFC], registering file types
+- windows [MFC], and dynamic data exchange
+- responding to dynamic data exchange (DDE)
+- frame windows [MFC], shell registration
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 响应动态数据交换 (DDE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45145f664fcb9e8d1d069bb84209e51460adf041
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-\(如果文件扩展名被注册或与应用程序关联\)，则框架窗口可以从文件管理器响应动态数据交换 \(DDE\) 请求。  参见 [Shell 注册](../mfc/special-cwinapp-services.md)。  
+---
+# <a name="responding-to-dynamic-data-exchange-dde"></a>Responding to Dynamic Data Exchange (DDE)
+The frame window can respond to dynamic data exchange (DDE) requests to open files from the File Manager (if the file extension is registered or associated with the application). See [Shell Registration](../mfc/special-cwinapp-services.md).  
   
-## 请参阅  
- [使用框架窗口](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

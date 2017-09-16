@@ -1,76 +1,93 @@
 ---
-title: "窗口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC [C++], 窗口"
-  - "对象 [C++], 窗口"
-  - "窗口对象 [C++], MFC 框架"
-  - "窗口 [C++]"
+title: Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], window
+- windows [MFC]
+- MFC, windows
+- window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 窗口
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 79e436760e1a96a4e3d6e3edf9729c6d9f3cb0b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此系列文章介绍 MFC 框架窗口中的对象。  所有 MFC 框架窗口视图窗口。包括、、对话框和控件类派生，[CWnd](../mfc/reference/cwnd-class.md)。  
+---
+# <a name="windows"></a>Windows
+This family of articles covers window objects in the MFC framework. All MFC windows derive from class [CWnd](../mfc/reference/cwnd-class.md), including frame windows, views, dialog boxes, and controls.  
   
- 文章的第一组通常描述 [窗口对象](../mfc/window-objects.md)。  请参见本组关于 C\+\+ Windows 对象的常规信息，它们封装，HWND，以及如何使用它们，在创建自己的 Windows，如子窗口时。  
+ The first group of articles describes [window objects](../mfc/window-objects.md) in general. Refer to this group for general information about C++ window objects, how they encapsulate an HWND, and how you use them when creating your own windows, such as child windows.  
   
- 文章的第二组具体而言描述在内容周围放置帧\) 的 [框架窗口](../mfc/frame-windows.md)\(窗口。  请参见本组有关 MFC 框架如何管理它们的信息配置的框架窗口和内容，包括控件条和视图。  
+ The second group of articles describes [frame windows](../mfc/frame-windows.md)—windows that put a frame around content — in particular. Refer to this group for information about how the MFC framework manages frame windows and the contents that they frame, including control bars and views.  
   
-## 您想进一步了解什么？  
- *在窗口对象的概述主题*  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ *Topics on Window Objects in General*  
   
--   [窗口对象](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [文件 . Windows 窗体对象和句柄 HWND 之间的关系](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
+-   [Relationship between a C++ window objects and HWND handles](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)  
   
--   [窗口派生的类](../mfc/derived-window-classes.md)  
+-   [Derived Window classes](../mfc/derived-window-classes.md)  
   
--   [创建窗口对象](../mfc/creating-windows.md)  
+-   [Creating window objects](../mfc/creating-windows.md)  
   
--   [窗口销毁的对象](../mfc/destroying-window-objects.md)  
+-   [Destroying Window Objects](../mfc/destroying-window-objects.md)  
   
--   [“分类”寄存器"窗口](../mfc/registering-window-classes.md)  
+-   [Registering window "classes"](../mfc/registering-window-classes.md)  
   
--   [与 Window 对象一起使用](../mfc/working-with-window-objects.md)  
+-   [Working with window objects](../mfc/working-with-window-objects.md)  
   
--   [设备上下文](../mfc/device-contexts.md):使 Windows 设备无关绘制的对象  
+-   [Device contexts](../mfc/device-contexts.md): objects that make Windows drawing device-independent  
   
--   [图形对象](../mfc/graphic-objects.md):笔，画笔，字体，位图，调色板，区域  
+-   [Graphic objects](../mfc/graphic-objects.md): pens, brushes, fonts, bitmaps, palettes, regions  
   
- *框架窗口主题*  
+ *Frame Window Topics*  
   
--   [框架窗口](../mfc/frame-windows.md):提供的框架窗口对象  
+-   [Frame windows](../mfc/frame-windows.md): window objects that provide frames  
   
--   [框架窗口和视图](../mfc/frame-windows.md)  
+-   [Frame windows and views](../mfc/frame-windows.md)  
   
--   [框架窗口类](../mfc/frame-window-classes.md)  
+-   [Frame-window classes](../mfc/frame-window-classes.md)  
   
--   [框架窗口样式](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [更改窗口的样式。MFC 创建](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
--   [什么框架窗口](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
--   [使用框架窗口](../mfc/using-frame-windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [托管 MD\/Child 窗口 \(MDICLIENT 窗口\)](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MD/Child windows (the MDICLIENT window)](../mfc/managing-mdi-child-windows.md)  
   
--   [托管、控件条菜单和快捷键](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
 -   [CFrameWnd](../mfc/reference/cframewnd-class.md)  
   
@@ -78,43 +95,45 @@ caps.handback.revision: 7
   
 -   [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
   
--   [使用视图](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [多文档类型、视图和拆分窗口框架窗口 \(\)](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows (Splitter windows)](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [和消息映射处理程序 \(函数\)](../mfc/messages.md)  
+-   [Messages (maps and handler functions)](../mfc/messages.md)  
   
- *创建和销毁窗口*  
+ *Create and Destroy Windows*  
   
--   [常规窗口创建序列](../mfc/general-window-creation-sequence.md)  
+-   [General Window Creation Sequence](../mfc/general-window-creation-sequence.md)  
   
--   [销毁窗口对象](../mfc/destroying-window-objects.md)  
+-   [Destroy window objects](../mfc/destroying-window-objects.md)  
   
--   [创建文档框架窗口](../mfc/creating-document-frame-windows.md)  
+-   [Create document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [销毁框架窗口](../mfc/destroying-frame-windows.md)  
+-   [Destroy frame windows](../mfc/destroying-frame-windows.md)  
   
- *为拆分窗口*  
+ *Create Splitter Windows*  
   
--   [为拆分窗口](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Create splitter windows](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
- *管理子窗口和当前的视图*  
+ *Manage Child Windows and the Current View*  
   
--   [管理 MDI 子窗口](../mfc/managing-mdi-child-windows.md)  
+-   [Manage MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [管理当前的视图](../mfc/managing-the-current-view.md)  
+-   [Manage the current view](../mfc/managing-the-current-view.md)  
   
--   [管理、控件条菜单和快捷键](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Manage menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- *与设备上下文以及窗口样式一起使用*  
+ *Work with Device Contexts and Window Styles*  
   
--   [在设备上下文使用钢笔和其他图形对象](../mfc/graphic-objects.md)  
+-   [Use pens and other graphic objects in a device context](../mfc/graphic-objects.md)  
   
--   [更改 MFC 创建窗口的样式](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Change the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)   
- [对话框](../mfc/dialog-boxes.md)   
- [工具栏](../mfc/toolbars.md)   
- [状态栏](../mfc/status-bars.md)   
- [对话栏](../mfc/dialog-bars.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Toolbars](../mfc/toolbars.md)   
+ [Status Bars](../mfc/status-bars.md)   
+ [Dialog Bars](../mfc/dialog-bars.md)
+
+

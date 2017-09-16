@@ -1,5 +1,5 @@
 ---
-title: "make_unsigned 类 | Microsoft Docs"
+title: make_unsigned Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- make_unsigned
 - type_traits/std::make_unsigned
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 1bdebf2a3d3f03defa041d049ac98287df7aad6c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c4ddd03c3f0d36cce3700884e34847933fa99f87
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="makeunsigned-class"></a>make_unsigned 类
-设置类型或大小大于或等于类型的无符号的最小类型。  
+# <a name="makeunsigned-class"></a>make_unsigned Class
+Makes type or the smallest unsigned type greater than or equal in size to type.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
@@ -55,21 +54,21 @@ template <class T>
 using make_unsigned_t = typename make_unsigned<T>::type;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`T`|要修改的类型。|  
+|`T`|The type to modify.|  
   
-## <a name="remarks"></a>备注  
- 如果 `is_unsigned<T>` 为 true，则类型修饰符的实例保留修改后的类型 `T`。 否则，它就是适用于 `sizeof (T) <= sizeof (ST)` 的最小的带符号类型 `ST`。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type modifier holds a modified-type that is `T` if `is_unsigned<T>` holds true. Otherwise it is the smallest signed type `ST` for which `sizeof (T) <= sizeof (ST)`.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

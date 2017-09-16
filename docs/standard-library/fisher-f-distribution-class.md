@@ -1,15 +1,14 @@
 ---
-title: "fisher_f_distribution 类 | Microsoft 文档"
+title: fisher_f_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- fisher_f_distribution
 - random/std::fisher_f_distribution
 - random/std::fisher_f_distribution::reset
 - random/std::fisher_f_distribution::m
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- fisher_f_distribution class
+- std::fisher_f_distribution [C++]
+- std::fisher_f_distribution [C++], reset
+- std::fisher_f_distribution [C++], m
+- std::fisher_f_distribution [C++], n
+- std::fisher_f_distribution [C++], param
+- std::fisher_f_distribution [C++], min
+- std::fisher_f_distribution [C++], max
+- std::fisher_f_distribution [C++], param_type
+- std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
 caps.latest.revision: 17
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 98a51009b6aaccf9e7799fa4bb124ec001ccca0f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 26616222a3290b426fbe84cbbf8df1ea09db7a48
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="fisherfdistribution-class"></a>fisher_f_distribution 类
-生成 Fisher F 分布。  
+# <a name="fisherfdistribution-class"></a>fisher_f_distribution Class
+Generates a Fisher F distribution.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class fisher_f_distribution  
@@ -85,35 +92,35 @@ public:
    result_type max() const;
    };  
 ```  
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
-浮点结果类型，默认为 `double`。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* 均匀随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>备注  
- 此模板类描述了生成用户指定浮点类型或根据 Fisher 的 F-分布分配的 `double` 类型（如果未提供任何内容）的值的分配。 下表链接到有关各个成员的文章。  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Fisher's F-Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
 |`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|  
   
- 属性函数 `m()` 和 `n()` 将分别返回存储的分布参数 `m` 和 `n` 的值。  
+ The property functions `m()` and `n()` return the values for the stored distribution parameters `m` and `n` respectively.  
   
-属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 和 `max()` 成员函数将分别返回最小可能结果和最大可能结果。  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 成员函数将放弃所有缓存的值，使下一个对 `operator()` 的调用的结果不取决于在调用之前从引擎获得的任何值。  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
- 有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
- 有关 F-分布的详细信息，请参阅 Wolfram MathWorld 文章 [F-分布](http://go.microsoft.com/fwlink/LinkId=400899)。  
+ For detailed information about the F-distribution, see the Wolfram MathWorld article [F-Distribution](http://go.microsoft.com/fwlink/LinkId=400899).  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -173,8 +180,8 @@ int main()
   
 ```  
   
-## <a name="output"></a>输出  
- 首次运行：  
+## <a name="output"></a>Output  
+ First run:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
@@ -198,7 +205,7 @@ Distribution for 10 samples:
     10: 3.4320929653  
 ```  
   
- 第二次运行：  
+ Second run:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
@@ -222,7 +229,7 @@ Distribution for 10 samples:
     10: 20829747131.7185860000  
 ```  
   
- 第三次运行：  
+ Third run:  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): .1  
@@ -246,38 +253,38 @@ Distribution for 10 samples:
     10: 3.4363333954  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
- 构造分布。  
+ Constructs the distribution.  
   
 ```  
 explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
 explicit fisher_f_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *m*  
- `m` 分布参数。  
+ The `m` distribution parameter.  
   
 *n*  
- `n` 分布参数。  
+ The `n` distribution parameter.  
   
 *parm*  
- 用于构造分布的 `param_type` 结构。  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>备注  
- **前置条件：**`0.0 < m` 和 `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < m` and `0.0 < n`  
   
- 第一个构造函数将构造一个其存储的 `m` 值保留值 *m*，而其存储的 `n` 值保留值 *n* 的对象。  
+ The first constructor constructs an object whose stored `m` value holds the value *m* and whose stored `n` value holds the value *n*.  
   
- 第二个构造函数将构造一个从 *parm* 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  fisher_f_distribution::param_type  
- 存储分布的参数。  
+ Stores the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -290,22 +297,22 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```  
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
 *m*  
- `m` 分布参数。  
+ The `m` distribution parameter.  
   
 *n*  
- `n` 分布参数。  
+ The `n` distribution parameter.  
   
 *right*  
-要与它进行比较的 `param_type` 对象。  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>备注  
- **前置条件：**`0.0 < m` 和 `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < m` and `0.0 < n`  
   
- 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
+ This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

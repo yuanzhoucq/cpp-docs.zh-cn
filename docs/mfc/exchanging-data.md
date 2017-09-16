@@ -1,38 +1,57 @@
 ---
-title: "交换数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对话框数据交换 (DDX), 属性表"
-  - "与属性表交换数据"
-  - "属性表, 数据交换"
+title: Exchanging Data | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets [MFC], data exchange
+- exchanging data with property sheets [MFC]
+- DDX (dialog data exchange) [MFC], property sheets
 ms.assetid: 689f02d0-51a9-455b-8ffb-5b44f0aefa28
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 交换数据
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c2e951499ecffaf6c8eb019ee3cb95d9f3bfcdeb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-与大多数对话框数据交换，在属性表和应用程序之间是的一个属性表的最重要的函数。  本主题介绍如何执行此任务。  
+---
+# <a name="exchanging-data"></a>Exchanging Data
+As with most dialog boxes, the exchange of data between the property sheet and the application is one of the most important functions of the property sheet. This article describes how to accomplish this task.  
   
- 使用属性表的交换数据。实际上是交换数据问题属性表的各个属性页。  因为一个 [CPropertyPage](../mfc/reference/cpropertypage-class.md) 对象仅仅是一个特定的 [CDialog](../mfc/reference/cdialog-class.md) 对象，用属性页交换数据的过程和用对话框交换数据的过程相同。  过程同时利用框架的对话框数据交换 \(DDX\) 结构，在这些控件在对话框和对话框成员变量之间的交换数据对象。  
+ Exchanging data with a property sheet is actually a matter of exchanging data with the individual property pages of the property sheet. The procedure for exchanging data with a property page is the same as for exchanging data with a dialog box, since a [CPropertyPage](../mfc/reference/cpropertypage-class.md) object is just a specialized [CDialog](../mfc/reference/cdialog-class.md) object. The procedure takes advantage of the framework's dialog data exchange (DDX) facility, which exchanges data between controls in a dialog box and member variables of the dialog box object.  
   
- 交换数据之间的重要差异在于将属性表与普通对话框是属性表有多页，因此，必须将所有页的数据交换。属性表。  有关 DDX 的更多信息，请参见 [对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。  
+ The important difference between exchanging data with a property sheet and with a normal dialog box is that the property sheet has multiple pages, so you must exchange data with all the pages in the property sheet. For more information on DDX, see [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md).  
   
- 下面的示例阐释在"视图和"属性表的两页的之间交换数据：  
+ The following example illustrates exchanging data between a view and two pages of a property sheet:  
   
- [!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/CPP/exchanging-data_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]  
   
-## 请参阅  
- [属性表](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

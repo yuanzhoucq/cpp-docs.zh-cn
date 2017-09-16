@@ -1,44 +1,63 @@
 ---
-title: "使用树控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 类, using"
-  - "树控件, 关于树控件"
+title: Using Tree Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], using
+- tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用树控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 906a4ba64103450e4c2d8e0496a33bd9543122e0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-树控件 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 的典型用法遵循以下模式：  
+---
+# <a name="using-tree-controls"></a>Using Tree Controls
+Typical usage of a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) follows the pattern below:  
   
--   创建控件。  如果控件在对话框模板指定或，如果您使用 `CTreeView`，则用于创建自动，则对话框或视图时创建。  如果想要创建树控件用作子窗口其他窗口，请使用 [创建](../Topic/CTreeCtrl::Create.md) 成员函数。  
+-   The control is created. If the control is specified in a dialog box template or if you're using `CTreeView`, creation is automatic when the dialog box or view is created. If you want to create the tree control as a child window of some other window, use the [Create](../mfc/reference/ctreectrl-class.md#create) member function.  
   
--   如果希望控件树使用图像，通过调用 [SetImageList](../Topic/CTreeCtrl::SetImageList.md)设置图像列表。  通过调用 [SetIndent](../Topic/CTreeCtrl::SetIndent.md)还更改缩进。  优秀时执行此操作，[OnInitDialog](../Topic/CDialog::OnInitDialog.md) \(用于在对话框的控件\) 或 [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) \(对于视图\)。  
+-   If you want your tree control to use images, set an image list by calling [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). You can also change the indentation by calling [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). A good time to do this is in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (for controls in dialog boxes) or [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (for views).  
   
--   将数据放入控件通过调用一次 `CTreeCtrl` [InsertItem](../Topic/CTreeCtrl::InsertItem.md) 函数的每个数据项。  `InsertItem` 返回一个句柄到可以使用后面引用它的项，例如，在添加子项时。  一个好时机初始化数据在 `OnInitDialog` \(用于在对话框的控件\) 或 `OnInitialUpdate` \(对于视图\)。  
+-   Put data into the control by calling the `CTreeCtrl`'s [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) function once for each data item. `InsertItem` returns a handle to the item you can use to refer to it later, such as when adding child items. A good time to initialize the data is in `OnInitDialog` (for controls in dialog boxes) or `OnInitialUpdate` (for views).  
   
--   当用户与控件交互，将发送的不同通知消息。  可以函数指定处理要处理通过将控制窗口的消息映射的 **ON\_NOTIFY\_REFLECT** 宏或通过添加 `ON_NOTIFY` 宏。父窗口的消息映射的每一条消息。  列表后的通知。可以参见 [树控件通知消息](../mfc/tree-control-notification-messages.md) 本主题。  
+-   As the user interacts with the control, it will send various notification messages. You can specify a function to handle each of the messages you want to handle by adding an **ON_NOTIFY_REFLECT** macro in your control window's message map or by adding an `ON_NOTIFY` macro to your parent window's message map. See [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md) later in this topic for a list of possible notifications.  
   
--   调用的各种集合成员函数设置控件的值。  更改可包括将缩进并更改文本、图像或数据相关的项。  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the indentation and changing the text, image, or data associated with an item.  
   
--   使用捕获各函数检查控件的内容。  还可以遍历控件树的内容与允许检索句柄到父、指定项的子项和同级的函数。  甚至可以排序特定节点的子级。  
+-   Use the various Get functions to examine the contents of the control. You can also traverse the contents of the tree control with functions that allow you to retrieve handles to parents, children, and siblings of a specified item. You can even sort the children of a particular node.  
   
--   当您用控件时，请确保正确销毁它。  如果该树控件在对话框或，则为视图，将自动销毁它和 `CTreeCtrl` 对象。  否则，您需要确保正确销毁控件和 `CTreeCtrl` 对象。  
+-   When you're done with the control, make sure it's properly destroyed. If the tree control is in a dialog box or if it's a view, it and the `CTreeCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CTreeCtrl` object are properly destroyed.  
   
-## 请参阅  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

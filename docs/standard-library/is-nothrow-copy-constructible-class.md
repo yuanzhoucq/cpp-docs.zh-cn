@@ -1,5 +1,5 @@
 ---
-title: "is_nothrow_copy_constructible 类 | Microsoft Docs"
+title: is_nothrow_copy_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_nothrow_copy_constructible
 - type_traits/std::is_nothrow_copy_constructible
 dev_langs:
 - C++
@@ -34,36 +33,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: c71cdf2bdc69f79884f08ede6cb1dd0c20cbd0cd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f57d5fa2cce0aa8515803d966b3900b1f7ec52e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible 类
-测试类型是否具有 **nothrow** 复制构造函数。  
+# <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible Class
+Tests whether type has a **nothrow** copy constructor.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_nothrow_copy_constructible;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 具有 nothrow 复制构造函数，则类型谓词的实例将保留为 true，否则保留为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` has a nothrow copy constructor, otherwise it holds false.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

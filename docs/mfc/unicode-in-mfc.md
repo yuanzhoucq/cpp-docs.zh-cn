@@ -1,68 +1,87 @@
 ---
-title: "MFC 中的 Unicode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字符串 [C++], Unicode"
-  - "Unicode [C++], 启用"
-  - "Unicode [C++], MFC"
-  - "宽字符, 编码"
-  - "宽字符, Unicode"
+title: Unicode in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- wide characters, Unicode
+- Unicode [MFC], MFC
+- wide characters, encoding
+- strings [MFC], Unicode
+- Unicode [MFC], enabling
 ms.assetid: 1002004b-4113-4380-bf63-e1570934b793
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC 中的 Unicode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66452e96c7ca61e3acad1ce1107b6ba24c0750b3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-描述 MFC 对在 Windows NT、Windows 2000 和 Windows XP 平台上编码宽字符的 Unicode 标准的支持。  Unicode 应用程序在 Windows 98 平台不能运行。  
+---
+# <a name="unicode-in-mfc"></a>Unicode in MFC
+MFC supports the Unicode standard for encoding wide characters on Windows NT, Windows 2000, and Windows XP platforms. Unicode applications cannot run on Windows 98 platforms.  
   
- MFC 库的 Unicode 版本介绍：  
+ The Unicode versions of the MFC libraries are described below:  
   
-### 静态连接库。  
+### <a name="static-link-libraries"></a>Static Link Libraries  
   
-|Release|调试|说明|  
-|-------------|--------|--------|  
-|UAFXCW.lib，.pdb|UAFXCWD.lib，.pdb|Unicode MFC 静态链接库|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|UAFXCW.lib, .pdb|UAFXCWD.lib, .pdb|Unicode MFC static link library|  
   
-### 动态链接库  
+### <a name="dynamic-link-libraries"></a>Dynamic-Link Libraries  
   
-|Release|调试|说明|  
-|-------------|--------|--------|  
-|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|Unicode MFC 导入库 \(文件扩展的说明。请参见下面的说明\)|  
-|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|Unicode MFC导入库包含应用程序或 DLL 必须静态链接的代码|  
+|Release|Debug|Description|  
+|-------------|-----------|-----------------|  
+|MFC100U.lib, .dbg, def, .dll, .map, .pdb, .prf|MFC100UD.lib, .def, .dll, .map, .pdb|Unicode MFC import library (see notes below for explanation of file extensions)|  
+|MFCS100U.lib, .pdb|MFCS100UD.lib, .pdb|Unicode MFC import library containing code that must be statically linked in an application or DLL|  
   
- **文件类型**  
+ **File Types**  
   
--   导入扩展库文件 \(.lib\)。  
+-   Import library files have the extension (.lib).  
   
--   动态链接库文件扩展 \(.dll\)。  
+-   Dynamic-link library files have the extension (.dll).  
   
--   模块定义 \(.def\) 文件是包含定义的 .exe 或 .dll 语句的文本文件。  
+-   Module definition (.def) files are text files that contain statements for defining an .exe or .dll.  
   
--   映射 \(.map\) 文件是包含有关当链接程序时链接器使用信息的文本文件。  
+-   Map (.map) files are text files that contain information that the linker uses when linking a program.  
   
--   库 \(.LIB\) 文件与 MFC DLL 版本一起使用。  这些文件包含应用程序或 DLL 静态链接必须的代码。  
+-   Library (.lib) files are used in conjunction with the DLL versions of MFC. These files contain code that must be statically linked in the application or DLL.  
   
--   程序数据库 \(.pdb\) 文件中包含调试和项目状态信息。  
+-   Program database (.pdb) files contain debugging and project state information.  
   
--   调试 \(.dbg\) 文件包含 Visual C\+\+ 调试器使用的信息 \(FPO 和 COFF CodeView\)。  
+-   Debug (.dbg) files contain information (COFF FPO, and CodeView) that the Visual C++ Debugger uses.  
   
- 关于命名约定的详细信息，请参见 [库命名约定](../mfc/library-naming-conventions.md)。  
+ For detailed information on naming conventions, see [Library Naming Conventions](../mfc/library-naming-conventions.md).  
   
- 有关使用的 MFC Unicode 的信息，请参见 [字符串：Unicode 和多字节字符集 \(MBCS\) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
+ For information on using Unicode with MFC, see [Strings: Unicode and Multibyte Character Set (MBCS) Support](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-## 请参阅  
- [概念](../mfc/mfc-concepts.md)   
- [常规 MFC 主题](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

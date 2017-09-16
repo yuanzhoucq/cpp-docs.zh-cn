@@ -1,35 +1,54 @@
 ---
-title: "设置热键 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "访问键 [C++], 热键"
-  - "CHotKeyCtrl 类, 设置热键"
-  - "键盘快捷键 [C++], 热键"
+title: Setting a Hot Key | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard shortcuts [MFC], hot keys
+- access keys [MFC], hot keys
+- CHotKeyCtrl class [MFC], setting hot key
 ms.assetid: 6f3bc141-e346-4dce-9ca7-3e6b2c453f3f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 设置热键
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c327c6e3094c94ceb6d024c5dbd14f6126c39f4e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-应用程序可以使用以下两种方式之一使用一热键 \([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)\) 控件提供的信息：  
+---
+# <a name="setting-a-hot-key"></a>Setting a Hot Key
+Your application can use the information provided by a hot key ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) control in one of two ways:  
   
--   通过 [WM\_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) 发送消息设置激活的窗口 nonchild 全局热键到要激活的窗口。  
+-   Set up a global hot key for activating a nonchild window by sending a [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) message to the window to be activated.  
   
--   通过调用 Windows 函数设置一个给定线程热键 [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)。  
+-   Set up a thread-specific hot key by calling the Windows function [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
-## 请参阅  
- [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

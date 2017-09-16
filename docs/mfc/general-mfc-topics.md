@@ -1,67 +1,86 @@
 ---
-title: "常规 MFC 主题 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类库, MFC"
-  - "MFC"
-  - "MFC, 应用程序开发"
+title: General MFC Topics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC
+- class libraries [MFC], MFC
+- MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 常规 MFC 主题
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e6d3368bc32cfffd07dad512d95c58f2c81996e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此系列文章包含有关 Microsoft 基础类 \(MFC\) 库的技术详细信息，并提供了 MFC 框架概述及其关键组件和子系统。  
+---
+# <a name="general-mfc-topics"></a>General MFC Topics
+This family of articles includes technical details about the Microsoft Foundation Class (MFC) Library and provides an overview of the MFC framework and its key components and subsystems.  
   
- Microsoft 基础类库是用于在 Microsoft Windows 中编程的应用程序框架。  MFC 采用 C\+\+ 编写，它提供了执行以下操作所需的很多代码：管理窗口、菜单和对话框；执行基本输入\/输出；存储数据对象的集合等。  您只需将特定于应用程序的代码添加到此框架中。  如果给定 C\+\+ 类编程的特性，则很容易扩展和重写 [MFC 框架](../mfc/framework-mfc.md)提供的基本功能。  
+ The Microsoft Foundation Class Library is an application framework for programming in Microsoft Windows. Written in C++, MFC provides much of the code necessary for managing windows, menus, and dialog boxes; performing basic input/output; storing collections of data objects; and so on. All you need to do is add your application-specific code into this framework. Given the nature of C++ class programming, it is easy to extend or override the basic functionality that [the MFC framework](../mfc/framework-mfc.md) supplies.  
   
- MFC 框架是一种让您基于 Windows 专家程序员的工作来进行开发的有力方法。  MFC 具有以下优点：缩短开发时间；提高代码的可移植性；提供强有力的支持而不会降低编程的自由性和灵活性；降低接触“难以编程”的用户界面元素和技术（如 Active 技术、OLE 和 Internet 编程）的难度。  此外，MFC 还通过数据访问对象 \(DAO\) 和开放式数据库连接 \(ODBC\) 简化了数据库编程，并通过 Windows 套接字简化了网络编程。  MFC 使用户可以轻松对属性表（“通过 Tab 切换对话框”）、打印预览和浮动的自定义工具栏等功能进行编程。  
+ The MFC framework is a powerful approach that lets you build upon the work of expert programmers for Windows. MFC shortens development time; makes code more portable; provides tremendous support without reducing programming freedom and flexibility; and gives easy access to "hard to program" user-interface elements and technologies, like Active technology, OLE, and Internet programming. Furthermore, MFC simplifies database programming through Data Access Objects (DAO) and Open Database Connectivity (ODBC), and network programming through Windows Sockets. MFC makes it easy to program features like property sheets ("tab dialogs"), print preview, and floating, customizable toolbars.  
   
-## 本节内容  
- [Visual C\+\+ 示例](../top/visual-cpp-samples.md)中提供的 `MFC Samples`  
+## <a name="in-this-section"></a>In This Section  
+ `MFC Samples`, which are supplied in [Visual C++ Samples](../visual-cpp-samples.md)  
   
- [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)  
   
- [MFC 库版本](../mfc/mfc-library-versions.md)  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)  
   
- [使用类编写 Windows 应用程序](../mfc/using-the-classes-to-write-applications-for-windows.md)  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
- [基于框架生成](../mfc/building-on-the-framework.md)  
+ [Building on the Framework](../mfc/building-on-the-framework.md)  
   
- [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)  
   
- [文档模板和文档\/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
- [管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
- [空闲循环处理](../mfc/idle-loop-processing.md)  
+ [Idle Loop Processing](../mfc/idle-loop-processing.md)  
   
- [针对 MFC 模块状态中的激活上下文的支持](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
+ [Support for Activation Contexts in the MFC Module State](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
   
- [隔离 MFC 公共控件库](../mfc/isolation-of-the-mfc-common-controls-library.md)  
+ [Isolation of the MFC Common Controls Library](../mfc/isolation-of-the-mfc-common-controls-library.md)  
   
- [Windows Vista 公共控件的生成要求](../mfc/build-requirements-for-windows-vista-common-controls.md)  
+ [Build Requirements for Windows Vista Common Controls](../mfc/build-requirements-for-windows-vista-common-controls.md)  
   
- [如何：添加重新启动管理器支持](../mfc/how-to-add-restart-manager-support.md)  
+ [How to: Add Restart Manager Support](../mfc/how-to-add-restart-manager-support.md)  
   
- [动态布局](../mfc/dynamic-layout.md)  
+ [Dynamic Layout](../mfc/dynamic-layout.md)  
   
- 有关 MFC 参考文档的概述，请参阅 [Microsoft 基础类库](../mfc/mfc-desktop-applications.md)。  
+ For an overview of the MFC reference documentation, see [Microsoft Foundation Class Library](../mfc/mfc-desktop-applications.md).  
   
- 有关 ATL 的信息，请参阅[活动模板库参考](../atl/atl-class-overview.md)。  
+ For information about ATL, see [Active Template Library Reference](../atl/atl-class-overview.md).  
   
-## 请参阅  
- [使用窗口对象](../mfc/working-with-window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Working with Window Objects](../mfc/working-with-window-objects.md)
+
+

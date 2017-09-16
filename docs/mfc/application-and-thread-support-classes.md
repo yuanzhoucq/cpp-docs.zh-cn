@@ -1,81 +1,100 @@
 ---
-title: "应用程序和线程支持类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.support"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序对象 [C++], 线程支持类"
-  - "应用程序支持类 [C++]"
-  - "锁定类"
-  - "同步类, 多线程处理"
-  - "线程支持类 [C++]"
-  - "线程处理 [MFC]"
+title: Application and Thread Support Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.support
+dev_langs:
+- C++
+helpviewer_keywords:
+- application objects [MFC], thread support classes
+- lock classes [MFC]
+- thread support classes [MFC]
+- threading [MFC]
+- synchronization classes [MFC], multithreading
+- application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 应用程序和线程支持类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 78d1c48f6b07999a1736bb443d1b1e31b2454cac
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-每个应用程序只有具有的应用程序对象；此对象与在运行程序的其他对象并从 `CWinApp`派生。  
+---
+# <a name="application-and-thread-support-classes"></a>Application and Thread Support Classes
+Each application has one and only one application object; this object coordinates other objects in the running program and is derived from `CWinApp`.  
   
- Microsoft 基础类 \(MFC\) 库支持执行多个线程在应用程序中。  所有应用程序必须至少有一个线程；`CWinApp` 对象使用的线程处于此主线程。  
+ The Microsoft Foundation Class (MFC) Library supports multiple threads of execution within an application. All applications must have at least one thread; the thread used by your `CWinApp` object is this primary thread.  
   
- `CWinThread` 封装操作系统线程的功能的一部分。  若要使用多个线程可以更容易，MFC 还提供同步对象类提供基于 C 接口以 . C\+\+ Win32 同步对象。  
+ `CWinThread` encapsulates a portion of the operating system's threading capabilities. To make using multiple threads easier, MFC also provides synchronization object classes to provide a C++ interface to Win32 synchronization objects.  
   
-## 应用程序和线程支持类  
+## <a name="application-and-thread-classes"></a>Application and Thread Classes  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
- 封装代码初始化，运行和终止应用程序。  您从该类中派生应用程序对象。  
+ Encapsulates the code to initialize, run, and terminate the application. You will derive your application object from this class.  
   
  [CWinThread](../mfc/reference/cwinthread-class.md)  
- 所有线程的基类。  如果线程执行用户接口函数，则使用直接或从 `CWinThread` 派生类。  `CWinApp` 是从 `CWinThread` 中派生的。  
+ The base class for all threads. Use directly, or derive a class from `CWinThread` if your thread performs user-interface functions. `CWinApp` is derived from `CWinThread`.  
   
-## 同步对象类  
+## <a name="synchronization-object-classes"></a>Synchronization Object Classes  
  [CSyncObject](../mfc/reference/csyncobject-class.md)  
- 同步对象类的基类。  
+ Base class of the synchronization object classes.  
   
  [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- 仅允许在单个进程中的线程访问对象的同步类。  
+ A synchronization class that allows only one thread within a single process to access an object.  
   
  [CSemaphore](../mfc/reference/csemaphore-class.md)  
- 允许在一个同步类和同时访问之间存在着指定的最大数对象。  
+ A synchronization class that allows between one and a specified maximum number of simultaneous accesses to an object.  
   
  [CMutex](../mfc/reference/cmutex-class.md)  
- 仅允许不论几个进程中的线程访问对象的同步类。  
+ A synchronization class that allows only one thread within any number of processes to access an object.  
   
  [CEvent](../mfc/reference/cevent-class.md)  
- 当事件发生，通知应用程序编写同步类。  
+ A synchronization class that notifies an application when an event has occurred.  
   
  [CSingleLock](../mfc/reference/csinglelock-class.md)  
- 用于在线程安全类的成员函数上锁定一个同步对象。  
+ Used in member functions of thread-safe classes to lock on one synchronization object.  
   
  [CMultiLock](../mfc/reference/cmultilock-class.md)  
- 用于在线程安全类的成员函数。锁定的一个或多个同步对象同步对象。  
+ Used in member functions of thread-safe classes to lock on one or more synchronization objects from an array of synchronization objects.  
   
-## 相关类  
+## <a name="related-classes"></a>Related Classes  
  [CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)  
- 分析启动程序的命令行。  
+ Parses the command line with which your program was started.  
   
  [CWaitCursor](../mfc/reference/cwaitcursor-class.md)  
- 屏幕上会将等待光标放置。  使用在长时间操作过程。  
+ Puts a wait cursor on the screen. Used during lengthy operations.  
   
  [CDockState](../mfc/reference/cdockstate-class.md)  
- 句柄永久性存储控件条停靠状态数据。  
+ Handles persistent storage of docking state data for control bars.  
   
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- 保留最近使用的文件列表\(MRU\)。  
+ Maintains the most recently used (MRU) file list.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

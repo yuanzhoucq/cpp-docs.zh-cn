@@ -1,5 +1,5 @@
 ---
-title: "CHtmlEditView 类 |Microsoft 文档"
+title: CHtmlEditView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHtmlEditView class
+- CHtmlEditView [MFC], CHtmlEditView
+- CHtmlEditView [MFC], Create
+- CHtmlEditView [MFC], GetDHtmlDocument
+- CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
 caps.latest.revision: 24
 author: mikeblome
@@ -38,39 +41,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d0194d48fe214d7c90b24ff8ce4ef10116cd536a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a853eda6e39ed07178b8711199f5f27e868c0be9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chtmleditview-class"></a>CHtmlEditView 类
-提供 MFC 文档/视图体系结构上下文中的 Web 浏览器编辑平台功能。  
+# <a name="chtmleditview-class"></a>CHtmlEditView Class
+Provides the functionality of the WebBrowser editing platform within the context of MFC's document/view architecture.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|构造 `CHtmlEditView` 对象。|  
+|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Constructs a `CHtmlEditView` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditView::Create](#create)|创建新的窗口对象。|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|返回**IHTMLDocument2**当前文档上的接口。|  
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|检索默认文档的此视图的名称。|  
+|[CHtmlEditView::Create](#create)|Creates a new window object.|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Returns the **IHTMLDocument2** interface on the current document.|  
+|[CHtmlEditView::GetStartDocument](#getstartdocument)|Retrieves the name of the default document for this view.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -85,22 +88,22 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
   
  [CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)  
   
- [由 CHtmlView](../../mfc/reference/chtmlview-class.md)  
+ [CHtmlView](../../mfc/reference/chtmlview-class.md)  
   
  `CHtmlEditView`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxhtml.h  
   
-##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
- 构造 `CHtmlEditView` 对象。  
+##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
+ Constructs a `CHtmlEditView` object.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="create"></a>CHtmlEditView::Create  
- 创建新的窗口对象。  
+##  <a name="create"></a>  CHtmlEditView::Create  
+ Creates a new window object.  
   
 ```  
 virtual BOOL Create(
@@ -113,52 +116,52 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszClassName`  
- 指向以 null 结尾的字符串名称的 Windows 类 string。 类名可以是任何名称注册[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数或**RegisterClass** Windows 函数。 如果**NULL**，使用预定义的默认[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
+ Points to a null-terminated character string that names the Windows class. The class name can be any name registered with the [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) global function or the **RegisterClass** Windows function. If **NULL**, uses the predefined default [CFrameWnd](../../mfc/reference/cframewnd-class.md) attributes.  
   
  `lpszWindowName`  
- 指向以 null 结尾的字符串表示窗口名称。  
+ Points to a null-terminated character string that represents the window name.  
   
  `dwStyle`  
- 指定的窗口样式特性。 默认情况下， **WS_VISIBLE**和**WS_CHILD**设置窗口的样式。  
+ Specifies the window style attributes. By default, the **WS_VISIBLE** and **WS_CHILD** Windows styles are set.  
   
  `rect`  
- 对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，它指定的大小和窗口的位置。 `rectDefault`值使 Windows 可以指定的大小和新窗口的位置。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure specifying the size and position of the window. The `rectDefault` value allows Windows to specify the size and position of the new window.  
   
  `pParentWnd`  
- 指向控件的父窗口的指针。  
+ A pointer to the parent window of the control.  
   
  `nID`  
- 视图的 ID 号。 默认情况下，将设置为**AFX_IDW_PANE_FIRST**。  
+ The ID number of the view. By default, set to **AFX_IDW_PANE_FIRST**.  
   
  `pContext`  
- 一个指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)。 **NULL**默认情况下。  
+ A pointer to a [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **NULL** by default.  
   
-### <a name="remarks"></a>备注  
- 此方法还将调用包含的 WebBrowser**导航**方法以加载默认文档 (请参阅[CHtmlEditView::GetStartDocument](#getstartdocument))。  
+### <a name="remarks"></a>Remarks  
+ This method will also call the contained WebBrowser's **Navigate** method to load a default document (see [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
- 返回**IHTMLDocument2**当前文档上的接口。  
+##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
+ Returns the **IHTMLDocument2** interface on the current document.  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ppDocument`  
- [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)接口。  
+ The [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interface.  
   
-##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
- 检索默认文档的此视图的名称。  
+##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
+ Retrieves the name of the default document for this view.  
   
 ```  
 virtual LPCTSTR GetStartDocument();
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [HTMLEdit 示例](../../visual-cpp-samples.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [HTMLEdit Sample](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

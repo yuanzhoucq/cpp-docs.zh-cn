@@ -1,5 +1,5 @@
 ---
-title: "COleDialog 类 |Microsoft 文档"
+title: COleDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE dialog boxes, base class
-- dialog boxes, OLE
-- COleDialog class
+- COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
 caps.latest.revision: 21
 author: mikeblome
@@ -37,32 +35,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 018d06ac167a8c352d9f1822b373126c4e615854
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82cc7cff7b295e2685a0456d525ed0d74af44e46
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledialog-class"></a>COleDialog 类
-提供 OLE 对话框共有的功能。  
+# <a name="coledialog-class"></a>COleDialog Class
+Provides functionality common to dialog boxes for OLE.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|获取由对话框返回的错误代码。|  
+|[COleDialog::GetLastError](#getlasterror)|Gets the error code returned by the dialog box.|  
   
-## <a name="remarks"></a>备注  
- Microsoft 基础类库提供了几个类派生自`COleDialog`:  
+## <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library provides several classes derived from `COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -82,9 +80,9 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- 关于特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+ For more information about OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -97,25 +95,25 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="getlasterror"></a>COleDialog::GetLastError  
- 调用`GetLastError`成员函数以获取其他错误信息时`DoModal`返回**IDABORT**。  
+##  <a name="getlasterror"></a>  COleDialog::GetLastError  
+ Call the `GetLastError` member function to get additional error information when `DoModal` returns **IDABORT**.  
   
 ```  
 UINT GetLastError() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回的错误代码`GetLastError`取决于显示特定对话框。  
+### <a name="return-value"></a>Return Value  
+ The error codes returned by `GetLastError` depend on the specific dialog box displayed.  
   
-### <a name="remarks"></a>备注  
- 请参阅`DoModal`有关特定错误消息信息派生类中的成员函数。  
+### <a name="remarks"></a>Remarks  
+ See the `DoModal` member function in the derived classes for information about specific error messages.  
   
-## <a name="see-also"></a>另请参阅  
- [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

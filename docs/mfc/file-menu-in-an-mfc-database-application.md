@@ -1,45 +1,64 @@
 ---
-title: "MFC 数据库应用程序中的文件菜单 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "“文件”菜单"
-  - "数据库应用程序 [C++]，“文件”菜单命令"
+title: File Menu in an MFC Database Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 数据库应用程序中的文件菜单
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df27a26720aca2ed02d9e3e972a96052ce6729ba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果在创建 MFC 数据库应用程序，不使用序列化，您应如何解释在"文件"菜单中打开，请关闭、保存和另存为命令？  在没有此问题时样式指南，这是个一些建议：  
+---
+# <a name="file-menu-in-an-mfc-database-application"></a>File Menu in an MFC Database Application
+If you create an MFC database application and don't use serialization, how should you interpret the Open, Close, Save, and Save As commands on the File menu While there are no style guidelines for this question, here are a few suggestions:  
   
--   完全消除"文件"菜单中打开命令。  
+-   Eliminate the File menu's Open command entirely.  
   
--   介绍打开为“命令打开”数据库并显示用户应用程序识别的数据源的列表。  
+-   Interpret the Open command as "open database" and show the user a list of data sources your application recognizes.  
   
--   介绍打开，打开“命令，而配置文件”。保留已打开的一个序列化的文件，但是，文件使用包含用户存储“配置文件”的信息，例如用户首选项的序列化文档，包括用户的登录 ID \(可选\) 不包括密码和数据源及其新工作了。  
+-   Interpret the Open command as, perhaps, "open profile." Retain Open for opening a serialized file, but use the file to store a serialized document containing "user profile" information, such as the user's preferences, including his or her login ID (optionally excluding the password) and the data source he or she most recently worked with.  
   
- MFC 应用程序向导创建应用程序支持无文档相关的"文件"菜单命令。  选择在 **数据库支持** 页中的 **不提供文件支持的数据库视图 \(V\)** 选项。  
+ The MFC Application Wizard supports creating an application with no document-related File menu commands. Select the **Database view without file support** option on the **Database Support** page.  
   
- 若要解释"文件"菜单命令。特定方法，您必须重写一个或多个命令处理程序，主 `CWinApp`的派生类。  例如，如果完全重写实现 \( `ID_FILE_OPEN` \) 命令的 `OnFileOpen` 指“打开的数据库：”  
+ To interpret a File menu command in a special way, you must override one or more command handlers, mostly in your `CWinApp`-derived class. For example, if you completely override `OnFileOpen` (which implements the `ID_FILE_OPEN` command) to mean "open database:"  
   
--   因为您将完全替换命令框架的默认实现，则不要调用 `OnFileOpen`的基类版本。  
+-   Don't call the base class version of `OnFileOpen`, since you're completely replacing the framework's default implementation of the command.  
   
--   使用处理程序演示对话框列表数据源。  通过调用 `CDatabase::OpenEx` 或 `CDatabase::Open` 以显示这样对话框使用参数 **NULL**。  这就打开显示在用户计算机的所有可用数据源的 ODBC 对话框。  
+-   Use the handler instead to display a dialog box listing data sources. You can display such a dialog by calling `CDatabase::OpenEx` or `CDatabase::Open` with the parameter **NULL**. This opens an ODBC dialog box that displays all available data sources on the user's machine.  
   
--   由于数据库应用程序通常不保存整个文档，您可能希望移除、保存和另存为实现，除非使用的序列化文档存储信息。  否则，您可能会实现一保存命令，例如，提交“事务”。参见 [技术说明 22](../mfc/tn022-standard-commands-implementation.md) 有关重写这些命令的更多信息。  
+-   Because database applications typically don't save a whole document, you'll probably want to remove the Save and Save As implementations unless you use a serialized document to store profile information. Otherwise, you might implement the Save command as, for example, "commit transaction." See [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) for more information about overriding these commands.  
   
-## 请参阅  
- [序列化：序列化与数据库输入\/输出的对比](../mfc/serialization-serialization-vs-database-input-output.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serialization vs. Database Input/Output](../mfc/serialization-serialization-vs-database-input-output.md)
+
+

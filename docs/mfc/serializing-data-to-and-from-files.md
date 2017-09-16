@@ -1,56 +1,75 @@
 ---
-title: "针对文件进行数据序列化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [MFC]"
-  - "数据 [MFC], 序列化"
-  - "反序列化 [C++]"
-  - "文档数据 [C++]"
-  - "文档 [C++], 保存"
-  - "文档 [C++], 序列化"
-  - "保存文档"
-  - "序列化 [C++], 数据的角色"
-  - "序列化 [C++], 文档的角色"
+title: Serializing Data to and from Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], serialization
+- documents [MFC], saving
+- saving documents
+- deserialization [MFC]
+- serialization [MFC], role of document
+- serialization [MFC], role of data
+- data [MFC]
+- data [MFC], serializing
+- document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 针对文件进行数据序列化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94f8f6b569b47bf54f0707c5e782b8d4e892bf7b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-持久性本意是对象应该能够将其当前状态写入，表示由的值成员变量，与持久性存储区。  之后，对象可以通过读取或“反序列化重新创建，”fr 永久性存储对象的状态。  此处的关键对象是用于读取和编写自己的运行状态。  因此，为的类可以是不可变的，则它必须实现基本序列化操作。  
+---
+# <a name="serializing-data-to-and-from-files"></a>Serializing Data to and from Files
+The basic idea of persistence is that an object should be able to write its current state, indicated by the values of its member variables, to persistent storage. Later, the object can be re-created by reading, or "deserializing," the object's state from persistent storage. A key point here is that the object itself is responsible for reading and writing its own state. Thus, for a class to be persistent, it must implement the basic serialization operations.  
   
- 框架提供保存文档提供默认实现。磁盘文件根据保存，并且另存为"命令"菜单以及从磁盘文件中加载的文档根据打开命令。  很少个工作，可实现文档的能力进出文件读取和写入数据。  必须执行的基本事件重写是文档中的 [序列化](../Topic/CObject::Serialize.md) 类成员函数。  
+ The framework provides a default implementation for saving documents to disk files in response to the Save and Save As commands on the File menu and for loading documents from disk files in response to the Open command. With very little work, you can implement a document's ability to write and read its data to and from a file. The main thing you must do is override the [Serialize](../mfc/reference/cobject-class.md#serialize) member function in your document class.  
   
- MFC 应用程序向导。类文档将为您创建 **CDocument** 成员函数 `Serialize` 的骨骼重写。  在实现了应用程序的成员变量后，您可以将数据发送到”连接的“Archive 对象对文件的代码的 `Serialize` 重写。  [CArchive](../mfc/reference/carchive-class.md) 对象类似于 C\+\+ iostream 库的输入\/输出的 `cin` 和 `cout` 对象。  但是，并读取 `CArchive` 写入二进制格式，非格式化文本。  
+ The MFC Application Wizard places a skeletal override of the **CDocument** member function `Serialize` in the document class it creates for you. After you have implemented your application's member variables, you can fill in your `Serialize` override with code that sends the data to an "archive object" connected to a file. A [CArchive](../mfc/reference/carchive-class.md) object is similar to the `cin` and `cout` input/output objects from the C++ iostream library. However, `CArchive` writes and reads binary format, not formatted text.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [序列化](../mfc/serialization-in-mfc.md)  
+-   [Serialization](../mfc/serialization-in-mfc.md)  
   
--   [在序列化的文档。](#_core_the_document.92.s_role_in_serialization)  
+-   [The document's role in serialization](#_core_the_document.92.s_role_in_serialization)  
   
--   [在序列化数据的效果](#_core_the_data.92.s_role_in_serialization)  
+-   [The data's role in serialization](#_core_the_data.92.s_role_in_serialization)  
   
--   [对于序列化机制](../mfc/bypassing-the-serialization-mechanism.md)  
+-   [Bypassing the serialization mechanism](../mfc/bypassing-the-serialization-mechanism.md)  
   
-##  <a name="_core_the_document.92.s_role_in_serialization"></a> 在序列化的文档。  
- 框架将自动响应"文件"菜单中打开，保存并"另存为"命令通过调用文档的 `Serialize` 成员函数。是否已实现。  `ID_FILE_OPEN` 命令，例如，调用在应用程序对象的处理程序函数。  在此过程中，用户看到并响应文件打开对话框，而框架获取用户选择的文件。  框架创建加载数据的 `CArchive` 对象设置到文档并将存档到 `Serialize`。  框架已打开的文件。  在文档的 `Serialize` 成员函数中的代码。存档写入数据，根据需要重新生成数据对象。  有关序列化的更多信息，请参见知识库文章 [序列化](../mfc/serialization-in-mfc.md)。  
+##  <a name="_core_the_document.92.s_role_in_serialization"></a> The Document's Role in Serialization  
+ The framework responds automatically to the File menu's Open, Save, and Save As commands by calling the document's `Serialize` member function if it is implemented. An `ID_FILE_OPEN` command, for example, calls a handler function in the application object. During this process, the user sees and responds to the File Open dialog box and the framework obtains the filename the user chooses. The framework creates a `CArchive` object set up for loading data into the document and passes the archive to `Serialize`. The framework has already opened the file. The code in your document's `Serialize` member function reads the data in through the archive, reconstructing data objects as needed. For more information about serialization, see the article [Serialization](../mfc/serialization-in-mfc.md).  
   
-##  <a name="_core_the_data.92.s_role_in_serialization"></a> 在序列化数据的效果  
- 通常，类类型数据应可以序列化。  也就是说，当传递到存档对象时，对象应该知道如何编写读取到一个存档和存档。  MFC 为使得类提供支持可序列化。  如果您设计一类定义数据类型，并且打算序列化该类型数据，用于序列化中设计。  
+##  <a name="_core_the_data.92.s_role_in_serialization"></a> The Data's Role in Serialization  
+ In general, class-type data should be able to serialize itself. That is, when you pass an object to an archive, the object should know how to write itself to the archive and how to read itself from the archive. MFC provides support for making classes serializable in this way. If you design a class to define a data type and you intend to serialize data of that type, design for serialization.  
   
-## 请参阅  
- [使用文档](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

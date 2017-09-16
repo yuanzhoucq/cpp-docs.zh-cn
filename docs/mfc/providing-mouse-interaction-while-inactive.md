@@ -1,44 +1,63 @@
 ---
-title: "不活动时提供鼠标交互 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控件, 鼠标交互"
+title: Providing Mouse Interaction While Inactive | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 不活动时提供鼠标交互
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5c23ed3d3b8ae0fcd5949cf216e403b8685e9f51
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果控件并未立即激活，您可能仍在处理 `WM_SETCURSOR` 和 `WM_MOUSEMOVE` 消息，即使控件，没有自己的窗口。  可以通过启用 `IPointerInactive` 接口的 `COleControl` 实现来完成，默认情况下将禁用。\(为此接口的说明，请参见 *ActiveX SDK* 。\)若要启用该身份，包含在组的 `pointerInactive` 标志。[COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md)返回：  
+---
+# <a name="providing-mouse-interaction-while-inactive"></a>Providing Mouse Interaction While Inactive
+If your control is not immediately activated, you may still want it to process `WM_SETCURSOR` and `WM_MOUSEMOVE` messages, even though the control has no window of its own. This can be accomplished by enabling `COleControl`'s implementation of the `IPointerInactive` interface, which is disabled by default. (See the *ActiveX SDK* for a description of this interface.) To enable it, include the `pointerInactive` flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/providing-mouse-interaction-while-inactive_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#10](../mfc/codesnippet/CPP/providing-mouse-interaction-while-inactive_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/providing-mouse-interaction-while-inactive_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#10](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_3.cpp)]  
   
- 为包含此标记的代码自动生成，则选择 [控件设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 页中的 **不活动时有鼠标指针通知 \(M\)** 选项，当创建具有 **MFC ActiveX 控件向导**时控件。  
+ The code to include this flag is automatically generated if you select the **Mouse Pointer Notifications When Inactive** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page when creating your control with the **MFC ActiveX Control Wizard**.  
   
- 在 `IPointerInactive` 接口启用时，容器将 `WM_SETCURSOR` 和 `WM_MOUSEMOVE` 消息。它。  `IPointerInactive` 的`COleControl` 实现通过控件的消息映射调度消息。相应调整鼠标坐之后。  可以通过将添加相应的项处理消息像操作普通窗口消息至消息映射。  在这些消息的处理程序，应避免使用 `m_hWnd` 成员变量 \(或使用它\) 的任何成员函数，但其值不是首先检查 **NULL**的。  
+ When the `IPointerInactive` interface is enabled, the container delegates `WM_SETCURSOR` and `WM_MOUSEMOVE` messages to it. `COleControl`'s implementation of `IPointerInactive` dispatches the messages through your control's message map after adjusting the mouse coordinates appropriately. You can process the messages just like ordinary window messages by adding the corresponding entries to the message map. In your handlers for these messages, avoid using the `m_hWnd` member variable (or any member function that uses it) without first checking that its value is not **NULL**.  
   
- 也可以为非活动控件一个 OLE 拖放操作的目标。  这需要激活控件，在用户拖动上方时的对象，因此，控制窗口来注册作为放置目标。  在拖动，重写 [COleControl::GetActivationPolicy](../Topic/COleControl::GetActivationPolicy.md)中，导致出现激活并返回 **POINTERINACTIVE\_ACTIVATEONDRAG** 标志：  
+ You may also want an inactive control to be the target of an OLE drag-and-drop operation. This requires activating the control at the moment the user drags an object over it, so that the control's window can be registered as a drop target. To cause activation to occur during a drag, override [COleControl::GetActivationPolicy](../mfc/reference/colecontrol-class.md#getactivationpolicy), and return the **POINTERINACTIVE_ACTIVATEONDRAG** flag:  
   
- [!code-cpp[NVC_MFC_AxOpt#11](../mfc/codesnippet/CPP/providing-mouse-interaction-while-inactive_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#11](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_4.cpp)]  
   
- 启用 `IPointerInactive` 接口通常意味着要控件能够始终处理鼠标消息。  为了在不支持 `IPointerInactive` 接口的容器的此行为，则需要有一些始终激活的控件，并且在状态，表示控件应包括在其混合标志中 **OLEMISC\_ACTIVATEWHENVISIBLE** 标志。  但是，为了防止此标志仅在支持 `IPointerInactive`的容器，还可以指定 **OLEMISC\_IGNOREACTIVATEWHENVISIBLE** 标志：  
+ Enabling the `IPointerInactive` interface typically means that you want the control to be capable of processing mouse messages at all times. To get this behavior in a container that doesn't support the `IPointerInactive` interface, you need to have your control always activated when visible, which means the control should include the **OLEMISC_ACTIVATEWHENVISIBLE** flag among its miscellaneous flags. However, to prevent this flag from taking effect in a container that does support `IPointerInactive`, you can also specify the **OLEMISC_IGNOREACTIVATEWHENVISIBLE** flag:  
   
- [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/CPP/providing-mouse-interaction-while-inactive_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]  
   
-## 请参阅  
- [MFC ActiveX 控件：优化](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "&lt;utility&gt; 函数 | Microsoft Docs"
+title: '&lt;utility&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,38 +15,45 @@ f1_keywords:
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 814fa9960e5507846f9d2846c15bdde7177b8678
-ms.lasthandoff: 02/24/2017
+helpviewer_keywords:
+- std::exchange [C++]
+- std::forward [C++]
+- std::make_pair [C++]
+- std::move [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e215a80647ad3927325cd9ffbd59e9029eeace7b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函数
+# <a name="ltutilitygt-functions"></a>&lt;utility&gt; functions
 ||||  
 |-|-|-|  
-|[exchange](#exchange)|[forward](#forward)|[get 函数 &lt;utility&gt;](#get)|  
+|[exchange](#exchange)|[forward](#forward)|[get Function &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
 ##  <a name="exchange"></a>  exchange  
- **(C++14)** 向对象赋予新值并返回其旧值。  
+ **(C++14)** Assigns a new value to an object and returns its old value.  
   
 ```cpp  
 template <class T, class Other = T>
 T exchange(T& val, Other&& new_val)
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `val`  
- 将接收 new_val 的值的对象。  
+ The object that will receive the value of new_val.  
   
  `new_val`  
- 其值将被复制或移到 val 中的对象。  
+ The object whose value is copied or moved into val.  
   
-### <a name="remarks"></a>备注  
- 对于复杂类型，`exchange` 可避免在移动构造函数可用时复制旧值、避免在新值是临时对象或进行移动时复制新值，并且可使用任何可用的转换赋值运算符接受任何类型作为新值。 Exchange 函数不同于 [std::swap](../standard-library/algorithm-functions.md#swap)，后者的左参数不会移动或复制到右参数。  
+### <a name="remarks"></a>Remarks  
+ For complex types, `exchange` avoids copying the old value when a move constructor is available, avoids copying the new value if it’s a temporary object or is moved, and accepts any type as the new value, using any available converting assignment operator. The exchange function is different from [std::swap](../standard-library/algorithm-functions.md#swap) in that the left argument is not moved or copied to the right argument.  
   
-### <a name="example"></a>示例  
-  下面的示例说明如何使用 `exchange`。 在实际情况下，`exchange` 对难以复制的大型对象非常有用：  
+### <a name="example"></a>Example  
+  The following example shows how to use `exchange`. In the real world, `exchange` is most useful with large objects that are expensive to copy:  
   
 ```  
 #include <utility>  
@@ -77,7 +84,7 @@ The new value of c1 after exchange is: 2
 ```  
   
 ##  <a name="forward"></a>  forward  
- 如果自变量是右值或右值引用，则有条件地将其自变量强制转换为右值引用。 这会将自变量的右值状态还原到转发函数，以支持完美转发。  
+ Conditionally casts its argument to an rvalue reference if the argument is an rvalue or rvalue reference. This restores the rvalue-ness of an argument to the forwarding function in support of perfect forwarding.  
   
 ```
 template <class Type>    // accepts lvalues
@@ -87,25 +94,25 @@ template <class Type>    // accepts everything else
 constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|传入 `Arg` 的值的类型，可能不同于 `Arg` 的类型。 通常由转发函数的模板自变量决定。|  
-|`Arg`|要强制转换的自变量。|  
+|`Type`|The type of the value passed in `Arg`, which might be different than the type of `Arg`. Typically determined by a template argument of the forwarding function.|  
+|`Arg`|The argument to cast.|  
   
-### <a name="return-value"></a>返回值  
- 如果传入 `Arg` 的值最初为右值或右值引用，则返回对 `Arg` 的右值引用；否则，返回 `Arg`，而不修改其类型。  
+### <a name="return-value"></a>Return Value  
+ Returns an rvalue reference to `Arg` if the value passed in `Arg` was originally an rvalue or a reference to an rvalue; otherwise, returns `Arg` without modifying its type.  
   
-### <a name="remarks"></a>备注  
- 你必须指定显式模板参数来调用 `forward`。  
+### <a name="remarks"></a>Remarks  
+ You must specify an explicit template argument to call `forward`.  
   
- `forward` 不转发其参数。 而是在其参数最初为右值或右值引用时，通过有条件地将参数强制转换为右值引用，`forward` 使得编译器能够在得知转发的参数的原始类型后执行重载决策。 转发函数的实参的表面类型可能不同于其原始类型，例如，当右值用作函数的实参并绑定到形参名称时；拥有名称可使其成为左值，而无论该值是否作为右值实际存在，`forward` 将还原实参的右值状态。  
+ `forward` does not forward its argument. Instead, by conditionally casting its argument to an rvalue reference if it was originally an rvalue or rvalue reference, `forward` enables the compiler to perform overload resolution with knowledge of the forwarded argument's original type. The apparent type of an argument to a forwarding function might be different than its original type—for example, when an rvalue is used as an argument to a function and is bound to a parameter name; having a name makes it an lvalue, regardless of whether the value actually exists as an rvalue— `forward` restores the rvalue-ness of the argument.  
   
- 还原参数原始值的右值状态以执行重载决策被称为“完美转发”。 通过完美转发，模板函数可接受任一引用类型的自变量，并在必要时还原其右值状态以执行正确的重载决策。 通过使用完美转发，你可以保留右值的移动语义，而且无需提供仅根据其自变量的引用类型而变化的函数的重载。  
+ Restoring the rvalue-ness of an argument's original value in order to perform overload resolution is known as *perfect forwarding*. Perfect forwarding enables a template function to accept an argument of either reference type and to restore its rvalue-ness when it's necessary for correct overload resolution. By using perfect forwarding, you can preserve move semantics for rvalues and avoid having to provide overloads for functions that vary only by the reference type of their arguments.  
   
-##  <a name="get"></a>get  
- 按索引位置或类型从 `pair` 对象获取元素。  
+##  <a name="get"></a>  get  
+ Gets an element from a `pair` object by index position, or by type.  
   
 ```
 // get reference to element at Index in pair Pr
@@ -148,27 +155,27 @@ template <class T2, class T1>
 constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Index`  
- 指定元素从 0 开始的索引。  
+ The 0-based index of the designated element.  
   
  `T1`  
- 第一个 pair 元素的类型。  
+ The type of the first pair element.  
   
  `T2`  
- 第二个 pair 元素的类型。  
+ The type of the second pair element.  
   
  `pr`  
- 要从中进行选择的对。  
+ The pair to select from.  
   
-### <a name="remarks"></a>备注  
- 每个模板函数都返回对其 `pair` 参数的元素的引用。  
+### <a name="remarks"></a>Remarks  
+ The template functions each return a reference to an element of its `pair` argument.  
   
- 对于索引重载，如果 `Index` 的值为 0，则这些函数返回 `pr.first` ；如果 `Index` 的值为 1，则这些函数返回 `pr.second`。 类型 `RI` 是返回的元素的类型。  
+ For the indexed overloads, if the value of `Index` is 0 the functions return `pr.first` and if the value of `Index` is 1 the functions return `pr.second`. The type `RI` is the type of the returned element.  
   
- 对于不具有索引参数的重载，要返回的元素由类型参数推导。 如果 `get<T>(Tuple)` 中包含的 T 类型元素的个数不为一个，则调用 `pr` 将生成编译器错误。  
+ For the overloads that do not have an Index parameter, the element to return is deduced by the type argument. Calling `get<T>(Tuple)` will produce a compiler error if `pr` contains more or less than one element of type T.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <utility>  
@@ -200,7 +207,7 @@ int main()
 ```  
   
 ##  <a name="make_pair"></a>  make_pair  
- 一种可用来构造 `pair` 类型对象的模板函数，其中，组件类型将根据作为参数传递的数据类型自动进行选择。  
+ A template function that you can use to construct objects of type `pair`, where the component types are automatically chosen based on the data types that are passed as parameters.  
   
 ```
 template <class T, class U>
@@ -216,78 +223,78 @@ template <class T, class U>
 pair<T, U> make_pair(T&& Val1, U&& Val2);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Val1`  
- 用于初始化第一个 `pair` 元素的值。  
+ Value that initializes the first element of `pair`.  
   
  `Val2`  
- 用于初始化第二个 `pair` 元素的值。  
+ Value that initializes the second element of `pair`.  
   
-### <a name="return-value"></a>返回值  
- 所构造的配对对象：`pair`< `T`，`U`>( `Val1`, `Val2`)。  
+### <a name="return-value"></a>Return Value  
+ The pair object that's constructed: `pair`< `T`, `U`>( `Val1`, `Val2`).  
   
-### <a name="remarks"></a>备注  
- `make_pair` 可以将 [reference_wrapper 类](../standard-library/reference-wrapper-class.md)类型的对象转换为引用类型，将衰减数组和函数转换为指针。  
+### <a name="remarks"></a>Remarks  
+ `make_pair` converts object of type [reference_wrapper Class](../standard-library/reference-wrapper-class.md) to reference types and converts decaying arrays and functions to pointers.  
   
- 在返回的 `pair` 对象中，`T` 通过以下方式确定：  
+ In the returned `pair` object, `T` is determined as follows:  
   
--   如果输入类型 `T` 为 `reference_wrapper<X>`，则返回的类型 `T` 为 `X&`。  
+-   If the input type `T` is `reference_wrapper<X>`, the returned type `T` is `X&`.  
   
--   否则，返回的类型 `T` 为 `decay<T>::type`。 如果不支持 [decay 类](../standard-library/decay-class.md)，则返回的类型 `T` 与输入类型 `T` 相同。  
+-   Otherwise, the returned type `T` is `decay<T>::type`. If [decay Class](../standard-library/decay-class.md) is not supported, the returned type `T` is the same as the input type `T`.  
   
- 返回的类型 `U` 以类似的方式通过输入类型 `U` 来确定。  
+ The returned type `U` is similarly determined from the input type `U`.  
   
- `make_pair` 的优势之一在于要存储的对象类型由编译器自动确定，而不必显式指定。 使用 `make_pair<int, int>(1, 2)` 时请不要使用显式模板参数（如 `make_pair`），因为它冗长而多余并会增加复杂的右值引用问题，可能会导致编译失败。 就此示例来说，正确的语法应该是 `make_pair(1, 2)`  
+ One advantage of `make_pair` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `make_pair<int, int>(1, 2)` when you use `make_pair` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure. For this example, the correct syntax would be `make_pair(1, 2)`  
   
- 利用 `make_pair` 帮助程序函数，还可以实现向需要一个配对作为输入参数的函数传递两个值。  
+ The `make_pair` helper function also makes it possible to pass two values to a function that requires a pair as an input parameter.  
   
-### <a name="example"></a>示例  
-  有关如何使用 helper 函数 `make_pair` 声明和初始化对的示例，请参阅 [pair 结构](../standard-library/pair-structure.md)。  
+### <a name="example"></a>Example  
+  For an example about how to use the helper function `make_pair` to declare and initialize a pair, see [pair Structure](../standard-library/pair-structure.md).  
   
 ##  <a name="move"></a>  move  
- 无条件将其自变量强制转换为右值引用，从而表示其可以移动（如果其类型支持移动）。  
+ Unconditionally casts its argument to an rvalue reference, and thereby signals that it can be moved if its type is move-enabled.  
   
 ```
 template <class Type>
 constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|一种从 `Arg` 中传递的参数类型推导出的类型（与引用折叠规则一起）。|  
-|`Arg`|要强制转换的自变量。 虽然 `Arg` 的类型看起来指定为右值引用，但 `move` 也接受左值参数，原因是左值引用可以绑定到右值引用。|  
+|`Type`|A type deduced from the type of the argument passed in `Arg`, together with the reference collapsing rules.|  
+|`Arg`|The argument to cast. Although the type of `Arg` appears to be specified as an rvalue reference, `move` also accepts lvalue arguments because lvalue references can bind to rvalue references.|  
   
-### <a name="return-value"></a>返回值  
- 作为右值引用 `Arg`，无论其类型是否是引用类型。  
+### <a name="return-value"></a>Return Value  
+ `Arg` as an rvalue reference, whether or not its type is a reference type.  
   
-### <a name="remarks"></a>备注  
- 模板参数 `Type` 不应显式指定，而应从 `Arg` 中传递的值类型进行推导。 `Type` 的类型将根据引用折叠规则进行进一步调整。  
+### <a name="remarks"></a>Remarks  
+ The template argument `Type` is not intended to be specified explicitly, but to be deduced from the type of the value passed in `Arg`. The type of `Type` is further adjusted according to the reference collapsing rules.  
   
- `move` 不会移动其参数。 相反，通过无条件将其参数（可能是左值）强制转换为右值引用，它使得编译器随后能够移动（而不是复制）在 `Arg` 中传递的值（如果其类型支持移动）。 如果其类型不支持移动，则将进行复制。  
+ `move` does not move its argument. Instead, by unconditionally casting its argument—which might be an lvalue—to an rvalue reference, it enables the compiler to subsequently move, rather than copy, the value passed in `Arg` if its type is move-enabled. If its type is not move-enabled, it is copied instead.  
   
- 如果 `Arg` 中传递的值为左值（也就是说，它具有名称或可以采用其地址），则它在发生移动时将会失效。 在移动 `Arg` 中传递的值后，请勿按照其名称或地址来引用它。  
+ If the value passed in `Arg` is an lvalue—that is, it has a name or its address can be taken—it's invalidated when the move occurs. Do not refer to the value passed in `Arg` by its name or address after it's been moved.  
   
-##  <a name="swap"></a>swap  
- 交换两个 [pair 结构](../standard-library/pair-structure.md)对象的元素。  
+##  <a name="swap"></a>  swap  
+ Exchanges the elements of two [pair Structure](../standard-library/pair-structure.md) objects.  
   
 ```
 template <class T, class U>  
 void swap(pair<T, U>& left, pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|一个 `pair` 类型的对象。|  
-|`right`|一个 `pair` 类型的对象。|  
+|`left`|An object of type `pair`.|  
+|`right`|An object of type `pair`.|  
   
-### <a name="remarks"></a>备注  
- `swap` 的优势之一在于要存储的对象类型由编译器自动确定，而不必显式指定。 使用 `swap<int, int>(1, 2)` 时请不要使用显式模板参数（如 `swap`），因为它冗长而多余并会增加复杂的右值引用问题，可能会导致编译失败。  
+### <a name="remarks"></a>Remarks  
+ One advantage of `swap` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `swap<int, int>(1, 2)` when you use `swap` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<utility>](../standard-library/utility.md)
 
 

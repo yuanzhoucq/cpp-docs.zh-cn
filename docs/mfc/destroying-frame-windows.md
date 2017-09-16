@@ -1,47 +1,66 @@
 ---
-title: "销毁框架窗口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PostNcDestroy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Default 方法"
-  - "销毁框架窗口"
-  - "DestroyWindow 方法"
-  - "文档框架窗口, 销毁"
-  - "框架窗口 [C++], 销毁"
-  - "MFC [C++], 框架窗口"
-  - "OnClose 方法"
-  - "OnNcDestroy 方法, 和框架窗口"
-  - "PostNcDestroy 方法"
-  - "窗口 [C++], 销毁"
+title: Destroying Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- PostNcDestroy
+dev_langs:
+- C++
+helpviewer_keywords:
+- Default method [MFC]
+- DestroyWindow method [MFC]
+- frame windows [MFC], destroying
+- OnNcDestroy method, and frame windows
+- document frame windows [MFC], destroying
+- destroying frame windows
+- MFC, frame windows
+- windows [MFC], destroying
+- OnClose method [MFC]
+- PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 销毁框架窗口
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: afa6392a6cf1e3b6717a42bc577cfd4720370907
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-管理 MFC 框架窗口销毁以及一些窗口创建与框架的文档和视图。  如果您创建附加窗口，就得销毁它们。  
+---
+# <a name="destroying-frame-windows"></a>Destroying Frame Windows
+The MFC framework manages window destruction as well as creation for those windows associated with framework documents and views. If you create additional windows, you are responsible for destroying them.  
   
- 在框架中，帧，当用户关闭窗口时，窗口的默认调用 [DestroyWindow](../Topic/CWnd::DestroyWindow.md)[OnClose](../Topic/CWnd::OnClose.md) 处理程序。  最后一次调用的成员函数，当窗口销毁时执行清理，调用 [默认值](../Topic/CWnd::Default.md) [OnNcDestroy](../Topic/CWnd::OnNcDestroy.md)窗口是，某些成员函数执行 Windows 清理和最后调用虚成员函数 [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md)。  `PostNcDestroy` 的实现 [CFrameWnd](../mfc/reference/cframewnd-class.md) 删除窗口 C\+\+ 对象。  不应使用的框架窗口 C\+\+ **删除** 运算符。  请改用 `DestroyWindow`。  
+ In the framework, when the user closes the frame window, the window's default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). The last member function called when the Windows window is destroyed is [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), which does some cleanup, calls the [Default](../mfc/reference/cwnd-class.md#default) member function to perform Windows cleanup, and lastly calls the virtual member function [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). The [CFrameWnd](../mfc/reference/cframewnd-class.md) implementation of `PostNcDestroy` deletes the C++ window object. You should never use the C++ **delete** operator on a frame window. Use `DestroyWindow` instead.  
   
- 在主窗口关闭时关闭，应用程序将关闭。  如果已经修改的未保存的文档框架，显示消息询问是否应保存文档并确保相应的文档如有必要，保存。  
+ When the main window closes, the application closes. If there are modified unsaved documents, the framework displays a message box to ask if the documents should be saved and ensures that the appropriate documents are saved if necessary.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [创建文档框架窗口](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
-## 请参阅  
- [使用框架窗口](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

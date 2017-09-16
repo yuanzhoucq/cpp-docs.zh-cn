@@ -1,41 +1,60 @@
 ---
-title: "活动文档包含示例：Office 活页夹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "活动文档容器 [C++], 示例"
-  - "活动文档 [C++], 容器"
-  - "容器 [C++], 活动文档"
-  - "示例 [C++], 活动文档包容"
-  - "MFC COM [C++], 活动文档包容"
-  - "Office Binder"
+title: 'Example of Active Document Containment: Office Binder | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- examples [MFC], active document containment
+- containers [MFC], active document
+- active document containers [MFC], examples
+- Office Binder [MFC]
+- MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 活动文档包含示例：Office 活页夹
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a7202da76d8b7bf66f0d912b4cc855ccfd12d2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-Microsoft Office 活页夹是活动文档容器的示例。  Office 活页夹包括主窗格，通常，容器。  左窗格包含对应于\) 将联编程序中的活动文档的图标。  每个文档调用联编程序中的 *节*。  例如，可以包含，PowerPoint 活页夹 Word 文档文件，Excel 电子表格，依此类推。  
+---
+# <a name="example-of-active-document-containment-office-binder"></a>Example of Active Document Containment: Office Binder
+The Microsoft Office Binder is an example of an active document container. An Office Binder includes two primary panes, as containers typically do. The left pane contains icons that correspond to active documents in the Binder. Each document is called a *section* within the Binder. For example, a Binder can contain Word documents, PowerPoint files, Excel spreadsheets, and so on.  
   
- 单击左侧窗格中的图标激活相应的活动文档。  联编程序的右窗格然后显示当前选择的活动文档的内容。  
+ Clicking an icon in the left pane activates the corresponding active document. The right pane of the Binder then displays the contents of the currently selected active document.  
   
- 如果打开并激活编程序的 Word 文档时，Word 的菜单栏和工具栏将出现在视图的顶部，框架使用任何命令或 Word 工具，因此，可以编辑文档的内容。  但是，是联编程序的菜单栏和 Word 的菜单栏的组合。  由于联编程序和 Word 具有 **帮助** 菜单，单个菜单的内容合并。  活动文档容器 \(例如 Office 活页夹自动提供 **帮助** 菜单合并；有关更多信息，请参见 [帮助菜单合并](../mfc/help-menu-merging.md)。  
+ If you open and activate a Word document in a Binder, the Word menu bar and toolbars appear at the top of the view frame, and you can edit the document's contents using any Word command or tool. However, the menu bar is a combination of both the Binder's and Word's menu bars. Because both Binder and Word have **Help** menus, the contents of the respective menus are merged. Active document containers such as Office Binder automatically provide **Help** menu merging; for more information, see [Help Menu Merging](../mfc/help-menu-merging.md).  
   
- 如果选择另一个应用程序类型时活动文档，联编程序的接口更改为适应该活动文档的应用程序类型。  例如，如果包含，活页夹 Excel 电子表格，将发现编程序的菜单更改，当您选择 Excel 电子表格节。  
+ When you select an active document of another application type, the Binder's interface changes to accommodate that of the active document's application type. For example, if a Binder contains an Excel spreadsheet, you will observe that the menus in the Binder change when you select the Excel spreadsheet section.  
   
- 有，当然，容器的其他可能的类型位于活页夹旁边的。  文件资源管理器使用左窗格使用的树控件显示分层目录的列表。驱动器或网络的典型、窗格界面，而右窗格显示当前选择的目录中的文件。  容器 Internet 浏览器类型 \(如 Microsoft Internet Explorer\) 可以使用超链接，而不使用双重窗格界面，通常具有单个帧并提供导航。  
+ There are, of course, other possible types of containers beside Binders. File Explorer uses the typical dual-pane interface in which the left pane uses a tree control to display a hierarchical list of directories in a drive or network, while the right pane displays the files contained in the currently selected directory. An Internet browser-type of container (such as Microsoft Internet Explorer), rather than using a dual-pane interface, usually has a single frame and provides navigation using hyperlinks.  
   
-## 请参阅  
- [活动文档包容](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

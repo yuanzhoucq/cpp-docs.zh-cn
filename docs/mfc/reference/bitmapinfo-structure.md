@@ -1,65 +1,84 @@
 ---
-title: "BITMAPINFO 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BITMAPINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BITMAPINFO 结构"
+title: BITMAPINFO Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- BITMAPINFO
+dev_langs:
+- C++
+helpviewer_keywords:
+- BITMAPINFO structure [MFC]
 ms.assetid: a00caa49-e4df-419f-89a7-ab03c13a1b5b
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# BITMAPINFO 结构
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a20d235ebe5c8758ecd3e5c99a6c9f94f872019b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-该 `BITMAPINFO` 的结构定义的尺寸和颜色信息的Windows设备无关位图（DIB）。  
+---
+# <a name="bitmapinfo-structure"></a>BITMAPINFO Structure
+The `BITMAPINFO` structure defines the dimensions and color information for a Windows device-independent bitmap (DIB).  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagBITMAPINFO {  
-   BITMAPINFOHEADER bmiHeader;  
-   RGBQUAD bmiColors[1];  
+    BITMAPINFOHEADER bmiHeader;  
+    RGBQUAD bmiColors[1];  
 } BITMAPINFO;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>Parameters  
  `bmiHeader`  
- 指定 [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) 的结构，它包含有关尺寸和设备无关位图的颜色格式信息。  
+ Specifies a [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) structure that contains information about the dimensions and color format of a device-independent bitmap.  
   
  `bmiColors`  
- 指定 [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) 或 `DWORD` 定义位图中的颜色数据类型。  
+ Specifies an array of [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) or `DWORD` data types that define the colors in the bitmap.  
   
-## 备注  
- 设备无关位图由两个不同的部分：一个 `BITMAPINFO` 的结构，描述了位图的尺寸和颜色，并指定位图像素的字节数组。  数组中的位在一起，但每个扫描行必须以零填充结束一个 `LONG` 边界。  如果该高度为正数的，位图的原点为左下角。  如果该高度为负，原点是该左上角。  
+## <a name="remarks"></a>Remarks  
+ A device-independent bitmap consists of two distinct parts: a `BITMAPINFO` structure that describes the dimensions and colors of the bitmap, and an array of bytes that specify the pixels in the bitmap. The bits in the array are packed together, but each scan line must be padded with zeros to end on a `LONG` boundary. If the height is positive, the origin of the bitmap is the lower-left corner. If the height is negative, the origin is the upper-left corner.  
   
- 一个 *包位图* 是一个位图，其中的字节数组紧跟在 `BITMAPINFO` 结构。  打包的位图由一个指针引用。  
+ A *packed bitmap* is a bitmap where the byte array immediately follows the `BITMAPINFO` structure. Packed bitmaps are referenced by a single pointer.  
   
- 有关 `BITMAPINFO` 结构和对 `BITMAPINFOHEADER` 和 `RGBQUAD` 结构的成员适当的值的详细信息，请参阅 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 文档。  
+ For more information about the `BITMAPINFO` structure and appropriate values for members of the `BITMAPINFOHEADER` and `RGBQUAD` structures, see the following topics in the Windows SDK documentation.  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="b5dd2e8c9cedbac12eb858bd01a029a2" class\="tgtSentence"\>BITMAPINFO 结构\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
+- [BITMAPINFO structure](http://msdn.microsoft.com/library/windows/desktop/dd183375)  
   
--   [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) 结构  
+- [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) structure  
   
--   [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) 结构  
+- [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) structure  
   
-## 要求  
+## <a name="requirements"></a>Requirements  
  **Header:** wingdi.h  
   
-## 请参阅  
- [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CBrush::CreateDIBPatternBrush](../Topic/CBrush::CreateDIBPatternBrush.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CBrush::CreateDIBPatternBrush](../../mfc/reference/cbrush-class.md#createdibpatternbrush)   
  [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)   
  [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)
+
+

@@ -1,46 +1,65 @@
 ---
-title: "Internet 上的 Active 技术 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Internet 应用程序, Active 技术"
+title: Active Technology on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Internet 上的 Active 技术
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3286a06350fde7c345f07dce909f90c85bfb4d83
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-Active 技术是允许开发人员创建的打开平台，动态内容和应用程序的环球网，或者对公司的内部网络，也称为的 Intranet 上。  Microsoft 提供的主要技术用于 Internet 介绍编程。  
+---
+# <a name="active-technology-on-the-internet"></a>Active Technology on the Internet
+Active technology is an open platform that lets developers create exciting, dynamic content and applications for the global Internet, or for a company's internal network, known as an intranet. The major technologies provided by Microsoft for Internet programming are described below.  
   
-## ActiveX 控件  
- ActiveX 控件 \(原来为 OLE\) 控件是可以插入到网页或其他应用程序是 ActiveX 控件容器的对象。  示例包括按钮、"股票行情自动收录器"和图表控件。  有关将控件锁定到窗体的更多信息，请参见 [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)。  
+## <a name="activex-controls"></a>ActiveX Controls  
+ ActiveX controls (formerly OLE controls) are objects that can be inserted into Web pages or any other application that is an ActiveX control container. Examples include buttons, stock tickers, and chart controls. For more information, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
-## 活动文档  
- 活动文档可供 Web 浏览器或文档浏览器中显示。  传统嵌入对象在文档已限制对页面和显示了嵌入。  Active 技术，该文档可以是在整个工作区窗口的完整框架中。  有关更多信息，请参见 [Internet 上的活动文档](../mfc/active-documents-on-the-internet.md)。  
+## <a name="active-documents"></a>Active Documents  
+ Active documents can be displayed by Web browsers or document viewers. Traditional embedded objects were limited to one page and were shown embedded in the document. With Active technology, the document can be displayed full frame in the entire client area window. For more information, see [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
-## Internet 下载服务数据  
- 使用公共的协议，数据可以通过 Internet 下载：HTTP、FTP 和地鼠。  MFC WinInet 类便于将数据使用 HTTP、FTP 和地鼠通过提取协议和 Winsock TCP\/IP 协议。  MFC 异步名字对象类提供用于下载文件，而不必阻止和呈现大型对象。  有关更多信息，请参见 [Win32 Internet 扩展 \(\/Ze WinInet\)](../mfc/win32-internet-extensions-wininet.md)。  
+## <a name="internet-data-download-services"></a>Internet Data Download Services  
+ Data can be downloaded over the Internet using common protocols: HTTP, FTP, and gopher. The MFC WinInet classes make it easy to transfer data using HTTP, FTP, and gopher protocols by abstracting the TCP/IP and WinSock protocols. The MFC asynchronous moniker classes provide a way to download files without blocking and to render large objects asynchronously. For more information, see [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
   
-## 活动脚本  
- VBScript 脚本语言和其他连接控件并添加交互功能添加到网页。  脚本将处理来自服务器移到客户。  例如，入学人数表可在客户端上验证然后发送到服务器。  
+## <a name="active-scripts"></a>Active Scripts  
+ VBScript and other scripting languages connect controls and add interactive functionality to Web pages. Scripting moves processing from the server to the client. For example, form entries can be validated on the client and then sent to the server.  
   
-## HTML 扩展  
- HTML 扩展名，例如对象标记，添加到支持控件和脚本。  
+## <a name="html-extensions"></a>HTML Extensions  
+ HTML extensions, such as the object tag, have been added to support controls and scripting.  
   
-## 请参阅  
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)   
- [Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)   
- [Internet 上的活动文档](../mfc/active-documents-on-the-internet.md)   
- [Win32 Internet 扩展 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)   
+ [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md)   
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+
+

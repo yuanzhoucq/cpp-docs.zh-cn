@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 662bbde9b4fc43321bd1435d17d6b7110e7ac31c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 85a63b12b203b237c2d948ccd4aabeeb9a8ef9e3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
-定义容器模板类 [unordered_map](../standard-library/unordered-map-class.md) 和 [unordered_multimap](../standard-library/unordered-multimap-class.md) 及其支持的模板。  
+Defines the container template classes [unordered_map](../standard-library/unordered-map-class.md) and [unordered_multimap](../standard-library/unordered-multimap-class.md) and their supporting templates.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <unordered_map>  
 ```  
   
-### <a name="classes"></a>类  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[unordered_map 类](../standard-library/unordered-map-class.md)|存储 {key, mapped} 对的哈希表。|  
-|[unordered_multimap 类](../standard-library/unordered-multimap-class.md)|存储 {key, mapped} 对的哈希表。|  
+|[unordered_map Class](../standard-library/unordered-map-class.md)|Stores hash table of {key, mapped} pairs.|  
+|[unordered_multimap Class](../standard-library/unordered-multimap-class.md)|Stores hash table of {key, mapped} pairs.|  
   
-### <a name="functions"></a>函数  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|测试位于运算符左侧的 unordered_map 对象是否与位于右侧的 unordered_map 对象不相等。|  
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|测试位于运算符左侧的 unordered_map 对象是否与位于右侧的 unordered_map 对象相等。|  
-|[swap 函数 (unordered_map)](../standard-library/unordered-map-functions.md#swap)|交换两个映射。|  
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|测试位于运算符左侧的 unordered_multimap 对象是否与位于右侧的 unordered_multimap 对象不相等。|  
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|测试位于运算符左侧的 unordered_multimap 对象是否与位于右侧的 unordered_multimap 对象相等。|  
-|[swap 函数 (unordered_map)](../standard-library/unordered-map-functions.md#swap)|交换两个多重映射。|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Tests if the unordered_map object on the left side of the operator is not equal to the unordered_map object on the right side.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Tests if the unordered_map object on the left side of the operator is equal to the unordered_map object on the right side.|  
+|[swap Function (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Swaps two maps.|  
+|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Tests if the unordered_multimap object on the left side of the operator is not equal to the unordered_multimap object on the right side.|  
+|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Tests if the unordered_multimap object on the left side of the operator is equal to the unordered_multimap object on the right side.|  
+|[swap Function (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Swaps two multimaps.|  
   
-## <a name="see-also"></a>另请参阅  
- [unordered_multiset 类](../standard-library/unordered-multiset-class.md)   
- [unordered_set 类](../standard-library/unordered-set-class.md)
+## <a name="see-also"></a>See Also  
+ [unordered_multiset Class](../standard-library/unordered-multiset-class.md)   
+ [unordered_set Class](../standard-library/unordered-set-class.md)
 

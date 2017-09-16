@@ -1,52 +1,71 @@
 ---
-title: "在项目中插入窗体 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "窗体, 添加到项目"
-  - "“新插入”对话框"
-  - "插入窗体"
+title: Inserting a Form into a Project | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- inserting forms [MFC]
+- Insert New dialog box [MFC]
+- forms, adding to projects
 ms.assetid: f3bd2998-3ce2-496d-ac5c-57ca70eec7cb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 在项目中插入窗体
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 801c5ce15e213479738551e843d9a4be96ef74a5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-窗体控件为提供方便容器。  应用程序，只要支持 MFC 库，可以轻松地将一个窗体分成基于 MFC 的应用程序。  
+---
+# <a name="inserting-a-form-into-a-project"></a>Inserting a Form into a Project
+Forms provide a convenient container for controls. You can easily insert an MFC-based form into your application as long as the application supports the MFC libraries.  
   
-### 插入窗体到项目  
+### <a name="to-insert-a-form-into-your-project"></a>To insert a form into your project  
   
-1.  从类视图中，选中要添加窗体的项目，再单击鼠标右键。  
+1.  From Class View, select the project to which you want to add the form, and click the right mouse button.  
   
-2.  从快捷菜单中单击“添加”，然后单击“添加类”。  
+2.  From the shortcut menu, click **Add** and then click **Add Class**.  
   
-     **New Form** 如果命令不可用，项目可能基于活动模板库 \(ATL\) \(ATL\)。  当第一次创建项目，若要将该窗体添加到 ATL 项目，您必须。[指定一些设置](../atl/reference/application-settings-atl-project-wizard.md)  
+     If the **New Form** command is not available, your project may be based on the Active Template Library (ATL). To add a form to an ATL project, you must [specify certain settings](../atl/reference/application-settings-atl-project-wizard.md) when first creating the project.  
   
-3.  在 **MFC\(M\)** 文件夹，单击 **MFC 类**。  
+3.  From the **MFC** folder, click **MFC Class**.  
   
-4.  使用 MFC 类向导，请将新类从派生。[CFormView](../mfc/reference/cformview-class.md)  
+4.  Using the MFC Class Wizard, make the new class derive from [CFormView](../mfc/reference/cformview-class.md).  
   
- Visual C\+\+ 将该窗体添加到应用程序中，它在对话框编辑器内打开，以便可以开始添加控件并在其工作的总体设计。  
+ Visual C++ adds the form to your application, opening it inside the Dialog editor so that you can begin adding controls and working on its overall design.  
   
- 可能需要执行以下附加步骤 \(适用于为基于对话框的应用程序\):  
+ You may want to perform the following additional steps (not applicable for dialog-based applications):  
   
-1.  重写 `OnUpdate` 成员函数。  
+1.  Override the `OnUpdate` member function.  
   
-2.  实现的成员函数将视图的数据移动到文档。  
+2.  Implement a member function to move data from your view to your document.  
   
-3.  创建 `OnPrint` 成员函数。  
+3.  Create an `OnPrint` member function.  
   
-## 请参阅  
- [窗体视图](../mfc/form-views-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Form Views](../mfc/form-views-mfc.md)
+
+

@@ -1,178 +1,203 @@
 ---
-title: "TN028：区分上下文的帮助支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.help"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "区分上下文的帮助, MFC 应用程序"
-  - "资源标识符, 区分上下文的帮助"
-  - "TN028"
+title: 'TN028: Context-Sensitive Help Support | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.help
+dev_langs:
+- C++
+helpviewer_keywords:
+- context-sensitive Help [MFC], MFC applications
+- TN028
+- resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# TN028：区分上下文的帮助支持
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 75fcbe5b4acd96c5881a9edba940928f3c8b2d7a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此注释该描述分配的帮助上下文 ID 和其他帮助规则问题。  上下文要求支持相关帮助可在 Visual C\+\+ 编译器的帮助。  
+---
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Context-Sensitive Help Support
+This note describes the rules for assigning Help contexts IDs and other help issues in MFC. Context-sensitive help support requires the help compiler that is available in Visual C++.  
   
 > [!NOTE]
->  除实现使用 WinHelp 的上下文相关帮助，使用 HTML 以外的 MFC 支持也帮助。  有关本支持和编程的 HTML 帮助的更多信息，请参见 [HTML 帮助：程序的上下文相关的帮助](../mfc/html-help-context-sensitive-help-for-your-programs.md)。  
+>  In addition to implementing context-sensitive help using WinHelp, MFC also supports using HTML Help. For more information on this support and programming with HTML Help, see [HTML Help: Context-Sensitive Help for Your Programs](../mfc/html-help-context-sensitive-help-for-your-programs.md).  
   
-## 支持类型的帮助  
- 在 Windows 应用程序的上下文相关帮助实现的两种类型。  第一，称为“F1 帮助”中启动 WinHelp 使用基于当前活动的对象的相应的上下文。  第二个是“F1 Shift\+”模式。  在此模式下，将鼠标光标更改帮助光标和用户而单击对象。  此时，WinHelp 启动提供用户单击对象的帮助。  
+## <a name="types-of-help-supported"></a>Types of Help Supported  
+ There are two types of context-sensitive help implemented in Windows applications. The first, referred to as "F1 Help" involves launching WinHelp with the appropriate context based on the currently active object. The second is "Shift+ F1" mode. In this mode, the mouse cursor changes to the help cursor, and the user proceeds to click on an object. At that point, WinHelp is launched to give help for the object that the user clicked on.  
   
- Microsoft 基础类 \(MFC\) 帮助实现这两种形式。  此外，框架支持简单的帮助，命令帮助索引和使用帮助。  
+ The Microsoft Foundation Classes implement both of these forms of help. In addition, the framework supports two simple help commands, Help Index and Using Help.  
   
-## 帮助文件  
- Microsoft 基础类具有一个帮助文件。  帮助文件必须具有名称和路径并应用程序相同。  例如，在中，如果可执行文件是 C:\\MyApplication\\MyHelp.exe 帮助文件必须是 C:\\MyApplication\\MyHelp.hlp.  通过 [CWinApp Class](../mfc/reference/cwinapp-class.md)的 `m_pszHelpFilePath` 成员变量设置的路径。  
+## <a name="help-files"></a>Help Files  
+ The Microsoft Foundation classes assume a single Help file. That Help file must have the same name and path as the application. For example, if the executable is C:\MyApplication\MyHelp.exe the help file must be C:\MyApplication\MyHelp.hlp. You set the path through the `m_pszHelpFilePath` member variable of the [CWinApp Class](../mfc/reference/cwinapp-class.md).  
   
-## 帮助上下文大小  
- MFC 的默认实现需要程序遵循关于帮助上下文 ID 分配的一些规则。  这些规则是范围 ID 分配到特定控件。  通过提供各种帮助关联的成员函数不同的实现重写这些规则。  
+## <a name="help-context-ranges"></a>Help Context Ranges  
+ The default implementation of MFC requires a program to follow some rules about the assignment of Help context IDs. These rules are a range of IDs allocated to specific controls. You can override these rules by providing different implementations of the various Help-related member functions.  
   
 ```  
 0x00000000 - 0x0000FFFF : user defined  
 0x00010000 - 0x0001FFFF : commands (menus/command buttons)  
-   0x00010000 + ID_  
-   (note: 0x18000-> 0x1FFFF is the practical range since command IDs are >=0x8000)  
+0x00010000 + ID_  
+(note: 0x18000-> 0x1FFFF is the practical range since command IDs are>=0x8000)  
 0x00020000 - 0x0002FFFF : windows and dialogs  
-   0x00020000 + IDR_  
-   (note: 0x20000-> 0x27FFF is the practical range since IDRs are <= 0x7FFF)  
+0x00020000 + IDR_  
+(note: 0x20000-> 0x27FFF is the practical range since IDRs are <= 0x7FFF)  
 0x00030000 - 0x0003FFFF : error messages (based on error string ID)  
-   0x00030000 + IDP_  
+0x00030000 + IDP_  
 0x00040000 - 0x0004FFFF : special purpose (non-client areas)  
-   0x00040000 + HitTest area  
+0x00040000 + HitTest area  
 0x00050000 - 0x0005FFFF : controls (those that are not commands)  
-   0x00040000 + IDW_  
+0x00040000 + IDW_  
 ```  
   
-## 简单的“帮助”命令  
- 包含由 Microsoft 基础类实现的简单命令帮助：  
+## <a name="simple-help-commands"></a>Simple "Help" Commands  
+ There are two simple Help commands that are implemented by the Microsoft Foundation Classes:  
   
--   按 [CWinApp::OnHelpIndex](../Topic/CWinApp::OnHelpIndex.md)实现的 ID\_HELP\_INDEX  
+-   ID_HELP_INDEX which is implemented by [CWinApp::OnHelpIndex](../mfc/reference/cwinapp-class.md#onhelpindex)  
   
--   按 [CWinApp::OnHelpUsing](../Topic/CWinApp::OnHelpUsing.md)实现的 ID\_HELP\_USING  
+-   ID_HELP_USING which is implemented by [CWinApp::OnHelpUsing](../mfc/reference/cwinapp-class.md#onhelpusing)  
   
- 第一命令演示应用程序的帮助索引。  第二个示例演示在使用 WinHelp 程序的用户帮助。  
+ The first command shows the Help index for the application. The second shows the user help on using the WinHelp program.  
   
-## 上下文相关帮助\(F1 Help\)  
- F1 键通常转换为具有 ID `ID_HELP` 的命令的快捷键。放在主窗口的快捷键对应表。  `ID_HELP` 命令可能用 ID `ID_HELP` 的按钮还在生成主窗口或对话框。  
+## <a name="context-sensitive-help-f1-help"></a>Context-Sensitive Help (F1 Help)  
+ The F1 key is usually translated to a command with an ID of `ID_HELP` by an accelerator placed into the main window's accelerator table. The `ID_HELP` command may also be generated by a button with an ID of `ID_HELP` on the main window or dialog box.  
   
- 无论 `ID_HELP` 如何生成常规的路由命令，则为命令，直到到达命令处理程序。  有关 MFC 命令传送结构的更多信息，请参见 [技术说明 21](../mfc/tn021-command-and-message-routing.md)。  如果应用程序已启用的帮助，则 `ID_HELP` 命令将已被 [CWinApp::OnHelp](../Topic/CWinApp::OnHelp.md)处理。  Application 对象收到帮助消息正确然后路由命令。  因为默认路由命令用于确定最特定的上下文，不够的这是必需的。  
+ Regardless of how the `ID_HELP` command is generated, it is routed as a normal command until it reaches a command handler. For more information about the MFC command-routing architecture, refer to [Technical Note 21](../mfc/tn021-command-and-message-routing.md). If the application has Help enabled, the `ID_HELP` command will be handled by [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). The application object receives the help message and then routes the command appropriately. This is necessary since the default command routing is not adequate for determining the most specific context.  
   
- `CWinApp::OnHelp` 尝试启动按下面的顺序 WinHelp:  
+ `CWinApp::OnHelp` attempts to launch WinHelp in the following order:  
   
-1.  检查使用 `AfxMessageBox` 活动调用的帮助 ID.  如果消息框处于活动状态，WinHelp 启动与上下文相应于该消息框。  
+1.  Checks for an active `AfxMessageBox` call with a Help ID. If a message box is currently active, WinHelp is launched with the context appropriate to that message box.  
   
-2.  WM\_COMMANDHELP 信息发送到活动窗口。  如果该窗口不响应通过启动 WinHelp，同一信息并发送到该窗口的上级，直到处理消息或当前窗口是顶级窗口。  
+2.  Sends a WM_COMMANDHELP message to the active window. If that window does not respond by launching WinHelp, the same message is then sent to the ancestors of that window until the message is processed or the current window is a top-level window.  
   
-3.  发送 ID\_DEFAULT\_HELP 命令向主窗口。  这称为默认帮助。  此命令映射通常为 `CWinApp::OnHelpIndex`。  
+3.  Sends a ID_DEFAULT_HELP command to the main window. This invokes the default Help. This command is generally mapped to `CWinApp::OnHelpIndex`.  
   
- 全局重写默认 ID 基数值 \(即 0x10000 命令的资源的 0x20000 如和对话框\)，应用程序应将 [CWinApp::WinHelp](../Topic/CWinApp::WinHelp.md)。  
+ To globally override the default ID base values (e.g. 0x10000 for commands and 0x20000 for resources such as dialogs), the application should override [CWinApp::WinHelp](../mfc/reference/cwinapp-class.md#winhelp).  
   
- 若要重写此功能和帮助上下文确定的方法，您应处理 WM\_COMMANDHELP 消息。  您与框架提供可提供希望更具体的帮助，路由，因为它仅访问相同深度与当前 MDI 子窗口。  可能还需要提供更具体的帮助为特定窗口或对话框，可以根据该对象当前内部状态或在对话框内的活动控件。  
+ To override this functionality and the way that a Help context is determined, you should handle the WM_COMMANDHELP message. You may wish to provide more specific Help routing than the framework provides, as it only goes as deep as the current MDI child window. You may also want to provide more specific help for a particular window or dialog, perhaps based on the current internal state of that object or the active control within the dialog.  
   
-## WM\_COMMANDHELP  
+## <a name="wmcommandhelp"></a>WM_COMMANDHELP  
   
 ```  
-  
+ 
 afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)  
+ 
 ```  
   
- WM\_COMMANDHELP 是活动窗口收到的私有 MFC Windows 消息，同时帮助请求时。  当窗口收到此消息时，它可以调用使用与窗口的内部状态执行上下文的 `CWinApp::WinHelp`。  
+ WM_COMMANDHELP is a private Windows MFC message that is received by the active window when Help is requested. When the window receives this message, it may call `CWinApp::WinHelp` with context that matches the window's internal state.  
   
  `lParam`  
- 包含当前可用的帮助上下文。  如果不确定，其`lParam` 为零帮助上下文。  `OnCommandHelp` 的实现。`lParam` 使用的上下文确定 ID 不同的上下文也可以传递到 `CWinApp::WinHelp`。  
+ Contains the currently available Help context. `lParam` is zero if no Help context has been determined. An implementation of `OnCommandHelp` can use the context ID in `lParam` to determine a different context or can just pass it to `CWinApp::WinHelp`.  
   
  `wParam`  
- 使用和不为零。  
+ Is not used and will be zero.  
   
- 如果 `OnCommandHelp` 函数调用 `CWinApp::WinHelp`，它将返回 `TRUE`。  返回 `TRUE` 停止此命令传送到其他类以及其他窗口。  
+ If the `OnCommandHelp` function calls `CWinApp::WinHelp`, it should return `TRUE`. Returning `TRUE` stops the routing of this command to other classes and to other windows.  
   
-## 帮助模式 \(Shift\+F1 帮助\)  
- 这是第二个窗体上下文相关的帮助。  通常，此模式将输入按 SHIFT\+F1 或通过菜单或工具栏。  它实现为命令 \(**ID\_CONTEXT\_HELP**\)。  消息筛选器挂钩不用于将此命令，在模式对话框或菜单为活动时，此命令才可用，因此用户在执行应用程序的主消息泵时 \(`CWinApp::Run`\)。  
+## <a name="help-mode-shiftf1-help"></a>Help Mode (Shift+F1 Help)  
+ This is the second form of context-sensitive Help. Generally, this mode is entered by pressing SHIFT+F1 or via the menu/toolbar. It is implemented as a command (**ID_CONTEXT_HELP**). The message filter hook is not used to translate this command while a modal dialog box or menu is active, therefore this command is only available to the user when the application is executing the main message pump (`CWinApp::Run`).  
   
- 在输入此模式后，鼠标光标帮助显示在所有区域，应用，即使应用程序通常显示为该区域的光标 \(如在 Windows 周围的大小调整边框\)。  用户可以使用鼠标或键盘选择命令。  而不是执行命令，该命令的帮助显示。  此外，用户可以单击屏幕上的可视化对象，如工具栏上的按钮，而且，用于帮助为该对象中显示。  `CWinApp::OnContextHelp`帮助提供此模式。  
+ After entering this mode, the Help mouse cursor is displayed over all areas of the application, even if the application would normally display its own cursor for that area (such as the sizing border around the window). The user is able to use the mouse or keyboard to select a command. Instead of executing the command, Help on that command is displayed. Also, the user can click a visible object on the screen, such as a button on the toolbar, and Help will be displayed for that object. This mode of Help is provided by `CWinApp::OnContextHelp`.  
   
- 在循环中执行，所有类型是停用，除键访问菜单的。  此外，命令转换通过 `PreTranslateMessage` 执行仍允许用户按快捷键以及获得该命令的帮助。  
+ During the execution of this loop, all keyboard input is inactive, except for keys that access the menu. Also, command translation is still performed via `PreTranslateMessage` to allow the user to press an accelerator key and receive help on that command.  
   
- 如果特定转换或在 SHIFT\+F1 帮助模式期间，出现在不应出现的 `PreTranslateMessage` 操作函数，您应在执行这些操作之前检查 `CWinApp` 的 `m_bHelpMode` 成员。  例如 `PreTranslateMessage` 的 `CDialog` 实现在调用 `IsDialogMessage`之前检查此。  在 SHIFT\+F1 模式下，这会禁用“对话框在无模式的对话框的导航”键。  此外，此循环内，`CWinApp::OnIdle` 仍调用。  
+ If there are particular translations or actions taking place in the `PreTranslateMessage` function that shouldn't take place during SHIFT+F1 Help mode, you should check the `m_bHelpMode` member of `CWinApp` before performing those operations. The `CDialog` implementation of `PreTranslateMessage` checks this before calling `IsDialogMessage`, for example. This disables "dialog navigation" keys on modeless dialogs during SHIFT+F1 mode. In addition, `CWinApp::OnIdle` is still called during this loop.  
   
- 如果用户从菜单中选择菜单命令，它将被处理为该命令的帮助 \(通过 **WM\_COMMANDHELP**，请参见下文\)。  如果用户单击应用程序窗口中可见区域，用于确定将与是否为非单击或客户端的单击。  `OnContextHelp` 句柄映射到客户的非工作单击自动单击。  如果它是客户单击它，然后将 **WM\_HELPHITTEST** 添加到单击的窗口。  如果该窗口返回一个非零值，则该值使用作为上下文。  如果返回零，`OnContextHelp` 尝试窗口 \(父和失败时，其父，等等\)。  如果帮助上下文都无法确定，默认会发送 **ID\_DEFAULT\_HELP** 命令向主窗口 \(通常为\)，则映射到 `CWinApp::OnHelpIndex`。  
+ If the user chooses a command from the menu, it is handled as help on that command (through **WM_COMMANDHELP**, see below). If the user clicks a visible area of the applications window, a determination is made as to whether it is a nonclient click or a client click. `OnContextHelp` handles mapping of nonclient clicks to client clicks automatically. If it is a client click, it then sends a **WM_HELPHITTEST** to the window that was clicked. If that window returns a nonzero value, that value is used as the context for help. If it returns zero, `OnContextHelp` tries the parent window (and failing that, its parent, and so on). If a Help context cannot be determined, the default is to send a **ID_DEFAULT_HELP** command to the main window, which is then (usually) mapped to `CWinApp::OnHelpIndex`.  
   
-## WM\_HELPHITTEST  
+## <a name="wmhelphittest"></a>WM_HELPHITTEST  
   
 ```  
-  
-afx_msg LRESULT CWnd::OnHelpHitTest(  
+ 
+afx_msg LRESULT CWnd::OnHelpHitTest(
 WPARAM, LPARAM lParam)  
 ```  
   
- **WM\_HELPHITTEST** 是在 SHIFT\+F1 帮助模式期间单击活动的窗口收到的私有 MFC Windows 消息。  当窗口收到此消息时，它返回一帮助 ID WinHelp 供使用。  
+ **WM_HELPHITTEST** is an MFC private windows message that is received by the active window clicked during SHIFT+F1 Help mode. When the Window receives this message, it returns a DWORD Help ID for use by WinHelp.  
   
- lParam LOWORD \(\)  
- 包含相对于鼠标单击窗口工作区的 X 轴设备坐标。  
+ LOWORD(lParam)  
+ contains the X-axis device coordinate where the mouse was clicked relative to the client area of the window.  
   
- HIWORD lParam \(\)  
- Y 轴包含坐标。  
+ HIWORD(lParam)  
+ contains the Y-axis coordinate.  
   
  `wParam`  
- 使用和不为零。  如果返回值不为零，WinHelp 调用该上下文。  如果返回值为零，父窗口对于帮助查询。  
+ is not used and will be zero. If the return value is nonzero, WinHelp is called with that context. If the return value is zero, the parent window is queried for help.  
   
- 在许多情况下，您可以利用您可能已经具有进行命中测试代码。  用于处理 **WM\_HELPHITTEST** 消息的示例参见 **CToolBar::OnHelpHitTest** 的实现 \(代码利用了按钮上和工具提示使用执行命中测试的代码。\) `CControlBar`。  
+ In many cases, you can leverage hit-testing code you may already have. See the implementation of **CToolBar::OnHelpHitTest** for an example of handling the **WM_HELPHITTEST** message (the code leverages the hit-test code used on buttons and tooltips in `CControlBar`).  
   
-## MFC 应用程序向导支持和 MAKEHM  
- MFC 应用程序向导创建必要的文件生成帮助文件 \(.cnt 和 .hpj 文件\)。  它还包括被 Microsoft Help 编译器接受的预 .rtf 文件。  许多主题完成，但一些可能需要对特定的应用程序进行修改。  
+## <a name="mfc-application-wizard-support-and-makehm"></a>MFC Application Wizard Support and MAKEHM  
+ The MFC Application Wizard creates the necessary files to build a Help file (.cnt and .hpj files). It also includes a number of prebuilt .rtf files that are accepted by the Microsoft Help Compiler. Many of the topics are complete, but some may need to be modified for your specific application.  
   
- “Help”映射文件的自动创建调用由 MAKEHM 的实用工具支持。  MAKEHM 实用工具可以将应用程序的文件 RESOURCE.H 到帮助映射文件。  例如：  
+ Automatic creation of a "help mapping" file is supported by a utility called MAKEHM. The MAKEHM utility can translate an application's RESOURCE.H file to a Help mapping file. For example:  
   
 ```  
 #define IDD_MY_DIALOG   2000  
 #define ID_MY_COMMAND   150  
 ```  
   
- 将转换为：  
+ will be translated into:  
   
 ```  
 HIDD_MY_DIALOG    0x207d0  
 HID_MY_COMMAND    0x10096  
 ```  
   
- 此格式是使用帮助编译器的功能兼容，映射上下文 ID \(右侧的数字\) 的主题的名称 \(在左侧的符号\)。  
+ This format is compatible with the Help compiler's facility, which maps context IDs (the numbers on the right side) with topic names (the symbols on the left side).  
   
- MAKEHM 的源代码可在编程实用工具示例 [MAKEHM](../top/visual-cpp-samples.md)的 MFC。  
+ The source code for MAKEHM is available in the MFC Programming Utilities sample [MAKEHM](../visual-cpp-samples.md).  
   
-## 添加帮助支持在运行" MFC 应用程序向导后  
- 的最佳方法将帮助添加到应用程序会检查在 MFC 应用程序向导的高级功能页面“区分上下文的帮助”选项在创建应用程序。  这样一来 MFC 应用程序向导自动将必要的消息映射项。`CWinApp`\- 对支持有助于的派生类。  
+## <a name="adding-help-support-after-running-the-mfc-application-wizard"></a>Adding Help Support After Running the MFC Application Wizard  
+ The best way to add Help to your application is to check the "Context-sensitive Help" option on the Advanced Features page of the MFC Application Wizard before creating your application. That way the MFC Application Wizard automatically adds the necessary message map entries to your `CWinApp`-derived class to support Help.  
   
-## 消息框上的帮助  
- 消息框上的帮助 \(有时称为警报\) 通过 `AfxMessageBox` 的 `MessageBox` 函数，它使用 Windows API 的换行支持。  
+## <a name="help-on-message-boxes"></a>Help on Message Boxes  
+ Help on Message Boxes (sometimes called alerts) is supported through the `AfxMessageBox` function, a wrapper for the `MessageBox` Windows API.  
   
- 具有 `AfxMessageBox`，一个用于字符串 ID 的使用和其他的两个版本使用。字符串指针 \(`LPCSTR`\):  
+ There are two versions of `AfxMessageBox`, one for use with a string ID and another for use with a pointer to string (`LPCSTR`):  
   
 ```  
-int AFXAPI AfxMessageBox(LPCSTR lpszText, UINT nType, UINT nIDHelp);  
-int AFXAPI AfxMessageBox(UINT nIDPrompt, UINT nType, UINT nIDHelp);  
+int AFXAPI AfxMessageBox(LPCSTR lpszText,
+    UINT nType,
+    UINT nIDHelp);
+
+int AFXAPI AfxMessageBox(UINT nIDPrompt,
+    UINT nType,
+    UINT nIDHelp);
 ```  
   
- 在这两种情况下，有帮助选项 ID.  
+ In both cases, there is an optional Help ID.  
   
- 在第一种情况 nIDHelp，默认的为 0，而指示此消息的帮助。  如果用户按 F1，在 \(例如消息为活动时，用户不会获取帮助 \(即使应用程序支持帮助\)。  如果这不需要的，应该为 nIDHelp 提供帮助 ID。  
+ In the first case, the default for nIDHelp is 0, which indicates no Help for this message box. If the user presses F1 while such as message box is active, the user will not receive Help (even if the application supports Help). If this is not desirable, a Help ID should be provided for nIDHelp.  
   
- 在第二种情况下，nIDHelp 的默认值是 \-1，指示帮助 ID 与 nIDPrompt。  帮助会起作用，只有当应用程序帮助启用，当然\)。  应为 nIDHelp 提供 0，如果希望消息没有帮助支持。  如果不希望 nIDPrompt 消息是启用的帮助，但希望不同的帮助 ID，请为 nIDHelp 提供正值与 nIDPrompt 不同。  
+ In the second case, the default value for nIDHelp is -1, which indicates the Help ID is the same as nIDPrompt. Help will work only if the application is Help-enabled, of course). You should provide 0 for nIDHelp if you wish that the message box have no help support. Should you want the message to be Help enabled, but desire a different help ID than nIDPrompt, simply provide a positive value for nIDHelp different from that of nIDPrompt.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

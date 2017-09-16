@@ -1,66 +1,85 @@
 ---
-title: "如何：自定义应用程序按钮 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序按钮, 自定义"
+title: 'How to: Customize the Application Button | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 如何：自定义应用程序按钮
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28a3c05e9df5e3bb62e5019e3664a939a34e8b29
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当单击按钮时，应用程序菜单命令显示。  通常，该菜单包含文件关联的命令 \(如 **打开**、**保存**、**打印**和 **退出**。  
+---
+# <a name="how-to-customize-the-application-button"></a>How to: Customize the Application Button
+When you click the Application button, a menu of commands is displayed. Typically, the menu contains file-related commands such as **Open**, **Save**, **Print**, and **Exit**.  
   
- ![MFC 功能区应用程序按钮](../mfc/media/application_button.png "Application\_Button")  
+ ![MFC Ribbon Application Button](../mfc/media/application_button.png "application_button")  
   
- 若要自定义应用按钮，请将其在 **属性** 窗口，更改其属性，然后预览功能区控件。  
+ To customize the Application button, open it in the **Properties** window, modify its properties, and then preview the ribbon control.  
   
-### 若要打开应用程序按在"属性"窗口  
+### <a name="to-open-the-application-button-in-the-properties-window"></a>To open the Application button in the Properties window  
   
-1.  在 Visual Studio 中，在 **视图** 菜单上，单击 **资源视图**。  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  在 **资源视图**中，双击功能区资源的设计图面上查看它。  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  在设计图面上，右击应用按钮菜单中单击 **属性**。  
+3.  On design surface, right-click the Application button menu and then click **Properties**.  
   
-## 应用按钮的属性  
- 下表定义的按钮的属性。  
+## <a name="application-button-properties"></a>Application Button Properties  
+ The following table defines the properties of the Application button.  
   
-|Property|定义|  
-|--------------|--------|  
-|**按钮**|包含出现应用程序菜单的右下角三个按钮集合的设置。|  
-|**Caption**|指定控件的文本。  与其他功能区元素，应用程序无法显示描述文本。  而，文本为辅助功能。|  
-|**HDPI 图像**|指定高、点\/英寸 \(HDPI\) 应用程序按钮图标的标识符。  在高 DPI 显示器运行时，使用 **HDPI 图像** 而不是 **图像**。|  
-|**HDPI 大图像**|指定高 DPI 大图像的标识符。  在高 DPI 显示器运行时，使用 **HDPI 大图像** 而不是 **大图像**。|  
-|**HDPI 小的图像**|指定高 DPI 小图像的标识符。  在高 DPI 显示器运行时，使用 **HDPI 小的图像** 而不是 **小的图像**。|  
-|**ID**|指定控件的标识符。|  
-|**Image**|指定应用程序图标按钮的标识符。  图标是包含 Alpha 的透明度的 32 位 26x26 位图。  当应用按钮单击或键盘时，该图标的透明部分突出显示。|  
-|**键**|指定显示的字符串，而键提示导航启用。  当您按下 Alt，键提示导航启用。|  
-|**大图像**|指定包含一系列的 32x32 图标图像的标识符。  使用按钮图标。主要项集合。|  
-|**主要项**|出现包含"菜单项的集合。|  
-|**MRU 标题**|关于新列表指定面板中显示的文本。|  
-|**小的图像**|指定包含一系列的 16x16 图标图像的标识符。  使用按钮图标按钮集合。|  
-|**使用**|启用或禁用新列表"面板。  新列表"面板显示"菜单。|  
-|**宽度**|在最新列表"面板的像素指定宽度。|  
+|Property|Definition|  
+|--------------|----------------|  
+|**Buttons**|Contains the collection of up to three buttons that appear in the bottom-right corner of the Application menu.|  
+|**Caption**|Specifies the text of the control. Unlike other ribbon elements, the Application button does not display caption text. Instead, the text is used for accessibility.|  
+|**HDPI Image**|Specifies the identifier of the high dots per inch (HDPI) Application button icon. When the application runs on a high DPI monitor, **HDPI Image** is used instead of **Image**.|  
+|**HDPI Large Images**|Specifies the identifier of the high DPI large images. When the application runs on a high DPI monitor, **HDPI Large Images** is used instead of **Large Images**.|  
+|**HDPI Small Images**|Specifies the identifier of the high DPI small images. When the application runs on a high DPI monitor, **HDPI Small Images** is used instead of **Small Images**.|  
+|**ID**|Specifies the identifier of the control.|  
+|**Image**|Specifies the identifier of the Application button icon. The icon is a 32-bit 26x26 bitmap that has alpha transparency. The transparent portions of the icon are highlighted when the Application button is clicked or hovered over.|  
+|**Keys**|Specifies the string that is displayed when key-tip navigation is enabled. Key-tip navigation is enabled when you press ALT.|  
+|**Large Images**|Specifies the identifier of the image that contains a series of 32x32 icons. The icons are used by the buttons in the Main Items collection.|  
+|**Main Items**|Contains a collection of menu items that appear on the Application menu.|  
+|**MRU Caption**|Specifies the text displayed on the Recent List panel.|  
+|**Small Images**|Specifies the identifier of the image that contains a series of 16x16 icons. The icons are used by the buttons in the Buttons collection.|  
+|**Use**|Enables or disables the Recent List panel. The Recent List panel appears on the Application menu.|  
+|**Width**|Specifies the width in pixels of the Recent List panel.|  
   
- 应用程序菜单不会显示在设计图面上。  若要显示，它必须预览功能区或运行应用程序。  
+ The Application menu does not appear on the design surface. To view it, you must either preview the ribbon or run the application.  
   
-#### 预览功能区控件  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   在 **功能编辑器工具栏**中，单击 **测试 Ribbon**。  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## 请参阅  
- [功能区设计器 \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

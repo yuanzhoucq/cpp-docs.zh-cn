@@ -1,5 +1,5 @@
 ---
-title: "CGopherFile 类 |Microsoft 文档"
+title: CGopherFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gopher protocol files
-- Internet, gopher
-- CGopherFile class
+- CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
 caps.latest.revision: 23
 author: mikeblome
@@ -37,39 +35,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 40c1e385d0f58095c2aa79cc23168fc00f48ed9b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86d539c706a2b0f607d771142ae03dbd86be35ee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cgopherfile-class"></a>CGopherFile 类
-提供查找和读取 Gopher 服务器上文件的功能。  
+# <a name="cgopherfile-class"></a>CGopherFile Class
+Provides the functionality to find and read files on a gopher server.  
   
 > [!NOTE]
->  这些类`CGopherConnection`， `CGopherFile`， `CGopherFileFind`，`CGopherLocator`和其成员已被否决，因为它们不能在 Windows XP 平台上，但它们将继续在较早的平台上工作。  
+>  The classes `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` and their members have been deprecated because they do not work on the Windows XP platform, but they will continue to work on earlier platforms.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CGopherFile : public CInternetFile  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CGopherFile::CGopherFile](#cgopherfile)|构造 `CGopherFile` 对象。|  
+|[CGopherFile::CGopherFile](#cgopherfile)|Constructs a `CGopherFile` object.|  
   
-## <a name="remarks"></a>备注  
- Gopher 服务不允许用户对 gopher 文件写入数据，因为此服务主要用作查找信息的菜单驱动式界面。 `CGopherFile`成员函数**编写**， `WriteString`，和`Flush`未向实施`CGopherFile`。 在调用这些函数`CGopherFile`对象返回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+## <a name="remarks"></a>Remarks  
+ The gopher service does not allow users to write data to a gopher file because this service functions mainly as a menu-driven interface for finding information. The `CGopherFile` member functions **Write**, `WriteString`, and `Flush` are not implemented for `CGopherFile`. Calling these functions on a `CGopherFile` object, returns a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 若要了解有关如何`CGopherFile`工作与其他 MFC Internet 类，请参阅文章[Internet 编程与 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
+ To learn more about how `CGopherFile` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -80,11 +78,11 @@ class CGopherFile : public CInternetFile
   
  `CGopherFile`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
- 调用此成员函数来构造`CGopherFile`对象。  
+##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
+ This member function is called to construct a `CGopherFile` object.  
   
 ```  
 CGopherFile(
@@ -101,38 +99,38 @@ CGopherFile(
     DWORD_PTR dwContext);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hFile`  
- 句柄`HINTERNET`文件。  
+ A handle to an `HINTERNET` file.  
   
  `refLocator`  
- 对引用[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)对象。  
+ A reference to a [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) object.  
   
  `pConnection`  
- 一个指向[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)对象。  
+ A pointer to a [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) object.  
   
  `hSession`  
- 当前 Internet 会话句柄。  
+ A handle to the current Internet session.  
   
  `pstrLocator`  
- 指向用来定位 gopher 服务器的字符串的指针。 请参阅[Gopher 会话](https://msdn.microsoft.com/library/24wz8xze.aspx)有关 gopher 定位符的详细信息。  
+ A pointer to a string used to locate the gopher server. See [Gopher Sessions](https://msdn.microsoft.com/library/24wz8xze.aspx) for more information about gopher locators.  
   
  *dwLocLen*  
- 一个包含中的字节数的 dword 值`pstrLocator`。  
+ A DWORD containing the number of bytes in `pstrLocator`.  
   
  `dwContext`  
- 指向所打开的文件的上下文标识符的指针。  
+ A pointer to the context identifier of the file being opened.  
   
-### <a name="remarks"></a>备注  
- 您需要`CGopherFile`对象，以便从文件读取 gopher Internet 会话期间。  
+### <a name="remarks"></a>Remarks  
+ You need a `CGopherFile` object to read from a file during a gopher Internet session.  
   
- 切勿创建`CGopherFile`直接对象。 而应调用[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)若要打开 gopher 服务器上的文件。  
+ You never create a `CGopherFile` object directly. Instead, call [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) to open a file on a gopher server.  
   
-## <a name="see-also"></a>另请参阅  
- [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
- [CGopherLocator 类](../../mfc/reference/cgopherlocator-class.md)   
- [CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md)   
- [CGopherConnection 类](../../mfc/reference/cgopherconnection-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetFile Class](../../mfc/reference/cinternetfile-class.md)   
+ [CGopherLocator Class](../../mfc/reference/cgopherlocator-class.md)   
+ [CGopherFileFind Class](../../mfc/reference/cgopherfilefind-class.md)   
+ [CGopherConnection Class](../../mfc/reference/cgopherconnection-class.md)
 

@@ -1,115 +1,134 @@
 ---
-title: "Windows 套接字：字节排序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "套接字编程中的字节顺序问题"
-  - "套接字 [C++], 字节顺序问题"
-  - "Windows 套接字 [C++], 字节顺序问题"
+title: 'Windows Sockets: Byte Ordering | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- byte order issues in sockets programming
+- sockets [MFC], byte order issues
+- Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows 套接字：字节排序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8542122bc1d242c564a3b25eacc7387d784057fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文和两指南手册演示 Windows Sockets 编程的一些问题。  本文包括字节顺序。  文章中介绍的其他问题：[Windows Sockets：块](../mfc/windows-sockets-blocking.md) 和 [Windows Sockets：转换字符串](../mfc/windows-sockets-converting-strings.md)。  
+---
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Byte Ordering
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers byte ordering. The other issues are covered in the articles: [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) and [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- 如果使用或派生自类[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，将需要管理这些问题。  如果使用或派生自类[CSocket](../mfc/reference/csocket-class.md)，MFC 为您管理这些。  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## 字节顺序  
- 不同的机器结构采用不同的字节顺序存储数据。  例如，在 Motorola Macintosh 计算机\) \(相反的顺序基于 Intel 的计算机存储数据。  Intel Little\-Endian 字节顺序，名为“”，也是网络标准“Big\-Endian”顺序相反。  下表说明这些术语。  
+## <a name="byte-ordering"></a>Byte Ordering  
+ Different machine architectures sometimes store data using different byte orders. For example, Intel-based machines store data in the reverse order of Macintosh (Motorola) machines. The Intel byte order, called "little-Endian," is also the reverse of the network standard "big-Endian" order. The following table explains these terms.  
   
-### 大和小端字节排序  
+### <a name="big--and-little-endian-byte-ordering"></a>Big- and Little-Endian Byte Ordering  
   
-|字节顺序|含义|  
-|----------|--------|  
-|大端|大端表示最大的有效字节位于单词的左端。|  
-|小端|大端表示最大的有效字节位于单词的右端。|  
+|Byte ordering|Meaning|  
+|-------------------|-------------|  
+|Big-Endian|The most significant byte is on the left end of a word.|  
+|Little-Endian|The most significant byte is on the right end of a word.|  
   
- 通常，您不必担心您通过网络发送和接收的数据的字节序列转换，但必须将字节顺序的情况。  
+ Typically, you do not have to worry about byte-order conversion for data that you send and receive over the network, but there are situations in which you must convert byte orders.  
   
-## 当必须将字节顺序  
- 需要在以下情况下转换字节顺序：  
+## <a name="when-you-must-convert-byte-orders"></a>When You Must Convert Byte Orders  
+ You need to convert byte orders in the following situations:  
   
--   您需要通过网络传递的信息解释，而您发送到另一台数据相对的。  例如，您可能将端口和网络地址，必须理解。  
+-   You are passing information that needs to be interpreted by the network, as opposed to the data you are sending to another machine. For example, you might pass ports and addresses, which the network must understand.  
   
--   您进行的服务器应用不是 MFC 应用程序 \(并在没有它的源代码\)。  此调用字节序列转换，如果两台计算机不共享同样字节顺序。  
+-   The server application with which you are communicating is not an MFC application (and you do not have source code for it). This calls for byte order conversions if the two machines do not share the same byte ordering.  
   
-## 在不必将转换字节顺序  
- 可以避免在以下情况下转换字节顺序工作：  
+## <a name="when-you-do-not-have-to-convert-byte-orders"></a>When You Do Not Have to Convert Byte Orders  
+ You can avoid the work of converting byte orders in the following situations:  
   
--   在两端的计算机上授予不交换字节，因此，两台计算机上使用相同字节顺序。  
+-   The machines on both ends can agree not to swap bytes, and both machines use the same byte order.  
   
--   您的服务器使用的是 MFC 应用程序。  
+-   The server you are communicating with is an MFC application.  
   
--   您将使用的服务器上的源代码，所以，可以显式分辨率是否必须将字节顺序。  
+-   You have source code for the server you're communicating with, so you can tell explicitly whether you must convert byte orders or not.  
   
--   服务器可以移植到 MFC。  这非常轻松执行，并且，结果通常更小，更快的代码。  
+-   You can port the server to MFC. This is fairly easy to do, and the result is usually smaller, faster code.  
   
- 使用 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)时，必须管理所需的字节序列转换。  Windows 套接字标准化“Big\-Endian”字节顺序并提供函数。此顺序和其他类型之间的转换。  [CArchive](../mfc/reference/carchive-class.md)，但是，可以使用 [CSocket](../mfc/reference/csocket-class.md)相反，使用 \(“Little\-Endian”\) 排序，但是，`CArchive` 负责字节序列转换详细信息了。  使用顺序应用程序或使用 Windows 套接字字节序列转换函数的此标准，可以使代码更可移植。  
+ Working with [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you must manage any necessary byte-order conversions yourself. Windows Sockets standardizes the "big-Endian" byte-order model and provides functions to convert between this order and others. [CArchive](../mfc/reference/carchive-class.md), however, which you use with [CSocket](../mfc/reference/csocket-class.md), uses the opposite ("little-Endian") order, but `CArchive` takes care of the details of byte-order conversions for you. By using this standard ordering in your applications, or using Windows Sockets byte-order conversion functions, you can make your code more portable.  
   
- 使用 MFC 套接字的理想情况是在您编写通信端点时：在两端都使用 MFC。  如果编写的非 MFC 应用程序将如通信，FTP 服务器，您的应用程序可能需要管理字节交换使用 Windows 套接字转换程序 **ntohs**、**ntohl**、**htons**和 **htonl**之前，在将数据传递到存档，对象。  在进行这些函数的示例使用非 MFC 应用程序之后。在本文。  
+ The ideal case for using MFC sockets is when you are writing both ends of the communication: using MFC at both ends. If you are writing an application that will communicate with non-MFC applications, such as an FTP server, you will probably need to manage byte-swapping yourself before you pass data to the archive object, using the Windows Sockets conversion routines **ntohs**, **ntohl**, **htons**, and **htonl**. An example of these functions used in communicating with a non-MFC application appears later in this article.  
   
 > [!NOTE]
->  当不存在的另一端。不是 MFC 应用程序时，还必须避免流从 `CObject` 派生的 C\+\+ 对象到存档，因为该接收器不能够处理它们。  参见 [Windows 套接字：将存档的套接字](../mfc/windows-sockets-using-sockets-with-archives.md)的注释。  
+>  When the other end of the communication is not an MFC application, you also must avoid streaming C++ objects derived from `CObject` into your archive because the receiver will not be able to handle them. See the note in [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md).  
   
- 有关字节顺序的更多信息，请参见 Windows 套接字规范，[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中可用。  
+ For more information about byte orders, see the Windows Sockets specification, available in the Windows SDK.  
   
-## 字节序列转换示例  
- 下面的示例演示如何使用已存档的 `CSocket` 对象序列化的函数。  使用在 Windows 套接字，API 的字节序列转换函数还说明。  
+## <a name="a-byte-order-conversion-example"></a>A Byte-Order Conversion Example  
+ The following example shows a serialization function for a `CSocket` object that uses an archive. It also illustrates using the byte-order conversion functions in the Windows Sockets API.  
   
- 此示例提供是在编写客户与非 MFC 服务器应用程序不具有访问源代码的一种方案。  在这种情况下，必须假定，非 MFC 服务器使用标准 Web 字节顺序。  相反，MFC 客户端应用程序使用 `CSocket` 对象的 `CArchive` 对象和 `CArchive` 使用“Little\-Endian”字节顺序，则网络标准的相反值。  
+ This example presents a scenario in which you are writing a client that communicates with a non-MFC server application for which you have no access to the source code. In this scenario, you must assume that the non-MFC server uses standard network byte order. In contrast, your MFC client application uses a `CArchive` object with a `CSocket` object, and `CArchive` uses "little-Endian" byte order, the opposite of the network standard.  
   
- 假定您有一条消息通信计划数据包中的协议建立如下所示的非 MFC 服务器：  
+ Suppose the non-MFC server with which you plan to communicate has an established protocol for a message packet like the following:  
   
- [!CODE [NVC_MFCSimpleSocket#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#5)]  
+ [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]  
   
- 在 MFC 术语，这表示如下：  
+ In MFC terms, this would be expressed as follows:  
   
- [!CODE [NVC_MFCSimpleSocket#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#6)]  
+ [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- 在 C\+\+，`struct` 实际上是内容与类相同。  `Message` 结构可以具有成员函数，如中声明的 `Serialize` 成员函数前面。  `Serialize` 成员函数如下所示：:  
+ In C++, a `struct` is essentially the same thing as a class. The `Message` structure can have member functions, such as the `Serialize` member function declared above. The `Serialize` member function might look like this:  
   
- [!CODE [NVC_MFCSimpleSocket#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#7)]  
+ [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   
- 此示例调用数据字节序列转换，因为存在字节顺序非 MFC 服务器应用于一个和上另一结束在 MFC 端的客户端应用程序的 `CArchive` 之间广泛的不匹配。  示例说明 Windows 套接字提供的几字节序列转换函数。  下表描述了这些函数。  
+ This example calls for byte-order conversions of data because there is a clear mismatch between the byte ordering of the non-MFC server application on one end and the `CArchive` used in your MFC client application on the other end. The example illustrates several of the byte-order conversion functions that Windows Sockets supplies. The following table describes these functions.  
   
-### Windows 套接字字节序列转换函数  
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows Sockets Byte-Order Conversion Functions  
   
-|功能|用途|  
-|--------|--------|  
-|**ntohs**|转换为 16 位数。从网络字节顺序为托管 \(字节顺序 Big\-Endian 为 little\-endian\)。|  
-|**ntohl**|转换为 32 位数。从网络字节顺序为托管 \(字节顺序 Big\-Endian 为 little\-endian\)。|  
-|**Htons**|转换为 16 位数。从网络字节顺序为托管 \(字节顺序大端为小端\)。|  
-|**Htonl**|转换为 32 位数。从网络字节顺序为托管 \(字节顺序大端为小端\)。|  
+|Function|Purpose|  
+|--------------|-------------|  
+|**ntohs**|Convert a 16-bit quantity from network byte order to host byte order (big-Endian to little-Endian).|  
+|**ntohl**|Convert a 32-bit quantity from network byte order to host byte order (big-Endian to little-Endian).|  
+|**Htons**|Convert a 16-bit quantity from host byte order to network byte order (little-Endian to big-Endian).|  
+|**Htonl**|Convert a 32-bit quantity from host byte order to network byte order (little-Endian to big-Endian).|  
   
- 此示例在另另一点是，一端通信的套接字应用程序非 MFC 应用程序时，则必须避免执行与下面类似的内容：  
+ Another point of this example is that when the socket application on the other end of the communication is a non-MFC application, you must avoid doing something like the following:  
   
  `ar << pMsg;`  
   
- 其中 `pMsg` 是指针对从类派生的。. C\+\+ 对象的 `CObject`。  这是发送额外 MFC 的信息与对象，服务器不能理解，那么，将，如果是 MFC 应用程序。  
+ where `pMsg` is a pointer to a C++ object derived from class `CObject`. This will send extra MFC information associated with objects and the server will not understand it, as it would if it were an MFC application.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [Windows 套接字：使用类 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows 套接字：背景](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows 套接字：流套接字](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows 套接字：数据报套接字](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 请参阅  
- [MFC 中的 Windows 套接字](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "istreambuf_iterator 类 | Microsoft Docs"
+title: istreambuf_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istreambuf_iterator
 - streambuf/std::istreambuf_iterator
 - iterator/std::istreambuf_iterator::char_type
 - iterator/std::istreambuf_iterator::int_type
@@ -20,7 +19,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- istreambuf_iterator class
+- std::istreambuf_iterator [C++]
+- std::istreambuf_iterator [C++], char_type
+- std::istreambuf_iterator [C++], int_type
+- std::istreambuf_iterator [C++], istream_type
+- std::istreambuf_iterator [C++], streambuf_type
+- std::istreambuf_iterator [C++], traits_type
+- std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 caps.latest.revision: 19
 author: corob-msft
@@ -40,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 942f61a053e77bf3d677f51cc30d39b5f4c76db6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c93e635fbd36b36082f5cd74499fc07fadb3e826
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator 类
-模板类 istreambuf_iterator 描述输入迭代器对象，此对象可从输入流缓冲区（通过它存储的对象访问）提取指向 `basic_streambuf`\< **CharType**, **Traits**> 的类型指针的字符元素。  
+# <a name="istreambufiterator-class"></a>istreambuf_iterator Class
+The template class istreambuf_iterator describes an input iterator object that extracts character elements from an input stream buffer, which it accesses through an object it stores, of type pointer to `basic_streambuf`\< **CharType**, **Traits**>.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType class Traits = char_traits <CharType>>  
@@ -58,64 +63,64 @@ class istreambuf_iterator
 : public iterator<input_iterator_tag, CharType, typename Traits ::off_type, CharType*, CharType&>
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 一种类型，此类型表示 istreambuf_iterator 的字符类型。  
+ The type that represents the character type for the istreambuf_iterator.  
   
  `Traits`  
- 一种类型，此类型表示 istreambuf_iterator 的字符类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*  
+ The type that represents the character type for the istreambuf_iterator. This argument is optional and the default value is `char_traits`\< *CharType>.*  
   
-## <a name="remarks"></a>备注  
- istreambuf_iterator 类必须满足输入迭代器的需求。  
+## <a name="remarks"></a>Remarks  
+ The istreambuf_iterator class must satisfy the requirements for an input iterator.  
   
- 构造或递增带有非 null 存储指针的 istreambuf_iterator 类对象后，此对象将有效尝试从关联的输入流提取和存储 **CharType** 类型的对象。 不过，提取可能会延迟到实际取消引用对象或复制对象后进行。 如果提取失败，对象将使用 null 指针有效替换存储指针，从而设置序列末尾指示符。  
+ After constructing or incrementing an object of class istreambuf_iterator with a non-null stored pointer, the object effectively attempts to extract and store an object of type **CharType** from the associated input stream. The extraction may be delayed, however, until the object is actually dereferenced or copied. If the extraction fails, the object effectively replaces the stored pointer with a null pointer, thus making an end-of-sequence indicator.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[istreambuf_iterator](#istreambuf_iterator)|构造初始化为从输入流读取字符的 `istreambuf_iterator`。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|为 `ostreambuf_iterator` 的字符类型提供的类型。|  
-|[int_type](#int_type)|为 `istreambuf_iterator` 提供整数类型的类型。|  
-|[istream_type](#istream_type)|为 `istream_iterator` 的流类型提供的类型。|  
-|[streambuf_type](#streambuf_type)|为 `istreambuf_iterator` 的流类型提供的类型。|  
-|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|为 `istream_iterator` 的字符特征类型提供的类型。|  
+|[istreambuf_iterator](#istreambuf_iterator)|Constructs an `istreambuf_iterator` that is initialized to read characters from the input stream.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[equal](#equal)|对于两个输入流缓冲区迭代器是否相等的测试。|  
+|[char_type](#char_type)|A type that provides for the character type of the `ostreambuf_iterator`.|  
+|[int_type](#int_type)|A type that provides an integer type for an `istreambuf_iterator`.|  
+|[istream_type](#istream_type)|A type that provides for the stream type of the `istream_iterator`.|  
+|[streambuf_type](#streambuf_type)|A type that provides for the stream type of the `istreambuf_iterator`.|  
+|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|A type that provides for the character traits type of the `istream_iterator`.|  
   
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|取消引用运算符将返回流中的下一字符。|  
-|[operator++](#op_add_add)|返回输入流中的下一字符或者在递增对象前复制对象并返回副本。|  
-|[operator->](#operator-_gt)|返回成员的值（如果有）。|  
+|[equal](#equal)|Tests for equality between two input stream buffer iterators.|  
   
-## <a name="requirements"></a>要求  
- **标头：** \<iterator>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|The dereferencing operator returns the next character in the stream.|  
+|[operator++](#op_add_add)|Either returns the next character from the input stream or copies the object before incrementing it and returns the copy.|  
+|[operator->](#operator-_gt)|Returns the value of a member, if any.|  
   
-##  <a name="char_type"></a>istreambuf_iterator::char_type  
- 为 `ostreambuf_iterator` 的字符类型提供的类型。  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
+  
+ **Namespace:** std  
+  
+##  <a name="char_type"></a>  istreambuf_iterator::char_type  
+ A type that provides for the character type of the `ostreambuf_iterator`.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_char_type.cpp  
@@ -148,24 +153,24 @@ int main( )
 }  
 ```  
   
-##  <a name="equal"></a>istreambuf_iterator::equal  
- 测试：两个输入流缓冲区迭代器是否相等。  
+##  <a name="equal"></a>  istreambuf_iterator::equal  
+ Tests for equivalence between two input stream buffer iterators.  
   
 ```
 bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要针对其检查相等性的迭代器。  
+ The iterator for which to check for equality.  
   
-### <a name="return-value"></a>返回值  
- 如果两个 `istreambuf_iterator` 都是流末尾迭代器或都不是流末尾迭代器，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if both `istreambuf_iterator`s are end-of-stream iterators or if neither is an end-of-stream iterator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 通过 `istreambuf_iterator` 定义当前位置和流末尾迭代器的范围，但由于所有非流末尾迭代器在 **equal** 成员函数下都相等，因此无法使用 `istreambuf_iterator` 定义任何子范围。 `==` 和 `!=` 运算符具有相同的语义。  
+### <a name="remarks"></a>Remarks  
+ A range is defined by the `istreambuf_iterator` to the current position and the end-of-stream iterator, but since all non-end-of stream iterators are equivalent under the **equal** member function, it is not possible to define any subranges using `istreambuf_iterator`s. The `==` and `!=` operators have the same semantics.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_equal.cpp  
@@ -193,17 +198,17 @@ int main( )
 }  
 ```  
   
-##  <a name="int_type"></a>istreambuf_iterator::int_type  
- 为 `istreambuf_iterator` 提供整数类型的类型。  
+##  <a name="int_type"></a>  istreambuf_iterator::int_type  
+ A type that provides an integer type for an `istreambuf_iterator`.  
   
 ```
 typedef typename traits_type::int_type int_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 **Traits::int_type** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for **Traits::int_type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_int_type.cpp  
@@ -222,38 +227,38 @@ The inttype1 = 100.
 *\  
 ```  
   
-##  <a name="istream_type"></a>istreambuf_iterator::istream_type  
- 为 `istreambuf_iterator` 的流类型提供的类型。  
+##  <a name="istream_type"></a>  istreambuf_iterator::istream_type  
+ A type that provides for the stream type of the `istreambuf_iterator`.  
   
 ```
 typedef basic_istream<CharType, Traits> istream_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 `basic_istream`\< **CharType**, **Traits**> 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_istream`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `istream_type` 的示例，请参阅 [istreambuf_iterator](#istreambuf_iterator)。  
+### <a name="example"></a>Example  
+  See [istreambuf_iterator](#istreambuf_iterator) for an example of how to declare and use `istream_type`.  
   
-##  <a name="istreambuf_iterator"></a>istreambuf_iterator::istreambuf_iterator  
- 构造一个 istreambuf_iterator，会将其初始化以从输入流读取字符。  
+##  <a name="istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
+ Constructs an istreambuf_iterator that is initialized to read characters from the input stream.  
   
 ```
 istreambuf_iterator(streambuf_type* strbuf = 0) throw();
 istreambuf_iterator(istream_type& _Istr) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- `istreambuf_iterator` 要附加到的输入流缓冲区。  
+ The input stream buffer to which the `istreambuf_iterator` is being attached.  
   
  `_Istr`  
- `istreambuf_iterator` 要附加到的输入流。  
+ The input stream to which the `istreambuf_iterator` is being attached.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数通过 `strbuf` 初始化输入流缓冲区指针。 第二个构造函数通过 `_Istr` 初始化输入流缓冲区指针。 `rdbuf`，然后最终尝试提取和存储 **CharType** 类型的对象。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the input stream-buffer pointer with `strbuf`. The second constructor initializes the input stream-buffer pointer with `_Istr`. `rdbuf`, and then eventually attempts to extract and store an object of type **CharType**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_istreambuf_iterator.cpp  
@@ -285,17 +290,17 @@ int main( )
 }  
 ```  
   
-##  <a name="op_star"></a>istreambuf_iterator::operator*  
- 取消引用运算符将返回流中的下一字符。  
+##  <a name="op_star"></a>  istreambuf_iterator::operator*  
+ The dereferencing operator returns the next character in the stream.  
   
 ```
 CharType operator*() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 流中的下一个字符。  
+### <a name="return-value"></a>Return Value  
+ The next character in the stream.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_operator_deref.cpp  
@@ -323,21 +328,21 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add_add"></a>istreambuf_iterator::operator++  
- 返回输入流中的下一字符或者在递增对象前复制对象并返回副本。  
+##  <a name="op_add_add"></a>  istreambuf_iterator::operator++  
+ Either returns the next character from the input stream or copies the object before incrementing it and returns the copy.  
   
 ```
 istreambuf_iterator<CharType, Traits>& operator++();
 istreambuf_iterator<CharType, Traits> operator++(int);
 ```  
   
-### <a name="return-value"></a>返回值  
- `istreambuf_iterator` 或对 `istreambuf_iterator` 的引用。  
+### <a name="return-value"></a>Return Value  
+ An `istreambuf_iterator` or a reference to an `istreambuf_iterator`.  
   
-### <a name="remarks"></a>备注  
- 第一个运算符最终尝试从关联的输入流提取和存储 **CharType** 类型的对象。 第二个运算符生成对象的副本，递增对象，然后返回副本。  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_operator_incr.cpp  
@@ -365,40 +370,40 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator-_gt"></a>istreambuf_iterator::operator-&gt;  
- 返回成员的值（如果有）。  
+##  <a name="istreambuf_iterator__operator-_gt"></a>  istreambuf_iterator::operator-&gt;  
+ Returns the value of a member, if any.  
   
 ```
 const Elem* operator->() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 运算符返回 **&\*\*this**。  
+### <a name="return-value"></a>Return Value  
+ The operator returns **&\*\*this**.  
   
-##  <a name="streambuf_type"></a>istreambuf_iterator::streambuf_type  
- 为 istreambuf_iterator 的流类型提供的类型。  
+##  <a name="streambuf_type"></a>  istreambuf_iterator::streambuf_type  
+ A type that provides for the stream type of the istreambuf_iterator.  
   
 ```
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 `basic_streambuf`\< **CharType**, **Traits**> 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_streambuf`\< **CharType**, **Traits**>.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 **istreambuf_type** 的示例，请参阅 [istreambuf_iterator](#istreambuf_iterator)。  
+### <a name="example"></a>Example  
+  See [istreambuf_iterator](#istreambuf_iterator) for an example of how to declare and use **istreambuf_type**.  
   
-##  <a name="traits_type"></a>istreambuf_iterator::traits_type  
- 为 `istream_iterator` 的字符特征类型提供的类型。  
+##  <a name="traits_type"></a>  istreambuf_iterator::traits_type  
+ A type that provides for the character traits type of the `istream_iterator`.  
   
 ```
 typedef Traits traits_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **Traits** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Traits**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istreambuf_iterator_traits_type.cpp  
@@ -431,11 +436,11 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [iterator 结构](../standard-library/iterator-struct.md)   
+## <a name="see-also"></a>See Also  
+ [iterator Struct](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

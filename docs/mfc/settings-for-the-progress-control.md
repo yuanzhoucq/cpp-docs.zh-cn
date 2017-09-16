@@ -1,36 +1,55 @@
 ---
-title: "进度控件的设置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl 类, 设置"
-  - "进度控件 [C++], 设置"
+title: Settings for the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CProgressCtrl class [MFC], settings
+- progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 进度控件的设置
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23ef2372cfad73f6af8aa7d363dfb5f8f557aa14
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-进度 \([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)\) 的基本设置为范围和当前位置。  范围表示操作的整个持续时间。  当前位置表示应用程序获得了在完成操作的进度。  对范围或位置的原因的任何更改重新绘制自己的进度。  
+---
+# <a name="settings-for-the-progress-control"></a>Settings for the Progress Control
+The basic settings for the progress control ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) are the range and current position. The range represents the entire duration of the operation. The current position represents the progress that your application has made toward completing the operation. Any changes to the range or position cause the progress control to redraw itself.  
   
- 默认情况下，范围设置为 0 \- 100 与初始位置设置为 0。  若要检索进度的当前范围设置，请使用 [GetRange](../Topic/CProgressCtrl::GetRange.md) 成员函数。  若要更改范围，请使用 [SetRange](../Topic/CProgressCtrl::SetRange.md) 成员函数。  
+ By default, the range is set to 0 - 100, and the initial position is set to 0. To retrieve the current range settings for the progress control, use the [GetRange](../mfc/reference/cprogressctrl-class.md#getrange) member function. To change the range, use the [SetRange](../mfc/reference/cprogressctrl-class.md#setrange) member function.  
   
- 若要设置定位，请使用 [SetPos](../Topic/CProgressCtrl::SetPos.md)。  若要检索当前位置，不必指定新值，请使用 [GetPos](../Topic/CProgressCtrl::GetPos.md)。  例如，在当前操作的状态可能需要查询。  
+ To set the position, use [SetPos](../mfc/reference/cprogressctrl-class.md#setpos). To retrieve the current position without specifying a new value, use [GetPos](../mfc/reference/cprogressctrl-class.md#getpos). For example, you might want to simply query on the status of the current operation.  
   
- 若要单步执行进度的当前位置，请使用 [StepIt](../Topic/CProgressCtrl::StepIt.md)。  若要设置数量每个步骤，请使用 [SetStep](../Topic/CProgressCtrl::SetStep.md)  
+ To step the current position of the progress control, use [StepIt](../mfc/reference/cprogressctrl-class.md#stepit). To set the amount of each step, use [SetStep](../mfc/reference/cprogressctrl-class.md#setstep)  
   
-## 请参阅  
- [使用 CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

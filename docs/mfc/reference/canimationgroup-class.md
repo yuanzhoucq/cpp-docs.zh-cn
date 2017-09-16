@@ -1,5 +1,5 @@
 ---
-title: "CAnimationGroup 类 |Microsoft 文档"
+title: CAnimationGroup Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationGroup class
+- CAnimationGroup [MFC], CAnimationGroup
+- CAnimationGroup [MFC], Animate
+- CAnimationGroup [MFC], ApplyTransitions
+- CAnimationGroup [MFC], FindAnimationObject
+- CAnimationGroup [MFC], GetGroupID
+- CAnimationGroup [MFC], RemoveKeyframes
+- CAnimationGroup [MFC], RemoveTransitions
+- CAnimationGroup [MFC], Schedule
+- CAnimationGroup [MFC], SetAutodestroyTransitions
+- CAnimationGroup [MFC], AddKeyframes
+- CAnimationGroup [MFC], AddTransitions
+- CAnimationGroup [MFC], CreateTransitions
+- CAnimationGroup [MFC], m_bAutoclearTransitions
+- CAnimationGroup [MFC], m_bAutodestroyAnimationObjects
+- CAnimationGroup [MFC], m_bAutodestroyKeyframes
+- CAnimationGroup [MFC], m_lstAnimationObjects
+- CAnimationGroup [MFC], m_lstKeyFrames
+- CAnimationGroup [MFC], m_pStoryboard
+- CAnimationGroup [MFC], m_nGroupID
+- CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
 caps.latest.revision: 17
 author: mikeblome
@@ -54,102 +73,102 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a59d8a86fde68510d48e4a3398b6590b2215cbea
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 61c1f626ce3ab4482ff2e3bd406d81962d7d0490
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationgroup-class"></a>CAnimationGroup 类
-实现动画组，它结合了动画情节提要、 动画对象和转换来定义动画。  
+# <a name="canimationgroup-class"></a>CAnimationGroup Class
+Implements an animation group, which combines an animation storyboard, animation objects, and transitions to define an animation.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationGroup;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationGroup::CAnimationGroup](#canimationgroup)|构造的动画组。|  
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|析构函数。 当动画组被销毁时调用。|  
+|[CAnimationGroup::CAnimationGroup](#canimationgroup)|Constructs an animation group.|  
+|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|The destructor. Called when an animation group is being destroyed.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationGroup::Animate](#animate)|一组进行动画处理。|  
-|[CAnimationGroup::ApplyTransitions](#applytransitions)|将转换应用于动画对象。|  
-|[CAnimationGroup::FindAnimationObject](#findanimationobject)|查找包含指定的动画变量的动画对象。|  
-|[CAnimationGroup::GetGroupID](#getgroupid)|返回 GroupID。|  
-|[CAnimationGroup::RemoveKeyframes](#removekeyframes)|删除并有选择地销毁属于动画组的所有关键帧。|  
-|[CAnimationGroup::RemoveTransitions](#removetransitions)|从属于组的动画的动画对象中删除转换。|  
-|[CAnimationGroup::Schedule](#schedule)|将动画安排在指定的时间。|  
-|[CAnimationGroup::SetAutodestroyTransitions](#setautodestroytransitions)|指示属于进行自动分组的所有动画对象都销毁转换。|  
+|[CAnimationGroup::Animate](#animate)|Animates a group.|  
+|[CAnimationGroup::ApplyTransitions](#applytransitions)|Applies transitions to animation objects.|  
+|[CAnimationGroup::FindAnimationObject](#findanimationobject)|Finds an animation object that contains the specified animation variable.|  
+|[CAnimationGroup::GetGroupID](#getgroupid)|Returns GroupID.|  
+|[CAnimationGroup::RemoveKeyframes](#removekeyframes)|Removes and optionally destroys all keyframes that belong to an animation group.|  
+|[CAnimationGroup::RemoveTransitions](#removetransitions)|Removes transitions from animation objects that belong to an animation group.|  
+|[CAnimationGroup::Schedule](#schedule)|Schedules an animation at the specified time.|  
+|[CAnimationGroup::SetAutodestroyTransitions](#setautodestroytransitions)|Directs all animation objects that belong to group automatically destroy transitions.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationGroup::AddKeyframes](#addkeyframes)|一个帮助程序，将关键帧添加到情节提要。|  
-|[CAnimationGroup::AddTransitions](#addtransitions)|一个帮助程序，将转换添加到情节提要。|  
-|[CAnimationGroup::CreateTransitions](#createtransitions)|创建 COM 转换对象帮助器。|  
+|[CAnimationGroup::AddKeyframes](#addkeyframes)|A helper that adds keyframes to a storyboard.|  
+|[CAnimationGroup::AddTransitions](#addtransitions)|A helper that adds transitions to a storyboard.|  
+|[CAnimationGroup::CreateTransitions](#createtransitions)|A helper that creates COM transition objects.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|指定如何清除从属于组的动画对象的转换。 如果此成员为 TRUE 时，会自动删除转换时已安排动画。 否则，您需要手动删除转换。|  
-|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|指定如何进行销毁的动画对象。 如果此参数为 TRUE，则当该组被销毁时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值为 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。|  
-|[CAnimationGroup::m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|指定如何进行销毁的关键帧。 如果此值为 TRUE，所有关键帧的删除和销毁;否则，则就会从列表中只删除。 默认值为 TRUE。|  
-|[CAnimationGroup::m_lstAnimationObjects](#m_lstanimationobjects)|包含的动画对象的列表。|  
-|[CAnimationGroup::m_lstKeyFrames](#m_lstkeyframes)|列出的关键帧。|  
-|[CAnimationGroup::m_pStoryboard](#m_pstoryboard)|指向以动画情节提要。 此指针仅在调用动画之后才有效。|  
+|[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Specifies how to clear transitions from animation objects that belong to group. If this member is TRUE, transitions are removed automatically when an animation has been scheduled. Otherwise you need to remove transitions manually.|  
+|[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Specifies how to destroy animation objects. If this parameter is TRUE, animation objects will be destroyed automatically when the group is destroyed. Otherwise animation objects must be destroyed manually. The default value is FALSE. Set this value to TRUE only if all animation objects that belong to group are allocated dynamically with operator new.|  
+|[CAnimationGroup::m_bAutodestroyKeyframes](#m_bautodestroykeyframes)|Specifies how to destroy keyframes. If this value is TRUE, all keyframes are removed and destroyed; otherwise they are removed from the list only. The default value is TRUE.|  
+|[CAnimationGroup::m_lstAnimationObjects](#m_lstanimationobjects)|Contains a list of animation objects.|  
+|[CAnimationGroup::m_lstKeyFrames](#m_lstkeyframes)|Contains a list of keyframes.|  
+|[CAnimationGroup::m_pStoryboard](#m_pstoryboard)|Points to animation storyboard. This pointer is valid only after call on Animate.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationGroup::m_nGroupID](#m_ngroupid)|动画组的唯一标识符。|  
-|[CAnimationGroup::m_pParentController](#m_pparentcontroller)|此组所属的动画控制器指向的指针。|  
+|[CAnimationGroup::m_nGroupID](#m_ngroupid)|A unique identifier of animation group.|  
+|[CAnimationGroup::m_pParentController](#m_pparentcontroller)|A pointer to animation controller this group belongs to.|  
   
-## <a name="remarks"></a>备注  
- 动画组由动画控制器 (CAnimationController) 添加动画对象使用 CAnimationController::AddAnimationObject 时自动创建。 动画组由 GroupID，通常作为一个参数用来操作动画组标识。 GroupID 取自被添加到新的动画组的第一个动画对象。 调用 CAnimationController::AnimateGroup 并可通过公共成员 m_pStoryboard 访问后，将创建封装的动画情节提要。  
+## <a name="remarks"></a>Remarks  
+ Animation groups are created automatically by animation controller (CAnimationController) when you add animation objects using CAnimationController::AddAnimationObject. An animation group is identified by GroupID, which is usually taken as a parameter to manipulate animation groups. The GroupID is taken from the first animation object being added to a new animation group. An encapsulated animation storyboard is created after you call CAnimationController::AnimateGroup and can be accessed via public member m_pStoryboard.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CAnimationGroup`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
- 析构函数。 当动画组被销毁时调用。  
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup::~CAnimationGroup  
+ The destructor. Called when an animation group is being destroyed.  
   
 ```  
 ~CAnimationGroup();
 ```  
   
-##  <a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
- 一个帮助程序，将关键帧添加到情节提要。  
+##  <a name="addkeyframes"></a>  CAnimationGroup::AddKeyframes  
+ A helper that adds keyframes to a storyboard.  
   
 ```  
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 指向情节提要 COM 对象的指针。  
+ A pointer to a storyboard COM object.  
   
  `bAddDeep`  
- 指定是否应将此方法添加到依赖于其他关键帧的情节提要关键帧。  
+ Specifies whether this method should add to the storyboard keyframes that depend on other keyframes.  
   
-##  <a name="addtransitions"></a>CAnimationGroup::AddTransitions  
- 一个帮助程序，将转换添加到情节提要。  
+##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
+ A helper that adds transitions to a storyboard.  
   
 ```  
 void AddTransitions(
@@ -157,14 +176,14 @@ void AddTransitions(
     BOOL bDependOnKeyframes);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 指向情节提要 COM 对象的指针。  
+ A pointer to a storyboard COM object.  
   
  `bDependOnKeyframes`  
   
-##  <a name="animate"></a>CAnimationGroup::Animate  
- 一组进行动画处理。  
+##  <a name="animate"></a>  CAnimationGroup::Animate  
+ Animates a group.  
   
 ```  
 BOOL Animate(
@@ -173,185 +192,185 @@ BOOL Animate(
     BOOL bScheduleNow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pManager`  
  `pTimer`  
  `bScheduleNow`  
   
-### <a name="return-value"></a>返回值  
- 如果方法成功，则为 TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if the method succeeds; otherwise FALSE.  
   
-### <a name="remarks"></a>备注  
- 此方法创建内部情节提要、 创建和应用转换和动画安排 bScheduleNow 为 TRUE 时。 如果 bScheduleNow 为 FALSE，您需要调用计划，以便启动动画在指定的时间。  
+### <a name="remarks"></a>Remarks  
+ This method creates an internal storyboard, creates and applies transitions and schedules an animation if bScheduleNow is TRUE. If bScheduleNow is FALSE, you need to call Schedule to start animation at the specified time.  
   
-##  <a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
- 将转换应用于动画对象。  
+##  <a name="applytransitions"></a>  CAnimationGroup::ApplyTransitions  
+ Applies transitions to animation objects.  
   
 ```  
 void ApplyTransitions();
 ```  
   
-### <a name="remarks"></a>备注  
- 此方法断言在调试模式下，如果尚未创建情节提要。 它首先，创建的所有转换，然后将"静态"关键帧 （取决于的偏移量的关键帧） 添加、 添加不依赖于关键帧的转换、 添加关键帧，具体取决于转换和其他关键帧，并最后添加依赖于关键帧的转换。  
+### <a name="remarks"></a>Remarks  
+ This method ASSERTS in debug mode if storyboard has not been created. It creates all transitions first, then adds "static" keyframes (keyframes that depend on offsets), adds transitions that do not depend on keyframes, adds keyframes depending on transitions and other keyframes, and at last adds transitions that depend on keyframes.  
   
-##  <a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
- 构造的动画组。  
+##  <a name="canimationgroup"></a>  CAnimationGroup::CAnimationGroup  
+ Constructs an animation group.  
   
 ```  
 CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentController`  
- 指向用于创建一组动画控制器的指针。  
+ A pointer to animation controller that creates a group.  
   
  `nGroupID`  
- 指定 GroupID。  
+ Specifies GroupID.  
   
-##  <a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
- 创建 COM 转换对象帮助器。  
+##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
+ A helper that creates COM transition objects.  
   
 ```  
 BOOL CreateTransitions();
 ```  
   
-### <a name="return-value"></a>返回值  
- TRUE 是此方法成功，否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE is the method succeeds, otherwise FALSE.  
   
-##  <a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
- 查找包含指定的动画变量的动画对象。  
+##  <a name="findanimationobject"></a>  CAnimationGroup::FindAnimationObject  
+ Finds an animation object that contains the specified animation variable.  
   
 ```  
 CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pVariable`  
- 指向动画变量的指针。  
+ A pointer to animation variable.  
   
-### <a name="return-value"></a>返回值  
- 指向动画对象，则为 NULL，如果找不到动画对象的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to animation object, or NULL if animation object is not found.  
   
-##  <a name="getgroupid"></a>CAnimationGroup::GetGroupID  
- 返回 GroupID。  
+##  <a name="getgroupid"></a>  CAnimationGroup::GetGroupID  
+ Returns GroupID.  
   
 ```  
 UINT32 GetGroupID() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 组标识符。  
+### <a name="return-value"></a>Return Value  
+ A group identifier.  
   
-##  <a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
- 指定如何清除从属于组的动画对象的转换。 如果此成员为 TRUE 时，会自动删除转换时已安排动画。 否则，您需要手动删除转换。  
+##  <a name="m_bautocleartransitions"></a>  CAnimationGroup::m_bAutoclearTransitions  
+ Specifies how to clear transitions from animation objects that belong to group. If this member is TRUE, transitions are removed automatically when an animation has been scheduled. Otherwise you need to remove transitions manually.  
   
 ```  
 BOOL m_bAutoclearTransitions;  
 ```  
   
-##  <a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::m_bAutodestroyAnimationObjects  
- 指定如何进行销毁的动画对象。 如果此参数为 TRUE，则当该组被销毁时，将自动销毁动画对象。 否则，必须手动销毁动画对象。 默认值为 FALSE。 仅当使用 new 运算符动态分配属于组的所有动画对象，请将此值设置为 TRUE。  
+##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::m_bAutodestroyAnimationObjects  
+ Specifies how to destroy animation objects. If this parameter is TRUE, animation objects will be destroyed automatically when the group is destroyed. Otherwise animation objects must be destroyed manually. The default value is FALSE. Set this value to TRUE only if all animation objects that belong to group are allocated dynamically with operator new.  
   
 ```  
 BOOL m_bAutodestroyAnimationObjects;  
 ```  
   
-##  <a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
- 指定如何进行销毁的关键帧。 如果此值为 TRUE，所有关键帧的删除和销毁;否则，则就会从列表中只删除。 默认值为 TRUE。  
+##  <a name="m_bautodestroykeyframes"></a>  CAnimationGroup::m_bAutodestroyKeyframes  
+ Specifies how to destroy keyframes. If this value is TRUE, all keyframes are removed and destroyed; otherwise they are removed from the list only. The default value is TRUE.  
   
 ```  
 BOOL m_bAutodestroyKeyframes;  
 ```  
   
-##  <a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
- 包含的动画对象的列表。  
+##  <a name="m_lstanimationobjects"></a>  CAnimationGroup::m_lstAnimationObjects  
+ Contains a list of animation objects.  
   
 ```  
 CObList m_lstAnimationObjects;  
 ```  
   
-##  <a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
- 列出的关键帧。  
+##  <a name="m_lstkeyframes"></a>  CAnimationGroup::m_lstKeyFrames  
+ Contains a list of keyframes.  
   
 ```  
 CObList m_lstKeyFrames;  
 ```  
   
-##  <a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
- 动画组的唯一标识符。  
+##  <a name="m_ngroupid"></a>  CAnimationGroup::m_nGroupID  
+ A unique identifier of animation group.  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
- 此组所属的动画控制器指向的指针。  
+##  <a name="m_pparentcontroller"></a>  CAnimationGroup::m_pParentController  
+ A pointer to animation controller this group belongs to.  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
- 指向以动画情节提要。 此指针仅在调用动画之后才有效。  
+##  <a name="m_pstoryboard"></a>  CAnimationGroup::m_pStoryboard  
+ Points to animation storyboard. This pointer is valid only after call on Animate.  
   
 ```  
 ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;  
 ```  
   
-##  <a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
- 删除并有选择地销毁属于动画组的所有关键帧。  
+##  <a name="removekeyframes"></a>  CAnimationGroup::RemoveKeyframes  
+ Removes and optionally destroys all keyframes that belong to an animation group.  
   
 ```  
 void RemoveKeyframes();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果 m_bAutodestroyKeyframes 成员为 TRUE，则会删除关键帧并将其销毁，否则关键帧只是删除从关键帧的内部列表。  
+### <a name="remarks"></a>Remarks  
+ If m_bAutodestroyKeyframes member is TRUE then keyframes are removed and destroyed, otherwise keyframes are just removed from the internal list of keyframes.  
   
-##  <a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
- 从属于组的动画的动画对象中删除转换。  
+##  <a name="removetransitions"></a>  CAnimationGroup::RemoveTransitions  
+ Removes transitions from animation objects that belong to an animation group.  
   
 ```  
 void RemoveTransitions();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果 m_bAutoclearTransitions 标志设置为 TRUE，则此方法循环访问属于的组的所有动画对象，并调用 CAnimationObject::ClearTransitions(FALSE)。  
+### <a name="remarks"></a>Remarks  
+ If m_bAutoclearTransitions flag is set to TRUE, this method loops over all animation objects that belong to the group and calls CAnimationObject::ClearTransitions(FALSE).  
   
-##  <a name="schedule"></a>CAnimationGroup::Schedule  
- 将动画安排在指定的时间。  
+##  <a name="schedule"></a>  CAnimationGroup::Schedule  
+ Schedules an animation at the specified time.  
   
 ```  
 BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pTimer`  
- 指向动画计时器的指针。  
+ A pointer to animation timer.  
   
  `time`  
- 指定该动画的安排的时间。  
+ Specifies time to schedule the animation.  
   
-### <a name="return-value"></a>返回值  
- 如果方法成功，则为 TRUEFALSE 如果该方法将失败，或者如果动画尚未调用与 bScheduleNow 设置为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if the method succeeds; FALSE if the method fails or if Animate has not been called with bScheduleNow set to FALSE.  
   
-### <a name="remarks"></a>备注  
- 调用此函数可将动画安排在指定的时间。 您必须首先设置为 FALSE 的 bScheduleNow 调用 Animate。  
+### <a name="remarks"></a>Remarks  
+ Call this function to schedule an animation at the specified time. You must call Animate with bScheduleNow set to FALSE first.  
   
-##  <a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
- 指示属于进行自动分组的所有动画对象都销毁转换。  
+##  <a name="setautodestroytransitions"></a>  CAnimationGroup::SetAutodestroyTransitions  
+ Directs all animation objects that belong to group automatically destroy transitions.  
   
 ```  
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bAutoDestroy`  
- 指定如何进行销毁转换。  
+ Specifies how to destroy transitions.  
   
-### <a name="remarks"></a>备注  
- 将此值设置为 FALSE，仅当分配到堆栈上的转换。 默认值为 TRUE，因此我们仍强烈建议为使用运算符 new 转换对象分配空间。  
+### <a name="remarks"></a>Remarks  
+ Set this value to FALSE only if you allocate transitions on the stack. The default value is TRUE, therefore it's highly recommended to allocate transition objects using operator new.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,7 +1,7 @@
 ---
-title: "链接器工具错误 LNK1104 |Microsoft 文档"
+title: Linker Tools Error LNK1104 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,55 +34,55 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: c6121f598bc2913b65fe781b07bcc27e6b55375b
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: e2ed1195fcd389a1ac5a0c93e66ad44aa96faf54
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="linker-tools-error-lnk1104"></a>链接器工具错误 LNK1104
-无法打开文件*filename*  
+# <a name="linker-tools-error-lnk1104"></a>Linker Tools Error LNK1104
+cannot open file '*filename*'  
   
-链接器无法打开指定的文件。  
+The linker could not open the specified file.  
   
-## <a name="possible-causes-and-solutions"></a>可能的原因和解决方案
+## <a name="possible-causes-and-solutions"></a>Possible causes and solutions
   
-链接器尝试打开以进行读取或写入的文件时，可以出现此错误。 此问题的最常见原因是该文件不存在，无法找到目录之一中链接器搜索时，或正在使用，另一个进程锁定。 较不常见的是，你可能已用完磁盘空间、 文件可能太大、 文件的路径可能太长，或你可能没有权限访问该文件。  
+This error can occur when the linker attempts to open a file for reading or for writing. The most common causes of this problem are that the file does not exist, can't be found in one of the directories the linker searches, or is in use and locked by another process. Less commonly, you may have run out of disk space, the file may be too large, the path to the file may be too long, or you may not have permission to access the file.  
 
-请检查这些常见的问题之一︰  
+Check for one of these common issues:  
 
--   当你尝试重新生成你的应用程序已在运行。 如果无法打开的文件是可执行文件或调试如.pdb 文件，这是一个常见原因。 若要解决此问题，请停止该程序，并将其从调试器卸载之前再次生成。  
+-   Your application is already running when you try to rebuild it. If the file that can't be opened is the executable or a debugging file such as a .pdb, this is a common cause. To fix this issue, stop the program and unload it from the debugger before building it again.  
   
--   文件*filename*生成的解决方案，但尚不存在时链接器尝试访问它。 这可能发生在一个项目依赖于另一个项目以生成此文件，但不是按正确的顺序生成项目时。 若要解决此问题，请确保你项目的引用设置中的项目中使用该文件，因此需要提供之前生成缺少的文件。 有关详细信息，请参阅[Visual c + + 项目中添加引用](../../ide/adding-references-in-visual-cpp-projects.md)和[管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)。  
+-   The file *filename* is built by your solution, but does not yet exist when the linker tries to access it. This can happen when one project depends on another project to produce this file, but the projects are not built in the correct order. To fix this issue, make sure your project references are set in the project that uses the file so the missing file is built before it is required. For more information, see [Adding references in Visual C++ projects](../../ide/adding-references-in-visual-cpp-projects.md) and [Managing references in a project](/visualstudio/ide/managing-references-in-a-project).  
   
--   文件名或命令行上或 #pragma lib 指令中指定的路径不正确，或者路径具有无效的驱动器规范。 请检查拼写，并验证该文件存在在指定的位置。  
+-   The filename or path specified on the command line or in a #pragma lib directive is incorrect, or the path has an invalid drive specification. Check your spelling and verify the file exists at the specified location.  
   
--   如果使用 Visual Studio IDE 生成项目从另一台计算机复制的则库的安装位置可能不同。 检查库目录属性[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)和根据需要进行更新。 若要查看和编辑在 IDE 中设置的当前库路径，选择库目录属性的下拉列表控件，然后选择**编辑**。 **计算值**部分的库目录对话框中列出当前搜索库文件的路径。  
+-   If you are using the Visual Studio IDE to build a project that was copied from another computer, the installation locations for libraries may be different. Check the Library Directories property on the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) and update it if necessary. To see and edit the current library paths set in the IDE, choose the drop-down control for the Library Directories property and choose **Edit**. The **Evaluated value** section of the Library Directories dialog lists the current paths searched for library files.  
   
--   如果你正在生成使用较旧版本的 Visual Studio 创建的项目，平台工具集和该版本的库可能不会不安装。 若要解决此问题，您具有两个选项︰ 你可以升级项目以使用你已安装的当前平台工具集，或者可以安装的较旧的工具集和生成项目保持不变。 有关详细信息，请参阅[从早期版本的 Visual c + + 升级项目](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)和[使用本机多目标在 Visual Studio 中生成旧项目](../../porting/use-native-multi-targeting.md)。
+-   If you're building a project that was created using an older version of Visual Studio, the platform toolset and libraries for that version may not be not installed. To fix this issue, you have two options: you can upgrade the project to use the current platform toolset you have installed, or you can install the older toolset and build the project unchanged. For more information, see [Upgrading Projects from Earlier Versions of Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) and [Use native multi-targeting in Visual Studio to build old projects](../../porting/use-native-multi-targeting.md).
   
--   未安装用于当前项目配置或平台工具集的库。 请验证中指定的平台工具集和 Windows SDK[常规属性页](../../ide/general-property-page-project.md)安装为你的项目，并验证是否在指定的库目录中提供了所需的库[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)的配置设置。 单独设置调试和发布配置，因此如果一个 build 的工作原理，但其他会导致错误，请确保设置正确无误，并为这两种配置安装所需的工具和库。  
+-   The libraries for the current project configuration or platform toolset are not installed. Verify that the platform toolset and Windows SDK specified in the [General property page](../../ide/general-property-page-project.md) for your project are installed, and verify that the required libraries are available in the Library Directories specified in the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) for your configuration settings. There are separate settings for Debug and Retail configurations, so if one build works but the other causes an error, make sure the settings are correct and the required tools and libraries are installed for both configurations.  
   
--   指向 Windows SDK 的路径已过期。 如果已安装的版本比你的 Visual Studio 版本新的 Windows sdk，请确保中指定的路径[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)更新以匹配新的 SDK。 如果你使用开发人员命令提示，请确保初始化环境变量的批处理文件，将更新为新的 SDK 路径。  
+-   The path to the Windows SDK is out of date. If you have installed a version of the Windows SDK that is newer than your version of Visual Studio, make sure that the paths specified in the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md) are updated to match the new SDK. If you use the Developer Command Prompt, make sure that the batch file that initializes the environment variables is updated for the new SDK paths.  
   
--   另一个程序可能已打开该文件，链接器无法向其写入。 防病毒程序通常暂时阻止对新创建的文件的访问。 若要解决此问题，请尝试从防病毒扫描程序中排除项目生成目录。  
+-   Another program may have the file open and the linker cannot write to it. Antivirus programs often temporarily block access to newly created files. To fix this issue, try excluding your project build directories from the antivirus scanner.  
   
--   如果你使用的并行生成选项，则可能 Visual Studio 已锁定另一个线程上的文件。 要解决此问题，请验证未生成的同一个代码对象或库在多个项目中，并且你使用的生成依赖关系或项目引用来选取你的项目中生成的二进制文件。  
+-   If you are using a parallel build option, it's possible that Visual Studio has locked the file on another thread. To fix this issue, verify that you do not build the same code object or library in multiple projects, and that you use build dependencies or project references to pick up built binaries in your project.  
   
--   具有不正确的 LIB 环境变量。 在命令行版本中，验证 LIB 环境变量已设置且包含你使用的库的所有目录。 在 IDE 中 LIB 变量属性设置的库目录上[VC + + 目录属性页](../../ide/vcpp-directories-property-page.md)。 请确保所有此处列出了包含所需的库的目录。 如果你需要提供库目录可重写的标准库目录，则可以使用[/LIBPATH](../../build/reference/libpath-additional-libpath.md)) 在命令行中或你的项目的链接器属性页中的附加库目录属性上的选项。  
+-   You have an incorrect LIB environment variable. In command line builds, verify that the LIB environment variable is set and contains all the directories for the libraries you use. In the IDE, the LIB variable is set by the Library Directories property on the [VC++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Make sure all the directories that contain the libraries you need are listed here. If you need to supply a library directory that overrides a standard library directory, you can use the [/LIBPATH](../../build/reference/libpath-additional-libpath.md)) option on the command line, or the Additional Library Directories property in the Linker property page for your project.  
   
--   在项目的属性页对话框中指定单独的库，必须用空格，而不是逗号分隔库名称。  
+-   When specifying individual libraries in a project's Property Pages dialog box, library names must be separated by spaces, not commas.  
   
--   路径*filename*超过 260 个字符。 更改名称或重新排列你的目录结构，如果需要缩短对所需文件的路径。  
+-   The path for *filename* expands to more than 260 characters. Change the names or rearrange your directory structure if needed to shorten the paths to the required files.  
   
--   该文件是太大。 库或对象的文件超过千兆字节的大小可能在 32 位链接的情况下会导致问题。 此问题的可能解决方法是使用 64 位工具集。 有关如何执行此操作在命令行的详细信息，请参阅[如何︰ 启用 64 位 Visual c + + 工具集在命令行上的](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。 有关如何执行此操作在 IDE 中的信息，请参阅[与 64 位编译器和工具使用 MSBuild](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)和此堆栈溢出文章︰[如何使 Visual Studio 中使用本机 amd64 工具链](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055)。  
+-   The file is too large. Libraries or object files more than a gigabyte in size may cause problems for the 32-bit linker. A possible fix for this issue is to use the 64-bit toolset. For more information on how to do this at the command line, see [How to: Enable a 64-Bit Visual C++ Toolset on the Command Line](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). For information on how to do this in the IDE, see [Using MSBuild with the 64-bit Compiler and Tools](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)  and this Stack Overflow post: [How to make Visual Studio use the native amd64 toolchain](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).  
   
--   具有访问没有足够的文件权限*filename*。 可能的原因是访问受保护的系统目录中的库文件或使用其他具有其原始的权限的用户复制文件设置。 若要解决此问题，请将文件移动到可写的项目目录中。 如果该文件可写目录中，但具有访问权限，你可以使用管理员命令提示符并运行 takeown.exe 命令，以获得的文件的所有权。  
+-   You have insufficient file permissions to access *filename*. This can happen if you access library files in protected system directories, or use files copied from other users that have their original permissions set. To fix this issue, move the file to a writeable project directory. If the file is in a writeable directory but has inaccessible permissions, you can use an Administrator command prompt and run the takeown.exe command to take ownership of the file.  
   
--   你没有足够的磁盘空间。 链接器在多个用例中使用临时文件。 即使有足够的磁盘空间，一个非常大的链接可以消耗或片段的可用磁盘空间。 请考虑使用[/OPT （优化）](../../build/reference/opt-optimizations.md)选项; 不采取可传递的 comdat 消除读取所有对象文件多次。  
+-   You don't have enough disk space. The linker uses temporary files in several cases. Even if you have sufficient disk space, a very large link can deplete or fragment the available disk space. Consider using the [/OPT (Optimizations)](../../build/reference/opt-optimizations.md) option; doing transitive comdat elimination reads all the object files multiple times.  
   
--   如果*filename*名为 LNK*n*、 即生成链接器为临时文件的文件名、 TMP 环境变量中指定的目录可能不存在，或为 TMP 环境变量可指定多个目录。 只能将一个目录路径应为 TMP 环境变量指定。  
+-   If the *filename* is named LNK*n*, which is a filename generated by the linker for a temporary file, the directory specified in the TMP environment variable may not exist, or more than one directory may be specified for the TMP environment variable. Only one directory path should be specified for the TMP environment variable.  
   
--   如果库名称出现错误消息，并且你最近刚从之前的 Microsoft Visual C++ 开发系统中移植了 .mak 文件，库名称可能不再有效。 确保库名称正确无误，且仍存在于指定的位置，或更新为指向新位置的 LIB 路径。  
+-   If the error message occurs for a library name, and you recently ported the .mak file from a previous Microsoft Visual C++ development system, the library may no longer be valid. Ensure that the library name is correct and still exists in the specified location, or update the LIB path to point to the new location.  
 

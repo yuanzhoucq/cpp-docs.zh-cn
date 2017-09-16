@@ -1,5 +1,5 @@
 ---
-title: "promise 类 | Microsoft Docs"
+title: promise Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,87 +38,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2f052d1af76e8f874e2bbe0187a82b838e47f45e
+helpviewer_keywords:
+- std::promise [C++]
+- std::promise [C++], promise
+- std::promise [C++], get_future
+- std::promise [C++], set_exception
+- std::promise [C++], set_exception_at_thread_exit
+- std::promise [C++], set_value
+- std::promise [C++], set_value_at_thread_exit
+- std::promise [C++], swap
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fb4ba5da5b2d7a65e1214e97b19ccf00d1bcca1c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="promise-class"></a>promise 类
-介绍*异步提供程序*。  
+# <a name="promise-class"></a>promise Class
+Describes an *asynchronous provider*.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class promise;
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[承诺](#promise)|构造 `promise` 对象。|  
+|[promise](#promise)|Constructs a `promise` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[get_future](#get_future)|返回与此 promise 关联的 [future](../standard-library/future-class.md)。|  
-|[set_exception](#set_exception)|以原子方式设置此 promise 的结果以指示异常。|  
-|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|以原子方式设置此 promise 的结果以指示异常，并且仅在销毁当前线程中的所有线程本地对象后（通常在线程退出时）发出通知。|  
-|[set_value](#set_value)|以原子方式设置此 promise 的结果以指示值。|  
-|[set_value_at_thread_exit](#set_value_at_thread_exit)|以原子方式设置此 promise 的结果以指示值，并且仅在销毁当前线程中的所有线程本地对象后（通常在线程退出时）发出通知。|  
-|[swap](#swap)|用指定的 promise 对象的*关联的异步状态*交换此 promise 的关联的异步状态。|  
+|[get_future](#get_future)|Returns a [future](../standard-library/future-class.md) associated with this promise.|  
+|[set_exception](#set_exception)|Atomically sets the result of this promise to indicate an exception.|  
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|Atomically sets the result of this promise to indicate an exception, and delivers the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).|  
+|[set_value](#set_value)|Atomically sets the result of this promise to indicate a value.|  
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|Atomically sets the result of this promise to indicate a value, and delivers the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).|  
+|[swap](#swap)|Exchanges the *associated asynchronous state* of this promise with that of a specified promise object.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[promise::operator=](#op_eq)|此 promise 对象的共享状态的分配。|  
+|[promise::operator=](#op_eq)|Assignment of the shared state of this promise object.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `promise`  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<将来 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="get_future"></a>promise::get_future  
- 返回具有与此 promise 相同的*关联异步状态*的 [future](../standard-library/future-class.md) 对象。  
+##  <a name="get_future"></a>  promise::get_future  
+ Returns a [future](../standard-library/future-class.md) object that has the same *associated asynchronous state* as this promise.  
   
 ```
 future<Ty> get_future();
 ```  
   
-### <a name="remarks"></a>备注  
- 如果 promise 对象为空，则此方法将引发一个 [error_code](../standard-library/error-code-class.md) 为 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If the promise object is empty, this method throws a [future_error](../standard-library/future-error-class.md) that has an [error_code](../standard-library/error-code-class.md) of `no_state`.  
   
- 如果此方法已调用具有相同关联异步状态的承诺对象，则此方法将引发 `future_error` 为 `error_code` 的 `future_already_retrieved`。  
+ If this method has already been called for a promise object that has the same associated asynchronous state, the method throws a `future_error` that has an `error_code` of `future_already_retrieved`.  
   
-##  <a name="op_eq"></a>promise::operator=  
- 从指定的 `promise` 对象传输*关联异步状态*。  
+##  <a name="op_eq"></a>  promise::operator=  
+ Transfers the *associated asynchronous state* from a specified `promise` object.  
   
 ```
 promise& operator=(promise&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 一个 `promise` 对象。  
+ A `promise` object.  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>备注  
- 此运算符从 `Other` 传输关联异步状态。 传输后，`Other` 为空。  
+### <a name="remarks"></a>Remarks  
+ This operator transfers the associated asynchronous state from `Other`. After the transfer, `Other` is *empty*.  
   
-##  <a name="promise"></a>promise::promise 构造函数  
- 构造 `promise` 对象。  
+##  <a name="promise"></a>  promise::promise Constructor  
+ Constructs a `promise` object.  
   
 ```
 promise();
@@ -127,58 +136,58 @@ promise(allocator_arg_t, const Alloc& Al);
 promise(promise&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Al`  
- 内存分配器。 有关详细信息，请参见 [\<allocators>](../standard-library/allocators-header.md)。  
+ A memory allocator. See [\<allocators>](../standard-library/allocators-header.md) for more information.  
   
  `Other`  
- 一个 `promise` 对象。  
+ A `promise` object.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数构造一个*空*`promise`对象。  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an *empty*`promise` object.  
   
- 第二个构造函数构造一个空 `promise` 对象，并使用 `Al` 实现内存分配。  
+ The second constructor constructs an empty `promise` object and uses `Al` for memory allocation.  
   
- 第三个构造函数构造 `promise` 对象并从 `Other` 传输关联异步状态，同时保留 `Other` 为空。  
+ The third constructor constructs a `promise` object and transfers the associated asynchronous state from `Other`, and leaves `Other` empty.  
   
-##  <a name="set_exception"></a>promise::set_exception  
- 以原子方式将异常存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。  
+##  <a name="set_exception"></a>  promise::set_exception  
+ Atomically stores an exception as the result of this `promise` object and sets the *associated asynchronous state* to *ready*.  
   
 ```
 void set_exception(exception_ptr Exc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Exc`  
- 通过此方法另存为异常结果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) that's stored by this method as the exception result.  
   
-### <a name="remarks"></a>备注  
- 如果 `promise` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If the `promise` object has no associated asynchronous state, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 `set_exception`、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ If `set_exception`, [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- 此方法的结果是，不再阻止在关联的异步状态上受阻的任何线程。  
+ As a result of this method, any threads that are blocked on the associated asynchronous state become unblocked.  
   
-##  <a name="set_exception_at_thread_exit"></a>promise::set_exception_at_thread_exit  
- 以原子方式设置此 `promise` 的结果以指示异常，并且仅在当前线程中的所有线程本地对象被销毁后（通常在线程退出时）发出通知。  
+##  <a name="set_exception_at_thread_exit"></a>  promise::set_exception_at_thread_exit  
+ Atomically sets the result of this `promise` to indicate an exception, delivering the notification only after all thread-local objects in the current thread have been destroyed (usually at thread exit).  
   
 ```
 void set_exception_at_thread_exit(exception_ptr Exc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Exc`  
- 通过此方法另存为异常结果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) that's stored by this method as the exception result.  
   
-### <a name="remarks"></a>备注  
- 如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If the promise object has no *associated asynchronous state*, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、`set_exception_at_thread_exit`、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ If [set_exception](#set_exception), `set_exception_at_thread_exit`, [set_value](#set_value), or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- 与 [set_exception](#set_exception) 相反，此方法在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。  
+ In contrast to [set_exception](#set_exception), this method does not set the associated asynchronous state to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state are not unblocked until the current thread exits.  
   
-##  <a name="set_value"></a>promise::set_value  
- 以原子方式将值存储为此 `promise` 对象的结果，并将“关联的异步状态”设置为“就绪”。  
+##  <a name="set_value"></a>  promise::set_value  
+ Atomically stores a value as the result of this `promise` object and sets the *associated asynchronous state* to *ready*.  
   
 ```
 void promise::set_value(const Ty& Val);
@@ -187,27 +196,27 @@ void promise<Ty&>::set_value(Ty& Val);
 void promise<void>::set_value();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Val`  
- 要存储为结果的值。  
+ The value to be stored as the result.  
   
-### <a name="remarks"></a>备注  
- 如果 `promise` 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If the `promise` object has no associated asynchronous state, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、`set_value` 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ If [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), `set_value`, or [set_value_at_thread_exit](#set_value_at_thread_exit) has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- 此方法的结果是，不再阻止在关联的异步状态上受阻的任何线程。  
+ As a result of this method, any threads that are blocked on the associated asynchronous state become unblocked.  
   
- 第一种方法还会引发在将 `Val` 复制到关联的异步状态时所引发的任何异常。 在此情况下，关联的异步状态不设置为“就绪”。  
+ The first method also throws any exception that is thrown when `Val` is copied into the associated asynchronous state. In this situation, the associated asynchronous state is not set to ready.  
   
- 第二种方法还会引发在将 `Val` 移动到关联的异步状态时引发的任何异常。 在此情况下，关联的异步状态不设置为“就绪”。  
+ The second method also throws any exception that is thrown when `Val` is moved into the associated asynchronous state. In this situation, the associated asynchronous state is not set to ready.  
   
- 对于部分专用化 `promise<Ty&>`，存储的值实际上是对 `Val` 的引用。  
+ For the partial specialization `promise<Ty&>`, the stored value is in effect a reference to `Val`.  
   
- 对于专用化 `promise<void>`，不存在任何存储的值。  
+ For the specialization `promise<void>`, no stored value exists.  
   
-##  <a name="set_value_at_thread_exit"></a>promise::set_value_at_thread_exit  
- 以原子方式将值存为此 `promise` 对象的结果。  
+##  <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit  
+ Atomically stores a value as the result of this `promise` object.  
   
 ```
 void promise::set_value_at_thread_exit(const Ty& Val);
@@ -216,38 +225,38 @@ void promise<Ty&>::set_value_at_thread_exit(Ty& Val);
 void promise<void>::set_value_at_thread_exit();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Val`  
- 要存储为结果的值。  
+ The value to be stored as the result.  
   
-### <a name="remarks"></a>备注  
- 如果 promise 对象没有关联的异步状态，则此方法将引发具有错误代码 `no_state` 的 [future_error](../standard-library/future-error-class.md)。  
+### <a name="remarks"></a>Remarks  
+ If the promise object has no *associated asynchronous state*, this method throws a [future_error](../standard-library/future-error-class.md) that has an error code of `no_state`.  
   
- 如果已为具有相同的关联异步状态的 `promise` 对象调用 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 `set_value_at_thread_exit`，则此方法将引发具有错误代码 `promise_already_satisfied` 的 `future_error`。  
+ If [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exception_at_thread_exit), [set_value](#set_value), or `set_value_at_thread_exit` has already been called for a `promise` object that has the same associated asynchronous state, this method throws a `future_error` that has an error code of `promise_already_satisfied`.  
   
- 与 `set_value` 相反，在当前线程中的所有线程本地对象被销毁前不会将关联的异步状态设置为已就绪。 通常，在关联的异步状态上受阻的线程会受到阻止，直到当前线程退出。  
+ In contrast to `set_value`, the associated asynchronous state is not set to ready until after all thread-local objects in the current thread have been destroyed. Typically, threads that are blocked on the associated asynchronous state are not unblocked until the current thread exits.  
   
- 第一种方法还会引发在将 `Val` 复制到关联的异步状态时所引发的任何异常。  
+ The first method also throws any exception that is thrown when `Val` is copied into the associated asynchronous state.  
   
- 第二种方法还会引发在将 `Val` 移动到关联的异步状态时引发的任何异常。  
+ The second method also throws any exception that is thrown when `Val` is moved into the associated asynchronous state.  
   
- 对于部分专用化 `promise<Ty&>`，存储的值实际上是对 `Val` 的引用。  
+ For the partial specialization `promise<Ty&>`, the stored value is effectively a reference to `Val`.  
   
- 对于专用化 `promise<void>`，不存在任何存储的值。  
+ For the specialization `promise<void>`, no stored value exists.  
   
-##  <a name="swap"></a>promise::swap  
- 将此 promise 对象的*关联异步状态*与指定对象的交换。  
+##  <a name="swap"></a>  promise::swap  
+ Exchanges the *associated asynchronous state* of this promise object with that of a specified object.  
   
 ```
 void swap(promise& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 一个 `promise` 对象。  
+ A `promise` object.  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

@@ -1,32 +1,49 @@
 ---
-title: "帮助菜单合并 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "菜单，合并"
-  - "合并帮助菜单"
-  - "帮助，对于活动文档容器"
+title: Help Menu Merging | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], merging
+- merging Help menus [MFC]
+- Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 帮助菜单合并
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f2517dbfbc31cb92f5aa4bdf46c45aa19cf1f1d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-当容器对象中处于活动状态，将 OLE 文档的协议菜单为 **帮助** 菜单对象的完全控制。  因此，活动对象，除非用户，容器的帮助主题将不可用。  活动文档包容结构在合并就地菜单的展开规则允许容器和是活动的共享菜单的活动文档。  新规则完成有关组件的不同的约定自己的菜单的内容部分，并且共享菜单如何构造的。  
+---
+# <a name="help-menu-merging"></a>Help Menu Merging
+When an object is active within a container, the menu merging protocol of OLE Documents gives the object complete control of the **Help** menu. As a result, the container's Help topics are not available unless the user deactivates the object. The active document containment architecture expands on the rules for in-place menu merging to allow both the container and an active document that is active to share the menu. The new rules are simply additional conventions about what component owns what part of the menu and how the shared menu is constructed.  
   
- 新的规则很简单。  在活动文档中，**帮助** 菜单有组织的两个顶级菜单项添加如下所示：  
+ The new convention is simple. In active documents, the **Help** menu has two top-level menu items organized as follows:  
   
  `Help`  
   
@@ -34,7 +51,7 @@ caps.handback.revision: 7
   
  `Object Help    >`  
   
- 例如，在 Word 中，节是活动状态在 Office 活页夹，则 **帮助** 菜单将显示如下：  
+ For example, when a Word section is active in the Office Binder, then the **Help** menu would appear as follows:  
   
  `Help`  
   
@@ -42,21 +59,23 @@ caps.handback.revision: 7
   
  `Word Help   >`  
   
- 两个菜单项下为所有附加的菜单项的特定访问容器和对象提供给用户的级联菜单。  此处显示的项情况随涉及的容器和对象。更改。  
+ Both menu items are cascading menus under which any additional menu items specific to the container and the object are provided to the user. What items appear here will vary with the container and objects involved.  
   
- 若要构造此合并的 **帮助** 菜单，对活动文档包容结构修改标准 OLE 文档过程。  根据 OLE 文档，合并的菜单栏可以具有菜单，即 **文件**，**编辑**，**容器 \(O\)**，`Object`，**窗口**，**帮助**的六组，该顺序。  在每组中，可以有零个或多菜单。  组 **文件**、**容器 \(O\)**和 **窗口** 容器属于，并且组 **编辑**、**Object,** 和 **帮助** 则属于对象。  当对象执行组合中的菜单，它将创建一个空白的菜单栏和传递到容器。  容器通过调用 **IOleInPlaceFrame::InsertMenus**，然后插入其菜单。  对象同时传递是六长值的结构 \(**OLEMENUGROUPWIDTHS**\)。  在插入菜单后，容器将指示剩余菜单在每个添加到该组，然后返回。  然后在每个对象容器组中插入的菜单，计数请注意菜单。  最后，传递对象合并的菜单栏和每个组中包含数组 \(为 OLE\) 计数菜单的，返回一不透明的“菜单句柄”说明符。  处理和合并的菜单栏为容器后的对象传递，通过 **IOleInPlaceFrame::SetMenu**。  这时，容器显示合并的菜单栏并将句柄到 OLE，因此，OLE 可以执行相应菜单调度消息。  
+ To construct this merged **Help** menu, the active document containment architecture modifies the normal OLE Documents procedure. According to OLE Documents, the merged menu bar can have six groups of menus, namely **File**, **Edit**, **Container**, `Object`, **Window**, **Help**, in that order. In each group, there can be zero or more menus. The groups **File**, **Container**, and **Window** belong to the container and the groups **Edit**, **Object,** and **Help** belong to the object. When the object wants to do menu merging, it creates a blank menu bar and passes it to the container. The container then inserts its menus, by calling **IOleInPlaceFrame::InsertMenus**. The object also passes a structure that is an array of six LONG values (**OLEMENUGROUPWIDTHS**). After inserting the menus, the container marks how many menus it added in each one of its groups, and then returns. Then the object inserts its menus, paying attention to the count of menus in each container group. Finally, the object passes the merged menu bar and the array (which contains the count of menus in each group) to OLE, which returns an opaque "menu descriptor" handle. Later the object passes that handle and the merged menu bar to the container, via **IOleInPlaceFrame::SetMenu**. At this time, the container displays the merged menu bar and also passes the handle to OLE, so that OLE can do proper dispatching of menu messages.  
   
- 在修改过程的活动文档对象，必须先初始化 **OLEMENUGROUPWIDTHS** 元素为零前请于容器。  然后执行容器的菜单插入有一个例外：容器在 **帮助** 菜单为最后一项并存储值为 1。一个 **OLEMENUGROUPWIDTHS** 数组 \(例如宽度 \[5\]\) 的最后 \(第六项，属于对象的帮助组\)。  此 **帮助** 菜单所述将只为子菜单的一项，“**Container Help** \>”级联菜单。  
+ In the modified active document procedure, the object must first initialize the **OLEMENUGROUPWIDTHS** elements to zero before passing it to the container. Then the container performs a normal menu insertion with one exception: The container inserts a **Help** menu as the last item and stores a value of 1 in the last (sixth) entry of the **OLEMENUGROUPWIDTHS** array (that is, width[5], which belongs to the object's Help group). This **Help** menu will have only one item which is a submenu, the "**Container Help** >" cascade menu as previously described.  
   
- 对象并执行其常规菜单插入代码，但在插入之前其 **帮助** 菜单，它检查 **OLEMENUGROUPWIDTHS** 数组的第六项。  如果值为 1，而次菜单的名称为 **帮助** \(或相应的本地化字符串\)，则对象插入其 **帮助** 菜单为容器的 **帮助** 菜单的子菜单。  
+ The object then executes its normal menu insertion code, except that before inserting its **Help** menu, it checks the sixth entry of the **OLEMENUGROUPWIDTHS** array. If the value is 1 and the name of the last menu is **Help** (or the appropriate localized string), then the object inserts its **Help** menu as submenu of the container's **Help** menu.  
   
- 对象然后调整 **OLEMENUGROUPWIDTHS** 元素的第六到零并通过递增第五个元素组成。  此通知 OLE **帮助** 菜单容器属于，并应路由与该菜单 \(及其子菜单的菜单\) 的消息到容器。  为容器的作用，然后转发 `WM_INITMENUPOPUP`、**WM\_SELECT**、**WM\_COMMAND**及属于 **帮助** 菜单的对象的其他菜单关联的消息。  这是实现通过使用 `WM_INITMENU` 清除标志调用容器的用户是否导航到对象的 **帮助** 菜单。  容器并注意 `WM_MENUSELECT` 从任何项的输入或退出对容器不添加自己的 **帮助** 菜单。  在输入，这意味着用户导航到此菜单对象，因此在“帮助”菜单，容器对象设置标志并使用该的状态的所有 `WM_MENUSELECT`、`WM_INITMENUPOPUP`和 **WM\_COMMAND** 消息，、最小值，向对象窗口。\(在调用退出，容器清除标志来处理这些消息。\)容器应为这些消息使用从对象的 **IOleInPlaceActiveObejct::GetWindow** 函数返回的窗口作为目标。  
+ The object then sets the sixth element of **OLEMENUGROUPWIDTHS** to zero and increments the fifth element by one. This lets OLE know that the **Help** menu belongs to the container and the menu messages corresponding to that menu (and its submenus) should be routed to the container. It is then the container's responsibility to forward `WM_INITMENUPOPUP`, **WM_SELECT**, **WM_COMMAND**, and other menu-related messages that belong to the object's portion of the **Help** menu. This is accomplished by using `WM_INITMENU` to clear a flag that tells the container whether the user has navigated into the object's **Help** menu. The container then watches `WM_MENUSELECT` for entry into or exit from any item on the **Help** menu that the container did not add itself. On entry, it means the user has navigated into an object menu, so the container sets the "in object Help menu" flag and uses the state of that flag to forward any `WM_MENUSELECT`, `WM_INITMENUPOPUP`, and **WM_COMMAND** messages, as a minimum, to the object window. (On exit, the container clears the flag and then processes these same messages itself.) The container should use the window returned from the object's **IOleInPlaceActiveObejct::GetWindow** function as the destination for these messages.  
   
- 如果检测零在 **OLEMENUGROUPWIDTHS**对象的第六元素，它根据 OLE 文档标准规则进行。  此过程包括将 **帮助** 的菜单以及一些不参与的容器。  
+ If the object detects a zero in the sixth element of **OLEMENUGROUPWIDTHS**, it proceeds according to the normal OLE Documents rules. This procedure covers containers that do participate in **Help** menu merging as well as those that do not.  
   
- 当对象在显示之前调用 **IOleInPlaceFrame::SetMenu**时，合并的菜单栏，容器 **帮助** 检查菜单是否有其他的子菜单时，除了外什么容器插入。  如果是这样，在容器合并的菜单栏将其 **帮助** 的菜单。  如果 **帮助** 菜单没有一个附加的子菜单时，容器从合并的菜单栏中移除其 **帮助** 菜单。  此过程包括将 **帮助** 的菜单以及一些不参与的对象。  
+ When the object calls **IOleInPlaceFrame::SetMenu**, before displaying the merged menu bar, the container checks whether the **Help** menu has an additional submenu, in addition to what the container has inserted. If so, the container leaves its **Help** menu in the merged menu bar. If the **Help** menu does not have an additional submenu, the container will remove its **Help** menu from the merged menu bar. This procedure covers objects that participate in **Help** menu merging as well as those that do not.  
   
- 最后，当为，时间拆卸菜单上，以及移除其他插入的菜单外，对象移除插入的 **帮助** 菜单。  当容器中移除其菜单，它将移除其 **帮助** 菜单以及其插入的其他菜单中。  
+ Finally, when it is time to disassemble the menu, the object removes the inserted **Help** menu in addition to removing the other inserted menus. When the container removes its menus, it will remove its **Help** menu in addition to the other menus that it has inserted.  
   
-## 请参阅  
- [活动文档容器](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

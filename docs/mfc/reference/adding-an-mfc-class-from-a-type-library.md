@@ -1,48 +1,67 @@
 ---
-title: "从类型库添加 MFC 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类 [C++], 添加 MFC"
-  - "MFC, 从类型库添加类"
-  - "类型库, 添加 MFC 类自"
+title: Adding an MFC Class from a Type Library | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [MFC], adding MFC
+- MFC, adding classes from type libraries
+- type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 从类型库添加 MFC 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c0cbd52202de867fb330a3acd2d72a4b940f56ed
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-使用该向导从可用类型库中的接口创建 MFC 类。  可以向 [MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控件](../../mfc/reference/creating-an-mfc-activex-control.md)中添加 MFC 类。  
+---
+# <a name="adding-an-mfc-class-from-a-type-library"></a>Adding an MFC Class from a Type Library
+Use this wizard to create an MFC class from an interface in an available type library. You can add an MFC class to an [MFC application](../../mfc/reference/creating-an-mfc-application.md), an [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), or an [MFC ActiveX control](../../mfc/reference/creating-an-mfc-activex-control.md).  
   
 > [!NOTE]
->  不需要创建启用自动化的 MFC 项目，也可以从类型库添加类。  
+>  You do not need to create your MFC project with Automation enabled to add a class from a type library.  
   
- 类型库包含组件公开的接口的二进制说明，定义了方法及其参数和返回类型。  必须注册类型库，它才会显示在“从类型库添加类向导”中的“可用类型库”列表中。  有关更多信息，请参见 MSDN Library 中的“分布式 COM 的内部：类型库和语言集成”。  
+ A type library contains a binary description of the interfaces exposed by a component, defining the methods along with their parameters and return types. Your type library must be registered for it to appear in the **Available type libraries** list in the Add Class from Typelib Wizard. See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information.  
   
-### 从类型库添加 MFC 类  
+### <a name="to-add-an-mfc-class-from-a-type-library"></a>To add an MFC class from a type library  
   
-1.  在**解决方案资源管理器**或[“类视图”](http://msdn.microsoft.com/zh-cn/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，右击要向其添加类的项目名称。  
+1.  In either **Solution Explorer** or [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), right-click the name of the project to which you want to add the class.  
   
-2.  从快捷菜单中单击“添加”，然后单击“添加类”。  
+2.  From the shortcut menu, click **Add**, and then click **Add Class**.  
   
-3.  在[添加类](../../ide/add-class-dialog-box.md)对话框中，在“模板”窗格中，单击“类型库中的 MFC 类”，然后单击“打开”显示[从类型库添加类向导](../../mfc/reference/add-class-from-typelib-wizard.md)。  
+3.  In the [Add Class](../../ide/add-class-dialog-box.md) dialog box, in the Templates pane, click **MFC Class from Typelib**, and then click **Open** to display the [Add Class from Typelib Wizard](../../mfc/reference/add-class-from-typelib-wizard.md).  
   
- 在该向导中，可以添加类型库中的多个类。  同样，在单个向导会话中可以从多个类型库添加类。  
+ In the wizard, you can add more than one class in a type library. Likewise, you can add classes from more than one type library in a single wizard session.  
   
- 该向导为从选定的类型库添加的每个接口创建 MFC 类（派生自 [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)）。  `COleDispatchDriver` 实现 OLE 自动化的客户端。  
+ The wizard creates an MFC class, derived from [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), for each interface you add from the selected type library. `COleDispatchDriver` implements the client side of OLE automation.  
   
-## 请参阅  
- [自动化客户端](../../mfc/automation-clients.md)   
- [自动化客户端：使用类型库](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [Automation Clients](../../mfc/automation-clients.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

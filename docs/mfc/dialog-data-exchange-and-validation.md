@@ -1,46 +1,65 @@
 ---
-title: "对话框数据交换和验证 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "公共控件 [C++], 对话框"
-  - "数据 [MFC], 对话框"
-  - "数据验证 [C++], 对话框"
-  - "DDV（对话框数据验证）[C++]"
-  - "DDX（对话框数据交换）[C++], 数据验证"
-  - "对话框数据 [C++]"
-  - "对话框数据 [C++], 检索"
-  - "对话框 [C++], 检索数据"
-  - "对话框 [C++], 验证数据"
-  - "检索对话框数据"
-  - "验证数据 [C++], 对话框数据输入"
-  - "Windows 公共控件 [C++], 对话框"
+title: Dialog Data Exchange and Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data validation [MFC], dialog boxes
+- dialog box data [MFC]
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDX (dialog data exchange) [MFC], data validation
+- dialog box data [MFC], retrieving
+- Windows common controls [MFC], dialog boxes
+- DDV (dialog data validation) [MFC]
+- data [MFC], dialog boxes
+- common controls [MFC], dialog boxes
+- dialog boxes [MFC], retrieving data
+- retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 对话框数据交换和验证
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed01ece0c4318b0c3cd92100147aab030222e2f9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-对话框数据交换 \(DDX\) 是一种初始化在对话框的控件和用户收集数据输入。  对话框数据验证 \(DDV\) 是一种简便方法来验证对话框中的数据输入。  若要使用 DDX 和 DDV 在对话框，请使用 [添加成员变量向导](../ide/add-member-variable-wizard.md) 创建数据成员并设置其数据类型和指定验证规则。  
+---
+# <a name="dialog-data-exchange-and-validation"></a>Dialog Data Exchange and Validation
+Dialog data exchange (DDX) is an easy way to initialize the controls in your dialog box and to gather data input by the user. Dialog data validation (DDV) is an easy way to validate data entry in a dialog box. To take advantage of DDX and DDV in your dialog boxes, use the [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) to create the data members and set their data types and specify validation rules.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [对话框数据交换](../mfc/dialog-data-exchange.md)  
+-   [Dialog data exchange](../mfc/dialog-data-exchange.md)  
   
--   [对话框数据验证](../mfc/dialog-data-validation.md)  
+-   [Dialog data validation](../mfc/dialog-data-validation.md)  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)   
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

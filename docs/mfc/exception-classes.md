@@ -1,67 +1,86 @@
 ---
-title: "异常类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.exception"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "异常类"
-  - "异常处理, 异常类"
-  - "MFC, 异常"
+title: Exception Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.exception
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception classes [MFC]
+- exception handling [MFC], exception classes
+- MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 异常类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f917d9f426a9ce20644c1897c595ba58fc9b5d41
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-类库提供基于类`CException`的异常处理机制。  在其代码应用程序框架使用异常；还允许在你的应用程序中使用它们。  有关更多信息，请参见[处理异常](../mfc/exception-handling-in-mfc.md)。  您可从 `CException`中派生自己的异常类型。  
+---
+# <a name="exception-classes"></a>Exception Classes
+The class library provides an exception-handling mechanism based on class `CException`. The application framework uses exceptions in its code; you can also use them in yours. For more information, see the article [Exceptions](../mfc/exception-handling-in-mfc.md). You can derive your own exception types from `CException`.  
   
- MFC 提供可派生您自己的异常的异常类以及它支持所有异常的异常类。  
+ MFC provides an exception class from which you can derive your own exception as well as exception classes for all of the exceptions it supports.  
   
  [CException](../mfc/reference/cexception-class.md)  
- 所有异常的基类。  
+ The base class for exceptions.  
   
  [CArchiveException](../mfc/reference/carchiveexception-class.md)  
- 存档异常。  
+ An archive exception.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
- 异常由 DAO 数据库操作的故障。  
+ An exception resulting from a failure in a DAO database operation.  
   
  [CDBException](../mfc/reference/cdbexception-class.md)  
- 异常由 ODBC 数据库处理的故障。  
+ An exception resulting from a failure in ODBC database processing.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  
- 面向文件的异常。  
+ A file-oriented exception.  
   
  [CMemoryException](../mfc/reference/cmemoryexception-class.md)  
- 内存不足异常  
+ An out-of-memory exception.  
   
  [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)  
- 异常由使用不支持的功能引起。  
+ An exception resulting from using an unsupported feature.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- 异常由 OLE 处理的故障引起。  容器和服务器使用该类。  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
  [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- 异常由在自动化期间的错误引起。  自动化异常由自动化服务器引发并通过自动化客户端捕获。  
+ An exception resulting from an error during automation. Automation exceptions are thrown by automation servers and caught by automation clients.  
   
  [CResourceException](../mfc/reference/cresourceexception-class.md)  
- 异常由失败加载 Windows 资源引起。  
+ An exception resulting from a failure to load a Windows resource.  
   
  [CUserException](../mfc/reference/cuserexception-class.md)  
- 用于停止正在用户启动操作的异常。  通常，在异常抛出前，用户已意识到问题。  
+ An exception used to stop a user-initiated operation. Typically, the user has been notified of the problem before this exception is thrown.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

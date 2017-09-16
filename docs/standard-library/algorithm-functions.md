@@ -1,5 +1,5 @@
 ---
-title: "&lt;algorithm&gt; 函数 | Microsoft 文档"
+title: '&lt;algorithm&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,172 +8,90 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- adjacent_find
 - algorithm/std::all_of
-- all_of
 - algorithm/std::any_of
-- any_of
 - algorithm/std::binary_search
-- binary_search
 - algorithm/std::copy
-- copy
 - algorithm/std::copy_backward
-- copy_backward
 - algorithm/std::copy_if
-- copy_if
 - algorithm/std::copy_n
-- copy_n
 - algorithm/std::equal
-- equal
 - algorithm/std::equal_range
-- equal_range
 - algorithm/std::fill
-- fill
 - algorithm/std::fill_n
-- fill_n
 - algorithm/std::find
-- find
 - algorithm/std::find_end
-- find_end
 - algorithm/std::find_first_of
-- find_first_of
 - algorithm/std::find_if
-- find_if
 - algorithm/std::find_if_not
-- find_if_not
 - algorithm/std::for_each
-- for_each
 - algorithm/std::generate
-- generate
 - algorithm/std::generate_n
-- generate_n
 - algorithm/std::includes
-- includes
 - algorithm/std::inplace_merge
-- inplace_merge
 - algorithm/std::is_heap
-- is_heap
 - algorithm/std::is_heap_until
-- is_heap_until
 - algorithm/std::is_partitioned
-- is_partitioned
 - algorithm/std::is_permutation
-- is_permutation
 - algorithm/std::is_sorted
-- is_sorted
 - algorithm/std::is_sorted_until
-- is_sorted_until
 - algorithm/std::iter_swap
-- iter_swap
 - algorithm/std::lexicographical_compare
-- lexicographical_compare
 - algorithm/std::lower_bound
-- lower_bound
 - algorithm/std::make_heap
-- make_heap
 - algorithm/std::max
-- max
 - algorithm/std::max_element
-- max_element
 - algorithm/std::merge
-- merge
 - algorithm/std::min
-- min
 - algorithm/std::minmax
-- minmax
 - algorithm/std::minmax_element
-- minmax_element
 - algorithm/std::min_element
-- min_element
 - algorithm/std::mismatch
-- mismatch
 - algorithm/std::move
-- move
 - algorithm/std::move_backward
-- move_backward
 - algorithm/std::next_permutation
-- next_permutation
 - algorithm/std::none_of
-- none_of
 - algorithm/std::nth_element
-- nth_element
 - algorithm/std::partial_sort
-- partial_sort
 - algorithm/std::partial_sort_copy
-- partial_sort_copy
 - algorithm/std::partition
-- partition
 - algorithm/std::partition_point
-- partition_point
 - algorithm/std::pop_heap
-- pop_heap
 - algorithm/std::prev_permutation
-- prev_permutation
 - algorithm/std::push_heap
-- push_heap
 - algorithm/std::random_shuffle
-- random_shuffle
 - algorithm/std::remove
-- remove
 - algorithm/std::remove_copy
-- remove_copy
 - algorithm/std::remove_copy_if
-- remove_copy_if
 - algorithm/std::remove_if
-- remove_if
 - algorithm/std::replace
-- replace
 - algorithm/std::replace_copy
-- replace_copy
 - algorithm/std::replace_copy_if
-- replace_copy_if
 - algorithm/std::replace_if
-- replace_if
 - algorithm/std::reverse
-- reverse
 - algorithm/std::reverse_copy
-- reverse_copy
 - algorithm/std::rotate
-- rotate
 - algorithm/std::rotate_copy
-- rotate_copy
 - algorithm/std::search
-- search
 - algorithm/std::search_n
-- search_n
 - algorithm/std::set_difference
-- set_difference
 - algorithm/std::set_intersection
-- set_intersection
 - algorithm/std::set_symmetric_difference
-- set_symmetric_difference
 - algorithm/std::set_union
-- set_union
 - algorithm/std::shuffle
-- shuffle
 - algorithm/std::sort
-- sort
 - algorithm/std::sort_heap
-- sort_heap
 - algorithm/std::stable_partition
-- stable_partition
 - algorithm/std::stable_sort
-- stable_sort
 - algorithm/std::swap_ranges
-- swap_ranges
 - algorithm/std::transform
-- transform
 - algorithm/std::unique
-- unique
 - algorithm/std::unique_copy
-- unique_copy
 - algorithm/std::upper_bound
-- upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- count
 - xutility/std::equal
 - xutility/std::fill
 - xutility/std::fill_n
@@ -194,14 +112,113 @@ caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+helpviewer_keywords:
+- std::adjacent_find [C++]
+- std::all_of [C++]
+- std::any_of [C++]
+- std::binary_search [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_if [C++]
+- std::copy_n [C++]
+- std::equal [C++]
+- std::equal_range [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::find_end [C++]
+- std::find_first_of [C++]
+- std::find_if [C++]
+- std::find_if_not [C++]
+- std::for_each [C++]
+- std::generate [C++]
+- std::generate_n [C++]
+- std::includes [C++]
+- std::inplace_merge [C++]
+- std::is_heap [C++]
+- std::is_heap_until [C++]
+- std::is_partitioned [C++]
+- std::is_permutation [C++]
+- std::is_sorted [C++]
+- std::is_sorted_until [C++]
+- std::iter_swap [C++]
+- std::lexicographical_compare [C++]
+- std::lower_bound [C++]
+- std::make_heap [C++]
+- std::max [C++]
+- std::max_element [C++]
+- std::merge [C++]
+- std::min [C++]
+- std::minmax [C++]
+- std::minmax_element [C++]
+- std::min_element [C++]
+- std::mismatch [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::next_permutation [C++]
+- std::none_of [C++]
+- std::nth_element [C++]
+- std::partial_sort [C++]
+- std::partial_sort_copy [C++]
+- std::partition [C++]
+- std::partition_point [C++]
+- std::pop_heap [C++]
+- std::prev_permutation [C++]
+- std::push_heap [C++]
+- std::random_shuffle [C++]
+- std::remove [C++]
+- std::remove_copy [C++]
+- std::remove_copy_if [C++]
+- std::remove_if [C++]
+- std::replace [C++]
+- std::replace_copy [C++]
+- std::replace_copy_if [C++]
+- std::replace_if [C++]
+- std::reverse [C++]
+- std::reverse_copy [C++]
+- std::rotate [C++]
+- std::rotate_copy [C++]
+- std::search [C++]
+- std::search_n [C++]
+- std::set_difference [C++]
+- std::set_intersection [C++]
+- std::set_symmetric_difference [C++]
+- std::set_union [C++]
+- std::shuffle [C++]
+- std::sort [C++]
+- std::sort_heap [C++]
+- std::stable_partition [C++]
+- std::stable_sort [C++]
+- std::swap_ranges [C++]
+- std::transform [C++]
+- std::unique [C++]
+- std::unique_copy [C++]
+- std::upper_bound [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_n [C++]
+- std::count [C++]
+- std::equal [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::is_permutation [C++]
+- std::lexicographical_compare [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::reverse [C++]
+- std::rotate [C++]
+- std::count_if [C++]
+- std::partition_copy [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 941b66bd40b1b14fd07f823023675d9ac52e141c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函数
+# <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; functions
 ||||  
 |-|-|-|  
 |[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|  
@@ -235,7 +252,7 @@ ms.lasthandoff: 04/19/2017
 |[upper_bound](#upper_bound)|  
   
 ##  <a name="adjacent_find"></a>  adjacent_find  
- 搜索相等或满足指定条件的两个相邻元素。  
+ Searches for two adjacent elements that are either equal or satisfy a specified condition.  
   
 ```  
 template<class ForwardIterator>  
@@ -250,25 +267,25 @@ template<class ForwardIterator , class BinaryPredicate>
         BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `comp`  
- 给定要搜索范围内相邻元素的值需满足的条件的二元谓词。  
+ The binary predicate giving the condition to be satisfied by the values of the adjacent elements in the range being searched.  
   
-### <a name="return-value"></a>返回值  
- 指向相互之间相等（第一个版本中）或满足二元谓词给定条件（第二个版本中）的相邻元素对中第一个元素的前向迭代器，假设找到了此类元素对。 否则，将返回指向 `last` 的迭代器。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the first element of the adjacent pair that are either equal to each other (in the first version) or that satisfy the condition given by the binary predicate (in the second version), provided that such a pair of elements is found. Otherwise, an iterator pointing to `last` is returned.  
   
-### <a name="remarks"></a>备注  
- `adjacent_find` 算法是不改变顺序的算法。 要搜索的范围必须是有效的；所有指针必须是可解除引用的，并且最后一个位置可从第一个位置通过递增到达。 算法的时间复杂性在范围所包含的元素数目上呈线性。  
+### <a name="remarks"></a>Remarks  
+ The `adjacent_find` algorithm is a nonmutating sequence algorithm. The range to be searched must be valid; all pointers must be dereferenceable and the last position is reachable from the first by incrementation. The time complexity of the algorithm is linear in the number of elements contained in the range.  
   
- `operator==` 用于确定元素间的匹配必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the match between elements must impose an equivalence relation between its operands.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_adj_fnd.cpp  
@@ -331,7 +348,7 @@ There are two adjacent elements where the second is twice the first.
 ```  
   
 ##  <a name="all_of"></a>  all_of  
- 当给定范围中的每个元素均满足条件时返回 `true`。  
+ Returns `true` when a condition is present at each element in the given range.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -341,24 +358,24 @@ template<class InputIterator, class Predicate>
         BinaryPredicatecomp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指示检查条件的起始位置。 该迭代器将标记元素范围的起始位置。  
+ An input iterator that indicates where to start to check for a condition. The iterator marks where a range of elements starts.  
   
  `last`  
- 一种输入迭代器，指示在元素范围内检查条件的结束位置。  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- 要测试的条件。 这是用户定义的谓词函数对象，定义被检查元素要满足的条件。 谓词采用一个参数并返回 `true` 或 `false`。  
+ A condition to test for. This is a user-defined predicate function object that defines the condition to be satisfied by an element being checked. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 如果在指示范围内的每个元素检测到条件，则返回 `true`，如果至少一次未检测条件，则返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at each element in the indicated range, and `false` if the condition is not detected at least one time.  
   
-### <a name="remarks"></a>备注  
- 对于范围 `[0,Last - first)` 中的每个 `N`，仅当谓词 `comp(*(_First + N))` 是 `true` 时，模版函数才返回 `true`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for each `N` in the range `[0,Last - first)`, the predicate `comp(*(_First + N))` is `true`.  
   
 ##  <a name="any_of"></a>  any_of  
- 当指定元素范围中至少有一个元素满足条件时返回 `true`。  
+ Returns `true` when a condition is present at least once in the specified range of elements.  
   
 ```  
 template<class InputIterator, class UnaryPredicate>  
@@ -368,26 +385,26 @@ template<class InputIterator, class UnaryPredicate>
         UnaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指示在元素范围内检查条件的起始位置。  
+ An input iterator that indicates where to start checking a range of elements for a condition.  
   
  `last`  
- 一种输入迭代器，指示在元素范围内检查条件的结束位置。  
+ An input iterator that indicates the end of the range of elements to check for a condition.  
   
  `comp`  
- 要测试的条件。 这是由用户定义的谓词函数对象提供的。 谓词定义所测试的元素应满足的条件。 谓词采用一个参数并返回 `true` 或 `false`。  
+ A condition to test for. This is provided by a user-defined predicate function object. The predicate defines the condition to be satisfied by the element being tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 如果在指示范围内至少一次检测到条件，则返回 `true`，如果从未检测条件，则返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is detected at least once in the indicated range, `false` if the condition is never detected.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回`true`才，对于某些`N`范围内  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range  
   
- `[0, last - first)`谓词`comp(*(first + N))`为 true。  
+ `[0, last - first)`, the predicate `comp(*(first + N))` is true.  
   
 ##  <a name="binary_search"></a>  binary_search  
- 测试已排序的范围中是否有等于指定值的元素，或在二元谓词指定的意义上与指定值等效的元素。  
+ Tests whether there is an element in a sorted range that is equal to a specified value or that is equivalent to it in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>      
@@ -405,34 +422,34 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- 需要与元素的值匹配或者必须满足元素值由二元谓词指定这一条件的值。  
+ The value required to be matched by the value of the element or that must satisfy the condition with the element value specified by the binary predicate.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数，并且在满足时返回 `true`，未满足时返回 `false`。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 如果在范围中找到的元素等于或者等效于指定的值，则返回 `true`；否则，返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if an element is found in the range that is equal or equivalent to the specified value; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 已排序的范围必须是应用 `binary_search` 算法分别进行排列的前提条件，与排序合并范围时算法要使用的排序标准相同。  
+ The sorted range must each be arranged as a precondition to the application of the `binary_search` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- `binary_search` 不会修改源范围。  
+ The source ranges are not modified by `binary_search`.  
   
- 前向迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定它们是相等的（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。  
+ The value types of the forward iterators need to be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- 该算法的复杂性是随机访问迭代器对数和线性的成正比的步骤数，否则为 ( `last`  -  `first`)。  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_bin_srch.cpp  
@@ -515,7 +532,7 @@ int main( )
 ```  
   
 ##  <a name="copy"></a>  copy  
- 将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向前方向的新位置。  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a forward direction.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -525,27 +542,27 @@ template<class InputIterator, class OutputIterator>
         OutputIterator destBeg);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 发现源范围内的第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last`  
- 一个输入迭代器，用于确定源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position that is one past the final element in the source range.  
   
  *destBeg*  
- 一种输出迭代器，用于定址目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>返回值  
- 发现即是一个在目标范围中的最后一个元素的位置的输出迭代器，此迭代器址`result`+ ( `last`  -   `first` )。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `result` + ( `last` -  `first` ).  
   
-### <a name="remarks"></a>备注  
- 源范围必须有效，且必须具有足够的空间来保存所有要复制的元素。  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- 因为此算法会从第一个元素开始按顺序复制源元素，所以，只要源范围的 `last` 位置未包含在目标范围中，目标范围便可能与源范围重叠。 可以使用**copy** 将元素移动到左侧，但不能移动到右侧，除非源范围和目标范围之间不存在重叠。 若要向右移动任意数量的位置，请使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 算法。  
+ Because the algorithm copies the source elements in order beginning with the first element, the destination range can overlap with the source range provided the `last` position of the source range is not contained in the destination range. **copy** can be used to shift elements to the left but not the right, unless there is no overlap between the source and destination ranges. To shift to the right any number of positions, use the [copy_backward](../standard-library/algorithm-functions.md#copy_backward) algorithm.  
   
- **copy** 算法只修改由迭代器指向的值，并为目标范围内的元素赋予新值。 它不能用来创建新元素，也无法直接将元素插入到空容器。  
+ The **copy** algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy.cpp  
@@ -604,7 +621,7 @@ v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```  
   
 ##  <a name="copy_backward"></a>  copy_backward  
- 将一个源范围中的元素值分配到目标范围，循环访问元素的源序列并将它们分配在一个向后方向的新位置。  
+ Assigns the values of elements from a source range to a destination range, iterating through the source sequence of elements and assigning them new positions in a backward direction.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -614,31 +631,31 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
         BidirectionalIterator2 destEnd);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，用于定址源范围内第一个元素的位置。  
+ A bidirectional iterator addressing the position of the first element in the source range.  
   
  `last`  
- 一种双向迭代器，用于定址源范围内最后元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position that is one past the final element in the source range.  
   
  `destEnd`  
- 一种双向迭代器，用于定址目标范围内最后元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="return-value"></a>返回值  
- 发现即是一个在目标范围中的最后一个元素的位置的输出迭代器，此迭代器址`destEnd`-( `last`  -   `first` )。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position that is one past the final element in the destination range, that is, the iterator addresses `destEnd` - ( `last` -  `first` ).  
   
-### <a name="remarks"></a>备注  
- 源范围必须有效，且必须具有足够的空间来保存所有要复制的元素。  
+### <a name="remarks"></a>Remarks  
+ The source range must be valid and there must be sufficient space at the destination to hold all the elements being copied.  
   
- `copy_backward` 算法的要求比 copy 算法更加严格。 它的输入和输出迭代器都必须是双向的。  
+ The `copy_backward` algorithm imposes more stringent requirements than that the copy algorithm. Both its input and output iterators must be bidirectional.  
   
- `copy_backward` 和 [move_backward](../standard-library/algorithm-functions.md#move_backward) 算法是唯一的 C++ 标准库算法，这些算法使用指向目标范围末尾的迭代器来指定输出范围。  
+ The `copy_backward` and [move_backward](../standard-library/algorithm-functions.md#move_backward) algorithms are the only C++ Standard Library algorithms designating the output range with an iterator pointing to the end of the destination range.  
   
- 因为此算法会从最后一个元素开始按顺序复制源元素，所以，只要源范围的 `first` 位置未包含在目标范围中，目标范围便可能与源范围重叠。 `copy_backward` 可用来将元素移动到右侧，但不能移动到左侧，除非源范围和目标范围之间不存在重叠。 若要向左移动任意数量的位置，请使用 [copy](../standard-library/algorithm-functions.md#copy) 算法。  
+ Because the algorithm copies the source elements in order beginning with the last element, the destination range can overlap with the source range provided the  `first` position of the source range is not contained in the destination range. `copy_backward` can be used to shift elements to the right but not the left, unless there is no overlap between the source and destination ranges. To shift to the left any number of positions, use the [copy](../standard-library/algorithm-functions.md#copy) algorithm.  
   
- `copy_backward` 算法只修改由迭代器指向的值，并为目标范围内的元素赋予新值。 它不能用来创建新元素，也无法直接将元素插入到空容器。  
+ The `copy_backward` algorithm only modifies values pointed to by the iterators, assigning new values to elements in the destination range. It cannot be used to create new elements and cannot insert elements into an empty container directly.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_copy_bkwd.cpp  
@@ -690,7 +707,7 @@ int main() {
 ```  
   
 ##  <a name="copy_if"></a>  copy_if  
- 在元素范围中，复制对于指定条件为 `true` 的元素。  
+ In a range of elements, copies the elements that are `true` for the specified condition.  
   
 ```  
 template<class InputIterator, class OutputIterator, class BinaryPredicate>  
@@ -701,31 +718,31 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指示在一个范围内检查条件的开始位置。  
+ An input iterator that indicates the start of a range to check for the condition.  
   
  `last`  
- 一种输入迭代器，指示范围的结束位置。  
+ An input iterator that indicates the end of the range.  
   
  `dest`  
- 输出迭代器，指示复制元素的目标。  
+ The output iterator that indicates the destination for the copied elements.  
   
  `_Pred`  
- 在范围内每个元素对其进行测试的条件。 由用户定义的谓词函数对象提供这一条件。 谓词采用一个参数并返回 `true` 或 `false`。  
+ The condition against which every element in the range is tested. This condition is provided by a user-defined predicate function object. A predicate takes one argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 一种等于 `dest` 的输出迭代器，针对符合条件的每个元素递增一次。 换言之，返回值减去 `dest` 等于复制的元素数目。  
+### <a name="return-value"></a>Return Value  
+ An output iterator that equals `dest` incremented once for each element that fulfills the condition. In other words, the return value minus `dest` equals the number of copied elements.  
   
-### <a name="remarks"></a>备注  
- 该模板函数为范围  中的每个  求值  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates  
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
- 一次为每个`N`范围内`[0, last - first)`，严格增加值的`N`从最低值开始 如果 `dest` 和 `first` 指定存储区域，则 `dest` 不得位于范围 `[` `first``,` `last``)` 内。  
+ once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. If `dest` and  `first` designate regions of storage, `dest` must not be in the range `[ first, last )`.  
   
 ##  <a name="copy_n"></a>  copy_n  
- 复制指定数量的元素。  
+ Copies a specified number of elements.  
   
 ```  
 template<class InputIterator, class Size, class OutputIterator>  
@@ -735,24 +752,24 @@ template<class InputIterator, class Size, class OutputIterator>
         OutputIterator dest);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 指示复制元素的位置的输入迭代器。  
+ An input iterator that indicates where to copy elements from.  
   
  `count`  
- 指定要复制的元素的数目的有符号或无符号整数类型。  
+ A signed or unsigned integer type specifying the number of elements to copy.  
   
  `dest`  
- 指示将元素复制到的位置的输出迭代器。  
+ An output iterator that indicates where to copy elements to.  
   
-### <a name="return-value"></a>返回值  
- 返回元素已被复制到的输出迭代器。 它与第三个参数 `dest` 的返回值相等。  
+### <a name="return-value"></a>Return Value  
+ Returns an output iterator where elements have been copied to. It is the same as the returned value of the third parameter, `dest`.  
   
-### <a name="remarks"></a>备注  
- 模板函数的计算结果`*(dest + N) = *(first + N))`一次为每个`N`范围内`[0, count)`，严格增加值的`N`从最低值开始。 然后返回 `dest + N`。 如果`dest`和`first`指定存储区域，`dest`不得位于范围`[first, last)`。  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = *(first + N))` once for each `N` in the range `[0, count)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="count"></a>  count  
- 返回范围中其值与指定值匹配的元素的数量。  
+ Returns the number of elements in a range whose values match a specified value.  
   
 ```  
 template<class InputIterator, class Type> 
@@ -762,25 +779,25 @@ template<class InputIterator, class Type>
         const Type& val);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，用于寻址要遍历的范围中第一个元素的位置。  
+ An input iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- 一种输入迭代器，用于寻址要遍历的范围中最后元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- 要计算的元素的值。  
+ The value of the elements to be counted.  
   
-### <a name="return-value"></a>返回值  
- **InputIterator** 的差异类型，将元素数量计入包含值 `val` 的范围 [  `first`, `last` ) 中。  
+### <a name="return-value"></a>Return Value  
+ The difference type of the **InputIterator** that counts the number of elements in the range [  `first`, `last` ) that have value `val`.  
   
-### <a name="remarks"></a>备注  
- `operator==` 用于确定元素与指定值之间的匹配必须在其操作数之间施加等效关系。  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 此算法已泛化，可使用模版函数 [count_if](../standard-library/algorithm-functions.md#count_if) 计入满足任何谓词的元素。  
+ This algorithm is generalized to count elements that satisfy any predicate with the template function [count_if](../standard-library/algorithm-functions.md#count_if).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count.cpp  
@@ -818,7 +835,7 @@ The number of 10s in v2 is: 3.
 ```  
   
 ##  <a name="count_if"></a>  count_if  
- 返回范围中其值满足指定条件的元素的数量。  
+ Returns the number of elements in a range whose values satisfy a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>
@@ -828,23 +845,23 @@ template<class InputIterator, class Predicate>
         Predicate pred);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 用于确定要搜索范围中的第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `_Pred`  
- 用户定义的谓词函数对象，用于定义如果计入元素要满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be counted. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>返回值  
- 满足谓词指定的条件的元素数目。  
+### <a name="return-value"></a>Return Value  
+ The number of elements that satisfy the condition specified by the predicate.  
   
-### <a name="remarks"></a>备注  
- 此模板函数是算法 [count](../standard-library/algorithm-functions.md#count) 的泛化，它将“等于指定值”谓词替换为任何谓词。  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [count](../standard-library/algorithm-functions.md#count), replacing the predicate "equals a specific value" with any predicate.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_count_if.cpp  
@@ -888,11 +905,11 @@ The number of elements in v1 greater than 10 is: 2.
 ```  
   
 ##  <a name="equal"></a>  equal  
- 逐个元素比较两个范围是否相等或是否在二元谓词指定的意义上等效。  
+ Compares two ranges element by element for equality or equivalence in a sense specified by a binary predicate.  
   
- 比较不同容器类型（例如 `vector` 和 `list`）中的元素时、比较不同元素类型时，或是需要比较容器的子范围时，可使用 `std::equal`。 否则，在比较相同容器类型中具有相同类型的元素时，可使用为每个容器提供的非成员运算符 `operator==`。  
+ Use `std::equal` when comparing elements in different container types (for example `vector` and `list`) or when comparing different element types, or when you need to compare sub-ranges of containers. Otherwise, when comparing elements of the same type in the same container type, use the non-member `operator==` that is provided for each container.  
   
- 在 C++14 代码中使用双范围重载，因为对第二个范围仅采用单个迭代器的重载在第二个范围长于第一个范围时不会检测到差异，并且会在第二个范围短于第一个范围时导致未定义的行为。  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -924,33 +941,33 @@ bool equal(
     BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 用于确定要测试的第一个范围中第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- 用于确定要测试的第一个范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- 用于确定要测试的第二个范围中第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `First2`  
- 用于确定要测试的第二个范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 当且仅当范围相同或在二元谓词下等效（逐个元素比较时）时为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if and only if the ranges are identical or equivalent under the binary predicate when compared element by element; otherwise, **false**.  
   
-### <a name="remarks"></a>备注  
- 要搜索的范围必须是有效的；所有迭代器必须是可解除引用的，并且最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- 如果两个范围的长度相等，则算法的时间复杂性在范围所包含的元素数目上呈线性。 否则，函数会立即返回 `false`。  
+ If the two ranges are equal length, then the time complexity of the algorithm is linear in the number of elements contained in the range. Otherwise the function immediately returns `false`.  
   
- `operator==` 和用户定义的谓词都不需要施加在其操作数之间施加对称、反身和可传递的等效关系。  
+ Neither the `operator==` nor the user-defined predicate is required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <iostream>  
@@ -985,7 +1002,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  equal_range  
- 在给定的排序范围中，查找其中所有元素都等效于给定值的子范围。  
+ Given an ordered range, finds the subrange in which all elements are equivalent to a given value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1002,34 +1019,34 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `val`  
- 在已排序范围中搜索的值。  
+ The value being searched for in the ordered range.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。  
+ User-defined predicate function object that defines the sense in which one element is less than another.  
   
-### <a name="return-value"></a>返回值  
- 一对前向迭代器，指定要搜索的范围中包含的一个子范围，根据所用的二元谓词（即 `comp`，或者默认情况下为“小于”）的定义，该子范围中的所有元素都等效于 `val`。  
+### <a name="return-value"></a>Return Value  
+ A pair of forward iterators that specify a subrange, contained within the range searched, in which all of the elements are equivalent to `val` in the sense defined by the binary predicate used (either `comp` or the default, less-than).  
   
- 如果范围中没有元素等效于 `val`，则返回的一对前向迭代器相等，并指定可以插入 `val` 而不打乱范围顺序的指针位置。  
+ If no elements in the range are equivalent to `val`, the returned pair of forward iterators are equal and specify the point where `val` could be inserted without disturbing the order of the range.  
   
-### <a name="remarks"></a>备注  
- 该算法返回的一对迭代器中，第一个迭代器是 [lower_bound](../standard-library/algorithm-functions.md#lower_bound)，第二个迭代器是 [upper_bound](../standard-library/algorithm-functions.md#upper_bound)。  
+### <a name="remarks"></a>Remarks  
+ The first iterator of the pair returned by the algorithm is [lower_bound](../standard-library/algorithm-functions.md#lower_bound), and the second iterator is [upper_bound](../standard-library/algorithm-functions.md#upper_bound).  
   
- 必须根据提供给 `equal_range` 的谓词排序范围。 例如，如果你打算使用“大于”谓词，则必须按降序排序范围。  
+ The range must be sorted according to the predicate provided to `equal_range`. For example, if you are going to use the greater-than predicate, the range must be sorted in descending order.  
   
- 根据所用谓词的定义，由 `equal_range` 返回的一对迭代器所定义的可能为空的子范围中的元素将等效于 `val`。  
+ Elements in the possibly empty subrange defined by the pair of iterators returned by `equal_range` will be equivalent to `val` in the sense defined by the predicate used.  
   
- 该算法的复杂性是随机访问迭代器对数和线性的成正比的步骤数，否则为 ( `last`  -  `first`)。  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last` - `first`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_equal_range.cpp  
@@ -1148,7 +1165,7 @@ int main()
 ```  
   
 ##  <a name="fill"></a>  fill  
- 将相同的新值分配给指定范围中的每个元素。  
+ Assigns the same new value to every element in a specified range.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -1158,20 +1175,20 @@ void fill(
     const Type& val);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种向前迭代器，用于寻址要遍历的范围内第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to be traversed.  
   
  `last`  
- 一种向前迭代器，用于寻址要遍历的范围内最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to be traversed.  
   
  `val`  
- 要分配给范围 [ `first`， `last`) 中元素的值。  
+ The value to be assigned to elements in the range [  `first`, `last`).  
   
-### <a name="remarks"></a>备注  
- 目标范围必须是有效的；所有指针必须是可取消引用的，并且最后一个位置可从第一个位置通过递增到达。 其复杂性与该范围的大小呈线性关系。  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill.cpp  
@@ -1213,7 +1230,7 @@ Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```  
   
 ##  <a name="fill_n"></a>  fill_n  
- 将新值分配给以特定元素开始的范围中指定数量的元素。  
+ Assigns a new value to a specified number of elements in a range beginning with a particular element.  
   
 ```  
 template<class OutputIterator, class Size, class Type>  
@@ -1223,23 +1240,23 @@ OutputIterator fill_n(
     const Type& Val);   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First`  
- 一种输出迭代器，用于寻址要分配值 `Val` 的范围中第一个元素的位置。  
+ An output iterator addressing the position of the first element in the range to be assigned the value `Val`.  
   
  `Count`  
- 指定要分配该值的元素数目的有符号或无符号整数类型。  
+ A signed or unsigned integer type specifying the number of elements to be assigned the value.  
   
  `Val`  
- 要分配给范围  [ `First`,          *First + Count*) 中的元素的值。  
+ The value to be assigned to elements in the range [ `First`,          *First + Count*).  
   
-### <a name="return-value"></a>返回值  
- 如果 `Count` > 0，则为指向填充的最后一个元素后面那个元素的迭代器，否则，为指向第一个元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the element that follows the last element filled if `Count` > zero, otherwise the first element.  
   
-### <a name="remarks"></a>备注  
- 目标范围必须是有效的；所有指针必须是可取消引用的，并且最后一个位置可从第一个位置通过递增到达。 其复杂性与该范围的大小呈线性关系。  
+### <a name="remarks"></a>Remarks  
+ The destination range must be valid; all pointers must be dereferenceable, and the last position is reachable from the first by incrementation. The complexity is linear with the size of the range.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_fill_n.cpp  
@@ -1289,7 +1306,7 @@ int main()
 ```  
   
 ##  <a name="find"></a>  find  
- 在范围中找到具有指定值的元素的第一个匹配项位置。  
+ Locates the position of the first occurrence of an element in a range that has a specified value.  
   
 ```  
 template<class InputIterator, class T>  
@@ -1299,26 +1316,26 @@ InputIterator find(
     const T& val);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 用于确定要在范围中搜索其指定值的第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the range to be searched for the specified value.  
   
  `last`  
- 用于确定要在范围中搜索其指定值的最后一个元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position one past the final element in the range to be searched for the specified value.  
   
  `val`  
- 要搜索的值。  
+ The value to be searched for.  
   
-### <a name="return-value"></a>返回值  
- 用于确定要在范围中搜索的指定值第一次出现的位置的输入迭代器。 如果找不到具有等效值的元素，则返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ An input iterator addressing the first occurrence of the specified value in the range being searched. If no element is found with an equivalent value, returns `last`.  
   
-### <a name="remarks"></a>备注  
- `operator==` 用于确定元素与指定值之间的匹配必须在其操作数之间施加等效关系。  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 有关使用 `find()` 的代码示例，请参阅 [find_if](../standard-library/algorithm-functions.md#find_if)。  
+ For a code example using `find()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="find_end"></a>  find_end  
- 在范围中查找与指定序列相同的最后一个序列，或在二元谓词指定的意义上等效的最后一个序列。  
+ Looks in a range for the last subsequence that is identical to a specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1337,31 +1354,31 @@ ForwardIterator1 find_end(
     Pred Comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `Last1`  
- 用于确定要搜索范围中最后一个元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the last element in the range to be searched.  
   
  `First2`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to search for.  
   
  `Last2`  
- 用于确定要搜索范围中最后一个元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the last element in the range to search for.  
   
  `Comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 用于确定 [First1, Last1) 内最后一个子序列的第一个元素的位置的前向迭代器，[First1, Last1) 与指定序列 [First2, Last2) 匹配。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the last subsequence within [First1, Last1) that matches the specified sequence [First2, Last2).  
   
-### <a name="remarks"></a>备注  
- `operator==` 用于确定元素与指定值之间的匹配必须在其操作数之间施加等效关系。  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置可从第一个位置通过递增到达。  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_end.cpp  
@@ -1458,7 +1475,7 @@ There is a sequence of elements in v1 that are equivalent to those
 ```  
   
 ##  <a name="find_first_of"></a>  find_first_of  
- 在目标范围中搜索若干值中任意值的第一个匹配项，或搜索在二元谓词指定的意义上等效于指定元素集的若干元素中任意元素的第一个匹配项。  
+ Searches for the first occurrence of any of several values within a target range or for the first occurrence of any of several elements that are equivalent in a sense specified by a binary predicate to a specified set of the elements.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -1477,31 +1494,31 @@ ForwardIterator1 find_first_of(
     BinaryPredicate  comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- 用于确定要匹配范围中的第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- 用于确定要匹配范围中的最后元素之后的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 用于确定第一个子序列的第一个元素的位置的前向迭代器，这个子序列与指定序列匹配或在二元谓词所指定的某个条件下等效。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>备注  
- `operator==` 用于确定元素与指定值之间的匹配必须在其操作数之间施加等效关系。  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置可从第一个位置通过递增到达。  
+ The ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_find_first_of.cpp  
@@ -1601,7 +1618,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="find_if"></a>  find_if  
- 在范围中找到满足指定条件的元素的第一个匹配项位置。  
+ Locates the position of the first occurrence of an element in a range that satisfies a specified condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1611,23 +1628,23 @@ InputIterator find_if(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 用于确定要搜索范围中的第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- 用户定义的谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素应满足的条件。 谓词采用单个参数并返回 `true`（满足条件）或 `false`（不满足条件）。 `pred` 的签名必须是有效的 `bool pred(const T& arg);`，其中，`T` 是 `InputIterator` 在取消引用时可隐式转换为的类型。 显示 `const` 关键字的目的仅为说明函数对象或 lambda 不应修改参数。  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>返回值  
- 用于引用范围中满足谓词所指定条件的元素（谓词产生的结果为 `true`）的输入迭代器。 如果找不到满足谓词的元素，则返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that satisfies the condition specified by the predicate (the predicate results in `true`). If no element is found to satisfy the predicate, returns `last`.  
   
-### <a name="remarks"></a>备注  
- 此模板函数是算法 [find](../standard-library/algorithm-functions.md#find) 的泛化，它将“等于指定值”谓词替换为任何谓词。 有关相反逻辑（找到不满足谓词的第一个元素），请参阅 [find_if_not](../standard-library/algorithm-functions.md#find_if_not)。  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does not satisfy the predicate), see [find_if_not](../standard-library/algorithm-functions.md#find_if_not).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /W4 /nologo /EHsc /MTd  
@@ -1714,7 +1731,7 @@ int main()
 ```  
   
 ##  <a name="find_if_not"></a>  find_if_not  
- 返回指示的范围中不满足条件的第一个元素。  
+ Returns the first element in the indicated range that does not satisfy a condition.  
   
 ```  
 template<class InputIterator, class Predicate>  
@@ -1724,26 +1741,26 @@ InputIterator find_if_not(
     Predicate pred);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 用于确定要搜索范围中的第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position one past the final element in the range to be searched.  
   
  `pred`  
- 用户定义谓词函数对象或 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)，用于定义要搜索的元素不满足的条件。 谓词采用单个参数并返回 `true`（满足条件）或 `false`（不满足条件）。 `pred` 的签名必须是有效的 `bool pred(const T& arg);`，其中，`T` 是 `InputIterator` 在取消引用时可隐式转换为的类型。 显示 `const` 关键字的目的仅为说明函数对象或 lambda 不应修改参数。  
+ User-defined predicate function object or [lambda expression](../cpp/lambda-expressions-in-cpp.md) that defines the condition to be not satisfied by the element being searched for. A predicate takes single argument and returns `true` (satisfied) or `false` (not satisfied). The signature of `pred` must effectively be `bool pred(const T& arg);`, where `T` is a type to which `InputIterator` can be implicitly converted when dereferenced. The `const` keyword is shown only to illustrate that the function object or lambda should not modify the argument.  
   
-### <a name="return-value"></a>返回值  
- 用于引用范围中不满足由谓词指定的条件（谓词产生的结果为 `false`）的第一个元素的输入迭代器。 如果所有元素均满足该谓词（对于每个元素，谓词产生的结果为 `true`），并返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ An input iterator that refers to the first element in the range that does not satisfy the condition specified by the predicate (the predicate results in `false`). If all elements satisfy the predicate (the predicate results in `true` for every element), returns `last`.  
   
-### <a name="remarks"></a>备注  
- 此模板函数是算法 [find](../standard-library/algorithm-functions.md#find) 的泛化，它将“等于指定值”谓词替换为任何谓词。 有关相反逻辑（找到满足谓词的第一个元素），请参阅 [find_if](../standard-library/algorithm-functions.md#find_if)。  
+### <a name="remarks"></a>Remarks  
+ This template function is a generalization of the algorithm [find](../standard-library/algorithm-functions.md#find), replacing the predicate "equals a specific value" with any predicate. For the logical opposite (find the first element that does satisfy the predicate), see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
- 有关易于适应 `find_if_not()` 的代码示例的信息，请参阅 [find_if](../standard-library/algorithm-functions.md#find_if)。  
+ For a code example readily adaptable to `find_if_not()`, see [find_if](../standard-library/algorithm-functions.md#find_if).  
   
 ##  <a name="for_each"></a>  for_each  
- 将指定的函数对象按向前顺序应用于范围中的每个元素并返回此函数对象。  
+ Applies a specified function object to each element in a forward order within a range and returns the function object.  
   
 ```  
 template<class InputIterator, class Function>  
@@ -1753,27 +1770,27 @@ Function for_each(
     Function _Func);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，用于寻址要操作的范围中第一个元素的位置。  
+ An input iterator addressing the position of the first element in the range to be operated on.  
   
  `last`  
- 一种输入迭代器，用于寻址要操作的范围中最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the range operated on.  
   
  `_Func`  
- 用户定义的应用于范围内每个元素的函数对象。  
+ User-defined function object that is applied to each element in the range.  
   
-### <a name="return-value"></a>返回值  
- 函数对象应用到范围内所有元素后的副本。  
+### <a name="return-value"></a>Return Value  
+ A copy of the function object after it has been applied to all of the elements in the range.  
   
-### <a name="remarks"></a>备注  
- 算法 `for_each` 非常灵活，允许以用户指定的不同方式修改范围内的每个元素。 模板化函数可能通过传递不同的参数在已修改的窗体中重用。 用户定义的函数可能会累积该算法在处理范围中所有元素后可能返回的内部状态中的信息。  
+### <a name="remarks"></a>Remarks  
+ The algorithm `for_each` is very flexible, allowing the modification of each element within a range in different, user-specified ways. Templatized functions may be reused in a modified form by passing different parameters. User-defined functions may accumulate information within an internal state that the algorithm may return after processing all of the elements in the range.  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，通过递增必须可从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 复杂性是线性的最多 ( `last`  -   `first`) 比较。  
+ The complexity is linear with at most ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_for_each.cpp  
@@ -1887,7 +1904,7 @@ The average of the elements of v1 is:
 ```  
   
 ##  <a name="generate"></a>  generate  
- 将函数对象生成的值分配给范围中的每个元素。  
+ Assigns the values generated by a function object to each element in a range.  
   
 ```  
 template<class ForwardIterator, class Generator>  
@@ -1897,24 +1914,24 @@ void generate(
     Generator _Gen);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种前向迭代器，用于寻址要分配值的范围中第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to which values are to be assigned.  
   
  `last`  
- 一种前向迭代器，用于寻址要分配值的范围中最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to which values are to be assigned.  
   
  `_Gen`  
- 用于生成要分配到范围中的每个元素的值的未使用任何自变量调用的函数对象。  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>备注  
- 为范围中的每个元素调用函数对象，并且每次调用它时，都无需返回相同的值。 例如，它可能会读取文件或引用和修改本地状态。 生成器的结果类型必须可以转换为范围中转发迭代器的值类型。  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，通过递增必须可从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 复杂性是线性的使用完全 ( `last`  -   `first`) 调用所需的生成器。  
+ The complexity is linear, with exactly ( `last` -  `first`) calls to the generator being required.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_generate.cpp  
@@ -1958,7 +1975,7 @@ Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```  
   
 ##  <a name="generate_n"></a>  generate_n  
- 将函数对象生成的值分配给范围中指定数量的元素，并返回到超出最后一个分配值的下一位置。  
+ Assigns the values generated by a function object to a specified number of elements in a range and returns to the position one past the last assigned value.  
   
 ```  
 template<class OutputIterator, class Diff, class Generator>  
@@ -1968,24 +1985,24 @@ void generate_n(
     Generator Gen);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First`  
- 寻址要分配值的范围中的第一个元素位置的输出迭代器。  
+ An output iterator addressing the position of first element in the range to which values are to be assigned.  
   
  `Count`  
- 指定生成器函数要将值分配到的元素数的有符号或无符号整型。  
+ A signed or unsigned integer type specifying the number of elements to be assigned a value by the generator function.  
   
  `Gen`  
- 用于生成要分配到范围中的每个元素的值的未使用任何自变量调用的函数对象。  
+ A function object that is called with no arguments that is used to generate the values to be assigned to each of the elements in the range.  
   
-### <a name="remarks"></a>备注  
- 为范围中的每个元素调用函数对象，并且每次调用它时，都无需返回相同的值。 例如，它可能会读取文件或引用和修改本地状态。 生成器的结果类型必须可以转换为范围中转发迭代器的值类型。  
+### <a name="remarks"></a>Remarks  
+ The function object is invoked for each element in the range and does not need to return the same value each time it is called. It may, for example, read from a file or refer to and modify a local state. The generator's result type must be convertible to the value type of the forward iterators for the range.  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，通过递增必须可从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and, within the sequence, the last position must be reachable from the first by incrementation.  
   
- 复杂性是线性的，对将需要的生成器具有确切的 `Count` 次调用。  
+ The complexity is linear, with exactly `Count` calls to the generator being required.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -2030,7 +2047,7 @@ int main()
 ```  
   
 ##  <a name="includes"></a>  includes  
- 测试一个排序的范围是否包含另一排序范围中的所有元素，其中元素之间的排序或等效条件可通过二元谓词指定。  
+ Tests whether one sorted range contains all the elements contained in a second sorted range, where the ordering or equivalence criterion between elements may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2049,39 +2066,39 @@ bool includes(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一种输入迭代器，用于寻址第一个元素在两个已排序源范围的第一个中的位置，以便测试第二个已排序源范围的所有元素是否包含在第一个中。  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last1`  
- 一种输入迭代器，用于寻址在两个已排序源范围的第一个中最后一个元素之后下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
   `first2`  
- 一种输入迭代器，用于寻址第一个元素在两个连续已排序源范围的第二个中的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `last2`  
- 一种输入迭代器，用于寻址在两个连续已排序源范围的第二个中最后一个元素之后的下一个元素的位置，以便测试第二个已排序源范围中的所有元素是否包含在第一个中。  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be tested for whether all the elements of the second are contained in the first.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 如果第一个排序范围包含第二个排序范围中的所有元素，则为 **true**，否则，为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the first sorted range contains all the elements in the second sorted range; otherwise, **false**.  
   
-### <a name="remarks"></a>备注  
- 考虑这种测试的另一种方式是，它确定第二个源范围是否为第一个源范围的子集。  
+### <a name="remarks"></a>Remarks  
+ Another way to think of this test is that it determined whether the second source range is a subset of the first source range.  
   
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- 必须按照该算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。  
+ The sorted source ranges must each be arranged as a precondition to the application of the algorithm includes in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- **merge**算法不会修改源范围。  
+ The source ranges are not modified by the algorithm **merge**.  
   
- 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 更准确的说，该算法测试在指定二元谓词下第一个已排序范围中的所有元素，是否与第二个已排序范围中的所有元素具有相同的排序。  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. More precisely, the algorithm tests whether all the elements in the first sorted range under a specified binary predicate have equivalent ordering to those in the second sorted range.  
   
- 算法的复杂性是线性的最多 2 \* (( *last1-first1*)-(* last2-first2 *))-1 比较对于非空源范围。  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( * last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_includes.cpp  
@@ -2231,7 +2248,7 @@ At least one of the elements in vector v3b is  not contained under mod_lesser in
 ```  
   
 ##  <a name="inplace_merge"></a>  inplace_merge  
- 将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。  
+ Combines the elements from two consecutive sorted ranges into a single sorted range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -2248,27 +2265,27 @@ void inplace_merge(
     Predicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第一个源范围内第一个元素的位置。  
+ A bidirectional iterator addressing the position of the first element in the first of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `middle`  
- 一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第二个源范围内第一个元素的位置。  
+ A bidirectional iterator addressing the position of the first element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `last`  
- 一种双向迭代器，用于寻址要合并且排序为一个范围的两个连续已排序源范围中，第二个源范围内最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position one past the last element in the second of two consecutive sorted ranges to be combined and sorted into a single range.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序连续范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted consecutive ranges referenced must be valid; all pointers must be dereferenceable and, within each sequence, the last position must be reachable from the first by incrementation.  
   
- 必须按照 `inplace_merge` 算法对合并范围排序时要使用的相同顺序对已排序连续范围分别进行排列，作为应用该算法的前置条件。 该操作保持不变，因为每个范围内元素的相对顺序均已保留。 当两个源范围中有相等的元素时，在合并范围中，第一个范围中的元素优先于第二个范围中的元素。  
+ The sorted consecutive ranges must each be arranged as a precondition to the application of the `inplace_merge` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges. The operation is stable as the relative order of elements within each range is preserved. When there are equivalent elements in both source ranges, the element is the first range precedes the element from the second in the combined range.  
   
- 因为该算法会向临时缓冲区分配内存，所以复杂性取决于可用内存。 如果提供足够的内存，最佳情况下是线性的 (* 姓氏-名字*)-1 比较; 如果辅助内存不可用，最坏情况下是*N*日志*(N)*，其中*N* = (* 姓氏-名字*)。  
+ The complexity depends on the available memory as the algorithm allocates memory to a temporary buffer. If sufficient memory is available, the best case is linear with ( * last - first*) - 1 comparisons; if no auxiliary memory is available, the worst case is  *N* log *(N)*, where  *N* = ( * last - first*).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_inplace_merge.cpp  
@@ -2380,7 +2397,7 @@ Merged inplace with binary predicate mod_lesser specified,
 ```  
   
 ##  <a name="is_heap"></a>  is_heap  
- 如果指定范围中的元素形成堆，则返回 `true`。  
+ Returns `true` if the elements in the specified range form a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2395,28 +2412,28 @@ bool is_heap(
     BinaryPredicate comp);   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种随机访问迭代器，指示在一个范围内检查堆的开始位置。  
+ A random access iterator that indicates the start of a range to check for a heap.  
   
  `last`  
- 一种随机访问迭代器，指示一个范围内的结束位置。  
+ A random access iterator that indicates the end of a range.  
   
  `comp`  
- 要测试或者排序元素的条件。 二元谓词采用单个参数并返回`true`或`false`。  
+ A condition to test to order elements. A binary predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 如果指定范围中的元素形成堆，则返回 `true`；否则，返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the elements in the specified range form a heap, `false` if they do not.  
   
-### <a name="remarks"></a>备注  
- 第一个模板函数返回 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first``,` `last``) ==` `last`。  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`.  
   
- 第二个模板函数返回  
+ The second template function returns  
   
- `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`。  
+ `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
 ##  <a name="is_heap_until"></a>  is_heap_until  
- 返回一个迭代器，它位于范围 [`begin`,`end`) 中不满足堆排序条件的第一个元素处；如果范围形成一个堆，则返回 `end`。  
+ Returns an iterator positioned at the first element in the range [ `begin`, `end`) that does not satisfy the heap ordering condition, or `end` if the range forms a heap.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -2431,26 +2448,26 @@ RandomAccessIterator is_heap_until(
     BinaryPredicate compare);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `begin`  
- 一个随机访问迭代器，它为堆指定范围中要检查的第一个元素。  
+ A random access iterator that specifies the first element of a range to check for a heap.  
   
  `end`  
- 一个随机访问迭代器，它为堆指定要检查的范围的末尾。  
+ A random access iterator that specifies the end of the range to check for a heap.  
   
  `compare`  
- 一个二元谓词，它指定定义堆的严格弱排序条件。 未指定 `compare` 时，默认谓词为 `std::less<>`。  
+ A binary predicate that specifies the strict weak ordering condition that defines a heap. The default predicate when `compare` is not specified is `std::less<>`.  
   
-### <a name="return-value"></a>返回值  
- 如果指定的范围形成堆或包含一个或更少元素，则返回 `end`。 否则，为找到的不满足该堆条件的第一个元素返回迭代器。  
+### <a name="return-value"></a>Return Value  
+ Returns `end` if the specified range forms a heap or contains one or fewer elements. Otherwise, returns an iterator for the first element found that does not satisfy the heap condition.  
   
-### <a name="remarks"></a>备注  
- 第一个模板函数返回 `[``begin``,` `end``]` 中的最后一个迭代器 `next`，其中 `[``begin``, next)` 是由函数对象 `std::less<>` 排序的一个堆。 如果距离 `end` `-` `begin` `< 2`，则函数返回 `end`。  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[ begin , end ]` where `[ begin , next)` is a heap ordered by the function object `std::less<>`. If the distance `end - begin < 2`, the function returns `end`.  
   
- 第二个模板函数行为与第一个相同，只不过它将谓词 `compare`（而非 `std::less<>`）作为堆排序条件。  
+ The second template function behaves the same as the first, except that it uses the predicate `compare` instead of `std::less<>` as the heap ordering condition.  
   
 ##  <a name="is_partitioned"></a>  is_partitioned  
- 如果给定范围中对某个条件测试为 `true` 的所有元素在测试为 `true` 的所有元素之前，则返回 `false`。  
+ Returns `true` if all the elements in the given range that test `true` for a condition come before any elements that test `false`.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
@@ -2460,24 +2477,24 @@ bool is_partitioned(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指示一个范围开始检查条件的位置。  
+ An input iterator that indicates where a range starts to check for a condition.  
   
  `last`  
- 一种输入迭代器，指示范围的结束位置。  
+ An input iterator that indicates the end of a range.  
   
  `comp`  
- 要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 谓词采用一个参数并返回 `true` 或 `false`。  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 如果给定范围中对某个条件测试为 `true` 的所有元素在测试为 `false` 的所有元素之前，将返回 True，否则，返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ Returns true when all of the elements in the given range that test `true` for a condition come before any elements that test `false`, and otherwise returns `false`.  
   
-### <a name="remarks"></a>备注  
- 仅当 `[` `first``,` `last``)` 中的所有元素通过 `comp` 进行分区时，模板函数才返回 `true`；即，`comp``(X)` 为 true 的 `[` `first``,` `last``)` 中的所有元素 `X` 在 `comp``(Y)` 为 `false` 的所有元素 `Y` 之前。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if all elements in `[` `first ,` `last )` are partitioned by `comp`; that is, all elements `X` in `[` `first ,` `last )` for which `comp (X)` is true occur before all elements `Y` for which `comp (Y)` is `false`.  
   
 ##  <a name="is_permutation"></a>  is_permutation  
- 如果这两个范围包含相同元素（无论元素是否处于相同顺序），则返回 true。 在 C++14 代码中使用双范围重载，因为对第二个范围仅采用单个迭代器的重载在第二个范围长于第一个范围时不会检测到差异，并且会在第二个范围短于第一个范围时导致未定义的行为。  
+ Returns true if both ranges contain the same elements, whether or not the elements are in the same order. Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2510,34 +2527,34 @@ bool is_permutation(
     Predicate Pred);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 引用范围的第一个元素的向前迭代器。  
+ A forward iterator that refers to the first element of the range.  
   
  `Last1`  
- 引用范围最后一个元素过去一个元素的向前迭代器。  
+ A forward iterator that refers one past the last element of the range.  
   
  `First2`  
- 引用第二个范围的第一个元素的向前迭代器（用于比较）。  
+ A forward iterator that refers to the first element of a second range, used for comparison.  
   
  `Last2`  
- 引用第二个范围最后一个元素过去一个元素的向前迭代器（用于比较）。  
+ A forward iterator that refers to one past the last element of a second range, used for comparison.  
   
  `Pred`  
- 针对等效性进行测试并返回 `bool` 的谓词。  
+ A predicate that tests for equivalence and returns a `bool`.  
   
-### <a name="return-value"></a>返回值  
- 当范围可以重新排列以便根据比较运算符谓词相同时为 `true`；否则为 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` when the ranges can be rearranged so as to be identical according to the comparator predicate; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- `is_permutation` 在最坏情况下具有二次复杂性。  
+### <a name="remarks"></a>Remarks  
+ `is_permutation` has quadratic complexity in the worst case.  
   
- 第一个模板函数假设以 `First2` 开头的范围中的元素与 [ `First1`, `Last1`) 指定的范围中的元素一样多。 如果第二个范围中存在更多元素，则忽略它们；如果元素更少，则会发生未定义的行为。 第三个模板函数（C++14 及更高版本）不会进行此假设。  仅当对于 [`First1`, `Last1`) 指定的范围中的每个元素 X，X == Y 的相同范围中的元素 Y 数量与从 `First2` 或 [`First2, Last2).` 开始的范围中的数量相同时，两者才返回 `true`。在这里，`operator==` 必须在其操作数之间执行成对比较。  
+ The first template function assumes that there are as many elements in the range beginning at `First2` as there are in the range designated by [ `First1`, `Last1`). If there are more elements in the second range, they are ignored; if there are less, undefined behavior will occur. The third template function (C++14 and later) does not make this assumption.  Both return `true` only if, for each element X in the range designated by [ `First1`, `Last1`) there are as many elements Y in the same range for which X == Y as there are in the range beginning at `First2` or [ `First2, Last2).` Here, `operator==` must perform a pairwise comparison between its operands.  
   
- 第二个和第四个模板函数的行为相同，只不过它们会将 `operator==(X, Y)` 替换为 `Pred(X, Y)`。 若要行为正确，谓词必须是对称、自反且可传递。  
+ The second and fourth template functions behave the same, except that they replace `operator==(X, Y)` with `Pred(X, Y)`. To behave correctly, the predicate must be symmetric, reflexive and transitive.  
   
-### <a name="example"></a>示例  
-  下面的示例演示如何使用 `is_permutation`：  
+### <a name="example"></a>Example  
+  The following example shows how to use `is_permutation`:  
   
 ```cpp  
 #include <vector>  
@@ -2593,7 +2610,7 @@ int main()
 ```  
   
 ##  <a name="is_sorted"></a>  is_sorted  
- 如果指定范围中的元素按顺序排序，则返回 `true`。  
+ Returns `true` if the elements in the specified range are in sorted order.  
   
 ```  
 template<class ForwardIterator>  
@@ -2608,25 +2625,25 @@ bool is_sorted(
     BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种前向迭代器，指示范围开始检查的位置。  
+ A forward iterator that indicates where the range to check begins.  
   
  `last`  
- 一种前向迭代器，指示范围的结束位置。  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- 要进行测试以确定两个元素之间顺序的条件。 谓词采用一个参数并返回 `true` 或 `false`。 此设置执行与 `operator<` 相同的任务。  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`. This performs the same task as `operator<`.  
   
-### <a name="remarks"></a>备注  
- 第一个模板函数返回 [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`(` `first``,` `last``) ==` `last`。 operator< 函数执行排序比较。  
+### <a name="remarks"></a>Remarks  
+ The first template function returns [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`. The `operator<` function performs the order comparison.  
   
- 第二个模板函数返回 `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`。 `comp` 谓词函数执行排序比较。  
+ The second template function returns `is_sorted_until( first, last , comp ) == last`. The `comp` predicate function performs the order comparison.  
   
 ##  <a name="is_sorted_until"></a>  is_sorted_until  
- 返回一个 `ForwardIterator`，设置为指定范围中按顺序排序的最后一个元素。  
+ Returns a `ForwardIterator` that is set to the last element that is in sorted order from a specified range.  
   
- 第二个版本可让你提供一个 `BinaryPredicate` 函数，当两个给定元素按顺序排序时，返回 `true`；否则，返回 `false`。  
+ The second version lets you provide a `BinaryPredicate` function that returns `true` when two given elements are in sorted order, and `false` otherwise.  
   
 ```  
 template<class ForwardIterator>  
@@ -2642,26 +2659,26 @@ template<class ForwardIterator, class BinaryPredicate>
     );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种前向迭代器，指示范围开始检查的位置。  
+ A forward iterator that indicates where the range to check starts.  
   
  `last`  
- 一种前向迭代器，指示范围的结束位置。  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- 要进行测试以确定两个元素之间顺序的条件。 谓词采用一个参数并返回 `true` 或 `false`。  
+ The condition to test to determine an order between two elements. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 返回 `ForwardIterator`，设置为最后一个元素按顺序排序。 排序的序列从 `first` 开始。  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` set to the last element in sorted order. The sorted sequence starts from  `first`.  
   
-### <a name="remarks"></a>备注  
- 第一个模板函数返回 `[` `first``,` `last``]` 中的最后一个迭代器 `next`，以便 `[` `first``, next)` 是由 `operator<` 排序的一个排序序列。 如果 `distance()` `< 2`，该函数将返回 `last`。  
+### <a name="remarks"></a>Remarks  
+ The first template function returns the last iterator `next` in `[` `first ,` `last ]` so that `[` `first , next)` is a sorted sequence ordered by `operator<`. If `distance()` `< 2` the function returns `last`.  
   
- 第二个模板函数的行为相同，只不过它将 `operator<(X, Y)` 替换为 `comp``(X, Y)`。  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
 ##  <a name="iter_swap"></a>  iter_swap  
- 交换由一对指定迭代器引用的两个值。  
+ Exchanges two values referred to by a pair of specified iterators.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -2669,19 +2686,19 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 其值将进行交换的其中一个前向迭代器。  
+ One of the forward iterators whose value is to be exchanged.  
   
  `right`  
- 其值将进行交换的前向迭代器中的第二个前向迭代器。  
+ The second of the forward iterators whose value is to be exchanged.  
   
-### <a name="remarks"></a>备注  
- `swap` 应优先于 **iter_swap** 使用，它包含在 C++ Standard 中用于实现向后兼容。 如果 `Fit1` 和 `Fit2` 是前向迭代器，则 `iter_swap` ( `Fit1`, `Fit2` ) 等效于 `swap` ( * `Fit1`, \* `Fit2` )。  
+### <a name="remarks"></a>Remarks  
+ `swap` should be used in preference to i **ter_swap**, which was included in the C++ Standard for backward compatibility. If `Fit1` and `Fit2` are forward iterators, then `iter_swap` ( `Fit1`, `Fit2` ), is equivalent to `swap` ( * `Fit1`, \* `Fit2` ).  
   
- 输入前向迭代器的值类型必须具有相同的值。  
+ The value types of the input forward iterators must have the same value.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_iter_swap.cpp  
@@ -2815,7 +2832,7 @@ After exchanging first elements,
 ```  
   
 ##  <a name="lexicographical_compare"></a>  lexicographical_compare  
- 逐个元素比较两个序列以确定其中的较小序列。  
+ Compares element by element between two sequences to determine which is lesser of the two.  
   
 ```  
 template<class InputIterator1, class InputIterator2>  
@@ -2835,35 +2852,35 @@ bool lexicographical_compare(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一种输入迭代器，用于寻址要比较的第一个范围中第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first range to be compared.  
   
  `last1`  
- 一种输入迭代器，用于寻址要比较的第一个范围中最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the first range to be compared.  
   
   `first2`  
- 一种输入迭代器，用于寻址要比较的第二个范围中第一个元素的位置。  
+ An input iterator addressing the position of the first element in the second range to be compared.  
   
  `last2`  
- 一种输入迭代器，用于寻址要比较的第二个范围中最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the second range to be compared.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 如果第一个范围按字典顺序小于第二个范围，则为 **true**；否则，为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the first range is lexicographically less than the second range; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 序列之间按字典顺序进行的比较将逐个比较元素，直到：  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between sequences compares them element by element until:  
   
--   它查找到两个不相等的相应元素，比较结果作为序列之间比较的结果。  
+-   It finds two corresponding elements unequal, and the result of their comparison is taken as the result of the comparison between sequences.  
   
--   未找到任何不相等的元素，但一个序列的元素数比另一个序列多，并且较短的序列小于较长的序列。  
+-   No inequalities are found, but one sequence has more elements than the other, and the shorter sequence is considered less than the longer sequence.  
   
--   未找到任何不相等的元素，并且序列具有相同的元素数，因此序列相等，比较的结果为 false。  
+-   No inequalities are found and the sequences have the same number of elements, and so the sequences are equal and the result of the comparison is false.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lex_comp.cpp  
@@ -2959,7 +2976,7 @@ Vector v1 is not lexicographically_less than v2 under twice.
 ```  
   
 ##  <a name="lower_bound"></a>  lower_bound  
- 在排序的范围中查找其值大于或等效于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。  
+ Finds the position of the first element in an ordered range that has a value greater than or equivalent to a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator, class Type>  
@@ -2977,34 +2994,34 @@ ForwardIterator lower_bound(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `value`  
- 正在已排序范围中搜索其第一个位置或可能的第一个位置的值。  
+ The value whose first position or possible first position is being searched for in the ordered range.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 已排序范围中其值大于或等效于指定值的第一个元素位置处的前向迭代器，其中等效性通过二元谓词指定。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator at the position of the first element in an ordered range with a value that is greater than or equivalent to a specified value, where the equivalence is specified with a binary predicate.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有迭代器必须可取消引用，并且在序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- 已排序的范围是使用 `lower_bound` 的前置条件，其中顺序与通过二元谓词指定的顺序相同。  
+ A sorted range is a precondition of using `lower_bound` and where the ordering is the same as specified by with binary predicate.  
   
- `lower_bound` 算法不会修改该范围。  
+ The range is not modified by the algorithm `lower_bound`.  
   
- 前向迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- 该算法的复杂性与随机访问迭代器是对数关系，而对于其他迭代器是线性关系，并且与步骤数成比例 ( `last - first`)。  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_lower_bound.cpp  
@@ -3096,7 +3113,7 @@ int main( )
 ```  
   
 ##  <a name="make_heap"></a>  make_heap  
- 将指定范围中的元素转换到第一个元素是最大元素的堆中，其中排序条件可通过二元谓词指定。  
+ Converts elements from a specified range into a heap in which the first element is the largest and for which a sorting criterion may be specified with a binary predicate.  
   
 ```  
  template<class RandomAccessIterator>  
@@ -3112,28 +3129,28 @@ void make_heap(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种随机访问迭代器，用于寻址要转换为堆的范围中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the range to be converted into a heap.  
   
  `last`  
- 一种随机访问迭代器，用于寻址要转换为堆的范围中最后一个元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 堆有两个属性：  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   第一个元素始终最大。  
+-   The first element is always the largest.  
   
--   可以在对数时间内添加或删除元素。  
+-   Elements may be added or removed in logarithmic time.  
   
- 堆是实施优先级队列的理想方式，用于实施 C++ 标准库容器适配器 [priority_queue 类](../standard-library/priority-queue-class.md)。  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 复杂性是线性的需要 3 \* (* 姓氏-名字 *) 比较。  
+ The complexity is linear, requiring 3 \* ( * last - first*) comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_make_heap.cpp  
@@ -3176,7 +3193,7 @@ int main() {
 ```  
   
 ##  <a name="max"></a>  max  
- 比较两个对象并返回较大对象，其中排序条件可通过二元谓词指定。  
+ Compares two objects and returns the larger of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3201,26 +3218,26 @@ template<class Type, class Pr>
     );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比较的两个对象中的第一个对象。  
+ The first of the two objects being compared.  
   
  `right`  
- 要比较的两个对象中的第二个对象。  
+ The second of the two objects being compared.  
   
  `comp`  
- 用于比较两个对象的二元谓词。  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- 包含要比较的对象的初始值设定项列表。  
+ The initializer list that contains the objects to be compared.  
   
-### <a name="return-value"></a>返回值  
- 两个对象中的较大者，除非两个对象都不大；在此情况下，它将返回两个对象中的第一个对象。 在 initializer_list 中，它将返回列表中的最大对象。  
+### <a name="return-value"></a>Return Value  
+ The greater of the two objects, unless neither is greater; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the greatest of the objects in the list.  
   
-### <a name="remarks"></a>备注  
- `max` 算法很少将对象作为参数传递。 大多数 C++ 标准库算法对一系列其位置由作为参数传递的迭代器指定的元素进行操作。 如果你需要一个对一系列元素进行操作的函数，请改用 [max_element](../standard-library/algorithm-functions.md#max_element)。  
+### <a name="remarks"></a>Remarks  
+ The `max` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that operates on a range of elements, use [max_element](../standard-library/algorithm-functions.md#max_element) instead.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max.cpp  
@@ -3389,7 +3406,7 @@ Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```  
   
 ##  <a name="max_element"></a>  max_element  
- 在指定范围中查找最大元素的第一个匹配项，其中排序条件可通过二元谓词指定。  
+ Finds the first occurrence of largest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator>  
@@ -3400,25 +3417,25 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个前向迭代器，用于确定要在其中搜索最大元素的范围中的第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to be searched for the largest element.  
   
  `last`  
- 一个前向迭代器，用于确定要在其中搜索最大元素的范围中的最后一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to be searched for the largest element.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一个前向迭代器，用于确定搜索范围内的最大元素的第一个匹配项的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the largest element in the range searched.  
   
-### <a name="remarks"></a>备注  
- 引用范围必须是有效的；所有指针必须是可解除引用的，在每个序列中，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- 复杂性是线性: ( `last`  -   `first`)-1 比较所需的非空范围。  
+ The complexity is linear: ( `last` -  `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_max_element.cpp  
@@ -3519,7 +3536,7 @@ int main( )
 ```  
   
 ##  <a name="merge"></a>  merge  
- 将两个已排序源范围中的所有元素合并为一个已排序目标范围，其中排序条件可通过二元谓词指定。  
+ Combines all of the elements from two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -3541,44 +3558,44 @@ OutputIterator merge(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一个输入迭代器，用于确定要合并且排序为一个范围的两个已排序源范围中第一个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
  `last1`  
- 一个输入迭代器，用于确定要合并且排序为一个范围的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be combined and sorted into a single range.  
   
   `first2`  
- 一个输入迭代器，用于确定要合并且排序为一个范围的两个连续已排序源范围中第二个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `last2`  
- 一个输入迭代器，用于确定要合并且排序为一个范围的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be combined and sorted into a single range.  
   
  `result`  
- 一个输出迭代器，用于确定要将两个源范围合并为一个已排序范围的目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be combined into a single sorted range.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于确定已排序目标范围中最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 目标范围不能与任一源范围重叠，并且应当足够大，以便包含目标范围。  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 必须按照 **merge** 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 **merge**算法不会修改源范围。  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range.  
   
- 算法的复杂性是线性的最多 (* last1-first1*)-(* last2-first2*)-1 比较。  
+ The complexity of the algorithm is linear with at most ( * last1 - first1*) - ( * last2 - first2*) - 1 comparisons.  
   
- [list 类](../standard-library/list-class.md)提供成员函数“merge”来合并两个列表的元素。  
+ The [list class](../standard-library/list-class.md) provides a member function "merge" to merge the elements of two lists.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_merge.cpp  
@@ -3689,7 +3706,7 @@ int main() {
 ```  
   
 ##  <a name="min"></a>  min  
- 比较两个对象并返回较小对象，其中排序条件可通过二元谓词指定。  
+ Compares two objects and returns the lesser of the two, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class Type>  
@@ -3713,26 +3730,26 @@ template<class Type, class Pr>    Type min (
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比较的两个对象中的第一个对象。  
+ The first of the two objects being compared.  
   
  `right`  
- 要比较的两个对象中的第二个对象。  
+ The second of the two objects being compared.  
   
  `comp`  
- 用于比较两个对象的二元谓词。  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- 包含要比较的成员的 initializer_list。  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="return-value"></a>返回值  
- 两个对象中的较小者，除非两个对象都不小；在此情况下，它将返回两个对象中的第一个对象。 在 initializer_list 中，它将返回列表中的最小对象。  
+### <a name="return-value"></a>Return Value  
+ The lesser of the two objects, unless neither is lesser; in that case, it returns the first of the two objects. In the case of an initializer_list, it returns the least of the objects in the list.  
   
-### <a name="remarks"></a>备注  
- `min` 算法很少将对象作为参数传递。 大多数 C++ 标准库算法对一系列其位置由作为参数传递的迭代器指定的元素进行操作。 如果你需要一个使用一系列元素的函数，请使用 [min_element](../standard-library/algorithm-functions.md#min_element)。  
+### <a name="remarks"></a>Remarks  
+ The `min` algorithm is unusual in having objects passed as parameters. Most C++ Standard Library algorithms operate on a range of elements whose position is specified by iterators passed as parameters. If you need a function that uses a range of elements, use [min_element](../standard-library/algorithm-functions.md#min_element).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min.cpp  
@@ -3900,7 +3917,7 @@ Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```  
   
 ##  <a name="min_element"></a>  min_element  
- 在指定范围中查找最小元素的第一个匹配项，其中排序条件可通过二元谓词指定。  
+ Finds the first occurrence of smallest element in a specified range where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class ForwardIterator>  
@@ -3911,25 +3928,25 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一种前向迭代器，用于寻址要在其中搜索最小元素的范围中第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to be searched for the smallest element.  
   
  `last`  
- 一种前向迭代器，用于寻址要在其中搜索最小元素的范围中最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to be searched for the smallest element.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一种前向迭代器，用于寻址搜索范围内最小元素的第一个匹配项的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first occurrence of the smallest element in the range searched.  
   
-### <a name="remarks"></a>备注  
- 引用范围必须是有效的；所有指针必须是可解除引用的，在每个序列中，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- 复杂性是线性: ( `last`  -  `first`)-1 比较所需的非空范围。  
+ The complexity is linear: ( `last` - `first`) - 1 comparisons are required for a nonempty range.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_min_element.cpp  
@@ -4040,7 +4057,7 @@ The smallest element in v1 under the mod_lesser
 ```  
   
 ##  <a name="minmax_element"></a>  minmax_element  
- 在一次调用中执行由 `min_element` 和 `max_element` 执行的操作。  
+ Performs the work performed by `min_element` and `max_element` in one call.  
   
 ```  
 template<class ForwardIterator>  
@@ -4058,36 +4075,36 @@ template<class ForwardIterator, class BinaryPredicate>
                 );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种前向迭代器，指示范围的开始位置。  
+ A forward iterator that indicates the beginning of a range.  
   
  `last`  
- 一种前向迭代器，指示范围的结束位置。  
+ A forward iterator that indicates the end of a range.  
   
  `comp`  
- 用于排序元素的可选测试。  
+ An optional test used to order elements.  
   
-### <a name="return-value"></a>返回值  
- 返回  
+### <a name="return-value"></a>Return Value  
+ Returns  
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(` [min_element](../standard-library/algorithm-functions.md#min_element)(  `first`, `last`)，[max_element](../standard-library/algorithm-functions.md#max_element)(  `first`, `last`))。  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
-### <a name="remarks"></a>备注  
- 第一个模板函数返回  
+### <a name="remarks"></a>Remarks  
+ The first template function returns  
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last),max_element(_First,Last))`。  
+ `(min_element(_First,Last), max_element(_First,Last))`.  
   
- 第二个模板函数的行为相同，只不过它将 `operator<(X, Y)` 替换为 `comp``(X, Y)`。  
+ The second template function behaves the same, except that it replaces `operator<(X, Y)` with `comp (X, Y)`.  
   
- 如果序列为非空，此函数将最多执行 `3 * (``last` `-` `first` `- 1) / 2` 次比较。  
+ If the sequence is non-empty, the function performs at most `3 * (last - first - 1) / 2` comparisons.  
   
 ##  <a name="minmax"></a>  minmax  
- 比较两个输入参数，并按较小到较大的顺序将它们作为参数对返回。  
+ Compares two input parameters and returns them as a pair, in order of lesser to greater.  
   
 ```  
 template<class Type>  
@@ -4114,32 +4131,32 @@ template<class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比较的两个对象中的第一个对象。  
+ The first of the two objects being compared.  
   
  `right`  
- 要比较的两个对象中的第二个对象。  
+ The second of the two objects being compared.  
   
  `comp`  
- 用于比较两个对象的二元谓词。  
+ A binary predicate used to compare the two objects.  
   
  `_IList`  
- 包含要比较的成员的 initializer_list。  
+ The initializer_list that contains the members to be compared.  
   
-### <a name="remarks"></a>备注  
- 如果 `right` 小于 `left`，第一个模板函数返回 `pair<const Type&, const Type&>(``right``,` `left``)`。 否则，将返回 `pair<const Type&, const Type&>(``left``,` `right``)`。  
+### <a name="remarks"></a>Remarks  
+ The first template function returns `pair<const Type&, const Type&>( right , left )` if `right` is less than `left`. Otherwise, it returns `pair<const Type&, const Type&>( left , right )`.  
   
- 当通过谓词 `comp` 进行比较时，第二个成员函数返回一对元素，其中第一个元素较小，第二个元素较大。  
+ The second member function returns a pair where the first element is the lesser and the second is the greater when compared by the predicate `comp`.  
   
- 其余模板函数的行为相同，只不过它们会将 `left` 和 `right` 参数替换为 `_IList`。  
+ The remaining template functions behave the same, except that they replace the `left` and `right` parameters with `_IList`.  
   
- 此函数仅执行一次比较。  
+ The function performs exactly one comparison.  
   
 ##  <a name="mismatch"></a>  mismatch  
- 逐个元素对比两个范围，并找到出现不同的第一个位置。  
+ Compares two ranges element by element and locates the first position where a difference occurs.  
   
- 在 C++14 代码中使用双范围重载，因为对第二个范围仅采用单个迭代器的重载在第二个范围长于第一个范围时不会检测到差异，并且会在第二个范围短于第一个范围时导致未定义的行为。  
+ Use the dual-range overloads in C++14 code because the overloads that only take a single iterator for the second range will not detect differences if the second range is longer than the first range, and will result in undefined behavior if the second range is shorter than the first range.  
   
 ```  
  template<class InputIterator1, class InputIterator2> pair<InputIterator1, InputIterator2>>   
@@ -4172,36 +4189,36 @@ mismatch(
      BinaryPredicate Comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First1`  
- 用于确定要测试的第一个范围中第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the first range to be tested.  
   
  `Last1`  
- 用于确定要测试的第一个范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position one past the last element in the first range to be tested.  
   
  `First2`  
- 用于确定要测试的第二个范围中第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the second range to be tested.  
   
  `Last2`  
- 用于确定要测试的第二个范围中最后元素之后下一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of one past the last element in the second range to be tested.  
   
  `Comp`  
- 用户定义的谓词函数对象，该对象将每个范围中的当前元素进行比较，并确定它们是否等效。 满足条件时，它将返回 **true**，不满足时将返回 **false**。  
+ User-defined predicate function object that compares the current elements in each range and determines whether they are equivalent. It returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 一对迭代器，用于确定两个范围中不匹配的位置，第一个组件迭代器指向第一个范围中的位置，第二个组件迭代器指向第二个范围中的位置。 如果比较的范围内的元素之间没有区别，或者两个范围内的所有元素对都满足第二个版本中的二进制谓词的两个范围，那么第一个组件迭代器会指向第一个范围中最后元素之后下一个元素的位置，第二个组件迭代器会指向第二个范围中测试的最后元素之后的下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators addressing the positions of the mismatch in the two ranges, the first component iterator to the position in the first range and the second component iterator to the position in the second range. If there is no difference between the elements in the ranges compared or if the binary predicate in the second version is satisfied by all element pairs from the two ranges, then the first component iterator points to the position one past the final element in the first range and the second component iterator to position one past the final element tested in the second range.  
   
-### <a name="remarks"></a>备注  
- 第一个模板函数假设从 first2 开始的范围中存在的元素数与 [first1, last1) 指定的范围中的元素数相同。 如果第二个范围中存在更多元素，则忽略它们；如果元素更少，则会导致未定义的行为。  
+### <a name="remarks"></a>Remarks  
+ The first template function assumes that there are as many elements in the range beginning at first2 as there are in the range designated by [first1, last1). If there are more in the second range, they are ignored; if there are less then undefined behavior will result.  
   
- 要搜索的范围必须是有效的；所有迭代器必须是可解除引用的，并且最后一个位置可从第一个位置通过递增到达。  
+ The range to be searched must be valid; all iterators must be dereferenceable and the last position is reachable from the first by incrementation.  
   
- 算法的时间复杂性在较短范围所包含的元素数目上呈线性。  
+ The time complexity of the algorithm is linear in the number of elements contained in the shorter range.  
   
- 用户定义的谓词不需要施加在其操作数之间施加对称、反身和可传递的等效关系。  
+ The user-defined predicate is not required to impose an equivalence relation that symmetric, reflexive and transitive between its operands.  
   
-### <a name="example"></a>示例  
-  下面的示例演示如何使用不匹配。 显示 C++03 重载只是为了演示它能如何产生意外结果。  
+### <a name="example"></a>Example  
+  The following example demonstrates how to use mismatch. The C++03 overload is shown only in order to demonstrate how it can produce an unexpected result.  
   
 ```cpp  
 #include <vector>  
@@ -4297,7 +4314,7 @@ Press a key
 ```  
   
 ##  <a name="alg_move"></a>  &lt;alg&gt; move  
- 移动与指定范围关联的元素。  
+ Move elements associated with a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator>  
@@ -4308,21 +4325,21 @@ template<class InputIterator, class OutputIterator>
                   );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个输入迭代器，指示在范围内移动元素的起始位置。  
+ An input iterator that indicates where to start the range of elements to move.  
   
  `last`  
- 一个输入迭代器，指示在范围内移动元素的结束位置。  
+ An input iterator that indicates the end of a range of elements to move.  
   
  `dest`  
- 将包含已移动元素的输出迭代器。  
+ The output iterator that is to contain the moved elements.  
   
-### <a name="remarks"></a>备注  
- 模板函数的计算结果`*(dest + N) = move(*(first + N))`一次为每个`N`范围内`[0, last - first)`，严格增加值的`N`从最低值开始。 然后返回 `dest + N`。 如果`dest`和`first`指定存储区域，`dest`不得位于范围`[first, last)`。  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(dest + N) = move(*(first + N))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `dest + N`. If `dest` and `first` designate regions of storage, `dest` must not be in the range `[first, last)`.  
   
 ##  <a name="move_backward"></a>  move_backward  
- 将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。  
+ Moves the elements of one iterator to another. The move starts with the last element in a specified range, and ends with the first element in that range.  
   
 ```  
 template<class BidirectionalIterator1, class BidirectionalIterator2>  
@@ -4333,23 +4350,23 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 指示范围内移动元素的开始位置的迭代器。  
+ An iterator that indicates the start of a range to move elements from.  
   
  `last`  
- 指示在范围内移动元素的结束位置的迭代器。 此元素未移动。  
+ An iterator that indicates the end of a range to move elements from. This element is not moved.  
   
  `destEnd`  
- 一种双向迭代器，用于定址目标范围内最后元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position of one past the final element in the destination range.  
   
-### <a name="remarks"></a>备注  
- 模板函数的计算结果`*(destEnd - N - 1) = move(*(last - N - 1))`一次为每个`N`范围内`[0, last - first)`，严格增加值的`N`从最低值开始。 然后返回 `destEnd - (last - first)`。 如果`destEnd`和`first`指定存储区域，`destEnd`不得位于范围`[first, last)`。  
+### <a name="remarks"></a>Remarks  
+ The template function evaluates `*(destEnd - N - 1) = move(*(last - N - 1))` once for each `N` in the range `[0, last - first)`, for strictly increasing values of `N` starting with the lowest value. It then returns `destEnd - (last - first)`. If `destEnd` and  `first` designate regions of storage, `destEnd` must not be in the range `[first, last)`.  
   
- `move` 和 `move_backward` 在功能上等效于将 `copy` 和 `copy_backward` 与移动迭代器结合使用。  
+ `move` and `move_backward` are functionally equivalent to using `copy` and `copy_backward` with a move iterator.  
   
 ##  <a name="next_permutation"></a>  next_permutation  
- 重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically next greater permutation if it exists, where the sense of next may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -4360,27 +4377,27 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，指向要重新排序的范围内第一个元素的位置。  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- 一种双向迭代器，指向要重新排序的范围内最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 如果按字典顺序下一个排列存在并且已替换范围的原始顺序，则返回 **true**；否则，返回 **false**。这种情况下，顺序转换为按字典顺序最小的排列。  
+### <a name="return-value"></a>Return Value  
+ **true** if the lexicographically next permutation exists and has replaced the original ordering of the range; otherwise **false**, in which case the ordering is transformed into the lexicographically smallest permutation.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 默认二元谓词是“小于”，并且范围中的元素必须是小于比较项，以确保正确定义下一个排列。  
+ The default binary predicate is less than and the elements in the range must be less than comparable to insure that the next permutation is well defined.  
   
- 复杂性是线性的最多 (* 姓氏-名字 *) / 2 交换。  
+ The complexity is linear with at most ( * last - first*)/2 swaps.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_next_perm.cpp  
@@ -4520,7 +4537,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- 对范围内的元素分区，正确找到范围中序列的第 *n* 个元素，以使序列中位于此元素之前的所有元素小于或等于此元素，位于此元素之后的所有元素大于或等于此元素。  
+ Partitions a range of elements, correctly locating the                 *n*th element of the sequence in the range so that all the elements in front of it are less than or equal to it and all the elements that follow it in the sequence are greater than or equal to it.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4531,29 +4548,29 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种随机访问迭代器，用于寻址要分区的范围中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the range to be partitioned.  
   
  *_Nth*  
- 一种随机访问迭代器，用于寻址要在分区边界上进行正确排序的元素的位置。  
+ A random-access iterator addressing the position of element to be correctly ordered on the boundary of the partition.  
   
  `last`  
- 一种随机访问迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- `nth_element` 算法不保证会存储子范围中第 *n* 个元素两边的任意元素。 因而，它保证的内容比 `partial_sort` 更少，它对范围中某些所选元素下面的元素进行排序，并且在不需要较低范围的排序时，可以用作替代 `partial_sort` 的一种较快算法。  
+ The `nth_element` algorithm does not guarantee that elements in the sub-ranges either side of the  *n*th element are sorted. It thus makes fewer guarantees than `partial_sort`, which orders the elements in the range below some chosen element, and may be used as a faster alternative to `partial_sort` when the ordering of the lower range is not required.  
   
- 元素是等效的，但是如果两者都不小于对方，则不一定要相等。  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other.  
   
- 排序复杂性的平均值是相对于线性 * 姓氏-名字 *。  
+ The average of a sort complexity is linear with respect to  * last - first*.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_nth_elem.cpp  
@@ -4620,31 +4637,31 @@ int main() {
 ```  
   
 ##  <a name="none_of"></a>  none_of  
- 当给定范围中没有元素满足条件时返回 `true`。  
+ Returns `true` when a condition is never present among elements in the given range.  
   
 ```  
 template<class InputIterator, class BinaryPredicate>  
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指示在元素范围内检查条件的起始位置。  
+ An input iterator that indicates where to start to check a range of elements for a condition.  
   
  `last`  
- 一种输入迭代器，指示元素范围的结束位置。  
+ An input iterator that indicates the end of a range of elements.  
   
  `comp`  
- 要测试的条件。 由定义条件的用户定义的谓词函数对象提供。 谓词采用一个参数并返回 `true` 或 `false`。  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 如果在指示范围内至少一次未检测到条件，则返回 `true`，如果检测条件，则返回 `false`。  
+### <a name="return-value"></a>Return Value  
+ Returns `true` if the condition is not detected at least once in the indicated range, and `false` if the condition is detected.  
   
-### <a name="remarks"></a>备注  
- 模板函数返回`true`才，对于某些`N`范围内`[0, last - first)`，谓词`comp(*(first + N))`始终`false`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `true` only if, for some `N` in the range `[0, last - first)`, the predicate `comp(*(first + N))` is always `false`.  
   
 ##  <a name="partial_sort"></a>  partial_sort  
- 将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。  
+ Arranges a specified number of the smaller elements in a range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4662,27 +4679,27 @@ template<class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `sortEnd`  
- 一种随机访问迭代器，用于寻址要排序的子范围中最后元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the subrange to be sorted.  
   
  `last`  
- 一种随机访问迭代器，用于寻址要部分排序的子范围中最后元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the range to be partially sorted.  
   
  `comp`  
- 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 元素是等效的，但是如果两者都不小于对方，则不一定要相等。 **sort** 算法不稳定，不保证保留等效元素的相对顺序。 算法 `stable_sort` 会保留此原始顺序。  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- 部分排序复杂性平均值为 *O*(( `last`- `first`) log ( `sortEnd`- `first`))。  
+ The average partial sort complexity is  *O*(( `last`- `first`) log ( `sortEnd`- `first`)).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort.cpp  
@@ -4756,7 +4773,7 @@ Partially resorted (UDgreater) vector:
 ```  
   
 ##  <a name="partial_sort_copy"></a>  partial_sort_copy  
- 将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。  
+ Copies elements from a source range into a destination range where the source elements are ordered by either less than or another specified binary predicate.  
   
 ```  
  template<class InputIterator, class RandomAccessIterator>  
@@ -4776,31 +4793,31 @@ template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 发现源范围内的第一个元素的位置的输入迭代器。  
+ An input iterator addressing the position of the first element in the source range.  
   
  `last1`  
- 一个输入迭代器，用于寻址源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the source range.  
   
   `first2`  
- 一种随机访问迭代器，用于寻址排序目标范围中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the sorted destination range.  
   
  `last2`  
- 一种随机访问迭代器，用于寻址排序目标范围中最后一个元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the sorted destination range.  
   
  `comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数，并且在满足时返回 `true`，未满足时返回 `false`。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 一种随机访问迭代器，用于将目标范围中的元素寻址到从源范围插入的最后一个元素之外的位置。  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator addressing the element in the destination range one position beyond the last element inserted from the source range.  
   
-### <a name="remarks"></a>备注  
- 源范围和目标范围务必不能重叠，并且必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges must not overlap and must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 二元谓词必须提供严格的弱排序，以便对不等效的元素进行排序，但是不对等效的元素进行排序。 两个元素在小于下是等效的，但是如果两者都不小于对方，则不一定要相等。  
+ The binary predicate must provide a strict weak ordering so that elements that are not equivalent are ordered, but elements that are equivalent are not. Two elements are equivalent under less than, but not necessarily equal, if neither is less than the other.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partial_sort_copy.cpp  
@@ -4877,7 +4894,7 @@ int main() {
 ```  
   
 ##  <a name="partition"></a>  partition  
- 将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -4888,27 +4905,27 @@ template<class BidirectionalIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，用于寻址要分区的范围中第一个元素的位置。  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- 一种双向迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes a single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>返回值  
- 一种双向迭代器，用于寻址范围中不满足谓词条件的第一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 元素 *a* 和 *b* 是等效的，但是如果 *Pr* ( *a*,  *b*) 和  *Pr* ( *b*,  *a*) 均为 false（其中 *Pr* 是指定参数的谓词），则不一定要相等。 **partition** 算法不稳定，不保证保留等效元素的相对顺序。 算法 **stable_ partition** 会保留此原始顺序。  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **partition** algorithm is not stable and does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm **stable_ partition** does preserve this original ordering.  
   
- 复杂性是线性︰ 有 ( `last`  -   `first`) 的应用程序`comp`且最多 ( `last`  -   `first`) / 2 交换。  
+ The complexity is linear: there are ( `last` -  `first`) applications of `comp` and at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_partition.cpp  
@@ -4948,7 +4965,7 @@ int main( ) {
 ```  
   
 ##  <a name="partition_copy"></a>  partition_copy  
- 将条件为 `true` 的元素复制到一个目标，将条件为 `false` 的元素复制到另一目标。 元素必须来自于指定范围。  
+ Copies elements for which a condition is `true` to one destination, and for which the condition is `false` to another. The elements must come from a specified range.  
   
 ```  
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>  
@@ -4962,27 +4979,27 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
         );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指示在一个范围中开始检查条件的位置。  
+ An input iterator that indicates the beginning of a range to check for a condition.  
   
  `last`  
- 一种输入迭代器，指示范围的结束位置。  
+ An input iterator that indicates the end of a range.  
   
  `dest1`  
- 一种输出迭代器，用于复制针对使用 `_Pred` 测试的条件返回 true 的元素。  
+ An output iterator used to copy elements that return true for a condition tested by using `_Pred`.  
   
  `dest2`  
- 一种输出迭代器，用于复制针对使用 `_Pred` 测试的条件返回 false 的元素。  
+ An output iterator used to copy elements that return false for a condition tested by using `_Pred`.  
   
  `_Pred`  
- 要测试的条件。 由定义要测试条件的用户定义谓词函数对象提供。 谓词采用一个参数并返回 `true` 或 `false`。  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be tested. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="remarks"></a>备注  
- 模板函数将复制的每个元素`X`中`[first,last)`到`*dest1++`如果`_Pred(X)`为 true，或者提供至`*dest2++`如果不是。 它将返回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。  
+### <a name="remarks"></a>Remarks  
+ The template function copies each element `X` in `[first,last)` to `*dest1++` if `_Pred(X)` is true, or to `*dest2++` if not. It returns `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.  
   
 ##  <a name="partition_point"></a>  partition_point  
- 返回给定范围中不满足条件的第一个元素。 元素经过排序，满足条件的元素在不满足条件的元素之前。  
+ Returns the first element in the given range that does not satisfy the condition. The elements are sorted so that those that satisfy the condition come before those that do not.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -4993,24 +5010,24 @@ template<class ForwardIterator, class Predicate>
     );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种 `ForwardIterator`，指示在一个范围内检查条件的开始位置。  
+ A `ForwardIterator` that indicates the start of a range to check for a condition.  
   
  `last`  
- 一种 `ForwardIterator`，指示范围的结束位置。  
+ A `ForwardIterator` that indicates the end of a range.  
   
  `comp`  
- 要测试的条件。 由用户定义的谓词函数对象提供，用于定义被搜索元素要满足的条件。 谓词采用一个参数并返回 `true` 或 `false`。  
+ The condition to test for. This is provided by a user-defined predicate function object that defines the condition to be satisfied by the element being searched for. A predicate takes a single argument and returns `true` or `false`.  
   
-### <a name="return-value"></a>返回值  
- 返回 `ForwardIterator`，是指不满足由 `comp` 测试的条件的第一个元素，如果找不到，则返回 `last`。  
+### <a name="return-value"></a>Return Value  
+ Returns a `ForwardIterator` that refers to the first element that does not fulfill the condition tested for by `comp`, or returns `last` if one is not found.  
   
-### <a name="remarks"></a>备注  
- 模板函数查找第一个迭代器`it`中`[first, last)`为其`comp(*it)`是`false`。 序列必须按 `comp` 排序。  
+### <a name="remarks"></a>Remarks  
+ The template function finds the first iterator `it` in `[first, last)` for which `comp(*it)` is `false`. The sequence must be ordered by `comp`.  
   
 ##  <a name="pop_heap"></a>  pop_heap  
- 移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。  
+ Removes the largest element from the front of a heap to the next-to-last position in the range and then forms a new heap from the remaining elements.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5021,34 +5038,34 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种随机访问迭代器，用于寻址堆中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- 一种随机访问迭代器，用于寻址堆中最后一个元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the heap.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 如果添加到堆中的元素大于该堆中已有的任何元素，则 `pop_heap` 算法是由 push_heap 算法执行的操作的反向操作，其中范围的倒数第二个元素添加到由范围中前面的元素组成的堆中。  
+### <a name="remarks"></a>Remarks  
+ The `pop_heap` algorithm is the inverse of the operation performed by the push_heap algorithm, in which an element at the next-to-last position of a range is added to a heap consisting of the prior elements in the range, in the case when the element being added to the heap is larger than any of the elements already in the heap.  
   
- 堆有两个属性：  
+ Heaps have two properties:  
   
--   第一个元素始终最大。  
+-   The first element is always the largest.  
   
--   可以在对数时间内添加或删除元素。  
+-   Elements may be added or removed in logarithmic time.  
   
- 堆是实施优先级队列的理想方式，用于实施 C++ 标准库容器适配器 [priority_queue 类](../standard-library/priority-queue-class.md)。  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 排除末尾新添加元素的范围必须是一个堆。  
+ The range excluding the newly added element at the end must be a heap.  
   
- 复杂性是对数，最多需要日志 (* 姓氏-名字 *) 比较。  
+ The complexity is logarithmic, requiring at most log ( * last - first*) comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_pop_heap.cpp  
@@ -5111,7 +5128,7 @@ int main( )  {
 ```  
   
 ##  <a name="prev_permutation"></a>  prev_permutation  
- 重新排序范围中的元素，以便按字典顺序的前一个更大排列（如果有）替换原有排序，其中“前一个”的意义可通过二元谓词指定。  
+ Reorders the elements in a range so that the original ordering is replaced by the lexicographically previous greater permutation if it exists, where the sense of previous may be specified with a binary predicate.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -5127,27 +5144,27 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，指向要重新排序的范围内第一个元素的位置。  
+ A bidirectional iterator pointing to the position of the first element in the range to be permuted.  
   
  `last`  
- 一种双向迭代器，指向要重新排序的范围内最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator pointing to the position one past the final element in the range to be permuted.  
   
  `comp`  
- 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数，并且在满足时返回 `true`，未满足时返回 `false`。  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns `true` when satisfied and `false` when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 如果按字典顺序前一个排列存在并且已替换范围的原始顺序，则返回 `true`；否则，返回 `false`。这种情况下，顺序转换为按字典顺序最大的排列。  
+### <a name="return-value"></a>Return Value  
+ `true` if the lexicographically previous permutation exists and has replaced the original ordering of the range; otherwise `false`, in which case the ordering is transformed into the lexicographically largest permutation.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 默认二元谓词是“小于”，并且范围中的元素必须是小于比较项，以确保正确定义前一个排列。  
+ The default binary predicate is less than and the elements in the range must be less-than comparable to ensure that the previous permutation is well defined.  
   
- 复杂性是线性的与最多 ( `last`  -   `first`) / 2 交换。  
+ The complexity is linear, with at most ( `last` -  `first`)/2 swaps.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_prev_perm.cpp  
@@ -5282,7 +5299,7 @@ After another prev_permutation of vector v1,
 ```  
   
 ##  <a name="push_heap"></a>  push_heap  
- 将范围末尾的元素添加到包括范围中前面元素的现有堆中。  
+ Adds an element that is at the end of a range to an existing heap consisting of the prior elements in the range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -5293,34 +5310,34 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种随机访问迭代器，用于寻址堆中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the heap.  
   
  `last`  
- 一种随机访问迭代器，用于寻址要转换为堆的范围中最后一个元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the range to be converted into a heap.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 元素必须先推送回现有堆的末尾，然后使用该算法将此元素添加到现有堆。  
+### <a name="remarks"></a>Remarks  
+ The element must first be pushed back to the end of an existing heap and then the algorithm is used to add this element to the existing heap.  
   
- 堆有两个属性：  
+ Heaps have two properties:  
   
--   第一个元素始终最大。  
+-   The first element is always the largest.  
   
--   可以在对数时间内添加或删除元素。  
+-   Elements may be added or removed in logarithmic time.  
   
- 堆是实施优先级队列的理想方式，用于实施 C++ 标准库容器适配器 [priority_queue 类](../standard-library/priority-queue-class.md)。  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 排除末尾新添加元素的范围必须是一个堆。  
+ The range excluding the newly added element at the end must be a heap.  
   
- 复杂性是对数，最多需要日志 (*姓氏-名字*) 比较。  
+ The complexity is logarithmic, requiring at most log ( *last - first*) comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_push_heap.cpp  
@@ -5388,10 +5405,10 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a>  random_shuffle  
- Std::random_shuffle() 函数已弃用，替换为[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 有关代码示例和详细信息，请参阅[\<随机 >](../standard-library/random.md)和 Stackoverflow 文章[为什么是 std:: random_shuffle 弃用方法在 C + + 14？](http://go.microsoft.com/fwlink/?LinkId=397954)。  
+ The std::random_shuffle() function is deprecated, replaced by [std::shuffle](../standard-library/algorithm-functions.md#shuffle). For a code example and more information, see [\<random>](../standard-library/random.md) and the Stackoverflow posting  [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954).  
   
 ##  <a name="remove"></a>  remove  
- 从给定范围中消除指定值，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。  
+ Eliminates a specified value from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -5399,31 +5416,31 @@ template<class ForwardIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 寻址要删除元素的范围中的第一个元素位置的转发迭代器。  
+ A forward iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 寻址要删除元素的范围中的最后一个元素的下一个位置的转发迭代器。  
+ A forward iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `val`  
- 要从该范围删除的值。  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>返回值  
- 寻址修改范围中的新的末尾位置的转发迭代器，此位置即超出不包含指定值的残留序列的最后一个元素的下一个位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 未删除的元素顺序保持不变。  
+ The order of the elements not removed remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性的;有 ( `last`  -   `first`) 相等比较。  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality.  
   
- [list 类](../standard-library/list-class.md)具有更高效的成员函数 **remove** 的版本，它也会重新链接指针。  
+ The [list class](../standard-library/list-class.md) has a more efficient member function version of **remove**, which also relinks pointers.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove.cpp  
@@ -5470,7 +5487,7 @@ int main( ) {
 ```  
   
 ##  <a name="remove_copy"></a>  remove_copy  
- 将源范围中的元素复制到目标范围（不复制具有指定值的元素），而不影响剩余元素的顺序，并返回新目标范围的末尾。  
+ Copies elements from a source range to a destination range, except that elements of a specified value are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Type>  
@@ -5478,34 +5495,34 @@ template<class InputIterator, class OutputIterator, class Type>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个输入迭代器，用于确定要删除元素的范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 一个输入迭代器，用于确定要删除元素的范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- 一个输出迭代器，用于确定要删除元素的目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `val`  
- 要从该范围删除的值。  
+ The value that is to be removed from the range.  
   
-### <a name="return-value"></a>返回值  
- 一个向前迭代器，用于确定目标范围中的新的末尾位置，此位置即不包含指定值的残留序列副本的最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the copy of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>备注  
- 引用的源范围和目标范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 目标范围中必须有足够的空间，以便包含删除具有指定值的元素之后将复制的残留元素。  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- 未删除的元素顺序保持不变。  
+ The order of the elements not removed remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性的;有 ( `last`  -   `first`) 比较是否相等和最多赋 ( `last`  -   `first`) 分配。  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy.cpp  
@@ -5549,7 +5566,7 @@ int main() {
 ```  
   
 ##  <a name="remove_copy_if"></a>  remove_copy_if  
- 将源范围中的元素复制到目标范围（不复制满足谓词的元素），而不影响剩余元素的顺序，并返回新目标范围的末尾。  
+ Copies elements from a source range to a destination range, except that satisfying a predicate are not copied, without disturbing the order of the remaining elements and returning the end of a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate>  
@@ -5557,36 +5574,36 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个输入迭代器，用于确定要删除元素的范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 一个输入迭代器，用于确定要删除元素的范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the range from which elements are being removed.  
   
  `result`  
- 一个输出迭代器，用于确定要删除元素的目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range to which elements are being removed.  
   
  `_Pred`  
- 必须满足的一元谓词是要替换的元素值。  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>返回值  
- 一个向前迭代器，用于确定目标范围中的新的末尾位置，此位置即不包含满足谓词的元素的残留序列的最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the destination range, one past the final element of the remnant sequence free of the elements satisfying the predicate.  
   
-### <a name="remarks"></a>备注  
- 引用的源范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 目标范围中必须有足够的空间，以便包含删除具有指定值的元素之后将复制的残留元素。  
+ There must be enough space in the destination range to contain the remnant elements that will be copied after elements of the specified value are removed.  
   
- 未删除的元素顺序保持不变。  
+ The order of the elements not removed remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性︰ 有 ( `last`  -   `first`) 比较是否相等和最多赋 ( `last`  -   `first`) 分配。  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments.  
   
- 有关这些函数行为方式的信息，请参阅[检查迭代器](../standard-library/checked-iterators.md)。  
+ For information on how these functions behave, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_copy_if.cpp  
@@ -5637,7 +5654,7 @@ int main() {
 ```  
   
 ##  <a name="remove_if"></a>  remove_if  
- 从给定范围中消除满足谓词的元素，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。  
+ Eliminates elements that satisfy a predicate from a given range without disturbing the order of the remaining elements and returning the end of a new range free of the specified value.  
   
 ```  
 template<class ForwardIterator, class Predicate>  
@@ -5645,31 +5662,31 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指向从其中删除元素的范围中第一个元素的位置。  
+ A forward iterator pointing to the position of the first element in the range from which elements are being removed.  
   
  `last`  
- 一种输入迭代器，指向从其中删除元素的范围中最后一个元素之后下一个元素的位置。  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being removed.  
   
  `_Pred`  
- 必须满足的一元谓词是要替换的元素值。  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
-### <a name="return-value"></a>返回值  
- 寻址修改范围中的新的末尾位置的转发迭代器，此位置即超出不包含指定值的残留序列的最后一个元素的下一个位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the new end position of the modified range, one past the final element of the remnant sequence free of the specified value.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 未删除的元素顺序保持不变。  
+ The order of the elements not removed remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性︰ 有 ( `last`  -   `first`) 相等比较。  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality.  
   
- List 具有更高效的成员函数 remove 的版本，它将会重新链接指针。  
+ List has a more efficient member function version of remove which relinks pointers.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_remove_if.cpp  
@@ -5720,36 +5737,36 @@ int main( ) {
 ```  
   
 ##  <a name="replace"></a>  replace  
- 检查范围中的每个元素，并替换与指定值匹配的元素。  
+ Examines each element in a range and replaces it if it matches a specified value.  
   
 ```  
 template<class ForwardIterator, class Type>  
 void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, const Type& _NewVal);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指向要从其中替换元素的范围中第一个元素的位置。  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 一种输入迭代器，指向要从其中替换元素的范围中最后一个元素之后下一个元素的位置。  
+ A forward iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_OldVal`  
- 要替换的元素的旧值。  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- 要赋给具有旧值的元素的新值。  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 未替换的元素的顺序保持不变。  
+ The order of the elements not replaced remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性的;有 ( `last`  -   `first`) 比较是否相等和最多赋 ( `last`  -   `first`) 次新值。  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace.cpp  
@@ -5788,7 +5805,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy"></a>  replace_copy  
- 检查源范围中的每个元素，并替换与指定值匹配的元素，同时将结果复制到新的目标范围。  
+ Examines each element in a source range and replaces it if it matches a specified value while copying the result into a new destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class Type>  
@@ -5801,35 +5818,35 @@ int main( ) {
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个输入迭代器，指向要替换元素的范围中的第一个元素的位置。  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 一个输入迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- 一个输出迭代器，指向要将序列已更改的元素复制到的目标范围中的第一个元素。  
+ An output iterator pointing to the first element in the destination range to where the altered sequence of elements is being copied.  
   
  `_OldVal`  
- 要替换的元素的旧值。  
+ The old value of the elements being replaced.  
   
  `_NewVal`  
- 要赋给具有旧值的元素的新值。  
+ The new value being assigned to the elements with the old value.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，指向要将序列已更改的元素复制到的目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>备注  
- 引用的源范围和目标范围不能重叠，并且必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- 未替换的元素的顺序保持不变。  
+ The order of the elements not replaced remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性︰ 有 ( `last`  -   `first`) 比较是否相等和最多赋 ( `last`  -   `first`) 次新值。  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy.cpp  
@@ -5887,7 +5904,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_copy_if"></a>  replace_copy_if  
- 检查源范围中的每个元素，并替换满足指定谓词的元素，同时将结果复制到新的目标范围。  
+ Examines each element in a source range and replaces it if it satisfies a specified predicate while copying the result into a new destination range.  
   
 ```  
 template<class InputIterator, class OutputIterator, class Predicate, class Type>  
@@ -5900,35 +5917,35 @@ OutputIterator replace_copy_if(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个输入迭代器，指向要替换元素的范围中的第一个元素的位置。  
+ An input iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 一个输入迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。  
+ An input iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `result`  
- 一个输出迭代器，指向要将元素复制到的目标范围内第一个元素的位置。  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
  `_Pred`  
- 必须满足的一元谓词是要替换的元素值。  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- 要赋给其旧值满足谓词的元素的新值。  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，指向要将序列已更改的元素复制到的目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>备注  
- 引用的源范围和目标范围不能重叠，并且必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must not overlap and must both be valid: all pointers must be dereferenceable and within the sequences the last position is reachable from the first by incrementation.  
   
- 未替换的元素的顺序保持不变。  
+ The order of the elements not replaced remains stable.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性的;有 ( `last`  -   `first`) 比较是否相等和最多赋 ( `last`  -   `first`) 次新值。  
+ The complexity is linear; there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_copy_if.cpp  
@@ -5993,7 +6010,7 @@ int main( ) {
 ```  
   
 ##  <a name="replace_if"></a>  replace_if  
- 检查范围中的每个元素，并替换满足指定谓词的元素。  
+ Examines each element in a range and replaces it if it satisfies a specified predicate.  
   
 ```  
 template<class ForwardIterator, class Predicate, class Type>  
@@ -6001,31 +6018,31 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种输入迭代器，指向要从其中替换元素的范围中第一个元素的位置。  
+ A forward iterator pointing to the position of the first element in the range from which elements are being replaced.  
   
  `last`  
- 一个迭代器，指向要替换元素的范围中最后一个元素之后下一个元素的位置。  
+ An iterator pointing to the position one past the final element in the range from which elements are being replaced.  
   
  `_Pred`  
- 必须满足的一元谓词是要替换的元素值。  
+ The unary predicate that must be satisfied is the value of an element is to be replaced.  
   
  `val`  
- 要赋给其旧值满足谓词的元素的新值。  
+ The new value being assigned to the elements whose old value satisfies the predicate.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 未替换的元素的顺序保持不变。  
+ The order of the elements not replaced remains stable.  
   
- 算法 `replace_if` 是算法 **replace** 的泛化，允许指定任何谓词，而非等于一个指定常量值。  
+ The algorithm `replace_if` is a generalization of the algorithm **replace**, allowing any predicate to be specified, rather than equality to a specified constant value.  
   
- 用于确定元素之间相等性的 `operator==` 必须在其操作数之间施加等效关系。  
+ The `operator==` used to determine the equality between elements must impose an equivalence relation between its operands.  
   
- 复杂性是线性︰ 有 ( `last`  -   `first`) 比较是否相等和最多赋 ( `last`  -   `first`) 次新值。  
+ The complexity is linear: there are ( `last` -  `first`) comparisons for equality and at most ( `last` -  `first`) assignments of new values.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_replace_if.cpp  
@@ -6070,7 +6087,7 @@ int main( ) {
 ```  
   
 ##  <a name="reverse"></a>  reverse  
- 反转范围中元素的顺序。  
+ Reverses the order of the elements within a range.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -6078,17 +6095,17 @@ template<class BidirectionalIterator>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，指向元素要进行重排的范围中第一个元素的位置。  
+ A bidirectional iterator pointing to the position of the first element in the range within which the elements are being permuted.  
   
  `last`  
- 一个双向迭代器，指向元素要进行重排的范围中最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator pointing to the position one past the final element in the range within which the elements are being permuted.  
   
-### <a name="remarks"></a>备注  
- 引用的源范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The source range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse.cpp  
@@ -6131,7 +6148,7 @@ The modified vector v1 with values reversed is:
 ```  
   
 ##  <a name="reverse_copy"></a>  reverse_copy  
- 反转源范围中元素的顺序，同时将这些元素复制到目标范围  
+ Reverses the order of the elements within a source range while copying them into a destination range  
   
 ```  
 template<class BidirectionalIterator, class OutputIterator>  
@@ -6142,23 +6159,23 @@ OutputIterator reverse_copy(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个双向迭代器，指向元素进行置换的源范围中第一个元素的位置。  
+ A bidirectional iterator pointing to the position of the first element in the source range within which the elements are being permuted.  
   
  `last`  
- 一个双向迭代器，指向元素进行置换的源范围中最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator pointing to the position one past the final element in the source range within which the elements are being permuted.  
   
  `result`  
- 一个输出迭代器，指向要将元素复制到的目标范围内第一个元素的位置。  
+ An output iterator pointing to the position of the first element in the destination range to which elements are being copied.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，指向要将序列已更改的元素复制到的目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator pointing to the position one past the final element in the destination range to where the altered sequence of elements is being copied.  
   
-### <a name="remarks"></a>备注  
- 引用的源范围和目标范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The source and destination ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_reverse_copy.cpp  
@@ -6199,7 +6216,7 @@ int main( ) {
 ```  
   
 ##  <a name="rotate"></a>  rotate  
- 交换两个相邻范围中的元素。  
+ Exchanges the elements in two adjacent ranges.  
   
 ```  
 template<class ForwardIterator>  
@@ -6207,22 +6224,22 @@ template<class ForwardIterator>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个向前迭代器，用于确定要轮换的范围内第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- 一个向前迭代器，用于在范围内定义边界，从而确定范围内其元素将与第一部分中的元素进行交换的第二部分中第一个元素的位置。  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
 `Last`  
- 一个向前迭代器，用于确定要轮换的范围内最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 复杂性是线性的最多 ( `last`  -   `first`) 交换。  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate.cpp  
@@ -6298,7 +6315,7 @@ After the rotation of a single deque element to the back,
 ```  
   
 ##  <a name="rotate_copy"></a>  rotate_copy  
- 交换源范围中两个相邻范围内的元素，并将结果复制到目标范围。  
+ Exchanges the elements in two adjacent ranges within a source range and copies the result to a destination range.  
   
 ```  
 template<class ForwardIterator, class OutputIterator>  
@@ -6310,28 +6327,28 @@ OutputIterator rotate_copy(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个向前迭代器，用于确定要轮换的范围内第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to be rotated.  
   
  `middle`  
- 一个向前迭代器，用于在范围内定义边界，从而确定范围内其元素将与第一部分中的元素进行交换的第二部分中第一个元素的位置。  
+ A forward iterator defining the boundary within the range that addresses the position of the first element in the second part of the range whose elements are to be exchanged with those in the first part of the range.  
   
  _ `Last`  
- 一个向前迭代器，用于确定要轮换的范围内最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to be rotated.  
   
  `result`  
- 一种输出迭代器，用于定址目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于确定目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针必须可取消引用，并且在序列内，最后一个位置可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 复杂性是线性的最多 ( `last`  -   `first`) 交换。  
+ The complexity is linear with at most ( `last` -  `first`) swaps.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_rotate_copy.cpp  
@@ -6391,7 +6408,7 @@ int main() {
 ```  
   
 ##  <a name="search"></a>  search  
- 在目标范围中搜索其元素与给定序列中的元素相等或在二元谓词指定的意义上等效于给定序列中的元素的序列的第一个匹配项。  
+ Searches for the first occurrence of a sequence within a target range whose elements are equal to those in a given sequence of elements or whose elements are equivalent in a sense specified by a binary predicate to the elements in the given sequence.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -6411,33 +6428,33 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
   `first2`  
- 用于确定要匹配范围中的第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be matched.  
   
  `last2`  
- 用于确定要匹配范围中的最后元素之后的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be matched.  
   
  `comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 用于确定第一个子序列的第一个元素的位置的前向迭代器，这个子序列与指定序列匹配或在二元谓词所指定的某个条件下等效。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>备注  
- `operator==` 用于确定元素与指定值之间的匹配必须在其操作数之间施加等效关系。  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置可从第一个位置通过递增到达。  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation.  
   
- 平均复杂性与搜索范围的大小呈线性关系，并且最坏情况下复杂性与要搜索序列的大小也呈线性关系。  
+ Average complexity is linear with respect to the size of the searched range, and worst case complexity is also linear with respect to the size of the sequence being searched for.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search.cpp  
@@ -6536,7 +6553,7 @@ There is a sequence of elements in v1 that are equivalent
 ```  
   
 ##  <a name="search_n"></a>  search_n  
- 在范围中搜索具有特定值或按二元谓词的指定与此值相关的指定数量的元素。  
+ Searches for the first subsequence in a range that of a specified number of elements having a particular value or a relation to that value as specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator1, class Diff2, class Type>  
@@ -6556,33 +6573,33 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 用于确定要搜索范围中第一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position of the first element in the range to be searched.  
   
  `last1`  
- 用于确定要搜索范围中最后元素之后下一个元素的位置的前向迭代器。  
+ A forward iterator addressing the position one past the final element in the range to be searched.  
   
  `count`  
- 要搜索的子序列的大小。  
+ The size of the subsequence being searched for.  
   
  `val`  
- 要搜索的序列中元素的值。  
+ The value of the elements in the sequence being searched for.  
   
  `comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 用于确定第一个子序列的第一个元素的位置的前向迭代器，这个子序列与指定序列匹配或在二元谓词所指定的某个条件下等效。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator addressing the position of the first element of the first subsequence that matches the specified sequence or that is equivalent in a sense specified by a binary predicate.  
   
-### <a name="remarks"></a>备注  
- `operator==` 用于确定元素与指定值之间的匹配必须在其操作数之间施加等效关系。  
+### <a name="remarks"></a>Remarks  
+ The `operator==` used to determine the match between an element and the specified value must impose an equivalence relation between its operands.  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 复杂性与搜索的大小呈线性关系。  
+ Complexity is linear with respect to the size of the searched.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_search_n.cpp  
@@ -6666,7 +6683,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 ```  
   
 ##  <a name="set_difference"></a>  set_difference  
- 将属于一个排序的源范围、但不属于另一排序的源范围的所有元素相并到一个排序的目标范围，其中排序条件可通过二元谓词指定。  
+ Unites all of the elements that belong to one sorted source range, but not to a second sorted source range, into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6688,42 +6705,42 @@ OutputIterator set_difference(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first1`  
- 一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个已排序源范围中第一个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last1`  
- 一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `first2`  
- 一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个连续已排序源范围中第二个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `last2`  
- 一个输入迭代器，用于寻址要相并且排序为一个范围（表示两个源范围的差异）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the difference of the two source ranges.  
   
  `result`  
- 一个输出迭代器，用于寻址要将两个源范围相并为一个已排序范围（表示两个源范围的差异）的目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the difference of the two source ranges.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于寻址表示两个源范围的差异的已排序目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the difference of the two source ranges.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 目标范围不能与任一源范围重叠，并且应当足够大，以便包含第一个源范围。  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the first source range.  
   
- 必须按照 `set_difference` 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。  
+ The sorted source ranges must each be arranged as a precondition to the application of the `set_difference` algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 merge 算法不会修改源范围。  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，以便使第一个源范围中的重复项多于第二个源范围中的重复项，则目标范围将包含这些元素在第一个源范围中出现的次数比其在第二个源范围中出现的次数多出的次数。  
+ The value types of the input iterators need be less-than-comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element such that there are more in the first source range than in the second, then the destination range will contain the number by which the occurrences of those elements in the first source range exceed the occurrences of those elements in the second source range.  
   
- 算法的复杂性是线性的最多 2 \* (( *last1-first1*)-( *last2-first2*))-1 比较对于非空源范围。  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_diff.cpp  
@@ -6843,7 +6860,7 @@ int main( )
 ```  
   
 ##  <a name="set_intersection"></a>  set_intersection  
- 将属于两个排序的源范围的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。  
+ Unites all of the elements that belong to both sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -6865,42 +6882,42 @@ OutputIterator set_intersection(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个已排序源范围中第一个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last1`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
   `first2`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个连续已排序源范围中第二个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
  `last2`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的交集）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the intersection of the two source ranges.  
   
- **_** *结果*  
- 一个输出迭代器，用于确定要将两个源范围相并为一个已排序范围（表示两个源范围的交集）的目标范围内第一个元素的位置。  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the intersection of the two source ranges.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于确定表示两个源范围的交集的已排序目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the intersection of the two source ranges.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 目标范围不能与任一源范围重叠，并且应当足够大，以便包含目标范围。  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 必须按照 merge 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。  
+ The sorted source ranges must each be arranged as a precondition to the application of the merge algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 该算法不会修改源范围。  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm.  
   
- 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，目标范围将包含出现在源范围中的这些元素的最大数目。  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- 算法的复杂性是线性的最多 2 \* (( *last1-first1*) + ( *last2-first2*))-1 比较对于非空源范围。  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) + ( *last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_intersection.cpp  
@@ -7014,7 +7031,7 @@ int main() {
 ```  
   
 ##  <a name="set_symmetric_difference"></a>  set_symmetric_difference  
- 将属于一个而不是两个排序的源范围的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。  
+ Unites all of the elements that belong to one, but not both, of the sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7036,42 +7053,42 @@ OutputIterator set_symmetric_difference(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个已排序源范围中第一个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last1`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
   `first2`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个连续已排序源范围中第二个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
  `last2`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的对称差异）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the symmetric difference of the two source ranges.  
   
- **_** *结果*  
- 一个输出迭代器，用于确定要将两个源范围相并为一个已排序范围（表示两个源范围的对称差异）的目标范围内第一个元素的位置。  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the symmetric difference of the two source ranges.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于确定表示两个源范围的对称差异的已排序目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the symmetric difference of the two source ranges.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 目标范围不能与任一源范围重叠，并且应当足够大，以便包含目标范围。  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 必须按照 **merge** 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 merge 算法不会修改源范围。  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm merge.  
   
- 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，则目标范围将包含这些元素在其中一个源范围中出现的次数比其在另一个源范围中出现的次数多出的次数的绝对值。  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the absolute value of the number by which the occurrences of those elements in the one of the source ranges exceeds the occurrences of those elements in the second source range.  
   
- 算法的复杂性是线性的最多 2 \* ((*last1-first1*)-(*last2-first2*))-1 比较对于非空源范围。  
+ The complexity of the algorithm is linear with at most 2 \* ( (*last1 - first1*) - (*last2 - first2*) ) - 1 comparisons for nonempty source ranges.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_sym_diff.cpp  
@@ -7191,7 +7208,7 @@ int main( )
 ```  
   
 ##  <a name="set_union"></a>  set_union  
- 将至少属于两个排序的源范围之一的所有元素相并为一个排序的目标范围，其中排序条件可通过二元谓词指定。  
+ Unites all of the elements that belong to at least one of two sorted source ranges into a single, sorted destination range, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
  template<class InputIterator1, class InputIterator2, class OutputIterator>  
@@ -7212,42 +7229,42 @@ OutputIterator set_union(
     BinaryPredicate comp );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个已排序源范围中第一个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last1`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个已排序源范围中第一个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in the first of two sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
   `first2`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个连续已排序源范围中第二个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
  `last2`  
- 一个输入迭代器，用于确定要相并且排序为一个范围（表示两个源范围的并集）的两个连续已排序源范围中第二个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the last element in second of two consecutive sorted source ranges to be united and sorted into a single range representing the union of the two source ranges.  
   
- **_** *结果*  
- 一个输出迭代器，用于确定要将两个源范围相并为一个已排序范围（表示两个源范围的并集）的目标范围内第一个元素的位置。  
+ **_** *Result*  
+ An output iterator addressing the position of the first element in the destination range where the two source ranges are to be united into a single sorted range representing the union of the two source ranges.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素大于另一个元素的理解。 二元谓词采用两个参数，并且应在第一个元素小于第二个元素时返回 **true** ；否则返回 **false** 。  
+ User-defined predicate function object that defines the sense in which one element is greater than another. The binary predicate takes two arguments and should return **true** when the first element is less than the second element and **false** otherwise.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于确定表示两个源范围的并集的已排序目标范围内最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the last element in the sorted destination range representing the union of the two source ranges.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有指针必须可取消引用，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation.  
   
- 目标范围不能与任一源范围重叠，并且应当足够大，以便包含目标范围。  
+ The destination range should not overlap either of the source ranges and should be large enough to contain the destination range.  
   
- 必须按照 **merge** 算法对合并范围排序时要使用的相同顺序对已排序源范围分别进行排列，作为应用该算法的前置条件。  
+ The sorted source ranges must each be arranged as a precondition to the application of the **merge** algorithm in accordance with the same ordering as is to be used by the algorithm to sort the combined ranges.  
   
- 该操作保持不变，因为每个范围内元素的相对顺序均保留在目标范围中。 **merge**算法不会修改源范围。  
+ The operation is stable as the relative order of elements within each range is preserved in the destination range. The source ranges are not modified by the algorithm **merge**.  
   
- 输入迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 当两个源范围中有相等的元素时，在目标范围中，第一个范围中的元素优先于第二个源范围中的元素。 如果源范围包含某个元素的重复项，目标范围将包含出现在源范围中的这些元素的最大数目。  
+ The value types of the input iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. When there are equivalent elements in both source ranges, the elements in the first range precede the elements from the second source range in the destination range. If the source ranges contain duplicates of an element, then the destination range will contain the maximum number of those elements that occur in both source ranges.  
   
- 算法的复杂性是线性的最多 2 \* (( *last1-first1*)-( *last2-first2*))-1 比较。  
+ The complexity of the algorithm is linear with at most 2 \* ( ( *last1 - first1*) - ( *last2 - first2*) ) - 1 comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_set_union.cpp  
@@ -7367,7 +7384,7 @@ int main( )
 ```  
   
 ##  <a name="shuffle"></a>  std::shuffle  
- 通过使用随机数生成器重新排列给定范围中的元素。  
+ Shuffles (rearranges) elements for a given range by using a random number generator.  
   
 ```  
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>  
@@ -7376,22 +7393,21 @@ void shuffle(RandomAccessIterator first,
     UniformRandomNumberGenerator&& gen);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 指向范围中要重新排序的第一个元素的迭代器（包含第一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。  
+ An iterator to the first element in the range to be shuffled, inclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `last`  
- 指向范围中要重新排序的最后一个元素的迭代器（不包含最后一个元素）。 必须满足 `RandomAccessIterator` 和 `ValueSwappable` 的要求。  
+ An iterator to the last element in the range to be shuffled, exclusive. Must meet the requirements of `RandomAccessIterator` and `ValueSwappable`.  
   
  `gen`  
- 
-          `shuffle()` 函数将用于运算的随机数生成器。 必须满足 `UniformRandomNumberGenerator` 的要求。  
+ The random number generator that the `shuffle()` function will use for the operation. Must meet the requirements of a `UniformRandomNumberGenerator`.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息和使用 `shuffle()` 的代码示例，请参阅 [\<random>](../standard-library/random.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information, and a code sample that uses `shuffle()`, see [\<random>](../standard-library/random.md).  
   
 ##  <a name="sort"></a>  sort  
- 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7407,24 +7423,24 @@ template<class RandomAccessIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 一种随机访问迭代器，用于寻址要排序的范围中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- 一种随机访问迭代器，用于定址要排序的范围中最后元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 该二元谓词采用两个参数，并且，如果两个参数按顺序排序，将返回 `true`，否则将返回 `false`。 该比较器函数必须对序列中的元素对进行严格弱排序。 有关详细信息，请参阅[算法](../standard-library/algorithms.md)。  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. This binary predicate takes two arguments and returns `true` if the two arguments are in order and `false` otherwise. This comparator function must impose a strict weak ordering on pairs of elements from the sequence. For more information, see [Algorithms](../standard-library/algorithms.md).  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 元素是等效的，但是如果两者都不小于对方，则不一定要相等。 `sort` 算法不稳定，因此不保证保留等效元素的相对顺序。 算法 `stable_sort` 会保留此原始顺序。  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The `sort` algorithm is not stable and so does not guarantee that the relative ordering of equivalent elements will be preserved. The algorithm `stable_sort` does preserve this original ordering.  
   
- 排序复杂性的平均值是*O*( *N*日志*N*)，其中*N* =  *姓氏-名字*。  
+ The average of a sort complexity is  *O*( *N* log  *N*), where  *N* =  *last - first*.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort.cpp  
@@ -7493,7 +7509,7 @@ Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```  
   
 ##  <a name="sort_heap"></a>  sort_heap  
- 将堆转换为排序的范围。  
+ Converts a heap into a sorted range.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -7508,34 +7524,34 @@ template<class RandomAccessIterator, class Predicate>
       Predicate comp);  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种随机访问迭代器，用于寻址目标堆中第一个元素的位置。  
+ A random-access iterator addressing the position of the first element in the target heap.  
   
  `last`  
- 一种随机访问迭代器，用于寻址目标堆中最后一个元素之后下一个元素的位置。  
+ A random-access iterator addressing the position one past the final element in the target heap.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 堆有两个属性：  
+### <a name="remarks"></a>Remarks  
+ Heaps have two properties:  
   
--   第一个元素始终最大。  
+-   The first element is always the largest.  
   
--   可以在对数时间内添加或删除元素。  
+-   Elements may be added or removed in logarithmic time.  
   
- 应用此算法后，其应用到的范围将不再是一个堆。  
+ After the application if this algorithm, the range it was applied to is no longer a heap.  
   
- 这种排序算法不稳定，因为不一定保留等效元素的相对顺序。  
+ This is not a stable sort because the relative order of equivalent elements is not necessarily preserved.  
   
- 堆是实施优先级队列的理想方式，用于实施 C++ 标准库容器适配器 [priority_queue 类](../standard-library/priority-queue-class.md)。  
+ Heaps are an ideal way to implement priority queues and they are used in the implementation of the C++ Standard Library container adaptor [priority_queue Class](../standard-library/priority-queue-class.md).  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 复杂性是最多*N*日志*N*，其中*N* = (*姓氏-名字*)。  
+ The complexity is at most  *N* log  *N*, where  *N* = ( *last - first*).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_sort_heap.cpp  
@@ -7586,7 +7602,7 @@ int main() {
 ```  
   
 ##  <a name="stable_partition"></a>  stable_partition  
- 将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前，并保留等效元素的相对顺序。  
+ Classifies elements in a range into two disjoint sets, with those elements satisfying a unary predicate preceding those that fail to satisfy it, preserving the relative order of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator, class Predicate>  
@@ -7597,25 +7613,25 @@ BidirectionalIterator stable_partition(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，用于寻址要分区的范围中第一个元素的位置。  
+ A bidirectional iterator addressing the position of the first element in the range to be partitioned.  
   
  `last`  
- 一种双向迭代器，用于寻址要分区的范围中最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position one past the final element in the range to be partitioned.  
   
  `_Pred`  
- 用户定义的谓词函数对象，用于定义如果元素要分类时应满足的条件。 谓词采用一个参数并返回 **true** 或 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if an element is to be classified. A predicate takes single argument and returns **true** or **false**.  
   
-### <a name="return-value"></a>返回值  
- 一种双向迭代器，用于寻址范围中不满足谓词条件的第一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the position of the first element in the range to not satisfy the predicate condition.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 元素 *a* 和 *b* 是等效的，但是如果 *Pr* ( *a*,  *b*) 和  *Pr* ( *b*,  *a*) 均为 false（其中 *Pr* 是指定参数的谓词），则不一定要相等。 **stable_ partition** 算法稳定，可保证保留等效元素的相对顺序。 算法 **partition** 不必保留此原始顺序。  
+ Elements  *a* and  *b* are equivalent, but not necessarily equal, if both  *Pr* ( *a*,  *b*) is false and  *Pr* ( *b*,  *a*) if false, where  *Pr* is the parameter-specified predicate. The **stable_ partition** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved. The algorithm **partition** does not necessarily preserve this original ordering.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_partition.cpp  
@@ -7661,7 +7677,7 @@ int main( ) {
 ```  
   
 ##  <a name="stable_sort"></a>  stable_sort  
- 将指定范围中的元素按非降序顺序排列，或根据二元谓词指定的排序条件排列，并保留等效元素的相对顺序。  
+ Arranges the elements in a specified range into a nondescending order or according to an ordering criterion specified by a binary predicate and preserves the relative ordering of equivalent elements.  
   
 ```  
 template<class BidirectionalIterator>  
@@ -7675,24 +7691,24 @@ void stable_sort(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种双向迭代器，用于寻址要排序的范围中第一个元素的位置。  
+ A bidirectional iterator addressing the position of the first element in the range to be sorted.  
   
  `last`  
- 一种双向迭代器，用于寻址要排序的范围中最后一个元素之后下一个元素的位置。  
+ A bidirectional iterator addressing the position one past the final element in the range to be sorted.  
   
  `comp`  
- 用户定义的谓词函数对象，定义排序中连续元素要满足的比较条件。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the comparison criterion to be satisfied by successive elements in the ordering. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+### <a name="remarks"></a>Remarks  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation.  
   
- 元素是等效的，但是如果两者都不小于对方，则不一定要相等。 **sort** 算法是稳定的，可保证保留等效元素的相对顺序。  
+ Elements are equivalent, but not necessarily equal, if neither is less than the other. The **sort** algorithm is stable and guarantees that the relative ordering of equivalent elements will be preserved.  
   
- 运行时间复杂性`stable_sort`取决于可用，内存量 （给定足够的内存） 的最佳大小写，但*O*( *N*日志*N*) 和最坏情况下是*O*( *N* (日志*N* ) 2)，其中*N* =  *姓氏的名字。* 通常情况下，**sort** 算法比 `stable_sort` 快得多。  
+ The run-time complexity of `stable_sort` depends on the amount of memory available, but the best case (given sufficient memory) is  *O*( *N* log  *N*) and the worst case is  *O*(  *N* ( log  *N* )2 ), where  *N* =  *last - First.* Usually, the **sort** algorithm is significantly faster than `stable_sort`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_stable_sort.cpp  
@@ -7760,7 +7776,7 @@ Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```  
   
 ##  <a name="swap"></a>  swap  
- 第一次重写交换两个对象的值。 第二次重写交换两个对象数组之间的值。  
+ The first override exchanges the values of two objects. The second override exchanges the values between two arrays of objects.  
   
 ```  
 template<class Type>  
@@ -7774,17 +7790,17 @@ template<class Type, size_t N>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 对于第一次重写，为交换其内容的第一个对象。 对于第二次重写，为交换其内容的第一个对象数组。  
+ For the first override, the first object to have its contents exchanged. For the second override, the first array of objects to have its contents exchanged.  
   
  `right`  
- 对于第一次重写，为交换其内容的第二个对象。 对于第二次重写，为交换其内容的第二个对象数组。  
+ For the first override, the second object to have its contents exchanged. For the second override, the second array of objects to have its contents exchanged.  
   
-### <a name="remarks"></a>备注  
- 第一次重载设计用于对各个对象进行操作。 第二次重载交换两个数组之间对象的内容。  
+### <a name="remarks"></a>Remarks  
+ The first overload is designed to operate on individual objects. The second overload swaps the contents of objects between two arrays.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap.cpp  
@@ -7841,7 +7857,7 @@ Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```  
   
 ##  <a name="swap_ranges"></a>  swap_ranges  
- 将一个范围中的元素与另一大小相等的范围中的元素交换。  
+ Exchanges the elements of one range with the elements of another, equal sized range.  
   
 ```  
 template<class ForwardIterator1, class ForwardIterator2>  
@@ -7852,25 +7868,25 @@ ForwardIterator2 swap_ranges(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一种前向迭代器，指向其元素将要进行交换的第一个范围的第一个位置。  
+ A forward iterator pointing to the first position of the first range whose elements are to be exchanged.  
   
  `last1`  
- 一种前向迭代器，指向其元素将要进行交换的第一个范围的最后一个位置之后的位置。  
+ A forward iterator pointing to one past the final position of the first range whose elements are to be exchanged.  
   
   `first2`  
- 一种前向迭代器，指向其元素将要进行交换的第二个范围的第一个位置。  
+ A forward iterator pointing to the first position of the second range whose elements are to be exchanged.  
   
-### <a name="return-value"></a>返回值  
- 一种前向迭代器，指向其元素将要进行交换的第二个范围的最后一个位置之后的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator pointing to one past the final position of the second range whose elements are to be exchanged.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置可从第一个位置通过递增到达。 第二个范围必须与第一个范围一样大。  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position is reachable from the first by incrementation. The second range has to be as large as the first range.  
   
- 复杂性是线性的`last1`  -   `first1`交换执行。 如果交换同一类型的容器中的元素，应使用该容器中的 `swap` 成员函数，因为该成员函数通常具有恒定的复杂性。  
+ The complexity is linear with `last1` -  `first1` swaps performed. If elements from containers of the same type are being swapped, them the `swap` member function from that container should be used, because the member function typically has constant complexity.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_swap_ranges.cpp  
@@ -7932,7 +7948,7 @@ After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```  
   
 ##  <a name="transform"></a>  transform  
- 将指定的函数对象应用于源范围中的每个元素或两个源范围中的元素对，并将函数对象的返回值复制到目标范围。  
+ Applies a specified function object to each element in a source range or to a pair of elements from two source ranges and copies the return values of the function object into a destination range.  
   
 ```  
  template<class InputIterator, class OutputIterator, class UnaryFunction>  
@@ -7952,33 +7968,33 @@ OutputIterator transform(
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first1`  
- 一种输入迭代器，用于寻址要操作的第一个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the first source range to be operated on.  
   
  `last1`  
- 一种输入迭代器，用于寻址要操作的第一个源范围内最后一个元素之后下一个元素的位置。  
+ An input iterator addressing the position one past the final element in the first source range operated on.  
   
   `first2`  
- 一种输入迭代器，用于定址所操作的第二个源范围内第一个元素的位置。  
+ An input iterator addressing the position of the first element in the second source range to be operated on.  
   
  `result`  
- 一种输出迭代器，用于定址目标范围内第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range.  
   
  `_Func`  
- 在应用到第一个源范围中每个元素的第一版算法中使用的用户定义一元函数对象，或者在按前向顺序成对应用到两个源范围的第二版算法中使用的用户定义 (UD) 二元函数对象。  
+ User-defined unary function object used in the first version of the algorithm that is applied to each element in the first source range or A user-defined (UD) binary function object used in the second version of the algorithm that is applied pairwise, in a forward order, to the two source ranges.  
   
-### <a name="return-value"></a>返回值  
- 一种输出迭代器，用于寻址接收通过函数对象转换的输出元素的目标范围内最后元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the output elements transformed by the function object.  
   
-### <a name="remarks"></a>备注  
- 引用的范围必须是有效的；所有指针必须是可解除引用的，并且在每个序列内，最后一个位置必须可从第一个位置通过递增到达。 目标范围必须足够大，以包含已转换的源范围。  
+### <a name="remarks"></a>Remarks  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within each sequence the last position must be reachable from the first by incrementation. The destination range must be large enough to contain the transformed source range.  
   
- 如果`result`设置为等于`first1`算法的第一个版本中，然后在源和目标范围将是相同的并且将就地修改序列。 但是`result`可能不解决范围内的位置 [`first1` + 1， `last1`)。  
+ If `result` is set equal to  `first1` in the first version of the algorithm, then the source and destination ranges will be the same and the sequence will be modified in place. But the `result` may not address a position within the range [`first1` + 1, `last1`).  
   
- 复杂性是线性的最多 (`last1` -  `first1`) 比较。  
+ The complexity is linear with at most (`last1` -  `first1`) comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_transform.cpp  
@@ -8066,7 +8082,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 ```  
   
 ##  <a name="unique"></a>  unique  
- 移除指定范围中彼此相邻的重复元素。  
+ Removes duplicate elements that are adjacent to each other in a specified range.  
   
 ```  
 template<class ForwardIterator>  
@@ -8082,33 +8098,33 @@ template<class ForwardIterator, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一种前向迭代器，用于寻址要进行重复删除扫描的范围中第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the range to be scanned for duplicate removal.  
   
  `last`  
- 一种前向迭代器，用于寻址要进行重复删除扫描的范围中最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the range to be scanned for duplicate removal.  
   
  `comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 一种前向迭代器，指向不包含连续重复项的已修改序列新末尾位置，用于寻址未删除的最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the new end of the modified sequence that contains no consecutive duplicates, addressing the position one past the last element not removed.  
   
-### <a name="remarks"></a>备注  
- 这两种形式的算法都可删除连续一对相等元素的第二个副本。  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- 该算法的操作是稳定的，因此未删除的元素的相对顺序不会发生更改。  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。 **unique** 算法不会更改序列中的元素数，并且已修改序列末尾位置之外的元素可取消引用，但未指定。  
+ The range referenced must be valid; all pointers must be dereferenceable and within the sequence the last position is reachable from the first by incrementation. he number of elements in the sequence is not changed by the algorithm **unique** and the elements beyond the end of the modified sequence are dereferenceable but not specified.  
   
- 复杂性是线性的需要 ( `last`  -   `first`)-1 比较。  
+ The complexity is linear, requiring ( `last` -  `first`) - 1 comparisons.  
   
- List 提供了更高效的成员函数 "unique"，它可能会表现得更好。  
+ List provides a more efficient member function "unique", which may perform better.  
   
- 不能在关联容器上使用这些算法。  
+ These algorithms cannot be used on an associative container.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique.cpp  
@@ -8196,7 +8212,7 @@ Removing adjacent elements satisfying the binary
 ```  
   
 ##  <a name="unique_copy"></a>  unique_copy  
- 将源范围中的元素复制到目标范围，彼此相邻的重复元素除外。  
+ Copies elements from a source range into a destination range except for the duplicate elements that are adjacent to each other.  
   
 ```  
  template<class InputIterator, class OutputIterator>  
@@ -8212,32 +8228,32 @@ OutputIterator unique_copy( InputIterator first,
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   `first`  
- 一个向前迭代器，用于寻址源范围中要复制的第一个元素的位置。  
+ A forward iterator addressing the position of the first element in the source range to be copied.  
   
  `last`  
- 一个向前迭代器，用于寻址源范围中要复制的最后一个元素之后下一个元素的位置。  
+ A forward iterator addressing the position one past the final element in the source range to be copied.  
   
  `result`  
- 一个输出迭代器，用于寻址接收删除的连续副本的目标范围中第一个元素的位置。  
+ An output iterator addressing the position of the first element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
  `comp`  
- 用于定义两个元素被视为等效时应满足的条件的用户定义谓词函数对象。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines the condition to be satisfied if two elements are to be taken as equivalent. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 一个输出迭代器，用于寻址接收删除的连续副本的目标范围中最后一个元素之后下一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator addressing the position one past the final element in the destination range that is receiving the copy with consecutive duplicates removed.  
   
-### <a name="remarks"></a>备注  
- 这两种形式的算法都可删除连续一对相等元素的第二个副本。  
+### <a name="remarks"></a>Remarks  
+ Both forms of the algorithm remove the second duplicate of a consecutive pair of equal elements.  
   
- 该算法的操作是稳定的，因此未删除的元素的相对顺序不会发生更改。  
+ The operation of the algorithm is stable so that the relative order of the undeleted elements is not changed.  
   
- 引用的范围必须有效；所有指针都必须可以引用，并且在序列中，可通过递增从第一个位置到达最后一个位置。  
+ The ranges referenced must be valid; all pointers must be dereferenceable and within a sequence the last position is reachable from the first by incrementation.  
   
- 复杂性是线性的需要 ( `last`  -   `first`) 比较。  
+ The complexity is linear, requiring ( `last` -  `first`) comparisons.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_unique_copy.cpp  
@@ -8310,7 +8326,7 @@ int main() {
 ```  
   
 ##  <a name="upper_bound"></a>  upper_bound  
- 在排序的范围中查找其值大于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。  
+ Finds the position of the first element in an ordered range that has a value that is greater than a specified value, where the ordering criterion may be specified by a binary predicate.  
   
 ```  
 template<class ForwardIterator, class Type>  
@@ -8328,34 +8344,34 @@ template<class ForwardIterator, class Type, class Predicate>
   
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要搜索的范围中第一个元素的位置。  
+ The position of the first element in the range to be searched.  
   
  `last`  
- 要搜索的范围中最后一个元素之后下一个元素的位置。  
+ The position one past the final element in the range to be searched.  
   
  `value`  
- 返回排序范围中需要被迭代器寻址的元素值超越的值。  
+ The value in the ordered range that needs to be exceeded by the value of the element addressed by the iterator returned.  
   
  `comp`  
- 用户定义的谓词函数对象，用于定义对一个元素小于另一个元素的理解。 二元谓词采用两个参数并在条件满足时返回 **true** ，不满足时返回 **false**。  
+ User-defined predicate function object that defines sense in which one element is less than another. A binary predicate takes two arguments and returns **true** when satisfied and **false** when not satisfied.  
   
-### <a name="return-value"></a>返回值  
- 一种前向迭代器，指向其值大于指定值的第一个元素的位置。  
+### <a name="return-value"></a>Return Value  
+ A forward iterator to the position of the first element that has a value greater than a specified value.  
   
-### <a name="remarks"></a>备注  
- 引用的已排序源范围必须有效；所有迭代器必须可取消引用，并且在序列内，最后一个位置必须可从第一个位置通过递增到达。  
+### <a name="remarks"></a>Remarks  
+ The sorted source range referenced must be valid; all iterators must be dereferenceable and within the sequence the last position must be reachable from the first by incrementation.  
   
- 已排序的范围是使用 `upper_bound` 的前置条件，其中排序标准与通过二元谓词指定的排序标准相同。  
+ A sorted range is a precondition of the use of `upper_bound` and where the ordering criterion is the same as specified by the binary predicate.  
   
- `upper_bound` 不会修改该范围。  
+ The range is not modified by `upper_bound`.  
   
- 前向迭代器的值类型需小于比较元素才能进行排序；因此，给定两个元素，可以确定这两个元素相等（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。  
+ The value types of the forward iterators need be less-than comparable to be ordered, so that, given two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements  
   
- 该算法的复杂性与随机访问迭代器是对数关系，而对于其他迭代器是线性关系，并且与步骤数成比例 ( `last - first`)。  
+ The complexity of the algorithm is logarithmic for random-access iterators and linear otherwise, with the number of steps proportional to ( `last - first`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // alg_upper_bound.cpp  
@@ -8445,5 +8461,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>另请参阅   
+## <a name="see-also"></a>See Also   
  [\<algorithm>](../standard-library/algorithm.md)

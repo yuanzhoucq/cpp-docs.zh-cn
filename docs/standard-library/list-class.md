@@ -1,5 +1,5 @@
 ---
-title: "list 类 | Microsoft Docs"
+title: list Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- list
 - list/std::list
 - list/std::list::allocator_type
 - list/std::list::const_iterator
@@ -60,7 +59,53 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- list class
+- std::list [C++]
+- std::list [C++], allocator_type
+- std::list [C++], const_iterator
+- std::list [C++], const_pointer
+- std::list [C++], const_reference
+- std::list [C++], const_reverse_iterator
+- std::list [C++], difference_type
+- std::list [C++], iterator
+- std::list [C++], pointer
+- std::list [C++], reference
+- std::list [C++], reverse_iterator
+- std::list [C++], size_type
+- std::list [C++], value_type
+- std::list [C++], assign
+- std::list [C++], back
+- std::list [C++], begin
+- std::list [C++], cbegin
+- std::list [C++], cend
+- std::list [C++], clear
+- std::list [C++], crbegin
+- std::list [C++], crend
+- std::list [C++], emplace
+- std::list [C++], emplace_back
+- std::list [C++], emplace_front
+- std::list [C++], empty
+- std::list [C++], end
+- std::list [C++], erase
+- std::list [C++], front
+- std::list [C++], get_allocator
+- std::list [C++], insert
+- std::list [C++], max_size
+- std::list [C++], merge
+- std::list [C++], pop_back
+- std::list [C++], pop_front
+- std::list [C++], push_back
+- std::list [C++], push_front
+- std::list [C++], rbegin
+- std::list [C++], remove
+- std::list [C++], remove_if
+- std::list [C++], rend
+- std::list [C++], resize
+- std::list [C++], reverse
+- std::list [C++], size
+- std::list [C++], sort
+- std::list [C++], splice
+- std::list [C++], swap
+- std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 caps.latest.revision: 20
 author: corob-msft
@@ -80,125 +125,125 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b53e8b2f708b03d1b2575beee7e93b51fbf4b398
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a1d5b3f567b69282e65cdcbe140f3128b97c17b2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="list-class"></a>list 类
-C++ 标准库列表类是序列容器的一个模板类，用于将它们的元素保持为线性排列，并允许在序列的任何位置高效插入和删除。 序列存储为双向链接的元素列表，每个包含一些 *Type* 类型的成员。  
+# <a name="list-class"></a>list Class
+The C++ Standard Library list class is a template class of sequence containers that maintain their elements in a linear arrangement and allow efficient insertions and deletions at any location within the sequence. The sequence is stored as a bidirectional linked list of elements, each containing a member of some type *Type*.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Type, class Allocator= allocator<Type>>  
 class list  
 ```  
   
-#### <a name="parameters"></a>参数  
- *类型*  
- 要存储在列表中的元素数据类型。  
+#### <a name="parameters"></a>Parameters  
+ *Type*  
+ The element data type to be stored in the list.  
   
  `Allocator`  
- 表示所存储分配器对象的类型，该分配器对象封装有关列表的内存分配和解除分配的详细信息。 此参数是可选的而默认值是**分配器**\<*类型*>。  
+ The type that represents the stored allocator object that encapsulates details about the list's allocation and deallocation of memory. This argument is optional, and the default value is **allocator**\<*Type*>.  
   
-## <a name="remarks"></a>备注  
- 容器类型选择通常应根据应用程序所需的搜索和插入的类型。 当对任何元素的随机访问超出限制并且仅要求在序列的末尾插入或删除元素时，矢量应作为用于管理序列的首选容器。 当需要随机访问并且在序列起始处和末尾处插入和删除元素已到达极限时，应首选类 deque 容器进行操作。  
+## <a name="remarks"></a>Remarks  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Vectors should be the preferred container for managing a sequence when random access to any element is at a premium and insertions or deletions of elements are only required at the end of a sequence. The performance of the class deque container is superior when random access is needed and insertions and deletions at both the beginning and the end of a sequence are at a premium.  
   
- 列表成员函数 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[remove](#remove) 和 [remove_if](#remove_if) 已针对对列表的操作进行了优化，它们可作为泛型对应函数的高性能替代函数。  
+ The list member functions [merge](#merge), [reverse](#reverse), [unique](#unique), [remove](#remove), and [remove_if](#remove_if) have been optimized for operation on list objects and offer a high-performance alternative to their generic counterparts.  
   
- 当成员函数必须插入或删除列表中的元素时，将发生列表的重新分配。 在所有这类情况下，仅指向受控制序列被消除部分的迭代器或引用将变为无效。  
+ List reallocation occurs when a member function must insert or erase elements of the list. In all such cases, only iterators or references that point at erased portions of the controlled sequence become invalid.  
   
- 包括 C++ 标准库标准标头 \<list>，以定义 [container](../standard-library/stl-containers.md) 模板类列表和多个支持模板。  
+ Include the C++ Standard Library standard header \<list> to define the [container](../standard-library/stl-containers.md) template class list and several supporting templates.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[list](#list)|构造一个列表，它具有特定大小或它的元素具有特定值，或具有特定 `allocator` 或作为某个其他列表副本。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|表示列表对象的 `allocator` 类的类型。|  
-|[const_iterator](#const_iterator)|提供可读取列表中 `const` 元素的双向迭代器的类型。|  
-|[const_pointer](#const_pointer)|提供指向列表中 `const` 元素的指针的类型。|  
-|[const_reference](#const_reference)|提供对存储于列表中供读取和执行 `const` 操作的 `const` 元素的引用的类型。|  
-|[const_reverse_iterator](#const_reverse_iterator)|提供可读取列表中任何 `const` 元素的双向迭代器的类型。|  
-|[difference_type](#difference_type)|提供引用同一列表中的元素的两个迭代器之间的差异的类型。|  
-|[iterator](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|  
-|[pointer](#pointer)|提供指向列表中元素的指针的类型。|  
-|[reference](#reference)|提供对存储于列表中供读取和执行 `const` 操作的 `const` 元素的引用的类型。|  
-|[reverse_iterator](#reverse_iterator)|提供可读取或修改反向列表中的元素的双向迭代器的类型。|  
-|[size_type](#size_type)|计算列表中元素的数目的类型。|  
-|[value_type](#value_type)|表示列表中存储的数据类型的类型。|  
+|[list](#list)|Constructs a list of a specific size or with elements of a specific value or with a specific `allocator` or as a copy of some other list.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[assign](#assign)|将元素从列表中擦除并将一组新的元素复制到目标列表。|  
-|[back](#back)|返回对列表中最后一个元素的引用。|  
-|[begin](#begin)|返回发现列表中第一个元素的位置的迭代器。|  
-|[cbegin](#cbegin)|返回发现列表中第一个元素的位置的常量迭代器。|  
-|[cend](#cend)|返回发现一个列表中最后一个元素之后的位置的敞亮表达式。|  
-|[clear](#clear)|消除列表中的全部元素。|  
-|[crbegin](#crbegin)|返回发现反向列表中第一个元素的位置的常量迭代器。|  
-|[crend](#crend)|返回用于发现反向列表中最后一个元素之后的位置的常量迭代器。|  
-|[emplace](#emplace)|将构造的元素插入到列表中的指定位置。|  
-|[emplace_back](#emplace_back)|在列表的结尾处添加一个就地构造的元素。|  
-|[emplace_front](#emplace_front)|在列表的起始位置添加一个就地构造的元素。|  
-|[empty](#empty)|测试列表是否为空。|  
-|[end](#end)|返回用于发现列表中最后一个元素之后的位置的迭代器。|  
-|[erase](#erase)|从列表中的指定位置移除一个或一系列元素。|  
-|[front](#front)|返回对列表中第一个元素的引用。|  
-|[get_allocator](#get_allocator)|返回用于构造列表的 `allocator` 对象的一个副本。|  
-|[insert](#insert)|将一个、几个或一系列元素插入列表中的指定位置。|  
-|[max_size](#max_size)|返回列表的最大长度。|  
-|[merge](#merge)|将元素从参数列表移除，将它们插入目标列表，将新的组合元素集以升序或其他指定顺序排序。|  
-|[pop_back](#pop_back)|删除列表末尾的元素。|  
-|[pop_front](#pop_front)|删除列表起始处的一个元素。|  
-|[push_back](#push_back)|在列表的末尾添加元素。|  
-|[push_front](#push_front)|在列表的开头添加元素。|  
-|[rbegin](#rbegin)|返回发现反向列表中第一个元素的位置的迭代器。|  
-|[remove](#remove)|清除列表中与指定值匹配的元素。|  
-|[remove_if](#remove_if)|将满足指定谓词的元素从列表中消除。|  
-|[rend](#rend)|返回发现反向列表中最后一个元素之后的位置的迭代器。|  
-|[resize](#resize)|为列表指定新的大小。|  
-|[reverse](#reverse)|反转列表中元素的顺序。|  
-|[size](#size)|返回列表中元素的数目。|  
-|[sort](#sort)|按升序或其他顺序关系排列列表中的元素。|  
-|[splice](#splice)|将元素从自变量列表中删除或将它们插入目标列表。|  
-|[swap](#swap)|交换两个列表的元素。|  
-|[unique](#unique)|从列表中删除满足某些其他二元谓词的相邻重复元素或相邻元素。|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for a list object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in a list.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a list.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a list for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in a list.|  
+|[difference_type](#difference_type)|A type that provides the difference between two iterators that refer to elements within the same list.|  
+|[iterator](#iterator)|A type that provides a bidirectional iterator that can read or modify any element in a list.|  
+|[pointer](#pointer)|A type that provides a pointer to an element in a list.|  
+|[reference](#reference)|A type that provides a reference to a `const` element stored in a list for reading and performing `const` operations.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed list.|  
+|[size_type](#size_type)|A type that counts the number of elements in a list.|  
+|[value_type](#value_type)|A type that represents the data type stored in a list.|  
   
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[list::operator=](#op_eq)|用另一个列表的副本替换列表中的元素。|  
+|[assign](#assign)|Erases elements from a list and copies a new set of elements to the target list.|  
+|[back](#back)|Returns a reference to the last element of a list.|  
+|[begin](#begin)|Returns an iterator addressing the first element in a list.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in a list.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a list.|  
+|[clear](#clear)|Erases all the elements of a list.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed list.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed list.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a list at a specified position.|  
+|[emplace_back](#emplace_back)|Adds an element constructed in place to the end of a list.|  
+|[emplace_front](#emplace_front)|Adds an element constructed in place to the beginning of a list.|  
+|[empty](#empty)|Tests if a list is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a list.|  
+|[erase](#erase)|Removes an element or a range of elements in a list from specified positions.|  
+|[front](#front)|Returns a reference to the first element in a list.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct a list.|  
+|[insert](#insert)|Inserts an element or a number of elements or a range of elements into a list at a specified position.|  
+|[max_size](#max_size)|Returns the maximum length of a list.|  
+|[merge](#merge)|Removes the elements from the argument list, inserts them into the target list, and orders the new, combined set of elements in ascending order or in some other specified order.|  
+|[pop_back](#pop_back)|Deletes the element at the end of a list.|  
+|[pop_front](#pop_front)|Deletes the element at the beginning of a list.|  
+|[push_back](#push_back)|Adds an element to the end of a list.|  
+|[push_front](#push_front)|Adds an element to the beginning of a list.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed list.|  
+|[remove](#remove)|Erases elements in a list that match a specified value.|  
+|[remove_if](#remove_if)|Erases elements from the list for which a specified predicate is satisfied.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed list.|  
+|[resize](#resize)|Specifies a new size for a list.|  
+|[reverse](#reverse)|Reverses the order in which the elements occur in a list.|  
+|[size](#size)|Returns the number of elements in a list.|  
+|[sort](#sort)|Arranges the elements of a list in ascending order or with respect to some other order relation.|  
+|[splice](#splice)|Removes elements from the argument list and inserts them into the target list.|  
+|[swap](#swap)|Exchanges the elements of two lists.|  
+|[unique](#unique)|Removes adjacent duplicate elements or adjacent elements that satisfy some other binary predicate from the list.|  
   
-## <a name="requirements"></a>要求  
- **标头**：\<list>  
+### <a name="operators"></a>Operators  
   
-##  <a name="allocator_type"></a>list::allocator_type  
- 表示列表对象的分配器类的类型。  
+|||  
+|-|-|  
+|[list::operator=](#op_eq)|Replaces the elements of the list with a copy of another list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<list>  
+  
+##  <a name="allocator_type"></a>  list::allocator_type  
+ A type that represents the allocator class for a list object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `allocator_type` 是模板参数 **Allocator** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ `allocator_type` is a synonym for the template parameter **Allocator.**  
   
-### <a name="example"></a>示例  
-  请参阅 [get_allocator](#get_allocator) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator).  
   
-##  <a name="assign"></a>list::assign  
- 清除列表中的元素，并将一组新元素复制到目标列表。  
+##  <a name="assign"></a>  list::assign  
+ Erases elements from a list and copies a new set of elements to a target list.  
   
 ```  
 void assign(
@@ -214,26 +259,26 @@ void assign(
     InputIterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `First`  
- 要从自变量列表中复制的一系列元素中的第一个元素的位置。  
+ Position of the first element in the range of elements to be copied from the argument list.  
   
  `Last`  
- 超出要从参数列表中复制的一系列元素的范围的第一个元素的位置。  
+ Position of the first element just beyond the range of elements to be copied from the argument list.  
   
  `Count`  
- 要插入列表中的元素副本的数目。  
+ The number of copies of an element being inserted into the list.  
   
  `Val`  
- 要插入到列表中的元素的值。  
+ The value of the element being inserted into the list.  
   
  `IList`  
- 包含要插入的元素的 initializer_list。  
+ The initializer_list that contains the elements to be inserted.  
   
-### <a name="remarks"></a>备注  
- 清除目标列表中的任何现有元素后，将原始列表或其他列表中的一系列指定的元素插入目标列表中，或将指定值的新元素的副本插入目标列表中  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in the target list, assign either inserts a specified range of elements from the original list or from some other list into the target list or inserts copies of a new element of a specified value into the target list  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_assign.cpp  
@@ -283,8 +328,8 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40  
 ```  
   
-##  <a name="back"></a>list::back  
- 返回对列表中最后一个元素的引用。  
+##  <a name="back"></a>  list::back  
+ Returns a reference to the last element of a list.  
   
 ```  
 reference back();
@@ -292,15 +337,15 @@ reference back();
 const_reference back() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 列表的最后一个元素。 如果列表为空，则返回值不确定。  
+### <a name="return-value"></a>Return Value  
+ The last element of the list. If the list is empty, the return value is undefined.  
   
-### <a name="remarks"></a>备注  
- 如果 **back** 的返回值赋给了 `const_reference`，则不能修改列表对象。 如果 **back** 的返回值赋给了 **reference**，则可以修改列表对象。  
+### <a name="remarks"></a>Remarks  
+ If the return value of **back** is assigned to a `const_reference`, the list object cannot be modified. If the return value of **back** is assigned to a **reference**, the list object can be modified.  
   
- 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空列表中的元素，则将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty list.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_back.cpp  
@@ -330,8 +375,8 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10  
 ```  
   
-##  <a name="begin"></a>list::begin  
- 返回发现列表中第一个元素的位置的迭代器。  
+##  <a name="begin"></a>  list::begin  
+ Returns an iterator addressing the first element in a list.  
   
 ```  
 const_iterator begin() const;
@@ -339,13 +384,13 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>返回值  
- 发现列表中第一个元素的位置或空列表之后的位置的双向迭代器。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the list or to the location succeeding an empty list.  
   
-### <a name="remarks"></a>备注  
- 如果 **begin** 的返回值赋给了 `const_iterator`，则无法修改列表对象中的元素。 如果 **begin** 的返回值赋给了 **iterator**，则可以修改列表对象中的元素。  
+### <a name="remarks"></a>Remarks  
+ If the return value of **begin** is assigned to a `const_iterator`, the elements in the list object cannot be modified. If the return value of **begin** is assigned to an **iterator**, the elements in the list object can be modified.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_begin.cpp  
@@ -380,20 +425,20 @@ The first element of c1 is 1
 The first element of c1 is now 20  
 ```  
   
-##  <a name="cbegin"></a>list::cbegin  
- 返回确定范围中第一个元素地址的 `const` 迭代器。  
+##  <a name="cbegin"></a>  list::cbegin  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- `const` 双向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围，`cbegin() == cend()`）。  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>备注  
- 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -403,20 +448,20 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a>list::cend  
- 返回一个 `const` 迭代器，此迭代器用于发现刚超出范围中最后一个元素的位置。  
+##  <a name="cend"></a>  list::cend  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向刚超出范围末尾的位置的 `const` 双向访问迭代器。  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>备注  
- `cend` 用于测试迭代器是否超过了其范围的末尾。  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- 可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `end()` 和 `cend()` 的可修改的任何类型的（非- `const`）容器。  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -426,16 +471,16 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- 不应对 `cend` 返回的值取消引用。  
+ The value returned by `cend` should not be dereferenced.  
   
-##  <a name="clear"></a>list::clear  
- 消除列表中的全部元素。  
+##  <a name="clear"></a>  list::clear  
+ Erases all the elements of a list.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_clear.cpp  
@@ -462,42 +507,42 @@ The size of the list is initially 3
 The size of list after clearing is 0  
 ```  
   
-##  <a name="const_iterator"></a>list::const_iterator  
- 提供可读取列表中 **const** 元素的双向迭代器的类型。  
+##  <a name="const_iterator"></a>  list::const_iterator  
+ A type that provides a bidirectional iterator that can read a **const** element in a list.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_iterator` 类型不能用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>示例  
-  请参阅 [back](#back) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [back](#back).  
   
-##  <a name="const_pointer"></a>list::const_pointer  
- 提供指向列表中 `const` 元素的指针。  
+##  <a name="const_pointer"></a>  list::const_pointer  
+ Provides a pointer to a `const` element in a list.  
   
 ``` 
 typedef typename Allocator::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_pointer` 类型不能用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- 在大多数情况下，应使用 [iterator](#iterator) 访问列表对象中的元素。  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a list object.  
   
-##  <a name="const_reference"></a>list::const_reference  
- 提供对存储于列表中供读取和执行 **const** 操作的 **const** 元素的引用的类型。  
+##  <a name="const_reference"></a>  list::const_reference  
+ A type that provides a reference to a **const** element stored in a list for reading and performing **const** operations.  
   
 ```  
 typedef typename Allocator::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_reference` 类型不能用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type `const_reference` cannot be used to modify the value of an element.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_const_ref.cpp  
@@ -529,35 +574,35 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="const_reverse_iterator"></a>list::const_reverse_iterator  
- 提供可读取列表中任何 **const** 元素的双向迭代器的类型。  
+##  <a name="const_reverse_iterator"></a>  list::const_reverse_iterator  
+ A type that provides a bidirectional iterator that can read any **const** element in a list.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问列表。  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is used to iterate through the list in reverse.  
   
-### <a name="example"></a>示例  
-  请参阅 [rbegin](#rbegin) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin).  
   
-##  <a name="crbegin"></a>list::crbegin  
- 返回发现反向列表中第一个元素的位置的常量迭代器。  
+##  <a name="crbegin"></a>  list::crbegin  
+ Returns a const iterator addressing the first element in a reversed list.  
   
 ```  
 const_reverse_iterator rbegin() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个常量反向双向迭代器，用于发现反向 `list` 中的第一个元素（或发现非反向列表中的最后一个元素的内容）。  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed list (or addressing what had been the last element in the unreversed `list`).  
   
-### <a name="remarks"></a>备注  
- `crbegin` 用于反向列表，正如 [list::begin](#begin) 用于 `list` 一样。  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed list just as [list::begin](#begin) is used with a `list`.  
   
- 返回值为 `crbegin` 时，无法修改列表对象。 [list::rbegin](#rbegin) 可用于向后循环访问列表。  
+ With the return value of `crbegin`, the list object cannot be modified. [list::rbegin](#rbegin) can be used to iterate through a list backwards.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_crbegin.cpp  
@@ -583,26 +628,26 @@ int main( )
 The last element in the list is 30.  
 ```  
   
-##  <a name="crend"></a>list::crend  
- 返回用于发现反向列表中最后一个元素之后的位置的常量迭代器。  
+##  <a name="crend"></a>  list::crend  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed list.  
   
 ```  
 const_reverse_iterator rend() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个常量反向双向迭代器，用于发现反向 [list](../standard-library/list-class.md) 中最后一个元素之后的位置（非反向 `list` 中第一个元素之前的位置）。  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [list](../standard-library/list-class.md) (the location that had preceded the first element in the unreversed `list`).  
   
-### <a name="remarks"></a>备注  
- `crend` 用于反向列表，正如 [list::end](#end) 用于 `list` 一样。  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed list just as [list::end](#end) is used with a `list`.  
   
- 返回值为 `crend` 时，无法修改 `list` 对象。  
+ With the return value of `crend`, the `list` object cannot be modified.  
   
- `crend` 可用于测试反向迭代器是否已到达其 `list` 的末尾。  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `list`.  
   
- 不应对 `crend` 返回的值取消引用。  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_crend.cpp  
@@ -631,19 +676,19 @@ int main( )
 The first element in the list is: 10  
 ```  
   
-##  <a name="difference_type"></a>list::difference_type  
- 可用于表示列表中迭代器所指向元素之间元素数目的有符号整数类型。  
+##  <a name="difference_type"></a>  list::difference_type  
+ A signed integer type that can be used to represent the number of elements of a list in a range between elements pointed to by iterators.  
   
 ```  
 typedef typename Allocator::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range [ `first`, `last`) between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- 注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 [vector 类](../standard-library/vector-class.md)）提供的随机访问迭代器支持。  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers like set, subtraction between iterators is only supported by random-access iterators provided by a random-access container, such as [vector Class](../standard-library/vector-class.md).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_diff_type.cpp  
@@ -686,25 +731,25 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.  
 ```  
   
-##  <a name="emplace"></a>list::emplace  
- 将构造的元素插入到列表中的指定位置。  
+##  <a name="emplace"></a>  list::emplace  
+ Inserts an element constructed in place into a list at a specified position.  
   
 ```  
-void emplace_back(iterator Where, Type&& val);
+void emplace(iterator Where, Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Where`|目标 [list](../standard-library/list-class.md) 中插入第一个元素的位置。|  
-|`val`|添加到 `list` 末尾的元素。|  
+|Parameter|Description|  
+|`Where`|The position in the target [list](../standard-library/list-class.md) where the first element is inserted.|  
+|`val`|The element added to the end of the `list`.|  
   
-### <a name="remarks"></a>备注  
- 如果引发了异常，`list` 将保持不变，该异常将被重新引发。  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace.cpp  
@@ -728,24 +773,24 @@ int main( )
 Moved first element: a  
 ```  
   
-##  <a name="emplace_back"></a>list::emplace_back  
- 在列表的起始位置添加一个就地构造的元素。  
+##  <a name="emplace_back"></a>  list::emplace_back  
+ Adds an element constructed in place to the end of a list.  
   
 ```  
 void emplace_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`val`|添加到 [list](../standard-library/list-class.md) 末尾的元素。|  
+|Parameter|Description|  
+|`val`|The element added to the end of the [list](../standard-library/list-class.md).|  
   
-### <a name="remarks"></a>备注  
- 如果引发了异常，`list` 将保持不变，该异常将被重新引发。  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace_back.cpp  
@@ -769,24 +814,24 @@ int main( )
 Moved first element: a  
 ```  
   
-##  <a name="emplace_front"></a>list::emplace_front  
- 在列表的起始位置添加一个就地构造的元素。  
+##  <a name="emplace_front"></a>  list::emplace_front  
+ Adds an element constructed in place to the beginning of a list.  
   
 ```  
 void emplace_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`val`|要添加到 [list](../standard-library/list-class.md) 开头的元素。|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the [list](../standard-library/list-class.md).|  
   
-### <a name="remarks"></a>备注  
- 如果引发了异常，`list` 将保持不变，该异常将被重新引发。  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the `list` is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_emplace_front.cpp  
@@ -810,17 +855,17 @@ int main( )
 Moved first element: a  
 ```  
   
-##  <a name="empty"></a>list::empty  
- 测试列表是否为空。  
+##  <a name="empty"></a>  list::empty  
+ Tests if a list is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果列表为空，则为 **true**；如果列表不为空，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the list is empty; **false** if the list is not empty.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_empty.cpp  
@@ -845,21 +890,21 @@ int main( )
 The list is not empty.  
 ```  
   
-##  <a name="end"></a>list::end  
- 返回用于发现列表中最后一个元素之后的位置的迭代器。  
+##  <a name="end"></a>  list::end  
+ Returns an iterator that addresses the location succeeding the last element in a list.  
   
 ```  
 const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>返回值  
- 用于发现列表中最后一个元素之后的位置的双向迭代器。 如果列表为空，则 `list::end == list::begin`。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that addresses the location succeeding the last element in a list. If the list is empty, then `list::end == list::begin`.  
   
-### <a name="remarks"></a>备注  
- **end** 用于测试迭代器是否已到达列表的末尾。  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has reached the end of its list.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_end.cpp  
@@ -902,33 +947,33 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30  
 ```  
   
-##  <a name="erase"></a>list::erase  
- 从列表中的指定位置移除一个或一系列元素。  
+##  <a name="erase"></a>  list::erase  
+ Removes an element or a range of elements in a list from specified positions.  
   
 ```  
 iterator erase(iterator Where);
 iterator erase(iterator first, iterator last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Where`  
- 要从列表中移除的元素的位置。  
+ Position of the element to be removed from the list.  
   
  `first`  
- 要从列表中移除的第一个元素的位置。  
+ Position of the first element removed from the list.  
   
  `last`  
- 要从列表中移除的刚超出最后一个元素的位置。  
+ Position just beyond the last element removed from the list.  
   
-### <a name="return-value"></a>返回值  
- 指定已移除的任何元素之外保留的第一个元素的双向迭代器；如果不存在此类元素，则为指向列表末尾的指针。  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator that designates the first element remaining beyond any elements removed, or a pointer to the end of the list if no such element exists.  
   
-### <a name="remarks"></a>备注  
- 不发生重新分配，因此迭代器和引用仅对已清除元素无效。  
+### <a name="remarks"></a>Remarks  
+ No reallocation occurs, so iterators and references become invalid only for the erased elements.  
   
- **erase** 永远不会引发异常。  
+ **erase** never throws an exception.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_erase.cpp  
@@ -973,23 +1018,23 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20  
 ```  
   
-##  <a name="front"></a>list::front  
- 返回对列表中第一个元素的引用。  
+##  <a name="front"></a>  list::front  
+ Returns a reference to the first element in a list.  
   
 ```  
 reference front();
 const_reference front() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果列表为空，返回的结果则不确定。  
+### <a name="return-value"></a>Return Value  
+ If the list is empty, the return is undefined.  
   
-### <a name="remarks"></a>备注  
- 如果将 `front` 的返回值分配给 `const_reference`，则无法修改列表对象。 如果 `front` 的返回值赋给了 **reference**，则无法修改列表对象。  
+### <a name="remarks"></a>Remarks  
+ If the return value of `front` is assigned to a `const_reference`, the list object cannot be modified. If the return value of `front` is assigned to a **reference**, the list object can be modified.  
   
- 当使用定义为 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 进行编译时，如果试图访问空列表中的元素，则将发生运行时错误。  有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
+ When compiled by using [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) defined as 1 or 2, a runtime error will occur if you attempt to access an element in an empty list.  See [Checked Iterators](../standard-library/checked-iterators.md) for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_front.cpp  
@@ -1017,20 +1062,20 @@ The first integer of c1 is 10
 The first integer of c1 is 11  
 ```  
   
-##  <a name="get_allocator"></a>list::get_allocator  
- 返回用于构造列表的分配器对象的一个副本。  
+##  <a name="get_allocator"></a>  list::get_allocator  
+ Returns a copy of the allocator object used to construct a list.  
   
 ```  
 Allocator get_allocator() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 列表使用的分配器。  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the list.  
   
-### <a name="remarks"></a>备注  
- 列表类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。  
+### <a name="remarks"></a>Remarks  
+ Allocators for the list class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_get_allocator.cpp  
@@ -1054,8 +1099,8 @@ int main( )
 }  
 ```  
   
-##  <a name="insert"></a>list::insert  
- 将一个、几个或一系列元素插入列表中的指定位置。  
+##  <a name="insert"></a>  list::insert  
+ Inserts an element or a number of elements or a range of elements into a list at a specified position.  
   
 ```  
 iterator insert(iterator Where, const Type& Val);
@@ -1068,21 +1113,21 @@ template <class InputIterator>
 void insert(iterator Where, InputIterator First, InputIterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Where`|目标列表中插入第一个元素的位置。|  
-|`Val`|要插入到列表中的元素的值。|  
-|`Count`|要插入列表中的元素数目。|  
-|`First`|要从参数列表中复制的一系列元素中第一个元素的位置。|  
-|`Last`|要从自变量列表中复制的一系列元素以外的第一个元素的位置。|  
+|Parameter|Description|  
+|`Where`|The position in the target list where the first element is inserted.|  
+|`Val`|The value of the element being inserted into the list.|  
+|`Count`|The number of elements being inserted into the list.|  
+|`First`|The position of the first element in the range of elements in the argument list to be copied.|  
+|`Last`|The position of the first element beyond the range of elements in the argument list to be copied.|  
   
-### <a name="return-value"></a>返回值  
- 前两个插入函数返回一个迭代器，该迭代器指向新元素插入到列表中的位置。  
+### <a name="return-value"></a>Return Value  
+ The first two insert functions return an iterator that points to the position where the new element was inserted into the list.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_class_insert.cpp  
@@ -1152,21 +1197,21 @@ int main()
 }  
 ```  
   
-##  <a name="iterator"></a>list::iterator  
- 提供可读取或修改列表中任何元素的双向迭代器的类型。  
+##  <a name="iterator"></a>  list::iterator  
+ A type that provides a bidirectional iterator that can read or modify any element in a list.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- **iterator** 类型可用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type **iterator** can be used to modify the value of an element.  
   
-### <a name="example"></a>示例  
-  请参阅 [begin](#begin) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin).  
   
-##  <a name="list"></a>list::list  
- 构造一个列表，它具有特定大小或它的元素具有特定值，或具有特定分配器或作为其他列表的全部或部分副本。  
+##  <a name="list"></a>  list::list  
+ Constructs a list of a specific size or with elements of a specific value or with a specific allocator or as a copy of all or part of some other list.  
   
 ```  
 list();
@@ -1186,41 +1231,41 @@ template <class InputIterator>
 list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`Al`|要用于此对象的分配器类。|  
-|`Count`|所构造列表中元素的数目。|  
-|`Val`|列表中元素的值。|  
-|`Right`|所构造列表要作为其副本的列表。|  
-|`First`|要复制的范围元素中的第一个元素的位置。|  
-|`Last`|要复制的元素范围以外的第一个元素的位置。|  
-|`IList`|包含要复制的元素的 initializer_list。|  
+|Parameter|Description|  
+|`Al`|The allocator class to use with this object.|  
+|`Count`|The number of elements in the list constructed.|  
+|`Val`|The value of the elements in the list.|  
+|`Right`|The list of which the constructed list is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list that contains the elements to be copied.|  
   
-### <a name="remarks"></a>备注  
- 所有构造函数都存储一个分配器对象 (`Al`) 并初始化列表。  
+### <a name="remarks"></a>Remarks  
+ All constructors store an allocator object ( `Al`) and initialize the list.  
   
- [get_allocator](#get_allocator) 返回用于构造列表的分配器对象的副本。  
+ [get_allocator](#get_allocator) returns a copy of the allocator object used to construct a list.  
   
- 第一个构造函数指定一个空的初始列表，第二个指定要使用的分配器类型 (`Al`)。  
+ The first two constructors specify an empty initial list, the second specifying the allocator type ( `Al`) to be used.  
   
- 第三个构造函数指定特定数目 (`Count`) 的元素的重复，这些元素具有类 **Type** 的默认值。  
+ The third constructor specifies a repetition of a specified number ( `Count`) of elements of the default value for class **Type**.  
   
- 第四个和第五个构造函数指定 (`Count`) 元素的重复，元素的值为 `Val`。  
+ The fourth and fifth constructors specify a repetition of ( `Count`) elements of value `Val`.  
   
- 第六个构造函数指定列表 `Right` 的副本。  
+ The sixth constructor specifies a copy of the list `Right`.  
   
- 第七个构造函数移动列表 `Right`。  
+ The seventh constructor moves the list `Right`.  
   
- 第八个构造函数使用 initializer_list 指定元素。  
+ The eighth constructor uses an initializer_list to specify the elements.  
   
- 接下来的两个构造函数复制列表的范围 `[First, Last)`。  
+ The next two constructors copy the range `[First, Last)` of a list.  
   
- 所有构造函数均不执行任何临时重新分配。  
+ None of the constructors perform any interim reallocations.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_class_list.cpp  
@@ -1311,17 +1356,17 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4  
 ```  
   
-##  <a name="max_size"></a>list::max_size  
- 返回列表的最大长度。  
+##  <a name="max_size"></a>  list::max_size  
+ Returns the maximum length of a list.  
   
 ```
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 列表的最大可取长度。  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the list.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_max_size.cpp  
@@ -1340,8 +1385,8 @@ int main( )
 }  
 ```  
   
-##  <a name="merge"></a>list::merge  
- 将元素从参数列表移除，将它们插入目标列表，将新的组合元素集以升序或其他指定顺序排序。  
+##  <a name="merge"></a>  list::merge  
+ Removes the elements from the argument list, inserts them into the target list, and orders the new, combined set of elements in ascending order or in some other specified order.  
   
 ```  
 void merge(list<Type, Allocator>& right);
@@ -1350,19 +1395,19 @@ template <class Traits>
 void merge(list<Type, Allocator>& right, Traits comp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要与目标列表合并的自变量列表。  
+ The argument list to be merged with the target list.  
   
  `comp`  
- 用于排列目标列表元素的比较运算符。  
+ The comparison operator used to order the elements of the target list.  
   
-### <a name="remarks"></a>备注  
- 参数列表 `right` 与目标列表合并。  
+### <a name="remarks"></a>Remarks  
+ The argument list `right` is merged with the target list.  
   
- 参数列表和目标列表必须用相同的比较关系进行排序，生成的序列将以这种关系进行排序。 第一个成员函数的默认排列顺序是升序。 第二个成员函数执行 **Traits** 类中用户指定的比较运算 `comp`。  
+ Both argument and target lists must be ordered with the same comparison relation by which the resulting sequence is to be ordered. The default order for the first member function is ascending order. The second member function imposes the user-specified comparison operation `comp` of class **Traits**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_merge.cpp  
@@ -1421,25 +1466,25 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1  
 ```  
   
-##  <a name="op_eq"></a>list::operator=  
- 用另一个列表的副本替换列表中的元素。  
+##  <a name="op_eq"></a>  list::operator=  
+ Replaces the elements of the list with a copy of another list.  
   
 ```  
 list& operator=(const list& right);
 list& operator=(list&& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|`right`|要复制到 `list` 中的 [list](../standard-library/list-class.md)。|  
+|Parameter|Description|  
+|`right`|The [list](../standard-library/list-class.md) being copied into the `list`.|  
   
-### <a name="remarks"></a>备注  
- 消除 `list` 中的任何现有元素后，运算符会将 `right` 的内容复制或移动到 `list` 内。  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `list`, the operator either copies or moves the contents of `right` into the `list`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_operator_as.cpp  
@@ -1480,29 +1525,29 @@ int main( )
 }  
 ```  
   
-##  <a name="pointer"></a>list::pointer  
- 提供指向列表元素的指针。  
+##  <a name="pointer"></a>  list::pointer  
+ Provides a pointer to an element in a list.  
   
 ```
 typedef typename Allocator::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>备注  
- **pointer** 类型可用于修改元素的值。  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- 在大多数情况下，应使用 [iterator](#iterator) 访问列表对象中的元素。  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a list object.  
   
-##  <a name="pop_back"></a>list::pop_back  
- 删除列表末尾的元素。  
+##  <a name="pop_back"></a>  list::pop_back  
+ Deletes the element at the end of a list.  
   
 ``` 
 void pop_back();
 ```  
   
-### <a name="remarks"></a>备注  
- 最后一个元素不得为空。 `pop_back` 绝不会引发异常。  
+### <a name="remarks"></a>Remarks  
+ The last element must not be empty. `pop_back` never throws an exception.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_pop_back.cpp  
@@ -1532,17 +1577,17 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1  
 ```  
   
-##  <a name="pop_front"></a>list::pop_front  
- 删除列表起始处的一个元素。  
+##  <a name="pop_front"></a>  list::pop_front  
+ Deletes the element at the beginning of a list.  
   
 ``` 
 void pop_front();
 ```  
   
-### <a name="remarks"></a>备注  
- 第一个元素不得为空。 `pop_front` 绝不会引发异常。  
+### <a name="remarks"></a>Remarks  
+ The first element must not be empty. `pop_front` never throws an exception.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_pop_front.cpp  
@@ -1572,24 +1617,24 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2  
 ```  
   
-##  <a name="push_back"></a>list::push_back  
- 在列表的末尾添加元素。  
+##  <a name="push_back"></a>  list::push_back  
+ Adds an element to the end of a list.  
   
 ```  
 void push_back(void push_back(Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`val`|添加到列表末尾的元素。|  
+|Parameter|Description|  
+|`val`|The element added to the end of the list.|  
   
-### <a name="remarks"></a>备注  
- 如果引发异常，列表将保持不变，该异常将被重新引发。  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the list is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_push_back.cpp  
@@ -1626,25 +1671,25 @@ New last element: 2
 Moved first element: a  
 ```  
   
-##  <a name="push_front"></a>list::push_front  
- 在列表的开头添加元素。  
+##  <a name="push_front"></a>  list::push_front  
+ Adds an element to the beginning of a list.  
   
 ```  
 void push_front(const Type& val);
 void push_front(Type&& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|描述|  
-|`val`|要添加到列表开头的元素。|  
+|Parameter|Description|  
+|`val`|The element added to the beginning of the list.|  
   
-### <a name="remarks"></a>备注  
- 如果引发异常，列表将保持不变，该异常将被重新引发。  
+### <a name="remarks"></a>Remarks  
+ If an exception is thrown, the list is left unaltered and the exception is rethrown.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_push_front.cpp  
@@ -1681,25 +1726,25 @@ New first element: 2
 Moved first element: a  
 ```  
   
-##  <a name="rbegin"></a>list::rbegin  
- 返回一个迭代器，此迭代器用于发现反向列表中的第一个元素。  
+##  <a name="rbegin"></a>  list::rbegin  
+ Returns an iterator that addresses the first element in a reversed list.  
   
 ``` 
 const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个发现反向列表中的第一个元素（或发现非反向列表中的最后一个元素的内容）的反向双向迭代器。  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed list (or addressing what had been the last element in the unreversed list).  
   
-### <a name="remarks"></a>备注  
- `rbegin` 用于反向列表，正如 [begin](#begin) 用于列表一样。  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed list just as [begin](#begin) is used with a list.  
   
- 如果将 `rbegin` 的返回值分配给 `const_reverse_iterator`，则无法修改列表对象。 如果将 `rbegin` 的返回值分配给 `reverse_iterator`，则可修改列表对象。  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, the list object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, the list object can be modified.  
   
- `rbegin` 可用于向后循环访问列表。  
+ `rbegin` can be used to iterate through a list backwards.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_rbegin.cpp  
@@ -1749,14 +1794,14 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.  
 ```  
   
-##  <a name="reference"></a>list::reference  
- 提供对存储在列表中的元素的引用的类型。  
+##  <a name="reference"></a>  list::reference  
+ A type that provides a reference to an element stored in a list.  
   
 ```  
 typedef typename Allocator::reference reference;  
 ```  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_ref.cpp  
@@ -1784,21 +1829,21 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="remove"></a>list::remove  
- 清除列表中与指定值匹配的元素。  
+##  <a name="remove"></a>  list::remove  
+ Erases elements in a list that match a specified value.  
   
 ``` 
 void remove(const Type& val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `val`  
- 一个值，如果某个元素包含该值，则会导致从列表中删除该元素。  
+ The value which, if held by an element, will result in that element's removal from the list.  
   
-### <a name="remarks"></a>备注  
- 剩余元素的排序不受影响。  
+### <a name="remarks"></a>Remarks  
+ The order of the elements remaining is not affected.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_remove.cpp  
@@ -1838,19 +1883,19 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300  
 ```  
   
-##  <a name="remove_if"></a>list::remove_if  
- 将满足指定谓词的元素从列表中消除。  
+##  <a name="remove_if"></a>  list::remove_if  
+ Erases elements from a list for which a specified predicate is satisfied.  
   
 ``` 
 template <class Predicate>  
 void remove_if(Predicate pred)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pred`  
- 一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。  
+ The unary predicate which, if satisfied by an element, results in the deletion of that element from the list.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_remove_if.cpp  
@@ -1901,27 +1946,27 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8  
 ```  
   
-##  <a name="rend"></a>list::rend  
- 返回发现反向列表中最后一个元素之后的位置的迭代器。  
+##  <a name="rend"></a>  list::rend  
+ Returns an iterator that addresses the location that follows the last element in a reversed list.  
   
 ``` 
 const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个反向双向迭代器，用于发现反向列表中最后一个元素之后的位置（非反向列表中第一个元素之前的位置）。  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed list (the location that had preceded the first element in the unreversed list).  
   
-### <a name="remarks"></a>备注  
- `rend` 用于反向列表，正如 [end](#end) 用于列表一样。  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed list just as [end](#end) is used with a list.  
   
- 如果将 `rend` 的返回值分配给 `const_reverse_iterator`，则无法修改列表对象。 如果将 `rend` 的返回值分配给 `reverse_iterator`，则可修改列表对象。  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, the list object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, the list object can be modified.  
   
- `rend` 可用于测试反向迭代器是否已到达其列表的末尾。  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its list.  
   
- 不应对 `rend` 返回的值取消引用。  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_rend.cpp  
@@ -1984,31 +2029,31 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40  
 ```  
   
-##  <a name="resize"></a>list::resize  
- 为列表指定新的大小。  
+##  <a name="resize"></a>  list::resize  
+ Specifies a new size for a list.  
   
 ``` 
 void resize(size_type _Newsize);
 void resize(size_type _Newsize, Type val);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Newsize`  
- 列表的新大小。  
+ The new size of the list.  
   
  `val`  
- 新的大小大于原始大小时要添加至列表的新元素的值。 如果省略此值，则会赋给新元素此类的默认值。  
+ The value of the new elements to be added to the list if the new size is larger that the original size. If the value is omitted, the new elements are assigned the default value for the class.  
   
-### <a name="remarks"></a>备注  
- 如果列表的大小小于请求的大小 `_Newsize`，那么会在列表中添加元素，直到该列表达到请求的大小。  
+### <a name="remarks"></a>Remarks  
+ If the list's size is less than the requested size, `_Newsize`, elements are added to the list until it reaches the requested size.  
   
- 如果列表的大小大于请求的大小，最接近列表末尾的元素将被删除，直到该列表达到 `_Newsize` 大小。  
+ If the list's size is larger than the requested size, the elements closest to the end of the list are deleted until the list reaches the size `_Newsize`.  
   
- 如果列表的当前大小与请求的大小相同，则不采取任何操作。  
+ If the present size of the list is the same as the requested size, no action is taken.  
   
- [size](#size) 表示列表的当前大小。  
+ [size](#size) reflects the current size of the list.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_resize.cpp  
@@ -2048,14 +2093,14 @@ The reduced size of c1 is: 2
 The value of the last element is now 20  
 ```  
   
-##  <a name="reverse"></a>list::reverse  
- 反转列表中元素的顺序。  
+##  <a name="reverse"></a>  list::reverse  
+ Reverses the order in which the elements occur in a list.  
   
 ``` 
 void reverse();
 ```  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_reverse.cpp  
@@ -2091,30 +2136,30 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10  
 ```  
   
-##  <a name="reverse_iterator"></a>list::reverse_iterator  
- 提供可读取或修改反向列表中的元素的双向迭代器的类型。  
+##  <a name="reverse_iterator"></a>  list::reverse_iterator  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed list.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>备注  
- `reverse_iterator` 类型用于反向循环访问列表。  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is used to iterate through the list in reverse.  
   
-### <a name="example"></a>示例  
-  请参阅 [rbegin](#rbegin) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin).  
   
-##  <a name="size"></a>list::size  
- 返回列表中元素的数目。  
+##  <a name="size"></a>  list::size  
+ Returns the number of elements in a list.  
   
 ``` 
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 列表的当前长度。  
+### <a name="return-value"></a>Return Value  
+ The current length of the list.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_size.cpp  
@@ -2143,18 +2188,18 @@ List length is 1.
 List length is now 2.  
 ```  
   
-##  <a name="size_type"></a>list::size_type  
- 计算列表中元素的数目的类型。  
+##  <a name="size_type"></a>  list::size_type  
+ A type that counts the number of elements in a list.  
   
 ```  
 typedef typename Allocator::size_type size_type;  
 ```  
   
-### <a name="example"></a>示例  
-  请参阅 [size](#size) 的示例。  
+### <a name="example"></a>Example  
+  See the example for [size](#size).  
   
-##  <a name="sort"></a>list::sort  
- 按升序或用户指定的其他顺序排列列表元素。  
+##  <a name="sort"></a>  list::sort  
+ Arranges the elements of a list in ascending order or with respect to some other user-specified order.  
   
 ``` 
 void sort();
@@ -2163,16 +2208,16 @@ template <class Traits>
 void sort(Traits comp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `comp`  
- 用于排列连续元素的比较运算符。  
+ The comparison operator used to order successive elements.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，第一个成员函数将按升序排列元素。  
+### <a name="remarks"></a>Remarks  
+ The first member function puts the elements in ascending order by default.  
   
- 成员模板函数将根据 **Traits** 类中用户指定的比较运算 `comp` 排列元素。  
+ The member template function orders the elements according to the user-specified comparison operation `comp` of class **Traits**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_sort.cpp  
@@ -2215,8 +2260,8 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10  
 ```  
   
-##  <a name="splice"></a>list::splice  
- 从源列表中删除元素并将其插入到目标列表中。  
+##  <a name="splice"></a>  list::splice  
+ Removes elements from a source list and inserts them into a destination list.  
   
 ```  
 // insert the entire source list  
@@ -2232,34 +2277,34 @@ void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator 
 void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator First, const_iterator Last);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Where`  
- 目标列表中要在其前面进行插入的位置。  
+ The position in the destination list before which to insert.  
   
  `Source`  
- 要插入目标列表中的源列表。  
+ The source list that is to be inserted into the destination list.  
   
  `Iter`  
- 要从源列表中进行插入的元素。  
+ The element to be inserted from the source list.  
   
  `First`  
- 要从源列表中进行插入的范围中的第一个元素。  
+ The first element in the range to be inserted from the source list.  
   
  `Last`  
- 要从源列表中进行插入的范围中的最后一个元素之外的第一个位置。  
+ The first position beyond the last element in the range to be inserted from the source list.  
   
-### <a name="remarks"></a>备注  
- 第一对成员函数在 `Where` 所引用的位置之前，将源列表中的所有元素插入到目标列表中，然后从源列表中删除所有元素。 （`&Source` 不得等于 `this`。）  
+### <a name="remarks"></a>Remarks  
+ The first pair of member functions inserts all elements in the source list into the destination list before the position referred to by `Where` and removes all elements from the source list. ( `&Source` must not equal `this`.)  
   
- 第二对成员函数将在 `Iter` 所引用的目标列表中的位置之前，插入 `Where` 所引用的元素，然后从源列表中删除 `Iter`。 （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）  
+ The second pair of member functions inserts the element referred to by `Iter` before the position in the destination list referred to by `Where` and removes `Iter` from the source list. (If `Where == Iter || Where == ++Iter`, no change occurs.)  
   
- 第三对成员函数将在 `Where` 所引用的目标列表中的元素之前，插入由 [ `First`, `Last`) 指定的范围，然后从源列表中删除该元素范围。 （如果 `&Source == this`，则范围 `[First, Last)` 不得包含 `Where` 所指向的元素。）  
+ The third pair of member functions inserts the range designated by [ `First`, `Last`) before the element in the destination list referred to by `Where` and removes that range of elements from the source list. (If `&Source == this`, the range `[First, Last)` must not include the element pointed to by `Where`.)  
   
- 如果范围接合插入 `N` 个元素和 `&Source != this`，则类 [iterator](../standard-library/forward-list-class.md#iterator) 的对象会递增 `N` 次。  
+ If the ranged splice inserts `N` elements, and `&Source != this`, an object of class [iterator](../standard-library/forward-list-class.md#iterator) is incremented `N` times.  
   
- 在所有情况下，迭代器、指针或引用接合的元素的引用都会保持有效状态且会转换为目标容器。  
+ In all cases iterators, pointers, or references that refer to spliced elements remain valid and are transferred to the destination container.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_splice.cpp  
@@ -2336,22 +2381,22 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)  
 ```  
   
-##  <a name="swap"></a>list::swap  
- 交换两个列表的元素。  
+##  <a name="swap"></a>  list::swap  
+ Exchanges the elements of two lists.  
   
 ``` 
 void swap(list<Type, Allocator>& right);
 friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 提供要交换的元素的列表，或其元素将要与列表 `left` 的元素交换的列表。  
+ The list providing the elements to be swapped, or the list whose elements are to be exchanged with those of the list `left`.  
   
  `left`  
- 其元素将与列表 `right` 的进行交换的列表。  
+ A list whose elements are to be exchanged with those of the list `right`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_swap.cpp  
@@ -2399,8 +2444,8 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100  
 ```  
   
-##  <a name="unique"></a>list::unique  
- 从列表中删除满足某些其他二元谓词的相邻重复元素或相邻元素。  
+##  <a name="unique"></a>  list::unique  
+ Removes adjacent duplicate elements or adjacent elements that satisfy some other binary predicate from a list.  
   
 ```  
 void unique();
@@ -2409,18 +2454,18 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate pred);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pred`  
- 用于比较连续元素的二元谓词。  
+ The binary predicate used to compare successive elements.  
   
-### <a name="remarks"></a>备注  
- 此函数假设列表是经过排序的，因此所有重复元素都是相邻的。 不相邻的重复元素将不被删除。  
+### <a name="remarks"></a>Remarks  
+ This function assumes that the list is sorted, so that all duplicate elements are adjacent. Duplicates that are not adjacent will not be deleted.  
   
- 第一个成员函数删除比较等于其前一个元素的每个元素。  
+ The first member function removes every element that compares equal to its preceding element.  
   
- 第二个成员函数删除与前一个元素比较时满足谓词函数 `pred` 的元素。 可以使用在 pred 自变量的 `<functional>` 标头中声明的任何二元函数对象，也可以创建自己的二元函数对象。  
+ The second member function removes every element that satisfies the predicate function `pred` when compared with its preceding element. You can use any of the binary function objects declared in the `<functional>`header for the argument  pred or you can create your own.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_unique.cpp  
@@ -2469,17 +2514,17 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10  
 ```  
   
-##  <a name="value_type"></a>list::value_type  
- 表示列表中存储的数据类型的类型。  
+##  <a name="value_type"></a>  list::value_type  
+ A type that represents the data type stored in a list.  
   
 ```  
 typedef typename Allocator::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `value_type` 是模板参数 **Type** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the template parameter **Type**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_value_type.cpp  
@@ -2500,9 +2545,9 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

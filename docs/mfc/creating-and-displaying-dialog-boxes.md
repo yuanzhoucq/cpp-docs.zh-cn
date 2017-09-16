@@ -1,41 +1,60 @@
 ---
-title: "创建并显示对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 对话框, 创建"
-  - "MFC 对话框, 显示"
-  - "有模式对话框, 创建"
-  - "无模式对话框, 创建"
-  - "打开对话框"
+title: Creating and Displaying Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modal dialog boxes [MFC], creating
+- opening dialog boxes
+- modeless dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 创建并显示对话框
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0791b27a8ca62f6db80d759d22fde7d3eafa58a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-创建对话框对象是个两阶段操作。  首先，请构造对话框对象，然后创建对话框窗口。  模式和无模式对话框。用于的进程不同一些创建并显示它们。  下表列出模式和无模式对话框通常如何构造并显示。  
+---
+# <a name="creating-and-displaying-dialog-boxes"></a>Creating and Displaying Dialog Boxes
+Creating a dialog object is a two-phase operation. First, construct the dialog object, then create the dialog window. Modal and modeless dialog boxes differ somewhat in the process used to create and display them. The following table lists how modal and modeless dialog boxes are normally constructed and displayed.  
   
-### 创建对话框  
+### <a name="dialog-creation"></a>Dialog Creation  
   
-|对话框类型|如何创建|  
-|-----------|----------|  
-|[Modeless](../mfc/creating-modeless-dialog-boxes.md)|构造 `CDialog`，然后调用 **创建** 成员函数。|  
-|[模式](../mfc/creating-modal-dialog-boxes.md)|构造 `CDialog`，然后调用 `DoModal` 成员函数。|  
+|Dialog type|How to create it|  
+|-----------------|----------------------|  
+|[Modeless](../mfc/creating-modeless-dialog-boxes.md)|Construct `CDialog`, then call **Create** member function.|  
+|[Modal](../mfc/creating-modal-dialog-boxes.md)|Construct `CDialog`, then call `DoModal` member function.|  
   
- 可以，如果需要，创建从已从对话框模板资源了构造而不是上的 [内存对话框模板](../mfc/using-a-dialog-template-in-memory.md) 的对话框。  这是一个高级主题，包括：  
+ You can, if you want, create your dialog box from an [in-memory dialog template](../mfc/using-a-dialog-template-in-memory.md) that you have constructed rather than from a dialog template resource. This is an advanced topic, however.  
   
-## 请参阅  
- [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

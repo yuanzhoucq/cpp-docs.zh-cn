@@ -1,5 +1,5 @@
 ---
-title: "CSplitterWndEx 类 |Microsoft 文档"
+title: CSplitterWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSplitterWndEx
+- CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
 caps.latest.revision: 24
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 08b26bc2321485181941dbaaa9a903de9a401ef8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c80722c339756f42889db39e1820edc8dc035f28
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csplitterwndex-class"></a>CSplitterWndEx 类
+# <a name="csplitterwndex-class"></a>CSplitterWndEx Class
 
 
 
-表示自定义拆分窗口。  
+Represents a customized splitter window.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSplitterWndEx : public CSplitterWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CSplitterWndEx::CSplitterWndEx`|默认构造函数。|  
-|`CSplitterWndEx::~CSplitterWndEx`|析构函数。|  
+|`CSplitterWndEx::CSplitterWndEx`|Default constructor.|  
+|`CSplitterWndEx::~CSplitterWndEx`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|由框架用于绘制拆分器窗口中调用。 (重写[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)。)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Called by the framework to draw a splitter window. (Overrides [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
-## <a name="remarks"></a>备注  
- 重写`OnDrawSplitter`方法以自定义拆分窗口将图形组件的外观。  
+## <a name="remarks"></a>Remarks  
+ Override the `OnDrawSplitter` method to customize the appearance of the graphical components of a splitter window.  
   
- `CSplitterWndEx`类一起配合使用[OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)， [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)，和[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)由的可视管理器实现的方法。 若要使视觉管理器中，若要绘制您的应用程序中的拆分窗口，替换的声明`CSplitterWnd`类`CSplitterWndEx`类。 为应用程序框架窗口，在 mainfrm.h 中位于 CMainFrame 类中声明拆分器窗口类。 有关示例，请参阅`OutlookDemo`示例在示例目录中。  
+ The `CSplitterWndEx` class is used together with the [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), and [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) methods, which are implemented by a visual manager. To cause a visual manager to draw a splitter window in your application, replace declarations of the `CSplitterWnd` class with the `CSplitterWndEx` class. For frame window applications, the splitter window class is declared in the CMainFrame class that is located in mainfrm.h. For an example, see the `OutlookDemo` sample in the Samples directory.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](cobject-class.md)  
   
  [CCmdTarget](ccmdtarget-class.md)  
@@ -83,11 +83,11 @@ class CSplitterWndEx : public CSplitterWnd
   
  [CSplitterWnd](csplitterwnd-class.md)  
    
-## <a name="requirements"></a>要求  
- **标头︰** afxsplitterwndex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsplitterwndex.h  
   
-##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
- 由框架用于绘制拆分器窗口中调用。  
+##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
+ Called by the framework to draw a splitter window.  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -97,20 +97,20 @@ virtual void OnDrawSplitter(
 );  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。 如果此参数为`NULL`，框架将重新绘制活动窗口中。  
+ Pointer to the device context. If this parameter is `NULL`, the framework redraws the active window.  
   
  [in] `nType`  
- 其中一个`CSplitterWnd::ESplitType`枚举值，该值指定要绘制的拆分器窗口元素。 有效值为 `splitBox`、`splitBar`、`splitIntersection` 和 `splitBorder`。  
+ One of the `CSplitterWnd::ESplitType` enumeration values that specifies the splitter window element to draw. Valid values are `splitBox`, `splitBar`, `splitIntersection`, and `splitBorder`.  
   
  [in] `rect`  
- 指定的尺寸和位置绘制指定的拆分器窗口元素边框。  
+ A bounding rectangle that specifies the dimensions and location to draw the specified splitter window element.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../hierarchy-chart.md)   
- [类](mfc-classes.md)   
- [CSplitterWnd 类](csplitterwnd-class.md)   
- [CMFCVisualManager 类](cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../hierarchy-chart.md)   
+ [Classes](mfc-classes.md)   
+ [CSplitterWnd Class](csplitterwnd-class.md)   
+ [CMFCVisualManager Class](cmfcvisualmanager-class.md)

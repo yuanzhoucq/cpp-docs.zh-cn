@@ -1,49 +1,68 @@
 ---
-title: "使用窗口对象 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "子窗口, 处理"
-  - "窗口对象, 处理"
+title: Working with Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- child windows [MFC], working with
+- window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用窗口对象
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2b5703795c56f9a5886220844a751397ad04adbb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-调用与 Windows 使用需要两个活动：  
+---
+# <a name="working-with-window-objects"></a>Working with Window Objects
+Working with windows calls for two kinds of activity:  
   
--   处理 Windows 消息  
+-   Handling Windows messages  
   
--   绘制窗口中  
+-   Drawing in the window  
   
- 若要在所有窗口的窗口消息，包括自己的子窗口，请参见 [指向函数的信息映射](../mfc/reference/mapping-messages-to-functions.md) 消息映射到 C\+\+ Windows 类。  然后编写消息处理程序在类的成员函数。  
+ To handle Windows messages in any window, including your own child windows, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md) to map the messages to your C++ window class. Then write message-handler member functions in your class.  
   
- 在框架应用程序的大多数图形视图中发生，[OnDraw](../Topic/CView::OnDraw.md) 成员函数调用，就必须绘制窗口的内容。  如果窗口是子视图中，可能将某些视图绘制到子窗口通过 Windows 具有成员函数的 `OnDraw` 调用。  
+ Most drawing in a framework application occurs in the view, whose [OnDraw](../mfc/reference/cview-class.md#ondraw) member function is called whenever the window's contents must be drawn. If your window is a child of the view, you might delegate some of the view's drawing to your child window by having `OnDraw` call one of your window's member functions.  
   
- 在任何情况下，需要绘制的设备上下文。  可以使用笔、股票和画笔在设备上下文包含的其他图形对象同窗口关联。  也可以修改这些对象获取所需的绘制。  当设备上下文设置为您喜欢中，调用类 [CDC](../mfc/reference/cdc-class.md) \(设备上下文类的成员函数\) 绘制线条，则形状和文本；使用颜色；并与坐标系统一起使用。  
+ In any case, you will need a device context for drawing. You can use the stock pen, brush, and other graphic objects contained in the device context associated with your window. Or you can modify these objects to get the drawing effects you need. With your device context set up as you like, call member functions of class [CDC](../mfc/reference/cdc-class.md) (device-context class) to draw lines, shapes, and text; to use colors; and to work with a coordinate system.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [和消息映射处理](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [在视图](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a view](../mfc/drawing-in-a-view.md)  
   
--   [设备上下文](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [图形对象](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
-## 请参阅  
- [窗口对象](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

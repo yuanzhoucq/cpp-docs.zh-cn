@@ -1,5 +1,5 @@
 ---
-title: "ostreambuf_iterator 类 | Microsoft Docs"
+title: ostreambuf_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - streambuf/std::ostreambuf_iterator
-- ostreambuf_iterator
 - iterator/std::ostreambuf_iterator::char_type
 - iterator/std::ostreambuf_iterator::ostream_type
 - iterator/std::ostreambuf_iterator::streambuf_type
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ostreambuf_iterator class
+- std::ostreambuf_iterator [C++]
+- std::ostreambuf_iterator [C++], char_type
+- std::ostreambuf_iterator [C++], ostream_type
+- std::ostreambuf_iterator [C++], streambuf_type
+- std::ostreambuf_iterator [C++], traits_type
+- std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
 caps.latest.revision: 16
 author: corob-msft
@@ -39,77 +43,77 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2f58e86e76e63d51739558b796e47dc3f5165d3f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 089009873b69087b1125ef3e1dc7b1c907dce956
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
-模板类 ostreambuf_iterator 描述一个输出迭代器对象，该对象使用提取 **operator>>** 将连续的字符元素写入输出流。 `ostreambuf_iterator` 与 [ostream_iterator 类](../standard-library/ostream-iterator-class.md)迭代器的不同之处在于，要插入输出流的对象类型为字符而不是泛型类型。  
+# <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
+The template class ostreambuf_iterator describes an output iterator object that writes successive character elements onto the output stream with the extraction **operator>>**. The `ostreambuf_iterator`s differ from those of the [ostream_iterator Class](../standard-library/ostream-iterator-class.md) in having characters instead of a generic type at the type of object being inserted into the output stream.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType = char class Traits = char_traits <CharType>>
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 表示 ostreambuf_iterator 字符类型的类型。 此参数为可选参数，默认值为 `char`。  
+ The type that represents the character type for the ostreambuf_iterator. This argument is optional and the default value is `char`.  
   
  `Traits`  
- 表示 ostreambuf_iterator 字符类型的类型。 此自变量是可选自变量，默认值为 `char_traits`\<*CharType>。*  
+ The type that represents the character type for the ostreambuf_iterator. This argument is optional and the default value is `char_traits`\< *CharType>.*  
   
-## <a name="remarks"></a>备注  
- ostreambuf_iterator 类必须满足输出迭代器的需求。 可使用 `ostreambuf_iterator` 直接向输出流中写入算法。 此类可提供一种低级别流迭代器，允许访问字符形式的原始（未格式化）I/O 流，并且能够绕过与高级别流迭代器相关联的缓冲和字符转换。  
+## <a name="remarks"></a>Remarks  
+ The ostreambuf_iterator class must satisfy the requirements for an output iterator. Algorithms can be written directly to output streams using an `ostreambuf_iterator`. The class provides a low-level stream iterator that allows access to the raw (unformatted) I/O stream in the form of characters and the ability to bypass the buffering and character translations associated with the high-level stream iterators.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|构造一个 `ostreambuf_iterator`，以便经初始化后向输出流写入字符。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|为 `ostreambuf_iterator` 的字符类型提供的类型。|  
-|[ostream_type](#ostreambuf_iterator_ostream_type)|为 `ostream_iterator` 的流类型提供的类型。|  
-|[streambuf_type](#streambuf_type)|为 `ostreambuf_iterator` 的流类型提供的类型。|  
-|[traits_type](#traits_type)|为 `ostream_iterator` 的字符特征类型提供的类型。|  
+|[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Constructs an `ostreambuf_iterator` that is initialized to write characters to the output stream.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[failed](#failed)|测试插入到输出流缓冲区的操作是否失败。|  
+|[char_type](#char_type)|A type that provides for the character type of the `ostreambuf_iterator`.|  
+|[ostream_type](#ostreambuf_iterator_ostream_type)|A type that provides for the stream type of the `ostream_iterator`.|  
+|[streambuf_type](#streambuf_type)|A type that provides for the stream type of the `ostreambuf_iterator`.|  
+|[traits_type](#traits_type)|A type that provides for the character traits type of the `ostream_iterator`.|  
   
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*](#op_star)|用于实现输出迭代器表达式 * `i` = `x` 的取消引用运算符。|  
-|[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|  
-|[operator=](#op_eq)|此运算符会将一个字符插入到关联的流缓冲区。|  
+|[failed](#failed)|Tests for failure of an insertion into the output stream buffer.|  
   
-## <a name="requirements"></a>要求  
- **标头：** \<iterator>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator*](#op_star)|Dereferencing operator used to implement the output iterator expression * `i` = `x`.|  
+|[operator++](#op_add_add)|A nonfunctional increment operator that returns an `ostreambuf_iterator` to the same object it addressed before the operation was called.|  
+|[operator=](#op_eq)|The operator inserts a character into the associated stream buffer.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
+  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  ostreambuf_iterator::char_type  
- 为 `ostreambuf_iterator` 的字符类型提供的类型。  
+ A type that provides for the character type of the `ostreambuf_iterator`.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **CharType** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_char_type.cpp  
@@ -148,19 +152,19 @@ The characters written to the output stream
 ```  
   
 ##  <a name="failed"></a>  ostreambuf_iterator::failed  
- 测试插入到输出流缓冲区的操作是否失败。  
+ Tests for failure of an insertion into the output stream buffer.  
   
 ```
 bool failed() const throw();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果之前成功插入到输出流缓冲区，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if no insertion into the output stream buffer has failed earlier; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 如果在以前对成员 `operator=` 的任何使用中，对 **subf**_-> `sputc` 的调用返回 **eof**，则成员函数将返回 **true**。  
+### <a name="remarks"></a>Remarks  
+ The member function returns **true** if, in any prior use of member `operator=`, the call to **subf**_-> `sputc` returned **eof**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_failed.cpp  
@@ -195,20 +199,20 @@ No insertions failed.
 *\  
 ```  
   
-##  <a name="op_star"></a>ostreambuf_iterator::operator*  
- 用于实现输出迭代器表达式 \* *i* = *x* 的非功能性的取消引用运算符。  
+##  <a name="op_star"></a>  ostreambuf_iterator::operator*  
+ A nonfunctional dereferencing operator used to implement the output iterator expression \* *i* = *x*.  
   
 ```
 ostreambuf_iterator<CharType, Traits>& operator*();
 ```  
   
-### <a name="return-value"></a>返回值  
- ostreambuf 迭代器对象。  
+### <a name="return-value"></a>Return Value  
+ The ostreambuf iterator object.  
   
-### <a name="remarks"></a>备注  
- 此运算符函数仅存在于输出迭代器表达式 \* *i* = *x* 中，以便将字符输出到流缓冲区。 应用于 ostreambuf 迭代器，它将返回该迭代器；**\*iter** 返回 **iter**，  
+### <a name="remarks"></a>Remarks  
+ This operator functions only in the output iterator expression \* *i* = *x* to output characters to stream buffer. Applied to an ostreambuf iterator, it returns the iterator; **\*iter** returns **iter**,  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_op_deref.cpp  
@@ -239,21 +243,21 @@ OUT
 *\  
 ```  
   
-##  <a name="op_add_add"></a>ostreambuf_iterator::operator++  
- 一种非功能性递增运算符，可向调用该运算之前所处理的同一字符返回 ostream 迭代器。  
+##  <a name="op_add_add"></a>  ostreambuf_iterator::operator++  
+ A nonfunctional increment operator that returns an ostream iterator to the same character it addressed before the operation was called.  
   
 ```
 ostreambuf_iterator<CharType, Traits>& operator++();
 ostreambuf_iterator<CharType, Traits>& operator++(int);
 ```  
   
-### <a name="return-value"></a>返回值  
- 对最初被寻址的字符的引用或对可转换为 `ostreambuf_iterator`\< **CharType**, **Traits**> 的实现定义的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the character originally addressed or to an implementation-defined object that is convertible to `ostreambuf_iterator`\< **CharType**, **Traits**>.  
   
-### <a name="remarks"></a>备注  
- 该运算符用于实现输出迭代器表达式 \* *i* = *x*。  
+### <a name="remarks"></a>Remarks  
+ The operator is used to implement the output iterator expression \* *i* = *x*.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_op_incr.cpp  
@@ -284,24 +288,24 @@ OUT
 *\  
 ```  
   
-##  <a name="op_eq"></a>ostreambuf_iterator::operator=  
- 此运算符会将一个字符插入到关联的流缓冲区。  
+##  <a name="op_eq"></a>  ostreambuf_iterator::operator=  
+ The operator inserts a character into the associated stream buffer.  
   
 ```
 ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Char`  
- 要插入到流缓冲区的字符。  
+ The character to be inserted into the stream buffer.  
   
-### <a name="return-value"></a>返回值  
- 对插入到流缓冲区的字符的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the character inserted into the stream buffer.  
   
-### <a name="remarks"></a>备注  
- 用于实现输出迭代器表达式 \* *i* = *x* 以写入输出流的赋值运算符。  
+### <a name="remarks"></a>Remarks  
+ Assignment operator used to implement the output iterator expression \* *i* = *x* for writing to an output stream.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_op_assign.cpp  
@@ -333,26 +337,26 @@ OUT
 ```  
   
 ##  <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator  
- 构造一个 `ostreambuf_iterator`，以便经初始化后向输出流写入字符。  
+ Constructs an `ostreambuf_iterator` that is initialized to write characters to the output stream.  
   
 ```
 ostreambuf_iterator(streambuf_type* strbuf) throw();
 ostreambuf_iterator(ostream_type& Ostr) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- 用于初始化输出流缓冲区指针的输出 streambuf 对象。  
+ The output streambuf object used to initialize the output stream-buffer pointer.  
   
  `Ostr`  
- 用于初始化输出流缓冲区指针的输出流对象。  
+ The output stream object used to initialize the output stream-buffer pointer.  
   
-### <a name="remarks"></a>备注  
- 第一个构造函数通过 `strbuf` 初始化输出流缓冲区指针。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the output stream-buffer pointer with `strbuf`.  
   
- 第二个构造函数通过 `Ostr` 初始化输出流缓冲区指针。 `rdbuf`。 存储的指针不能为空指针。  
+ The second constructor initializes the output stream-buffer pointer with `Ostr`. `rdbuf`. The stored pointer must not be a null pointer.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iteratorOstreambuf_iterator.cpp  
@@ -386,42 +390,42 @@ These characters are being written to the output stream.
 ```  
   
 ##  <a name="ostreambuf_iterator_ostream_type"></a>  ostreambuf_iterator::ostream_type  
- 为 `ostream_iterator` 的流类型提供的类型。  
+ A type that provides for the stream type of the `ostream_iterator`.  
   
 ```
 typedef basicOstream<CharType, Traits> ostream_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 `basicOstream`\<**CharType**, **Traits**> 的同义词  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basicOstream`\< **CharType**, **Traits**>  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `ostream_type` 的示例，请参阅 [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)。  
+### <a name="example"></a>Example  
+  See [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) for an example of how to declare and use `ostream_type`.  
   
 ##  <a name="streambuf_type"></a>  ostreambuf_iterator::streambuf_type  
- 为 `ostreambuf_iterator` 的流类型提供的类型。  
+ A type that provides for the stream type of the `ostreambuf_iterator`.  
   
 ```
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型为 `basic_streambuf`\<**CharType**, **Traits**> 的同义词，这是 I/O 缓冲区的流类，当专用化为字符类型 `char` 时将成为 `streambuf`。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for `basic_streambuf`\< **CharType**, **Traits**>, a stream class for I/O buffers that becomes `streambuf` when specialized to character type `char`.  
   
-### <a name="example"></a>示例  
-  有关如何声明和使用 `streambuf_type` 的示例，请参阅 [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)。  
+### <a name="example"></a>Example  
+  See [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator) for an example of how to declare and use `streambuf_type`.  
   
 ##  <a name="traits_type"></a>  ostreambuf_iterator::traits_type  
- 为 `ostream_iterator` 的字符特征类型提供的类型。  
+ A type that provides for the character traits type of the `ostream_iterator`.  
   
 ```
 typedef Traits traits_type;
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 **Traits** 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Traits**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ostreambuf_iterator_traits_type.cpp  
@@ -459,10 +463,10 @@ The characters written to the output stream
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "CSingleLock 类 |Microsoft 文档"
+title: CSingleLock Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSingleLock class
-- threading [MFC], access control
-- synchronization objects, access control
-- threading [MFC], synchronization
+- CSingleLock [MFC], CSingleLock
+- CSingleLock [MFC], IsLocked
+- CSingleLock [MFC], Lock
+- CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 caps.latest.revision: 20
 author: mikeblome
@@ -41,55 +41,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b1efc2daf1c3714446223cc69f9cc2a6a3401173
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e71c3ef486fdff44525fc178666107b4a2963fff
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csinglelock-class"></a>CSingleLock 类
-表示多线程程序中用于控制对一个资源的访问的访问控制机制。  
+# <a name="csinglelock-class"></a>CSingleLock Class
+Represents the access-control mechanism used in controlling access to a resource in a multithreaded program.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSingleLock  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSingleLock::CSingleLock](#csinglelock)|构造 `CSingleLock` 对象。|  
+|[CSingleLock::CSingleLock](#csinglelock)|Constructs a `CSingleLock` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSingleLock::IsLocked](#islocked)|确定对象被锁定。|  
-|[CSingleLock::Lock](#lock)|在同步对象中等待。|  
-|[CSingleLock::Unlock](#unlock)|释放同步对象。|  
+|[CSingleLock::IsLocked](#islocked)|Determines if the object is locked.|  
+|[CSingleLock::Lock](#lock)|Waits on a synchronization object.|  
+|[CSingleLock::Unlock](#unlock)|Releases a synchronization object.|  
   
-## <a name="remarks"></a>备注  
- `CSingleLock`没有基类的类。  
+## <a name="remarks"></a>Remarks  
+ `CSingleLock` does not have a base class.  
   
- 若要使用同步类[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)， [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，您必须创建`CSingleLock`或[CMultiLock](../../mfc/reference/cmultilock-class.md)对象等待，并释放同步对象。 使用`CSingleLock`时只需一次针对一个对象的等待。 使用**CMultiLock**时有多个可以使用某一时刻的对象。  
+ In order to use the synchronization classes [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), and [CEvent](../../mfc/reference/cevent-class.md), you must create either a `CSingleLock` or [CMultiLock](../../mfc/reference/cmultilock-class.md) object to wait on and release the synchronization object. Use `CSingleLock` when you only need to wait on one object at a time. Use **CMultiLock** when there are multiple objects that you could use at a particular time.  
   
- 若要使用`CSingleLock`对象，请在受控的资源的类中调用其构造函数在成员函数内的。 然后，调用[IsLocked](#islocked)成员函数来确定该资源是否可用。 如果是，继续使用该成员函数的其余部分。 如果该资源不可用，等待指定的资源要释放的时间量，或返回失败。 使用该资源已完成后，或者调用[解锁](#unlock)函数如果`CSingleLock`对象是同样，使用或允许`CSingleLock`对象将其销毁。  
+ To use a `CSingleLock` object, call its constructor inside a member function in the controlled resource's class. Then call the [IsLocked](#islocked) member function to determine if the resource is available. If it is, continue with the remainder of the member function. If the resource is unavailable, either wait for a specified amount of time for the resource to be released, or return failure. After use of the resource is complete, either call the [Unlock](#unlock) function if the `CSingleLock` object is to be used again, or allow the `CSingleLock` object to be destroyed.  
   
- `CSingleLock`对象需要将一个对象派生自存在[CSyncObject](../../mfc/reference/csyncobject-class.md)。 这通常是受控的资源类的数据成员。 有关如何使用`CSingleLock`对象，请参阅文章[多线程处理︰ 如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ `CSingleLock` objects require the presence of an object derived from [CSyncObject](../../mfc/reference/csyncobject-class.md). This is usually a data member of the controlled resource's class. For more information on how to use `CSingleLock` objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CSingleLock`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
- 构造 `CSingleLock` 对象。  
+##  <a name="csinglelock"></a>  CSingleLock::CSingleLock  
+ Constructs a `CSingleLock` object.  
   
 ```  
 explicit CSingleLock(
@@ -97,54 +97,54 @@ explicit CSingleLock(
     BOOL bInitialLock = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pObject`  
- 指向要访问的同步对象。 不能为**NULL**。  
+ Points to the synchronization object to be accessed. Cannot be **NULL**.  
   
  `bInitialLock`  
- 指定是否以最初尝试访问所提供的对象。  
+ Specifies whether to initially attempt to access the supplied object.  
   
-### <a name="remarks"></a>备注  
- 此函数通常是从受控资源的访问成员函数中调用的。  
+### <a name="remarks"></a>Remarks  
+ This function is generally called from within an access member function of the controlled resource.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&19;](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="islocked"></a>CSingleLock::IsLocked  
- 确定是否对象与关联`CSingleLock`对象是非终止状态 （不可用）。  
+##  <a name="islocked"></a>  CSingleLock::IsLocked  
+ Determines if the object associated with the `CSingleLock` object is nonsignaled (unavailable).  
   
 ```  
 BOOL IsLocked();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果该对象被锁定，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object is locked; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&20;](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="lock"></a>CSingleLock::Lock  
- 调用此函数可获取对由提供给的同步对象控制的资源访问权限`CSingleLock`构造函数。  
+##  <a name="lock"></a>  CSingleLock::Lock  
+ Call this function to gain access to the resource controlled by the synchronization object supplied to the `CSingleLock` constructor.  
   
 ```  
 BOOL Lock(DWORD dwTimeOut = INFINITE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *dwTimeOut*  
- 指定要等待同步对象可用的时间量 （终止）。 如果**无限**，`Lock`将等待，直到在返回之前，该对象处于终止状态。  
+ Specifies the amount of time to wait for the synchronization object to be available (signaled). If **INFINITE**, `Lock` will wait until the object is signaled before returning.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果同步对象发出信号，`Lock`将立即成功返回，并在线程现在拥有对象。 如果同步对象是非终止状态 （不可用）`Lock`将等待要接收信号最中指定的毫秒数的同步对象*dwTimeOut*参数。 如果没有未在指定的时间量，接收信号的同步对象`Lock`返回失败。  
+### <a name="remarks"></a>Remarks  
+ If the synchronization object is signaled, `Lock` will return successfully and the thread now owns the object. If the synchronization object is nonsignaled (unavailable), `Lock` will wait for the synchronization object to become signaled up to the number of milliseconds specified in the *dwTimeOut* parameter. If the synchronization object did not become signaled in the specified amount of time, `Lock` returns failure.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="unlock"></a>CSingleLock::Unlock  
- 释放同步对象归`CSingleLock`。  
+##  <a name="unlock"></a>  CSingleLock::Unlock  
+ Releases the synchronization object owned by `CSingleLock`.  
   
 ```  
 BOOL Unlock();
@@ -155,25 +155,25 @@ BOOL Unlock(
     LPLONG lPrevCount = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lCount`  
- 若要释放的访问次数。 必须大于 0。 如果指定的量会导致对象的计数超出其最大值，计数未发生更改时，该函数将返回**FALSE**。  
+ Number of accesses to release. Must be greater than 0. If the specified amount would cause the object's count to exceed its maximum, the count is not changed and the function returns **FALSE**.  
   
  `lPrevCount`  
- 指向一个变量来接收的同步对象的前一个计数。 如果**NULL**，则不返回前一个计数。  
+ Points to a variable to receive the previous count of the synchronization object. If **NULL**, the previous count is not returned.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则非零值否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 调用此函数`CSingleLock`的析构函数。  
+### <a name="remarks"></a>Remarks  
+ This function is called by `CSingleLock`'s destructor.  
   
- 如果你需要释放信号量的多个访问次数，使用第二种形式的`Unlock`并指定要发布的访问次数。  
+ If you need to release more than one access count of a semaphore, use the second form of `Unlock` and specify the number of accesses to release.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_Utilities #&21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CMultiLock 类](../../mfc/reference/cmultilock-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMultiLock Class](../../mfc/reference/cmultilock-class.md)
 

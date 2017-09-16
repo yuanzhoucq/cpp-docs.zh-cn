@@ -1,39 +1,58 @@
 ---
-title: "自动化管理器 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AUTMGR32.exe"
-  - "自动化客户端, 自动化管理器"
-  - "自动化管理器"
-  - "自动化服务器, 自动化管理器"
-  - "自动化, 自动化管理器"
-  - "远程自动化, 自动化管理器"
+title: Automation Manager (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation Manager
+- Automation servers, Automation Manager
+- Automation, Automation Manager
+- Remote Automation, Automation Manager
+- Automation clients, Automation Manager
+- AUTMGR32.exe
 ms.assetid: 6bf3429e-1946-41c5-86d0-ad7f5b8585b8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 自动化管理器 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8bda0d1a73ba434821652c372d96a322da795194
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-应当复制到 AUTMGR32.EXE 旨在提供远程的自动化对象的每个计算机上 Windows 系统目录。  对于 Windows 95 和 Windows 98，该目录通常是 C:\\WINDOWS\\SYSTEM.  对于 Windows 2000 和 Windows NT，它通常是 C:\\WINNT\\SYSTEM32.  
+---
+# <a name="automation-manager-mfc"></a>Automation Manager (MFC)
+AUTMGR32.EXE should be copied to the Windows system directory of each machine that is intending to provide Remote Automation objects. For Windows 95 and Windows 98, this directory is typically C:\WINDOWS\SYSTEM. For Windows NT and Windows 2000, it is typically C:\WINNT\SYSTEM32.  
   
- 如果要启用从服务器执行回调。客户，还应当复制此可执行文件。每台客户端系统目录。  
+ If you want to enable callbacks from the server to the client, this executable file should also be copied to the system directory of each client machine.  
   
- 尽管自动化管理器运行时，它显示在状态信息包含简单的服务器计算机的小型窗口。  如果要隐藏它，请参见位于 Microsoft 知识库中的文章 Q138067。  
+ When the Automation Manager is running, it displays a small window on the server machine that contains brief status information. If you want to hide it, refer to article Q138067 in the Microsoft Knowledge Base.  
   
-## 请参阅  
- [远程自动化连接管理器](../mfc/remote-automation-connection-manager.md)   
- [远程自动化用户组件](../mfc/remote-automation-user-components.md)   
- [远程自动化安装](../mfc/remote-automation-installation.md)
+## <a name="see-also"></a>See Also  
+ [Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)   
+ [Remote Automation User Components](../mfc/remote-automation-user-components.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

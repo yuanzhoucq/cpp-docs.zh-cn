@@ -1,5 +1,5 @@
 ---
-title: "reference_wrapper 类 | Microsoft Docs"
+title: reference_wrapper Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
@@ -22,8 +21,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- reference_wrapper class
-- reference_wrapper
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++]
+- std::reference_wrapper [C++], result_type
+- std::reference_wrapper [C++], type
+- std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4e6acb873221133edb3000eeb82bd72ac9185744
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper 类
-包装引用。  
+# <a name="referencewrapper-class"></a>reference_wrapper Class
+Wraps a reference.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -75,54 +77,54 @@ private:
 };  
 ```  
   
-## <a name="remarks"></a>备注  
-`reference_wrapper<Ty>` 是可构造副本和可指定副本的包装器，它包装对某个 `Ty` 类型对象或函数的引用，并具有指向该类型对象的指针。 `reference_wrapper` 可用于将引用存储在标准容器内，并根据对 `std::bind` 的引用传递对象。  
+## <a name="remarks"></a>Remarks  
+A `reference_wrapper<Ty>` is a copy constructible and copy assignable wrapper around a reference to an object or a function of type `Ty`, and holds a pointer that points to an object of that type. A `reference_wrapper` can be used to store references in standard containers, and to pass objects by reference to `std::bind`.  
   
-类型 `Ty` 必须是一种对象类型或函数类型，或会在编译时失败的静态断言。  
+The type `Ty` must be an object type or a function type, or a static assert fails at compile time.  
   
-帮助程序函数 [std::ref](functional-functions.md#ref) 和 [std::cref](functional-functions.md#cref) 可以用于创建 `reference_wrapper` 对象。  
+The helper functions [std::ref](functional-functions.md#ref) and [std::cref](functional-functions.md#cref) can be used to create `reference_wrapper` objects.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[reference_wrapper](#reference_wrapper)|构造一个 `reference_wrapper`。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[result_type](#result_type)|已包装引用的弱结果类型。|  
-|[类型](#type)|已包装引用的类型。|  
+|[reference_wrapper](#reference_wrapper)|Constructs a `reference_wrapper`.|  
   
-### <a name="member-functions"></a>成员函数  
-  
-|||  
-|-|-|  
-|[get](#get)|获取已包装的引用。|  
-  
-### <a name="operators"></a>运算符  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|获取指向已包装引用的指针。|  
-|[reference_wrapper::operator()](#op_call)|调用已包装的引用。|  
-## <a name="requirements"></a>要求  
- **标头：**\<functional>  
+|[result_type](#result_type)|The weak result type of the wrapped reference.|  
+|[type](#type)|The type of the wrapped reference.|  
   
- **命名空间：** std  
+### <a name="member-functions"></a>Member Functions  
+  
+|||  
+|-|-|  
+|[get](#get)|Obtains the wrapped reference.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Gets a pointer to the wrapped reference.|  
+|[reference_wrapper::operator()](#op_call)|Calls the wrapped reference.|  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
+  
+ **Namespace:** std  
   
 ##  <a name="get"></a>  reference_wrapper::get  
- 获取已包装的引用。  
+ Obtains the wrapped reference.  
   
 ```  
 Ty& get() const noexcept;
 ```  
   
-### <a name="remarks"></a>备注  
-成员函数返回已包装的引用。  
+### <a name="remarks"></a>Remarks  
+The member function returns the wrapped reference.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_get.cpp   
@@ -149,17 +151,17 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="op_ty_amp"></a>reference_wrapper::operator Ty&amp;  
- 获取已包装的引用。  
+##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
+ Gets the wrapped reference.  
   
 ```  
 operator Ty&() const noexcept;
 ```  
   
-### <a name="remarks"></a>备注  
- 该成员运算符将返回 `*ptr`。  
+### <a name="remarks"></a>Remarks  
+ The member operator returns `*ptr`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_cast.cpp   
@@ -183,25 +185,25 @@ i = 1
 (int)rwi = 1  
 ```  
   
-##  <a name="op_call"></a>reference_wrapper::operator()  
- 调用已包装的引用。  
+##  <a name="op_call"></a>  reference_wrapper::operator()  
+ Calls the wrapped reference.  
   
 ```  
 template <class... Types>  
 auto operator()(Types&&... args);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Types`  
- 参数列表类型。  
+ The argument list types.  
   
  `args`  
- 参数列表。  
+ The argument list.  
   
-### <a name="remarks"></a>备注  
- 模板成员 `operator()` 返回 `std::invoke(get(), std::forward<Types>(args)...)`。  
+### <a name="remarks"></a>Remarks  
+ The template member `operator()` returns `std::invoke(get(), std::forward<Types>(args)...)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_operator_call.cpp   
@@ -227,23 +229,23 @@ rwi(3) = -3
 ```  
   
 ##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
- 构造一个 `reference_wrapper`。  
+ Constructs a `reference_wrapper`.  
   
 ```  
 reference_wrapper(Ty& val) noexcept;
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 要包装的类型。  
+ The type to wrap.  
   
  `val`  
- 要包装的值。  
+ The value to wrap.  
   
-### <a name="remarks"></a>备注  
- 该构造函数将存储的值 `ptr` 设置为 `&val`。  
+### <a name="remarks"></a>Remarks  
+ The constructor sets the stored value `ptr` to `&val`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_reference_wrapper.cpp   
@@ -275,16 +277,16 @@ i = -1
 ```  
   
 ##  <a name="result_type"></a>  reference_wrapper::result_type  
- 已包装引用的弱结果类型。  
+ The weak result type of the wrapped reference.  
   
 ```  
 typedef R result_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- `result_type` typedef 是已包装函数的弱结果类型的同义词。 typedef 仅对函数类型有意义。  
+### <a name="remarks"></a>Remarks  
+ The `result_type` typedef is a synonym for the weak result type of a wrapped function. This typedef is only meaningful for function types.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_result_type.cpp   
@@ -312,16 +314,16 @@ val = -3
 ```  
   
 ##  <a name="type"></a>  reference_wrapper::type  
- 已包装引用的类型。  
+ The type of the wrapped reference.  
   
 ```  
 typedef Ty type;  
 ```  
   
-### <a name="remarks"></a>备注  
- Typedef 是模板参数 `Ty`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template argument `Ty`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__reference_wrapper_type.cpp   
@@ -351,7 +353,7 @@ i = 1
 rwi = 1  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [cref](../standard-library/functional-functions.md#cref)   
  [ref](../standard-library/functional-functions.md#ref)
 

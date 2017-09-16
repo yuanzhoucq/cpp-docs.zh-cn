@@ -1,5 +1,5 @@
 ---
-title: "CKeyFrame 类 |Microsoft 文档"
+title: CKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyFrame class
+- CKeyFrame [MFC], CKeyFrame
+- CKeyFrame [MFC], AddToStoryboard
+- CKeyFrame [MFC], AddToStoryboardAfterTransition
+- CKeyFrame [MFC], AddToStoryboardAtOffset
+- CKeyFrame [MFC], GetExistingKeyframe
+- CKeyFrame [MFC], GetOffset
+- CKeyFrame [MFC], GetTransition
+- CKeyFrame [MFC], m_offset
+- CKeyFrame [MFC], m_pExistingKeyFrame
+- CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
 caps.latest.revision: 18
 author: mikeblome
@@ -44,64 +53,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d8ecff2e36148fb114ee708712b6e8bd0fe558ed
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f7fbeccae04eaeb02be295c45b33db20144f115
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyframe-class"></a>CKeyFrame 类
-表示动画关键帧。  
+# <a name="ckeyframe-class"></a>CKeyFrame Class
+Represents an animation keyframe.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyFrame : public CBaseKeyFrame;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::CKeyFrame](#ckeyframe)|已重载。 构造一个取决于其他关键帧的关键帧。|  
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Overloaded. Constructs a keyframe that depends on other keyframe.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|添加到情节提要的一个关键帧。 (重写[CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard)。)|  
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|添加关键帧，以转换后的情节提要。|  
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|将添加到情节提要偏移量处的关键帧。|  
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|返回指向此关键帧依赖的关键帧的指针。|  
-|[CKeyFrame::GetOffset](#getoffset)|从其他关键帧返回某一偏移量。|  
-|[CKeyFrame::GetTransition](#gettransition)|返回到转换取决于此关键帧的指针。|  
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to a storyboard. (Overrides [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Adds a keyframe to storyboard after transition.|  
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Adds a keyframe to storyboard at offset.|  
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Returns a pointer to a keyframe this keyframe depends on.|  
+|[CKeyFrame::GetOffset](#getoffset)|Returns an offset from other keyframe.|  
+|[CKeyFrame::GetTransition](#gettransition)|Returns a pointer to a transition this keyframe depends on.|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::m_offset](#m_offset)|指定从存储在 m_pExistingKeyFrame 一个关键帧此关键帧的偏移量。|  
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|存储指向现有关键帧的指针。 此关键帧添加到现有关键帧 m_offset 的情节提要。|  
-|[CKeyFrame::m_pTransition](#m_ptransition)|存储在此关键帧处开始的过渡的指针。|  
+|[CKeyFrame::m_offset](#m_offset)|Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.|  
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.|  
+|[CKeyFrame::m_pTransition](#m_ptransition)|Stores a pointer to transtion that begins at this keyframe.|  
   
-## <a name="remarks"></a>备注  
- 此类实现动画关键帧。 关键帧表示情节提要的时间中的某一刻，并可以用于指定转换的开始和结束时间。 关键帧可能基于其他关键帧和具有偏移量 （以秒为单位），或可能根据转换并且表示某一时刻这一转换的结束的时间。  
+## <a name="remarks"></a>Remarks  
+ This class implements an animation keyframe. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. A keyframe may be based on other keyframe and have an offset (in seconds) from it, or may be based on a transition and represent a moment in time when this transition ends.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)  
   
  [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
- 添加到情节提要的一个关键帧。  
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
+ Adds a keyframe to a storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -109,21 +118,21 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 指向一个情节提要的指针。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 指定是否要添加关键帧或转换以递归方式。  
+ Specifies whether to add keyframe or transition recursively.  
   
-### <a name="return-value"></a>返回值  
- 如果为 TRUE，已成功添加关键帧。  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>备注  
- 此方法添加到情节提要的关键帧。 如果这取决于其他关键帧或转换，并且 bDeepAdd 为 TRUE，此方法将尝试以递归方式添加它们。  
+### <a name="remarks"></a>Remarks  
+ This method adds a keyframe to storyboard. If it depends on other keyframe or transition and bDeepAdd is TRUE, this method tries to add them recursively.  
   
-##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
- 添加关键帧，以转换后的情节提要。  
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
+ Adds a keyframe to storyboard after transition.  
   
 ```  
 BOOL AddToStoryboardAfterTransition(
@@ -131,21 +140,21 @@ BOOL AddToStoryboardAfterTransition(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 指向一个情节提要的指针。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 指定是否转换以递归方式添加。  
+ Specifies whether to add a transition recursively.  
   
-### <a name="return-value"></a>返回值  
- 如果为 TRUE，已成功添加关键帧。  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>备注  
- 此函数是由框架调用以添加关键帧转换后的情节提要。  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard after transition.  
   
-##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
- 将添加到情节提要偏移量处的关键帧。  
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
+ Adds a keyframe to storyboard at offset.  
   
 ```  
 virtual BOOL AddToStoryboardAtOffset(
@@ -153,21 +162,21 @@ virtual BOOL AddToStoryboardAtOffset(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 指向一个情节提要的指针。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 指定是否要添加关键帧此关键帧依赖以递归方式。  
+ Specifies whether to add a keyframe this keyframe depend on recursively.  
   
-### <a name="return-value"></a>返回值  
- 如果为 TRUE，已成功添加关键帧。  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>备注  
- 要添加到情节提要偏移量处的关键帧的框架调用此函数。  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard at offset.  
   
-##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
- 构造一个取决于转换的关键帧。  
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
+ Constructs a keyframe that depends on a transition.  
   
 ```  
 CKeyFrame(CBaseTransition* pTransition);
@@ -178,79 +187,79 @@ CKeyFrame(
     UI_ANIMATION_SECONDS offset = 0.0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- 转换指针。  
+ A pointer to a transition.  
   
  `pKeyframe`  
- 指向关键帧的指针。  
+ A pointer to keyframe.  
   
  `offset`  
- 偏移量，以秒为单位，从 pKeyframe 由指定的关键帧。  
+ Offset, in seconds, from keyframe specified by pKeyframe.  
   
-### <a name="remarks"></a>备注  
- 指定的转换结束时，构造的关键帧将表示某个时刻情节提要。  
+### <a name="remarks"></a>Remarks  
+ The constructed keyframe will represent a moment in time within a storyboard when the specified transition ends.  
   
-##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
- 返回指向此关键帧依赖的关键帧的指针。  
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
+ Returns a pointer to a keyframe this keyframe depends on.  
   
 ```  
 CBaseKeyFrame* GetExistingKeyframe();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向关键帧，则为 NULL，如果此关键帧不依赖于其他关键帧的有效指针。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to keyframe, or NULL if this keyframe does not depend on other keyframe.  
   
-### <a name="remarks"></a>备注  
- 这是对此关键帧依赖的关键帧的访问器。  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a keyframe this keyframe depends on.  
   
-##  <a name="getoffset"></a>CKeyFrame::GetOffset  
- 从其他关键帧返回某一偏移量。  
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
+ Returns an offset from other keyframe.  
   
 ```  
 UI_ANIMATION_SECONDS GetOffset();
 ```  
   
-### <a name="return-value"></a>返回值  
- 以秒为单位，从其他关键帧的偏移量。  
+### <a name="return-value"></a>Return Value  
+ An offset in seconds from other keyframe.  
   
-### <a name="remarks"></a>备注  
- 应调用此方法来确定其他关键帧之后的秒数中的偏移量。  
+### <a name="remarks"></a>Remarks  
+ This method should be called to determine an offset in seconds from other keyframe.  
   
-##  <a name="gettransition"></a>CKeyFrame::GetTransition  
- 返回到转换取决于此关键帧的指针。  
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
+ Returns a pointer to a transition this keyframe depends on.  
   
 ```  
 CBaseTransition* GetTransition();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向转换，则为 NULL，如果此关键帧不依赖于转换的有效指针。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to transition, or NULL if this keyframe does not depend on transition.  
   
-### <a name="remarks"></a>备注  
- 这是对转换取决于此关键帧的访问器。  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a transition this keyframe depends on.  
   
-##  <a name="m_offset"></a>CKeyFrame::m_offset  
- 指定从存储在 m_pExistingKeyFrame 一个关键帧此关键帧的偏移量。  
+##  <a name="m_offset"></a>  CKeyFrame::m_offset  
+ Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
- 存储指向现有关键帧的指针。 此关键帧添加到现有关键帧 m_offset 的情节提要。  
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
+ Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
- 存储在此关键帧处开始的过渡的指针。  
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
+ Stores a pointer to transtion that begins at this keyframe.  
   
 ```  
 CBaseTransition* m_pTransition;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

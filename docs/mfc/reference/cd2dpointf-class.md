@@ -1,5 +1,5 @@
 ---
-title: "CD2DPointF 类 |Microsoft 文档"
+title: CD2DPointF Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DPointF class
+- CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
 caps.latest.revision: 18
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8449fcadfb72305e9e5b6ed2c6829ba9963ba7ca
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63adc1f9ff0786ca074a3275eff0ff8b9f68c77b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dpointf-class"></a>CD2DPointF 类
-`D2D1_POINT_2F`的包装器。  
+# <a name="cd2dpointf-class"></a>CD2DPointF Class
+A wrapper for `D2D1_POINT_2F`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DPointF : public D2D1_POINT_2F;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|已重载。 构造`CD2DPointF`对象从`D2D1_POINT_2F`对象。|  
+|[CD2DPointF::CD2DPointF](#cd2dpointf)|Overloaded. Constructs a `CD2DPointF` object from `D2D1_POINT_2F` object.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DPointF::operator CPoint](#operator_cpoint)|将转换`CD2DPointF`到`CPoint`对象。|  
+|[CD2DPointF::operator CPoint](#operator_cpoint)|Converts `CD2DPointF` to `CPoint` object.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_POINT_2F`  
   
  `CD2DPointF`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
- 构造 CD2DPointF 对象从 CPoint 对象。  
+##  <a name="cd2dpointf"></a>  CD2DPointF::CD2DPointF  
+ Constructs a CD2DPointF object from CPoint object.  
   
 ```  
 CD2DPointF(const CPoint& pt);    
@@ -83,26 +83,26 @@ CD2DPointF(const D2D1_POINT_2F* pt);
 CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pt`  
- 源点  
+ source point  
   
  `fX`  
- 源 X  
+ source X  
   
  `fY`  
- 源 Y  
+ source Y  
   
-##  <a name="operator_cpoint"></a>CD2DPointF::operator CPoint  
- 将 CD2DPointF 转换成 CPoint 对象。  
+##  <a name="operator_cpoint"></a>  CD2DPointF::operator CPoint  
+ Converts CD2DPointF to CPoint object.  
   
 ```  
 operator CPoint();
 ```   
   
-### <a name="return-value"></a>返回值  
- D2D 点的当前值。  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D point.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

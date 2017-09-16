@@ -1,5 +1,5 @@
 ---
-title: "add_cv 类 | Microsoft 文档"
+title: add_cv Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_cv
 - type_traits/std::add_cv
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 8630a5c0b97b85e0dc75e8b470974bb7d223a511
-ms.openlocfilehash: efa1d246eb793cb2d0a64347aa062e7ab908e7c4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8d36187e25e3b6d64a9455b6d88333e5c1eff000
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addcv-class"></a>add_cv 类
-从类型设置常量可变类型。  
+# <a name="addcv-class"></a>add_cv Class
+Makes const volatile type from type.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,16 +54,16 @@ template <class T>
 using add_cv_t = typename add_cv<T>::type;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
 *T*  
-要修改的类型。  
+The type to modify.  
   
-## <a name="remarks"></a>备注  
-修改类型 `add_cv<T>` 的实例具有等同于由 [add_volatile](../standard-library/add-volatile-class.md) 和 [add_const](../standard-library/add-const-class.md) 修改的 *T* 的 `type` 成员 typedef，*T* 已经有 cv 限定符、是一个引用或者一个函数的情况除外。  
+## <a name="remarks"></a>Remarks  
+An instance of the modified type `add_cv<T>` has a `type` member typedef equivalent to *T* modified by both [add_volatile](../standard-library/add-volatile-class.md) and [add_const](../standard-library/add-const-class.md), unless *T* already has the cv-qualifiers, is a reference, or is a function.  
   
-`add_cv_t<T>` 帮组程序类型是访问 `add_cv<T>` 成员 typedef `type` 的快捷方式。
+The `add_cv_t<T>` helper type is a shortcut to access the `add_cv<T>` member typedef `type`.
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // add_cv.cpp
@@ -109,12 +108,12 @@ invoked volatile S.f()
 invoked const volatile S.f()  
 ```  
   
-## <a name="requirements"></a>要求  
-**标头：**\<type_traits>  
-**命名空间：** std  
+## <a name="requirements"></a>Requirements  
+**Header:** \<type_traits>  
+**Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [<type_traits>](../standard-library/type-traits.md)   
-[remove_const 类](../standard-library/remove-const-class.md)   
-[remove_volatile 类](../standard-library/remove-volatile-class.md)
+[remove_const Class](../standard-library/remove-const-class.md)   
+[remove_volatile Class](../standard-library/remove-volatile-class.md)
 

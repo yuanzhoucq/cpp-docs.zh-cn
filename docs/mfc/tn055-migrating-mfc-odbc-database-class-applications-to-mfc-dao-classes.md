@@ -1,78 +1,95 @@
 ---
-title: "TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], 迁移"
-  - "迁移数据库应用程序"
-  - "迁移 ODBC 数据库应用程序"
-  - "迁移 [C++], ODBC 数据库应用程序"
-  - "ODBC [C++], DAO"
-  - "ODBC 类 [C++], DAO 类"
-  - "将数据库应用程序迁移到 DAO"
-  - "将 ODBC 数据库应用程序迁移到 DAO"
-  - "TN055"
+title: 'TN055: Migrating MFC ODBC Database Class Applications to MFC DAO Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO [MFC], migration
+- TN055
+- migration [MFC], ODBC database applications
+- ODBC classes [MFC], DAO classes
+- migrating ODBC database applications [MFC]
+- porting database applications to DAO
+- ODBC [MFC], DAO
+- porting ODBC database applications to DAO
+- migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN055：将 MFC ODBC 数据库类应用程序迁移到 MFC DAO 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f7d44a4accb934bfd4aabbc972ce102184973ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Migrating MFC ODBC Database Class Applications to MFC DAO Classes
 > [!NOTE]
->  从 Visual C\+\+ .NET 起，Visual C\+\+ 环境和向导不再支持 DAO（不过提供了 DAO 类，仍可供您使用）。  Microsoft 建议对新项目使用[OLE DB 模版](../data/oledb/ole-db-templates.md) 或 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。  DAO 只应用于维护现有的应用程序。  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use [OLE DB Templates](../data/oledb/ole-db-templates.md) or [ODBC and MFC](../data/odbc/odbc-and-mfc.md) for new projects. You should only use DAO in maintaining existing applications.  
   
- **概述**  
+ **Overview**  
   
- 大多数情况下可能需要使用 MFC的 ODBC 数据库类移植应用程序到 MFC的DAO 数据库类。  此技术声明将详述 MFC ODBC 和 DAO 类之间的很多区别。  如有必要记住了差异，迁移应用程序从 ODBC 类到 MFC 类不会过于困难。  
+ In many situations it may be desirable to migrate applications that use MFC's ODBC database classes to MFC's DAO database classes. This technical note will detail most of the differences between the MFC ODBC and DAO classes. With the differences in mind, it should not be overly difficult to migrate applications from the ODBC classes to the MFC classes if desired.  
   
- **为什么从 ODBC 迁移到 DAO?**  
+ **Why Migrate from ODBC to DAO**  
   
- 可能你有很多原因可能想迁移应用程序从 ODBC 数据库类到DAO数据库类 ，但决定不易或明显。  需要谨记的一点是 DAO 使用的 Microsoft Jet 数据库引擎可以读取您具有 ODBC 驱动程序的任何 ODBC 数据源。  可能更为高效地使用 ODBC 数据库类或直接调用 ODBC，但 Microsoft Jet 数据库引擎可以读取 ODBC 数据。  
+ There are a number of reasons why you might want to migrate applications from the ODBC Database Classes to the DAO Database Classes, but the decision is not necessarily simple or obvious. One thing to keep in mind is that the Microsoft Jet database engine that is used by DAO can read any ODBC data source for which you have an ODBC driver. It may be more efficient to use the ODBC Database Classes or call ODBC directly yourself, but the Microsoft Jet database engine can read ODBC data.  
   
- 一些简单的情况使做出 ODBC\/DAO决策更容易。  例如，当你仅需要访问 Microsoft Jet 引擎可以直接读取的格式时\(访问格式，Excel 格式，依此类推\)可以使用 DAO 数据库类。  
+ Some simple cases that make the ODBC/DAO decision easy. For instance, when you only need access to data in a format that the Microsoft Jet engine can read directly (Access format, Excel format, and so on) the obvious choice is to use the DAO Database Classes.  
   
- 当数据存储在服务器上或位于各种不同的服务器上，将出现更复杂的情况。  在这种情况下，很难决定是使用 ODBC 数据库类 或是DAO 数据库类。  如果想要异类联接 \(异类从服务器联接数据，如 SQL Server 和 Oracle 的多格式\)，则 Microsoft Jet 数据库引擎将为您执行联接而不是强制您需要完成的工作是否使用了 ODBC 数据库类或直接调用 ODBC。  如果使用支持驱动游标的 ODBC 驱动程序，可能最佳选择是用 ODBC 数据库类。  
+ More complex cases arise when your data exists on a server or on a variety of different servers. In this case, the decision to use the ODBC Database classes or the DAO Database classes is a difficult one. If you want to do things like heterogeneous joins (join data from servers in multiple formats like SQL Server and Oracle), then the Microsoft Jet database engine will perform the join for you rather than forcing you to do the work necessary if you used the ODBC Database Classes or called ODBC directly. If you are using an ODBC driver that supports driver cursors, your best choice might be the ODBC Database classes.  
   
- 选项可以是复杂的，因此，您可能希望编写一些示例代码以测试特定需求的各种方法性能。  此技术说明假设你将ODBC 数据库类迁移到 DAO 数据库类。  
+ The choice can be complicated, so you might want to write some sample code to test the performance of various methods given your special needs. This technical note assumes that you have made the decision to migrate from the ODBC Database Classes to the DAO Database classes.  
   
- **在 ODBC 数据库类和 MFC DAO 数据库类之间存在相似性**  
+ **Similarities Between ODBC Database Classes and MFC DAO Database Classes**  
   
- MFC ODBC 类的原始设计基于正在使用中的 Microsoft Access 和 Microsoft Visual Basic 中的 DAO 对象模型。  这意味着具有 ODBC 和 MFC DAO 类的许多常用功能，本节不会列出。  通常，编程模型是相同的。  
+ The original design of the MFC ODBC classes was based on the DAO object model that has been in use in Microsoft Access and Microsoft Visual Basic. This means that there are many common features of the ODBC and DAO MFC classes, which will not all be listed in this section. In general, the programming models are the same.  
   
- 突出显示一些相似：  
+ To highlight a few similarities:  
   
--   ODBC 和 DAO 类具有管理使用基础数据库管理系统 \(DBMS\)的数据库对象。  
+-   Both the ODBC and DAO classes have database objects that manage using the underlying database management system (DBMS).  
   
--   都具有一组表示结果的记录集对象返回该 DBMS。  
+-   Both have recordset objects representing a set of results returned from that DBMS.  
   
--   DAO 数据库和记录对象具有与ODBC 类几近相同的成员。  
+-   The DAO database and recordset objects have members nearly identical to the ODBC classes.  
   
--   两组类，用于检索数据的代码是相同的 ，除了这些名称更改了的对象和成员。  需要更改，但当从ODBC类切换到DAO类时，通常过程是直接更改名称。  
+-   With both sets of classes, the code to retrieve data is identical except for some object and member name changes. Changes will be required, but usually the process is a straightforward name change when switching from the ODBC classes to DAO classes.  
   
- 例如，在两模型检索数据的过程是打开和创建数据库对象，创建并打开记录集对象以及导航 \(移动\) 数据执行某些操作。  
+ For example, in both models the procedure to retrieve data is to create and open a database object, create and open a recordset object, and navigate (move) though the data performing some operation.  
   
- **ODBC类与DAO MFC类之间的差异**  
+ **Differences Between ODBC and DAO MFC Classes**  
   
- DAO 类包含一个或多个对象和更丰富的方法集，但是，本节将只提供在类似的类和功能上的区别。  
+ The DAO classes include more objects and a richer set of methods, but this section will only detail the differences in similar classes and functionality.  
   
- 可能类之间最明显的差异是类似的类和全局函数的名称更改。  下面的列表演示数据库类的对象、方法和全局函数的名称更改：  
+ Probably the most obvious differences between the classes are the name changes for similar classes and global functions. The following list shows the name changes of the objects, methods and global functions associated with the database classes:  
   
-|类或函数。|在 MFC DAO 类的等效项|  
-|-----------|---------------------|  
+|Class or function|Equivalent in MFC DAO classes|  
+|-----------------------|-----------------------------------|  
 |`CDatabase`|`CDaoDatabase`|  
 |`CDatabase::ExecuteSQL`|`CDaoDatabase::Execute`|  
 |`CRecordset`|`CDaoRecordset`|  
@@ -85,36 +102,38 @@ caps.handback.revision: 6
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX\_Date \***|**DFX\_Date** \(基于`COleDateTime`\)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-based)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \* `RFX_Date`函数 基于 `CTime` 和 **TIMESTAMP\_STRUCT**。  
+ \*    The `RFX_Date` function is based on `CTime` and **TIMESTAMP_STRUCT**.  
   
- 主要的功能更改可能会影响应用程序，这需要不止是更改名称，如下列出。  
+ The major changes to functionality which may affect your application and require more than simple name changes are listed below.  
   
--   更改用于指定记录打开类型和选项的常数和宏。  
+-   The constants and macros used to specify things like recordset open type and recordset open options have been changed.  
   
-     ODBC 类的 MFC 需要通过宏或者枚举类型定义这些选项。  
+     With the ODBC classes MFC needed to define these options via macros or enumerated types.  
   
-     DAO 类，DAO 提供头文件 \(DBDAOINT.H\)中这些选项的定义。  从而记录集类型为 `CRecordset`的枚举成员，但是 DAO使用的是常数。  例如当在ODBC中指定 `CRecordset` 类型时应使用 **快照**，但当指定 `CDaoRecordset`类型时应使用 **DB\_OPEN\_SNAPSHOT** 。  
+     With the DAO classes, DAO provides the definition of these options in a header file (DBDAOINT.H). Thus the recordset type is an enumerated member of `CRecordset`, but with DAO it is a constant instead. For example you would use **snapshot** when specifying the type of `CRecordset` in ODBC but **DB_OPEN_SNAPSHOT** when specifying the type of `CDaoRecordset`.  
   
--   `CRecordset` 记录集的默认类型为 **快照**，而 `CDaoRecordset` 的默认记录集类型为 **dynaset** \(有关 ODBC 类快照的其他问题，请参见下面的说明\)。  
+-   The default recordset type for `CRecordset` is **snapshot** while the default recordset type for `CDaoRecordset` is **dynaset** (see the Note below for an additional issue about ODBC class snapshots).  
   
--   ODBC `CRecordset` 类具有创建仅向前记录集类型的选项。  在 `CDaoRecordset`类中，仅转接不是记录集类型，而是 特定记录集类型的属性\(或选项\)。  
+-   The ODBC `CRecordset` class has an option to create a forward-only recordset type. In the `CDaoRecordset` class, forward-only is not a recordset type, but rather a property (or option) of certain types of recordsets.  
   
--   当打开 `CRecordset` 对象时，仅追加的记录集表示记录集的数据可能读取并追加。  `CDaoRecordset` 对象，仅追加选项按原义表示记录集的数据只能附加 \(而不是读取\)。  
+-   An append-only recordset when opening a `CRecordset` object meant that the recordset's data could be read and appended. With `CDaoRecordset` object, the append-only option means literally that the recordset's data can only be appended (and not read).  
   
--   ODBC 类的成员函数为 `CDatabase` 的成员，并在数据库级别执行。  在 MFC DAO 类中，事务成员函数是更高级别类\(`CDaoWorkspace`\)成员，因此这可能影响许多`CDaoDatabase` 对象共享相同的工作区 \(事务空间\)。  
+-   The ODBC classes' transaction member functions are members of `CDatabase` and act at the database level. In the DAO classes, the transaction member functions are members of a higher level class (`CDaoWorkspace`) and thus may impact multiple `CDaoDatabase` objects sharing the same workspace (transaction space).  
   
--   异常类更改。  在 ODBC类中抛出**CDBExceptions** ，在DAO 类中抛出 **CDaoExceptions** 。  
+-   The exception class has been changed. **CDBExceptions** are thrown in the ODBC classes and **CDaoExceptions** in the DAO classes.  
   
--   当 **DFX\_Date** 使用 `COleDateTime`时，`RFX_Date` 使用 `CTime` 和 **TIMESTAMP\_STRUCT** 对象。  `COleDateTime` 与`CTime`是基本相同的，但是这是基于 OLE 8 字节的 **DATE** 而不是4 字节 `time_t`，以便它可以保存较大的范围数据。  
+-   `RFX_Date` uses `CTime` and **TIMESTAMP_STRUCT** objects while **DFX_Date** uses `COleDateTime`. The `COleDateTime` is nearly identical to `CTime`, but is based on a 8-byte OLE **DATE** rather than a 4-byte `time_t` so it can hold a much bigger range of data.  
   
     > [!NOTE]
-    >  DAO \(`CDaoRecordset`\) 快照是只读的，当 ODBC \(`CRecordset`\) 更新快照是根据 ODBC 游标库的驱动程序和使用。  如果您确实在使用游标库，`CRecordset` 可更新快照。  如果您使用以下任一从台式机驱动程序包 3.0 的 Microsoft 驱动程序，而不用 ODBC 游标库，`CRecordset` 快照是只读的。  如果您使用其他驱动程序，请检查驱动程序的文档，查看快照 \(**STATIC\_CURSORS**\) 是否为只读。  
+    >  DAO (`CDaoRecordset`) snapshots are read-only while ODBC (`CRecordset`) snapshots may be updateable depending on the driver and use of the ODBC cursor library. If you are using the cursor library, `CRecordset` snapshots are updateable. If you are using any of the Microsoft drivers from Desktop Driver Pack 3.0 without the ODBC cursor library, the `CRecordset` snapshots are read-only. If you are using another driver, check the driver's documentation to see if snapshots (**STATIC_CURSORS**) are read-only.  
   
-## 请参阅  
- [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
- [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

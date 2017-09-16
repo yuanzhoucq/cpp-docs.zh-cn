@@ -1,43 +1,62 @@
 ---
-title: "使用文档数据变量管理数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类 [C++], 友元"
-  - "集合类 [C++], 由文档对象使用"
-  - "数据 [MFC]"
-  - "数据 [MFC], 文档"
-  - "文档数据 [C++]"
-  - "文档 [C++], 数据存储"
-  - "友元类"
-  - "成员变量 [C++], 文档类"
+title: Managing Data with Document Data Variables | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], data storage
+- friend classes [MFC]
+- classes [MFC], friend
+- data [MFC]
+- data [MFC], documents
+- collection classes [MFC], used by document object
+- document data [MFC]
+- member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用文档数据变量管理数据
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f891754a2161b87c87e56cd392faf1394e62ba5d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-实现文档的数据，文档成员变量的类。  例如，一组程序声明 `CObList` 类型 \- 存储指向 `CObject` 对象的链接列表数据成员。  此列表存储构成徒手画的线描的某点。  
+---
+# <a name="managing-data-with-document-data-variables"></a>Managing Data with Document Data Variables
+Implement your document's data as member variables of your document class. For example, the Scribble program declares a data member of type `CObList` — a linked list that stores pointers to `CObject` objects. This list is used to store arrays of points that make up a freehand line drawing.  
   
- 您如何实现文档的成员数据取决于应用程序的特性。  帮助，则“集合的一组类”的 \-，MFC 提供数组列表，并映射字典 \(\)，其中包括基于 C\+\+ 模板的集合 \- 与类一起封装各种常见数据类型 \(如 `CString`、`CRect`、`CPoint`、`CSize`和 `CTime`。  有关这些类的更多信息，请参见" *MFC 参考"中的*[概述类库](../mfc/class-library-overview.md)。  
+ How you implement your document's member data depends on the nature of your application. To help you out, MFC supplies a group of "collection classes" — arrays, lists, and maps (dictionaries), including collections based on C++ templates — along with classes that encapsulate a variety of common data types such as `CString`, `CRect`, `CPoint`, `CSize`, and `CTime`. For more information about these classes, see the [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
- 当定义文档的成员数据，您通常将成员函数添加到类文档设置和获取数据项并对它们执行这些其他有用的操作。  
+ When you define your document's member data, you will usually add member functions to the document class to set and get data items and perform other useful operations on them.  
   
- 视图访问文档对象通过使用视图的指针到文档，安装在视图在创建时间。  您可以通过调用 `CView` 成员函数检索在此视图的成员函数的指针 **GetDocument**。  确保将此指针到自己文档类型。  然后可以通过指针访问政府文件的成员。  
+ Your views access the document object by using the view's pointer to the document, installed in the view at creation time. You can retrieve this pointer in a view's member functions by calling the `CView` member function **GetDocument**. Be sure to cast this pointer to your own document type. Then you can access public document members through the pointer.  
   
- 如果频繁的数据传输需要直接访问，或者您使用文档的非公共成员的意愿类，您可能希望视图类的友 \(术语在 C\+\+ 文档\) 类。  
+ If frequent data transfer requires direct access, or you wish to use the nonpublic members of the document class, you may want to make your view class a friend (in C++ terms) of the document class.  
   
-## 请参阅  
- [使用文档](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

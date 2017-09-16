@@ -1,49 +1,64 @@
 ---
-title: "&lt;vector&gt; 运算符 | Microsoft Docs"
+title: '&lt;vector&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- vector/std::operator!=
+- vector/std::operator&gt;
+- vector/std::operator&gt;=
+- vector/std::operator&lt;
+- vector/std::operator&lt;=
+- vector/std::operator==
+dev_langs:
+- C++
 ms.assetid: 1d14f312-6f59-4ec7-88ae-95f89a558823
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4f99e943ce0dfa6a8450b795723e9dc209d3770a
+helpviewer_keywords:
+- std::operator!= (vector)
+- std::operator&gt; (vector)
+- std::operator&gt;= (vector)
+- std::operator&lt; (vector)
+- std::operator&lt;= (vector)
+- std::operator== (vector)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4e320c84696c4ad6272514fd20b72693128a5716
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltvectorgt-operators"></a>&lt;vector&gt; 运算符
+# <a name="ltvectorgt-operators"></a>&lt;vector&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>operator!=  
- 测试运算符左侧的对象是否不等于右侧的对象。  
+##  <a name="op_neq"></a>  operator!=  
+ Tests if the object on the left side of the operator is not equal to the object on the right side.  
   
 ```  
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
  `right`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>返回值  
- 如果 vector 不相等，则为 **true**；如果 vector 相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vectors are not equal; **false** if the vectors are equal.  
   
-### <a name="remarks"></a>备注  
- 如果两个 vector 具有的元素数目相等且对应元素具有相同的值，则两个 vector 相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ Two vectors are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_ne.cpp  
@@ -70,24 +85,24 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="op_lt"></a>operator&lt;  
- 测试运算符左侧的对象是否小于右侧的对象。  
+##  <a name="op_lt"></a>  operator&lt;  
+ Tests if the object on the left side of the operator is less than the object on the right side.  
   
 ```  
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
  `right`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 vector 小于运算符右侧的 vector，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is less than the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_lt.cpp  
@@ -118,24 +133,24 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
- 测试运算符左侧的对象是否小于或等于右侧的对象。  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Tests if the object on the left side of the operator is less than or equal to the object on the right side.  
   
 ```  
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
  `right`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 vector 小于或等于运算符右侧的 vector，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is less than or equal to the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_le.cpp  
@@ -166,27 +181,27 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="op_eq_eq"></a>operator==  
- 测试运算符左侧的对象是否等于右侧的对象。  
+##  <a name="op_eq_eq"></a>  operator==  
+ Tests if the object on the left side of the operator is equal to the object on the right side.  
   
 ```  
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
  `right`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 vector 等于运算符右侧的 vector，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is equal to the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 如果两个 vector 具有的元素数目相等且对应元素具有相同的值，则两个 vector 相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ Two vectors are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_eq.cpp  
@@ -213,24 +228,24 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="op_gt"></a>operator&gt;  
- 测试运算符左侧的对象是否大于右侧的对象。  
+##  <a name="op_gt"></a>  operator&gt;  
+ Tests if the object on the left side of the operator is greater than the object on the right side.  
   
 ```  
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
  `right`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 vector 大于运算符右侧的 vector，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is greater than the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_gt.cpp  
@@ -262,24 +277,24 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;=  
- 测试运算符左侧的对象是否大于或等于右侧的对象。  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Tests if the object on the left side of the operator is greater than or equal to the object on the right side.  
   
 ```  
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
  `right`  
- 类型 **vector** 的对象。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的 vector 大于或等于运算符右侧的 vector，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is greater than or equal to the vector on the right side of the vector; otherwise **false**.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_ge.cpp  
@@ -311,7 +326,7 @@ int main( )
 Vector v1 is greater than or equal to vector v2.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<vector>](../standard-library/vector.md)
 
 

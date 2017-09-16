@@ -1,15 +1,14 @@
 ---
-title: "minus 结构 | Microsoft Docs"
+title: minus Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- minus
 - xfunctional/std::minus
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: e2ed81d3d990e9c9f2a9a21d04fabcbbfbb94f9a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c877325af09f3ad486a6965e2652b829213ffbbf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="minus-struct"></a>minus 结构
-对其自变量执行减法运算（二进制 `operator-`）的预定义函数对象。  
+# <a name="minus-struct"></a>minus Struct
+A predefined function object that performs the subtraction operation (binary `operator-`)  on its arguments.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,20 +64,20 @@ struct minus<void>
  };
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支持二元 `operator-` 接受指定或推断类型的操作数的类型。  
+ A type that supports a binary `operator-` that takes operands of the specified or inferred types.  
   
  `Left`  
- 运算的左操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `T` 的左值和右值引用参数。  
+ The left operand of the operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 运算的右操作数。 未专用化的模板采用 `Type` 类型的左值引用参数。 专用化的模板可完美转移推断类型 `U` 的左值和右值引用参数。  
+ The right operand of the operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>返回值  
- `Left``-``Right` 的结果。 专用化模板可完美转移结果，该结果具有由 `operator-` 返回的类型。  
+## <a name="return-value"></a>Return Value  
+ The result of `Left - Right`. The specialized template does perfect forwarding of the result, which has the type returned by `operator-`.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_minus.cpp  
@@ -132,14 +132,14 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
 *\  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

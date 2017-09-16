@@ -1,5 +1,5 @@
 ---
-title: "CImageList 类 |Microsoft 文档"
+title: CImageList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,9 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows common controls [C++], CImageList
-- image lists [C++], CImageList class
-- CImageList class
+- CImageList [MFC], CImageList
+- CImageList [MFC], Add
+- CImageList [MFC], Attach
+- CImageList [MFC], BeginDrag
+- CImageList [MFC], Copy
+- CImageList [MFC], Create
+- CImageList [MFC], DeleteImageList
+- CImageList [MFC], DeleteTempMap
+- CImageList [MFC], Detach
+- CImageList [MFC], DragEnter
+- CImageList [MFC], DragLeave
+- CImageList [MFC], DragMove
+- CImageList [MFC], DragShowNolock
+- CImageList [MFC], Draw
+- CImageList [MFC], DrawEx
+- CImageList [MFC], DrawIndirect
+- CImageList [MFC], EndDrag
+- CImageList [MFC], ExtractIcon
+- CImageList [MFC], FromHandle
+- CImageList [MFC], FromHandlePermanent
+- CImageList [MFC], GetBkColor
+- CImageList [MFC], GetDragImage
+- CImageList [MFC], GetImageCount
+- CImageList [MFC], GetImageInfo
+- CImageList [MFC], GetSafeHandle
+- CImageList [MFC], Read
+- CImageList [MFC], Remove
+- CImageList [MFC], Replace
+- CImageList [MFC], SetBkColor
+- CImageList [MFC], SetDragCursorImage
+- CImageList [MFC], SetImageCount
+- CImageList [MFC], SetOverlayImage
+- CImageList [MFC], Write
+- CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 caps.latest.revision: 19
 author: mikeblome
@@ -70,96 +101,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4f7f53d6398219c069fb1a6949ff609b4e38b4db
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4182553639c6c3da560609d6cd944eaa5f45e6c5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cimagelist-class"></a>CImageList 类
-提供 Windows 公共图像列表控件的功能。  
+# <a name="cimagelist-class"></a>CImageList Class
+Provides the functionality of the Windows common image list control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CImageList : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CImageList::CImageList](#cimagelist)|构造 `CImageList` 对象。|  
+|[CImageList::CImageList](#cimagelist)|Constructs a `CImageList` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CImageList::Add](#add)|将图像添加到图像列表。|  
-|[CImageList::Attach](#attach)|将附加到图像列表`CImageList`对象。|  
-|[CImageList::BeginDrag](#begindrag)|开始拖动图像。|  
-|[CImageList::Copy](#copy)|将复制中的某个图像`CImageList`对象。|  
-|[CImageList::Create](#create)|初始化图像列表并将其附加到`CImageList`对象。|  
-|[CImageList::DeleteImageList](#deleteimagelist)|删除图像列表。|  
-|[CImageList::DeleteTempMap](#deletetempmap)|由调用[CWinApp](../../mfc/reference/cwinapp-class.md)空闲时间处理程序以删除任何临时`CImageList`创建对象`FromHandle`。|  
-|[CImageList::Detach](#detach)|从图像列表对象中分离`CImageList`对象并返回图像列表的句柄。|  
-|[CImageList::DragEnter](#dragenter)|在拖动操作期间锁定更新并在指定位置显示拖动图像。|  
-|[CImageList::DragLeave](#dragleave)|将解锁窗口并隐藏拖动图像，以便该窗口可以更新。|  
-|[CImageList::DragMove](#dragmove)|将映像所拖动拖放操作期间移动。|  
-|[CImageList::DragShowNolock](#dragshownolock)|显示或在拖动操作过程中隐藏拖动图像，而无需锁定窗口。|  
-|[Cimagelist:: Draw](#draw)|绘制拖放操作期间所拖动的图像。|  
-|[CImageList::DrawEx](#drawex)|在指定的设备上下文中绘制图像列表项。 该函数使用指定的绘制样式，并混合用指定颜色的图像。|  
-|[CImageList::DrawIndirect](#drawindirect)|从图像列表绘制图像。|  
-|[CImageList::EndDrag](#enddrag)|结束拖动操作。|  
-|[CImageList::ExtractIcon](#extracticon)|创建基于的图像和掩码图像列表中的图标。|  
-|[CImageList::FromHandle](#fromhandle)|返回一个指向`CImageList`对象时提供了句柄图像列表。 如果 `CImageList` 对象未附加到该句柄，则会创建并附加一个临时 `CImageList` 对象。|  
-|[CImageList::FromHandlePermanent](#fromhandlepermanent)|返回一个指向`CImageList`对象时提供了句柄图像列表。 如果`CImageList`对象未附加到该句柄， **NULL**返回。|  
-|[CImageList::GetBkColor](#getbkcolor)|检索图像列表的当前背景色。|  
-|[CImageList::GetDragImage](#getdragimage)|获取用于拖动的临时图像列表。|  
-|[CImageList::GetImageCount](#getimagecount)|检索图像列表中的图像数量。|  
-|[CImageList::GetImageInfo](#getimageinfo)|检索有关映像的信息。|  
-|[CImageList::GetSafeHandle](#getsafehandle)|检索**m_hImageList**。|  
-|[CImageList::Read](#read)|从存档读取图像列表。|  
-|[CImageList::Remove](#remove)|从图像列表中删除映像。|  
-|[CImageList::Replace](#replace)|图像列表中的图像替换为新图像。|  
-|[CImageList::SetBkColor](#setbkcolor)|设置图像列表的背景色。|  
-|[CImageList::SetDragCursorImage](#setdragcursorimage)|创建新的拖动图像。|  
-|[CImageList::SetImageCount](#setimagecount)|重置映像列表中的图像的计数。|  
-|[Cimagelist:: Setoverlayimage](#setoverlayimage)|将图像的从零开始的索引添加到映像以用作覆盖掩码的列表。|  
-|[CImageList::Write](#write)|图像列表写入存档。|  
+|[CImageList::Add](#add)|Adds an image or images to an image list.|  
+|[CImageList::Attach](#attach)|Attaches an image list to a `CImageList` object.|  
+|[CImageList::BeginDrag](#begindrag)|Begins dragging an image.|  
+|[CImageList::Copy](#copy)|Copies an image within a `CImageList` object.|  
+|[CImageList::Create](#create)|Initializes an image list and attaches it to a `CImageList` object.|  
+|[CImageList::DeleteImageList](#deleteimagelist)|Deletes an image list.|  
+|[CImageList::DeleteTempMap](#deletetempmap)|Called by the [CWinApp](../../mfc/reference/cwinapp-class.md) idle-time handler to delete any temporary `CImageList` object created by `FromHandle`.|  
+|[CImageList::Detach](#detach)|Detaches an image list object from a `CImageList` object and returns a handle to an image list.|  
+|[CImageList::DragEnter](#dragenter)|Locks updates during a drag operation and displays the drag image at a specified position.|  
+|[CImageList::DragLeave](#dragleave)|Unlocks the window and hides the drag image so that the window can be updated.|  
+|[CImageList::DragMove](#dragmove)|Moves the image that is being dragged during a drag-and-drop operation.|  
+|[CImageList::DragShowNolock](#dragshownolock)|Shows or hides the drag image during a drag operation, without locking the window.|  
+|[CImageList::Draw](#draw)|Draws the image that is being dragged during a drag-and-drop operation.|  
+|[CImageList::DrawEx](#drawex)|Draws an image list item in the specified device context. The function uses the specified drawing style and blends the image with the specified color.|  
+|[CImageList::DrawIndirect](#drawindirect)|Draws an image from an image list.|  
+|[CImageList::EndDrag](#enddrag)|Ends a drag operation.|  
+|[CImageList::ExtractIcon](#extracticon)|Creates an icon based on an image and mask in an image list.|  
+|[CImageList::FromHandle](#fromhandle)|Returns a pointer to a `CImageList` object when given a handle to an image list. If a `CImageList` object is not attached to the handle, a temporary `CImageList` object is created and attached.|  
+|[CImageList::FromHandlePermanent](#fromhandlepermanent)|Returns a pointer to a `CImageList` object when given a handle to an image list. If a `CImageList` object is not attached to the handle, **NULL** is returned.|  
+|[CImageList::GetBkColor](#getbkcolor)|Retrieves the current background color for an image list.|  
+|[CImageList::GetDragImage](#getdragimage)|Gets the temporary image list that is used for dragging.|  
+|[CImageList::GetImageCount](#getimagecount)|Retrieves the number of images in an image list.|  
+|[CImageList::GetImageInfo](#getimageinfo)|Retrieves information about an image.|  
+|[CImageList::GetSafeHandle](#getsafehandle)|Retrieves **m_hImageList**.|  
+|[CImageList::Read](#read)|Reads an image list from an archive.|  
+|[CImageList::Remove](#remove)|Removes an image from an image list.|  
+|[CImageList::Replace](#replace)|Replaces an image in an image list with a new image.|  
+|[CImageList::SetBkColor](#setbkcolor)|Sets the background color for an image list.|  
+|[CImageList::SetDragCursorImage](#setdragcursorimage)|Creates a new drag image.|  
+|[CImageList::SetImageCount](#setimagecount)|Resets the count of images in an image list.|  
+|[CImageList::SetOverlayImage](#setoverlayimage)|Adds the zero-based index of an image to the list of images to be used as overlay masks.|  
+|[CImageList::Write](#write)|Writes an image list to an archive.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CImageList::operator HIMAGELIST](#operator_himagelist)|返回`HIMAGELIST`附加到`CImageList`。|  
+|[CImageList::operator HIMAGELIST](#operator_himagelist)|Returns the `HIMAGELIST` attached to the `CImageList`.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CImageList::m_hImageList](#m_himagelist)|包含附加到此对象的图像列表的句柄。|  
+|[CImageList::m_hImageList](#m_himagelist)|A handle containing the image list attached to this object.|  
   
-## <a name="remarks"></a>备注  
- "图像列表"是相同大小的图像，其中每个可以按其从零开始的索引引用集合。 图像列表用于有效地管理大的图标或位图集。 图像列表中的所有映像都包含在单个屏幕设备格式宽位图中。 图像列表可能包含一个单色位图，该位图包含用于透明地绘制图像的蒙板（图标样式）。 Microsoft Win32 应用程序编程接口 (API) 提供可让您绘制图像、 创建和销毁图像列表、 添加和移除图像、 替换图像、 合并图像以及拖动图像的图像列表函数。  
+## <a name="remarks"></a>Remarks  
+ An "image list" is a collection of same-sized images, each of which can be referred to by its zero-based index. Image lists are used to efficiently manage large sets of icons or bitmaps. All images in an image list are contained in a single, wide bitmap in screen device format. An image list may also include a monochrome bitmap that contains masks used to draw images transparently (icon style). The Microsoft Win32 application programming interface (API) provides image list functions that enable you to draw images, create and destroy image lists, add and remove images, replace images, merge images, and drag images.  
   
- 此控件 (因此`CImageList`类) 仅适用于在 Windows 95/98 和 Windows NT 版本 3.51 下运行的程序和更高版本。  
+ This control (and therefore the `CImageList` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 有关详细信息使用`CImageList`，请参阅[控件](../../mfc/controls-mfc.md)和[使用 CImageList](../../mfc/using-cimagelist.md)。  
+ For more information on using `CImageList`, see [Controls](../../mfc/controls-mfc.md) and [Using CImageList](../../mfc/using-cimagelist.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CImageList`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="add"></a>CImageList::Add  
- 调用此函数可将一个或多个映像或图标添加到图像列表。  
+##  <a name="add"></a>  CImageList::Add  
+ Call this function to add one or more images or an icon to an image list.  
   
 ```  
 int Add(
@@ -174,47 +205,47 @@ int Add(
 int Add(HICON hIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pbmImage`  
- 指向包含或多个图像的位图。 从位图的宽度，则推断的映像数量。  
+ Pointer to the bitmap containing the image or images. The number of images is inferred from the width of the bitmap.  
   
  `pbmMask`  
- 指向包含掩码的位图。 如果未应用蒙板的图像列表一起使用，则忽略此参数。  
+ Pointer to the bitmap containing the mask. If no mask is used with the image list, this parameter is ignored.  
   
  `crMask`  
- 用于生成掩码的颜色。 每个像素中给定的位图此颜色更改为黑色和掩码中的对应位设置为一个。  
+ Color used to generate the mask. Each pixel of this color in the given bitmap is changed to black and the corresponding bit in the mask is set to one.  
   
  `hIcon`  
- 包含的位图和掩码为新映像的图标的句柄。  
+ Handle of the icon that contains the bitmap and mask for the new image.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则的第一个新图像的从零开始的索引否则为-1。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the first new image if successful; otherwise - 1.  
   
-### <a name="remarks"></a>备注  
- 你负责使用它完成后释放图标句柄。  
+### <a name="remarks"></a>Remarks  
+ You are responsible for releasing the icon handle when you are done with it.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]  
   
-##  <a name="attach"></a>CImageList::Attach  
- 调用此函数可将附加到图像列表`CImageList`对象。  
+##  <a name="attach"></a>  CImageList::Attach  
+ Call this function to attach an image list to a `CImageList` object.  
   
 ```  
 BOOL Attach(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hImageList`  
- 图像列表对象的句柄。  
+ A handle to an image list object.  
   
-### <a name="return-value"></a>返回值  
- 如果附件成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the attachment was successful; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]  
   
-##  <a name="begindrag"></a>CImageList::BeginDrag  
- 调用此函数可开始拖动图像。  
+##  <a name="begindrag"></a>  CImageList::BeginDrag  
+ Call this function to begin dragging an image.  
   
 ```  
 BOOL BeginDrag(
@@ -222,31 +253,31 @@ BOOL BeginDrag(
     CPoint ptHotSpot);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 要拖动图像的从零开始索引。  
+ Zero-based index of the image to drag.  
   
  `ptHotSpot`  
- 起始拖动位置 （通常情况下，光标位置） 的坐标。 坐标为相对于图像的左上角。  
+ Coordinates of the starting drag position (typically, the cursor position). The coordinates are relative to the upper left corner of the image.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数将创建用于拖动一个临时的图像列表。 映像当前光标中结合指定的映像和其掩码。 在后续响应中`WM_MOUSEMOVE`消息，你可以通过使用移动拖动图像`DragMove`成员函数。 若要结束拖动操作，你可以使用`EndDrag`成员函数。  
+### <a name="remarks"></a>Remarks  
+ This function creates a temporary image list that is used for dragging. The image combines the specified image and its mask with the current cursor. In response to subsequent `WM_MOUSEMOVE` messages, you can move the drag image by using the `DragMove` member function. To end the drag operation, you can use the `EndDrag` member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 3](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#3](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]  
   
-##  <a name="cimagelist"></a>CImageList::CImageList  
- 构造 `CImageList` 对象。  
+##  <a name="cimagelist"></a>  CImageList::CImageList  
+ Constructs a `CImageList` object.  
   
 ```  
 CImageList();
 ```  
   
-##  <a name="copy"></a>CImageList::Copy  
- 此成员函数实现的 Win32 函数的行为[ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+##  <a name="copy"></a>  CImageList::Copy  
+ This member function implements the behavior of the Win32 function [ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520), as described in the Windows SDK.  
   
 ```  
 BOOL Copy(
@@ -262,32 +293,32 @@ BOOL Copy(
     UINT uFlags = ILCF_MOVE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *iDst*  
- 作为复制操作的目标使用的图像的从零开始的索引。  
+ The zero-based index of the image to be used as the destination of the copy operation.  
   
  `iSrc`  
- 要用作复制操作的源的图像的从零开始的索引。  
+ The zero-based index of the image to be used as the source of the copy operation.  
   
  `uFlags`  
- 用于指定进行的复制操作的类型的位标志值。 此参数可以是以下值之一︰  
+ The bit flag value that specifies the type of copy operation to be made. This parameter can be one of the following values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`ILCF_MOVE`|源映像复制到目标图像的索引。 此操作导致给定图像的多个实例。 默认为 `ILCF_MOVE`。|  
-|`ILCF_SWAP`|源和目标图像交换图像列表内的位置。|  
+|`ILCF_MOVE`|The source image is copied to the destination image's index. This operation results in multiple instances of a given image. `ILCF_MOVE` is the default.|  
+|`ILCF_SWAP`|The source and destination images exchange positions within the image list.|  
   
  `pSrc`  
- 指向的指针`CImageList`目标的复制操作的对象。  
+ A pointer to a `CImageList` object that is the target of the copy operation.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为零，否则为零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]  
   
-##  <a name="create"></a>CImageList::Create  
- 初始化图像列表并将其附加到[CImageList](../../mfc/reference/cimagelist-class.md)对象。  
+##  <a name="create"></a>  CImageList::Create  
+ Initializes an image list and attaches it to a [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
 ```  
 BOOL Create(
@@ -323,113 +354,113 @@ BOOL Create(
 BOOL Create(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cx`  
- 每个图像，以像素为单位的尺寸。  
+ Dimensions of each image, in pixels.  
   
  `cy`  
- 每个图像，以像素为单位的尺寸。  
+ Dimensions of each image, in pixels.  
   
  `nFlags`  
- 指定要创建的映像列表的类型。 此参数可以是以下值的组合，但它可以包括只有其中一个`ILC_COLOR`值。  
+ Specifies the type of image list to create. This parameter can be a combination of the following values, but it can include only one of the `ILC_COLOR` values.  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`ILC_COLOR`|使用默认行为，如果没有其他`ILC_COLOR`* 指定标志。 通常，默认值是`ILC_COLOR4`; 但对于旧版本显示驱动程序，默认值是`ILC_COLORDDB`。|  
-|`ILC_COLOR4`|使用 4 位 （16 颜色） 独立于设备的位图 (DIB) 部分作为位图的图像列表。|  
-|`ILC_COLOR8`|使用 8 位 DIB 部分。 颜色表使用的颜色是作为半色调调色板的相同颜色。|  
-|`ILC_COLOR16`|使用 16 位 (32/64 k 颜色) DIB 部分。|  
-|`ILC_COLOR24`|使用 24 位 DIB 部分。|  
-|`ILC_COLOR32`|使用 32 位 DIB 部分。|  
-|`ILC_COLORDDB`|使用依赖于设备的位图。|  
-|`ILC_MASK`|使用掩码。 图像列表包含两个位图，其中之一是用作掩码的单色位图。 如果不包括此值，则图像列表包含只有一个位图。 请参阅[来自图像列表绘制图像](../../mfc/drawing-images-from-an-image-list.md)在掩蔽的映像上的其他信息。|  
+|`ILC_COLOR`|Use the default behavior if none of the other `ILC_COLOR`* flags is specified. Typically, the default is `ILC_COLOR4`; but for older display drivers, the default is `ILC_COLORDDB`.|  
+|`ILC_COLOR4`|Use a 4-bit (16 color) device-independent bitmap (DIB) section as the bitmap for the image list.|  
+|`ILC_COLOR8`|Use an 8-bit DIB section. The colors used for the color table are the same colors as the halftone palette.|  
+|`ILC_COLOR16`|Use a 16-bit (32/64k color) DIB section.|  
+|`ILC_COLOR24`|Use a 24-bit DIB section.|  
+|`ILC_COLOR32`|Use a 32-bit DIB section.|  
+|`ILC_COLORDDB`|Use a device-dependent bitmap.|  
+|`ILC_MASK`|Uses a mask. The image list contains two bitmaps, one of which is a monochrome bitmap used as a mask. If this value is not included, the image list contains only one bitmap. See [Drawing Images from an Image List](../../mfc/drawing-images-from-an-image-list.md) for additional information on masked images.|  
   
  `nInitial`  
- 图像列表最初包含的图像数量。  
+ Number of images that the image list initially contains.  
   
  `nGrow`  
- 图像列表可以依据增长时系统需要调整大小的列表，以便腾出空间供新的映像的映像数量。 此参数表示调整大小的图像列表可以包含新映像的数量。  
+ Number of images by which the image list can grow when the system needs to resize the list to make room for new images. This parameter represents the number of new images the resized image list can contain.  
   
  `nBitmapID`  
- 资源的位图的 Id 与图像列表相关联。  
+ Resource IDs of the bitmap to be associated with the image list.  
   
  `crMask`  
- 用于生成掩码的颜色。 指定位图中此颜色的每个像素更改为黑色，并且将对应的位掩码中设置为一个。  
+ Color used to generate a mask. Each pixel of this color in the specified bitmap is changed to black, and the corresponding bit in the mask is set to one.  
   
  `lpszBitmapID`  
- 包含的图像的资源 Id 的字符串。  
+ A string containing the resource IDs of the images.  
   
  `imagelist1`  
- 对 `CImageList` 对象的引用。  
+ A reference to a `CImageList` object.  
   
  `nImage1`  
- 第一个现有图像的索引。  
+ Index of the first existing image.  
   
  `imagelist2`  
- 对 `CImageList` 对象的引用。  
+ A reference to a `CImageList` object.  
   
  `nImage2`  
- 第二个现有图像的索引。  
+ Index of the second existing image.  
   
  `dx`  
- 中的第一个图像，以像素为单位的关系的第二个图像的 x 轴的偏移量。  
+ Offset of the x-axis of the second image in relationship to the first image, in pixels.  
   
  `dy`  
- 中的第一个图像，以像素为单位的关系的第二个图像的 y 轴的偏移量。  
+ Offset of the y-axis of the second image in relationship to the first image, in pixels.  
   
  `pImageList`  
- 指向的指针`CImageList`对象。  
+ A pointer to a `CImageList` object.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 构造`CImageList`中两个步骤。 首先，调用的构造函数，然后调用`Create`，它创建的图像列表，并将其附加到`CImageList`对象。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CImageList` in two steps. First, call the constructor and then call `Create`, which creates the image list and attaches it to the `CImageList` object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 7](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#7](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]  
   
-##  <a name="deleteimagelist"></a>CImageList::DeleteImageList  
- 调用此函数可删除图像列表。  
+##  <a name="deleteimagelist"></a>  CImageList::DeleteImageList  
+ Call this function to delete an image list.  
   
 ```  
 BOOL DeleteImageList();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 8](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#8](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]  
   
-##  <a name="deletetempmap"></a>CImageList::DeleteTempMap  
- 自动调用`CWinApp`空闲时间处理程序，`DeleteTempMap`删除任何临时`CImageList`创建的对象[FromHandle](#fromhandle)，但不会销毁所有句柄 ( `hImageList`) 暂时与**ImageList**对象。  
+##  <a name="deletetempmap"></a>  CImageList::DeleteTempMap  
+ Called automatically by the `CWinApp` idle-time handler, `DeleteTempMap` deletes any temporary `CImageList` objects created by [FromHandle](#fromhandle), but does not destroy any handles ( `hImageList`) temporarily associated with the **ImageList** objects.  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]  
   
-##  <a name="detach"></a>CImageList::Detach  
- 调用此函数可分离从图像列表对象`CImageList`对象。  
+##  <a name="detach"></a>  CImageList::Detach  
+ Call this function to detach an image list object from a `CImageList` object.  
   
 ```  
 HIMAGELIST Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 图像列表对象的句柄。  
+### <a name="return-value"></a>Return Value  
+ A handle to an image list object.  
   
-### <a name="remarks"></a>备注  
- 此函数返回的句柄的图像列表对象。  
+### <a name="remarks"></a>Remarks  
+ This function returns a handle to the image list object.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CImageList::Attach](#attach)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::Attach](#attach).  
   
-##  <a name="dragenter"></a>CImageList::DragEnter  
- 在拖动操作，锁定更新指定的窗口`pWndLock`并显示在指定的位置拖动图像`point`。  
+##  <a name="dragenter"></a>  CImageList::DragEnter  
+ During a drag operation, locks updates to the window specified by `pWndLock` and displays the drag image at the position specified by `point`.  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -437,82 +468,82 @@ static BOOL PASCAL DragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWndLock`  
- 指向拥有拖动图像窗口的指针。  
+ Pointer to the window that owns the drag image.  
   
  `point`  
- 显示拖动图像的位置。 坐标是相对于窗口 （而不是工作区） 的左上角。  
+ Position at which to display the drag image. Coordinates are relative to the upper left corner of the window (not the client area).  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 坐标是相对于窗口的左上角，因此指定坐标时必须补偿窗口元素，如边框、 标题栏和菜单栏的宽度。  
+### <a name="remarks"></a>Remarks  
+ The coordinates are relative to the window's upper left corner, so you must compensate for the widths of window elements, such as the border, title bar, and menu bar, when specifying the coordinates.  
   
- 如果`pWndLock`是**NULL**、 此函数在桌面窗口中，与关联的显示上下文中绘制的图像和坐标是相对于屏幕左上角。  
+ If `pWndLock` is **NULL**, this function draws the image in the display context associated with the desktop window, and coordinates are relative to the upper left corner of the screen.  
   
- 此函数在拖动操作期间将锁定给定窗口的所有其他更新。 如果你需要执行任何绘图在拖动操作，如突出显示拖放操作的目标可以通过使用临时隐藏拖动的图像[CImageList::DragLeave](#dragleave)函数。  
+ This function locks all other updates to the given window during the drag operation. If you need to do any drawing during a drag operation, such as highlighting the target of a drag-and-drop operation, you can temporarily hide the dragged image by using the [CImageList::DragLeave](#dragleave) function.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CImageList::BeginDrag](#begindrag)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::BeginDrag](#begindrag).  
   
-##  <a name="dragleave"></a>CImageList::DragLeave  
- 解锁指定的窗口`pWndLock`并隐藏拖动图像，允许窗口进行更新。  
+##  <a name="dragleave"></a>  CImageList::DragLeave  
+ Unlocks the window specified by `pWndLock` and hides the drag image, allowing the window to be updated.  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pWndLock`  
- 指向拥有拖动图像窗口的指针。  
+ Pointer to the window that owns the drag image.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CImageList::EndDrag](#enddrag)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::EndDrag](#enddrag).  
   
-##  <a name="dragmove"></a>CImageList::DragMove  
- 调用此函数可将映像所拖动拖放操作期间移动。  
+##  <a name="dragmove"></a>  CImageList::DragMove  
+ Call this function to move the image that is being dragged during a drag-and-drop operation.  
   
 ```  
 static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pt`  
- 新的拖动位置。  
+ New drag position.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数通常在响应中调用`WM_MOUSEMOVE`消息。 若要开始拖动操作，使用`BeginDrag`成员函数。  
+### <a name="remarks"></a>Remarks  
+ This function is typically called in response to a `WM_MOUSEMOVE` message. To begin a drag operation, use the `BeginDrag` member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]  
   
-##  <a name="dragshownolock"></a>CImageList::DragShowNolock  
- 显示或在拖动操作过程中隐藏拖动图像，而无需锁定窗口。  
+##  <a name="dragshownolock"></a>  CImageList::DragShowNolock  
+ Shows or hides the drag image during a drag operation, without locking the window.  
   
 ```  
 static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- 指定是否要显示拖动图像。  
+ Specifies whether the drag image is to be shown.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- [CImageList::DragEnter](#dragenter)函数在拖动操作期间会锁定到窗口的所有更新。 此函数，但是，不会锁定窗口。  
+### <a name="remarks"></a>Remarks  
+ The [CImageList::DragEnter](#dragenter) function locks all updates to the window during a drag operation. This function, however, does not lock the window.  
   
-##  <a name="draw"></a>Cimagelist:: Draw  
- 调用此函数可绘制在拖放操作期间所拖动图像。  
+##  <a name="draw"></a>  CImageList::Draw  
+ Call this function to draw the image that is being dragged during a drag-and-drop operation.  
   
 ```  
 BOOL Draw(
@@ -522,35 +553,35 @@ BOOL Draw(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向目标设备上下文的指针。  
+ Pointer to the destination device context.  
   
  `nImage`  
- 要绘制的图像的从零开始索引。  
+ Zero-based index of the image to draw.  
   
  `pt`  
- 在其中进行绘制的指定的设备上下文中的位置。  
+ Location at which to draw within the specified device context.  
   
  `nStyle`  
- 指定的绘制样式的标志。 它可以是一个或多个这些值︰  
+ Flag specifying the drawing style. It can be one or more of these values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`ILD_BLEND25`**ILD_FOCUS**|绘制图像，混合系统突出显示颜色的 25%。 如果图像列表不包含掩码，则此值无效。|  
-|`ILD_BLEND50`**ILD_SELECTED**， **ILD_BLEND**|绘制图像，混合 50%，而系统突出显示颜色。 如果图像列表不包含掩码，则此值无效。|  
-|**ILD_MASK**|绘制掩码。|  
-|`ILD_NORMAL`|绘制图像的图像列表中使用的背景色。 如果背景色为`CLR_NONE`值，该图像绘制以透明方式使用的掩码。|  
-|`ILD_TRANSPARENT`|绘制图像以透明方式使用的掩码，而不考虑的背景色。|  
+|`ILD_BLEND25`, **ILD_FOCUS**|Draws the image, blending 25 percent with the system highlight color. This value has no effect if the image list does not contain a mask.|  
+|`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Draws the image, blending 50 percent with the system highlight color. This value has no effect if the image list does not contain a mask.|  
+|**ILD_MASK**|Draws the mask.|  
+|`ILD_NORMAL`|Draws the image using the background color for the image list. If the background color is the `CLR_NONE` value, the image is drawn transparently using the mask.|  
+|`ILD_TRANSPARENT`|Draws the image transparently using the mask, regardless of the background color.|  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
-  请参阅示例[cimagelist:: Setoverlayimage](#setoverlayimage)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::SetOverlayImage](#setoverlayimage).  
   
-##  <a name="drawex"></a>CImageList::DrawEx  
- 在指定的设备上下文中绘制图像列表项。  
+##  <a name="drawex"></a>  CImageList::DrawEx  
+ Draws an image list item in the specified device context.  
   
 ```  
 BOOL DrawEx(
@@ -563,39 +594,39 @@ BOOL DrawEx(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向目标设备上下文的指针。  
+ Pointer to the destination device context.  
   
  `nImage`  
- 要绘制的图像的从零开始索引。  
+ Zero-based index of the image to draw.  
   
  `pt`  
- 在其中进行绘制的指定的设备上下文中的位置。  
+ Location at which to draw within the specified device context.  
   
  `sz`  
- 要相对于图像的左上角绘制图像的部分的大小。 请参阅`dx`和*dy*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Size of the portion of the image to draw relative to the upper-left corner of the image. See `dx` and *dy* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) in the Windows SDK.  
   
  *clrBk*  
- 图像的背景色。 请参阅*rgbBk*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Background color of the image. See *rgbBk* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) in the Windows SDK.  
   
  *clrFg*  
- 图像的前景色。 请参阅*rgbFg*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Foreground color of the image. See *rgbFg* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) in the Windows SDK.  
   
  `nStyle`  
- 指定的绘制样式的标志。 请参阅*fStyle*中[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Flag specifying the drawing style. See *fStyle* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) in the Windows SDK.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 该函数使用指定的绘制样式，并混合用指定颜色的图像。  
+### <a name="remarks"></a>Remarks  
+ The function uses the specified drawing style and blends the image with the specified color.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]  
   
-##  <a name="drawindirect"></a>CImageList::DrawIndirect  
- 调用此成员函数可从图像列表绘制图像。  
+##  <a name="drawindirect"></a>  CImageList::DrawIndirect  
+ Call this member function to draw an image from an image list.  
   
 ```  
 BOOL DrawIndirect(IMAGELISTDRAWPARAMS* pimldp);
@@ -616,165 +647,165 @@ BOOL DrawIndirect(
     COLORREF crEffect = CLR_DEFAULT);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pimldp*  
- 指向的指针[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构，它包含与绘制操作有关的信息。  
+ A pointer to an [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure that contains information about the draw operation.  
   
  `pDC`  
- 指向目标设备上下文的指针。 你必须删除此[CDC](../../mfc/reference/cdc-class.md)对象都完成。  
+ A pointer to the destination device context. You must delete this [CDC](../../mfc/reference/cdc-class.md) object when you are done with it.  
   
  `nImage`  
- 要绘制的图像的从零开始索引。  
+ The zero-based index of the image to be drawn.  
   
  `pt`  
- A[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标绘制图像的位置。  
+ A [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure containing the x- and y- coordinates where the image will be drawn.  
   
  `sz`  
- A[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构，表示要绘制的图像的大小。  
+ A [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure indicating the size of the image to be drawn.  
   
  *ptOrigin*  
- A[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它包含 x 坐标和 y 坐标指定图像本身绘制操作的左上的角。 不绘制左侧的 x 坐标和 y 坐标上面的图像的像素。  
+ A [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure containing the x- and y-coordinates specifying the upper left corner of the drawing operation with respect to the image itself. Pixels of the image that are to the left of the x-coordinate and above the y-coordinate are not drawn.  
   
  `fStyle`  
- 指定的绘制样式和 （可选） 将覆盖图像的标志。 将覆盖图像上，请参阅备注部分的信息。 MFC 默认实现中， `ILD_NORMAL`，使用的背景色的图像列表绘制图像。 如果背景色为`CLR_NONE`值，该图像绘制以透明方式使用掩码。  
+ Flag specifying the drawing style and, optionally, the overlay image. See the Remarks section for information on the overlay image. The MFC default implementation, `ILD_NORMAL`, draws the image using the background color for the image list. If the background color is the `CLR_NONE` value, the image is drawn transparently using a mask.  
   
- 在描述了其他可能的样式**fStyle**的成员[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。  
+ Other possible styles are described under the **fStyle** member of the [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure.  
   
  *dwRop*  
- 指定的光栅操作代码的值。 这些代码定义源矩形的颜色数据将如何组合使用要实现的最终颜色的目标矩形的颜色数据。 MFC 的默认实现中， **SRCCOPY**，将源矩形复制直接到目标矩形。 如果忽略此参数`fStyle`参数不包括**ILD_ROP**标志。  
+ Value specifying a raster-operation code. These codes define how the color data for the source rectangle will be combined with the color data for the destination rectangle to achieve the final color. MFC's default implementation, **SRCCOPY**, copies the source rectangle directly to the destination rectangle. This parameter is ignored if the `fStyle` parameter does not include the **ILD_ROP** flag.  
   
- 下面列出了其他可能的值**dwRop**的成员[IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。  
+ Other possible values are described under the **dwRop** member of the [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure.  
   
  *rgbBack*  
- 图像背景色，默认情况下的`CLR_DEFAULT`。 此参数可以为应用程序定义的 RGB 值或以下值之一︰  
+ The image background color, by default `CLR_DEFAULT`. This parameter can be an application-defined RGB value or one of the following values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`CLR_DEFAULT`|默认背景色。 使用图像列表的背景色绘制图像。|  
-|`CLR_NONE`|没有背景色。 透明地绘制图像。|  
+|`CLR_DEFAULT`|Default background color. The image is drawn using the image list background color.|  
+|`CLR_NONE`|No background color. The image is drawn transparently.|  
   
  *rgbFore*  
- 默认情况下映像前景色， `CLR_DEFAULT`。 此参数可以为应用程序定义的 RGB 值或以下值之一︰  
+ Image foreground color, by default `CLR_DEFAULT`. This parameter can be an application-defined RGB value or one of the following values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|`CLR_DEFAULT`|默认前景色。 使用作为的前景色的系统突出显示颜色绘制图像。|  
-|`CLR_NONE`|无 blend 颜色。 图像是与目标设备上下文的颜色混合。|  
+|`CLR_DEFAULT`|Default foreground color. The image is drawn using the system highlight color as the foreground color.|  
+|`CLR_NONE`|No blend color. The image is blended with the color of the destination device context.|  
   
- 仅当使用此参数`fStyle`包括`ILD_BLEND25`或`ILD_BLEND50`标志。  
+ This parameter is used only if `fStyle` includes the `ILD_BLEND25` or `ILD_BLEND50` flag.  
   
  *fState*  
- 指定绘制状态的标志。 此成员可以包含一个或多个映像列表状态标志。  
+ Flag specifying the drawing state. This member can contain one or more image list state flags.  
   
- *帧*  
- 影响 saturate 和 alpha 混合的影响的行为。  
+ *Frame*  
+ Affects the behavior of saturate and alpha-blending effects.  
   
- 如果用于**ILS_SATURATE**，此成员保留添加到每个颜色部分中的图标中的每个像素 RGB 三元数组的值。  
+ When used with **ILS_SATURATE**, this member holds the value that is added to each color component of the RGB triplet for each pixel in the icon.  
   
- 如果用于**ILS_APLHA**，此成员保留 alpha 通道的值。 此值可以为从 0 到 255，0 表示完全透明，255 完全不透明。  
+ When used with **ILS_APLHA**, this member holds the value for the alpha channel. This value can be from 0 to 255, with 0 being completely transparent, and 255 being completely opaque.  
   
  *crEffect*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)用于发光和卷影效果的值。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value used for glow and shadow effects.  
   
-### <a name="return-value"></a>返回值  
- **TRUE**如果图像是成功绘制; 否则为**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the image is successfully drawn; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 如果你想要自己填充 Win32 结构，使用的第一个版本。 如果你想要利用的一个或多个 MFC 的默认自变量，或避免管理这种结构，请使用第二个版本。  
+### <a name="remarks"></a>Remarks  
+ Use the first version if you want to fill the Win32 structure yourself. Use the second version if you want to take advantage of one or more of MFC's default arguments, or avoid managing the structure.  
   
- 覆盖图像是绘制在通过此成员函数中指定的主映像之上的映像`nImage`参数。 使用绘制覆盖掩码[绘制](#draw)成员函数使用指定覆盖掩码的基于 1 的索引[INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408)宏。  
+ An overlay image is an image that is drawn on top of the primary image, specified in this member function by the `nImage` parameter. Draw an overlay mask by using the [Draw](#draw) member function with the one-based index of the overlay mask specified by using the [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) macro.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
   
-##  <a name="enddrag"></a>CImageList::EndDrag  
- 调用此函数可结束拖动操作。  
+##  <a name="enddrag"></a>  CImageList::EndDrag  
+ Call this function to end a drag operation.  
   
 ```  
 static void PASCAL EndDrag();
 ```  
   
-### <a name="remarks"></a>备注  
- 若要开始拖动操作，使用`BeginDrag`成员函数。  
+### <a name="remarks"></a>Remarks  
+ To begin a drag operation, use the `BeginDrag` member function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]  
   
-##  <a name="extracticon"></a>CImageList::ExtractIcon  
- 调用此函数可创建基于图像和图像列表中的其相关的掩码图标。  
+##  <a name="extracticon"></a>  CImageList::ExtractIcon  
+ Call this function to create an icon based on an image and its related mask in an image list.  
   
 ```  
 HICON ExtractIcon(int nImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 从零开始的索引，该图像。  
+ Zero-based index of the image.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则在图标的句柄否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Handle of the icon if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此方法依赖于的行为[ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)宏创建图标。 请参阅[ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)图标创建和清理的详细信息的宏。  
+### <a name="remarks"></a>Remarks  
+ This method relies on the behavior of the [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) macro to create the icon. Refer to the [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) macro for more information on icon creation and cleanup.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
   
-##  <a name="fromhandle"></a>CImageList::FromHandle  
- 返回一个指向`CImageList`对象时提供了句柄图像列表。  
+##  <a name="fromhandle"></a>  CImageList::FromHandle  
+ Returns a pointer to a `CImageList` object when given a handle to an image list.  
   
 ```  
 static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hImageList`  
- 指定的图像列表。  
+ Specifies the image list.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针`CImageList`对象成功; 否则为如果**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CImageList` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 如果`CImageList`尚未附加到该句柄，一种临时`CImageList`创建对象并将其附加。 此临时`CImageList`仅直到下次应用程序在其事件循环中具有空闲时间，此时所有临时对象会被删除，对象是否有效。  
+### <a name="remarks"></a>Remarks  
+ If a `CImageList` is not already attached to the handle, a temporary `CImageList` object is created and attached. This temporary `CImageList` object is valid only until the next time the application has idle time in its event loop, at which time all temporary objects are deleted.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 13](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#13](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]  
   
-##  <a name="fromhandlepermanent"></a>CImageList::FromHandlePermanent  
- 返回一个指向`CImageList`对象时提供了句柄图像列表。  
+##  <a name="fromhandlepermanent"></a>  CImageList::FromHandlePermanent  
+ Returns a pointer to a `CImageList` object when given a handle to an image list.  
   
 ```  
 static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hImageList`  
- 指定的图像列表。  
+ Specifies the image list.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针`CImageList`对象成功; 否则为如果**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CImageList` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 如果`CImageList`对象未附加到该句柄， **NULL**返回。  
+### <a name="remarks"></a>Remarks  
+ If a `CImageList` object is not attached to the handle, **NULL** is returned.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 14](../../mfc/reference/codesnippet/cpp/cimagelist-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#14](../../mfc/reference/codesnippet/cpp/cimagelist-class_14.cpp)]  
   
-##  <a name="getbkcolor"></a>CImageList::GetBkColor  
- 调用此函数可检索图像列表的当前背景色。  
+##  <a name="getbkcolor"></a>  CImageList::GetBkColor  
+ Call this function to retrieve the current background color for an image list.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- RGB 颜色值的`CImageList`对象背景色。  
+### <a name="return-value"></a>Return Value  
+ The RGB color value of the `CImageList` object background color.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CImageList::SetBkColor](#setbkcolor)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::SetBkColor](#setbkcolor).  
   
-##  <a name="getdragimage"></a>CImageList::GetDragImage  
- 获取用于拖动的临时图像列表。  
+##  <a name="getdragimage"></a>  CImageList::GetDragImage  
+ Gets the temporary image list that is used for dragging.  
   
 ```  
 static CImageList* PASCAL GetDragImage(
@@ -782,31 +813,31 @@ static CImageList* PASCAL GetDragImage(
     LPPOINT lpPointHotSpot);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpPoint`  
- 地址[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)结构，它接收当前拖动位置。  
+ Address of a [POINT](http://msdn.microsoft.com/library/windows/desktop/dd162805) structure that receives the current drag position.  
   
  *lpPointHotSpot*  
- 地址**点**接收拖动图像相对于拖动位置的偏移量的结构。  
+ Address of a **POINT** structure that receives the offset of the drag image relative to the drag position.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，指向临时图像的列表，用于拖动;否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the temporary image list that is used for dragging; otherwise, **NULL**.  
   
-##  <a name="getimagecount"></a>CImageList::GetImageCount  
- 调用此函数可检索的图像列表中的映像数量。  
+##  <a name="getimagecount"></a>  CImageList::GetImageCount  
+ Call this function to retrieve the number of images in an image list.  
   
 ```  
 int GetImageCount() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 映像数量。  
+### <a name="return-value"></a>Return Value  
+ The number of images.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CImageList::ExtractIcon](#extracticon)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::ExtractIcon](#extracticon).  
   
-##  <a name="getimageinfo"></a>CImageList::GetImageInfo  
- 调用此函数可检索有关映像的信息。  
+##  <a name="getimageinfo"></a>  CImageList::GetImageInfo  
+ Call this function to retrieve information about an image.  
   
 ```  
 BOOL GetImageInfo(
@@ -814,98 +845,98 @@ BOOL GetImageInfo(
     IMAGEINFO* pImageInfo) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 从零开始的索引，该图像。  
+ Zero-based index of the image.  
   
  *pImageInfo*  
- 指向[IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393)接收有关映像的信息的结构。 此结构中的信息可以用于直接操作图像的位图。  
+ Pointer to an [IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393) structure that receives information about the image. The information in this structure can be used to directly manipulate the bitmaps for the image.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- `IMAGEINFO`结构包含有关图像列表中的映像的信息。  
+### <a name="remarks"></a>Remarks  
+ The `IMAGEINFO` structure contains information about an image in an image list.  
   
-##  <a name="getsafehandle"></a>CImageList::GetSafeHandle  
- 调用此函数可检索**m_hImageList**数据成员。  
+##  <a name="getsafehandle"></a>  CImageList::GetSafeHandle  
+ Call this function to retrieve the **m_hImageList** data member.  
   
 ```  
 HIMAGELIST GetSafeHandle() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 附加的图像列表中; 句柄否则为**NULL**如果附加没有任何对象。  
+### <a name="return-value"></a>Return Value  
+ A handle to the attached image list; otherwise **NULL** if no object is attached.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 15](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#15](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]  
   
-##  <a name="m_himagelist"></a>CImageList::m_hImageList  
- 附加到此对象的图像列表的句柄。  
+##  <a name="m_himagelist"></a>  CImageList::m_hImageList  
+ A handle of the image list attached to this object.  
   
  **HIMAGELIST m_hImageList;**  
   
-### <a name="remarks"></a>备注  
- **M_hImageList**数据成员是类型的公共变量`HIMAGELIST`。  
+### <a name="remarks"></a>Remarks  
+ The **m_hImageList** data member is a public variable of type `HIMAGELIST`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 23](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#23](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]  
   
-##  <a name="operator_himagelist"></a>CImageList::operator HIMAGELIST  
- 此运算符用于获取附加的句柄`CImageList`对象。  
+##  <a name="operator_himagelist"></a>  CImageList::operator HIMAGELIST  
+ Use this operator to get the attached handle of the `CImageList` object.  
   
 ```  
 operator HIMAGELIST() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，图像列表的句柄表示`CImageList`对象; 否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the image list represented by the `CImageList` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此运算符是一个强制转换运算符，它支持直接使用`HIMAGELIST`对象。  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HIMAGELIST` object.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]  
   
-##  <a name="read"></a>CImageList::Read  
- 调用此函数可从存档读取图像列表。  
+##  <a name="read"></a>  CImageList::Read  
+ Call this function to read an image list from an archive.  
   
 ```  
 BOOL Read(CArchive* pArchive);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pArchive`  
- 指向的指针`CArchive`对象，是要读取的图像列表。  
+ A pointer to a `CArchive` object from which the image list is to be read.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]  
   
-##  <a name="remove"></a>CImageList::Remove  
- 调用此函数可从图像列表对象中删除映像。  
+##  <a name="remove"></a>  CImageList::Remove  
+ Call this function to remove an image from an image list object.  
   
 ```  
 BOOL Remove(int nImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 要删除的映像的从零开始索引。  
+ Zero-based index of the image to remove.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 后面的所有项`nImage`现在下移一个位置。 例如，如果图像列表包含两个项，则删除第一项将导致剩余的项现在处于的第一个位置。 `nImage`= 0 中的第一个位置的项。  
+### <a name="remarks"></a>Remarks  
+ All items following `nImage` now move down one position. For example, if an image list contains two items, deleting the first item will cause the remaining item to now be in the first position. `nImage`=0 for the item in the first position.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
   
-##  <a name="replace"></a>CImageList::Replace  
- 调用此函数可将图像列表中的映像替换为新映像。  
+##  <a name="replace"></a>  CImageList::Replace  
+ Call this function to replace an image in an image list with a new image.  
   
 ```  
 BOOL Replace(
@@ -919,49 +950,49 @@ int Replace(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 要替换的映像的从零开始索引。  
+ Zero-based index of the image to replace.  
   
  `pbmImage`  
- 指向包含图像的位图的指针。  
+ A pointer to the bitmap containing the image.  
   
  `pbmMask`  
- 指向包含掩码位图的指针。 如果未应用蒙板的图像列表一起使用，则忽略此参数。  
+ A pointer to the bitmap containing the mask. If no mask is used with the image list, this parameter is ignored.  
   
  `hIcon`  
- 包含的位图和掩码为新映像的图标的句柄。  
+ A handle to the icon that contains the bitmap and mask for the new image.  
   
-### <a name="return-value"></a>返回值  
- 返回的版本**BOOL**返回非零，如果成功; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ The version returning **BOOL** returns nonzero if successful; otherwise 0.  
   
- 返回的版本`int`返回图像的从零开始的索引; 如果成功; 否则为-1。  
+ The version returning `int` returns the zero-based index of the image if successful; otherwise - 1.  
   
-### <a name="remarks"></a>备注  
- 在调用后调用此成员函数[SetImageCount](#setimagecount)要分配新，有效的映像分发到占位符图像的索引编号。  
+### <a name="remarks"></a>Remarks  
+ Call this member function after calling [SetImageCount](#setimagecount) to assign the new, valid images to the placeholder image index numbers.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CImageList::SetImageCount](#setimagecount)。  
+### <a name="example"></a>Example  
+  See the example for [CImageList::SetImageCount](#setimagecount).  
   
-##  <a name="setbkcolor"></a>CImageList::SetBkColor  
- 调用此函数可设置图像列表的背景色。  
+##  <a name="setbkcolor"></a>  CImageList::SetBkColor  
+ Call this function to set the background color for an image list.  
   
 ```  
 COLORREF SetBkColor(COLORREF cr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cr`  
- 若要设置的背景色。 它可以是`CLR_NONE`。 在这种情况下，以透明方式使用掩码绘制图像。  
+ Background color to set. It can be `CLR_NONE`. In that case, images are drawn transparently using the mask.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则以前的背景颜色否则为`CLR_NONE`。  
+### <a name="return-value"></a>Return Value  
+ The previous background color if successful; otherwise `CLR_NONE`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 20](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#20](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]  
   
-##  <a name="setdragcursorimage"></a>CImageList::SetDragCursorImage  
- 通过组合给定的图像 （通常是鼠标光标图像） 与当前拖动图像中创建新的拖动图像。  
+##  <a name="setdragcursorimage"></a>  CImageList::SetDragCursorImage  
+ Creates a new drag image by combining the given image (typically a mouse cursor image) with the current drag image.  
   
 ```  
 BOOL SetDragCursorImage(
@@ -969,43 +1000,43 @@ BOOL SetDragCursorImage(
     CPoint ptHotSpot);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nDrag*  
- 要结合拖动图像的新映像的索引。  
+ Index of the new image to be combined with the drag image.  
   
  `ptHotSpot`  
- 新映像内的作用点的位置。  
+ Position of the hot spot within the new image.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 由于拖动函数将在拖动操作期间使用新的映像，你应使用 Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396)函数调用后隐藏实际鼠标光标`CImageList::SetDragCursorImage`。 否则，系统在拖动操作期间可能看起来具有两个鼠标光标。  
+### <a name="remarks"></a>Remarks  
+ Because the dragging functions use the new image during a drag operation, you should use the Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) function to hide the actual mouse cursor after calling `CImageList::SetDragCursorImage`. Otherwise, the system may appear to have two mouse cursors for the duration of the drag operation.  
   
-##  <a name="setimagecount"></a>CImageList::SetImageCount  
- 调用此成员函数以重置中的图像数`CImageList`对象。  
+##  <a name="setimagecount"></a>  CImageList::SetImageCount  
+ Call this member function to reset the number of images in a `CImageList` object.  
   
 ```  
 BOOL SetImageCount(UINT uNewCount);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *uNewCount*  
- 指定映像的新总数的图像列表中的值。  
+ The value specifying the new total number of images in the image list.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为零，否则为零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>备注  
- 如果调用该成员函数以增加图像列表中的图像数，然后调用[替换](#replace)每个其他映像将新的索引分配到有效的图像。 如果您不能将索引分配到有效的图像，描述创建新的映像的操作将是不可预知。  
+### <a name="remarks"></a>Remarks  
+ If you call this member function to increase the number of images in the image list, then call [Replace](#replace) for each additional image to assign the new indexes to valid images. If you fail to assign the indexes to valid images, draw operations that create the new images will be unpredictable.  
   
- 如果你通过使用此函数减少图像列表的大小，将释放的截断的映像。  
+ If you decrease the size of an image list by using this function, the truncated images are freed.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]  
   
-##  <a name="setoverlayimage"></a>Cimagelist:: Setoverlayimage  
- 调用此函数可将图像的从零开始的索引添加到映像以用作覆盖掩码的列表。  
+##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage  
+ Call this function to add the zero-based index of an image to the list of images to be used as overlay masks.  
   
 ```  
 BOOL SetOverlayImage(
@@ -1013,44 +1044,44 @@ BOOL SetOverlayImage(
     int nOverlay);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 要用作覆盖掩码的图像的从零开始索引。  
+ Zero-based index of the image to use as an overlay mask.  
   
  *nOverlay*  
- 覆盖掩码的基于 1 的索引。  
+ One-based index of the overlay mask.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 最多四个索引可被添加到列表。  
+### <a name="remarks"></a>Remarks  
+ Up to four indices can be added to the list.  
   
- 覆盖掩码是在另一个图像上透明绘制的图像。 使用在图像上绘制覆盖掩码[cimagelist:: Draw](#draw)成员函数使用指定覆盖掩码的基于 1 的索引**INDEXTOOVERLAYMASK**宏。  
+ An overlay mask is an image drawn transparently over another image. Draw an overlay mask over an image by using the [CImageList::Draw](#draw) member function with the one-based index of the overlay mask specified by using the **INDEXTOOVERLAYMASK** macro.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]  
   
-##  <a name="write"></a>CImageList::Write  
- 调用此函数可将图像列表对象写入存档。  
+##  <a name="write"></a>  CImageList::Write  
+ Call this function to write an image list object to an archive.  
   
 ```  
 BOOL Write(CArchive* pArchive);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pArchive`  
- 指向的指针`CArchive`对象是用要存储的图像列表。  
+ A pointer to a `CArchive` object in which the image list is to be stored.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CImageList # 17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [CObject 类](../../mfc/reference/cobject-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CListCtrl 类](../../mfc/reference/clistctrl-class.md)   
- [CTabCtrl 类](../../mfc/reference/ctabctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)   
+ [CTabCtrl Class](../../mfc/reference/ctabctrl-class.md)
 

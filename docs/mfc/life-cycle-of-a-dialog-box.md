@@ -1,62 +1,81 @@
 ---
-title: "对话框的生命周期 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对话框, 生命周期"
-  - "对话框的生命周期"
-  - "MFC 对话框, 生命周期"
-  - "有模式对话框, 生命周期"
-  - "无模式对话框, 生命周期"
+title: Life Cycle of a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], life cycle
+- modal dialog boxes [MFC], life cycle
+- modeless dialog boxes [MFC], life cycle
+- MFC dialog boxes [MFC], life cycle
+- life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 对话框的生命周期
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 244bc75dfdb4695184ca66b8810260d407507f54
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在对话框的生命周期中，用户，调用对话框通常在创建并初始化对话框对象的命令处理程序中，用户交互的对话框，并且，关闭对话框。  
+---
+# <a name="life-cycle-of-a-dialog-box"></a>Life Cycle of a Dialog Box
+During the life cycle of a dialog box, the user invokes the dialog box, typically inside a command handler that creates and initializes the dialog object, the user interacts with the dialog box, and the dialog box closes.  
   
- 对于模式对话框，因而，对话框关闭后，处理程序收集任何数据。用户输入。  因为对话框对象存在，在其 Windows 对话框关闭后，可以使用对话框获取数据的类成员变量。  
+ For modal dialog boxes, your handler gathers any data the user entered once the dialog box closes. Since the dialog object exists after its dialog window has closed, you can simply use the member variables of your dialog class to extract the data.  
   
- 对于无模式对话框，则在对话框，可见时，您可能常常从该对话框提取对象的数据。  有时，销毁对话框对象；发生这种情况时依赖代码。  
+ For modeless dialog boxes, you may often extract data from the dialog object while the dialog box is still visible. At some point, the dialog object is destroyed; when this happens depends on your code.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [创建并显示对话框](../mfc/creating-and-displaying-dialog-boxes.md)  
+-   [Creating and displaying dialog boxes](../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [创建模式对话框](../mfc/creating-modal-dialog-boxes.md)  
+-   [Creating modal dialog boxes](../mfc/creating-modal-dialog-boxes.md)  
   
--   [创建无模式对话框。](../mfc/creating-modeless-dialog-boxes.md)  
+-   [Creating modeless dialog boxes](../mfc/creating-modeless-dialog-boxes.md)  
   
--   [使用内存中的对话框模板](../mfc/using-a-dialog-template-in-memory.md)  
+-   [Using a dialog template in memory](../mfc/using-a-dialog-template-in-memory.md)  
   
--   [将对话框的背景色](../mfc/setting-the-dialog-box’s-background-color.md)  
+-   [Setting the dialog box's background color](../mfc/setting-the-dialog-boxs-background-color.md)  
   
--   [初始化对话框](../mfc/initializing-the-dialog-box.md)  
+-   [Initializing the dialog box](../mfc/initializing-the-dialog-box.md)  
   
--   [处理该对话框的消息窗口](../mfc/handling-windows-messages-in-your-dialog-box.md)  
+-   [Handling Windows messages in your dialog box](../mfc/handling-windows-messages-in-your-dialog-box.md)  
   
--   [从对话框对象检索数据](../mfc/retrieving-data-from-the-dialog-object.md)  
+-   [Retrieving data from the dialog object](../mfc/retrieving-data-from-the-dialog-object.md)  
   
--   [关闭对话框](../mfc/closing-the-dialog-box.md)  
+-   [Closing the dialog box](../mfc/closing-the-dialog-box.md)  
   
--   [销毁对话框](../mfc/destroying-the-dialog-box.md)  
+-   [Destroying the dialog box](../mfc/destroying-the-dialog-box.md)  
   
--   [对话框数据交换 \(DDX\) 和验证 \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [属性表对话框](../mfc/property-sheets-and-property-pages-mfc.md)  
+-   [Property sheet dialog boxes](../mfc/property-sheets-and-property-pages-mfc.md)  
   
-## 请参阅  
- [对话框](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

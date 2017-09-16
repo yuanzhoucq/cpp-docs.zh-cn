@@ -1,5 +1,5 @@
 ---
-title: "COleUpdateDialog 类 |Microsoft 文档"
+title: COleUpdateDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,12 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Update dialog
-- links [C++], updating
-- updating OLE links
-- OLE dialog boxes, Edit Link
-- OLE link updating
-- COleUpdateDialog class
+- COleUpdateDialog [MFC], COleUpdateDialog
+- COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
 caps.latest.revision: 22
 author: mikeblome
@@ -41,40 +37,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8066a8dc9e572c14e9423af62d340e249351ac11
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af1ebfad4c2aae99e6e1774842cb2bb78ffe7b69
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleupdatedialog-class"></a>COleUpdateDialog 类
-用于 OLE“编辑链接”对话框的特例，当你只需要更新文档中现有的链接对象或嵌入对象时才可使用。  
+# <a name="coleupdatedialog-class"></a>COleUpdateDialog Class
+Used for a special case of the OLE Edit Links dialog box, which should be used when you need to update only existing linked or embedded objects in a document.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleUpdateDialog : public COleLinksDialog  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|构造 `COleUpdateDialog` 对象。|  
+|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Constructs a `COleUpdateDialog` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|显示**编辑链接**在更新模式下的对话框。|  
+|[COleUpdateDialog::DoModal](#domodal)|Displays the **Edit Links** dialog box in an update mode.|  
   
-## <a name="remarks"></a>备注  
- 有关特定于 OLE 的对话框的详细信息，请参阅文章[OLE 中的对话框](../../mfc/dialog-boxes-in-ole.md)。  
+## <a name="remarks"></a>Remarks  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -91,11 +87,11 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
- 构造 `COleUpdateDialog` 对象。  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
+ Constructs a `COleUpdateDialog` object.  
   
 ```  
 explicit COleUpdateDialog(
@@ -105,44 +101,44 @@ explicit COleUpdateDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 指向包含可能需要更新的链接的文档。  
+ Points to the document containing the links that may need updating.  
   
  *bUpdateLinks*  
- 确定是否要更新链接的对象的标志。  
+ Flag that determines whether linked objects are to be updated.  
   
  *bUpdateEmbeddings*  
- 确定是否要更新嵌入的对象的标志。  
+ Flag that determines whether embedded objects are to be updated.  
   
  `pParentWnd`  
- 指向父或所有者窗口对象 (类型的`CWnd`) 对话框对象所属。 如果它是**NULL**，对话框中的父窗口都将设置为主应用程序窗口中。  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box will be set to the main application window.  
   
-### <a name="remarks"></a>备注  
- 此函数只构造`COleUpdateDialog`对象。 若要显示对话框中，调用[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 此类应使用而不是`COleLinksDialog`如果想要更新仅现有链接项或嵌入项。  
+### <a name="remarks"></a>Remarks  
+ This function constructs only a `COleUpdateDialog` object. To display the dialog box, call [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). This class should be used instead of `COleLinksDialog` when you want to update only existing linked or embedded items.  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
- 编辑链接对话框框中显示更新模式。  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
+ Displays the Edit Links dialog box in update mode.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>返回值  
- 对话框中的完成状态。 以下值之一：  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK**如果成功返回对话框。  
+- **IDOK** if the dialog box returned successfully.  
   
-- **IDCANCEL**如果无当前文档中的链接或嵌入项需要更新。  
+- **IDCANCEL** if none of the linked or embedded items in the current document need updating.  
   
-- **IDABORT**是否发生了错误。 如果**IDABORT**是返回，调用[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成员函数以获取有关发生的错误类型的详细信息。 有关可能出现的错误的列表，请参阅[OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) ，此功能在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) function in the Windows SDK.  
   
-### <a name="remarks"></a>备注  
- 用户未选择取消按钮，将更新所有链接和/或嵌入。  
+### <a name="remarks"></a>Remarks  
+ All links and/or embeddings are updated unless the user selects the Cancel button.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
- [COleLinksDialog 类](../../mfc/reference/colelinksdialog-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleLinksDialog 类](../../mfc/reference/colelinksdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleLinksDialog Class](../../mfc/reference/colelinksdialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleLinksDialog Class](../../mfc/reference/colelinksdialog-class.md)
 

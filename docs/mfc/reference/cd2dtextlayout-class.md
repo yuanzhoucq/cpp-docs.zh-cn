@@ -1,5 +1,5 @@
 ---
-title: "CD2DTextLayout 类 |Microsoft 文档"
+title: CD2DTextLayout Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DTextLayout class
+- CD2DTextLayout [MFC], CD2DTextLayout
+- CD2DTextLayout [MFC], Create
+- CD2DTextLayout [MFC], Destroy
+- CD2DTextLayout [MFC], Get
+- CD2DTextLayout [MFC], GetFontFamilyName
+- CD2DTextLayout [MFC], GetLocaleName
+- CD2DTextLayout [MFC], IsValid
+- CD2DTextLayout [MFC], ReCreate
+- CD2DTextLayout [MFC], SetFontFamilyName
+- CD2DTextLayout [MFC], SetLocaleName
+- CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
 caps.latest.revision: 16
 author: mikeblome
@@ -45,76 +55,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b9d3873058613041042857b7edf213d207f058c5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b828d6964e4c62c3a4b1b4c14932481a7143bb98
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dtextlayout-class"></a>CD2DTextLayout 类
-IDWriteTextLayout 包装器。  
+# <a name="cd2dtextlayout-class"></a>CD2DTextLayout Class
+A wrapper for IDWriteTextLayout.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DTextLayout : public CD2DResource;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|构造 CD2DTextLayout 对象。|  
-|[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|析构函数。 当 D2D 文本布局对象被销毁时调用。|  
+|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Constructs a CD2DTextLayout object.|  
+|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|The destructor. Called when a D2D text layout object is being destroyed.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextLayout::Create](#create)|创建 CD2DTextLayout。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DTextLayout::Destroy](#destroy)|销毁 CD2DTextLayout 对象。 (重写[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
-|[CD2DTextLayout::Get](#get)|返回 IDWriteTextLayout 接口|  
-|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|复制位于指定位置的文本的字体系列名称。|  
-|[CD2DTextLayout::GetLocaleName](#getlocalename)|获取位于指定位置的文本的区域设置名称。|  
-|[CD2DTextLayout::IsValid](#isvalid)|检查资源的有效性 (重写[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|  
-|[CD2DTextLayout::ReCreate](#recreate)|重新创建 CD2DTextLayout。 (重写[CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate)。)|  
-|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|集内指定的文本范围的文本的 null 终止字体系列名称|  
-|[CD2DTextLayout::SetLocaleName](#setlocalename)|设置指定的文本范围内的文本的区域设置名称|  
+|[CD2DTextLayout::Create](#create)|Creates a CD2DTextLayout. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DTextLayout::Destroy](#destroy)|Destroys a CD2DTextLayout object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DTextLayout::Get](#get)|Returns IDWriteTextLayout interface|  
+|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Copies the font family name of the text at the specified position.|  
+|[CD2DTextLayout::GetLocaleName](#getlocalename)|Gets the locale name of the text at the specified position.|  
+|[CD2DTextLayout::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DTextLayout::ReCreate](#recreate)|Re-creates a CD2DTextLayout. (Overrides [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
+|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Sets null-terminated font family name for text within a specified text range|  
+|[CD2DTextLayout::SetLocaleName](#setlocalename)|Sets the locale name for text within a specified text range|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|返回 IDWriteTextLayout 接口|  
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Returns IDWriteTextLayout interface|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|指向 IDWriteTextLayout 的指针。|  
+|[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|A pointer to an IDWriteTextLayout.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  [CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextlayout"></a>CD2DTextLayout:: ~ CD2DTextLayout  
- 析构函数。 当 D2D 文本布局对象被销毁时调用。  
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout::~CD2DTextLayout  
+ The destructor. Called when a D2D text layout object is being destroyed.  
   
 ```  
 virtual ~CD2DTextLayout();
 ```  
   
-##  <a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
- 构造 CD2DTextLayout 对象。  
+##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout  
+ Constructs a CD2DTextLayout object.  
   
 ```  
 CD2DTextLayout(
@@ -125,51 +135,51 @@ CD2DTextLayout(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
  `strText`  
- CString 对象，其中包含要从其创建新 CD2DTextLayout 对象的字符串。  
+ A CString object that contains the string to create a new CD2DTextLayout object from.  
   
  `textFormat`  
- CString 对象，其中包含要应用于字符串的格式。  
+ A CString object that contains the format to apply to the string.  
   
  `sizeMax`  
- 布局框中的大小。  
+ The size of the layout box.  
   
  `bAutoDestroy`  
- 指示所有者 (pParentTarget) 将销毁该对象。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DTextLayout::Create  
- 创建 CD2DTextLayout。  
+##  <a name="create"></a>  CD2DTextLayout::Create  
+ Creates a CD2DTextLayout.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DTextLayout::Destroy  
- 销毁 CD2DTextLayout 对象。  
+##  <a name="destroy"></a>  CD2DTextLayout::Destroy  
+ Destroys a CD2DTextLayout object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextLayout::Get  
- 返回 IDWriteTextLayout 接口  
+##  <a name="get"></a>  CD2DTextLayout::Get  
+ Returns IDWriteTextLayout interface  
   
 ```  
 IDWriteTextLayout* Get();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向 IDWriteTextLayout 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextLayout interface or NULL if object is not initialized yet.  
   
-##  <a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
- 复制位于指定位置的文本的字体系列名称。  
+##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName  
+ Copies the font family name of the text at the specified position.  
   
 ```  
 CString GetFontFamilyName(
@@ -177,18 +187,18 @@ CString GetFontFamilyName(
     DWRITE_TEXT_RANGE* textRange = NULL) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `currentPosition`  
- 要检查的文本的位置。  
+ The position of the text to examine.  
   
  `textRange`  
- 具有相同的文本范围的格式设置为指定 currentPosition 的位置处的文本。 这意味着该运行具有指定，包括但不是限于字体系列名称的位置的准确格式。  
+ The range of text that has the same formatting as the text at the position specified by currentPosition. This means the run has the exact formatting as the position specified, including but not limited to the font family name.  
   
-### <a name="return-value"></a>返回值  
- CString 对象，其中包含当前的字体系列名称。  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current font family name.  
   
-##  <a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
- 获取位于指定位置的文本的区域设置名称。  
+##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName  
+ Gets the locale name of the text at the specified position.  
   
 ```  
 CString GetLocaleName(
@@ -196,55 +206,55 @@ CString GetLocaleName(
     DWRITE_TEXT_RANGE* textRange = NULL) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `currentPosition`  
- 要检查的文本的位置。  
+ The position of the text to inspect.  
   
  `textRange`  
- 具有相同的文本范围的格式设置为指定 currentPosition 的位置处的文本。 这意味着该运行具有指定，包括但不是限于对区域设置名称的位置的准确格式。  
+ The range of text that has the same formatting as the text at the position specified by currentPosition. This means the run has the exact formatting as the position specified, including but not limited to the locale name.  
   
-### <a name="return-value"></a>返回值  
- CString 对象，其中包含当前区域设置名称。  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current locale name.  
   
-##  <a name="isvalid"></a>CD2DTextLayout::IsValid  
- 检查资源的有效性  
+##  <a name="isvalid"></a>  CD2DTextLayout::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果资源是有效，则为，TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
- 指向 IDWriteTextLayout 的指针。  
+##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout  
+ A pointer to an IDWriteTextLayout.  
   
 ```  
 IDWriteTextLayout* m_pTextLayout;  
 ```  
   
-##  <a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::operator IDWriteTextLayout *  
- 返回 IDWriteTextLayout 接口  
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*  
+ Returns IDWriteTextLayout interface  
   
 ```  
 operator IDWriteTextLayout*();
 ```   
   
-### <a name="return-value"></a>返回值  
- 指向 IDWriteTextLayout 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextLayout interface or NULL if object is not initialized yet.  
   
-##  <a name="recreate"></a>CD2DTextLayout::ReCreate  
- 重新创建 CD2DTextLayout。  
+##  <a name="recreate"></a>  CD2DTextLayout::ReCreate  
+ Re-creates a CD2DTextLayout.  
   
 ```  
 virtual HRESULT ReCreate(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
- 集内指定的文本范围的文本的 null 终止字体系列名称  
+##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName  
+ Sets null-terminated font family name for text within a specified text range  
   
 ```  
 BOOL SetFontFamilyName(
@@ -252,18 +262,18 @@ BOOL SetFontFamilyName(
     DWRITE_TEXT_RANGE textRange);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pwzFontFamilyName`  
- 适用于整个文本字符串 textRange 所指定的范围之内的字体系列名称  
+ The font family name that applies to the entire text string within the range specified by textRange  
   
  `textRange`  
- 此更改适用的文本范围  
+ Text range to which this change applies  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE  
   
-##  <a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
- 设置指定的文本范围内的文本的区域设置名称  
+##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName  
+ Sets the locale name for text within a specified text range  
   
 ```  
 BOOL SetLocaleName(
@@ -271,16 +281,16 @@ BOOL SetLocaleName(
     DWRITE_TEXT_RANGE textRange);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pwzLocaleName`  
- Null 结尾的区域设置名称字符串  
+ A null-terminated locale name string  
   
  `textRange`  
- 此更改适用的文本范围  
+ Text range to which this change applies  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

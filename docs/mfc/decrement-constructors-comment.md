@@ -1,42 +1,60 @@
 ---
-title: "// Constructors 注释 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "注释, 构造函数注释"
-  - "注释, MFC"
-  - "构造函数 [C++], 声明"
-  - "构造函数注释"
-  - "声明, 构造函数"
-  - "声明构造函数, 代码注释"
-  - "实例构造函数, 代码注释"
-  - "MFC 源文件, 构造函数注释"
+title: -- Constructors Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- constructors comment
+- declarations, constructors
+- MFC source files, Constructors comment
+- declaring constructors, code comments
+- comments, MFC
+- comments, constructors comment
+- constructors [MFC], declaring
+- instance constructors, code comments
 ms.assetid: f400774e-ba85-49ed-85b7-70ef2f7dcb2b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Constructors 注释
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66e3fbf55e2cbe677423a4990884921e8e46e76a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 类的声明部分声明构造函数 `// Constructors` \(在 C\+\+ 中有效\) 以及需要的所有初始化函数实际上使用对象。  例如，`CWnd::Create`。构造函数，因为部分，则使用 `CWnd` 对象之前，必须先“调用 C\+\+ 构造函数然后调用 **创建** 函数完全构造导出”。  通常，这些成员称为公共。  
+---
+# <a name="-constructors-comment"></a>// Constructors Comment
+The `// Constructors` section of an MFC class declaration declares constructors (in the C++ sense) as well as any initialization functions required to really use the object. For example, `CWnd::Create` is in the constructors section because before you use the `CWnd` object, it must be "fully constructed" by first calling the C++ constructor and then calling the **Create** function. Typically, these members are public.  
   
- 例如，`CStdioFile` 具有三个构造函数的类，其中在 [批注的示例](../mfc/an-example-of-the-comments.md)下面的列表显示。  
+ For example, class `CStdioFile` has three constructors, one of which is shown in the listing under [An Example of the Comments](../mfc/an-example-of-the-comments.md).  
   
-## 请参阅  
- [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
- [\/\/ Implementation 注释](../mfc/decrement-implementation-comment.md)   
- [\/\/ Attributes 注释](../mfc/decrement-attributes-comment.md)   
- [\/\/ Operations 注释](../mfc/decrement-operations-comment.md)   
- [\/\/ Overridables 注释](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

@@ -1,23 +1,38 @@
 ---
-title: "&lt;set&gt; 运算符 | Microsoft Docs"
+title: '&lt;set&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- set/std::operator!=
+- set/std::operator&gt;
+- set/std::operator&gt;=
+- set/std::operator&lt;
+- set/std::operator&lt;=
+- set/std::operator==
+dev_langs:
+- C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ce8af6d17082b8838b01a9121e91d3ee23f90d4
+helpviewer_keywords:
+- std::operator!= (set)
+- std::operator&gt; (set)
+- std::operator&gt;= (set)
+- std::operator&lt; (set)
+- std::operator&lt;= (set)
+- std::operator== (set)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b986da86efac9cdfa027b23d2fe973062a52c8b7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsetgt-operators"></a>&lt;set&gt; 运算符
+# <a name="ltsetgt-operators"></a>&lt;set&gt; operators
 ||||  
 |-|-|-|  
 |[operator!= (set)](#op_neq)|[operator&gt; (set)](#op_gt)|[operator&gt;= (set)](#eq)|  
@@ -25,27 +40,27 @@ ms.lasthandoff: 04/29/2017
 |[operator!= (multiset)](#op_neq_multiset)|[operator&gt; (multiset)](#op_gt_multiset)|[operator&gt;= (multiset)](#op_gt_eq_multiset)|  
 |[operator&lt; (multiset)](#op_lt_multiset)|[operator&lt;= (multiset)](#op_lt_eq_multiset)|[operator== (multiset)](#op_eq_eq_multiset)|  
   
-##  <a name="op_neq"></a>operator!= (set)  
- 测试运算符左侧的 set 对象是否不等于右侧的 set 对象。  
+##  <a name="op_neq"></a>  operator!= (set)  
+ Tests if the set object on the left side of the operator is not equal to the set object on the right side.  
   
 ```
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
  `right`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
-### <a name="return-value"></a>返回值  
- 如果集不相等，则为 **true**；如果集相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the sets are not equal; **false** if sets are equal.  
   
-### <a name="remarks"></a>备注  
- 集对象之间的比较基于其元素的成对比较。 如果两个集具有的元素数目相等且对应元素的值相同，则两个集相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison between their elements. Two sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_ne.cpp  
@@ -82,27 +97,27 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>operator&lt; (set)  
- 测试运算符左侧的集对象是否小于右侧的集对象。  
+##  <a name="op_lt"></a>  operator&lt; (set)  
+ Tests if the set object on the left side of the operator is less than the set object on the right side.  
   
 ```
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
  `right`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的集严格大于右侧的集，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is strictly less than the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 集对象之间的比较基于其元素的成对比较。 两个对象之间的小于关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_lt.cpp  
@@ -139,27 +154,27 @@ The set s1 is not less than the set s3.
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;= (set)  
- 测试运算符左侧的集对象是否小于或等于右侧的集对象。  
+##  <a name="op_lt_eq"></a>  operator&lt;= (set)  
+ Tests if the set object on the left side of the operator is less than or equal to the set object on the right side.  
   
 ```
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
  `right`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的集小于或等于右侧的集，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is less than or equal to the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 集对象之间的比较基于其元素的成对比较。 两个对象之间的小于或等于关系基于首对不相等元素的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_le.cpp  
@@ -203,27 +218,27 @@ Set s1 is less than or equal to the set s4.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>operator== (set)  
- 测试运算符左侧的 set 对象是否等于右侧的 set 对象。  
+##  <a name="op_eq_eq"></a>  operator== (set)  
+ Tests if the set object on the left side of the operator is equal to the set object on the right side.  
   
 ```
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
  `right`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的集等于运算符右侧的集，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is equal to the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 集对象之间的比较基于其元素的成对比较。 如果两个集具有的元素数目相等且对应元素的值相同，则两个集相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. Two sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_eq.cpp  
@@ -260,27 +275,27 @@ The sets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>operator&gt; (set)  
- 测试运算符左侧的集对象是否大于右侧的集对象。  
+##  <a name="op_gt"></a>  operator&gt; (set)  
+ Tests if the set object on the left side of the operator is greater than the set object on the right side.  
   
 ```
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
  `right`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的集大于右侧的集，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is greater than the set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 集对象之间的比较基于其元素的成对比较。 两个对象之间的大于关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_gt.cpp  
@@ -317,27 +332,27 @@ The set s1 is greater than the set s3.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>operator&gt;= (set)  
- 测试运算符左侧的集对象是否大于或等于右侧的集对象。  
+##  <a name="op_gt_eq"></a>  operator&gt;= (set)  
+ Tests if the set object on the left side of the operator is greater than or equal to the set object on the right side.  
   
 ```
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
  `right`  
- 一个 **set** 类型的对象。  
+ An object of type **set**.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的集大于或等于列表右侧的集，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the set on the left side of the operator is greater than or equal to the set on the right side of the list; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 集对象之间的比较基于其元素的成对比较。 两个对象之间大于或等于的关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between set objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // set_op_ge.cpp  
@@ -381,27 +396,27 @@ Set s1 is greater than or equal to set s4.
 *\  
 ```  
   
-##  <a name="op_neq_multiset"></a>operator!= (multiset)  
- 测试运算符左侧的 multiset 对象是否不等于右侧的 multiset 对象。  
+##  <a name="op_neq_multiset"></a>  operator!= (multiset)  
+ Tests if the multiset object on the left side of the operator is not equal to the multiset object on the right side.  
   
 ```
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
  `right`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>返回值  
- 如果集或多重集不相等，则为 **true**；如果相等，则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the sets or multisets are not equal; **false** if sets or multisets are equal.  
   
-### <a name="remarks"></a>备注  
- 多重集对象之间的比较基于其元素的成对比较。 如果两个集或多重集具有的元素数目相等且对应元素具有相同的值，则这两个集或多重集相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison between their elements. Two sets or multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_ne.cpp  
@@ -438,27 +453,27 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt_multiset"></a>operator&lt; (multiset)  
- 测试运算符左侧的多重集对象是否小于右侧的多重集对象。  
+##  <a name="op_lt_multiset"></a>  operator&lt; (multiset)  
+ Tests if the multiset object on the left side of the operator is less than the multiset object on the right side.  
   
 ```
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
  `right`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的多重集严格小于右侧的多重集，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is strictly less than the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 多重对象之间的比较基于其元素的成对比较。 两个对象之间的小于关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_lt.cpp  
@@ -499,27 +514,27 @@ The multiset s1 is not less than the multiset s3.
 *\  
 ```  
   
-##  <a name="op_lt_eq_multiset"></a>operator&lt;= (multiset)  
- 测试运算符左侧的多重集对象是否小于或等于右侧的多重集对象。  
+##  <a name="op_lt_eq_multiset"></a>  operator&lt;= (multiset)  
+ Tests if the multiset object on the left side of the operator is less than or equal to the multiset object on the right side.  
   
 ```
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
  `right`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的多重集小于或等于右侧的多重集，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is less than or equal to the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 多重对象之间的比较基于其元素的成对比较。 两个对象之间的小于或等于关系基于首对不相等元素的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_le.cpp  
@@ -569,27 +584,27 @@ The multiset s1 is less than or equal to the multiset s4.
 *\  
 ```  
   
-##  <a name="op_eq_eq_multiset"></a>operator== (multiset)  
- 测试运算符左侧的 multiset 对象是否等于右侧的 multiset 对象。  
+##  <a name="op_eq_eq_multiset"></a>  operator== (multiset)  
+ Tests if the multiset object on the left side of the operator is equal to the multiset object on the right side.  
   
 ```
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
  `right`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的多重集等于右侧的多重集，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is equal to the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 多重对象之间的比较基于其元素的成对比较。 如果两个集或多重集具有的元素数目相等且对应元素具有相同的值，则这两个集或多重集相等。 否则，它们不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. Two sets or multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_eq.cpp  
@@ -626,27 +641,27 @@ The multisets s1 and s3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt_multiset"></a>operator&gt; (multiset)  
- 测试运算符左侧的多重集对象是否大于右侧的多重集对象。  
+##  <a name="op_gt_multiset"></a>  operator&gt; (multiset)  
+ Tests if the multiset object on the left side of the operator is greater than the multiset object on the right side.  
   
 ```
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
  `right`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的多重集大于右侧的多重集，则为 **true**；否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is greater than the multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 多重对象之间的比较基于其元素的成对比较。 两个对象之间的大于关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_gt.cpp  
@@ -687,27 +702,27 @@ The multiset s1 is greater than the multiset s3.
 *\  
 ```  
   
-##  <a name="op_gt_eq_multiset"></a>operator&gt;= (multiset)  
- 测试运算符左侧的多重集对象是否大于或等于右侧的多重集对象。  
+##  <a name="op_gt_eq_multiset"></a>  operator&gt;= (multiset)  
+ Tests if the multiset object on the left side of the operator is greater than or equal to the multiset object on the right side.  
   
 ```
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `left`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
  `right`  
- 一个 `multiset` 类型的对象。  
+ An object of type `multiset`.  
   
-### <a name="return-value"></a>返回值  
- 如果运算符左侧的多重集大于或等于列表右侧的多重集，则为 **true**，否则为 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the multiset on the left side of the operator is greater than or equal to the multiset on the right side of the list; otherwise **false**.  
   
-### <a name="remarks"></a>备注  
- 多重对象之间的比较基于其元素的成对比较。 两个对象之间大于或等于的关系基于首对不相等元素之间的比较。  
+### <a name="remarks"></a>Remarks  
+ The comparison between multiset objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multiset_op_ge.cpp  
@@ -757,7 +772,7 @@ The multiset s1 is greater than or equal to the multiset s4.
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<set>](../standard-library/set.md)
 
 

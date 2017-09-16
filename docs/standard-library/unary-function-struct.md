@@ -1,5 +1,5 @@
 ---
-title: "unary_function 结构 | Microsoft Docs"
+title: unary_function Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unary
 - functional/std::unary
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bf173d75b04598f7472e7c906b74b9d11fc76870
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unaryfunction-struct"></a>unary_function 结构
-空基结构，定义可能由提供一元函数对象的派生类继承的类型。  
+# <a name="unaryfunction-struct"></a>unary_function Struct
+An empty base struct that defines types that may be inherited by derived classes that provides a unary function object.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
 ```  
 struct unary_function 
 {
@@ -52,12 +51,12 @@ struct unary_function
    typedef Result result_type;
 };  
 ``` 
-## <a name="remarks"></a>备注  
- 模板结构可作为一些类的基础，这些类可定义 **result_type**`operator()`( **constargument_type&**) **const** 窗体的成员函数。  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base for classes that define a member function of the form **result_type**`operator()`( **constargument_type&**) **const**.  
   
- 所有这些派生的一元函数都可将其唯一参数类型引用为 **argument_type**，将其返回类型引用为 **result_type**。  
+ All such derived unary functions can refer to their sole argument type as **argument_type** and their return type as **result_type**.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_unary_function.cpp  
@@ -107,14 +106,14 @@ The number of elements in v1 greater than 10 is: 3.
 *\  
 ```  
   
-## <a name="requirements"></a>要求  
- **标头：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

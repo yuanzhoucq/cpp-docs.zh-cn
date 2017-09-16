@@ -1,5 +1,5 @@
 ---
-title: "注册 OLE 控件 |Microsoft 文档"
+title: Registering OLE Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - registering OLE controls
-- OLE controls, registering
+- OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 caps.latest.revision: 15
 author: mikeblome
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 9c54fb7dc3802e78c8dc68df02ff55ef4732a36b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 545b3c44b0ce4866c13f1fd3d62d24aa621a8974
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="registering-ole-controls"></a>注册 OLE 控件
-与其他 OLE 服务器对象一样，OLE 控件可由其他 OLE 感知应用程序访问。 这是通过注册控件的类型库和类来实现的。  
+# <a name="registering-ole-controls"></a>Registering OLE Controls
+OLE controls, like other OLE server objects, can be accessed by other OLE-aware applications. This is achieved by registering the control's type library and class.  
   
- 利用下列函数，您可在 Windows 注册数据库中添加和删除控件的类、属性页和类型库：  
+ The following functions allow you to add and remove the control's class, property pages, and type library in the Windows registration database:  
   
-### <a name="registering-ole-controls"></a>注册 OLE 控件  
+### <a name="registering-ole-controls"></a>Registering OLE Controls  
   
 |||  
 |-|-|  
-|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|将控件的类添加到注册数据库。|  
-|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|将控件属性页添加到注册数据库。|  
-|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|将控件的类型库添加到注册数据库。|  
-|[AfxOleUnregisterClass](#afxoleunregisterclass)|从注册数据库中删除控件类或属性页类。|  
-|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|从注册数据库中删除控件的类型库。|  
+|[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Adds the control's class to the registration database.|  
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Adds a control property page to the registration database.|  
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Adds the control's type library to the registration database.|  
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Removes a control class or a property page class from the registration database.|  
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Removes the control's type library from the registration database.|  
   
- 一般在控件 DLL 的 `AfxOleRegisterTypeLib` 实现中调用 `DllRegisterServer`。 同样，`AfxOleUnregisterTypeLib` 由 `DllUnregisterServer` 调用。 `AfxOleRegisterControlClass`、`AfxOleRegisterPropertyPageClass` 和 `AfxOleUnregisterClass` 一般由控件的类工厂或属性页的 `UpdateRegistry` 成员函数调用。  
+ `AfxOleRegisterTypeLib` is typically called in a control DLL's implementation of `DllRegisterServer`. Similarly, `AfxOleUnregisterTypeLib` is called by `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, and `AfxOleUnregisterClass` are typically called by the `UpdateRegistry` member function of a control's class factory or property page.  
   
-##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
- 向 Windows 注册数据库注册控件类。  
+##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass  
+ Registers the control class with the Windows registration database.  
   
 ```   
 BOOL AFXAPI AfxOleRegisterControlClass(
@@ -75,38 +75,38 @@ BOOL AFXAPI AfxOleRegisterControlClass(
     WORD wVerMinor); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 与控件类相关联的模块的实例句柄。  
+ The instance handle of the module associated with the control class.  
   
  `clsid`  
- 控件的唯一类 ID。  
+ The unique class ID of the control.  
   
  `pszProgID`  
- 控件的唯一程序 ID。  
+ The unique program ID of the control.  
   
  `idTypeName`  
- 包含控件的用户可读类型名称的字符串资源 ID。  
+ The resource ID of the string that contains a user-readable type name for the control.  
   
  *idBitmap*  
- 用于表示 OLE 控件在工具栏上或调色板中的位图资源 ID。  
+ The resource ID of the bitmap used to represent the OLE control in a toolbar or palette.  
   
  `nRegFlags`  
- 包含一个或多个以下标志︰  
+ Contains one or more of the following flags:  
   
-- `afxRegInsertable`使控件才会出现在插入对象对话框中的 OLE 对象。  
+- `afxRegInsertable` Allows the control to appear in the Insert Object dialog box for OLE objects.  
   
-- `afxRegApartmentThreading`ThreadingModel 注册表中设置线程模型 = 单元。  
+- `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel=Apartment.  
   
-- `afxRegFreeThreading`ThreadingModel 注册表中设置线程模型 = 免费。  
+- `afxRegFreeThreading` Sets the threading model in the registry to ThreadingModel=Free.  
   
-     您可以组合使用两个标记`afxRegApartmentThreading`和`afxRegFreeThreading`设置 ThreadingModel = Both。 请参阅[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关线程处理模型注册的详细信息。  
+     You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) in the Windows SDK for more information on threading model registration.  
   
 > [!NOTE]
->  在 MFC 4.2 版之前的 MFC 版本中`int``nRegFlags`参数**BOOL**参数， *bInsertable*，，允许或禁止要从插入对象对话框中插入的控件。  
+>  In MFC versions before MFC 4.2, the `int` `nRegFlags` parameter was a **BOOL** parameter, *bInsertable*, that allowed or disallowed the control to be inserted from the Insert Object dialog box.  
   
  *dwMiscStatus*  
- 包含一个或多个以下的状态标志 (标志的说明，请参阅**OLEMISC**中的枚举[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]):  
+ Contains one or more of the following status flags (for a description of the flags, see **OLEMISC** enumeration in the Windows SDK):  
   
 -   OLEMISC_RECOMPOSEONRESIZE  
   
@@ -147,34 +147,34 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 -   OLEMISC_SETCLIENTSITEFIRST  
   
  *tlid*  
- 控件类的唯一 ID。  
+ The unique ID of the control class.  
   
  `wVerMajor`  
- 控件类的主版本号。  
+ The major version number of the control class.  
   
  `wVerMinor`  
- 控件类的次版本号。  
+ The minor version number of the control class.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果已注册的控件类;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control class was registered; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 这样，要由 OLE 控件可识别的容器使用的控件。 `AfxOleRegisterControlClass`使用控件的名称和位置在系统上的更新注册表，并设置该控件支持在注册表中的线程模型。 有关详细信息，请参阅[技术注意 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，"单元模型线程处理中 OLE 控件"和[有关进程和线程](http://msdn.microsoft.com/library/windows/desktop/ms681917)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This allows the control to be used by containers that are OLE-control aware. `AfxOleRegisterControlClass` updates the registry with the control's name and location on the system and also sets the threading model that the control supports in the registry. For more information, see [Technical Note 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Model Threading in OLE Controls," and [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCAxCtl #&11;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
   
- 上面的示例演示如何`AfxOleRegisterControlClass`被调用，该标志可插入和标志的单元模型用 or 连在一起以创建第六个参数︰  
+ The above example demonstrates how `AfxOleRegisterControlClass` is called with the flag for insertable and the flag for apartment model ORed together to create the sixth parameter:  
   
- [!code-cpp[NVC_MFCAxCtl #&12;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]  
   
- 该控件将显示在已启用容器插入对象对话框中，它将模型感知的单元。 单元模型识别控件必须确保该锁，就会保护数据的静态类，这样，一个单元中的控件在访问静态数据，而它未被禁用的计划程序完成后，并使用相同的静态数据的同一个类的另一个实例启动之前。 对静态数据的任何访问权限将由关键部分代码括起来。  
+ The control will show up in the Insert Object dialog box for enabled containers, and it will be apartment model-aware. Apartment model-aware controls must ensure that static class data is protected by locks, so that while a control in one apartment is accessing the static data, it isn't disabled by the scheduler before it is finished, and another instance of the same class starts using the same static data. Any accesses to the static data will be surrounded by critical section code.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
- 向 Windows 注册数据库注册属性页类。  
+##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass  
+ Registers the property page class with the Windows registration database.  
   
 ```  
 BOOL AFXAPI AfxOleRegisterPropertyPageClass(
@@ -184,35 +184,35 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
    int nRegFlags); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 与属性页类相关联的模块的实例句柄。  
+ The instance handle of the module associated with the property page class.  
   
  `clsid`  
- 属性页上唯一类 ID。  
+ The unique class ID of the property page.  
   
  `idTypeName`  
- 包含属性页上的用户可读名称的字符串资源 ID。  
+ The resource ID of the string that contains a user-readable name for the property page.  
   
  `nRegFlags`  
- 可能包含标志︰  
+ May contain the flag:  
   
-- `afxRegApartmentThreading`ThreadingModel 注册表中设置线程模型 = 单元。  
+- `afxRegApartmentThreading` Sets the threading model in the registry to ThreadingModel = Apartment.  
   
 > [!NOTE]
->  在 MFC 4.2 版之前的 MFC 版本`int``nRegFlags`参数不可用。 另请注意，`afxRegInsertable`标志不是属性页的有效选项，如果将其设置将导致在 MFC 中的断言  
+>  In MFC versions prior to MFC 4.2, the `int` `nRegFlags` parameter was not available. Note also that the `afxRegInsertable` flag is not a valid option for property pages and will cause an ASSERT in MFC if it is set  
   
-### <a name="return-value"></a>返回值  
- 非零，如果已注册的控件类;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control class was registered; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 这允许使用由 OLE 控件可识别的容器的属性页。 `AfxOleRegisterPropertyPageClass`使用属性页名称和其位置在系统上的更新注册表，并设置该控件支持在注册表中的线程模型。 有关详细信息，请参阅[技术注意 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，"单元模型线程处理中 OLE 控件"和[有关进程和线程](http://msdn.microsoft.com/library/windows/desktop/ms681917)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This allows the property page to be used by containers that are OLE-control aware. `AfxOleRegisterPropertyPageClass` updates the registry with the property page name and its location on the system and also sets the threading model that the control supports in the registry. For more information, see [Technical Note 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Apartment-Model Threading in OLE Controls," and [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917) in the Windows SDK.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
- 将类型库注册到 Windows 数据库并允许类型库由 OLE 控件可识别的其他容器使用。  
+##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib  
+ Registers the type library with the Windows registration database and allows the type library to be used by other containers that are OLE-control aware.  
   
 ```   
 BOOL AfxOleRegisterTypeLib(
@@ -222,73 +222,73 @@ BOOL AfxOleRegisterTypeLib(
     LPCTSTR pszHelpDir  = NULL); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hInstance`  
- 与类型库关联的应用程序的实例句柄。  
+ The instance handle of the application associated with the type library.  
   
  *tlid*  
- 类型库的唯一 ID。  
+ The unique ID of the type library.  
   
  *pszFileName*  
- 指向控件的本地化类型库 (.TLB) 文件的可选文件名的指针。  
+ Points to the optional filename of a localized type library (.TLB) file for the control.  
   
  *pszHelpDir*  
- 可从中找到类型库的帮助文件的名称的目录。 如果**NULL**，则假定帮助文件可与类型库本身位于同一目录中。  
+ The name of the directory where the help file for the type library can be found. If **NULL**, the help file is assumed to be in the same directory as the type library itself.  
   
-### <a name="return-value"></a>返回值  
- 如果已注册类型库，则为非零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the type library was registered; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此函数将在注册表中更新类型库名称及其在系统中的位置。  
+### <a name="remarks"></a>Remarks  
+ This function updates the registry with the type library name and its location on the system.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCAutomation #&7;](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#7](../../mfc/codesnippet/cpp/registering-ole-controls_3.cpp)]  
   
- [!code-cpp[NVC_MFCAutomation #&8;](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]  
   
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
- 从 Windows 注册数据库中删除控件或属性页类项。  
+##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass  
+ Removes the control or property page class entry from the Windows registration database.  
   
 ```   
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *clsID*  
- 控件或属性页唯一类 ID。  
+ The unique class ID of the control or property page.  
   
  `pszProgID`  
- 控件或属性页的唯一程序 ID。  
+ The unique program ID of the control or property page.  
   
-### <a name="return-value"></a>返回值  
- 如果控件或属性页类已成功注销; 则为非否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control or property page class was successfully unregistered; otherwise 0.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
- 调用此函数可从 Windows 注册数据库中删除的类型库项。  
+##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib  
+ Call this function to remove the type library entry from the Windows registration database.  
   
 ```   
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `tlID`  
- 类型库的唯一 ID。  
+ The unique ID of the type library.  
   
-### <a name="return-value"></a>返回值  
- 非零，如果类型库已成功注销;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the type library was successfully unregistered; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCAxCtl #&13;](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]  
 
-### <a name="requirements"></a>要求  
-  **标头**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
 
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

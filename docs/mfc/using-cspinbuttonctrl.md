@@ -1,48 +1,67 @@
 ---
-title: "使用 CSpinButtonCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSpinButtonCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSpinButtonCtrl 类, using"
-  - "数值调节钮控件"
-  - "up-down 控件"
-  - "up-down 控件, 数值调节钮控件"
+title: Using CSpinButtonCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSpinButtonCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- up-down controls [MFC], spin button control
+- up-down controls
+- spin button control
+- CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 使用 CSpinButtonCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7afe4fb7053c5da720cf2ae219f85ea6bac649aa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-*旋转按钮控件* \(也称为 *up\-down* 控件\) 提供用户可单击调整值的一对箭头。  此值称为 *当前位置*。  位置旋转按钮在的范围内进行。  当用户单击此箭头，朝着最大数量；位置此外，用户在单击向下键时，位置被移向最小数量。  
+---
+# <a name="using-cspinbuttonctrl"></a>Using CSpinButtonCtrl
+The *spin button* control (also known as an *up-down* control) provides a pair of arrows that a user can click to adjust a value. This value is known as the *current position*. The position stays within the range of the spin button. When the user clicks the up arrow, the position moves toward the maximum; and when the user clicks the down arrow, the position moves toward the minimum.  
   
- 旋转按钮控件 MFC 中由 [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) 类。  
+ The spin button control is represented in MFC by the [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) class.  
   
 > [!NOTE]
->  默认情况下，数值调节钮按钮的范围有最大大小为零 \(0\) 和最小设置为 100。  由于最大值小于最小值，单击箭头将位置降低，再单击向下使其增大。  使用 [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md) 调整这些值。  
+>  By default, the range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow decreases the position and clicking the down arrow increases it. Use [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) to adjust these values.  
   
- 通常，当前位置显示在该控件。  伴随控件称为" *合作者窗口*。  有关旋转按钮控件的阐释，请参阅《[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [Up\-Down 关于控件](http://msdn.microsoft.com/library/windows/desktop/bb759889)。  
+ Typically, the current position is displayed in a companion control. The companion control is known as the *buddy window*. For an illustration of a spin button control, see [About Up-Down Controls](http://msdn.microsoft.com/library/windows/desktop/bb759889) in the Windows SDK.  
   
- 若要旋转，请创建控件和一个编辑控件合作者窗口，在 Visual Studio 中，首先编辑控件拖动到对话框或窗口，然后拖动调节钮控件。  选择数值调节钮控件并设置其 **自动合作者** 和 **设置合作者整数** 属性设置为 **True**。  并将 **对齐** 属性；**右端对齐** 最典型的。  这些设置中，因为它直接位于在 Tab 键顺序的编辑控件，编辑控件设置为合作者窗口。  编辑控件显示整数和数值调节钮控件处于编辑嵌入控件的右侧。  或者，可以使用 [CSpinButtonCtrl::SetRange](../Topic/CSpinButtonCtrl::SetRange.md) 方法，可以设置数值调节钮控件的有效范围内。  不需要在旋转合作者控件和窗口之间进行事件处理程序进行通信，因为它们直接交换数据。  如果因其他目的，例如，通过 Windows 序列页或对话框来使用数值调节钮控件，然后将 `UDN_DELTAPOS` 消息的处理程序并执行自定义操作的位置。  
+ To create a spin control and an edit control buddy window, in Visual Studio, first drag an edit control to the dialog box or window, and then drag a spin control. Select the spin control and set its **Auto Buddy** and **Set Buddy Integer** properties to **True**. Also set the **Alignment** property; **Right Align** is most typical. With these settings, the edit control is set as the buddy window because it directly precedes the edit control in the tab order. The edit control displays integers and the spin control is embedded in the right side of the edit control. Optionally, you can set the valid range of the spin control by using the [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) method. No event handlers are required to communicate between the spin control and buddy window because they exchange data directly. If you use a spin control for some other purpose, for example, to page through a sequence of windows or dialog boxes, then add a handler for the `UDN_DELTAPOS` message and perform your custom action there.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [调节按钮样式](../mfc/spin-button-styles.md)  
+-   [Spin Button Styles](../mfc/spin-button-styles.md)  
   
--   [调节钮成员函数](../mfc/spin-button-member-functions.md)  
+-   [Spin Button Member Functions](../mfc/spin-button-member-functions.md)  
   
-## 请参阅  
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

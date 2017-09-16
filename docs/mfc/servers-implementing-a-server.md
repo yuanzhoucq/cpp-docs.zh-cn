@@ -1,56 +1,75 @@
 ---
-title: "服务器：实现服务器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE 服务器应用程序, 实现 OLE 服务器"
-  - "服务器, 实现"
+title: 'Servers: Implementing a Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- servers, implementing
+- OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 服务器：实现服务器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a5a1dd3183d9ee6debc0b82aea7b88e519422701
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文说明 MFC 应用程序向导为可视化编辑服务器应用创建的代码。  如果不使用应用程序向导，本文列表区域必须编写代码来实现服务器的应用场合。  
+---
+# <a name="servers-implementing-a-server"></a>Servers: Implementing a Server
+This article explains the code the MFC Application Wizard creates for a visual editing server application. If you are not using the application wizard, this article lists the areas where you must write code to implement a server application.  
   
- 如果使用应用程序向导创建新的服务器应用程序，它为您提供大量特定于服务器的代码。  如果向可视化编辑服务器功能中向现有应用程序，您必须复制应用程序向导在添加需要的服务器代码的其余部分之前提供的代码。  
+ If you are using the application wizard to create a new server application, it provides a significant amount of server-specific code for you. If you are adding visual editing server functionality to an existing application, you must duplicate the code that the application wizard would have provided before adding the rest of the necessary server code.  
   
- 应用程序向导提供可分为若干类别的服务器代码：  
+ The server code that the application wizard provides falls into several categories:  
   
--   管理服务器资源  
+-   Defining server resources:  
   
-    -   使用菜单资源编辑的，当服务器在其自己的窗口的嵌入项。  
+    -   The menu resource used when the server is editing an embedded item in its own window.  
   
-    -   使用资源，当服务器可用的菜单和工具栏都准备就绪。  
+    -   The menu and toolbar resources used when the server is active in place.  
   
-     有关这些资源的更多信息，请参见 [菜单和资源：服务器添加](../mfc/menus-and-resources-server-additions.md)。  
+     For more information on these resources, see [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md).  
   
--   定义从 `COleServerItem`派生的项类。  有关服务器项的更多详细信息，请参见 [服务器：服务器项目](../mfc/servers-server-items.md)。  
+-   Defining an item class derived from `COleServerItem`. For further details on server items, see [Servers: Server Items](../mfc/servers-server-items.md).  
   
--   文档更改类的基类为 `COleServerDoc`。  有关更多详细信息，请参见 [服务器：实现服务器文档。](../mfc/servers-implementing-server-documents.md)。  
+-   Changing the base class of the document class to `COleServerDoc`. For further details, see [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md).  
   
--   定义从 `COleIPFrameWnd`派生的框架窗口类。  有关更多详细信息，请参见 [服务器：实现就地框架窗口](../mfc/servers-implementing-in-place-frame-windows.md)。  
+-   Defining a frame-window class derived from `COleIPFrameWnd`. For further details, see [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md).  
   
--   创建服务器应用的项存储在 Windows 注册数据库和注册服务器的新实例。OLE 的系统。  有关本主题的更多信息，请参见 [](../mfc/registration.md "Registration")。  
+-   Creating an entry for the server application in the Windows registration database and registering the new instance of the server with the OLE system. For information on this topic, see [Registration](../mfc/registration.md).  
   
--   初始化和启动服务器应用。  有关本主题的更多信息，请参见 [](../mfc/registration.md "Registration")。  
+-   Initializing and launching the server application. For information on this topic, see [Registration](../mfc/registration.md).  
   
- 有关更多信息，请参见 [COleServerItem](../mfc/reference/coleserveritem-class.md) 中[COleServerDoc](../mfc/reference/coleserverdoc-class.md) 和 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) in the *宏和全局*下的 RFX 函数。  
+ For more information, see [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), and [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) in the *Class Library Reference*.  
   
-## 请参阅  
- [服务器](../mfc/servers.md)   
- [容器](../mfc/containers.md)   
- [菜单和资源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [注册](../mfc/registration.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)
+
+

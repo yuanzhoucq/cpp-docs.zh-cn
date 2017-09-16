@@ -1,5 +1,5 @@
 ---
-title: "CD2DGeometry 类 |Microsoft 文档"
+title: CD2DGeometry Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,7 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGeometry class
+- CD2DGeometry [MFC], CD2DGeometry
+- CD2DGeometry [MFC], Attach
+- CD2DGeometry [MFC], CombineWithGeometry
+- CD2DGeometry [MFC], CompareWithGeometry
+- CD2DGeometry [MFC], ComputeArea
+- CD2DGeometry [MFC], ComputeLength
+- CD2DGeometry [MFC], ComputePointAtLength
+- CD2DGeometry [MFC], Destroy
+- CD2DGeometry [MFC], Detach
+- CD2DGeometry [MFC], FillContainsPoint
+- CD2DGeometry [MFC], Get
+- CD2DGeometry [MFC], GetBounds
+- CD2DGeometry [MFC], GetWidenedBounds
+- CD2DGeometry [MFC], IsValid
+- CD2DGeometry [MFC], Outline
+- CD2DGeometry [MFC], Simplify
+- CD2DGeometry [MFC], StrokeContainsPoint
+- CD2DGeometry [MFC], Tessellate
+- CD2DGeometry [MFC], Widen
+- CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
 caps.latest.revision: 17
 author: mikeblome
@@ -54,96 +73,96 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 948b2e2154259557e3a52c2045586cffce2a16f8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dc5ac92b1f9ea42ff03710976678c574f69f219d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dgeometry-class"></a>CD2DGeometry 类
-ID2D1Geometry 包装器。  
+# <a name="cd2dgeometry-class"></a>CD2DGeometry Class
+A wrapper for ID2D1Geometry.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DGeometry : public CD2DResource;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|构造 CD2DGeometry 对象。|  
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|析构函数。 当 D2D 几何图形对象被销毁时调用。|  
+|[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Constructs a CD2DGeometry object.|  
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|The destructor. Called when a D2D geometry object is being destroyed.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::Attach](#attach)|附加现有的资源的对象的接口|  
-|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|组合此几何都与指定的几何图形，并将结果存储在 ID2D1SimplifiedGeometrySink。|  
-|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|描述此 geometry 和指定的几何图形的交集。 使用指定的平展容差进行比较。|  
-|[CD2DGeometry::ComputeArea](#computearea)|计算几何形状的区域后，将通过指定的矩阵转换并使用指定的容差单一化。|  
-|[CD2DGeometry::ComputeLength](#computelength)|计算该几何图形的长度，就好像每个段是为一条线展开。|  
-|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|计算在几何图形的指定距离处的点和切线向量后，将通过指定的矩阵转换并使用指定的容差单一化。|  
-|[CD2DGeometry::Destroy](#destroy)|销毁 CD2DGeometry 对象。 (重写[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
-|[CD2DGeometry::Detach](#detach)|分离对象中的资源接口|  
-|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|指示是否由几何图形填充的区域将包含指定的点给定指定的平展容差。|  
-|[CD2DGeometry::Get](#get)|返回 ID2D1Geometry 接口|  
+|[CD2DGeometry::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Combines this geometry with the specified geometry and stores the result in an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::CompareWithGeometry](#comparewithgeometry)|Describes the intersection between this geometry and the specified geometry. The comparison is performed using the specified flattening tolerance.|  
+|[CD2DGeometry::ComputeArea](#computearea)|Computes the area of the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::ComputeLength](#computelength)|Calculates the length of the geometry as though each segment were unrolled into a line.|  
+|[CD2DGeometry::ComputePointAtLength](#computepointatlength)|Calculates the point and tangent vector at the specified distance along the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::Destroy](#destroy)|Destroys a CD2DGeometry object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DGeometry::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Indicates whether the area filled by the geometry would contain the specified point given the specified flattening tolerance.|  
+|[CD2DGeometry::Get](#get)|Returns ID2D1Geometry interface|  
 |[CD2DGeometry::GetBounds](#getbounds)||  
-|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|扩展由指定的笔画宽度和样式并通过指定的矩阵转换后，请获取该几何图形的边界。|  
-|[CD2DGeometry::IsValid](#isvalid)|检查资源的有效性 (重写[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|  
-|[CD2DGeometry::Outline](#outline)|计算 geometry 的轮廓，并将结果写入 ID2D1SimplifiedGeometrySink。|  
-|[CD2DGeometry::Simplify](#simplify)|创建仅包含行和 （可选） 三次方贝塞尔曲线并将结果写入到 ID2D1SimplifiedGeometrySink 的几何图形的简化的版本。|  
-|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|确定几何图形的笔画是否包含给定指定的笔画粗细、 样式和转换的指定的点。|  
-|[CD2DGeometry::Tessellate](#tessellate)|创建一组覆盖该几何图形后已转换使用指定的矩阵并使用指定的容差单一化的顺时针缠绕三角形。|  
-|[CD2DGeometry::Widen](#widen)|通过指定的笔画加宽几何图形，并将结果写入到 ID2D1SimplifiedGeometrySink 后，将通过指定的矩阵转换并使用指定的容差单一化。|  
+|[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Gets the bounds of the geometry after it has been widened by the specified stroke width and style and transformed by the specified matrix.|  
+|[CD2DGeometry::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DGeometry::Outline](#outline)|Computes the outline of the geometry and writes the result to an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::Simplify](#simplify)|Creates a simplified version of the geometry that contains only lines and (optionally) cubic Bezier curves and writes the result to an ID2D1SimplifiedGeometrySink.|  
+|[CD2DGeometry::StrokeContainsPoint](#strokecontainspoint)|Determines whether the geometry's stroke contains the specified point given the specified stroke thickness, style, and transform.|  
+|[CD2DGeometry::Tessellate](#tessellate)|Creates a set of clockwise-wound triangles that cover the geometry after it has been transformed using the specified matrix and flattened using the specified tolerance.|  
+|[CD2DGeometry::Widen](#widen)|Widens the geometry by the specified stroke and writes the result to an ID2D1SimplifiedGeometrySink after it has been transformed by the specified matrix and flattened using the specified tolerance.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|返回 ID2D1Geometry 接口|  
+|[CD2DGeometry::operator ID2D1Geometry*](#operator_id2d1geometry_star)|Returns ID2D1Geometry interface|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometry::m_pGeometry](#m_pgeometry)|指向 ID2D1Geometry 的指针。|  
+|[CD2DGeometry::m_pGeometry](#m_pgeometry)|A pointer to an ID2D1Geometry.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  `CD2DGeometry`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
- 析构函数。 当 D2D 几何图形对象被销毁时调用。  
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry::~CD2DGeometry  
+ The destructor. Called when a D2D geometry object is being destroyed.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="attach"></a>CD2DGeometry::Attach  
- 附加现有的资源的对象的接口  
+##  <a name="attach"></a>  CD2DGeometry::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1Geometry* pResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 现有资源的接口。 不能为 NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
- 构造 CD2DGeometry 对象。  
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
+ Constructs a CD2DGeometry object.  
   
 ```  
 CD2DGeometry(
@@ -151,15 +170,15 @@ CD2DGeometry(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
  `bAutoDestroy`  
- 指示所有者 (pParentTarget) 将销毁该对象。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
- 组合此几何都与指定的几何图形，并将结果存储在 ID2D1SimplifiedGeometrySink。  
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
+ Combines this geometry with the specified geometry and stores the result in an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL CombineWithGeometry(
@@ -170,27 +189,27 @@ BOOL CombineWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `inputGeometry`  
- 要与此实例将组合的几何图形。  
+ The geometry to combine with this instance.  
   
  `combineMode`  
- 要执行的组合操作的类型。  
+ The type of combine operation to perform.  
   
  `inputGeometryTransform`  
- 要将应用于 inputGeometry 合并之前的转换。  
+ The transform to apply to inputGeometry before combining.  
   
  `geometrySink`  
- 合并操作的结果。  
+ The result of the combine operation.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
- 描述此 geometry 和指定的几何图形的交集。 使用指定的平展容差进行比较。  
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
+ Describes the intersection between this geometry and the specified geometry. The comparison is performed using the specified flattening tolerance.  
   
 ```  
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -199,21 +218,21 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `inputGeometry`  
- 要测试的几何图形。  
+ The geometry to test.  
   
  `inputGeometryTransform`  
- 要将应用于 inputGeometry 的转换。  
+ The transform to apply to inputGeometry.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
- 计算几何形状的区域后，将通过指定的矩阵转换并使用指定的容差单一化。  
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
+ Computes the area of the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL ComputeArea(
@@ -222,21 +241,21 @@ BOOL ComputeArea(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 要计算其面积之前应用于此几何图形的转换。  
+ The transform to apply to this geometry before computing its area.  
   
  `area`  
- 此方法返回时，包含到此几何图形的转换后的平展版本的区域的指针。 您必须为此参数分配存储。  
+ When this method returns, contains a pointer to the area of the transformed, flattened version of this geometry. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
- 计算该几何图形的长度，就好像每个段是为一条线展开。  
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
+ Calculates the length of the geometry as though each segment were unrolled into a line.  
   
 ```  
 BOOL ComputeLength(
@@ -245,21 +264,21 @@ BOOL ComputeLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 要计算其长度之前应用于几何图形的转换。  
+ The transform to apply to the geometry before calculating its length.  
   
  `length`  
- 此方法返回时，包含指向该几何图形的长度的指针。 对于已关闭几何长度包括隐式关闭段。 您必须为此参数分配存储。  
+ When this method returns, contains a pointer to the length of the geometry. For closed geometries, the length includes an implicit closing segment. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
- 计算在几何图形的指定距离处的点和切线向量后，将通过指定的矩阵转换并使用指定的容差单一化。  
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
+ Calculates the point and tangent vector at the specified distance along the geometry after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL ComputePointAtLength(
@@ -270,44 +289,44 @@ BOOL ComputePointAtLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `length`  
- 若要查找的正切值的点的几何图形的距离。 如果此距离少于 0，则此方法计算几何图形中的第一个点。 如果此距离大于该几何图形的长度，则此方法计算几何图形中的最后一个点。  
+ The distance along the geometry of the point and tangent to find. If this distance is less then 0, this method calculates the first point in the geometry. If this distance is greater than the length of the geometry, this method calculates the last point in the geometry.  
   
  `worldTransform`  
- 要计算指定的点和正切值之前应用于几何图形的转换。  
+ The transform to apply to the geometry before calculating the specified point and tangent.  
   
  `point`  
- 在几何图形的指定距离的位置。 如果几何为空，则此时包含 NaN 作为其 x 和 y 值。  
+ The location at the specified distance along the geometry. If the geometry is empty, this point contains NaN as its x and y values.  
   
  `unitTangentVector`  
- 此方法返回时，包含指向在几何图形的指定距离处的切线向量的指针。 如果几何为空，则此向量包含 NaN 作为其 x 和 y 值。 您必须为此参数分配存储。  
+ When this method returns, contains a pointer to the tangent vector at the specified distance along the geometry. If the geometry is empty, this vector contains NaN as its x and y values. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="destroy"></a>CD2DGeometry::Destroy  
- 销毁 CD2DGeometry 对象。  
+##  <a name="destroy"></a>  CD2DGeometry::Destroy  
+ Destroys a CD2DGeometry object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DGeometry::Detach  
- 分离对象中的资源接口  
+##  <a name="detach"></a>  CD2DGeometry::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1Geometry* Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向已分离的资源接口指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
- 指示是否由几何图形填充的区域将包含指定的点给定指定的平展容差。  
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
+ Indicates whether the area filled by the geometry would contain the specified point given the specified flattening tolerance.  
   
 ```  
 BOOL FillContainsPoint(
@@ -317,33 +336,33 @@ BOOL FillContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `point`  
- 要测试的点。  
+ The point to test.  
   
  `worldTransform`  
- 要应用于几何图形前测试对包含的转换。  
+ The transform to apply to the geometry prior to testing for containment.  
   
  `contains`  
- 当此方法返回时，包含由几何图形填充该区域不包含点; 如果为 TRUE 的 bool 值否则为 FALSE。 您必须为此参数分配存储。  
+ When this method returns, contains a bool value that is TRUE if the area filled by the geometry contains point; otherwise, FALSE. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 与之的数值精度精确几何路径和路径相交的计算。 在仍被视为缺失填充小于容差的点。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the fill by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="get"></a>CD2DGeometry::Get  
- 返回 ID2D1Geometry 接口  
+##  <a name="get"></a>  CD2DGeometry::Get  
+ Returns ID2D1Geometry interface  
   
 ```  
 ID2D1Geometry* Get();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1Geometry 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Geometry interface or NULL if object is not initialized yet.  
   
-##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -351,14 +370,14 @@ const D2D1_MATRIX_3X2_F& worldTransform,
 CD2DRectF& bounds) const; 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
  `bounds`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
- 扩展由指定的笔画宽度和样式并通过指定的矩阵转换后，请获取该几何图形的边界。  
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
+ Gets the bounds of the geometry after it has been widened by the specified stroke width and style and transformed by the specified matrix.  
   
 ```  
 BOOL GetWidenedBounds(
@@ -369,54 +388,54 @@ BOOL GetWidenedBounds(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `strokeWidth`  
- 若要扩大几何范围由大于描画轮廓的量。  
+ The amount by which to widen the geometry by stroking its outline.  
   
  `strokeStyle`  
- 加宽几何图形的笔画的样式。  
+ The style of the stroke that widens the geometry.  
   
  `worldTransform`  
- 要应用于几何图形几何转换之后，并且在描边几何形状之后的转换。  
+ A transform to apply to the geometry after the geometry is transformed and after the geometry has been stroked.  
   
  `bounds`  
- 此方法返回时，包含该加宽几何图形的边界。 您必须为此参数分配存储。  
+ When this method returns, contains the bounds of the widened geometry. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometries. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="isvalid"></a>CD2DGeometry::IsValid  
- 检查资源的有效性  
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果资源是有效，则为，TRUE否则为 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
- 指向 ID2D1Geometry 的指针。  
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
+ A pointer to an ID2D1Geometry.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
- 返回 ID2D1Geometry 接口  
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry*  
+ Returns ID2D1Geometry interface  
   
 ```  
 operator ID2D1Geometry*();
 ```   
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1Geometry 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1Geometry interface or NULL if object is not initialized yet.  
   
-##  <a name="outline"></a>CD2DGeometry::Outline  
- 计算 geometry 的轮廓，并将结果写入 ID2D1SimplifiedGeometrySink。  
+##  <a name="outline"></a>  CD2DGeometry::Outline  
+ Computes the outline of the geometry and writes the result to an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL Outline(
@@ -425,21 +444,21 @@ BOOL Outline(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 要应用于该几何图形边框的转换。  
+ The transform to apply to the geometry outline.  
   
  `geometrySink`  
- 向其中追加的几何变换的轮廓 ID2D1SimplifiedGeometrySink。  
+ The ID2D1SimplifiedGeometrySink to which the geometry transformed outline is appended.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="simplify"></a>CD2DGeometry::Simplify  
- 创建仅包含行和 （可选） 三次方贝塞尔曲线并将结果写入到 ID2D1SimplifiedGeometrySink 的几何图形的简化的版本。  
+##  <a name="simplify"></a>  CD2DGeometry::Simplify  
+ Creates a simplified version of the geometry that contains only lines and (optionally) cubic Bezier curves and writes the result to an ID2D1SimplifiedGeometrySink.  
   
 ```  
 BOOL Simplify(
@@ -449,24 +468,24 @@ BOOL Simplify(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `simplificationOption`  
- 一个值，指定简化的几何图形是否应包含曲线。  
+ A value that specifies whether the simplified geometry should contain curves.  
   
  `worldTransform`  
- 要应用于简化几何图形的转换。  
+ The transform to apply to the simplified geometry.  
   
  `geometrySink`  
- 向其中追加简化的几何图形 ID2D1SimplifiedGeometrySink。  
+ The ID2D1SimplifiedGeometrySink to which the simplified geometry is appended.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
- 确定几何图形的笔画是否包含给定指定的笔画粗细、 样式和转换的指定的点。  
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
+ Determines whether the geometry's stroke contains the specified point given the specified stroke thickness, style, and transform.  
   
 ```  
 BOOL StrokeContainsPoint(
@@ -478,30 +497,30 @@ BOOL StrokeContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `point`  
- 要对包含测试的点。  
+ The point to test for containment.  
   
  `strokeWidth`  
- 要应用的笔画粗细。  
+ The thickness of the stroke to apply.  
   
  `strokeStyle`  
- 要应用的笔画的样式。  
+ The style of the stroke to apply.  
   
  `worldTransform`  
- 要将应用于描边的几何图形的转换。  
+ The transform to apply to the stroked geometry.  
   
  `contains`  
- 当此方法返回时，包含几何图形的笔画包含指定的点; 如果设置为 TRUE 的布尔值否则为 FALSE。 您必须为此参数分配存储。  
+ When this method returns, contains a boolean value set to TRUE if the geometry's stroke contains the specified point; otherwise, FALSE. You must allocate storage for this parameter.  
   
  `flatteningTolerance`  
- 与之的数值精度精确几何路径和路径相交的计算。 在仍被视为缺失笔画小于容差的点。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The numeric accuracy with which the precise geometric path and path intersection is calculated. Points missing the stroke by less than the tolerance are still considered inside. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
- 创建一组覆盖该几何图形后已转换使用指定的矩阵并使用指定的容差单一化的顺时针缠绕三角形。  
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
+ Creates a set of clockwise-wound triangles that cover the geometry after it has been transformed using the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL Tessellate(
@@ -510,21 +529,21 @@ BOOL Tessellate(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `worldTransform`  
- 要将应用于此几何形状，则为 NULL 的转换。  
+ The transform to apply to this geometry, or NULL.  
   
  `tessellationSink`  
- 分割追加到 ID2D1TessellationSink。  
+ The ID2D1TessellationSink to which the tessellated is appended.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="widen"></a>CD2DGeometry::Widen  
- 通过指定的笔画加宽几何图形，并将结果写入到 ID2D1SimplifiedGeometrySink 后，将通过指定的矩阵转换并使用指定的容差单一化。  
+##  <a name="widen"></a>  CD2DGeometry::Widen  
+ Widens the geometry by the specified stroke and writes the result to an ID2D1SimplifiedGeometrySink after it has been transformed by the specified matrix and flattened using the specified tolerance.  
   
 ```  
 BOOL Widen(
@@ -535,25 +554,25 @@ BOOL Widen(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `strokeWidth`  
- 若要扩大范围几何图形的量。  
+ The amount by which to widen the geometry.  
   
  `strokeStyle`  
- 要将应用于几何图形或为空的笔画样式。  
+ The style of stroke to apply to the geometry, or NULL.  
   
  `worldTransform`  
- 要应用于几何图形后扩大它的转换。  
+ The transform to apply to the geometry after widening it.  
   
  `geometrySink`  
- 向其中追加加宽的几何图形 ID2D1SimplifiedGeometrySink。  
+ The ID2D1SimplifiedGeometrySink to which the widened geometry is appended.  
   
  `flatteningTolerance`  
- 几何形状的多边形近似中两点间距离上限。 较小的值生成更准确的结果，但会导致执行速度变慢。  
+ The maximum bounds on the distance between points in the polygonal approximation of the geometry. Smaller values produce more accurate results but cause slower execution.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，则返回 TRUE。 否则，它将返回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

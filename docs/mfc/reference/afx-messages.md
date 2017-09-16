@@ -1,11 +1,11 @@
 ---
-title: "AFX 消息 |Microsoft 文档"
+title: AFX Messages | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -71,7 +71,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- AFX messages
+- AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
 caps.latest.revision: 24
 author: mikeblome
@@ -92,86 +92,87 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 35b4e99c7bb383e4887a5b3c3f9211464ba2f951
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="afx-messages"></a>AFX 消息
-在 MFC 中使用这些消息。  
+# <a name="afx-messages"></a>AFX Messages
+These messages are used in MFC.  
   
-## <a name="messages"></a>消息  
- 下表列出了在 MFC 库中使用的消息︰  
+## <a name="messages"></a>Messages  
+ The following table lists messages that are used in the MFC library:  
   
 ||||||  
 |-|-|-|-|-|  
-|消息|描述|[in] `wParam`|`lParam`（所有参数都都 [in] 除非另行说明。）|返回值|  
-|AFX_WM_ACCGETOBJECT|未使用。|未使用。|不适用。|不适用。|  
-|AFX_WM_ACCGETSTATE|用于可访问性支持。 发送到此消息`CMFCPopupMenu`或`CMFCRibbonPanelMenu`检索的当前元素的状态。|元素，可以为一个菜单按钮或分隔符的索引。|未使用。|元素状态中。 如果该索引无效，则为-1 0 菜单按钮是否没有特殊特性。 否则，它是以下标志的组合︰<br /><br /> TBBS_DISABLED — 项被禁用<br /><br /> TBBS_CHECKED-选中项<br /><br /> TBBS_BUTTON-表明它是标准按键<br /><br /> TBBS_PRESSED-按下按钮<br /><br /> TBBS_INDETERMINATE-未定义的状态<br /><br /> TBBS_SEPARATOR-而不是菜单按钮，此元素窗体的其他菜单项之间的分离|  
-|AFX_WM_CHANGE_ACTIVE_TAB|框架将此消息发送到可调整大小控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象时用户更改活动选项卡。|选项卡的索引。|未使用。|非零。|  
-|AFX_WM_CHANGE_CURRENT_FOLDER|框架将此邮件发送到的父级`CMFCShellListCtrl`时用户已更改的当前文件夹。|未使用。|未使用。|未使用。|  
-|AFX_WM_CHANGEVISUALMANAGER|在用户更改当前可视化管理器时，框架会将此消息发送到所有框架窗口。 响应此消息，框架窗口重新计算其区域，并根据需要调整其他参数。 如果你需要有关此事件通知，您可以在你的应用程序中处理 AFX_WM_CHANGEVISUALMANAGER 消息。 必须调用基类处理程序 (`OnChangeVisualManager`) 以确保框架的内部处理此事件发生。|未使用。|未使用。|未使用。|  
-|AFX_WM_CHANGING_ACTIVE_TAB|发送到的父级`CMFCTabCtrl`对象。  处理此消息，如果你想要接收来自通知`CMFCTabCtrl`对象时用户重置选项卡。|正在激活选项卡的索引。|未使用。|非零。|  
-|AFX_WM_CHECKEMPTYMINIFRAME|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX_WM_CREATETOOLBAR|从发送`CMFCToolBarsListPropertyPage`时用户可以在自定义过程创建一个新的工具栏。 你可以处理此消息实例化自定义的 CMFCToolBar 派生对象。 如果你处理此消息，并且创建您自己的工具栏，省略默认处理程序调用。|未使用。|指向包含的工具栏的名称的字符串的指针。|指向新创建的工具栏的指针。 NULL 指示工具栏创建已取消。|  
-|AFX_WM_CUSTOMIZEHELP|从自定义属性表发送到主框架窗口`CMFCToolbarCustomize``Dialog`当用户按**帮助**按钮或按 F1 键。|指定的活动页面的自定义属性表。|指向的指针`CMFCToolbarCustomize``Dialog`对象。|为零。|  
-|AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize``Dialog`发送此消息，以通知父框架，用户为其创建一个新的工具栏。|`TRUE`当启动自定义项时，`FALSE`完成自定义项。|未使用。|为零。|  
-|AFX_WM_DELETETOOLBAR|当用户是将要删除自定义模式中的工具栏时，发送到主框架窗口。<br /><br /> 处理此消息以执行额外的操作，当用户中删除自定义模式中的工具栏。 你还应调用默认处理程序 (`OnToolbarDelete`)，并删除工具栏。 默认处理程序返回一个值，该值指示是否可以删除工具栏。|未使用。|指向`CMFCToolBar`要删除的对象。|如果无法删除一个工具栏，则不为否则为 0。|  
-|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton`将此消息发送到要检索的文档颜色的主框架窗口。|未使用。|[在中，out]指向`CList<COLORREF, COLORREF>`对象。|为零。|  
-|AFX_WM_GETDRAGBOUNDS|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|用户突出显示功能区列表项时，发送到主框架窗口。|突出显示的项的索引|指向的指针`CMFCBaseRibbonElement`|未使用。|  
-|AFX_WM_ON_AFTER_SHELL_COMMAND|发送到的父级`CMFCShellListCtrl`或`CMFCShellTreeCtrl`控制用户完成执行 shell 命令。|用户执行的命令 ID|未使用。|如果应用程序将处理此消息，则应返回零。|  
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|显示弹出菜单之前，框架会将此邮件发送到功能区的父级。 可以处理此消息，还可以随时修改弹出菜单。|未使用。|指向的指针`CMFCBaseRibbonElement`|未使用。|  
-|AFX_WM_ON_CANCELTABMOVE|仅限内部使用。|不适用。|不适用。||  
-|AFX_WM_ON_CHANGE_RIBBON_CATEGORY|在用户更改活动的功能区控件类别时，框架会将此消息发送到主框架。|未使用。|指向的指针`CMFCRibbonBar`其类别发生了更改。|未使用。|  
-|AFX_WM_ON_CLOSEPOPUPWINDOW|框架发送此消息，以通知的所有者`CMFCDesktopAlertWnd`窗口是即将关闭。|未使用。|指向的指针`CMFCDesktopAlertWnd`对象。|未使用。|  
-|AFX_WM_ON_DRAGCOMPLETE|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX_WM_ON_GET_TAB_TOOLTIP|选项卡窗口将要时显示的工具提示选项卡上，如果启用了自定义工具提示，则发送到主框架窗口。|未使用。|指向的指针`CMFCTabToolTipInfo`结构。|未使用。|  
-|AFX_WM_ON_HSCROLL|发送到可调整大小控件栏控件。 处理此消息以接收来自通知`CMFCTabCtrl`对象中选项卡式小组件水平滚动条的滚动事件发生时。|低序位字指定滚动条值，该值指示用户的滚动请求。  有关更多信息，请参见本主题中后面的表。|未使用。|非零。|  
-|AFX_WM_ON_MOVE_TAB|当用户将选项卡拖动到新位置，则发送到选项卡式窗口的父级。|在其原始位置的选项卡的从零开始的索引。|[out]在其新位置的选项卡的从零开始的索引。|为零。|  
-|AFX_WM_ON_MOVETABCOMPLETE|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX_WM_ON_MOVETOTABGROUP|当用户将 MDI 子窗口从一个选项卡式组移到另一个，则发送到主框架窗口。|选项卡式窗口的句柄 (`CMFCTabCtrl`) 从已删除的 MDI 子窗口。|[out]选项卡式窗口的句柄 (`CMFCTabCtrl`) 到已插入 MDI 子窗口。|已忽略。|  
-|AFX_WM_ON_PRESS_CLOSE_BUTTON|发送到的父级`CDockablePane`当用户单击**关闭**在标题控件条上的按钮。|未使用。|用户单击了在其上的可停靠窗格的指针**关闭**按钮。|`TRUE`如果窗格中不能关闭;否则为 FALSE。|  
-|AFX_WM_ON_RENAME_TAB|之后用户重命名一个可编辑的选项卡，则发送到选项卡式窗口的父级。|重命名选项卡的从零开始索引。|[out]指向包含新的选项卡名称的字符串的指针。|如果应用程序处理此消息; 非零框架将取消显示调用`CMFCBaseTabCtrl::SetTabLabel`。  如果返回零，然后`CMFCBaseTabCtrl::SetTabLabel`由框架调用。|  
-|AFX_WM_ON_RIBBON_CUSTOMIZE|在用户开始自定义项时，发送到的父框架。 如果你想要显示你自己的自定义对话框，请处理此消息。|未使用。|指向要自定义功能区控件的指针。|如果应用程序处理此消息，并显示其自己的自定义对话框，则为非 0。 如果在应用程序返回零，则框架将显示内置的自定义对话框。|  
-|AFX_WM_ON_TABGROUPMOUSEMOVE|仅限内部使用。|不适用。|不适用。|不适用。|  
-|AFX_WM_POSTSETPREVIEWFRAME|发送通知的主框架用户更改的打印预览模式|`TRUE`指示设置的打印预览模式。 `FALSE`指示该打印预览模式处于关闭状态。|未使用。|未使用。|  
-|AFX_WM_PROPERTY_CHANGED|发送到属性网格控件的所有者 (`CMFCPropertyGridCtrl`) 当用户更改所选属性的值。|属性列表控件 ID。|属性指向的指针 (`CMFCProp``ertyGridProperty`) 更改。|未使用。|  
-|AFX_WM_RESETCONTEXTMENU|当用户重置中的自定义的上下文菜单时，发送到主框架窗口。|上下文菜单资源 ID。|指向当前的上下文菜单中， `CMFCPopupMenu`。|未使用。|  
-|AFX_WM_RESETKEYBOARD|当用户在自定义期间重置所有键盘快捷键时，框架会将此消息发送到主框架窗口。|未使用。|未使用。|未使用。|  
-|AFX_WM_RESETMENU|框架将此消息发送到的菜单所有者 （框架窗口） 时用户将重置应用程序框架菜单中的自定义|菜单资源 id。|未使用。|未使用。|  
-|AFX_WM_RESETPROMPT|从工具栏中的工具栏上的用户重置自定义对话框时，框架将发送此消息。 默认处理程序会显示一个消息框，询问用户是否要重置此工具栏。|未使用。|未使用。|未使用。|  
-|AFX_WM_RESETTOOLBAR|A`CMFCToolBar`对象将发送此消息，当一个工具栏还原到其原始状态，即，从资源加载。 处理此消息以重新插入其类派生自的工具栏按钮`CMFCToolbarButton`。 有关详细信息，请参阅`CMFCToolbarComboBoxButton`。|其状态已还原的工具栏的资源 ID。|未使用。|为零。|  
-|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`用户单击常规菜单按钮时，对象会将此邮件发送给其所有者。 处理此消息使用每次`CMFCToolbarMenuButton`用户单击按钮时显示一个弹出菜单。|将消息发送的按钮命令 ID。|光标的屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|未使用。|  
-|AFX_WM_TOOLBARMENU|当用户释放鼠标右键，鼠标指针在客户端或窗格中的非工作区时，发送到主框架窗口。|未使用。|鼠标指针的屏幕坐标。 低序位字指定的 x 坐标。 高序位字指定的 y 坐标。|如果应用程序将处理此消息; 则为零否则为则为非 0。|  
-|AFX_WM_UPDATETOOLTIPS|发送到所有工具提示所有者以指示其工具提示控件应该重新创建。|应处理此消息的控件的类型。 请参阅有关的可能的值列表本主题后面的表。|未使用。|未使用。|  
-|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`将此消息发送到的父框架中，当用户单击**帮助**按钮，或通过单击进入帮助模式**帮助**标题按钮或按 F1 键。|未使用。|指向的实例的指针`CMFCWindowsManagerDialog`。|未使用。|  
+|Message|Description|[in] `wParam`|`lParam` (All parameters are [in] unless otherwise stated.)|Return Value|  
+|AFX_WM_ACCGETOBJECT|Not used.|Not used.|Not applicable.|Not applicable.|  
+|AFX_WM_ACCGETSTATE|Used for accessibility support. Send this message to `CMFCPopupMenu` or `CMFCRibbonPanelMenu` to retrieve the state of the current element.|Index of element, which could be a menu button or separator.|Not used.|The element state. It is -1 if the index is invalid, 0 if the menu button has no special attributes. Otherwise it is a combination of the following flags:<br /><br /> TBBS_DISABLED — item is disabled<br /><br /> TBBS_CHECKED — item is checked<br /><br /> TBBS_BUTTON — the item is a standard pushbutton<br /><br /> TBBS_PRESSED — button is pressed<br /><br /> TBBS_INDETERMINATE — undefined state<br /><br /> TBBS_SEPARATOR - rather than a menu button, this element forms a separation between other menu items|  
+|AFX_WM_CHANGE_ACTIVE_TAB|The framework sends this message to the resizable control bar control. Process this message to receive notifications from `CMFCTabCtrl` objects when a user changes an active tab.|The index of a tab.|Not used.|Nonzero.|  
+|AFX_WM_CHANGE_CURRENT_FOLDER|The framework sends this message to the parent of `CMFCShellListCtrl` when the user has changed the current folder.|Not used.|Not used.|Not used.|  
+|AFX_WM_CHANGEVISUALMANAGER|The framework sends this message to all frame windows when the user changes the current Visual Manager. In response to this message, a frame window recalculates its region and adjusts other parameters as needed. You can process the AFX_WM_CHANGEVISUALMANAGER message in your application if you need to be notified about this event. You must call the base class handler (`OnChangeVisualManager`) to ensure that the framework's internal processing of this event takes place.|Not used.|Not used.|Not used.|  
+|AFX_WM_CHANGING_ACTIVE_TAB|Sent to the parent of `CMFCTabCtrl` object.  Process this message if you want to receive notifications from `CMFCTabCtrl` objects when a user resets a tab.|The index of the tab that is being activated.|Not used.|Nonzero.|  
+|AFX_WM_CHECKEMPTYMINIFRAME|For internal use only.|Not applicable.|Not applicable.|Not applicable.|  
+|AFX_WM_CREATETOOLBAR|Sent from `CMFCToolBarsListPropertyPage` when a user creates a new toolbar during customization process. You can process this message to instantiate a custom CMFCToolBar-derived object. If you handle this message and create your own toolbar, omit the call to the default handler.|Not used.|A pointer to a string that contains the name of the toolbar.|A pointer to the newly created toolbar. NULL indicates that the toolbar creation was canceled.|  
+|AFX_WM_CUSTOMIZEHELP|Sent to the main frame window from the customization property sheet `CMFCToolbarCustomize Dialog` when the user presses the **Help** button or the F1 key.|Specifies the active page of the customization property sheet.|A pointer to a `CMFCToolbarCustomize Dialog` object.|Zero.|  
+|AFX_WM_CUSTOMIZETOOLBAR|The `CMFCToolbarCustomize Dialog` sends this message to notify the parent frame that the user is creating a new toolbar.|`TRUE` when customization is started, `FALSE` when customization is finished.|Not used.|Zero.|  
+|AFX_WM_DELETETOOLBAR|Sent to the main frame window when the user is about to delete a toolbar in the customization mode.<br /><br /> Process this message to take additional actions when a user deletes a toolbar in customization mode. You should also call the default handler (`OnToolbarDelete`), which deletes the toolbar. The default handler returns a value that indicates whether it is possible to delete the toolbar.|Not used.|Pointer to a `CMFCToolBar` object to be deleted.|Nonzero if a toolbar cannot be deleted; otherwise 0.|  
+|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` sends this message to the main frame window to retrieve the document colors.|Not used.|[in, out] Pointer to a `CList<COLORREF, COLORREF>` object.|Zero.|  
+|AFX_WM_GETDRAGBOUNDS|For internal use only.|Not applicable.|Not applicable.|Not applicable.|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Sent to the main frame window when a user highlights a ribbon list item.|Index of the highlighted item|A pointer to `CMFCBaseRibbonElement`|Not used.|  
+|AFX_WM_ON_AFTER_SHELL_COMMAND|Sent to a parent of `CMFCShellListCtrl` or `CMFCShellTreeCtrl` controls when a user finishes executing a shell command.|The ID of the command that the user executed|Not used.|If the application processes this message, it should return zero.|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|The framework sends this message to the ribbon's parent before it displays the pop-up menu. You can process this message and modify pop-up menus at any time.|Not used.|A pointer to `CMFCBaseRibbonElement`|Not used.|  
+|AFX_WM_ON_CANCELTABMOVE|For internal use only.|Not applicable.|Not applicable.||  
+|AFX_WM_ON_CHANGE_RIBBON_CATEGORY|The framework sends this message to the main frame when the user changes the active Ribbon Control category.|Not used.|A pointer to the `CMFCRibbonBar` whose category has changed.|Not used.|  
+|AFX_WM_ON_CLOSEPOPUPWINDOW|The framework sends this message to notify the owner of `CMFCDesktopAlertWnd` that the window is about to be closed.|Not used.|A pointer to `CMFCDesktopAlertWnd` object.|Not used.|  
+|AFX_WM_ON_DRAGCOMPLETE|For internal use only.|Not applicable.|Not applicable.|Not applicable.|  
+|AFX_WM_ON_GET_TAB_TOOLTIP|Sent to the main frame window when a tab window is about to display a tooltip for a tab, if custom tooltips are enabled.|Not used.|A pointer to a `CMFCTabToolTipInfo` structure.|Not used.|  
+|AFX_WM_ON_HSCROLL|Sent to the resizable control bar control. Process this message to receive notifications from `CMFCTabCtrl` objects when a scroll event occurs in the tabbed widget horizontal scroll bar.|The low-order word specifies a scroll bar value that indicates the user's scrolling request.  For more information, see the table later in this topic.|Not used.|Nonzero.|  
+|AFX_WM_ON_MOVE_TAB|Sent to the parent of a tabbed window when a user drags a tab to a new position.|The zero-based index of the tab in its original position.|[out] The zero-based index of the tab in its new position.|Zero.|  
+|AFX_WM_ON_MOVETABCOMPLETE|For internal use only.|Not applicable.|Not applicable.|Not applicable.|  
+|AFX_WM_ON_MOVETOTABGROUP|Sent to the main frame window when a user moves an MDI child window from one tabbed group to another.|A handle to tabbed window (`CMFCTabCtrl`) from which the MDI child window has been removed.|[out] A handle to tabbed window (`CMFCTabCtrl`) to which the MDI child window has been inserted.|Ignored.|  
+|AFX_WM_ON_PRESS_CLOSE_BUTTON|Sent to a parent of `CDockablePane` when user clicks the **Close** button on the caption of the control bar.|Not used.|A pointer to a dockable pane on which the user clicked the **Close** button.|`TRUE` if a pane cannot be closed; otherwise FALSE.|  
+|AFX_WM_ON_RENAME_TAB|Sent to the parent of tabbed window after the user renamed an editable tab.|The zero-based index of the renamed tab.|[out] A pointer to a string that contains the new tab name.|Nonzero if the application processes this message; the framework will suppress the call to `CMFCBaseTabCtrl::SetTabLabel`.  If zero is returned, then `CMFCBaseTabCtrl::SetTabLabel` is called by the framework.|  
+|AFX_WM_ON_RIBBON_CUSTOMIZE|Sent to the parent frame when user starts customization. Process this message if you want to display your own customization dialog box.|Not used.|A pointer to the ribbon control to be customized.|Nonzero if the application processes this message and displays its own customization dialog box. If the application returns zero, the framework will display the built-in customization dialog box.|  
+|AFX_WM_ON_TABGROUPMOUSEMOVE|For internal use only.|Not applicable.|Not applicable.|Not applicable.|  
+|AFX_WM_POSTSETPREVIEWFRAME|Sent to notify the main frame that the user changed the print preview mode|`TRUE` indicates that the print preview mode is set. `FALSE` indicates that print preview mode is turned off.|Not used.|Not used.|  
+|AFX_WM_PROPERTY_CHANGED|Sent to the owner of the property grid control (`CMFCPropertyGridCtrl`) when the user changes the value of the selected property.|The control ID of the property list.|A pointer to the property (`CMFCPropertyGridProperty`) that changed.|Not used.|  
+|AFX_WM_RESETCONTEXTMENU|Sent to the main frame window when the user resets the context menu during customization.|The resource ID of the context menu.|A pointer to the current context menu, `CMFCPopupMenu`.|Not used.|  
+|AFX_WM_RESETKEYBOARD|The framework sends this message to the main frame window when the user resets all keyboard accelerators during customization.|Not used.|Not used.|Not used.|  
+|AFX_WM_RESETMENU|The framework sends this message to the menu owner (a frame window) when the user resets an application frame menu during customization|The menu resource ID.|Not used.|Not used.|  
+|AFX_WM_RESETPROMPT|The framework sends this message when the user resets a toolbar from the toolbar customize dialog box. The default handler displays a message box that asks whether the user wants to reset the toolbar.|Not used.|Not used.|Not used.|  
+|AFX_WM_RESETTOOLBAR|A `CMFCToolBar` object sends this message when a toolbar is restored to its original state, that is, loaded from the resources. Process this message to reinsert toolbar buttons whose classes are derived from `CMFCToolbarButton`. For more information, see `CMFCToolbarComboBoxButton`.|The resource ID of a toolbar whose state was restored.|Not used.|Zero.|  
+|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` object sends this message to its owner when the user clicks a regular menu button. Process this message every time that you use `CMFCToolbarMenuButton` to display a pop-up menu when the user clicks a button.|The command ID of a button that sends the message.|Screen coordinates of the cursor. The low-order word specifies the x-coordinate. The high-order word specifies the y-coordinate.|Not used.|  
+|AFX_WM_TOOLBARMENU|Sent to the main frame window when the user releases the right button of a mouse while the mouse pointer is in the client or non-client area of a pane.|Not used.|Screen coordinates of the mouse pointer. The low-order word specifies the x-coordinate. The high-order word specifies the y-coordinate.|Zero if the application processes this message; otherwise, nonzero.|  
+|AFX_WM_UPDATETOOLTIPS|Sent to all tooltip owners to indicate that their tooltip controls should be recreated.|The type of control that should process this message. See the table later in this topic for a list of possible values.|Not used.|Not used.|  
+|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` sends this message to the parent frame when the user clicks the **Help** button, or enters the help mode by clicking the **Help** caption button or the F1 key.|Not used.|A pointer to the instance of `CMFCWindowsManagerDialog`.|Not used.|  
   
- 下表显示的值的低位字`lParam`AFX_WM_HSCROLL 方法的参数︰  
+ The following table shows the values for the low word of the `lParam` parameter of the AFX_WM_HSCROLL method:  
   
 |||  
 |-|-|  
-|值|含义|  
-|SB_ENDSCROLL|用户结束滚动。|  
-|SB_LEFT|用户滚动到左上角。|  
-|SB_RIGHT|用户滚动到右下角。|  
-|SB_LINELEFT|用户滚动一个单元的左侧。|  
-|SB_LINERIGHT|用户向一个单元的右滚动。|  
-|SB_PAGELEFT|用户滚动左窗口的宽度。|  
-|SB_PAGERIGHT|用户向右滚动的窗口的宽度。|  
-|SB_THUMBPOSITION|用户拖动滚动框 （缩略图），并释放鼠标按钮。 高序位字指示在拖动操作结束时滚动框的位置。|  
-|SB_THUMBTRACK|用户正在拖动滚动框。 此值，直到用户释放鼠标按钮会重复发送 AFX_WM_ON_HSCROLL 消息。 高序位字指示已向其拖动到滚动框的位置。|  
+|Value|Meaning|  
+|SB_ENDSCROLL|The user ends the scroll.|  
+|SB_LEFT|The user scrolls to the upper-left.|  
+|SB_RIGHT|The user scrolls to the lower-right.|  
+|SB_LINELEFT|The user scrolls left by one unit.|  
+|SB_LINERIGHT|The user scrolls right by one unit.|  
+|SB_PAGELEFT|The user scrolls left by the width of the window.|  
+|SB_PAGERIGHT|The user scrolls right by the width of the window.|  
+|SB_THUMBPOSITION|The user has dragged the scroll box (thumb) and released the mouse button. The high-order word indicates the position of the scroll box at the end of the drag operation.|  
+|SB_THUMBTRACK|The user is dragging the scroll box. The AFX_WM_ON_HSCROLL message is sent repeatedly with this value until the user releases the mouse button. The high-order word indicates the position to which the scroll box has been dragged.|  
   
 > [!NOTE]
->  高序位字`lParam`参数指定滚动框的当前位置，如果低序位字是 SB_THUMBPOSITION 或 SB_THUMBTRACK; 否则，不使用该单词。  
+>  The high-order word of the `lParam` parameter specifies the current position of the scroll box if the low-order word is SB_THUMBPOSITION or SB_THUMBTRACK; otherwise, this word is not used.  
   
- 下表列出的标志值`lParam`AFX_WM_UPDATETOOLTIPS 消息参数︰  
+ The following table lists the flag values for the `lParam` parameter of the AFX_WM_UPDATETOOLTIPS message:  
   
 |||  
 |-|-|  
-|Flag|值|  
-|AFX_TOOLTIP_TYPE_DEFAULT|从 0x0001|  
+|Flag|Value|  
+|AFX_TOOLTIP_TYPE_DEFAULT|0x0001|  
 |AFX_TOOLTIP_TYPE_TOOLBAR|0x0002|  
 |AFX_TOOLTIP_TYPE_TAB|0x0004|  
 |AFX_TOOLTIP_TYPE_MINIFRAME|0x0008|  
@@ -181,6 +182,6 @@ ms.lasthandoff: 04/01/2017
 |AFX_TOOLTIP_TYPE_TOOLBOX|0x0080|  
 |AFX_TOOLTIP_TYPE_ALL|0xFFFF|  
   
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

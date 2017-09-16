@@ -1,55 +1,74 @@
 ---
-title: "进度控件的样式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl 类, 样式"
-  - "PBS_SMOOTH 样式"
-  - "PBS_VERTICAL 样式"
-  - "进度控件 [C++], 样式"
+title: Styles for the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- PBS_SMOOTH style
+- progress controls [MFC], styles
+- PBS_VERTICAL style
+- CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 进度控件的样式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f7a2fd46e9a9af0e3de95f99b717629feab3357
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在最初创建进度 \([CProgressCtrl::Create](../Topic/CProgressCtrl::Create.md)\)，请使用 `dwStyle` 参数用于进度指定所需窗口样式。  下表详述相应的窗口样式。  控件将忽略所有窗口样式不列出的以外示。  应始终创建控件作为子窗口通常，父对话框。  
+---
+# <a name="styles-for-the-progress-control"></a>Styles for the Progress Control
+When you initially create the progress control ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use the `dwStyle` parameter to specify the desired window styles for your progress control. The following list details the applicable window styles. The control ignores any window style other than the ones listed here. You should always create the control as a child window, usually of a dialog box parent.  
   
-|窗口样式|效果|  
-|----------|--------|  
-|`WS_BORDER`|在窗口周围创建边框。|  
-|**WS\_CHILD**|创建子窗口 \(应对 `CProgressCtrl`始终使用\)。|  
-|**WS\_CLIPCHILDREN**|在父窗口中绘图时，会排除子窗口占用的区域。  在创建父窗口时使用。|  
-|**WS\_CLIPSIBLINGS**|剪辑相对的子窗口。|  
-|**已禁用**|用于创建初始禁用的窗口。|  
-|**WS\_VISIBLE**|创建初始可见的窗口。|  
-|**WS\_TABSTOP**|指定控件可以接收焦点，则用户按 Tab 键移动到它。|  
+|Window style|Effect|  
+|------------------|------------|  
+|`WS_BORDER`|Creates a border around the window.|  
+|**WS_CHILD**|Creates a child window (should always be used for `CProgressCtrl`).|  
+|**WS_CLIPCHILDREN**|Excludes the area occupied by child windows when you draw within the parent window. Used when you create the parent window.|  
+|**WS_CLIPSIBLINGS**|Clips child windows relative to each other.|  
+|**WS_DISABLED**|Creates a window that is initially disabled.|  
+|**WS_VISIBLE**|Creates a window that is initially visible.|  
+|**WS_TABSTOP**|Specifies that the control can receive focus when the user presses the TAB key to move to it.|  
   
- 此外，还可以指定仅适用于进度控件`PBS_VERTICAL` 和 `PBS_SMOOTH`的两种方式。  
+ In addition, you can specify two styles that apply only to the progress control, `PBS_VERTICAL` and `PBS_SMOOTH`.  
   
- 使用垂直 `PBS_VERTICAL` 放在控件中，而不是水平。  使用 `PBS_SMOOTH` 完全填充控件，而不是显示控件小的增量填充说明的正方形。  
+ Use `PBS_VERTICAL` to orient the control vertically, rather than horizontally. Use `PBS_SMOOTH` to fill the control completely, rather than displaying small delineated squares that fill the control incrementally.  
   
- 如果没有 `PBS_SMOOTH` 样式：  
+ Without `PBS_SMOOTH` style:  
   
- ![标准进度栏样式](../mfc/media/vc4ruw1.png "vc4RUW1")  
+ ![Standard progress bar style](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- `PBS_SMOOTH` 和 `PBS_VERTICAL` 样式：  
+ With `PBS_SMOOTH` and `PBS_VERTICAL` styles:  
   
- ![进度栏样式 &#45; 平滑和垂直](../mfc/media/vc4ruw2.png "vc4RUW2")  
+ ![Progress bar style, smooth and vertical](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   
- 有关更多信息，请参见" *MFC 参考"中的*[窗口样式](../mfc/reference/frame-window-styles-mfc.md)。  
+ For more information, see [Window Styles](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) in the *MFC Reference*.  
   
-## 请参阅  
- [使用 CProgressCtrl](../mfc/using-cprogressctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)
+
+

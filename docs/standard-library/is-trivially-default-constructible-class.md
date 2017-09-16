@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_default_constructible 类 | Microsoft Docs"
+title: is_trivially_default_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_default_constructible
 - type_traits/std::is_trivially_default_constructible
 dev_langs:
 - C++
@@ -34,50 +33,50 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: dd41fbdcc33250bc60a0b919b17dd52862549a77
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7378e982af31c1030012934924a053666fb4fff2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible 类
-测试类型是否具有普通默认构造函数。  
+# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible Class
+Tests if type has trivial default constructor.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_default_constructible;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 是具有普通构造函数的类，则类型谓词的实例为 true；否则为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial constructor, otherwise it holds false.  
   
- 类 `Ty` 的默认构造函数为普通构造函数，如果：  
+ A default constructor for a class `Ty` is trivial if:  
   
--   它是一个隐式声明的默认构造函数  
+-   it is an implicitly declared default constructor  
   
--   类 `Ty` 没有虚函数  
+-   the class `Ty` has no virtual functions  
   
--   类 `Ty` 没有虚拟基  
+-   the class `Ty` has no virtual bases  
   
--   类 `Ty` 的所有直接基均具有普通构造函数  
+-   all the direct bases of the class `Ty` have trivial constructors  
   
--   类类型的所有非静态数据成员的类具有普通构造函数  
+-   the classes of all the non-static data members of class type have trivial constructors  
   
--   类的类型数组的所有非静态数据成员的类具有普通构造函数  
+-   the classes of all the non-static data members of type array of class have trivial constructors  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

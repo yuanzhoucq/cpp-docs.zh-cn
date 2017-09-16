@@ -1,15 +1,14 @@
 ---
-title: "basic_streambuf 类 | Microsoft 文档"
+title: basic_streambuf Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_streambuf
 - streambuf/std::basic_streambuf
 - streambuf/std::basic_streambuf::char_type
 - streambuf/std::basic_streambuf::int_type
@@ -58,7 +57,51 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_streambuf class
+- std::basic_streambuf [C++]
+- std::basic_streambuf [C++], char_type
+- std::basic_streambuf [C++], int_type
+- std::basic_streambuf [C++], off_type
+- std::basic_streambuf [C++], pos_type
+- std::basic_streambuf [C++], traits_type
+- std::basic_streambuf [C++], eback
+- std::basic_streambuf [C++], egptr
+- std::basic_streambuf [C++], epptr
+- std::basic_streambuf [C++], gbump
+- std::basic_streambuf [C++], getloc
+- std::basic_streambuf [C++], gptr
+- std::basic_streambuf [C++], imbue
+- std::basic_streambuf [C++], in_avail
+- std::basic_streambuf [C++], overflow
+- std::basic_streambuf [C++], pbackfail
+- std::basic_streambuf [C++], pbase
+- std::basic_streambuf [C++], pbump
+- std::basic_streambuf [C++], pptr
+- std::basic_streambuf [C++], pubimbue
+- std::basic_streambuf [C++], pubseekoff
+- std::basic_streambuf [C++], pubseekpos
+- std::basic_streambuf [C++], pubsetbuf
+- std::basic_streambuf [C++], pubsync
+- std::basic_streambuf [C++], sbumpc
+- std::basic_streambuf [C++], seekoff
+- std::basic_streambuf [C++], seekpos
+- std::basic_streambuf [C++], setbuf
+- std::basic_streambuf [C++], setg
+- std::basic_streambuf [C++], setp
+- std::basic_streambuf [C++], sgetc
+- std::basic_streambuf [C++], sgetn
+- std::basic_streambuf [C++], showmanyc
+- std::basic_streambuf [C++], snextc
+- std::basic_streambuf [C++], sputbackc
+- std::basic_streambuf [C++], sputc
+- std::basic_streambuf [C++], sputn
+- std::basic_streambuf [C++], stossc
+- std::basic_streambuf [C++], sungetc
+- std::basic_streambuf [C++], swap
+- std::basic_streambuf [C++], sync
+- std::basic_streambuf [C++], uflow
+- std::basic_streambuf [C++], underflow
+- std::basic_streambuf [C++], xsgetn
+- std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 caps.latest.revision: 27
 author: corob-msft
@@ -78,140 +121,140 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e20dfefcfc46871d43ec5b89f492102d07a9610
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: df3cddeeb4f7d597b97325b7e0d8e7ddb4b96c1b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf 类
-描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。  
+# <a name="basicstreambuf-class"></a>basic_streambuf Class
+Describes an abstract base class for deriving a stream buffer, which controls the transmission of elements to and from a specific representation of a stream.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_streambuf;  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- 一个 [char_type](#char_type)。  
+ A [char_type](#char_type).  
   
  `Tr`  
- 字符 [traits_type](#traits_type)。  
+ The character [traits_type](#traits_type).  
   
-## <a name="remarks"></a>备注  
- 此模板类描述一个用于派生流缓冲区的抽象基类，该缓冲区控制元素与特定的流表示形式的来回传输。 `basic_streambuf` 类的对象有助于控制具有 `Tr` 类型（也称为 [char_type](#char_type)）的元素的流，该类型的字符特征由 [char_traits](../standard-library/char-traits-struct.md) 类（也称为 [traits_type](#traits_type)）决定。  
+## <a name="remarks"></a>Remarks  
+ The template class describes an abstract base class for deriving a stream buffer, which controls the transmission of elements to and from a specific representation of a stream. An object of class `basic_streambuf` helps control a stream with elements of type `Tr`, also known as [char_type](#char_type), whose character traits are determined by the class [char_traits](../standard-library/char-traits-struct.md), also known as [traits_type](#traits_type).  
   
- 从概念上来说，每个流缓冲区控制两个独立的流：一个用于提取（输入），另一个用于插入（输出）。 但是，特定的表示形式可能会导致这些流中的一个或两个不可访问。 通常，它在两个流之间保持有某种关系。 例如，向 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> 对象的输出流插入的内容，就是之后从其输入流中提取的内容。 当定位 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 对象的一个流时，将同时定位其他流。  
+ Every stream buffer conceptually controls two independent streams: one for extractions (input) and one for insertions (output). A specific representation may, however, make either or both of these streams inaccessible. It typically maintains some relationship between the two streams. What you insert into the output stream of a [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> object, for example, is what you later extract from its input stream. When you position one stream of a [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> object, you position the other stream in tandem.  
   
- 模板类 `basic_streambuf` 的公共接口提供对所有流缓冲区通用但又专用的操作。 受保护的接口提供特定流的表示形式完成其工作所需的操作。 受保护的虚拟成员函数允许你为特定的流表示形式定制派生流缓冲区的行为。 此库中的每个派生流缓冲区描述它如何专用化其受保护虚拟成员函数的行为。 本主题中描述了基类的默认行为，基类通常不执行任何操作。  
+ The public interface to template class `basic_streambuf` supplies the operations that are common to all stream buffers, however specialized. The protected interface supplies the operations needed for a specific representation of a stream to do its work. The protected virtual member functions let you tailor the behavior of a derived stream buffer for a specific representation of a stream. Each derived stream buffer in this library describes how it specializes the behavior of its protected virtual member functions. The default behavior for the base class, which is often to do nothing, is described in this topic.  
   
- 剩余的受保护成员函数控制将内容复制到任何存储以及从此类存储中复制内容的操作，这类存储用于缓冲出入流的传输。 例如，输入缓冲区的特征是：  
+ The remaining protected member functions control copying to and from any storage supplied to buffer transmissions to and from streams. An input buffer, for example, is characterized by:  
   
-- [eback](#eback)，指向缓冲区开头的指针。  
+- [eback](#eback), a pointer to the beginning of the buffer.  
   
-- [gptr](#gptr)，指向要读取的下一个元素的指针。  
+- [gptr](#gptr), a pointer to the next element to read.  
   
-- [egptr](#egptr)，刚超出缓冲区末尾的指针。  
+- [egptr](#egptr), a pointer just past the end of the buffer.  
   
- 同样，输出缓冲区的特征是：  
+ Similarly, an output buffer is characterized by:  
   
-- [pbase](#pbase)，指向缓冲区开头的指针。  
+- [pbase](#pbase), a pointer to the beginning of the buffer.  
   
-- [pptr](#pptr)，指向要写入的下一个元素的指针。  
+- [pptr](#pptr), a pointer to the next element to write.  
   
-- [epptr](#epptr)，刚超出缓冲区末尾的指针。  
+- [epptr](#epptr), a pointer just past the end of the buffer.  
   
- 对于任何缓冲区，使用以下协议：  
+ For any buffer, the following protocol is used:  
   
--   如果下一个指针为 null，则不存在缓冲区。 否则，所有三个指针都将指向相同的序列。 可以安全地比较它们的顺序。  
+-   If the next pointer is null, no buffer exists. Otherwise, all three pointers point into the same sequence. They can be safely compared for order.  
   
--   对于输出缓冲区，如果下一个指针与结束指针相比较小，则可以在下一个指针指定的写入位置处存储元素。  
+-   For an output buffer, if the next pointer compares less than the end pointer, you can store an element at the write position designated by the next pointer.  
   
--   对于输入缓冲区，如果下一个指针与结束指针相比较小，则可以在下一个指针指定的读取位置处读取元素。  
+-   For an input buffer, if the next pointer compares less than the end pointer, you can read an element at the read position designated by the next pointer.  
   
--   对于输入缓冲区，如果开始指针与下一个指针相比较小，则可以在递减的下一个指针指定的放回位置处放回元素。  
+-   For an input buffer, if the beginning pointer compares less than the next pointer, you can put back an element at the putback position designated by the decremented next pointer.  
   
- 为派生自 `basic_streambuf`< `Elem`, `Tr`> 的类编写的任何受保护虚拟成员函数必须共同协作来维护此协议。  
+ Any protected virtual member functions you write for a class derived from `basic_streambuf`< `Elem`, `Tr`> must cooperate in maintaining this protocol.  
   
- `basic_streambuf`< `Elem`, `Tr`> 类的对象将存储前面所述的六个指针。 该对象还会将区域设置对象存储于类型 [locale](../standard-library/locale-class.md) 的对象中，以供派生的流缓冲区使用。  
+ An object of class `basic_streambuf`< `Elem`, `Tr`> stores the six pointers previously described. It also stores a locale object in an object of type [locale](../standard-library/locale-class.md) for potential use by a derived stream buffer.  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[basic_streambuf](#basic_streambuf)|构造 `basic_streambuf` 类型的对象。|  
-  
-### <a name="typedefs"></a>Typedef  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|将类型名与 `Elem` 模板参数关联。|  
-|[int_type](#int_type)|将 `basic_streambuf` 范围内的类型名称与 `Elem`模板参数 关联。|  
-|[off_type](#off_type)|将 `basic_streambuf` 范围内的类型名称与 `Elem`模板参数 关联。|  
-|[pos_type](#pos_type)|将 `basic_streambuf` 范围内的类型名称与 `Elem`模板参数 关联。|  
-|[traits_type](#traits_type)|将类型名与 `Tr` 模板参数关联。|  
+|[basic_streambuf](#basic_streambuf)|Constructs an object of type `basic_streambuf`.|  
   
-### <a name="member-functions"></a>成员函数  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[eback](#eback)|一个受保护的函数，该函数返回指向输入缓冲区开头的指针。|  
-|[egptr](#egptr)|一个受保护的函数，该函数返回刚超出输入缓冲区末尾的指针。|  
-|[epptr](#epptr)|一个受保护的函数，该函数返回刚超出输出缓冲区末尾的指针。|  
-|[gbump](#gbump)|一个受保护的函数，该函数将 `count` 添加到输入缓冲区的下一个指针。|  
-|[getloc](#getloc)|获取 `basic_streambuf` 对象的区域设置。|  
-|[gptr](#gptr)|一个受保护的函数，该函数返回指向输入缓冲区的下一个元素的指针。|  
-|[imbue](#imbue)|由 [pubimbue](#pubimbue) 调用的受保护虚拟函数。|  
-|[in_avail](#in_avail)|返回可随时从缓冲区读取的元素数目。|  
-|[overflow](#overflow)|将新字符插入到已满缓冲区时可以调用的受保护虚函数。|  
-|[pbackfail](#pbackfail)|一个受保护虚拟成员函数，该函数尝试将元素放回输入流中，随后使它成为当前元素（由下一个指针指向）。|  
-|[pbase](#pbase)|一个受保护的函数，该函数返回指向输出缓冲区开头的指针。|  
-|[pbump](#pbump)|一个受保护的函数，该函数将 `count` 添加到输出缓冲区的下一个指针。|  
-|[pptr](#pptr)|一个受保护的函数，该函数返回指向输出缓冲区的下一个元素的指针。|  
-|[pubimbue](#pubimbue)|设置 `basic_streambuf` 对象的区域设置。|  
-|[pubseekoff](#pubseekoff)|调用 [seekoff](#seekoff)，它是在派生类中进行了重写的受保护虚拟函数。|  
-|[pubseekpos](#pubseekpos)|调用 [seekpos](#seekpos)，它是在派生类中进行了重写并且重置了当前指针位置的受保护虚拟函数。|  
-|[pubsetbuf](#pubsetbuf)|调用 [setbuf](#setbuf)，它是在派生类中进行了重写的受保护虚拟函数。|  
-|[pubsync](#pubsync)|调用 [sync](#sync)，它是在派生类中进行了重写并且更新了与此缓冲区关联的外部流的受保护虚拟函数。|  
-|[sbumpc](#sbumpc)|读取并返回当前元素，从而移动流指针。|  
-|[seekoff](#seekoff)|受保护虚拟成员函数尝试更改受控制流的当前位置。|  
-|[seekpos](#seekpos)|受保护虚拟成员函数尝试更改受控制流的当前位置。|  
-|[setbuf](#setbuf)|受保护虚拟成员函数执行特定于每个派生流缓冲区的操作。|  
-|[setg](#setg)|一个受保护的函数，该函数将 `_Gbeg` 存储到开始指针，将 `_Gnext` 存储到下一个指针，并将 `_Gend` 存储到输入缓冲区的结束指针。|  
-|[setp](#setp)|一个受保护的函数，该函数将 `_Pbeg` 存储到开始指针，并将 `_Pend` 存储到输出缓冲区的结束指针。|  
-|[sgetc](#sgetc)|返回当前元素，但不更改流中的位置。|  
-|[sgetn](#sgetn)|返回读取的元素数目。|  
-|[showmanyc](#showmanyc)|一个受保护的虚拟成员函数，该函数返回可以从输入流中提取并确保该程序将不需要无限期等待的字符数计数。|  
-|[snextc](#snextc)|读取当前元素并返回以下元素。|  
-|[sputbackc](#sputbackc)|将 `char_type` 放入流中。|  
-|[sputc](#sputc)|将一个字符放入流中。|  
-|[sputn](#sputn)|将一个字符串放入流中。|  
-|[stossc](#stossc)|越过流中的当前元素。|  
-|[sungetc](#sungetc)|从流中获取字符。|  
-|[swap](#swap)|将此对象中的值与所提供 `basic_streambuf` 对象参数中的值进行交换。|  
-|[sync](#sync)|一个受保护的虚拟函数，它尝试将受控流与任何关联的外部流同步。|  
-|[uflow](#uflow)|一个受保护的虚拟函数，它从输入流中提取当前元素。|  
-|[underflow](#underflow)|一个受保护的虚拟函数，它从输入流中提取当前元素。|  
-|[xsgetn](#xsgetn)|一个受保护的虚拟函数，它从输入流中提取元素。|  
-|[xsputn](#xsputn)|一个受保护的虚拟函数，它将元素插入到输出流中。|  
+|[char_type](#char_type)|Associates a type name with the `Elem` template parameter.|  
+|[int_type](#int_type)|Associates a type name within `basic_streambuf` scope with the `Elem` template parameter.|  
+|[off_type](#off_type)|Associates a type name within `basic_streambuf` scope with the `Elem` template parameter.|  
+|[pos_type](#pos_type)|Associates a type name within `basic_streambuf` scope with the `Elem` template parameter.|  
+|[traits_type](#traits_type)|Associates a type name with the `Tr` template parameter.|  
   
-### <a name="operators"></a>运算符  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|从另一个 `basic_streambuf` 对象为此对象赋值。|  
+|[eback](#eback)|A protected function that returns a pointer to the beginning of the input buffer.|  
+|[egptr](#egptr)|A protected function that returns a pointer just past the end of the input buffer.|  
+|[epptr](#epptr)|A protected function that returns a pointer just past the end of the output buffer.|  
+|[gbump](#gbump)|A protected function that adds `count` to the next pointer for the input buffer.|  
+|[getloc](#getloc)|Gets the `basic_streambuf` object's locale.|  
+|[gptr](#gptr)|A protected function that returns a pointer to the next element of the input buffer.|  
+|[imbue](#imbue)|A protected, virtual function called by [pubimbue](#pubimbue).|  
+|[in_avail](#in_avail)|Returns the number of elements that are ready to be read from the buffer.|  
+|[overflow](#overflow)|A protected virtual function that can be called when a new character is inserted into a full buffer.|  
+|[pbackfail](#pbackfail)|A protected virtual member function that tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).|  
+|[pbase](#pbase)|A protected function that returns a pointer to the beginning of the output buffer.|  
+|[pbump](#pbump)|A protected function that adds `count` to the next pointer for the output buffer.|  
+|[pptr](#pptr)|A protected function that returns a pointer to the next element of the output buffer.|  
+|[pubimbue](#pubimbue)|Sets the `basic_streambuf` object's locale.|  
+|[pubseekoff](#pubseekoff)|Calls [seekoff](#seekoff), a protected virtual function that is overridden in a derived class.|  
+|[pubseekpos](#pubseekpos)|Calls [seekpos](#seekpos), a protected virtual function that is overridden in a derived class and resets the current pointer position.|  
+|[pubsetbuf](#pubsetbuf)|Calls [setbuf](#setbuf), a protected virtual function that is overridden in a derived class.|  
+|[pubsync](#pubsync)|Calls [sync](#sync), a protected virtual function that is overridden in a derived class and updates the external stream associated with this buffer.|  
+|[sbumpc](#sbumpc)|Reads and returns the current element, moving the stream pointer.|  
+|[seekoff](#seekoff)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[seekpos](#seekpos)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[setbuf](#setbuf)|The protected virtual member function performs an operation particular to each derived stream buffer.|  
+|[setg](#setg)|A protected function that stores `_Gbeg` in the beginning pointer, `_Gnext` in the next pointer, and `_Gend` in the end pointer for the input buffer.|  
+|[setp](#setp)|A protected function that stores `_Pbeg` in the beginning pointer and `_Pend` in the end pointer for the output buffer.|  
+|[sgetc](#sgetc)|Returns current element without changing position in the stream.|  
+|[sgetn](#sgetn)|Returns the number of elements read.|  
+|[showmanyc](#showmanyc)|Protected virtual member function that returns a count of the number of characters that can be extracted from the input stream and ensure that the program will not be subject to an indefinite wait.|  
+|[snextc](#snextc)|Reads the current element and returns the following element.|  
+|[sputbackc](#sputbackc)|Puts a `char_type` in the stream.|  
+|[sputc](#sputc)|Puts a character into the stream.|  
+|[sputn](#sputn)|Puts a character string into the stream.|  
+|[stossc](#stossc)|Move past the current element in the stream.|  
+|[sungetc](#sungetc)|Gets a character from the stream.|  
+|[swap](#swap)|Exchanges the values in this object for the values in the provided `basic_streambuf` object parameter.|  
+|[sync](#sync)|A protected virtual function that tries to synchronize the controlled streams with any associated external streams.|  
+|[uflow](#uflow)|A protected virtual function that extracts the current element from the input stream.|  
+|[underflow](#underflow)|A protected virtual function that extracts the current element from the input stream.|  
+|[xsgetn](#xsgetn)|A protected virtual function that extracts elements from the input stream.|  
+|[xsputn](#xsputn)|A protected virtual function that inserts elements into the output stream.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<streambuf>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the values of this object from another `basic_streambuf` object.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<streambuf>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_streambuf"></a>  basic_streambuf::basic_streambuf  
- 构造 `basic_streambuf` 类型的对象。  
+ Constructs an object of type `basic_streambuf`.  
   
 ```  
 basic_streambuf();
@@ -219,77 +262,77 @@ basic_streambuf();
 basic_streambuf(const basic_streambuf& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 对用于为此 `basic_streambuf` 对象设置值的 `basic_streambuf` 对象的左值引用。  
+ An lvalue reference to the `basic_streambuf` object that is used to set the values for this `basic_streambuf` object.  
   
-### <a name="remarks"></a>备注  
- 第一个受保护构造函数将 null 指针存储在控制输入缓冲区和输出缓冲区的所有指针中。 此外，它还将 `locale::classic` 存储在区域设置对象中。 有关详细信息，请参见 [locale::classic](../standard-library/locale-class.md#classic)。  
+### <a name="remarks"></a>Remarks  
+ The first protected constructor stores a null pointer in all pointers controlling the input buffer and the output buffer. It also stores `locale::classic` in the locale object. For more information, see [locale::classic](../standard-library/locale-class.md#classic).  
   
- 第二个受保护构造函数会从 `right` 复制指针和区域设置。  
+ The second protected constructor copies the pointers and locale from `right`.  
   
 ##  <a name="char_type"></a>  basic_streambuf::char_type  
- 将类型名与 **Elem** 模板参数关联。  
+ Associates a type name with the **Elem** template parameter.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
 ##  <a name="eback"></a>  basic_streambuf::eback  
- 一个受保护的函数，该函数返回指向输入缓冲区开头的指针。  
+ A protected function that returns a pointer to the beginning of the input buffer.  
   
 ```  
 char_type *eback() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向输入缓冲区开头的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the input buffer.  
   
 ##  <a name="egptr"></a>  basic_streambuf::egptr  
- 一个受保护的函数，该函数返回刚超出输入缓冲区末尾的指针。  
+ A protected function that returns a pointer just past the end of the input buffer.  
   
 ```  
 char_type *egptr() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 刚超出输入缓冲区末尾的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer just past the end of the input buffer.  
   
 ##  <a name="epptr"></a>  basic_streambuf::epptr  
- 一个受保护的函数，该函数返回刚超出输出缓冲区末尾的指针。  
+ A protected function that returns a pointer just past the end of the output buffer.  
   
 ```  
 char_type *epptr() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 刚超出输出缓冲区末尾的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer just past the end of the output buffer.  
   
 ##  <a name="gbump"></a>  basic_streambuf::gbump  
- 一个受保护的函数，该函数将 `count` 添加到输入缓冲区的下一个指针。  
+ A protected function that adds `count` to the next pointer for the input buffer.  
   
 ```  
 void gbump(int count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 让指针前进的量。  
+ The amount by which to advance the pointer.  
   
 ##  <a name="getloc"></a>  basic_streambuf::getloc  
- 获取 basic_streambuf 对象的区域设置。  
+ Gets the basic_streambuf object's locale.  
   
 ```  
 locale getloc() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 存储的区域设置对象。  
+### <a name="return-value"></a>Return Value  
+ The stored locale object.  
   
-### <a name="remarks"></a>备注  
- 相关信息，请参阅 [ios_base::getloc](../standard-library/ios-base-class.md#getloc)。  
+### <a name="remarks"></a>Remarks  
+ For related information, see [ios_base::getloc](../standard-library/ios-base-class.md#getloc).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_getloc.cpp  
@@ -308,43 +351,43 @@ C
 ```  
   
 ##  <a name="gptr"></a>  basic_streambuf::gptr  
- 一个受保护的函数，该函数返回指向输入缓冲区的下一个元素的指针。  
+ A protected function that returns a pointer to the next element of the input buffer.  
   
 ```  
 char_type *gptr() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向输入缓冲区下一个元素的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next element of the input buffer.  
   
 ##  <a name="imbue"></a>  basic_streambuf::imbue  
- 由 [pubimbue](#pubimbue) 调用的受保护虚拟函数。  
+ A protected virtual function called by [pubimbue](#pubimbue).  
   
 ```  
 virtual void imbue(const locale& _Loc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Loc`  
- 对区域设置的引用。  
+ A reference to a locale.  
   
-### <a name="remarks"></a>备注  
- 默认行为是不执行任何操作。  
+### <a name="remarks"></a>Remarks  
+ The default behavior is to do nothing.  
   
 ##  <a name="in_avail"></a>  basic_streambuf::in_avail  
- 返回可随时从缓冲区读取的元素数目。  
+ Returns the number of elements that are ready to be read from the buffer.  
   
 ```  
 streamsize in_avail();
 ```  
   
-### <a name="return-value"></a>返回值  
- 可随时从缓冲区读取的元素数目。  
+### <a name="return-value"></a>Return Value  
+ The number of elements that are ready to be read from the buffer.  
   
-### <a name="remarks"></a>备注  
- 如果[读取位置](../standard-library/basic-streambuf-class.md)不可用，此成员函数返回[egptr](#egptr) - [gptr](#gptr)。 否则，将返回 [showmanyc](#showmanyc)。  
+### <a name="remarks"></a>Remarks  
+ If a [read position](../standard-library/basic-streambuf-class.md) is available, the member function returns [egptr](#egptr) - [gptr](#gptr). Otherwise, it returns [showmanyc](#showmanyc).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_in_avail.cpp  
@@ -363,147 +406,147 @@ int main( )
 ```  
   
 ##  <a name="int_type"></a>  basic_streambuf::int_type  
- 将 basic_streambuf 作用域内的类型名称与模板参数中的其中一个类型相关联。  
+ Associates a type name within basic_streambuf scope with one of the types in a template parameter.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
 ##  <a name="off_type"></a>  basic_streambuf::off_type  
- 将 basic_streambuf 作用域内的类型名称与模板参数中的其中一个类型相关联。  
+ Associates a type name within basic_streambuf scope with one of the types in a template parameter.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
 ##  <a name="op_eq"></a>  basic_streambuf::operator=  
- 从另一个 `basic_streambuf` 对象为此对象赋值。  
+ Assigns the values of this object from another `basic_streambuf` object.  
   
 ```  
 basic_streambuf& operator=(const basic_streambuf& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 对用于为此对象赋值的 `basic_streambuf` 对象的左值引用。  
+ An lvalue reference to the `basic_streambuf` object that is used to assign values to this object.  
   
-### <a name="remarks"></a>备注  
- 受保护的成员运算符从 `right`（控制输入缓冲区和输出缓冲区的指针）进行复制。 它还将 `right``.`[getloc()](#getloc) 存储在 `locale object` 中。 它将返回 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The protected member operator copies from `right` the pointers that control the input buffer and the output buffer. It also stores `right.`[getloc()](#getloc) in the `locale object`. It returns `*this`.  
   
 ##  <a name="overflow"></a>  basic_streambuf::overflow  
- 将新字符插入到已满缓冲区时可以调用的受保护虚函数。  
+ A protected virtual function that can be called when a new character is inserted into a full buffer.  
   
 ```  
 virtual int_type overflow(int_type _Meta = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 要插入到缓冲区中的字符或 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。  
+ The character to insert into the buffer, or **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="return-value"></a>返回值  
- 如果该函数不能成功，它将返回 **traits_type::eof** 或引发异常。 否则，它将返回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。 默认行为是返回 **traits_type::eof**。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof** or throws an exception. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*). The default behavior is to return **traits_type::eof**.  
   
-### <a name="remarks"></a>备注  
- 如果 _ *Meta* 不等于 **traits_type::eof**，则受保护虚拟成员函数将尝试向输出流中插入元素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*)。 它可以用多种方法执行此操作：  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta* does not compare equal to **traits_type::eof**, the protected virtual member function endeavors to insert the element **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) into the output stream. It can do so in various ways:  
   
--   如果 `write position` 可用，它可将元素存储到写入位置并增加输出缓冲区的下一个指针。  
+-   If a `write position` is available, it can store the element into the write position and increment the next pointer for the output buffer.  
   
--   它可以通过为输出缓冲区分配新的或额外的存储空间，提供写入位置。  
+-   It can make a write position available by allocating new or additional storage for the output buffer.  
   
--   可以通过写出到某些外部目标、输出缓冲区的开头和下一个指针之间的某些或所有元素使写入位置可用。  
+-   It can make a write position available by writing out, to some external destination, some or all of the elements between the beginning and next pointers for the output buffer.  
   
- 虚拟溢出函数，以及 [sync](#sync) 和 [underflow](#underflow) 函数，共同定义了 streambuf 派生的类的特征。 每个派生的类实现下溢的方式可能不同，但是调用流类的接口是相同的。  
+ The virtual overflow function, together with the [sync](#sync) and [underflow](#underflow) functions, defines the characteristics of the streambuf-derived class. Each derived class might implement overflow differently, but the interface with the calling stream class is the same.  
   
- 在 put 区域为满时，`overflow` 函数最常由公共 `streambuf` 函数（如 `sputc` 和 `sputn`）调用，但其他类（包括流类）可以在任何时候调用 `overflow`。  
+ The `overflow` function is most frequently called by public `streambuf` functions like `sputc` and `sputn` when the put area is full, but other classes, including the stream classes, can call `overflow` anytime.  
   
- 该函数使用 `pbase` 和 `pptr` 指针之间 put 区域中的字符，然后重新初始化 put 区域。 `overflow` 函数必须也使用 `nCh`（如果 `nCh` 不为 `EOF`），或者，它可能选择将该字符放入新的 put 区域，以便在下一次调用时使用它。  
+ The function consumes the characters in the put area between the `pbase` and `pptr` pointers and then reinitializes the put area. The `overflow` function must also consume `nCh` (if `nCh` is not `EOF`), or it might choose to put that character in the new put area so that it will be consumed on the next call.  
   
- 使用的定义根据派生的类而有所不同。 例如，`filebuf` 类将其字符写入到文件，而 `strstreambuf` 类则将字符保留在它的缓冲区中，并且（缓冲区被指定为动态）扩展缓冲区，以响应溢出的调用。 此扩展通过释放旧的缓冲区并将其替换为新的、较大的缓冲区来实现。 根据需要调整指针。  
+ The definition of consume varies among derived classes. For example, the `filebuf` class writes its characters to a file, while the `strstreambuf` class keeps them in its buffer and (if the buffer is designated as dynamic) expands the buffer in response to a call to overflow. This expansion is achieved by freeing the old buffer and replacing it with a new, larger one. The pointers are adjusted as necessary.  
   
 ##  <a name="pbackfail"></a>  basic_streambuf::pbackfail  
- 一个受保护虚拟成员函数，该函数尝试将元素放回输入流中，随后使它成为当前元素（由下一个指针指向）。  
+ A protected virtual member function that tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).  
   
 ```  
 virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 要插入到缓冲区中的字符或 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。  
+ The character to insert into the buffer, or **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="return-value"></a>返回值  
- 如果该函数不能成功，它将返回 **traits_type::eof** 或引发异常。 否则，将返回其他值。 默认行为是返回 **traits_type::eof**。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof** or throws an exception. Otherwise, it returns some other value. The default behavior is to return **traits_type::eof**.  
   
-### <a name="remarks"></a>备注  
- 如果 _ *Meta* 等于 **traits_type::eof**，要推送回的元素在当前元素之前实际上已是流中的一个元素了。 否则，由 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 替换该元素。 该函数可以用多种方法放回元素：  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta* compares equal to **traits_type::eof**, the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). The function can put back an element in various ways:  
   
--   如果放回位置可用，它可将元素存储到放回位置并递减输入缓冲区的下一个指针。  
+-   If a putback position is available, it can store the element into the putback position and decrement the next pointer for the input buffer.  
   
--   通过分配输入缓冲区的新的或其他存储使放回位置可用。  
+-   It can make a putback position available by allocating new or additional storage for the input buffer.  
   
--   对于具有常见的输入和输出流的流缓冲区，可以通过写出到某些外部目标、输出缓冲区的开头和下一个指针之间的某些或所有元素使放回位置可用。  
+-   For a stream buffer with common input and output streams, it can make a putback position available by writing out, to some external destination, some or all of the elements between the beginning and next pointers for the output buffer.  
   
 ##  <a name="pbase"></a>  basic_streambuf::pbase  
- 一个受保护的函数，该函数返回指向输出缓冲区开头的指针。  
+ A protected function that returns a pointer to the beginning of the output buffer.  
   
 ```  
 char_type *pbase() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向输出缓冲区开头的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the output buffer.  
   
 ##  <a name="pbump"></a>  basic_streambuf::pbump  
- 一个受保护的函数，该函数将 `count` 添加到输出缓冲区的下一个指针。  
+ A protected function that adds `count` to the next pointer for the output buffer.  
   
 ```  
 void pbump(int count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `count`  
- 向前移动写入位置的字符数。  
+ The number of characters by which to move the write position forward.  
   
 ##  <a name="pos_type"></a>  basic_streambuf::pos_type  
- 将 basic_streambuf 作用域内的类型名称与模板参数中的其中一个类型相关联。  
+ Associates a type name within basic_streambuf scope with one of the types in a template parameter.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
 ##  <a name="pptr"></a>  basic_streambuf::pptr  
- 一个受保护的函数，该函数返回指向输出缓冲区的下一个元素的指针。  
+ A protected function that returns a pointer to the next element of the output buffer.  
   
 ```  
 char_type *pptr() const;
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向输出缓冲区下一个元素的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next element of the output buffer.  
   
 ##  <a name="pubimbue"></a>  basic_streambuf::pubimbue  
- 设置 basic_streambuf 对象的区域设置。  
+ Sets the basic_streambuf object's locale.  
   
 ```  
 locale pubimbue(const locale& _Loc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Loc`  
- 对区域设置的引用。  
+ A reference to a locale.  
   
-### <a name="return-value"></a>返回值  
- 存储在区域设置对象中的以前的值。  
+### <a name="return-value"></a>Return Value  
+ The previous value stored in the locale object.  
   
-### <a name="remarks"></a>备注  
- 成员函数将 _ *Loc* 存储在区域设置对象中，并调用 [imbue](#imbue)。  
+### <a name="remarks"></a>Remarks  
+ The member function stores _ *Loc* in the locale object and calls [imbue](#imbue).  
   
-### <a name="example"></a>示例  
-  有关使用 `pubimbue` 的示例，请参阅 [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue)。  
+### <a name="example"></a>Example  
+  See [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue) for an example that uses `pubimbue`.  
   
 ##  <a name="pubseekoff"></a>  basic_streambuf::pubseekoff  
- 调用 [seekoff](#seekoff)，它是在派生类中进行了重写的受保护虚拟函数。  
+ Calls [seekoff](#seekoff), a protected virtual function that is overridden in a derived class.  
   
 ```  
 pos_type pubseekoff(off_type _Off,
@@ -511,44 +554,44 @@ pos_type pubseekoff(off_type _Off,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 要搜寻的相对于 `_Way` 的位置。  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- 指定指针位置的模式。 默认允许修改读取和写入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>返回值  
- 返回新位置或无效的流位置 ( [seekoff](#seekoff)(_ *Off*, `_Way`, `_Which`) )。  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position ( [seekoff](#seekoff)(_ *Off*, `_Way`, `_Which`) ).  
   
-### <a name="remarks"></a>备注  
- 移动相对于 `_Way` 的指针。  
+### <a name="remarks"></a>Remarks  
+ Moves the pointer relative to `_Way`.  
   
 ##  <a name="pubseekpos"></a>  basic_streambuf::pubseekpos  
- 调用 [seekpos](#seekpos)，它是在派生类中进行了重写并且重置了当前指针位置的受保护虚拟函数。  
+ Calls [seekpos](#seekpos), a protected virtual function that is overridden in a derived class, and resets the current pointer position.  
   
 ```  
 pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- 要搜寻的位置。  
+ The position to seek for.  
   
  `_Which`  
- 指定指针位置的模式。 默认允许修改读取和写入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>返回值  
- 新位置或无效的流位置。 若要确定流位置是否无效，请比较返回值与 `pos_type(off_type(-1))`。  
+### <a name="return-value"></a>Return Value  
+ The new position or an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回 [seekpos](#seekpos)(_ *Sp*, `_Which`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [seekpos](#seekpos)(_ *Sp*, `_Which`).  
   
 ##  <a name="pubsetbuf"></a>  basic_streambuf::pubsetbuf  
- 调用 [setbuf](#setbuf)，它是在派生类中进行了重写的受保护虚拟函数。  
+ Calls [setbuf](#setbuf), a protected virtual function that is overridden in a derived class.  
   
 ```  
 basic_streambuf<Elem, Tr> *pubsetbuf(
@@ -556,40 +599,40 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Buffer`  
- 指向此实例化的 `char_type` 的指针。  
+ A pointer to `char_type` for this instantiation.  
   
  `count`  
- 缓冲区的大小。  
+ The size of the buffer.  
   
-### <a name="return-value"></a>返回值  
- 返回 [setbuf](#setbuf)( `_Buffer`, `count`)。  
+### <a name="return-value"></a>Return Value  
+ Returns [setbuf](#setbuf)( `_Buffer`, `count`).  
   
 ##  <a name="pubsync"></a>  basic_streambuf::pubsync  
- 调用 [sync](#sync)，它是在派生类中重写并更新了与此缓冲区相关联的外部流的受保护虚拟函数。  
+ Calls [sync](#sync), a protected virtual function that is overridden in a derived class, and updates the external stream associated with this buffer.  
   
 ```  
 int pubsync();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回[同步](#sync)或则为-1 失败。  
+### <a name="return-value"></a>Return Value  
+ Returns [sync](#sync) or -1 if failure.  
   
 ##  <a name="sbumpc"></a>  basic_streambuf::sbumpc  
- 读取并返回当前元素，从而移动流指针。  
+ Reads and returns the current element, moving the stream pointer.  
   
 ```  
 int_type sbumpc();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前元素。  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>备注  
- 如果读取位置可用，则成员函数返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr)) 并递增输入缓冲区的下一个指针。 否则，返回 [uflow](#uflow)。  
+### <a name="remarks"></a>Remarks  
+ If a read position is available, the member function returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\***[gptr](#gptr)) and increments the next pointer for the input buffer. Otherwise, it returns [uflow](#uflow).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sbumpc.cpp  
@@ -618,7 +661,7 @@ int main( )
 ```  
   
 ##  <a name="seekoff"></a>  basic_streambuf::seekoff  
- 一个受保护的虚拟成员函数，它尝试更改受控流的当前位置。  
+ A protected virtual member function that tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekoff(
@@ -627,58 +670,58 @@ virtual pos_type seekoff(
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 要搜寻的相对于 `_Way` 的位置。  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- 偏移操作的起点。 请参阅 [seekdir](../standard-library/ios-base-class.md#seekdir)，查看可能的值。  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- 指定指针位置的模式。 默认允许修改读取和写入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>返回值  
- 返回新位置或无效的流位置 ( `seekoff` (_ *Off*, `_Way`, `_Which`) )。  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position ( `seekoff` (_ *Off*, `_Way`, `_Which`) ).  
   
-### <a name="remarks"></a>备注  
- 确定新的位置，如下所示：  
+### <a name="remarks"></a>Remarks  
+ The new position is determined as follows:  
   
--   如果 `_Way` ==  `ios_base::beg`，新位置是流的开始位置加上 _ *Off*。  
+-   If `_Way` == `ios_base::beg`, the new position is the beginning of the stream plus _ *Off*.  
   
--   如果 `_Way` ==  `ios_base::cur`，新位置是当前流位置加上 _*Off*。  
+-   If `_Way` == `ios_base::cur`, the new position is the current stream position plus _ *Off*.  
   
--   如果 `_Way` ==  `ios_base::end`，新的位置是当前流末尾加上 _*Off*。  
+-   If `_Way` == `ios_base::end`, the new position is the end of the stream plus _ *Off*.  
   
- 通常情况下，如果 **which & ios_base::in** 为非零值，则输入流受影响；如果 **which & ios_base::out** 为非零值，则输出流受影响。 但是，此参数的实际用法因派生的流缓冲区而有所不同。  
+ Typically, if **which & ios_base::in** is nonzero, the input stream is affected, and if **which & ios_base::out** is nonzero, the output stream is affected. Actual use of this parameter varies among derived stream buffers, however.  
   
- 如果该函数成功改变了一个或多个流位置，它将返回结果流位置或其中一个结果流位置。 否则，返回一个无效的流位置。 默认行为是返回无效的流位置。  
+ If the function succeeds in altering the stream position or positions, it returns the resulting stream position or one of the resulting stream positions. Otherwise, it returns an invalid stream position. The default behavior is to return an invalid stream position.  
   
 ##  <a name="seekpos"></a>  basic_streambuf::seekpos  
- 一个受保护的虚拟成员函数，它尝试更改受控流的当前位置。  
+ A protected virtual member function that tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- 要搜寻的位置。  
+ The position to seek for.  
   
  `_Which`  
- 指定指针位置的模式。 默认允许修改读取和写入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>返回值  
- 新位置，或无效的流位置。 若要确定流位置是否无效，请比较返回值与 `pos_type(off_type(-1))`。  
+### <a name="return-value"></a>Return Value  
+ The new position, or an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>备注  
- 新的位置是 _ *Sp*。  
+### <a name="remarks"></a>Remarks  
+ The new position is _ *Sp*.  
   
- 通常情况下，如果 **which & ios_base::in** 为非零值，则输入流受影响；如果 **which & ios_base::out** 为非零值，则输出流受影响。 但是，此参数的实际用法因派生的流缓冲区而有所不同。  
+ Typically, if **which & ios_base::in** is nonzero, the input stream is affected, and if **which & ios_base::out** is nonzero, the output stream is affected. Actual use of this parameter varies among derived stream buffers, however.  
   
- 如果该函数成功改变了一个或多个流位置，它将返回结果流位置或其中一个结果流位置。 否则，返回一个无效的流位置 (-1)。 默认行为是返回无效的流位置。  
+ If the function succeeds in altering the stream position or positions, it returns the resulting stream position or one of the resulting stream positions. Otherwise, it returns an invalid stream position (-1). The default behavior is to return an invalid stream position.  
   
 ##  <a name="setbuf"></a>  basic_streambuf::setbuf  
- 受保护虚拟成员函数，执行特定于每个派生流缓冲区的操作。  
+ A protected virtual member function that performs an operation particular to each derived stream buffer.  
   
 ```  
 virtual basic_streambuf<Elem, Tr> *setbuf(
@@ -686,21 +729,21 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Buffer`  
- 指向缓冲区的指针。  
+ Pointer to a buffer.  
   
  `count`  
- 缓冲区的大小。  
+ Size of the buffer.  
   
-### <a name="return-value"></a>返回值  
- 默认行为是返回 **this**。  
+### <a name="return-value"></a>Return Value  
+ The default behavior is to return **this**.  
   
-### <a name="remarks"></a>备注  
- 请参阅 [basic_filebuf](../standard-library/basic-filebuf-class.md)。 `setbuf` 提供一个内存区域，以供 `streambuf` 对象使用。 在派生类中定义的缓冲区的使用方式。  
+### <a name="remarks"></a>Remarks  
+ See [basic_filebuf](../standard-library/basic-filebuf-class.md). `setbuf` provides an area of memory for the `streambuf` object to use. How the buffer is used in defined in the derived classes.  
   
 ##  <a name="setg"></a>  basic_streambuf::setg  
- 一个受保护函数，用于将 _*Gbeg* 存储到开始指针，将 `_Gnext` 存储到下一个指针，并将 `_Gend` 存储到输入缓冲区的结束指针。  
+ A protected function that stores _ *Gbeg* in the beginning pointer, `_Gnext` in the next pointer, and `_Gend` in the end pointer for the input buffer.  
   
 ```  
 void setg(char_type* _Gbeg,
@@ -708,44 +751,44 @@ void setg(char_type* _Gbeg,
     char_type* _Gend);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *_Gbeg*  
- 指向缓冲区开头的指针。  
+ A pointer to the beginning of the buffer.  
   
  `_Gnext`  
- 指向缓冲区中间某处的指针。  
+ A pointer to somewhere in the middle of the buffer.  
   
  `_Gend`  
- 指向缓冲区末尾的指针。  
+ A pointer to the end of the buffer.  
   
 ##  <a name="setp"></a>  basic_streambuf::setp  
- 一个受保护的函数，该函数将 `_Pbeg` 存储到开始指针，并将 `_Pend` 存储到输出缓冲区的结束指针。  
+ A protected function that stores `_Pbeg` in the beginning pointer and `_Pend` in the end pointer for the output buffer.  
   
 ```  
 void setp(char_type* _Pbeg, char_type* _Pend);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Pbeg`  
- 指向缓冲区开头的指针。  
+ A pointer to the beginning of the buffer.  
   
  `_Pend`  
- 指向缓冲区末尾的指针。  
+ A pointer to the end of the buffer.  
   
 ##  <a name="sgetc"></a>  basic_streambuf::sgetc  
- 返回当前元素，但不更改流中的位置。  
+ Returns current element without changing position in the stream.  
   
 ```  
 int_type sgetc();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前元素。  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>备注  
- 如果读取位置可用，则成员函数返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr))。 否则，返回 [underflow](#underflow)。  
+### <a name="remarks"></a>Remarks  
+ If a read position is available, the member function returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)). Otherwise, it returns [underflow](#underflow).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sgetc.cpp  
@@ -766,9 +809,9 @@ int main( )
 ```  
   
 ##  <a name="sgetn"></a>  basic_streambuf::sgetn  
- 最多从输入缓冲区提取 `count` 个字符，并将其存储在提供的缓冲区 `ptr`。  
+ Extracts up to `count` characters from the input buffer and stores them in the provided buffer `ptr`.  
   
- 此方法可能并不安全，因为它依赖于调用方检查所传递的值是否正确。  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 streamsize sgetn(
@@ -776,20 +819,20 @@ streamsize sgetn(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 要包含提取字符的缓冲区。  
+ The buffer to contain the extracted characters.  
   
  `count`  
- 要读取的元素数目。  
+ The number of elements to read.  
   
-### <a name="return-value"></a>返回值  
- 要读取的元素数目。 有关详细信息，请参阅 [streamsize](../standard-library/ios-typedefs.md#streamsize)。  
+### <a name="return-value"></a>Return Value  
+ The number of elements read. See [streamsize](../standard-library/ios-typedefs.md#streamsize) for more information.  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回 [xsgetn](#xsgetn)( `ptr`, `count`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [xsgetn](#xsgetn)( `ptr`, `count`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sgetn.cpp  
@@ -817,29 +860,29 @@ int main()
 ```  
   
 ##  <a name="showmanyc"></a>  basic_streambuf::showmanyc  
- 一个受保护虚拟成员函数，该函数返回可以从输入流中提取并确保该程序将不需要无限期等待的字符数计数。  
+ A protected virtual member function that returns a count of the number of characters that can be extracted from the input stream and ensure that the program will not be subject to an indefinite wait.  
   
 ```  
 virtual streamsize showmanyc();
 ```  
   
-### <a name="return-value"></a>返回值  
- 默认行为是返回零。  
+### <a name="return-value"></a>Return Value  
+ The default behavior is to return zero.  
   
 ##  <a name="snextc"></a>  basic_streambuf::snextc  
- 读取当前元素并返回以下元素。  
+ Reads the current element and returns the following element.  
   
 ```  
 int_type snextc();
 ```  
   
-### <a name="return-value"></a>返回值  
- 流中的下一个元素。  
+### <a name="return-value"></a>Return Value  
+ The next element in the stream.  
   
-### <a name="remarks"></a>备注  
- 成员函数调用 [sbumpc](#sbumpc)，如果该函数返回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，则返回 **traits_type::eof**。 否则，返回 [sgetc](#sgetc)。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [sbumpc](#sbumpc) and, if that function returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), returns **traits_type::eof**. Otherwise, it returns [sgetc](#sgetc).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_snextc.cpp  
@@ -867,23 +910,23 @@ aa97
 ```  
   
 ##  <a name="sputbackc"></a>  basic_streambuf::sputbackc  
- 将 char_type 放入流中。  
+ Puts a char_type in the stream.  
   
 ```  
 int_type sputbackc(char_type _Ch);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- 字符。  
+ The character.  
   
-### <a name="return-value"></a>返回值  
- 返回字符或失败。  
+### <a name="return-value"></a>Return Value  
+ Returns the character or failure.  
   
-### <a name="remarks"></a>备注  
- 如果放回位置可用，且 `_Ch` 与存储在该位置的字符相等，则成员函数递减输入缓冲区的下一个指针，并返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否则，它将返回 [pbackfail](#pbackfail)( `_Ch`)。  
+### <a name="remarks"></a>Remarks  
+ If a putback position is available and `_Ch` compares equal to the character stored in that position, the member function decrements the next pointer for the input buffer and returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Otherwise, it returns [pbackfail](#pbackfail)( `_Ch`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sputbackc.cpp  
@@ -911,23 +954,23 @@ int main( )
 ```  
   
 ##  <a name="sputc"></a>  basic_streambuf::sputc  
- 将一个字符放入流中。  
+ Puts a character into the stream.  
   
 ```  
 int_type sputc(char_type _Ch);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- 字符。  
+ The character.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则返回字符。  
+### <a name="return-value"></a>Return Value  
+ Returns the character, if successful.  
   
-### <a name="remarks"></a>备注  
- 如果 `write position` 可用，则成员函数在写入位置存储 `_Ch`，递增输出缓冲区的下一个指针，并返回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否则，返回 [overflow](#overflow)( `_Ch`)。  
+### <a name="remarks"></a>Remarks  
+ If a `write position` is available, the member function stores `_Ch` in the write position, increments the next pointer for the output buffer, and returns **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Otherwise, it returns [overflow](#overflow)( `_Ch`).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sputc.cpp  
@@ -950,26 +993,26 @@ a
 ```  
   
 ##  <a name="sputn"></a>  basic_streambuf::sputn  
- 将一个字符串放入流中。  
+ Puts a character string into the stream.  
   
 ```  
 streamsize sputn(const char_type* ptr, streamsize count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 字符串。  
+ The character string.  
   
  `count`  
- 字符数。  
+ The count of characters.  
   
-### <a name="return-value"></a>返回值  
- 实际插入流的字符数。  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually inserted into the stream.  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回 [xsgetn](#xsputn)( `ptr`, `count`)。 有关详细信息，请参阅此成员的“备注”部分。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [xsputn](#xsputn)( `ptr`, `count`). See the Remarks section of this member for more information.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sputn.cpp  
@@ -992,16 +1035,16 @@ test
 ```  
   
 ##  <a name="stossc"></a>  basic_streambuf::stossc  
- 越过流中的当前元素。  
+ Move past the current element in the stream.  
   
 ```  
 void stossc();
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数调用 [sbumpc](#sbumpc)。 请注意，提供该成员函数不需要实现。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [sbumpc](#sbumpc). Note that an implementation is not required to supply this member function.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_stossc.cpp  
@@ -1021,19 +1064,19 @@ int main( )
 ```  
   
 ##  <a name="sungetc"></a>  basic_streambuf::sungetc  
- 从流中获取字符。  
+ Gets a character from the stream.  
   
 ```  
 int_type sungetc();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回字符或失败。  
+### <a name="return-value"></a>Return Value  
+ Returns either the character or failure.  
   
-### <a name="remarks"></a>备注  
- 如果放回位置可用，则成员函数递减输入缓冲区的下一个指针并返回 `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr))。 但是，并不总是能够确定读取的最后一个字符，使得可以在当前缓冲区的状态中将其捕获。 如果这为 true，则函数返回 [pbackfail](#pbackfail)。 若要避免这种情况，请跟踪字符，以放回并调用 `sputbackc(ch)`；如果没有在流的开始位置对其调用或尝试放回多个字符，则此调用不会失败。  
+### <a name="remarks"></a>Remarks  
+ If a putback position is available, the member function decrements the next pointer for the input buffer and returns `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr)). However, it is not always possible to determine the last character read so that it can be captured in the state of the current buffer. If this is true, then the function returns [pbackfail](#pbackfail). To avoid this situation, keep track of the character to put back and call `sputbackc(ch)`, which will not fail provided you don't call it at the beginning of the stream and you don't try to put back more than one character.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_streambuf_sungetc.cpp  
@@ -1068,93 +1111,93 @@ int main( )
 ```  
   
 ##  <a name="swap"></a>  basic_streambuf::swap  
- 将此对象中的值与提供的 `basic_streambuf` 对象中的值进行交换。  
+ Exchanges the values in this object for the values in the provided `basic_streambuf` object.  
   
 ```  
 void swap(basic_streambuf& right);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|对用于交换值的 `basic_streambuf` 对象的左值引用。|  
+|`right`|An lvalue reference to the `basic_streambuf` object that is used to exchange values.|  
   
-### <a name="remarks"></a>备注  
- 受保护的成员函数可与 `right`（控制 `input buffer` 和 `output buffer` 的所有指针）进行交换。 它还将 `right``.`[getloc()](#getloc) 与 `locale` 对象进行交换。  
+### <a name="remarks"></a>Remarks  
+ The protected member function exchanges with `right` all the pointers controlling the `input buffer` and the `output buffer`. It also exchanges `right.`[getloc()](#getloc) with the `locale` object.  
   
 ##  <a name="sync"></a>  basic_streambuf::sync  
- 一个受保护的虚拟函数，它尝试将受控流与任何关联的外部流同步。  
+ A protected virtual function that tries to synchronize the controlled streams with any associated external streams.  
   
 ```  
 virtual int sync();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果该函数不成功，它将返回 -1。 默认行为是返回零。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns -1. The default behavior is to return zero.  
   
-### <a name="remarks"></a>备注  
- `sync` 涉及写出输出缓冲区的开头和下一个指针间的任意元素。 它不涉及放回输入缓冲区的下一个和结束指针之间的任何元素。  
+### <a name="remarks"></a>Remarks  
+ `sync` involves writing out any elements between the beginning and next pointers for the output buffer. It does not involve putting back any elements between the next and end pointers for the input buffer.  
   
 ##  <a name="traits_type"></a>  basic_streambuf::traits_type  
- 将类型名与 **Tr** 模板参数关联。  
+ Associates a type name with the **Tr** template parameter.  
   
 ```  
 typedef Tr traits_type;  
 ```  
   
 ##  <a name="uflow"></a>  basic_streambuf::uflow  
- 一个受保护的虚拟函数，它从输入流中提取当前元素。  
+ A protected virtual function that extracts the current element from the input stream.  
   
 ```  
 virtual int_type uflow();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前元素。  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>备注  
- 受保护虚拟成员函数尝试从输入流提取当前元素 **ch**，提升当前流位置，并返回元素作为 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**)。 它可以用多种方法执行此操作：  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function tries to extract the current element **ch** from the input stream, then advance the current stream position, and return the element as **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). It can do so in various ways:  
   
--   如果读取位置可用，它采用 **ch** 作为存储在读取位置中的元素，并提升输入缓冲区的下一个指针。  
+-   If a read position is available, it takes **ch** as the element stored in the read position and advances the next pointer for the input buffer.  
   
--   它可以从某些外部源直接读取元素，并将其传输为值 **ch**。  
+-   It can read an element directly, from some external source, and deliver it as the value **ch**.  
   
--   对于具有常见的输入和输出流的流缓冲区，可以通过写出到某些外部目标、输出缓冲区的开头和下一个指针之间的某些或所有元素使读取位置可用。 或者，可以为输入缓冲区分配新的或其他存储。 然后，该函数从某些外部源的一个或多个元素中进行读取。  
+-   For a stream buffer with common input and output streams, it can make a read position available by writing out, to some external destination, some or all of the elements between the beginning and next pointers for the output buffer. Or it can allocate new or additional storage for the input buffer. The function then reads in, from some external source, one or more elements.  
   
- 如果该函数不成功，它将返回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，或者引发异常。 否则，它返回输入流中的当前元素 `ch`，按上文所述进行转换，并提升输入缓冲区的下一个指针。 默认行为是调用 [underflow](#underflow)，并且，如果该函数返回 **traits_type::eof**，则返回 **traits_type::eof**。 否则，它返回输入流中的当前元素 **ch**，按上文所述进行转换，并为输入缓冲区提升下一个指针。  
+ If the function cannot succeed, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), or throws an exception. Otherwise, it returns the current element `ch` in the input stream, converted as described above, and advances the next pointer for the input buffer. The default behavior is to call [underflow](#underflow) and, if that function returns **traits_type::eof**, to return **traits_type::eof**. Otherwise, the function returns the current element **ch** in the input stream, converted as previously described, and advances the next pointer for the input buffer.  
   
 ##  <a name="underflow"></a>  basic_streambuf::underflow  
- 受保护虚函数从输入流中提取当前元素。  
+ Protected, virtual function to extract the current element from the input stream.  
   
 ```  
 virtual int_type underflow();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前元素。  
+### <a name="return-value"></a>Return Value  
+ The current element.  
   
-### <a name="remarks"></a>备注  
- 受保护虚拟成员函数从输入流提取当前元素 **ch**，而不会提升当前流位置，并将其返回为 `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**)。 它可以用多种方法执行此操作：  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to extract the current element **ch** from the input stream, without advancing the current stream position, and return it as `traits_type::`[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). It can do so in various ways:  
   
--   如果读取位置可用，则 **ch** 为存储在读取位置的元素。 有关详细信息，请参阅 [basic_streambuf 类](../standard-library/basic-streambuf-class.md)的“备注”部分。  
+-   If a read position is available, **ch** is the element stored in the read position. For more information on this, see the Remarks section of the [basic_streambuf Class](../standard-library/basic-streambuf-class.md).  
   
--   通过为输入缓冲区分配新的或其他存储，然后从某些外部源中读取一个或多个元素使读取位置可用。 有关详细信息，请参阅 [basic_streambuf 类](../standard-library/basic-streambuf-class.md)的“备注”部分。  
+-   It can make a read position available by allocating new or additional storage for the input buffer, then reading in, from some external source, one or more elements. For more information on this, see the Remarks section of the [basic_streambuf Class](../standard-library/basic-streambuf-class.md).  
   
- 如果该函数不能成功，它将返回 `traits_type::`[eof](../standard-library/char-traits-struct.md#eof)`()` 或引发异常。 否则，它返回输入流中的当前元素，并根据前文所述进行转换。 默认行为是返回 `traits_type::eof()`。  
+ If the function cannot succeed, it returns `traits_type::`[eof](../standard-library/char-traits-struct.md#eof)`()` or throws an exception. Otherwise, it returns the current element in the input stream, converted as previously described. The default behavior is to return `traits_type::eof()`.  
   
- 虚拟 `underflow` 函数，以及 [sync](#sync) 和 [overflow](#overflow) 函数，共同定义 `streambuf` 派生的类的特征。 每个派生的类实现 `underflow` 的方式可能不同，但是调用流类的接口是相同的。  
+ The virtual `underflow` function, with the [sync](#sync) and [overflow](#overflow) functions, defines the characteristics of the `streambuf`-derived class. Each derived class might implement `underflow` differently, but the interface with the calling stream class is the same.  
   
- 在 get 区域为空时，`underflow` 函数最常由公共 `streambuf` 函数调用，如 [sgetc](#sgetc) 和 [sgetn](#sgetn)，但其他类（包括流类）可以在任何时候调用 `underflow`。  
+ The `underflow` function is most frequently called by public `streambuf` functions like [sgetc](#sgetc) and [sgetn](#sgetn) when the get area is empty, but other classes, including the stream classes, can call `underflow` anytime.  
   
- `underflow` 函数为 get 区域提供来自输入源的字符。 如果 get 区域包含字符，则 `underflow` 返回第一个字符。 如果 get 区域为空，则填充 get 区域并返回下一个字符（即留在 get 区域中的字符）。 如果没有更多可用的字符，则 `underflow` 返回 `EOF` 并将 get 区域留空。  
+ The `underflow` function supplies the get area with characters from the input source. If the get area contains characters, `underflow` returns the first character. If the get area is empty, it fills the get area and returns the next character (which it leaves in the get area). If there are no more characters available, then `underflow` returns `EOF` and leaves the get area empty.  
   
- 在 `strstreambuf` 类中，`underflow` 调整 [egptr](#egptr) 指针，以访问由调用 `overflow` 动态分配的存储。  
+ In the `strstreambuf` class, `underflow` adjusts the [egptr](#egptr) pointer to access storage that was dynamically allocated by a call to `overflow`.  
   
 ##  <a name="xsgetn"></a>  basic_streambuf::xsgetn  
- 一个受保护虚拟函数，它从输入流中提取元素。  
+ Protected, virtual function to extract elements from the input stream.  
   
- 此方法可能并不安全，因为它依赖于调用方检查所传递的值是否正确。  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 virtual streamsize xsgetn(
@@ -1162,42 +1205,42 @@ virtual streamsize xsgetn(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 要包含提取字符的缓冲区。  
+ The buffer to contain the extracted characters.  
   
  `count`  
- 要提取的元素数。  
+ The number of elements to extract.  
   
-### <a name="return-value"></a>返回值  
- 已提取的元素数。  
+### <a name="return-value"></a>Return Value  
+ The number of elements extracted.  
   
-### <a name="remarks"></a>备注  
- 此受保护虚拟成员函数最多将从输入流提取 `count` 个元素，这与从以 `ptr` 开头的数组重复调用 [sbumpc](#sbumpc) 并存储元素类似。 它返回实际提取的元素数。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function extracts up to `count` elements from the input stream, as if by repeated calls to [sbumpc](#sbumpc), and stores them in the array beginning at `ptr`. It returns the number of elements actually extracted.  
   
 ##  <a name="xsputn"></a>  basic_streambuf::xsputn  
- 受保护虚拟函数，它将元素插入到输出流中。  
+ Protected, virtual function to insert elements into the output stream.  
   
 ```  
 virtual streamsize xsputn(const char_type* ptr, streamsize count);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 指向要插入的元素的指针。  
+ Pointer to elements to insert.  
   
  `count`  
- 要插入的元素数。  
+ Number of elements to insert.  
   
-### <a name="return-value"></a>返回值  
- 它返回实际插入到流的元素数。  
+### <a name="return-value"></a>Return Value  
+ The number of elements actually inserted into the stream.  
   
-### <a name="remarks"></a>备注  
- 此受保护虚拟成员函数最多将 `count` 个元素插入输出流，这与从以 `ptr` 开头的数组重复调用 [sputc](#sputc) 类似。 当所有 `count` 个字符已被写入或如果调用 `sputc( count)` 将返回 `traits::eof()` 时，输出流的字符插入立即停止。 它返回实际插入的元素数。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function inserts up to `count` elements into the output stream, as if by repeated calls to [sputc](#sputc), from the array beginning at `ptr`. The insertion of characters into the output stream stops once all `count` characters have been written, or if calling `sputc( count)` would return `traits::eof()`. It returns the number of elements actually inserted.  
   
-## <a name="see-also"></a>另请参阅  
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 编程](../standard-library/iostream-programming.md)   
- [iostreams 约定](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

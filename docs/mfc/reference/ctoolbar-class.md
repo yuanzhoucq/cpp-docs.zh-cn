@@ -1,5 +1,5 @@
 ---
-title: "CToolBar 类 |Microsoft 文档"
+title: CToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,13 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows toolbar common controls [C++]
-- control bars [C++], CToolBar class
-- toolbars [C++], CToolBar class
-- buttons [C++], MFC toolbars
-- bitmaps [C++], button controls
-- CToolBar class
-- Windows common controls [C++], CToolBar class
+- CToolBar [MFC], CToolBar
+- CToolBar [MFC], CommandToIndex
+- CToolBar [MFC], Create
+- CToolBar [MFC], CreateEx
+- CToolBar [MFC], GetButtonInfo
+- CToolBar [MFC], GetButtonStyle
+- CToolBar [MFC], GetButtonText
+- CToolBar [MFC], GetItemID
+- CToolBar [MFC], GetItemRect
+- CToolBar [MFC], GetToolBarCtrl
+- CToolBar [MFC], LoadBitmap
+- CToolBar [MFC], LoadToolBar
+- CToolBar [MFC], SetBitmap
+- CToolBar [MFC], SetButtonInfo
+- CToolBar [MFC], SetButtons
+- CToolBar [MFC], SetButtonStyle
+- CToolBar [MFC], SetButtonText
+- CToolBar [MFC], SetHeight
+- CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 caps.latest.revision: 26
 author: mikeblome
@@ -59,104 +71,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3df7fd3eda4dad244a90364593744068df62508e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 16276e2460b8151fb5354533fb589d256189bfe2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctoolbar-class"></a>CToolBar 类
-具有一行位图化按钮和可选分隔符的控件条。  
+# <a name="ctoolbar-class"></a>CToolBar Class
+Control bars that have a row of bitmapped buttons and optional separators.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CToolBar : public CControlBar  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CToolBar::CToolBar](#ctoolbar)|构造 `CToolBar` 对象。|  
+|[CToolBar::CToolBar](#ctoolbar)|Constructs a `CToolBar` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CToolBar::CommandToIndex](#commandtoindex)|返回一个具有给定的命令 id。 按钮的索引|  
-|[CToolBar::Create](#create)|创建 Windows 工具栏并将其附加到`CToolBar`对象。|  
-|[CToolBar::CreateEx](#createex)|创建`CToolBar`有其他样式的嵌入对象`CToolBarCtrl`对象。|  
-|[CToolBar::GetButtonInfo](#getbuttoninfo)|检索 ID、 样式和一个按钮的图像数。|  
-|[CToolBar::GetButtonStyle](#getbuttonstyle)|检索一个按钮的样式。|  
-|[CToolBar::GetButtonText](#getbuttontext)|检索将显示在按钮的文本。|  
-|[CToolBar::GetItemID](#getitemid)|返回的命令 ID 的按钮或给定索引处的分隔符。|  
-|[CToolBar::GetItemRect](#getitemrect)|检索给定索引处的项的显示矩形。|  
-|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|允许直接访问基础的公共控件。|  
-|[CToolBar::LoadBitmap](#loadbitmap)|加载包含位图按钮图像的位图。|  
-|[CToolBar::LoadToolBar](#loadtoolbar)|加载使用资源编辑器创建工具栏资源。|  
-|[CToolBar::SetBitmap](#setbitmap)|设置一个位图图像。|  
-|[CToolBar::SetButtonInfo](#setbuttoninfo)|设置 ID、 样式和一个按钮的图像数。|  
-|[CToolBar::SetButtons](#setbuttons)|设置按钮样式和的按钮图像位图中的索引。|  
-|[CToolBar::SetButtonStyle](#setbuttonstyle)|设置按钮样式。|  
-|[CToolBar::SetButtonText](#setbuttontext)|设置在按钮上将显示的文本。|  
-|[CToolBar::SetHeight](#setheight)|设置工具栏的高度。|  
-|[CToolBar::SetSizes](#setsizes)|设置按钮和其位图的大小。|  
+|[CToolBar::CommandToIndex](#commandtoindex)|Returns the index of a button with the given command ID.|  
+|[CToolBar::Create](#create)|Creates the Windows toolbar and attaches it to the `CToolBar` object.|  
+|[CToolBar::CreateEx](#createex)|Creates a `CToolBar` object with additional styles for the embedded `CToolBarCtrl` object.|  
+|[CToolBar::GetButtonInfo](#getbuttoninfo)|Retrieves the ID, style, and image number of a button.|  
+|[CToolBar::GetButtonStyle](#getbuttonstyle)|Retrieves the style for a button.|  
+|[CToolBar::GetButtonText](#getbuttontext)|Retrieves the text that will appear on a button.|  
+|[CToolBar::GetItemID](#getitemid)|Returns the command ID of a button or separator at the given index.|  
+|[CToolBar::GetItemRect](#getitemrect)|Retrieves the display rectangle for the item at the given index.|  
+|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Allows direct access to the underlying common control.|  
+|[CToolBar::LoadBitmap](#loadbitmap)|Loads the bitmap containing bitmap-button images.|  
+|[CToolBar::LoadToolBar](#loadtoolbar)|Loads a toolbar resource created with the resource editor.|  
+|[CToolBar::SetBitmap](#setbitmap)|Sets a bitmapped image.|  
+|[CToolBar::SetButtonInfo](#setbuttoninfo)|Sets the ID, style, and image number of a button.|  
+|[CToolBar::SetButtons](#setbuttons)|Sets button styles and an index of button images within the bitmap.|  
+|[CToolBar::SetButtonStyle](#setbuttonstyle)|Sets the style for a button.|  
+|[CToolBar::SetButtonText](#setbuttontext)|Sets the text that will appear on a button.|  
+|[CToolBar::SetHeight](#setheight)|Sets the height of the toolbar.|  
+|[CToolBar::SetSizes](#setsizes)|Sets the sizes of buttons and their bitmaps.|  
   
-## <a name="remarks"></a>备注  
- 按钮可以像普通按钮、 复选框按钮、 或单选按钮。 `CToolBar`对象是从类派生的框架窗口对象的通常嵌入的成员[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)。  
+## <a name="remarks"></a>Remarks  
+ The buttons can act like pushbuttons, check-box buttons, or radio buttons. `CToolBar` objects are usually embedded members of frame-window objects derived from the class [CFrameWnd](../../mfc/reference/cframewnd-class.md) or [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成员函数新到 MFC 4.0，使您可以充分利用自定义工具栏和其他功能的 Windows 公共控件的支持。 `CToolBar`成员函数为您提供的大多数 Windows 公共控件; 功能但是，当调用`GetToolBarCtrl`，你可让您的工具栏甚至多个 Windows 95/98 工具栏的特征。 当调用`GetToolBarCtrl`，它将返回到引用`CToolBarCtrl`对象。 请参阅[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)有关设计使用 Windows 公共控件的工具栏的详细信息。 公共控件有关的更多常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl), a member function new to MFC 4.0, allows you to take advantage of the Windows common control's support for toolbar customization and additional functionality. `CToolBar` member functions give you most of the functionality of the Windows common controls; however, when you call `GetToolBarCtrl`, you can give your toolbars even more of the characteristics of Windows 95/98 toolbars. When you call `GetToolBarCtrl`, it will return a reference to a `CToolBarCtrl` object. See [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) for more information about designing toolbars using Windows common controls. For more general information about common controls, see [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) in the Windows SDK.  
   
- Visual c + + 为你提供了两种方法，以创建工具栏。 若要创建工具栏资源使用资源编辑器，请按照下列步骤︰  
+ Visual C++ provides you with two methods to create a toolbar. To create a toolbar resource using the Resource Editor, follow these steps:  
   
-1.  创建工具栏资源。  
+1.  Create a toolbar resource.  
   
-2.  构造 `CToolBar` 对象。  
+2.  Construct the `CToolBar` object.  
   
-3.  调用[创建](#create)(或[CreateEx](#createex)) 函数来创建 Windows 工具栏和将其附加到`CToolBar`对象。  
+3.  Call the [Create](#create) (or [CreateEx](#createex)) function to create the Windows toolbar and attach it to the `CToolBar` object.  
   
-4.  调用[LoadToolBar](#loadtoolbar)加载工具栏资源。  
+4.  Call [LoadToolBar](#loadtoolbar) to load the toolbar resource.  
   
- 否则，请按照下列步骤︰  
+ Otherwise, follow these steps:  
   
-1.  构造 `CToolBar` 对象。  
+1.  Construct the `CToolBar` object.  
   
-2.  调用[创建](#create)(或[CreateEx](#createex)) 函数来创建 Windows 工具栏和将其附加到`CToolBar`对象。  
+2.  Call the [Create](#create) (or [CreateEx](#createex)) function to create the Windows toolbar and attach it to the `CToolBar` object.  
   
-3.  调用[LoadBitmap](#loadbitmap)加载用于包含工具栏按钮图像的位图。  
+3.  Call [LoadBitmap](#loadbitmap) to load the bitmap that contains the toolbar button images.  
   
-4.  调用[SetButtons](#setbuttons)用于设置按钮样式并在位图中图像关联的每个按钮。  
+4.  Call [SetButtons](#setbuttons) to set the button style and associate each button with an image in the bitmap.  
   
- 在工具栏中的所有按钮图像，都将从一个位图，这必须包含每个按钮的一个映像。 所有映像必须都是相同的大小;默认值为 16 像素宽和 15 像素高。 映像必须在位图中的并排放置。  
+ All the button images in the toolbar are taken from one bitmap, which must contain one image for each button. All images must be the same size; the default is 16 pixels wide and 15 pixels high. Images must be side by side in the bitmap.  
   
- `SetButtons`函数将指针传递到的控件 Id 和一个整数，数组中指定的元素数的数组。 该函数将每个按钮 ID 设置为该数组的相应元素的值，并将每个按钮分配图像索引，它指定在位图中的按钮的图像的位置。 如果数组元素具有值**ID_SEPARATOR**，不分配任何映像索引。  
+ The `SetButtons` function takes a pointer to an array of control IDs and an integer that specifies the number of elements in the array. The function sets each button's ID to the value of the corresponding element of the array and assigns each button an image index, which specifies the position of the button's image in the bitmap. If an array element has the value **ID_SEPARATOR**, no image index is assigned.  
   
- 在位图中图像的顺序通常是在其中绘制它们在屏幕上，但你可以使用的顺序[SetButtonInfo](#setbuttoninfo)函数来更改图像顺序和绘制顺序之间的关系。  
+ The order of the images in the bitmap is typically the order in which they are drawn on the screen, but you can use the [SetButtonInfo](#setbuttoninfo) function to change the relationship between image order and drawing order.  
   
- 在工具栏中的所有按钮都都相同的大小。 默认值为 24 x 22 像素，根据*软件设计的 Windows 界面指南*。 图像和按钮尺寸之间的任何额外的空间用于构成该图像的周围边框。  
+ All buttons in a toolbar are the same size. The default is 24 x 22 pixels, in accordance with *Windows Interface Guidelines for Software Design*. Any additional space between the image and button dimensions is used to form a border around the image.  
   
- 每个按钮有一个映像。 各种按钮状态，然后从该一个映像生成样式 （按下，列表中，已禁用、 关闭、 禁用和中间状态）。 尽管位图可能是任意颜色，可以获得最佳结果的黑色和阴影的灰色图像。  
+ Each button has one image. The various button states and styles (pressed, up, down, disabled, disabled down, and indeterminate) are generated from that one image. Although bitmaps can be any color, you can achieve the best results with images in black and shades of gray.  
   
 > [!WARNING]
-> `CToolBar`支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
+> `CToolBar` supports bitmaps with a maximum of 16 colors. When you load an image into a toolbar editor, Visual Studio automatically converts the image to a 16-color bitmap, if necessary, and displays a warning message if the image was converted. If you use an image with more than 16 colors (using an external editor to edit the image), the application might behave unexpectedly.  
   
- 默认情况下，工具栏按钮模仿按键。 但是，复选框按钮或单选按钮，还可以模拟工具栏按钮。 复选框按钮有三种状态︰ 已选中、 已清除，和中间状态。 单选按钮具有只有两种状态︰ 选中和清除。  
+ Toolbar buttons imitate pushbuttons by default. However, toolbar buttons can also imitate check-box buttons or radio buttons. Check-box buttons have three states: checked, cleared, and indeterminate. Radio buttons have only two states: checked and cleared.  
   
- 若要设置的单个按钮或分隔符样式不指向数组的情况下，调用[GetButtonStyle](#getbuttonstyle)以检索该样式，然后调用[SetButtonStyle](#setbuttonstyle)而不是`SetButtons`。 `SetButtonStyle`当你想要在运行时更改按钮的样式，则将最为有用。  
+ To set an individual button or separator style without pointing to an array, call [GetButtonStyle](#getbuttonstyle) to retrieve the style, and then call [SetButtonStyle](#setbuttonstyle) instead of `SetButtons`. `SetButtonStyle` is most useful when you want to change a button's style at run time.  
   
- 若要将分配要在按钮上显示的文本，调用[GetButtonText](#getbuttontext)以检索要显示在的按钮，然后调用的文本[SetButtonText](#setbuttontext)以设置的文本。  
+ To assign text to appear on a button, call [GetButtonText](#getbuttontext) to retrieve the text to appear on the button, and then call [SetButtonText](#setbuttontext) to set the text.  
   
- 若要创建复选框按钮，将其分配样式**TBBS_CHECKBOX**或使用`CCmdUI`对象的`SetCheck`成员函数在`ON_UPDATE_COMMAND_UI`处理程序。 调用`SetCheck`变为复选框按钮的按钮。 传递`SetCheck`参数为 0 的未选中，1 选中，或 2 的不确定。  
+ To create a check-box button, assign it the style **TBBS_CHECKBOX** or use a `CCmdUI` object's `SetCheck` member function in an `ON_UPDATE_COMMAND_UI` handler. Calling `SetCheck` turns a pushbutton into a check-box button. Pass `SetCheck` an argument of 0 for unchecked, 1 for checked, or 2 for indeterminate.  
   
- 若要创建的单选按钮，调用[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的[SetRadio](../../mfc/reference/ccmdui-class.md#setradio)从成员函数`ON_UPDATE_COMMAND_UI`处理程序。 传递`SetRadio`取消选中或签入的非零的自变量为 0。 若要提供单选按钮组的互斥行为，您必须`ON_UPDATE_COMMAND_UI`针对所有组中的按钮处理程序。  
+ To create a radio button, call a [CCmdUI](../../mfc/reference/ccmdui-class.md) object's [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) member function from an `ON_UPDATE_COMMAND_UI` handler. Pass `SetRadio` an argument of 0 for unchecked or nonzero for checked. In order to provide a radio group's mutually exclusive behavior, you must have `ON_UPDATE_COMMAND_UI` handlers for all of the buttons in the group.  
   
- 有关详细信息使用`CToolBar`，请参阅文章[MFC 工具栏实现](../../mfc/mfc-toolbar-implementation.md)和[技术说明 31︰ 控件条](../../mfc/tn031-control-bars.md)。  
+ For more information on using `CToolBar`, see the article [MFC Toolbar Implementation](../../mfc/mfc-toolbar-implementation.md) and [Technical Note 31: Control Bars](../../mfc/tn031-control-bars.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -167,25 +179,25 @@ class CToolBar : public CControlBar
   
  `CToolBar`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
- 此成员函数返回的第一个工具栏按钮，开始位置 0，其命令 ID 匹配的索引`nIDFind`。  
+##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
+ This member function returns the index of the first toolbar button, starting at position 0, whose command ID matches `nIDFind`.  
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDFind`  
- 工具栏按钮的命令 ID。  
+ Command ID of a toolbar button.  
   
-### <a name="return-value"></a>返回值  
- 索引的按钮，则为-1 如果按钮没有给定的命令 id。  
+### <a name="return-value"></a>Return Value  
+ The index of the button, or -1 if no button has the given command ID.  
   
-##  <a name="create"></a>CToolBar::Create  
- 此成员函数将创建一个 Windows 工具栏 （子窗口），并将其与关联`CToolBar`对象。  
+##  <a name="create"></a>  CToolBar::Create  
+ This member function creates a Windows toolbar (a child window) and associates it with the `CToolBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -194,45 +206,45 @@ virtual BOOL Create(
     UINT nID = AFX_IDW_TOOLBAR);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 指向将工具栏的父窗口的指针。  
+ Pointer to the window that is the toolbar's parent.  
   
  `dwStyle`  
- 工具栏样式中。 支持的其他工具栏样式包括︰  
+ The toolbar style. Additional toolbar styles supported are:  
   
-- `CBRS_TOP`控件条是在框架窗口的顶部。  
+- `CBRS_TOP` Control bar is at top of the frame window.  
   
-- `CBRS_BOTTOM`控件条是在框架窗口的底部。  
+- `CBRS_BOTTOM` Control bar is at bottom of the frame window.  
   
-- `CBRS_NOALIGN`父级调整大小时，将不会重新定位控件条。  
+- `CBRS_NOALIGN` Control bar is not repositioned when the parent is resized.  
   
-- `CBRS_TOOLTIPS`控件栏会显示工具提示。  
+- `CBRS_TOOLTIPS` Control bar displays tool tips.  
   
-- **CBRS_SIZE_DYNAMIC**控件条是动态的。  
+- **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
-- **CBRS_SIZE_FIXED**固定的控件条。  
+- **CBRS_SIZE_FIXED** Control bar is fixed.  
   
-- **CBRS_FLOATING**浮点控件条。  
+- **CBRS_FLOATING** Control bar is floating.  
   
-- `CBRS_FLYBY`状态栏会显示有关该按钮的信息。  
+- `CBRS_FLYBY` Status bar displays information about the button.  
   
-- **CBRS_HIDE_INPLACE**控件条不向用户显示。  
+- **CBRS_HIDE_INPLACE** Control bar is not displayed to the user.  
   
  `nID`  
- 工具栏的子窗口 id。  
+ The toolbar's child-window ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 它还将工具栏高度设置为默认值。  
+### <a name="remarks"></a>Remarks  
+ It also sets the toolbar height to a default value.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="createex"></a>CToolBar::CreateEx  
- 调用此函数可创建一个 Windows 工具栏 （子窗口），并将其与关联`CToolBar`对象。  
+##  <a name="createex"></a>  CToolBar::CreateEx  
+ Call this function to create a Windows toolbar (a child window) and associate it with the `CToolBar` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -247,45 +259,45 @@ virtual BOOL CreateEx(
     UINT nID = AFX_IDW_TOOLBAR);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 指向将工具栏的父窗口的指针。  
+ Pointer to the window that is the toolbar's parent.  
   
  `dwCtrlStyle`  
- 为创建的嵌入其他样式[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)对象。 默认情况下，此值设置为**TBSTYLE_FLAT**。 工具栏样式的完整列表，请参阅`dwStyle`。  
+ Additional styles for the creation of the embedded [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) object. By default, this value is set to **TBSTYLE_FLAT**. For a complete list of toolbar styles, see `dwStyle`.  
   
  `dwStyle`  
- 工具栏样式中。 请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关相应的样式的列表。  
+ The toolbar style. See [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439) in the Windows SDK for a list of appropriate styles.  
   
  *rcBorders*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md)对象，用于定义工具栏窗口边框的宽度。 这些边框设置为 0,0,0,0 默认情况下，从而导致在工具栏窗口中并无边框。  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md) object that defines the widths of the toolbar window borders. These borders are set to 0,0,0,0 by default, thereby resulting in a toolbar window with no borders.  
   
  `nID`  
- 工具栏的子窗口 id。  
+ The toolbar's child-window ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 它还将工具栏高度设置为默认值。  
+### <a name="remarks"></a>Remarks  
+ It also sets the toolbar height to a default value.  
   
- 使用`CreateEx`，而不是[创建](#create)，当需要在嵌入式的工具栏控件的创建过程的某些样式。 例如，设置`dwCtrlStyle`到**TBSTYLE_FLAT |TBSTYLE_TRANSPARENT**创建类似于 Internet 资源管理器 4 工具栏的工具栏。  
+ Use `CreateEx`, instead of [Create](#create), when certain styles need to be present during the creation of the embedded tool bar control. For example, set `dwCtrlStyle` to **TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT** to create a toolbar that resembles the Internet Explorer 4 toolbars.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="ctoolbar"></a>CToolBar::CToolBar  
- 此成员函数构造`CToolBar`对象和设置的默认大小。  
+##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
+ This member function constructs a `CToolBar` object and sets the default sizes.  
   
 ```  
 CToolBar();
 ```  
   
-### <a name="remarks"></a>备注  
- 调用[创建](#create)成员函数来创建工具栏窗口。  
+### <a name="remarks"></a>Remarks  
+ Call the [Create](#create) member function to create the toolbar window.  
   
-##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
- 此成员函数将检索控件 ID、 样式和工具栏按钮或通过指定的位置处的分隔符图像索引*nIndex。*  
+##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
+ This member function retrieves the control ID, style, and image index of the toolbar button or separator at the location specified by *nIndex.*  
   
 ```  
 void GetButtonInfo(
@@ -295,43 +307,43 @@ void GetButtonInfo(
     int& iImage) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 工具栏按钮或获取其信息是要检索的分隔符的索引。  
+ Index of the toolbar button or separator whose information is to be retrieved.  
   
  `nID`  
- 引用**UINT**是否设置为按钮的命令 ID。  
+ Reference to a **UINT** that is set to the command ID of the button.  
   
  `nStyle`  
- 引用**UINT**是否设置为按钮的样式。  
+ Reference to a **UINT** that is set to the style of the button.  
   
  `iImage`  
- 对一个整数，它设置为位图中的按钮的图像的索引引用。  
+ Reference to an integer that is set to the index of the button's image within the bitmap.  
   
-### <a name="remarks"></a>备注  
- 这些值将赋给引用的变量`nID`， `nStyle`，和`iImage`。 映像索引是包含的所有工具栏按钮的图像位图中图像的位置。 第一个图像位于位置 0。  
+### <a name="remarks"></a>Remarks  
+ Those values are assigned to the variables referenced by `nID`, `nStyle`, and `iImage`. The image index is the position of the image within the bitmap that contains images for all the toolbar buttons. The first image is at position 0.  
   
- 如果`nIndex`指定一个分隔符，`iImage`设为以像素为单位的分隔符宽度。  
+ If `nIndex` specifies a separator, `iImage` is set to the separator width in pixels.  
   
-##  <a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
- 调用此成员函数可检索的按钮或在工具栏上的分隔符的样式。  
+##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
+ Call this member function to retrieve the style of a button or separator on the toolbar.  
   
 ```  
 UINT GetButtonStyle(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 要检索的工具栏按钮或分隔符样式的索引。  
+ The index of the toolbar button or separator style to be retrieved.  
   
-### <a name="return-value"></a>返回值  
- 按钮或由指定的分隔符的样式`nIndex`。  
+### <a name="return-value"></a>Return Value  
+ The style of the button or separator specified by `nIndex`.  
   
-### <a name="remarks"></a>备注  
- 按钮样式确定如何该按钮显示和对用户输入的响应方式。 请参阅[SetButtonStyle](#setbuttonstyle)有关按钮样式的示例。  
+### <a name="remarks"></a>Remarks  
+ A button's style determines how the button appears and how it responds to user input. See [SetButtonStyle](#setbuttonstyle) for examples of button styles.  
   
-##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
- 调用此成员函数以检索在按钮显示的文本。  
+##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
+ Call this member function to retrieve the text that appears on a button.  
   
 ```  
 CString GetButtonText(int nIndex) const;  
@@ -341,38 +353,38 @@ void GetButtonText(
     CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 要检索的文本索引。  
+ Index of the text to be retrieved.  
   
  `rString`  
- 对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)将包含要检索的文本的对象。  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that will contain the text to be retrieved.  
   
-### <a name="return-value"></a>返回值  
- A`CString`对象，其中包含按钮文本。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing the button text.  
   
-### <a name="remarks"></a>备注  
- 此成员的第二种形式函数填充`CString`具有字符串文本对象。  
+### <a name="remarks"></a>Remarks  
+ The second form of this member function fills a `CString` object with the string text.  
   
-##  <a name="getitemid"></a>CToolBar::GetItemID  
- 此成员函数返回的命令 ID 的按钮或由指定的分隔符`nIndex`。  
+##  <a name="getitemid"></a>  CToolBar::GetItemID  
+ This member function returns the command ID of the button or separator specified by `nIndex`.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 要检索其 ID 的项的索引。  
+ Index of the item whose ID is to be retrieved.  
   
-### <a name="return-value"></a>返回值  
- 按钮或由指定的分隔符的命令 ID `nIndex`。  
+### <a name="return-value"></a>Return Value  
+ The command ID of the button or separator specified by `nIndex`.  
   
-### <a name="remarks"></a>备注  
- 分隔符返回**ID_SEPARATOR**。  
+### <a name="remarks"></a>Remarks  
+ Separators return **ID_SEPARATOR**.  
   
-##  <a name="getitemrect"></a>CToolBar::GetItemRect  
- 此成员函数填充`RECT`结构中包含其地址`lpRect`按钮或由指定的分隔符的坐标`nIndex`。  
+##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
+ This member function fills the `RECT` structure whose address is contained in `lpRect` with the coordinates of the button or separator specified by `nIndex`.  
   
 ```  
 virtual void GetItemRect(
@@ -380,106 +392,106 @@ virtual void GetItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 矩形坐标是要检索的项 （按钮或分隔符） 的索引。  
+ Index of the item (button or separator) whose rectangle coordinates are to be retrieved.  
   
  `lpRect`  
- 地址[RECT](../../mfc/reference/rect-structure1.md)结构，它将包含该项的坐标。  
+ Address of the [RECT](../../mfc/reference/rect-structure1.md) structure that will contain the item's coordinates.  
   
-### <a name="remarks"></a>备注  
- 坐标是以相对于工具栏的左上角的像素为单位。  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the upper-left corner of the toolbar.  
   
- 使用`GetItemRect`若要获取你想要将替换为组合框或其他控件的分隔符坐标。  
+ Use `GetItemRect` to get the coordinates of a separator you want to replace with a combo box or other control.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CToolBar::SetSizes](#setsizes)。  
+### <a name="example"></a>Example  
+  See the example for [CToolBar::SetSizes](#setsizes).  
   
-##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
- 此成员函数允许直接访问基础的公共控件。  
+##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
+ This member function allows direct access to the underlying common control.  
   
 ```  
 CToolBarCtrl& GetToolBarCtrl() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 对 `CToolBarCtrl` 对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to a `CToolBarCtrl` object.  
   
-### <a name="remarks"></a>备注  
- 使用`GetToolBarCtrl`若要利用 Windows 工具栏公共控件的功能并利用支持[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)提供用于自定义工具栏。  
+### <a name="remarks"></a>Remarks  
+ Use `GetToolBarCtrl` to take advantage of the functionality of the Windows toolbar common control, and to take advantage of the support [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) provides for toolbar customization.  
   
- 有关使用公共控件的详细信息，请参阅文章[控件](../../mfc/controls-mfc.md)和[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about using common controls, see the article [Controls](../../mfc/controls-mfc.md) and [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) in the Windows SDK.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocViewSDI # 15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
- 调用此成员函数可加载由指定的位图`lpszResourceName`或`nIDResource`。  
+##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
+ Call this member function to load the bitmap specified by `lpszResourceName` or `nIDResource`.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
 BOOL LoadBitmap(UINT nIDResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszResourceName`  
- 指向要加载的位图的资源名称。  
+ Pointer to the resource name of the bitmap to be loaded.  
   
  `nIDResource`  
- 资源 ID 加载位图。  
+ Resource ID of the bitmap to be loaded.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 位图应包含一个图像可查看每个工具栏按钮。 如果图像不标准大小 （16 像素宽和高 15 像素） 的调用[SetSizes](#setsizes)设置按钮大小和其图像。  
+### <a name="remarks"></a>Remarks  
+ The bitmap should contain one image for each toolbar button. If the images are not of the standard size (16 pixels wide and 15 pixels high), call [SetSizes](#setsizes) to set the button sizes and their images.  
   
 > [!WARNING]
-> `CToolBar`支持最多为 16 种颜色的位图。 当在工具栏编辑器中加载图像时，Visual Studio 将自动将图像转换为 16 颜色位图，如有必要，并显示一条警告消息，如果映像已转换。 如果具有多个 16 种颜色 （使用外部编辑器编辑图像） 使用的映像，应用程序可能出现意外行为。  
+> `CToolBar` supports bitmaps with a maximum of 16 colors. When you load an image into a toolbar editor, Visual Studio automatically converts the image to a 16-color bitmap, if necessary, and displays a warning message if the image was converted. If you use an image with more than 16 colors (using an external editor to edit the image), the application might behave unexpectedly.  
   
-##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
- 调用此成员函数可加载由指定的工具栏`lpszResourceName`或`nIDResource`。  
+##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
+ Call this member function to load the toolbar specified by `lpszResourceName` or `nIDResource`.  
   
 ```  
 BOOL LoadToolBar(LPCTSTR lpszResourceName);  
 BOOL LoadToolBar(UINT nIDResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszResourceName`  
- 指向要加载的工具栏资源名称。  
+ Pointer to the resource name of the toolbar to be loaded.  
   
  `nIDResource`  
- 资源 ID 工具栏的加载。  
+ Resource ID of the toolbar to be loaded.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 请参阅[工具栏编辑器](../../windows/toolbar-editor.md)中有关创建工具栏资源的详细信息。  
+### <a name="remarks"></a>Remarks  
+ See [toolbar editor](../../windows/toolbar-editor.md) in for more information about creating a toolbar resource.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CToolBar::CreateEx](#createex)。  
+### <a name="example"></a>Example  
+  See the example for [CToolBar::CreateEx](#createex).  
   
-##  <a name="setbitmap"></a>CToolBar::SetBitmap  
- 调用此成员函数可设置工具栏的位图图像。  
+##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
+ Call this member function to set the bitmap image for the toolbar.  
   
 ```  
 BOOL SetBitmap(HBITMAP hbmImageWell);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *hbmImageWell*  
- 位图图像与工具栏关联的句柄。  
+ Handle of a bitmap image that is associated with a toolbar.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 例如，调用`SetBitmap`用户对更改按钮的操作的文档执行操作后更改位图图像。  
+### <a name="remarks"></a>Remarks  
+ For example, call `SetBitmap` to change the bitmapped image after the user takes an action on a document that changes the action of a button.  
   
-##  <a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
- 调用此成员函数可设置按钮的命令 ID、 样式和映像数量。  
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
+ Call this member function to set the button's command ID, style, and image number.  
   
 ```  
 void SetButtonInfo(
@@ -489,45 +501,45 @@ void SetButtonInfo(
     int iImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 按钮或分隔符为设置信息的从零开始索引。  
+ Zero-based index of the button or separator for which information is to be set.  
   
  `nID`  
- 为其设置按钮的命令 ID 的值。  
+ The value to which the button's command ID is set.  
   
  `nStyle`  
- 新的按钮样式。 支持以下按钮样式︰  
+ The new button style. The following button styles are supported:  
   
-- **TBBS_BUTTON**标准按键 （默认值）  
+- **TBBS_BUTTON** Standard pushbutton (default)  
   
-- **TBBS_SEPARATOR**分隔符  
+- **TBBS_SEPARATOR** Separator  
   
-- **TBBS_CHECKBOX**自动复选框按钮  
+- **TBBS_CHECKBOX** Auto check-box button  
   
-- **TBBS_GROUP**标记的一组按钮开始位置  
+- **TBBS_GROUP** Marks the start of a group of buttons  
   
-- **TBBS_CHECKGROUP**标记的一组复选框按钮开始位置  
+- **TBBS_CHECKGROUP** Marks the start of a group of check-box buttons  
   
-- **TBBS_DROPDOWN**创建下拉列表按钮。  
+- **TBBS_DROPDOWN** Creates a drop-down list button.  
   
-- **TBBS_AUTOSIZE**按钮的宽度将计算基于上按钮的文本，而非图像的大小。  
+- **TBBS_AUTOSIZE** The button's width will be calculated based on the text of the button, not on the size of the image.  
   
-- **TBBS_NOPREFIX**按钮文本将不具有与之关联的快捷键前缀。  
+- **TBBS_NOPREFIX** The button text will not have an accelerator prefix associated with it.  
   
  `iImage`  
- 位图中的按钮的图像的新索引。  
+ New index for the button's image within the bitmap.  
   
-### <a name="remarks"></a>备注  
- 分隔符，都样式**TBBS_SEPARATOR**，此函数以像素为单位到中存储的值设置的分隔符的宽度`iImage`。  
+### <a name="remarks"></a>Remarks  
+ For separators, which have the style **TBBS_SEPARATOR**, this function sets the separator's width in pixels to the value stored in `iImage`.  
   
 > [!NOTE]
->  你还可以设置使用的按钮状态`nStyle`参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonInfo`在下一步的空闲处理期间将会丢失。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031︰ 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
+>  You can also set button states using the `nStyle` parameter; however, because button states are controlled by the [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) handler, any state you set using `SetButtonInfo` will be lost during the next idle processing. See [How to Update User-Interface Objects](../../mfc/how-to-update-user-interface-objects.md) and [TN031: Control Bars](../../mfc/tn031-control-bars.md) for more information.  
   
- 位图图像和按钮上的信息，请参阅[CToolBar](../../mfc/reference/ctoolbar-class.md)概述和[CToolBar::LoadBitmap](#loadbitmap)。  
+ For information on bitmap images and buttons, see the [CToolBar](../../mfc/reference/ctoolbar-class.md) Overview and [CToolBar::LoadBitmap](#loadbitmap).  
   
-##  <a name="setbuttons"></a>CToolBar::SetButtons  
- 此成员函数将每个工具栏按钮的命令 ID 设置为指定数组的相应元素的值`lpIDArray`。  
+##  <a name="setbuttons"></a>  CToolBar::SetButtons  
+ This member function sets each toolbar button's command ID to the value specified by the corresponding element of the array `lpIDArray`.  
   
 ```  
 BOOL SetButtons(
@@ -535,25 +547,25 @@ BOOL SetButtons(
     int nIDCount);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpIDArray`  
- 指向命令 Id 的数组的指针。 它可以是**NULL**分配空按钮。  
+ Pointer to an array of command Ids. It can be **NULL** to allocate empty buttons.  
   
  `nIDCount`  
- 指向数组中的元素数目`lpIDArray`。  
+ Number of elements in the array pointed to by `lpIDArray`.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果数组的元素具有值**ID_SEPARATOR**，在工具栏上的相应位置中创建一个分隔符。 此函数还将每个按钮的样式设置为**TBBS_BUTTON**和每个分隔符样式应用到**TBBS_SEPARATOR**，并将一个图像索引分配给每个按钮。 映像索引指定位图中的按钮的图像的位置。  
+### <a name="remarks"></a>Remarks  
+ If an element of the array has the value **ID_SEPARATOR**, a separator is created in the corresponding position of the toolbar. This function also sets each button's style to **TBBS_BUTTON** and each separator's style to **TBBS_SEPARATOR**, and assigns an image index to each button. The image index specifies the position of the button's image within the bitmap.  
   
- 不需要考虑的位图中的分隔符，因为此函数不会分配为分隔符的映像索引。 如果你工具栏按钮在位置 0，1，和 3 和在位置 2，分别位于位置 0、 1 和 2 中你位图图像的分隔符为的按钮位于位置 0、 1 和 3，分别分配。  
+ You do not need to account for separators in the bitmap because this function does not assign image indexes for separators. If your toolbar has buttons at positions 0, 1, and 3 and a separator at position 2, the images at positions 0, 1, and 2 in your bitmap are assigned to the buttons at positions 0, 1, and 3, respectively.  
   
- 如果`lpIDArray`是**NULL**，此函数为指定的项的数目分配空间`nIDCount`。 使用[SetButtonInfo](#setbuttoninfo)设置每个项的特性。  
+ If `lpIDArray` is **NULL**, this function allocates space for the number of items specified by `nIDCount`. Use [SetButtonInfo](#setbuttoninfo) to set each item's attributes.  
   
-##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
- 调用此成员函数可设置的样式的按钮或分隔符，或组按钮。  
+##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
+ Call this member function to set the style of a button or separator, or to group buttons.  
   
 ```  
 void SetButtonStyle(
@@ -561,39 +573,39 @@ void SetButtonStyle(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 索引的按钮或获取其信息是要设置的分隔符。  
+ Index of the button or separator whose information is to be set.  
   
  `nStyle`  
- 按钮样式中。 支持以下按钮样式︰  
+ The button style. The following button styles are supported:  
   
-- **TBBS_BUTTON**标准按键 （默认值）  
+- **TBBS_BUTTON** Standard pushbutton (default)  
   
-- **TBBS_SEPARATOR**分隔符  
+- **TBBS_SEPARATOR** Separator  
   
-- **TBBS_CHECKBOX**自动复选框按钮  
+- **TBBS_CHECKBOX** Auto check-box button  
   
-- **TBBS_GROUP**标记的一组按钮开始位置  
+- **TBBS_GROUP** Marks the start of a group of buttons  
   
-- **TBBS_CHECKGROUP**标记的一组复选框按钮开始位置  
+- **TBBS_CHECKGROUP** Marks the start of a group of check-box buttons  
   
-- **TBBS_DROPDOWN**创建下拉列表按钮  
+- **TBBS_DROPDOWN** Creates a drop-down list button  
   
-- **TBBS_AUTOSIZE**按钮的宽度将计算基于上按钮的文本，而非图像的大小  
+- **TBBS_AUTOSIZE** The button's width will be calculated based on the text of the button, not on the size of the image  
   
-- **TBBS_NOPREFIX**按钮文本将不具有与之关联的快捷键前缀  
+- **TBBS_NOPREFIX** The button text will not have an accelerator prefix associated with it  
   
-### <a name="remarks"></a>备注  
- 按钮样式确定如何该按钮显示和对用户输入的响应方式。  
+### <a name="remarks"></a>Remarks  
+ A button's style determines how the button appears and how it responds to user input.  
   
- 之前调用`SetButtonStyle`，调用[GetButtonStyle](#getbuttonstyle)成员函数来检索按钮或分隔符样式。  
+ Before calling `SetButtonStyle`, call the [GetButtonStyle](#getbuttonstyle) member function to retrieve the button or separator style.  
   
 > [!NOTE]
->  你还可以设置使用的按钮状态`nStyle`参数; 但是，因为由控制按钮状态[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)处理程序中，任何状态使用设置`SetButtonStyle`在下一步的空闲处理期间将会丢失。 请参阅[如何更新用户界面对象](../../mfc/how-to-update-user-interface-objects.md)和[TN031︰ 控件条](../../mfc/tn031-control-bars.md)有关详细信息。  
+>  You can also set button states using the `nStyle` parameter; however, because button states are controlled by the [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) handler, any state you set using `SetButtonStyle` will be lost during the next idle processing. See [How to Update User-Interface Objects](../../mfc/how-to-update-user-interface-objects.md) and [TN031: Control Bars](../../mfc/tn031-control-bars.md) for more information.  
   
-##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
- 调用此函数可设置上一个按钮的文本。  
+##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
+ Call this function to set the text on a button.  
   
 ```  
 BOOL SetButtonText(
@@ -601,37 +613,37 @@ BOOL SetButtonText(
     LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 其中的文本是设置按钮的索引。  
+ Index of the button whose text is to be set.  
   
  `lpszText`  
- 指向要设置在按钮上的文本。  
+ Points to the text to be set on a button.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CToolBar::GetToolBarCtrl](#gettoolbarctrl)。  
+### <a name="example"></a>Example  
+  See the example for [CToolBar::GetToolBarCtrl](#gettoolbarctrl).  
   
-##  <a name="setheight"></a>CToolBar::SetHeight  
- 此成员函数设置的值，以像素为单位，指定在工具栏的高度`cyHeight`。  
+##  <a name="setheight"></a>  CToolBar::SetHeight  
+ This member function sets the toolbar's height to the value, in pixels, specified in `cyHeight`.  
   
 ```  
 void SetHeight(int cyHeight);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `cyHeight`  
- 以像素为单位工具栏的高度。  
+ The height in pixels of the toolbar.  
   
-### <a name="remarks"></a>备注  
- 在调用[SetSizes](#setsizes)，此成员函数用于重写的标准工具栏高度。 如果高度太小，则将在底部剪辑按钮。  
+### <a name="remarks"></a>Remarks  
+ After calling [SetSizes](#setsizes), use this member function to override the standard toolbar height. If the height is too small, the buttons will be clipped at the bottom.  
   
- 如果未调用此函数，框架将使用按钮的大小来确定工具栏高度。  
+ If this function is not called, the framework uses the size of the button to determine the toolbar height.  
   
-##  <a name="setsizes"></a>CToolBar::SetSizes  
- 调用此成员函数可设置为的大小，以像素为单位中, 指定的工具栏按钮*sizeButton*。  
+##  <a name="setsizes"></a>  CToolBar::SetSizes  
+ Call this member function to set the toolbar's buttons to the size, in pixels, specified in *sizeButton*.  
   
 ```  
 void SetSizes(
@@ -639,27 +651,27 @@ void SetSizes(
     SIZE sizeImage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *sizeButton*  
- 以像素为单位，每个按钮的大小。  
+ The size in pixels of each button.  
   
  `sizeImage`  
- 以像素为单位的每个图像大小。  
+ The size in pixels of each image.  
   
-### <a name="remarks"></a>备注  
- `sizeImage`参数必须包含大小，以像素为单位，工具栏的位图中图像的大小。 中的维度*sizeButton*必须足以容纳图像加 7 像素额外的宽度和高度额外 6 个像素。 此函数还将设置工具栏的高度以适应按钮。  
+### <a name="remarks"></a>Remarks  
+ The `sizeImage` parameter must contain the size, in pixels, of the images in the toolbar's bitmap. The dimensions in *sizeButton* must be sufficient to hold the image plus 7 pixels extra in width and 6 pixels extra in height. This function also sets the toolbar height to fit the buttons.  
   
- 调用此成员函数仅对工具栏不遵循*软件设计的 Windows 界面指南*按钮和图像的大小的建议。  
+ Call this member function only for toolbars that do not follow *Windows Interface Guidelines for Software Design* recommendations for button and image sizes.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCListView # 8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 CTRLBARS](../../visual-cpp-samples.md)   
- [MFC 示例 DLGCBR32](../../visual-cpp-samples.md)   
- [MFC 示例 DOCKTOOL](../../visual-cpp-samples.md)   
- [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CToolBarCtrl 类](../../mfc/reference/ctoolbarctrl-class.md)   
- [CControlBar 类](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [MFC Sample DLGCBR32](../../visual-cpp-samples.md)   
+ [MFC Sample DOCKTOOL](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CToolBarCtrl Class](../../mfc/reference/ctoolbarctrl-class.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
 

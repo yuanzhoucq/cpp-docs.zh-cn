@@ -1,5 +1,5 @@
 ---
-title: "CD2DRadialGradientBrush 类 |Microsoft 文档"
+title: CD2DRadialGradientBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRadialGradientBrush class
+- CD2DRadialGradientBrush [MFC], CD2DRadialGradientBrush
+- CD2DRadialGradientBrush [MFC], Attach
+- CD2DRadialGradientBrush [MFC], Create
+- CD2DRadialGradientBrush [MFC], Destroy
+- CD2DRadialGradientBrush [MFC], Detach
+- CD2DRadialGradientBrush [MFC], Get
+- CD2DRadialGradientBrush [MFC], GetCenter
+- CD2DRadialGradientBrush [MFC], GetGradientOriginOffset
+- CD2DRadialGradientBrush [MFC], GetRadiusX
+- CD2DRadialGradientBrush [MFC], GetRadiusY
+- CD2DRadialGradientBrush [MFC], SetCenter
+- CD2DRadialGradientBrush [MFC], SetGradientOriginOffset
+- CD2DRadialGradientBrush [MFC], SetRadiusX
+- CD2DRadialGradientBrush [MFC], SetRadiusY
+- CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
+- CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
 caps.latest.revision: 17
 author: mikeblome
@@ -50,63 +65,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8b3fd7f468745567969ba1f7e9d6871a9060582b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c8a0bdfea24b6df30d707ad8c0165391c5cae524
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 类
-ID2D1RadialGradientBrush 包装器。  
+# <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush Class
+A wrapper for ID2D1RadialGradientBrush.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DRadialGradientBrush : public CD2DGradientBrush;  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|构造 CD2DLinearGradientBrush 对象。|  
-|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|析构函数。 当 D2D 径向渐变画笔对象被销毁时调用。|  
+|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Constructs a CD2DLinearGradientBrush object.|  
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|The destructor. Called when a D2D radial gradient brush object is being destroyed.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::Attach](#attach)|附加现有的资源的对象的接口|  
-|[CD2DRadialGradientBrush::Create](#create)|创建 CD2DRadialGradientBrush。 (重写[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DRadialGradientBrush::Destroy](#destroy)|销毁 CD2DRadialGradientBrush 对象。 (重写[CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy)。)|  
-|[CD2DRadialGradientBrush::Detach](#detach)|分离对象中的资源接口|  
-|[CD2DRadialGradientBrush::Get](#get)|返回 ID2D1RadialGradientBrush 接口|  
-|[CD2DRadialGradientBrush::GetCenter](#getcenter)|检索渐变椭圆的中心|  
-|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|检索该渐变原点相对于渐变椭圆中心的偏移量|  
-|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|检索的渐变的椭圆的 x 半径|  
-|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|检索的渐变椭圆 y 半径|  
-|[CD2DRadialGradientBrush::SetCenter](#setcenter)|画笔的坐标空间中指定的渐变的椭圆的中心|  
-|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|指定渐变原点相对于渐变椭圆中心的偏移量|  
-|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|指定渐变椭圆，x 轴半径画笔的坐标空间中|  
-|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|指定渐变椭圆，y 轴半径画笔的坐标空间中|  
+|[CD2DRadialGradientBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DRadialGradientBrush::Create](#create)|Creates a CD2DRadialGradientBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DRadialGradientBrush::Destroy](#destroy)|Destroys a CD2DRadialGradientBrush object. (Overrides [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|  
+|[CD2DRadialGradientBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DRadialGradientBrush::Get](#get)|Returns ID2D1RadialGradientBrush interface|  
+|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Retrieves the center of the gradient ellipse|  
+|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Retrieves the offset of the gradient origin relative to the gradient ellipse's center|  
+|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Retrieves the x-radius of the gradient ellipse|  
+|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Retrieves the y-radius of the gradient ellipse|  
+|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Specifies the center of the gradient ellipse in the brush's coordinate space|  
+|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Specifies the offset of the gradient origin relative to the gradient ellipse's center|  
+|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Specifies the x-radius of the gradient ellipse, in the brush's coordinate space|  
+|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Specifies the y-radius of the gradient ellipse, in the brush's coordinate space|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|返回 ID2D1RadialGradientBrush 接口|  
+|[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|Returns ID2D1RadialGradientBrush interface|  
   
-### <a name="protected-data-members"></a>受保护的数据成员  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|指向 ID2D1RadialGradientBrush 的指针。|  
-|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|中心、 渐变原点偏移量和 x 轴半径和 y 轴半径画笔的渐变。|  
+|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|A pointer to an ID2D1RadialGradientBrush.|  
+|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|The center, gradient origin offset, and x-radius and y-radius of the brush's gradient.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -117,29 +132,29 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
  `CD2DRadialGradientBrush`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
- 析构函数。 当 D2D 径向渐变画笔对象被销毁时调用。  
+##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::~CD2DRadialGradientBrush  
+ The destructor. Called when a D2D radial gradient brush object is being destroyed.  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="attach"></a>CD2DRadialGradientBrush::Attach  
- 附加现有的资源的对象的接口  
+##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 现有资源的接口。 不能为 NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
- 构造 CD2DLinearGradientBrush 对象。  
+##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+ Constructs a CD2DLinearGradientBrush object.  
   
 ```  
 CD2DRadialGradientBrush(
@@ -153,180 +168,180 @@ CD2DRadialGradientBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
  `gradientStops`  
- 指向一个 D2D1_GRADIENT_STOP 结构数组的指针。  
+ A pointer to an array of D2D1_GRADIENT_STOP structures.  
   
  `gradientStopsCount`  
- 一个值大于或等于 1，gradientStops 数组中指定的渐变停止点的数目。  
+ A value greater than or equal to 1 that specifies the number of gradient stops in the gradientStops array.  
   
  `RadialGradientBrushProperties`  
- 中心、 渐变原点偏移量和 x 轴半径和 y 轴半径画笔的渐变。  
+ The center, gradient origin offset, and x-radius and y-radius of the brush's gradient.  
   
  `colorInterpolationGamma`  
- 在哪种颜色执行内插的渐变停止点之间的空间。  
+ The space in which color interpolation between the gradient stops is performed.  
   
  `extendMode`  
- [0，1] 的规范化范围之外的渐变的行为。  
+ The behavior of the gradient outside the [0,1] normalized range.  
   
  `pBrushProperties`  
- 一个指向不透明度和画笔的转换。  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- 指示所有者 (pParentTarget) 将销毁该对象。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DRadialGradientBrush::Create  
- 创建 CD2DRadialGradientBrush。  
+##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
+ Creates a CD2DRadialGradientBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- 指向该呈现器目标的指针。  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>返回值  
- 如果该方法成功，它会返回 S_OK。 否则，它返回一个 HRESULT 错误代码。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
- 销毁 CD2DRadialGradientBrush 对象。  
+##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy  
+ Destroys a CD2DRadialGradientBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DRadialGradientBrush::Detach  
- 分离对象中的资源接口  
+##  <a name="detach"></a>  CD2DRadialGradientBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1RadialGradientBrush* Detach();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向已分离的资源接口指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DRadialGradientBrush::Get  
- 返回 ID2D1RadialGradientBrush 接口  
+##  <a name="get"></a>  CD2DRadialGradientBrush::Get  
+ Returns ID2D1RadialGradientBrush interface  
   
 ```  
 ID2D1RadialGradientBrush* Get();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1RadialGradientBrush 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1RadialGradientBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
- 检索渐变椭圆的中心  
+##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter  
+ Retrieves the center of the gradient ellipse  
   
 ```  
 CD2DPointF GetCenter() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 渐变的椭圆的中心。 此值表示画笔的坐标空间  
+### <a name="return-value"></a>Return Value  
+ The center of the gradient ellipse. This value is expressed in the brush's coordinate space  
   
-##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
- 检索该渐变原点相对于渐变椭圆中心的偏移量  
+##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset  
+ Retrieves the offset of the gradient origin relative to the gradient ellipse's center  
   
 ```  
 CD2DPointF GetGradientOriginOffset() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 偏移量从渐变椭圆中心渐变的原点。 此值表示画笔的坐标空间  
+### <a name="return-value"></a>Return Value  
+ The offset of the gradient origin from the center of the gradient ellipse. This value is expressed in the brush's coordinate space  
   
-##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
- 检索的渐变的椭圆的 x 半径  
+##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX  
+ Retrieves the x-radius of the gradient ellipse  
   
 ```  
 FLOAT GetRadiusX() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 渐变椭圆 x 半径。 此值表示画笔的坐标空间  
+### <a name="return-value"></a>Return Value  
+ The x-radius of the gradient ellipse. This value is expressed in the brush's coordinate space  
   
-##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
- 检索的渐变椭圆 y 半径  
+##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY  
+ Retrieves the y-radius of the gradient ellipse  
   
 ```  
 FLOAT GetRadiusY() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 渐变椭圆 y 半径。 此值表示画笔的坐标空间  
+### <a name="return-value"></a>Return Value  
+ The y-radius of the gradient ellipse. This value is expressed in the brush's coordinate space  
   
-##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
- 指向 ID2D1RadialGradientBrush 的指针。  
+##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush  
+ A pointer to an ID2D1RadialGradientBrush.  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
- 中心、 渐变原点偏移量和 x 轴半径和 y 轴半径画笔的渐变。  
+##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+ The center, gradient origin offset, and x-radius and y-radius of the brush's gradient.  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
- 返回 ID2D1RadialGradientBrush 接口  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush*  
+ Returns ID2D1RadialGradientBrush interface  
   
 ```  
 operator ID2D1RadialGradientBrush*();
 ```   
   
-### <a name="return-value"></a>返回值  
- 指向 ID2D1RadialGradientBrush 接口或者如果对象尚未初始化为 NULL 指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1RadialGradientBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
- 画笔的坐标空间中指定的渐变的椭圆的中心  
+##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter  
+ Specifies the center of the gradient ellipse in the brush's coordinate space  
   
 ```  
 void SetCenter(CD2DPointF point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `point`  
- 渐变椭圆，画笔的坐标空间中的中心  
+ The center of the gradient ellipse, in the brush's coordinate space  
   
-##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
- 指定渐变原点相对于渐变椭圆中心的偏移量  
+##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
+ Specifies the offset of the gradient origin relative to the gradient ellipse's center  
   
 ```  
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `gradientOriginOffset`  
- 渐变的渐变的椭圆的中心从原点的偏移量  
+ The offset of the gradient origin from the center of the gradient ellipse  
   
-##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
- 指定渐变椭圆，x 轴半径画笔的坐标空间中  
+##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
+ Specifies the x-radius of the gradient ellipse, in the brush's coordinate space  
   
 ```  
 void SetRadiusX(FLOAT radiusX);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `radiusX`  
- 渐变椭圆 x 半径。 此值是画笔的坐标空间  
+ The x-radius of the gradient ellipse. This value is in the brush's coordinate space  
   
-##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
- 指定渐变椭圆，y 轴半径画笔的坐标空间中  
+##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
+ Specifies the y-radius of the gradient ellipse, in the brush's coordinate space  
   
 ```  
 void SetRadiusY(FLOAT radiusY);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `radiusY`  
- 渐变椭圆 y 半径。 此值是画笔的坐标空间  
+ The y-radius of the gradient ellipse. This value is in the brush's coordinate space  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

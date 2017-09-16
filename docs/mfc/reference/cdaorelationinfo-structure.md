@@ -1,5 +1,5 @@
 ---
-title: "CDaoRelationInfo 结构 |Microsoft 文档"
+title: CDaoRelationInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationInfo structure
+- CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7c3a8195aed2c3b3fe5c78c98afcc6e72a83cc21
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dee874251923212544fa886f5a219e1613fe61c9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 结构
-`CDaoRelationInfo`结构包含有关定义字段中两个表之间的关系信息[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)对象。  
+# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo Structure
+The `CDaoRelationInfo` structure contains information about a relation defined between fields of two tables in a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationInfo  
@@ -60,49 +60,49 @@ struct CDaoRelationInfo
 };  
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一地命名关系对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。  
+ Uniquely names the relation object. For more information, see the topic "Name Property" in DAO Help.  
   
  *m_strTable*  
- 关系中主键的表进行命名。  
+ Names the primary table in the relation.  
   
  *m_strForeignTable*  
- 关系中的外部表进行命名。 外部表是用于包含外键的表。 通常，可以使用外部表来建立或强制实施引用完整性。 外部表通常是一种一对多关系的多方。 外部表的示例包括表中包含美国的州或加拿大省市自治区或客户订单的代码。  
+ Names the foreign table in the relation. A foreign table is a table used to contain foreign keys. Generally, you use a foreign table to establish or enforce referential integrity. The foreign table is usually on the many side of a one-to-many relationship. Examples of foreign tables include tables containing codes for the American states or Canadian provinces or customer orders.  
   
  `m_lAttributes`  
- 包含有关关系类型的信息。 此成员的值可以是以下任一情况︰  
+ Contains information about the relation type. The value of this member can be any of the following:  
   
-- **dbRelationUnique**关系是一对一。  
+- **dbRelationUnique** Relationship is one-to-one.  
   
-- **dbRelationDontEnforce**关系不是强制执行 （无参照完整性）。  
+- **dbRelationDontEnforce** Relationship is not enforced (no referential integrity).  
   
-- **dbRelationInherited**包含两个附加的表的非当前数据库中存在的关系。  
+- **dbRelationInherited** Relationship exists in a noncurrent database that contains the two attached tables.  
   
-- **dbRelationLeft**的关系是左的联接。 左外部联接包含的所有记录从第一个 （左侧） 两个表，即使有第二个 （右） 表中的记录没有匹配的值。  
+- **dbRelationLeft** The relationship is a left join. A left outer join includes all of the records from the first (left-hand) of two tables, even if there are no matching values for records in the second (right-hand) table.  
   
-- **dbRelationRight**的关系是正确的联接。 右外部联接包含的所有记录中第二个 （右） 的两个表，即使没有匹配的第一个 （左侧） 表中的记录值。  
+- **dbRelationRight** The relationship is a right join. A right outer join includes all of the records from the second (right-hand) of two tables, even if there are no matching values for records in the first (left-hand) table.  
   
-- **两**将级联更新。  
+- **dbRelationUpdateCascade** Updates will cascade.  
   
-- **dbRelationDeleteCascade**将级联删除。  
+- **dbRelationDeleteCascade** Deletions will cascade.  
   
  `m_pFieldInfos`  
- 指向数组的指针[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)结构。 该数组包含一个对象，该关系中每个字段。 `m_nFields`数据成员提供了数组元素的计数。  
+ A pointer to an array of [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. The array contains one object for each field in the relation. The `m_nFields` data member gives a count of the array elements.  
   
  `m_nFields`  
- 数`CDaoRelationFieldInfo`中的对象`m_pFieldInfos`数据成员。  
+ The number of `CDaoRelationFieldInfo` objects in the `m_pFieldInfos` data member.  
   
-## <a name="remarks"></a>备注  
- 对主和辅助数据库更高版本的引用指示如何通过返回的信息[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)类中的成员函数`CDaoDatabase`。  
+## <a name="remarks"></a>Remarks  
+ The references to Primary and Secondary above indicate how the information is returned by the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function in class `CDaoDatabase`.  
   
- 关系对象不由 MFC 类表示。 改为基础的 MFC 对象的 DAO 对象`CDaoDatabase`类维护关系对象的集合︰`CDaoDatabase`提供成员函数来访问某些各个项的关系的信息，或者您可以访问它们同时与`CDaoRelationInfo`对象通过调用`GetRelationInfo`包含的数据库对象的成员函数。  
+ Relation objects are not represented by an MFC class. Instead, the DAO object underlying an MFC object of the `CDaoDatabase` class maintains a collection of relation objects: `CDaoDatabase` supplies member functions to access some individual items of relation information, or you can access them all at once with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function of the containing database object.  
   
- 检索的信息[CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成员函数存储在`CDaoRelationInfo`结构。 `CDaoRelationInfo`此外定义了`Dump`成员函数在调试生成。 您可以使用`Dump`转储的内容`CDaoRelationInfo`对象。  
+ Information retrieved by the [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function is stored in a `CDaoRelationInfo` structure. `CDaoRelationInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationInfo` object.  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另请参阅  
- [CDaoRelationFieldInfo 结构](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [CDaoRelationFieldInfo Structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)
 

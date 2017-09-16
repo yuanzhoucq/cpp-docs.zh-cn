@@ -1,39 +1,58 @@
 ---
-title: "窗口析构序列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWnd 对象, 析构序列"
-  - "销毁窗口"
-  - "析构, 窗口"
-  - "序列 [C++]"
-  - "序列 [C++], 窗口析构"
-  - "窗口 [C++], 销毁"
+title: Window Destruction Sequence | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- destruction, windows
+- destroying windows
+- sequence [MFC], window destruction
+- CWnd objects [MFC], destruction sequence
+- sequence [MFC]
+- windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 窗口析构序列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8829a095c2372b030a8111d1145467f4f346927
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在MFC框架中，当用户关闭帧窗口时，窗口的默认的[OnClose](../Topic/CWnd::OnClose.md) 处理程序调用[DestroyWindow](../Topic/CWnd::DestroyWindow.md)。  最后一次调用的成员函数，当窗口销毁时执行清理，调用 [默认值](../Topic/CWnd::Default.md) [OnNcDestroy](../Topic/CWnd::OnNcDestroy.md)窗口是，某些成员函数执行 Windows 清理和最后调用虚成员函数 [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md)。  `PostNcDestroy` 的实现 [CFrameWnd](../mfc/reference/cframewnd-class.md) 删除窗口 C\+\+ 对象。  
+---
+# <a name="window-destruction-sequence"></a>Window Destruction Sequence
+In the MFC framework, when the user closes the frame window, the window's default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). The last member function called when the Windows window is destroyed is [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), which does some cleanup, calls the [Default](../mfc/reference/cwnd-class.md#default) member function to perform Windows cleanup, and lastly calls the virtual member function [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). The [CFrameWnd](../mfc/reference/cframewnd-class.md) implementation of `PostNcDestroy` deletes the C++ window object.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [分配和回收窗口内存](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
--   [将 CWnd 从其 HWND 中分离出来](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
+-   [Detaching a CWnd from its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
-## 请参阅  
- [销毁窗口对象](../mfc/destroying-window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Destroying Window Objects](../mfc/destroying-window-objects.md)
+
+

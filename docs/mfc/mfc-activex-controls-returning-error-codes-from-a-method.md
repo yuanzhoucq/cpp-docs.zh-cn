@@ -1,45 +1,64 @@
 ---
-title: "MFC ActiveX 控件：从方法返回错误代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "错误 [C++], ActiveX 控件错误代码"
-  - "FireError 方法"
-  - "GetNotSupported 方法"
-  - "MFC ActiveX 控件, 错误代码"
-  - "SCODE, MFC ActiveX 控件"
-  - "SetNotSupported 方法, using"
-  - "ThrowError 方法"
+title: 'MFC ActiveX Controls: Returning Error Codes From a Method | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], error codes
+- SetNotSupported method, using
+- errors [MFC], ActiveX control error codes
+- GetNotSupported method [MFC]
+- FireError method [MFC]
+- SCODE, MFC ActiveX controls
+- ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：从方法返回错误代码
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d29c889dcc8bb86b024a4dd78954286d8ed6b33f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文介绍如何从 ActiveX 控件方法返回错误代码。  
+---
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX Controls: Returning Error Codes From a Method
+This article describes how to return error codes from an ActiveX control method.  
   
- 若要指示错误方法内发生，应使用 [COleControl::ThrowError](../Topic/COleControl::ThrowError.md) 成员函数的 \(状态代码，采用 `SCODE` 作为参数。\)  可以使用预定义的 `SCODE` 还是定义一个拥有。  
+ To indicate that an error has occurred within a method, you should use the [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) member function, which takes an `SCODE` (status code) as a parameter. You can use a predefined `SCODE` or define one of your own.  
   
 > [!NOTE]
->  `ThrowError` 被视为是只能作为返回错误的方法从的属性获取或设置函数或自动化方法内。  这是仅有的时间相应的异常处理程序会存在于堆栈。  
+>  `ThrowError` is meant to be used only as a means of returning an error from within a property's Get or Set function or an automation Method. These are the only times that the appropriate exception handler will be present on the stack.  
   
- 帮助程序函数。常见预定义的 `SCODE`。最存在，如 [COleControl::SetNotSupported](../Topic/COleControl::SetNotSupported.md)[COleControl::GetNotSupported](../Topic/COleControl::GetNotSupported.md)[COleControl::SetNotPermitted](../Topic/COleControl::SetNotPermitted.md)、和。  
+ Helper functions exist for the most common predefined `SCODE`s, such as [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), and [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
- 有关预定义的 `SCODE`s 和指令列表。定义自定义的 `SCODE`，请参见在 ActiveX 控件的节：[在 ActiveX 控件中的错误处理](../mfc/mfc-activex-controls-advanced-topics.md) 高级主题。  
+ For a list of predefined `SCODE`s and instructions on defining custom `SCODE`s, see the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in ActiveX Controls: Advanced Topics.  
   
- 有关在代码的其他区域的异常报告的更多信息，请参见 [COleControl::FireError](../Topic/COleControl::FireError.md) 和节中的 [在 ActiveX 控件中的错误处理](../mfc/mfc-activex-controls-advanced-topics.md) ActiveX 控件：高级主题。  
+ For more information on reporting exceptions in other areas of your code, see [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) and the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in ActiveX Controls: Advanced Topics.  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

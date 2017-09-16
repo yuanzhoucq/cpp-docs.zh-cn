@@ -1,46 +1,65 @@
 ---
-title: "框架窗口类（体系结构） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.frame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架窗口类, 文档/视图体系结构"
+title: Frame Window Classes (Architecture) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.frame
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架窗口类（体系结构）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66f5c9f7ab9d8e72fb357accf84eb93bf44595ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在文档\/视图体系结构方面，框架窗口是一窗口的窗口。  它们还支持具有控件条附加到它们。  
+---
+# <a name="frame-window-classes-architecture"></a>Frame Window Classes (Architecture)
+In document/view architecture, frame windows are windows that contain a view window. They also support having control bars attached to them.  
   
- 在多文档界面 \(MDI\) \(MDI\) 应用程序中，主窗口从 `CMDIFrameWnd`派生。  其间接包含文档的框架，它是 `CMDIChildWnd` 对象。  `CMDIChildWnd` 对象，反之亦然，包含文档的视图。  
+ In multiple document interface (MDI) applications, the main window is derived from `CMDIFrameWnd`. It indirectly contains the documents' frames, which are `CMDIChildWnd` objects. The `CMDIChildWnd` objects, in turn, contain the documents' views.  
   
- 在单文档界面 \(SDI\) \(SDI\) 应用程序中，主窗口，从 `CFrameWnd`中派生，它包含当前文件的视图。  
+ In single document interface (SDI) applications, the main window, derived from `CFrameWnd`, contains the view of the current document.  
   
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- SDI 应用程序的主框架窗口的基类。  并且的基类框架窗口类。  
+ The base class for an SDI application's main frame window. Also the base class for all other frame window classes.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- MDI 应用程序的主框架窗口的基类。  
+ The base class for an MDI application's main frame window.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- MDI 应用程序的文档框架窗口的基类。  
+ The base class for an MDI application's document frame windows.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- 当服务器文档采用后，编辑为视图提供框架窗口。  
+ Provides the frame window for a view when a server document is being edited in place.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

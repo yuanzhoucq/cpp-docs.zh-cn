@@ -1,99 +1,116 @@
 ---
-title: "HTML 基础 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HTML, 关于 HTML"
+title: HTML Basics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# HTML 基础
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 765f52d5de6f85346eefe13ce60db45520a25552
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-大多数浏览器需要检查您浏览页面的 HTML 源的功能。  当您查看将显示大量的 HTML 源 \(HyperText Markup Language\)，标记是由尖括号 \(\<\>\)，与使用文本。  
+---
+# <a name="html-basics"></a>HTML Basics
+Most browsers have the capability of examining the HTML source of the pages you browse. When you view the source you will see a number of HTML (Hypertext markup language) tags, surrounded by angle brackets(<>), interspersed with text.  
   
- 在使用生成简单网页的 HTML 标记下的步骤。  在以下步骤，您将键入纯文本到记事本的文件，使某种更改，保存文件，并在浏览器中重新加载该页才能看到更改。  
+ The steps below use HTML tags to build a simple Web page. In these steps, you'll type plain text into a file in Notepad, make a few changes, save the file, and reload your page in the browser to see your changes.  
   
-#### 创建 HTML 文件  
+#### <a name="to-create-an-html-file"></a>To create an HTML file  
   
-1.  打开记事本或所有纯文本编辑器使用。  
+1.  Open Notepad or any plain text editor.  
   
-2.  从**“文件”**菜单中选择“保存”`New`。  
+2.  From the **File** menu, choose `New`.  
   
-3.  键入以下行：  
+3.  Type the following lines:  
   
-    ```  
-    <HTML>  
-    <HEAD>  
-    <TITLE>Top HTML Tags</TITLE>  
-    </HEAD>  
-    </HTML>  
-    ```  
+ ```  
+ <HTML>  
+ <HEAD>  
+ <TITLE>Top HTML Tags</TITLE>  
+ </HEAD>  
+ </HTML>  
+ ```  
   
-4.  从 **文件** 菜单中，选择 **保存**，将该文件保存为 c:\\webpages\\First.htm.  在“代码编辑器”中打开文件。  
+4.  From the **File** menu, choose **Save**, and save the file as c:\webpages\First.htm. Leave the file open in the editor.  
   
-5.  切换到浏览器并从 **文件** 菜单中，选择 **打开**或键入在浏览器的 URL 编辑框的 `file://C:/webpages/first.htm`。  您应看到的窗口标题“Top\-level HTML 标记的一个空白页”。  
+5.  Switch to your browser, and from the **File** menu, choose **Open**, or type `file://C:/webpages/first.htm` in the browser's URL edit box. You should see a blank page with the window caption "Top HTML Tags."  
   
-     请注意名为尖括号中成对的和中。  标记不区分大小写，但通常大小写进行标记引人注意。  
+     Notice the tags are paired and are included in angle brackets. Tags are not case-sensitive, but capitalization is often used to make tags stand out.  
   
-     HTML\> 文档中，开始标记 \<，并且标记 \<\/HTML\> 关闭它。  结束标记 \(\) 不需要始终与的开始标记，但在某些情况下，一个正斜杠 \(\/\/\) 将标记前面。  不应具有在尖括号 \(\<\) 和标记的开头之间的空间。  
+     The tag \<HTML> starts the document, and the tag \</HTML> ends it. Ending tags (not always required) are the same as the starting tag, but have a forward slash (/) in front of the tag. There should be no spaces between the angle bracket (<) and the start of your tag.  
   
-6.  回记事本的开关，并且，在 \<\/HEAD\> 行类型后：  
+6.  Switch back to Notepad, and after the \</HEAD> line, type:  
   
-    ```  
-    <BODY>  
+ ```  
+ <BODY>  
     HTML is swell.  
     Life is good.  
-    </BODY>  
-    ```  
+ </BODY>  
+ ```  
   
-7.  从**“文件”**菜单中选择**“保存”**。  
+7.  From the **File** menu, choose **Save**.  
   
-8.  回浏览器切换和刷新页面。  
+8.  Switch back to your browser and refresh the page.  
   
-     Word 将显示在浏览器窗口的工作区。  请注意、回车符被忽略。  如果要包含换行符，必须包括 `<BR>` 标记，在第一行后面。  
+     The words will appear in the client area of your browser's window. Notice that your carriage return is ignored. If you want to have a line break, you must include a `<BR>` tag after the first line.  
   
-     对于下面的所有步骤，在 \<BODY\> 和 \<\/BODY\> 之间的任何位置插入文本以添加文档主体。  
+     For all the steps that follow, insert the text anywhere between \<BODY> and \</BODY> to add to the body of your document.  
   
-9. 添加标题：  
+9. Add a header:  
   
-    ```  
-    <H3>Here's the big picture</H3>  
-    ```  
+ ```  
+ <H3>Here's the big picture</H3>  
+ ```  
   
-10. 添加图像，使用位于目录保存的 .gif 文件和页相同：  
+10. Add an image, using a .gif file saved in the same directory as your page:  
   
-    ```  
-    <IMG src="yourfile.gif">  
-    ```  
+ ```  
+ <IMG src="yourfile.gif">  
+ ```  
   
-11. 添加列表：  
+11. Add a list:  
   
-    ```  
-    <UL>Make me an unordered list.  
-    <LI>One programmer</LI>  
-    <LI>Ten SDKs</LI>  
-    <LI>Great Internet Apps</LI>  
-    </UL>  
-    ```  
+ ```  
+ <UL>Make me an unordered list.  
+ <LI>One programmer</LI>  
+ <LI>Ten SDKs</LI>  
+ <LI>Great Internet Apps</LI>  
+ </UL>  
+ ```  
   
-12. 若要计算列表，请在 \<UL\> 和 \<\/UL\> 标记位置使用匹配的 \<OL\> \/OL\> 和 \<标记。  
+12. To number the list instead, use paired \<OL> and \</OL> tags in place of the \<UL> and \</UL> tags.  
   
- 这应您入门。  如果看到在网页上的功能，则可以查看它如何通过检查 HTML 源创建。  HTML 编辑器 \(Front Page Microsoft 可用于创建简单页面和高级。  
+ That should get you started. If you see a great feature on a Web page, you can find out how it was created by examining the HTML source. HTML editors such as Microsoft Front Page can be used to create both simple and advanced pages.  
   
- 这是在生成的文件的完整 HTML 源：  
+ Here's the entire HTML source for the file you've been building:  
   
 ```  
 <HTML>  
@@ -114,9 +131,11 @@ Life is good.
 </HTML>  
 ```  
   
- 对于标记的完整说明，属性和扩展，请参见 HyperText Markup Language \(HTML\) 规范：  
+ For a complete description of tags, attributes, and extensions, see the Hypertext Markup Language (HTML) specification:  
   
- [http:\/\/www.w3.org\/pub\/WWW\/MarkUp\/](http://www.w3.org/pub/WWW/MarkUp/)  
+ [http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)  
   
-## 请参阅  
- [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

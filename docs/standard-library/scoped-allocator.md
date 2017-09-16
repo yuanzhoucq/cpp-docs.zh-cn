@@ -33,39 +33,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6372d4f2a553f8d7667d520617d969700931010c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 723823bc5331b647cb053123b3fa18fdb66f7ff6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
-定义容器模板类 scoped_allocator。  
+Defines the container template class scoped_allocator.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <scoped_allocator>  
 ```  
   
-### <a name="operators"></a>运算符  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|测试运算符左侧的 scoped_allocator 对象是否不等于右侧的列表对象。|  
-|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|测试运算符左侧的 scoped_allocator 对象是否等于右侧的列表对象。|  
+|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Tests if the scoped_allocator object on the left side of the operator is not equal to the list object on the right side.|  
+|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Tests if the scoped_allocator object on the left side of the operator is equal to the list object on the right side.|  
   
-### <a name="classes"></a>类  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[scoped_allocator_adaptor 类](../standard-library/scoped-allocator-adaptor-class.md)|封装一个或多个分配器嵌套的模板类。|  
+|[scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)|A template class that encapsulates a nest of one or more allocators.|  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

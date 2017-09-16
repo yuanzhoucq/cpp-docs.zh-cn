@@ -1,5 +1,5 @@
 ---
-title: "CResourceException 类 |Microsoft 文档"
+title: CResourceException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,11 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- resource allocation exception
-- resources [C++], allocating
-- resource exceptions
-- exceptions, resource
-- CResourceException class
+- CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
 caps.latest.revision: 22
 author: mikeblome
@@ -39,36 +35,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2013a73f91687277df9dd1e6747aba2dd02a4346
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e177da6dbaabd6cd96f0a5e61303a6194bf7ba6d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cresourceexception-class"></a>CResourceException 类
-当 Windows 无法找到或分配请求的资源时生成。  
+# <a name="cresourceexception-class"></a>CResourceException Class
+Generated when Windows cannot find or allocate a requested resource.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CResourceException : public CSimpleException  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CResourceException::CResourceException](#cresourceexception)|构造 `CResourceException` 对象。|  
+|[CResourceException::CResourceException](#cresourceexception)|Constructs a `CResourceException` object.|  
   
-## <a name="remarks"></a>备注  
- 没有进一步限定是有必要或不可能。  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible.  
   
- 有关详细信息使用`CResourceException`，请参阅文章[异常处理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ For more information on using `CResourceException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -77,22 +73,22 @@ class CResourceException : public CSimpleException
   
  `CResourceException`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cresourceexception"></a>CResourceException::CResourceException  
- 构造 `CResourceException` 对象。  
+##  <a name="cresourceexception"></a>  CResourceException::CResourceException  
+ Constructs a `CResourceException` object.  
   
 ```  
 CResourceException();
 ```  
   
-### <a name="remarks"></a>备注  
- 不直接使用此构造函数，但而是调用全局函数[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 关于异常的详细信息，请参阅文章[Exception Handling in MFC](../exception-handling-in-mfc.md)。  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). for more information about exceptions, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>另请参阅  
- [CException 类](cexception-class.md)   
- [层次结构图](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

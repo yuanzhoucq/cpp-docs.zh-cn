@@ -1,54 +1,73 @@
 ---
-title: "处理 Rebar 控件中的通知消息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBarCtrl 类, 通知消息发送方"
-  - "通知, CReBarCtrl"
-  - "RBN_ 通知消息"
-  - "RBN_ 通知消息, 说明"
+title: Processing Notification Messages in a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- RBN_ notification messages, description of
+- CReBarCtrl class [MFC], notification messages sent by
+- RBN_ notification messages [MFC]
+- notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 处理 Rebar 控件中的通知消息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9f6dd828b8864763d46592d270db38927198a0e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-在 rebar 控件的父类中，请创建一个带有与 switch 语句的 `OnChildNotify` 处理函数处理的所有 rebar 控件 \(`CReBarCtrl`\) 的通知消息。  当用户拖动对象经过 rebar 控件时，或改变 rebar 控件条带的布局时或删除 rebar 控件的条带等情况时，将向其父窗体发送通知的布局。  
+---
+# <a name="processing-notification-messages-in-a-rebar-control"></a>Processing Notification Messages in a Rebar Control
+In the parent class of the rebar control, create an `OnChildNotify` handler function with a switch statement for any rebar-control (`CReBarCtrl`) notification messages you want to handle. Notifications are sent to the parent window when the user drags objects over the rebar control, changes the layout of the rebar bands, deletes bands from the rebar control, and so on.  
   
- 下一则通知消息可由 rebar 控件对象发送：  
+ The following notification messages can be sent by the rebar control object:  
   
--   在 rebar 自动调整大小时, **RBN\_AUTOSIZE** 由 rebar 控件发送 \(创建具有 **RBS\_AUTOSIZE** 样式 \) 。  
+-   **RBN_AUTOSIZE** Sent by a rebar control (created with the **RBS_AUTOSIZE** style) when the rebar automatically resizes itself.  
   
--   当用户开始拖动条带时，**RBN\_BEGINDRAG** 被 rebar 控件发送。  
+-   **RBN_BEGINDRAG** Sent by a rebar control when the user begins dragging a band.  
   
--   当条带的子窗口重设大小时，**RBN\_CHILDSIZE** 被 rebar 控件发送。  
+-   **RBN_CHILDSIZE** Sent by a rebar control when a band's child window is resized.  
   
--   在条带删除之后，**RBN\_DELETEDBAND** 被 rebar 控件发送。  
+-   **RBN_DELETEDBAND** Sent by a rebar control after a band has been deleted.  
   
--   当条带将要删除时，**RBN\_DELETINGBAND** 由 rebar 控件发送。  
+-   **RBN_DELETINGBAND** Sent by a rebar control when a band is about to be deleted.  
   
--   当用户停止拖动带时，**RBN\_ENDDRAG** 由 rebar 控件发送。  
+-   **RBN_ENDDRAG** Sent by a rebar control when the user stops dragging a band.  
   
--   则拖动对象经过一条带时， **RBN\_GETOBJECT** 由 rebar 控件发送 \(创建具有 **RBS\_REGISTERDROP** 样式\)。  
+-   **RBN_GETOBJECT** Sent by a rebar control (created with the **RBS_REGISTERDROP** style) when an object is dragged over a band in the control.  
   
--   其高度更改时，**RBN\_HEIGHTCHANGE** 被 rebar 控件发送。  
+-   **RBN_HEIGHTCHANGE** Sent by a rebar control when its height has changed.  
   
--   当用户更改控件条带的布局时，**RBN\_LAYOUTCHANGED** 被 rebar 控件发送。  
+-   **RBN_LAYOUTCHANGED** Sent by a rebar control when the user changes the layout of the control's bands.  
   
- 有关这些通知的更多信息，请参见 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 中的 [Rebar 控件引用](http://msdn.microsoft.com/library/windows/desktop/bb774375).  
+ For more information on these notifications, see [Rebar Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb774375) in the Windows SDK.  
   
-## 请参阅  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,48 +1,66 @@
 ---
-title: "命令和控件通知的处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令, 处理程序"
-  - "控件 [MFC], 通知"
-  - "函数 [C++], 处理程序"
-  - "处理程序"
-  - "处理程序, 命令"
-  - "处理程序, 控件通知"
-  - "通知, 用于控件的处理程序"
+title: Handlers for Commands and Control Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- commands [MFC], handlers for
+- functions [MFC], handler
+- handlers [MFC]
+- controls [MFC], notifications
+- handlers [MFC], control notification [MFC]
+- notifications [MFC], handlers for control
+- handlers [MFC]], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 命令和控件通知的处理程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 601f4cc9f7da5c7038443d3d5d73e6192e37187a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-命令或控件通知消息没有默认的处理程序。  因此，仅由约定命名这些类别的消息处理程序约束。  当映射命令或控件通知给处理程序时，属性窗口建议基于命令 ID 或控件通知代码命名。  可以接受建议的名称，更改或替换它。  
+---
+# <a name="handlers-for-commands-and-control-notifications"></a>Handlers for Commands and Control Notifications
+There are no default handlers for commands or control-notification messages. Therefore, you are bound only by convention in naming your handlers for these categories of messages. When you map the command or control notification to a handler, the Properties windows proposes a name based on the command ID or control-notification code. You can accept the proposed name, change it, or replace it.  
   
- 约定建议您在为它们所表示的用户界面对象用全部类别来命名处理程序。  从而可能命名在"编辑"菜单上剪切命令的处理程序  
+ Convention suggests that you name handlers in both categories for the user-interface object they represent. Thus a handler for the Cut command on the Edit menu might be named  
   
- [!CODE [NVC_MFCMessageHandling#4](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#4)]  
+ [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]  
   
- 因为在应用上通常实现了剪切命令，框架为为剪切命令预定义剪切命令 ID为 **ID\_EDIT\_CUT** 。  有关所有预定义命令 ID 的列表，请参阅 AFXRES.H 文件。  有关详细信息，请参阅 [Standard Commands](../mfc/standard-commands.md)。  
+ Because the Cut command is so commonly implemented in applications, the framework predefines the command ID for the Cut command as **ID_EDIT_CUT**. For a list of all predefined command IDs, see the file AFXRES.H. For more information, see [Standard Commands](../mfc/standard-commands.md).  
   
- 此外，约定建议 **BN\_CLICKED** 通知消息的处理程序可能命名来自标记“我的按钮”按钮  
+ In addition, convention suggests a handler for the **BN_CLICKED** notification message from a button labeled "My Button" might be named  
   
- [!CODE [NVC_MFCMessageHandling#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#5)]  
+ [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- 因为它等效于特定的用户界面对象，可能将分配 `IDC_MY_BUTTON` 的命令 ID。  
+ You might assign this command an ID of `IDC_MY_BUTTON` because it is equivalent to an application-specific user-interface object.  
   
- 所有消息类别不采用参数也不返回值。  
+ Both categories of messages take no arguments and return no value.  
   
-## 请参阅  
- [声明消息处理程序函数](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

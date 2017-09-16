@@ -1,5 +1,5 @@
 ---
-title: "&lt;ios&gt; 函数 | Microsoft Docs"
+title: '&lt;ios&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,18 +33,42 @@ f1_keywords:
 ms.assetid: 1382d53f-e531-4b41-adf6-6a1543512e51
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0939c7bf681a3ef336d9846dfd2cbe1c117d3cd8
+helpviewer_keywords:
+- std::defaultfloat [C++]
+- std::boolalpha [C++]
+- std::dec [C++]
+- std::fixed [C++]
+- std::hex [C++]
+- std::internal [C++]
+- std::left [C++]
+- std::noboolalpha [C++]
+- std::noshowbase [C++]
+- std::noshowpoint [C++]
+- std::noshowpos [C++]
+- std::noskipws [C++]
+- std::nounitbuf [C++]
+- std::nouppercase [C++]
+- std::oct [C++]
+- std::right [C++]
+- std::scientific [C++]
+- std::showbase [C++]
+- std::showpoint [C++]
+- std::showpos [C++]
+- std::skipws [C++]
+- std::unitbuf [C++]
+- std::uppercase [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3fffde3f04da07baf858209d717098ec7ad5e085
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiosgt-functions"></a>&lt;ios&gt; 函数
+# <a name="ltiosgt-functions"></a>&lt;ios&gt; functions
 ||||  
 |-|-|-|  
 |[defaultfloat](#ios_defaultfloat)|[boolalpha](#boolalpha)|[dec](#dec)|  
-|[fixed](#fixed)|[hex](#hex)|[内部](#internal)|  
+|[fixed](#fixed)|[hex](#hex)|[internal](#internal)|  
 |[left](#left)|[noboolalpha](#noboolalpha)|[noshowbase](#noshowbase)|  
 |[noshowpoint](#noshowpoint)|[noshowpos](#noshowpos)|[noskipws](#noskipws)|  
 |[nounitbuf](#nounitbuf)|[nouppercase](#nouppercase)|[oct](#oct)|  
@@ -53,27 +77,27 @@ ms.lasthandoff: 04/29/2017
 |[unitbuf](#unitbuf)|[uppercase](#uppercase)|  
   
 ##  <a name="boolalpha"></a>  boolalpha  
- 指定类型为 [bool](../cpp/bool-cpp.md) 的变量在流中显示为 **true** 或 **false**。  
+ Specifies that variables of type [bool](../cpp/bool-cpp.md) appear as **true** or **false** in the stream.  
   
 ```  
 ios_base& boolalpha(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，`bool` 类型的变量显示为 1 或 0。  
+### <a name="remarks"></a>Remarks  
+ By default, variables of type `bool` are displayed as 1 or 0.  
   
- `boolalpha`有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`)，然后返回`str`。  
+ `boolalpha` effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), and then returns `str`.  
   
- [noboolalpha](../standard-library/ios-functions.md#noboolalpha) 会取消 `boolalpha` 的效果。  
+ [noboolalpha](../standard-library/ios-functions.md#noboolalpha) reverses the effect of `boolalpha`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_boolalpha.cpp  
@@ -100,26 +124,26 @@ true
 true  
 ```  
   
-##  <a name="dec"></a>dec  
- 指定以十进制计数法形式显示整数变量。  
+##  <a name="dec"></a>  dec  
+ Specifies that integer variables appear in base 10 notation.  
   
 ```  
 ios_base& dec(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，整型变量以十进制计数法显示。  
+### <a name="remarks"></a>Remarks  
+ By default, integer variables are displayed in base 10.  
   
- **dec** 有效调用 `str``.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**)，然后返回 `str`。  
+ **dec** effectively calls `str.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_dec.cpp  
@@ -149,40 +173,40 @@ int main( )
 100  
 ```  
   
-##  <a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat  
- 配置 `ios_base` 对象的标记以使用浮点值的默认显示格式。  
+##  <a name="ios_defaultfloat"></a>  &lt;ios&gt; defaultfloat  
+ Configures the flags of an `ios_base` object to use a default display format for float values.  
   
 ```  
 ios_base& defaultfloat(ios_base& _Iosbase);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Iosbase`  
- 一个 `ios_base` 对象。  
+ An `ios_base` object.  
   
-### <a name="remarks"></a>备注  
- 此操控器会有效调用 _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`，然后返回 _I `osbase`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator effectively calls _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, then returns _I `osbase`.  
   
-##  <a name="fixed"></a>fixed  
- 指定浮点数以自动设置小数点表示法显示。  
+##  <a name="fixed"></a>  fixed  
+ Specifies that a floating-point number is displayed in fixed-decimal notation.  
   
 ```  
 ios_base& fixed(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- **fixed** 是浮点数的默认显示表示法。 [scientific](../standard-library/ios-functions.md#scientific) 会导致使用科学记数法显示浮点数。  
+### <a name="remarks"></a>Remarks  
+ **fixed** is the default display notation for floating-point numbers. [scientific](../standard-library/ios-functions.md#scientific) causes floating-point numbers to be displayed using scientific notation.  
   
- 操控器可有效地调用 * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`， **ios_base::floatfield**)，然后返回`str`。  
+ The manipulator effectively calls * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_fixed.cpp  
@@ -207,48 +231,48 @@ int main( )
 1.1  
 ```  
   
-##  <a name="hex"></a>hex  
- 指定以十六进制计数法形式显示整型变量。  
+##  <a name="hex"></a>  hex  
+ Specifies that integer variables shall appear in base 16 notation.  
   
 ```  
 ios_base& hex(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，整型变量以十进制计数法显示。 [dec](../standard-library/ios-functions.md#dec) 和 [oct](../standard-library/ios-functions.md#oct) 也会改变整型变量显示的方式。  
+### <a name="remarks"></a>Remarks  
+ By default, integer variables are displayed in base 10 notation. [dec](../standard-library/ios-functions.md#dec) and [oct](../standard-library/ios-functions.md#oct) also change the way integer variables appear.  
   
- 此操控器有效调用 `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**)，然后返回 `str`。  
+ The manipulator effectively calls `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**), and then returns `str`.  
   
-### <a name="example"></a>示例  
-  有关如何使用 **hex** 的示例，请参阅 [dec](../standard-library/ios-functions.md#dec)。  
+### <a name="example"></a>Example  
+  See [dec](../standard-library/ios-functions.md#dec) for an example of how to use **hex**.  
   
-##  <a name="internal"></a>internal  
- 导致数字的符号左对齐，数字右对齐。  
+##  <a name="internal"></a>  internal  
+ Causes a number's sign to be left justified and the number to be right justified.  
   
 ```  
 ios_base& internal(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 `str` 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which `str` is derived.  
   
-### <a name="remarks"></a>备注  
- [showpos](../standard-library/ios-functions.md#showpos) 会对正数显示此符号。  
+### <a name="remarks"></a>Remarks  
+ [showpos](../standard-library/ios-functions.md#showpos) causes the sign to display for positive numbers.  
   
- 此操控器有效调用 `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags))，然后返回 `str`。  
+ The manipulator effectively calls `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_internal.cpp  
@@ -271,24 +295,24 @@ int main( void )
 -..123.456  
 ```  
   
-##  <a name="left"></a>left  
- 导致宽度比输出宽度短的文本在流刷新过程中显示时带有左边距。  
+##  <a name="left"></a>  left  
+ Causes text that is not as wide as the output width to appear in the stream flush with the left margin.  
   
 ```  
 ios_base& left(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`， **ios_base::adjustfield**)，然后返回`str`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_left.cpp  
@@ -310,72 +334,72 @@ int main( )
 5  
 ```  
   
-##  <a name="noboolalpha"></a>noboolalpha  
- 指定类型为 [bool](../cpp/bool-cpp.md) 的变量在流中显示为 1 或 0。  
+##  <a name="noboolalpha"></a>  noboolalpha  
+ Specifies that variables of type [bool](../cpp/bool-cpp.md) appear as 1 or 0 in the stream.  
   
 ```  
 ios_base& noboolalpha(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况，`noboolalpha` 是有效的。  
+### <a name="remarks"></a>Remarks  
+ By default, `noboolalpha` is in effect.  
   
- `noboolalpha`有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`)，然后返回`str`。  
+ `noboolalpha` effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), and then returns `str`.  
   
- [boolalpha](../standard-library/ios-functions.md#boolalpha) 会取消 `noboolalpha` 的效果。  
+ [boolalpha](../standard-library/ios-functions.md#boolalpha) reverses the effect of `noboolalpha`.  
   
-### <a name="example"></a>示例  
-  有关使用 `noboolalpha` 的示例，请参阅 [boolalpha](../standard-library/ios-functions.md#boolalpha)。  
+### <a name="example"></a>Example  
+  See [boolalpha](../standard-library/ios-functions.md#boolalpha) for an example of using `noboolalpha`.  
   
-##  <a name="noshowbase"></a>noshowbase  
- 关闭显示数字所采用的进制的指示。  
+##  <a name="noshowbase"></a>  noshowbase  
+ Turns off indicating the notational base in which a number is displayed.  
   
 ```  
 ios_base& noshowbase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，`noshowbase` 处于打开状态。 使用 [showbase](../standard-library/ios-functions.md#showbase) 来指示数字基数。  
+### <a name="remarks"></a>Remarks  
+ `noshowbase` is on by default. Use [showbase](../standard-library/ios-functions.md#showbase) to indicate the notational base of numbers.  
   
- 操控器可有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), and then returns `str`.  
   
-### <a name="example"></a>示例  
-  有关如何使用 `noshowbase` 的示例，请参阅 [showbase](../standard-library/ios-functions.md#showbase)。  
+### <a name="example"></a>Example  
+  See [showbase](../standard-library/ios-functions.md#showbase) for an example of how to use `noshowbase`.  
   
-##  <a name="noshowpoint"></a>noshowpoint  
- 仅显示浮点数（其小数部分为零）的整数部分。  
+##  <a name="noshowpoint"></a>  noshowpoint  
+ Displays only the whole-number part of floating-point numbers whose fractional part is zero.  
   
 ```  
 ios_base& noshowpoint(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- `noshowpoint` 默认为打开；使用 [showpoint](../standard-library/ios-functions.md#showpoint) 和 [precision](../standard-library/ios-base-class.md#precision) 显示小数点后的零。  
+### <a name="remarks"></a>Remarks  
+ `noshowpoint` is on by default; use [showpoint](../standard-library/ios-functions.md#showpoint) and [precision](../standard-library/ios-base-class.md#precision) to display zeros after the decimal point.  
   
- 操控器可有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_noshowpoint.cpp  
@@ -399,48 +423,48 @@ int main( )
 5  
 ```  
   
-##  <a name="noshowpos"></a>noshowpos  
- 导致正数不显式带有符号。  
+##  <a name="noshowpos"></a>  noshowpos  
+ Causes positive numbers to not be explicitly signed.  
   
 ```  
 ios_base& noshowpos(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，`noshowpos` 处于打开状态。  
+### <a name="remarks"></a>Remarks  
+ `noshowpos` is on by default.  
   
- 操控器可有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), then returns `str`.  
   
-### <a name="example"></a>示例  
-  有关使用 `noshowpos` 的示例，请参阅 [showpos](../standard-library/ios-functions.md#showpos)。  
+### <a name="example"></a>Example  
+  See [showpos](../standard-library/ios-functions.md#showpos) for an example of using `noshowpos`.  
   
-##  <a name="noskipws"></a>noskipws  
- 导致输入流读取空格。  
+##  <a name="noskipws"></a>  noskipws  
+ Cause spaces to be read by the input stream.  
   
 ```  
 ios_base& noskipws(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- [skipws](../standard-library/ios-functions.md#skipws) 默认为开启状态。 读取到流中的空格时，它表示缓冲区的结束。  
+### <a name="remarks"></a>Remarks  
+ By default, [skipws](../standard-library/ios-functions.md#skipws) is in effect. When a space is read in the input stream, it signals the end of the buffer.  
   
- 操控器可有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_noskipws.cpp  
@@ -459,87 +483,87 @@ int main() {
 }  
 ```  
   
-##  <a name="nounitbuf"></a>nounitbuf  
- 导致缓冲区已满时缓冲和处理输出。  
+##  <a name="nounitbuf"></a>  nounitbuf  
+ Causes output to be buffered and processed on when the buffer is full.  
   
 ```  
 ios_base& nounitbuf(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- [unitbuf](../standard-library/ios-functions.md#unitbuf) 导致在缓冲区未满时处理缓冲区。  
+### <a name="remarks"></a>Remarks  
+ [unitbuf](../standard-library/ios-functions.md#unitbuf) causes the buffer to be processed when it is not empty.  
   
- 操控器可有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`), and then returns `str`.  
   
-##  <a name="nouppercase"></a>nouppercase  
- 指定十六进制数字和科学计数法形式的指数以小写形式显示。  
+##  <a name="nouppercase"></a>  nouppercase  
+ Specifies that hexadecimal digits and the exponent in scientific notation appear in lowercase.  
   
 ```  
 ios_base& nouppercase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 操控器可有效地调用`str`。[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`)，然后返回`str`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator effectively calls `str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), and then returns `str`.  
   
-### <a name="example"></a>示例  
-  有关使用 `nouppercase` 的示例，请参阅 [uppercase](../standard-library/ios-functions.md#uppercase)。  
+### <a name="example"></a>Example  
+  See [uppercase](../standard-library/ios-functions.md#uppercase) for an example of using `nouppercase`.  
   
-##  <a name="oct"></a>oct  
- 指定以八进制计数法形式显示整数变量。  
+##  <a name="oct"></a>  oct  
+ Specifies that integer variables appear in base 8 notation.  
   
 ```  
 ios_base& oct(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 从中对对象的引用*str*派生。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which *str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，整型变量以十进制计数法显示。 [dec](../standard-library/ios-functions.md#dec) 和 [hex](../standard-library/ios-functions.md#hex) 也会改变整型变量显示的方式。  
+### <a name="remarks"></a>Remarks  
+ By default, integer variables are displayed in base 10 notation. [dec](../standard-library/ios-functions.md#dec) and [hex](../standard-library/ios-functions.md#hex) also change the way integer variables appear.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`， `ios_base::basefield`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), and then returns `str`.  
   
-### <a name="example"></a>示例  
-  有关如何使用 **oct** 的示例，请参阅 [dec](../standard-library/ios-functions.md#dec)。  
+### <a name="example"></a>Example  
+  See [dec](../standard-library/ios-functions.md#dec) for an example of how to use **oct**.  
   
-##  <a name="right"></a>right  
- 导致宽度比输出宽度短的文本在流刷新过程中显示时带有右边距。  
+##  <a name="right"></a>  right  
+ Causes text that is not as wide as the output width to appear in the stream flush with the right margin.  
   
 ```  
 ios_base& right(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 从中对对象的引用*str*派生。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which *str* is derived.  
   
-### <a name="remarks"></a>备注  
- [left](../standard-library/ios-functions.md#left) 还会修改文本对齐方式。  
+### <a name="remarks"></a>Remarks  
+ [left](../standard-library/ios-functions.md#left) also modifies the justification of text.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`， `ios_base::adjustfield`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_right.cpp  
@@ -573,26 +597,26 @@ int main( )
                    5  
 ```  
   
-##  <a name="scientific"></a>scientific  
- 导致使用科学记数法显示浮点数。  
+##  <a name="scientific"></a>  scientific  
+ Causes floating-point numbers to be displayed using scientific notation.  
   
 ```  
 ios_base& scientific(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认对浮点数启用 [fixed](../standard-library/ios-functions.md#fixed) 表示法。  
+### <a name="remarks"></a>Remarks  
+ By default, [fixed](../standard-library/ios-functions.md#fixed) notation is in effect for floating-point numbers.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`， `ios_base::floatfield`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_scientific.cpp  
@@ -614,26 +638,26 @@ int main( )
 1.002300e+002  
 ```  
   
-##  <a name="showbase"></a>showbase  
- 指示显示数字所采用的进制。  
+##  <a name="showbase"></a>  showbase  
+ Indicates the notational base in which a number is displayed.  
   
 ```  
 ios_base& showbase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 可使用 [dec](../standard-library/ios-functions.md#dec)、[oct](../standard-library/ios-functions.md#oct) 或 [hex](../standard-library/ios-functions.md#hex) 更改数字的基数。  
+### <a name="remarks"></a>Remarks  
+ The notational base of a number can be changed with [dec](../standard-library/ios-functions.md#dec), [oct](../standard-library/ios-functions.md#oct), or [hex](../standard-library/ios-functions.md#hex).  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_showbase.cpp  
@@ -664,48 +688,48 @@ int main( )
 144  
 ```  
   
-##  <a name="showpoint"></a>showpoint  
- 显示浮点数的整数部分和小数点右侧的数字，即使小数部分为零。  
+##  <a name="showpoint"></a>  showpoint  
+ Displays the whole-number part of a floating-point number and digits to the right of the decimal point even when the fractional part is zero.  
   
 ```  
 ios_base& showpoint(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- [noshowpoint](../standard-library/ios-functions.md#noshowpoint) 默认为开启状态。  
+### <a name="remarks"></a>Remarks  
+ By default, [noshowpoint](../standard-library/ios-functions.md#noshowpoint) is in effect.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), and then returns `str`.  
   
-### <a name="example"></a>示例  
-  有关使用 `showpoint` 的示例，请参阅 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)。  
+### <a name="example"></a>Example  
+  See [noshowpoint](../standard-library/ios-functions.md#noshowpoint) for an example of using `showpoint`.  
   
-##  <a name="showpos"></a>showpos  
- 导致正数显式带有符号。  
+##  <a name="showpos"></a>  showpos  
+ Causes positive numbers to be explicitly signed.  
   
 ```  
 ios_base& showpos(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- [noshowpos](../standard-library/ios-functions.md#noshowpos) 为默认值。  
+### <a name="remarks"></a>Remarks  
+ [noshowpos](../standard-library/ios-functions.md#noshowpos) is the default.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_showpos.cpp  
@@ -727,26 +751,26 @@ int main( )
 +1  
 ```  
   
-##  <a name="skipws"></a>skipws  
- 导致输入流不读取空格。  
+##  <a name="skipws"></a>  skipws  
+ Cause spaces to not be read by the input stream.  
   
 ```  
 ios_base& skipws(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 _ *Str* 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which _ *Str* is derived.  
   
-### <a name="remarks"></a>备注  
- 默认情况，`skipws` 是有效的。 [noskipws](../standard-library/ios-functions.md#noskipws) 会导致从输入流中读取空格。  
+### <a name="remarks"></a>Remarks  
+ By default, `skipws` is in effect. [noskipws](../standard-library/ios-functions.md#noskipws) will cause spaces to be read from the input stream.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`)，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <iostream>  
@@ -777,47 +801,47 @@ int main( )
 .3.  
 ```  
   
-##  <a name="unitbuf"></a>unitbuf  
- 导致在缓冲区未满时处理输出。  
+##  <a name="unitbuf"></a>  unitbuf  
+ Causes output to be processed when the buffer is not empty.  
   
 ```  
 ios_base& unitbuf(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 `str` 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which `str` is derived.  
   
-### <a name="remarks"></a>备注  
- 请注意，`endl` 也会刷新缓冲区。  
+### <a name="remarks"></a>Remarks  
+ Note that `endl` also flushes the buffer.  
   
- [nounitbuf](../standard-library/ios-functions.md#nounitbuf) 默认为开启状态。  
+ [nounitbuf](../standard-library/ios-functions.md#nounitbuf) is in effect by default.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags))，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)), and then returns `str`.  
   
-##  <a name="uppercase"></a>uppercase  
- 指定十六进制数字和科学计数法形式的指数以大写形式显示。  
+##  <a name="uppercase"></a>  uppercase  
+ Specifies that hexadecimal digits and the exponent in scientific notation appear in uppercase.  
   
 ```  
 ios_base& uppercase(ios_base& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `str`  
- 对 [ios_base](../standard-library/ios-base-class.md) 类型的对象的引用，或对从 `ios_base` 继承的类型的引用。  
+ A reference to an object of type [ios_base](../standard-library/ios-base-class.md), or to a type that inherits from `ios_base`.  
   
-### <a name="return-value"></a>返回值  
- 对 `str` 派生所源自的对象的引用。  
+### <a name="return-value"></a>Return Value  
+ A reference to the object from which `str` is derived.  
   
-### <a name="remarks"></a>备注  
- [nouppercase](../standard-library/ios-functions.md#nouppercase) 默认为开启状态。  
+### <a name="remarks"></a>Remarks  
+ By default, [nouppercase](../standard-library/ios-functions.md#nouppercase) is in effect.  
   
- 操控器可有效地调用`str`。[setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags))，然后返回`str`。  
+ The manipulator effectively calls `str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), and then returns `str`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // ios_uppercase.cpp  
@@ -845,7 +869,7 @@ a
 A  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<ios>](../standard-library/ios.md)
 
 

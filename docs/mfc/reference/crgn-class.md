@@ -1,5 +1,5 @@
 ---
-title: "CRgn 类 |Microsoft 文档"
+title: CRgn Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HRGN
-- CRgn class
-- regions, MFC
+- CRgn [MFC], CRgn
+- CRgn [MFC], CombineRgn
+- CRgn [MFC], CopyRgn
+- CRgn [MFC], CreateEllipticRgn
+- CRgn [MFC], CreateEllipticRgnIndirect
+- CRgn [MFC], CreateFromData
+- CRgn [MFC], CreateFromPath
+- CRgn [MFC], CreatePolygonRgn
+- CRgn [MFC], CreatePolyPolygonRgn
+- CRgn [MFC], CreateRectRgn
+- CRgn [MFC], CreateRectRgnIndirect
+- CRgn [MFC], CreateRoundRectRgn
+- CRgn [MFC], EqualRgn
+- CRgn [MFC], FromHandle
+- CRgn [MFC], GetRegionData
+- CRgn [MFC], GetRgnBox
+- CRgn [MFC], OffsetRgn
+- CRgn [MFC], PtInRegion
+- CRgn [MFC], RectInRegion
+- CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
 caps.latest.revision: 23
 author: mikeblome
@@ -56,79 +73,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3aa69aa3947409b5b3d96a9da92f5d4549eebbb4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9aab720a355bb351c32d6a2242979306e62cbbaf
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crgn-class"></a>CRgn 类
-封装一个 Windows 图形设备接口 (GDI) 区域。  
+# <a name="crgn-class"></a>CRgn Class
+Encapsulates a Windows graphics device interface (GDI) region.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRgn : public CGdiObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::CRgn](#crgn)|构造 `CRgn` 对象。|  
+|[CRgn::CRgn](#crgn)|Constructs a `CRgn` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::CombineRgn](#combinergn)|集`CRgn`对象，以便让它相当于两个指定的联合`CRgn`对象。|  
-|[CRgn::CopyRgn](#copyrgn)|集`CRgn`对象，以便让它是一份指定的`CRgn`对象。|  
-|[CRgn::CreateEllipticRgn](#createellipticrgn)|初始化`CRgn`与椭圆地区的对象。|  
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|初始化`CRgn`对象定义的椭圆区域[RECT](../../mfc/reference/rect-structure1.md)结构。|  
-|[CRgn::CreateFromData](#createfromdata)|从给定的区域和转换数据创建一个区域。|  
-|[CRgn::CreateFromPath](#createfrompath)|从选定到给定的设备上下文的路径中创建一个区域。|  
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|初始化`CRgn`与多边形区域的对象。 系统多边形将自动关闭，如有必要，通过从最后一个顶点绘制线条，与第一个。|  
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|初始化`CRgn`具有闭合的多边形的一系列组成区域的对象。 多边形可能是连续的或者它们可能重叠。|  
-|[CRgn::CreateRectRgn](#createrectrgn)|初始化`CRgn`具有矩形区域的对象。|  
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|初始化`CRgn`对象定义的矩形区域[RECT](../../mfc/reference/rect-structure1.md)结构。|  
-|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|初始化`CRgn`与具有圆角的矩形区域的对象。|  
-|[CRgn::EqualRgn](#equalrgn)|检查两个`CRgn`对象以确定它们是否等效。|  
-|[CRgn::FromHandle](#fromhandle)|返回一个指向`CRgn`对象提供一个 Windows 区域句柄时。|  
-|[CRgn::GetRegionData](#getregiondata)|用描述给定的区域的数据填充指定的缓冲区。|  
-|[CRgn::GetRgnBox](#getrgnbox)|检索的绑定矩形的坐标`CRgn`对象。|  
-|[CRgn::OffsetRgn](#offsetrgn)|将移动`CRgn`对象指定的偏移量。|  
-|[CRgn::PtInRegion](#ptinregion)|确定指定的点是否在区域中。|  
-|[CRgn::RectInRegion](#rectinregion)|确定指定的任何的矩形部分是否区域的边界内。|  
-|[CRgn::SetRectRgn](#setrectrgn)|集`CRgn`到指定的矩形区域的对象。|  
+|[CRgn::CombineRgn](#combinergn)|Sets a `CRgn` object so that it is equivalent to the union of two specified `CRgn` objects.|  
+|[CRgn::CopyRgn](#copyrgn)|Sets a `CRgn` object so that it is a copy of a specified `CRgn` object.|  
+|[CRgn::CreateEllipticRgn](#createellipticrgn)|Initializes a `CRgn` object with an elliptical region.|  
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initializes a `CRgn` object with an elliptical region defined by a [RECT](../../mfc/reference/rect-structure1.md) structure.|  
+|[CRgn::CreateFromData](#createfromdata)|Creates a region from the given region and transformation data.|  
+|[CRgn::CreateFromPath](#createfrompath)|Creates a region from the path that is selected into the given device context.|  
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initializes a `CRgn` object with a polygonal region. The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first.|  
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initializes a `CRgn` object with a region consisting of a series of closed polygons. The polygons may be disjoint, or they may overlap.|  
+|[CRgn::CreateRectRgn](#createrectrgn)|Initializes a `CRgn` object with a rectangular region.|  
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initializes a `CRgn` object with a rectangular region defined by a [RECT](../../mfc/reference/rect-structure1.md) structure.|  
+|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initializes a `CRgn` object with a rectangular region with rounded corners.|  
+|[CRgn::EqualRgn](#equalrgn)|Checks two `CRgn` objects to determine whether they are equivalent.|  
+|[CRgn::FromHandle](#fromhandle)|Returns a pointer to a `CRgn` object when given a handle to a Windows region.|  
+|[CRgn::GetRegionData](#getregiondata)|Fills the specified buffer with data describing the given region.|  
+|[CRgn::GetRgnBox](#getrgnbox)|Retrieves the coordinates of the bounding rectangle of a `CRgn` object.|  
+|[CRgn::OffsetRgn](#offsetrgn)|Moves a `CRgn` object by the specified offsets.|  
+|[CRgn::PtInRegion](#ptinregion)|Determines whether a specified point is in the region.|  
+|[CRgn::RectInRegion](#rectinregion)|Determines whether any part of a specified rectangle is within the boundaries of the region.|  
+|[CRgn::SetRectRgn](#setrectrgn)|Sets the `CRgn` object to the specified rectangular region.|  
   
-### <a name="public-operators"></a>公共运算符  
+### <a name="public-operators"></a>Public Operators  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::operator HRGN](#operator_hrgn)|返回中包含的 Windows 句柄`CRgn`对象。|  
+|[CRgn::operator HRGN](#operator_hrgn)|Returns the Windows handle contained in the `CRgn` object.|  
   
-## <a name="remarks"></a>备注  
- 区域是一个窗口内的一个椭圆或多边形区域。 若要使用的区域，你使用的类成员函数`CRgn`与剪辑函数定义为类的成员`CDC`。  
+## <a name="remarks"></a>Remarks  
+ A region is an elliptical or polygonal area within a window. To use regions, you use the member functions of class `CRgn` with the clipping functions defined as members of class `CDC`.  
   
- 成员函数的`CRgn`创建、 更改和检索有关区域对象调用它们的信息。  
+ The member functions of `CRgn` create, alter, and retrieve information about the region object for which they are called.  
   
- 有关详细信息使用`CRgn`，请参阅[图形对象](../../mfc/graphic-objects.md)。  
+ For more information on using `CRgn`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CRgn`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="combinergn"></a>CRgn::CombineRgn  
- 通过组合两个现有区域来创建新的 GDI 区域。  
+##  <a name="combinergn"></a>  CRgn::CombineRgn  
+ Creates a new GDI region by combining two existing regions.  
   
 ```  
 int CombineRgn(
@@ -137,79 +154,79 @@ int CombineRgn(
     int nCombineMode);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pRgn1`  
- 标识现有区域。  
+ Identifies an existing region.  
   
  `pRgn2`  
- 标识现有区域。  
+ Identifies an existing region.  
   
  `nCombineMode`  
- 指定要合并两个源区域时执行的操作。 它可以是以下值之一︰  
+ Specifies the operation to be performed when combining the two source regions. It can be any one of the following values:  
   
-- **RGN_AND**使用的两个区域 （交集） 的重叠区域。  
+- **RGN_AND** Uses overlapping areas of both regions (intersection).  
   
-- **RGN_COPY**会创建一份区域 1 (由标识`pRgn1`)。  
+- **RGN_COPY** Creates a copy of region 1 (identified by `pRgn1`).  
   
-- **RGN_DIFF**创建包含区域的区域 1 的区域 (由标识`pRgn1`)，不是区域 2 的一部分 (由标识`pRgn2`)。  
+- **RGN_DIFF** Creates a region consisting of the areas of region 1 (identified by `pRgn1`) that are not part of region 2 (identified by `pRgn2`).  
   
-- **RGN_OR**将合并整个 （并集） 的两个区域。  
+- **RGN_OR** Combines both regions in their entirety (union).  
   
-- **RGN_XOR**将合并两个区域，但将删除重叠区域。  
+- **RGN_XOR** Combines both regions but removes overlapping areas.  
   
-### <a name="return-value"></a>返回值  
- 指定所生成的区域的类型。 它可以是以下值之一︰  
+### <a name="return-value"></a>Return Value  
+ Specifies the type of the resulting region. It can be one of the following values:  
   
-- **COMPLEXREGION**新的区域有重叠的边框。  
+- **COMPLEXREGION** New region has overlapping borders.  
   
-- **错误**创建任何新区域。  
+- **ERROR** No new region created.  
   
-- **NULLREGION**新区域为空。  
+- **NULLREGION** New region is empty.  
   
-- **SIMPLEREGION**新区域具有不重叠的边框。  
+- **SIMPLEREGION** New region has no overlapping borders.  
   
-### <a name="remarks"></a>备注  
- 区域组合所指定的`nCombineMode`。  
+### <a name="remarks"></a>Remarks  
+ The regions are combined as specified by `nCombineMode`.  
   
- 两个指定的区域会进行合并，并生成的区域句柄存储在`CRgn`对象。 因此，任何区域存储在`CRgn`对象替换为组合的区域。  
+ The two specified regions are combined, and the resulting region handle is stored in the `CRgn` object. Thus, whatever region is stored in the `CRgn` object is replaced by the combined region.  
   
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 使用[CopyRgn](#copyrgn)只需将一个区域复制到另一个区域。  
+ Use [CopyRgn](#copyrgn) to simply copy one region into another region.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="copyrgn"></a>CRgn::CopyRgn  
- 将复制定义的区域`pRgnSrc`到`CRgn`对象。  
+##  <a name="copyrgn"></a>  CRgn::CopyRgn  
+ Copies the region defined by `pRgnSrc` into the `CRgn` object.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pRgnSrc`  
- 标识现有区域。  
+ Identifies an existing region.  
   
-### <a name="return-value"></a>返回值  
- 指定所生成的区域的类型。 它可以是以下值之一︰  
+### <a name="return-value"></a>Return Value  
+ Specifies the type of the resulting region. It can be one of the following values:  
   
-- **COMPLEXREGION**新的区域有重叠的边框。  
+- **COMPLEXREGION** New region has overlapping borders.  
   
-- **错误**创建任何新区域。  
+- **ERROR** No new region created.  
   
-- **NULLREGION**新区域为空。  
+- **NULLREGION** New region is empty.  
   
-- **SIMPLEREGION**新区域具有不重叠的边框。  
+- **SIMPLEREGION** New region has no overlapping borders.  
   
-### <a name="remarks"></a>备注  
- 新的区域将替换以前存储在区域`CRgn`对象。 此函数是一种特殊情况的[CombineRgn](#combinergn)成员函数。  
+### <a name="remarks"></a>Remarks  
+ The new region replaces the region formerly stored in the `CRgn` object. This function is a special case of the [CombineRgn](#combinergn) member function.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CRgn::CreateEllipticRgn](#createellipticrgn)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
- 创建一个椭圆的区域。  
+##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
+ Creates an elliptical region.  
   
 ```  
 BOOL CreateEllipticRgn(
@@ -219,58 +236,58 @@ BOOL CreateEllipticRgn(
     int y2);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定的椭圆的边框的左上角中的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the upper-left corner of the bounding rectangle of the ellipse.  
   
  `y1`  
- 指定的椭圆的边框的左上角中的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the upper-left corner of the bounding rectangle of the ellipse.  
   
  `x2`  
- 指定的椭圆的边框的右下角中的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the lower-right corner of the bounding rectangle of the ellipse.  
   
  `y2`  
- 指定的椭圆的边框的右下角中的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the lower-right corner of the bounding rectangle of the ellipse.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 区域定义的由指定的边界矩形`x1`， `y1`， `x2`，和`y2`。 该区域存储在`CRgn`对象。  
+### <a name="remarks"></a>Remarks  
+ The region is defined by the bounding rectangle specified by `x1`, `y1`, `x2`, and `y2`. The region is stored in the `CRgn` object.  
   
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 当它已完成使用与创建区域`CreateEllipticRgn`函数，应用程序应选择的设备上下文和使用的区域出`DeleteObject`函数以将其删除。  
+ When it has finished using a region created with the `CreateEllipticRgn` function, an application should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
- 创建一个椭圆的区域。  
+##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
+ Creates an elliptical region.  
   
 ```  
 BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向`RECT`结构或`CRect`包含椭圆的边框的左上角和右下角的逻辑坐标的对象。  
+ Points to a `RECT` structure or a `CRect` object that contains the logical coordinates of the upper-left and lower-right corners of the bounding rectangle of the ellipse.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 区域定义的结构或指向的对象`lpRect`并存储在`CRgn`对象。  
+### <a name="remarks"></a>Remarks  
+ The region is defined by the structure or object pointed to by `lpRect` and is stored in the `CRgn` object.  
   
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 当它已完成使用与创建区域`CreateEllipticRgnIndirect`函数，应用程序应选择的设备上下文和使用的区域出`DeleteObject`函数以将其删除。  
+ When it has finished using a region created with the `CreateEllipticRgnIndirect` function, an application should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
-##  <a name="createfromdata"></a>CRgn::CreateFromData  
- 从给定的区域和转换数据创建一个区域。  
+##  <a name="createfromdata"></a>  CRgn::CreateFromData  
+ Creates a region from the given region and transformation data.  
   
 ```  
 BOOL CreateFromData(
@@ -279,41 +296,41 @@ BOOL CreateFromData(
     const RGNDATA* pRgnData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpXForm*  
- 指向[XFORM](../../mfc/reference/xform-structure.md)数据结构，它定义要在区域上执行的转换。 此指针为时**NULL**，使用标识转换。  
+ Points to an [XFORM](../../mfc/reference/xform-structure.md) data structure that defines the transformation to be performed on the region. If this pointer is **NULL**, the identity transformation is used.  
   
  `nCount`  
- 指定指向的字节数`pRgnData`。  
+ Specifies the number of bytes pointed to by `pRgnData`.  
   
  `pRgnData`  
- 指向[RGNDATA](../../mfc/reference/rgndata-structure.md)包含区域数据的数据结构。  
+ Points to a [RGNDATA](../../mfc/reference/rgndata-structure.md) data structure that contains the region data.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 应用程序可以通过调用检索区域的数据`CRgn::GetRegionData`函数。  
+### <a name="remarks"></a>Remarks  
+ An application can retrieve data for a region by calling the `CRgn::GetRegionData` function.  
   
-##  <a name="createfrompath"></a>CRgn::CreateFromPath  
- 从选定到给定的设备上下文的路径中创建一个区域。  
+##  <a name="createfrompath"></a>  CRgn::CreateFromPath  
+ Creates a region from the path that is selected into the given device context.  
   
 ```  
 BOOL CreateFromPath(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 标识设备上下文，其中包含已关闭的路径。  
+ Identifies a device context that contains a closed path.  
   
-### <a name="return-value"></a>返回值  
- 如果该函数成功，则为非 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 由标识的设备上下文`pDC`参数必须包含已关闭的路径。 后`CreateFromPath`将某个区域，Windows 路径转换放弃从设备上下文已关闭的路径。  
+### <a name="remarks"></a>Remarks  
+ The device context identified by the `pDC` parameter must contain a closed path. After `CreateFromPath` converts a path into a region, Windows discards the closed path from the device context.  
   
-##  <a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
- 创建一个多边形区域。  
+##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
+ Creates a polygonal region.  
   
 ```  
 BOOL CreatePolygonRgn(
@@ -322,9 +339,9 @@ BOOL CreatePolygonRgn(
     int nMode);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向数组的**点**结构或一组`CPoint`对象。 每个结构指定的 x 坐标和 y 坐标的多边形的一个顶点。 **点**结构具有以下形式︰  
+ Points to an array of **POINT** structures or an array of `CPoint` objects. Each structure specifies the x-coordinate and y-coordinate of one vertex of the polygon. The **POINT** structure has the following form:  
   
  `typedef struct tagPOINT {`  
   
@@ -335,30 +352,30 @@ BOOL CreatePolygonRgn(
  `} POINT;`  
   
  `nCount`  
- 指定的数**点**结构或`CPoint`指向数组中的对象`lpPoints`。  
+ Specifies the number of **POINT** structures or `CPoint` objects in the array pointed to by `lpPoints`.  
   
  `nMode`  
- 指定区域的填充模式。 此参数可以是**备用**或**绕**。  
+ Specifies the filling mode for the region. This parameter may be either **ALTERNATE** or **WINDING**.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 系统多边形将自动关闭，如有必要，通过从最后一个顶点绘制线条，与第一个。 所生成的区域存储在`CRgn`对象。  
+### <a name="remarks"></a>Remarks  
+ The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first. The resulting region is stored in the `CRgn` object.  
   
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 多边形填充模式时**备用**，系统填充每个扫描线上的奇数和偶数多边形边之间的区域。 也就是说，系统填充区域之间的第一个和第二个端、 之间的第三个和第四个端和等等。  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on.  
   
- 多边形填充模式时**绕**，系统将使用在其中绘制图来确定是否填充区域的方向。 在以顺时针方向或逆时针方向绘制多边形内的每个直线线段。 每当从封闭区域到图的外部绘制的虚线通过顺时针旋转线段，即会递增计数。 当行通过逆时针线段时，计数会减少。 计数不为零的曲线到达图外部时，会填充区域。  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
- 当应用程序已完成使用与创建区域`CreatePolygonRgn`函数，它应选择的设备上下文和使用的区域出`DeleteObject`函数以将其删除。  
+ When an application has finished using a region created with the `CreatePolygonRgn` function, it should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
- 创建闭合的多边形的一系列组成的区域。  
+##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
+ Creates a region consisting of a series of closed polygons.  
   
 ```  
 BOOL CreatePolyPolygonRgn(
@@ -368,9 +385,9 @@ BOOL CreatePolyPolygonRgn(
     int nPolyFillMode);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向数组的**点**结构或一组`CPoint`定义的多边形的顶点的对象。 必须显式关闭每个多边形，因为系统不会自动关闭它们。 多边形指定连续。 **点**结构具有以下形式︰  
+ Points to an array of **POINT** structures or an array of `CPoint` objects that defines the vertices of the polygons. Each polygon must be explicitly closed because the system does not close them automatically. The polygons are specified consecutively. The **POINT** structure has the following form:  
   
  `typedef struct tagPOINT {`  
   
@@ -381,32 +398,32 @@ BOOL CreatePolyPolygonRgn(
  `} POINT;`  
   
  `lpPolyCounts`  
- 指向整数的数组。 第一个整数指定中第一个多边形的顶点数`lpPoints`数组，第二个整数的顶点数指定在第二个多边形，依次类推。  
+ Points to an array of integers. The first integer specifies the number of vertices in the first polygon in the `lpPoints` array, the second integer specifies the number of vertices in the second polygon, and so on.  
   
  `nCount`  
- 指定在整数的总数`lpPolyCounts`数组。  
+ Specifies the total number of integers in the `lpPolyCounts` array.  
   
  `nPolyFillMode`  
- 指定的多边形填充模式。 此值可能是**备用**或**绕**。  
+ Specifies the polygon-filling mode. This value may be either **ALTERNATE** or **WINDING**.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 所生成的区域存储在`CRgn`对象。  
+### <a name="remarks"></a>Remarks  
+ The resulting region is stored in the `CRgn` object.  
   
- 多边形可能是连续的或者它们可能重叠。  
+ The polygons may be disjoint, or they may overlap.  
   
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 多边形填充模式时**备用**，系统填充每个扫描线上的奇数和偶数多边形边之间的区域。 也就是说，系统填充区域之间的第一个和第二个端、 之间的第三个和第四个端和等等。  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on.  
   
- 多边形填充模式时**绕**，系统将使用在其中绘制图来确定是否填充区域的方向。 在以顺时针方向或逆时针方向绘制多边形内的每个直线线段。 每当从封闭区域到图的外部绘制的虚线通过顺时针旋转线段，即会递增计数。 当行通过逆时针线段时，计数会减少。 计数不为零的曲线到达图外部时，会填充区域。  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
- 当应用程序已完成使用与创建区域`CreatePolyPolygonRgn`函数，它应选择的设备上下文和使用的区域出[CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成员函数以将其删除。  
+ When an application has finished using a region created with the `CreatePolyPolygonRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.  
   
-##  <a name="createrectrgn"></a>CRgn::CreateRectRgn  
- 创建存储在一个矩形区域`CRgn`对象。  
+##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn  
+ Creates a rectangular region that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRectRgn(
@@ -416,42 +433,42 @@ BOOL CreateRectRgn(
     int y2);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定区域的左上角中的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the upper-left corner of the region.  
   
  `y1`  
- 指定区域的左上角中的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the upper-left corner of the region.  
   
  `x2`  
- 指定区域的右下角中的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the lower-right corner of the region.  
   
  `y2`  
- 指定区域的右下角中的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the lower-right corner of the region.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 当它已完成使用创建的区域`CreateRectRgn`，应用程序应使用[CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成员函数以移除区域。  
+ When it has finished using a region created by `CreateRectRgn`, an application should use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove the region.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
- 有关其他示例，请参阅[CRgn::CombineRgn](#combinergn)。  
+ For an additional example, see [CRgn::CombineRgn](#combinergn).  
   
-##  <a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
- 创建存储在一个矩形区域`CRgn`对象。  
+##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect  
+ Creates a rectangular region that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向`RECT`结构或`CRect`包含区域的左上角和右下角的逻辑坐标的对象。 `RECT`结构具有以下形式︰  
+ Points to a `RECT` structure or `CRect` object that contains the logical coordinates of the upper-left and lower-right corners of the region. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -465,19 +482,19 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
   
  `} RECT;`  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 当它已完成使用创建的区域`CreateRectRgnIndirect`，应用程序应使用[CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成员函数以移除区域。  
+ When it has finished using a region created by `CreateRectRgnIndirect`, an application should use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove the region.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
- 创建与存储中的圆角矩形区域`CRgn`对象。  
+##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
+ Creates a rectangular region with rounded corners that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRoundRectRgn(
@@ -489,85 +506,85 @@ BOOL CreateRoundRectRgn(
     int y3);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定区域的左上角中的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the upper-left corner of the region.  
   
  `y1`  
- 指定区域的左上角中的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the upper-left corner of the region.  
   
  `x2`  
- 指定区域的右下角中的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the lower-right corner of the region.  
   
  `y2`  
- 指定区域的右下角中的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the lower-right corner of the region.  
   
  *x3*  
- 指定用于创建圆的角的椭圆的宽度。  
+ Specifies the width of the ellipse used to create the rounded corners.  
   
  `y3`  
- 指定用于创建圆的角的椭圆的高度。  
+ Specifies the height of the ellipse used to create the rounded corners.  
   
-### <a name="return-value"></a>返回值  
- 如果该操作成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 区域的大小被限制为 32,767 通过 32,767 逻辑单元或 64k 的内存，以二者中较小者为准。  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- 当应用程序已完成使用与创建区域`CreateRoundRectRgn`函数，它应选择的设备上下文和使用的区域出[CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成员函数以将其删除。  
+ When an application has finished using a region created with the `CreateRoundRectRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="crgn"></a>CRgn::CRgn  
- 构造 `CRgn` 对象。  
+##  <a name="crgn"></a>  CRgn::CRgn  
+ Constructs a `CRgn` object.  
   
 ```  
 CRgn();
 ```  
   
-### <a name="remarks"></a>备注  
- `m_hObject`之前使用一个或多个其他初始化对象，数据成员不包含有效的 Windows GDI 区域`CRgn`成员函数。  
+### <a name="remarks"></a>Remarks  
+ The `m_hObject` data member does not contain a valid Windows GDI region until the object is initialized with one or more of the other `CRgn` member functions.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CRgn::CreateRoundRectRgn](#createroundrectrgn)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
-##  <a name="equalrgn"></a>CRgn::EqualRgn  
- 确定给定的区域是否等效于存储在区域`CRgn`对象。  
+##  <a name="equalrgn"></a>  CRgn::EqualRgn  
+ Determines whether the given region is equivalent to the region stored in the `CRgn` object.  
   
 ```  
 BOOL EqualRgn(CRgn* pRgn) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 标识的区域。  
+ Identifies a region.  
   
-### <a name="return-value"></a>返回值  
- 如果两个区域相等，则非零否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the two regions are equivalent; otherwise 0.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView # 150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="fromhandle"></a>CRgn::FromHandle  
- 返回一个指向`CRgn`对象提供一个 Windows 区域句柄时。  
+##  <a name="fromhandle"></a>  CRgn::FromHandle  
+ Returns a pointer to a `CRgn` object when given a handle to a Windows region.  
   
 ```  
 static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hRgn`  
- 指定一个 Windows 区域的句柄。  
+ Specifies a handle to a Windows region.  
   
-### <a name="return-value"></a>返回值  
- 指向的指针`CRgn`对象。 如果该函数不成功，返回值是**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CRgn` object. If the function was not successful, the return value is **NULL**.  
   
-### <a name="remarks"></a>备注  
- 如果`CRgn`对象尚未附加到该句柄，一种临时`CRgn`创建对象并将其附加。 此临时`CRgn`对象是否有效，仅在下次应用程序在其事件循环中具有空闲时间，直到在哪些时间所有临时图形对象会被删除。 另一种说法是一个窗口消息处理期间才有效临时对象。  
+### <a name="remarks"></a>Remarks  
+ If a `CRgn` object is not already attached to the handle, a temporary `CRgn` object is created and attached. This temporary `CRgn` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.  
   
-##  <a name="getregiondata"></a>CRgn::GetRegionData  
- 用描述区域数据填充指定的缓冲区。  
+##  <a name="getregiondata"></a>  CRgn::GetRegionData  
+ Fills the specified buffer with data describing the region.  
   
 ```  
 int GetRegionData(
@@ -575,29 +592,29 @@ int GetRegionData(
     int nCount) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRgnData`  
- 指向[RGNDATA](../../mfc/reference/rgndata-structure.md)接收信息的数据结构。 如果此参数为**NULL**，返回值将包含所需的区域数据的字节数。  
+ Points to a [RGNDATA](../../mfc/reference/rgndata-structure.md) data structure that receives the information. If this parameter is **NULL**, the return value contains the number of bytes needed for the region data.  
   
  `nCount`  
- 指定的大小，以字节为单位，`lpRgnData`缓冲区。  
+ Specifies the size, in bytes, of the `lpRgnData` buffer.  
   
-### <a name="return-value"></a>返回值  
- 如果函数成功和`nCount`指定足够数目的字节，返回值始终是`nCount`。 如果函数失败，或者如果`nCount`指定小于比足够数量的字节，则返回值为 0 （错误）。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds and `nCount` specifies an adequate number of bytes, the return value is always `nCount`. If the function fails, or if `nCount` specifies less than adequate number of bytes, the return value is 0 (error).  
   
-### <a name="remarks"></a>备注  
- 此数据包括组成区域的矩形的尺寸。 结合使用此函数`CRgn::CreateFromData`函数。  
+### <a name="remarks"></a>Remarks  
+ This data includes the dimensions of the rectangles that make up the region. This function is used in conjunction with the `CRgn::CreateFromData` function.  
   
-##  <a name="getrgnbox"></a>CRgn::GetRgnBox  
- 检索的绑定矩形的坐标`CRgn`对象。  
+##  <a name="getrgnbox"></a>  CRgn::GetRgnBox  
+ Retrieves the coordinates of the bounding rectangle of the `CRgn` object.  
   
 ```  
 int GetRgnBox(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向`RECT`结构或`CRect`对象以便接收边界的矩形的坐标。 `RECT`结构具有以下形式︰  
+ Points to a `RECT` structure or `CRect` object to receive the coordinates of the bounding rectangle. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -611,22 +628,22 @@ int GetRgnBox(LPRECT lpRect) const;
   
  `} RECT;`  
   
-### <a name="return-value"></a>返回值  
- 指定区域的类型。 它可以是任何以下值︰  
+### <a name="return-value"></a>Return Value  
+ Specifies the region's type. It can be any of the following values:  
   
-- **COMPLEXREGION**区域有重叠的边框。  
+- **COMPLEXREGION** Region has overlapping borders.  
   
-- **NULLREGION**区域为空。  
+- **NULLREGION** Region is empty.  
   
-- **错误**`CRgn`对象未指定有效的区域。  
+- **ERROR** `CRgn` object does not specify a valid region.  
   
-- **SIMPLEREGION**区域具有不重叠的边框。  
+- **SIMPLEREGION** Region has no overlapping borders.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CRgn::CreatePolygonRgn](#createpolygonrgn)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
-##  <a name="offsetrgn"></a>CRgn::OffsetRgn  
- 移动存储在区域`CRgn`对象指定的偏移量。  
+##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
+ Moves the region stored in the `CRgn` object by the specified offsets.  
   
 ```  
 int OffsetRgn(
@@ -636,52 +653,52 @@ int OffsetRgn(
 int OffsetRgn(POINT point);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定要向左移动或向右的单位数。  
+ Specifies the number of units to move left or right.  
   
  *y*  
- 指定要向上或向下移动单位的数。  
+ Specifies the number of units to move up or down.  
   
  `point`  
- X 坐标`point`指定左移或向右的单位数。 Y 坐标`point`指定要向上或向下移动的单位数。 `point`参数可能是**点**结构或`CPoint`对象。  
+ The x-coordinate of `point` specifies the number of units to move left or right. The y-coordinate of `point` specifies the number of units to move up or down. The `point` parameter may be either a **POINT** structure or a `CPoint` object.  
   
-### <a name="return-value"></a>返回值  
- 新区域的类型。 它可以是以下值之一︰  
+### <a name="return-value"></a>Return Value  
+ The new region's type. It can be any one of the following values:  
   
-- **COMPLEXREGION**区域有重叠的边框。  
+- **COMPLEXREGION** Region has overlapping borders.  
   
-- **错误**区域句柄无效。  
+- **ERROR** Region handle is not valid.  
   
-- **NULLREGION**区域为空。  
+- **NULLREGION** Region is empty.  
   
-- **SIMPLEREGION**区域具有不重叠的边框。  
+- **SIMPLEREGION** Region has no overlapping borders.  
   
-### <a name="remarks"></a>备注  
- 该函数将移动区域*x*沿 x 轴单位和*y*沿 y 轴的单元。  
+### <a name="remarks"></a>Remarks  
+ The function moves the region *x* units along the x-axis and *y* units along the y-axis.  
   
- 区域的坐标值必须小于或等于 32,767 且大于或等于-32768。 *X*和*y*参数必须小心选择，以防止无效区域坐标。  
+ The coordinate values of a region must be less than or equal to 32,767 and greater than or equal to -32,768. The *x* and *y* parameters must be carefully chosen to prevent invalid region coordinates.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CRgn::CreateEllipticRgn](#createellipticrgn)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="operator_hrgn"></a>CRgn::operator HRGN  
- 此运算符用于获取附加的 Windows GDI 句柄的`CRgn`对象。  
+##  <a name="operator_hrgn"></a>  CRgn::operator HRGN  
+ Use this operator to get the attached Windows GDI handle of the `CRgn` object.  
   
 ```  
 operator HRGN() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，Windows GDI 对象的句柄表示`CRgn`对象; 否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CRgn` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此运算符是一个强制转换运算符，它支持直接使用**HRGN**对象。  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an **HRGN** object.  
   
- 有关使用图形对象的详细信息，请参阅文章[图形对象](http://msdn.microsoft.com/library/windows/desktop/dd144962)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-##  <a name="ptinregion"></a>CRgn::PtInRegion  
- 检查是否给定的点*x*和*y*存储在位于区域`CRgn`对象。  
+##  <a name="ptinregion"></a>  CRgn::PtInRegion  
+ Checks whether the point given by *x* and *y* is in the region stored in the `CRgn` object.  
   
 ```  
 BOOL PtInRegion(
@@ -691,29 +708,29 @@ BOOL PtInRegion(
 BOOL PtInRegion(POINT point) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定要测试的点的逻辑 x 坐标。  
+ Specifies the logical x-coordinate of the point to test.  
   
  *y*  
- 指定要测试的点的逻辑 y 坐标。  
+ Specifies the logical y-coordinate of the point to test.  
   
  `point`  
- X 和 y 坐标`point`指定要测试的值的点 x 和 y 坐标。 `point`参数可以是**点**结构或`CPoint`对象。  
+ The x- and y-coordinates of `point` specify the x- and y-coordinates of the point to test the value of. The `point` parameter can either be a **POINT** structure or a `CPoint` object.  
   
-### <a name="return-value"></a>返回值  
- 如果该点位于区域; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the point is in the region; otherwise 0.  
   
-##  <a name="rectinregion"></a>CRgn::RectInRegion  
- 确定指定的矩形的任何部分`lpRect`中存储的区域的边界内`CRgn`对象。  
+##  <a name="rectinregion"></a>  CRgn::RectInRegion  
+ Determines whether any part of the rectangle specified by `lpRect` is within the boundaries of the region stored in the `CRgn` object.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向`RECT`结构或`CRect`对象。 `RECT`结构具有以下形式︰  
+ Points to a `RECT` structure or `CRect` object. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -727,11 +744,11 @@ BOOL RectInRegion(LPCRECT lpRect) const;
   
  `} RECT;`  
   
-### <a name="return-value"></a>返回值  
- 非零，如果指定的任何的矩形部分存在于区域的边界内否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if any part of the specified rectangle lies within the boundaries of the region; otherwise 0.  
   
-##  <a name="setrectrgn"></a>CRgn::SetRectRgn  
- 创建一个矩形区域。  
+##  <a name="setrectrgn"></a>  CRgn::SetRectRgn  
+ Creates a rectangular region.  
   
 ```  
 void SetRectRgn(
@@ -743,30 +760,30 @@ void SetRectRgn(
 void SetRectRgn(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定的矩形区域的左上角的 x 坐标。  
+ Specifies the x-coordinate of the upper-left corner of the rectangular region.  
   
  `y1`  
- 指定的矩形区域的左上角的 y 坐标。  
+ Specifies the y-coordinate of the upper-left corner of the rectangular region.  
   
  `x2`  
- 指定的矩形区域的右下角的 x 坐标。  
+ Specifies the x-coordinate of the lower-right corner of the rectangular region.  
   
  `y2`  
- 指定的矩形区域的右下角的 y 坐标。  
+ Specifies the y-coordinate of the lower-right corner of the rectangular region.  
   
  `lpRect`  
- 指定的矩形区域。 可以是到指针`RECT`结构或`CRect`对象。  
+ Specifies the rectangular region. Can be either a pointer to a `RECT` structure or a `CRect` object.  
   
-### <a name="remarks"></a>备注  
- 与不同[CreateRectRgn](#createrectrgn)，但是，它不会分配任何额外的内存从本地的 Windows 应用程序堆。 相反，它使用为该区域存储在分配的空间`CRgn`对象。 这意味着，`CRgn`对象必须具有已初始化与有效的 Windows 区域之前调用`SetRectRgn`。 通过给定的点`x1`， `y1`， `x2`，和`y2`指定分配的空间的最小大小。  
+### <a name="remarks"></a>Remarks  
+ Unlike [CreateRectRgn](#createrectrgn), however, it does not allocate any additional memory from the local Windows application heap. Instead, it uses the space allocated for the region stored in the `CRgn` object. This means that the `CRgn` object must already have been initialized with a valid Windows region before calling `SetRectRgn`. The points given by `x1`, `y1`, `x2`, and `y2` specify the minimum size of the allocated space.  
   
- 使用此函数，而不是`CreateRectRgn`成员函数以避免对本地内存管理器的调用。  
+ Use this function instead of the `CreateRectRgn` member function to avoid calls to the local memory manager.  
   
-## <a name="see-also"></a>另请参阅  
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

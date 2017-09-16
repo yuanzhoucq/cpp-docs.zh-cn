@@ -1,5 +1,5 @@
 ---
-title: "is_pod 类 | Microsoft Docs"
+title: is_pod Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_pod
 - type_traits/std::is_pod
 dev_langs:
 - C++
@@ -35,55 +34,55 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 2236d6a9796b1353b919a63620606242cde169bd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ecbad6c19819f6d99ec7cfd3d34d61e1e0201569
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ispod-class"></a>is_pod 类
-测试类型是否为 POD。  
+# <a name="ispod-class"></a>is_pod Class
+Tests if type is POD.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
 struct is_pod;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
 *T*  
-要查询的类型。  
+The type to query.  
   
-## <a name="remarks"></a>备注  
-如果类型 *T* 为纯旧数据 (POD)，则 `is_pod<T>::value` 为 `true`。 否则为 `false`。  
+## <a name="remarks"></a>Remarks  
+`is_pod<T>::value` is `true` if the type *T* is Plain Old Data (POD). Otherwise it is `false`.  
   
-算术类型、枚举类型、指针类型和指向成员类型的指针是 POD。  
+Arithmetic types, enumeration types, pointer types, and pointer to member types are POD.  
   
-POD 类型的 cv 限定版本本身就是 POD 类型。  
+A cv-qualified version of a POD type is itself a POD type.  
   
-POD 数组本身就是 POD。  
+An array of POD is itself POD.  
   
-所有非静态数据成员都是 POD 的结构或联本身就是 POD，前提是它：  
+A struct or union, all of whose non-static data members are POD, is itself POD if it has:  
   
--   没有用户声明的构造函数。  
+-   No user-declared constructors.  
   
--   没有私有或受保护的非静态数据成员。  
+-   No private or protected non-static data members.  
   
--   没有基类。  
+-   No base classes.  
   
--   没有虚函数。  
+-   No virtual functions.  
   
--   没有引用类型的非静态数据成员。  
+-   No non-static data members of reference type.  
   
--   没有用户定义的复制赋值运算符。  
+-   No user-defined copy assignment operator.  
   
--   没有用户定义的析构函数。  
+-   No user-defined destructor.  
   
-因此，你可以以递归方式生成 POD 结构和包含 POD 结构和数组的数组。  
+Therefore, you can recursively build POD structs and arrays that contain POD structs and arrays.  
   
-## <a name="example"></a>示例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_pod.cpp   
@@ -119,12 +118,12 @@ is_pod<int> == true
 is_pod<throws> == false  
 ```  
   
-## <a name="requirements"></a>要求  
-**标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<type_traits>  
   
-**命名空间：** std  
+**Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
 [<type_traits>](../standard-library/type-traits.md)
 
 

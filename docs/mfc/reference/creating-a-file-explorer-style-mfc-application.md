@@ -1,64 +1,83 @@
 ---
-title: "创建文件资源管理器样式的 MFC 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfcexplorer.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "浏览器, 资源管理器样式的应用程序"
-  - "资源管理器样式的应用程序, 创建"
-  - "MFC 应用程序, Windows 资源管理器样式"
+title: Creating a File Explorer-Style MFC Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfcexplorer.project
+dev_langs:
+- C++
+helpviewer_keywords:
+- browsers [MFC], Explorer-style applications
+- MFC applications [MFC], Windows Explorer-style
+- Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 创建文件资源管理器样式的 MFC 应用程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1ec48d8090c06c23670e21ef5fbdaa37428d7851
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-许多 Windows 系统应用于文件资源管理器使用用户界面 \(UI\) \(UI\)。  例如，当开始时，文件 Explorer 看到一个垂直拆分条分割的应用程序划分工作区中。  工作区的左边提供导航和浏览功能，工作区的右边显示与左窗格中的选定内容相关的详细信息。  用户单击左窗格中的某项时，应用程序重新填充右窗格。  在 MDI 应用程序中，可以使用**“视图”**菜单中的命令更改右窗格显示的详细信息量。（在 SDI 或多顶级文档应用程序中，只能使用工具栏按钮更改详细信息。）  
+---
+# <a name="creating-a-file-explorer-style-mfc-application"></a>Creating a File Explorer-Style MFC Application
+Many Windows system applications use the user interface (UI) for File Explorer. When you start File Explorer, for example, you see an application with a vertical splitter bar dividing the client area. The left side of the client area provides navigation and browsing features, and the right side of the client area shows details pertinent to the selection in the left pane. When a user clicks an item in the left pane, the application repopulates the right pane. In an MDI application, you can use commands on the **View** menu to change the amount of detail shown in the right pane. (In an SDI or multiple top-level document application, you can change the detail using the toolbar buttons only.)  
   
- 窗格的内容取决于应用程序。  在文件系统浏览器中，左窗格显示目录或计算机（或计算机组）的分层视图，而右窗格显示文件夹、个别的文件或计算机以及有关它们的详细信息。  这些内容不一定非是文件。  它们可以是电子邮件、错误报告或是数据库中的其他项。  
+ The contents of the panes depend on the application. In a file-system browser, the left pane shows a hierarchical view of directories or machines, or machine groups, while the right pane displays folders, individual files, or machines, and details about them. The contents do not necessarily have to be files. They could be e-mail messages, error reports, or other items in a database.  
   
- 向导为您创建了以下类：  
+ The wizard creates the following classes for you:  
   
--   **CLeftView** 类定义工作区的左窗格。  通常是从 [CTreeView](../../mfc/reference/ctreeview-class.md) 导出。  
+-   The **CLeftView** class defines the left pane of the client area. It is always derived from [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
--   C*ProjName*View 类定义工作区的右窗格。  默认情况下，它从 [CListView](../../mfc/reference/clistview-class.md) 导出，但根据在向导的[生成的类](../../mfc/reference/generated-classes-mfc-application-wizard.md)页中的“基类”列表中指定的类，它可以是另一种视图类型。  
+-   The C*ProjName*View class defines the right pane of the client area. By default, it is derived from [CListView](../../mfc/reference/clistview-class.md) but can be another type of view depending on the class you specify from the **Base class** list in the [Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard.  
   
- 生成的应用程序可以具有单文档界面 \(SDI\)、多文档界面 \(MDI\) 或多顶级文档结构。  应用程序创建的每个框架窗口都用 [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) 垂直拆分。  该应用程序的编码类似于使用拆分器的标准 MFC 应用程序的编码，不同的是该应用程序类型的每个拆分器窗格中都有单独的控件视图。  
+ The generated application can have a single document interface (SDI), a multiple document interface (MDI), or a multiple top-level documents architecture. Each frame window the application creates is vertically split using [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md). Coding this application type is similar to coding a normal MFC application that uses a splitter, except that this type of application has separate control views within each splitter pane.  
   
- 如果在右窗格中使用默认的列表视图，向导将创建附加的菜单选项（仅在 MDI 应用程序中）和工具栏按钮，以在大图标、小图标、列表和详细信息模式间切换视图的样式。  
+ If you use the default list view in the right pane, the wizard creates additional menu choices (in MDI applications only) and toolbar buttons to switch the view's style among large icons, small icons, list, and detail modes.  
   
-### 开始创建文件资源管理器样式的 MFC 可执行文件  
+### <a name="to-begin-creating-a-file-explorer-style-mfc-executable"></a>To begin creating a File Explorer-style MFC executable  
   
-1.  按照[创建 MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)中的指导操作。  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  在 MFC 应用程序向导的 [应用程序类型](../../mfc/reference/application-type-mfc-application-wizard.md) 页中，为 **文件资源管理器** 项目选择样式。  
+2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, select the **File Explorer** project style.  
   
-3.  在其他向导页中设置所需的任何其他选项。  
+3.  Set any other options you desire on the other pages of the wizard.  
   
-4.  单击“完成”生成主干应用程序。  
+4.  Click **Finish** to generate the skeleton application.  
   
- 有关详细信息，请参阅：  
+ For more information, see:  
   
--   [多文档类型、视图和框架窗口](../../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows](../../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [派生的视图类](../../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived View Classes](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [应用程序设计选择](../../mfc/application-design-choices.md)  
+-   [Application Design Choices](../../mfc/application-design-choices.md)  
   
-## 请参阅  
- [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
- [创建 Web 浏览器样式的 MFC 应用程序](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
- [创建基于窗体的 MFC 应用程序](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
+ [Creating a Forms-Based MFC Application](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+
+

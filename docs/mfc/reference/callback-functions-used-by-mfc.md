@@ -1,5 +1,5 @@
 ---
-title: "MFC 使用的回调函数 |Microsoft 文档"
+title: Callback Functions Used by MFC | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- callback functions, MFC
+- callback functions [MFC], MFC
 - MFC, callback functions
-- functions [C++], callback
-- callback functions
+- functions [MFC], callback
+- callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 caps.latest.revision: 11
 author: mikeblome
@@ -36,29 +36,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: 08c6f547c95adb4c6794ec71259888d390e42e92
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d02fd24240aae6eba247052120d387e4e0219d11
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/06/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
-在 Microsoft 基础类库中显示三个回调函数。 这些回调函数传递给[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意所有的回调函数必须捕获返回到 Windows 帐户，因为不能跨回调边界引发异常之前的 MFC 异常。 关于异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。  
+# <a name="callback-functions-used-by-mfc"></a>Callback Functions Used by MFC
+Three callback functions appear in the Microsoft Foundation Class Library. These callback functions are passed to [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), and [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Note that all callback functions must trap MFC exceptions before returning to Windows, since exceptions cannot be thrown across callback boundaries. For more information about exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
 
-|名称||  
+|Name||  
 |----------|-----------------|  
-|[CDC::EnumObjects 的回调函数](#enum_objects)||  
-|[CDC::GrayString 的回调函数](#graystring)||
+|[Callback Function for CDC::EnumObjects](#enum_objects)||  
+|[Callback Function for CDC::GrayString](#graystring)||
 |[Callback Function for CDC::SetAbortProc](#setabortproc)|| 
 
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h 
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h 
 
-## <a name="enum_objects"></a>Cdc:: enumobjects 的回调函数
-*ObjectFunc*名称是应用程序提供的函数名称的占位符。  
+## <a name="enum_objects"></a> Callback Function for CDC::EnumObjects
+The *ObjectFunc* name is a placeholder for the application-supplied function name.  
   
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 int CALLBACK EXPORT ObjectFunc(
@@ -66,23 +66,23 @@ int CALLBACK EXPORT ObjectFunc(
     LPSTR* lpData);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpszLogObject*  
- 指向[LOGPEN](../../mfc/reference/logpen-structure.md)或[LOGBRUSH](../../mfc/reference/logbrush-structure.md)数据结构，其中包含的对象的逻辑特性信息。  
+ Points to a [LOGPEN](../../mfc/reference/logpen-structure.md) or [LOGBRUSH](../../mfc/reference/logbrush-structure.md) data structure that contains information about the logical attributes of the object.  
   
  `lpData`  
- 指向传递给 `EnumObjects` 函数的应用程序提供的数据。  
+ Points to the application-supplied data passed to the `EnumObjects` function.  
   
-### <a name="return-value"></a>返回值  
- 回调函数返回 `int`。 此返回值是用户定义的。 如果回调函数返回 0，`EnumObjects` 将提前停止枚举。  
+### <a name="return-value"></a>Return Value  
+ The callback function returns an `int`. The value of this return is user-defined. If the callback function returns 0, `EnumObjects` stops enumeration early.  
   
-### <a name="remarks"></a>备注  
- 必须导出实际名称。  
+### <a name="remarks"></a>Remarks  
+ The actual name must be exported.  
   
-## <a name="graystring"></a>Cdc:: graystring 的回调函数
-*OutputFunc*是由应用程序提供的回调函数名称的占位符。  
+## <a name="graystring"></a>  Callback Function for CDC::GrayString
+*OutputFunc* is a placeholder for the application-supplied callback function name.  
   
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 BOOL CALLBACK EXPORT OutputFunc(
@@ -91,26 +91,26 @@ BOOL CALLBACK EXPORT OutputFunc(
     int nCount);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- 向 `nWidth` 标识一个内存设备上下文，该上下文具有宽度和高度至少为 `nHeight` 和 `GrayString` 指定的值的位图。  
+ Identifies a memory device context with a bitmap of at least the width and height specified by `nWidth` and `nHeight` to `GrayString`.  
   
  `lpData`  
- 指向要绘制的字符串。  
+ Points to the character string to be drawn.  
   
  `nCount`  
- 指定要输出的字符数。  
+ Specifies the number of characters to output.  
   
-### <a name="return-value"></a>返回值  
- 回调函数的返回值必须是**TRUE**以指示成功; 否则它就是**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ The callback function's return value must be **TRUE** to indicate success; otherwise it is **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 回调函数 (*OutputFunc*) 必须绘制的图像相对于坐标 (0，0) 而不是 (*x*， *y*)。  
+### <a name="remarks"></a>Remarks  
+ The callback function (*OutputFunc*) must draw an image relative to the coordinates (0,0) rather than (*x*, *y*).  
 
-## <a name="setabortproc"></a>Cdc:: setabortproc 的回调函数
-名称*AbortFunc*是应用程序提供的函数名称的占位符。  
+## <a name="setabortproc"></a>  Callback Function for CDC::SetAbortProc
+The name *AbortFunc* is a placeholder for the application-supplied function name.  
   
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 BOOL CALLBACK EXPORT AbortFunc(
@@ -118,24 +118,21 @@ BOOL CALLBACK EXPORT AbortFunc(
     int code);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *hPr*  
- 标识设备上下文。  
+ Identifies the device context.  
   
  `code`  
- 指定是否已发生了错误。 如果未发生错误，则为 0。 它是**SP_OUTOFDISK**如果打印管理器当前磁盘空间不足，更多磁盘空间将变为可用，如果应用程序等待。 如果`code`是**SP_OUTOFDISK**，应用程序没有中止打印作业。 如果不存在，它必须通过调用产生到打印管理器**PeekMessage**或**GetMessage** Windows 函数。  
+ Specifies whether an error has occurred. It is 0 if no error has occurred. It is **SP_OUTOFDISK** if the Print Manager is currently out of disk space and more disk space will become available if the application waits. If `code` is **SP_OUTOFDISK**, the application does not have to abort the print job. If it does not, it must yield to the Print Manager by calling the **PeekMessage** or **GetMessage** Windows function.  
   
-### <a name="return-value"></a>返回值  
- 终止处理程序函数的返回值，并且如果打印作业若要继续，则为非 0 如果就被取消。  
+### <a name="return-value"></a>Return Value  
+ The return value of the abort-handler function is nonzero if the print job is to continue, and 0 if it is canceled.  
   
-### <a name="remarks"></a>备注  
- 中的备注部分所述，必须导出实际名称[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。  
+### <a name="remarks"></a>Remarks  
+ The actual name must be exported as described in the Remarks section of [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).  
  
   
-## <a name="see-also"></a>另请参阅  
- [结构、 样式、 回调和消息映射](structures-styles-callbacks-and-message-maps.md)
- [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)
- [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)
- [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](structures-styles-callbacks-and-message-maps.md) [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects) [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc) [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
 
 

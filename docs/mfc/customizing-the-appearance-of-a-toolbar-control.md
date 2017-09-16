@@ -1,66 +1,85 @@
 ---
-title: "自定义工具栏控件的外观 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBSTYLE_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBar 类, 样式"
-  - "CToolBarCtrl 类, 对象样式"
-  - "平面工具栏"
-  - "TBSTYLE_ 样式"
-  - "工具栏控件 [MFC], 样式"
-  - "透明工具栏"
+title: Customizing the Appearance of a Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBSTYLE_
+dev_langs:
+- C++
+helpviewer_keywords:
+- flat toolbars
+- CToolBar class [MFC], styles
+- transparent toolbars
+- TBSTYLE_ styles [MFC]
+- CToolBarCtrl class [MFC], object styles
+- toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 自定义工具栏控件的外观
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f3f482e66b7c584f7f7ec176fdef5df895a3260
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-类 `CToolBarCtrl` 提供许多影响外观的样式 \(，并偶尔，行为\) 工具栏对象。  通过设置 `CToolBarCtrl::Create` 或 `CToolBar::CreateEx`\) 成员函数的 `dwCtrlStyle` 参数修改工具栏对象，那么，当首次创建工具栏控件时。  
+---
+# <a name="customizing-the-appearance-of-a-toolbar-control"></a>Customizing the Appearance of a Toolbar Control
+Class `CToolBarCtrl` provides many styles that affect the appearance (and, occasionally, the behavior) of the toolbar object. Modify the toolbar object by setting the `dwCtrlStyle` parameter of the `CToolBarCtrl::Create` (or `CToolBar::CreateEx`) member function, when you first create the toolbar control.  
   
- 工具栏按钮的“三维”影响以下样式特性以及该文本的位置：  
+ The following styles affect the "3D" aspect of the toolbar buttons and the placement of the button text:  
   
--   **TBSTYLE\_FLAT** 创建工具栏按钮和透明的平缓工具栏。  按钮文本在按钮位图。下。  当使用时，此样式将光标下的按钮自动突出显示。  
+-   **TBSTYLE_FLAT** Creates a flat toolbar where both the toolbar and the buttons are transparent. Button text appears under button bitmaps. When this style is used, the button underneath the cursor is automatically highlighted.  
   
--   **TBSTYLE\_TRANSPARENT** 创建透明工具栏。  在的工具栏透明，但透明，工具栏按钮不是。  按钮文本在按钮位图。下。  
+-   **TBSTYLE_TRANSPARENT** Creates a transparent toolbar. In a transparent toolbar, the toolbar is transparent but the buttons are not. Button text appears under button bitmaps.  
   
--   **TBSTYLE\_LIST** 使在位图按钮右侧按文本。  
+-   **TBSTYLE_LIST** Places button text to the right of button bitmaps.  
   
 > [!NOTE]
->  为了避免中重绘问题，**TBSTYLE\_FLAT**，并应将 **TBSTYLE\_TRANSPARENT** 设置样式，在工具栏对象是可见的。  
+>  To prevent repaint problems, the **TBSTYLE_FLAT** and **TBSTYLE_TRANSPARENT** styles should be set before the toolbar object is visible.  
   
- 下面的样式确定工具栏使用拖放，是否允许用户重新定位在工具栏对象中的各个按钮：  
+ The following styles determine if the toolbar allows a user to reposition individual buttons within a toolbar object using drag and drop:  
   
--   **TBSTYLE\_ALTDRAG** 允许用户通过将该更改工具栏按钮的位置，在按住 Alt 时。  如果不指定此样式，用户按住 Shift，必须在拖动按钮时。  
+-   **TBSTYLE_ALTDRAG** Allows users to change a toolbar button's position by dragging it while holding down ALT. If this style is not specified, the user must hold down SHIFT while dragging a button.  
   
     > [!NOTE]
-    >  必须指定 `CCS_ADJUSTABLE` 允许拖动样式的工具栏按钮。  
+    >  The `CCS_ADJUSTABLE` style must be specified to enable toolbar buttons to be dragged.  
   
--   当鼠标指针传递此工具栏按钮时，**TBSTYLE\_REGISTERDROP** 生成 **TBN\_GETOBJECT** 通知消息请求放置目标对象。  
+-   **TBSTYLE_REGISTERDROP** Generates **TBN_GETOBJECT** notification messages to request drop target objects when the mouse pointer passes over toolbar buttons.  
   
- 剩余的可视影响样式，然后工具栏的非可视对象的特性：  
+ The remaining styles affect visual and nonvisual aspects of the toolbar object:  
   
--   创建`TBSTYLE_WRAPABLE` 可以具有多行按钮的工具栏。  当工具栏，变得太窄到包括在同一行时，中所有按钮的工具栏按钮可以通过“包装都可以过度”到下一行。  分隔并包装在 nongroup 边界发生。  
+-   `TBSTYLE_WRAPABLE` Creates a toolbar that can have multiple lines of buttons. Toolbar buttons can "wrap" to the next line when the toolbar becomes too narrow to include all buttons on the same line. Wrapping occurs on separation and nongroup boundaries.  
   
--   当其处理 `WM_ERASEBKGND` 消息时，**TBSTYLE\_CUSTOMERASE** 生成 **NM\_CUSTOMDRAW** 通知消息。  
+-   **TBSTYLE_CUSTOMERASE** Generates **NM_CUSTOMDRAW** notification messages when it processes `WM_ERASEBKGND` messages.  
   
--   `TBSTYLE_TOOLTIPS` 创建应用程序可用显示按钮的描述性文字在工具栏的工具提示控件。  
+-   `TBSTYLE_TOOLTIPS` Creates a tool tip control that an application can use to display descriptive text for the buttons in the toolbar.  
   
- 有关和工具栏样式扩展样式完整列表，请参见 [控件和工具栏按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430) 和 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中。  
+ For a complete listing of toolbar styles and extended styles, see [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439) and [Toolbar Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760430) in the Windows SDK.  
   
-## 请参阅  
- [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

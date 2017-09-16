@@ -1,5 +1,5 @@
 ---
-title: "basic_regex 类 | Microsoft 文档"
+title: basic_regex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_regex
 - regex/std::basic_regex
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f7b9afbe09fe010596a40f37eba9b0679a38268c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d09c6e2522c866e6c7a86016c2a85dd6b0dcc3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicregex-class"></a>basic_regex 类
-包装正则表达式。  
+# <a name="basicregex-class"></a>basic_regex Class
+Wraps a regular expression.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class basic_regex {  
@@ -99,39 +98,39 @@ class basic_regex {
    };  
    ```   
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- 要匹配的元素的类型。  
+ The type of elements to match.  
   
  `RXtraits`  
- 元素的特征类。  
+ Traits class for elements.  
   
-## <a name="remarks"></a>备注  
- 此模板类描述包含正则表达式的对象。 此模板类的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，和[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及适合的文本字符串参数，可搜索与正则表达式匹配的文本。 此模板类有两种专用定义，包括针对 `char` 类型元素的类型定义 [regex](../standard-library/regex-typedefs.md#regex)，以及针对 `wchar_t` 类型元素的类型定义 [wregex](../standard-library/regex-typedefs.md#wregex)。  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that holds a regular expression. Objects of this template class can be passed to the template functions [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), and [regex_replace](../standard-library/regex-functions.md#regex_replace), along with suitable text string arguments, to search for text that matches the regular expression. There are two specializations of this template class, with the type definitions [regex](../standard-library/regex-typedefs.md#regex) for elements of type `char`, and [wregex](../standard-library/regex-typedefs.md#wregex) for elements of type `wchar_t`.  
   
- 模板参数 `RXtraits` 描述模板类支持的正则表达式语法的各个重要属性。 一个指定这些正则表达式特征的外部接口必须与模板类 [regex_traits Class](../standard-library/regex-traits-class.md) 的对象相同的类。  
+ The template argument `RXtraits` describes various important properties of the syntax of the regular expressions that the template class supports. A class that specifies these regular expression traits must have the same external interface as an object of template class [regex_traits Class](../standard-library/regex-traits-class.md).  
   
- 某些函数使用操作数序列来定义正则表达式。 可以通过多种方式指定此操作数序列：  
+ Some functions take an operand sequence that defines a regular expression. You can specify such an operand sequence several ways:  
   
- `ptr` - 从 `Elem`（不能为 null 指针）开始、以 null 结尾的序列（例如 C 字符串，`char` 类型的 `ptr`），其中结尾元素为值 `value_type()`，且不是操作数序列的一部分  
+ `ptr` -- a null-terminated sequence (such as a C string, for `Elem` of type `char`) beginning at `ptr` (which must not be a null pointer), where the terminating element is the value `value_type()` and is not part of the operand sequence  
   
- `ptr`, `count` - 从 `count`（不能为 null 指针）开始的 `ptr` 元素序列  
+ `ptr`, `count` -- a sequence of `count` elements beginning at `ptr` (which must not be a null pointer)  
   
- `str` - `basic_string` 对象 `str` 指定的序列  
+ `str` -- the sequence specified by the `basic_string` object `str`  
   
- `first`, `last` - 迭代器 `first` 和 `last` 在范围 `[first, last)` 中分隔的元素序列  
+ `first`, `last` -- a sequence of elements delimited by the iterators `first` and `last`, in the range `[first, last)`  
   
- `right` - `basic_regex` 对象 `right`  
+ `right` -- the `basic_regex` object `right`  
   
- 这些成员函数还使用参数 `flags` 指定用于解释正则表达式的各个选项以及 `RXtraits` 类型描述的选项。  
+ These member functions also take an argument `flags` that specifies various options for the interpretation of the regular expression in addition to those described by the `RXtraits` type.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<regex 1>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
 ##  <a name="assign"></a>  basic_regex::assign  
- 将一个值分配到正则表达式对象。  
+ Assigns a value to the regular expressoin object.  
   
 ```  
 basic_regex& assign(
@@ -161,44 +160,44 @@ basic_regex& assign(
     flag_type flags = ECMAScript);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `STtraits`  
- 字符串源的特征类。  
+ Traits class for a string source.  
   
  `STalloc`  
- 字符串源的分配器类。  
+ Allocator class for a string source.  
   
  `InIt`  
- 范围源的输入迭代器类型。  
+ Input iterator type for a range source.  
   
  `right`  
- 要复制的正则表达式源。  
+ Regex source to copy.  
   
  `ptr`  
- 指向要复制的序列开头的指针。  
+ Pointer to beginning of sequence to copy.  
   
  `flags`  
- 复制时要添加的语法选项标志。  
+ Syntax option flags to add while copying.  
   
  `len/TD>`  
- 要复制的序列的长度。  
+ Length of sequence to copy.  
   
  `str`  
- 要复制的字符串。  
+ String to copy.  
   
  `first`  
- 要复制的序列的开头。  
+ Beginning of sequence to copy.  
   
  `last`  
- 要复制的序列的结尾。  
+ End of sequence to copy.  
   
  `IList`  
- 要复制的 initializer_list。  
+ The initializer_list to copy.  
   
-### <a name="remarks"></a>备注  
- 每个成员函数将 `*this` 保留的正则表达式替换为操作数序列所描述的正则表达式，然后返回 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The member functions each replace the regular expression held by `*this` with the regular expression described by the operand sequence, then return `*this`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_assign.cpp   
@@ -281,7 +280,7 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 ```  
   
 ##  <a name="basic_regex"></a>  basic_regex::basic_regex  
- 构造正则表达式对象。  
+ Construct the regular expression object.  
   
 ```  
 basic_regex();
@@ -314,48 +313,48 @@ explicit basic_regex(
     flag_type flags);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `STtraits`  
- 字符串源的特征类。  
+ Traits class for a string source.  
   
  `STalloc`  
- 字符串源的分配器类。  
+ Allocator class for a string source.  
   
  `InIt`  
- 范围源的输入迭代器类型。  
+ Input iterator type for a range source.  
   
  `right`  
- 要复制的正则表达式源。  
+ Regex source to copy.  
   
  `ptr`  
- 指向要复制的序列开头的指针。  
+ Pointer to beginning of sequence to copy.  
   
  `flags`  
- 复制时要添加的语法选项标志。  
+ Syntax option flags to add while copying.  
   
  `len/TD>`  
- 要复制的序列的长度。  
+ Length of sequence to copy.  
   
  `str`  
- 要复制的字符串。  
+ String to copy.  
   
  `first`  
- 要复制的序列的开头。  
+ Beginning of sequence to copy.  
   
  `last`  
- 要复制的序列的结尾。  
+ End of sequence to copy.  
   
  `IList`  
- 要复制的 initializer_list。  
+ The initializer_list to copy.  
   
-### <a name="remarks"></a>备注  
- 所有构造函数将存储类型 `RXtraits` 的默认构造对象。  
+### <a name="remarks"></a>Remarks  
+ All constructors store a default-constructed object of type `RXtraits`.  
   
- 第一个构造函数构造一个空 `basic_regex` 对象。 其他构造函数构造 `basic_regex` 对象，其中包含由操作数序列描述的正则表达式。  
+ The first constructor constructs an empty `basic_regex` object. The other constructors construct a `basic_regex` object that holds the regular expression described by the operand sequence.  
   
- 一个空`basic_regex`对象不匹配任何字符序列时传递给[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，或[regex_replace](../standard-library/regex-functions.md#regex_replace)。  
+ An empty `basic_regex` object does not match any character sequence when passed to [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search), or [regex_replace](../standard-library/regex-functions.md#regex_replace).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_construct.cpp   
@@ -438,16 +437,16 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 ```  
   
 ##  <a name="flag_type"></a>  basic_regex::flag_type  
- 语法选项标志的类型。  
+ The type of syntax option flags.  
   
 ```  
 typedef regex_constants::syntax_option_type flag_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_flag_type.cpp   
@@ -533,16 +532,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="flags"></a>  basic_regex::flags  
- 返回语法选项标志。  
+ Returns syntax option flags.  
   
 ```  
 flag_type flags() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数返回 `flag_type` 自变量的值，该值传递到对一个 [basic_regex::assign](#assign) 成员函数的最近调用，或者如果没有实施这类调用，则返回传递到构造函数的值。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the value of the `flag_type` argument passed to the most recent call to one of the [basic_regex::assign](#assign) member functions or, if no such call has been made, the value passed to the constructor.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_flags.cpp   
@@ -628,16 +627,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="getloc"></a>  basic_regex::getloc  
- 返回存储的区域设置对象。  
+ Returns the stored locale object.  
   
 ```  
 locale_type getloc() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_getloc.cpp   
@@ -723,20 +722,20 @@ getloc == imbued == true
 ```  
   
 ##  <a name="imbue"></a>  basic_regex::imbue  
- 更改存储的区域设置对象。  
+ Alters the stored locale object.  
   
 ```  
 locale_type imbue(locale_type loc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `loc`  
- 要存储的区域设置对象。  
+ The locale object to store.  
   
-### <a name="remarks"></a>备注  
- 该成员函数将清空 `*this` 并返回 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`。  
+### <a name="remarks"></a>Remarks  
+ The member function empties `*this` and returns `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_imbue.cpp   
@@ -822,16 +821,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="locale_type"></a>  basic_regex::locale_type  
- 存储的区域设置对象的类型。  
+ The type of the stored locale object.  
   
 ```  
 typedef typename RXtraits::locale_type locale_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) 的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_locale_type.cpp   
@@ -917,16 +916,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="mark_count"></a>  basic_regex::mark_count  
- 返回匹配的子表达式的数目。  
+ Returns number of subexpressions matched.  
   
 ```  
 unsigned mark_count() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回正则表达式中的捕获组数量。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of capture groups in the regular expression.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_mark_count.cpp   
@@ -1012,7 +1011,7 @@ getloc == imbued == true
 ```  
   
 ##  <a name="op_eq"></a>  basic_regex::operator=  
- 将一个值分配到正则表达式对象。  
+ Assigns a value to the regular expression object.  
   
 ```  
 basic_regex& operator=(const basic_regex& right);
@@ -1023,23 +1022,23 @@ template <class STtraits, class STalloc>
 basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `STtraits`  
- 字符串源的特征类。  
+ Traits class for a string source.  
   
  `STalloc`  
- 字符串源的分配器类。  
+ Allocator class for a string source.  
   
  `right`  
- 要复制的正则表达式源。  
+ Regex source to copy.  
   
  `str`  
- 要复制的字符串。  
+ String to copy.  
   
-### <a name="remarks"></a>备注  
- 每个运算符将 `*this` 保留的正则表达式替换为操作数序列所描述的正则表达式，然后返回 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The operators each replace the regular expression held by `*this` with the regular expression described by the operand sequence, then return `*this`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_operator_as.cpp   
@@ -1125,20 +1124,20 @@ getloc == imbued == true
 ```  
   
 ##  <a name="swap"></a>  basic_regex::swap  
- 交换两个正则表达式对象。  
+ Swaps two regular expression objects.  
   
 ```  
 void swap(basic_regex& right) throw();
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要交换的正则表达式对象。  
+ The regular expression object to swap with.  
   
-### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right`之间的正则表达式。 它定时执行此操作且不引发异常。  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the regular expressions between `*this` and `right`. It does so in constant time and throws no exceptions.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_swap.cpp   
@@ -1224,16 +1223,16 @@ getloc == imbued == true
 ```  
   
 ##  <a name="value_type"></a>  basic_regex::value_type  
- 元素类型。  
+ The element type.  
   
 ```  
 typedef Elem value_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `Elem`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Elem`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__basic_regex_value_type.cpp   
@@ -1318,13 +1317,13 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<regex>](../standard-library/regex.md)   
  [regex_match](../standard-library/regex-functions.md#regex_match)   
  [regex_search](../standard-library/regex-functions.md#regex_search)   
  [regex_replace](../standard-library/regex-functions.md#regex_replace)   
  [regex](../standard-library/regex-typedefs.md#regex)   
  [wregex](../standard-library/regex-typedefs.md#wregex)   
- [regex_traits 类](../standard-library/regex-traits-class.md)
+ [regex_traits Class](../standard-library/regex-traits-class.md)
 
 

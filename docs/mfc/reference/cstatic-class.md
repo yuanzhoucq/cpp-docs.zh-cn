@@ -1,5 +1,5 @@
 ---
-title: "CStatic 类 |Microsoft 文档"
+title: CStatic Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,14 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- enhanced metafiles
-- cursors, displaying
-- static controls
-- controls [MFC], static
-- icons, displaying
-- CStatic class
-- enhanced metafiles, displaying
-- bitmaps, displaying
+- CStatic [MFC], CStatic
+- CStatic [MFC], Create
+- CStatic [MFC], DrawItem
+- CStatic [MFC], GetBitmap
+- CStatic [MFC], GetCursor
+- CStatic [MFC], GetEnhMetaFile
+- CStatic [MFC], GetIcon
+- CStatic [MFC], SetBitmap
+- CStatic [MFC], SetCursor
+- CStatic [MFC], SetEnhMetaFile
+- CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
 caps.latest.revision: 21
 author: mikeblome
@@ -52,55 +55,55 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0209fad1b84b782cdec7927cb5a04e9bb3083d64
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ea9d17a55035a02fba744bd6829fd6c0187378be
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstatic-class"></a>CStatic 类
-提供 Windows 静态控件功能。  
+# <a name="cstatic-class"></a>CStatic Class
+Provides the functionality of a Windows static control.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStatic : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStatic::CStatic](#cstatic)|构造 `CStatic` 对象。|  
+|[CStatic::CStatic](#cstatic)|Constructs a `CStatic` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStatic::Create](#create)|创建 Windows 静态控件，并将其附加到`CStatic`对象。|  
-|[CStatic::DrawItem](#drawitem)|若要绘制一个所有者描述的静态控件的替代。|  
-|[CStatic::GetBitmap](#getbitmap)|检索与以前设置的位图的句柄[SetBitmap](#setbitmap)。|  
-|[CStatic::GetCursor](#getcursor)|检索与以前设置的光标图像的句柄[SetCursor](#setcursor)。|  
-|[CStatic::GetEnhMetaFile](#getenhmetafile)|检索与以前设置的增强型图元文件的句柄[SetEnhMetaFile](#setenhmetafile)。|  
-|[CStatic::GetIcon](#geticon)|检索与以前设置的图标的句柄[SetIcon](#seticon)。|  
-|[CStatic::SetBitmap](#setbitmap)|指定要在静态控件中显示的位图。|  
-|[CStatic::SetCursor](#setcursor)|指定要在静态控件中显示的光标图像。|  
-|[CStatic::SetEnhMetaFile](#setenhmetafile)|指定要在静态控件中显示增强型图元文件。|  
-|[CStatic::SetIcon](#seticon)|指定要在静态控件中显示的图标。|  
+|[CStatic::Create](#create)|Creates the Windows static control and attaches it to the `CStatic` object.|  
+|[CStatic::DrawItem](#drawitem)|Override to draw an owner-drawn static control.|  
+|[CStatic::GetBitmap](#getbitmap)|Retrieves the handle of the bitmap previously set with [SetBitmap](#setbitmap).|  
+|[CStatic::GetCursor](#getcursor)|Retrieves the handle of the cursor image previously set with [SetCursor](#setcursor).|  
+|[CStatic::GetEnhMetaFile](#getenhmetafile)|Retrieves the handle of the enhanced metafile previously set with [SetEnhMetaFile](#setenhmetafile).|  
+|[CStatic::GetIcon](#geticon)|Retrieves the handle of the icon previously set with [SetIcon](#seticon).|  
+|[CStatic::SetBitmap](#setbitmap)|Specifies a bitmap to be displayed in the static control.|  
+|[CStatic::SetCursor](#setcursor)|Specifies a cursor image to be displayed in the static control.|  
+|[CStatic::SetEnhMetaFile](#setenhmetafile)|Specifies an enhanced metafile to be displayed in the static control.|  
+|[CStatic::SetIcon](#seticon)|Specifies an icon to be displayed in the static control.|  
   
-## <a name="remarks"></a>备注  
- 静态控件显示的文本字符串、 框、 矩形、 图标、 光标、 位图或增强型图元文件。 它可以用于添加标签、 框中，或单独的其他控件。 静态控件通常不接受任何输入，并不提供任何输出;但是，它可以通知其父级的鼠标单击操作，如果使用创建**SS_NOTIFY**样式。  
+## <a name="remarks"></a>Remarks  
+ A static control displays a text string, box, rectangle, icon, cursor, bitmap, or enhanced metafile. It can be used to label, box, or separate other controls. A static control normally takes no input and provides no output; however, it can notify its parent of mouse clicks if it's created with **SS_NOTIFY** style.  
   
- 在两个步骤中创建静态控件。 首先，调用构造函数来构造`CStatic`对象，然后调用[创建](#create)成员函数来创建静态控件并将其附加到`CStatic`对象。  
+ Create a static control in two steps. First, call the constructor to construct the `CStatic` object, then call the [Create](#create) member function to create the static control and attach it to the `CStatic` object.  
   
- 如果您创建`CStatic`（通过对话框资源） 的对话框内的对象`CStatic`当用户关闭对话框中，将自动销毁对象。  
+ If you create a `CStatic` object within a dialog box (through a dialog resource), the `CStatic` object is automatically destroyed when the user closes the dialog box.  
   
- 如果您创建`CStatic`对象在窗口中，您可能还需要将其销毁。 一个`CStatic`的时间段内堆栈上创建的对象将自动销毁。 如果您创建`CStatic`使用堆上的对象**新**函数，则必须调用**删除**上要完成此操作与之对其进行销毁的对象。  
+ If you create a `CStatic` object within a window, you may also need to destroy it. A `CStatic` object created on the stack within a window is automatically destroyed. If you create the `CStatic` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when you are done with it.  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -109,11 +112,11 @@ class CStatic : public CWnd
   
  `CStatic`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="create"></a>CStatic::Create  
- 创建 Windows 静态控件，并将其附加到`CStatic`对象。  
+##  <a name="create"></a>  CStatic::Create  
+ Creates the Windows static control and attaches it to the `CStatic` object.  
   
 ```  
 virtual BOOL Create(
@@ -124,248 +127,248 @@ virtual BOOL Create(
     UINT nID = 0xffff);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 指定要放置在控件中的文本。 如果**NULL**，没有文本将可见。  
+ Specifies the text to place in the control. If **NULL**, no text will be visible.  
   
  `dwStyle`  
- 指定静态控件的窗口样式。 应用的任意组合[静态控件样式](../../mfc/reference/static-styles.md)到控件。  
+ Specifies the static control's window style. Apply any combination of [static control styles](../../mfc/reference/styles-used-by-mfc.md#static-styles) to the control.  
   
  `rect`  
- 指定的位置和静态控件的大小。 它可为`RECT`结构或`CRect`对象。  
+ Specifies the position and size of the static control. It can be either a `RECT` structure or a `CRect` object.  
   
  `pParentWnd`  
- 指定`CStatic`父窗口中，通常`CDialog`对象。 它不能**NULL**。  
+ Specifies the `CStatic` parent window, usually a `CDialog` object. It must not be **NULL**.  
   
  `nID`  
- 指定静态控件的控件 id。  
+ Specifies the static control's control ID.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 构造`CStatic`两个步骤中的对象。 首先，调用构造函数`CStatic`，然后调用**创建**，它创建 Windows 静态控件并将其附加到`CStatic`对象。  
+### <a name="remarks"></a>Remarks  
+ Construct a `CStatic` object in two steps. First, call the constructor `CStatic`, and then call **Create**, which creates the Windows static control and attaches it to the `CStatic` object.  
   
- 将应用以下[窗口样式](../../mfc/reference/window-styles.md)到静态控件︰  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a static control:  
   
-- **WS_CHILD**始终  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED**很少  
+- **WS_DISABLED** Rarely  
   
- 如果您打算在静态控件中显示位图、 光标、 图标或图元文件，您将需要应用以下项之一[静态样式](../../mfc/reference/static-styles.md):  
+ If you're going to display a bitmap, cursor, icon, or metafile in the static control, you'll need to apply one of the following [static styles](../../mfc/reference/styles-used-by-mfc.md#static-styles):  
   
-- **SS_BITMAP**针对位图使用此样式。  
+- **SS_BITMAP** Use this style for bitmaps.  
   
-- **SS_ICON**光标和图标使用此样式。  
+- **SS_ICON** Use this style for cursors and icons.  
   
-- **SS_ENHMETAFILE**对增强型图元文件中使用此样式。  
+- **SS_ENHMETAFILE** Use this style for enhanced metafiles.  
   
- 对于游标、 位图或图标，可能还想要使用下列样式︰  
+ For cursors, bitmaps, or icons, you may also want to use the following style:  
   
-- **SS_CENTERIMAGE**使用来居中对齐静态控件中的图像。  
+- **SS_CENTERIMAGE** Use to center the image in the static control.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&1;](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
-##  <a name="cstatic"></a>CStatic::CStatic  
- 构造 `CStatic` 对象。  
+##  <a name="cstatic"></a>  CStatic::CStatic  
+ Constructs a `CStatic` object.  
   
 ```  
 CStatic();
 ```  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&2;](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CStatic::DrawItem  
- 由框架来绘制一个所有者描述的静态控件调用。  
+##  <a name="drawitem"></a>  CStatic::DrawItem  
+ Called by the framework to draw an owner-drawn static control.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 一个指向[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)结构。 该结构包含有关要绘制的项和绘图所需的类型信息。  
+ A pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. The structure contains information about the item to be drawn and the type of drawing required.  
   
-### <a name="remarks"></a>备注  
- 重写此函数可实现绘制一个所有者绘制的**CStatic**对象 (该控件具有该样式**SS_OWNERDRAW**)。  
+### <a name="remarks"></a>Remarks  
+ Override this function to implement drawing for an owner-drawn **CStatic** object (the control has the style **SS_OWNERDRAW**).  
   
-##  <a name="getbitmap"></a>CStatic::GetBitmap  
- 获取在位图中，与以前设置的句柄[SetBitmap](#setbitmap)，也就是说，与关联`CStatic`。  
+##  <a name="getbitmap"></a>  CStatic::GetBitmap  
+ Gets the handle of the bitmap, previously set with [SetBitmap](#setbitmap), that is associated with `CStatic`.  
   
 ```  
 HBITMAP GetBitmap() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前位图的句柄或**NULL**如果未不设置任何位图。  
+### <a name="return-value"></a>Return Value  
+ A handle to the current bitmap, or **NULL** if no bitmap has been set.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&3;](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="getcursor"></a>CStatic::GetCursor  
- 获取光标，与以前设置的句柄[SetCursor](#setcursor)，也就是说，与关联`CStatic`。  
+##  <a name="getcursor"></a>  CStatic::GetCursor  
+ Gets the handle of the cursor, previously set with [SetCursor](#setcursor), that is associated with `CStatic`.  
   
 ```  
 HCURSOR GetCursor();
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前光标的句柄或**NULL**如果尚未设置无游标。  
+### <a name="return-value"></a>Return Value  
+ A handle to the current cursor, or **NULL** if no cursor has been set.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&4;](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
- 获取增强型图元文件，与以前设置的句柄[SetEnhMetafile](#setenhmetafile)，也就是说，与关联`CStatic`。  
+##  <a name="getenhmetafile"></a>  CStatic::GetEnhMetaFile  
+ Gets the handle of the enhanced metafile, previously set with [SetEnhMetafile](#setenhmetafile), that is associated with `CStatic`.  
   
 ```  
 HENHMETAFILE GetEnhMetaFile() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前的增强型元文件的句柄或**NULL**如果未不设置任何增强型图元文件。  
+### <a name="return-value"></a>Return Value  
+ A handle to the current enhanced metafile, or **NULL** if no enhanced metafile has been set.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&5;](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="geticon"></a>CStatic::GetIcon  
- 获取与以前设置的图标的句柄[SetIcon](#seticon)，也就是说，与关联`CStatic`。  
+##  <a name="geticon"></a>  CStatic::GetIcon  
+ Gets the handle of the icon, previously set with [SetIcon](#seticon), that is associated with `CStatic`.  
   
 ```  
 HICON GetIcon() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 当前图标的句柄或**NULL**如果尚未设置无图标。  
+### <a name="return-value"></a>Return Value  
+ A handle to the current icon, or **NULL** if no icon has been set.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&6;](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-##  <a name="setbitmap"></a>CStatic::SetBitmap  
- 将新位图与静态控件相关联。  
+##  <a name="setbitmap"></a>  CStatic::SetBitmap  
+ Associates a new bitmap with the static control.  
   
 ```  
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hBitmap`  
- 要在静态控件中绘制的位图的句柄。  
+ Handle of the bitmap to be drawn in the static control.  
   
-### <a name="return-value"></a>返回值  
- 以前与静态控件相关联的位图的句柄或`NULL`如果不使用位图与静态控件相关联。  
+### <a name="return-value"></a>Return Value  
+ The handle of the bitmap that was previously associated with the static control, or `NULL` if no bitmap was associated with the static control.  
   
-### <a name="remarks"></a>备注  
- 将静态控件中自动绘制位图。 默认情况下，它将在窗口左上角中绘制和静态控件的大小将调整为位图的大小。  
+### <a name="remarks"></a>Remarks  
+ The bitmap will be automatically drawn in the static control. By default, it will be drawn in the upper-left corner and the static control will be resized to the size of the bitmap.  
   
- 您可以使用各种窗口和静态控制样式，其中包括︰  
+ You can use various window and static control styles, including these:  
   
--   SS_BITMAP 针对位图始终使用此样式。  
+-   SS_BITMAP   Use this style always for bitmaps.  
   
--   SS_CENTERIMAGE 用于 center 静态控件中的图像。 如果图像大于静态控件，则将剪辑元素。 如果该值小于静态控件，将位图左上角的像素颜色数据填充在图像周围的空白区域。  
+-   SS_CENTERIMAGE   Use to center the image in the static control. If the image is larger than the static control, it will be clipped. If it is smaller than the static control, the empty space around the image will be filled by the color of the pixel in the upper left corner of the bitmap.  
   
--   MFC 提供一种类`CBitmap`，您可以在您需要执行更多与位图图像不是只需调用 Win32 函数时使用`LoadBitmap`。 `CBitmap`其中包含一种类型的 GDI 对象中经常会用与合作`CStatic`，即`CWnd`用于为静态控件中显示图形对象的类。  
+-   MFC provides the class `CBitmap`, which you can use when you have to do more with a bitmap image than just call the Win32 function `LoadBitmap`. `CBitmap`, which contains one kind of GDI object, is often used in cooperation with `CStatic`, which is a `CWnd` class that is used for displaying a graphic object as a static control.  
   
- `CImage`是一个 ATL/MFC 类，使您能够更轻松地使用设备无关位图 (DIB)。 有关详细信息，请参阅[CImage 类](../../atl-mfc-shared/reference/cimage-class.md)。  
+ `CImage` is an ATL/MFC class that lets you more easily work with device independent bitmaps (DIB). For more information, see [CImage Class](../../atl-mfc-shared/reference/cimage-class.md).  
   
--   典型的用法是为提供`CStatic::SetBitmap`的 HBITMAP 运算符返回的 GDI 对象`CBitmap`或`CImage`对象。 若要执行此操作的代码类似于下面的行。  
+-   Typical usage is to give `CStatic::SetBitmap` a GDI object that is returned by the HBITMAP operator of a `CBitmap` or `CImage` object. The code to do this resembles the following line.  
   
 ```  
 MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ```  
-下面的示例创建两个`CStatic`堆上的对象。 然后将加载另一个使用系统位图使用`CBitmap::LoadOEMBitmap`和其他文件中使用`CImage::Load`。  
+The following example creates two `CStatic` objects on the heap. It then loads one with a system bitmap using `CBitmap::LoadOEMBitmap` and the other from a file using `CImage::Load`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&3;](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="setcursor"></a>CStatic::SetCursor  
- 将新的光标图像与静态控件相关联。  
+##  <a name="setcursor"></a>  CStatic::SetCursor  
+ Associates a new cursor image with the static control.  
   
 ```  
 HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hCursor`  
- 要在静态控件中绘制的光标的句柄。  
+ Handle of the cursor to be drawn in the static control.  
   
-### <a name="return-value"></a>返回值  
- 以前与静态控件中，光标的句柄或**NULL**如果无游标与静态控件相关联。  
+### <a name="return-value"></a>Return Value  
+ The handle of the cursor previously associated with the static control, or **NULL** if no cursor was associated with the static control.  
   
-### <a name="remarks"></a>备注  
- 光标将自动绘制静态控件中。 默认情况下，它将在窗口左上角中绘制和静态控制将调整为光标的大小。  
+### <a name="remarks"></a>Remarks  
+ The cursor will be automatically drawn in the static control. By default, it will be drawn in the upper-left corner and the static control will be resized to the size of the cursor.  
   
- 您可以使用各种窗口和静态控制样式，其中包括︰  
+ You can use various window and static control styles, including the following:  
   
-- **SS_ICON**光标和图标始终使用此样式。  
+- **SS_ICON** Use this style always for cursors and icons.  
   
-- **SS_CENTERIMAGE**使用静态控件中居中。 如果图像大于静态控件，则将剪辑元素。 如果它小于静态控件，将用静态控件的背景色填充在图像周围的空白区域。  
+- **SS_CENTERIMAGE** Use to center in the static control. If the image is larger than the static control, it will be clipped. If it is smaller than the static control, the empty space around the image will be filled with the background color of the static control.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&4;](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
- 将新的增强型图元文件映像与静态控件相关联。  
+##  <a name="setenhmetafile"></a>  CStatic::SetEnhMetaFile  
+ Associates a new enhanced metafile image with the static control.  
   
 ```  
 HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hMetaFile`  
- 要在静态控件中绘制的增强型图元文件的句柄。  
+ Handle of the enhanced metafile to be drawn in the static control.  
   
-### <a name="return-value"></a>返回值  
- 以前与静态控件关联的增强型图元文件的句柄或**NULL**如果没有增强型图元文件与静态控件相关联。  
+### <a name="return-value"></a>Return Value  
+ The handle of the enhanced metafile previously associated with the static control, or **NULL** if no enhanced metafile was associated with the static control.  
   
-### <a name="remarks"></a>备注  
- 增强型图元文件将自动绘制静态控件中。 增强型图元文件进行缩放以适合静态控件的大小。  
+### <a name="remarks"></a>Remarks  
+ The enhanced metafile will be automatically drawn in the static control. The enhanced metafile is scaled to fit the size of the static control.  
   
- 您可以使用各种窗口和静态控制样式，其中包括︰  
+ You can use various window and static control styles, including the following:  
   
-- **SS_ENHMETAFILE**对增强型图元文件始终使用此样式。  
+- **SS_ENHMETAFILE** Use this style always for enhanced metafiles.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&5;](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="seticon"></a>CStatic::SetIcon  
- 将新的图标图像与静态控件相关联。  
+##  <a name="seticon"></a>  CStatic::SetIcon  
+ Associates a new icon image with the static control.  
   
 ```  
 HICON SetIcon(HICON hIcon);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hIcon`  
- 要在静态控件中绘制的图标的句柄。  
+ Handle of the icon to be drawn in the static control.  
   
-### <a name="return-value"></a>返回值  
- 以前与静态控件关联的图标的句柄或**NULL**无图标是否与静态控件相关联。  
+### <a name="return-value"></a>Return Value  
+ The handle of the icon previously associated with the static control, or **NULL** if no icon was associated with the static control.  
   
-### <a name="remarks"></a>备注  
- 该图标将自动绘制静态控件中。 默认情况下，它将在窗口左上角中绘制和静态控件的大小将调整为图标的大小。  
+### <a name="remarks"></a>Remarks  
+ The icon will be automatically drawn in the static control. By default, it will be drawn in the upper-left corner and the static control will be resized to the size of the icon.  
   
- 您可以使用各种窗口和静态控制样式，其中包括︰  
+ You can use various window and static control styles, including the following:  
   
-- **SS_ICON**光标和图标始终使用此样式。  
+- **SS_ICON** Use this style always for cursors and icons.  
   
-- **SS_CENTERIMAGE**使用静态控件中居中。 如果图像大于静态控件，则将剪辑元素。 如果它小于静态控件，将用静态控件的背景色填充在图像周围的空白区域。  
+- **SS_CENTERIMAGE** Use to center in the static control. If the image is larger than the static control, it will be clipped. If it is smaller than the static control, the empty space around the image will be filled with the background color of the static control.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFC_CStatic #&6;](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [CButton 类](../../mfc/reference/cbutton-class.md)   
- [CComboBox 类](../../mfc/reference/ccombobox-class.md)   
- [CEdit 类](../../mfc/reference/cedit-class.md)   
- [CListBox 类](../../mfc/reference/clistbox-class.md)   
- [CScrollBar 类](../../mfc/reference/cscrollbar-class.md)   
- [CDialog 类](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

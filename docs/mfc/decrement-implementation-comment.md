@@ -1,44 +1,62 @@
 ---
-title: "// Implementation 注释 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "注释, 实现注释"
-  - "注释, MFC"
-  - "MFC 源文件中的实现注释"
-  - "MFC 源文件, 实现注释"
+title: -- Implementation Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Implementation comment in MFC source files
+- comments, MFC
+- MFC source files, Implementation comment
+- comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // Implementation 注释
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 74c75369879369232c35e114c2b283911a072795
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-"\/\/ Implementation"  节是所有 MFC 类声明的最重要部分。  
+---
+# <a name="-implementation-comment"></a>// Implementation Comment
+The `// Implementation` section is the most important part of any MFC class declaration.  
   
- 此节实现的详细信息。  成员变量和成员函数都可出现在此节。  一切低于此行的在 MFC 未来版本中可能会更改。  除非不能避免它，不应依赖在 `// Implementation` 行之下的详细信息。  在此外，实现行下声明的成员未记录到文档，尽管某些实现在技术备注中讨论。  基类中虚函数的重写属于此节，而忽略基类函数定义在哪节，因为函数重写基类实现将被认为是实现的详细信息。  通常，这些成员是 protected，但并不总是。  
+ This section houses all implementation details. Both member variables and member functions can appear in this section. Everything below this line could change in a future release of MFC. Unless you cannot avoid it, you should not rely on details below the `// Implementation` line. In addition, members declared below the implementation line are not documented, although some implementation is discussed in technical notes. Overrides of virtual functions in the base class reside in this section, regardless of which section the base class function is defined in, because the fact that a function overrides the base class implementation is considered an implementation detail. Typically, these members are protected, but not always.  
   
- 通知来自 [批注的示例](../mfc/an-example-of-the-comments.md) 下的 `CStdioFile` 列表，该示例在 `// Implementation` 注释下声明的成员可能声明为 **public**、 `protected`或 `private`。  因为它们可能会在将来更改，则应谨慎使用这些成员。  声明成员的一组为 **public** 可能是类库实现正常工作所需的。  但是，这并不意味着您可以安全使用成员中的声明。  
+ Notice from the `CStdioFile` listing under [An Example of the Comments](../mfc/an-example-of-the-comments.md) that members declared below the `// Implementation` comment may be declared as **public**, `protected`, or `private`. You should only use these members with caution, because they may change in the future. Declaring a group of members as **public** may be necessary for the class library implementation to work correctly. However, this does not mean that you may safely use the members so declared.  
   
 > [!NOTE]
->  您可以在 `// Implementation` 注释的上方或下方发现其保留类型的注释 。  在任何情况下，但它们描述在其下声明的类型成员。  如果它们在 `// Implementation` 注释下发生，应假设成员在 MFC 将来的版本中可能发生更改。  
+>  You may find comments of the remaining types either above or below the `// Implementation` comment. In either case, they describe the kinds of members declared below them. If they occur below the `// Implementation` comment, you should assume that the members may change in future versions of MFC.  
   
-## 请参阅  
- [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
- [注释示例](../mfc/an-example-of-the-comments.md)   
- [\/\/ Constructors 注释](../mfc/decrement-constructors-comment.md)   
- [\/\/ Attributes 注释](../mfc/decrement-attributes-comment.md)   
- [\/\/ Operations 注释](../mfc/decrement-operations-comment.md)   
- [\/\/ Overridables 注释](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

@@ -1,51 +1,70 @@
 ---
-title: "MFC 应用程序体系结构类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "应用程序体系结构类"
-  - "类 [C++], MFC"
-  - "MFC [C++], 应用程序开发"
-  - "MFC [C++], 类"
+title: MFC Application Architecture Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, classes
+- MFC, application development
+- classes [MFC], MFC
+- application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 应用程序体系结构类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff7e847340e6afb6c1a97160a7b1763e43447a6a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-此类别的类使框架应用程序的体系结构。  这些提供通用功能。大多数应用程序。  通过填写框架添加应用程序特定的功能。  通常，您通过派生新类从结构类，然后添加新成员或者重写现有成员函数执行。  
+---
+# <a name="mfc-application-architecture-classes"></a>MFC Application Architecture Classes
+Classes in this category contribute to the architecture of a framework application. They supply functionality common to most applications. You fill in the framework to add application-specific functionality. Typically, you do so by deriving new classes from the architecture classes, and then adding new members or overriding existing member functions.  
   
- [应用程序向导](../mfc/reference/mfc-application-wizard.md) 生成应用程序的多种类型，在不同的方式使用应用程序框架。  SDI \(单文档界面\) 和 MDI \(多文档界面\) 应用程序充分利用调用文档框架的部分\/视图结构。  其他类型的应用程序，比如基于对话框的应用程序，基于窗体的应用程序，并且，DLL，使用少量文档\/视图体系结构功能。  
+ [Application wizards](../mfc/reference/mfc-application-wizard.md) generate several types of applications, all of which use the application framework in differing ways. SDI (single document interface) and MDI (multiple document interface) applications make full use of a part of the framework called document/view architecture. Other types of applications, such as dialog-based applications, form-based applications, and DLLs, use only some of document/view architecture features.  
   
- 文档\/视图应用程序包含一个或多个组文档、视图和框架窗口。  文档模板对象将每文档\/视图\/框架集中的类。  
+ Document/view applications contain one or more sets of documents, views, and frame windows. A document-template object associates the classes for each document/view/frame set.  
   
- 尽管您在 MFC 应用程序不必使用文档\/视图结构，有很多好处这样做。  MFC OLE、容器和服务器支持基于文档\/视图结构，如打印和"打印预览"的支持。  
+ Although you do not have to use document/view architecture in your MFC application, there are a number of advantages to doing so. The MFC OLE container and server support is based on document/view architecture, as is support for printing and print preview.  
   
- 所有 MFC 应用程序都至少有两个对象：从派生的应用程序 [CWinApp](../mfc/reference/cwinapp-class.md)对象和某类主窗口对象派生 \(间接\)，通常从 [CWnd](../mfc/reference/cwnd-class.md)。\(通常，主窗口从 [CFrameWnd](../mfc/reference/cframewnd-class.md)[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)[CDialog](../mfc/reference/cdialog-class.md)、或派生，后者从 `CWnd`派生。\)  
+ All MFC applications have at least two objects: an application object derived from [CWinApp](../mfc/reference/cwinapp-class.md), and some sort of main window object, derived (often indirectly) from [CWnd](../mfc/reference/cwnd-class.md). (Most often, the main window is derived from [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), or [CDialog](../mfc/reference/cdialog-class.md), all of which are derived from `CWnd`.)  
   
- 使用文档\/视图结构的应用程序包含其他对象。  主要对象有：  
+ Applications that use document/view architecture contain additional objects. The principal objects are:  
   
--   从类派生的应用程序 [CWinApp](../mfc/reference/cwinapp-class.md)对象相同，如上面所述。  
+-   An application object derived from class [CWinApp](../mfc/reference/cwinapp-class.md), as mentioned before.  
   
--   从类派生的一个或多个类文档对象。[CDocument](../mfc/reference/cdocument-class.md) 文档对象类负责在视图来操作数据的内部表示形式运行。  它们可能与数据文件。  
+-   One or more document class objects derived from class [CDocument](../mfc/reference/cdocument-class.md). Document class objects are responsible for the internal representation of the data manipulated in the view. They may be associated with a data file.  
   
--   从类派生的一个或多个视图对象。[CView](../mfc/reference/cview-class.md) 每个视图是附加到文档并与框架窗口的窗口。  视图显示和操作文档类对象中包含的数据。  
+-   One or more view objects derived from class [CView](../mfc/reference/cview-class.md). Each view is a window that is attached to a document and associated with a frame window. Views display and manipulate the data contained in a document class object.  
   
- 文档\/视图应用程序还包含框架窗口 \(派生自 [CFrameWnd](../mfc/reference/cframewnd-class.md)\) 和文档模板 \(从派生\)。[CDocTemplate](../mfc/reference/cdoctemplate-class.md)  
+ Document/view applications also contain frame windows (derived from [CFrameWnd](../mfc/reference/cframewnd-class.md)) and document templates (derived from [CDocTemplate](../mfc/reference/cdoctemplate-class.md)).  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CMFCPropertySheet 类 |Microsoft 文档"
+title: CMFCPropertySheet Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,9 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPropertySheet::PreTranslateMessage method
-- CMFCPropertySheet::OnInitDialog method
-- CMFCPropertySheet class
+- CMFCPropertySheet [MFC], CMFCPropertySheet
+- CMFCPropertySheet [MFC], AddPage
+- CMFCPropertySheet [MFC], AddPageToTree
+- CMFCPropertySheet [MFC], AddTreeCategory
+- CMFCPropertySheet [MFC], EnablePageHeader
+- CMFCPropertySheet [MFC], GetHeaderHeight
+- CMFCPropertySheet [MFC], GetLook
+- CMFCPropertySheet [MFC], GetNavBarWidth
+- CMFCPropertySheet [MFC], GetTab
+- CMFCPropertySheet [MFC], InitNavigationControl
+- CMFCPropertySheet [MFC], OnActivatePage
+- CMFCPropertySheet [MFC], OnDrawPageHeader
+- CMFCPropertySheet [MFC], OnRemoveTreePage
+- CMFCPropertySheet [MFC], RemoveCategory
+- CMFCPropertySheet [MFC], RemovePage
+- CMFCPropertySheet [MFC], SetIconsList
+- CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 caps.latest.revision: 35
 author: mikeblome
@@ -53,86 +67,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a157a0afa4542bc023ba4d7149e78a71bbd56e74
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f37532948f47aa8e5c986e29691f9346f8fe62c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
-`CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。  
+# <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet Class
+The `CMFCPropertySheet` class supports a property sheet where each property page is denoted by a page tab, a toolbar button, a tree control node, or a list item.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPropertySheet : public CPropertySheet  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|构造 `CMFCPropertySheet` 对象。|  
-|`CMFCPropertySheet::~CMFCPropertySheet`|析构函数。|  
+|[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Constructs a `CMFCPropertySheet` object.|  
+|`CMFCPropertySheet::~CMFCPropertySheet`|Destructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cmfcpropertysheet:: Addpage](#addpage)|向属性表添加页面。|  
-|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|向树控件添加新的属性页。|  
-|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|向树控件添加新节点。|  
-|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|在每个页面顶部保留一定空间，用于绘制自定义页眉。|  
-|[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|检索当前页眉的高度。|  
-|[CMFCPropertySheet::GetLook](#getlook)|检索一个枚举值，该值指定当前属性表的外观。|  
-|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|检索导航栏的宽度（以像素为单位）。|  
-|[CMFCPropertySheet::GetTab](#gettab)|检索支持当前属性表控件的内部选项卡控件对象。|  
-|`CMFCPropertySheet::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|初始化当前属性表控件的外观。|  
-|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|当属性页处于启用状态时由框架调用。|  
-|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|由框架调用，用于绘制自定义属性页页眉。|  
-|`CMFCPropertySheet::OnInitDialog`|处理[WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)消息。 (重写[cpropertysheet:: Oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)。)|  
-|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|由框架调用，用于从树控件中删除属性页。|  
-|`CMFCPropertySheet::PreTranslateMessage`|翻译窗口消息之前被发送到[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函数。 （重写 `CPropertySheet::PreTranslateMessage`。）|  
-|[CMFCPropertySheet::RemoveCategory](#removecategory)|从树控件中删除节点。|  
-|[CMFCPropertySheet::RemovePage](#removepage)|从属性表中删除属性页。|  
-|[CMFCPropertySheet::SetIconsList](#seticonslist)|指定用于 Outlook 窗格的导航控件的图像列表。|  
-|[Cmfcpropertysheet:: Setlook](#setlook)|指定属性表的外观。|  
+|[CMFCPropertySheet::AddPage](#addpage)|Adds a page to the property sheet.|  
+|[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Adds a new property page to the tree control.|  
+|[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Adds a new node to the tree control.|  
+|[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Reserves space at the top of each page to draw a custom header.|  
+|[CMFCPropertySheet::GetHeaderHeight](#getheaderheight)|Retrieves the height of the current header.|  
+|[CMFCPropertySheet::GetLook](#getlook)|Retrieves an enumeration value that specifies the appearance of the current property sheet.|  
+|[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|Retries the width of the navigation bar in pixels.|  
+|[CMFCPropertySheet::GetTab](#gettab)|Retrieves the internal tab control object that supports the current property sheet control.|  
+|`CMFCPropertySheet::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Initializes the appearance of the current property sheet control.|  
+|[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Called by the framework when a property page is enabled.|  
+|[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Called by the framework to draw a custom property page header.|  
+|`CMFCPropertySheet::OnInitDialog`|Handles the [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) message. (Overrides [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Called by the framework to remove a property page from a tree control.|  
+|`CMFCPropertySheet::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides `CPropertySheet::PreTranslateMessage`.)|  
+|[CMFCPropertySheet::RemoveCategory](#removecategory)|Removes a node from the tree control.|  
+|[CMFCPropertySheet::RemovePage](#removepage)|Removes a property page from the property sheet.|  
+|[CMFCPropertySheet::SetIconsList](#seticonslist)|Specifies the list of images that are used in the navigation control of the Outlook pane.|  
+|[CMFCPropertySheet::SetLook](#setlook)|Specifies the appearance of the property sheet.|  
   
-## <a name="remarks"></a>备注  
- `CMFCPropertySheet` 类表示属性表，也称为选项卡对话框。 `CMFCPropertySheet` 类可以用多种方式显示属性页。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCPropertySheet` class represents property sheets, also known as tab dialog boxes. The `CMFCPropertySheet` class can display a property page in a variety of ways.  
   
- 执行以下步骤，以便在应用程序中使用 `CMFCPropertySheet` 类：  
+ Perform the following steps to use the `CMFCPropertySheet` class in your application:  
   
-1.  从 `CMFCPropertySheet` 类派生一个类，并对其命名，例如，CMyPropertySheet。  
+1.  Derive a class from the `CMFCPropertySheet` class and name the class, for example, CMyPropertySheet.  
   
-2.  构造[CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)每个属性页面的对象。  
+2.  Construct a [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md) object for each property page.  
   
-3.  调用[cmfcpropertysheet:: Setlook](#setlook) CMyPropertySheet 构造函数中的方法。 该方法的参数指定属性页的显示方式：属性表顶部或左侧的选项卡；Microsoft OneNote 属性表样式的选项卡；Microsoft Outlook 工具栏控件上的按钮；树控件上的节点；或属性表左侧的项列表。  
+3.  Call the [CMFCPropertySheet::SetLook](#setlook) method in the CMyPropertySheet constructor. A parameter of that method specifies that property pages shall be displayed either as tabs along the top or left of the property sheet; tabs in the style of a Microsoft OneNote property sheet; buttons on a Microsoft Outlook toolbar control; nodes on a tree control; or as a list of items on the left side of the property sheet.  
   
-4.  如果在 Microsoft Outlook 工具栏样式的中创建属性表，则调用[CMFCPropertySheet::SetIconsList](#seticonslist)方法将一个图像列表与属性页关联起来。  
+4.  If you create a property sheet in the style of a Microsoft Outlook toolbar, call the [CMFCPropertySheet::SetIconsList](#seticonslist) method to associate an image list together with the property pages.  
   
-5.  调用[cmfcpropertysheet:: Addpage](#addpage)每个属性页面的方法。  
+5.  Call the [CMFCPropertySheet::AddPage](#addpage) method for each property page.  
   
-6.  创建 `CMFCPropertySheet` 控件并调用其 `DoModal` 方法。  
+6.  Create a `CMFCPropertySheet` control and call its `DoModal` method.  
   
-## <a name="illustrations"></a>图示  
- 下图描绘了一个采用嵌入式 Microsoft Outlook 工具栏样式的属性表。 该 Outlook 工具栏显示在属性表左侧。  
+## <a name="illustrations"></a>Illustrations  
+ The following illustration depicts a property sheet that is in the style of an embedded Microsoft Outlook toolbar. The Outlook toolbar appears on the left side of the property sheet.  
   
- ![CMFCPropertySheet 颜色控件](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
+ ![CMFCPropertySheet color controls](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")  
   
- 下图描绘了一个包含的属性表[CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md)对象。 该对象是一个采用标准常用控件属性表样式的属性表。  
+ The following illustration depicts a property sheet that contains a [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md) object. That object is a property sheet in the style of a standard common controls property sheet.  
   
- ![CMFCPropertySheet 列表和属性控件](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
+ ![CMFCPropertySheet list and property controls](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")  
   
- 下图描绘了一个采用树控件样式的属性表。  
+ The following illustration depicts a property sheet that is in the style of a tree control.  
   
- ![属性树](../../mfc/reference/media/proptree.png "proptree")  
+ ![Peroperty Tree](../../mfc/reference/media/proptree.png "proptree")  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -143,27 +157,27 @@ class CMFCPropertySheet : public CPropertySheet
   
  [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxpropertysheet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpropertysheet.h  
   
-##  <a name="addpage"></a>Cmfcpropertysheet:: Addpage  
- 向属性表添加页面。  
+##  <a name="addpage"></a>  CMFCPropertySheet::AddPage  
+ Adds a page to the property sheet.  
   
 ```  
 void AddPage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pPage`  
- Page 对象的指针。 此参数不能为`NULL`。  
+ Pointer to a page object. This parameter cannot be `NULL`.  
   
-### <a name="remarks"></a>备注  
- 此方法将指定的属性页添加为属性表中最右侧的选项卡。 因此，使用此方法以从左到右的顺序添加页面。  
+### <a name="remarks"></a>Remarks  
+ This method adds the specified property page as the rightmost tab in the property sheet. Therefore, use this method to add pages in left-to-right order.  
   
- 如果属性表样式的 Microsoft Outlook，框架将显示属性表左侧的导航按钮的列表。 此方法将添加属性页后，它会将相应的按钮添加到列表中。 若要显示属性页上，单击其对应的按钮。 属性表样式的详细信息，请参阅[cmfcpropertysheet:: Setlook](#setlook)。  
+ If the property sheet is in the style of Microsoft Outlook, the framework displays a list of navigation buttons at the left of the property sheet. After this method adds a property page, it adds a corresponding button to the list. To display a property page, click its corresponding button. For more information about styles of property sheets, see [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree  
- 向树控件添加新的属性页。  
+##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree  
+ Adds a new property page to the tree control.  
   
 ```  
 void AddPageToTree(
@@ -173,24 +187,24 @@ void AddPageToTree(
     int nSelIconNum=-1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pCategory`  
- 指向父树节点或`NULL`将指定的页的顶级节点与相关联。 调用[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法来获取该指针。  
+ Pointer to a parent tree node, or `NULL` to associate the specified page with the top-level node. Call the [CMFCPropertySheet::AddTreeCategory](#addtreecategory) method to obtain this pointer.  
   
  [in] `pPage`  
- 为属性页上对象的指针。  
+ Pointer to a property page object.  
   
  [in] `nIconNum`  
- 一个图标，则为-1 如果使用无图标的从零开始索引。 如果未选择页上，树控件属性页旁边显示此图标。 默认值为 -1。  
+ Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is not selected. The default value is -1.  
   
  [in] `nSelIconNum`  
- 一个图标，则为-1 如果使用无图标的从零开始索引。 在页处于选定状态时，树控件属性页旁边显示此图标。 默认值为 -1。  
+ Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is selected. The default value is -1.  
   
-### <a name="remarks"></a>备注  
- 此方法为叶树控件中添加属性页。 若要添加的属性页，创建`CMFCPropertySheet`对象，请调用[cmfcpropertysheet:: Setlook](#setlook)方法`look`参数设置为`CMFCPropertySheet::PropSheetLook_Tree`，然后使用此方法中添加属性页。  
+### <a name="remarks"></a>Remarks  
+ This method adds a property page as a leaf of a tree control. To add a property page, create a `CMFCPropertySheet` object, call the [CMFCPropertySheet::SetLook](#setlook) method with the `look` parameter set to `CMFCPropertySheet::PropSheetLook_Tree`, and then use this method to add the property page.  
   
-##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory  
- 向树控件添加新节点。  
+##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
+ Adds a new node to the tree control.  
   
 ```  
 CMFCPropertySheetCategoryInfo* AddTreeCategory(
@@ -200,29 +214,29 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
     const CMFCPropertySheetCategoryInfo* pParentCategory=NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- 节点的名称。  
+ The name of the node.  
   
  [in] `nIconNum`  
- 一个图标，则为-1 如果使用无图标的从零开始索引。 如果未选择页上，树控件属性页旁边显示此图标。 默认值为 -1。  
+ Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is not selected. The default value is -1.  
   
  [in] `nSelectedIconNum`  
- 一个图标，则为-1 如果使用无图标的从零开始索引。 在页处于选定状态时，树控件属性页旁边显示此图标。 默认值为 -1。  
+ Zero-based index of an icon, or -1 if no icon is used. The icon is displayed next to the tree control property page when the page is selected. The default value is -1.  
   
  [in] `pParentCategory`  
- 指向父树节点或`NULL`将指定的页的顶级节点与相关联。 设置此参数与[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法。  
+ Pointer to a parent tree node, or `NULL` to associate the specified page with the top-level node. Set this parameter with the [CMFCPropertySheet::AddTreeCategory](#addtreecategory) method.  
   
-### <a name="return-value"></a>返回值  
- 指向目录树控件中的新节点的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new node in the tree control.  
   
-### <a name="remarks"></a>备注  
- 使用此方法将也称为一个类别，一个新节点添加到树控件。 若要添加节点时，创建`CMFCPropertySheet`对象，请调用[cmfcpropertysheet:: Setlook](#setlook)方法`look`参数设置为`CMFCPropertySheet::PropSheetLook_Tree`，然后使用此方法将节点添加。  
+### <a name="remarks"></a>Remarks  
+ Use this method to add a new node, which is also referred to as a category, to the tree control. To add a node, create a `CMFCPropertySheet` object, call the [CMFCPropertySheet::SetLook](#setlook) method with the `look` parameter set to `CMFCPropertySheet::PropSheetLook_Tree`, and then use this method to add the node.  
   
- 在后续调用中使用此方法的返回值[CMFCPropertySheet::AddPageToTree](#addpagetotree)和[CMFCPropertySheet::AddTreeCategory](#addtreecategory)。  
+ Use the return value of this method in subsequent calls to [CMFCPropertySheet::AddPageToTree](#addpagetotree) and [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
-##  <a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet  
- 构造 `CMFCPropertySheet` 对象。  
+##  <a name="cmfcpropertysheet"></a>  CMFCPropertySheet::CMFCPropertySheet  
+ Constructs a `CMFCPropertySheet` object.  
   
 ```  
 CMFCPropertySheet(
@@ -236,115 +250,115 @@ CMFCPropertySheet(
     UINT iSelectPage=0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pszCaption`  
- 一个包含属性表标题的字符串。 不能为`NULL`。  
+ A string that contains the property sheet caption. Cannot be `NULL`.  
   
  [in] `nIDCaption`  
- 一个包含属性表标题的资源 ID。  
+ A resource ID that contains the property sheet caption.  
   
  [in] `pParentWnd`  
- 向属性表中，其父窗口的指针或`NULL`如果父窗口是应用程序的主窗口。 默认值为 `NULL`。  
+ Pointer to the parent window of the property sheet, or `NULL` if the parent window is the main window of the application. The default value is `NULL`.  
   
  [in] `iSelectPage`  
- Top 属性页的从零开始索引。 默认值为 0。  
+ The zero-based index of the top property page. The default value is 0.  
   
-### <a name="remarks"></a>备注  
- 有关详细信息，请参阅为参数[CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet)构造函数。  
+### <a name="remarks"></a>Remarks  
+ For more information, see the parameters for the [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) constructor.  
   
-##  <a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader  
- 在每个页面顶部保留一定空间，用于绘制自定义页眉。  
+##  <a name="enablepageheader"></a>  CMFCPropertySheet::EnablePageHeader  
+ Reserves space at the top of each page to draw a custom header.  
   
 ```  
 void EnablePageHeader(int nHeaderHeight);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `nHeaderHeight`  
- 标头，以像素为单位的高度。  
+ The height of the header, in pixels.  
   
-### <a name="remarks"></a>备注  
- 若要使用的值`nHeaderHeight`参数来绘制自定义标头，重写[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)方法。  
+### <a name="remarks"></a>Remarks  
+ To use the value of the `nHeaderHeight` parameter to draw a custom header, override the [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) method.  
   
-##  <a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight  
- 检索当前页眉的高度。  
+##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
+ Retrieves the height of the current header.  
   
 ```  
 int GetHeaderHeight() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 标头，以像素为单位的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of the header, in pixels.  
   
-### <a name="remarks"></a>备注  
- 调用[CMFCPropertySheet::EnablePageHeader](#enablepageheader)方法之前调用此方法。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCPropertySheet::EnablePageHeader](#enablepageheader) method before you call this method.  
   
-##  <a name="getlook"></a>CMFCPropertySheet::GetLook  
- 检索一个枚举值，该值指定当前属性表的外观。  
+##  <a name="getlook"></a>  CMFCPropertySheet::GetLook  
+ Retrieves an enumeration value that specifies the appearance of the current property sheet.  
   
 ```  
 PropSheetLook GetLook() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指定的属性表的外观的枚举值之一。 有关可能的值的列表，请参阅中的备注部分的枚举表[cmfcpropertysheet:: Setlook](#setlook)。  
+### <a name="return-value"></a>Return Value  
+ One of the enumeration values that specifies the appearance of the property sheet. For a list of possible values, see the enumeration table in the Remarks section of [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="getnavbarwidth"></a>CMFCPropertySheet::GetNavBarWidth  
- 获取导航栏的宽度。  
+##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth  
+ Gets the width of the navigation bar.  
   
 ```  
 int GetNavBarWidth() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 导航栏的宽度（以像素为单位）。  
+### <a name="return-value"></a>Return Value  
+ The width of the navigation bar in pixels.  
   
-##  <a name="gettab"></a>CMFCPropertySheet::GetTab  
- 检索支持当前属性表控件的内部选项卡控件对象。  
+##  <a name="gettab"></a>  CMFCPropertySheet::GetTab  
+ Retrieves the internal tab control object that supports the current property sheet control.  
   
 ```  
 CMFCTabCtrl& GetTab() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 内部选项卡控件对象。  
+### <a name="return-value"></a>Return Value  
+ An internal tab control object.  
   
-### <a name="remarks"></a>备注  
- 您可以设置属性表，以使其显示在不同的样式，例如树控件中，导航按钮或一组选项卡式页的列表。  
+### <a name="remarks"></a>Remarks  
+ You can set a property sheet so that it appears in different styles, such as a tree control, a list of navigation buttons, or a set of tabbed pages.  
   
- 在调用此方法之前，调用[cmfcpropertysheet:: Setlook](#setlook)方法设置的属性表控件的外观。 然后，调用[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)方法以初始化内部的选项卡控件对象。 使用此方法来检索选项卡控件对象，然后使用该对象为适用于选项卡上的属性表。  
+ Before you call this method, call the [CMFCPropertySheet::SetLook](#setlook) method to set the appearance of the property sheet control. Then call the [CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol) method to initialize the internal tab control object. Use this method to retrieve the tab control object and then use that object to work with the tabs on the property sheet.  
   
- 此方法断言在调试模式下，如果未设置属性表控件才会显示在 Microsoft OneNote 的样式。  
+ This method asserts in debug mode if the property sheet control is not set to appear in the style of Microsoft OneNote.  
   
-##  <a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl  
- 初始化当前属性表控件的外观。  
+##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl  
+ Initializes the appearance of the current property sheet control.  
   
 ```  
 virtual CWnd* InitNavigationControl();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向窗口中的属性表控件的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the window of the property sheet control.  
   
-### <a name="remarks"></a>备注  
- 属性表控件可以出现在多个不同的形式，如一组选项卡式的页面、 树控件中或导航按钮的列表。 使用[cmfcpropertysheet:: Setlook](#setlook)方法，以指定的属性表控件的外观。  
+### <a name="remarks"></a>Remarks  
+ A property sheet control can appear in several different forms, such as a set of tabbed pages, a tree control, or a list of navigation buttons. Use the [CMFCPropertySheet::SetLook](#setlook) method to specify the appearance of the property sheet control.  
   
-##  <a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage  
- 当属性页处于启用状态时由框架调用。  
+##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage  
+ Called by the framework when a property page is enabled.  
   
 ```  
 virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pPage`  
- 为属性页对象表示已启用的属性页的指针。  
+ Pointer to a property page object that represents the enabled property page.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法可以确保 enabled 的属性页上，滚动到视图。 如果当前属性表样式包含 Microsoft Outlook 窗格中，此方法设置相应的 Outlook 按钮为选中状态。  
+### <a name="remarks"></a>Remarks  
+ By default, this method ensures that the enabled property page is scrolled into view. If the style of the current property sheet contains a Microsoft Outlook pane, this method sets the corresponding Outlook button to the checked state.  
   
-##  <a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader  
- 由框架用于绘制自定义属性页的标头调用。  
+##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader  
+ Called by the framework to draw the header for a custom property page.  
   
 ```  
 virtual void OnDrawPageHeader(
@@ -353,67 +367,67 @@ virtual void OnDrawPageHeader(
     CRect rectHeader);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 指向设备上下文的指针。  
+ Pointer to a device context.  
   
  [in] `nPage`  
- 从零开始的属性页号。  
+ The zero-based property page number.  
   
  [in] `rectHeader`  
- 指定要绘制标题的边框。  
+ A bounding rectangle that specifies where to draw the header.  
   
-### <a name="remarks"></a>备注  
- 默认情况下，此方法没有任何效果。 如果重写此方法，调用[CMFCPropertySheet::EnablePageHeader](#enablepageheader)方法之前框架将调用此方法。  
+### <a name="remarks"></a>Remarks  
+ By default, this method does nothing. If you override this method, call the [CMFCPropertySheet::EnablePageHeader](#enablepageheader) method before the framework calls this method.  
   
-##  <a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage  
- 由框架调用，用于从树控件中删除属性页。  
+##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage  
+ Called by the framework to remove a property page from a tree control.  
   
 ```  
 virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pPage`  
- 表示属性页上，要删除的属性页上对象的指针。  
+ Pointer to a property page object that represents the property page to remove.  
   
-### <a name="return-value"></a>返回值  
- 如果此方法成功，则为 `TRUE`；否则为 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-##  <a name="removecategory"></a>CMFCPropertySheet::RemoveCategory  
- 从树控件中删除节点。  
+##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory  
+ Removes a node from the tree control.  
   
 ```  
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pCategory`  
- 指针，指向要删除的类别 （节点）。  
+ Pointer to a category (node) to remove.  
   
-### <a name="remarks"></a>备注  
- 使用此方法中删除节点，这也称为为类别，从树控件。 使用[CMFCPropertySheet::AddTreeCategory](#addtreecategory)方法将节点添加到树控件。  
+### <a name="remarks"></a>Remarks  
+ Use this method to remove a node, which is also referred to as a category, from a tree control. Use the [CMFCPropertySheet::AddTreeCategory](#addtreecategory) method to add a node to a tree control.  
   
-##  <a name="removepage"></a>CMFCPropertySheet::RemovePage  
- 从属性表中删除属性页。  
+##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage  
+ Removes a property page from the property sheet.  
   
 ```  
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pPage`  
- 为表示属性页上，要删除的属性页上对象的指针。 不能为`NULL`。  
+ Pointer to property page object that represents the property page to remove. Cannot be `NULL`.  
   
  [in] `nPage`  
- 要删除的页的从零开始索引。  
+ Zero-based index of the page to remove.  
   
-### <a name="remarks"></a>备注  
- 此方法中删除指定的属性页和销毁其关联的窗口。 属性页上对象`pPage`参数指定不会被破坏之前[CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)窗口处于关闭状态。  
+### <a name="remarks"></a>Remarks  
+ This method removes the specified property page and destroys its associated window. The property page object that the `pPage` parameter specifies is not destroyed until the [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) window is closed.  
   
-##  <a name="seticonslist"></a>CMFCPropertySheet::SetIconsList  
- 指定用于 Outlook 窗格的导航控件的图像列表。  
+##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
+ Specifies the list of images that are used in the navigation control of the Outlook pane.  
   
 ```  
 BOOL SetIconsList(
@@ -423,29 +437,29 @@ BOOL SetIconsList(
 void SetIconsList(HIMAGELIST hIcons);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiImageListResID`  
- 图像列表资源 ID。  
+ The resource ID of an image list.  
   
  [in] `cx`  
- 以像素为单位的图像列表中的图标的宽度。  
+ The width, in pixels, of icons in the image list.  
   
  [in] `clrTransparent`  
- 透明图像颜色。 是这种颜色的图像的部分将是透明的。 默认值为颜色洋红 RGB(255,0,255)。  
+ The transparent image color. The parts of the image that are this color will be transparent. The default value is the color magenta, RGB(255,0,255).  
   
  [in] `hIcons`  
- 指向现有图像列表的句柄。  
+ A handle to an existing image list.  
   
-### <a name="return-value"></a>返回值  
- 第一种方法重载的语法中，`TRUE`如果此方法成功，否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ In the first method overload syntax, `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 如果属性表样式的 Microsoft Outlook，框架显示导航按钮，称为 Outlook 窗格控件中，属性表左侧的列表。 此方法用于设置要由 Outlook 窗格控件的图像列表。  
+### <a name="remarks"></a>Remarks  
+ If the property sheet is in the style of Microsoft Outlook, the framework displays a list of navigation buttons, called the Outlook pane control, at the left of the property sheet. Use this method to set the image list to be used by the Outlook pane control.  
   
- 有关支持此方法的方法的详细信息，请参阅[CImageList::Create](../../mfc/reference/cimagelist-class.md#create)和[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)。 有关如何设置的属性表样式的详细信息，请参阅[cmfcpropertysheet:: Setlook](#setlook)。  
+ For more information about the methods that support this method, see [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) and [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). For more information about how to set the style of a property sheet, see [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="setlook"></a>Cmfcpropertysheet:: Setlook  
- 指定属性表的外观。  
+##  <a name="setlook"></a>  CMFCPropertySheet::SetLook  
+ Specifies the appearance of the property sheet.  
   
 ```  
 void SetLook(
@@ -453,29 +467,29 @@ void SetLook(
     int nNavControlWidth=100);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `look`  
- 指定的属性表的外观的枚举值之一。 属性表的默认样式为`CMFCPropertySheet::PropSheetLook_Tabs`。 有关详细信息，请参阅本主题的备注部分中的表。  
+ One of the enumeration values that specifies the appearance of the property sheet. The default style for a property sheet is `CMFCPropertySheet::PropSheetLook_Tabs`. For more information, see the table in the Remarks section of this topic.  
   
  [in] `nNavControlWidth`  
- 导航控件，以像素为单位的宽度。 默认值为 100。  
+ The width of the navigation control, in pixels. The default value is 100.  
   
-### <a name="remarks"></a>备注  
- 若要显示属性表中而不是默认样式，请在创建属性表窗口之前调用此方法。  
+### <a name="remarks"></a>Remarks  
+ To display a property sheet in a style other than the default, call this method before you create the property sheet window.  
   
- 下表列出了可以在中指定的枚举值`look`参数。  
+ The following table lists the enumeration values that can be specified in the `look` parameter.  
   
-|值|说明|  
+|Value|Description|  
 |-----------|-----------------|  
-|`CMFCPropertySheet::PropSheetLook_Tabs`|（默认值）显示每个属性页面选项卡。 选项卡显示在属性表的顶部，并具有堆积，如果有多个选项卡的单个行中放不下。|  
-|`CMFCPropertySheet::PropSheetLook_OutlookBar`|显示样式的 Microsoft Outlook 栏中，属性表左侧的导航按钮的列表。 在列表中的每个按钮对应于属性页。 如果有更多按钮在列表的可见区域中放不下，框架将显示滚动箭头。|  
-|`CMFCPropertySheet::PropSheetLook_Tree`|属性表的左侧显示一个树控件。 树控件的每个父或子节点对应的属性页。 如果有多个节点的树控件的可视区域中放不下，框架将显示滚动箭头。|  
-|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|显示一个选项卡，在 Microsoft onenote 样式中每个属性页。 框架在属性表的顶部显示选项卡并滚动箭头比更多选项卡是否适合单个行中。|  
-|`CMFCPropertySheet::PropSheetLook_List`|显示属性表左侧的列表。 每个列表项对应于属性页。 如果有多个列表项列表的可见区域中放不下，框架将显示滚动箭头。|  
+|`CMFCPropertySheet::PropSheetLook_Tabs`|(Default) Displays a tab for each property page. Tabs are displayed at the top of the property sheet and are stacked if there are more tabs than will fit in a single row.|  
+|`CMFCPropertySheet::PropSheetLook_OutlookBar`|Displays a list of navigation buttons, in the style of the Microsoft Outlook bar, at the left side of the property sheet. Each button in the list corresponds to a property page. The framework displays scroll arrows if there are more buttons than will fit in the visible area of the list.|  
+|`CMFCPropertySheet::PropSheetLook_Tree`|Displays a tree control at the left side of the property sheet. Each parent or child node of the tree control corresponds to a property page. The framework displays scroll arrows if there are more nodes than will fit in the visible area of the tree control.|  
+|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|Displays a tab, in the style of Microsoft OneNote, for each property page. The framework displays tabs at the top of the property sheet and scroll arrows if there are more tabs than will fit in a single row.|  
+|`CMFCPropertySheet::PropSheetLook_List`|Displays a list at the left side of the property sheet. Each list item corresponds to a property page. The framework displays scroll arrows if there are more list items than will fit in the visible area of the list.|  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyPage 类](../../mfc/reference/cmfcpropertypage-class.md)   
- [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCPropertyPage Class](../../mfc/reference/cmfcpropertypage-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)
 

@@ -1,55 +1,74 @@
 ---
-title: "对象的一阶段和两阶段构建 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对象创建, 图形对象"
-  - "对象 [C++], 创建图形对象"
-  - "对象 [C++], 图形对象"
-  - "对象的一阶段和两阶段构建"
+title: One-Stage and Two-Stage Construction of Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], creating graphic objects
+- object creation [MFC], graphic objects
+- objects [MFC], graphic objects
+- one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 对象的一阶段和两阶段构建
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 154c97ac97e2410d786c27305d0262a8cb133c0a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-您可以在两种方法之间的选择。创建图形对象，如钢笔和画笔：  
+---
+# <a name="one-stage-and-two-stage-construction-of-objects"></a>One-Stage and Two-Stage Construction of Objects
+You have a choice between two techniques for creating graphic objects, such as pens and brushes:  
   
--   *构造一级别*:构造和初始化。一阶段，所有的对象有构造函数。  
+-   *One-stage construction*: Construct and initialize the object in one stage, all with the constructor.  
   
--   *构造两个阶段*:构造和初始化对象在两个不同的阶段。  构造函数创建对象，这些初始化函数初始化它。  
+-   *Two-stage construction*: Construct and initialize the object in two separate stages. The constructor creates the object and an initialization function initializes it.  
   
- 两阶段结构总是更安全。  在一级别一样，构造函数可能会引发异常，如果您提供了不正确的参数或内存分配失败。  该问题的两阶段结构，避免，尽管您必须检查失败。  在任何情况下，销毁对象是同一过程。  
+ Two-stage construction is always safer. In one-stage construction, the constructor could throw an exception if you provide incorrect arguments or memory allocation fails. That problem is avoided by two-stage construction, although you do have to check for failure. In either case, destroying the object is the same process.  
   
 > [!NOTE]
->  这些技术适用于创建所有对象，而不只是对象图。  
+>  These techniques apply to creating any objects, not just graphic objects.  
   
-## 两个构造技术的示例  
- 以下简单示例显示构造钢笔对象有两种方法：  
+## <a name="example-of-both-construction-techniques"></a>Example of Both Construction Techniques  
+ The following brief example shows both methods of constructing a pen object:  
   
- [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/CPP/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [图形对象](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
--   [将图形对象选入设备上下文](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
+-   [Selecting a graphic object into a device context](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
--   [设备上下文](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [在视图中绘制](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a View](../mfc/drawing-in-a-view.md)  
   
-## 请参阅  
- [图形对象](../mfc/graphic-objects.md)
+## <a name="see-also"></a>See Also  
+ [Graphic Objects](../mfc/graphic-objects.md)
+
+

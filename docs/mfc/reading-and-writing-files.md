@@ -1,51 +1,70 @@
 ---
-title: "读取和写入文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFile 类, 对象"
-  - "CFile 类, 读取和写入 CFile 对象"
-  - "示例 [MFC], 读取文件"
-  - "示例 [MFC], 写入文件"
-  - "文件 [C++], 读取"
-  - "文件 [C++], 写入"
-  - "MFC [C++], 文件操作"
-  - "读取文件"
-  - "写入文件 [C++]"
+title: Reading and Writing Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CFile class [MFC], objects
+- examples [MFC], reading files
+- files [MFC], writing to
+- examples [MFC], writing to files
+- files [MFC], reading
+- MFC, file operations
+- CFile class [MFC], reading and writing CFile objects
+- reading files
+- writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 读取和写入文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8ed13b13d140d6e90a758183b62958145959cc3a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-如果使用的 C 运行库文件处理的函数，读取和写入操作的 MFC 看起来很熟悉。  本文描述用于读取直接从和直接写入 `CFile` 对象。  还可以使用 [CArchive](../mfc/reference/carchive-class.md) 类执行的缓存文件 I\/O。  
+---
+# <a name="reading-and-writing-files"></a>Reading and Writing Files
+If you've used the C run-time library file-handling functions, MFC reading and writing operations will appear familiar. This article describes reading directly from and writing directly to a `CFile` object. You can also do buffered file I/O with the [CArchive](../mfc/reference/carchive-class.md) class.  
   
-#### 读取和写入文件  
+#### <a name="to-read-from-and-write-to-the-file"></a>To read from and write to the file  
   
-1.  使用 **读取** 和 **写入** 成员函数读取和写入文件中的数据。  
+1.  Use the **Read** and **Write** member functions to read and write data in the file.  
   
-     \- 或 \-  
+     -or-  
   
-2.  `Seek` 成员函数为移动还为该文件内的偏移量。  
+2.  The `Seek` member function is also available for moving to a specific offset within the file.  
   
- **读取** 采用指向缓冲区读取的字节数和并返回实际读取的字节数。  如果所需的字节数无法读取，因为文件尾 \(EOF\) 到达实际读取的字节数，返回。  如果读取任何错误，将引发异常。  **写入** 类似于 **读取**，编写的字节数，但未返回。  如果写入错误，包含不写入指定的所有字节为止，将引发异常。  如果您拥有有效的 `CFile` 对象，如下面的示例所示，您可以从中读取或写入。它：  
+ **Read** takes a pointer to a buffer and the number of bytes to read and returns the actual number of bytes that were read. If the required number of bytes could not be read because end-of-file (EOF) is reached, the actual number of bytes read is returned. If any read error occurs, an exception is thrown. **Write** is similar to **Read**, but the number of bytes written is not returned. If a write error occurs, including not writing all the bytes specified, an exception is thrown. If you have a valid `CFile` object, you can read from it or write to it as shown in the following example:  
   
- [!code-cpp[NVC_MFCFiles#2](../mfc/codesnippet/CPP/reading-and-writing-files_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]  
   
 > [!NOTE]
->  您通常应执行在 **try**\/**catch** 异常处理块中的输入\/输出操作。  有关更多信息，请参见 [异常处理 \(MFC\)](../mfc/exception-handling-in-mfc.md)。  
+>  You should normally carry out input/output operations within a **try**/**catch** exception handling block. For more information, see [Exception Handling (MFC)](../mfc/exception-handling-in-mfc.md).  
   
-## 请参阅  
- [文件](../mfc/files-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Files](../mfc/files-in-mfc.md)
+
+

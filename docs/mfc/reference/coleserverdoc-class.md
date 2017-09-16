@@ -1,5 +1,5 @@
 ---
-title: "COleServerDoc 类 |Microsoft 文档"
+title: COleServerDoc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -52,13 +52,44 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, OLE
-- OLE server applications, managing server documents
-- container/server applications
-- OLE server documents
-- COleServerDoc class
-- server documents, OLE
-- OLE containers, server documents
+- COleServerDoc [MFC], COleServerDoc
+- COleServerDoc [MFC], ActivateDocObject
+- COleServerDoc [MFC], ActivateInPlace
+- COleServerDoc [MFC], DeactivateAndUndo
+- COleServerDoc [MFC], DiscardUndoState
+- COleServerDoc [MFC], GetClientSite
+- COleServerDoc [MFC], GetEmbeddedItem
+- COleServerDoc [MFC], GetItemClipRect
+- COleServerDoc [MFC], GetItemPosition
+- COleServerDoc [MFC], GetZoomFactor
+- COleServerDoc [MFC], IsDocObject
+- COleServerDoc [MFC], IsEmbedded
+- COleServerDoc [MFC], IsInPlaceActive
+- COleServerDoc [MFC], NotifyChanged
+- COleServerDoc [MFC], NotifyClosed
+- COleServerDoc [MFC], NotifyRename
+- COleServerDoc [MFC], NotifySaved
+- COleServerDoc [MFC], OnDeactivate
+- COleServerDoc [MFC], OnDeactivateUI
+- COleServerDoc [MFC], OnDocWindowActivate
+- COleServerDoc [MFC], OnResizeBorder
+- COleServerDoc [MFC], OnShowControlBars
+- COleServerDoc [MFC], OnUpdateDocument
+- COleServerDoc [MFC], RequestPositionChange
+- COleServerDoc [MFC], SaveEmbedding
+- COleServerDoc [MFC], ScrollContainerBy
+- COleServerDoc [MFC], UpdateAllItems
+- COleServerDoc [MFC], CreateInPlaceFrame
+- COleServerDoc [MFC], DestroyInPlaceFrame
+- COleServerDoc [MFC], GetDocObjectServer
+- COleServerDoc [MFC], OnClose
+- COleServerDoc [MFC], OnExecOleCmd
+- COleServerDoc [MFC], OnFrameWindowActivate
+- COleServerDoc [MFC], OnGetEmbeddedItem
+- COleServerDoc [MFC], OnReactivateAndUndo
+- COleServerDoc [MFC], OnSetHostNames
+- COleServerDoc [MFC], OnSetItemRects
+- COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
 caps.latest.revision: 24
 author: mikeblome
@@ -78,93 +109,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: db50c2a5709fbc07d0e0db99a4cffc733c4b6ead
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd5f9c7aec119a3e559b25742a378674ba403f48
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleserverdoc-class"></a>COleServerDoc 类
-OLE 服务器文档的基类。  
+# <a name="coleserverdoc-class"></a>COleServerDoc Class
+The base class for OLE server documents.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerDoc::COleServerDoc](#coleserverdoc)|构造 `COleServerDoc` 对象。|  
+|[COleServerDoc::COleServerDoc](#coleserverdoc)|Constructs a `COleServerDoc` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerDoc::ActivateDocObject](#activatedocobject)|激活相关联的 DocObject 文档。|  
-|[COleServerDoc::ActivateInPlace](#activateinplace)|激活该文档进行就地编辑。|  
-|[COleServerDoc::DeactivateAndUndo](#deactivateandundo)|停用服务器的用户界面。|  
-|[COleServerDoc::DiscardUndoState](#discardundostate)|放弃撤消状态信息。|  
-|[COleServerDoc::GetClientSite](#getclientsite)|检索对基础指针`IOleClientSite`接口。|  
-|[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|返回指向一个表示整个文档的项的指针。|  
-|[COleServerDoc::GetItemClipRect](#getitemcliprect)|返回当前的剪辑矩形进行就地编辑。|  
-|[COleServerDoc::GetItemPosition](#getitemposition)|返回当前 position rectangle，相对于容器应用程序的工作区，用于就地编辑。|  
-|[COleServerDoc::GetZoomFactor](#getzoomfactor)|返回以像素为单位的缩放系数。|  
-|[COleServerDoc::IsDocObject](#isdocobject)|确定文档是否 DocObject。|  
-|[COleServerDoc::IsEmbedded](#isembedded)|指示文档是否为嵌入在容器文档中或独立运行。|  
-|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|返回`TRUE`如果当前在就地激活项。|  
-|[COleServerDoc::NotifyChanged](#notifychanged)|通知用户更改了该文档的容器。|  
-|[COleServerDoc::NotifyClosed](#notifyclosed)|通知用户已关闭文档容器。|  
-|[COleServerDoc::NotifyRename](#notifyrename)|通知用户已重命名文档容器。|  
-|[COleServerDoc::NotifySaved](#notifysaved)|通知用户已保存文档容器。|  
-|[COleServerDoc::OnDeactivate](#ondeactivate)|当用户停用在就地激活项时，由框架调用。|  
-|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|由框架销毁控件和就地激活为创建其他用户界面元素调用。|  
-|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|当激活或停用该容器的文档框架窗口时，由框架调用。|  
-|[COleServerDoc::OnResizeBorder](#onresizeborder)|在容器应用程序的框架窗口或文档窗口调整大小时，由框架调用。|  
-|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|由框架来显示或隐藏用于就地编辑的控件条调用。|  
-|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|更新项的容器的副本保存为嵌入的项的服务器文档时，由框架调用。|  
-|[COleServerDoc::RequestPositionChange](#requestpositionchange)|更改在就地编辑框的位置。|  
-|[COleServerDoc::SaveEmbedding](#saveembedding)|告知容器应用程序，用于保存文档。|  
-|[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|滚动到容器文档。|  
-|[COleServerDoc::UpdateAllItems](#updateallitems)|通知用户更改了该文档的容器。|  
+|[COleServerDoc::ActivateDocObject](#activatedocobject)|Activates the associated DocObject document.|  
+|[COleServerDoc::ActivateInPlace](#activateinplace)|Activates the document for in-place editing.|  
+|[COleServerDoc::DeactivateAndUndo](#deactivateandundo)|Deactivates the server's user interface.|  
+|[COleServerDoc::DiscardUndoState](#discardundostate)|Discards undo-state information.|  
+|[COleServerDoc::GetClientSite](#getclientsite)|Retrieves a pointer to the underlying `IOleClientSite` interface.|  
+|[COleServerDoc::GetEmbeddedItem](#getembeddeditem)|Returns a pointer to an item representing the entire document.|  
+|[COleServerDoc::GetItemClipRect](#getitemcliprect)|Returns the current clipping rectangle for in-place editing.|  
+|[COleServerDoc::GetItemPosition](#getitemposition)|Returns the current position rectangle, relative to the container application's client area, for in-place editing.|  
+|[COleServerDoc::GetZoomFactor](#getzoomfactor)|Returns the zoom factor in pixels.|  
+|[COleServerDoc::IsDocObject](#isdocobject)|Determines if the document is a DocObject.|  
+|[COleServerDoc::IsEmbedded](#isembedded)|Indicates whether the document is embedded in a container document or running stand-alone.|  
+|[COleServerDoc::IsInPlaceActive](#isinplaceactive)|Returns `TRUE` if the item is currently activated in place.|  
+|[COleServerDoc::NotifyChanged](#notifychanged)|Notifies containers that the user has changed the document.|  
+|[COleServerDoc::NotifyClosed](#notifyclosed)|Notifies containers that the user has closed the document.|  
+|[COleServerDoc::NotifyRename](#notifyrename)|Notifies containers that the user has renamed the document.|  
+|[COleServerDoc::NotifySaved](#notifysaved)|Notifies containers that the user has saved the document.|  
+|[COleServerDoc::OnDeactivate](#ondeactivate)|Called by the framework when the user deactivates an item that was activated in place.|  
+|[COleServerDoc::OnDeactivateUI](#ondeactivateui)|Called by the framework to destroy controls and other user-interface elements created for in-place activation.|  
+|[COleServerDoc::OnDocWindowActivate](#ondocwindowactivate)|Called by the framework when the container's document frame window is activated or deactivated.|  
+|[COleServerDoc::OnResizeBorder](#onresizeborder)|Called by the framework when the container application's frame window or document window is resized.|  
+|[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|Called by the framework to show or hide control bars for in-place editing.|  
+|[COleServerDoc::OnUpdateDocument](#onupdatedocument)|Called by the framework when a server document that is an embedded item is saved, updating the container's copy of the item.|  
+|[COleServerDoc::RequestPositionChange](#requestpositionchange)|Changes the position of the in-place editing frame.|  
+|[COleServerDoc::SaveEmbedding](#saveembedding)|Tells the container application to save the document.|  
+|[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|Scrolls the container document.|  
+|[COleServerDoc::UpdateAllItems](#updateallitems)|Notifies containers that the user has changed the document.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|由框架创建框架窗口以进行就地编辑调用。|  
-|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|由框架销毁框架窗口以进行就地编辑调用。|  
-|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|重写此函数可创建一个新`CDocObjectServer`对象，并指示本文档是 DocObject 容器。|  
-|[COleServerDoc::OnClose](#onclose)|当容器请求关闭文档时，由框架调用。|  
-|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|执行指定的命令或显示有关命令的帮助。|  
-|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|当激活或停用该容器的框架窗口时，由框架调用。|  
-|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|调用以获取`COleServerItem`，表示整个文档; 用于获取嵌入的项。 所需的实现。|  
-|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|由框架后，若要撤消的就地编辑过程中所做的更改调用。|  
-|[COleServerDoc::OnSetHostNames](#onsethostnames)|当容器设置为嵌入对象的窗口标题时，由框架调用。|  
-|[COleServerDoc::OnSetItemRects](#onsetitemrects)|由框架在容器应用程序的窗口内放置在就地编辑框架窗口调用。|  
-|[COleServerDoc::OnShowDocument](#onshowdocument)|由框架来显示或隐藏文档调用。|  
+|[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Called by the framework to create a frame window for in-place editing.|  
+|[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Called by the framework to destroy a frame window for in-place editing.|  
+|[COleServerDoc::GetDocObjectServer](#getdocobjectserver)|Override this function to create a new `CDocObjectServer` object and indicate that this document is a DocObject container.|  
+|[COleServerDoc::OnClose](#onclose)|Called by the framework when a container requests to close the document.|  
+|[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Executes a specified command or displays help for the command.|  
+|[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Called by the framework when the container's frame window is activated or deactivated.|  
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|Called to get a `COleServerItem` that represents the entire document; used to get an embedded item. Implementation required.|  
+|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Called by the framework to undo changes made during in-place editing.|  
+|[COleServerDoc::OnSetHostNames](#onsethostnames)|Called by the framework when a container sets the window title for an embedded object.|  
+|[COleServerDoc::OnSetItemRects](#onsetitemrects)|Called by the framework to position the in-place editing frame window within the container application's window.|  
+|[COleServerDoc::OnShowDocument](#onshowdocument)|Called by the framework to show or hide the document.|  
   
-## <a name="remarks"></a>备注  
- 服务器文档可以包含[COleServerItem](../../mfc/reference/coleserveritem-class.md)对象，它表示对嵌入或链接的项的服务器接口。 当编辑嵌入的项的容器启动服务器应用程序时，作为自己服务器文档，则加载项`COleServerDoc`对象都包含只是一个`COleServerItem`由组成的整个文档的对象。 服务器应用程序在启动时由容器，用来编辑链接的项目，从磁盘; 加载现有文档突出显示文档的内容的一部分来指示链接的项。  
+## <a name="remarks"></a>Remarks  
+ A server document can contain [COleServerItem](../../mfc/reference/coleserveritem-class.md) objects, which represent the server interface to embedded or linked items. When a server application is launched by a container to edit an embedded item, the item is loaded as its own server document; the `COleServerDoc` object contains just one `COleServerItem` object, consisting of the entire document. When a server application is launched by a container to edit a linked item, an existing document is loaded from disk; a portion of the document's contents is highlighted to indicate the linked item.  
   
- `COleServerDoc`对象还可以包含的项[COleClientItem](../../mfc/reference/coleclientitem-class.md)类。 这样，您可以创建容器 / 服务器应用程序。 框架提供了函数能正确地存储`COleClientItem`在处理项`COleServerItem`对象。  
+ `COleServerDoc` objects can also contain items of the [COleClientItem](../../mfc/reference/coleclientitem-class.md) class. This allows you to create container-server applications. The framework provides functions to properly store the `COleClientItem` items while servicing the `COleServerItem` objects.  
   
- 如果服务器应用程序不支持的链接，服务器文档将始终包含只有一个服务器项目，该对象表示整个的嵌入的对象作为文档。 如果服务器应用程序不支持的链接，它必须创建服务器项每次所选内容复制到剪贴板。  
+ If your server application does not support links, a server document will always contain only one server item, which represents the entire embedded object as a document. If your server application does support links, it must create a server item each time a selection is copied to the Clipboard.  
   
- 若要使用`COleServerDoc`、 从其派生一个类和实现[OnGetEmbeddedItem](#ongetembeddeditem)成员函数，允许你的服务器以支持嵌入的项。 从派生类`COleServerItem`可实现在文档中的项并返回从该类的对象`OnGetEmbeddedItem`。  
+ To use `COleServerDoc`, derive a class from it and implement the [OnGetEmbeddedItem](#ongetembeddeditem) member function, which allows your server to support embedded items. Derive a class from `COleServerItem` to implement the items in your documents, and return objects of that class from `OnGetEmbeddedItem`.  
   
- 若要支持链接的项，`COleServerDoc`提供[OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem)成员函数。 可以使用的默认实现，或如果您有您自己的方式管理文档项的重写它。  
+ To support linked items, `COleServerDoc` provides the [OnGetLinkedItem](../../mfc/reference/colelinkingdoc-class.md#ongetlinkeditem) member function. You can use the default implementation or override it if you have your own way of managing document items.  
   
- 你需要一个`COleServerDoc`-对于每种类型的服务器文档对应用程序支持派生类。 例如，如果服务器应用程序支持工作表和图表，必须有两个`COleServerDoc`的派生类。  
+ You need one `COleServerDoc`-derived class for each type of server document your application supports. For example, if your server application supports worksheets and charts, you need two `COleServerDoc`-derived classes.  
   
- 在服务器上的详细信息，请参阅文章[服务器︰ 实现服务器](../../mfc/servers-implementing-a-server.md)。  
+ For more information on servers, see the article [Servers: Implementing a Server](../../mfc/servers-implementing-a-server.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -177,181 +208,181 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
   
  `COleServerDoc`  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
- 激活相关联的 DocObject 文档。  
+##  <a name="activatedocobject"></a>  COleServerDoc::ActivateDocObject  
+ Activates the associated DocObject document.  
   
 ```  
 void ActivateDocObject();
 ```  
   
-### <a name="remarks"></a>备注  
- 默认情况下，`COleServerDoc`不支持活动文档 （也称为 DocObjects）。 若要启用该支持，请参阅[GetDocObjectServer](#getdocobjectserver)和类[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)。  
+### <a name="remarks"></a>Remarks  
+ By default, `COleServerDoc` does not support Active documents (also referred to as DocObjects). To enable this support, see [GetDocObjectServer](#getdocobjectserver) and class [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).  
   
-##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace  
- 激活就地编辑的项。  
+##  <a name="activateinplace"></a>  COleServerDoc::ActivateInPlace  
+ Activates the item for in-place editing.  
   
 ```  
 BOOL ActivateInPlace();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则非零值否则为 0，表示项处于完全打开状态。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0, which indicates that the item is fully open.  
   
-### <a name="remarks"></a>备注  
- 此函数执行就地激活所需的所有操作。 它创建的就地框架窗口、 激活它和大小的项、 设置共享的菜单和其他控件，将该项目滚动到视图中，并将焦点设置到的就地框架窗口。  
+### <a name="remarks"></a>Remarks  
+ This function performs all operations necessary for in-place activation. It creates an in-place frame window, activates it and sizes it to the item, sets up shared menus and other controls, scrolls the item into view, and sets the focus to the in-place frame window.  
   
- 默认实现调用此函数[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。 如果您的应用程序支持的就地激活 （例如播放） 的另一个谓词，则调用此函数。  
+ This function is called by the default implementation of [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Call this function if your application supports another verb for in-place activation (such as Play).  
   
-##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc  
- 构造`COleServerDoc`对象而无需使用 OLE 系统 Dll 进行连接。  
+##  <a name="coleserverdoc"></a>  COleServerDoc::COleServerDoc  
+ Constructs a `COleServerDoc` object without connecting with the OLE system DLLs.  
   
 ```  
 COleServerDoc();
 ```  
   
-### <a name="remarks"></a>备注  
- 必须调用[COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register)以向 OLE 打开通信。 如果您使用[COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)应用程序中`COleLinkingDoc::Register`为您通过调用`COleLinkingDoc`的实现`OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。  
+### <a name="remarks"></a>Remarks  
+ You must call [COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) to open communications with OLE. If you are using [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) in your application, `COleLinkingDoc::Register` is called for you by `COleLinkingDoc`'s implementation of `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.  
   
-##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame  
- 框架调用此函数可创建用于就地编辑一个框架窗口。  
+##  <a name="createinplaceframe"></a>  COleServerDoc::CreateInPlaceFrame  
+ The framework calls this function to create a frame window for in-place editing.  
   
 ```  
 virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 向容器应用程序的父窗口的指针。  
+ Pointer to the container application's parent window.  
   
-### <a name="return-value"></a>返回值  
- 就地框架窗口中，指向的指针或**NULL**如果不成功。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the in-place frame window, or **NULL** if unsuccessful.  
   
-### <a name="remarks"></a>备注  
- 默认实现使用文档模板中指定的信息创建框架。 使用的视图是为文档创建的第一个视图。 此视图是暂时从原始帧中分离和附加到新创建的框架。  
+### <a name="remarks"></a>Remarks  
+ The default implementation uses information specified in the document template to create the frame. The view used is the first view created for the document. This view is temporarily detached from the original frame and attached to the newly created frame.  
   
- 这是一个高级可重写。  
+ This is an advanced overridable.  
   
-##  <a name="deactivateandundo"></a>COleServerDoc::DeactivateAndUndo  
- 如果您的应用程序支持撤消，并且用户选择撤消激活项后但在编辑之前，调用此函数。  
+##  <a name="deactivateandundo"></a>  COleServerDoc::DeactivateAndUndo  
+ Call this function if your application supports Undo and the user chooses Undo after activating an item but before editing it.  
   
 ```  
 BOOL DeactivateAndUndo();
 ```  
   
-### <a name="return-value"></a>返回值  
- 若成功，则为非零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果容器应用程序使用 Microsoft 基础类库编写的调用此函数会导致[COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo)调用，它将停用服务器的用户界面。  
+### <a name="remarks"></a>Remarks  
+ If the container application is written using the Microsoft Foundation Class Library, calling this function causes [COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) to be called, which deactivates the server's user interface.  
   
-##  <a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame  
- 框架调用此函数可销毁就地框架窗口，并将该服务器应用程序的文档窗口返回到之前在就地激活状态。  
+##  <a name="destroyinplaceframe"></a>  COleServerDoc::DestroyInPlaceFrame  
+ The framework calls this function to destroy an in-place frame window and return the server application's document window to its state before in-place activation.  
   
 ```  
 virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFrameWnd`  
- 指向指针的就地框架窗口将其销毁。  
+ Pointer to the in-place frame window to be destroyed.  
   
-### <a name="remarks"></a>备注  
- 这是一个高级可重写。  
+### <a name="remarks"></a>Remarks  
+ This is an advanced overridable.  
   
-##  <a name="discardundostate"></a>COleServerDoc::DiscardUndoState  
- 如果用户执行编辑操作无法撤消，则调用此函数可强制容器应用程序放弃其撤消状态信息。  
+##  <a name="discardundostate"></a>  COleServerDoc::DiscardUndoState  
+ If the user performs an editing operation that cannot be undone, call this function to force the container application to discard its undo-state information.  
   
 ```  
 BOOL DiscardUndoState();
 ```  
   
-### <a name="return-value"></a>返回值  
- 若成功，则为非零；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero on success; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 提供此函数，以便支持撤消服务器的可释放否则供撤消状态信息不能使用的资源。  
+### <a name="remarks"></a>Remarks  
+ This function is provided so that servers that support Undo can free resources that would otherwise be consumed by undo-state information that cannot be used.  
   
-##  <a name="getclientsite"></a>COleServerDoc::GetClientSite  
- 检索对基础指针`IOleClientSite`接口。  
+##  <a name="getclientsite"></a>  COleServerDoc::GetClientSite  
+ Retrieves a pointer to the underlying `IOleClientSite` interface.  
   
 ```  
 LPOLECLIENTSITE GetClientSite() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 检索对基础指针[IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706)接口。  
+### <a name="return-value"></a>Return Value  
+ Retrieves a pointer to the underlying [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) interface.  
   
-##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer  
- 重写此函数可创建一个新`CDocObjectServer`项并返回指向它的指针。  
+##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
+ Override this function to create a new `CDocObjectServer` item and return a pointer to it.  
   
 ```  
 virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDocSite`  
- 指向`IOleDocumentSite`将连接到服务器的本文档的接口。  
+ Pointer to the `IOleDocumentSite` interface that will connect this document to the server.  
   
-### <a name="return-value"></a>返回值  
- 一个指向`CDocObjectServer`;**NULL**如果操作失败。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CDocObjectServer`; **NULL** if the operation failed.  
   
-### <a name="remarks"></a>备注  
- 激活 DocObject 服务器时，返回一个非**NULL**指针显示客户端可以支持 DocObjects。 默认实现返回**NULL**。  
+### <a name="remarks"></a>Remarks  
+ When a DocObject server is activated, the return of a non- **NULL** pointer shows that the client can support DocObjects. The default implementation returns **NULL**.  
   
- 典型的实现支持 DocObjects 的文档只是将分配一个新`CDocObjectServer`对象，并将其返回给调用方。 例如:   
+ A typical implementation for a document that supports DocObjects will simply allocate a new `CDocObjectServer` object and return it to the caller. For example:  
   
- [!code-cpp[NVC_MFCOleServer #&3;](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
+ [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
   
-##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem  
- 调用此函数可获取一个表示整个文档的项指向的指针。  
+##  <a name="getembeddeditem"></a>  COleServerDoc::GetEmbeddedItem  
+ Call this function to get a pointer to an item representing the entire document.  
   
 ```  
 COleServerItem* GetEmbeddedItem();
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个表示整个文档; 的项指向的指针**NULL**如果操作失败。  
+### <a name="return-value"></a>Return Value  
+ A pointer to an item representing the entire document; **NULL** if the operation failed.  
   
-### <a name="remarks"></a>备注  
- 它将调用[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)，没有默认实现的虚函数。  
+### <a name="remarks"></a>Remarks  
+ It calls [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), a virtual function with no default implementation.  
   
-##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect  
- 调用`GetItemClipRect`成员函数以获取正在编辑的项的剪辑矩形坐标中的位置。  
+##  <a name="getitemcliprect"></a>  COleServerDoc::GetItemClipRect  
+ Call the `GetItemClipRect` member function to get the clipping-rectangle coordinates of the item that is being edited in place.  
   
 ```  
 void GetItemClipRect(LPRECT lpClipRect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpClipRect`  
- 指向`RECT`结构或`CRect`对象，以接收该项的剪辑矩形坐标。  
+ Pointer to a `RECT` structure or a `CRect` object to receive the clipping-rectangle coordinates of the item.  
   
-### <a name="remarks"></a>备注  
- 坐标是以相对于容器应用程序窗口工作区的像素为单位。  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the container application window's client area.  
   
- 绘图不应出现在剪辑矩形的外部。 通常，绘制为自动限制。 使用此函数可确定用户是否已经滚动外部文档; 的可见部分如果是这样，滚动到容器文档，根据需要通过调用[ScrollContainerBy](#scrollcontainerby)。  
+ Drawing should not occur outside the clipping rectangle. Usually, drawing is automatically restricted. Use this function to determine whether the user has scrolled outside the visible portion of the document; if so, scroll the container document as needed by means of a call to [ScrollContainerBy](#scrollcontainerby).  
   
-##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition  
- 调用`GetItemPosition`成员函数要获取其坐标进行就地编辑的项。  
+##  <a name="getitemposition"></a>  COleServerDoc::GetItemPosition  
+ Call the `GetItemPosition` member function to get the coordinates of the item being edited in place.  
   
 ```  
 void GetItemPosition(LPRECT lpPosRect) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpPosRect`  
- 指向`RECT`结构或`CRect`对象以便接收该项目的坐标。  
+ Pointer to a `RECT` structure or a `CRect` object to receive the coordinates of the item.  
   
-### <a name="remarks"></a>备注  
- 坐标是以相对于容器应用程序窗口工作区的像素为单位。  
+### <a name="remarks"></a>Remarks  
+ Coordinates are in pixels relative to the container application window's client area.  
   
- 可以与当前的剪辑矩形，以确定该项可见 （或不可见） 的范围比较项的位置在屏幕上。  
+ The item's position can be compared with the current clipping rectangle to determine the extent to which the item is visible (or not visible) on the screen.  
   
-##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor  
- `GetZoomFactor`成员函数可确定已激活以进行就地编辑项的"缩放系数"。  
+##  <a name="getzoomfactor"></a>  COleServerDoc::GetZoomFactor  
+ The `GetZoomFactor` member function determines the "zoom factor" of an item that has been activated for in-place editing.  
   
 ```  
 BOOL GetZoomFactor(
@@ -360,174 +391,174 @@ BOOL GetZoomFactor(
     LPCRECT lpPosRect = NULL) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *lpSizeNum*  
- 指向类的对象指针`CSize`，将存放缩放系数分子。 可以是**NULL**。  
+ Pointer to an object of class `CSize` that will hold the zoom factor's numerator. Can be **NULL**.  
   
  *lpSizeDenom*  
- 指向类的对象指针`CSize`，将存放缩放系数分母。 可以是**NULL**。  
+ Pointer to an object of class `CSize` that will hold the zoom factor's denominator. Can be **NULL**.  
   
  `lpPosRect`  
- 指向类的对象指针`CRect`，描述项的新位置。 如果此参数为**NULL**，该函数使用项的当前位置。  
+ Pointer to an object of class `CRect` that describes the item's new position. If this argument is **NULL**, the function uses the item's current position.  
   
-### <a name="return-value"></a>返回值  
- 如果为就地激活项，则为非编辑和其缩放系数不是 100%(1:1);否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is activated for in-place editing and its zoom factor is other than 100% (1:1); otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 缩放系数，以像素为单位，是大小的其当前范围内的项的比例。 如果容器应用程序没有设置项的作用域，其原始大小 (由[COleServerItem::OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)) 使用。  
+### <a name="remarks"></a>Remarks  
+ The zoom factor, in pixels, is the proportion of the item's size to its current extent. If the container application has not set the item's extent, its natural extent (as determined by [COleServerItem::OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)) is used.  
   
- 该函数将其前两个参数设置为分子和分母的项的"缩放系数。" 如果该项不就地编辑，该函数将这些参数设置为默认值为 100%（或 1:1），并返回零。 有关详细信息，请参阅技术注意 40， [MFC/OLE 就地调整大小和缩放](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)。  
+ The function sets its first two arguments to the numerator and denominator of the item's "zoom factor." If the item is not being edited in place, the function sets these arguments to a default value of 100% (or 1:1) and returns zero. For further information, see Technical Note 40, [MFC/OLE In-Place Resizing and Zooming](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-##  <a name="isdocobject"></a>COleServerDoc::IsDocObject  
- 确定文档是否 DocObject。  
+##  <a name="isdocobject"></a>  COleServerDoc::IsDocObject  
+ Determines if the document is a DocObject.  
   
 ```  
 BOOL IsDocObject() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- **TRUE**文档是否 DocObject; 否则为**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the document is a DocObject; otherwise **FALSE**.  
   
-##  <a name="isembedded"></a>COleServerDoc::IsEmbedded  
- 调用`IsEmbedded`成员函数来确定文档是否表示嵌入在容器中的对象。  
+##  <a name="isembedded"></a>  COleServerDoc::IsEmbedded  
+ Call the `IsEmbedded` member function to determine whether the document represents an object embedded in a container.  
   
 ```  
 BOOL IsEmbedded() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果非零`COleServerDoc`对象是表示的对象的文档容器中嵌入; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `COleServerDoc` object is a document that represents an object embedded in a container; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 尽管它可能由容器应用程序的链接的形式进行操作，将不会嵌入从文件加载的文档。 嵌入在容器文档的文档被视为要嵌入。  
+### <a name="remarks"></a>Remarks  
+ A document loaded from a file is not embedded although it may be manipulated by a container application as a link. A document that is embedded in a container document is considered to be embedded.  
   
-##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive  
- 调用`IsInPlaceActive`成员函数来确定该项目当前是否处于就地活动状态。  
+##  <a name="isinplaceactive"></a>  COleServerDoc::IsInPlaceActive  
+ Call the `IsInPlaceActive` member function to determine whether the item is currently in the in-place active state.  
   
 ```  
 BOOL IsInPlaceActive() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果非零`COleServerDoc`对象是就地活动状态; 否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `COleServerDoc` object is active in place; otherwise 0.  
   
-##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged  
- 调用此函数来通知所有链接的项目连接到该文档已更改的文档。  
+##  <a name="notifychanged"></a>  COleServerDoc::NotifyChanged  
+ Call this function to notify all linked items connected to the document that the document has changed.  
   
 ```  
 void NotifyChanged();
 ```  
   
-### <a name="remarks"></a>备注  
- 通常情况下，用户更改一些全局属性，如服务器文档的维度之后调用此函数。 如果将 OLE 项与自动链接到文档链接，该项目将更新以反映所做的更改。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数`COleClientItem`调用。  
+### <a name="remarks"></a>Remarks  
+ Typically, you call this function after the user changes some global attribute such as the dimensions of the server document. If an OLE item is linked to the document with an automatic link, the item is updated to reflect the changes. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
 > [!NOTE]
->  此函数是为了与 OLE 1 的兼容性。 新的应用程序应使用[UpdateAllItems](#updateallitems)。  
+>  This function is included for compatibility with OLE 1. New applications should use [UpdateAllItems](#updateallitems).  
   
-##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed  
- 调用此函数以通知容器文档已关闭。  
+##  <a name="notifyclosed"></a>  COleServerDoc::NotifyClosed  
+ Call this function to notify the container(s) that the document has been closed.  
   
 ```  
 void NotifyClosed();
 ```  
   
-### <a name="remarks"></a>备注  
- 当用户从文件菜单中，选择关闭命令`NotifyClosed`由调用`COleServerDoc`的实现[OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument)成员函数。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数`COleClientItem`调用。  
+### <a name="remarks"></a>Remarks  
+ When the user chooses the Close command from the File menu, `NotifyClosed` is called by `COleServerDoc`'s implementation of the [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) member function. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
-##  <a name="notifyrename"></a>COleServerDoc::NotifyRename  
- 调用此函数后用户重命名服务器文档。  
+##  <a name="notifyrename"></a>  COleServerDoc::NotifyRename  
+ Call this function after the user renames the server document.  
   
 ```  
 void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszNewName`  
- 指定的服务器文档; 的新名称的字符串指针这通常是完全限定的路径。  
+ Pointer to a string specifying the new name of the server document; this is typically a fully qualified path.  
   
-### <a name="remarks"></a>备注  
- 当用户从文件菜单中，选择另存为命令`NotifyRename`由调用`COleServerDoc`的实现[OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument)成员函数。 此函数通知 OLE 系统 Dll，其反过来通知容器。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数`COleClientItem`调用。  
+### <a name="remarks"></a>Remarks  
+ When the user chooses the Save As command from the File menu, `NotifyRename` is called by `COleServerDoc`'s implementation of the [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) member function. This function notifies the OLE system DLLs, which in turn notify the containers. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
-##  <a name="notifysaved"></a>COleServerDoc::NotifySaved  
- 用户将服务器文档保存后，请调用此函数。  
+##  <a name="notifysaved"></a>  COleServerDoc::NotifySaved  
+ Call this function after the user saves the server document.  
   
 ```  
 void NotifySaved();
 ```  
   
-### <a name="remarks"></a>备注  
- 当用户从文件菜单中，选择保存命令`NotifySaved`为您通过调用`COleServerDoc`的实现[OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument)。 此函数通知 OLE 系统 Dll，其反过来通知容器。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数`COleClientItem`调用。  
+### <a name="remarks"></a>Remarks  
+ When the user chooses the Save command from the File menu, `NotifySaved` is called for you by `COleServerDoc`'s implementation of [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). This function notifies the OLE system DLLs, which in turn notify the containers. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
-##  <a name="onclose"></a>COleServerDoc::OnClose  
- 当容器请求的服务器文档将关闭时由框架调用。  
+##  <a name="onclose"></a>  COleServerDoc::OnClose  
+ Called by the framework when a container requests that the server document be closed.  
   
 ```  
 virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwCloseOption`  
- 枚举中的值`OLECLOSE`。 此参数可以具有下列值之一：  
+ A value from the enumeration `OLECLOSE`. This parameter can have one of the following values:  
   
-- `OLECLOSE_SAVEIFDIRTY`如果已被修改，将保存该文件。  
+- `OLECLOSE_SAVEIFDIRTY` The file is saved if it has been modified.  
   
-- `OLECLOSE_NOSAVE`关闭该文件，而不会保存。  
+- `OLECLOSE_NOSAVE` The file is closed without being saved.  
   
-- `OLECLOSE_PROMPTSAVE`如果该文件已被修改，将其保存有关提示用户。  
+- `OLECLOSE_PROMPTSAVE` If the file has been modified, the user is prompted about saving it.  
   
-### <a name="remarks"></a>备注  
- 默认实现调用`CDocument::OnCloseDocument`。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls `CDocument::OnCloseDocument`.  
   
- 有关详细信息和其他值，请参阅[OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information and additional values, see [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) in the Windows SDK.  
   
-##  <a name="ondeactivate"></a>COleServerDoc::OnDeactivate  
- 当用户停用嵌入或链接项是当前处于就地活动状态时，由框架调用。  
+##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
+ Called by the framework when the user deactivates an embedded or linked item that is currently in-place active.  
   
 ```  
 virtual void OnDeactivate();
 ```  
   
-### <a name="remarks"></a>备注  
- 此函数将容器应用程序的用户界面还原到其原始状态，并会破坏任何菜单和其他已由称为就地激活的控件。  
+### <a name="remarks"></a>Remarks  
+ This function restores the container application's user interface to its original state and destroys any menus and other controls that were created for in-place activation.  
   
- 撤消状态信息应无条件地释放这个时候。  
+ The undo state information should be unconditionally released at this point.  
   
- 有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)...  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md)..  
   
-##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI  
- 当用户停用在就地激活项时调用。  
+##  <a name="ondeactivateui"></a>  COleServerDoc::OnDeactivateUI  
+ Called when the user deactivates an item that was activated in place.  
   
 ```  
 virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bUndoable`  
- 指定是否可以撤消编辑的更改。  
+ Specifies whether the editing changes can be undone.  
   
-### <a name="remarks"></a>备注  
- 此函数将还原到其原始状态，隐藏任何菜单和其他已由称为就地激活的控件的容器应用程序的用户界面。  
+### <a name="remarks"></a>Remarks  
+ This function restores the container application's user interface to its original state, hiding any menus and other controls that were created for in-place activation.  
   
- 框架始终设置`bUndoable`到**FALSE**。 如果服务器支持撤消，并且没有可用于撤消的操作，调用基类实现与`bUndoable`设置为**TRUE**。  
+ The framework always sets `bUndoable` to **FALSE**. If the server supports undo and there is an operation that can be undone, call the base-class implementation with `bUndoable` set to **TRUE**.  
   
-##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate  
- 框架调用此函数可激活或停用进行就地编辑一个文档窗口。  
+##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
+ The framework calls this function to activate or deactivate a document window for in-place editing.  
   
 ```  
 virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- 指定是否要激活或停用文档窗口中。  
+ Specifies whether the document window is to be activated or deactivated.  
   
-### <a name="remarks"></a>备注  
- 默认实现中删除，或根据需要添加的帧级用户界面元素。 如果你想要在激活或停用包含您的项目的文档时执行其他操作，重写此函数。  
+### <a name="remarks"></a>Remarks  
+ The default implementation removes or adds the frame-level user interface elements as appropriate. Override this function if you want to perform additional actions when the document containing your item is activated or deactivated.  
   
- 有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)...  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md)..  
   
-##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd  
- 框架调用此函数可执行指定的命令或显示有关命令的帮助。  
+##  <a name="onexecolecmd"></a>  COleServerDoc::OnExecOleCmd  
+ The framework calls this function to execute a specified command or display help for the command.  
   
 ```  
 virtual HRESULT OnExecOleCmd(
@@ -538,15 +569,15 @@ virtual HRESULT OnExecOleCmd(
     VARIANTARG* pvarargOut);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pguidCmdGroup`  
- 一个指向一个 GUID，标识一组命令。 可以是**NULL**以指示的默认命令组。  
+ A pointer to a GUID that identifies a set of commands. Can be **NULL** to indicate the default command group.  
   
  `nCmdID`  
- 要执行的命令。 通过标识的组中必须是`pguidCmdGroup`。  
+ The command to execute. Must be in the group identified by `pguidCmdGroup`.  
   
  *nCmdExecOut*  
- 该对象中的命令，其中一个或多个中的以下值应执行的方式**OLECMDEXECOPT**枚举︰  
+ The way the object should execute the command, one or more of the following values from the **OLECMDEXECOPT** enumeration:  
   
  **OLECMDEXECOPT_DODEFAULT**  
   
@@ -557,82 +588,82 @@ virtual HRESULT OnExecOleCmd(
  **OLECMDEXECOPT_SHOWHELP**  
   
  `pvarargIn`  
- 指向**VARIANTARG**包含命令的输入的参数。 可以是**NULL**。  
+ Pointer to a **VARIANTARG** containing input arguments for the command. Can be **NULL**.  
   
  `pvarargOut`  
- 指向**VARIANTARG**以接收来自该命令的输出返回值。 可以是**NULL**。  
+ Pointer to a **VARIANTARG** to receive the output return values from the command. Can be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 返回`S_OK`如果成功，否则为下面的错误代码之一︰  
+### <a name="return-value"></a>Return Value  
+ Returns `S_OK` if successful; otherwise, one of the following error codes:  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
-|**E_UNEXPECTED**|出现意外的错误|  
-|**E_FAIL**|出现错误|  
-|**E_NOTIMPL**|表示 MFC 本身应尝试将转换并将其分派命令|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`为非**NULL**但未指定可识别的命令组|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`未被识别为有效的组中的命令`pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|标识的命令`nCmdID`被禁用且不能执行|  
-|**OLECMDERR_NOHELP**|请求有关的帮助调用方标识的命令上`nCmdID`但无帮助可|  
-|**OLECMDERR_CANCELED**|用户已取消执行|  
+|**E_UNEXPECTED**|Unexpected error occurred|  
+|**E_FAIL**|Error occurred|  
+|**E_NOTIMPL**|Indicates MFC itself should attempt to translate and dispatch the command|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` is non- **NULL** but does not specify a recognized command group|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` is not recognized as a valid command in the group `pguidCmdGroup`|  
+|**OLECMDERR_DISABLED**|The command identified by `nCmdID` is disabled and cannot be executed|  
+|**OLECMDERR_NOHELP**|Caller asked for help on the command identified by `nCmdID` but no help is available|  
+|**OLECMDERR_CANCELED**|User canceled the execution|  
   
-### <a name="remarks"></a>备注  
- `COleCmdUI`可用于启用、 更新和设置其他属性 DocObject 用户界面命令。 在初始化命令后，您可以执行这些与`OnExecOleCmd`。  
+### <a name="remarks"></a>Remarks  
+ `COleCmdUI` can be used to enable, update, and set other properties of DocObject user interface commands. After the commands are initialized, you can execute them with `OnExecOleCmd`.  
   
- 框架在尝试将转换并将其分派 OLE 文档命令之前调用该函数。 无需重写此函数来处理标准 OLE 文档命令，但如果您想要处理您自己的自定义命令或处理接受参数或返回结果的命令，则必须提供此函数的重写。  
+ The framework calls the function before attempting to translate and dispatch an OLE document command. You don't need to override this function to handle standard OLE document commands, but you must supply an override to this function if you want to handle your own custom commands or handle commands that accept parameters or return results.  
   
- 大多数命令执行不带参数或返回值。 对于大多数命令的调用方可以将传递**NULL**s 表示`pvarargIn`和`pvarargOut`。 对于预期输入的值的命令，调用方可以声明并初始化**VARIANTARG**变量并将指针传递给该变量`pvarargIn`。 对于需要单个值的命令，该参数可以直接存储在**VARIANTARG**并传递给函数。 多个参数必须打包在**VARIANTARG**使用一种受支持的类型 (如`IDispatch`和**SAFEARRAY** )。  
+ Most of the commands do not take arguments or return values. For a majority of commands the caller can pass **NULL**s for `pvarargIn` and `pvarargOut`. For commands that expect input values, the caller can declare and initialize a **VARIANTARG** variable and pass a pointer to the variable in `pvarargIn`. For commands that require a single value, the argument can be stored directly in the **VARIANTARG** and passed to the function. Multiple arguments must be packaged within the **VARIANTARG** using one of the supported types (such as `IDispatch` and **SAFEARRAY** ).  
   
- 同样，如果命令返回参数调用方应声明**VARIANTARG**，将其初始化为`VT_EMPTY`，并将其中的地址传递`pvarargOut`。 如果命令返回单个值，该对象可以将该值存储在直接在`pvarargOut`。 多个输出值必须进行打包以某种方式适用于**VARIANTARG**。  
+ Similarly, if a command returns arguments the caller is expected to declare a **VARIANTARG**, initialize it to `VT_EMPTY`, and pass its address in `pvarargOut`. If a command returns a single value, the object can store that value directly in `pvarargOut`. Multiple output values must be packaged in some way appropriate for the **VARIANTARG**.  
   
- 此函数的基类实现将引导**OLE_COMMAND_MAP**与命令目标，然后重试调度到相应的处理程序的命令相关联的结构。 基类实现仅适用于命令不接受参数或返回值。 如果您需要处理命令，请不要接受参数或返回值，您必须重写此函数和处理`pvarargIn`和`pvarargOut`参数自己。  
+ The base-class implementation of this function will walk the **OLE_COMMAND_MAP** structures associated with the command target and try to dispatch the command to an appropriate handler. The base-class implementation works only with commands that do not accept arguments or return values. If you need to handle commands that do accept arguments or return values, you must override this function and work with the `pvarargIn` and `pvarargOut` parameters yourself.  
   
-##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate  
- 当激活或停用容器应用程序的框架窗口时，框架将调用此函数。  
+##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
+ The framework calls this function when the container application's frame window is activated or deactivated.  
   
 ```  
 virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- 指定是否要激活或停用的框架窗口。  
+ Specifies whether the frame window is to be activated or deactivated.  
   
-### <a name="remarks"></a>备注  
- 默认实现将取消框架窗口可能处于的任何帮助模式。 如果你想要激活或停用的框架窗口时执行特殊处理，重写此函数。  
+### <a name="remarks"></a>Remarks  
+ The default implementation cancels any help modes the frame window might be in. Override this function if you want to perform special processing when the frame window is activated or deactivated.  
   
- 有关详细信息，请参阅文章[激活](../../mfc/activation-cpp.md)...  
+ For more information, see the article [Activation](../../mfc/activation-cpp.md)..  
   
-##  <a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem  
- 当容器应用程序调用服务器应用程序可以创建或编辑嵌入的项时，由框架调用。  
+##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem  
+ Called by the framework when a container application calls the server application to create or edit an embedded item.  
   
 ```  
 virtual COleServerItem* OnGetEmbeddedItem() = 0;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个表示整个文档; 的项指向的指针**NULL**如果操作失败。  
+### <a name="return-value"></a>Return Value  
+ A pointer to an item representing the entire document; **NULL** if the operation failed.  
   
-### <a name="remarks"></a>备注  
- 没有默认实现。 必须重写此函数可返回表示整个文档的项。 此返回值应为对象`COleServerItem`的派生类。  
+### <a name="remarks"></a>Remarks  
+ There is no default implementation. You must override this function to return an item that represents the entire document. This return value should be an object of a `COleServerItem`-derived class.  
   
-##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo  
- 在用户选择要撤消对已就地激活，更改，并且随后停用的项目所做的更改时，框架将调用此函数。  
+##  <a name="onreactivateandundo"></a>  COleServerDoc::OnReactivateAndUndo  
+ The framework calls this function when the user chooses to undo changes made to an item that has been activated in place, changed, and subsequently deactivated.  
   
 ```  
 virtual BOOL OnReactivateAndUndo();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 默认实现不执行任何操作返回除**FALSE**以指示失败。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing except return **FALSE** to indicate failure.  
   
- 如果您的应用程序支持撤消，重写此函数。 通常您需要执行撤消操作中，然后通过调用激活选项`ActivateInPlace`。 如果容器应用程序使用 Microsoft 基础类库编写的则调用`COleClientItem::ReactivateAndUndo`导致要调用此函数。  
+ Override this function if your application supports undo. Usually you would perform the undo operation, then activate the item by calling `ActivateInPlace`. If the container application is written with the Microsoft Foundation Class Library, calling `COleClientItem::ReactivateAndUndo` causes this function to be called.  
   
-##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder  
- 框架调用此函数在容器应用程序的框架窗口更改大小。  
+##  <a name="onresizeborder"></a>  COleServerDoc::OnResizeBorder  
+ The framework calls this function when the container application's frame windows change size.  
   
 ```  
 virtual void OnResizeBorder(
@@ -641,25 +672,25 @@ virtual void OnResizeBorder(
     BOOL bFrame);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpRectBorder`  
- 指向`RECT`结构或`CRect`对象，它指定边框的坐标。  
+ Pointer to a `RECT` structure or a `CRect` object that specifies the coordinates of the border.  
   
  `lpUIWindow`  
- 指向类的对象指针**IOleInPlaceUIWindow**拥有当前就地编辑会话。  
+ Pointer to an object of class **IOleInPlaceUIWindow** that owns the current in-place editing session.  
   
- *b 帧*  
- **TRUE**如果`lpUIWindow`指向容器应用程序的顶层框架窗口中，或**FALSE**如果`lpUIWindow`指向容器应用程序的文档级框架窗口。  
+ *bFrame*  
+ **TRUE** if `lpUIWindow` points to the container application's top-level frame window, or **FALSE** if `lpUIWindow` points to the container application's document-level frame window.  
   
-### <a name="remarks"></a>备注  
- 此函数调整大小，并调整工具栏和其他用户界面元素，根据新的窗口大小。  
+### <a name="remarks"></a>Remarks  
+ This function resizes and adjusts toolbars and other user-interface elements in accordance with the new window size.  
   
- 有关详细信息，请参阅[IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) in the Windows SDK.  
   
- 这是一个高级可重写。  
+ This is an advanced overridable.  
   
-##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames  
- 当容器设置或更改本文档的主机名时由框架调用。  
+##  <a name="onsethostnames"></a>  COleServerDoc::OnSetHostNames  
+ Called by the framework when the container sets or changes the host names for this document.  
   
 ```  
 virtual void OnSetHostNames(
@@ -667,20 +698,20 @@ virtual void OnSetHostNames(
     LPCTSTR lpszHostObj);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszHost`  
- 指定的容器应用程序的名称的字符串指针。  
+ Pointer to a string that specifies the name of the container application.  
   
  `lpszHostObj`  
- 指定文档的容器的名称的字符串指针。  
+ Pointer to a string that specifies the container's name for the document.  
   
-### <a name="remarks"></a>备注  
- 默认实现更改本文档引用的所有视图的文档标题。  
+### <a name="remarks"></a>Remarks  
+ The default implementation changes the document title for all views referring to this document.  
   
- 如果您的应用程序设置了标题通过另一种机制，重写此函数。  
+ Override this function if your application sets the titles through a different mechanism.  
   
-##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects  
- 框架调用此函数可在容器应用程序的框架窗口内放置在就地编辑框架窗口。  
+##  <a name="onsetitemrects"></a>  COleServerDoc::OnSetItemRects  
+ The framework calls this function to position the in-place editing frame window within the container application's frame window.  
   
 ```  
 virtual void OnSetItemRects(
@@ -688,20 +719,20 @@ virtual void OnSetItemRects(
     LPCRECT lpClipRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpPosRect`  
- 指向`RECT`结构或`CRect`对象，它指定相对于容器应用程序的工作区的就地框架窗口的位置。  
+ Pointer to a `RECT` structure or a `CRect` object that specifies the in-place frame window's position relative to the container application's client area.  
   
  `lpClipRect`  
- 指向`RECT`结构或`CRect`对象，它指定相对于容器应用程序的工作区的就地框架窗口的剪辑矩形。  
+ Pointer to a `RECT` structure or a `CRect` object that specifies the in-place frame window's clipping rectangle relative to the container application's client area.  
   
-### <a name="remarks"></a>备注  
- 如有必要，重写此函数可更新视图的缩放系数。  
+### <a name="remarks"></a>Remarks  
+ Override this function to update the view's zoom factor, if necessary.  
   
- 此函数通常称为以响应`RequestPositionChange`调用时，虽然它可以调用在任何时候由容器请求的就地项的位置的更改。  
+ This function is usually called in response to a `RequestPositionChange` call, although it can be called at any time by the container to request a position change for the in-place item.  
   
-##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars  
- 框架将调用此函数可显示或隐藏与通过标识的框架窗口关联的服务器应用程序的控件条`pFrameWnd`。  
+##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
+ The framework calls this function to show or hide the server application's control bars associated with the frame window identified by `pFrameWnd`.  
   
 ```  
 virtual void OnShowControlBars(
@@ -709,86 +740,86 @@ virtual void OnShowControlBars(
     BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pFrameWnd`  
- 到应显示或隐藏其控件条的框架窗口的指针。  
+ Pointer to the frame window whose control bars should be hidden or shown.  
   
  `bShow`  
- 确定控件条是显示还是隐藏。  
+ Determines whether control bars are shown or hidden.  
   
-### <a name="remarks"></a>备注  
- 默认实现枚举由该框架窗口拥有的所有控件条和隐藏或显示它们。  
+### <a name="remarks"></a>Remarks  
+ The default implementation enumerates all control bars owned by that frame window and hides or shows them.  
   
-##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument  
- 框架将调用`OnShowDocument`时必须显示或隐藏服务器文档的功能。  
+##  <a name="onshowdocument"></a>  COleServerDoc::OnShowDocument  
+ The framework calls the `OnShowDocument` function when the server document must be hidden or shown.  
   
 ```  
 virtual void OnShowDocument(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- 指定是否对文档的用户界面是显示还是隐藏。  
+ Specifies whether the user interface to the document is to be shown or hidden.  
   
-### <a name="remarks"></a>备注  
- 如果`bShow`是**TRUE**的默认实现激活服务器应用程序，如有必要，并使此容器应用程序滚动其窗口，以便使项是否可见。 如果`bShow`是**FALSE**，默认实现将停用项通过调用`OnDeactivate`，然后销毁或隐藏所有已为该文档，除第一个创建的框架窗口。 如果没有可见的文档保持，默认实现将隐藏服务器应用程序。  
+### <a name="remarks"></a>Remarks  
+ If `bShow` is **TRUE**, the default implementation activates the server application, if necessary, and causes the container application to scroll its window so that the item is visible. If `bShow` is **FALSE**, the default implementation deactivates the item through a call to `OnDeactivate`, then destroys or hides all frame windows that have been created for the document, except the first one. If no visible documents remain, the default implementation hides the server application.  
   
-##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument  
- 将文档保存为复合文档中的嵌入的项时由框架调用。  
+##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
+ Called by the framework when saving a document that is an embedded item in a compound document.  
   
 ```  
 virtual BOOL OnUpdateDocument();
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果已成功更新文档;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document was successfully updated; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 默认实现调用[COleServerDoc::NotifySaved](#notifysaved)和[COleServerDoc::SaveEmbedding](#saveembedding)成员函数，然后将标记为干净的文档。 如果您想要执行特殊处理更新嵌入的项时，重写此函数。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the [COleServerDoc::NotifySaved](#notifysaved) and [COleServerDoc::SaveEmbedding](#saveembedding) member functions and then marks the document as clean. Override this function if you want to perform special processing when updating an embedded item.  
   
-##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange  
- 调用此成员函数来更改项的位置的容器应用程序。  
+##  <a name="requestpositionchange"></a>  COleServerDoc::RequestPositionChange  
+ Call this member function to have the container application change the item's position.  
   
 ```  
 void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpPosRect`  
- 指向`RECT`结构或`CRect`对象，其中包含项的新位置。  
+ Pointer to a `RECT` structure or a `CRect` object containing the item's new position.  
   
-### <a name="remarks"></a>备注  
- 此函数通常称为 (结合`UpdateAllItems`) 中处于就地活动项的数据发生更改时。 按照此调用后，容器可能或可能无法通过调用执行更改`OnSetItemRects`。 最终位置可能不同于请求。  
+### <a name="remarks"></a>Remarks  
+ This function is usually called (in conjunction with `UpdateAllItems`) when the data in an in-place active item has changed. Following this call, the container might or might not perform the change by calling `OnSetItemRects`. The resulting position might be different from the one requested.  
   
-##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding  
- 调用此函数可告知容器应用程序，以便保存嵌入的对象。  
+##  <a name="saveembedding"></a>  COleServerDoc::SaveEmbedding  
+ Call this function to tell the container application to save the embedded object.  
   
 ```  
 void SaveEmbedding();
 ```  
   
-### <a name="remarks"></a>备注  
- 从自动调用此函数`OnUpdateDocument`。 请注意，此函数会导致要更新在磁盘上，因此它通常称为只能通过特定的用户操作的项。  
+### <a name="remarks"></a>Remarks  
+ This function is called automatically from `OnUpdateDocument`. Note that this function causes the item to be updated on disk, so it is usually called only as a result of a specific user action.  
   
-##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy  
- 调用`ScrollContainerBy`成员函数，以便滚动容器文档的量，以像素为单位，由`sizeScroll`。  
+##  <a name="scrollcontainerby"></a>  COleServerDoc::ScrollContainerBy  
+ Call the `ScrollContainerBy` member function to scroll the container document by the amount, in pixels, indicated by `sizeScroll`.  
   
 ```  
 BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `sizeScroll`  
- 指示延伸的范围容器文档将向下滚动。  
+ Indicates how far the container document is to scroll.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 正值指示向下和向右; 滚动负值表示向上和向左滚动。  
+### <a name="remarks"></a>Remarks  
+ Positive values indicate scrolling down and to the right; negative values indicate scrolling up and to the left.  
   
-##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems  
- 调用此函数来通知所有链接的项目连接到该文档已更改的文档。  
+##  <a name="updateallitems"></a>  COleServerDoc::UpdateAllItems  
+ Call this function to notify all linked items connected to the document that the document has changed.  
   
 ```  
 void UpdateAllItems(
@@ -798,37 +829,37 @@ void UpdateAllItems(
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pSender`  
- 修改了文档的项的指针或**NULL**如果所有项都是要更新。  
+ Pointer to the item that modified the document, or **NULL** if all items are to be updated.  
   
  `lHint`  
- 包含有关修改信息。  
+ Contains information about the modification.  
   
  `pHint`  
- 指针指向存储修改的相关信息的对象。  
+ Pointer to an object storing information about the modification.  
   
  `nDrawAspect`  
- 确定如何对项目进行绘制。 这是一个介于`DVASPECT`枚举。 此参数可以具有下列值之一：  
+ Determines how the item is to be drawn. This is a value from the `DVASPECT` enumeration. This parameter can have one of the following values:  
   
-- `DVASPECT_CONTENT`项可以显示为嵌入对象到其容器内的方式表示。  
+- `DVASPECT_CONTENT` Item is represented in such a way that it can be displayed as an embedded object inside its container.  
   
-- `DVASPECT_THUMBNAIL`项将呈现在"thumbnail"表示形式，以便它可以显示在浏览工具。  
+- `DVASPECT_THUMBNAIL` Item is rendered in a "thumbnail" representation so that it can be displayed in a browsing tool.  
   
-- `DVASPECT_ICON`项由一个图标来表示。  
+- `DVASPECT_ICON` Item is represented by an icon.  
   
-- `DVASPECT_DOCPRINT`就像它已打印使用打印命令从文件菜单项表示。  
+- `DVASPECT_DOCPRINT` Item is represented as if it were printed using the Print command from the File menu.  
   
-### <a name="remarks"></a>备注  
- 用户更改服务器文档之后，通常会调用此函数。 如果将 OLE 项与自动链接到文档链接，该项目将更新以反映所做的更改。 在容器应用程序中使用 Microsoft 基础类库编写[OnChange](../../mfc/reference/coleclientitem-class.md#onchange)成员函数`COleClientItem`调用。  
+### <a name="remarks"></a>Remarks  
+ You typically call this function after the user changes the server document. If an OLE item is linked to the document with an automatic link, the item is updated to reflect the changes. In container applications written with the Microsoft Foundation Class Library, the [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) member function of `COleClientItem` is called.  
   
- 此函数将调用`OnUpdate`成员函数为每个文档的项除外发送邮件，传递`pHint`， `lHint`，和`nDrawAspect`。 使用这些参数将信息传递给对文档进行的更改的项。 您可以使用信息进行编码`lHint`，也可以定义`CObject`的派生类以存储信息所做的修改并传递一个对象的类使用`pHint`。 重写`OnUpdate`成员函数在您`COleServerItem`的派生类以优化的每个项具体取决于其演示文稿是否发生了更改随之更新。  
+ This function calls the `OnUpdate` member function for each of the document's items except the sending item, passing `pHint`, `lHint`, and `nDrawAspect`. Use these parameters to pass information to the items about the modifications made to the document. You can encode information using `lHint` or you can define a `CObject`-derived class to store information about the modifications and pass an object of that class using `pHint`. Override the `OnUpdate` member function in your `COleServerItem`-derived class to optimize the updating of each item depending on whether its presentation has changed.  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
- [COleLinkingDoc 类](../../mfc/reference/colelinkingdoc-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [COleDocument 类](../../mfc/reference/coledocument-class.md)   
- [COleLinkingDoc 类](../../mfc/reference/colelinkingdoc-class.md)   
- [COleTemplateServer 类](../../mfc/reference/coletemplateserver-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [COleLinkingDoc Class](../../mfc/reference/colelinkingdoc-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDocument Class](../../mfc/reference/coledocument-class.md)   
+ [COleLinkingDoc Class](../../mfc/reference/colelinkingdoc-class.md)   
+ [COleTemplateServer Class](../../mfc/reference/coletemplateserver-class.md)
 

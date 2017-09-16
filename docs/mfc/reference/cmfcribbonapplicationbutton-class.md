@@ -1,5 +1,5 @@
 ---
-title: "而 CMFCRibbonApplicationButton 类 |Microsoft 文档"
+title: CMFCRibbonApplicationButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonApplicationButton class
+- CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
+- CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
 caps.latest.revision: 25
 author: mikeblome
@@ -36,58 +37,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a6fc19c2af854f3cd4ee3dc3a3008abcb4714ba3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b9462c709795fd9c7a55ff234b2b0116d41666c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>而 CMFCRibbonApplicationButton 类
-实现位于应用程序窗口左上角的特殊按钮。 单击此按钮将打开一个菜单，其中通常包含公共的 **“文件”** 命令，如 **“打开”**、 **“保存”**和 **“退出”**。  
+# <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton Class
+Implements a special button located in the top-left corner of the application window. When clicked, the button opens a menu that usually contains common **File** commands like **Open**, **Save**, and **Exit**.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonApplicationButton : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|构造并初始化一个 `CMFCRibbonApplicationButton` 对象。|  
+|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Constructs and initializes a `CMFCRibbonApplicationButton` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonApplicationButton::CreateObject`|由框架用于创建此类类型的动态实例。|  
-|`CMFCRibbonApplicationButton::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)程序与此类类型的对象。|  
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|将图像分配给功能区应用程序按钮。|  
+|`CMFCRibbonApplicationButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonApplicationButton::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCRibbonApplicationButton::SetImage](#setimage)|Assigns an image to the ribbon application button.|  
   
-## <a name="example"></a>示例  
- 下面的示例演示如何使用各种方法`CMFCRibbonApplicationButton`类。 该示例演示如何将图像分配给应用程序按钮，以及如何设置其工具提示。 此代码段属于[绘制客户端示例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonApplicationButton` class. The example shows how to assign an image to the application button, and how to set its tooltip. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient #&4;](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_DrawClient #&5;](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)  
   
- [而 CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
+ [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxRibbonBar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxRibbonBar.h  
   
-##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
- 构造并初始化[而 CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)对象。  
+##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+ Constructs and initializes a [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) object.  
   
 ```  
 CMFCRibbonApplicationButton();  
@@ -95,36 +96,36 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
   CMFCRibbonApplicationButton(HBITMAP hBmp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `uiBmpResID`  
- 若要在应用程序按钮上显示的图像资源 ID。  
+ The resource ID of the image to display on the application button.  
   
  `hBmp`  
- 若要在应用程序按钮上显示的位图句柄。  
+ A handle to a bitmap to display on the application button.  
   
-### <a name="remarks"></a>备注  
- 功能区应用程序按钮是位于应用程序窗口的左上角的特殊按钮。 当用户单击此按钮时，应用程序打开一个菜单，通常包含公共**文件**命令，如**打开**，**保存**，和**退出**。  
+### <a name="remarks"></a>Remarks  
+ The ribbon application button is a special button that is located in the upper-left corner of the application window. When a user clicks this button, the application opens a menu that usually contains common **File** commands, such as **Open**, **Save**, and **Exit**.  
   
-##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
- 将图像分配给应用程序按钮。  
+##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
+ Assigns an image to the application button.  
   
 ```  
 void SetImage(UINT uiBmpResID);  
 void SetImage(HBITMAP hBmp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `uiBmpResID`  
- 若要在应用程序按钮上显示的图像资源 ID。  
+ The resource ID of the image to display on the application button.  
   
  [in] `hBmp`  
- 若要在应用程序按钮上显示的位图句柄。  
+ A handle to a bitmap to display on the application button.  
   
-### <a name="remarks"></a>备注  
- 使用此方法将新映像给功能区应用程序按钮后创建按钮。 应用程序按钮位于应用程序窗口的左上角。  
+### <a name="remarks"></a>Remarks  
+ Use this method to assign a new image to the ribbon application button after you create the button. The application button is located in the upper-left corner of the application window.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

@@ -1,26 +1,43 @@
 ---
-title: "依赖类型的名称解析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Dependent Types | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 依赖类型的名称解析
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 055b6e4300179d3a2350782b9d92547d288dbe5a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-使用 **typename** 作为模板定义中的限定名称，以告知编译器给定的限定名称标识一个类型。  有关详细信息，请参阅 [typename](../cpp/typename.md)。  
+---
+# <a name="name-resolution-for-dependent-types"></a>Name Resolution for Dependent Types
+Use **typename** for qualified names in template definitions to tell the compiler that the given qualified name identifies a type. For more information, see [typename](../cpp/typename.md).  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -45,18 +62,16 @@ int main()
 }  
 ```  
   
-### Output  
-  
-```  
+```Output  
 Name resolved by using typename keyword.  
 ```  
   
- 针对依赖名称的名称查找将检查模板定义上下文（在下面的示例中，此上下文将查找 `myFunction(char)`）和模板实例化上下文中的名称。  在下面的示例中，将在 main 中实例化模板；因此，`MyNamespace::myFunction` 从实例化的角度来看是可见的，因而将选取它作为更好的匹配。  如果重命名 `MyNamespace::myFunction`，则将调用 `myFunction(char)`。  
+ Name lookup for dependent names examines names from both the context of the template definition—in the following example, this context would find `myFunction(char)`—and the context of the template instantiation.In the following example, the template is instantiated in main; therefore, the `MyNamespace::myFunction` is visible from the point of instantiation and is picked as the better match. If `MyNamespace::myFunction` were renamed, `myFunction(char)` would be called instead.  
   
- 所有名称都会得到解析，就如同它们是依赖名称一样。  尽管如此，如果存在任何可能的冲突，建议您使用完全限定名。  
+ All names are resolved as if they were dependent names. Nevertheless, we recommend that you use fully qualified names if there is any possible conflict.  
   
 ```cpp  
-//template_name_resolution2.cpp  
+// template_name_resolution2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
 using namespace std;  
@@ -93,14 +108,14 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Int MyNamespace::myFunction  
 ```  
   
-### 模板消除歧义  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 强制实施 C\+\+98\/03\/11 标准规则以使用“template”关键字消除歧义。  在下面的示例中，[!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 将接受不一致性行和一致性行。[!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 仅接受一致性行。  
+### <a name="template-disambiguation"></a>Template Disambiguation  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] enforces the C++98/03/11 standard rules for disambiguation with the "template" keyword. In the following example, Visual C++ 2010 would accept both the nonconforming lines and the conforming lines.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] accepts only the conforming lines.  
   
 ```cpp  
 #include <iostream>  
@@ -129,7 +144,7 @@ int main() {
 }  
 ```  
   
- 需要符合消除歧义规则，因为默认情况下，C\+\+ 假定 `AY::Rebind` 不是模板，因此编译器会将后面的“`<`”解释为小于。  它必须知道 `Rebind` 是模板，这样才能正确地将“`<`”分析为尖括号。  
+ Conformance with the disambiguation rules is required because, by default, C++ assumes that `AY::Rebind` isn't a template, and so the compiler interprets the following "`<`" as a less-than. It has to know that `Rebind` is a template so that it can correctly parse "`<`" as an angle bracket.  
   
-## 请参阅  
- [名称解析](../cpp/templates-and-name-resolution.md)
+## <a name="see-also"></a>See Also  
+ [Name Resolution](../cpp/templates-and-name-resolution.md)

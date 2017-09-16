@@ -1,44 +1,62 @@
 ---
-title: "打印和打印预览 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "预览打印"
-  - "打印预览"
-  - "打印 [C++]"
-  - "打印 [C++], 打印预览"
-  - "打印 [MFC]"
+title: Printing and Print Preview | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC]
+- previewing printing
+- printing [MFC]
+- print preview
+- printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 打印和打印预览
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc0dd2a387ebdcfe43d68afdd894cf92fdd94827
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-MFC 通过 [CView](../mfc/reference/cview-class.md)类支持打印和打印预览文档的程序。  对于基本打印和打印预览，请重写视图类的 [OnDraw](../Topic/CView::OnDraw.md) 成员函数，则必须执行执行。  该函数可以绘制到屏幕上的视图，以便实际打印机的打印机或设备上下文，到数据对屏幕打印机的设备上下文。  
+---
+# <a name="printing-and-print-preview"></a>Printing and Print Preview
+MFC supports printing and print preview for your program's documents via class [CView](../mfc/reference/cview-class.md). For basic printing and print preview, simply override your view class's [OnDraw](../mfc/reference/cview-class.md#ondraw) member function, which you must do anyway. That function can draw to the view on the screen, to a printer device context for an actual printer, or to a device context that simulates your printer on the screen.  
   
- 还可以将代码添加管理页和多文档打印预览，分页打印文档中添加页眉和页脚。它们。  
+ You can also add code to manage multipage document printing and preview, to paginate your printed documents, and to add headers and footers to them.  
   
- 此系列文章解释如何打印在 Microsoft 基础类库 \(MFC\) 中实现\) 以及如何使用打印结构已内置框架。  文章还说明 MFC 如何支持打印预览功能的简单实现，以及如何使用和修改该功能。  
+ This family of articles explains how printing is implemented in the Microsoft Foundation Class Library (MFC) and how to take advantage of the printing architecture already built into the framework. The articles also explain how MFC supports easy implementation of print preview functionality and how you can use and modify that functionality.  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [打印](../mfc/printing.md)  
+-   [Printing](../mfc/printing.md)  
   
--   [打印预览体系结构](../mfc/print-preview-architecture.md)  
+-   [Print preview architecture](../mfc/print-preview-architecture.md)  
   
--   [示例](../top/visual-cpp-samples.md)  
+-   [Sample](../visual-cpp-samples.md)  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

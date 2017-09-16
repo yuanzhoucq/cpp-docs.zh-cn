@@ -1,5 +1,5 @@
 ---
-title: "CSettingsStoreSP 类 |Microsoft 文档"
+title: CSettingsStoreSP Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSettingsStoreSP class
+- CSettingsStoreSP [MFC], CSettingsStoreSP
+- CSettingsStoreSP [MFC], Create
+- CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
 caps.latest.revision: 18
 author: mikeblome
@@ -37,64 +39,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 00131a3c03fdb2c1c1de247a8e1bdcfd9beaf852
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cafba9ad629afadbdfb2299d4810230fa2a2d441
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csettingsstoresp-class"></a>CSettingsStoreSP 类
-`CSettingsStoreSP`类是可用于创建实例的一个帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
+# <a name="csettingsstoresp-class"></a>CSettingsStoreSP Class
+The `CSettingsStoreSP` class is a helper class that you can use to create instances of the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSettingsStoreSP  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|构造 `CSettingsStoreSP` 对象。|  
+|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Constructs a `CSettingsStoreSP` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStoreSP::Create](#create)|创建派生自的类的实例`CSettingsStore`。|  
-|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|设置运行时类。 `Create`方法使用的运行时类来确定哪些类要创建的对象。|  
+|[CSettingsStoreSP::Create](#create)|Creates an instance of a class that is derived from `CSettingsStore`.|  
+|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Sets the runtime class. The `Create` method uses the runtime class to determine what class of objects to create.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_dwUserData`|自定义用户数据存储在`CSettingsStoreSP`对象。 你提供的构造函数中的此数据`CSettingsStoreSP`对象。|  
-|`m_pRegistry`|`CSettingsStore`-派生对象`Create`方法创建。|  
+|`m_dwUserData`|Custom user data that is stored in the `CSettingsStoreSP` object. You supply this data in the constructor of the `CSettingsStoreSP` object.|  
+|`m_pRegistry`|The `CSettingsStore`-derived object that the `Create` method creates.|  
   
-## <a name="remarks"></a>备注  
- 您可以使用`CSettingsStoreSP`类，以将所有 MFC 注册表操作重都定向到其他位置，如 XML 文件或数据库。 为此，请执行以下步骤：  
+## <a name="remarks"></a>Remarks  
+ You can use the `CSettingsStoreSP` class to redirect all MFC registry operations to other locations, such as an XML file or a database. To do this, follow these steps:  
   
-1.  创建一个类 (如`CMyStore`)，并获得从`CSettingsStore`。  
+1.  Create a class (such as `CMyStore`) and derive it from `CSettingsStore`.  
   
-2.  使用[DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)和[IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)宏与您的自定义`CSettingsStore`类，以启用动态创建。  
+2.  Use [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) and [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) macros with your custom `CSettingsStore` class to enable dynamic creation.  
   
-3.  重写虚函数并实现`Read`和`Write`自定义类中的函数。 实现其他功能来对读取和写入数据所需的位置。  
+3.  Override the virtual functions and implement the `Read` and `Write` functions in your custom class. Implement any other functionality to read and write data to your desired location.  
   
-4.  在应用程序中调用`CSettingsStoreSP::SetRuntimeClass`，并传入一个指向[CRuntimeClass 结构](../../mfc/reference/cruntimeclass-structure.md)获得从您的类。  
+4.  In your application, call `CSettingsStoreSP::SetRuntimeClass` and pass in a pointer to the [CRuntimeClass Structure](../../mfc/reference/cruntimeclass-structure.md) obtained from your class.  
   
- 每当框架通常会访问注册表，它将现在动态实例化自定义类并使用它来读取或写入数据。  
+ Whenever the framework would typically access the registry, it will now dynamically instantiate your custom class and use it to read or write data.  
   
- `CSettingsStoreSP::SetRuntimeClass`使用全局静态变量。 因此，一次只能有一个自定义存储才可用。  
+ `CSettingsStoreSP::SetRuntimeClass` uses a global static variable. Therefore, only one custom store is available at a time.  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxsettingsstore.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
- 创建派生自的对象的新实例[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
+ Creates a new instance of an object that is derived from the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
 CSettingsStore& CSettingsStoreSP Create(
@@ -102,61 +104,61 @@ CSettingsStore& CSettingsStoreSP Create(
     BOOL bReadOnly);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bAdmin`  
- 一个布尔型参数，用于确定是否`CSettingsStore`在管理员模式下创建对象。  
+ A Boolean parameter that determines whether a `CSettingsStore` object is created in administrator mode.  
   
  [in] `bReadOnly`  
- 一个布尔型参数，用于确定是否`CSettingsStore`对象创建为只读访问权限。  
+ A Boolean parameter that determines whether a `CSettingsStore` object is created for read-only access.  
   
-### <a name="return-value"></a>返回值  
- 对新创建的引用`CSettingsStore`对象。  
+### <a name="return-value"></a>Return Value  
+ A reference to the newly created `CSettingsStore` object.  
   
-### <a name="remarks"></a>备注  
- 可以使用该方法[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)以确定哪种类型的对象`CSettingsStoreSP::Create`将创建。 默认情况下，此方法创建`CSettingsStore`对象。  
+### <a name="remarks"></a>Remarks  
+ You can use the method [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) to determine what type of object `CSettingsStoreSP::Create` will create. By default, this method creates a `CSettingsStore` object.  
   
- 如果您创建`CSettingsStore`对象在管理员模式下，所有注册表访问权限的默认位置为 HKEY_LOCAL_MACHINE。 否则，所有注册表访问权限的默认位置为 HKEY_CURRENT_USER。  
+ If you create a `CSettingsStore` object in administrator mode, the default location for all registry access is HKEY_LOCAL_MACHINE. Otherwise, the default location for all registry access is HKEY_CURRENT_USER.  
   
- 如果`bAdmin`是`TRUE`，应用程序必须具有管理权限。 否则，它将失败时它将尝试访问注册表。  
+ If `bAdmin` is `TRUE`, the application must have administration rights. Otherwise, it will fail when it tries to access the registry.  
   
-### <a name="example"></a>示例  
- 下面的示例演示如何使用`Create`方法`CSettingsStoreSP`类。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method of the `CSettingsStoreSP` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp 第&33;](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
- 构造[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)对象。  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
+ Constructs a [CSettingsStoreSP Class](../../mfc/reference/csettingsstoresp-class.md) object.  
   
 ```  
 CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `dwUserData`  
- 用户定义数据，`CSettingsStoreSP`对象存储区。  
+ User-defined data that the `CSettingsStoreSP` object stores.  
   
-### <a name="remarks"></a>备注  
- `CSettingsStoreSP`对象将从数据存储`dwUserData`在受保护的成员变量`m_dwUserData`。  
+### <a name="remarks"></a>Remarks  
+ The `CSettingsStoreSP` object stores the data from `dwUserData` in the protected member variable `m_dwUserData`.  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
- 设置运行时类。 该方法[CSettingsStoreSP::Create](#create)的运行时类用于确定要创建的对象类型。  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
+ Sets the runtime class. The method [CSettingsStoreSP::Create](#create) uses the runtime class to determine what type of object to create.  
   
 ```  
 static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pRTI`  
- 指向类的运行时类信息派生自[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
+ A pointer to the runtime class information for a class derived from the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`如果类由标识`pRTI`不源自`CSettingsStore`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` if the class identified by `pRTI` is not derived from `CSettingsStore`.  
   
-### <a name="remarks"></a>备注  
- 您可以使用[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)派生类从`CSettingsStore`。 使用方法`SetRuntimeClass`如果想要创建派生自的自定义类的对象`CSettingsStore`。  
+### <a name="remarks"></a>Remarks  
+ You can use the [CSettingsStoreSP Class](../../mfc/reference/csettingsstoresp-class.md) to derive classes from `CSettingsStore`. Use the method `SetRuntimeClass` if you want to create objects of a custom class that is derived from `CSettingsStore`.  
   
-## <a name="see-also"></a>另请参阅  
- [类](../../mfc/reference/mfc-classes.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md)
 

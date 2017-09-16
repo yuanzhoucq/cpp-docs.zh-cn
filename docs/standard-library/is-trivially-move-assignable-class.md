@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_move_assignable 类 | Microsoft Docs"
+title: is_trivially_move_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_move_assignable
 - type_traits/std::is_trivially_move_assignable
 dev_langs:
 - C++
@@ -34,48 +33,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: b9d94304c6fbbd925ac3b670dc7665402b521dfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 781412d18bb786a1c7b03f855f38dfbfc8b34e3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable 类
-测试类型是否具有普通移动赋值运算符。  
+# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable Class
+Tests whether the type has a trivial move assignment operator.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_move_assignable;
 ```  
   
-#### <a name="parameters"></a>参数  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查询的类型。  
+ The type to query.  
   
-## <a name="remarks"></a>备注  
- 如果类型 `Ty` 是具有普通移动赋值运算符的类，则类型谓词的实例为 true；否则为 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial move assignment operator, otherwise it holds false.  
   
- 如果符合以下条件，类 `Ty` 的移动赋值运算符是普通运算符：  
+ A move assignment operator for a class `Ty` is trivial if:  
   
- 它被隐式提供  
+ it is implicitly provided  
   
- 类 `Ty` 没有虚函数  
+ the class `Ty` has no virtual functions  
   
- 类 `Ty` 没有虚拟基  
+ the class `Ty` has no virtual bases  
   
- 类类型的所有非静态数据成员的类具有普通移动赋值运算符  
+ the classes of all the non-static data members of class type have trivial move assignment operators  
   
- 类的类型数组的所有非静态数据成员的类具有普通移动赋值运算符  
+ the classes of all the non-static data members of type array of class have trivial move assignment operators  
   
-## <a name="requirements"></a>要求  
- **标头：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

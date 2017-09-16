@@ -1,54 +1,73 @@
 ---
-title: "创建标题控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl 类, 创建"
-  - "标题控件, 创建"
+title: Creating the Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeaderCtrl class [MFC], creating
+- header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 创建标题控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19990137630ff7074523f98399ca21b0accc00ee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-标题控件没有直接可用在对话框编辑器 \(尽管可以向列表控件，包含一个标题控件\)。  
+---
+# <a name="creating-the-header-control"></a>Creating the Header Control
+The header control is not directly available in the dialog editor (although you can add a list control, which includes a header control).  
   
-### 放置在对话框标题控件  
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>To put a header control in a dialog box  
   
-1.  请手动嵌入类型 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) 中的成员变量。对话框类。  
+1.  Manually embed a member variable of type [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) in your dialog class.  
   
-2.  在 [OnInitDialog](../Topic/CDialog::OnInitDialog.md)，请创建一个并设置 `CHeaderCtrl`的样式，它确定，并显示它。  
+2.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), create and set the styles for the `CHeaderCtrl`, position it, and display it.  
   
-3.  向标题控件添加项  
+3.  Add items to the header control.  
   
-4.  使用属性窗口映射在对话框类的处理程序函数需要处理的所有头控件通知消息 \(参见 [指向函数的信息映射](../mfc/reference/mapping-messages-to-functions.md)\)。  
+4.  Use the Properties window to map handler functions in the dialog class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-### 将标题控件不包括在视图 \(并非 CListView\)  
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>To put a header control in a view (not a CListView)  
   
-1.  嵌入视图类的 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) 一个对象。  
+1.  Embed a [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) object in your view class.  
   
-2.  样式，位置，并显示视图中 [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) 成员函数控制窗口的标题。  
+2.  Style, position, and display the header control window in the view's [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) member function.  
   
-3.  向标题控件添加项  
+3.  Add items to the header control.  
   
-4.  使用属性窗口映射在试图类的处理程序函数需要处理的所有头控件通知消息 \(参见 [指向函数的信息映射](../mfc/reference/mapping-messages-to-functions.md)\)。  
+4.  Use the Properties window to map handler functions in the view class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
- 在任何情况下，视图，当或对话框创建对象时，嵌入的控件对象。  然后必须调用 [CHeaderCtrl::Create](../Topic/CHeaderCtrl::Create.md) 创建控制窗口。  定位控件，调用 [CHeaderCtrl::Layout](../Topic/CHeaderCtrl::Layout.md) 确定控件的初始设置所需位置的大小以及定位和 [SetWindowPos](../Topic/CWnd::SetWindowPos.md)。  再添加项。[标题控件添加项。](../mfc/adding-items-to-the-header-control.md)所述。  
+ In either case, the embedded control object is created when the view or dialog object is created. Then you must call [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) to create the control window. To position the control, call [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) to determine the control's initial size and position and [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) to set the position you want. Then add items as described in [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md).  
   
- 有关详细信息，请参阅[创建头控件](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ For more information, see [Creating a Header Control](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK.  
   
-## 请参阅  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

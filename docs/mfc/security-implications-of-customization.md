@@ -1,43 +1,63 @@
 ---
-title: "自定义对安全有何影响 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 功能包, 安全性"
-  - "安全性, MFC 功能包"
+title: Security Implications of Customization | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- security, MFC Feature Pack
+- MFC Feature Pack, security
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 自定义对安全有何影响
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882ce16a4123125e10dd7cb6c2b4743f077b5241
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本主题中讨论 MFC 潜在的安全漏洞。  
+---
+# <a name="security-implications-of-customization"></a>Security Implications of Customization
+This topic discusses a potential security weakness in MFC.  
   
-## 潜在的安全漏洞  
- MFC 允许用户自定义应用程序的用户界面，例如，图标和按钮外观的外观。  MFC 还支持用户定义的工具，使用户执行命令 shell。  因为应用程序的自定义设置。在注册表，用户配置文件将出现安全漏洞。  访问注册表的人可以编辑那些设置和更改应用程序的外观或行为。  例如，一台计算机的管理员可以通过生成用户的应用程序模拟用户执行任何程序 \(即使从网络共享\)。  
+## <a name="potential-security-weakness"></a>Potential Security Weakness  
+ MFC allows the user customize the look of an application user interface, for example, the appearance of buttons and icons. MFC also supports user-defined tools, which let the user execute shell commands. A security vulnerability arises because the customized settings of the application are saved in the user profile in the registry. Anyone who can access the registry can edit those settings and change the application appearance or behavior. For example, an administrator on the computer could impersonate a user by causing the user's application to execute arbitrary programs (even from a network share).  
   
-## 问题解决  
- 我们建议采用这三种方法中的任意一个关闭注册表中的漏洞：  
+## <a name="workarounds"></a>Workarounds  
+ We recommend any of these three ways to close the vulnerabilities in the registry:  
   
--   加密其中存储的数据  
+-   Encrypt the data that is stored there  
   
--   存储在安全文件中的数据而不是注册表。  
+-   Store the data in a secure file instead of in the registry.  
   
-     若要完成这些后两种方法之一，从 [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) 中派生一个类并重写其方法实现加密或存储在注册表中。  
+     To accomplish either of these first two ways, derive a class from [CSettingsStore Class](../mfc/reference/csettingsstore-class.md) and override its methods to implement encryption or storage outside the registry.  
   
--   还可以禁用应用程序的自定义。  
+-   You can also disable customizations in your application.  
   
-## 请参阅  
- [MFC 自定义](../mfc/customization-for-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Customization for MFC](../mfc/customization-for-mfc.md)
+
+

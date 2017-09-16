@@ -1,5 +1,5 @@
 ---
-title: "Internet URL 分析全局函数和帮助器 |Microsoft 文档"
+title: Internet URL Parsing Globals and Helpers | Microsoft Docs
 ms.custom: 
 ms.date: 04/03/2017
 ms.reviewer: 
@@ -34,31 +34,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 947ef992d58895e4638d9ffe77fca973cea8eada
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 675b7cced508fbd03b36948004d2312e5525b908
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局函数和帮助器
-当某个客户端发送查询到 Internet 服务器时，您可以使用 URL 分析全局变量之一提取有关此客户端的信息。 帮助器函数提供其他 internet 功能。
+# <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL Parsing Globals and Helpers
+When a client sends a query to the Internet server, you can use one of the URL parsing globals to extract information about the client. The helper functions provide other internet functionality.
   
-## <a name="internet-url-parsing-globals"></a>Internet URL 分析全局函数  
+## <a name="internet-url-parsing-globals"></a>Internet URL Parsing Globals  
   
 |||  
 |-|-|  
-|[AfxParseURL](#afxparseurl)|分析 URL 字符串并返回服务类型及其组件。|  
-|[AfxParseURLEx](#afxparseurlex)|分析 URL 字符串并返回服务类型及其组件，这与提供用户名和密码一样。|  
+|[AfxParseURL](#afxparseurl)|Parses a URL string and returns the type of service and its components.|  
+|[AfxParseURLEx](#afxparseurlex)|Parses a URL string and returns the type of service and its components, as well as providing the user name and password.|  
 
-## <a name="other-internet-helpers"></a>其他 Internet 帮助器
+## <a name="other-internet-helpers"></a>Other Internet Helpers
 |||
 |-|-|
-|[AfxThrowInternetException](#afxthrowinternetexception)|引发与 internet 连接有关的异常。|
-|[AfxGetInternetHandleType](#afxgetinternethandletype)|确定 Internet 句柄的类型。|
+|[AfxThrowInternetException](#afxthrowinternetexception)|Throws an exception related to the internet connection.|
+|[AfxGetInternetHandleType](#afxgetinternethandletype)|Determines the type of an Internet handle.|
   
-##  <a name="afxparseurl"></a>AfxParseURL  
- 使用在此全局[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)。  
+##  <a name="afxparseurl"></a>  AfxParseURL  
+ This global is used in [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ```   
 BOOL AFXAPI AfxParseURL(
@@ -69,12 +69,12 @@ BOOL AFXAPI AfxParseURL(
     INTERNET_PORT& nPort); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pstrURL*  
- 指向包含要分析的 URL 的字符串的指针。  
+ A pointer to a string containing the URL to be parsed.  
   
  `dwServiceType`  
- 指示 Internet 服务的类型。 可能的值如下：  
+ Indicates the type of Internet service. Possible values are as follows:  
   
 -   AFX_INET_SERVICE_FTP  
   
@@ -107,38 +107,38 @@ BOOL AFXAPI AfxParseURL(
 -   AFX_INET_SERVICE_UNK  
   
  `strServer`  
- 以下服务类型的 URL 的第一条线段。  
+ The first segment of the URL following the service type.  
   
  `strObject`  
- URL 指代的对象 （可能为空）。  
+ An object that the URL refers to (may be empty).  
   
  `nPort`  
- 从服务器或对象部分的 url 中确定是否存在。  
+ Determined from either the Server or Object portions of the URL, if either exists.  
   
-### <a name="return-value"></a>返回值  
- 如果已成功分析该 URL; 则为非 0否则为 0，如果它为空或不包含已知的 Internet 服务类型。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the URL was successfully parsed; otherwise, 0 if it is empty or does not contain a known Internet service type.  
   
-### <a name="remarks"></a>备注  
- 它分析 URL 字符串并返回服务及其组件的类型。  
+### <a name="remarks"></a>Remarks  
+ It parses a URL string and returns the type of service and its components.  
   
- 例如，`AfxParseURL`分析的窗体的 Url **service://server/dir/dir/object.ext:port**并返回其组件存储，如下所示︰  
+ For example, `AfxParseURL` parses URLs of the form **service://server/dir/dir/object.ext:port** and returns its components stored as follows:  
   
- `strServer`= ="server"  
+ `strServer` == "server"  
   
- `strObject`= ="/ dir/dir/object/object.ext"  
+ `strObject` == "/dir/dir/object/object.ext"  
   
- `nPort`= = #port  
+ `nPort` == #port  
   
- `dwServiceType`= = #service  
+ `dwServiceType` == #service  
   
 > [!NOTE]
->  若要调用此函数，你的项目必须包括 AFXINET。H。  
+>  To call this function, your project must include AFXINET.H.  
   
-### <a name="requirements"></a>要求  
-  **标头**afxinet.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxinet.h  
   
-##  <a name="afxparseurlex"></a>AfxParseURLEx  
- 此全局函数是扩展的版本[AfxParseURL](#afxparseurl)并可用于[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)。  
+##  <a name="afxparseurlex"></a>  AfxParseURLEx  
+ This global function is the extended version of [AfxParseURL](#afxparseurl) and is used in [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
   
 ```   
 BOOL AFXAPI AfxParseURLEx(
@@ -152,12 +152,12 @@ BOOL AFXAPI AfxParseURLEx(
     DWORD dwFlags = 0); 
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pstrURL*  
- 指向包含要分析的 URL 的字符串的指针。  
+ A pointer to a string containing the URL to be parsed.  
   
  `dwServiceType`  
- 指示 Internet 服务的类型。 可能的值如下：  
+ Indicates the type of Internet service. Possible values are as follows:  
   
 -   AFX_INET_SERVICE_FTP  
   
@@ -190,64 +190,64 @@ BOOL AFXAPI AfxParseURLEx(
 -   AFX_INET_SERVICE_UNK  
   
  `strServer`  
- 以下服务类型的 URL 的第一条线段。  
+ The first segment of the URL following the service type.  
   
  `strObject`  
- URL 指代的对象 （可能为空）。  
+ An object that the URL refers to (may be empty).  
   
  `nPort`  
- 从服务器或对象部分的 url 中确定是否存在。  
+ Determined from either the Server or Object portions of the URL, if either exists.  
   
  *strUsername*  
- 对引用`CString`对象，其中包含用户的名称。  
+ A reference to a `CString` object containing the name of the user.  
   
  `strPassword`  
- 对引用`CString`对象，其中包含用户的密码。  
+ A reference to a `CString` object containing the password of the user.  
   
  `dwFlags`  
- 控制如何分析的 URL 的标志。 可以是以下值的组合︰  
+ The flags controlling how to parse the URL. Can be a combination of the following values:  
   
-|值|含义|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**ICU_DECODE**|将 %xx 转义序列转换为字符。|  
-|**ICU_NO_ENCODE**|不会转换不安全的字符进行转义序列。|  
-|**ICU_NO_META**|不删除元序列 （例如"\"。 和"\."）从 URL。|  
-|**ICU_ENCODE_SPACES_ONLY**|对仅空格进行编码。|  
-|**ICU_BROWSER_MODE**|不进行编码或解码字符后 '#' 或 '，且不要删除尾随空格后 '。 如果未指定此值，编码整个 URL，并且会删除尾随空格。|  
+|**ICU_DECODE**|Convert %XX escape sequences to characters.|  
+|**ICU_NO_ENCODE**|Do not convert unsafe characters to escape sequence.|  
+|**ICU_NO_META**|Do not remove meta sequences (such as "\ ." and "\ ..") from the URL.|  
+|**ICU_ENCODE_SPACES_ONLY**|Encode spaces only.|  
+|**ICU_BROWSER_MODE**|Do not encode or decode characters after '#' or '', and do not remove trailing white space after ''. If this value is not specified, the entire URL is encoded and trailing white space is removed.|  
   
- 如果您使用 MFC 默认情况下，这不是任何标志，该函数将转换所有不安全的字符和元序列 (如\\。，\...，和\\...) 进行转义序列。  
+ If you use the MFC default, which is no flags, the function converts all unsafe characters and meta sequences (such as \\.,\ .., and \\...) to escape sequences.  
   
-### <a name="return-value"></a>返回值  
- 如果已成功分析该 URL; 则为非 0否则为 0，如果它为空或不包含已知的 Internet 服务类型。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the URL was successfully parsed; otherwise, 0 if it is empty or does not contain a known Internet service type.  
   
-### <a name="remarks"></a>备注  
- 它分析 URL 字符串并返回类型的服务和及其组件，以及提供用户的名称和密码。 标志指示如何不安全的字符进行处理。  
+### <a name="remarks"></a>Remarks  
+ It parses a URL string and returns the type of service and its components, as well as providing the user's name and password. The flags indicate how unsafe characters are handled.  
   
 > [!NOTE]
->  若要调用此函数，你的项目必须包括 AFXINET。H。  
+>  To call this function, your project must include AFXINET.H.  
 
-### <a name="requirements"></a>要求  
-  **标头**afxinet.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxinet.h  
     
-## <a name="see-also"></a>另请参阅  
- [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
-使用此全局函数来确定 Internet 句柄的类型。  
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
+Use this global function to determine the type of an Internet handle.  
    
-### <a name="syntax"></a>语法  
+### <a name="syntax"></a>Syntax  
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `hQuery`  
- Internet 查询句柄。  
+ A handle to an Internet query.  
    
-### <a name="return-value"></a>返回值  
- 任何由 WININET 定义的 Internet 服务类型。H。 请参阅这些 Internet 服务的列表的备注部分。 如果句柄为 NULL，或者无法识别，该函数将返回 AFX_INET_SERVICE_UNK。  
+### <a name="return-value"></a>Return Value  
+ Any of the Internet service types defined by WININET.H. See the Remarks section for a list of these Internet services. If the handle is NULL or not recognized, the function returns AFX_INET_SERVICE_UNK.  
    
-### <a name="remarks"></a>备注  
- 以下列表包含可能返回的 Internet 类型`AfxGetInternetHandleType`。  
+### <a name="remarks"></a>Remarks  
+ The following list includes possible Internet types returned by `AfxGetInternetHandleType`.  
   
 -   INTERNET_HANDLE_TYPE_INTERNET  
   
@@ -276,42 +276,42 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 -   INTERNET_HANDLE_TYPE_HTTP_REQUEST  
   
 > [!NOTE]
->  若要调用此函数，你的项目必须包括 AFXINET。H。  
+>  In order to call this function, your project must include AFXINET.H.  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxinet.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
-引发 Internet 异常。  
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
+Throws an Internet exception.  
    
-### <a name="syntax"></a>语法    
+### <a name="syntax"></a>Syntax    
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );  
 ```
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwContext`  
- 引起该错误的操作上下文标识符。 默认值`dwContext`中最初指定[CInternetSession](cinternetsession-class.md) ，并传递给[CInternetConnection](cinternetconnection-class.md)-和[CInternetFile](cinternetfile-class.md)-派生类。 对于基于连接或一个文件执行的特定操作，您通常重写的默认方式`dwContext`你自己。 此值随后返回到[CInternetSession::OnStatusCallback](cinternetsession-class.md#onstatuscallback)以识别特定操作的状态。 
+ The context identifier for the operation that caused the error. The default value of `dwContext` is specified originally in [CInternetSession](cinternetsession-class.md) and is passed to [CInternetConnection](cinternetconnection-class.md)- and [CInternetFile](cinternetfile-class.md)-derived classes. For specific operations performed on a connection or a file, you usually override the default with a `dwContext` of your own. This value then is returned to [CInternetSession::OnStatusCallback](cinternetsession-class.md#onstatuscallback) to identify the specific operation's status. 
   
  `dwError`  
- 导致异常的错误。  
+ The error that caused the exception.  
    
-### <a name="remarks"></a>备注  
- 你负责确定基于操作系统错误代码的原因。  
+### <a name="remarks"></a>Remarks  
+ You are responsible for determining the cause based on the operating-system error code.  
   
 > [!NOTE]
->  若要调用此函数，你的项目必须包括 AFXINET。H。  
+>  To call this function, your project must include AFXINET.H.  
    
-### <a name="requirements"></a>要求  
- **标头︰** afxinet.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
    
-### <a name="see-also"></a>另请参阅  
- [宏和全局函数](mfc-macros-and-globals.md)   
- [CInternetException 类](cinternetexception-class.md)   
- [引发](#throw)
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [CInternetException Class](cinternetexception-class.md)   
+ [THROW](#throw)
  
 
 

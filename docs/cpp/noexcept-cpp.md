@@ -1,58 +1,73 @@
 ---
-title: "noexcept (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "noexcept_cpp"
-dev_langs: 
-  - "C++"
+title: noexcept (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- noexcept_cpp
+dev_langs:
+- C++
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# noexcept (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 80e9ac58dcee9ee4e3028b422d0fede23f8a72f3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/11/2017
 
-**C\+\+11：**指定函数是否可能会引发异常。  
+---
+# <a name="noexcept-c"></a>noexcept (C++)
+**C++11:** Specifies whether a function might throw exceptions.  
   
-## 语法  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-ReturnType FunctionName(params) noexcept;  
-ReturnType FunctionName(params) noexcept(noexcept(expression);  
-```  
+> *noexcept-expression*:  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**  
   
-#### 参数  
- 表达式  
- 计算结果是 True 或 False 的常量表达式。  无条件版本相当于 noexcept\(true\)。  
+### <a name="parameters"></a>Parameters  
+ *constant-expression*  
+ A constant expression of type `bool` that represents whether the set of potential exception types is empty. The unconditional version is equivalent to `noexcept(true)`.  
   
-## 备注  
- `noexcept`（及其同义词 `noecept(true)`）指定函数绝不会引发异常，或允许从异常直接或间接调用的任何其他函数传播异常。  更具体地说，`noexcept` 意味着，仅当调用的所有函数也为 noexcept 或 const 并且没有要求运行时检查、应用于类型为多态类类型的 glvalue 表达式的 typeid 表达式或 throw 表达式的潜在已评估转换时，该函数才是 `noexcept`。  但是，编译器不一定会检查可能归因于 `noexcept` 函数的异常的每个代码路径。  如果异常确实到达标记为 `noexcept` 的函数，则会立即调用 [std::terminate](../Topic/terminate%20\(%3Cexception%3E\).md)，并且不会保证将调用任何范围内对象的析构函数。  
+## <a name="remarks"></a>Remarks  
+ A *noexcept expression* is a kind of *exception specification*, a suffix to a function declaration that represents a set of types that might be matched by an exception handler for any exception that exits a function. Unary conditional operator `noexcept(`*constant_expression*`)` where *constant_expression* yeilds `true`, and its unconditional synonym `noexcept`, specify that the set of potential exception types that can exit a function is empty. That is, the function never throws an exception and never allows an exception to be propagated outside its scope. The operator `noexcept(`*constant_expression*`)` where *constant_expression* yeilds `false`, or the absence of an exception specification (other than for a destructor or deallocation function), indicates that the set of potential exceptions that can exit the function is the set of all types.  
+ 
+ Mark a function as `noexcept` only if all the functions that it calls, either directly or indirectly, are also `noexcept` or `const`. The compiler does not necessarily check every code path for exceptions that might bubble up to a `noexcept` function. If an exception does exit the outer scope of a function marked `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked immediately, and there is no guarantee that destructors of any in-scope objects will be invoked. Use `noexcept` instead of the dynamic exception specifier `throw`, which is deprecated in C++11 and later and not fully implemented in Visual Studio. We recommended you apply `noexcept` to any function that never allows an exception to propagate up the call stack. When a function is declared `noexcept`, it enables the compiler to generate more efficient code in several different contexts.    
   
- 使用条件 noexcept 声明的且计算结果为 noexcept\(false\) 的函数指定它确实允许传播异常。  例如，当要复制的对象是普通的旧数据类型 \(POD\) 时，可将复制其参数的函数声明为 noexcept。  此类函数可以如下声明：  
+## <a name="example"></a>Example  
+A template function that copies its argument might be declared `noexcept` on the condition that the object being copied is a plain old data type (POD). Such a function could be declared like this:  
   
-```  
+```cpp  
 #include <type_traits>  
   
 template <typename T>  
-T copy_object(T& obj) noexcept(std::is_pod<T>)  
+T copy_object(const T& obj) noexcept(std::is_pod<T>)  
 {  
- //. . .   
+   // ...   
 }  
-  
 ```  
   
- 使用 `noexcept` 代替异常说明符 `throw`，后者在 C\+\+11 和更高版本中已弃用。  当你确信函数绝不允许异常传播到调用堆栈时，我们建议你将 `noexcept` 应用到函数。  使用 `noexcept` 声明的函数使编译器可以在多种不同的上下文中生成更高效的代码。  
-  
-## 请参阅  
- [C\+\+ 异常处理](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>See Also  
+ [C++ Exception Handling](../cpp/cpp-exception-handling.md) [Exception Specifications (throw, noexcept)](../cpp/exception-specifications-throw-cpp.md)

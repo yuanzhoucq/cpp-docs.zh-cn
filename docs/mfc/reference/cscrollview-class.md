@@ -1,5 +1,5 @@
 ---
-title: "CScrollView 类 |Microsoft 文档"
+title: CScrollView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,9 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CScrollView class
-- views, scrolling
-- scrolling views
+- CScrollView [MFC], CScrollView
+- CScrollView [MFC], CheckScrollBars
+- CScrollView [MFC], FillOutsideRect
+- CScrollView [MFC], GetDeviceScrollPosition
+- CScrollView [MFC], GetDeviceScrollSizes
+- CScrollView [MFC], GetScrollPosition
+- CScrollView [MFC], GetTotalSize
+- CScrollView [MFC], ResizeParentToFit
+- CScrollView [MFC], ScrollToPosition
+- CScrollView [MFC], SetScaleToFitSize
+- CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 caps.latest.revision: 24
 author: mikeblome
@@ -47,81 +55,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0dc937a9559306ff527779c45af9fdb62cf602df
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b7db2e86937ae306b2447592b12ba893f8ac8690
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cscrollview-class"></a>CScrollView 类
-一个[CView](../../mfc/reference/cview-class.md)带滚动功能。  
+# <a name="cscrollview-class"></a>CScrollView Class
+A [CView](../../mfc/reference/cview-class.md) with scrolling capabilities.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CScrollView : public CView  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保护的构造函数  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollView::CScrollView](#cscrollview)|构造 `CScrollView` 对象。|  
+|[CScrollView::CScrollView](#cscrollview)|Constructs a `CScrollView` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollView::CheckScrollBars](#checkscrollbars)|指示滚动视图是否具有水平和垂直滚动条。|  
-|[CScrollView::FillOutsideRect](#filloutsiderect)|填充视图是滚动区域以外的区域。|  
-|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|获取当前以设备为单位的滚动位置。|  
-|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|获取当前的映射模式、 的总大小和可滚动视图的行和页大小。 大小为以设备为单位。|  
-|[CScrollView::GetScrollPosition](#getscrollposition)|获取当前使用逻辑单位的滚动位置。|  
-|[CScrollView::GetTotalSize](#gettotalsize)|使用逻辑单位获取滚动视图的总大小。|  
-|[CScrollView::ResizeParentToFit](#resizeparenttofit)|导致要听写及其的帧的大小的视图的大小。|  
-|[CScrollView::ScrollToPosition](#scrolltoposition)|滚动到给定的点，在逻辑单元中指定的视图。|  
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|将置于缩放以适合模式滚动视图。|  
-|[CScrollView::SetScrollSizes](#setscrollsizes)|设置滚动视图映射模式、 总大小和水平和垂直滚动量。|  
+|[CScrollView::CheckScrollBars](#checkscrollbars)|Indicates whether the scroll view has horizontal and vertical scroll bars.|  
+|[CScrollView::FillOutsideRect](#filloutsiderect)|Fills the area of a view outside the scrolling area.|  
+|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Gets the current scroll position in device units.|  
+|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Gets the current mapping mode, the total size, and the line and page sizes of the scrollable view. Sizes are in device units.|  
+|[CScrollView::GetScrollPosition](#getscrollposition)|Gets the current scroll position in logical units.|  
+|[CScrollView::GetTotalSize](#gettotalsize)|Gets the total size of the scroll view in logical units.|  
+|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Causes the size of the view to dictate the size of its frame.|  
+|[CScrollView::ScrollToPosition](#scrolltoposition)|Scrolls the view to a given point, specified in logical units.|  
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Puts the scroll view into scale-to-fit mode.|  
+|[CScrollView::SetScrollSizes](#setscrollsizes)|Sets the scroll view's mapping mode, total size, and horizontal and vertical scroll amounts.|  
   
-## <a name="remarks"></a>备注  
- 您可以处理任何派生自的类中滚动您自己的标准`CView`通过重写消息映射[OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)成员函数。 但是`CScrollView`会添加以下功能对其`CView`功能︰  
+## <a name="remarks"></a>Remarks  
+ You can handle standard scrolling yourself in any class derived from `CView` by overriding the message-mapped [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) member functions. But `CScrollView` adds the following features to its `CView` capabilities:  
   
--   它管理窗口和视区的大小以及映射模式。  
+-   It manages window and viewport sizes and mapping modes.  
   
--   它会自动滚动以响应滚动条消息。  
+-   It scrolls automatically in response to scroll-bar messages.  
   
--   它会自动滚动以响应消息从键盘、 非滚动鼠标或智能鼠标滚轮。  
+-   It scrolls automatically in response to messages from the keyboard, a non-scrolling mouse, or the IntelliMouse wheel.  
   
- 若要自动滚动以响应键盘消息，添加 WM_KEYDOWN 消息，并测试 VK_DOWN、 VK_PREV 和调用[SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597)。  
+ To scroll automatically in response to messages from the keyboard, add a WM_KEYDOWN message, and test for VK_DOWN, VK_PREV and call [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
   
- 您可以处理鼠标滚轮滚动自己通过重写消息映射[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)和[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)成员函数。 因为它们是为`CScrollView`，这些成员函数支持的建议的行为[对 WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617)，鼠标轮旋转消息。  
+ You can handle mouse wheel scrolling yourself by overriding the message-mapped [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) and [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) member functions. As they are for `CScrollView`, these member functions support the recommended behaviour for [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), the wheel rotation message.  
   
- 若要利用自动滚动，派生视图类从`CScrollView`而不是从`CView`。 当第一次创建视图，如果您想要计算的基于文档中，调用大小的可滚动视图大小`SetScrollSizes`通过重写的成员函数[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)或[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)。 （您必须编写您自己的代码来查询文档的大小。 有关示例，请参阅[Scribble 示例](../../visual-cpp-samples.md)。)  
+ To take advantage of automatic scrolling, derive your view class from `CScrollView` instead of from `CView`. When the view is first created, if you want to calculate the size of the scrollable view based on the size of the document, call the `SetScrollSizes` member function from your override of either [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) or [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (You must write your own code to query the size of the document. For an example, see the [Scribble sample](../../visual-cpp-samples.md).)  
   
- 对调用`SetScrollSizes`成员函数将设置视图的映射模式、 滚动视图和水平和垂直滚动的金额的总尺寸。 所有尺寸都都使用逻辑单位。 该视图的逻辑大小通常计算从数据存储在文档中，但在某些情况下，可能想要指定固定的大小。 有关这两种方法的示例，请参阅[CScrollView::SetScrollSizes](#setscrollsizes)。  
+ The call to the `SetScrollSizes` member function sets the view's mapping mode, the total dimensions of the scroll view, and the amounts to scroll horizontally and vertically. All sizes are in logical units. The logical size of the view is usually calculated from data stored in the document, but in some cases you may want to specify a fixed size. For examples of both approaches, see [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- 指定以水平和垂直滚动的逻辑单元的金额。 默认情况下，如果用户单击滚动框的外部的滚动条轴`CScrollView`执行滚动操作使得"页"。 如果用户单击滚动箭头的滚动条任意一端`CScrollView`执行滚动操作使得"行"。 默认情况下，一页就是 1/10 的该视图; 的总大小线路是 1/10 的页大小。 通过传递自定义大小，以重写这些默认值`SetScrollSizes`成员函数。 例如，您可能设置的水平大小为的总大小和对行的高度的垂直大小的宽度的某些部分在当前的字体。  
+ You specify the amounts to scroll horizontally and vertically in logical units. By default, if the user clicks a scroll bar shaft outside of the scroll box, `CScrollView` scrolls a "page." If the user clicks a scroll arrow at either end of a scroll bar, `CScrollView` scrolls a "line." By default, a page is 1/10 of the total size of the view; a line is 1/10 of the page size. Override these default values by passing custom sizes in the `SetScrollSizes` member function. For example, you might set the horizontal size to some fraction of the width of the total size and the vertical size to the height of a line in the current font.  
   
- 而不是滚动，`CScrollView`可以自动缩放视图到当前窗口的大小。 在此模式下，此视图具有任何滚动条，逻辑视图被拉伸或收缩以完全适合窗口的工作区。 若要使用此比例调整功能，请调用[CScrollView::SetScaleToFitSize](#setscaletofitsize)。 (调用`SetScaleToFitSize`或`SetScrollSizes`，但不要同时使用两者。)  
+ Instead of scrolling, `CScrollView` can automatically scale the view to the current window size. In this mode, the view has no scroll bars and the logical view is stretched or shrunk to exactly fit the window's client area. To use this scale-to-fit capability, call [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Call either `SetScaleToFitSize` or `SetScrollSizes`, but not both.)  
   
- 之前`OnDraw`称为派生的视图类的成员函数，`CScrollView`自动进行调整的视区原点`CPaintDC`设备上下文对象，将其传递到`OnDraw`。  
+ Before the `OnDraw` member function of your derived view class is called, `CScrollView` automatically adjusts the viewport origin for the `CPaintDC` device-context object that it passes to `OnDraw`.  
   
- 若要调整滚动的窗口中，视区原点`CScrollView`替代[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。 这一调整是自动的`CPaintDC`设备上下文的`CScrollView`将传递给`OnDraw`，但是必须调用**CScrollView::OnPrepareDC**对任何其他设备上下文的您自己使用，如`CClientDC`。 您可以重写**CScrollView::OnPrepareDC**设置笔、 背景色和其他绘图的属性，但调用基类来进行缩放。  
+ To adjust the viewport origin for the scrolling window, `CScrollView` overrides [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). This adjustment is automatic for the `CPaintDC` device context that `CScrollView` passes to `OnDraw`, but you must call **CScrollView::OnPrepareDC** yourself for any other device contexts you use, such as a `CClientDC`. You can override **CScrollView::OnPrepareDC** to set the pen, background color, and other drawing attributes, but call the base class to do scaling.  
   
- 在以下情况中所示，可以在三个位置相对于一个视图，显示滚动条︰  
+ Scroll bars can appear in three places relative to a view, as shown in the following cases:  
   
--   可以为视图使用设置标准的窗口样式滚动条**WS_HSCROLL**和**WS_VSCROLL**[Windows 样式](../../mfc/reference/window-styles.md)。  
+-   Standard window-style scroll bars can be set for the view using the **WS_HSCROLL** and **WS_VSCROLL**[Windows Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
--   滚动条控件还可以添加到包含的视图中，用例框架将转发的框架`WM_HSCROLL`和`WM_VSCROLL`框架窗口中对当前活动视图的消息。  
+-   Scroll-bar controls can also be added to the frame containing the view, in which case the framework forwards `WM_HSCROLL` and `WM_VSCROLL` messages from the frame window to the currently active view.  
   
--   该框架还将转发滚动消息从`CSplitterWnd`到当前处于活动状态的拆分器窗格 （视图） 的拆分器控件。 放入[CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)带共享的滚动条，`CScrollView`对象将使用共享的而不是创建其自身。  
+-   The framework also forwards scroll messages from a `CSplitterWnd` splitter control to the currently active splitter pane (a view). When placed in a [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) with shared scroll bars, a `CScrollView` object will use the shared ones rather than creating its own.  
   
- 有关详细信息使用`CScrollView`，请参阅[文档/视图体系结构](../../mfc/document-view-architecture.md)和[派生视图类在 MFC 中提供](../../mfc/derived-view-classes-available-in-mfc.md)。  
+ For more information on using `CScrollView`, see [Document/View Architecture](../../mfc/document-view-architecture.md) and [Derived View Classes Available in MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,11 +140,11 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
- 调用此成员函数以确定滚动视图是否具有水平和垂直条形图。  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
+ Call this member function to determine if the scroll view has horizontal and vertical bars.  
   
 ```  
 void CheckScrollBars(
@@ -144,25 +152,25 @@ void CheckScrollBars(
     BOOL& bHasVertBar) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bHasHorzBar*  
- 指示应用程序具有水平滚动条。  
+ Indicates the application has a horizontal scroll bar.  
   
  *bHasVertBar*  
- 指示应用程序具有一个垂直滚动条。  
+ Indicates the application has a vertical scroll bar.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
- 构造 `CScrollView` 对象。  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
+ Constructs a `CScrollView` object.  
   
 ```  
 CScrollView();
 ```  
   
-### <a name="remarks"></a>备注  
- 您必须调用`SetScrollSizes`或`SetScaleToFitSize`之前滚动视图是可用。  
+### <a name="remarks"></a>Remarks  
+ You must call either `SetScrollSizes` or `SetScaleToFitSize` before the scroll view is usable.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
- 调用`FillOutsideRect`以填充区域外滚动区域将显示的视图。  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
+ Call `FillOutsideRect` to fill the area of the view that appears outside of the scrolling area.  
   
 ```  
 void FillOutsideRect(
@@ -170,36 +178,36 @@ void FillOutsideRect(
     CBrush* pBrush);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 设备上下文是用来进行填充。  
+ Device context in which the filling is to be done.  
   
  `pBrush`  
- 画笔的区域填充是。  
+ Brush with which the area is to be filled.  
   
-### <a name="remarks"></a>备注  
- 使用`FillOutsideRect`中滚动视图的`OnEraseBkgnd`处理程序函数，以防止过多的背景重画。  
+### <a name="remarks"></a>Remarks  
+ Use `FillOutsideRect` in your scroll view's `OnEraseBkgnd` handler function to prevent excessive background repainting.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
- 调用`GetDeviceScrollPosition`何时需要当前水平和垂直位置的滚动框中的滚动条。  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
+ Call `GetDeviceScrollPosition` when you need the current horizontal and vertical positions of the scroll boxes in the scroll bars.  
   
 ```  
 CPoint GetDeviceScrollPosition() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 水平和垂直位置 （以设备为单位） 的滚动框作为`CPoint`对象。  
+### <a name="return-value"></a>Return Value  
+ The horizontal and vertical positions (in device units) of the scroll boxes as a `CPoint` object.  
   
-### <a name="remarks"></a>备注  
- 此坐标对对应于已向其滚动视图的左上角的文档中的位置。 这是用于抵销滚动查看设备职位鼠标设备位置很有用。  
+### <a name="remarks"></a>Remarks  
+ This coordinate pair corresponds to the location in the document to which the upper-left corner of the view has been scrolled. This is useful for offsetting mouse-device positions to scroll-view device positions.  
   
- `GetDeviceScrollPosition`以设备为单位返回值。 如果您希望的逻辑单元，使用`GetScrollPosition`相反。  
+ `GetDeviceScrollPosition` returns values in device units. If you want logical units, use `GetScrollPosition` instead.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`获取当前的映射模式、 的总大小和可滚动视图的行和页大小。  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` gets the current mapping mode, the total size, and the line and page sizes of the scrollable view.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -209,103 +217,103 @@ void GetDeviceScrollSizes(
     SIZE& sizeLine) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- 返回此视图的当前映射模式。 有关可能的值的列表，请参阅`SetScrollSizes`。  
+ Returns the current mapping mode for this view. For a list of possible values, see `SetScrollSizes`.  
   
  `sizeTotal`  
- 返回以设备为单位的滚动视图的当前总大小。  
+ Returns the current total size of the scroll view in device units.  
   
  `sizePage`  
- 返回当前的水平和垂直量在每个方向以响应鼠标滚动单击滚动条轴中。 **Cx**成员包含水平的量。 **Cy**成员包含垂直量。  
+ Returns the current horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll-bar shaft. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
  `sizeLine`  
- 返回当前的水平和垂直量在每个方向以响应鼠标滚动单击滚动箭头。 **Cx**成员包含水平的量。 **Cy**成员包含垂直量。  
+ Returns the current horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll arrow. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
-### <a name="remarks"></a>备注  
- 大小为以设备为单位。 很少会调用此成员函数。  
+### <a name="remarks"></a>Remarks  
+ Sizes are in device units. This member function is rarely called.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
- 调用`GetScrollPosition`何时需要当前水平和垂直位置的滚动框中的滚动条。  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
+ Call `GetScrollPosition` when you need the current horizontal and vertical positions of the scroll boxes in the scroll bars.  
   
 ```  
 CPoint GetScrollPosition() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 水平和垂直位置 （使用逻辑单位） 的滚动框作为`CPoint`对象。  
+### <a name="return-value"></a>Return Value  
+ The horizontal and vertical positions (in logical units) of the scroll boxes as a `CPoint` object.  
   
-### <a name="remarks"></a>备注  
- 此坐标对对应于已向其滚动视图的左上角的文档中的位置。  
+### <a name="remarks"></a>Remarks  
+ This coordinate pair corresponds to the location in the document to which the upper-left corner of the view has been scrolled.  
   
- `GetScrollPosition`返回值中的逻辑单元。 如果您希望设备单位，使用`GetDeviceScrollPosition`相反。  
+ `GetScrollPosition` returns values in logical units. If you want device units, use `GetDeviceScrollPosition` instead.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
- 调用`GetTotalSize`要检索的滚动视图当前的水平和垂直大小。  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
+ Call `GetTotalSize` to retrieve the current horizontal and vertical sizes of the scroll view.  
   
 ```  
 CSize GetTotalSize() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 使用逻辑单位的滚动视图总大小。 水平大小为**cx**的成员`CSize`返回值。 垂直大小为**cy**成员。  
+### <a name="return-value"></a>Return Value  
+ The total size of the scroll view in logical units. The horizontal size is in the **cx** member of the `CSize` return value. The vertical size is in the **cy** member.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
- 调用`ResizeParentToFit`让您的视图的大小指示其框架窗口的大小。  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
+ Call `ResizeParentToFit` to let the size of your view dictate the size of its frame window.  
   
 ```  
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bShrinkOnly*  
- 若要执行调整大小的类型。 默认值为**TRUE**，如果相应缩小框架窗口。 对于较大视图或小型框架窗口，仍将显示滚动条。 值为**FALSE**使视图始终完全调整框架窗口的大小。 这可能会稍有危险，因为框架窗口可能会收到过大而无法容纳在多文档界面 (MDI) 框架窗口或屏幕内。  
+ The kind of resizing to perform. The default value, **TRUE**, shrinks the frame window if appropriate. Scroll bars will still appear for large views or small frame windows. A value of **FALSE** causes the view always to resize the frame window exactly. This can be somewhat dangerous since the frame window could get too big to fit inside the multiple document interface (MDI) frame window or the screen.  
   
-### <a name="remarks"></a>备注  
- 这被建议仅用于 MDI 子框架窗口中的视图。 使用`ResizeParentToFit`中`OnInitialUpdate`处理程序函数的派生`CScrollView`类。 有关此成员函数的示例，请参阅[CScrollView::SetScrollSizes](#setscrollsizes)。  
+### <a name="remarks"></a>Remarks  
+ This is recommended only for views in MDI child frame windows. Use `ResizeParentToFit` in the `OnInitialUpdate` handler function of your derived `CScrollView` class. For an example of this member function, see [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`假定已设置了视图窗口的大小。 如果将视图的窗口大小尚未设置时`ResizeParentToFit`是调用，您将获得一个断言。 若要确保此情况发生，进行以下调用之前调用`ResizeParentToFit`:  
+ `ResizeParentToFit` assumes that the size of the view window has been set. If the view window size has not been set when `ResizeParentToFit` is called, you will get an assertion. To ensure that this does not happen, make the following call before calling `ResizeParentToFit`:  
   
- [!code-cpp[NVC_MFCDocView #&165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
- 调用`ScrollToPosition`以滚动到视图中给定的点。  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
+ Call `ScrollToPosition` to scroll to a given point in the view.  
   
 ```  
 void ScrollToPosition(POINT pt);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pt`  
- 要向下滚动到，使用逻辑单位的点。 **X**成员必须为正值 （大于或等于 0，最多的视图的总大小）。 同样适用于**y**成员映射模式时`MM_TEXT`。 **Y**成员为负以外，模式将映射`MM_TEXT`。  
+ The point to scroll to, in logical units. The **x** member must be a positive value (greater than or equal to 0, up to the total size of the view). The same is true for the **y** member when the mapping mode is `MM_TEXT`. The **y** member is negative in mapping modes other than `MM_TEXT`.  
   
-### <a name="remarks"></a>备注  
- 因此，此点窗口左上角的窗口中，将会滚动视图。 如果对视图进行缩放以适合，必须不调用该成员函数。  
+### <a name="remarks"></a>Remarks  
+ The view will be scrolled so that this point is at the upper-left corner of the window. This member function must not be called if the view is scaled to fit.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
- 调用`SetScaleToFitSize`当您想要自动缩放使视区大小与当前窗口的大小。  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
+ Call `SetScaleToFitSize` when you want to scale the viewport size to the current window size automatically.  
   
 ```  
 void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `sizeTotal`  
- 水平和垂直大小的视图是可按比例。 滚动视图大小单位逻辑单元。 中包含的水平大小**cx**成员。 中包含的垂直大小**cy**成员。 这两**cx**和**cy**必须大于或等于 0。  
+ The horizontal and vertical sizes to which the view is to be scaled. The scroll view's size is measured in logical units. The horizontal size is contained in the **cx** member. The vertical size is contained in the **cy** member. Both **cx** and **cy** must be greater than or equal to 0.  
   
-### <a name="remarks"></a>备注  
- 带滚动条，只有逻辑视图部分可能会显示在任何时间。 而进行缩放以适合功能中，此视图具有任何滚动条操作和逻辑视图被拉伸或收缩以完全适合窗口的工作区。 在窗口中调整大小时，视图在一个基于窗口的大小的新刻度绘制其数据。  
+### <a name="remarks"></a>Remarks  
+ With scroll bars, only a portion of the logical view may be visible at any time. But with the scale-to-fit capability, the view has no scroll bars and the logical view is stretched or shrunk to exactly fit the window's client area. When the window is resized, the view draws its data at a new scale based on the size of the window.  
   
- 通常将放入到调用`SetScaleToFitSize`的视图的重写中`OnInitialUpdate`成员函数。 如果不希望自动缩放，调用`SetScrollSizes`成员函数。  
+ You'll typically place the call to `SetScaleToFitSize` in your override of the view's `OnInitialUpdate` member function. If you do not want automatic scaling, call the `SetScrollSizes` member function instead.  
   
- `SetScaleToFitSize`可以用于实现"缩放 Fit"操作。 使用`SetScrollSizes`若要重新初始化滚动。  
+ `SetScaleToFitSize` can be used to implement a "Zoom to Fit" operation. Use `SetScrollSizes` to reinitialize scrolling.  
   
- `SetScaleToFitSize`假定已设置了视图窗口的大小。 如果将视图的窗口大小尚未设置时`SetScaleToFitSize`是调用，您将获得一个断言。 若要确保此情况发生，进行以下调用之前调用`SetScaleToFitSize`:  
+ `SetScaleToFitSize` assumes that the size of the view window has been set. If the view window size has not been set when `SetScaleToFitSize` is called, you will get an assertion. To ensure that this does not happen, make the following call before calling `SetScaleToFitSize`:  
   
- [!code-cpp[NVC_MFCDocView #&165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
- 调用`SetScrollSizes`视图时要进行更新。  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
+ Call `SetScrollSizes` when the view is about to be updated.  
   
 ```  
 void SetScrollSizes(
@@ -315,52 +323,52 @@ void SetScrollSizes(
     const SIZE& sizeLine = sizeDefault);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- 要设置为该视图的映射模式。 可能的值包括：  
+ The mapping mode to set for this view. Possible values include:  
   
-|映射模式|逻辑单元|正 y 轴扩展...|  
+|Mapping Mode|Logical Unit|Positive y-axis Extends...|  
 |------------------|------------------|---------------------------------|  
-|`MM_TEXT`|1 个像素|向下|  
-|`MM_HIMETRIC`|0.01 毫米|向上|  
-|`MM_TWIPS`|中的&1;/1440|向上|  
-|`MM_HIENGLISH`|0.001 英寸|向上|  
-|`MM_LOMETRIC`|0.1 毫米|向上|  
-|`MM_LOENGLISH`|0.01 英寸|向上|  
+|`MM_TEXT`|1 pixel|Downward|  
+|`MM_HIMETRIC`|0.01 mm|Upward|  
+|`MM_TWIPS`|1/1440 in|Upward|  
+|`MM_HIENGLISH`|0.001 in|Upward|  
+|`MM_LOMETRIC`|0.1 mm|Upward|  
+|`MM_LOENGLISH`|0.01 in|Upward|  
   
- 所有这些模式都由 Windows 定义。 两种标准的映射模式，`MM_ISOTROPIC`和`MM_ANISOTROPIC`，不能使用`CScrollView`。 类库提供了`SetScaleToFitSize`缩放窗口的大小的视图的成员函数。 第三列上表中的描述的坐标的方向。  
+ All of these modes are defined by Windows. Two standard mapping modes, `MM_ISOTROPIC` and `MM_ANISOTROPIC`, are not used for `CScrollView`. The class library provides the `SetScaleToFitSize` member function for scaling the view to window size. Column three in the table above describes the coordinate orientation.  
   
  `sizeTotal`  
- 滚动视图总大小。 **Cx**成员都包含有水平扩展盘区。 **Cy**成员包含垂直扩展盘区。 大小为使用逻辑单位。 这两**cx**和**cy**必须大于或等于 0。  
+ The total size of the scroll view. The **cx** member contains the horizontal extent. The **cy** member contains the vertical extent. Sizes are in logical units. Both **cx** and **cy** must be greater than or equal to 0.  
   
  `sizePage`  
- 在滚动条轴中单击向下滚动以响应鼠标每个方向的水平和垂直金额。 **Cx**成员包含水平的量。 **Cy**成员包含垂直量。  
+ The horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll-bar shaft. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
  `sizeLine`  
- 水平和垂直量，以响应鼠标每个方向滚动单击滚动箭头。 **Cx**成员包含水平的量。 **Cy**成员包含垂直量。  
+ The horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll arrow. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
-### <a name="remarks"></a>备注  
- 在重写中调用它`OnUpdate`成员函数以调整滚动特征，例如，最初显示的文档或时调整大小。  
+### <a name="remarks"></a>Remarks  
+ Call it in your override of the `OnUpdate` member function to adjust scrolling characteristics when, for example, the document is initially displayed or when it changes size.  
   
- 您将通常大小信息从获取视图的相关文档，通过调用文档成员函数，也许称为`GetMyDocSize`，提供与您的派生的文档类。 下面的代码演示了这种方法︰  
+ You will typically obtain size information from the view's associated document by calling a document member function, perhaps called `GetMyDocSize`, that you supply with your derived document class. The following code shows this approach:  
   
- [!code-cpp[NVC_MFCDocView #&166;](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
   
- 或者，您有时可能需要设置固定的大小，如以下代码所示︰  
+ Alternatively, you might sometimes need to set a fixed size, as in the following code:  
   
- [!code-cpp[NVC_MFCDocView #&167;](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
   
- 必须将映射模式设置为任何除 Windows 映射模式`MM_ISOTROPIC`或`MM_ANISOTROPIC`。 如果您想要使用不受约束的映射模式，则调用`SetScaleToFitSize`成员函数而不是`SetScrollSizes`。  
+ You must set the mapping mode to any of the Windows mapping modes except `MM_ISOTROPIC` or `MM_ANISOTROPIC`. If you want to use an unconstrained mapping mode, call the `SetScaleToFitSize` member function instead of `SetScrollSizes`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCDocView #&168;](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #&169;](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
- [MFC 示例 DIBLOOK](../../visual-cpp-samples.md)   
- [CView 类](../../mfc/reference/cview-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CView 类](../../mfc/reference/cview-class.md)   
- [CSplitterWnd 类](../../mfc/reference/csplitterwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)
 

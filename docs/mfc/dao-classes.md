@@ -1,73 +1,92 @@
 ---
-title: "DAO 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DAO [C++], 类"
-  - "数据库类 [C++], DAO"
+title: DAO Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- database classes [MFC], DAO
+- DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# DAO 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dbc2c515978597e4d7a386ec05afe1e5caae6563
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-这些类与其他应用程序框架类一起使用为便于访问数据访问对象 \(DAO\) \(DAO\) 数据库，使用数据库引擎和 Microsoft Visual Basic 和 Microsoft Access 相同。  DAO 类还访问开放式数据库连接 \(ODBC\) 的各种数据库驱动程序可用。  
+---
+# <a name="dao-classes"></a>DAO Classes
+These classes work with the other application framework classes to give easy access to Data Access Object (DAO) databases, which use the same database engine as Microsoft Visual Basic and Microsoft Access. The DAO classes can also access a wide variety of databases for which Open Database Connectivity (ODBC) drivers are available.  
   
- 使用 DAO 数据库的程序将具有 `CDaoDatabase` 对象和至少一个 `CDaoRecordset` 对象。  
+ Programs that use DAO databases will have at least a `CDaoDatabase` object and a `CDaoRecordset` object.  
   
 > [!NOTE]
->  从 Visual C\+\+ .NET 起，Visual C\+\+ 环境和向导不再支持 DAO（不过提供了 DAO 类，仍可供您使用）。  Microsoft 建议对新项目使用 ODBC或 MFC。  DAO 只应用于维护现有的应用程序。  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use ODBC for new MFC projects. You should only use DAO in maintaining existing applications.  
   
  [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)  
- 管理单个用户从登录到注销的已命名并受密码保护的数据库会话。  大多数程序使用默认工作区。  
+ Manages a named, password-protected database session from login to logoff. Most programs use the default workspace.  
   
  [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)  
- 表示与数据库的连接，通过此连接可操作数据。  
+ A connection to a database through which you can operate on the data.  
   
  [CDaoRecordset](../mfc/reference/cdaorecordset-class.md)  
- 表示从数据源选择的一组记录。  
+ Represents a set of records selected from a data source.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- 显示控件中数据库记录的视图。  
+ A view that displays database records in controls.  
   
  [CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)  
- 表示通常保存在数据库中的查询定义（即“querydef”）。  
+ Represents a query definition, usually one saved in a database.  
   
  [CDaoTableDef](../mfc/reference/cdaotabledef-class.md)  
- 表示基表或附加表的已存储定义。  
+ Represents the stored definition of a base table or an attached table.  
   
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
- 表示由数据库类引起的异常条件。  
+ Represents an exception condition arising from the DAO classes.  
   
  [CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)  
- 支持 DAO 数据库类使用的 DAO 记录字段交换 \(DFX\) 例程。  您通常不会直接使用该类。  
+ Supports the DAO record field exchange (DFX) routines used by the DAO database classes. You will normally not directly use this class.  
   
-## 相关类  
+## <a name="related-classes"></a>Related Classes  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- 封装的句柄。一个二进制大对象 \(BLOB\) \(BLOB\) 的存储空间，如位图。  `CLongBinary` 对象用于管理数据库中表中存储大量数据对象。  
+ Encapsulates a handle to storage for a binary large object (BLOB), such as a bitmap. `CLongBinary` objects are used to manage large data objects stored in database tables.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
- OLE 自动化类型 **CURRENCY**的包装，使用定点算术类型，小数点前 15 位和 小数点后4 位。  
+ Wrapper for the OLE automation type **CURRENCY**, a fixed-point arithmetic type, with 15 digits before the decimal point and 4 digits after.  
   
  [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)  
- OLE 自动化类型**DATE**的包装。  表示日期和时间值。  
+ Wrapper for the OLE automation type **DATE**. Represents date and time values.  
   
  [COleVariant](../mfc/reference/colevariant-class.md)  
- OLE 自动化类型**VARIANT**的包装。  在 **VARIANT**中可以存储多格式数据。  
+ Wrapper for the OLE automation type **VARIANT**. Data in **VARIANT**s can be stored in many formats.  
   
-## 请参阅  
- [类概述](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

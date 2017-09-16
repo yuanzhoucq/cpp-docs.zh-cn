@@ -1,5 +1,5 @@
 ---
-title: "CTabbedPane 类 |Microsoft 文档"
+title: CTabbedPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,7 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CTabbedPane class
+- CTabbedPane [MFC], DetachPane
+- CTabbedPane [MFC], EnableTabAutoColor
+- CTabbedPane [MFC], FloatTab
+- CTabbedPane [MFC], GetTabArea
+- CTabbedPane [MFC], GetTabWnd
+- CTabbedPane [MFC], HasAutoHideMode
+- CTabbedPane [MFC], IsTabLocationBottom
+- CTabbedPane [MFC], ResetTabs
+- CTabbedPane [MFC], SetTabAutoColors
+- CTabbedPane [MFC], m_bTabsAlwaysTop
+- CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
 caps.latest.revision: 27
 author: mikeblome
@@ -45,62 +55,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 70377d6be8ef4ec957c7270e501022107d4b093c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a5a64318a91378cbf14e4eae040702106555728
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabbedpane-class"></a>CTabbedPane 类
-利用可拆分的选项卡实现窗格的功能。  
+# <a name="ctabbedpane-class"></a>CTabbedPane Class
+Implements the functionality of a pane with detachable tabs.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabbedPane : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CTabbedPane::CTabbedPane`|默认构造函数。|  
+|`CTabbedPane::CTabbedPane`|Default constructor.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabbedPane::DetachPane](#detachpane)|(重写[CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane)。)|  
-|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|启用或禁用自动选项卡着色。|  
-|[CTabbedPane::FloatTab](#floattab)|仅当窗格中当前驻留在拆离的选项卡中时浮动窗格。 (重写[CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。)|  
-|[CTabbedPane::GetTabArea](#gettabarea)|返回选项卡区域在选项卡式窗口中的大小和位置。|  
+|[CTabbedPane::DetachPane](#detachpane)|(Overrides [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|  
+|[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Enables or disables automatic coloring of tabs.|  
+|[CTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CTabbedPane::GetTabArea](#gettabarea)|Returns the size and position of the tab area within the tabbed window.|  
 |[CTabbedPane::GetTabWnd](#gettabwnd)||  
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|确定选项卡式窗格是否可以切换为自动隐藏模式。 (重写[CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode)。)|  
-|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|确定选项卡是否位于窗口的底部。|  
-|[CTabbedPane::ResetTabs](#resettabs)|将所有选项卡式窗格重置为默认状态。|  
-|[CTabbedPane::SetTabAutoColors](#settabautocolors)|设置可以在自动颜色功能启用时可用的自定义颜色列表。|  
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to autohide mode. (Overrides [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|  
+|[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Determines whether the tabs are located at the bottom of the window.|  
+|[CTabbedPane::ResetTabs](#resettabs)|Resets all tabbed panes to the default state.|  
+|[CTabbedPane::SetTabAutoColors](#settabautocolors)|Sets a list of custom colors that can be used when the auto color feature is enabled.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="data-members"></a>Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|选项卡在应用程序中的的默认位置。|  
-|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|自定义 `CMFCTabCtrl`-派生对象的运行时类信息。|  
+|[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|The default location for tabs in the application.|  
+|[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Runtime class information for a custom `CMFCTabCtrl`-derived object.|  
   
-## <a name="remarks"></a>备注  
- 当用户通过将一个窗格指向第二个窗格的标题的方式来附加到另一个窗格，框架自动创建此类的实例。 由框架创建的所有选项卡式窗格都具有值为 -1 的 ID。  
+## <a name="remarks"></a>Remarks  
+ The framework automatically creates an instance of this class when a user attaches one pane to another by pointing to the caption of the second pane. All of the tabbed panes that are created by the framework have an ID of -1.  
   
- 若要指定而不是 Outlook 样式的选项卡的常规选项卡，请将传递`AFX_CBRS_REGULAR_TABS`到样式[CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex)方法。  
+ To specify regular tabs instead of Outlook-style tabs, pass the `AFX_CBRS_REGULAR_TABS` style to the [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) method.  
   
- 如果你使用可拆离的选项卡创建一个选项卡式窗格，该窗格可能会被框架自动销毁，因此，你不应该存储该指针。 若要获取对选项卡式窗格的指针，请调用 `CBasePane::GetParentTabbedPane` 方法。  
+ If you create a tabbed pane with detachable tabs, the pane may be destroyed automatically by the framework, so you should not store the pointer. To get a pointer to the tabbed pane, call the `CBasePane::GetParentTabbedPane` method.  
   
-## <a name="example"></a>示例  
- 我们在此示例中创建了一个 `CTabbedPane` 对象。 接下来，我们使用[CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab)要附加的其他选项卡。  
+## <a name="example"></a>Example  
+ In this example we create a `CTabbedPane` object. Next, we use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) to attach additional tabs.  
   
 ```  
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -131,10 +141,10 @@ pTabbededBar->EnableDocking(CBRS_ALIGN_ANY);
 DockPane(pTabbededBar);
 ```  
   
-## <a name="example"></a>示例  
- 若要创建选项卡式的控件条对象的另一种方法是使用[CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd)。 `AttachToTabWnd`方法动态地创建使用运行时类信息设置的选项卡式的窗格对象[CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc)。  
+## <a name="example"></a>Example  
+ Another way to create a tabbed control bar object is to use [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). The `AttachToTabWnd` method dynamically creates a tabbed pane object using runtime class information set by [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
- 在此示例中，我们动态地创建了一个选项卡式窗格，附加这两个选项卡，并使第二个选项不可拆离。  
+ In this example we create a tabbed pane dynamically, attach two tabs, and make the second tab non-detachable.  
   
 ```  
 DockPane(&m_wndClassView);
@@ -154,7 +164,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
     FALSE);
 ```  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -171,10 +181,10 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
   
  [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxTabbedPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTabbedPane.h  
   
-##  <a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
 
   
 ```  
@@ -183,33 +193,33 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `bHide`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
- 启用或禁用自动选项卡着色。  
+##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
+ Enables or disables automatic coloring of tabs.  
   
 ```  
 static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要启用自动着色的选项卡。否则为`FALSE`。  
+ `TRUE` to enable auto coloring of tabs; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
- 此静态方法用于启用或禁用自动着色的应用程序中的所有选项卡式窗格中的选项卡。 启用此功能后，由它自己的颜色填充每个选项卡。 您可以找到的用于通过调用颜色选项卡的颜色列表[CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)方法。  
+### <a name="remarks"></a>Remarks  
+ Use this static method to enable or disable automatic coloring of tabs in all tabbed panes in the application. When this feature is enabled, each tab is filled by its own color. You can find the list of colors that are used to color the tabs by calling the [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) method.  
   
- 您可以指定将通过调用使用选项卡的颜色的列表[CTabbedPane::SetTabAutoColors](#settabautocolors)。  
+ You can specify the list of colors that will be used for tabs by calling [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
- 默认情况下，禁用此选项。  
+ By default, this option is disabled.  
   
-##  <a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
   
 ```  
@@ -220,18 +230,18 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `nTabID`  
  [in] `dockMethod`  
  [in] `bHide`  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
- 返回选项卡式窗口中的大小和选项卡区域的位置。  
+##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
+ Returns the size and position of the tab area in the tabbed window.  
   
 ```  
 virtual void GetTabArea(
@@ -239,106 +249,106 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [out] `rectTabAreaTop`  
- 包含的大小和位置，在屏幕坐标中的顶级选项卡区域。  
+ Contains the size and position, in screen coordinates, of the top tab area.  
   
  [out] `rectTabAreaBottom`  
- 包含的大小和位置，在屏幕坐标中的选项卡区域底部。  
+ Contains the size and position, in screen coordinates, of the bottom tab area.  
   
-### <a name="remarks"></a>备注  
- 框架调用此方法以确定如何将用户正在拖动窗格停靠。 当用户将一个窗格拖到目标窗格中的选项卡区域中时，框架会尝试将其添加为目标窗格中的新选项卡。 否则，它尝试将窗格停靠到的目标窗格中，这涉及创建一个新的窗格中容器与窗格分隔符分隔两个窗格一侧。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine how to dock a pane that a user is dragging. When the user drags a pane over the tab area of the target pane, the framework tries to add it as a new tab of the target pane. Otherwise, it tries to dock the pane to the side of the target pane, which involves creating a new pane container with a pane divider that separates the two panes.  
   
- 重写此方法在`CTabbedPane`的派生类来更改此行为。  
+ Override this method in a `CTabbedPane`-derived class to change this behavior.  
   
-##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
   
 ```  
 CMFCTabCtrl* GetTabWnd() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode  
 
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
- 确定选项卡是否位于窗口的底部。  
+##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom  
+ Determines whether the tabs are located at the bottom of the window.  
   
 ```  
 virtual BOOL IsTabLocationBottom() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果选项卡区域位于底部的选项卡式窗口;否则为`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab area is located at the bottom of the tabbed window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
- 选项卡在应用程序中的的默认位置。  
+##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop  
+ The default location for tabs in the application.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;  
 ```  
   
-### <a name="remarks"></a>备注  
- 此静态成员设置为`TRUE`以强制应用程序将显示在选项卡式窗格顶部中的所有选项卡。  
+### <a name="remarks"></a>Remarks  
+ Set this static member to `TRUE` to force all tabs in the application to be displayed at the top of the tabbed pane.  
   
- 在创建选项卡式窗格中之前，必须设置此值。  
+ You must set this value before a tabbed pane has been created.  
   
- 默认值为 `FALSE`。  
+ The default value is `FALSE`.  
   
-##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
- 自定义 `CMFCTabCtrl`-派生对象的运行时类信息。  
+##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
+ Runtime class information for a custom `CMFCTabCtrl`-derived object.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;  
 ```  
   
-### <a name="remarks"></a>备注  
- 将此静态成员变量设置为指向运行时类信息的`CMFCTabCtrl`-如果您使用的在选项卡式窗格内的自定义选项卡式的窗口派生的对象。  
+### <a name="remarks"></a>Remarks  
+ Set this static member variable to a pointer to the runtime class information of a `CMFCTabCtrl`-derived object if you are using a custom tabbed window inside a tabbed pane.  
   
-##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
- 将所有选项卡式窗格重置为默认状态。  
+##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
+ Resets all tabbed panes to the default state.  
   
 ```  
 static void ResetTabs();
 ```  
   
-### <a name="remarks"></a>备注  
- 调用此方法，以还原为其默认状态的所有选项卡式的窗格。 在调用时，此方法将重置的边框大小和自动颜色状态的所有选项卡式窗格。  
+### <a name="remarks"></a>Remarks  
+ Call this method to revert all tabbed panes to their default state. When called, this method resets the border sizes and auto color state of all tabbed panes.  
   
-##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
- 设置启用自动的颜色特征时使用的自定义颜色的列表。  
+##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
+ Sets a list of custom colors that are used when the auto color feature is enabled.  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  [in] `arColors`  
- 包含要设置的颜色数组。  
+ Contains the array of colors to set.  
   
-### <a name="remarks"></a>备注  
- 使用此方法自定义的启用自动的颜色特征时使用的颜色列表。 这是一个静态函数，并且会影响您的应用程序中的所有选项卡式的窗格。  
+### <a name="remarks"></a>Remarks  
+ Use this method to customize the list of colors that are used when the auto color feature is enabled. This is a static function and affects all tabbed panes in your application.  
   
- 使用[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)若要启用或禁用自动颜色功能。  
+ Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) to enable or disable the auto color feature.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   
- [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)   
- [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CBaseTabbedPane Class](../../mfc/reference/cbasetabbedpane-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)
 

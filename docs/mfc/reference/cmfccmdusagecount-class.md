@@ -1,5 +1,5 @@
 ---
-title: "CMFCCmdUsageCount 类 |Microsoft 文档"
+title: CMFCCmdUsageCount Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCmdUsageCount class
+- CMFCCmdUsageCount [MFC], AddCmd
+- CMFCCmdUsageCount [MFC], GetCount
+- CMFCCmdUsageCount [MFC], HasEnoughInformation
+- CMFCCmdUsageCount [MFC], IsFreqeuntlyUsedCmd
+- CMFCCmdUsageCount [MFC], Reset
+- CMFCCmdUsageCount [MFC], Serialize
+- CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
 caps.latest.revision: 20
 author: mikeblome
@@ -41,178 +47,178 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b264448af4041139018b181e2255988555267b89
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b6431555d8a8551c170025998427c3fe775c742
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 类
-跟踪 Windows 消息，例如当用户从菜单中选择某个项的使用计数。  
+# <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount Class
+Tracks the usage count of Windows messages, such as when the user selects an item from a menu.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCmdUsageCount : public CObject  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
-  
-|||  
-|-|-|  
-|名称|说明|  
-|`CMFCCmdUsageCount::CMFCCmdUsageCount`|默认构造函数。|  
-|`CMFCCmdUsageCount::~CMFCCmdUsageCount`|析构函数。|  
-  
-### <a name="public-methods"></a>公共方法  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名称|说明|  
-|[CMFCCmdUsageCount::AddCmd](#addcmd)|一个与给定的命令相关联的计数器将增加。|  
-|[CMFCCmdUsageCount::GetCount](#getcount)|检索与给定的命令 ID 相关联的使用计数|  
-|[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|确定此对象是否具有收集最小数量的跟踪数据。|  
-|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|确定是否经常使用给定的命令。|  
-|[CMFCCmdUsageCount::Reset](#reset)|清除所有命令的使用计数。|  
-|[CMFCCmdUsageCount::Serialize](#serialize)|从存档读取此对象或将其写入存档。 (重写[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)。)|  
-|[CMFCCmdUsageCount::SetOptions](#setoptions)|设置的值共享`CMFCCmdUsageCount`类数据成员。|  
+|Name|Description|  
+|`CMFCCmdUsageCount::CMFCCmdUsageCount`|Default constructor.|  
+|`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Destructor.|  
   
-### <a name="data-members"></a>数据成员  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名称|说明|  
-|`m_CmdUsage`|一个`CMap`将命令映射到其使用情况计数的对象。|  
-|`m_nMinUsagePercentage`|命令，以将常用小使用率百分比。|  
-|`m_nStartCount`|起始计数器，用于确定此对象是否具有收集最小数量的跟踪数据。|  
-|`m_nTotalUsage`|所有跟踪命令计数。|  
+|Name|Description|  
+|[CMFCCmdUsageCount::AddCmd](#addcmd)|Increments by one the counter that is associated with the given command.|  
+|[CMFCCmdUsageCount::GetCount](#getcount)|Retrieves the usage count that is associated with the given command ID.|  
+|[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Determines whether this object has collected the minimum amount of tracking data.|  
+|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|Determines whether the given command is frequently used.|  
+|[CMFCCmdUsageCount::Reset](#reset)|Clears the usage count of all commands.|  
+|[CMFCCmdUsageCount::Serialize](#serialize)|Reads this object from an archive or writes it to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CMFCCmdUsageCount::SetOptions](#setoptions)|Sets the values of shared `CMFCCmdUsageCount` class data members.|  
   
-### <a name="remarks"></a>备注  
- `CMFCCmdUsageCount`类映射到 32 位无符号的整数计数器数值的每个 Windows 消息标识符。 `CMFCToolBar`使用此类来显示常用工具栏项。 有关详细信息`CMFCToolBar`，请参阅[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。  
+### <a name="data-members"></a>Data Members  
   
- 您可以保留`CMFCCmdUsageCount`类程序的运行之间的数据。 使用[CMFCCmdUsageCount::Serialize](#serialize)方法可序列化类成员数据和[CMFCCmdUsageCount::SetOptions](#setoptions)方法以设置共享的成员数据。  
+|||  
+|-|-|  
+|Name|Description|  
+|`m_CmdUsage`|A `CMap` object that maps commands to their usage counts.|  
+|`m_nMinUsagePercentage`|The minimum usage percentage for a command to be frequently used.|  
+|`m_nStartCount`|The start counter that is used to determine whether this object has collected the minimum amount of tracking data.|  
+|`m_nTotalUsage`|The count of all tracked commands.|  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+### <a name="remarks"></a>Remarks  
+ The `CMFCCmdUsageCount` class maps each numeric Windows message identifier to a 32-bit unsigned integer counter. `CMFCToolBar` uses this class to display frequently-used toolbar items. For more information about `CMFCToolBar`, see [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md).  
+  
+ You can persist `CMFCCmdUsageCount` class data between runs of your program. Use the [CMFCCmdUsageCount::Serialize](#serialize) method to serialize class member data and the [CMFCCmdUsageCount::SetOptions](#setoptions) method to set shared member data.  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)  
   
-## <a name="requirements"></a>要求  
- **标头︰** afxcmdusagecount.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmdusagecount.h  
   
-##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
- 一个与给定的命令相关联的计数器将增加。  
+##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
+ Increments by one the counter that is associated with the given command.  
   
 ```  
 void AddCmd(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `uiCmd`|指定命令计数器递增。|  
+|Parameter|Description|  
+|[in] `uiCmd`|Specifies the command counter to increment.|  
   
-### <a name="remarks"></a>备注  
- 此方法将新条目添加到命令计数站点地图结构`m_CmdUsage`，如果该条目不存在。  
+### <a name="remarks"></a>Remarks  
+ This method adds a new entry to the map structure of command counts, `m_CmdUsage`, if the entry does not already exist.  
   
- 此方法没有任何效果在以下情况︰  
+ This method does nothing in the following cases:  
   
--   工具栏框架是在自定义模式 ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)方法返回一个非零值)。  
+-   The toolbar framework is in customization mode (the [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) method returns a nonzero value).  
   
--   该命令是指子菜单或菜单分隔符 (`uiCmd`等于 0 或-1)。  
+-   The command refers to a submenu or menu separator ( `uiCmd` equals 0 or -1).  
   
-- `uiCmd`指的是标准命令 (全局`IsStandardCommand`函数将返回一个非零值)。  
+- `uiCmd` refers to a standard command (the global `IsStandardCommand` function returns a nonzero value).  
   
-##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
- 检索与给定的命令 ID 相关联的使用计数  
+##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
+ Retrieves the usage count that is associated with the given command ID.  
   
 ```  
 UINT GetCount(UINT uiCmd) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `uiCmd`|要检索命令计数器的 ID。|  
+|Parameter|Description|  
+|[in] `uiCmd`|The ID of the command counter to retrieve.|  
   
-### <a name="return-value"></a>返回值  
- 与给定的命令 ID 相关联的使用计数  
+### <a name="return-value"></a>Return Value  
+ The usage count that is associated with the given command ID.  
   
-##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
- 确定此对象是否已接收到最小数量的跟踪数据。  
+##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation  
+ Determines whether this object has received the minimum amount of tracking data.  
   
 ```  
 BOOL HasEnoughInformation() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果此对象已收到最小数量的跟踪数据;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this object has received the minimum amount of tracking data; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 如果此方法返回一个非零值的总计数`m_nTotalUsage`，所有跟踪命令是等于或大于的初始计数`m_nStartCount`。 默认情况下，框架将设置初始计数 0。 您可以使用重写此值[CMFCCmdUsageCount::SetOptions](#setoptions)方法。  
+### <a name="remarks"></a>Remarks  
+ This method returns a nonzero value if the total count, `m_nTotalUsage`, of all tracked commands is equal to or larger than the initial count, `m_nStartCount`. By default, the framework sets the initial count 0. You can override this value by using the [CMFCCmdUsageCount::SetOptions](#setoptions) method.  
   
- 此方法由[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)来确定是否显示所有可用菜单命令。  
+ This method is used by [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) to determine whether to show all available menu commands.  
   
-##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
- 确定是否经常使用给定的命令。  
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+ Determines whether the given command is frequently used.  
   
 ```  
 BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `uiCmd`|指定要检查的命令。|  
+|Parameter|Description|  
+|[in] `uiCmd`|Specifies the command to check.|  
   
-### <a name="return-value"></a>返回值  
- 非零，如果经常使用的命令;否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the command is frequently used; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此方法返回 0，如果使用总命令`m_nTotalUsage`，为 0。 否则，此方法将返回非零，如果指定的命令使用其中的百分比大于最小百分比`m_nMinUsagePercentage`。 默认情况下，框架将最小百分比设置为 5。 您可以使用重写此值[CMFCCmdUsageCount::SetOptions](#setoptions)方法。 如果最小百分比为 0，则此方法返回非零，如果指定的命令计数大于 0。  
+### <a name="remarks"></a>Remarks  
+ This method returns 0 if the total command usage, `m_nTotalUsage`, is 0. Otherwise, this method returns nonzero if the percentage of which the specified command is used is larger than the minimum percentage, `m_nMinUsagePercentage`. By default, the framework sets the minimum percentage to 5. You can override this value by using the [CMFCCmdUsageCount::SetOptions](#setoptions) method. If the minimum percentage is 0, this method returns nonzero if the specified command count is larger than 0.  
   
- [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused)使用此方法来确定命令是否很少使用。  
+ [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) uses this method to determine whether a command is rarely used.  
   
-##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
- 清除所有命令的使用计数。  
+##  <a name="reset"></a>  CMFCCmdUsageCount::Reset  
+ Clears the usage count of all commands.  
   
 ```  
 void Reset();
 ```  
   
-### <a name="remarks"></a>备注  
- 调用此方法来清除所有项从的命令计数映射结构`m_CmdUsage`，并重置总命令用法， `m_nTotalUsage`、 计数器为 0。  
+### <a name="remarks"></a>Remarks  
+ Call this method to clear all entries from the map structure of command counts, `m_CmdUsage`, and to reset the total command usage, `m_nTotalUsage`, counter to 0.  
   
-##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
- 从存档读取此对象或将其写入存档。  
+##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize  
+ Reads this object from an archive, or writes it to an archive.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `ar`|一个`CArchive`要序列化来自或发往对象。|  
+|Parameter|Description|  
+|[in] `ar`|A `CArchive` object to serialize from or to.|  
   
-### <a name="remarks"></a>备注  
- 此方法进行序列化的命令计数映射结构`m_CmdUsage`，并且总命令的使用情况， `m_nTotalUsage`、 计数器来自或发往指定存档。  
+### <a name="remarks"></a>Remarks  
+ This method serializes the map structure of command counts, `m_CmdUsage`, and the total command usage, `m_nTotalUsage`, counter from or to the specified archive.  
   
- 有关序列化示例，请参阅[序列化︰ 将对象序列化为](../../mfc/serialization-serializing-an-object.md)。  
+ For serialization examples, see [Serialization: Serializing an Object](../../mfc/serialization-serializing-an-object.md).  
   
-##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
- 设置的值共享`CMFCCmdUsageCount`类数据成员。  
+##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions  
+ Sets the values of shared `CMFCCmdUsageCount` class data members.  
   
 ```  
 static BOOL __stdcall SetOptions(
@@ -220,24 +226,24 @@ static BOOL __stdcall SetOptions(
     UINT nMinUsagePercentage);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|参数|说明|  
-|[in] `nStartCount`|所有跟踪命令新初始计数。|  
-|[in] `nMinUsagePercentage`|新的小使用率百分比。|  
+|Parameter|Description|  
+|[in] `nStartCount`|The new initial count of all tracked commands.|  
+|[in] `nMinUsagePercentage`|The new minimum usage percentage.|  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果该方法成功，`FALSE`如果`nMinUsagePercentage`参数是否大于或等于 100。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, `FALSE` if the `nMinUsagePercentage` parameter is larger than or equal to 100.  
   
-### <a name="remarks"></a>备注  
- 此方法可设置共享`CMFCCmdUsageCount`类数据成员`m_nStartCount`和`m_nMinUsagePercentage`到`nStartCount`和`nMinUsagePercentage`分别。 `m_nStartCount`通过使用[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)方法来确定此对象是否具有收集最小数量的跟踪数据。 `m_nMinUsagePercentage`通过使用[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法，以确定是否经常使用给定的命令。  
+### <a name="remarks"></a>Remarks  
+ This method sets the shared `CMFCCmdUsageCount` class data members `m_nStartCount` and `m_nMinUsagePercentage` to `nStartCount` and `nMinUsagePercentage`, respectively. `m_nStartCount` is used by the [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) method to determine whether this object has collected the minimum amount of tracking data. `m_nMinUsagePercentage` is used by the [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) method to determine whether a given command is frequently used.  
   
- 在调试生成中如果此方法生成断言失败`nMinUsagePercentage`参数是否大于或等于 100。  
+ In Debug builds this method generates an assertion failure if the `nMinUsagePercentage` parameter is larger than or equal to 100.  
   
-## <a name="see-also"></a>另请参阅  
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [类](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)
 

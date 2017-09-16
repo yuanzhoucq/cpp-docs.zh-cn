@@ -1,52 +1,71 @@
 ---
-title: "ActiveX 控件容器：将 ActiveX 控件连接到成员变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件容器 [C++], 访问 ActiveX 控件"
-  - "ActiveX 控件容器 [C++], ActiveX 控件作为成员变量"
-  - "ActiveX 控件 [C++], 访问"
-  - "ActiveX 控件 [C++], 项目的成员变量"
-  - "将 ActiveX 控件与容器成员变量相连接"
-  - "成员变量 [C++], 项目中的 ActiveX 控件"
+title: 'ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], accessing ActiveX controls
+- ActiveX controls [MFC], member variables of project
+- connecting ActiveX controls to container member variables
+- ActiveX controls [MFC], accessing
+- member variables [MFC], ActiveX controls in project
+- ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 控件容器：将 ActiveX 控件连接到成员变量
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d79444d098c1946f6cd54d8d904a06c17923c3f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-简单的访问方法 ActiveX 控件从其控件容器应用程序内部会与 ActiveX 控件使用将包含控件对话框类的成员变量。  
+---
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable
+The easiest way to access an ActiveX control from within its control container application is to associate the ActiveX control with a member variable of the dialog class that will contain the control.  
   
 > [!NOTE]
->  这不是唯一的方法访问嵌入的控件从容器类的内部，但对于，本文满足的。  
+>  This is not the only way to access an embedded control from within a container class, but for the purposes of this article it is sufficient.  
   
-### 将成员变量添加到的对话框类  
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Adding a member variable to the dialog class  
   
-1.  从类视图，请右击主对话框类打开快捷菜单。  例如 `CContainerDlg`。  
+1.  From Class View, right-click the main dialog class to open the shortcut menu. For example, `CContainerDlg`.  
   
-2.  在快捷菜单上，单击**“添加”**，再单击**“添加变量”**。  
+2.  From the shortcut menu, click **Add** and then **Add Variable**.  
   
-3.  在"添加成员变量向导，单击 **控件变量 \(O\)**。  
+3.  In the Add Member Variable Wizard, click **Control variable**.  
   
-4.  在 **控件 ID** 列表框，选择嵌入一个 ActiveX 控件的控件 ID。  例如 `IDC_CIRCCTRL1`。  
+4.  In the **Control ID** list box, select the control ID of the embedded ActiveX control. For example, `IDC_CIRCCTRL1`.  
   
-5.  在“变量名”框中，键入名称。  
+5.  In the **Variable Name** box, enter a name.  
   
-     例如 `m_circctl`。  
+     For example, `m_circctl`.  
   
-6.  单击 **完成** 接受选择并退出"添加成员变量向导"  
+6.  Click **Finish** to accept your choices and exit the Add Member Variable Wizard.  
   
-## 请参阅  
- [ActiveX 控件容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "seed_seq 类 | Microsoft Docs"
+title: seed_seq Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- seed_seq
 - random/std::seed_seq
 - random/std::seed_seq::result_type
 - random/std::seed_seq::generate
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- seed_seq class
+- std::seed_seq [C++]
+- std::seed_seq [C++], result_type
+- std::seed_seq [C++], generate
+- std::seed_seq [C++], size
+- std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
 caps.latest.revision: 19
 author: corob-msft
@@ -38,17 +41,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: b637e311971b71564244f9bbdcfc37973a514710
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bbcb40d865c562cca2f8cc2b427fbf93a7c9d191
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="seedseq-class"></a>seed_seq 类
-存储可以为随机数引擎提供随机化种子的无符号整数值的矢量。  
+# <a name="seedseq-class"></a>seed_seq Class
+Stores a vector of unsigned integer values that can supply a randomized seed for a random-number engine.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
 ```  
 class seed_seq  
    {  
@@ -77,40 +80,40 @@ public:
    void operator=(const seed_seq&) = delete;  
    };  
 ```  
-## <a name="types"></a>类型  
+## <a name="types"></a>Types  
  `typedef unsigned int result_type;`   
-种子序列中的元素类型。 32 位无符号整数类型。  
+The type of the elements of the seed sequence. A 32-bit unsigned integer type.  
   
-## <a name="constructors"></a>构造函数  
+## <a name="constructors"></a>Constructors  
  `seed_seq();`   
-默认构造函数，需要初始化为空的内部序列。  
+Default constructor, initializes to have an empty internal sequence.  
   
  `template<class T>`   
  `seed_seq(initializer_list<T> initlist);`   
-请使用 `initlist` 设置内部序列。                   
-`T` 必须为整型。  
+Uses `initlist` to set the internal sequence.                   
+`T` must be an integer type.  
   
  `template<class InputIterator>`   
  `seed_seq(InputIterator begin, InputIterator end);`   
-使用提供的输入迭代器范围中的所有元素初始化内部序列。                  
-`iterator_traits<InputIterator>::value_type` 必须为整型。  
+Initializes the internal sequence using all elements in the input iterator range provided.                  
+`iterator_traits<InputIterator>::value_type` must be an integer type.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="generating-functions"></a>生成函数  
+### <a name="generating-functions"></a>Generating Functions  
  `template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);`   
-使用内部算法填充所提供序列的元素。 此算法受初始化 `seed_seq` 的内部序列影响。                          
-如果 `begin == end`，则不执行任何操作。  
+Populates the elements of the provided sequence using an internal algorithm. This algorithm is affected by the internal sequence with which `seed_seq` was initialized.                          
+Does nothing if `begin == end`.  
   
-### <a name="property-functions"></a>属性函数  
+### <a name="property-functions"></a>Property Functions  
  `size_t size() const;`   
-返回 `seed_seq` 中的元素数量。  
+Returns the number of elements in the `seed_seq`.  
   
  `template<class OutputIterator> void param(OutputIterator dest) const;`   
-将内部序列复制到输出迭代器 `dest` 中。  
+Copies the internal sequence into the output iterator `dest`.  
   
-## <a name="example"></a>示例  
- 以下代码示例练习了三种构造函数，并且从分配到数组时生成的 `seed_seq` 实例中生成输出。 有关将 `seed_seq` 与随机数生成器一起使用的示例，请参阅 [\<random>](../standard-library/random.md)。  
+## <a name="example"></a>Example  
+ The following code example exercises the three constructors and generates output from the resulting `seed_seq` instances when assigned to an array. For an example that uses `seed_seq` with a random number generator, see [\<random>](../standard-library/random.md).  
   
 ```cpp  
 #include <iostream>  
@@ -177,15 +180,15 @@ Generating a sequence of 5 elements into an array:
 1985355432  
 ```  
   
-## <a name="remarks"></a>备注  
- 此类的成员函数不会引发异常。  
+## <a name="remarks"></a>Remarks  
+ Member functions of this class do not throw exceptions.  
   
-## <a name="requirements"></a>要求  
- **标头：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

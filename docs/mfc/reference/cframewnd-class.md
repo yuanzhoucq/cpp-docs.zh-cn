@@ -1,5 +1,5 @@
 ---
-title: "CFrameWnd 类 |Microsoft 文档"
+title: CFrameWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -64,10 +64,56 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- frame window classes, base class
-- single document interface (SDI), frame windows
-- frame windows, creating
-- CFrameWnd class
+- CFrameWnd [MFC], CFrameWnd
+- CFrameWnd [MFC], ActivateFrame
+- CFrameWnd [MFC], BeginModalState
+- CFrameWnd [MFC], Create
+- CFrameWnd [MFC], CreateView
+- CFrameWnd [MFC], DockControlBar
+- CFrameWnd [MFC], EnableDocking
+- CFrameWnd [MFC], EndModalState
+- CFrameWnd [MFC], FloatControlBar
+- CFrameWnd [MFC], GetActiveDocument
+- CFrameWnd [MFC], GetActiveFrame
+- CFrameWnd [MFC], GetActiveView
+- CFrameWnd [MFC], GetControlBar
+- CFrameWnd [MFC], GetDockState
+- CFrameWnd [MFC], GetMenuBarState
+- CFrameWnd [MFC], GetMenuBarVisibility
+- CFrameWnd [MFC], GetMessageBar
+- CFrameWnd [MFC], GetMessageString
+- CFrameWnd [MFC], GetTitle
+- CFrameWnd [MFC], InitialUpdateFrame
+- CFrameWnd [MFC], InModalState
+- CFrameWnd [MFC], IsTracking
+- CFrameWnd [MFC], LoadAccelTable
+- CFrameWnd [MFC], LoadBarState
+- CFrameWnd [MFC], LoadFrame
+- CFrameWnd [MFC], NegotiateBorderSpace
+- CFrameWnd [MFC], OnBarCheck
+- CFrameWnd [MFC], OnContextHelp
+- CFrameWnd [MFC], OnSetPreviewMode
+- CFrameWnd [MFC], OnUpdateControlBarMenu
+- CFrameWnd [MFC], RecalcLayout
+- CFrameWnd [MFC], SaveBarState
+- CFrameWnd [MFC], SetActivePreviewView
+- CFrameWnd [MFC], SetActiveView
+- CFrameWnd [MFC], SetDockState
+- CFrameWnd [MFC], SetMenuBarState
+- CFrameWnd [MFC], SetMenuBarVisibility
+- CFrameWnd [MFC], SetMessageText
+- CFrameWnd [MFC], SetProgressBarPosition
+- CFrameWnd [MFC], SetProgressBarRange
+- CFrameWnd [MFC], SetProgressBarState
+- CFrameWnd [MFC], SetTaskbarOverlayIcon
+- CFrameWnd [MFC], SetTitle
+- CFrameWnd [MFC], ShowControlBar
+- CFrameWnd [MFC], ShowOwnedWindows
+- CFrameWnd [MFC], OnCreateClient
+- CFrameWnd [MFC], OnHideMenuBar
+- CFrameWnd [MFC], OnShowMenuBar
+- CFrameWnd [MFC], m_bAutoMenuEnable
+- CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 caps.latest.revision: 21
 author: mikeblome
@@ -87,142 +133,142 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 06becdd593028e02d45ed68fb8fa5687e1e2dbd1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a9e99662b69fce1a63b9935d838e13b16f9180c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cframewnd-class"></a>CFrameWnd 类
-提供 Windows 单文档界面 (SDI) 重叠式或弹出框架窗口功能，并提供管理窗口的成员。  
+# <a name="cframewnd-class"></a>CFrameWnd Class
+Provides the functionality of a Windows single document interface (SDI) overlapped or pop-up frame window, along with members for managing the window.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFrameWnd : public CWnd  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFrameWnd::CFrameWnd](#cframewnd)|构造 `CFrameWnd` 对象。|  
+|[CFrameWnd::CFrameWnd](#cframewnd)|Constructs a `CFrameWnd` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFrameWnd::ActivateFrame](#activateframe)|使帧可见且可用于用户。|  
-|[CFrameWnd::BeginModalState](#beginmodalstate)|将框架窗口设置为模式。|  
-|[CFrameWnd::Create](#create)|调用创建并初始化与关联的 Windows 框架窗口`CFrameWnd`对象。|  
-|[CFrameWnd::CreateView](#createview)|创建在不派生自的范围内的视图`CView`。|  
-|[CFrameWnd::DockControlBar](#dockcontrolbar)|停靠控件条。|  
-|[CFrameWnd::EnableDocking](#enabledocking)|允许要停靠的控件条。|  
-|[CFrameWnd::EndModalState](#endmodalstate)|结束框架窗口的模式状态。 使所有 windows 通过停用`BeginModalState`。|  
-|[CFrameWnd::FloatControlBar](#floatcontrolbar)|浮动的控件条。|  
-|[CFrameWnd::GetActiveDocument](#getactivedocument)|返回活动**CDocument**对象。|  
-|[CFrameWnd::GetActiveFrame](#getactiveframe)|返回活动`CFrameWnd`对象。|  
-|[CFrameWnd::GetActiveView](#getactiveview)|返回活动`CView`对象。|  
-|[CFrameWnd::GetControlBar](#getcontrolbar)|检索控件条。|  
-|[CFrameWnd::GetDockState](#getdockstate)|检索框架窗口的停靠状态。|  
-|[CFrameWnd::GetMenuBarState](#getmenubarstate)|检索当前的 MFC 应用程序中的菜单的显示状态。|  
-|[CFrameWnd::GetMenuBarVisibility](#getmenubarvisibility)|指示当前的 MFC 应用程序中的菜单的默认行为是否隐藏还是可见。|  
-|[CFrameWnd::GetMessageBar](#getmessagebar)|返回指向状态栏属于框架窗口的指针。|  
-|[CFrameWnd::GetMessageString](#getmessagestring)|检索消息对应于命令 id。|  
-|[CFrameWnd::GetTitle](#gettitle)|检索相关的控件条的标题。|  
-|[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|导致`OnInitialUpdate`属于框架窗口调用中的所有视图的成员函数。|  
-|[CFrameWnd::InModalState](#inmodalstate)|返回一个值，该值指示框架窗口处于模式状态。|  
-|[CFrameWnd::IsTracking](#istracking)|确定当前移动拆分栏。|  
-|[CFrameWnd::LoadAccelTable](#loadacceltable)|调用以加载快捷键对应表。|  
-|[CFrameWnd::LoadBarState](#loadbarstate)|若要还原控件栏设置的调用。|  
-|[CFrameWnd::LoadFrame](#loadframe)|调用动态地创建框架窗口中的资源信息。|  
-|[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|协商框架窗口中的边框空间。|  
-|[CFrameWnd::OnBarCheck](#onbarcheck)|每当在指定的控件条上执行操作时调用。|  
-|[CFrameWnd::OnContextHelp](#oncontexthelp)|处理的就地项的 SHIFT + F1 帮助。|  
-|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|执行和跳出执行打印预览模式，请设置应用程序的主框架窗口。|  
-|[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|更新关联的菜单时由框架调用。|  
-|[CFrameWnd::RecalcLayout](#recalclayout)|将重新定位的控件条`CFrameWnd`对象。|  
-|[CFrameWnd::SaveBarState](#savebarstate)|若要保存控件栏设置的调用。|  
-|[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|指定要用于丰富预览的活动视图，指定的视图。|  
-|[CFrameWnd::SetActiveView](#setactiveview)|设置活动`CView`对象。|  
-|[CFrameWnd::SetDockState](#setdockstate)|若要将停靠在主窗口中的框架窗口的调用。|  
-|[CFrameWnd::SetMenuBarState](#setmenubarstate)|隐藏或显示当前的 MFC 应用程序中设置菜单的显示状态。|  
-|[CFrameWnd::SetMenuBarVisibility](#setmenubarvisibility)|在当前的 MFC 应用程序，可隐藏还是可见设置菜单的默认行为。|  
-|[CFrameWnd::SetMessageText](#setmessagetext)|设置标准状态栏的文本。|  
-|[CFrameWnd::SetProgressBarPosition](#setprogressbarposition)|设置显示在任务栏上的 Windows 7 进度栏的当前位置。|  
-|[CFrameWnd::SetProgressBarRange](#setprogressbarrange)|设置 Windows 7 进度栏在任务栏上显示的范围。|  
-|[CFrameWnd::SetProgressBarState](#setprogressbarstate)|设置的类型和状态任务栏按钮上显示的进度指示器。|  
-|[CFrameWnd::SetTaskbarOverlayIcon](#settaskbaroverlayicon)|已重载。 将一个覆盖区应用到任务栏按钮，以指示应用程序状态或向用户通知。|  
-|[CFrameWnd::SetTitle](#settitle)|设置相关的控件条的标题。|  
-|[CFrameWnd::ShowControlBar](#showcontrolbar)|调用以显示控件条。|  
-|[CFrameWnd::ShowOwnedWindows](#showownedwindows)|显示所有的派生的窗口`CFrameWnd`对象。|  
+|[CFrameWnd::ActivateFrame](#activateframe)|Makes the frame visible and available to the user.|  
+|[CFrameWnd::BeginModalState](#beginmodalstate)|Sets the frame window to modal.|  
+|[CFrameWnd::Create](#create)|Call to create and initialize the Windows frame window associated with the `CFrameWnd` object.|  
+|[CFrameWnd::CreateView](#createview)|Creates a view within a frame that is not derived from `CView`.|  
+|[CFrameWnd::DockControlBar](#dockcontrolbar)|Docks a control bar.|  
+|[CFrameWnd::EnableDocking](#enabledocking)|Allows a control bar to be docked.|  
+|[CFrameWnd::EndModalState](#endmodalstate)|Ends the frame window's modal state. Enables all of the windows disabled by `BeginModalState`.|  
+|[CFrameWnd::FloatControlBar](#floatcontrolbar)|Floats a control bar.|  
+|[CFrameWnd::GetActiveDocument](#getactivedocument)|Returns the active **CDocument** object.|  
+|[CFrameWnd::GetActiveFrame](#getactiveframe)|Returns the active `CFrameWnd` object.|  
+|[CFrameWnd::GetActiveView](#getactiveview)|Returns the active `CView` object.|  
+|[CFrameWnd::GetControlBar](#getcontrolbar)|Retrieves the control bar.|  
+|[CFrameWnd::GetDockState](#getdockstate)|Retrieves the dock state of a frame window.|  
+|[CFrameWnd::GetMenuBarState](#getmenubarstate)|Retrieves the display state of the menu in the current MFC application.|  
+|[CFrameWnd::GetMenuBarVisibility](#getmenubarvisibility)|Indicates whether the default behavior of the menu in the current MFC application is  either hidden or visible.|  
+|[CFrameWnd::GetMessageBar](#getmessagebar)|Returns a pointer to the status bar belonging to the frame window.|  
+|[CFrameWnd::GetMessageString](#getmessagestring)|Retrieves message corresponding to a command ID.|  
+|[CFrameWnd::GetTitle](#gettitle)|Retrieves the title of the related control bar.|  
+|[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|Causes the `OnInitialUpdate` member function belonging to all views in the frame window to be called.|  
+|[CFrameWnd::InModalState](#inmodalstate)|Returns a value indicating whether or not a frame window is in a modal state.|  
+|[CFrameWnd::IsTracking](#istracking)|Determines if splitter bar is currently being moved.|  
+|[CFrameWnd::LoadAccelTable](#loadacceltable)|Call to load an accelerator table.|  
+|[CFrameWnd::LoadBarState](#loadbarstate)|Call to restore control bar settings.|  
+|[CFrameWnd::LoadFrame](#loadframe)|Call to dynamically create a frame window from resource information.|  
+|[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|Negotiates border space in the frame window.|  
+|[CFrameWnd::OnBarCheck](#onbarcheck)|Called whenever an action is performed on the specified control bar.|  
+|[CFrameWnd::OnContextHelp](#oncontexthelp)|Handles SHIFT+F1 Help for in-place items.|  
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|Sets the application's main frame window into and out of print-preview mode.|  
+|[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|Called by the framework when the associated menu is updated.|  
+|[CFrameWnd::RecalcLayout](#recalclayout)|Repositions the control bars of the `CFrameWnd` object.|  
+|[CFrameWnd::SaveBarState](#savebarstate)|Call to save control bar settings.|  
+|[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|Designates the specified view to be the active view for Rich Preview.|  
+|[CFrameWnd::SetActiveView](#setactiveview)|Sets the active `CView` object.|  
+|[CFrameWnd::SetDockState](#setdockstate)|Call to dock the frame window in the main window.|  
+|[CFrameWnd::SetMenuBarState](#setmenubarstate)|Sets the display state of the menu in the current MFC application to hidden or displayed.|  
+|[CFrameWnd::SetMenuBarVisibility](#setmenubarvisibility)|Sets the default behavior of the menu in the current MFC application to be either hidden or visible.|  
+|[CFrameWnd::SetMessageText](#setmessagetext)|Sets the text of a standard status bar.|  
+|[CFrameWnd::SetProgressBarPosition](#setprogressbarposition)|Sets current position for Windows 7 progress bar displayed on taskbar.|  
+|[CFrameWnd::SetProgressBarRange](#setprogressbarrange)|Sets range for Windows 7 progress bar displayed on taskbar.|  
+|[CFrameWnd::SetProgressBarState](#setprogressbarstate)|Sets the type and state of the progress indicator displayed on a taskbar button.|  
+|[CFrameWnd::SetTaskbarOverlayIcon](#settaskbaroverlayicon)|Overloaded. Applies an overlay to a taskbar button to indicate application status or a notification to the user.|  
+|[CFrameWnd::SetTitle](#settitle)|Sets the title of the related control bar.|  
+|[CFrameWnd::ShowControlBar](#showcontrolbar)|Call to show the control bar.|  
+|[CFrameWnd::ShowOwnedWindows](#showownedwindows)|Shows all windows that are descendants of the `CFrameWnd` object.|  
   
-### <a name="protected-methods"></a>受保护的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFrameWnd::OnCreateClient](#oncreateclient)|创建一个客户端窗口框架。|  
-|[CFrameWnd::OnHideMenuBar](#onhidemenubar)|隐藏在当前的 MFC 应用程序中的菜单之前调用。|  
-|[CFrameWnd::OnShowMenuBar](#onshowmenubar)|在显示的菜单中当前的 MFC 应用程序之前调用。|  
+|[CFrameWnd::OnCreateClient](#oncreateclient)|Creates a client window for the frame.|  
+|[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Called before the menu in the current MFC application is hidden.|  
+|[CFrameWnd::OnShowMenuBar](#onshowmenubar)|Called before the menu in the current MFC application is displayed.|  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|控件自动启用和禁用的菜单项的功能。|  
-|[CFrameWnd::rectDefault](#rectdefault)|将此传递静态`CRect`作为参数创建时`CFrameWnd`对象，以使 Windows 能够选择窗口的初始大小和位置。|  
+|[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Controls automatic enable and disable functionality for menu items.|  
+|[CFrameWnd::rectDefault](#rectdefault)|Pass this static `CRect` as a parameter when creating a `CFrameWnd` object to allow Windows to choose the window's initial size and position.|  
   
-## <a name="remarks"></a>备注  
- 若要创建你的应用程序有用的框架窗口，从派生类`CFrameWnd`。 将成员变量添加到派生的类，以存储特定于你的应用程序数据。 可派生类中实现消息处理程序成员函数和消息映射，以指定在消息定向到窗口时所发生的情况。  
+## <a name="remarks"></a>Remarks  
+ To create a useful frame window for your application, derive a class from `CFrameWnd`. Add member variables to the derived class to store data specific to your application. Implement message-handler member functions and a message map in the derived class to specify what happens when messages are directed to the window.  
   
- 有三种方法来构造框架窗口︰  
+ There are three ways to construct a frame window:  
   
--   直接构造它使用[创建](#create)。  
+-   Directly construct it using [Create](#create).  
   
--   直接构造它使用[LoadFrame](#loadframe)。  
+-   Directly construct it using [LoadFrame](#loadframe).  
   
--   间接构造使用的文档模板。  
+-   Indirectly construct it using a document template.  
   
- 你调用之前**创建**或`LoadFrame`，您必须先构造使用 c + + 堆上的框架窗口对象**新**运算符。 之前调用**创建**，还可以注册窗口类[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全局函数，若要设置帧的图标和类样式。  
+ Before you call either **Create** or `LoadFrame`, you must construct the frame-window object on the heap using the C++ **new** operator. Before calling **Create**, you can also register a window class with the [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) global function to set the icon and class styles for the frame.  
   
- 使用**创建**成员函数将为快速的自变量传递帧的创建参数。  
+ Use the **Create** member function to pass the frame's creation parameters as immediate arguments.  
   
- `LoadFrame`需要更少的自变量比**创建**，并改为从资源，包括帧的标题、 图标、 快捷键对应表和菜单中检索大多数其默认值。 可以访问`LoadFrame`，所有这些资源必须具有相同的资源 ID (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` requires fewer arguments than **Create**, and instead retrieves most of its default values from resources, including the frame's caption, icon, accelerator table, and menu. To be accessible by `LoadFrame`, all these resources must have the same resource ID (for example, **IDR_MAINFRAME**).  
   
- 当`CFrameWnd`对象包含视图和文档，就会创建间接的框架，而不是直接由程序员。 `CDocTemplate`对象安排帧的创建、 创建所包含的视图和连接到适当的文档的视图。 参数`CDocTemplate`构造函数指定`CRuntimeClass`的三个类涉及到 （文档、 框架和视图）。 A`CRuntimeClass`对象由框架用于动态创建新帧时指定用户 （例如，通过使用新建文件命令或多个文档界面 (MDI) 窗口新命令）。  
+ When a `CFrameWnd` object contains views and documents, they are created indirectly by the framework instead of directly by the programmer. The `CDocTemplate` object orchestrates the creation of the frame, the creation of the containing views, and the connection of the views to the appropriate document. The parameters of the `CDocTemplate` constructor specify the `CRuntimeClass` of the three classes involved (document, frame, and view). A `CRuntimeClass` object is used by the framework to dynamically create new frames when specified by the user (for example, by using the File New command or the multiple document interface (MDI) Window New command).  
   
- 框架窗口类派生自`CFrameWnd`必须使用声明`DECLARE_DYNCREATE`顺序上述`RUNTIME_CLASS`机制才能正常工作。  
+ A frame-window class derived from `CFrameWnd` must be declared with `DECLARE_DYNCREATE` in order for the above `RUNTIME_CLASS` mechanism to work correctly.  
   
- A`CFrameWnd`包含默认实现为 Windows 在典型的应用程序中执行主窗口的下列函数︰  
+ A `CFrameWnd` contains default implementations to perform the following functions of a main window in a typical application for Windows:  
   
--   A`CFrameWnd`框架窗口用于跟踪的独立于 Windows 的活动窗口或当前输入的焦点的当前处于活动状态视图。 重新激活的帧后，通过调用通知活动视图`CView::OnActivateView`。  
+-   A `CFrameWnd` frame window keeps track of a currently active view that is independent of the Windows active window or the current input focus. When the frame is reactivated, the active view is notified by calling `CView::OnActivateView`.  
   
--   命令消息和许多常见的帧通知消息，包括那些由`OnSetFocus`， `OnHScroll`，和`OnVScroll`函数的`CWnd`，通过委派`CFrameWnd`对当前活动视图的框架窗口。  
+-   Command messages and many common frame-notification messages, including those handled by the `OnSetFocus`, `OnHScroll`, and `OnVScroll` functions of `CWnd`, are delegated by a `CFrameWnd` frame window to the currently active view.  
   
--   当前处于活动状态的视图 （或当前活动 MDI 子框架窗口的 MDI 框架对于） 可以确定框架窗口的标题。 可以通过关闭来禁用此功能**FWS_ADDTOTITLE**框架窗口的样式位。  
+-   The currently active view (or currently active MDI child frame window in the case of an MDI frame) can determine the caption of the frame window. This feature can be disabled by turning off the **FWS_ADDTOTITLE** style bit of the frame window.  
   
--   A`CFrameWnd`框架窗口管理控件条、 视图和框架窗口的客户端区域内的其他子窗口的位置。 框架窗口还执行更新的工具栏和其他控件栏按钮的空闲时间。 A`CFrameWnd`框架窗口还具有用于切换打开和关闭工具栏和状态栏的命令的默认实现。  
+-   A `CFrameWnd` frame window manages the positioning of the control bars, views, and other child windows inside the frame window's client area. A frame window also does idle-time updating of toolbar and other control-bar buttons. A `CFrameWnd` frame window also has default implementations of commands for toggling on and off the toolbar and status bar.  
   
--   A`CFrameWnd`框架窗口管理主菜单栏。 当显示弹出菜单时，框架窗口使用**UPDATE_COMMAND_UI**机制来确定哪些菜单项应启用、 禁用，或检查。 当用户选择菜单项时，则框架窗口更新状态栏使用该命令的消息字符串。  
+-   A `CFrameWnd` frame window manages the main menu bar. When a pop-up menu is displayed, the frame window uses the **UPDATE_COMMAND_UI** mechanism to determine which menu items should be enabled, disabled, or checked. When the user selects a menu item, the frame window updates the status bar with the message string for that command.  
   
--   A`CFrameWnd`框架窗口具有可选的快捷键对应表进行自动转换的键盘快捷键。  
+-   A `CFrameWnd` frame window has an optional accelerator table that automatically translates keyboard accelerators.  
   
--   A`CFrameWnd`框架窗口具有可选帮助 ID 与设置`LoadFrame`用于区分上下文的帮助。 框架窗口是半模式状态，如上下文相关帮助 (SHIFT + F1) 和打印预览模式的主要 orchestrator。  
+-   A `CFrameWnd` frame window has an optional help ID set with `LoadFrame` that is used for context-sensitive help. A frame window is the main orchestrator of semimodal states such as context-sensitive help (SHIFT+F1) and print-preview modes.  
   
--   A`CFrameWnd`框架窗口将打开一个文件从文件管理器拖放框架窗口。 如果文件扩展名已注册并与应用程序关联，框架窗口的请求作出响应动态数据交换 (DDE) 打开发生在用户打开数据文件在文件管理器时或当**ShellExecute**调用 Windows 函数。  
+-   A `CFrameWnd` frame window will open a file dragged from the File Manager and dropped on the frame window. If a file extension is registered and associated with the application, the frame window responds to the dynamic data exchange (DDE) open request that occurs when the user opens a data file in the File Manager or when the **ShellExecute** Windows function is called.  
   
--   如果框架窗口是主应用程序窗口 (即， `CWinThread::m_pMainWnd`)，当用户关闭应用程序时，框架窗口将提示用户保存任何已修改的文档 (有关`OnClose`和`OnQueryEndSession`)。  
+-   If the frame window is the main application window (that is, `CWinThread::m_pMainWnd`), when the user closes the application, the frame window prompts the user to save any modified documents (for `OnClose` and `OnQueryEndSession`).  
   
--   如果框架窗口是主应用程序窗口，框架窗口是运行 WinHelp 的上下文。 关闭帧窗口将关闭 WINHELP。如果它对此应用程序的帮助启动，EXE。  
+-   If the frame window is the main application window, the frame window is the context for running WinHelp. Closing the frame window will shut down WINHELP.EXE if it was launched for help for this application.  
   
- 不使用 c + +**删除**运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow` 。 `CFrameWnd`实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。  
+ Do not use the C++ **delete** operator to destroy a frame window. Use `CWnd::DestroyWindow` instead. The `CFrameWnd` implementation of `PostNcDestroy` will delete the C++ object when the window is destroyed. When the user closes the frame window, the default `OnClose` handler will call `DestroyWindow`.  
   
- 有关详细信息`CFrameWnd`，请参阅[框架窗口](../../mfc/frame-windows.md)。  
+ For more information on `CFrameWnd`, see [Frame Windows](../../mfc/frame-windows.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -231,49 +277,49 @@ class CFrameWnd : public CWnd
   
  `CFrameWnd`  
   
-## <a name="requirements"></a>要求  
- **标头:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="activateframe"></a>CFrameWnd::ActivateFrame  
- 调用此成员函数以激活并还原框架窗口，以便它向用户是可见的且可用。  
+##  <a name="activateframe"></a>  CFrameWnd::ActivateFrame  
+ Call this member function to activate and restore the frame window so that it is visible and available to the user.  
   
 ```  
 virtual void ActivateFrame(int nCmdShow = -1);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nCmdShow`  
- 指定要传递给参数[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。 默认情况下，框架显示，并且正确还原。  
+ Specifies the parameter to pass to [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow). By default, the frame is shown and correctly restored.  
   
-### <a name="remarks"></a>备注  
- 非用户界面事件，如 DDE、 OLE 或可能向用户显示框架窗口或其内容的其他事件之后通常调用此成员函数。  
+### <a name="remarks"></a>Remarks  
+ This member function is usually called after a non-user interface event such as a DDE, OLE, or other event that may show the frame window or its contents to the user.  
   
- 默认实现激活该框架和将其带到 Z 顺序的顶层而且，如果有必要，将执行应用程序的主框架窗口的相同步骤。  
+ The default implementation activates the frame and brings it to the top of the Z-order and, if necessary, carries out the same steps for the application's main frame window.  
   
- 重写该成员函数以更改激活某个帧的方式。 例如，你可以强制 MDI 子窗口，以最大化。 添加适当的功能，然后调用基类版本的显式`nCmdShow`。  
+ Override this member function to change how a frame is activated. For example, you can force MDI child windows to be maximized. Add the appropriate functionality, then call the base class version with an explicit `nCmdShow`.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
   
-##  <a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
- 调用此成员函数以使框架窗口具有模式。  
+##  <a name="beginmodalstate"></a>  CFrameWnd::BeginModalState  
+ Call this member function to make a frame window modal.  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="cframewnd"></a>CFrameWnd::CFrameWnd  
- 构造`CFrameWnd`对象，但不会创建可见框架窗口。  
+##  <a name="cframewnd"></a>  CFrameWnd::CFrameWnd  
+ Constructs a `CFrameWnd` object, but does not create the visible frame window.  
   
 ```  
 CFrameWnd();
 ```  
   
-### <a name="remarks"></a>备注  
- 调用**创建**创建可见的窗口。  
+### <a name="remarks"></a>Remarks  
+ Call **Create** to create the visible window.  
   
-##  <a name="create"></a>CFrameWnd::Create  
- 调用创建并初始化与关联的 Windows 框架窗口`CFrameWnd`对象。  
+##  <a name="create"></a>  CFrameWnd::Create  
+ Call to create and initialize the Windows frame window associated with the `CFrameWnd` object.  
   
 ```  
 virtual BOOL Create(
@@ -287,41 +333,41 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszClassName`  
- 指向以 null 结尾的字符串名称的 Windows 类。 类名称可以是与注册的任何名称`AfxRegisterWndClass`全局函数或**RegisterClass** Windows 函数。 如果**NULL**，使用预定义的默认`CFrameWnd`属性。  
+ Points to a null-terminated character string that names the Windows class. The class name can be any name registered with the `AfxRegisterWndClass` global function or the **RegisterClass** Windows function. If **NULL**, uses the predefined default `CFrameWnd` attributes.  
   
  `lpszWindowName`  
- 指向以 null 结尾的字符串表示的窗口名称。 用作标题栏的文本。  
+ Points to a null-terminated character string that represents the window name. Used as text for the title bar.  
   
  `dwStyle`  
- 指定的窗口[样式](../../mfc/reference/window-styles.md)属性。 包括**FWS_ADDTOTITLE** ，如你想要自动显示的名称出现在窗口中的文档的标题栏的样式。  
+ Specifies the window [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) attributes. Include the **FWS_ADDTOTITLE** style if you want the title bar to automatically display the name of the document represented in the window.  
   
  `rect`  
- 指定的大小和窗口的位置。 `rectDefault`值允许 Windows 指定的大小和位置的新窗口。  
+ Specifies the size and position of the window. The `rectDefault` value allows Windows to specify the size and position of the new window.  
   
  `pParentWnd`  
- 指定此框架窗口的父窗口。 此参数应为**NULL**的顶级框架窗口。  
+ Specifies the parent window of this frame window. This parameter should be **NULL** for top-level frame windows.  
   
  *lpszMenuName*  
- 标识要使用与窗口的菜单资源的名称。 使用**MAKEINTRESOURCE**如果的菜单还拥有整数 ID 而不是字符串。 此参数可以为**NULL**。  
+ Identifies the name of the menu resource to be used with the window. Use **MAKEINTRESOURCE** if the menu has an integer ID instead of a string. This parameter can be **NULL**.  
   
  `dwExStyle`  
- 指定扩展的窗口[样式](../../mfc/reference/extended-window-styles.md)属性。  
+ Specifies the window extended [style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) attributes.  
   
  `pContext`  
- 指定指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。 此参数可以为**NULL**。  
+ Specifies a pointer to a [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. This parameter can be **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 如果初始化成功; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization is successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 构造`CFrameWnd`两个步骤中的对象。 首先，调用构造函数构造`CFrameWnd`对象，，然后调用**创建**，它创建 Windows 框架窗口，并将其附加到`CFrameWnd`对象。 **创建**初始化窗口的类名称和窗口名称并注册其样式、 父级和关联的菜单的默认值。  
+### <a name="remarks"></a>Remarks  
+ Construct a `CFrameWnd` object in two steps. First, invoke the constructor, which constructs the `CFrameWnd` object, and then call **Create**, which creates the Windows frame window and attaches it to the `CFrameWnd` object. **Create** initializes the window's class name and window name and registers default values for its style, parent, and associated menu.  
   
- 使用`LoadFrame`而非**创建**从而不是指定其自变量的资源加载框架窗口。  
+ Use `LoadFrame` rather than **Create** to load the frame window from a resource instead of specifying its arguments.  
   
-##  <a name="createview"></a>CFrameWnd::CreateView  
- 调用`CreateView`创建在范围内的视图。  
+##  <a name="createview"></a>  CFrameWnd::CreateView  
+ Call `CreateView` to create a view within a frame.  
   
 ```  
 CWnd* CreateView(
@@ -329,21 +375,21 @@ CWnd* CreateView(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pContext`  
- 指定的视图和文档的类型。  
+ Specifies the type of view and document.  
   
  `nID`  
- 视图的 ID 号。  
+ The ID number of a view.  
   
-### <a name="return-value"></a>返回值  
- 指向`CWnd`对象成功; 否则为如果**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CWnd` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 使用此成员函数来创建"视图"不是`CView`-框架内派生。 在调用`CreateView`，你必须手动设置为活动状态的视图，并将其设置为可见; 这些任务不会自动执行通过`CreateView`。  
+### <a name="remarks"></a>Remarks  
+ Use this member function to create "views" that are not `CView`-derived within a frame. After calling `CreateView`, you must manually set the view to active and set it to be visible; these tasks are not automatically performed by `CreateView`.  
   
-##  <a name="dockcontrolbar"></a>CFrameWnd::DockControlBar  
- 将导致控件栏停靠到框架窗口。  
+##  <a name="dockcontrolbar"></a>  CFrameWnd::DockControlBar  
+ Causes a control bar to be docked to the frame window.  
   
 ```  
 void DockControlBar(
@@ -352,68 +398,68 @@ void DockControlBar(
     LPCRECT lpRect = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- 指向要停靠控件条。  
+ Points to the control bar to be docked.  
   
  `nDockBarID`  
- 确定框架窗口停靠考虑哪些边。 它可以是 0，或一个或多个以下︰  
+ Determines which sides of the frame window to consider for docking. It can be 0, or one or more of the following:  
   
-- `AFX_IDW_DOCKBAR_TOP`将停靠到框架窗口的顶部。  
+- `AFX_IDW_DOCKBAR_TOP` Dock to the top side of the frame window.  
   
-- **AFX_IDW_DOCKBAR_BOTTOM**停靠到框架窗口的底部。  
+- **AFX_IDW_DOCKBAR_BOTTOM** Dock to the bottom side of the frame window.  
   
-- `AFX_IDW_DOCKBAR_LEFT`停靠到框架窗口的左侧。  
+- `AFX_IDW_DOCKBAR_LEFT` Dock to the left side of the frame window.  
   
-- `AFX_IDW_DOCKBAR_RIGHT`停靠框架窗口的右侧。  
+- `AFX_IDW_DOCKBAR_RIGHT` Dock to the right side of the frame window.  
   
- 如果为 0，为在目标框架窗口停靠启用任何端可停靠控件条。  
+ If 0, the control bar can be docked to any side enabled for docking in the destination frame window.  
   
  `lpRect`  
- 确定在屏幕坐标中，控件条将停靠在目标框架窗口的非工作区中的位置。  
+ Determines, in screen coordinates, where the control bar will be docked in the nonclient area of the destination frame window.  
   
-### <a name="remarks"></a>备注  
- 将对两者的调用中指定在框架窗口的侧之一停靠控件条[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)和[CFrameWnd::EnableDocking](#enabledocking)。 选择端由`nDockBarID`。  
+### <a name="remarks"></a>Remarks  
+ The control bar will be docked to one of the sides of the frame window specified in the calls to both [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) and [CFrameWnd::EnableDocking](#enabledocking). The side chosen is determined by `nDockBarID`.  
   
-##  <a name="enabledocking"></a>CFrameWnd::EnableDocking  
- 调用此函数可启用框架窗口中的可停靠控件条。  
+##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking  
+ Call this function to enable dockable control bars in a frame window.  
   
 ```  
 void EnableDocking(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `dwDockStyle`  
- 指定的框架窗口的哪些边可用作停靠控件条的站点。 它可以是一个或多个以下︰  
+ Specifies which sides of the frame window can serve as docking sites for control bars. It can be one or more of the following:  
   
-- `CBRS_ALIGN_TOP`允许在客户端区域的顶部停靠。  
+- `CBRS_ALIGN_TOP` Allows docking at the top of the client area.  
   
-- `CBRS_ALIGN_BOTTOM`允许在工作区底部停靠。  
+- `CBRS_ALIGN_BOTTOM` Allows docking at the bottom of the client area.  
   
-- `CBRS_ALIGN_LEFT`允许客户端区域的左侧停靠。  
+- `CBRS_ALIGN_LEFT` Allows docking on the left side of the client area.  
   
-- `CBRS_ALIGN_RIGHT`允许客户端区域右侧停靠。  
+- `CBRS_ALIGN_RIGHT` Allows docking on the right side of the client area.  
   
-- `CBRS_ALIGN_ANY`允许在客户端区域的任何一侧上停靠。  
+- `CBRS_ALIGN_ANY` Allows docking on any side of the client area.  
   
-### <a name="remarks"></a>备注  
- 将默认情况下，框架窗口按以下顺序的一侧中停靠控件条︰ 上、 下、 左、 右。  
+### <a name="remarks"></a>Remarks  
+ By default, control bars will be docked to a side of the frame window in the following order: top, bottom, left, right.  
   
-### <a name="example"></a>示例  
-  请参阅示例[CToolBar::Create](../../mfc/reference/ctoolbar-class.md#create)。  
+### <a name="example"></a>Example  
+  See the example for [CToolBar::Create](../../mfc/reference/ctoolbar-class.md#create).  
   
-##  <a name="endmodalstate"></a>CFrameWnd::EndModalState  
- 调用此成员函数以将框架窗口从有模式更改为无模式。  
+##  <a name="endmodalstate"></a>  CFrameWnd::EndModalState  
+ Call this member function to change a frame window from modal to modeless.  
   
 ```  
 virtual void EndModalState();
 ```  
   
-### <a name="remarks"></a>备注  
- `EndModalState`使所有 windows 通过停用[BeginModalState](#beginmodalstate)。  
+### <a name="remarks"></a>Remarks  
+ `EndModalState` enables all of the windows disabled by [BeginModalState](#beginmodalstate).  
   
-##  <a name="floatcontrolbar"></a>CFrameWnd::FloatControlBar  
- 调用此函数可导致控件栏不停靠到框架窗口。  
+##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar  
+ Call this function to cause a control bar to not be docked to the frame window.  
   
 ```  
 void FloatControlBar(
@@ -422,150 +468,150 @@ void FloatControlBar(
     DWORD dwStyle = CBRS_ALIGN_TOP);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- 指向控件条以浮动。  
+ Points to the control bar to be floated.  
   
  `point`  
- 中的位置，屏幕坐标，在其中放置控件条的左上的角。  
+ The location, in screen coordinates, where the top left corner of the control bar will be placed.  
   
  `dwStyle`  
- 指定是否在其新的框架窗口内水平或垂直对齐控件条。 它可以是以下之一︰  
+ Specifies whether to align the control bar horizontally or vertically within its new frame window. It can be any one of the following:  
   
-- `CBRS_ALIGN_TOP`纵向排列控件条。  
+- `CBRS_ALIGN_TOP` Orients the control bar vertically.  
   
-- `CBRS_ALIGN_BOTTOM`纵向排列控件条。  
+- `CBRS_ALIGN_BOTTOM` Orients the control bar vertically.  
   
-- `CBRS_ALIGN_LEFT`水平排列控件条。  
+- `CBRS_ALIGN_LEFT` Orients the control bar horizontally.  
   
-- `CBRS_ALIGN_RIGHT`水平排列控件条。  
+- `CBRS_ALIGN_RIGHT` Orients the control bar horizontally.  
   
- 如果指定水平和垂直方向传递样式，工具栏将为水平方向。  
+ If styles are passed specifying both horizontal and vertical orientation, the toolbar will be oriented horizontally.  
   
-### <a name="remarks"></a>备注  
- 通常情况下，这是在应用程序启动时该程序从上一次执行还原设置。  
+### <a name="remarks"></a>Remarks  
+ Typically, this is done at application startup when the program is restoring settings from the previous execution.  
   
- 当用户释放鼠标左键拖动控件条通过也无法供停靠的位置时来导致放操作时，将由框架调用此函数。  
+ This function is called by the framework when the user causes a drop operation by releasing the left mouse button while dragging the control bar over a location that is not available for docking.  
   
-##  <a name="getactivedocument"></a>CFrameWnd::GetActiveDocument  
- 调用此成员函数以获取指向当前的**CDocument**附加到当前活动视图。  
+##  <a name="getactivedocument"></a>  CFrameWnd::GetActiveDocument  
+ Call this member function to obtain a pointer to the current **CDocument** attached to the current active view.  
   
 ```  
 virtual CDocument* GetActiveDocument();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向当前[CDocument](../../mfc/reference/cdocument-class.md)。 如果不不存在任何当前的文档，返回**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current [CDocument](../../mfc/reference/cdocument-class.md). If there is no current document, returns **NULL**.  
   
-##  <a name="getactiveframe"></a>CFrameWnd::GetActiveFrame  
- 调用此成员函数以获取指向活动的多文档界面 (MDI) 子窗口的 MDI 框架窗口。  
+##  <a name="getactiveframe"></a>  CFrameWnd::GetActiveFrame  
+ Call this member function to obtain a pointer to the active multiple document interface (MDI) child window of an MDI frame window.  
   
 ```  
 virtual CFrameWnd* GetActiveFrame();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向活动的 MDI 子窗口的指针。 如果应用程序是 SDI 应用程序，或 MDI 框架窗口包含任何活动文档时，隐式**这**将返回指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the active MDI child window. If the application is an SDI application, or the MDI frame window has no active document, the implicit **this** pointer will be returned.  
   
-### <a name="remarks"></a>备注  
- 如果没有任何活动的 MDI 子或应用程序为单文档界面 (SDI) 的隐式**这**指针会返回。  
+### <a name="remarks"></a>Remarks  
+ If there is no active MDI child or the application is a single document interface (SDI), the implicit **this** pointer is returned.  
   
-##  <a name="getactiveview"></a>CFrameWnd::GetActiveView  
- 调用此成员函数可获取附加到框架窗口的活动视图 （如果有） 的指针 ( `CFrameWnd`)。  
+##  <a name="getactiveview"></a>  CFrameWnd::GetActiveView  
+ Call this member function to obtain a pointer to the active view (if any) attached to a frame window ( `CFrameWnd`).  
   
 ```  
 CView* GetActiveView() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向当前[CView](../../mfc/reference/cview-class.md)。 如果没有当前视图，将返回**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current [CView](../../mfc/reference/cview-class.md). If there is no current view, returns **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此函数将返回**NULL**调用 MDI 主框架窗口 ( `CMDIFrameWnd`)。 在 MDI 应用程序，MDI 主框架窗口没有与它关联的视图。 相反，每个单独的子窗口 ( `CMDIChildWnd`) 具有一个或多个关联的视图。 可以通过首先查找活动的 MDI 子窗口，然后为该子窗口查找活动视图获取 MDI 应用程序中的活动视图。 通过调用函数找不到活动的 MDI 子窗口`MDIGetActive`或**GetActiveFrame**在下面的示例所示︰  
+### <a name="remarks"></a>Remarks  
+ This function returns **NULL** when called for an MDI main frame window ( `CMDIFrameWnd`). In an MDI application, the MDI main frame window does not have a view associated with it. Instead, each individual child window ( `CMDIChildWnd`) has one or more associated views. The active view in an MDI application can be obtained by first finding the active MDI child window and then finding the active view for that child window. The active MDI child window can be found by calling the function `MDIGetActive` or **GetActiveFrame** as demonstrated in the following:  
   
- [!code-cpp[NVC_MFCWindowing # 2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
-##  <a name="getcontrolbar"></a>CFrameWnd::GetControlBar  
- 调用`GetControlBar`来访问与 ID 相关联的控件条  
+##  <a name="getcontrolbar"></a>  CFrameWnd::GetControlBar  
+ Call `GetControlBar` to gain access to the control bar that is associated with the ID.  
   
 ```  
 CControlBar* GetControlBar(UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 控件条 ID 号。  
+ The ID number of a control bar.  
   
-### <a name="return-value"></a>返回值  
- 指向控件条 id 相关联的指针  
+### <a name="return-value"></a>Return Value  
+ A pointer to the control bar that is associated with the ID.  
   
-### <a name="remarks"></a>备注  
- `nID`参数引用传递到的唯一标识符**创建**控件条的方法。 有关控件条的详细信息，请参阅标题为主题[控件条](../../mfc/control-bars.md)。  
+### <a name="remarks"></a>Remarks  
+ The `nID` parameter refers to the unique identifier passed to the **Create** method of the control bar. For more information on control bars, refer to the topic entitled [Control Bars](../../mfc/control-bars.md).  
   
- `GetControlBar`将返回控件条，即使它浮动的因此不是当前帧的子窗口。  
+ `GetControlBar` will return the control bar even if it is floating and thus is not currently a child window of the frame.  
   
-##  <a name="getdockstate"></a>CFrameWnd::GetDockState  
- 调用此成员函数以存储有关框架窗口的控件条中的状态信息`CDockState`对象。  
+##  <a name="getdockstate"></a>  CFrameWnd::GetDockState  
+ Call this member function to store state information about the frame window's control bars in a `CDockState` object.  
   
 ```  
 void GetDockState(CDockState& state) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `state`  
- 包含返回后的框架窗口的控件条的当前状态。  
+ Contains the current state of the frame window's control bars upon return.  
   
-### <a name="remarks"></a>备注  
- 然后，便可以编写的内容`CDockState`到存储使用`CDockState::SaveState`或`Serialize`。 如果你以后想要还原到以前的状态的控件条，加载将状态与`CDockState::LoadState`或`Serialize`，然后调用`SetDockState`要应用于框架窗口的控件条的前一状态。  
+### <a name="remarks"></a>Remarks  
+ You can then write the contents of `CDockState` to storage using `CDockState::SaveState` or `Serialize`. If you later want to restore the control bars to a previous state, load the state with `CDockState::LoadState` or `Serialize`, then call `SetDockState` to apply the previous state to the frame window's control bars.  
   
-##  <a name="getmenubarstate"></a>CFrameWnd::GetMenuBarState  
- 检索当前的 MFC 应用程序中的菜单的显示状态。  
+##  <a name="getmenubarstate"></a>  CFrameWnd::GetMenuBarState  
+ Retrieves the display state of the menu in the current MFC application.  
   
 ```  
 virtual DWORD GetMenuBarState();
 ```  
   
-### <a name="return-value"></a>返回值  
- 返回值可以具有以下值︰  
+### <a name="return-value"></a>Return Value  
+ The return value can have the following values:  
   
--   AFX_MBS_VISIBLE (0x01)-菜单是可见的。  
+-   AFX_MBS_VISIBLE (0x01) - The menu is visible.  
   
--   AFX_MBS_HIDDEN (0x02)-隐藏菜单。  
+-   AFX_MBS_HIDDEN (0x02) - The menu is hidden.  
   
-### <a name="remarks"></a>备注  
- 如果出现运行时错误时，此方法在调试模式中断言，并且会引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
+### <a name="remarks"></a>Remarks  
+ If a runtime error occurs, this method asserts in Debug mode and raises an exception derived from the [CException](../../mfc/reference/cexception-class.md) class.  
   
-##  <a name="getmenubarvisibility"></a>CFrameWnd::GetMenuBarVisibility  
- 指示当前的 MFC 应用程序中的菜单的默认状态是隐藏还是可见。  
+##  <a name="getmenubarvisibility"></a>  CFrameWnd::GetMenuBarVisibility  
+ Indicates whether the default state of the menu in the current MFC application is hidden or visible.  
   
 ```  
 virtual DWORD CFrameWnd::GetMenuBarVisibility();
 ```  
   
-### <a name="return-value"></a>返回值  
- 此方法返回以下值之一︰  
+### <a name="return-value"></a>Return Value  
+ This method returns one of the following values:  
   
--   AFX_MBV_KEEPVISIBLE (0x01) 的菜单将显示在所有时间，以及通过默认不具有焦点。  
+-   AFX_MBV_KEEPVISIBLE (0x01) - The menu is displayed at all times, and by default does not have the focus.  
   
--   AFX_MBV_DISPLAYONFOCUS (0x02)-默认情况下隐藏菜单。 如果菜单处于隐藏状态，请按 ALT 键来显示菜单并授予它焦点。 如果显示菜单上，则按 ALT 或 ESC 键，可以将其隐藏。  
+-   AFX_MBV_DISPLAYONFOCUS (0x02) - The menu is hidden by default. If the menu is hidden, press the ALT key to display the menu and give it the focus. If the menu is displayed, press the ALT or ESC key to hide it.  
   
--   AFX_MBV_ DISPLAYONFOCUS (0X02) |AFX_MBV_DISPLAYONF10 (0x04) （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。  
+-   AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04) (bitwise combination (OR)) - The menu is hidden by default. If the menu is hidden, press the F10 key to display the menu and give it the focus. If the menu is displayed, press the F10 key to toggle the focus on or off the menu. The menu is displayed until you press the ALT or ESC key to hide it.  
   
-### <a name="remarks"></a>备注  
- 如果出现运行时错误时，此方法在调试模式中断言，并且会引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
+### <a name="remarks"></a>Remarks  
+ If a runtime error occurs, this method asserts in Debug mode and raises an exception derived from the [CException](../../mfc/reference/cexception-class.md) class.  
   
-##  <a name="getmessagebar"></a>CFrameWnd::GetMessageBar  
- 调用此成员函数可获取对状态栏的指针。  
+##  <a name="getmessagebar"></a>  CFrameWnd::GetMessageBar  
+ Call this member function to get a pointer to the status bar.  
   
 ```  
 virtual CWnd* GetMessageBar();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向状态栏窗口的指针。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the status-bar window.  
   
-##  <a name="getmessagestring"></a>CFrameWnd::GetMessageString  
- 重写此函数可提供自定义字符串的命令 Id。  
+##  <a name="getmessagestring"></a>  CFrameWnd::GetMessageString  
+ Override this function to provide custom strings for command IDs.  
   
 ```  
 virtual void GetMessageString(
@@ -573,28 +619,28 @@ virtual void GetMessageString(
     CString& rMessage) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 所需的消息的资源 ID。  
+ Resource ID of the desired message.  
   
  `rMessage`  
- `CString`要将该消息放到其中的对象。  
+ `CString` object into which to place the message.  
   
-### <a name="remarks"></a>备注  
- 默认实现只需加载指定的字符串`nID`使用资源文件。 当状态栏中的消息字符串需要更新时，将由框架调用此函数。  
+### <a name="remarks"></a>Remarks  
+ The default implementation simply loads the string specified by `nID` from the resource file. This function is called by the framework when the message string in the status bar needs updating.  
   
-##  <a name="gettitle"></a>CFrameWnd::GetTitle  
- 检索窗口对象的标题。  
+##  <a name="gettitle"></a>  CFrameWnd::GetTitle  
+ Retrieves the title of the window object.  
   
 ```  
 CString GetTitle() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)对象，其中包含的窗口对象的当前标题。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the current title of the window object.  
   
-##  <a name="initialupdateframe"></a>CFrameWnd::InitialUpdateFrame  
- 调用**IntitialUpdateFrame**创建具有的新帧之后**创建**。  
+##  <a name="initialupdateframe"></a>  CFrameWnd::InitialUpdateFrame  
+ Call **IntitialUpdateFrame** after creating a new frame with **Create**.  
   
 ```  
 void InitialUpdateFrame(
@@ -602,77 +648,77 @@ void InitialUpdateFrame(
     BOOL bMakeVisible);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- 指向框架窗口所关联到的文档。 可以是**NULL**。  
+ Points to the document to which the frame window is associated. Can be **NULL**.  
   
  `bMakeVisible`  
- 如果**TRUE**，表示框架应变得可见并处于活动状态。 如果**FALSE**，没有后代进行可见。  
+ If **TRUE**, indicates that the frame should become visible and active. If **FALSE**, no descendants are made visible.  
   
-### <a name="remarks"></a>备注  
- 这将导致在接收该框架窗口中的所有视图其`OnInitialUpdate`调用。  
+### <a name="remarks"></a>Remarks  
+ This causes all views in that frame window to receive their `OnInitialUpdate` calls.  
   
- 此外，如果存在不是以前的活动视图，框架窗口的主视图设为活动。 主视图是使用子 ID 的视图**AFX_IDW_PANE_FIRST**。 最后，框架窗口均可见如果`bMakeVisible`为非零值。 如果`bMakeVisible`为 0，则当前焦点和框架窗口的可见状态将保持不变。 不需要使用框架的实现的新文件和文件打开时调用此函数。  
+ Also, if there was not previously an active view, the primary view of the frame window is made active. The primary view is a view with a child ID of **AFX_IDW_PANE_FIRST**. Finally, the frame window is made visible if `bMakeVisible` is nonzero. If `bMakeVisible` is 0, the current focus and visible state of the frame window will remain unchanged. It is not necessary to call this function when using the framework's implementation of File New and File Open.  
   
-##  <a name="inmodalstate"></a>CFrameWnd::InModalState  
- 调用此成员函数以检查框架窗口是模式还是无模式。  
+##  <a name="inmodalstate"></a>  CFrameWnd::InModalState  
+ Call this member function to check if a frame window is modal or modeless.  
   
 ```  
 BOOL InModalState() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 非零，如果否。否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if yes; otherwise 0.  
   
-##  <a name="istracking"></a>CFrameWnd::IsTracking  
- 调用此成员函数可确定当前移动窗口中的拆分栏。  
+##  <a name="istracking"></a>  CFrameWnd::IsTracking  
+ Call this member function to determine if the splitter bar in the window is currently being moved.  
   
 ```  
 BOOL IsTracking() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果拆分器操作正在进行; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a splitter operation is in progress; otherwise 0.  
   
-##  <a name="loadacceltable"></a>CFrameWnd::LoadAccelTable  
- 调用以加载指定的快捷键对应表。  
+##  <a name="loadacceltable"></a>  CFrameWnd::LoadAccelTable  
+ Call to load the specified accelerator table.  
   
 ```  
 BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszResourceName`  
- 标识快捷键资源的名称。 使用**MAKEINTRESOURCE**如果资源标识使用整数 id。  
+ Identifies the name of the accelerator resource. Use **MAKEINTRESOURCE** if the resource is identified with an integer ID.  
   
-### <a name="return-value"></a>返回值  
- 如果已成功加载的快捷键对应表; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the accelerator table was successfully loaded; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 只有一个表可以加载一次。  
+### <a name="remarks"></a>Remarks  
+ Only one table can be loaded at a time.  
   
- 当在应用程序终止时，从资源加载的快捷键对应表将自动释放。  
+ Accelerator tables loaded from resources are freed automatically when the application terminates.  
   
- 如果调用`LoadFrame`若要创建框架窗口，框架将加载快捷键对应表以及菜单和图标的资源，而此成员函数的后续调用即不必要。  
+ If you call `LoadFrame` to create the frame window, the framework loads an accelerator table along with the menu and icon resources, and a subsequent call to this member function is then unnecessary.  
   
-##  <a name="loadbarstate"></a>CFrameWnd::LoadBarState  
- 调用此函数可还原拥有框架窗口的每个控件条的设置。  
+##  <a name="loadbarstate"></a>  CFrameWnd::LoadBarState  
+ Call this function to restore the settings of each control bar owned by the frame window.  
   
 ```  
 void LoadBarState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszProfileName`  
- 初始化 (INI) 文件中的节或 Windows 注册表状态信息的存储位置中的键的名称。  
+ Name of a section in the initialization (INI) file or a key in the Windows registry where state information is stored.  
   
-### <a name="remarks"></a>备注  
- 还原的信息包括可见性、 水平/垂直方向、 停靠状态和控件条的位置。  
+### <a name="remarks"></a>Remarks  
+ Information restored includes visibility, horizontal/vertical orientation, docking state, and control-bar position.  
   
- 你想要还原的设置必须写入注册表，然后才能调用`LoadBarState`。 将信息写入注册表通过调用[CWinApp::SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey)。 将信息写入 INI 文件通过调用[SaveBarState](#savebarstate)。  
+ The settings you want to restore must be written to the registry before you call `LoadBarState`. Write the information to the registry by calling [CWinApp::SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey). Write the information to the INI file by calling [SaveBarState](#savebarstate).  
   
-##  <a name="loadframe"></a>CFrameWnd::LoadFrame  
- 调用动态地创建框架窗口中的资源信息。  
+##  <a name="loadframe"></a>  CFrameWnd::LoadFrame  
+ Call to dynamically create a frame window from resource information.  
   
 ```  
 virtual BOOL LoadFrame(
@@ -682,50 +728,50 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- 与框架窗口关联的共享资源的 ID。  
+ The ID of shared resources associated with the frame window.  
   
  *dwDefaultStyle*  
- 帧的[样式](../../mfc/reference/window-styles.md)。 包括**FWS_ADDTOTITLE** ，如你想要自动显示的名称出现在窗口中的文档的标题栏的样式。  
+ The frame's [style](../../mfc/reference/styles-used-by-mfc.md#window-styles). Include the **FWS_ADDTOTITLE** style if you want the title bar to automatically display the name of the document represented in the window.  
   
  `pParentWnd`  
- 指向帧的父的指针。  
+ A pointer to the frame's parent.  
   
  `pContext`  
- 指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。 此参数可以为**NULL**。  
+ A pointer to a [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure. This parameter can be **NULL**.  
   
-### <a name="remarks"></a>备注  
- 构造`CFrameWnd`两个步骤中的对象。 首先，调用构造函数构造`CFrameWnd`对象，，然后调用`LoadFrame`，它将加载 Windows 框架窗口和关联的资源并将附加到框架窗口`CFrameWnd`对象。 `nIDResource`参数指定菜单、 快捷键对应表、 图标和框架窗口的标题的字符串资源。  
+### <a name="remarks"></a>Remarks  
+ Construct a `CFrameWnd` object in two steps. First, invoke the constructor, which constructs the `CFrameWnd` object, and then call `LoadFrame`, which loads the Windows frame window and associated resources and attaches the frame window to the `CFrameWnd` object. The `nIDResource` parameter specifies the menu, the accelerator table, the icon, and the string resource of the title for the frame window.  
   
- 使用**创建**成员函数而不是`LoadFrame`如果想要指定所有框架窗口的创建参数。  
+ Use the **Create** member function rather than `LoadFrame` when you want to specify all of the frame window's creation parameters.  
   
- 框架调用`LoadFrame`使用文档模板对象的框架窗口在创建时。  
+ The framework calls `LoadFrame` when it creates a frame window using a document template object.  
   
- 框架将使用`pContext`自变量以指定要连接到框架窗口中，包括所有的对象包含的视图对象。 你可以设置`pContext`参数**NULL**当调用`LoadFrame`。  
+ The framework uses the `pContext` argument to specify the objects to be connected to the frame window, including any contained view objects. You can set the `pContext` argument to **NULL** when you call `LoadFrame`.  
   
-##  <a name="m_bautomenuenable"></a>CFrameWnd::m_bAutoMenuEnable  
- 启用此数据成员时 （这是默认值），菜单项没有`ON_UPDATE_COMMAND_UI`或`ON_COMMAND`用户会拉取菜单时，处理程序将被自动禁用。  
+##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable  
+ When this data member is enabled (which is the default), menu items that do not have `ON_UPDATE_COMMAND_UI` or `ON_COMMAND` handlers will be automatically disabled when the user pulls down a menu.  
   
 ```  
 BOOL m_bAutoMenuEnable;  
 ```  
   
-### <a name="remarks"></a>备注  
- 菜单项具有`ON_COMMAND`处理程序但不是`ON_UPDATE_COMMAND_UI`处理程序将自动启用。  
+### <a name="remarks"></a>Remarks  
+ Menu items that have an `ON_COMMAND` handler but no `ON_UPDATE_COMMAND_UI` handler will be automatically enabled.  
   
- 当设置此数据成员时，菜单项会自动启用与工具栏按钮处于启用状态的方式相同。  
+ When this data member is set, menu items are automatically enabled in the same way that toolbar buttons are enabled.  
   
 > [!NOTE]
-> `m_bAutoMenuEnable`具有对顶级菜单项没有影响。  
+> `m_bAutoMenuEnable` has no effect on top-level menu items.  
   
- 此数据成员简化了基于当前所选内容的可选命令的实现，而无需编写`ON_UPDATE_COMMAND_UI`用于启用和禁用菜单项的处理程序。  
+ This data member simplifies the implementation of optional commands based on the current selection and reduces the need to write `ON_UPDATE_COMMAND_UI` handlers for enabling and disabling menu items.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCWindowing # 3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]  
   
-##  <a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  
- 调用此成员函数可在 OLE 就地激活过程协商框架窗口中的边框空间。  
+##  <a name="negotiateborderspace"></a>  CFrameWnd::NegotiateBorderSpace  
+ Call this member function to negotiate border space in a frame window during OLE inplace activation.  
   
 ```  
 virtual BOOL NegotiateBorderSpace(
@@ -733,9 +779,9 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *nBorderCmd*  
- 包含中的以下值之一**枚举 BorderCmd**:  
+ Contains one of the following values from the **enum BorderCmd**:  
   
 - **borderGet** = 1  
   
@@ -744,46 +790,46 @@ virtual BOOL NegotiateBorderSpace(
 - **borderSet** = 3  
   
  `lpRectBorder`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象，它指定边框的坐标。  
+ Pointer to a [RECT](../../mfc/reference/rect-structure1.md) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the coordinates of the border.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 此成员函数是**CFrameWnd** OLE 边框空间协商实现。  
+### <a name="remarks"></a>Remarks  
+ This member function is the **CFrameWnd** implementation of OLE border space negotiation.  
   
-##  <a name="onbarcheck"></a>CFrameWnd::OnBarCheck  
- 每当在指定的控件条上执行操作时调用。  
+##  <a name="onbarcheck"></a>  CFrameWnd::OnBarCheck  
+ Called whenever an action is performed on the specified control bar.  
   
 ```  
 afx_msg BOOL OnBarCheck(UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 栏显示控件的 ID。  
+ The ID of the control bar being shown.  
   
-### <a name="return-value"></a>返回值  
- 如果控件条存在; 则为非 0否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control bar existed; otherwise 0.  
   
-##  <a name="oncontexthelp"></a>CFrameWnd::OnContextHelp  
- 处理的就地项的 SHIFT + F1 帮助。  
+##  <a name="oncontexthelp"></a>  CFrameWnd::OnContextHelp  
+ Handles SHIFT+F1 Help for in-place items.  
   
 ```  
 afx_msg void OnContextHelp();
 ```  
   
-### <a name="remarks"></a>备注  
- 若要启用上下文相关帮助，你必须添加  
+### <a name="remarks"></a>Remarks  
+ To enable context-sensitive help, you must add an  
   
- [!code-cpp[NVC_MFCDocViewSDI # 16](../../mfc/codesnippet/cpp/cframewnd-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#16](../../mfc/codesnippet/cpp/cframewnd-class_4.cpp)]  
   
- 语句与你`CFrameWnd`类消息映射，还将添加一个快捷键对应表条目，通常 SHIFT + F1，若要启用此成员函数。  
+ statement to your `CFrameWnd` class message map and also add an accelerator-table entry, typically SHIFT+F1, to enable this member function.  
   
- 如果你的应用程序是 OLE 容器，`OnContextHelp`放入框架窗口对象中包含到帮助模式的所有现有项。 然后，光标更改为一个箭头和问号，以及用户可以将鼠标指针移动，并按鼠标左键以选择对话框中，窗口、 菜单上或命令按钮。 此成员函数将调用 Windows 函数`WinHelp`光标下的对象的帮助上下文。  
+ If your application is an OLE Container, `OnContextHelp` puts all in-place items contained within the frame window object into Help mode. The cursor changes to an arrow and a question mark, and the user can then move the mouse pointer and press the left mouse button to select a dialog box, window, menu, or command button. This member function calls the Windows function `WinHelp` with the Help context of the object under the cursor.  
   
-##  <a name="oncreateclient"></a>CFrameWnd::OnCreateClient  
- 在执行期间由框架调用`OnCreate`。  
+##  <a name="oncreateclient"></a>  CFrameWnd::OnCreateClient  
+ Called by the framework during the execution of `OnCreate`.  
   
 ```  
 virtual BOOL OnCreateClient(
@@ -791,38 +837,38 @@ virtual BOOL OnCreateClient(
     CCreateContext* pContext);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpcs`  
- 指向 Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)结构。  
+ A pointer to a Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.  
   
  `pContext`  
- 指向的指针[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。  
+ A pointer to a [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) structure.  
   
-### <a name="return-value"></a>返回值  
- 如果成功，则不为 0；否则为 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>备注  
- 永远不会调用此函数。  
+### <a name="remarks"></a>Remarks  
+ Never call this function.  
   
- 此函数的默认实现将创建`CView`从中提供的信息的对象`pContext`如果可能。  
+ The default implementation of this function creates a `CView` object from the information provided in `pContext`, if possible.  
   
- 重写此函数可重写传入值`CCreateContext`对象或更改创建框架窗口的主要工作区中的方式控件。 `CCreateContext`可以重写的成员中所述[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)类。  
+ Override this function to override values passed in the `CCreateContext` object or to change the way controls in the main client area of the frame window are created. The `CCreateContext` members you can override are described in the [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) class.  
   
 > [!NOTE]
->  不将值传入`CREATESTRUCT`结构。 它们是仅用于提供信息。 如果你想要重写初始窗口矩形，例如，重写`CWnd`成员函数[PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow)。  
+>  Do not replace values passed in the `CREATESTRUCT` structure. They are for informational use only. If you want to override the initial window rectangle, for example, override the `CWnd` member function [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).  
   
-##  <a name="onhidemenubar"></a>CFrameWnd::OnHideMenuBar  
- 当系统以隐藏在当前的 MFC 应用程序的菜单栏时调用此函数。  
+##  <a name="onhidemenubar"></a>  CFrameWnd::OnHideMenuBar  
+ This function is called when the system is about to hide the menu bar in the current MFC application.  
   
 ```  
 virtual void OnHideMenuBar();
 ```  
   
-### <a name="remarks"></a>备注  
- 此事件处理程序使应用程序将要隐藏菜单系统时执行自定义操作。 不能防止菜单隐藏，但可以例如，调用其他方法来检索的菜单样式或状态。  
+### <a name="remarks"></a>Remarks  
+ This event handler enables your application to perform custom actions when the system is about to hide the menu. You cannot prevent the menu from being hidden, but you can, for example, call other methods to retrieve the menu style or state.  
   
-##  <a name="onsetpreviewmode"></a>CFrameWnd::OnSetPreviewMode  
- 调用该成员函数以设置应用程序主框架窗口打印预览模式的流入和流出。  
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode  
+ Call this member function to set the application's main frame window into and out of print-preview mode.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -830,91 +876,91 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *bPreview*  
- 指定将应用程序放置在打印预览模式下。 设置为**TRUE**放置在打印预览中**FALSE**取消预览模式。  
+ Specifies whether or not to place the application in print-preview mode. Set to **TRUE** to place in print preview, **FALSE** to cancel preview mode.  
   
  `pState`  
- 指向的指针**CPrintPreviewState**结构。  
+ A pointer to a **CPrintPreviewState** structure.  
   
-### <a name="remarks"></a>备注  
- 默认实现禁用所有标准工具栏，并隐藏在主菜单和客户端主窗口。 这将转换临时 SDI 框架窗口的 MDI 框架窗口。  
+### <a name="remarks"></a>Remarks  
+ The default implementation disables all standard toolbars and hides the main menu and the main client window. This turns MDI frame windows into temporary SDI frame windows.  
   
- 重写该成员函数以自定义的隐藏和显示的控件条和其他帧窗口部分在打印预览的过程。 调用基类实现从中重写版本。  
+ Override this member function to customize the hiding and showing of control bars and other frame window parts during print preview. Call the base class implementation from within the overridden version.  
   
-##  <a name="onshowmenubar"></a>CFrameWnd::OnShowMenuBar  
- 当系统即将在当前的 MFC 应用程序中显示的菜单栏时调用此函数。  
+##  <a name="onshowmenubar"></a>  CFrameWnd::OnShowMenuBar  
+ This function is called when the system is about to display the menu bar in the current MFC application.  
   
 ```  
 virtual void OnShowMenuBar();
 ```  
   
-### <a name="remarks"></a>备注  
- 此事件处理程序使应用程序将要显示的菜单时执行自定义操作。 不能防止菜单显示，但你可以例如，调用其他方法来检索的菜单样式或状态。  
+### <a name="remarks"></a>Remarks  
+ This event handler enables your application to perform custom actions when the menu is about to be displayed. You cannot prevent the menu from being displayed, but you can, for example, call other methods to retrieve the menu style or state.  
   
-##  <a name="onupdatecontrolbarmenu"></a>CFrameWnd::OnUpdateControlBarMenu  
- 更新关联的菜单时由框架调用。  
+##  <a name="onupdatecontrolbarmenu"></a>  CFrameWnd::OnUpdateControlBarMenu  
+ Called by the framework when the associated menu is updated.  
   
 ```  
 afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- 指向的指针[CCmdUI](../../mfc/reference/ccmdui-class.md)表示生成更新命令的菜单对象。 更新处理程序调用[启用](../../mfc/reference/ccmdui-class.md#enable)成员函数`CCmdUI`对象通过`pCmdUI`若要更新的用户界面。  
+ A pointer to a [CCmdUI](../../mfc/reference/ccmdui-class.md) object representing the menu that generated the update command. The update handler calls the [Enable](../../mfc/reference/ccmdui-class.md#enable) member function of the `CCmdUI` object through `pCmdUI` to update the user interface.  
   
-##  <a name="recalclayout"></a>CFrameWnd::RecalcLayout  
- 标准控件条打开或关闭时或在框架窗口调整大小时，由框架调用。  
+##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout  
+ Called by the framework when the standard control bars are toggled on or off or when the frame window is resized.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bNotify`  
- 确定框架窗口的活动的就地项是否接收通知的布局更改。 如果**TRUE**，表明它是通知; 否则为**FALSE**。  
+ Determines whether the active in-place item for the frame window receives notification of the layout change. If **TRUE**, the item is notified; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 此成员函数的默认实现调用`CWnd`成员函数`RepositionBars`来重新定位在框架也如主要的客户端窗口中的所有控件条 (通常`CView`或**MDICLIENT**)。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this member function calls the `CWnd` member function `RepositionBars` to reposition all the control bars in the frame as well as in the main client window (usually a `CView` or **MDICLIENT**).  
   
- 重写该成员函数以后已更改的框架窗口的布局进行控制的外观和行为的控件条。 例如，调用它时打开或关闭的控件条或添加另一个控件条。  
+ Override this member function to control the appearance and behavior of control bars after the layout of the frame window has changed. For example, call it when you turn control bars on or off or add another control bar.  
   
-##  <a name="rectdefault"></a>CFrameWnd::rectDefault  
- 将此传递静态`CRect`作为参数创建一个窗口，以使 Windows 能够选择窗口的初始大小和位置时。  
+##  <a name="rectdefault"></a>  CFrameWnd::rectDefault  
+ Pass this static `CRect` as a parameter when creating a window to allow Windows to choose the window's initial size and position.  
   
 ```  
 static AFX_DATA const CRect rectDefault;  
 ```  
   
-##  <a name="savebarstate"></a>CFrameWnd::SaveBarState  
- 调用此函数可存储有关拥有框架窗口的每个控件条的信息。  
+##  <a name="savebarstate"></a>  CFrameWnd::SaveBarState  
+ Call this function to store information about each control bar owned by the frame window.  
   
 ```  
 void SaveBarState(LPCTSTR lpszProfileName) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszProfileName`  
- 初始化文件中的节或 Windows 注册表状态信息的存储位置中的键的名称。  
+ Name of a section in the initialization file or a key in the Windows registry where state information is stored.  
   
-### <a name="remarks"></a>备注  
- 从初始化文件使用可以读取此信息[LoadBarState](#loadbarstate)。 存储的信息包括可见性，水平/垂直方向、 停靠状态和控件条的位置。  
+### <a name="remarks"></a>Remarks  
+ This information can be read from the initialization file using [LoadBarState](#loadbarstate). Information stored includes visibility, horizontal/vertical orientation, docking state, and control bar position.  
   
-##  <a name="setactivepreviewview"></a>CFrameWnd::SetActivePreviewView  
- 指定要用于丰富预览的活动视图，指定的视图。  
+##  <a name="setactivepreviewview"></a>  CFrameWnd::SetActivePreviewView  
+ Designates the specified view to be the active view for Rich Preview.  
   
 ```  
 void SetActivePreviewView(CView* pViewNew);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pViewNew`  
- 指向要激活的视图的指针。  
+ A pointer to a view to be activated.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveview"></a>CFrameWnd::SetActiveView  
- 调用此成员函数可设置活动的视图。  
+##  <a name="setactiveview"></a>  CFrameWnd::SetActiveView  
+ Call this member function to set the active view.  
   
 ```  
 void SetActiveView(
@@ -922,100 +968,100 @@ void SetActiveView(
     BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *pViewNew*  
- 指定指向的指针[CView](../../mfc/reference/cview-class.md)对象，或**NULL**没有活动的视图。  
+ Specifies a pointer to a [CView](../../mfc/reference/cview-class.md) object, or **NULL** for no active view.  
   
  `bNotify`  
- 指定视图是否接收通知的激活。 如果**TRUE**，`OnActivateView`称为新视图; 如果**FALSE**，它不是。  
+ Specifies whether the view is to be notified of activation. If **TRUE**, `OnActivateView` is called for the new view; if **FALSE**, it is not.  
   
-### <a name="remarks"></a>备注  
- 框架将自动调用此函数，如用户将焦点更改到在框架窗口内的视图。 你可以明确地调用`SetActiveView`要将焦点更改到指定的视图。  
+### <a name="remarks"></a>Remarks  
+ The framework will call this function automatically as the user changes the focus to a view within the frame window. You can explicitly call `SetActiveView` to change the focus to the specified view.  
   
-##  <a name="setdockstate"></a>CFrameWnd::SetDockState  
- 调用此成员函数可将状态信息存储在应用`CDockState`到框架窗口的控件条对象。  
+##  <a name="setdockstate"></a>  CFrameWnd::SetDockState  
+ Call this member function to apply state information stored in a `CDockState` object to the frame window's control bars.  
   
 ```  
 void SetDockState(const CDockState& state);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `state`  
- 将存储的状态应用到框架窗口的控件条。  
+ Apply the stored state to the frame window's control bars.  
   
-### <a name="remarks"></a>备注  
- 若要还原以前的状态的控件条，可以加载带的存储的状态`CDockState::LoadState`或`Serialize`，然后使用`SetDockState`以将其应用到框架窗口的控件条。 以前的状态存储在`CDockState`对象`GetDockState`  
+### <a name="remarks"></a>Remarks  
+ To restore a previous state of the control bars, you can load the stored state with `CDockState::LoadState` or `Serialize`, then use `SetDockState` to apply it to the frame window's control bars. The previous state is stored in the `CDockState` object with `GetDockState`  
   
-##  <a name="setmenubarstate"></a>CFrameWnd::SetMenuBarState  
- 隐藏或显示当前的 MFC 应用程序中设置菜单的显示状态。  
+##  <a name="setmenubarstate"></a>  CFrameWnd::SetMenuBarState  
+ Sets the display state of the menu in the current MFC application to hidden or displayed.  
   
 ```  
 virtual BOOL SetMenuBarState(DWORD nState);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nState`|指定是否显示或隐藏菜单。 `nState`参数可以具有以下值︰<br /><br /> -如果它处于隐藏状态，但如果它是可见不起作用，AFX_MBS_VISIBLE (0x01)-显示菜单。<br />-AFX_MBS_HIDDEN (0x02)-隐藏菜单上，如果它可见，但如果它隐藏不起作用。|  
+|[in] `nState`|Specifies whether to display or hide the menu. The `nState` parameter can have the following values:<br /><br /> -   AFX_MBS_VISIBLE (0x01) - Displays the menu if it is hidden, but has no effect if it is visible.<br />-   AFX_MBS_HIDDEN (0x02) - Hides the menu if it is visible, but has no effect if it is hidden.|  
   
-### <a name="return-value"></a>返回值  
- `true`如果此方法已成功更改菜单状态;，否则为`false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method successfully changes the menu state; otherwise, `false`.  
   
-### <a name="remarks"></a>备注  
- 如果出现运行时错误时，此方法在调试模式中断言，并且会引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
+### <a name="remarks"></a>Remarks  
+ If a runtime error occurs, this method asserts in Debug mode and raises an exception derived from the [CException](../../mfc/reference/cexception-class.md) class.  
   
-##  <a name="setmenubarvisibility"></a>CFrameWnd::SetMenuBarVisibility  
- 在当前的 MFC 应用程序，可隐藏还是可见设置菜单的默认行为。  
+##  <a name="setmenubarvisibility"></a>  CFrameWnd::SetMenuBarVisibility  
+ Sets the default behavior of the menu in the current MFC application to be either hidden or visible.  
   
 ```  
 virtual void SetMenuBarVisibility(DWORD nStyle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
   
-|参数|说明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nStyle`|指定是否菜单默认情况下隐藏的或者是可见的具有焦点。 `nStyle`参数可以具有以下值︰<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     菜单会显示在所有时间，并默认情况下不具有焦点。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     默认情况下，菜单处于隐藏状态。 如果菜单处于隐藏状态，请按 ALT 键来显示菜单并授予它焦点。 如果显示菜单上，则按 ALT 或 ESC 键，若要隐藏菜单。<br />-AFX_MBV_ DISPLAYONFOCUS (0X02) |AFX_MBV_DISPLAYONF10 (0X04)<br />     （按位组合 (OR)）-默认情况下隐藏菜单。 如果菜单处于隐藏状态，按 F10 键，以显示的菜单，然后使其获得焦点。 如果显示菜单上，则按 F10 键，以切换焦点打开或关闭菜单。 直到按 ALT 或 ESC 键，以隐藏它，将显示菜单。|  
+|[in] `nStyle`|Specifies whether the menu is by default hidden, or is visible and has the focus. The `nStyle` parameter can have the following values:<br /><br /> -   AFX_MBV_KEEPVISIBLE (0x01) -<br />     The menu is displayed at all times, and by default does not have the focus.<br />-   AFX_MBV_DISPLAYONFOCUS (0x02) -<br />     The menu is hidden by default. If the menu is hidden, press the ALT key to display the menu and give it the focus. If the menu is displayed, press the ALT or ESC key to hide menu.<br />-   AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (bitwise combination (OR)) - The menu is hidden by default. If the menu is hidden, press the F10 key to display the menu and give it the focus. If the menu is displayed, press the F10 key to toggle the focus on or off the menu. The menu is displayed until you press the ALT or ESC key to hide it.|  
   
-### <a name="remarks"></a>备注  
- 如果值`nStyle`参数不是有效的此方法会断言在调试模式并引发[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在发布模式下。 在其他运行时错误，此方法在调试模式中断言和引发异常派生自[CException](../../mfc/reference/cexception-class.md)类。  
+### <a name="remarks"></a>Remarks  
+ If the value of the `nStyle` parameter is not valid, this method asserts in Debug mode and raises [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) in Release mode. In case of other runtime errors, this method asserts in Debug mode and raises an exception derived from the [CException](../../mfc/reference/cexception-class.md) class.  
   
- 此方法会影响为编写的应用程序中的菜单状态[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
+ This method affects the state of menus in applications written for [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] and later.  
   
-##  <a name="setmessagetext"></a>CFrameWnd::SetMessageText  
- 调用此函数可将字符串放置在状态栏窗格中具有的 ID 为 0。  
+##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
+ Call this function to place a string in the status-bar pane that has an ID of 0.  
   
 ```  
 void SetMessageText(LPCTSTR lpszText);  
 void SetMessageText(UINT nID);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 指向要将放置在状态栏上的字符串。  
+ Points to the string to be placed on the status bar.  
   
  `nID`  
- 字符串的字符串资源 ID 放在状态栏。  
+ String resource ID of the string to be placed on the status bar.  
   
-### <a name="remarks"></a>备注  
- 这通常是状态栏的最左侧，且最长，窗格。  
+### <a name="remarks"></a>Remarks  
+ This is typically the leftmost, and longest, pane of the status bar.  
   
-##  <a name="setprogressbarposition"></a>CFrameWnd::SetProgressBarPosition  
- 设置显示在任务栏上的 Windows 7 进度栏的当前位置。  
+##  <a name="setprogressbarposition"></a>  CFrameWnd::SetProgressBarPosition  
+ Sets the current position for the Windows 7 progress bar displayed on the taskbar.  
   
 ```  
 void SetProgressBarPosition(int nProgressPos);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nProgressPos`  
- 指定要设置的位置。 它必须位于设置的范围内`SetProgressBarRange`。  
+ Specifies the position to set. It must be within the range set by `SetProgressBarRange`.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setprogressbarrange"></a>CFrameWnd::SetProgressBarRange  
- 设置 Windows 7 进度栏显示在任务栏上的范围。  
+##  <a name="setprogressbarrange"></a>  CFrameWnd::SetProgressBarRange  
+ Sets the range for the Windows 7 progress bar displayed on the taskbar.  
   
 ```  
 void SetProgressBarRange(
@@ -1023,30 +1069,30 @@ void SetProgressBarRange(
     int nRangeMax);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nRangeMin`  
- 最小值。  
+ Minimal value.  
   
  `nRangeMax`  
- 最大值。  
+ Maximal value.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setprogressbarstate"></a>CFrameWnd::SetProgressBarState  
- 设置的类型和状态任务栏按钮上显示的进度指示器。  
+##  <a name="setprogressbarstate"></a>  CFrameWnd::SetProgressBarState  
+ Sets the type and state of the progress indicator displayed on a taskbar button.  
   
 ```  
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `tbpFlags`  
- 控制进度按钮的当前状态的标志。 指定以下之一标记的所有状态都是互相排斥，因为︰ TBPF_NOPROGRESS、 TBPF_INDETERMINATE、 TBPF_NORMAL、 TBPF_ERROR、 TBPF_PAUSED。  
+ Flags that control the current state of the progress button. Specify only one of the following flags because all states are mutually exclusive: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settaskbaroverlayicon"></a>CFrameWnd::SetTaskbarOverlayIcon  
- 已重载。 将一个覆盖区应用到任务栏按钮，以指示应用程序状态，或者通知用户。  
+##  <a name="settaskbaroverlayicon"></a>  CFrameWnd::SetTaskbarOverlayIcon  
+ Overloaded. Applies an overlay to a taskbar button to indicate application status or to notify the user.  
   
 ```  
 BOOL SetTaskbarOverlayIcon(
@@ -1059,34 +1105,34 @@ BOOL SetTaskbarOverlayIcon(
     LPCTSTR lpcszDescr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- 指定要用作在覆盖区上图标的资源 ID。 请参阅说明`hIcon`有关详细信息。  
+ Specifies the Resource ID of an icon to use as the overlay. See description for `hIcon` for details.  
   
  `lpcszDescr`  
- 指向提供传达在覆盖区上，供辅助功能的信息的替换文字版本的字符串的指针。  
+ A pointer to a string that provides an alt text version of the information conveyed by the overlay, for accessibility purposes.  
   
  `hIcon`  
- 要用作在覆盖区上的图标的句柄。 这应该是一个小图标，测量每英寸点数 (dpi) 96 点在 16 x 16 像素。 如果覆盖图标已应用于任务栏按钮时，将替换该现有覆盖区。 此值可为 `NULL`。 如何`NULL`处理值取决于任务栏按钮表示单个窗口或 windows 组。 要释放的调用应用程序负责`hIcon`不再需要时。  
+ The handle of an icon to use as the overlay. This should be a small icon, measuring 16x16 pixels at 96 dots per inch (dpi). If an overlay icon is already applied to the taskbar button, that existing overlay is replaced. This value can be `NULL`. How a `NULL` value is handled depends on whether the taskbar button represents a single window or a group of windows. It is the responsibility of the calling application to free `hIcon` when it is no longer needed.  
   
-### <a name="return-value"></a>返回值  
- `TRUE`如果成功，则，`FALSE`如果操作系统版本低于 Windows 7 或设置图标就会出错。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` if OS version is less than Windows 7 or if an error occurs setting the icon.  
   
-### <a name="remarks"></a>备注  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settitle"></a>CFrameWnd::SetTitle  
- 设置窗口对象的标题。  
+##  <a name="settitle"></a>  CFrameWnd::SetTitle  
+ Sets the title of the window object.  
   
 ```  
 void SetTitle(LPCTSTR lpszTitle);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `lpszTitle`  
- 指向包含窗口对象的标题的字符串的指针。  
+ A pointer to a character string containing the title of the window object.  
   
-##  <a name="showcontrolbar"></a>CFrameWnd::ShowControlBar  
- 调用此成员函数可显示或隐藏控件条。  
+##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar  
+ Call this member function to show or hide the control bar.  
   
 ```  
 void ShowControlBar(
@@ -1095,34 +1141,34 @@ void ShowControlBar(
     BOOL bDelay);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- 指向控件条是显示还是隐藏。  
+ Pointer to the control bar to be shown or hidden.  
   
  `bShow`  
- 如果**TRUE**，指定要显示控件条。 如果**FALSE**，指定要隐藏控件条。  
+ If **TRUE**, specifies that the control bar is to be shown. If **FALSE**, specifies that the control bar is to be hidden.  
   
  *bDelay*  
- 如果**TRUE**，延迟显示控件条。 如果**FALSE**，显示栏立即的控件。  
+ If **TRUE**, delay showing the control bar. If **FALSE**, show the control bar immediately.  
   
-##  <a name="showownedwindows"></a>CFrameWnd::ShowOwnedWindows  
- 调用此成员函数，以显示所有的派生的窗口`CFrameWnd`对象。  
+##  <a name="showownedwindows"></a>  CFrameWnd::ShowOwnedWindows  
+ Call this member function to show all windows that are descendants of the `CFrameWnd` object.  
   
 ```  
 void ShowOwnedWindows(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- 指定是否拥有的 windows 的是显示还是隐藏。  
+ Specifies whether the owned windows are to be shown or hidden.  
   
-## <a name="see-also"></a>另请参阅  
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)   
- [CWnd 类](../../mfc/reference/cwnd-class.md)   
- [CMDIFrameWnd 类](../../mfc/reference/cmdiframewnd-class.md)   
- [CMDIChildWnd 类](../../mfc/reference/cmdichildwnd-class.md)   
- [CView 类](../../mfc/reference/cview-class.md)   
- [CDocTemplate 类](../../mfc/reference/cdoctemplate-class.md)   
- [CRuntimeClass 结构](../../mfc/reference/cruntimeclass-structure.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CMDIFrameWnd Class](../../mfc/reference/cmdiframewnd-class.md)   
+ [CMDIChildWnd Class](../../mfc/reference/cmdichildwnd-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CRuntimeClass Structure](../../mfc/reference/cruntimeclass-structure.md)
 

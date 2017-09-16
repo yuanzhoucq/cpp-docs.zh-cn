@@ -1,45 +1,64 @@
 ---
-title: "向控件添加列（报表视图） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 类, 添加列"
-  - "CListCtrl 类, 报告查看器"
-  - "列 [C++], 添加到 CListCtrl"
-  - "CListCtrl 类中报告视图"
-  - "视图, 报表"
+title: Adding Columns to the Control (Report View) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], adding columns
+- report view in CListCtrl class [MFC]
+- views [MFC], report
+- columns [MFC], adding to CListCtrl
+- CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 向控件添加列（报表视图）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae67c7c011123533227f1a7d4891b553f2cd0dc7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="adding-columns-to-the-control-report-view"></a>Adding Columns to the Control (Report View)
 > [!NOTE]
->  以下过程适用于或 [CListView](../mfc/reference/clistview-class.md) [CListCtrl](../mfc/reference/clistctrl-class.md) 对象。  
+>  The following procedure applies to either a [CListView](../mfc/reference/clistview-class.md) or [CListCtrl](../mfc/reference/clistctrl-class.md) object.  
   
- 在列表控件在报表视图时，列中显示，提供组织每个列表项控件各个子项方法。  此组织 \+ 实施使用在一列在列表控件以及列表控件项的关联子项之间的一对一对应的通信。  子项有关的更多信息，请参见 [向控件添加项](../mfc/adding-items-to-the-control.md)。  一个列表控件的示例。报表的视图。在 Windows 95 和 Windows 98 Explorer 的详细信息视图提供。  第一列列出文件夹文件、图标和标签。  其他列中列出文件大小，文件类型，最后更新日期，依此类推。  
+ When a list control is in report view, columns are displayed, providing a method of organizing the various subitems of each list control item. This organization is implemented with a one-to-one correspondence between a column in the list control and the associated subitem of the list control item. For more information on subitems, see [Adding Items to the Control](../mfc/adding-items-to-the-control.md). An example of a list control in report view is provided by the Details view in Windows 95 and Windows 98 Explorer. The first column lists folder, file icons, and labels. Other columns list file size, file type, date last modified, and so on.  
   
- 即使该列可以随时添加到某个 List 控件中，列可见，只有当控件具有将置的 `LVS_REPORT` 样式位时。  
+ Even though columns can be added to a list control at any time, the columns are visible only when the control has the `LVS_REPORT` style bit turned on.  
   
- 每个列的列标记并允许用户调整列关联的标题项 \(参见 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)\) 对象。  
+ Each column has an associated header item (see [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) object that labels the column and allows users to resize the column.  
   
- 如果列表控件支持报表视图，需要向每条可能的子项的列在列表控件项。  通过使用 [LV\_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) 结构然后调用添加列。[InsertColumn](../Topic/CListCtrl::InsertColumn.md) 在添加必要的列后面 \(有时引用标题项\)，则可以重新排列它们。属于嵌入的标题控件的成员函数和样式。  有关更多信息，请参见 [顺序标题控件的项](../mfc/ordering-items-in-the-header-control.md)。  
+ If your list control supports a report view, you need to add a column for each possible subitem in a list control item. Add a column by preparing an [LV_COLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) structure and then making a call to [InsertColumn](../mfc/reference/clistctrl-class.md#insertcolumn). After adding the necessary columns (sometimes referred to as header items), you can reorder them using member functions and styles belonging to the embedded header control. For more information, see [Ordering Items in the Header Control](../mfc/ordering-items-in-the-header-control.md).  
   
 > [!NOTE]
->  如果列表控件创建具有 **LVS\_NOCOLUMNHEADER** 样式，任何尝试插入一列将被忽略。  
+>  If the list control is created with the **LVS_NOCOLUMNHEADER** style, any attempt to insert columns will be ignored.  
   
-## 请参阅  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,111 +1,129 @@
 ---
-title: "MFC ActiveX 控件：添加常用属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BackColor 属性"
-  - "ForeColor 属性"
-  - "前景色"
-  - "前景色, ActiveX 控件"
-  - "MFC ActiveX 控件, 属性"
-  - "属性 [MFC], 添加常用"
+title: 'MFC ActiveX Controls: Adding Stock Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- BackColor property [MFC]
+- properties [MFC], adding stock
+- ForeColor property [MFC]
+- MFC ActiveX controls [MFC], properties
+- foreground colors, ActiveX controls
+- foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：添加常用属性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4ed7e3d92a0881420e49f95142dfe2fb08e59c07
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-常用属性与自定义属性不同它们由类已经实现 `COleControl`。  `COleControl` 包含预定义的成员函数共同支持的控件属性。  某些包含通用控件的标题和前景色和背景色。  有关其他常用属性的信息后，请参见 [添加属性向导支持的常用属性](#_core_stock_properties_supported_by_classwizard) 本文。  常用属性的计划映射条目按 **DISP\_STOCKPROP**始终前缀。  
+---
+# MFC ActiveX Controls: Adding Stock Properties
+Stock properties differ from custom properties in that they are already implemented by the class `COleControl`. `COleControl` contains predefined member functions that support common properties for the control. Some common properties include the control's caption and the foreground and background colors. For information on other stock properties, see [Stock Properties Supported by the Add Property Wizard](#_core_stock_properties_supported_by_classwizard) later in this article. The dispatch map entries for stock properties are always prefixed by **DISP_STOCKPROP**.  
   
- 本文介绍如何添加常用属性 \(在此例，标题\) 为 ActiveX 控件使用"添加属性向导并说明发生的代码更改。  主题包括：  
+ This article describes how to add a stock property (in this case, Caption) to an ActiveX control using the Add Property Wizard and explains the resulting code modifications. Topics include:  
   
--   [使用添加属性向导的自定义属性](#_core_using_classwizard_to_add_a_stock_property)  
+-   [Using the Add Property Wizard to add a stock property](#_core_using_classwizard_to_add_a_stock_property)  
   
--   [添加属性向导"提供常用属性更改](#_core_classwizard_changes_for_stock_properties)  
+-   [Add Property Wizard changes for stock properties](#_core_classwizard_changes_for_stock_properties)  
   
--   [添加属性向导支持的常用属性](#_core_stock_properties_supported_by_classwizard)  
+-   [Stock properties supported by the Add Property Wizard](#_core_stock_properties_supported_by_classwizard)  
   
--   [常用属性和通知](#_core_stock_properties_and_notification)  
+-   [Stock properties and notification](#_core_stock_properties_and_notification)  
   
--   [颜色属性](#_core_color_properties)  
+-   [Color properties](#_core_color_properties)  
   
     > [!NOTE]
-    >  Visual Basic 自定义控件通常具有属性 \(顶部，左侧，宽度、高度、对齐、、、、TabStop TabIndex 标记名称和父级。  ActiveX 控件容器，但是，将负责实现这些控件的属性。和 ActiveX 控件不应支持这些属性。  
+    >  Visual Basic custom controls typically have properties such as Top, Left, Width, Height, Align, Tag, Name, TabIndex, TabStop, and Parent. ActiveX control containers, however, are responsible for implementing these control properties and therefore ActiveX controls should not support these properties.  
   
-##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> 使用添加属性向导的自定义属性  
- 因为属性的 `COleControl`支持，会自动处理添加常用属性比添加自定义属性需要更少的代码。  下面的过程演示添加股票的 caption 属性到 ActiveX 控件框架，也可用于添加其他常用属性。  标题并重写选定的常用属性名。  
+##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> Using the Add Property Wizard to Add a Stock Property  
+ Adding stock properties requires less code than adding custom properties because support for the property is handled automatically by `COleControl`. The following procedure demonstrates adding the stock Caption property to an ActiveX control framework and can also be used to add other stock properties. Substitute the selected stock property name for Caption.  
   
-#### 使用"添加属性向导，将库存 caption 属性  
+#### To add the stock Caption property using the Add Property Wizard  
   
-1.  加载控件项目。  
+1.  Load your control's project.  
   
-2.  在类视图中，展开控件的库节点。  
+2.  In Class View, expand the library node of your control.  
   
-3.  右击控件的接口节点 \(库节点的第二个节点\) ，打开快捷菜单。  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  从快捷菜单中，单击**“添加”**，然后单击**“添加属性”**。  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     这会打开 [添加属性向导](../ide/names-add-property-wizard.md)。  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  在 **属性名** 框中，单击 **标题**。  
+5.  In the **Property Name** box, click **Caption**.  
   
-6.  单击**“完成”**。  
+6.  Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_stock_properties"></a> 添加属性向导"提供常用属性更改  
- 由于支持 `COleControl` 常用属性，添加属性向导既不将类声明更改；它将属性添加到计划映射。  添加属性向导以下行添加到的控件映射计划，实现 \(.cpp\) 文件中：  
+##  <a name="_core_classwizard_changes_for_stock_properties"></a> Add Property Wizard Changes for Stock Properties  
+ Because `COleControl` supports stock properties, the Add Property Wizard does not change the class declaration in any way; it adds the property to the dispatch map. The Add Property Wizard adds the following line to the dispatch map of the control, which is located in the implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-properties_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]  
   
- 下列代码行添加到控件的 .IDL 文件：  
+ The following line is added to your control's interface description (.IDL) file:  
   
- [!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-properties_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]  
   
- 此行将标题属性特定 ID.  请注意属性绑定，再修改值之前从数据库请求权限。  
+ This line assigns the Caption property a specific ID. Notice that the property is bindable and will request permission from the database before modifying the value.  
   
- 这使标题属性可用控件的用户。  若要使用常用属性的值，请访问基类的 `COleControl` 成员变量或成员函数。  有关这些变量成员和成员函数的更多信息，请参见下部分，"添加属性向导"支持的常用属性。  
+ This makes the Caption property available to users of your control. To use the value of a stock property, access a member variable or member function of the `COleControl` base class. For more information on these member variables and member functions, see the next section, Stock Properties Supported by the Add Property Wizard.  
   
-##  <a name="_core_stock_properties_supported_by_classwizard"></a> 添加属性向导支持的常用属性  
- `COleControl` 类提供了常用属性。  可以使用添加"添加属性向导"您需的属性。  
+##  <a name="_core_stock_properties_supported_by_classwizard"></a> Stock Properties Supported by the Add Property Wizard  
+ The `COleControl` class provides nine stock properties. You can add the properties you want by using the Add Property Wizard.  
   
-|Property|计划映射项|如何访问此值|  
-|--------------|-----------|------------|  
-|**外观**|**DISP\_STOCKPROP\_APPEARANCE \(\)**|访问的值为 **m\_sAppearance**。|  
-|`BackColor`|**DISP\_STOCKPROP\_BACKCOLOR \(\)**|值访问通过调用 `GetBackColor`。|  
-|`BorderStyle`|**DISP\_STOCKPROP\_BORDERSTYLE \(\)**|访问的值为 **m\_sBorderStyle**。|  
-|**Caption**|**DISP\_STOCKPROP\_CAPTION \(\)**|值访问通过调用 `InternalGetText`。|  
-|**Enabled**|**DISP\_STOCKPROP\_ENABLED \(\)**|访问的值为 **m\_bEnabled**。|  
-|**字体**|**DISP\_STOCKPROP\_FONT \(\)**|用于条件参见文章 [MFC ActiveX 控件：使用字体](../mfc/mfc-activex-controls-using-fonts.md)。|  
-|`ForeColor`|**DISP\_STOCKPROP\_FORECOLOR \(\)**|值访问通过调用 `GetForeColor`。|  
-|**hWnd**|**DISP\_STOCKPROP\_HWND\( \)**|访问值为 `m_hWnd`。|  
-|**Text**|**DISP\_STOCKPROP\_TEXT\( \)**|值访问通过调用 `InternalGetText`。  此属性与 **标题**，除属性名。|  
-|**ReadyState**|**DISP\_STOCKPROP\_READYSTATE\(\)**|访问的值作为 m\_lReadyState 或 `GetReadyState`|  
+|Property|Dispatch map entry|How to access value|  
+|--------------|------------------------|-------------------------|  
+|**Appearance**|**DISP_STOCKPROP_APPEARANCE( )**|Value accessible as **m_sAppearance**.|  
+|`BackColor`|**DISP_STOCKPROP_BACKCOLOR( )**|Value accessible by calling `GetBackColor`.|  
+|`BorderStyle`|**DISP_STOCKPROP_BORDERSTYLE( )**|Value accessible as **m_sBorderStyle**.|  
+|**Caption**|**DISP_STOCKPROP_CAPTION( )**|Value accessible by calling `InternalGetText`.|  
+|**Enabled**|**DISP_STOCKPROP_ENABLED( )**|Value accessible as **m_bEnabled**.|  
+|**Font**|**DISP_STOCKPROP_FONT( )**|See the article [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md) for usage.|  
+|`ForeColor`|**DISP_STOCKPROP_FORECOLOR( )**|Value accessible by calling `GetForeColor`.|  
+|**hWnd**|**DISP_STOCKPROP_HWND( )**|Value accessible as `m_hWnd`.|  
+|**Text**|**DISP_STOCKPROP_TEXT( )**|Value accessible by calling `InternalGetText`. This property is the same as **Caption**, except for the property name.|  
+|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Value accessible as m_lReadyState or `GetReadyState`|  
   
-##  <a name="_core_stock_properties_and_notification"></a> 常用属性和通知  
- 最常用属性可以重写通知的函数。  例如，每当 `BackColor`，属性已更改，则 `OnBackColorChanged` 函数 \(控件类的成员函数\) 调用。  默认实现\(在 `COleControl` 中\)调用`InvalidateControl`。  重写此函数是要执行其他操作来响应此情况。  
+##  <a name="_core_stock_properties_and_notification"></a> Stock Properties and Notification  
+ Most stock properties have notification functions that can be overridden. For example, whenever the `BackColor` property is changed, the `OnBackColorChanged` function (a member function of the control class) is called. The default implementation (in `COleControl`) calls `InvalidateControl`. Override this function if you want to take additional actions in response to this situation.  
   
-##  <a name="_core_color_properties"></a> 颜色属性  
- 在绘制控件时，可以使用常用 `ForeColor` 和 `BackColor` 属性或自己的自定义颜色属性。  若要使用颜色属性，请调用成员函数。[COleControl::TranslateColor](../Topic/COleControl::TranslateColor.md) 此函数参数为 Color 属性值和一选项调色板句柄。  返回值是可传递给函数，如 `SetTextColor` GDI 和 `CreateSolidBrush`的 **COLORREF** 值。  
+##  <a name="_core_color_properties"></a> Color Properties  
+ You can use the stock `ForeColor` and `BackColor` properties, or your own custom color properties, when painting the control. To use a color property, call the [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) member function. The parameters of this function are the value of the color property and an optional palette handle. The return value is a **COLORREF** value that can be passed to GDI functions, such as `SetTextColor` and `CreateSolidBrush`.  
   
- 将 `ForeColor` 和 `BackColor` 属性的颜色值通过调用 `GetForeColor` 或 `GetBackColor` 函数，您可以分别访问  
+ The color values for the stock `ForeColor` and `BackColor` properties are accessed by calling either the `GetForeColor` or the `GetBackColor` function, respectively.  
   
- 在绘制控件时，下面的示例演示如何使用两种颜色属性。  该临时变量 **COLORREF** 和 `CBrush` 对象用调用 `TranslateColor`:一个使用 `ForeColor` 和其他 `BackColor` 属性使用。  临时 `CBrush` 对象用于绘制的矩形，然后控件使用 `ForeColor` 属性，并且，设置文本颜色。  
+ The following example demonstrates using these two color properties when painting a control. It initializes a temporary **COLORREF** variable and a `CBrush` object with calls to `TranslateColor`: one using the `ForeColor` property and the other using the `BackColor` property. A temporary `CBrush` object is then used to paint the control's rectangle, and the text color is set using the `ForeColor` property.  
   
- [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-properties_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
-## 请参阅  
- [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控件：属性](../mfc/mfc-activex-controls-properties.md)   
- [MFC ActiveX 控件：方法](../mfc/mfc-activex-controls-methods.md)   
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

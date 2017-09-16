@@ -1,42 +1,61 @@
 ---
-title: "子窗口通知消息处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ChildWindow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "子窗口, 消息"
-  - "消息处理程序 [C++]"
-  - "消息处理 [C++], 子窗口消息处理程序"
-  - "通知, 子窗口消息"
-  - "窗口 [C++], 消息处理程序"
+title: Child Window Notification Message Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ChildWindow
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- message handling [MFC], child window message handlers
+- notifications [MFC], child window messages
+- windows [MFC], message handlers
+- child windows [MFC], messages
 ms.assetid: fddfdd08-8ecf-4f84-8b45-5a84616aaa8d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 子窗口通知消息处理程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4f3d61f74a010904bd21636f0d0781b231103925
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-具有子窗口通知消息五种类别：  
+---
+# <a name="child-window-notification-message-handlers"></a>Child Window Notification Message Handlers
+There are five categories of child window notification messages:  
   
-|类别|说明|  
-|--------|--------|  
-|[一般控件处理程序](../../mfc/reference/generic-control-handler.md)|一般控件代码通知的处理程序。|  
-|[用户按钮处理程序](../../mfc/reference/user-button-handlers.md)|用户按钮通知代码的处理程序。|  
-|[组合框处理程序](../../mfc/reference/combo-box-handlers.md)|组合框代码通知的处理程序。|  
-|[编辑控件处理程序](../../mfc/reference/edit-control-handlers.md)|编辑控件代码通知的处理程序。|  
-|[列表框处理程序](../../mfc/reference/list-box-handlers.md)|列表框代码通知的处理程序。|  
+|Category|Description|  
+|--------------|-----------------|  
+|[Generic Control Handler](../../mfc/reference/generic-control-handler.md)|Handler for generic control notification codes.|  
+|[User Button Handlers](../../mfc/reference/user-button-handlers.md)|Handlers for user button notification codes.|  
+|[Combo Box Handlers](../../mfc/reference/combo-box-handlers.md)|Handlers for combo box notification codes.|  
+|[Edit Control Handlers](../../mfc/reference/edit-control-handlers.md)|Handlers for edit control notification codes.|  
+|[List Box Handlers](../../mfc/reference/list-box-handlers.md)|Handlers for list box notification codes.|  
   
-## 请参阅  
- [消息映射](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
+
+

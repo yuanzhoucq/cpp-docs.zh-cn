@@ -1,5 +1,5 @@
 ---
-title: "&lt;complex&gt; 函数 | Microsoft 文档"
+title: '&lt;complex&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,14 +28,33 @@ f1_keywords:
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
 caps.latest.revision: 14
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 928ed213f4605ea1b39d2d5cf92673bc055aaf4a
+helpviewer_keywords:
+- std::abs [C++]
+- std::arg [C++]
+- std::conj [C++]
+- std::cos [C++]
+- std::cosh [C++]
+- std::exp [C++]
+- std::imag [C++]
+- std::log [C++]
+- std::log10
+- std::norm [C++]
+- std::polar [C++]
+- std::pow [C++]
+- std::real [C++]
+- std::sin [C++]
+- std::sinh [C++]
+- std::sqrt [C++]
+- std::tan [C++]
+- std::tanh [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14714c92087492199c47580144dfbd64afece59a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函数
+# <a name="ltcomplexgt-functions"></a>&lt;complex&gt; functions
 ||||  
 |-|-|-|  
 |[abs](#abs)|[arg](#arg)|[conj](#conj)|
@@ -46,24 +65,24 @@ ms.lasthandoff: 04/19/2017
 |[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|  
   
 ##  <a name="abs"></a>  abs  
- 计算复数的模数。  
+ Calculates the modulus of a complex number.  
   
 ```  
 template <class Type>  
 Type abs(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定取模的复数。  
+ The complex number whose modulus is to be determined.  
   
-### <a name="return-value"></a>返回值  
- 复数取模。  
+### <a name="return-value"></a>Return Value  
+ The modulus of a complex number.  
   
-### <a name="remarks"></a>备注  
- 复数的*取模*是测量表示复数矢量的长度。 复数取模                         a + bi 为                         sqrt (a<sup>2</sup> + b<sup>2</sup>)，写作                        &#124；a + bi&#124；。 复数的 *norm*                          a + bi 为 (a<sup>2</sup> + b<sup>2</sup>)，因此复数的取模是其 norm 的平方根。  
+### <a name="remarks"></a>Remarks  
+ The *modulus* of a complex number is a measure of the length of the vector representing the complex number. The modulus of a complex number                         a + bi is                         sqrt (a<sup>2</sup> + b<sup>2</sup>),  written                         &#124;a + bi&#124;. The *norm* of a complex number                         a + bi is (a<sup>2</sup> + b<sup>2</sup>), so the modulus of a complex number is the square root of its norm.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_abs.cpp  
@@ -129,24 +148,24 @@ The complex numbers c2 & c3 have the same principal arguments.
 ```  
   
 ##  <a name="arg"></a>  arg  
- 从复数中提取自变量。  
+ Extracts the argument from a complex number.  
   
 ```  
 template <class Type>  
 Type arg(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定参数的复数。  
+ The complex number whose argument is to be determined.  
   
-### <a name="return-value"></a>返回值  
- 复数的参数。  
+### <a name="return-value"></a>Return Value  
+ The argument of the complex number.  
   
-### <a name="remarks"></a>备注  
- *参数*是复杂向量可使与复平面中的正实际轴的角度。 对于复数*a + bi*，该参数是否等于反正切值 (*b / a*)。 该角度从正实轴以逆时针方向测量时为正值，以顺时针方向测量时则为负值。 主体的值为大于-pi 且小于于或等于 + pi。  
+### <a name="remarks"></a>Remarks  
+ The *argument* is the angle that the complex vector makes with the positive real axis in the complex plane. For a complex number *a + bi*, the argument is equal to arctan(*b/a*). The angle has a positive sense when measured in a counterclockwise direction from the positive real axis and a negative sense when measured in a clockwise direction. The principal values are greater than -pi and less than or equal to +pi.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_arg.cpp  
@@ -212,24 +231,24 @@ The complex numbers c2 & c3 have the same principal arguments.
 ```  
   
 ##  <a name="conj"></a>  conj  
- 返回复数的复数共轭。  
+ Returns the complex conjugate of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> conj(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要返回的复共轭的复数。  
+ The complex number whose complex conjugate is being returned.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的复共轭。  
+### <a name="return-value"></a>Return Value  
+ The complex conjugate of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 复数的复数共轭*a + bi*是*a-bi*。 复数及其共轭的乘积是数 *a*2 + *b*2 的 norm。  
+### <a name="remarks"></a>Remarks  
+ The complex conjugate of a complex number *a + bi* is *a - bi*. The product of a complex number and its conjugate is the norm of the number *a*2 + *b*2.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_conj.cpp  
@@ -283,28 +302,28 @@ The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```  
   
 ##  <a name="cos"></a>  cos  
- 返回复数的余弦值。  
+ Returns the cosine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> cos(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其余弦的复数。  
+ The complex number whose cosine is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的余弦的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the cosine of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 定义复余弦的标识：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex cosines:  
   
  cos ( *z*) = (1/2)\*( exp ( *iz*) + exp (- *iz*) )  
   
  cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_cos.cpp  
@@ -370,28 +389,28 @@ The complex components cos (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="cosh"></a>  cosh  
- 返回复数的双曲余弦值。  
+ Returns the hyperbolic cosine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> cosh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其双曲余弦的复数。  
+ The complex number whose hyperbolic cosine is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的双曲余弦的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the hyperbolic cosine of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 定义复双曲余弦的标识：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex hyperbolic cosines:  
   
  cos ( *z*) = (1/2)\*( exp ( *z*) + exp (- *z*) )  
   
  cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_cosh.cpp  
@@ -457,21 +476,21 @@ The complex components cosh (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="exp"></a>  exp  
- 返回复数的指数函数。  
+ Returns the exponential function of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> exp(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其指数的复数。  
+ The complex number whose exponential is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的指数的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the exponential of the input complex number.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_exp.cpp  
@@ -525,24 +544,24 @@ int main() {
 ```  
   
 ##  <a name="imag"></a>  imag  
- 提取复数的虚分量。  
+ Extracts the imaginary component of a complex number.  
   
 ```  
 template <class Type>  
 Type imag(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要提取其实部的复数。  
+ The complex number whose real part is to be extracted.  
   
-### <a name="return-value"></a>返回值  
- 作为全局函数的复数的虚部。  
+### <a name="return-value"></a>Return Value  
+ The imaginary part of the complex number as a global function.  
   
-### <a name="remarks"></a>备注  
- 此模板函数无法用于修改复数的实部。 要更改实部，必须为新复数分配分量值。  
+### <a name="remarks"></a>Remarks  
+ This template function cannot be used to modify the real part of the complex number. To change the real part, a new complex number must be assigned the component value.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complexc_imag.cpp  
@@ -573,24 +592,24 @@ The imaginary part of c1 is imag ( c1 ) = 3.
 ```  
   
 ##  <a name="log"></a>  log  
- 返回复数的自然对数。  
+ Returns the natural logarithm of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> log(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其自然对数的复数。  
+ The complex number whose natural logarithm is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的自然对数的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the natural logarithm of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 沿负实轴的分支剪切。  
+### <a name="remarks"></a>Remarks  
+ The branch cuts are along the negative real axis.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_log.cpp  
@@ -639,24 +658,24 @@ int main() {
 ```  
   
 ##  <a name="log10"></a>  log10  
- 返回复数的以 10 为底的对数。  
+ Returns the base 10 logarithm of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> log10(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定以 10 为底的对数的复数。  
+ The complex number whose base 10 logarithm is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数以 10 为底的对数的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the base 10 logarithm of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 沿负实轴的分支剪切。  
+### <a name="remarks"></a>Remarks  
+ The branch cuts are along the negative real axis.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_log10.cpp  
@@ -705,24 +724,24 @@ int main() {
 ```  
   
 ##  <a name="norm"></a>  norm  
- 提取复数的范数。  
+ Extracts the norm of a complex number.  
   
 ```  
 template <class Type>  
 Type norm(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其 norm 的复数。  
+ The complex number whose norm is to be determined.  
   
-### <a name="return-value"></a>返回值  
- 复数的 norm。  
+### <a name="return-value"></a>Return Value  
+ The norm of a complex number.  
   
-### <a name="remarks"></a>备注  
- 复数 *a + bi* 的 norm 为 *(a*<sup>2</sup> *+ b*<sup>2</sup>*)。* 复数的 norm 是其取模的平方。 复数的取模是测量表示复数矢量的长度。 复数 *a + bi* 的取模为 `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)，* 写作 *&#124；a + bi&#124；。*  
+### <a name="remarks"></a>Remarks  
+ The norm of a complex number *a + bi* is *(a*<sup>2</sup> *+ b*<sup>2</sup>*).* The norm of a complex number is the square of its modulus. The modulus of a complex number is a measure of the length of the vector representing the complex number. The modulus of a complex number *a + bi* is `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*),* written *&#124;a + bi&#124;.*  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_norm.cpp  
@@ -784,27 +803,27 @@ The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```  
   
 ##  <a name="polar"></a>  polar  
- 返回以笛卡尔坐标形式表示的，对应于指定模数和自变量的复数。  
+ Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.  
   
 ```  
 template <class Type>  
 complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  *_Modulus*  
- 所输入的复数取模。  
+ The modulus of the complex number being input.  
   
  *_Argument*  
- 所输入的复数的参数。  
+ The argument of the complex number being input.  
   
-### <a name="return-value"></a>返回值  
- 极坐标视图中指定的复数的笛卡尔视图。  
+### <a name="return-value"></a>Return Value  
+ Cartesian form of the complex number specified in polar form.  
   
-### <a name="remarks"></a>备注  
- 复数的极坐标图形式提供取模*r*和自变量*p*，这些参数将与实部和虚部的笛卡尔组件和*b*公式通过 = r \* cos *p*和*b* = *r* \* sin *p*。  
+### <a name="remarks"></a>Remarks  
+ The polar form of a complex number provides the modulus *r* and the argument *p*, where these parameters are related to the real and imaginary Cartesian components *a* and *b* by the equations *a* = r \* cos *p* and *b* = *r* \* sin *p*.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_polar.cpp  
@@ -857,7 +876,7 @@ Argument of c2 is recovered from c2 using:
 ```  
   
 ##  <a name="pow"></a>  pow  
- 计算通过进行底数为复数的另一个复数次幂运算获得的复数。  
+ Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.  
   
 ```  
 template <class Type>  
@@ -873,22 +892,22 @@ template <class Type>
 complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `_Base`  
- 复数或属于复数参数类型的数是基数由成员函数升幂的基数。  
+ The complex number or number that is of the parameter type for the complex number that is the base to be raised to a power by the member function.  
   
  *_Power*  
- 整数或复数或属于复数参数类型的数是由成员函数升底数的幂。  
+ The integer or complex number or number that is of the parameter type for the complex number that is the power that the base is to be raised to by the member function.  
   
-### <a name="return-value"></a>返回值  
- 通过提升指定幂的指定基数获取复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number obtained by raising the specified base to the specified power.  
   
-### <a name="remarks"></a>备注  
- 这些函数各自有效地将这两个操作转换为返回类型，并将转换后的 **left** 返回到幂 **right**。  
+### <a name="remarks"></a>Remarks  
+ The functions each effectively convert both operands to the return type, and then return the converted **left** to the power **right**.  
   
- 沿负实轴的分支剪切。  
+ The branch cut is along the negative real axis.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_pow.cpp  
@@ -998,24 +1017,24 @@ The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```  
   
 ##  <a name="real"></a>  real  
- 提取复数的实分量。  
+ Extracts the real component of a complex number.  
   
 ```  
 template <class Type>  
 Type real(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要提取其实部的复数。  
+ The complex number whose real part is to be extracted.  
   
-### <a name="return-value"></a>返回值  
- 作为全局函数的复数的实部。  
+### <a name="return-value"></a>Return Value  
+ The real part of the complex number as a global function.  
   
-### <a name="remarks"></a>备注  
- 此模板函数无法用于修改复数的实部。 要更改实部，必须为新复数分配分量值。  
+### <a name="remarks"></a>Remarks  
+ This template function cannot be used to modify the real part of the complex number. To change the real part, a new complex number must be assigned the component value.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_real.cpp  
@@ -1046,28 +1065,28 @@ The imaginary part of c1 is imag ( c1 ) = 3.
 ```  
   
 ##  <a name="sin"></a>  sin  
- 返回复数的正弦值。  
+ Returns the sine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> sin(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其正弦的复数。  
+ The complex number whose sine is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的正弦的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the sine of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 定义复正弦的标识：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex sines:  
   
  sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )  
   
  sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_sin.cpp  
@@ -1133,28 +1152,28 @@ The complex components sin (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="sinh"></a>  sinh  
- 返回复数的双曲正弦值。  
+ Returns the hyperbolic sine of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> sinh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其双曲正弦的复数。  
+ The complex number whose hyperbolic sine is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的双曲正弦的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the hyperbolic sine of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 定义复双曲正弦的标识：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex hyperbolic sines:  
   
  sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )  
   
  sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_sinh.cpp  
@@ -1220,28 +1239,28 @@ The complex components sinh (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="sqrt"></a>  sqrt  
- 计算复数的平方根。  
+ Calculates the square root of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> sqrt(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 将查找其平方根的复数。  
+ The complex number whose square root is to be found.  
   
-### <a name="return-value"></a>返回值  
- 复数的平方根。  
+### <a name="return-value"></a>Return Value  
+ The square root of a complex number.  
   
-### <a name="remarks"></a>备注  
- 平方根将在半开放间隔中具有一个阶段角度 (-pi/2，pi/2]。  
+### <a name="remarks"></a>Remarks  
+ The square root will have a phase angle in the half-open interval (-pi/2, pi/2].  
   
- 沿负实轴的复平面中的分支剪切。  
+ The branch cuts in the complex plane are along the negative real axis.  
   
- 复数的平方根将具有输入数的平方根的取模，以及输入数一半数的参数。  
+ The square root of a complex number will have a modulus that is the square root of the input number and an argument that is one-half that of the input number.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_sqrt.cpp  
@@ -1293,26 +1312,26 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
 ```  
   
 ##  <a name="tan"></a> tan  
- 返回复数的正切值。  
+ Returns the tangent of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> tan(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其正切的复数。  
+ The complex number whose tangent is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的正切的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the tangent of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 定义复正切的标识：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex cotangent:  
   
  tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_tan.cpp  
@@ -1378,26 +1397,26 @@ The complex components tan (vci), where abs (vci) = 1
 ```  
   
 ##  <a name="tanh"></a>  tanh  
- 返回复数的双曲正切值。  
+ Returns the hyperbolic tangent of a complex number.  
   
 ```  
 template <class Type>  
 complex<Type> tanh(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 要确定其双曲正切的复数。  
+ The complex number whose hyperbolic tangent is being determined.  
   
-### <a name="return-value"></a>返回值  
- 输入复数的双曲正切的复数。  
+### <a name="return-value"></a>Return Value  
+ The complex number that is the hyperbolic tangent of the input complex number.  
   
-### <a name="remarks"></a>备注  
- 定义复双曲余切的标识：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the complex hyperbolic cotangent:  
   
  tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_tanh.cpp  
@@ -1462,7 +1481,7 @@ The complex components tanh (vci), where abs (vci) = 1
 (-0.761594,-8.68604e-014)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<complex>](../standard-library/complex.md)
 
 

@@ -1,40 +1,59 @@
 ---
-title: "Rich Edit 控件中的当前选定内容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 类, 当前选定内容"
-  - "CRichEditCtrls 中的当前选定内容"
-  - "Rich Edit 控件, 当前选定内容"
-  - "选择, CRichEditCtrl 中的当前选定内容"
+title: Current Selection in a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- current selection in CRichEditCtrls
+- CRichEditCtrl class [MFC], current selection in
+- rich edit controls [MFC], current selection in
+- selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Rich Edit 控件中的当前选定内容
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0f40011dcdc9e4153341a4b91ffef3a184db53c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-用户可以选择中丰富的编辑控件 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 的文本。使用鼠标和键盘。  当前选定范围是选定的字符或插入点位置的字符均未选中。  应用程序可以获取有关当前选择的信息，将当前选择，确定当前选择发生更改并显示或隐藏选定突出显示。  
+---
+# <a name="current-selection-in-a-rich-edit-control"></a>Current Selection in a Rich Edit Control
+The user can select text in a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) by using the mouse or the keyboard. The current selection is the range of selected characters, or the position of the insertion point if no characters are selected. An application can get information about the current selection, set the current selection, determine when the current selection changes, and show or hide the selection highlight.  
   
- 若要确定在丰富的编辑控件中当前选择，请使用 [GetSel](../Topic/CRichEditCtrl::GetSel.md) 成员函数。  若要将当前选择，请使用 [SetSel](../Topic/CRichEditCtrl::SetSel.md) 成员函数。  [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 结构来提供这些函数指定字符范围。  若要检索有关当前选择内容的信息，可以使用 [GetSelectionType](../Topic/CRichEditCtrl::GetSelectionType.md) 成员函数。  
+ To determine the current selection in a rich edit control, use the [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) member function. To set the current selection, use the [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) member function. The [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure is used with these functions to specify a range of characters. To retrieve information about the contents of the current selection, you can use the [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) member function.  
   
- 默认情况下，中，在元素获取和失去焦点时，丰富的编辑控件显示和隐藏选定突出显示。  使用 [HideSelection](../Topic/CRichEditCtrl::HideSelection.md) 成员函数，则可以随时显示或隐藏选定突出显示。  例如，应用程序可能会提供搜索"对话框查找中丰富的编辑控件的文本。  应用程序可以选择文本匹配，并且无需关闭对话框，在这种情况下，它必须使用 `HideSelection` 显示选定的情况下。  
+ By default, a rich edit control shows and hides the selection highlight when it gains and loses the focus. You can show or hide the selection highlight at any time by using the [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) member function. For example, an application might provide a Search dialog box to find text in a rich edit control. The application might select matching text without closing the dialog box, in which case it must use `HideSelection` to highlight the selection.  
   
- 若要获取中丰富的编辑控件的选定文本，请使用 [GetSelText](../Topic/CRichEditCtrl::GetSelText.md) 成员函数。  指定的文本复制到字符数组。  必须确保数组足以容纳选定的文本以及将终止空字符。  
+ To get the selected text in a rich edit control, use the [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) member function. The text is copied to the specified character array. You must ensure that the array is large enough to hold the selected text plus a terminating null character.  
   
- 可以为中丰富的编辑控件的字符串搜索。使用 [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) 结构对该函数指定文本范围搜索和字符串搜索的 [FindText](../Topic/CRichEditCtrl::FindText.md) 成员函数。  也可以指定这些选项。搜索是否区分大小写。  
+ You can search for a string in a rich edit control by using the [FindText](../mfc/reference/cricheditctrl-class.md#findtext) member function The [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure used with this function specifies the text range to search and the string to search for. You can also specify such options as whether the search is case-sensitive.  
   
-## 请参阅  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控件](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

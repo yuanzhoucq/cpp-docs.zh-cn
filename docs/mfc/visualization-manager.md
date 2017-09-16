@@ -1,86 +1,105 @@
 ---
-title: "可视化管理器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "可视化管理器"
+title: Visualization Manager | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 可视化管理器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 263fd911d68d6b179ee110594e4b8ed855b69473
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-视觉管理器是对象控件的整个应用程序的外观。  是可将应用程序中的任何绘图代码的单个类。  MFC 库包括几视觉管理器。  如果要创建自定义视图应用程序，您也可以创建自己视觉管理器。  当不同的视觉管理器启用时，下面的图像演示同一应用程序：  
+---
+# <a name="visualization-manager"></a>Visualization Manager
+The visual manager is an object that controls the appearance of a whole application. It acts as a single class where you can put all the drawing code for your application. The MFC Library includes several visual managers. You can also create your own visual manager if you want to create a custom view for your application. The following images show the same application when different visual managers are enabled:  
   
- ![由 CMFCVisualManagerWindows 呈现的 MyApp](../Image/VMWindows.png "VMWindows")  
-使用 CMFCVisualManagerWindows 视觉管理器中名为 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows")  
+MyApp that uses the CMFCVisualManagerWindows visual manager  
   
- ![由 CMFCVisualManagerVS2005 呈现的 MyApp](../mfc/media/vmvs2005.png "VMVS2005")  
-使用 CMFCVisualManagerVS2005 视觉管理器中名为 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005")  
+MyApp that uses the CMFCVisualManagerVS2005 visual manager  
   
- ![由 CMFCVisualManagerOfficeXP 呈现的 MyApp](../mfc/media/vmofficexp.png "VMOfficeXP")  
-使用 CMFCVisualManagerOfficeXP 视觉管理器中名为 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp")  
+MyApp that uses the CMFCVisualManagerOfficeXP visual manager  
   
- ![由 CMFCVisualManagerOffice2003 呈现的 MyApp](../mfc/media/vmoffice2003.png "VMOffice2003")  
-使用 CMFCVisualManagerOffice2003 视觉管理器中名为 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003")  
+MyApp that uses the CMFCVisualManagerOffice2003 visual manager  
   
- ![由 CMFCVisualManagerOffice2007 呈现的 MyApp](../mfc/media/msoffice2007.png "MSOffice2007")  
-使用 CMFCVisualManagerOffice2007 视觉管理器中名为 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007")  
+MyApp that uses the CMFCVisualManagerOffice2007 visual manager  
   
- 默认情况下，虚拟管理器会维护几 GUI 元素的绘图代码。  若要提供自定义 UI 元素，您需要重写虚拟管理器相关的绘制方法。  有关这些方法列表，请参见 [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md)。  可以重写的自定义外观的方法是以 `OnDraw`的所有方法。  
+ By default, the visual manager maintains the drawing code for several GUI elements. To provide custom UI elements, you need to override the related drawing methods of the visual manager. For the list of these methods, see [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md). The methods that you can override to provide a custom appearance are all the methods that start with `OnDraw`.  
   
- 应用程序只能有一个 `CMFCVisualManager` 对象。  要获取指向应用程序的视觉管理器，请调用静态函数 [CMFCVisualManager::GetInstance](../Topic/CMFCVisualManager::GetInstance.md)。  由于所有虚拟管理器从 `CMFCVisualManager`继承，则 `CMFCVisualManager::GetInstance` 方法将一个指向相应的虚拟管理器，即使创建自定义虚拟管理器。  
+ Your application can have only one `CMFCVisualManager` object. To obtain a pointer to the visual manager for your application, call the static function [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Because all visual managers inherit from `CMFCVisualManager`, the `CMFCVisualManager::GetInstance` method will get a pointer to the appropriate visual manager, even if you create a custom visual manager.  
   
- 如果您希望创建自定义虚拟管理器，则必须从现有的虚拟管理器派生。  默认 `CMFCVisualManager`是从派生的类。  但是，您可以使用不同的视觉管理器，则更好类似于您的应用程序需要。  例如，在中，如果要使用 `CMFCVisualManagerOffice2007` 虚管理器，但是，若要只更改分隔符如何查找，可以从 `CMFCVisualManagerOffice2007`派生自定义类。  在这种情况下，您应覆盖绘制的分隔符只有方法。  
+ If you want to create a custom visual manager, you must derive it from a visual manager that already exists. The default class to derive from is `CMFCVisualManager`. However, you can use a different visual manager if it better resembles what you want for your application. For example, if you wanted to use the `CMFCVisualManagerOffice2007` visual manager, but wanted only to change how separators look, you could derive your custom class from `CMFCVisualManagerOffice2007`. In this scenario, you should overwrite only the methods for drawing separators.  
   
- 有两种可能的情况下用作应用程序特定虚拟管理器。  一种方法是调用 [CMFCVisualManager::SetDefaultManager](../Topic/CMFCVisualManager::SetDefaultManager.md) 方法并传入相应的虚拟管理器作为参数。  下面的代码示例演示如何将对该方法的虚拟 `CMFCVisualManagerVS2005` 管理器：  
+ There are two possible ways to use a specific visual manager for your application. One way is to call the [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) method and pass the appropriate visual manager as a parameter. The following code example shows how you would use the `CMFCVisualManagerVS2005` visual manager with this method:  
   
 ```  
-CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));  
+CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```  
   
- 另一个方式使用视觉管理器在应用程序中手动创建它。  应用程序的所有呈现将使用了这一新的视觉管理器。  但是，因为，应用程序只能有每一个 `CMFCVisualManager` 对象，您必须删除当前视觉管理器中，创建新的。  在下面的示例中，`CMyVisualManager` 是 `CMFCVisualManager`派生的自定义虚拟管理器。  以下方法根据索引将更改的视觉管理器用于查看应用程序，例如：  
+ The other way to use a visual manager in your application is to create it manually. The application will then use this new visual manager for all the rendering. However, because there can be only one `CMFCVisualManager` object per application, you will have to delete the current visual manager before you create a new one. In the following example, `CMyVisualManager` is a custom visual manager that is derived from `CMFCVisualManager`. The following method will change what visual manager is used to display your application, depending on an index:  
   
 ```  
 void CMyApp::SetSkin (int index)  
 {  
-   if (CMFCVisualManager::GetInstance() != NULL)  
-   {  
-      delete CMFCVisualManager::GetInstance();  
-   }  
-  
-   switch (index)  
-   {  
-   case DEFAULT_STYLE:  
-      // The following statement creates a new CMFCVisualManager  
-      CMFCVisualManager::GetInstance();  
-      break;  
-  
-   case CUSTOM_STYLE:  
-      new CMyVisualManager;  
-      break;  
-  
-   default:  
-      CMFCVisualManager::GetInstance();  
-      break;  
-   }  
-  
-   CMFCVisualManager::GetInstance()->RedrawAll();  
-}  
+    if (CMFCVisualManager::GetInstance() != NULL)  
+ {  
+    delete CMFCVisualManager::GetInstance();
+
+ }  
+ 
+    switch (index)  
+ {  
+    case DEFAULT_STYLE: *// The following statement creates a new CMFCVisualManager  
+    CMFCVisualManager::GetInstance();
+break;  
+ 
+    case CUSTOM_STYLE:  
+    new CMyVisualManager;  
+    break; 
+ 
+    default: 
+    CMFCVisualManager::GetInstance();
+break;  
+ }  
+ 
+    CMFCVisualManager::GetInstance()->RedrawAll();
+
+} 
 ```  
   
-## 请参阅  
- [用户界面元素](../mfc/user-interface-elements-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
  [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md)
+

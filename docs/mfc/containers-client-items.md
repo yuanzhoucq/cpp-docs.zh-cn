@@ -1,42 +1,60 @@
 ---
-title: "容器：客户端项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "客户端项和 OLE 容器"
-  - "OLE 容器, 客户端项"
+title: 'Containers: Client Items | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE containers [MFC], client items
+- client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 容器：客户端项
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5be6e1261c3592c074112c7cb99d2b8ceb43dea7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/12/2017
 
-本文解释客户项是什么并且应用程序从哪些类派生其客户项。  
+---
+# <a name="containers-client-items"></a>Containers: Client Items
+This article explains what client items are and from what classes your application should derive its client items.  
   
- 客户项是包含或引用 OLE 容器应用程序的文档的属于另一应用程序的数据项。  客户项包含潜入在文档中的数据，数据存储在通过连接的容器文档引用的其他位置。  
+ Client items are data items belonging to another application that are either contained in or referenced by an OLE container application's document. Client items whose data is contained within the document are embedded; those whose data is stored in another location referenced by the container document are linked.  
   
- 在 OLE 应用程序的文档类从类 **CDocument** 派生而不是从 [COleDocument](../mfc/reference/coledocument-class.md) `COleDocument` 类为基于 MFC 应用程序中使用文档\/视图结构从 **CDocument** 继承所需的所有功能。  `COleDocument` 还定义将文档作为 `CDocItem` 对象的集合的接口。  为添加，检索和删除该集合的元素提供一些 `COleDocument` 成员函数。  
+ The document class in an OLE application is derived from the class [COleDocument](../mfc/reference/coledocument-class.md) rather than from **CDocument**. The `COleDocument` class inherits from **CDocument** all the functionality necessary for using the document/view architecture on which MFC applications are based. `COleDocument` also defines an interface that treats a document as a collection of `CDocItem` objects. Several `COleDocument` member functions are provided for adding, retrieving, and deleting elements of that collection.  
   
- 每个容器应用程序应从 `COleClientItem` 派生至少一个类。  此类对象在 OLE 文档表示项，嵌入或链接。  除非从文档删除这些对象，不然这些对象出现在包含其文档的整个生存期中。  
+ Every container application should derive at least one class from `COleClientItem`. Objects of this class represent items, embedded or linked, in the OLE document. These objects exist for the life of the document containing them, unless they are deleted from the document.  
   
- `CDocItem` 是 `COleClientItem` 和 `COleServerItem` 的基类。  类的对象从这两各自派生，作为在 OLE 项4和客户\/服务器应用程序之间的中介。  每当新的 OLE 项添加到文档，MFC 框架添加客户端应用程序的 `COleClientItem` 的新对象 \- 对 `CDocItem` 对象的文档的集合的派生类。  
+ `CDocItem` is the base class for `COleClientItem` and `COleServerItem`. Objects of classes derived from these two act as intermediaries between the OLE item and the client and server applications, respectively. Each time a new OLE item is added to the document, the MFC framework adds a new object of your client application's `COleClientItem`-derived class to the document's collection of `CDocItem` objects.  
   
-## 请参阅  
- [容器](../mfc/containers.md)   
- [容器：复合文件](../mfc/containers-compound-files.md)   
- [容器：用户界面问题](../mfc/containers-user-interface-issues.md)   
- [容器：高级功能](../mfc/containers-advanced-features.md)   
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Compound Files](../mfc/containers-compound-files.md)   
+ [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
  [COleClientItem Class](../mfc/reference/coleclientitem-class.md)   
  [COleServerItem Class](../mfc/reference/coleserveritem-class.md)
+

@@ -1,15 +1,14 @@
 ---
-title: "shared_ptr 类 | Microsoft Docs"
+title: shared_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- shared_ptr
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
 - memory/std::shared_ptr::get
@@ -32,7 +31,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- shared_ptr class
+- std::shared_ptr [C++]
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 caps.latest.revision: 28
 author: corob-msft
@@ -52,30 +65,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a6fd55efcd0501cd794cdffa506b5cbb6b04ff5c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sharedptr-class"></a>shared_ptr 类
-将引用计数智能指针回绕在动态分配的对象周围。  
+# <a name="sharedptr-class"></a>shared_ptr Class
+Wraps a reference-counted smart pointer around a dynamically allocated object.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
 ```
 template <class T>
 class shared_ptr; 
 ```  
   
-## <a name="remarks"></a>备注  
- shared_ptr 类描述使用引用计数来管理资源的对象。 `shared_ptr` 对象有效保留一个指向其拥有的资源的指针或保留一个 null 指针。 资源可由多个 `shared_ptr` 对象拥有；当拥有特定资源的最后一个 `shared_ptr` 对象被销毁后，资源将释放。  
+## <a name="remarks"></a>Remarks  
+ The shared_ptr class describes an object that uses reference counting to manage resources. A `shared_ptr` object effectively holds a pointer to the resource that it owns or holds a null pointer. A resource can be owned by more than one `shared_ptr` object; when the last `shared_ptr` object that owns a particular resource is destroyed, the resource is freed.  
   
- 在重新分配或重置资源后，`shared_ptr` 将停止拥有该资源。  
+ A `shared_ptr` stops owning a resource when it is reassigned or reset.  
   
- 模板参数 `T` 可能是一个不完整的类型，针对某些成员函数的情况除外。  
+ The template argument `T` might be an incomplete type except as noted for certain member functions.  
   
- 当从类型 `shared_ptr<T>` 的资源指针或 `G*` 中构造 `shared_ptr<G>` 对象时，指针类型 `G*` 必须可转换为 `T*`。 如果不是这样，则代码将不进行编译。 例如：  
+ When a `shared_ptr<T>` object is constructed from a resource pointer of type `G*` or from a `shared_ptr<G>`, the pointer type `G*` must be convertible to `T*`. If it is not, the code will not compile. For example:  
   
 ```cpp  
 #include <memory>  
@@ -93,101 +106,101 @@ shared_ptr<int> sp5(new G); // error, G* not convertible to int*
 shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared_ptr<F>  
 ```  
   
- 一个 `shared_ptr` 对象拥有一个资源：  
+ A `shared_ptr` object owns a resource:  
   
--   如果已使用指向该资源的指针构造它，  
+-   if it was constructed with a pointer to that resource,  
   
--   如果已从拥有该资源的 `shared_ptr` 对象构造它，  
+-   if it was constructed from a `shared_ptr` object that owns that resource,  
   
--   如果已从指向该资源的 [weak_ptr 类](../standard-library/weak-ptr-class.md) 对象构造它，或  
+-   if it was constructed from a [weak_ptr Class](../standard-library/weak-ptr-class.md) object that points to that resource, or  
   
--   如果已使用 [shared_ptr::operator=](#op_eq) 或通过调用成员函数 [shared_ptr::reset](#reset) 将该资源的所有权分配给它。  
+-   if ownership of that resource was assigned to it, either with [shared_ptr::operator=](#op_eq) or by calling the member function [shared_ptr::reset](#reset).  
   
- 拥有资源的 `shared_ptr` 对象共享控制块。 控制块包含：  
+ The `shared_ptr` objects that own a resource share a control block. The control block holds:  
   
--   拥有该资源的 `shared_ptr` 对象的数目，  
+-   the number of `shared_ptr` objects that own the resource,  
   
--   指向该资源的 `weak_ptr` 对象的数目；  
+-   the number of `weak_ptr` objects that point to the resource,  
   
--   该资源的删除器（如果有），  
+-   the deleter for that resource if it has one,  
   
--   控制块的自定义分配器（如果有）。  
+-   the custom allocator for the control block if it has one.  
   
- 使用 null 指针初始化的 `shared_ptr` 对象具有控制块且不为空。 在 `shared_ptr` 对象释放资源之后，它将不再拥有该资源。 在 `weak_ptr` 对象释放资源之后，它将不再指向该资源。  
+ A `shared_ptr` object that is initialized by using a null pointer has a control block and is not empty. After a `shared_ptr` object releases a resource, it no longer owns that resource. After a `weak_ptr` object releases a resource, it no longer points to that resource.  
   
- 当拥有资源的 `shared_ptr` 对象的数目变为零时，可通过删除该资源或将其地址传递给删除器来释放资源，这取决于最初创建资源所有权的方式。 当拥有资源的 `shared_ptr` 对象的数目数为零，并且指向该资源的 `weak_ptr` 对象的数目为零时，可使用控制块的自定义分配器（如果有）来释放控制块。  
+ When the number of `shared_ptr` objects that own a resource becomes zero, the resource is freed, either by deleting it or by passing its address to a deleter, depending on how ownership of the resource was originally created. When the number of `shared_ptr` objects that own a resource is zero, and the number of `weak_ptr` objects that point to that resource is zero, the control block is freed, using the custom allocator for the control block if it has one.  
   
- 空 `shared_ptr` 对象不拥有任何资源和控制块。  
+ An empty `shared_ptr` object does not own any resources and has no control block.  
   
- 删除器是一个拥有成员函数 `operator()` 的函数对象。 其类型必须是可复制构造的，而且其副本构造函数和析构函数不得引发异常。 它接受一个参数（即要删除的对象）。  
+ A deleter is a function object that has a member function `operator()`. Its type must be copy constructible, and its copy constructor and destructor must not throw exceptions. It accepts one parameter, the object to be deleted.  
   
- 一些函数具有一个参数列表，此列表定义了生成的 `shared_ptr<T>` 或 `weak_ptr<T>` 对象的属性。 您可通过多种方法指定此类参数列表：  
+ Some functions take an argument list that defines properties of the resulting `shared_ptr<T>` or `weak_ptr<T>` object. You can specify such an argument list in several ways:  
   
- 无参数 - 生成的对象是一个空 `shared_ptr` 对象或者一个空 `weak_ptr` 对象。  
+ no arguments -- the resulting object is an empty `shared_ptr` object or an empty `weak_ptr` object.  
   
- `ptr` -- 一个指向要管理的资源的类型 `Other*` 的指针。 `T` 必须是完整类型。 如果函数失败（因为无法分配控制块），则将计算表达式 `delete ptr` 的结果。  
+ `ptr` -- a pointer of type `Other*` to the resource to be managed. `T` must be a complete type. If the function fails (because the control block cannot be allocated) it evaluates the expression `delete ptr`.  
   
- `ptr, dtor` - 一个指向要管理的资源的类型 `Other*` 的指针和一个针对该资源的删除器。 如果函数失败（因为无法分配控制块），则调用必须经过良好定义的 `dtor(ptr)`。  
+ `ptr, dtor` -- a pointer of type `Other*` to the resource to be managed and a deleter for that resource. If the function fails (because the control block cannot be allocated), it calls `dtor(ptr)`, which must be well defined.  
   
- `ptr, dtor, alloc` - 一个指向要管理的资源的类型 `Other*` 的指针、一个针对资源的删除器和一个用于管理必须分配和释放的任何存储的分配器。 如果函数失败（因为无法分配控制块），则调用必须经过良好定义的 `dtor(ptr)`。  
+ `ptr, dtor, alloc` -- a pointer of type `Other*` to the resource to be managed, a deleter for that resource, and an allocator to manage any storage that must be allocated and freed. If the function fails (because the control block can't be allocated) it calls `dtor(ptr)`, which must be well defined.  
   
- `sp` - 一个拥有要管理的资源的 `shared_ptr<Other>` 对象。  
+ `sp` -- a `shared_ptr<Other>` object that owns the resource to be managed.  
   
- `wp` - 一个指向要管理的资源的 `weak_ptr<Other>` 对象。  
+ `wp` -- a `weak_ptr<Other>` object that points to the resource to be managed.  
   
- `ap` - 一个拥有指向要管理的资源的指针的 `auto_ptr<Other>` 对象。 如果函数成功，则调用 `ap.release()`；否则保持 `ap` 不变。  
+ `ap` -- an `auto_ptr<Other>` object that holds a pointer to the resource to be managed. If the function succeeds it calls `ap.release()`; otherwise it leaves `ap` unchanged.  
   
- 在所有情况下，指针类型 `Other*` 必须可转换为 `T*`。  
+ In all cases, the pointer type `Other*` must be convertible to `T*`.  
   
-## <a name="thread-safety"></a>线程安全  
- 多个线程可以同时读取和写入不同的 `shared_ptr` 对象，即使这些对象是共享所有权的副本。  
+## <a name="thread-safety"></a>Thread Safety  
+ Multiple threads can read and write different `shared_ptr` objects at the same time, even when the objects are copies that share ownership.  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>构造函数  
-  
-|||  
-|-|-|  
-|[shared_ptr](#shared_ptr)|构造一个 `shared_ptr`。|  
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|销毁 `shared_ptr`。|  
-  
-### <a name="methods"></a>方法  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|元素的类型。|  
-|[get](#get)|获取拥有的资源的地址。|  
-|[owner_before](#owner_before)|如果此 `shared_ptr` 排在提供的指针之前（或小于该指针），则返回 true。|  
-|[reset](#reset)|替换拥有的资源。|  
-|[swap](#swap)|交换两个 `shared_ptr` 对象。|  
-|[unique](#unique)|测试拥有的资源是否是唯一的。|  
-|[use_count](#use_count)|计算资源所有者的数目。|  
+|[shared_ptr](#shared_ptr)|Constructs a `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Destroys a `shared_ptr`.|  
   
-### <a name="operators"></a>运算符  
+### <a name="methods"></a>Methods  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#op_boolean-type)|测试拥有的资源是否存在。|  
-|[shared_ptr::operator*](#op_star)|获取指定的值。|  
-|[shared_ptr::operator=](#op_eq)|替换拥有的资源。|  
-|[shared_ptr::operator-&gt;](#operator-_gt)|获取指向指定的值的指针。|  
+|[element_type](#element_type)|The type of an element.|  
+|[get](#get)|Gets address of owned resource.|  
+|[owner_before](#owner_before)|Returns true if this `shared_ptr` is ordered before (or less than) the provided pointer.|  
+|[reset](#reset)|Replace owned resource.|  
+|[swap](#swap)|Swaps two `shared_ptr` objects.|  
+|[unique](#unique)|Tests if owned resource is unique.|  
+|[use_count](#use_count)|Counts numbers of resource owners.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<memory>  
+### <a name="operators"></a>Operators  
   
- **命名空间：** std  
+|||  
+|-|-|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Tests if an owned resource exists.|  
+|[shared_ptr::operator*](#op_star)|Gets the designated value.|  
+|[shared_ptr::operator=](#op_eq)|Replaces the owned resource.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Gets a pointer to the designated value.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
   
 ##  <a name="element_type"></a>  shared_ptr::element_type  
- 元素的类型。  
+ The type of an element.  
   
 ```  
 typedef T element_type;  
 ```  
   
-### <a name="remarks"></a>备注  
- 该类型是模板参数 `T`的同义词。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `T`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_element_type.cpp   
@@ -212,16 +225,16 @@ int main()
 ```  
   
 ##  <a name="get"></a>  shared_ptr::get  
- 获取拥有的资源的地址。  
+ Gets address of owned resource.  
   
 ```  
 T *get() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 此成员函数返回已有资源的地址。 如果该对象没有资源，则返回 0。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the owned resource. If the object does not own a resource it returns 0.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_get.cpp   
@@ -249,16 +262,16 @@ sp0.get() == 0 == true
 ```  
   
 ##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
- 测试拥有的资源是否存在。  
+ Tests if an owned resource exists.  
   
 ```  
 operator boolean-type() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 此运算符返回可转换为 `bool` 的类型的值。 当 `bool` 时，转换为 `true` 的结果为 `get() != 0`，否则为 `false`。  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value of a type that is convertible to `bool`. The result of the conversion to `bool` is `true` when `get() != 0`, otherwise `false`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_bool.cpp   
@@ -286,17 +299,17 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="op_star"></a>shared_ptr::operator*  
- 获取指定的值。  
+##  <a name="op_star"></a>  shared_ptr::operator*  
+ Gets the designated value.  
   
 ```  
 T& operator*() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 间接运算符返回 `*get()`。 因此存储指针不能为 null。  
+### <a name="remarks"></a>Remarks  
+ The indirection operator returns `*get()`. Hence, the stored pointer must not be null.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_st.cpp   
@@ -319,8 +332,8 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="op_eq"></a>shared_ptr::operator=  
- 替换拥有的资源。  
+##  <a name="op_eq"></a>  shared_ptr::operator=  
+ Replaces the owned resource.  
   
 ```  
 shared_ptr& operator=(const shared_ptr& sp);
@@ -341,17 +354,17 @@ template <class Other, class Deletor>
 shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `sp`  
- 要复制的共享指针。  
+ The shared pointer to copy.  
   
  `ap`  
- 要复制的自动指针。  
+ The auto pointer to copy.  
   
-### <a name="remarks"></a>备注  
- 这些运算符均会递减 `*this` 当前拥有资源的引用计数，并将操作数序列命名的资源所有权分配给 `*this`。 如果引用计数降至零，则释放资源。 如果运算符操作失败，则不会改变 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The operators all decrement the reference count for the resource currently owned by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If the reference count falls to zero, the resource is released. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_as.cpp   
@@ -381,17 +394,17 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="shared_ptr__operator-_gt"></a>shared_ptr::operator-&gt;  
- 获取指向指定的值的指针。  
+##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
+ Gets a pointer to the designated value.  
   
 ```  
 T * operator->() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 选择运算符返回 `get()`，以便让表达式 `sp->member` 的行为与 `(sp.get())->member` 相同，其中 `sp` 是类 `shared_ptr<T>` 的对象。 因此，存储指针不能为空且 `T` 必须是类、结构或成员为 `member` 的联合类型。  
+### <a name="remarks"></a>Remarks  
+ The selection operator returns `get()`, so that the expression `sp->member` behaves the same as `(sp.get())->member` where `sp` is an object of class `shared_ptr<T>`. Hence, the stored pointer must not be null, and `T` must be a class, structure, or union type with a member `member`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_ar.cpp   
@@ -418,7 +431,7 @@ sp0->second == 2
 ```  
   
 ##  <a name="owner_before"></a>  shared_ptr::owner_before  
- 如果此 `shared_ptr` 排在提供的指针之前（或小于该指针），则返回 true。  
+ Returns true if this `shared_ptr` is ordered before (or less than) the provided pointer.  
   
 ```  
 template <class Other>  
@@ -428,15 +441,15 @@ template <class Other>
 bool owner_before(const weak_ptr<Other>& ptr);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 对 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 引用。  
+ An `lvalue` reference to either a `shared_ptr` or a `weak_ptr`.  
   
-### <a name="remarks"></a>备注  
- 如果 `*this` 为 `ordered before``ptr`，则模板成员函数返回 true。  
+### <a name="remarks"></a>Remarks  
+ The template member function returns true if `*this` is `ordered before` `ptr`.  
   
 ##  <a name="reset"></a>  shared_ptr::reset  
- 替换拥有的资源。  
+ Replace owned resource.  
   
 ```  
 void reset();
@@ -451,29 +464,29 @@ template <class Other, class D, class A>
 void reset(Other *ptr, D dtor, A alloc);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 由自变量指针控制的类型。  
+ The type controlled by the argument pointer.  
   
  `D`  
- 删除器的类型。  
+ The type of the deleter.  
   
  `ptr`  
- 要复制的指针。  
+ The pointer to copy.  
   
  `dtor`  
- 要复制的删除器。  
+ The deleter to copy.  
   
  `A`  
- 分配器的类型。  
+ The type of the allocator.  
   
  `alloc`  
- 要复制的分配器。  
+ The allocator to copy.  
   
-### <a name="remarks"></a>备注  
- 这些运算符均会递减 `*this` 当前拥有资源的引用计数，并将操作数序列命名的资源所有权分配给 `*this`。 如果引用计数降至零，则释放资源。 如果运算符操作失败，则不会改变 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The operators all decrement the reference count for the resource currently owned by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If the reference count falls to zero, the resource is released. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_reset.cpp   
@@ -521,7 +534,7 @@ int main()
 ```  
   
 ##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
- 构造一个 `shared_ptr`。  
+ Constructs a `shared_ptr`.  
   
 ```  
 shared_ptr();
@@ -569,38 +582,38 @@ template <class Other, class D>
 shared_ptr(const unique_ptr<Other, D>& up) = delete;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `Other`  
- 由自变量指针控制的类型。  
+ The type controlled by the argument pointer.  
   
  `ptr`  
- 要复制的指针。  
+ The pointer to copy.  
   
  `D`  
- 删除器的类型。  
+ The type of the deleter.  
   
  `A`  
- 分配器的类型。  
+ The type of the allocator.  
   
  `dtor`  
- 删除器。  
+ The deleter.  
   
  `ator`  
- 分配器。  
+ The allocator.  
   
  `sp`  
- 要复制的智能指针。  
+ The smart pointer to copy.  
   
  `wp`  
- 弱指针。  
+ The weak pointer.  
   
  `ap`  
- 要复制的自动指针。  
+ The auto pointer to copy.  
   
-### <a name="remarks"></a>备注  
- 每个构造函数都将构造一个对象，该对象拥有由操作数序列命名的资源。 如果 `wp.expired()`，构造函数 `shared_ptr(const weak_ptr<Other>& wp)` 引发类型 [bad_weak_ptr 类](../standard-library/bad-weak-ptr-class.md) 的异常对象。  
+### <a name="remarks"></a>Remarks  
+ The constructors each construct an object that owns the resource named by the operand sequence. The constructor `shared_ptr(const weak_ptr<Other>& wp)` throws an exception object of type [bad_weak_ptr Class](../standard-library/bad-weak-ptr-class.md) if `wp.expired()`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_construct.cpp   
@@ -654,16 +667,16 @@ int main()
 ```  
   
 ##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
- 销毁 `shared_ptr`。  
+ Destroys a `shared_ptr`.  
   
 ```  
 ~shared_ptr();
 ```  
   
-### <a name="remarks"></a>备注  
- 析构函数递减 `*this` 当前拥有的资源的引用计数。 如果引用计数降至零，则释放资源。  
+### <a name="remarks"></a>Remarks  
+ The destructor decrements the reference count for the resource currently owned by `*this`. If the reference count falls to zero, the resource is released.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_destroy.cpp   
@@ -708,20 +721,20 @@ use count == 1
 ```  
   
 ##  <a name="swap"></a>  shared_ptr::swap  
- 交换两个 `shared_ptr` 对象。  
+ Swaps two `shared_ptr` objects.  
   
 ```  
 void swap(shared_ptr& sp);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `sp`  
- 要交换的共享指针。  
+ The shared pointer to swap with.  
   
-### <a name="remarks"></a>备注  
- 成员函数将保留最初由 `*this` 拥有随后由 `sp` 拥有的资源，以及最初由 `sp` 拥有随后为 `*this` 所有的资源。 此函数不会更改两个资源的引用计数，也不会引发任何异常。  
+### <a name="remarks"></a>Remarks  
+ The member function leaves the resource originally owned by `*this` subsequently owned by `sp`, and the resource originally owned by `sp` subsequently owned by `*this`. The function does not change the reference counts for the two resources and it does not throw any exceptions.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_swap.cpp   
@@ -776,16 +789,16 @@ int main()
 ```  
   
 ##  <a name="unique"></a>  shared_ptr::unique  
- 测试拥有的资源是否是唯一的。  
+ Tests if owned resource is unique.  
   
 ```  
 bool unique() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 如果其他 `shared_ptr` 对象没有为 `*this` 所有的资源，成员函数将返回 `true`，否则返回 `false`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `true` if no other `shared_ptr` object owns the resource that is owned by `*this`, otherwise `false`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_unique.cpp   
@@ -822,16 +835,16 @@ sp1.unique() == false
 ```  
   
 ##  <a name="use_count"></a>  shared_ptr::use_count  
- 计算资源所有者的数目。  
+ Counts numbers of resource owners.  
   
 ```  
 long use_count() const;
 ```  
   
-### <a name="remarks"></a>备注  
- 成员函数将返回 `shared_ptr` 对象的数量，该对象拥有为 `*this` 所有的资源。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of `shared_ptr` objects that own the resource that is owned by `*this`.  
   
-### <a name="example"></a>示例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_use_count.cpp   
@@ -859,9 +872,9 @@ sp1.use_count() == 1
 sp1.use_count() == 2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [weak_ptr 类](../standard-library/weak-ptr-class.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [weak_ptr Class](../standard-library/weak-ptr-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

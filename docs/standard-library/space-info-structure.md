@@ -1,5 +1,5 @@
 ---
-title: "space_info 结构 | Microsoft Docs"
+title: space_info Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,45 +31,45 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: e8573fab6f0d1a1ad43a9be2e3be1ddd8f556748
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bd6c8f5e4107c785e1283c028dfcf4e3f7f5e1ef
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="spaceinfo-structure"></a>space_info 结构
-保存有关卷的信息。  
+# <a name="spaceinfo-structure"></a>space_info Structure
+Holds information about a volume.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-struct space_info    {
+struct space_info   {
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
     };  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-data-members"></a>公共数据成员  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|`unsigned long long available`|表示可用于表示卷上数据的字节数。|  
-|`unsigned long long capacity`|表示卷可以表示的字节总数。|  
-|`unsigned long long free`|表示不用于表示卷上数据的字节数。|  
+|`unsigned long long available`|Represents the number of bytes that are available to represent data on the volume.|  
+|`unsigned long long capacity`|Represents the total number of bytes that the volume can represent.|  
+|`unsigned long long free`|Represents the number of bytes that are not used to represent data on the volume.|  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<文件系统 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<filesystem>  
   
- **命名空间：**std::experimental::filesystem  
+ **Namespace:** std::experimental::filesystem  
   
-## <a name="see-also"></a>另请参阅  
- [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [空间](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
- [文件系统导航 (C++)](../standard-library/file-system-navigation.md)
+ [space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
+ [File System Navigation (C++)](../standard-library/file-system-navigation.md)
 
 

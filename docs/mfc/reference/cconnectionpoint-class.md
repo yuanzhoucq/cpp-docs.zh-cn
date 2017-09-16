@@ -1,5 +1,5 @@
 ---
-title: "CConnectionPoint 类 |Microsoft 文档"
+title: CConnectionPoint Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CConnectionPoint class
+- CConnectionPoint [MFC], CConnectionPoint
+- CConnectionPoint [MFC], GetConnections
+- CConnectionPoint [MFC], GetContainer
+- CConnectionPoint [MFC], GetIID
+- CConnectionPoint [MFC], GetMaxConnections
+- CConnectionPoint [MFC], GetNextConnection
+- CConnectionPoint [MFC], GetStartPosition
+- CConnectionPoint [MFC], OnAdvise
+- CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
 caps.latest.revision: 20
 author: mikeblome
@@ -43,192 +51,192 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a511f252bf921433d070059518e6e67b952680eb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e0590375c0e09245e7dac75893b6738d4a9e414
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cconnectionpoint-class"></a>CConnectionPoint 类
-定义用于与其他 OLE 对象通信的接口（称为“连接点”）的特殊类型。  
+# <a name="cconnectionpoint-class"></a>CConnectionPoint Class
+Defines a special type of interface used to communicate with other OLE objects, called a "connection point."  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CConnectionPoint : public CCmdTarget  
 ```  
   
-## <a name="members"></a>成员  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公共构造函数  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConnectionPoint::CConnectionPoint](#cconnectionpoint)|构造 `CConnectionPoint` 对象。|  
+|[CConnectionPoint::CConnectionPoint](#cconnectionpoint)|Constructs a `CConnectionPoint` object.|  
   
-### <a name="public-methods"></a>公共方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名称|说明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CConnectionPoint::GetConnections](#getconnections)|检索一个连接映射中的所有连接点。|  
-|[CConnectionPoint::GetContainer](#getcontainer)|检索拥有连接映射的控件的容器。|  
-|[CConnectionPoint::GetIID](#getiid)|检索连接点的接口 ID。|  
-|[CConnectionPoint::GetMaxConnections](#getmaxconnections)|检索控件支持的连接点的最大数目。|  
-|[在](#getnextconnection)|检索指向处的连接元素的指针`pos`。|  
-|[CConnectionPoint::GetStartPosition](#getstartposition)|通过返回启动映射迭代**位置**值，可以传递给`GetNextConnection`调用。|  
-|[CConnectionPoint::OnAdvise](#onadvise)|由框架建立或断开连接时调用。|  
-|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|检索指向请求的接收器接口的指针。|  
+|[CConnectionPoint::GetConnections](#getconnections)|Retrieves all connection points in a connection map.|  
+|[CConnectionPoint::GetContainer](#getcontainer)|Retrieves the container of the control that owns the connection map.|  
+|[CConnectionPoint::GetIID](#getiid)|Retrieves the interface ID of a connection point.|  
+|[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Retrieves the maximum number of connection points supported by a control.|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Retrieves a pointer to the connection element at `pos`.|  
+|[CConnectionPoint::GetStartPosition](#getstartposition)|Starts a map iteration by returning a **POSITION** value that can be passed to a `GetNextConnection` call.|  
+|[CConnectionPoint::OnAdvise](#onadvise)|Called by the framework when establishing or breaking connections.|  
+|[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Retrieves a pointer to the requested sink interface.|  
   
-## <a name="remarks"></a>备注  
- 与普通的 OLE 接口，用于实现和公开 OLE 控件的功能，不同的连接点实现了可以启动对其他对象，如触发事件的操作和更改通知的传出接口。  
+## <a name="remarks"></a>Remarks  
+ Unlike normal OLE interfaces, which are used to implement and expose the functionality of an OLE control, a connection point implements an outgoing interface that is able to initiate actions on other objects, such as firing events and change notifications.  
   
- 连接由两部分组成︰ 调用该接口，称为"源"，并实现接口，该对象的对象称为"接收器"。 通过公开连接点，则 source 允许接收器，以建立与自身连接。 连接点机制，通过源对象获取对该接收器实现的一组的成员函数的指针。 例如，若要激发事件接收器实现的源可以调用该接收器实现的适当方法。  
+ A connection consists of two parts: the object calling the interface, called the "source," and the object implementing the interface, called the "sink." By exposing a connection point, a source allows sinks to establish connections to itself. Through the connection point mechanism, a source object obtains a pointer to the sink's implementation of a set of member functions. For example, to fire an event implemented by the sink, the source can call the appropriate method of the sink's implementation.  
   
- 默认情况下，`COleControl`的派生的类实现两个连接点︰ 一个事件，一个用于属性更改通知。 使用这些连接，分别为事件触发和通知接收器 （例如，控件的容器） 当属性值已更改。 OLE 控件以实现额外的连接点还提供支持。 对于每个控件类中实现附加的连接点，您必须声明实现连接点的"连接部分"。 如果实现一个或多个连接点，您还需要声明一个在控件类中的"连接映射"。  
+ By default, a `COleControl`-derived class implements two connection points: one for events and one for property change notifications. These connections are used, respectively, for event firing and for notifying a sink (for example, the control's container) when a property value has changed. Support is also provided for OLE controls to implement additional connection points. For each additional connection point implemented in your control class, you must declare a "connection part" that implements the connection point. If you implement one or more connection points, you also need to declare a single "connection map" in your control class.  
   
- 下面的示例演示一个简单的连接映射和为一个连接点`Sample`包含的代码的两个片段的 OLE 控件︰ 的第一部分声明连接映射和点; 第二个实现此映射和点。 第一个片段插入到的控件类中，声明下`protected`部分︰  
+ The following example demonstrates a simple connection map and one connection point for the `Sample` OLE control, consisting of two fragments of code: the first portion declares the connection map and point; the second implements this map and point. The first fragment is inserted into the declaration of the control class, under the `protected` section:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&7;](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
+ [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- `BEGIN_CONNECTION_PART`和`END_CONNECTION_PART`宏声明嵌入的类， `XSampleConnPt` (派生自`CConnectionPoint`) 实现此特定连接点。 如果您想要重写任何`CConnectionPoint`成员函数，或添加您自己的成员函数，将它们声明这两种宏之间。 例如，`CONNECTION_IID`宏重写`CConnectionPoint::GetIID`成员函数时放置在这两种宏之间。  
+ The `BEGIN_CONNECTION_PART` and `END_CONNECTION_PART` macros declare an embedded class, `XSampleConnPt` (derived from `CConnectionPoint`) that implements this particular connection point. If you want to override any `CConnectionPoint` member functions, or add member functions of your own, declare them between these two macros. For example, the `CONNECTION_IID` macro overrides the `CConnectionPoint::GetIID` member function when placed between these two macros.  
   
- 第二个代码段插入到实现文件 (。CPP) 的控件类。 此代码实现连接映射，包括附加的连接点， `SampleConnPt`:  
+ The second code fragment is inserted into the implementation file (.CPP) of your control class. This code implements the connection map, which includes the additional connection point, `SampleConnPt`:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&2;](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- 一旦已插入的这些代码片段，示例 OLE 控件都公开的连接点**ISampleSink**接口。  
+ Once these code fragments have been inserted, the Sample OLE control exposes a connection point for the **ISampleSink** interface.  
   
- 通常情况下，连接点支持"多播"，是指广播到多个连接到同一接口的接收器的能力。 下面的代码段演示如何通过循环访问每个连接点上的接收器实现多播︰  
+ Typically, connection points support "multicasting", which is the ability to broadcast to multiple sinks connected to the same interface. The following code fragment demonstrates how to accomplish multicasting by iterating through each sink on a connection point:  
   
- [!code-cpp[NVC_MFCConnectionPoints #&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
- 此示例检索当前的一组连接上`SampleConnPt`连接点，通过调用`CConnectionPoint::GetConnections`。 然后，循环访问该连接并调用`ISampleSink::SinkFunc`上每个活动连接。  
+ This example retrieves the current set of connections on the `SampleConnPt` connection point with a call to `CConnectionPoint::GetConnections`. It then iterates through the connections and calls `ISampleSink::SinkFunc` on every active connection.  
   
- 有关详细信息使用`CConnectionPoint`，请参阅文章[连接点](../../mfc/connection-points.md)。  
+ For more information on using `CConnectionPoint`, see the article [Connection Points](../../mfc/connection-points.md).  
   
-## <a name="inheritance-hierarchy"></a>继承层次结构  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CConnectionPoint`  
   
-## <a name="requirements"></a>要求  
- **标头：** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
- 构造 `CConnectionPoint` 对象。  
+##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
+ Constructs a `CConnectionPoint` object.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
- 调用此函数可检索所有活动连接的连接点。  
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections  
+ Call this function to retrieve all active connections for a connection point.  
   
 ```  
 const CPtrArray* GetConnections();
 ```  
   
-### <a name="return-value"></a>返回值  
- 指向活动连接 （接收器） 的数组的指针。 某些中数组的指针可能是 NULL。 此数组中的每个非 NULL 指针可以安全地转换为指向使用强制转换运算符的接收器接口的指针。  
+### <a name="return-value"></a>Return Value  
+ A pointer to an array of active connections (sinks). Some of the pointers in the array may be NULL. Each non-NULL pointer in this array can be safely converted to a pointer to the sink interface using a cast operator.  
   
-##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
- 由框架调用以检索**IConnectionPointContainer**连接点。  
+##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
+ Called by the framework to retrieve the **IConnectionPointContainer** for the connection point.  
   
 ```  
 virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ```  
   
-### <a name="return-value"></a>返回值  
- 如果成功，到容器; 的指针否则为**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the container; otherwise **NULL**.  
   
-### <a name="remarks"></a>备注  
- 此函数通常由实现`BEGIN_CONNECTION_PART`宏。  
+### <a name="remarks"></a>Remarks  
+ This function is typically implemented by the `BEGIN_CONNECTION_PART` macro.  
   
-##  <a name="getiid"></a>CConnectionPoint::GetIID  
- 由框架来检索连接点的接口 ID 调用。  
+##  <a name="getiid"></a>  CConnectionPoint::GetIID  
+ Called by the framework to retrieve the interface ID of a connection point.  
   
 ```  
 virtual REFIID GetIID() = 0;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 参考连接点的接口 id。  
+### <a name="return-value"></a>Return Value  
+ A reference to the connection point's interface ID.  
   
-### <a name="remarks"></a>备注  
- 重写此函数可返回用于此连接点的接口 ID。  
+### <a name="remarks"></a>Remarks  
+ Override this function to return the interface ID for this connection point.  
   
-##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
- 由要检索的最大连接点所支持的连接数的框架调用。  
+##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
+ Called by the framework to retrieve the maximum number of connections supported by the connection point.  
   
 ```  
 virtual int GetMaxConnections();
 ```  
   
-### <a name="return-value"></a>返回值  
- 最大受该控件，则为-1，如果没有限制的连接数。  
+### <a name="return-value"></a>Return Value  
+ The maximum number of connections supported by the control, or -1 if no limit.  
   
-### <a name="remarks"></a>备注  
- 默认实现将返回-1，表示无限制。  
+### <a name="remarks"></a>Remarks  
+ The default implementation returns -1, indicating no limit.  
   
- 如果您想要限制可以连接到您的控件的接收器的数目，重写此函数。  
+ Override this function if you want to limit the number of sinks that can connect to your control.  
   
-##  <a name="getnextconnection"></a>在  
- 检索指向处的连接元素的指针`pos`。  
+##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
+ Retrieves a pointer to the connection element at `pos`.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pos`  
- 指定对引用**位置**返回先前值`GetNextConnection`或[GetStartPosition](#getstartposition)调用。  
+ Specifies a reference to a **POSITION** value returned by a previous `GetNextConnection` or [GetStartPosition](#getstartposition) call.  
   
-### <a name="return-value"></a>返回值  
- 指向由指定的连接元素的指针`pos`，则为 NULL。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the connection element specified by `pos`, or NULL.  
   
-### <a name="remarks"></a>备注  
- 此函数是最适用于循环访问连接映射中的所有元素。 当循环时，跳过从该函数返回的任何 null 值。  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the connection map. When iterating, skip any NULLs returned from this function.  
   
-### <a name="example"></a>示例  
- [!code-cpp[NVC_MFCConnectionPoints #&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
- 通过返回启动映射迭代**位置**值，可以传递给[GetNextConnection](#getnextconnection)调用。  
+##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
+ Starts a map iteration by returning a **POSITION** value that can be passed to a [GetNextConnection](#getnextconnection) call.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>返回值  
- 一个**位置**值，该值指示为循环映射; 的起始位置或**NULL**如果映射为空。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that indicates a starting position for iterating the map; or **NULL** if the map is empty.  
   
-### <a name="remarks"></a>备注  
- 迭代序列是不可预测的;因此，"在映射中的第一个元素"有没有特别的意义。  
+### <a name="remarks"></a>Remarks  
+ The iteration sequence is not predictable; therefore, the "first element in the map" has no special significance.  
   
-### <a name="example"></a>示例  
-  请参阅示例[在](#getnextconnection)。  
+### <a name="example"></a>Example  
+  See the example for [CConnectionPoint::GetNextConnection](#getnextconnection).  
   
-##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
- 由框架的连接时调用是建立或断开。  
+##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
+ Called by the framework when a connection is being established or broken.  
   
 ```  
 virtual void OnAdvise(BOOL bAdvise);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `bAdvise`  
- **TRUE**，如果连接正在建立; 否则为**FALSE**。  
+ **TRUE**, if a connection is being established; otherwise **FALSE**.  
   
-### <a name="remarks"></a>备注  
- 默认实现不执行任何操作。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing.  
   
- 如果您想要通知接收器连接到或从连接点断开连接时，重写此函数。  
+ Override this function if you want notification when sinks connect to or disconnect from your connection point.  
   
-##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
- 检索指向请求的接收器接口的指针。  
+##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
+ Retrieves a pointer to the requested sink interface.  
   
 ```  
 virtual HRESULT QuerySinkInterface(
@@ -236,18 +244,18 @@ virtual HRESULT QuerySinkInterface(
     void** ppInterface);
 ```  
   
-### <a name="parameters"></a>参数  
+### <a name="parameters"></a>Parameters  
  `pUnkSink`  
- 正在请求的接收器接口的标识符。  
+ The identifier of the sink interface being requested.  
   
  `ppInterface`  
- 指向由标识的接口指针的指针`pUnkSink`。 如果该对象不支持此接口， \* `ppInterface`设置为**NULL**。  
+ A pointer to the interface pointer identified by `pUnkSink`. If the object does not support this interface, \* `ppInterface` is set to **NULL**.  
   
-### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。  
+### <a name="return-value"></a>Return Value  
+ A standard `HRESULT` value.  
   
-## <a name="see-also"></a>另请参阅  
- [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
- [层次结构图](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

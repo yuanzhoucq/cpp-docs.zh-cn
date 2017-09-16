@@ -1,5 +1,5 @@
 ---
-title: "pointer_traits 结构 | Microsoft Docs"
+title: pointer_traits Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -41,25 +41,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dbb9a0a8ecd59b76a84ce05b3c239de42be647cb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6dd1d04071429da08fca79bc900757f2adc74c98
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="pointertraits-struct"></a>pointer_traits 结构
-提供模板类 `allocator_traits` 对象所需信息，用于描述一个采用指针类型 `Ptr` 的分配器。  
+# <a name="pointertraits-struct"></a>pointer_traits Struct
+Supplies information that is needed by an object of template class `allocator_traits` to describe an allocator with pointer type `Ptr`.  
   
-## <a name="syntax"></a>语法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Ptr>
 struct pointer_traits;
 ```  
   
-## <a name="remarks"></a>备注  
- Ptr 可以是 `Ty *` 类型的原始指针或具有以下属性的类。  
+## <a name="remarks"></a>Remarks  
+ Ptr can be a raw pointer of type `Ty *` or a class with the following properties.  
 ```  
 struct Ptr
    { // describes a pointer type usable by allocators
@@ -72,40 +72,40 @@ struct Ptr
    // optional
    };  
 ```
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Typedefs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`typedef T2 difference_type`|如果 `Ptr::difference_type` 类型存在，则类型 `T2` 为此类型，否则为 `ptrdiff_t`。 如果 `Ptr` 是原始指针，则类型为 `ptrdiff_t`。|  
-|`typedef T1 element_type`|如果 `Ptr::element_type` 类型存在，则类型 `T1` 为此类型，否则为 `Ty`。 如果 `Ptr` 是原始指针，则类型为 `Ty`。|  
-|`typedef Ptr pointer`|类型为 `Ptr`。|  
+|`typedef T2 difference_type`|The type `T2` is `Ptr::difference_type` if that type exists, otherwise `ptrdiff_t`. If `Ptr` is a raw pointer, the type is `ptrdiff_t`.|  
+|`typedef T1 element_type`|The type `T1` is `Ptr::element_type` if that type exists, otherwise `Ty`. If `Ptr` is a raw pointer, the type is `Ty`.|  
+|`typedef Ptr pointer`|The type is `Ptr`.|  
   
-### <a name="structs"></a>结构  
+### <a name="structs"></a>Structs  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`pointer_traits::rebind`|尝试将基础指针类型转换为指定类型。|  
+|`pointer_traits::rebind`|Attempts to convert the underlying pointer type to a specified type.|  
   
-### <a name="methods"></a>方法  
+### <a name="methods"></a>Methods  
   
-|名称|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|  
+|[pointer_to](#pointer_to)|Converts an arbitrary reference to an object of class `Ptr`.|  
   
-## <a name="requirements"></a>要求  
- **标头：**\<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **命名空间：** std  
+ **Namespace:** std  
   
-##  <a name="pointer_to"></a>pointer_to  
- 存在 `Ptr::pointer_to(obj)` 时，则为返回该函数的静态方法。 否则，无法将任意引用转换为 `Ptr` 类的对象。 如果 `Ptr` 是原始指针，则此方法将返回 `addressof(obj)`。  
+##  <a name="pointer_to"></a>  pointer_to  
+ Static method that returns `Ptr::pointer_to(obj)`, if that function exists. Otherwise, it is not possible to convert an arbitrary reference to an object of class `Ptr`. If `Ptr` is a raw pointer, this method returns `addressof(obj)`.  
   
 ```cpp  
 static pointer pointer_to(element_type& obj);
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
- [allocator_traits 类](../standard-library/allocator-traits-class.md)
+ [allocator_traits Class](../standard-library/allocator-traits-class.md)
 
 
