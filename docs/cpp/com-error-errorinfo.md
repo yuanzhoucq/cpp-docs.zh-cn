@@ -1,36 +1,53 @@
 ---
-title: "_com_error::ErrorInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error::ErrorInfo"
-  - "ErrorInfo"
-  - "_com_error.ErrorInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ErrorInfo 方法"
+title: "_com_error::ErrorInfo |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error::ErrorInfo
+- ErrorInfo
+- _com_error.ErrorInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- ErrorInfo method
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::ErrorInfo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e80dafb5d1472ec28631b13ab05a0dea0b4de4ba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Microsoft 专用**  
   
- 检索传递给构造函数的 **IErrorInfo** 对象。  
+ 检索**IErrorInfo**对象传递给构造函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,13 +55,13 @@ IErrorInfo * ErrorInfo( ) const throw( );
   
 ```  
   
-## 返回值  
- 传入到构造函数中的原始 **IErrorInfo** 项。  
+## <a name="return-value"></a>返回值  
+ 原始**IErrorInfo**项传递到构造函数。  
   
-## 备注  
- 检索 `_com_error` 对象中的封装 **IErrorInfo** 项，如果 **IErrorInfo** 项未记录，则返回 **NULL**。  使用完返回的对象后，调用方必须对该对象调用 **Release**。  
+## <a name="remarks"></a>备注  
+ 检索封装**IErrorInfo**中项`_com_error`对象，或**NULL**如果没有**IErrorInfo**记录项。 调用方必须调用**版本**在完成返回的对象上使用它。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [\_com\_error 类](../cpp/com-error-class.md)
+## <a name="see-also"></a>另请参阅  
+ [_com_error 类](../cpp/com-error-class.md)

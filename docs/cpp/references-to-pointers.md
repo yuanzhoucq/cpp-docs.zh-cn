@@ -1,33 +1,50 @@
 ---
-title: "对指针的引用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引用, 到指针"
+title: "对指针的引用 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 对指针的引用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-声明对指针的引用的方式与声明对对象的引用差不多。  声明对指针的引用将生成一个可像常规指针一样使用的可修改值。  
+---
+# <a name="references-to-pointers"></a>对指针的引用
+声明对指针的引用的方式与声明对对象的引用差不多。 声明对指针的引用将生成一个可像常规指针一样使用的可修改值。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下代码示例演示了使用指向指针的指针与使用对指针的引用之间的差异。  
   
- 函数 `Add1` 和 `Add2` 在功能上是等效的（虽然它们的调用方式不同）。  二者的差异在于，`Add1` 使用双间接寻址，而 `Add2` 利用了对指针的引用的便利性。  
+ 函数 `Add1` 和 `Add2` 在功能上是等效的（虽然它们的调用方式不同）。 二者的差异在于，`Add1` 使用双间接寻址，而 `Add2` 利用了对指针的引用的便利性。  
   
 ```  
 // references_to_pointers.cpp  
@@ -36,7 +53,7 @@ caps.handback.revision: 12
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -157,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **用法：Refptr \[1 &#124; 2\]**  
-**其中：**  
-**1 使用双间接寻址**  
-**2 使用对指针的引用。  输入来自 stdin。**    
-## 请参阅  
- [引用](../cpp/references-cpp.md)
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [参考资料](../cpp/references-cpp.md)

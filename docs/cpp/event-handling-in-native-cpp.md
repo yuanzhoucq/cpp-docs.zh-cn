@@ -1,48 +1,64 @@
 ---
-title: "本机 C++ 中的事件处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件处理, Visual C++"
+title: "本机 c + + 中的事件处理 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handling, Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 本机 C++ 中的事件处理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ff5032966cb44ff8d14dd6e0a33fb5f8cf56ed7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-在处理本机 C \+\+ 事件时，您分别使用 [event\_source](../windows/event-source.md) 和 [event\_receiver](../windows/event-receiver.md) 特性设置事件源和事件接收器，并指定 `type`\=`native`。  这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。  
+---
+# <a name="event-handling-in-native-c"></a>本机 C++ 中的事件处理
+在本机 c + + 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = `native`. 这些特性允许应用它们的类在本机的非 COM 上下文中激发和处理事件。  
   
-## 声明事件  
- 在事件源类中，对一个方法声明使用 [\_\_event](../cpp/event.md)关键字可将该方法声明为事件。  请确保声明该方法，但不要定义它；这样做会产生编译器错误，因为将该方法转换为事件时编译器会隐式定义它。  本机事件可以是带有零个或多个参数的方法。  返回类型可以是 void 或任何整型。  
+## <a name="declaring-events"></a>声明事件  
+ 在事件源类中，使用[__event](../cpp/event.md)方法声明来声明为事件的方法上的关键字。 请确保声明该方法，但不要定义它；这样做会产生编译器错误，因为将该方法转换为事件时编译器会隐式定义它。 本机事件可以是带有零个或多个参数的方法。 返回类型可以是 void 或任何整型。  
   
-## 定义事件处理程序  
+## <a name="defining-event-handlers"></a>定义事件处理程序  
  在事件接收器类中，可定义事件处理程序，这些处理程序是具有与它们将处理的事件匹配的签名（返回类型、调用约定和参数）的方法。  
   
-## 将事件处理程序挂钩到事件  
- 同样在事件接收器类中，可使用内部函数 [\_\_hook](../cpp/hook.md) 将事件与事件处理程序关联，并可使用 [\_\_unhook](../cpp/unhook.md) 取消事件与事件处理程序的关联。  您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。  
+## <a name="hooking-event-handlers-to-events"></a>将事件处理程序挂钩到事件  
+ 此外在事件接收器类中，使用内部函数[__hook](../cpp/hook.md)若要将事件与事件处理程序关联和[__unhook](../cpp/unhook.md)取消事件与事件处理程序。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。  
   
-## 激发事件  
- 若要激发事件，只需调用声明为事件源类中的事件的方法即可。  如果处理程序已挂钩到事件，则将调用处理程序。  
+## <a name="firing-events"></a>激发事件  
+ 若要激发事件，只需调用声明为事件源类中的事件的方法即可。 如果处理程序已挂钩到事件，则将调用处理程序。  
   
-### 本机 C\+\+ 事件代码  
- 以下示例演示如何在本机 C\+\+ 中激发事件。  若要编译并运行此示例，请参考代码中的注释。  
+### <a name="native-c-event-code"></a>本机 C++ 事件代码  
+ 以下示例演示如何在本机 C++ 中激发事件。 若要编译并运行此示例，请参考代码中的注释。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // evh_native.cpp  
@@ -86,12 +102,12 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 MyHandler2 was called with value 123.  
 MyHandler1 was called with value 123.  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件处理](../cpp/event-handling.md)

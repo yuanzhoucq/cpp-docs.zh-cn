@@ -1,99 +1,118 @@
 ---
-title: "线程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "thread"
-  - "thread_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 关键字 [C++], 线程"
-  - "thread __declspec 关键字"
-  - "线程本地存储 (TLS)"
-  - "TLS（线程本地存储）, 编译器实现"
+title: "线程 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- thread
+- thread_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- thread local storage (TLS)
+- thread __declspec keyword
+- TLS (thread local storage), compiler implementation
+- __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 7261dc1d6d76eeac8a6b2959bc9bb6fc3c98a66e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
+
 ---
-# 线程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="thread"></a>thread
 
 **Microsoft 专用**  
-  
- **thread** 扩展存储类修饰符用于声明线程局部变量。  对于 C\+\+11 中的可移植等效，使用 [thread\_local](../cpp/storage-classes-cpp.md#thread_local) 存储类说明符。  
-  
-## 语法  
-  
-```  
-  
-__declspec( thread ) declarator  
-```  
-  
-## 备注  
- 线程本地存储 \(TLS\) 是多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。  在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。  有关线程的完整讨论，请参阅[多线程](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
-  
- 线程局部变量的声明必须将[扩展的特性语法](../cpp/declspec.md)与 `__declspec` 关键字和 **thread** 关键字一起使用。  例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：  
-  
-```  
+**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C + + 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)存储类说明符。
+
+## <a name="syntax"></a>语法
+
+```
+__declspec( thread ) declarator
+```
+
+## <a name="remarks"></a>备注
+
+线程本地存储 (TLS) 是多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。 在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。 有关线程的完整讨论，请参阅[多线程处理](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
+
+线程局部变量的声明必须使用[扩展特性语法](../cpp/declspec.md)和`__declspec`关键字后的跟**线程**关键字。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
+
+```cpp
 __declspec( thread ) int tls_i = 1;  
-```  
-  
- 在声明线程局部对象和变量时必须遵守下列准则：  
-  
--   可以只将 **thread** 特性应用于类和数据声明和定义；**thread** 不能用于函数声明或定义。  
-  
--   使用 **thread** 特性可能会影响 DLL 导入的[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)**。**  
-  
--   在 XP 系统上，如果 DLL 使用 \_\_declspec \(thread\) 数据并且通过 LoadLibrary 动态加载而成，则 `thread` 可能无法正常运行。  
-  
--   只能在具有静态存储持续时间的数据项上指定 **thread** 特性。  这包括全局数据对象（**static** 和 `extern`）、本地静态对象和类的静态数据成员。  不能声明带 **thread** 特性的自动数据对象。  
-  
--   必须为线程本地对象的声明和定义使用 **thread** 特性，无论声明和定义是在同一文件中还是单独的文件中发生。  
-  
--   无法将 **thread** 特性用作类型修饰符。  
-  
--   由于允许使用 **thread** 特性的对象的声明，因此下面的两个示例在语义上是等效的：  
-  
-    ```  
-    // declspec_thread_2.cpp  
-    // compile with: /LD  
-    __declspec( thread ) class B {  
-    public:  
-       int data;  
-    } BObject;   // BObject declared thread local.  
-  
-    class B2 {  
-    public:  
-       int data;  
-    };  
-    __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.  
-    ```  
-  
--   标准 C 允许使用涉及引用自身的表达式初始化对象或变量，但只适用于非静态范围的对象。  虽然 C\+\+ 通常允许使用涉及引用自身的表达式动态初始化对象，但是不允许将这种类型的初始化用于线程本地对象。  例如:  
-  
-    ```  
-    // declspec_thread_3.cpp  
-    // compile with: /LD  
-    #define Thread __declspec( thread )  
-    int j = j;   // Okay in C++; C error  
-    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++  
-    ```  
-  
-     请注意，包含将初始化的对象的 `sizeof` 表达式不构成对自身的引用，允许在 C 和 C\+\+ 中使用该表达式。  
-  
- **结束 Microsoft 专用**  
-  
-## 请参阅  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [线程本地存储 \(TLS\)](../parallel/thread-local-storage-tls.md)
+```
+
+在声明线程本地对象和变量时必须遵守下列准则：
+
+- 你可以将应用**线程**属性仅为类和数据声明和定义;**线程**不能用于函数声明或定义。
+
+- 使用**线程**属性可能会干扰[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)DLL 导入。
+
+- 在 XP 系统上**线程**如果 DLL 使用 __declspec （thread） 数据，并且它通过 LoadLibrary 动态加载可能无法正常工作。
+
+- 你可以指定**线程**只能在具有静态存储持续时间的数据项上的属性。 这包括全局数据对象 (同时**静态**和**extern**)，本地静态对象和类的静态数据成员。 你不能声明自动数据对象与**线程**属性。
+
+- 必须使用**线程**是否声明和定义出现在同一文件中还是单独的文件属性，则为声明和定义的线程本地对象。
+
+- 不能使用**线程**用作类型修饰符的属性。
+
+- 因为使用的对象的声明**线程**允许属性，这两个示例在语义上等效：
+
+    ```cpp
+    // declspec_thread_2.cpp
+    // compile with: /LD
+    __declspec( thread ) class B {
+    public:
+       int data;
+    } BObject;   // BObject declared thread local.
+
+    class B2 {
+    public:
+       int data;
+    };
+    __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
+    ```
+
+- 标准 C 允许使用涉及引用自身的表达式初始化对象或变量，但只适用于非静态范围的对象。 虽然 C++ 通常允许使用涉及引用自身的表达式动态初始化对象，但是不允许将这种类型的初始化用于线程本地对象。 例如: 
+
+    ```cpp
+    // declspec_thread_3.cpp
+    // compile with: /LD
+    #define Thread __declspec( thread )
+    int j = j;   // Okay in C++; C error
+    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+    ```
+
+     请注意， **sizeof**包含正在初始化的对象的表达式不构成对自身的引用，允许 C 和 c + + 中。
+
+**结束 Microsoft 专用**
+
+## <a name="see-also"></a>另请参阅
+
+[__declspec](../cpp/declspec.md)  
+[关键字](../cpp/keywords-cpp.md)  
+[线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)
+

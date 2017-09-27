@@ -1,51 +1,66 @@
 ---
-title: "显式类型转换运算符：() | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "转换 [C++], explicit"
-  - "数据类型转换 [C++], explicit"
-  - "显式数据类型转换运算符"
-  - "运算符 [C++], 显式类型转换"
-  - "类型转换 [C++], 显式转换"
+title: "显式类型转换运算符: （) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- explicit data type conversion operator
+- conversions [C++], explicit
+- operators [C++], explicit type conversion
+- data type conversion [C++], explicit
+- type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 显式类型转换运算符：()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 09afbed7f5a399b9ca192ff57be1c866baf59626
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-C\+\+ 允许使用与函数调用语法类似的语法进行显式类型转换。  
+---
+# <a name="explicit-type-conversion-operator-"></a>显式类型转换运算符：()
+C++ 允许使用与函数调用语法类似的语法进行显式类型转换。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
 simple-type-name ( expression-list )  
 ```  
   
-## 备注  
- 后跟包含在括号中的 *expression\-list* 的 *simple\-type\-name* 使用指定表达式构造指定类型的对象。  以下示例显示到类型 int 的显式类型转换：  
+## <a name="remarks"></a>备注  
+ A*简单类型名称*跟*表达式列表*括在括号构造使用指定的表达式的指定类型的对象。 以下示例显示到类型 int 的显式类型转换：  
   
 ```  
 int i = int( d );  
 ```  
   
- 以下示例使用在[函数调用结果](../misc/function-call-results.md)中定义的 `Point` 类的修改版本。  
+ 下面的示例演示`Point`类。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // expre_Explicit_Type_Conversion_Operator.cpp  
@@ -91,14 +106,14 @@ int main()
 }  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
   
 ```  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
- 尽管前面的示例演示了使用常量的显式类型转换，但在对对象执行转换时，此方法也同样有效。  以下代码片段对此进行了演示：  
+ 尽管前面的示例演示了使用常量的显式类型转换，但在对对象执行转换时，此方法也同样有效。 以下代码片段对此进行了演示：  
   
 ```  
 int i = 7;  
@@ -107,13 +122,13 @@ float d;
 d = float( i );  
 ```  
   
- 还可以使用“cast”语法指定显式类型转换。  使用 cast 语法重写的上一个示例是：  
+ 还可以使用“cast”语法指定显式类型转换。 使用 cast 语法重写的上一个示例是：  
   
 ```  
 d = (float)i;  
 ```  
   
- 当从单个值转换时，强制转换和函数样式转换都有相同的结果。  但是，在函数样式语法中，可以为转换指定多个参数。  此差异对用户定义的类型非常重要。  请考虑 `Point` 类及其转换：  
+ 当从单个值转换时，强制转换和函数样式转换都有相同的结果。 但是，在函数样式语法中，可以为转换指定多个参数。 此差异对用户定义的类型非常重要。 请考虑 `Point` 类及其转换：  
   
 ```  
 struct Point  
@@ -126,16 +141,15 @@ struct Point
 Point pt = Point( 3, 10 );  
 ```  
   
- 前面的使用函数样式转换的示例演示了如何将两个值（一个用于 *x*，另一个用于 *y*）转换为用户定义的类型 `Point`。  
+ 上述示例中，使用函数样式转换，演示如何将转换两个值 (一个用于*x* ，另一个用于*y*) 为用户定义类型`Point`。  
   
 > [!CAUTION]
->  请谨慎使用显式类型转换，因其会重写 C\+\+ 编译器的内置类型检查。  
+>  请谨慎使用显式类型转换，因其会重写 C++ 编译器的内置类型检查。  
   
- [强制转换](../cpp/cast-operator-parens.md)批注必须用于到没有 *simple\-type\-name*（例如，指针或引用类型）的类型的转换。  到可与 *simple\-type\-name* 一起表示的类型的转换可以使用任何一种形式写入。  有关 *simple\-type\-name* 的构造详细信息，请参阅[类型说明符](http://msdn.microsoft.com/zh-cn/34b6c737-0ef1-4470-9b77-b26e46c0bbd4)。  
+ [强制转换](../cpp/cast-operator-parens.md)表示法必须用于到没有的类型的转换*简单类型名称*（指针或引用类型，例如）。 可以使用表示的类型转换*简单类型名称*可以用其中任一种形式编写。 请参阅[类型说明符](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4)有关何谓*简单类型名称*。  
   
  在强制转换中的类型定义是非法的。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C\+\+ 运算符](../misc/cpp-operators.md)   
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

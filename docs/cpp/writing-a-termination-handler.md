@@ -1,47 +1,64 @@
 ---
-title: "编写终止处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "异常处理, 终止处理程序"
-  - "异常, 终止"
-  - "处理程序"
-  - "处理程序, 终止"
-  - "结构化异常处理, 终止处理程序"
-  - "终止处理程序"
-  - "终止处理程序, 写入"
-  - "try-catch 关键字 [C++], 终止处理程序"
+title: "编写终止处理程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- structured exception handling, termination handlers
+- exceptions, terminating
+- termination handlers, writing
+- handlers
+- handlers, termination
+- termination handlers
+- exception handling, termination handlers
+- try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编写终止处理程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 06fb01f2ee2782f8786308554923b3c5597a4574
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-与异常处理程序不同，无论代码的受保护块是否已正常终止，终止处理程序总是会执行。  终止处理程序的唯一用途应该是确保无论代码的节如何完成执行，内存、句柄和文件等资源都能正确关闭。  
+---
+# <a name="writing-a-termination-handler"></a>编写终止处理程序
+与异常处理程序不同，无论代码的受保护块是否已正常终止，终止处理程序总是会执行。 终止处理程序的唯一用途应该是确保无论代码的节如何完成执行，内存、句柄和文件等资源都能正确关闭。  
   
- 终止处理程序使用 try\-finally 语句。  
+ 终止处理程序使用 try-finally 语句。  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
--   [try\-finally 语句](../cpp/try-finally-statement.md)  
+-   [Try-finally 语句](../cpp/try-finally-statement.md)  
   
 -   [清理资源](../cpp/cleaning-up-resources.md)  
   
--   [异常处理的操作的计时](../cpp/timing-of-exception-handling-a-summary.md)  
+-   [操作的异常处理计时](../cpp/timing-of-exception-handling-a-summary.md)  
   
--   [终止处理程序的限制](../cpp/restrictions-on-termination-handlers.md)  
+-   [对于终止处理程序的限制](../cpp/restrictions-on-termination-handlers.md)  
   
-## 请参阅  
- [结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

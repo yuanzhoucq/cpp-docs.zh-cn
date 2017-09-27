@@ -1,41 +1,58 @@
 ---
-title: "override 说明符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "override 标识符"
+title: "重写说明符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# override 说明符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="override-specifier"></a>override 说明符
 您可使用 `override` 关键字来指定在基类中重写虚函数的成员函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 function-declaration override;  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `override` 仅在成员函数声明之后使用时才是区分上下文的且具有特殊含义；否则，它不是保留的关键字。  
   
-## 示例  
- 使用 `override` 有助于防止您的代码中出现意外的继承行为。  以下示例演示在未使用 `override` 的情况下，可能不打算使用派生类的成员函数行为。  编译器不会发出此代码的任何错误。  
+## <a name="example"></a>示例  
+ 使用 `override` 有助于防止您的代码中出现意外的继承行为。 以下示例演示在未使用 `override` 的情况下，可能不打算使用派生类的成员函数行为。 编译器不会发出此代码的任何错误。  
   
 ```cpp  
 class BaseClass  
@@ -89,9 +106,9 @@ class DerivedClass: public BaseClass
   
 ```  
   
- 若要指定不能重写函数且不能继承类，请使用 [final](../cpp/final-specifier.md) 关键字。  
+ 若要指定函数不能重写并且类不能被继承，请使用[最终](../cpp/final-specifier.md)关键字。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [final 说明符](../cpp/final-specifier.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\) C\+\+ Type Names](http://msdn.microsoft.com/zh-cn/b53ba470-e583-4e5c-b634-6018f6110674)
+ [关键字](../cpp/keywords-cpp.md)   
+ 

@@ -1,58 +1,75 @@
 ---
-title: "COM 中的事件处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM, 事件"
-  - "声明事件"
-  - "声明事件, COM 中的事件处理"
-  - "声明事件, 在 COM 中"
-  - "事件处理程序"
-  - "事件处理程序, COM"
-  - "事件处理"
-  - "事件处理, 关于事件处理"
-  - "事件处理, COM"
-  - "事件接收器, 在事件处理中"
-  - "事件接收器, 名称和签名匹配"
-  - "事件源, 在事件处理中"
-  - "挂接事件"
+title: "COM 中的事件处理 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handling, COM
+- event handling, about event handling
+- declaring events
+- event handlers, COM
+- event handlers
+- COM, events
+- event receivers, in event handling
+- event handling
+- hooking events
+- event receivers, name and signature matching
+- event sources, in event handling
+- declaring events, in COM
+- declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# COM 中的事件处理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: fc39584845bafa469b5d5ee8a925c2b4c5335345
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-在 COM 事件处理中，您使用 [event\_source](../windows/event-source.md) 和 [event\_receiver](../windows/event-receiver.md) 特性分别设置事件源和事件接收器，并指定 `type`\=**com**。  这些特性为自定义接口、调度接口和双重接口注入相应的代码，从而使这些接口能够应用到的类激发事件并通过 COM 连接点处理事件。  
+---
+# <a name="event-handling-in-com"></a>COM 中的事件处理
+在 COM 事件处理中，你将设置事件源和事件接收器使用[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)属性，分别指定`type` = **com**。这些特性为自定义接口、调度接口和双重接口注入相应的代码，从而使这些接口能够应用到的类激发事件并通过 COM 连接点处理事件。  
   
-## 声明事件  
- 在事件源类中，在接口声明上使用 [\_\_event](../cpp/event.md) 关键字以将该接口的方法声明为事件。  当您将该接口的事件作为接口方法调用时，将激发这些事件。  事件接口上的方法可以有零个或多个参数（应全是 **in** 参数）。  返回类型可以是 void 或任何整型。  
+## <a name="declaring-events"></a>声明事件  
+ 在事件源类中，使用[__event](../cpp/event.md)在接口声明以该接口将方法声明为事件的关键字。 当您将该接口的事件作为接口方法调用时，将激发这些事件。 事件接口上的方法可以具有零个或多个参数 (应全是**中**参数)。 返回类型可以是 void 或任何整型。  
   
-## 定义事件处理程序  
- 在事件接收器类中，可定义事件处理程序，这些处理程序是具有与它们将处理的事件匹配的签名（返回类型、调用约定和参数）的方法。  对于 COM 事件，调用约定不必匹配；有关详细信息，请参阅下文中的[依赖于布局的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)。  
+## <a name="defining-event-handlers"></a>定义事件处理程序  
+ 在事件接收器类中，可定义事件处理程序，这些处理程序是具有与它们将处理的事件匹配的签名（返回类型、调用约定和自变量）的方法。 对于 COM 事件，调用约定不必匹配;请参阅[布局依赖于 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)下面有关详细信息。  
   
-## 将事件处理程序挂钩到事件  
- 同样在事件接收器类中，可使用内部函数 [\_\_hook](../cpp/hook.md) 将事件与事件处理程序关联，并可使用 [\_\_unhook](../cpp/unhook.md) 取消事件与事件处理程序的关联。  您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。  
+## <a name="hooking-event-handlers-to-events"></a>将事件处理程序挂钩到事件  
+ 此外在事件接收器类中，使用内部函数[__hook](../cpp/hook.md)若要将事件与事件处理程序关联和[__unhook](../cpp/unhook.md)取消事件与事件处理程序。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。  
   
 > [!NOTE]
->  通常，有两种方法使 COM 事件接收器能够访问事件源接口定义。  第一种是共享公共头文件，如下所示。  第二种是将 [\#import](../preprocessor/hash-import-directive-cpp.md) 与 `embedded_idl` 导入限定符结合使用，以便让事件源类型库写入到保留了特性生成的代码的 .tlh 文件。  
+>  通常，有两种方法使 COM 事件接收器能够访问事件源接口定义。 第一种是共享公共头文件，如下所示。 第二个是使用[#import](../preprocessor/hash-import-directive-cpp.md)与`embedded_idl`导入限定符结合，以便让事件源类型库写入保留了特性生成的代码的.tlh 文件。  
   
-## 激发事件  
- 若要激发事件，只需调用在事件源类中使用 `__event` 关键字声明的接口中的方法。  如果处理程序已挂钩到事件，则将调用处理程序。  
+## <a name="firing-events"></a>激发事件  
+ 若要激发事件，只需调用在事件源类中使用 `__event` 关键字声明的接口中的方法。 如果处理程序已挂钩到事件，则将调用处理程序。  
   
-### COM 事件代码  
- 下面的示例演示如何在 COM 类中激发事件。  若要编译并运行此示例，请参考代码中的注释。  
+### <a name="com-event-code"></a>COM 事件代码  
+ 下面的示例演示如何在 COM 类中激发事件。 若要编译并运行此示例，请参考代码中的注释。  
   
 ```  
 // evh_server.h  
@@ -154,19 +171,19 @@ int main() {
 }  
 ```  
   
-### 输出  
+### <a name="output"></a>输出  
   
 ```  
 MyHandler1 was called with value 123.  
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 依赖于布局的 COM 事件  
- 布局依赖性只是 COM 编程中的一个问题。  在本机和托管事件处理中，处理程序的签名（返回类型、调用约定和参数）必须与其事件匹配，但处理程序的名称不必与其事件匹配。  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>布局取决于 COM 事件  
+ 布局依赖性只是 COM 编程中的一个问题。 在本机和托管事件处理中，处理程序的签名（返回类型、调用约定和自变量）必须与其事件匹配，但处理程序的名称不必与其事件匹配。  
   
- 但是，在 COM 事件处理中，如果将 **event\_receiver** 的 *layout\_dependent* 参数设置为 **true**，则将强制名称和签名匹配。  这意味着事件接收器中处理程序的名称和签名必须与处理程序将挂钩到的事件的名称和签名完全匹配。  
+ 但是，在 COM 事件处理中，当你设置*layout_dependent*参数**event_receiver**到**true**，强制执行的名称和签名匹配。 这意味着事件接收器中处理程序的名称和签名必须与处理程序将挂钩到的事件的名称和签名完全匹配。  
   
- 当 *layout\_dependent* 设置为 **false** 时，激发事件方法与挂钩方法（其委托）之间的调用约定和存储类（虚拟、静态等）可以混合和匹配。  将 *layout\_dependent* 设置为 **true** 效率会稍微高一点。  
+ 当*layout_dependent*设置为**false**，调用约定和存储类 （虚拟、 静态的等等） 可以混合和匹配之间激发事件方法并与挂钩方法 （其委托）。 它是效率稍有提高具有*layout_dependent*=**true**。  
   
  例如，假设 `IEventSource` 定义为具有下列方法：  
   
@@ -216,5 +233,5 @@ public:
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件处理](../cpp/event-handling.md)

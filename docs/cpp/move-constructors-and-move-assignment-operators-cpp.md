@@ -1,31 +1,47 @@
 ---
-title: "移动构造函数和移动赋值运算符 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "移动构造函数"
+title: "移动构造函数和移动赋值运算符 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 移动构造函数和移动赋值运算符 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-本主题介绍如何为 C\+\+ 类编写移动构造函数和移动赋值运算符。  利用移动构造函数，您可以实现移动语义，从而显著提高应用程序的性能。  有关移动语义的详细信息，请参阅[规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>移动构造函数和移动赋值运算符 (C++)
+本主题介绍如何编写*移动构造函数*和移动赋值运算符的 c + + 类。 利用移动构造函数，您可以实现移动语义，从而显著提高应用程序的性能。 有关移动语义的详细信息，请参阅[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
- 此主题基于用于管理内存缓冲区的 C\+\+ 类 `MemoryBlock`。  
+ 此主题基于用于管理内存缓冲区的 C++ 类 `MemoryBlock`。  
   
 ```cpp  
 // MemoryBlock.h  
@@ -103,9 +119,9 @@ private:
 };  
 ```  
   
- 以下过程介绍如何为示例 C\+\+ 类编写移动构造函数和移动赋值运算符。  
+ 以下过程介绍如何为示例 C++ 类编写移动构造函数和移动赋值运算符。  
   
-### 为 C\+\+ 创建移动构造函数  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>为 C++ 创建移动构造函数  
   
 1.  定义一个空的构造函数方法，该方法采用一个对类类型的右值引用作为参数，如以下示例所示：  
   
@@ -124,14 +140,14 @@ private:
     _length = other._length;  
     ```  
   
-3.  将源对象的数据成员分配给默认值。  这可以防止析构函数多次释放资源（如内存）:  
+3.  将源对象的数据成员分配给默认值。 这可以防止析构函数多次释放资源（如内存）:  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### 为 C\+\+ 类创建移动赋值运算符  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>为 C++ 类创建移动赋值运算符  
   
 1.  定义一个空的赋值运算符，该运算符采用一个对类类型的右值引用作为参数并返回一个对类类型的引用，如以下示例所示：  
   
@@ -178,7 +194,7 @@ private:
     return *this;  
     ```  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例显示了 `MemoryBlock` 类的完整移动构造函数和移动赋值运算符：  
   
 ```cpp  
@@ -226,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## 示例  
- 以下示例演示移动语义如何能提高应用程序的性能。  此示例将两个元素添加到一个矢量对象，然后在两个现有元素之间插入一个新元素。  在 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 中，`vector` 类使用移动语义，通过移动矢量元素（而非复制它们）来高效地执行插入操作。  
+## <a name="example"></a>示例  
+ 以下示例演示移动语义如何能提高应用程序的性能。 此示例将两个元素添加到一个矢量对象，然后在两个现有元素之间插入一个新元素。 在 Visual c + + 2010 中，`vector`类使用移动语义来高效地执行插入操作，通过移动而不是将其复制向量的元素。  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -272,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- 在 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 之前，此示例生成以下输出：  
+ 在 Visual c + + 2010 中之前, 该示例产生下面的输出：  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -297,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  使用移动语义的此示例版本比不使用移动语义的版本更高效，因为前者执行的复制、内存分配和内存释放操作更少。  
   
-## 可靠编程  
+## <a name="robust-programming"></a>可靠编程  
  若要防止资源泄漏，请始终释放移动赋值运算符中的资源（如内存、文件句柄和套接字）。  
   
  若要防止不可恢复的资源损坏，请正确处理移动赋值运算符中的自我赋值。  
   
- 如果为您的类同时提供了移动构造函数和移动赋值运算符，则可以编写移动构造函数来调用移动赋值运算符，从而消除冗余代码。  以下示例显示了调用移动赋值运算符的移动构造函数的修改后的版本：  
+ 如果为您的类同时提供了移动构造函数和移动赋值运算符，则可以编写移动构造函数来调用移动赋值运算符，从而消除冗余代码。 以下示例显示了调用移动赋值运算符的移动构造函数的修改后的版本：  
   
 ```  
 // Move constructor.  
@@ -314,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [std::move](../Topic/move.md) 函数保留了 `other` 参数的右值属性。  
+ [Std:: move](../standard-library/utility-functions.md#move)函数保留的右值属性`other`参数。  
   
-## 请参阅  
- [规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<实用程序\> 移动](http://msdn.microsoft.com/zh-cn/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>另请参阅  
+ [右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<实用程序 > 移动](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

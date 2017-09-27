@@ -1,37 +1,54 @@
 ---
-title: "_variant_t::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::Attach"
-  - "_variant_t.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach 方法"
-  - "VARIANT 对象"
-  - "VARIANT 对象, attach"
+title: "_variant_t::Attach |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::Attach
+- _variant_t.Attach
+dev_langs:
+- C++
+helpviewer_keywords:
+- Attach method
+- VARIANT object, attach
+- VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 33e21d3bea71c80b8b60df222682fda560fbce9c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft 专用**  
   
- 将 **VARIANT** 对象附加到 `_variant_t` 对象中。  
+ 将附加**VARIANT**对象插入`_variant_t`对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -40,14 +57,14 @@ caps.handback.revision: 6
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *varSrc*  
- 要附加到此 `_variant_t` 对象中的 **VARIANT** 对象。  
+ A **VARIANT**要附加到此对象`_variant_t`对象。  
   
-## 备注  
- 通过封装取得 **VARIANT** 的所有权。  此成员函数将释放所有现有封装的 **VARIANT**，然后复制提供的 **VARIANT**，并将其 **VARTYPE** 设置为 `VT_EMPTY` 以确保其资源只能由 `_variant_t` 析构函数释放。  
+## <a name="remarks"></a>备注  
+ 将获得的所有权**VARIANT**通过封装。 此成员函数释放所有现有封装**VARIANT**，然后复制提供**VARIANT**，并设置其**VARTYPE**到`VT_EMPTY`若要确保其资源仅通过释放`_variant_t`析构函数。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [\_variant\_t 类](../cpp/variant-t-class.md)
+## <a name="see-also"></a>另请参阅  
+ [_variant_t 类](../cpp/variant-t-class.md)

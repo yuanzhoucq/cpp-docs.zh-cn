@@ -1,29 +1,45 @@
 ---
-title: "使用数组 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++]"
+title: "使用数组 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 使用数组 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 31402e2f113deb89fce6d2d8b6c3633f06a944be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-可以使用数组下标操作符 （`[ ]`） 访问数组的各个元素。  如果在无下标表达式中使用一维数组，组名计算为指向该数组中的第一个元素的指针。  
+---
+# <a name="using-arrays-c"></a>使用数组 (C++)
+您可以使用数组下标运算符 (`[ ]`) 访问数组的各个元素。 如果一维数组用于无下标的表达式中，则数组名称的计算结果为一个指向该数组中第一个元素的指针。  
   
 ```  
 // using_arrays.cpp  
@@ -35,7 +51,7 @@ int main() {
 }  
 ```  
   
- 使用多维数组时，在表达式中使用各种组合。  
+ 使用多维数组时，可以在表达式中使用各种组合。  
   
 ```  
 // using_arrays_2.cpp  
@@ -56,7 +72,7 @@ int main() {
 }  
 ```  
   
- 在前面的代码中， `multi` 是类型 `double` 的一个三维数组。  `p2multi` 指针指向大小为三的 `double` 类型数组。  本例中该数组用于一个，两个和三个下标。  尽管指定所有下标更为常见（如 `cout` 语句所示），但是如下的语句 `cout` 所示，有时其在选择数组元素的特定子集时非常有用。  
+ 在前面的代码中，`multi` 是 `double` 类型的三维数组。 `p2multi` 指针指向大小为三的 `double` 类型的数组。 在此示例中，该数组与一个、两个和三个下标一起使用。 尽管更为常见的是指定所有下标（如在 `cout` 语句中），但有时选择数组元素的特定子集会很有用，如 `cout` 后面的语句中所示。  
   
-## 请参阅  
- [数组](../cpp/arrays-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [阵列](../cpp/arrays-cpp.md)

@@ -1,39 +1,57 @@
 ---
-title: "声明符概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "声明符，有关声明符"
+title: "声明符概述 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 声明符概述
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符 [声明](../misc/declarations.md), ，类型和存储类等属性。 本部分中并在讨论的修饰符 [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md), ，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。  
+---
+# <a name="overview-of-declarators"></a>声明符概述
+声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符[声明和定义](declarations-and-definitions-cpp.md)，类型和存储类等属性。 在本部分和讨论的修饰符[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。  
   
- ![修饰符、说明符和声明符](../cpp/media/vc38qy1.png "vc38QY1")  
+ ![修饰符、 说明符和声明符](../cpp/media/vc38qy1.gif "vc38QY1")  
 说明符、修饰符和声明符  
   
  **Microsoft 专用**  
   
- 大多数 Microsoft 扩展关键字可用作修饰符来构成派生类型；它们不是说明符或声明符。 (请参阅 [Microsoft-Specific 修饰符](../cpp/microsoft-specific-modifiers.md)。)  
+ 大多数 Microsoft 扩展关键字可用作修饰符来构成派生类型；它们不是说明符或声明符。 (请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。)  
   
  **结束 Microsoft 专用**  
   
- 声明符出现在声明语法中可选的说明符列表后面。 中讨论了这些说明符 [声明。](../misc/declarations.md) 声明可包含多个声明符，但每个声明符只声明一个名称。  
+ 声明符出现在声明语法中可选的说明符列表后面。 中讨论了这些说明符[声明。](declarations-and-definitions-cpp.md) 声明可包含多个声明符，但每个声明符只声明一个名称。  
   
  以下示例声明显示了如何将说明符和声明符组合以构成一个完整的声明：  
   
@@ -41,7 +59,7 @@ caps.handback.revision: 10
 const char *pch, ch;  
 ```  
   
- 在前面的声明，这些关键字 **const** 和 `char` 组成了说明符的列表。 列出了两个声明：`*pch` 和 `ch`。  声明多个实体的声明由类型说明符后跟声明符的逗号分隔列表组成，并以分号终止。  
+ 在前面的声明中，关键字**const**和`char`组成了说明符的列表。 列出了两个声明：`*pch` 和 `ch`。  声明多个实体的声明由类型说明符后跟声明符的逗号分隔列表组成，并以分号终止。  
   
  **简单对象的声明符**  
   
@@ -53,7 +71,7 @@ const char *pch, ch;
   
  **指针、 引用和数组的声明符**  
   
- 在名称前面插入的指针运算符使对象成为指针或引用。   **\*** 运算符声明为指针; 名称 **&** 运算符声明为引用。  
+ 在名称前面插入的指针运算符使对象成为指针或引用。  ** \* **运算符声明为指针; 名称** & **运算符声明为引用。  
   
 ```  
 int *i; // declarator is *i  
@@ -69,7 +87,7 @@ const char *pcc; // pointer to const char
 const char *const cpcc; // const pointer to const char  
 ```  
   
- 在中可能找到更多信息 [const 和 volatile 指针](../cpp/const-and-volatile-pointers.md)。  
+ 在中，可找到详细信息[const 和 volatile 指针](../cpp/const-and-volatile-pointers.md)。  
   
  指向类或结构的成员的指针使用适当的嵌套名称说明符来声明：  
   
@@ -96,8 +114,6 @@ int i[2][2]; // two dimensional array
 int f(int a, int b, int c);  
 ```  
   
- 参数列表的信息，请参阅 [函数声明](http://msdn.microsoft.com/zh-cn/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)。  
-  
  针对函数的指针和引用通过将指针或引用运算符添加到函数名称来声明，如下所示。  需要使用圆括号（通常为可选）来区分指向函数的指针和返回指针的函数：  
   
 ```  
@@ -113,7 +129,7 @@ int (X::* pmf)(); // pointer to member function of X returning int
 int* (X::* pmf)(); // pointer to member function returning pointer to int  
 ```  
   
- 另请参阅 [指向成员的指针](../cpp/pointers-to-members.md)。  
+ 另请参阅[指向成员的指针](../cpp/pointers-to-members.md)。  
   
  **函数和同一声明中的对象**  
   
@@ -151,7 +167,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );  
 ```  
   
- 有关 typedef 的详细信息，请参阅 [typedef 说明符](http://msdn.microsoft.com/zh-cn/cc96cf26-ba93-4179-951e-695d1f5fdcf1)。  
+ 有关 typedef 的详细信息，请参阅[别名和 typedef](aliases-and-typedefs-cpp.md)。  
   
  指针、引用以及单个基类型的数组可以在单个声明中合并（以逗号分隔）为  
   
@@ -177,7 +193,7 @@ int a, *b, c[5], **d, &e=a;
 6. ( declarator )  
 ```  
   
--   和 *指针运算符* 是之一︰  
+-   和*指针运算符*是之一：  
   
 ```  
   
@@ -186,7 +202,7 @@ int a, *b, c[5], **d, &e=a;
 ::nested-name-specifier * [cv-qualfiers]  
 ```  
   
- 由于一个声明符可能包含多个声明符，因此可以使用上述规则来构造更复杂的派生类型，如指针数组和返回函数指针数组的函数。  若要制定构造的所有步骤，请以呈现基数据类型的标识符开头，并应用上面的语法规则（将上一个表达式作为 `declarator`）。  应用语法规则的顺序应该与用英语表示表达式的方法相反。  如果将应用 *指针运算符* 语法规则应用于数组或函数表达式，如果你需要指向该数组或函数，如下面的表中的最后一行中所示使用括号。  
+ 由于一个声明符可能包含多个声明符，因此可以使用上述规则来构造更复杂的派生类型，如指针数组和返回函数指针数组的函数。  若要制定构造的所有步骤，请以呈现基数据类型的标识符开头，并应用上面的语法规则（将上一个表达式作为 `declarator`）。  应用语法规则的顺序应该与用英语表示表达式的方法相反。  如果将应用*指针运算符*语法规则应用于数组或函数表达式，如果你需要指向该数组或函数下, 表中的最后一行所示使用括号。  
   
  以下示例显示了“指向‘指向 int 的 10 个指针的数组’的指针”的构造。  
   
@@ -197,4 +213,4 @@ int a, *b, c[5], **d, &e=a;
 |10 的数组|`(*i)[10]`|4|  
 |指针|`*((*i)[10])`|6，然后 5|  
   
- 当使用多个指针、引用、数组或函数修饰符时，声明符可能变得十分复杂。  主题 [解释更复杂声明符](../c-language/interpreting-more-complex-declarators.md) 介绍了如何阅读更复杂的声明符语法。  标题是适用于 C 和 c + +，但在 c + +，任意位置 * 用来指示指针，MyClass 等限定名::\* 可能用来指定指向类的成员的指针。
+ 当使用多个指针、引用、数组或函数修饰符时，声明符可能变得十分复杂。  主题[解释更复杂声明符](../c-language/interpreting-more-complex-declarators.md)描述如何阅读更复杂的声明符语法。  主题是适用于 C 和 c + +，但在 c + +，任何位置 * 用于指示指针，一个限定的名称，例如 MyClass::\*可能用于指定指向类的成员的指针。

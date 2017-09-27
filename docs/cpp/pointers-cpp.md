@@ -1,55 +1,71 @@
 ---
-title: "指针 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "声明, 指针"
-  - "声明符, 指针"
-  - "指针"
-  - "指针, 声明"
+title: "指针 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 指针
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>指针 （c + +）
 使用以下序列声明指针。  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
- 其中，任何有效指针声明符均可用于 `declarator`。简单指针声明符的语法如下所示：  
+ 其中，任何有效指针声明符均可用于 `declarator`。  简单指针声明符的语法如下所示：  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  声明说明符：  
+ 1. 声明说明符：  
   
--   可选存储类说明符。  有关详细信息，请参阅[说明符](../cpp/specifiers.md)。  
+-   可选存储类说明符。 有关详细信息，请参阅[说明符](../cpp/specifiers.md)。  
   
 -   应用于要指向的对象的类型的可选 `const` 或 `volatile` 关键字。  
   
 -   类型说明符：可表示要指向的对象的类型的类型名称。  
   
- 2.  声明符：  
+ 2. 声明符：  
   
--   可选的 Microsoft 专用修饰符。  有关详细信息，请参阅 [Microsoft 专用修饰符](../cpp/microsoft-specific-modifiers.md)。  
+-   可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)。  
   
 -   `*` 运算符。  
   
@@ -72,8 +88,6 @@ manager: "ghogen"
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   但是，指针声明符可能更复杂。  有关详细信息，请参阅[声明符](http://msdn.microsoft.com/zh-cn/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
-  
 -   多个声明符及其初始值设定项可能同时出现在前面有声明说明符且以逗号分隔的列表中的一个声明中。  
   
  指针声明的简单示例如下：  
@@ -90,7 +104,7 @@ char *pch;
 static unsigned int * const ptr;  
 ```  
   
- 前面的声明指定 `ptr` 是一个指向 `unsigned` `int` 类型（带静态存储持续时间）的对象的常量指针。  
+ 前面的声明指定`ptr`是指向类型的对象的常量指针`unsigned``int`具有静态存储持续时间。  
   
  下一个示例演示如何声明和初始化多个指针：  
   
@@ -98,9 +112,9 @@ static unsigned int * const ptr;
 static int *p = &i, *q = &j;  
 ```  
   
- 在前面的示例中，指针 p 和 q 都指向类型 `int` 的对象并分别初始化为 i 和 j 的地址。存储类说明符 `static` 应用于这两个指针。  
+ 在前面的示例中，指针 p 和 q 都指向类型 `int` 的对象并分别初始化为 i 和 j 的地址。  存储类说明符 `static` 应用于这两个指针。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j is 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## 示例  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>示例  
  另一个示例演示如何在数据结构中使用指针；本例中采用链接列表。  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\)  d \(display list\)  q \(quit\)**   
-## 请参阅  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/zh-cn/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [指针加法类型](../misc/addition-of-pointer-types.md)   
- [间接寻址运算符：\*](../cpp/indirection-operator-star.md)   
- [Address\-of 运算符：&](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [间接寻址运算符：*](../cpp/indirection-operator-star.md)   
+ [Address-of 运算符：&](../cpp/address-of-operator-amp.md)

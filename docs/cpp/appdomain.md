@@ -1,48 +1,65 @@
 ---
-title: "appdomain | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "appdomain_cpp"
-  - "appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 关键字 [C++], appdomain"
-  - "appdomain __declspec 关键字"
+title: "appdomain |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- appdomain_cpp
+- appdomain
+dev_langs:
+- C++
+helpviewer_keywords:
+- appdomain __declspec keyword
+- __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# appdomain
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9d4143fa5bb7b302899207041d38cd355ac31b42
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-指定托管应用程序的每个应用程序域应具有其自己的特定全局变量或静态成员变量的副本。  有关更多信息，请参见[应用程序域和 Visual C\+\+](../dotnet/application-domains-and-visual-cpp.md)。  
+---
+# <a name="appdomain"></a>appdomain
+指定托管应用程序的每个应用程序域应具有其自己的特定全局变量或静态成员变量的副本。 请参阅[应用程序域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)有关详细信息。  
   
- 每个应用程序域具有其自己的 per\-appdomain 变量的副本。  在将程序集加载到应用程序域中时执行 appdomain 变量的构造函数，并在卸载应用程序域时执行析构函数。  
+ 每个应用程序域具有其自己的 per-appdomain 变量的副本。 在将程序集加载到应用程序域中时执行 appdomain 变量的构造函数，并在卸载应用程序域时执行析构函数。  
   
- 如果希望公共语言运行时中进程内的所有应用程序域共享全局变量，请使用 `__declspec(process)` 修饰符。  默认情况下，`__declspec(process)` 在 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 下方生效，并且 `__declspec(appdomain)` 在 **\/clr:pure** 下方生效。  在 **\/clr:safe** 下强制执行 `__declspec(appdomain)`。  
+ 如果希望公共语言运行时中进程内的所有应用程序域共享全局变量，请使用 `__declspec(process)` 修饰符。 `__declspec(process)`默认情况下实际上是[/clr](../build/reference/clr-common-language-runtime-compilation.md)和`__declspec(appdomain)`实际上是默认情况下**/clr: pure**。 `__declspec(appdomain)`下强制执行**/clr: safe**。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- `__declspec(appdomain)` 仅在使用 **\/clr** 编译器选项之一时有效。  只有全局变量、静态成员变量或静态局部变量可以使用 `__declspec(appdomain)` 进行标记。  将 `__declspec(appdomain)` 应用于托管类型的静态成员是错误的，因为它们始终具有此行为。  
+ `__declspec(appdomain)`时才有效之一**/clr**使用编译器选项。 只有全局变量、静态成员变量或静态局部变量可以使用 `__declspec(appdomain)` 进行标记。 将 `__declspec(appdomain)` 应用于托管类型的静态成员是错误的，因为它们始终具有此行为。  
   
- 使用 `__declspec(appdomain)` 与使用[线程本地存储 \(TLS\)](../parallel/thread-local-storage-tls.md) 类似。  线程具有其自己的存储，就像应用程序域一样。  使用 `__declspec(appdomain)` 可确保全局变量在为此应用程序创建的每个应用程序域中都具有其自己的存储。  
+ 使用`__declspec(appdomain)`类似于使用[线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)。 线程具有其自己的存储，就像应用程序域一样。 使用 `__declspec(appdomain)` 可确保全局变量在为此应用程序创建的每个应用程序域中都具有其自己的存储。  
   
- 在将 per process 和 per appdomain 变量结合使用方面存在一些限制；有关详细信息，请参阅 [process](../cpp/process.md)。  
+ 有混合 per process 和 per appdomain 变量; 的使用限制请参阅[过程](../cpp/process.md)有关详细信息。  
   
- 例如，在程序启动时，初始化所有 per\-process 变量，然后初始化所有 per\-appdomain 变量。  因此，当初始化 per\-process 变量时，它不能依赖于任何 per\-application 域变量的值。  混合使用（分配）per appdomain 和 per process 变量的做法不妥。  
+ 例如，在程序启动时，初始化所有 per-process 变量，然后初始化所有 per-appdomain 变量。 因此，当初始化 per-process 变量时，它不能依赖于任何 per-application 域变量的值。 混合使用（分配）per appdomain 和 per process 变量的做法不妥。  
   
- 有关如何在特定应用程序域中调用函数的信息，请参阅 [call\_in\_appdomain 函数](../dotnet/call-in-appdomain-function.md)。  
+ 有关如何在特定应用程序域中调用函数的信息，请参阅[call_in_appdomain 函数](../dotnet/call-in-appdomain-function.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // declspec_appdomain.cpp  
@@ -119,28 +136,31 @@ int main() {
 }  
 ```  
   
-  **\_\_declspec\(process\) CGlobal::CGlobal constructor**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal constructor**  
-**初始值**  
-**process\_global value in appdomain 'declspec\_appdomain.exe': 10**  
-**appdomain\_global value in appdomain 'declspec\_appdomain.exe': 10**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal constructor**  
-**process\_global value in appdomain 'Domain 1': 10**  
-**appdomain\_global value in appdomain 'Domain 1': 10**  
-**\_\_declspec\(appdomain\) CGlobal::CGlobal constructor**  
-**process\_global value in appdomain 'Domain 2': 10**  
-**appdomain\_global value in appdomain 'Domain 2': 10**  
-**Changed value**  
-**process\_global value in appdomain 'declspec\_appdomain.exe': 20**  
-**appdomain\_global value in appdomain 'declspec\_appdomain.exe': 10**  
-**process\_global value in appdomain 'Domain 1': 20**  
-**appdomain\_global value in appdomain 'Domain 1': 11**  
-**process\_global value in appdomain 'Domain 2': 20**  
-**appdomain\_global value in appdomain 'Domain 2': 12**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal destructor**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal destructor**  
-**\_\_declspec\(appdomain\) CGlobal::~CGlobal destructor**  
-**\_\_declspec\(process\) CGlobal::~CGlobal destructor**   
-## 请参阅  
- [\_\_declspec](../cpp/declspec.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+```Output  
+__declspec(process) CGlobal::CGlobal constructor  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+Initial value  
+process_global value in appdomain 'declspec_appdomain.exe': 10  
+appdomain_global value in appdomain 'declspec_appdomain.exe': 10  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+process_global value in appdomain 'Domain 1': 10  
+appdomain_global value in appdomain 'Domain 1': 10  
+__declspec(appdomain) CGlobal::CGlobal constructor  
+process_global value in appdomain 'Domain 2': 10  
+appdomain_global value in appdomain 'Domain 2': 10  
+Changed value  
+process_global value in appdomain 'declspec_appdomain.exe': 20  
+appdomain_global value in appdomain 'declspec_appdomain.exe': 10  
+process_global value in appdomain 'Domain 1': 20  
+appdomain_global value in appdomain 'Domain 1': 11  
+process_global value in appdomain 'Domain 2': 20  
+appdomain_global value in appdomain 'Domain 2': 12  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(appdomain) CGlobal::~CGlobal destructor  
+__declspec(process) CGlobal::~CGlobal destructor  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [__declspec](../cpp/declspec.md)   
+ [关键字](../cpp/keywords-cpp.md)

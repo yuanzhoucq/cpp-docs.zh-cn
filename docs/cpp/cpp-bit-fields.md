@@ -1,41 +1,57 @@
 ---
-title: "C++ 位域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "位域"
-  - "位域"
-  - "字段 [C++], bit"
+title: "C + + 位字段 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- fields [C++], bit
+- bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 位域
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-类和结构可包含比整型类型占用更少存储空间的成员。  这些成员被指定为位域。  位域*成员声明符*规范的语法如下：  
+---
+# <a name="c-bit-fields"></a>C++ 位域
+类和结构可包含比整型类型占用更少存储空间的成员。 这些成员被指定为位域。 位域的语法*成员声明符*规范如下所示：  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 declarator  : constant-expression  
 ```  
   
-## 备注  
- （可选）`declarator` 是在程序中访问成员的名称。  它必须是整型类型（包括枚举类型）。  *常数表达式*指定结构中成员所占据的位数。  匿名位域 — 即不带标识符的位域成员，可用于填充。  
+## <a name="remarks"></a>备注  
+ （可选）`declarator` 是在程序中访问成员的名称。 它必须是整型类型（包括枚举类型）。 *常量表达式*结构中指定的成员所占据的位数。 匿名位域 — 即不带标识符的位域成员，可用于填充。  
   
 > [!NOTE]
 >  宽度为 0 的未命名位域强制将下一个位域与下一个 `type` 边界对齐，其中 `type` 是成员的类型。  
@@ -58,7 +74,7 @@ struct Date {
  ![Date 对象的内存布局](../cpp/media/vc38uq1.png "vc38UQ1")  
 数据对象的内容布局  
   
- 请注意，`nYear` 的长度为 8 位，并且会溢出声明类型 **unsigned short** 的字边界。  因此，它始于新 **unsigned short** 的开头。  并不必使所有位域均适合基础类型的对象；根据声明中请求的位数来分配新的存储单元。  
+ 请注意，`nYear`长度为 8 位，并且会溢出声明的类型的字边界**无符号短**。 因此，它始于的一个新的开头**无符号短**。 并不必使所有位域均适合基础类型的对象；根据声明中请求的位数来分配新的存储单元。  
   
  **Microsoft 专用**  
   
@@ -82,17 +98,17 @@ struct Date {
   
  则内存布局如下图中所示。  
   
- ![带有零长度位域的 Date 对象的布局](../Image/vc38UQ2.png "vc38UQ2")  
+ ![与零 & #45 的 Date 对象的布局; 长度位域](../cpp/media/vc38uq2.png "vc38UQ2")  
 带有零长度位域的数据对象的布局  
   
- 位域的基础类型必须是整型类型，如[基本类型](../cpp/fundamental-types-cpp.md)中所述。  
+ 位域的基础类型必须是整数类型、 中所述[基本类型](../cpp/fundamental-types-cpp.md)。  
   
-## 位域的限制  
+## <a name="restrictions-on-bit-fields"></a>位域的限制  
  以下列表详述了位域的错误操作：  
   
 1.  采用位域的地址。  
   
 2.  使用位域初始化引用。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [类和结构](../cpp/classes-and-structs-cpp.md)

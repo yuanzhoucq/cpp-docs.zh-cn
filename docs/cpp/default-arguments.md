@@ -1,34 +1,51 @@
 ---
-title: "默认参数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "参数 [C++], default"
-  - "参数 [C++], 函数"
-  - "声明函数, 声明符"
-  - "默认参数"
-  - "默认值 [C++], 参数"
-  - "函数声明"
-  - "函数 [C++], 默认参数"
+title: "默认自变量 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function declarators
+- functions [C++], default arguments
+- declaring functions, declarators
+- default arguments
+- arguments [C++], default
+- defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 默认参数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-在许多情况下，函数具有不常使用的参数，因为使用默认值便已足够。  为了解决此问题，默认参数工具允许为函数仅指定在给定调用中有意义的参数。  为了阐释此概念，请考虑[函数重载](../cpp/function-overloading.md)中所示的示例。  
+---
+# <a name="default-arguments"></a>默认自变量
+在许多情况下，函数具有不常使用的自变量，因为使用默认值便已足够。 为了解决此问题，默认自变量工具允许为函数仅指定在给定调用中有意义的自变量。 若要阐明这个概念，请考虑在提供的示例[函数重载](../cpp/function-overloading.md)。  
   
 ```  
 // Prototype three print functions.  
@@ -47,7 +64,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.  
 ```  
   
- 略微更改了 `print` 函数的实现以反映类型 **double** 仅存在一个此类函数这一事实：  
+ 实现`print`函数略有更改，以反映只有一个此类函数存在类型事实**double**:  
   
 ```  
 // default_arguments.cpp  
@@ -90,13 +107,13 @@ print( d, 0 ); // Override default argument to achieve other
   
  使用默认参数时，请注意以下几点：  
   
--   默认参数仅在其中省略了尾随参数的函数调用中使用 \- 它们必须是最后的参数。  因此，以下代码是非法的：  
+-   默认参数仅在其中省略了尾随参数的函数调用中使用 - 它们必须是最后的参数。 因此，以下代码是非法的：  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
     ```  
   
--   默认参数不能在以后的声明中重新定义，即使重新定义的参数与原始参数相同也是如此。  因此，以下代码将生成错误：  
+-   默认参数不能在以后的声明中重新定义，即使重新定义的参数与原始参数相同也是如此。 因此，以下代码将生成错误：  
   
     ```  
     // Prototype for print function.  
@@ -115,11 +132,11 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   以后的声明可添加额外的默认参数。  
   
--   可为指向函数的指针提供默认参数。  例如:  
+-   可为指向函数的指针提供默认参数。 例如:   
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## 请参阅  
- [C\+\+ 抽象声明符](http://msdn.microsoft.com/zh-cn/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>另请参阅  
+ 

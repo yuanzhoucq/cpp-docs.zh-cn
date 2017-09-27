@@ -1,45 +1,60 @@
 ---
-title: "指针到成员运算符：.* 和 -&gt;* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - ".*"
-  - "->*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".* 运算符"
-  - "->* 运算符"
-  - "表达式 [C++], 运算符"
-  - "表达式 [C++], 指针"
-  - "指针到成员运算符"
+title: "指针到成员运算符:。 * 和-&gt;* |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .*
+- ->*
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], pointer
+- pointer-to-member operators
+- .* operator
+- expressions [C++], operators
+- ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 指针到成员运算符：.* 和 -&gt;*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## 语法  
+---
+# <a name="pointer-to-member-operators--and--gt"></a>指针到成员运算符:。 * 和-&gt;*
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      expression .* expression  
-expression –>* expression  
+expression .* expression  
+expression ->* expression  
 ```  
   
-## 备注  
- 指向成员的指针运算符（.\* 和 –\>\*）返回表达式左侧上指定的对象的特定类成员的值。右侧必须指定该类的成员。下面的示例演示如何使用这些运算符：  
+## <a name="remarks"></a>备注  
+ 指针到成员的指针运算符，。 * 和->\*，返回表达式左侧指定的对象的特定类成员的值。  右侧必须指定该类的成员。  下面的示例演示如何使用这些运算符：  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -79,7 +94,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 m_func1  
@@ -88,17 +103,17 @@ m_func1
 2  
 ```  
   
- 在前面的示例中，指向成员的指针 `pmfn` 用于调用成员函数 `m_func1`。  另一个指向成员的指针 `pmd` 用于访问 `m_num` 成员。  
+ 在前面的示例中，指向成员的指针 `pmfn` 用于调用成员函数 `m_func1`。 另一个指向成员的指针 `pmd` 用于访问 `m_num` 成员。  
   
- 二元运算符 .\* 将其第一操作数（必须是类类型的对象）与其第二操作数（必须是指向成员的指针类型）组合在一起。  
+ 二元运算符 .* 将其第一操作数（必须是类类型的对象）与其第二操作数（必须是指向成员的指针类型）组合在一起。  
   
- 二元运算符 –\>\* 将其第一操作数（必须是指向类类型的对象的指针）与其第二操作数（必须是指向成员的指针类型）组合在一起。  
+ 二元运算符-> * 将合并其第一个操作数，它必须是指向类类型的对象的指针必须是指向成员的指针类型与其第二个操作数。  
   
- 在包含 .\* 运算符的表达式中，第一操作数必须是类类型且可访问，而指向第二操作数中指定的成员的指针或可访问类型的成员的指针明确从该类派生并且可供该类访问。  
+ 在包含 .* 运算符的表达式中，第一操作数必须是类类型且可访问，而指向第二操作数中指定的成员的指针或可访问类型的成员的指针明确从该类派生并且可供该类访问。  
   
- 在包含 –\>\* 运算符的表达方式中，第一操作数必须是第二操作数中指定的类型的“指向类类型的指针”或明确地从该类派生的类型。  
+ 在表达式中包含-> * 运算符，第一个操作数必须类型的类型"指向类类型"中指定第二个操作数，或它必须派生的类型明确从该类。  
   
-## 示例  
+## <a name="example"></a>示例  
  考虑以下类和程序段：  
   
 ```  
@@ -137,11 +152,12 @@ int main() {
 }  
 ```  
   
- 指向成员的指针运算符 .\* 或 –\>\* 的结果是在指向成员的指针的声明中指定的类型的对象或函数。  因此，在前面的示例中，表达式 `ADerived.*pmfnFunc1()` 的结果是指向返回 void 的函数的指针。  如果第二操作数是左值，则此结果为左值。  
+ 结果。 * 或->\*指针到成员运算符是对象或指向成员的指针的声明中指定的类型的函数。 因此，在前面的示例中，表达式 `ADerived.*pmfnFunc1()` 的结果是指向返回 void 的函数的指针。 如果第二操作数是左值，则此结果为左值。  
   
 > [!NOTE]
 >  如果某个指向成员的指针运算符的结果是函数，则该结果只能用作函数调用运算符的操作数。  
   
-## 请参阅  
- [C\+\+ 运算符](../misc/cpp-operators.md)   
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+

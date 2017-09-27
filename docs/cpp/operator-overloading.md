@@ -1,77 +1,94 @@
 ---
-title: "运算符重载 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "operator_cpp"
-  - "operator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "非可以重新定义的运算符"
-  - "运算符关键字 [C++]"
-  - "运算符重载"
-  - "运算符 [C++], 重载"
-  - "可以重新定义的运算符"
+title: "运算符重载 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- operator_cpp
+- operator
+dev_langs:
+- C++
+helpviewer_keywords:
+- redefinable operators
+- non-redefinable operators
+- operator keyword [C++]
+- operators [C++], overloading
+- operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 运算符重载
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5ac9415ec186760a70394772ffaff011d7c68c95
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-当应用于类的实例时，`operator` 关键字将声明一个用于指定 `operator-symbol` 含义的函数。  这将为运算符提供多个含义，或者将“重载”它。  编译器通过检查其操作数类型来区分运算符不同的含义。  
+---
+# <a name="operator-overloading"></a>运算符重载
+当应用于类的实例时，`operator` 关键字将声明一个用于指定 `operator-symbol` 含义的函数。 这将为运算符提供多个含义，或者将“重载”它。 编译器通过检查其操作数类型来区分运算符不同的含义。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 type operator operator-symbol ( parameter-list )  
 ```  
   
-## 备注  
- 你可以在全局或为各个类重新定义大多数内置运算符的函数。  重载运算符作为函数来实现。  
+## <a name="remarks"></a>备注  
+ 你可以在全局或为各个类重新定义大多数内置运算符的函数。 重载运算符作为函数来实现。  
   
- 重载运算符的名称是 `operator``x`，其中 `x` 为下表中显示的运算符。  例如，若要重载加法运算符，则可以对称为 `operator+` 的函数进行定义。  同样，若要重载加法\/赋值运算符 `+=`，则可以对称为 `operator+=` 的函数进行定义。  
+ 重载运算符的名称是`operator x`，其中`x`是运算符下, 表中所示。 例如，若要重载加法运算符，则可以对称为 `operator+` 的函数进行定义。 同样，若要重载加法/赋值运算符 `+=`，则可以对称为 `operator+=` 的函数进行定义。  
   
-### 可重定义的运算符  
+### <a name="redefinable-operators"></a>可重定义的运算符  
   
 |运算符|名称|类型|  
-|---------|--------|--------|  
+|--------------|----------|----------|  
 |`,`|逗号|二进制|  
 |`!`|逻辑“非”|一元|  
 |`!=`|不相等|二进制|  
 |`%`|取模|二进制|  
 |`%=`|取模赋值|二进制|  
 |`&`|按位“与”|二进制|  
-|`&`|address\-of|一元|  
+|`&`|address-of|一元|  
 |`&&`|逻辑“与”|二进制|  
 |`&=`|按位“与”赋值|二进制|  
-|`( )`|函数调用|—|  
+|`( )`|函数调用 |—|  
 |`( )`|强制转换运算符|一元|  
 |`*`|乘法|二进制|  
 |`*`|指针取消引用|一元|  
 |`*=`|乘法赋值|二进制|  
 |`+`|添加|二进制|  
 |`+`|一元加|一元|  
-|`++`|增量 <sup>1</sup>|一元|  
+|`++`|递增<sup>1</sup>|一元|  
 |`+=`|加法赋值|二进制|  
-|`–`|减法|二进制|  
-|`–`|一元求反|一元|  
-|`––`|减量 <sup>1</sup>|一元|  
-|`–=`|减法赋值|二进制|  
-|`–>`|成员选择|二进制|  
-|`–>*`|指向成员的指针选定内容|二进制|  
-|`/`|除号|二进制|  
+|`-`|减法|二进制|  
+|`-`|一元求反|一元|  
+|`--`|递减<sup>1</sup>|一元|  
+|`-=`|减法赋值|二进制|  
+|`->`|成员选择|二进制|  
+|`->*`|指向成员的指针选定内容|二进制|  
+|`/`|除法|二进制|  
 |`/=`|除法赋值|二进制|  
 |`<`|小于|二进制|  
 |`<<`|左移|二进制|  
@@ -94,9 +111,9 @@ type operator operator-symbol ( parameter-list )
 |`new`|`New`|—|  
 |`conversion operators`|转换运算符|一元|  
   
- 1   存在两个一元递增和递减运算符版本：前置递增和后置递增。  
+ 1 两个版本的一元递增和递减运算符存在： 前置递增和后置递增。  
   
- 有关详细信息，请参阅[运算符重载的一般规则](../cpp/general-rules-for-operator-overloading.md)。  以下主题对各种类别的重载运算符的约束进行了介绍：  
+ 请参阅[运算符重载的一般规则](../cpp/general-rules-for-operator-overloading.md)有关详细信息。 以下主题对各种类别的重载运算符的约束进行了介绍：  
   
 -   [一元运算符](../cpp/overloading-unary-operators.md)  
   
@@ -112,11 +129,11 @@ type operator operator-symbol ( parameter-list )
   
 -   [递增和递减](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
   
--   [转换](../cpp/user-defined-type-conversions-cpp.md)  
+-   [用户定义类型转换](../cpp/user-defined-type-conversions-cpp.md)  
   
- 无法重载下表中显示的运算符。  该表包括预处理器符号 `#` 和 `##`。  
+ 无法重载下表中显示的运算符。 该表包括预处理器符号 `#` 和 `##`。  
   
-### 不可重定义的运算符  
+### <a name="nonredefinable-operators"></a>不可重定义的运算符  
   
 |||  
 |-|-|  
@@ -124,7 +141,7 @@ type operator operator-symbol ( parameter-list )
 |`.`|成员选择|  
 |`.*`|指向成员的指针选定内容|  
 |`::`|范围解析|  
-|`?  :`|条件运算|  
+|`? :`|条件运算|  
 |`#`|预处理器转换为字符串|  
 |`##`|预处理器串联|  
   
@@ -135,7 +152,7 @@ Point pt;
 pt.operator+( 3 );  // Call addition operator to add 3 to pt.  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例重载 `+` 运算符以添加两个复数并返回结果。  
   
 ```  
@@ -167,13 +184,13 @@ int main() {
 }  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
   
 ```  
 6.8, 11.2  
 ```  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
 1.  [运算符重载的一般规则](../cpp/general-rules-for-operator-overloading.md)  
   
@@ -183,12 +200,12 @@ int main() {
   
 4.  [赋值](../cpp/assignment.md)  
   
-5.  [函数调用 ](../cpp/function-call-cpp.md)  
+5.  [函数调用](../cpp/function-call-cpp.md)  
   
 6.  [下标](../cpp/subscripting.md)  
   
 7.  [成员访问](../cpp/member-access.md)  
   
-## 请参阅  
- [C\+\+ 运算符](../misc/cpp-operators.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [关键字](../cpp/keywords-cpp.md)

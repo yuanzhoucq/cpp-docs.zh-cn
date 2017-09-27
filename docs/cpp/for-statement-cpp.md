@@ -1,49 +1,65 @@
 ---
-title: "for 语句 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for 关键字 [C++]"
+title: "for 语句 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# for 语句 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6b958bba842a5dfdbe61415c6ad81aab7a8b4110
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-重复执行语句，直到条件变为 false。  有关基于范围的 for 语句的信息，请参阅[基于范围的 for 语句 \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)。  
+---
+# <a name="for-statement-c"></a>for 语句 (C++)
+重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 for ( init-expression ; cond-expression ; loop-expression )   
     statement;  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  使用 `for` 语句可构建必须执行指定次数的循环。  
   
  `for` 语句包括三个可选部分，如下表所示。  
   
-### for 循环元素  
+### <a name="for-loop-elements"></a>for 循环元素  
   
-|语法名称|执行时间|说明|  
-|----------|----------|--------|  
-|`init-expression`|在 **for** 语句的任何其他元素之前，`init-expression` 仅执行一次。  控制权然后传递给 `cond-expression`。|通常用来初始化循环索引。  它可以包含表达式或声明。|  
-|`cond-expression`|在执行 `statement` 的每次迭代之前，包括第一次迭代。  `statement` 只在 `cond-expression` 的计算结果为 true（非零）时执行。|计算结果为整数型或明确转换为整数型的类类型的表达式。  通常用于测试循环终止条件。|  
-|`loop-expression`|在 `statement` 的每次迭代结束时。  执行 `loop-expression` 后，将计算 `cond-expression`。|通常用于循环索引递增。|  
+|语法名称|执行时间|描述|  
+|-----------------|-------------------|-----------------|  
+|`init-expression`|任何其他元素之前**为**语句，`init-expression`仅执行一次。 控制权然后传递给 `cond-expression`。|通常用来初始化循环索引。 它可以包含表达式或声明。|  
+|`cond-expression`|在执行 `statement` 的每次迭代之前，包括第一次迭代。 `statement` 只在 `cond-expression` 的计算结果为 true（非零）时执行。|计算结果为整数型或明确转换为整数型的类类型的表达式。 通常用于测试循环终止条件。|  
+|`loop-expression`|在 `statement` 的每次迭代结束时。 执行 `loop-expression` 后，将计算 `cond-expression`。|通常用于循环索引递增。|  
   
  下面的示例将显示使用 `for` 语句的不同方法。  
   
@@ -72,7 +88,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` 和 `loop-expression` 可以包含以逗号分隔的多个语句。  例如：  
+ `init-expression` 和 `loop-expression` 可以包含以逗号分隔的多个语句。 例如：  
   
 ```cpp  
 #include <iostream>  
@@ -107,11 +123,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18  
 ```  
   
- 当 `statement` 中的 [break](../cpp/break-statement-cpp.md)、[return](../cpp/return-statement-cpp.md) 或 [goto](../cpp/goto-statement-cpp.md)（转到 **for** 循环外部的标记语句）执行时，`for` 循环将终止。  `for` 循环中的 [continue](../cpp/continue-statement-cpp.md) 语句仅终止当前迭代。  
+ A`for`循环将终止时[中断](../cpp/break-statement-cpp.md)，[返回](../cpp/return-statement-cpp.md)，或[goto](../cpp/goto-statement-cpp.md) (到体外的标记语句**为**循环) 中`statement`执行。 A[继续](../cpp/continue-statement-cpp.md)中的语句`for`循环仅终止当前迭代。  
   
- 如果忽略 `cond-expression`，则认为其为 true，**for** 循环在 `statement` 中没有 `break`、`return` 或 `goto` 时不会终止。  
+ 如果`cond-expression`是省略，它将被视为 true 和**为**循环将不会终止而无需`break`， `return`，或`goto`内`statement`。  
   
- 虽然 `for` 语句的三个字段通常用于初始化、测试终止条件和递增，但并不限于这些用途。  例如，下面的代码将打印数字 0 至 4。  在这种情况下，`statement` 是 null 语句：  
+ 虽然 `for` 语句的三个字段通常用于初始化、测试终止条件和递增，但并不限于这些用途。 例如，下面的代码将打印数字 0 至 4。 在这种情况下，`statement` 是 null 语句：  
   
 ```cpp  
 #include <iostream>  
@@ -126,8 +142,8 @@ int main()
 }  
 ```  
   
-## for 循环和 C\+\+ 标准  
- C\+\+ 标准中提到，`for` 循环中声明的变量将在 `for` 循环结束后超出范围。  例如：  
+## <a name="for-loops-and-the-c-standard"></a>for 循环和 C++ 标准  
+ C++ 标准中提到，`for` 循环中声明的变量将在 `for` 循环结束后超出范围。 例如:   
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
@@ -136,11 +152,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope  
 ```  
   
- 默认情况下，在 [\/Ze](../build/reference/za-ze-disable-language-extensions.md) 下，`for` 循环中声明的变量在 `for` 循环的封闭范围终止前保持在范围内。  
+ 默认情况下[/Ze](../build/reference/za-ze-disable-language-extensions.md)中, 声明的变量`for`循环保持在范围内之前`for`循环的封闭范围终止。  
   
- [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 无需指定 \/Za 即可启用 for 循环中声明的变量的标准行为。  
+ [/Zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)启用中声明的循环，而无需指定 /Za 的变量的标准行为。  
   
- 也可以使用 `for` 循环的范围差异，重新声明 \/Ze 下的变量，如下所示：  
+ 也可以使用 `for` 循环的范围差异，重新声明 /Ze 下的变量，如下所示：  
   
 ```cpp  
 // for_statement5.cpp  
@@ -152,11 +168,11 @@ int main(){
 }  
 ```  
   
- 这更类似于 `for` 循环中声明的变量的标准行为，后者要求 `for` 循环中声明的变量在循环完毕后超出范围。  在 `for` 循环中声明变量后，编译器会在内部将其提升为 `for` 循环封闭范围中的局部变量，即使存在同名的局部变量也会如此。  
+ 这更类似于 `for` 循环中声明的变量的标准行为，后者要求 `for` 循环中声明的变量在循环完毕后超出范围。 在 `for` 循环中声明变量后，编译器会在内部将其提升为 `for` 循环封闭范围中的局部变量，即使存在同名的局部变量也会如此。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [迭代语句](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [While 语句 \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [do\-while 语句 \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [基于范围的 for 语句 \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)   
+ [while Statement (C++)](../cpp/while-statement-cpp.md) （while 语句 (C++)）  
+ [do-while 语句 (C++)](../cpp/do-while-statement-cpp.md)   
+ [基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)

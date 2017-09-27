@@ -1,47 +1,75 @@
 ---
-title: "using 声明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "using 声明"
-  - "声明命名空间, 命名空间中的非限定名称"
-  - "声明 [C++], using 声明"
-  - "命名空间 [C++], 中的非限定名称"
-  - "using 关键字 [C++]"
-  - "声明 [C++], 命名空间"
+title: "using 声明 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- using declaration
+- declaring namespaces, unqualified names in namespaces
+- declarations [C++], using-declaration
+- namespaces [C++], unqualified names in
+- using keyword [C++]
+- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# using 声明
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c55abac758c636bce596b0613e0ad5671fc9c430
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-`using` 声明引入名称到 `using` 说明出现的声明区域。  
+---
+# <a name="using-declaration"></a>using 声明
+使用声明将名称引入在其中的声明性区域 using 声明出现。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
-      using [typename][::] nested-name-specifier unqualified-id  
-using :: unqualified-id  
+using [typename] nested-name-specifier unqualified-id ;  
+using declarator-list ;  
 ```  
   
-## 备注  
- 该名称成为了在其他地方声明的某个实体的同义词。  它允许从特定的命名空间的 *individual* 名称使用，而不需要[显式限定](../misc/explicit-qualification.md)。  与 `using` 指令不同，这允许命名空间中的 *all* 名称无限制地使用。  有关更多信息，请参见[使用指令](../misc/using-directive-cpp.md)。  这个关键字还被用于 [“类型别名”](../cpp/aliases-and-typedefs-cpp.md).  
+### <a name="parameters"></a>参数
   
-## 示例  
- using 声明可用于类定义。  
+*嵌套名称说明符*  
+    终止通过范围解析运算符的命名空间、 类或枚举名称和范围解析运算符 （:），一个序列。 单个作用域解析运算符可能用于与全局命名空间中引入一个名称。 关键字`typename`是可选的可能用于解析依赖名称从基类引入到类模板时。  
+  
+*非限定 id*  
+    非限定的 id 的表达式，这可能是标识符、 重载的运算符名称、 用户定义的文本运算符或转换函数名称、 类析构函数名称或模板名称和自变量列表。  
+  
+*声明符列表*  
+    逗号分隔的列表 [`typename`]*嵌套名称说明符**非限定 id*声明符，（可选） 跟省略号。
+    
+## <a name="remarks"></a>备注  
+一个 using 声明引入作为实体的同义词的非限定的名称声明在其他位置。 它允许从特定的命名空间，而无需显式限定它显示在其中声明区域中使用单个名称。 这是与此相反[using 指令](../cpp/namespaces-cpp.md#using_directives)，这样，*所有*而无需限定使用的命名空间中的名称。 `using`关键字还用于[键入别名](../cpp/aliases-and-typedefs-cpp.md)。  
+  
+## <a name="example"></a>示例  
+ 一个声明可以使用类定义中。  
   
 ```cpp  
 // using_declaration1.cpp  
@@ -59,16 +87,16 @@ public:
   
 class D : B {  
 public:  
-   using B::f;  
-   using B::g;  
+   using B::f;    // B::f(char) is now visible as D::f(char)  
+   using B::g;    // B::g(char) is now visible as D::g(char)  
    void f(int) {  
       printf_s("In D::f()\n");  
-      f('c');  
+      f('c');     // Invokes B::f(char) instead of recursing  
    }  
   
    void g(int) {  
       printf_s("In D::g()\n");  
-      g('c');  
+      g('c');     // Invokes B::g(char) instead of recursing  
    }  
 };  
   
@@ -79,11 +107,14 @@ int main() {
 }  
 ```  
   
-  **在D::f\(\)中**  
-**In B::f\(\)**  
-**在B::g\(\)中**   
-## 示例  
- 当用于声明成员时，使用的声明必须引用基类的成员。  
+```Output  
+In D::f()  
+In B::f()  
+In B::g()  
+```  
+  
+## <a name="example"></a>示例  
+当用于声明一个成员，using 声明必须指向基类的成员。  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -117,9 +148,12 @@ int main() {
 }  
 ```  
   
-  **In B::f\(\)**   
-## 示例  
- 使用显式限定可以引用使用声明声明的成员。  `::` 前缀指的是全局命名空间。  
+```Output  
+In B::f()  
+```  
+  
+## <a name="example"></a>示例  
+使用 using 声明成员声明可以通过使用显式限定引用。 `::`前缀引用的全局命名空间。  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -136,8 +170,8 @@ namespace A {
 }  
   
 namespace X {  
-   using ::f;   // global f  
-   using A::g;   // A's g  
+   using ::f;   // global f is also visible as X::f  
+   using A::g;   // A's g is now visible as X::g 
 }  
   
 void h() {  
@@ -151,13 +185,16 @@ int main() {
 }  
 ```  
   
-  **在 h中**  
-**在 f中**  
-**在 A::g中**   
-## 示例  
- 当创建 using 声明时，声明创建一个同义词只引用有效的 using 声明来定义。  在使用的声明不是有效同义词后，定义添加到命名空间中。  
+```Output  
+In h  
+In f  
+In A::g  
+```  
   
- 通过使用的声明定义的名称为其原始名称的别名。  它不影响原始声明的类型、链接或其他特性。  
+## <a name="example"></a>示例  
+使用时进行声明，由声明所创建同义词仅指在使用有效的定义声明。 定义在使用后添加到命名空间声明不是有效的同义词。  
+  
+通过定义的名称`using`声明是其原始名称的别名。 它不影响类型、 链接或原始声明的其他特性。  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -182,8 +219,8 @@ void b() {
 }  
 ```  
   
-## 示例  
- 就命名空间中的函数而言，如果在声明区域中给定一组本地声明，为单个名称使用声明，则其所有必须引用相同的实体或必须引用函数。  
+## <a name="example"></a>示例  
+对于命名空间，如果一组本地声明中的函数和单个名称提供声明性区域中，它们必须都引用同一个实体，或者它们必须都引用函数使用声明。  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -202,10 +239,10 @@ void g() {
 }  
 ```  
   
- 在上面的示例中，在 `g()` 函数中 `using B::i` 语句会导致声明第二个 `int i`。  因为由 `B::f` 介绍的函数名称具有不同的参数类型，`using B::f` 语句不与 `f(char)` 函数发生冲突。  
+ 在上例中，`using B::i`语句会导致第二个`int i`中声明`g()`函数。 `using B::f`语句不与冲突`f(char)`正常，因为引入了函数名称`B::f`具有不同的参数类型。  
   
-## 示例  
- 本地函数声明不能与通过使用声明引入的函数具有相同的名称和类型。  例如：  
+## <a name="example"></a>示例  
+ 本地函数声明不能将相同的名称和类型作为通过使用声明引入的函数。 例如:   
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -230,8 +267,8 @@ void h() {
 }  
 ```  
   
-## 示例  
- 就继承而言，当使用声明从基类将名称为引入派生的类作用域时，派生类中的成员函数将使用相同的名称和基类中的参数类型重写虚拟成员函数。  
+## <a name="example"></a>示例  
+ 相对于继承，使用时声明引入一个名称从基类派生的类范围，派生的类重写虚拟成员函数中与基类中相同的名称和参数类型的成员函数。  
   
 ```cpp  
 // using_declaration_inheritance1.cpp  
@@ -268,9 +305,9 @@ struct D : B {
 };  
   
 void f(D* pd) {  
-   pd->f(1);   // calls D::f(int)  
+   pd->f(1);     // calls D::f(int)  
    pd->f('a');   // calls B::f(char)  
-   pd->g(1);   // calls B::g(int)  
+   pd->g(1);     // calls B::g(int)  
    pd->g('a');   // calls D::g(char)  
 }  
   
@@ -280,14 +317,17 @@ int main() {
 }  
 ```  
   
-  **在 D::f\(int\)中**  
-**在 B::f\(char\)中**  
-**在 B::g中**  
-**在 D::g\(char\)中**   
-## 示例  
- 在 using 声明中提到的名称的所有实例必须是可访问的。  具体来说，如果派生类使用 using 声明访问基类的成员，成员名称必须是可访问的。  如果名称是一个重载成员函数的名称，则所有命名的函数必须是可访问的。  
+```Output  
+In D::f(int)  
+In B::f(char)  
+In B::g  
+In D::g(char)  
+```  
   
- 有关成员辅助性的更多信息，请参见[Member\-Access Control](../cpp/member-access-control-cpp.md)（成员访问控制）。  
+## <a name="example"></a>示例  
+使用所述的名称的所有实例声明必须是可访问。 具体而言，如果派生的类使用 using 声明，以访问基类的成员名称的成员必须可访问性。 如果名称是，一个重载的成员函数，则名为的所有函数必须都是可访问。  
+  
+可访问性成员的详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  
@@ -308,6 +348,6 @@ public:
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [命名空间](../cpp/namespaces-cpp.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

@@ -1,44 +1,61 @@
 ---
-title: "this 指针 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "this"
-  - "this_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "非静态成员函数"
-  - "指针, 到类实例"
-  - "此指针"
+title: "此指针 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- this
+- this_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- nonstatic member functions
+- pointers, to class instance
+- this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# this 指针
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-**this** 指针是只能在 **class**、`struct`或 **union** 类型的非静态成员函数中访问的指针。  它指向为其调用成员函数的对象。  静态成员函数没有 **this** 指针。  
+---
+# <a name="this-pointer"></a>this 指针
+**这**指针是只能在的非静态成员函数中访问指针**类**， `struct`，或**联合**类型。 它指向为其调用成员函数的对象。 静态成员函数没有**这**指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-        this   
+      this   
 this->member-identifier  
 ```  
   
-## 备注  
- 对象的 **this** 指针不是对象的一部分；它没有在对象上的 `sizeof` 语句的结果中反映。  相反，当对某个对象调用非静态成员函数时，该对象的地址将由编译器作为隐藏的参数传递给函数。  例如，以下函数调用：  
+## <a name="remarks"></a>备注  
+ 对象的**这**指针不是对象本身; 的一部分不会反映在的结果`sizeof`对象上的语句。 相反，当对某个对象调用非静态成员函数时，该对象的地址将由编译器作为隐藏的自变量传递给函数。 例如，以下函数调用：  
   
 ```  
 myDate.setMonth( 3 );  
@@ -50,7 +67,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- 对象的地址可从成员函数的内部作为 **this** 指针提供。  **this** 的大多数使用都是隐式的。  在引用类的成员时显式使用 **this** 是合法的，但没有必要。  例如:  
+ 对象的地址是可从成员函数作为**这**指针。 大部分使用**这**是隐式的。 它是合法的但没有必要显式使用**这**在引用类的成员时。 例如:   
   
 ```  
 void Date::setMonth( int mn )  
@@ -67,7 +84,7 @@ void Date::setMonth( int mn )
 return *this;  
 ```  
   
- **this** 指针还用于防止自引用：  
+ **这**指针还用于防止自引用：  
   
 ```  
 if (&Object != this) {  
@@ -75,11 +92,11 @@ if (&Object != this) {
 ```  
   
 > [!NOTE]
->  由于 **this** 指针无法更改，因此不允许对 **this** 赋值。  C\+\+ 的早期实现允许对 **this** 赋值。  
+>  因为**这**指针是不可修改，分配到**这**不允许。 C + + 的早期实现允许对分配**这**。  
   
- **this** 指针有时可直接使用 \- 例如，当操作自引用数据结构，而其中需要当前对象的地址时。  
+ 有时，**这**直接使用指针 — 例如，操作自引用数据结构，在要求的当前对象的地址的位置。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // this_pointer.cpp  
@@ -144,10 +161,13 @@ int main()
 }  
 ```  
   
-  **my buffer**  
-**your buffer**   
-## this 指针的类型  
- 通过 **const** 和  **关键字，可以在函数声明中修改 `volatile`this** 指针的类型。  若要将函数声明为具有一个或多个关键字的特性，请将关键字添加到函数参数列表的后面。  
+```Output  
+my buffer  
+your buffer  
+```  
+  
+## <a name="type-of-the-this-pointer"></a>this 指针的类型  
+ **这**指针的类型可以修改的函数声明中**const**和`volatile`关键字。 若要将函数声明为具有一个或多个关键字的特性，请将关键字添加到函数自变量列表的后面。  
   
  请看以下示例：  
   
@@ -162,7 +182,7 @@ int main()
 }  
 ```  
   
- 上面的代码声明一个成员函数 `X`，其中，**this** 指针被视为指向 **const** 对象的 **const** 指针。  可以使用 *cv\-mod\-list* 选项的组合，但它们始终通过 **this** 修改指向的对象，而不是 **this** 指针本身。  因此，以下声明将声明函数 `X`；**this** 指针是指向 **const** 对象的 **const** 指针：  
+ 上面的代码声明一个成员函数`X`，在其中**这**指针被视为**const**指向**const**对象。 组合*cv mod 列表*可以使用选项，但它们始终修改指向的对象**这**，而不**这**指针本身。 因此，以下声明将声明函数`X`;**这**指针**const**指向**const**对象：  
   
 ```  
 // type_of_this_pointer2.cpp  
@@ -175,29 +195,28 @@ int main()
 }  
 ```  
   
- 成员函数中 **this** 指针的类型由以下语法描述，其中，*cv\-qualifier\-list* 是从成员函数声明符中确定的，可以是 **const** 和\/或 **volatile**，而 *class\-type* 是类的名称：  
+ 一种**这**在成员函数中的以下语法，其中*cv 限定符列表*确定从成员函数声明符和可以为**const**或**易失性**（或两者），和*类类型*是类的名称：  
   
- *\[cv\-qualifier\-list\] class\-type*  **\* const this**  
+ *[cv 限定符列表] 类类型*** \* const 这  **  
   
- 换言之，**this** 始终是 const 指针；无法重新指派它。  成员函数声明中使用的 **const** 或 `volatile` 限定符适用于由该函数范围中的 **this** 指向的类实例。  
+ 换而言之，**这**始终是 const 指针; 无法重新指派它。  **Const**或`volatile`成员函数声明中使用的限定符应用于指向的类实例**这**该函数的作用域中。  
   
  下表介绍了有关这些修饰符的工作方式的更多信息。  
   
-### this 修饰符的语义  
+### <a name="semantics-of-this-modifiers"></a>this 修饰符的语义  
   
 |修饰符|含义|  
-|---------|--------|  
-|**const**|不能更改数据成员；无法调用不是 **const** 的成员函数。|  
+|--------------|-------------|  
+|**const**|不能更改数据成员;无法调用成员函数不是**const**。|  
 |`volatile`|每次访问成员数据时，都会从内存中加载该数据；禁用某些优化。|  
   
- 将 **const** 对象传递给不是 **const** 的成员函数是错误的。  同样，将 `volatile` 对象传递给不是 `volatile` 的成员函数也是错误的。  
+ 它是错误传递**const**指向不是成员函数的对象**const**。 同样，将 `volatile` 对象传递给不是 `volatile` 的成员函数也是错误的。  
   
- 声明为 **const** 的成员函数不能更改数据成员 \- 在此类函数中，**this** 指针是指向 **const** 对象的指针。  
+ 成员函数声明为**const**不能更改数据成员-在此类函数中，**这**指针是指向的**const**对象。  
   
 > [!NOTE]
->  构造函数和析构函数不能声明为 **const** 或 `volatile`。  但是，可以在 **const** 或 `volatile` 对象上调用它们。  
+>  构造函数和析构函数不能声明为**const**或`volatile`。 它们，但是，可以调用**const**或`volatile`对象。  
   
-## 请参阅  
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [this 指针的类型](../misc/type-of-this-pointer.md)   
- [自变量匹配和 this 指针](../misc/argument-matching-and-the-this-pointer.md)
+## <a name="see-also"></a>另请参阅  
+ [关键字](../cpp/keywords-cpp.md)   
+ 

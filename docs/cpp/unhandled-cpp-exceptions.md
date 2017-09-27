@@ -1,36 +1,52 @@
 ---
-title: "未经处理的 C++ 异常 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 异常处理, 未经处理的异常"
-  - "catch 关键字 [C++], 未找到处理程序"
-  - "事件处理程序, 未经处理的异常"
-  - "异常, 未处理的"
-  - "未经处理的异常"
+title: "未经处理的 c + + 异常 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers, unhandled exceptions
+- catch keyword [C++], handler not found
+- exceptions, unhandled
+- C++ exception handling, unhandled exceptions
+- unhandled exceptions
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 未经处理的 C++ 异常
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 590dc46e5cf761f02ba85dba950c04a2da4df022
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-如果无法找到当前异常的匹配处理程序（或省略号 **catch** 处理程序），则调用预定义的 `terminate` 运行时函数。（您也可以在任意处理程序中显式调用 `terminate`。）`terminate` 的默认操作是调用 `abort`。  如果您希望 `terminate` 在退出应用程序之前调用程序中的某些其他函数，则用被调用函数的名称作为其单个参数调用 `set_terminate` 函数。  您可以在程序的任何点调用 `set_terminate`。  `terminate` 例程总是调用指定为 `set_terminate` 的参数的最后一个函数。  
+---
+# <a name="unhandled-c-exceptions"></a>未处理的 C++ 异常
+如果匹配的处理 (或省略号**捕获**处理程序) 无法找到当前异常，预定义`terminate`调用运行时函数。 （您也可以在任意处理程序中显式调用 `terminate`。）`terminate` 的默认操作是调用 `abort`。 如果您希望 `terminate` 在退出应用程序之前调用程序中的某些其他函数，则用被调用函数的名称作为其单个参数调用 `set_terminate` 函数。 您可以在程序的任何点调用 `set_terminate`。 `terminate`例程总是调用的最后一个函数的自变量被当作`set_terminate`。  
   
-## 示例  
- 以下示例引发 `char *` 异常，但不包含用于捕获类型 `char *` 的异常的指定处理程序。  对 `set_terminate` 的调用指示 `terminate` 调用 `term_func`。  
+## <a name="example"></a>示例  
+ 以下示例引发 `char *` 异常，但不包含用于捕获类型 `char *` 的异常的指定处理程序。 对 `set_terminate` 的调用指示 `terminate` 调用 `term_func`。  
   
 ```  
 // exceptions_Unhandled_Exceptions.cpp  
@@ -55,13 +71,13 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 term_func was called by terminate.  
 ```  
   
- `term_func` 函数最好是通过调用 `exit` 来终止程序或当前线程。  如果它没有这样做，而是返回到其调用方，则调用 `abort`。  
+ `term_func` 函数最好是通过调用 `exit` 来终止程序或当前线程。 如果它没有这样做，而是返回到其调用方，则调用 `abort`。  
   
-## 请参阅  
- [C\+\+ 异常处理](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>另请参阅  
+ [C++ 异常处理](../cpp/cpp-exception-handling.md)

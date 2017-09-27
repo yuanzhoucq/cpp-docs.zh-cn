@@ -1,32 +1,48 @@
 ---
-title: "private (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "private_cpp"
-  - "private"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "private 关键字 [C++]"
+title: "私有 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- private_cpp
+- private
+dev_langs:
+- C++
+helpviewer_keywords:
+- private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# private (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec12850b2d2059c2824c0585edee21cb3fd1a7f7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## 语法  
+---
+# <a name="private-c"></a>private (C++)
+## <a name="syntax"></a>语法  
   
 ```  
 private:  
@@ -34,26 +50,26 @@ private:
 private base-class  
 ```  
   
-## 备注  
- 当位于类成员列表之前时，`private` 关键字指定这些成员仅可从成员函数和该类的友元中进行访问。  这适用于声明到下一个访问指示符或类的末尾的所有成员。  
+## <a name="remarks"></a>备注  
+ 当位于类成员列表之前时，`private` 关键字指定这些成员仅可从成员函数和该类的友元中进行访问。 这适用于声明到下一个访问指示符或类的末尾的所有成员。  
   
  当位于基类的名称之前时，`private` 关键字指定基类的公共成员和受保护成员为派生类的私有成员。  
   
- 类中成员的默认访问是私有的。  结构或联合中成员的默认访问是公共的。  
+ 类中成员的默认访问是私有的。 结构或联合中成员的默认访问是公共的。  
   
- 基类的默认访问对于类是私有的，而对于结构是公共的。   联合不能具有基类。  
+ 基类的默认访问对于类是私有的，而对于结构是公共的。  联合不能具有基类。  
   
- 有关相关信息，请参阅[控制对类成员的访问](../cpp/friend-cpp.md)中的[友元](../cpp/public-cpp.md)、[公共](../cpp/protected-cpp.md)、[受保护的](../misc/controlling-access-to-class-members.md)和成员访问表。  
+ 有关相关信息，请参阅[友元](../cpp/friend-cpp.md)，[公共](../cpp/public-cpp.md)，[保护](../cpp/protected-cpp.md)，和中的成员访问表[控制访问类成员](member-access-control-cpp.md).  
   
-## \/clr 专用  
- 在 CLR 类型中，C\+\+访问说明符关键字（**public**、`private` 和 `protected`）可能影响与程序集相关的类型和方法的可见性。  有关详细信息，请参阅[类型和成员可见性](../misc/type-and-member-visibility.md)。  
+## <a name="clr-specific"></a>/clr 专用  
+ 在 CLR 类型中，c + + 访问说明符关键字 (**公共**， `private`，和`protected`) 可能会影响类型和方法与程序集相关的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。  
   
 > [!NOTE]
->  使用 [\/LN](../build/reference/ln-create-msil-module.md) 编译的文件不受此行为的影响。  在这种情况下，所有托管类（公共或私有）都将可见。  
+>  与已编译的文件[/LN](../build/reference/ln-create-msil-module.md)不受此行为。 在这种情况下，所有托管类（公共或私有）都将可见。  
   
-## END \/clr 专用  
+## <a name="end-clr-specific"></a>END /clr 专用  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // keyword_private.cpp  
@@ -90,6 +106,6 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [控制对类成员的访问](../misc/controlling-access-to-class-members.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [控制对类成员访问](member-access-control-cpp.md)   
+ [关键字](../cpp/keywords-cpp.md)

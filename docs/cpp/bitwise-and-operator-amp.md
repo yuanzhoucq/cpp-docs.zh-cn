@@ -1,33 +1,49 @@
 ---
-title: "按位与运算符：&amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& 运算符, 按位运算符"
-  - "AND 运算符"
-  - "按位运算符, AND 运算符"
+title: "按位与运算符： &amp; |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitand
+dev_langs:
+- C++
+helpviewer_keywords:
+- AND operator
+- bitwise operators, AND operator
+- '& operator, bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 按位与运算符：&amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 99ff65f38abf5cfcac135e2cc54e3df6df5f336d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## 语法  
+---
+# <a name="bitwise-and-operator-amp"></a>按位与运算符：&amp;
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,17 +53,17 @@ expression
   
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  表达式可以是其他“与”表达式，或（遵循下面所述的类型限制）相等表达式、关系表达式、加法表达式、乘法表达式、指向成员的指针表达式、强制转换表达式、一元表达式、后缀表达式或主表达式。  
   
- 按位“与”运算符 \(**&**\) 会将第一操作数的每一位与第二操作数的相应位进行比较。  如果两个位均为 1，则对应的结果位将设置为 1。  否则，将对应的结果位设置为 0。  
+ 按位 AND 运算符 (**&**) 的每个位与第二个操作数的相应位的第一个操作数将进行比较。 如果两个位均为 1，则对应的结果位将设置为 1。 否则，将对应的结果位设置为 0。  
   
- 按位“与”运算符的两个操作数必须为整型。  [算术转换](../misc/arithmetic-conversions.md)中所述的常用算术转换将应用于操作数。  
+ 按位“与”运算符的两个操作数必须为整型。 中涵盖的常用算术转换[标准转换](standard-conversions.md)，适用于操作数。  
   
-## & 的运算符关键字  
- `bitand` 运算符是 **&** 的文本等效项。  访问程序中的 `bitand` 运算符的方式有两种：包括头文件 `iso646.h`，或使用 [\/Za](../build/reference/za-ze-disable-language-extensions.md)（禁用语言扩展）编译器选项进行编译。  
+## <a name="operator-keyword-for-"></a>运算符关键字 （& a)  
+ `bitand`运算符是文本等效项** & **。 有两种方法来访问`bitand`在程序中的运算符： 包含头文件`iso646.h`，或使用编译[/Za](../build/reference/za-ze-disable-language-extensions.md) （禁用语言扩展） 编译器选项。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // expre_Bitwise_AND_Operator.cpp  
@@ -63,8 +79,7 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [C\+\+ 按位运算符](../misc/cpp-bitwise-operators.md)   
- [C\+\+ 运算符](../misc/cpp-operators.md)   
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>另请参阅  
+ [C++ 内置运算符、优先级和关联性](cpp-built-in-operators-precedence-and-associativity.md)  
+ [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 按位运算符](../c-language/c-bitwise-operators.md)

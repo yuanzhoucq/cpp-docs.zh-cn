@@ -1,61 +1,78 @@
 ---
-title: "说明符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "声明说明符"
-  - "声明, 说明符"
-  - "说明符, 在声明中"
+title: "说明符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaration specifiers
+- declarations, specifiers
+- specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 说明符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c67ae6ce353ee48635df1b3be6b124344cdd4e91
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-本主题介绍了[声明](../misc/declarations.md)的*decl\-specifiers*（声明说明符）组件。  
+---
+# <a name="specifiers"></a>说明符
+本主题介绍*声明说明符*（声明说明符） 组件[声明](declarations-and-definitions-cpp.md)。  
   
  以下占位符和语言关键字为声明说明符：  
   
- *storage\-class\-specifier*  
+ *存储类说明符*  
   
- *type\-specifier*  
+ *类型说明符*  
   
- *function\-specifier*  
+ *函数说明符*  
   
- [friend](../cpp/friend-cpp.md)  
+ [友元](../cpp/friend-cpp.md)  
   
- [typedef](http://msdn.microsoft.com/zh-cn/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
+ [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [\_\_declspec](../cpp/declspec.md) `(` *extended\-decl\-modifier\-seq* `)`  
+ [__declspec](../cpp/declspec.md) `(` *扩展声明修饰符 seq*`)`  
   
-## 备注  
- 声明的 *decl\-specifiers* 部分是可以用来表示类型名称的 *decl\-specifiers* 的最长序列，不包括指针或引用修饰符。  声明的其余部分是 *declarator*，它包括引入的名称。  
+## <a name="remarks"></a>备注  
+ *声明说明符*声明一部分的最长序列是*声明说明符*可以用来表示类型名称，不包括指针或引用修饰符。 声明的剩余部分*声明符*，其中包括引入的名称。  
   
- 下表列出了四个声明，然后分别列出了每个声明的 *decl\-specifers* 和 *declarator* 组件。  
+ 下表列出了四个声明，并随后会列出每个声明*声明说明符*和*声明符*组件单独。  
   
-|声明|*decl\-specifiers*|`declarator`|  
-|--------|------------------------|------------------|  
+|声明|*声明说明符*|`declarator`|  
+|-----------------|------------------------|------------------|  
 |`char *lpszAppName;`|`char`|`*lpszAppName`|  
 |`typedef char * LPSTR;`|`char`|`*LPSTR`|  
 |`const int func1();`|`const int`|`func1`|  
 |`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
   
- 由于 `signed`、`unsigned`、`long` 和 `short` 都表示 `int`，因此将后跟以下任一关键字的 `typedef` 名称作为 *declarator\-list* 的成员，而不是 *decl\-specifiers* 的成员。  
+ 因为`signed`， `unsigned`， `long`，和`short`都表示`int`、`typedef`命名这些关键字之一将其视为属于以下*声明符列表*不的*声明说明符*。  
   
 > [!NOTE]
->  由于可以重新声明名称，因此其解释受当前范围内的最新声明的约束。  重新声明可能影响编译器解释名称的方式，尤其是 `typedef` 名称。  
+>  由于可以重新声明名称，因此其解释受当前范围内的最新声明的约束。 重新声明可能影响编译器解释名称的方式，尤其是 `typedef` 名称。  
   
-## 请参阅  
- [声明](../misc/declarations.md)
+## <a name="see-also"></a>另请参阅  
+ [声明和定义](declarations-and-definitions-cpp.md)

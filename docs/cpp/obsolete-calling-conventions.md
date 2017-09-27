@@ -1,41 +1,58 @@
 ---
-title: "已过时调用约定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__fortran"
-  - "__pascal"
-  - "__syscall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__fortran 关键字 [C++]"
-  - "__pascal 关键字 [C++]"
-  - "__syscall 关键字 [C++]"
-  - "调用约定, 已过时"
-  - "WINAPI"
+title: "已过时调用约定 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __fortran
+- __pascal
+- __syscall
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINAPI
+- __syscall keyword [C++]
+- __pascal keyword [C++]
+- __fortran keyword [C++]
+- calling conventions, obsolete
 ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 已过时调用约定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 90f328552677bc0f41accc316433365467dd7673
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## Microsoft 专用  
- **\_\_pascal**、**\_\_fortran** 和 **\_\_syscall** 调用约定不再受支持。  通过使用支持的调用约定之一和适当的链接器选项，可以模拟其功能。  
+---
+# <a name="obsolete-calling-conventions"></a>已过时调用约定
+## <a name="microsoft-specific"></a>Microsoft 专用  
+ **__Pascal**， **__fortran**，和**__syscall**调用约定不再受支持。 通过使用支持的调用约定之一和适当的链接器选项，可以模拟其功能。  
   
- WINDOWS.H 现在支持 **WINAPI** 宏，该宏将转换为目标的适当调用约定。  在之前使用 **PASCAL** 或 **\_\_far \_\_pascal** 的位置使用 **WINAPI**。  
+ WINDOWS。H 现在支持**WINAPI**宏，将转换为目标的适当调用约定。 使用**WINAPI**以前使用**PASCAL**或**__far \__pascal**。  
   
-## 结束 Microsoft 专用  
+**结束 Microsoft 专用**  
   
-## 请参阅  
- [参数传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)
+## <a name="see-also"></a>另请参阅  
+ [自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)
