@@ -1,33 +1,49 @@
 ---
-title: "C++ 常量表达式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "常量表达式"
-  - "常量表达式, 语法"
-  - "表达式 [C++], 常量"
+title: "C + + 常量表达式 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 常量表达式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-*常量*值是指不会更改的值。  C \+ \+ 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。  
+---
+# <a name="c-constant-expressions"></a>C++ 常量表达式
+A*常量*值是一种不会更改。 C + + 提供了两个关键字，它们使你能够表达不打算修改对象的意图，还可让你实现该意图。  
   
- C\+\+ 需要常量表达式（计算结果为常量的表达式）以便声明：  
+ C++ 需要常量表达式（计算结果为常量的表达式）以便声明：  
   
 -   数组边界  
   
@@ -47,7 +63,7 @@ manager: "ghogen"
   
 -   `sizeof` 表达式  
   
- 必须将非整型常量（显式或隐式）转换为常量表达式中合法的整型。  因此，以下代码是合法的：  
+ 必须将非整型常量（显式或隐式）转换为常量表达式中合法的整型。 因此，以下代码是合法的：  
   
 ```  
 const double Size = 11.0;  
@@ -58,5 +74,5 @@ char chArray[(int)Size];
   
  逗号运算符和赋值运算符不能用于常量表达式。  
   
-## 请参阅  
- [表达式的类型](../cpp/types-of-expressions.md)
+## <a name="see-also"></a>另请参阅  
+ [表达式类型](../cpp/types-of-expressions.md)

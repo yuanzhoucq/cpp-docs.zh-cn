@@ -1,41 +1,58 @@
 ---
-title: "bad_typeid 异常 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid 异常"
-  - "异常, bad_typeid"
+title: "bad_typeid 异常 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# bad_typeid 异常
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-当 `typeid` 的操作数是 Null 指针时，[typeid 运算符](../cpp/typeid-operator.md)将引发 `bad_typeid` 异常。  
+---
+# <a name="badtypeid-exception"></a>bad_typeid 异常
+`bad_typeid`引发异常[typeid 运算符](../cpp/typeid-operator.md)时的操作数`typeid`是 NULL 指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `bad_typeid` 的接口为：  
   
 ```  
@@ -48,7 +65,7 @@ public:
 };  
 ```  
   
- 以下示例演示引发 `bad_typeid` 异常的 `typeid` 运算符。  
+ 以下示例演示引发 `typeid` 异常的 `bad_typeid` 运算符。  
   
 ```  
 // expre_bad_typeid.cpp  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
   
 ```  
 Object is NULL  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行时类型信息](../cpp/run-time-type-information.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

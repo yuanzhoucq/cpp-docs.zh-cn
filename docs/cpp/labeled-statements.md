@@ -1,31 +1,48 @@
 ---
-title: "标记语句 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "goto"
-  - "case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "标记语句"
-  - "语句, 标记"
+title: "标记语句 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- goto
+- case
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 标记语句
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9011728bf6b8eac5a8ce13ebca2301fc36ad633a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="labeled-statements"></a>标记语句
 标签用于将程序控制权直接转交给特定语句。  
   
 ```  
@@ -36,8 +53,8 @@ default :  statement
   
  标签的范围为整个函数，已在其中声明该标签。  
   
-## 备注  
- 有三种标记语句。  它们全都使用冒号将某种标签与语句隔开。  case 和 default 标签特定于 case 语句。  
+## <a name="remarks"></a>备注  
+ 有三种标记语句。 它们全都使用冒号将某种标签与语句隔开。 case 和 default 标签特定于 case 语句。  
   
 ```cpp  
 #include <iostream>   
@@ -66,13 +83,13 @@ int main() {
   
 ```  
   
- **goto 语句**  
+ **Goto 语句**  
   
- 源程序中 *identifier* 标签的外观声明了一个标签。  仅 [goto](../cpp/goto-statement-cpp.md) 语句可将控制转移到 *identifier* 标签。  以下代码片段阐释了 `goto` 语句和 *identifier* 标签的使用：  
+ 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了的使用`goto`语句和*标识符*标签：  
   
- 标签无法独立出现，必须总是附加到语句。  如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
+ 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
   
- 标签具有函数范围，并且不能在函数中重新声明。  但是，相同的名称可用作不同函数中的标签。  
+ 标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。  
   
 ```  
 // labels_with_goto.cpp  
@@ -91,9 +108,9 @@ int main() {
 //Output: At Test2 label.  
 ```  
   
- **case 语句**  
+ **Case 语句**  
   
- 在 **case** 关键字后显示的标签不能在 `switch` 语句的外部显示。  （此限制也适用于 **default** 关键字。） 下面的代码片段演示了 **case** 标签的正确用法：  
+ 后显示的标签**用例**关键字不能外部显示`switch`语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -121,8 +138,8 @@ switch( msg )
 }  
 ```  
   
-## case 语句中的标签  
- 在 **case** 关键字后显示的标签不能在 `switch` 语句的外部显示。  （此限制也适用于 **default** 关键字。） 下面的代码片段演示了 **case** 标签的正确用法：  
+## <a name="labels-in-the-case-statement"></a>case 语句中的标签  
+ 后显示的标签**用例**关键字不能外部显示`switch`语句。 (此限制也适用于**默认**关键字。)下面的代码段演示如何正确使用**用例**标签：  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -165,12 +182,12 @@ switch( msg )
 }  
 ```  
   
-## goto 语句中的标签  
- 源程序中 *identifier* 标签的外观声明了一个标签。  仅 [goto](../cpp/goto-statement-cpp.md) 语句可将控制转移到 *identifier* 标签。  以下代码片段阐释了 `goto` 语句和 *identifier* 标签的使用：  
+## <a name="labels-in-the-goto-statement"></a>goto 语句中的标签  
+ 外观*标识符*标签在源程序中的声明了一个标签。 仅[goto](../cpp/goto-statement-cpp.md)语句可以将控制转移到*标识符*标签。 下面的代码段演示了的使用`goto`语句和*标识符*标签：  
   
- 标签无法独立出现，必须总是附加到语句。  如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
+ 标签无法独立出现，必须总是附加到语句。 如果标签需要独立出现，则必须在标签后放置一个 null 语句。  
   
- 标签具有函数范围，并且不能在函数中重新声明。  但是，相同的名称可用作不同函数中的标签。  
+ 标签具有函数范围，并且不能在函数中重新声明。 但是，相同的名称可用作不同函数中的标签。  
   
 ```  
 // labels_with_goto.cpp  
@@ -189,6 +206,6 @@ int main() {
   
 ```  
   
-## 请参阅  
- [C\+\+ 语句概述](../cpp/overview-of-cpp-statements.md)   
- [switch 语句 \(C\+\+\)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [C + + 语句概述](../cpp/overview-of-cpp-statements.md)   
+ [switch 语句 (C++)](../cpp/switch-statement-cpp.md)

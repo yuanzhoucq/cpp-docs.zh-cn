@@ -1,33 +1,50 @@
 ---
-title: "__interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__interface"
-  - "__interface_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__interface 关键字 [C++]"
+title: "__interface |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __interface
+- __interface_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# __interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e502574b9d55238d6f9aed33949e06db3ec6349d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="interface"></a>__interface
 **Microsoft 专用**  
   
- 可定义 Visual C\+\+ 接口，如下所示：  
+ 可定义 Visual C++ 接口，如下所示：  
   
 -   可从零个或多个基接口继承。  
   
@@ -41,7 +58,7 @@ caps.handback.revision: 8
   
 -   不能包含数据成员；允许使用属性。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -49,8 +66,8 @@ modifier
  __interface interface-name {interface-definition};  
 ```  
   
-## 备注  
- C\+\+ [类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)可通过这些规则实现，但 `__interface` 会强制执行它们。  
+## <a name="remarks"></a>备注  
+ C + +[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)无法实现与这些规则，但`__interface`执行它们的时间。  
   
  例如，以下是示例接口定义：  
   
@@ -63,15 +80,15 @@ __interface IMyInterface {
   
  有关托管接口的信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
   
- 请注意，您无需显式指示 `CommitX` 和 `get_X` 函数是纯虚函数。  第一个函数的等效声明为：  
+ 请注意，您无需显式指示 `CommitX` 和 `get_X` 函数是纯虚函数。 第一个函数的等效声明为：  
   
 ```  
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` 表示 [novtable](../cpp/novtable.md) `__declspec` 修饰符。  
+ `__interface`意味着[novtable](../cpp/novtable.md) `__declspec`修饰符。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例演示如何使用接口中声明的属性。  
   
 ```  
@@ -147,10 +164,13 @@ int main()
 }  
 ```  
   
-  **p\-\>int\_data \= 100**  
-**bstr\_data \= Testing**   
-## 结束 Microsoft 专用  
+```Output  
+p->int_data = 100  
+bstr_data = Testing  
+```  
   
-## 请参阅  
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [Interface Attributes](../windows/interface-attributes.md)
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>另请参阅  
+ [关键字](../cpp/keywords-cpp.md)   
+ [接口特性](../windows/interface-attributes.md)

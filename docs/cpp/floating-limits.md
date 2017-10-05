@@ -1,57 +1,74 @@
 ---
-title: "浮点限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FLOAT.H 头文件"
-  - "浮点常量, 限制"
-  - "浮点数字, 浮点限制"
-  - "限制, 浮点常量"
-  - "范围, 浮点常量"
+title: "浮点限制 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ranges, floating-point constants
+- floating-point constants, limits
+- FLOAT.H header file
+- limits, floating-point constants
+- floating-point numbers, floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 浮点限制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a19ed24e7765c9b0042831fc2eda9df937be42b3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="floating-limits"></a>浮点限制
 **Microsoft 专用**  
   
- 下表列出了浮点常数的值的限制。  标准头文件 FLOAT.H 中也定义了这些限制。  
+ 下表列出了浮点常数的值的限制。 标准头文件 FLOAT.H 中也定义了这些限制。  
   
-### 对浮点常量的限制  
+### <a name="limits-on-floating-point-constants"></a>对浮点常量的限制  
   
 |常量|含义|值|  
-|--------|--------|-------|  
-|FLT\_DIG DBL\_DIG LDBL\_DIG|位数 q，以便 q 十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6 15 15|  
-|FLT\_EPSILON DBL\_EPSILON LDBL\_EPSILON|最小正数 x，以便 x \+ 1.0 不等于 1.0。|1.192092896e–07F 2.2204460492503131e–016 2.2204460492503131e–016|  
-|FLT\_GUARD||0|  
-|FLT\_MANT\_DIG DBL\_MANT\_DIG LDBL\_MANT\_DIG|由浮点有效位数中的 FLT\_RADIX 指定的基数中的位数。  该基数为 2；因此，这些值指定位。|24 53 53|  
-|FLT\_MAX DBL\_MAX LDBL\_MAX|可表示的最大浮点数。|3.402823466e\+38F 1.7976931348623158e\+308 1.7976931348623158e\+308|  
-|FLT\_MAX\_10\_EXP DBL\_MAX\_10\_EXP LDBL\_MAX\_10\_EXP|最大整数，以便 10 的该数字的幂是一个可表示的浮点数。|38 308 308|  
-|FLT\_MAX\_EXP DBL\_MAX\_EXP LDBL\_MAX\_EXP|最大整数，以便 FLT\_RADIX 的该数字的幂是一个可表示的浮点数。|128 1024 1024|  
-|FLT\_MIN DBL\_MIN LDBL\_MIN|最小正值。|1.175494351e–38F 2.2250738585072014e–308 2.2250738585072014e–308|  
-|FLT\_MIN\_10\_EXP DBL\_MIN\_10\_EXP LDBL\_MIN\_10\_EXP|最小负整数，以便 10 的该数字的幂是一个可表示的浮点数。|–37<br /><br /> –307<br /><br /> –307|  
-|FLT\_MIN\_EXP DBL\_MIN\_EXP LDBL\_MIN\_EXP|最小负整数，以便 FLT\_RADIX 的该数字的幂是一个可表示的浮点数。|–125<br /><br /> –1021<br /><br /> –1021|  
-|FLT\_NORMALIZE||0|  
-|FLT\_RADIX \_DBL\_RADIX \_LDBL\_RADIX|基数的指数表示形式。|2 2 2|  
-|FLT\_ROUNDS \_DBL\_ROUNDS \_LDBL\_ROUNDS|浮点添加的舍入模式。|1 \(near\) 1 \(near\) 1 \(near\)|  
+|--------------|-------------|-----------|  
+|FLT_DIG DBL_DIG LDBL_DIG|位数 q，以便 q 十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6 15 15|  
+|FLT_EPSILON DBL_EPSILON LDBL_EPSILON|最小正数 x，以便 x + 1.0 不等于 1.0。|1.192092896e-07F 2.2204460492503131e-016 2.2204460492503131e-016|  
+|FLT_GUARD||0|  
+|FLT_MANT_DIG DBL_MANT_DIG LDBL_MANT_DIG|由浮点有效位数中的 FLT_RADIX 指定的基数中的位数。 基数为 2;因此，这些值指定位。|24 53 53|  
+|FLT_MAX DBL_MAX LDBL_MAX|最大可表示的浮点数。|3.402823466e+38F 1.7976931348623158e+308 1.7976931348623158e+308|  
+|FLT_MAX_10_EXP DBL_MAX_10_EXP LDBL_MAX_10_EXP|最大整数，以便 10 的该数字引发是一个可表示的浮点数。|38 308 308|  
+|FLT_MAX_EXP DBL_MAX_EXP LDBL_MAX_EXP|最大整数，以便 FLT_RADIX 的该数字的幂是一个可表示的浮点数。|128 1024 1024|  
+|FLT_MIN DBL_MIN LDBL_MIN|最小正值。|1.175494351e-38F 2.2250738585072014 e-308 2.2250738585072014 e-308|  
+|FLT_MIN_10_EXP DBL_MIN_10_EXP LDBL_MIN_10_EXP|最小负整数，以便 10 的该数字引发是可表示的浮点数。|-37<br /><br /> -307<br /><br /> -307|  
+|FLT_MIN_EXP DBL_MIN_EXP LDBL_MIN_EXP|最小负整数，以便 FLT_RADIX 的该数字的幂是一个可表示的浮点数。|-125<br /><br /> -1021<br /><br /> -1021|  
+|FLT_NORMALIZE||0|  
+|FLT_RADIX _DBL_RADIX _LDBL_RADIX|基数的指数表示形式。|2 2 2|  
+|FLT_ROUNDS _DBL_ROUNDS _LDBL_ROUNDS|浮点加法的舍入模式。|1 (near) 1 (near) 1 (near)|  
   
 > [!NOTE]
 >  表中信息可能与该产品的将来版本不同。  
   
-## 结束 Microsoft 专用  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [整数限制](../cpp/integer-limits.md)

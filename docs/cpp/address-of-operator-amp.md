@@ -1,47 +1,63 @@
 ---
-title: "Address-of 运算符：&amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "address-of"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& 运算符"
-  - "& 运算符, address-of 运算符"
-  - "address-of 运算符 (&)"
+title: "Address-of 运算符： &amp; |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- address-of
+dev_langs:
+- C++
+helpviewer_keywords:
+- address-of operator (&)
+- '& operator'
+- '& operator, address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Address-of 运算符：&amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## 语法  
+---
+# <a name="address-of-operator-amp"></a>Address-of 运算符：&amp;
+## <a name="syntax"></a>语法  
   
 ```  
   
 & cast-expression  
 ```  
   
-## 备注  
- 一元 address\-of 运算符 \(**&**\) 采用其操作数的地址。  address\-of 运算符的操作数可以是函数指示符，也可以是指定不是位域且不使用 **register** 储存类说明符声明的对象的左值。  
+## <a name="remarks"></a>备注  
+ 一元 address-of 运算符 (**&**) 采用其操作数的地址。 Address-of 运算符的操作数可以是函数指示符，也可以是指定不是位域且不使用 register 存储类说明符声明的对象的左值。  
   
- address\-of 运算符仅适用于具有基本、结构、类或在文件范围级别声明的联合类型的变量，或仅适用于下标数组引用。  在这些表达式中，可在 address\-of 表达式中添加或提取不包括 address\-of 运算符的常数表达式。  
+ address-of 运算符仅适用于具有基本、结构、类或在文件范围级别声明的联合类型的变量，或仅适用于下标数组引用。 在这些表达式中，可在 address-of 表达式中添加或提取不包括 address-of 运算符的常数表达式。  
   
- 当应用于函数或左值时，该表达式的结果将是派生自操作数类型（右值）的指针类型。  例如，如果操作数的类型为 `char`，则表达式的结果为指向 `char` 的类型指针。  address\-of 运算符（应用于 **const** 或 `volatile` 对象）的计算结果为 **const** `type` **\*** 或 `volatile` `type` **\***，其中 `type` 是原始对象的类型。  
+ 当应用于函数或左值时，该表达式的结果将是派生自操作数类型（右值）的指针类型。 例如，如果操作数的类型为 `char`，则表达式的结果为指向 `char` 的类型指针。 Address-of 运算符，应用于**const**或`volatile`对象、 计算结果为**const** `type` ** \* **或`volatile` `type`** \* **，其中`type`是原始对象的类型。  
   
- 在将 address\-of 运算符应用于[限定名](http://msdn.microsoft.com/zh-cn/3fefb16d-8120-4627-8b3f-3d90fbdcd1df)时，结果将取决于 *qualified\-name* 是否指定静态成员。  如果是这样，则结果为指向成员声明中指定的类型的指针。  如果该成员不是静态的，则结果为指向由 *qualified\-class\-name* 指示的类的成员 *name* 的指针。（有关 *qualified\-class\-name* 的详细信息，请参阅[主表达式](../cpp/primary-expressions.md)。）以下代码段说明了结果的不同之处，取决于该成员是否为静态的：  
+ 当将 address-of 运算符应用于[限定的名称](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df)，结果取决于是否*限定名称*指定静态成员。 如果是这样，则结果为指向成员声明中指定的类型的指针。 如果成员不是静态的结果是指向成员的指针*名称*指示的类的*限定类名*。 (请参阅[主表达式](../cpp/primary-expressions.md)深入了解*限定类名*。)以下代码段说明了结果的不同之处，取决于该成员是否为静态的：  
   
 ```  
 // expre_Address_Of_Operator.cpp  
@@ -59,13 +75,13 @@ int main() {
 }  
 ```  
   
- 在此示例中，由于 `fValue` 是静态成员，因此表达式 `&PTM::fValue` 产生类型 `float *` 而不是类型 `float PTM::*`。  
+ 在此示例中，由于 `&PTM::fValue` 是静态成员，因此表达式 `float *` 产生类型 `float PTM::*` 而不是类型 `fValue`。  
   
- 仅当明确要引用的函数的版本时，才能采用重载函数的地址。  有关如何获取特定重载函数的地址的信息，请参阅[重载函数的地址](../misc/address-of-overloaded-functions.md)。  
+ 仅当明确要引用的函数的版本时，才能采用重载函数的地址。 请参阅[函数重载](function-overloading.md)有关如何获取特定的地址信息重载函数。  
   
- 通过将 address\-of 运算符应用于引用类型，可获得与将该运算符应用于引用绑定到的对象所获得的结果相同的结果。  例如：  
+ 通过将 address-of 运算符应用于引用类型，可获得与将该运算符应用于引用绑定到的对象所获得的结果相同的结果。 例如:   
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // expre_Address_Of_Operator2.cpp  
@@ -82,13 +98,13 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 &d equals &rd  
 ```  
   
- 以下示例使用 address\-of 运算符将指针参数传递给函数：  
+ 以下示例使用 address-of 运算符将指针参数传递给函数：  
   
 ```  
 // expre_Address_Of_Operator3.cpp  
@@ -109,15 +125,14 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 25  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 运算符](../misc/cpp-operators.md)   
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)   
- [间接寻址和 Address\-of 运算符](../c-language/indirection-and-address-of-operators.md)
+ [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)   
+ [间接寻址运算符和 Address-of 运算符](../c-language/indirection-and-address-of-operators.md)

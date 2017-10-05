@@ -1,77 +1,92 @@
 ---
-title: "函数调用运算符：() | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "( ) 函数调用运算符"
-  - "( ) 函数调用运算符"
-  - "函数调用运算符 ( )"
-  - "函数调用, C++ 函数"
-  - "函数调用, 运算符"
-  - "函数 [C++], 函数调用运算符"
-  - "后缀运算符"
+title: "函数调用运算符: （) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) function call operator
+- function calls, C++ functions
+- () function call operator
+- postfix operators
+- function calls, operator
+- functions [C++], function-call operator
+- function call operator ( )
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 函数调用运算符：()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-postfix\-expression 后跟函数调用运算符 **\( \)** 用于指定函数调用。  
+---
+# <a name="function-call-operator-"></a>函数调用运算符：()
+Postfix-expression 后跟函数调用运算符**（)**，指定函数调用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-  
 postfix-expression   
 ( [argument-expression-list ] )  
 ```  
   
-## 备注  
- 函数调用运算符的参数是零或用逗号分隔的多个表达式 \- 函数的实参。  
+## <a name="remarks"></a>备注  
+ 函数调用运算符的自变量是零或用逗号分隔的多个表达式 - 函数的自变量。  
   
- *postfix\-expression* 的计算结果必须为函数地址（例如，函数标识符或函数指针值），*argument\-expression\-list* 是其值（参数）传递到函数的表达式的列表（用逗号分隔）。  *argument\-expression\-list* 参数可以为空。  
+ *后缀表达式*计算结果必须为函数地址 （例如，函数标识符或函数指针的值） 和*自变量表达式列表*是表达式 （分隔的列表用逗号分隔） 其值 （参数） 传递给函数。 argument-expression-list 参数可以为空。  
   
- *postfix\-expression* 必须为以下类型之一：  
+ *后缀表达式*必须为这些类型之一：  
   
--   函数返回类型 `T`。  示例声明如下  
+-   函数返回类型 `T`。 示例声明如下  
   
     ```  
     T func( int i )  
     ```  
   
--   指向函数返回类型 `T` 的指针。  示例声明如下  
+-   指向函数返回类型 `T` 的指针。 示例声明如下  
   
     ```  
     T (*func)( int i )  
     ```  
   
--   对函数返回类型 `T` 的引用。  示例声明如下  
+-   对函数返回类型 `T` 的引用。 示例声明如下  
   
     ```  
     T (&func)(int i)  
     ```  
   
--   指向成员的指针函数取消引用返回类型 `T`。  示例函数调用如下  
+-   指向成员的指针函数取消引用返回类型 `T`。 示例函数调用如下  
   
     ```  
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例调用带有三个参数的标准库函数 `strcat_s`：  
   
 ```  
@@ -81,7 +96,7 @@ postfix-expression
 #include <iostream>  
 #include <string>  
   
-// STL name space  
+// C++ Standard Library name space  
 using namespace std;  
   
 int main()  
@@ -100,9 +115,12 @@ int main()
 }  
 ```  
   
-  **Welcome to C\+\+**   
-## 函数调用结果  
- 除非函数被声明为引用类型，否则函数调用的计算结果为右值。  具有引用返回类型的函数的计算结果为左值，并且可在赋值语句的左侧使用该函数，如下所示：  
+```Output  
+Welcome to C++  
+```  
+  
+## <a name="function-call-results"></a>函数调用结果  
+ 除非函数被声明为引用类型，否则函数调用的计算结果为右值。 具有引用返回类型的函数的计算结果为左值，并且可在赋值语句的左侧使用该函数，如下所示：  
   
 ```  
 // expre_Function_Call_Results.cpp  
@@ -134,9 +152,9 @@ int main()
 }  
 ```  
   
- 前面的代码定义一个称作 `Point` 的类，该类包含表示 *x* 和 *y* 坐标的私有数据对象。  必须修改这些数据对象，并且必须检索其值。  该程序只是针对此类的多个设计之一；另一种可能的设计是使用 `GetX` 与 `SetX` 函数或使用 `GetY` 与 `SetY` 函数。  
+ 前面的代码定义一个名为类`Point`，其中包含私有数据对象表示*x*和*y*坐标。 必须修改这些数据对象，并且必须检索其值。 该程序只是针对此类的多个设计之一；另一种可能的设计是使用 `GetX` 与 `SetX` 函数或使用 `GetY` 与 `SetY` 函数。  
   
- 返回类类型的函数、指向类类型的指针或对类类型的引用可以用作成员选择运算符的左操作数。  因此，以下代码是合法的：  
+ 返回类类型的函数、指向类类型的指针或对类类型的引用可以用作成员选择运算符的左操作数。 因此，以下代码是合法的：  
   
 ```  
 // expre_Function_Results2.cpp  
@@ -179,11 +197,10 @@ int main() {
 }  
 ```  
   
- 可以递归方式调用函数。  有关函数声明的详细信息，请参阅[函数说明符](../misc/function-specifiers.md)和[成员函数](../misc/member-functions-cpp.md)。  [程序和链接](../cpp/program-and-linkage-cpp.md)中提供了相关材料。  
+ 可以递归方式调用函数。 关于函数声明的详细信息，请参阅[函数](functions-cpp.md)。 提供了相关的材料处于[程序和链接](../cpp/program-and-linkage-cpp.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
- [C\+\+ 运算符](../misc/cpp-operators.md)   
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [函数调用 ](../c-language/function-call-c.md)   
- [\(NOTINBUILD\) Function Declarations](http://msdn.microsoft.com/zh-cn/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)
+ [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [函数调用](../c-language/function-call-c.md)   
+

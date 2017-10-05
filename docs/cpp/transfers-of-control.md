@@ -1,31 +1,48 @@
 ---
-title: "控制的转移 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制流, 分支"
-  - "控制流, 传输控制"
+title: "控制的转移 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 控制的转移
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-可以在 `goto` 语句中使用  **语句或 `switch`case** 标签来指定分支超出初始值设定项的程序。  此类代码是非法的，除非包含初始值设定项的声明在跳转语句发生的块所封闭的块中。  
+---
+# <a name="transfers-of-control"></a>控制的转移
+你可以使用`goto`语句或**用例**标签英寸`switch`语句要指定分支过初始值设定项的程序。 此类代码是非法的，除非包含初始值设定项的声明在跳转语句发生的块所封闭的块中。  
   
- 下面的示例显示了声明和初始化对象 `total`、`ch` 和 `i` 的循环。  也存在将控制权传递过初始值设定项的错误 `goto` 语句。  
+ 下面的示例显示了声明和初始化对象 `total`、`ch` 和 `i` 的循环。 也存在将控制权传递过初始值设定项的错误 `goto` 语句。  
   
 ```  
 // transfers_of_control.cpp  
@@ -57,9 +74,8 @@ int main()
 }  
 ```  
   
- 在前面的示例中，`goto` 语句尝试将控制权传递过 `i` 的初始化。  但是，如果已声明但未初始化 `i`，则该传递是合法的。  
+ 在前面的示例中，`goto` 语句尝试将控制权传递过 `i` 的初始化。 但是，如果已声明但未初始化 `i`，则该传递是合法的。  
   
- 在用作 `total` 语句的 `ch`statement 的块中声明的对象  *和 `while` 在使用 `break` 语句退出此块时将被销毁。*  
+ 对象`total`和`ch`、 用作块中声明*语句*的`while`语句，在使用退出该块时销毁`break`语句。  
   
-## 请参阅  
- [\(NOTINBUILD\) Declaration of Automatic Objects](http://msdn.microsoft.com/zh-cn/81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

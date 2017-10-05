@@ -1,52 +1,52 @@
 ---
-title: "Lambda 表达式的示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lambda 表达式 [C++], 示例"
+title: "Lambda 表达式的示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# Lambda 表达式的示例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 29a2c80bbd586ecf495269dad84f2b42440c41cc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-本文演示如何在你的程序中使用 lambda 表达式。  有关 lambda 表达式的概述，请参阅 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。  有关 lambda 表达式结构的详细信息，请参阅 [Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。  
+---
+# <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
+本文演示如何在你的程序中使用 lambda 表达式。 有关 lambda 表达式的概述，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。 有关 lambda 表达式结构的详细信息，请参阅[Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。  
   
-##  <a name="top"></a> 本文内容  
- [声明 Lambda 表达式](#declaringLambdaExpressions)  
+##  <a name="declaringLambdaExpressions"></a>声明 Lambda 表达式  
   
- [调用 Lambda 表达式](#callingLambdaExpressions)  
+### <a name="example-1"></a>示例 1  
+ 由于 lambda 表达式已类型化，你可以将其分配给`auto`变量或[函数](../standard-library/function-class.md)对象，如下所示：  
   
- [嵌套 Lambda 表达式](#nestingLambdaExpressions)  
-  
- [高阶 Lambda 函数](#higherOrderLambdaExpressions)  
-  
- [在函数中使用 Lambda 表达式](#methodLambdaExpressions)  
-  
- [配合使用 Lambda 表达式和模板](#templateLambdaExpressions)  
-  
- [处理异常](#ehLambdaExpressions)  
-  
- [配合使用 Lambda 表达式和托管类型 (C++/CLI)](#managedLambdaExpressions)  
-  
-##  <a name="declaringLambdaExpressions"></a> 声明 Lambda 表达式  
-  
-### 示例 1  
- 由于 lambda 表达式已类型化，所以你可以将其指派给 `auto` 变量或 [function](../standard-library/function-class.md) 对象，如下所示：  
-  
-### 代码  
+### <a name="code"></a>代码  
   
 ```cpp  
 // declaring_lambda_expressions1.cpp  
@@ -71,18 +71,22 @@ int main()
 }  
 ```  
   
-### 输出  
-  **5**  
-**7**   
-### 备注  
- 有关详细信息，请参阅 [auto](../cpp/auto-cpp.md)、[function 类](../standard-library/function-class.md)和[函数调用 ](../cpp/function-call-cpp.md)。  
+### <a name="output"></a>输出  
+  
+```Output  
+5  
+7  
+```  
+  
+### <a name="remarks"></a>备注  
+ 有关详细信息，请参阅[自动](../cpp/auto-cpp.md)，[函数类](../standard-library/function-class.md)，和[函数调用](../cpp/function-call-cpp.md)。  
   
  虽然 lambda 表达式多在函数的主体中声明，但是可以在初始化变量的任何地方声明。  
   
-### 示例 2  
- Visual C\+\+ 编译器将在声明而非调用 lambda 表达式时，将表达式绑定到捕获的变量。  以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。  由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。  但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。  
+### <a name="example-2"></a>示例 2  
+ Visual C++ 编译器将在声明而非调用 lambda 表达式时，将表达式绑定到捕获的变量。 以下示例显示一个通过值捕获局部变量 `i` 并通过引用捕获局部变量 `j` 的 lambda 表达式。 由于 lambda 表达式通过值捕获 `i`，因此在程序后面部分中重新指派 `i` 不影响该表达式的结果。 但是，由于 lambda 表达式通过引用捕获 `j`，因此重新指派 `j` 会影响该表达式的结果。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```cpp  
 // declaring_lambda_expressions2.cpp  
@@ -110,16 +114,21 @@ int main()
 }  
 ```  
   
-### 输出  
-  **47** \[[本文内容](#top)\]  
+### <a name="output"></a>输出  
   
-##  <a name="callingLambdaExpressions"></a> 调用 Lambda 表达式  
- 你可以立即调用 lambda 表达式，如下面的代码片段所示。  第二个代码片段演示如何将 lambda 作为参数传递给标准模板库 \(STL\) 算法，例如 `find_if`。  
+```Output  
+47  
+```  
   
-### 示例 1  
+ [[本文内容](#top)]  
+  
+##  <a name="callingLambdaExpressions"></a>调用 Lambda 表达式  
+ 你可以立即调用 lambda 表达式，如下面的代码片段所示。 第二个代码段演示如何 lambda 作为参数传递到 c + + 标准库算法如`find_if`。  
+  
+### <a name="example-1"></a>示例 1  
  以下示例声明的 lambda 表达式将返回两个整数的总和并使用参数 `5` 和 `4` 立即调用该表达式：  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```cpp  
 // calling_lambda_expressions1.cpp  
@@ -134,12 +143,16 @@ int main()
 }  
 ```  
   
-### 输出  
-  **9**   
-### 示例 2  
- 以下示例将 lambda 表达式作为参数传递给 `find_if` 函数。  如果 lambda 表达式的参数是偶数，则返回 `true`。  
+### <a name="output"></a>输出  
   
-### 代码  
+```Output  
+9  
+```  
+  
+### <a name="example-2"></a>示例 2  
+ 以下示例将 lambda 表达式作为参数传递给 `find_if` 函数。 如果 lambda 表达式的参数是偶数，则返回 `true`。  
+  
+### <a name="code"></a>代码  
   
 ```cpp  
 // calling_lambda_expressions2.cpp  
@@ -174,19 +187,23 @@ int main()
 }  
 ```  
   
-### 输出  
-  **列表中的第一个偶数是 42。**   
-### 备注  
- 有关 `find_if` 函数的详细信息，请参阅 [find\_if](../Topic/find_if.md)。  有关执行公共算法的 STL 函数的详细信息，请参阅 [\<algorithm\>](../standard-library/algorithm.md)。  
+### <a name="output"></a>输出  
   
- \[[本文内容](#top)\]  
+```Output  
+The first even number in the list is 42.  
+```  
   
-##  <a name="nestingLambdaExpressions"></a> 嵌套 Lambda 表达式  
+### <a name="remarks"></a>备注  
+ 有关详细信息`find_if`函数中，请参阅[find_if](../standard-library/algorithm-functions.md#find_if)。 有关执行公共算法的 c + + 标准库函数的详细信息，请参阅[\<算法 >](../standard-library/algorithm.md)。  
   
-### 示例  
- 你可以将 lambda 表达式嵌套在另一个中，如下例所示。  内部 lambda 表达式将其参数与 2 相乘并返回结果。  外部 lambda 表达式通过其参数调用内部 lambda 表达式并在结果上加 3。  
+ [[本文内容](#top)]  
   
-### 代码  
+##  <a name="nestingLambdaExpressions"></a>嵌套 Lambda 表达式  
+  
+### <a name="example"></a>示例  
+ 你可以将 lambda 表达式嵌套在另一个中，如下例所示。 内部 lambda 表达式将其参数与 2 相乘并返回结果。 外部 lambda 表达式通过其参数调用内部 lambda 表达式并在结果上加 3。  
+  
+### <a name="code"></a>代码  
   
 ```cpp  
 // nesting_lambda_expressions.cpp  
@@ -207,19 +224,23 @@ int main()
   
 ```  
   
-### 输出  
-  **13**   
-### 备注  
+### <a name="output"></a>输出  
+  
+```Output  
+13  
+```  
+  
+### <a name="remarks"></a>备注  
  在该示例中，`[](int y) { return y * 2; }` 是嵌套的 lambda 表达式。  
   
- \[[本文内容](#top)\]  
+ [[本文内容](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a> 高阶 Lambda 函数  
+##  <a name="higherOrderLambdaExpressions"></a>高阶 Lambda 函数  
   
-### 示例  
- 许多编程语言都支持高阶函数的概念。 高阶函数是采用另一个 lambda 表达式作为其参数或返回 lambda 表达式的 lambda 表达式。  你可以使用 [function](../standard-library/function-class.md) 类，使得 C\+\+ lambda 表达式具有类似高阶函数的行为。  以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。  
+### <a name="example"></a>示例  
+ 许多编程语言都支持这一概念*高阶函数。* 高阶函数是采用另一个 lambda 表达式作为其自变量或返回 lambda 表达式的 lambda 表达式。 你可以使用[函数](../standard-library/function-class.md)类，使得 c + + lambda 表达式的行为类似高阶函数。 以下示例显示返回 `function` 对象的 lambda 表达式和采用 `function` 对象作为其参数的 lambda 表达式。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```cpp  
 // higher_order_lambda_expression.cpp  
@@ -255,22 +276,38 @@ int main()
   
 ```  
   
-### 输出  
-  **30** \[[本文内容](#top)\]  
+### <a name="output"></a>输出  
   
-##  <a name="methodLambdaExpressions"></a> 在函数中使用 Lambda 表达式  
+```Output  
+30  
+```  
   
-### 示例  
- 你可以在函数的主体中使用 lambda 表达式。  lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。  你可以显式或隐式捕获 `this` 指针，以提供对封闭类的函数和数据成员的访问路径。  
+ [[本文内容](#top)]  
+  
+##  <a name="methodLambdaExpressions"></a>在函数中使用 Lambda 表达式  
+  
+### <a name="example"></a>示例  
+ 你可以在函数的主体中使用 lambda 表达式。 lambda 表达式可以访问该封闭函数可访问的任何函数或数据成员。 你可以显式或隐式捕获 `this` 指针，以提供对封闭类的函数和数据成员的访问路径。  
+**Visual Studio 2017 15.3 及更高版本**(适用于[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 捕获`this`通过值 (`[*this]`) 当 lambda 将使用在异步或并行操作中代码的可能位置执行后的原始对象超出范围。
   
  你可以在函数中显式使用 `this` 指针，如下所示：  
   
 ```cpp  
+
+// capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
    for_each(v.begin(), v.end(),   
       [this](int n) { cout << n * _scale << endl; });  
 }  
+
+// capture "this" by value (Visual Studio 2017 version 15.3 and later)
+void ApplyScale2(const vector<int>& v) const  
+{  
+   for_each(v.begin(), v.end(),   
+      [*this](int n) { cout << n * _scale << endl; });  
+}  
+
 ```  
   
  你也可以隐式捕获 `this` 指针：  
@@ -327,22 +364,27 @@ int main()
   
 ```  
   
-### 输出  
-  **3**  
-**6**  
-**9**  
-**12**   
-### 备注  
- `ApplyScale` 函数使用 lambda 表达式打印小数位数值与 `vector` 对象中的每个元素的乘积。  lambda 表达式隐式捕获 `this` 指针，以便访问 `_scale` 成员。  
+### <a name="output"></a>输出  
   
- \[[本文内容](#top)\]  
+```Output  
+3  
+6  
+9  
+12  
   
-##  <a name="templateLambdaExpressions"></a> 配合使用 Lambda 表达式和模板  
+```  
   
-### 示例  
- 由于 lambda 表达式已类型化，因此你可以将其与 C\+\+ 模板一起使用。  下面的示例显示 `negate_all` 和 `print_all` 函数。  `negate_all` 函数将一元 `operator-` 应用于 `vector` 对象中的每个元素。  `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。  
+### <a name="remarks"></a>备注  
+ `ApplyScale` 函数使用 lambda 表达式打印小数位数值与 `vector` 对象中的每个元素的乘积。 lambda 表达式隐式捕获 `this` 指针，以便访问 `_scale` 成员。  
   
-### 代码  
+ [[本文内容](#top)]  
+  
+##  <a name="templateLambdaExpressions"></a>与模板配合使用 Lambda 表达式  
+  
+### <a name="example"></a>示例  
+ 由于 lambda 表达式已类型化，因此你可以将其与 C++ 模板一起使用。 下面的示例显示 `negate_all` 和 `print_all` 函数。 `negate_all` 函数将一元 `operator-` 应用于 `vector` 对象中的每个元素。 `print_all` 函数将 `vector` 对象中的每个元素打印到控制台。  
+  
+### <a name="code"></a>代码  
   
 ```cpp  
 // template_lambda_expression.cpp  
@@ -383,25 +425,30 @@ int main()
   
 ```  
   
-### 输出  
-  **34**  
-**\-43**  
-**56**  
-**After negate\_all\(\):**  
-**\-34**  
-**43**  
-**\-56**   
-### 备注  
- 有关 C\+\+ 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)。  
+### <a name="output"></a>输出  
   
- \[[本文内容](#top)\]  
+```Output  
+34  
+-43  
+56  
+After negate_all():  
+-34  
+43  
+-56  
   
-##  <a name="ehLambdaExpressions"></a> 处理异常  
+```  
   
-### 示例  
- lambda 表达式的主体遵循结构化异常处理 \(SEH\) 和 C\+\+ 异常处理的原则。  你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。  以下示例使用 `for_each` 函数和 lambda 表达式将一个 `vector` 对象的值填充到另一个中。  它使用 `try`\/`catch` 块处理对第一个矢量的无效访问。  
+### <a name="remarks"></a>备注  
+ 有关 c + + 模板的详细信息，请参阅[模板](../cpp/templates-cpp.md)。  
   
-### 代码  
+ [[本文内容](#top)]  
+  
+##  <a name="ehLambdaExpressions"></a>处理异常  
+  
+### <a name="example"></a>示例  
+ lambda 表达式的主体遵循结构化异常处理 (SEH) 和 C++ 异常处理的原则。 你可以在 lambda 表达式主体中处理引发的异常或将异常处理推迟至封闭范围。 以下示例使用 `for_each` 函数和 lambda 表达式将一个 `vector` 对象的值填充到另一个中。 它使用`try` / `catch`块来处理无效访问第一个向量。  
+  
+### <a name="code"></a>代码  
   
 ```cpp  
 // eh_lambda_expression.cpp  
@@ -439,19 +486,23 @@ int main()
 }  
 ```  
   
-### 输出  
-  **Caught 'invalid vector\<T\> subscript'.**   
-### 备注  
- 有关异常处理的详细信息，请参阅 [异常处理](../cpp/exception-handling-in-visual-cpp.md)。  
+### <a name="output"></a>输出  
   
- \[[本文内容](#top)\]  
+```Output  
+Caught 'invalid vector<T> subscript'.  
+```  
   
-##  <a name="managedLambdaExpressions"></a> 配合使用 Lambda 表达式和托管类型 \(C\+\+\/CLI\)  
+### <a name="remarks"></a>备注  
+ 有关异常处理的详细信息，请参阅[异常处理](../cpp/exception-handling-in-visual-cpp.md)。  
   
-### 示例  
- lambda 表达式的捕获子句不能包含具有托管类型的变量。  但是，你可以将具有托管类型的实际参数传递到 lambda 表达式的形式参数列表。  以下示例包含一个 lambda 表达式，它通过值捕获局部非托管变量 `ch`，并采用 <xref:System.String?displayProperty=fullName> 对象作为其参数。  
+ [[本文内容](#top)]  
   
-### 代码  
+##  <a name="managedLambdaExpressions"></a>托管类型传递配合使用 Lambda 表达式 (C + + /cli CLI)  
+  
+### <a name="example"></a>示例  
+ lambda 表达式的捕获子句不能包含具有托管类型的变量。 但是，你可以将具有托管类型的实际参数传递到 lambda 表达式的形式参数列表。 以下示例包含一个 lambda 表达式，它通过值捕获局部非托管变量 `ch`，并采用 <xref:System.String?displayProperty=fullName> 对象作为其参数。  
+  
+### <a name="code"></a>代码  
   
 ```cpp  
 // managed_lambda_expression.cpp  
@@ -471,24 +522,28 @@ int main()
   
 ```  
   
-### 输出  
-  **Hello\!**   
-### 备注  
- 你还可以配合使用 lambda 表达式和 STL\/CLR 库。  有关详细信息，请参阅 [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)。  
+### <a name="output"></a>输出  
+  
+```Output  
+Hello!  
+```  
+  
+### <a name="remarks"></a>备注  
+ 你还可以配合使用 lambda 表达式和 STL/CLR 库。 有关详细信息，请参阅[STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)。  
   
 > [!IMPORTANT]
->  以下公共语言运行时 \(CLR\) 托管实体中不支持 Lambda：`ref class`、`ref struct`、`value class` 和 `value struct`。  
+>  以下公共语言运行时 (CLR) 托管实体中不支持 Lambda：`ref class`、`ref struct`、`value class` 和 `value struct`。  
   
- \[[本文内容](#top)\]  
+ [[本文内容](#top)]  
   
-## 请参阅  
- [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)   
+## <a name="see-also"></a>另请参阅  
+ [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)   
  [Lambda 表达式语法](../cpp/lambda-expression-syntax.md)   
- [auto](../cpp/auto-cpp.md)   
+ [自动](../cpp/auto-cpp.md)   
  [function 类](../standard-library/function-class.md)   
- [find\_if](../Topic/find_if.md)   
- [\<algorithm\>](../standard-library/algorithm.md)   
- [函数调用 ](../cpp/function-call-cpp.md)   
+ [find_if](../standard-library/algorithm-functions.md#find_if)   
+ [\<算法 >](../standard-library/algorithm.md)   
+ [函数调用](../cpp/function-call-cpp.md)   
  [模板](../cpp/templates-cpp.md)   
  [异常处理](../cpp/exception-handling-in-visual-cpp.md)   
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

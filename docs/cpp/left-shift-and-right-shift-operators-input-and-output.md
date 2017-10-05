@@ -1,56 +1,69 @@
 ---
-title: "左移和右移运算符（&gt;&gt; 和 &lt;&lt;） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "<<"
-  - ">>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<< 运算符, 具有特定对象"
-  - ">> 运算符"
-  - "按位移位运算符"
-  - "左移位运算符"
-  - "运算符 [C++], 移位"
-  - "右移位运算符"
-  - "移位运算符"
+title: "左的移和右移运算符 (&gt; &gt;和&lt; &lt;) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- <<
+- '>>'
+dev_langs:
+- C++
+helpviewer_keywords:
+- << operator, with specific objects
+- left shift operators
+- right shift operators
+- bitwise-shift operators
+- '>> operator'
+- shift operators
+- operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 左移和右移运算符（&gt;&gt; 和 &lt;&lt;）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-按位移位运算符包括向右移动 `>>` 的位的右移运算符 \(`shift_expression`\) 和向左移动 `<<` 的位的左移运算符 \(`shift_expression`\)。  <sup>1</sup>  
+---
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移运算符 (&gt; &gt;和&lt; &lt;)
+按位移位运算符是右移位运算符 (>>)，移动的位*shift 表达式*到右侧，并使用左移运算符 (<<)，移动的位*shift 表达式*左侧。 <sup>1</sup>  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
+> *shift 表达式* `<<` *加法表达式*  
+> *shift 表达式* `>>` *加法表达式*  
   
-        shift-expression << additive-expression  
-shift-expression >> additive-expression  
-```  
-  
-## 备注  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]
->  以下说明和示例在 x86 和 x64 体系结构的 Windows 上有效。  左移和右移运算符的实现在 ARM 版 Windows RT 设备上有很大不同。  有关详细信息，请参阅[你好 ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) 博客文章的“移位运算符”部分。  
+> 以下说明和示例在 x86 和 x64 体系结构的 Windows 上有效。 左移和右移运算符的实现在 ARM 版 Windows RT 设备上有很大不同。 有关详细信息，请参阅的"移位运算符"部分[你好 ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx)博客文章。  
   
-## 左移  
- 左移运算符将导致 `shift-expression` 中的位向左移动 `additive-expression` 所指定的位数。  因移位运算而空出的位上将用零填充。  左移是逻辑移动（从末端移掉的位将被舍弃，包括符号位）。  有关按位移位的类型的详细信息，请参阅[按位移位](http://en.wikipedia.org/wiki/Bitwise_shift)。  
+## <a name="left-shifts"></a>左移  
+ 左移运算符使中的位*shift 表达式*要数指定的位数向左移动*加法表达式*。 因移位运算而空出的位上将用零填充。 左移是逻辑移动（从末端移掉的位将被舍弃，包括符号位）。 有关类型的按位右移的详细信息，请参阅[按位右移](http://en.wikipedia.org/wiki/Bitwise_shift)。  
   
- 以下示例将显示使用无符号数字的左移运算。  该示例通过将值表示为 bitset 来显示对位的操作。  有关详细信息，请参阅[bitset 类](../standard-library/bitset-class.md)。  
+ 以下示例将显示使用无符号数字的左移运算。 该示例通过将值表示为 bitset 来显示对位的操作。 有关详细信息，请参阅[bitset 类](../standard-library/bitset-class.md)。  
   
 ```cpp  
 #include <iostream>  
@@ -73,7 +86,7 @@ int main() {
   
 ```  
   
- 如果你左移有符号的数字，以至于符号位受影响，则结果是不确定的。  以下示例将显示 Visual C\+\+ 中 1 位左移到符号位时所发生的情况。  
+ 如果你左移有符号的数字，以至于符号位受影响，则结果是不确定的。 以下示例将显示 Visual C++ 中 1 位左移到符号位时所发生的情况。  
   
 ```cpp  
 #include <iostream>  
@@ -95,11 +108,11 @@ int main() {
 }  
 ```  
   
-## 右移  
- 右移运算符将导致 `shift-expression` 中的位模式向右移动 `additive-expression` 所指定的位数。  对于无符号数字，因移位运算而空出的位上将用零填充。  对于有符号数字，符号位用于填充空出的位。  也就是说，如果数字为正，则使用 0；如果数字为负，则使用 1。  
+## <a name="right-shifts"></a>右移  
+ 右移位运算符将导致位模式中的*shift 表达式*要数指定的位数向右移动*加法表达式*。 对于无符号数字，因移位运算而空出的位上将用零填充。 对于有符号数字，符号位用于填充空出的位。 也就是说，如果数字为正，则使用 0；如果数字为负，则使用 1。  
   
 > [!IMPORTANT]
->  符号为负的数字右移的结果依实现而定。  虽然 Visual C\+\+ 使用符号位填充空出的位，但是无法保证其他实现也会这样执行。  
+> 符号为负的数字右移的结果依实现而定。 虽然 Visual C++ 使用符号位填充空出的位，但是无法保证其他实现也会这样执行。  
   
  以下示例显示使用无符号数字的右移运算：  
   
@@ -179,8 +192,8 @@ int main() {
 }  
 ```  
   
-## 移位和提升  
- 移位运算符两侧的表达式必须是整数类型。  整型提升将根据[整数提升](../misc/integral-promotions.md)中描述的规则执行。  结果的类型与提升后的 `shift-expression` 类型相同。  
+## <a name="shifts-and-promotions"></a>移位和提升  
+ 移位运算符两侧的表达式必须是整数类型。 整型提升执行根据所述的规则[标准转换](standard-conversions.md)。 结果的类型是与提升后的类型相同*shift 表达式*。  
   
  在下面的示例中，`char` 类型的变量将提升为 `int`。  
   
@@ -193,16 +206,16 @@ using namespace std;
 int main() {  
     char char1 = 'a';  
   
-    auto promoted1 = char1 << 1;  // 194  
+    auto promoted1 = char1 << 1;   // 194  
     cout << typeid(promoted1).name() << endl;  // int  
   
     auto promoted2 = char1 << 10;  // 99328  
-    cout << typeid(promoted2).name() << endl;   // int  
+    cout << typeid(promoted2).name() << endl;  // int  
 }  
 ```  
   
-## 其他详细信息  
- 如果 `additive-expression` 为负或 `additive-expression` 大于或等于 `shift-expression`（提升后）中的位数，则移位运算的结果是不确定的。  如果 `additive-expression` 为 0，移位运算不会执行。  
+## <a name="additional-details"></a>其他详细信息  
+ 移位运算的结果是不确定的如果*加法表达式*为负或如果*加法表达式*大于或等于 （提升） 中的位数*shift 表达式*。 如果执行移位运算不*加法表达式*为 0。  
   
 ```cpp  
 #include <iostream>  
@@ -227,13 +240,13 @@ int main() {
 }  
 ```  
   
-## 脚注  
- 1 以下是 C\+\+ ISO 规范 \(INCITS\/ISO\/IEC 14882\-2011\[2012\]\) 5.8.2 和 5.8.3 两节中对移位运算符的说明。  
+## <a name="footnotes"></a>脚注  
+ 1 以下是中 C + + 11 ISO 规范 （INCITS/ISO/IEC 14882-2011[2012])，部分 5.8.2 和 5.8.3 对移位运算符描述。  
   
- `E1 << E2` 的值是 `E1` 向左移动 `E2` 位的结果，空出的位用零填充。  如果 `E1` 属于无符号类型，则结果的值为 `E1 × 2`<sup>E2</sup>，约减的模一大于结果类型可表示的最大值。  否则，如果 `E1` 属于有符号类型且为非负值，`E1 × 2`<sup>E2</sup> 可由结果类型的相应无符号类型表示，则该值转换为结果类型后即为得到的值；否则，该行为是不确定的。  
+ 值**E1 << E2**是**E1**向左移动**E2**位的结果，空出 bits 将用零填充。 如果**E1**具有无符号的类型，则结果的值是**E1 × 2**<sup>**E2**</sup>，约减的模一大于中可表示的最大值结果类型中。 否则为如果**E1**有符号的类型且非负值，和**E1 × 2**<sup>**E2** </sup>是用相应的无符号类型表示结果类型，该值转换为结果类型，则生成的值;否则，该行为不确定。  
   
- `E1 >> E2` 的值是 `E1` 向右移动 `E2` 位的结果。  如果 `E1` 属于无符号类型或 `E1` 属于有符号类型且为非负值，则结果值为 `E1/2`<sup>E2</sup> 之商的整数部分。  如果 `E1` 属于有符号类型且为负值，则结果值由实现决定。  
+ 值**E1 >> E2**是**E1**向右移动**E2**位的结果。 如果**E1**属于无符号的类型或如果**E1**有符号的类型且为非负值，则结果的值为的商的整数部分**E1/2** <sup>**E2**</sup>。 如果**E1**具有带符号的类型且为负值，生成的值是实现定义。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

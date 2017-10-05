@@ -1,34 +1,51 @@
 ---
-title: "虚函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "派生类, 虚函数"
-  - "函数 [C++], 虚函数"
-  - "虚函数"
+title: "虚函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [C++], virtual functions
+- derived classes, virtual functions
+- virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 虚函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c0607bdc502e8478784c1e9e3a884e0c3d3a537
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-虚函数是应在派生类中重新定义的成员函数。  当使用指针或对基类的引用来引用派生的类对象时，可以为该对象调用虚函数并执行该函数的派生类版本。  
+---
+# <a name="virtual-functions"></a>虚函数
+虚函数是应在派生类中重新定义的成员函数。 当使用指针或对基类的引用来引用派生的类对象时，可以为该对象调用虚函数并执行该函数的派生类版本。  
   
  虚函数确保为该对象调用正确的函数，这与用于进行函数调用的表达式无关。  
   
- 假定基类包含声明为 [virtual](../cpp/virtual-cpp.md) 的函数，并且派生类定义了相同的函数。  为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。  以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现  
+ 假定基类包含声明为函数[虚拟](../cpp/virtual-cpp.md)并派生的类定义了相同的函数。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现  
   
 ```  
 // deriv_VirtualFunctions.cpp  
@@ -72,11 +89,11 @@ int main() {
 }  
 ```  
   
- 在前面的代码中，对 `PrintBalance` 的调用是相同的，`pAccount` 所指向的对象除外。  由于 `PrintBalance` 是虚拟的，因此将调用为每个对象定义的函数版本。  派生类 `PrintBalance` 和 `CheckingAccount` 中的 `SavingsAccount` 函数“重写”基类 `Account` 中的函数。  
+ 在前面的代码中，对 `PrintBalance` 的调用是相同的，`pAccount` 所指向的对象除外。 由于 `PrintBalance` 是虚拟的，因此将调用为每个对象定义的函数版本。 派生类 `PrintBalance` 和 `CheckingAccount` 中的 `SavingsAccount` 函数“重写”基类 `Account` 中的函数。  
   
  如果声明的类不提供 `PrintBalance` 函数的重写实现，则使用基类 `Account` 中的默认实现。  
   
- 派生类中的函数仅在基类中的虚函数的类型相同时重写这些虚函数。  派生类中的函数不能只是与其返回类型中的基类的虚函数不同；参数列表也必须不同。  
+ 派生类中的函数仅在基类中的虚函数的类型相同时重写这些虚函数。 派生类中的函数不能只是与其返回类型中的基类的虚函数不同；参数列表也必须不同。  
   
  当使用指针或引用调用函数时，以下规则将适用：  
   
@@ -139,7 +156,7 @@ int main() {
 }  
 ```  
   
-### 输出  
+### <a name="output"></a>输出  
   
 ```  
 Derived::NameOf  
@@ -148,15 +165,15 @@ Derived::NameOf
 Invoked by Derived  
 ```  
   
- 请注意，无论 `NameOf` 函数是通过指向 `Base` 的指针还是通过指向 `Derived` 的指针进行调用，它都会调用 `Derived` 的函数。  它调用 `Derived` 的函数，因为 `NameOf` 是虚函数，并且 `pBase` 和 `pDerived` 都指向类型 `Derived` 的对象。  
+ 请注意，无论 `NameOf` 函数是通过指向 `Base` 的指针还是通过指向 `Derived` 的指针进行调用，它都会调用 `Derived` 的函数。 它调用 `Derived` 的函数，因为 `NameOf` 是虚函数，并且 `pBase` 和 `pDerived` 都指向类型 `Derived` 的对象。  
   
- 由于仅为类类型的对象调用虚函数，因此不能将全局函数或静态函数声明为 **virtual**。  
+ 因为仅为类类型的对象调用虚函数时，你不能声明为全局或静态函数**虚拟**。  
   
- 在派生类中声明重写函数时可使用 **virtual** 关键字，但它不是必需的；虚函数的重写始终是虚拟的。  
+ **虚拟**派生类中声明重写函数时，可以使用关键字但它是不必要的; 虚函数的重写始终是虚拟。  
   
- 必须定义基类中的虚函数，除非使用 *pure\-specifier* 声明它们。  （有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。）  
+ 必须定义在基类中的虚拟函数，除非它们声明为使用*纯说明符*。 (有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。)  
   
- 可通过使用范围解析运算符 \(`::`\) 显式限定函数名称来禁用虚函数调用机制。  考虑先前涉及 `Account` 类的示例。  若要调用基类中的 `PrintBalance`，请使用如下所示的代码：  
+ 可通过使用范围解析运算符 (`::`) 显式限定函数名称来禁用虚函数调用机制。 考虑先前涉及 `Account` 类的示例。 若要调用基类中的 `PrintBalance`，请使用如下所示的代码：  
   
 ```  
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
@@ -170,5 +187,4 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
   
  在前面的示例中，对 `PrintBalance` 的调用将禁用虚函数调用机制。  
   
-## 请参阅  
- [对虚函数的访问](../misc/access-to-virtual-functions.md)
+

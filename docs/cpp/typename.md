@@ -1,45 +1,60 @@
 ---
-title: "typename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typename"
-  - "typename_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typename 模板说明符"
+title: "typename |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typename
+- typename_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# typename
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-向编译器通知未知标识符是类型。  
+---
+# <a name="typename"></a>typename
+在模板定义中，提供对编译器的提示未知的标识符是一种类型。 在模板参数列表中，用于指定类型参数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 typename identifier;  
 ```  
   
-## 备注  
- 仅在模板定义中使用此关键字。  
+## <a name="remarks"></a>备注  
+ 如果模板定义中的名称是依赖于模板自变量; 的限定的名称，则必须使用此关键字如果限定的名不是依赖，它是可选的。 有关详细信息，请参阅[模板和名称解析](../cpp/templates-and-name-resolution.md)。  
   
- 如果该名称是依赖于模板参数的限定名，则必须使用此关键字；如果限定名不是依赖项，则该名称是可选的。  有关详细信息，请参阅[模板和名称解析](../cpp/templates-and-name-resolution.md)。  
-  
- **typename** 可由任何类型在模板声明或定义中的任何位置使用。  不允许在基类列表中使用该关键字，除非将它用作模板基类的模板参数。  
+ **typename**可由任意位置中的模板声明或定义的任何类型。 不允许在基类列表中使用该关键字，除非将它用作模板基类的模板自变量。  
   
 ```  
 template <class T>  
@@ -50,14 +65,14 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};  
 ```  
   
- **typename** 关键字也替代模板参数列表中的 **class**。  例如，以下语句是相同的：  
+ **Typename**关键字还可代替了**类**模板参数列表。 例如，以下语句在语义上等效:  
   
 ```  
 template<class T1, class T2>...  
 template<typename T1, typename T2>...  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // typename.cpp  
@@ -71,6 +86,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [模板](../cpp/templates-cpp.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

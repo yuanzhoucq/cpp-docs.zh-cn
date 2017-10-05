@@ -1,32 +1,49 @@
 ---
-title: "初始值设定项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组元素初始值设定项"
-  - "数组 [C++], 数组元素初始值设定项"
-  - "声明符, 作为初始值设定项"
-  - "初始值设定项, 数组元素"
-  - "初始化数组, 初始值设定项"
+title: "初始值设定项 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- array-element initializers
+- initializing arrays, initializers
+- arrays [C++], array-element initializers
+- declarators, as initializers
+- initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 初始值设定项
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-初始值设定项可指定变量的初始值。  你可以在以下上下文中初始化变量：  
+---
+# <a name="initializers"></a>初始值设定项
+初始值设定项可指定变量的初始值。 你可以在以下上下文中初始化变量：  
   
 -   在变量的定义中：  
   
@@ -63,7 +80,7 @@ caps.handback.revision: 9
     string s = "hello";  
     ```  
   
--   括号内的初始值设定项列表。  该列表可能为空，或可能包含一组列表，如下面的示例所示：  
+-   括号内的初始值设定项列表。 该列表可能为空，或可能包含一组列表，如下面的示例所示：  
   
     ```cpp  
     struct Point{  
@@ -83,23 +100,23 @@ caps.handback.revision: 9
     }  
     ```  
   
-## 初始化类型  
- 初始化有若干类型，可能出现在程序执行的不同点。  不同的初始化类型并不是相互排斥的。例如，列表初始化可触发值初始化，在其他情况中，它可以触发聚合初始化。  
+## <a name="kinds-of-initialization"></a>初始化类型  
+ 初始化有若干类型，可能出现在程序执行的不同点。 不同的初始化类型并不是相互排斥的。例如，列表初始化可触发值初始化，在其他情况中，它可以触发聚合初始化。  
   
-### 零初始化  
+### <a name="zero-initialization"></a>零初始化  
  零初始化是指将变量设置为隐式转换为该类型的零值：  
   
 -   数值变量初始化为 0（或 0.0、0.0000000000 等）。  
   
--   字符变量初始化为“\\0”。  
+-   字符变量初始化为`'\0'`。  
   
 -   指针初始化为 `nullptr`。  
   
--   数组、[POD](../standard-library/is-pod-class.md) 类、结构和联合将其成员初始化为零值。  
+-   数组， [POD](../standard-library/is-pod-class.md)类、 结构和联合将其成员初始化为零值。  
   
  零初始化在不同的时间执行：  
   
--   在程序启动时，对具有静态持续时间的所有已命名变量进行初始化。  这些变量可以稍后再次初始化。  
+-   在程序启动时，对具有静态持续时间的所有已命名变量进行初始化。 这些变量可以稍后再次初始化。  
   
 -   值初始化期间，对使用空大括号初始化的标量类型和 POD 类类型进行初始化。  
   
@@ -124,8 +141,8 @@ int main() {
 }  
 ```  
   
-### 默认初始化  
- 类、结构和联合的默认初始化是具有默认构造函数的初始化。  可以不使用初始化表达式或使用 `new` 关键字调用默认构造函数：  
+### <a name="default_initialization"></a>默认初始化  
+ 类、结构和联合的默认初始化是具有默认构造函数的初始化。 可以不使用初始化表达式或使用 `new` 关键字调用默认构造函数：  
   
 ```cpp  
 MyClass mc1;  
@@ -134,7 +151,7 @@ MyClass* mc3 = new MyClass;
   
  如果类、结构或联合没有默认构造函数，则编译器将发出错误。  
   
- 如果定义标量变量时不使用初始化表达式，则进行默认初始化。  它们的值是不确定的。  
+ 如果定义标量变量时不使用初始化表达式，则进行默认初始化。 它们的值是不确定的。  
   
 ```cpp  
 int i1;  
@@ -142,7 +159,7 @@ float f;
 char c;  
 ```  
   
- 如果定义数组时不使用初始化表达式，则进行默认初始化。  数组进行默认初始化时，其成员将进行默认初始化并具有不确定的值，如以下示例所示：  
+ 如果定义数组时不使用初始化表达式，则进行默认初始化。 数组进行默认初始化时，其成员将进行默认初始化并具有不确定的值，如以下示例所示：  
   
 ```cpp  
 int int_arr[3];  
@@ -150,8 +167,8 @@ int int_arr[3];
   
  如果数组成员没有默认构造函数，则编译器将发出错误。  
   
-#### 常量变量的默认初始化  
- 常量变量必须与初始值设定项一起声明。  如果它们是标量类型，则会导致编译器错误，而如果是具有默认构造函数的类类型，则将导致警告：  
+#### <a name="default-initialization-of-constant-variables"></a>常量变量的默认初始化  
+ 常量变量必须与初始值设定项一起声明。 如果它们是标量类型，则会导致编译器错误，而如果是具有默认构造函数的类类型，则将导致警告：  
   
 ```cpp  
 class MyClass{};  
@@ -162,7 +179,7 @@ int main() {
 }  
 ```  
   
-#### 静态变量的默认初始化  
+#### <a name="default-initialization-of-static-variables"></a>静态变量的默认初始化  
  如果静态变量的声明中没有初始值设定项，则初始化为 0（隐式转换为该类型）。  
   
 ```cpp  
@@ -180,9 +197,9 @@ int main() {
 }  
 ```  
   
- 有关全局静态对象的初始化的详细信息，请参阅[附加启动注意事项](../cpp/additional-startup-considerations.md)。  
+ 有关全局静态对象的初始化详细信息，请参阅[附加启动注意事项](../cpp/additional-startup-considerations.md)。  
   
-### 值初始化  
+### <a name="value-initialization"></a>值初始化  
  值初始化发生在以下情况下：  
   
 -   使用空大括号初始化来初始化已命名值  
@@ -217,8 +234,8 @@ int main() {
   
 ```  
   
-### 复制初始化  
- 复制初始化是指使用一个不同的对象来初始化另一个对象。  在以下情况下，它会发生：  
+### <a name="copy-initialization"></a>复制初始化  
+ 复制初始化是指使用一个不同的对象来初始化另一个对象。 在以下情况下，它会发生：  
   
 -   使用等号初始化变量  
   
@@ -230,7 +247,7 @@ int main() {
   
 -   使用等号初始化非静态数据成员  
   
--   在聚合初始化期间通过复制初始化来初始化类、结构和联合成员。  请参阅[聚合初始化](../cpp/initializers.md#INIT_AggInit)中的示例。  
+-   在聚合初始化期间通过复制初始化来初始化类、结构和联合成员。 请参阅[聚合初始化](#agginit)有关示例。  
   
  下面的代码显示复制初始化的几个示例：  
   
@@ -272,10 +289,10 @@ regex r = "a.*b"; // the constructor is explicit; same error
 shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error  
 ```  
   
- 有时，如果类的复制构造函数被删除或不可访问，复制初始化将导致编译器错误。  请参阅[显式初始化](http://msdn.microsoft.com/zh-cn/c89724f8-ddd3-4d77-b86d-77fcd8bd8595)以获取详细信息。  
+ 有时，如果类的复制构造函数被删除或不可访问，复制初始化将导致编译器错误。 
   
-### 直接初始化  
- 直接初始化是使用（非空）大括号或圆括号的初始化。  不同于复制初始化，它可以调用显式构造函数。  在以下情况下，它会发生：  
+### <a name="direct-initialization"></a>直接初始化  
+ 直接初始化是使用（非空）大括号或圆括号的初始化。 不同于复制初始化，它可以调用显式构造函数。 在以下情况下，它会发生：  
   
 -   使用非空大括号或圆括号初始化变量  
   
@@ -316,8 +333,8 @@ int main(){
 }  
 ```  
   
-### 列表初始化  
- 使用大括号内的初始值设定项列表初始化变量时，将发生列表初始化。  大括号内的初始值设定项列表可在以下情况中使用：  
+### <a name="list-initialization"></a>列表初始化  
+ 使用大括号内的初始值设定项列表初始化变量时，将发生列表初始化。 大括号内的初始值设定项列表可在以下情况中使用：  
   
 -   初始化变量  
   
@@ -335,7 +352,7 @@ int main(){
   
  以下代码显示了列表初始化的一些示例：  
   
-```vb  
+```cpp  
 class MyClass {  
 public:  
     MyClass(int myInt, char myChar) {}    
@@ -366,7 +383,7 @@ int main() {
 }  
 ```  
   
-### 聚合初始化  
+### <a name="agginit"></a>聚合初始化  
  聚合初始化是针对数组或类类型（通常为结构或联合）的一种列表初始化形式：  
   
 -   没有私有或受保护成员  
@@ -377,7 +394,8 @@ int main() {
   
 -   没有虚拟成员函数  
   
--   没有用于非静态成员的大括号或等号初始值设定项  
+> [!NOTE]
+>  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
   
  聚合初始值设定项包括含等号或不含等号的括号内的初始化列表，如以下示例所示：  
   
@@ -424,10 +442,10 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  在聚合初始化期间声明但未显式初始化的数组成员将进行零初始化，如上面的 `myArr3` 中。  
+>  已声明但未显式初始化聚合初始化期间数组成员都是零初始化，如`myArr3`上面。  
   
-#### 初始化联合和结构  
- 如果联合没有构造函数，你可以使用单个值（或使用联合的另一个实例）对其初始化。  该值用于初始化第一个非静态字段。  结构初始化与其不同，其初始值设定项中的第一个值用于初始化第一个字段，第二个值用于初始化第二个字段，依此类推。  比较以下示例中联合和结构的初始化：  
+#### <a name="initializing-unions-and-structs"></a>初始化联合和结构  
+ 如果联合没有构造函数，你可以使用单个值（或使用联合的另一个实例）对其初始化。 该值用于初始化第一个非静态字段。 结构初始化与其不同，其初始值设定项中的第一个值用于初始化第一个字段，第二个值用于初始化第二个字段，依此类推。 比较以下示例中联合和结构的初始化：  
   
 ```cpp  
 struct MyStruct {  
@@ -458,8 +476,8 @@ int main() {
 }  
 ```  
   
-#### 初始化包含聚合的聚合  
- 聚合类型可包含其他聚合类型，例如数组的数组、结构的数组等。  这些类型使用嵌套的大括号组进行初始化，例如：  
+#### <a name="initializing-aggregates-that-contain-aggregates"></a>初始化包含聚合的聚合  
+ 聚合类型可包含其他聚合类型，例如数组的数组、结构的数组等。 这些类型使用嵌套的大括号组进行初始化，例如：  
   
 ```cpp  
 struct MyStruct {  
@@ -473,8 +491,8 @@ int main() {
 }  
 ```  
   
-### 引用初始化  
- 引用类型的变量必须使用引用类型派生自的类型的对象进行初始化，或使用可转换为引用类型派生自的类型的类型的对象进行初始化。  例如:  
+### <a name="reference-initialization"></a>引用初始化  
+ 引用类型的变量必须使用引用类型派生自的类型的对象进行初始化，或使用可转换为引用类型派生自的类型的类型的对象进行初始化。 例如:  
   
 ```  
 // initializing_references.cppint   
@@ -489,33 +507,33 @@ int main()
    LongRef3 = 11L;   // C3892}  
 ```  
   
- 使用临时对象初始化引用的唯一方式是初始化常量临时对象。  初始化后，引用类型变量始终指向同一对象；不能将它修改为指向另一个对象。  
+ 使用临时对象初始化引用的唯一方式是初始化常量临时对象。 初始化后，引用类型变量始终指向同一对象；不能将它修改为指向另一个对象。  
   
- 尽管语法可以相同，但引用类型变量的引用和引用类型变量的赋值在语义上不同。  在前面的示例中，更改 `iVar` 和 `lVar` 的赋值看起来像初始化，但它们有不同的效果。  初始化指定引用类型变量指向的对象；赋值通过引用向引用目标对象赋值。  
+ 尽管语法可以相同，但引用类型变量的引用和引用类型变量的赋值在语义上不同。 在前面的示例中，更改 `iVar` 和 `lVar` 的赋值看起来像初始化，但它们有不同的效果。 初始化指定引用类型变量指向的对象；赋值通过引用向引用目标对象赋值。  
   
  由于将引用类型的参数传递给函数或从函数返回引用类型的值都是初始化，因此会正确初始化函数的形参，就像它们是返回的引用一样。  
   
  只有在下列声明中才能在没有初始值设定项的情况下声明引用类型变量：  
   
--   函数声明（原型）。  例如:  
+-   函数声明（原型）。 例如:  
   
     ```  
     int func( int& );  
     ```  
   
--   函数返回类型声明。  例如:  
+-   函数返回类型声明。 例如:  
   
     ```  
     int& func( int& );  
     ```  
   
--   引用类型类成员的声明。  例如:  
+-   引用类型类成员的声明。 例如:  
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   显式指定为 `extern` 的声明。  例如:  
+-   显式指定为 `extern` 的声明。 例如:  
   
     ```  
     extern int& iVal;  
@@ -523,15 +541,14 @@ int main()
   
  初始化引用类型变量时，编译器将使用下图中所示的决策关系图，在创建对对象的引用或创建引用所指向的临时对象之间做出选择。  
   
- ![初始化引用类型决策图](../cpp/media/vc38s71.png "vc38S71")  
+ ![Ref 类型初始化决策图](../cpp/media/vc38s71.gif "vc38S71")  
 引用类型初始化决策图  
   
- 可使用同一类型的 `volatile` 对象或使用尚未声明为 `volatile` 的对象初始化对 `volatile` 类型（已声明为 `volatile` *typename* **和** *identifier*）的引用。  但是，不能使用该类型的 **const** 对象初始化它们。  同样，可使用相同类型的 **const** 对象（或具有到该类型的转换的任何内容或使用尚未声明为 **const** 的对象）初始化对 **const** 类型（已声明为 **const** *typename* **和** *identifier*）的引用。  但是，不能使用该类型的 `volatile` 对象初始化它们。  
+ 引用`volatile`类型 (声明为`volatile` *typename* ** & ** *标识符*) 可以使用初始化`volatile`对象的相同类型的对象或使用未声明为`volatile`。 它们不能但是，使用初始化**const**该类型的对象。 同样，引用**const**类型 (声明为**const** *typename* ** & ** *标识符*) 可以使用初始化**const**同类型的对象 (或任何具有转换为该类型或具有未声明为对象**const**)。 但是，不能使用该类型的 `volatile` 对象初始化它们。  
   
- 未使用 **const** 或 `volatile` 关键字限定的引用只能使用既未声明为 **const** 也未声明为 `volatile` 的对象进行初始化。  
+ 不使用限定的引用**const**或`volatile`关键字可以仅使用作为既不声明的对象初始化**const**也不`volatile`。  
   
-### 外部变量的初始化  
- 自动变量、寄存器变量、静态变量和外部变量的声明可包含初始值设定项。  但是，仅当外部变量没有声明为 `extern` 时，其声明中才可以包含初始值设定项。  有关详细信息，请参阅[外部](../misc/external.md)。  
+### <a name="initialization-of-external-variables"></a>外部变量的初始化  
+ 自动、 静态的和外部变量的声明可以包含初始值设定项。 但是，仅当外部变量没有声明为 `extern` 时，其声明中才可以包含初始值设定项。
   
-## 请参阅  
- [\(NOTINBUILD\)Declarators](http://msdn.microsoft.com/zh-cn/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)
+

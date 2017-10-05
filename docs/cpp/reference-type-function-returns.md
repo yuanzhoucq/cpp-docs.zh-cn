@@ -1,30 +1,47 @@
 ---
-title: "引用类型函数返回 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据类型 [C++], 函数返回类型"
-  - "函数返回类型, 引用类型"
-  - "函数 [C++], 返回类型"
+title: "引用类型函数返回 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function return types, reference type
+- data types [C++], function return types
+- functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 引用类型函数返回
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1cadf01b1af0bac4fb76d0146a51b789b5ddc6e5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-可将函数声明为返回引用类型。  做出此类声明有两个原因：  
+---
+# <a name="reference-type-function-returns"></a>引用类型函数返回
+可将函数声明为返回引用类型。 做出此类声明有两个原因：  
   
 -   返回的信息是一个返回引用比返回副本更有效的足够大的对象。  
   
@@ -32,11 +49,11 @@ caps.handback.revision: 8
   
 -   引用的对象在函数返回时不会超出范围。  
   
- 就像通过引用传递大型对象 *to* 函数或返回大型对象 *from* 函数可能更有效。  引用返回协议使得不必在返回前将对象复制到临时位置。  
+ 就像它可能更有效，传递大型对象*到*函数按引用，它还可以更加高效返回大型对象*从*通过引用的函数。 引用返回协议使得不必在返回前将对象复制到临时位置。  
   
- 当函数的计算结果必须为左值时，引用返回类型也可能很有用。  大多数重载运算符属于此类别，尤其是赋值运算符。  重载运算符在[重载运算符](../cpp/operator-overloading.md)中有述。  
+ 当函数的计算结果必须为左值时，引用返回类型也可能很有用。 大多数重载运算符属于此类别，尤其是赋值运算符。 重载运算符详见[重载运算符](../cpp/operator-overloading.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  请考虑 `Point` 示例：  
   
 ```  
@@ -81,14 +98,14 @@ cout << "x = " << ThePoint.x() << "\n"
 }  
 ```  
   
-## 输出  
+## <a name="output"></a>输出  
   
 ```  
 x = 7  
 y = 9  
 ```  
   
- 请注意，函数`x` 和 `y` 被声明为返回引用类型。  这些函数可在赋值语句的每一端上使用。  
+ 请注意，函数`x` 和 `y` 被声明为返回引用类型。 这些函数可在赋值语句的每一端上使用。  
   
  另请注意在 main 中，ThePoint 对象停留在范围中，因此其引用成员仍处于活动状态，可以安全地访问。  
   
@@ -102,8 +119,8 @@ y = 9
   
 -   函数的参数或函数的返回类型的声明  
   
-## 返回局部变量地址时的注意事项  
- 如果在局部范围中声明某个对象，则该对象会在函数返回时销毁。  如果函数返回对该对象的引用，则当调用方尝试使用 null 引用时，该引用可能会在运行时导致访问冲突。  
+## <a name="caution-returning-address-of-local"></a>返回局部变量地址时的注意事项  
+ 如果在局部范围中声明某个对象，则该对象会在函数返回时销毁。 如果函数返回对该对象的引用，则当调用方尝试使用 null 引用时，该引用可能会在运行时导致访问冲突。  
   
 ```  
 // C4172 means Don’t do this!!!  
@@ -115,7 +132,7 @@ Foo& GetFoo()
 } // f is destroyed here  
 ```  
   
- 编译器会在这种情况下发出警告：`警告 C4172: 返回局部变量或临时变量的地址`。  在简单程序中，如果调用方在覆盖内存位置之前访问引用，则有时可能不会发生访问冲突。  这纯属运气。  请注意该警告。  
+ 编译器会发出警告在此情况下： `warning C4172: returning address of local variable or temporary`。 在简单程序中，如果调用方在覆盖内存位置之前访问引用，则有时可能不会发生访问冲突。 这纯属运气。 请注意该警告。  
   
-## 请参阅  
- [引用](../cpp/references-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [参考资料](../cpp/references-cpp.md)

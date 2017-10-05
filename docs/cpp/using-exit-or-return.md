@@ -1,33 +1,50 @@
 ---
-title: "使用 exit 或 return | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Exit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exit 函数"
-  - "return 关键字 [C++], 用于程序终止"
+title: "使用退出或返回 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Exit
+dev_langs:
+- C++
+helpviewer_keywords:
+- exit function
+- return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 使用 exit 或 return
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9fc6588a6593559314774e30a4d65c5a60779eb5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-在从 **main** 调用 **exit** 或执行 `return` 语句时，静态对象将以与其初始化相反的顺序被销毁。  以下示例演示如何进行此类初始化和清理工作。  
+---
+# <a name="using-exit-or-return"></a>使用 exit 或 return
+当调用**退出**或执行`return`语句从**主要**，静态对象会被销毁其初始化的相反顺序。 以下示例演示如何进行此类初始化和清理工作。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // using_exit_or_return1.cpp  
@@ -65,7 +82,7 @@ int main() {
 }  
 ```  
   
- 在前面的示例中，在进入 `main` 之前，将创建和初始化静态对象 `sd1` 和 `sd2`。  使用 `return` 语句终止此程序后，首先销毁 `sd2`，然后销毁 `sd1`。  `ShowData` 类的析构函数将关闭与这些静态对象关联的文件。（有关初始化、构造函数和析构函数的详细信息，请参阅[特殊成员函数](../misc/special-member-functions-cpp.md)。）  
+ 在前面的示例中，在进入 `sd1` 之前，将创建和初始化静态对象 `sd2` 和 `main`。 使用 `return` 语句终止此程序后，首先销毁 `sd2`，然后销毁 `sd1`。 `ShowData` 类的析构函数将关闭与这些静态对象关联的文件。   
   
  另一种编写此代码的方式为，使用块范围声明 `ShowData` 对象，并允许在它们超出范围时将其销毁：  
   
@@ -78,5 +95,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [附加终止注意事项](../cpp/additional-termination-considerations.md)

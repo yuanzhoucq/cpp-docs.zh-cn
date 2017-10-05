@@ -1,62 +1,80 @@
 ---
-title: "MFC ActiveX 控件：事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleControl 类, 事件的处理"
-  - "容器事件"
-  - "自定义事件, 添加到 ActiveX 控件"
-  - "事件 [C++], ActiveX 控件"
-  - "事件 [C++], 映射"
-  - "映射, 事件"
-  - "MFC ActiveX 控件, 事件"
-  - " [C++], 通知事件容器"
-  - "OLE 事件"
-  - "常用事件"
+title: "MFC ActiveX 控件： 事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], events
+- notifications [MFC], notifying containers of events
+- custom events [MFC], adding to ActiveX controls
+- events [MFC], mapping
+- COleControl class [MFC], handling of events
+- mappings [MFC], events
+- stock events [MFC]
+- container events [MFC]
+- events [MFC], ActiveX controls
+- OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# MFC ActiveX 控件：事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
+ms.openlocfilehash: f4e6cfc21a12288a53eca391eccb86bb4ea3ff55
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-ActiveX 控件使用事件通知内容发生控件的容器。  事件的通用示例包括在控件状态单击控件，使用键盘输入的数据，并且更改。  在这些操作时，控件引发事件通知容器。  
+---
+# <a name="mfc-activex-controls-events"></a>MFC ActiveX 控件：事件
+ActiveX 控件使用事件通知控件有事情的容器。 事件的常见示例包括点击控件，输入在控件的状态中使用键盘和更改的数据。 当发生这些操作时，则控件触发事件以提醒容器。  
   
- 事件还调用消息。  
+ 事件也称为消息。  
   
- MFC 支持两个事件：常用和自定义。  常用事件是自动的 [COleControl](../mfc/reference/colecontrol-class.md) 类处理这些事件。  有关常用事件的完整列表，请参见的文章 [MFC ActiveX 控件：添加股票事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)。  当该控件特定的操作发生时，自定义事件提供了通知控件容器。  某些示例在以下某一窗口消息的控件或接收的内部状态的更改。  
+ MFC 支持两种类型的事件： 常用和自定义。 常用事件是这些类的事件[COleControl](../mfc/reference/colecontrol-class.md)自动处理。 常用事件的完整列表，请参阅文章[MFC ActiveX 控件： 添加常用事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)。 自定义事件使控件能够在特定于该控件的操作发生时通知该容器。 一些示例将一个控件的内部状态或收到某些窗口消息中的更改。  
   
- 为了能够将相应地激发的控件事件，控件类必须映射每个控件的事件。应调用的成员相关函数，当发生事件时。  此映射机制 \(称为事件映射\) 焦点有关事件的信息并使 Visual Studio 很容易地访问和操作该控件的事件。  此事件由映射以下宏声明，在标题 \(。H 控件类\) 声明的文件：  
+ 为您正确地引发事件的控件，你的控件类必须映射到相关的事件发生时应调用的成员函数的每个事件的控件。 此映射机制 （称为事件映射） 集中了有关事件的信息，并使 Visual Studio 可以轻松地访问和处理控件的事件。 下面的宏，位于标头中声明此事件映射 (。H） 文件的控件类声明：  
   
- [!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/CPP/mfc-activex-controls-events_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/cpp/mfc-activex-controls-events_1.h)]  
   
- 在事件声明映射后，在控件的实现 \(.cpp\) 文件必须定义它。  以下代码行定义事件映射，允许控件触发给定事件：  
+ 声明事件映射后，它必须在定义控件的实现 (。CPP) 文件。 下面的代码行定义事件映射，从而允许您控制触发特定事件：  
   
- [!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/CPP/mfc-activex-controls-events_2.cpp)]  
-[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/CPP/mfc-activex-controls-events_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/cpp/mfc-activex-controls-events_2.cpp)]  
+[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/cpp/mfc-activex-controls-events_3.cpp)]  
   
- 如若使用 MFC ActiveX 控件向导创建项目时，它自动添加这些行。  如果不使用 MFC ActiveX 控件向导，您必须手动添加这些行。  
+ 如果您使用 MFC ActiveX 控件向导创建项目，它会自动添加这些行。 如果不使用 MFC ActiveX 控件向导，您必须手动添加这些行。  
   
- 类视图，可以将定义类支持的库存事件 `COleControl` 或自定义事件。  对于每个新事件，类视图自动将适当的输入到控件的事件映射和控件的 .idl 文件。  
+ 使用类视图中，你可以添加类支持的常用事件`COleControl`或你定义的自定义事件。 对于每个新的事件，类视图自动将适当的条目添加到控件的事件映射和控制的。IDL 文件。  
   
- 其他两个情景详细介绍事件：  
+ 两个其他文章讨论了详细的事件：  
   
--   [MFC ActiveX 控件：添加股票事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
+-   [MFC ActiveX 控件： 添加常用事件](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
 -   [MFC ActiveX 控件：添加自定义事件](../mfc/mfc-activex-controls-adding-custom-events.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控件：方法](../mfc/mfc-activex-controls-methods.md)   
- [COleControl Class](../mfc/reference/colecontrol-class.md)
+ [MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)   
+ [COleControl 类](../mfc/reference/colecontrol-class.md)
+

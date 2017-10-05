@@ -1,51 +1,68 @@
 ---
-title: "dynamic_cast 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "dynamic_cast"
-  - "dynamic_cast_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dynamic_cast 关键字 [C++]"
+title: "dynamic_cast 运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- dynamic_cast
+- dynamic_cast_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# dynamic_cast 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3137207566a6df16c420493afa93269540de2bae
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-将操作数 `expression` 转换成类型为`type-id` 的对象。  
+---
+# <a name="dynamiccast-operator"></a>dynamic_cast 运算符
+将转换该操作数`expression`类型的对象到`type-id`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 dynamic_cast < type-id > ( expression )  
 ```  
   
-## 备注  
- `type-id` 必须是一个指针或引用到以前已定义的类类型的引用或“指向 void 的指针”。  如果 `type-id` 是指针，则`expression` 的类型必须是指针，如果 `type-id` 是引用，则为左值。  
+## <a name="remarks"></a>备注  
+ `type-id`必须是指针或对以前定义的类类型的引用或"指向 void 指针"。 如果 `type-id` 是指针，则 `expression` 类型必须为指针，或者如果 `type-id` 是引用，则为左值。  
   
- 有关静态和动态强制转换之间区别的描述，以及各在什么情况下适合使用，请参见 [static\_cast](../cpp/static-cast-operator.md)。  
+ 请参阅[static_cast](../cpp/static-cast-operator.md)有关之间的差异静态和动态强制转换，以及何时适合使用它们的说明。  
   
- 在托管代码中的 `dynamic_cast`的行为中有两个重大更改。  
+ 中的行为有两个重大更改`dynamic_cast`在托管代码中：  
   
--   为指针的`dynamic_cast` 对指向装箱的枚举的基础类型的指针将在运行时失败，则返回 0 而不是已转换的指针。  
+-   `dynamic_cast`在运行时，返回 0 而不是转换后的指针的指针到装箱枚举的基础类型将失败。  
   
--   `dynamic_cast` 将不再引发一个异常，当 `type-id` 是指向值类型的内部指针，则转换在运行时失败。该转换将返回 0 指示运行值而不是引发。  
+-   `dynamic_cast`将不再引发异常时`type-id`是值类型，与在运行时失败的强制转换为内部指针。  现在，该强制转换将返回 0 的指针值而不是引发。  
   
- 如果 `type-id` 是指向 `expression`的明确的可访问的直接或间接基类的指针，则结果是指向 `type-id` 类型的唯一子对象的指针。  例如：  
+ 如果`type-id`是指向一个明确访问直接或间接基类的`expression`，指向类型的唯一的子对象的指针`type-id`结果。 例如：  
   
 ```  
 // dynamic_cast_1.cpp  
@@ -62,9 +79,9 @@ void f(D* pd) {
 }  
 ```  
   
- 此转换类型称为“向上转换”，因为它将在类层次结构上的指针，从派生的类移到该类派生的类。  向上转换是一种隐式转换。  
+ 这种类型的转换称为"向上转换"，因为它将类层次结构，向上的指针移到派生自的类派生类。 向上转换是隐式转换。  
   
- 如果 `type-id` 为 void\*，则做运行时进行检查确定 `expression`的实际类型。  结果是指向 by `expression` 的完整的对象的指针。  例如：  
+ 如果`type-id`是 void * 进行运行时检查以确定的实际类型`expression`。 结果是指向完整对象的指针`expression`。 例如：  
   
 ```  
 // dynamic_cast_2.cpp  
@@ -83,9 +100,9 @@ void f() {
 }  
 ```  
   
- 如果 `type-id` 不是 void\*，则做运行时进行检查以确定是否由 `expression` 指向的对象可以转换为由 `type-id`指向的类型。  
+ 如果`type-id`不是 void * 进行运行时检查以查看如果指向的对象通过`expression`可以转换为指向类型`type-id`。  
   
- 如果 `expression` 类型是 `type-id`类型的基类，则做运行时检查来看是否 `expression` 确实指向 `type-id`类型的完整对象。  如果为 true，则结果是指向 `type-id`类型的完整对象的指针。  例如：  
+ 如果的一种`expression`是基类的一种`type-id`，进行运行时检查以查看是否`expression`实际指向的类型的完整对象`type-id`。 如果这是真的，结果是指向整个对象的类型的`type-id`。 例如：  
   
 ```  
 // dynamic_cast_3.cpp  
@@ -102,13 +119,13 @@ void f() {
 }  
 ```  
   
- 此转换类型称为“向下转换”，因为它将在类层次结构下的指针，从给定的类移到该类派生的类。  
+ 此类型的转换称为"向下转换"因为它将一个指针下移类层次结构中，从给定类的类派生自它。  
   
- 对于多重继承，引入多义性的可能性。  考虑下图中显示的类层次结构。  
+ 多重继承的情况下，在引入了不明确的可能性。 请考虑下图中所示的类层次结构。  
   
- 对于 CLR 类型，如果转换可以隐式执行，则 `dynamic_cast` 结果为 no\-op，如果转换失败，则 MSIL `isinst` 指令将执行动态检查并返回 `nullptr`。  
+ 对于 CLR 类型，`dynamic_cast`导致不执行任何操作可以隐式执行转换或 MSIL`isinst`指令，这将执行动态检查，并返回`nullptr`如果转换失败。  
   
- 以下示例使用 `dynamic_cast` 以确定一个类是否为特殊类型的实例：  
+ 下面的示例使用`dynamic_cast`以确定是否类是特定类型的实例：  
   
 ```  
 // dynamic_cast_clr.cpp  
@@ -131,10 +148,10 @@ int main() {
 }  
 ```  
   
- ![显示多重继承的类层次结构](../cpp/media/vc39011.png "vc39011")  
+ ![类层次结构显示多重继承的](../cpp/media/vc39011.gif "vc39011")  
 显示多继承的类层次结构  
   
- 指向类型 `D` 对象的指针可以安全地强制转换为 `B` 或 `C`。  但是，如果 `D` 强制转换为指向 `A` 对象的指针，会导致 `A` 的哪个实例？  这将导致不明确的强制转换错误。  若要避免此问题，可以执行两个明确的转换。  例如：  
+ 指向类型的对象的指针`D`能够安全地转换为`B`或`C`。 但是，如果`D`被强制转换为指向`A`对象，哪个实例`A`将导致？ 这将导致不明确的强制转换错误。 若要获取解决此问题，你可以执行两个明确的强制转换。 例如：  
   
 ```  
 // dynamic_cast_4.cpp  
@@ -150,19 +167,19 @@ void f() {
 }  
 ```  
   
- 当使用虚拟基类时，其他多义性问题会被引入。  考虑下图中显示的类层次结构。  
+ 当你使用虚拟基类时，可以引入了进一步的多义性。 请考虑下图中所示的类层次结构。  
   
- ![显示虚拟基类的类层次结构](../cpp/media/vc39012.png "vc39012")  
+ ![类层次结构显示虚拟基类的](../cpp/media/vc39012.gif "vc39012")  
 显示虚拟基类的类层次结构  
   
- 在此层次结构中，`A` 是虚拟基类。  对于虚拟基类的定义，请参见 [虚拟基类](../misc/virtual-base-classes.md)。  给定一个 `E` 类实例和一个指向 `A` 子对象的指针，指向 `B` 指针的 `dynamic_cast` 将失败于多义性。  必须先将强制转换回完整 `E` 对象，然后以明确的方式反向沿层次结构，到达正确的 `B` 对象。  
+ 此层次结构中`A`是虚拟基类。 给定类的实例`E`和一个指向`A`子对象，`dynamic_cast`的指针到`B`由于语意不明确将失败。 你必须首先重新强制转换为完整`E`对象，然后以明确方式，来访问正确工作反向沿层次结构，`B`对象。  
   
- 考虑下图中显示的类层次结构。  
+ 请考虑下图中所示的类层次结构。  
   
- ![显示重复基类的类层次结构](../Image/vc39013.gif "vc39013")  
+ ![类层次结构显示重复基类的](../cpp/media/vc39013.gif "vc39013")  
 显示重复基类的类层次结构  
   
- 给定一个 `E` 类型的对象和一个指向 `D` 子对象的指针，从 `D` 子对象定位到最左侧的 `A` 子对象，可进行三个转换。  可以从 `D` 指针到 `E` 指针执行 `dynamic_cast` 转换，然后从 `E` 到 `B` 执行转换（`dynamic_cast` 或隐式转换），最后从 `B` 到 `A` 执行隐式转换。  例如：  
+ 给定类型的对象`E`和一个指向`D`子对象，若要从导航`D`到最左边的子对象`A`子对象，可以进行三个转换。 你可以执行`dynamic_cast`从转换`D`指向`E`指针，则转换 (或者`dynamic_cast`或隐式转换) 从`E`到`B`，和最后一个从隐式转换`B`到`A`。 例如：  
   
 ```  
 // dynamic_cast_5.cpp  
@@ -180,9 +197,9 @@ void f(D* pd) {
 }  
 ```  
   
- `dynamic_cast` 运算符还可以使用执行 “相互转换”。使用同一个类层次结构可能进行指针转换，例如： 从`B` 子对象转换到`D`子对象（只要整个对象是类转换型`E`。  
+ `dynamic_cast`运算符还可以用于执行"交叉 cast"。 使用相同的类层次结构，它可强制是指针，例如，转换从`B`到的子对象`D`子对象，前提是完整的对象属于类型`E`。  
   
- 考虑相互转换，实际上从指针转换到 `D` 到指针到最左侧的 `A` 子对象只要两个步骤。  可以从 `D` 到 `B` 执行相互转换，然后从 `B` 到 `A` 执行隐式转换。  例如：  
+ 考虑跨强制转换时，它是实际可用来执行从指向的指针转换`D`的指针到最左侧`A`仅使用两个步骤中的子对象。 你可以执行强制转换从跨`D`到`B`，然后从隐式转换`B`到`A`。 例如：  
   
 ```  
 // dynamic_cast_6.cpp  
@@ -199,9 +216,9 @@ void f(D* pd) {
 }  
 ```  
   
- 通过 `dynamic_cast` 将 null 指针值转换到目标类型的 null 指针值。  
+ 一个 null 指针值转换为的目标类型的 null 指针值`dynamic_cast`。  
   
- 当您使用 `dynamic_cast < type-id > ( expression )`时，如果`expression`无法安全地转换成类型 `type-id`，则运行时检查会引起变换失败。  例如：  
+ 当你使用`dynamic_cast < type-id > ( expression )`，如果`expression`无法安全地转换为类型`type-id`，运行时检查导致转换失败。 例如：  
   
 ```  
 // dynamic_cast_7.cpp  
@@ -216,14 +233,14 @@ void f() {
 }  
 ```  
   
- 指针类型的非限定转换的值是 null 指针。  引用类型的非限定转换会引发 [bad\_cast 异常](../cpp/bad-cast-exception.md)。   如果 `expression` 不指向也不引用有效的对象，则`__non_rtti_object` 异常引发。  
+ 失败的强制转换为指针类型的值是 null 指针。 失败的强制转换为引用类型会引发[bad_cast 异常](../cpp/bad-cast-exception.md)。   如果`expression`不指向或引用有效的对象，`__non_rtti_object`引发异常。  
   
- 有关异常 `__non_rtti_object` 的解释，请参见 [typeid](../cpp/typeid-operator.md)。  
+ 请参阅[typeid](../cpp/typeid-operator.md)有关的说明`__non_rtti_object`异常。  
   
-## 示例  
- 以下示例创建基类（结构 A）指针，为一个对象（结构 C）。这以及在该情况是虚函数，启用运行时多态性。  
+## <a name="example"></a>示例  
+ 下面的示例创建基类 （结构一个） 指针，指向的对象 （结构 C）。  再加上存在的事实是虚拟函数，启用运行时多态性。  
   
- 该示例也在层次结构中调用非虚函数。  
+ 本示例还调用层次结构中的非虚拟函数。  
   
 ```  
 // dynamic_cast_8.cpp  
@@ -290,10 +307,13 @@ int main() {
 }  
 ```  
   
-  **in C**  
-**test2 in B**  
-**in GlobalTest**  
-**Can't cast to C**   
-## 请参阅  
+```Output  
+in C  
+test2 in B  
+in GlobalTest  
+Can't cast to C  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [强制转换运算符](../cpp/casting-operators.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

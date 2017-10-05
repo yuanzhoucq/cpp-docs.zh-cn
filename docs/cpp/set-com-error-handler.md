@@ -1,32 +1,49 @@
 ---
-title: "_set_com_error_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_com_error_handler 函数"
+title: "_set_com_error_handler |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _set_com_error_handler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 626227fb9c5162e5b9fc72fc64348b75ecb27e44
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft 专用**  
   
  替换用于 COM 错误处理的默认函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __stdcall _set_com_error_handler(  
@@ -37,7 +54,7 @@ void __stdcall _set_com_error_handler(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pHandler`  
  指向替换函数的指针。  
   
@@ -47,12 +64,12 @@ void __stdcall _set_com_error_handler(
  `perrinfo`  
  `IErrorInfo` 对象。  
   
-## 备注  
- 默认情况下，[\_com\_raise\_error](../cpp/com-raise-error.md) 处理所有 COM 错误。  您可以通过使用 `_set_com_error_handler` 调用您自己的错误处理函数来更改此行为。  
+## <a name="remarks"></a>备注  
+ 默认情况下， [_com_raise_error](../cpp/com-raise-error.md)处理所有 COM 错误。 您可以通过使用 `_set_com_error_handler` 调用您自己的错误处理函数来更改此行为。  
   
  替换函数必须具有与 `_com_raise_error` 的签名等效的签名。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // _set_com_error_handler.cpp  
@@ -89,11 +106,14 @@ int main()
 }  
 ```  
   
-  **引发的异常：无法建立连接！**   
-## 要求  
- **标头：**comdef.h  
+```Output  
+Exception raised: Unable to establish the connection!  
+```  
   
- **库：**如果启用“wchar\_t is Native Type”编译器选项，请使用 comsuppw.lib 或 comsuppwd.lib。  如果禁用“wchar\_t is Native Type”，请使用 comsupp.lib。  有关详细信息，请参阅 [\/Zc:wchar\_t（wchar\_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+## <a name="requirements"></a>要求  
+ **标头：** comdef.h  
   
-## 请参阅  
+ **Lib:**如果**wchar_t is Native Type**编译器选项设置为 on，请使用对 comsuppw.lib 或 comsuppwd.lib。 如果**wchar_t is Native Type** ，请使用 comsupp.lib。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)

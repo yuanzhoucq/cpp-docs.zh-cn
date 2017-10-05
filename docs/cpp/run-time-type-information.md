@@ -1,48 +1,65 @@
 ---
-title: "运行时类型信息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RTTI 编译器选项"
-  - "运行时, 类型检查"
-  - "运行时检查, 类型检查"
-  - "运行时类型信息"
-  - "类型信息, 运行时类型检查"
+title: "运行时类型信息 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- RTTI compiler option
+- run-time type information
+- run time, type checking
+- type information, run-time type checking
+- run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 运行时类型信息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec36acfdba274a0eaf36c099da11f4462f2aad70
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-运行时类型信息 \(RTTI\) 是一种允许在程序执行过程中确定对象的类型的机制。  RTTI 已添加到 C\+\+ 语言中，因为许多类库供应商将自行实现此功能。  这会导致库之间出现不兼容的情况。  因此，显而易见的是，需要语言级别的对运行时类型信息的支持。  
+---
+# <a name="run-time-type-information"></a>运行时类型信息
+运行时类型信息 (RTTI) 是一种允许在程序执行过程中确定对象的类型的机制。 RTTI 已添加到 C++ 语言中，因为许多类库供应商将自行实现此功能。 这会导致库之间出现不兼容的情况。 因此，显而易见的是，需要语言级别的对运行时类型信息的支持。  
   
- 为了清楚起见，此 RTTI 的讨论几乎完全是针对指针展开的。  但讨论的概念也适用于引用。  
+ 为了清楚起见，此 RTTI 的讨论几乎完全是针对指针展开的。 但讨论的概念也适用于引用。  
   
- 有三个针对运行时类型信息的 C\+\+ 语言元素：  
+ 有三个针对运行时类型信息的 C++ 语言元素：  
   
--   [dynamic\_cast](../cpp/dynamic-cast-operator.md) 运算符。  
+-   [Dynamic_cast](../cpp/dynamic-cast-operator.md)运算符。  
   
      用于多态类型的转换。  
   
--   [typeid](../cpp/typeid-operator.md) 运算符。  
+-   [Typeid](../cpp/typeid-operator.md)运算符。  
   
      用于标识对象的确切类型。  
   
--   [type\_info](../cpp/type-info-class.md) 类。  
+-   [Type_info](../cpp/type-info-class.md)类。  
   
      用于保留由 `typeid` 运算符返回的类型信息。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [强制转换](../cpp/casting.md)

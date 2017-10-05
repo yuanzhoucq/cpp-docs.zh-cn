@@ -1,35 +1,52 @@
 ---
-title: "下标 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 下标 "
-  - "运算符重载, 示例"
-  - "运算符 [C++], 重载"
-  - "下标运算符"
-  - "下标运算符, 重载的"
-  - "下标 "
+title: "下标 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, overloaded
+- arrays [C++], subscripting
+- subscripting
+- operators [C++], overloading
+- operator overloading, examples
+- subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 下标
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 82feaa68724e36c7ac7e739397d8a11a18e970a0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-下标运算符 \(**\[ \]**\)（如函数调用运算符）被视为二元运算符。  下标运算符必须是采用单个参数的非静态成员函数。  此参数可以是任何类型，并指定所需的数组下标。  
+---
+# <a name="subscripting"></a>下标
+下标运算符 (**[]**)，如函数调用运算符，被视为二元运算符。 下标运算符必须是采用单个自变量的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例演示如何创建用于实现边界检查的 `int` 类型的矢量：  
   
 ```  
@@ -81,23 +98,26 @@ int main() {
 }  
 ```  
   
-  **Array bounds violation.**  
-**Element: \[0\] \= 0**  
-**Element: \[1\] \= 1**  
-**Element: \[2\] \= 2**  
-**Element: \[3\] \= 9**  
-**Element: \[4\] \= 4**  
-**Element: \[5\] \= 5**  
-**Element: \[6\] \= 6**  
-**Element: \[7\] \= 7**  
-**Element: \[8\] \= 8**  
-**Element: \[9\] \= 9**  
-**Array bounds violation.**  
-**Element: \[10\] \= 10**   
-## 注释  
+```Output  
+Array bounds violation.  
+Element: [0] = 0  
+Element: [1] = 1  
+Element: [2] = 2  
+Element: [3] = 9  
+Element: [4] = 4  
+Element: [5] = 5  
+Element: [6] = 6  
+Element: [7] = 7  
+Element: [8] = 8  
+Element: [9] = 9  
+Array bounds violation.  
+Element: [10] = 10  
+```  
+  
+## <a name="comments"></a>注释  
  当 `i` 在前一个程序中达到 10 时，`operator[]` 将检测是否在使用超出边界的下标并发出错误消息。  
   
- 请注意，函数 `operator[]` 将返回引用类型。  这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。  
+ 请注意，函数 `operator[]` 将返回引用类型。 这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [运算符重载](../cpp/operator-overloading.md)

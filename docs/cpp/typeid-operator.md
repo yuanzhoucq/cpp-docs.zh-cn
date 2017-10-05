@@ -1,28 +1,45 @@
 ---
-title: "typeid 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typeid 运算符"
+title: "typeid 运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# typeid 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3b987f26e7908c85ca1630059eec434c009c3ef4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## 语法  
+---
+# <a name="typeid-operator"></a>typeid 运算符
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -32,22 +49,22 @@ caps.handback.revision: 10
 typeid( expression )  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `typeid` 运算符允许在运行时确定对象的类型。  
   
- `typeid` 的结果是 **const type\_info&**。  该值是对表示 *type\-id* 或 *expression* 的类型的 **type\_info** 对象的引用，具体取决于所使用的 `typeid` 的形式。  有关详细信息，请参阅 [type\_info 类](../cpp/type-info-class.md)。  
+ 结果`typeid`是**const type_info &**。 该值是对引用**type_info**表示的对象*类型 id*或何种*表达式*，取决于哪种形式的`typeid`使用. 请参阅[type_info 类](../cpp/type-info-class.md)有关详细信息。  
   
- `typeid` 运算符不适用于托管类型（抽象声明符或实例），有关获取指定类型的 <xref:System.Type> 的信息，请参阅 [typeid](../windows/typeid-cpp-component-extensions.md)。  
+ `typeid`运算符并不适用于托管类型 （抽象声明符或实例），请参阅[typeid](../windows/typeid-cpp-component-extensions.md)有关获取信息<xref:System.Type>的指定类型。  
   
- `typeid` 运算符在应用于多态类类型的左值时执行运行时检查，其中对象的实际类型不能由提供的静态信息确定。  此类情况是：  
+ `typeid` 运算符在应用于多态类类型的左值时执行运行时检查，其中对象的实际类型不能由提供的静态信息确定。 此类情况是：  
   
 -   对类的引用  
   
--   使用 \* 取消引用的指针  
+-   使用 * 取消引用的指针  
   
--   带下标的指针（即 \[ \]）。（请注意，通常情况下，将下标与指向多态类型的指针一起使用不安全。）  
+-   带下标的指针（即 [ ]）。 （请注意，通常情况下，将下标与指向多态类型的指针一起使用不安全。）  
   
- 如果 *expression* 指向基类类型，但该对象实际上是派生自该基类的类型，则派生类的 **type\_info** 引用是结果。  *expression* 必须指向多态类型（具有虚函数的类）。  否则，结果是 *expression* 中引用的静态类的 **type\_info**。  此外，必须取消引用指针以使用它指向的对象。  如果未取消引用指针，结果将是指针的 **type\_info**，而不是它指向的内容。  例如：  
+ 如果*表达式*指向基类类型，但该对象的实际类型是派生自该基类， **type_info**引用派生的类为结果。 *表达式*必须指向多态类型 （具有虚函数的类）。 否则，结果是**type_info**中引用的静态类*表达式*。 此外，必须取消引用指针以使用它指向的对象。 如果未取消引用指针，则结果将为**type_info**指针，它不指向。 例如:   
   
 ```  
 // expre_typeid_Operator.cpp  
@@ -74,9 +91,9 @@ int main() {
 }  
 ```  
   
- 如果 *expression* 正在取消引用某个指针，并且该指针的值是零， **typeid** 将引发 [bad\_typeid 异常](../cpp/bad-typeid-exception.md)。  如果该指针没有指向有效的对象，则会引发 `__non_rtti_object` 异常来指示尝试了分析引发错误（如访问冲突）的 RTTI，因为该对象在某种程度上是无效的（无效的指针或代码不是用 [\/GR](../build/reference/gr-enable-run-time-type-information.md) 编译的）。  
+ 如果*表达式*取消引用指针和指针的值为零， **typeid**引发[bad_typeid 异常](../cpp/bad-typeid-exception.md)。 如果指针不指向有效的对象，`__non_rtti_object`引发异常，来分析错误的 RTTI 指示尝试 （如访问冲突），因为该对象在某种程度上是无效 （无效的指针或代码不使用编译[/GR](../build/reference/gr-enable-run-time-type-information.md))。  
   
- 如果 *expression* 既不是指针也不是对对象的基类的引用，则结果是表示 *expression* 的静态类型的 **type\_info** 引用。  表达式的 *static type* 将引用在编译时已知的表达式的类型。  在计算表达式的静态类型时，将忽略执行语义。  此外，在确定表达式的静态类型时，将忽略引用（如果可能）：  
+ 如果*表达式*既不是指针，也不对基类的对象的引用的结果是**type_info**表示的静态类型的引用*表达式*. *静态类型*的表达式引用的表达式类型在编译时已知。 在计算表达式的静态类型时，将忽略执行语义。 此外，在确定表达式的静态类型时，将忽略引用（如果可能）：  
   
 ```  
 // expre_typeid_Operator_2.cpp  
@@ -88,7 +105,7 @@ int main()
 }  
 ```  
   
- **typeid** 还可在模板中使用以确定模板参数的类型：  
+ **typeid**还可在模板中以确定模板参数的类型：  
   
 ```  
 // expre_typeid_Operator_3.cpp  
@@ -101,6 +118,6 @@ T max( T arg1, T arg2 ) {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [运行时类型信息](../cpp/run-time-type-information.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

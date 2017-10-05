@@ -1,45 +1,65 @@
 ---
-title: "Lvalues 和 Rvalues | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "L-values"
-  - "R-values"
+title: "值的分类： 左值和右值 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- R-values
+- L-values
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Lvalues 和 Rvalues
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a3d230d3374a7be5aa57d965a451235d40cbee12
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-每个 C\+\+ 表达式是左值或右值。  左值是指在单个表达式的外部保留的对象。  可以将左值视为具有名称的对象。  所有变量（包括不能更改的 \(`const`\) 变量）都是左值。  左值是一个不在使用它的表达式的外部保留的临时值。  若要更好地了解左值和右值之间的区别，请考虑下面的示例：  
-  
-```  
-// lvalues_and_rvalues1.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-int main()  
-{  
-   int x = 3 + 4;  
-   cout << x << endl;  
-}  
-```  
-  
- 在此示例中，`x` 是左值，因为它在定义它的表达式的外部保留。  表达式 `3 + 4` 是为一个右值，因为其计算结果为不在定义它的表达式的外部保留的临时值。  
-  
+---
+# <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual c + +）
+每个 c + + 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和表达式求值期间移动临时对象时，编译器必须遵循的规则的基础。 
+
+ C + + 17 标准定义表达式值的分类，如下所示：
+
+- A *glvalue*是求值确定的标识的对象、 位域或函数的表达式。 
+- A *prvalue*是一个表达式求值初始化对象或一个位字段，或在它所出现的上下文中的指定计算运算符的操作数的值。 
+- *Xvalue*是表示的对象或位域 （通常是因为它是在其生存期结束时的附近），可以重用其资源 glvalue。 [示例： 某些类型的表达式涉及右值引用 (8.3.2) 产生 xvalues，如对其返回类型是右值引用的函数的调用或强制转换为右值引用类型。 ] 
+- *左值*是不是 xvalue glvalue。 
+- *右值*prvalue 或 xvalue。 
+
+下图阐释了两个分类之间的关系：
+
+ ![C + + 表达式值的分类](media/value_categories.png "c + + 表达式值的分类")  
+ 
+ 左值具有可以访问你的程序的地址。 左值表达式的示例包括变量名称，包括`const`变量，数组元素，函数返回左值引用、 位域、 联合和类成员的调用。 
+ 
+ Prvalue 表达式中有任何由你的程序可访问的地址。 Prvalue 表达式的示例包括文本、 非引用类型返回的函数调用和只能由编译器创建表达式评估过程中，但可访问的临时对象。 
+
+ Xvalue 表达式没有地址，但可以用于初始化右值引用，它提供的表达式的访问。 示例包括返回右值引用，数组下标、 成员和指针到成员表达式，该数组或对象是右值引用的函数调用。 
+ 
  以下示例演示左值和右值的多种正确的和错误的用法：  
   
 ```  
@@ -48,10 +68,10 @@ int main()
 {  
    int i, j, *p;  
   
-   // Correct usage: the variable i is an lvalue.  
+   // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.  
    i = 7;  
   
-   // Incorrect usage: The left operand must be an lvalue (C2106).  
+   // Incorrect usage: The left operand must be an lvalue (C2106).  `j * 4` is a prvalue.
    7 = i; // C2106  
    j * 4 = 7; // C2106  
   
@@ -68,11 +88,12 @@ int main()
 ```  
   
 > [!NOTE]
->  此主题中的示例阐释了未重载运算符时的正确和错误用法。  通过重载运算符，可以使表达式（如 `j * 4`）成为左值。  
+>  此主题中的示例阐释了未重载运算符时的正确和错误用法。 通过重载运算符，可以使表达式（如 `j * 4`）成为左值。  
+
   
- 当引用对象引用时，通常会使用术语“左值”和“右值”。  有关引用的详细信息，请参阅[Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md) 和[规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 条款*左值*和*右值*通常用于在引用对象引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)和[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [基本概念](../cpp/basic-concepts-cpp.md)   
- [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)   
+ [左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)   
  [规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

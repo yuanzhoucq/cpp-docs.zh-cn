@@ -1,35 +1,52 @@
 ---
-title: "_com_ptr_t::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t.Release"
-  - "_com_ptr_t::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release 方法"
+title: "_com_ptr_t::Release |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t.Release
+- _com_ptr_t::Release
+dev_langs:
+- C++
+helpviewer_keywords:
+- Release method
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_ptr_t::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6f3875a48977b047dfd8706369d448838626e5c6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comptrtrelease"></a>_com_ptr_t::Release
 **Microsoft 专用**  
   
- 调用封装的接口指针上的 **IUnknown** 的 **Release** 成员函数。  
+ 调用**版本**成员函数**IUnknown**封装的接口指针上。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,10 +54,10 @@ void Release( );
   
 ```  
   
-## 备注  
- 对封装的接口指针调用 `IUnknown::Release`，如果此接口指针为 **NULL**，则将引发 `E_POINTER` 错误。  
+## <a name="remarks"></a>备注  
+ 调用`IUnknown::Release`封装的接口指针上引发`E_POINTER`错误如果此接口指针是**NULL**。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [\_com\_ptr\_t 类](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>另请参阅  
+ [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

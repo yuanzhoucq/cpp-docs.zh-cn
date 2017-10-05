@@ -1,51 +1,67 @@
 ---
-title: "包含变量参数列表的函数 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "参数列表 [C++], 数目可变的"
-  - "参数 [C++], 数目可变的"
-  - "声明符, 函数"
-  - "声明函数, 变量"
-  - "函数调用, 数目可变的参数"
-  - "变量参数列表"
+title: "函数具有变量自变量列表 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], variable number of
+- variable argument lists
+- declarators, functions
+- argument lists [C++], variable number of
+- declaring functions, variables
+- function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 包含变量参数列表的函数 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-如果函数声明中最后一个成员是省略号 \(...\)，则函数声明可采用数量可变的参数。  在这些情况下，C\+\+ 只为显式声明的参数提供类型检查。  即使参数的数量和类型是可变的，在需要使函数泛化时也可使用变量参数列表。  函数的系列是一个使用变量参数列表的函数的示例。`printf`*argument\-declaration\-list*  
+---
+# <a name="functions-with-variable-argument-lists--c"></a>包含变量自变量列表的函数 （c + +）
+如果函数声明中最后一个成员是省略号 (...)，则函数声明可采用数量可变的自变量。 在这些情况下，C++ 只为显式声明的参数提供类型检查。 即使自变量的数量和类型是可变的，在需要使函数泛化时也可使用变量自变量列表。 函数的系列是一个示例使用变量自变量列表的函数。`printf`*自变量声明列表*  
   
-## 包含变量参数的函数  
- 若要访问声明后的参数，请使用包含在标准包含文件 STDARG.H 中的宏（如下所述）。  
+## <a name="functions-with-variable-arguments"></a>包含变量自变量的函数  
+ 若要访问声明后的自变量，请使用包含在标准包含文件 STDARG.H 中的宏（如下所述）。  
   
  **Microsoft 专用**  
   
- Microsoft C\+\+ 允许将省略号指定为参数（如果省略号是最后一个参数且在逗号的后面）。  因此，声明 `int Func( int i, ... );` 是合法的，但 `int Func( int i ... );` 不是合法的。  
+ Microsoft C++ 允许将省略号指定为自变量（如果省略号是最后一个自变量且在逗号的后面）。 因此，声明 `int Func( int i, ... );` 是合法的，但 `int Func( int i ... );` 不是合法的。  
   
  **结束 Microsoft 专用**  
   
- 采用数量可变的参数的函数声明至少需要一个占位符参数（即使不使用它）。  如果未提供此占位符参数，则无法访问其余参数。  
+ 采用数量可变的自变量的函数声明至少需要一个占位符自变量（即使不使用它）。 如果未提供此占位符参数，则无法访问其余参数。  
   
- 当 `char` 类型的参数作为变量参数进行传递时，它们将被转换为 `int` 类型。  同样，当 **float** 类型的参数作为变量参数进行传递时，它们将被转换为 **double** 类型。  其他类型的参数受常见整型和浮点型提升的限制。  有关详细信息，请参阅[整型提升](../misc/integral-promotions.md)。  
+ 当 `char` 类型的参数作为变量参数进行传递时，它们将被转换为 `int` 类型。 同样，当类型自变量**float**传递作为变量自变量，它们会转换为类型**double**。 其他类型的参数受常见整型和浮点型提升的限制。 请参阅[标准转换](standard-conversions.md)有关详细信息。  
   
- 使用参数列表中的省略号 \(...\) 来声明需要变量列表的函数。  使用在 STDARG.H 包含文件中描述的类型与宏来访问变量列表所传递的参数。  有关这些宏的详细信息，请参阅 [va\_arg、va\_copy、va\_end、va\_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  （处于 C 运行时库文档中）。  
+ 使用自变量列表中的省略号 (...) 来声明需要变量列表的函数。 使用在 STDARG.H 包含文件中描述的类型与宏来访问变量列表所传递的自变量。 有关这些宏的详细信息，请参阅[va_arg、 va_copy、 va_end、 va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 （处于 C 运行时库文档中）。  
   
- 以下示例演示如何将宏与类型一起使用（在 STDARG.H 中声明）：`va_list` `va_end` `va_arg` `va_start`  
+ 下面示例演示如何宏与 （STDARG 中声明类型一起使用。H): 
   
 ```  
 // variable_argument_lists.cpp  
@@ -123,9 +139,9 @@ void ShowVar( char *szTypes, ... ) {
   
  上一个示例演示以下重要概念：  
   
-1.  在访问任何变量参数前，必须建立一个列表标记作为类型 `va_list` 的变量。  在前面的示例中，该标记称为 `vl`。  
+1.  在访问任何变量参数前，必须建立一个列表标记作为类型 `va_list` 的变量。 在前面的示例中，该标记称为 `vl`。  
   
-2.  使用 `va_arg` 宏访问各个参数。  必须告知 `va_arg` 宏要检索的参数的类型，以便它可以从堆栈中传输正确的字节数。  如果为 `va_arg` 指定的大小的类型与通过调用程序提供的类型不同，则结果是不可预知的。  
+2.  使用 `va_arg` 宏访问各个参数。 必须告知 `va_arg` 宏要检索的参数的类型，以便它可以从堆栈中传输正确的字节数。 如果为 `va_arg` 指定的大小的类型与通过调用程序提供的类型不同，则结果是不可预知的。  
   
 3.  应将使用 `va_arg` 宏获取的结果显式强制转换为所需类型。  
   

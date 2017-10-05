@@ -1,30 +1,47 @@
 ---
-title: "tile_static 关键字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static 关键字"
+title: "tile_static 关键字 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# tile_static 关键字
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-`tile_static` 关键字用于声明可由线程平铺中的所有线程访问的变量。  此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。  有关使用平铺的详细信息，请参阅[使用平铺](../parallel/amp/using-tiles.md)。  
+---
+# <a name="tilestatic-keyword"></a>tile_static 关键字
+`tile_static` 关键字用于声明可由线程平铺中的所有线程访问的变量。 此变量的生存期在执行到达声明点时开始，在内核函数返回时结束。 使用磁贴的详细信息，请参阅[使用磁贴](../parallel/amp/using-tiles.md)。  
   
  `tile_static` 关键字具有下列限制：  
   
@@ -32,17 +49,16 @@ caps.handback.revision: 12
   
 -   它不能对作为指针或引用类型的变量使用。  
   
--   `tile_static` 变量不能具有初始值设定项。  不会自动调用默认构造函数和析构函数。  
+-   `tile_static` 变量不能具有初始值设定项。 不会自动调用默认构造函数和析构函数。  
   
 -   未初始化的 `tile_static` 变量的值是不确定的。  
   
--   如果在产生于对 `parallel_for_each` 的非平铺调用的调用关系图中声明 `tile_static` 变量，则将生成警告并且变量的行为是不确定的。  
+-   如果在产生于对 `tile_static` 的非平铺调用的调用关系图中声明 `parallel_for_each` 变量，则将生成警告并且变量的行为是不确定的。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例演示如何使用 `tile_static` 变量在一个平铺的多个线程中累积数据。  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)   
- [C\+\+ AMP 概述](../parallel/amp/cpp-amp-overview.md)   
- [parallel\_for\_each 函数 \(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
+ [C + + AMP 概述](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each 函数 (c + + AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [演练：矩阵乘法](../parallel/amp/walkthrough-matrix-multiplication.md)

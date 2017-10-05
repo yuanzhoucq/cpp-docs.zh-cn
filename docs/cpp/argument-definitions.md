@@ -1,59 +1,77 @@
 ---
-title: "参数定义 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argc 参数"
-  - "参数 [C++], 对于主函数"
-  - "argv 参数"
-  - "envp 参数"
-  - "主函数, 参数"
+title: "自变量定义 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- envp argument
+- main function, arguments
+- arguments [C++], for main function
+- argv argument
+- argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 参数定义
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-原型中的参数  
+---
+# <a name="argument-definitions"></a>自变量定义
+原型中的自变量  
   
 ```  
   
-int main( int argc[ , char *argv[ ] [, char *envp[ ] ] ] ); int wmain( int argc[ , wchar_t *argv[ ] [, wchar_t *envp[ ] ] ] );  
+int main( int  
+argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar_t*envp[] ] ] );  
 ```  
   
- 允许通过命令行分析参数并（可选）允许访问环境变量。  参数定义如下所示：  
+ 允许通过命令行分析参数并（可选）允许访问环境变量。 自变量定义如下所示：  
   
  `argc`  
- 包含 `argv` 后面的参数计数的整数。  `argc` 参数始终大于或等于 1。  
+ 包含 `argv` 后面的参数计数的整数。 `argc` 参数始终大于或等于 1。  
   
  `argv`  
- 表示由杂注用户输入的命令行参数的以 null 结尾的字符串的数组。  按照约定，`argv`**\[0\]** 是用于调用程序的命令，`argv`**\[1\]** 是第一个命令行参数，依此类推，直到 `argv`**\[\]**`argc`，它始终为 **NULL**。  有关取消命令行处理的信息，请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)。  
+ 表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定， `argv` **[0]**是与其调用该程序，该命令`argv` **[1]**为第一个命令行参数，依此类推，直到`argv` **[**`argc`**]**，这始终是**NULL**。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消命令行处理的信息。  
   
- 第一个命令行参数始终是 `argv`**\[1\]**，且最后一个命令行参数是 `argv`**\[**`argc` – 1**\]**。  
+ 第一个命令行自变量始终是`argv` **[1]**和最后一项`argv` **[** `argc` -1**]**。  
   
 > [!NOTE]
->  按照约定，`argv`**\[0\]** 是用于调用程序的命令。但是，可以使用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) 来生成进程，并且如果您使用第一个参数和第二个参数（`lpApplicationName` 和 `lpCommandLine`），则 `argv`**\[0\]** 可能不是可执行文件的名称；使用 [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) 检索可执行文件名称及其完全限定路径。  
+>  按照约定，`argv`[0] 是用于调用程序的命令。  但是，很可能生成进程使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)并且当你使用第一个和第二个参数 (`lpApplicationName`和`lpCommandLine`)， `argv` **[0]**可能不是可执行文件的名称;使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)检索可执行文件的名称和其完全限定路径。  
   
-## Microsoft 专用  
+## <a name="microsoft-specific"></a>Microsoft 专用  
  `envp`  
- 在 Microsoft C\+\+ 中使用 `envp` 数组（它是许多 UNIX 系统中的常见扩展）。  它是表示用户环境中的变量集的字符串的数组。  该数组由 **NULL** 项终止。  它可以声明为指向 **char \(char** \*envp\[ \]**\)** 的指针的数组或一个指向 **char \(char** \*\*envp**\)** 的指针的指针。  如果程序使用 **wmain** 而不是 **main**，请使用 `wchar_t` 数据类型而不是 `char`。  传递给 **main** 和 **wmain** 的环境块是当前环境的“冻结”副本。  如果您随后通过调用 **putenv** 或 `_wputenv` 更改环境，则当前环境（由 `getenv`\/`_wgetenv` 和 `_environ`\/ `_wenviron` 变量返回）将发生更改，但由 envp 指向的块将不会更改。  有关取消环境处理的信息，请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)。  此参数在 C 中是 ANSI 兼容的，但在 C\+\+ 中不是这样。  
+ 在 Microsoft C++ 中使用 `envp` 数组（它是许多 UNIX 系统中的常见扩展）。 它是表示用户环境中的变量集的字符串的数组。 终止此数组**NULL**条目。 它可以声明为指向的指针的数组**char (char** \*envp []**)**或指针指向**char (char** \* \*envp**)**。 如果程序使用**wmain**而不是**主要**，使用`wchar_t`数据类型而不是`char`。 环境块传递给**主要**和**wmain**是当前环境的"冻结"副本。 如果随后更改通过调用环境**putenv**或`_wputenv`，当前环境 (如返回`getenv` / `_wgetenv`和`_environ` /  `_wenviron`变量) 更改，但由 envp 指向的块将不会更改。 请参阅[自定义命令行处理](../cpp/customizing-cpp-command-line-processing.md)有关取消环境处理的信息。 此自变量在 C 中是 ANSI 兼容的，但在 C++ 中不是这样。  
   
-## 结束 Microsoft 专用  
+**结束 Microsoft 专用**  
   
-## 示例  
- 下面的示例演示如何将 `argc`、`argv` 和 `envp` 参数用于 **main**：  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用`argc`， `argv`，和`envp`自变量**主要**:  
   
 ```  
 // argument_definitions.cpp  
@@ -79,5 +97,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [main：程序启动](../cpp/main-program-startup.md)

@@ -1,84 +1,100 @@
 ---
-title: "class (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "class_cpp"
-  - "class"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "class 关键字 [C++]"
-  - "类类型, class 语句"
+title: "类 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- class_cpp
+- class
+dev_langs:
+- C++
+helpviewer_keywords:
+- class types, class statements
+- class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# class (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7cdd7b7cefcd9f3826cfe426008bdf1eefde82f6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-`class` 关键字声明类类型或定义类类型的对象。  
+---
+# <a name="class-c"></a>class (C++)
+`class`关键字声明的类类型或定义的类类型的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
       [template-spec]  
        class [ms-decl-spec] [tag [: base-list ]]  
 {  
-   member-list  
+   member-list  
 } [declarators];  
 [ class ] tag declarators;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `template-spec`  
- 可选模板说明。  有关更多信息，请参见 [模板规范](../Topic/Template%20Specifications.md)。  
+ 可选模板规范。 有关详细信息，请参阅[模板](templates-cpp.md)。  
   
  `class`  
  `class` 关键字。  
   
  `ms-decl-spec`  
- 可选存储类说明  有关更多信息，请参考关键字 [\_\_declspec](../cpp/declspec.md)。  
+ 可选存储类规范。 有关详细信息，请参阅[__declspec](../cpp/declspec.md)关键字。  
   
  `tag`  
- 给定于类的类型名称。  在类范围内的标记成为了保留字。  标志是可选项。  如果省略，定义匿名类。  有关更多信息，请参见 [Anonymous Class Types](../cpp/anonymous-class-types.md)。  
+ 提供给类的类型名称。 标记将变成类的范围内的保留的字。 标记是可选项。 如果省略，则定义匿名类。 有关详细信息，请参阅[匿名类类型](../cpp/anonymous-class-types.md)。  
   
  `base-list`  
- 此类派生其成员的类或结构的可选列表。  有关更多信息，请参见[基类](../cpp/base-classes.md)。  每个基类或结构名称可以在访问说明符 \([公用](../cpp/public-cpp.md)、 [专用](../cpp/private-cpp.md)， [保护](../cpp/protected-cpp.md)\) 和 [虚拟](../cpp/virtual-cpp.md) 关键字之前。  有的更多信息，请参见 [Controlling Access to Class Members](../misc/controlling-access-to-class-members.md)（控制访问类成员）中的成员访问表。  
+ 类或结构，此类将从中派生其成员的可选列表。 请参阅[基类](../cpp/base-classes.md)有关详细信息。 每个基的类或结构名称的前面可具有访问说明符 ([公共](../cpp/public-cpp.md)，[私有](../cpp/private-cpp.md)，[保护](../cpp/protected-cpp.md)) 和[虚拟](../cpp/virtual-cpp.md)关键字。 请参阅中的成员访问表[控制对类成员的访问](member-access-control-cpp.md)有关详细信息。  
   
  `member-list`  
- 类成员列表。  有关更多信息，请参考 [类成员概述](../cpp/class-member-overview.md)。  
+ 类成员的列表。 请参阅[类成员概述](../cpp/class-member-overview.md)有关详细信息。  
   
  `declarators`  
- 指定类类型一个或多个实例名称的声明符列表。  如果类的所有数据成员是 `public`，声明符可以包含初始值设定项列表。  这在数据成员被默认为 `public` 的结构中比在类中更常见.  有关更多信息，请参见[声明符概述](../cpp/overview-of-declarators.md)。  
+ 指定的类类型的一个或多个实例的名称的声明符列表。 如果类的所有数据成员是 `public`，则声明符可以包含初始值设定项列表。 这是更常见的结构，其数据成员是`public`默认情况下，比在类。 请参阅[的声明符概述](../cpp/overview-of-declarators.md)有关详细信息。  
   
-## 备注  
- 一般有关类的更多信息，请参见以下主题之一：  
+## <a name="remarks"></a>备注  
+ 有关详细信息类一般情况下，请参阅下列主题之一：  
   
 -   [struct](../cpp/struct-cpp.md)  
   
 -   [union](../cpp/unions.md)  
   
--   [\_\_multiple\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__multiple_inheritance](../cpp/inheritance-keywords.md)  
   
--   [\_\_single\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__single_inheritance](../cpp/inheritance-keywords.md)  
   
--   [\_\_virtual\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__virtual_inheritance](../cpp/inheritance-keywords.md)  
   
- 有关托管类和结构的信息，请参见 [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)  
+ 有关托管的类和结构的信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // class.cpp  
@@ -151,6 +167,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>另请参阅  
+ [关键字](../cpp/keywords-cpp.md)   
  [类和结构](../cpp/classes-and-structs-cpp.md)

@@ -1,40 +1,56 @@
 ---
-title: "C++ 注释 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "代码注释, C++"
-  - "注释, C++ 代码"
-  - "注释, 编制代码文档"
-  - "空白, C++ 注释"
+title: "注释 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- code comments, C++
+- comments, documenting code
+- comments, C++ code
+- white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 注释
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c6c97e27ff4019eec3ee3f63f2b4ed06db6af317
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-注释是编译器忽略但对程序员有用的文本。  注释通常用于供将来的引用的说明编码。  该编译器将它们视为空白。  在测试中，可以使用注释让特定代码行处于非活动状态；但是 `#if`\/`#endif` 预处理器指令会因此更好地进行工作，因为您可以包围包含注释但不能嵌套注释的代码。  
+---
+# <a name="comments-c"></a>注释 （c + +）
+注释是的文本，编译器将忽略，但这是用于程序员。 通常使用注释来批注代码以供将来参考。 编译器会将它们视为空白区域。 你可以使用在测试中的注释以使某些行代码处于非活动状态;但是， `#if` / `#endif`预处理器指令更适用于这因为可以包含注释的代码外侧，但你无法嵌套注释。  
   
- A C\+\+ 注释以下列方式之一进行编写：  
+ 通过以下方式之一是编写 c + + 注释：  
   
--   `/*` （斜杠、星号） 字符，其后跟任何字符 \(包括新行） 的序列，其后跟 `*/` 字符。  此语法与 ANSI C 相同。  
+-   `/*`正斜杠 (星号） 字符后, 跟的任意字符序列 （包括新行） 后, 跟`*/`字符。 此语法等同于 ANSI c。  
   
--   `//` \(两斜杠\) 字符，其后跟字符的任何序列。  如果新的行前面没有立即放入反斜杠，则该行终止注释的此窗体。  因此，它通常称为“单行注释”。  
+-   `//` （两个斜杠） 字符后, 跟的任意字符序列。 新行不立即前加反斜杠终止这种形式的注释。 因此，它通常称为"单行注释"。  
   
- 注释字符（`/*`、`*/` 和 `//`）在字符串末尾、字符串或注释中没有特殊含义。  注释使用第一个语法，因此不能套入。  
+ 注释字符 (`/*`， `*/`，和`//`) 有任何特殊意义中的字符常量，字符串文本，或注释。 因此，不能嵌套注释，使用的第一个语法。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [词法约定](../cpp/lexical-conventions.md)

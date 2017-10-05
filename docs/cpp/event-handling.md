@@ -1,47 +1,64 @@
 ---
-title: "事件处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "特性 [C++], 事件处理"
-  - "事件处理, Visual C++"
-  - "内部函数, 事件处理"
+title: "事件处理 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- attributes [C++], event handling
+- intrinsic functions, event handling
+- event handling, Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 事件处理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a05886ade7ff9369dfae29accf7c47d1890998b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-COM 类（实现 COM 对象的 C\+\+ 类，通常使用 ATL 类或 [coclass](../windows/coclass.md) 特性）主要支持事件处理。有关更多信息，请参见 [COM 中的事件处理](../cpp/event-handling-in-com.md)。  
+---
+# <a name="event-handling"></a>事件处理
+COM 类主要支持事件处理 (实现 COM 对象，通常使用 ATL 类的 c + + 类或[组件类](../windows/coclass.md)属性)。  有关详细信息，请参阅[COM 中的事件处理](../cpp/event-handling-in-com.md)。  
   
- 本机 C\+\+ 类（不实现 COM 对象的 C\+\+ 类）也支持事件处理，但将来版本中会弃用并删除此支持。有关详细信息，请参阅[本机 C\+\+ 中的事件处理](../cpp/event-handling-in-native-cpp.md)。  
+ 本机 C++ 类（不实现 COM 对象的 C++ 类）也支持事件处理，但将来版本中会弃用并删除此支持。  有关详细信息，请参阅[本机 c + + 中的事件处理](../cpp/event-handling-in-native-cpp.md)。  
   
- 事件处理支持单线程和多线程用法，并防止数据同时进行多线程访问。  它还允许您从事件源或接收器类派生子类，并支持派生类中的扩展事件源\/接收。  
+ 事件处理支持单线程和多线程用法，并防止数据同时进行多线程访问。 它还允许您从事件源或接收器类派生子类，并支持派生类中的扩展事件源/接收。  
   
- Visual C\+\+ 包含用于声明事件和事件处理程序的特性和关键字。  事件特性和关键字可用于 CLR 程序和本机 C\+\+ 程序中。  
+ Visual C++ 包含用于声明事件和事件处理程序的特性和关键字。 事件特性和关键字可用于 CLR 程序和本机 C++ 程序中。  
   
-|主题|说明|  
-|--------|--------|  
-|[event\_source](../windows/event-source.md)|创建事件源。|  
-|[event\_receiver](../windows/event-receiver.md)|创建事件接收器（接收器）。|  
-|[\_\_event](../cpp/event.md)|声明事件。|  
-|[\_\_raise](../cpp/raise.md)|强调一个事件的调用站点。|  
-|[\_\_hook](../cpp/hook.md)|将处理程序方法与事件关联。|  
-|[\_\_unhook](../cpp/unhook.md)|取消处理程序方法与事件的关联。|  
+|主题|描述|  
+|-----------|-----------------|  
+|[event_source](../windows/event-source.md)|创建事件源。|  
+|[event_receiver](../windows/event-receiver.md)|创建事件接收器（接收器）。|  
+|[__event](../cpp/event.md)|声明事件。|  
+|[__raise](../cpp/raise.md)|强调一个事件的调用站点。|  
+|[__hook](../cpp/hook.md)|将处理程序方法与事件关联。|  
+|[__unhook](../cpp/unhook.md)|取消处理程序方法与事件的关联。|  
   
-## 请参阅  
- [C\+\+ 语言参考](../cpp/cpp-language-reference.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [Event Handling Samples](http://msdn.microsoft.com/zh-cn/cc0287d4-f92b-4da5-85fc-a0f186e16424)
+## <a name="see-also"></a>另请参阅  
+ [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [关键字](../cpp/keywords-cpp.md)   
+ [事件处理示例](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

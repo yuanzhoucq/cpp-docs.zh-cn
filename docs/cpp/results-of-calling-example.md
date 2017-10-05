@@ -1,52 +1,70 @@
 ---
-title: "调用示例的结果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "示例 [C++], 调用的结果"
-  - "结果, __cdecl 调用"
-  - "结果, __fastcall 关键字调用"
-  - "结果, __stdcall 调用"
-  - "结果, thiscall 调用"
+title: "调用示例的结果 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- examples [C++], results of calling
+- results, thiscall call
+- results, __fastcall keyword call
+- results, __cdecl call
+- results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 调用示例的结果
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5a1d6bf1c1d3cf2a57a74b7994766e940488a8e8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## Microsoft 专用  
+---
+# <a name="results-of-calling-example"></a>调用示例的结果
+## <a name="microsoft-specific"></a>Microsoft 专用  
   
-## \_\_cdecl  
- C 修饰函数名为“\_MyFunc”。  
+## <a name="cdecl"></a>__cdecl  
+ C 修饰函数名为“_MyFunc”。  
   
- ![CDECL 调用约定](../Image/vc37I01.gif "vc37I01")  
-\_\_cdecl 调用约定  
+ ![CDECL 调用约定](../cpp/media/vc37i01.gif "vc37I01")  
+__cdecl 调用约定  
   
-## \_\_stdcall 和 thiscall  
- C 修饰名 \(`__stdcall`\) 是“\_MyFunc@20”。该 C \+\+ 修饰名是专用的。  
+## <a name="stdcall-and-thiscall"></a>__stdcall 和 thiscall  
+ C 修饰名 (`__stdcall`) 是"_MyFunc@20。" 该 C ++ 修饰名是专用的。  
   
- ![&#95;&#95;stdcall 和 thiscall 调用约定](../cpp/media/vc37i02.png "vc37I02")  
-\_\_stdcall 和 thiscall 调用约定  
+ ![&#95; &#95; stdcall 和 thiscall 调用约定](../cpp/media/vc37i02.gif "vc37I02")  
+__stdcall 和 thiscall 调用约定  
   
-## \_\_fastcall  
- C 修饰名 \(`__fastcall`\) 是“@MyFunc@20”。该 C \+\+ 修饰名是专用的。  
+## <a name="fastcall"></a>__fastcall  
+ C 修饰名 (`__fastcall`) 是"@MyFunc@20。" 该 C ++ 修饰名是专用的。  
   
- ![&#95;&#95;fastcall 调用约定](../cpp/media/vc37i03.png "vc37I03")  
-\_\_fastcall 调用约定  
+ ![调用约定 &#95; &#95; fastcall](../cpp/media/vc37i03.gif "vc37I03")  
+__fastcall 调用约定  
   
-### 结束 Microsoft 专用  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调用示例：函数原型和调用](../cpp/calling-example-function-prototype-and-call.md)

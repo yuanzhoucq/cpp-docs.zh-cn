@@ -1,36 +1,52 @@
 ---
-title: "_variant_t::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operator="
-  - "_variant_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= 运算符, 具有特定的 Visual C++ 对象"
-  - "运算符 =, 变量"
-  - "operator=, 变量"
+title: "_variant_t::operator = |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operator=
+- _variant_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator=, variant
+- operator =, variant
+- = operator, with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _variant_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 850562235442ef8fed4f7b130948a5e92b15a1fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttoperator-"></a>_variant_t::operator =
 **Microsoft 专用**  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -127,42 +143,42 @@ _variant_t& operator=(
 );  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  此运算符将向 `_variant_t` 对象赋予新值：  
   
--   **operator\=\(**  *varSrc*  **\)** 将现有 **VARIANT** 赋给 `_variant_t` 对象。  
+-   **运算符 = (***varSrc***)**将分配一个现有**VARIANT**到`_variant_t`对象。      
   
--   **operator\=\(**  *pVarSrc*  **\)** 将现有 **VARIANT** 赋给 `_variant_t` 对象。  
+-   **运算符 = (***pVarSrc***)**将分配一个现有**VARIANT**到`_variant_t`对象。      
   
--   **operator\=\(**  *var\_t\_Src*  **\)** 将现有 `_variant_t` 对象赋给 `_variant_t` 对象。  
+-   **运算符 = (***var_t_Src***)**将分配一个现有`_variant_t`对象传递给`_variant_t`对象。      
   
--   **operator\=\(**  *sSrc*  **\)** 将 **short** 整数值赋给 `_variant_t` 对象。  
+-   **运算符 = (***sSrc***)**分配**短**整数值到`_variant_t`对象。      
   
--   **operator\=\(**  `lSrc`  **\)** 将 **long** 整数值赋给 `_variant_t` 对象。  
+-   **运算符 = (**`lSrc`**)**分配**长**整数值到`_variant_t`对象。      
   
--   **operator\=\(**  *fltSrc*  **\)** 将 **float** 数字值赋给 `_variant_t` 对象。  
+-   **运算符 = (***fltSrc***)**分配**float**到数值`_variant_t`对象。      
   
--   **operator\=\(**  *dblSrc*  **\)** 将 **double** 数字值赋给 `_variant_t` 对象。  
+-   **运算符 = (***dblSrc***)**分配**double**到数值`_variant_t`对象。      
   
--   **operator\=\(**  *cySrc*  **\)** 将 **CY** 对象赋给 `_variant_t` 对象。  
+-   **运算符 = (***cySrc***)**分配**CY**对象传递给`_variant_t`对象。      
   
--   **operator\=\(**  *bstrSrc*  **\)** 将 `BSTR` 对象赋给 `_variant_t` 对象。  
+-   **运算符 = (***bstrSrc***)**分配`BSTR`对象传递给`_variant_t`对象。      
   
--   **operator\=\(**  *wstrSrc*  **\)** 将 Unicode 字符串赋给 `_variant_t` 对象。  
+-   **运算符 = (***wstrSrc***)**将分配到的 Unicode 字符串`_variant_t`对象。      
   
--   **operator\=\(**  `strSrc`  **\)** 将多字节字符串赋给 `_variant_t` 对象。  
+-   **运算符 = (**`strSrc`**)**将分配到的多字节字符串`_variant_t`对象。      
   
--   **operator\=\(**  `bSrc` **\)** 将 `bool` 值赋给 `_variant_t` 对象。  
+-   **运算符 = (** `bSrc` **)**分配`bool`值赋给`_variant_t`对象。    
   
--   **operator\=\(**  *pDispSrc*  **\)** 将 **VT\_DISPATCH** 对象赋给 `_variant_t` 对象。  
+-   **运算符 = (***pDispSrc***)**分配**VT_DISPATCH**对象传递给`_variant_t`对象。      
   
--   **operator\=\(**  *pIUnknownSrc*  **\)** 将 **VT\_UNKNOWN** 对象赋给 `_variant_t` 对象。  
+-   **运算符 = (***pIUnknownSrc***)**分配**VT_UNKNOWN**对象传递给`_variant_t`对象。      
   
--   **operator\=\(**  *decSrc*  **\)** 将 **DECIMAL** 值赋给 `_variant_t` 对象。  
+-   **运算符 = (***decSrc***)**分配**十进制**值赋给`_variant_t`对象。      
   
--   **operator\=\(**  `bSrc` **\)** 将 **BYTE** 值赋给 `_variant_t` 对象。  
+-   **运算符 = (** `bSrc` **)**分配**字节**值赋给`_variant_t`对象。    
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [\_variant\_t 类](../cpp/variant-t-class.md)
+## <a name="see-also"></a>另请参阅  
+ [_variant_t 类](../cpp/variant-t-class.md)

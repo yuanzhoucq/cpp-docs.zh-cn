@@ -1,43 +1,59 @@
 ---
-title: "true (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "true_cpp"
-  - "true"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "true 关键字 [C++]"
+title: "true （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- true_cpp
+- "true"
+dev_langs:
+- C++
+helpviewer_keywords:
+- true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# true (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b10cf33ff93a01347ee8c8e7fc56bb5be8058f3a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-## 语法  
+---
+# <a name="true-c"></a>true (C++)
+## <a name="syntax"></a>语法  
   
 ```  
   
-        bool-identifier = true ;  
+      bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  
   
-## 备注  
- 此关键字是类型 [bool](../cpp/bool-cpp.md) 的变量或条件表达式（条件表达式现在是值为 true 的 Boolean 表达式）的两个值之一。  如果 `i` 的类型为 `bool`，则 `i = true;` 语句会将 **true** 赋给 `i`。  
+## <a name="remarks"></a>备注  
+ 此关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 （条件表达式现在是 true 的 boolean 表达式）。 如果`i`属于类型`bool`，then 语句`i = true;`分配**true**到`i`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // bool_true.cpp  
@@ -51,7 +67,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**0**   
-## 请参阅  
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+```Output  
+1  
+0  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [关键字](../cpp/keywords-cpp.md)

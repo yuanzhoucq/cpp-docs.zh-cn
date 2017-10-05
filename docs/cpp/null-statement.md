@@ -1,30 +1,47 @@
 ---
-title: "Null 语句 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "表达式 [C++], null"
-  - "null 语句"
-  - "null 值, 表达式"
+title: "Null 语句 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], null
+- null statement
+- null values, expressions
 ms.assetid: 606f5953-55f0-40c8-ae03-3ee3a819b851
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Null 语句
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f15fda458fe604d0501c4daa87e6a76cd0422260
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-“null 语句”是缺少 *expression* 的表达式语句。  当语言的语法调用语句而不是表达式计算时，它很有用。    它包括分号。  
+---
+# <a name="null-statement"></a>Null 语句
+"Null 语句"是使用表达式语句*表达式*缺少。 当语言的语法调用语句而不是表达式计算时，它很有用。   它包括分号。  
   
  Null 语句通常用作迭代语句中的占位符或用作在复合语句或函数的末尾放置标签的语句。  
   
@@ -50,5 +67,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [表达式语句](../cpp/expression-statement.md)

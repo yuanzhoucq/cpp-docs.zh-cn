@@ -1,37 +1,54 @@
 ---
-title: "类模板的部分专用化 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类模板的部分专用化"
+title: "模板专用化 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 类模板的部分专用化 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-类模板可以部分专用化，生成的类仍是模板。  在类似于下面的情况下，部分专用化允许为特定类型部分自定义模板代码：  
+---
+# <a name="template-specialization-c"></a>模板专用化 （c + +）
+
+类模板可以部分专用化，生成的类仍是模板。 在类似于下面的情况下，部分专用化允许为特定类型部分自定义模板代码：  
   
--   模板有多个类型，且只有一部分需要专用化。  结果是基于其余类型参数化的模板。  
+-   模板有多个类型，且只有一部分需要专用化。 结果是基于其余类型参数化的模板。  
   
--   模板只有一个类型，但指针、引用、指向成员的指针或函数指针类型需要专用化。  专用化本身仍是指向或引用的类型上的模板。  
+-   模板只有一个类型，但指针、引用、指向成员的指针或函数指针类型需要专用化。 专用化本身仍是指向或引用的类型上的模板。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -72,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## 示例  
- 如果有一个采用任何 **T** 类型的模板集合类，则可以创建采用任何指针类型 **T\*** 的部分专用化。  以下代码演示了一个集合类模板 `Bag` 以及指针类型的部分专用化，在此专用化中，该集合在将指针类型复制到数组前取消引用它们。  该集合随后存储指向的值。  对于原始模板，只有指针本身将存储在集合中，从而使数据易受删除或修改。  在此特殊指针版本的集合中，添加了在 `add` 方法中检查 null 指针的代码。  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>示例
+
+ 如果必须采用任何类型的模板集合类**T**，你可以创建采用任何指针类型的部分专用化**T***。 以下代码演示了一个集合类模板 `Bag` 以及指针类型的部分专用化，在此专用化中，该集合在将指针类型复制到数组前取消引用它们。 该集合随后存储指向的值。 对于原始模板，只有指针本身将存储在集合中，从而使数据易受删除或修改。 在此特殊指针版本的集合中，添加了在 `add` 方法中检查 null 指针的代码。  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -179,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**  
-**a b c**  
-**Null pointer\!**  
-**3 87 8 100**   
-## 示例  
- 以下示例定义一个采用由任意两种类型构成的对的模板类，然后定义已专用化的模板类的部分专用化，以便让其中一个类型为 `int`。  该专用化定义了基于整数实现简单气泡排序的另一种排序方法。  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>示例
+
+ 以下示例定义一个采用由任意两种类型构成的对的模板类，然后定义已专用化的模板类的部分专用化，以便让其中一个类型为 `int`。 该专用化定义了基于整数实现简单气泡排序的另一种排序方法。  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -315,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{apple, fruit}**  
-**{banana, fruit}**  
-**{dog, animal}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**  
-**{89, cat}**  
-**Sorted list:**  
-**{89, cat}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**   
-## 请参阅  
- [类模板的显式专用化](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

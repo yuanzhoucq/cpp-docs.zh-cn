@@ -1,42 +1,59 @@
 ---
-title: "Lambda 表达式语法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "VCF1 Lambda_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lambda 表达式 [C++], 语法"
+title: "Lambda 表达式语法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCF1 Lambda_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# Lambda 表达式语法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9daa1ce8d7b55f71113dcf7559394715bd93c604
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-本文演示了 lambda 表达式的语法和结构化元素。  有关 lambda 表达式的说明，请参阅 [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。  
+---
+# <a name="lambda-expression-syntax"></a>Lambda 表达式语法
+本文演示了 lambda 表达式的语法和结构化元素。 有关 lambda 表达式的说明，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。  
   
-## 函数对象与Lambdas  
- 你编写代码时，尤其是使用 [STL 算法](../cpp/algorithms-modern-cpp.md)时，可能会使用函数指针和函数对象来解决问题和执行计算。  函数指针和函数对象各有利弊。例如，函数指针具有最低的语法开销，但不保持范围内的状态，函数对象可保持状态，但需要类定义的语法开销。  
+## <a name="function-objects-vs-lambdas"></a>函数对象与Lambdas  
+ 当你编写代码时，你可能会使用函数指针和函数对象来解决问题和执行计算，尤其是当你使用[c + + 标准库算法](../cpp/algorithms-modern-cpp.md)。 函数指针和函数对象各有利弊。例如，函数指针具有最低的语法开销，但不保持范围内的状态，函数对象可保持状态，但需要类定义的语法开销。  
   
- lambda 结合了函数指针和函数对象的优点并避免其缺点。  lambda 与函数对象相似的是灵活并且可以保持状态，但不同的是其简洁的语法不需要显式类定义。  使用 lambda，你可以编写出比等效的函数对象代码更简洁、更不容易出错的代码。  
+ lambda 结合了函数指针和函数对象的优点并避免其缺点。 lambda 与函数对象相似的是灵活并且可以保持状态，但不同的是其简洁的语法不需要显式类定义。 使用 lambda，你可以编写出比等效的函数对象代码更简洁、更不容易出错的代码。  
   
- 以下示例将比较 lambda 的用途和函数对象的用途。  第一个示例使用 lambda 向控制台打印 `vector` 对象中的每个元素是偶数还是奇数。  第二个示例使用函数对象来完成相同任务。  
+ 以下示例将比较 lambda 的用途和函数对象的用途。 第一个示例使用 lambda 向控制台打印 `vector` 对象中的每个元素是偶数还是奇数。 第二个示例使用函数对象来完成相同任务。  
   
-## 示例 1：使用 lambda  
- 此示例将一个 lambda 传递给 `for_each` 函数。  该 lambda 打印一个结果，该结果指出 `vector` 对象中的每个元素是偶数还是奇数。  
+## <a name="example-1-using-a-lambda"></a>示例 1：使用 lambda  
+ 此示例将一个 lambda 传递给 `for_each` 函数。 该 lambda 打印一个结果，该结果指出 `vector` 对象中的每个元素是偶数还是奇数。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```cpp  
 // even_lambda.cpp  
@@ -73,26 +90,31 @@ int main()
 }  
 ```  
   
-### 输出  
-  **1 为奇数**  
-**2 为偶数**  
-**3 为奇数**  
-**4 为偶数**  
-**5 为奇数**  
-**6 为偶数**  
-**7 为奇数**  
-**8 为偶数**  
-**9 为奇数**  
-**在向量中存在 4 个偶数。**   
-### 批注  
- 在该示例中，`for_each` 函数的第三个参数是一个 lambda。  `[&evenCount]` 部分指定表达式的捕获子句，`(int n)` 指定参数列表，剩余部分指定表达式的主体。  
+### <a name="output"></a>输出  
   
-## 示例 2：使用函数对象  
- 有时 lambda 过于庞大，无法在上一示例的基础上大幅度扩展。  下一示例使用函数对象（而非 lambda）以及 `for_each` 函数，以产生与示例 1 相同的结果。  两个示例都在 `vector` 对象中存储偶数的个数。  为保持运算的状态，`FunctorClass` 类通过引用存储 `m_evenCount` 变量作为成员变量。  为执行该运算，`FunctorClass` 实现函数调用运算符 `operator()`。  Visual C\+\+ 编译器生成的代码与示例 1 中的 lambda 代码在大小和性能上相差无几。  对于类似本文中示例的基本问题，较为简单的 lambda 设计可能优于函数对象设计。  但是，如果你认为该功能在将来可能需要重大扩展，则使用函数对象设计，这样代码维护会更简单。  
+```Output  
+1 is odd  
+2 is even  
+3 is odd  
+4 is even  
+5 is odd  
+6 is even  
+7 is odd  
+8 is even  
+9 is odd  
+There are 4 even numbers in the vector.  
   
- 有关 `operator()` 的详细信息，请参阅[函数调用 ](../cpp/function-call-cpp.md)。  有关 `for_each` 函数的详细信息，请参阅 [for\_each](../Topic/for_each.md)。  
+```  
   
-### 代码  
+### <a name="comments"></a>注释  
+ 在该示例中，`for_each` 函数的第三个参数是一个 lambda。 `[&evenCount]` 部分指定表达式的捕获子句，`(int n)` 指定参数列表，剩余部分指定表达式的主体。  
+  
+## <a name="example-2-using-a-function-object"></a>示例 2：使用函数对象  
+ 有时 lambda 过于庞大，无法在上一示例的基础上大幅度扩展。 下一示例使用函数对象（而非 lambda）以及 `for_each` 函数，以产生与示例 1 相同的结果。 两个示例都在 `vector` 对象中存储偶数的个数。 为保持运算的状态，`FunctorClass` 类通过引用存储 `m_evenCount` 变量作为成员变量。 为执行该运算，`FunctorClass` 实现函数调用运算符 `operator()`。 Visual C++ 编译器生成的代码与示例 1 中的 lambda 代码在大小和性能上相差无几。 对于类似本文中示例的基本问题，较为简单的 lambda 设计可能优于函数对象设计。 但是，如果你认为该功能在将来可能需要重大扩展，则使用函数对象设计，这样代码维护会更简单。  
+  
+ 有关详细信息`operator()`，请参阅[函数调用](../cpp/function-call-cpp.md)。 有关详细信息`for_each`函数中，请参阅[for_each](../standard-library/algorithm-functions.md#for_each)。  
+  
+### <a name="code"></a>代码  
   
 ```cpp  
 // even_functor.cpp  
@@ -150,23 +172,28 @@ int main()
   
 ```  
   
-## 输出  
-  **1 为奇数**  
-**2 为偶数**  
-**3 为奇数**  
-**4 为偶数**  
-**5 为奇数**  
-**6 为偶数**  
-**7 为奇数**  
-**8 为偶数**  
-**9 为奇数**  
-**在向量中存在 4 个偶数。**   
-## 请参阅  
- [lambda 表达式](../cpp/lambda-expressions-in-cpp.md)   
+## <a name="output"></a>输出  
+  
+```Output  
+1 is odd  
+2 is even  
+3 is odd  
+4 is even  
+5 is odd  
+6 is even  
+7 is odd  
+8 is even  
+9 is odd  
+There are 4 even numbers in the vector.  
+  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)   
  [Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)   
- [生成](../Topic/generate.md)   
- [generate\_n](../Topic/generate_n.md)   
- [for\_each](../Topic/for_each.md)   
- [异常规范 \(throw\)](../cpp/exception-specifications-throw-cpp.md)   
- [编译器警告（等级 1）C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
+ [生成](../standard-library/algorithm-functions.md#generate)   
+ [generate_n](../standard-library/algorithm-functions.md#generate_n)   
+ [for_each](../standard-library/algorithm-functions.md#for_each)   
+ [异常规范 (throw)](../cpp/exception-specifications-throw-cpp.md)   
+ [编译器警告 （等级 1） C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)   
  [Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)

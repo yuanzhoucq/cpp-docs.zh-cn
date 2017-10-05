@@ -1,44 +1,65 @@
 ---
-title: "范围解析运算符：:: | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ":: 运算符"
-  - "运算符 [C++], 范围解析"
-  - "范围解析运算符"
-  - "范围, 范围解析运算符"
+title: "范围解析运算符::: |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 范围解析运算符：::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-范围解析运算符 `::` 用于标识和消除在不同范围内使用的标识符。  有关范围的详细信息，请参阅[范围](../cpp/scope-visual-cpp.md)。  
+---
+# <a name="scope-resolution-operator-"></a>范围解析运算符：::
+范围解析运算符 `::` 用于标识和消除在不同范围内使用的标识符。 有关作用域的详细信息，请参阅[作用域](../cpp/scope-visual-cpp.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `identifier` 可以是变量、函数或枚举值。  
   
-## 具有命名空间和类  
+## <a name="with-classes-and-namespaces"></a>具有命名空间和类  
  以下示例显示范围解析运算符如何与命名空间和类一起使用：  
   
 ```cpp  
@@ -85,7 +106,7 @@ int main() {
 }  
 ```  
   
- 你可以使用范围解析运算符来标识命名空间的成员，还可标识通过 using 指定成员的命名空间的命名空间。  在下面的示例中，你可以使用 `NamespaceC` 限定 `ClassB`（尽管 `ClassB` 已在 `NamespaceB` 中声明），因为已通过 using 指令在 `NamespaceC` 中指定 `NamespaceB`。  
+ 你可以使用范围解析运算符来标识命名空间的成员，还可标识通过 using 指定成员的命名空间的命名空间。 在下面的示例中，你可以使用 `ClassB``NamespaceC` 限定 `NamespaceB``ClassB`（尽管 `NamespaceC``NamespaceB` 已在  中声明），因为已通过 using 指令在  中指定 。  
   
 ```cpp  
 namespace NamespaceB {  
@@ -109,7 +130,7 @@ int main() {
   
 ```  
   
- 可使用范围解析运算符链。  在以下示例中，`NamespaceD::NamespaceD1` 将标识嵌套的命名空间 `NamespaceD1`，并且 `NamespaceE::ClassE::ClassE1` 将标识嵌套的类 `ClassE1`。  
+ 可使用范围解析运算符链。 在以下示例中，`NamespaceD::NamespaceD1` 将标识嵌套的命名空间 `NamespaceD1`，并且 `NamespaceE::ClassE::ClassE1` 将标识嵌套的类 `ClassE1`。  
   
 ```cpp  
 namespace NamespaceD{  
@@ -137,7 +158,7 @@ int main() {
   
 ```  
   
-## 具有静态成员  
+## <a name="with-static-members"></a>具有静态成员  
  必须使用范围解析运算符来调用类的静态成员。  
   
 ```cpp  
@@ -157,8 +178,8 @@ int main() {
   
 ```  
   
-## 具有区分范围的枚举  
- 区分范围的解析运算符还可以与区分范围的枚举[枚举声明](../cpp/enumerations-cpp.md)的值一起使用，如下例所示：  
+## <a name="with-scoped-enumerations"></a>具有区分范围的枚举  
+ 范围的解析运算符还可以指定了作用域枚举的值与[枚举声明](../cpp/enumerations-cpp.md)，下面的示例所示：  
   
 ```cpp  
 enum class EnumA{  
@@ -174,7 +195,6 @@ int main() {
   
 ```  
   
-## 请参阅  
- [C\+\+ 运算符优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>另请参阅  
+ [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [命名空间](../cpp/namespaces-cpp.md)   
- [名称和限定名称](../misc/names-and-qualified-names.md)

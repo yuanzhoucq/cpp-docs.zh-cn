@@ -1,48 +1,64 @@
 ---
-title: "While 语句 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "while 关键字 [C++]"
-  - "while 关键字 [C++], 语法"
+title: "while 语句 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# While 语句 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-重复执行*语句*，直到*表达式*计算为零。  
+---
+# <a name="while-statement-c"></a>While 语句 (C++)
+执行*语句*重复直到*表达式*计算结果为零。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## 备注  
- *expression* 的测试在每次执行循环前发生；因此 `while` 循环执行零次或更多次。  *表达式*必须是整型、指针类型或包含明确的整型或指针类型转换的类类型。  
+## <a name="remarks"></a>备注  
+ 测试*表达式*发生在每次执行循环; 因此，`while`循环将执行零次或多次。 *表达式*必须是整数类型、 指针类型，或明确转换为整数的类类型或指针类型。  
   
- 当[中断](../cpp/break-statement-cpp.md)、[导航](../cpp/goto-statement-cpp.md)或[回归](../cpp/return-statement-cpp.md)在语句体中执行时，也可以中止`while` 循环。  请使用[continue](../cpp/continue-statement-cpp.md)语句来结束当前迭代但不退出`while`循环。   **继续**  将控件传递给下一轮循环 `while`。  
+ A`while`时，还可以终止循环[中断](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[返回](../cpp/return-statement-cpp.md)语句内执行主体。 使用[继续](../cpp/continue-statement-cpp.md)终止当前迭代，但不退出`while`循环。 **继续**将控制权传递给下一个迭代的`while`循环。  
   
- 以下代码使用 `while` 循环从字符串中剪裁尾随下划线：  
+ 下面的代码使用`while`循环要修剪尾随下划线从字符串：  
   
 ```  
 // while_statement.cpp  
@@ -71,11 +87,11 @@ int main()
 }  
 ```  
   
- 在循环顶部计算终止条件。  如果没有尾随下划线，循环不执行。  
+ 终止条件在循环的顶部。 如果不有任何尾随下划线，则循环将永远不会执行。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [迭代语句](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [do\-while 语句 \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for 语句 \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [基于范围的 for 语句 \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)   
+ [do-while 语句 (C++)](../cpp/do-while-statement-cpp.md)   
+ [for 语句 (C++)](../cpp/for-statement-cpp.md)   
+ [基于范围的 for 语句 (C++)](../cpp/range-based-for-statement-cpp.md)

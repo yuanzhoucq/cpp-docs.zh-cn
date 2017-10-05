@@ -1,28 +1,45 @@
 ---
-title: "初始化数组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "初始化数组"
-  - "初始化数组 [c + +]"
+title: "初始化数组 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing arrays
+- arrays [C++], initializing
 ms.assetid: 41efe5f0-15b5-4f49-9196-c4902f8fc705
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 初始化数组
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5370633ac0d73815c048153f7025ea50b990a3f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="initializing-arrays"></a>初始化数组
 如果类具有构造函数，该类的数组将由构造函数初始化。 如果初始值设定项列表中的项少于数组中的元素，则默认的构造函数将用于剩余元素。 如果没有为类定义默认构造函数，初始值设定项列表必须完整，即数组中的每个元素都必须有一个初始值设定项。  
   
  考虑定义了两个构造函数的`Point` 类：  
@@ -52,7 +69,7 @@ int main()
   
  `aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。  
   
- 静态成员数组 (是否 **const** 与否) 可在它们的定义 （类声明的外部） 中初始化。 例如:   
+ 静态成员数组 (是否**const**或不) 可以在其定义 （类声明的外部） 中初始化。 例如:   
   
 ```  
 // initializing_arrays2.cpp  
@@ -70,5 +87,4 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [(NOTINBUILD)特殊成员函数](http://msdn.microsoft.com/zh-cn/82223d73-64cb-4923-b678-78f9568ff3ca)
+

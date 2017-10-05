@@ -1,42 +1,59 @@
 ---
-title: "异常处理的计时：摘要 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "异常处理, 计时"
-  - "处理程序, 异常的顺序"
-  - "序列"
-  - "序列, 处理程序"
-  - "SETJMP.H"
-  - "SETJMPEX.H"
-  - "结构化异常处理, 计时"
-  - "终止处理程序, 计时"
+title: "异常处理的计时： 摘要 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- sequence
+- sequence, of handlers
+- exception handling, timing
+- SETJMPEX.H
+- termination handlers, timing
+- SETJMP.H
+- handlers, order of exception
+- structured exception handling, timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 异常处理的计时：摘要
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ba1075095381229667c7164aa7de7f3e4537486
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-无论 `__try` 语句块如何终止，都要执行终止处理程序。  原因包括跳出 `__try` 块（用于将控制权转交给块的 `longjmp` 语句外部）以及为了进行异常处理而展开堆栈。  
+---
+# <a name="timing-of-exception-handling-a-summary"></a>异常处理的计时：摘要
+无论 `__try` 语句块如何终止，都要执行终止处理程序。 原因包括跳出 `__try` 块（用于将控制权转交给块的 `longjmp` 语句外部）以及为了进行异常处理而展开堆栈。  
   
 > [!NOTE]
->  Visual C\+\+ 支持 `setjmp` 和 `longjmp` 语句两种形式。  快速版本会跳过终止处理，但更高效。  若要使用此版本，请包含文件 SETJMP.H。  另一个版本支持上一段中所述的终止处理。  若要使用此版本，请包含文件 SETJMPEX.H。  快速版本的性能提升取决于硬件配置。  
+>  Visual C++ 支持 `setjmp` 和 `longjmp` 语句两种形式。 快速版本会跳过终止处理，但更高效。 若要使用此版本，请包含文件 SETJMP.H。 另一个版本支持上一段中所述的终止处理。 若要使用此版本，请包含文件 SETJMPEX.H。 快速版本的性能提升取决于硬件配置。  
   
  在执行任何其他代码前，操作系统将以适当的顺序执行所有终止处理程序，包括异常处理程序的主体。  
   
- 当中断的原因是异常时，系统在决定要终止的内容前必须先执行一个或多个异常处理程序的筛选器部分。  事件的顺序如下：  
+ 当中断的原因是异常时，系统在决定要终止的内容前必须先执行一个或多个异常处理程序的筛选器部分。 事件的顺序如下：  
   
 1.  引发异常。  
   
@@ -44,7 +61,7 @@ caps.handback.revision: 6
   
 3.  如果此筛选器传递控制权（返回 0），过程将继续，直到发现筛选器不传递控制权。  
   
-4.  如果此筛选器返回 –1，则执行在引发异常的地方继续，而并不会发生终止。  
+4.  如果此筛选器返回-1，其中引发了异常，并且不会发生终止持续执行。  
   
 5.  如果筛选器返回 1，则发生以下事件：  
   
@@ -56,6 +73,6 @@ caps.handback.revision: 6
   
     -   控制权将交给此异常处理程序末尾后的代码行。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编写终止处理程序](../cpp/writing-a-termination-handler.md)   
- [结构化异常处理](../cpp/structured-exception-handling-c-cpp.md)
+ [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

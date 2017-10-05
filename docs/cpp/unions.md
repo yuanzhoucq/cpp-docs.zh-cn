@@ -1,55 +1,71 @@
 ---
-title: "联合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "union_cpp"
-  - "union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类类型, 联合为"
-  - "union 关键字 [C++]"
+title: "联合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- union_cpp
+- union
+dev_langs:
+- C++
+helpviewer_keywords:
+- class types, unions as
+- union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 联合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3a4cbede49c32fd7ae60320fa13b9dd4e3c729a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-`union` 是用户定义的类型，其中所有成员都共享同一个内存位置。  这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。  这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。  
+---
+# <a name="unions"></a>Unions
+`union` 是用户定义的类型，其中所有成员都共享同一个内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。  
   
- 具有大量对象和\/或内存有限时，联合可用于节省内存。  但是，需要格外小心才能正确使用它们，因为由你负责确保可始终访问写入的最后一个成员。  如果任何成员类型具有不常用构造函数，则必须编写附加代码来显式构造和销毁该成员。  使用联合之前，应考虑是否可以使用基类和派生类来更好地表示尝试解决的问题。  
+ 具有大量对象和/或内存有限时，联合可用于节省内存。 但是，需要格外小心才能正确使用它们，因为由你负责确保可始终访问写入的最后一个成员。 如果任何成员类型具有不常用构造函数，则必须编写附加代码来显式构造和销毁该成员。 使用联合之前，应考虑是否可以使用基类和派生类来更好地表示尝试解决的问题。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
-```  
+```cpp  
 union [name]  { member-list };  
-  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `name`  
  为联合提供的类型名称。  
   
  `member-list`  
- 联合可以包含的成员。  请参阅“备注”。  
+ 联合可以包含的成员。 请参阅“备注”。  
   
-## 备注  
+## <a name="remarks"></a>备注  
   
-## 声明联合  
+## <a name="declaring-a-union"></a>声明联合  
  利用 `union` 关键字开始联合的声明，并用大括号包含成员列表：  
   
-```  
+```cpp  
 // declaring_a_union.cpp  
 union RecordType    // Declare a simple union type  
 {  
@@ -68,11 +84,10 @@ int main()
 }  
 ```  
   
-## 使用联合  
- 在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。  此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。  这称为可区分的联合，下面的示例演示了基本模式。  
+## <a name="using-unions"></a>使用联合  
+ 在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为*可区分的联合*，下面的示例演示了基本模式。  
   
-```  
-  
+```cpp  
 #include "stdafx.h"  
 #include <queue>  
   
@@ -155,16 +170,16 @@ void Initialize()
   
 ```  
   
- 在前面的示例中，请注意 Input 结构中的联合没有名称。  这是匿名联合，可以访问其成员，如同它们是结构的直接成员一样。  有关匿名联合的详细信息，请参阅下面一节。  
+ 在前面的示例中，请注意 Input 结构中的联合没有名称。 这是匿名联合，可以访问其成员，如同它们是结构的直接成员一样。 有关匿名联合的详细信息，请参阅下面一节。  
   
- 当然，上面的示例演示的问题也可以通过以下方法解决：使用派生自公共基类的类，并基于容器中每个对象的运行时类型对代码进行分支。  这可以生成更易于维护和理解的代码，但是也可能比使用联合更慢。  此外，通过联合可以存储完全不相关的类型，并动态更改存储的值的类型，而无需更改联合变量本身的类型。  因此可以创建其元素存储不同类型的不同值的 MyUnionType 异类数组。  
+ 当然，上面的示例演示的问题也可以通过以下方法解决：使用派生自公共基类的类，并基于容器中每个对象的运行时类型对代码进行分支。 这可以生成更易于维护和理解的代码，但是也可能比使用联合更慢。 此外，通过联合可以存储完全不相关的类型，并动态更改存储的值的类型，而无需更改联合变量本身的类型。 因此可以创建其元素存储不同类型的不同值的 MyUnionType 异类数组。  
   
- 请注意，可能会很容易误用前面示例中的 `Input` 结构。  完全由用户负责正确使用鉴别器来访问保存数据的成员。  你可以通过使联合成为专用并提供特殊访问函数（如下一个示例所示）来防止误用。  
+ 请注意，可能会很容易误用前面示例中的 `Input` 结构。 完全由用户负责正确使用鉴别器来访问保存数据的成员。 你可以通过使联合成为专用并提供特殊访问函数（如下一个示例所示）来防止误用。  
   
-## 无限制的联合 \(C\+\+11\)  
- 在 C\+\+03 及更低版本中，联合可以包含具有类类型的非静态数据成员，只要该类型没有用户提供的构造函数、析构函数或赋值运算符即可。  在 C\+\+11 中，消除了这些限制。  如果在联合中包含这样一个成员，则编译器会自动将不是用户提供的任何特殊成员函数标记为已删除。  如果联合是类或结构中的匿名联合，则类或结构的不是用户提供的任何特殊成员函数都会标记为已删除。  下面的示例演示如何处理联合的某个成员具有需要此特殊处理的成员的情况：  
+## <a name="unrestricted-unions-c11"></a>无限制的联合 (C++11)  
+ 在 C++03 及更低版本中，联合可以包含具有类类型的非静态数据成员，只要该类型没有用户提供的构造函数、析构函数或赋值运算符即可。 在 C++11 中，消除了这些限制。 如果在联合中包含这样一个成员，则编译器会自动将不是用户提供的任何特殊成员函数标记为已删除。 如果联合是类或结构中的匿名联合，则类或结构的不是用户提供的任何特殊成员函数都会标记为已删除。 下面的示例演示如何处理联合的某个成员具有需要此特殊处理的成员的情况：  
   
-```  
+```cpp  
 // for MyVariant  
 #include <crtdbg.h>  
 #include <new>  
@@ -609,12 +624,12 @@ private:
   
 ```  
   
- 联合不能存储引用。  联合不支持继承，因此联合本身不能用作基类、继承自另一个类或具有虚函数。  
+ 联合不能存储引用。 联合不支持继承，因此联合本身不能用作基类、继承自另一个类或具有虚函数。  
   
-## 初始化联合  
- 可以通过指定包含在括号中的表达式来在相同语句中声明并初始化联合。  计算该表达式并将其分配给联合的第一个字段。  
+## <a name="initializing-unions"></a>初始化联合  
+ 可以通过指定包含在括号中的表达式来在相同语句中声明并初始化联合。 计算该表达式并将其分配给联合的第一个字段。  
   
-```  
+```cpp  
 #include <iostream>  
 using namespace std;  
   
@@ -644,28 +659,25 @@ int main()
  ![数值类型联合中的数据存储](../cpp/media/vc38ul1.png "vc38UL1")  
 NumericType 联合中的数据存储  
   
-## 匿名联合  
- 匿名联合是声明的没有 *class\-name* 或 *declarator\-list* 的联合。  
+## <a name="anonymous_unions"></a>匿名联合  
+ 匿名联合还未声明的联合*类名*或*声明符列表*。  
   
+```cpp  
+union  {  member-list  }    
 ```  
   
-union  
-{  member-list  }    
-```  
+匿名联合中声明的名称可直接使用，就像非成员变量一样。 因此，匿名联合中声明的名称必须在周边范围中是唯一的。  
   
- 匿名联合中声明的名称可直接使用，就像非成员变量一样。  因此，匿名联合中声明的名称必须在周边范围中是唯一的。  
+除了命名联合的限制，匿名联合还受这些其他的限制：  
   
- 除了[联合成员数据](../misc/union-member-data.md)中列出的限制之外，匿名联合还受其他限制：  
-  
--   如果在文件或命名空间范围内声明联合，则还必须将它们声明为“静态的”。  
+-   它们还必须声明为**静态**如果在文件或命名空间范围中声明。  
   
 -   它们可以只具有公共成员；匿名联合中的私有成员和受保护的成员会生成错误。  
   
 -   它们不能具有函数成员。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [类和结构](../cpp/classes-and-structs-cpp.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)   
- [匿名联合](../misc/anonymous-unions.md)   
- [class](../cpp/class-cpp.md)   
+ [关键字](../cpp/keywords-cpp.md)   
+ [类](../cpp/class-cpp.md)   
  [struct](../cpp/struct-cpp.md)

@@ -1,41 +1,57 @@
 ---
-title: "可变数据成员 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "mutable_cpp"
-  - "mutable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mutable 关键字 [C++]"
+title: "可变数据成员 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- mutable_cpp
+- mutable
+dev_langs:
+- C++
+helpviewer_keywords:
+- mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 可变数据成员 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b51f53444b7482575398b68c3a2bf52b3de96e55
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-此关键字只能应用于类的非静态和非常量数据成员。  如果某个数据成员被声明为 `mutable`，则从 **const** 成员函数为此数据成员赋值是合法的。  
+---
+# <a name="mutable-data-members-c"></a>可变数据成员 (C++)
+此关键字只能应用于类的非静态和非常量数据成员。 如果声明数据成员`mutable`，则它是合法将值分配给从该数据成员**const**成员函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 mutable member-variable-declaration;  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  例如，以下代码在编译时不会出错，因为 `m_accessCount` 已声明为 `mutable`，因此可以由 `GetFlag` 修改，即使 `GetFlag` 是常量成员函数。  
   
 ```  
@@ -58,5 +74,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [关键字](../cpp/keywords-cpp.md)

@@ -1,36 +1,53 @@
 ---
-title: "_variant_t::_variant_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::_variant_t"
-  - "_variant_t._variant_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_variant_t 类, 构造函数"
-  - "_variant_t 方法"
+title: "_variant_t::_variant_t |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::_variant_t
+- _variant_t._variant_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- _variant_t class, constructor
+- _variant_t method
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _variant_t::_variant_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6bd29401970d3beffcac6d29247138aa65d6a338
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 专用**  
   
  构造 `_variant_t` 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -139,57 +156,57 @@ _variant_t(
 ) throw();  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *varSrc*  
- 要复制到新 `_variant_t` 对象中的 **VARIANT** 对象。  
+ A **VARIANT**要复制到新对象`_variant_t`对象。  
   
  *pVarSrc*  
- 指向要复制到新的 `_variant_t` 对象中的 **VARIANT** 对象的指针。  
+ 指向**VARIANT**要复制到新对象`_variant_t`对象。  
   
- *var\_t\_Src*  
+ *var_t_Src*  
  要复制到新的 `_variant_t` 对象中的 `_variant_t` 对象。  
   
  `fCopy`  
- 如果为 false，则提供的 **VARIANT** 对象将附加到新的 `_variant_t` 对象中，而无需通过 **VariantCopy** 创建新副本。  
+ 如果为 false，提供**VARIANT**对象附加到新`_variant_t`对象而不创建新的副本通过**VariantCopy**。  
   
- *ISrc, sSrc*  
+ *ISrc sSrc*  
  要复制到新的 `_variant_t` 对象中的整数值。  
   
  `vtSrc`  
- 新的 `_variant_t` 对象的 **VARTYPE**。  
+ **VARTYPE**新`_variant_t`对象。  
   
- *fltSrc, dblSrc*  
+ *fltSrc dblSrc*  
  要复制到新的 `_variant_t` 对象中的数值。  
   
  `cySrc`  
- 要复制到新的 `_variant_t` 对象中的 **CY** 对象。  
+ A **CY**要复制到新对象`_variant_t`对象。  
   
  `bstrSrc`  
  要复制到新的 `_bstr_t` 对象中的 `_variant_t` 对象。  
   
- *strSrc, wstrSrc*  
+ *strSrc wstrSrc*  
  要复制到新的 `_variant_t` 对象中的字符串。  
   
  `bSrc`  
  要复制到新的 `bool` 对象中的 `_variant_t` 值。  
   
  `pIUknownSrc`  
- 指向要封装到新的 `_variant_t` 对象中的 **VT\_UNKNOWN** 对象的 COM 接口指针。  
+ COM 接口指针**VT_UNKNOWN**要封装到新对象`_variant_t`对象。  
   
  `pDispSrc`  
- 指向要封装到新的 `_variant_t` 对象中的 **VT\_DISPATCH** 对象的 COM 接口指针。  
+ COM 接口指针**VT_DISPATCH**要封装到新对象`_variant_t`对象。  
   
  `decSrc`  
- 要复制到新的 `_variant_t` 对象中的 **DECIMAL** 值。  
+ A**十进制**要复制到新值`_variant_t`对象。  
   
  `bSrc`  
- 要复制到新的 `_variant_t` 对象中的 **BYTE** 值。  
+ A**字节**要复制到新值`_variant_t`对象。  
   
  `cSrc`  
  要复制到新的 `char` 对象中的 `_variant_t` 值。  
   
  *usSrc*  
- 要复制到新的 `_variant_t` 对象中的 **unsigned short** 值。  
+ A**无符号短**要复制到新值`_variant_t`对象。  
   
  *ulSrc*  
  要复制到新的 `unsigned long` 对象中的 `_variant_t` 值。  
@@ -201,50 +218,50 @@ _variant_t(
  要复制到新的 `unsigned int` 对象中的 `_variant_t` 值。  
   
  *i8Src*  
- 要复制到新的 `_variant_t` 对象中的 \_\_**int64** 值。  
+ __**Int64**要复制到新值`_variant_t`对象。  
   
  *ui8Src*  
- 要复制到新的 `_variant_t`对象中的 **unsigned \_\_int64** 值。  
+ **Unsigned 的 __int64**要复制到新值`_variant_t`对象。  
   
-## 备注  
+## <a name="remarks"></a>备注  
   
--   **\_variant\_t\( \)** 构造一个空的 `_variant_t` 对象 `VT_EMPTY`。  
+-   **_variant_t （)**构造一个空`_variant_t`对象， `VT_EMPTY`。  
   
--   **\_variant\_t\( VARIANT&**  *varSrc*  **\)** 从 **VARIANT** 对象的副本中构造一个 `_variant_t` 对象。  变体类型将保留。  
+-   **_variant_t (VARIANT &***varSrc***)**构造`_variant_t`对象的副本**VARIANT**对象。     变体类型将保留。  
   
--   **\_variant\_t\( VARIANT\***  *pVarSrc*  **\)** 从 **VARIANT** 对象的副本中构造一个 `_variant_t` 对象。  变体类型将保留。  
+-   **_variant_t (VARIANT\****pVarSrc***)**构造`_variant_t`对象的副本**VARIANT**对象。     变体类型将保留。  
   
--   **\_variant\_t\( \_variant\_t&**  *var\_t\_Src*  **\)** 从另一个 `_variant_t` 对象中构造一个 `_variant_t` 对象。  变体类型将保留。  
+-   **_variant_t (_variant_t （& a)***var_t_Src***)**构造`_variant_t`从另一个对象`_variant_t`对象。     变体类型将保留。  
   
--   **\_variant\_t\( VARIANT&**  *varSrc* **, bool**  `fCopy`  **\)** 从现有 **VARIANT** 对象中构造一个 `_variant_t` 对象。  如果 `fCopy` 为 **false**，则 **VARIANT** 对象将附加到新对象中，而无需创建副本。  
+-   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)**构造`_variant_t`从现有对象**VARIANT**对象。       如果`fCopy`是**false**、 **VARIANT**对象附加到新的对象，而无需制作的副本。  
   
--   **\_variant\_t\( short**  *sSrc* **, VARTYPE**  `vtSrc`  **\= VT\_I2 \)** 从 **short** 整数值构造一个类型为 `VT_I2` 或 `VT_BOOL` 的 `_variant_t` 对象。  任何其他 **VARTYPE** 都会导致 `E_INVALIDARG` 错误。  
+-   **_variant_t (短***sSrc* **，VARTYPE**`vtSrc`**= VT_I2)**构造`_variant_t`类型的对象`VT_I2`或`VT_BOOL`从**短**整数值。       任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
   
--   **\_variant\_t\( long**  `lSrc` **, VARTYPE**  `vtSrc`  **\= VT\_I4 \)** 从 **long** 整数值构造一个类型为 `VT_I4`、`VT_BOOL` 或 `VT_ERROR` 的 `_variant_t` 对象。  任何其他 **VARTYPE** 都会导致 `E_INVALIDARG` 错误。  
+-   **_variant_t (长**`lSrc` **，VARTYPE**`vtSrc`**= VT_I4)**构造`_variant_t`类型的对象`VT_I4`， `VT_BOOL`，或`VT_ERROR`从**长**整数值。       任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
   
--   **\_variant\_t\( float**  `fltSrc`  **\)** 从 **float** 数值构造一个 `VT_R4` 类型的 `_variant_t` 对象。  
+-   **_variant_t (float**`fltSrc`**)**构造`_variant_t`类型的对象`VT_R4`从**float**数字值。      
   
--   **\_variant\_t\( double**  `dblSrc` **, VARTYPE**  `vtSrc`  **\= VT\_R8 \)** 从 **double** 数值构造一个 `VT_R8` 或 `VT_DATE` 类型的 `_variant_t` 对象。  任何其他 **VARTYPE** 都会导致 `E_INVALIDARG` 错误。  
+-   **_variant_t (double** `dblSrc` **，VARTYPE**`vtSrc`**= VT_R8)**构造`_variant_t`类型的对象`VT_R8`或`VT_DATE`从**double**数字值。       任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
   
--   **\_variant\_t\( CY&**  `cySrc`  **\)** 从 **CY** 对象构造一个 `VT_CY` 类型的 `_variant_t` 对象。  
+-   **_variant_t (CY （& a)**`cySrc`**)**构造`_variant_t`类型的对象`VT_CY`从**CY**对象。      
   
--   **\_variant\_t\( \_bstr\_t&**  `bstrSrc`  **\)** 从 `_bstr_t` 对象构造一个 `VT_BSTR` 类型的 `_variant_t` 对象。  分配新的 `BSTR`。  
+-   **_variant_t (_bstr_t （& a)**`bstrSrc`**)**构造`_variant_t`类型的对象`VT_BSTR`从`_bstr_t`对象。     分配新的 `BSTR`。  
   
--   **\_variant\_t\( wchar\_t \*** *wstrSrc*  **\)** 从 Unicode 字符串构造一个 `VT_BSTR` 类型的 `_variant_t` 对象。  分配新的 `BSTR`。  
+-   **_variant_t (wchar_t \* ** *wstrSrc***)**构造`_variant_t`类型的对象`VT_BSTR`从 Unicode 字符串。   分配新的 `BSTR`。  
   
--   **\_variant\_t\( char\***  `strSrc`  **\)** 从字符串构造一个 `VT_BSTR` 类型的 `_variant_t` 对象。  分配新的 `BSTR`。  
+-   **_variant_t (char\***`strSrc`**)**构造`_variant_t`类型的对象`VT_BSTR`从字符串。     分配新的 `BSTR`。  
   
--   **\_variant\_t\( bool**  `bSrc`  **\)** 从 `bool` 值构造一个 `VT_BOOL` 类型的 `_variant_t` 对象。  
+-   **_variant_t (bool**`bSrc`**)**构造`_variant_t`类型的对象`VT_BOOL`从`bool`值。      
   
--   **\_variant\_t\( IUnknown\***  `pIUknownSrc` **, bool**  `fAddRef`  **\= true \)** 从 COM 接口指针构造一个 **VT\_UNKNOWN** 类型的 `_variant_t` 对象。  如果 `fAddRef` 为 **true**，则在提供的接口指针上调用 `AddRef` 以匹配将在 `_variant_t` 对象被销毁时发生的对 **Release** 的调用。  由您来在提供的接口指针上调用 **Release**。  如果 `fAddRef` 为 **false**，则此构造函数将获得提供的接口指针的所有权；不在提供的接口指针上调用 **Release**。  
+-   **_variant_t (IUnknown\* ** `pIUknownSrc` **，bool**`fAddRef`**= true)**构造`_variant_t`类型的对象**VT_UNKNOWN**从 COM 接口指针。       如果`fAddRef`是**true**，然后`AddRef`对提供的接口的指针来匹配到调用调用**版本**将发生时`_variant_t`对象被销毁。 它将由您来调用**版本**上提供的接口指针。 如果`fAddRef`是**false**，此构造函数将提供的接口指针的所有权; 不调用**版本**上提供的接口指针。  
   
--   **\_variant\_t\( IDispatch\***  `pDispSrc` **, bool**  `fAddRef`  **\= true \)** 从 COM 接口指针构造一个 **VT\_DISPATCH** 类型的 `_variant_t` 对象。  如果 `fAddRef` 为 **true**，则在提供的接口指针上调用 `AddRef` 以匹配将在 `_variant_t` 对象被销毁时发生的对 **Release** 的调用。  由您来在提供的接口指针上调用 **Release**。  如果 **fAddRef** 为 false，则此构造函数将获得提供的接口指针的所有权；不在提供的接口指针上调用 **Release**。  
+-   **_variant_t (IDispatch\* ** `pDispSrc` **，bool**`fAddRef`**= true)**构造`_variant_t`类型的对象**VT_DISPATCH**从 COM 接口指针。       如果`fAddRef`是**true**，然后`AddRef`对提供的接口的指针来匹配到调用调用**版本**将发生时`_variant_t`对象被销毁。 它将由您来调用**版本**上提供的接口指针。 如果**fAddRef**是 false，此构造函数将提供的接口指针的所有权; 不调用**版本**上提供的接口指针。  
   
--   **\_variant\_t\( DECIMAL&**  `decSrc`  **\)** 从 **DECIMAL** 值构造一个 **VT\_DECIMAL** 类型的 `_variant_t` 对象。  
+-   **_variant_t (十进制 （& a)**`decSrc`**)**构造`_variant_t`类型的对象**VT_DECIMAL**从**十进制**值。      
   
--   **\_variant\_t\( BYTE**  `bSrc`  **\)** 从 **BYTE** 值构造一个 `VT_UI1` 类型的 `_variant_t` 对象。  
+-   **_variant_t (字节**`bSrc`**)**构造`_variant_t`类型的对象`VT_UI1`从**字节**值。      
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [\_variant\_t 类](../cpp/variant-t-class.md)
+## <a name="see-also"></a>另请参阅  
+ [_variant_t 类](../cpp/variant-t-class.md)

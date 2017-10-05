@@ -1,41 +1,58 @@
 ---
-title: "下标运算符的解释 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 下标 "
-  - "解释下标运算符"
-  - "运算符 [C++], 下标的解释"
-  - "下标运算符, 解释"
+title: "下标运算符的解释 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, interpretation of
+- arrays [C++], subscripting
+- interpreting subscript operators
+- operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 下标运算符的解释
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1a83ff6aea4380688d3b6298b93e04caab1dbb7f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-与其他运算符相似，下标运算符 \(**\[ \]**\) 也可由用户重新定义。  如果没有重载下标运算符，下标运算符的默认行为是使用以下方法组合数组名称和下标：  
+---
+# <a name="interpretation-of-subscript-operator"></a>下标运算符的解释
+与其他运算符，下标运算符相似 (**[]**) 可以由用户重新定义。 如果没有重载下标运算符，下标运算符的默认行为是使用以下方法组合数组名称和下标：  
   
- \*\(\(*array\-name*\) \+ \(*subscript*\)\)  
+ \*((*数组名称*) + (*下标*))  
   
- 像涉及指针类型的所有加法中一样，缩放将自动执行以调整类型的大小。  因此，生成的值不是来自 *array\-name* 的原点的 *subscript* 个字节，而是数组第 *subscript* 个元素。（有关此转换的详细信息，请参阅[相加运算符](../cpp/additive-operators-plus-and.md)。）  
+ 像涉及指针类型的所有加法中一样，缩放将自动执行以调整类型的大小。 因此，所得到的值不是*下标*字节的原点*数组名称*; 相反，它是*下标*th 元素的数组。 (有关此转换的详细信息，请参阅[相加运算符](../cpp/additive-operators-plus-and.md)。)  
   
  同样，对于多维数组，将使用以下方法获取地址：  
   
- **\(\(**   
- ***array\-name* \) \+ \(**   
- ***subscript* 1**  *max*2 *\* max*3*...max*n\)               **\+** *subscript*2 *\* max*3*...max*n\)                    . . .  *\+* *subscript*n\)\)  
+ **((**   
+ ***阵列名称*) + （**   
+ ***下标*1***max*2 * \* max*3*....max 表示*n) ** + ***下标*2 * \* max*3*....max 表示*n)。   。 。 *+**下标*n))  
   
-## 请参阅  
- [数组](../cpp/arrays-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [阵列](../cpp/arrays-cpp.md)

@@ -1,40 +1,56 @@
 ---
-title: "复制构造函数和复制赋值运算符 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= 运算符, 复制对象"
-  - "赋值到复制对象"
-  - "赋值运算符, 用于复制对象"
-  - "赋值语句, 复制对象"
-  - "复制对象"
-  - "初始化对象, 通过复制对象"
-  - "对象 [C++], 复制"
+title: "复制构造函数和复制赋值运算符 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- = operator, copying objects
+- assignment statements, copying objects
+- assignment operators, for copying objects
+- objects [C++], copying
+- initializing objects, by copying objects
+- copying objects
+- assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 复制构造函数和复制赋值运算符 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="copy-constructors-and-copy-assignment-operators-c"></a>复制构造函数和复制赋值运算符 (C++)
 > [!NOTE]
->  从 C\+\+ 11 中开始，该语言支持两种类型的分配：*复制赋值*和*移动赋值*。  在本文中，“赋值”意味着复制赋值，除非有其他显式声明。  有关移动分配的信息，请参阅[移动构造函数和移动赋值运算符 \(C\+\+\)](http://msdn.microsoft.com/zh-cn/1442de5f-37a5-42a1-83a6-ec9cfe0414db)。  
+>  从 C + + 11 开始，两种类型的分配支持的语言：*复制分配*和*移动赋值*。 在本文中，“赋值”意味着复制赋值，除非有其他显式声明。 有关移动分配的信息，请参阅[移动构造函数和移动赋值运算符 （c + +）](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db)。  
 >   
 >  赋值操作和初始化操作都会导致对象被复制。  
   
--   **赋值**：在将一个对象的值赋给另一个对象时，第一个对象将复制到第二个对象中。  因此，  
+-   **分配**： 如果一个对象的值分配给另一个对象，第一个对象将复制到第二个对象。 因此，  
   
     ```cpp  
     Point a, b;  
@@ -44,9 +60,9 @@ manager: "ghogen"
   
      导致 `b` 的值被复制到 `a` 中。  
   
--   **初始化**：在以下情况下将进行初始化：声明新对象、参数通过值传递给函数或值通过值从函数返回。  
+-   **初始化**： 声明新对象、 自变量传递给函数的值，或当值从函数返回值时，便会初始化。  
   
- 您可以为类类型的对象定义“复制”的语义。  例如，考虑此代码：  
+ 您可以为类类型的对象定义“复制”的语义。 例如，考虑此代码：  
   
 ```cpp  
 TextFile a, b;  
@@ -59,13 +75,11 @@ b = a;
   
 -   通过将赋值运算符 `operator=` 与对类类型的引用一起用作返回类型和 `const` 引用所传递的参数（例如，`ClassName& operator=(const ClassName& x);`）。  
   
--   通过通过复制构造函数。  有关复制构造函数的详细信息，请参阅[声明构造函数的规则](../misc/rules-for-declaring-constructors.md)。  
+-   通过通过复制构造函数。   
   
- 如果不声明复制构造函数，编译器将为你生成 member\-wise 复制构造函数。  如果不声明复制赋值运算符，编译器将为你生成 member\-wise 复制赋值运算符。 声明复制构造函数不会取消编译器生成的复制赋值运算符，反之亦然。  如果实现上述其中一项，建议您还实现另一项以使代码的含义变得明确。  
-  
- [\(NOTINBUILD\) Memberwise Assignment and Initialization](http://msdn.microsoft.com/zh-cn/94048213-8b49-4416-8069-b1b7a6f271f9)中更详细地介绍了逐个成员赋值。  
-  
- 复制构造函数采用了 *class\-name***&** 类型的参数，其中 *class\-name* 是为其定义构造函数的类的名称。  例如:  
+ 如果不声明复制构造函数，编译器将为你生成 member-wise 复制构造函数。  如果不声明复制赋值运算符，编译器将为你生成 member-wise 复制赋值运算符。 声明复制构造函数不会取消编译器生成的复制赋值运算符，反之亦然。 如果实现上述其中一项，建议您还实现另一项以使代码的含义变得明确。  
+   
+ 复制构造函数采用类型的自变量*类名***&**，其中*类名*是为其定义构造函数的类的名称。 例如:   
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -82,21 +96,20 @@ int main()
 ```  
   
 > [!NOTE]
->  尽可能创建该类型的复制构造函数的参数 *const class\-name***&**。  这可防止复制构造函数意外更改从中复制它的对象。  它还支持从 **const** 对象进行复制。  
+>  请复制构造函数的自变量的类型*常量的类名称*** & **尽可能。 这可防止复制构造函数意外更改从中复制它的对象。 它还允许将从复制**const**对象。  
   
-## 编译器生成的构造函数  
- 编译器生成的复制构造函数（如用户定义的复制构造函数）具有单个参数类型“对 *class\-name* 的引用”。 当所有基类和成员类都具有声明为采用 **const** *class\-name***&** 类型的单个参数的复制构造函数时，将引发异常。  在这种情况下，编译器生成的复制构造函数的参数也是 **const**。  
+## <a name="compiler-generated-copy-constructors"></a>编译器生成的构造函数  
+ 编译器生成的复制构造函数，如用户定义的复制构造函数具有单个参数的类型"引用*类名*。" 例外情况是当所有基类和成员类都具有声明为采用单个参数的类型的复制构造函数**const** *类名***&**。 在这种情况下，编译器生成的复制构造函数的参数也是**const**。  
   
- 当复制构造函数的参数类型不是 **const** 时，通过复制 **const** 对象进行初始化将产生错误。  反之则不然：如果参数是 **const**，您可以通过复制不是 **const** 的对象进行初始化。  
+ 当复制构造函数自变量类型不是**const**，通过复制初始化**const**对象生成一个错误。 反之则不然： 如果参数是**const**，可以通过复制不是一个对象初始化**const**。  
   
- 编译器生成的赋值运算符遵循关于 **const** 的相同模式。 除非所有基类和成员类中的赋值运算符都采用 **const** *class\-name&* 类型的参数，否则它们将采用 *class\-name***&** 类型的单个参数。 在这种情况下，类的生成的赋值运算符采用 **const** 参数。  
+ 编译器生成的赋值运算符遵循关于相同的模式**const。** 它们将采用类型的单个参数*类名*** & **除非所有基类和成员类中的赋值运算符采用自变量类型的**const** *类名称 （& a)。* 在这种情况下，类的生成的赋值运算符采用**const**自变量。  
   
 > [!NOTE]
 >  当虚拟基类由复制构造函数（编译器生成或用户定义的）初始化时，将只初始化这些基类一次：在构造它们时。  
   
- 含义类似于复制构造函数的含义。  当参数类型不是 **const** 时，从 **const** 对象赋值将产生错误。  反之则不然：如果将 **const** 值赋给不是 **const** 的值，则赋值能成功。  
+ 含义类似于复制构造函数的含义。 当自变量类型不是**const**，从分配**const**对象生成一个错误。 反之则不然： 如果**const**值分配给一个值，不是**const**，则赋值能成功。  
   
- 有关重载赋值运算符的详细信息，请参阅[赋值](../cpp/assignment.md)。  
+ 有关重载的赋值运算符的详细信息，请参阅[分配](../cpp/assignment.md)。  
   
-## 请参阅  
- [特殊成员函数](../misc/special-member-functions-cpp.md)
+

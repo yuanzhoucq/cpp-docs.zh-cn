@@ -1,30 +1,47 @@
 ---
-title: "浮点协处理器和调用约定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "浮点协处理器"
-  - "浮点数字"
-  - "浮点数字, 协处理器"
+title: "浮点协处理器和调用约定 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point numbers, coprocessor
+- floating-point coprocessor
+- floating-point numbers
 ms.assetid: 3cc6615a-b308-4cf7-9570-83e192a832b3
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 浮点协处理器和调用约定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6d14f7f445064316c83b31e9b4cdc421d68d7255
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-如果在为浮点协处理器编写程序集例程，必须保留浮点控制字和清理协处理器堆栈，除非您在返回 **float** 或 **double** 值（您的函数应通过 ST\(0\) 返回）。  
+---
+# <a name="floating-point-coprocessor-and-calling-conventions"></a>浮点协处理器和调用约定
+如果要为浮点例程点协处理器编写程序集，你必须保留浮点控制字和清理协处理器堆栈，除非您在返回**float**或**double**值 （您的函数应返回 ST(0)) 中。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调用约定](../cpp/calling-conventions.md)

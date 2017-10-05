@@ -1,34 +1,51 @@
 ---
-title: "ConvertStringToBSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ConvertStringToBSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ConvertStringToBSTR 函数"
+title: "ConvertStringToBSTR |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ConvertStringToBSTR
+dev_langs:
+- C++
+helpviewer_keywords:
+- ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# ConvertStringToBSTR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3778f84f152b9ce5dd1121d9cf01d7c1a4472a1e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft 专用**  
   
- 将 **char \*** 值转换为 `BSTR`。  
+ 将转换**char \* **值赋给`BSTR`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,11 +54,11 @@ caps.handback.revision: 9
 )  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pSrc`  
- **char \*** 变量。  
+ A **char \* **变量。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // ConvertStringToBSTR.cpp  
@@ -62,14 +79,17 @@ int main() {
 }  
 ```  
   
-  **char \* 文本：Test**  
-**BSTR 文本：Test**   
-## 结束 Microsoft 专用  
+```Output  
+char * text: Test  
+BSTR text: Test  
+```  
   
-## 要求  
- **头文件：** comutil.h  
+**结束 Microsoft 专用**  
   
- **Lib：**comsuppw.lib 或 comsuppwd.lib（有关详细信息，请参阅 [\/Zc:wchar\_t（wchar\_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)）  
+## <a name="requirements"></a>要求  
+ **标头：** comutil.h  
   
-## 请参阅  
+ **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)

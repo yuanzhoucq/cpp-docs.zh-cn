@@ -1,34 +1,50 @@
 ---
-title: "false (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "false_cpp"
-  - "false"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "false 关键字 [C++]"
+title: "false （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- false_cpp
+- "false"
+dev_langs:
+- C++
+helpviewer_keywords:
+- false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# false (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9937d786413234c2d5d87bd9505982e70112aca4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 09/25/2017
 
-关键字是类型 [bool](../cpp/bool-cpp.md) 的变量或条件表达式（条件表达式现为 **true** Boolean 表达式）的两个值之一。  例如，如果 `i` 是类型 `bool` 的变量，则 `i = false;` 语句将 **false** 分配给 `i`。  
+---
+# <a name="false-c"></a>false (C++)
+关键字是类型的变量的两个值之一[bool](../cpp/bool-cpp.md)或条件表达式 (条件表达式现在是**true**布尔表达式)。 例如，如果`i`是类型的变量`bool`、`i = false;`语句分配**false**到`i`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // bool_false.cpp  
@@ -43,7 +59,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**0**   
-## 请参阅  
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+```Output  
+1  
+0  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [关键字](../cpp/keywords-cpp.md)
