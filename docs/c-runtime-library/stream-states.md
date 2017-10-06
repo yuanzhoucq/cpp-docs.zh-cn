@@ -17,20 +17,6 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
 ms.openlocfilehash: f2d1b9a6f4a25423f5e3f418604a8f05e83e1b31
@@ -38,8 +24,7 @@ ms.contentlocale: zh-cn
 ms.lasthandoff: 07/14/2017
 
 ---
-# 流状态
-<a id="stream-states" class="xliff"></a>
+# <a name="stream-states"></a>流状态
 下图中显示了流的有效状态及状态转换。  
   
  ![流](../c-runtime-library/media/stream.gif "流")  
@@ -68,6 +53,5 @@ ms.lasthandoff: 07/14/2017
   
  最后，状态图显示位置操作始终不会减少可后续进行的有效函数调用的次数。  
   
-## 另请参阅
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>另请参阅  
  [文件和流](../c-runtime-library/files-and-streams.md)
