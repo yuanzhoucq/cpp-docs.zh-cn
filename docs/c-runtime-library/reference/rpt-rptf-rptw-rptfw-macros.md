@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 宏
-通过生成调试报告跟踪应用程序的进程（仅限调试版本）。 请注意，*n* 指定 `args` 中的参数个数，它可以是 0、1、2、3、4 或 5。  
+通过生成调试报告跟踪应用程序的进程（仅限调试版本）。 请注意，  *n* 指定中的参数数目`args`和可以是 0、 1、 2、 3、 4 或 5。  
   
 ## <a name="syntax"></a>语法  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  `_RPTW` 和 `_RPTFW` 宏是这些宏的宽字符版本。 它们类似于 `wprintf` 并将宽字符字符串用作参数。  
   
- `_RPT` 宏调用 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函数，生成包含用户消息的调试报告。 `_RPTW` 宏调用 `_CrtDbgReportW` 函数，生成具有宽字符的同一个报告。 除了用户消息以外，`_RPTF` 和 `_RPTFW` 宏还将创建包含调用报告宏所在的源文件和行号的调试报告。 通过使用由 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函数定义的相同规则将 `arg`[*n* 参数替换为 `format` 字符串，以创建用户消息。  
+ `_RPT` 宏调用 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函数，生成包含用户消息的调试报告。 `_RPTW` 宏调用 `_CrtDbgReportW` 函数，生成具有宽字符的同一个报告。 除了用户消息以外，`_RPTF` 和 `_RPTFW` 宏还将创建包含调用报告宏所在的源文件和行号的调试报告。 通过用替换来创建用户消息`arg`[*n*] 参数插入`format`字符串，并使用定义的相同规则[printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)函数。  
   
  `_CrtDbgReport` 或 `_CrtDbgReportW` 会基于当前报告模式以及为 `reportType` 定义的文件，生成调试报告并确定其目标。 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 函数用于为每种报告类型定义目标。  
   

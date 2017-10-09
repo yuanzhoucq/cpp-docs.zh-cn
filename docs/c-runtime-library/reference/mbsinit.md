@@ -1,46 +1,49 @@
 ---
-title: "mbsinit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbsinit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsinit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mbsinit 函数"
+title: "mbsinit | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbsinit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- mbsinit
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# mbsinit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 5b6105de398d50770aecc55cd10f209e6c4521ba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="mbsinit"></a>mbsinit
 跟踪多字节字符转换的状态。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -49,19 +52,19 @@ caps.handback.revision: 11
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `ps`  
- 指向[mbstate\_t](../../c-runtime-library/standard-types.md) 变量的指针。  
+ 指向 [mbstate_t](../../c-runtime-library/standard-types.md) 变量的指针。  
   
-## 返回值  
- 如果 `ps`是 NULL或者不在转换中间，则非零。  
+## <a name="return-value"></a>返回值  
+ 如果 `ps` 为 NULL 或者不在转换的中间，则为非零值。  
   
-## 备注  
- 在使用采用 **mbstate\_t** 指针的 ANSI 函数时，传递`mbstate_t` 的地址将返回缓冲区的最后一字节是否转换的信息。  
+## <a name="remarks"></a>备注  
+ 当使用接受 **mbstate_t** 指针的 ANSI 函数之一时，传递 `mbstate_t` 的地址将返回有关缓冲区中的最后一个字节是否已转换的信息。  
   
- 需要安装适当代码页支持多字节字符。  
+ 需要安装适当的代码页来支持多字节字符。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_mbsinit.cpp  
@@ -155,7 +158,7 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 Locale set to: "Japanese_Japan.932"  
@@ -167,5 +170,5 @@ MB String: AaBbCcxXyYzZ
 WC String: AaBbCcxXyYzZ  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)

@@ -23,32 +23,18 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: fa331e05d647b5e2b9a0a76581e75d6b40366f95
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a777b3c1ae6056fe4ae414371cbed4eee1accd86
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 类
-此类提供 Windows 线程的创建函数。 如果该线程将不使用的 CRT 函数，请使用此类。  
+此类提供了 Windows 线程创建函数。 如果线程将不会使用 CRT 函数，请使用此类。  
   
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,26 +46,26 @@ class Win32ThreadTraits
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|（静态）调用此函数可创建不应使用的 CRT 函数的线程。|  
+|[Win32ThreadTraits::CreateThread](#createthread)|（静态）调用此函数可创建一个不应使用 CRT 函数的线程。|  
   
 ## <a name="remarks"></a>备注  
- 线程特征是线程的为特定类型提供创建函数的类。 创建函数具有相同的签名和语义，随着 Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数。  
+ 线程特征是线程的为特定类型提供创建函数的类。 创建函数将具有与 Windows 相同的签名和语义[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数。  
   
- 下面的类使用线程特征︰  
+ 由以下类使用线程特征：  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- 如果该线程将使用的 CRT 函数，使用[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)相反。  
+ 线程要使用 CRT 函数，如果使用[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)相反。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
   
 ##  <a name="createthread"></a>Win32ThreadTraits::CreateThread  
- 调用此函数可创建不应使用的 CRT 函数的线程。  
+ 调用此函数可创建一个不应使用 CRT 函数的线程。  
   
 ```
 static HANDLE CreateThread(
@@ -96,22 +82,22 @@ static HANDLE CreateThread(
  新线程的安全属性。  
   
  `dwStackSize`  
- 新线程，堆栈大小。  
+ 新线程堆栈大小。  
   
  `pfnThreadProc`  
  新线程的线程的过程。  
   
  `pvParam`  
- 要传递给该线程过程的参数。  
+ 要传递给了线程过程的参数。  
   
  `dwCreationFlags`  
- 创建标志 （0 或 CREATE_SUSPENDED）。  
+ 创建标志 （0 个或 CREATE_SUSPENDED）。  
   
  `pdwThreadId`  
  [out]成功时，接收新创建的线程的线程 ID 的 DWORD 变量的地址。  
   
 ### <a name="return-value"></a>返回值  
- 失败时返回新创建的线程或为空的句柄。 调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)若要获得扩展错误信息。  
+ 失败时返回的新创建的线程或为 NULL 的句柄。 调用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)若要获得扩展的错误信息。  
   
 ### <a name="remarks"></a>备注  
  请参阅[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)有关对此函数的参数的详细信息。  

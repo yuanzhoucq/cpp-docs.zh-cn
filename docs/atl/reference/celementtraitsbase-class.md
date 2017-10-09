@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 类
-此类提供默认副本，并将移动的集合类的方法。  
+此类提供默认副本，并移动的集合类的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -57,34 +43,34 @@ class CElementTraitsBase
   
 #### <a name="parameters"></a>参数  
  `T`  
- 要在集合中存储的数据类型。  
+ 要存储在集合中的数据类型。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CElementTraitsBase::INARGTYPE](#inargtype)|要用于将元素添加到集合类对象的数据类型。|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|要用于从集合类对象中检索元素的数据类型。|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|要用来检索元素的集合类对象的数据类型。|  
   
 ### <a name="public-methods"></a>公共方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|调用此方法将存储在集合类对象中的元素复制。|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|调用此方法来重新定位在集合类对象中存储元素。|  
+|[CElementTraitsBase::CopyElements](#copyelements)|调用此方法以将集合类对象中存储的元素复制。|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|调用此方法可重新定位集合类对象中存储元素。|  
   
 ## <a name="remarks"></a>备注  
- 此基类的类定义进行复制和重新定位在集合类元素的方法。 类使用它可以将[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)， [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)，和[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
+ 此基类的类定义复制和重新指定的集合类中的元素的方法。 类使用[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)， [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)，和[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcoll.h  
+ **标头：** atlcoll.h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
- 调用此方法将存储在集合类对象中的元素复制。  
+ 调用此方法以将集合类对象中存储的元素复制。  
   
 ```
 static void CopyElements(
@@ -95,7 +81,7 @@ static void CopyElements(
   
 ### <a name="parameters"></a>参数  
  `pDest`  
- 指向将接收复制的数据的第一个元素的指针。  
+ 将接收复制的数据的第一个元素的指针。  
   
  `pSrc`  
  指向要复制的第一个元素的指针。  
@@ -104,7 +90,7 @@ static void CopyElements(
  要复制的元素数。  
   
 ### <a name="remarks"></a>备注  
- 源和目标元素不应重叠。  
+ 不应重叠的源和目标的元素。  
   
 ##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  要用于将元素添加到集合的数据类型。  
@@ -114,14 +100,14 @@ typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
- 要用于从集合中检索元素的数据类型。  
+ 要用来从集合检索元素的数据类型。  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
- 调用此方法来重新定位在集合类对象中存储元素。  
+ 调用此方法可重新定位集合类对象中存储元素。  
   
 ```
 static void RelocateElements(
@@ -132,7 +118,7 @@ static void RelocateElements(
   
 ### <a name="parameters"></a>参数  
  `pDest`  
- 指向将接收被重新定位的数据的第一个元素的指针。  
+ 将收到的被重新定位的数据的第一个元素的指针。  
   
  `pSrc`  
  若要重新定位的第一个元素的指针。  
@@ -141,7 +127,7 @@ static void RelocateElements(
  要重新定位的元素数。  
   
 ### <a name="remarks"></a>备注  
- 此方法调用[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，足以满足大多数数据类型。 如果正在移动的对象包含它们自己的成员的指针，将需要重写此方法。  
+ 此方法调用[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，这对大多数数据类型足够了。 如果要移动的对象包含指向其自己的成员的指针，此方法将需要重写。  
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)

@@ -21,29 +21,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 类
-此类提供一个静态函数用于计算哈希值。  
+此类提供用于计算哈希值的静态函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +40,7 @@ class CDefaultHashTraits
   
 #### <a name="parameters"></a>参数  
  `T`  
- 要在集合中存储的数据类型。  
+ 要存储在集合中的数据类型。  
   
 ## <a name="members"></a>成员  
   
@@ -62,18 +48,18 @@ class CDefaultHashTraits
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|（静态）调用此函数来计算给定元素的哈希值。|  
+|[CDefaultHashTraits::Hash](#hash)|（静态）调用此函数可计算给定元素的哈希值。|  
   
 ## <a name="remarks"></a>备注  
- 此类包含一个返回给定元素的哈希值的单个静态函数。 此类利用[CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)。  
+ 此类包含一个返回给定元素的哈希值的单个静态函数。 使用此类[CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcoll.h  
+ **标头：** atlcoll.h  
   
 ##  <a name="hash"></a>CDefaultHashTraits::Hash  
- 调用此函数来计算给定元素的哈希值。  
+ 调用此函数可计算给定元素的哈希值。  
   
 ```
 static ULONG Hash(const T& element) throw();
@@ -84,10 +70,10 @@ static ULONG Hash(const T& element) throw();
  元素。  
   
 ### <a name="return-value"></a>返回值  
- 返回的哈希值。  
+ 返回哈希值。  
   
 ### <a name="remarks"></a>备注  
- 默认哈希算法是非常简单︰ 返回值是元素数。 如果需要更复杂的算法，则重写此函数。  
+ 默认哈希算法是非常简单： 返回的值是元素数。 如果需要更复杂的算法，重写此函数。  
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)

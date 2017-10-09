@@ -22,25 +22,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1d1253b7a7d69024465627cc9fb37fcd2afba693
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 类
@@ -55,7 +41,7 @@ class CDefaultCompareTraits
   
 #### <a name="parameters"></a>参数  
  `T`  
- 要在集合中存储的数据类型。  
+ 要存储在集合中的数据类型。  
   
 ## <a name="members"></a>成员  
   
@@ -63,19 +49,19 @@ class CDefaultCompareTraits
   
 |名称|描述|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|（静态）调用此函数可比较两个元素相等。|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|（静态）调用此函数可确定更高版本或更低的元素。|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|（静态）调用此函数可比较两个元素相等性。|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|（静态）调用此函数可确定更大或较低的元素。|  
   
 ## <a name="remarks"></a>备注  
- 此类包含用于存储在集合类对象中的元素进行比较的两个静态函数。 此类利用[CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)。  
+ 此类包含用于比较存储在集合类对象中元素的两个静态函数。 使用此类[CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcoll.h  
+ **标头：** atlcoll.h  
   
 ##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
- 调用此函数可比较两个元素相等。  
+ 调用此函数可比较两个元素相等性。  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -92,10 +78,10 @@ static bool CompareElements(const T& element1, const T& element2);
  如果元素均相等，则返回 false，则返回 true。  
   
 ### <a name="remarks"></a>备注  
- 此函数的默认实现是等号 ( `==`) 运算符。 对于以外的简单数据类型的对象，该函数可能需要重写。  
+ 此函数的默认实现是相等性 ( `==`) 运算符。 对于以外的简单数据类型的对象，此函数可能需要重写。  
   
 ##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
- 调用此函数可确定更高版本或更低的元素。  
+ 调用此函数可确定更大或较低的元素。  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -109,7 +95,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
  第二个元素。  
   
 ### <a name="return-value"></a>返回值  
- 返回一个整数，基于以下表︰  
+ 返回一个整数，该整数基于下表：  
   
 |条件|返回值|  
 |---------------|------------------|  
@@ -118,7 +104,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>备注  
- 此函数的默认实现使用`==`， ** \< **，和** > **运算符。 对于以外的简单数据类型的对象，该函数可能需要重写。  
+ 此函数的默认实现使用`==`，  **\<** ，和 **>** 运算符。 对于以外的简单数据类型的对象，此函数可能需要重写。  
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)

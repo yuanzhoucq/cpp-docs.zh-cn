@@ -1,47 +1,50 @@
 ---
-title: "towctrans | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "towctrans"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "towctrans"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "towctrans 函数"
+title: "towctrans | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- towctrans
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- towctrans
+dev_langs:
+- C++
+helpviewer_keywords:
+- towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# towctrans
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: fcd97b3af0bb7e469db18b1a7ff8290af5df1bc4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="towctrans"></a>towctrans
 转换字符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 wint_t towctrans(  
@@ -50,29 +53,29 @@ wint_t towctrans(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `c`  
  要转换的字符。  
   
  `category`  
- 包含 [wctrans](../../c-runtime-library/reference/wctrans.md)返回值的标识符。  
+ 包含 [wctrans](../../c-runtime-library/reference/wctrans.md) 的返回值的标识符。  
   
-## 返回值  
- `towctrans` 后面的 `c`字符，`category`使用的转换规则。  
+## <a name="return-value"></a>返回值  
+ `c` 后面的 `towctrans` 字符使用 `category` 中的转换规则。  
   
-## 备注  
- 绑定由对 [wctrans](../../c-runtime-library/reference/wctrans.md)的早期的成功调用 `category` 的返回值。  
+## <a name="remarks"></a>备注  
+ `category` 的值必须已通过之前对 [wctrans](../../c-runtime-library/reference/wctrans.md) 进行的成功调用返回。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`towctrans`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`towctrans`|\<wctype.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
- 使用 `towctrans`的示例参见 `wctrans`。  
+## <a name="example"></a>示例  
+ 有关使用 `wctrans` 的示例，请参见 `towctrans`。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)

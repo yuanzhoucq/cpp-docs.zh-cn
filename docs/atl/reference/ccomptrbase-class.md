@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
@@ -93,15 +79,15 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|强制转换运算符。|  
 |[CComPtrBase::operator ！](#operator_not)|NOT 运算符。|  
-|[CComPtrBase::operator.](#operator_amp)|1 & 运算符。|  
+|[CComPtrBase::operator （& a)](#operator_amp)|& 运算符。|  
 |[CComPtrBase::operator *](#operator_star)|* 运算符。|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|小于-高于运算符。|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|小于-高于运算符。|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|相等运算符。|  
-|[-> CComPtrBase::operator](#operator_ptr)|指针到成员运算符中。|  
+|[CComPtrBase::operator->](#operator_ptr)|指针到成员运算符中。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComPtrBase::p](#p)|指针数据成员变量。|  
   
@@ -109,7 +95,7 @@ class CComPtrBase
  此类为其他智能指针，如使用 COM 内存管理例程，该对话框提供了基础[CComQIPtr](../../atl/reference/ccomqiptr-class.md)和[CComPtr](../../atl/reference/ccomptr-class.md)。 派生的类中添加自己的构造函数和运算符，但是在提供的方法依赖于`CComPtrBase`。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcomcli.h  
+ **标头：** atlcomcli.h  
   
 ##  <a name="advise"></a>CComPtrBase::Advise  
  调用此方法以之间创建连接`CComPtrBase`的连接点和客户端的接收器。  
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>参数  
  `pOther`  
- **IUnknown \***进行比较。  
+ **IUnknown \*** 进行比较。  
   
 ### <a name="return-value"></a>返回值  
  如果对象均相同，则返回 false，则返回 true。  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  返回 true 如果`CComHeapPtr`指针为 NULL，等于 false 否则为。  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- 1 & 运算符。  
+ & 运算符。  
   
 ```
 T** operator&() throw();

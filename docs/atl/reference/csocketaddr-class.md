@@ -26,25 +26,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ee3f69874460d09e495a237985a98ace19134a01
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 33e82acc7b246c1c28eb991c49010f811420094b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 类
@@ -60,7 +46,7 @@ class CSocketAddr
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSocketAddr::CSocketAddr](#csocketaddr)|构造函数。|  
   
@@ -71,18 +57,18 @@ class CSocketAddr
 |[CSocketAddr::FindAddr](#findaddr)|调用此方法将提供的主机名转换为主机地址。|  
 |[CSocketAddr::FindINET4Addr](#findinet4addr)|调用此方法将 IPv4 主机名转换为主机地址。|  
 |[CSocketAddr::FindINET6Addr](#findinet6addr)|调用此方法将 IPv6 主机名转换为主机地址。|  
-|[CSocketAddr::GetAddrInfo](#getaddrinfo)|调用此方法以返回指向中的特定元素的指针**addrinfo**列表。|  
+|[CSocketAddr::GetAddrInfo](#getaddrinfo)|调用此方法以返回到中的特定元素的指针**addrinfo**列表。|  
 |[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|调用此方法以返回一个指向**addrinfo**列表。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供不可知的方法，以查找与 Windows 一起使用的网络地址设置套接字 API 函数和套接字包装库中的 IP 版本。  
+ 此类提供 API 函数和库中的套接字包装，套接字不可知的方法，用于查找与 Windows 一起使用的网络地址的 IP 版本。  
   
  用于查找网络地址的此类成员都使用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)。  
   
  此类支持这两个 IPv4 andIPv6 网络地址。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlsocket.h  
+ **标头：** atlsocket.h  
   
 ##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
  构造函数。  
@@ -120,7 +106,7 @@ int FindAddr(
  主机名或以点分隔的 IP 地址。  
   
  *szPortOrServiceName*  
- 端口号或主机上的服务的名称。  
+ 端口号或主机上的服务名称。  
   
  `nPortNo`  
  端口号。  
@@ -129,19 +115,19 @@ int FindAddr(
  0 或 AI_PASSIVE、 AI_CANONNAME 或 AI_NUMERICHOST 的组合。  
   
  *addr_family*  
- 地址 （如 PF_INET) 的系列。  
+ 地址系列 （例如 PF_INET)。  
   
  `sock_type`  
  套接字类型 （如 SOCK_STREAM)。  
   
  *ai_proto*  
- 协议 （例如 IPPROTO_IP 或 IPPROTO_IPV6）。  
+ 协议 （如 IPPROTO_IP 或 IPPROTO_IPV6）。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功计算出该地址，则返回零。 失败时返回非零的 Windows 套接字错误代码。 如果成功，计算的地址存储在可能使用所引用的链接列表`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
+ 如果成功计算地址，则返回零。 返回一个非零的 Windows 套接字错误代码失败。 如果成功，计算的地址存储在可能使用引用的链接列表`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
   
 ### <a name="remarks"></a>备注  
- 主机名称参数可能是 IPv4 或 IPv6 格式。 此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
+ 主机名称参数还可以是 IPv4 或 IPv6 格式。 此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
 ##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
  调用此方法将 IPv4 主机名转换为主机地址。  
@@ -168,7 +154,7 @@ int FindINET4Addr(
  套接字类型 （如 SOCK_STREAM)。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功计算出该地址，则返回零。 失败时返回非零的 Windows 套接字错误代码。 如果成功，计算的地址存储在可能使用所引用的链接列表`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
+ 如果成功计算地址，则返回零。 返回一个非零的 Windows 套接字错误代码失败。 如果成功，计算的地址存储在可能使用引用的链接列表`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
   
 ### <a name="remarks"></a>备注  
  此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
@@ -198,13 +184,13 @@ int FindINET6Addr(
  套接字类型 （如 SOCK_STREAM)。  
   
 ### <a name="return-value"></a>返回值  
- 如果成功计算出该地址，则返回零。 失败时返回非零的 Windows 套接字错误代码。 如果成功，计算的地址存储在可能使用所引用的链接列表`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
+ 如果成功计算地址，则返回零。 返回一个非零的 Windows 套接字错误代码失败。 如果成功，计算的地址存储在可能使用引用的链接列表`CSocketAddr::GetAddrInfoList`和`CSocketAddr::GetAddrInfo`。  
   
 ### <a name="remarks"></a>备注  
  此方法调用 Win32 API 函数[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)来执行转换。  
   
 ##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
- 调用此方法以返回指向中的特定元素的指针**addrinfo**列表。  
+ 调用此方法以返回到中的特定元素的指针**addrinfo**列表。  
   
 ```
 addrinfo* const GetAddrInfoint nIndex = 0) const;
@@ -215,7 +201,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
  对中的特定元素的引用[addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530)列表。  
   
 ### <a name="return-value"></a>返回值  
- 返回一个指向**addrinfo**结构引用的`nIndex`中包含有关主机的响应信息的链接列表。  
+ 返回一个指向**addrinfo**结构引用`nIndex`中包含有关主机的响应信息的链接列表。  
   
 ##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
  调用此方法以返回一个指向**addrinfo**列表。  
@@ -225,7 +211,7 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向链接列表的一个或多个`addrinfo`包含有关主机的响应信息的结构。 有关详细信息`addrinfo`结构，请参阅"addrinfo"文章中的[MSDN 库](http://go.microsoft.com/fwlink/linkid=556)  
+ 指向一个或多个链接列表`addrinfo`包含有关主机的响应信息的结构。 有关详细信息`addrinfo`结构，请参阅中的"addrinfo"文章[MSDN 库](http://go.microsoft.com/fwlink/linkid=556)  
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)

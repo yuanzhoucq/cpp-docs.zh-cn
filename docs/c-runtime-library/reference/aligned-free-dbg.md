@@ -35,25 +35,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 724acaed1c99aa2507c33010e97f3f993e1b6de6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -72,7 +58,7 @@ void _aligned_free_dbg(
  指向返回到 `_aligned_malloc` 或 `_aligned_offset_malloc` 函数的内存块的指针。  
   
 ## <a name="remarks"></a>备注  
- `_aligned_free_dbg` 函数是 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_free_dbg` 的调用都会减少到对 `_aligned_free` 的调用。 同时`_aligned_free`和`_aligned_free_dbg`释放内存块在基堆中，但`_aligned_free_dbg`还包含一种调试功能︰ 能够保留已释放在堆链接列表，以便模拟内存不足的情况中块。  
+ `_aligned_free_dbg` 函数是 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，每个对 `_aligned_free_dbg` 的调用都会减少到对 `_aligned_free` 的调用。 同时`_aligned_free`和`_aligned_free_dbg`释放内存块在基堆中，但`_aligned_free_dbg`还包含一种调试功能： 能够保留已释放在堆链接列表，以便模拟内存不足的情况中块。  
   
  在执行释放操作之前，`_aligned_free_dbg` 将在所有指定的文件和块位置上执行有效性检查。 应用程序不应该提供此信息。 当释放内存块时，调试堆管理器自动检查用户部分两侧的缓冲区的完整性，如果发生覆盖，将发出错误报告。 如果设置了 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 标志的 `_CRTDBG_DELAY_FREE_MEM_DF` 位域，则将使用值 0xDD 填充释放的块、为其分配 `_FREE_BLOCK` 块类型，以及将其保留在内存块的堆链接列表中。  
   
@@ -86,7 +72,7 @@ void _aligned_free_dbg(
 |-------------|---------------------|  
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

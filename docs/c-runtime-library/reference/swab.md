@@ -1,52 +1,55 @@
 ---
-title: "_swab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_swab"
-  - "stdlib/_swab"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_swab"
-  - "stdlib/_swab"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_swab 函数"
-  - "字节, 交换"
-  - "swab 函数"
-  - "交换字节"
+title: "_swab | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _swab
+- stdlib/_swab
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _swab
+- stdlib/_swab
+dev_langs:
+- C++
+helpviewer_keywords:
+- _swab function
+- swapping bytes
+- swab function
+- bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _swab
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="swab"></a>_swab
 交换字节。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void _swab(  
@@ -56,52 +59,56 @@ void _swab(
 );  
 ```  
   
-#### 参数  
+## <a name="parameters"></a>参数  
  `src`  
- 复制和交换数据。  
+ 要复制和交换的数据。  
   
  `dest`  
- 交换数据的存储位置。  
+ 已交换数据的存储位置。  
   
  `n`  
- 复制和交换字节数。  
+ 要复制和交换的字节数。  
   
-## 备注  
- 如果 `n` 值为偶数，`_swab` 函数从 `src`复制 `n` 字节，交换每对相邻字节，并将结果存储在 `dest`中。  如果 `n` 为奇数，复制`_swab` ，交换`src`的第一个`n-1` 字节。  `_swab` 通常用于为传输二进制数据到使用不同字节顺序的计算机上做准备。  
+## <a name="return-value"></a>返回值
+ `swab` 函数不返回值。 如果 `src` 或 `dest` 指针为空指针或 `n` 小于零，则函数将 `errno` 设置为 `EINVAL`，并调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
-## 要求  
+ 有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+ 
+## <a name="remarks"></a>备注  
+ 如果 `n` 值为偶数，`_swab` 函数将从 `n` 复制 `src` 个字节，交换每对相邻的字节，并将结果存储在 `dest` 上。 如果 `n` 为奇数，则 `_swab` 复制并交换 `src` 的前 `n-1` 字节，而并不复制最后一个字节。 `_swab` 函数通常用于准备要传输到使用不同的字节顺序的计算机的二进制数据。  
   
+## <a name="requirements"></a>要求  
 |例程|必需的标头|  
-|--------|-----------|  
-|`_swab`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_swab`|C：\<stdlib.h> C++：\<cstdlib> 或 \<stdlib.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
-  
-```  
+## <a name="example"></a>示例  
+```C 
 // crt_swab.c  
   
 #include <stdlib.h>  
 #include <stdio.h>  
   
 char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "..........................";  
+char to[] =   "...........................";  
   
 int main()  
 {  
-    printf( "Before: %s\n        %s\n\n", from, to );  
-    _swab( from, to, sizeof( from ) );  
-    printf( "After:  %s\n        %s\n\n", from, to );  
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
+    _swab(from, to, sizeof(from));  
+    printf("After:  %s\n        %s\n\n", from, to);  
 }  
 ```  
   
-  **前面：BADCFEHGJILKNMPORQTSVUXWZY**  
- **..........................**  
-**后面：BADCFEHGJILKNMPORQTSVUXWZY**  
- **ABCDEFGHIJKLMNOPQRSTUVWXYZ**   
-## .NET Framework 等效项  
- 不适用。若要调用标准 C 函数，请使用 `PInvoke`。有关更多信息，请参见[平台调用示例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
+        ...........................  
   
-## 请参阅  
+After:  BADCFEHGJILKNMPORQTSVUXWZY  
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)

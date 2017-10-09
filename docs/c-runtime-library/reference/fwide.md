@@ -1,46 +1,49 @@
 ---
-title: "fwide | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fwide"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fwide"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fwide 函数"
+title: "fwide | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fwide
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fwide
+dev_langs:
+- C++
+helpviewer_keywords:
+- fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# fwide
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: f10bd98a6dedba2181aa1d5ebba60f64dda093be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-尚未实现。  
+---
+# <a name="fwide"></a>fwide
+未实现。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int fwide(  
@@ -49,23 +52,23 @@ int fwide(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `stream`  
- 指向 `FILE` 结构的指针（忽略）。  
+ 指向 `FILE` 结构的指针（已忽略）。  
   
  `mode`  
- 流的新宽度：宽字符的正，负用于字节，零不更改退出。（忽略此值。）  
+ 流的新宽度：宽字符为正，字节为负，保持不变的为零。 （将忽略此值。）  
   
-## 返回值  
- 此当前函数返回 `mode`。  
+## <a name="return-value"></a>返回值  
+ 此函数当前仅返回 `mode`。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  此函数的当前版本不符合标准。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|功能|必需的标头|  
-|--------|-----------|  
-|`fwide`|\<wchar.h\>|  
+|函数|必需的标头|  
+|--------------|---------------------|  
+|`fwide`|\<wchar.h>|  
   
- 有关更多信息，请参见[Compatibility](../../c-runtime-library/compatibility.md)。
+ 有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。

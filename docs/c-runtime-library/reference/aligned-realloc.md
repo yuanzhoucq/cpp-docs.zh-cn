@@ -1,49 +1,52 @@
 ---
-title: "_aligned_realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_realloc"
-  - "aligned_realloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_realloc 函数"
-  - "_aligned_realloc 函数"
+title: "_aligned_realloc | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_realloc
+- aligned_realloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_realloc function
+- _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _aligned_realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2d572e7f5fa58e354ffb571bc822d8861703b564
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-更改使用 [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) 分配的内存块的大小 。  
+---
+# <a name="alignedrealloc"></a>_aligned_realloc
+更改使用 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 或 [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) 分配的内存块的大小。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void * _aligned_realloc(  
@@ -53,34 +56,34 @@ void * _aligned_realloc(
 );  
 ```  
   
-#### 参数  
- \[in\] `memblock`  
- 当前内存块的指针。  
+#### <a name="parameters"></a>参数  
+ [in] `memblock`  
+ 当前的内存块指针。  
   
- \[in\] `size`  
+ [in] `size`  
  请求的内存分配的大小。  
   
- \[in\] `alignment`  
- 对齐值必须是2的整数次幂。  
+ [in] `alignment`  
+ 对齐值，必须是 2 的整数次幂。  
   
-## 返回值  
- `_aligned_realloc` 返回一无效指针用来重分配的 \(可能移动）内存块。  如果大小为零，则返回值为 `NULL`，并且缓冲区参数不为 `NULL`，或者如果，没有足够的可用内存块来扩展特定大小的块。  在第一种情况下，释放原始块。  在第二种情况下，原始块是不变。  返回值指向保证适当地存储任何类型的对象的对齐的存储空间。  若要获取指向类型的指针而不是void，请对返回值使用类型转换。  
+## <a name="return-value"></a>返回值  
+ `_aligned_realloc` 将返回指向重新分配的（并且可能已移动的）内存块的 void 指针。 如果大小为零且缓冲区参数不为 `NULL`，或内存不足以将块展开到给定的大小，则返回值为 `NULL`。 在第一种情况下，会释放原始块。 在第二种情况下，将不会更改原始块。 返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型而非 void 的指针，请在返回值上使用类型转换。  
   
- 重新分配内存并更改块的对齐方式是错误的。  
+ 重新分配内存并更改块对齐是错误的。  
   
-## 备注  
- `_aligned_realloc` 基于 `malloc`。  有关使用 `_aligned_offset_malloc` 的详细信息，请参见[malloc](../../c-runtime-library/reference/malloc.md)。  
+## <a name="remarks"></a>备注  
+ `_aligned_realloc` 基于 `malloc`。 有关使用 `_aligned_offset_malloc` 的详细信息，请参阅 [malloc](../../c-runtime-library/reference/malloc.md)。  
   
- 如果内存分配失败或是如果请求的大小比`_HEAP_MAXREQ` 更大，则函数将 `ENOMEM` 设置为 `errno` 。  有关 `errno`的更多信息，请参见[errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  此外，`_aligned_realloc` 验证其参数。  如果 `alignment` 不是2的幂，此函数调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)所述。  如果允许执行继续，则这函数返回 `NULL` 并将 `errno` 设置为 `EINVAL`。  
+ 如果内存分配失败或请求的大小大于 `errno`，则此函数会将 `ENOMEM` 设置为 `_HEAP_MAXREQ`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外，`_aligned_realloc` 将验证其参数。 如果 `alignment` 不是 2 的幂，则此函数调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数将返回 `NULL` 并将 `errno` 设置为 `EINVAL`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_aligned_realloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_realloc`|\<malloc.h>|  
   
-## 示例  
- 有关详细信息，请参阅 [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md)。  
+## <a name="example"></a>示例  
+ 有关详细信息，请参阅 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据对齐](../../c-runtime-library/data-alignment.md)
