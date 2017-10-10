@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C2011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2011"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2011"
+title: "编译器错误 C2011 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2011
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2011
 ms.assetid: 992c9d51-e850-4d53-b86b-02e73b38249c
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C2011
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f32048e0de21e5af2d4d52a0c703813b1a1ff8b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2011"></a>编译器错误 C2011
 “identifier”：“type”类型重定义  
   
- 标识符已定义为 `type`。  检查标识符的重定义。  
+ 标识符已定义为 `type`。 检查标识符的重定义。  
   
- 如果不止一次将头文件或类型库导入同一个文件，则也有可能生成 C2011。  若要防止多次包含头文件中定义的类型，可使用头文件中的 include guards 或`#pragma` [once](../../preprocessor/once.md) 指令。  
+ 如果不止一次将头文件或类型库导入同一个文件，则也有可能生成 C2011。 若要防止多次包含头文件中定义的类型，使用 include 防护或`#pragma`[后](../../preprocessor/once.md)指令标头文件中。  
   
- 如果需要查找重定义的类型的初始声明，则可以使用 [\/P](../../build/reference/p-preprocess-to-a-file.md) 编译器标志生成传递给编译器的预处理输出。  你可以使用文本搜索工具在输出文件中查找重定义的标识符的实例。  
+ 如果您需要查找重定义的类型的初始声明，则可以使用[/P](../../build/reference/p-preprocess-to-a-file.md)编译器标志生成的预处理的输出传递到编译器。 你可以使用文本搜索工具在输出文件中查找重定义的标识符的实例。  
   
  下面的示例生成了 C2011 并演示了修复此错误的一种方法：  
   

@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 078454c9824a734863796ab5810056147d17879c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a2c4f8d31fb6ddb6eaa9472dc7537edbcdc29054
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2393"></a>编译器错误 C2393
-symbol︰ 不能在段领域中分配每个 appdomain 符号  
+symbol： 不能在段领域中分配每个 appdomain 符号  
   
- **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+ **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- 使用[appdomain](../../cpp/appdomain.md)变量意味着您用编译**/clr: pure**或**/clr: safe**，并且安全或纯映像不能包含数据段。  
+ 使用[appdomain](../../cpp/appdomain.md)变量表示您正在用编译**/clr: pure**或**/clr: safe**，和的安全或纯映像不能包含数据段。  
   
  请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)有关详细信息。  
   

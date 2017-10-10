@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2247 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2247"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2247"
+title: "编译器错误 C2247 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2247
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C2247
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 64eafb23ca83cb61ac9b45cf9c84ba69365f8198
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier”不可访问，因为“class”使用“specifier”来从“class”继承  
+---
+# <a name="compiler-error-c2247"></a>编译器错误 C2247
+identifier 无法访问，因为 class 使用 specifier 继承 class  
   
- `identifier` 是从用私有或受保护访问权声明的类继承的。  
+ `identifier`是从声明具有私有或受保护的访问权限的类继承。  
   
- 下面的示例生成 C2247：  
+ 下面的示例生成 C2247:  
   
 ```  
 // C2247.cpp  
@@ -41,9 +44,9 @@ class C : public B {} c;   // so even though C's B is public
 int j = c.i;               // C2247, i not accessible  
 ```  
   
- 也可能由于为 Visual Studio .NET 2003 进行的编译器一致性工作生成此错误：访问具有受保护成员的控件。  受保护成员 \(n\) 只能通过类 \(B\)（该类从 \(n\) 是其成员的类 \(A\) 继承）的成员函数访问。  
+ 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作： 访问控制与受保护的成员。 仅可以通过从它 (n) 是其成员的类 (A) 继承的类 (B) 的成员函数的访问受保护的成员 (n)。  
   
- 为使代码在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中都有效，将成员声明为该类型的友元。  还可以使用公共继承。  
+ 对于 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的代码，声明为友元的类型的成员。 此外可以使用公共继承。  
   
 ```  
 // C2247b.cpp  
@@ -66,9 +69,9 @@ void A::f() {
 }  
 ```  
   
- 为 Visual Studio .NET 2003 进行的编译器一致性工作也可能导致 C2247：私有基类现在不可访问。  是类型 \(B\) 的私有基类的类 \(A\) 对于使用 B 作为基类的类型 \(C\) 不应是可访问的。  
+ C2247 还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作： 专用的基本类现在无法访问。 是一种类型的私有基类的类 (A) （B） 不应访问的类型 （C） B 用作基类。  
   
- 为使代码在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中都有效，使用范围运算符。  
+ 对于 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的代码，请使用范围运算符。  
   
 ```  
 // C2247c.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2276 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2276"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2276"
+title: "编译器错误 C2276 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2276
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2276
 ms.assetid: 62005ad9-6cb9-4b1f-965d-b875adaf695e
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2276
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 365ffc998d201efb7397f1b08cbbc86032fd2781
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“operator”: 绑定成员函数表达式上的非法操作  
+---
+# <a name="compiler-error-c2276"></a>编译器错误 C2276
+operator： 非法操作绑定的成员函数表达式  
   
- 编译器发现用来创建指向成员的指针的语法有问题。  
+ 编译器发现用于创建指针到成员的语法有问题。  
   
- 下面的示例生成 C2276：  
+ 下面的示例生成 C2276:  
   
 ```  
 // C2276.cpp  

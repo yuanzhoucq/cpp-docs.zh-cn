@@ -1,34 +1,37 @@
 ---
-title: "错误 C1191 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1191"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1191"
+title: "错误 C1191 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1191
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1191
 ms.assetid: 2888c6c4-b4e6-449e-8ee0-7917f31086df
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 错误 C1191
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 95795ddfcc27a7cd150dec565f0e52a4f7eca00e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-只能在全局范围内导入“dll”  
+---
+# <a name="fatal-error-c1191"></a>错误 C1191
+只能在全局范围内导入 dll  
   
- 将 mscorlib.dll 导入使用 \/clr 编程的程序不能出现在命名空间或函数中，而是必须出现在全局范围内。  
+ 指令 mscorlib.dll 导入使用 /clr 编程的程序不能出现在命名空间或函数，但必须出现在全局范围内。  
   
- 下面的示例生成 C1191：  
+ 下面的示例生成 C1191:  
   
 ```  
 // C1191.cpp  
@@ -38,7 +41,7 @@ namespace sample {
 }  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C1191b.cpp  

@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 6b30911cc63d944c4b68a9711fbe8613e74c3fe8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c771780ad3bbaefd51be10c9ff1454127f8439b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2289"></a>编译器错误 C2289
 多次使用同一类型限定符  
   
- 类型声明或定义多次使用类型限定符（`const`、 `volatile`、 `signed`、 or `unsigned`) more than once、 causing an error under ANSI compatibility (**/Za**)。  
+ 类型声明或定义多次使用类型限定符（`const`、 `volatile`、 `signed`或 `unsigned`），从而导致 ANSI 兼容性错误 (**/Za**)。  
   
  下面的示例生成 C2286：  
   

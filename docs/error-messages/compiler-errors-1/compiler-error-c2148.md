@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C2148 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2148"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2148"
+title: "编译器错误 C2148 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2148
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2148
 ms.assetid: e510c2c9-7b57-4ce8-be03-ba363e2cc5d9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C2148
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2d98197ed8043af05fd27239ca10aa3a0d06e3c0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2148"></a>编译器错误 C2148
 数组的总大小不得超过 0x7fffffff 字节  
   
- 数组超出该限制。  减小数组大小。  
+ 数组超出了限制。 减少数组的大小。  
   
-## 示例  
- 下面的示例生成 C2148：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C2148:  
   
 ```  
 // C2148.cpp  

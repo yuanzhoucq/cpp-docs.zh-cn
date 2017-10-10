@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2036 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2036"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2036"
+title: "编译器错误 C2036 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2036
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2036
 ms.assetid: 895821a9-65d1-44b5-bde1-dae827f3e486
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C2036
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8ffb8f2b8ad0df1741687c1081fc499d3a9fde31
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier”: 未知的大小  
+---
+# <a name="compiler-error-c2036"></a>编译器错误 C2036
+identifier： 未知的大小  
   
- 对 `identifier` 的操作需要数据对象的大小，而该大小无法确定。  
+ 上的操作`identifier`需要的数据对象，无法确定大小。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2036。  
   
 ```  
@@ -44,7 +47,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2036。  
   
 ```  

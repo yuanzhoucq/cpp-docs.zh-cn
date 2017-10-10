@@ -1,42 +1,45 @@
 ---
-title: "错误 C1060 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1060"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1060"
+title: "错误 C1060 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1060
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 错误 C1060
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fatal-error-c1060"></a>错误 C1060
 编译器的堆空间不足  
   
  操作系统或运行时库无法满足内存要求。  
   
-### 若要修复此错误，请尝试以下可能的解决方案  
+### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>若要修复此错误，请尝试以下可能的解决方案  
   
-1.  如果编译器还发出错误 [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) 和 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)，请使用 [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 编译器选项减少内存分配限制。  如果减少剩余内存分配，更多堆空间可用于应用程序。  
+1.  如果编译器还发出错误[C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)和[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)，使用[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)编译器选项减少内存分配限制。 如果减少剩余内存分配，更多堆空间可用于应用程序。  
   
-     如果已设置 [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 选项，请尝试将其删除。  堆空间可能已用完，因为选项中指定的内存分配限制太高。  如果你删除了 [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 选项，则编译器将使用默认限制。  
+     如果[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项已设置，请尝试将其删除。 堆空间可能已用完，因为选项中指定的内存分配限制太高。 编译器使用的默认限制，如果你删除[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)选项。  
   
-2.  如果你正在 64 位平台上进行编译，请使用 64 位编译器工具集。  有关信息，请参阅 [如何：在命令行上启用 64 位 Visual C\+\+ 工具集](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
+2.  如果你正在 64 位平台上进行编译，请使用 64 位编译器工具集。 有关信息，请参阅[如何： 启用 64 位 Visual c + + 工具集在命令行上的](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
   
-3.  在 32 位 Windows 中，请尝试使用 [\/3GB](http://go.microsoft.com/fwlink/?LinkId=177831) boot.ini 开关。  
+3.  在 32 位 Windows 上，请尝试使用[3 GB](http://go.microsoft.com/fwlink/?LinkId=177831) boot.ini 开关。  
   
 4.  增加 Windows 交换文件的大小。  
   

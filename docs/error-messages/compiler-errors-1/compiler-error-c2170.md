@@ -1,33 +1,36 @@
 ---
-title: "编译器错误 C2170 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2170"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2170"
+title: "编译器错误 C2170 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2170
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2170
 ms.assetid: d5c663f0-2459-4e11-a8bf-a52b62f3c71d
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2170
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8520e9ea71d90e7f97c6296d4326abb1fd4c7609
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier”: 没有声明为函数，不能是内部函数  
+---
+# <a name="compiler-error-c2170"></a>编译器错误 C2170
+identifier： 未声明为函数，不能为内部函数  
   
-### 通过检查以下可能的原因进行修复  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
   
-1.  `intrinsic` 杂注用于函数以外的项。  
+1.  杂注`intrinsic`用于与函数之外的项。  
   
-2.  `intrinsic` 杂注用于没有内部形式的函数。
+2.  杂注`intrinsic`用于没有内部形式的函数。

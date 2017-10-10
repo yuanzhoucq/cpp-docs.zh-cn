@@ -1,34 +1,37 @@
 ---
-title: "错误 C1094 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1094"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1094"
+title: "错误 C1094 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1094
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1094
 ms.assetid: 9e1193b2-cb95-44f9-bf6f-019e0d41dd97
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 错误 C1094
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 032eee2edf1570e46359d22379843157c6889b4b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“\-Zmval1”: 命令行选项与用于生成预编译头\(“\-Zmval2”\)的值不一致  
+---
+# <a name="fatal-error-c1094"></a>错误 C1094
+-Zmval1： 命令行选项是与用于生成预编译标头的值不一致 (-Zmval2)  
   
- 传递给 [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) 的值必须与传递给 [\/Yu](../../build/reference/yu-use-precompiled-header-file.md) 的值相同（在使用或创建相同预编译头文件的所有编译中，**\/Zm** 值都必须相同）。  
+ 传递到值[/Yc](../../build/reference/yc-create-precompiled-header-file.md)必须是相同的值传递给[/Yu](../../build/reference/yu-use-precompiled-header-file.md) (**/Zm**值必须在所有编译中，使用或创建相同的预编译相同标头文件）。  
   
- 下面的示例生成 C1094：  
+ 下面的示例生成 C1094:  
   
 ```  
 // C1094.h  

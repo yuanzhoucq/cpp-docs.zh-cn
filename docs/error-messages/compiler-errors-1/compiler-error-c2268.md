@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 29a09917ab80eb536050885a3c2cd9984f82a59a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2268"></a>编译器错误 C2268
 “function”是编译器预定义的库帮助器。 系统不支持使用 /GL 的库帮助器，编译对象文件“file”时不要使用 /GL。  
   
- 源代码中定义的函数与内部编译器函数具有相同的名称。 编译包含函数而无需的模块[/GL](../../build/reference/gl-whole-program-optimization.md)。  
+ 源代码中定义的函数与内部编译器函数具有相同的名称。 编译包含函数的模块时不要使用 [/GL](../../build/reference/gl-whole-program-optimization.md)。  
   
  下面的示例生成 C2268：  
   

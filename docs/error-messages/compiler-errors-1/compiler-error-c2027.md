@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2027 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2027"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2027"
+title: "编译器错误 C2027 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2027
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2027
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2a2fec9194858127ca08ecc0a891a81a91de48fa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-使用了未定义类型“type”  
+---
+# <a name="compiler-error-c2027"></a>编译器错误 C2027
+使用未定义的类型 type  
   
- 类型只有经过定义才能使用。  若要解决该错误，请确保在引用类型前已对其进行了完全定义。  
+ 它定义之前，不能使用的类型。 若要解决此错误，请确保在引用它之前完全定义的类型。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2027。  
   
 ```  
@@ -49,8 +52,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 有可能声明一个指向已声明但未定义的类型的指针。但是 Visual C\+\+ 不允许引用未定义的类型。  
+## <a name="example"></a>示例  
+ 它是可以声明指向声明但未定义类型的指针。  但 Visual c + + 不允许对未定义类型的引用。  
   
  下面的示例生成 C2027。  
   

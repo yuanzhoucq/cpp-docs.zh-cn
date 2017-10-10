@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2064 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2064"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2064"
+title: "编译器错误 C2064 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2064
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2064
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e0c82ae2de90a6e4e6e7e66648d84c2b55a9c2b0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-项不会计算为接受 N 个参数的函数  
+---
+# <a name="compiler-error-c2064"></a>编译器错误 C2064
+项不会计算为接受 N 个自变量的函数  
   
- 通过一个表达式对函数进行调用。  表达式不会计算为指向接受指定数量的参数的函数的指针。  
+ 通过一个表达式对函数进行调用。 表达式不会计算为指向接受指定数量的参数的函数的指针。  
   
- 在此示例中，代码尝试调用非函数作为函数。  以下示例生成 C2064：  
+ 在此示例中，代码尝试调用非函数作为函数。 以下示例生成 C2064：  
   
 ```  
 // C2064.cpp  
@@ -40,7 +43,7 @@ void func() {
 }  
 ```  
   
- 必须从对象实例的上下文调用指向非静态成员函数的指针。  以下示例生成 C2064，并演示如何修复此错误：  
+ 必须从对象实例的上下文调用指向非静态成员函数的指针。 以下示例生成 C2064，并演示如何修复此错误：  
   
 ```  
 // C2064b.cpp  
@@ -60,7 +63,7 @@ int main() {
   
 ```  
   
- 在类中，成员函数指针必须也指示调用对象上下文。  以下示例生成 C2064，并演示如何修复此错误：  
+ 在类中，成员函数指针必须也指示调用对象上下文。 以下示例生成 C2064，并演示如何修复此错误：  
   
 ```  
 // C2064d.cpp  
