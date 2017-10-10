@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2770 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2770"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2770"
+title: "编译器错误 C2770 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2770
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2770
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 81179a10cc58c1b22f974b4367d471dde87bdc65
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“template”的显式模板或泛型参数无效  
+---
+# <a name="compiler-error-c2770"></a>编译器错误 C2770
+template 的无效显式 template_or_generic 参数  
   
- 具有显式模板或泛型参数的函数模板候选导致了不允许的函数类型。  
+ 使用显式模板或泛型自变量的函数模板候选项时不允许的函数类型。  
   
- 下面的示例生成 C2770：  
+ 下面的示例生成 C2770:  
   
 ```  
 // C2770.cpp  

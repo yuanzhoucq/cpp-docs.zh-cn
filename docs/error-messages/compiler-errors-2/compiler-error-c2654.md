@@ -1,31 +1,34 @@
 ---
-title: "编译器错误 C2654 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2654"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2654"
+title: "编译器错误 C2654 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2654
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2654
 ms.assetid: ca7de1bd-576b-40bf-96fc-a91984827d20
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C2654
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13747ec0c67b53c1451cf0769d5f7cdf2744c768
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“identifier”: 尝试访问成员函数的外部成员  
+---
+# <a name="compiler-error-c2654"></a>编译器错误 C2654
+identifier： 尝试在成员函数的外部访问成员  
   
- 在声明中访问了某成员。  成员数据仅可在成员函数中进行访问。  
+ 在声明中访问的成员。 可以仅在成员函数中访问成员数据。  
   
- 当尝试在声明中初始化变量时，可能会导致此错误。  为此，请使用构造函数。
+ 在尝试初始化声明中的变量时，可以导致此错误。 为此目的使用构造函数。

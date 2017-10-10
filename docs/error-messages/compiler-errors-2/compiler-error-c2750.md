@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2750 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2750"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2750"
+title: "编译器错误 C2750 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2750
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2750
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbe3ee423183bb841e3e6777db94e4645b94355d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”: 不能对引用类型使用“new”，请改为使用“gcnew”  
+---
+# <a name="compiler-error-c2750"></a>编译器错误 C2750
+type： 不能使用引用类型; 上的 new请改用 gcnew  
   
- 要创建 CLR 类型的实例（它将导致实例被放置在垃圾回收堆上），必须使用 [gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md)。  
+ 若要创建的是 CLR 类型，它将导致要放置在垃圾回收堆上的实例，实例必须使用[gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
- 下面的示例生成 C2750：  
+ 下面的示例生成 C2750:  
   
 ```  
 // C2750.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C2768 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2768"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2768"
+title: "编译器错误 C2768 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2768
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2768
 ms.assetid: a7f6047a-6a80-4737-ad5c-c12868639fb5
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2768
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 79693c3d7b337302698d7854b5cd447ce7c68334
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 非法使用显式模板参数  
+---
+# <a name="compiler-error-c2768"></a>编译器错误 C2768
+function： 非法使用显式模板自变量  
   
- 编译器无法确定函数定义应是函数模板的显式专用化还是函数定义应用于新函数。  
+ 编译器无法确定是否应该函数定义的显式专用化函数模板，或者函数定义应该用于新函数。  
   
- 此错误作为编译器一致性增强功能的一部分在 Visual Studio .NET 2003 中引入。  
+ 此错误的引入了在 Visual Studio.NET 2003 中，编译器一致性增强功能的一部分。  
   
- 下面的示例生成 C2768：  
+ 下面的示例生成 C2768:  
   
 ```  
 // C2768.cpp  

@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 993b67c619cd56e4245b0195e1f8446577b7ecc8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e10d357679fc7a0d1a5e183bdc1eb95a7a597c00
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2757"></a>编译器错误 C2757
-symbol︰ 已存在具有此名称的符号，因此不能使用此名称作为命名空间名称  
+symbol： 已存在具有此名称的符号，因此此名称不能用作命名空间名称  
   
- 中引用的程序集已使用与命名空间标识符当前编译中使用的符号。  
+ 中引用的程序集中已使用的命名空间标识符作为当前的编译中使用的符号。  
   
  下面的示例生成 C2757:  
   

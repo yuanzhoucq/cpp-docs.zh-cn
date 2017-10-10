@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2553 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2553"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2553"
+title: "编译器错误 C2553 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2553
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2553
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 623a09c54333ef62de7a7924cc4be02ff1b2c726
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“base\_function”: 重写虚函数返回类型不同于“override\_function”  
+---
+# <a name="compiler-error-c2553"></a>编译器错误 C2553
+base_function： 重写虚函数返回类型不同于 override_function  
   
- 派生类中的函数尝试重写基类中的虚函数，但是派生类函数的返回类型与基类函数的返回类型不同。重写函数的签名必须与正被重写的函数的签名匹配。  
+ 派生类中的函数尝试重写基类中的虚函数，但派生的类函数不具有相同的返回类型作为基类函数。  重写函数签名必须与被重写的函数的签名匹配。  
   
- 下面的示例生成 C2553：  
+ 下面的示例生成 C2553:  
   
 ```  
 // C2553.cpp  

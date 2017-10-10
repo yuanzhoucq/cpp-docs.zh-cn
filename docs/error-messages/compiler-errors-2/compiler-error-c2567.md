@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C2567 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2567"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2567"
+title: "编译器错误 C2567 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2567
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 编译器错误 C2567
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bbdc535f75230da05a92eb0498176da40e918ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-无法打开“file”中的元数据，文件可能已删除或移动  
+---
+# <a name="compiler-error-c2567"></a>编译器错误 C2567
+无法打开 file 中的元数据，文件可能已删除或移动  
   
- 编译器前端进程在某目录中找到了在源中引用的元数据文件（用 `#using`），而编译器后端进程找不到此文件。  有关更多信息，请参见[\#using 指令](../../preprocessor/hash-using-directive-cpp.md)。  
+ 在源中引用的元数据文件 (与`#using`) 未找到位于同一目录中由编译器后端进程按照原样编译器前端进程。 请参阅[#using 指令](../../preprocessor/hash-using-directive-cpp.md)有关详细信息。  
   
- 如果在一台计算机上用 **\/c** 进行编译，然后在另一台计算机上尝试链接时代码生成，则可能导致 C2567。  有关更多信息，请参见 [\/LTCG（链接时代码生成）](../../build/reference/ltcg-link-time-code-generation.md)。  
+ 如果使用进行编译则可能导致 C2567 **/c**在某个上计算机，然后尝试在其他计算机上的链接时代码生成。 有关详细信息，请参阅[/LTCG （链接时间代码生成）](../../build/reference/ltcg-link-time-code-generation.md))。  
   
- 它还可能指示您的计算机内存不足。  
+ 此外，它也可能表示你的计算机已没有更多内存。  
   
- 若要更正此错误，请确保对于生成过程的所有阶段，元数据文件都在同一个目录位置。
+ 若要更正此错误，请确保元数据文件位于相同的目录位置为生成过程的所有阶段。

@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C2650 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2650"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2650"
+title: "编译器错误 C2650 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2650
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2650
 ms.assetid: 49a8ac6e-aa6d-4616-917c-a3cfcdbad5a4
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C2650
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c3352820434c8d794d4980a606cb945bd8ecc4a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“operator”: 不能是虚函数  
+---
+# <a name="compiler-error-c2650"></a>编译器错误 C2650
+operator： 不能为虚函数  
   
- 将 `new` 或 `delete` 运算符声明为 `virtual`。  这些运算符是 `static` 成员函数并且不能为 `virtual`。  
+ A`new`或`delete`运算符被声明为`virtual`。 这些运算符是`static`成员函数，不能为`virtual`。  
   
-## 示例  
- 下面的示例生成 C2650：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C2650:  
   
 ```  
 // C2650.cpp  

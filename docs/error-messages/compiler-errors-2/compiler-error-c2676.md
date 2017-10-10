@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2676 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2676"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2676"
+title: "编译器错误 C2676 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2676
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C2676
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-二元“operator”:“type”不定义此运算符或到预定义运算符可接收的类型的转换  
+---
+# <a name="compiler-error-c2676"></a>编译器错误 C2676
+二进制 operator: type 不定义此运算符或可接受的类型转换到预定义的运算符  
   
- 若要使用该运算符，必须针对指定类型将其重载，或者定义一个到某个类型（该运算符已针对此类型进行了定义）的转换。  
+ 要使用该运算符，必须针对指定类型将其重载，或者定义一个到某个类型（该运算符已针对此类型进行了定义）的转换。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2676。  
   
 ```  
@@ -59,10 +62,10 @@ int main() {
 }  
 ```  
   
-## 示例  
- 如果尝试在引用类型的 `this` 指针上执行指针算法，也可能发生 C2676。  
+## <a name="example"></a>示例  
+ 如果你尝试执行指针算术操作上，也可能发生 C2676`this`引用类型的指针。  
   
- `this` 指针属于引用类型中的类型句柄。  有关详细信息，请参阅[此指针的语义](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。  
+ `this`指针为类型中引用类型的句柄。 有关详细信息，请参阅[语义 this 指针](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。  
   
  下面的示例生成 C2676。  
   

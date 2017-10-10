@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2583 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2583"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2583"
+title: "编译器错误 C2583 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2583
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2583
 ms.assetid: b1c952dc-872c-47e4-9fc8-4dd72bcee6f9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2583
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 924a370a59fff0e118b76e52e17d44b3b2268103
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“identifier”:“const\/volatile”“this”指针对于构造函数\/析构函数是非法的  
+---
+# <a name="compiler-error-c2583"></a>编译器错误 C2583
+identifier: const/volatile this 指针是非法的构造函数/析构函数  
   
- 构造函数或析构函数被声明为 `const` 或 `volatile`。  这是不允许的。  
+ 声明构造函数或析构函数`const`或`volatile`。 这是不允许的。  
   
- 下面的示例生成 C2583：  
+ 下面的示例生成 C2583:  
   
 ```  
 // C2583.cpp  
