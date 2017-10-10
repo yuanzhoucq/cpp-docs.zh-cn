@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: "编译器错误 C2896 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function1”: 无法将函数模板“function2”用作参数  
+---
+# <a name="compiler-error-c2896"></a>编译器错误 C2896
+function1： 不能用作参数的函数模板 function2  
   
- 函数模板不能是另一个函数模板的参数。  
+ 函数模板不能为另一个函数模板的自变量。  
   
- 下面的示例生成 C2896：  
+ 下面的示例生成 C2896:  
   
 ```  
 // C2896.cpp  
@@ -40,7 +43,7 @@ int main() {
 }  
 ```  
   
- 使用泛型时也可能发生 C2896 错误：  
+ 使用泛型时，也可能发生 C2896:  
   
 ```  
 // C2896b.cpp  

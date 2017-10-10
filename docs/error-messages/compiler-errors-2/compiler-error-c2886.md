@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2886 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2886"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2886"
+title: "编译器错误 C2886 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2886
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2886
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cbb4ab1d50a4a6c5bb9ea3c392febf786197e0fa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“class::identifier”: 在成员 using 声明中不能使用符号  
+---
+# <a name="compiler-error-c2886"></a>编译器错误 C2886
+class::identifier： 符号不能在成员 using 声明  
   
- `using` 声明使用了符号，如命名空间名称。  `using` 声明用于声明基类成员。  
+ A`using`声明将使用一个符号，如命名空间名称。 A`using`声明是用于声明基类成员。  
   
- 下面的示例生成 C2886：  
+ 下面的示例生成 C2886:  
   
 ```  
 // C2886.cpp  

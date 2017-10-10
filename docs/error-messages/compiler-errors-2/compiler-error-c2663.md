@@ -1,40 +1,43 @@
 ---
-title: "编译器错误 C2663 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2663"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2663"
+title: "编译器错误 C2663 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2663
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2663
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a9efe20b4a80b9ff6f337d32acd35320125008dc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: number 重载没有“this”指针的合法转换  
+---
+# <a name="compiler-error-c2663"></a>编译器错误 C2663
+function： 数字重载具有 this 指针的任何合法转换  
   
- 编译器未能将 `this` 转换为该成员函数的任何重载版本。  
+ 编译器无法转换`this`到任何成员函数的重载版本。  
   
- 此错误可能是由对 `const` 对象调用非 `const` 成员函数引起的。可能的解决方案：  
+ 可以通过调用非-导致此错误`const`成员函数上的`const`对象。  可能的解决方法：  
   
-1.  从对象声明中移除 `const`。  
+1.  删除`const`从对象声明。  
   
-2.  将 `const` 添加到成员函数重载之一。  
+2.  添加`const`成员函数重载之一。  
   
- 下面的示例生成 C2663：  
+ 下面的示例生成 C2663:  
   
 ```  
 // C2663.cpp  

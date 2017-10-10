@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3028"
+title: "编译器错误 C3028 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3028
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56d1ed561b4f414cc85c7b0d7f2c112648ae6281
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“member”: 在数据共享子句中仅可使用变量或静态数据成员  
+---
+# <a name="compiler-error-c3028"></a>编译器错误 C3028
+member： 只有变量或静态数据成员可以使用的 data-sharing 子句中  
   
- 向 reduction 子句传递的是符号而不是变量或静态数据成员。  
+ 向 reduction 子句传递的变量或静态数据成员以外的符号。  
   
- 下面的示例生成 C3028：  
+ 下面的示例生成 C3028:  
   
 ```  
 // C3028.cpp  

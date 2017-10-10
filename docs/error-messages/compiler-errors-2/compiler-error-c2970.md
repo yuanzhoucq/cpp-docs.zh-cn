@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2970 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2970"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2970"
+title: "编译器错误 C2970 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2970
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2970
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc125b400a718805af2ee0829100c056fffa29a3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“class”: 模板参数“param”:“arg”: 涉及带有内部链接的对象的表达式不能用作非类型参数  
+---
+# <a name="compiler-error-c2970"></a>编译器错误 C2970
+class： 模板参数 param: arg： 涉及带内部链接的对象的表达式不能用作非类型参数  
   
- 不能将静态变量的名称或地址用作模板参数。  模板类应为在编译时可以计算出的常数值。  
+ 作为模板参数，不能使用的名称或静态变量的地址。 此模板类需要一个常量值，可以在编译时进行计算。  
   
- 下面的示例生成 C2970：  
+ 下面的示例生成 C2970:  
   
 ```  
 // C2970.cpp  

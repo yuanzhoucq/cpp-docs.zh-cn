@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C2665 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2665"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2665"
+title: "编译器错误 C2665 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2665
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C2665
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a349df2c60d746b6b090953362c7c6801e1f2a3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: number1 个重载中没有一个可以转换参数 number2 \(从“type”类型\)  
+---
+# <a name="compiler-error-c2665"></a>编译器错误 C2665
+function： 无 number1 重载可以从类型 type 转换参数 number2  
   
- 该重载函数的参数无法转换为所需类型。可能的解决方案：  
+ 重载函数的参数无法转换为所需的类型。  可能的解决方法：  
   
--   提供转换运算符。  
+-   提供一个转换运算符。  
   
 -   使用显式转换。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2665。  
   
 ```  

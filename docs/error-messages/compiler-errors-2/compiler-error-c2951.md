@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2951 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2951"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2951"
+title: "编译器错误 C2951 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2951
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2951
 ms.assetid: c6f95aa2-c894-425b-a51c-d40d70c8daa1
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C2951
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4be1b3a298fc24572fcc44b9deb031c0d49b7332
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-类型声明只能在全局、命名空间或类范围内使用  
+---
+# <a name="compiler-error-c2951"></a>编译器错误 C2951
+类型声明只能在全局命名空间或类范围内  
   
- 不能在全局或命名空间范围之外声明泛型类或模板类。  如果在包含文件中进行泛型声明或模板声明，请确保包含文件位于全局范围内。  
+ 不能声明泛型或模板类外部全局或命名空间范围。 如果在包含文件中进行泛型或模板声明，请确保包含文件是在全局范围内。  
   
- 下面的示例生成 C2951：  
+ 下面的示例生成 C2951:  
   
 ```  
 // C2951.cpp  
@@ -41,7 +44,7 @@ int main() {
 }  
 ```  
   
- 使用以下泛型时也可能发生 C2951 错误：  
+ 使用泛型时，也可能发生 C2951:  
   
 ```  
 // C2951b.cpp  

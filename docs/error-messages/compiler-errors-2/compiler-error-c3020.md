@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3020"
+title: "编译器错误 C3020 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3020
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“var”: OpenMP“for”循环的索引变量不能在循环体中修改  
+---
+# <a name="compiler-error-c3020"></a>编译器错误 C3020
+var： 不能在循环体中修改索引变量的 OpenMP for 循环  
   
- OpenMP `for` 循环不能修改 `for` 循环体中的索引（循环计数器）。  
+ OpenMP`for`循环不能修改的正文中的索引 （循环计数器）`for`循环。  
   
- 下面的示例生成 C3020：  
+ 下面的示例生成 C3020:  
   
 ```  
 // C3020.cpp  
@@ -47,9 +50,9 @@ int main() {
 }  
 ```  
   
- 使用 [lastprivate](../../parallel/openmp/reference/lastprivate.md) 声明的变量不能用作并行化循环中的索引。  
+ 与声明的变量[lastprivate](../../parallel/openmp/reference/lastprivate.md)不能用作并行化循环内的索引。  
   
- 对于第二个 lastprivate，下面的示例将给出 C3020，原因是该 lastprivate 将触发在最外层 for 循环内写入 idx\_a。  第一个 lastprivate 不会给出错误，原因是该 lastprivate 将触发在最外层 for 循环外写入 idx\_a（从技术角度来说，是在上一次迭代将近结束的位置）。  下面的示例生成 C3020。  
+ 下面的示例将为第二个 lastprivate 产生 C3020，因为该 lastprivate 将触发写入中最外面的 idx_a for 循环。 第一个 lastprivate 不产生错误，因为该 lastprivate 触发写入外部最外面的 idx_a for 循环 （从技术上讲，在最后一次迭代的结尾）。 下面的示例生成 C3020。  
   
 ```  
 // C3020b.cpp  
@@ -68,7 +71,7 @@ void test(int first, int last)
 }  
 ```  
   
- 下面的示例演示一个可能的解决方法：  
+ 以下示例演示了可能的解决方法：  
   
 ```  
 // C3020c.cpp  

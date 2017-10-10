@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2864 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2864"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2864"
+title: "编译器错误 C2864 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2864
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C2864
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f205aeb886921439360191def0853e33e4eb0fea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2864"></a>编译器错误 C2864
 “variable”：具有类中初始值设定项的静态数据成员必须具有非易失性常量整型  
   
- 若要初始化定义为 `volatile`、非 `const` 或非整型的 `static` 数据成员，请使用成员定义语句。  无法在声明中初始化它们。  
+ 若要初始化定义为 `static`、非 `volatile` 或非整型的 `const` 数据成员，请使用成员定义语句。 无法在声明中初始化它们。  
   
- 此示例生成 C2864：  
+ 此示例生成 C2864:  
   
 ```  
 // C2864.cpp  

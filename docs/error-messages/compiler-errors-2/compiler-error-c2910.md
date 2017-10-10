@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2910 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2910"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2910"
+title: "编译器错误 C2910 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2910
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2910
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: db1c4d7b4533d6bbfb0848c1dc16a7336ad81eb0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 无法显式专用化  
+---
+# <a name="compiler-error-c2910"></a>编译器错误 C2910
+function： 不能显式专用化  
   
- 编译器检测出两次尝试显式专用化一个函数。  
+ 编译器检测到尝试两次显式专用化函数。  
   
- 下面的示例生成 C2910：  
+ 下面的示例生成 C2910:  
   
 ```  
 // C2910.cpp  
@@ -40,9 +43,9 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization  
 ```  
   
- 如果尝试显式专用化非模板成员，也可能生成 C2910。  即，只能显式专用化一个函数模板。  
+ 如果你尝试显式专用化非模板成员，则还可以生成 C2910。 也就是说，你可以仅显式专用化函数模板。  
   
- 下面的示例生成 C2910：  
+ 下面的示例生成 C2910:  
   
 ```  
 // C2910b.cpp  
@@ -63,11 +66,11 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}  
 ```  
   
- 该错误也可能是由于在 Visual Studio .NET 2003 中所做的编译器一致性工作而产生的：  
+ 此错误还将导致在 Visual Studio.NET 2003年中完成的编译器一致性工作:。  
   
- 为使代码在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中有效，请移除 `template <>`。  
+ 代码将在 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效，请删除`template <>`。  
   
- 下面的示例生成 C2910：  
+ 下面的示例生成 C2910:  
   
 ```  
 // C2910c.cpp  

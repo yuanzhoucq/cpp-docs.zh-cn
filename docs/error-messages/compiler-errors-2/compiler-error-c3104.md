@@ -19,35 +19,21 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>编译器错误 C3104
-特性参数非法  
+非法特性自变量  
   
- 指定属性的参数无效。  
+ 指定属性的无效自变量。  
   
  请参阅[特性参数类型](../../windows/attribute-parameter-types-cpp-component-extensions.md)有关详细信息。  
   
- 为 Visual c + + 2005年执行的编译器一致性工作可以导致此错误︰ 时将托管的数组传递给自定义特性，该数组的类型不能再从聚合初始化列表推导。 现在，编译器要求您指定的数组初始值设定项列表的类型。  
+ 此错误可能来自于为 Visual c + + 2005年执行的编译器一致性工作： 不再将从聚合初始化列表推导时将托管的数组传递给自定义特性，数组的类型。 编译器现在需要你指定的数组初始值设定项列表的类型。  
   
 ## <a name="example"></a>示例  
  下面的示例生成 C3104。  

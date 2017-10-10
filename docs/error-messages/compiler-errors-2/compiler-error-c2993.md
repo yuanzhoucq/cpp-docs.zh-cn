@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2993 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2993"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2993"
+title: "编译器错误 C2993 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2993
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2993
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“identifier”: 非类型模板参数“parameter”的类型非法  
+---
+# <a name="compiler-error-c2993"></a>编译器错误 C2993
+identifier： 非类型模板参数 parameter 的非法类型  
   
- 不能使用结构参数或联合参数声明模板。  应使用指针将结构和联合作为模板参数来传递。  
+ 不能声明具有结构或联合的自变量的模板。 使用指针作为模板参数传递结构和联合。  
   
- 下面的示例生成 C2993：  
+ 下面的示例生成 C2993:  
   
 ```  
 // C2993.cpp  
@@ -45,9 +48,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};  
 ```  
   
- 也将由于在 Visual Studio .NET 2003 中进行的编译器一致性工作生成此错误：不再允许浮点非类型模板参数。  C\+\+ 标准不允许浮点非类型模板参数。  
+ 此错误还将导致在 Visual Studio.NET 2003年中完成的编译器一致性工作： 浮点不再允许非类型模板参数。 C + + 标准不允许浮点非类型模板参数。  
   
- 如果它是函数模板，则使用函数参数来传入浮点非类型模板参数（此代码将在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中有效）。  如果它是类模板，则没有简单的变通方法。  
+ 如果它是函数模板，使用要在浮点中传递函数自变量将点 （此代码将在 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效） 的非类型模板参数。 如果它是类模板，则没有简单的解决方法。  
   
 ```  
 // C2993b.cpp  

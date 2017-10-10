@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 196074fe2ad14ae0ab86fea19b707ee575a0c8a4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e131d44a3a5ffbab2874f8e524d0f57ddc77faa2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3066"></a>编译器错误 C3066
-使用这些参数调用此类型的对象有多种方法  
+有多种方法可以调用此类型的对象使用这些自变量  
   
  编译器检测到涉及代理项的不明确的函数调用。  
   

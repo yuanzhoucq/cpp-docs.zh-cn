@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2974 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2974"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2974"
+title: "编译器错误 C2974 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2974
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C2974
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e24e25816ac646bcf26099abbfa8e681fdd72a6e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-类型参数“number”无效，应为类型  
+---
+# <a name="compiler-error-c2974"></a>编译器错误 C2974
+应该为无效的类型参数 number 类型  
   
- 泛型或模板参数与泛型或模板声明不匹配。  尖括号内应为类型。  检查泛型或模板定义以找到正确的类型。  
+ 泛型或模板自变量与泛型或模板声明不匹配。 类型应出现在尖括号中。 检查泛型或模板定义，以找到正确的类型。  
   
- 下面的示例生成 C2974：  
+ 下面的示例生成 C2974:  
   
 ```  
 // C2974.cpp  
@@ -49,7 +52,7 @@ int main() {
 }  
 ```  
   
- 使用泛型时也可能发生 C2974：  
+ 使用泛型时，也可能发生 C2974:  
   
 ```  
 // C2974b.cpp  
