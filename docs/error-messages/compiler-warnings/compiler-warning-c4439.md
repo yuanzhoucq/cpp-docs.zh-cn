@@ -1,36 +1,39 @@
 ---
-title: "编译器警告 C4439 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4439"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4439"
+title: "编译器警告 C4439 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4439
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器警告 C4439
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eec228922a6f5796587243fe2d1f2c6cc1cf6b1c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 签名中具有托管类型的函数定义必须有一个 \_\_clrcall 调用约定  
+---
+# <a name="compiler-warning-c4439"></a>编译器警告 C4439
+function： 与托管签名中类型的函数定义必须具有调用约定 __clrcall  
   
- 编译器用 [\_\_clrcall](../../cpp/clrcall.md) 隐式替换了调用约定。  若要消除此警告，请移除 `__cdecl` 或 `__stdcall` 调用约定。  
+ 编译器隐式替换与调用约定[__clrcall](../../cpp/clrcall.md)。 若要解决此警告，请删除`__cdecl`或`__stdcall`调用约定。  
   
- C4439 始终按错误发出。  可以使用 `#pragma warning` 或 **\/wd** 关闭此警告；有关更多信息，请参见 [警告](../../preprocessor/warning.md) 或 [\/w、\/Wn、\/WX、\/Wall、\/wln、\/wdn、\/wen、\/won（警告等级）](../../build/reference/compiler-option-warning-level.md)。  
+ C4439 始终作为错误发出。 你可以关闭此警告，其中包含`#pragma warning`或**/wd**; 请参阅[警告](../../preprocessor/warning.md)或[/w、 /w0 取消显示、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4，/Wall、 /wd，/ 我们 /wo，/Wv，/WX （警告级别）](../../build/reference/compiler-option-warning-level.md)有关详细信息。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4439。  
   
 ```  

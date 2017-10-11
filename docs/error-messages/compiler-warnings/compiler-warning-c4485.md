@@ -1,38 +1,41 @@
 ---
-title: "编译器警告 C4485 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4485"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4485"
+title: "编译器警告 C4485 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4485
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器警告 C4485
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 435e49a857e3c448ac7e5f7ef00bb9032320aa25
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“override\_function”: 匹配 ref 基类方法“base\_class\_function”，但没有标记为“new”或“override”；假定为“new”\(和“virtual”\)  
+---
+# <a name="compiler-warning-c4485"></a>编译器警告 C4485
+override_function: ref 基类类方法 base_class_function 相匹配，但不是标记 new 或重写';假定 new （和虚拟）  
   
- 访问器重写（无论是否具有 `virtual` 关键字）基类访问器函数，而 `override` 或 `new` 说明符并非重写函数签名的一部分。  添加 `new` 或 `override` 说明符可解决此警告。  
+ 访问器中重写时，带有或不带`virtual`关键字、 基类访问器函数，但`override`或`new`说明符不是重写的函数签名的一部分。 添加`new`或`override`说明符若要解决此警告。  
   
- 有关更多信息，请参见 [override](../../windows/override-cpp-component-extensions.md) 和 [新的 \(在 vtable 的新槽\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)。  
+ 请参阅[重写](../../windows/override-cpp-component-extensions.md)和[新 (新 vtable 中的槽）](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)有关详细信息。  
   
- C4485 始终作为错误发出。  使用 [警告](../../preprocessor/warning.md) 杂注可取消 C4485。  
+ C4485 始终作为错误发出。 使用[警告](../../preprocessor/warning.md)杂注可取消 C4485。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4485  
   
 ```  

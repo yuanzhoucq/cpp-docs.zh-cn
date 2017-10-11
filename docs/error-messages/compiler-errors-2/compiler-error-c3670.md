@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3670 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3670"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3670"
+title: "编译器错误 C3670 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3670
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3670
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 773ee85df3e19245b665521be8d65055ffe3bf17
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“override”: 不能重写不可访问的基类方法“method”  
+---
+# <a name="compiler-error-c3670"></a>编译器错误 C3670
+重写： 不能重写无法访问基类方法 method  
   
- 只有其访问级别使其可用于派生类型的函数才能进行重写。  有关更多信息，请参见[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 替代仅会在其访问级别使其可派生类型中的函数上发生。 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- 下面的示例生成 C3670：  
+ 下面的示例生成 C3670:  
   
 ```  
 // C3670.cpp  

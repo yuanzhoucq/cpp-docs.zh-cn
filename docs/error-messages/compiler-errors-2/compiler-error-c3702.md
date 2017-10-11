@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3702 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3702"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3702"
+title: "编译器错误 C3702 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3702
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3702
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3702
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6d41ff2f20caa61126c122b50957037718968d3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: COM 事件需要 ATL  
+---
+# <a name="compiler-error-c3702"></a>编译器错误 C3702
+function: ATL 是所必需的 COM 事件  
   
- 尝试在未包括必要的 ATL 头文件的情况下使用 COM 事件。  
+ 你试图使用 COM 事件，而不包括必要的 ATL 标头文件。  
   
- 下面的示例生成 C3702：  
+ 下面的示例生成 C3702:  
   
 ```  
 // C3702.cpp  

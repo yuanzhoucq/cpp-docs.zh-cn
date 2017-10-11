@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3719 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3719"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3719"
+title: "编译器错误 C3719 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3719
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3719
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“interface”: 基于接口的事件源只能用于 COM 事件  
+---
+# <a name="compiler-error-c3719"></a>编译器错误 C3719
+interface： 接口基于的事件源仅用于 COM 事件  
   
- 您在非 COM 上下文中声明了接口。  
+ 声明中的非 COM 上下文的接口。  
   
- 下面的示例生成 C3719：  
+ 下面的示例生成 C3719:  
   
 ```  
 // C3719a.cpp  
@@ -55,7 +58,7 @@ int main() {
 }  
 ```  
   
- 若要修复此错误，请适当地应用 [object](../../windows/object-cpp.md)、[coclass](../../windows/coclass.md)、[event\_source](../../windows/event-source.md) 和 [event\_receiver](../../windows/event-receiver.md) 特性，以生成您要在其中使用接口 COM 类的类。  例如：  
+ 若要修复此错误，应用[对象](../../windows/object-cpp.md)，[组件类](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，和[event_receiver](../../windows/event-receiver.md)属性相应地进行在其中使用接口 COM 类的类。 例如:   
   
 ```  
 // C3719b.cpp  

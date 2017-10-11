@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C3642 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3642"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3642"
+title: "编译器错误 C3642 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3642
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C3642
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4b5d73344b99a42dfc4caf2b9f6b8cf7c9dc18bc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“return\_type\/args”: 不能从本机代码中使用 \_\_clrcall 调用约定调用函数  
+---
+# <a name="compiler-error-c3642"></a>编译器错误 C3642
+return_type/参数： 无法从本机代码调用约定的 __clrcall 与调用函数  
   
- 不能从本机（非托管）代码中调用使用 [\_\_clrcall](../../cpp/clrcall.md) 调用约定标记的函数。  
+ 将标有一个函数[__clrcall](../../cpp/clrcall.md)调用约定不能从本机 （非托管） 代码调用。  
   
- *return\_type\/args* 是正尝试调用的函数的名称，或者是正尝试调用的 `__clrcall`函数的类型。通过函数指针进行调用时使用了类型。  
+ *return_type/args*是函数的名称或的一种`__clrcall`尝试调用的函数。  通过函数指针进行调用时，使用的类型。  
   
- 若要从本机上下文调用托管函数，则可以添加一个将调用 `__clrcall` 函数的“包装”函数。  也可以使用 CLR 封送处理机制；有关更多信息，请参见[如何：使用 PInvoke 封送函数指针](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)。  
+ 若要从本地上下文调用托管的函数，你可以添加将调用"包装器"函数`__clrcall`函数。 或者，你可以使用 CLR 封送处理机制;请参阅[How to： 封送函数指针使用 PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)有关详细信息。  
   
- 下面的示例生成 C3642：  
+ 下面的示例生成 C3642:  
   
 ```  
 // C3642.cpp  

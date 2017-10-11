@@ -19,38 +19,23 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 58d702067c186eeeea94768a03836b64577961ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4342c749c5db4d66f206209a146ad7d7aef7041
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4936"></a>编译器警告 C4936
 只有使用 /clr 或 /clr:pure 编译时，才支持此 __declspec  
   
- **/Clr: pure**编译器选项已弃用 Visual Studio 2015 中。  
+ **/Clr: pure**编译器选项在 Visual Studio 2015 中已弃用。  
   
- 一个`__declspec`但使用了修饰符`__declspec`修饰符才编译之一时有效[/clr](../../build/reference/clr-common-language-runtime-compilation.md)选项。  
+ 使用了 `__declspec` 修饰符，但只有在编译时使用 `__declspec` /clr [选项之一的情况下](../../build/reference/clr-common-language-runtime-compilation.md) 修饰符方才有效。  
   
- 有关详细信息，请参阅[appdomain](../../cpp/appdomain.md)和[过程](../../cpp/process.md)。  
+ 有关详细信息，请参见 [应用程序域](../../cpp/appdomain.md) 和 [过程](../../cpp/process.md)。  
   
- 始终发出 C4936 错误。  您可以禁用与 C4936[警告](../../preprocessor/warning.md)杂注。  
+ 始终发出 C4936 错误。  可以使用 [warning](../../preprocessor/warning.md) 杂注来禁用 C4936。  
   
  下面的示例生成 C4936：  
   

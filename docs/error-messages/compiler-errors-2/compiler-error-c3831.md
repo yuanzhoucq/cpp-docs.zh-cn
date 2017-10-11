@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 9b0dc2a5da701c94408e79053df721af38cada62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 27b330e82c952bd02de7499e8dffe548acfe819c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3831"></a>编译器错误 C3831
-member: class 不能具有固定的数据成员或成员函数返回的钉住指针  
+member: class 不能具有固定的数据成员或成员函数返回钉住指针  
   
  [pin_ptr (C + + /cli CLI)](../../windows/pin-ptr-cpp-cli.md)未正确使用。  
   

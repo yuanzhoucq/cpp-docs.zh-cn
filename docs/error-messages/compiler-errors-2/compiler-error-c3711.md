@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3711"
+title: "编译器错误 C3711 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“method”: 非托管事件源方法必须返回 void 或者整型  
+---
+# <a name="compiler-error-c3711"></a>编译器错误 C3711
+method： 非托管事件源方法必须返回 void 或整数类型  
   
- 您在事件源中定义的方法不返回 void 或整型。  若要修复此错误，请使事件和事件处理程序的返回类型为 `void` 或整型（如 `int` 或 `long`）。  
+ 中的事件源的未返回 void 或整型类型定义的方法。 若要修复此错误，请在事件和事件处理程序具有返回类型的`void`或整型类型，如`int`或`long`。  
   
- 下面的示例生成 C3711：  
+ 下面的示例生成 C3711:  
   
 ```  
 // C3711.cpp  

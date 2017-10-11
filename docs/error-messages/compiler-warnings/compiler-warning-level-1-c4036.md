@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 30ff24d9d8746d914ba4dd098e715d8b5ecb55c9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6392ba12c14ca3ef89f992e358bf019d1d92e5db
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4036"></a>编译器警告（等级 1）C4036
 未命名的“type”作为实际参数  
   
- 未向用作实际参数的结构、联合、枚举或类提供任何类型名称。 如果你使用[/Zg](../../build/reference/zg-generate-function-prototypes.md)来生成函数原型，编译器发出此警告，并注释掉所生成原型中的形参。  
+ 未向用作实际参数的结构、联合、枚举或类提供任何类型名称。 如果使用 [/Zg](../../build/reference/zg-generate-function-prototypes.md) 来生成函数原型，编译器会发出此警告，并注释掉所生成原型中的形式参数。  
   
  指定类型名称，以解决此警告。  
   

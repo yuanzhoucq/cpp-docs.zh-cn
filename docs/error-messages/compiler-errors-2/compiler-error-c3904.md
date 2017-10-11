@@ -1,40 +1,43 @@
 ---
-title: "编译器错误 C3904 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3904"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3904"
+title: "编译器错误 C3904 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3904
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C3904
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31a6f728fdbfb9540245cf85879adef8c1827d2e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“property\_accessor”: 必须指定 number 参数  
+---
+# <a name="compiler-error-c3904"></a>编译器错误 C3904
+property_accessor： 必须指定数目的参数  
   
- 对照属性维数，检查 `get` 和 `set` 方法中参数的个数。  
+ 检查中的参数数目你`get`和`set`对照属性维数的方法。  
   
--   `get` 方法的参数个数必须等于属性的维数，或者为零（对于非索引属性）。  
+-   参数数目`get`方法必须等于的属性的维度数或为零，对于非索引属性。  
   
--   `set` 方法的参数个数必须比属性的维数多一个。  
+-   参数数目`set`方法必须是一个以上的属性的维度数。  
   
- 有关更多信息，请参见[属性](../../windows/property-cpp-component-extensions.md)。  
+ 有关详细信息，请参阅 [property](../../windows/property-cpp-component-extensions.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3904。  
   
 ```  
@@ -55,7 +58,7 @@ ref class X {
 };  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3904。  
   
 ```  

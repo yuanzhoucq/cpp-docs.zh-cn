@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3655 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3655"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3655"
+title: "编译器错误 C3655 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3655
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3655
 ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3655
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6ac13086c64887a916041853db7606aa2e1e532
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 函数已显式重写  
+---
+# <a name="compiler-error-c3655"></a>编译器错误 C3655
+function： 函数已显式重写  
   
- 函数只能显式重写一次。  有关更多信息，请参见[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 可以仅显式重写函数一次。 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- 下面的示例生成 C3655：  
+ 下面的示例生成 C3655:  
   
 ```  
 // C3655.cpp  

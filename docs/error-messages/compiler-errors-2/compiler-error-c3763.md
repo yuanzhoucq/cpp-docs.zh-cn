@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: "编译器错误 C3763 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”:“retval”和“out”只能出现在数据指针类型上  
+---
+# <a name="compiler-error-c3763"></a>编译器错误 C3763
+type: retval 和 out 只能出现在数据指针类型  
   
- [out](../../windows/out-cpp.md) 或 [retval](../../windows/retval.md) 特性只能出现在指针类型的参数中。  或者移除该特性，或者创建指针类型的参数。  
+ [出](../../windows/out-cpp.md)或[retval](../../windows/retval.md)特性只能出现在参数的类型指针。 或者删除该特性，或者创建的参数的类型指针。  
   
- 下面的示例生成 C3763：  
+ 下面的示例生成 C3763:  
   
 ```  
 // C3763.cpp  

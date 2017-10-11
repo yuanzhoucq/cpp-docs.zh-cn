@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b55f164e7d672b843ddf45c8518d0540611fcd29
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3c57a7ca72529555420d32985da78b463baef268
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3619"></a>编译器错误 C3619
@@ -45,5 +31,5 @@ ms.lasthandoff: 02/24/2017
   
 不允许在托管或 WinRT 类或接口使用类模板。  
   
-C3619 才可使用已过时的编译器选项连接**/clr:oldSyntax**。  
+C3619 才可访问使用过时的编译器选项**/clr:oldSyntax**。  
 

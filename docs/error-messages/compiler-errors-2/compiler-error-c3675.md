@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C3675 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3675"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3675"
+title: "编译器错误 C3675 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3675
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3675
 ms.assetid: 87461613-6633-430b-b95d-c7cb1bb63776
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 编译器错误 C3675
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d45236fc32fd0d10e9617b6946683d8ebd73ef0e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 已定义了“property”，因此被保留  
+---
+# <a name="compiler-error-c3675"></a>编译器错误 C3675
+function： 是保留的因为没有定义属性。  
   
- 当声明一个简单的属性时，编译器生成 get 和 set 访问器方法，并且那些名称存在于程序范围内。编译器生成的名称是通过在属性名称前预置 get\_ 和 set\_ 形成的。因此，不能声明与编译器生成的访问器同名的函数。  
+ 在声明简单属性时，编译器将生成 get 和 set 访问器方法，以及那些名称是你的程序的作用域中存在。  通过预先计算 get_ 和 set_ 到属性名称形成编译器生成的名称。  因此，不能声明具有同名的编译器生成的访问器函数。  
   
- 有关更多信息，请参见[属性](../../windows/property-cpp-component-extensions.md)。  
+ 有关更多信息，请参见 [property](../../windows/property-cpp-component-extensions.md) 。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3675。  
   
 ```  

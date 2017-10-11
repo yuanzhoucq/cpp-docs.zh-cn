@@ -19,31 +19,17 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: f90319164eca1e4f32918c814f0edbf7b859d1af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b2a0e91b3ccb6bbcb5ecef15e7fb33754c239932
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3721"></a>编译器错误 C3721
-签名︰ 事件不兼容的签名  
+签名： 事件不兼容的签名  
   
  未正确声明事件。 有关详细信息，请参阅[__event](../../cpp/event.md)。  
   
- C3721 才可使用已过时的编译器选项连接**/clr:oldSyntax**。  
+ C3721 才可访问使用过时的编译器选项**/clr:oldSyntax**。  
 

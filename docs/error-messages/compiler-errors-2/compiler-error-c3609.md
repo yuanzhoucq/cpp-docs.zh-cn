@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ffb46df64ac0a18847c3595f9fb3fffc3bd26c51
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb5d5127020ad1855c3fe7d94c362deeee53ccad
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3609"></a>编译器错误 C3609
 “成员”：密封的或最终函数必须是虚拟函数  
   
- [密封](../../windows/sealed-cpp-component-extensions.md)和[最终](../../cpp/final-specifier.md)上标记的类、 结构或成员函数仅允许使用关键字`virtual`。  
+ [密封](../../windows/sealed-cpp-component-extensions.md)和[最终](../../cpp/final-specifier.md)关键字标记的类、 结构或成员函数上只允许`virtual`。  
   
  以下示例生成 C3609：  
   

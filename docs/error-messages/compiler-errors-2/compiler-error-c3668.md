@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C3668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3668"
+title: "编译器错误 C3668 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3668
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3668
 ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C3668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5db5144aac56112522f7ac707bd1b5f252929dc8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“method”: 包含重写说明符“override”的方法没有重写任何基类方法  
+---
+# <a name="compiler-error-c3668"></a>编译器错误 C3668
+method： 重写说明符替代方法未进行重写任何基类方法  
   
- 函数尝试重写一个不存在的函数。  
+ 尝试重写不存在函数的函数。  
   
- 有关更多信息，请参见[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3668。  
   
 ```  

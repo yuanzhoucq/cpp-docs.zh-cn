@@ -1,32 +1,35 @@
 ---
-title: "编译器错误 C3839 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3839"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3839"
+title: "编译器错误 C3839 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3839
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3839
 ms.assetid: 0957faff-1e9f-439b-876b-85bd8d2c578d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3839
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a8c9fa9112128b86123693aea7443d68e8531d0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3839"></a>编译器错误 C3839
 无法更改托管或 WinRT 类型中的对齐方式  
   
- 托管或 Windows 运行时类型中变量的对齐是由 CLR 或 Windows 运行时控制的，不能使用 [align](../../cpp/align-cpp.md) 进行修改。  
+ 变量的对齐在托管或 Windows 运行时类型由 CLR 或 Windows 运行时控制，并且不能修改与[对齐](../../cpp/align-cpp.md)。  
   
  下面的示例生成 C3839：  
   
@@ -42,5 +45,4 @@ public:
 int main()  
 {  
 }  
-  
 ```

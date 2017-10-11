@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3703"
+title: "编译器错误 C3703 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3703
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3703
 ms.assetid: 7e3677d9-f2be-4c26-998f-423564e9023c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6ef53628f3a24dd3e6f7f387491fc959d70aa04
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“event handler”: 事件处理程序方法必须具有与源“event”相同的存储类  
+---
+# <a name="compiler-error-c3703"></a>编译器错误 C3703
+事件处理程序： 事件处理程序方法必须具有相同的存储类作为源 event  
   
- [event](../../cpp/event-handling.md) 与它挂钩的事件处理程序的存储类不同。  例如，如果事件处理程序是静态成员函数而事件不是静态的，则将发生此错误。  若要修复此错误，请给予事件和事件处理程序相同的存储类。  
+ [事件](../../cpp/event-handling.md)具有不同的存储类它挂钩的事件处理程序。 例如，如果该事件处理程序的静态成员函数和事件不是静态的则会发生此错误。 若要修复此错误，给予事件和事件处理程序相同的存储类。  
   
- 下面的示例生成 C3703：  
+ 下面的示例生成 C3703:  
   
 ```  
 // C3703.cpp  

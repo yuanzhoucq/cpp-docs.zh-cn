@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: bbc097048600700592d2ebb30d939ba216434d84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5be1886ad2404f0c0eb30cb5511111e4e8e97180
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3648"></a>编译器错误 C3648
-此显式重写语法需要 /clr:oldSyntax  
+此显式重写语法要求 /clr:oldSyntax  
   
-在编译的最新的托管语法时，编译器找到显式重写为以前的版本不再受支持的语法。  
+在编译的最新的托管语法时，编译器找到显式重写对于以前的版本不再受支持的语法。  
   
 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   

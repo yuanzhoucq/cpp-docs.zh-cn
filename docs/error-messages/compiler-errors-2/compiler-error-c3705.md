@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3705 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3705"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3705"
+title: "编译器错误 C3705 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3705
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3705
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”：找不到事件接口  
+---
+# <a name="compiler-error-c3705"></a>编译器错误 C3705
+function： 找不到事件接口  
   
- 必须定义事件接口来使用 COM 事件。  请注意，使用 COM 事件需要下面的示例中所显示的 ATL 头文件的 `#include` 行。  若要修复此错误，请取消注释代码示例中 `IEvents` 接口的定义。  
+ 你必须定义要使用 COM 事件的事件接口。 请注意，`#include`在下面的示例所示的 ATL 标头文件的行所需的使用 COM 事件。 若要解决此错误，取消注释的定义`IEvents`示例代码中的接口。  
   
- 下面的示例生成 C3705：  
+ 下面的示例生成 C3705:  
   
 ```  
 // C3705.cpp  

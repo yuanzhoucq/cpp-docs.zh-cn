@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1f928242a26ed45a48cc9bc19be231e2d0e09a51
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 992e2a5d34b380146a99f6f78145b022eacd21d6
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3641"></a>编译器错误 C3641
-function︰ 使用 /clr 编译的函数的调用约定 calling_convention 无效︰ pure 或 /clr: safe  
+function： 无效的使用 /clr 编译的函数调用约定 calling_convention: pure 或 /clr: safe  
   
- **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+ **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- 仅[__clrcall](../../cpp/clrcall.md)调用约定允许使用以[/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 仅[__clrcall](../../cpp/clrcall.md)调用约定允许使用[/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
  下面的示例生成 C3641:  
   

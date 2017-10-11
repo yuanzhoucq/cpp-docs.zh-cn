@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3637 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3637"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3637"
+title: "编译器错误 C3637 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3637
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3637
 ms.assetid: 72391377-8519-43d9-870a-73a6423deb74
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3637
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 111e4025122ca298939e696901cb37f079d4be21
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 友元函数定义不能是函数类型的专用化  
+---
+# <a name="compiler-error-c3637"></a>编译器错误 C3637
+function： 友元函数定义不能为函数类型的专用化  
   
- 为模板或泛型错误地定义了友元函数。  
+ 友元函数已定义为模板或泛型的不正确。  
   
- 下面的示例生成 C3637：  
+ 下面的示例生成 C3637:  
   
 ```  
 // C3637.cpp  
@@ -40,7 +43,7 @@ struct S {
 };  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C3637b.cpp  
@@ -53,7 +56,7 @@ struct S {
 };  
 ```  
   
- 使用以下泛型时也可能发生 C3637 错误：  
+ 使用泛型时，也可能发生 C3637:  
   
 ```  
 // C3637c.cpp  
@@ -67,7 +70,7 @@ struct S {
 };  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C3637d.cpp  

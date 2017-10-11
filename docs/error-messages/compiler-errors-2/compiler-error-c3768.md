@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: cb9c1c3a41deb35e6aa82d3d77e61dfd4b15a7cb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d334473e326f28a628ebda9dede7a83340a1cb34
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3768"></a>编译器错误 C3768
-在纯托管代码中不能采用虚拟 vararg 函数的地址  
+不能将虚拟 vararg 函数的地址采用纯托管代码  
   
- **/Clr: pure**编译器选项已弃用 Visual Studio 2015 中。  
+ **/Clr: pure**编译器选项在 Visual Studio 2015 中已弃用。  
   
- 使用编译时`/clr:pure`，您无法采用的一个虚拟地址`vararg`函数。  
+ 使用编译时`/clr:pure`，不能采用的虚拟地址`vararg`函数。  
   
 ## <a name="example"></a>示例  
 
