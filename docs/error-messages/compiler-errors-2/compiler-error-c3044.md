@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 07b7fd0668eef1137f81d435dd89fefe314ad64e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 313b5d1d6b0d8204d4d4716d0671e8093f4978d5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3044"></a>编译器错误 C3044
 “section”: 只允许直接嵌套在 OpenMP“sections”指令中  
   
- 编译器发现 `section` 指令未正确使用。 有关详细信息，请参阅[部分](../../parallel/openmp/reference/sections-openmp.md)。  
+ 编译器发现 `section` 指令未正确使用。 有关详细信息，请参见 [部分](../../parallel/openmp/reference/sections-openmp.md)。  
   
  以下示例生成 C3044：  
   

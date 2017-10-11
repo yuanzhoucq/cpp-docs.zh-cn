@@ -19,35 +19,21 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>编译器错误 C3149
-type︰ 不能使用不顶级 char 的情况下此类型  
+type： 不能使用不顶级 char 的情况下此类型  
   
- 未正确指定一个声明。  
+ 声明未正确指定。  
   
- 例如，您可能会定义在全局范围内的 CLR 类型并尝试作为定义的一部分创建类型的变量。 因为不允许使用 CLR 类型的全局变量，则编译器将生成 C3149。  
+ 例如，你可能具有定义在全局范围内的 CLR 类型并尝试作为定义的一部分创建的变量的类型。 因为不允许的 CLR 类型的全局变量，编译器将生成 C3149。  
   
- 若要解决此错误，声明函数或类型定义内的 CLR 类型的变量。  
+ 若要解决此错误，声明一个函数或类型定义中的 CLR 类型的变量。  
   
  下面的示例生成 C3149:  
   

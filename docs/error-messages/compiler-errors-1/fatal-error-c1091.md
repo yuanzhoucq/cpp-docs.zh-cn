@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f014e2b9d34cdac17adefe88c4947ee5fb66cfcc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6c3fd2dae1f3258ce90d30c78792c498be75615a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1091"></a>错误 C1091
@@ -46,4 +31,4 @@ ms.lasthandoff: 04/12/2017
   
  字符串常量超过当前的字符串长度限制。  
   
- 你可能想要将静态字符串拆分为两个 （或多个） 的变量和使用[strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)作为一部分声明时或在运行时联接结果。
+ 你可能希望将静态字符串拆分为两个（或更多）变量，以及使用 [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) 在声明或在运行时联接结果。

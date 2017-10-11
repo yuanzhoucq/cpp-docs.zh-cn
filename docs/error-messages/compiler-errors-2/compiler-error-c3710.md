@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3710"
+title: "编译器错误 C3710 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3710
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C3710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc39cd77bc9316024d0980be3a432e332f09cbb7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 在 \_\_hook\/\_\_unhook 中指定事件处理程序的语法不正确  
+---
+# <a name="compiler-error-c3710"></a>编译器错误 C3710
+function： 不正确的语法，用于指定事件处理程序中 __hook /\__unhook  
   
- 使用 [\_\_hook](../../cpp/hook.md) 或 [\_\_unhook](../../cpp/unhook.md) 指定事件处理程序时，处理程序必须是有效的方法。  
+ 当你指定事件处理程序替换[__hook](../../cpp/hook.md)或[__unhook](../../cpp/unhook.md)，该处理程序必须是有效的方法。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3710  
   
 ```  

@@ -19,34 +19,19 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 865eea3ed69ea817aafea011e81033f2bd4ca5f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2259"></a>编译器错误 C2259
-class︰ 无法实例化的抽象类  
+class： 无法实例化的抽象类  
   
- 代码声明抽象类或结构的实例。  
+ 代码声明一个抽象类或结构的实例。  
   
- 无法实例化类或结构具有一个或多个纯虚函数。 若要实例化派生类的对象，派生的类必须重写每个纯虚函数。  
+ 无法实例化类或结构具有一个或多个纯虚函数。 若要实例化的派生类的对象，派生的类必须重写每个纯虚函数。  
   
  有关详细信息，请参阅[隐式抽象类](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。  
   
@@ -69,15 +54,15 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()  
 ```  
   
- 只要从接口派生，并在具有非公共访问权限的派生类中实现接口方法，您可能会收到 C2259。  这是因为编译器需要具有公共访问权限的派生类中实现的接口方法。 当实现更为严格的访问权限的接口的成员函数时，编译器不考虑它们可以在接口中，这会使一个抽象类派生的类定义的接口方法的实现。  
+ 无论何时你从接口派生，并在具有非公共访问权限的派生类中实现接口方法，你可能会收到 C2259。  这是因为编译器需要具有公共访问权限的派生类中实现的接口方法。 当您实现了限制性更强的访问权限的接口的成员函数时，编译器不考虑它们可以在接口中，这会使一个抽象类派生的类定义的接口方法的实现。  
   
- 有两种可能的问题的解决方法︰  
+ 有两种可能解决问题的方法：  
   
--   公开的访问权限，实现的方法。  
+-   公开的访问权限，实现方法。  
   
--   在派生类中实现的接口方法的使用范围解析运算符来限定实现的方法的接口的名称的名称。  
+-   为派生类中实现接口方法使用范围解析运算符来限定同名的接口的实现的方法名称。  
   
- Visual c + + 2005 中，执行的一致性工作也可能导致 C2259 **/zc: wchar_t**现在默认是打开的。 在此情况下，可被解析或者通过使用编译 C2599 **/Zc:wchar_t-**，以获得的行为，从早期版本中，或最好是通过更新您的类型，使它们互相兼容。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+ 于在 Visual c + + 2005 中中, 完成的一致性工作也可能导致 C2259 **/zc: wchar_t**现在默认是打开的。 在此情况下，C2599 可被解析或者通过使用编译**/Zc:wchar_t-**，以获得的行为，从早期版本中，或者最好是通过更新你的类型，使它们互相兼容。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   
  下面的示例生成 C2259:  
   

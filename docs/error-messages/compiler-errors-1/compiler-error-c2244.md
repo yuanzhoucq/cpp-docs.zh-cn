@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C2244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2244"
+title: "编译器错误 C2244 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2244
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C2244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc2afb310e7fdee866d437631f4a20554fc7a872
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier”: 无法将函数定义与现有的声明匹配  
+---
+# <a name="compiler-error-c2244"></a>编译器错误 C2244
+identifier： 无法匹配函数定义与现有的声明  
   
- 在没有括号的函数调用前使用了一元 \+ 运算符的异常用法。  
+ 一元加运算符的异常用法已用于没有括号的函数调用的前面。  
   
- 此错误仅发生在 C\+\+ 项目中。  
+ 此错误仅出现在 c + + 项目中。  
   
- 下面的示例生成 C2244：  
+ 下面的示例生成 C2244:  
   
 ```  
 // C2244.cpp  
@@ -47,7 +50,7 @@ int main() {
 }  
 ```  
   
- 在将不正确的函数签名用于类模板的成员函数时也会发生 C2244 错误。  
+ 不正确的函数签名使用类模板的成员函数时，也会发生 c2244 错误。  
   
 ```  
 // C2244b.cpp  
@@ -63,7 +66,7 @@ void XYZ<T>::func(int i) {}   // C2244 wrong function signature
 // void XYZ<T>::func(T t) {}  
 ```  
   
- 在将不正确的函数签名用于成员函数模板时也会发生 C2244 错误。  
+ 不正确的函数签名用于成员函数模板时，也会发生 c2244 错误。  
   
 ```  
 // C2244c.cpp  
@@ -79,7 +82,7 @@ void ABC::func(int i) {}   // C2244 wrong signature
 // void ABC::func(int i, T t) {}  
 ```  
   
- 无法使函数模板部分专用化。  
+ 你无法部分专用化函数模板。  
   
 ```  
 // C2244d.cpp  

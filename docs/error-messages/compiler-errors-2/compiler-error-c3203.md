@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3203 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3203"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3203"
+title: "编译器错误 C3203 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3203
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C3203
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“类型”：未专用化的类模板或泛型不能用作模板或模板的泛型参数或泛型参数“param”，应为 real 类型  
+---
+# <a name="compiler-error-c3203"></a>编译器错误 C3203
+“类型”：未专用化的类模板或泛型不能用作模板或模板的泛型自变量或泛型参数“param”，应为 real 类型  
   
- 你传递了一个无效的参数到类模板或泛型。  类模板或泛型需要一种类型作为参数。  
+ 你传递了一个无效的自变量到类模板或泛型。 类模板或泛型需要一种类型作为参数。  
   
- 为 Visual C\+\+ 2005 执行的编译器一致性工作可以导致此错误：专用的类模板不能用作基类列表中的模板参数。  若要解决 C3203，则当将模板类型参数用作基类列表中的模板参数时，将其显式添加到模板类名称。  
+ 为 Visual C++ 2005 执行的编译器一致性工作可以导致此错误：专用的类模板不能用作基类列表中的模板参数。 若要解决 C3203，则当将模板类型参数用作基类列表中的模板参数时，将其显式添加到模板类名称。  
   
 ```  
 // C3203.cpp  

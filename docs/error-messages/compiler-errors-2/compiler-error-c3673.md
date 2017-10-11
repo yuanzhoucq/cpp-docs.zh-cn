@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3673"
+title: "编译器错误 C3673 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3673
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4958f3652119e105ed327d5476c084ad6707fb9a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”: 类没有复制构造函数  
+---
+# <a name="compiler-error-c3673"></a>编译器错误 C3673
+type： 类没有复制构造函数  
   
- 需要使用用户定义的构造函数来复制 CLR ref 类型的对象。  有关详细信息，请参阅[参考类型的 C\+\+ 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。  
+ 用户定义的构造函数需要复制 CLR 引用类型的对象。 有关详细信息，请参阅[对于引用类型的 c + + 堆栈语义](../../dotnet/cpp-stack-semantics-for-reference-types.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3673。  
   
 ```  
@@ -47,7 +50,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3673。  
   
 ```  

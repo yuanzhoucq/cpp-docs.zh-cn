@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C2764 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2764"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2764"
+title: "编译器错误 C2764 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2764
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2764
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 18e32646c3930dfae79ffd1ed13dfa014da4ce1a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“param”: 部分专用化“specialization”中未使用或不能推导模板参数  
+---
+# <a name="compiler-error-c2764"></a>编译器错误 C2764
+param： 未使用或部分专用化 specialization 中不能推导出的模板参数  
   
- 在部分专用化中未使用模板参数。  这使该部分专用化无法使用，因为无法推导模板参数。  
+ 部分专用化中未使用的模板参数。 这使得部分专用化不可用，因为无法推导模板参数。  
   
-## 示例  
- 下面的示例生成 C2764：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C2764:  
   
 ```  
 // C2764.cpp  

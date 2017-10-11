@@ -1,41 +1,44 @@
 ---
-title: "编译器错误 C2217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2217"
+title: "编译器错误 C2217 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2217
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“attribute1”需要“attribute2”  
+---
+# <a name="compiler-error-c2217"></a>编译器错误 C2217
+attribute1 需要 attribute2  
   
- 第一个函数特性需要第二个特性。  
+ 第一个函数属性要求第二个属性。  
   
-### 通过检查以下可能的原因进行修复  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
   
-1.  中断函数 \(`__interrupt`\) 声明为 `near`。  中断函数必须为 `far`。  
+1.  中断 (`__interrupt`) 函数声明为`near`。 中断函数必须是`far`。  
   
-2.  中断函数是用 `__stdcall` 或 `__fastcall` 声明的。  中断函数必须使用 C 调用约定。  
+2.  中断用声明的函数`__stdcall`，或`__fastcall`。 中断函数必须使用 C 调用约定。  
   
-## 示例  
- 如果您尝试将委托绑定到使用数目可变的参数的 CLR 函数，则也会发生 C2217。  如果该函数还有一个参数数组重载，请改用此重载。  下面的示例生成 C2217。  
+## <a name="example"></a>示例  
+ 如果你尝试将委托绑定到采用数量可变的自变量的 CLR 函数，也会发生 C2217。 如果函数还具有 e param 数组重载，使用该副本。 下面的示例生成 C2217。  
   
 ```  
 // C2217.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2698 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2698"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2698"
+title: "编译器错误 C2698 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2698
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2698
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 654367e882b16c18cc4bd58c339d61c653dc68e9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“declaration 1”的 using 声明不能与“declaration 2”的现有 using 声明共存  
+---
+# <a name="compiler-error-c2698"></a>编译器错误 C2698
+using 声明为声明 1 不能共存与现有 using 声明为声明 2  
   
- 一旦有了某数据成员的 [using 声明](../../cpp/using-declaration.md)，则在同一范围中，不允许有任何同名的 using declaration，因为仅可重载函数。  
+ 一旦[using 声明](../../cpp/using-declaration.md)任何使用的数据成员不允许使用相同的名称与同一范围中的声明，因为只有函数可以进行重载。  
   
- 下面的示例生成 C2698：  
+ 下面的示例生成 C2698:  
   
 ```  
 // C2698.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3713 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3713"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3713"
+title: "编译器错误 C3713 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3713
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3713
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13387629ab4dda3965bc8b835e2e092ef29ef880
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“method”: 事件处理程序方法必须有和源“method”相同的函数参数  
+---
+# <a name="compiler-error-c3713"></a>编译器错误 C3713
+method： 事件处理程序方法必须具有相同的函数参数作为源 method  
   
- 您定义的事件处理程序方法与源事件方法使用的参数不同。  若要修复此错误，请给予事件处理程序方法与源事件方法的参数相同的参数。  
+ 您定义未使用相同的参数作为源事件方法的事件处理程序方法。 若要修复此错误，给予事件处理程序方法与这些源事件方法相同的参数。  
   
- 下面的示例生成 C3713：  
+ 下面的示例生成 C3713:  
   
 ```  
 // C3713.cpp  

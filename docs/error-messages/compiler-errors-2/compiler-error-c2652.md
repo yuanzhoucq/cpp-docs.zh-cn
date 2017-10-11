@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2652 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2652"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2652"
+title: "编译器错误 C2652 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2652
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2652
 ms.assetid: 6e3d1a90-a989-4088-8afd-dc82f6a2d66f
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2652
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56cfdf52ec3a6947a6a82774f551fc1a6880c959
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“identifier”: 非法的复制构造函数: 第一个参数不能是“identifier”  
+---
+# <a name="compiler-error-c2652"></a>编译器错误 C2652
+identifier： 非法的复制构造函数： 第一个参数不能 identifier  
   
- 对于为其定义了复制构造函数的类、结构或联合，该复制构造函数中的第一个参数的类型与该类、结构或联合相同。  第一个参数可以是对该类型的引用，而不能是该类型本身。  
+ 复制构造函数中的第一个参数具有与类、 结构或联合为其定义相同的类型。 第一个参数可以是对的类型，但不是类型本身的引用。  
   
- 下面的示例生成 C2651：  
+ 下面的示例生成 C2651:  
   
 ```  
 // C2652.cpp  

@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0085ecc5811be49bf36ecf70b38bed11c3ef3f0b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b1a6a450c0c3faca9088b01e1016df5f4e5a4045
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3370"></a>编译器错误 C3370
 “idl_module nam”：idl_module 尚未定义  
   
- 你可以使用之前[idl_module](../../windows/idl-module.md)若要在 DLL 中指定的入口点，必须首先使用`idl_module`以指定 DLL 名称。  
+ 使用 [idl_module](../../windows/idl-module.md) 在 DLL 中指定入口点前，必须首先使用 `idl_module` 指定 DLL 名称。  
   
  以下示例生成 C3370：  
   

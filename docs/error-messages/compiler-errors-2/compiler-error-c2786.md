@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C2786 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2786"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2786"
+title: "编译器错误 C2786 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2786
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2786
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d78b5664fa2853a3fe8f7934cba9ce5b8b3f782a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”: \_\_uuidof 的操作数无效  
+---
+# <a name="compiler-error-c2786"></a>编译器错误 C2786
+type： 对于 __uuidof 无效的操作数  
   
- [\_\_uuidof](../../cpp/uuidof-operator.md) 运算符采用附加了 GUID 的用户定义类型，或采用这种用户定义类型的对象。可能的原因：  
+ [__Uuidof](../../cpp/uuidof-operator.md)运算符采用与附加的 GUID 或用户定义类型的对象的用户定义的类型。  可能的原因：  
   
-1.  该参数不是用户定义的类型。  
+1.  参数不是用户定义的类型。  
   
-2.  `__uuidof` 无法从该参数中提取 GUID。  
+2.  `__uuidof`无法提取自变量中的 GUID。  
   
- 下面的示例生成 C2786：  
+ 下面的示例生成 C2786:  
   
 ```  
 // C2786.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "错误 C1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1017"
+title: "错误 C1017 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1017
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 错误 C1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 478a0a17ef8e0f0e6cb6589798d901837e7aff75
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-无效的整数常数表达式  
+---
+# <a name="fatal-error-c1017"></a>错误 C1017
+无效的整数常量表达式  
   
- `#if` 指令中的表达式不存在或者计算结果不为常数。  
+ 中的表达式`#if`指令不存在或计算结果不为常量。  
   
- 用 `#define` 定义的常数在 `#if`、`#elif` 或 `#else` 指令中使用时必须具有计算结果为整数常数的值。  
+ 使用定义的常量`#define`必须具有如果中使用的计算结果为整数常量的值`#if`， `#elif`，或`#else`指令。  
   
- 下面的示例生成 C1017：  
+ 下面的示例生成 C1017:  
   
 ```  
 // C1017.cpp  
@@ -39,7 +42,7 @@ caps.handback.revision: 8
 #endif  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C1017b.cpp  
@@ -49,9 +52,9 @@ caps.handback.revision: 8
 #endif  
 ```  
   
- 因为 `CONSTANT_NAME` 计算结果为字符串而不是整数，所以 `#if` 指令生成错误 C1017。  
+ 因为`CONSTANT_NAME`计算结果为字符串而不是整数，`#if`指令生成错误 C1017。  
   
- 在其他情况中，预处理器将未定义的常数作为零进行计算。  这可能导致意外的结果，如下例中所示。  因为未定义 `YES`，所以它的计算结果为零。  表达式 `#if` `CONSTANT_NAME` 计算结果为 false，而要对 `YES` 使用的代码由预处理器移除。  由于 `NO` 也未定义（零），因此 `#elif` `CONSTANT_NAME==NO` 计算结果为 true \(`0 == 0`\)，导致预处理器将代码保留在语句的 `#elif` 部分（与预期的行为完全相反）。  
+ 在其他情况下，预处理器会作为零计算未定义的常数。 下面的示例中所示，这可能导致意外的结果。 `YES`未定义，所以它的计算结果为零。 表达式`#if``CONSTANT_NAME`计算结果为 false，将使用上代码`YES`由预处理器移除。 `NO`也是不确定 （零），因此`#elif``CONSTANT_NAME==NO`计算结果为 true (`0 == 0`)，导致预处理器将中的代码`#elif`语句部分 — 完全相反的预期行为。  
   
 ```  
 // C1017c.cpp  
@@ -64,4 +67,4 @@ caps.handback.revision: 8
 #endif  
 ```  
   
- 若要确切了解编译器如何处理预处理器指令，请使用 [\/P](../../build/reference/p-preprocess-to-a-file.md)、[\/E](../../build/reference/e-preprocess-to-stdout.md) 或 [\/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)。
+ 若要查看完全编译器如何处理预处理器指令，使用[/P](../../build/reference/p-preprocess-to-a-file.md)， [/E](../../build/reference/e-preprocess-to-stdout.md)，或[/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)。

@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: zh-cn
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何使用 Visual C++ 工具集报告问题
@@ -40,7 +37,7 @@ ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
   
  无论对我们，还是对和你一样的其他开发者而言，你的报告都十分重要。 谢谢你帮助我们改进 Visual C++！  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a>如何准备报告  
+##  <a name="prepare"></a>如何准备报告  
  创建高质量报告至关重要，因为一旦缺少完整信息，我们将难以在计算机上重现你所遇到的问题。 报告的质量越高，我们重新创建和诊断问题的效率就越高。  
   
  报告中应至少包括  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a>后端（代码生成）故障  
+####  <a name="backend_crash"></a>后端（代码生成）故障  
  后端故障发生在编译器的代码生成阶段。 通常情况下，编译器会发出[错误 C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)，并可能不会引用与问题相关的源代码文件和行号；它通常会提及文件 compiler\utc\src\p2\main.c，你可忽略此详细信息。  
   
  对于这种类型的故障，如果使用的是链接时间代码生成 (LTCG)，请提供[链接重现](#link_repro)，如果不是，请提供[预处理过的重现](#preprocessed_repro)。 LTCG 由 cl.exe 的 `/GL` 命令行参数启用。  
@@ -217,7 +214,7 @@ CONTEXT:
   
  对于这种类型的故障，如果使用的是链接时间代码生成 (LTCG)，请提供[链接重现](#link_repro)，如果不是，请提供[预处理过的重现](#preprocessed_repro)。 LTCG 由 cl.exe 的 `/GL` 命令行参数启用。  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a>发送报告的方式  
+##  <a name="send"></a>发送报告的方式  
  向我们提交报告的方式有多种。 你可以通过 Microsoft Connect 提交 Bug、向我们发送电子邮件，或使用 Visual Studio 的内置报告问题工具。 提交报告的最佳方式取决于你遇到的问题类型、希望与调查报告的工程师互动的方式、以及是要跟踪其进度还是与社区共享报告。  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  对于可能在 Visual Studio 中遇到的、与工具集无关的问题（例如 UI 问题、损坏的 IDE 功能或常规故障），“报告问题”工具可能是最佳之选，因为它具有屏幕截图功能，可以记录导致问题的 UI 操作。 对于报告其他类型的错误而言，Microsoft Connect 也是一个不错的选择，但它缺少“报告问题”工具的其他功能。 请勿以发送电子邮件至 compilercrash@microsoft.com 的方式报告其他类型的错误。  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a>生成重现  
+##  <a name="generate"></a>生成重现  
  重现是一个完整的自包含代码示例，用于演示所报告的问题。 重现**并非**一个代码片段 - 它必须是生成和运行的完整示例（你所报告的问题产生的错误除外）。 它应包含全部必需的 #include 指令，即使对标准标头亦是如此。  
   
  此外，好的重新应是  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  以下是生成用于报告不同类型问题的各种重现的说明。  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a>预处理过的重现  
+###  <a name="preprocessed_repro"></a>预处理过的重现  
  预处理过的重现是用于说明问题的单个源文件，它从 C 预处理器的输出中通过处理原始源文件而生成。 此进程内联包含标头，以删除其他源和头文件中的依赖项、宏、#ifdefs 以及其他可能依赖本地化环境的预处理器命令。  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  最后，将此重现附加到报告。  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a>链接重现  
+###  <a name="link_repro"></a>链接重现  
  链接重现是一个包含生成项目（它们共同说明发生在链接时间的问题）的单独目录，例如涉及链接时间代码生成 (LTCG) 的后端故障，或链接器故障；所包含的生成项目是链接器输入所需的生成项目，因此可以重现问题。 使用链接器提供的设备可以轻松创建链接重现。  
   
 ##### <a name="to-generate-a-link-repro"></a>生成链接重现：  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  最后，通过将整个目录压缩为 .zip 文件或相似文件来打包重现，并将其附加到报告中。  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a>其他重现  
+###  <a name="other_repros"></a>其他重现  
  如果无法将问题减少到单个源文件或预处理过的重现，且此问题无需链接重现，我们可以调查 IDE 项目。 项目内的代码应仍保持最小，本文档中的所有指导仍然适用。  
   
  将重现创建为一个最小的 IDE 项目，再将整个目录结构压缩成 .zip 文件或其他相似文件，并将其附加到报告。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

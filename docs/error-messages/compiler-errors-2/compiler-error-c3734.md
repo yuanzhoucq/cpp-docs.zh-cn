@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: f63bb40c55298a5fd3b61b12aa5b3ddff2591b65
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 83f523bb615ef06716f226d4a6c837acaa26c5b2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3734"></a>编译器错误 C3734
 “class”: 托管或 WinRT 类不能是组件类  
   
- [Coclass](../../windows/coclass.md)属性不能与使用托管或 WinRT 类。  
+ [组件类](../../windows/coclass.md)属性不能用于托管或 WinRT 类。  
   
  下面的示例生成 C3734，并演示如何修复此错误：  
   

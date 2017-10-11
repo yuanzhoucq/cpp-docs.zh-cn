@@ -19,36 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 782735be55c043482679740afa9571ba7b29dfc4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bad7fac98e81e39457f484960ee566c16b6fe5bc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4956"></a>编译器警告 C4956
 “type”：此类型不可验证  
   
- 生成此警告时[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)指定而你的代码包含不可验证的类型。  
+ 当指定了 [/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md) 而你的代码包含不可验证的类型时，将生成此警告。  
   
  有关详细信息，请参阅[纯代码和可验证代码 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   
- 此警告作为错误发出，并且可以禁用，[警告](../../preprocessor/warning.md)杂注或[/wd](../../build/reference/compiler-option-warning-level.md)编译器选项。  
+ 此警告作为错误发出，可通过 [warning](../../preprocessor/warning.md) 杂注或 [/wd](../../build/reference/compiler-option-warning-level.md) 编译器选项禁用该警告。  
   
  下面的示例生成 C4956：  
   

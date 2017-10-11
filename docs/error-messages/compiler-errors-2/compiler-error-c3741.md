@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e7744a62cce2fddf27026ea453643063da9d9757
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: edbdc98c4591b565edcbd0ff5eb484a115bff16e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3741"></a>编译器错误 C3741
-class︰ 必须能是组件类时 event_receiver layout_dependent 参数 = true  
+class： 必须能是组件类时 event_receiver layout_dependent 参数 = true  
   
  当`layout_dependent=true`为[event_receiver](../../windows/event-receiver.md)类，则类还必须具有[组件类](../../windows/coclass.md)属性。  
   

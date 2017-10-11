@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f5c657322e901da8658e5d7d99e3d28c3392b579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b85138c6183598c8db2ab89099aa66940f60e8cd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3055"></a>编译器错误 C3055
 “symbol”：符号在用于“threadprivate”指令之前无法引用  
   
- 符号是引用，然后再在[threadprivate](../../parallel/openmp/reference/threadprivate.md)子句，这不允许。  
+ 引用了一个符号，然后在 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 子句中使用，这是不允许的。  
   
  下面的示例生成 C3055：  
   

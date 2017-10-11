@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 13f7af86f70cb1d8539db593cbf0170a71f66498
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bab3adb4d6fd916eedaec36d455252b6a5ade454
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3268"></a>编译器错误 C3268
 “function”：泛型函数或泛型类的成员函数不能包含变量参数列表  
   
- **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+ **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
  请参阅[泛型](../../windows/generics-cpp-component-extensions.md)有关详细信息。  
   

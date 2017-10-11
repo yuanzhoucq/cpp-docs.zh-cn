@@ -1,41 +1,44 @@
 ---
-title: "编译器错误 C2220 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2220"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2220"
+title: "编译器错误 C2220 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2220
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C2220
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc31519b2153c66ea9bab42f536ba7c6be5b2a10
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-视为错误的警告，没有生成对象文件  
+---
+# <a name="compiler-error-c2220"></a>编译器错误 C2220
+警告视为错误-没有生成的对象文件  
   
- [\/WX](../../build/reference/compiler-option-warning-level.md) 通知编译器将所有警告视为错误。  因为发生错误，所以未生成对象或可执行文件。  
+ [/WX](../../build/reference/compiler-option-warning-level.md)告知编译器将所有警告视为错误。 由于发生了错误，未生成对象或可执行文件。  
   
- 此错误仅在设置**\/WX** 标志时显示 ，并且警告是在编译时出现。  若要修复此错误，必须消除项目中的每个警告。  
+ 时，此错误仅出现**/WX**设置标志，并且在编译期间出现警告。 若要纠正此错误，必须消除项目中的每个警告。  
   
-### 若要修复，请使用以下技术之一  
+### <a name="to-fix-use-one-of-the-following-techniques"></a>若要纠正错误，请使用以下方法之一  
   
--   解决您的项目中引起警告的问题。  
+-   解决导致项目中出现警告的问题。  
   
--   在较低警告等级中编译——例如，使用 **\/W3** 而不是 **\/W4**。  
+-   在较低警告等级进行编译-例如，使用**/W3**而不是**/W4**。  
   
--   使用 [警告](../../preprocessor/warning.md) 杂注来禁用或禁止特定的警告。  
+-   使用[警告](../../preprocessor/warning.md)杂注来禁用还是禁止在某个具体的警告。  
   
--   不要使用 **\/WX** 来编译。
+-   不要使用**/WX**进行编译。

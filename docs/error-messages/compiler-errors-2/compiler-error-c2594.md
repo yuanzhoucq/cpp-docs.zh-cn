@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2594 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2594"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2594"
+title: "编译器错误 C2594 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2594
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 编译器错误 C2594
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6a73e5202b90a0bc436d93be142162531c6d204
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“operator”: 从“type1”到“type2”的转换不明确  
+---
+# <a name="compiler-error-c2594"></a>编译器错误 C2594
+operator： 从 type1 到 type2 的不明确转换  
   
- 从 *type1* 到 *type2* 的转换是最不明确的。  这里建议两种从 *type1*转换到 *type2*的可能的解决方案。  第一种选择是定义从 *type1* 到 *type2* 的直接转换，第二种选择是指定从 *type1* 到 *type2* 的转换序列。  
+ 从任何转换*type1*到*type2*比任何其他更直接。 我们建议从转换的两个可能的解决方案*type1*到*type2*。 第一个选项是定义从直接转换*type1*到*type2*，和第二个选项是指定的转换从序列*type1*到*type2*。  
   
- 下面的示例生成 C2594。  建议用来解决该错误的方法是指定一个转换序列：  
+ 下面的示例生成 C2594。 到错误的建议解决方法是一系列的转换：  
   
 ```  
 // C2594.cpp  

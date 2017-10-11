@@ -19,35 +19,21 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 6d93fd662b638126e21d5f5f034138c0e6f0e0ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fac0a5218e1faf16d3db459567c36775acd9bb12
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1092"></a>错误 C1092
 “编辑并继续”不支持对数据类型的更改；需要生成  
   
- 您更改或添加自上次成功生成了数据类型。  
+ 更改或自上次成功生成以来添加的数据类型。  
   
--   编辑并继续不支持对现有的数据类型，其中包括类、 结构或枚举定义的更改。 必须停止调试并生成该应用程序。  
+-   编辑并继续不支持对现有的数据类型，包括类、 结构或枚举定义的更改。 你必须停止调试并生成应用程序。  
   
--   编辑并继续不支持添加新的数据类型，如果程序数据库文件，如 vc*x*0.pdb (其中*x*是 Visual c + + 中使用的主要版本) 是只读的。 若要添加的数据类型，编译器必须在写模式下打开.pdb 文件。  
+-   编辑并继续不支持添加新的数据类型，如果程序数据库文件，如 vc*x*0 pdb (其中*x*是在使用 Visual c + + 的主要版本) 是只读的。 若要添加的数据类型，编译器必须在写入模式下打开.pdb 文件。  
   
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要删除此错误，而无需结束当前调试会话  
   
@@ -61,4 +47,4 @@ ms.lasthandoff: 02/24/2017
   
 2.  在“生成”  菜单上，选择“生成” 。  
   
- 有关详细信息，请参阅[支持的代码更改](/visualstudio/debugger/supported-code-changes-cpp)。
+ 有关详细信息，请参阅 [受支持的代码更改](/visualstudio/debugger/supported-code-changes-cpp)。

@@ -1,37 +1,40 @@
 ---
-title: "编译器错误 C3225 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3225"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3225"
+title: "编译器错误 C3225 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3225
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C3225
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4cf62ba7b0c3b95f22c27172546ccdd253ed9279
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“arg”的泛型类型参数不能是“type”，它必须是值类型或句柄类型  
+---
+# <a name="compiler-error-c3225"></a>编译器错误 C3225
+arg 的泛型类型参数不能是 type，它必须是值类型或句柄类型  
   
- 泛型类型参数不是正确类型。  
+ 泛型类型参数不是类型的正确。  
   
  有关详细信息，请参阅[泛型](../../windows/generics-cpp-component-extensions.md)。  
   
-## 示例  
- 不能使用本机类型实例化泛型类型。  下面的示例生成 C3225。  
+## <a name="example"></a>示例  
+ 无法实例化具有本机类型的泛型类型。 下面的示例生成 C3225。  
   
 ```  
 // C3225.cpp  
@@ -49,8 +52,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例使用 C\# 创建一个组件。  请注意，该约束指定泛型类型只能使用值类型进行实例化。  
+## <a name="example"></a>示例  
+ 下面的示例创建一个使用 C# 的组件。 请注意，该约束指定泛型类型仅使用值类型进行实例化。  
   
 ```  
 // C3225_b.cs  
@@ -59,8 +62,8 @@ int main() {
 public class MyList<T> where T: struct {}  
 ```  
   
-## 示例  
- 此示例使用 C\# 编写的组件，违反了 MyList 只能使用 <xref:System.Nullable> 以外的值类型进行实例化的约束。  下面的示例生成 C3225。  
+## <a name="example"></a>示例  
+ 此示例使用 C# 的创作组件，并且违反 MyList 只能约束而不使用值类型实例化<xref:System.Nullable>。 下面的示例生成 C3225。  
   
 ```  
 // C3225_c.cpp  

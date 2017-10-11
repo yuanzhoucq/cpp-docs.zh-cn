@@ -19,30 +19,16 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 79987719614dfa3075f9a9090ca1d97f6546ceb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89354565f67c8704eee8c8b5f9dcb94523800c63
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1902"></a>错误 C1902
-程序数据库管理器不匹配;请检查您的安装  
+程序数据库管理器不匹配;请检查安装  
   
-程序数据库文件 (.pdb) 使用 mspdb 的较新版本创建*XXX*.dll 比编译器在您的系统上找到。 此错误通常指示缺少 mspdbsrv.exe 或 mspdbcore.dll 或具有不同版本与 mspdb*XXX*.dll。 ( *XXX*中 mspdb 占位符*XXX*每个产品版本的.dll 文件名称更改。 例如，在 Visual Studio 2015 中，文件名为 mspdb140.dll。）  
+程序数据库文件 (.pdb) 使用较新版本的 mspdb 创建*XXX*比你系统上找到编译器.dll。 此错误通常表示 mspdbsrv.exe 或 mspdbcore.dll 缺少或者具有不同的版本比 mspdb*XXX*.dll。 ( *XXX*中 mspdb 占位符*XXX*随每个产品版本的.dll 文件名称更改。 例如，在 Visual Studio 2015 中，文件名为 mspdb140.dll。）  
   
-确保匹配版本的 mspdbsrv.exe、 mspdbcore.dll 和 mspdb*XXX*.dll 安装在您的系统上。 请确保版本不匹配，尚未复制到包含您的目标平台的编译器和链接工具的目录。 例如，您可能已经复制这些文件以便可以调用该编译器或链接的工具，在命令提示符下设置不**路径**环境变量相应地进行。
+确保匹配版本的 mspdbsrv.exe、 mspdbcore.dll 和 mspdb*XXX*.dll 你系统上安装。 确保不具有已不匹配的版本复制到包含目标平台的编译器和链接工具的目录。 例如，你可能具有复制文件，以便你可以调用该编译器或链接的工具，在命令提示符下设置不**路径**环境变量相应地。

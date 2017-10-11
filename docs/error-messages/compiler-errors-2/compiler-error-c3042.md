@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d6e26077e9ced646615681c1472661145939887a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0fe35a4021cca6ac1e3dd9846a3c165f50797f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3042"></a>编译器错误 C3042
 “copyprivate”和“nowait”子句不能同时出现在 OpenMP“directive”指令中  
   
- [Copyprivate](../../parallel/openmp/reference/copyprivate.md)和[nowait](../../parallel/openmp/reference/nowait.md)是互相排斥指定指令上的子句。 若要修复此错误，请删除 `copyprivate` 或 `nowait` 子句之一或两者一起删除。  
+ [Copyprivate](../../parallel/openmp/reference/copyprivate.md) 和 [nowait](../../parallel/openmp/reference/nowait.md) 子句在指定的指令上彼此排斥。 若要修复此错误，请删除 `copyprivate` 或 `nowait` 子句之一或两者一起删除。  
   
  以下示例生成 C3042：  
   

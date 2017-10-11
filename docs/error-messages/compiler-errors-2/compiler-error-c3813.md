@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 74c976fb090533ade91e5debf067371d5d3295c1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cabe753691b3d72ede25f0c25404d73fb63ceba8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3813"></a>编译器错误 C3813
 属性声明只能在托管类型或 WinRT 类型的定义内出现  
   
-一个[属性](../../dotnet/how-to-use-properties-in-cpp-cli.md)只能在托管或 Windows 运行时中声明类型。 本机类型不支持 `property` 关键字。  
+A[属性](../../dotnet/how-to-use-properties-in-cpp-cli.md)仅可以在托管或 Windows 运行时内声明类型。 本机类型不支持 `property` 关键字。  
   
 ## <a name="example"></a>示例  
 下面的示例生成 C3813，并演示如何修复此错误：  

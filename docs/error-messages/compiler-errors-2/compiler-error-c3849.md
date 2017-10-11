@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: "编译器错误 C3849 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-类型“type”的表达式中的函数样式调用会丢失所有 number 个可用运算符重载的 const 和\/或 volatile 限定符  
+---
+# <a name="compiler-error-c3849"></a>编译器错误 C3849
+在类型 type 的表达式上的函数样式调用都将丢失所有数字可用运算符重载的 const 和/或可变限定符  
   
- 具有指定的 const\-volatile 类型的变量只能调用使用相同或更大的 const\-volatile 限定定义的函数。  
+ 使用指定的量可变类型的变量只能调用成员函数定义具有相同或更高版本 const 易失性限制。  
   
- 若要修复此错误，请提供一个适当的成员函数。  当转换导致丢失限定时，不能对常数或易失性限定对象执行转换。  您可以获得限定符，但不能在转换中丢失限定符。  
+ 若要修复此错误，提供适当的成员函数。 无法对常数或可变限定的对象执行转换，转换会导致丢失的限定。 你可以获得限定符，但不能丢失在转换中的限定符。  
   
- 下面的示例生成 C3849：  
+ 以下示例生成 C3849:  
   
 ```  
 // C3849.cpp  

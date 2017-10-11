@@ -1,29 +1,32 @@
 ---
-title: "编译器错误 C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: "编译器错误 C2552 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>编译器错误 C2552
 “标识符”：不能用初始值设定项列表初始化非聚合  
   
  错误初始化了聚合标识符。  
@@ -42,7 +45,7 @@ caps.handback.revision: 12
   
     -   虚函数  
   
- 此外，Visual C\+\+ 不允许在包含构造函数的聚合中使用数据类型。  
+ 此外，Visual C++ 不允许在包含构造函数的聚合中使用数据类型。  
   
  以下内容表示在尝试对类型进行聚合初始化时可能触发 C2552 的原因：  
   

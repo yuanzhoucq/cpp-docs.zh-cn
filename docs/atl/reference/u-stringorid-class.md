@@ -1,66 +1,93 @@
 ---
-title: "_U_STRINGorID Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL._U_STRINGorID"
-  - "ATL::_U_STRINGorID"
-  - "_U_STRINGorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_STRINGorID class"
-  - "U_STRINGorID class"
+title: "_U_STRINGorID 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL._U_STRINGorID
+- ATL::_U_STRINGorID
+- _U_STRINGorID
+dev_langs:
+- C++
+helpviewer_keywords:
+- _U_STRINGorID class
+- U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _U_STRINGorID Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-此参数适配器选件类允许资源名称\(`LPCTSTR`属于\)或资源ID \(**UINT**属于\)使用 **MAKEINTRESOURCE** 宏，将传递给函数，而无需调用方ID转换为字符串。  
+---
+# <a name="ustringorid-class"></a>_U_STRINGorID 类
+此自变量适配器类允许任一资源名称 ( `LPCTSTR`s) 或资源 Id ( **UINT**s) 传递到函数，而无需调用方将 ID 转换为字符串使用**MAKEINTRESOURCE**宏。  
   
 > [!IMPORTANT]
->  此选件类及其成员不能在Windows运行时执行的应用程序。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+class _U_STRINGorID
 ```  
   
-class _U_STRINGorID  
+## <a name="members"></a>成员  
   
+### <a name="public-constructors"></a>公共构造函数  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[_U_STRINGorID::_U_STRINGorID](#_u_stringorid___u_stringorid)|构造函数。|  
+  
+### <a name="public-data-members"></a>公共数据成员  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|资源标识符。|  
+  
+## <a name="remarks"></a>备注  
+ 此类专用于如实现对 Windows 资源管理 API 的包装器[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)， [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，和[LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990)函数，它们接受`LPCTSTR`资源的名称，或者其 id。 可能的自变量  
+  
+ 类定义两个构造函数重载： 一种方法接受`LPCTSTR`参数，而另接受**UINT**自变量。 **UINT**自变量转换为与使用 Windows 资源管理函数兼容的资源类型**MAKEINTRESOURCE**宏，并且在类的单个数据成员中存储的结果[m_lpstr](#_u_stringorid__m_lpstr)。 自变量`LPCTSTR`构造函数存储直接进行转换。  
+  
+## <a name="requirements"></a>要求  
+ **标头：** atlwin.h  
+  
+##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+ 类包含传递给其构造函数之一为公共的值`LPCTSTR`数据成员。  
+  
+```
+LPCTSTR m_lpstr;
 ```  
   
-## 成员  
+##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+ **UINT**构造函数将其自变量转换为与使用 Windows 资源管理函数兼容的资源类型**MAKEINTRESOURCE**宏和结果存储在类的单数据成员[m_lpstr](#_u_stringorid__m_lpstr)。  
   
-### 公共构造函数  
+```
+_U_STRINGorID(UINT nID);  
+_U_STRINGorID(LPCTSTR lpString);
+```  
   
-|名称|说明|  
-|--------|--------|  
-|[\_U\_STRINGorID::\_U\_STRINGorID](../Topic/_U_STRINGorID::_U_STRINGorID.md)|构造函数。|  
+### <a name="parameters"></a>参数  
+ `nID`  
+ 是资源 id。  
   
-### 公共数据成员  
+ `lpString`  
+ 资源名称。  
   
-|名称|说明|  
-|--------|--------|  
-|[\_U\_STRINGorID::m\_lpstr](../Topic/_U_STRINGorID::m_lpstr.md)|资源标识符。|  
+### <a name="remarks"></a>备注  
+ 自变量`LPCTSTR`构造函数存储直接进行转换。  
   
-## 备注  
- 此选件类为实现对于Windows资源管理API包装的类型和 [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042)、 [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)和 [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) 功能，接受 `LPCTSTR` 参数可以是资源的名称或其ID.  
-  
- 选件类定义两个构造函数重载:一 `LPCTSTR` 接受参数，另一个接受 **UINT** 参数。  **UINT** 参数转换为资源类型与Windows资源管理功能兼容使用在选件类的单个数据成员和结果存储的 **MAKEINTRESOURCE** 宏，[m\_lpstr](../Topic/_U_STRINGorID::m_lpstr.md)。  为 `LPCTSTR` 构造函数的参数存储直接，不进行转换。  
-  
-## 要求  
- **Header:** atlwin.h  
-  
-## 请参阅  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>另请参阅  
+ [类概述](../../atl/atl-class-overview.md)
+

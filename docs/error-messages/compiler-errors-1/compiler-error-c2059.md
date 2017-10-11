@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2059 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2059"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2059"
+title: "编译器错误 C2059 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2059
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 编译器错误 C2059
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dbf80ab803eaaacc29ac82657af130194417f1c7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-语法错误 :“token”  
+---
+# <a name="compiler-error-c2059"></a>编译器错误 C2059
+语法错误: token  
   
  该标记导致语法错误。  
   
- 下面的示例对声明 `j` 的行生成了错误消息。  
+ 下面的示例生成声明的行的错误消息`j`。  
   
 ```  
 // C2059e.cpp  
@@ -38,11 +41,11 @@ caps.handback.revision: 22
    int j*; // C2059   
 ```  
   
- 若要确定该错误的原因，则不仅要检查在错误消息中列出的行，还要检查该行上面的行。  如果对行的检查没有获得有关可能出现的问题的任何线索，则尝试注释掉在错误消息中列出的行以及可能出现在该行上面的若干行。  
+ 若要确定错误的原因，请检查错误消息中列出的行不仅上面的行。 如果对行的检查任何线索有关的问题，请尝试注释掉错误消息中列出的一行，并可能对上面的若干行。  
   
- 如果该错误消息在紧跟 `typedef` 变量的符号上出现，则确保该变量是否已在源代码中定义。  
+ 如果在紧随的符号上会出现该错误消息`typedef`变量，请确保该变量已定义的源代码中。  
   
- 如果符号没有计算出任何结果（在使用 **\/D**`symbol`**\=** 编译时可能发生），可能会导致 C2059。  
+ 如果符号计算结果为执行任何操作，可能会发生，可能会 C2059 时**/D** `symbol`  **=** 用于编译。  
   
 ```  
 // C2059a.cpp  
@@ -58,9 +61,9 @@ int main() {
 }  
 ```  
   
- 可能收到 C2059 的另一个特定原因是编译在函数的默认参数中指定了结构的应用程序。  参数的默认值必须是一个表达式。  初始值设定项列表—如，用于初始化结构的初始值设定项列表—不是表达式。若要解决该问题，定义一个执行所需初始化的构造函数。  
+ 在其中会发生 C2059 的另一种是在编译的应用程序中的函数的默认自变量指定了结构时。 自变量的默认值必须是一个表达式。 初始值设定项列表-例如，一个用于初始化结构 — 不是表达式。  若要解决此问题，请定义一个构造函数来执行所需的初始化。  
   
- 下面的示例生成 C2059：  
+ 下面的示例生成 C2059:  
   
 ```  
 // C2059b.cpp  
@@ -76,11 +79,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK  
 ```  
   
- 如果您在类外定义成员模板类或函数，也可能获得 C2059。  有关更多信息，请参见 [知识库文章 241949](http://support.microsoft.com/kb/241949)。  
+ 如果你定义的成员模板类或函数的类之外，还可以获取 C2059。 有关信息，请参阅[知识库文章 241949](http://support.microsoft.com/kb/241949)。  
   
- 对于格式错误的强制转换，会发生 C2059。  
+ C2059 可能格式不正确的强制转换。  
   
- 下面的示例生成 C2059：  
+ 下面的示例生成 C2059:  
   
 ```  
 // C2059c.cpp  
@@ -96,9 +99,9 @@ int main() {
 }  
 ```  
   
- 如果尝试创建一个包含句点的命名空间名称，也会发生 C2059。  
+ 如果你尝试创建命名空间名称包含句点，也会发生 C2059。  
   
- 下面的示例生成 C2059：  
+ 下面的示例生成 C2059:  
   
 ```  
 // C2059d.cpp  
@@ -111,7 +114,7 @@ namespace A  {
 }  
 ```  
   
- C2059可发生，当一个可以限定名称的运算符 \(`::`、`->`和 `.`\) 必须后跟 `template`关键字时，如该例中所示：  
+ 时可限定名称的运算符会发生 C2059 (`::`， `->`，和`.`) 关键字后面必须跟`template`，此示例中所示：  
   
 ```cpp  
 template <typename T> struct Allocator {  
@@ -126,7 +129,7 @@ template <typename X, typename AY> struct Container {
   
 ```  
   
- 默认情况下，C\+\+假设 `AY::Rebind` 不是模板；因此，下面的 `<` 解释为小于号。必须显式告诉编译器 `Rebind` 是通过模板，以便可以正确分析尖括号。  若要更正此错误，请使用上依赖类型名称的 `template` 关键字，如下所示：  
+ 默认情况下，C++ 会假定 `AY::Rebind` 不是模板；因此，后面的 `<` 解释为小于号。  必须显式告知编译器 `Rebind` 是模板，以便其正确分析尖括号。 若要更正此错误，请在依赖类型的名称上使用 `template` 关键字，如下所示：  
   
 ```cpp  
 template <typename T> struct Allocator {  

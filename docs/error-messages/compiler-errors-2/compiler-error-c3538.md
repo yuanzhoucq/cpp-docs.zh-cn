@@ -1,39 +1,42 @@
 ---
-title: "编译器错误 C3538 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3538"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3538"
+title: "编译器错误 C3538 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3538
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3538
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: da21036ddd4cc8b468f291079e0c475ca1b7c4b3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3538"></a>编译器错误 C3538
 在声明符列表中，“auto”必须始终推导为同一类型  
   
  声明列表中的所有已声明变量不解析为同一类型。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
 1.  确保列表中的所有 `auto` 声明都推导为同一类型。  
   
-## 示例  
- 下面的语句生成 C3538。  每条语句声明多个变量，但 `auto` 关键字的每次使用都不推导为同一类型。  
+## <a name="example"></a>示例  
+ 下面的语句生成 C3538。 每条语句声明多个变量，但 `auto` 关键字的每次使用都不推导为同一类型。  
   
 ```  
 // C3538.cpp  
@@ -53,5 +56,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)

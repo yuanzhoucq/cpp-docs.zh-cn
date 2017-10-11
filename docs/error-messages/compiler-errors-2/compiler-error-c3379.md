@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>编译器错误 C3379
-class︰ 嵌套的类不能将作为其声明的一部分的程序集访问说明符  
+class： 嵌套的类不能将作为其声明的一部分的程序集访问说明符  
   
- 当应用于托管类型，如类或结构，[公共](../../cpp/public-cpp.md)和[专用](../../cpp/private-cpp.md)关键字指示是否将程序集元数据通过公开的类。 `public`或`private`不能应用于嵌套类，该类将继承在封闭类的程序集访问权限。  
+ 当应用于托管类型，例如类或结构，[公共](../../cpp/public-cpp.md)和[私有](../../cpp/private-cpp.md)关键字指示是否将程序集元数据通过公开的类。 `public`或`private`不能应用于嵌套类，该类将继承封闭类的程序集访问权限。  
   
- 与一起使用时[/clr](../../build/reference/clr-common-language-runtime-compilation.md)、`ref`和`value`关键字表示该类托管 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md))。  
+ 如果用于[/clr](../../build/reference/clr-common-language-runtime-compilation.md)、`ref`和`value`关键字指示该类受托管 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md))。  
   
  下面的示例生成 C3379:  
   

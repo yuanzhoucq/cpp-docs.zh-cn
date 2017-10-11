@@ -1,44 +1,47 @@
 ---
-title: "编译器错误 C2390 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2390"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2390"
+title: "编译器错误 C2390 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2390
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2390
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 37803b8eb5034fb3281dcea385b4a0fca462aaf0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier”: 不正确的存储类“specifier”  
+---
+# <a name="compiler-error-c2390"></a>编译器错误 C2390
+identifier： 不正确的存储类 specifier  
   
- 该存储类对于该全局范围标识符是无效的。  使用默认存储类替代了无效类。  
+ 存储类对于全局范围标识符无效。 默认的存储类用于替换无效的类。  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
--   如果该标识符是函数，则使用 `extern` 存储声明它。  
+-   如果该标识符是一个函数，将其与声明`extern`存储。  
   
--   如果该标识符是形参或局部变量，则使用自动存储声明它。  
+-   如果该标识符是正式参数或局部变量，则将其声明使用自动存储。  
   
--   如果该标识符是全局变量，则在不使用存储类（自动存储）的情况下声明它。  
+-   如果该标识符是全局变量，则在使用没有任何存储类 （自动存储） 的情况下声明它。  
   
-## 示例  
+## <a name="example"></a>示例  
   
--   下面的示例生成 C2390：  
+-   下面的示例生成 C2390:  
   
 ```  
 // C2390.cpp  

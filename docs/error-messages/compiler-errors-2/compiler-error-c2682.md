@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C2682 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2682"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2682"
+title: "编译器错误 C2682 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2682
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C2682
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3df494f5d78a862e260fa4edfe0a2740e4fc8cdd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-无法使用 casting\_operator 从“type1”强制转换到“type2”  
+---
+# <a name="compiler-error-c2682"></a>编译器错误 C2682
+不能使用 casting_operator 将从 type1 转换为 type2  
   
- 某转换运算符尝试在不兼容的类型之间进行转换。  例如，无法使用 [dynamic\_cast](../../cpp/dynamic-cast-operator.md) 运算符将指针转换为引用。  `dynamic_cast` 运算符不能用于转换掉限定符。  类型上的所有限定符必须匹配。  
+ 强制转换运算符已尝试使用不兼容的类型之间进行转换。 例如，不能使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)运算符将指针转换为引用。 `dynamic_cast`运算符不能用于转换掉限定符。 所有的限定符类型必须匹配。  
   
- 可以使用 `const_cast` 运算符移除 `const`、`volatile`、`__unaligned` 等特性。  
+ 你可以使用`const_cast`运算符来删除属性，如`const`， `volatile`，或`__unaligned`。  
   
- 下面的示例生成 C2682：  
+ 下面的示例生成 C2682:  
   
 ```  
 // C2682.cpp  
@@ -42,7 +45,7 @@ void g(A* pa) {
 }  
 ```  
   
- 下面的示例生成 C2682：  
+ 下面的示例生成 C2682:  
   
 ```  
 // C2682b.cpp  

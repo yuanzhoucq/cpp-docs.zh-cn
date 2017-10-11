@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C2415 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2415"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2415"
+title: "编译器错误 C2415 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2415
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2415
 ms.assetid: f225c913-2bea-46b1-b096-3d358ac94a15
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2415
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 68666ba203897b43fb1658525e1f342bcb923c09
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-不正确的操作数类型  
+---
+# <a name="compiler-error-c2415"></a>编译器错误 C2415
+操作数类型不正确  
   
- 该操作码不使用此类型的操作数。  
+ 操作码不使用此类型的操作数。  
   
-### 通过检查以下可能的原因进行修复  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
   
-1.  该操作码不支持所使用的操作数数目。  检查程序集语言参考手册以确定正确的操作数数目。  
+1.  操作码不支持的使用的操作数的数目。 检查程序集语言参考手册 》 来确定的正确数目的操作数。  
   
-2.  较新的处理器支持带有附加类型的指令。  调整选项[\/arch（最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md) 以使用更高版本的处理器。
+2.  较新的处理器支持与其他类型的指令。 调整[/arch （最小 CPU 体系结构）](../../build/reference/arch-minimum-cpu-architecture.md)选项以使用更高版本的处理器。

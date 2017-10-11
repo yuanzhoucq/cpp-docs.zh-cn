@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3856 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3856"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3856"
+title: "编译器错误 C3856 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3856
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3856
 ms.assetid: 242d9322-c325-4f20-be58-b2be6da56d60
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3856
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d2f74872939a2237f2c816e348242ebd58c8b3e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”: 类不是类类型  
+---
+# <a name="compiler-error-c3856"></a>编译器错误 C3856
+type： 类不是类类型  
   
- 导致此错误的最常见原因是：定义时具有的泛型或模板参数列表多于声明时具有的泛型或模板参数列表。  
+ 此错误最常见原因是当没有更泛型或模板参数列出在定义比在声明。  
   
- 下面的示例生成 C3856：  
+ 下面的示例生成 C3856:  
   
 ```  
 // C3856.cpp  
@@ -45,7 +48,7 @@ template <class T2>  // extra template parameter list in definition
 struct S<T>::S1{};  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C3856b.cpp  
@@ -62,7 +65,7 @@ template <class T1>
 struct S<T>::S1{};  
 ```  
   
- 使用以下泛型时也可能发生 C3856 错误：  
+ 使用泛型时，也可能发生 C3856:  
   
 ```  
 // C3856c.cpp  
@@ -79,7 +82,7 @@ generic <class V>
 ref struct GS<T>::GS2 {};   // C3856  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C3856d.cpp  

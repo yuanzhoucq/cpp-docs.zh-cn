@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C2297 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2297"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2297"
+title: "编译器错误 C2297 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2297
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2297
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2c621e1e2c19f69e82110d34bec86f6927bf7436
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“operator”：右操作数错误  
+---
+# <a name="compiler-error-c2297"></a>编译器错误 C2297
+operator： 错误的右操作数  
   
- 与 `operator` 一起使用的右操作数无效。  
+ 右操作数与使用`operator`无效。  
   
- 例如，编译器可能发现在应该出现函数调用的位置出现声明。  
+ 例如，编译器可能会看到一个声明打算函数调用。  
   
- 下面的示例生成 C2297：  
+ 下面的示例生成 C2297:  
   
 ```  
 // C2297.cpp  

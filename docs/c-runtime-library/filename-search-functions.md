@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>文件名搜索函数
@@ -108,17 +93,17 @@ ms.lasthandoff: 04/04/2017
  `_A_SYSTEM`  
  系统文件。 使用 **DIR** 命令时通常不可见，除非使用 **/A** 或 **/A:S** 选项。 值：0x04。  
   
- `_findnext` 找到下一个名称（若有），该名称匹配对 `_findfirst` 的早期调用中指定的 `filespec` 参数。 `fileinfo` 参数应指向由之前对 `_findfirst`的调用初始化的结构。 如果找到匹配项，则如前文所述， `fileinfo` 结构内容将发生更改。 否则保持不变。 `_findclose` 关闭指定的搜索句柄并释放 `_findfirst` 和 `_findnext` 的所有关联资源。 通过 `_findfirst` 或 `_findnext` 返回的句柄必须首先传递给 `_findclose`，然后才对形成传递路径的目录执行修改操作（例如删除）。  
+ `_findnext` 找到下一个名称（若有），该名称匹配对 `filespec` 的早期调用中指定的 `_findfirst`参数。 `fileinfo` 参数应指向由之前对 `_findfirst`的调用初始化的结构。 如果找到匹配项，则如前文所述， `fileinfo` 结构内容将发生更改。 否则保持不变。 `_findclose` 关闭指定的搜索句柄并释放 `_findfirst` 和 `_findnext`的所有关联资源。 通过 `_findfirst` 或 `_findnext` 返回的句柄必须首先传递给 `_findclose`，然后才对形成传递路径的目录执行修改操作（例如删除）。  
   
  你可以嵌套 `_find` 函数。 例如，如果对 `_findfirst` 或 `_findnext` 的调用找到作为子目录的文件，则可以使用对 `_findfirst` 或 `_findnext`的另一个调用开始新的搜索。  
   
- `_wfindfirst` 和 `_wfindnext` 是 `_findfirst` 和 `_findnext` 的宽字符版本。 宽字符版本的结构参数具有在 IO.h 和 Wchar.h 中定义的 `_wfinddata_t` 数据类型。 该数据类型的字段与 `_finddata_t` 数据类型中的相同，除非在 `_wfinddata_t` 中，名称字段属于 `wchar_t` 类型，而不属于 `char`类型。 除此之外， `_wfindfirst` 和 `_wfindnext` 的行为与 `_findfirst` 和 `_findnext`完全相同。  
+ `_wfindfirst` 和 `_wfindnext` 是 `_findfirst` 和 `_findnext`的宽字符版本。 宽字符版本的结构参数具有在 IO.h 和 Wchar.h 中定义的 `_wfinddata_t` 数据类型。 该数据类型的字段与 `_finddata_t` 数据类型中的相同，除非在 `_wfinddata_t` 中，名称字段属于 `wchar_t` 类型，而不属于 `char`类型。 除此之外， `_wfindfirst` 和 `_wfindnext` 的行为与 `_findfirst` 和 `_findnext`完全相同。  
   
  `_findfirst` 和 `_findnext` 使用 64 位时间类型。 如果你必须使用旧的 32 位时间类型，则可以定义 `_USE_32BIT_TIME_T`。 名称中具有 `32` 后缀的这些函数的版本使用 32 位时间类型，而具有 `64` 后缀的那些版本使用 64 位时间类型。  
   
  除了使用并返回 64 位文件长度外，函数 `_findfirst32i64`、`_findnext32i64``_wfindfirst32i64` 和 `_wfindnext32i64` 的行为与 32 位时间类型版本的这些函数相同。 函数 `_findfirst64i32`、`_findnext64i32`、`_wfindfirst64i32` 和 `_wfindnext64i32` 使用 64 位时间类型，但使用 32 位文件长度。 这些函数使用适当 `_finddata_t` 类型变体，其中字段对于时间和文件大小具有不同的类型。  
   
- `_finddata_t` 实际上是计算结果为 `_USE_32BIT_TIME_T` 的宏（或如果定义了 `_finddata32_t`，则为 `_finddata64i32_t`）。 下表总结了 `_finddata_t`上的变体：  
+ `_finddata_t` 实际上是计算结果为 `_finddata64i32_t` 的宏（或如果定义了 `_finddata32_t` ，则为 `_USE_32BIT_TIME_T` ）。 下表总结了 `_finddata_t`上的变体：  
   
 |结构|时间类型|文件大小类型|  
 |---------------|---------------|--------------------|  

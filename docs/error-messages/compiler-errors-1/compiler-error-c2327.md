@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2eefd1e3fb4f23087b0f08bf6a9ff55593d9a961
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2327"></a>编译器错误 C2327
-symbol︰ 不是类型名称、 静态的、 或枚举器  
+symbol： 不是类型名称、 静态、 或枚举器  
   
  嵌套类中的代码尝试访问不是类型名称、 静态成员或一个枚举器在封闭类的成员。  
   
- 使用编译时**/clr**，C2327 的常见原因是具有相同名称的属性类型的属性。  
+ 使用编译时**/clr**，C2327 的常见原因是具有同名的属性类型的属性。  
   
  下面的示例生成 C2327:  
   
@@ -66,7 +52,7 @@ public:
 };  
 ```  
   
- 如果一种类型的名称隐藏的成员的名称，也可能发生 C2327:  
+ 如果类型的名称隐藏的成员的名称，也可能发生 C2327:  
   
 ```  
 // C2327b.cpp  
@@ -80,7 +66,7 @@ class S {
 };  
 ```  
   
- 在此情况下，您需要完全指定参数的数据类型，也可以激发 C2327:  
+ 在此情况下，你需要完全指定的参数的数据类型，也可以激发 C2327:  
   
 ```  
 // C2327c.cpp  
@@ -129,7 +115,7 @@ namespace NA {
 }  
 ```  
   
-下面的示例演示 C2327 当属性具有相同名称的属性类型︰  
+下面的示例演示 C2327，当属性具有同名的属性类型：  
   
 ```  
 // C2327f.cpp  

@@ -1,40 +1,43 @@
 ---
-title: "编译器错误 C2356 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2356"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2356"
+title: "编译器错误 C2356 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2356
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2356
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 99f29fb1e651c8182c8aa4dc037fc8cd6af6c6cc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-初始化段在翻译单元期间不能更改  
+---
+# <a name="compiler-error-c2356"></a>编译器错误 C2356
+在翻译单元期间，初始化段不得更改。  
   
  可能的原因：  
   
--   `#pragma init_seg` 的前面是段初始化代码  
+-   `#pragma init_seg`跟在段初始化代码  
   
--   `#pragma init_seg` 的前面是另一个 `#pragma init_seg`  
+-   `#pragma init_seg`前面是另一个`#pragma init_seg`  
   
- 要解决此错误，将该段初始化代码移到模块的开始处。  如果必须初始化多个区域，请将它们移到单独的模块中。  
+ 若要解决，将移动到的模块开头的段初始化代码。 如果必须初始化多个区域，将它们移到单独的模块。  
   
- 下面的示例生成 C2356：  
+ 下面的示例生成 C2356:  
   
 ```  
 // C2356.cpp  

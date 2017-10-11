@@ -19,31 +19,17 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 89b7d0ad3c7e175db1525c2f3fb8407240ce943c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af8f975960f34307c0e297f58f613eaf92018ef2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2712"></a>编译器错误 C2712
 无法在要求对象展开的函数中使用 __try  
   
- 如果您使用，则会出现错误 C2712 [/EHsc](../../build/reference/eh-exception-handling-model.md)，并且将函数与结构化的异常处理也具有需要展开 （析构） 的对象。  
+ 如果你使用，则会发生错误 C2712 [/EHsc](../../build/reference/eh-exception-handling-model.md)，并且带有结构化的异常处理也的函数具有需要展开 （析构） 的对象。  
   
  可能的解决方案：  
   
@@ -53,12 +39,12 @@ ms.lasthandoff: 02/24/2017
   
 -   不使用 /EHsc 进行编译  
   
- 如果调用使用声明的方法，也可能发生错误 C2712 [__event](../../cpp/event.md)关键字。 因为该事件可能在多线程环境中使用，编译器将生成代码，阻止操作的基础事件对象，然后将生成的代码封装在 SEH [try-finally 语句](../../cpp/try-finally-statement.md)。 因此，如果调用事件方法并按值传递其类型具有析构函数的自变量，则将发生错误 C2712。 这种情况的一种解决方法是将自变量作为常数引用进行传递。  
+ 如果调用通过使用声明的方法，也可能发生错误 C2712 [__event](../../cpp/event.md)关键字。 因为事件可能在多线程环境中使用，编译器将生成阻止基础事件对象操作，然后将生成的代码封装到 SEH 的代码[try-finally 语句](../../cpp/try-finally-statement.md)。 因此，如果调用事件方法并按值传递其类型具有析构函数的自变量，则将发生错误 C2712。 这种情况的一种解决方法是将自变量作为常数引用进行传递。  
   
 ## <a name="example"></a>示例  
- 如果在编译时使用，也可能发生 C2712 **/clr: pure**并声明中的函数指针的静态数组`__try`块。 静态成员需要编译器下使用动态初始化**/clr: pure**，这表明 c + + 异常处理。 但是，不允许在 `__try` 块中进行 C++ 异常处理。  
+ 如果使用进行编译，也会发生 C2712 **/clr: pure**和声明中的指针到函数的静态数组`__try`块。 静态成员要求编译器下使用动态初始化**/clr: pure**，这意味着 c + + 异常处理。 但是，不允许在 `__try` 块中进行 C++ 异常处理。  
   
- **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+ **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
  下面的示例生成 C2712，并演示如何修复此错误。  
   

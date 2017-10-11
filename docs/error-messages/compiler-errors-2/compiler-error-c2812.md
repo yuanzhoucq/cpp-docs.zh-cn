@@ -19,33 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 358d0d3a5c7f0129d74be70c3309337542807d1d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 859d371d5886ece416ea6d60c405b114a527864f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2812"></a>编译器错误 C2812
 \#导入不支持使用 /clr: pure 和 /clr: safe  
   
- **/Clr: pure**和**/clr: safe**编译器选项不推荐使用 Visual Studio 2015 中。  
+ **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
- [#import 指令](../../preprocessor/hash-import-directive-cpp.md)不支持**/clr: pure**和**/clr: safe**因为`#import`需要本机编译器支持库使用。  
+ [#import 指令](../../preprocessor/hash-import-directive-cpp.md)不支持**/clr: pure**和**/clr: safe**因为`#import`需要本机编译器支持库的使用。  
   
 ## <a name="example"></a>示例  
  下面的示例生成 C2812。  

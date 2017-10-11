@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2039"
+title: "编译器错误 C2039 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# 编译器错误 C2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier1”: 不是“identifier2”的成员  
+---
+# <a name="compiler-error-c2039"></a>编译器错误 C2039
+identifier1： 不是 identifier2 的成员  
   
- 该代码错误调用或引用了结构、类或联合的成员。  
+ 代码不正确地调用或引用的结构、 类或联合成员。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2039。  
   
 ```  
@@ -43,7 +46,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2039。  
   
 ```  
@@ -57,7 +60,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2039。  
   
 ```  
@@ -74,8 +77,8 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK  
 ```  
   
-## 示例  
- 如果尝试不正确地访问默认索引器，则也会发生 C2039 错误。  下面的示例定义一个用 C\# 编写的组件。  
+## <a name="example"></a>示例  
+ 如果你尝试访问默认索引器不正确，也会发生 C2039。 下面的示例定义一个 C# 编写的组件。  
   
 ```  
 // C2039_d.cs  
@@ -90,7 +93,7 @@ public class B {
 };  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2039。  
   
 ```  
@@ -108,8 +111,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 如果使用泛型，则也会发生 C2039 错误。  下面的示例生成 C2039。  
+## <a name="example"></a>示例  
+ 如果你使用的泛型，也会发生 C2039。 下面的示例生成 C2039。  
   
 ```  
 // C2039_f.cpp  
@@ -132,8 +135,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 尝试释放托管资源或非托管资源时会发生 C2039 错误。  有关详细信息，请参阅[析构函数和终结器](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
+## <a name="example"></a>示例  
+ 当你尝试释放托管或非托管资源，则会发生 C2039。 有关详细信息，请参阅[析构函数和终结器](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
   
  下面的示例生成 C2039。  
   

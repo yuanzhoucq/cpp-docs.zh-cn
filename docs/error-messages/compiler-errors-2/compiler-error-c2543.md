@@ -1,31 +1,34 @@
 ---
-title: "编译器错误 C2543 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2543"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2543"
+title: "编译器错误 C2543 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2543
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2543
 ms.assetid: 6e4d2d03-ef34-4514-92fe-763543a71fa8
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C2543
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e032bf16c26b536008be6181567f7db07ea80c00
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-应输入运算符“\[\]”的“\]”  
+---
+# <a name="compiler-error-c2543"></a>编译器错误 C2543
+预期] 运算符 []  
   
- 下标运算符缺少左尖括号。  
+ 下标运算符缺少左的括号。  
   
- 此错误可能是由宏扩展导致的。
+ 宏扩展可以导致此错误。

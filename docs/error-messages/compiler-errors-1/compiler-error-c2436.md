@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2436"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2436"
+title: "编译器错误 C2436 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2436
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2436
 ms.assetid: ca4cc813-bc1d-4c0a-9a2c-3a5fe673d084
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ca7f9a160675009e1462b1e7c5c1b110180e10c5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“identifier”: 构造函数初始值设定项列表中的成员函数或嵌套类  
+---
+# <a name="compiler-error-c2436"></a>编译器错误 C2436
+identifier： 成员函数或构造函数初始值设定项列表中的嵌套的类  
   
- 无法初始化构造函数初始值设定项列表中的成员函数或局部类。  
+ 无法初始化成员函数或构造函数初始值设定项列表中的本地类。  
   
- 下面的示例生成 C2436：  
+ 下面的示例生成 C2436:  
   
 ```  
 // C2436.cpp  

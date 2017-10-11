@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+title: "编译器错误 C3706 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 激发 COM 事件必须是 COM 接口  
+---
+# <a name="compiler-error-c3706"></a>编译器错误 C3706
+function： 必须是一个 COM 接口激发 COM 事件  
   
- 用于引发 COM 事件的事件接口必须是 COM 接口。  在此情况下，该接口应使用 Visual C\+\+ 特性进行定义，或者使用 [\#import](../../preprocessor/hash-import-directive-cpp.md) 从具有 \#import 的 embedded\_idl 特性的类型库中导入。  
+ 使用激发 COM 事件的事件接口必须是 COM 接口。 在此情况下，接口也应通过使用 Visual c + + 特性，定义，或使用导入[#import](../../preprocessor/hash-import-directive-cpp.md)从具有 #import 的 embedded_idl 特性的类型库。  
   
- 请注意，使用 COM 事件需要下面的示例中所显示的 ATL 头文件的 `#include` 行。  若要修复此错误，请通过将以下特性之一应用于接口定义，使 `IEvents`（事件接口）成为 COM 接口：[object](../../windows/object-cpp.md)、[dual](../../windows/dual.md) 或 [dispinterface](../../windows/dispinterface.md)。  
+ 请注意，`#include`在下面的示例所示的 ATL 标头文件的行所需的使用 COM 事件。 若要修复此错误，请`IEvents`（事件接口） 接口定义属性的 COM 接口通过应用以下项之一：[对象](../../windows/object-cpp.md)，[双重](../../windows/dual.md)，或[调度接口](../../windows/dispinterface.md)。  
   
- 如果接口来自 MIDL 生成的头文件，则编译器不会将其识别为 COM 接口。  
+ 如果接口是从由 MIDL 生成的标头文件中，编译器将无法识别它为 COM 接口。  
   
- 下面的示例生成 C3706：  
+ 下面的示例生成 C3706:  
   
 ```  
 // C3706.cpp  

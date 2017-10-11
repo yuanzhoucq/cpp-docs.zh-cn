@@ -1,43 +1,46 @@
 ---
-title: "错误 C1010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1010"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1010"
+title: "错误 C1010 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1010
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 错误 C1010
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 65a1842e8f7c920e053b3cdbcd41ea09583133b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-在查找预编译头时遇到意外的文件结尾。是否忘记了向源代码中添加“\#include name”?  
+---
+# <a name="fatal-error-c1010"></a>错误 C1010
+查找预编译头时意外的文件尾。 是否忘记添加 #include 名称对源？  
   
- 用 [\/Yu](../../build/reference/yu-use-precompiled-header-file.md) 指定的包含文件没有列在源文件中。在大多数的 Visual C\+\+ 项目类型中，此选项默认是启用的，而且“stdafx.h”是此选项指定的默认包含文件。  
+ 使用指定的包含文件[/Yu](../../build/reference/yu-use-precompiled-header-file.md)源文件中未列出。  默认情况下，在大多数 Visual c + + 项目类型中启用了此选项，并且"stdafx.h"默认值包括此选项指定的文件。  
   
- 在 Visual Studio 环境中，请使用下列方法之一消除此错误：  
+ 在 Visual Studio 环境中，使用以下方法之一来解决此错误：  
   
--   如果项目中没有使用预编译头，请将源文件的**“创建\/使用预编译头”**属性设置为**“不使用预编译头”**。  若要设置此编译器选项，请遵循以下这些步骤：  
+-   如果你的项目中不使用预编译标头，设置**创建/使用预编译标头**属性源文件复制到**不使用预编译头**。 若要设置此编译器选项，请按照下列步骤：  
   
-    1.  在项目的“解决方案资源管理器”窗格中，右击项目名称，再单击**“属性”**。  
+    1.  在项目的解决方案资源管理器窗格中，右键单击项目名称，然后单击**属性**。  
   
-    2.  在左窗格中单击“**C\/C\+\+**”文件夹。  
+    2.  在左窗格中，单击**C/c + +**文件夹。  
   
-    3.  单击**“预编译头”**节点。  
+    3.  单击**预编译标头**节点。  
   
-    4.  在右窗格中单击**“创建\/使用预编译头”**，再单击**“不使用预编译头”**。  
+    4.  在右窗格中，单击**创建/使用预编译标头**，然后单击**不使用预编译头**。  
   
--   确保您没有在不注意的情况下从当前项目中删除、重命名或移除头文件（默认为 stdafx.h）。  还需要使用 **\#include "stdafx.h"** 在源文件中的任何其他代码之前包含这一文件。（此头文件被指定为**“通过文件创建\/使用 PCH”**项目属性）
+-   请确保不要意外删除、 重命名或删除了标头文件 (默认情况下，stdafx.h) 从当前项目。 此文件还需要在你使用的源文件中的任何其他代码之前包含**#include"stdafx.h"**。 (此标头文件指定为**通过文件创建/使用 PCH**项目属性)

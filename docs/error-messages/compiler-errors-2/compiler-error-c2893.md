@@ -1,37 +1,40 @@
 ---
-title: "编译器错误 C2893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2893"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2893"
+title: "编译器错误 C2893 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2893
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C2893
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ad558968720a13b95fecc6860df5826b47874aa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-未能使函数模板“template name”专用化  
+---
+# <a name="compiler-error-c2893"></a>编译器错误 C2893
+未能特殊化函数模板的模板名称  
   
- 编译器未能使函数模板专用化。  有多种原因可导致此错误。  
+ 编译器未能特殊化函数模板。 可以有多种原因会导致此错误。  
   
- 通常，处理 C2893 错误的方法就是检查函数的签名，并确保可以实例化每个类型。  
+ 通常情况下，解决 C2893 错误的方法是先查看函数的签名并确保可以实例化每个类型。  
   
-## 示例  
- C2893 的发生是因为 `f` 的模板参数 `T` 被推导为 `std::map<int,int>`，但 `std::map<int,int>` 却没有 `data_type` 成员（`T::data_type` 不能使用 `T = std::map<int,int>` 实例化。）。  下面的示例生成 C2893。  
+## <a name="example"></a>示例  
+ C2893 的发生是因为`f`的模板参数`T`推导为`std::map<int,int>`，但`std::map<int,int>`不具备成员`data_type`(`T::data_type`不使用实例化`T = std::map<int,int>`。)。 下面的示例生成 C2893。  
   
 ```  
 // C2893.cpp  

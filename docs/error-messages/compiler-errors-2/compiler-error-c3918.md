@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C3918 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3918"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3918"
+title: "编译器错误 C3918 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3918
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C3918
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bf9cf676cf7435eaf1f0b924fbadcaddef842b4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-用法要求“member”是数据成员  
+---
+# <a name="compiler-error-c3918"></a>编译器错误 C3918
+用法要求 member 是数据成员  
   
- 一些与事件相关的原因会导致发生 C3918。  
+ C3918 可以出现原因有多种与事件相关。  
   
-## 示例  
- 由于在当前上下文中需要类成员，因此会发生 C3918。  下面的示例生成 C3918。  
+## <a name="example"></a>示例  
+ 因为类成员需要在当前上下文中，会发生 C3918。 下面的示例生成 C3918。  
   
 ```  
 // C3918.cpp  
@@ -49,8 +52,8 @@ public:
 };  
 ```  
   
-## 示例  
- 尝试检查常用事件是否为空（事件名不再为该事件提供对后备存储委托的直接访问）时，也会导致 C3918。  
+## <a name="example"></a>示例  
+ 如果你尝试检查常用事件为 null （事件名称将不再提供直接访问后备存储委托为事件），则也会导致 C3918。  
   
  下面的示例生成 C3918。  
   
@@ -73,8 +76,8 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## 示例  
- 如果订阅事件时有误，也会发生 C3918。  下面的示例生成 C3918。  
+## <a name="example"></a>示例  
+ 如果你错误地订阅事件，也会发生 C3918。 下面的示例生成 C3918。  
   
 ```  
 // C3918_3.cpp  

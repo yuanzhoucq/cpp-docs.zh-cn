@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2990 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2990"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2990"
+title: "编译器错误 C2990 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2990
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 编译器错误 C2990
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a2433bec7992c73fb7e9b7f358e89b7e75da384
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“class”: 非类类型已声明为类类型  
+---
+# <a name="compiler-error-c2990"></a>编译器错误 C2990
+class： 非类类型已被声明为类类型  
   
- 非泛型或模板类重定义了泛型或模板类。  检查头文件中是否有冲突。  
+ 非泛型或模板类重新定义泛型或模板类。 检查冲突的标头文件。  
   
- 下面的示例生成 C2990：  
+ 下面的示例生成 C2990:  
   
 ```  
 // C2990.cpp  
@@ -38,7 +41,7 @@ class C{};
 class C{};   // C2990  
 ```  
   
- 使用泛型时也可能发生 C2990：  
+ 使用泛型时也可能导致 C2990:  
   
 ```  
 // C2990b.cpp  
@@ -49,9 +52,9 @@ ref struct GC;
 ref struct GC {};   // C2990  
 ```  
   
- Visual C\+\+ 编译器中对 Visual C\+\+ 2005 的重大更改也可能导致 C2990；对于模板规范，该编译器现在要求相同类型的多个声明应相同。  
+ 也可能导致 C2990 由于中 Visual c + + 编译器的重大更改为 Visual c + + 2005;编译器现在需要为同一类型的多个声明与模板规范相同。  
   
- 下面的示例生成 C2990：  
+ 下面的示例生成 C2990:  
   
 ```  
 // C2990c.cpp  

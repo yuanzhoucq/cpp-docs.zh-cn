@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3653 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3653"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3653"
+title: "编译器错误 C3653 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3653
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C3653
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a978ee9fc6e46fb743a663ec89152db80769c8e0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 不能用作命名重写: 未找到正在被重写的函数；是否忘记了使用 :: 运算符显式命名该函数？  
+---
+# <a name="compiler-error-c3653"></a>编译器错误 C3653
+function： 不能用作命名重写： 重写未找到; 函数是否忘记使用显式命名函数:: 运算符？  
   
- 显式重写指定了在任何接口中都找不到的函数。  有关更多信息，请参见[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 显式重写指定未在任何接口中找到的函数。 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- 下面的示例生成 C3653：  
+ 下面的示例生成 C3653:  
   
 ```  
 // C3653.cpp  

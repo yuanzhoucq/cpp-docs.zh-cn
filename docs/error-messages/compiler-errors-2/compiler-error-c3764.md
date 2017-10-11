@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3764 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3764"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3764"
+title: "编译器错误 C3764 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3764
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3764
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60317bb31b5021d4b9b1b6568d77ae92e06880ce
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“override\_function”: 无法重写基类方法“base\_class\_function”  
+---
+# <a name="compiler-error-c3764"></a>编译器错误 C3764
+override_function： 不能重写基类方法 base_class_function  
   
- 编译器检测出格式错误的重写。  例如，基类函数不是 `virtual`。  有关详细信息，请参阅[override](../../windows/override-cpp-component-extensions.md)。  
+ 编译器检测到的格式不正确的重写。 例如，基类函数未`virtual`。 有关详细信息，请参阅[重写](../../windows/override-cpp-component-extensions.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3764。  
   
 ```  
@@ -45,8 +48,8 @@ public ref struct B : A {
 };  
 ```  
   
-## 示例  
- 当显式重写命名的重写基类方法时也会发生 C3764。  下面的示例生成 C3764。  
+## <a name="example"></a>示例  
+ C3764 基类方法既显式时也会发生和名为重写。 下面的示例生成 C3764。  
   
 ```  
 // C3764_b.cpp  

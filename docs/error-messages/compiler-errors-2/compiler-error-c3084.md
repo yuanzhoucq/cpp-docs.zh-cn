@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 7fb05bf2ebf23446de0552fd06092cb75541d49e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a160c807bbc8a44c8073cc66ddacad7c8a398d53
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3084"></a>编译器错误 C3084
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  未正确声明终结器或析构函数。  
   
- 例如，析构函数不应标记为密封。  派生类型无法访问析构函数。  有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)和[析构函数和终结器中如何︰ 定义和使用类和结构 (C + + /cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
+ 例如，析构函数不应标记为密封。  派生类型无法访问析构函数。  有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)和[析构函数和终结器中如何： 定义和使用类和结构 (C + + /cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
   
 ## <a name="example"></a>示例  
  以下示例生成 C3084。  

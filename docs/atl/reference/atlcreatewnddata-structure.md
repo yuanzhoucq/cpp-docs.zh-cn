@@ -1,57 +1,65 @@
 ---
-title: "_AtlCreateWndData Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::_AtlCreateWndData"
-  - "ATL._AtlCreateWndData"
-  - "_AtlCreateWndData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AtlCreateWndData structure"
-  - "AtlCreateWndData structure"
+title: "_AtlCreateWndData 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::_AtlCreateWndData
+- ATL._AtlCreateWndData
+- _AtlCreateWndData
+dev_langs:
+- C++
+helpviewer_keywords:
+- _AtlCreateWndData structure
+- AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _AtlCreateWndData Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-此机制在ATL的多窗口代码包含选件类实例数据。  
+---
+# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 结构
+此结构包含类实例数据中的代码窗口中 atl。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
+```
+    struct _AtlCreateWndData{
+    void* m_pThis;
+    DWORD m_dwThreadID;
+    _AtlCreateWndData* m_pNext;
+};
 ```  
   
-      struct _AtlCreateWndData{  
-   void* m_pThis;  
-   DWORD m_dwThreadID;  
-   _AtlCreateWndData* m_pNext;  
-};  
-```  
-  
-## 成员  
- **m\_pThis**  
- **this** 使用指针到选件类实例的get访问在窗口过程。  
+## <a name="members"></a>成员  
+ **m_pThis**  
+ **这**用于窗口过程中有权访问类实例的指针。  
   
  `m_dwThreadID`  
- 当前选件类实例的线程ID。  
+ 当前的类实例的线程 ID。  
   
- **m\_pNext**  
- 到下 `_AtlCreateWndData` 对象的指针。  
+ **m_pNext**  
+ 到下一个指针`_AtlCreateWndData`对象。  
   
-## 要求  
- **Header:** atlbase.h  
+## <a name="requirements"></a>要求  
+ **标头：** atlbase.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [结构](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

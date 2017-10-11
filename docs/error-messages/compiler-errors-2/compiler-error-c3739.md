@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3739 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3739"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3739"
+title: "编译器错误 C3739 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3739
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3739
 ms.assetid: acffe894-08b8-4bf2-9249-9501e6e2bad3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3739
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3fa62f908f152e127669d1cd935fafdb75d413f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“class”: 当 event\_receiver 的“layout\_dependent”参数为“真”时才支持语法  
+---
+# <a name="compiler-error-c3739"></a>编译器错误 C3739
+class: event_receiver layout_dependent 参数为 true 时，仅支持语法  
   
- 您尝试挂钩事件的整个接口，但 [event\_receiver](../../windows/event-receiver.md) 特性上的 `layout_dependent` 不为真；每次必须挂钩一个事件。  
+ 你尝试以挂钩整个事件的接口，但`layout_dependent`上[event_receiver](../../windows/event-receiver.md)属性不为 true; 必须将一个事件挂钩一次。  
   
- 下面的示例生成 C3739：  
+ 下面的示例生成 C3739:  
   
 ```  
 // C3739.cpp  

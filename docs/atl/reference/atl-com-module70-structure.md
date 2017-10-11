@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 503c2a29cf0e70020b012911c51b056f00562374
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 结构
-使用 atl。 在与 COM 相关代码  
+由 COM 相关的代码在 atl。  
   
 ## <a name="syntax"></a>语法  
   
@@ -60,25 +46,25 @@ struct _ATL_COM_MODULE70 {
   
 ## <a name="members"></a>成员  
  `cbSize`  
- 用于版本控制的结构的大小。  
+ 结构，用于版本控制的大小。  
   
  `m_hInstTypeLib`  
- 此模块的类型库句柄实例。  
+ 实例句柄的与此模块的类型库。  
   
  **m_ppAutoObjMapFirst**  
- 数组元素，该值指示此模块对象映射条目的开头的地址。  
+ 指示为此模块对象映射条目的开始的数组元素的地址。  
   
  **m_ppAutoObjMapLast**  
- 指示此模块对象映射项的结束位置的数组元素的地址。  
+ 数组元素，该值指示此模块对象映射条目的结束地址。  
   
  `m_csObjMap`  
- 若要序列化到对象的映射条目的访问的关键部分。 Atl。 在内部使用  
+ 要序列化到对象映射项的访问的关键部分。 Atl。 在内部使用  
   
 ## <a name="remarks"></a>备注  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)定义的 typedef 为`_ATL_COM_MODULE70`。  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)指的 typedef `_ATL_COM_MODULE70`。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
   
 ## <a name="see-also"></a>另请参阅  
  [结构](../../atl/reference/atl-structures.md)

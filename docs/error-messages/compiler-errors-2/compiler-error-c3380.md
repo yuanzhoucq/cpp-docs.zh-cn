@@ -19,34 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fbc75caa22d3c46b5a7a487662119a43b27eaf2b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b06f57795cea7dda7b3ba2797f7c57026a9acf60
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3380"></a>编译器错误 C3380
 “class”: 程序集访问说明符无效 - 只允许“public”或“private”  
   
- 当应用于的托管的类或结构，[公共](../../cpp/public-cpp.md)和[专用](../../cpp/private-cpp.md)关键字指示是否将程序集元数据通过公开的类。 仅`public`或`private`可以应用于编译的程序中的类[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 应用于托管类或结构时， [public](../../cpp/public-cpp.md) 和 [private](../../cpp/private-cpp.md) 关键字指示是否通过程序集元数据公开此类。 程序中使用 `public` /clr `private` 编译的类只可使用 [或](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
- `ref`和`value`关键字一起使用时[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，指示该类托管 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md))。  
+ `ref`和`value`关键字，与一起使用时[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，指示该类受托管 (请参阅[类和结构](../../windows/classes-and-structs-cpp-component-extensions.md))。  
   
  以下示例生成 C3380：  
   

@@ -22,25 +22,11 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 结构
@@ -59,22 +45,22 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>成员  
  `cbSize`  
- 用于版本控制的结构的大小。  
+ 结构，用于版本控制的大小。  
   
  `m_nLockCnt`  
- 引用计数以确定模块应保留多长时间保持活动状态。  
+ 引用计数以确定多长时间将模块应保持活动状态。  
   
  **m_pTermFuncs**  
- 已注册在 ATL 关闭时要调用的跟踪功能。  
+ 跟踪已注册在 ATL 关闭时要调用的函数。  
   
  **m_csStaticDataInitAndTypeInfo**  
- 用于协调对在多线程情况下的内部数据的访问。  
+ 用于协调对内部数据在多线程情况下的访问。  
   
 ## <a name="remarks"></a>备注  
- [_ATL_MODULE](atl-typedefs.md#_atl_module)定义的 typedef 为`_ATL_MODULE70`。  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module)指的 typedef `_ATL_MODULE70`。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
   
 ## <a name="see-also"></a>另请参阅  
  [结构](../../atl/reference/atl-structures.md)

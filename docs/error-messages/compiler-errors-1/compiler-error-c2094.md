@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6fe065a9cefe7a01942aa3f5411167f8a5f38985
-ms.openlocfilehash: a33bc40cd39494a304652ff8b20d40a6f3fdd099
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f20930a38a429aba3e3959f57f937bbfa9962da9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2094"></a>编译器错误 C2094
 标签“identifier”未定义  
   
-通过使用的标签[goto](../../cpp/goto-statement-cpp.md)函数中不存在语句。  
+通过 [goto](../../cpp/goto-statement-cpp.md) 语句使用的标签在函数中不存在。  
   
 ## <a name="example"></a>示例  
 以下示例生成 C2094：  

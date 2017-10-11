@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C2500 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2500"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2500"
+title: "编译器错误 C2500 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2500
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2500
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2b869ca0ba959e9b774a005298ef4456d0995156
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“identifier1”:“identifier2”已是直接基类  
+---
+# <a name="compiler-error-c2500"></a>编译器错误 C2500
+identifier1: identifier2 已直接基类  
   
- 某类或结构在基类列表中多次出现。  
+ 类或结构的基类列表中多次出现。  
   
- 直接基是在基列表中提到的基。  间接基是基列表中一个类的基类。  
+ 直接基是基础列表中所述。 间接基类是基类的基础列表中的类之一。  
   
- 不能多次将一个类指定为直接基类。  一个类可以多次用作间接基类。  
+ 一个类不能多次指定为直接基类。 类可以用作间接基类不止一次。  
   
- 下面的示例生成 C2500：  
+ 下面的示例生成 C2500:  
   
 ```  
 // C2500.cpp  

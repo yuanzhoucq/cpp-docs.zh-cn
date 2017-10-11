@@ -19,29 +19,15 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 48af783aab38f7d314d0b8cf45d876e6a8682030
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2668"></a>编译器错误 C2668
-function︰ 对重载函数调用不明确  
+function： 对重载函数调用不明确  
   
  无法解析指定的重载的函数调用。 你可能想要将一个或多个实参显式转换。  
   
@@ -113,7 +99,7 @@ class MyTestCase : public AppTestCase {
 ```  
   
 ## <a name="example"></a>示例  
- 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作︰ 强制转换为常量 0 上的不明确转换。  
+ 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作： 强制转换为常量 0 上的不明确转换。  
   
  强制转换使用常量 0 上的转换是不明确，因为 int 需要这两个到转换和长到 void *。 若要解决此错误，强制转换为它正用于以便发生 （此代码将在 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中有效） 所需的任何转换的函数参数的确切类型 0。  
   

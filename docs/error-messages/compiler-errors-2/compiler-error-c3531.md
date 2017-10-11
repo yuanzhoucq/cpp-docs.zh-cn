@@ -1,39 +1,42 @@
 ---
-title: "编译器错误 C3531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3531"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3531"
+title: "编译器错误 C3531 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3531
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3531
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“symbol”: 其类型包含“auto”的符号必须具有初始值设定项  
+---
+# <a name="compiler-error-c3531"></a>编译器错误 C3531
+symbol： 的符号的类型包含 auto 必须具有初始值设定项  
   
- 指定的变量没有初始值设定项表达式。  
+ 指定的变量不具有初始值设定项表达式。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  在声明变量时，指定初始值设定项表达式（如使用等号语法的简单赋值表达式）。  
+1.  指定的声明变量时使用等号语法，一个简单赋值语句之类的初始值设定项表达式。  
   
-## 示例  
- 下面的示例会产生 C3531，因为变量 `x1`、`y1, y2, y3` 和 `z2` 未初始化。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3531，因为变量`x1`， `y1, y2, y3`，和`z2`未初始化。  
   
 ```  
 // C3531.cpp  
@@ -47,5 +50,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)

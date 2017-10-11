@@ -19,26 +19,11 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 39bbed326de5fc0a367e9b7693d3975b766e9bfc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6960d2a34a6a68925e04e0812730025d1ce2ff92
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2228"></a>编译器错误 C2228
@@ -67,6 +52,6 @@ int main() {
   
  如果在使用托管扩展时用了不正确的语法，也会看到此错误。 而在其他 Visual Studio 语言中，可以使用点运算符访问托管类的成员，指向 C++ 中对象的指针意味着你需要使用 -> 运算符来访问该成员:  
   
- 错误︰`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
+ 错误： `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   
- 权限︰`String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+ 正确： `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

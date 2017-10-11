@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3853 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3853"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3853"
+title: "编译器错误 C3853 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3853
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3853
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54a05062cfc3f0871e16b500c8a3c4b6c3787b15
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“\=”: 通过指向函数的引用重新初始化引用或分配是非法的  
+---
+# <a name="compiler-error-c3853"></a>编译器错误 C3853
+'=': 是非法的重新初始化引用或通过引用向函数分配  
   
- 不能通过函数分配到引用，因为函数不是 lvalue。  
+ 无法分配到通过函数的指针的引用，因为函数都不是左值。  
   
- 下面的示例生成 C3853：  
+ 以下示例生成 C3853:  
   
 ```  
 // C3853.cpp  

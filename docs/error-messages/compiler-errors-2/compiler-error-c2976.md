@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: d691eba50403819e1a468b850995f4ae55a3731f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49250abe3cef048b15f7af87f643002640fe6bf5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2976"></a>编译器错误 C2976
-identifier︰ 类型参数太少  
+identifier： 类型参数太少  
   
- Generic 或 template 缺少一个或多个实际参数。 检查泛型或模板声明，以查找正确的参数数目。  
+ 泛型或模板缺少一个或多个自变量。 检查泛型或模板声明，以查找正确的参数数目。  
   
  可以通过 c + + 标准库组件中缺少模板参数导致此错误。  
   

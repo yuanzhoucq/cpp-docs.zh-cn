@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 15bb9910d689cd9b8f05ed6df306f3bdf1f79195
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4002"></a>编译器警告（等级 1）C4002
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  宏中的实参数量超过宏定义中的形参数量。 预处理器会收集额外参数，但会在宏扩展过程中忽略它们。  
   
- 未正确使用时，可能会发生 C4002 [Variadic 宏](../../preprocessor/variadic-macros.md)。  
+ 未正确使用 [Variadic Macros](../../preprocessor/variadic-macros.md)时，可能会发生 C4002。  
   
  下面的示例生成 C4002：  
   

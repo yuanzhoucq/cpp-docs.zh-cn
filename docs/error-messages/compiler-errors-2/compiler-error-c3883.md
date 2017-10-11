@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3883 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3883"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3883"
+title: "编译器错误 C3883 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3883
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3883
 ms.assetid: cdd1c1f4-f268-4469-9c62-d52303114b0c
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C3883
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ef1203b3162aa08f1de9a5a4ee68277d2c3489cc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“var”: initonly 静态数据成员必须被初始化  
+---
+# <a name="compiler-error-c3883"></a>编译器错误 C3883
+var： 必须初始化 initonly 静态数据成员  
   
- 标记为 [initonly](../../dotnet/initonly-cpp-cli.md) 的变量未正确初始化。  
+ 变量标记为[initonly](../../dotnet/initonly-cpp-cli.md)未正确初始化。  
   
- 下面的示例生成 C3883：  
+ 下面的示例生成 C3883:  
   
 ```  
 // C3883.cpp  
@@ -39,7 +42,7 @@ ref struct Y1 {
 };  
 ```  
   
- 下面的示例演示一个可能的解决方法：  
+ 以下示例演示了可能的解决方法：  
   
 ```  
 // C3883b.cpp  
@@ -50,7 +53,7 @@ ref struct Y1 {
 };  
 ```  
   
- 下面的示例演示如何初始化静态构造函数：  
+ 下面的示例演示如何在静态构造函数初始化：  
   
 ```  
 // C3883c.cpp  

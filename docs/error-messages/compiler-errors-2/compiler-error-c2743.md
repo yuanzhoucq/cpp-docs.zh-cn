@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>编译器错误 C2743
-type︰ 无法捕获具有 __clrcall 析构函数或复制构造函数的本机类型  
+type： 无法捕获具有 __clrcall 析构函数或复制构造函数的本机类型  
   
  使用编译的模块**/clr**尝试捕获异常的本机类型和其中的类型的析构函数或复制构造函数使用`__clrcall`调用约定。  
   
- 如果使用编译的**/clr**，异常处理预计要的本机类型的成员函数[__cdecl](../../cpp/cdecl.md)和 not [__clrcall](../../cpp/clrcall.md)。 本机类型与成员函数使用`__clrcall`调用约定不能使用编译的模块中捕获**/clr**。  
+ 如果使用编译的**/clr**，异常处理预计要的本机类型的成员函数[__cdecl](../../cpp/cdecl.md)和 not [__clrcall](../../cpp/clrcall.md)。 与成员函数使用的本机类型`__clrcall`调用约定不能使用编译的模块中捕获**/clr**。  
   
  有关详细信息，请参阅 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  
   

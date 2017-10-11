@@ -1,39 +1,42 @@
 ---
-title: "编译器错误 C3530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3530"
+title: "编译器错误 C3530 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 编译器错误 C3530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d66e76fc3e44a037f52aa6e217fae848f1338d2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“auto”不能与其他任何类型说明符一起使用  
+---
+# <a name="compiler-error-c3530"></a>编译器错误 C3530
+auto 不能与任何其他类型说明符组合  
   
- 某个类型说明符与 `auto` 关键字一起使用。  
+ 与使用的类型说明符`auto`关键字。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  不要在使用 `auto` 关键字的变量声明中使用类型说明符。  
+1.  请勿使用的变量声明中使用的类型说明符`auto`关键字。  
   
-## 示例  
- 下面的示例会产生 C3530，因为同时用 `auto` 关键字和 `int` 类型声明 `x` 变量，还因为该示例是用 **\/Zc:auto** 编译的。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3530，因为变量`x`声明两个`auto`关键字和类型`int`，而使用编译该示例是因为**/zc: auto**。  
   
 ```  
 // C3530.cpp  
@@ -45,5 +48,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)

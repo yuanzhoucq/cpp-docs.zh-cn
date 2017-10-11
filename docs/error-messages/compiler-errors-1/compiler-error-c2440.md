@@ -19,29 +19,15 @@ caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23d6666e2b8e61a8761454729f4f7444a9800cbe
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
-conversion︰ 无法从 type1 转换为 type2  
+conversion： 无法从 type1 转换为 type2  
   
 编译器不能强制转换从`type1`到`type2`。  
   
@@ -187,7 +173,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 如果你尝试创建其类型是一种<xref:System.Array>。</xref:System.Array> Visual c + + 数组的实例，也可能发生 C2440  有关详细信息，请参阅[数组](../../windows/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:  
+ 如果你尝试创建其类型为的 Visual c + + 数组的实例，也可能发生 C2440 <xref:System.Array>。  有关详细信息，请参阅[数组](../../windows/arrays-cpp-component-extensions.md)。  下一步的示例生成 C2440:  
   
 ```cpp  
 // C2440e.cpp  
@@ -299,7 +285,7 @@ int main()
 ## <a name="example"></a>示例
 ### <a name="cv-qualifiers-in-class-construction"></a>类构造中的 cv 限定符
 
-在 Visual Studio 2015 中，编译器有时会在通过构造函数调用生成类对象时错误地忽略 cv 限定符。 这可能会导致故障或意外的运行时行为。 下面的示例在 Visual Studio 2015 中编译，但将引发编译器错误 Visual Studio 2017 及更高版本︰
+在 Visual Studio 2015 中，编译器有时会在通过构造函数调用生成类对象时错误地忽略 cv 限定符。 这可能会导致故障或意外的运行时行为。 下面的示例在 Visual Studio 2015 中编译，但将引发编译器错误 Visual Studio 2017 及更高版本：
 
 ```cpp
 struct S 

@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2883 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2883"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2883"
+title: "编译器错误 C2883 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2883
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2883
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28c2031c3e659099507a8e59758e27f364dd29b9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“name”: 函数声明与 using 声明引入的“identifier”冲突  
+---
+# <a name="compiler-error-c2883"></a>编译器错误 C2883
+name： 函数声明与由使用声明引入的 identifier 冲突  
   
- 您尝试多次定义一个函数。  第一个定义是使用 `using` 声明从命名空间定义的。  第二个是局部定义。  
+ 你尝试以不止一次定义的函数。 与一个命名空间中进行的第一个定义`using`声明。 第二种是本地的定义。  
   
- 下面的示例生成 C2883：  
+ 下面的示例生成 C2883:  
   
 ```  
 // C2883.cpp  

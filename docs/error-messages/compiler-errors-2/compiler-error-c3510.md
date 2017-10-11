@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C3510 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3510"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3510"
+title: "编译器错误 C3510 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3510
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3510
 ms.assetid: c48387bc-0300-4a4d-97f7-3fb90f82a451
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 编译器错误 C3510
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9603a4f94106d491ea5e14f30b36b1b230554ad2
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-无法找到依赖类型库“type\_lib”  
+---
+# <a name="compiler-error-c3510"></a>编译器错误 C3510
+找不到依赖类型库 type_lib  
   
- [no\_registry](../../preprocessor/no-registry.md) 和 [auto\_search](../../preprocessor/auto-search.md) 已传递给 `#import`，但编译器无法找到引用类型库。  
+ [no_registry](../../preprocessor/no-registry.md)和[auto_search](../../preprocessor/auto-search.md)传递给`#import`但编译器找不到引用的类型库。  
   
- 若要解决此错误，请确保所有类型库和引用类型库均对编译器可用。  
+ 若要解决此错误，请确保所有类型库和引用的类型库都是可用于编译器。  
   
- 下面的示例生成 C3510：  
+ 下面的示例生成 C3510:  
   
- 假定生成了以下两个类型库，并且 C3510a.tlb 已被删除或不在路径中。  
+ 假定以下两个类型库生成，并且 C3510a.tlb 已被删除或不在路径。  
   
 ```  
 // C3510a.idl  
@@ -47,7 +50,7 @@ library C3510aLib
 };  
 ```  
   
- 然后是第二个类型库的源代码：  
+ 然后第二个类型库的源代码：  
   
 ```  
 // C3510b.idl  
@@ -63,7 +66,7 @@ library C3510bLib
 };  
 ```  
   
- 然后是客户端代码：  
+ 然后客户端代码：  
   
 ```  
 // C3510.cpp  

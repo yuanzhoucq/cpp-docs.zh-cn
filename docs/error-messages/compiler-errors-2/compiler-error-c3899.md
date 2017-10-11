@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: "编译器错误 C3899 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 编译器错误 C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“var”: 不允许在类“class”的并行区域内直接使用 initonly 数据成员的左值  
+---
+# <a name="compiler-error-c3899"></a>编译器错误 C3899
+var： 左值使用 initonly 数据成员不允许直接在类 class 中的并行区域内  
   
- [initonly](../../dotnet/initonly-cpp-cli.md) 数据成员无法在 [parallel](../../parallel/openmp/reference/parallel.md) 区域中构造函数的该部分内初始化。这是因为编译器执行了该代码的内部重定位，因此，它不再是构造函数的一部分。  
+ [Initonly (C + + /cli CLI)](../../dotnet/initonly-cpp-cli.md)数据成员不能初始化该部分中的构造函数内[并行](../../parallel/openmp/reference/parallel.md)区域。  这是由于编译器执行该代码，内部重定位，以便它不再有效地构造函数的一部分。  
   
- 要解决此问题，请初始化构造函数中的 initonly 数据成员，但是要在并行区域外进行。  
+ 若要解决，初始化在构造函数中，但在并行区域外的 initonly 数据成员。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3899。  
   
 ```  

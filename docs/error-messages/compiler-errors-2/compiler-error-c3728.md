@@ -1,31 +1,34 @@
 ---
-title: "编译器错误 C3728 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3728"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3728"
+title: "编译器错误 C3728 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3728
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3728
 ms.assetid: 6b510cb1-887f-4fcd-9a1f-3bb720417ed1
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3728
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 100ef8275f938406a4f6a7d3909e04f40ce1d16b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“event”: 事件没有引发方法  
+---
+# <a name="compiler-error-c3728"></a>编译器错误 C3728
+event： 事件不具有引发方法  
   
- 对于不允许从事件在其中定义的类之外引发事件的语言（如 C\#），通过 [\#using](../../preprocessor/hash-using-directive-cpp.md) 指令包括了使用该语言创建的元数据；使用 CLR 编程的 Visual C\+\+ 程序尝试引发该事件。  
+ 使用一种语言，创建的元数据，如 C# 中，不允许在定义它在类外部从引发事件，不包括[#using](../../preprocessor/hash-using-directive-cpp.md)指令，而是使用尝试的 CLR 编程的 Visual c + + 程序引发事件。  
   
- 若要在使用 C\# 之类的语言开发的程序中引发事件，则包含该事件的类还需要定义引发该事件的公共方法。
+ 若要引发事件如 C# 语言开发的程序中，包含事件的类需要还定义引发事件的公共方法。

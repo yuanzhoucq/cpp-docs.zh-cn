@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 783e05439168a63c21a3900c993813dd973a642a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ca9b4d5ca4362e1d728a854bb776573d25969d7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3364"></a>编译器错误 C3364
-delegate︰ 委托构造函数︰ 参数必须是指向托管类的成员函数或全局函数  
+delegate： 委托构造函数： 参数必须是指向托管类的成员函数或全局函数  
   
  该委托的构造函数的第二个参数采用成员函数的地址或任何类的静态成员函数的地址。 同时将被视为简单的地址。  
   

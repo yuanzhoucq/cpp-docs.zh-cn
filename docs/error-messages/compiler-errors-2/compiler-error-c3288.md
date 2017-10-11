@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3288 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3288"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3288"
+title: "编译器错误 C3288 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3288
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 编译器错误 C3288
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9030ad9f46a36a1879d1c0f4f97b772e893b37ab
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”: 非法取消对句柄类型的引用  
+---
+# <a name="compiler-error-c3288"></a>编译器错误 C3288
+type： 非法的取消引用的句柄类型  
   
- 编译器检测到非法取消了对句柄类型的引用。  可以取消对句柄类型的引用，然后再将其分配给引用。  有关详细信息，请参阅[% \(跟踪引用\)](../../windows/tracking-reference-operator-cpp-component-extensions.md)。  
+ 编译器检测到句柄类型非法取消引用。 你可以取消引用句柄类型，并将其分配为引用。 有关详细信息，请参阅[跟踪引用运算符](../../windows/tracking-reference-operator-cpp-component-extensions.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3288。  
   
 ```  

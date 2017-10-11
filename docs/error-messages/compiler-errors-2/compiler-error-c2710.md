@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2710"
+title: "编译器错误 C2710 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2710
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2710
 ms.assetid: a2a6bb5b-86ad-4a6c-acd0-e2bef8464e0e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5bb6349bf6efb8c63b68c78644343ace5dc07e67
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“construct”:“\_\_declspec\(modifier\)”只能应用于返回指针的函数  
+---
+# <a name="compiler-error-c2710"></a>编译器错误 C2710
+construct: __declspec(modifier) 可以仅应用于返回一个指向函数  
   
- 返回值为指针的函数是可应用 `modifier` 的唯一构造。  
+ 其返回值是一个指针的函数是到的唯一构造`modifier`可以应用。  
   
- 下面的示例生成 C2710：  
+ 下面的示例生成 C2710:  
   
 ```  
 // C2710.cpp  

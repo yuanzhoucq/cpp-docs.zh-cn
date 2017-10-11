@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C2362 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2362"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2362"
+title: "编译器错误 C2362 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2362
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2362
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e3a921084d696e6cf7abebc75d02d403cbcda2be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“goto label”跳过了“identifier”的初始化  
+---
+# <a name="compiler-error-c2362"></a>编译器错误 C2362
+identifier 的初始化已通过转到标签跳过  
   
- 当使用 [\/Za](../../build/reference/za-ze-disable-language-extensions.md) 编译时，跳转到该标签会无法初始化此标识符。  
+ 使用编译时[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳转到标签防止标识符进行初始化。  
   
- 无法跳过带有初始值设定项的声明，除非该声明包含在未进入的块内，或者已经初始化过该变量。  
+ 不能跳过具有初始值设定项的声明，除非声明包含在一个块，它不输入，或对象变量已初始化。  
   
- 下面的示例生成 C2326：  
+ 下面的示例生成 C2326:  
   
 ```  
 // C2362.cpp  
@@ -42,7 +45,7 @@ label1:;
 }  
 ```  
   
- 可能的解决方案：  
+ 可能的解决方法：  
   
 ```  
 // C2362b.cpp  

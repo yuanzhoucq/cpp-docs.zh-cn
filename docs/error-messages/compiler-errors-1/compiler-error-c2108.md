@@ -1,35 +1,38 @@
 ---
-title: "编译器错误 C2108 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2108"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2108"
+title: "编译器错误 C2108 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2108
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 编译器错误 C2108
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 936c7f53ba112d2fc7bf03d76acac27bd8b4c372
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-下标不是整型  
+---
+# <a name="compiler-error-c2108"></a>编译器错误 C2108
+下标不是整数类型  
   
- 该数组下标是非整型表达式。  
+ 该数组下标是非了非整型表达式。  
   
-## 示例  
- 如果错误地使用值类型的 `this` 指针来访问该类型的默认索引器，则会发生 C2108 错误。  有关详细信息，请参阅 [此指针的语义](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。  
+## <a name="example"></a>示例  
+ 如果错误地使用，则会发生 C2108`this`值类型访问该类型的默认索引器的指针。 有关详细信息，请参阅[语义 this 指针](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。  
   
  下面的示例生成 C2108。  
   

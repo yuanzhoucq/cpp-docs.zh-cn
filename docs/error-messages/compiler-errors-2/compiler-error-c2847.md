@@ -19,31 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 004b3b4474593ac4350e35fd48309a271948a3ea
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8406ea786def9c3241a0ae1de8743d53e91f96cd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2847"></a>编译器错误 C2847
 无法将 sizeof 应用到托管或 WinRT 类型“类”  
   
- [Sizeof](../../cpp/sizeof-operator.md)运算符在编译时获取对象的值。 由于托管或 WinRT 类的大小、接口或值类型是动态的，因此在编译时无法得知。  
+ [Sizeof](../../cpp/sizeof-operator.md)运算符可在编译时获取对象的值。 由于托管或 WinRT 类的大小、接口或值类型是动态的，因此在编译时无法得知。  
   
  例如，以下示例生成 C2847：  
   

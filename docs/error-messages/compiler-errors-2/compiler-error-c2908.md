@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2908 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2908"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2908"
+title: "编译器错误 C2908 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2908
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2908
 ms.assetid: 49cd2a21-cad8-4ba0-9a0b-3a0190d9344c
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C2908
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cbffa47dc7f5ff4559285a949c330bc34281c91a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-显式专用化；已实例化“template”  
+---
+# <a name="compiler-error-c2908"></a>编译器错误 C2908
+显式专用化;'template' 已实例化  
   
- 主模板的专用化已在显式专用化之前发生。  
+ 主模板的专用化发生之前显式专用化。  
   
- 下面的示例生成 C2908：  
+ 下面的示例生成 C2908:  
   
 ```  
 // C2908.cpp  

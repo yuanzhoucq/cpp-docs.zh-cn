@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fa97b32bb88adf056ee32289fa2eb11fd0579a28
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fc2149b3aac1e3575500ed4ac6c3c1b283f1db4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3274"></a>编译器错误 C3274
 __finally/finally 没有匹配的 try  
   
- A [__finally](../../cpp/try-finally-statement.md)或[最后](../../dotnet/finally.md)语句找没有与其匹配的`try`。 若要解决此问题，删除 `__finally` 语句或为 `try` 添加 `__finally`语句。  
+ 发现 [__finally](../../cpp/try-finally-statement.md) 或 [finally](../../dotnet/finally.md) 语句没有匹配的 `try`。 若要解决此问题，删除 `__finally` 语句或为 `try` 添加 `__finally`语句。  
   
  以下示例生成 C3274：  
   

@@ -19,35 +19,21 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 352b38744d83b3dc163125ff5ec8d80165f60c9a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>编译器警告 C4867
-function︰ 函数调用缺少自变量列表;使用调用创建指向成员的指针  
+function： 函数调用缺少自变量列表;使用调用创建指向成员的指针  
   
  指向成员函数的未正确初始化。  
   
- 此警告可以来自于为 Visual c + + 2005年执行的编译器一致性工作︰ 增强的指针到成员一致性。  Visual c + + 2005年之前的版本编译的代码现在将生成 C4867。  
+ 此警告可以来自于为 Visual c + + 2005年执行的编译器一致性工作： 增强的指针到成员一致性。  Visual c + + 2005年之前的版本编译的代码现在将生成 C4867。  
   
- 始终作为错误发出此警告。 使用[警告](../../preprocessor/warning.md)杂注来禁用此警告。 有关 C4867 和 MFC/ATL 的详细信息，请参阅[_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)。  
+ 始终作为错误发出此警告。 请使用 [警告](../../preprocessor/warning.md) 杂注禁用此警告。 有关 C4867 和 MFC/ATL 的详细信息，请参阅[_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)。  
   
 ## <a name="example"></a>示例  
  下面的示例生成 C4867。  

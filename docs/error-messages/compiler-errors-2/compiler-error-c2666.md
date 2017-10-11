@@ -19,30 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fb6c45ad153a428d090d05c8fa24c05eef024607
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2666"></a>编译器错误 C2666
-identifier︰ 数字重载具有相似的转换  
+identifier： 数字重载具有相似的转换  
   
  重载的函数或运算符不明确。   形参列表可能太相似，编译器无法解析多义性。  若要解决此错误，显式转换一个或多个实际的参数。  
   
@@ -62,13 +47,13 @@ int main() {
 }  
 ```  
   
- 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作︰  
+ 此错误还可能来自于为 Visual Studio.NET 2003年执行的编译器一致性工作：  
   
 -   二元运算符和用户定义的到指针类型转换  
   
 -   限定转换不标识转换相同  
   
- 对于二元运算符\<，1>， \<=、 和 1> =，传递参数现在被隐式转换为操作数的类型如果参数的类型定义用户定义的转换运算符以将转换为操作数的类型。 现在有了潜在不明确。  
+ 对于二元运算符\<，>， \<=、 和 > =、 传递参数现在被隐式转换为操作数的类型如果参数的类型定义用户定义的转换运算符以将转换为操作数的类型。 现在有了潜在不明确。  
   
  对于 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的代码，调用使用函数语法显式类运算符。  
   

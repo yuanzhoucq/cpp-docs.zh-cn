@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2706"
+title: "编译器错误 C2706 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2706
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C2706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9190c457e5397acbfd8a2358563d2359e9c5190b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-没有匹配 \_\_try 的非法 \_\_except\(\_\_try 块中是否缺少“}”？\)  
+---
+# <a name="compiler-error-c2706"></a>编译器错误 C2706
+没有匹配非法 __except \__finally (缺少} 中\__finally 块？)  
   
- 编译器没有找到 `__try` 块的右大括号。  
+ 编译器未找到的右大括号`__try`块。  
   
- 下面的示例生成 C2706：  
+ 下面的示例生成 C2706:  
   
 ```  
 // C2706.cpp  

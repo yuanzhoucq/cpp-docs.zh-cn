@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3652 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3652"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3652"
+title: "编译器错误 C3652 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3652
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 编译器错误 C3652
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4bade460d97b8d7dcb38e7d37fa87f2910047c47
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“override”: 显式重写的函数必须是虚拟的  
+---
+# <a name="compiler-error-c3652"></a>编译器错误 C3652
+重写： 显式重写的函数必须是虚拟的  
   
- 显式重写的函数必须是虚拟的。  有关更多信息，请参见[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 一个不显式重写函数必须是虚拟的。 有关详细信息，请参阅[显式重写](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- 下面的示例生成 C3652：  
+ 下面的示例生成 C3652:  
   
 ```  
 // C3652.cpp  

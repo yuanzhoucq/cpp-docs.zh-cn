@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: c6bfb80408e058d22977ff068c9a0c21d5353a90
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45e0a7eb7a8846d90cc8e0743f5484ba1b58208a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2844"></a>编译器错误 C2844
-member︰ 不能为接口的成员  
+member： 不能为接口 interface 的成员  
   
- [接口类](../../windows/interface-class-cpp-component-extensions.md)不能包含数据成员，除非它也是一个属性。  
+ [接口类](../../windows/interface-class-cpp-component-extensions.md)不能包含的数据成员，除非它也是一个属性。  
   
- 属性或成员函数之外的任何不允许在接口中。 此外，不允许的构造函数、 析构函数和运算符。  
+ 在接口中不允许一个属性或成员函数之外的任何内容。 此外，不允许构造函数、 析构函数和运算符。  
   
  下面的示例生成 C2844:  
   

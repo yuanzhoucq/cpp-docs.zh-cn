@@ -1,38 +1,41 @@
 ---
-title: "编译器错误 C2571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2571"
+title: "编译器错误 C2571 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2571
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8bfb4f9af849efea2fa3aa8a84a57f1cfb4cd502
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“function”: 虚函数不能在联合“union”中  
+---
+# <a name="compiler-error-c2571"></a>编译器错误 C2571
+function： 虚函数不能为联合联合中  
   
- 用虚函数声明了联合。  仅能在类或结构中声明虚函数。可能的解决方案：  
+ 与虚函数声明的联合。 您可以声明只能在类或结构中的虚拟函数。  可能的解决方法：  
   
-1.  将该联合更改为类或结构。  
+1.  将联合更改为类或结构。  
   
-2.  使该函数成为非虚拟的。  
+2.  使非虚拟函数。  
   
- 下面的示例生成 C2571：  
+ 下面的示例生成 C2571:  
   
 ```  
 // C2571.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C2752 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2752"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2752"
+title: "编译器错误 C2752 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2752
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2752
 ms.assetid: ae42b3ec-84a9-4e9d-8d59-3d208132d0b2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C2752
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9ec3809b4826cf336391e561839840af44593cb6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“template”: 多个部分专用化与模板参数列表匹配  
+---
+# <a name="compiler-error-c2752"></a>编译器错误 C2752
+'template': 多个部分专用化匹配模板自变量列表  
   
- 实例化是不明确的。  
+ 实例化是不明确。  
   
- 下面的示例生成 C2752：  
+ 下面的示例生成 C2752:  
   
 ```  
 // C2752.cpp  

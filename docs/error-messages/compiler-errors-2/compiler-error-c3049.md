@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a5fbd2416488675e76490c6b23728e882080137d
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e2c81bf792be0340cd558ce3ad8efccd64d0d8a7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3049"></a>编译器错误 C3049
 “arg”: OpenMP“default”子句中的参数无效  
   
- 不正确的值传递到[默认](../../parallel/openmp/reference/default-openmp.md)子句。  
+ 向 [default](../../parallel/openmp/reference/default-openmp.md) 子句传递的值不正确。  
   
  下面的示例生成 C3049：  
   

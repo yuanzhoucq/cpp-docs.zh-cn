@@ -19,34 +19,20 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7d77c7fa0c8035f8bb3a9ef732880bce4253c25b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bd852023fe4e8cf9b1845ed1a4d53f937b039211
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2753"></a>编译器错误 C2753
-*模板*︰ 部分专用化不能与匹配主模板参数列表  
+*模板*： 部分专用化不能与匹配主模板参数列表  
   
  如果模板自变量列表与匹配参数列表，则编译器会将其视为相同的模板。 不允许两次定义相同的模板。  
   
 ## <a name="example"></a>示例
- 下面的示例生成 C2753，并演示了如何修复此错误︰  
+ 下面的示例生成 C2753，并演示了如何修复此错误：  
   
 ```cpp  
 // C2753.cpp  

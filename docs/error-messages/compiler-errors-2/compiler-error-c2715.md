@@ -19,31 +19,17 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ecd5056d656865c893c60f63afbf7a558a839785
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8d396830b31e0d46781c3f008847f4cc9bd7bcc5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2715"></a>编译器错误 C2715
-type︰ 无法引发或捕捉这种类型  
+type： 无法引发或捕捉此类型  
   
- 值类型不是有效的参数使用中的异常处理托管代码时 (请参阅[异常处理](../../windows/exception-handling-cpp-component-extensions.md)有关详细信息)。  
+ 值类型不是有效的自变量中使用异常处理托管代码时 (请参阅[异常处理](../../windows/exception-handling-cpp-component-extensions.md)有关详细信息)。  
   
 ```  
 // C2715a.cpp  

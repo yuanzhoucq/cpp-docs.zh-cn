@@ -19,36 +19,22 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: faa2aa2c29ea34009f0812a3796d450a6877ca48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f6fa7626541f5fcd06bc2c2c513f52ec443ba4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2383"></a>编译器错误 C2383
-*符号*︰ 默认自变量不能存在于此符号  
+*符号*： 默认自变量不能存在于此符号  
   
  C + + 编译器不允许在指向函数的指针上的默认自变量。  
   
  Visual Studio 2005 中之前, 的版本中的 Visual c + + 编译器接受此代码，但现在会导致错误。 对于适用于所有版本的 Visual c + + 的代码，现在将默认值分配给指针到函数参数。  
   
 ## <a name="example"></a>示例  
- 下面的示例生成 C2383，并显示可能的解决方法︰  
+ 下面的示例生成 C2383，并显示可能的解决方法：  
   
 ```cpp  
 // C2383.cpp  

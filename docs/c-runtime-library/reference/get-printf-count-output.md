@@ -37,25 +37,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 2645201f1c5dfd7c8f23e86b43ef360ef5cb6e91
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 4373fc075e46110cbcef411b283b8566bf74508c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
@@ -71,7 +57,7 @@ int _get_printf_count_output();
  如果支持 `%n`，则为非零值。如果不支持 `%n`，则为 0。  
   
 ## <a name="remarks"></a>备注  
- 如果不支持 `%n`（默认设置），则在任何 `printf` 函数的格式字符串中遇到 `%n` 时，都将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`启用支持 (请参阅[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然后`%n`中所述的表现[格式规范语法︰ printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如果不支持 `%n`（默认设置），则在任何 `printf` 函数的格式字符串中遇到 `%n` 时，都将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`启用支持 (请参阅[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然后`%n`中所述的表现[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="requirements"></a>要求  
   

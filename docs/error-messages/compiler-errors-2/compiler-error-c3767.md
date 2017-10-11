@@ -19,34 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>编译器错误 C3767
 function 候选函数不可访问  
   
- 不应看做就好像它已定义，并在全局命名空间范围中声明的类中定义的友元函数。 它可以但是，要找到依赖于参数的查找。  
+ 类中定义的友元函数不应被视为已定义，并且可以在全局命名空间范围中声明。 它可以但是，找不到由依赖于参数的查找。  
   
- C3767 还可能由重大更改导致︰ 本机类型现在是默认情况下，在私有**/clr**编译; 请参阅[类型可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)有关详细信息。  
+ C3767 还可能引起一项重大更改： 本机类型现在是在默认情况下私有**/clr**编译，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)有关详细信息。  
   
 ## <a name="example"></a>示例  
  下面的示例生成 C3767:  
@@ -102,7 +87,7 @@ ref class Der : public Base {
 };  
 ```  
   
- 在 Visual c + +.NET 2002 中，编译器将更改查找符号的方式。 在某些情况下，它会自动查找指定的命名空间中的符号。 现在，它使用依赖于参数的查找。  
+ 在 Visual c + +.NET 2002 中，编译器将更改查找符号的方式。 在某些情况下，它将自动查找指定的命名空间中的符号。 现在，它使用依赖于自变量的查找。  
   
  下面的示例生成 C3767:  
   
@@ -123,7 +108,7 @@ int main() {
 }  
 ```  
   
- 有关在 Visual c + +.NET 2003年和 Visual c + +.NET 2002年中是有效的代码，声明友元类范围中的并将其定义在命名空间范围︰  
+ 对于 Visual c + +.NET 2003年和 Visual c + +.NET 2002年中有效的代码，声明友元类作用域中的和在命名空间范围中定义它：  
   
 ```  
 // C3767f.cpp  

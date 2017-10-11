@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ed81cc21e3c3ae574a0c83a692f75638d24111de
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a5ebccc9fb6cc8c25a8a6b42ae3b99439b1f5d44
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3622"></a>编译器错误 C3622
-class: 关键字' 不能实例化一个类声明  
+class: 类声明为 keyword 不能实例化  
   
-尝试实例化类标记为[抽象](../../windows/abstract-cpp-component-extensions.md)。 一个类标记为`abstract`可以是一个基类，但它不能被实例化。  
+尝试实例化类标记为[抽象](../../windows/abstract-cpp-component-extensions.md)。 一个类标记为`abstract`可以是基类，但它不能实例化。  
   
 ## <a name="example"></a>示例  
 下面的示例生成 C3622。  

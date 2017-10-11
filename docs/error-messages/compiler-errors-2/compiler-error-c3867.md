@@ -1,37 +1,40 @@
 ---
-title: "编译器错误 C3867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3867"
+title: "编译器错误 C3867 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 编译器错误 C3867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f8e4612dc12274c689ec0d4e9406dea74c608f4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“func”: 函数调用缺少参数列表；请使用“&func”创建指向成员的指针  
+---
+# <a name="compiler-error-c3867"></a>编译器错误 C3867
+“func”: 函数调用缺少自变量列表；请使用“&func”创建指向成员的指针  
   
- 你曾尝试在不使用成员函数的类名称和 address\-of 运算符限定成员函数的情况下采用其地址。  
+ 你曾尝试在不使用成员函数的类名称和 address-of 运算符限定成员函数的情况下采用其地址。  
   
- 此错误还可能来自于为 Visual C\+\+ 2005 执行的编译器一致性工作：增强了指针到成员一致性。  使用 Visual C\+\+ 2005 之前的版本编译的代码现在将生成 C3867。  
+ 此错误还可能来自于为 Visual C++ 2005 执行的编译器一致性工作：增强了指针到成员一致性。 使用 Visual C++ 2005 之前的版本编译的代码现在将生成 C3867。  
   
-## 示例  
- C3867 可能会从带有误导性的建议解决方案的编译器发出。  如可能，请使用派生程度最高的类。  
+## <a name="example"></a>示例  
+ C3867 可能会从带有误导性的建议解决方案的编译器发出。 如可能，请使用派生程度最高的类。  
   
  下面的示例生成 C3867，并演示如何修复此错误：  
   
@@ -53,7 +56,7 @@ void Derived::Bar() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3867，并演示如何修复此错误：  
   
 ```  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3867，并演示如何修复此错误：  
   
 ```  
@@ -102,7 +105,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3867。  
   
 ```  
@@ -125,7 +128,7 @@ public:
 };  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3867。  
   
 ```  

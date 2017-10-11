@@ -19,29 +19,15 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 043c28c9fa11dc28425c58aea2efc6a2cefe4065
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5878c28ed0b4fc2663c17021aa9e277ccaa8ad4e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2249"></a>编译器错误 C2249
-member︰ 在虚拟基 class 中没有可访问的路径访问成员声明  
+member： 在虚拟基 class 中声明为访问成员没有可访问的路径  
   
  `member`继承自非公共`virtual`基类或结构。  
   
@@ -66,7 +52,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 如果您尝试将一个流从 c + + 标准库分配给另一个流，也可能发生 C2249。  下面的示例生成 C2249。  
+ 如果你尝试将流从 c + + 标准库分配给另一个流，也可能发生 C2249。  下面的示例生成 C2249。  
   
 ```  
 // C2249_2.cpp  

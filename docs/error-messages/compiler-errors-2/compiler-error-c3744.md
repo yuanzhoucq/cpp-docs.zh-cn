@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: f6cd256454b51a103d9c4249b050c8c05781bc78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87df3fd92ac3fcad9b3e87f02f16b8151e678b77
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3744"></a>编译器错误 C3744
-对托管事件 __unhook 必须有至少 3 个参数  
+__unhook 必须具有针对托管事件至少 3 个自变量  
   
- [__Unhook](../../cpp/unhook.md)函数必须采用三个参数在 c + + 托管扩展中编译的程序中使用时。  
+ [__Unhook](../../cpp/unhook.md)函数必须采用三个参数在 c + + 托管扩展编译的程序中使用时。  
   
- `__hook`和`__unhook`与 /clr 编程不兼容。 而是使用 + = 和-= 运算符。  
+ `__hook`和`__unhook`与 /clr 编程不兼容。 改为使用 + = 和-= 运算符。  
   
- C3744 才可使用已过时的编译器选项连接**/clr:oldSyntax**。  
+ C3744 才可访问使用过时的编译器选项**/clr:oldSyntax**。  
 

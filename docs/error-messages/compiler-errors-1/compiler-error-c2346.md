@@ -1,42 +1,45 @@
 ---
-title: "编译器错误 C2346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2346"
+title: "编译器错误 C2346 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2346
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 编译器错误 C2346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bf0133aba65b8477bd949cd90b51edbd407bcda7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/09/2017
 
-“function”不能编译为本机函数: 原因  
+---
+# <a name="compiler-error-c2346"></a>编译器错误 C2346
+function 不能编译为本机： 原因  
   
- 编译器无法将函数编译为 MSIL。  
+ 编译器无法编译为 MSIL 的函数。  
   
- 有关更多信息，请参见[managed、unmanaged](../../preprocessor/managed-unmanaged.md)和[\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 有关详细信息，请参阅[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)和[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  移除不能编译为 MSIL 的函数中的代码。  
+1.  不能编译为 MSIL 的函数中删除该代码。  
   
-2.  请不要用 **\/clr** 编译模块，或者可以用非托管杂注将函数标记为非托管函数。  
+2.  请不编译的模块**/clr**，或将函数标记为非托管与非托管杂注。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C2346。  
   
 ```  
