@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3196 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3196"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3196"
+title: "编译器错误 C3196 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3196
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3196
 ms.assetid: d9c38a13-191d-472d-aa2b-f61a6459d16c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3196
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7425abce554427aafa1443d4a5cc6828deefef8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“keyword”: 使用了多次  
+---
+# <a name="compiler-error-c3196"></a>编译器错误 C3196
+keyword： 使用多个一次  
   
- 某关键字被使用了多次。  
+ 不止一次使用的关键字。  
   
- 下面的示例生成 C3196：  
+ 下面的示例生成 C3196:  
   
 ```  
 // C3196.cpp  

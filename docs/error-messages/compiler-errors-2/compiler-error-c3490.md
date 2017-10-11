@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3490"></a>编译器错误 C3490
@@ -51,7 +36,7 @@ ms.lasthandoff: 04/04/2017
 -   从方法声明删除 `const` 修饰符。  
   
 ## <a name="example"></a>示例  
- 下面的示例生成 C3490，因为它修改成员变量`_i`中`const`方法︰  
+ 下面的示例生成 C3490，因为它修改 `_i` 方法中的成员变量 `const` ：  
   
 ```  
 // C3490a.cpp  

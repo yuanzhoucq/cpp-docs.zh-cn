@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 2ad4d2d5b926001fad668b62b6cbf0abe21542c0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2352ff83181fe1127e1faa60829d00f03508bccd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3365"></a>编译器错误 C3365
 运算符“operator”: 区分类型为“type1”和“type2”的操作数  
   
-已尝试撰写具有不同类型的委托。  请参阅[如何︰ 定义和使用委托 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)有关委托的详细信息。  
+已尝试撰写具有不同类型的委托。  请参阅[如何： 定义和使用委托 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)有关委托的详细信息。  
   
 ## <a name="example"></a>示例  
 以下示例生成 C3365：  

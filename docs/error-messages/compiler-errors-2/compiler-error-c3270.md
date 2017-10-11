@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 13ef4bca19de5b1dcda8fd0c22a15d43f00257b7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 326f53f06c6cc4d93eb85f265df161c7b2b86535
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3270"></a>编译器错误 C3270
 “field”: FieldOffset 特性只能在 StructLayout(Explicit) 上下文中使用，在该情况下它是必需的  
   
-字段标记有**FieldOffset**，其中时，才允许**StructLayout(Explicit)**生效。  
+使用标记了一个字段**FieldOffset**，这仅允许时**StructLayout(Explicit)**生效。  
   
 下面的示例生成 C3270：  
   

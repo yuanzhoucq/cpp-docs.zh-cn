@@ -19,32 +19,17 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f1d148a21e532863315470366820cc825c45f782
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2c5f79f76329277fa24e90eaa0ab32209cafe6c0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3463"></a>编译器错误 C3463
 “type”：类型不允许出现在特性“implements”中  
   
- 无效的类型传递给[实现](../../windows/implements-cpp.md)属性。 例如，可以传递一个接口到 `implements`，但不能将一个指针传递到一个接口。  
+ 向 [implements](../../windows/implements-cpp.md) 特性传递了一个无效类型。 例如，可以传递一个接口到 `implements`，但不能将一个指针传递到一个接口。  
   
 ## <a name="example"></a>示例  
  以下示例生成 C3463。  

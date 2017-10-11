@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 13ff799b21825c24ae98cfd416e7e2021b6bd2bb
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aa933235f14f2ab6f11c86e6cbd3e23dc15481ec
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3166"></a>编译器错误 C3166
-指针︰ 不能将内部 __gc 指针指向的指针声明为 'type' 的成员  
+指针： 不能将内部 __gc 指针指向的指针声明为 type 的成员  
   
-编译器发现无效的指针声明 (`__nogc`指针，指向`__gc`指针。)。 
+编译器找到了无效的指针声明 (`__nogc`指向`__gc`指针。)。 
   
-C3166 才可使用已过时的编译器选项连接**/clr:oldSyntax**。  
+C3166 才可访问使用过时的编译器选项**/clr:oldSyntax**。  
 

@@ -1,37 +1,40 @@
 ---
-title: "编译器错误 C3466 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3466"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3466"
+title: "编译器错误 C3466 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3466
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3466
 ms.assetid: 69a877d9-a749-474b-bfc3-8d3fd53ba8fd
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3466
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b4610f7a47784dfa93339e06f09f6a576b02455d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”: 无法转发泛型类的专用化  
+---
+# <a name="compiler-error-c3466"></a>编译器错误 C3466
+type： 不能转发泛型类专用化  
   
- 无法对泛型类的专用化使用类型转发。  
+ 不能使用类型转发泛型类的专用化。  
   
- 有关详细信息，请参阅[类型转发 \(C\+\+\/CLI\)](../../windows/type-forwarding-cpp-cli.md)。  
+ 有关详细信息，请参阅[类型转发 (C + + /cli CLI)](../../windows/type-forwarding-cpp-cli.md)。  
   
-## 示例  
- 下面的示例创建了一个组件。  
+## <a name="example"></a>示例  
+ 下面的示例创建一个组件。  
   
 ```  
 // C3466.cpp  
@@ -42,7 +45,7 @@ public ref class GR {};
 public ref class GR2 {};  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3466。  
   
 ```  

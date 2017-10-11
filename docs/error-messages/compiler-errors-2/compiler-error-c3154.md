@@ -1,36 +1,39 @@
 ---
-title: "编译器错误 C3154 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3154"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3154"
+title: "编译器错误 C3154 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3154
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3154
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: de38898f775d621edfec464de8a51d20c3bdb4f0
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-省略号前面应为“,”。参数数组函数中不支持非逗号分隔的省略号。  
+---
+# <a name="compiler-error-c3154"></a>编译器错误 C3154
+预期 '，' 之前省略号。 非逗号分隔的参数数组函数上不支持的省略号。  
   
- 未正确地声明变量参数函数。  
+ 未正确声明的变量自变量函数。  
   
- 有关详细信息，请参阅[变量参数列表 \(...\) \(C\+\+\/CLI\)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)。  
+ 有关详细信息，请参阅[变量自变量列表 （...）(C + + /CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C3154。  
   
 ```  

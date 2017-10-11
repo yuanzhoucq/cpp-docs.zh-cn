@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a8e195a4dba4964d0ed487ad4ebd189190467155
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 62cd3de9bca4e695d051e150c7dfa45dca28936a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3369"></a>编译器错误 C3369
 “模块名”: idl_module 已经定义  
   
- [Idl_module](../../windows/idl-module.md)使用你在其中定义 DLL 只能一次出现在程序中。  
+ 定义 DLL 的 [Idl_module](../../windows/idl-module.md) 使用只能在程序中出现一次。  
   
  以下示例生成 C3369:  
   

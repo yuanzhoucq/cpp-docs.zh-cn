@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3140 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3140"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3140"
+title: "编译器错误 C3140 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3140
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 编译器错误 C3140
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e809ddaaa278e0c6a2660fbb71b84323dcd40018
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-同一编译单元中不能有多个“module”特性  
+---
+# <a name="compiler-error-c3140"></a>编译器错误 C3140
+不能在同一编译单元中有多个模块属性  
   
- 每个项目只能定义一次 [module](../../windows/module-cpp.md) 特性。  
+ [模块](../../windows/module-cpp.md)属性只能定义一次每个项目。  
   
- 下面的示例生成 C3140：  
+ 下面的示例生成 C3140:  
   
 ```  
 // C3140.cpp  

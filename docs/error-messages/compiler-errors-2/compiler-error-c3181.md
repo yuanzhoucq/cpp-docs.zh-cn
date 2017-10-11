@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 4229a9d9811bad46035451c5d64b7ed06da476d2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84f725f64e22dc5da1736eb64696b03b0b7ea36a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3181"></a>编译器错误 C3181
-type︰ 无效的操作数的运算符  
+type： 无效的操作数用于运算符  
   
-无效的参数传递给[typeid](../../windows/typeid-cpp-component-extensions.md)运算符。 参数必须是托管的类型。  
+无效的参数传递到[typeid](../../windows/typeid-cpp-component-extensions.md)运算符。 参数必须是托管的类型。  
   
-请注意，编译器使用的本机类型的映射到公共语言运行库中的类型的别名。  
+请注意，编译器使用的本机类型的映射到公共语言运行时中类型的别名。  
   
 下面的示例生成 C3181:  
   

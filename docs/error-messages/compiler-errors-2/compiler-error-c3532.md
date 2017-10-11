@@ -1,41 +1,44 @@
 ---
-title: "编译器错误 C3532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3532"
+title: "编译器错误 C3532 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e78db21d00ea93378358a1147163276fb12bdfd5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“type”:“auto”的用法不正确  
+---
+# <a name="compiler-error-c3532"></a>编译器错误 C3532
+type: auto 用法不正确  
   
- 不能使用 `auto` 关键字声明指定的类型。  例如，不能使用 `auto` 关键字声明数组或方法返回类型。  
+ 指明的类型不能用声明`auto`关键字。 例如，不能使用`auto`关键字来声明一个数组或方法返回类型。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  确保初始化表达式的结果是有效类型。  
+1.  确保初始化表达式结果是有效类型。  
   
-2.  确保不声明数组或方法返回类型。  
+2.  确保不要声明数组或方法的返回类型。  
   
-## 示例  
- 下面的示例会产生 C3532，因为 `auto` 关键字不能声明方法返回类型。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3532，因为`auto`关键字不能声明方法的返回类型。  
   
 ```  
 // C3532a.cpp  
@@ -43,8 +46,8 @@ caps.handback.revision: 6
 auto f(){}   // C3532  
 ```  
   
-## 示例  
- 下面的示例会产生 C3532，因为 `auto` 关键字不能声明数组。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3532，因为`auto`关键字不能声明数组。  
   
 ```  
 // C3532b.cpp  
@@ -61,5 +64,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)

@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 09c62f455bc666296222a2079ef6b0b97c507d85
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc07da3d6fa994bfba9588b1169287da8c0d738b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3247"></a>编译器错误 C3247
 “class1”：组件类不能继承自另一个组件类“class2”  
   
- 类用来标记[组件类](../../windows/coclass.md)属性不能从标记的另一个类继承`coclass`属性。  
+ [coclass](../../windows/coclass.md) 特性标记的类不能继承自 `coclass` 特性标记的另一个类。  
   
  以下示例生成 C3247：  
   

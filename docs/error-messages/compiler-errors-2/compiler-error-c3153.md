@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e7755c5924af2d2266fdf5e97a76eac3d229aa79
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d6a2ad948ae8d5517f7b98316b4e3c67bea5afb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3153"></a>编译器错误 C3153
-接口︰ 无法创建接口的实例  
+interface： 无法创建接口的实例  
   
- 无法实例化接口。 若要使用接口的成员，从接口派生类，实现接口成员，然后使用这些成员。  
+ 接口不能实例化。 若要使用接口的成员，从接口派生类，实现接口成员，然后使用这些成员。  
   
  下面的示例生成 C3153:  
   

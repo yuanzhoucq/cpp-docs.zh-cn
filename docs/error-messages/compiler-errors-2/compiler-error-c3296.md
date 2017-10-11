@@ -19,26 +19,11 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 75facf4bbc92481db12c3254e2035a39b7310a6b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 734f4e1e337833e26c60d4239a465818d8601ae5
 ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3296"></a>编译器错误 C3296
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  编译器遇到具有相同名称的多个属性。 类型中的每个属性均必须具有唯一名称。  
   
- 有关详细信息，请参阅[属性](../../windows/property-cpp-component-extensions.md)。  
+ 有关详细信息，请参阅 [property](../../windows/property-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>示例  
  以下示例生成 C3296。  

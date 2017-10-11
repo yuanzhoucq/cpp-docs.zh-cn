@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0aee8d8860183f73f638e1ec41c6841ad45573d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dff7fc5162fb84a4878553ec74953d8b7d42ddea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3414"></a>编译器错误 C3414
-member︰ 不能定义导入的成员函数  
+member： 不能定义导入的成员函数  
   
- 在代码中也定义引用的程序集中定义的成员。  
+ 此外定义中引用的程序集中的代码中定义的成员。  
   
  下面的示例生成 C3414:  
   

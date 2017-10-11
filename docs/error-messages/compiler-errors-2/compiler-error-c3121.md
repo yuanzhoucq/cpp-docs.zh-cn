@@ -1,34 +1,37 @@
 ---
-title: "编译器错误 C3121 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3121"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3121"
+title: "编译器错误 C3121 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3121
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3121
 ms.assetid: 1d3c7be4-d42d-4def-8d53-182c0c5cc237
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 编译器错误 C3121
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56e97505119f16cf81fdc216527af39eaa837dba
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-无法更改“class\_name”类的 GUID  
+---
+# <a name="compiler-error-c3121"></a>编译器错误 C3121
+无法更改的类 class_name 的 GUID  
   
- 尝试使用 [\_\_declspec\(uuid\)](../../cpp/uuid-cpp.md) 更改类 ID。  
+ 试图更改的类 ID 与[__declspec(uuid)](../../cpp/uuid-cpp.md)。  
   
- 例如，以下代码生成 C3121：  
+ 例如，下面的代码生成 C3121:  
   
 ```  
 // C3121.cpp  

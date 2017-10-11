@@ -1,39 +1,42 @@
 ---
-title: "编译器错误 C3536 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3536"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3536"
+title: "编译器错误 C3536 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3536
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 编译器错误 C3536
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 90db065c9a16e72a396bd1c1ae54bb99cdb97153
+ms.contentlocale: zh-cn
+ms.lasthandoff: 10/10/2017
 
-“symbol”: 不能在初始化之前使用  
+---
+# <a name="compiler-error-c3536"></a>编译器错误 C3536
+symbol： 不能在初始化之前  
   
- 指定的符号不能在初始化之前使用。  实际上，这意味着变量不能用来对自身进行初始化。  
+ 在初始化之前，不能使用指定的符号。 在实践中，这意味着无法使用变量来初始化自身。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  不要使用变量对其自身进行初始化。  
+1.  未初始化变量对其自身。  
   
-## 示例  
- 下面的示例会产生 C3536，因为每个变量都对其自身进行初始化。  
+## <a name="example"></a>示例  
+ 下面的示例生成 C3536，因为每个变量初始化与其自身。  
   
 ```  
 // C3536.cpp  
@@ -49,5 +52,5 @@ int main()
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)
