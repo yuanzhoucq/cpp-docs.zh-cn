@@ -48,7 +48,7 @@ ms.lasthandoff: 08/15/2017
 
 ### <a name="new-compiler-switches"></a>新的编译器开关  
 
- -**/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [-std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 /std:c++lates 开关保护。 
+ -**/std:c++14** 和 **/std:c++latest**：这些编译器开关使你可以选择在项目中加入特定版本的 ISO C++ 编程语言。 有关详细信息，请参阅 [-std（指定语言标准版本）](build/reference/std-specify-language-standard-version.md)。 大多数新的草案标准功能由 /std:c++latest 开关保护。 
 
 **Visual Studio 2017 版本 15.3**：**/std:c++17** 选项启用由 Visual C++ 编译器实现的一组 C++17 功能。 此选项禁用 C++ 标准的工作草案和缺陷更新的最新版本中已更改或新的功能的编译器和标准库支持。
 
