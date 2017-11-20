@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
 - alignof_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - alignas [C++]
 - alignment of structures
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 94940b15e185866d8f24a20c417e730c52b8502c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="alignof-operator"></a>__alignof 运算符
 C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式（以字节为单位）。 为实现最大的可移植性，应使用 alignof 运算符，而不是特定于 Microsoft 的 __alignof 运算符。  

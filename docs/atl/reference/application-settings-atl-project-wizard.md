@@ -1,62 +1,61 @@
 ---
-title: "应用程序设置，ATL 项目向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.atl.com.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 项目向导，应用程序设置"
+title: "应用程序设置，ATL 项目向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.appwiz.atl.com.appset
+dev_langs: C++
+helpviewer_keywords: ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 312c2b879f19e670d9737bfa530e0cc2a35bfe58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 应用程序设置，ATL 项目向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用 ATL 项目向导的**“应用程序设置”**页为新的 ATL 项目设计和添加基本功能。  
+# <a name="application-settings-atl-project-wizard"></a>应用程序设置，ATL 项目向导
+使用**应用程序设置**ATL 项目向导设计并将基本功能添加到新的 ATL 项目页。  
   
-## 服务器类型  
- 从三种服务器类型中选择一种：  
+## <a name="server-type"></a>服务器类型  
+ 选择三种服务器类型之一：  
   
- **动态链接库 \(DLL\)**  
- 选择以创建进程内服务器。  
+ **动态链接库 (DLL)**  
+ 选择要创建一个进程内服务器。  
   
- **可执行文件 \(EXE\)**  
- 选择以创建本地进程外服务器。  此选项不允许 MFC 或 COM\+ 1.0 支持。  它不允许合并代理\/存根 \(stub\) 代码。  
+ **可执行文件 (EXE)**  
+ 选择创建的本地进程外服务器。 此选项不允许对 MFC 或 COM + 1.0 的支持。 它不允许为合并代理/存根代码。  
   
- **服务 \(EXE\)**  
- 选择以创建当 Windows 启动时在后台运行的 Windows 应用程序。  此选项不允许 MFC 或 COM\+ 1.0 支持，也不允许合并代理\/存根 \(stub\) 代码。  
+ **服务 (EXE)**  
+ 选择创建的 Windows 应用程序在 Windows 启动时在后台运行。 此选项不允许支持 MFC 或 COM + 1.0，或不允许合并代理/存根代码。  
   
-## 附加选项  
+## <a name="additional-options"></a>附加选项  
   
 > [!NOTE]
->  所有的附加选项仅适用于 DLL 项目。  
+>  所有其他选项都仅适用于 DLL 项目。  
   
- **允许合并代理\/存根\(stub\)代码**  
- 选中**“允许合并代理\/存根\(stub\)代码”**复选框可在需要封送处理接口时提供方便。  此选项在与服务器相同的可执行文件中放置 MIDL 生成的代理和存根 \(stub\) 代码。  
+ **允许合并代理/存根代码**  
+ 选择**允许合并代理/存根代码**为方便起见需要封送接口时的复选框。 此选项将在相同的 MIDL 生成的代理和存根代码可执行文件作为服务器。  
   
- **支持 MFC**  
- 选择以指定对象包含 MFC 支持。  此选项将项目链接到 MFC 库，以便可以访问它们包含的任何类和函数。  
+ **MFC 支持**  
+ 选择此选项可以指定你的对象包括 MFC 支持。 此选项将项目链接到 MFC 库，以便你可以访问的任何类和它们所包含的功能。  
   
- **支持 COM\+ 1.0**  
- 选择修改项目生成设置以支持 COM\+ 1.0 组件。  除标准库列表以外，向导还添加了 COM\+ 1.0 组件特定库 comsvcs.lib  
+ **支持 COM + 1.0**  
+ 选择此选项可修改项目的生成设置来支持 COM + 1.0 组件。 除了标准库的列表，则向导将添加 COM + 1.0 特定于组件的库 comsvcs.lib  
   
- 另外，当启动应用程序时 mtxex.dll 在主系统上延迟加载。  
+ 此外，mtxex.dll 是你的应用程序启动时加载主机系统上的延迟。  
   
--   **支持部件注册器**，如果您的 ATL 项目包含用于支持 COM\+ 1.0 组件，可以设置此选项。  组件注册器使 COM\+ 1.0 对象得以获取组件列表、注册组件或注销组件（个别或同时）。  
+-   **支持组件注册机构**如果 ATL 项目包含对 COM + 1.0 组件的支持，则可以设置此选项。 组件注册机构允许你 COM + 1.0 对象获取组件的列表、 注册组件，或注销组件 （单独或在一次）。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
  [创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)   
  [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
+

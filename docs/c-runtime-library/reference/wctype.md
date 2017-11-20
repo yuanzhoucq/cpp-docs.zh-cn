@@ -1,47 +1,45 @@
 ---
-title: "wctype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctype"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wctype 函数"
-  - "宽字符"
+title: "wctype | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: wctype
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords: wctype
+dev_langs: C++
+helpviewer_keywords:
+- wctype function
+- wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: daae662a39d012418b5cd178e26d731dbca1e715
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# wctype
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-确定字符代码的分类规则。  
+# <a name="wctype"></a>wctype
+确定宽字符代码的分类规则。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 wctype_t wctype(  
@@ -49,18 +47,18 @@ wctype_t wctype(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `property`  
- String 属性  
+ 属性字符串。  
   
-## 返回值  
- 如果当前区域设置的 `LC_CTYPE` 类别不定义规则与属性字符串 `property`的映射，函数返回零。  否则，返回一个非零值都作为第二个参数。随后调用到 [towctrans](../../c-runtime-library/reference/towctrans.md)。  
+## <a name="return-value"></a>返回值  
+ 如果当前区域设置的 `LC_CTYPE` 类别未定义其名称与属性字符串 `property` 匹配的分类规则，则函数将返回零。 否则，它将返回一个适合用作对 [towctrans](../../c-runtime-library/reference/towctrans.md) 的后续调用的第二个参数的非零值。  
   
-## 备注  
- 函数确定字符代码的分类规则。  以下对调用具有相同的行为在所有区域设置 \(，但实现可以定义其他排序规则 \(“C”区域设置\):  
+## <a name="remarks"></a>备注  
+ 此函数将确定宽字符代码的分类规则。 以下调用对在所有区域设置中具有相同的行为（但实现可定义其他分类规则，甚至在“C”区域设置中）：  
   
-|功能|和相同。|  
-|--------|----------|  
+|函数|与以下项相同|  
+|--------------|-------------|  
 |`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
 |`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
 |`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
@@ -73,14 +71,14 @@ wctype_t wctype(
 |`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
 |`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`wctype`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`wctype`|\<wctype.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

@@ -1,44 +1,41 @@
 ---
-title: ".SAVEXMM128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SAVEXMM128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SAVEXMM128 directive"
+title: ".SAVEXMM128 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SAVEXMM128
+dev_langs: C++
+helpviewer_keywords: .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4f79fc84e12f536383753d1d5982751cd30099d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# .SAVEXMM128
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-生成或 `UWOP_SAVE_XMM128` 使用当前 \(偏移量，或 `UWOP_SAVE_XMM128_FAR` 展开指定的 XMM 寄存器的代码项和扭曲。  MASM 将选择最有效的编码。  
+# <a name="savexmm128"></a>.SAVEXMM128
+生成或者`UWOP_SAVE_XMM128`或`UWOP_SAVE_XMM128_FAR`展开代码条目指定的 XMM 寄存器和偏移量使用当前的序言偏移量。 MASM 将选择最有效的编码。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 .savexmm128 xmmreg , offset  
 ```  
   
-## 备注  
- .SAVEXMM128 允许 ml64.exe 用户指定框架功能如何展开和在序言中只允许，从 [PROC](../../assembler/masm/proc.md) 帧声明扩展到 [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) 指令。  这些指令不生成代码;它们只生成 `.xdata` 和 `.pdata`。  .SAVEXMM128 应在实际实现将展开的事件的命令之后。  最好包装展开指令及其在宏被视为展开确保协议的代码。  
+## <a name="remarks"></a>备注  
+ .SAVEXMM128 允许 ml64.exe 用户指定如何帧函数展开，并只允许在序言从内[PROC](../../assembler/masm/proc.md)帧声明移到[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。 这些指令不会生成代码;它们仅生成`.xdata`和`.pdata`。 .SAVEXMM128 前面应带有实际实现的操作要展开的说明。 它是一个包装展开指令和它们专用于在宏中展开以确保协议的代码的好办法。  
   
- `offset` 必须是多个为 16。  
+ `offset`必须是 16 的倍数。  
   
- 有关更多信息，请参见 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
+ 有关详细信息，请参阅[x64 (ml64.exe) 的 MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

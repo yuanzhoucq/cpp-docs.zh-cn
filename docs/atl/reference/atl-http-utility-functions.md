@@ -7,14 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 9cdb12373d93c17258fb615f667d7321e06f6728
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 实用函数
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/12/2017
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|调用此函数可将系统时间转换为采用适合在 HTTP 标头中使用的格式的字符串。|
 
 ## <a name="requirements"></a>要求  
- **标头︰** atlutil.h  
+ **标头：** atlutil.h  
 
 ## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 调用此函数可对 URL 进行规范化，包括将不安全的字符和空格转换为转义序列。  
@@ -50,10 +50,10 @@ inline BOOL AtlCanonicalizeUrl(
  要规范化的 URL。  
   
  `szCanonicalized`  
- 若要检索规范化的 URL 的调用方分配的缓冲区。  
+ 要接收的规范化的 URL 的调用方分配的缓冲区。  
   
  `pdwMaxLength`  
- 指向包含以字符为单位的长度的变量`szCanonicalized`。 如果函数成功，变量将接收到不包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
+ 指向包含以字符为单位的长度的变量`szCanonicalized`。 如果函数成功，变量将接收到包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
   
  `dwFlags`  
  ATL_URL 标志控制此函数的行为。 
@@ -95,10 +95,10 @@ inline BOOL AtlCombineUrl(
  相对于基 URL URL。  
   
  `szBuffer`  
- 若要检索规范化的 URL 的调用方分配的缓冲区。  
+ 要接收的规范化的 URL 的调用方分配的缓冲区。  
   
  `pdwMaxLength`  
- 指向包含以字符为单位的长度的变量`szBuffer`。 如果函数成功，变量将接收到不包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
+ 指向包含以字符为单位的长度的变量`szBuffer`。 如果函数成功，变量将接收到包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
   
  `dwFlags`  
  控制此函数的行为的标志。 请参阅[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
@@ -136,7 +136,7 @@ inline BOOL AtlEscapeUrl(
  转换后的 URL 将写入的调用方分配的缓冲区。  
   
  `pdwStrLen`  
- 指向 DWORD 变量的指针。 如果函数成功，`pdwStrLen`接收写入缓冲区，不包括终止 null 字符的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。 使用此方法的宽字符版本时`pdwStrLen`收到需要的字符数，不的字节数。  
+ 指向 DWORD 变量的指针。 如果函数成功，`pdwStrLen`接收到包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。 使用此方法的宽字符版本时`pdwStrLen`接收需要的字符数，不的字节数。  
   
  `dwMaxLength`  
  缓冲区的大小`lpszStringOut`。  
@@ -203,7 +203,7 @@ inline BOOL AtlUnescapeUrl(
  转换后的 URL 将写入的调用方分配的缓冲区。  
   
  `pdwStrLen`  
- 指向 DWORD 变量的指针。 如果函数成功，变量将接收到不包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
+ 指向 DWORD 变量的指针。 如果函数成功，变量将接收到包括终止 null 字符的缓冲区写入的字符数。 如果函数失败，变量将接收以包括终止 null 字符的空间的缓冲区的字节为单位的所需的长度。  
   
  `dwMaxLength`  
  缓冲区的大小`lpszStringOut`。  
@@ -259,5 +259,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>另请参阅  
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
-
 

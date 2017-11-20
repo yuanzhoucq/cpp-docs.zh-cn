@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CInterfaceArray
 - ATLCOLL/ATL::CInterfaceArray
 - ATLCOLL/ATL::CInterfaceArray::CInterfaceArray
-dev_langs:
-- C++
-helpviewer_keywords:
-- CInterfaceArray class
+dev_langs: C++
+helpviewer_keywords: CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a2a99eb3cff4f2381d4c58e4d1a7aaa167e83896
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 5a06fe0f7fab05b6b73856fa3f326f1c54d4f55c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 类
-在构造 COM 接口指针的数组时，此类提供有用的方法。  
+构造的 COM 接口指针的数组时，此类提供有用的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,18 +41,18 @@ class CInterfaceArray :
  COM 接口，指定要存储的指针的类型。  
   
  `piid`  
- 指向的指针的 IID `I`。  
+ 指向 IID 的`I`。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|对于接口数组构造函数。|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|接口数组构造函数。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供一个构造函数和派生的方法，用于创建 COM 接口指针的数组。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)需要列表时。  
+ 此类提供一个构造函数和派生的方法用于创建 COM 接口指针的数组。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)需要列表时。  
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
@@ -80,7 +62,7 @@ class CInterfaceArray :
  `CInterfaceArray`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcoll.h  
+ **标头：** atlcoll.h  
   
 ##  <a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
  构造函数。  
@@ -97,4 +79,3 @@ CInterfaceArray() throw();
  [CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

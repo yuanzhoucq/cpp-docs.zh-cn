@@ -1,47 +1,47 @@
 ---
-title: "在内联程序集中使用和保留寄存器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 关键字 [C++], 注册值"
-  - "内联程序集, 寄存器"
-  - "保留寄存器"
-  - "寄存器, 内联程序集"
+title: "使用和保留内联程序集中的寄存器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __asm keyword [C++], register values
+- inline assembly, registers
+- registers, inline assembly
+- preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bc9b874535e2169a1ca16bb934fb4d13029c46e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 在内联程序集中使用和保留寄存器
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 特定  
- 一般情况下，您不应假定给定的值都登记在`__asm`块开始。  寄存器值并不保证会保留在单独的`__asm`块。  如果您结束的内联代码块，开始另一个，则不能依赖第二块来保留它们的值的第一个块中的寄存器。   `__asm`块继承任何注册值从正常的控制流的结果。  
+# <a name="using-and-preserving-registers-in-inline-assembly"></a>在内联汇编程序中使用和保留寄存器
+## <a name="microsoft-specific"></a>Microsoft 专用  
+ 通常，`__asm` 块开始时，不应假定寄存器将具有给定值。 不保证将在单独的 `__asm` 块中保留寄存器值。 如果结束一个内联代码块并开始另一个内联代码块，则不能依赖第二个块中的寄存器来保留其在第一个块中的值。 `__asm` 块从正常控制流继承任意寄存器值结果。  
   
- 如果您使用`__fastcall`调用约定时，编译器传递函数参数寄存器，而不是在堆栈上。  这可能会导致问题的函数`__asm`函数具有无法知道哪些参数是哪些寄存器中因阻塞。  如果函数碰巧在 EAX 接收一个参数，并立即将存储 EAX 中的其他部分，则原始参数将会丢失。  此外，必须保留 ECX 寄存器中声明的任何函数 `__fastcall`.  
+ 如果使用 `__fastcall` 调用约定，则编译器将传递寄存器中而不是堆栈上的函数参数。 这可能会导致带 `__asm` 块的函数出现问题，因为函数无法告知哪一参数位于哪一寄存器中。 如果函数碰巧在 EAX 中收到一个参数并立即在 EAX 中存储其他内容，则原始参数将丢失。 此外，您还必须在使用 `__fastcall` 声明的任何函数中保留 ECX 寄存器。  
   
- 若要避免此类注册的冲突，请不要使用`__fastcall`约定的函数包含  `__asm`块。  如果指定`__fastcall`约定具有 \/Gr 编译器选项时，全局声明每个函数包含  `__asm`块，  `__cdecl`或  `__stdcall`.  \(  `__cdecl`特性通知编译器为该函数使用 C 调用约定。） 如果您不编译使用 \/Gr，避免声明与函数`__fastcall`特性。  
+ 若要避免此类寄存器冲突，请勿对包含 `__fastcall` 块的函数使用 `__asm` 约定。 如果使用 /Gr 编译器选项全局指定 `__fastcall` 约定，请使用 `__asm` 或 `__cdecl` 来声明每个包含 `__stdcall` 块的函数。 （`__cdecl` 特性将告知编译器对该函数使用 C 调用约定。）如果不使用 /Gr 进行编译，请避免用 `__fastcall` 特性声明此函数。  
   
- 当使用 `__asm`C\/c \+ \+ 函数中编写程序集语言，您不需要保留 EAX、 EBX、 ECX、 EDX，ESI 或 EDI 收银机。  例如，在电源 2。C 中的示例[编写函数的内联程序集](../../assembler/inline/writing-functions-with-inline-assembly.md)、  `power2`函数不能保留 EAX 寄存器中的值。  但是，使用这些寄存器会影响代码质量由于寄存器分配器不能使用它们来存储值，在`__asm`块。  此外，在内联程序集代码中使用 EBX、 ESI 或 EDI，强制编译器来保存和还原这些寄存器中的函数的序言和跋。  
+ 当使用 `__asm` 在 C/C++ 函数中编写汇编语言时，不需要保留 EAX、EBX、ECX、EDX、ESI 或 EDI 寄存器。 例如，在电源 2。中的 C 示例[使用内联程序集编写函数](../../assembler/inline/writing-functions-with-inline-assembly.md)、`power2`函数并不保存在 EAX 寄存器中的值。 但是，使用这些寄存器将影响代码质量，因为寄存器分配器无法使用它们在 `__asm` 块中储存值。 此外，通过在内联程序集代码中使用 EBX、ESI 或 EDI，将强制编译器在函数序言和尾声中保存并还原这些寄存器。  
   
- 应保留的作用域 （例如 DS、 SS、 SP、 BP、 和标志寄存器） 使用其他寄存器`__asm`块。  除非您有一些理由更改它们 （如切换堆栈），应保留的 ESP 和 EBP 寄存器。  另请参阅[优化内联程序集](../../assembler/inline/optimizing-inline-assembly.md)。  
+ 您应保留用于 `__asm` 块的范围的其他寄存器（如 DS、SS、SP、BP 和标记寄存器）。 您应保留 ESP 和 EBP 寄存器，除非您出于某种原因要更改它们（例如，切换堆栈）。 另请参阅[优化内联程序集](../../assembler/inline/optimizing-inline-assembly.md)。  
   
- 某些 SSE 类型需要堆栈 8 字节对齐方式，强制编译器将发出动态堆栈对齐方式的代码。  若要能够进行对齐之后访问局部变量和函数参数，编译器，请保持两个框架指针。  如果编译器执行帧指针省略 \(FPO\)，它将使用 EBP 和 ESP。  如果编译器没有执行 FPO，它将使用 EBX 和 EBP。  为确保代码运行正常，不要修改 EBX asm 代码中如果函数需要动态堆栈对齐方式，因为它无法修改帧指针。  无论是移动 8 个字节对齐的类型，退出该函数，或避免使用 EBX。  
+ 某些 SSE 类型需要 8 字节堆栈对齐，以强制编译器发出动态堆栈对齐代码。 为了能在对齐之后访问局部变量和函数参数，编译器将保留两个帧指针。  如果编译器执行框架指针省略 (FPO)，它将使用 EBP 和 ESP。  如果编译器不执行 FPO，它将使用 EBX 和 EBP。 为了确保代码正常运行，当函数需要动态堆栈对齐以便能修改帧指针时，请勿在 asm 代码中修改 EBX。 请将 8 字节对齐的类型移出函数，或者避免使用 EBX。  
   
 > [!NOTE]
->  如果内联程序集代码发生更改时使用的标准或 CLD 说明方向标志，则必须还原为其原始值的标志。  
+>  如果内联程序集代码使用 STD 或 CLD 指令更改方向标志，你必须将此标志还原为其原始值。  
   
- **最终 Microsoft 特定**  
+ **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [内联汇编程序](../../assembler/inline/inline-assembler.md)

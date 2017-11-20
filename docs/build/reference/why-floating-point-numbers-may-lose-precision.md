@@ -1,42 +1,42 @@
 ---
-title: "为何浮点数可能丢失精度 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DBL_EPSILON 常量"
-  - "浮点数字, 精度"
-  - "FLT_EPSILON 常量"
+title: "为何浮点数可能丢失精度 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DBL_EPSILON constant
+- FLT_EPSILON constant
+- floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ad6d78b6209b2a2d45f0d0e5874dff1271da880b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 为何浮点数可能丢失精度
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-浮点十进制值通常没有完全相同的二进制表示形式。  这是 CPU 所采用的浮点数据表示形式的副作用。  为此，可能会经历一些精度丢失，并且一些浮点运算可能会产生意外的结果。  
+# <a name="why-floating-point-numbers-may-lose-precision"></a>为何浮点数可能丢失精度
+浮点十进制值通常没有确切的二进制表示形式。 这是如何 CPU 浮点数据表示形式会产生副作用。 为此，你可能会遇到一些丢失精度，和某些浮点运算可能产生意外的结果。  
   
- 导致此行为的原因是下面之一：  
+ 此行为是下列其中一项的结果：  
   
--   十进制数的二进制表示形式可能不精确。  
+-   二进制表示形式的十进制数可能不准确。  
   
--   使用的数字之间类型不匹配（例如，混合使用浮点型和双精度型）。  
+-   使用的数字 （例如，混合使用 float 和 double） 之间没有类型不匹配。  
   
- 为解决此行为，大多数程序员或是确保值比需要的大或者小，或是获取并使用可以维护精度的二进制编码的十进制 \(BCD\) 库。  
+ 若要解决此问题，大多数程序员来说，请确保的值大于或小于什么需要的或它们获取并使用可以维护精度的二进制编码的十进制 (BCD) 库。  
   
- 浮点值的二进制表示形式影响浮点计算的精度和准确性。  Microsoft Visual C\+\+ 使用 [IEEE 浮点格式](../../build/reference/ieee-floating-point-representation.md)。  
+ 浮点值的二进制表示形式会影响的精度和准确性的浮点计算。 Microsoft Visual c + + 使用[IEEE 浮点格式](../../build/reference/ieee-floating-point-representation.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // Floating-point_number_precision.c  
@@ -63,9 +63,12 @@ int main() {
 }  
 ```  
   
-  **它们并不相等！  c 的值为 2.4679999352 或 2.468000。**    
-## 注释  
- 对于 EPSILON，可以使用常量 FLT\_EPSILON（对于浮点型定义为 1.192092896e\-07F）或者 DBL\_EPSILON（对于双精度型定义为 2.2204460492503131e\-016）。  需要为这些常量包含 float.h。  这些常数被定义为最小的正数 x，因此 x\+1.0 不等于 1.0。  因为这是非常小的数，所以对于涉及大数的计算应采用用户定义的公差。  
+```Output  
+They are not equal! The value of c is  2.4679999352 or 2.468000  
+```  
   
-## 请参阅  
+## <a name="comments"></a>注释  
+ 对于 EPSILON，你可以使用常量 FLT_EPSILON，定义的浮点型作为 1.192092896e-07F，或 DBL_EPSILON，定义 2.2204460492503131e 作为双精度型-016。 你需要包括这些常量的 float.h。 这些常量定义为最小正数 x 号，例如 x + 1.0 不等于 1.0。 由于这是极小的数字，你应采用对于涉及大量的计算用户定义容差。  
+  
+## <a name="see-also"></a>另请参阅  
  [优化代码](../../build/reference/optimizing-your-code.md)

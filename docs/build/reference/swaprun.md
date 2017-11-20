@@ -1,45 +1,44 @@
 ---
-title: "/SWAPRUN | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/swaprun"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SWAPRUN editbin 选项"
-  - "SWAPRUN editbin 选项"
-  - "-SWAPRUN editbin 选项"
+title: "-SWAPRUN |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /swaprun
+dev_langs: C++
+helpviewer_keywords:
+- /SWAPRUN editbin option
+- -SWAPRUN editbin option
+- SWAPRUN editbin option
 ms.assetid: 6eefd7f3-ca47-48e3-8509-323d27cf4ae7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fde871c2e10f1b2bebafef6e668aadfc8fad5c47
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /SWAPRUN
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="swaprun"></a>/SWAPRUN
 ```  
 /SWAPRUN:{[!]NET|[!]CD}  
 ```  
   
-## 备注  
- 此选项编辑图像以通知操作系统将图像复制到交换文件并从那里运行它。  此选项用于驻留在网络或可移动媒体上的图像。  
+## <a name="remarks"></a>备注  
+ 此选项编辑映像以告知操作系统的映像复制到一个交换文件，并从该处运行它。 将此选项用于驻留在网络或可移动媒体的映像。  
   
- 可以添加或移除 NET 或 CD 限定符：  
+ 你可以添加或删除的 NET 或 CD 限定符：  
   
 -   NET 指示图像驻留在网络上。  
   
--   CD 指示图像驻留在光盘或类似的可移动媒体上。  
+-   CD 指示图像驻留在 CD-ROM 或类似的可移动媒体。  
   
--   使用 \!NET 和 \!CD 可反转 NET 和 CD 的效果。  
+-   使用 ！ NET 和 ！要反转的 NET 和 CD 的效果的 CD。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

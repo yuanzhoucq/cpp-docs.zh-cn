@@ -4,45 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- RegistryDataExchange function, global functions
+f1_keywords:
+- atlbase/ATL::AtlGetPerUserRegistration
+- afxpriv/ATL::AfxRegCreateKey
+- afxpriv/ATL::AfxRegDeleteKey
+- atlbase/ATL::AtlRegisterTypeLib
+- afxpriv/ATL::AfxRegOpenKey
+- afxpriv/ATL::AfxRegOpenKeyEx
+- afxdisp/ATL::AfxUnregisterPreviewHandler
+- atlbase/ATL::AtlSetPerUserRegistration
+- atlbase/ATL::AtlUnRegisterTypeLib
+- atlbase/ATL::AtlLoadTypeLib
+- atlbase/ATL::AtlUpdateRegistryFromResourceD
+- atlbase/ATL::RegistryDataExchange
+dev_langs: C++
+helpviewer_keywords: RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9f05db468d5d7fffce149d7a92ba29615c3ae7c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6f9dd09983a7b8cb781e26a6a3ed049d82d03632
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 这些函数提供用于加载和注册类型库的支持。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
   
 |||  
 |-|-|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 03/31/2017
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|设置是否应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h
+ **标头：** atlbase.h
 
 ## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
 使用此函数可确定应用程序是否将注册表访问重定向**HKEY_CURRENT_USER** (**HKCU**) 节点。  
@@ -90,7 +85,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
  重定向不是全局设置。 仅 MFC 和 ATL 框架受此注册表重定向。  
   
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
 
  ## <a name="afxregcreatekey"></a>AfxRegCreateKey
  创建指定的注册表项。  
@@ -188,7 +183,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)和[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h
+ **标头：** atlbase.h
 
  ## <a name="afxregopenkey"></a>AfxRegOpenKey
  打开指定的注册表项。  
@@ -289,7 +284,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
  重定向不是全局设置。 仅 MFC 和 ATL 框架受此注册表重定向。  
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
 
 ##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
  调用此函数可注销类型库。  
@@ -314,7 +309,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)和[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h
+ **标头：** atlbase.h
 
 ##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
  调用此函数可加载类型库。  
@@ -383,7 +378,7 @@ HRESULT RegistryDataExchange(
 ### <a name="remarks"></a>备注  
  宏[BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map)和[END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map)展开到调用的函数， `RegistryDataExchange`。  
   
- 可能的枚举值，用于指示操作函数应执行以下表所示︰  
+ 可能的枚举值，用于指示操作函数应执行以下表所示：  
   
 |枚举值|操作|  
 |----------------|---------------|  
@@ -392,12 +387,10 @@ HRESULT RegistryDataExchange(
 |eDeleteFromReg|从注册表中删除密钥。|  
   
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h
+ **标头：** atlbase.h
 
 ## <a name="see-also"></a>另请参阅  
- [函数](atl-functions.md)
- [注册表数据交换宏](registry-data-exchange-macros.md)
-
+ [函数](atl-functions.md)[注册表数据交换宏](registry-data-exchange-macros.md)
 
 
 

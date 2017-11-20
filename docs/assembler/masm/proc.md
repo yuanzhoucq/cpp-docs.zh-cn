@@ -1,32 +1,30 @@
 ---
-title: "PROC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROC directive"
+title: "PROC |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROC
+dev_langs: C++
+helpviewer_keywords: PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2567099c26682bd7d448175b1283aeab56054516
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# PROC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-标记开始和过程的结束块调用的 *标签*。  块中的语句可以调用与 **调用** 命令或 [调用](../../assembler/masm/invoke.md) 指令。  
+# <a name="proc"></a>PROC
+将标记开始和结束调用的过程块*标签*。 块中的语句可以使用调用**调用**指令或[INVOKE](../../assembler/masm/invoke.md)指令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,14 +35,14 @@ statements
 label ENDP  
 ```  
   
-## 备注  
- \[帧 \[:*ehandler 地址*\] out\] ml64.exe 才有效，并使 MASM 生成在 .pdata 的函数表项目，然后展开在 .xdata 功能的信息的结构化异常处理的展开行为。  
+## <a name="remarks"></a>备注  
+ [帧 [:*ehandler 地址*]] 才有效，且 ml64.exe，并导致 MASM 将在.pdata 中生成函数表项和展开.xdata 中的信息的函数的结构化异常处理展开行为。  
   
- 当使用时 **框架** 属性，必须由 [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) 指令后跟它。  
+ 当**帧**使用属性，它的后面必须跟[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指令。  
   
- 请参见 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md) 有关使用 ml64.exe 的更多信息。  
+ 请参阅[x64 (ml64.exe) 的 MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)有关使用 ml64.exe 的详细信息。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -66,7 +64,7 @@ _text ENDS
 END  
 ```  
   
- 上面的代码将发出以下函数表并展开信息:  
+ 上面的代码将发出以下函数表，并展开信息：  
   
 ```  
 FileHeader->Machine 34404  
@@ -89,5 +87,5 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp  
 ```  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

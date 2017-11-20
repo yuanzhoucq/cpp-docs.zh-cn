@@ -1,118 +1,114 @@
 ---
-title: "ARM Assembler Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "ARM 汇编程序指令 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ARM Assembler Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-大多数情况下，Microsoft 臂组装器使用 ARM 程序集语言中，在第 7 章的[臂组装器工具指南](http://go.microsoft.com/fwlink/?LinkId=246102)。  但是，某些程序集指令的 Microsoft 实现不同臂程序集指令。  这篇文章解释的差异。  
+# <a name="arm-assembler-directives"></a>ARM 汇编程序指令
+大多数情况下，Microsoft ARM 汇编程序使用 ARM 程序集语言，这记录在的第 7 章[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/?LinkId=246102)。 但是，某些程序集指令的 Microsoft 实现与不同 ARM 程序集指令。 本文介绍的区别。  
   
-## Microsoft 臂的程序集指令的实现  
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft 实现的 ARM 程序集指令  
  区域  
- Microsoft 臂汇编程序支持这些区域属性： 对齐、 代码、 CODEALIGN、 数据、 NOINIT、 只读、 读写、 缩略图、 臂。  
+ Microsoft ARM 汇编程序支持这些区域属性： 对齐，代码、 CODEALIGN、 数据、 NOINIT、 READONLY、 READWRITE、 THUMB、 ARM。  
   
- 除缩略图和 ARM 之外的所有工作中所述[臂组装器工具指南](http://go.microsoft.com/fwlink/?LinkId=246102)。  
+ 用拇指和臂除外工作如中所述[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/?LinkId=246102)。  
   
- Microsoft 臂组装器中，在滚动块表示的代码段包含缩略图的代码，是代码节的默认值。  ARM 表示该部分包含臂代码。  
+ 在 Microsoft ARM 汇编程序 THUMB 指示代码节包含 Thumb 代码，并且是代码段的默认值。  ARM 指示的部分包含 ARM 代码。  
   
- 属性  
+ ATTR  
  不支持。  
   
  代码 16  
- 因为它意味着前的双重拇指语法中，Microsoft 臂汇编程序不允许不受支持。  滚动块的指令，以及双重语法使用。  
+ 不支持，因为它意味着 Microsoft ARM 汇编程序不允许的前期 UAL Thumb 语法。  请改用 THUMB 指令，以及 UAL 语法。  
   
- 通用  
- 不支持的公共区域对齐方式的规范。  
+ 常见  
+ 不支持的常见区域的对齐方式的规范。  
   
  DCDO  
  不支持。  
   
  DN，QN，SN  
- 不支持类型或车道上注册别名的规范。  
+ 不支持的类型或上注册别名 lane 的规范。  
   
  条目  
  不支持。  
   
  EQU  
- 规范定义的符号的类型不受支持。  
+ 不支持规范定义的符号的类型。  
   
- 导出和全球  
+ 导出和全局  
  ```  
-  
 EXPORTsym {[type]}  
-  
 ```  
   
- `sym`为要导出的符号。  `[type]`如果指定，可以是`[DATA]`表示该符号所指向的数据或`[FUNC]`表示该符号所指向的代码。  
+ `sym`是要导出的符号。  `[type]`如果指定，可以是`[DATA]`以指示符号指向数据或`[FUNC]`以指示符号指向代码。  
   
- 导出全局是同义词。  
+ 全局是导出的同义词。  
   
  EXPORTAS  
  不支持。  
   
- 框架  
+ 帧  
  不支持。  
   
  函数和过程  
- 尽管该程序集的语法支持自定义规范过程调用约定，通过列出被调用方保存以及那些被调用方保存的寄存器 Microsoft 臂组装器接受语法但忽略寄存器列表。  调试信息生成汇编程序的支持的默认调用约定。  
+ 虽然程序集语法支持的规范的自定义过程通过列出调用方保存和那些被调用方保存的寄存器调用约定 Microsoft ARM 汇编程序接受语法但忽略寄存器列表中。  由汇编程序生成的调试信息支持的默认调用约定。  
   
- 导入和外部  
+ 导入和 EXTERN  
  ```  
-  
 IMPORT sym{, WEAK alias{, TYPE t}}  
-  
 ```  
   
- `sym`是要导入的元件的名称。  
+ `sym`是要导入的符号的名称。  
   
- 如果弱`alias`指定，则说明没有`sym`是弱外部。  如果在链接时，发现它没有定义，则对它的所有引用而是都绑定到`alias`。  
+ 如果弱`alias`指定，它表明`sym`是弱外部。 如果在链接时，找到的它没有定义，则对它的所有引用改为都绑定到`alias`。  
   
- 如果类型 `t`指定，然后`t`指示如何尝试链接器解析`sym`。  这些值的`t`可能会：   
-1\-不执行库搜索功能`sym`   
-2\-执行库搜索功能`sym`   
-3\-\-`sym`是`alias` （默认值）  
+ 如果类型`t`未指定，则`t`指示如何链接器将尝试解决`sym`。  有关这些值`t`还可能有：   
+1-不执行库搜索`sym`  
+2-执行库搜索`sym`  
+3-`sym`是的别名`alias`（默认值）  
   
- 外部是导入，只是同义词`sym`只有在当前程序集的引用，则导入。  
+ EXTERN 是导入，只不过的同义词`sym`仅在没有引用了它在当前程序集导入。  
   
- 宏  
- 不支持一个变量来保存宏的状态代码的使用。  宏不支持参数的默认值。  
+ MACRO  
+ 不支持的一个变量以保存宏的条件代码使用。 宏不支持参数的默认值。  
   
  NOFP  
  不支持。  
   
- 可选，TTL，SUBT  
- 不支持，因为 Microsoft 臂汇编程序不生成列表。  
+ 选择，TTL、 SUBT  
+ 不支持，因为 Microsoft ARM 汇编程序不会生成列表。  
   
  PRESERVE8  
  不支持。  
   
- 重定位  
- `RELOC n`只有按照指令或数据定义指令。  没有任何"匿名"的符号可以重新定位。  
+ RELOC  
+ `RELOC n`仅可以按照指令或数据定义指令。 没有任何"匿名符号"可重新定位。  
   
- 要求  
+ 需要  
  不支持。  
   
  REQUIRE8  
  不支持。  
   
  THUMBX  
- 不支持，因为 Microsoft 臂组装器不支持滚动块 2EE 指令集。  
+ 中不受支持，因为 Microsoft ARM 汇编程序不支持 Thumb 2EE 指令集。  
   
-## 请参阅  
- [ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+## <a name="see-also"></a>另请参阅  
+ [ARM 汇编程序命令行参考](../../assembler/arm/arm-assembler-command-line-reference.md)   
+ [ARM 汇编程序诊断消息](../../assembler/arm/arm-assembler-diagnostic-messages.md)

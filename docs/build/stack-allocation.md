@@ -1,38 +1,38 @@
 ---
-title: "堆栈分配 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "堆栈分配 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 098e51f2-eda6-40d0-b149-0b618aa48b47
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 866a5183a50f13472167f912691804a995e90023
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 堆栈分配
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-函数的 Prolog 负责为局部变量、保存的寄存器、堆栈参数和寄存器参数分配堆栈空间。  
+# <a name="stack-allocation"></a>堆栈分配
+函数的 prolog 负责为本地变量分配堆栈空间，保存的寄存器，堆栈参数，并注册参数。  
   
- 参数区通常位于堆栈底部（即使使用了 alloca），因此在任何函数调用期间，参数区通常与返回地址相邻。  该区域至少包含四项，但通常有足够的空间来保存可能调用的任何函数所需的所有参数。  请注意，即使寄存器参数本身始终不对堆栈进行寻址，也会始终为这些参数分配空间；保证为被调用方的所有参数分配空间。  寄存器参数要求内部地址，这样，如果被调用的函数需要获得参数列表 \(va\_list\) 或单个参数的地址，就会有可用的连续区域。  此区域还提供了一个方便的位置，用于在 thunk 执行期间保存寄存器参数，并可作为一个调试选项（例如，如果参数存储在其 Prolog 代码的内部地址，则在调试期间便易于查找）。  即使被调用函数的参数少于 4 个，该函数实际上也占有这 4 个堆栈位置，并可将这几个位置用于保存参数寄存器值以外的其他目的。  因此，在整个函数调用过程中，调用方不会将信息保存在此堆栈区域中。  
+ 参数区域始终在堆栈底部 （即使是使用 alloca），以便它始终会靠近的寄信人地址的任何函数调用过程。 它包含至少四个条目，但足够空间来保留所有参数始终需要的不能调用任何函数。 请注意，即使参数本身永远不会托管到堆栈; 始终将寄存器参数，为分配空间被调用方不保证所有其参数的分配空间。 这样的相邻区域才可以使用被调用的函数需要采用自变量列表 (va_list) 或单个自变量的地址的情况下，家庭地址所需的寄存器自变量。 此区域还提供了方便的位置，若要在转换 （thunk） 执行期间以及作为调试选项保存寄存器自变量 （例如，它将自变量便于查找在调试如果它们存储在其在 prolog 代码中的家庭地址期间）。 即使被调用的函数具有少于 4 个参数，这些 4 堆栈位置有效地归调用函数，并可能被调用函数使用保存寄存器值的参数以外的其他目的。  因此调用方可能未将信息保存在此区域堆栈整个函数调用。  
   
- 如果在函数中动态分配 \(alloca\) 空间，则必须将非易失寄存器作为帧指针使用，以标记堆栈的固定部分的基址，并且必须在 Prolog 中对该寄存器进行保存和初始化。  请注意，使用 alloca 时，如果同一个调用方对同一个被调用方进行调用，则寄存器参数可能会有不同的内部地址。  
+ 如果动态分配空间 (alloca) 函数中，然后非易失寄存器必须用作帧指针以将标记固定堆栈的一部分的基寄存器必须且保存在序言中初始化。 请注意，当使用 alloca 时，从相同的调用方对相同的被调用方的调用可能有不同的内部地址寄存器参数。  
   
- 堆栈将始终保持 16 字节对齐，以下两种情况除外：一是在 Prolog 中（例如，推入返回地址之后）；二是在帧函数特定类的 [函数类型](../build/function-types.md) 中指示的位置。  
+ 堆栈将始终保持不变 16 字节对齐中 （例如，在推送到的回邮地址），prolog, except 和中所示除外[函数类型](../build/function-types.md)对于帧函数某一类。  
   
- 下面是一个堆栈布局的示例，其中函数 A 调用一个非叶函数 B。  函数 A 的 Prolog 已在栈底为 B 需要的所有寄存器参数和堆栈参数分配了空间。  该调用将返回地址压栈，而 B 的 Prolog 为其局部变量、非易失寄存器分配空间，并为其分配调用函数所需的空间。  如果 B 使用 alloca，则在局部变量\/非易失寄存器保存区与参数堆栈区之间进行空间分配。  
+ 下面是一个函数的调用非叶 where 函数 B.函数 A 的序言堆栈布局的示例已为所有寄存器和堆栈所都需的参数在堆栈底部 B 分配了空间。 该调用将返回地址和 B 的 prolog 为其本地变量、 非易失寄存器和它调用的函数所需的空间分配空间。 如果 B 使用 alloca，是本地的变量/非易失寄存器保存区和参数堆栈区域之间分配空间。  
   
- ![AMD 转换示例](../build/media/vcamd_conv_ex_5.png "vcAmd\_conv\_ex\_5")  
+ ![AMD 转换示例](../build/media/vcamd_conv_ex_5.png "vcAmd_conv_ex_5")  
   
- 当函数 B 调用另一个函数时，正好将返回地址推入 RCX 内部地址的下方。  
+ 当函数 B 调用另一个函数时，寄信人地址的正下方的家庭地址按以 RCX 中。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [堆栈使用](../build/stack-usage.md)

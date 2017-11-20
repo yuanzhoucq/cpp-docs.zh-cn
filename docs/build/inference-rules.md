@@ -1,43 +1,43 @@
 ---
-title: "推理规则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE 中的推理规则"
-  - "NMAKE 程序, 推理规则"
-  - "规则, 推理"
+title: "推理规则 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- rules, inference
+- NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c833a4833bfc670a58796700efd4f885fe3ee560
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 推理规则
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-推理规则提供命令来更新目标并推理目标的依赖项。  推理规则中的扩展名与具有相同基名称的单个目标和依赖项匹配。  推理规则是用户定义的，或预定义的；预定义的规则可以重新定义。  
+# <a name="inference-rules"></a>推理规则
+推理规则提供命令来更新目标，并可以推断目标的依赖项。 推理规则中的扩展匹配单个目标并具有相同的基名称的依赖。 推理规则是用户定义的或预定义的;可以重新定义预定义的规则。  
   
- 如果过期的依赖项没有命令，并且如果 [.SUFFIXES](../build/dot-directives.md) 包含依赖项的扩展名，则 NMAKE 使用其扩展名与当前或指定目录中的目标和现有文件匹配的规则。  如果有多个规则与现有文件匹配，**.SUFFIXES** 列表将确定使用哪一个规则；列表优先级从左向右按降序排列。  如果依赖文件不存在，并且未在另一个描述块中作为目标列出，则推理规则可以从具有相同基名称的另一个文件创建缺少的依赖项。  如果描述块的目标没有依赖项或命令，推理规则可以更新目标。  即使不存在描述块，推理规则也可以生成命令行目标。  即使指定了显式依赖项，NMAKE 也可以调用推理依赖项的规则。  
+ 如果过期的依赖项不具有任何命令，并且如果[。后缀](../build/dot-directives.md)包含依赖项的扩展，NMAKE 使用其扩展匹配的目标和现有的规则文件中的当前或指定的目录。 如果多个规则匹配现有文件的文件， **。后缀**列表确定使用哪; 从左到右的列表优先级递减。 如果依赖文件不存在，并且不被列为在另一个描述块中的目标，推理规则可以创建缺少的依赖从具有相同的基名称的另一个文件。 如果描述块的目标没有依赖项或命令，推理规则可以更新目标。 推理规则可以生成的命令行目标，即使不存在描述块。 NMAKE 可能会调用推理依赖项的规则，即使指定了显式依赖项。  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
  [定义规则](../build/defining-a-rule.md)  
   
  [批模式规则](../build/batch-mode-rules.md)  
   
  [预定义的规则](../build/predefined-rules.md)  
   
- [推导出的依赖项和规则](../build/inferred-dependents-and-rules.md)  
+ [推断出的依赖项和规则](../build/inferred-dependents-and-rules.md)  
   
  [推理规则中的优先级](../build/precedence-in-inference-rules.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [NMAKE 参考](../build/nmake-reference.md)

@@ -1,33 +1,34 @@
 ---
-title: "Displaying Assertions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "断言, 调试"
-  - "断言, 显示"
-  - "调试 [ATL], displaying assertions"
-  - "调试断言"
+title: "显示断言 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [ATL], displaying assertions
+- assertions, displaying
+- debugging assertions
+- assertions, debugging
 ms.assetid: fa353fe8-4656-4384-a5d2-8866bc977f06
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ebfa692f422283e69395639295b3bf2ace1741ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Displaying Assertions
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="displaying-assertions"></a>显示断言
+如果连接到你的服务的客户端似乎停止响应，服务可能有断言，并显示一个消息框，你不可以看到。 您可以通过使用 Visual c + + 的调试器来调试你的代码对此进行确认 (请参阅[使用任务管理器](../atl/using-task-manager.md)本部分前面的)。  
+  
+ 如果你确定你的服务显示一个消息框，你无法看到，你可能想要设置**允许服务与桌面交互**之前再次使用该服务的选项。 此选项是启动参数，允许服务出现在桌面上显示任何消息框。 若要设置此选项，打开服务控制面板应用程序，选择的服务，单击**启动**，然后选择**允许服务与桌面交互**选项。  
+  
+## <a name="see-also"></a>另请参阅  
+ [调试提示](../atl/debugging-tips.md)
 
-如果客户端连接到的服务看似停止响应，服务可以断言和显示的消息框不能发现。  若要确认此使用Visual C\+\+的调试器调试代码\(请参见 [使用任务管理器](../atl/using-task-manager.md) 本节前面）。  
-  
- 如果您确定您的服务公开看不到消息框，您可能希望在再次使用服务之前设置 **Allow Service to Interact with Desktop** 选项。  此选项是允许服务公开的任何消息框在桌面上的一个启动参数。  若要设置此选项，请打开服务控制面板应用程序，选择服务，单击 **Startup**，然后选择 **Allow Service to Interact with Desktop** 选项。  
-  
-## 请参阅  
- [Debugging Tips](../atl/debugging-tips.md)

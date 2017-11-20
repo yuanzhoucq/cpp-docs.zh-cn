@@ -1,33 +1,30 @@
 ---
-title: ".LISTMACROALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTMACROALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTMACROALL directive"
+title: ".LISTMACROALL |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTMACROALL
+dev_langs: C++
+helpviewer_keywords: .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5e047b807304029dde3cb27b2ab7ef35f97a8520
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# .LISTMACROALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-启动列出了宏的任何语句。  
+# <a name="listmacroall"></a>.LISTMACROALL
+启动的宏中的所有语句的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,8 +32,8 @@ manager: "ghogen"
   
 ```  
   
-## 备注  
- 和 [.LALL](../../assembler/masm/dot-lall.md)相同。  
+## <a name="remarks"></a>备注  
+ 与相同[。LALL](../../assembler/masm/dot-lall.md)。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

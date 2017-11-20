@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,21 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 4501b310f71921c9e79910f0585d85eb647f3e4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 将多字节字符序列转换为对应的宽字符序列。 这些版本的 [mbstowcs、_mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
@@ -142,9 +124,9 @@ errno_t _mbstowcs_s_l(
   
  如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，则 `mbstowcs_s` 会根据目标缓冲区的容量尽量多地转换字符串，同时仍然为 null 终止符留下空间。  
   
- 如果 `mbstowcs_s` 成功转换了源字符串，它会将转换的字符串（包括 null 终止符）的大小（以宽字符为单位）放入 `*``pReturnValue`（假定 `pReturnValue` 不是 `NULL`）。 即使 `wcstr` 参数为 `NULL` 并提供了确定所需的缓冲区大小的方法，也会发生这种情况。 请注意，如果 `wcstr` 为 `NULL`，则 `count` 会被忽略，且 `sizeInWords` 必须为 0。  
+ 如果 `mbstowcs_s` 成功转换了源字符串，它会将转换的字符串（包括 null 终止符）的大小（以宽字符为单位）放入 `*pReturnValue`（假定 `pReturnValue` 不是 `NULL`）。 即使 `wcstr` 参数为 `NULL` 并提供了确定所需的缓冲区大小的方法，也会发生这种情况。 请注意，如果 `wcstr` 为 `NULL`，则 `count` 会被忽略，且 `sizeInWords` 必须为 0。  
   
- 如果 `mbstowcs_s` 遇到无效的多字节字符，它将执行以下操作：将 0 放入 `*``pReturnValue`，将目标缓冲区设置为空字符串，将 `errno` 设置为 `EILSEQ`，并返回 `EILSEQ`。  
+ 如果 `mbstowcs_s` 遇到无效的多字节字符，它将执行以下操作：将 0 放入 `*pReturnValue`，将目标缓冲区设置为空字符串，将 `errno` 设置为 `EILSEQ`，并返回 `EILSEQ`。  
   
  如果 `mbstr` 和 `wcstr` 指向的序列重叠，则 `mbstowcs_s` 的行为没有定义。  
   

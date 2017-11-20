@@ -1,48 +1,49 @@
 ---
-title: "使用 ATL 和 C 运行时代码进行编程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_MIN_CRT 宏"
-  - "ATL, C 运行库 (CRT)"
-  - "ATL_MIN_CRT 宏"
-  - "CRT, 与 ATL 结合使用"
+title: "使用 ATL 和 C 运行时代码编程 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL_MIN_CRT macro
+- CRT, using with ATL
+- _ATL_MIN_CRT macro
+- ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 ATL 和 C 运行时代码进行编程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本节与静态或动态链接讨论使用C运行库的优点\(crt\)。  
+# <a name="programming-with-atl-and-c-run-time-code"></a>使用 ATL 和 C 运行时代码进行编程
+本部分讨论使用 C 运行时库 (CRT) 与静态或动态链接的好处。  
   
-## 本节内容  
- [使用的方法的优点和权衡若要链接到CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
- 总结了静态链接到CRT或动态链接和权衡所涉及的优点。  
+## <a name="in-this-section"></a>本节内容  
+ [链接到 CRT 所用方法的优缺点](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+ 总结了的优点和缺点参与链接到 CRT 的静态或动态链接。  
   
- [链接到在您的ATL项目的CRT](../atl/linking-to-the-crt-in-your-atl-project.md)  
- 讨论项目设置和链接器选项的链接到CRT;还详细介绍如何链接到CRT影响程序图像。  
+ [链接到 ATL 项目中的 CRT](../atl/linking-to-the-crt-in-your-atl-project.md)  
+ 讨论的项目设置和链接到 CRT 的内容; 链接器选项此外提供有关如何将链接到 CRT 影响你的程序映像的详细信息。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 使用活动模板库提供一些链接，指向有关概念性主题有关如何使用进行编程。  
+ 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。  
   
- [运行库行为](../build/run-time-library-behavior.md)  
- 详细介绍如何CRT启动代码。  
+ [DLL 和 Visual C++ 运行时库行为](../build/run-time-library-behavior.md)  
+ 提供有关 VCRuntime 和 CRT 启动代码的工作原理的详细信息。  
   
- [C运行库](../c-runtime-library/crt-library-features.md)  
- 讨论包含C运行库的各种.lib文件和列表及其关联的编译器选项和预处理器指令。  
+ [C 运行时库](../c-runtime-library/crt-library-features.md)  
+ 介绍各种.lib 文件，包括 C 运行时库，并列出其关联的编译器选项和预处理器指令。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)
+

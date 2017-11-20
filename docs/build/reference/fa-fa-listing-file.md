@@ -1,94 +1,105 @@
 ---
-title: "/FA、/Fa（列出文件） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AssemblerListingLocation"
-  - "VC.Project.VCCLCompilerTool.ConfigureASMListing"
-  - "VC.Project.VCCLWCECompilerTool.AssemblerOutput"
-  - "VC.Project.VCCLCompilerTool.AssemblerListingLocation"
-  - "/fa"
-  - "VC.Project.VCCLCompilerTool.AssemblerOutput"
-  - "VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FA 编译器选项 [C++]"
-  - "仅列出程序集"
-  - "FA 编译器选项 [C++]"
-  - "-FA 编译器选项 [C++]"
-  - "列出文件类型"
+title: "/FA、 /Fa （列出文件） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
+- VC.Project.VCCLCompilerTool.ConfigureASMListing
+- VC.Project.VCCLWCECompilerTool.AssemblerOutput
+- VC.Project.VCCLCompilerTool.AssemblerListingLocation
+- /fa
+- VC.Project.VCCLCompilerTool.AssemblerOutput
+- VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing
+dev_langs: C++
+helpviewer_keywords:
+- FA compiler option [C++]
+- /FA compiler option [C++]
+- -FA compiler option [C++]
+- listing file type
+- assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 44d21eae211bd2d01e202a516ef487c8d0df3684
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /FA、/Fa（列出文件）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
+创建包含汇编代码的列表文件。  
+  
+## <a name="syntax"></a>语法  
+  
+> **/FA**[**c**\][**s**\][**u**]  
+> **/Fa**_路径名_  
+  
+## <a name="remarks"></a>备注  
+`/FA`编译器选项为每个翻译单元中编译，通常对应于 C 或 c + + 源文件生成汇编程序列表文件。 默认情况下，仅汇编程序包含在列表文件中，编码为 ANSI。 可选`c`， `s`，和`u`自变量`/FA`控件是否机器代码或源代码都输出一起列出的汇编和是否列表被编码为 utf-8。  
+  
+默认情况下，每个列表文件获取与源文件，相同的基名称，并且具有.asm 扩展名。 当使用包括机器代码`c`选项，清单文件的扩展名为.cod。 你可以更改的名称和扩展名的清单文件并创建使用的目录`/Fa`选项。  
 
-创建包含程序集代码的清单文件。  
+### <a name="fa-arguments"></a>/FA 自变量  
+无  
+仅汇编程序语言包含在列表中。  
   
-## 语法  
+`c`  
+可选。 在列表中包括机器代码。  
   
-```  
-/FA[c|s|u]  
-/Fapathname  
-```  
+`s`  
+可选。 在列表中包括源代码。  
   
-## 备注  
- 参数控制源代码和机器码的生成以及清单文件的扩展名。  
+`u`可选。 将编码 utf-8 格式的列表文件并包含字节顺序标记。 默认情况下，文件编码为 ANSI。 使用`u`创建列表文件正确显示在任何系统上，或者如果您正在使用 Unicode 源代码文件作为输入到编译器。  
   
- 下表描述 **\/FA** 的各种不同的值。  可为 **\/FA** 指定多个值。  例如，可以指定 **\/FAsu**。  
+如果这两个`s`和`u`指定，并如果源代码文件使用 Unicode 编码，而不是 utf-8，则.asm 文件中的代码行可能无法正确显示。  
   
-|选项|清单内容和文件扩展名|  
-|--------|----------------|  
-|**\/FA**|程序集代码；.asm|  
-|**\/FAc**|机器码和程序集代码；.cod|  
-|**\/FAs**|源代码和程序集代码；.asm<br /><br /> 如果指定了 **\/FAcs**，则文件扩展名将为 .cod|  
-|**\/FAu**|导致用 UTF\-8 格式和字节顺序标记创建输出文件。  默认情况下，文件编码为 ANSI，但是如果您希望清单文件在所有系统中均正确显示，或者如果要使用 Unicode 源代码文件作为编译器的输入，则请使用 **\/FAu**。<br /><br /> 如果指定了 **\/FAsu**，并且源代码文件使用 UTF\-8 之外的 Unicode 编码，则 .asm 文件中的代码行可能无法正确显示。|  
+### <a name="fa-argument"></a>/Fa 自变量  
+无  
+一个*源*为每个源代码文件编译中创建.asm 文件。  
   
- 默认情况下，清单文件获取与源文件相同的基名称。  使用 **\/Fa** 选项可以更改清单文件的名称和在其中创建清单文件的目录。  
+*filename*列表文件名为*filename*.asm 位于当前目录中。 编译单个源代码文件时，这是仅有效。  
   
-|\/Fa 用法|结果|  
-|-------------|--------|  
-|**\/Fa**|为编译中的每个源代码文件创建一个 *source\_file*.asm。|  
-|**\/Fa** *filename*|将 *filename*.asm 放到当前目录中。  仅在编译单个源代码文件时有效。|  
-|**\/Fa** *filename.extension*|将 *filename.extension* 放到当前目录中。  仅在编译单个源代码文件时有效。|  
-|**\/Fa** *directory*\\|为编译中的每个源代码文件创建一个 *source\_file*.asm，并将其放到指定的*directory*中。  请注意必须有后缀反斜杠。  只允许使用当前磁盘上的路径。|  
-|**\/Fa** *directory*\\*filename*|将 *文件名filename.asm 放到指定的* `directory` 中。  仅在编译单个源代码文件时有效。|  
-|**\/Fa** *directory*\\*filename.extension*|*filename.extension*在指定的`directory`中。  仅在编译单个源代码文件时有效。|  
+*将文件名.扩展名*  
+名为的列表文件*文件名.扩展名*位于当前目录中。 编译单个源代码文件时，这是仅有效。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+*目录*\  
+一个*源文件*创建.asm 文件并将其放在指定*目录*为每个源代码文件编译中。 请注意所需的尾随反斜杠。 允许使用仅在当前的磁盘上的路径。  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+*目录*\\*filename*列表文件名为*filename*.asm 放在指定*目录*。 编译单个源代码文件时，这是仅有效。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+*目录*\\*文件名.扩展名*  
+名为的列表文件*文件名.扩展名*放置在指定*目录*。 编译单个源代码文件时，这是仅有效。  
   
-3.  单击**“输出文件”**属性页。  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-4.  修改**“ASM 列表位置”**\(**\/Fa**\) 或**“汇编输出”**\(**\/FA**\) 属性（必须在**“命令行”**属性页的**“附加选项”**框中指定 **\/FAu**）。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-### 以编程方式设置此编译器选项  
+2.  打开**C/c + +**文件夹，然后选择**输出文件**属性页。  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>。  若要指定 **\/FAu**，请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+3.  修改**汇编程序输出**属性来设置`/FAc`和`/FAs`汇编程序、 计算机和源代码的选项。 修改**使用 Unicode 对于汇编程序列出**属性来设置`/FAu`ANSI 或 utf-8 输出的选项。 修改**ASM 列表位置**设置`/Fa`用于列出文件的名称和位置的选项。  
   
-## 示例  
- 下列命令行产生名为 HELLO.cod 的组合源代码和机器码清单：  
+请注意，将设置同时**汇编程序输出**和**使用 Unicode 对于汇编程序列出**属性可能会导致[命令行警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md)。 若要合并这些选项在 IDE 中的，使用**其他选项**字段**命令行**属性页相反。  
+  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
+  
+-   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>。 若要指定`/FAu`，请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+  
+## <a name="example"></a>示例  
+下面的命令行生成的组合的源和机器代码列表调用 HELLO.cod:  
   
 ```  
 CL /FAcs HELLO.CPP  
 ```  
   
-## 请参阅  
- [输出文件 \(\/F\) 选项](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>另请参阅  
+ [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [指定路径名](../../build/reference/specifying-the-pathname.md)
