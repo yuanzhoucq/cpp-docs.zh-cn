@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-keywords"></a>C 关键字
 “关键字”是对 C 编译器具有特殊含义的单词。 在翻译的第 7 和第 8 阶段中，标识符不能具有与 C 关键字相同的拼写和大小写。 （请参阅《预处理器参考》中的[翻译阶段](../preprocessor/phases-of-translation.md)的说明；有关标识符的信息，请参阅[标识符](../c-language/c-identifiers.md)。）C 语言使用下列关键字：  

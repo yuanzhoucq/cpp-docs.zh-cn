@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="example-program"></a>示例程序
 下面的 C 源程序包括两个源文件。 它尽可能在 C 程序中提供一些各种声明和定义的概述。 本书后面的节中描述了如何写入这些声明、定义和初始化，以及如何使用 C 关键字（例如，static 和 `extern`）。 在 C 标头文件 STDIO.H. 中声明 `printf` 函数。  

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- DLL conflicts [C++]
+dev_langs: C++
+helpviewer_keywords: DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 边界传递 CRT 对象时可能的错误
 当你将 C 运行时 (CRT) 对象（例如，文件句柄、区域设置和环境变量）传入或传出 DLL（跨 DLL 边界的函数调用）时，如果 DLL 以及 DLL 中调用的文件使用不同的 CRT 库副本，则可能发生意外行为。  

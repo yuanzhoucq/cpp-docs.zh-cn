@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.functions
-dev_langs:
-- C++
+f1_keywords: c.functions
+dev_langs: C++
 helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: e6e10a2a2991f314d61bd8c2df22b59d7791b6c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>关于选择函数和宏的建议
 大多数 Microsoft 运行库例程都是编译的或汇编的函数，但有些例程是作为宏实现的。 当标头文件声明例程的函数和宏版本时，将优先考虑宏定义，因为它始终显示在函数声明之后。 在调用作为函数和宏实现的例程时，您可以通过两种方法强制编译器使用函数版本：  

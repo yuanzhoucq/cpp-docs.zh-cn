@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functions [C], recursive
 - function calls, recursive
 - functions [C], calling recursively
 - recursive function calls
 ms.assetid: 59739040-3081-4006-abbc-9d8423992bce
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: cca28b41b15ae14504ac5692a3e8a7063a11e862
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="recursive-functions"></a>递归函数
 C 程序中的任何函数都可以以递归方式调用；也就是说，函数可以调用自己。 递归调用的数量受堆栈的大小的限制。 有关设置堆栈大小的链接器选项的信息，请参阅 [/STACK（堆栈分配）](../build/reference/stack-stack-allocations.md)(/STACK) 链接器选项。 每次调用函数时，都会为参数以及 auto 和 register 变量分配新存储，以便不会覆盖它们在前面未完成的调用中的值。 只有从中创建参数的函数的实例才能直接访问该参数。 前面的参数对函数的后续实例不可直接访问。  

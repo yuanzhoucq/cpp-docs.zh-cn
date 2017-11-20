@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - type float
 - exponent length
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-float"></a>float 类型
 浮点数使用 IEEE（电气和电子工程师协会）格式。 浮点类型的单精度值具有 4 个字节，包括一个符号位、一个 8 位 excess-127 二进制指数和一个 23 位尾数。 尾数表示一个介于 1.0 和 2.0 之间的数。 由于尾数的高顺序位始终为 1，因此它不是以数字形式存储的。 此表示形式为 float 类型提供了一个大约在 3.4E-38 和 3.4E+38 之间的范围。  

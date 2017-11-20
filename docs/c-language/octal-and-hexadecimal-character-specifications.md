@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 9f9ff802a63aed2484407b7e5fe82848ecd69cea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八进制和十六进制字符规范
 序列 \\ooo 表示可以将 ASCII 字符集中的任何字符指定为三位数八进制字符代码。 八进制整数的数字值用于指定所需字符或宽字符的值。  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function declarators
 - function definitions
@@ -21,66 +19,51 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dd5e3b5f9e7b395b04e3efec01a7cff63cdf90cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: c57536aed0c53e8f74ac6031632e60a403e5ce30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-function-definitions"></a>C 函数定义
 函数定义指定函数的名称、函数期望接收的参数的类型和数量以及函数的返回类型。 函数定义还包括带有局部变量的声明的函数体和确定函数行为的语句。  
   
 ## <a name="syntax"></a>语法  
  translation-unit：  
-external-declaration **  
+ external-declaration  
   
  translation-unit external-declaration  
   
  external-declaration: /\* 只允许在外部（文件）范围内 \*/  
-function-definition **  
+ function-definition  
   
  `declaration`  
   
  function-definition: /\* 此处的声明符是函数声明符 \*/  
-declaration-specifiers ** optattribute-seq optdeclarator declaration-list optcompound-statement  
+ declaration-specifiers optattribute-seq optdeclarator declaration-list optcompound-statement  
   
  /\* *attribute-seq* 为 Microsoft 专用 */  
   
  原型参数为：  
   
  *declaration-specifiers*：  
-storage-class-specifier declaration-specifiers ** opt  
+ storage-class-specifier declaration-specifiers opt  
   
  type-specifier declaration-specifiers opt  
   
  type-qualifier declaration-specifiers opt  
   
  declaration-list：  
-declaration **  
+ declaration  
   
  declaration-list declaration  
   
  `declarator`：  
-pointer ** optdirect-declarator  
+ pointer optdirect-declarator  
   
  direct-declarator: /\* 函数声明符 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* 新样式声明符 \*/  
@@ -100,7 +83,7 @@ pointer ** optdirect-declarator
  parameter-list ,  parameter-declaration  
   
  *parameter-declaration*:  
-declaration-specifiers declarator **  
+ declaration-specifiers declarator  
   
  declaration-specifiers abstract declarator opt  
   
@@ -114,7 +97,7 @@ declaration-specifiers declarator **
  函数体的语法为：  
   
  compound-statement：/\* 函数体 \*/  
-{ ****  `declaration`-list optstatement-list opt}  
+ {  `declaration`-list optstatement-list opt}  
   
  仅有的可修改函数声明的存储类说明符是 `extern` 和 static。 `extern` 说明符表示可以从其他文件引用函数；即，将函数名导出到链接器。 static 说明符表示不能从其他文件引用函数；即，链接器不会导出名称。 如果存储类未在函数定义中出现，则假定 `extern`。 在任何情况下，从定义点到文件的末尾函数始终可见。  
   

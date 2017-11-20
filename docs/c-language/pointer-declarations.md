@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - pointer declarations
 - declarations, pointers
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 02f33a5cd41dbbf45047915e3ad890311eba8cca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: e7d8b351f7cc58d37d4da8bc273d8541aee54446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointer-declarations"></a>指针声明
 “指针声明”可命名指针变量并指定该变量所指向的对象的类型。 声明为指针的变量保留了一个内存地址。  
@@ -142,7 +125,7 @@ struct id
 } record;  
 ```  
   
- 变量 *record* 具有结构类型 *id*。 请注意，*pname* 被声明为指向名为 *name* 的另一个结构类型的指针。 此声明可在定义 *name* 类型之前出现。  
+ 变量 *record* 具有结构类型 *id*。请注意，*pname* 被声明为指向名为 *name* 的另一个结构类型的指针。 此声明可在定义 *name* 类型之前出现。  
   
 ## <a name="see-also"></a>另请参阅  
  [声明符和变量声明](../c-language/declarators-and-variable-declarations.md)

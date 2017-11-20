@@ -5,22 +5,18 @@ keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
 ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/30/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：用于 Windows 的程序包管理器 
 vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上第三方库的购置与安装。 如果项目要使用第三方库，建议通过 vcpkg 来安装它们。 vcpkg 同时支持开源和专有库。 已测试 vcpkg 公共目录中所有库与 Visual Studio 2015 及 Visual Studio 2017 的兼容性。 截至 2017 年 5 月，目录中已有超过 238 个库，并且 C++ 社区正在此基础上持续添加更多库。
 
@@ -32,7 +28,7 @@ vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上第三�
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
 
 ## <a name="installation"></a>安装
 从 GitHub (https://github.com/Microsoft/vcpkg) 克隆 vcpkg 存储库。 可凭喜好下载到任意文件夹位置。
@@ -158,4 +154,3 @@ vcpkg 实例的内容如下：
   `--triplet <t>` 指定目标体系结构三元组。 （默认：`%VCPKG_DEFAULT_TRIPLET%`，另请参阅 `vcpkg help triplet`）
 
   `--vcpkg-root <path>` 指定 vcpkg 根目录（默认：`%VCPKG_ROOT%`）
-

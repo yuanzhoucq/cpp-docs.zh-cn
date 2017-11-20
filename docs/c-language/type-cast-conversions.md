@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - data type conversion [C++], type-cast conversions
 - conversions [C++], type-cast
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - type casts [C++], about type-cast conversion
 - type-cast conversions [C++]
 ms.assetid: 57ab5902-f12f-4326-a2f6-6282f1d4025a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: b67b6beeb235585715db9c0ba9cbd589922de467
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: d3426d6ff06a5d07dd64889e6a5d89da543cfe68
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-cast-conversions"></a>类型强制转换的转换
 可以使用类型强制转换来显式转换类型。  
@@ -49,12 +32,12 @@ ms.lasthandoff: 05/18/2017
  **语法**  
   
  *cast-expression*：  
-unary expression **  
+ unary expression  
   
  **(**  *type-name*  **)**  *cast-expression*  
   
  *type-name*：  
-specifier-qualifier-list abstract-declarator ** opt  
+ specifier-qualifier-list abstract-declarator opt  
   
  type-name 是类型，cast-expression 是要转换为该类型的值。 具有类型强制转换的表达式不是左值。 cast-expression 也会被转换，就好像它已分配到 type-name 类型的变量一样。 赋值的转换规则（在[赋值转换](../c-language/assignment-conversions.md)中进行了概述）也适用于类型强制转换。 下表显示了可强制转换为任何给定类型的类型。  
   

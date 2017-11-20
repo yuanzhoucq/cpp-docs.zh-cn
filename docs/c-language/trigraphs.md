@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ??) trigraph
 - ??- trigraph
@@ -24,30 +22,15 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c2c4e7554b6a11e7396627e085d9645a4161ff15
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a480a38411536266c8cd4c23f8b29190550d3444
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="trigraphs"></a>三字符组
 C 源程序的源字符集包含在 7 位 ASCII 字符集中，但它是 ISO 646-1983 固定语言代码集的超集。 三元组序列仅允许使用 ISO（国际标准组织）固定语言代码集编写 C 程序。 三元组是三字符序列（由两个连续问号引入），编译器会将它替换为其相应的标点字符。 可以将 C 源文件中的三元组与不包含某些标点字符的方便图形表示形式的字符集一起使用。  

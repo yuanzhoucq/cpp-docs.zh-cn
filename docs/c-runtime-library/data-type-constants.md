@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -47,8 +46,7 @@ f1_keywords:
 - UCHAR_MAX
 - FLT_EPSILON
 - UINT_MAX
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DBL_MAX_EXP constant
 - _DBL_RADIX constant
@@ -95,16 +93,15 @@ helpviewer_keywords:
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 1406e086818ea6f71d32e345aaf3d0d79b91940c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="data-type-constants"></a>数据类型常量
 数据类型常量是实现相关的整数数据类型允许的值范围。 下面列出的常数提供了整数数据类型的范围，并在 LIMITS.H 中进行了定义。  

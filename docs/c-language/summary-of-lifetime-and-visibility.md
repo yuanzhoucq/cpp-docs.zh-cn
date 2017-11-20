@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 下表是大多数标识符的生存期和可见性特征的摘要。 前三列提供了定义生存期和可见性的特性。 具有前三列提供的特性的标识符具有在第四和第五列中显示的生存期和可见性。 但是，该表未涵盖所有可能的情况。 有关详细信息，请参考[存储类](../c-language/c-storage-classes.md)。  

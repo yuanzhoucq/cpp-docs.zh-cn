@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -17,38 +16,21 @@ apilocation:
 - msvcr120.dll
 - msvcr80.dll
 apitype: DLLExport
-f1_keywords:
-- _ismbc
-dev_langs:
-- C++
+f1_keywords: _ismbc
+dev_langs: C++
 helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 4af1bd32f4c1050428fa91d1379412d805ad0516
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc 例程
 每个 **_ismbc** 例程都针对特定条件测试给定多字节字符 `c`。  
@@ -79,7 +61,7 @@ ms.lasthandoff: 04/01/2017
 |[_ismbcsymbol、_ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|多字节字符|当且仅当 0x8141<=`c`<=0x81AC 时返回非零值。|  
 |[_ismbcupper、_ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|大写字母|当且仅当 `c` 是 ASCII 大写英文字母 0x41<=`c`<=0x5A 的单字节表示形式时返回非零值。|  
   
- **特定于代码页 932**  
+ **特定于代码页 932**   
   
  下面的例程特定于代码页 932。  
   
@@ -93,7 +75,7 @@ ms.lasthandoff: 04/01/2017
   
  `_ismbcl0`、`_ismbcl1` 和 `_ismbcl2` 将检查指定值 `c` 是否匹配上表中所述的测试条件，但不会检查 `c` 是否为有效的多字节字符。 如果低字节位于范围 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 内，这些函数将返回一个非零值，指明字符满足测试条件。 使用 [_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) 来测试是否定义了多字节字符。  
   
- **END 特定于代码页 932**  
+ **END 特定于代码页 932**   
   
 ## <a name="see-also"></a>另请参阅  
  [字符分类](../c-runtime-library/character-classification.md)   

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sizeof
-dev_langs:
-- C++
-helpviewer_keywords:
-- sizeof operator
+f1_keywords: sizeof
+dev_langs: C++
+helpviewer_keywords: sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 11fa4acae05c5488ce1d90873ec816744c7e83df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sizeof-operator-c"></a>sizeof 运算符 (C)
 `sizeof` 运算符提供了存储操作数的类型的对象所需的存储空间量（以字节为单位）。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。  

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- identifiers, designating objects
+dev_langs: C++
+helpviewer_keywords: identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ce62a6ad0f0cb36678de0756d77155769393f760
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="identifiers-in-primary-expressions"></a>主要表达式中的标识符
 标识符可具有整数、float、`enum`、`struct`、union、数组、指针或函数类型。 如果已将标识符声明为指定对象（此时为左值）或声明为函数（此时为函数指示符），则它是主函数。 有关左值的定义，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。  

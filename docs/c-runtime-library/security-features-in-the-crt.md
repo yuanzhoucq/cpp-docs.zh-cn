@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -33,30 +31,15 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: c197434fceff8920cd501a64131c3e0816c9594d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全功能
 许多旧 CRT 函数具有更新、更安全的版本。 如果存在安全函数，则较旧的、安全性更低的版本将标记为已弃用，并且新版本具有 `_s`（“安全”）后缀。  

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 01/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 3rd-party libraries
 - vspkg
 ms.assetid: b055ed20-8a9e-45b2-ac2a-e3d94271c009
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
-ms.openlocfilehash: d2707321719e5ff6afa84203fd79d975bb696960
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/30/2017
-
+ms.openlocfilehash: cdcfd815f520ff5d9e3931945eeb7b3597ec2393
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="porting-third-party-libraries"></a>移植第三方库
 
 将项目升级到当前版本的 Visual C++ 后，还必须升级项目使用的所有库，以便使用相同的编译器版本和风格构建库和项目。 有关详细信息，请参阅[潜在的升级问题概述](overview-of-potential-upgrade-issues-visual-cpp.md)。 
@@ -42,4 +38,3 @@ ms.lasthandoff: 06/30/2017
   
 ## <a name="see-also"></a>另请参阅  
  [Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)
-

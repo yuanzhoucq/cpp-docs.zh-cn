@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aec7ba33643e1efc5402ab7ce99febf3dc6d23e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 5e30d0664716df0f4cdf7d394d9c9a5fd7e8c798
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-guide-com-spy"></a>迁移指南：COM Spy
 本主题是一系列文章中的第二个主题，它演示将旧版 Visual C++ 项目升级到最新版本 Visual Studio 的过程。 本主题中的示例代码是先前使用 Visual Studio 2005 编译的代码。  

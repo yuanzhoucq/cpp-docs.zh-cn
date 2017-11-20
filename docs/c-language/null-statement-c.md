@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - semicolon, C null statement
 - expressions [C++], null
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4ead6c1bb4ad5330ed23c90019ec4e5e03282fb8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="null-statement-c"></a>Null 语句 (C)
 “null 语句”是仅包含分号的语句；它可在需要语句时显示。 执行 null 语句时不会发生任何事件。 编码 null 语句的正确方式是：  

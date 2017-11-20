@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -29,8 +28,7 @@ f1_keywords:
 - _tspawnv
 - _tspawnle
 - wspawn
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tspawnve function
 - _spawn functions
@@ -54,31 +52,15 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1794395cd9e6684788458aad424336efbc421c0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函数
 每个 `_spawn` 函数将创建并执行一个新进程：  
@@ -93,7 +75,7 @@ ms.lasthandoff: 02/24/2017
  函数名称的结尾字母确定变体。  
   
  `e`  
-指向环境设置的指针的数组  `envp` 将传递给新进程。  
+ 指向环境设置的指针的数组 `envp` 将传递给新进程。  
   
  `l`  
  将命令行参数单独传递给 `_spawn` 函数。 一般将在预先知道新进程的一些参数时使用此后缀。  
@@ -102,7 +84,7 @@ ms.lasthandoff: 02/24/2017
  `PATH` 环境变量用于查找要执行的文件。  
   
  `v`  
-指向命令行参数的指针的数组  `argv` 将传递给 `_spawn` 函数。 一般在新进程的一些参数可变时使用此后缀。  
+ 指向命令行参数的指针的数组 `argv` 将传递给 `_spawn` 函数。 一般在新进程的一些参数可变时使用此后缀。  
   
 ## <a name="remarks"></a>备注  
  每个 `_spawn` 函数都将创建并执行一个新进程。 它们将根据情况自动处理多字节字符串参数，根据当前正在使用中的多字节代码页识别多字节字符序列。 `_wspawn` 函数是 `_spawn` 函数的宽字符版本；它们不处理多字节字符串。 否则，`_wspawn` 函数的行为将与其 `_spawn` 对等函数的一致。  
@@ -158,7 +140,7 @@ ms.lasthandoff: 02/24/2017
   
  一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
   
- `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv`*传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
+ `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv` *传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
   
 ## <a name="environment-of-the-spawned-process"></a>生成进程的环境  
  调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value` 并未括在双引号中。）`envp` 数组的最后一个元素应该是 `NULL`。 当 `envp` 本身为 `NULL` 时，生成进程将继承父进程的环境设置。  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - types [C], constants
 - floating-point numbers, floating-point constants
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 7bd4bd3e0dc2dcd1388c7e8db5c9fcf209a9b47c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-floating-point-constants"></a>C 浮点常量
 “浮点常量”是表示带符号实数的十进制数字。 带符号实数的表现形式包括整数部分、小数部分和指数。 浮点常量用于表示不可更改的浮点值。  

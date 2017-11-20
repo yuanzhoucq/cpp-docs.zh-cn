@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>从浮点类型的转换
 转换为 double 或 `long double` 的 float 值，或转换为 `long double` 的 double 值不会发生更改。 如果可能，请准确表示转换为 float 值的 double 值。 如果无法准确表示该值，则可能会丢失精度。 如果结果超出范围，则该行为是不确定的。 有关浮点类型的范围，请参阅[浮点常量的限制](../c-language/limits-on-floating-point-constants.md)。  

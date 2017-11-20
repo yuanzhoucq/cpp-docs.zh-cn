@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 *“通用”* 的意思是代码可以在运行 Windows 10 的任何设备上运行，包括桌面、手机、平板电脑和运行 Windows 10 的未来设备。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。  
   
- Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅[从 Windows 运行时 8 移动到 UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。  
+ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅 [从 Windows Runtime 8 移动到 UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。  
   
  本主题包含以下用于将代码移植到 UWP 的过程。  
   
@@ -94,7 +76,7 @@ ms.lasthandoff: 02/24/2017
   
 11. 对应用支持的每种类型的设备，在仿真器或物理设备运行和调试应用。 若要运行仿真程序，则需在物理计算机上（而不是虚拟机上）运行 Visual Studio。  
   
-##  <a name="BK_81Component"></a>将 Windows 8.1 运行时组件移植到 UWP  
+##  <a name="BK_81Component"></a> 将 Windows 8.1 运行时组件移植到 UWP  
  如果有一个 DLL 或一个已使用 Windows 8.1 应用商店应用的 Windows 运行时组件，则可以使用此过程来获取使用 UWP 和 Windows 10 的组件或 DLL。 基本过程是创建新项目，然后将代码复制到其中。  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>将 Windows 8.1 运行时组件移植到 UWP  
@@ -133,4 +115,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>另请参阅  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [开发通用 Windows 平台 (UWP) 的应用](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-

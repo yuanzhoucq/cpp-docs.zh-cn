@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,40 +15,23 @@ apilocation:
 - msvcr100.dll
 - msvcr110.dll
 apitype: DLLExport
-f1_keywords:
-- strcoll
-dev_langs:
-- C++
+f1_keywords: strcoll
+dev_langs: C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - string comparison [C++], culture-specific
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 2d0073470eade62584b107d38cafed0184c0383e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strcoll-functions"></a>strcoll 函数
 每个 `strcoll` 和 `wcscoll` 函数根据当前使用的区域设置代码页的 `LC_COLLATE` 类别设置来比较两个字符串。 每个 `_mbscoll` 函数根据当前使用的多字节代码页比较两个字符串。 在以下情况下使用 `coll` 函数进行字符串比较：当前代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于比较很有用。 使用相应的 `cmp` 函数仅测试字符串相等性。  

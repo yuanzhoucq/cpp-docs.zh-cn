@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - identifiers, C
 - naming identifiers
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: fca83b12e469401fe18632a1df9f876964b8a493
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: ab60d1275925504a746f8b6d01003129fd688673
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-identifiers"></a>C 标识符
 “Identifiers”或“symbols”是您为程序中的变量、类型、函数和标签提供的名称。 标识符名称在拼写和大小写上必须与任何关键字都不同。 不能将关键词（C 或 Microsoft）用作标识符；将它们保留以用于特殊用途。 通过在变量、类型或函数的声明中指定标识符来创建标识符。 在此示例中，`result` 是整型变量的标识符，`main` 和 `printf` 是函数的标识符名称。  
@@ -64,7 +47,7 @@ int main()
   
 ## <a name="syntax"></a>语法  
  identifier：  
-nondigit **  
+ nondigit  
   
  identifier nondigit  
   

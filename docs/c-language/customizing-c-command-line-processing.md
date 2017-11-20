@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 00194acd1aa72db73f75a2cb5aa5700df02be0a3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>自定义 C 命令行处理
 如果程序不采用命令行自变量，则可以通过取消使用执行命令行处理的库例程来节省少量空间。 此例程称为 _setargv（在宽字符环境中，称为 _wsetargv），如[展开通配符参数](../c-language/expanding-wildcard-arguments.md)中所述。 若要禁止使用它，请在包含 main 函数的文件中定义一个不执行任何操作的例程，并将其命名为 _setargv（在宽字符环境中为 _wsetargv）。 随后，对 _setargv 或 _wsetargv 的调用由 _setargv 或 _wsetargv 的定义实现，并且不会加载库版本。  

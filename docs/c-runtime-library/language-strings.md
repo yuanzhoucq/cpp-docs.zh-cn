@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
-helpviewer_keywords:
-- language strings
+f1_keywords: c.strings
+dev_langs: C++
+helpviewer_keywords: language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 和 `_create_locale` 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[区域语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)。 语言字符串可以是支持语言列表的“语言”和“语言名称缩写”列中的任意值。 有关操作系统版本的语言支持的其他信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。   

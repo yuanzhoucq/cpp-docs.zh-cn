@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - data types [C]
 - types [C]
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 29e7d1687946c463a2c486423da8fb9d585a3546
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="declarations-and-types"></a>声明和类型
 本节介绍了变量、函数和类型的声明和初始化。 C 语言包括一组标准的基本数据类型。 您还可以通过基于已定义的类型声明新的类型来添加自己的数据类型（称为“派生类型”）。 本文讨论了以下主题：  

@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: 79efd81177cc3235030600779e70c1e9a2043670
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
@@ -496,7 +479,7 @@ class CTreeListBox : public CListBox
   
 ```  
   
- 此代码在 Visual C++ 支持内置的 bool 类型前编写。 在此类代码中，BOOL 是 int 的 typedef。 int 类型是带符号类型，而带符号 int 的位表示是将第一个位用作符号位，以便 int 类型的位域可以解释为表示 0 或 -1，结果可能超出预期。  
+ 此代码在 Visual C++ 支持内置的 bool 类型前编写。 在此类代码中，BOOL 是 int 的 typedef。int 类型是带符号类型，而带符号 int 的位表示是将第一个位用作符号位，以便 int 类型的位域可以解释为表示 0 或 -1，结果可能超出预期。  
   
  通过查看代码无法知道这些为什么是位域。 是否打算保持较小的对象尺寸？或者是否有任何地方使用该对象的二进制布局？ 由于没有使用位域的原因，我们将它们更改为了普通 BOOL 成员。 使用位域来使对象保持小尺寸并不能保证有效。 这取决于编译器如何布局类型。  
   

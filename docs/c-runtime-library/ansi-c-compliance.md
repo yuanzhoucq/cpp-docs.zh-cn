@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Ansi
-dev_langs:
-- C++
+f1_keywords: Ansi
+dev_langs: C++
 helpviewer_keywords:
 - underscores, leading
 - compatibility [C++], ANSI C
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: bd98d80c2fcbf3c684aa185b783f164d6b14f0a9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 遵从性
 在运行时系统（如函数、宏、常量、变量和类型定义）中，所有 Microsoft 专用标识符的命名规则均符合 ANSI 标准。 在本文档中，任何符合 ANSI/ISO C 标准的运行时函数都将标记为与 ANSI 兼容。 符合 ANSI 标准的应用程序应仅使用这些与 ANSI 兼容的函数。  

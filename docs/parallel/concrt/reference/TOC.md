@@ -2,7 +2,7 @@
 ## [并发命名空间](concurrency-namespace.md)
 ### [并发命名空间函数](concurrency-namespace-functions.md)
 ### [并发命名空间运算符](concurrency-namespace-operators.md)
-### [并发命名空间常量&1;](concurrency-namespace-constants1.md)
+### [并发命名空间常量 1](concurrency-namespace-constants1.md)
 ### [并发命名空间枚举](concurrency-namespace-enums.md)
 ### [affinity_partitioner 类](affinity-partitioner-class.md)
 ### [agent 类](agent-class.md)

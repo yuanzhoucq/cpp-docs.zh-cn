@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>从无符号整型的转换
 通过截断高序位将无符号整数转换为较短的无符号或带符号整数，或者通过零扩展将其转换为一个较长的无符号或带符号整数（请参阅[从无符号整型类型转换](#_clang_table_4..3)表）。  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C, portability of Microsoft C
 - portability [C++], Microsoft C to ANSI C
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 1fda4b8a6c530d494640d486227d3bdda25ea728
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="implementation-defined-behavior"></a>实现定义的行为
 ANSI X3.159-1989，*American National Standard for Information Systems* - *编程语言* - *C*，包含“可移植性问题”节。 ANSI 部分列出了 ANSI 针对每个特定实现开放的 C 语言区域。 本节描述 Microsoft C 如何处理 C 语言的这些实现定义的区域。  

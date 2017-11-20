@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>流 I/O
 这些函数处理不同大小和格式的数据，从单个字符到大型数据结构都有。 它们还提供缓冲区，这样能提高性能。 流缓冲区的默认大小为 4K。 这些例程会仅影响由运行时库例程创建的缓冲区，对由操作系统创建的缓冲区不起作用。  
@@ -52,8 +33,8 @@ ms.lasthandoff: 03/30/2017
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md)、 [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除流的错误指示器|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|关闭流|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|关闭所有打开的流，除了 `stdin`、`stdout` 和 `stderr`|  
-|[_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|将流与打开的文件的文件描述符相关联|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|关闭所有打开的流，除了 `stdin`、 `stdout`和 `stderr`|  
+|[_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|将流与打开的文件的文件描述符相关联|  
 |[feof](../c-runtime-library/reference/feof.md)|在流上测试文件尾|  
 |[ferror](../c-runtime-library/reference/ferror.md)|在流上测试错误|  
 |[fflush](../c-runtime-library/reference/fflush.md)|刷新到缓冲区或存储设备的流|  
@@ -63,13 +44,13 @@ ms.lasthandoff: 03/30/2017
 |[fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)|从流读取字符串|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|获取与流关联的文件描述符|  
 |[_flushall](../c-runtime-library/reference/flushall.md)|刷新所有到缓冲区或存储设备的流|  
-|[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)、[fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|打开流|  
+|[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)、 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|打开流|  
 |[fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)、[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|将格式化数据写入流|  
 |[fputc、fputwc](../c-runtime-library/reference/fputc-fputwc.md)|将字符写入流（ `putc` 和 `putwc`的函数版本）|  
 |[_fputchar、_fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|将字符写入 `stdout` （ `putchar` 和 `putwchar`的函数版本）|  
 |[fputs、fputws](../c-runtime-library/reference/fputs-fputws.md)|将字符串写入流|  
 |[fread](../c-runtime-library/reference/fread.md)|从流中读取未格式化的数据|  
-|[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)、[freopen_s、_wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|重新将 `FILE` 流指针分配到新的文件或设备|  
+|[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)、 [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|重新将 `FILE` 流指针分配到新的文件或设备|  
 |[fscanf、fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|从流中读取格式化数据|  
 |[fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|将文件位置移动到给定位置|  
 |[fsetpos](../c-runtime-library/reference/fsetpos.md)|设置流的位置指示器|  
@@ -92,13 +73,13 @@ ms.lasthandoff: 03/30/2017
 |[setbuf](../c-runtime-library/reference/setbuf.md)|控制流缓冲|  
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|设置在流 I/O 级别同时打开的最大文件数。|  
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|控制流缓冲和缓冲区大小|  
-|[_snprintf、_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)、[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|将指定长度的格式化数据写入字符串|  
+|[_snprintf、_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)、 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|将指定长度的格式化数据写入字符串|  
 |[_snscanf、_snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md)、[_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|从标准输入流读取指定长度的格式化数据。|  
 |[sprintf、swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)、[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|将格式化数据写入字符串|  
 |[sscanf、swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)、[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|从字符串读取格式化数据|  
-|[_tempnam、_wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|在给定目录中生成临时文件名|  
-|[tmpfile](../c-runtime-library/reference/tmpfile.md)、[tmpfile_s](../c-runtime-library/reference/tmpfile-s.md)|创建临时文件|  
-|[tmpnam、_wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)、[tmpnam_s、_wtmpnam_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|生成临时文件名|  
+|[_tempnam，_wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|在给定目录中生成临时文件名|  
+|[tmpfile](../c-runtime-library/reference/tmpfile.md)、 [tmpfile_s](../c-runtime-library/reference/tmpfile-s.md)|创建临时文件|  
+|[tmpnam、_wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)、 [tmpnam_s, _wtmpnam_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|生成临时文件名|  
 |[ungetc、ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|将字符推送回流上|  
 |[_vcprintf、_vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md)、[_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)|将格式化数据写入控制台。|  
 |[vfprintf、vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)、[vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|将格式化数据写入流|  
@@ -118,7 +99,7 @@ ms.lasthandoff: 03/30/2017
   
  专门使用 `c` 或 `n` 标志打开的任何文件的行为以该标志为准，而不考虑全局提交/不提交标志的状态。  
   
- 如果你的程序未显式关闭流，则程序终止时流会自动关闭。 但是，你应在程序完成流操作时关闭流，因为可以同时打开的流的数量是有限。 请参阅 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 了解有关此限制的信息。  
+ 如果你的程序未显式关闭流，则程序终止时流会自动关闭。 但是，你应在程序完成流操作时关闭流，因为可以同时打开的流的数量是有限。 请参阅 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 获取有关此限制的信息。  
   
  只有通过对 `fflush` 或对文件定位函数（`fseek`、 `fsetpos`或 `rewind`）进行干预调用时，输入才能直接跟随输出。 如果输入操作遇到文件末尾，则输出可以在没有对文件定位函数进行干预调用的情况下跟随输入。  
   

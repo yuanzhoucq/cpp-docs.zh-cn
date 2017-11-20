@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- integer constants
+dev_langs: C++
+helpviewer_keywords: integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dab1cb72b5914901808dc51f3a173a62a8924cfb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 20025ae47491084436864481357125e741ccc486
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-integer-constants"></a>C 整数常量
 “整数常量”是表示整数值的十进制（基数为 10）、八进制（基数为 8）或十六进制（基数为 16）数字。 使用整数常量表示不能更改的整数值。  
@@ -95,7 +77,7 @@ ms.lasthandoff: 04/01/2017
   
  整数常量为正数，除非它们的前面有减号 (**-**)。 减号解释为一元算术求反运算符。 （有关此运算符的信息，请参阅[一元算术运算符](../c-language/unary-arithmetic-operators.md)。）  
   
- 如果整数常量以 **0x** 或 **0X** 开始，则它是十六进制。 如果它以数字 **0** 开始，则为八进制。 否则，将其假定为十进制。  
+ 如果整数常量以 **0x** 或 **0X**  开始，则它是十六进制。 如果它以数字 **0** 开始，则为八进制。 否则，将其假定为十进制。  
   
  下列行是等效的：  
   

@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="text-and-binary-streams"></a>文本和二进制流
 文本流包含一个或多个文本行，这些文本行可写入到面向文本的显示器中以供读取。 当从文本流中进行读取时，程序在每行末尾读取一个 `NL`（换行符）。 在写入文本流时，程序写入一个 `NL` 以表示行的结尾。 为了在目标环境中匹配不同的约定来表示文件中的文本，库函数可以更改在程序和文本流之间传输的字符的数量和表示。  

@@ -4,54 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], source
 - programs [C++], source
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: a9bb5e470dc4d3da5662a15e3b7ed5e9bc60d01f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: f8355dd04376e73618a215fa73160dc1ee64dae2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="source-files-and-source-programs"></a>源文件和源程序
 源程序可以分为一个或多个“源文件”或“翻译单元”。 编译器的输入称为“翻译单元”。  
   
 ## <a name="syntax"></a>语法  
  translation-unit：  
-external-declaration **  
+ external-declaration  
   
  translation-unit external-declaration  
   
  external-declaration：  
-function-definition **  
+ function-definition  
   
  declaration  
   

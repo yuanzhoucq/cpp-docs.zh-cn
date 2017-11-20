@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constant expressions, syntax
 - constant expressions
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0e3323c85ce7668adfe5b4a297ac8bab930c3ae6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-constant-expressions"></a>C 常量表达式
 常量表达式将在编译时而不是运行时计算，并且可在可使用常量的任何位置使用。 常量表达式的计算结果必须是位于该类型的可表示值范围内的常量。 常量表达式的操作数可以是整数常量、字符常量、浮点常量、枚举常量、类型强制转换、`sizeof` 表达式和其他常量表达式。  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - function parameters
@@ -21,42 +19,27 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 7f596595f8d21df6a0027a3a5ebfdc5beda5e374
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 93e3b33e6e5e9eee52ec08eac32c47bf0ae6213f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="parameters"></a>参数
 自变量是通过函数调用传递到函数的值的名称。 形参是函数期望接收的值。 在函数原型中，函数名称后的括号包含函数的参数及其类型的完整列表。 参数声明指定参数中存储的值的类型、大小和标识符。  
   
 ## <a name="syntax"></a>语法  
  function-definition：  
-declaration-specifiers ** optattribute-seq optdeclarator declaration-list optcompound-statement  
+ declaration-specifiers optattribute-seq optdeclarator declaration-list optcompound-statement  
   
  /\* *attribute-seq* 为 Microsoft 专用 */  
   
  declarator :  
-pointer ** optdirect-declarator  
+ pointer optdirect-declarator  
   
  direct-declarator：/\* 函数声明符 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* 新样式声明符 \*/  
@@ -72,7 +55,7 @@ pointer ** optdirect-declarator
  *parameter-list*  **,**  *parameter-declaration*  
   
  *parameter-declaration*:  
-declaration-specifiers declarator **  
+ declaration-specifiers declarator  
   
  *declaration-specifiers abstract-declarator* opt  
   
@@ -93,7 +76,7 @@ void new( double x, double y, double z )
 }  
 ```  
   
- 如果至少有一个参数出现在参数列表中，则该列表可以以一个逗号后跟三个句点 (, ...) 结尾。 此构造称为“省略号表示法”，表示函数的可变数量的自变量。 （有关详细信息，请参阅[使用可变数量的参数进行调用](../c-language/calls-with-a-variable-number-of-arguments.md)。）但是，对函数进行调用时，自变量的数量必须至少与最后一个逗号前面的参数的数量相同。  
+ 如果至少有一个参数出现在参数列表中，则该列表可以以一个逗号后跟三个句点 (, ...) 结尾。此构造称为“省略号表示法”，表示函数的可变数量的自变量。 （有关详细信息，请参阅[使用可变数量的参数进行调用](../c-language/calls-with-a-variable-number-of-arguments.md)。）但是，对函数进行调用时，自变量的数量必须至少与最后一个逗号前面的参数的数量相同。  
   
  如果实参不会传递到函数，则形参的列表将替换为关键字 `void`。 对 `void` 的这种用法不同于将其用作类型说明符。  
   

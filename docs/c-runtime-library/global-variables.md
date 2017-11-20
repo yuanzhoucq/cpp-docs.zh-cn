@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.variables
-dev_langs:
-- C++
+f1_keywords: c.variables
+dev_langs: C++
 helpviewer_keywords:
 - global variables
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: b4fb921a0685181aa3cd4dd2cf0422e3d6256ac5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 74e4d0a87976017deda146274947d98a76002004
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="global-variables"></a>全局变量
 Microsoft C 运行时库提供了以下全局变量或宏。 已弃用几个全局变量或宏，以便使用我们建议的更安全的函数版本，而非全局变量。  

@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: fc0ed4b45e04357fae46fb1391d55d184440f12d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: b332e392db2ca788d041cb73e73cf42cce85906c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Windows 应用商店应用程序、Windows 运行时和 C 运行时
 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 应用是在 [!INCLUDE[win8](../build/reference/includes/win8_md.md)] 上执行的 Windows 运行时中运行的程序。  Windows 运行时是一个控制函数、变量以及可用于 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 应用的资源的可信环境。 但依据设计，Windows 运行时限制会阻止在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 应用中使用大多数 C 运行库 (CRT) 功能。  

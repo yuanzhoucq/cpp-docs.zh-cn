@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mantissas, floating-point variables
 - type double
 - portability [C++], type double
 - double data type
 ms.assetid: 17c85b24-1475-4d41-a03c-ddf2d6561d34
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: aa4e81164a02774f7f9aa034f2c1a5492233600d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-double"></a>类型 double
 双精度类型的双精度值具有 8 个字节。 此格式类似于浮点格式，只不过该格式具有一个 11 位 excess-1023 指数和一个 52 位尾数以及隐含的高顺序 1 位。 此格式为双精度类型提供的范围大约介于 1.7E-308 和 1.7E+308 之间。  

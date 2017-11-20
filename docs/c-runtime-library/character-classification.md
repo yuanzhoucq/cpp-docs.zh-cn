@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.types.character
-dev_langs:
-- C++
+f1_keywords: c.types.character
+dev_langs: C++
 helpviewer_keywords:
 - character classification routines
 - characters, testing
 ms.assetid: 3b6c8f0b-9701-407a-b384-9086698773f5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: d238acf9bfe55052a1d6dc316f5425774737f9f2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="character-classification"></a>字符分类
 其中的每个例程均针对条件满意度测试指定的单字节字符、宽字符或多字节字符。 （根据定义，0 和 127 之间的 ASCII 字符集是所有多字节字符集的子集。 例如，日语的片假名包括 ASCII 以及非 ASCII 字符。）  

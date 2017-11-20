@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 5974e192e32c612fe995cbc736e703f6168a3e8d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-literal-concatenation"></a>字符串文本串联
 若要形成占用多行的字符串文本，则可以将两个字符串串联起来。 为此，请键入反斜杠，然后按 Return 键。 反斜杠将使编译器忽略以下换行符。 例如，字符串文本  

@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- sized integer types
+dev_langs: C++
+helpviewer_keywords: sized integer types
 ms.assetid: 0d6199b4-d0ab-4e8c-a769-785f5afb92eb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: db04c6862be26d5641a485c47ac7fd71b43d16fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 101c8facb8871d814d1a1ea05c2856d3105a8bfc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-sized-integer-types"></a>C 调整了大小的整型
 **Microsoft 专用**  
@@ -50,7 +32,7 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- 固定大小整数的前三种类型是大小相同的 ANSI 类型的同义词，用于编写在多个平台中具有相同的行为的可移植代码。 请注意，__int8 数据类型与 char 类型是同义词，\__int16 与 short 类型是同义词，\__int32 与 int 类型是同义词。 \__int64 类型没有等效的 ANSI 匹配项。  
+ 固定大小整数的前三种类型是大小相同的 ANSI 类型的同义词，用于编写在多个平台中具有相同的行为的可移植代码。 请注意，__int8 数据类型与 char 类型是同义词，\__int16 与 short 类型是同义词，\__int32 与 int 类型是同义词。\__int64 类型没有等效的 ANSI 匹配项。  
   
  **结束 Microsoft 专用**  
   

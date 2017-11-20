@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 8eeadc61c41d37247b08bdc8e3806da6d6200e4a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multithreaded-libraries-performance"></a>多线程库性能
 单线程的 CRT 不再可用。 本主题讨论如何从多线程库中获取最佳性能。  

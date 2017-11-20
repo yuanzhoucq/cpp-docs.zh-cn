@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators, types of
 - decrement operators, syntax
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: f5a6c98d53c73a6913c9ed8e63b2a1fce43b97d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>前缀增量和减量运算符
 当增量和减量运算符出现在操作数的前面时，一元运算符（`++` 和 **--**）称作“前缀”增量和减量运算符。 与前缀递增和递减相比，后缀递增和递减的优先级更高。 操作数必须具有整型、浮点型或指针类型且必须是可修改的左值表达式（不带 **const** 特性的表达式）。 结果为一个左值。  

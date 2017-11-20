@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, enumerations
 - define directive (#define), alternative to
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 90d3b0837adb2bd646ef39f4898377c41a030a81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-enumeration-declarations"></a>C 枚举声明
 枚举由一组命名整数常量构成。 枚举类型声明提供（可选）枚举标记的名称，并定义命名整数标识符集（称为“枚举集”、“枚举器常量”、“枚举器”或“成员”）。 具有枚举类型的变量存储该类型所定义的枚举集的值之一。  
@@ -52,7 +35,7 @@ ms.lasthandoff: 05/18/2017
   
 ## <a name="syntax"></a>语法  
  *enum-specifier*：  
-enum ****  identifier opt{ enumerator-list }  
+ enum  identifier opt{ enumerator-list }  
   
  **enum**  *identifier*  
   

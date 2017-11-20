@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.debug
-dev_langs:
-- C++
+f1_keywords: c.debug
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - macros, debugging with
@@ -19,31 +16,15 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], run-time routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 41e3f6151dc3bec38cd672deee681c37e090507f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 25bbbfae7e12154f9e64540ce9f5e8bdb7ebef42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debug-routines"></a>调试例程
 C 运行时库的调试版本提供了很多诊断服务，便于调试程序并允许开发人员执行以下操作：  

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - L-values
 - member-selection expressions
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 8c2d37d95a20ac2a71c50d468a7793ae4ab8956f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="l-value-and-r-value-expressions"></a>左值和右值表达式
 引用内存位置的表达式称为“左值”表达式。 左值表示存储区域的“locator”值或“left”值，并暗示它可以出现在等号 (**=**) 的左侧。 左值通常是标识符。  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C]
 - storage class specifiers, extern
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern 存储类说明符
 使用 `extern` 存储类说明符声明的变量是对名称与在程序的任何源文件的外部级别定义的名称相同的变量的引用。 内部 `extern` 声明用于使外部级别变量定义在块中可见。 除非在外部级别另有声明，否则使用 `extern` 关键字声明的变量仅在声明它的块中可见。  

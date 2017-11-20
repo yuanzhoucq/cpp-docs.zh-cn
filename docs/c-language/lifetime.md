@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - local variables, lifetime
 - variables, automatic
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - lifetime
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ac1e1904ea5b1d7280f614ec65af2be71f862104
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lifetime"></a>生存期
 “生存期”是其中存在变量或函数的程序执行的时段。 标识符的存储持续时间决定其生存期。  

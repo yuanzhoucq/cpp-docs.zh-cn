@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function prototypes
 - function return types, function prototypes
@@ -17,42 +15,27 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: a9f005b9a48cc3c09f1fce1803988dbfe9eaaf72
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: ceccc88737b90e8833c2a9e087dfa9540dfa13d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-prototypes"></a>函数原型
 函数声明位于函数定义之前，用来指定函数的名称、返回类型、存储类和其他特性。 若要作为原型，函数声明还必须为函数的参数确定类型和标识符。  
   
 ## <a name="syntax"></a>语法  
  `declaration`：  
-declaration-specifiers attribute-seq ** optinit-declarator-list opt;  
+ declaration-specifiers attribute-seq optinit-declarator-list opt;  
   
  /\* attribute-seq opt 是 Microsoft 专用的 */  
   
  *declaration-specifiers*：  
-storage-class-specifier declaration-specifiers ** opt  
+ storage-class-specifier declaration-specifiers opt  
   
  type-specifier declaration-specifiers opt  
   
@@ -69,10 +52,10 @@ storage-class-specifier declaration-specifiers ** opt
  declarator = initializer  
   
  `declarator`：  
-pointer ** optdirect-declarator  
+ pointer optdirect-declarator  
   
  direct-declarator: /\* 函数声明符 \*/  
-direct-declarator **  (  parameter-type-list  )  /* 新样式声明符 \*/  
+ direct-declarator  (  parameter-type-list  )  /* 新样式声明符 \*/  
   
  direct-declarator  (  identifier-list opt) /* 旧样式声明符 \*/  
   

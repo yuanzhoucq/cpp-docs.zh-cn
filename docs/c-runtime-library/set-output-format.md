@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_output_format
+apiname: _set_output_format
 apilocation:
 - msvcrt.dll
 - msvcr120.dll
@@ -22,8 +20,7 @@ apitype: DLLExport
 f1_keywords:
 - set_output_format
 - _set_output_format
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _TWO_DIGIT_EXPONENT constant
 - output formatting
@@ -31,31 +28,15 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 602f4460af0e08e6515fb4559bec2d49bbc56e75
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/07/2017
-
+ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 自定义格式化 I/O 函数使用的输出格式。  
@@ -81,7 +62,7 @@ unsigned int _set_output_format(
 ## <a name="remarks"></a>备注  
  `_set_output_format` 用于配置格式化 I/O 函数的输出，如 [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)。 目前，此函数可以更改的唯一格式设置约定是输出浮点数时在指数中显示的位数。  
   
- 默认情况下，即使不需要使用三位数来表示指数的值，由函数（例如 `printf_s`、 `wprintf_s`等）和 Visual C++ 标准 C 库中的相关函数输出浮点数也会打印表示指数值的三位数。 用零来填充此值，使其成为三位数。 利用 `_set_output_format` 可以更改此行为，这样就可以只打印指数中的两位数，除非指数的大小必需具有第三个数字。  
+ 默认情况下，即使不需要使用三位数来表示指数的值，由函数（例如 `printf_s`、 `wprintf_s`等）和 Visual C++ 标准 C 库中的相关函数输出浮点数也会打印表示指数值的三位数。 用零来填充此值，使其成为三位数。 利用`_set_output_format` 可以更改此行为，这样就可以只打印指数中的两位数，除非指数的大小必需具有第三个数字。  
   
  若要启用两位数指数，请使用参数 `_TWO_DIGIT_EXPONENT`调用此函数，如示例中所示。 若要禁用两位数指数，请使用参数 0 调用此函数。  
   

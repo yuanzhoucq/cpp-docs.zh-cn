@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,10 +15,8 @@ apilocation:
 - msvcr80.dll
 - msvcr100.dll
 apitype: DLLExport
-f1_keywords:
-- To
-dev_langs:
-- C++
+f1_keywords: To
+dev_langs: C++
 helpviewer_keywords:
 - to functions
 - string conversion, to different characters
@@ -29,30 +26,15 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0f4efaf826da7a2ff1ef5b9f21bc5e846751211b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="to-functions"></a>to 函数
 每个 **to** 函数及其关联的宏（如果有），将单个字符转换为另一个字符。  
@@ -75,7 +57,7 @@ ms.lasthandoff: 02/24/2017
 |`_toupper`|`_toupper`|将 `c` 转换为大写|  
 |`towupper`|无|将 c 转换为相应的宽字符大写字母|  
   
- 若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。  
+ 若要将  **的函数版本用于同时定义为宏的**  例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。  
   
  `__toascii` 例程集将除低顺序 7 位以外的所有 `c` 设置为 0，使转换后的值表示 ASCII 字符集中的字符。 如果 `c` 已表示 ASCII 字符，则 `c` 保持不变。  
   

@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Controlling Streams
-dev_langs:
-- C++
+f1_keywords: Controlling Streams
+dev_langs: C++
 helpviewer_keywords:
 - streams, controlling
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="controlling-streams"></a>控制流
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) 返回 `FILE` 类型的对象的地址。 您可以将此地址用作多个库函数的 `stream` 参数以对打开的文件执行各种操作。 对于字节流，会像通过调用 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。 对于宽流，会像通过调用 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。  

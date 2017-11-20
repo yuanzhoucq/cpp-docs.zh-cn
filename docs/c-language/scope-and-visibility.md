@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - scope, levels
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-and-visibility"></a>范围和可见性
 标识符的“可见性”确定其可以引用的程序部分，即其“范围”。 标识符仅在其“范围”包含的程序部分中可见（即可使用），这可能仅限于（按限制增长的顺序）它显示在其中的文件、函数、块或函数原型。 标识符的范围是可使用名称的程序的一部分。 这有时被称为“词法范围”。 有四种范围：函数、文件、块和函数原型。  

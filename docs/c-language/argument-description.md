@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - envp argument
 - main function, syntax
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4876d2b05f7124a12976e87022700f9be660b8fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="argument-description"></a>自变量说明
 main 和 wmain 函数中的 `argc` 形参是一个整数，用来指定从命令行传递到程序的实参的数量。 由于程序名被视为实参，因此 `argc` 的值至少有一个。  

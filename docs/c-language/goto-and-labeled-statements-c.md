@@ -4,58 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- goto
-dev_langs:
-- C++
+f1_keywords: goto
+dev_langs: C++
 helpviewer_keywords:
 - labeled statement
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 2e42906c932375ec62597868f7c106712bd25cbc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: ab5bfa5b145f698b1c93c4a494802cd63bbcfb04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和标记语句 (C)
 `goto` 语句将控制权转交给一个标签。 给定标签必须位于同一函数中，并且只可以出现在同一函数中的一个语句前面。  
   
 ## <a name="syntax"></a>语法  
  statement：  
-labeled-statement **  
+ labeled-statement  
   
  jump-statement  
   
  *jump-statement*:  
-goto ****  identifier  ;  
+ goto  identifier  ;  
   
  *labeled-statement*:  
-identifier **  :  statement  
+ identifier  :  statement  
   
  语句标签仅对 `goto` 语句有意义；在任何其他上下文中，在不考虑标签的情况下执行已标记的语句。  
   

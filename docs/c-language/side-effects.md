@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - expression evaluation, side effects
 - side effects in expression evaluation
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 687a5ad1327e1a36a2b854c8a3fcb03d8f45e104
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="side-effects"></a>副作用
 表达式的计算顺序由特定实现定义，但语言保证特定的计算顺序时除外（如[计算的优先级和顺序](../c-language/precedence-and-order-of-evaluation.md)中概述）。 例如，下列函数调用中将出现副作用：  

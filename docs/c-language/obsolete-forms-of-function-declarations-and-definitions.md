@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- old style function declarations
+dev_langs: C++
+helpviewer_keywords: old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 0fb3006cb92184ad7338b1d13b1d0559a39aa69d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>函数声明和定义的过时形式
 旧式函数声明和定义使用与 ANSI C 标准建议的语法略微不同的规则来声明参数。 首先，旧式声明不具有参数列表。 第二，在函数定义中，列出了参数，但未在参数列表中声明其类型。 类型声明在构成函数主体的复合语句之前。 该旧式语法已过时，不应在新代码中使用。 但仍支持使用旧式语法的代码。 此示例阐释声明和定义的过时形式：  

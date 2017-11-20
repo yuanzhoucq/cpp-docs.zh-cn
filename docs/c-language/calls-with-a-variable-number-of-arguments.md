@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - arguments [C++], variable number of
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 10f2eb4597808f726d55c3ece76b99c394d691c3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>使用数目可变的自变量调用
 部分参数列表可由省略号表示法（一个逗号后跟三个句点 (, ...) 终止，以指示可能有多个自变量传递给函数，但没有有关这些自变量的详细信息。 对此类自变量不执行类型检查。 省略号表示法前面必须至少有一个参数，并且省略号表示法必须是参数列表中的最后一个标记。 如果没有省略号表示法，当函数收到除参数列表中声明的参数以外的参数时，该函数的行为是不确定的。  

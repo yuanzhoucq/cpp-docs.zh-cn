@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C], assignment
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 8771aba4328cef785347712f037ea21c5a46cfad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-compound-assignment"></a>C 复合赋值
 复合赋值运算符将简单赋值运算符与另一个二元运算符相结合。 复合赋值运算符执行其他运算符指定的运算，然后将结果赋给左操作数。 例如，一个复合赋值表达式，如  

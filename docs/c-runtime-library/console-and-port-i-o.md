@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -20,30 +17,15 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f252a10b0d340b6fceac2c2372cdf991764c83c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="console-and-port-io"></a>控制台和端口 I/O
 这些例程在控制台或指定端口上读写。 控制台 I/O 例程与流 I/O 或低级 I/O 库例程不兼容。 在执行 I/O 前，不必打开或关闭控制台或端口，因此此类别中没有打开或关闭例程。 在 Windows 操作系统中，来自这些函数的输出始终将定向到控制台，且无法重定向。  

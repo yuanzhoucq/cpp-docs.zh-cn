@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.math
-dev_langs:
-- C++
+f1_keywords: c.math
+dev_langs: C++
 helpviewer_keywords:
 - floating-point numbers, math routines
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 60a2131b08b9f0ac119bdcd414f2d4d1761a9b6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 3c30aa62fb24f1536c865b43e8147d030efc4c58
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="floating-point-support"></a>浮点支持
 Microsoft C 运行时库 (CRT) 提供了许多浮点数学库函数，包括 ISO C99 所需的所有函数。 这些函数的实现是为了平衡性能与正确性。 因为产生正确舍入的结果可能成本过高，这些函数旨在有效地生成接近正确舍入结果的近似结果。 在大多数情况下，虽然可能存在误差较大的情况，但生成的结果在正确舍入结果的 + /-1 ulp 范围内。  

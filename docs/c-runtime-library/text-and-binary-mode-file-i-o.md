@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -24,30 +21,15 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: a788242344c7cb3b89765e7476fdd23dbf68982d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 0bd2eb90ad8498daa318ffecacd7b32f3f3d3eca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="text-and-binary-mode-file-io"></a>文本和二进制模式文件 I/O
 文件 I/O 操作将在文本或二进制这两种转换模式之一中进行，具体取决于文件时在哪种模式下打开的。 数据文件通常在文本模式下处理。 若要控制文件转换模式，可以：  

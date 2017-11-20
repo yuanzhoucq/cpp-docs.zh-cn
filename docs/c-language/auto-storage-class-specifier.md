@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 5e80f6057a26ba7655df0a04d75dcaec2c4856ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="auto-storage-class-specifier"></a>auto 存储类说明符
 auto 存储类说明符可声明自动变量，即具有本地生存期的变量。 auto 变量仅在声明它的块中可见。 auto 变量的声明可包含初始值设定项，如[初始化](../c-language/initialization.md)中所述。 由于具有 auto 存储类的变量不会自动初始化，因此应该在声明这些变量时对其进行显式初始化，或在块的语句中为其分配初始值。 未初始化的 auto 变量的值是不确定的。 （如果给定了初始值设定项，则每次 auto 或 register 存储类的局部变量进入此范围时都会被初始化。）  

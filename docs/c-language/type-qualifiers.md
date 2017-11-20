@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - volatile keyword [C], type qualifier
 - type qualifiers
@@ -19,30 +17,15 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 491ff4d2b6b1507680f9ad40f73e0055da638204
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: c4fad93505a5778c23171b413654624a32e825b2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-qualifiers"></a>类型限定符
 类型限定符为标识符提供两个属性之一。 const 类型限定符将对象声明为不可修改。 `volatile` 类型限定符声明一个项，该项的值可由超出该项所在的程序控制范围的某个项（如并发执行的线程）合理更改。  
@@ -65,7 +48,7 @@ float f, const cf;
   
 ## <a name="syntax"></a>语法  
  *type-qualifier*:  
-constvolatile ****  
+ constvolatile  
   
  以下是合法的 const 和 `volatile` 声明：  
   
@@ -81,7 +64,7 @@ int volatile vint;     /* Volatile integer        */
   
  此列表描述如何使用 const 和 `volatile`。  
   
--   const 关键字可用于修改任何基本或聚合类型、指向任何类型的对象的指针或 `typedef`。 如果仅使用 const 类型限定符声明项，则项的类型将被当成 const int。 可以初始化 const 变量，也可以将该变量置于存储的只读区域中。 const 关键字对于声明指向 const 的指针很有用，因为这需要函数不以任何方式更改指针。  
+-   const 关键字可用于修改任何基本或聚合类型、指向任何类型的对象的指针或 `typedef`。 如果仅使用 const 类型限定符声明项，则项的类型将被当成 const int。可以初始化 const 变量，也可以将该变量置于存储的只读区域中。 const 关键字对于声明指向 const 的指针很有用，因为这需要函数不以任何方式更改指针。  
   
 -   编译器假定可通过使用或修改 `volatile` 变量的值未知过程来访问该变量（在程序中的任意未知）。 因此，无论是否在命令行上指定优化，都必须为对 `volatile` 变量的每个分配或引用生成代码，即使它似乎不起作用。  
   

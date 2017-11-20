@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, typedef
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: b830afd21fafa487c006c1a6035ffdce0bc8dd7c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: daffef64ab4c212a9688b05e450f226519869f7d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="typedef-declarations"></a>Typedef 声明
 typedef 声明是具有作为存储类的 typedef 的声明。 声明符将成为新类型。 您可以使用 typedef 声明为已由 C 定义的类型或您已声明的类型构造更短和更有意义的名称。 利用 Typedef 名称，您可以封装可能会发生更改的实现详细信息。  
@@ -47,10 +30,10 @@ typedef 声明是具有作为存储类的 typedef 的声明。 声明符将成�
   
 ## <a name="syntax"></a>语法  
  `declaration`：  
-declaration-specifiers init-declarator-list ** opt;  
+ declaration-specifiers init-declarator-list opt;  
   
  *declaration-specifiers*：  
-storage-class-specifier declaration-specifiers ** opt  
+ storage-class-specifier declaration-specifiers opt  
   
  type-specifier declaration-specifiers opt  
   
@@ -184,6 +167,5 @@ void box( int, int );
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-
 
 

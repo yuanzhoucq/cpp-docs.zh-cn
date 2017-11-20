@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - relational operators, syntax
 - equality operator
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 31d7b7a4725c6c956ad5acf647ad6224585f9d24
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 5b1581fe5a952d1ea8e78f29e606af5ac148f3b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-relational-and-equality-operators"></a>C 关系和相等运算符
 二元关系运算符和相等运算符将其第一个操作数与其第二个操作数进行比较以测试指定关系的有效性。 如果测试的关系为 true，则关系表达式的结果为 1；如果测试的关系为 false，则关系表达式的结果为 0。 结果的类型为 `int`。  
