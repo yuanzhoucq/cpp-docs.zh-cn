@@ -1,35 +1,34 @@
 ---
-title: "Menu Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.menu.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resource editors, Menu editor"
-  - "editors, menus"
-  - "Menu editor"
-  - "menus, Menu editor"
+title: "菜单编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.menu.F1
+dev_langs: C++
+helpviewer_keywords:
+- resource editors, Menu editor
+- editors, menus
+- Menu editor
+- menus, Menu editor
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 58d4813135cfea1bbf4ee3e8df928130ae33100f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Menu Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="menu-editor"></a>菜单编辑器
 使用菜单，可以按照逻辑方式和易于查找的方式排列命令。 使用菜单编辑器，可以通过直接使用与已完成应用程序中非常相似的菜单栏来创建和编辑菜单。  
   
- 对于 Visual C\+\+ 项目，可以使用菜单编辑器执行以下操作：  
+ 对于 Visual C++ 项目，可以使用菜单编辑器执行以下操作：  
   
 -   [创建菜单](../windows/creating-a-menu.md)  
   
@@ -61,16 +60,17 @@ caps.handback.revision: 9
     >  使用菜单编辑器时，在许多情况下可以单击鼠标右键以显示常用命令的快捷菜单。 可用命令取决于指针所指向的内容。  
   
     > [!NOTE]
-    >  对于 Microsoft 基础类库 \(MFC\) 程序和 ATL 程序，可以使用代码向导将菜单命令与代码挂钩。 有关更多信息，请参阅 [添加事件](../ide/adding-an-event-visual-cpp.md)。  
+    >  对于 Microsoft 基础类库 (MFC) 程序和 ATL 程序，可以使用代码向导将菜单命令与代码挂钩。 有关更多信息，请参阅 [添加事件](../ide/adding-an-event-visual-cpp.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南”[](../Topic/Resources%20in%20Desktop%20Apps.md)中的*应用程序中的资源*。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  Win32  
   
-## 请参阅  
- [Working with Resource Files](../mfc/working-with-resource-files.md)   
- [Resource Editors](../mfc/resource-editors.md)   
- [用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)   
+## <a name="see-also"></a>另请参阅  
+ [使用资源文件](../windows/working-with-resource-files.md)   
+ [资源编辑器](../windows/resource-editors.md)   
+ [用户界面对象和命令 Id](../mfc/user-interface-objects-and-command-ids.md)   
  [菜单](../mfc/menus-mfc.md)   
  [菜单](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
+

@@ -1,43 +1,41 @@
 ---
-title: "编译器错误 C3535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3535"
+title: "编译器错误 C3535 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3535
+dev_langs: C++
+helpviewer_keywords: C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ab054ceefa51ab944e2d048996e25559b0c86ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器错误 C3535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-无法从“type2”推导“type1”的类型  
+# <a name="compiler-error-c3535"></a>编译器错误 C3535
+无法推导出的类型 type1 从 type2  
   
- 无法从初始化表达式的类型推导 `auto` 关键字所声明的变量的类型。  例如，如果初始化表达式的结果为 `void`（不是类型），则会产生此错误。  
+ 声明的变量的类型`auto`无法从初始化表达式的类型推导关键字。 例如，此错误发生的初始化表达式的计算结果为`void`，这不是类型。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  确保初始化表达式的类型不是 `void`。  
+1.  确保初始化表达式的类型不是`void`。  
   
-2.  确保声明不是指向基本类型的指针。  有关详细信息，请参阅[基本类型](../../cpp/fundamental-types-cpp.md)。  
+2.  确保声明不是指向基本类型的指针。 有关详细信息，请参阅[基本类型](../../cpp/fundamental-types-cpp.md)。  
   
-3.  如果声明是指向某个类型的指针，确保初始化表达式是指针类型。  
+3.  请确保如果该声明是指向类型的指针，初始化表达式是指针类型。  
   
-## 示例  
- 下面的示例会产生 C3535，因为初始化表达式的结果为 `void`。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3535，因为初始化表达式的计算结果为`void`。  
   
 ```  
 // C3535a.cpp  
@@ -50,8 +48,8 @@ int main()
 }  
 ```  
   
-## 示例  
- 下面的示例会产生 C3535，因为该语句将变量 `x` 声明为指向推导类型的指针，但初始值设定项表达式的类型为 double。  因此，编译器无法推导该变量的类型。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3535，因为该语句声明变量`x`作为指向推导出的类型，但初始值设定项的类型的表达式进行双。 因此，编译器无法推导变量类型。  
   
 ```  
 // C3535b.cpp  
@@ -63,8 +61,8 @@ int main()
 }  
 ```  
   
-## 示例  
- 下面的示例会产生 C3535，因为变量 `p` 声明一个指向推导类型的指针，但初始化表达式不是指针类型。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3535，因为变量`p`声明指针指向推导出的类型，但初始化表达式不是指针类型。  
   
 ```  
 // C3535c.cpp  
@@ -74,6 +72,6 @@ A x;
 auto *p = x;  // C3535  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)   
  [基本类型](../../cpp/fundamental-types-cpp.md)

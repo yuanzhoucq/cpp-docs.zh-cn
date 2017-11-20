@@ -1,34 +1,33 @@
 ---
-title: "如何：从 Windows 注册表中读取数据 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "注册表, 读取"
-  - "Visual C++, 从 Windows 注册表中读取"
+title: "如何： 从 Windows 注册表中读取数据 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, reading from Windows Registry
+- registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25ab4b9cdba5a9a71d1258960e4da89d2d5e657d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：从 Windows 注册表中读取数据 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例使用 <xref:Microsoft.Win32.Registry.CurrentUser> 项从 Windows 注册表中读取数据。  首先，使用 <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> 方法枚举子项，然后使用 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 方法打开标识子项。  与根项一样，每个子项由 <xref:Microsoft.Win32.RegistryKey> 类来表示。  最后，使用新的 <xref:Microsoft.Win32.RegistryKey> 对象来枚举项\/值对。  
+# <a name="how-to-read-data-from-the-windows-registry-ccli"></a>如何：从 Windows 注册表中读取数据 (C++/CLI)
+下面的代码示例使用<xref:Microsoft.Win32.Registry.CurrentUser>键以从 Windows 注册表中读取数据。 首先，使用枚举子项<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>使用打开方法，然后标识子项<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>方法。 与根键中，每个子项都由<xref:Microsoft.Win32.RegistryKey>类。 最后，使用新<xref:Microsoft.Win32.RegistryKey>对象用于枚举的键/值对。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // registry_read.cpp  
@@ -67,14 +66,14 @@ int main( )
 }  
 ```  
   
-## 备注  
- <xref:Microsoft.Win32.Registry> 类仅仅是 <xref:Microsoft.Win32.RegistryKey> 的静态实例的一个容器。  每个实例表示一个根注册表节点。  这些实例为 <xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine> 和 <xref:Microsoft.Win32.Registry.Users>。  
+## <a name="remarks"></a>备注  
+ <xref:Microsoft.Win32.Registry>类是只是静态的实例的容器<xref:Microsoft.Win32.RegistryKey>。 每个实例表示的根注册表节点。 两个实例<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。  
   
- 除了为静态实例之外，<xref:Microsoft.Win32.Registry> 类中的对象为只读对象。  而且，为了访问注册表对象的内容而创建的 <xref:Microsoft.Win32.RegistryKey> 类的实例也是只读实例。  有关如何重写此行为的示例，请参见 [如何：将数据写入 Windows 注册表](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。  
+ 除了为静态中的对象<xref:Microsoft.Win32.Registry>类是只读的。 此外，实例的<xref:Microsoft.Win32.RegistryKey>类创建的用于访问注册表的内容对象也是只读的。 有关如何重写此行为的示例，请参阅[如何： 将数据写入到 Windows 注册表 (C + + /cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)。  
   
- <xref:Microsoft.Win32.Registry> 类中有两个附加对象：<xref:Microsoft.Win32.Registry.DynData> 和 <xref:Microsoft.Win32.Registry.PerformanceData>。  这两个对象都是 <xref:Microsoft.Win32.RegistryKey> 类的实例。  <xref:Microsoft.Win32.Registry.DynData> 对象包含动态注册表信息，这些信息仅在 Windows 98 和 Windows Me 中受支持。  <xref:Microsoft.Win32.Registry.PerformanceData> 对象可用于访问使用 Windows 性能监视系统的应用程序的性能计数器信息。  <xref:Microsoft.Win32.Registry.PerformanceData> 节点表示的信息实际上并不存储于注册表中，因此不能使用 Regedit.exe 进行查看。  
+ 有两个其他对象<xref:Microsoft.Win32.Registry>类：<xref:Microsoft.Win32.Registry.DynData>和<xref:Microsoft.Win32.Registry.PerformanceData>。 都的实例<xref:Microsoft.Win32.RegistryKey>类。 <xref:Microsoft.Win32.Registry.DynData>对象包含动态注册表信息，仅支持在 Windows 98 和 Windows me。 <xref:Microsoft.Win32.Registry.PerformanceData>对象可用来访问使用 Windows 性能监视系统的应用程序的性能计数器信息。 <xref:Microsoft.Win32.Registry.PerformanceData>节点表示不实际存储在注册表中，因此不能使用 Regedit.exe 的信息。  
   
-## 请参阅  
- [如何：将数据写入 Windows 注册表](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [如何： 将数据写入到 Windows 注册表 (C + + /cli CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

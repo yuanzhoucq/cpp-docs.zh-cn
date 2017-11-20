@@ -1,45 +1,43 @@
 ---
-title: "stack::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 成员 [STL/CLR]"
+title: "stack::assign (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 18cc35ad-23cf-4a5a-adae-d967dc5d6980
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 11214550141cc32c589ef090c48775390bc26627
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# stack::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackassign-stlclr"></a>stack::assign (STL/CLR)
 替换所有元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void assign(stack<Value, Container>% right);  
 ```  
   
-#### 参数  
- right  
- 插入容器适配器。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 要插入的容器适配器。  
   
-## 备注  
- 成员函数分配 `right``.get_container()`给基础容器。  使用它更改堆叠的整个内容。  
+## <a name="remarks"></a>备注  
+ 成员函数将指派`right.get_container()`到基础的容器。 你可以使用它来更改堆栈的全部内容。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_stack_assign.cpp   
@@ -70,13 +68,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 要求  
- **标头:** \<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/堆栈 >  
   
-## 请参阅  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [堆栈 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

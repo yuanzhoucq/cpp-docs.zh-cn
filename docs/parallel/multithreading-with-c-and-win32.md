@@ -1,58 +1,58 @@
 ---
-title: "使用 C 和 Win32 进行多线程编程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "多线程处理 [C++], C 和 Win32"
-  - "线程处理 [C]"
-  - "线程处理 [C++], C 和 Win32"
-  - "Visual C, 多线程处理"
-  - "Win32 [C++], 多线程处理"
-  - "Win32 应用程序 [C++], 多线程处理"
-  - "Windows API [C++], 多线程处理"
+title: "多线程处理使用 C 和 Win32 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows API [C++], multithreading
+- multithreading [C++], C and Win32
+- Visual C, multithreading
+- Win32 applications [C++], multithreading
+- threading [C++], C and Win32
+- Win32 [C++], multithreading
+- threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 C 和 Win32 进行多线程编程
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Visual C\+\+ 支持在 Microsoft Windows（Windows XP、Windows 2000、Windows NT、Windows Me 和 Windows 98）下创建多线程应用程序。  如果您的应用程序需要管理多个活动（如同时进行键盘和鼠标输入），则您应当考虑使用多线程。  一个线程可以处理键盘输入，而另一个线程可以筛选鼠标活动。  第三个线程可以根据鼠标和键盘线程的数据更新显示屏幕。  同时，其他线程可以访问磁盘文件或从通信端口获取数据。  
+# <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 进行多线程编程
+Microsoft Visual c + + 用于与 Microsoft Windows 一起创建多线程应用程序提供支持： Windows XP、 Windows 2000、 Windows NT、 Windows Me，和 Windows 98。 你应考虑使用多个线程，如果你的应用程序需要管理多个活动，如同时键盘和鼠标输入。 一个线程可以处理键盘输入，而第二个线程筛选鼠标活动。 第三个线程可以更新显示屏幕基于数据的鼠标和键盘线程。 同时，其他线程可以访问磁盘文件或从通信端口中获取数据。  
   
- 使用 Visual C\+\+ 的多线程编程有两种方式：使用 Microsoft 基础类库 \(MFC\)，或使用 C 运行库和 Win32 API。  有关使用 MFC 创建多线程应用程序的信息，请先阅读以下使用 C 进行多线程处理的主题，再参见[使用 C\+\+ 和 MFC 进行多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)。  
+ 使用 Visual c + + 中，有两个程序与多个线程的方法： 使用 Microsoft 基础类 (MFC) 库或 C 运行时库和 Win32 API。 有关使用 MFC 创建多线程应用程序的信息，请参阅[与 c + + 和 MFC 的多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)之后读取以下有关 C 中的多线程处理的主题  
   
- 这些主题介绍 Visual C\+\+ 中支持创建多线程程序的功能。  
+ 这些主题说明了支持创建多线程程序中 Visual c + + 的功能。  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
--   [关于多线程处理](../parallel/multithread-programs.md)  
+-   [什么多线程处理即将](../parallel/multithread-programs.md)  
   
--   [多线程处理的库支持](../parallel/library-support-for-multithreading.md)  
+-   [库支持多线程处理](../parallel/library-support-for-multithreading.md)  
   
--   [包含用于多线程处理的文件](../parallel/include-files-for-multithreading.md)  
+-   [包含文件中的多线程处理](../parallel/include-files-for-multithreading.md)  
   
--   [线程控制的 C 运行库函数](../parallel/c-run-time-library-functions-for-thread-control.md)  
+-   [线程控制的 C 运行时库函数](../parallel/c-run-time-library-functions-for-thread-control.md)  
   
--   [C 语言示例多线程程序](../parallel/sample-multithread-c-program.md)  
+-   [示例在 C 中的多线程程序](../parallel/sample-multithread-c-program.md)  
   
 -   [编写多线程 Win32 程序](../parallel/writing-a-multithreaded-win32-program.md)  
   
 -   [编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)  
   
--   [避免多线程程序易出现的问题](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
+-   [避免与多线程程序问题](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
   
--   [线程本地存储 \(TLS\)](../parallel/thread-local-storage-tls.md)  
+-   [线程本地存储区 (TLS)](../parallel/thread-local-storage-tls.md)  
   
-## 请参阅  
- [针对旧代码的多线程支持 \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [针对旧代码的多线程支持 (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

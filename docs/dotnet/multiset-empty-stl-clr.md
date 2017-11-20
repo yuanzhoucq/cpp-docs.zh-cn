@@ -1,41 +1,39 @@
 ---
-title: "multiset::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成员 [STL/CLR]"
+title: "multiset:: empty (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 59ec9cc4-cc72-4082-9ab2-49b49980e681
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289c885269c9c40690e58c33d481e4a4081eda00
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetempty-stlclr"></a>multiset::empty (STL/CLR)
 测试元素是否存在。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 bool empty();  
 ```  
   
-## 备注  
- 由一个空序列控制，则成员函数返回 true。  它等效于[multiset::size](../dotnet/multiset-size-stl-clr.md)`() == 0`。  您可用它测试多集是否为空。  
+## <a name="remarks"></a>备注  
+ 对于空受控序列，该成员函数返回 true。 它相当于[multiset:: size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`。 用于测试是否多重集合为空。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multiset_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::size](../dotnet/multiset-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)

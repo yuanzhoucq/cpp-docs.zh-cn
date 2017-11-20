@@ -1,50 +1,48 @@
 ---
-title: "wctrans | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctrans"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctrans"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字符代码, wctrans"
-  - "字符, 代码"
-  - "字符, 转换"
-  - "wctrans 函数"
+title: "wctrans | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: wctrans
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords: wctrans
+dev_langs: C++
+helpviewer_keywords:
+- character codes, wctrans
+- characters, codes
+- characters, converting
+- wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6b22ed97755b150831282c517b9bf98851da9003
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# wctrans
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-确定映射从一组字符代码到另一个。  
+# <a name="wctrans"></a>wctrans
+确定一组字符代码到另一组之间的映射。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 wctrans_t wctrans(  
@@ -52,32 +50,32 @@ wctrans_t wctrans(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `property`  
- 指定一个有效的转换的字符串。  
+ 指定一个有效转换的字符串。  
   
-## 返回值  
- 如果当前区域设置的 `LC_CTYPE` 类别不定义名称与属性字符串 `property`的映射，函数返回零。  否则，返回一个非零值都作为第二个参数。随后调用到 [towctrans](../../c-runtime-library/reference/towctrans.md)。  
+## <a name="return-value"></a>返回值  
+ 如果当前区域设置的 `LC_CTYPE` 类别未定义其名称与属性字符串 `property` 匹配的映射，则函数将返回零。 否则，它将返回一个适合用作对 [towctrans](../../c-runtime-library/reference/towctrans.md) 的后续调用的第二个参数的非零值。  
   
-## 备注  
- 函数确定映射从一组字符代码到另一个。  
+## <a name="remarks"></a>备注  
+ 此函数确定一组字符代码到另一组之间的映射。  
   
- 以下对调用具有相同的行为在所有区域设置中，但定义其他映射 \(“C”区域设置可能适用：  
+ 以下调用对在所有区域设置中具有相同的行为（但可以定义其他映射，甚至在“C”区域设置中）：  
   
-|功能|和相同。|  
-|--------|----------|  
+|函数|与以下项相同|  
+|--------------|-------------|  
 |`tolower(`  `c`  `)`|`towctrans(`  `c` `, wctrans("towlower" ) )`|  
 |`towupper(`  `c`  `)`|`towctrans(`  `c` `, wctrans( "toupper" ) )`|  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`wctrans`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`wctrans`|\<wctype.h>|  
   
- 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // crt_wctrans.cpp  
@@ -106,10 +104,13 @@ int main()
 }  
 ```  
   
-  **97**  
-**1**  
-**0**  
-**65**   
-## 请参阅  
+```Output  
+97  
+1  
+0  
+65  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

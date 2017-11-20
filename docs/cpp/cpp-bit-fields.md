@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 71f70995cf1a59153a380f0e22f0321fd59abee0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 01a346054fff0f8f3a9a1407c17e28e8dc234a57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-bit-fields"></a>C++ 位域
 类和结构可包含比整型类型占用更少存储空间的成员。 这些成员被指定为位域。 位域的语法*成员声明符*规范如下所示：  
@@ -84,7 +81,7 @@ struct Date {
   
  则内存布局如下图中所示。  
   
- ![与零 & #45 的 Date 对象的布局; 长度位域](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![与零 &#45;的 Date 对象的布局; 长度位域](../cpp/media/vc38uq2.png "vc38UQ2")  
 带有零长度位域的数据对象的布局  
   
  位域的基础类型必须是整数类型、 中所述[基本类型](../cpp/fundamental-types-cpp.md)。  

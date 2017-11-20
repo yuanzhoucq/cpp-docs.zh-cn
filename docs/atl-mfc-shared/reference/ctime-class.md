@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -28,36 +27,20 @@ f1_keywords:
 - ATLTIME/ATL::CTime::GetTime
 - ATLTIME/ATL::CTime::GetYear
 - ATLTIME/ATL::CTime::Serialize64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 22e488a1c5760c342ce79c42cd8a48c911715b23
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 5b341ba3397841c21f7c2c71359b8cd5ccd3e8ae
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="ctime-class"></a>CTime 类
 表示绝对时间和日期。  
@@ -104,14 +87,14 @@ class CTime
 |[运算符 +-](#operator_add_-)|这些运算符加法和减法`CTimeSpan`和`CTime`对象。|  
 |[运算符 + =、 =](#operator_add_eq_-_eq)|这些运算符加法和减法`CTimeSpan`对象与其他这`CTime`对象。|  
 |[运算符 =](#operator_eq)|赋值运算符中。|  
-|[运算符 = =、< ,="">](#ctime_comparison_operators)|比较运算符。|  
+|[运算符 = =、 < 等。](#ctime_comparison_operators)|比较运算符。|  
   
 ## <a name="remarks"></a>备注  
  `CTime`没有基类。  
   
  `CTime`值基于协调世界时 (UTC)，这等同于协调世界时 （格林威治标准时间，格林威治标准时间）。 请参阅[时间管理](../../c-runtime-library/time-management.md)有关如何确定时区信息。  
   
- 当你创建`CTime`对象，设置`nDST`参数设为 0 以指示该标准时间有效时，是为大于 0 来指示值该夏时制为有效时，或为一个值小于零 C 运行时库代码计算是否是标准时间还是夏令时有效。 `tm_isdst` 是必填字段。 如果未设置，未定义其值和返回值从[mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)是不可预知的。 如果`timeptr`指向返回上次调用 tm 结构[asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)， [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)，或[localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)、`tm_isdst`字段包含正确的值。  
+ 当你创建`CTime`对象，设置`nDST`参数为 0 来指示标准时间是在起作用，或到的值大于 0 来指示该夏时制是否生效，或为一个值小于零 C 运行时库代码计算机e 是否是标准时间还是夏令时有效。 `tm_isdst` 是必填字段。 如果未设置，未定义其值和返回值从[mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)是不可预知的。 如果`timeptr`指向返回上次调用 tm 结构[asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)， [_gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)，或[localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)、`tm_isdst`字段包含正确的值。  
   
  伴生类， [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)，表示一个时间间隔。  
   
@@ -126,7 +109,7 @@ class CTime
 >  `CTime`结构从 MFC 7.1 更改为 MFC 8.0。 如果序列化`CTime`结构使用`operator <<`在 MFC 8.0 或更高版本下，生成的文件不会在较旧版本的 MFC 可读。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atltime.h  
+ **标头：** atltime.h  
   
 ##  <a name="ctime_comparison_operators"></a>CTime 比较运算符  
  比较运算符。  
@@ -148,7 +131,7 @@ bool operator>=(CTime time) const throw();
  这些运算符比较两个绝对时间，并返回**true**如果条件为 true; 否则为**false**。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
   
 ##  <a name="ctime"></a>CTime::CTime  
  创建一个新`CTime`对象初始化为指定的时间。  
@@ -170,14 +153,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
  `time`  
  A **__time64_t**时间值，该值是 UTC 1970 年 1 月 1 日之后的秒数。 请注意这将调整为你的本地时间。 例如，如果你位于纽约，创建`CTime`对象将为 0，参数传递[CTime::GetMonth](#getmonth)将返回 12。  
-  
- 在 Visual c + + 6.0 版和更早版本，`time`是一个值的`time_t`。 Visual c + +.NET 和更高版本将转换`time_t`参数**__time64_t**。  
+
   
  `nYear`, `nMonth`, `nDay`, `nHour`, `nMin`, `nSec`  
  指示要复制到新的日期和时间值`CTime`对象。  
   
  `nDST`  
- 指示夏令时是否有效。 可以具有三个值之一︰  
+ 指示夏令时是否有效。 可以具有三个值之一：  
   
 - `nDST`设置为 0Standard 时间将发挥作用。  
   
@@ -198,15 +180,15 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
  包含当前本地时间的 DBTIMESTAMP 结构引用。  
   
 ### <a name="remarks"></a>备注  
- 下面描述了每个构造函数︰  
+ 下面描述了每个构造函数：  
   
 - **CTime();**构造未经初始化即`CTime`对象。 此构造函数允许你定义`CTime`对象数组。 在使用之前的有效时间与此类阵列，你应将其初始化。  
   
-- **CTime (const CTime.);**构造`CTime`从另一个对象`CTime`值。  
+- **CTime (const CTime （& a));**构造`CTime`从另一个对象`CTime`值。  
   
 - **CTime (__time64_t);**构造`CTime`对象**__time64_t**类型。 此构造函数需要 UTC 时间，并将结果存储在之前将结果转换为本地时间。  
   
-- **CTime （int、 int、...）;**构造`CTime`从本地时间与每个组件的组件的对象限制为以下范围︰  
+- **CTime （int、 int、...）;**构造`CTime`从本地时间与每个组件的组件的对象限制为以下范围：  
   
     |组件|范围|  
     |---------------|-----------|  
@@ -221,17 +203,17 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
 - **CTime （WORD、 WORD）;**构造`CTime`从指定的 MS-DOS 日期和时间值的对象。 此构造函数需要本地时间。  
   
-- **CTime (const SYSTEMTIME.);**构造`CTime`对象`SYSTEMTIME`结构。 此构造函数需要本地时间。  
+- **CTime (const SYSTEMTIME （& a));**构造`CTime`对象`SYSTEMTIME`结构。 此构造函数需要本地时间。  
   
-- **CTime (const FILETIME.);**构造`CTime`对象`FILETIME`结构。 你最有可能将不会使用`CTime FILETIME`直接初始化。 如果你使用`CFile`对象操作文件，`CFile::GetStatus`为你通过检索文件时间戳`CTime`使用初始化对象`FILETIME`结构。 此构造函数采用基于 UTC 的时间，并自动将值转换为本地时间，并将结果存储之前。  
+- **CTime (const FILETIME （& a));**构造`CTime`对象`FILETIME`结构。 你最有可能将不会使用`CTime FILETIME`直接初始化。 如果你使用`CFile`对象操作文件，`CFile::GetStatus`为你通过检索文件时间戳`CTime`使用初始化对象`FILETIME`结构。 此构造函数采用基于 UTC 的时间，并自动将值转换为本地时间，并将结果存储之前。  
   
     > [!NOTE]
     >  构造函数使用**DBTIMESTAMP**参数包含 OLEDB.h 时才可用。  
   
- 有关详细信息，请参阅[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)和[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)结构[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 另请参阅[MS-DOS 日期和时间](http://msdn.microsoft.com/library/windows/desktop/ms724503)中的条目[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
+ 有关详细信息，请参阅[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)和[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Windows SDK 中的结构。 另请参阅[MS-DOS 日期和时间](http://msdn.microsoft.com/library/windows/desktop/ms724503)Windows SDK 中的条目。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
   
 ##  <a name="format"></a>CTime::Format  
  调用此成员函数来创建的日期时间值的格式的表示。  
@@ -257,7 +239,7 @@ CString Format(UINT nFormatID) const;
  此方法将引发异常，如果要设置格式的日期时间值超出范围从 1970 年 1 月 1 日通过 3000 年 12 月 31 日午夜协调世界时 (UTC)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 149](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#149](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
   
 ##  <a name="formatgmt"></a>CTime::FormatGmt  
  生成与对应于此的格式化的字符串`CTime`对象。  
@@ -303,7 +285,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  将所得到的时间存储在引用的 `dbts` 结构中。 **DBTIMESTAMP**由此函数初始化的数据结构将包含其**分数**成员设置为零。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>CTime::GetAsSystemTime  
  调用此成员函数将转换中存储的时间信息`CTime`对象与 Win32 兼容[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
@@ -323,7 +305,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
  `GetAsSystemTime`将所生成的时间存储在引用*timeDest*结构。 `SYSTEMTIME`由此函数初始化的数据结构将包含其**wMilliseconds**成员设置为零。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
   
 ##  <a name="getcurrenttime"></a>CTime::GetCurrentTime  
  返回`CTime`对象，表示当前时间。  
@@ -336,7 +318,7 @@ static CTime WINAPI GetCurrentTime() throw();
  返回当前系统日期和时间以协调世界时 (UTC)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 152](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#152](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
   
 ##  <a name="getday"></a>CTime::GetDay  
  返回由一天表示`CTime`对象。  
@@ -352,7 +334,7 @@ int GetDay() const throw();
  此函数将调用`GetLocalTm`，它使用的内部、 静态分配的缓冲区。 在此缓冲区中的数据覆盖彼此的调用由于`CTime`成员函数。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 153](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#153](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
   
 ##  <a name="getdayofweek"></a>CTime::GetDayOfWeek  
  返回表示星期几`CTime`对象。  
@@ -368,7 +350,7 @@ int GetDayOfWeek() const throw();
  此函数将调用`GetLocalTm`，它使用内部静态分配缓冲区。 在此缓冲区中的数据覆盖彼此的调用由于`CTime`成员函数。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 154](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#154](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
   
 ##  <a name="getgmttm"></a>CTime::GetGmtTm  
  获取**结构 tm**包含包含在此时间的分解`CTime`对象。  
@@ -390,7 +372,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
  `ptm` 不能为 `NULL`。 如果你想要还原到旧行为，在其中`ptm`可能是`NULL`若要指示应使用的内部、 静态分配的缓冲区，然后取消定义`_SECURE_ATL`。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 155](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#155](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
   
 ##  <a name="gethour"></a>CTime::GetHour  
  返回表示的小时`CTime`对象。  
@@ -406,7 +388,7 @@ int GetHour() const throw();
  此函数将调用`GetLocalTm`，它使用内部静态分配缓冲区。 在此缓冲区中的数据覆盖彼此的调用由于`CTime`成员函数。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 156](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#156](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
   
 ##  <a name="getlocaltm"></a>CTime::GetLocalTm  
  获取**结构 tm**包含包含在此时间的分解`CTime`对象。  
@@ -428,7 +410,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
  `ptm` 不能为 `NULL`。 如果你想要还原到旧行为，在其中`ptm`可能是`NULL`若要指示应使用的内部、 静态分配的缓冲区，然后取消定义`_SECURE_ATL`。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 157](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#157](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
   
 ##  <a name="getminute"></a>CTime::GetMinute  
  返回表示分钟`CTime`对象。  
@@ -489,7 +471,7 @@ __time64_t GetTime() const throw();
  **GetTime**将返回当前之间的秒数`CTime`对象和自 1970 年 1 月 1 日。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 158](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#158](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
   
 ##  <a name="getyear"></a>CTime::GetYear  
  返回所表示的年份`CTime`对象。  
@@ -547,7 +529,7 @@ CTimeSpan operator-(CTime time) const throw();
  `CTime`对象表示绝对时间，`CTimeSpan`对象表示相对时间。 前两个运算符使您得以加法和减法`CTimeSpan`对象来回`CTime`对象。 第三个运算符，你可以减去`CTime`从另一个用来生成对象`CTimeSpan`对象。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
 ##  <a name="operator_add_eq_-_eq"></a>CTime::operator + =、 =  
  这些运算符加法和减法`CTimeSpan`对象与其他这`CTime`对象。  
@@ -568,7 +550,7 @@ CTime& operator-=(CTimeSpan span) throw();
  这些运算符使您得以加法和减法`CTimeSpan`对象与其他这`CTime`对象。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATLMFC_Utilities # 160](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#160](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
   
 ##  <a name="serialize64"></a>CTime::Serialize64  
   
@@ -598,6 +580,5 @@ CArchive& Serialize64(CArchive& ar);
  [CTimeSpan 类](../../atl-mfc-shared/reference/ctimespan-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

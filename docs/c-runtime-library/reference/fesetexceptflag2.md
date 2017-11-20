@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fesetexceptflag
+apiname: fesetexceptflag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,35 +26,18 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
-helpviewer_keywords:
-- fesetexceptflag function
+dev_langs: C++
+helpviewer_keywords: fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 786970d63482f2cede5e6b20af605accebe87da7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 在当前浮点环境中设置指定的浮点状态标志。  

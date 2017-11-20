@@ -1,68 +1,138 @@
 ---
-title: "Platform::Collections::BackInsertIterator 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Platform::Collections::BackInsertIterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BackInsertIterator 类"
+title: "Platform::Collections::BackInsertIterator 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs: C++
+helpviewer_keywords: BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 197c0c8dc7de6dca562d961635706a51fff992c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Collections::BackInsertIterator 类
+# <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 表示一个迭代器，它插入而非重写元素到有序集合的后端。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-template <  
-   typename T  
->  
-class BackInsertIterator : public ::std::iterator< ::std::output_iterator_tag, void, void, void, void>;  
+template <typename T>  
+class BackInsertIterator : 
+public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
  当前集合中项目的类型。  
   
-## 备注  
- BackInsertIterator 类实现 [back\_insert\_iterator 类](../standard-library/back-insert-iterator-class.md) 所要求的规则。  
+### <a name="remarks"></a>备注  
+ BackInsertIterator 类实现 [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md)所要求的规则。  
   
-## 成员  
+### <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|描述|  
-|--------|--------|  
-|[BackInsertIterator::BackInsertIterator 构造函数](../cppcx/backinsertiterator-backinsertiterator-constructor.md)|初始化 BackInsertIterator 类的新实例。|  
+|----------|-----------------|  
+|[Backinsertiterator:: Backinsertiterator](#ctor)|初始化 BackInsertIterator 类的新实例。|  
   
-### 公共运算符  
+### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
-|--------|--------|  
-|[BackInsertIterator::operator\* 运算符](../cppcx/backinsertiterator-operator-dereference-operator.md)|检索对当前 BackInsertIterator 的引用。|  
-|[BackInsertIterator::operator\+\+ 运算符](../cppcx/backinsertiterator-operator-increment-operator.md)|返回对当前 BackInsertIterator 的引用。 迭代器未经修改。|  
-|[BackInsertIterator::operator\= 运算符](../cppcx/backinsertiterator-operator-assign-operator.md)|将指定对象追加到当前有序集合的末尾。|  
+|名称|描述|  
+|----------|-----------------|  
+|[BackInsertIterator::operator* 运算符](#operator-dereference)|检索对当前 BackInsertIterator 的引用。|  
+|[BackInsertIterator::operator++ 运算符](#operator-increment)|返回对当前 BackInsertIterator 的引用。 迭代器未经修改。|  
+|[BackInsertIterator::operator= 运算符](#operator-assign)|将指定对象追加到当前有序集合的末尾。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `BackInsertIterator`  
   
-## 要求  
- **标头：**collection.h  
+### <a name="requirements"></a>要求  
+ **标头：** collection.h  
   
- **命名空间：**Platform::Collections  
+ **命名空间：** Platform::Collections  
   
-## 请参阅  
- [\(NOTINBUILD\) Platform 命名空间](http://msdn.microsoft.com/zh-cn/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+---
+## <a name="ctor"></a>Backinsertiterator:: Backinsertiterator 构造函数
+初始化 `BackInsertIterator` 类的新实例。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+  
+explicit BackInsertIterator(  
+   Windows::Foundation::Collections::IVector<T>^ v);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ `v`  
+ IVector\<T > 对象。  
+  
+### <a name="remarks"></a>备注  
+ `BackInsertIterator` 在参数 `v` 指定的对象的最后一个元素之后插入元素。  
+ 
+## <a name="operator-assign"></a>Backinsertiterator:: Operator = 运算符
+将指定对象追加到当前有序集合的末尾。  
+  
+## <a name="syntax"></a>语法  
+  
+```    
+BackInsertIterator& operator=( const T& t);  
+```  
+  
+#### <a name="parameters"></a>参数  
+ `t`  
+ 要追加到当前集合的对象。  
+  
+### <a name="return-value"></a>返回值  
+ 对当前 BackInsertIterator 的引用。  
+
+## <a name="operator-dereference"></a>Backinsertiterator:: Operator * 运算符
+检索对当前 BackInsertIterator 的引用。  
+  
+## <a name="syntax"></a>语法  
+  
+```  
+BackInsertIterator& operator*();  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 对当前 BackInsertIterator 的引用。  
+  
+### <a name="remarks"></a>备注  
+ 此运算符返回对当前 BackInsertIterator 的引用；而不是对当前集合中任何元素的引用。  
+ 
+## <a name="operator-increment"></a>Backinsertiterator:: Operator + + 运算符
+返回对当前 BackInsertIterator 的引用。 迭代器未经修改。  
+  
+## <a name="syntax"></a>语法  
+  
+``` 
+  
+BackInsertIterator& operator++();  
+  
+BackInsertIterator operator++(int);  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 对当前 BackInsertIterator 的引用。  
+  
+### <a name="remarks"></a>备注  
+ 按照设计，第一个语法示例前递增当前 BackInsertIterator，第二个语法后递增当前 BackInsertIterator。 第二个语法中的 `int` 类型指示后递增操作，而不是实际整数操作数。  
+  
+ 但是，此运算符不会实际修改 BackInsertIterator， 而是返回对未经修改的当前迭代器的引用。 这是相同的行为[运算符 *](#dereference-operator)。  
+  
+  
+## <a name="see-also"></a>另请参阅  
+ [平台 Namespace](platform-namespace-c-cx.md)

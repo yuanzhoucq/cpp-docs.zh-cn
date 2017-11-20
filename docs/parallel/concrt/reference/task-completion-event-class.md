@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_completion_event class
+dev_langs: C++
+helpviewer_keywords: task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 78c5cb9bdd1da0876abacda48000a914c884d25a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 类
 `task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。  
@@ -89,7 +71,7 @@ class task_completion_event<void>;
  `task_completion_event`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** ppltasks.h  
+ **标头：** ppltasks.h  
   
  **命名空间：** 并发  
   
@@ -108,10 +90,10 @@ bool set() const ;
  要设置与此事件的结果。  
   
 ### <a name="return-value"></a>返回值  
- 该方法返回`true`是否成功地设置该事件。 它将返回`false`如果已经设置了事件。  
+ 该方法返回`true`如果已成功设置事件。 它将返回`false`如果已设置事件。  
   
 ### <a name="remarks"></a>备注  
- 在多个存在或对并发调用`set`，仅第一次调用将失败，并且其结果 （如果有） 将存储在任务完成事件。 剩余的集将被忽略并且该方法将返回 false。 如果设置任务完成事件时，所有任务从都创建的事件将立即完成，并且其延续，如果有的话，这将安排。 任务已完成对象`_ResultType`以外`void`将的值传递给它们的延续。  
+ 在多个存在或对并发调用`set`，仅第一次调用将成功，并且其结果 （如果有） 将存储在任务完成事件。 而忽略其余的集，并且该方法将返回 false。 当设置任务完成事件时，所有的任务创建从，事件将立即完成，并且其延续，如果有的话，将被排定。 任务完成对象具有`_ResultType`以外`void`将将值传递给它们的延续。  
   
 ##  <a name="set_exception"></a>set_exception 
 
@@ -141,4 +123,3 @@ task_completion_event();
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-

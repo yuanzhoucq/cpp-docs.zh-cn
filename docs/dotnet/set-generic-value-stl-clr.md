@@ -1,41 +1,39 @@
 ---
-title: "set::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 成员 [STL/CLR]"
+title: "set::generic_value (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: bdb11400-c7b8-466f-abae-5c878e7721c2
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68fd5a411d5cb962852b0d00a385485463473e9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# set::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一元素的类型用于泛型接口的容器使用的。  
+# <a name="setgenericvalue-stlclr"></a>set::generic_value (STL/CLR)
+使用容器的泛型接口具有的元素的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 备注  
- 描述类型存储描述的元素值用于带有泛型接口的容器类使用此模板的 `GValue` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 此类型描述类型的对象`GValue`描述使用的存储的元素值与此模板容器类的泛型接口。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_set_generic_value.cpp   
@@ -70,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## 要求  
- **页眉：** \<cliext\/设置\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [集合](../dotnet/set-stl-clr.md)   
- [set::generic\_container](../dotnet/set-generic-container-stl-clr.md)   
- [set::generic\_iterator](../dotnet/set-generic-iterator-stl-clr.md)   
- [set::generic\_reverse\_iterator](../dotnet/set-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)   
+ [set::generic_iterator (STL/CLR)](../dotnet/set-generic-iterator-stl-clr.md)   
+ [set::generic_reverse_iterator (STL/CLR)](../dotnet/set-generic-reverse-iterator-stl-clr.md)

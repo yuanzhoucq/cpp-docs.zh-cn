@@ -1,33 +1,30 @@
 ---
-title: "operator&gt; (pair) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> 成员 [STL/CLR]"
+title: "运算符&gt;（对） (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: c392a696-3425-49c8-9ddf-be2f2d2dd42e
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 399286325a38ac7272e2159d24f8ed4cb9360f62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt; (pair) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="operatorgt-pair-stlclr"></a>运算符&gt;（对） (STL/CLR)
 对大于比较。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Value1,  
@@ -36,17 +33,17 @@ template<typename Value1,
         pair<Value1, Value2>% right);  
 ```  
   
-#### 参数  
- left  
- 比较的左上角对。  
+#### <a name="parameters"></a>参数  
+ 左  
+ 要比较的左的对。  
   
- right  
- 比较的正确对。  
+ 右  
+ 要比较的右对。  
   
-## 备注  
- 运算符函数返回 `right` `<` `left`。  您可用它测试 `left` 是否在 `right` 后排序，当两对是比较的元素由元素。  
+## <a name="remarks"></a>备注  
+ 运算符函数返回`right` `<` `left`。 用于测试是否`left`进行排序之后`right`时的两个对是元素的比较的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_pair_operator_gt.cpp   
@@ -69,19 +66,22 @@ int main()
   
 ```  
   
-  **\[x，3\]**  
-**\[x，4\]**  
-**\[x 3\] \> \[x 3\] 为 false**  
-**\[x 4\] \> \[x 3\] 为 true**   
-## 要求  
- **页眉：** \<\/cliext 实用工具\>  
+```Output  
+[x, 3]  
+[x, 4]  
+[x 3] > [x 3] is False  
+[x 4] > [x 3] is True  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/实用工具 >  
   
-## 请参阅  
- [pair](../dotnet/pair-stl-clr.md)   
- [operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)   
- [operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)   
- [operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)   
- [operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
- [operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [对 (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [运算符 = = （对） (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)   
+ [运算符 ！ = （对） (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)   
+ [运算符\<（对） (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)   
+ [运算符 > = （对） (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
+ [operator<= (pair) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)

@@ -1,37 +1,35 @@
 ---
-title: "支持在记录视图中导航（MFC 数据访问） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "导航 [C++], 在记录视图中"
-  - "记录视图, 导航"
-  - "记录 [C++], 导航"
+title: "支持在记录视图 （MFC 数据访问） 中导航 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records [C++], navigating
+- record views, navigation
+- navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 485d37c06624ae5ee534480b8f16bb94dad6d94f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 支持在记录视图中导航（MFC 数据访问）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题将介绍如何支持在记录视图中逐条移动记录，其中包含以下相关内容：  
+# <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支持在记录视图中导航（MFC 数据访问）
+本主题说明如何支持在记录间移动你[CRecordView](../mfc/reference/crecordview-class.md)类，包括有关的信息：  
   
--   用于记录滚动命令的[命令处理](../data/command-handlers-for-record-scrolling-mfc-data-access.md)。  
+-   [命令处理](../data/command-handlers-for-record-scrolling-mfc-data-access.md)用于记录滚动命令。  
   
--   用于滚动命令的[用户界面更新处理程序](../data/user-interface-updating-for-record-views-mfc-data-access.md)。  
+-   [用户界面更新处理程序滚动](../data/user-interface-updating-for-record-views-mfc-data-access.md)命令。  
   
- 这些主题中的信息对 [CRecordView](../mfc/reference/crecordview-class.md) \(ODBC\) 和 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) \(DAO\) 均适用。  
-  
-## 请参阅  
- [记录视图（MFC 数据访问）](../data/record-views-mfc-data-access.md)   
+## <a name="see-also"></a>另请参阅  
+ [记录视图 （MFC 数据访问）](../data/record-views-mfc-data-access.md)   
  [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

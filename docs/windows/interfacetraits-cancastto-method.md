@@ -1,32 +1,30 @@
 ---
-title: "InterfaceTraits::CanCastTo 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo 方法"
+title: "Interfacetraits:: Cancastto 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 275847cb-69ea-42bf-910f-05ba6ef8b48d
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 107c89c7643e137b20492f9ae932a736cc0ba603
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceTraits::CanCastTo 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -39,29 +37,29 @@ static __forceinline bool CanCastTo(
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `ptr`  
- 指针的名称为类型。  
+ 指向类型的名称。  
   
  `riid`  
- `Base`接口 ID。  
+ 接口 ID `Base`。  
   
  `ppv`  
- 如果该操作成功，给接口的 `ppv` 点由 `Base`指定。  否则，将`ppv`设置为`nullptr` 。  
+ 如果此操作成功，`ppv`指向指定的接口`Base`。 否则为`ppv`设置为`nullptr`。  
   
-## 返回值  
- `true`，如果该操作成功和 `ptr` 转换到 `Base`的指针；否则，返回 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果此操作是否成功和`ptr`被强制转换为指向的指针`Base`; 否则为`false`。  
   
-## 备注  
- 指示指定的指针是否可以转换到 `Base`的指针。  
+## <a name="remarks"></a>备注  
+ 指示是否可以强制的指定的指针转换为指向的指针`Base`。  
   
- 有关 `Base`的更多信息，请参见 [InterfaceTraits 结构](../windows/interfacetraits-structure.md)Typedefs 的公共部分。  
+ 有关详细信息`Base`，请参阅中的公共 Typedef 部分[InterfaceTraits 结构](../windows/interfacetraits-structure.md)。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>要求  
+ **标头：** implements.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [InterfaceTraits 结构](../windows/interfacetraits-structure.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

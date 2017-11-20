@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3893
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3893
+f1_keywords: C3893
+dev_langs: C++
+helpviewer_keywords: C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 49097d988175e7571c5825b4d54e1dd496fb2ba7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3893"></a>编译器错误 C3893
 var： 左值使用 initonly 数据成员仅允许用在类类型 _ 名称的实例构造函数  

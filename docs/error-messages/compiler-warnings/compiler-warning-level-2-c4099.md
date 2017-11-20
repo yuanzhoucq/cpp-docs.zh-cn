@@ -1,34 +1,32 @@
 ---
-title: "编译器警告（等级 2）C4099 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4099"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4099"
+title: "编译器警告 （等级 2） C4099 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4099
+dev_langs: C++
+helpviewer_keywords: C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: af0f7aacb5e4600b48120576135b2052af2a5315
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 2）C4099
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“identifier”: 以前使用“objecttype1”的类型名称现在使用“objecttype2”  
+# <a name="compiler-warning-level-2-c4099"></a>编译器警告 （等级 2） C4099
+identifier： 首先被使用 objecttype1 现在了解了使用 objecttype2 的类型名称  
   
- 将声明为结构的对象定义为类，或将声明为类的对象定义为结构。  编译器使用在定义中给定的类型。  
+ 作为一种结构声明的对象定义为类，或作为类声明的对象定义为结构。 编译器使用给定定义中的类型。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4099。  
   
 ```  

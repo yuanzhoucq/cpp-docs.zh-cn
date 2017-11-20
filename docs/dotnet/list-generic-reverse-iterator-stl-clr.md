@@ -1,42 +1,40 @@
 ---
-title: "list::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator 成员 [STL/CLR]"
+title: "list::generic_reverse_iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: 63435f10-5d2b-43fa-8d7a-7c5c4daf55ad
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 505a00c0a10d35b48c145671ca182849ed727dce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-与容器的泛型接口一起使用的迭代器类型。  
+# <a name="listgenericreverseiterator-stlclr"></a>list::generic_reverse_iterator (STL/CLR)
+反向迭代器用于与容器的泛型接口类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseBidirectionalIterator<generic_value> generic_reverse_iterator;  
 ```  
   
-## 备注  
- 此类型描述了一个泛型迭代器，此迭代器可以与模板容器类的泛型接口一同使用。  
+## <a name="remarks"></a>备注  
+ 该类型描述一个泛型反向迭代器，此模板容器类可与泛型接口中使用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_generic_reverse_iterator.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a c c**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a c c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::generic\_iterator](../dotnet/list-generic-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)

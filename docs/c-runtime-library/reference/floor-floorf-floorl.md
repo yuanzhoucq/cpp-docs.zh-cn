@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,38 +29,22 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 6eda1db54148009d87ef6b7a59522d61332304dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 计算一个值的下限。  

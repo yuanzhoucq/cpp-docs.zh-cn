@@ -1,32 +1,30 @@
 ---
-title: "deque::deque (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::deque"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "deque 成员 [STL/CLR]"
+title: "deque:: deque (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::deque
+dev_langs: C++
+helpviewer_keywords: deque member [STL/CLR]
 ms.assetid: e5bc9511-619e-469c-b50a-e06858e7fce7
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc08403d0d8cf7875700ca539a3e68a0ed788104
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# deque::deque (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequedeque-stlclr"></a>deque::deque (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 deque();  
@@ -39,52 +37,52 @@ template<typename InIt>
 deque(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 参数  
- count  
- 插入的元素数。  
+#### <a name="parameters"></a>参数  
+ `count`  
+ 要插入的元素数。  
   
- 首先  
- 插入范围的开头。  
+ `first`  
+ 要插入的范围开始处。  
   
- last  
- 插入的范围末尾。  
+ `last`  
+ 要插入的范围的末尾。  
   
- right  
- 插入的对象或值范围。  
+ `right`  
+ 要插入的对象或范围。  
   
- val  
- 插入元素的值。  
+ `val`  
+ 要插入的元素的值。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `deque();`  
   
- 初始化控制序列的元素。  可以使用它来指定空的初始序列控制。  
+ 初始化受控的序列不包含任何元素。 用于指定空的初始受控的序列。  
   
  构造函数：  
   
  `deque(deque<Value>% right);`  
   
- 初始化与序列 `[``right``.``(),` `right``.``())`的控制。序列[deque::end](../dotnet/deque-end-stl-clr.md)[deque::begin](../dotnet/deque-begin-stl-clr.md) 将它指定为顺序复制由 deque 对象控制 `right`控件的初始序列。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)。 用于指定的初始受控的序列的 deque 对象所控制的序列副本`right`。 有关迭代器的详细信息，请参阅[deque:: begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)和[deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md)。  
   
  构造函数：  
   
  `deque(deque<Value>^ right);`  
   
- 初始化与序列 `[``right``->``(),` `right``->``())`的控制。序列[deque::end](../dotnet/deque-end-stl-clr.md)[deque::begin](../dotnet/deque-begin-stl-clr.md) 将它指定为复制由 deque 对象顺序控制柄是 `right`的初始序列控制。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)。 用于指定是由其句柄的 deque 对象控制的序列的副本的初始受控的序列`right`。  
   
  构造函数：  
   
  `explicit deque(size_type count);`  
   
- 初始化 `count` 的序列元素控制每个使用 `value_type()`值。  使用它填充元素的容器具有的所有默认值。  
+ 初始化受控的序列与`count`元素每个值`value_type()`。 你使用它来填充容器元素与所有具有默认值。  
   
  构造函数：  
   
  `deque(size_type count, value_type val);`  
   
- 初始化 `count` 的序列元素控制每个使用 `val`值。  使用它填充元素的容器都具有相同的值。  
+ 初始化受控的序列与`count`元素每个值`val`。 你使用它来填充容器元素与所有具有相同的值。  
   
  构造函数：  
   
@@ -92,17 +90,17 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `deque(InIt first, InIt last);`  
   
- 初始化与序列 `[``first``,` `last``)`的顺序控制。  使用会使控制序列复制另一个序列。  
+ 初始化受控的序列与序列 [`first`， `last`)。 你可以使用它以使另一个序列的副本的受控的序列。  
   
  构造函数：  
   
  `deque(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- 初始化枚举数指定的顺序控制序列 `right`。  使用会使控制序列描述枚举器副本另一个序列。  
+ 初始化与枚举器指定序列的受控的序列`right`。 你可以使用它来使一个枚举器所描述的另一个序列的副本的受控的序列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cliext_deque_construct.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -156,20 +154,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## 要求  
- **页眉：** \<cliext\/deque\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)   
- [deque::generic\_container](../dotnet/deque-generic-container-stl-clr.md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)   
+ [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
+ [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- declarators, about declarators
+dev_langs: C++
+helpviewer_keywords: declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d64e375375deac828689f37475d9bfe04b08925b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-declarators"></a>声明符概述
 声明符是指定对象或函数名称的声明的组成部分。 声明符还指定是否命名对象是对象、指针、引用还是数组。  尽管声明符不指定基类型，但它们会修改基类型中的类型信息以指定派生类型，如指针、引用和数组。  声明符应用于函数，与类型说明符（用于完全指定函数的返回类型是对象、指针还是引用）的工作方式相同。 (中讨论的说明符[声明和定义](declarations-and-definitions-cpp.md)，类型和存储类等属性。 在本部分和讨论的修饰符[Microsoft 专用的修饰符](../cpp/microsoft-specific-modifiers.md)，修改声明符。)下图显示 `MyFunction` 的完整声明，并对声明的各个组成部分进行了标注。  
@@ -56,7 +52,7 @@ const char *pch, ch;
   
  **指针、 引用和数组的声明符**  
   
- 在名称前面插入的指针运算符使对象成为指针或引用。  ** \* **运算符声明为指针; 名称** & **运算符声明为引用。  
+ 在名称前面插入的指针运算符使对象成为指针或引用。  **\*** 运算符声明为指针; 名称 **&** 运算符声明为引用。  
   
 ```  
 int *i; // declarator is *i  

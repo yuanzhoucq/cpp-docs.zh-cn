@@ -1,52 +1,51 @@
 ---
-title: "marshal_context::marshal_context | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::interop::marshal_context::marshal_context"
-  - "marshal_context::marshal_context"
-  - "msclr.interop.marshal_context.marshal_context"
-  - "marshal_context.marshal_context"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_context 类 [C++], 操作"
+title: "marshal_context::marshal_context |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::interop::marshal_context::marshal_context
+- marshal_context::marshal_context
+- msclr.interop.marshal_context.marshal_context
+- marshal_context.marshal_context
+dev_langs: C++
+helpviewer_keywords: marshal_context class [C++], operations
 ms.assetid: 5f08c895-60b0-4f72-97ff-7ae37c68e853
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ce4837f4e3820544852f5ca535a24ee4ed46cb0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# marshal_context::marshal_context
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-构造 `marshal_context` 对象为在托管和本机数据类型之间进行数据转换使用。  
+# <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
+构造`marshal_context`用于托管和本机数据类型之间的数据转换对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 marshal_context();  
 ```  
   
-## 备注  
- 这些数据转换需要上下文。  参见转换需要上下文，并且的更多信息封送处理文件在应用程序必须包含的有关 [C\+\+ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)。  
+## <a name="remarks"></a>备注  
+ 某些数据转换需要封送上下文。 请参阅[概述的封送处理在 c + +](../dotnet/overview-of-marshaling-in-cpp.md)有关哪些翻译需要上下文，并且的封送处理文件具有要包括在你的应用程序的详细信息。  
   
-## 示例  
- 请参见 [marshal\_context::marshal\_as](../dotnet/marshal-context-marshal-as.md)中的示例。  
+## <a name="example"></a>示例  
+ 请参阅示例[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)。  
   
-## 要求  
- **Header file:** \<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>, \<msclr\\marshal\_cppstd.h\>, 或 \<msclr\\marshal\_atl.h\>  
+## <a name="requirements"></a>要求  
+ **标头文件：** \<msclr\marshal.h >， \<msclr\marshal_windows.h >， \<msclr\marshal_cppstd.h >，或\<msclr\marshal_atl.h >  
   
  **Namespace:** msclr::interop  
   
-## 请参阅  
- [C\+\+ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_as](../dotnet/marshal-as.md)   
- [marshal\_context 类](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>另请参阅  
+ [C + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_as](../dotnet/marshal-as.md)   
+ [marshal_context 类](../dotnet/marshal-context-class.md)

@@ -1,34 +1,32 @@
 ---
-title: "链接器工具错误 LNK2011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2011"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2011"
+title: "链接器工具错误 LNK2011 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2011
+dev_langs: C++
+helpviewer_keywords: LNK2011
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a660356f719003a06c17d1fddba948e9d903e00a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器工具错误 LNK2011
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-未链接预编译对象；映像可能不能运行  
+# <a name="linker-tools-error-lnk2011"></a>链接器工具错误 LNK2011
+预编译的对象中; 不链接图像可能无法运行  
   
- 如果使用预编译头，LINK 要求必须链接所有与预编译头一起创建的对象文件。  如果您有用来生成用于其他源文件的预编译头的源文件，现在必须包括与预编译头一起创建的对象文件。  
+ 如果你使用预编译标头，链接要求的所有对象文件使用预编译标头创建必须链接到。 如果你有一个源文件，则使用与其他源文件生成使用的预编译标头，你现在必须包含预编译标头以及创建的对象文件。  
   
- 例如，如果编译一个名为 STUB.cpp 的文件，以创建用于其他源文件的预编译头，则必须与 STUB.obj 链接，否则就会得到此错误。  在下列命令行中，第一行用于创建预编译头 COMMON.pch，它与第二行和第三行中的 PROG1.cpp 和 PROG2.cpp 一起使用。  文件 STUB.cpp 只包含 `#include` 行（与 PROG1.cpp 和 PROG2.cpp 中的 `#include` 行相同），并只用于生成预编译头。  在最后一行中，必须链接 STUB.obj 以避免 LNK2011。  
+ 例如，如果编译 stub.cpp 使用其他源文件中创建的预编译标头，使用的文件，必须与 STUB.obj 链接，或将发生此错误。 在下面的命令行中，一个用于创建预编译标头，COMMON.pch，在两个和第三行中与 PROG1.cpp 和 PROG2.cpp 一起使用。 STUB.cpp 只包含文件`#include`行 (相同`#include`线如下所示 PROG1.cpp 和 PROG2.cpp) 和仅用于生成预编译标头。 在最后一个行中，STUB.obj 必须链接到以免 LNK2011。  
   
 ```  
 cl /c /Yccommon.h stub.cpp  

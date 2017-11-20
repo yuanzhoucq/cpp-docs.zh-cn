@@ -1,35 +1,34 @@
 ---
-title: "如何：监视文件系统更改 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件 [C++], 监视"
-  - "示例 [C++], 监视文件系统更改"
-  - "文件系统事件 [C++]"
-  - "FileSystemWatcher 类, 示例"
-  - "监视文件系统事件"
+title: "如何： 监视文件系统更改 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- monitoring file system events
+- FileSystemWatcher class, examples
+- examples [C++], monitoring file system changes
+- events [C++], monitoring
+- file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：监视文件系统更改 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例使用 <xref:System.IO.FileSystemWatcher> 注册对应于正在创建、更改、删除或重命名的文件的事件。  无需通过定期轮询目录来查看文件更改情况，而可以使用 <xref:System.IO.FileSystemWatcher> 类在检测到更改时激发事件。  
+# <a name="how-to-monitor-file-system-changes-ccli"></a>如何：监视文件系统更改 (C++/CLI)
+下面的代码示例使用<xref:System.IO.FileSystemWatcher>以注册事件对应于正在创建，已更改、 删除或重命名的文件。 而不是定期轮询更改文件的目录，你可以使用<xref:System.IO.FileSystemWatcher>类激发事件时检测到更改。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // monitor_fs.cpp  
@@ -91,7 +90,7 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [System.IO 命名空间](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
- [文件和流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [文件和流 I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

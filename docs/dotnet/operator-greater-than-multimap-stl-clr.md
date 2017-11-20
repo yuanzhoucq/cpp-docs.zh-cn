@@ -1,33 +1,30 @@
 ---
-title: "operator&gt; (multimap) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> 成员 [STL/CLR]"
+title: "运算符&gt;(multimap) (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: 84d6d09d-bcb7-4679-bc42-8a60670aadef
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 40aca103e8ea092f16e838253c512d7701d5fd76
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt; (multimap) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-列表大于比较。  
+# <a name="operatorgt-multimap-stlclr"></a>运算符&gt;(multimap) (STL/CLR)
+大于比较的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key,  
@@ -36,17 +33,17 @@ template<typename Key,
         multimap<Key, Mapped>% right);  
 ```  
   
-#### 参数  
- left  
- 比较左边的容器。  
+#### <a name="parameters"></a>参数  
+ 左  
+ 要比较的左容器。  
   
- right  
- 比较右边的容器。  
+ 右  
+ 要比较的右容器。  
   
-## 备注  
- 操作符函数返回 `right` `<` `left`。  当一个个元素地比较两种多集时，您可以用它测试 `left` 是否不在 `right` 之后排序。  
+## <a name="remarks"></a>备注  
+ 运算符函数返回`right` `<` `left`。 用于测试是否`left`进行排序之后`right`两个 multimap 何时比较的元素的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multimap_operator_gt.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[d 4\]**  
-**\[a b c\] \> \[a b c\] 为 False**  
-**\[a b d\] \> \[a b c\] 为 True**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [operator\=\= \(multimap\)](../dotnet/operator-equality-multimap-stl-lr.md)   
- [operator\!\= \(multimap\)](../dotnet/operator-inequality-multimap-stl-clr.md)   
- [operator\< \(multimap\)](../dotnet/operator-less-than-multimap-stl-clr.md)   
- [operator\>\= \(multimap\)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
- [operator\<\= \(multimap\)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [运算符 = = (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)   
+ [运算符 ！ = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)   
+ [运算符\<(multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)   
+ [运算符 > = (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
+ [operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3265
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3265
+f1_keywords: C3265
+dev_langs: C++
+helpviewer_keywords: C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 1b136e2f64296d2ca39fb0778898afcd2c0caaba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3265"></a>编译器错误 C3265
 不能声明托管托管中构造非托管的非托管构造  
@@ -50,4 +45,3 @@ class B
    // gcroot<A^> a;  
 };  
 ```  
-

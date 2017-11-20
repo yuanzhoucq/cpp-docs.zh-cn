@@ -1,34 +1,35 @@
 ---
-title: "Dual Interfaces and Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "双重接口, 事件"
-  - "事件 [C++], 双重接口"
+title: "双重接口和事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- events [C++], dual interfaces
+- dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d18124646f4d4fcb02246234bf74b5870246e7e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Dual Interfaces and Events
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-当设计事件接口为双时是可能的，有多种虚拟设计原因不这样做。  根本原因是事件的源只会激发此事件传递vtable或通过 `Invoke`，而不是两个。  如果事件源激发事件，当一个直接vtable调用方法，将不使用 `IDispatch` 方法，并清楚接口都应是纯vtable接口。  如果事件源激发该事件作为调用 `Invoke`，将不使用vtable方法，并清楚接口都应是调度接口。  如果定义了自己的事件接口双倍，您需要客户端实现不使用的接口。  
+# <a name="dual-interfaces-and-events"></a>双重接口和事件
+可以设计作为一个双的事件接口时，有多种良好的设计原因不要这样做。 基本的原因是事件源将仅触发事件通过 vtable 或`Invoke`，而不是同时。 如果事件源触发作为直接 vtable 方法调用，事件`IDispatch`永远不会使用方法和很明显的接口应已纯 vtable 接口。 如果事件源触发事件时为对的调用`Invoke`将永远不会使用 vtable 方法，它是清除接口应已调度接口。 如果您定义事件接口为双重接口，则你将要求客户端实现将永远不会使用接口的一部分。  
   
 > [!NOTE]
->  此参数不适用于双重接口，通常。  从实现方面，双倍是实现到所有类型的客户端访问的接口一个express，方便支持的方式。  
+>  此参数不适用于双重接口，一般情况下。 从实现的角度看，双重接口是实现广泛的客户端可以访问的接口的快速、 便利，然而和广受支持的方式。  
   
- 有进一步的原因避免双事件接口;Visual Basic和Internet Explorer不支持它们。  
+ 进一步有原因，若要避免双事件接口;Visual Basic 和 Internet Explorer 都不支持这些选项。  
   
-## 请参阅  
- [Dual Interfaces and ATL](../atl/dual-interfaces-and-atl.md)
+## <a name="see-also"></a>另请参阅  
+ [双重接口和 ATL](../atl/dual-interfaces-and-atl.md)
+

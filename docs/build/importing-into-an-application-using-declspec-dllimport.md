@@ -1,34 +1,34 @@
 ---
-title: "使用 __declspec(dllimport) 导入到应用程序中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__declspec"
-  - "dllimport"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport) 关键字 [C++]"
-  - "导入 DLL [C++], __declspec(dllimport)"
+title: "导入到应用程序中使用 __declspec （dllimport） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __declspec
+- dllimport
+dev_langs: C++
+helpviewer_keywords:
+- __declspec(dllimport) keyword [C++]
+- importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4f16c9f5c96712c311928e0389fec0a1ce1f0dca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 __declspec(dllimport) 导入到应用程序中
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果一个程序使用 DLL 定义的公共符号，就说该程序是在导入公共符号。  为使用 DLL 生成的应用程序创建头文件时，在公共符号的声明上使用 **\_\_declspec\(dllimport\)**。  不论是用 .def 文件导出还是用 **\_\_declspec\(dllexport\)** 关键字导出，**\_\_declspec\(dllimport\)** 关键字均有效。  
+# <a name="importing-into-an-application-using-declspecdllimport"></a>使用 __declspec(dllimport) 导入到应用程序中
+我们称程序使用 DLL 定义的公共符号导入它们。 当创建标头文件，使用你的 Dll，生成的应用程序使用此选项**__declspec （dllimport)**上的公共符号的声明。 关键字**__declspec （dllimport)**工作是否导出与.def 文件或**__declspec （dllexport)**关键字。  
   
- 若要提高代码的可读性，请为 **\_\_declspec\(dllimport\)** 定义一个宏，然后使用此宏声明每个导入的符号：  
+ 若要使代码更具可读性，定义为宏**__declspec （dllimport)** ，然后使用宏来声明每个导入的符号：  
   
 ```  
 #define DllImport   __declspec( dllimport )  
@@ -37,9 +37,9 @@ DllImport int  j;
 DllImport void func();  
 ```  
   
- 在函数声明上使用 **\_\_declspec\(dllimport\)** 是可选操作，但如果使用此关键字，编译器将生成更有效的代码。  但是，为使导入的可执行文件能够访问 DLL 的公共数据符号和对象，必须使用 **\_\_declspec\(dllimport\)**。  请注意，DLL 的用户仍然需要与导入库链接。  
+ 使用**__declspec （dllimport)**在函数声明是可选的但如果你使用此关键字，则编译器将产生更高效的代码。 但是，你必须使用**__declspec （dllimport)**访问 DLL 的公共数据符号和对象的导入可执行文件。 请注意，您的 DLL 的用户仍然需要链接导入库。  
   
- 对 DLL 和客户端应用程序可以使用相同的头文件。  为此，请使用特殊的预处理器符号来指示是生成 DLL 还是生成客户端应用程序。  例如：  
+ DLL 和客户端应用程序，可以使用相同的标头文件。 若要执行此操作，请使用特殊的预处理器符号，该值指示是否正在生成 DLL 或生成客户端应用程序。 例如：  
   
 ```  
 #ifdef _EXPORTING  
@@ -52,15 +52,15 @@ class CLASS_DECLSPEC CExampleA : public CObject
 { ... class definition ... };  
 ```  
   
-## 你希望做什么？  
+## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   
--   [初始化 DLL](../build/initializing-a-dll.md)  
+-   [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
 -   [导入和导出内联函数](../build/importing-and-exporting-inline-functions.md)  
   
 -   [相互导入](../build/mutual-imports.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [导入到应用程序中](../build/importing-into-an-application.md)

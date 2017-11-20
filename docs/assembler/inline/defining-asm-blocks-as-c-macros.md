@@ -1,40 +1,40 @@
 ---
-title: "将 __asm 块定义为 C 宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 关键字 [C++], 作为 C 宏"
-  - "宏, __asm 块"
-  - "Visual C, 宏"
+title: "__Asm 块定义为 C 宏 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, __asm blocks
+- Visual C, macros
+- __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7b2751e966f93b760898b6869ffa684f4fed323c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 将 __asm 块定义为 C 宏
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 特定**  
+# <a name="defining-asm-blocks-as-c-macros"></a>将 __asm 块定义为 C 宏
+**Microsoft 专用**  
   
- C 宏提供一种简便方法将程序集代码插入到源代码中，但它们要求格外小心，因为到一个逻辑行扩展的宏。  若要创建无故障的宏，请遵循下列规则：  
+ 利用 C 宏，可以轻松将程序集代码插入源代码中，但执行此操作时要格外小心，因为宏会扩展到单个逻辑行中。 若要创建可靠的宏，请遵循以下规则：  
   
--   请将`__asm`在大括号内阻止。  
+-   将 `__asm` 块括在大括号内。  
   
--   将`__asm`关键字前面每个程序集指令。  
+-   将 `__asm` 关键字放在每个程序集指令的前面。  
   
--   使用旧式 C 注释 \(  `/* comment */`\) 而不是程序集样式注释 \(   `; comment`\) 或单行 C 注释 \(   `// comment`）。  
+-   使用旧式 C 注释 (`/* comment */`) 而不是程序集样式的注释 (`; comment`) 或单行 C 注释 (`// comment`)。  
   
- 为了说明，下面的示例定义了一个简单的宏：  
+ 为了演示这一点，下面的示例定义一个简单的宏：  
   
 ```  
 #define PORTIO __asm      \  
@@ -46,23 +46,23 @@ caps.handback.revision: 7
 }  
 ```  
   
- 在第一印象后, 三个`__asm`关键字似乎多余。  在需要，但是，因为该宏扩展到单个行：  
+ 乍一看，最后三个 `__asm` 关键字是多余的。 但它们是必需的，因为宏将扩展到单个行中：  
   
 ```  
 __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }  
 ```  
   
- 第三、 第四`__asm`关键字需要作为语句分隔符。  语句分隔符中识别`__asm`块是换行符和  `__asm`关键字。  定义为宏块是一个逻辑行，因为您必须将每个指令，  `__asm`.  
+ 需要将第三个和第四个 `__asm` 关键字作为语句分隔符。 在 `__asm` 块中识别的唯一语句分隔符是换行符和 `__asm` 关键字。 由于定义为宏的块是一个逻辑行，因此您必须使用 `__asm` 分隔每个指令。  
   
- 大括号也是必不可少的。  如果忽略这些参数时，编译器可以通过右侧的宏调用同一行上的 C 或 c \+ \+ 语句相混淆。  右大括号，而编译器无法判断其中的程序集代码停止，并看到的 C 或 c \+ \+ 语句`__asm`作为程序集指令块。  
+ 大括号也是必需的。 如果省略它们，则编译器会对同一行上的 C 或 C++ 语句与宏调用的右侧内容混淆不清。 在没有右大括号的情况下，编译器无法告知程序集代码停止的位置，并且会将 `__asm` 块后面的 C 或 C++ 语句视为程序集指令。  
   
- 以分号开头的程序集的样式注释 \(**;**） 转到行的结尾。  这因为编译器会忽略所有内容之后一直到逻辑行尾注释，在宏会导致问题。  是如此的单行 C 或 c \+ \+ 注释 \(  `// comment`）。  若要避免错误，使用旧式 C 注释 \(  `/* comment */`\) 在  `__asm`块定义为宏。  
+ 以分号开头的程序集样式注释 (**;**) 继续到行的末尾。 这会导致宏出现问题，因为编译器将忽略注释后面的内容，直到到达逻辑行尾。 上述情况同样适用于单行 C 或 C++ 注释 (`// comment`)。 若要防止错误，请在定义为宏的 `/* comment */` 块中使用旧式 C 注释 (`__asm`)。  
   
- `__asm`块写入为 C 宏可以带有参数。  与普通 C 宏，但是，  `__asm`宏不能返回值。  因此，在 C 或 c \+ \+ 表达式中，不能使用这些宏。  
+ 编写为 C 宏的 `__asm` 块可以采用参数。 但与普通 C 宏不同，`__asm` 宏不能返回值。 这样您便无法在 C 或 C++ 表达式中使用这些宏。  
   
- 请注意不要不加选择地调用此类型的宏。  例如，调用的函数中的程序集语言宏声明与`__fastcall`约定可能会导致意外的结果。  （请参阅[使用内容，同时保留寄存器中内联程序集](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。）  
+ 请注意，不要任意调用此类型的宏。 例如，调用使用 `__fastcall` 约定声明的函数中的汇编语言宏可能会导致意外的结果。 (请参阅[使用和保留内联程序集中的寄存器](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。)  
   
- **最终 Microsoft 特定**  
+ **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [内联汇编程序](../../assembler/inline/inline-assembler.md)

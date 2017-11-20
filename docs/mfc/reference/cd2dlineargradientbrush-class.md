@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DLinearGradientBrush::SetStartPoint
 - AFXRENDERTARGET/CD2DLinearGradientBrush::m_LinearGradientBrushProperties
 - AFXRENDERTARGET/CD2DLinearGradientBrush::m_pLinearGradientBrush
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], CD2DLinearGradientBrush
 - CD2DLinearGradientBrush [MFC], Attach
@@ -39,16 +37,15 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 5f763c2abb919e8f65c7c386ae40a52a54fe0fa0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 50f0c3c8fbfb56e41e492e7dcea7188858a69831
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 类
 ID2D1LinearGradientBrush 包装器。  
@@ -276,4 +273,3 @@ void SetStartPoint(CD2DPointF point);
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

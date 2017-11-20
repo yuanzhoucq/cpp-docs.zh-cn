@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Abort
-dev_langs:
-- C++
-helpviewer_keywords:
-- abort function
+f1_keywords: Abort
+dev_langs: C++
+helpviewer_keywords: abort function
 ms.assetid: 3352bcc4-1a8a-4e1f-8dcc-fe30f6b50f2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 169c76f4925dd02aeffbaa510526ce3caa53e93f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: dd1d8b656fccb8a2581e0d59982a220e19da37f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="abort-function"></a>abort 函数
 **中止**还在标准包含文件 STDLIB 中声明的函数。H、 终止 c + + 程序。 之间的差异**退出**和**中止**在于**退出**允许执行 c + + 运行时终止处理 （全局对象将调用析构函数），而**中止**立即终止程序。 有关详细信息，请参阅[中止](../c-runtime-library/reference/abort.md)中*运行时库参考*。  

@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fread_nolock_s
+apiname: _fread_nolock_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,34 +26,17 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f7f6dff1902777d5c795ac5cb29e1bcfdf3b0eb5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: e53f57a042216b0c910a74b4cea7c34eb1b62011
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 读取流中的数据，而不锁定其他线程。 这是 [fread_nolock](../../c-runtime-library/reference/fread-nolock.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -99,7 +81,7 @@ size_t _fread_nolock_s(
 |--------------|---------------------|  
 |`_fread_nolock_s`|C: \<stdio.h>；C++: \<cstdio> 或 \<stdio.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="class-member-overview"></a>类成员概述
 类或结构由其成员组成。 类的工作由其成员函数执行。 它所维持的状态存储在其数据成员中。 成员初始化的通过构造函数和清理工作，如释放的内存和释放资源可通过析构函数。 在 C++ 11 和更高版本中，数据成员可以（并且通常应该）在声明时初始化。  
@@ -179,4 +176,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>另请参阅  
  [类和结构](../cpp/classes-and-structs-cpp.md)
-

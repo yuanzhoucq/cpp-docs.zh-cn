@@ -1,75 +1,74 @@
 ---
-title: "/CLRTHREADATTRIBUTE（设置 CLR 线程特性） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.CLRThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRTHREADATTRIBUTE 链接器选项"
-  - "-CLRTHREADATTRIBUTE 链接器选项"
+title: "-CLRTHREADATTRIBUTE （设置 CLR 线程特性） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.CLRThreadAttribute
+dev_langs: C++
+helpviewer_keywords:
+- /CLRTHREADATTRIBUTE linker option
+- -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e928d24c6257bc64303d667e66cd1f968e003450
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRTHREADATTRIBUTE（设置 CLR 线程特性）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-显式指定用于 CLR 程序的入口点的线程特性。  
+# <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE（设置 CLR 线程特性）
+显式指定为 CLR 程序入口点的线程特性。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /CLRTHREADATTRIBUTE:{STA|MTA|NONE}  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  MTA  
- 将 MTAThreadAttribute 特性应用于程序的入口点。  
+ 将该 MTAThreadAttribute 属性应用到你的程序的入口点。  
   
- NONE  
- 等同于不指定 \/CLRTHREADATTRIBUTE。让公共语言运行时\(CLR\)设置默认线程特性。  
+ 无  
+ 与不指定 /CLRTHREADATTRIBUTE 相同。  允许公共语言运行时 (CLR) 设置默认线程特性。  
   
  STA  
- 将 STAThreadAttribute 特性应用于程序的入口点。  
+ 将该 STAThreadAttribute 属性应用到你的程序的入口点。  
   
-## 备注  
- 设置线程特性只有在生成 .exe 时才有效，因为它影响主线程的入口点。  
+## <a name="remarks"></a>备注  
+ 设置将 thread 特性有效时才生成.exe，因为它影响主线程的入口点。  
   
- 如果使用默认入口点（例如 main 或 wmain），则使用 \/CLRTHREADATTRIBUTE 或将线程特性（STAThreadAttribute 或 MTAThreadAttribute）置于默认入口函数来指定线程模型。  
+ 如果你使用的默认入口点 （主数据连接或 wmain，例如） 指定的线程模型通过使用 /CLRTHREADATTRIBUTE 或放置线程处理特性 （STAThreadAttribute 或 MTAThreadAttribute） 上的默认条目函数。  
   
- 如果使用非默认入口点，则先使用 \/CLRTHREADATTRIBUTE 或将线程特性置于非默认入口函数来指定线程模型，然后使用 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) 来指定非默认入口点。  
+ 如果你使用非默认入口点，指定通过使用 /CLRTHREADATTRIBUTE 或通过放置线程处理非默认入口函数中，属性，然后指定了具有非默认入口点的线程模型[/ENTRY](../../build/reference/entry-entry-point-symbol.md).  
   
- 如果在源代码中指定的线程模型与使用 \/CLRTHREADATTRIBUTE 指定的线程模型不一致，链接器将忽略 \/CLRTHREADATTRIBUTE 并应用在源代码中指定的线程模型。  
+ 如果 /CLRTHREADATTRIBUTE 使用指定的线程模型不一致的源代码中指定的线程模型，将忽略 /CLRTHREADATTRIBUTE 链接器并将其应用源代码中指定的线程处理模型。  
   
- 例如，如果 CLR 程序承载使用单线程的 COM 对象，则必须使用单线程。如果 CLR 程序使用多线程，则该程序不能承载使用单线程的 COM 对象。  
+ 如果 CLR 程序承载使用单线程的 COM 对象，它将你使用单线程处理，例如，所必需的。  如果你 CLR 程序使用多线程处理，它不能承载使用单线程的 COM 对象。  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  展开**“配置属性”**节点。  
+2.  展开**配置属性**节点。  
   
-3.  展开**“链接器”**节点。  
+3.  展开**链接器**节点。  
   
-4.  选择**“高级”**属性页。  
+4.  选择**高级**属性页。  
   
-5.  修改**“CLR 线程特性”**属性。  
+5.  修改**CLR 线程特性**属性。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
-1.  请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>。  
+1.  请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

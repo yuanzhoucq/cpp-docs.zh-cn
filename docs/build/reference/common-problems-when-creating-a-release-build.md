@@ -1,44 +1,44 @@
 ---
-title: "创建发行版本时遇到的常见问题 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "调试版本, 与发行版本的差异"
-  - "调试内存分配器"
-  - "调试 [MFC], 发行版本"
-  - "堆布局问题"
-  - "内存 [C++], 改写"
-  - "MFC [C++], 发行版本"
-  - "优化 [C++], 编译器"
-  - "指针, 杂散"
-  - "项目 [C++], 调试配置"
-  - "发行版本, 生成应用程序"
-  - "发行版本, 疑难解答"
-  - "杂散指针"
-  - "发行版本疑难解答"
-  - "Visual C++ 疑难解答"
-  - "意外的代码生成"
+title: "创建发布版本时的常见问题 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- unexpected code generation
+- debugging [MFC], release builds
+- release builds, troubleshooting
+- stray pointers
+- debug builds, difference from release builds
+- MFC [C++], release builds
+- heap layout problems
+- pointers, stray
+- release builds, building applications
+- debug memory allocator
+- optimization [C++], compiler
+- projects [C++], debug configuration
+- troubleshooting Visual C++
+- troubleshooting release builds
+- memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d07abc5e2579ac0764d32223b4ded15265e827fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 创建发行版本时遇到的常见问题
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在开发期间，通常要生成项目的调试版本并用它进行测试。  如果那时生成应用程序的发布版本，则可能会发生访问冲突。  
+# <a name="common-problems-when-creating-a-release-build"></a>创建发行版本时遇到的常见问题
+在开发期间，你通常将生成，并使用你的项目的调试版本进行测试。 如果你然后生成你的应用程序的发布版本，则可能获得访问冲突。  
   
- 以下列表显示调试版本和发布（非调试）版本之间的主要差异。  还有其他差异，但以下是导致应用程序在调试版本中可以运行但在发布版本中失败的主要差异。  
+ 下面的列表显示调试版本和版本 （非调试） 生成之间的主要差异。 其他差异，但以下是在调试版本一起使用时将导致在发布版本中的应用程序失败的主要差异。  
   
 -   [堆布局](#_core_heap_layout)  
   
@@ -48,26 +48,26 @@ caps.handback.revision: 7
   
 -   [优化](#_core_optimizations)  
   
- 有关如何在调试版本中捕捉发布版本错误的信息，请参见 [\/GZ（在调试版本中捕捉发布版本错误）](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md)编译器选项。  
+ 请参阅[/GZ （调试版本中捕捉版本生成错误）](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md)有关如何捕获版本的编译器选项生成调试版本中的错误。  
   
-##  <a name="_core_heap_layout"></a> 堆布局  
- 在导致应用程序在调试时可运行，但在发布时不运行的问题中，约有百分之九十都是由堆布局引起的。  
+##  <a name="_core_heap_layout"></a>堆布局  
+ 堆布局将大约 90%的明显的问题的原因，在调试，但不是发布应用程序运行时。  
   
- 在生成用于调试的项目时，使用的是调试内存分配器。  这意味着所有内存分配的周围都有保护字节。  这些保护字节检测内存覆盖。  由于堆布局在发布版本和调试版本间不同，因此内存覆盖在调试版本中可能不会引起任何问题，但在发布版本中可能导致灾难性的后果。  
+ 生成用于调试的项目时，您正在使用调试内存分配器。 这意味着所有内存分配都有保护字节放置在其周围。 这些保护字节检测内存改写。 因为堆布局不同之间发行版本和调试版本中，内存覆盖不可能会在调试版本，创建的任何问题，但可能会产生灾难性的效果在发布版本中。  
   
- 有关更多信息，请参见[检查内存覆盖](../../build/reference/checking-for-memory-overwrites.md)和[使用调试版本来检查内存覆盖](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)。  
+ 有关详细信息，请参阅[检查内存覆盖](../../build/reference/checking-for-memory-overwrites.md)和[用于调试版本来检查内存改写](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)。  
   
-##  <a name="_core_compilation"></a> 编译  
- 在生成发布版本时，许多 MFC 宏和 MFC 实现会更改。  具体说来，ASSERT 宏在发布版本中求得 nothing，因此将不执行 ASSERT 中的任何代码。  有关更多信息，请参见[检查 ASSERT 语句](../../build/reference/using-verify-instead-of-assert.md)。  
+##  <a name="_core_compilation"></a>编译  
+ 许多 MFC 宏和很多 MFC 实现更改时生成发布版本。 具体而言，断言宏计算出任何结果中的发布版本中，以便将执行任何在 assert 语句中找到的代码。 有关详细信息，请参阅[检查断言语句](../../build/reference/using-verify-instead-of-assert.md)。  
   
- 在发布版本中，一些函数进行了内联以提高速度。  发布版本中的优化通常是打开的。  还使用了不同的内存分配器。  
+ 一些函数是内联以发布版本中提高速度。 优化通常是在发布版本中打开的。 也会使用不同的内存分配器。  
   
-##  <a name="_core_pointer_support"></a> 指针支持  
- 缺少调试信息时，空白部分会被从应用程序中移除。  在发布版本中，游离的指针有更多机会指向未初始化的内存，而不是指向调试信息。  
+##  <a name="_core_pointer_support"></a>指针支持  
+ 缺少调试信息从你的应用程序中移除填充。 在发布版本，杂散指针具有更好的指向未初始化的内存，而不是指向的调试信息。  
   
-##  <a name="_core_optimizations"></a> 优化  
- 取决于某些代码段的特性，优化编译器可能会生成意外的代码。  这导致发布版本问题的可能性最低，但有时确实会发生。  有关解决方案，请参见[优化代码](../../build/reference/optimizing-your-code.md)。  
+##  <a name="_core_optimizations"></a>优化  
+ 根据某些代码段的性质，优化编译器可能生成意外的代码。 这是最可能的原因的发行版本问题，但有时确实会发生。 一种解决方案，请参阅[优化您的代码](../../build/reference/optimizing-your-code.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [发行版本](../../build/reference/release-builds.md)   
  [修复发行版本问题](../../build/reference/fixing-release-build-problems.md)

@@ -1,37 +1,36 @@
 ---
-title: "用作链接器输入的 .Exp 文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".exp 文件 [C++]"
-  - "EXP 文件"
-  - "导出数据, 导出 (.exp) 文件"
-  - "导出函数"
-  - "导出函数, 关于导出的函数的信息"
-  - "函数 [C++], 导出"
-  - "导入库, 链接器文件"
-  - "链接 [C++], 导出"
+title: ".Exp 文件作为链接器输入 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions
+- import libraries, linker files
+- linking [C++], exports
+- exporting functions, information about exported functions
+- exporting data, export (.exp) files
+- functions [C++], exporting
+- .exp files [C++]
+- EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39e515cadf2930cdbe5ef600bcba4c86cb79a191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 用作链接器输入的 .Exp 文件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-导出 \(.exp\) 文件包含有关导出函数和数据项的信息。  LIB 在创建导入库时还创建 .exp 文件。  当直接或间接地链接一个既导出到另一程序又从其导入的程序时，请使用 .exp 文件。  如果用 .exp 文件链接，则 LINK 不产生导入库，因为它假定 LIB 已经创建了导入库。  有关 .exp 文件和导入库的详细信息，请参见[处理导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)。  
+# <a name="exp-files-as-linker-input"></a>用作链接器输入的 .Exp 文件
+导出 (.exp) 文件包含导出的函数和数据项目的信息。 当 LIB 创建导入库时，它还创建了.exp 文件。 当你将同时导出文件，直接或间接从另一个程序导入的程序时，你可以使用.exp 文件。 如果使用了.exp 文件进行链接，链接将不生成导入库，，因为它假定 LIB 已创建一个。 有关.exp 文件和导入库的详细信息，请参阅[使用导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)。  
   
-## 请参阅  
- [LINK 输入文件](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>另请参阅  
+ [LINK 输入的文件](../../build/reference/link-input-files.md)   
  [链接器选项](../../build/reference/linker-options.md)

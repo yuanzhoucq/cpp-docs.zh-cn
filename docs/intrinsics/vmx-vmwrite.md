@@ -1,73 +1,72 @@
 ---
-title: "__vmx_vmwrite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmwrite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmwrite intrinsic"
-  - "VMWRITE 指令"
+title: "__vmx_vmwrite |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmwrite
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmwrite intrinsic
+- VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3c9ebd2602fe38a0ec1b51389b1a8a90625dd75e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmwrite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Microsoft 专用**  
   
- 写入指定的字段中指定的值与当前虚拟计算机控制结构 \(VMCS\)。  
+ 将指定的值写入当前虚拟机控件结构 (VMCS) 中的指定字段。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-unsigned char __vmx_vmwrite(   
+unsigned char __vmx_vmwrite(   
    size_t Field,  
    size_t FieldValue  
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
   
-|Parameter|说明|  
-|---------------|--------|  
-|\[in\] `Field`|写入的 VMCS 字段。|  
-|\[in\] `FieldValue`|写入的值设置为 VMCS 字段。|  
+|参数|说明|  
+|---------------|-----------------|  
+|[in] `Field`|要写入的 VMCS 字段。|  
+|[in] `FieldValue`|要写入的 VMCS 字段的值。|  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  0  
- 成功的操作。  
+ 操作成功。  
   
  1  
- 失败的操作以扩展的状态可用于在当前 VMCS 的 `VM-instruction error field` 。  
+ 操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。  
   
  2  
- 操作失败，但没有可用状态。  
+ 操作失败，无可用状态。  
   
-## 备注  
- `__vmx_vmwrite` 功能与 `VMWRITE` 指令是等效的。  `Field` 参数的值是在 Intel 文档中介绍的编码域的索引。  有关更多信息，搜索文档， “IA\-32 Intel 体系结构的 Intel 虚拟化技术规范，”在网站单据数字 C97063 \-002 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) ，，然后参考附录 C 该文档。  
+## <a name="remarks"></a>备注  
+ `__vmx_vmwrite`函数等同于`VMWRITE`计算机指令。 值`Field`参数是 Intel 文档所述的编码的字段索引。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127)站点，并请查阅的附录 C文档。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmread](../intrinsics/vmx-vmread.md)
+ [__vmx_vmread](../intrinsics/vmx-vmread.md)

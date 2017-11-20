@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _bstr_t::GetBSTR
-dev_langs:
-- C++
-helpviewer_keywords:
-- GetBSTR method [C++]
+f1_keywords: _bstr_t::GetBSTR
+dev_langs: C++
+helpviewer_keywords: GetBSTR method [C++]
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 376951862a82d6588221b592238c9346d31bad4d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 7b8a66c9bf40ccb1467b0679f567a79bfd065315
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Microsoft 专用**  

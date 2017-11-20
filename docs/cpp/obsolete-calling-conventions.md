@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __fortran
 - __pascal
 - __syscall
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - WINAPI [C++]
 - __syscall keyword [C++]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - __fortran keyword [C++]
 - calling conventions, obsolete
 ms.assetid: a91fc665-034a-48ce-b6bd-d27125f308a7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 90f328552677bc0f41accc316433365467dd7673
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: bb6eafda669f4901db1259881fd2ed8cb995f559
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="obsolete-calling-conventions"></a>已过时调用约定
 ## <a name="microsoft-specific"></a>Microsoft 专用  

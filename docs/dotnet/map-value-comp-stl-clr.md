@@ -1,41 +1,39 @@
 ---
-title: "map::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_comp 成员 [STL/CLR]"
+title: "map:: value_comp (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: b0e53052-f3cc-48c8-8e29-1b151c23860a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ded4813f7a8e73efd9afbe6fe538835136c83259
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# map::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制两个元素值的排序委托。  
+# <a name="mapvaluecomp-stlclr"></a>map::value_comp (STL/CLR)
+将复制两个元素值的排序委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## 备注  
- 成员函数返回用于对受控序列进行排序的排序委托。  用它对两个元素进行比较。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回使用受控的序列进行排序的排序委托。 使用两个元素值进行比较。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_map_value_comp.cpp   
@@ -63,15 +61,18 @@ int main()
   
 ```  
   
-  **compare\(\[L'a', 1\], \[L'a', 1\]\) \= False**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= True**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= False**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [map](../dotnet/map-stl-clr.md)   
- [map::value\_compare](../dotnet/map-value-compare-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

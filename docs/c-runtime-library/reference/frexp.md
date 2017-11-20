@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- frexp
+apiname: frexp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -36,30 +33,15 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c281f59ebf90030abf2046e8639135aa47fc6058
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: f463ee2e077d4d1cc90e4fe2fc04eeda025bb6a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="frexp"></a>frexp
 获取浮点数的尾数和指数。  
@@ -92,7 +74,7 @@ long double frexp(
  `frexp` 返回尾数。 如果 `x` 为 0，则该函数将返回 0 表示尾数和指数。 如果 `expptr` 为 `NULL`，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将 `errno` 设置为 `EINVAL` 并返回 0。  
   
 ## <a name="remarks"></a>备注  
- `frexp` 函数将浮点值 (`x`) 分解为一个尾数 (`m`) 和一个指数 (`n`)，这样，`m` 的绝对值将大于或等于 0.5 且小于 1.0，并且 `x` = `m`*2<sup>n</sup>。 整数指数 `n` 存储在由 `expptr` 指向的位置。  
+ `frexp`函数将分解的浮点值 (`x`) 到一个尾数 (`m`) 和指数 (`n`)，这样的绝对值的数值`m`大于或等于 0.5 且小于 1.0，和`x` =  `m`* 2<sup>n</sup>。 整数指数 `n` 存储在由 `expptr` 指向的位置。  
   
  C++ 允许重载，因此您可以调用 `frexp` 的重载。 在 C 程序中，`frexp` 始终采用一个双精度值和一个整数并返回一个双精度值。  
   

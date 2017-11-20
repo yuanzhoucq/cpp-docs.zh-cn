@@ -1,45 +1,43 @@
 ---
-title: "generate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::generate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generate 函数 [STL/CLR]"
+title: "生成 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::generate
+dev_langs: C++
+helpviewer_keywords: generate function [STL/CLR]
 ms.assetid: 970f209f-31db-47c4-a0bb-4c3e579adb52
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2a2941894e6aa63708f9878abbf33f1335f812ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# generate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="generate-stlclr"></a>generate (STL/CLR)
 将函数对象生成的值分配给范围中的每个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _FwdIt, class _Fn0> inline  
     void generate(_FwdIt _First, _FwdIt _Last, _Fn0 _Func);  
 ```  
   
-## 备注  
- 此函数行为与 STL `generate`函数相同。  有关详细信息，请参阅[生成](../Topic/generate.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`generate`。 有关详细信息，请参阅[生成](../standard-library/algorithm-functions.md#generate)。  
   
-## 要求  
- **标头:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/算法 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

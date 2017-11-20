@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_bValue
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_gValue
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_rValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationColor [MFC], CAnimationColor
 - CAnimationColor [MFC], AddTransition
@@ -39,16 +37,15 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: e03ba23b30c714216356d49086a0d8f81df7db14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d380a2ea464737e29e32c9a79622aed7f1dada15
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 类
 实现可对颜色的红色、绿色和蓝色分量进行动画处理的颜色功能。  
@@ -304,4 +301,3 @@ void SetDefaultValue(COLORREF color);
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

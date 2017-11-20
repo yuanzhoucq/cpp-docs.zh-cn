@@ -1,41 +1,39 @@
 ---
-title: "deque::push_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::push_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_front 成员 [STL/CLR]"
+title: "deque:: push_front (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::push_front
+dev_langs: C++
+helpviewer_keywords: push_front member [STL/CLR]
 ms.assetid: a452c94e-abad-4e28-af41-c73ec805ec6f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 110c1eb538c08b8bba891433e639a0f6559a6d1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# deque::push_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequepushfront-stlclr"></a>deque::push_front (STL/CLR)
 添加新的第一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void push_front(value_type val);  
 ```  
   
-## 备注  
- 成员函数在控制的序列开始插入值为 `val` 的元素。  使用它添加到队列其他元素前面。  
+## <a name="remarks"></a>备注  
+ 成员函数将插入具有值的元素`val`受控序列的开头。 你可以使用它来添加到 deque 的另一个元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_push_front.cpp   
@@ -58,14 +56,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+c b a  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_back](../dotnet/deque-push-back-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)

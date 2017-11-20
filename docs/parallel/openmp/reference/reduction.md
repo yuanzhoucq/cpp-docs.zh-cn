@@ -1,58 +1,56 @@
 ---
-title: "reduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reduction"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reduction OpenMP clause"
+title: "减少 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33c629253db2d891f5e52347db291a3eec00bd03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# reduction
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定是私有的。每个线程的一个或多个变量是减少操作的主题在并行区域末端。  
+# <a name="reduction"></a>reduction
+指定对每个线程都是私有的一个或多个变量是并行区域末尾缩减操作的主题。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 reduction(operation:var)  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `operation`  
- 操作的运算符可以对变量 \(`var`\) 在并行区域末端。  
+ 要在变量上执行该操作的运算符 (`var`) 并行区域的末尾。  
   
  `var`  
- 一的多个变量执行标量降低。  如果多于变量中指定，用逗号分隔变量名称。  
+ 要对其执行标量降低的一个更多个变量。 如果指定多个变量，则请用逗号分隔变量名。  
   
-## 备注  
- `reduction` 适用于以下指令:  
+## <a name="remarks"></a>备注  
+ `reduction`适用于以下指令：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [部分](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 有关更多信息，请参见 [2.7.2.6 reduction](../../../parallel/openmp/2-7-2-6-reduction.md)。  
+ 有关详细信息，请参阅[2.7.2.6 缩减](../../../parallel/openmp/2-7-2-6-reduction.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_reduction.cpp  
@@ -159,7 +157,11 @@ int main( )
 }  
 ```  
   
-  **并行部分并行执行了 4 次。  连续的整数之和从 1 到 10，为 55**  
-**所有功能， func1 通过成功的 func5\!**    
-## 请参阅  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+The parallel section was executed 4 times in parallel.  
+The sum of the consecutive integers from 1 to 10, is 55  
+All of the the functions, func1 through func5 succeeded!  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

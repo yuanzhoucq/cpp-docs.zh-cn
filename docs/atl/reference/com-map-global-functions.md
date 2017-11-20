@@ -4,39 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- COM interfaces, COM map global functions
+f1_keywords:
+- atlbase/ATL::AtlInternalQueryInterface
+- atlbase/ATL::InlineIsEqualIUnknown
+dev_langs: C++
+helpviewer_keywords: COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: d6f23de1a5fd13d61d376acded35f9217d0a898d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 8a5c73f99d8d31ad500b232d371bf55072dd567a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="com-map-global-functions"></a>COM 映射全局函数
 这些函数提供支持 COM 映射**IUnknown**实现。  
@@ -48,7 +33,7 @@ ms.lasthandoff: 03/31/2017
 
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
 
 ##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
  检索指向所请求的接口的指针。  
@@ -81,7 +66,7 @@ HRESULT AtlInternalQueryInterface(
  `AtlInternalQueryInterface` 仅处理 COM 映射表中的接口。 如果你的对象进行了聚合，`AtlInternalQueryInterface`不未将委托给未知的外部对象。 可以接口输入到 COM 映射表与宏[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)或其变化版本之一。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
 ##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
  对测试的特例调用此函数， **IUnknown**。  
@@ -97,4 +82,3 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 ## <a name="see-also"></a>另请参阅  
  [函数](../../atl/reference/atl-functions.md)   
  [COM 映射宏](../../atl/reference/com-map-macros.md)
-

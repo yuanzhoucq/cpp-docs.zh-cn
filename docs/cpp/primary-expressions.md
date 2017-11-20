@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 980be1e393fab633f3417dcc250c1820def3ff90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="primary-expressions"></a>主要表达式
 主表达式是更复杂的表达式的构造块。 它们是文本、名称以及范围解析运算符 (`::`) 限定的名称。  主表达式可以具有以下任一形式：  
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/25/2017
   
  **这**关键字是指向类对象的指针。 它在非静态成员函数中可用，并指向为其调用函数的类的实例。 **这**关键字不能使用外部类成员函数体。  
   
- 一种**这**指针`type` ** \*const** (其中`type`是类名称) 不是专门修改的函数中**此**指针。 下面的示例演示成员函数声明和类型的**这**:  
+ 一种**这**指针`type`  **\*const** (其中`type`是类名称) 不是专门修改的函数中**此**指针。 下面的示例演示成员函数声明和类型的**这**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

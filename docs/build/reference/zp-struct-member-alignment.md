@@ -1,88 +1,88 @@
 ---
-title: "/Zp（结构成员对齐） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zp"
-  - "VC.Project.VCCLCompilerTool.StructMemberAlignment"
-  - "VC.Project.VCCLWCECompilerTool.StructMemberAlignment"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zp 编译器选项 [C++]"
-  - "“结构成员对齐”编译器选项"
-  - "Zp 编译器选项"
-  - "-Zp 编译器选项 [C++]"
+title: "-Zp （结构成员对齐） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zp
+- VC.Project.VCCLCompilerTool.StructMemberAlignment
+- VC.Project.VCCLWCECompilerTool.StructMemberAlignment
+dev_langs: C++
+helpviewer_keywords:
+- Struct Member Alignment compiler option
+- Zp compiler option
+- /Zp compiler option [C++]
+- -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0743c9c11af61356806eb0f42efb8bba8139479b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /Zp（结构成员对齐）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-控制结构的成员如何封装到内存并为模块中的所有结构指定相同的封装。  
+# <a name="zp-struct-member-alignment"></a>/Zp（结构成员对齐）
+控制结构的成员如何打包到内存并指定模块中的所有结构相同的封装。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Zp[1|2|4|8|16]  
 ```  
   
-## 备注  
- 当指定此选项时，第一个结构成员后的每个结构成员将存储在成员类型大小或 `n` 字节边界（其中 `n` 为 1、2、4、8 或 16）两者中较小的一个边界上。  
+## <a name="remarks"></a>备注  
+ 指定此选项，第一个之后的每个结构成员会存储在成员类型的大小上或`n`-字节边界 (其中`n`是 1、 2、 4、 8 或 16)，两者中较小。  
   
- 下表描述了可用的值。  
+ 下表中列出了该可用值。  
   
  1  
- 针对 1 字节边界将结构打包。  与 **\/Zp** 相同。  
+ 1 字节边界上的包结构。 与相同**/Zp**。  
   
  2  
- 针对 2 字节边界将结构打包。  
+ 在 2 字节边界上的包结构。  
   
  4  
- 针对 4 字节边界将结构打包。  
+ 在 4 字节边界上的包结构。  
   
  8  
- 针对 8 字节边界将结构打包\(默认设置\)。  
+ 在 8 字节边界 （默认值） 上的包结构。  
   
  16  
- 针对 16 字节边界将结构打包。  
+ 在 16 字节边界上的包结构。  
   
- 除非有特定的对齐要求，否则不应使用此选项。  
+ 除非有特定的对齐要求，不应使用此选项。  
   
- 还可以使用 [pack](../../preprocessor/pack.md) 控制结构封装。  有关对齐的详细信息，请参阅：  
+ 你还可以使用[包](../../preprocessor/pack.md)控制结构封装。 有关对齐的详细信息，请参阅：  
   
 -   [align](../../cpp/align-cpp.md)  
   
--   [\_\_alignof 运算符](../../cpp/alignof-operator.md)  
+-   [__alignof 运算符](../../cpp/alignof-operator.md)  
   
--   [\_\_unaligned](../../cpp/unaligned.md)  
+-   [__unaligned](../../cpp/unaligned.md)  
   
--   [结构对齐示例](../../build/examples-of-structure-alignment.md)（特定于 x64）  
+-   [结构对齐示例](../../build/examples-of-structure-alignment.md)(特定于 x64)  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“代码生成”**属性页。  
+3.  单击**代码生成**属性页。  
   
-4.  修改**“结构成员对齐”**属性。  
+4.  修改**结构成员对齐**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

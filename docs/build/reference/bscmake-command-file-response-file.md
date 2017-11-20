@@ -1,47 +1,47 @@
 ---
-title: "BSCMAKE 命令文件（响应文件） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSCMAKE, 命令文件"
-  - "BSCMAKE, 响应文件"
-  - "命令文件"
-  - "命令文件, BSCMAKE"
-  - "响应文件"
-  - "响应文件, BSCMAKE"
+title: "BSCMAKE 命令文件 （响应文件） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BSCMAKE, response file
+- BSCMAKE, command file
+- response files, BSCMAKE
+- command files, BSCMAKE
+- response files
+- command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1d5dd2696a48a84672350b90b569c8f0caf7c3cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE 命令文件（响应文件）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以在命令文件中提供部分或全部命令行输入。  用下面的语法指定命令文件：  
+# <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令文件（响应文件）
+你可以提供部分或全部命令文件中的命令行输入。 指定命令文件使用以下语法：  
   
 ```  
 BSCMAKE @filename  
 ```  
   
- 只有一个命令文件允许使用。  可以用 *filename* 指定路径。  在 *filename* 前使用 at 符号 \(@\)。  BSCMAKE 不采用扩展名。  可以在命令行上 *filename* 之后指定附加 *sbrfile*。  命令文件是文本文件，包含 BSCMAKE 的输入，顺序和您在命令行上指定时的顺序相同。  用一或多个空格、制表符或换行符分隔命令行参数。  
+ 允许只能有一个命令文件。 你可以指定具有路径*filename*。 位于之前*filename*使用 at 符号 (@)。 BSCMAKE 假定不扩展。 你可以指定其他*sbrfiles*之后在命令行上*filename*。 命令文件是包含在命令行中的指定它的相同顺序 BSCMAKE 的输入的文本文件。 用一个或多个空格、 制表符或换行符分隔的命令行参数。  
   
- 下面的命令使用命令文件调用 BSCMAKE：  
+ 以下命令调用 BSCMAKE 使用命令文件：  
   
 ```  
 BSCMAKE @prog1.txt  
 ```  
   
- 下面是一个示例命令文件：  
+ 下面是示例命令文件：  
   
 ```  
 /n /v /o main.bsc /El  
@@ -52,5 +52,5 @@ verdate.h c:\src\inc\screen.h
 file1.sbr file2.sbr file3.sbr file4.sbr  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [BSCMAKE 参考](../../build/reference/bscmake-reference.md)

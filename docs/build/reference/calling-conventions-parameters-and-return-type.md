@@ -1,29 +1,29 @@
 ---
-title: "调用约定、参数和返回类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "调用约定, Helper 函数"
-  - "Helper 函数, 调用约定"
-  - "Helper 函数, 返回类型"
+title: "调用约定、 参数和返回类型 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- calling conventions, helper functions
+- helper functions, calling conventions
+- helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bdaf30655808d5a43f6866039cc93a3833896921
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 调用约定、参数和返回类型
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 Helper 例程的原型是：  
   
 ```  
@@ -36,17 +36,17 @@ FARPROC WINAPI __delayLoadHelper2(
  其中：  
   
  `pidd`  
- 指向 `ImgDelayDescr`（请参阅 delayimp.h）的 `const` 指针，其中包含与导入相关的各种数据的偏移量、绑定信息的时间戳和提供有关描述符内容的进一步信息的特性集。  当前只有一个特性，即 `dlattrRva`，它指示描述符中的地址是相对虚拟地址（相对于虚拟地址）。  
+ 指向 `const`（请参阅 delayimp.h）的 `ImgDelayDescr` 指针，其中包含与导入相关的各种数据的偏移量、绑定信息的时间戳和提供有关描述符内容的进一步信息的特性集。 当前只有一个特性，即 `dlattrRva`，它指示描述符中的地址是相对虚拟地址（相对于虚拟地址）。  
   
- 有关 `PCImgDelayDescr` 结构的定义，请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)。  
+ 定义`PCImgDelayDescr`结构，请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)。  
   
  `ppfnIATEntry`  
- 指向延迟加载导入地址表 \(IAT\) 中的槽的指针，该地址表将用导入函数的地址更新。  Helper 例程需要存储它将要返回到该位置的同一值。  
+ 指向延迟加载导入地址表 (IAT) 中的槽的指针，该地址表将用导入函数的地址更新。 Helper 例程需要存储它将要返回到该位置的同一值。  
   
-## 预期的返回值  
+## <a name="expected-return-values"></a>预期的返回值  
  如果函数运行成功，则返回导入函数的地址。  
   
- 如果函数运行失败，将引发异常，并且返回 0。  引发的异常有三种类型：  
+ 如果函数运行失败，将引发异常，并且返回 0。 引发的异常有三种类型：  
   
 -   无效参数，发生在 `pidd` 中的特性未正确指定时。  
   
@@ -56,12 +56,12 @@ FARPROC WINAPI __delayLoadHelper2(
   
  由你负责处理这些异常。  
   
-## 备注  
- Helper 函数的调用约定是 `__stdcall`。  返回值的类型不相关，所以使用 FARPROC。  该函数具有 C 链接。  
+## <a name="remarks"></a>备注  
+ Helper 函数的调用约定是 `__stdcall`。 返回值的类型不相关，所以使用 FARPROC。 该函数具有 C 链接。  
   
- 除非要将 Helper 例程用作通知挂钩，否则延迟加载 Helper 的返回值需要存储在已传入函数指针的位置。  在这种情况下，由你的代码负责查找要返回的适当函数指针。  然后，链接器生成的 thunk 代码可将该返回值用作导入的实际目标并直接跳转到该目标。  
+ 除非要将 Helper 例程用作通知挂钩，否则延迟加载 Helper 的返回值需要存储在已传入函数指针的位置。 在这种情况下，由你的代码负责查找要返回的适当函数指针。 然后，链接器生成的 thunk 代码可将该返回值用作导入的实际目标并直接跳转到该目标。  
   
-## 示例  
+## <a name="sample"></a>示例  
  以下代码显示如何实现一个简单的挂钩函数。  
   
 ```  
@@ -141,5 +141,5 @@ PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解 Helper 函数](../../build/reference/understanding-the-helper-function.md)

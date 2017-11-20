@@ -1,42 +1,41 @@
 ---
-title: "数据源：以编程方式配置 ODBC 数据源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQLConfigDataSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "配置 ODBC 数据源"
-  - "ODBC 连接, 配置"
-  - "ODBC 数据源, 配置"
-  - "SQLConfigDataSource 方法示例"
+title: "数据源： 以编程方式配置 ODBC 数据源 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SQLConfigDataSource
+dev_langs: C++
+helpviewer_keywords:
+- ODBC data sources, configuring
+- SQLConfigDataSource method example
+- ODBC connections, configuring
+- configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd401acedbdfd8928ab3b2b085ce02595bdaa13b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 数据源：以编程方式配置 ODBC 数据源
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明如何用编程方式配置开放式数据库连接 \(ODBC\) 数据源名称。  这增加了访问数据的灵活性，不必强制用户显式地使用 ODBC 管理器或其他程序来指定数据源名称。  
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
+本主题说明如何以编程方式配置开放式数据库连接 (ODBC) 数据源名称。 这可以灵活地访问数据而不强制用户显式使用 ODBC 管理器或其他程序以指定数据源的名称。  
   
- 通常，如果关联的数据库管理系统 \(DBMS\) 支持用 ODBC 管理器来创建数据源，则用户运行 ODBC 管理器来创建数据源。  
+ 通常情况下，用户运行 ODBC 管理器可以创建数据源，如果关联的数据库管理系统 (DBMS) 支持此操作。  
   
- 用 ODBC 管理器创建 Microsoft Access ODBC 数据源时，有两个选择：可以选择现有的 .mdb 文件，或者创建新的 .mdb 文件。  没有从 MFC ODBC 应用程序创建 .mdb 文件的编程方式。  因此，如果您的应用程序要求将数据放到 Microsoft Access 数据源（.mdb 文件）中，最可行的办法是有一个空的 .mdb 文件，需要时可以使用或复制它。  
+ 在创建时 Microsoft 访问 ODBC 数据源通过 ODBC 管理器中，您有两个选项： 您可以选择现有的.mdb 文件，或者可以创建新的.mdb 文件。 没有从 MFC ODBC 应用程序创建的.mdb 文件的编程方法。 因此，如果你的应用程序要求您将数据放置到 Microsoft Access 数据源 （.mdb 文件），你最有可能想要具有空的.mdb 文件，你可以使用或在需要时复制。  
   
- 但是，许多 DBMS 允许以编程的方式创建数据源。  一些数据源维护数据库的目录规范。  也就是说，目录是一个数据源，数据源中的每个表都存储在单独的文件中（对于 dBASE，每个表都是一个 .dbf 文件）。  其他 ODBC 数据库的驱动程序，如 Microsoft Access 和 SQL Server，要求在满足一些特定的条件之后才能建立数据源。  例如，使用 SQL Server ODBC 驱动程序时，需要建立了一台 SQL Server 计算机。  
+ 但是，许多 Dbms 允许以编程方式的数据源创建。 某些数据源保持数据库的目录规范。 也就是说，目录是数据源，数据源中的每个表都存储在单独的文件 （对于 dBASE，每个表都是一个.dbf 文件）。 对于其他 ODBC 数据库，如 Microsoft Access 和 SQL Server 驱动程序都需要在建立数据源之前满足某些特定条件。 例如，在使用 SQL Server ODBC 驱动程序时，你需要建立了 SQL Server 计算机。  
   
-##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 实例  
- 下面的示例用 **::SQLConfigDataSource** ODBC API 函数创建一个新的称为“New Excel Data Source”的 Excel 数据源：  
+##  <a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource 示例  
+ 下面的示例使用**:: SQLConfigDataSource**调用 ODBC API 函数来创建新的 Excel 数据源的新的 Excel 数据源：  
   
 ```  
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",   
@@ -47,78 +46,78 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
                    "MaxScanRows=20\0");  
 ```  
   
- 注意，数据源实际上是一个目录 \(C:\\EXCELDIR\)，这个目录必须存在。  Excel 驱动程序使用目录作为其数据源，使用文件作为单独的表（一个表就是一个 .xls 文件）。  
+ 请注意，数据源是实际的目录 (C:\EXCELDIR);此目录必须存在。 作为单独的表 （一个表中每个.xls 文件） 还原时，Excel 驱动程序使用作为其数据源和文件的目录。  
   
- 有关创建表的更多信息，请参见 [数据源：以编程方式在 ODBC 数据源中创建表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。  
+ 有关创建表的详细信息，请参阅[数据源： 以编程方式创建 ODBC 数据源中的表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。  
   
- 下面的内容讨论需要传递给 **::SQLConfigDataSource** ODBC API 函数的参数。  若要使用 **::SQLConfigDataSource**，必须包括 Odbcinst.h 头文件并使用 Odbcinst.lib 导入库。  另外，Odbccp32.dll（对于 16 位系统为 Odbcinst.dll）必须在运行时路径中。  
+ 以下信息讨论如何将传递给所需要的参数**:: SQLConfigDataSource** ODBC API 函数。 若要使用**:: SQLConfigDataSource**，你必须包括 Odbcinst.h 标头文件，并使用 Odbcinst.lib 导入库。 此外，在路径中必须在 Odbccp32.dll，在运行的时 （或 Odbcinst.dll 16 位）。  
   
- 您可以使用 ODBC 管理器或类似的实用程序来创建 ODBC 数据源名称。  但是，有时从应用程序直接创建数据源名称获得访问权，而不需要用户运行单独的实用程序的做法更可取。  
+ 你可以创建 ODBC 数据源名称使用 ODBC 管理器或类似的实用工具。 但是，有时最好直接从你的应用程序，以获取访问权限，而无需用户运行单独的实用程序创建数据源名称。  
   
- ODBC 管理器（通常安装在“控制面板”中）将一些项放在 Windows 注册表（对于 16 位系统，放在 Odbc.ini 文件）中，从而新建数据源。  ODBC 驱动程序管理器将查询这个文件，以获得有关数据源的所需信息。  了解哪些信息要放在注册表中很重要，因为您需要通过调用 **::SQLConfigDataSource** 来提供这些信息。  
+ ODBC 管理器 （通常在控制面板中安装） 通过将项放在 Windows 注册表中 （或者，为 Odbc.ini 文件中的 16 位） 创建一个新的数据源。 ODBC 驱动程序管理器查询此文件以获取有关数据源所需的信息。 务必要知道哪些信息需要放置在注册表中，因为你需要提供对的调用**:: SQLConfigDataSource**。  
   
- 尽管不用 **::SQLConfigDataSource** 也可以将这些信息直接写到注册表，但是任何这样做的应用程序都依赖于驱动程序管理器当前用来维护其数据的技术。  如果 ODBC 驱动程序管理器以后的修订版使用不同的方法来维护有关数据源的记录，使用这项技术的所有应用程序都将会出现问题。  通常建议您在提供了 API 函数的情况下使用 API 函数。  例如，如果使用 **::SQLConfigDataSource** 函数，可以将代码从 16 位系统移植到 32 位系统，因为该函数可以正确地写入 Odbc.ini 文件或注册表。  
+ 尽管此信息无法将直接写入到注册表而无需使用**:: SQLConfigDataSource**，这样做的任何应用程序依赖于驱动程序管理器使用来维护其数据的当前技术。 如果以不同的方式维护有关数据源的 ODBC 驱动程序管理器实现记录到更高版本的修订版本，任何应用程序使用此方法将断开。 通常，最好是在其中一个提供时使用 API 函数。 例如，你的代码是在 16 位为 32 位可移植性的如果你使用**:: SQLConfigDataSource**函数，因为该函数正确将写入 Odbc.ini 文件或注册表。  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 参数  
- 下面解释 **::SQLConfigDataSource** 函数的参数。  其中大部分内容摘自随 Visual C\+\+ 1.5 版本和更高版本一同提供的“ODBC API 程序员参考”。  
+##  <a name="_core_sqlconfigdatasource_parameters"></a>SQLConfigDataSource 参数  
+ 以下说明了这些参数的**:: SQLConfigDataSource**函数。 很多信息则来自 ODBC API*程序员参考*提供使用 Visual c + + 版本 1.5 和更高版本。  
   
-###  <a name="_core_function_prototype"></a> 函数原型  
+###  <a name="_core_function_prototype"></a>函数原型  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
 ```  
   
-### 备注  
+### <a name="remarks"></a>备注  
   
-####  <a name="_core_parameters_and_usage"></a> 参数及其用法  
+####  <a name="_core_parameters_and_usage"></a>参数和使用情况  
  *hwndParent*  
- 指定为任何对话框的所有者的窗口。ODBC 驱动程序管理器或者特定 ODBC 驱动程序将创建这些对话框以从用户处获得有关新数据源的附加信息。  如果 `lpszAttributes` 参数没有提供足够的信息，则显示一个对话框。  *hwndParent* 参数可以为 **NULL**。  
+ 指定为任何 ODBC 驱动程序管理器或特定 ODBC 驱动程序创建以获得有关新的数据源的用户的其他信息的对话框的所有者窗口。 如果`lpszAttributes`参数不会提供足够的信息，将出现一个对话框。 *HwndParent*参数可能是**NULL**。  
   
  `lpszDriver`  
- 驱动程序的描述。  这是显示给用户的名称，不是物理驱动器的名称 \(DLL\)。  
+ 驱动程序说明中。 这是显示给用户，而不是物理驱动器的名称 (DLL) 的名称。  
   
  `lpszAttributes`  
- 格式为“键名＝值”的特性列表。  这些字符串用 Null 结束符分开，列表结尾有 2 个连续的 Null 结束符。  这些特性主要是要为新数据源填入到注册表中的默认驱动程序特定项。  ODBC API 参考中有关该函数没有提到的重要的一项是指定新数据源名称的“DSN”（“数据源名称”）。  其他项都是针对新数据源驱动程序的。  因为驱动程序会用对话框提示用户提供新值，所以通常没有必要提供所有的项。（将 *hwndParent* 设置成 **NULL** 将导致这种情况。）您也可以显式地提供默认值以便不提示用户进行输入。  
+ 窗体中的属性列表"keyname = value"。 这些字符串用在列表末尾的两个连续 null 终止符与 null 终止符分隔。 这些特性是主要是特定于驱动程序中的默认项进入新的数据源的注册表。 此函数的 ODBC API 参考中未提及的一个重要的项是"DSN"（"数据源名称"），它指定新的数据源的名称。 项的其余部分是特定于新数据源的驱动程序。 通常不需要提供的所有条目，因为该驱动程序可以提示用户提供的新值的对话框。 (设置*hwndParent*到**NULL**以导致此问题。)你可能想要显式提供默认值，以便不会提示用户。  
   
-###### 使用 ODBC 管理器确定 lpszDriver 参数的驱动程序说明  
-  
-1.  运行 ODBC 管理器。  
-  
-2.  单击**“添加”**。  
-  
- 这会提供已安装的驱动程序及其说明的列表。  将此说明作为 `lpszDriver` 参数使用。  请注意，应使用整个说明，包括说明中的文件扩展名和括号（如果有），如“Excel Files \(\*.xls\)”。  
-  
- 另一种方法是检查注册表（对于 16 位系统，为 Odbcinst.ini 文件），在注册表项“ODBC Drivers”（或在 Odbcinst.ini 的 \[ODBC Drivers\] 节）下有一个所有驱动程序项和说明的列表。  
-  
- 一种查找 `lpszAttributes` 参数的键名和值的方法是：查看已配置的数据源（多半是由 ODBC 管理器配置的数据源）的 Odbc.ini 文件。  
-  
-###### 查找 lpszAttributes 参数的键名及值  
-  
-1.  运行 Windows 注册表编辑器（或者对于 16 位系统，打开 Odbc.ini 文件）。  
-  
-2.  使用以下方法之一查找 ODBC 数据源的信息：  
-  
-    -   对于 32 位系统，在左窗格中查找键 **HKEY\_CURRENT\_USER\\Software\\ODBC\\ODBC.INI\\ODBC Data Sources**。  
-  
-         右边窗格列出了窗体实体：“pub: REG\_SZ:*\<数据源名称\>*”，这里*\<数据源名称\>*是已用您要使用的驱动程序所需设置配置好的数据源。  选择要用的数据源，例如 SQL Server。  字符串“pub:”后的项依次为在 `lpszAttributes` 参数中要使用的键名和值。  
-  
-    -   对于 16 位系统，在 Odbc.ini 文件中查找带 \[*\<数据源名称\>*\] 标记的节。  
-  
-         该行之后的各行的格式为“键名\=值”。  这些正是在 `lpszAttributes` 参数中要用的项。  
-  
- 您也许想查看要使用的特定驱动程序的文档。  可以在驱动程序的联机帮助中找到有用的信息。运行 ODBC 管理器可访问驱动程序的联机帮助。  在 Windows NT、Windows 3.1 或 Windows 95 上，这些帮助文件通常位于 WINDOWS\\SYSTEM 目录下。  
-  
-###### 获得 ODBC 驱动程序的联机帮助  
+###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>若要确定用于使用 ODBC 管理器的 lpszDriver 参数的驱动程序的说明  
   
 1.  运行 ODBC 管理器。  
   
-2.  单击**“添加”**。  
+2.  单击 **“添加”**。  
   
-3.  选择驱动程序名称。  
+ 这样，可以安装的驱动程序和及其说明的列表。 将此说明作为`lpszDriver`参数。 请注意，你将使用整个说明，如"Excel 文件 (*.xls)"，如果它们存在描述中包括的文件扩展名和括号。  
   
-4.  单击**“确定”**。  
+ 作为替代方法，你可以检查注册表 （或者，为 16 位，文件 Odbcinst.ini），其中包含的所有驱动程序项和注册表项"ODBC 驱动程序"下的说明 （或 Odbcinst.ini 中的部分 [ODBC 驱动程序]） 的列表。  
   
- 在 ODBC 管理器显示为该特定驱动程序创建新数据源的信息时，单击“帮助”。  这就打开了该特定驱动程序的帮助文件，该帮助文件一般包含有关使用驱动程序的重要信息。  
+ 查找的键名和值的一种方法`lpszAttributes`参数是 （可能是一个已配置由 ODBC 管理器） 已配置的数据源的 Odbc.ini 文件。  
   
-## 请参阅  
- [数据源 \(ODBC\)](../../data/odbc/data-source-odbc.md)
+###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>若要查找 lpszAttributes 参数的键名和值  
+  
+1.  运行 Windows 注册表编辑器 （或对于 16 位，打开 Odbc.ini 文件）。  
+  
+2.  查找使用下列其中一项的 ODBC 数据源信息：  
+  
+    -   32 位，找不到该项**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 数据源**的左窗格中。  
+  
+         右窗格中列出的窗体的项:"pub: REG_SZ:*<data source name>*"，其中 *<data source name>* 是已配置了你想驱动程序所需的设置的数据源若要使用。 选择数据源所需，例如，SQL Server。 以下字符串的项"发布:"中，在顺序、 keyname 和值要在中使用你`lpszAttributes`参数。  
+  
+    -   16 位，在标记的 Odbc.ini 文件中找到的部分 [*\<数据源名称 >*]。  
+  
+         该行之后的行是窗体的"keyname = value"。 这些是完全的条目用于你`lpszAttributes`参数。  
+  
+ 你可能还想要检查你要使用的特定驱动程序的文档。 可以驱动程序，你可以通过运行 ODBC 管理器访问联机帮助中找到有用的信息。 这些帮助文件通常位于 WINDOWS\SYSTEM 目录中的 Windows NT、 Windows 3.1 中或 Windows 95。  
+  
+###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>若要获取联机帮助的 ODBC 驱动程序  
+  
+1.  运行 ODBC 管理器。  
+  
+2.  单击 **“添加”**。  
+  
+3.  选择的驱动程序名称。  
+  
+4.  单击“确定”。  
+  
+ ODBC 管理器在显示时用于创建该特定的驱动程序的新数据源的信息，请单击**帮助**。 这将打开该特定的驱动程序，其中通常包含有关使用驱动程序的重要信息的帮助文件。  
+  
+## <a name="see-also"></a>另请参阅  
+ [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)

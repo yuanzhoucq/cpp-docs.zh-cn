@@ -1,32 +1,30 @@
 ---
-title: "multimap::multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multimap 成员 [STL/CLR]"
+title: "multimap:: multimap (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::multimap
+dev_langs: C++
+helpviewer_keywords: multimap member [STL/CLR]
 ms.assetid: cdf9c5dc-774c-424e-aeea-7554643e401c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 90e201ea917ea50b64c85d8b1b103e186b267b88
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapmultimap-stlclr"></a>multimap::multimap (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 multimap();  
@@ -43,79 +41,71 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### 参数  
- 首先  
- 插入范围的开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要插入的范围开始处。  
   
  last  
- 插入的范围末尾。  
+ 要插入的范围的末尾。  
   
  pred  
- 排序规则序列的谓词。  
+ 排序受控序列的谓词。  
   
- right  
- 插入的对象或值范围。  
+ 右  
+ 要插入的对象或范围。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `multimap();`  
   
- 初始化控制序列没有元素，并且默认排序 `key_compare()`谓词。  使用它来指定空的初始序列，以控制默认排序谓词中。  
+ 使用默认的排序谓词初始化受控的序列不包含任何元素， `key_compare()`。 用于指定空的初始受控的序列，使用默认的排序谓词。  
   
  构造函数：  
   
  `explicit multimap(key_compare^ pred);`  
   
- 初始化控制序列没有元素，与顺序 `pred`的谓词。  使用该指定一个空控件，使用初始序列指定顺序匹配的谓词。  
+ 初始化受控的序列不包含任何元素，与排序的谓词`pred`。 用于指定空的初始受控的序列，通过指定排序的谓词。  
   
  构造函数：  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- 初始化与序列 `[``right``.``(),` `right``.`中的[multimap::end](../dotnet/multimap-end-stl-clr.md)[multimap::begin](../dotnet/multimap-begin-stl-clr.md)并且默认`())`的序列顺序控制，谓词。  使用指定它是控制 multimap 对象顺序复制由 `right`的初始序列，以控制默认排序谓词中。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)，使用默认的排序谓词。 用于指定是通过多重映射对象控制的序列的副本的初始受控的序列`right`，使用默认的排序谓词。  
   
  构造函数：  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- 初始化与序列 `[``right``->``(),` `right``->`中的[multimap::end](../dotnet/multimap-end-stl-clr.md)[multimap::begin](../dotnet/multimap-begin-stl-clr.md)并且默认`())`的序列顺序控制，谓词。  使用指定它是控制 multimap 对象顺序复制由 `right`的初始序列，以控制默认排序谓词中。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)，使用默认的排序谓词。 用于指定是通过多重映射对象控制的序列的副本的初始受控的序列`right`，使用默认的排序谓词。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> multimap(InIter first, InIter last);`  
   
- `multimap(InIter first, InIter last);`  
-  
- 初始化与序列 `[``first``,` 并默认`last`的`)`的序列顺序控制，谓词。  使用会使控制序列复制另一个序列，其中包含默认排序谓词中。  
+ 初始化受控的序列与序列 [`first`， `last`)，使用默认的排序谓词。 你可以使用它以使用默认的排序谓词使受控的序列的另一个序列，副本。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- 初始化与序列 `[``first``,` 。排序的谓词 `pred``last``)`的控制，序列。  使用会使控制序列复制其他序列，具有指定顺序的谓词。  
+ 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`。 你可以使用它以使另一个序列，使用指定的排序谓词的副本的受控的序列。  
   
  构造函数：  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化时使用其默认的枚举数指定的顺序控制 `right`序列排序，谓词。  使用会使控制枚举数的序列描述复制另一个序列，其中包含默认排序谓词。  
+ 初始化与枚举器指定序列的受控的序列`right`，使用默认的排序谓词。 你可以使用它来使一个枚举器，使用默认的排序谓词所描述的另一个序列的副本的受控的序列。  
   
  构造函数：  
   
- `multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`。 你可以使用它来使受控的序列的枚举，通过指定排序的谓词所描述的另一个序列的副本。  
   
- 初始化具有排序谓词的 `pred`枚举数指定的顺序控制序列，`right`。  使用会使控制枚举数的序列描述复制其他序列，具有指定顺序的谓词的。  
+## <a name="example"></a>示例  
   
-## 示例  
-  
-```  
+```cpp  
 // cliext_multimap_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -189,22 +179,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **页眉：** \<\/cliext 映射\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)   
- [multimap::operator\=](../dotnet/multimap-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
+ [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

@@ -1,34 +1,32 @@
 ---
-title: "编译器警告（等级 1）C4835 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4835"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4835"
+title: "编译器警告 （等级 1） C4835 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4835
+dev_langs: C++
+helpviewer_keywords: C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c1b01a84313d2d04e927420d1462dd8d5c2c495b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 1）C4835
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“variable”: 在主机程序集中首次执行托管代码之后，才能运行导出数据的初始值设定项  
+# <a name="compiler-warning-level-1-c4835"></a>编译器警告（等级 1）C4835
+variable： 在宿主程序集首次执行托管的代码之前，不会运行导出的数据的初始值设定项  
   
- 在托管组件之间访问数据时，建议不要使用本机 C\+\+ 导入和导出机制。  而应在托管类型内声明数据成员，并在客户端中使用 `#using` 引用该元数据。  有关详细信息，请参阅[\#using 指令](../../preprocessor/hash-using-directive-cpp.md)。  
+ 在访问托管组件之间的数据时，建议不使用本机 c + + 导入和导出机制。 相反，声明在托管类型的内部数据成员，并引用元数据与`#using`在客户端。 有关详细信息，请参阅[#using 指令](../../preprocessor/hash-using-directive-cpp.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4835。  
   
 ```  
@@ -41,8 +39,8 @@ __declspec(dllexport) int m = f();   // C4835
 __declspec(dllexport) int *p = &n;   // C4835  
 ```  
   
-## 示例  
- 下面的示例使用上一示例中生成的组件，演示变量的值不是所期望的值。  
+## <a name="example"></a>示例  
+ 下面的示例使用在前面的示例，显示的变量的值不按预期方式构建的组件。  
   
 ```  
 // C4835_b.cpp  
@@ -57,5 +55,7 @@ int main() {
 }  
 ```  
   
-  **0**  
-**268456008**
+```Output  
+0  
+268456008  
+```

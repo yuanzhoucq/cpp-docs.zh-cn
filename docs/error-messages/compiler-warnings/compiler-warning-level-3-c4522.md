@@ -1,36 +1,34 @@
 ---
-title: "编译器警告（等级 3）C4522 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4522"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4522"
+title: "编译器警告 （等级 3） C4522 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4522
+dev_langs: C++
+helpviewer_keywords: C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 564ccedc090d7fb5c3f594f62b21f0afdf094a26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 3）C4522
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“class”: 指定了多个赋值运算符  
+# <a name="compiler-warning-level-3-c4522"></a>编译器警告（等级 3）C4522
+class： 多个指定的赋值运算符  
   
- 类有单个类型的多个赋值运算符。  此警告是信息性的；构造函数在程序中是可调用的。  
+ 此类具有单个类型的多个赋值运算符。 此警告为信息性;构造函数是可在程序中调用。  
   
- 使用 [警告](../../preprocessor/warning.md) 杂注可取消此警告。  
+ 使用[警告](../../preprocessor/warning.md)杂注来禁止显示此警告。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4522。  
   
 ```  

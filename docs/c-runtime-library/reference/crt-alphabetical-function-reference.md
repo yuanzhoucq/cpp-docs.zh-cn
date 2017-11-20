@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.tables.runtime
-dev_langs:
-- C++
+f1_keywords: vc.tables.runtime
+dev_langs: C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 7c3b6c4b5d8c1c479be20e7437441f9fcdba7007
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: cf32d38e05da75772ae817c686b154eaed0f69ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crt-alphabetical-function-reference"></a>CRT 按字母顺序的函数参考
 C 运行时 (CRT) 库参考文档由例程按字母顺序进行排列。 若要基于功能性查找 CRT 例程，请参阅[按类别划分的运行时例程](../../c-runtime-library/run-time-routines-by-category.md)。  
@@ -1015,6 +997,8 @@ C 运行时 (CRT) 库参考文档由例程按字母顺序进行排列。 若要�
  [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)  
   
  [_get_errno](../../c-runtime-library/reference/get-errno.md)  
+  
+ [_get_FMA3_enable](../../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
  [_get_fmode](../../c-runtime-library/reference/get-fmode.md)  
   
@@ -2247,6 +2231,8 @@ C 运行时 (CRT) 库参考文档由例程按字母顺序进行排列。 若要�
  [_set_errno](../../c-runtime-library/reference/set-errno.md)  
   
  [_set_error_mode](../../c-runtime-library/reference/set-error-mode.md)  
+  
+ [_set_FMA3_enable](../../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
  [_set_fmode](../../c-runtime-library/reference/set-fmode.md)  
   

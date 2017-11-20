@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_not_attached class
+dev_langs: C++
+helpviewer_keywords: scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5e0ec52a5b204d33f391d367d36d6ab3e9af6d74
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 6e18171f3984a7021884586ec519512a49dc6fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached 类
 此类描述需要将计划程序附加到当前上下文以执行操作，而实际并未进行附加即执行该操作时引发的异常。  
@@ -65,7 +47,7 @@ class scheduler_not_attached : public std::exception;
  `scheduler_not_attached`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -86,4 +68,3 @@ scheduler_not_attached() throw();
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)
-

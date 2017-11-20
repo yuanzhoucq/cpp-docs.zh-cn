@@ -1,41 +1,39 @@
 ---
-title: "链接器工具错误 LNK1201 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1201"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1201"
+title: "链接器工具错误 LNK1201 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1201
+dev_langs: C++
+helpviewer_keywords: LNK1201
 ms.assetid: 64c3f496-a428-4b54-981e-faa82ef9c8a1
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 344f56eb3097bad447d9a0b12a0c5aac6f68b119
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器工具错误 LNK1201
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-写入程序数据库“filename”时出错；请检查是否是磁盘空间不足、路径无效或权限不够  
+# <a name="linker-tools-error-lnk1201"></a>链接器工具错误 LNK1201
+错误写入到程序数据库 filename;检查有足够的磁盘空间、 路径无效或没有足够的权限  
   
- LINK 未能写入输出文件的程序数据库 \(PDB\)。  
+ 链接无法写入输出文件的程序数据库 (PDB)。  
   
-### 通过检查以下可能的原因进行修复  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
   
-1.  文件已损坏。  删除 PDB 文件然后重新链接。  
+1.  文件已损坏。 删除 PDB 文件并重新链接。  
   
-2.  没有足够的磁盘空间写入文件。  
+2.  没有足够的磁盘空间来写入文件。  
   
-3.  可能由于网络问题，驱动器不可用。  
+3.  驱动器不可用，可能是由于网络问题造成。  
   
-4.  调试器在您尝试链接的程序上是活动的。  
+4.  调试器上处于活动状态尝试链接程序。  
   
-5.  堆空间不足。有关更多信息，请参见 [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)。
+5.  堆空间不足。  请参阅[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)有关详细信息。

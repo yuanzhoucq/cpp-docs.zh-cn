@@ -1,48 +1,47 @@
 ---
-title: "auto_handle::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.operator bool"
-  - "msclr.auto_handle.operator bool"
-  - "operator bool"
-  - "msclr::auto_handle::operator bool"
-  - "auto_handle::operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator bool"
+title: "auto_handle::operator bool |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.operator bool
+- msclr.auto_handle.operator bool
+- operator bool
+- msclr::auto_handle::operator bool
+- auto_handle::operator bool
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator bool
 ms.assetid: 2e535e99-cf87-4008-b588-02c587d77453
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45454de445b0f8304a78e46a098e23173bb9889f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在条件表达式中，使用运算符 `auto_handle` 。  
+# <a name="autohandleoperator-bool"></a>auto_handle::operator bool
+使用的运算符`auto_handle`条件表达式中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 operator bool();  
 ```  
   
-## 返回值  
- 如果指定的对象有效，则为 `true`；否则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`已包装的对象是否有效，则为`false`否则为。  
   
-## 备注  
- 比 `bool` 安全的此运算符实际上转换为 `_detail_class::_safe_bool`，因为它无法转换为整型。  
+## <a name="remarks"></a>备注  
+ 此运算符实际将转换为`_detail_class::_safe_bool`即比更安全`bool`因为它不能转换为整型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_handle_operator_bool.cpp  
@@ -65,14 +64,17 @@ int main() {
 }  
 ```  
   
-  **无效。**  
-**s2是有效的**  
-**s2 现在无效了**   
-## 要求  
- **头文件** \<msclr\\auto\_handle.h\>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_handle 成员](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator\!](../dotnet/auto-handle-operator-logical-not.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_handle 成员](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator!](../dotnet/auto-handle-operator-logical-not.md)

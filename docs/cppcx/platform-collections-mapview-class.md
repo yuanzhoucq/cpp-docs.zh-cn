@@ -1,41 +1,46 @@
 ---
-title: "Platform::Collections::MapView 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Platform::Collections::MapView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MapView 类"
+title: "Platform::Collections::MapView 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COLLECTION/Platform::Collections::MapView::MapView
+- COLLECTION/Platform::Collections::MapView::First
+- COLLECTION/Platform::Collections::MapView::HasKey
+- COLLECTION/Platform::Collections::MapView::Lookup
+- COLLECTION/Platform::Collections::MapView::Size
+- COLLECTION/Platform::Collections::MapView::Split
+dev_langs: C++
+helpviewer_keywords: MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 349dbfd081301e8bf3661c8a6cf18766adaaf238
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Collections::MapView 类
-将一个只读视图表示为一个映射，这是键值对的集合。  
+# <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
+将一个只读视图表示为一个 映射，这是键值对的集合。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
    typename K,  
    typename V,  
-   typename C = ::std::less<K>  
->  
+   typename C = ::std::less<K>>  
 ref class MapView sealed;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `K`  
  键值对中键的类型。  
   
@@ -43,36 +48,173 @@ ref class MapView sealed;
  键值对中值的类型。  
   
  `C`  
- 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下为 [::std::less\<K\>](../standard-library/less-struct.md)。  
+ 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下， [std:: less\<K >](../standard-library/less-struct.md)。  
   
-## 备注  
- MapView 是跨应用程序二进制接口 \(ABI\) 传递的 [Windows::Foundation::Collections::IMapView \<K,V\>](http://go.microsoft.com/fwlink/p/?LinkId=262409) 接口的具体 C\+\+ 实现。 有关更多信息，请参见[集合 \(C\+\+\/CX\)](../cppcx/collections-c-cx.md)。  
+### <a name="remarks"></a>备注  
+ MapView 是的具体 c + + 实现[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)跨应用程序二进制接口 (ABI) 传递的接口。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
-## 成员  
+### <a name="members"></a>成员  
   
-### 公共构造函数  
-  
-|名称|描述|  
-|--------|--------|  
-|[MapView::MapView 构造函数](../cppcx/mapview-mapview-constructor.md)|初始化 MapView 类的新实例。|  
-  
-### 公共方法  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|描述|  
-|--------|--------|  
-|[MapView::First 方法](../cppcx/mapview-first-method.md)|返回初始化为映射视图中第一个元素的迭代器。|  
-|[MapView::HasKey 方法](../cppcx/mapview-haskey-method.md)|确定当前 MapView 中是否包含指定键。|  
-|[MapView::Lookup 方法](../cppcx/mapview-lookup-method.md)|检索当前 MapView 对象中指定键处的元素。|  
-|[MapView::Size 方法](../cppcx/mapview-size-method.md)|返回当前 MapView 对象中的元素数目。|  
-|[MapView::Split 方法](../cppcx/mapview-split-method.md)|将原始 MapView 对象拆分成两个 MapView 对象。|  
+|----------|-----------------|  
+|[Mapview:: Mapview](#ctor)|初始化 MapView 类的新实例。|  
   
-## 继承层次结构  
+### <a name="public-methods"></a>公共方法  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[Mapview:: First](#first)|返回初始化为映射视图中第一个元素的迭代器。|  
+|[Mapview:: Haskey](#haskey)|确定当前 MapView 中是否包含指定键。|  
+|[Mapview:: Lookup](#lookup)|检索当前 MapView 对象中指定键处的元素。|  
+|[Mapview:: Size](#size)|返回当前 MapView 对象中的元素数目。|  
+|[Mapview:: Split](#split)|将原始 MapView 对象拆分成两个 MapView 对象。|  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `MapView`  
   
-## 要求  
- **标头：**collection.h  
+### <a name="requirements"></a>要求  
+ **标头：** collection.h  
   
- **命名空间：**Platform::Collections  
+ **命名空间：** Platform::Collections  
+
+
+## <a name="first"></a>Mapview:: First 方法
+返回指定映射视图中第一个元素的迭代器。  
   
-## 请参阅  
- [\(NOTINBUILD\) Platform 命名空间](http://msdn.microsoft.com/zh-cn/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>语法  
+  
+```    
+virtual Windows::Foundation::Collections::IIterator<  
+   Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 指定映射视图中第一个元素的迭代器。  
+  
+### <a name="remarks"></a>备注  
+ 保留 first 返回的迭代器一种简便方式是将返回值分配给使用声明的变量**自动**类型推导关键字。 例如 `auto x = myMapView->First();`。  
+  
+
+
+## <a name="haskey"></a>Mapview:: Haskey 方法
+确定当前 MapView 中是否包含指定键。  
+  
+### <a name="syntax"></a>语法  
+  
+```  
+  
+bool HasKey(K key);  
+```  
+  
+### <a name="parameters"></a>参数  
+ `key`  
+ 用于定位 MapView 元素的键。 一种`key`名称*K*。  
+  
+### <a name="return-value"></a>返回值  
+ 如果找到该键，则为 `true`；否则为 `false`。  
+  
+
+
+##  <a name="lookup"></a>Mapview:: Lookup 方法
+检索与类型 K 的指定键关联的类型 V 的值。  
+  
+### <a name="syntax"></a>语法  
+  
+```  
+V Lookup(K key);  
+```  
+  
+### <a name="parameters"></a>参数  
+ `key`  
+ 用于定位 MapView 中的元素的键。 一种`key`名称*K*。  
+  
+### <a name="return-value"></a>返回值  
+ 与 `key` 配对的值。 返回值的类型是 e *V*。  
+  
+
+
+##  <a name="ctor"></a>Mapview:: Mapview 构造函数
+初始化 MapView 类的新实例。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp  
+explicit MapView(const C& comp = C());  
+  
+explicit MapView(const ::std::map<K, V, C>& m);  
+  
+explicit MapView(std::map<K, V, C>&& m);  
+  
+template <typename InIt> MapView(  
+    InIt first,  
+    InIt last,  
+    const C& comp = C());  
+  
+MapView(
+    ::std::initializer_list<std::pair<const K, V>> il,  
+    const C& comp = C());  
+```  
+  
+### <a name="parameters"></a>参数  
+ `InIt`  
+ 当前 MapView 的类型名称。  
+  
+ `comp`  
+ 可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序的函数对象。  
+  
+ `m`  
+ 引用或[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)到`map Class`用于初始化当前 MapView。  
+  
+ `first`  
+ 用于初始化当前 MapView 的一系列元素中的第一个元素的输入迭代器。  
+  
+ `last`  
+ 用于初始化当前 MapView 的一系列元素之后的第一个元素的输入迭代器。  
+  
+ il  
+ A [std:: initializer_list < std:: pair\<K，V >>](../standard-library/initializer-list-class.md)其元素将插入 MapView。  
+
+
+
+##  <a name="size"></a>Mapview:: Size 方法
+返回当前 MapView 对象中的元素数目。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp  
+  
+virtual property unsigned int Size;  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 当前 MapView 中的元素数目。  
+  
+
+
+##  <a name="split"></a>Mapview:: Split 方法
+将当前 MapView 对象分成两个 MapView 对象。 此方法为非操作性的。  
+  
+### <a name="syntax"></a>语法  
+  
+```  
+void Split(  
+   Windows::Foundation::Collections::IMapView<  
+                         K, V>^ * firstPartition,  
+   Windows::Foundation::Collections::IMapView<  
+                         K, V>^ * secondPartition);  
+```  
+  
+### <a name="parameters"></a>参数  
+ `firstPartition`  
+ 原始 MapView 对象的第一部分。  
+  
+ `secondPartition`  
+ 原始 MapView 对象的第二部分。  
+  
+### <a name="remarks"></a>备注  
+ 此方法为非操作性的，它不执行任何操作。  
+    
+## <a name="see-also"></a>另请参阅  
+ [平台 Namespace](platform-namespace-c-cx.md)

@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4457
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4457
+f1_keywords: C4457
+dev_langs: C++
+helpviewer_keywords: C4457
 ms.assetid: 02fd149a-917d-4f67-97a6-eb714572271f
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 4977ade625e3f4af5f01364b865d2c2f41ebe80a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: a8ede4500e579436d5d6b9db581a06c14a6aca43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4457"></a>编译器警告 （等级 4） C4457
   
@@ -64,4 +45,3 @@ struct S {
     }
 } s;
 ```  
-

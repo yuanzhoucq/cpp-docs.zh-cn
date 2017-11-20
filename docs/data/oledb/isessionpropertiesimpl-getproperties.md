@@ -1,51 +1,50 @@
 ---
-title: "ISessionPropertiesImpl::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISessionPropertiesImpl::GetProperties"
-  - "ISessionPropertiesImpl.GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperties 方法"
+title: "Isessionpropertiesimpl:: Getproperties |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ISessionPropertiesImpl::GetProperties
+- ISessionPropertiesImpl.GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: 48726c2a-9599-4fc5-9940-a932faef91ab
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44e708420162235164355a25e5ec8f8714b4fbf0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ISessionPropertiesImpl::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-返回在当前回话中设置的 **DBPROPSET\_SESSION** 属性组中的属性列表。  
+# <a name="isessionpropertiesimplgetproperties"></a>ISessionPropertiesImpl::GetProperties
+返回的列表中的属性**DBPROPSET_SESSION**当前会话设置的属性组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      STDMETHOD(GetProperties)(   
-   ULONG cPropertyIDSets,   
-   const DBPROPIDSET rgPropertyIDSets[],   
-   ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets    
+      STDMETHOD(GetProperties)(   
+   ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets    
 );  
 ```  
   
-#### 参数  
- 请参见 *OLE DB 程序员参考手册* 中的 [ISessionProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms723643.aspx)。  
+#### <a name="parameters"></a>参数  
+ 请参阅[ISessionProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms723643.aspx)中*OLE DB 程序员参考*。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ISessionPropertiesImpl 类](../../data/oledb/isessionpropertiesimpl-class.md)   
  [ISessionPropertiesImpl::SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)

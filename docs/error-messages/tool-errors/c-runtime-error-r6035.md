@@ -1,38 +1,36 @@
 ---
-title: "C 运行时错误 R6035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6035"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6035"
+title: "C 运行时错误 R6035 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6035
+dev_langs: C++
+helpviewer_keywords: R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# C 运行时错误 R6035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Visual C\+\+ 运行库，错误 R6035 \- 在依赖模块的全局安全 Cookie 的函数处于活动状态的情况下，此应用程序中的模块初始化该安全 Cookie。以前调用过 \_\_security\_init\_cookie。  
+# <a name="c-runtime-error-r6035"></a>C 运行时错误 R6035
+函数依赖于该安全 cookie 处于活动状态时，Microsoft Visual c + + 运行时库，错误 R6035-此应用程序中的模块正在初始化的模块的全局安全 cookie。  调用 __security_init_cookie 更早版本。  
   
- 在首次使用全局安全 Cookie 之前，必须调用 [\_\_security\_init\_cookie](../../c-runtime-library/reference/security-init-cookie.md)。  
+ [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)必须在全局安全 cookie 首次使用之前调用。  
   
- 在用 [\/GS（缓冲区安全检查）](../../build/reference/gs-buffer-security-check.md) 编译的代码和使用结构化异常处理的代码中，全局安全 Cookie 用于缓冲区溢出保护。  实质上，在进入溢出保护的函数时，会将该 Cookie 放在堆栈上；在退出该函数时，会将堆栈上的值与全局 Cookie 进行比较。  如果它们之间有任何区别，则指示缓冲区溢出已经发生并将导致立即终止程序。  
+ 全局安全 cookie 用于与编译的代码中的缓冲区溢出保护[/GS （缓冲区安全检查）](../../build/reference/gs-buffer-security-check.md)并在代码中使用结构化的异常处理。 实质上，在进入受到溢出保护的函数，cookie 被置于堆栈上，并在退出时，在堆栈上的值进行比较与全局 cookie。 它们之间存在任何差异指示缓冲区溢出出现，并导致该程序的立即终止。  
   
- 错误 R6035 指示在进入受保护的函数后，已经对 `__security_init_cookie` 进行了调用。  如果要继续执行，则会检测到虚假的缓冲区溢出，因为堆栈上的 Cookie 将不再与全局 Cookie 相匹配。  
+ 错误 R6035 指示调用`__security_init_cookie`后输入受保护的函数创建的。 如果要继续执行，因为在堆栈上的 cookie 将不再匹配全局 cookie 检测虚假的缓冲区溢出。  
   
- 请考虑下面的 DLL 示例。  DLL 入口点通过链接器的 [\/ENTRY（入口点符号）](../../build/reference/entry-entry-point-symbol.md) 选项设置为 DllEntryPoint。  这会跳过 CRT 的初始化（该初始化通常初始化全局安全 Cookie），因此 DLL 本身必须调用 `__security_init_cookie`。  
+ 例如，以下 DLL。 通过链接器的 DLL 入口点设置为 DllEntryPoint [/ENTRY （入口点符号）](../../build/reference/entry-entry-point-symbol.md)选项。 这会跳过的 CRT 初始化这通常会初始化全局安全 cookie，使 DLL 本身必须调用`__security_init_cookie`。  
   
 ```  
 // Wrong way to call __security_init_cookie  
@@ -51,9 +49,9 @@ void DllInitialize() {
 }  
 ```  
   
- 此示例将生成错误 R6035，因为 DllEntryPoint 使用结构化异常处理，从而使用安全 Cookie 检测缓冲区溢出。  在调用 DllInitialize 时，全局安全 Cookie 已经放在堆栈上。  
+ 此示例将生成错误 R6035，因为 DllEntryPoint 使用结构化的异常处理，并因此使用安全 cookie 来检测缓冲区溢出。 调用 DllInitialize 时，全局安全 cookie 已置于堆栈上。  
   
- 下面的示例将演示正确的方法：  
+ 在此示例演示了正确的方法：  
   
 ```  
 // Correct way to call __security_init_cookie  
@@ -72,10 +70,10 @@ void DllEntryHelper() {
 }  
 ```  
   
- 在这种情况下，没有防止 DllEntryPoint 出现缓冲区溢出（DllEntryPoint 没有本地字符串缓冲区，也不使用结构化异常处理）；因此 DllEntryPoint 可以安全地调用 `__security_init_cookie`。  DllEntryPoint 随后调用受到保护的 Helper 函数。  
+ 在这种情况下，DllEntryPoint 不会受到缓冲区溢出 （它具有任何本地字符串缓冲区和不使用结构化的异常处理）;因此它可以安全调用`__security_init_cookie`。 然后，它调用受保护的帮助器函数。  
   
 > [!NOTE]
->  错误信息 R6035 仅由 x86 调试 CRT 生成，而且仅用于结构化异常处理，但是该情况是所有平台上的错误，并且适用于各种形式的异常处理，如 C\+\+ EH。  
+>  错误消息 R6035 仅通过 x86 生成调试 CRT，并仅为结构化的异常处理，但条件错误在所有平台上以及为各种形式的异常处理，例如 c + + EH。  
   
-## 请参阅  
- [深入的编译器安全检查](http://go.microsoft.com/fwlink/?linkid=7260)
+## <a name="see-also"></a>另请参阅  
+ [编译器安全检查深入介绍](http://go.microsoft.com/fwlink/?linkid=7260)

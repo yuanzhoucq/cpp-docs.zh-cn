@@ -1,52 +1,52 @@
 ---
-title: "优化杂注和关键字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "关键字 [C++], 用于优化"
-  - "优化, 关键字和杂注"
-  - "杂注, 用于优化"
+title: "优化杂注和关键字 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keywords [C++], for optimization
+- pragmas, for optimization
+- optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39dbce247116b434f9083f19ce23607d2212d2c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 优化杂注和关键字
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 C 或 C\+\+ 代码中使用的若干关键字和杂注将影响优化：  
+# <a name="optimization-pragmas-and-keywords"></a>优化杂注和关键字
+几个关键字和使用 C 或 c + + 代码中的杂注会影响优化：  
   
--   [\_\_asm](../../assembler/inline/asm.md)  
+-   [__asm](../../assembler/inline/asm.md)  
   
--   [\_\_assume](../../intrinsics/assume.md)  
+-   [__assume](../../intrinsics/assume.md)  
   
--   [inline、\_inline 或 \_\_forceinline](../../misc/inline-inline-forceinline.md)  
+-   [内联，_inline，或\__forceinline](../../cpp/inline-functions-cpp.md)  
   
--   [\#pragma auto\_inline](../../preprocessor/auto-inline.md)  
+-   [#pragma auto_inline](../../preprocessor/auto-inline.md)  
   
--   [\#pragma check\_stack](../../preprocessor/check-stack.md)  
+-   [#pragma check_stack](../../preprocessor/check-stack.md)  
   
--   [\#pragma function](../../preprocessor/function-c-cpp.md)  
+-   [#pragma 函数](../../preprocessor/function-c-cpp.md)  
   
--   [\#pragma inline\_depth](../../preprocessor/inline-depth.md)  
+-   [#pragma inline_depth](../../preprocessor/inline-depth.md)  
   
--   [\#pragma inline\_recursion](../../preprocessor/inline-recursion.md)  
+-   [#pragma inline_recursion](../../preprocessor/inline-recursion.md)  
   
--   [\#pragma intrinsic](../../preprocessor/intrinsic.md)  
+-   [#pragma 内部函数](../../preprocessor/intrinsic.md)  
   
--   [\#pragma optimize](../../preprocessor/optimize.md)  
+-   [#pragma 优化](../../preprocessor/optimize.md)  
   
--   [register 关键字](http://msdn.microsoft.com/zh-cn/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)  
+-   [register 关键字](../../cpp/storage-classes-cpp.md#register)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [优化代码](../../build/reference/optimizing-your-code.md)

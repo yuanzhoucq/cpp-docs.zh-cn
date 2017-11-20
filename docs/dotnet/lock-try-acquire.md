@@ -1,36 +1,35 @@
 ---
-title: "lock::try_acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "try_acquire"
-  - "lock.try_acquire"
-  - "msclr.lock.try_acquire"
-  - "lock::try_acquire"
-  - "msclr::lock::try_acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::try_acquire"
+title: "lock::try_acquire |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- try_acquire
+- lock.try_acquire
+- msclr.lock.try_acquire
+- lock::try_acquire
+- msclr::lock::try_acquire
+dev_langs: C++
+helpviewer_keywords: lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c63d6a9161eab707b0eab2b831d02210c57a25d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# lock::try_acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-获取对对象采用锁，则经过指定的时间并返回 `bool` 的成功获取报告而不是引发异常。  
+# <a name="locktryacquire"></a>lock::try_acquire
+获取对等待指定的时间量，并返回的对象的锁`bool`报告成功的收购而不是引发异常。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 bool try_acquire(  
@@ -41,18 +40,18 @@ bool try_acquire(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_timeout`  
- 超时值 \(以毫秒为或 <xref:System.TimeSpan>。  
+ 超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
   
-## 返回值  
- `true`，如果锁获取的，则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果已获取锁，`false`否则为。  
   
-## 备注  
- 如果锁已获得的，则该函数不执行任何操作。  
+## <a name="remarks"></a>备注  
+ 如果已获取锁，则此函数没有任何影响。  
   
-## 示例  
- 此示例使用类的一个实例在多个线程中。类使用自身上的锁将确保对其内部数据的访问权限。每个线程都是一致的。主应用程序线程使用类的同一实例的锁定定期检查任何辅助线程是否仍然存在，并且等待，直到退出所有辅助线程完成它们的任务。  
+## <a name="example"></a>示例  
+ 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -126,22 +125,25 @@ int main() {
 }  
 ```  
   
-  **在线程 3，计数器为 0**  
-**在线程 3，计数器为 10**  
-**在线程 5，计数器为 0**  
-**在线程 5，计数器为 10**  
-**在线程 7，计数器为 0**  
-**在线程 7，计数器为 10**  
-**在线程 4，计数器为 0**  
-**在线程 4，计数器为 10**  
-**在线程 6，计数器为 0**  
-**在线程 6，计数器为 10**  
-**所有线程完成。**   
-## 要求  
- **头文件** \<msclr \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **命名空间** msclr  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\lock.h >  
   
-## 请参阅  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>另请参阅  
  [锁定成员](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

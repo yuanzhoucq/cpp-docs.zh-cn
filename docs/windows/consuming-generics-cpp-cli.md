@@ -1,43 +1,34 @@
 ---
-title: "从其他 .NET 语言中使用的一般 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "普通 [C++], 使用来自 .NET 语言"
+title: "使用泛型 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 从其他 .NET 语言中使用的一般
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一种 .NET 语言编写泛型可能在其他 .NET 语言。  不同于常规模板，则在已编译的程序集仍保存一般。  因此，一个比泛型类型定义的程序集能实例化泛型类型在不同程序集甚至在其他语言。  
+# <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
+使用一种 .NET 语言编写的泛型可以用于其他 .NET 语言。 不同于模板，泛型在编译的程序集中仍然保持泛型。 因此，可以在不同程序集中实例化泛型类型，甚至可以使用与定义该泛型类型的程序集语言不同的语言。  
   
-## 备注  
- 有关详细信息，请参阅：  
+## <a name="example"></a>示例  
   
--   [泛型介绍](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
+### <a name="description"></a>描述  
+ 此示例中演示 C# 定义的泛型类。  
   
--   [Visual Basic 中的泛型类型](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
-  
-## 示例  
-  
-### 说明  
- 此示例中演示 C\# 定义的泛型类。  
-  
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // consuming_generics_from_other_NET_languages.cs  
@@ -95,12 +86,12 @@ public class CircularList<ItemType> {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 此示例使用 C\# 编写的程序集。  
+### <a name="description"></a>描述  
+ 此示例使用 C# 编写的程序集。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // consuming_generics_from_other_NET_languages_2.cpp  
@@ -121,7 +112,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 90  
@@ -134,5 +125,5 @@ int main() {
 10  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

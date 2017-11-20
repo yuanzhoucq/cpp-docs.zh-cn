@@ -1,76 +1,76 @@
 ---
-title: "了解 Helper 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delayLoadHelper 函数"
-  - "__delayLoadHelper2 函数"
-  - "DLL 的延迟加载, Helper 函数"
-  - "delayhlp.cpp"
-  - "delayimp.h"
-  - "delayimp.lib"
-  - "Helper 函数"
+title: "了解 Helper 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- delayed loading of DLLs, helper function
+- __delayLoadHelper2 function
+- delayimp.lib
+- __delayLoadHelper function
+- delayhlp.cpp
+- delayimp.h
+- helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7b8604c90c4af46d98c3d9da72899670e86ca154
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 了解 Helper 函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-链接器支持的延迟加载 Helper 函数是在运行时实际加载 DLL 的函数。  您可以不用 Delayimp.lib 中提供的 Helper 函数，而是编写自己的函数，并链接到您的程序来修改 Helper 函数以自定义它的行为。  一个 Helper 函数服务于所有延迟加载的 DLL。  
+# <a name="understanding-the-helper-function"></a>了解 Helper 函数
+链接器支持延迟加载 helper 函数是什么实际上在运行时加载 DLL。 你可以修改要自定义其行为，通过编写自己的函数，并将其链接到你的程序而不是在 Delayimp.lib 中使用提供的帮助器函数的帮助器函数。 一个帮助器函数提供所有延迟加载 Dll。  
   
- 如果想执行基于 DLL 名称或导入名称的特定处理，可以提供自己的 Helper 函数版本。  
+ 如果你想要执行的 DLL 或导入的名称所基于的特定处理，你可以提供您自己的 helper 函数版本。  
   
  Helper 函数执行下列操作：  
   
--   检查存储的库句柄，确保已加载。  
+-   检查以查看已加载的库的存储句柄  
   
--   调用 **LoadLibrary** 以尝试加载 DLL。  
+-   调用**LoadLibrary**尝试加载的 DLL  
   
--   调用 **GetProcAddress** 以尝试获取过程的地址。  
+-   调用**GetProcAddress**尝试获取的过程的地址  
   
--   返回到延迟导入加载 thunk，以调用当前加载的入口点。  
+-   返回到延迟导入加载转换 （thunk） 来调用当前加载的入口点  
   
- 执行完下列每一操作后，Helper 函数可以回调程序中的通知挂钩：  
+ Helper 函数可以回调到你的程序中的通知挂钩后的每个以下操作：  
   
 -   Helper 函数启动时  
   
--   只有当在 Helper 函数中调用 **LoadLibrary** 之前  
+-   之前**LoadLibrary**帮助器函数中调用  
   
--   只有当在 Helper 函数中调用 **GetProcAddress** 之前  
+-   之前**GetProcAddress**帮助器函数中调用  
   
--   如果在 Helper 函数中调用 **LoadLibrary** 失败  
+-   如果调用**LoadLibrary**帮助器函数中失败  
   
--   如果在 Helper 函数中调用 **GetProcAddress** 失败  
+-   如果调用**GetProcAddress**帮助器函数中失败  
   
--   Helper 函数完成处理后  
+-   函数完成后帮助器处理  
   
- 这些挂钩点中的每一个都可以返回一个值，该值将以某种方式改变 Helper 例程的正常处理（返回到延迟导入加载 thunk 除外）。  
+ 其中每个挂钩点可返回一个值，将更改以某种方式除为延迟导入负载转换 （thunk） 返回的帮助器例程的正常处理。  
   
- 默认 Helper 代码在 Delayhlp.cpp 和 Delayimp.h（在 vc\\include 中）中可以找到，并在 Delayimp.lib（在 vc\\lib 中）中编译。  除非编写自己的 Helper 函数，否则需要在编译中包括该库。  
+ 默认帮助程序代码可以 Delayhlp.cpp 和 Delayimp.h 中找到 （在 vc\include)，并且在 Delayimp.lib 中编译 （以 vc\lib)。 你将需要在编译中包括此库，除非你编写您自己的 helper 函数。  
   
- 下列主题描述 Helper 函数：  
+ 以下主题介绍 helper 函数：  
   
--   [自 Visual C\+\+ 6.0 以来 DLL 延迟加载 Helper 函数所做的更改](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
+-   [自 Visual C++ 6.0 以来 DLL 延迟加载 Helper 函数所做的更改](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)  
   
 -   [调用约定、参数和返回类型](../../build/reference/calling-conventions-parameters-and-return-type.md)  
   
--   [结构和常数定义](../../build/reference/structure-and-constant-definitions.md)  
+-   [结构和常量定义](../../build/reference/structure-and-constant-definitions.md)  
   
 -   [计算所需值](../../build/reference/calculating-necessary-values.md)  
   
 -   [卸载延迟加载的 DLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
   
-## 请参阅  
- [链接器的延迟加载 DLL 支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+## <a name="see-also"></a>另请参阅  
+ [延迟加载 DLL 的链接器支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)

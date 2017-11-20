@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_PROPSET_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPSET_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPSET_MAP 宏"
+title: "BEGIN_PROPSET_MAP |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPSET_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPSET_MAP macro
 ms.assetid: c3a30618-6025-4d49-8688-a171294d2e93
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d92723ec126f23d479189ccb4629f70256949ab6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PROPSET_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-标记属性集映射项的开始。  
+# <a name="beginpropsetmap"></a>BEGIN_PROPSET_MAP
+标记的属性的开头设置的映射条目。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,25 +34,25 @@ Class
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *类*  
- \[in\] 此设置的属性指定。类。  属性集下 OLE DB 对象可以指定：  
+ [in]指定设置此属性的类。 可以在以下的 OLE DB 对象中指定属性集：  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="75bbb794f21139fcd243c18fff6050d2" class\="tgtSentence"\>对象数据源\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
+-   [数据源对象](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="e423b0fba10fc83bd76e01e3eee2fd69" class\="tgtSentence"\>会话对象\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
+-   [会话对象](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="5f6bc08c46cee6f21bfcdd08aff6e8aa" class\="tgtSentence"\>命令\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
+-   [命令](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
   
-## 示例  
- 这是该属性集映射：  
+## <a name="example"></a>示例  
+ 下面是示例属性集映射：  
   
- [!CODE [NVC_OLEDB_Provider#3](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#3)]  
+ [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   

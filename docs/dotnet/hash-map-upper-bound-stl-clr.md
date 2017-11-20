@@ -1,45 +1,43 @@
 ---
-title: "hash_map::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound 成员 [STL/CLR]"
+title: "hash_map:: upper_bound (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: f83e88b4-e15e-49d5-90e4-cf7360c27c30
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5aa02417eba0d31a56697f21baa04411ef161d4e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-查找与指定的键范围的末尾。  
+# <a name="hashmapupperbound-stlclr"></a>hash_map::upper_bound (STL/CLR)
+查找与指定的键匹配的范围末尾。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### 参数  
- 键  
- 搜索的键值。  
+#### <a name="parameters"></a>参数  
+ 密钥  
+ 要搜索的键值。  
   
-## 备注  
- 成员函数确定。散列为存储桶与 `key` 相同并且具有相同订单给 `key`的控制序列中的最后一个 `X`。  如果不存在此类元素，或者，如果 `X` 位于控制序列中的最后一个元素，则返回`()`; [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)否则它返回指定除 `X`外的第一个元素的次数的迭代器。  使用其当前找到的元素序列的末尾与指定的键在控制序列。  
+## <a name="remarks"></a>备注  
+ 成员函数将确定最后一个元素`X`作为相同的存储桶进行哈希处理到受控序列中`key`和具有等效顺序到`key`。 如果此类元素不存在，或者`X`为受控序列中的最后一个元素，它将返回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; 否则它将返回指定以外的第一个元素的迭代器`X`. 用于当前与指定的键匹配的控制序列中查找的元素序列的末尾。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) 为 True**  
-**\*upper\_bound \(\=\) L'a \[b 2\]**  
-**\*upper\_bound \(\=\) L'b \[c 3\]**   
-## 要求  
- **页眉：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::count](../dotnet/hash-map-count-stl-clr.md)   
- [hash\_map::equal\_range](../dotnet/hash-map-equal-range-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::lower\_bound](../dotnet/hash-map-lower-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)   
+ [hash_map:: equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)   
+ [hash_map:: find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)

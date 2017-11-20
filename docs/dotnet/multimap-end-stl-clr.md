@@ -1,41 +1,39 @@
 ---
-title: "multimap::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 成员 [STL/CLR]"
+title: "multimap:: end (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 8d3f9347-794d-4bd3-9bd1-50534fcf4ffe
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 055c24a2038c03c7a37d78b5f75bc5c169c7e280
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapend-stlclr"></a>multimap::end (STL/CLR)
 指定受控序列的末尾。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator end();  
 ```  
   
-## 备注  
- 该成员函数返回一个双向迭代器，指向刚刚超越控制序列的末尾。  用于获取一个迭代器，该迭代器指定受控序列的末尾，但如果受控序列的长度发生更改，则该迭代器的状态也不会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回的双向迭代器，它指向刚超出受控序列的末尾。 用于获取指定的受控序列中; 末尾的迭代器其状态不更改如果更改了受控序列的长度。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multimap_end.cpp   
@@ -69,14 +67,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**\*\-\- \-\-end\(\) \= \[b 2\]**  
-**\*\-\-end\(\) \= \[c 3\]**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --end() = [b 2]  
+*--end() = [c 3]  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::begin](../dotnet/multimap-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)

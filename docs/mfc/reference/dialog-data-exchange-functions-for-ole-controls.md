@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,22 +20,20 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 719acc2706483a3fcfa5506da077cee9e5fc1a5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c0629e57c518334b84ed3110e3dab14a5d259fc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控件的对话框数据交换函数
 本主题列出了用于对话框、 窗体视图或控件视图对象中 OLE 控件的属性和对话框、 窗体视图或控件视图对象的数据成员之间交换数据的 DDX_OC 函数。  
@@ -444,4 +441,3 @@ void AFXAPI DDX_OCTextRO(
     
 ## <a name="see-also"></a>另请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
-

@@ -1,33 +1,30 @@
 ---
-title: "com_interface_entry (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.com_interface_entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "com_interface_entry attribute"
+title: "com_interface_entry （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.com_interface_entry
+dev_langs: C++
+helpviewer_keywords: com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 67b6fd116f75ddc35ac1d3095ebfcbb1973b9d20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# com_interface_entry (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将接口添加到目标项类中的 COM 映射。  
+# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+将添加到 COM 映射的目标类的接口条目。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,28 +33,28 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 参数  
- *com\_interface\_entry*  
- 包含项的实际的文本字符串。  有关可能值列表，请参见 [COM\_INTERFACE\_ENTRY 宏](../Topic/COM_INTERFACE_ENTRY%20Macros.md)。  
+#### <a name="parameters"></a>参数  
+ *com_interface_entry*  
+ 包含的项的实际文本的字符串。 有关可能的值的列表，请参阅[COM_INTERFACE_ENTRY 宏](../atl/reference/com-interface-entry-macros.md)。  
   
-## 备注  
- `com_interface_entry` C\+\+ 特性插入字符字符串的非删节的内容到目标对象的 COM 接口映射中。  如果属性一次是应用于目标对象，项插入到现有接口映射的开头。  如果属性重复适用于同一目标对象，接收的项在接口映射开头插入顺序。  
+## <a name="remarks"></a>备注  
+ `com_interface_entry` C + + 特性将字符字符串的 unabridged 的内容插入到目标对象的 COM 接口映射。 如果该属性一次应用于目标对象，该条目插入到现有的接口映射的开头。 如果属性重复应用于相同的目标对象，它们接收的顺序中的接口映射的开头插入项。  
   
- 此特性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi\_progid](../windows/vi-progid.md) 属性 \(或表示这些中为\) 的其他特性也适用于同一元素。  如果使用任何单一属性，自动应用其他两个。  例如，因此，如果 **progid** 是应用的，也适用 **vi\_progid** 和 **coclass** 。  
+ 此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 **progid** ，则也会应用 **vi_progid** 和 **coclass** 。  
   
- 由于 `com_interface_entry` 第一种用法使新接口在接口映射开头插入，它必须是下列 COM\_INTERFACE\_ENTRY 类型之一:  
+ 因为第一次使用`com_interface_entry`将导致新的界面，要插入开头的接口映射中，它必须是以下 COM_INTERFACE_ENTRY 类型之一：  
   
--   COM\_INTERFACE\_ENTRY  
+-   COM_INTERFACE_ENTRY  
   
--   COM\_INTERFACE\_ENTRY\_IID  
+-   COM_INTERFACE_ENTRY_IID  
   
--   COM\_INTERFACE\_ENTRY2  
+-   COM_INTERFACE_ENTRY2  
   
--   COM\_INTERFACE\_ENTRY2\_IID  
+-   COM_INTERFACE_ENTRY2_IID  
   
- `com_interface_entry` 属性的其他用法可使用任何支持的 COM\_INTERFACE\_ENTRY 类型。  
+ 其他用法`com_interface_entry`属性可以使用所有受支持的 COM_INTERFACE_ENTRY 类型。  
   
- ，因为 ATL 在接口映射使用先输入为标识 **IUnknown**，此限制是必需的;因此，项必须是有效的接口。  例如，在中，因为在接口映射的第一个输入不指定实际的 COM 接口，下面的代码示例是无效的。  
+ 此限制是必要的因为 ATL 作为标识接口映射中使用的第一个条目**IUnknown**; 因此，项必须是一个有效的接口。 例如，下面的代码示例无效，因为接口映射中的第一个条目不指定实际的 COM 接口。  
   
 ```  
 [ coclass, com_interface_entry =  
@@ -68,8 +65,8 @@ manager: "ghogen"
    };  
 ```  
   
-## 示例  
- 下面的代码添加两项。 **CMyBaseClass**现有 COM 接口映射。  第一个是一个标准接口，因此，第二个隐藏 **IDebugTest** 接口。  
+## <a name="example"></a>示例  
+ 下面的代码将两个条目添加到现有的 COM 接口映射的**CMyBaseClass**。 第一个是标准接口，并且第二个隐藏**IDebugTest**接口。  
   
 ```  
 // cpp_attr_ref_com_interface_entry.cpp  
@@ -99,7 +96,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };  
 ```  
   
- **CMyBaseClass** 生成的 COM 对象映射如下所示:  
+ 为生成的 COM 对象图**CMyBaseClass**如下：  
   
 ```  
 BEGIN_COM_MAP(CMyClass)  
@@ -112,21 +109,20 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
+|**适用对象**|**class**， `struct`|  
 |**可重复**|是|  
-|**必需的特性**|一个或多个以下各项: **coclass**、 **progid**或 **vi\_progid**。|  
+|**必需的特性**|以下一个或多个属性： **coclass**、 **progid**或 **vi_progid**。|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [COM 特性](../windows/com-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   

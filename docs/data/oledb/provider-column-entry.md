@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY 宏"
+title: "PROVIDER_COLUMN_ENTRY |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY macro
 ms.assetid: 7921cfc1-aa9c-493e-8fc4-9d4294cafe72
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e8a97beb60dcc08fb442322191d8a515bdbdbc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示提供程序所支持的特定列。  
+# <a name="providercolumnentry"></a>PROVIDER_COLUMN_ENTRY
+表示提供程序支持的特定列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,20 +33,20 @@ name
 , ordinal, member )  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *name*  
- \[in\] 列名称。  
+ [in]列名称。  
   
  `ordinal`  
- \[in\] 列号。  除非将列是书签列，列数无法为 0。  
+ [in] 列号。 除非列是书签列，列数必须不为 0。  
   
  `member`  
- \[in\] `dataClass` 中的成员变量。列对应。  
+ [in]中的成员变量`dataClass`与列对应。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   

@@ -1,45 +1,43 @@
 ---
-title: "hash_multiset::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 成员 [STL/CLR]"
+title: "hash_multiset:: lower_bound (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 891898fa-c9e8-4132-a71d-36e5141793f1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d18a31280cd2c0d7629dfb822107cbdde39042c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-查找与指定的键范围的开头。  
+# <a name="hashmultisetlowerbound-stlclr"></a>hash_multiset::lower_bound (STL/CLR)
+查找与指定的键匹配的范围开始处。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### 参数  
- 键  
+#### <a name="parameters"></a>参数  
+ 密钥  
  要搜索的键值。  
   
-## 备注  
- 成员函数确定受控序列中可散列为与 `key` 相同的存储桶并具有与 `key` 等效的顺序的第一个元素`X`。  如果不存在此类元素，则返回`()`; [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)否则它返回将 `X`的迭代器。  使用其当前找到的元素序列的开头与指定的键在控制序列。  
+## <a name="remarks"></a>备注  
+ 成员函数将确定第一个元素`X`作为相同的存储桶进行哈希处理到受控序列中`key`和具有等效顺序到`key`。 如果此类元素不存在，它将返回[hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; 否则它将返回指定的迭代器`X`。 用于当前与指定的键匹配的控制序列中查找的元素序列的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_lower_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*lower\_bound\(L'a'\) \= a**  
-**\*lower\_bound \(L'b \= b\)**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::count](../dotnet/hash-multiset-count-stl-clr.md)   
- [hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)   
- [hash\_multiset::find](../dotnet/hash-multiset-find-stl-clr.md)   
- [hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)   
+ [hash_multiset:: equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   
+ [hash_multiset:: find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)   
+ [hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)

@@ -1,38 +1,37 @@
 ---
-title: "如何：使用 C++ 互操作封送结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 互操作, 结构"
-  - "数据封送处理 [C++], 结构"
-  - "互操作 [C++], 结构"
-  - "封送处理 [C++], 结构"
-  - "结构 [C++], 封送处理"
+title: "如何： 使用 c + + 互操作封送结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 640b3cdbfe9bd88faa337737b0423e3f759b41dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 C++ 互操作封送结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题演示 Visual C\+\+ 互操作性的一个方面。  有关详细信息，请参阅[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="how-to-marshal-structures-using-c-interop"></a>如何：使用 C++ 互操作封送结构
+本主题演示 Visual c + + 互操作性的一个的方面。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
- 下面的代码示例使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) \#pragma 指令在同一个文件中实现托管函数和非托管函数，但如果在不同的文件中定义这些函数，则它们将以同样的方式进行交互操作。  不需要使用 [\/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md) 对仅包含非托管函数的文件进行编译。  
+ 下面的代码示例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指令来实现托管和非托管函数中同一文件中，但如果在单独的文件中定义，这些函数互操作方式相同。 仅包含非托管的函数的文件不需要使用编译[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 示例  
- 下面的示例演示如何按值以及按引用从托管函数向非托管函数传递结构。  由于本示例中的结构只包含简单内部数据类型（请参见 [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../Topic/Blittable%20and%20Non-Blittable%20Types.md)），因此不需要进行特殊的封送处理。  若要封送非直接复制到本机结构中的结构（例如包含指针的结构），请参见 [如何：使用 C\+\+ 互操作封送嵌入式指针](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+## <a name="example"></a>示例  
+ 下面的示例演示的值和按引用从托管到非托管函数传递结构。 因为在此示例中的结构包含仅简单的内部数据类型 (请参阅[本机结构中和非 Blittable 类型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，是必需的没有特殊封送处理。 若要封送非本机结构中的结构，例如包含的指针，请参阅[How to： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +87,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例演示如何按值以及按引用从非托管函数向托管函数传递结构。  由于本示例中的结构只包含简单内部数据类型（请参见 [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../Topic/Blittable%20and%20Non-Blittable%20Types.md)），因此不需要进行特殊的封送处理。  若要封送非直接复制到本机结构中的结构（例如包含指针的结构），请参见 [如何：使用 C\+\+ 互操作封送嵌入式指针](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+## <a name="example"></a>示例  
+ 下面的示例演示将结构从非托管传递到托管函数的值和引用。 因为在此示例中的结构包含仅简单的内部数据类型 (请参阅[本机结构中和非 Blittable 类型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，是必需的任何特殊的封送处理。 若要封送非本机结构中的结构，例如包含的指针，请参阅[How to： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +153,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>另请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

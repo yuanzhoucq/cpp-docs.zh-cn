@@ -1,35 +1,33 @@
 ---
-title: "BSCMAKE 错误 BK1508 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1508"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1508"
+title: "BSCMAKE 错误 BK1508 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK1508
+dev_langs: C++
+helpviewer_keywords: BK1508
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5bf4b51943e672ee1d3f398deaa0c88b5c137ac6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE 错误 BK1508
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-无法删除临时文件“文件名”\[: 原因\]  
+# <a name="bscmake-error-bk1508"></a>BSCMAKE 错误 BK1508
+无法删除临时文件 filename [: 原因]  
   
- BSCMAKE 无法删除其临时文件之一。  
+ BSCMAKE 无法删除的一个临时文件。  
   
-### 通过检查以下可能的原因进行修复  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复  
   
-1.  另一进程已打开该文件。  
+1.  另一个进程已打开该文件。  
   
 2.  硬件错误。

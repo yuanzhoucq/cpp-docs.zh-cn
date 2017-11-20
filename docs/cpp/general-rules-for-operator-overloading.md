@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 92bcbc85a3edf683d00818a4c1da76849dbc29cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>运算符重载的一般规则
 以下规则约束如何实现重载运算符。 但是，它们不适用于[新](../cpp/new-operator-cpp.md)和[删除](../cpp/delete-operator-cpp.md)运算符，对其进行单独讨论。  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/25/2017
   
 -   声明为成员函数的二元运算符将采用一个自变量；如果声明为全局函数，它们将采用两个自变量。  
   
--   如果可以为一个是一元或二元运算符使用运算符 (**&**， ** \* **， ** + **，和** - **)，您可以单独重载每次使用。  
+-   如果可以为一个是一元或二元运算符使用运算符 (**&**，  **\*** ，  **+** ，和 **-** )，您可以单独重载每次使用。  
   
 -   重载运算符不能具有默认自变量。  
   

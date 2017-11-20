@@ -1,55 +1,55 @@
 ---
-title: "float_control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.float_control"
-  - "float_control_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "float_control 杂注"
-  - "杂注, float_control"
+title: "float_control |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.float_control
+- float_control_CPP
+dev_langs: C++
+helpviewer_keywords:
+- float_control pragma
+- pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 42bd20fc051175bf9aaaba6103a1f9e29f0818b2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# float_control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="floatcontrol"></a>float_control
 指定函数的浮点行为。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 float_control( value,setting [push] | push | pop )  
 ```  
   
-## Flags  
- `value` *,* `setting` **\[push\]**  
- 指定浮点行为。  `value` 可以是 **precise**  或 **except**。  有关详细信息，请参阅 [\/fp（指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。  `setting` 可以是 **on** 或 **off**。  
+## <a name="flags"></a>Flags  
+ `value``setting` **[推送]**  
+ 指定浮点行为。 `value`可以是**精确**或**除**。 有关详细信息，请参阅 [/fp（指定浮点行为）](../build/reference/fp-specify-floating-point-behavior.md)。 `setting`可以是**上**或**关闭**。  
   
- 如果 `value` 是 **precise**，则指定 **precise** 和 **except** 的设置。  **except** 只能设置为 **on** 的情况是 **precise** 也设置为 **on**。  
+ 如果`value`是**精确**的设置**精确**和**除**指定了。 **除**只能设置为**上**时**精确**也设置为**上**。  
   
- 如果添加了可选的 **push** 标记，则 `value` 的当前设置将推送到内部编译器堆栈。  
+ 如果可选**推送**令牌添加，当前设置`value`推送到内部编译器堆栈。  
   
  **push**  
  将当前的 `float_control` 设置推送到内部编译器堆栈  
   
  **pop**  
- 从内部编译器堆栈的顶部移除 `float_control` 设置，使其成为新的 `float_control` 设置。  
+ 删除`float_control`从内部编译器堆栈顶部的设置，并成为新`float_control`设置。  
   
-## 备注  
- 当 **except** 打开时，无法关闭 `float_control precise`。  同样，当 `fenv_access` 打开时，无法关闭 **precise**。  若要通过 `float_control` 杂注从严格模式转到快速模式，请使用以下代码：  
+## <a name="remarks"></a>备注  
+ 无法打开`float_control precise`关闭时**除**上。 同样，**精确**无法关闭时`fenv_access`上。 若要通过 `float_control` 杂注从严格模式转到快速模式，请使用以下代码：  
   
 ```  
 #pragma float_control(except, off)  
@@ -71,11 +71,11 @@ float_control( value,setting [push] | push | pop )
   
  其他浮点杂注包括：  
   
--   [fenv\_access](../preprocessor/fenv-access.md)  
+-   [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例演示如何通过使用杂注 `float_control` 捕获溢出浮点异常。  
   
 ```  
@@ -112,6 +112,9 @@ int main( ) {
 }  
 ```  
   
-  **通过**   
-## 请参阅  
- [Pragma 指令和 \_\_Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+Pass  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

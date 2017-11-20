@@ -1,48 +1,48 @@
 ---
-title: "message | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "message_CPP"
-  - "vc-pragma.message"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "消息杂注"
-  - "杂注, message"
+title: "消息 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- message_CPP
+- vc-pragma.message
+dev_langs: C++
+helpviewer_keywords:
+- message pragma
+- pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b62961ebd1327e8f8a844482b1490b21b4e9c34
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# message
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="message"></a>消息
 在未结束编译的情况下将字符串发送到标准输出。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 #pragma message( messagestring )  
 ```  
   
-## 备注  
- **message** 杂注的典型用途是在编译时显示信息性消息。  
+## <a name="remarks"></a>备注  
+ 一个典型用途**消息**杂注是在编译时显示信息性消息。  
   
- *messagestring* 参数可以是扩展到字符串的宏，您可以通过任意组合将此类宏与字符串串联起来。  
+ *Messagestring*参数可以是到字符串文本，扩展的宏，并且您可以将此类宏与字符串文字的任意组合。  
   
- 如果在 **message** 杂注中使用预定义的宏，则该宏应返回字符串，否则必须将该宏的输出转换为字符串。  
+ 如果使用中的预定义的宏**消息**杂注时，该宏应返回一个字符串，否则你将需要将该宏的输出转换为字符串。  
   
- 以下代码段使用 **message** 杂注在编译过程中显示消息：  
+ 下面的代码片段使用**消息**杂注在编译期间显示消息：  
   
 ```  
 // pragma_directives_message1.cpp  
@@ -67,5 +67,5 @@ caps.handback.revision: 7
 #pragma message("")  
 ```  
   
-## 请参阅  
- [Pragma 指令和 \_\_Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>另请参阅  
+ [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

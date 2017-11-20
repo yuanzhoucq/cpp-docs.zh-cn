@@ -1,41 +1,39 @@
 ---
-title: "multimap::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin 成员 [STL/CLR]"
+title: "multimap:: rbegin (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: fd5a2a04-b03d-4920-b8f2-e01985cb91e3
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16d576c58ac21ec9d8a33d45d192b77491c10d84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定反转的受控序列的开头。  
+# <a name="multimaprbegin-stlclr"></a>multimap::rbegin (STL/CLR)
+指定反向受控序列的开头。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## 备注  
- 指定控件成员函数返回序列中的最后一个元素，或进行反向迭代器对象一个空序列的开头之外。  因此，它指定反向序列的 `beginning`。  用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回指定的受控序列，或刚超出空序列的开头的最后一个元素的反向迭代器。 因此，它指定`beginning`反向序列。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改按逆序的受控的序列，但其状态的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multimap_rbegin.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**\*rbegin\(\) \= \[c 3\]**  
-**\*\+\+rbegin\(\) \= \[b 2\]**   
-## 要求  
- **页眉：** \<\/cliext 映射\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::begin](../dotnet/multimap-begin-stl-clr.md)   
- [multimap::end](../dotnet/multimap-end-stl-clr.md)   
- [multimap::rend](../dotnet/multimap-rend-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)   
+ [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)   
+ [multimap::rend (STL/CLR)](../dotnet/multimap-rend-stl-clr.md)

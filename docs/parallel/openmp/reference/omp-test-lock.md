@@ -1,32 +1,30 @@
 ---
-title: "omp_test_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_test_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_test_lock OpenMP function"
+title: "omp_test_lock |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_test_lock
+dev_langs: C++
+helpviewer_keywords: omp_test_lock OpenMP function
 ms.assetid: 314ca85e-0749-4c16-800f-b0f36fed256d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 052b552cab9d8fb0ff6b969e85a7108ca232b572
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# omp_test_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-尝试设置锁定，但不阻塞线程上执行。  
+# <a name="omptestlock"></a>omp_test_lock
+尝试设置锁，但不会阻止线程执行。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int omp_test_lock(  
@@ -34,16 +32,16 @@ int omp_test_lock(
 );  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `lock`  
- 初始化 [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)类型 [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md) 的变量。  
+ 类型的变量的[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)初始化与[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)。  
   
-## 备注  
- 有关更多信息，请参见 [3.2.5 omp\_test\_lock and omp\_test\_nest\_lock Functions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。  
+## <a name="remarks"></a>备注  
+ 有关详细信息，请参阅[3.2.5 omp_test_lock 和 omp_test_nest_lock 函数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_test_lock.cpp  
@@ -74,25 +72,28 @@ int main() {
 }  
 ```  
   
-  **线程 1 \- 获取的 simple\_lock**  
-**线程 1 \- 释放的 simple\_lock**  
-**0 \- 未能的线程获取 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**0 \- 未能的线程获取 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**线程 2 \- 获取的 simple\_lock**  
-**0 \- 未能的线程获取 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**0 \- 未能的线程获取 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**线程 2 \- 释放的 simple\_lock**  
-**0 \- 未能的线程获取 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**线程 0 \- 获取的 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**线程 0 \- 释放的 simple\_lock**  
-**3 \- 未能的线程获取 simple\_lock**  
-**线程 3 \- 获取的 simple\_lock**  
-**线程 3 \- 释放的 simple\_lock**   
-## 请参阅  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 1 - acquired simple_lock  
+Thread 1 - released simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 2 - acquired simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 2 - released simple_lock  
+Thread 0 - failed to acquire simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - acquired simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 0 - released simple_lock  
+Thread 3 - failed to acquire simple_lock  
+Thread 3 - acquired simple_lock  
+Thread 3 - released simple_lock  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [函数](../../../parallel/openmp/reference/openmp-functions.md)

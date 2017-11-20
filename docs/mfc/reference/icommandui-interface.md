@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,18 @@ f1_keywords:
 - AFXWINFORMS/ICommandUI::Index
 - AFXWINFORMS/ICommandUI::Radio
 - AFXWINFORMS/ICommandUI::Text
-dev_langs:
-- C++
-helpviewer_keywords:
-- ICommandUI interface [MFC]
+dev_langs: C++
+helpviewer_keywords: ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: e64d55250a9739e8465a4ae79ecb293e2879daef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c616d5b6a569cec5f54970f7b4cb3778841738bc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="icommandui-interface"></a>ICommandUI 接口
 管理用户界面命令。  
@@ -132,4 +128,3 @@ property String^ Text;
   
 ## <a name="see-also"></a>另请参阅  
  [CCmdUI 类](../../mfc/reference/ccmdui-class.md)
-

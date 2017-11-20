@@ -1,77 +1,75 @@
 ---
-title: "“&lt;项目名&gt; 属性页”对话框 -&gt;“配置属性”-&gt;“清单工具”-&gt;“输入和输出” | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.OutputManifestFile"
-  - "VC.Project.VCManifestTool.InputResourceManifests"
-  - "VC.Project.VCManifestTool.EmbedManifest"
-  - "VC.Project.VCManifestTool.AdditionalManifestFiles"
-  - "VC.Project.VCManifestTool.DependencyInformationFile"
-  - "VC.Project.VCManifestTool.OutputResourceManifest"
-  - "VC.Project.VCManifestTool.GenerateCatalogFiles"
-dev_langs: 
-  - "C++"
+title: "清单工具输入和输出属性 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.OutputManifestFile
+- VC.Project.VCManifestTool.InputResourceManifests
+- VC.Project.VCManifestTool.EmbedManifest
+- VC.Project.VCManifestTool.AdditionalManifestFiles
+- VC.Project.VCManifestTool.DependencyInformationFile
+- VC.Project.VCManifestTool.OutputResourceManifest
+- VC.Project.VCManifestTool.GenerateCatalogFiles
+dev_langs: C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6042a480eef506af736ad958643288efa67402d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “&lt;项目名&gt; 属性页”对话框 -&gt;“配置属性”-&gt;“清单工具”-&gt;“输入和输出”
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用此对话框可以指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的输入和输出选项。  
+# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>输入和输出，清单工具，配置属性&lt;Projectname&gt;属性页对话框
+使用此对话框中指定的输入和输出选项[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
   
- 若要访问此属性页对话框，请打开项目或属性表的属性页。  展开**“配置属性”**下的**“清单工具”**节点，然后选择**“输入和输出”**。  
+ 若要访问此属性页对话框中，打开你的项目或属性表的属性页。 展开**清单工具**节点下的**配置属性**，然后选择**输入和输出**。  
   
-## UIElement 列表  
- **附加清单文件**  
- 使用 **\/manifest** 选项可以指定清单工具将处理或合并的附加清单文件的完整路径。  完整路径采用分号进行分隔。  
+## <a name="uielement-list"></a>UIElement 列表  
+ **其他清单文件**  
+ 使用**/清单**选项以指定的清单工具将处理的其他清单文件或合并的完整路径。 完整路径由分号分隔。  
   
- **输入资源清单**  
- 使用 **\/inputresource** 选项可以指定输入到清单工具中的 RT\_MANIFEST 类型的资源的完整路径。  该路径的后面可以是指定的资源 ID。  例如：  
+ **输入的资源清单**  
+ 使用**/inputresource**选项以指定类型 RT_MANIFEST，其输入到该清单工具的资源的完整路径。 可以通过指定的资源 ID 遵循的路径 例如:   
   
  `dll_with_manifest.dll;#1`  
   
- 资源 ID 是可选的，并且默认为 winuser.h 中的 CREATEPROCESS\_MANIFEST\_RESOURCE\_ID。  
+ 资源 ID 是可选的默认为 CREATEPROCESS_MANIFEST_RESOURCE_ID 中参见 winuser.h。  
   
  **嵌入清单**  
- **“是”**指定项目系统将应用程序清单文件嵌入到程序集中。  
+ **是**指定项目系统将嵌入到程序集的应用程序清单文件。  
   
- **“否”**指定项目系统将应用程序清单文件作为独立文件进行创建。  
+ **不**指定项目系统将创建应用程序清单文件作为独立的文件。  
   
  **输出清单文件**  
- 指定输出清单文件的名称。  如果清单工具所操作的只有一个清单文件，则此属性是可选的。  
+ 指定输出清单文件的名称。 只有一个清单文件所操作的清单工具时，此属性是可选的。  
   
  **清单资源文件**  
- 指定用于将清单嵌入到项目输出的输出资源文件。  
+ 指定资源文件用于将清单嵌入到项目输出的输出。  
   
  **生成目录文件**  
- 使用 **\/makecdfs** 选项可以指定清单工具将生成目录定义文件（.cdf 文件），这些文件用于制作目录。  
+ 使用**/makecdfs**选项以指定该清单工具将生成目录定义文件 （.cdf 文件），用于使目录。  
   
  **从 ManagedAssembly 生成清单**  
- 从托管程序集生成清单。  \(**\-managedassemblyname:***文件*\)。  
+ 从托管程序集生成清单。 (**-managedassemblyname:***文件*)。  
   
- **禁止依赖项元素**  
- 与 **\-managedassembly** 选项一起使用。  此标记取消在最终清单中生成依赖项元素。  
+ **禁止显示依赖关系元素**  
+ 与使用**-managedassembly**选项。 此标记取消生成最终的清单中的依赖关系元素。  
   
  **生成类别标记**  
- 与 **\-managedassembly** 选项一起使用。  此标记可能导致生成类别标记。  
+ 与使用**-managedassembly**选项。 此标记会导致类别标记来生成。  
   
- **启用 DPI 识别**  
- 指定应用程序是否支持 DPI。  默认情况下，如果是 MFC 项目，此设置为**“Yes”**，否则为**“No”**，因为仅 MFC 项目具有内置 DPI 识别。  如果添加代码以处理不同的 DPI 设置，您可以将设置重写为**“YES”**。  如果在应用程序不支持 DPI 时将其设置为支持 DPI，则该应用程序可能会出现模糊或变小。  
+ **启用 DPI 感知**  
+ 指定是否 DPI 感知应用程序。 默认情况下，设置是**是**对于 MFC 项目和**否**否则为因为 DPI 感知内置了只有 MFC 项目。 你可以重写将设置改为**是**如果添加代码来处理采用不同 DPI 设置。 模糊或如果你将其设置为 dpi 时它不是小型，可能会出现你的应用程序。  
   
-## 请参阅  
- [ClickOnce 应用程序清单](../Topic/ClickOnce%20Application%20Manifest.md)   
+## <a name="see-also"></a>另请参阅  
+ [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)   
  [清单工具属性页](../ide/manifest-tool-property-pages.md)   
- [如何：打开项目属性页](../misc/how-to-open-project-property-pages.md)   
- [如何：编辑项目属性表](../misc/how-to-edit-project-property-sheets.md)
+ [使用项目属性](../ide/working-with-project-properties.md)   

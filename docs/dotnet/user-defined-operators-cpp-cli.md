@@ -1,71 +1,69 @@
 ---
-title: "用户定义的运算符 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "在 /clr 下用户定义的运算符"
+title: "用户定义的运算符 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 73a397664d5e5a9074731b6eac879fe965580f05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 用户定义的运算符 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-托管类型的用户定义运算符允许用作静态成员或实例成员，或者位于全局范围内。  但是，只有静态运算符通过使用除 Visual C\+\+ 外语言编写的到客户端的元数据实现访问。  
+# <a name="user-defined-operators-ccli"></a>用户定义的运算符 (C++/CLI)
+托管类型的用户定义运算符可用作静态成员或实例成员，或者在全局范围内使用。 但是，使用除 Visual C++ 之外的语言编写的客户端通过元数据仅可以访问静态运算符。  
   
- 在引用类型，一个静态的用户定义的运算符的参数必须为这些类型中的一个：  
+ 在引用类型中，静态的用户定义的运算符的参数之一必须是以下类型中的一个：  
   
--   一个句柄 \(`type` ^\) 到封闭类型的实例。  
+-   封闭类型的实例的一个句柄 (`type` ^)。  
   
--   间接引用类型 \(`type`^& 或 type^% \) 到封闭类型的实例句柄。  
+-   封闭类型实例的句柄的间接引用类型（`type`^& 或 type^%）。  
   
- 在值类型，一个静态的用户定义的运算符的参数必须为这些类型中的一个：  
+ 在值类型中，静态的用户定义的运算符的参数之一必须是以下类型中的一个：  
   
--   与封闭值类型的类型相同。  
+-   与封闭值类型相同的类型。  
   
--   指针类型间接 \(`type` ^\) 指向封闭类型。  
+-   封闭类型的间接指针类型 (`type` ^)。  
   
--   引用类型间接 \(`type` % 或 `type`& ）到封闭类型。  
+-   封闭类型的间接引用类型（`type`% 或 `type`&）。  
   
--   引用类型间接 \(`type`^% 或 `type`^&\) 到句柄。  
+-   句柄的间接引用类型（`type`^% 或 `type`^&）。  
   
- 可以定义以下运算符：  
+ 您可以定义以下运算符：  
   
-|运算符|一元\/二进制格式?|  
-|---------|----------------|  
-|\!|一元|  
-|\!\=|二进制|  
+|运算符|一元还是二元形式？|  
+|--------------|--------------------------|  
+|!|一元|  
+|!=|二进制|  
 |%|二进制|  
 |&|一元和二进制|  
 |&&|二进制|  
-|\*|一元和二进制|  
-|\+|一元和二进制|  
-|\+\+|一元|  
+|*|一元和二进制|  
+|+|一元和二进制|  
+|++|一元|  
 |,|二进制|  
-|\-|一元和二进制|  
-|\-\-|一元|  
-|\-\>|一元|  
-|\/|二进制|  
-|\<|二进制|  
-|\<\<|二进制|  
-|\<\=|二进制|  
-|\=|二进制|  
-|\=\=|二进制|  
-|\>|二进制|  
-|\>\=|二进制|  
-|\>\>|二进制|  
+|-|一元和二进制|  
+|--|一元|  
+|->|一元|  
+|/|二进制|  
+|<|二进制|  
+|<<|二进制|  
+|\<=|二进制|  
+|=|二进制|  
+|==|二进制|  
+|>|二进制|  
+|>=|二进制|  
+|>>|二进制|  
 |^|二进制|  
 |false|一元|  
 |true|一元|  
@@ -73,9 +71,9 @@ manager: "ghogen"
 |&#124;&#124;|二进制|  
 |~|一元|  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // mcppv2_user-defined_operators.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -135,17 +133,20 @@ int main() {
 }  
 ```  
   
-  **\-5**  
-**\-4**  
-**\-3**  
-**\-2**  
-**\-1**  
-**\-2**  
-**\-3**   
-## 示例  
- 下面的示例演示复合运算符，只有使用 **\/clr** 编译时才可用。  复合运算符创建二元运算符的赋值形式，如果一个赋值运算符的左边具有 CLR 类型的操作数没有定义。  
-  
+```Output  
+-5  
+-4  
+-3  
+-2  
+-1  
+-2  
+-3  
 ```  
+  
+## <a name="example"></a>示例  
+ 下面的示例演示如何使用时才可用的复合运算符**/clr**进行编译。 如果未定义二元运算符的赋值形式，则复合运算符会创建一个，其中赋值运算符的左侧具有一个 CLR 类型。  
+  
+```cpp  
 // mcppv2_user-defined_operators_2.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -165,6 +166,9 @@ int main() {
 }  
 ```  
   
-  **30**   
-## 请参阅  
- [类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+30  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)

@@ -1,32 +1,30 @@
 ---
-title: "unary_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate 函数 [STL/CLR]"
+title: "unary_delegate (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate
+dev_langs: C++
+helpviewer_keywords: unary_delegate function [STL/CLR]
 ms.assetid: b3ee253c-98e8-466e-a272-505e47aed061
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 50a59472b2aa2873cf1efe00741f3ddfd98f0e5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# unary_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-genereic 类描述一委托参数。  使用该指定委托根据其参数和返回类型。  
+# <a name="unarydelegate-stlclr"></a>unary_delegate (STL/CLR)
+Genereic 类描述一个单参数的委托。 使用它指定根据其自变量和返回类型的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 generic<typename Arg,  
@@ -34,23 +32,23 @@ generic<typename Arg,
     delegate Result unary_delegate(Arg);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  Arg  
  参数类型。  
   
  结果  
  返回类型。  
   
-## 备注  
- genereic 描述委托一参数函数。  
+## <a name="remarks"></a>备注  
+ Genereic 委托介绍了一个自变量的函数。  
   
- 请注意，为：  
+ 请注意，对于：  
   
  `unary_delegare<int, int> Fun1;`  
   
  `unary_delegare<int, int> Fun2;`  
   
- `Fun1` 和 `Fun2` 类型是同义词，那么，当进行针对：  
+ 类型`Fun1`和`Fun2`是同义词，而为：  
   
  `delegate int Fun1(int);`  
   
@@ -58,7 +56,7 @@ generic<typename Arg,
   
  它们不是同一类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_unary_delegate.cpp   
@@ -82,14 +80,17 @@ int main()
   
 ```  
   
-  **哈希 \(L'a\)\/5**  
-**哈希 \(L'b\)\/22**   
-## 要求  
- **页眉：** \<\/cliext 功能\>  
+```Output  
+hash(L'a') = 5  
+hash(L'b') = 22  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

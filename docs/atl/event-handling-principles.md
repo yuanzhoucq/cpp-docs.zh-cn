@@ -1,55 +1,56 @@
 ---
-title: "Event Handling Principles | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "双重接口, event interfaces"
-  - "事件处理, advising event sources"
-  - "事件处理, dual event interfaces"
-  - "事件处理, 实现"
-  - "接口, event and event sink"
+title: "事件处理原则 (ATL) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- event handling, implementing
+- event handling, advising event sources
+- interfaces, event and event sink
+- dual interfaces, event interfaces
+- event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c37544f7b9083bbfa890961ef40e0c9f26aecc2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Event Handling Principles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-有三个步骤共有的所有事件处理。  您需要:  
+# <a name="event-handling-principles"></a>事件处理原则
+有三个步骤普遍适用于所有事件处理。 你将需要：  
   
--   实现对象的事件接口。  
+-   在你的对象上实现事件接口。  
   
--   建议事件源您的对象要接收事件。  
+-   建议你的对象要接收事件的事件源。  
   
--   Unadvise事件源，当对象不再需要接收事件。  
+-   当你的对象不再需要要接收事件时，不建议事件源。  
   
- 您将实现接口的方法取决于其类型。  事件接口可以是vtable，、或调度接口。  将由定义的接口事件源的设计器;将由实现该接口的。  
+ 你将实施事件接口的方法将取决于其类型。 Vtable、 双或调度接口，可以是事件接口。 这取决于事件源的设计器定义接口;它是最多可以实现该接口来决定。  
   
 > [!NOTE]
->  虽然在技术上的原因事件接口不能是双的，有多种虚拟设计原因避免使用双绑定。  但是，这种 *事件源的*设计器\/实现所做的决策。  因为您从活动 `sink`的角度工作，您需要允许这种可能性您可能没有任何选择，但实现一个双事件接口。  有关双重接口的更多信息，请参见 [双重接口和ATL](../atl/dual-interfaces-and-atl.md)。  
+>  尽管不有任何事件接口不能是双重的技术原因，不有多种良好的设计原因，以避免使用双接口。 但是，这是由设计器/事件的实施者决定*源*。 由于你正在从该事件的角度`sink`，你需要允许是否可能会出现，你可能没有选择任何但要实现双事件接口。 双重接口的详细信息，请参阅[双重接口和 ATL](../atl/dual-interfaces-and-atl.md)。  
   
- 建议事件源可以分解为三个步骤:  
+ 通知事件源可以分为三个步骤：  
   
--   查询 [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)的源对象。  
+-   查询的源对象[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)。  
   
--   调用通过感兴趣事件接口的IID的 [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)。  如果成功，则将返回在的 [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) 接口的连接点对象。  
+-   调用[IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)传递事件接口的 IID 感兴趣。 如果成功，这将返回[IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)连接点对象上的接口。  
   
--   该调用会将事件接收器的 **IUnknown** 的 [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815)。  如果成功，则将返回表示连接的 `DWORD` cookie。  
+-   调用[IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815)传递**IUnknown**的事件接收器。 如果成功，这将返回`DWORD`表示连接的 cookie。  
   
- 一旦在接收事件上成功注册了感兴趣，在对象的事件接口的方法根据操作将调用激发的源对象。  当不再需要接收事件时，可以通过cookie回通过 [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608)连接点。  否则会中断连接在源和事件之间。  
+ 一旦你已成功注册您有兴趣接收事件，将根据源对象激发的事件调用对象的事件接口方法。 当你不再需要要接收事件时，可以将 cookie 传递回连接点通过[IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608)。 这会使源和接收器之间的连接。  
   
- 在处理事件时，请注意避免循环引用。  
+ 请注意避免引用时处理事件周期。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件处理](../atl/event-handling-and-atl.md)
+

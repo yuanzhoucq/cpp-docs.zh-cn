@@ -1,32 +1,30 @@
 ---
-title: "bind1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind1st 函数 [STL/CLR]"
+title: "bind1st (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind1st
+dev_langs: C++
+helpviewer_keywords: bind1st function [STL/CLR]
 ms.assetid: 03a04cef-60fb-4667-b22a-22a387adb028
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 732238e3c0754731dcf7caf10ad1d6a140490cd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# bind1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-生成参数和仿函数 的 `binder1st`。  
+# <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
+生成`binder1st`有关自变量，以及函子。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Fun,  
@@ -35,24 +33,24 @@ template<typename Fun,
         Arg left);  
 ```  
   
-## Template Parameters  
+## <a name="template-parameters"></a>模板参数  
  Arg  
  参数类型。  
   
- Fun  
- 函数对象的类型。  
+ 有趣  
+ 函子的类型。  
   
-## 函数参数  
- functor  
- 包装的 functor。  
+## <a name="function-parameters"></a>函数参数  
+ 函子  
+ 包装函数。  
   
  left  
  要包装的第一个参数。  
   
-## 备注  
- 模板函数返回  [binder1st](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`。  使用它作为一种简便方法包装两参数的仿函数及在一个一参数的仿函数的第一个参数调用它的第二个参数。  
+## <a name="remarks"></a>备注  
+ 模板函数返回[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`。 你将它用作一种简便方式中调用它与第二个参数的单自变量涵子包装两个参数函子和其第一个参数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_bind1st.cpp   
@@ -95,13 +93,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [binder1st](../dotnet/binder1st-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)

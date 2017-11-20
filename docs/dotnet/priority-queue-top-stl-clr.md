@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::top (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::top"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top 成员 [STL/CLR]"
+title: "priority_queue:: top (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::top
+dev_langs: C++
+helpviewer_keywords: top member [STL/CLR]
 ms.assetid: e45211d5-e6df-4c03-97fd-57afb87af58c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db32b4e3a9b744940c2467176e23d986ef9df23c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::top (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-访问要求优先级最高的元素。  
+# <a name="priorityqueuetop-stlclr"></a>priority_queue::top (STL/CLR)
+访问优先级最高的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 reference top();  
 ```  
   
-## 备注  
- 成员函数返回给控制序列的顶部 \(优先级最高的元素\) 的引用，必须非空。  使用访问它的优先级最高，的元素，在您知道存在\)。  
+## <a name="remarks"></a>备注  
+ 成员函数返回对受控序列，必须为非空的顶部 （最高优先级） 元素的引用。 用于访问优先级最高的元素中，当你知道它存在。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_priority_queue_top.cpp   
@@ -68,14 +66,17 @@ int main()
   
 ```  
   
-  **c b**  
-**top\(\) 为 c**  
- **x b**   
-## 要求  
- **页眉：** \<\/cliext 队列\>  
+```Output  
+ c a b  
+top() = c  
+ x a b  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::top\_item](../dotnet/priority-queue-top-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)

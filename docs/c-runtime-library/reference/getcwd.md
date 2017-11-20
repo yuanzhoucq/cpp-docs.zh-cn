@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- getcwd
+apiname: getcwd
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- getcwd
-dev_langs:
-- C++
-helpviewer_keywords:
-- getcwd function
+f1_keywords: getcwd
+dev_langs: C++
+helpviewer_keywords: getcwd function
 ms.assetid: c740ab06-9ba0-4036-a025-ce3acded3ffe
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 1dc6bd28105edf5c689176cd48b3cfc08a380ce0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getcwd"></a>getcwd
 此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_getcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)。  

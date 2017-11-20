@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_new_handler
+apiname: _set_new_handler
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c8a3b6e7df9f46ebf299f2fe5472461f1944b055
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 5ab5d0da21b7034d1a5ab336854b87ae2d2cc429
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 如果 `new` 运算符无法分配内存，则将控制权传输到错误处理机制。  

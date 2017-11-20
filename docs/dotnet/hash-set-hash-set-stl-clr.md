@@ -1,32 +1,30 @@
 ---
-title: "hash_set::hash_set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hash_set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_set 成员 [STL/CLR]"
+title: "hash_set:: hash_set (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hash_set
+dev_langs: C++
+helpviewer_keywords: hash_set member [STL/CLR]
 ms.assetid: 006414ed-db5a-4c08-ac81-4a8ae57d0aad
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e4a7e2975402183c0cabf46ce786bf3877fe6d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::hash_set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsethashset-stlclr"></a>hash_set::hash_set (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 hash_set();  
@@ -49,104 +47,90 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### 参数  
- first  
- 插入范围的开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要插入的范围开始处。  
   
  hashfn  
- 映射到键的哈希函数存储桶。  
+ 哈希与存储桶的映射键的函数。  
   
  last  
- 插入范围的末尾。  
+ 要插入的范围的末尾。  
   
  pred  
- 排序规则序列的谓词。  
+ 排序受控序列的谓词。  
   
- right  
+ 右  
  要插入的对象或范围。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `hash_set();`  
   
- 初始化控制没有元素的序列，并且默认排序谓词使用 `key_compare()`和默认哈希函数。  使用它来指定空的初始序列，使用控制默认排序和哈希函数。  
+ 使用默认的排序谓词初始化受控的序列不包含任何元素， `key_compare()`，并使用默认哈希运算。 用于指定空的初始受控的序列，使用默认的排序谓词和哈希函数。  
   
  构造函数：  
   
  `explicit hash_set(key_compare^ pred);`  
   
- 初始化控制序列没有元素，并且排序谓词使用默认 `pred`和哈希函数。  使用它来指定空的初始序列，使用控制指定排序和默认的哈希函数。  
+ 初始化受控的序列不包含任何元素，与排序的谓词`pred`，并使用默认哈希运算。 用于指定空的初始受控的序列，使用指定的排序谓词和默认哈希函数。  
   
  构造函数：  
   
  `hash_set(key_compare^ pred, hasher^ hashfn);`  
   
- 初始化控制序列没有元素，并且排序谓词使用 `pred`和哈希函数`hashfn`。  使用它来指定空的初始序列，使用控制指定排序和哈希函数。  
+ 初始化受控的序列不包含任何元素，与排序的谓词`pred`，并使用哈希运算`hashfn`。 用于指定空的初始受控的序列，使用指定的排序谓词和哈希函数。  
   
  构造函数：  
   
  `hash_set(hash_set<Key>% right);`  
   
- 初始化控制序列，使用序列 `[``right``.`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``.`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`，使用默认排序谓词，和默认哈希函数。  使用它来指定初始控制序列，该序列是由哈希多重集对象`right`控制的序列副本，使用默认排序谓词和哈希函数。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)、 排序谓词，默认值和默认哈希函数。 用于指定是由 hash_set 对象控制的序列的副本的初始受控的序列`right`、 与的默认排序谓词和哈希函数。  
   
  构造函数：  
   
  `hash_set(hash_set<Key>^ right);`  
   
- 初始化控制序列，使用序列 `[``right``->`[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` `right``->`[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`，使用默认排序谓词，和默认哈希函数。  使用它来指定初始控制序列，该序列是由哈希多重集对象`right`控制的序列副本，使用默认排序谓词和哈希函数。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)、 排序谓词，默认值和默认哈希函数。 用于指定是由 hash_set 对象控制的序列的副本的初始受控的序列`right`、 与的默认排序谓词和哈希函数。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last);`  
   
- `hash_set(InIter first, InIter last);`  
-  
- 初始化控制序列，使用序列 `[``first``,` `last``)`，使用默认排序谓词，和默认哈希函数。  使用会使控制序列复制另一个序列，其中包含默认排序谓词和哈希函数中。  
+ 初始化受控的序列与序列 [`first`， `last`)、 排序谓词，默认值和默认哈希函数。 你可以使用它以使用默认的排序谓词和哈希函数使受控的序列的另一个序列，副本。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
   
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- 初始化控制序列，使用序列 `[``first``,` `last``)`，使用排序谓词 `pred`，和默认哈希函数。  使用会使控制序列复制另一个序列，其中包含指定排序谓词和默认哈希函数中。  
+ 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`，并使用默认哈希运算。 你可以使用它以使另一个序列，使用指定的排序谓词和默认哈希函数的副本的受控的序列。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_set(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- 初始化控制序列，使用序列 `[``first``,` `last``)`,使用排序谓词 `pred`, 和指定哈希函数`hashfn`.  使用会使控制序列复制另一个序列，其中包含指定排序谓词和哈希函数中。  
+ 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`，并使用哈希运算`hashfn`。 你可以使用它以使另一个序列，使用指定的排序谓词和哈希函数的副本的受控的序列。  
   
  构造函数：  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化控制序列的枚举数指定的 `right`序列，并默认排序谓词和具有默认哈希函数。  使用它来为控制序列创建一个另一个由枚举器指定的序列副本，其中包含默认排序谓词和哈希函数。  
+ 初始化与枚举器指定序列的受控的序列`right`、 排序谓词，默认值和默认哈希函数。 你可以使用它来使一个枚举器，使用默认的排序谓词和哈希函数所描述的另一个序列的副本的受控的序列。  
   
  构造函数：  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
-  
- 初始化控制序列的枚举数指定的 `right`序列，并默认排序谓词`pred`和具有默认哈希函数。  使用它来为控制序列创建一个另一个由枚举器指定的序列副本，其中包含指定排序谓词和默认哈希函数。  
+ 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`，并使用默认哈希运算。 你可以使用它以使所描述的枚举，使用指定排序谓词和默认哈希的函数的另一个序列的副本的受控的序列。  
   
  构造函数：  
   
- `hash_set(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `key_compare^ pred, hasher^ hashfn);`  
+ 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`，并使用哈希运算`hashfn`。 你可以使用它以使所描述的枚举，使用指定的排序谓词和哈希函数的另一个序列的副本的受控的序列。  
   
- 初始化控制序列的枚举数指定的 `right`序列，并排序谓词`pred`和具认哈希函数`hashfn`。  使用它来为控制序列创建一个另一个由枚举器指定的序列副本，其中包含指定排序谓词和哈希函数。  
-  
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_set_construct.cpp   
@@ -255,26 +239,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**   
-## 要求  
- **Header:** \<cliext\/hash\_set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_container](../dotnet/hash-set-generic-container-stl-clr.md)   
- [hash\_set::operator\=](../dotnet/hash-set-operator-assign-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)   
+ [hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)

@@ -1,35 +1,34 @@
 ---
-title: "ptr::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::ptr"
-  - "ptr.ptr"
-  - "msclr.com.ptr.ptr"
-  - "msclr::com::ptr::ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::ptr"
+title: "ptr::ptr |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::ptr
+- ptr.ptr
+- msclr.com.ptr.ptr
+- msclr::com::ptr::ptr
+dev_langs: C++
+helpviewer_keywords: ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99016a9006bb13be70fe38fd222ad25a08792b20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-构造 `com::ptr` 包装 COM 对象。  
+# <a name="ptrptr"></a>ptr::ptr
+构造`com::ptr`包装的 COM 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 ptr();  
@@ -38,19 +37,19 @@ ptr(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `P`  
  COM 接口指针。  
   
-## 备注  
- 非参数构造函数将 `nullptr` 赋给对象处理基础。  对 `com::ptr` 的后续调用将生成验证对象和无提示地失败，直到对象实际创建或附加。  
+## <a name="remarks"></a>备注  
+ 无参数构造函数将分配`nullptr`对基础对象句柄。 后续调用`com::ptr`将验证的内部对象，并且以静默方式失败，直到实际创建或附加对象。  
   
- 单参数构造函数将对 COM 对象的引用，但调用方不释放的引用，因此，调用方必须对 COM 对象调用的 `Release` 正确的控件。  当 `com::ptr` 调用析构函数。它会自动释放它对该 COM 对象的引用。  
+ 单参数构造函数添加对 COM 对象的引用，但不会释放调用方的引用，以便调用方必须调用`Release`上要真正放弃控件的 COM 对象。 当`com::ptr`的调用析构函数，它将自动释放 COM 对象上的引用。  
   
- 将 `NULL` 传递给该构造函数与调用由参数版本。  
+ 传递`NULL`向此构造函数是与调用的无参数的版本相同。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  它演示构造函数的两个版本使用。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 它演示如何使用这两个版本的构造函数。  
   
 ```  
 // comptr_ptr.cpp  
@@ -111,12 +110,12 @@ int main() {
 }  
 ```  
   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

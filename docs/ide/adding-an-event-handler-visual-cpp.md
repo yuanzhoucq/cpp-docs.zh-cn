@@ -1,55 +1,53 @@
 ---
-title: "添加事件处理程序 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.eventhandler.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件处理程序, 添加"
-  - "MSBuild, 属性"
-  - "属性 [Visual Studio], MSBuild"
+title: "添加事件处理程序 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.eventhandler.overview
+dev_langs: C++
+helpviewer_keywords:
+- event handlers, adding
+- properties [Visual Studio], MSBuild
+- MSBuild, properties
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 172a9c2dd7f2af941c9b0ae5d2600d2717d15b1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 添加事件处理程序 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从资源编辑器中，可以使用[事件处理程序向导](../ide/event-handler-wizard.md)为对话框控件添加新的事件处理程序，或编辑现有的事件处理程序。  
+# <a name="adding-an-event-handler-visual-c"></a>添加事件处理程序 (Visual C++)
+从资源编辑器中，你可以添加一个新的事件处理程序，或编辑现有事件处理程序，对话框框控件使用[事件处理程序向导](../ide/event-handler-wizard.md)。  
   
- 可以使用[“属性”窗口](../Topic/Properties%20Window.md)向实现对话框的类添加事件。  如果要向对话框类以外的类添加事件，请使用“事件处理程序向导”。  
+ 你可以将事件添加到实现对话框框中使用的类[属性窗口](/visualstudio/ide/reference/properties-window)。 如果你想要将事件添加到对话框类以外的类，使用事件处理程序向导。  
   
-### 向对话框控件添加事件处理程序  
+### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>若要将事件处理程序添加到对话框控件  
   
-1.  在[资源视图](../windows/resource-view-window.md)中双击对话框资源，以打开包含[对话框编辑器](../mfc/dialog-editor.md)中的控件的对话框资源。  
+1.  双击对话框资源中的[资源视图](../windows/resource-view-window.md)以打开对话框资源包含在控件[对话框编辑器](../windows/dialog-editor.md)。  
   
-2.  右击要为其处理通知事件的控件。  
+2.  右键单击你想要处理该通知事件的控件。  
   
-3.  在快捷菜单上，单击**“添加事件处理程序”**以显示事件处理程序向导。  
+3.  在快捷菜单上，单击**添加事件处理程序**以显示事件处理程序向导。  
   
-4.  在“消息类型”框中选择要添加到“类列表”框中的选定类的事件。  
+4.  选择中的事件**消息类型**框以将添加到中选定的类**类列表**框。  
   
-5.  接受“函数处理程序名称”框中的默认名称，或提供自己选择的名称。  
+5.  接受默认名称中的**函数处理程序名称**框中，或提供你选择的名称。  
   
-6.  单击“添加并编辑”，向项目中添加事件处理程序，并在新函数处打开文本编辑器，添加适当的事件处理程序代码。  
+6.  单击**添加和编辑**以向项目添加事件处理程序并打开新的函数在文本编辑器，添加相应的事件处理程序代码。  
   
-     如果选定的消息类型已经具有选定类的事件处理程序，则“添加并编辑”不可用，而“编辑代码”可用。  单击“编辑代码”以现有函数打开文本编辑器。  
+     如果选定的消息类型已经具有所选的类，事件处理程序**添加和编辑**不可用，和**编辑代码**可用。 单击**编辑代码**以打开现有的函数在文本编辑器。  
   
- 或者，可以从[“属性”窗口](../Topic/Properties%20Window.md)添加事件处理程序。  有关更多信息，请参见[添加对话框控件的事件处理程序](../mfc/adding-event-handlers-for-dialog-box-controls.md)。  
+ 或者，你可以将添加事件处理程序从[属性窗口](/visualstudio/ide/reference/properties-window)。 请参阅[对于对话框控件添加事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)有关详细信息。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../ide/adding-a-class-visual-cpp.md)   
  [添加成员变量](../ide/adding-a-member-variable-visual-cpp.md)   

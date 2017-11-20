@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,38 +18,21 @@ f1_keywords:
 - ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlBaseModule class
+dev_langs: C++
+helpviewer_keywords: CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4897f6cf7e12a18401720ad663c90491bb0e599d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 3249240ef90224dc1a297a848f1eba55d915fdac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule 类
-此类进行实例化每个 ATL 项目中。  
+此类是实例化每个 ATL 项目中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -62,29 +44,29 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAtlBaseModule::CAtlBaseModule](#catlbasemodule)|构造函数。|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|将资源实例添加到的存储句柄的列表。|  
+|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|将资源实例添加到存储的句柄的列表。|  
 |[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|返回指定的资源实例的句柄。|  
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|返回从模块实例`CAtlBaseModule`对象。|  
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|返回从的模块实例`CAtlBaseModule`对象。|  
 |[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|返回从资源实例`CAtlBaseModule`对象。|  
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|从存储句柄的列表中删除资源实例。|  
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|从存储的句柄的列表中删除的资源实例。|  
 |[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|设置的资源实例`CAtlBaseModule`对象。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|指示是否出现故障的模块初始化的变量。|  
+|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|指示是否模块初始化失败的变量。|  
   
 ## <a name="remarks"></a>备注  
- 一个实例`CAtlBaseModule`命名的 _AtlBaseModule 是否出现在每个 ATL 项目，其中包含模块实例的句柄、 包含资源 （即默认情况下，同一个），该模块，提供主要资源的模块的句柄数组的句柄。 `CAtlBaseModule`可以安全地从多个线程访问。  
+ 实例`CAtlBaseModule`命名的 _AtlBaseModule 位于每个 ATL 项目，其中包含模块实例的句柄、 包含的资源 （默认情况下，同一个） 的模块和提供主模块的句柄的数组的句柄资源。 `CAtlBaseModule`可以安全地从多个线程访问。  
   
  此类替换已过时[CComModule](../../atl/reference/ccommodule-class.md)的 atl。 早期版本中使用的类  
   
@@ -94,10 +76,10 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
  `CAtlBaseModule`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcore.h  
+ **标头：** atlcore.h  
   
 ##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
- 将资源实例添加到的存储句柄的列表。  
+ 将资源实例添加到存储的句柄的列表。  
   
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -108,7 +90,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
  要添加的资源实例。  
   
 ### <a name="return-value"></a>返回值  
- 如果该资源已成功则返回 true，添加 false 否则。  
+ 如果资源已成功，则返回 true 添加，false 否则。  
   
 ##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  构造函数。  
@@ -132,10 +114,10 @@ HINSTANCE GetHInstanceAt(int i) throw();
  资源实例数。  
   
 ### <a name="return-value"></a>返回值  
- 如果没有对应的资源实例存在，请返回的句柄资源实例，或者为 NULL。  
+ 返回的句柄到的资源实例或为 NULL，如果不存在任何相应的资源实例。  
   
 ##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
- 返回从模块实例`CAtlBaseModule`对象。  
+ 返回从的模块实例`CAtlBaseModule`对象。  
   
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -155,7 +137,7 @@ HINSTANCE GetResourceInstance() throw();
  返回的资源实例。  
   
 ##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
- 指示是否出现故障的模块初始化的变量。  
+ 指示是否模块初始化失败的变量。  
   
 ```
 static bool m_bInitFailed;
@@ -165,7 +147,7 @@ static bool m_bInitFailed;
  如果该模块初始化，false 如果它无法初始化，则为 true。  
   
 ##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
- 从存储句柄的列表中删除资源实例。  
+ 从存储的句柄的列表中删除的资源实例。  
   
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -190,9 +172,8 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
  新的资源实例。  
   
 ### <a name="return-value"></a>返回值  
- 返回的已更新的资源实例。  
+ 返回已更新的资源实例。  
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)   
  [Module 类](../../atl/atl-module-classes.md)
-

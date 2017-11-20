@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,41 +16,24 @@ f1_keywords:
 - No header/ATL::QueryControl
 - No header/ATL::SetExternalDispatch
 - No header/ATL::SetExternalUIHandler
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinHostWindow interface
+dev_langs: C++
+helpviewer_keywords: IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ecf88a3a6b115088dd605fff2b633bff86fb086a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 28fdc1a3a26fc2bb6117c345da3588ff0d2de193
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 接口
 此接口提供用于操作控件和其主机对象的方法。  
   
 > [!IMPORTANT]
->  该类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -224,7 +206,6 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
  [IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

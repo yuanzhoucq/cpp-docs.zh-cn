@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- const_reference method
+dev_langs: C++
+helpviewer_keywords: const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 128311db068d1a34f0f8e3d68291209ed44462e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 84f2d94c665d5d75a8927b2cbf7d4af9a854792f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="container-classconstreference"></a>Container Class::const_reference
 > [!NOTE]
@@ -56,4 +38,3 @@ typedef T3 const_reference;
   
 ## <a name="see-also"></a>另请参阅  
  [Sample Container 类](../standard-library/sample-container-class.md)
-

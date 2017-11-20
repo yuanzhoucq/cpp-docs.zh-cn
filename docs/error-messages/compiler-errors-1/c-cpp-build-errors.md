@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -186,7 +185,6 @@ f1_keywords:
 - LNK4020
 - LNK4030
 - LNK4031
-- LNK4037
 - LNK4038
 - LNK4040
 - LNK4041
@@ -302,39 +300,22 @@ f1_keywords:
 - R6022
 - R6023
 - R6034
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1a370ddc7c314cae0cb1a048cacb704480525b0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cc-build-errors"></a>C/C++ 生成错误
 本节文档中的文章介绍生成工具所生成的错误消息。 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 编译器和生成工具可报告多种类型的错误和警告。 发现错误或警告后，生成工具可做出有关代码意图的假设并尝试继续，所以此时可能会报告更多问题。 如果工具做出错误假设，则后续错误或警告可能不适于你的项目。 纠正项目中的问题时，请始终先纠正报告的第一个错误或警告，然后在通常情况下重新生成。  
@@ -342,7 +323,7 @@ ms.lasthandoff: 04/24/2017
  若要获取 Visual Studio 中的特定错误消息的帮助，请选择中的错误号**输出**窗口，并按 F1 键打开 MSDN 页上该错误的。 在 MSDN 中，还可搜索有关错误的文章，或在导航窗格中浏览各类错误的列表。  
   
 > [!NOTE]
->  不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误或警告记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误或警告记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  错误和警告的 MSDN 公共论坛，可能会发现更多帮助。 [Visual c + + 语言](http://go.microsoft.com/fwlink/?LinkId=158195)论坛是有关问题和讨论有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]语言语法和编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/?LinkId=158194)论坛的问题是有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他论坛中未涉及。 你还可能上查找有关错误和警告的帮助[堆栈溢出](http://stackoverflow.com/)。  
   

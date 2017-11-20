@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 成员 [STL/CLR]"
+title: "hash_multiset:: difference_type (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 31e492b1-e980-4799-bab2-0dd2864428c9
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7584b3e66b79ffd1c2cfcbdf23d08aca0d77d2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-两个元素之间带符号距离的类型。  
+# <a name="hashmultisetdifferencetype-stlclr"></a>hash_multiset::difference_type (STL/CLR)
+两个元素间的带符号距离的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 备注  
- 类型描述可能为负元素计数。  
+## <a name="remarks"></a>备注  
+ 该类型描述可能负元素计数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_difference_type.cpp   
@@ -71,14 +69,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::size\_type](../dotnet/hash-multiset-size-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::size_type (STL/CLR)](../dotnet/hash-multiset-size-type-stl-clr.md)

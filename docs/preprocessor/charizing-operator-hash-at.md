@@ -1,36 +1,33 @@
 ---
-title: "字符化运算符 (#@) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "#@"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "#@ 预处理器运算符"
-  - "字符化运算符"
-  - "预处理器, 运算符"
+title: "字符化运算符 (#@) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '#@'
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor, operators
+- charizing operator
+- '#@ preprocessor operator'
 ms.assetid: dee03314-d27c-4063-965c-64756efbef22
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1920d8183607140ebe38aaf56a447bc9cd3010f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 字符化运算符 (#@)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="charizing-operator-"></a>字符化运算符 (#@)
 **Microsoft 专用**  
   
- charizing 运算符只能与宏的参数一起使用。  如果宏的定义中的形参前有 **\#@**，则会在扩展宏时用单引号括起实参并将其视为一个字符。  例如：  
+ charizing 运算符只能与宏的自变量一起使用。 如果 **#@** 的形参前在宏的定义，实际自变量是用单引号括起来，在扩展宏时视为一个字符。 例如:   
   
 ```  
 #define makechar(x)  #@x  
@@ -52,5 +49,5 @@ a = 'b';
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [预处理器运算符](../preprocessor/preprocessor-operators.md)

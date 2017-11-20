@@ -1,35 +1,35 @@
 ---
-title: "CAtlServiceModuleT::Handler Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CServiceModule::Handler"
-  - "CServiceModule.Handler"
-  - "Handler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Handler method"
+title: "CAtlServiceModuleT::Handler 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CServiceModule::Handler
+- CServiceModule.Handler
+- Handler
+dev_langs: C++
+helpviewer_keywords: Handler method
 ms.assetid: 14db5f2a-be87-4774-a296-445cb6fc7b2e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9f8c83db3f7834c79656adc3443fd3c8946a4176
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CAtlServiceModuleT::Handler Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`CAtlServiceModuleT::Handler` 是服务控制管理器\(SCM\)调用检索服务的状态并为其提供不同的命令实例\(如停止或暂停\)。  SCM通过操作代码来 `Handler` 指示该服务应执行。  默认ATL生成了仅服务处理停机命令。  如果SCM通过停机命令，服务调用SCM程序将停止。  服务然后调用 `PostThreadMessage` 宣告一出的消息到它。  这将停止消息循环，而服务最终关闭。  
+# <a name="catlservicemodulethandler-function"></a>CAtlServiceModuleT::Handler 函数
+`CAtlServiceModuleT::Handler`服务控制管理器 (SCM) 调用来检索服务的状态，并授予它 （例如停止或暂停） 的各种说明的例程。 SCM 将传递到操作代码`Handler`以指示服务应执行的操作。 一个默认 ATL 生成服务仅处理停止指令。 如果 SCM 通过停止指令，则服务将通知 SCM 程序即将停止。 然后，服务调用`PostThreadMessage`发布到其自身发出退出的消息。 这将终止消息循环并将最终关闭服务。  
   
- 处理多个命令，需要更改在 `CAtlServiceModuleT` 构造函数初始化的 `m_status` 数据成员。  此数据成员调用SCM启用服务时要使用的哪些按钮在服务控制面板应用程序选择。  
+ 若要处理的详细说明，你需要更改`m_status`中初始化的数据成员`CAtlServiceModuleT`构造函数。 此数据成员通知 SCM 时服务选择服务控制面板应用程序中启用哪些按钮。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务](../atl/atl-services.md)   
- [CAtlServiceModuleT::Handler](../Topic/CAtlServiceModuleT::Handler.md)
+ [CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)
+

@@ -1,71 +1,67 @@
 ---
-title: "友元程序集 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "友元程序集，Visual C++"
+title: "友元程序集 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 友元程序集 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-适当的运行时，则友元 *程序集* 语言功能将在命名空间范围或全局范围的程序集中的组件可访问一个或多个客户程序集或 .netmodules 的类型。  
+# <a name="friend-assemblies-c"></a>友元程序集 (C++)
+适用的运行时，为*友元程序集*语言功能使位于命名空间范围或一个或多个客户端程序集或.netmodule 可以访问程序集组件中的全局范围的类型。  
   
-## 所有运行时  
+## <a name="all-runtimes"></a>所有运行时  
  **备注**  
   
- （此语言在中任何没有运行时支持。）  
+ （并不是所有运行时都支持此语言功能。）  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
- \(此语言功能在[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]中不支持。\)  
+ （此语言功能不支持在 Windows 运行时中。）  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
-#### 使类型在命名空间范围或全局范围，程序集可以访问客户 .netmodule 程序集或组件  
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>使位于程序集组件命名空间范围或全局范围的类型可供客户端程序集或 .netmodule 访问  
   
-1.  在组件中指定程序集特性 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>，而将访问类型在命名空间范围或全局范围。客户组件程序集或 .netmodule 的名称。通过指定附加的特性指定多客户端程序集或 .netmodules。  
+1.  在组件中，指定程序集特性 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>，然后传递将访问位于组件命名空间范围或全局范围的类型的客户端程序集或 .netmodule 的名称。  您可通过指定其他特性来指定多个客户端程序集或 .netmodule。  
   
-2.  在客户端程序集或 .netmodule，使用 `#using`时，当您引用组件程序集，请将 `as_friend` 特性。如果对未指定 `InternalsVisibleToAttribute`的程序集指定 `as_friend` 特性，则运行时将引发异常，如果尝试访问类型在命名空间范围或全局范围中的组件。  
+2.  在客户端程序集或 .netmodule 中，当您使用 `#using` 引用组件程序集时，请传递 `as_friend` 特性。  如果您为未指定 `as_friend` 的程序集指定 `InternalsVisibleToAttribute` 特性，则将在您尝试访问位于组件命令空间范围或全局范围的类型时引发运行时异常。  
   
- 如果包含 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 特性的程序集没有强名称将产生一个错误，，则程序集使用 `as_friend` 特性中的客户。  
+ 如果包含 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 特性的程序集没有强名称，但使用 `as_friend` 特性的客户端程序集有，则将导致生成错误。  
   
- 虽然在命名空间范围和全局范围的类型可以为客户端程序集或 .netmodule 已知，成员可访问性仍然有效。例如，您无法访问私有成员。  
+ 虽然位于命名空间范围和全局范围的类型可为客户端程序集所知，但成员可访问性仍然有效。  例如，您无法访问私有成员。  
   
- 添加整访问程序集中必须显式授予。例如，C 不能访问的任何程序集输入程序集 A，如果程序集 C 引用了程序集 B，而将访问的所有程序集输入程序集 A。  
+ 必须显式授予对程序集中所有类型的访问权限。  例如，如果程序集 C 引用程序集 B，而程序集 B 具有对程序集 A 中所有类型的访问权限，则程序集 C 没有对程序集 A 中所有类型的访问权限。  
   
- 有关如何指定类型的可访问性的信息在程序集外，请参见 [类型可见性](../misc/type-visibility.md)。  
+ 有关如何进行签名的信息-即，如何赋予其强名称-请参阅使用 Visual c + + 编译器生成的程序集[强名称程序集 （程序集签名） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
- 有关对符号是使用 Visual C\+\+ 编译器，如何为对生成程序集的强名称信息的方式，请参见 [强名称程序集（程序集签名）](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
+ 作为对使用友元程序集功能的替代，您可使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制对单独类型的访问。  
   
- 用于友元程序集的功能，您的重写都使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制对各个类型的访问权限。  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="examples"></a>示例  
+ 以下代码示例定义了指定对组件中类型具有访问权限的客户端程序集的组件。  
   
-### 示例  
- 下面的代码示例定义了指定客户端程序集可以访问该类型在组件的组件。  
-  
-```  
+```cpp  
 // friend_assemblies.cpp  
 // compile by using: /clr /LD  
 using namespace System::Runtime::CompilerServices;  
@@ -81,9 +77,9 @@ public:
 };  
 ```  
   
- 下面的代码示例访问私有类型组件。  
+ 下一代码示例访问组件中的私有类型。  
   
-```  
+```cpp  
 // friend_assemblies_2.cpp  
 // compile by using: /clr  
 #using "friend_assemblies.dll" as_friend  
@@ -94,15 +90,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
- `Class1::Test_Public`  
-  
- 下面的代码示例定义了一个组件，但没有指定将对类型的在组件的客户程序集。  
-  
- 请注意，使用 **\/opt:noref**组件链接。  这确保私有类型的组件元数据发出，不需要 `InternalsVisibleTo` 时，特性存在。  有关详细信息，请参阅[\/OPT（优化）](../build/reference/opt-optimizations.md)。  
-  
+```Output  
+Class1::Test_Public  
 ```  
+  
+ 下一代码示例定义了未指定将对组件中类型具有访问权限的客户端程序集的组件。  
+  
+ 请注意，通过使用链接组件**/opt: noref**。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅[/OPT （优化）](../build/reference/opt-optimizations.md)。  
+  
+```cpp  
 // friend_assemblies_3.cpp  
 // compile by using: /clr /LD /link /opt:noref  
 using namespace System;  
@@ -115,9 +111,9 @@ public:
 };  
 ```  
   
- 下面的代码示例定义访问专用的组件尝试输入不允许访问其私有类型的访问的客户。  由于运行时的行为，如果您为了捕捉异常，则必须访问私有类型尝试帮助器函数。  
+ 以下代码示例定义了尝试访问组件（其未为其私有类型提供访问权限）中私有类型的客户端。 由于运行时的行为，如果您需要捕获异常，则必须尝试访问帮助器函数中的私有类型。  
   
-```  
+```cpp  
 // friend_assemblies_4.cpp  
 // compile by using: /clr  
 #using "friend_assemblies_3.dll" as_friend  
@@ -138,13 +134,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+caught an exception  
+```
   
- `caught an exception`  
+ 下一代码示例演示了如何创建强名称组件，其指定将对组件中类型具有访问权限的客户端程序集。  
   
- 下面的代码示例演示如何创建一客户端程序集可以访问该类型在组件的强名称组件。  
-  
-```  
+```cpp  
 // friend_assemblies_5.cpp  
 // compile by using: /clr /LD /link /keyfile:friend_assemblies.snk  
 using namespace System::Runtime::CompilerServices;  
@@ -161,21 +157,21 @@ public:
 };  
 ```  
   
- 注意必须组件指定其公钥。  我们建议您按顺序运行以下命令在命令提示符处创建密钥对并获取公钥：  
+ 请注意，组件必须指定其公钥。 我们建议您在命令提示符处按顺序运行下列命令以创建密钥对并获取公钥：  
   
- **sn \-d friend\_assemblies.snk**  
+ **sn-d friend_assemblies.snk**  
   
- **sn \-k friend\_assemblies.snk**  
+ **sn-k friend_assemblies.snk**  
   
- **sn \-i friend\_assemblies.snk friend\_assemblies.snk**  
+ **sn-i friend_assemblies.snk friend_assemblies.snk**  
   
- **sn \-pc friend\_assemblies.snk key.publickey**  
+ **sn-pc friend_assemblies.snk key.publickey**  
   
- **sn \-tp key.publickey**  
+ **sn-tp key.publickey**  
   
- 下面的代码示例访问私有类型强名称组件。  
+ 下一代码示例访问强名称组件中的私有类型。  
   
-```  
+```cpp  
 // friend_assemblies_6.cpp  
 // compile by using: /clr /link /keyfile:friend_assemblies.snk  
 #using "friend_assemblies_5.dll" as_friend  
@@ -186,9 +182,9 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+Class1::Test_Public  
+```  
   
- `Class1::Test_Public`  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

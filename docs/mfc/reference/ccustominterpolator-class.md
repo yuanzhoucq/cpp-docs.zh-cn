@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_finalValue
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialVelocity
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCustomInterpolator [MFC], CCustomInterpolator
 - CCustomInterpolator [MFC], GetDependencies
@@ -45,16 +43,15 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: bd687a396b6538d73290a305959ba95f6b49c7e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 4198e4b694356087cccad99d8ca62da3f23ba6ec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 类
 实现基本插值程序。  
@@ -303,4 +300,3 @@ virtual BOOL SetInitialValueAndVelocity(
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

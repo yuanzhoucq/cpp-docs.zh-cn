@@ -1,41 +1,39 @@
 ---
-title: "multiset::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 成员 [STL/CLR]"
+title: "multiset:: end (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 225f8b74-f9b9-47ea-9603-43ac7c9a9734
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92a7604c30070cc7b2023a73ecc4285a8d5152d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetend-stlclr"></a>multiset::end (STL/CLR)
 指定受控序列的末尾。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator end();  
 ```  
   
-## 备注  
- 该成员函数返回一个双向迭代器，指向刚刚超越控制序列的末尾。  用于获取一个迭代器，该迭代器指定受控序列的末尾，但如果受控序列的长度发生更改，则该迭代器的状态也不会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回的双向迭代器，它指向刚超出受控序列的末尾。 用于获取指定的受控序列中; 末尾的迭代器其状态不更改如果更改了受控序列的长度。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multiset_end.cpp   
@@ -65,14 +63,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::begin](../dotnet/multiset-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)

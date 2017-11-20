@@ -1,82 +1,87 @@
 ---
-title: "/ORDER（按顺序放置函数） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.FunctionOrder"
-  - "/order"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ORDER 链接器选项"
-  - "LINK 工具 [C++], 程序优化"
-  - "LINK 工具 [C++], 交换优化"
-  - "ORDER 链接器选项"
-  - "-ORDER 链接器选项"
-  - "分页, 优化"
+title: "顺序 （按顺序放置函数） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.FunctionOrder
+- /order
+dev_langs: C++
+helpviewer_keywords:
+- ORDER linker option
+- -ORDER linker option
+- LINK tool [C++], program optimizing
+- /ORDER linker option
+- LINK tool [C++], swap tuning
+- paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 695c716b29e8d43c0190b4721285f6b4f6959e29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /ORDER（按顺序放置函数）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="order-put-functions-in-order"></a>/ORDER（按顺序放置函数）
 
-```  
-/ORDER:@filename  
-```  
-  
-## 参数  
- *filename*  
- 指定 COMDAT 函数链接顺序的文本文件。  
-  
-## 备注  
- \/ORDER 选项告知 LINK 通过按预设的顺序将特定的 COMDAT 放置到映像中来优化程序。  LINK 按指定的顺序将函数放置到映像中的每一节内。  
-  
- 在 *filename* 中指定顺序，这是按照您希望链接 COMDAT 的顺序列出 COMDAT 的文本文件（响应文件）。  *filename* 中的每一行包含一个 COMDAT 的名称。  如果对象已经用 \/Gy 选项编译过，它包含 COMDAT。  函数名区分大小写。  
-  
- LINK 使用标识符的修饰形式。  编译器在创建 .obj 文件时修饰标识符。  当需要将标识符的修饰形式指定给链接器时，可使用 [DUMPBIN](../../build/reference/dumpbin-reference.md) 工具获取它。  有关修饰名的更多信息，请参见[修饰名](../../build/reference/decorated-names.md)。  
-  
- 如果使用了多个 \/ORDER 规范，指定的最后一个规范有效。  
-  
- 排序允许将一个函数与该函数调用的函数组合，通过交换优化来优化程序的分页行为。  还可将经常调用的函数分在一组。  这些技术增加了调用的函数在需要它时位于内存中从而不必从磁盘分页的可能性。  
-  
- 链接器在 *filename* 中的每个修饰名前放置一个下划线 \(\_\)，只要名称不是以问号 \(?\) 或 at 符 \(@\) 开头。  例如，如果对象文件包含 `extern "C" int func(int)` 和 `int main(void)`，则 DUMPBIN [\/SYMBOLS](../../build/reference/symbols.md) 将列出这些修饰名：  
-  
-```  
-009 00000000 SECT3  notype ()    External     | _func  
-00A 00000008 SECT3  notype ()    External     | _main  
-```  
-  
- 不过，在顺序文件中指定的名称应为 `func` 和 `main`。  
-  
- \/ORDER 选项禁用增量链接。  
-  
+指定单独打包 (COMDAT) 函数的链接顺序。
+
+## <a name="syntax"></a>语法
+
+>/ 排序: @*filename*
+
+### <a name="parameters"></a>参数
+
+*filename*  
+指定 COMDAT 函数的链接顺序的文本文件。
+
+## <a name="remarks"></a>备注
+
+**/Order**编译器选项允许你通过将一个函数调用的函数以及组合优化程序的分页行为。 你还可以分组频繁调用的函数在一起。 这些技巧，称为*交换优化*或*分页优化*，增加在需要时并不需要从磁盘分页时调用的函数是在内存中的概率。
+
+当你将你的源代码编译到的对象文件时，可以告诉编译器将每个函数放入其自己的部分，调用*COMDAT*，通过使用[/Gy （启用函数级链接）](../../build/reference/gy-enable-function-level-linking.md)编译器选项。 **/Order**链接器选项通知链接器将 Comdat 放置到可执行映像中所指定的顺序。
+
+若要指定的 COMDAT 顺序，创建*响应文件*，按名称，每行一个，在你想要放置链接器的顺序列出每个 COMDAT 的文本文件。 将此文件作为名称传递给*filename*参数**/order**选项。 对于 c + + 函数，COMDAT 的名称是函数名称的修饰的形式。 使用 C 函数的未修饰的名称`main`，并为 c + + 函数声明为`extern "C"`。 函数名称和修饰的名称区分大小写。 修饰名的详细信息，请参阅[修饰名](../../build/reference/decorated-names.md)。 
+
+若要查找你 Comdat 的修饰的名，使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具的[/符号](../../build/reference/symbols.md)对象文件上的选项。 链接器会自动将添加前下划线 (\_) 到函数名称在响应中的文件，除非名称开头用问号 （？） 或 at 符号 (@)。 例如，如果源文件，example.cpp，包含函数`int cpp_func(int)`，`extern "C" int c_func(int)`和`int main(void)`，该命令`DUMPBIN /SYMBOLS example.obj`列出这些修饰的名：
+
+```Output
+...
+088 00000000 SECT1A notype ()    External     | ?cpp_func@@YAHH@Z (int __cdecl cpp_func(int))
+089 00000000 SECT22 notype ()    External     | _c_func
+08A 00000000 SECT24 notype ()    External     | _main
+...
+```
+
+在这种情况下，指定的名称作为`?cpp_func@@YAHH@Z`， `c_func`，和`main`响应文件中。
+
+如果多个**/order**选项会显示在链接器选项，指定的最后一个生效。
+
+**/Order**选项禁用增量链接。 你可能会看到链接器警告[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)时指定此选项，如果启用了增量链接，或如果已指定[/ZI (增量 PDB)](../../build/reference/z7-zi-zi-debug-information-format.md)编译器选项。 若要抑制此警告，可以使用[/incremental: no](../../build/reference/incremental-link-incrementally.md)链接器选项，若要关闭增量链接，并使用[/Zi (生成 PDB)](../../build/reference/z7-zi-zi-debug-information-format.md)编译器选项以生成 PDB，而增量链接。
+
 > [!NOTE]
->  LINK 无法对静态函数进行排序，因为静态函数名不是公共符号名。  如果指定了 \/ORDER，在顺序文件中将为每个静态的或者没有找到的符号生成链接器警告 LNK4037。  
-  
-### 在 Visual Studio 开发环境中设置此链接器选项  
-  
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
-  
-2.  单击“链接器”文件夹。  
-  
-3.  单击“优化”属性页。  
-  
-4.  修改“函数顺序”属性。  
-  
-### 以编程方式设置此链接器选项  
-  
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>。  
-  
-## 请参阅  
- [设置链接器选项](../../build/reference/setting-linker-options.md)   
- [链接器选项](../../build/reference/linker-options.md)
+> 链接无法排序静态函数，因为静态函数名称不是公共符号名称。 当**/order**指定，则链接器警告[LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md)生成为静态或找不到顺序响应文件中的每个符号。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
+
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
+
+1. 下**配置属性**，打开**链接器**，然后选择**优化**属性页。
+
+1. 修改**函数顺序**属性以包含响应文件的名称。
+
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
+
+- 请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>。
+
+## <a name="see-also"></a>另请参阅
+
+[设置链接器选项](../../build/reference/setting-linker-options.md)  
+[链接器选项](../../build/reference/linker-options.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,15 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a86fd9be56b18c3ad51e3b24e965ae67b6b38fe4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 配置每个线程的区域设置选项。  
@@ -90,7 +72,7 @@ int _configthreadlocale(
  `0`  
  检索此特定线程的当前设置。  
   
- 这些函数将影响的行为`setlocale`， `_tsetlocale`，和`_wsetlocale`。 当每个线程区域设置是已禁用，任何后续调用`setlocale`或`_wsetlocale`更改使用全局区域设置的所有线程的区域设置。 当每个线程的区域设置都已启用时，`setlocale` 或 `_wsetlocale` 只会影响当前线程的区域设置。  
+ 这些函数会影响的行为`setlocale`， `_tsetlocale`， `_wsetlocale`，和`_setmbcp`。 每个线程区域设置时已禁用，因为在任何后续调用`setlocale`或`_wsetlocale`更改使用全局区域设置的所有线程的区域设置。 当每个线程的区域设置都已启用时，`setlocale` 或 `_wsetlocale` 只会影响当前线程的区域设置。  
   
  如果使用了 `_configurethreadlocale` 来启用每个线程的区域设置，则建议您在此后立即调用 `setlocale` 或 `_wsetlocale` 来设置该线程的首选区域设置。  
   
@@ -216,4 +198,3 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
  [_beginthread、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多线程和区域设置](../../parallel/multithreading-and-locales.md)  
-

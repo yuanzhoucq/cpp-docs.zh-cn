@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -39,8 +38,7 @@ f1_keywords:
 - _ftcsnextc
 - _strnextc
 - wcsnextc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsnextc function
 - _tcsnextc function
@@ -53,30 +51,15 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d9d2554bb581fb63df0453ea664e5b76c41994fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 查找字符串中的下一个字符。  
@@ -139,7 +122,7 @@ unsigned int _mbsnextc_l(
 |`_strnextc`|\<tchar.h>|  
 |`_wcsnextc`|\<tchar.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

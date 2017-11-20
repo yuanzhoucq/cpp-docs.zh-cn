@@ -1,92 +1,90 @@
 ---
-title: "IRowsetImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetImpl 类"
+title: "IRowsetImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c934ce36ae20727340ea9d2e6bd4d95272c908f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetimpl-class"></a>IRowsetImpl 类
 提供 `IRowset` 接口的实现。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
-   class T,   
+   class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
+      RowClass*   
    >  
 >  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类是从`IRowsetImpl` 中派生的。  
+ 你的类，派生自`IRowsetImpl`。  
   
  `RowsetInterface`  
- 类从 `IRowsetImpl` 派生。  
+ 从派生的类`IRowsetImpl`。  
   
  `RowClass`  
- 为 **HROW** 的存储单元。  
+ 有关存储单元**HROW**。  
   
  `MapClass`  
- 提供程序\) 占用的任何行句柄的单元格。  
+ 提供程序持有的所有行句柄的存储单位。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|向现有的行句柄添加引用数。|  
-|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|调用 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 分配新的 **HROW**。  未直接由用户调用。|  
-|[GetData](../../data/oledb/irowsetimpl-getdata.md)|从行的行集合副本中检索数据。|  
-|[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|返回中指定的字段的状态。|  
-|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|按顺序获取行，同时记住以前的位置。|  
-|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|构造函数。  未直接由用户调用。|  
-|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|调用 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 和 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)。  未直接由用户调用。|  
+|[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|将引用计数添加到现有行句柄。|  
+|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|由调用[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)分配一个新**HROW**。 不直接由用户调用。|  
+|[GetData](../../data/oledb/irowsetimpl-getdata.md)|从行的行集的副本检索数据。|  
+|[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|返回指定字段的状态。|  
+|[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|记住的以前的位置按顺序，提取行。|  
+|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|构造函数。 不直接由用户调用。|  
+|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|由调用[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)和[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)。 不直接由用户调用。|  
 |[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|释放行。|  
-|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|重新定位一获取位置到其初始位置；即，在某位置集中首次创建。|  
-|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|设置指定的状态字段的标记。|  
+|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|将下次提取位置重新定位到其初始位置;即，创建第一个行集时其位置。|  
+|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|设置指定字段的状态标志。|  
   
-### 数据成员  
+### <a name="data-members"></a>数据成员  
   
 |||  
 |-|-|  
-|[m\_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|指示提供程序是否支持向后获取。|  
-|[m\_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|指示提供程序是否可以排列其反转光标移动。|  
-|[m\_bReset](../../data/oledb/irowsetimpl-m-breset.md)|指示提供程序是否重置其光标位置。  当向后滚动或向后搜索提取在 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)时，这具有特殊含义。|  
-|[m\_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|对行集合的索引，表示光标。|  
-|[m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|行处理列表。|  
+|[m_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|指示提供程序是否支持向后提取。|  
+|[m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|指示提供程序是否可以向后具有其游标滚动。|  
+|[m_bReset](../../data/oledb/irowsetimpl-m-breset.md)|指示提供程序是否已重置其光标位置。 这具有特殊含义时向后滚动或向后在提取[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)。|  
+|[m_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|表示光标的行集的索引。|  
+|[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|行句柄的列表。|  
   
-## 备注  
- [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) 是基础行集合接口。  
+## <a name="remarks"></a>备注  
+ [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx)是基行集接口。  
   
-## 要求  
- **头文件:** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

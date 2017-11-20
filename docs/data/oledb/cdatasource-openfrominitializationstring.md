@@ -1,62 +1,61 @@
 ---
-title: "CDataSource::OpenFromInitializationString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenFromInitializationString"
-  - "OpenFromInitializationString"
-  - "CDataSource::OpenFromInitializationString"
-  - "ATL::CDataSource::OpenFromInitializationString"
-  - "ATL.CDataSource.OpenFromInitializationString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenFromInitializationString 方法"
+title: "Cdatasource:: Openfrominitializationstring |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenFromInitializationString
+- OpenFromInitializationString
+- CDataSource::OpenFromInitializationString
+- ATL::CDataSource::OpenFromInitializationString
+- ATL.CDataSource.OpenFromInitializationString
+dev_langs: C++
+helpviewer_keywords: OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa25389a5924dc235791d11ee7d37eb1febe4259
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CDataSource::OpenFromInitializationString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-打开用户提供的初始化字符串指定的数据源。  
+# <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
+打开用户提供的初始化字符串指定数据源。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT OpenFromInitializationString(   
-   LPCOLESTR szInitializationString,   
-   bool fPromptForInfo = false    
+      HRESULT OpenFromInitializationString(   
+   LPCOLESTR szInitializationString,   
+   bool fPromptForInfo = false    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *szInitializationString*  
- \[in\] 初始化字符串。  
+ [in]初始化字符串中。  
   
  *fPromptForInfo*  
- \[in\] 如果此参数设置 **true**，则 `OpenFromInitializationString` 中将 **DBPROP\_INIT\_PROMPT** 属性设置为 **DBPROMPT\_COMPLETEREQUIRED**，指定想提示用户，只有当多为所需的信息。  这对于初始化字符串指定数据库需要密码的情况非常有用，但是，字符串不包含密码。  将提示用户输入密码 \(或其他\)，当缺少信息尝试连接到数据库时。  
+ [in]如果此参数设置为**true**，然后`OpenFromInitializationString`将设置**DBPROP_INIT_PROMPT**属性**DBPROMPT_COMPLETEREQUIRED**，它指定用户是系统提示仅在需要时的详细信息。 这对于在其中初始化字符串指定需要密码，数据库的情况下很有用，但字符串不包含密码。 将提示用户输入密码 （或其他任何缺少的信息） 尝试连接到数据库时。  
   
- 默认值为 **false**，指定从不提示用户 \(到 **DBPROMPT\_NOPROMPT**中设置 **DBPROP\_INIT\_PROMPT**。\)  
+ 默认值是**false**，它指定永远不会提示用户 (设置**DBPROP_INIT_PROMPT**到**DBPROMPT_NOPROMPT**)。  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- 使用在 oledb32.dll，的服务组件此方法以打开数据源对象；此 DLL 包含服务组件功能的实现 \(如合并资源，自动事务登记，依此类推。  
+## <a name="remarks"></a>备注  
+ 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDataSource 类](../../data/oledb/cdatasource-class.md)

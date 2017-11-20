@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4155
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4155
+f1_keywords: C4155
+dev_langs: C++
+helpviewer_keywords: C4155
 ms.assetid: ba233353-09e3-4195-8127-13a27ddd8d70
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a335e94af669eaccc89a069643adfb54b33f4046
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 76e709491c221d7fba9516b8d005c5455921eaa7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4155"></a>编译器警告（等级 1）C4155
 未使用数组形式的“delete”删除数组表达式  

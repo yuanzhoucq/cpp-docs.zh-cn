@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2859
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2859
+f1_keywords: C2859
+dev_langs: C++
+helpviewer_keywords: C2859
 ms.assetid: fcfbc58d-08f6-4752-9688-8aaac517e684
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 0e5df69833f60c0f0dc868e78e8e7f12f7cd5f9a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2859"></a>编译器错误 C2859
 文件名不是创建此预编译标头时已使用的类型文件，请重新创建预编译标头。  

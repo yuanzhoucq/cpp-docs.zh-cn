@@ -1,29 +1,29 @@
 ---
-title: "使用 OLE DB 使用者模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 使用者模板, 关于使用者模板"
-  - "示例应用程序 [C++], OLE DB 模板"
+title: "使用 OLE DB 使用者模板 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sample applications [C++], OLE DB Templates
+- OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 OLE DB 使用者模板
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列主题就通常情况下如何使用 OLE DB 使用者模板提供了一些示例：  
+# <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 使用者模板
+以下主题提供如何在常见方案中使用 OLE DB 使用者模板的一些示例：  
   
 -   [使用数据库特性简化数据访问](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -33,7 +33,7 @@ caps.handback.revision: 8
   
 -   [发出参数化查询](../../data/oledb/issuing-a-parameterized-query.md)  
   
--   [获取数据](../../data/oledb/fetching-data.md)  
+-   [提取数据](../../data/oledb/fetching-data.md)  
   
 -   [更新行集合](../../data/oledb/updating-rowsets.md)  
   
@@ -57,15 +57,15 @@ caps.handback.revision: 8
   
 -   [接收通知](../../data/oledb/receiving-notifications.md)  
   
- 有关创建和实现 OLE DB 使用者的示例，请参见[创建简单使用者](../../data/oledb/creating-an-ole-db-consumer.md)。  
+ 有关创建和实现 OLE DB 使用者的示例，请参阅[创建简单使用者](../../data/oledb/creating-an-ole-db-consumer.md)。  
   
- 还可以在下列示例中找到如何使用 OLE DB 使用者模板的示例：  
+ 你还可以查找如何在下面的示例中使用 OLE DB 使用者模板的示例：  
   
--   [CatDB](http://msdn.microsoft.com/zh-cn/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/zh-cn/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/zh-cn/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,37 +1,35 @@
 ---
-title: "编译器警告（等级 4）C4754 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4754"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4754"
+title: "编译器警告 （等级 4） C4754 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4754
+dev_langs: C++
+helpviewer_keywords: C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 06ff5e8f0d2dc87d26e5fc1db80b70def5bb0fd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 4）C4754
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在比较中的算术运算的转换规则意味着无法执行一个分支。  
+# <a name="compiler-warning-level-4-c4754"></a>编译器警告（等级 4）C4754
+比较中的算术运算的转换规则意味着无法执行一个分支。  
   
- 该 C4754 警告问题，因为该比较的结果总是相同的。  这可能表示一个条件的分支绝对不会执行，因为关联的整数表达式不正确。  此代码缺陷在 64 位体系结构不正确的整数溢出选定经常发生。  
+ 发出了 C4754 警告，因为比较的结果总是相同。 这可能表示条件的其中一个分支绝不会执行，原因最可能是关联的整数表达式不正确。 此代码缺陷通常在对 64 位体系结构执行了不正确的整数溢出检查时发生。  
   
- 整数转换规则是复杂的，因此有许多细微的 bug。  作为一种替代方法，以适应每个C4754警告，您可以更新代码以使用 [SafeInt Library](../../windows/safeint-library.md)。  
+ 整数转换规则很复杂，并且有很多微小的缺陷。 作为解决每个 C4754 警告的替代方法，你可以更新代码以使用[SafeInt 库](../../windows/safeint-library.md)。  
   
-## 示例  
- 此示例生成 C4754：  
+## <a name="example"></a>示例  
+ 此示例会生成 C4754:  
   
 ```cpp  
 // C4754a.cpp  
@@ -51,9 +49,13 @@ int sum_overflow(unsigned long a, unsigned long b)
 }  
 ```  
   
- 加法`a + b` 可能导致算术溢出之前的结果是向上转型为一个64位的值，并分配给64位变量`x`。  这意味着，在`x`的检查是多余的，永远不会上溢出。  在这种情况下，编译器发出此警告：  
+ 加法 `a + b` 可能导致在将结果向上转换为 64 位值并分配给 64 位变量 `x` 前发生算术溢出。 这意味着，对 `x` 的检查是多余的，永远不会捕获到溢出。 在这种情况下，编译器将发出以下警告：  
   
-  **警告的 C4754:算术运算的转换规则在 C4754a.cpp \(7\) 表示的比较一个分支无法执行。  将'\(a \+ ...\)'强制转换为'ULONG64'\(或字节的相似类型\)。**  若要消除此警告，您可以更改赋值语句转换操作的为 8 字节值：  
+```Output  
+Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).  
+```  
+  
+ 若要消除此警告，您可以更改赋值语句以将操作数强制转换为 8 字节值：  
   
 ```cpp  
 // Casting one operand is sufficient to force all the operands in   
@@ -63,8 +65,8 @@ unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;  
 ```  
   
-## 示例  
- 下面的示例也会生成 C4754。  
+## <a name="example"></a>示例  
+ 下一个示例也会生成 C4754。  
   
 ```cpp  
 // C4754b.cpp  
@@ -82,11 +84,15 @@ int wrap_overflow(unsigned long a)
 }  
 ```  
   
- 该`sizeof()`操作符返回一个`size_t`，其大小是与体系结构相关。  该示例代码适用于32位体系结构，其中一个`size_t`是一个32位的类型。  然而，在64位体系结构，其中一个`size_t`是一个64位的类型。  对于整数转换规则意味着`a`是向上转型中的表达`a + b < a`一个64位的值，正如它被写为`(size_t)a + (size_t)b < (size_t)a` 当`a`和`b`为32位整数，64位的加法运算可以永远不会溢出，并约束从不保存。  因此，代码会检测到 64 位体系结构的整数溢出条件。  此示例导致编译器发出此警告：  
+ `sizeof()` 运算符返回了 `size_t`，其大小依赖于体系结构。 该代码示例适用于其中的 `size_t` 是 32 位类型的 32 位体系结构。 然而，在 64 位体系结构中，`size_t` 是 64 位类型。 整数的转换规则意味着，`a` 在表达式 `a + b < a` 中将向上转换 64 位值，就如同采用 `(size_t)a + (size_t)b < (size_t)a` 形式一样。 当 `a` 和 `b` 为 32 位整数时，64 位加法运算永远不会溢出，并且永远不会应用约束。 因此，代码永远不会检测在 64 位体系结构中检测到整数溢出条件。 此示例导致编译器发出以下警告：  
   
-  **警告的 C4754:算术运算的转换规则在 C4754b.cpp \(7\) 表示的比较一个分支无法执行。  转换“4 "到“ULONG”\(或 4 个字节的相似类型\)。**  请注意，警告讯息明确地列出了恒定值，而不是原始的源字符串的预警分析遇到的问题的代码，`sizeof(unsigned long)`已被转换为一个常数。  因此，在源代码的表达式与警告消息的常量值的可能必须能够找到。  代码解析为C4754警告消息常量中最常见的来源是如`sizeof(TYPE)` 和 `strlen(szConstantString)`。  
+```Output  
+Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).  
+```  
   
- 在这种情况下，内置的代码将类似于以下内容：  
+ 请注意，警告消息在警告分析遇到违规代码时显式列出了常量值 4 而不是原始的源字符串，`sizeof(unsigned long)` 已转换为常量。 因此，您可能必须追查源代码的哪个表达式与警告消息中的常量值关联。 解析为 C4754 警告消息中的常量的最常见的代码来源是表达式，如 `sizeof(TYPE)` 和 `strlen(szConstantString)`。  
+  
+ 在这种情况下，修复后的代码将类似于形式：  
   
 ```cpp  
 // Casting the result of sizeof() to unsigned long ensures  
@@ -96,7 +102,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **Note**的编译器警告中提到的行号是一个语句的最后一行。  有关是扩展多个行的复杂条件语句的警告消息，具有的行代码缺陷可能是若干行中报告的行之前。  例如：  
+ **请注意**编译器警告中提到的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如：  
   
 ```cpp  
 unsigned long a;  
@@ -107,5 +113,4 @@ if (a + sizeof(unsigned long) < a || // incorrect check
          // never executes!  
          return INVALID_PARAMETER;  
 }  
-  
 ```

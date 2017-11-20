@@ -1,52 +1,51 @@
 ---
-title: "CSimpleRow::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSimpleRow.Compare"
-  - "CSimpleRow::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "“比较”方法"
+title: "Csimplerow:: Compare |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSimpleRow.Compare
+- CSimpleRow::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: 0bb65f09-c7bc-449b-aa4e-c828cac13510
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8e49dcc0356c563312c0d73041ab412716694c1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CSimpleRow::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-比较两个行，以了解它们是否引用了同一个行实例。  
+# <a name="csimplerowcompare"></a>CSimpleRow::Compare
+比较两个行，以查看它们是否引用相同的行实例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT Compare(   
-   CSimpleRow* pRow    
+      HRESULT Compare(   
+   CSimpleRow* pRow    
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pRow`  
- 指向 `CSimpleRow` 对象的指针。  
+ 指向的指针`CSimpleRow`对象。  
   
-## 返回值  
- 通常，`HRESULT` 值 `S_OK`，指示两行显示的是同一实例，行或 **S\_FALSE**，指示两行不同。  为其他的返回值可能查看 *OLE DB 程序员参考》\) 中的*[IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx)。  
+## <a name="return-value"></a>返回值  
+ `HRESULT`值，通常`S_OK`，，该值指示两个行相同的行实例，或**S_FALSE**，，用于指示两个行都不同。 请参阅[IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx)中*OLE DB 程序员参考*有关其他可能的返回值。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CSimpleRow 类](../../data/oledb/csimplerow-class.md)   
- [CSimpleRow::ReleaseRow](../../data/oledb/csimplerow-releaserow.md)   
+ [Csimplerow:: Releaserow](../../data/oledb/csimplerow-releaserow.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)

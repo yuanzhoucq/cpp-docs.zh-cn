@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,7 +13,6 @@ f1_keywords:
 - ATLCOLL/ATL::Add
 - ATLCOLL/ATL::Append
 - ATLCOLL/ATL::AssertValid
-- ATLCOLL/ATL::CAtlArray
 - ATLCOLL/ATL::Copy
 - ATLCOLL/ATL::FreeExtra
 - ATLCOLL/ATL::GetAt
@@ -30,35 +28,18 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlArray class
+dev_langs: C++
+helpviewer_keywords: CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: c81ee3121ffbb9d89374afd4e09a3a6044c4b70b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 此类实现一个数组对象。  
@@ -106,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#operator_at)|调用此运算符可返回数组中的元素的引用。|  
+|[运算符 &#91; &#93;](#operator_at)|调用此运算符可返回数组中的元素的引用。|  
 
   
 ### <a name="typedefs"></a>Typedef  
@@ -126,7 +107,7 @@ class CAtlArray
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcoll.h  
+ **标头：** atlcoll.h  
   
 ##  <a name="add"></a>CAtlArray::Add  
  调用此方法将元素添加到数组对象。  
@@ -147,7 +128,7 @@ size_t Add();
  新元素添加到数组末尾。 如果没有任何元素提供，添加空元素;即数组被增大的大小就像已添加实际的元素。 如果操作失败， [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)使用参数 E_OUTOFMEMORY 调用。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
 ##  <a name="append"></a>CAtlArray::Append  
  调用此方法以将一个数组的内容添加到另一个末尾。  
@@ -171,7 +152,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
  在调试版本中，ATLASSERT 如果将会引发`CAtlArray`参数不是有效的数组或如果`aSrc`引用同一对象。 在发布版本无效自变量可能导致不可预知的行为。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
 ##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  调用此方法以确认数组对象有效。  
@@ -184,7 +165,7 @@ void AssertValid() const;
  如果数组对象无效，`ATLASSERT`将引发一个断言。 此方法是定义 _DEBUG 时才可用。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
 ##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  构造函数。  
@@ -197,7 +178,7 @@ CAtlArray() throw();
  初始化数组对象。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
 ##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  析构函数。  
@@ -231,7 +212,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 > `CAtlArray::Copy`不支持使用创建的元素组成的数组[CAutoPtr](../../atl/reference/cautoptr-class.md)类。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
 ##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  调用此方法以从数组中移除任何空元素。  
@@ -264,7 +245,7 @@ E& GetAt(size_t iElement) throw();
  在调试版本中，ATLASSERT 如果将会引发`iElement`超过数组中元素的数目。 在发布版本中无效的参数可能导致不可预知的行为。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
 ##  <a name="getcount"></a>CAtlArray::GetCount  
  调用此方法以返回数组中存储的元素数量。  
@@ -294,7 +275,7 @@ const E* GetData() const throw();
  返回指向数组中存储的第一个元素的内存位置的指针。 如果没有元素可用，则返回 NULL。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
 ##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  要用于将元素添加到数组的数据类型。  
@@ -326,7 +307,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 > `CAtlArray::InsertArrayAt`不支持使用创建的元素组成的数组[CAutoPtr](../../atl/reference/cautoptr-class.md)类。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
 ##  <a name="insertat"></a>CAtlArray::InsertAt  
  数组对象调用此方法插入一个新的元素 （或多个元素的副本）。  
@@ -351,7 +332,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
  在调试版本中，ATLASSERT 如果将会引发`CAtlArray`对象无效，要添加的元素数为零，或组合的元素数为要包含的数组太大。 在零售版本传递无效的参数可能会导致不可预知的结果。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
 ##  <a name="isempty"></a>CAtlArray::IsEmpty  
  调用此方法以测试相同，如果数组为空。  
@@ -367,7 +348,7 @@ bool IsEmpty() const throw();
  数组被认为如果它不包含任何元素为空。 因此，即使该数组包含空元素，它不为空。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
 ##  <a name="operator_at"></a>CAtlArray::operator]  
  调用此运算符可返回数组中的元素的引用。  
@@ -431,7 +412,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
  在调试版本中，ATLASSERT 如果将会引发`CAtlArray`对象无效，或者如果的总和`iElement`和`nCount`超过数组中的元素总数。 在零售版本无效的参数可能会导致不可预知的结果。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
 ##  <a name="setat"></a>CAtlArray::SetAt  
  调用此方法以设置元素的值的数组对象中。  
@@ -496,7 +477,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  替换由索引指向的元素的值。 如果`iElement`大于当前大小的数组，数组自动增大调用[CAtlArray::SetCount](#setcount)。 在调试版本中，ATLASSERT 如果将会引发`CAtlArray`对象无效。 在零售版本无效的参数可能会导致不可预知的结果。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
   
 ## <a name="see-also"></a>另请参阅  
  [MMXSwarm 示例](../../visual-cpp-samples.md)   
@@ -505,4 +486,3 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  [选框示例](../../visual-cpp-samples.md)   
  [CArray 类](../../mfc/reference/carray-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

@@ -1,43 +1,41 @@
 ---
-title: "项目生成错误 PRJ0016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0016"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0016"
+title: "项目生成错误 PRJ0016 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0016
+dev_langs: C++
+helpviewer_keywords: PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9aa96ec353dbe236744a6a9baa5ad18ff25451d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 项目生成错误 PRJ0016
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-用户的安全设置禁止创建该进程。这些设置是生成所必需的。  
+# <a name="project-build-error-prj0016"></a>项目生成错误 PRJ0016
+用户的安全设置阻止从正在创建的过程。 这些设置是生成所必需的。  
   
- 登录用的用户身份不具有使用进程创建进程的权限。  必须更改此用户帐户的权限级别，或者与帐户管理员联系。  
+ 您没有权限来创建使用一个进程的进程的用户身份登录。 你必须更改此用户帐户的权限级别，或联系你的帐户管理员。  
   
- 如果设置了以下注册表项，也可能发生该错误：  
+ 如果设置以下注册表项，也可能发生此错误：  
   
- \\\\HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\RestrictRun  
+ \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun  
   
- 若要解决此错误，请删除 RestrictRun 项。  如果需要此注册表项，则将 **vcspawn.exe** 追加到该注册表项中条目的列表后。  
+ 若要解决此错误，删除 RestrictRun 密钥。 如果需要此注册表项，则追加**vcspawn.exe**到的项中的条目的列表。  
   
- 此错误的另一种原因是：对于此用户帐户，“策略设置”未将注册表项 HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\RestrictRun 下的 VCSpawn.exe 作为允许的 Window 程序包含在内。  
+ 此错误的另一个原因是，你的策略设置不包括 VCSpawn.exe 注册表项 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun 下作为此用户帐户的允许窗口程序。  
   
- 有关附加信息，请参见：  
+ 有关其他信息，请参阅：  
   
--   知识库文章 324153，可打开 [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153)。  
+-   知识库文章 324153，可在找到[http://support.microsoft.com/default.aspx?scid=kb;en-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153)。  
   
--   [遵循系统策略设置](http://msdn.microsoft.com/library/aa372139)，“Run only allowed Windows applications”中的一节。
+-   [遵守系统策略设置](http://msdn.microsoft.com/library/aa372139)，在"仅运行许可的 Windows 应用程序"部分。

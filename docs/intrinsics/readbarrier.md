@@ -1,55 +1,54 @@
 ---
-title: "_ReadBarrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReadBarrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ReadBarrier 内部"
+title: "_ReadBarrier |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReadBarrier
+dev_langs: C++
+helpviewer_keywords: _ReadBarrier intrinsic
 ms.assetid: f9e54a92-61bc-4f55-8195-b8932065a796
-caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 654d68ddf16dd0e162e0e50bbfb85f15fe9b5a86
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# _ReadBarrier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readbarrier"></a>_ReadBarrier  
+  
 **Microsoft 专用**  
   
  限制可重新排列调用点上的内存访问操作的编译器优化。  
   
 > [!CAUTION]
->  已全部弃用且不应使用 `_ReadBarrier`、`_WriteBarrier` 和 `_ReadWriteBarrier` 编译器内部函数和 `MemoryBarrier` 宏。  对于线程间的通信，请使用在 [C\+\+ 标准库](../standard-library/cpp-standard-library-reference.md)中定义的机制，例如 [atomic\_thread\_fence](../Topic/atomic_thread_fence%20Function.md) 和 [std::atomic\<T\>](../standard-library/atomic.md)。  对于硬件访问，请结合使用 [\/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) 编译器选项以及 [volatile](../cpp/volatile-cpp.md) 关键字。  
+>  已全部弃用且不应使用 `_ReadBarrier`、`_WriteBarrier` 和 `_ReadWriteBarrier` 编译器内部函数和 `MemoryBarrier` 宏。 对于线程间通信使用机制例如[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)和[std::atomic\<T >](../standard-library/atomic.md)中定义[c + + 标准库](../standard-library/cpp-standard-library-reference.md). 硬件访问，请使用[/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)一起使用的编译器选项[易失性](../cpp/volatile-cpp.md)关键字。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void _ReadBarrier(void);  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|  
-|----------|----------|  
+|---------------|------------------|  
 |`_ReadBarrier`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
+## <a name="remarks"></a>备注  
  `_ReadBarrier` 内部函数将限制可删除或重新排列调用点上的内存访问操作的编译器优化。  
   
-## 结束 Microsoft 专用  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

@@ -1,47 +1,48 @@
 ---
-title: "Cropping or Extending an Entire Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], cropping"
-  - "images [C++], extending"
-  - "Image editor [C++], cropping or extending images"
+title: "裁剪或扩展整个图像 （图标的图像编辑器） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], cropping
+- images [C++], extending
+- Image editor [C++], cropping or extending images
 ms.assetid: 21cdaff5-6636-4ad9-a2f0-ca2228321927
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a23b8dd9a7705a18b46432c8cb504c3402cafd31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Cropping or Extending an Entire Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-以下过程显示如何裁剪或扩展整个图像。  
+# <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>裁剪或扩展整个图像（图标的图像编辑器）
+以下过程演示如何裁剪或扩展整个图像。  
   
-### 裁剪或扩展整个图像  
+### <a name="to-crop-or-extend-an-entire-image"></a>裁剪或扩展整个图像  
   
 1.  选择整个图像。  
   
-     如果当前已选定图像的一部分而您要选择整个图像，请在图像上当前选定内容边框外部的任意位置单击。  
+     如果当前选择的映像的一部分，并且你想要选择整个映像，单击任意位置上当前选定内容边框外部图像。  
   
-2.  拖动尺寸柄直到图像变为想要的大小。  
+2.  拖动尺寸控点，直到映像是所需的大小。  
   
- 通常，当通过移动尺寸柄调整图像的大小时，图像编辑器裁剪或增大图像。  如果移动尺寸柄时按住 Shift 键，则图像编辑器将[缩小或拉伸](../mfc/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)图像。  
+ 通常情况下，图像编辑器裁剪或增大图像，当调整通过移动尺寸控点。 如果移动尺寸控点，图像编辑器时按住 SHIFT 键[收缩或拉伸](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)映像。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  要求  
   
  无  
   
-## 请参阅  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)
+## <a name="see-also"></a>另请参阅  
+ [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [调整图像的大小](../windows/resizing-an-image-image-editor-for-icons.md)
+

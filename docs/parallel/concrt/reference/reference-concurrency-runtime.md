@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -454,48 +453,31 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 88de4e73c29e222009a4ca90b3b22c4701b21e70
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b97785b2853b278e93f5f13aa2c40741d10c9d9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reference-concurrency-runtime"></a>参考（并发运行时）
-本部分包含有关并发运行时参考信息。
-**请注意**的 c + + 语言标准保留实现，如库以下划线 (_) 字符开头的标识符的使用。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，并发运行时文档中省略了此类代码元素。
+本部分包含有关并发运行时的参考信息。
+**请注意**的 c + + 语言标准保留以实现，如库中的下划线 (_) 字符开头的标识符的使用。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 出于这些原因，并发运行时文档中省略了此类代码元素。
 
 ## <a name="in-this-section"></a>本节内容
-[并发 Namespace](concurrency-namespace.md)并发命名空间提供类访问和函数，使您可以并发运行时，c + + 的并发编程框架。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
+[并发 Namespace](concurrency-namespace.md)并发命名空间提供类和函数，可让你访问的并发运行和并发编程框架的 c + +。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
 
-[std 命名空间](std-namespace.md)
+[std 命名空间中](std-namespace.md)
 [stdx 命名空间](stdx-namespace.md)
-
 
 

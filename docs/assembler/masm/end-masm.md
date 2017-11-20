@@ -1,37 +1,35 @@
 ---
-title: "END (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "END directive"
+title: "结束 (MASM) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: end
+dev_langs: C++
+helpviewer_keywords: END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f92bcc90c67ce7c9f52f9b06843080d969e4af44
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# END (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-标记模块的结束，并且，选择，将程序入口点 *解决*。  
+# <a name="end-masm"></a>END (MASM)
+将标记的末尾模块，并 （可选） 将程序入口点设置为*地址*。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 END [[address]]  
 ```  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

@@ -1,33 +1,30 @@
 ---
-title: "operator&gt; (map) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> 成员 [STL/CLR]"
+title: "运算符&gt;(map) (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: f57da93f-6bd7-4589-ac69-4869b055ba4b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 50984cea64f503b2b2c27457d23f53d5ff95a9ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt; (map) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-大于列表比较。  
+# <a name="operatorgt-map-stlclr"></a>运算符&gt;(map) (STL/CLR)
+大于比较的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key,  
@@ -36,17 +33,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### 参数  
- left  
- 比较的容器。  
+#### <a name="parameters"></a>参数  
+ 左  
+ 要比较的左容器。  
   
- right  
- 比较的正确的容器。  
+ 右  
+ 要比较的右容器。  
   
-## 备注  
- 运算符函数返回 `right` `<` `left`。  您可用它测试 `left` 是否在 `right` 后排序，当两映射是比较的元素由元素。  
+## <a name="remarks"></a>备注  
+ 运算符函数返回`right` `<` `left`。 用于测试是否`left`进行排序之后`right`的两个图时元素的比较的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_map_operator_gt.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[d 4\]**  
-**\[a b c\] \> \[a b c\] 为 c b 的错误**  
-**\[a b d\] \> \[a b c\] 为 true**   
-## 要求  
- **页眉：** \<\/cliext 映射\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [map](../dotnet/map-stl-clr.md)   
- [operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)   
- [operator\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)   
- [operator\< \(map\)](../dotnet/operator-less-than-map-stl-clr.md)   
- [operator\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
- [operator\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [运算符 = = (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
+ [运算符 ！ = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
+ [运算符\<(map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   
+ [运算符 > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
+ [operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)

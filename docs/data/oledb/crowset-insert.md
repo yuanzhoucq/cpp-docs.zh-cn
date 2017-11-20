@@ -1,72 +1,71 @@
 ---
-title: "CRowset::Insert | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>.Insert"
-  - "CRowset.Insert"
-  - "CRowset<TAccessor>.Insert"
-  - "CRowset<TAccessor>::Insert"
-  - "ATL::CRowset<TAccessor>::Insert"
-  - "ATL.CRowset.Insert"
-  - "CRowset::Insert"
-  - "ATL::CRowset::Insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Insert 方法"
+title: "Crowset:: Insert |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>.Insert
+- CRowset.Insert
+- CRowset<TAccessor>.Insert
+- CRowset<TAccessor>::Insert
+- ATL::CRowset<TAccessor>::Insert
+- ATL.CRowset.Insert
+- CRowset::Insert
+- ATL::CRowset::Insert
+dev_langs: C++
+helpviewer_keywords: Insert method
 ms.assetid: 6a64a1c3-10ac-4296-8685-0fd6fe63a13b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a8cdb6c413cc1a655ace270df632ca501b9b5f3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::Insert
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-CRowset::Insert 使用访问器中的数据创建并初始化新行。  
+# <a name="crowsetinsert"></a>CRowset::Insert
+创建并初始化新行使用访问器中的数据。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT Insert(   
-   int nAccessor = 0,   
-   bool bGetHRow = false    
+      HRESULT Insert(   
+   int nAccessor = 0,   
+   bool bGetHRow = false    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nAccessor`  
- \[in\] 用来插入数据的访问器的索引号  
+ [in]访问器可用于插入数据的数。  
   
  *bGetHRow*  
- \[in\] 指示插入的行句柄是否检索。  
+ [in]指示是否检索为插入的行的句柄。  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- 此方法要求可选接口 `IRowsetChange`，因此所有的提供程序可能不支持；如果是这样，方法返回 **E\_NOINTERFACE**。  还必须设置**DBPROP\_IRowsetChange**为`VARIANT_TRUE` 在对包含行集合中的 **打开** 表或命令。  
+## <a name="remarks"></a>备注  
+ 此方法要求的可选接口`IRowsetChange`，这可能不支持对所有提供程序，如果出现这种情况，该方法返回**E_NOINTERFACE**。 你还必须设置**DBPROP_IRowsetChange**到`VARIANT_TRUE`之前调用**打开**对表或命令，其中包含行集。  
   
- 如果一个或多个列是不可写的，则插入操作可能会失败。  修改游标映射以更正此问题。  
+ 如果一个或多个列是不可写，则插入可能会失败。 修改光标映射以更正此问题。  
   
-## 示例  
- 使用该行集合的表，下面的示例演示如何遍历数据行集访问源然后插入字符串。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何通过行集访问数据源，然后插入使用表格，在该行集的字符串。  
   
- 首先，通过插入新的 ATL 对象创建表类到项目。  例如，右击在工作区窗格的项目并选择 **New ATL Object**。  从 **Data Access** 类，选择 **使用者**。  创建 **表**类型使用者对象。\(选择 **表** 创建一行集直接从表；选择 **命令** 通过 SQL 命令创建该行集合。\)选择指定一表访问数据源，该数据源。  如果使用者对象调用 **CCustomerTable**，然后实现插入如下代码：  
+ 首先，通过将新的 ATL 对象插入到你的项目中创建表类。 例如，右键单击工作区窗格中的项目并选择**新 ATL 对象**。 从**数据访问**类别中，选择**使用者**。 创建类型的使用者对象**表**。 (选择**表**直接从表中创建行集; 选择**命令**创建通过 SQL 命令的行集。)选择数据源，指定要用来访问该数据源的表。 如果调用使用者对象**CCustomerTable**，然后将实现你插入的代码，如下所示：  
   
- [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/CPP/crowset-insert_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)

@@ -1,41 +1,39 @@
 ---
-title: "hash_map::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "迭代器成员 [STL/CLR]"
+title: "hash_map:: iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: fffbde89-dc72-40a9-95f2-eae7fd061c15
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3850d1674b4769f6bc86fd45f5118db5fb4567f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapiterator-stlclr"></a>hash_map::iterator (STL/CLR)
 受控序列的迭代器的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## 备注  
- 描述类型可以作为一双向迭代数。为控制序列未指定的 `T1` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 此类型描述未指定类型的对象`T1`，可用作受控序列的双向迭代器。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **页眉：** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::const\_iterator](../dotnet/hash-map-const-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::const_iterator (STL/CLR)](../dotnet/hash-map-const-iterator-stl-clr.md)

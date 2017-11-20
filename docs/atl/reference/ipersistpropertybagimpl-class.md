@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,24 @@ f1_keywords:
 - ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
 - ATLCOM/ATL::IPersistPropertyBagImpl::Load
 - ATLCOM/ATL::IPersistPropertyBagImpl::Save
-dev_langs:
-- C++
-helpviewer_keywords:
-- IPersistPropertyBagImpl class
+dev_langs: C++
+helpviewer_keywords: IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 1854f4c078bb6c8ce6a987961dc75444e104278c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 类
 此类实现**IUnknown**和允许将其属性保存到客户端提供的属性包对象。  
   
 > [!IMPORTANT]
->  该类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +48,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|检索对象的 CLSID。|  
 |[IPersistPropertyBagImpl::InitNew](#initnew)|初始化新创建的对象。 ATL 实现返回`S_OK`。|  
@@ -86,7 +68,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
  `IPersistPropertyBagImpl`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+ **标头：** atlcom.h  
   
 ##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
  检索对象的 CLSID。  
@@ -96,7 +78,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 请参阅[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  初始化新创建的对象。  
@@ -109,7 +91,7 @@ STDMETHOD(InitNew)();
  返回 `S_OK`。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 请参阅[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK 中。  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  从客户端提供的属性包加载对象的属性。  
@@ -121,7 +103,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ### <a name="remarks"></a>备注  
  ATL 使用对象的属性映射来检索此信息。  
   
- 请参阅[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 请参阅[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) Windows SDK 中。  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  将对象的属性保存到客户端提供的属性包。  
@@ -136,9 +118,8 @@ STDMETHOD(Save)(
 ### <a name="remarks"></a>备注  
  ATL 使用对象的属性映射来存储此信息。 默认情况下，此方法将保存所有属性，而不考虑的值*fSaveAllProperties*。  
   
- 请参阅[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 请参阅[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK 中。  
   
 ## <a name="see-also"></a>另请参阅  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [类概述](../../atl/atl-class-overview.md)
-

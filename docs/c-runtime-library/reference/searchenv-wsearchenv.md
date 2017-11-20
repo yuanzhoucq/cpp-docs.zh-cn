@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - wsearchenv
 - _searchenv
 - searchenv
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wsearchenv function
 - files [C++], finding
@@ -43,36 +41,21 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 2c71b97e925ab23c893eefd6092efffe57bea3a7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/28/2017
-
+ms.openlocfilehash: 553d51363479a220b5850af2a7ff3ad880c31878
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
 使用环境路径搜索文件。 提供这些函数的更多安全版本；请参阅 [_searchenv_s、_wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>语法  
   

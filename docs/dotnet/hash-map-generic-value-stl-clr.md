@@ -1,41 +1,39 @@
 ---
-title: "hash_map::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 成员 [STL/CLR]"
+title: "hash_map::generic_value (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: e370feb3-3d2d-493e-b29d-4e97756c33b0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d11aece37e3c1d986db8ad73fc662ea599570236
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一元素的类型用于泛型接口的容器使用的。  
+# <a name="hashmapgenericvalue-stlclr"></a>hash_map::generic_value (STL/CLR)
+使用容器的泛型接口具有的元素的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 备注  
- 描述类型存储描述的元素值用于带有泛型接口的容器类使用此模板的 `GValue` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 此类型描述类型的对象`GValue`描述使用的存储的元素值与此模板容器类的泛型接口。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_generic_value.cpp   
@@ -70,16 +68,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[一个 1\]**   
-## 要求  
- **页眉：** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::generic\_container](../dotnet/hash-map-generic-container-stl-clr.md)   
- [hash\_map::generic\_iterator](../dotnet/hash-map-generic-iterator-stl-clr.md)   
- [hash\_map::generic\_reverse\_iterator](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)   
+ [hash_map::generic_iterator (STL/CLR)](../dotnet/hash-map-generic-iterator-stl-clr.md)   
+ [hash_map::generic_reverse_iterator (STL/CLR)](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)

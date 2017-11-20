@@ -1,30 +1,31 @@
 ---
-title: "Using Task Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "断点, Task Manager"
-  - "调试 [ATL], using Task Manager"
-  - "Task Manager"
+title: "使用任务管理器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Task Manager
+- breakpoints, Task Manager
+- debugging [ATL], using Task Manager
 ms.assetid: 773fccd5-308d-42c2-a17f-60ae94989062
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb099a534fba9c34d46d634bbca9648af1577a85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Using Task Manager
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-其中一种简单的方法调试服务是使用Windows NT 4.0或Windows 2000的任务管理器。  在服务运行时，启动任务管理器并单击 **Processes** 选项。  右击EXE的名称然后单击 **Debug**。  这将启动Visual C\+\+附加到该进程中运行。  现在，在允许您的 **Debug** 菜单中单击 **Break** 在代码中设置断点。  单击 **Run** 运行到已选定断点。  
+# <a name="using-task-manager"></a>使用任务管理器
+调试服务的最简单方法之一是通过使用任务管理器在 Windows NT 4.0 或 Windows 2000。 在运行时服务，启动任务管理器，然后单击**进程**选项卡。右键单击该 exe 文件的名称，然后单击**调试**。 这将启动 Visual c + + 附加到该正在运行的进程。 现在，单击**中断**上**调试**菜单以允许你在你的代码中设置断点。 单击**运行**运行到选定的断点。  
   
-## 请参阅  
- [Debugging Tips](../atl/debugging-tips.md)
+## <a name="see-also"></a>另请参阅  
+ [调试提示](../atl/debugging-tips.md)
+

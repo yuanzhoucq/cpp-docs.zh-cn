@@ -1,36 +1,35 @@
 ---
-title: "表达式计算器错误 CXX0065 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0065"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0065"
-  - "CXX0065"
+title: "表达式计算器错误 CXX0065 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0065
+dev_langs: C++
+helpviewer_keywords:
+- CAN0065
+- CXX0065
 ms.assetid: aac68f87-0b90-4c19-afa6-1c587625a5fd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a80869ad54541a493450ce4cc3696da5da6116b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 表达式计算器错误 CXX0065
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0065"></a>表达式计算器错误 CXX0065
 变量需要堆栈帧  
   
- 表达式包含的某个变量存在于当前范围内但尚未被创建。  
+ 表达式包含在当前范围内存在但尚未创建的变量。  
   
- 当已单步执行函数的序言但尚未设置该函数的堆栈帧时，或者如果已单步执行该函数的退出代码时会发生该错误。  
+ 当你具有单步执行序言函数但尚未设置函数的堆栈帧或你单步函数的退出代码执行，则可能出现此错误。  
   
- 逐句通过序言码，直到在计算表达式之前设置了堆栈帧。  
+ 逐句通过 prolog 代码，直到在计算该表达式之前设置的堆栈帧。  
   
- 该错误与 CAN0065 相同。
+ 此错误是与 CAN0065 相同。

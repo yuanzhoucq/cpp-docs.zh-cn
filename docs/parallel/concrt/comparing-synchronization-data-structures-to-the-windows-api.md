@@ -1,91 +1,92 @@
 ---
-title: "将同步数据结构与 Windows API 进行比较 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "同步数据结构, 与 Windows API 比较"
-  - "event 类, 示例"
+title: "将同步数据结构与 Windows API 进行比较 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- synchronization data structures, compared to Windows API
+- event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bed81cc8b212b6deef13cc0c6fed013b854fb4ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 将同步数据结构与 Windows API 进行比较
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主题将并发运行时提供的同步数据结构的行为与 Windows API 提供的同步数据结构的行为进行比较。  
+# <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>将同步数据结构与 Windows API 进行比较
+本主题比较由并发运行时与所提供的 Windows API 提供的同步数据结构的行为。  
   
- 并发运行时提供的同步数据结构效仿协作式线程模型。  在协作式线程模型中，同步基元将其处理资源显式让给其他线程。  这不同于抢先式线程模型，在该模型中，处理资源由控制计划程序或操作系统传输给其他线程。  
+ 通过并发运行时提供的同步数据结构效仿*线程处理模型的协作*。 协作的线程模型，在同步基元显式产生其他线程对其处理资源。 这不同于*preemptive 线程处理模型*，其中处理资源被传输到其他线程的控制计划程序或操作系统。  
   
-## critical\_section  
- [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) 类与 Windows `CRITICAL_SECTION` 结构类似，因为它只能由一个进程的线程使用。  有关 Windows API 中的临界区的更多信息，请参见[临界区对象](http://msdn.microsoft.com/library/windows/desktop/ms682530)。  
+## <a name="criticalsection"></a>critical_section  
+ [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)类类似于 Windows`CRITICAL_SECTION`结构，因为它可仅由一个进程的线程。 有关 Windows API 中的临界区的详细信息，请参阅[关键部分对象](http://msdn.microsoft.com/library/windows/desktop/ms682530)。  
   
-## reader\_writer\_lock  
- [concurrency::reader\_writer\_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) 类与 Windows 轻量级读\/写 \(SRW\) 锁类似。  下表说明了一些相似性和差异。  
+## <a name="readerwriterlock"></a>reader_writer_lock  
+ [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)类类似于 Windows 精简读取器/编写 (SRW) 器锁。 下表说明的相似性和差异。  
   
 |功能|`reader_writer_lock`|SRW 锁|  
-|--------|--------------------------|-----------|  
-|非重入|是|是|  
-|可以将读取器升级为编写器（升级支持）|否|否|  
-|可以将编写器降级为读取器（降级支持）|否|否|  
-|写优先锁|是|否|  
-|FIFO 方式访问编写器|是|否|  
+|-------------|--------------------------|--------------|  
+|非可重入|是|是|  
+|可以将提升到编写器 （升级支持） 的读取器|No|No|  
+|可以降级到读取器 （降级支持） 的编写器|No|No|  
+|写入首选项锁|是|No|  
+|编写器的先进先出访问|是|No|  
   
- 有关 SRW 锁的更多信息，请参见平台 SDK 中的[轻量级读取器\/编写器 \(SRW\) 锁](http://msdn.microsoft.com/library/windows/desktop/aa904937)。  
+ 有关 SRW 锁的详细信息，请参阅[精简读取器/编写器 (SRW) 锁](http://msdn.microsoft.com/library/windows/desktop/aa904937)平台 SDK 中。  
   
-## event  
- [concurrency::event](../../parallel/concrt/reference/event-class.md) 类与未命名的 Windows 手动重置事件类似。  但是，`event` 对象以协作方式工作，而 Windows 事件以抢先式方式工作。  有关 Windows 事件的更多信息，请参见[事件对象](http://msdn.microsoft.com/library/windows/desktop/ms682655)。  
+## <a name="event"></a>Event — 事件  
+ [Concurrency:: event](../../parallel/concrt/reference/event-class.md)类类似于未命名，Windows 手动重置事件。 但是，`event`对象以协作方式工作，而 Windows 事件的行为优先。 有关 Windows 事件的详细信息，请参阅[事件对象](http://msdn.microsoft.com/library/windows/desktop/ms682655)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 为了更好地了解 `event` 类和 Windows 事件之间的区别，请考虑下面的示例。  本示例使计划程序最多能够创建两个同时发生的任务，然后调用使用 `event` 类和 Windows 手动重置事件的两个相似函数。  每个函数首先创建一些等待共享事件变为终止状态的任务。  接着，每个函数让位于正在运行的任务，并用信号通知该事件。  然后，每个函数将等待终止的事件。  
+### <a name="description"></a>描述  
+ 若要更好地了解之间的差异`event`类和 Windows 事件，请考虑下面的示例。 此示例将启用的计划程序创建最多两个同时进行的任务，然后两个相似函数使用的调用`event`类和 Windows 手动重置事件。 每个函数首先创建若干个任务，等待共享事件变为终止状态。 每个函数然后生成到正在运行的任务，并用信号通知事件。 每个函数然后等待已终止事件。  
   
-### 代码  
- [!CODE [concrt-event-comparison#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-event-comparison#1)]  
+### <a name="code"></a>代码  
+ [!code-cpp[concrt-event-comparison#1](../../parallel/concrt/codesnippet/cpp/comparing-synchronization-data-structures-to-the-windows-api_1.cpp)]  
   
-### 注释  
- 此示例产生下面的示例输出：  
+### <a name="comments"></a>注释  
+ 该示例产生下面的示例输出：  
   
-  **协作事件：**  
- **上下文 0:等待事件。**  
- **上下文 1:等待事件。**  
- **上下文 2:等待事件。**  
- **上下文 3:等待事件。**  
- **上下文 4:等待事件。**  
- **设置事件。**  
- **上下文 5:接收事件。**  
- **上下文 6:接收事件。**  
- **上下文 7:接收事件。**  
- **上下文 8:接收事件。**  
- **上下文 9:接收事件。**  
-**Windows 事件**  
- **上下文 10:等待事件。**  
- **上下文 11:等待事件。**  
- **设置事件。**  
- **上下文 12:接收事件。**  
- **上下文 14:等待事件。**  
- **上下文 15:接收事件。**  
- **上下文 16:等待事件。**  
- **上下文 17:接收事件。**  
- **上下文 18:等待事件。**  
- **上下文 19:接收事件。**  
- **上下文 13:接收事件。** 因为 `event` 类以协作方式工作，所以当事件等待进入终止状态时，计划程序可以将处理资源重新分配给另一个上下文。  因此，使用 `event` 类的版本将完成更多的工作。  在使用 Windows 事件的版本中，每个正在等待的任务必须进入终止状态，下一个任务才能开始。  
+```Output  
+Cooperative event:  
+    Context 0: waiting on an event.  
+    Context 1: waiting on an event.  
+    Context 2: waiting on an event.  
+    Context 3: waiting on an event.  
+    Context 4: waiting on an event.  
+    Setting the event.  
+    Context 5: received the event.  
+    Context 6: received the event.  
+    Context 7: received the event.  
+    Context 8: received the event.  
+    Context 9: received the event.  
+Windows event:  
+    Context 10: waiting on an event.  
+    Context 11: waiting on an event.  
+    Setting the event.  
+    Context 12: received the event.  
+    Context 14: waiting on an event.  
+    Context 15: received the event.  
+    Context 16: waiting on an event.  
+    Context 17: received the event.  
+    Context 18: waiting on an event.  
+    Context 19: received the event.  
+    Context 13: received the event.  
+```  
   
- 有关任务的更多信息，请参见 [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 因为`event`类，其行为以协作方式，当事件正在等待进入终止的状态时，计划程序可以重新分配到另一个上下文的处理资源。 因此，更多的工作通过使用版本来实现`event`类。 使用 Windows 事件的版本，该下一步的任务开始之前，每个正在等待的任务必须进入终止的状态。  
   
-## 请参阅  
- [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)   
- [关键代码段对象](http://msdn.microsoft.com/library/windows/desktop/ms682530)   
- [亭亭玉立的读取器\/编写器锁 \(SRW\)](http://msdn.microsoft.com/library/windows/desktop/aa904937)   
- [事件对象](http://msdn.microsoft.com/library/windows/desktop/ms682655)
+ 有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+  
+## <a name="see-also"></a>另请参阅  
+ [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)

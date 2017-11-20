@@ -1,65 +1,64 @@
 ---
-title: "CManualAccessor::CreateAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::CreateAccessor"
-  - "CreateAccessor"
-  - "ATL.CManualAccessor.CreateAccessor"
-  - "CManualAccessor.CreateAccessor"
-  - "CManualAccessor::CreateAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateAccessor 方法"
+title: "Cmanualaccessor:: Createaccessor |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::CreateAccessor
+- CreateAccessor
+- ATL.CManualAccessor.CreateAccessor
+- CManualAccessor.CreateAccessor
+- CManualAccessor::CreateAccessor
+dev_langs: C++
+helpviewer_keywords: CreateAccessor method
 ms.assetid: 594c8d6d-b49a-4818-a9a5-81c8115d4e42
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bbd82a7ab2720d63ffa7860c26fc447b58e4f24
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CManualAccessor::CreateAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-分配列绑定结构的内存并初始化列数据成员。  
+# <a name="cmanualaccessorcreateaccessor"></a>CManualAccessor::CreateAccessor
+为列绑定结构分配内存和初始化列数据成员。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT CreateAccessor(   
-   int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize    
+      HRESULT CreateAccessor(   
+   int nBindEntries,   
+   void* pBuffer,   
+   DBLENGTH nBufferSize    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nBindEntries`  
- \[in\] 列数。  此数字应与调用数。[CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 函数。  
+ [in]列数。 此数字应匹配对的调用数[cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md)函数。  
   
  `pBuffer`  
- \[in\] 对输出列存储的缓冲区的指针。  
+ [in]指向输出列的存储位置的缓冲区的指针。  
   
  `nBufferSize`  
- \[in\] 字节缓冲区的大小。  
+ [in]以字节为单位的缓冲区大小。  
   
-## 返回值  
- `HRESULT` 标准的值之一。  
+## <a name="return-value"></a>返回值  
+ 一个标准`HRESULT`值。  
   
-## 备注  
- 在调用函数 `CManualAccessor::AddBindEntry` 之前，调用此函数。  
+## <a name="remarks"></a>备注  
+ 调用此函数，然后才能调用`CManualAccessor::AddBindEntry`函数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)   
- [DBViewer 示例](../../top/visual-cpp-samples.md)
+ [DBViewer 示例](../../visual-cpp-samples.md)

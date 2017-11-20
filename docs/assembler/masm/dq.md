@@ -1,37 +1,35 @@
 ---
-title: "DQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DQ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DQ directive"
+title: "DQ |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DQ
+dev_langs: C++
+helpviewer_keywords: DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a5fea30e39094bf344bd87c823dfcf4b8b3b91e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# DQ
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-分配和 \(可选\) 初始化 8 个字节每 `initializer`的存储。  可以用作类型说明符任何位置类型是非法的。  `DQ` 是 [QWORD](../../assembler/masm/qword.md)同义词。  
+# <a name="dq"></a>DQ
+分配和 （可选） 为每个初始化 8 个字节存储`initializer`。 此外可以用作类型说明符类型是合法的任何位置。 `DQ`同义词[QWORD](../../assembler/masm/qword.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 [[name]] DQ initializer [[, initializer]]...  
 ```  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [指令引用](../../assembler/masm/directives-reference.md)   
  [QWORD](../../assembler/masm/qword.md)

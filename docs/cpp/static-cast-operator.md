@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- static_cast_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- static_cast keyword [C++]
+f1_keywords: static_cast_cpp
+dev_langs: C++
+helpviewer_keywords: static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0c8d041ff7b615e4fd8b6e0e54365e92aca2ebc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d04c49076f5189e913c8755a5bce4d7e5c7daf11
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="staticcast-operator"></a>static_cast 运算符
 将转换*表达式*为的类型*类型 id，*仅根据同时出现在表达式的类型。  

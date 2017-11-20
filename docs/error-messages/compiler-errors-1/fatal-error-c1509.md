@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1509
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1509
+f1_keywords: C1509
+dev_langs: C++
+helpviewer_keywords: C1509
 ms.assetid: 40dd100d-c6ba-451c-bd26-2c99ec1c36d6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 3d3fc7a7be867a7137dab4155984cf1844b661ea
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1509"></a>错误 C1509
 编译器限制： 函数 function 中的有太多异常处理程序状态。 简化函数  

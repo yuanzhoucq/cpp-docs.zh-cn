@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator!=
-- random/std::discrete_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::discrete_distribution [C++]
 - std::discrete_distribution [C++], reset
@@ -33,16 +30,15 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 3f215fb2c7e3b86181a01d06b4b88192e7df812d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 092185d577b28b0507be554d48e4dacf0439e60c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 类
 生成包含以等概率分布在每个区间中的等宽区间的离散型整数分布。  
@@ -299,7 +295,6 @@ struct param_type {
   
 ## <a name="see-also"></a>另请参阅  
  [\<random>](../standard-library/random.md)
-
 
 
 

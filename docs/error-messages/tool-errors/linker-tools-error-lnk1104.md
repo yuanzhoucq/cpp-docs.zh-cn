@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1104
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1104
+f1_keywords: LNK1104
+dev_langs: C++
+helpviewer_keywords: LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: ebc0b23a7d92c94373b9ae5be01a0ef50476e433
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk1104"></a>链接器工具错误 LNK1104
 无法打开文件*filename*  
@@ -70,4 +65,3 @@ ms.lasthandoff: 10/09/2017
 -   如果*filename*名为 LNK*n*生成链接器为临时文件的文件名时，可能不存在 TMP 环境变量中指定的目录，或多个可能为 TMP 环境变量指定目录。 只能将一个目录路径应为 TMP 环境变量指定。  
   
 -   如果库名称出现错误消息，并且你最近刚从之前的 Microsoft Visual C++ 开发系统中移植了 .mak 文件，库名称可能不再有效。 确保库名称正确无误，且仍存在于指定的位置，或更新为指向新位置的 LIB 路径。  
-

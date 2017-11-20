@@ -1,62 +1,61 @@
 ---
-title: "LINK 输出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ilk 文件"
-  - "DLL [C++], 作为链接器输出"
-  - "可执行文件 [C++], 作为链接器输出"
-  - "文件 [C++], LINK"
-  - "ILK 文件"
-  - "导入库 [C++], 创建"
-  - "LINK 工具 [C++], 映射文件"
-  - "LINK 工具 [C++], 输出"
-  - "链接器 [C++], 输出文件"
-  - "映射文件 [C++]"
-  - "映射文件 [C++], LINK 输出"
-  - "输出文件 [C++], 链接器"
+title: "LINK 输出 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles [C++]
+- ILK files
+- output files [C++], linker
+- files [C++], LINK
+- .ilk files
+- LINK tool [C++], output
+- import libraries [C++], creating
+- executable files [C++], as linker output
+- mapfiles [C++], LINK output
+- linker [C++], output files
+- DLLs [C++], as linker output
+- LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d01f19f31f83324beab1e44efe181086d6432175
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# LINK 输出
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Link 输出包括 .exe 文件、DLL、映射文件和消息。  
+# <a name="link-output"></a>LINK 输出
+Link 输出包括.exe 文件、 Dll、 映射文件和消息。  
   
-##  <a name="_core_output_files"></a> 输出文件  
- LINK 的默认输出文件是 .exe 文件。  如果指定了 [\/DLL](../../build/reference/dll-build-a-dll.md) 选项，则 LINK 生成 .dll 文件。  可以用[输出文件名称 \(\/OUT\)](../../build/reference/out-output-file-name.md) 选项控制输出文件名。  
+##  <a name="_core_output_files"></a>输出文件  
+ 链接的默认输出文件是.exe 文件。 如果[/DLL](../../build/reference/dll-build-a-dll.md)指定选项，LINK 在生成.dll 文件。 你可以控制输出文件的名称与[输出文件的名称 （/ OUT）](../../build/reference/out-output-file-name.md)选项。  
   
- 在增量模式中，LINK 创建一个 .ilk 文件来保存程序后来的增量编译状态信息。  有关 .ilk 文件的详细信息，请参见 [.ilk 文件](../../build/reference/dot-ilk-files-as-linker-input.md)。  有关增量链接的更多信息，请参见[渐进式链接 \(\/INCREMENTAL\)](../../build/reference/incremental-link-incrementally.md) 选项。  
+ 在增量模式下，链接创建一个.ilk 文件来保存更高版本增量编译的程序的状态信息。 .Ilk 文件有关的详细信息，请参阅[.ilk 文件](../../build/reference/dot-ilk-files-as-linker-input.md)。 有关增量链接的详细信息，请参阅[增量链接 (/incremental)](../../build/reference/incremental-link-incrementally.md)选项。  
   
- 当 LINK 创建包含导出（通常是 DLL）的程序时，如果在生成中没有使用 .exp 文件，它还将生成 .lib 文件。  可以用 [\/IMPLIB](../../build/reference/implib-name-import-library.md) 选项控制导入库文件名。  
+ 当 LINK 将创建包含的程序导出 (通常为 DLL) 时，它还将生成的.lib 文件，除非生成中使用了.exp 文件。 你可以控制在导入库文件名前面加[/IMPLIB](../../build/reference/implib-name-import-library.md)选项。  
   
- 如果指定了[生成映射文件 \(\/MAP\)](../../build/reference/map-generate-mapfile.md) 选项，则 LINK 创建映射文件。  
+ 如果[生成映射文件 （/ 映射）](../../build/reference/map-generate-mapfile.md)指定选项，则 LINK 创建映射文件。  
   
- 如果指定了[生成调试信息 \(\/DEBUG\)](../../build/reference/debug-generate-debug-info.md) 选项，则 LINK 创建 PDB 以包含程序的调试信息。  
+ 如果[生成调试信息 (/debug)](../../build/reference/debug-generate-debug-info.md)指定选项，则 LINK 创建包含调试信息的程序的 PDB。  
   
-##  <a name="_core_other_output"></a> 其他输出  
- 当键入 `link` 时不带任何其他命令行输入，LINK 将显示总结其选项的用法语句。  
+##  <a name="_core_other_output"></a>其他输出  
+ 当你键入`link`而无需任何其他命令行输入时，链接将显示一条总结了其选项的用法语句。  
   
- 如果没有使用[取消显示启动版权标志 \(\/NOLOGO\)](../../build/reference/nologo-suppress-startup-banner-linker.md) 选项，则 LINK 显示版权和版本消息，并回显命令文件输入。  
+ LINK 显示版权和版本号消息并回显命令文件输入，除非[取消显示启动版权标志 (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md)使用选项。  
   
- 可以使用[显示进度消息 \(\/VERBOSE\)](../../build/reference/verbose-print-progress-messages.md) 选项显示有关生成的附加详细信息。  
+ 你可以使用[打印进度消息 （/ 详细）](../../build/reference/verbose-print-progress-messages.md)选项以显示有关生成的其他详细信息。  
   
- LINK 以 LNK*nnnn* 的格式发出错误信息和警告消息。  LIB、DUMPBIN 和 EDITBIN 也使用该错误前缀和数字范围。  
+ 链接会发出错误和警告消息的形式 LNK*nnnn*。 此错误前缀和的数字的范围也使用 LIB、 DUMPBIN 和 EDITBIN。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

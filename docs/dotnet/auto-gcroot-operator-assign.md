@@ -1,36 +1,34 @@
 ---
-title: "auto_gcroot::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator="
-  - "msclr::auto_gcroot::operator="
-  - "msclr.auto_gcroot.operator="
-  - "auto_gcroot::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: "auto_gcroot::operator = |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator=
+- msclr::auto_gcroot::operator=
+- msclr.auto_gcroot.operator=
+- auto_gcroot::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 99eba5eb-5a2c-4edf-b3d5-c903f818233d
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cd87111bf28cc758094936b0fb586fce2e475f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autogcrootoperator"></a>auto_gcroot::operator=
 赋值运算符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 auto_gcroot<_element_type> & operator=(  
@@ -45,14 +43,14 @@ auto_gcroot<_element_type> & operator=(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_right`  
- 将要赋值的对象或 `auto_gcroot` 设置为当前 `auto_gcroot`。  
+ 对象或`auto_gcroot`要分配给当前`auto_gcroot`。  
   
-## 返回值  
- 当前 `auto_gcroot`，现在是 `_right`。  
+## <a name="return-value"></a>返回值  
+ 当前`auto_gcroot`、 现在拥有`_right`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_gcroot_operator_equals.cpp  
@@ -105,21 +103,24 @@ int main()
 }  
 ```  
   
-  **在 ClassA 构造函数：首先**  
-**从第一个A开始。**  
-**ClassA 构造函数：第二步**  
-**在 ClassA 析构函数：首先**  
-**在 ClassA constructor:third**  
-**Hello 从第三个一！**  
-**在 ClassA 析构函数：秒**  
-**Hello 从第三个一！**  
-**done**  
-**在 ClassA destructor:third**   
-## 要求  
- **头文件** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+in ClassA destructor: first  
+in ClassA constructor: third  
+Hello from third B!  
+in ClassA destructor: second  
+Hello from third A!  
+done  
+in ClassA destructor: third  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

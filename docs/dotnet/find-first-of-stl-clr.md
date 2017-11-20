@@ -1,32 +1,30 @@
 ---
-title: "find_first_of (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::find_first_of"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find_first_of 函数 [STL/CLR]"
+title: "find_first_of (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::find_first_of
+dev_langs: C++
+helpviewer_keywords: find_first_of function [STL/CLR]
 ms.assetid: d559bad4-fc12-4201-af49-db0e7eec48e8
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 910760f9964c612096a97e175ff0a8771a91003a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# find_first_of (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-搜索的第一次出现的任何在目标范围中的第几个值或一次出现的二进制谓词事实上是等效的指定与元素指定的组任意多个元素。  
+# <a name="findfirstof-stlclr"></a>find_first_of (STL/CLR)
+在目标范围中搜索若干值中任意值的第一个匹配项，或搜索在二元谓词指定的意义上等效于指定元素集的若干元素中任意元素的第一个匹配项。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
         _FwdIt2 _First2, _FwdIt2 _Last2, _Pr _Pred);  
 ```  
   
-## 备注  
- 此函数行为与 STL `find_first_of`函数相同。  有关详细信息，请参阅[find\_first\_of](../Topic/find_first_of.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`find_first_of`。 有关详细信息，请参阅[find_first_of](../standard-library/algorithm-functions.md#find_first_of)。  
   
-## 要求  
- **页眉：** \<\/cliext 算法\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/算法 >  
   
- **命名空间：** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

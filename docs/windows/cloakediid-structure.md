@@ -1,32 +1,30 @@
 ---
-title: "CloakedIid 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::CloakedIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CloakedIid 结构"
+title: "CloakedIid 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::CloakedIid
+dev_langs: C++
+helpviewer_keywords: CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5a10752fecadaf3a7f044e3c563931ae3cdbe1b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CloakedIid 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-来 RuntimeClass、实现和 ChainInterfaces 模板指定接口是不可访问的。IID 列表。  
+# <a name="cloakediid-structure"></a>CloakedIid 结构
+指示无法访问 IID 列表中指定接口的 RuntimeClass、Implements 和 ChainInterfaces 模板。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -35,22 +33,22 @@ template<
 struct CloakedIid : T;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 隐藏的接口 \(掩蔽\)。  
+ 接口不可见 （掩蔽）。  
   
-## 备注  
- 下面是有关如何使用 CloakedIid: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
+## <a name="remarks"></a>备注  
+ 下面是如何使用 CloakedIid 的一个示例： `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `T`  
   
  `CloakedIid`  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>要求  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>另请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

@@ -1,69 +1,69 @@
 ---
-title: "保留字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "CONFORMING"
-  - "DISCARDABLE"
-  - "Description"
-  - "base"
-  - "APPLOADER"
-  - "Data"
-  - "DYNAMIC"
-  - "DEV386"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def 文件 [C++], 保留字"
-  - "def 文件 [C++], 保留字"
-  - "链接器 [C++], 保留字"
-  - "保留字 [C++]"
+title: "保留字 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- CONFORMING
+- DISCARDABLE
+- Description
+- base
+- APPLOADER
+- Data
+- DYNAMIC
+- DEV386
+dev_langs: C++
+helpviewer_keywords:
+- .def files [C++], reserved words
+- def files [C++], reserved words
+- linker [C++], reserved words
+- reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1a7040ac0093471be657c2ed7a064719abcd0230
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 保留字
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列字是为链接器保留的。  仅当将这些名称用双引号 \(""\) 括起来时，它们才可用作 [模块定义语句](../../build/reference/module-definition-dot-def-files.md) 中的参数。  
+# <a name="reserved-words"></a>保留字
+链接器将保留下列词语。 这些名称可用作自变量中[模块定义语句](../../build/reference/module-definition-dot-def-files.md)仅当名称括在双引号 ("")。  
   
 ||||  
 |-|-|-|  
-|**APPLOADER**1|**INITINSTANCE**2|**PRELOAD**|  
-|**BASE**|**IOPL**|**PRIVATE**|  
-|**CODE**|**LIBRARY**1|**PROTMODE**2|  
-|**CONFORMING**|**LOADONCALL**1|**PURE**1|  
-|**DATA**|**LONGNAMES**2|**READONLY**|  
-|**DESCRIPTION**|`MOVABLE`1|**READWRITE**|  
-|**DEV386**|**MOVEABLE**1|**REALMODE**1|  
-|**DISCARDABLE**|**MULTIPLE**|**RESIDENT**|  
-|**DYNAMIC**|**NAME**|**RESIDENTNAME**1|  
-|**EXECUTE\-ONLY**|**NEWFILES**2|**SECTIONS**|  
-|**EXECUTEONLY**|`NODATA`1|**SEGMENTS**|  
-|**EXECUTEREAD**|**NOIOPL**1|**SHARED**|  
-|**EXETYPE**|**NONAME**|**SINGLE**|  
-|**EXPORTS**|**NONCONFORMING**1|**STACKSIZE**|  
-|**FIXED**1|**NONDISCARDABLE**|**STUB**|  
-|**FUNCTIONS**2|**NONE**|**VERSION**|  
-|**HEAPSIZE**|**NONSHARED**|**WINDOWAPI**|  
-|**IMPORTS**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
-|**IMPURE**1|**OBJECTS**|**WINDOWS**|  
-|**INCLUDE**2|**OLD**1||  
+|**APPLOADER**1|**INITINSTANCE**2|**预加载**|  
+|**基**|**IOPL**|**私有**|  
+|**代码**|**库**1|**PROTMODE**2|  
+|**符合**|**由**1|**纯**1|  
+|**数据**|**LONGNAMES**2|**READONLY**|  
+|**说明**|**可移动**1|**READWRITE**|  
+|**DEV386**|**可移动**1|**实模式**1|  
+|**可丢弃**|**多个**|**驻留**|  
+|**动态**|**名称**|**RESIDENTNAME**1|  
+|**仅执行**|**NEWFILES**2|**部分**|  
+|**EXECUTEONLY**|**无数据**1|**段**|  
+|**执行读取**|**NOIOPL**1|**共享**|  
+|**EXETYPE**|**NONAME**|**单个**|  
+|**EXPORTS**|**不一致性**1|**STACKSIZE**|  
+|**固定**1|**NONDISCARDABLE**|**STUB**|  
+|**函数**2|**无**|**版本**|  
+|**HEAPSIZE**|**非共享**|**WINDOWAPI**|  
+|**导入**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
+|**非纯**1|**对象**|**WINDOWS**|  
+|**包括**2|**旧**1||  
   
- 1 链接器在遇到此术语时发出警告（“忽略”）。  不过，该保留字仍然保留。  
+ 1 当它遇到此术语，链接器将发出警告 （"忽略"）。 但是，单词是仍保留。  
   
- 2 链接器忽略该字，但是不发出警告。  
+ 2 链接器忽略该保留字，但是不发出警告。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

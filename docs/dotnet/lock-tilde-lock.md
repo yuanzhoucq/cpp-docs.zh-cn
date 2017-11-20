@@ -1,47 +1,45 @@
 ---
-title: "lock::~lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "~lock"
-  - "msclr.lock.~lock"
-  - "lock.~lock"
-  - "msclr::lock::~lock"
-  - "lock::~lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~lock 析构函数"
+title: "锁:: ~ 锁 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ~lock
+- msclr.lock.~lock
+- lock.~lock
+- msclr::lock::~lock
+- lock::~lock
+dev_langs: C++
+helpviewer_keywords: ~lock destructor
 ms.assetid: 55fa9f6c-d7a6-48ef-9236-ee03342c1d20
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2fe737a0e40c1b45e7c5622ee377663e997e87ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# lock::~lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-重构 `lock` 对象。  
+# <a name="locklock"></a>lock::~lock
+因`lock`对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 ~lock();  
 ```  
   
-## 备注  
- 析构函数调用 [lock::release](../dotnet/lock-release.md)。  
+## <a name="remarks"></a>备注  
+ 析构函数调用[lock::release](../dotnet/lock-release.md)。  
   
-## 示例  
- 此示例使用在多个线程中类的一个实例。类使用自身上的锁确保每个线程对其内部数据的访问权限都是一致的。主应用程序线程使用类的同一实例的锁定定期检查任何辅助线程是否仍然存在，并且等待，直到退出所有辅助线程完成它们的任务。  
+## <a name="example"></a>示例  
+ 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
   
 ```  
 // msl_lock_dtor.cpp  
@@ -115,22 +113,25 @@ int main() {
 }  
 ```  
   
-  **在线程 3，Counter \= 0**  
-**在线程 3，Counter \= 10**  
-**在线程 5，Counter \= 0**  
-**在线程 5 ，Counter \= 10**  
-**在线程 7，Counter \= 0**  
-**在线程 7，Counter \= 10**  
-**在线程 4，Counter \= 0**  
-**在线程 4，Counter \= 10**  
-**在线程 6，Counter \= 0**  
-**在线程 6，Counter \= 10**  
-**所有线程完成。**   
-## 要求  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [锁定成员](../dotnet/lock-members.md)   
  [lock::lock](../dotnet/lock-lock.md)

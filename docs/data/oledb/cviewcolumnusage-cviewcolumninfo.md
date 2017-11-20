@@ -1,80 +1,80 @@
 ---
-title: "CViewColumnUsage，CViewColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szCatalog"
-  - "m_nColumnPropID"
-  - "COLUMN_GUID"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "CViewColumnInfo"
-  - "m_szSchema"
-  - "CViewColumnUsage"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "m_szTableName"
-  - "m_szName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CViewColumnInfo 参数类"
-  - "CViewColumnUsage typedef 类"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szCatalog"
-  - "m_szColumnName"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CViewColumnUsage，CViewColumnInfo |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szCatalog
+- m_nColumnPropID
+- COLUMN_GUID
+- m_szColumnName
+- m_szTableCatalog
+- CViewColumnInfo
+- m_szSchema
+- CViewColumnUsage
+- COLUMN_PROPID
+- m_guidColumn
+- m_szTableName
+- m_szName
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- m_szSchema
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCatalog
+- TABLE_NAME
+- m_nColumnPropID
+- CViewColumnInfo parameter class
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szName
+- m_szTableCatalog
+- CViewColumnUsage typedef class
+- m_szTableName
+- COLUMN_GUID
+- m_guidColumn
 ms.assetid: 4af14d6b-b224-4d72-b035-9d3aaacde32f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 834f1f0bd60bb573c5371a8a5aa3e2185bb115d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CViewColumnUsage，CViewColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-调用 typedef 类 **CViewColumnUsage** 实现其参数类 **CViewColumnInfo**。  
+# <a name="cviewcolumnusage-cviewcolumninfo"></a>CViewColumnUsage，CViewColumnInfo
+调用 typedef 类**CViewColumnUsage**来实现其参数类**CViewColumnInfo**。  
   
-## 备注  
- 参见 [架构行集合类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 中使用 typedef 类的更多信息。  
+## <a name="remarks"></a>备注  
+ 请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)有关使用 typedef 类的详细信息。  
   
- 定义视图表上的列的类在在目录中定义并由给定用户拥有的表，是从属的。  
+ 此类标识的列上查看目录中定义的表，并且由给定用户拥有的是依赖。  
   
- 下表列出了类数据成员及其对应的 OLE DB 行。  有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [VIEW\_COLUMN\_USAGE 行集](https://msdn.microsoft.com/en-us/library/ms714896.aspx)。  
+ 下表列出了类数据成员及其对应的 OLE DB 列。 请参阅[VIEW_COLUMN_USAGE 行集](https://msdn.microsoft.com/en-us/library/ms714896.aspx)中*OLE DB 程序员参考*有关的架构和列的详细信息。  
   
 |数据成员|OLE DB 列|  
-|----------|--------------|  
-|m\_szCatalog|VIEW\_CATALOG|  
-|m\_szSchema|VIEW\_SCHEMA|  
-|m\_szName|VIEW\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
+|------------------|--------------------|  
+|m_szCatalog|VIEW_CATALOG|  
+|m_szSchema|VIEW_SCHEMA|  
+|m_szName|VIEW_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
   
-## 要求  
- **头文件：**atldbsch.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldbsch.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRestrictions 类](../../data/oledb/crestrictions-class.md)

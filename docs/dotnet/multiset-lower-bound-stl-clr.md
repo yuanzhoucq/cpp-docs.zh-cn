@@ -1,45 +1,43 @@
 ---
-title: "multiset::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 成员 [STL/CLR]"
+title: "multiset:: lower_bound (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 5e3d1ba0-8b03-436e-b502-dbdb764f452b
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8f5cbbf26d85ebd5199d439cbaf4cc06cd9dcaa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-查找与指定的键范围的开头。  
+# <a name="multisetlowerbound-stlclr"></a>multiset::lower_bound (STL/CLR)
+查找与指定的键匹配的范围开始处。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### 参数  
- 键  
+#### <a name="parameters"></a>参数  
+ 密钥  
  要搜索的键值。  
   
-## 备注  
- 成员函数确定。具有相同订单给 `key`的控制序列中的第一个 `X` 元素。  如果不存在此类元素，则返回`()`; [multiset::end](../dotnet/multiset-end-stl-clr.md)否则它返回将 `X`的迭代器。  使用其当前找到的元素序列的开头与指定的键在控制序列。  
+## <a name="remarks"></a>备注  
+ 成员函数将确定第一个元素`X`受控序列中具有等效顺序到`key`。 如果此类元素不存在，它将返回[multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; 否则它将返回指定的迭代器`X`。 用于当前与指定的键匹配的控制序列中查找的元素序列的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multiset_lower_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*lower\_bound\(L'a'\) \= a**  
-**\*lower\_bound \(L'b \= b\)**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::count](../dotnet/multiset-count-stl-clr.md)   
- [multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)   
- [multiset::find](../dotnet/multiset-find-stl-clr.md)   
- [multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)   
+ [multiset:: equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)   
+ [multiset:: find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)   
+ [multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)

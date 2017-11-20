@@ -1,32 +1,30 @@
 ---
-title: "nonextensible | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.nonextensible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nonextensible attribute"
+title: "nonextensible |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.nonextensible
+dev_langs: C++
+helpviewer_keywords: nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 277e8ad4b19f5da5cf0d5574e240915ddc9b525c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# nonextensible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定 `IDispatch` 实现接口中声明包括只有列表的属性和方法，而不能扩展与运行时的其他成员。  
+# <a name="nonextensible"></a>nonextensible
+指定`IDispatch`实现仅包括的属性和方法的接口描述中列出，并在运行时不能与其他成员扩展。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,13 +32,13 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **nonextensible** C\+\+ 特性具有与 [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Nonextensible** c + + 属性具有相同的功能[nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) MIDL 特性。  
   
- 为 **nonextensible** 的使用还需要 [custom](../windows/oleautomation.md) 属性。  
+ 利用**nonextensible**还要求[oleautomation](../windows/oleautomation.md)属性。  
   
-## 示例  
- 下面的代码演示 **nonextensible** 属性的一个用途:  
+## <a name="example"></a>示例  
+ 下面的代码演示一个使用**nonextensible**属性：  
   
 ```  
 // cpp_attr_ref_nonextensible.cpp  
@@ -57,20 +55,19 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`interface`|  
-|**可重复**|否|  
-|**必需的特性**|**双** 和 **custom**或 **dispinterface**|  
+|**可重复**|No|  
+|**必需的特性**|**双**和**oleautomation**，或**调度接口**|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   

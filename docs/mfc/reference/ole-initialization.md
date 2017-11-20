@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - afxdisp/AfxOleInit
 - afxdisp/AfxEnableControlContainer
-dev_langs:
-- C++
-helpviewer_keywords:
-- OLE initialization
+dev_langs: C++
+helpviewer_keywords: OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 5fd0a194dc8f5b9272921a0445ecf5754ec2a4e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d86083701e6fb0510eb0fa79f0812fca95445881
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ole-initialization"></a>OLE 初始化
 必须先初始化 OLE 系统并验证 DLL 是否是正确版本，然后应用程序才能使用 OLE 系统服务。 **AfxOleInit**函数初始化 OLE 系统 Dll。  
@@ -81,4 +77,3 @@ BOOL AFXAPI AfxOleInit();
 
 ## <a name="see-also"></a>另请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
-

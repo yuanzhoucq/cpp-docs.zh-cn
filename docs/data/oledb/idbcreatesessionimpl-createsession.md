@@ -1,49 +1,48 @@
 ---
-title: "IDBCreateSessionImpl::CreateSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBCreateSessionImpl::CreateSession"
-  - "IDBCreateSessionImpl.CreateSession"
-  - "CreateSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateSession 方法"
+title: "Idbcreatesessionimpl:: Createsession |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBCreateSessionImpl::CreateSession
+- IDBCreateSessionImpl.CreateSession
+- CreateSession
+dev_langs: C++
+helpviewer_keywords: CreateSession method
 ms.assetid: 035e5ddb-56e6-43b1-874d-89c0e40b103b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7cee8a99e39434ddab7061c2e67adafbeb864717
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IDBCreateSessionImpl::CreateSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-创建从数据源对象的新会话并返回在新生成的会话的请求的接口。  
+# <a name="idbcreatesessionimplcreatesession"></a>IDBCreateSessionImpl::CreateSession
+从数据源对象创建新的会话并在新创建的会话上返回所请求的接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      STDMETHOD(CreateSession)(   
-   IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppDBSession    
+      STDMETHOD(CreateSession)(   
+   IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppDBSession    
 );  
 ```  
   
-#### 参数  
- 有关更多信息，请参见 *OLE DB Programmer's Reference*中的[IDBCreateSession::CreateSession](https://msdn.microsoft.com/en-us/library/ms714942.aspx)。  
+#### <a name="parameters"></a>参数  
+ 请参阅[IDBCreateSession::CreateSession](https://msdn.microsoft.com/en-us/library/ms714942.aspx)中*OLE DB 程序员参考*。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [IDBCreateSessionImpl 类](../../data/oledb/idbcreatesessionimpl-class.md)

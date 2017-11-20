@@ -1,50 +1,48 @@
 ---
-title: "链接器工具警告 LNK4098 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4098"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4098"
+title: "链接器工具警告 LNK4098 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4098
+dev_langs: C++
+helpviewer_keywords: LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0acc9ba4a43e37712e3643b49975fc15a4cce280
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器工具警告 LNK4098
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-默认库“library”与其他库的使用冲突；请使用 \/NODEFAULTLIB:library  
+# <a name="linker-tools-warning-lnk4098"></a>链接器工具警告 LNK4098
+与 defaultlib 库冲突的其他 libs; 使用使用 /NODEFAULTLIB:library  
   
- 您尝试与不兼容的库链接。  
+ 正在尝试与不兼容的库链接。  
   
 > [!NOTE]
->  运行库现在包含可防止混合不同类型的指令。  如果尝试在同一个程序中使用不同类型的运行库或使用调试和非调试版本的运行库，则将收到此警告。  例如，如果编译一个文件以使用一种运行库，而编译另一个文件以使用另一种运行库（例如单线程运行库对多线程运行库），并尝试链接它们，则将得到此警告。  应将所有源文件编译为使用同一个运行库。  有关更多信息，请参见[使用运行库](../../build/reference/md-mt-ld-use-run-time-library.md)（**\/MD**、**\/MT** 和 **\/LD**）编译器选项。  
+>  运行时库现在包含指令以防止混合不同类型。 同一程序中，将收到此警告如果您尝试使用不同的类型或调试和运行时库的非调试版本。 例如，如果编译一个文件，以使用一种运行时库，另一个文件以使用另一种 （例如，单线程方式而不是多线程），并尝试将它们链接，你将收到此警告。 应编译所有源代码文件，以使用相同的运行时库。 请参阅[使用运行时库](../../build/reference/md-mt-ld-use-run-time-library.md)(**/MD**， **/MT**， **/LD**) 编译器选项，有关详细信息。  
   
- 可以使用链接器的 [\/VERBOSE:LIB](../../build/reference/verbose-print-progress-messages.md) 开关来确定链接器搜索的库。  如果收到 LNK4098，并想创建使用如单线程、非调试运行库的可执行文件，请使用 **\/VERBOSE:LIB** 选项确定链接器搜索的库。  链接器作为搜索的库输出的应是 LIBC.lib，而非 LIBCMT.lib、MSVCRT.lib、LIBCD.lib、LIBCMTD.lib 和 MSVCRTD.lib。  对每个要忽略的库可以使用 [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)，以通知链接器忽略错误的运行库。  
+ 你可以使用链接器的[/VERBOSE:LIB](../../build/reference/verbose-print-progress-messages.md)开关来确定链接器搜索的库。 如果你收到 LNK4098 并想要创建的可执行文件，例如，使用单线程，非调试运行时库，请使用**/VERBOSE:LIB**选项以了解链接器搜索的库。 链接器应打印 LIBC.lib 和不 LIBCMT.lib、 MSVCRT.lib、 LIBCD.lib、 LIBCMTD.lib 或 MSVCRTD.lib 作为所搜索的库。 你可以判断链接器忽略不正确的运行时库通过使用[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)为每个你想要忽略的库。  
   
- 下表显示根据要使用的运行库应忽略的库。  
+ 下表显示应忽略的库，你想要使用具体取决于哪个运行时库。  
   
-|若要使用此运行库|请忽略这些库|  
-|--------------|------------|  
-|单线程 \(libc.lib\)|libcmt.lib、msvcrt.lib、libcd.lib、libcmtd.lib、msvcrtd.lib|  
-|多线程 \(libcmt.lib\)|libc.lib、msvcrt.lib、libcd.lib、libcmtd.lib、msvcrtd.lib|  
-|使用 DLL 的多线程 \(msvcrt.lib\)|libc.lib、libcmt.lib、libcd.lib、libcmtd.lib、msvcrtd.lib|  
-|调试单线程 \(libcd.lib\)|libc.lib、libcmt.lib、msvcrt.lib、libcmtd.lib、msvcrtd.lib|  
-|调试多线程 \(libcmtd.lib\)|libc.lib、libcmt.lib、msvcrt.lib、libcd.lib、msvcrtd.lib|  
-|使用 DLL 的调试多线程 \(msvcrtd.lib\)|libc.lib、libcmt.lib、msvcrt.lib、libcd.lib、libcmtd.lib|  
+|若要使用此运行时库|忽略这些库|  
+|-----------------------------------|----------------------------|  
+|单线程方式 (libc.lib)|libcmt.lib、 msvcrt.lib、 libcd.lib、 libcmtd.lib、 msvcrtd.lib|  
+|多线程 (libcmt.lib)|libc.lib、 msvcrt.lib、 libcd.lib、 libcmtd.lib、 msvcrtd.lib|  
+|使用 DLL (msvcrt.lib) 的多线程|libc.lib、 libcmt.lib、 libcd.lib、 libcmtd.lib、 msvcrtd.lib|  
+|调试单线程方式 (libcd.lib)|libc.lib、 libcmt.lib、 msvcrt.lib、 libcmtd.lib、 msvcrtd.lib|  
+|调试多线程 (libcmtd.lib)|libc.lib、 libcmt.lib、 msvcrt.lib、 libcd.lib、 msvcrtd.lib|  
+|调试多线程使用 DLL (msvcrtd.lib)|libc.lib、 libcmt.lib、 msvcrt.lib、 libcd.lib、 libcmtd.lib|  
   
- 例如，如果收到此警告，并希望创建使用非调试、单线程版本的运行库的可执行文件，可以将下列选项与链接器一起使用：  
+ 例如，如果你收到此警告，并且你想要创建使用的非调试单线程版本运行时库的可执行文件，你可以用链接器使用以下选项：  
   
 ```  
 /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib  

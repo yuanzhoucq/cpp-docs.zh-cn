@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CInterpolatorBase [MFC], CInterpolatorBase
 - CInterpolatorBase [MFC], CreateInstance
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: a9ce4874fc0dd2a238f26219fe6dd0fd36a01a79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 6bf2a6b11f64b5ec7e7f2e311c62e7f1ce9144d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 类
 实现回调，它在必须计算动画变量的新值时由动画 API 调用。  
@@ -250,4 +247,3 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

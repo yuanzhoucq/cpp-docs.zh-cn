@@ -1,34 +1,32 @@
 ---
-title: "编译器警告（等级 4）C4245 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4245"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4245"
+title: "编译器警告 （等级 4） C4245 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4245
+dev_langs: C++
+helpviewer_keywords: C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8e6e369717c6133d49de0a44a625b251ddf671cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 4）C4245
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“conversion”: 从“type1”转换到“type2”，有符号\/无符号不匹配  
+# <a name="compiler-warning-level-4-c4245"></a>编译器警告（等级 4）C4245
+conversion： 从 type1 转换到 type2，有符号/无符号不匹配  
   
- 您尝试将带负值的有符号 **const** 转换为 `unsigned`。  
+ 你尝试转换一个已签名**const**具有负值到`unsigned`。  
   
- 下面的示例生成 C4245：  
+ 下面的示例生成 C4245:  
   
 ```  
 // C4245.cpp  

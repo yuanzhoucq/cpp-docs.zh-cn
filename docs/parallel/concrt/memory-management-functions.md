@@ -1,45 +1,45 @@
 ---
-title: "内存管理函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "内存管理函数 [并发运行时]"
+title: "内存管理函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c090041969bae959ecb386486032f3f848a1440b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 内存管理函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文档描述了并发运行时提供的内存管理函数如何帮助您以并发方式分配和释放内存。  
+# <a name="memory-management-functions"></a>内存管理函数
+本文档介绍并发运行时提供的可帮助你分配和释放内存以并发方式的内存管理函数。  
   
 > [!TIP]
->  并发运行时提供默认的计划程序，因此您不需要在应用程序中再创建一个计划程序。  由于任务计划程序可帮助您优化应用程序的性能，因此，如果您初次接触并发运行时，则建议您先使用 [并行模式库 \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) 或 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)。  
+>  并发运行时提供了一个默认计划程序，因此无需在应用程序中创建一个。 由于任务计划程序有助于细微调整你的应用程序的性能，我们建议你开始使用[并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)或[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)如果你是新的并发运行。  
   
- 并发运行时提供两个内存管理函数，它们进行了优化以便以并发方式分配和释放内存块。  [concurrency::Alloc](../Topic/Alloc%20Function.md) 函数通过使用指定的大小来分配内存块。  [concurrency::Free](../Topic/Free%20Function.md) 函数释放由 `Alloc` 分配的内存。  
-  
-> [!NOTE]
->  `Alloc` 和 `Free` 函数相互依赖。  `Free` 函数仅用于释放使用 `Alloc` 函数分配的内存。  同样，当使用 `Alloc` 函数分配内存时，只能使用 `Free` 函数释放该内存。  
-  
- 当从不同的线程或任务分配和释放一组固定的分配大小时，使用 `Alloc` 和 `Free` 函数。  并发运行时将缓存它从 C 运行时堆分配的内存。  由于并发运行时为每个正在运行的线程保留单独的内存缓存，因此运行时无需使用锁或内存屏障即可管理内存。  系统访问内存缓存越频繁，应用程序从 `Alloc` 和 `Free` 函数受益越多。  例如，经常同时调用 `Alloc` 和 `Free` 的线程要比主要调用 `Alloc` 或 `Free` 的线程受益多。  
+ 并发运行时提供两个针对分配和释放内存块的能力以并发方式进行了优化的内存管理函数。 [Concurrency:: alloc](reference/concurrency-namespace-functions.md#alloc)函数通过使用指定的大小中分配的内存块。 [Concurrency:: free](reference/concurrency-namespace-functions.md#free)函数释放已分配的内存`Alloc`。  
   
 > [!NOTE]
->  在使用这些内存管理函数，并且您的应用程序使用许多内存时，应用程序可能比预期更早地出现内存不足情况。  由于一个线程缓存的内存块不可用于其他任何线程，因此如果一个线程占有大量内存，则该内存不可用。  
+>  `Alloc`和`Free`函数相互依赖。 使用`Free`函数仅用于释放通过使用分配的内存`Alloc`函数。 此外，当使用`Alloc`函数以分配内存时，只能使用`Free`函数来释放该内存。  
   
-## 示例  
- 有关使用 `Alloc` 和 `Free` 函数来提高内存性能的示例，请参见[如何：使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。  
+ 使用`Alloc`和`Free`函数时分配和释放一组固定的分配大小从不同的线程或任务。 并发运行时缓存它从 C 运行时堆中分配的内存。 并发运行时保存单独的内存缓存中，以便每个正在运行的线程;因此，运行时管理内存而不使用锁或内存屏障。 应用程序受益越多从`Alloc`和`Free`函数时更频繁地访问内存缓存。 例如，经常同时调用的线程`Alloc`和`Free`好处超过主要调用线程`Alloc`或`Free`。  
   
-## 请参阅  
+> [!NOTE]
+>  当您使用这些内存管理函数，并输入你的应用程序使用大量内存，应用程序可能内存不足的情况更快地比预期。 因为通过某个线程缓存的内存块均不可用于其他任何线程，如果一个线程持有大量内存，则该内存不可用。  
+  
+## <a name="example"></a>示例  
+ 有关示例，使用`Alloc`和`Free`函数提高内存性能，请参阅[如何： 使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。  
+  
+## <a name="see-also"></a>另请参阅  
  [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [如何：使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
+

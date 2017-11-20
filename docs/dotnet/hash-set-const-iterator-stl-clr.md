@@ -1,41 +1,39 @@
 ---
-title: "hash_set::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator 成员 [STL/CLR]"
+title: "hash_set:: const_iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 5b346a3e-cdbb-4300-9b25-a16a5f74f9b2
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a4dde55c1e019c89565f236d729a55997311cfd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetconstiterator-stlclr"></a>hash_set::const_iterator (STL/CLR)
 受控序列的常量迭代器的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## 备注  
- 该类型描述了未指定类型 `T2` 的一个对象，该类型可以作为控制序列的常数双向迭代数。  
+## <a name="remarks"></a>备注  
+ 此类型描述未指定类型的对象`T2`，可用作受控序列的常量的双向迭代器。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_set_const_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::iterator](../dotnet/hash-set-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)

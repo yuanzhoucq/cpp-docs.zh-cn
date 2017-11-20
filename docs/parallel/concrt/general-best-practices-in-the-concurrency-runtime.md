@@ -1,156 +1,166 @@
 ---
-title: "并发运行时中的常规最佳做法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "并发运行时，常规最佳做法"
+title: "并发运行时中的常规最佳做法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70903fd7d74f23d17fffb9795b36c5351745a829
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 并发运行时中的常规最佳做法
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文档描述应用于并发运行时的多个领域的最佳实践。  
+# <a name="general-best-practices-in-the-concurrency-runtime"></a>并发运行时中的常规最佳做法
+本文档描述应用于的并发运行时的多个区域的最佳做法。  
   
-##  <a name="top"></a> 各节内容  
- 本文档包含以下几节：  
+##  <a name="top"></a> 部分  
+ 本文档包含以下各节：  
   
--   [尽可能使用协作同步构造](#synchronization)  
+- [使用尽可能协作同步构造](#synchronization)  
   
--   [避免不让步的长任务](#yield)  
+- [避免不产生的时间较长的任务](#yield)  
   
--   [使用过度订阅抵消停滞或高延迟的操作](#oversubscription)  
+- [使用过度订阅于阻止或具有高延时的偏移量操作](#oversubscription)  
   
--   [尽可能使用并发内存管理函数](#memory)  
+- [使用尽可能并发内存管理函数](#memory)  
   
--   [使用 RAII 管理并发对象的生存期](#raii)  
+- [使用 RAII 来管理并发对象的生存期](#raii)  
   
--   [不要在全局范围内创建并发对象](#global-scope)  
+- [不要在全局范围内创建并发对象](#global-scope)  
   
--   [不要在共享数据段中使用并发对象](#shared-data)  
+- [不在共享的数据段中使用并发对象](#shared-data)  
   
-##  <a name="synchronization"></a> 尽可能使用协作同步构造  
- 并发运行时提供了许多无需外部同步对象的并发安全的构造。  例如，[concurrency::concurrent\_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 类可提供并发安全的追加和元素访问操作。  但是，如果您需要对资源进行独占访问，则运行时可提供 [Concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md)、[concurrency::reader\_writer\_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) 和 [concurrency::event](../../parallel/concrt/reference/event-class.md) 类。  这些类型以协作方式工作；因此，当第一个任务等待数据时，任务计划程序可以将处理资源重新分配给另一个上下文。  请尽可能使用这些同步类型而不是其他同步机制，例如 Windows API（它不以协作方式工作）提供的同步机制。  有关这些同步类型和代码示例的更多信息，请参见[同步数据结构](../../parallel/concrt/synchronization-data-structures.md)和[将同步数据结构与 Windows API 进行比较](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。  
+##  <a name="synchronization"></a>使用尽可能协作同步构造  
+ 并发运行时提供许多不需要外部同步对象的并发安全构造。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)类提供并发安全追加和元素访问操作。 但是，对于需要对资源的独占访问的情况下，运行时提供[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)， [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)，和[并发:: 事件](../../parallel/concrt/reference/event-class.md)类。 这些类型的行为以协作方式;因此，第一个任务等待数据任务计划程序可以重新分配到另一个上下文的处理资源。 请尽可能使用这些同步类型而不是其他同步机制，如提供的 Windows API 中，不以协作方式那样工作。 有关这些同步类型和代码示例的详细信息，请参阅[同步数据结构](../../parallel/concrt/synchronization-data-structures.md)和[比较同步数据结构与 Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="yield"></a> 避免不让步的长任务  
- 因为任务计划程序以协作方式工作，所以它无法保证任务之间的公平性。  因此，一项任务可以阻止其他任务启动。  虽然这在某些情况下是可以接受的，但在其他情况下可能导致死锁或匮乏。  
+##  <a name="yield"></a>避免不产生的时间较长的任务  
+ 由于任务计划程序的行为以协作方式，它不提供任务间的公平性。 因此，任务可以阻止其他任务启动。 虽然这是可接受在某些情况下，这会在其他情况下导致死锁或资源不足。  
   
- 以下示例可执行比已分配的处理资源数更多的任务。  第一个任务不对任务计划程序让步，因此在完成第一个任务之前，第二个任务不会启动。  
+ 下面的示例执行多个任务比已分配的处理资源数。 第一个任务不会生成任务计划程序，因此第二个任务不会在第一个任务完成之前不启动。  
   
- [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/CPP/general-best-practices-in-the-concurrency-runtime_1.cpp)]  
+ [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]  
   
  该示例产生下面的输出：  
   
  1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000  
   
- 可通过几种方式在这两个任务之间实现协作。  一种方式是在长期运行任务中偶尔对任务计划程序做出让步。  以下示例修改了 `task` 函数，以便调用 [concurrency::Context::Yield](../Topic/Context::Yield%20Method.md) 方法来让任务计划程序先运行另一个任务。  
+
+ 有多种方法可以启用这两个任务间的协作。 一种方法是有时将控制权转交给长时间运行任务的任务计划程序。 下面的示例修改`task`函数调用[concurrency::Context::Yield](reference/context-class.md#yield)方法来让任务计划程序执行，以便可以运行另一个任务。  
+
   
- [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/CPP/general-best-practices-in-the-concurrency-runtime_2.cpp)]  
+ [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]  
   
  该示例产生下面的输出：  
   
-  **1: 250000000**  
-**2: 250000000**  
-**1: 500000000**  
-**2: 500000000**  
-**1: 750000000**  
-**2: 750000000**  
-**1: 1000000000**  
-**2: 1000000000** `Context::Yield` 方法只对当前线程所属的计划程序中的其他活动线程、轻量级任务或另一个操作系统线程做出让步。  此方法不会对 [Concurrency::task\_group](../Topic/task_group%20Class.md) 或 [concurrency::structured\_task\_group](../../parallel/concrt/reference/structured-task-group-class.md) 对象中计划运行但尚未开始的工作做出让步。  
+```Output  
+1: 250000000  
+2: 250000000  
+1: 500000000  
+2: 500000000  
+1: 750000000  
+2: 750000000  
+1: 1000000000  
+2: 1000000000  
+```  
   
- 还可以通过其他方式在长期运行的任务之间实现协作。  您可以将大任务划分为较小的子任务，  还可以在执行长期任务期间启用过度订阅。  您可以通过过度订阅创建比可用硬件线程数更多的线程。  如果长期任务包含大量延迟（例如，从磁盘或网络连接读取数据），则过度订阅会很有用。  有关轻量级任务和过度订阅的更多信息，请参见[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
+ `Context::Yield`方法可让出仅另一个活动线程在与当前线程的所属，轻量级任务或另一个操作系统线程计划程序上。 此方法不会生成工作计划运行[concurrency:: task_group](reference/task-group-class.md)或[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)对象但尚未开始。  
   
- \[[Top](#top)\]  
+ 还有其他方法，以便在长时间运行的任务之间的协作。 为较小的多个子任务，可以中断大型任务。 你还可以启用较长的任务执行期间的过度订阅。 可以通过过度订阅创建比可用硬件线程数更多的线程。 时间较长的任务包含很长的延迟，例如，从磁盘或从网络连接读取数据，过度订阅时特别有用。 有关轻量级任务和过度订阅的详细信息，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
-##  <a name="oversubscription"></a> 使用过度订阅抵消停滞或高延迟的操作  
- 并发运行时可提供同步基元（如 [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md)），以便任务能够以协作方式停滞和互相做出让步。  如果一项任务以协作方式停滞或做出让步，那么当第一个任务等待数据时，任务计划程序可以将处理资源重新分配给另一个上下文。  
+ [[返回页首](#top)]  
   
- 在某些情况下，您无法使用并发运行时提供的协作停滞机制。  例如，您所使用的外部库可能使用不同的同步机制。  又比如，当您执行包含大量延迟的操作时，例如，您使用 Windows API `ReadFile` 函数从网络连接读取数据。  在这些情况下，过度订阅会在另一个任务闲置时使其他任务能够运行。  您可以通过过度订阅创建比可用硬件线程数更多的线程。  
+##  <a name="oversubscription"></a>使用过度订阅于阻止或具有高延时的偏移量操作  
+ 并发运行时提供同步基元，如[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)，，以便任务能够以协作方式停滞和将控制权转交给彼此。 当一个任务以协作方式阻止或生成时，任务计划程序可以重新分配到另一个上下文的处理资源，如第一个任务等待数据。  
   
- 请考虑下面的 `download` 函数，它使用指定 URL 下载文件。  此示例使用 [concurrency::Context::Oversubscribe](../Topic/Context::Oversubscribe%20Method.md) 方法临时增加活动线程的数量。  
+ 在你不能在其中使用并发运行时提供的协作停滞机制的情况下。 例如，你使用的外部库可能使用不同的同步机制。 另一个示例是执行操作时，可能存在很长的延迟，例如，当你使用 Windows API`ReadFile`函数从网络连接读取数据。 在这些情况下，过度订阅可以启用要在另一个任务空闲时运行的其他任务。 可以通过过度订阅创建比可用硬件线程数更多的线程。  
   
- [!CODE [concrt-download-oversubscription#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#4)]  
+ 请考虑以下函数， `download`，其中下载了给定的 URL 的文件。 此示例使用[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法临时增加活动线程数。  
+
+ [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]  
   
- 因为 `GetHttpFile` 函数执行潜在延迟操作，所以在当前任务等待数据时，过度订阅可以使其他任务能够运行。  有关此示例的完整版本，请参见[如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。  
+ 因为`GetHttpFile`函数执行潜在延迟操作，过度订阅可以启用其他任务运行在当前任务等待数据。 此示例的完整版本，请参阅[如何： 使用过度订阅偏移延迟到](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="memory"></a> 尽可能使用并发内存管理函数  
- 如果您具有经常分配生存期相对较短的小型对象的精细任务时，可使用内存管理函数 [concurrency::Alloc](../Topic/Alloc%20Function.md) 和 [concurrency::Free](../Topic/Free%20Function.md)。  并发运行时为每个正在运行的线程保留单独的内存缓存。  在不使用锁或内存屏障的情况下，`Alloc` 和 `Free` 函数从这些缓存分配和释放内存。  
+##  <a name="memory"></a>使用尽可能并发内存管理函数  
+
+ 使用内存管理函数[concurrency:: alloc](reference/concurrency-namespace-functions.md#alloc)和[concurrency:: free](reference/concurrency-namespace-functions.md#free)，如果你具有经常分配生存期相对较短的小型对象的精细任务。 并发运行时包含单独的内存缓存中，以便每个正在运行的线程。 `Alloc`和`Free`函数分配和释放内存从这些缓存而不使用锁或内存屏障。  
   
- 有关这些内存管理函数的更多信息，请参见[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  有关使用这些函数的示例，请参见[如何：使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。  
+ 有关这些内存管理函数的详细信息，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 有关使用这些函数的示例，请参阅[如何： 使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)。  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="raii"></a> 使用 RAII 管理并发对象的生存期  
- 并发运行时使用异常处理实现取消等功能。  因此，在您调用运行时或调用另一个调用该运行时的库时，可编写异常安全代码。  
+##  <a name="raii"></a>使用 RAII 来管理并发对象的生存期  
+ 并发运行时使用异常处理来实现的功能，例如取消。 调入运行时或调用调入运行时的另一个库时，因此，编写异常安全的代码。  
   
- “资源获取即初始化”\(RAII\) 模式是一种在给定范围内安全管理并发对象的生存期的方式。  在 RAII 模式下，将在堆栈上分配一个数据结构。  该数据结构在创建时将会初始化或获取一个资源，而且该数据结构在销毁时将会销毁或释放该资源。  RAII 模式可确保在封闭范围退出之前调用析构函数。  在函数包含多个 `return` 语句时，此模式很有用。  此模式还可帮助您编写异常安全代码。  在 `throw` 语句导致堆栈展开时，将会调用 RAII 对象的析构函数；因此，始终会正确删除或释放资源。  
+ *获取资源即初始化*(RAII) 模式是一种方法，以便安全地管理在给定作用域下的并发对象的生存期。 下 RAII 模式，在堆栈上分配一种数据结构。 该数据结构初始化，或在创建和销毁或销毁数据结构时释放该资源时，获取一个资源。 RAII 模式可确保在封闭作用域退出之前被调用的析构函数。 当函数包含多个时，此模式将有用`return`语句。 此模式还可帮助你编写异常安全的代码。 当`throw`语句会导致堆栈展开，析构函数调用 RAII 对象的; 因此，资源是始终正确地删除或释放。  
   
- 运行时定义了几种使用 RAII 模式的类，例如，[concurrency::critical\_section::scoped\_lock](../Topic/critical_section::scoped_lock%20Class.md) 和 [concurrency::reader\_writer\_lock::scoped\_lock](../Topic/reader_writer_lock::scoped_lock%20Class.md)。  这些帮助器类称作“范围锁”。  在使用 [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) 或 [concurrency::reader\_writer\_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) 对象时，这些类可提供若干好处。  这些类的构造函数需要对已提供的 `critical_section` 或 `reader_writer_lock` 对象的访问权限；而析构函数可释放对此对象的访问权限。  当销毁范围锁时，它会自动释放对其互斥对象的访问权；因此，请不要手动为基础对象解锁。  
+ 运行时定义了几种使用 RAII 模式，例如，类[concurrency::critical_section::scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class)和[concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)。 这些帮助器类称为*范围锁*。 当您使用时，这些类将提供以下几个好处[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)或[concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)对象。 这些类的构造函数获取对提供的访问`critical_section`或`reader_writer_lock`对象; 对该对象的析构函数版本访问权限。 因为它被销毁时自动范围的锁释放对其的互相排斥对象的访问，你手动解锁基础对象。  
   
- 请考虑 `account` 类，它由外部库定义，因此无法修改。  
+ 请考虑以下类， `account`，这由外部库定义，并因此不能修改。  
   
- [!CODE [concrt-account-transactions#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-account-transactions#1)]  
+ [!code-cpp[concrt-account-transactions#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_4.h)]  
   
- 以下示例对 `account` 对象并行执行多个事务。  该示例使用 `critical_section` 对象同步访问 `account` 对象，因为 `account` 类是并发安全的。  每项并行操作都使用 `critical_section::scoped_lock` 对象来保证在操作成功或失败时可以解锁 `critical_section` 对象。  如果帐户余额为负，则可引发异常以使 `withdraw` 操作失败。  
+ 下面的示例执行多个事务上`account`并行的对象。 该示例使用`critical_section`对访问进行同步的对象`account`对象，因为`account`类不是并发安全。 每个并行操作使用`critical_section::scoped_lock`对象来保证`critical_section`该操作成功或失败时，对象处于解除锁定状态。 当帐户余额为负，`withdraw`通过引发异常的操作失败。  
   
- [!CODE [concrt-account-transactions#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-account-transactions#2)]  
+ [!code-cpp[concrt-account-transactions#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_5.cpp)]  
   
- 此示例产生下面的示例输出：  
+ 该示例产生下面的示例输出：  
   
-  **在存款之前平衡：1924**   
-**存款之后平衡：2924**  
-**提款之前平衡：2924**  
-**提款之后平衡：\-76**  
-**提款之前平衡：\-76**  
-**错误详细信息:**   
- **负数平衡：\-76** 有关使用 RAII 模式管理并发对象生存期的其他示例，请参见[演练：从用户界面线程中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)、[如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)和[如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。  
+```Output  
+Balance before deposit: 1924  
+Balance after deposit: 2924  
+Balance before withdrawal: 2924  
+Balance after withdrawal: -76  
+Balance before withdrawal: -76  
+Error details:  
+    negative balance: -76  
+```  
   
- \[[Top](#top)\]  
+ 有关使用 RAII 模式，来管理并发对象的生存期的其他示例，请参阅[演练： 从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)，[如何： 使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)，和[如何： 使用过度订阅抵消延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。  
   
-##  <a name="global-scope"></a> 不要在全局范围内创建并发对象  
- 在全局范围内创建并发对象时可在应用程序中导致问题 ，如内存访问冲突或死锁。  
+ [[返回页首](#top)]  
   
- 例如，在创建并发运行时对象时，如果尚未创建计划程序，那么运行时会创建一个默认计划程序。  在全局对象构造期间创建的运行时对象创建将相应地造成此运行时创建默认计划程序。  但是，此过程采用了内部锁，这可能会干扰支持并发运行时基础结构的其他对象的初始化过程。  另一个尚未初始化的基础结构对象可能需要此内部锁，所以您的应用程序可能发生死锁。  
+##  <a name="global-scope"></a>不要在全局范围内创建并发对象  
+ 在全局范围内创建并发对象时，会导致应用程序中出现死锁或内存访问冲突等问题。  
   
- 以下示例演示了如何创建全局 [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) 对象。  此模式不仅适用于 `Scheduler` 类，还适用于并发运行时提供的所有其他类型。  建议您不要遵循此模式，因为它可能导致您的应用程序出现意外的行为。  
+ 例如，在创建并发运行时对象时，如果尚未创建计划程序，运行时会创建一个默认计划程序。 相应地，在全局对象构造期间创建的运行时对象将导致运行时创建此默认计划程序。 但是，此过程采用了内部锁，这会干扰支持并发运行时基础结构的其他对象的初始化过程。 另一个尚未初始化的基础结构对象可能需要此内部锁，因此会导致您的应用程序中发生死锁。  
   
- [!code-cpp[concrt-global-scheduler#1](../../parallel/concrt/codesnippet/CPP/general-best-practices-in-the-concurrency-runtime_3.cpp)]  
+ 下面的示例演示如何创建全局[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)对象。 此模式不仅适用于 `Scheduler` 类，还适用于并发运行时提供的所有其他类型。 建议您不要遵循此模式，因为它可能会导致您的应用程序中出现意外行为。  
   
- 有关创建 `Scheduler` 对象的正确方式的示例，请参见[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
+ [!code-cpp[concrt-global-scheduler#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_6.cpp)]  
   
- \[[Top](#top)\]  
+ 有关创建的正确方法的示例`Scheduler`对象，请参阅[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
-##  <a name="shared-data"></a> 不要在共享数据段中使用并发对象  
- 并发运行时不支持在共享数据段（例如，由 [data\_seg](../../preprocessor/data-seg.md) `#pragma` 指令创建的数据段）中使用并发对象。  跨进程边界共享的并发对象可使运行时处于不一致或无效的状态。  
+ [[返回页首](#top)]  
   
- \[[Top](#top)\]  
+##  <a name="shared-data"></a>不在共享的数据段中使用并发对象  
+ 并发运行时不支持在共享的数据部分中，例如，在 data 节创建并发对象的使用[data_seg](../../preprocessor/data-seg.md) `#pragma`指令。 跨进程边界共享的并发对象无法将运行时置于不一致或无效的状态。  
   
-## 请参阅  
+ [[返回页首](#top)]  
+  
+## <a name="see-also"></a>另请参阅  
  [并发运行时最佳做法](../../parallel/concrt/concurrency-runtime-best-practices.md)   
- [并行模式库 \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
+ [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
  [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)   
  [将同步数据结构与 Windows API 进行比较](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)   
- [如何：使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)   
- [如何：使用过度订阅偏移延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)   
- [如何：使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)   
- [演练：从用户界面线程中移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)   
+ [如何： 使用 Alloc 和 Free 提高内存性能](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)   
+ [如何： 使用过度订阅抵消延迟](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)   
+ [如何： 使用上下文类实现协作信号量](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)   
+ [演练： 从用户界面线程中删除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)   
  [并行模式库中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)   
  [异步代理库中的最佳做法](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocale/std::ctype_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- ctype_byname class
+f1_keywords: xlocale/std::ctype_byname
+dev_langs: C++
+helpviewer_keywords: ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: f1fb3ef836361a4d98ac8c7ab764da5e3fd43c7a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5f57ef8eadf5ea963ef4a8b8c1eaa7b6ec48ee6d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ctypebyname-class"></a>ctype_byname 类
 派生模板类描述一个对象，该对象可以充当给定区域设置的 ctype facet ，允许对字符进行分类，并在大小写之间以及本机字符集和区域设置指定的字符集之间进行转换。  
@@ -60,7 +55,6 @@ protected:
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

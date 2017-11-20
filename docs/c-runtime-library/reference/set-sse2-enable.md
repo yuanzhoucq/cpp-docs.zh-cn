@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_SSE2_enable
+apiname: _set_SSE2_enable
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,23 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _set_SSE2_enable function
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: d6db305c6674b974786cd6c17e6bf8b63b304aa2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 启用或禁用在 CRT 数学例程中使用[流式处理 SIMD 扩展 2](http://msdn.microsoft.com/en-us/f98440eb-73a9-4f96-b203-ac41bb6701ea) (SSE2) 指令。 （此函数在 x64 体系结构上不可用，因为默认情况下将启用 SSE2。）  

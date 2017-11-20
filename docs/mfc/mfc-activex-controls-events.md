@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
 - notifications [MFC], notifying containers of events
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
-ms.openlocfilehash: f4e6cfc21a12288a53eca391eccb86bb4ea3ff55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 98be16e8e493592f06aa2e4963f748e32b3f345d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 控件：事件
 ActiveX 控件使用事件通知控件有事情的容器。 事件的常见示例包括点击控件，输入在控件的状态中使用键盘和更改的数据。 当发生这些操作时，则控件触发事件以提醒容器。  
@@ -63,4 +60,3 @@ ActiveX 控件使用事件通知控件有事情的容器。 事件的常见示�
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)   
  [COleControl 类](../mfc/reference/colecontrol-class.md)
-

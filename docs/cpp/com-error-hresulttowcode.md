@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_error::HRESULTToWCode
-dev_langs:
-- C++
-helpviewer_keywords:
-- HRESULTToWCode method [C++]
+f1_keywords: _com_error::HRESULTToWCode
+dev_langs: C++
+helpviewer_keywords: HRESULTToWCode method [C++]
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 296c6f43c1bc840ae13bdf4ad355d7f41e2cc3fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2dac335f3cc2ea26602a5f8a91a47db7d1ebe39b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Microsoft 专用**  

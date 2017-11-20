@@ -1,39 +1,39 @@
 ---
-title: "OLE DB 使用者和提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 使用者"
-  - "OLE DB 使用者, OLE DB 数据体系结构"
-  - "OLE DB 提供程序"
-  - "OLE DB 提供程序, OLE DB 数据体系结构"
-  - "OLE DB, 数据模型"
+title: "OLE DB 使用者和提供程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, OLE DB data architecture
+- OLE DB providers
+- OLE DB consumers, OLE DB data architecture
+- OLE DB consumers
+- OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd09e1566a6f53244d420387870a03b0b34f8fb6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 使用者和提供程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 结构采用使用者和提供程序模型。  使用者请求数据。  提供程序响应这些请求，将数据放置于一个表格中并且将其返回到使用者。  使用者发出的任何调用都必须在提供程序中实现。  
+# <a name="ole-db-consumers-and-providers"></a>OLE DB 使用者和提供程序
+OLE DB 体系结构使用的模型使用者和提供程序。 使用者发出数据请求。 一个提供程序通过将数据放在以表格格式并将其返回给使用者响应这些请求。 必须提供程序中实现任何使用者可以进行的调用。  
   
- 从技术定义而言，使用者是指任何通过 OLE DB 接口访问数据的系统或应用程序代码（不一定是 OLE DB 组件）。  这些接口在提供程序中实现。  因此，提供程序是指任何一个实现 OLE DB 接口来封装数据访问并将其向其他对象（即，使用者）公开的软件组件。  
+ 定义从技术上讲，使用者是指任何通过 OLE DB 接口访问数据的系统或应用程序代码 （不一定是 OLE DB 组件）。 提供程序中实现接口。 因此，提供程序是实现 OLE DB 接口来封装对数据的访问，并将其公开给其他对象 （即，使用者） 的任何软件组件。  
   
- 从其角色而言，使用者调用 OLE DB 接口方法；而 OLE DB 提供程序实现所需的 OLE DB 接口。  
+ 根据角色，使用者方法对调用 OLE DB 接口;OLE DB 提供程序实现所需的 OLE DB 接口。  
   
- OLE DB 避免使用术语“客户端”和“服务器”，因为这些角色并不总是有意义，尤其具有 n 层的情况下。  因为使用者可能是一层中为另一组件服务的组件，所以称之为客户组件会引起混乱。  另外，提供程序有时更像一个数据库驱动程序，而不是服务器。  
+ OLE DB 避免条款客户端和服务器，因为这些角色执行不总是有意义，特别是在 n 层的情况。 因为使用者可能是上一层中提供另一个组件的组件，无法调用它的客户端组件会引起混乱。 此外，提供程序有时更像与服务器的数据库驱动程序。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 编程](../../data/oledb/ole-db-programming.md)   
  [OLE DB 编程概述](../../data/oledb/ole-db-programming-overview.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - _copysign
 - copysignl
 - _copysignf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - copysignl function
 - _copysignl function
@@ -45,30 +43,15 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: eacbc58af19bf5b2a038021c982e348a50fa9271
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 48e78da8f8ffa72ee5e10dab866f5ffdee5aac4c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 返回一个值，该值具有一个自变量的数值和另一个自变量的符号。  
@@ -128,7 +111,7 @@ long double _copysignl(
 |`_copysign`|\<float.h>|  
 |`copysign`, `copysignf`, `copysignl`, `_copysignf`, `_copysignl`|\<math.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [fabs、fabsf、fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   

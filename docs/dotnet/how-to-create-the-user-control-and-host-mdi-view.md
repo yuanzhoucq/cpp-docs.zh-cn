@@ -1,84 +1,84 @@
 ---
-title: "如何：创建用户控件并承载 MDI 视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC [C++], Windows 窗体控件"
-  - "Windows 窗体 [C++], MFC 支持"
+title: "如何： 创建用户控件并承载 MDI 视图 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms Controls
+- Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 298a08689d6c4aa69d4a52af5fad965e3e353b5c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：创建用户控件并承载 MDI 视图
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列步骤说明如何创建 .NET Framework 用户控件、创作控件类库（特别是 Windows 控件库项目）中的用户控件，然后将项目编译为程序集。  然后，可以从 MFC 应用程序中使用控件，该应用程序使用派生自 [CView Class](../mfc/reference/cview-class.md) 和 [CWinFormsView Class](../mfc/reference/cwinformsview-class.md) 的类。  
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：创建用户控件并承载 MDI 视图
+以下步骤演示如何创建.NET Framework 用户控件创作控件类库 （具体而言，Windows 控件库项目） 中的用户控件，然后将项目编译为程序集。 从 MFC 应用程序使用派生自的类也可以使用控件[CView 类](../mfc/reference/cview-class.md)和[CWinFormsView 类](../mfc/reference/cwinformsview-class.md)。  
   
- 有关如何创建 Windows 窗体用户控件和创作控件类库的信息，请参见[如何：创作用户控件](../Topic/How%20to:%20Author%20Composite%20Controls.md)。  
+ 有关如何创建 Windows 窗体用户控件和创作控件类库的信息，请参阅[如何： 创作用户控件](/dotnet/framework/winforms/controls/how-to-author-composite-controls)。  
   
 > [!NOTE]
->  在某些情况下，Windows 窗体控件（例如第三方网格控件）当在 MFC 应用程序中被承载时行为可能不可靠。  建议的解决方法是：将 Windows 窗体用户控件放置在 MFC 应用程序中，而将第三方网格控件放置在用户控件中。  
+>  在某些情况下，Windows 窗体控件，如第三方网格控件，可能无法可靠地在 MFC 应用程序中承载时。 建议的解决方法是将 Windows 窗体用户控件放在 MFC 应用程序并将该用户控件中的第三方网格控件放。  
   
- 此过程假定您按照[如何：创建用户控件并将它承载在对话框中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)中的过程创建了名为 WindowsFormsControlLibrary1 的 Windows 窗体控件库项目。  
+ 此过程假定你创建一个名 WindowsFormsControlLibrary1，为按照中的过程的 Windows 窗体控件库项目[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。  
   
-### 创建 MFC 宿主应用程序  
+### <a name="to-create-the-mfc-host-application"></a>若要创建 MFC 主机应用程序  
   
 1.  创建 MFC 应用程序项目。  
   
-     在**“文件”**菜单上，选择**“新建”**，然后单击**“项目”**。  在**“Visual C\+\+”**文件夹中，选择**“MFC 应用程序”**。  
+     上**文件**菜单上，选择**新建**，然后单击**项目**。 在**Visual c + +**文件夹，选择**MFC 应用程序**。  
   
-     在“名称”框中，输入 `MFC02`，并将“解决方案”设置更改为“添入解决方案”。  单击**“确定”**。  
+     在**名称**框中，输入`MFC02`和更改**解决方案**将设置为**将添加到解决方案**。 单击“确定”。  
   
-     在**“MFC 应用程序向导”**中，接受所有默认值，然后单击**“完成”**。  这就创建了一个具有多文档界面的 MFC 应用程序。  
+     在**MFC 应用程序向导**，接受所有默认值，然后单击**完成**。 这将创建多文档界面 MFC 应用程序。  
   
-2.  配置项目以获得公共语言运行时 \(CLR\) 支持。  
+2.  配置公共语言运行时 (CLR) 支持的项目。  
   
-     在“解决方案资源管理器”中，右击 `MFC01` 项目节点，然后从上下文菜单中选择“属性”。  将显示**“属性页”**对话框。  
+     在**解决方案资源管理器**，右键单击`MFC01`项目节点，然后选择**属性**从上下文菜单。 **属性页**对话框随即出现。  
   
-     在**“配置属性”**下选择**“常规”**。  在**“项目默认值”**部分下，将**“公共语言运行时支持”**设置为**“公共语言运行时支持\(\/clr\)”**。  
+     下**配置属性**，选择**常规**。 下**项目默认值**部分中，设置**公共语言运行时支持**到**公共语言运行时支持 (/ clr)**。  
   
-     在**“配置属性”**下，展开**“C\/C\+\+”**，然后单击**“常规”**节点。  将**“调试信息格式”**设置为**“程序数据库\(\/Zi\)”**。  
+     下**配置属性**，展开**C/c + +**单击**常规**节点。 设置**调试信息格式**到**程序数据库 (/Zi)**。  
   
-     单击**“代码生成”**节点。  将**“启用最小重新生成”**设置为**“否\(\/Gm\-\)”**。  另外，将**“基本运行时检查”**设置为**“默认”**。  
+     单击**代码生成**节点。 设置**启用最小重新生成**到**否 (/ Gm-)**。 此外设置**基本运行时检查**到**默认**。  
   
-     单击**“确定”**应用所做的更改。  
+     单击**确定**要应用所做的更改。  
   
-3.  在 stdafx.h 中，添加下列行：  
+3.  在 stdafx.h 文件中，添加以下行：  
   
     ```  
     #using <System.Windows.Forms.dll>  
     ```  
   
-4.  向 .NET 控件添加引用。  
+4.  添加对.NET 控件的引用。  
   
-     在解决方案资源管理器中，右击 `MFC02` 项目节点，然后选择“添加”、“引用”。  在“属性页”中，单击“添加新引用”，选择“WindowsFormsControlLibrary1”（在“项目”选项卡下），然后单击“确定”。  此操作添加一个 [\/FU](../build/reference/fu-name-forced-hash-using-file.md) 编译器选项形式的引用，以便程序进行编译；它还将 WindowsFormsControlLibrary1.dll 复制到 `MFC02` 项目目录中，以便程序运行。  
+     在**解决方案资源管理器**，右键单击`MFC02`项目节点，然后选择**添加**，**引用**。 在**属性页**，单击**添加新引用**，选择 WindowsFormsControlLibrary1 (下**项目**选项卡)，然后单击**确定**. 这将添加引用的形式[/FU](../build/reference/fu-name-forced-hash-using-file.md)编译器选项，以使程序将编译; 它还会将复制到 WindowsFormsControlLibrary1.dll`MFC02`项目目录，以便运行程序。  
   
-5.  在 stdafx.h 中，请找到以下行：  
+5.  在 stdafx.h 文件中，找到以下行：  
   
     ```  
     #endif // _AFX_NO_AFXCMN_SUPPORT   
     ```  
   
-     在此行上面添加这些行：  
+     添加上面这些行：  
   
     ```  
     #include <afxwinforms.h>   // MFC Windows Forms support  
     ```  
   
-6.  修改视图类以便它从 [CWinFormsView](../mfc/reference/cwinformsview-class.md) 继承。  
+6.  修改视图类，以便它继承自[CWinFormsView](../mfc/reference/cwinformsview-class.md)。  
   
-     在 MFC02View.h 中，将 [CView](../mfc/reference/cview-class.md) 替换为 [CWinFormsView](../mfc/reference/cwinformsview-class.md)，以便出现如下所示的代码：  
+     在 MFC02View.h，将替换为[CView](../mfc/reference/cview-class.md)与[CWinFormsView](../mfc/reference/cwinformsview-class.md) ，以便该代码会出现，如下所示：  
   
     ```  
     class CMFC02View : public CWinFormsView  
@@ -86,9 +86,9 @@ caps.handback.revision: 25
     };  
     ```  
   
-     如果希望将附加视图添加到 MDI 应用程序，需要为创建的每个视图调用 [CWinApp::AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md)。  
+     如果你想将其他视图添加到 MDI 应用程序，你将需要调用[CWinApp::AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate)为你创建每个视图。  
   
-7.  修改 MFC02View.cpp 文件以将 IMPLEMENT\_DYNCREATE 宏和消息映射中的 CView 更改为 CWinFormsView，并且将现有空构造函数替换为下面显示的构造函数：  
+7.  修改要更改 CView 为 CWinFormsView IMPLEMENT_DYNCREATE 宏和消息映射中并将现有的空构造函数替换为下面所示的构造函数的 MFC02View.cpp 文件：  
   
     ```  
     IMPLEMENT_DYNCREATE(CMFC02View, CWinFormsView)  
@@ -103,11 +103,11 @@ caps.handback.revision: 25
   
 8.  生成并运行该项目。  
   
-     在**“解决方案资源管理器”**中，右击“MFC02”并选择**“设为启动项目”**。  
+     在**解决方案资源管理器**，右键单击 MFC02 并选择**设为启动项目**。  
   
-     在**“生成”**菜单上，单击**“生成解决方案”**。  
+     在 **“生成”** 菜单上，单击 **“生成解决方案”**。  
   
-     在**“调试”**菜单上，单击**“开始执行\(不调试\)”**。  
+     上**调试**菜单上，单击**启动而不调试**。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [以 MFC 视图的形式承载 Windows 窗体用户控件](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

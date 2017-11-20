@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs:
-- C++
-helpviewer_keywords:
-- ITopologyNode structure
+dev_langs: C++
+helpviewer_keywords: ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: c0a4e8365d7d0ef9912bb84e4a2a4cfe7e9ef0f1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 1b2c53761a47162e3dae17a1447612d2e16fe16c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 结构
 资源管理器定义的拓扑节点的接口。 一个节点包含一个或多个执行资源。  
@@ -59,22 +41,22 @@ struct ITopologyNode;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|返回在此节点下组合在一起的执行资源的数量。|  
 |[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|返回在此节点下以枚举顺序分组的第一个执行资源。|  
 |[Itopologynode:: Getid](#getid)|返回此节点的资源管理器的唯一标识符。|  
 |[Itopologynode:: Getnext](#getnext)|返回一个指向枚举顺序中下一拓扑节点的接口。|  
-|[Itopologynode:: Getnumanode](#getnumanode)|返回 Windows 分配此资源管理器节点所属于的 NUMA 节点号。|  
+|[Itopologynode:: Getnumanode](#getnumanode)|返回 Windows 分配到此资源管理器节点所属的 NUMA 节点数。|  
   
 ## <a name="remarks"></a>备注  
- 此接口通常用来为资源管理器已观察到引导系统的拓扑。  
+ 此接口通常用于为通过资源管理器已观察到引导系统的拓扑。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ITopologyNode`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** concrtrm.h  
+ **标头：** concrtrm.h  
   
  **命名空间：** 并发  
   
@@ -109,9 +91,9 @@ virtual unsigned int GetId() const = 0;
  资源管理器的此节点的唯一标识符。  
   
 ### <a name="remarks"></a>备注  
- 并发运行时表示处理器节点组中的系统上的硬件线程。 节点通常派生自系统的硬件拓扑。 例如，特定的套接字或特定 NUMA 节点上的所有处理器可能都属于同一处理器节点。 资源管理器将唯一标识符分配给这些节点开头`0`达并包括`nodeCount - 1`，其中`nodeCount`表示系统上的处理器节点的总数。  
+ 并发运行时表示的处理器节点组中的系统上的硬件线程。 节点通常被派生自系统的硬件拓扑。 例如，特定的套接字或特定的 NUMA 节点上的所有处理器可能都属于同一处理器节点。 资源管理器将分配给从这些节点的唯一标识符`0`包括`nodeCount - 1`，其中`nodeCount`表示系统上的处理器节点的总数。  
   
- 可以从该函数获取节点数[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
+ 可以从函数获取节点的计数[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
   
 ##  <a name="getnext"></a>Itopologynode:: Getnext 方法  
  返回一个指向枚举顺序中下一拓扑节点的接口。  
@@ -124,18 +106,17 @@ virtual ITopologyNode *GetNext() const = 0;
  一个指向枚举顺序中下一节点的接口。 如果系统拓扑的枚举顺序中没有更多的节点，则此方法将返回值 `NULL`。  
   
 ##  <a name="getnumanode"></a>Itopologynode:: Getnumanode 方法  
- 返回 Windows 分配此资源管理器节点所属于的 NUMA 节点号。  
+ 返回 Windows 分配到此资源管理器节点所属的 NUMA 节点数。  
   
 ```
 virtual unsigned long GetNumaNode() const = 0;
 ```  
   
 ### <a name="return-value"></a>返回值  
- Windows 分配此资源管理器节点所属于的 NUMA 节点号。  
+ Windows 分配到此资源管理器节点所属的 NUMA 节点数。  
   
 ### <a name="remarks"></a>备注  
- 在对此节点所属的虚拟处理器根上运行的线程代理将具有关联到至少是此方法返回的 NUMA 节点的 NUMA 节点级别。  
+ 在对此节点所属的虚拟处理器根上运行的线程代理将具有关联到至少是通过此方法返回的 NUMA 节点的 NUMA 节点级别。  
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-

@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::length_error
-- length_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- length_error class
+f1_keywords: stdexcept/std::length_error
+dev_langs: C++
+helpviewer_keywords: length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8720ad32638442d134f3b3d4c3e638ca048f719e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: ee49a5af42dd3ccb34e9465cb46809cc6bb80f09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lengtherror-class"></a>length_error 类
 此类用作引发报告尝试生成对象太长而难以指定的所有异常的基类。  
@@ -109,5 +89,4 @@ Type class std::length_error
 ## <a name="see-also"></a>另请参阅  
  [logic_error 类](../standard-library/logic-error-class.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

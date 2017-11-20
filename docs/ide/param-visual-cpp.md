@@ -1,53 +1,52 @@
 ---
-title: "&lt;param&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "param"
-  - "<param>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<param> C++ XML 标记"
-  - "param C++ XML 标记"
+title: "&lt;param&gt; （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- param
+- <param>
+dev_langs: C++
+helpviewer_keywords:
+- param C++ XML tag
+- <param> C++ XML tag
 ms.assetid: 66c1a1c3-4f98-4bcf-8c7d-9a40308982fb
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21dcb436c58bc3823092ba7c03511bdf04fba9d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;param&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<param\> 标记应当用于方法声明的注释中，以描述方法的一个参数。  
+# <a name="ltparamgt-visual-c"></a>&lt;param&gt; （Visual c + +）
+在方法声明的注释中，应使用 \<param> 标记来描述方法参数之一。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 <param name='name'>description</param>  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `name`  
- 方法参数名。  名称括在单引号或双引号。  如果它没有找到 `name`，编译器会发出警告。  
+ 方法参数的名称。  将名称括在单引号或双引号中。  如果编译器没有找到 `name`，它会发出警告。  
   
  `description`  
- 参数说明。  
+ 参数的说明。  
   
-## 备注  
- \<param\> 标记的文本将显示在 IntelliSense，[对象浏览器](http://msdn.microsoft.com/zh-cn/f89acfc5-1152-413d-9f56-3dc16e3f0470)以及代码注释 Web 报告。  
+## <a name="remarks"></a>备注  
+ 文本\<param > 标记将显示在 IntelliSense 中，[对象浏览器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)，并在代码注释 Web 报表。  
   
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // xml_param_tag.cpp  
@@ -61,5 +60,5 @@ public ref class MyClass {
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

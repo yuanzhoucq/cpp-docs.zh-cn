@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - codecvt
 - <codecvt>
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt header
+dev_langs: C++
+helpviewer_keywords: codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 81a40835fc5122d6384578e1b6e48e81a70db18b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: d35597d8d0c39a15aead1e7c35c512bc8dc7fafe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 定义了多种模板类，用于描述基于模板类 [codecvt](../standard-library/codecvt-class.md) 的对象。 此对象可用作[区域设置 facet](../standard-library/locale-class.md#facet_class) 来控制 `Elem` 类型的值序列和 `char` 类型的值序列之间的转换。  
@@ -88,7 +84,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>另请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

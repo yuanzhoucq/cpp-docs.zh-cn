@@ -1,59 +1,119 @@
 ---
-title: "Platform::MTAThreadAttribute 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::MTAThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::MTAThreadAttribute 类"
+title: "Platform:: mtathreadattribute 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::MTAThreadAttribute::Equals
+- VCCORLIB/Platform::MTAThreadAttribute::GetHashCode
+- VCCORLIB/Platform::MTAThreadAttribute::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 6c45256272f7d72dd1da6b6486f9358eaf062b8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::MTAThreadAttribute 类
-指示应用程序的线程处理模型为多线程单元 \(MTA\)。  
+# <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 类
+指示应用程序的线程处理模型为多线程单元 (MTA)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 public ref class MTAThreadAttribute sealed : Attribute  
 ```  
   
-## 成员  
+### <a name="members"></a>成员  
   
-### 公共构造函数  
-  
-|名称|说明|  
-|--------|--------|  
-|[MTAThreadAttribute 构造函数](../cppcx/mtathreadattribute-constructor-1.md) 构造函数|初始化类的新实例。|  
-  
-### 公共方法  
- MTAThreadAttribute 属性继承自 [Platform::Object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：  
+### <a name="public-constructors"></a>公共构造函数  
   
 |名称|描述|  
-|--------|--------|  
-|[MTAThreadAttribute::Equals](../cppcx/mtathreadattribute-equals.md)|确定指定的对象是否等于当前对象。|  
-|[MTAThreadAttribute::GetHashCode](../cppcx/mtathreadattribute-gethashcode.md)|返回此实例的哈希代码。|  
-|[MTAThreadAttribute::ToString](../cppcx/mtathreadattribute-tostring.md)|返回表示当前对象的字符串。|  
+|----------|-----------------|  
+|[MTAThreadAttribute 构造函数 1](#ctor)构造函数|初始化类的新实例。|  
   
-## 继承层次结构  
+### <a name="public-methods"></a>公共方法  
+ MTAThreadAttribute 属性继承自[platform:: object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：  
+  
+|名称|描述|  
+|----------|-----------------|  
+|[MTAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|  
+|[MTAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
+|[MTAThreadAttribute::ToString](#tostring)|返回表示当前对象的字符串。|  
+  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Platform`  
   
-## 要求  
- **元数据：**platform.winmd  
+### <a name="requirements"></a>要求  
+ **元数据：** platform.winmd  
   
- **命名空间：**Platform  
+ **命名空间：** Platform  
+
+
+
+## <a name="ctor"></a>MTAThreadAttribute 构造函数
+初始化 MTAThreadAttribute 类的新实例。  
   
-## 请参阅  
- [\(NOTINBUILD\) Platform 命名空间](http://msdn.microsoft.com/zh-cn/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>语法  
+  
+```cpp  
+public:MTAThreadAttribute()  
+```  
+  
+
+
+## <a name="equals"></a>MTAThreadAttribute::Equals
+确定指定的对象是否等于当前对象。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp  
+public:virtual override bool Equals(  Object^ obj)  
+```  
+  
+### <a name="parameters"></a>参数  
+ obj  
+ 要比较的对象。  
+  
+### <a name="return-value"></a>返回值  
+ 如果对象相等，则为 `true`；否则为 `false`。  
+  
+
+
+## <a name="gethashcode"></a>MTAThreadAttribute::GetHashCode
+返回此实例的哈希代码。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 此实例的哈希代码。  
+  
+
+
+## <a name="tostring"></a>MTAThreadAttribute::ToString
+返回表示当前对象的字符串。  
+  
+### <a name="syntax"></a>语法  
+  
+```cpp  
+public:String^ ToString()  
+```  
+  
+### <a name="return-value"></a>返回值  
+ 表示当前对象的字符串。  
+    
+## <a name="see-also"></a>另请参阅  
+ [平台 Namespace](platform-namespace-c-cx.md)

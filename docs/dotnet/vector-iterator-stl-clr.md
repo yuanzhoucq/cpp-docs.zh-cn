@@ -1,41 +1,39 @@
 ---
-title: "vector::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "迭代器成员 [STL/CLR]"
+title: "vector:: iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: a99932ac-c29e-4851-9331-9367f4dd9440
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f3a63e6ce5e2aa86fd869081f60735a9ddda0b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# vector::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectoriterator-stlclr"></a>vector::iterator (STL/CLR)
 受控序列的迭代器的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## 备注  
- 描述类型可以作双向迭代数，为控制序列未指定的 `T1` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 此类型描述未指定类型的对象`T1`，可用作受控序列的随机访问迭代器。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_iterator.cpp   
@@ -66,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **x b c**   
-## 要求  
- **标头:** \<cliext\/vector\>  
+```Output  
+a b c  
+x b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::const\_iterator](../dotnet/vector-const-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)

@@ -1,34 +1,32 @@
 ---
-title: "编译器警告（等级 1）C4376 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4376"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4376"
+title: "编译器警告 （等级 1） C4376 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4376
+dev_langs: C++
+helpviewer_keywords: C4376
 ms.assetid: 5f202c74-9489-48fe-b36f-19cd882b1589
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b78407a29ade4c6792afbd8e15295199b7d6b2c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 1）C4376
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-不再支持访问说明符“old\_specifier:”: 请改用“new\_specifier:”  
+# <a name="compiler-warning-level-1-c4376"></a>编译器警告（等级 1）C4376
+访问说明符 old_specifier: 不再受支持： 请使用 new_specifier: 改为  
   
- 有关指定的元数据类型和成员可访问性的更多信息，请参阅[类型可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 和 [成员可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) 在 [如何：定义和使用类和结构](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)。  
+ 在元数据中指定类型和成员可访问性的详细信息，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)和[成员的可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility)中[如何： 定义和使用类和结构 (C + + /cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4376。  
   
 ```  

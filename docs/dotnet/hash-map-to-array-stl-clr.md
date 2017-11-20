@@ -1,41 +1,39 @@
 ---
-title: "hash_map::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成员 [STL/CLR]"
+title: "hash_map::to_array (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 26d7620f-893b-47f2-99e3-f0b6af3aedc9
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53be0d34d58c6cf294f77293498e330f167bd836
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制控件序列到新数组。  
+# <a name="hashmaptoarray-stlclr"></a>hash_map::to_array (STL/CLR)
+受控的序列复制到新数组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 备注  
- 成员函数返回包含一控制序列的数组。  使用它获得一个控制序列复本在数组窗体中。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回包含受控的序列的数组。 用于获取受控序列中数组形式的副本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **a, b, c, d, \*, \+, \=**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)

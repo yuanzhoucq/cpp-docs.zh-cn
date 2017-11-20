@@ -1,63 +1,63 @@
 ---
-title: "在 OLE DB 中支持事务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据库 [C++], 事务"
-  - "分布式事务 [C++]"
-  - "嵌套事务 [C++]"
-  - "OLE DB [C++], 事务支持"
-  - "OLE DB 使用者模板 [C++], 事务支持"
-  - "事务 [C++], OLE DB 支持"
+title: "OLE DB 中支持事务 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates [C++], transaction support
+- transactions [C++], OLE DB support for
+- nested transactions [C++]
+- OLE DB [C++], transaction support
+- databases [C++], transactions
+- distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a7b1e937a7fa1ab33ff74d3c4e42856928320fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 在 OLE DB 中支持事务
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[事务](../../data/transactions-mfc-data-access.md)是一种对数据源的一系列更新进行分组或批处理以便当所有更新都成功时同时提交这些更新，或者如果任何一个更新失败则不提交任何更新并且回滚整个事务的方法。  此过程确保了数据源上结果的完整性。  
+# <a name="supporting-transactions-in-ole-db"></a>在 OLE DB 中支持事务
+A[事务](../../data/transactions-mfc-data-access.md)是组，或批处理，一系列与数据源的更新，以便所有成功并同时提交，或 （如果任何之一失败） 会提交任何一种方法并回滚整个事务。 此过程可确保数据源上的结果的完整性。  
   
- OLE DB 通过下列三种方法支持事务：  
+ OLE DB 提供以下三种方法支持事务：  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="0699a86bb6d6316bff035b804a56f0aa" class\="tgtSentence"\>ITransactionLocal::StartTransaction\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="39299b0fea086b86052550bd165334f7" class\="tgtSentence"\>ITransaction::Commit\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [Itransaction:: 提交](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="8e992150c28ae247d532408ca7828bfe" class\="tgtSentence"\>ITransaction::Abort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction::Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
   
-## 会话和事务的关系  
- 单个数据源对象可以创建一个或多个会话对象，每个会话对象都可以在给定时间位于事务范围内或范围外。  
+## <a name="relationship-of-sessions-and-transactions"></a>会话和事务之间的关系  
+ 单个数据源对象可以创建一个或多个会话对象，其中每个可以是内部或外部事务在给定时间范围。  
   
- 如果会话未进入事务，则在该会话中对数据存储区所做的所有工作都会在每个方法调用后立即提交。（这有时称为自动提交模式或隐式模式。）  
+ 如果会话未进入事务，则在每个方法调用后立即提交对数据存储在该会话中所做的所有工作。 （这有时称为自动提交模式或隐式的模式。）  
   
- 如果会话进入事务，则在该会话中对数据存储区所做的所有工作都成为该事务的组成部分并作为单个单元提交或中止。（这有时称为手动提交模式。）  
+ 当会话进入事务时，对数据存储在该会话中所做的所有工作是该事务的一部分并提交或中止作为单个单元。 （这有时称为手动提交模式。）  
   
- 事务支持是特定于提供程序的。  如果所使用的提供程序支持事务，则支持 **ITransaction** 和 **ITransactionLocal** 的会话对象便可以进入简单（即非嵌套）的事务。  OLE DB 模板类 [CSession](../../data/oledb/csession-class.md) 支持这些接口，并且该类是一种在 Visual C\+\+ 中实现事务支持的推荐方法。  
+ 事务支持是特定于提供程序。 如果你使用的提供程序支持事务，支持会话对象**itransaction::**和**ITransactionLocal**可以输入一个简单 (即非嵌套) 事务。 OLE DB 模板类[CSession](../../data/oledb/csession-class.md)并支持这些接口，则在 Visual c + + 中实现的事务支持的建议的方法。  
   
-## 启动和结束事务  
- 在使用者的行集合对象中调用 `StartTransaction`、**Commit** 和 **Abort** 方法。  
+## <a name="starting-and-ending-the-transaction"></a>起始和结束事务  
+ 你调用`StartTransaction`，**提交**，和**中止**中使用者中的行集对象的方法。  
   
- 调用 **ITransactionLocal::StartTransaction** 将启动一个新的本地事务。  启动事务后，由随后的操作强制进行的任何更改只有在提交该事务时才会实际应用于数据存储区。  
+ 调用**ITransactionLocal::StartTransaction**启动新的本地事务。 当你启动事务时，由后续操作强制进行任何更改实际不适用于数据存储区之前提交事务。  
   
- 调用 **ITransaction::Commit** 或 **ITransaction::Abort** 将结束该事务。  **Commit** 使该事务范围内的所有更改都应用于数据存储区。  **Abort** 使该事务范围内的所有更改都被取消，并且数据存储区将保持在启动该事务之前的状态。  
+ 调用**itransaction:: 提交**或**ITransaction::Abort**结束事务。 **提交**导致要应用到数据存储在事务范围内的所有更改。 **中止**在事务开始之前要取消的事务和数据存储区的作用域内的所有更改都处于状态它的原因。  
   
-## 嵌套事务  
- 如果在会话中已经存在一个活动事务时启动一个新的本地事务，则发生[嵌套事务](https://msdn.microsoft.com/en-us/library/ms716985.aspx)。  新的事务将作为当前事务下的嵌套事务启动。  如果提供程序不支持嵌套事务，则在会话中已经存在一个活动事务时调用 `StartTransaction` 将返回 **XACT\_E\_XTIONEXISTS**。  
+## <a name="nested-transactions"></a>嵌套的事务  
+ A[嵌套事务](https://msdn.microsoft.com/en-us/library/ms716985.aspx)启动一个新的本地事务活动事务已在会话中存在时发生。 作为当前事务下的嵌套事务启动新事务。 如果提供程序不支持嵌套的事务，则调用`StartTransaction`会话上已活动事务时返回**XACT_E_XTIONEXISTS**。  
   
-## 分布式事务  
- 分布式事务是用于更新分布式数据（即位于一个以上网络计算机系统上的数据）的事务。  如果想在分布式系统中支持事务，则应使用 .NET Framework，而不是使用 OLE DB 事务支持。  
+## <a name="distributed-transactions"></a>分布式事务  
+ 分布式的事务是指更新分布式的数据; 的事务也就是说，多个连网的计算机系统上的数据。 如果你想要支持分布式系统上的事务，则应使用.NET Framework 而不是 OLE DB 事务支持。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)

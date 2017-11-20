@@ -1,35 +1,34 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface 方法"
+title: "ptr::QueryInterface |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 890d08e4d18dd98beebb4f90b43788e2a7658589
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-自己的查询接口的 COM 对象并将结果与另一个 `com::ptr`。  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+查询接口拥有的 COM 对象，并将结果附加到另一个`com::ptr`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _other_type>  
@@ -38,18 +37,18 @@ void QueryInterface(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `other`  
- 将接口获取的 `com::ptr`。  
+ `com::ptr` ，将获取接口。  
   
-## 异常  
- 在内部，`QueryInterface` 对自己的 COM 对象，并且所有错误 `HRESULT` 转换到异常的 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
+## <a name="exceptions"></a>异常  
+ 在内部，`QueryInterface`上拥有的 COM 对象和任何错误调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
-## 备注  
- 使用此方法创建自己当前打包的 COM 对象的不同接口的 COM 包装。  此方法调用 `QueryInterface` 来请求指针的所属 COM 对象向 COM 对象并附加的特定接口返回的接口指针。已传入 `com::ptr`。  
+## <a name="remarks"></a>备注  
+ 此方法用于创建归当前包装的 COM 对象使用不同的接口的 COM 包装器。 此方法调用`QueryInterface`通过拥有的 COM 对象，以请求指向特定的 COM 接口的对象，并将返回的接口指针附加到传入的`com::ptr`。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有 `IXMLDOMDocument` 对象中保存 CLR 类。  `WriteTopLevelNode` 成员函数使用 `QueryInterface` 填充本地 `com::ptr` 以及 `IXMLDOMNode` 传递 `com::ptr` \(通过跟踪引用\) 写入节点名称和文本属性到控制台的私有成员函数。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteTopLevelNode`成员函数使用`QueryInterface`以填充本地`com::ptr`与`IXMLDOMNode`然后传递`com::ptr`（通过跟踪引用） 对该节点的名称和文本属性写入控制台的私有成员函数。  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +149,15 @@ int main() {
 }  
 ```  
   
-  **\<\#document\>persnickety\<\/\#document\>**   
-## 要求  
- **头文件** \<msclr \\ \\ ptr.h com\>  
+```Output  
+<#document>persnickety</#document>  
+```  
   
- **命名空间** msclr::com  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\com\ptr.h >  
   
-## 请参阅  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>另请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

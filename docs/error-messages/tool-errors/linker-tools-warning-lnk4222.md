@@ -1,32 +1,30 @@
 ---
-title: "链接器工具警告 LNK4222 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4222"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4222"
+title: "链接器工具警告 LNK4222 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4222
+dev_langs: C++
+helpviewer_keywords: LNK4222
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a0074e71902a145df8c37b52a5a16295a2b1dfd2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器工具警告 LNK4222
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-不应为导出符号“symbol”分配序号  
+# <a name="linker-tools-warning-lnk4222"></a>链接器工具警告 LNK4222
+不应为导出的符号 symbol 分配是执行序号  
   
- 下列符号不应按序号导出：  
+ 不应该按序号导出以下符号：  
   
 -   `DllCanUnloadNow`  
   
@@ -42,7 +40,7 @@ caps.handback.revision: 8
   
 -   `DllUnregisterServer`  
   
- 应总是通过使用 `GetProcAddress` 按名称定位这些函数。  链接器就此类导出发出警告是因为该导出可能导致较大的图像。  如果序号导出的范围大，而导出相对较少，则可能发生这种情况。  例如，  
+ 这些函数始终位于的名称，使用`GetProcAddress`。 链接器警告有关这种导出是因为它可能会导致更大的映像。 这可能是如果序号导出的范围很大，包含相对较少的导出。 例如，  
   
 ```  
 EXPORTS  
@@ -50,7 +48,7 @@ EXPORTS
    MyOtherAPI      @100  
 ```  
   
- 要求导出地址表中有 100 个槽，其中 98 个 \(2\-99\) 仅供补充。  而  
+ 需要有 100 个槽中其中 98 个导出地址表 (2-99) 仅供补充。 另一方面  
   
 ```  
 EXPORTS  
@@ -58,4 +56,4 @@ EXPORTS
    MyOtherAPI      @100  
 ```  
   
- 需要两个槽。（注意还可以使用 [\/EXPORT](../../build/reference/export-exports-a-function.md) 链接器选项进行导出。）
+ 将需要两个槽。 (请注意，你还可以将导出与[/导出](../../build/reference/export-exports-a-function.md)链接器选项。)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -65,8 +64,7 @@ f1_keywords:
 - AFXRENDERTARGET/CRenderTarget::m_lstResources
 - AFXRENDERTARGET/CRenderTarget::m_pRenderTarget
 - AFXRENDERTARGET/CRenderTarget::m_pTextFormatDefault
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRenderTarget [MFC], CRenderTarget
 - CRenderTarget [MFC], Attach
@@ -123,16 +121,15 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 46ca0fbb4b076fe8cf9dab4d986da487b16cc976
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a12ec4bd293901ed1b8928ecd4e425b335e11890
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 类
 ID2D1RenderTarget 包装器。  
@@ -1049,4 +1046,3 @@ BOOL VerifyResource(CD2DResource* pResource);
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

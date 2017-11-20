@@ -1,33 +1,30 @@
 ---
-title: ".LISTALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTALL directive"
+title: ".LISTALL |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTALL
+dev_langs: C++
+helpviewer_keywords: .LISTALL directive
 ms.assetid: fccb5117-542d-4ae3-869b-40cc2ab55ecb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a7b7416205b9844146ed21c25f1d871afa2ac313
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# .LISTALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-启动 " 列出所有语句。  
+# <a name="listall"></a>.LISTALL
+启动的所有语句的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,8 +32,8 @@ manager: "ghogen"
   
 ```  
   
-## 备注  
- 为 [.LIST](../../assembler/masm/dot-list.md)、 [.LISTIF](../../assembler/masm/dot-listif.md)和 [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md)的组合等效。  
+## <a name="remarks"></a>备注  
+ 等效于的组合[。列表](../../assembler/masm/dot-list.md)， [。列表如果](../../assembler/masm/dot-listif.md)，和[。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

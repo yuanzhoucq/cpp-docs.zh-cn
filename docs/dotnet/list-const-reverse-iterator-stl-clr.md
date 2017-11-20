@@ -1,41 +1,39 @@
 ---
-title: "list::const_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::const_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reverse_iterator 成员 [STL/CLR]"
+title: "list:: const_reverse_iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::const_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: const_reverse_iterator member [STL/CLR]
 ms.assetid: d9a9a1ec-df5f-411f-9918-beb5838ffa63
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d200ae6d8092520f08504734459220d36fe750e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::const_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-常数进行反向迭代器类型的控制的序列。  
+# <a name="listconstreverseiterator-stlclr"></a>list::const_reverse_iterator (STL/CLR)
+受控序列的常量反向迭代器的类型...  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef T4 const_reverse_iterator;  
 ```  
   
-## 备注  
- 描述类型可以作为常数进行反向迭代数。为控制序列未指定的 `T4` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 此类型描述未指定类型的对象`T4`，可用作受控序列的常量反向迭代器。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_const_reverse_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **c b。**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+c b a  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::reverse\_iterator](../dotnet/list-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)

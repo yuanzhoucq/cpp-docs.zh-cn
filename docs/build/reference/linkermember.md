@@ -1,39 +1,38 @@
 ---
-title: "/LINKERMEMBER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/linkermember"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LINKERMEMBER dumpbin 选项"
-  - "LINKERMEMBER dumpbin 选项"
-  - "-LINKERMEMBER dumpbin 选项"
+title: "-LINKERMEMBER |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /linkermember
+dev_langs: C++
+helpviewer_keywords:
+- /LINKERMEMBER dumpbin option
+- LINKERMEMBER dumpbin option
+- -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1af5cf0f3304b77bf731a95f8fc771bf7010dfbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /LINKERMEMBER
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="linkermember"></a>/LINKERMEMBER
 ```  
 /LINKERMEMBER[:{1|2}]  
 ```  
   
-## 备注  
- 此选项显示库中定义的公共符号。  指定参数 1 将按对象顺序显示符号及其偏移量。  指定参数 2 将显示对象的偏移量和索引号，然后按字母顺序列出这些符号及每个符号的对象索引。  若要两个输出都获得，指定不带数字参数的 \/LINKERMEMBER。  
+## <a name="remarks"></a>备注  
+ 此选项显示在库中定义的公共符号。 指定要显示在对象的顺序，以及它们的偏移量的符号的 1 自变量。 指定要显示偏移量和对象的索引号的 2 的自变量，并列出字母顺序排列，以及每个对象索引中的符号。 若要获取这两个输出，请不带编号的参数指定 /LINKERMEMBER。  
   
- 只有 [\/HEADERS](../../build/reference/headers.md) DUMPBIN 选项可用于由 [\/GL](../../build/reference/gl-whole-program-optimization.md) 编译器选项产生的文件。  
+ 仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项是可供产生的文件的使用[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [DUMPBIN 选项](../../build/reference/dumpbin-options.md)

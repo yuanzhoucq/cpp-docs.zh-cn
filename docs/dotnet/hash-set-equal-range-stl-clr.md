@@ -1,45 +1,43 @@
 ---
-title: "hash_set::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 成员 [STL/CLR]"
+title: "hash_set:: equal_range (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: 502af4c5-f71e-44cf-a180-21e9da4b50ff
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dc9a81639da3bcd4aa7ba866f5efb5da39163818
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetequalrange-stlclr"></a>hash_set::equal_range (STL/CLR)
 查找与指定键匹配的范围。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### 参数  
- 键  
+#### <a name="parameters"></a>参数  
+ 密钥  
  要搜索的键值。  
   
-## 备注  
- 成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)[hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)`(``key``),` `(``key``))`。  用于确定受控序列中当前与指定键匹配的元素数。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回一对迭代器`cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`。 你可以使用它来确定的受控序列中的当前与指定的键匹配的元素范围。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_set_equal_range.cpp   
@@ -75,17 +73,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**equal\_range \(空\) L'x 为 True**  
- **b**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::find](../dotnet/hash-set-find-stl-clr.md)   
- [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set:: find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)   
+ [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

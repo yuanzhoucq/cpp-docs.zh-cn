@@ -1,34 +1,33 @@
 ---
-title: "将并发运行时与其他并发模型进行比较 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "并发运行时, 与其他模型比较"
+title: "并发运行时与其他并发模型进行比较 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a20df7ed057c11f8d8879e1373cc7466982d871b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 将并发运行时与其他并发模型进行比较
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>将并发运行时与其他并发模型进行比较
 本文档介绍了并发运行时与其他技术在功能和编程模型上的区别。 通过了解并发运行时与其他编程模型各自优点的比较，你可以选择最能满足应用程序要求的技术。  
   
  如果当前正在使用其他编程模型（例如 Windows 线程池或 OpenMP），可以在适当情况下迁移到并发运行时中。 例如，主题 [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) 描述了何时适合从 OpenMP 迁移到并发运行时。 但是，如果你对应用程序性能和当前调试支持感到满意，则无需进行迁移。  
   
  可以使用并发运行时的功能和工作效率的优势来补充使用另一种并发模型的现有应用程序。 多个任务计划程序争夺同一计算资源时，并发运行时无法保证负载平衡。 但是，工作负载不重叠时，这种影响非常小。  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> 部分  
+##  <a name="top"></a> 部分  
   
 -   [比较抢先式计划与协作式计划](#models)  
   
@@ -36,7 +35,7 @@ caps.handback.revision: 18
   
 -   [比较并发运行时与 OpenMP](#openmp)  
   
-##  <a name="a-namemodelsa-comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a>比较抢先式计划与协作式计划  
+##  <a name="models"></a>比较抢先式计划与协作式计划  
  抢先式模型和协作式计划模型是启用多任务以共享计算资源的两种常用方式，例如，处理器或硬件线程。  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>抢先式和协作式计划  
@@ -55,7 +54,7 @@ caps.handback.revision: 18
   
  [[返回页首](#top)]  
   
-##  <a name="a-namewinapia-comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> 比较并发运行时与 Windows API  
+##  <a name="winapi"></a> 比较并发运行时与 Windows API  
  Microsoft Windows 应用程序编程接口（通常称为 Windows API，以前称为 Win32）提供了在应用程序中启用并发的编程模型。 并发运行时基于 Windows API 生成，以提供无法从基础操作系统中获得的其他编程模型。  
   
  并发运行时基于 Windows API 线程模型生成以执行并行工作。 同时还使用 Windows API 内存管理和线程本地存储区机制。 在 Windows 7 和 Windows Server 2008 R2 上，它将 Windows API 用于支持用户可计划的线程和具有 64 个以上硬件线程的计算机。 并发运行时通过提供协同式任务计划程序和工作窃取算法来最大化计算资源的使用，并启用多个同时计划程序实例，来扩展 Windows API 模型。  
@@ -81,8 +80,8 @@ caps.handback.revision: 18
   
  [[返回页首](#top)]  
   
-##  <a name="a-nameopenmpa-comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> 比较并发运行时与 OpenMP  
- 并发运行时支持各种编程模型。 这些模型可能会与其他库的模型重叠或对其进行补充。 本部分将并发运行时与 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add) 进行比较。  
+##  <a name="openmp"></a> 比较并发运行时与 OpenMP  
+ 并发运行时支持各种编程模型。 这些模型可能会与其他库的模型重叠或对其进行补充。 本部分将并发运行时与 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) 进行比较。  
   
  OpenMP 编程模型由开放标准定义，具有与 Fortran 和 C/C++ 编程语言定义完善的绑定。 OpenMP 2.0 版和 2.5 版都很适合迭代的并行算法；也就是说，它们在数据数组上执行并行迭代。 当预设了并行度，并匹配了系统上的可用资源时，OpenMP 的效率最高。 OpenMP 模型特别适合将大量运算问题分配到单一计算机的处理资源中的高性能计算。 在此方案中，硬件环境已知，开发人员可以合理期望执行该算法时拥有对计算资源的独占访问权限。  
   
@@ -99,4 +98,4 @@ caps.handback.revision: 18
  [概述](../../parallel/concrt/asynchronous-message-blocks.md)   
  [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)
+ [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

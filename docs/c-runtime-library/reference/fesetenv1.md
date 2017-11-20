@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fesetenv
+apiname: fesetenv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,35 +26,18 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs:
-- C++
-helpviewer_keywords:
-- fesetenv function
+dev_langs: C++
+helpviewer_keywords: fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 96453fb182aa3c14bec8a296899cfcd15d39222c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 98ceb7a1be89284f02de2f1f2ed42e6e3198d885
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fesetenv"></a>fesetenv
 设置当前的浮点环境。  

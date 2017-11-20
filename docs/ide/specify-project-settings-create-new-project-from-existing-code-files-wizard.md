@@ -1,78 +1,76 @@
 ---
-title: "“从现有代码文件创建新项目”向导 -&gt;“指定项目设置” | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.appsettings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "“从现有代码文件创建新项目”向导，项目设置"
+title: "指定项目设置，从现有代码文件向导创建新项目 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.appsettings
+dev_langs: C++
+helpviewer_keywords: Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac4e4a0e9454567be98e4534614c725df70368ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “从现有代码文件创建新项目”向导 -&gt;“指定项目设置”
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用“从现有代码文件创建新项目”向导的此页可以指定：  
+# <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>“从现有代码文件创建新项目”向导 ->“指定项目设置”
+从现有代码文件创建新项目向导的此页用于指定：  
   
 -   新项目的生成环境  
   
--   与要生成的特定类型的新项目相匹配的生成设置  
+-   生成设置以匹配特定类型的新项目以生成  
   
-## 任务列表  
- [如何：通过现有代码创建 C\+\+ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>任务列表  
+ [如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **使用 Visual Studio**  
- 指定使用 Visual Studio 中包含的生成工具生成新项目。  默认情况下此选项处于选中状态。  
+ 指定要使用了包含在 Visual Studio 中生成新项目的生成工具。 默认情况下选择此选项。  
   
  **项目类型**  
- 指定向导将生成的项目类型。  
+ 指定此向导将生成的项目的类型。  
   
  **Windows 应用程序项目**  
- 指示向导将为可执行的 Windows 应用程序生成一个项目。  此选项可从**“项目类型”**下拉列表框中获得。  
+ 指示此向导将生成可执行文件的 Windows 应用程序的项目。 此选项才可用从**项目类型**下拉列表框。  
   
  **控制台应用程序项目**  
- 指示向导将为控制台应用程序生成一个项目。  此选项可从**“项目类型”**下拉列表框中获得。  
+ 指示此向导将生成一个控制台应用程序的项目。 此选项才可用从**项目类型**下拉列表框。  
   
- **动态链接库\(DLL\)项目**  
- 指示向导将为空动态链接库应用程序生成一个项目。  此选项可从**“项目类型”**下拉列表框中获得。  
+ **动态链接的库 (DLL) 项目**  
+ 指示此向导将生成空的动态链接库应用程序的项目。 此选项才可用从**项目类型**下拉列表框。  
   
- **静态库\(LIB\)项目**  
- 指示向导将为静态库应用程序生成一个项目。  此选项可从**“项目类型”**下拉列表框中获得。  
+ **静态库 (LIB) 项目**  
+ 指示此向导将生成为静态库应用程序项目。 此选项才可用从**项目类型**下拉列表框。  
   
- **添加对 ATL 的支持**  
- 向新项目中添加 ATL 支持。  
+ **添加 ATL 支持**  
+ 为新项目添加 ATL 支持。  
   
- **添加对 MFC 的支持**  
- 向新项目中添加 MFC 支持。  
+ **添加 mfc 支持**  
+ 将 MFC 支持添加到新项目。  
   
  **添加对公共语言运行时的支持**  
- 向新项目中添加 CLR 编程支持。  
+ 添加 CLR 编程到新项目的支持。  
   
  **公共语言运行时**  
- 指定新项目要与 CLR 功能兼容。  
+ 指定要符合 CLR 功能的新项目。  
   
- **公共语言运行时（旧语法）**  
- 指定要符合 C\+\+ 托管扩展语法（在 Visual C\+\+ 2005 之前为 CLR 编程语法）的新项目。  
+ **公共语言运行时 （旧语法）**  
+ 指定要符合有关 c + + 语法，这是在 Visual c + + 2005年之前的 CLR 编程语法的托管扩展的新项目。  
   
  **使用外部生成系统**  
- 指定使用未包含在 Visual Studio 中的生成工具生成新项目。  选择此选项时，可以在**“指定调试配置设置”**和**“指定发布配置设置”**页上指定生成命令行。  
+ 指定要使用了不包含在 Visual Studio 中生成新项目的生成工具。 选中此选项后，你可以指定生成命令行上**指定调试配置设置**和**指定发布配置设置**页。  
   
 > [!NOTE]
->  选中**“使用外部生成系统”**选项时，IDE 不会生成新项目，因此编译时不需要 \/D、\/I、\/FI、\/AI 或 \/FU 选项。  但是，为使 IntelliSense 能够正常工作，必须正确设置这些选项。  
+>  当**使用外部生成系统**选项已选中，则 IDE 不会生成新项目中，因此 /D，/ 我、 /FI、 /AI 或 /FU 选项不需要的编译。 但是，这些选项必须正确设置使 IntelliSense 正常工作。  
   
-## 请参阅  
- [“从现有代码文件创建新项目”向导 \-\>“指定调试配置设置”](../ide/specify-debug-configuration-settings.md)   
- [“从现有代码文件创建新项目”向导 \-\>“指定发布配置设置”](../ide/specify-release-configuration.md)
+## <a name="see-also"></a>另请参阅  
+ [指定调试配置设置、 从现有代码文件向导创建新项目](../ide/specify-debug-configuration-settings.md)   
+ [指定发布配置设置，“从现有代码文件创建新项目”向导](../ide/specify-release-configuration.md)

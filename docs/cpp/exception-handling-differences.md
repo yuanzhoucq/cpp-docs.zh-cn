@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-handling-differences"></a>异常处理差异
 结构化异常处理和 C++ 异常处理的主要区别在于 C++ 异常处理模式处理的是多个类型，而 C 结构化异常处理模式处理的是一个类型（具体而言就是 `unsigned int`）的异常。 即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 当 C 中引发了异常时，每个可能的处理程序都将执行筛选器来检查 C 异常上下文并确定是接受该异常、将其传递给其他处理程序还是忽略它。 当 C++ 中引发了异常时，该异常可以是任何类型。  

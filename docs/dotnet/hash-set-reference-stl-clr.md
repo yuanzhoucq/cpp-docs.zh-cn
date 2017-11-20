@@ -1,41 +1,39 @@
 ---
-title: "hash_set::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引用成员 [STL/CLR]"
+title: "hash_set:: reference (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 98116382-be98-4b97-bf83-0e340603dd4c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb040e38c7ceb9b970b83ab573f461e617645af6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetreference-stlclr"></a>hash_set::reference (STL/CLR)
 元素的引用的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## 备注  
- 此类型描述了一个对元素的引用。  
+## <a name="remarks"></a>备注  
+ 该类型描述元素的引用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_set_reference.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::const\_reference](../dotnet/hash-set-const-reference-stl-clr.md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

@@ -1,92 +1,92 @@
 ---
-title: "如何：公开程序集中的 STL/CLR 容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STL/CLR 容器 [STL/CLR]"
-  - "STL/CLR, 跨程序集问题"
+title: "如何： 公开从程序集中的 STL/CLR 容器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR Containers [STL/CLR]
+- STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b47e59e5b0c14bc0014140da67d226d62fad02ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：公开程序集中的 STL/CLR 容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-STL\/CLR 容器 \(如 `list` 和 `map` \) 实现为模板 ref 类。  由于 C\+\+ 模板在编译时实例化，具有相同的签名，但两个模板类在不同的程序集实际是不同的类型。  这意味着一个模板类不能跨程序集边界使用。  
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>如何：公开程序集中的 STL/CLR 容器
+STL/CLR 容器，如`list`和`map`作为模板 ref 类实现。 因为在编译时实例化 c + + 模板，具有相同的签名，但位于不同的程序集的两个模板类将是实际不同类型。 这意味着不能跨程序集边界用于模板类。  
   
- 允许跨程序集共享成为可能。STL\/CLR，容器实现泛型 <xref:System.Collections.Generic.ICollection%601>接口。  使用此泛型接口，支持泛型，包括 C\+\+，C\# 和 Visual Basic 的所有语言，可以访问。STL\/CLR 容器  
+ 若要使跨程序集共享成为可能，STL/CLR 容器实现泛型接口<xref:System.Collections.Generic.ICollection%601>。 通过使用此泛型接口，支持泛型，包括 c + +、 C# 和 Visual Basic 中的所有语言都可以都访问 STL/CLR 容器。  
   
- 显示如何显示写入 C\+\+ 程序集的几个 STL\/CLR 容器的元素`StlClrClassLibrary`。  将显示两个程序集访问 `StlClrClassLibrary`。  第一个程序集。C\+\+ 和第二个用 C\# 编写。  
+ 本主题演示如何编写在 c + + 程序集中名为的几个 STL/CLR 容器元素显示`StlClrClassLibrary`。 我们显示两个程序集访问`StlClrClassLibrary`。 第一个程序集编写 c + + 和 C# 中的第二个。  
   
- 如果两个程序集都用 C\+\+ 编写，使用其 `generic_container` typedef，可以访问容器的泛型接口。  例如，在中，如果已具有容器 `cliext::vector<int>`类型，然后其泛型接口是：`cliext::vector<int>::generic_container`。  同样，使用 `generic_iterator` typedef，如，您可以获取在泛型接口的迭代器：`cliext::vector<int>::generic_iterator`。  
+ 如果两个程序集编写 c + + 中，你可以通过访问容器的泛型接口其`generic_container`typedef。 例如，如果你有类型的容器`cliext::vector<int>`，则其泛型接口是： `cliext::vector<int>::generic_container`。 同样，你可以获取迭代器的泛型接口使用`generic_iterator`typedef，如下所示： `cliext::vector<int>::generic_iterator`。  
   
- 因为这些 C\+\+ typedef 中头文件声明，在其他语言编写的程序集无法使用它们。  因此，若要访问 `cliext::vector<int>` 的泛型接口用 C\# 或其他 .NET 语言，请使用 `System.Collections.Generic.ICollection<int>`。  若要循环内访问集合，请使用 `foreach` 循环。  
+ 由于这些 typedef 声明在 c + + 标头文件中，用其他语言编写的程序集无法使用它们。 因此，若要访问的泛型接口`cliext::vector<int>`在 C# 或任何其他.NET 语言，使用`System.Collections.Generic.ICollection<int>`。 若要循环访问此集合，使用`foreach`循环。  
   
- 下表列出了一个通用接口 STL\/CLR 容器实现：  
+ 下表列出了每个 STL/CLR 容器实现的泛型接口：  
   
-|STL\/CLR容器|Generic Interface — 泛型接口|  
-|----------------|------------------------------|  
-|deque\<T\>|ICollection\<T\>|  
-|hash\_map\<K, V\>|IDictionary\<K, V\>|  
-|hash\_multimap\<K, V\>|IDictionary\<K, V\>|  
-|hash\_multiset\<T\>|ICollection\<T\>|  
-|hash\_set\<T\>|ICollection\<T\>|  
-|list\<T\>|ICollection\<T\>|  
-|map\<K, V\>|IDictionary\<K, V\>|  
-|multimap\<K, V\>|IDictionary\<K, V\>|  
-|multiset\<T\>|ICollection\<T\>|  
-|set\<T\>|ICollection\<T\>|  
-|vector\<T\>|ICollection\<T\>|  
+|STL/CLR 容器|泛型接口|  
+|------------------------|-----------------------|  
+|e q u e < T\>|ICollection < T\>|  
+|hash_map < K，V >|IDictionary < K，V >|  
+|hash_multimap < K，V >|IDictionary < K，V >|  
+|hash_multiset < T\>|ICollection < T\>|  
+|hash_set < T\>|ICollection < T\>|  
+|列表 < T\>|ICollection < T\>|  
+|映射 < K，V >|IDictionary < K，V >|  
+|多重映射 < K，V >|IDictionary < K，V >|  
+|multiset < T\>|ICollection < T\>|  
+|设置 < T\>|ICollection < T\>|  
+|向量 < T\>|ICollection < T\>|  
   
 > [!NOTE]
->  由于 `queue`、`priority_queue`和 `stack` 容器不支持迭代器，这些没有实现泛型接口，不能跨程序集的访问。  
+>  因为`queue`， `priority_queue`，和`stack`容器不支持迭代器，它们不实现泛型接口，并且不能访问的跨程序集。  
   
-## 示例 1  
+## <a name="example-1"></a>示例 1  
   
-### 说明  
- 在此示例中，我们要声明包含私有 STL\/CLR 成员数据 .\) 的 C\+\+ 类。  然后我们声明公共方法对类的其他集合的访问权限。  我们以在两种不同的情况下，一 C\+\+ 客户端和一个其他 .NET 客户端的。  
+### <a name="description"></a>描述  
+ 在此示例中，我们可以声明包含私有 STL/CLR 成员数据的 c + + 类。 我们然后声明用于授予访问权限的专用集合类的公共方法。 我们执行操作在两种不同方式、 c + + 客户端和其他.NET 客户端。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-## 示例 2  
+## <a name="example-2"></a>示例 2  
   
-### 说明  
- 在此示例中，我们要实现。示例声明类。  为了使客户可以使用此类库，我们使用清单工具 **mt.exe** 嵌入清单文件调入 DLL。  有关详细信息，请参见代码注释。  
+### <a name="description"></a>描述  
+ 在此示例中，我们实现示例 1 中声明的类。 为了使客户端使用此类库，我们将使用该清单工具**mt.exe**要嵌入到该 DLL 的清单文件。 有关详细信息，请参阅代码注释。  
   
- 有关清单工具和并行程序集的更多信息，请参见 [生成 C\/C\+\+ 独立应用程序和并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。  
+ 清单工具和通过并行程序集的详细信息，请参阅[生成 C/c + + 独立应用程序和通过并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 <CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-## 示例 3  
+## <a name="example-3"></a>示例 3  
   
-### 说明  
- 在此示例中，我们要创建您在示例 1 和 2. 使用创建的类库中。. C\+\+ 客户。  此客户使用 STL\/CLR 容器的 `generic_container` typedef 循环访问容器并显示其内容。  
+### <a name="description"></a>描述  
+ 在此示例中，我们创建了使用在示例 1 和 2 中创建的类库的 c + + 客户端。 此客户端使用`generic_container`STL/CLR 容器循环访问容器以及以显示其内容的 typedef。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 <CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-### Output  
+### <a name="output"></a>输出  
   
 <CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-## 示例 4  
+## <a name="example-4"></a>示例 4  
   
-### 说明  
- 在此示例中，我们要创建您在示例 1 和 2. 使用创建的类库中。. C\# 客户。  此客户使用 STL\/CLR 容器的  <xref:System.Collections.Generic.ICollection%601>方法循环访问容器并显示其内容。  
+### <a name="description"></a>描述  
+ 在此示例中，我们将创建一个 C# 客户端使用在示例 1 和 2 中创建的类库。 此客户端使用<xref:System.Collections.Generic.ICollection%601>STL/CLR 容器循环访问容器以及以显示其内容的方法。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // CsConsoleApp.cs  
@@ -151,7 +151,7 @@ namespace CsConsoleApp
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 cliext::deque contents:  
@@ -175,5 +175,5 @@ cliext::vector contents:
 20  
 ```  
   
-## 请参阅  
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

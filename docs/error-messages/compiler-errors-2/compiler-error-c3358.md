@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3358
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3358
+f1_keywords: C3358
+dev_langs: C++
+helpviewer_keywords: C3358
 ms.assetid: 180b93df-e78f-441a-91fb-1594c681f7f0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 0a4e062fd21577836ae1b56d2d0e277b162d9451
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3358"></a>编译器错误 C3358
 “symbol”：未找到符号  

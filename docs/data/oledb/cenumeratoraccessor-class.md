@@ -1,57 +1,56 @@
 ---
-title: "CEnumeratorAccessor 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CEnumeratorAccessor"
-  - "CEnumeratorAccessor"
-  - "ATL.CEnumeratorAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CEnumeratorAccessor 类"
+title: "CEnumeratorAccessor 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CEnumeratorAccessor
+- CEnumeratorAccessor
+- ATL.CEnumeratorAccessor
+dev_langs: C++
+helpviewer_keywords: CEnumeratorAccessor class
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b78307c1b8f9df1945ab2376b939db2c41b8ad23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CEnumeratorAccessor 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-通过使用 [CEnumerator](../../data/oledb/cenumerator-class.md) 访问枚举数行集合中的数据。  
+# <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
+使用[CEnumerator](../../data/oledb/cenumerator-class.md)从枚举器行集访问数据。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CEnumeratorAccessor  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 数据成员  
+### <a name="data-members"></a>数据成员  
   
 |||  
 |-|-|  
-|[m\_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|如果行是枚举数，变量指示枚举数是否是父枚举数。|  
-|[m\_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|变量指示行是否描述了数据源或枚举数。|  
-|[m\_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|数据源或枚举数的描述。|  
-|[m\_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|数据源或枚举数的名称。|  
-|[m\_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|传递 [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) 获取数据源或枚举器的名字的字符串。|  
+|[m_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|一个指示枚举器是否的父枚举，如果行是一个枚举的变量。|  
+|[m_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|变量，该值指示是否行所说明的数据源或枚举数。|  
+|[m_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|数据源或枚举器的说明。|  
+|[m_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|数据源或枚举器的名称。|  
+|[m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|要传递给字符串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)若要获取的数据源或枚举器的名字对象。|  
   
-## 备注  
- 此行集合包括数据源和从当前枚举数的可见枚举数。  
+## <a name="remarks"></a>备注  
+ 下一个行集合组成的数据源和当前的枚举器中可见的枚举器。  
   
-## 要求  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>要求  
+ **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

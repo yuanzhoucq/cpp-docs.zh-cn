@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], handling exceptions in C++
 - structured exception handling [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9098ac4914bdb9e054d4db27c0a5498c0f9d9ea8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 60480cef84f04c8c962e94d8f550823f637cfd84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 尽管 Windows 和 Visual C++ 支持结构化异常处理 (SEH)，我们还是建议你使用 ISO 标准 C++ 异常处理，因为它使代码具有更好的可移植性并更灵活。 然而，在现有代码中或者对于特定类型的程序，你仍可能必须使用 SEH。  

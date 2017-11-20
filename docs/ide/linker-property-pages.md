@@ -1,62 +1,62 @@
 ---
-title: "“链接器”属性页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.RegisterOutput"
-  - "VC.Project.VCLinkerTool.IgnoreImportLibrary"
-  - "VC.Project.VCLinkerTool.UseLibraryDependencyInputs"
-  - "VC.Project.VCLinkerTool.LinkLibraryDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "按用户重定向"
-  - "“链接器”属性页"
+title: "链接器属性页 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.RegisterOutput
+- VC.Project.VCLinkerTool.OVERWRITEImportLibrary
+- VC.Project.VCLinkerTool.UseLibraryDependencyInputs
+- VC.Project.VCLinkerTool.LinkLibraryDependencies
+dev_langs: C++
+helpviewer_keywords:
+- per-user redirection
+- Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c958b0bce27effc5362d107a3b6abe9fcc761d39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “链接器”属性页
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题论述**“常规”**链接器属性页上的下列属性：  
+# <a name="linker-property-pages"></a>“链接器”属性页
+本主题讨论以下属性上**常规**链接器属性页：  
   
  **忽略导入库**  
- 通知链接器不要尝试将任何从此生成产生的 .lib 输出链接到依赖项目中。  这允许项目系统处理生成时不产生 .lib 文件的 .dll 文件。  如果一个项目依赖另一个产生 DLL 的项目，项目系统将自动链接该子项目产生的 .lib 文件。  这对产生 COM DLL 或纯资源 DLL 的项目可能不是必需的，这些 DLL 没有任何具有特定意义的导出。  如果 DLL 没有导出，链接器将不生成 .lib 文件。  如果磁盘上不存在导出 .lib 文件，而项目系统通知链接器链接此（缺少的）DLL，链接将失败。  
+ 通知链接后，不会尝试将此生成到依赖项目中生成任何.lib 输出链接。 这样，项目系统以处理.dll 文件，不会产生时生成的.lib 文件。 如果一个项目依赖于另一个生成 DLL 的项目，项目系统会自动将链接该子项目生成的.lib 文件。 这可能不需要的 COM Dll 或纯资源 Dll; 生成的项目这些 Dll 不具有任何有意义的导出。 如果 DLL 没有导出，链接器不会生成的.lib 文件。 如果不不存在，磁盘上的任何导出.lib 文件和项目系统通知链接后，将其与此 （缺少） DLL 链接，链接将失败。  
   
- 使用“忽略导入库”解决此问题。  当设置为 `Yes` 时，项目系统将忽略此 .lib 文件是否存在，并使依赖该项目的任何项目不链接到不存在的 .lib 文件。  
+ 使用**忽略导入库**若要解决此问题。 当设置为`Yes`，项目系统将忽略该.lib 文件是否存在，并且导致依赖于此项目，从而不与不存在的.lib 文件链接任何项目。  
   
- 若要以编程方式访问此属性，请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>。  
+ 若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>。  
   
  **注册输出**  
- 运行 regsvr32.exe \/s $\(TargetPath\)，它仅在 .dll 项目上有效。  对于 .exe 项目，忽略该属性。  如果要注册 .exe 输出，在配置上设置生成后事件，以执行已注册的 .exe 文件始终要求的自定义注册。  
+ 运行 regsvr32.exe /s $(TargetPath)，即仅在.dll 项目上有效。 对于.exe 项目，将忽略此属性。 如果你想要注册.exe 输出，配置为始终是必需的已注册的.exe 文件的自定义注册上设置生成后事件。  
   
- 若要以编程方式访问此属性，请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>。  
+ 若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>。  
   
- **每个用户的重定向**  
- 传统上在 HKEY\_CLASSES\_ROOT \(HKCR\) 中完成 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中的注册。  要使用 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 访问 HKCR，您必须在提升模式下运行 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。  开发人员并非总是需要在提升模式下运行，但是仍必须进行注册。  每用户的重定向允许您无需在此模式下运行即可注册。  
+ **Per-user Redirection**  
+ Visual Studio 中的注册传统上已完成 HKEY_CLASSES_ROOT (HKCR)。 与[!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]、 访问 HKCR 必须在提升模式下运行 Visual Studio。 开发人员始终不希望在提升模式下运行，但仍必须适用于注册。 每个用户重定向，可注册而无需在此模式下运行。  
   
- 每用户的重定向会强制将针对 HKCR 的任何写入重定向到 HKEY\_CURRENT\_USER \(HKCU\)。  如果关闭每用户的重定向，则当程序尝试写入 HKCR 时可导致[项目生成错误 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)。  
+ 每个用户重定向到 HKCR 重定向到 HKEY_CURRENT_USER (HKCU) 将强制任何写入操作。 如果每个用户重定向已关闭，它可能会导致[项目生成错误 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)当程序尝试写入 HKCR。  
   
  **链接库依赖项**  
- 为您提供在依赖项目所生成的 .lib 文件中进行链接的选择。  您通常需要在 .lib 文件中进行链接。  
+ 在由依赖项目生成的.lib 文件链接的选项让你。 通常情况下，你将想要在.lib 文件链接。  
   
- 你也可以通过提供文件名和相对路径来指定 .obj 文件，如 **..\\..\\MyLibProject\\MyObjFile.obj**。  如果 .obj 文件 \#includes 的源代码预编译标头，例如 pch.h，及 pch.obj 文件所在的文件夹与 **MyObjFile.obj**相似，那么你还必须添加 **pch.obj** 作为附加依赖项。  
+ 你还可以通过以下方式指定.obj 文件通过提供的文件名和相对路径，例如**...\\..\MyLibProject\MyObjFile.obj**。如果源代码.obj 文件 #includes 预编译标头，例如 pch.h 中，则 pch.obj 文件位于相同的文件夹**MyObjFile.obj**并且您必须添加**pch.obj**作为附加依赖项。  
   
  **使用库依赖项输入**  
- 在一个大项目中，当依赖项目生成 .lib 文件时，增量链接是被禁用的。  如果有许多生成 .lib 文件的依赖项目，则生成应用程序会花很长时间。  当该属性设置为 `Yes` 时，项目系统在依赖项目所生成的 .lib 文件的 .obj 文件中进行链接，从而启用增量链接。  
+ 在大型项目中，当依赖项目生成的.lib 文件，增量链接处于禁用状态。 如果有许多依赖项目生成的.lib 文件，生成应用程序可能需要很长时间。 当此属性设置为`Yes`，.lib 的.obj 文件中的项目系统链接生成依赖项目，从而启用增量链接。  
   
- 有关如何访问**“常规”**链接器属性页的信息，请参见[如何：用属性页指定项目属性](../misc/how-to-specify-project-properties-with-property-pages.md)。  
+ 有关如何访问**常规**链接器属性页上，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
-## 请参阅  
- [VC\+\+ Directories, Projects and Solutions, Options Dialog Box](http://msdn.microsoft.com/zh-cn/e027448b-c811-4c3d-8531-4325ad3f6e02)   
+## <a name="see-also"></a>另请参阅  
+ [VC + + 目录、 项目和解决方案、 选项对话框](http://msdn.microsoft.com/en-us/e027448b-c811-4c3d-8531-4325ad3f6e02)   
  [属性页](../ide/property-pages-visual-cpp.md)

@@ -1,47 +1,45 @@
 ---
-title: "omp_nest_lock_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_nest_lock_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_nest_lock_t OpenMP data type"
+title: "omp_nest_lock_t |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_nest_lock_t
+dev_langs: C++
+helpviewer_keywords: omp_nest_lock_t OpenMP data type
 ms.assetid: fceac9fb-96d2-42b0-af19-c9b078380618
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 73615a6c8e4b09aae01369c5a2fed07117fe490c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# omp_nest_lock_t
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-包含以下信息有关锁定的类型:锁是否可用并且拥有锁和嵌套计数线程的标识。  
+# <a name="ompnestlockt"></a>omp_nest_lock_t
+一种保存有关锁的信息的以下部分： 是否锁定，并且可线程的标识的拥有锁和嵌套的计数。  
   
- 以下功能使用 **omp\_nest\_lock\_t**:  
+ 以下函数使用**omp_nest_lock_t**:  
   
--   [omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)  
+-   [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)  
   
--   [omp\_destroy\_nest\_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)  
+-   [omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)  
   
--   [omp\_set\_nest\_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)  
+-   [omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)  
   
--   [omp\_unset\_nest\_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)  
+-   [omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)  
   
--   [omp\_test\_nest\_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)  
+-   [omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)  
   
- 有关更多信息，请参见 [3.2 Lock Functions](../../../parallel/openmp/3-2-lock-functions.md)。  
+ 有关详细信息，请参阅[3.2 锁函数](../../../parallel/openmp/3-2-lock-functions.md)。  
   
-## 示例  
- 有关使用示例 **omp\_nest\_lock\_t**参见 [omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) 。  
+## <a name="example"></a>示例  
+ 请参阅[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)有关的使用示例**omp_nest_lock_t**。  
   
-## 请参阅  
- [Data Types](../../../parallel/openmp/reference/openmp-data-types.md)
+## <a name="see-also"></a>另请参阅  
+ [数据类型](../../../parallel/openmp/reference/openmp-data-types.md)

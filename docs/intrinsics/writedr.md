@@ -1,58 +1,56 @@
 ---
-title: "__writedr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writedr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__writedr 内部函数"
+title: "__writedr |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writedr
+dev_langs: C++
+helpviewer_keywords: __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e5a87f7339481378c3a7fb6af7201dd13a3ede59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __writedr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-写入的指定值指定的调试注册。  
+# <a name="writedr"></a>__writedr
+将指定的值写入指定的调试寄存器。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __writedr(unsigned DebugRegister, unsigned DebugValue);  
 void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);  
 ```  
   
-#### 参数  
- \[in\] `DebugRegister`  
- 标识调试注册的从 0 到 7 的数字。  
+#### <a name="parameters"></a>参数  
+ [in] `DebugRegister`  
+ 一个介于 0 到 7 标识调试注册。  
   
- \[in\]`DebugValue`  
- 编写的值进行调试注册。  
+ [in] `DebugValue`  
+ 一个值，以写入调试注册。  
   
-## 备注  
- 这些内部可用内核模式，并且，实例仅可用作内部。  
+## <a name="remarks"></a>备注  
+ 这些内部函数仅在内核模式下适用而例程只能用作内部函数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__writedr`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_readdr](../intrinsics/readdr.md)
+ [__readdr](../intrinsics/readdr.md)

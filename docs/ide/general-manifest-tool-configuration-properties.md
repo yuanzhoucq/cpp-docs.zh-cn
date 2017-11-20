@@ -1,53 +1,51 @@
 ---
-title: "“&lt;项目名&gt; 属性页”对话框 -&gt;“配置属性”-&gt;“清单工具”-&gt;“常规” | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.MergeRulesFile"
-  - "VC.Project.VCManifestTool.UseUnicodeResponseFiles"
-  - "VC.Project.VCManifestTool.SuppressStartupBanner"
-  - "VC.Project.VCManifestTool.UseFAT32Workaround"
-  - "VC.Project.VCManifestTool.VerboseOutput"
-  - "VC.Project.VCManifestTool.AssemblyIdentity"
-dev_langs: 
-  - "C++"
+title: "清单工具配置属性 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.MergeRulesFile
+- VC.Project.VCManifestTool.UseUnicodeResponseFiles
+- VC.Project.VCManifestTool.SuppressStartupBanner
+- VC.Project.VCManifestTool.UseFAT32Workaround
+- VC.Project.VCManifestTool.VerboseOutput
+- VC.Project.VCManifestTool.AssemblyIdentity
+dev_langs: C++
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aba154afb6c3f30c305518702f42c618335f5b8e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “&lt;项目名&gt; 属性页”对话框 -&gt;“配置属性”-&gt;“清单工具”-&gt;“常规”
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用此对话框可指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的常规选项。  
+# <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>常规、 清单工具，配置属性&lt;Projectname&gt;属性页对话框
+使用此对话框中指定的常规选项[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
   
- 若要访问此属性页对话框，请打开项目或属性表的属性页。  展开**“配置属性”**下的**“清单工具”**节点，然后选择**“常规”**。  
+ 若要访问此属性页对话框中，打开你的项目或属性表的属性页。 展开**清单工具**节点下的**配置属性**，然后选择**常规**。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **取消显示启动版权标志**  
- **“是\(\/nologo\)”**指定启动清单工具时将隐藏标准的 Microsoft 版权数据。  将 mt.exe 作为生成过程的一部分运行或在生成环境中运行时，可以使用此选项取消日志文件中不需要的输出。  
+ **是 (/ nologo)**指定启动清单工具时，将隐藏标准 Microsoft 版权数据。 使用此选项时作为生成过程中或从生成环境的一部分运行 mt.exe 抑制不需要的输出日志文件中。  
   
  **详细输出**  
- **“是\(\/verbose\)”**指定在清单生成期间将显示附加生成信息。  
+ **是 （/ 详细）**指定清单生成过程中，将显示其他生成信息。  
   
  **程序集标识**  
- 可以使用 \/identity 选项指定标识字符串，该字符串包含 [\<assemblyIdentity\> 元素](../Topic/%3CassemblyIdentity%3E%20Element%20\(ClickOnce%20Application\).md) 的各个特性。  标识字符串以 `name` 特性的值开头，后面是“*特性* \= *值*”对。  标识字符串中的特性采用逗号进行分隔。  
+ 使用 /identity 选项来指定一个标识字符串，其包含的属性[ \<assemblyIdentity > 元素](/visualstudio/deployment/assemblyidentity-element-clickonce-application)。 标识字符串开头的值`name`特性，并后跟*属性* = *值*对。 用逗号分隔的标识字符串中的属性。  
   
- 下面是标识字符串的一个示例：  
+ 下面是一个示例标识字符串：  
   
  `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`  
   
-## 请参阅  
- [ClickOnce 应用程序清单](../Topic/ClickOnce%20Application%20Manifest.md)   
+## <a name="see-also"></a>另请参阅  
+ [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)   
  [清单工具属性页](../ide/manifest-tool-property-pages.md)   
- [如何：打开项目属性页](../misc/how-to-open-project-property-pages.md)   
- [如何：编辑项目属性表](../misc/how-to-edit-project-property-sheets.md)
+ [使用项目属性](../ide/working-with-project-properties.md)   

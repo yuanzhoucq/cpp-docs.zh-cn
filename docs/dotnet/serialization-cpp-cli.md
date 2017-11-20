@@ -1,44 +1,43 @@
 ---
-title: "序列化 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], 序列化"
-  - "托管代码 [C++], 序列化"
-  - "NonSerializedAttribute 类, 托管应用程序"
-  - "SerializableAttribute 类, 托管应用程序"
-  - "序列化 [C++]"
-  - "序列化 [C++], 关于序列化"
+title: "序列化 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- serialization [C++]
+- SerializableAttribute class, managed applications
+- NonSerializedAttribute class, managed applications
+- managed code [C++], serializing
+- .NET Framework [C++], serialization
+- serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 57ec673e945d0db14ce8fee0d477d7aeb2a9e238
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 序列化 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-<xref:System.SerializableAttribute> 和 <xref:System.NonSerializedAttribute> 类支持托管类（包括个别字段或属性）的序列化（将对象或成员的状态存储在永久介质中的过程）。  
+# <a name="serialization-ccli"></a>序列化 (C++/CLI)
+序列化 （的过程中存储的对象或成员在永久介质状态） 的托管类 （包括单个字段或属性） 受<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>类。  
   
-## 备注  
- 将 **SerializableAttribute** 自定义特性应用于托管类以序列化整个类，或仅应用于特定的字段或属性以序列化托管类的一部分。  使用 **NonSerializedAttribute** 自定义特性使托管类的字段或属性免于序列化。  
+## <a name="remarks"></a>备注  
+ 应用**SerializableAttribute**到托管的类，以便序列化整个类或仅为特定字段或属性进行序列化托管类的部分应用的自定义属性。 使用**NonSerializedAttribute**到免除字段或托管类的属性从要序列化的自定义属性。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 在下面的示例中，类 `MyClass`（还有属性 `m_nCount`）被标记为可序列化的。  但 `m_nData` 属性未序列化，如 **NonSerialized** 自定义特性所指示的一样：  
+### <a name="description"></a>描述  
+ 在下面的示例中，类`MyClass`(和属性`m_nCount`) 标记为可序列化。 但是，`m_nData`不序列化属性，如所示**所以**自定义属性：  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // serialization_and_mcpp.cpp  
@@ -55,8 +54,8 @@ private:
 };  
 ```  
   
-### 注释  
- 注意，这两个特性都可以用其“简称”（**Serializable** 和 **NonSerialized**）来引用。  这一点在[应用特性](../Topic/Applying%20Attributes.md)中做了进一步解释。  
+### <a name="comments"></a>注释  
+ 请注意，可以使用其"短名称"引用这两个属性 (**Serializable**和**所以**)。 这做进一步的解释在[应用特性](/dotnet/standard/attributes/applying-attributes)。  
   
-## 请参阅  
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

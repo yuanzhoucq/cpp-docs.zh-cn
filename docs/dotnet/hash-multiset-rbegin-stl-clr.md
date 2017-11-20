@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin 成员 [STL/CLR]"
+title: "hash_multiset:: rbegin (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: 69a06d99-3262-495b-9956-5f155162da33
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 898c7e25482f1a1984e7093ac5a77c0b98ec2799
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定反转的受控序列的开头。  
+# <a name="hashmultisetrbegin-stlclr"></a>hash_multiset::rbegin (STL/CLR)
+指定反向受控序列的开头。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## 备注  
- 一个反向迭代器，指定受控序列的最后一个元素，或刚好在空序列的开头之外的位置。  因此，它指定反向序列的 `beginning`。  用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回指定的受控序列，或刚超出空序列的开头的最后一个元素的反向迭代器。 因此，它指定`beginning`反向序列。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改按逆序的受控的序列，但其状态的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_rbegin.cpp   
@@ -64,16 +62,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)   
- [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)   
- [hash\_multiset::rend](../dotnet/hash-multiset-rend-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)   
+ [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)   
+ [hash_multiset::rend (STL/CLR)](../dotnet/hash-multiset-rend-stl-clr.md)

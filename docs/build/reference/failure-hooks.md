@@ -1,30 +1,29 @@
 ---
-title: "失败挂钩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 的延迟加载, 失败挂钩"
+title: "失败挂钩 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 86f3f27d06b353d0e34a62b636dc7ae0313a462c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 失败挂钩
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-失败挂钩和[通知挂钩](../../build/reference/notification-hooks.md)的启用方式相同。  挂钩例程需返回一个合适的值，以便处理能继续进行（HINSTANCE 或 FARPROC），或返回 0 指示将引发异常。  
+# <a name="failure-hooks"></a>失败挂钩
+失败挂钩的启用方式与[通知挂钩](../../build/reference/notification-hooks.md)。 挂钩例程需要将返回一个适合的值，以便处理可以继续 （HINSTANCE 或 FARPROC） 或为 0 指示应引发异常。  
   
- 引用用户定义函数的指针变量为：  
+ 指的是用户定义函数的指针变量是：  
   
 ```  
 // This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}  
@@ -32,19 +31,19 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- **DelayLoadInfo** 结构包含准确报告错误所需的所有相关数据，包括来自 `GetLastError` 的值。  
+ **DelayLoadInfo**结构包含准确报告错误，包括从值所需的所有相关数据`GetLastError`。  
   
- 如果通知是 **dliFailLoadLib**，挂钩函数可以返回：  
+ 如果通知为**dliFailLoadLib**，挂钩函数可以返回：  
   
--   0，如果它不能处理失败。  
+-   如果为 0，它无法处理失败。  
   
--   HMODULE，如果失败挂钩修复了问题并且自己加载了库。  
+-   HMODULE，如果失败挂钩解决问题并将加载在库自身。  
   
- 如果通知是 **dliFailGetProc**，挂钩函数可以返回：  
+ 如果通知为**dliFailGetProc**，挂钩函数可以返回：  
   
--   0，如果它不能处理失败。  
+-   如果为 0，它无法处理失败。  
   
--   一个有效的进程地址（导入函数地址），如果失败挂钩自已成功地获取了地址。  
+-   有效的进程地址 （导入函数地址），如果失败挂钩成功地获取本身的地址。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误处理和通知](../../build/reference/error-handling-and-notification.md)

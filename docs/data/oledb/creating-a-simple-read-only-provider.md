@@ -1,35 +1,35 @@
 ---
-title: "创建简单的只读提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序模板, 创建提供程序"
-  - "OLE DB 提供程序, 创建"
+title: "创建简单的只读提供程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, creating
+- OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 67ffacffde8dc13e49a09358efcafefd751619ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 创建简单的只读提供程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用“ATL 项目向导”和“ATL OLE DB 提供程序向导”创建了 OLE DB 提供程序后，可以添加希望支持的其他功能。  通过检查将向使用者发送的数据类型和在什么条件下发送，开始设计提供程序。  尤其重要的是确定是否需要支持命令、事务和其他可选对象。  开头设计好将加快实现和测试的速度。  
+# <a name="creating-a-simple-read-only-provider"></a>创建简单的只读提供程序
+如果你已创建使用 ATL 项目向导和 ATL OLE DB 提供程序向导的 OLE DB 提供程序，你可以添加你想要支持其他功能。 开始通过检查什么类型的数据，则将会发送给使用者和在什么条件下设计你的提供商。 尤其是，务必确定你是否需要支持命令、 事务和其他可选对象。 设计良好，预先将加快实现和测试。  
   
- 示例显示在两部分中：  
+ 该示例会显示在两个部分：  
   
--   第一部分显示如何[创建简单的只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)，该提供程序读取一对字符串。  
+-   第一个部分演示如何[创建简单的只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)读取一对字符串。  
   
--   第二部分显示如何通过添加 `IRowsetLocate` 接口[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
+-   第二个部分显示如何[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)通过添加`IRowsetLocate`接口。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)

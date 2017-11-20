@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,39 +33,23 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: c9e3d47f68575b27d65422f9adec2c24dee83425
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccommodule-class"></a>CComModule 类
-ATL 7.0 截至`CComModule`已弃用︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ATL 7.0 截至`CComModule`已弃用： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 > [!IMPORTANT]
 >  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
@@ -102,7 +85,7 @@ class CComModule : public _ATL_MODULE
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComModule::m_csObjMap](#m_csobjmap)|可确保同步的访问对象映射信息。|  
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|可确保同步的访问的类型库信息。|  
@@ -119,7 +102,7 @@ class CComModule : public _ATL_MODULE
   
  `CComModule`实现 COM 服务器模块，从而使客户端访问模块的组件。 `CComModule`支持两个 DLL （进程） 和 EXE （本地） 模块。  
   
- A`CComModule`实例使用的对象映射来维护一组类对象定义。 此对象映射实现为一个数组`_ATL_OBJMAP_ENTRY`结构，并包含有关的信息︰  
+ A`CComModule`实例使用的对象映射来维护一组类对象定义。 此对象映射实现为一个数组`_ATL_OBJMAP_ENTRY`结构，并包含有关的信息：  
   
 -   输入和系统注册表中删除对象说明。  
   
@@ -143,10 +126,10 @@ class CComModule : public _ATL_MODULE
  `CComModule`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
   
 ##  <a name="getclassobject"></a>CComModule::GetClassObject  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT GetClassObject(  
@@ -174,7 +157,7 @@ HRESULT GetClassObject(
  `GetClassObject`仅可用于 Dll。  
   
 ##  <a name="getmoduleinstance"></a>CComModule::GetModuleInstance  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -187,7 +170,7 @@ HINSTANCE GetModuleInstance() throw();
  返回[m_hInst](#m_hinst)数据成员。  
   
 ##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -200,7 +183,7 @@ HINSTANCE GetResourceInstance() throw();
  返回[m_hInstResource](#m_hinstresource)数据成员。  
   
 ##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HINSTANCE GetTypeLibInstance() const throw();
@@ -213,7 +196,7 @@ HINSTANCE GetTypeLibInstance() const throw();
  返回[m_hInstTypeLib](#m_hinsttypelib)数据成员。  
   
 ##  <a name="init"></a>CComModule::Init  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT Init(
@@ -239,7 +222,7 @@ HRESULT Init(
  初始化所有数据成员。  
   
 ##  <a name="m_csobjmap"></a>CComModule::m_csObjMap  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 CRITICAL_SECTION m_csObjMap;
@@ -249,7 +232,7 @@ CRITICAL_SECTION m_csObjMap;
  确保同步的访问对象映射。  
   
 ##  <a name="m_cstypeinfoholder"></a>CComModule::m_csTypeInfoHolder  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 CRITICAL_SECTION m_csTypeInfoHolder;
@@ -259,7 +242,7 @@ CRITICAL_SECTION m_csTypeInfoHolder;
  可确保对该类型库的同步的访问。  
   
 ##  <a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 CRITICAL_SECTION m_csWindowCreate;
@@ -269,7 +252,7 @@ CRITICAL_SECTION m_csWindowCreate;
  可确保窗口类信息并对在窗口创建过程中使用的静态数据的同步的访问。  
   
 ##  <a name="m_hinst"></a>CComModule::m_hInst  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HINSTANCE m_hInst;
@@ -281,7 +264,7 @@ HINSTANCE m_hInst;
  [Init](#init)方法设置`m_hInst`到句柄传递给**DLLMain**或`WinMain`。  
   
 ##  <a name="m_hinstresource"></a>CComModule::m_hInstResource  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HINSTANCE m_hInstResource;
@@ -295,7 +278,7 @@ HINSTANCE m_hInstResource;
  [GetResourceInstance](#getresourceinstance)方法返回的句柄存储在`m_hInstResource`。  
   
 ##  <a name="m_hinsttypelib"></a>CComModule::m_hInstTypeLib  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HINSTANCE m_hInstTypeLib;
@@ -309,7 +292,7 @@ HINSTANCE m_hInstTypeLib;
  [GetTypeLibInstance](#gettypelibinstance)方法返回的句柄存储在`m_hInstTypeLib`。  
   
 ##  <a name="m_pobjmap"></a>CComModule::m_pObjMap  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 _ATL_OBJMAP_ENTRY* m_pObjMap;
@@ -319,7 +302,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
  指向由模块实例维护的对象映射。  
   
 ##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 ATL_DEPRECATED HRESULT RegisterClassHelper(  
@@ -355,7 +338,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
  [UpdateRegistryClass](#updateregistryclass)方法调用`RegisterClassHelper`。  
   
 ##  <a name="registerclassobjects"></a>CComModule::RegisterClassObjects  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -363,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>参数  
  `dwClsContext`  
- [in]指定的类对象将在其中运行的上下文。 可能的值为**CLSCTX_INPROC_SERVER**， **CLSCTX_INPROC_HANDLER**，或**CLSCTX_LOCAL_SERVER**。 有关这些值的说明，请参阅[注册](http://msdn.microsoft.com/library/windows/desktop/ms693716)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]指定的类对象将在其中运行的上下文。 可能的值为**CLSCTX_INPROC_SERVER**， **CLSCTX_INPROC_HANDLER**，或**CLSCTX_LOCAL_SERVER**。 有关这些值的说明，请参阅[注册](http://msdn.microsoft.com/library/windows/desktop/ms693716)Windows SDK 中。  
   
  `dwFlags`  
- [in]确定对类对象的连接类型。 可能的值为**REGCLS_SINGLEUSE**， **REGCLS_MULTIPLEUSE**，或**REGCLS_MULTI_SEPARATE**。 有关这些值的说明，请参阅[结合](http://msdn.microsoft.com/library/windows/desktop/ms679697)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]确定对类对象的连接类型。 可能的值为**REGCLS_SINGLEUSE**， **REGCLS_MULTIPLEUSE**，或**REGCLS_MULTI_SEPARATE**。 有关这些值的说明，请参阅[结合](http://msdn.microsoft.com/library/windows/desktop/ms679697)Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
@@ -375,7 +358,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
  向 OLE 注册 EXE 类对象，以便其他应用程序可以连接到它。 此方法仅供 Exe。  
   
 ##  <a name="registerserver"></a>CComModule::RegisterServer  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT RegisterServer(
@@ -403,7 +386,7 @@ HRESULT RegisterServer(
  `RegisterServer`将自动调用**dllregisterserver 的调用**dll 或`WinMain`为使用运行 EXE **/RegServer**命令行选项。  
   
 ##  <a name="registertypelib"></a>CComModule::RegisterTypeLib  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT RegisterTypeLib() throw();
@@ -423,7 +406,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
  如果模块实例包含多个类型库，使用此方法的第二个版本可指定应使用哪些类型库。  
   
 ##  <a name="revokeclassobjects"></a>CComModule::RevokeClassObjects  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT RevokeClassObjects() throw();
@@ -436,7 +419,7 @@ HRESULT RevokeClassObjects() throw();
  中删除类的对象。 此方法仅供 Exe。  
   
 ##  <a name="term"></a>CComModule::Term  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 void Term() throw();
@@ -446,7 +429,7 @@ void Term() throw();
  释放所有数据成员。  
   
 ##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 ATL_DEPRECATED HRESULT UnregisterClassHelper(  
@@ -474,7 +457,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
  [UpdateRegistryClass](#updateregistryclass)方法调用`UnregisterClassHelper`。  
   
 ##  <a name="unregisterserver"></a>CComModule::UnregisterServer  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
@@ -499,7 +482,7 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
  请参阅[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)有关如何将条目添加到对象映射的信息。  
   
 ##  <a name="updateregistryclass"></a>CComModule::UpdateRegistryClass  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 ATL_DEPRECATED HRESULT UpdateRegistryClass(  
@@ -554,7 +537,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
  通过指定[DECLARE_REGISTRY](registry-macros.md#declare_registry)宏，`UpdateRegistryClass`处理对象映射时将自动调用。  
   
 ##  <a name="updateregistryfromresourced"></a>CComModule::UpdateRegistryFromResourceD  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 virtual HRESULT UpdateRegistryFromResourceD(  
@@ -600,7 +583,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
  有关可替换参数和脚本的详细信息，请参阅文章[ATL 注册表组件 （注册器）](../../atl/atl-registry-component-registrar.md)。  
   
 ##  <a name="updateregistryfromresources"></a>CComModule::UpdateRegistryFromResourceS  
- ATL 7.0 截至`CComModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 virtual HRESULT UpdateRegistryFromResourceS(  
@@ -642,4 +625,3 @@ virtual HRESULT UpdateRegistryFromResourceS(
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

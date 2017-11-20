@@ -1,53 +1,52 @@
 ---
-title: "default (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default OpenMP clause"
-  - "defaults, OpenMP clause"
+title: "默认值 (OpenMP) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: default
+dev_langs: C++
+helpviewer_keywords:
+- default OpenMP clause
+- defaults, OpenMP clause
 ms.assetid: 96055106-a8f0-40b3-8319-e412b6e07bf8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: caafb7818c32dad7b21ac7a05d10f77753c1da73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# default (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-在并行区域指定 unscoped 变量的行为。  
+# <a name="default-openmp"></a>default (OpenMP)
+并行区域中指定的未区分范围的变量的行为。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 default(shared | none)  
 ```  
   
-## 备注  
- `shared`，实际上是，如果 `default` 未指定子句，这意味着任何变量在并行区域将处理，就象指定了一 [shared](../../../parallel/openmp/reference/shared-openmp.md) 子句。  `none` 意味着没有范围与 [private](../../../parallel/openmp/reference/private-openmp.md)用于并行区域， [shared](../../../parallel/openmp/reference/shared-openmp.md)、 [reduction](../../../parallel/openmp/reference/reduction.md)、 [firstprivate](../../../parallel/openmp/reference/firstprivate.md)或 [lastprivate](../../../parallel/openmp/reference/lastprivate.md) 子句的所有变量将导致编译器错误。  
+## <a name="remarks"></a>备注  
+ `shared`它实际上是如果`default`子句未指定，意味着将被视为并行区域内的任何变量，如同它指定与[共享](../../../parallel/openmp/reference/shared-openmp.md)子句。 `none`意味着在作用域不是使用并行区域中使用的任何变量[私有](../../../parallel/openmp/reference/private-openmp.md)，[共享](../../../parallel/openmp/reference/shared-openmp.md)，[缩减](../../../parallel/openmp/reference/reduction.md)， [firstprivate](../../../parallel/openmp/reference/firstprivate.md)，或[lastprivate](../../../parallel/openmp/reference/lastprivate.md)子句将导致编译器错误。  
   
- `default` 适用于以下指令:  
+ `default`适用于以下指令：  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [部分](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 有关更多信息，请参见 [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md)。  
+ 有关详细信息，请参阅[2.7.2.5 默认](../../../parallel/openmp/2-7-2-5-default.md)。  
   
-## 示例  
- 有关使用示例 `default`参见 [private](../../../parallel/openmp/reference/private-openmp.md) 。  
+## <a name="example"></a>示例  
+ 请参阅[私有](../../../parallel/openmp/reference/private-openmp.md)有关的使用示例`default`。  
   
-## 请参阅  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>另请参阅  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

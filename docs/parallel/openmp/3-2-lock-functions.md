@@ -1,50 +1,49 @@
 ---
-title: "3.2 Lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.2 锁函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0ec855c6-55a9-49d7-bee4-5edae6e86a1b
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 540c76a5fdcee4df78df454fed957191fc244cf5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 3.2 Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本节描述的功能操作用于同步锁。  
+# <a name="32-lock-functions"></a>3.2 锁函数
+本节中所述的函数操作用于同步的锁。  
   
- 为以下功能，锁变量必须具有类型 **omp\_lock\_t**。  必须通过这些功能仅捕获此变量。  所有死锁函数具有指向 **omp\_lock\_t** 类型的参数。  
+ 对于以下函数，锁定变量必须具有类型**omp_lock_t**。 此变量仅必须通过这些函数来访问。 所有锁函数都需要具有到指针参数**omp_lock_t**类型。  
   
--   `omp_init_lock` 函数来初始化一个简单的锁。  
+-   `omp_init_lock`函数初始化简单锁。  
   
--   `omp_destroy_lock` 功能移除一个简单的锁。  
+-   `omp_destroy_lock`函数中删除一个简单的锁定。  
   
--   `omp_set_lock` 函数等待，直到简单的锁可用。  
+-   `omp_set_lock`函数等待，直到简单锁是可用。  
   
--   `omp_unset_lock` 函数释放一个简单的锁。  
+-   `omp_unset_lock`函数释放简单锁。  
   
--   `omp_test_lock` 函数可测试一个简单的锁。  
+-   `omp_test_lock`函数测试一个简单的锁定。  
   
- 为以下功能，锁变量必须具有类型 **omp\_nest\_lock\_t**。  必须通过这些功能仅捕获此变量。  所有可套上的死锁函数具有指向 **omp\_nest\_lock\_t** 类型的参数。  
+ 对于以下函数，锁定变量必须具有类型**omp_nest_lock_t**。  此变量仅必须通过这些函数来访问。 所有 nestable 锁函数需要具有到指针参数**omp_nest_lock_t**类型。  
   
--   `omp_init_nest_lock` 函数初始化可套上的锁。  
+-   `omp_init_nest_lock`函数初始化 nestable 锁。  
   
--   `omp_destroy_nest_lock` 功能移除可套上的锁。  
+-   `omp_destroy_nest_lock`函数中移除 nestable 锁。  
   
--   `omp_set_nest_lock` 函数等待，直到可套上的锁可用。  
+-   `omp_set_nest_lock`函数等待，直到 nestable 锁时可用。  
   
--   `omp_unset_nest_lock` 函数释放可套上的锁。  
+-   `omp_unset_nest_lock`函数释放 nestable 锁。  
   
--   `omp_test_nest_lock` 函数可测试可套上的锁。  
+-   `omp_test_nest_lock`函数测试 nestable 锁。  
   
- OpenMP 死锁函数访问锁定变量，因此总是读取和更新锁定变量的当前值。  因此，包括显式 **刷新** 指令确保 OpenMP 程序并不是必需的锁变量值在不同的线程之间保持一致。  \(可能需要 **刷新** 指令使值其他变量一致。\)
+ OpenMP 锁函数访问它们始终读取和更新的锁定变量的最新值的方式的锁定变量。 因此，不需要的 OpenMP 程序以包括显式**刷新**指令以确保锁定变量的值在不同线程之间保持一致。 (可能有需要**刷新**指令以使其他变量的值保持一致。)

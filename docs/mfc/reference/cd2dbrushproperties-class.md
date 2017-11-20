@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,20 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DBrushProperties
 - AFXRENDERTARGET/CD2DBrushProperties::CD2DBrushProperties
 - AFXRENDERTARGET/CD2DBrushProperties::CommonInit
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 9aeaa81a6f1192cb2d05ac37c56c95032fa4b398
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: ce10f805968b31f0d3a832891c1e0e378277b626
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties 类
 `D2D1_BRUSH_PROPERTIES`的包装器。  
@@ -90,4 +87,3 @@ void CommonInit();
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

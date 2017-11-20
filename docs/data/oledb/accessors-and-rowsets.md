@@ -1,79 +1,79 @@
 ---
-title: "访问器和行集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "访问器 [C++]"
-  - "访问器 [C++], 行集合"
-  - "数组行集合"
-  - "批量行集合"
-  - "CAccessorBase 类"
-  - "CAccessorRowset 类, 访问器类型"
-  - "CArrayRowset 类, 访问器"
-  - "CBulkRowset 类, 访问器"
-  - "CRowset 类, 访问器和行集合"
-  - "OLE DB 使用者模板, 访问器"
-  - "OLE DB 使用者模板, 行集合支持"
-  - "行集合 [C++], 访问"
-  - "行集合 [C++], 支持的类型"
-  - "单个行集合"
+title: "访问器和行集合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++]
+- OLE DB consumer templates, rowset support
+- OLE DB consumer templates, accessors
+- rowsets [C++], accessing
+- bulk rowsets
+- CAccessorRowset class, accessor types
+- single rowsets
+- CArrayRowset class, accessors
+- CBulkRowset class, accessors
+- array rowsets
+- CAccessorBase class
+- CRowset class, accessors and rowsets
+- accessors [C++], rowsets
+- rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0514524c3f96791c05b3d3ae33b8196deb7e554
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 访问器和行集合
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-为了设置和检索数据，OLE DB 模板通过 [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) 类使用访问器和行集合。  此类可以处理多个不同类型的访问器。  
+# <a name="accessors-and-rowsets"></a>访问器和行集合
+若要设置和检索数据，OLE DB 模板使用访问器和行集通过[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)类。 此类可以处理不同类型的多个访问器。  
   
-## 访问器类型  
- 所有访问器均从 [CAccessorBase](../../data/oledb/caccessorbase-class.md) 派生。  `CAccessorBase` 既提供参数又提供列绑定。  
+## <a name="accessor-types"></a>访问器类型  
+ 所有访问器派生自[CAccessorBase](../../data/oledb/caccessorbase-class.md)。 `CAccessorBase`提供参数和列绑定。  
   
  下图显示访问器类型。  
   
- ![访问器类型](../../data/oledb/media/vcaccessortypes.gif "vcAccessorTypes")  
+ ![访问器类型](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 访问器类  
   
--   [CAccessor](../../data/oledb/caccessor-class.md) 如果您在设计时知道数据库源的结构，则使用此访问器。  `CAccessor` 将包含缓冲区的数据库记录静态绑定到数据源。  
+-   [CAccessor](../../data/oledb/caccessor-class.md)当你在设计时知道数据库源的结构时使用此访问器。 `CAccessor`将数据库记录，其中包含缓冲区，静态绑定到数据源。  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 如果您在设计时不知道数据库的结构，则使用此访问器。  `CDynamicAccessor` 调用 `IColumnsInfo::GetColumnInfo` 以获取数据库列信息。  它创建并管理访问器和缓冲区。  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)在设计时不知道数据库的结构时使用此访问器。 `CDynamicAccessor`调用`IColumnsInfo::GetColumnInfo`获取的数据库列信息。 它创建和管理访问器和缓冲区。  
   
--   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) 使用此访问器处理未知的命令类型。  在准备命令时，如果提供程序支持 `ICommandWithParameters`，`CDynamicParameterAccessor` 就可以从 `ICommandWithParameters` 接口获取参数信息。  
+-   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)此访问器用于处理未知的命令类型。 当你准备命令，`CDynamicParameterAccessor`即可获取参数信息从`ICommandWithParameters`接口，如果该提供程序支持`ICommandWithParameters`。  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)、[CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md) 和 [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) 如果您不知道数据库架构，则使用这些类。  `CDynamicStringAccessorA` 检索 ANSI 字符串形式的数据；`CDynamicStringAccessorW` 检索 Unicode 字符串形式的数据。  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)， [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)，和[CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)在不知道数据库架构时使用这些类。 `CDynamicStringAccessorA`将数据检索为 ANSI 字符串;`CDynamicStringAccessorW`将数据检索为 Unicode 字符串。  
   
--   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) 通过此类可以使用任何所需的数据类型（只要提供程序可以转换此类型）。  它既可以处理结果列，也可以处理命令参数。  
+-   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)与此类，可以使用任何你希望如果提供程序可以将类型转换的数据类型。 它处理结果列和命令参数。  
   
- 下表概述了 OLE DB 模板访问器类型中的支持。  
+ 下表总结了中的 OLE DB 模板访问器类型的支持。  
   
-|访问器类型|Dynamic|处理参数|缓冲区|多个访问器|  
-|-----------|-------------|----------|---------|-----------|  
-|`CAccessor`|否|是|用户|是|  
-|`CDynamicAccessor`|是|否|OLE DB 模板|否|  
-|`CDynamicParameterAccessor`|是|是|OLE DB 模板|否|  
-|`CDynamicStringAccessor[A,W]`|是|否|OLE DB 模板|否|  
+|访问器类型|动态|句柄 params|缓冲区|多个访问器|  
+|-------------------|-------------|--------------------|------------|------------------------|  
+|`CAccessor`|No|是|用户|是|  
+|`CDynamicAccessor`|是|No|OLE DB 模板|No|  
+|`CDynamicParameterAccessor`|是|是|OLE DB 模板|No|  
+|`CDynamicStringAccessor[A,W]`|是|No|OLE DB 模板|No|  
 |`CManualAccessor`|是|是|用户|是|  
   
-## 行集合类型  
- OLE DB 模板支持三种行集合（见上图）：单个行集合（由 [CRowset](../../data/oledb/crowset-class.md) 实现）、批量行集合（由 [CBulkRowset](../../data/oledb/cbulkrowset-class.md) 实现）和数组行集合（由 [CArrayRowset](../../data/oledb/carrayrowset-class.md) 实现）。  单个行集合在 `MoveNext` 被调用时获取单个行句柄。  批量行集合可以获取多个行句柄。  数组行集合是可以使用数组语法进行访问的行集合。  
+## <a name="rowset-types"></a>行集合类型  
+ OLE DB 模板支持三种类型的行集 （请参阅前图所示）： 单一行集 (由实现[CRowset](../../data/oledb/crowset-class.md))，大容量行集 (由实现[CBulkRowset](../../data/oledb/cbulkrowset-class.md))，和数组 （实现的行集通过[CArrayRowset](../../data/oledb/carrayrowset-class.md))。 单个行处理时的单个行集提取`MoveNext`调用。 大容量行集可以提取多个行句柄。 数组行集是可以使用数组语法访问的行集。  
   
- 下图显示行集合类型。  
+ 下图显示的行集类型。  
   
- ![RowsetType 图](../Image/vcRowsetTypes.gif "vcRowsetTypes")  
-行集合类  
+ ![RowsetType 图](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
+行集类  
   
- [架构行集合](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)不访问数据存储区中的数据，而是访问关于数据存储区的信息（称为元数据）。  对于在编译时不知道数据库结构、但必须在运行时获取此结构的情况，通常需使用架构行集合。  
+ [架构行集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)执行不访问数据中的数据存储，但改为访问有关数据存储区，称为元数据信息。 在数据库结构在编译时未知，并且必须在运行时获取的情况下，通常使用架构行集合。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

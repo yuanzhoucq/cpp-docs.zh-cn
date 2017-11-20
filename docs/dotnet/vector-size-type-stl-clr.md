@@ -1,41 +1,39 @@
 ---
-title: "vector::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 成员 [STL/CLR]"
+title: "vector:: size_type (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 0789e887-e79a-42f9-a162-fc27f1341900
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31e464d1880847751e1134c226b0964654270ee5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# vector::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorsizetype-stlclr"></a>vector::size_type (STL/CLR)
 两个元素间的带符号距离的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 备注  
- 这个类型描述了一个非整数元素的数量。  
+## <a name="remarks"></a>备注  
+ 该类型描述非负元素计数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_size_type.cpp   
@@ -62,13 +60,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**   
-## 要求  
- **标头:** \<cliext\/vector\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/向量 >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::empty](../dotnet/vector-empty-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)

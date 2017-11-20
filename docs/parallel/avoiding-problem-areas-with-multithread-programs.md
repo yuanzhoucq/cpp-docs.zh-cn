@@ -1,36 +1,36 @@
 ---
-title: "避免与多线程程序有关的问题 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "错误 [C++], 多线程程序"
-  - "多线程处理 [C++], 疑难解答"
-  - "线程处理 [C++], 疑难解答"
-  - "疑难解答 [C++], 多线程处理"
+title: "避免与多线程程序问题 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multithreading [C++], troubleshooting
+- errors [C++], multithreaded programs
+- threading [C++], troubleshooting
+- troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a6722e2cea4141a44bee43a162a73176ce35fea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 避免与多线程程序有关的问题
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在创建、链接或执行多线程 C 程序时可能会遇到几种问题。  下表将对一些更常见的问题进行描述。（有关从 MFC 角度进行的类似讨论，请参见[多线程编程：编程提示](../parallel/multithreading-programming-tips.md)。）  
+# <a name="avoiding-problem-areas-with-multithread-programs"></a>避免与多线程程序有关的问题
+有几个问题可能会创建、 链接或执行多线程 C 程序中出现。 下表介绍了一些较为常见的问题。 (从 MFC 角度来看的类似讨论，请参阅[多线程处理： 编程提示](../parallel/multithreading-programming-tips.md)。)  
   
 |问题|可能的原因|  
-|--------|-----------|  
-|出现一个消息框，显示程序已导致保护冲突。|许多 Win32 编程错误导致保护冲突。  导致保护冲突的常见原因是间接将数据分配给 null 指针。  因为这会导致程序尝试访问不属于它的内存，所以发出保护冲突。<br /><br /> 检测导致保护冲突原因的一个很容易的方式就是使用调试信息编译程序，然后在 Visual C\+\+ 环境中通过调试器运行程序。  发生保护错误时，Windows 将控制传输到调试器，光标会定位在导致问题的行上。|  
-|程序生成许多编译和链接错误。|通过将编译器的警告等级设置为最高值之一并注意警告消息，可以消除许多潜在问题。  通过使用等级为 3 或等级为 4 的警告等级选项，可以检测意外的数据转换、丢失的函数原型和非 ANSI 功能的使用。|  
+|-------------|--------------------|  
+|获取一个消息框显示你的程序导致保护冲突。|许多 Win32 编程错误导致保护冲突。 保护冲突的常见原因是间接分配到 null 指针的数据。 因为这会导致程序尝试访问不属于它的内存，则会发出保护冲突。<br /><br /> 检测保护冲突的原因的简单办法是编译您的程序与调试信息并运行通过 Visual c + + 环境中的调试器。 当保护错误发生时，Windows 将控制权转交给调试器，并将光标置于引起问题的行。|  
+|你的程序会生成大量的编译和链接错误。|编译器的警告级别设置为其最大的值之一，并注意警告消息，可以消除许多潜在的问题。 通过使用级别 3 和等级 4 警告级别选项，则可以检测到意外的数据转换、 缺少函数原型，以及使用非 ANSI 功能。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)

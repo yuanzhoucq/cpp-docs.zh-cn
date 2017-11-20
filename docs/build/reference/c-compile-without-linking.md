@@ -1,67 +1,66 @@
 ---
-title: "/c（在不链接的情况下进行编译） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/c"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/c 编译器选项 [C++]"
-  - "c 编译器选项 [C++]"
-  - "-c 编译器选项 [C++]"
-  - "cl.exe 编译器, 编译而不链接"
-  - "取消链接"
+title: "-c （链接的情况下进行编译） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /c
+dev_langs: C++
+helpviewer_keywords:
+- suppress link
+- cl.exe compiler, compiling without linking
+- -c compiler option [C++]
+- c compiler option [C++]
+- /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a8f10aef6c2907d0730d358a6471c17bfd6a4cf8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /c（在不链接的情况下进行编译）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-禁止自动调用 LINK。  
+# <a name="c-compile-without-linking"></a>/c（在不链接的情况下进行编译）
+可防止对链接的自动调用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /c  
 ```  
   
-## 备注  
- 用 **\/c** 编译将只创建 .obj 文件。  必须用正确的文件和选项显式调用 LINK，才能执行生成的链接阶段。  
+## <a name="remarks"></a>备注  
+ 使用编译**/c**只创建.obj 文件。 使用正确的文件和选项来执行生成的链接阶段中，必须显式调用链接。  
   
- 默认情况下，在开发环境中创建的任何内部项目都使用 **\/c** 选项。  
+ 在开发环境中创建任何内部项目使用**/c**默认情况下的选项。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
--   此选项从开发环境内部不可用。  
+-   此选项不可用从开发环境中。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   若要以编程方式设置此编译器选项，请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>。  
+-   若要以编程方式设置此编译器选项，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>。  
   
-## 示例  
- 下列命令行创建对象文件 FIRST.obj 和 SECOND.obj。  忽略 THIRD.obj。  
+## <a name="example"></a>示例  
+ 下面的命令行创建 FIRST.obj 和 SECOND.obj 对象文件。THIRD.obj 将被忽略。  
   
 ```  
 CL /c FIRST.C SECOND.C THIRD.OBJ  
 ```  
   
- 若要创建可执行文件，必须调用 LINK：  
+ 若要创建可执行文件，必须调用链接：  
   
 ```  
 LINK firsti.obj second.obj third.obj /OUT:filename.exe  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -1,33 +1,30 @@
 ---
-title: ".FPO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".FPO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".FPO directive"
+title: ".FPO |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .FPO
+dev_langs: C++
+helpviewer_keywords: .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fc26358e1da11ada6b23364576bfedb379bc4030
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# .FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-.FPO 指令控件发出调试记录到 .debug$F 段或部分。  
+# <a name="fpo"></a>.FPO
+。FPO 指令控制调试记录与.debug$ F 段或部分显示。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -47,24 +44,24 @@ cbFrame
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `cdwLocals`  
- 局部变量的数字，无符号 32 位值。  
+ 无符号的 32 位值的本地变量数。  
   
  `cdwParams`  
- 参数，无符号 16 位值的范围在 DWORDS 的。  
+ Dword 值，一个 16 位无符号的值中的参数的大小。  
   
  *cbProlog*  
- 中的字节数 prolog 代码，无符号 8 位的值。  
+ 在函数 prolog 代码中，一个 8 位无符号的值的字节数。  
   
  `cbRegs`  
- 保存的数字注册。  
+ 保存的寄存器号。  
   
  `fUseBP`  
- 指示是否已分配的 EBP 寄存器。  0 或 1。  
+ 指示是否已分配的 EBP 寄存器。 0 或 1。  
   
  *cbFrame*  
- 指示框架类型。  有关更多信息，请参见[FPO\_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352)。  
+ 指示的帧类型。  请参阅[FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352)有关详细信息。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

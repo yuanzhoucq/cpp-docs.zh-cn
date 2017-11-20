@@ -1,41 +1,40 @@
 ---
-title: "Debug 类 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], 调试类"
-  - "调试类"
-  - "Trace 类, Visual C++"
+title: "Debug 类 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Trace class, Visual C++
+- .NET Framework [C++], Debug class
+- Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 14354241c4e16e1177a5680b901a738f16036f96
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Debug 类 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 Visual C\+\+ 应用程序中使用 <xref:System.Diagnostics.Debug> 时，行为在调试版本和发布版本之间不发生更改。  
+# <a name="debug-class-ccli"></a>Debug 类 (C++/CLI)
+使用时<xref:System.Diagnostics.Debug>在 Visual c + + 应用程序，该行为不会更改调试版本和发布版本之间。  
   
-## 备注  
- <xref:System.Diagnostics.Trace> 的行为与 Debug 类的行为相同，但是依赖于正被定义的符号 TRACE。  这意味着必须 `#ifdef` 任何与 Trace 相关的代码，以防止在发布版本中出现调试行为。  
+## <a name="remarks"></a>备注  
+ 行为<xref:System.Diagnostics.Trace>等同于 Debug 类的行为，但依赖于跟踪正在定义的符号。 这意味着你必须`#ifdef`任何与跟踪相关的代码，以防止在发布版本中的调试行为。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 无论您是用 **\/DDEBUG** 还是用 **\/DTRACE** 编译，下面的示例总是执行输出语句。  
+### <a name="description"></a>描述  
+ 下面的示例执行速度始终都输出语句，而不考虑是否使用编译**/DDEBUG**或**/DTRACE**。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // mcpp_debug_class.cpp  
@@ -57,7 +56,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
     Entering Main  
@@ -66,12 +65,12 @@ Hello World.
 test  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 若要获得预期的行为（即发布版本不打印“test”输出），必须使用 `#ifdef` 和 `#endif` 指令。  上述代码示例经过如下修改以说明此修复：  
+### <a name="description"></a>描述  
+ 若要获取的预期的行为 （即，没有"test"的输出为打印的发布版本），你必须使用`#ifdef`和`#endif`指令。 前面的代码示例如下修改，以说明此修补程序：  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // mcpp_debug_class2.cpp  
@@ -98,5 +97,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

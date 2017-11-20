@@ -1,66 +1,64 @@
 ---
-title: "“从现有代码文件创建新项目”向导 -&gt;“指定项目位置和源文件” | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.location"
-dev_langs: 
-  - "C++"
+title: "从现有代码的源文件 （Visual c + +） 的新项目 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.location
+dev_langs: C++
 ms.assetid: 29ddffb9-5918-4d72-8c7a-a365f9de96dd
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 36b20340da6cae933acb0650b3e073e3835a0204
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “从现有代码文件创建新项目”向导 -&gt;“指定项目位置和源文件”
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用“从现有代码文件创建新项目”向导的此页可以指定：  
+# <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>“从现有代码文件创建新项目”向导 ->“指定项目位置和源文件”
+从现有代码文件创建新项目向导的此页用于指定：  
   
 -   新项目的目录路径  
   
--   要在其中搜索现有源文件的目录  
+-   要搜索现有的源文件的目录  
   
--   向导将向新项目中导入的文件类型  
+-   类型的向导将导入到新的项目的文件  
   
-## 任务列表  
- [如何：通过现有代码创建 C\+\+ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>任务列表  
+ [如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **项目文件位置**  
- 指定新项目的目录路径。  向导将在此位置放置新项目的所有文件（和子目录）。  
+ 指定新项目的目录路径。 此位置是所有的文件 （和子目录） 的新项目向导将放入其中。  
   
  **浏览**  
- 显示**“项目文件位置”**对话框，该对话框可以帮助您指定包含新项目的目录。  通过此控件可以定位到所需的文件夹。  
+ 显示**项目文件位置**对话框中，这可帮助您指定将包含新的项目的目录。 此控制，你可以导航到所需的文件夹。  
   
  **项目名称**  
- 指定新项目的名称。  具有文件扩展名（如 .vcxproj）的项目文件将采用此名称。  现有代码文件将继续使用其原始名称。  
+ 指定新项目的名称。 项目文件，具有文件扩展，如.vcxproj 将采用此名称。 现有代码文件将保留其原始名称。  
   
- **将文件从这些文件夹添加到项目中**  
- 如果选中，则将向导设置为将现有代码文件从其原始目录（在此控件下面的列表框中指定）复制到新项目中。  
+ **从这些文件夹将文件添加到项目**  
+ 选中之后，设置向导将现有代码文件从其原始指定的目录 （此控件下面的列表框中） 复制到新的项目。  
   
  **添加子文件夹**  
- 指定将代码文件从**“文件夹”**列中列出的目录的所有子目录复制到新项目中。  
+ 指定将代码文件从目录的所有子目录复制列出**文件夹**到新的项目的列。  
   
  **文件夹**  
- 指示包含要复制到新项目中的现有代码文件的目录的路径。  此列将列出向导要在其中搜索现有代码文件的所有目录。  
+ 指示包含要复制到新的项目的现有代码文件的目录的路径。 此列列出向导将搜索现有代码文件的所有目录。  
   
  **添加**  
- 显示**“从此文件夹向项目添加文件”**对话框，该对话框可以帮助您指定向导将在其中搜索现有代码文件的目录。  
+ 显示**从此文件夹将文件添加到项目**对话框中，可帮助你向导将搜索现有代码文件的指定目录。  
   
  **移除**  
  删除在此控件左侧的列表框中选择的目录路径。  
   
- **要添加到项目的文件类型**  
- 根据给定的文件扩展名指定向导将添加到新项目中的文件类型。  文件扩展名前面带有星号通配符，在文件扩展名列表中以分号分隔各个扩展名。  
+ **要向项目中添加的文件类型**  
+ 指定该向导将添加到新项目基于给定的文件扩展名的文件的类型。 文件扩展名前面加上星号通配符，和由分号分隔的文件扩展名的列表中。  
   
  **在解决方案资源管理器中显示所有文件**  
- 指定新项目中的所有文件都是可见的，这些文件在“解决方案资源管理器”窗口中显示。  默认情况下，启用此选项。
+ 指定在新项目在解决方案资源管理器窗口中是可见且显示中的所有文件。 默认情况下启用此选项。

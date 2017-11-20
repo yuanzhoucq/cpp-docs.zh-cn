@@ -1,50 +1,50 @@
 ---
-title: "记录集：执行联接 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据绑定 [C++], 记录集内的列"
-  - "数据绑定 [C++], 记录集列"
-  - "筛选器 [C++], 记录集的联接条件"
-  - "联接 [C++], 在记录集中"
-  - "ODBC 记录集 [C++], 联接"
-  - "记录集 [C++], 绑定数据"
-  - "记录集 [C++], 联接表"
+title: "记录集： 执行联接 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- joins [C++], in recordsets
+- data binding [C++], recordset columns
+- recordsets [C++], binding data
+- data binding [C++], columns in recordsets
+- filters [C++], join conditions for recordsets
+- ODBC recordsets [C++], joins
+- recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5366484ab4e2b08ababd887e0f09c9f97ce6c02f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 记录集：执行联接 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-performing-a-join-odbc"></a>记录集：执行联接 (ODBC)
 本主题适用于 MFC ODBC 类。  
   
-## 什么是联接  
- 联接操作（一个通用的数据访问任务）使您得以使用一个记录集对象处理来自多个表的数据。  联接两个或两个以上的表产生可以包含每个表中的列的记录集，但该记录集在应用程序中仍表现为单个表。  有时联接使用所有表的所有列，但有时联接中的 SQL **SELECT** 子句只使用每个表中的某些列。  数据库类支持只读联接，但不支持可更新的联接。  
+## <a name="what-a-join-is"></a>什么联接就是将  
+ 联接操作，一个通用的数据访问任务，使你可以使用单个记录集对象的多个表的数据。 联接两个或多个表生成一个可以包含每个表中的列，但显示为你的应用程序到单个表的记录集。 有时联接使用所有表，但有时 SQL 中的所有列**选择**子句一个联接中的只都使用某些的每个表中的列。 数据库类支持只读联接，但不是可更新的联接。  
   
- 若要选择包含联接表中的列的记录，需要下列项：  
+ 若要选择包含联接的表中的列的记录，你需要以下各项：  
   
--   包含所有正在联接的表名的表列表。  
+-   包含要联接的所有表的名称的表列表。  
   
--   包含所有参与列名的列列表。  具有相同名称但来自不同表的列由表名限定。  
+-   包含所有参与列的名称的列列表。 具有相同名称但来自不同表的列是由表名限定。  
   
--   指定用于联接表的列的筛选器（SQL **WHERE** 子句）。  此筛选器采用“Table1.KeyCol \= Table2.KeyCol”的格式并实际完成联接。  
+-   筛选器 (SQL**其中**子句)，它指定在其表已联接的列。 此筛选器的形式"Table1.KeyCol = Table2.KeyCol"和实际完成联接。  
   
- 可以以同样的方式联接两个以上的表，即通过将多个列对视为相等，每一对都由 SQL 关键字 **AND** 联接。  
+ 可以在相同的方式联接两个以上的表，即多个列对，通过 SQL 关键字联接每一对通过**AND**。  
   
-## 请参阅  
- [记录集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [记录集：为预定义查询声明一个类 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [记录集：声明表的类 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [记录集：再次查询记录集 \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+## <a name="see-also"></a>另请参阅  
+ [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [记录集： 为预定义的查询 (ODBC) 声明一个类](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [记录集： 声明表 (ODBC) 类](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

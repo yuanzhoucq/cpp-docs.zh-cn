@@ -1,33 +1,30 @@
 ---
-title: "operator&gt;= (queue) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator>="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator>= 成员 [STL/CLR]"
+title: "运算符&gt;= （队列） (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator>=
+dev_langs: C++
+helpviewer_keywords: operator>= member [STL/CLR]
 ms.assetid: 55504da4-90a9-4c02-94df-10ba51b6b7cc
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cba51a22d5e9f5656dad7480d5c6d28f6d4ca271
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt;= (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-队列大于或等于比较。  
+# <a name="operatorgt-queue-stlclr"></a>运算符&gt;= （队列） (STL/CLR)
+队列大于以下值或相等比较。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Value,  
@@ -36,17 +33,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### 参数  
- left  
- 比较左边的容器。  
+#### <a name="parameters"></a>参数  
+ 左  
+ 要比较的左容器。  
   
- right  
- 比较右边的容器。  
+ 右  
+ 要比较的右容器。  
   
-## 备注  
- 运算符函数返回 `!(``left` `<` `right``)`。  当一个个元素地比较两队列时，您可以用它测试 `left` 是否在 `right` 之前排序。  
+## <a name="remarks"></a>备注  
+ 运算符函数返回`!(left < right)`。 用于测试是否`left`未进行排序之前`right`两个队列时由元素的比较的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_queue_operator_ge.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \>\= \[a b c\] 为True**  
-**\[a b c\] \>\= \[a b d\] 为 False**   
-## 要求  
- **标头:** \<cliext\/queue\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)   
- [operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [运算符 = = （队列） (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [运算符 ！ = （队列） (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [运算符\<（队列） (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [运算符 > （队列） (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
+ [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)

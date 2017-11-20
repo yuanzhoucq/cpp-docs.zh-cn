@@ -1,42 +1,42 @@
 ---
-title: "ATL 复合控件基础知识 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "复合控件, 关于复合控件"
+title: "ATL 复合控件基础知识 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f824d9148f45b7744ca2e911c8a83b0074784f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ATL 复合控件基础知识
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复合控件是可以包含ActiveX控件的类型\(类似于对话框\)其他ActiveX控件或Windows控件。  如果有复合控件后，可以插入就好像它是ActiveX控件可以承载。  
+# <a name="atl-composite-control-fundamentals"></a>ATL 复合控件基础知识
+复合控件是一种 ActiveX 控件可以包含 （类似于对话框） 其他 ActiveX 控件或 Windows 控件。 生成复合控件后，它可以插入任何可以承载 ActiveX 控件的位置。  
   
- ATL项目向导"和 **Add Class** 对话框自动创建和实现复合控件项的过程，与运行应用程序向导的结果创建MFC应用程序框架。  开发过程包括五个步骤:  
+ ATL 项目向导和**添加类**对话框中自动执行创建和实现类似于运行应用程序向导创建 MFC 应用程序框架的结果的复合控件项目的过程。 开发过程中包括五个步骤：  
   
--   [创建ATL项目](../atl/reference/creating-an-atl-project.md)  
+-   [创建 ATL 项目](../atl/reference/creating-an-atl-project.md)  
   
 -   [插入复合控件](../atl/inserting-a-composite-control.md)  
   
--   [修改ATL项目](../atl/modifying-the-atl-project.md)  
+-   [修改 ATL 项目](../atl/modifying-the-atl-project.md)  
   
 -   [将功能添加到复合控件](../atl/adding-functionality-to-the-composite-control.md)  
   
--   [生成并测试ATL项目](../atl/building-and-testing-the-atl-project.md)  
+-   [生成和测试 ATL 项目](../atl/building-and-testing-the-atl-project.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [Composite Control Global Functions](../atl/reference/composite-control-global-functions.md)   
- [Composite Control Macros](../atl/reference/composite-control-macros.md)
+ [复合控件全局函数](../atl/reference/composite-control-global-functions.md)   
+ [复合控件宏](../atl/reference/composite-control-macros.md)
+

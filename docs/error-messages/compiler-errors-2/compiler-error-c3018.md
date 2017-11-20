@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3018
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3018
+f1_keywords: C3018
+dev_langs: C++
+helpviewer_keywords: C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 05d0cc8f381335b22a53a4cc699172cd289126a9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3018"></a>编译器错误 C3018
 “var1”: OpenMP“for”测试或递增必须使用索引变量“var2”  

@@ -1,32 +1,30 @@
 ---
-title: "stack::stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stack 成员 [STL/CLR]"
+title: "stack:: stack (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::stack
+dev_langs: C++
+helpviewer_keywords: stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e12c704561cd56ac251479861740c7df205f1e37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# stack::stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackstack-stlclr"></a>stack::stack (STL/CLR)
 构造容器适配器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 stack();  
@@ -35,39 +33,39 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);  
 ```  
   
-#### 参数  
- right  
- 复制的对象。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 要复制的对象。  
   
  包装  
- 使用包装的容器。  
+ 要使用的已包装的容器。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `stack();`  
   
- 创建空的包装的容器。  可以使用它来指定空的初始序列控制。  
+ 创建一个空的已包装的容器。 用于指定空的初始受控的序列。  
   
  构造函数：  
   
  `stack(stack<Value, Container>% right);`  
   
- 创建 `right.get_container()`复制的包装的容器。  将它指定为将顺序控制堆栈对象由 `right`控制的初始序列。  
+ 创建一个已包装的容器，它是一份`right.get_container()`。 用于指定的初始受控的序列的堆栈对象所控制的序列副本`right`。  
   
  构造函数：  
   
  `stack(stack<Value, Container>^ right);`  
   
- 创建 `right->get_container()`复制的包装的容器。  将它指定为将顺序控制堆栈对象由 `*right`控制的初始序列。  
+ 创建一个已包装的容器，它是一份`right->get_container()`。 用于指定的初始受控的序列的堆栈对象所控制的序列副本`*right`。  
   
  构造函数：  
   
  `explicit stack(container_type% wrapped);`  
   
- 使用现有 `wrapped` 容器作为包装的容器。  使用该构造从现有容器的堆栈。  
+ 使用现有容器`wrapped`作为已包装的容器。 你可以使用它来构造从现有容器的堆栈。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_stack_construct.cpp   
@@ -107,17 +105,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## 要求  
- **页眉：** \<\/cliext 堆栈\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/堆栈 >  
   
-## 请参阅  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [堆栈 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
+ [stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

@@ -1,47 +1,43 @@
 ---
-title: "default (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default 特性"
-  - "属性 [C#], 默认属性"
-  - "默认值, 默认属性"
+title: "默认值 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 352fca07ecb9528bb11ff1cb5cc1f701bfa01e1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="default-c"></a>default (C++)
 指示组件类中定义的自定义接口或调度接口表示默认的可编程性接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *interface1*  
  默认接口，将可用于根据类（使用 **default** 属性定义）创建对象的脚本环境。  
   
@@ -52,10 +48,10 @@ interface1
   
  如果未指定默认源接口，则第一个源接口用作默认接口。  
   
-## 备注  
- **default** C\+\+ 属性具有与 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 属性相同的功能。**default** 属性还可以与 [case](../windows/case-cpp.md) 属性结合使用。  
+## <a name="remarks"></a>备注  
+ **default** C++ 属性具有与 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 属性相同的功能。 **default** 属性还可以与 [case](../windows/case-cpp.md) 属性结合使用。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下代码演示如何在组件类的定义中使用 **default** 来将 **ICustomDispatch** 指定为默认可编程性接口：  
   
 ```  
@@ -107,23 +103,22 @@ int main() {
 }  
 ```  
   
- [source](../windows/source-cpp.md) 属性也有说明如何使用 **default** 的示例。  
+ [source](../windows/source-cpp.md) 属性也有说明如何使用 **default**的示例。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 特性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**class**、`struct`、数据成员|  
+|**适用对象**|**class**、 `struct`、数据成员|  
 |**可重复**|No|  
-|**必需的特性**|**coclass**（应用于**class** 或 `struct` 时）|  
+|**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
 |**无效的特性**|无|  
   
- 有关详细信息，请参见[特性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

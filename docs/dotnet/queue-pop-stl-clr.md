@@ -1,41 +1,39 @@
 ---
-title: "queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop 成员 [STL/CLR]"
+title: "queue:: pop (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: 38f6c03b-e8f8-4663-b3d6-18314cdc8e7d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: de17790b127ad62c35db835c9555e7c410764812
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除最后的元素。  
+# <a name="queuepop-stlclr"></a>queue::pop (STL/CLR)
+移除的最后一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void pop();  
 ```  
   
-## 备注  
- 移除成员函数控制序列中的最后一个元素，该元素绑定非空。  使用由的元素队列缩写在后面。  
+## <a name="remarks"></a>备注  
+ 成员函数删除受控序列，必须为非空的最后一个元素。 你可以使用它将在后面的一个元素缩短队列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_queue_pop.cpp   
@@ -65,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **b c**   
-## 要求  
- **标头:** \<cliext\/queue\>  
+```Output  
+a b c  
+b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::push](../dotnet/queue-push-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)

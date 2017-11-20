@@ -1,32 +1,30 @@
 ---
-title: "replace_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "replace_if 函数 [STL/CLR]"
+title: "replace_if (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace_if
+dev_langs: C++
+helpviewer_keywords: replace_if function [STL/CLR]
 ms.assetid: 485ed698-551f-4808-8562-9e32b151786d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 87e02b927e01ad1b5180c7b25b5192d370d4b009
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# replace_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="replaceif-stlclr"></a>replace_if (STL/CLR)
 检查范围中的每个元素，并替换满足指定谓词的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _FwdIt, class _Pr, class _Ty> inline  
@@ -34,13 +32,13 @@ template<class _FwdIt, class _Pr, class _Ty> inline
         const _Ty% _Val);  
 ```  
   
-## 备注  
- 此函数行为与 STL `replace_if`函数相同。  有关详细信息，请参阅[replace\_if](../Topic/replace_if.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`replace_if`。 有关详细信息，请参阅[replace_if](../standard-library/algorithm-functions.md#replace_if)。  
   
-## 要求  
- **标头:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/算法 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

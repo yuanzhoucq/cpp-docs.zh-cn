@@ -1,80 +1,80 @@
 ---
-title: "__incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incgsdword"
-  - "__incgsqword_cpp"
-  - "__incgsword_cpp"
-  - "__incgsword"
-  - "__incgsbyte"
-  - "__incgsbyte_cpp"
-  - "__incgsqword"
-  - "__incgsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incgsbyte 内部函数"
-  - "__incgsword 内部函数"
-  - "__incgsqword 内部函数"
-  - "__incgsdword 内部函数"
+title: "__incgsbyte、 __incgsword、 __incgsdword、 __incgsqword |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incgsdword
+- __incgsqword_cpp
+- __incgsword_cpp
+- __incgsword
+- __incgsbyte
+- __incgsbyte_cpp
+- __incgsqword
+- __incgsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incgsbyte intrinsic
+- __incgsword intrinsic
+- __incgsqword intrinsic
+- __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 042858ea1568705050c5e10399a24f7bc24edd8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __incgsbyte, __incgsword, __incgsdword, __incgsqword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 **Microsoft 专用**  
   
- 添加一个。该值在指定了偏移量的内存位置相对于 `GS` 段开头。  
+ 指定相对于开始的偏移量的内存位置添加一个为值`GS`段。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __incgsbyte(   
-   unsigned long Offset   
+void __incgsbyte(   
+   unsigned long Offset   
 );  
-void __incgsword(   
-   unsigned long Offset   
+void __incgsword(   
+   unsigned long Offset   
 );  
-void __incgsdword(   
+void __incgsdword(   
    unsigned long Offset  
 );  
-void __incgsqword(   
-   unsigned long Offset   
+void __incgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### 参数  
- \[in\] `Offset`  
- 从最初 `GS`的偏移量。  
+#### <a name="parameters"></a>参数  
+ [in] `Offset`  
+ 从开始处的偏移量`GS`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
-## 备注  
- 这些内部只有在内核模式，并且，实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 这些内部函数只有在内核模式下可用，例程都仅可用作内部函数。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
- [\_\_addgsbyte, \_\_addgsword, \_\_addgsdword, \_\_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
- [\_\_readgsbyte、\_\_readgsdword、\_\_readgsqword、\_\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+## <a name="see-also"></a>另请参阅  
+ [__addgsbyte， \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
+ [__readgsbyte， \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
+ [__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

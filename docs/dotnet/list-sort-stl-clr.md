@@ -1,32 +1,30 @@
 ---
-title: "list::sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sort 成员 [STL/CLR]"
+title: "list:: sort (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::sort
+dev_langs: C++
+helpviewer_keywords: sort member [STL/CLR]
 ms.assetid: f811d5f4-a19e-4194-8765-1e68097c52f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6531459f26605aa63eccbe69c84959b2abe70493
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-对受控序列进行排序。  
+# <a name="listsort-stlclr"></a>list::sort (STL/CLR)
+受控的序列进行排序。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void sort();  
@@ -34,18 +32,18 @@ template<typename Pred2>
     void sort(Pred2 pred);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  pred  
- 比较器的元素对。  
+ 用于元素对比较器。  
   
-## 备注  
- 第一个成员函数重新排列控制序列的元素，以便由 `operator<` 排序\-\-，当通过序列，元素不继续减小。值。  使用该成员函数以递增的顺序排序的序列。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数重新排列受控序列中的元素，以便按排序`operator<`-值中不要递减元素，在访问的序列。 使用此成员函数进行排序以升序序列。  
   
- 第二个成员函数行为与第一个相同，不同之处在于，`pred` 排序序列。\-\- `pred``(X, Y)` 用于按照为序列的元素的所有 `Y` 元素 `X` 为 false。  使用此顺序。通过谓词函数或委托指定的排序的序列。  
+ 第二个成员函数行为与第一个相同，只不过按排序序列`pred`  --  `pred(X, Y)`为 false 的任何元素`X`后面元素`Y`生成序列中。 您可以使用它进行排序的谓词函数或委托指定的顺序中的序列。  
   
- 两个函数执行一个稳定排序\-\-对原始序列在控件的元素在生成的控制序列不会撤消。  
+ 同时函数执行一个稳定排序--没有一对原始的受控序列中的元素将被反转生成受控序列中。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_sort.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **a b c**  
- **c b。**  
- **a b c**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+a b c  
+c b a  
+a b c  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)   
- [list::reverse](../dotnet/list-reverse-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)   
- [list::unique](../dotnet/list-unique-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)   
+ [list:: reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)   
+ [list:: splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)   
+ [list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)

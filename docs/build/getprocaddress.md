@@ -1,34 +1,33 @@
 ---
-title: "GetProcAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetProcAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], GetProcAddress"
-  - "GetProcAddress 方法"
-  - "序号导出 [C++]"
+title: "GetProcAddress |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: GetProcAddress
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], GetProcAddress
+- ordinal exports [C++]
+- GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 426a0c5a40f3be3effdf4ba8316f6a72a8295965
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# GetProcAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-显式链接到 DLL 的进程调用 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) 来获取 DLL 导出函数的地址。  使用返回的函数指针调用 DLL 函数。  **GetProcAddress** 将（由 **LoadLibrary**、`AfxLoadLibrary` 或 **GetModuleHandle** 返回的）DLL 模块句柄和要调用的函数名或函数的导出序号用作参数。  
+# <a name="getprocaddress"></a>GetProcAddress
+显式链接到 DLL 调用的进程[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 中导出的函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用作为参数的 DLL 模块句柄 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 将函数名称和你要调用或函数的导出序号。  
   
- 由于是通过指针调用 DLL 函数并且没有编译时类型检查，需确保函数的参数是正确的，以便不会超出在堆栈上分配的内存和不会导致访问冲突。  帮助提供类型安全的一种方法是查看导出函数的函数原型，并创建函数指针的匹配 typedef。  例如：  
+ 由于要调用的 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并且会导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建匹配的函数指针的 typedef。 例如:   
   
 ```  
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  
@@ -58,23 +57,23 @@ if (hDLL != NULL)
 }  
 ```  
   
- 调用 **GetProcAddress** 时指定所需函数的方式取决于 DLL 的生成方式。  
+ 如何指定所需时调用的函数**GetProcAddress**取决于 DLL 如何生成。  
   
- 仅当要链接到的 DLL 是用模块定义 \(.def\) 文件生成的，并且序号在 DLL 的 .def 文件的 **EXPORTS** 部分中与函数一起列出时，才能获取导出序号。  如果 DLL 具有许多导出函数，则相对于使用函数名，使用导出序号调用 **GetProcAddress** 的速度稍快一些，因为导出序号是 DLL 导出表的索引。  使用导出序号，**GetProcAddress** 可直接定位函数，而不是将指定名称与 DLL 导出表中的函数名进行比较。  但是，仅当有权控制 .def 文件中导出函数的序号分配时，才应使用导出序号调用 **GetProcAddress**。  
+ 如果使用的模块定义 (.def) 文件生成要链接到 DLL，并列出中的函数的序号，仅可以获取导出序号**导出**DLL 的.def 文件的部分。 调用**GetProcAddress**与导出序号，而不是函数名称，是 DLL 具有许多导出的函数，因为索引到该 DLL 导出表作为导出序号稍微快一些。 与导出序号， **GetProcAddress**可以找到而比较指定的名称与 DLL 的导出表中的函数名称不是直接函数。 但是，你应调用**GetProcAddress**与仅当将序号分配到.def 文件中导出的函数的控制导出序号。  
   
-## 你希望做什么？  
+## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   
--   [隐式链接](../build/linking-implicitly.md)  
+-   [如何将隐式链接到 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [确定要使用的链接方法](../build/determining-which-linking-method-to-use.md)  
+-   [确定要使用的链接方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
 -   [LoadLibrary 和 AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
   
--   [\<caps:sentence id\="tgt17" sentenceid\="8c920606bb67e2587dd3c3e5cf977593" class\="tgtSentence"\>FreeLibrary\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683152)  
+-   [FreeLibrary](http://msdn.microsoft.com/library/windows/desktop/ms683152)  
   
 -   [使用 DEF 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

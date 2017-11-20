@@ -1,63 +1,64 @@
 ---
-title: "Aligning Controls on a Guide | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLUs (dialog units)"
-  - "controls [C++], aligning"
-  - "Dialog editor, snap to guides"
-  - "guides, tick mark interval"
-  - "dialog box controls, placement"
-  - "guides, aligning controls"
-  - "dialog units (DLUs)"
-  - "snap to guides (Dialog editor)"
-  - "controls [C++], sizing"
-  - "tick mark interval in Dialog editor"
-  - "controls [C++], snap to guides/grid"
+title: "对齐参考线上的控件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLUs (dialog units)
+- controls [C++], aligning
+- Dialog editor, snap to guides
+- guides, tick mark interval
+- dialog box controls, placement
+- guides, aligning controls
+- dialog units (DLUs)
+- snap to guides (Dialog editor)
+- controls [C++], sizing
+- tick mark interval in Dialog editor
+- controls [C++], snap to guides/grid
 ms.assetid: 17db84ba-5288-4478-be57-afa748aa6447
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 65eef3ef17e46e86a302b614b88413c97b045616
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Aligning Controls on a Guide
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-当移动控件时，控件的尺寸柄对齐参考线，而参考线对齐控件（如果以前没有任何控件对齐参考线的话）。  当移动参考线时，与它对齐的控件也同时移动。  与一条以上的参考线对齐的控件在其中一条参考线移动时调整大小。  
+# <a name="aligning-controls-on-a-guide"></a>在参考线上对齐控件
+当控件移，并参考线对齐控件 （如果不有任何控件的指南以前对齐），参考线对齐控件的尺寸控点。 当移动参考线时，会对齐到它的控件以及移动。 如果移动其中一个指南，对齐到多个指南的控件的大小。  
   
- 确定参考线和控件间距的标尺中的刻度线由对话框单元 \(DLU\) 定义。  DLU 基于对话框字体的大小，通常为 8 磅 MS Shell Dlg 字体。  水平 DLU 是按四划分的对话框字体的平均宽度。  垂直 DLU 是按八划分的字体的平均高度。  
+ 由对话框单元 (Dlu) 定义确定指南和控件的间距标尺中的刻度线。 DLU 基于对话框字体，通常 8 点 MS Shell Dlg 的大小。 水平 DLU 是由 4 个划分对话框字体的平均宽度。 垂直 DLU 是平均除以八个字体的高度。  
   
-### 用参考线调整一组控件的大小  
+### <a name="to-size-a-group-of-controls-with-guides"></a>若要调整的一组控件大小使用指南  
   
-1.  将控件的一端与一条参考线对齐。  
+1.  与参考线对齐 （或多个控件） 的一侧。  
   
-2.  将另一条参考线拖到控件的另一端。  
+2.  拖动 （或多个控件） 的另一端的指南。  
   
-     如果需要对多个控件执行此操作，则调整每个控件的大小使其与第二条参考线对齐。  
+     在必要时使用多个控件，调整大小以与第二个参考线对齐。  
   
-3.  移动任一参考线以调整控件的大小。  
+3.  移动任一参考线大小 （或多个控件）。  
   
-### 更改刻度线的间隔  
+### <a name="to-change-the-intervals-of-the-tick-marks"></a>若要更改的刻度线间隔  
   
-1.  从“格式”菜单中选择“参考线设置”。  
+1.  从**格式**菜单上，选择**参考线设置**。  
   
-2.  在[“参考线设置”对话框](../mfc/guide-settings-dialog-box.md)中，在“网格间距”字段中指定以 DLU 为单位的新的宽度和高度。  
+2.  在[参考线设置对话框中](../windows/guide-settings-dialog-box.md)中**网格间距**字段中，指定新的宽度和高度 Dlu。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  要求  
   
  Win32  
   
-## 请参阅  
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>另请参阅  
+ [对话框编辑器状态 （参考线和网格）](../windows/dialog-editor-states-guides-and-grids.md)   
+ [对话框中的控件](../windows/controls-in-dialog-boxes.md)
+

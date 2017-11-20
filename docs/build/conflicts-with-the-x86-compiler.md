@@ -1,35 +1,35 @@
 ---
-title: "与 x86 编译器冲突 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "冲突与 x86 编译器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8e47f0d3-afe0-42d9-9efa-de239ddd3a05
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a1a039b086b806c22e9cfe5ceda907916a7cf5de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 与 x86 编译器冲突
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-当使用 x86 编译器编译应用程序时，大于 4 字节的数据类型不会自动在堆栈上对齐。  由于 x86 编译器的体系结构为 4 字节对齐堆栈，因此大于 4 字节的任何数据类型（例如，64 位整数）均无法自动与 8 字节地址对齐。  
+# <a name="conflicts-with-the-x86-compiler"></a>与 x86 编译器冲突
+数据类型都大于 4 个字节不自动对齐在堆栈上时使用 x86 编译器进行编译应用程序。 因为编译器为 4 字节对齐的堆栈，任何大于 4 个字节，例如，64 位整数，不能自动对齐到 8 字节地址 x86 的体系结构。  
   
- 使用未对齐的数据具有两层隐含意义。  
+ 处理未对齐的数据有两个含义。  
   
--   与访问对齐的位置相比，可能需要更长的时间来访问未对齐的位置。  
+-   可能需要更长时间才能访问未对齐的位置不是所需对齐的位置。  
   
--   在互锁操作中，不能使用未对齐的位置。  
+-   未对齐的位置不能在互锁操作。  
   
- 如果您需要更为严格的对齐，请使用 `__declspec(align(N)) on your variable declarations`。  这会导致编译器与堆栈动态对齐以满足您的规范。  但是，在运行时动态调整堆栈可能会导致应用程序的执行速度变慢。  
+ 如果需要更为严格的对齐，则使用`__declspec(align(N)) on your variable declarations`。 这将导致编译器动态对齐堆栈，以满足您的规范。 但是，在运行时动态调整堆栈，这种情况可能会导致你的应用程序的执行速度变慢。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [类型和存储](../build/types-and-storage.md)   
  [align](../cpp/align-cpp.md)

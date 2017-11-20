@@ -1,62 +1,62 @@
 ---
-title: "conform | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "conform_CPP"
-  - "vc-pragma.conform"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "符合杂注"
-  - "forScope 符合杂注"
-  - "杂注, 符合"
+title: "符合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- conform_CPP
+- vc-pragma.conform
+dev_langs: C++
+helpviewer_keywords:
+- conform pragma
+- forScope conform pragma
+- pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b64027e2513b1df6013a8100ffd0b42d990b2ea2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# conform
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+ 专用**  
+# <a name="conform"></a>conform
+**C + + 专用**  
   
- 指定 [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 编译器选项的运行时行为。  
+ 指定的运行时行为[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)编译器选项。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *name*  
- 指定要修改的编译器选项的名称。  唯一有效的 *name* 为 `forScope`。  
+ 指定要修改的编译器选项的名称。 仅有的有效*名称*是`forScope`。  
   
- **show**（可选）  
- 导致 *name* 的当前设置（true 或 false）在编译期间以警告消息的方式显示。  例如 `#pragma conform(forScope, show)`。  
+ **显示**（可选）  
+ 导致的当前设置*名称*（true 或 false），以在编译期间显示通过一条警告消息。 例如 `#pragma conform(forScope, show)`。  
   
- **on、off**（可选）  
- 将 *name* 设置为 **on** 将启用 [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 编译器选项。  默认值为 **off**。  
+ **打开、 关闭**（可选）  
+ 设置*名称*到**上**使[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)编译器选项。 默认值是**关闭**。  
   
- **push**（可选）  
- 将 *name* 的当前值推送到内部编译器堆栈。  如果您指定 *identifier*，则可为要推送到堆栈的 *name* 指定 **on** 或 **off** 值。  例如 `#pragma conform(forScope, push, myname, on)`。  
+ **推送**（可选）  
+ 当前值推送*名称*到内部编译器堆栈。 如果指定*标识符*，你可以指定**上**或**关闭**值*名称*推送到堆栈上。 例如 `#pragma conform(forScope, push, myname, on)`。  
   
- **pop**（可选）  
- 将 *name* 的值设置为位于内部编译器堆栈顶部的值，然后弹出堆栈。  如果使用 **pop** 指定 identifier，则堆栈将弹回，直到它找到具有 *identifier* 的记录（也会弹出）；堆栈上的下一记录中的 *name* 的当前值将变为 *name* 的新值。  如果使用不在堆栈上的记录中的 *identifier* 指定 pop，则将忽略 **pop**。  
+ **pop** （可选）  
+ 设置的值*名称*到内部编译器堆栈，然后弹出堆栈顶部的值。 如果具有指定标识符**pop**，堆栈将弹回，直到它找到的记录*标识符*，这也会弹出; 的当前值*名称*中堆栈上的下一步记录将成为新值*名称*。 如果指定使用 pop*标识符*不在堆栈上，记录**pop**将被忽略。  
   
- *identifier*（可选）  
- 可以与 **push** 或 **pop** 命令包含在一起。  如果使用了 *identifier*，则还可以使用 **on** 或 **off** 说明符。  
+ *标识符*（可选）  
+ 可以包含在**推送**或**pop**命令。 如果*标识符*使用时，则**上**或**关闭**说明符还可以使用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // pragma_directive_conform.cpp  
@@ -74,5 +74,5 @@ caps.handback.revision: 5
 int main() {}  
 ```  
   
-## 请参阅  
- [Pragma 指令和 \_\_Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>另请参阅  
+ [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

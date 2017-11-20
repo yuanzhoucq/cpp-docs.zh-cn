@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2019
-dev_langs:
-- C++
+f1_keywords: LNK2019
+dev_langs: C++
 helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
 ms.assetid: 4392be92-195c-4eb2-bd4d-49cfac3ca291
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: ce3fddc9977f0abda1d776fd66172dbb49e86d3a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 4cb4413b8c0b53b407724dd16083027b89b91b37
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk2019"></a>链接器工具错误 LNK2019
 无法解析的外部符号*符号*函数中引用*函数*  
@@ -61,6 +57,8 @@ ms.lasthandoff: 10/09/2017
   
 -   **你通过使用 Windows 应用程序的设置生成了控制台应用程序**。 如果错误消息类似于 **unresolved external symbol WinMain referenced in function**`function_name`，请使用 **/SUBSYSTEM:CONSOLE** （而不是 **/SUBSYSTEM:WINDOWS**。 有关此设置的详细信息以及如何在 Visual Studio 中设置此属性的说明，请参阅 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。  
   
+-   **你尝试将 64 位库链接到 32 位代码或 32 位到 64 位代码的库。** 必须为你的代码相同的体系结构编译库和对象文件链接到你的代码。 验证为你的项目相同的体系结构编译项目引用的库。 请确保[/LIBPATH](../../build/reference/libpath-additional-libpath.md)或**附加库目录**为正确的体系结构生成的库的链接器点所使用的路径选项。
+
 -   **你为在不同源文件中内联的函数使用了不同的编译器选项。** 使用 .cpp 文件中定义的内联函数并在不同源文件中混合使用函数内联编译器可能会导致 LNK2019。 有关详细信息，请参阅 [Function Inlining Problems](../../error-messages/tool-errors/function-inlining-problems.md)。  
   
 -   **在自动变量范围外使用自动变量。** 自动（函数范围）变量仅可在该函数的范围内使用。 这些变量不可声明为 `extern` ，也不能在其他源文件中使用。 有关示例，请参见 [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md)。  
@@ -194,5 +192,4 @@ int main() {
 ## <a name="additional-resources"></a>其他资源  
   
 LNK2001 可能的原因和解决方案的详细信息，请参阅堆栈溢出问题[什么是未定义引用/未解析的外部符号错误以及如何修复此错误？](http://stackoverflow.com/q/12573816/2002113)。  
-
 

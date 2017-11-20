@@ -1,30 +1,30 @@
 ---
-title: "多线程 C 程序示例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "示例多线程 C 程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e4906924f3a572f2e8a00d226acdb3da7097cdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 多线程 C 程序示例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c 是一个示例多线程程序，每次键入字母 **a** 或 **A** 时，它都创建新线程。  每个线程都在屏幕的周围弹出不同颜色的笑脸。  最多可以创建 32 个线程。  键入 `q` 或 **Q** 时，发生正常的程序终止。  有关编译和链接 Bounce.c 的信息，请参见[编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)。  
+# <a name="sample-multithread-c-program"></a>多线程 C 程序示例
+Bounce.c 是创建一个新的示例多线程程序线程每次字母或**A**已类型化。 每个线程退回笑脸在屏幕的不同颜色。 可以创建多达 32 个线程。 发生的程序正常终止时`q`或**Q**已类型化。 编译和链接 Bounce.c 有关的信息，请参阅[编译和链接多线程程序](../parallel/compiling-and-linking-multithread-programs.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // sample_multithread_c_program.c  
@@ -211,12 +211,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### 输入  
+### <a name="input"></a>输入  
   
 ```  
 a  
 q  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)

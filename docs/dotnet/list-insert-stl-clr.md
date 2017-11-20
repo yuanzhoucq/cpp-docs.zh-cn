@@ -1,32 +1,30 @@
 ---
-title: "list::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert 成员 [STL/CLR]"
+title: "list:: insert (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 399ed30f-6b76-41a8-b180-6070e3ca1c68
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2a0fd1aad6b32de4f9232cbb7f7874255d1ecba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-添加元素到一个指定位置处。  
+# <a name="listinsert-stlclr"></a>list::insert (STL/CLR)
+将元素添加的指定位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator insert(iterator where, value_type val);  
@@ -37,39 +35,39 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  count  
  要插入的元素数。  
   
- first  
- 插入范围的开头。  
+ 第一个  
+ 要插入的范围开始处。  
   
  last  
- 插入范围的末尾。  
+ 要插入的范围的末尾。  
   
- right  
- 插入的枚举。  
+ 右  
+ 要插入的枚举。  
   
  val  
  要插入的元素的值。  
   
- where  
- 在之前插入的容器。  
+ 其中  
+ 要在其前插入容器中的何处。  
   
-## 备注  
- 每个成员函数，在控制序列中`where`指向元素之后，插入由剩余的操作数所指定的序列，  
+## <a name="remarks"></a>备注  
+ 每个成员函数插入的指向的元素之前`where`剩余操作数到受控序列中指定一个序列。  
   
- 第一个成员函数插入值`val`的元素，并返回指定新插入的元素的迭代器。  使用它在迭代器指定的位置之前插入一个元素。  
+ 第一个成员函数将具有值的元素插入`val`返回迭代器，它指定新插入的元素。 你可以使用它来插入单个元素之前指定迭代器的位置。  
   
- 第二个成员函数插入重复 `val`次 的元素 \(`count`\)。  使用它来插入零或相同值的所有副本的更多连续的元素。  
+ 第二个成员函数插入 `count` 元素的重复元素，值为 `val`。 用于插入零个或多个由连续的元素是相同的值的所有副本。  
   
- 如果`InIt`是一个整数类型，第三个成员函数的行为和`insert(``where``, (size_type)``first``, (value_type)``last``)`相同。  否则，其插入序列 `[``first``,` `last``)`。  将它粘贴从其他序列复制的零个或多个连续元素。  
+ 如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，它还将序列插入 [`first`， `last`)。 用于插入零个或多个由连续的元素从另一个序列复制。  
   
- 第四个成员函数 `right`插入选定的序列。  使用插入它枚举器描述的顺序。  
+ 第四个成员函数将由序列插入`right`。 用于插入一个枚举器所描述的序列。  
   
- 当插入单个元素时，元素副本数是线性的中元素的数量插入点且序列之间的接近序列结束的结尾。\(当在一个或多个元素在序列中的任一端，元素副本不发生。\)如果 `InIt` 是输入迭代器，第三个成员函数。序列有效运行每个元素的单个插入。  否则，插入`N`元件时，元件的份数是线性的`N`加在插入点和序列的较近端之间的元素数。  
+ 在插入单个元素时，元素副本的数目上呈线性之间插入点和最近序列末尾的元素数目。 （当将一个或多个元素插入序列的任意一端，没有元素副本会发生。）如果`InIt`作为输入的迭代器，第三个成员函数有效地执行每个序列中元素的单个插入。 否则为插入时`N`元素，元素副本的数目上呈线性`N`plus 之间插入点和最近序列末尾的元素数目。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_insert.cpp   
@@ -130,17 +128,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**insert\(begin\(\)\+1, L'x'\) \= x**  
- **a x b c**  
- **y y**  
- **y y a x b**  
- **a x b c y y a x b**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)

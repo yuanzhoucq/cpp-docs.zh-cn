@@ -1,53 +1,53 @@
 ---
-title: "标量类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "标量类型 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 07c9195e-b6c7-4083-8ef0-8a93032e4d1e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 279c4eefb072c6caab85a61bba3abc73be22d3a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 标量类型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尽管可从任何对齐方式发出数据访问，但建议将数据在其自然边界上对齐，以避免性能损失（或更多损失）。  枚举为常数整数，视为 32 位整数。  下表介绍类型定义及其属于使用以下对齐值的对齐方式时的推荐存储区大小：  
+# <a name="scalar-types"></a>标量类型
+虽然数据的访问可能源于任何的对齐方式，建议，在以避免性能损失 （或更多损失） 其自然边界上对齐数据。 枚举是常量的整数，而是被视为 32 位整数。 下表描述的类型定义和建议的存储为其与使用以下的对齐方式值的对齐方式：  
   
--   Byte － 8 位  
+-   字节的 8 位  
   
--   Word － 16 位  
+-   Word 的 16 位  
   
--   Double Word － 32 位  
+-   双字的 32 位  
   
--   Quad Word － 64 位  
+-   四 Word-64 位  
   
--   Octa Word － 128 位  
+-   Octa Word-128 位  
   
 |||||  
 |-|-|-|-|  
-|标量类型|C 数据类型|存储区大小（以字节为单位）|推荐对齐方式|  
+|标量类型|C 数据类型|存储大小 （以字节为单位）|建议的对齐方式|  
 |**INT8**|`char`|1|Byte|  
 |**UINT8**|`unsigned char`|1|Byte|  
 |**INT16**|**short**|2|Word|  
 |**UINT16**|**unsigned short**|2|Word|  
-|**INT32**|**int、long**|4|Doubleword|  
-|**UINT32**|**unsigned int、unsigned long**|4|Doubleword|  
-|**INT64**|`__int64`|8|Quadword|  
-|**UINT64**|**unsigned \_\_int64**|8|Quadword|  
-|**FP32（单精度）**|**float**|4|Doubleword|  
-|**FP64（双精度）**|**double**|8|Quadword|  
-|**POINTER**|**\***|8|Quadword|  
-|`__m64`|**struct \_\_m64**|8|Quadword|  
-|`__m128`|**struct \_\_m128**|16|Octaword|  
+|**INT32**|**int、 long**|4|双字|  
+|**UINT32**|**无符号长的无符号的整数**|4|双字|  
+|**INT64**|`__int64`|8|四字|  
+|**UINT64**|unsigned __int64|8|四字|  
+|**FP32 （单精度）**|**float**|4|双字|  
+|**FP64 （双精度）**|**double**|8|四字|  
+|**指针**|**\***|8|四字|  
+|`__m64`|**结构 __m64**|8|四字|  
+|`__m128`|**结构 __m128**|16|Octaword|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [类型和存储](../build/types-and-storage.md)

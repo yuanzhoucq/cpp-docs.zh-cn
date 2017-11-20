@@ -1,41 +1,39 @@
 ---
-title: "list::pop_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::pop_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_front 成员 [STL/CLR]"
+title: "list:: pop_front (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::pop_front
+dev_langs: C++
+helpviewer_keywords: pop_front member [STL/CLR]
 ms.assetid: 6a0bad42-6796-41d9-a3e9-1488b3882574
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa9df1ea52b525d00aa77478f6fcbe1f3e29b29c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::pop_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除第一个元素。  
+# <a name="listpopfront-stlclr"></a>list::pop_front (STL/CLR)
+移除的第一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void pop_front();  
 ```  
   
-## 备注  
- 移除成员函数控制序列中的第一个元素，该元素绑定非空。  使用由的元素列表缩写在前面。  
+## <a name="remarks"></a>备注  
+ 成员函数删除必须为非空的受控序列的第一个元素。 你可以使用它来缩短在前面的一个元素的列表。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_pop_front.cpp   
@@ -64,15 +62,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **b c**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+a b c  
+b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::pop\_back](../dotnet/list-pop-back-stl-clr.md)   
- [list::push\_back](../dotnet/list-push-back-stl-clr.md)   
- [list::push\_front](../dotnet/list-push-front-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
+ [list:: push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)   
+ [list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)

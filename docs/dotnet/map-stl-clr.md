@@ -1,44 +1,43 @@
 ---
-title: "map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/map> 标头 [STL/CLR]"
-  - "<map> 标头 [STL/CLR]"
-  - "map 类 [STL/CLR]"
+title: "映射 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map
+dev_langs: C++
+helpviewer_keywords:
+- <map> header [STL/CLR]
+- map class [STL/CLR]
+- <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b6e535dac08e473e281f45e45a084d856c931b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此模板类描述用于控制双向访问的变长元素序列的对象。  使用容器 `map` 管理用作 \(关闭\) 平衡的节点排序树的元素序列，每个存储一个元素。  元素包含一个键，排序序列和一映射值，为乘驾情况。  
+# <a name="map-stlclr"></a>map (STL/CLR)
+此模板类描述控制变长序列的元素具有双向访问的对象。 使用容器`map`来管理一个序列的元素作为 （几乎） 平衡的有序树的节点，各个存储一个元素。 元素包含的密钥，以进行排序序列，并映射的值，其中会赶上。  
   
- 在如下解释 `GValue` 是相同的，如下所示：  
+ 在下面，描述`GValue`相同：  
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
  其中：  
   
- 同样，`GKey` 与 `Key` 相同，除非后者是 ref 类型，在这种情况下，它是 `Key^`。  
+ `GKey`等同于`Key`后者为 ref 类型，除非在此情况下它是`Key^`  
   
- 同样，`GMapped` 与 `Mapped` 相同，除非后者是 ref 类型，在这种情况下，它是 `Mapped^`。  
+ `GMapped`等同于`Mapped`后者为 ref 类型，除非在此情况下它是`Mapped^`  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key,  
@@ -56,119 +55,119 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  键  
- 受控序列中元素的键组件的类型。  
+ 受控序列中的元素的关键组件的类型。  
   
- 已映射  
- 受控序列中元素的值组件的类型。  
+ 映射  
+ 受控序列中的元素的其他组件的类型。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-|类型定义|说明|  
-|----------|--------|  
-|[map::const\_iterator](../dotnet/map-const-iterator-stl-clr.md)|受控序列的常量迭代器的类型。|  
-|[map::const\_reference](../dotnet/map-const-reference-stl-clr.md)|元素的常量引用的类型。|  
-|[map::const\_reverse\_iterator](../dotnet/map-const-reverse-iterator-stl-clr.md)|这种类型的常量为受控序列存储迭代器。|  
-|[map::difference\_type](../dotnet/map-difference-type-stl-clr.md)|两个元素间的\(可能带符号\)距离的类型。|  
-|[map::generic\_container](../dotnet/map-generic-container-stl-clr.md)|泛型接口的容器适配器类型。|  
-|[map::generic\_iterator](../dotnet/map-generic-iterator-stl-clr.md)|有关容器的泛型接口的迭代器的类型。|  
-|[map::generic\_reverse\_iterator](../dotnet/map-generic-reverse-iterator-stl-clr.md)|与容器的泛型接口一起使用的迭代器的类型。|  
-|[map::generic\_value](../dotnet/map-generic-value-stl-clr.md)|有关容器的泛型接口的元素的类型。|  
-|[map::iterator](../dotnet/map-iterator-stl-clr.md)|受控序列的迭代器的类型。|  
-|[map::key\_compare](../dotnet/map-key-compare-stl-clr.md)|两个键的排序委托。|  
-|[map::key\_type](../dotnet/map-key-type-stl-clr.md)|排序键的类型。|  
-|[map::mapped\_type](../dotnet/map-mapped-type-stl-clr.md)|与每个键关联的映射值的类型。|  
-|[map::reference](../dotnet/map-reference-stl-clr.md)|元素的引用的类型。|  
-|[map::reverse\_iterator](../dotnet/map-reverse-iterator-stl-clr.md)|受控序列的反转迭代器的类型。|  
-|[map::size\_type](../dotnet/map-size-type-stl-clr.md)|两个元素间的\(非负\)距离的类型。|  
-|[map::value\_compare](../dotnet/map-value-compare-stl-clr.md)|两个元素值的排序委托。|  
-|[map::value\_type](../dotnet/map-value-type-stl-clr.md)|元素的类型。|  
+|类型定义|描述|  
+|---------------------|-----------------|  
+|[map::const_iterator (STL/CLR)](../dotnet/map-const-iterator-stl-clr.md)|受控序列的常量迭代器的类型。|  
+|[map::const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)|元素的常量引用的类型。|  
+|[map::const_reverse_iterator (STL/CLR)](../dotnet/map-const-reverse-iterator-stl-clr.md)|受控序列的常量反向迭代器的类型。|  
+|[map::difference_type (STL/CLR)](../dotnet/map-difference-type-stl-clr.md)|两个元素间的 （可能是带符号） 距离的类型。|  
+|[map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)|容器的泛型接口的类型。|  
+|[map::generic_iterator (STL/CLR)](../dotnet/map-generic-iterator-stl-clr.md)|容器的泛型接口的迭代器类型。|  
+|[map::generic_reverse_iterator (STL/CLR)](../dotnet/map-generic-reverse-iterator-stl-clr.md)|容器的泛型接口的反向迭代器的类型。|  
+|[map::generic_value (STL/CLR)](../dotnet/map-generic-value-stl-clr.md)|容器的泛型接口的元素的类型。|  
+|[map::iterator (STL/CLR)](../dotnet/map-iterator-stl-clr.md)|受控序列的迭代器的类型。|  
+|[map::key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)|两个键的排序的委托。|  
+|[map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)|排序键的类型。|  
+|[map::mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)|与每个键关联的映射值的类型。|  
+|[map::reference (STL/CLR)](../dotnet/map-reference-stl-clr.md)|元素的引用的类型。|  
+|[map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)|受控序列的反向迭代器的类型。|  
+|[map::size_type (STL/CLR)](../dotnet/map-size-type-stl-clr.md)|两个元素间的 （非负号） 距离的类型。|  
+|[map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)|两个元素值排序委托。|  
+|[map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)|元素的类型。|  
   
-|成员函数|说明|  
-|----------|--------|  
-|[map::begin](../dotnet/map-begin-stl-clr.md)|指定受控序列的开头。|  
-|[map::clear](../dotnet/map-clear-stl-clr.md)|移除所有元素。|  
-|[map::count](../dotnet/map-count-stl-clr.md)|与指定键匹配的计数元素。|  
-|[map::empty](../dotnet/map-empty-stl-clr.md)|测试元素是否存在。|  
-|[map::end](../dotnet/map-end-stl-clr.md)|指定受控序列的末尾。|  
-|[map::equal\_range](../dotnet/map-equal-range-stl-clr.md)|查找与指定键匹配的范围。|  
-|[map::erase](../dotnet/map-erase-stl-clr.md)|移除指定位置处的元素。|  
-|[map::find](../dotnet/map-find-stl-clr.md)|查找与指定键匹配的元素。|  
-|[map::insert](../dotnet/map-insert-stl-clr.md)|添加元素。|  
-|[map::key\_comp](../dotnet/map-key-comp-stl-clr.md)|复制两个键的排序委托。|  
-|[map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)|查找与指定的键范围的开头。|  
-|[map::make\_value](../dotnet/map-make-value-stl-clr.md)|构造一个值对象。|  
-|[map::map](../dotnet/map-map-stl-clr.md)|构造容器对象。|  
-|[map::rbegin](../dotnet/map-rbegin-stl-clr.md)|指定反转的受控序列的开头。|  
-|[map::rend](../dotnet/map-rend-stl-clr.md)|指定反转的受控序列的末尾。|  
-|[map::size](../dotnet/map-size-stl-clr.md)|计算元素的数量。|  
-|[map::swap](../dotnet/map-swap-stl-clr.md)|交换两个容器的内容。|  
-|[map::to\_array](../dotnet/map-to-array-stl-clr.md)|复制控制序列到新数组。|  
-|[map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)|查找与指定键匹配的范围。|  
-|[map::value\_comp](../dotnet/map-value-comp-stl-clr.md)|复制两个元素值的排序委托。|  
+|成员函数|描述|  
+|---------------------|-----------------|  
+|[map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)|指定受控序列的开头。|  
+|[map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|删除所有元素。|  
+|[map::count (STL/CLR)](../dotnet/map-count-stl-clr.md)|对与指定的键匹配的元素计数。|  
+|[map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)|测试元素是否存在。|  
+|[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)|指定受控序列的末尾。|  
+|[map::equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)|查找与指定键匹配的范围。|  
+|[map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)|移除指定位置处的元素。|  
+|[map::find (STL/CLR)](../dotnet/map-find-stl-clr.md)|查找与指定键匹配的元素。|  
+|[map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)|添加元素。|  
+|[map::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)|将复制为两个键排序的委托。|  
+|[map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)|查找与指定的键匹配的范围开始处。|  
+|[map::make_value (STL/CLR)](../dotnet/map-make-value-stl-clr.md)|构造值对象。|  
+|[map::map (STL/CLR)](../dotnet/map-map-stl-clr.md)|构造容器对象。|  
+|[map::rbegin (STL/CLR)](../dotnet/map-rbegin-stl-clr.md)|指定反向受控序列的开头。|  
+|[map::rend (STL/CLR)](../dotnet/map-rend-stl-clr.md)|指定反向受控序列的末尾。|  
+|[map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)|对元素数进行计数。|  
+|[map::swap (STL/CLR)](../dotnet/map-swap-stl-clr.md)|交换两个容器的内容。|  
+|[map::to_array (STL/CLR)](../dotnet/map-to-array-stl-clr.md)|受控的序列复制到新数组。|  
+|[map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)|查找与指定的键匹配的范围末尾。|  
+|[map::value_comp (STL/CLR)](../dotnet/map-value-comp-stl-clr.md)|将复制两个元素值的排序委托。|  
   
-|运算符|说明|  
-|---------|--------|  
-|[map::operator\=](../dotnet/map-operator-assign-stl-clr.md)|替换控件序列。|  
-|[map::operator](../dotnet/map-operator-stl-clr.md)|映射到键映射及其关联的值。|  
-|[operator\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)|确定 `map` 对象是否等与不等于另一 `map` 对象。|  
-|[operator\< \(map\)](../dotnet/operator-less-than-map-stl-clr.md)|确定 `map` 对象是否小于另一 `map` 对象。|  
-|[operator\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)|确定一个 `map` 对象是否小于或等于另一个`map`对象。|  
-|[operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)|确定 `map` 对象是否等于另一 `map` 对象。|  
-|[operator\> \(map\)](../dotnet/operator-greater-than-map-stl-clr.md)|确定 `map` 对象是否大于另一 `map` 对象。|  
-|[operator\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|确定一个 `map` 对象是否大于或等于另一个`map`对象。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|[map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|替换受控序列。|  
+|[map::operator(STL/CLR)](../dotnet/map-operator-stl-clr.md)|将键映射到其关联的映射值。|  
+|[operator!= (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)|确定如果`map`对象是否不等于另一个`map`对象。|  
+|[operator< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)|确定如果`map`对象是否小于另一个`map`对象。|  
+|[operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)|确定如果`map`对象是否小于或等于另一个`map`对象。|  
+|[operator== (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)|确定如果`map`对象是否等于另一个`map`对象。|  
+|[operator> (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)|确定如果`map`对象是否大于另一个`map`对象。|  
+|[operator>= (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|确定如果`map`对象是否大于或等于另一个`map`对象。|  
   
-## 接口  
+## <a name="interfaces"></a>接口  
   
-|接口|说明|  
-|--------|--------|  
+|接口|描述|  
+|---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
-|<xref:System.Collections.IEnumerable>|元素的序列。|  
-|<xref:System.Collections.ICollection>|维护元素组。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|输入元素的序列。|  
-|<xref:System.Collections.Generic.ICollection%601>|维护输入元素组。|  
-|<xref:System.Collections.Generic.IDictionary%602>|维护{键，值}对的组。|  
-|ITree\<键，值\>|维护泛型容器。|  
+|<xref:System.Collections.IEnumerable>|通过元素的序列。|  
+|<xref:System.Collections.ICollection>|维护的组元素。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|访问类型化的元素序列。|  
+|<xref:System.Collections.Generic.ICollection%601>|维护的组类型化的元素。|  
+|<xref:System.Collections.Generic.IDictionary%602>|维护组 {键，值} 对。|  
+|ITree < 键，值 >|维护泛型容器。|  
   
-## 备注  
- 对象对作为单独节点控制的序列分配并释放内存。  将元素插入到 \(近似\)平衡树， 通过更改节点间的链接保持有序，从不通过复制节点的内容到另一个节点上。  这表示您可以自由插入和移除元素，而不干扰的其余元素。  
+## <a name="remarks"></a>备注  
+ 对象分配和释放各个节点作为其控制的序列的存储。 它将元素插入到通过变更节点，永远不会通过将一个节点的内容复制到另一个之间的链接保持有序 （几乎） 平衡的树。 这意味着可以插入和移除自由不影响剩余元素的元素。  
   
- 对象通过调用存储的 [map::key\_compare](../dotnet/map-key-compare-stl-clr.md) 类型的委托对象，对它控制的序列进行排序。  当在构造集合时，您可以指定该存储的委托对象；如果您不指定委托对象，默认是比较 `operator<(key_type, key_type)`。  通过调用成员函数访问该存储区的对象[map::key\_comp](../dotnet/map-key-comp-stl-clr.md)`()`。  
+ 该对象进行排序它通过调用类型的存储的委托对象控制的序列[map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)。 在构造映射; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<(key_type, key_type)`。 通过调用成员函数来访问此存储的对象[map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`。  
   
- 此委托对象必须根据 [map::key\_type](../dotnet/map-key-type-stl-clr.md)键的类型，进行严格的弱序化。  这意味着，任何两键的 `X` 和 `Y`:  
+ 此类委托对象必须进行严格弱排序键的类型在施加[map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `key_comp()(X, Y)` 返回对每个调用相同的布尔值结果。  
+ `key_comp()(X, Y)`返回相同的布尔值导致每次调用。  
   
- 如果 `key_comp()(X, Y)` 为 true，则 `key_comp()(Y, X)` 必须是错误的。  
+ 如果`key_comp()(X, Y)`为 true，然后`key_comp()(Y, X)`必须是 false。  
   
- 如果 `key_comp()(X, Y)` 为 true，则 `X` 被视为 `Y`之前的排序。  
+ 如果`key_comp()(X, Y)`为 true，然后`X`称为才能进行排序之前`Y`。  
   
- 如果 `!key_comp()(X, Y) && !key_comp()(Y, X)` 为 true，则 `X` 和 `Y` 是具有相同顺序。  
+ 如果`!key_comp()(X, Y) && !key_comp()(Y, X)`为 true，然后`X`和`Y`被认为具有等效顺序。  
   
- 在控制序列中，对优先于`Y` 的所有元素 `X`来说，`key_comp()(Y, X)` 为 false。\(对于默认委托对象，键值从来不会是降序排列。\)不同于类模板 [map](../dotnet/map-stl-clr.md)，模板类对象`map`不需要任何元素的键是唯一的。\(两个或多个键可以具有相同排序。\)  
+ 任何元素`X`，之前`Y`受控序列中中,`key_comp()(Y, X)`为 false。 （对于默认委托对象，密钥永远不会减小值中。）与模板类不同[映射](../dotnet/map-stl-clr.md)，模板类的对象`map`不需要的所有元素的键是唯一。 （两个或多个密钥可以拥有等效顺序。）  
   
- 每个元素都包含一个键和一映射值。  序列以使查找、插入和删除任意元素的方式表示，序列的操作与元素的数量的对数成正比\(对数时间\)。  此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
+ 每个元素包含一个单独的键和映射的值。 序列是按顺序 （对数时间） 允许查找、 插入和移除任意元素与大量的操作的元素数的对数成正比的方式表示。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
   
- 集合支持双向迭代器，这意味着可以单步执行到给定的相邻元素迭代器指定控制在序列中的元素。  特定头节点对应于 [map::end](../dotnet/map-end-stl-clr.md)`()`返回的迭代器。  如果有，可以减小此迭代器达到控制序列中的最后一个元素。  您可以将集合迭代器增加到头节点，则将与 `end()`比较。  但是，您无法取消引用 `end()`返回的迭代器。  
+ 地图支持双向迭代器，这意味着你可以单步执行到给定指定受控序列中的元素的迭代器的相邻元素。 特殊的头节点对应于返回的迭代器[map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`。 如果存在，可以减少此迭代器来访问控制的序列中中的最后一个元素。 可以递增的映射迭代器来访问头节点，且然后将比较等于`end()`。 但不是能取消引用返回的迭代器`end()`。  
   
- 注意不可以直接引用基于数字的集合的元素\-\-这要求一个随机访问迭代器。  
+ 请注意，不能引用地图元素直接给定其数字位置-需要随机访问迭代器。  
   
- 集合迭代器存储其关联集合节点的句柄，而后者存储其关联的容器的句柄。  只可以在与它们关联的容器对象上使用迭代器。  只要关联集合节点与某些集合关联，迭代器集合保持有效。  而且，有效的迭代器是可重复引用的\-\-可以用来访问或修改指定的元素值\-\-只要它不等于 `end()`。  
+ 映射迭代器存储其关联的映射节点，后者反过来将存储到其关联的容器的句柄的句柄。 迭代器仅用于其关联的容器对象。 只要其关联的映射节点是与某个映射相关联，映射迭代器就保持有效。 此外，有效的迭代器是 dereferencable-可用来访问或更改元素值，它指定-，只要不等于`end()`。  
   
- 调用析构函数清除或移除元素的存储值。  销毁容器会清除所有元素。  因此，元素类型为参考类的容器确保元素存在容器内。  但是，注意容器的处理执行销毁 `not` 元素。  
+ 擦除或删除元素调用析构函数作为其存储的值。 销毁容器清除所有元素。 因此，其元素类型是一个 ref 类的容器可确保任何元素生存期限超过容器。 但请注意，句柄的容器未`not`销毁它的元素。  
   
-## 要求  
- **标头:** \<cliext\/map\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [集合](../dotnet/set-stl-clr.md)   
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [映射](../dotnet/map-stl-clr.md)   
+ [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

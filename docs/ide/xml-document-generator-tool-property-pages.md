@@ -1,49 +1,49 @@
 ---
-title: "“XML 文档生成器工具”属性页 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCXDCMakeTool.ValidateIntelliSense"
-  - "VC.Project.VCXDCMakeTool.SuppressStartupBanner"
-  - "VC.Project.VCXDCMakeTool.DocumentLibraryDependencies"
-  - "VC.Project.VCXDCMakeTool.OutputDocumentFile"
-  - "VC.Project.VCXDCMakeTool.AdditionalDocumentFiles"
-dev_langs: 
-  - "C++"
+title: "XML 文档生成器工具属性页 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCXDCMakeTool.ValidateIntelliSense
+- VC.Project.VCXDCMakeTool.SuppressStartupBanner
+- VC.Project.VCXDCMakeTool.DocumentLibraryDependencies
+- VC.Project.VCXDCMakeTool.OutputDocumentFile
+- VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
+dev_langs: C++
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 66d6cd4359cfe4700f7decf0ec54686a4b70a183
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “XML 文档生成器工具”属性页
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-“XML 文档生成器工具”属性页公开了 xdcmake.exe 的功能。  当源代码包含文档注释并且指定了 [\/doc（处理文档注释）](../build/reference/doc-process-documentation-comments-c-cpp.md) 时，xdcmake.exe 将 .xdc 文件合并到 .xml 文件中。  有关将文档注释添加到源代码中的信息，请参见 [建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。  
+# <a name="xml-document-generator-tool-property-pages"></a>“XML 文档生成器工具”属性页
+XML 文档生成器工具属性页公开 xdcmake.exe 的功能。 xdcmake.exe.xdc 会文件合并到一个.xml 文件时你的源代码包含文档注释和[/doc （处理文档注释） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)指定，则。 请参阅[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)有关将文档注释添加到源代码的信息。  
   
 > [!NOTE]
->  开发环境（属性页）中的 xdcmake.exe 选项与 xdcmake.exe 在命令行中使用时的选项不同。  有关在命令行使用 xdcmake.exe 的信息，请参见 [XDCMake 参考](../ide/xdcmake-reference.md)。  
+>  在命令行使用 xdcmake.exe 时，在开发环境 （属性页） 中的 xdcmake.exe 选项将有所不同选项。 在命令行使用 xdcmake.exe 的信息，请参阅[XDCMake 参考](../ide/xdcmake-reference.md)。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **取消显示启动版权标志**  
- 取消显示版权消息。  
+ 禁止显示版权消息。  
   
- **附加文档文件**  
- 您希望项目系统在其中查找 .xdc 文件的附加目录。  xdcmake 将始终查找项目生成的 .xdc 文件。  可指定多个目录。  
+ **其他文档文件**  
+ 你希望项目系统以查找.xdc 文件的其他目录。 xdcmake 始终将查找由项目生成的.xdc 文件。 可以指定多个目录。  
   
  **输出文档文件**  
- .xml 输出文件的名称和目录位置。  有关使用宏指定目录位置的信息，请参见 [用于生成命令和属性的宏](../ide/common-macros-for-build-commands-and-properties.md)。  
+ .Xml 输出文件的名称和目录位置。 请参阅[用于生成命令和属性的公共宏](../ide/common-macros-for-build-commands-and-properties.md)有关使用宏来指定目录位置信息。  
   
  **文档库依赖项**  
- 如果您的项目在解决方案中的 .lib 项目上有依赖项，您可以将 .lib 项目中的 .xdc 文件处理到当前项目的 .xml 文件中。  
+ 如果你的项目在解决方案中的.lib 项目上具有依赖关系，你可以为当前项目的.xml 文件处理.lib 项目中的.xdc 文件。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)   
  [属性页](../ide/property-pages-visual-cpp.md)

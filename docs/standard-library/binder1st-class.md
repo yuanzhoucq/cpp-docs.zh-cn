@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::binder1st
-- binder1st
-dev_langs:
-- C++
-helpviewer_keywords:
-- binder1st class
+f1_keywords: xfunctional/std::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 4f9198d5b3f29799d38036ce4fd0dd0a67b66137
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: e5401c5753693a9f546895bbc485eb9e59888fca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="binder1st-class"></a>binder1st 类
 一种模板类，用于提供构造函数，通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。  
@@ -144,7 +124,6 @@ The number of elements in v1 less than 10 is: 2.
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

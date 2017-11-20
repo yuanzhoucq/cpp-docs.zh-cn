@@ -1,67 +1,67 @@
 ---
-title: "指定生成事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.IVCEventTool.CommandLine"
-  - "VC.Project.IVCEventTool.ExcludedFromBuild"
-  - "VC.Project.IVCEventTool.Description"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "生成事件 [C++]"
-  - "生成事件 [C++], 指定"
-  - "builds [C++], 自定义 C++"
-  - "builds [C++], 事件"
-  - "自定义生成步骤 [C++], 生成事件"
-  - "事件 [C++], 生成"
-  - "生成后事件"
-  - "Pre-Link 事件"
+title: "指定生成事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.IVCEventTool.CommandLine
+- VC.Project.IVCEventTool.ExcludedFromBuild
+- VC.Project.IVCEventTool.Description
+dev_langs: C++
+helpviewer_keywords:
+- Pre-Link event
+- build events [C++], specifying
+- custom build steps [C++], build events
+- builds [C++], events
+- events [C++], build
+- builds [C++], customizing C++
+- build events [C++]
+- post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43f12e28487a4e162a88eaf0881ac9e50391e1f4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 指定生成事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以使用生成事件指定在生成启动前、进行链接前或生成完成后运行的命令。  
+# <a name="specifying-build-events"></a>指定生成事件
+生成事件可用于指定链接过程中之前, 在生成开始之前或在生成完成之后运行的命令。  
   
- 只有当生成成功到达生成过程中的这些时间点时，才执行生成事件。  如果生成过程中发生错误，则不会发生生成后事件；如果错误发生在链接阶段之前，则不会发生预链接和生成后事件。  此外，如果没有要链接的文件，则不会发生预链接事件。  在不包含链接步骤的项目中，也不会有预链接事件。  
+ 只有当生成成功到达生成过程中的这些时间点时，才执行生成事件。 如果错误发生在生成、*后期生成*事件不会发生; 如果发生此错误的链接的阶段中前, 两者*预链接*也不*后期生成*事件将发生。 此外，如果需要链接，没有文件*预链接*事件才会发生。 *预链接*事件还不是在不包含一个链接步骤的项目中可用。  
   
- 如果没有要生成的文件，则不会发生生成事件。  
+ 如果任何文件不需要进行构建，会发生不生成事件。  
   
- 有关生成事件的一般信息，请参见[了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)。  
+ 生成事件的常规信息，请参阅[了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)。  
   
-### 指定生成事件  
+### <a name="to-specify-a-build-event"></a>指定生成事件  
   
-1.  在**“解决方案资源管理器”**中，选择要为其指定生成事件的项目。  
+1.  在“解决方案资源管理器”中，选择要为其指定生成事件的项目。  
   
-2.  打开项目的**“属性页”**对话框。  有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+2.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
-3.  在**“生成事件”**文件夹中，选择生成事件属性页。  
+3.  在**生成事件**文件夹中，选择生成事件属性页。  
   
-4.  指定与生成事件关联的属性：  
+4.  指定生成事件与关联的属性：  
   
-    -   在**“命令行”**中，指定一个命令，就像在命令提示符处指定命令一样。  指定一个有效的命令或批处理文件以及任何必需的输入或输出文件。  在批处理文件名的前面指定 **call** 批处理命令，以确保执行后面的所有命令。  
+    -   在**命令行**，指定的命令，就像已在命令提示符下指定它。 请指定有效的命令或批处理文件，任何必需的输入或输出文件。 指定**调用**批处理的批处理文件的名称前的命令，以确保执行所有后续命令。  
   
-         可以使用 MSBuild 宏通过符号指定多个输入和输出文件。  [!INCLUDE[crabout](../build/reference/includes/crabout_md.md)]指定文件位置或文件集名称的信息，请参见[用于生成命令和属性的宏](../ide/common-macros-for-build-commands-and-properties.md)。  
+         可以使用 MSBuild 宏以符号方式指定多个输入和输出文件。 [!INCLUDE[crabout](../build/reference/includes/crabout_md.md)]指定的文件，位置或集名称的文件，请参阅[用于生成命令和属性的公共宏](../ide/common-macros-for-build-commands-and-properties.md)。  
   
-         由于“%”字符是 MSBuild 的保留字符，因此，如果指定环境变量，请将每个 **%** 转义字符替换为 **%25** 十六进制转义序列。  例如，将 **%WINDIR%** 替换为 **%25WINDIR%25**。  在 MSBuild 访问环境变量之前，它会将每个 **%25** 序列替换为 **%** 字符。  
+         因为 %字符保留了 MSBuild，如果你指定的环境变量将每个 **%** 用字符转义**%25**十六进制转义序列。 例如，对于替换**%WINDIR%**与**%25WINDIR %25**。 MSBuild 替换每个**%25**序列与 **%** 字符访问环境变量之前。  
   
-    -   在**“说明”**中，键入事件的说明。  当发生此事件时，该说明会输出到**“输出”**窗口。  
+    -   在**说明**，键入此事件的描述。 该说明将输出到**输出**窗口时将发生此事件。  
   
-    -   在**“从生成中排除”**中，如果不想让事件运行，则请指定**“是”**。  
+    -   在**从生成中排除**，指定**是**如果你不想要运行的事件。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)   
- [用于生成命令和属性的宏](../ide/common-macros-for-build-commands-and-properties.md)   
+ [用于生成命令和属性的公共宏](../ide/common-macros-for-build-commands-and-properties.md)   
  [生成自定义项疑难解答](../ide/troubleshooting-build-customizations.md)

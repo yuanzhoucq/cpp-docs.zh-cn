@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXADV/CJumpList::GetRemovedItems
 - AFXADV/CJumpList::InitializeList
 - AFXADV/CJumpList::SetAppID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CJumpList [MFC], CJumpList
 - CJumpList [MFC], AbortList
@@ -45,16 +43,15 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 2a71ff9fa64f52120cf230e46ed0fcabe8f60ddb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 02e170248a2d33fda195daeb1094d70daee12fb0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 A`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。  
@@ -338,4 +335,3 @@ void SetAppID(LPCTSTR strAppID);
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

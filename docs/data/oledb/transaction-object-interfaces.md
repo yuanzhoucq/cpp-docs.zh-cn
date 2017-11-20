@@ -1,41 +1,41 @@
 ---
-title: "事务对象接口 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "接口, 列表"
-  - "接口, OLE DB"
-  - "OLE DB 提供程序模板, 对象接口"
-  - "OLE DB 提供程序, 事务支持"
-  - "OLE DB, 接口"
-  - "事务对象接口"
+title: "事务对象接口 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interfaces, OLE DB
+- transaction object interfaces
+- OLE DB, interfaces
+- OLE DB providers, transaction support
+- OLE DB provider templates, object interfaces
+- interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5731d4d187fa02b0b68c9e4b764bf9aeb1f653dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 事务对象接口
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-事务对象定义数据源上的原子工作单元并确定这些工作单元如何相关。  此对象不直接受 OLE DB 提供程序模板的支持（即您必须创建自己的对象）。  
+# <a name="transaction-object-interfaces"></a>事务对象接口
+事务对象数据源上定义工作的原子单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，你必须创建您自己的对象）。  
   
- 下表显示 OLE DB 为事务对象定义的强制和可选接口。  
+ 下表显示由 OLE DB 事务对象的必需和可选接口。  
   
-|接口|是否必需？|是否由 OLE DB 模板实现？|  
-|--------|-----------|----------------------|  
-|[\<caps:sentence id\="tgt7" sentenceid\="63e99e63156fc90f114fa402662387ef" class\="tgtSentence"\>IConnectionPointContainer\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683857)|必需|否|  
-|[\<caps:sentence id\="tgt10" sentenceid\="f5097e646bb93cceb560c38e13953a89" class\="tgtSentence"\>ITransaction\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|必需|否|  
-|[\<caps:sentence id\="tgt13" sentenceid\="130702210bcc45e1afd88b1f2aae1a0b" class\="tgtSentence"\>ISupportErrorInfo\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|可选|否|  
+|接口|是否必需？|实现的 OLE DB 模板？|  
+|---------------|---------------|--------------------------------------|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|强制|No|  
+|[Itransaction::](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|强制|No|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|No|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - functions [C++], paramters
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 63eb2b4c7415dc463b38346909bd2b6fd902c332
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reference-type-function-arguments"></a>引用类型函数自变量
 向函数传递引用而非大型对象的效率通常更高。 这使编译器能够在保持已用于访问对象的语法的同时传递对象的地址。 请考虑以下使用了 `Date` 结构的示例：  
@@ -80,7 +77,7 @@ long JulianFromGregorian( const Date& GDate );
   
  此原型将确保函数 `JulianFromGregorian` 不会更改其参数。  
   
- 任何函数原型采用引用类型可以接受在其位置的相同类型的对象，因为没有从标准转换*typename*到*typename* ** &**.  
+ 任何函数原型采用引用类型可以接受在其位置的相同类型的对象，因为没有从标准转换*typename*到*typename*  **&**.  
   
 ## <a name="see-also"></a>另请参阅  
  [参考资料](../cpp/references-cpp.md)

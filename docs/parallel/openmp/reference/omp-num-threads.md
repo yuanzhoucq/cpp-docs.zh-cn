@@ -1,62 +1,60 @@
 ---
-title: "OMP_NUM_THREADS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_NUM_THREADS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_NUM_THREADS OpenMP environment variable"
+title: "OMP_NUM_THREADS |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_NUM_THREADS
+dev_langs: C++
+helpviewer_keywords: OMP_NUM_THREADS OpenMP environment variable
 ms.assetid: 4b558124-1387-4c30-a6a5-ff5345a9ced6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2139ecfc719bd6e5836a67d9387b3ff2f4289bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# OMP_NUM_THREADS
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-在并行区域设置线程的最大项数，，除非重写由 [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) 或 [num\_threads](../../../parallel/openmp/reference/num-threads.md)。  
+# <a name="ompnumthreads"></a>OMP_NUM_THREADS
+在并行区域中，设置最大线程数，除非通过重写[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `num`  
- 在并行区域希望线程， 64 的最大数在 Visual C\+\+ 中实现。  
+ 最大你想在并行区域中，最多为 64 Visual c + + 实现中的线程数。  
   
-## 备注  
- **OMP\_NUM\_THREADS** 环境变量可以重写由 [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) 函数或由 [num\_threads](../../../parallel/openmp/reference/num-threads.md)。  
+## <a name="remarks"></a>备注  
+ **OMP_NUM_THREADS**环境变量可以通过重写[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函数或通过[num_threads](../../../parallel/openmp/reference/num-threads.md)。  
   
- `num` 的默认值在 OpenMP 标准的 Visual C\+\+ 实现的是虚拟处理器的数目，包括 hyperthreading CPU。  
+ 默认值`num`Visual c + + 中实现的 OpenMP 标准是虚拟处理器，包括超线程的 Cpu 数。  
   
- 有关更多信息，请参见 [4.2 OMP\_NUM\_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)。  
+ 有关详细信息，请参阅[4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)。  
   
-## 示例  
- 以下命令将 **OMP\_NUM\_THREADS** 环境变量设置为 16:  
+## <a name="example"></a>示例  
+ 下面的命令集**OMP_NUM_THREADS**为 16 的环境变量：  
   
 ```  
 set OMP_NUM_THREADS=16  
 ```  
   
- 下面的命令演示当前设置 **OMP\_NUM\_THREADS** 环境变量:  
+ 下面的命令显示的当前设置**OMP_NUM_THREADS**环境变量：  
   
 ```  
 set OMP_NUM_THREADS  
 ```  
   
-## 请参阅  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>另请参阅  
+ [环境变量](../../../parallel/openmp/reference/openmp-environment-variables.md)

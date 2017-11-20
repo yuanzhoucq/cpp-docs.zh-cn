@@ -1,66 +1,65 @@
 ---
-title: "/Fm（命名映射文件） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fm"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fm 编译器选项 [C++]"
-  - "文件 [C++], 创建映射"
-  - "Fm 编译器选项 [C++]"
-  - "-Fm 编译器选项 [C++]"
-  - "映射文件 [C++], 创建链接器"
+title: "-Fm （命名映射文件） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fm
+dev_langs: C++
+helpviewer_keywords:
+- -Fm compiler option [C++]
+- mapfiles [C++], creating linker
+- files [C++], creating map
+- Fm compiler option [C++]
+- /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 153a91d25a45a86f01885b679f039f41390dc291
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /Fm（命名映射文件）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-通知链接器生成包含段列表的映射文件，并且这些段按照它们在相应的 .exe 文件或 DLL 中出现的顺序排列。  
+# <a name="fm-name-mapfile"></a>/Fm（命名映射文件）
+通知链接器生成映射文件包含在相应的.exe 文件或 DLL 的显示的顺序中的段的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Fmpathname  
 ```  
   
-## 备注  
- 默认情况下，此映射文件具有相应 C 或 C\+\+ 源文件的基名称以及 .MAP 扩展名。  
+## <a name="remarks"></a>备注  
+ 默认情况下，映射文件授予的相应 C 或 c + + 源文件的基名称。将扩展名的映射。  
   
- 指定 **\/Fm** 的作用与已指定 [\/MAP（生成映射文件）](../../build/reference/map-generate-mapfile.md) 链接器选项时相同。  
+ 指定**/Fm**具有相同的效果，如同你指定的一样[/MAP （生成映射文件）](../../build/reference/map-generate-mapfile.md)链接器选项。  
   
- 如果指定 [\/c（在不链接的情况下进行编译）](../../build/reference/c-compile-without-linking.md) 以取消链接，则 **\/Fm** 无效。  
+ 如果指定[（编译而无需链接） 的 /c](../../build/reference/c-compile-without-linking.md)以取消链接， **/Fm**不起作用。  
   
- 映射文件中的全局符号通常有一个或多个前导下划线，因为编译器向变量名添加前导下划线。  许多出现在映射文件中的全局符号由编译器和标准库在内部使用。  
+ 映射文件中的全局符号通常有一个或多个前导下划线，因为编译器会向变量名称添加前导下划线。 出现在映射文件中的许多全局符号是由编译器和标准库内部使用。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“命令行”**属性页。  
+3.  点击“命令行”  属性页。  
   
-4.  在**“附加选项”**框中键入编译器选项。  
+4.  在 **“附加选项”** 框中键入编译器选项。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 请参阅  
- [输出文件 \(\/F\) 选项](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>另请参阅  
+ [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [指定路径名](../../build/reference/specifying-the-pathname.md)

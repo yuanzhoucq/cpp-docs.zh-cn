@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- signal
+apiname: signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- signal
-dev_langs:
-- C++
-helpviewer_keywords:
-- signal function
+f1_keywords: signal
+dev_langs: C++
+helpviewer_keywords: signal function
 ms.assetid: 094118de-d789-4063-b4f4-cffcc80bf29d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b124479c62a62ef7795498b6c4a96191e2ecb6e4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 125512ba670c438ff7694b05fa73822273aba664
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="signal"></a>signal
 设置中断信号处理。  
@@ -99,7 +79,7 @@ void (__cdecl *signal(
  默认情况下，无论 `signal` 的值如何，`sig` 都将终止调用程序并显示退出代码 3。  
   
 > [!NOTE]
-> 任何 Win32 应用程序都不支持  `SIGINT`。 当 Ctrl+C 中断发生时，Win32 操作系统将专门生成新的线程来处理中断。 这可能导致单线程应用程序（如 UNIX 中的此类应用程序）变成多线程应用程序并导致意外行为。  
+>  任何 Win32 应用程序都不支持 `SIGINT`。 当 Ctrl+C 中断发生时，Win32 操作系统将专门生成新的线程来处理中断。 这可能导致单线程应用程序（如 UNIX 中的此类应用程序）变成多线程应用程序并导致意外行为。  
   
  `func` 参数是您编写的信号处理程序的地址，或者预定义常量 `SIG_DFL` 或 `SIG_IGN` 之一（也在 SIGNAL.H 中定义）的地址。 如果 `func` 是函数，则它会作为给定信号的信号处理程序安装。 该信号处理程序的原型需要一个 `sig` 类型的形参 `int`。 当发生中断时，操作系统将通过 `sig` 提供实参；此参数是生成中断的信号。 因此，您可以在信号处理程序中使用六个清单常量（在前面的表中列出）来确定发生了哪种中断并采取相应措施。 例如，您可以调用 `signal` 两次来将同一处理程序分配给两个不同的信号，然后测试处理程序中的 `sig` 参数以基于收到的信号采取不同的措施。  
   

@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::swap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_gcroot.swap"
-  - "msclr::auto_gcroot::swap"
-  - "auto_gcroot::swap"
-  - "auto_gcroot.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::swap"
+title: "auto_gcroot::swap |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_gcroot.swap
+- msclr::auto_gcroot::swap
+- auto_gcroot::swap
+- auto_gcroot.swap
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::swap
 ms.assetid: 4915c629-6a53-432c-8155-3a7511dc70cb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f3876550ed48c0ab570220042b64ccadc4cff33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::swap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用另一个 `auto_gcroot`交换对象。  
+# <a name="autogcrootswap"></a>auto_gcroot::swap
+交换对象与另一个`auto_gcroot`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void swap(  
@@ -37,11 +36,11 @@ void swap(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_right`  
- 交换的 `auto_gcroot` 对象。  
+ `auto_gcroot`可供换用对象。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_gcroot_swap.cpp  
@@ -63,13 +62,16 @@ int main() {
 }  
 ```  
   
-  **s1 \=“strong one"s2 \=“strong two”**  
-**s1 \=“strong two"s2 \=“strong one”**   
-## 要求  
- **头文件** \<msclr\\auto\_gcroot.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [swap 函数 \(auto\_gcroot\)](../dotnet/swap-function-auto-gcroot.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
+ [swap 函数 (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)

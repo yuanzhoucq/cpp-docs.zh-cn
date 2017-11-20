@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -40,8 +39,7 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -95,16 +93,15 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 宏
 通过生成调试报告跟踪应用程序的进程（仅限调试版本）。 请注意，  *n* 指定中的参数数目`args`和可以是 0、 1、 2、 3、 4 或 5。  

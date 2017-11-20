@@ -1,45 +1,43 @@
 ---
-title: "multimap::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成员 [STL/CLR]"
+title: "multimap:: swap (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 198018d2-7814-4237-8ec3-5f3ea950e8af
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 848203f896f8693bfc1bf4437f958fc64eb2f267
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapswap-stlclr"></a>multimap::swap (STL/CLR)
 交换两个容器的内容。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void swap(multimap<Key, Mapped>% right);  
 ```  
   
-#### 参数  
- right  
+#### <a name="parameters"></a>参数  
+ 右  
  要与其交换内容的容器。  
   
-## 备注  
- 成员函数将交换 `this` 和 `right`之间的控制序列。  在常数的时间来实现，且不引发异常。  将它用作一种快速交换两个内容容器的方式。  
+## <a name="remarks"></a>备注  
+ 成员函数交换 `this` 和 `right`之间的受控序列。 它会以在常量时间内，则会引发任何异常。 你将它用作交换两个容器的内容的快速方法。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multimap_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[d 4\] \[e 5\] \[f 6\]**  
- **\[d 4\] \[e 5\] \[f 6\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::operator\=](../dotnet/multimap-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

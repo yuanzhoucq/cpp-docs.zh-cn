@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactoryAutoThread
 - ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
 - ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactoryAutoThread class
+dev_langs: C++
+helpviewer_keywords: CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 88728e6fccc4aea6e8a1f0bbb2811ed299dd4ad9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: dfeadfba46f1dd0b033f3d82571e82c59a449ec9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 类
 此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，并允许在多个单元中创建的对象。  
@@ -69,9 +51,9 @@ class CComClassFactoryAutoThread
 ## <a name="remarks"></a>备注  
  `CComClassFactoryAutoThread`类似于[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)，但允许在多个单元中创建的对象。 若要利用此支持，派生从你 EXE 模块[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。  
   
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)对象的类定义中的宏。 例如：  
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)对象的类定义中的宏。 例如:   
   
- [!code-cpp[NVC_ATL_COM #9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CComObjectRootBase`  
@@ -83,7 +65,7 @@ class CComClassFactoryAutoThread
  `CComClassFactoryAutoThread`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+ **标头：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  创建指定的 CLSID 的对象并检索到此对象的接口指针。  
@@ -137,4 +119,3 @@ STDMETHODIMP LockServer(BOOL fLock);
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [类概述](../../atl/atl-class-overview.md)
-

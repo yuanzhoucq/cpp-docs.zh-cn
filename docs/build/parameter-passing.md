@@ -1,72 +1,72 @@
 ---
-title: "参数传递 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "参数传递 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 参数传递
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-前四个整数参数将传入寄存器。  整数值在 RCX、RDX、R8 和 R9 中传递 \(按顺序从左到右\)。  参数五和更高在堆栈上传递。  所有参数是将右侧对齐在注册。  因此，被调用方可以根据需要忽略寄存器中上面的位，并且只访问所需的寄存器部分。  
+# <a name="parameter-passing"></a>参数传递
+在寄存器中传递的前四个整数参数。 整数值在 RCX、 RDX、 R8 和 R9 中传递 （按从左到右的顺序）。 自变量 5 和更高版本在堆栈上传递。 所有自变量是右对齐，寄存器中。 这样为了使被调用方可以忽略的寄存器高位，如果需要并且可以访问仅需的寄存器的部分。  
   
- 浮点型和双精度参数传入 XMM0、XMM1、XMM2、XMM3（最大可达 4 个）中，并忽略常用于该基槽的整型槽（RCX、RDX、R8 和 R9）（请参见示例），反之亦然。  
+ 浮点和双精度自变量将传入 XMM0-XMM3 （最多 4) 与通常使用该基数槽正在整数槽 （RCX、 RDX、 R8 和 R9） 忽略 （参阅示例），反之亦然。  
   
- [\_\_m128](../cpp/m128.md) 键入，数组，并字符串传递立即值，但指针相当传递给分配的内存由调用方。  范围 8，16，32 个、64 位和\_\_m64 结构\/联合通过，则相同大小的整数。  结构\/联合除了这些范围外作为指针传递给分配的内存由调用方。  对于这些作为指针（包括 \_\_m128）传递的聚合类型，调用方分配的临时内存将是 16 字节对齐的。  
+ [__m128](../cpp/m128.md)类型、 数组和字符串绝对不传递按即时值但而是将指针传递对由调用方分配的内存。 结构/联合的大小 8、 16、 32 或 64 位和 __m64 传递就像它们是相同大小的整数。 这些大小以外的结构/联合作为指针传递给由调用方分配的内存。 为这些聚合类型作为指针的传递 (包括\__m128)，调用方分配的临时内存将是 16 字节对齐。  
   
- 由于编译器与内部函数实现之间存在紧密的绑定，因此不分配堆栈空间且不调用其他函数的内部函数可以使用其他易失寄存器来传递附加的寄存器参数。  这样便可以进一步改进性能。  
+ 不分配堆栈空间并且不调用其他函数的内部函数可以使用其他易失寄存器将传递其他寄存器自变量，因为编译器和内部函数实现之间紧密的绑定。 这是进一步提高性能的机会。  
   
- 被调用方负责根据需要将寄存器参数转储到它们的阴影空间中。  
+ 被调用方有责任将寄存器参数转储到如果需要其影子空间。  
   
- 下表总结了传递参数的方式：  
+ 下表总结了如何传递参数：  
   
-|参数类型|传递方式|  
-|----------|----------|  
-|浮点|前 4 个参数传入 XMM0、XMM1、XMM2 和 XMM3 中。  其他参数传递到堆栈中。|  
-|Integer|前 4 个参数传入 RCX、RDX、R8 和 R9 中。  其他参数传递到堆栈中。|  
-|聚合（8、16、32 或 64 位）和 \_\_m64|前 4 个参数传入 RCX、RDX、R8 和 R9 中。  其他参数传递到堆栈中。|  
-|聚合（其他）|通过指针传递。  前 4 个参数作为 RCX、RDX、R8 和 R9 中的指针传递|  
-|\_\_m128|通过指针传递。  前 4 个参数作为 RCX、RDX、R8 和 R9 中的指针传递|  
+|参数类型|如何传递|  
+|--------------------|----------------|  
+|浮点|第一次 4 参数-通过 XMM3 XMM0。 其他参数在堆栈上传递。|  
+|整数|第一次 4 参数-RCX、 RDX、 R8 R9。 其他参数在堆栈上传递。|  
+|聚合 （8、 16、 32 或 64 位） 和 __m64|第一次 4 参数-RCX、 RDX、 R8 R9。 其他参数在堆栈上传递。|  
+|聚合 （其他）|通过指针传递。 4 个参数作为指针 RCX、 RDX、 R8 和 R9 中传递的第一次|  
+|__m128|通过指针传递。 4 个参数作为指针 RCX、 RDX、 R8 和 R9 中传递的第一次|  
   
-## 参数传递示例 1 – 全部都是整型参数  
+## <a name="example-of-argument-passing-1---all-integers"></a>自变量传递 1 的所有整数示例  
   
 ```  
 func1(int a, int b, int c, int d, int e);    
 // a in RCX, b in RDX, c in R8, d in R9, e pushed on stack  
 ```  
   
-## 参数传递示例 2 – 全部都是浮点型参数  
+## <a name="example-of-argument-passing-2---all-floats"></a>自变量传递 2-所有的浮动内容的示例  
   
 ```  
 func2(float a, double b, float c, double d, float e);    
 // a in XMM0, b in XMM1, c in XMM2, d in XMM3, e pushed on stack  
 ```  
   
-## 参数传递示例 3 – 既有整型参数又有浮点型参数  
+## <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>自变量传递 3-混合的整数与浮点数的示例  
   
 ```  
 func3(int a, double b, int c, float d);    
 // a in RCX, b in XMM1, c in R8, d in XMM3  
 ```  
   
-## 参数传递示例 4 –\_\_m64、\_\_m128 和聚合  
+## <a name="example-of-argument-passing-4--m64-m128-and-aggregates"></a>自变量传递 4 示例-__m64， \__m128，和聚合  
   
 ```  
 func4(__m64 a, _m128 b, struct c, float d);  
 // a in RCX, ptr to b in RDX, ptr to c in R8, d in XMM3  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [调用约定](../build/calling-convention.md)

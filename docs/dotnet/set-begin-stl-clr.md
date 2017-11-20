@@ -1,41 +1,39 @@
 ---
-title: "set::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin 成员 [STL/CLR]"
+title: "set:: begin (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: 4bfe0b50-bd7e-4b7a-81ba-143f40a7d916
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6592db26bd9e5fc89cf3022663550cf3891b4f6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# set::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setbegin-stlclr"></a>set::begin (STL/CLR)
 指定受控序列的开头。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator begin();  
 ```  
   
-## 备注  
- 数字函数返回一个双向迭代器，指定受控序列的第一个元素，或刚好在空序列的末尾之外。  用于获取一个迭代器，该迭代器指定受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回指定的受控序列，或刚超出空序列末尾的第一个元素的双向迭代器。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改的受控的序列中，但其状态的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_set_begin.cpp   
@@ -64,14 +62,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= b**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [集合](../dotnet/set-stl-clr.md)   
- [set::end](../dotnet/set-end-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)

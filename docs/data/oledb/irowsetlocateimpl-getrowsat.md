@@ -1,36 +1,35 @@
 ---
-title: "IRowsetLocateImpl::GetRowsAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetRowsAt"
-  - "IRowsetLocateImpl.GetRowsAt"
-  - "ATL::IRowsetLocateImpl::GetRowsAt"
-  - "IRowsetLocateImpl::GetRowsAt"
-  - "ATL.IRowsetLocateImpl.GetRowsAt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowsAt 方法"
+title: "Irowsetlocateimpl:: Getrowsat |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetRowsAt
+- IRowsetLocateImpl.GetRowsAt
+- ATL::IRowsetLocateImpl::GetRowsAt
+- IRowsetLocateImpl::GetRowsAt
+- ATL.IRowsetLocateImpl.GetRowsAt
+dev_langs: C++
+helpviewer_keywords: GetRowsAt method
 ms.assetid: 6aeb09dc-3aa8-4729-97a8-144dd27063f7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: facb6498d38c05d513b08016b85865438174ed5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::GetRowsAt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-获取启动行与书签的偏移量指定的行。  
+# <a name="irowsetlocateimplgetrowsat"></a>IRowsetLocateImpl::GetRowsAt
+提取行开头指定偏移量从书签的行。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -46,17 +45,17 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
- 有关更多信息，请参见  [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx) in the *OLE DB Programmer's Reference*。  
+#### <a name="parameters"></a>参数  
+ 请参阅[IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)中*OLE DB 程序员参考*。  
   
-## 备注  
- 从光标位置若要获取，请使用 [IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)。  
+## <a name="remarks"></a>备注  
+ 若要改为提取从光标位置，使用[IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)。  
   
- `IRowsetLocateImpl::GetRowsAt` 不更改光标位置。  
+ `IRowsetLocateImpl::GetRowsAt`不会更改光标位置。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRowsetLocateImpl 类](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)

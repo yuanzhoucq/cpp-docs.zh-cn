@@ -1,85 +1,91 @@
 ---
-title: "如何：使用过度订阅偏移延迟 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "过度订阅, 使用 [并发运行时]"
-  - "使用过度订阅 [并发运行时]"
+title: "如何： 使用过度订阅抵消延迟 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- oversubscription, using [Concurrency Runtime]
+- using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7159d5489459bd32566c8665a5bbf42337fd8837
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用过度订阅偏移延迟
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-对于一些所含任务存在大量延迟的应用程序，过度订阅可以提高这些应用程序的整体效率。  本主题阐释如何使用过度订阅来抵消通过网络连接读取数据导致的延迟。  
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用过度订阅偏移延迟
+过度订阅可提高对某些包含很长的延迟的任务的应用程序的整体效率。 本主题演示如何使用过度订阅抵消延迟所致通过网络连接读取数据。  
   
-## 示例  
- 此示例使用[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)从 HTTP 服务器下载文件。  `http_reader` 类从 [concurrency::agent](../../parallel/concrt/reference/agent-class.md) 派生，并使用消息传递来异步读取要下载的 URL 名称。  
+## <a name="example"></a>示例  
+ 此示例使用[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)从 HTTP 服务器下载文件。 `http_reader`类派生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)并使用消息传递来异步读取要下载的 URL 名称。  
   
- `http_reader` 类使用 [concurrency::task\_group](../Topic/task_group%20Class.md) 类来同时读取每个文件。  每个任务都调用 [concurrency::Context::Oversubscribe](../Topic/Context::Oversubscribe%20Method.md) 方法（其 `_BeginOversubscription` 参数设置为 `true`），以便在当前上下文中启用过度订阅。  然后，每个任务使用 Microsoft 基础类 \(MFC\) [CInternetSession](../../mfc/reference/cinternetsession-class.md) 和 [CHttpFile](../../mfc/reference/chttpfile-class.md) 类来下载文件。  最后，每个任务在 `_BeginOversubscription` 参数设置为 `false` 的情况下调用 `Context::Oversubscribe` 以禁用过度订阅。  
+ `http_reader`类使用[concurrency:: task_group](reference/task-group-class.md)类来同时读取每个文件。 每个任务都调用[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法替换`_BeginOversubscription`参数设置为`true`以便启用过度订阅当前上下文中的。 每个任务，然后使用 Microsoft 基础类 (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md)和[CHttpFile](../../mfc/reference/chttpfile-class.md)类来下载文件。 最后，每个任务调用`Context::Oversubscribe`与`_BeginOversubscription`参数设置为`false`禁用过度订阅。  
   
- 启用过度订阅后，运行时会创建一个在其中运行任务的附加线程。  此外，每个线程都可以过度订阅当前上下文，从而创建附加线程。  `http_reader` 类使用 [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) 对象来限制应用程序所使用的线程数。  代理将使用固定数目的标记值来初始化缓冲区。  对于每个下载操作，代理会在操作开始前读取缓冲区中的一个标记值，然后在操作完成后将该值写回到缓冲区中。  当缓冲区为空时，代理会等待其中的某个下载操作将值写回到缓冲区。  
+ 启用过度订阅后，运行时将创建一个要在其中运行任务的其他线程。 每个这些线程可以过度订阅当前上下文，从而创建其他线程。 `http_reader`类使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)对象来限制的应用程序使用的线程数。 代理初始化具有固定数量的标记值的缓冲区。 对于每个下载操作中，代理令牌值从缓冲区中读取操作开始前，然后将该值返回写入缓冲区在操作完成后。 如果缓冲区为空，则代理会等待下载操作将返回到缓冲区写入的值之一。  
   
- 下面的示例将同步任务数限制为可用硬件线程数的两倍。  在试验过度订阅时，这个值很适合于初次使用。  可以使用适合特定处理环境的值，也可以动态更改此值以响应实际工作负载。  
+ 下面的示例限制为可用硬件线程数的两倍的同步任务数。 此值为使用过度订阅进行试验时要使用的良好开端。 你可以使用一个值，适合特定处理环境或动态更改此值可响应的实际工作负荷。  
   
- [!CODE [concrt-download-oversubscription#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#1)]  
+ [!code-cpp[concrt-download-oversubscription#1](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_1.cpp)]  
   
- 此示例将在具有四个处理器的计算机上产生以下输出：  
+ 该示例产生下面的输出具有四个处理器的计算机上：  
   
-  **下载中 http:\/\/www.adatum.com\/...**  
-**下载中 http:\/\/www.adventure\-works.com\/...**  
-**下载中 http:\/\/www.alpineskihouse.com\/...**  
-**下载中 http:\/\/www.cpandl.com\/...**  
-**下载中 http:\/\/www.cohovineyard.com\/...**  
-**下载中 http:\/\/www.cohowinery.com\/...**  
-**下载中 http:\/\/www.cohovineyardandwinery.com\/...**  
-**下载中http:\/\/www.contoso.com\/...**  
-**下载中 http:\/\/www.consolidatedmessenger.com\/...**  
-**下载中 http:\/\/www.fabrikam.com\/...**  
-**下载中 http:\/\/www.fourthcoffee.com\/...**  
-**下载中 http:\/\/www.graphicdesigninstitute.com\/...**  
-**下载中 http:\/\/www.humongousinsurance.com\/...**  
-**下载中 http:\/\/www.litwareinc.com\/...**  
-**下载中 http:\/\/www.lucernepublishing.com\/...**  
-**下载中 http:\/\/www.margiestravel.com\/...**  
-**下载中 http:\/\/www.northwindtraders.com\/...**  
-**下载中 http:\/\/www.proseware.com\/...**  
-**下载中 http:\/\/www.fineartschool.net...**  
-**下载中 http:\/\/www.tailspintoys.com\/...**  
-**在 3276 毫秒内下载了1801040 字节。** 当启用过度订阅时，此示例运行的速度会更快，这是因为当其他任务等待延迟操作完成时，将会运行附加任务。  
+```Output  
+Downloading http://www.adatum.com/...  
+Downloading http://www.adventure-works.com/...  
+Downloading http://www.alpineskihouse.com/...  
+Downloading http://www.cpandl.com/...  
+Downloading http://www.cohovineyard.com/...  
+Downloading http://www.cohowinery.com/...  
+Downloading http://www.cohovineyardandwinery.com/...  
+Downloading http://www.contoso.com/...  
+Downloading http://www.consolidatedmessenger.com/...  
+Downloading http://www.fabrikam.com/...  
+Downloading http://www.fourthcoffee.com/...  
+Downloading http://www.graphicdesigninstitute.com/...  
+Downloading http://www.humongousinsurance.com/...  
+Downloading http://www.litwareinc.com/...  
+Downloading http://www.lucernepublishing.com/...  
+Downloading http://www.margiestravel.com/...  
+Downloading http://www.northwindtraders.com/...  
+Downloading http://www.proseware.com/...  
+Downloading http://www.fineartschool.net...  
+Downloading http://www.tailspintoys.com/...  
+Downloaded 1801040 bytes in 3276 ms.  
+```  
   
-## 编译代码  
- 复制代码示例，再将此代码粘贴到 Visual Studio项目中或一个名为`download-oversubscription.cpp` 的文件中，然后在Visual Studio命令提示符窗口中运行下列命令之一。  
+ 因为其他任务运行其他任务等待延迟操作完成时启用过度订阅时，该示例可以更快地运行。  
   
- **cl.exe \/EHsc \/MD \/D "\_AFXDLL" download\-oversubscription.cpp**  
+## <a name="compiling-the-code"></a>编译代码  
+ 复制代码示例并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`download-oversubscription.cpp`，然后运行以下命令之一在 Visual Studio 命令提示符窗口中。  
   
- **cl.exe \/EHsc \/MT download\-oversubscription.cpp**  
+ **cl.exe /EHsc /MD /D"_AFXDLL"download-oversubscription.cpp**  
   
-## 可靠编程  
- 当不再需要过度订阅时，始终禁用过度订阅。  考虑一个不处理由另一个函数引发的异常的函数。  如果在此函数返回之前不禁用过度订阅，则任何附加的并行工作也将过度订阅当前上下文。  
+ **cl.exe /EHsc /MT download-oversubscription.cpp**  
   
- 可以使用“获取资源即初始化”\(RAII\) 模式，将过度订阅限制为某个给定范围。  在 RAII 模式下，将在堆栈上分配一个数据结构。  该数据结构在创建时将会初始化或获取一个资源，而且该数据结构在销毁时将会销毁或释放该资源。  RAII 模式可确保在封闭范围退出之前调用析构函数。  因此，在引发异常时或在函数包含多个 `return` 语句时，将可以正确地管理资源。  
+## <a name="robust-programming"></a>可靠编程  
+ 后不再需要将始终禁用过度订阅。 请考虑不处理由另一个函数引发的异常的函数。 如果函数返回前未禁用过度订阅，则任何其他并行工作也将过度订阅当前上下文。  
   
- 下面的示例定义了一个名为 `scoped_blocking_signal` 的结构。  `scoped_blocking_signal` 结构的构造函数启用过度订阅，而析构函数禁用过度订阅。  
+ 你可以使用*获取资源即初始化*(RAII) 模式，以限制为某个给定范围的过度订阅。 下 RAII 模式，在堆栈上分配一种数据结构。 该数据结构初始化，或在创建和销毁或销毁数据结构时释放该资源时，获取一个资源。 RAII 模式可确保在封闭作用域退出之前被调用的析构函数。 因此，资源会引发异常时或当函数包含多个正常管理`return`语句。  
   
- [!CODE [concrt-download-oversubscription#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#2)]  
+ 下面的示例定义一个名为`scoped_blocking_signal`。 构造函数`scoped_blocking_signal`结构启用过度订阅和析构函数禁用过度订阅。  
   
- 下面的示例修改 `download` 方法的主体以使用 RAII 来确保在函数返回之前禁用过度订阅。  这项技术可确保 `download` 方法不会出现异常。  
+ [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]  
   
- [!CODE [concrt-download-oversubscription#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#3)]  
+ 下面的示例修改的正文`download`方法以使用 RAII 来确保，过度订阅已禁用函数返回前。 此方法可确保`download`方法是异常安全的。  
   
-## 请参阅  
+ [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]  
+  
+## <a name="see-also"></a>另请参阅  
  [上下文](../../parallel/concrt/contexts.md)   
- [Context::Oversubscribe 方法](../Topic/Context::Oversubscribe%20Method.md)
+ [Context:: oversubscribe 方法](reference/context-class.md#oversubscribe)
+
+

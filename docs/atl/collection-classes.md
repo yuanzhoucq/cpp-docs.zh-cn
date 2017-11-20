@@ -1,100 +1,100 @@
 ---
-title: "集合类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "集合类"
+title: "ATL 集合类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2aacc778e6df974f364f2be9da72aa46fed8f4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 集合类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面选件类提供对数组支持，列表，映射和特征方法帮助进行比较和元素访问。  
+# <a name="collection-classes"></a>集合类
+下面的类为数组、 列表、 图、 和也用于帮助进行比较和元素访问的特征方法提供支持。  
   
--   [CAtlArray](../atl/reference/catlarray-class.md) 此选件类实现数组对象。  
+-   [CAtlArray](../atl/reference/catlarray-class.md)此类实现一个数组对象。  
   
--   [CAtlList](../atl/reference/catllist-class.md) 此选件类为创建和管理列表对象的方法。  
+-   [CAtlList](../atl/reference/catllist-class.md)此类提供了用于创建和管理列表对象的方法。  
   
--   [CAtlMap](../atl/reference/catlmap-class.md) 此选件类为创建和管理映射对象的方法。  
+-   [CAtlMap](../atl/reference/catlmap-class.md)此类提供了用于创建和管理 map 对象的方法。  
   
--   当构造一个数组智能指针时，[CAutoPtrArray](../atl/reference/cautoptrarray-class.md) 此选件类提供有用的方法。  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md)构造的智能指针的数组时，此类提供有用的方法。  
   
--   在创建智能指针时，的集合[CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) 此选件类的方法、静态有用功能和的typedef。  
+-   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md)创建的智能指针的集合时，此类将提供方法、 静态函数和有用的 typedef。  
   
--   当构造列出了智能指针时，[CAutoPtrList](../atl/reference/cautoptrlist-class.md) 此选件类提供有用的方法。  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md)构造的智能指针的列表时，此类提供有用的方法。  
   
--   在创建智能指针使用新的向量和删除运算符时，的集合[CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) 此选件类的方法、静态有用功能和的typedef。  
+-   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md)此类提供方法，静态函数，并后创建的使用的智能指针的集合功能非常有用的 typedef 矢量 new 和 delete 运算符。  
   
--   在创建COM接口指针时，的集合[CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) 此选件类的方法、静态有用功能和的typedef。  
+-   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md)此类提供的方法，静态函数和 typedef 适合于在创建集合的 COM 接口指针。  
   
--   [CComSafeArray](../atl/reference/ccomsafearray-class.md) 此选件类是 [SAFEARRAY Data Type](http://msdn.microsoft.com/zh-cn/9ec8025b-4763-4526-ab45-390c5d8b3b1e) 结构的包装。  
+-   [CComSafeArray](../atl/reference/ccomsafearray-class.md)此类是包装器[SAFEARRAY 数据类型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)结构。  
   
--   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) 此选件类是 [SAFEARRAYBOUND](http://msdn.microsoft.com/zh-cn/303a9bdb-71d6-4f14-8747-84cf84936c6d) 结构的包装。  
+-   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)此类是包装器[SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d)结构。  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) 此选件类存储 **IUnknown** 指针和旨在用作参数 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) 模板选件类。  
+-   [CComUnkArray](../atl/reference/ccomunkarray-class.md)此类存储**IUnknown**指针和旨在使用作为参数传递给[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)模板类。  
   
--   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) 此选件类为将在大写和小写之间的字符提供两个静态函数。  
+-   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md)此类提供了两个静态函数将之间大写和小写字符转换。  
   
--   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) 此选件类提供默认元素比较函数。  
+-   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md)此类提供了默认元素比较函数。  
   
--   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) 此选件类提供默认方法，并收集的功能类别。  
+-   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md)此类提供了默认方法和函数的集合类。  
   
--   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) 此选件类用于计算哈希值提供静态函数。  
+-   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md)此类提供了计算哈希值的静态函数。  
   
--   此选件类集合选件类用于[CElementTraits](../atl/reference/celementtraits-class.md) 为移动，复制，比较和散列的操作的方法和功能。  
+-   [CElementTraits](../atl/reference/celementtraits-class.md)集合类使用此类用于移动、 复制、 比较，和哈希操作提供方法和函数。  
   
--   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) 此选件类提供默认副本，并且集合的移动方案类别。  
+-   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md)此类提供了默认的集合类的复制和移动方法。  
   
--   在创建堆指针时，的集合[CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) 此选件类的方法、静态有用功能和的typedef。  
+-   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md)创建的堆指针的集合时，此类将提供方法、 静态函数和有用的 typedef。  
   
--   当构造列表堆指针时，[CHeapPtrList](../atl/reference/cheapptrlist-class.md) 此选件类提供有用的方法。  
+-   [CHeapPtrList](../atl/reference/cheapptrlist-class.md)构造的堆指针的列表时，此类提供有用的方法。  
   
--   当构造一个数组COM接口指针时，[CInterfaceArray](../atl/reference/cinterfacearray-class.md) 此选件类提供有用的方法。  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md)构造的 COM 接口指针的数组时，此类提供有用的方法。  
   
--   当构造列表COM接口指针时，[CInterfaceList](../atl/reference/cinterfacelist-class.md) 此选件类提供有用的方法。  
+-   [CInterfaceList](../atl/reference/cinterfacelist-class.md)构造的 COM 接口指针的列表时，此类提供有用的方法。  
   
--   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) 此选件类为集合选件类提供默认方法和函数中对基元数据类型。  
+-   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md)此类提供默认方法并为集合类的函数组成基元数据类型。  
   
--   使用红色黑色二叉树，[CRBMap](../atl/reference/crbmap-class.md) 此选件类表示一个映射的结构。  
+-   [CRBMap](../atl/reference/crbmap-class.md)此类表示一个映射结构中，使用红色黑色二进制树。  
   
--   使用红色黑色二叉树，[CRBMultiMap](../atl/reference/crbmultimap-class.md) 此选件类表示允许每个键与多个值的映射，结构。  
+-   [CRBMultiMap](../atl/reference/crbmultimap-class.md)此类表示允许每个密钥要与多个值，使用红色黑色二进制树关联的映射结构。  
   
--   [CRBTree](../atl/reference/crbtree-class.md) 此选件类是创建和使用红色黑色树的方法。  
+-   [CRBTree](../atl/reference/crbtree-class.md)此类提供了用于创建和使用红色黑色树的方法。  
   
--   [CSimpleArray](../atl/reference/csimplearray-class.md) 此选件类用于管理一个简单数组的方法。  
+-   [CSimpleArray](../atl/reference/csimplearray-class.md)此类提供了用于管理简单数组的方法。  
   
--   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) 此选件类是 [CSimpleArray](../atl/reference/csimplearray-class.md) 选件类的一个帮助器。  
+-   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md)此类是帮助器[CSimpleArray](../atl/reference/csimplearray-class.md)类。  
   
--   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) 此选件类是 [CSimpleArray](../atl/reference/csimplearray-class.md) 选件类的一个帮助器。  
+-   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md)此类是帮助器[CSimpleArray](../atl/reference/csimplearray-class.md)类。  
   
--   此 选件类提供一个简单的映射数组支持的[CSimpleMap](../atl/reference/csimplemap-class.md)。  
+-   [CSimpleMap](../atl/reference/csimplemap-class.md)此类提供支持的是简单映射数组。  
   
--   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) 此选件类是 [CSimpleMap](../atl/reference/csimplemap-class.md) 选件类的一个帮助器。  
+-   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md)此类是帮助器[CSimpleMap](../atl/reference/csimplemap-class.md)类。  
   
--   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) 此选件类是 [CSimpleMap](../atl/reference/csimplemap-class.md) 选件类的一个帮助器。  
+-   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md)此类是帮助器[CSimpleMap](../atl/reference/csimplemap-class.md)类。  
   
--   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) 此选件类提供集合选件使用类的静态函数存储 `CString` 对象。  
+-   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md)此类提供了使用的存储的集合类的静态函数`CString`对象。  
   
--   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) 此选件类提供静态函数与集合选件类对象存储的字符串相关。  它类似于 [CStringElementTraits](../atl/reference/cstringelementtraits-class.md)，但是，执行不区分大小写的比较。  
+-   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md)此类提供与集合类对象中存储的字符串相关的静态函数。 它是类似于[CStringElementTraits](../atl/reference/cstringelementtraits-class.md)，但执行不区分大小写的比较。  
   
--   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) 此选件类提供静态函数与集合选件类对象存储的字符串相关。  字符串对象处理引用。  
+-   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md)此类提供与集合类对象中存储的字符串相关的静态函数。 字符串对象以引用的方式处理的。  
   
-## 相关文章  
+## <a name="related-articles"></a>相关文章  
  [ATL 集合类](../atl/atl-collection-classes.md)  
   
-## 请参阅  
- [Class Overview](../atl/atl-class-overview.md)   
+## <a name="see-also"></a>另请参阅  
+ [类概述](../atl/atl-class-overview.md)   
  [集合类](../atl/atl-collection-classes.md)
+

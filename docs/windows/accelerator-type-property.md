@@ -1,40 +1,40 @@
 ---
-title: "快捷键 Type 属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Type 属性"
-  - "VIRTKEY"
+title: "快捷键 Type 属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Type property
+- VIRTKEY
 ms.assetid: 8c349bc4-e6ad-43fa-959e-f29168af35b8
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ef1788f451597cdc8d3b512f5eede3c3d5abb382
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 快捷键 Type 属性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-快捷键的 **Type** 属性确定与快捷键 ID 关联的快捷组合键是虚拟组合键还是 ASCII\/ANSI 键值：  
+# <a name="accelerator-type-property"></a>快捷键 Type 属性
+快捷键**类型**属性确定是否与快捷键 ID 关联的快捷键组合为虚拟键组合或 ASCII/ANSI 密钥值：  
   
--   如果 **Type** 属性是 **ASCII**，则 [Modifier](../windows/accelerator-modifier-property.md) 只能是 None 或 Alt，或者可以有使用 Ctrl 键的快捷键（通过在键的前面加 ^ 来指定）。  
+-   如果**类型**属性是**ASCII**、[修饰符](../windows/accelerator-modifier-property.md)可能仅为 None 或 Alt，也可以使用 CTRL 键的加速器 (通过在前面的密钥指定 ^)。  
   
--   如果 **Type** 属性是 **VIRTKEY**，则 Modifier 和 Key 值的任意组合都有效。  
+-   如果**类型**属性是**VIRTKEY**，修饰符和密钥值的任意组合无效。  
   
     > [!NOTE]
-    >  如果要向快捷键对应表中输入值并将此值视为 ASCII\/ANSI，只需在表中单击该项的“类型”并从下拉列表中选择“ASCII”。  然而，如果使用**“键入的下一个键”**命令（**“编辑”**菜单）指定 Key，则必须在输入 Key 代码之前将 **Type** 属性从 VIRTKEY 更改为 ASCII。  
+    >  如果你想要的快捷键对应表中输入一个值，并具有值被视为 ASCII/ANSI，只需单击表中的条目的类型，从下拉列表中选择 ASCII。 但是，如果你使用**键入的下一个密钥**命令 (**编辑**菜单) 若要指定的密钥，则必须更改**类型**属性从 VIRTKEY 为 ASCII *之前*中输入密钥的代码。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  Win32  
   
-## 请参阅  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>另请参阅  
+ [设置快捷键属性](../windows/setting-accelerator-properties.md)   
+ [快捷键编辑器](../windows/accelerator-editor.md)

@@ -1,32 +1,30 @@
 ---
-title: "inplace_merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inplace_merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inplace_merge 函数 [STL/CLR]"
+title: "inplace_merge (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inplace_merge
+dev_langs: C++
+helpviewer_keywords: inplace_merge function [STL/CLR]
 ms.assetid: e6948c03-8c5b-4a7c-915c-0a531946a321
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad06f2b7917413617adef6a151e75fb848e8da3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# inplace_merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将两个连续的范围的元素分为单个订单的范围，排序的标准可能是按二进制谓词指定。  
+# <a name="inplacemerge-stlclr"></a>inplace_merge (STL/CLR)
+将两个连续的排序范围中的元素合并为一个排序范围，其中排序条件可通过二元谓词指定。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _BidIt> inline  
@@ -36,13 +34,13 @@ template<class _BidIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## 备注  
- 此函数相同行为与 STL `inplace_merge` 函数对于更多信息，请参见 [inplace\_merge](../Topic/inplace_merge.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`inplace_merge`详细信息，请参阅[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)。  
   
-## 要求  
- **页眉：** \<\/cliext 算法\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/算法 >  
   
- **命名空间：** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

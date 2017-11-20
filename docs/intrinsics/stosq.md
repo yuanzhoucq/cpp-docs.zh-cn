@@ -1,69 +1,68 @@
 ---
-title: "__stosq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep stosq 指令"
-  - "stosq 指令"
-  - "__stosq 内部函数"
+title: "__stosq |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosq
+dev_langs: C++
+helpviewer_keywords:
+- rep stosq instruction
+- stosq instruction
+- __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6195632e6f0c395b225325ec7546a254b90cbf3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __stosq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stosq"></a>__stosq
 **Microsoft 专用**  
   
- 生成存储字符串命令 \(`rep stosq`\)。  
+ 生成一个存储字符串指令 (`rep stosq`)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
+void __stosb(   
+   unsigned __int64* Dest,   
+   unsigned __int64 Data,   
+   size_t Count   
 );  
 ```  
   
-#### 参数  
- \[out\] `Dest`  
+#### <a name="parameters"></a>参数  
+ [out] `Dest`  
  操作的目标。  
   
- \[in\] `Data`  
+ [in] `Data`  
  要存储的数据。  
   
- \[in\] `Count`  
- 多次字长块的长度写入的。  
+ [in] `Count`  
+ 四字要写入的块的长度。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 结果为四次字长 `Data` 将写入 `Count` 多次字长块在 `Dest` 字符串的。  
+## <a name="remarks"></a>备注  
+ 结果是，四字`Data`写入到的块`Count`四字`Dest`字符串。  
   
- 此实例只能用作内部。  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // stosq.c  
@@ -83,13 +82,13 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-### 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

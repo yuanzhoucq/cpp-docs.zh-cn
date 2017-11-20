@@ -1,41 +1,39 @@
 ---
-title: "multimap::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成员 [STL/CLR]"
+title: "multimap::to_array (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: eb4872dd-5e32-4a82-8ad4-37b533eb6814
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c51fe6e8196f68ade3977c6d239d859cd0752d46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制控件序列到新数组。  
+# <a name="multimaptoarray-stlclr"></a>multimap::to_array (STL/CLR)
+受控的序列复制到新数组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 备注  
- 成员函数返回一控制序列的数组。  使用它包含控制的序列复制以数组形式。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回包含受控的序列的数组。 用于获取受控序列中数组形式的副本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multimap_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\] \[d 4\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **页眉：** \<\/cliext 映射\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)

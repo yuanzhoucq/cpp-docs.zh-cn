@@ -1,89 +1,88 @@
 ---
-title: "/Yu（使用预编译的头文件） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pch 文件, 使用现有的项"
-  - "/Yu 编译器选项 [C++]"
-  - "PCH 文件, 使用现有的项"
-  - "预编译的头文件, 使用现有的项"
-  - "Yu 编译器选项 [C++]"
-  - "-Yu 编译器选项 [C++]"
+title: "-Yu （使用预编译标头文件） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yu
+dev_langs: C++
+helpviewer_keywords:
+- Yu compiler option [C++]
+- /Yu compiler option [C++]
+- -Yu compiler option [C++]
+- PCH files, use existing
+- .pch files, use existing
+- precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c0eb123cca28fdae379b387aaf09d0a200a88287
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /Yu（使用预编译的头文件）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指示编译器在当前编译中使用现有预编译头\(.pch\)文件。  
+# <a name="yu-use-precompiled-header-file"></a>/Yu（使用预编译标头文件）
+指示编译器使用当前的编译中的现有预编译标头 (.pch) 文件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Yu[filename]  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>参数  
  *filename*  
- 头文件的名称，它包含在使用 **\#include** 预处理器指令的源文件中。  
+ 标头文件，它包括在源文件使用的名称**#include**预处理器指令。  
   
-## 备注  
- 对于创建预编译头的 **\/Yc** 选项和任何随后指示使用预编译头的 **\/Yu** 选项，包含文件的名称必须相同。  
+## <a name="remarks"></a>备注  
+ 该包含文件的名称必须是相同**/Yc**选项创建预编译标头和任何后续**/Yu** ，该值指示使用预编译标头的选项。  
   
- 对于 **\/Yc**，`filename` 指定预编译停止的位置；编译器预编译直到 `filename` 的所有代码，并使用包含文件的基名称和 .pch 扩展名对得到的预编译头进行命名。  
+ 有关**/Yc**，`filename`指定的点的预编译会停止; 编译器预编译所有代码，但`filename`并将其命名生成预编译的头使用的包含文件和扩展的基名称为.pch。  
   
- 该 .pch 文件必须是使用 **\/Yc** 创建的。  
+ .Pch 文件必须已经创建使用**/Yc**。  
   
- 编译器将所有在 .h 文件之前出现的代码视为已经过预编译。  它刚好跳到与 .h 文件关联的 **\#include** 指令之外，使用 .pch 文件中包含的代码，然后编译 `filename` 之后的所有代码。  
+ 编译器将在作为预编译的.h 文件之前发生的所有代码。 它将跳到刚刚场外**#include**与.h 文件中，关联的指令使用.pch 文件中包含的代码并进行编译之后的所有代码`filename`。  
   
- 在命令行上，**\/Yu** 和 `filename` 之间不允许存在空格。  
+ 在命令行中，不允许有空格之间**/Yu**和`filename`。  
   
- 如果指定 **\/Yu** 选项但不带文件名，则源程序必须包含指定预编译头（.pch 文件）的文件名的 [\#pragma hdrstop](../../preprocessor/hdrstop.md) 杂注。  在这种情况下，编译器将使用由 [\/Fp（命名 .Pch 文件）](../../build/reference/fp-name-dot-pch-file.md) 命名的预编译头（.pch 文件）。  编译器跳到该杂注所在的位置，从由杂注指定的预编译头文件还原编译状态，然后只编译杂注后面的代码。  如果 **\#pragma hdrstop** 没有指定文件名，编译器将查找其名称从扩展名为 .pch 的源文件的基名称派生的文件。  还可以使用 **\/Fp** 选项指定不同的 .pch 文件。  
+ 当指定**/Yu**选项但不带文件名称，源程序必须包含[#pragma hdrstop](../../preprocessor/hdrstop.md)指定预编译标头，.pch 文件的文件名称的杂注。 在这种情况下，编译器将使用预编译标头 （.pch 文件） 由名为[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)。 编译器将跳到该杂注的位置，从指定的杂注，预编译标头文件将还原的已编译的状态并进行编译杂注后面的代码。 如果**#pragma hdrstop**未指定文件名，编译器将查找具有派生自的基名称的扩展名为.pch 的源文件的名称的文件。 你还可以使用**/Fp**选项以指定不同的.pch 文件。  
   
- 如果指定 **\/Yu** 选项但不带文件名，且未能指定 **hdrstop** 杂注，则生成错误信息，且编译不成功。  
+ 如果指定**/Yu**选项但不带文件名称，并且无法指定**hdrstop**杂注时，将生成错误消息和编译不成功。  
   
- 如果 **\/Yc**`filename` 和  **\/Yu**`filename` 选项出现在同一命令行上，并且引用同一文件名，则 **\/Yc**`filename` 优先，对直到命名文件（包含该文件）的所有代码进行预编译。  此功能简化了生成文件的编写。  
+ 如果**/Yc** `filename`和**/Yu** `filename`选项出现在相同的命令行上，并且引用相同的文件名， **/Yc** `filename`采用优先级，最多预编译所有代码和包括的命名的文件。 此功能简化了生成文件的写入。  
   
- 由于 .pch 文件包含的信息涉及计算机环境以及程序的内存地址，因此，只应在创建 pch 文件的计算机上使用该文件。  
+ 由于.pch 文件包含有关计算机环境的信息以及有关程序的内存地址信息，你应仅使用被创建时所在的计算机上的 pch 文件。  
   
- 有关预编译头的更多信息，请参见：  
+ 预编译标头的详细信息，请参阅：  
   
--   [\/Y（预编译头）](../../build/reference/y-precompiled-headers.md)  
+-   [/Y （预编译标头）](../../build/reference/y-precompiled-headers.md)  
   
--   [创建预编译的头文件](../../build/reference/creating-precompiled-header-files.md)  
+-   [创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  在项目中的 .cpp 文件中指定 [\/Yc（创建预编译的头文件）](../../build/reference/yc-create-precompiled-header-file.md)。  
+1.  指定[/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)项目中的.cpp 文件。  
   
-2.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+2.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-3.  单击**“C\/C\+\+”**文件夹。  
+3.  单击 **“C/C++”** 文件夹。  
   
-4.  单击**“预编译头”**属性页。  
+4.  单击**预编译标头**属性页。  
   
-5.  修改**“通过文件创建\/使用 PCH”**属性或**“创建\/使用预编译头”**属性。  
+5.  修改**通过文件创建/使用 PCH**属性或**创建/使用预编译标头**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
 -   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>。  
   
-## 示例  
- 如果下列代码：  
+## <a name="examples"></a>示例  
+ 如果以下代码：  
   
 ```  
 #include <afxwin.h>   // Include header for class library  
@@ -92,16 +91,16 @@ caps.handback.revision: 12
 ...  
 ```  
   
- 使用命令行 `CL /YuMYAPP.H PROG.CPP` 进行编译，则编译器不处理这三个 include 语句，但使用 MYAPP.pch 中的预编译代码，从而节省了用于预处理所有这三个文件（以及它们可能包含的任何文件）的时间。  
+ 使用命令行编译`CL /YuMYAPP.H PROG.CPP`，编译器不会处理三个保存在预处理所有三个文件 （和它们可能包含任何文件） 中所涉及的时间从而 include 语句，但 myapp.pch，使用预编译代码。  
   
- 可以将 [\/Fp（命名 .Pch 文件）](../../build/reference/fp-name-dot-pch-file.md) 选项与 **\/Yu** 选项一起使用，以指定 .pch 文件的名称（如果该名称不同于 **\/Yc** 的文件名参数或源文件的基名称），如下所示：  
+ 你可以使用[/Fp （名称。Pch 文件）](../../build/reference/fp-name-dot-pch-file.md)选项与**/Yu**选项以指定.pch 文件的名称，如果名称不同于到两个文件名称参数**/Yc**或源文件，如下所示的基名称以下：  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP  
 ```  
   
- 此命令指定名为 MYPCH.pch 的预编译头文件。  编译器使用其内容还原所有头文件（一直到 MYAPP.h 并包含该文件）的预编译状态。  然后编译器编译在 MYAPP.h 的 **include** 语句之后出现的代码。  
+ 此命令指定一个名为 MYPCH.pch 的预编译标头文件。 编译器使用其内容以还原的所有标头文件达 myapp.h 预编译的状态。 由编译器进行编译的代码在 MYAPP.h 之后**包括**语句。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

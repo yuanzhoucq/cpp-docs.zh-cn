@@ -1,35 +1,34 @@
 ---
-title: "如何：使用正则表达式进行搜索和替换 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "正则表达式 [C++], 搜索和替换"
-  - "Replace 方法"
-  - "搜索和替换"
+title: "如何： 使用正则表达式进行搜索和替换 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search and replace
+- Replace method
+- regular expressions [C++], search and replace
 ms.assetid: 12fe3e18-fe10-4b25-a221-19dc5eab3821
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用正则表达式进行搜索和替换 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何使用正则表达式类 <xref:System.Text.RegularExpressions.Regex> 执行搜索和替换。  可通过使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 方法完成此任务。  所用的版本将两个字符串作为输入：要修改的字符串和要插入的字符串，后者取代与为 <xref:System.Text.RegularExpressions.Regex> 对象提供的模式相匹配的节（如果有）。  
+# <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>如何：使用正则表达式进行搜索和替换 (C++/CLI)
+下面的代码示例演示如何正则表达式类<xref:System.Text.RegularExpressions.Regex>可用来执行搜索和替换。 这通过完成<xref:System.Text.RegularExpressions.Regex.Replace%2A>方法。 使用的版本将作为输入的两个字符串： 要修改的字符串和字符串 （如果有） 代替部分要插入到给定模式相匹配<xref:System.Text.RegularExpressions.Regex>对象。  
   
- 此代码用下划线 \(\_\) 替换字符串中的所有数字，然后用空字符串替换下划线，从而有效地将其移除。  执行一个步骤就可以得到相同的效果，但为了演示的目的，在此使用两个步骤。  
+ 此代码用字符串中的所有数字都替换下划线 (_)，然后都替换具有空字符串，有效地删除它们。 相同的效果，可在单个步骤中，但是，出于演示目的此处使用两个步骤。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // regex_replace.cpp  
@@ -55,6 +54,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [.NET Framework 正则表达式](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [.NET Framework 正则表达式](/dotnet/standard/base-types/regular-expressions)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

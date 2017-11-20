@@ -20,7 +20,7 @@ f1_keywords:
 - string/std::to_string
 - string/std::to_wstring
 ms.assetid: 1a4ffd11-dce5-4cc6-a043-b95de034c7c4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -37,12 +37,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 5f6b8c5da1b8d848d751a8ce2189b864538f4cfe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函数
 ||||  
@@ -536,5 +535,4 @@ wstring to_wstring(long double Val);
   
 ## <a name="see-also"></a>另请参阅  
  [\<string>](../standard-library/string.md)
-
 

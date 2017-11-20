@@ -1,26 +1,26 @@
 ---
-title: "命令行错误 D8000 到 D9999 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "命令行错误 D8000 到 D9999 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: d02ec7df-26a5-4198-ac92-87b29ec9d5c8
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2210ff4805138fb77e6a61f430ace25b8be65ff6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 命令行错误 D8000 到 D9999
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-该节是生成工具所产生错误的参考。  若要获得特定错误信息的相关帮助，请在“输出”窗口中的错误号上单击鼠标并按 F1，在“索引”的**“查找”**框中键入错误号，或单击下面的链接。  
+# <a name="command-line-errors-d8000-through-d9999"></a>命令行错误 D8000 到 D9999
+该节是生成工具所生成错误的参考。 以获取有关特定错误消息的帮助，单击输出窗口中的错误号上鼠标并按 F1，键入错误号**查找**框中的索引，或单击下面的链接。  
   
  [命令行错误 D8016](../../error-messages/tool-errors/command-line-error-d8016.md)  
   
@@ -56,5 +56,5 @@ caps.handback.revision: 15
   
  [命令行警告 D9043](../../error-messages/tool-errors/command-line-warning-d9043.md)  
   
-## 请参阅  
- [C\/C\+\+ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+## <a name="see-also"></a>另请参阅  
+ [C/C++ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

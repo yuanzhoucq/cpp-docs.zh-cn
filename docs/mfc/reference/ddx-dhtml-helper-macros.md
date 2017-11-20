@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - AFXDHTML/DDX_DHtml_Img_Src
 - AFXDHTML/DDX_DHtml_Frame_Src
 - AFXDHTML/DDX_DHtml_IFrame_Src
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - macros [MFC], exchanging data with HMTL pages
 - DDX macros [MFC]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 976fc0c6fb4d803bf1f998518d9bcc5f4f808637
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d9729affe9c3aaeaac217a1f2d4ddce0de06182d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 帮助器宏
 DDX_DHtml 帮助器宏让您轻松访问的 HTML 页上的控件的常用属性。  
@@ -256,4 +253,3 @@ DDX_DHtml_Img_Src(
   
 ## <a name="see-also"></a>另请参阅  
  [CDHtmlDialog 类](../../mfc/reference/cdhtmldialog-class.md)
-

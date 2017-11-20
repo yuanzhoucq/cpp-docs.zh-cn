@@ -1,41 +1,39 @@
 ---
-title: "链接器工具警告 LNK4078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4078"
+title: "链接器工具警告 LNK4078 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c6fc69436d30500eeb73af8435aad962bb228e07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器工具警告 LNK4078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-找到多个具有不同特性的“section name”节  
+# <a name="linker-tools-warning-lnk4078"></a>链接器工具警告 LNK4078
+找到具有不同的属性的多个 section name 节  
   
- LINK 找到两个或更多同名但特性不同的节。  
+ LINK 找到两个或更多具有相同的节名称但不同的属性。  
   
- 由早期版本的 LINK 或 LIB 创建的导入库或导出文件可能导致此警告。  
+ 此警告可能引起由以前版本的链接或 LIB 导入库或导出文件。  
   
- 重新创建文件，然后重新链接。  
+ 重新创建文件并重新链接。  
   
-## 示例  
- LNK4078 也可能由以下重大更改导致：由 [init\_seg](../../preprocessor/init-seg.md) 命名的节在 x86 上是可读\/写的，现在却是只读的。  
+## <a name="example"></a>示例  
+ LNK4078 也由一项重大更改： 命名的节[init_seg](../../preprocessor/init-seg.md) x86 上的读/写，现在只读的。  
   
- 下面的示例生成 LNK4078：  
+ 下面的示例生成 LNK4078。  
   
 ```  
 // LNK4078.cpp  

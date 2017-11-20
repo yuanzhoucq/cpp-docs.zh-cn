@@ -1,41 +1,39 @@
 ---
-title: "vector::push_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_back 成员 [STL/CLR]"
+title: "vector:: push_back (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: 4a4c302b-e29f-4b68-b759-2f831814d896
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 15543574c29cea7bab8e99cc2e96d891c03c1282
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# vector::push_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-添加新的末尾元素。  
+# <a name="vectorpushback-stlclr"></a>vector::push_back (STL/CLR)
+添加新的最后一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## 备注  
- 成员函数在控制的序列末尾插入值为 `val` 的元素。  使用它附加另一元素到 vector。  
+## <a name="remarks"></a>备注  
+ 成员函数将插入具有值的元素`val`受控序列的末尾。 你可以使用它要追加到向量的另一个元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_push_back.cpp   
@@ -58,12 +56,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 要求  
- **标头:** \<cliext\/vector\>  
+```Output  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::pop\_back](../dotnet/vector-pop-back-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)

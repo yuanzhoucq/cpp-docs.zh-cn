@@ -1,55 +1,55 @@
 ---
-title: "_AddressOfReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_AddressOfReturnAddress_cpp"
-  - "_AddressOfReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AddressOfReturnAddress 指令"
-  - "AddressOfReturnAddress 指令"
+title: "_AddressOfReturnAddress |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _AddressOfReturnAddress_cpp
+- _AddressOfReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _AddressOfReturnAddress intrinsic
+- AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0808f1053475b1f4919ada60615f91dc8cc0cba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# _AddressOfReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Microsoft 专用**  
   
- 提供包含该函数的返回地址内存位置的地址。  此地址不可用于访问其他内存位置 \(例如，函数的参数\)。  
+ 提供保留当前函数的返回地址的内存位置的地址。 不可能使用此地址用于访问其他内存位置 （例如，函数的自变量）。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void * _AddressOfReturnAddress();  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`_AddressOfReturnAddress`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 当 `_AddressOfReturnAddress` 程序中使用编译 [\/clr](../build/reference/clr-common-language-runtime-compilation.md)时，包含 `_AddressOfReturnAddress` 的函数调用编译为本机函数。  当为管理编译函数调用到包含 `_AddressOfReturnAddress`时的函数， `_AddressOfReturnAddress` 可能与预期的方式工作。  
+## <a name="remarks"></a>备注  
+ 当`_AddressOfReturnAddress`在编译的程序中使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函数包含`_AddressOfReturnAddress`调用编译为本机函数。 当函数编译为托管调入函数包含`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能无法按预期方式。  
   
- 此实例只能用作内部。  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // compiler_intrinsics_AddressOfReturnAddress.cpp  
@@ -75,11 +75,14 @@ int main() {
 }  
 ```  
   
-  **0012FF78**  
-**00401058**  
-**00401058**   
-## 特定于 Microsoft 的结尾  
+```Output  
+0012FF78  
+00401058  
+00401058  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

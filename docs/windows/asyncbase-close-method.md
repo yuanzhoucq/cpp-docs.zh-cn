@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::Close 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close 方法"
+title: "Asyncbase:: Close 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: a52b1124-754b-4393-b491-64aae0c22f1c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dbdc52eec476b973c3d3549cfb0ff9413a46f6f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::Close 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-结束异步操作。  
+# <a name="asyncbaseclose-method"></a>AsyncBase::Close 方法
+关闭的异步操作。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHOD(  
@@ -34,16 +32,16 @@ STDMETHOD(
 )(void) override;  
 ```  
   
-## 返回值  
- S\_OK，如果操作关闭或已关闭；否则，E\_ILLEGAL\_STATE\_CHANGE。  
+## <a name="return-value"></a>返回值  
+ 如果该操作将关闭，或者已经，则为 S_OK 关闭;否则为 E_ILLEGAL_STATE_CHANGE。  
   
-## 备注  
- Close\(\) 是 IAsyncInfo::Close 的默认实现，并且不执行实际工作。  实际取消异步操作，请重写 OnClose\(\) 纯虚方法。  
+## <a name="remarks"></a>备注  
+ Close （） IAsyncInfo::Close，默认实现，并且不执行任何实际工作。 若要实际关闭异步操作，重写 OnClose() 纯虚方法。  
   
-## 要求  
- **页眉：**async.h  
+## <a name="requirements"></a>要求  
+ **标头：** async.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [AsyncBase 类](../windows/asyncbase-class.md)

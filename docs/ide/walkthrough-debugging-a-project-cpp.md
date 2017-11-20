@@ -1,69 +1,68 @@
 ---
-title: "演练：调试项目 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "调试项目"
-  - "项目调试 [C++]"
-  - "项目 [C++], 调试"
+title: "演练： 调试项目 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- projects [C++], debugging
+- project debugging [C++]
+- debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ec7a363d3aa4601e33e44d15fbb3d667c3a87db4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 演练：调试项目 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在本步骤中，您将调整程序以修复在测试项目时你所发现的问题。  
+# <a name="walkthrough-debugging-a-project-c"></a>演练：调试项目 (C++)
+在本演练中，你将修改程序以修复在测试项目时发现的问题。  
   
-## 系统必备  
+## <a name="prerequisites"></a>先决条件  
   
--   本演练假定您具备 C\+\+ 语言的基础知识。  
+-   本演练假定你具备 C++ 语言的基础知识。  
   
--   它还假定已完成[使用 Visual Studio IDE 进行 C\+\+ 桌面开发](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中列出的早期相关演练。  
+-   它还假定你已完成中列出的更早版本相关的演练[使用适用于 c + + 桌面开发的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   
-### 修复包含 bug 的程序  
+### <a name="to-fix-a-program-that-has-a-bug"></a>若要修复有 bug 的程序  
   
-1.  要理解在撤销 `Cardgame` 对象时会发生什么, 请查看 `Cardgame` 类的析构函数。  
+1.  若要查看销毁 `Cardgame` 对象时发生的情况，请查看 `Cardgame` 类的析构函数。  
   
-     在菜单栏上，选择“查看” 、“类似图” 。  
+     在菜单栏上，选择**视图**，**类视图**。  
   
-     在“类视图”  窗口中，展开“游戏”  项目树并选择“Cardgame”  类展示类成员和方法。  
+     在**类视图**窗口中，展开**游戏**项目树并选择**Cardgame**类来显示类成员和方法。  
   
-     打开 **~Cardgame \(失效\)** 析构函数的快捷菜单然后选择“转到定义” 。  
+     打开的快捷菜单**~Cardgame(void)**析构函数，然后选择**转到定义**。  
   
-2.  在卡片游戏终止时 `totalParticipants`会递减，请在析构函数 `Cardgame::~Cardgame` 的左大括号和右大括号之间加入以下代码：  
+2.  若要在 Cardgame 终止时减少 `totalParticipants`，请在 `Cardgame::~Cardgame` 析构函数的左大括号和右大括号之间键入以下代码。  
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]  
   
-3.  在您对 Cardgame.cpp 文件进行更改之后，该文件应类似于：  
+3.  在更改后，Cardgame.cpp 文件应类似如下：  
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]  
   
-4.  在菜单栏上，依次选择**“生成”**、**“生成解决方案”**。  
+4.  在菜单栏上，依次选择 **“生成”**、 **“生成解决方案”**。  
   
-5.  在版本完成后，通过选择在菜单栏上的“调试”  “启动调试” 运行调试模式，或按 F5 键。  程序将在第一个断点处暂停。  
+5.  在生成完成，以运行它在调试模式下通过选择**调试**，**启动调试**在菜单栏上，或通过选择 F5 键。 在第一个断点处暂停程序。  
   
-6.  若要逐句通过程序单步执行，则在菜单栏上，选择“调试” ，“单步执行” ，或选择 F10 键。  
+6.  若要逐步执行程序，请在菜单栏上，选择**调试**，**逐过程**，或选择 F10 键。  
   
-     请注意，当卡片游戏的每个构造函数都执行后，`totalParticipants` 的值会增大。  当 `PlayGames` 函数返回，由于每个超出范围的卡片游戏实例都将被删除 \(并调用析构函数\)，`totalParticipants` 降低。  恰好在执行 `return` 语句之前，`totalParticipants` 等于 0。  
+     请注意，执行每个 Cardgame 构造函数后，`totalParticipants` 的值会增大。 在 `PlayGames` 函数返回时，由于每个 Cardgame 实例都超出范围且被删除（并且调用析构函数），因此 `totalParticipants` 会减小。 之前`return`执行语句，`totalParticipants`等于 0。  
   
-7.  继续逐句执行程序，直到退出或让其通过选择在菜单栏上的“调试” ，“运行” ，或通过选择 F5 键运行。  
+7.  继续逐步执行程序直到其退出，或将其通过选择运行**调试**，**运行**在菜单栏上，或通过选择 F5 键。  
   
-## 后续步骤  
- **上一部分：** [演练：测试项目 \(C\+\+\)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **下一部分：**[演练：部署程序 \(C\+\+\)](../ide/walkthrough-deploying-your-program-cpp.md)  
+## <a name="next-steps"></a>后续步骤  
+ **上一步：** [演练： 测试项目 （c + +）](../ide/walkthrough-testing-a-project-cpp.md) &#124;**下一步：**[演练： 部署程序 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## 请参阅  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/zh-cn/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/zh-cn/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>另请参阅  
+ [C + + 语言参考](../cpp/cpp-language-reference.md)   
+ [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

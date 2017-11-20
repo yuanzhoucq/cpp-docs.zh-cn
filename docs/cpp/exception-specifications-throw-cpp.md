@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范 （throw，noexcept） （c + +）
 异常规范是 c + + 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 你可以指定一个函数可能或可能不通过使用中退出的异常*异常规范*。 编译器可以使用此信息来优化对该函数调用和终止程序，如果异常转义函数。 有两种类型的异常规范。 *Noexcept 规范*是 C + + 11 中的新增功能。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*，或`throw(optional_type_list)`规范中，在 C + + 11 中已弃用，并且仅部分 Visual Studio 提供的支持。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 证明确实有一定用处的一个动态异常规范是无条件`throw()`规范。 例如，以下函数声明中：  

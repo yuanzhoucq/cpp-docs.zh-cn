@@ -4,41 +4,36 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- COM interfaces, COM interface entry macros
+f1_keywords:
+- atlcom/ATL::COM_INTERFACE_ENTRY
+- atlcom/ATL::COM_INTERFACE_ENTRY_IID
+- atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE
+- atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE
+- atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_BREAK
+- atlcom/ATL::COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
+- atlcom/ATL::COM_INTERFACE_ENTRY_TEAR_OFF
+- atlcom/ATL::COM_INTERFACE_ENTRY_CHAIN
+- atlcom/ATL::COM_INTERFACE_ENTRY_FUNC
+- atlcom/ATL::COM_INTERFACE_ENTRY_FUNC_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_NOINTERFACE
+dev_langs: C++
+helpviewer_keywords: COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7e9eb155d10a0a05916fc5f74cbe58fdf14b7475
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 281829593087a936f201000faaa42f698344d3b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏  
  这些宏在以便其可以访问通过其 COM 映射到输入对象的接口`QueryInterface`。 COM 映射中的项的顺序有顺序接口将检查匹配**IID**期间`QueryInterface`。  
 
@@ -51,7 +46,7 @@ ms.lasthandoff: 03/31/2017
 |[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|接口由`iid`，查询`COM_INTERFACE_ENTRY_AGGREGATE`将转发到`punk`。|  
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，只不过查询任何 IID 导致转发到查询`punk`。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非`punk`是**NULL**，它会自动创建所描述的聚合`clsid`。|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|与相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，只不过查询任何 IID 导致转发到查询`punk`，并且如果`punk`是**NULL**，则自动创建所描述的聚合`clsid`。|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|与相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，只不过查询任何 IID 导致转发到查询`punk`，并且如果`punk`是**NULL**，则自动创建聚合所描述`clsid`。|  
 |[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|导致你的程序以调用[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|将每个实例的特定接口的数据的保存。|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|公开分离式接口。|  
@@ -60,6 +55,8 @@ ms.lasthandoff: 03/31/2017
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|与相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，只不过对的调用中查询任何 IID 结果`func`。|  
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|返回**E_NOINTERFACE**并终止 COM 映射处理时为查询指定的接口。|  
 
+## <a name="requirements"></a>要求
+**标头：** atlcom.h
 
 ## <a name="com_interface_entry"></a>COM_INTERFACE_ENTRY
 将接口输入到 COM 接口映射。
@@ -85,7 +82,7 @@ BEGIN_COM_MAP(CThisExample)
 END_COM_MAP()
 ```
 ### <a name="requirements"></a>要求
-**标头︰** atlcom.h
+**标头：** atlcom.h
   
 ##  <a name="com_interface_entry2"></a>COM_INTERFACE_ENTRY2  
  使用此宏来消除歧义的继承的两个分支。  
@@ -106,7 +103,7 @@ COM_INTERFACE_ENTRY2(x, x2)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
 ##  <a name="com_interface_entry_iid"></a>COM_INTERFACE_ENTRY_IID  
  使用此宏输入到 COM 映射的接口，并指定其 IID。  
@@ -124,7 +121,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
   
  
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
 ##  <a name="com_interface_entry2_iid"></a>COM_INTERFACE_ENTRY2_IID  
  与相同[COM_INTERFACE_ENTRY2](#com_interface_entry2)，只是你可以指定不同的 IID。  
@@ -163,7 +160,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
+ [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
 ##  <a name="com_interface_entry_aggregate_blind"></a>COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
  与相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，只不过查询任何 IID 导致转发到查询`punk`。  
@@ -182,7 +179,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
+ [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
   
 
 ##  <a name="com_interface_entry_autoaggregate"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE  
@@ -206,10 +203,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
+ [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
 ##  <a name="com_interface_entry_autoaggregate_blind"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
- 与相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，只不过查询任何 IID 导致转发到查询`punk`，并且如果`punk`是**NULL**，则自动创建所描述的聚合`clsid`。  
+ 与相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，只不过查询任何 IID 导致转发到查询`punk`，并且如果`punk`是**NULL**，则自动创建聚合所描述`clsid`。  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
@@ -228,7 +225,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Windowing # 115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
+ [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>COM_INTERFACE_ENTRY_BREAK  
  导致你的程序以调用[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)时为查询指定的接口。  
@@ -269,7 +266,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
+ [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
   
 ##  <a name="com_interface_entry_tear_off"></a>COM_INTERFACE_ENTRY_TEAR_OFF  
  公开分离式接口。  
@@ -291,7 +288,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
   
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
+ [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 ##  <a name="com_interface_entry_chain"></a>COM_INTERFACE_ENTRY_CHAIN  
  当处理到达的 COM 映射中的此项目时，请处理的基类的 COM 映射。  
@@ -301,17 +298,17 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 ```  
   
 ### <a name="parameters"></a>参数  
- *类名*  
+ classname  
  [in]当前对象的基类。  
   
 ### <a name="remarks"></a>备注  
- 例如，在以下代码︰  
+ 例如，在以下代码：  
   
- [!code-cpp[NVC_ATL_Windowing # 116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
+ [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
   
  请注意，COM 映射中的第一个输入必须是包含 COM 映射的对象上的接口。 因此，无法启动与你 COM 映射项`COM_INTERFACE_ENTRY_CHAIN`，这将导致产生不同的对象要搜索的点处的 COM 映射其中**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)**将显示在对象的 COM 映射。 如果你想要搜索的另一个对象的 COM 映射首先，添加为一个接口条目**IUnknown**到 COM 图中，然后链接其他对象的 COM 映射。 例如:   
   
- [!code-cpp[NVC_ATL_Windowing # 111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
+ [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
   
   
   
@@ -333,7 +330,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
  [in]将返回的函数指针`iid`。  
   
 ### <a name="remarks"></a>备注  
- 如果*iid*匹配查询，该接口然后由指定的函数的 IID`func`调用。 该函数的声明应为︰  
+ 如果*iid*匹配查询，该接口然后由指定的函数的 IID`func`调用。 该函数的声明应为：  
   
  `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`  
   

@@ -4,49 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList::CHeapPtrList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHeapPtrList class
+dev_langs: C++
+helpviewer_keywords: CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9acf18d0e0a72f27a335cefca81341c95d530ae5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 18d4847c53e7926abecba43dd55f44acd22ed2f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList 类
 构造的堆指针的列表时，此类提供有用的方法。  
   
 > [!IMPORTANT]
->  不能在 Windows 运行时中执行的应用程序中使用此类及其成员。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,12 +50,12 @@ class CHeapPtrList
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|构造函数。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供一个构造函数，并且是从方法[CAtlList](../../atl/reference/catllist-class.md)和[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)以协助创建存储堆指针的集合类对象。  
+ 此类提供的构造函数和派生方法从[CAtlList](../../atl/reference/catllist-class.md)和[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)以帮助存储堆指针集合类对象的创建。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -81,7 +63,7 @@ class CHeapPtrList
  `CHeapPtrList`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcoll.h  
+ **标头：** atlcoll.h  
   
 ##  <a name="cheapptrlist"></a>CHeapPtrList::CHeapPtrList  
  构造函数。  
@@ -95,11 +77,10 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
  块大小。  
   
 ### <a name="remarks"></a>备注  
- 块大小为分配一个新元素时所需的内存量的度量值。 更大的块大小减少对内存分配例程的调用，但使用更多的资源。  
+ 块大小是内存的分配需要一个新的元素时量的度量值。 更大的块大小减少到内存分配例程的调用，但使用更多资源。  
   
 ## <a name="see-also"></a>另请参阅  
  [CAtlList 类](../../atl/reference/catllist-class.md)   
  [CHeapPtr 类](../../atl/reference/cheapptr-class.md)   
  [CHeapPtrElementTraits 类](../../atl/reference/cheapptrelementtraits-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

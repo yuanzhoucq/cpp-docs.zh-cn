@@ -1,38 +1,36 @@
 ---
-title: "编译器警告（等级 1）C4692 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4692"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4692"
+title: "编译器警告 （等级 1） C4692 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4692
+dev_langs: C++
+helpviewer_keywords: C4692
 ms.assetid: f6fb3acc-8228-491a-9c30-ce302d8a9c75
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 546259d172b8718a62e62e5efd01ce7717d3578f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 1）C4692
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“function”: 非私有成员的签名包含程序集私有本机类型“native\_type”  
+# <a name="compiler-warning-level-1-c4692"></a>编译器警告（等级 1）C4692
+“function”: 非私有成员的签名包含程序集私有本机类型“native_type”  
   
- 程序集以外可见的类型包含某个成员函数，该函数的签名包含在程序集以外不可见的本机类型。  因此，如果该成员函数的包含类型在程序集以外进行实例化，则不应调用该成员函数。  
+ 程序集外部可见类型包含其签名包含不是程序集外部可见的本机类型的成员函数。 因此，不应如果其包含类型实例化的程序集外部调用成员函数。  
   
- 有关更多信息，请参见[类型可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)。  
+ 有关详细信息，请参阅[键入可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)。  
   
- 默认情况下关闭此警告。  有关详细信息，请参阅[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4692。  
   
 ```  

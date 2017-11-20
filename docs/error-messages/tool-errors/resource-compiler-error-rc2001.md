@@ -1,37 +1,35 @@
 ---
-title: "资源编译器错误 RC2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2001"
+title: "资源编译器错误 RC2001 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2001
+dev_langs: C++
+helpviewer_keywords: RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23b853db3cbea89bf9cb1ba43607c312e5264394
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 资源编译器错误 RC2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-常数中有换行符  
+# <a name="resource-compiler-error-rc2001"></a>资源编译器错误 RC2001
+常量中有换行符  
   
- 字符串常数在第二行继续，既没有反斜杠 \(**\\**\) 也没有右双引号和左双引号 \(**"**\)。  
+ 字符串常量在第二个行继续没有反斜杠 (**\\**) 或关闭并打开两个双引号 (**"**)。  
   
- 若要断开源文件中位于两行上的字符串常数，执行下列任一操作：  
+ 若要中断位于源文件中的两个行的字符串常量，执行以下操作：  
   
--   以行继续符（反斜杠）结束第一行。  
+-   结束以行继续符，反斜杠的第一行。  
   
--   用一个双引号结束第一行上的字符串并在下一行用另一个双引号开始该字符串。  
+-   关闭与双引号匹配的第一行中的字符串，并使用另一个引号打开下一步的行中的字符串。  
   
- 用 \\n（将换行符嵌入字符串常数的换码序列）结束第一行是不够的。
+ 不满足需求，若要结束用 \n，字符串常量中嵌入换行字符的转义序列的第一行。

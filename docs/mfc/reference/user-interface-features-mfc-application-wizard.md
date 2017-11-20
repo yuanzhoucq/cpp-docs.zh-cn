@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.ui
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, user interface features
+f1_keywords: vc.appwiz.mfc.exe.ui
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 78bc0d034c7f4e3b5c34596ee83de1b68d8d9173
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 应用程序向导的用户界面功能
 本主题说明了可用于指定你的应用程序的外观的选项。 用户界面功能可用于你的项目取决于应用程序中指定的类型[应用程序类型、 MFC 应用程序向导](../../mfc/reference/application-type-mfc-application-wizard.md)MFC 应用程序向导页。 例如，如果你创建单文档界面应用程序，则无法添加子框架样式。  
@@ -71,5 +66,4 @@ ms.lasthandoff: 10/09/2017
   
 ## <a name="see-also"></a>另请参阅  
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)
-
 

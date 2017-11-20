@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,18 @@ f1_keywords:
 - ATLWIN/ATL::m_szAutoName
 - ATLWIN/ATL::m_wc
 - ATLWIN/ATL::pWndProc
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWndClassInfo class
+dev_langs: C++
+helpviewer_keywords: CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 071a6683a459c1b668cfa3eb5e866b461d82ab29
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 27e87210bc92554b960469336af591ec5ada485a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 类
 此类提供注册窗口类信息的方法。  
@@ -82,7 +64,7 @@ class CWndClassInfo
 |[pWndProc](#pwndproc)|指向现有窗口类的窗口过程。|  
   
 ## <a name="remarks"></a>备注  
- `CWndClassInfo`管理窗口类的信息。 通常使用`CWndClassInfo`通过三个宏之一`DECLARE_WND_CLASS`， `DECLARE_WND_CLASS_EX`，或`DECLARE_WND_SUPERCLASS`下, 表中所述︰  
+ `CWndClassInfo`管理窗口类的信息。 通常使用`CWndClassInfo`通过三个宏之一`DECLARE_WND_CLASS`， `DECLARE_WND_CLASS_EX`，或`DECLARE_WND_SUPERCLASS`下, 表中所述：  
   
 |宏|描述|  
 |-----------|-----------------|  
@@ -94,14 +76,14 @@ class CWndClassInfo
   
  如果你想要创建窗口基于现有窗口类，派生您的类从`CWindowImpl`和包括`DECLARE_WND_SUPERCLASS`在类定义的宏。 例如:   
   
- [!code-cpp[NVC_ATL_Windowing # 43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- 窗口类的详细信息，请参阅[窗口类](http://msdn.microsoft.com/library/windows/desktop/ms632596)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 窗口类的详细信息，请参阅[窗口类](http://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。  
   
  有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlwin.h  
+ **标头：** atlwin.h  
   
 ##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  包含已注册的窗口类的唯一标识符。  
@@ -162,7 +144,7 @@ WNDCLASSEX m_wc;
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果已指定[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (中的默认值[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)宏，`m_wc`包含有关新的窗口类信息。  
+ 如果已指定[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (中的默认值[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)宏，`m_wc`包含有关的信息新的窗口类。  
   
  如果已指定[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏，`m_wc`包含有关超类信息 — 的窗口类，基于现有类，但使用不同的窗口过程。 [m_lpszOrigName](#m_lpszorigname)和[pWndProc](#pwndproc)分别保存现有窗口类的名称和窗口过程。  
   

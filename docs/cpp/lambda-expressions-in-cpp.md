@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: eaf06a81979294b20f3b9b2f15cfcaab6be0008b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b7af430bd8c509713d5be76ea0f64601a91c35cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 表达式
 在 C + + 11 和更高版本，lambda 表达式-通常称为*lambda*— 是定义匿名函数对象的简便方法 (*闭包*) 坐在调用或作为参数传递位置的位置到函数。 Lambda 通常用于封装传递给算法或异步方法的少量代码行。 本文将提供 lambda 的定义、将它与其他编程技术做比较、介绍各自的优点并提供一个基本示例。  
@@ -141,7 +138,7 @@ pNums = make_unique<vector<int>>(nums);
  除了捕获变量，lambda 还可接受输入参数。 参数列表 (*lambda 声明符*标准语法中) 是可选的在大多数方面类似于函数的参数列表。  
   
 ```cpp  
-int y = [] (int first, int second)  
+auto y = [] (int first, int second)  
 {  
     return first + second;  
 };  

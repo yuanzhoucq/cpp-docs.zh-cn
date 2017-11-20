@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- AMP_GRAPHICS/Concurrency
-dev_langs:
-- C++
+f1_keywords: AMP_GRAPHICS/Concurrency
+dev_langs: C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空间
 图形命名空间提供的类型和用于图形编程的函数。  
@@ -53,11 +35,11 @@ namespace graphics;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Concurrency::graphics::direct3d 命名空间](concurrency-graphics-direct3d-namespace.md)|提供用于 Direct3D 互操作函数。|  
+|[Concurrency::graphics::direct3d 命名空间](concurrency-graphics-direct3d-namespace.md)|提供了用于 Direct3D 互操作的函数。|  
   
 ### <a name="typedefs"></a>Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |`uint`|元素类型[uint_2 类](uint-2-class.md)， [uint_3 类](uint-3-class.md)，和[uint_4 类](uint-4-class.md)。 定义为`typedef unsigned int uint;`。|  
   
@@ -70,32 +52,32 @@ namespace graphics;
   
 ### <a name="classes"></a>类  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[texture 类](texture-class.md)|纹理是在扩展盘区域中的 accelerator_view 上聚合的数据。 它是变量，一个用于扩展盘区域中的每个元素的集合。 每个变量包含的值对应于 c + + 基元类型 (unsigned 的 int、 int、 float、 double)，或在 concurrency:: graphics 中定义的标量类型 norm 或 unorm （在 concurrency:: graphics 中定义） 或合格的短矢量类型。|  
-|[writeonly_texture_view 类](writeonly-texture-view-class.md)|Writeonly_texture_view 提供对纹理 writeonly 访问。|  
-|[double_2 类](double-2-class.md)|表示 2 的短矢量`double`值。|  
-|[double_3 类](double-3-class.md)|表示 3 的短矢量`double`值。|  
-|[double_4 类](double-4-class.md)|表示 4 的短矢量`double`值。|  
-|[float_2 类](float-2-class.md)|表示 2 的短矢量`float`值。|  
-|[float_3 类](float-3-class.md)|表示 3 的短矢量`float`值。|  
-|[float_4 类](float-4-class.md)|表示 4 的短矢量`float`值。|  
-|[int_2 类](int-2-class.md)|表示 2 的短矢量`int`值。|  
-|[int_3 类](int-3-class.md)|表示 3 的短矢量`int`值。|  
-|[int_4 类](int-4-class.md)|表示 4 的短矢量`int`值。|  
-|[norm_2 类](norm-2-class.md)|表示 2 的短矢量`norm`值。|  
-|[norm_3 类](norm-3-class.md)|表示 3 的短矢量`norm`值。|  
-|[norm_4 类](norm-4-class.md)|表示 4 的短矢量`norm`值。|  
-|[uint_2 类](uint-2-class.md)|表示 2 的短矢量`uint`值。|  
-|[uint_3 类](uint-3-class.md)|表示 3 的短矢量`uint`值。|  
-|[uint_4 类](uint-4-class.md)|表示 4 的短矢量`uint`值。|  
-|[unorm_2 类](unorm-2-class.md)|表示 2 的短矢量`unorm`值。|  
-|[unorm_3 类](unorm-3-class.md)|表示 3 的短矢量`unorm`值。|  
-|[unorm_4 类](unorm-4-class.md)|表示 4 的短矢量`unorm`值。|  
+|[texture 类](texture-class.md)|纹理是一种数据聚合范围域中的 accelerator_view 上。 它是变量，一个用于扩展盘区域中的每个元素的集合。 每个变量持有值对应于 c + + 基元类型 (无符号的 int、 int、 float、 double)，或在 concurrency:: graphics 中定义的标量类型 norm 或 unorm （在 concurrency:: graphics 中定义） 或符合条件的短矢量类型。|  
+|[writeonly_texture_view 类](writeonly-texture-view-class.md)|Writeonly_texture_view 提供对纹理的 writeonly 访问。|  
+|[double_2 类](double-2-class.md)|表示 2 短矢量`double`值。|  
+|[double_3 类](double-3-class.md)|表示 3 短矢量`double`值。|  
+|[double_4 类](double-4-class.md)|表示 4 短矢量`double`值。|  
+|[float_2 类](float-2-class.md)|表示 2 短矢量`float`值。|  
+|[float_3 类](float-3-class.md)|表示 3 短矢量`float`值。|  
+|[float_4 类](float-4-class.md)|表示 4 短矢量`float`值。|  
+|[int_2 类](int-2-class.md)|表示 2 短矢量`int`值。|  
+|[int_3 类](int-3-class.md)|表示 3 短矢量`int`值。|  
+|[int_4 类](int-4-class.md)|表示 4 短矢量`int`值。|  
+|[norm_2 类](norm-2-class.md)|表示 2 短矢量`norm`值。|  
+|[norm_3 类](norm-3-class.md)|表示 3 短矢量`norm`值。|  
+|[norm_4 类](norm-4-class.md)|表示 4 短矢量`norm`值。|  
+|[uint_2 类](uint-2-class.md)|表示 2 短矢量`uint`值。|  
+|[uint_3 类](uint-3-class.md)|表示 3 短矢量`uint`值。|  
+|[uint_4 类](uint-4-class.md)|表示 4 短矢量`uint`值。|  
+|[unorm_2 类](unorm-2-class.md)|表示 2 短矢量`unorm`值。|  
+|[unorm_3 类](unorm-3-class.md)|表示 3 短矢量`unorm`值。|  
+|[unorm_4 类](unorm-4-class.md)|表示 4 短矢量`unorm`值。|  
 |[sampler 类](sampler-class.md)|表示用于纹理采样的采样器配置。|  
-|[short_vector 结构](short-vector-structure.md)|提供的值的短矢量的基本实现。|  
-|[short_vector_traits 结构](short-vector-traits-structure.md)|提供用于检索的长度和短矢量类型。|  
-|[texture_view 类](texture-view-class.md)|提供了读取访问权限和对纹理写访问权限。|  
+|[short_vector 结构](short-vector-structure.md)|提供短矢量的值的基本实现。|  
+|[short_vector_traits 结构](short-vector-traits-structure.md)|提供用于检索的长度和短矢量的类型。|  
+|[texture_view 类](texture-view-class.md)|提供为纹理的写访问权限和读取访问权限。|  
   
 ### <a name="functions"></a>函数  
   
@@ -105,10 +87,9 @@ namespace graphics;
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|已重载。 以异步方式将源纹理的内容复制到目标主机缓冲区。|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amp_graphics.h  
+ **标头：** amp_graphics.h  
   
  **命名空间：** 并发  
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

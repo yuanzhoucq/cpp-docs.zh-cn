@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- namespace_CPP
-dev_langs:
-- C++
+f1_keywords: namespace_CPP
+dev_langs: C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5c7098727052ec9ef19614d011ace5981b54ce15
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="namespaces-c"></a>命名空间 (C++)
 命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过使用每个标识符的完全限定的名称，例如访问成员`std::vector<std::string> vec;`，也可通过[using 声明](../cpp/using-declaration.md)单个标识符 (`using std::string`)，或[using 指令](../cpp/namespaces-cpp.md#using_directives)对命名空间中的所有标识符 (`using namespace std;`)。 头文件中的代码应始终使用完全限定的命名空间名称。  
@@ -281,4 +277,3 @@ namespace
   
 ## <a name="see-also"></a>另请参阅  
  [声明和定义](declarations-and-definitions-cpp.md)
-

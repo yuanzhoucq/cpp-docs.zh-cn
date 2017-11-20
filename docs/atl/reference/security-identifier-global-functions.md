@@ -4,46 +4,61 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::Sids::AccountOps
+- atlsecurity/ATL::Sids::Admins
+- atlsecurity/ATL::Sids::AnonymousLogon
+- atlsecurity/ATL::Sids::AuthenticatedUser
+- atlsecurity/ATL::Sids::BackupOps
+- atlsecurity/ATL::Sids::Batch
+- atlsecurity/ATL::Sids::CreatorGroup
+- atlsecurity/ATL::Sids::CreatorGroupServer
+- atlsecurity/ATL::Sids::CreatorOwner
+- atlsecurity/ATL::Sids::CreatorOwnerServer
+- atlsecurity/ATL::Sids::Dialup
+- atlsecurity/ATL::Sids::Guests
+- atlsecurity/ATL::Sids::Interactive
+- atlsecurity/ATL::Sids::Local
+- atlsecurity/ATL::Sids::Network
+- atlsecurity/ATL::Sids::NetworkService
+- atlsecurity/ATL::Sids::Null
+- atlsecurity/ATL::Sids::PowerUsers
+- atlsecurity/ATL::Sids::PrintOps
+- atlsecurity/ATL::Sids::Proxy
+- atlsecurity/ATL::Sids::RasServers
+- atlsecurity/ATL::Sids::Replicator
+- atlsecurity/ATL::Sids::RestrictedCode
+- atlsecurity/ATL::Sids::Self
+- atlsecurity/ATL::Sids::ServerLogon
+- atlsecurity/ATL::Sids::Service
+- atlsecurity/ATL::Sids::System
+- atlsecurity/ATL::Sids::SystemOps
+- atlsecurity/ATL::Sids::TerminalServer
+- atlsecurity/ATL::Sids::Users
+- atlsecurity/ATL::Sids::World
+dev_langs: C++
 helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9e51fe30b0519514df34f1a77b1e731f51047520
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0a8c0b901bf5be8bc89e9e77a0fa65d86bb29add
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="security-identifier-global-functions"></a>安全标识符全局函数
-这些函数返回的对象的常见众所周知的 SID。  
+这些函数返回常见的已知 SID 的对象。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能用于应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
   
 |||  
 |-|-|  
@@ -81,7 +96,7 @@ ms.lasthandoff: 02/24/2017
 |[Sids::World](#world)|返回 SECURITY_WORLD_RID SID。|  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="accountops"></a>Sids::AccountOps  
  返回 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID。    
@@ -181,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>备注  
- 使用 NetworkService 启用 NT AUTHORITY\NetworkService 用户读取 CPerfMon 安全对象。 NetworkService 将 SecurityAttribute 添加到 atl Server 代码，这将允许 DLL 以在 NetworkService 帐户下登录到[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]和更高版本的操作系统。  
+ 使用 NetworkService 启用 NT AUTHORITY\NetworkService 用户阅读 CPerfMon 安全对象。 NetworkService 向 atl Server 代码，这将允许使用 NetworkService 帐户登录到 DLL 中添加 SecurityAttribute[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]和更高版本的操作系统。  
   
- 与 Perfmon MMC 中的 atl Server CPerfMon 类创建自定义日志计数器，计数器可能不会显示时查看日志文件，但它们将在实时视图中正确显示。 CPerfMon 自定义性能计数器上没有必要的权限来运行"性能日志和警报"服务 (smlogsvc.exe) 下[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]（或更高版本） 的操作系统。 在"NT AUTHORITY\NetworkService"帐户下运行该服务。  
+ 使用 Perfmon MMC 中的 atl Server CPerfMon 类创建自定义日志计数器，计数器可能不会显示在查看日志文件，但它们将显示正确中的实时视图时。 CPerfMon 自定义性能计数器上没有足够的权限来运行在"性能日志和警报"服务 (smlogsvc.exe) 下[!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)]（或更高版本） 操作系统。 在"NT AUTHORITY\NetworkService"帐户下运行该服务。  
   
 ##  <a name="null"></a>Sids::Null  
  返回 SECURITY_NULL_RID SID。  
@@ -283,4 +298,3 @@ CSid World() throw(...);
   
 ## <a name="see-also"></a>另请参阅  
  [函数](../../atl/reference/atl-functions.md)
-

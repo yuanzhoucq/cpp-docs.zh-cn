@@ -1,50 +1,49 @@
 ---
-title: "/SAFESEH（图像具有安全异常处理程序） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/SAFESEH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SAFESEH 链接器选项"
-  - "-SAFESEH 链接器选项"
-  - "SAFESEH 链接器选项"
+title: "-SAFESEH （图像具有安全异常处理程序） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /SAFESEH
+dev_langs: C++
+helpviewer_keywords:
+- /SAFESEH linker option
+- -SAFESEH linker option
+- SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 430991838245e258a8f1b4bffe16a2f559019901
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /SAFESEH（图像具有安全异常处理程序）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH（图像具有安全异常处理程序）
 ```  
 /SAFESEH[:NO]  
 ```  
   
- 在指定 **\/SAFESEH** 后，只有在链接器还可以生成映像的安全异常处理程序表的情况下，该链接器才会生成一个映像。  此表为操作系统指定哪些异常处理程序对映像有效。  
+ 当**/SAFESEH**指定，是否它还可以生成的图像的安全异常处理程序表，链接器才将生成一个映像。 此表指定哪些异常处理程序是适合于该映像的操作系统。  
   
- 只有在对 x86 目标进行链接时，**\/SAFESEH** 才有效。  已注明异常处理程序的平台不支持 **\/SAFESEH**。  例如，在 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 上，所有异常处理程序都在 PDATA 中注明。  ML64.exe 支持添加批注，这些批注将 SEH 信息（XDATA 和 PDATA）发出到映像中，允许您通过 ml64 函数展开。  有关更多信息，请参见[MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
+ **/SAFESEH**针对 x86 链接时才有效目标。 **/SAFESEH**已记下的异常处理程序的平台不支持。 例如，在 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 上，所有异常处理程序都在 PDATA 中注明。 ML64.exe 到的映像，并可通过 ml64 函数展开具有用于添加批注发出 SEH 信息 （XDATA 和 PDATA） 支持。 请参阅[x64 (ml64.exe) 的 MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)有关详细信息。  
   
- 如果未指定 **\/SAFESEH**，链接器将生成具有安全异常处理程序表的映像（如果所有模块都与安全异常处理功能兼容）。  如果任意模块与安全异常处理功能不兼容，则最终的映像将不会包含安全异常处理程序表。  如果 [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 指定 WINDOWSCE 或某一 EFI\_\* 选项，则链接器将不尝试生成具有安全异常处理程序表的映像，因为上述任何子系统都不可以利用这些信息。  
+ 如果**/SAFESEH**未指定，则链接器将生成具有安全异常处理程序表的图像，如果所有模块都都与安全异常处理功能兼容。 如果任何模块不兼容与安全异常处理功能，则生成的映像将不包含安全异常处理程序表。 如果[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 或 EFI_ * 选项之一，指定链接器不会尝试生成具有安全异常处理程序表映像都不这些子系统可以进行信息的使用。  
   
- 如果指定了 **\/SAFESEH:NO**，则链接器将不会生成具有安全异常处理程序表的映像，即使所有模块都与安全异常处理程序功能兼容。  
+ 如果**/SAFESEH:NO**指定，则链接器将不会生成安全异常处理程序表的映像，即使所有模块都都与安全异常处理功能兼容。  
   
- 链接器无法生成映像的最常见的原因是：该链接器的一个或多个输入文件（模块）与安全异常处理程序功能不兼容。  模块与安全异常处理程序不兼容的一个常见原因是：该模块是通过来自以前版本的 Visual C\+\+ 的编译器创建的。  
+ 链接器不要无法生成映像的最常见原因是因为一个或多个到链接器输入文件 （模块） 未与安全异常处理程序功能兼容。 要与安全异常处理程序不兼容的模块的常见原因是因为它创建使用从以前版本的 Visual c + + 编译器。  
   
- 通过使用 [.SAFESEH](../../assembler/masm/dot-safeseh.md)，还可以将函数注册为结构化的异常处理程序。  
+ 你还可以将函数通过注册为结构化的异常处理程序[。SAFESEH](../../assembler/masm/dot-safeseh.md)。  
   
- 无法将现有的二进制文件标记为具有安全异常处理程序（或不具有异常处理程序）；必须在生成时添加关于安全异常处理的信息。  
+ 不能将标记的现有二进制为具有安全异常处理程序 （或没有异常处理程序）;必须在生成时添加安全异常处理的信息。  
   
- 链接器能否生成安全异常处理程序表取决于使用 C 运行库的应用程序。  如果使用 [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 进行链接，并希望得到一张安全异常处理程序表，则需要提供加载配置结构（例如可在 loadcfg.c CRT 源文件中找到的结构），此结构包含为 Visual C\+\+ 定义的所有项。  例如：  
+ 链接器的功能将生成安全异常处理程序表依赖于使用 C 运行库的应用程序。 如果与链接[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)并且想要安全异常处理程序表，则需要提供负载配置结构 （如，可以在 loadcfg.c CRT 源文件中找到），它包含为 Visual c + + 定义的所有项。 例如:   
   
 ```  
 #include <windows.h>  
@@ -105,20 +104,20 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 };  
 ```  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  选择 **Linker** 文件夹。  
+2.  选择**链接器**文件夹。  
   
-3.  选择**“命令行”**属性页。  
+3.  选择**命令行**属性页。  
   
-4.  将该选项键入**“附加选项”**框中。  
+4.  该选项输入**其他选项**框。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

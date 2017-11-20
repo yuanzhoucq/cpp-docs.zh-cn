@@ -1,41 +1,39 @@
 ---
-title: "list::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 成员 [STL/CLR]"
+title: "list:: difference_type (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 0044d53b-47d8-4c96-b996-b5492c0679c3
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33d647c4b4a09f5c8e226daefe7b56e4b81a34e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-两个元素之间带符号距离的类型。  
+# <a name="listdifferencetype-stlclr"></a>list::difference_type (STL/CLR)
+两个元素间的带符号距离的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 备注  
- 描述签名类型的元素数。  
+## <a name="remarks"></a>备注  
+ 该类型描述签名的元素计数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_difference_type.cpp   
@@ -70,14 +68,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::size\_type](../dotnet/list-size-type-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)

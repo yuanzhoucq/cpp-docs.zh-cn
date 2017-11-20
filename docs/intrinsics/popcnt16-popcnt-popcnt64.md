@@ -1,39 +1,39 @@
 ---
-title: "__popcnt16, __popcnt, __popcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__popcnt64"
-  - "__popcnt"
-  - "__popcnt16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "popcnt 指令"
-  - "__popcnt16"
-  - "__popcnt64"
-  - "__popcnt"
+title: "__popcnt16、 __popcnt、 __popcnt64 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __popcnt64
+- __popcnt
+- __popcnt16
+dev_langs: C++
+helpviewer_keywords:
+- popcnt instruction
+- __popcnt16
+- __popcnt64
+- __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2a73775316391fd90698f35a5d5f1fdd7e00ebe3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __popcnt16, __popcnt, __popcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 **Microsoft 专用**  
   
- 计数一个 \(种群统计\) 数。 16\-， 32\- 或 64 字节无符号整数。  
+ 对其中一个的数量进行计数 bits （填充计数） 在 16 位、 32 位或 64 位无符号的整数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned short __popcnt16(  
@@ -47,29 +47,29 @@ unsigned __int64 __popcnt64(
 );  
 ```  
   
-#### 参数  
- \[in\] `value`  
- 我们需要种群统计的 16\-， 32\- 或 64 位无符号整数。  
+#### <a name="parameters"></a>参数  
+ [in] `value`  
+ 16 位、 32 或 64 位无符号的整数，我们想要填充计数。  
   
-## 返回值  
- 一个位于 `value` 参数的位数。  
+## <a name="return-value"></a>返回值  
+ 中的一个比特数`value`参数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__popcnt16`|高级二进制处理|  
-|`__popcnt`|高级二进制处理|  
-|`__popcnt64`|高级二进制处理在 64 位模式下。|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__popcnt16`|高级的位操作|  
+|`__popcnt`|高级的位操作|  
+|`__popcnt64`|在 64 位模式下的高级的位操作。|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 这些内部每个生成`popcnt` 命令。  `popcnt` 命令返回值的大小与其参数的大小。  在 32 位模式下不 64 位通用寄存器，因此不能 64 位 `popcnt`。  
+## <a name="remarks"></a>备注  
+ 每个这些内部函数生成`popcnt`指令。  值的大小，`popcnt`指令返回其自变量的大小相同。  在 32 位模式下有任何 64 位通用寄存器，因此不是 64 位`popcnt`。  
   
- 若要确定硬件为 `popcnt`命令支持，调用与 `InfoType=0x00000001` 的 `__cpuid` 内部和校验位 23 `CPUInfo[2] (ECX)`。  此位否则为 1，则命令支持和 0。  如果运行使用在硬件的固有不支持 `popcnt` 命令的代码，结果是不可预知的。  
+ 若要确定的硬件支持`popcnt`指令，请调用`__cpuid`与内部函数`InfoType=0x00000001`和检查的位 23 `CPUInfo[2] (ECX)`。 此位为否则如果支持指令，则为 1 和 0。 如果你运行代码使用此内部函数不支持的硬件上`popcnt`指令，则结果不可预知。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 #include <iostream>   
@@ -96,15 +96,18 @@ int main()
   
 ```  
   
-  **\_\_popcnt16 \(0x0\) \= 0**  
- **\_\_popcnt16 \(0xff\) \= 8**  
- **\_\_popcnt16 \(0xffff\) \= 16**  
- **\_\_popcnt \(0x0\) \= 0**  
- **\_\_popcnt \(0xff\) \= 8**  
- **\_\_oopcnt \(0xffff\) \= 16**  
- **\_\_popcnt \(0xffffffff\) \= 32**   
-## 特定于 Microsoft 的结尾  
- copyright 2007 年 Advanced Micro 设备，公司着。  保留所有权利。  重现经 Advanced Micro 设备授予，公司。  
+```Output  
+__popcnt16(0x0) = 0  
+__popcnt16(0xff) = 8  
+__popcnt16(0xffff) = 16  
+__popcnt(0x0) = 0  
+__popcnt(0xff) = 8  
+__oopcnt(0xffff) = 16  
+__popcnt(0xffffffff) = 32  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+ 高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

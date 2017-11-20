@@ -1,105 +1,105 @@
 ---
-title: "BSCMAKE 选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCBscMakeTool.OutputFile"
-  - "VC.Project.VCBscMakeTool.SuppressStartupBanner"
-  - "VC.Project.VCBscMakeTool.PreserveSBR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/v BSCMAKE 选项"
-  - "Iu BSCMAKE 选项"
-  - "浏览信息文件 (.bsc), 内容"
-  - "/Er BSCMAKE 选项"
-  - "NOLOGO BSCMAKE 选项"
-  - "/s BSCMAKE 选项"
-  - "/Ei BSCMAKE 选项"
-  - "/o BSCMAKE 选项"
-  - "/NOLOGO BSCMAKE 选项"
-  - "/Iu BSCMAKE 选项"
-  - "s BSCMAKE 选项 (/s)"
-  - "/Em BSCMAKE 选项"
-  - "Em BSCMAKE 选项"
-  - "Es BSCMAKE 选项"
-  - "文件 [C++], BSCMAKE"
-  - "Er BSCMAKE 选项"
-  - "BSCMAKE, 用于控制文件的选项"
-  - "控制 BSCMAKE 选项"
-  - "El BSCMAKE 选项"
-  - "/El BSCMAKE 选项"
-  - "/Es BSCMAKE 选项"
-  - "Ei BSCMAKE 选项"
+title: "BSCMAKE 选项 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCBscMakeTool.OutputFile
+- VC.Project.VCBscMakeTool.SuppressStartupBanner
+- VC.Project.VCBscMakeTool.PreserveSBR
+dev_langs: C++
+helpviewer_keywords:
+- /v BSCMAKE option
+- Iu BSCMAKE option
+- browse information files (.bsc), content
+- /Er BSCMAKE option
+- NOLOGO BSCMAKE option
+- /s BSCMAKE option
+- /Ei BSCMAKE option
+- /o BSCMAKE option
+- /NOLOGO BSCMAKE option
+- /Iu BSCMAKE option
+- s BSCMAKE option (/s)
+- /Em BSCMAKE option
+- Em BSCMAKE option
+- Es BSCMAKE option
+- files [C++], BSCMAKE
+- Er BSCMAKE option
+- BSCMAKE, options for controlling files
+- controlling BSCMAKE options
+- El BSCMAKE option
+- /El BSCMAKE option
+- /Es BSCMAKE option
+- Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 972ac61ff4e838e1c1bf2ad10db50f3a3d595a5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE 选项
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本节描述可用于控制 BSCMAKE 的选项。  几个选项通过排除或包含某些信息来控制浏览信息文件的内容。  排除选项可以使 BSCMAKE 的运行速度更快，并且可能使 .bsc 文件更小。  选项名区分大小写（**\/HELP** 和 **\/NOLOGO**除外）  
+# <a name="bscmake-options"></a>BSCMAKE 选项
+本部分介绍可用于控制 BSCMAKE 选项。 多个选项控制通过排除或包括某些信息的浏览信息文件的内容。 排除选项可以允许 BSCMAKE 运行更快，并可能会导致较小的.bsc 文件。 选项名称不区分大小写 (除**/帮助**和**/NOLOGO**)。  
   
- 在 Visual Studio 开发环境中仅有**\/NOLOGO** 和 **\/o**可用。有关访问项目属性页的信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+ 仅**/NOLOGO**和**/o**可从 Visual Studio 开发环境中。  请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)有关的信息访问项目的属性页。  
   
- \/Ei \( `filename`...\)  
- 从浏览信息文件中排除指定包含文件的内容。  若要指定多个文件，请用空格分隔名称并将列表括在圆括号内。  如果仅指定一个 `filename`，则无需使用圆括号。  使用**\/Ei**和**\/Es**选项排除不排除**\/Es**。  
+ /Ei ( `filename`...)  
+ 从浏览信息文件排除指定的包含文件的内容。 若要指定多个文件，用空格分隔这些名称，并将列表括在括号中。 括号，则不需要如果只指定一个`filename`。 使用**/Ei**连同**/Es**选项以排除未排除的文件**/Es**。  
   
- \/El  
- 排除本地符号。  默认情况是包含本地符号。  有关本地符号的更多信息，请参见[创建 .sbr 文件](../../build/reference/creating-an-dot-sbr-file.md)。  
+ /El  
+ 排除本地符号。 默认值是包含本地符号。 有关本地符号的详细信息，请参阅[创建.sbr 文件](../../build/reference/creating-an-dot-sbr-file.md)。  
   
- \/Em  
- 排除宏体中的符号。  使用 **\/Em**只将宏名称包含到浏览信息文件中。  默认情况是既包括宏名称也包括宏展开的结果。  
+ /Em  
+ 排除宏的正文中的符号。 使用**/Em**以在浏览信息文件中包含宏的名称。 默认值是包括宏名称和宏展开的结果。  
   
- \/Er \(`symbol`...\)  
- 从浏览信息文件中排除指定符号。  若要指定多个符号名称，请用空格分隔名称并将列表括在圆括号内。  如果仅指定一个 `symbol`，则无需使用圆括号。  
+ /Er ( `symbol`...)  
+ 从浏览信息文件排除指定的符号。 若要指定多个符号名，请用空格分隔这些名称，并将列表括在括号中。 括号，则不需要如果只指定一个`symbol`。  
   
- \/Es  
- 从浏览信息文件中排除用绝对路径指定的每个包含文件，或在 INCLUDE 环境变量中指定的绝对路径里找到的每个包含文件。（通常，这些是系统包含文件，包含许多您在浏览信息文件中可能不需要的信息。）此选项不排除未用路径指定的文件、用相对路径指定的文件或在 INCLUDE 的相对路径中找到的文件。  可以将 **\/Ei** 选项与 **\/Es** 选项一起使用以排除 **\/Es** 不排除的文件。  如果只想排除 **\/Es** 排除的某些文件，则使用 **\/Ei** 选项而非 **\/Es** 选项，并列出要排除的文件。  
+ /Es  
+ 从浏览信息文件不包括每个包含文件使用绝对路径指定或在 INCLUDE 环境变量中指定的绝对路径中找到。 (通常，这是系统包括文件，其中包含大量你可能不需要在你浏览信息文件中的信息。)此选项不排除不含路径或相对路径或文件中包括的相对路径中找到与指定的文件。 你可以使用**/Ei**选项和**/Es**排除的文件**/Es**不排除。 如果你想要排除只有某些文件， **/Es**不包括，使用**/Ei**而不是**/Es**和列出你想要排除的文件。  
   
- \/errorreport:\[none &#124; prompt &#124; queue &#124; send\]  
- 允许您向 Microsoft 发送有关 bscmake.exe 中的内部错误的信息。  
+ /errorreport: [无 &#124; 提示符 &#124; 队列 &#124; 发送]  
+ 可以将信息发送给 Microsoft，有关 bscmake.exe 中的内部错误。  
   
- 有关 **\/errorreport** 的更多信息，请参见 [\/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。  
+ 有关详细信息**/errorreport**，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。  
   
- \/HELP  
+ /HELP  
  显示 BSCMAKE 命令行语法的摘要。  
   
- \/Iu  
- 包括未引用符号。  默认情况下，BSCMAKE 不记录已定义但未引用的任何符号。  如果某个 .sbr 文件已压缩，由于编译器已移除未引用符号，则此选项对该输入文件无效。  
+ /Iu  
+ 包括未引用的符号。 默认情况下，BSCMAKE 不会记录任何已定义，但未引用的符号。 如果已打包的.sbr 文件，此选项不起该输入文件因为编译器已移除未引用的符号。  
   
- \/n  
- 强制非增量编译。  使用 **\/n** 强制浏览信息文件的完全生成（不管 .bsc 文件是否存在）并防止 .sbr 文件被截断。  请参见 [BSCMAKE 生成 .bsc 文件的方式](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)。  
+ /n  
+ 强制非增量生成。 使用 **/n** 强制完全生成浏览信息文件.bsc 文件是否存在并防止.sbr 文件被截断。 请参阅[BSCMAKE 如何生成.bsc 文件](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)。  
   
- \/NOLOGO  
- 取消 BSCMAKE 版权信息。  
+ /NOLOGO  
+ 禁止 BSCMAKE 版权信息。  
   
- \/o `filename`  
- 指定浏览信息文件的名称。  默认情况下，BSCMAKE 给浏览信息文件提供第一个 .sbr 文件的基名称和一个 .bsc 扩展名。  
+ /o`filename`  
+ 指定的浏览信息文件的名称。 默认情况下，BSCMAKE 为浏览信息文件的第一个的.sbr 文件和.bsc 扩展名的基名称。  
   
- \/S \( `filename`...\)  
- 通知 BSCMAKE 在第一次遇到指定的包含文件时处理该文件，其他情况下排除此文件。  如果某个文件（如 .c 或 .cpp 源文件的头或 .h 文件）包括在几个源文件内但每次都不被预处理指令更改，则使用此选项以节省处理时间。  如果文件的更改方式对于正在创建的浏览信息文件并不重要，则可能也要使用此选项。  若要指定多个文件，请用空格分隔名称并将列表括在圆括号内。  如果仅指定一个 `filename`，则无需使用圆括号。  如果要在文件每次被包含时排除该文件，请使用 **\/Ei** 或 **\/Es** 选项。  
+ /S ( `filename`...)  
+ 告知 BSCMAKE 来处理指定的包含文件时遇到的第一个时间并否则排除。 使用此选项以节省处理时间 （如标头，或.h、.c 或.cpp 源文件） 的文件，包含在多个源文件但因预处理指令每次更改时。 你可能还想要使用此选项，如果文件更改对你创建的浏览信息文件并不重要的方式。 若要指定多个文件，用空格分隔这些名称，并将列表括在括号中。 括号，则不需要如果只指定一个`filename`。 如果你想要排除的文件，每次包含它是，请使用**/Ei**或**/Es**选项。  
   
- \/v  
- 提供详细输出，其中包括正在处理的每个 .sbr 文件的名称和有关完整 BSCMAKE 运行的信息。  
+ /v  
+ 提供详细输出，其中包括正在处理每个.sbr 文件的名称和完整 BSCMAKE 运行有关的信息。  
   
- \/?  
+ /?  
  显示 BSCMAKE 命令行语法的简短摘要。  
   
- 下列命令行通知 BSCMAKE 从三个 .sbr 文件执行 MAIN.bsc 的完全编译。  还通知 BSCMAKE 排除 TOOLBOX.h 的重复实例：  
+ 下面的命令行告知 BSCMAKE 如何 MAIN.bsc 完全生成从三个.sbr 文件。 它还指示 BSCMAKE 要排除的 TOOLBOX.h 重复实例：  
   
 ```  
 BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [BSCMAKE 参考](../../build/reference/bscmake-reference.md)

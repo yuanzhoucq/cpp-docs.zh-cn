@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrays-c"></a>数组 (C++)
 数组是类似对象的集合。 数组最简单的用例是矢量，可以按以下序列声明矢量：  
@@ -56,7 +53,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. 可选初始值设定项。  请参阅[初始值设定项](../cpp/initializers.md)。  
   
- 数组中的元素数目由常数表达式给定。 数组中的第一个元素是 0th 元素，和最后一个元素是 (*n*-1) 元素，其中* n *是数组可以包含的元素数。 *常量表达式*必须为整数类型，并且必须是大于 0。 仅当数组的最后一个字段时，零大小的数组才合法`struct`或**联合**并启用 Microsoft 扩展 (/Ze) 时。  
+ 数组中的元素数目由常数表达式给定。 数组中的第一个元素是 0th 元素，和最后一个元素是 (*n*-1) 元素，其中 *n* 是数组可以包含的元素数。 *常量表达式*必须为整数类型，并且必须是大于 0。 仅当数组的最后一个字段时，零大小的数组才合法`struct`或**联合**并启用 Microsoft 扩展 (/Ze) 时。  
   
  以下示例说明如何在运行时定义数组：  
   
@@ -91,7 +88,7 @@ int i2[5][7];
   
  它指定类型为 `int` 的数组，从概念上以五行七列的二维矩阵排列，如下图所示：  
   
- ![一个多 & #45 的概念布局; 的二维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![一个多 &#45;的概念布局; 的二维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
 多维数组的概念性布局  
   
  在声明的具有初始值设定项列表的多维数组中 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如:   

@@ -1,33 +1,31 @@
 ---
-title: "项目生成错误 PRJ0050 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0050"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0050"
+title: "项目生成错误 PRJ0050 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0050
+dev_langs: C++
+helpviewer_keywords: PRJ0050
 ms.assetid: ceef3b37-0acf-4abd-ac62-aa830b4fa145
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a712c370de6f5a3a8cc9d0fd96e7937deddd201e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 项目生成错误 PRJ0050
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-未能注册输出。请确保您具有修改注册表的适当权限。  
+# <a name="project-build-error-prj0050"></a>项目生成错误 PRJ0050
+未能注册输出。 请确保你具有适当的权限来修改注册表。  
   
- Visual C\+\+ 生成系统未能注册生成（dll 或 .exe）的输出。  您需要以管理员身份登录才能修改注册表。  
+ Visual c + + 生成系统无法注册 （dll 或.exe） 的生成输出。 你需要以管理员身份来修改注册表登录。  
   
- 如果生成的是 .dll，可以尝试使用 regsvr32.exe 手动注册 .dll，这样就应显示有关生成失败的原因的信息。  
+ 如果要生成.dll，你可以尝试注册手动使用 regsvr32.exe.dll，这应该会显示有关生成失败的原因的信息。  
   
- 如果生成的不是 .dll，请查看生成日志以找到引起错误的命令。
+ 如果你不生成.dll，查看引起错误的命令生成日志。

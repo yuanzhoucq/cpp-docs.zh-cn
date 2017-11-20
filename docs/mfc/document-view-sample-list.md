@@ -1,48 +1,49 @@
 ---
-title: "文档/视图示例列表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "文档视图示例列表 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a98e087a9155268997e913c2ecafc1bfd7020e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 文档/视图示例列表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="documentview-sample-list"></a>文档/视图示例列表
+请参阅以下演示有趣的方式使用 MFC 文档/视图体系结构的示例程序：  
+  
+ *文档/视图变体*  
+  
+-   [MDI](../visual-cpp-samples.md)  
+  
+-   [SCRIBBLE](../visual-cpp-samples.md)  
+  
+-   [VIEWEX](../visual-cpp-samples.md)  
+  
+ *对话框中接口替换文档/视图*  
+  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
+  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
+  
+ *使用 COleDocument 和其派生的类*  
+  
+-   [容器](../visual-cpp-samples.md)  
+  
+-   [HIERSVR](../visual-cpp-samples.md)  
+  
+-   [OCLIENT](../visual-cpp-samples.md)  
+  
+## <a name="see-also"></a>另请参阅  
+ [文档/视图体系结构](../mfc/document-view-architecture.md)
 
-参见使用 MFC 文档\/视图体系结构。有趣情况下，描述的示例程序：  
-  
- *文档\/视图变体*  
-  
--   [MDI](../top/visual-cpp-samples.md)  
-  
--   [SCRIBBLE](../top/visual-cpp-samples.md)  
-  
--   [VIEWEX](../top/visual-cpp-samples.md)  
-  
- *对话框接口替换文档\/视图*  
-  
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
-  
- *使用 COleDocument 及其派生类*  
-  
--   [CONTAINER](../top/visual-cpp-samples.md)  
-  
--   [HIERSVR](../top/visual-cpp-samples.md)  
-  
--   [OCLIENT](../top/visual-cpp-samples.md)  
-  
-## 请参阅  
- [文档\/视图体系结构](../mfc/document-view-architecture.md)

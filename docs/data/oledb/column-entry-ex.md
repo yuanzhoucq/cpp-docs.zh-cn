@@ -1,32 +1,30 @@
 ---
-title: "COLUMN_ENTRY_EX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_EX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_EX 宏"
+title: "COLUMN_ENTRY_EX |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_EX
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_EX macro
 ms.assetid: dfad1b67-51c3-4289-b89a-da42d7e8bb88
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 837bd4eccc0246de5fa719df0c79f5e71e790589
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# COLUMN_ENTRY_EX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-对行集合的绑定到数据库中的特定列。  
+# <a name="columnentryex"></a>COLUMN_ENTRY_EX
+表示行集上与数据库中的特定列的绑定。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -50,61 +48,61 @@ status
   
 ```  
   
-#### 参数  
- 参阅《*OLE DB 程序员参考》\) 中的*[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
+#### <a name="parameters"></a>参数  
+ 请参阅[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程序员参考*。  
   
  `nOrdinal`  
- \[in\] 列数。  
+ [in] 列号。  
   
  `wType`  
- \[in\] 数据类型。  
+ [in]数据类型。  
   
  `nLength`  
- \[in\] 数据大小 \(以字节为单位\)。  
+ [in]数据大小 （字节）。  
   
  `nPrecision`  
- \[in\] 用于获取数据和 `wType` 时的最大 `DBTYPE_NUMERIC`是精度。  或者，忽略此参数。  
+ [in]获取数据时要使用的最大精度和`wType`是`DBTYPE_NUMERIC`。 否则，将忽略此参数。  
   
  `nScale`  
- \[in\] 用于获取数据和 `wType` 使用的小数位数是 `DBTYPE_NUMERIC` 或 **DBTYPE\_DECIMAL**。  
+ [in]要获取数据时使用的比例和`wType`是`DBTYPE_NUMERIC`或**DBTYPE_DECIMAL**。  
   
  `data`  
- \[in\] 用户记录的相应数据成员。  
+ [in] 用户记录中的对应数据成员。  
   
  *length*  
- \[in\] 绑定的变量为列长度。  
+ [in] 要绑定到列长度的变量。  
   
  *status*  
- \[in\] 绑定的变量为列状态。  
+ [in] 要绑定到列变量的状态。  
   
-## 备注  
- `COLUMN_ENTRY_EX` 宏在以下位置：  
+## <a name="remarks"></a>备注  
+ `COLUMN_ENTRY_EX`在下列位置使用宏：  
   
--   在 [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)[END\_COLUMN\_MAP](../../data/oledb/end-column-map.md) 宏和之间。  
+-   之间[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏。  
   
--   在 [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)[END\_ACCESSOR](../../data/oledb/end-accessor.md) 宏和之间。  
+-   之间[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏。  
   
--   在 [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md)[END\_PARAM\_MAP](../../data/oledb/end-param-map.md) 宏和之间。  
+-   之间[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏。  
   
-## 示例  
- 参见 [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md)。  
+## <a name="example"></a>示例  
+ 请参阅[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
- [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
- [COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)   
- [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
- [COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)   
- [COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>另请参阅  
+ [宏和全局函数 OLE DB 使用者模板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)   
+ [COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
+ [COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)   
+ [COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

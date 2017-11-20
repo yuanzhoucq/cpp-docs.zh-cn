@@ -1,38 +1,39 @@
 ---
-title: "Creating an ATL DHTML Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls"
-  - "DHTML controls, 创建"
-  - "HTML 控件, 创建"
+title: "创建 ATL DHTML 控件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, creating
+- DHTML controls
+- DHTML controls, creating
 ms.assetid: 1d8f0ede-7d8b-4959-976e-b4d0e2a87f5a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7b0c9ad01bf8ffbfbd4c554aec3f3627c8be2fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Creating an ATL DHTML Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL控件向导自动创建DHTML控制。  它生成所需的资源文件，包含代码示例的HTML文件。  
+# <a name="creating-an-atl-dhtml-control"></a>创建 ATL DHTML 控件
+ATL 控件向导创建 DHTML 控件的过程进行自动化。 它会生成必需的资源文件，包括包含的示例代码的 HTML 文件。  
   
-#### 创建ATL DHTML控件  
+#### <a name="to-create-an-atl-dhtml-control"></a>若要创建 ATL DHTML 控件  
   
-1.  按照 [创建ATL项目](../atl/reference/creating-an-atl-project.md)的步骤。  
+1.  按照中的步骤[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)。  
   
-2.  在选件类视图中，右击项目节点，指向 **添加**，并单击快捷菜单上的 **Add Class**。  在 **Add Class** 对话框中，双击 [ATL控件向导](../atl/reference/atl-control-wizard.md)。  在ATL控件向导，请单击 **选项** 选项并选择 **DHTML control**。  
+2.  在类视图中，右键单击项目节点，指向**添加**，然后单击**添加类**从快捷菜单。 在**添加类**对话框中，双击[ATL 控件向导](../atl/reference/atl-control-wizard.md)。 ATL 控件向导，在单击**选项**选项卡并选择**DHTML 控件**。  
   
- 现在可以 [测试默认控件](../atl/testing-the-atl-dhtml-control.md)。  
+ 你现在可以[测试默认控件](../atl/testing-the-atl-dhtml-control.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
+

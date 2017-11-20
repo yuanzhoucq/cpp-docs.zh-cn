@@ -1,41 +1,39 @@
 ---
-title: "deque::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin 成员 [STL/CLR]"
+title: "deque:: begin (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: e99d20d2-bb33-415f-9bd6-fe331d8c2ba2
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4943971a82d1a87515a6e2ebc96963adeb49c6d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# deque::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequebegin-stlclr"></a>deque::begin (STL/CLR)
 指定受控序列的开头。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator begin();  
 ```  
   
-## 备注  
- 指定控件成员函数返回序列中的第一个元素的随机访问迭代器，或者除一个空序列的结尾。  用于获取一个迭代器，该迭代器指定受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回指定第一个元素的受控序列，或刚超出空序列末尾的随机访问迭代器。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改的受控的序列中，但其状态的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_begin.cpp   
@@ -70,17 +68,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \=。**  
-**\*\+\+begin\(\) \= b**  
- **x \- Y 的 c**   
-## 要求  
- **页眉：** \<cliext\/deque\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::end](../dotnet/deque-end-stl-clr.md)   
- [deque::front](../dotnet/deque-front-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md)   
+ [deque:: front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

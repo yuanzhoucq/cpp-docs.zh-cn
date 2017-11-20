@@ -1,50 +1,48 @@
 ---
-title: "模块定义语句的规则 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".def"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "模块定义文件"
-  - "模块定义文件, 语句语法"
+title: "模块定义语句的规则 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .def
+dev_langs: C++
+helpviewer_keywords:
+- module definition files, statement syntax
+- module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 50d382b8f6dbb8c6468bba3bcb2d5c65607de99d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 模块定义语句的规则
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列语法规则适用于 .def 文件中的所有语句。  其他适用于特定语句的规则与各语句一起加以说明。  
+# <a name="rules-for-module-definition-statements"></a>模块定义语句的规则
+下面的语法规则应用于.def 文件中的所有语句。 与每个语句描述了适用于特定语句其他规则。  
   
--   语句、特性关键字和用户指定的标识符区分大小写。  
+-   语句、 属性关键字和用户指定的标识符区分大小写。  
   
--   包含空格或分号 \(;\) 的长文件名必须用引号 \("\) 引起。  
+-   长文件名包含空格或分号 （;） 的名称必须用引号引起来 （"）。  
   
--   使用一个或多个空格、制表符或换行符，将语句关键字同其参数分开和将各语句分开。  指定参数的冒号 \(:\) 或等号 \(\=\) 两旁有零个或多个空格、制表符或换行符。  
+-   将语句关键字单独从其自变量，将从每个其他语句分隔使用一个或多个空格、 制表符或换行字符。 冒号 （:） 或括零或多个空格、 制表符或换行字符在等号 （=），它指定自变量。  
   
--   如果使用 **NAME** 或 **LIBRARY** 语句，则这些语句必须位于所有其他语句之前。  
+-   A**名称**或**库**语句，如果使用，必须所有其他语句之前。  
   
--   在 .def 文件中，**SECTIONS** 和 **EXPORTS** 语句可以出现多次。  每个语句都可以采用多个规范，各规范间必须用一个或多个空格、制表符或换行符分开。  语句关键字必须在第一个规范的前面出现一次，并且可以在每个附加规范的前面重复。  
+-   **部分**和**导出**语句可以多次出现在.def 文件。 每个语句都可以采用多个规范，后者必须按一个或多个空格、 制表符或换行符分隔。 语句关键字必须出现一次在第一种规范之前，并且可以在每个附加规范之前重复。  
   
--   许多语句都具有等效的 LINK 命令行选项。  有关其他详细信息，请参见相应的 LINK 选项说明。  
+-   很多语句具有等效的链接命令行选项。 请参阅有关其他详细信息的相应链接选项的说明。  
   
--   .def 文件中的注释由每个注释行开始处的分号 \(;\) 指定。  注释不能与语句共享一行，但可以在多行语句的规范间出现。（**SECTIONS** 和 **EXPORTS** 为多行语句。）  
+-   .Def 文件中的注释来指定分号 （;） 在每个注释行的开头。 注释不能使用一个语句，共享一条线路，但它可以出现在多行语句中的规范之间。 (**部分**和**导出**多行语句。)  
   
--   以十进制或十六进制为基础指定数值参数。  
+-   数值参数均为指定以 10 为基数或十六进制。  
   
--   如果字符串参数与[保留字](../../build/reference/reserved-words.md)匹配，则必须用双引号 \("\) 将字符串参数引起。  
+-   如果字符串自变量与匹配[保留字](../../build/reference/reserved-words.md)，它必须括在双引号 （"）。  
   
-## 请参阅  
- [模块定义 \(.Def\) 文件](../../build/reference/module-definition-dot-def-files.md)   
- [Frequently Asked Questions on Building](http://msdn.microsoft.com/zh-cn/56a3bb8f-0181-4989-bab4-a07ba950ab08)
+## <a name="see-also"></a>另请参阅  
+ [模块定义 (.Def) 文件](../../build/reference/module-definition-dot-def-files.md)  

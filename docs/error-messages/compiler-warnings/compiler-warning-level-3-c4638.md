@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4638
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4638
+f1_keywords: C4638
+dev_langs: C++
+helpviewer_keywords: C4638
 ms.assetid: 2c07923a-e103-4e40-bd11-fdfed428a5ec
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 62c908c7e39dfe985025df62823b464b566e9d68
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: f1be99cb087ce664030d116135a2b4fb43c72da9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-3-c4638"></a>编译器警告（等级 3）C4638
 XML 文档注释目标：引用未知符号“symbol”  

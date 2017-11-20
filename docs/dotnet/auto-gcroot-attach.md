@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.attach"
-  - "auto_gcroot::attach"
-  - "msclr::auto_gcroot::attach"
-  - "msclr.auto_gcroot.attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::attach"
+title: "auto_gcroot::attach |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.attach
+- auto_gcroot::attach
+- msclr::auto_gcroot::attach
+- msclr.auto_gcroot.attach
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::attach
 ms.assetid: 996ede65-bcb5-41f2-bfbf-507f8a578241
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 776d504af3f2b657629604323670fd59d0bb18c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-附加`auto_gcroot` 到对象。  
+# <a name="autogcrootattach"></a>auto_gcroot::attach
+附加`auto_gcroot`到的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 auto_gcroot<_element_type> & attach(  
@@ -44,17 +43,17 @@ auto_gcroot<_element_type> & attach(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_right`  
- 要附加到的对象或者包含要附加到的 `auto_gcroot` 对象。  
+ 要附加的对象或`auto_gcroot`包含要附加的对象。  
   
-## 返回值  
- 当前 `auto_gcroot`。  
+## <a name="return-value"></a>返回值  
+ 当前的 `auto_gcroot`。  
   
-## 备注  
- 如果 `_right` 是 `auto_gcroot`，它会释放其对象所属权，在对象附加到当前 `auto_gcroot`之前。  
+## <a name="remarks"></a>备注  
+ 如果`_right`是`auto_gcroot`，它会释放其对象的所有权之前的对象附加到当前`auto_gcroot`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_gcroot_attach.cpp  
@@ -103,25 +102,28 @@ int main() {
 }  
 ```  
   
-  **在 ClassA 构造函数：首先**  
-**从第一个A开始。**  
-**ClassA 构造函数：第二步**  
-**在 ClassA 析构函数：首先**  
-**Hello 从第二 A\!**  
-**在 ClassA constructor:third**  
-**在 ClassA 析构函数：秒**  
-**Hello 从第三个一！**  
-**在 ClassA constructor:fourth**  
-**Hello 从第四 B\!**  
-**在 ClassA destructor:third**  
-**Hello 从第四 B\!**  
-**在 ClassA destructor:fourth**   
-## 要求  
- **头文件** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+in ClassA constructor:second  
+in ClassA destructor:first  
+Hello from second A!  
+in ClassA constructor:third  
+in ClassA destructor:second  
+Hello from third A!  
+in ClassA constructor:fourth  
+Hello from fourth B!  
+in ClassA destructor:third  
+Hello from fourth A!  
+in ClassA destructor:fourth  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator\=](../dotnet/auto-gcroot-operator-assign.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::release](../dotnet/auto-gcroot-release.md)

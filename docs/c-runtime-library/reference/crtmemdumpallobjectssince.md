@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtMemDumpAllObjectsSince
+apiname: _CrtMemDumpAllObjectsSince
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtMemDumpAllObjectsSince
 - _CrtMemDumpAllObjectsSince
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtMemDumpAllObjectsSince function
 - CrtMemDumpAllObjectsSince function
 ms.assetid: c48a447a-e6bb-475c-9271-a3021182a0dc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 93904e03c38a74005682aabfc30c69b6f96b14c7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: fa818c63e779b51c9aa6c36204b5be2932d3b752
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 从程序开始执行或从指定的堆状态转储堆中对象的信息（仅限调试版本）。  

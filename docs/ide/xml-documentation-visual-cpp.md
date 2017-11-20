@@ -1,56 +1,55 @@
 ---
-title: "XML 文档 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用于 C++ 文档的 /// 分隔符"
-  - "注释, C++ 源代码文件"
-  - "XML 文档"
-  - "XML, 源代码中的文档注释"
+title: "XML 文档 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- XML documentation
+- XML, documentation comments in source code
+- comments, C++ source code files
+- /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fb5b9968ad652e5ab6ef4dd29eb3c6ccc6da7493
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# XML 文档 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 Visual C\+\+ 中，可以将注释添加到将处理到 .xml 文件的源代码。  此文件可以是输入到在代码中创建选件类的文档的处理。  
+# <a name="xml-documentation-visual-c"></a>XML 文档 (Visual C++)
+Visual c + +，你可以在你将处理到一个.xml 文件的源代码中添加注释。 然后，此文件可以是在你的代码中创建的类的文档的进程的输入。  
   
- 在 Visual C\+\+ 代码文件，XML 必须直接在方法或类型定义之前位于文档注释。  注释可以使用该在下列方案中的 Intellisense 以前的数据提示：  
+ 在 Visual c + + 代码文件中，必须直接在方法或类型定义之前位于 XML 文档注释。 可以使用注释来填充的 Intellisense 快速信息数据提示在以下方案：  
   
-1.  当代码编译为具有附带的 .winmd 文件的 windows 运行时组件  
+1.  使用随附的.winmd 文件时为 Windows 运行时组件编译代码  
   
-2.  当源代码在当前时包括项目  
+2.  当在当前项目中包括的源代码  
   
-3.  在类型声明和实现位于同一标头文件的库中  
+3.  在库中的类型声明和实现都位于相同的标头文件  
   
 > [!NOTE]
->  在当前版本中，代码注释中包含模板类型 \(例如，函数的模板或任何未处理采用参数作为模板\)。  添加这样的注释生成未定义的行为。  
+>  在当前版本中，代码注释不会处理在模板或含有 （例如，接受作为模板参数的函数） 的一种模板类型的所有内容。 添加此类的注释将导致未定义的行为。  
   
- 有关创建 .xml 文件的详细信息。文档注释，请参见下列主题。  
+ 有关创建带有文档注释的.xml 文件的详细信息，请参阅以下主题。  
   
-|有关以下内容的信息|请参见|  
-|---------------|---------|  
-|使用的编译器选项|[\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
-|可以使用提供在文档的常用功能的标记|[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
-|编译器生成标识代码构造的 ID 字符串|[处理 .xml 文件](../ide/dot-xml-file-processing.md)|  
-|如何将文档标记|[Visual C\+\+ 文档标记的分隔符](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|生成一个 .xml 文件从一个或多个 .xdc 文件。|[XDCMake 引用](../ide/xdcmake-reference.md)|  
-|信息的链接有关 XML，它与 Visual Studio 功能区相关|[在 Visual Studio 中的 XML](../Topic/XML%20Tools%20in%20Visual%20Studio.md)|  
+|有关信息|请参阅|  
+|---------------------------|---------|  
+|要使用的编译器选项|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|标记可用于提供通常使用文档中的功能|[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
+|编译器将产生以标识你的代码中的构造 ID 字符串|[处理的.xml 文件](../ide/dot-xml-file-processing.md)|  
+|如何分隔文档标记|[Visual C++ 文档标记的分隔符](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
+|从一个或多个.xdc 文件中生成一个.xml 文件。|[XDCMake 参考](../ide/xdcmake-reference.md)|  
+|有关 XML 作为它的信息的链接与 Visual Studio 的功能区域|[Visual Studio 中的 XML](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
   
- 如果需要将 XML 文档文本的特殊字符注释，必须将 XML 实体或 CDATA 节。  
+ 如果你需要在的文档注释的文本中放置 XML 特殊字符，必须使用 XML 实体或 CDATA 节。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

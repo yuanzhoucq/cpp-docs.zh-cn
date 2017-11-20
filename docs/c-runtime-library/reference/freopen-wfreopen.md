@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wfreopen
 - _tfreopen
 - freopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfreopen function
 - file pointers [C++], reassigning
@@ -38,30 +36,15 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 47b45dd9e2ad07032529652021172ea64b84d652
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: f25c4966b567d165be8f33a0c04f58ba0ac611b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="freopen-wfreopen"></a>freopen、_wfreopen
 重新分配文件指针。 提供这些函数的更安全版本；请参阅 [freopen_s、_wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md)。  
@@ -107,7 +90,7 @@ FILE *_wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tfreopen`|`freopen`|`freopen`|`_wfreopen`|  
   
- `freopen` 通常用于将预先打开的文件 `stdin`、`stdout` 和 `stderr` 重定向到用户指定的文件。 与关联的新文件`stream`使用打开`mode`，后者是一个字符串，指定，如下所示为该文件，请求的访问类型︰  
+ `freopen` 通常用于将预先打开的文件 `stdin`、`stdout` 和 `stderr` 重定向到用户指定的文件。 与关联的新文件`stream`使用打开`mode`，后者是一个字符串，指定，如下所示为该文件，请求的访问类型：  
   
  `"r"`  
  打开以便读取。 如果文件不存在或找不到，`freopen` 调用将失败。  
@@ -129,7 +112,7 @@ FILE *_wfreopen(
   
  使用 `"w"` 和 `"w+"` 类型时要小心，因为它们可能会破坏现有文件。  
   
- 使用 `"a"` 或 `"a+"` 访问类型打开文件时，所有写入操作均将在文件末尾进行。 虽然使用 `fseek` 或 `rewind` 可重新定位文件指针，但在执行任何写入操作前，文件指针将始终被移回文件末尾。 因此，无法覆盖现有数据。  
+ 使用 `"a"` 或 `"a+"` 访问类型打开文件时，所有写入操作均将在文件末尾进行。 虽然使用 `fseek` 或 `rewind` 可重新定位文件指针，但在执行任何写入操作前，文件指针将始终被移回文件末尾。因此，无法覆盖现有数据。  
   
  在 EOF 标记追加到文件之前，`"a"` 模式不会将其删除。 在追加后，MS-DOS TYPE 命令只显示原始 EOF 标记之前的数据，不显示追加到文件的任何数据。 在 EOF 标记追加到文件之前，`"a+"` 模式会将其删除。 在追加后，MS-DOS TYPE 命令显示文件中的所有数据。 需使用 `"a+"` 模式才能附加到通过 CTRL+Z EOF 标记终止的流文件。  
   

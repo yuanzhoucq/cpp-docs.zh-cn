@@ -1,50 +1,49 @@
 ---
-title: "/ALLOWISOLATION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ALLOWISOLATION"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALLOWISOLATION editbin 选项"
-  - "ALLOWISOLATION editbin 选项"
-  - "-ALLOWISOLATION editbin 选项"
+title: "-ALLOWISOLATION |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /ALLOWISOLATION
+dev_langs: C++
+helpviewer_keywords:
+- -ALLOWISOLATION editbin option
+- /ALLOWISOLATION editbin option
+- ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bb0a3973b140e452d3cb1198c5a98ca2caf61a1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /ALLOWISOLATION
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="allowisolation"></a>/ALLOWISOLATION
 指定清单查找的行为。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 /ALLOWISOLATION[:NO]  
 ```  
   
-## 备注  
- **\/ALLOWISOLATION** 将导致操作系统进行清单查找和加载。  
+## <a name="remarks"></a>备注  
+ **/ALLOWISOLATION**会导致操作系统进行清单查找和加载。  
   
- 默认为 **\/ALLOWISOLATION**。  
+ **/ALLOWISOLATION**是默认设置。  
   
- **\/ALLOWISOLATION:NO** 指示像没有清单一样加载可执行文件，并导致 [EDITBIN 参考](../../build/reference/editbin-reference.md) 在可选标头的 `DllCharacteristics` 字段中设置 `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` 位。  
+ **/ALLOWISOLATION:NO**该值指示像没有任何清单和原因加载可执行文件[EDITBIN 参考](../../build/reference/editbin-reference.md)设置`IMAGE_DLLCHARACTERISTICS_NO_ISOLATION`optional 标头中位`DllCharacteristics`字段。  
   
- 当对可执行文件禁用隔离时，Windows 加载程序不会尝试为新创建的进程查找应用程序清单。  新进程没有默认激活上下文，即使可执行文件本身中有清单或存在名为 *executable\-name*.exe.manifest 的清单。  
+ 当对可执行文件禁用隔离时，Windows 加载程序不会尝试为新创建的进程查找应用程序清单。 新的进程没有默认激活上下文，即使当在可执行文件本身中的清单，或者如果没有清单，其名称*可执行文件名称*。 exe.manifest。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)   
- [\/ALLOWISOLATION（清单查找）](../../build/reference/allowisolation-manifest-lookup.md)   
+ [/ALLOWISOLATION （清单查找）](../../build/reference/allowisolation-manifest-lookup.md)   
  [清单文件引用](http://msdn.microsoft.com/library/aa375632.aspx)

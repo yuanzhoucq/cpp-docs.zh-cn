@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _spawnle
 - wspawnle
 - _wspawnle
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - spawnle function
 - processes, creating
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4607528d5e7d5bdeb71c560f8f5890fe469a531e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 1db331aa1f424e96cc10f89a944abc1e4ac43d2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 创建并执行更新过程。  

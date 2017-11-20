@@ -1,32 +1,32 @@
 ---
-title: "如何：修改本机函数中的引用类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "平台调用, 引用类"
-  - "引用类型, 在 C++ 本机函数中修改"
+title: "如何： 修改本机函数中的引用类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke, reference class
+- reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 955de592b5e065164f16a4f78c9faaaffcdd3efb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：修改本机函数中的引用类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以使用 PInvoke 服务向本机函数传递具有 CLR 数组的引用类，并可修改该类。  
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改本机函数中的引用类
+你可以将具有 CLR 数组的引用类传递给本机函数中，并修改类，使用 PInvoke 服务。  
   
-## 示例  
- 编译下面的本机库。  
+## <a name="example"></a>示例  
+ 编译以下本机库。  
   
 ```  
 // modify_ref_class_in_native_function.cpp  
@@ -54,8 +54,8 @@ extern "C"  {
 };  
 ```  
   
-## 示例  
- 编译下面的程序集。  
+## <a name="example"></a>示例  
+ 编译以下程序集。  
   
 ```  
 // modify_ref_class_in_native_function_2.cpp  
@@ -89,8 +89,11 @@ int main() {
 }  
 ```  
   
-  **str: Hello**  
-**In native: intarr: 100, 200**  
-**In managed: intarr: 300, 400**   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+str: Hello  
+In native: intarr: 100, 200  
+In managed: intarr: 300, 400  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,31 +1,31 @@
 ---
-title: "重载运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "运算符重载, 在 CLR 类中"
-  - "运算符 [C++], 重载"
+title: "重载运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21d006aabc83af2021bb2b6d8bfa6a35588de12f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 重载运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，运算符重载发生了明显的更改。  
+# <a name="overloaded-operators"></a>重载运算符
+运算符重载已显著从更改托管扩展的 c + + 为 Visual c + +。  
   
- 例如，在引用类型的声明中，您可以显式写出运算符的基础内部名称（在这种情况下，为 `op_Addition`），而不使用本机 `operator+` 语法。  此外，必须通过该名称显式调用运算符的调用，这样会排除运算符重载的两个主要好处：\(a\) 语法直观和 \(b\) 具有将新的类型与现有类型混合的功能。  例如：  
+ 个示例中，而不是使用本机引用类型的声明中`operator+`语法中，你显式将写出的运算符的基础的内部名称在这种情况下， `op_Addition`。 此外，运算符的调用必须显式调用通过该名称时，这样会排除运算符重载的两个主要优点: （a） 的直观的语法，并将新的类型与现有类型的混合 （b） 的功能。 例如：  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +52,7 @@ int main()
 }  
 ```  
   
- 在新的语法中，在声明和静态运算符的使用中将还原本机 C\+\+ 程序员的常见期望值。  以下是转为使用新语法的 `Vector` 类：  
+ 在新语法中，还原的常用期望的本机 c + + 程序员，请同时中的声明和使用静态运算符。 下面是`Vector`类转换为新的语法：  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +79,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [类或接口中的成员声明 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

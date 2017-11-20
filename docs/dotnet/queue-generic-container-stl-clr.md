@@ -1,42 +1,40 @@
 ---
-title: "queue::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container 成员 [STL/CLR]"
+title: "queue::generic_container (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 58e07f5e-a854-48fa-b505-9bb82c1cac69
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c87ca4fdf95134e0857dac327d9663c68e014453
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# queue::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-泛型接口的容器适配器类型。  
+# <a name="queuegenericcontainer-stlclr"></a>queue::generic_container (STL/CLR)
+容器适配器泛型接口的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
-## 备注  
- 类型表明了此模块容器适配器类的泛型接口。  
+## <a name="remarks"></a>备注  
+ 该类型描述此模板容器适配器类的泛型接口。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_queue_generic_container.cpp   
@@ -78,14 +76,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## 要求  
- **标头:** \<cliext\/queue\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [queue](../dotnet/queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [queue (STL/CLR)](../dotnet/queue-stl-clr.md)

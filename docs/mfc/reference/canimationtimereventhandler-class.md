@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], CreateInstance
 - CAnimationTimerEventHandler [MFC], OnPostUpdate
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 35e59a74be574913b6605bd9bce0934280bbb542
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: dc2dd4ddc96ab589d88b34d3d31fb131ab49fbc2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 类
 实现回调，它在计时事件发生时由动画 API 调用。  
@@ -134,4 +131,3 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

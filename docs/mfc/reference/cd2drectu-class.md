@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,20 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DRectU
 - AFXRENDERTARGET/CD2DRectU::CD2DRectU
 - AFXRENDERTARGET/CD2DRectU::IsNull
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: c426332dcbb0313c1ca9befcd652f87e342e48fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 50347c96bf4e2d75be0528bcc5860d1677e6c6f7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 类
 `D2D1_RECT_U`的包装器。  
@@ -121,4 +118,3 @@ operator CRect();
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

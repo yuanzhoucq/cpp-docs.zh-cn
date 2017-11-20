@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DMesh::IsValid
 - AFXRENDERTARGET/CD2DMesh::Open
 - AFXRENDERTARGET/CD2DMesh::m_pMesh
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DMesh [MFC], CD2DMesh
 - CD2DMesh [MFC], Attach
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 0b639bf69a58c132dab604b26a100d4c92d87086
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 689d8f5a98b7dc8daf225b611a5718a22d20b67c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 类
 ID2D1Mesh 包装器。  
@@ -210,4 +207,3 @@ operator ID2D1Mesh*();
   
 ## <a name="see-also"></a>另请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

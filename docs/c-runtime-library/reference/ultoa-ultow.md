@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -42,30 +40,15 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 824e40d4c5879251fc029ad940b5fd6038fe4544
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 05a79538edf1e39b26ad38f365b5fc52bb713f61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ultoa-ultow"></a>_ultoa、_ultow
 将无符号长整数转换为字符串。 提供这些函数的更多安全版本；请参阅 [_ultoa_s、_ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)。  
@@ -116,7 +99,7 @@ wchar_t *_ultow(
 > [!IMPORTANT]
 >  若要防止缓冲区溢出，请确保 `str` 缓冲区的大小足以承载转换的位数及尾随的 Null 字符。  
   
- 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   

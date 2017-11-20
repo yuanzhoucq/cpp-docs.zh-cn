@@ -1,31 +1,29 @@
 ---
-title: "2.6.1 master Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.6.1 master 构造 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c092064b-ea57-4d4e-9c99-a004d65656fe
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bff566967749068f9792a98dc3cf2151e4df3d9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.1 master Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**母版** 指令标识指定构造块该团队的主线程执行的构造。  **母版** 指令的语法如下所示:  
+# <a name="261-master-construct"></a>2.6.1 master 构造
+**Master**指令标识一个构造，用于指定由主线程的团队执行的结构化的块。 语法**master**指令是，如下所示：  
   
 ```  
-#pragma omp master new-line  
-   structured-block  
+#pragma omp master new-linestructured-block  
 ```  
   
- 在团队中的其他线程不执行关联的构造块。  没有提示的关卡在项到或从主构造退出。
+ 团队中的其他线程不会执行关联的结构化的块。 在进入或退出 master 构造上的没有隐含的屏障。

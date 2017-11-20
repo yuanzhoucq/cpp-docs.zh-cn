@@ -1,48 +1,46 @@
 ---
-title: "hash_multimap::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value 成员 [STL/CLR]"
+title: "hash_multimap::make_value (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 300fb6ec-98c8-48d5-8626-0646878a8462
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53fee6b9e1f77e7892e19a11976de4d4cb039aaf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-构造一个值对象。  
+# <a name="hashmultimapmakevalue-stlclr"></a>hash_multimap::make_value (STL/CLR)
+构造值对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### 参数  
- 键  
- 可以使用的键值。  
+#### <a name="parameters"></a>参数  
+ 密钥  
+ 要使用的密钥值。  
   
- 已映射  
- 要搜索的映射值。  
+ 映射  
+ 要搜索的映射的值。  
   
-## 备注  
- 成员函数返回键值是 `key`，映射值为 `mapped`的 `value_type` 对象。  使用它创建一个适合其他成员函数使用的对象。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回`value_type`对象，其键是`key`并且其映射的值为`mapped`。 你可以使用它来编写适用于多个其他成员函数的对象。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_type](../dotnet/hash-multimap-key-type-stl-clr.md)   
- [hash\_multimap::mapped\_type](../dotnet/hash-multimap-mapped-type-stl-clr.md)   
- [hash\_multimap::value\_type](../dotnet/hash-multimap-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)   
+ [hash_multimap:: mapped_type (STL/CLR)](../dotnet/hash-multimap-mapped-type-stl-clr.md)   
+ [hash_multimap::value_type (STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

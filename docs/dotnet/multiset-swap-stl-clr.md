@@ -1,45 +1,43 @@
 ---
-title: "multiset::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成员 [STL/CLR]"
+title: "multiset:: swap (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 8a3023c7-e58b-4ffe-8fd5-2e0bf02cc291
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b520cb617b4a8fed151d0c2f473cce75c7594178
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetswap-stlclr"></a>multiset::swap (STL/CLR)
 交换两个容器的内容。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void swap(multiset<Key>% right);  
 ```  
   
-#### 参数  
- right  
+#### <a name="parameters"></a>参数  
+ 右  
  要与其交换内容的容器。  
   
-## 备注  
- 成员函数将交换了 `this` 和 `right`之间的控制序列。  在常数的时间来实现，且不引发异常。  将它用作一种快速交换两个内容容器。  
+## <a name="remarks"></a>备注  
+ 成员函数交换 `this` 和 `right`之间的受控序列。 它会以在常量时间内，则会引发任何异常。 你将它用作交换两个容器的内容的快速方法。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multiset_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **d e f**  
- **d e f**  
- **a b c**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::operator\=](../dotnet/multiset-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)

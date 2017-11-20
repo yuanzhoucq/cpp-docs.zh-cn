@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2440
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2440
+f1_keywords: C2440
+dev_langs: C++
+helpviewer_keywords: C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 23d6666e2b8e61a8761454729f4f7444a9800cbe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 conversion： 无法从 type1 转换为 type2  
@@ -298,4 +293,3 @@ int i = (const S)0; // error C2440
 ```
 
 若要更正此错误，将运算符 int() 声明为 const。
-

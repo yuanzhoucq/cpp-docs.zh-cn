@@ -1,46 +1,46 @@
 ---
-title: "设置链接器选项 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件 [C++], LINK"
-  - "输入文件 [C++]"
-  - "输入文件 [C++], 链接器"
-  - "链接器 [C++], 开关"
-  - "链接器 [C++], 设置选项的方法"
-  - "对象/库模块"
+title: "设置链接器选项 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- input files [C++], linker
+- linker [C++], ways to set options
+- linker [C++], switches
+- input files [C++]
+- object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b64b1dfd342598735124940d01b1bb4939242e10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 设置链接器选项
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可在开发环境内部或外部设置链接器选项。  每个链接器选项的主题讨论如何在开发环境中设置该选项。  有关完整的列表，请参见[链接器选项](../../build/reference/linker-options.md)。  
+# <a name="setting-linker-options"></a>设置链接器选项
+内部或外部开发环境，可以设置链接器选项。 每个链接器选项的主题讨论如何可以在开发环境中设置它。 请参阅[链接器选项](../../build/reference/linker-options.md)有关的完整列表。  
   
- 当您在开发环境外部运行 LINK 时，可以用一种或多种方法指定输入：  
+ 在开发环境外部运行链接时，你可以指定一个或多个方面输入：  
   
--   在[命令行](../../build/reference/linker-command-line-syntax.md)上  
+-   上[命令行](../../build/reference/linker-command-line-syntax.md)  
   
 -   使用[命令文件](../../build/reference/link-command-files.md)  
   
--   在[环境变量](../../build/reference/link-environment-variables.md)中  
+-   在[环境变量](../../build/reference/link-environment-variables.md)  
   
- LINK 首先处理在 LINK 环境变量中指定的选项，然后按照选项在命令行上和命令文件中的指定顺序处理这些选项。  如果某个选项带有多个不同的参数，则要优先处理最后一个参数。  
+ 链接第一个处理指定的选项在链接环境变量中，然后按照在命令行指定它们的顺序和命令文件中的选项。 如果一个选项重复使用不同的自变量，处理的最后一个优先。  
   
- 选项将应用于整个生成；任何选项都不能应用于某个特定输入文件。  
+ 选项将应用于整个生成;无选项可以应用于特定的输入文件中。  
   
-## 请参阅  
- [C\/C\+\+ 生成参考](../../build/reference/c-cpp-building-reference.md)   
+## <a name="see-also"></a>另请参阅  
+ [C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
  [链接器选项](../../build/reference/linker-options.md)

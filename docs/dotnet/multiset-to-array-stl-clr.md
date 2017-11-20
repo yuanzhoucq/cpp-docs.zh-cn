@@ -1,41 +1,39 @@
 ---
-title: "multiset::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成员 [STL/CLR]"
+title: "multiset::to_array (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 3ca4482d-2584-4a93-89b9-33ea29692de2
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb405955e20859529380198a02210fc443c624b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制控制序列到新数组。  
+# <a name="multisettoarray-stlclr"></a>multiset::to_array (STL/CLR)
+受控的序列复制到新数组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 备注  
- 成员函数返回包含一控制序列的数组。  使用它获得数组窗体中的一个控制序列副本。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回包含受控的序列的数组。 用于获取受控序列中数组形式的副本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multiset_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+a b c d  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [multiset](../dotnet/multiset-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)

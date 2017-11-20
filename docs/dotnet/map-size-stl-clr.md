@@ -1,41 +1,39 @@
 ---
-title: "map::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 成员 [STL/CLR]"
+title: "map:: size (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: e28e5ab6-9d3f-4aab-8bb4-c90520776239
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8829d8a59de8fd6586ba52a943d51959a5f3f030
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# map::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-计算元素的数量。  
+# <a name="mapsize-stlclr"></a>map::size (STL/CLR)
+对元素数进行计数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_type size();  
 ```  
   
-## 备注  
- 成员函数返回控制序列的长度。  使用其当前确定元素的数目。控制序列。  如果您关注的是序列是否具有非零大小，请参见 [map::empty](../dotnet/map-empty-stl-clr.md)`()`。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回受控序列的长度。 用于确定当前受控序列中的元素的数目。 如果你关注的只是序列是否具有非零大小，请参阅[map:: empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_map_size.cpp   
@@ -68,14 +66,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0。之后清除**  
-**size\(\) \= 2 在" 2 "之后**   
-## 要求  
- **页眉：** \<\/cliext 映射\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [map](../dotnet/map-stl-clr.md)   
- [map::empty](../dotnet/map-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)

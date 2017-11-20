@@ -1,44 +1,42 @@
 ---
-title: "项目生成错误 PRJ0006 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0006"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0006"
+title: "项目生成错误 PRJ0006 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0006
+dev_langs: C++
+helpviewer_keywords: PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ef1dff813c709a117d92abcdd7a2d4f9d3420c65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 项目生成错误 PRJ0006
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-未能打开临时文件“file”。请确保该文件存在并且目录未被写保护。  
+# <a name="project-build-error-prj0006"></a>项目生成错误 PRJ0006
+无法打开临时文件 file。 请确保文件存在，而且，目录未写入-受保护。  
   
- Visual C\+\+ 在生成过程中未能创建临时文件。  原因包括：  
+ Visual c + + 无法在生成过程中创建临时文件。 其中的原因包括：  
   
 -   没有临时目录。  
   
--   临时目录是只读的。  
+-   只读的临时目录。  
   
 -   磁盘空间不足。  
   
--   $\(IntDir\) 文件夹是只读的或者包含只读的临时文件。  
+-   $ （intdir） 文件夹是只读的或包含临时文件的是只读的。  
   
- 该错误还将在错误 PRJ0007（未能创建输出目录“directory”）后发生。  错误 PRJ0007 意味着未能创建 $\(IntDir\) 目录，暗指临时文件的创建也将失败。  
+ 此错误也会出现以下错误 PRJ0007： 无法创建输出目录目录。 错误 PRJ0007 意味着无法创建的 $ （intdir） 目录，并暗示临时文件的创建也将失败。  
   
- 每当指定以下各项时都会创建临时文件：  
+ 只要你指定就会创建临时文件：  
   
 -   响应文件。  
   

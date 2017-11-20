@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -58,19 +57,17 @@ helpviewer_keywords:
 - C2288
 - C2291
 - C2294
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9b36d11b-9510-4390-96f1-0c9235124d14
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 07d87f9828bac1a025f9ac2375c79f29d96a89b4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>编译器错误 C2200 到 C2299
 文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
@@ -182,4 +179,3 @@ ms.lasthandoff: 10/09/2017
 |[编译器错误 C2297](compiler-error-c2297.md)|*运算符*： 非法、 右操作数具有类型*类型*|  
 |[编译器错误 C2298](compiler-error-c2298.md)|缺少绑定到成员函数的指针的调用|  
 |[编译器错误 C2299](compiler-error-c2299.md)|*函数*： 行为更改： 显式专用化不能是复制构造函数或复制赋值运算符|  
-

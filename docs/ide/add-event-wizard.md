@@ -1,64 +1,62 @@
 ---
-title: "添加事件向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.event.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "添加事件向导 [C++]"
+title: "添加事件向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.event.overview
+dev_langs: C++
+helpviewer_keywords: Add Event Wizard [C++]
 ms.assetid: bdd2a7bb-13d5-44d7-abc9-e785ba4e05ce
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02df801788d17f9ab00adc5c527db155d7db88f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 添加事件向导
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-该向导将事件添加到 MFC ActiveX 控件项目。  可以指定自己的事件，可以自定义典型的常用事件，也可以从常用事件列表中选择。  
+# <a name="add-event-wizard"></a>添加事件向导
+此向导将事件添加到 MFC ActiveX 控件项目。 你可以指定自己的事件，你可以自定义的通常常用事件，或可以从常用事件的列表中选择。  
   
  **事件名称**  
- 设置自动化客户端用来从类请求事件的名称。  输入名称或从列表中选择名称。  
+ 设置自动化客户端用于从类请求事件的名称。 输入的名称或从列表中选择一个。  
   
  **事件类型**  
- 指示要添加的事件类型。  仅当从“事件名称”列表中选择时可用。  
+ 指示要添加事件的类型。 仅当选择从可用**事件名称**列表。  
   
-|选项|说明|  
-|--------|--------|  
-|**常用**|指定将为该类实现的常用事件，如单击按钮。  常用事件在 Microsoft 基础类 \(MFC\) 库中定义。|  
-|**自定义**|指定提供自己的事件实现。|  
+|选项|描述|  
+|------------|-----------------|  
+|**常用**|指定将此类实现的常用事件，例如单击按钮;。 常用事件是在 Microsoft 基础类 (MFC) 库中定义的。|  
+|**自定义**|指定你要提供您自己的事件的实现。|  
   
  **内部名称**  
- 设置发送事件的成员函数名。  仅对自定义事件可用。  该名称基于“事件名称”。  如果要提供不同于“事件名称”的名称，可以更改内部名称。  
+ 设置成员函数将事件发送的文件的名称。 仅适用于自定义事件。 名称基于**事件名称**。 如果你想要提供一个名称不同，你可以更改该内部名称**事件名称**。  
   
  **参数类型**  
- 设置“参数名”的类型。  从列表中选择类型。  
+ 设置的类型**参数名称**。 从列表中选择类型。  
   
- **参数名**  
- 设置通过事件传递的参数的名称。  键入名称后，必须单击“添加”将其添加到参数列表中。  
+ **参数名称**  
+ 设置用于通过事件传递的参数的名称。 键入名称后，你必须单击**添加**以将其添加参数的列表。  
   
- 单击“添加”后，参数名出现在**“参数列表”**中。  
+ 单击后**添加**，参数名称将显示在**参数列表**。  
   
 > [!NOTE]
->  如果提供参数名并在单击“添加”前单击“完成”，则不会将此参数添加到事件中。  必须查找该方法并手动插入参数。**参数列表**  
+>  如果你提供参数名称，然后单击**完成**在单击之前**添加**，则不会将参数添加到事件。 你必须找到方法，并手动将参数插入。 **参数列表**  
   
  **添加**  
- 将“参数名”中指定的参数及其类型添加到**“参数列表”**中。  必须单击“添加”才能将参数添加到列表中。  
+ 添加你在中指定的参数**参数名称**，及其类型到**参数列表**。 你必须单击**添加**将参数添加到列表。  
   
  **移除**  
- 从列表中移除在**“参数列表”**中选择的参数。  
+ 中移除在中选择的参数**参数列表**从列表中。  
   
  **参数列表**  
- 显示当前为方法添加的所有参数及其类型。  向导在您添加参数的同时更新**“参数列表”**以显示每个参数及其类型。  
+ 显示所有参数和参数类型当前为该方法添加的。 添加参数时，向导将更新**参数列表**以显示其类型的每个参数。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [添加事件](../ide/adding-an-event-visual-cpp.md)

@@ -1,57 +1,55 @@
 ---
-title: "__writeeflags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writeeflags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__writeeflags 内部函数"
+title: "__writeeflags |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writeeflags
+dev_langs: C++
+helpviewer_keywords: __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1b87ffaacbbfee167c779f25ae83090b7b8e3397
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __writeeflags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-写入程序状态和控件 \(EFLAGS\) 注册的指定值。  
+# <a name="writeeflags"></a>__writeeflags
+指定的值写入程序状态和控制 (EFLAGS) 注册。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __writeeflags(unsigned Value);  
 void __writeeflags(unsigned __int64 Value);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
   
-|Parameter|说明|  
-|---------------|--------|  
-|\[in\] `Value`|写入的值设置为 EFLAGS 注册。  `Value` 参数时间长度为 32 位 32 位平台上为 64 位和 64 位平台上。|  
+|参数|说明|  
+|---------------|-----------------|  
+|[in] `Value`|要写入的 EFLAGS 寄存器的值。 `Value`参数为 32 位长的 32 位平台和 64 位长为 64 位平台。|  
   
-## 备注  
- 这些实例仅可用作内部。  
+## <a name="remarks"></a>备注  
+ 这些例程只能用作内部函数不可用。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__writeeflags`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__writeeflags`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 关闭 Microsoft 特定  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_readeflags](../intrinsics/readeflags.md)
+ [__readeflags](../intrinsics/readeflags.md)
