@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O [CRT], low-level
 - I/O [CRT], functions
@@ -19,30 +16,15 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 36128b5f262ef84986c2a4e0db1b7eeceee14ec3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: c22164fdc2bd8236b6f4819609175c80bd472abf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="low-level-io"></a>低级别 I/O
 这些函数将为低于流 I/O 提供的操作的低级别操作直接调用操作系统。 低级别输入和输出调用不会缓冲数据或设置数据格式。  
@@ -55,7 +37,7 @@ ms.lasthandoff: 05/18/2017
 |`stdout`|1|  
 |`stderr`|2|  
   
- 发生错误时，低级别 I/O 例程将设置 errno[](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全局变量。 只有在程序需要 STDIO.H 中定义的常量（例如文件尾指示符 (`EOF`)）时，在使用低级别函数时必须将 STDIO.H 包含在内。  
+ 发生错误时，低级别 I/O 例程将设置 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全局变量。 只有在程序需要 STDIO.H 中定义的常量（例如文件尾指示符 (`EOF`)）时，在使用低级别函数时必须将 STDIO.H 包含在内。  
   
 ### <a name="low-level-io-functions"></a>低级别 I/O 函数  
   

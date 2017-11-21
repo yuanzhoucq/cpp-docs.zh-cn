@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - EAGAIN
 - EEXIST
 - ECHILD
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ENOEXEC constant
 - EBADF constant
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: fdfb4477b4de30221a0e89db02cd45178b70db0a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="errno-constants"></a>errno 常量
 ## <a name="syntax"></a>语法  
@@ -74,7 +71,7 @@ ms.lasthandoff: 10/09/2017
   
  ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供定义都可用于 32 位 Windows 操作系统。 ERRNO.H 中的某些值的存在是为了保持与 UNIX 系列操作系统的兼容性。  
   
- 32 位 Windows 操作系统中的 errno 值是 XENIX 系统中的 errno 值的子集。 因此，errno 值不一定与由从 Windows 操作系统进行的系统调用返回的实际错误代码相同。 若要访问实际操作系统错误代码，请使用包含此值的 _doserrno[](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 变量。  
+ 32 位 Windows 操作系统中的 errno 值是 XENIX 系统中的 errno 值的子集。 因此，errno 值不一定与由从 Windows 操作系统进行的系统调用返回的实际错误代码相同。 若要访问实际操作系统错误代码，请使用包含此值的 [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 变量。  
   
  下列 errno 值受支持：  
   

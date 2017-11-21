@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - S_IREAD
 - _S_IFCHR
 - _S_IFREG
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - S_IFDIR constant
 - stat structure
@@ -44,30 +42,15 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: ebac26fce8a1717cd6d964e8cec6a5ce7e3c2d8f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: eb6277eea45aec64c285c3e2780d65be0224ce11
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 结构 st_mode 字段常量
 ## <a name="syntax"></a>语法  
@@ -79,7 +62,7 @@ ms.lasthandoff: 05/18/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- 这些常量用于指示 _stat 结构[](../c-runtime-library/standard-types.md)的 st_mode 字段中的文件类型。  
+ 这些常量用于指示 [_stat 结构](../c-runtime-library/standard-types.md)的 **st_mode** 字段中的文件类型。  
   
  下面描述了位掩码常量：  
   
