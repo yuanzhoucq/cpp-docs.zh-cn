@@ -1,32 +1,30 @@
 ---
-title: "InvokeHelper 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeHelper 结构"
+title: "InvokeHelper 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper
+dev_langs: C++
+helpviewer_keywords: InvokeHelper structure
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 52dc2118f537535b81163d375db483a57c5a9854
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# InvokeHelper 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="invokehelper-structure"></a>InvokeHelper 结构
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -87,50 +85,50 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `TDelegateInterface`  
  `TCallback`  
- 事件句柄函数类型。  
+ 事件处理程序函数的类型。  
   
  `argCount`  
- InvokeHelper 专用化的参数数量。  
+ InvokeHelper 专用化中的参数的数目。  
   
-## 备注  
- 提供基于参数的指定数目和类型的 Invoke\(\) 方法的实现。  
+## <a name="remarks"></a>备注  
+ 提供基于指定的数目和自变量的类型 invoke （） 方法的实现。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`Traits`|定义每个事件处理程序参数类型类的同义词。|  
+|名称|描述|  
+|----------|-----------------|  
+|`Traits`|类定义的每个事件处理程序参数的类型的同义词。|  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |[InvokeHelper::InvokeHelper 构造函数](../windows/invokehelper-invokehelper-constructor.md)|初始化 InvokeHelper 类的新实例。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用签名包含参数的指定的事件处理程序。|  
+|名称|描述|  
+|----------|-----------------|  
+|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用签名包含参数的指定的数目的事件处理程序。|  
   
-### 公共数据成员  
+### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
-|--------|--------|  
-|[InvokeHelper::callback\_ 数据成员](../windows/invokehelper-callback-data-member.md)|当事件发生时调用的事件处理程序。|  
+|名称|描述|  
+|----------|-----------------|  
+|[InvokeHelper::callback_ 数据成员](../windows/invokehelper-callback-data-member.md)|表示事件发生时要调用的事件处理程序。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `InvokeHelper`  
   
-## 要求  
- **标头：**event.h  
+## <a name="requirements"></a>要求  
+ **标头：** event.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

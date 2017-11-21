@@ -1,60 +1,60 @@
 ---
-title: "Resizing an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], resizing images"
-  - "graphics [C++], resizing"
-  - "images [C++], resizing"
-  - "resizing images"
+title: "调整图像 （图标的图像编辑器） 的大小 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], resizing images
+- graphics [C++], resizing
+- images [C++], resizing
+- resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6c6e8d5e4704f9dda9399d67de5b3d0f93d283a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Resizing an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-调整图像大小时图像编辑器的行为取决于是已[选定的](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md)整个图像还是仅选定图像的一部分。  
+# <a name="resizing-an-image-image-editor-for-icons"></a>调整图像大小（图标的图像编辑器）
+图像编辑器时调整图像的大小的行为取决于是否已[选](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)整个图像或只是它的一部分。  
   
- 当选定内容只包括图像的一部分时，图像编辑器通过删除像素行或列并用当前背景色填充空出的区域以缩小选定内容，或者通过复制像素行或列拉伸选定内容。  
+ 当所选内容包含仅映像的一部分时，图像编辑器通过删除行来缩小选定内容或列的像素和使用当前的背景色，或它填充空出的区域拉伸所选内容通过复制行或列的像素为单位。  
   
- 当选定内容包括整个图像时，图像编辑器或者缩小和拉伸此图像，或者裁剪和扩展它。  
+ 当所选内容包括整个图像时，图像编辑器是收缩和拉伸图像，或裁剪和对其进行扩展。  
   
- 调整图像大小的机制有两种：尺寸柄和[“属性”窗口](../Topic/Properties%20Window.md)。  可以拖动尺寸柄更改整个图像或图像的一部分的大小。  可以拖动的尺寸柄是实心的。  不能拖动空心的尺寸柄。  使用“属性”窗口只能调整整个图像的大小，而不能调整选定部分的大小。  
+ 调整图像大小的两种机制： 调整大小控点和[属性窗口](/visualstudio/ide/reference/properties-window)。 您可以拖动调整大小控点，若要更改的所有大小或映像的一部分。 您可以拖动的调整大小控点是实心的。 不能拖动空心的句柄。 你可以使用属性窗口来调整整个图像的大小不的选定部分。  
   
- ![位图上的大小调整控点](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
-尺寸柄  
+ ![大小调整控点位图上的](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+大小调整控点  
   
 > [!NOTE]
->  如果已在[“网格设置”对话框](../mfc/grid-settings-dialog-box-image-editor-for-icons.md)中选定“平铺网格”选项，则调整大小将对齐下一个平铺网格线。  如果只选择了“像素网格”选项（默认设置），则调整大小将对齐下一个可用像素。  
+>  如果你有中选择的平铺网格选项[网格设置对话框](../windows/grid-settings-dialog-box-image-editor-for-icons.md)，然后调整大小将下一个磁贴网格线对齐。 如果仅像素网格选项是选中 （默认设置），调整大小将对齐到下一个可用像素。  
   
--   [调整整个图像的大小](../mfc/resizing-an-entire-image-image-editor-for-icons.md)  
+-   [调整整个图像的大小](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   
--   [裁剪或扩展整个图像](../mfc/cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
+-   [裁剪或扩展整个图像](cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
   
--   [缩小或拉伸整个图像](../mfc/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
+-   [缩小或拉伸整个图像](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
   
--   [缩小或拉伸图像的一部分](../mfc/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
+-   [缩小或拉伸图像的一部分](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  无  
   
-## 请参阅  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>另请参阅  
+ [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)
+

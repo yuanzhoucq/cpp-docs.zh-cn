@@ -1,34 +1,33 @@
 ---
-title: "如何：实现 C# 的 lock 关键字 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock C# 关键字 [C++]"
-  - "lock 语句"
+title: "如何： 实现 C# 的 lock 关键字 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f126968805e38d1435f4f24862183f84d089b36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：实现 C# 的 lock 关键字 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题将说明如何在 Visual C\+\+ 中实现 C\# `lock` 关键字。  有关详细信息，请参阅[“锁定”语句](../Topic/lock%20Statement%20\(C%23%20Reference\).md)。  
+# <a name="how-to-implement-the-lock-c-keyword-ccli"></a>如何：实现 C# 的 lock 关键字 (C++/CLI)
+本主题演示如何实现的 C# `lock` Visual c + + 中的关键字。 
   
- 还可以使用 C\+\+ 支持库中的 `lock` 类。  有关更多信息，请参见[同步（lock 类）](../dotnet/synchronization-lock-class.md)。  
+ 你还可以使用`lock`c + + 支持库中的类。 请参阅[同步 (lock 类)](../dotnet/synchronization-lock-class.md)有关详细信息。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // CS_lock_in_CPP.cpp  
@@ -65,5 +64,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [与其他 .NET 语言的互操作性](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [与其他 .NET 语言的互操作性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

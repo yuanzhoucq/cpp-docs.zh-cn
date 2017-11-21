@@ -1,32 +1,30 @@
 ---
-title: "db_table | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_table"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_table attribute"
+title: "db_table |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_table
+dev_langs: C++
+helpviewer_keywords: db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2d8c7efaa23a8d7169ca41b4bfcb78722d73543
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# db_table
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-打开 OLE DB 表。  
+# <a name="dbtable"></a>db_table
+将打开一个 OLE DB 表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,26 +36,26 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 参数  
- *db\_table*  
- 指定数据库表的名称字符串 \(如 “产品”\)。  
+#### <a name="parameters"></a>参数  
+ *db_table*  
+ 指定数据库表 （例如"Products") 的名称的字符串。  
   
- *名称* \(可选\)  
- 使用与表使用处理的名称。  ，如果要返回多个结果，一行必须指定此参数。  **db\_table** 生成与可用于遍历行集合或执行多个操作查询的指定名称的变量。  
+  名称（可选）  
+ 用于处理与表的句柄的名称。 如果你想要返回的结果的多个行，必须指定此参数。 **db_table**生成指定的变量*名称*可用来遍历行集或执行操作的多个查询。  
   
- *source\_name* \(可选\)  
- 具有 `db_source` 特性类的 `CSession` 变量或实例应用于它在哪些命令执行。  [db\_source](../windows/db-source.md)参见。  
+  source_name（可选）  
+ 将 `CSession` 特性应用到其（在其上运行命令）的类的 `db_source` 变量或实例。 请参阅 [db_source](../windows/db-source.md)。  
   
  `hresult`（可选）  
- 标识要接收此数据库命令 `HRESULT` 的变量。  如果变量不存在，则将属性自动插入。  
+ 标识将接收此数据库命令的 `HRESULT` 的变量。 如果该变量不存在，属性将自动插入。  
   
-## 备注  
- **db\_table** 创建一 [CTable](../data/oledb/ctable-class.md) 对象， OLE DB 使用者用于打开表。  只能使用该属性在类级别;您不能使用它内联。  使用 **db\_column** 表绑定列给变量;使用 **db\_param** 分隔 \(将参数类型等\) 参数。  
+## <a name="remarks"></a>备注  
+ **db_table**创建[CTable](../data/oledb/ctable-class.md)对象，该 OLE DB 使用者用来打开表对象。 你可以使用此属性仅在类级别;不能使用它内联。 使用**db_column**将表中的列绑定到变量; 使用**db_param**来分隔 （设置的参数类型，因此上） 的参数。  
   
- 当使用者属性提供程序应用此特性应用于类，编译器将类重命名为 \_TheClassNameAccessor， *TheClassName* 的名称就是您为该类，因此，编译器还将创建一个名为 *TheClassName 的* 类 *，* 从 \_TheClassNameAccessor 派生。  在类视图中，您将看到两类。  
+ 当使用者特性提供程序应用于类时此属性时，编译器将该类重命名为\_*类名*访问器，其中*类名*是你为指定的名称类，并且编译器还将创建一个名为类*类名*，它派生自\_*类名*访问器。  将在类视图中看到这两个类。  
   
-## 示例  
- 下面的示例打开 products 表 `CProducts`供使用。  
+## <a name="example"></a>示例  
+ 下面的示例打开以供产品表`CProducts`。  
   
 ```  
 // db_table.cpp  
@@ -72,21 +70,20 @@ class CProducts {
 };  
 ```  
   
- 有关用于应用程序的此属性的示例，请参见示例 [AtlAgent](http://msdn.microsoft.com/zh-cn/52bef5da-c1a0-4223-b4e6-9e464b6db409) 和 [MultiRead](http://msdn.microsoft.com/zh-cn/5a2a915a-77dc-492f-94b2-1b809995dd5e)。  
+ 应用程序中使用此属性的示例，请参阅示例[AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409)和[MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
-|**可重复**|否|  
+|**适用对象**|**class**， `struct`|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)   

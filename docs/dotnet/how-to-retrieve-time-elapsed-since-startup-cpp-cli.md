@@ -1,35 +1,34 @@
 ---
-title: "如何：检索自启动以来经过的时间 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "计数器, 运行时间"
-  - "启动"
-  - "启动, 运行时间自"
-  - "刻度计数"
-  - "时间, 自启动后已运行的"
+title: "如何： 自启动以来经过的检索时间 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- time, elapsed since startup
+- counters, elapsed time
+- startup, time elapsed since
+- tick counts
+- startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 56f73aec78af0fe34d8c3881911a6ae1d7f26501
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：检索自启动以来经过的时间 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何确定刻度计数，或自 Windows 启动以来已经流逝的毫秒数。  此值存储在 <xref:System.Environment.TickCount%2A?displayProperty=fullName> 成员中，并且由于该值为 32 位值，因此大约每 24.9 天就会重置为零。  
+# <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>如何：检索自启动以来经过的时间 (C++/CLI)
+下面的代码示例演示如何确定滴答计数，或启动 Windows 后经过的毫秒数。 此值存储在<xref:System.Environment.TickCount%2A?displayProperty=fullName>成员，因为它是一个 32 位值，将重置为零大约每 24.9 天。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // startup_time.cpp  
@@ -54,6 +53,6 @@ int main( )
 }  
 ```  
   
-## 请参阅  
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

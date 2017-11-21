@@ -1,41 +1,41 @@
 ---
-title: "生成文件中的特殊字符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宏, 特殊字符"
-  - "生成文件, 特殊字符"
-  - "NMAKE 程序, 特殊字符"
-  - "特殊字符, 在 NMAKE 宏中"
+title: "生成文件中的特殊字符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, special characters
+- makefiles, special characters
+- special characters, in NMAKE macros
+- macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 53b2457c87e587b4e1ef13e53bf2dfcdd4800d7f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 生成文件中的特殊字符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-若要将 NMAKE 特殊字符用作文字字符，请在它前面添一插入符号 \(^\)。  NMAKE 忽略其他字符前面的插入符号。  特殊字符为：  
+# <a name="special-characters-in-a-makefile"></a>生成文件中的特殊字符
+若要使用 NMAKE 特殊字符作为原义字符，请在它前面添脱字号 (^)。 NMAKE 将忽略位于其他字符之前的插入符号。 特殊字符包括：  
   
  `:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
   
- 引号引起来的字符串内的插入符号 \(^\) 被视为 ^ 字符。  在字符串或宏中，位于行尾的插入符号插入换行符。  
+ 带引号的字符串中的脱字号 (^) 被视为文本的插入符号字符。 在行尾的脱字号插入文本换行字符在字符串或宏中。  
   
- 在宏中，后面跟有换行符的反斜杠 \(\\\) 由空格替换。  
+ 在宏的位置，反斜杠 (\\) 后接换行符字符替换为空格。  
   
- 在命令中，百分号 \(%\) 是文件说明符。  若要在命令中按原义表示 %，请指定两个百分号 \(%%\) 取代一个百分号。  在其他情况中，NMAKE 按原义解释一个 %，但它总将两个 %% 解释为一个 %。  因此，若要表示 %%，请指定三个百分号 %%%，或四个百分号 %%%%。  
+ 在命令中，百分号 （%） 是一个文件说明符。 若要表示 %按原义命令中的，指定代替一条双百分号 （%）。 在其他情况下，NMAKE 单个 %按原义解释，但它始终将双精度值 %%作为单个 %。 因此，来表示文本 %%，指定任一三个百分比符号，%%%，或四个百分比符号 %%%。  
   
- 若要将美元符号 \($\) 用作命令中的文字字符，请指定两个美元符号 \($$\)。  此方法还可用于 ^$ 有效的其他情况。  
+ 若要使用美元符号 （$） 用作原义字符命令中，指定两个美元符号 （$$）。 此方法还可在其他情况下其中 ^ $ 工作原理。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [生成文件的内容](../build/contents-of-a-makefile.md)

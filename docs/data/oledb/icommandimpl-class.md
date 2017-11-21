@@ -1,72 +1,70 @@
 ---
-title: "ICommandImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandImpl 类"
+title: "ICommandImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandImpl
+dev_langs: C++
+helpviewer_keywords: ICommandImpl class
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab3aced3ebd5c98699b967300b3a47d5171a74d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-针对 [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) 接口的实现。  
+# <a name="icommandimpl-class"></a>ICommandImpl 类
+提供有关实现[ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx)接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <class T, class CommandBase = ICommand>   
 class ATL_NO_VTABLE ICommandImpl : public CommandBase  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类，从 `ICommandImpl`中派生。  
+ 你的类，派生自`ICommandImpl`。  
   
  `CommandBase`  
- 命令接口。  默认值为 `ICommand`。  
+ 命令界面。 默认值为 `ICommand`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
 |[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|取消当前的命令执行。|  
 |[取消](../../data/oledb/icommandimpl-cancel.md)|取消当前的命令执行。|  
-|[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|创建行集合对象。|  
-|[执行](../../data/oledb/icommandimpl-execute.md)|执行命令。|  
-|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|返回接口指针。创建命令的会话。|  
+|[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|创建一个行集对象。|  
+|[执行](../../data/oledb/icommandimpl-execute.md)|执行的命令。|  
+|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|返回到创建该命令的会话中的接口指针。|  
 |[ICommandImpl](../../data/oledb/icommandimpl-icommandimpl.md)|构造函数。|  
   
-### 数据成员  
+### <a name="data-members"></a>数据成员  
   
 |||  
 |-|-|  
-|[m\_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|指示命令是否将取消。|  
-|[m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|指示命令是否移除，当完成以后。|  
-|[m\_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|指示命令当前是否正在执行。|  
+|[m_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|指示是否要取消命令。|  
+|[m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|指示是否要取消时执行该命令。|  
+|[m_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|指示当前正在执行该命令。|  
   
-## 备注  
- 在命令的对象强制接口。  
+## <a name="remarks"></a>备注  
+ 命令对象上的必需接口。  
   
-## 要求  
- **页眉：**atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

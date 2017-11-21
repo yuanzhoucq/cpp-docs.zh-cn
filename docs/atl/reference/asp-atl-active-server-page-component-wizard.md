@@ -1,47 +1,46 @@
 ---
-title: "ASP，ATL Active Server Page 组件向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.asp.asp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL Active Server Page 组件向导，ASP"
+title: "ASP，ATL Active Server Page 组件向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.codewiz.class.atl.asp.asp
+dev_langs: C++
+helpviewer_keywords: ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e2ffa9ed5a25417cfcf46c5b47b55b3eecc2fe27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ASP，ATL Active Server Page 组件向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用“ATL Active Server Page 组件向导”的该页指定用于处理 ASP 组件的相关信息和状态的可选设置。  
+# <a name="asp-atl-active-server-page-component-wizard"></a>ASP，ATL Active Server Page 组件向导
+使用 ATL Active Server Page 组件向导的此页指定用于处理信息和状态与 ASP 组件相关的可选设置。  
   
  **可选方法**  
- 向对象中添加可选 ASP 方法 **OnStartPage** 和 **OnEndPage**。  必须选定此选项才能设置任何 Active Server Page 内部对象。  默认情况下，此选项是选定的。  
+ 添加可选的 ASP 方法， **OnStartPage**和**OnEndPage**，对你的对象。 必须选择此选项设置任何 Active Server Pages 的内部对象。 默认情况下，选中该选项。  
   
--   **OnStartPage\/OnEndPage** 当脚本第一次尝试访问对象时调用 [OnStartPage](https://msdn.microsoft.com/en-us/library/ms691624.aspx)。  对象结束处理脚本时调用 **OnEndPage**。  
+-   **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)称为第一次脚本尝试访问的对象。 **OnEndPage**对象完成时，将调用处理脚本。  
   
  **内部对象**  
- 必须选定“OnStartPage\/OnEndPage”选项才能设置任何 ASP 内部对象。  
+ 必须选择**OnStartPage/OnEndPage**选项可设置任何 ASP 内部对象。  
   
-|选项|说明|  
-|--------|--------|  
-|**请求**|提供对 Active Server Page 内部 **Request** 对象的访问。  Request 对象用于传递 HTTP 请求。|  
-|**响应**|提供对 Active Server Page 内部 **Response** 对象的访问。  为响应请求，Response 对象向浏览器发送信息以显示给用户。|  
-|**会话**|提供对 Active Server Page 内部 **Session** 对象的访问。  **Session** 对象维护有关当前用户会话的信息，包括存储和检索状态信息。|  
-|**Application**|提供对 Active Server Page 内部 **Application** 对象的访问。  **Application** 对象管理在多个 ASP 对象间共享的状态。|  
-|**服务器**|提供对 Active Server Page 内部 **Server** 对象的访问。  **Server** 对象使您得以创建其他 ASP 对象。|  
+|选项|描述|  
+|------------|-----------------|  
+|**请求**|提供对内部 Active Server Pages 访问**请求**对象。 请求对象用于通过 HTTP 请求。|  
+|**响应**|提供对内部 Active Server Pages 访问**响应**对象。 在对请求的响应，则响应对象将信息发送到浏览器将向用户显示。|  
+|**会话**|提供对内部 Active Server Pages 访问**会话**对象。 **会话**对象维护有关当前用户会话，包括存储和检索状态信息的信息。|  
+|**应用程序**|提供对内部 Active Server Pages 访问**应用程序**对象。 **应用程序**对象管理在多个 ASP 对象之间共享的状态。|  
+|**服务器**|提供对内部 Active Server Pages 访问**服务器**对象。 **服务器**对象允许你创建其他 ASP 对象。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)   
- [ATL Active Server Page Component](../../atl/reference/adding-an-atl-active-server-page-component.md)
+ [ATL Active Server Page 组件](../../atl/reference/adding-an-atl-active-server-page-component.md)
+

@@ -1,79 +1,82 @@
 ---
-title: "如何：使用并行容器提高效率 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "使用并行容器提高效率 [并发运行时]"
-  - "concurrent_queue 类，示例"
-  - "concurrent_vector 类，示例"
+title: "如何： 使用并行容器提高效率 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- increasing efficiency with parallel containers [Concurrency Runtime]
+- concurrent_queue class, examples
+- concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6fd904db5d01bf1464da522d7209f8d15502556
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用并行容器提高效率
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明如何使用并行容器以并行方式高效地存储和访问数据。  
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>如何：使用并行容器提高效率
+本主题演示如何使用并行容器来高效地存储和访问数据并行。  
   
- 代码示例以并行方式计算一组质数和 Carmichael 数。  然后，对于每个 Carmichael 数，此代码将计算该数的质数因子。  
+ 示例代码计算质数和并行 Carmichael 数字的组。 然后，为每个 Carmichael 编号，代码会计算该数字的主要因素。  
   
-## 示例  
- 下面的示例显示了 `is_prime` 函数和 `is_carmichael` 函数，前者可确定输入值是否为质数，后者可确定输入值是否为 Carmichael 数。  
+## <a name="example"></a>示例  
+ 下面的示例演示`is_prime`函数，确定输入的值是否为质数，和`is_carmichael`函数，确定输入的值是否为 Carmichael 数。  
   
- [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]  
   
-## 示例  
- 下面的示例使用 `is_prime` 和 `is_carmichael` 函数计算多组质数和 Carmichael 数。  此示例使用 [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) 和 [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) 算法以并行方式计算每个组。  有关并行算法的更多信息，请参见[并行算法](../../parallel/concrt/parallel-algorithms.md)。  
+## <a name="example"></a>示例  
+ 下面的示例使用`is_prime`和`is_carmichael`函数来计算质数和 Carmichael 数字的集。 该示例使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)和[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)并行算法来计算每个设置。 有关并行算法的详细信息，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。  
   
- 此示例使用 [concurrency::concurrent\_queue](../../parallel/concrt/reference/concurrent-queue-class.md) 对象保存一组 Carmichael 数，因为它稍后会将该对象用作工作队列。  此示例使用 [concurrency::concurrent\_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 对象保存一组质数，因为它稍后将循环访问此组以查找质数因子。  
+ 此示例使用[concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)对象以保存的一套 Carmichael 数字，因为它更高版本将通过以下方式使用该对象作为工作队列。 它使用[concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)对象以保存质数的集，因为它更高版本将循环访问该选项设置为查找主要因素。  
   
- [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]  
   
-## 示例  
- 下面的示例演示 `prime_factors_of` 函数，该函数使用试除法来查找给定值的所有质数因子。  
+## <a name="example"></a>示例  
+ 下面的示例演示`prime_factors_of`使用试用除法来查找给定值的所有主要因素的函数。  
   
- 该函数使用 [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) 算法循环访问质数集合。  `concurrent_vector` 对象使并行循环能够同时向结果中添加多个质数因子。  
+ 此函数使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)要循环访问集合的质数算法。 `concurrent_vector`对象使并行循环并发添加到结果的主要因素。  
   
- [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]  
   
-## 示例  
- 此示例通过调用 `prime_factors_of` 函数计算 Carmichael 数的质数因子来处理 Carmichael 数队列中的每个元素。  此示例使用任务组以并行方式执行此任务。  有关任务组的更多信息，请参见[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+## <a name="example"></a>示例  
+ 此示例通过调用处理 Carmichael 数字的队列中每个元素`prime_factors_of`函数来计算其主要因素。 它使用任务组来并行执行此工作。 有关任务组的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
- 此示例将输出每个具有四个以上的质数因子的 Carmichael 数的质数因子。  
+ 此示例将打印为每个 Carmichael 号码的主要因素，如果该版本号中有多个四个主要因素。  
   
- [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]  
   
-## 示例  
- 下面的代码演示完整示例，该示例使用并行容器计算 Carmichael 数的质数因子。  
+## <a name="example"></a>示例  
+ 下面的代码显示完整示例，其中使用并行容器来计算 Carmichael 数字的主要因素。  
   
- [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]  
   
- 此示例产生下面的示例输出。  
+ 该示例产生下面的示例输出。  
   
-  **9890881的质因子为 :7 11 13 41 241。**  
-**825265的质因子为 :5 7 17 19 73。**  
-**1050985的质因子为 :5 13 19 23 37。**   
-## 编译代码  
- 复制代码示例，再将此代码粘贴到Visual Studio 项目中或一个名为`carmichael-primes.cpp`的文件中，然后在Visual Studio命令提示符窗口中运行以下命令。  
+```Output  
+Prime factors of 9890881 are: 7 11 13 41 241.  
+Prime factors of 825265 are: 5 7 17 19 73.  
+Prime factors of 1050985 are: 5 13 19 23 37.  
+```  
   
- **cl.exe \/EHsc carmichael\-primes.cpp**  
+## <a name="compiling-the-code"></a>编译代码  
+ 复制代码示例并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`carmichael-primes.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
-## 请参阅  
+ **cl.exe /EHsc carmichael primes.cpp**  
+  
+## <a name="see-also"></a>另请参阅  
  [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)   
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
- [concurrent\_vector 类](../../parallel/concrt/reference/concurrent-vector-class.md)   
- [concurrent\_queue 类](../../parallel/concrt/reference/concurrent-queue-class.md)   
- [parallel\_invoke 函数](../Topic/parallel_invoke%20Function.md)   
- [parallel\_for 函数](../Topic/parallel_for%20Function.md)   
- [task\_group 类](../Topic/task_group%20Class.md)
+ [concurrent_vector 类](../../parallel/concrt/reference/concurrent-vector-class.md)   
+ [concurrent_queue 类](../../parallel/concrt/reference/concurrent-queue-class.md)   
+ [parallel_invoke 函数](reference/concurrency-namespace-functions.md#parallel_invoke)   
+ [parallel_for 函数](reference/concurrency-namespace-functions.md#parallel_for)   
+ [task_group 类](reference/task-group-class.md)

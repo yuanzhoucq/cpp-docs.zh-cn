@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 17231b9d541163d5b14509bafb991fcd32215fca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initializers"></a>初始值设定项
 初始值设定项可指定变量的初始值。 你可以在以下上下文中初始化变量：  
@@ -530,11 +527,10 @@ int main()
  ![Ref 类型初始化决策图](../cpp/media/vc38s71.gif "vc38S71")  
 引用类型初始化决策图  
   
- 引用`volatile`类型 (声明为`volatile` *typename* ** & ** *标识符*) 可以使用初始化`volatile`对象的相同类型的对象或使用未声明为`volatile`。 它们不能但是，使用初始化**const**该类型的对象。 同样，引用**const**类型 (声明为**const** *typename* ** & ** *标识符*) 可以使用初始化**const**同类型的对象 (或任何具有转换为该类型或具有未声明为对象**const**)。 但是，不能使用该类型的 `volatile` 对象初始化它们。  
+ 引用`volatile`类型 (声明为`volatile` *typename*  **&**  *标识符*) 可以使用初始化`volatile`对象的相同类型的对象或使用未声明为`volatile`。 它们不能但是，使用初始化**const**该类型的对象。 同样，引用**const**类型 (声明为**const** *typename*  **&**  *标识符*) 可以使用初始化**const**同类型的对象 (或任何具有转换为该类型或具有未声明为对象**const**)。 但是，不能使用该类型的 `volatile` 对象初始化它们。  
   
  不使用限定的引用**const**或`volatile`关键字可以仅使用作为既不声明的对象初始化**const**也不`volatile`。  
   
 ### <a name="initialization-of-external-variables"></a>外部变量的初始化  
  自动、 静态的和外部变量的声明可以包含初始值设定项。 但是，仅当外部变量没有声明为 `extern` 时，其声明中才可以包含初始值设定项。
   
-

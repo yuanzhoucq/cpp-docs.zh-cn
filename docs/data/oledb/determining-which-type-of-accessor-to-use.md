@@ -1,44 +1,44 @@
 ---
-title: "确定要使用的访问器类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "访问器 [C++], 类型"
-  - "行集合 [C++], 数据类型"
+title: "确定要使用的访问器类型 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rowsets [C++], data types
+- accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6eebc119186a5a57fa1cf2c5e0c80479ef4cdcf3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 确定要使用的访问器类型
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以在编译时或运行时确定行集合上的数据类型。  
+# <a name="determining-which-type-of-accessor-to-use"></a>确定要使用的访问器类型
+在编译时或在运行时，你可以确定行集上的数据类型。  
   
- 如果需要在编译时确定数据类型，则应使用静态访问器（如 `CAccessor`）。  可以手动确定数据类型，也可以通过使用“ATL OLE DB 使用者向导”来确定。  
+ 如果你需要在编译时确定数据类型，使用静态的访问器 (如`CAccessor`)。 手动或通过使用 ATL OLE DB 使用者向导，你可以确定数据类型。  
   
- 如果需要在运行时确定数据类型，则应使用动态访问器（`CDynamicAccessor` 或其子级）或手动访问器 \(`CManualAccessor`\)。  在这些情况下，可以在行集合上调用 `GetColumnInfo` 以返回列绑定信息，从此信息中即可确定类型。  
+ 如果你需要在运行时确定的数据类型，使用动态 (`CDynamicAccessor`或其子级) 或手动访问器 (`CManualAccessor`)。 在这些情况下，你可以调用`GetColumnInfo`行集返回的列绑定信息，从中你可以确定类型上。  
   
- 下表列出了使用者模板中所提供的访问器类型。  每种访问器都各有利弊。  根据不同的情况，其中一种访问器类型将适合您的需要。  
+ 下表列出的使用者模板中提供的访问器的类型。 每个访问器都有优点和缺点。 具体取决于你的情况，一个访问器类型应适合你的需求。  
   
 |访问器类|绑定|参数|注释|  
-|----------|--------|--------|--------|  
-|`CAccessor`|用 `COLUMN_ENTRY` 宏创建用户记录。  这些宏将该记录中的数据成员绑定到此访问器。  创建行集合后，列将无法取消绑定。|是，通过使用 **PARAM\_MAP** 宏项。  绑定后，参数将无法取消绑定。|速度最快的访问器，因为代码数量较少。|  
-|`CDynamicAccessor`|自动。|不可以。|当不知道行集合中的数据类型时很有用。|  
-|`CDynamicParameterAccessor`|自动，但可以[重写](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，但条件是提供程序支持 `ICommandWithParameters`。  自动绑定参数。|速度比 `CDynamicAccessor` 慢，但对于调用一般存储过程很有用。|  
-|**CDynamicStringAccessor\[A,W\]**|自动。|不可以。|将在数据存储区中存取的数据作为字符串数据检索。|  
-|`CManualAccessor`|手动使用 `AddBindEntry`。|手动使用 `AddParameterEntry`。|非常快；参数和列只绑定一次。  您自己确定要使用的数据类型。（有关示例，请参见 [DBVIEWER](http://msdn.microsoft.com/zh-cn/07620f99-c347-4d09-9ebc-2459e8049832) 示例）。比 `CDynamicAccessor` 或 `CAccessor` 需要更多的代码。  更类似于直接调用 OLE DB。|  
-|`CXMLAccessor`|自动。|不可以。|将在数据存储区中存取的数据作为字符串数据检索，并将其格式化为带有 XML 标记的数据。|  
+|--------------------|-------------|---------------|-------------|  
+|`CAccessor`|创建的用户记录`COLUMN_ENTRY`宏。 宏将该记录中的数据成员绑定到访问器中。 当创建行集时，列不能为未绑定。|是，通过使用**PARAM_MAP**宏条目。 绑定后，参数不能为未绑定。|由于少量的代码的最快访问器。|  
+|`CDynamicAccessor`|自动。|不可以。|如果你不知道在行集中的数据的类型很有用。|  
+|`CDynamicParameterAccessor`|自动进行的但可以是[中被重写](../../data/oledb/overriding-a-dynamic-accessor.md)。|是的如果该提供程序支持`ICommandWithParameters`。 自动绑定参数。|低于`CDynamicAccessor`但用于调用泛型存储的过程。|  
+|**CDynamicStringAccessor [A，W]**|自动。|不可以。|检索访问从数据存储区作为字符串数据的数据。|  
+|`CManualAccessor`|手动使用`AddBindEntry`。|使用手动`AddParameterEntry`。|非常快;参数和列绑定仅一次。 确定要使用数据的类型。 (请参阅[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)示例的示例。)需要更多代码比`CDynamicAccessor`或`CAccessor`。 而是要直接调用 OLE DB。|  
+|`CXMLAccessor`|自动。|不可以。|检索从数据存储区作为字符串数据访问的数据，并将其格式化为 XML 标记数据。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)

@@ -1,32 +1,30 @@
 ---
-title: "ComPtrRefBase 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRefBase 类"
+title: "ComPtrRefBase 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase
+dev_langs: C++
+helpviewer_keywords: ComPtrRefBase class
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2c010b85095da67a91c0b4c1df6f3da7a4f677dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRefBase 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="comptrrefbase-class"></a>ComPtrRefBase 类
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -35,41 +33,41 @@ template <
 class ComPtrRefBase;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- [ComPtr\<T\>](../windows/comptr-class.md) 类型或从它，ComPtr 表示的接口没有派生的。  
+ A [ComPtr\<T >](../windows/comptr-class.md)类型派生自它，而不仅仅是 ComPtr 所表示的接口。  
   
-## 备注  
- [ComPtrRef](../windows/comptrref-class.md) 表示类的基类。  
+## <a name="remarks"></a>备注  
+ 表示类的基类[ComPtrRef](../windows/comptrref-class.md)类。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`InterfaceType`|表示模板参数的 `T`同义词。|  
+|名称|描述|  
+|----------|-----------------|  
+|`InterfaceType`|模板参数的类型的同义词`T`。|  
   
-### 公共运算符  
+### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
-|--------|--------|  
-|[ComPtrRefBase::operator IInspectable\*\* 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|模拟当前数据成员设置为指针对 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 指针对 IInspectable 接口中。|  
-|[ComPtrRefBase::operator IUnknown\*\* 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|模拟当前数据成员设置为指针对 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 指针对 IUnknown 接口中。|  
+|名称|描述|  
+|----------|-----------------|  
+|[ComPtrRefBase::operator IInspectable** 运算符](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|将当前强制转换[ptr_](../windows/comptrrefbase-ptr-data-member.md)对指针到-a-指针-到的数据成员 IInspectable 接口。|  
+|[ComPtrRefBase::operator IUnknown** 运算符](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|将当前强制转换[ptr_](../windows/comptrrefbase-ptr-data-member.md)对指针到-a-指针-到的数据成员的 IUnknown 接口。|  
   
-### 受保护的数据成员  
+### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|说明|  
-|--------|--------|  
-|[ComPtrRefBase::ptr\_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|为当前模板参数指定的类型的指针。|  
+|名称|描述|  
+|----------|-----------------|  
+|[ComPtrRefBase::ptr_ 数据成员](../windows/comptrrefbase-ptr-data-member.md)|指向由当前模板参数指定的类型的指针。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `ComPtrRefBase`  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>要求  
+ **标头：** client.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

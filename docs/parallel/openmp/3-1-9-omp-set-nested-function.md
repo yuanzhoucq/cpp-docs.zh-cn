@@ -1,43 +1,42 @@
 ---
-title: "3.1.9 omp_set_nested Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.9 omp_set_nested 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4afc3aa-bb96-4314-9849-fd5df5f437d9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a70406e42904c40ac81901ffd174991c0ebc54d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.9 omp_set_nested Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**omp\_set\_nested** 功能启用或禁用嵌套并行。  格式如下所示：  
+# <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 函数
+**Omp_set_nested**函数启用或禁用嵌套并行度。 格式如下所示：  
   
 ```  
 #include <omp.h>  
 void omp_set_nested(int nested);  
 ```  
   
- 如果 *嵌套* 的计算结果为 0，嵌套并行禁用，它是默认值，，并且当前线程序列化嵌套并行区域并执行。  *嵌套* 的计算结果为非零值，嵌套并行有效，并且，嵌套并行区域可以部署其他线程以形成嵌套团队。  
+ 如果*嵌套*计算结果为 0，嵌套并行处于禁用状态，这是默认设置，以及嵌套并行区域的序列化和由当前线程执行。 如果*嵌套*计算结果为非零值，启用了嵌套并行机制，并将其嵌套的并行区域可能部署以形成嵌套的团队的其他线程。  
   
- 该函数具有中描述的效果顶部，在调用从 **omp\_in\_parallel** 函数返回零程序的一部分。  如果从 **omp\_in\_parallel** 函数返回非零值程序的一部分调用，此功能的行为未定义。  
+ 此函数具有从一部分的程序中调用时，上面所述的效果其中**omp_in_parallel**函数将返回零。 如果它从一部分的程序调用其中**omp_in_parallel**函数将返回一个非零值，此函数的行为是不确定。  
   
- 这称为在 **OMP\_NESTED** 环境变量的优先级。  
+ 此调用的优先级高于**OMP_NESTED**环境变量。  
   
- 当嵌套并行启用时，用于执行的线程的数目嵌套并行区域实现中定义。  因此，，即使嵌套并行启用， OpenMP 兼容实现允许序列化嵌套并行区域。  
+ 启用嵌套的并行后，用于执行嵌套并行区域的线程数是实现定义的。 因此，允许 OpenMP 符合实现序列化嵌套并行区域，即使启用了嵌套并行度。  
   
-## 交叉引用:  
+## <a name="cross-references"></a>交叉引用：  
   
--   **OMP\_NESTED** 环境变量，请参见中的第 49 页的 [第4.4部分](../../parallel/openmp/4-4-omp-nested.md) 。  
+-   **OMP_NESTED**环境变量，请参阅[部分 4.4](../../parallel/openmp/4-4-omp-nested.md)页 49 上。  
   
--   **omp\_in\_parallel** 功能，请参见中的第 38 页的 [第3.1.6部分](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) 。
+-   **omp_in_parallel**函数中，请参阅[部分 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)在第 38 页上。

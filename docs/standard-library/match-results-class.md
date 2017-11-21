@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- regex/std::match_results
-dev_langs:
-- C++
-helpviewer_keywords:
-- match_results class
+f1_keywords: regex/std::match_results
+dev_langs: C++
+helpviewer_keywords: match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 484f7181bafc4103ef4f3dcfa4e88475a8798ada
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: bf915f8097d76ff7b21158302e1272e462294f05
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="matchresults-class"></a>match_results 类
 包含一系列子匹配项。  
@@ -3231,6 +3226,5 @@ empty == false
   
 ## <a name="see-also"></a>另请参阅  
  [\<regex>](../standard-library/regex.md)
-
 
 

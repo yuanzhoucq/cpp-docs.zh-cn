@@ -1,62 +1,69 @@
 ---
-title: "_BitScanReverse, _BitScanReverse64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_BitScanReverse64"
-  - "_BitScanReverse_cpp"
-  - "_BitScanReverse"
-  - "_BitScanReverse64_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_BitScanReverse intrinsic"
-  - "BitScanReverse intrinsic"
-  - "bsr instruction"
+title: "_BitScanReverse、 _BitScanReverse64 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _BitScanReverse64
+- _BitScanReverse_cpp
+- _BitScanReverse
+- _BitScanReverse64_cpp
+dev_langs: C++
+helpviewer_keywords:
+- bsr instruction
+- _BitScanReverse intrinsic
+- BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1547a5aa4ab4709c47305bd5097ba138171fd71c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# _BitScanReverse, _BitScanReverse64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 **Microsoft 专用**  
   
- 从设置位 \(1\) 的最高有效位 \(MSB\) 到最低有效位 \(LSB\) 搜索掩码数据。  
+ 从设置位 (1) 的最高有效位 (MSB) 到最低有效位 (LSB) 搜索掩码数据。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-unsigned char _BitScanReverse(    unsigned long * Index,    unsigned long Mask ); unsigned char _BitScanReverse64(    unsigned long * Index,    unsigned __int64 Mask );  
+unsigned char _BitScanReverse(  
+   unsigned long * Index,  
+   unsigned long Mask  
+);  
+unsigned char _BitScanReverse64(  
+   unsigned long * Index,  
+   unsigned __int64 Mask  
+);  
 ```  
   
-#### 参数  
- \[out\] `Index`  
- 已使用找到的第一个设置位 \(1\) 的位位置加载。  
+#### <a name="parameters"></a>参数  
+ [out] `Index`  
+ 已使用找到的第一个设置位 (1) 的位位置加载。  
   
- \[in\] `Mask`  
+ [in] `Mask`  
  要搜索的 32 位或 64 位值。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  如果设定 `Index`，则为非零，如果未发现设置位，则为 0。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |内部函数|体系结构|Header|  
-|----------|----------|------------|  
-|`_BitScanReverse`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
+|---------------|------------------|------------|  
+|`_BitScanReverse`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
 |`_BitScanReverse64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]||  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // BitScanReverse.cpp  
@@ -87,20 +94,20 @@ int main()
 }  
 ```  
   
-## 输入  
+## <a name="input"></a>输入  
   
 ```  
 12  
 ```  
   
-## 示例输出  
+## <a name="sample-output"></a>示例输出  
   
 ```  
 Enter a positive integer as the mask:   
 Mask: 12 Index: 3  
 ```  
   
-### 结束 Microsoft 专用  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

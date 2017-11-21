@@ -1,37 +1,36 @@
 ---
-title: "如何：使用 C++ 互操作封送嵌入式指针 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 互操作, 嵌入式指针"
-  - "数据封送处理 [C++], 嵌入式指针"
-  - "互操作 [C++], 嵌入式指针"
-  - "封送处理 [C++], 嵌入式指针"
-  - "指针 [C++], 封送处理"
-  - "结构 [C++], 封送处理嵌入式指针"
+title: "如何： 封送嵌入式指针使用 c + + 互操作 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- structures [C++], marshaling embedded pointers
+- interop [C++], embedded pointers
+- C++ Interop, embedded pointers
+- marshaling [C++], embedded pointers
+- pointers [C++], marshaling
+- data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3916d80089d78925b6b5746146490f901c093c09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 C++ 互操作封送嵌入式指针
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) \#pragma 指令在同一个文件中实现托管函数和非托管函数，但如果在不同的文件中定义这些函数，则它们将以同样的方式进行交互操作。  不需要使用 [\/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md) 对仅包含非托管函数的文件进行编译。  
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>如何：使用 C++ 互操作封送嵌入式指针
+下面的代码示例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指令来实现托管和非托管函数中同一文件中，但如果在单独的文件中定义，这些函数互操作方式相同。 仅包含非托管的函数的文件不需要使用编译[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 示例  
- 下面的示例演示如何从托管函数调用采用包含指针的结构的非托管函数。  该托管函数创建该结构的一个实例，并使用新关键字（而不是 [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 关键字）对嵌入的指针进行初始化。  由于是在本机堆上分配内存，因此不需要固定该数组以取消垃圾回收。  但是，必须显式删除内存，以避免内存溢出。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何采用包含指针的结构非托管的函数可以调用从托管函数。 托管的函数创建结构的一个实例并初始化与新的关键字对嵌入的指针 (而不是[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)关键字)。 由于这分配本机堆上的内存，所以没有无需将固定要禁止显示垃圾回收的数组。 但是，必须显式删除内存以避免内存泄露。  
   
 ```  
 // marshal_embedded_pointer.cpp  
@@ -74,27 +73,30 @@ int main() {
 }  
 ```  
   
-  **\[managed\] count \= 10**  
-**array\[0\] \= 72.624326996796**  
-**array\[1\] \= 81.7325359590969**  
-**array\[2\] \= 76.8022689394663**  
-**array\[3\] \= 55.8161191436537**  
-**array\[4\] \= 20.6033154021033**  
-**array\[5\] \= 55.8884794618415**  
-**array\[6\] \= 90.6027066011926**  
-**array\[7\] \= 44.2177873310716**  
-**array\[8\] \= 97.754975314138**  
-**array\[9\] \= 27.370445768987**  
-**\[unmanaged\] count \= 10**  
-**array\[0\] \= 72.624327**  
-**array\[1\] \= 81.732536**  
-**array\[2\] \= 76.802269**  
-**array\[3\] \= 55.816119**  
-**array\[4\] \= 20.603315**  
-**array\[5\] \= 55.888479**  
-**array\[6\] \= 90.602707**  
-**array\[7\] \= 44.217787**  
-**array\[8\] \= 97.754975**  
-**array\[9\] \= 27.370446**   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+[managed] count = 10  
+array[0] = 72.624326996796  
+array[1] = 81.7325359590969  
+array[2] = 76.8022689394663  
+array[3] = 55.8161191436537  
+array[4] = 20.6033154021033  
+array[5] = 55.8884794618415  
+array[6] = 90.6027066011926  
+array[7] = 44.2177873310716  
+array[8] = 97.754975314138  
+array[9] = 27.370445768987  
+[unmanaged] count = 10  
+array[0] = 72.624327  
+array[1] = 81.732536  
+array[2] = 76.802269  
+array[3] = 55.816119  
+array[4] = 20.603315  
+array[5] = 55.888479  
+array[6] = 90.602707  
+array[7] = 44.217787  
+array[8] = 97.754975  
+array[9] = 27.370446  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

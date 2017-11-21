@@ -1,59 +1,58 @@
 ---
-title: "2.7.1 threadprivate Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.1 threadprivate 指令 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75214320f40ad60940ff4713dc80b8d3111378c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.1 threadprivate Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`threadprivate` 指令在 *变量中* 指定的命名文件大小、命名空间范围或静态块范围变量私有传递给线程。  *变量列表* 是逗号分隔的不包含不完整类型的列表变量。  `threadprivate` 指令的语法如下所示:  
+# <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指令
+`threadprivate`指令使命名的文件范围、 命名空间范围或静态的块范围变量中指定*变量列表*专用于一个线程。 *变量列表*是不具有不完整类型的变量的以逗号分隔列表。 语法`threadprivate`指令是，如下所示：  
   
 ```  
 #pragma omp threadprivate(variable-list) new-line  
 ```  
   
- `threadprivate` 变量的每个副本初始化一次，在未指定点在程序在第一之前对该副本并以常规方式 \(即，，因为该主复制到过程中序列化的执行过程中初始化\)。  请注意，如果对象引用按 `threadprivate` 变量的显式初始值设定项和对象的值在第一之前修改引用要复制的变量，则该行为是未指定的。  
+ 每个副本`threadprivate`变量一次，在初始化到该副本的第一个引用之前的计划中并按常规方式的未指定点 （即，为将在该程序的串行执行过程中初始化的主副本）。 请注意，如果在一个显式初始值设定项中引用对象`threadprivate`一份该变量，则首次引用之前修改变量和对象的值，则行为是未指定。  
   
- 与任何私有变量，线程无法引用 `threadprivate` 对象的另一个线程的副本。  在序列化区域以及程序执行期间的主区域，引用是对对象的主线程的副本。  
+ 如与任何私有变量，线程不能引用另一个线程份`threadprivate`对象。 在串行区域和程序的主区域中，引用将发送到主线程的对象的副本。  
   
- 在第一个并行区域执行后，在 `threadprivate` 对象的数据确保仍然存在，仅当动态线程结构已被禁用，并且，如果线程数。所有并行区域不变。  
+ 在执行第一个并行区域中的数据后`threadprivate`对象保证以保留仅已禁用，如果动态线程机制和线程数保持为所有并行区域不变。  
   
- 为 `threadprivate` 指令的限制如下所示:  
+ 对限制`threadprivate`指令如下所示：  
   
--   文件的大小或命名空间范围变量的一个 `threadprivate` 指令必须在所有定义或声明外部出现，并且必须在词法上排在所有对任何在其变量列表。  
+-   A`threadprivate`文件范围或命名空间范围变量的指令必须显示在外部的任何定义或声明，以及必须词法前面的所有引用的任何变量在其列表中。  
   
--   每个变量在 `threadprivate` 指令的 *变量列表* 在文件或命名空间范围必须是指一个变量声明在词法指令前面的文件或命名空间范围。  
+-   在每个变量*变量列表*的`threadprivate`在文件或命名空间范围内的指令必须引用在词法上之前指令的文件或命名空间范围内的变量声明。  
   
--   静态块范围变量的一个 `threadprivate` 指令必须出现在变量的范围内和不适用于嵌套的大小。  指令必须在词法上排在所有对任何在其变量列表。  
+-   A`threadprivate`指令为静态的块范围变量必须显示在变量的作用域中，不能在嵌套的范围。 词法上指令必须在所有引用的任何变量都前在其列表中。  
   
--   每个变量在 `threadprivate` 指令的 *变量列表* 块范围必须引用在词法指令前面的同一范围的变量声明。  变量声明必须使用这种静态的存储类说明符。  
+-   在每个变量*变量列表*的`threadprivate`块范围中的指令必须引用相同的词法之前指令的范围中的变量声明。 变量的声明必须使用静态存储类说明符。  
   
--   如果变量在一个翻译单元的一个 `threadprivate` 指令指定，在声明它的每个翻译单元的一个 `threadprivate` 指令必须指定。  
+-   如果在指定变量`threadprivate`指令中一个翻译单元，它必须按指定`threadprivate`指令在其中声明每个翻译单元中。  
   
--   `threadprivate` 变量不能出现除 `copyin`、 `copyprivate`、 `schedule`、 `num_threads`或 **如果** 子句的任何子句。  
+-   A`threadprivate`变量不能出现在除任何子句中`copyin`， `copyprivate`， `schedule`， `num_threads`，或**如果**子句。  
   
--   `threadprivate` 变量的地址不是地址常数。  
+-   地址`threadprivate`变量不是地址常量。  
   
--   `threadprivate` 变量不能包含不完整类型或引用类型。  
+-   A`threadprivate`变量必须没有不完整类型或引用类型。  
   
--   ，则声明使用显式初始值设定项，与非 POD 类类型的一个 `threadprivate` 变量必须有一个可访问，明确的复制构造函数。  
+-   A`threadprivate`与非 POD 类类型的变量必须具有可访问的明确的复制构造函数，如果它用一个显式初始值设定项声明。  
   
- 下面的示例演示修改出现在本过程中的变量如何产生未指定的行为，使用一个从属对象和复制构造函数，以及如何避免此问题。  
+ 下面的示例演示如何修改变量时，将显示在初始值设定项可能会导致未指定的行为，以及如何通过使用一个辅助对象和复制构造函数来避免此问题。  
   
 ```  
 int x = 1;  
@@ -75,8 +74,8 @@ void f(int n) {
 }  
 ```  
   
-## 交叉引用:  
+## <a name="cross-references"></a>交叉引用：  
   
--   动态线程，请参见中的第 39 页的 [第3.1.7部分](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 。  
+-   动态线程，请参阅[部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上。  
   
--   `OMP_DYNAMIC` 环境变量，请参见中的第 49 页的 [第4.3部分](../../parallel/openmp/4-3-omp-dynamic.md) 。
+-   `OMP_DYNAMIC`环境变量，请参阅[部分 4.3](../../parallel/openmp/4-3-omp-dynamic.md)页 49 上。

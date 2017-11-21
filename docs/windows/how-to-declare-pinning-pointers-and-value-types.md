@@ -1,33 +1,33 @@
 ---
-title: "如何：声明钉住指针和值类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "钉住指针"
-  - "值类型, 声明"
+title: "如何： 声明钉住指针和值类型 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- value types, declaring
+- pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 04ee5a54ec797324aa0bad6e72f8cfc0861d2a38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：声明钉住指针和值类型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-只有值类型可以装箱。  然后可以声明钉住的指针到装箱值类型的值类型对象和使用 **pin\_ptr**。  
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>如何：声明钉住指针和值类型
+值类型可以隐式装箱。 然后可以声明钉住指针指向值的类型对象本身并使用**pin_ptr**为装箱的值类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // pin_ptr_value.cpp  
@@ -47,7 +47,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 8  
@@ -55,5 +55,5 @@ int main() {
 7  
 ```  
   
-## 请参阅  
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

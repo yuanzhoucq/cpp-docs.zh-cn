@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -40,19 +39,17 @@ helpviewer_keywords:
 - C3267
 - C3281
 - C3294
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 10c64a5969e8a735ad4e7797ecf41ab0674c82cc
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>编译器错误 C3200 通过 C3299
 文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
@@ -138,9 +135,9 @@ ms.lasthandoff: 10/10/2017
 |[编译器错误 C3271](compiler-error-c3271.md)|*字段*': 无效的值*数*FieldOffset 特性的|  
 |[编译器错误 C3272](compiler-error-c3272.md)|*符号*： 符号需要 FieldOffset，因为它是结构/类的成员*type_name* layoutkind 定义|  
 |[编译器错误 C3273](compiler-error-c3273.md)|*关键字*： 不允许对 c + + try 块执行|  
-|[编译器错误 C3274](compiler-error-c3274.md)|最后 /\_\_最后没有匹配，并重试|  
+|[编译器错误 C3274](compiler-error-c3274.md)|最后 / &#95; &#95; 最后没有匹配，并重试|  
 |[编译器错误 C3275](compiler-error-c3275.md)|*标识符*： 不能使用该无限定符的符号|  
-|[编译器错误 C3276](compiler-error-c3276.md)|*关键字*： 最后外跳转 /\_\_最后块具有未定义的行为在终止处理过程|  
+|[编译器错误 C3276](compiler-error-c3276.md)|*关键字*： 最后外跳转 / &#95; &#95; 最后块具有未定义的行为在终止处理过程|  
 |[编译器错误 C3277](compiler-error-c3277.md)|不能定义非托管的枚举*枚举*内部托管*类型*|  
 |[编译器错误 C3278](compiler-error-c3278.md)|直接调用的接口或纯方法*函数*将在运行时失败|  
 |[编译器错误 C3279](compiler-error-c3279.md)|不允许对在 cli 命名空间中声明的类模板进行部分专用化、显式专用化和显式实例化|  
@@ -164,4 +161,3 @@ ms.lasthandoff: 10/10/2017
 |[编译器错误 C3297](compiler-error-c3297.md)|*constraint2*： 不能使用*constraint1*作为约束因为*constraint1*具有值约束|  
 |[编译器错误 C3298](compiler-error-c3298.md)|*constraint1*： 不能使用*constraint2*作为约束因为*constraint2*具有 ref 约束和*constraint1*具有值约束|  
 |[编译器错误 C3299](compiler-error-c3299.md)|*函数*： 无法指定约束，它们都继承自基方法|  
-

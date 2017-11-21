@@ -1,33 +1,33 @@
 ---
-title: "如何：创建发行版本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "发行版本, 创建"
-  - "Win32, 发行版本"
+title: "如何： 创建发行版本 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Win32, release build
+- release builds, creating
 ms.assetid: 6a4c89b1-48f0-44d2-8703-ca0a4b0351bf
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ca4d1401cf0cff6750473a3281a94053298662b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：创建发行版本
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-### 生成程序的发布版本  
+# <a name="how-to-create-a-release-build"></a>如何：创建发行版本
+### <a name="to-generate-a-release-build-of-your-program"></a>若要生成你的程序的发布版本  
   
-1.  从“标准”工具栏上的“解决方案配置”下拉列表中选择“发布”。  
+1.  选择**版本**从**解决方案配置**下拉列表中，这将在上**标准**工具栏。  
   
-2.  在**“生成”**菜单上，单击**“生成”**。  
+2.  上**生成**菜单上，单击**生成**。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [发行版本](../../build/reference/release-builds.md)

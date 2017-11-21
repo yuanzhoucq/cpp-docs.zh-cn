@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::CreateRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl.CreateRow"
-  - "ATL.IRowsetImpl.CreateRow"
-  - "ATL::IRowsetImpl::CreateRow"
-  - "CreateRow"
-  - "IRowsetImpl::CreateRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRow 方法"
+title: "Irowsetimpl:: Createrow |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl.CreateRow
+- ATL.IRowsetImpl.CreateRow
+- ATL::IRowsetImpl::CreateRow
+- CreateRow
+- IRowsetImpl::CreateRow
+dev_langs: C++
+helpviewer_keywords: CreateRow method
 ms.assetid: b01c430c-9484-4fef-a6cf-a2e8d9d99130
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2f455935a1736eae2c70d95f4528d216a80e782a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::CreateRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 调用的帮助器方法将新的 **HROW**。  
+# <a name="irowsetimplcreaterow"></a>IRowsetImpl::CreateRow
+由调用一个帮助器方法[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)分配一个新**HROW**。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -41,21 +40,21 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *lRowsOffset*  
- 创建行的光标位置。  
+ 正在创建的行的光标位置。  
   
  *cRowsObtained*  
- 引用传递给回指示要创建的用户。  
+ 引用传递回用户，该值指示创建的行数。  
   
  *rgRows*  
- **HROW**数组中返回到包含新生成的行句柄的调用方。  
+ 数组**HROW**s 返回新创建的行句柄调用方。  
   
-## 备注  
- 如果行存在，此方法调用将返回。[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 否则，它将 RowClass 模板变量的新实例并将其添加到。[m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)  
+## <a name="remarks"></a>备注  
+ 如果行存在，此方法调用[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)并返回。 否则为它分配 RowClass 模板变量的新实例并将其添加到[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRowsetImpl 类](../../data/oledb/irowsetimpl-class.md)

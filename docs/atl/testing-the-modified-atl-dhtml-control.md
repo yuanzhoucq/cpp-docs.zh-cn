@@ -1,54 +1,55 @@
 ---
-title: "Testing the Modified ATL DHTML Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls, 测试"
-  - "HTML 控件, 测试"
-  - "testing controls"
+title: "测试修改后的 ATL DHTML 控件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, testing
+- testing controls
+- DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84b9aa9ffb04b807cba07fdd3577622f62f6ab45
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Testing the Modified ATL DHTML Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-测试您的新控件从而了解现在可以使用。  
+# <a name="testing-the-modified-atl-dhtml-control"></a>测试修改后的 ATL DHTML 控件
+试用新控件，以了解它如何现在工作。  
   
-#### 生成并测试修改的控件  
+#### <a name="to-build-and-test-the-modified-control"></a>若要生成并测试修改后的控件  
   
-1.  重新生成项目并打开该测试容器。  有关如何访问测试容器的信息，请参见 [测试属性和事件与测试容器](../mfc/testing-properties-and-events-with-test-container.md)。  
+1.  重新生成项目并在测试容器中打开它。 请参阅[使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)有关如何访问测试容器的信息。  
   
-     调整控件来显示您添加的所有按钮。  
+     调整控件以显示所有你添加的按钮的大小。  
   
-2.  检查通过修改HTML插入的两个按钮。  每个按钮谨记在 [修改ATL DHTML控件](../atl/modifying-the-atl-dhtml-control.md)标识的标签: **Refresh** 和 **HelloHTML**。  
+2.  检查通过更改 HTML 插入的两个按钮。 每个按钮具有您在中标识的标签[修改 ATL DHTML 控件](../atl/modifying-the-atl-dhtml-control.md):**刷新**和**HelloHTML**。  
   
-3.  测试两个新按钮以查看其工作方式。  
+3.  测试两个新的按钮，以查看它们如何工作。  
   
- 现在测试不是用户界面的方法。  
+ 现在，测试不是 UI 的一部分的方法。  
   
-1.  显示控件，因此，激活该边框。  
+1.  突出显示该控件，以便激活边框。  
   
-2.  在 **Control** 菜单上，单击 **Invoke Methods**。  
+2.  上**控件**菜单上，单击**调用方法**。  
   
- 在标记 **Method Name** 的列表的方法是容器可调用的方法: `MethodInvoked`和`GoToURL`。  其他方法由UI控件的。  
+ 标记为列表中的方法**方法名称**是容器可以调用的方法：`MethodInvoked`和`GoToURL`。 通过 UI，所有其他方法进行控制。  
   
-1.  选择一个方法调用并单击 `Invoke` 公开方法的消息框或定位到www.microsoft.com。  
+1.  选择一个方法调用，并单击`Invoke`显示方法的消息框，或导航到 www.microsoft.com。  
   
-2.  在 **Invoke Methods** 对话框中，单击 **Close**。  
+2.  在**调用方法**对话框中，单击**关闭**。  
   
- 若要了解有关由一个ATL DHTML控件的各个组件和文件，请参见 [标识DHTML控件项目的元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
+ 若要了解有关各个元素和构成的 ATL DHTML 控件文件的详细信息，请参阅[确定 DHTML 控件项目元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
+

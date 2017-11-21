@@ -1,32 +1,30 @@
 ---
-title: "SafeLessThanEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeLessThanEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeLessThanEquals 函数"
+title: "SafeLessThanEquals |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeLessThanEquals
+dev_langs: C++
+helpviewer_keywords: SafeLessThanEquals function
 ms.assetid: cbd70526-faf2-4fbc-96a0-b61e8cf5f04a
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: dd68034f107e13adb8a7584f6c7eba5e7844d896
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# SafeLessThanEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-比较两个数。  
+# <a name="safelessthanequals"></a>SafeLessThanEquals
+比较两个数字。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <typename T, typename U>  
@@ -36,32 +34,32 @@ inline bool SafeLessThanEquals (
 ) throw ();  
 ```  
   
-#### 参数  
- \[in\] `t`  
- 要比较的第一个数字。  这必须是类型 T。  
+#### <a name="parameters"></a>参数  
+ [in] `t`  
+ 要比较的第一个数字。 其类型必须为 T。  
   
- \[in\] `u`  
- 要比较的第二个数字。  这必须为类型 U。  
+ [in] `u`  
+ 要比较的第二个数字。 其类型必须为 U。  
   
-## 返回值  
- `true`，如果 `t` 小于或等于 `u`;否则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果`t`小于或等于`u`; 否则为`false`。  
   
-## 备注  
- `SafeLessThanEquals` 通过使您能够比较数字的两种不同类型扩展普通比较运算符。  
+## <a name="remarks"></a>备注  
+ `SafeLessThanEquals`扩展的正则比较运算符，通过它可以比较两个不同类型的数字。  
   
- 此方法为 [SafeInt 库](../windows/safeint-library.md) 的一部分以及单个比较操作设计，而不会创建的实例。[SafeInt 类](../windows/safeint-class.md)  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例的适用的单个比较运算[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  此方法，如果必须保护时，才应使用个数学运算。  如果存在多个操作，应该使用 `SafeInt` 类 \(而非调用各个独立函数。  
+>  此方法仅应在必须保护单个数学运算时使用。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
   
- 有关类型 U 和 T 模板的更多信息，请参见 [SafeInt 函数](../windows/safeint-functions.md)。  
+ 有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
-## 要求  
- **页眉：** safeint.h  
+## <a name="requirements"></a>要求  
+ **标头：** safeint.h  
   
- **命名空间：** Microsoft::Utilities  
+ **Namespace:** microsoft:: utilities  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [SafeInt 函数](../windows/safeint-functions.md)   
  [SafeInt 库](../windows/safeint-library.md)   
  [SafeInt 类](../windows/safeint-class.md)   

@@ -1,32 +1,30 @@
 ---
-title: "accumulate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::accumulate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accumulate 函数 [STL/CLR]"
+title: "累积 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::accumulate
+dev_langs: C++
+helpviewer_keywords: accumulate function [STL/CLR]
 ms.assetid: b80e1ef1-1858-4c1d-817b-c42ad1f17a2f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 50334d4468f34afa10639ad18b649c964b126ee4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# accumulate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-被计算顺序部分计算和所有元素的总和在指定的范围中包括某些初始值或计算从使用的指定二进制操作类似获取的顺序部分结果除和之外。  
+# <a name="accumulate-stlclr"></a>accumulate (STL/CLR)
+通过计算连续部分总和来计算指定范围（包括一些初始值）中所有元素的和，或计算通过指定的二元运算（而不是求和运算）获得的类似的连续部分结果的结果。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _InIt, class _Ty> inline  
@@ -35,13 +33,13 @@ template<class _InIt, class _Ty, class _Fn2> inline
     _Ty accumulate(_InIt _First, _InIt _Last, _Ty _Val, _Fn2 _Func);  
 ```  
   
-## 备注  
- 此函数行为与 STL 数字 `accumulate`函数相同。  有关详细信息，请参阅[accumulate](../Topic/accumulate.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库数值函数相同`accumulate`。 有关详细信息，请参阅[累积](../standard-library/numeric-functions.md#accumulate)。  
   
-## 要求  
- **页眉：** \<\/cliext 数字\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/数字 >  
   
- **命名空间：** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [numeric](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

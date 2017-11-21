@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4959
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4959
+f1_keywords: C4959
+dev_langs: C++
+helpviewer_keywords: C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 89413ece25d2a60b821765ec6e07d4ab574ea81a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-c4959"></a>编译器警告 C4959
 不能在 /clr:safe 中定义非托管结构“type”，因为访问其成员会产生不可验证的代码  

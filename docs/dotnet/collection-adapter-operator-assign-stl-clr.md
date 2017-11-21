@@ -1,46 +1,43 @@
 ---
-title: "collection_adapter::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成员 [STL/CLR]"
+title: "collection_adapter::operator = (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 45365a33-3b56-4cb7-962f-81c20d8901d3
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51ebc0fd2b3d13227cec2db5a755bed8a6739674
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-替换存储 BCL 句柄。  
+# <a name="collectionadapteroperator-stlclr"></a>collection_adapter::operator= (STL/CLR)
+替换存储的 BCL 句柄。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);  
 ```  
   
-#### 参数  
- right  
- 复制的适配器。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 要复制的适配器。  
   
-## 备注  
- 成员运算符将复制 `right` 给对象，然后返回 `*this`。  使用它用在 `right` 中存储的 BCL 句柄的副本替换存储的 BCL 句柄。  
+## <a name="remarks"></a>备注  
+ 成员运算符副本`right`到对象，然后返回`*this`。 用于将替换中的存储 BCL 句柄的副本存储的 BCL 句柄`right`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_collection_adapter_operator_as.cpp   
@@ -74,12 +71,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 要求  
- **标头:** \<cliext\/adapter\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/适配器 >  
   
-## 请参阅  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

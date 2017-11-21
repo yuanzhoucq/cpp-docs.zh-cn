@@ -1,70 +1,71 @@
 ---
-title: "ATL COM Desktop Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 关于 ATL"
-  - "ATL, 参考"
+title: "ATL COM 桌面组件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, reference
+- ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ATL COM Desktop Components
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL引用文档活动模板库\(atl\) \(ATL\)，简化编程组件对象模型\(COM\)对象的设置基于模板的C\+\+选件类。  完全利用ATL，对COM的工作熟悉是强烈建议的。  
+# <a name="atl-com-desktop-components"></a>ATL COM 桌面组件
+ATL 引用记录活动模板库 (ATL)，一组基于模板的 c + + 类，用于简化组件对象模型 (COM) 对象的编程。 要完全利用 ATL，强烈建议熟悉 COM 工作。  
   
-## 本节内容  
- [ATL选件类概述](../atl/atl-class-overview.md)  
- 提供指向和类别组织的ATL选件类的简要说明。  
+## <a name="in-this-section"></a>本节内容  
+ [ATL 类概述](../atl/atl-class-overview.md)  
+ 提供链接到并按类别组织的 ATL 类的简要说明。  
   
- [ATL选件类](../atl/reference/atl-classes.md)  
- 提供对按字母顺序组织的选件类的材料。  
+ [ATL 类](../atl/reference/atl-classes.md)  
+ 提供在按字母顺序组织的类的参考资料。  
   
  [ATL 函数](../atl/reference/atl-functions.md)  
- 提供对按字母顺序组织的全局函数的材料。  包括组织功能的主题分类。  
+ 提供按字母顺序组织的全局函数的参考资料。 包括将函数组织为类别的主题。  
   
- [ATL全局变量](../atl/reference/atl-global-variables.md)  
- 提供对按字母顺序组织的全局变量的材料。  
+ [ATL 全局变量](../atl/reference/atl-global-variables.md)  
+ 提供按字母顺序组织的全局变量的参考资料。  
   
- [ATL宏](../atl/reference/atl-macros.md)  
- 提供对按字母顺序组织宏的材料。  包括组织宏的主题分类。  
+ [ATL 宏](../atl/reference/atl-macros.md)  
+ 提供按字母顺序组织的宏的参考资料。 包括将宏组织为类别的主题。  
   
- [ATL结构](../atl/reference/atl-structures.md)  
- 提供对按字母顺序的组织结构的材料。  
+ [ATL 结构](../atl/reference/atl-structures.md)  
+ 按字母顺序组织的结构上提供参考资料。  
   
  [ATL Typedef](../atl/reference/atl-typedefs.md)  
- 提供对按字母顺序组织的typedef的材料  
+ 提供有关按字母顺序组织的 typedef 的参考资料  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- 提供指向ATL原型，理论上的选件类提供方法、数据成员、静态函数、函数，或其他功能的集合，按字母顺序列出。  
+ [原型](../atl/reference/atl-archetypes.md)  
+ 提供指向 ATL 原型，它们是理论上提供的方法、 数据成员、 静态函数、 typedef 或其他功能，按字母顺序列出集合的类。  
   
- [过时ATL主题](http://msdn.microsoft.com/zh-cn/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- 提供对选件类的参考资料，过时或已弃用的宏和功能。  
+ [过时 ATL 主题](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
+ 在类、 宏和已过时或已弃用的函数上提供参考资料。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 使用活动模板库\(ATL\)，主题提供有关如何进行编程。  
+ 提供有关如何使用活动模板库 (ATL) 进行编程的主题。  
   
- [ATL教程](../atl/active-template-library-atl-tutorial.md)  
- 带领您完成创建控件的过程，并在此过程中阐释一些 ATL 基础知识。  
+ [ATL 教程](../atl/active-template-library-atl-tutorial.md)  
+ 将引导你完成创建控件并演示了在过程中的一些 ATL 基础知识。  
   
- [ATL示例](../top/visual-cpp-samples.md)  
- 采样演示如何使用ATL来编写COM对象的代码。  
+ [ATL 示例](../visual-cpp-samples.md)  
+ 演示如何使用 ATL 编写 COM 对象的示例代码。  
   
  [OLE DB 模板](../data/oledb/ole-db-templates.md)  
- 提供有关 OLE DB 使用者和提供程序模板（一组实现许多常用 OLE DB 接口的模板类）的参考资料。  
+ 提供 OLE DB 使用者参考资料和提供程序模板，实现许多常用 OLE DB 接口的一组模板类。  
   
- [Visual C\+\+ 库](http://msdn.microsoft.com/zh-cn/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- 提供指向Visual C\+\+附带的各种库，包括ATL、MFC，OLE DB模板、运行库和标准C\+\+库。
+ [Visual C++ 库](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ 提供 Visual C++ 附带的各种库链接，其中包括 ATL、MFC、OLE DB 模板、C 运行时库和 C++ 标准库。
+

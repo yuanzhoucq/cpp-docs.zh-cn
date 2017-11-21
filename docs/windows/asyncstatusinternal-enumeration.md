@@ -1,60 +1,58 @@
 ---
-title: "AsyncStatusInternal 枚举 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::Details::AsyncStatusInternal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsyncStatusInternal 枚举"
+title: "AsyncStatusInternal 枚举 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::Details::AsyncStatusInternal
+dev_langs: C++
+helpviewer_keywords: AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f014cb2bdf1fa6077dd6922e40e0253b5297c29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncStatusInternal 枚举
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 枚举
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 enum AsyncStatusInternal;  
 ```  
   
-## 备注  
- 指定要枚举异步操作的状态和 **Windows::Foundation::AsyncStatus** 枚举之间的映射。  
+## <a name="remarks"></a>备注  
+ 指定状态的异步操作的内部枚举之间的映射和**Windows::Foundation::AsyncStatus**枚举。  
   
-## 成员  
+## <a name="members"></a>成员  
  `_Created`  
- 为：:Windows::Foundation::AsyncStatus::Created 的等效项  
+ 等效于:: Windows::Foundation::AsyncStatus:: 创建  
   
  `_Started`  
- 为：:Windows::Foundation::AsyncStatus::Started 的等效项  
+ 等效于:: Windows::Foundation::AsyncStatus:: 启动  
   
  `_Completed`  
- 为：:Windows::Foundation::AsyncStatus::Completed 的等效项  
+ 等效于:: Windows::Foundation::AsyncStatus:: 完成  
   
  `_Cancelled`  
- 为：:Windows::Foundation::AsyncStatus::Cancelled 的等效项  
+ 等效于:: Windows::Foundation::AsyncStatus:: 已取消  
   
  `_Error`  
- 为：:Windows::Foundation::AsyncStatus::Error 的等效项  
+ 等效于:: Windows::Foundation::AsyncStatus::Error  
   
-## 要求  
- **页眉：**async.h  
+## <a name="requirements"></a>要求  
+ **标头：** async.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

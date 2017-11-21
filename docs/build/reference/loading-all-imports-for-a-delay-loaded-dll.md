@@ -1,36 +1,35 @@
 ---
-title: "加载被延迟加载的 DLL 的所有导入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__HrLoadAllImportsForDll 链接器选项"
+title: "加载被延迟加载的 DLL 的所有导入 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 842b23afe7aec4d66eaf0787976d8e0c5d9a7320
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 加载被延迟加载的 DLL 的所有导入
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-delayhlp.cpp 中定义的 **\_\_HrLoadAllImportsForDll** 函数通知链接器加载用 [\/delayload](../../build/reference/delayload-delay-load-import.md) 链接器选项指定的 DLL 中的所有导入。  
+# <a name="loading-all-imports-for-a-delay-loaded-dll"></a>加载被延迟加载的 DLL 的所有导入
+**__HrLoadAllImportsForDll**函数，其定义中 delayhlp.cpp，通知链接器从指定的 DLL 加载所有导入[/delayload](../../build/reference/delayload-delay-load-import.md)链接器选项。  
   
- 加载所有导入使您能够将错误处理置于代码中的一个地方，而无需在对导入的实际调用周围使用异常处理。  它还避免了因 Helper 代码加载导入失败而导致应用程序的一部分在进程中失败。  
+ 加载所有导入，可将放在代码中的一个位置中的错误处理，而不必使用异常处理的导入的实际调用周围。 它还可以避免在你的应用程序宿主即失败部分通过由于未能加载导入的帮助器代码的过程的情况。  
   
- 调用 **\_\_HrLoadAllImportsForDll** 不会更改挂钩和错误处理的行为；有关更多信息，请参见[错误处理和通知](../../build/reference/error-handling-and-notification.md)。  
+ 调用**__HrLoadAllImportsForDll**不会更改的行为挂钩和错误处理; 请参阅[错误处理和通知](../../build/reference/error-handling-and-notification.md)有关详细信息。  
   
- 通过 **\_\_HrLoadAllImportsForDll** 的 DLL 名称与 DLL 自身内存储的名称进行比较，区分大小写。  
+ DLL 名称传递给**__HrLoadAllImportsForDll**相比存储内 DLL 本身的名称和区分大小写。  
   
- 下面的示例显示如何调用 **\_\_HrLoadAllImportsForDll**：  
+ 下面的示例演示如何调用**__HrLoadAllImportsForDll**:  
   
 ```  
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {  
@@ -39,5 +38,5 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }  
 ```  
   
-## 请参阅  
- [链接器的延迟加载 DLL 支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+## <a name="see-also"></a>另请参阅  
+ [延迟加载 DLL 的链接器支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)

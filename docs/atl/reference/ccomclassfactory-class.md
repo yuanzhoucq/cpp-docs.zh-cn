@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactory
 - ATLCOM/ATL::CComClassFactory::CreateInstance
 - ATLCOM/ATL::CComClassFactory::LockServer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactory class
+dev_langs: C++
+helpviewer_keywords: CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a0c1c115bfffa1de9a2a8c91c5268de66c68e7cd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 832563b99d33fe56542fcc48a7ca144124c81e53
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 类
 此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口。  
@@ -66,13 +48,13 @@ class CComClassFactory
 ## <a name="remarks"></a>备注  
  `CComClassFactory`实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口，其中包含用于创建特定的 CLSID，一个对象，以及锁定内存中要允许更快地创建新对象的类工厂方法。 **IClassFactory**必须为系统注册表中和为你分配 CLSID 注册每个类实现。  
   
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要重写此默认值，指定之一`DECLARE_CLASSFACTORY` *XXX*在类定义的宏。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)宏的类工厂使用指定的类︰  
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明`CComClassFactory`作为默认类工厂。 若要重写此默认值，指定之一`DECLARE_CLASSFACTORY` *XXX*在类定义的宏。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)宏的类工厂使用指定的类：  
   
- [!code-cpp[NVC_ATL_COM #8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]  
   
  上面的类定义指定**CMyClassFactory**将用作对象的默认类工厂。 **CMyClassFactory**必须派生自`CComClassFactory`，并重写`CreateInstance`。  
   
- ATL 提供了三个其他声明类工厂的宏︰  
+ ATL 提供了三个其他声明类工厂的宏：  
   
 - [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)使用[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)，它可以控制通过许可证的创建。  
   
@@ -81,7 +63,7 @@ class CComClassFactory
 - [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)，它构造单个[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+ **标头：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
  创建指定的 CLSID 的对象并检索到此对象的接口指针。  
@@ -126,4 +108,3 @@ STDMETHOD(LockServer)(BOOL fLock);
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [类概述](../../atl/atl-class-overview.md)
-

@@ -1,48 +1,51 @@
 ---
-title: "Implementing the Event Handling Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 事件处理"
-  - "事件处理, ATL"
-  - "接口, event and event sink"
+title: "实现的事件处理接口 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, event handling
+- event handling, ATL
+- interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3ea192e863fe9813a762c0c948cc141b068c3f43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing the Event Handling Interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementing-the-event-handling-interface"></a>实现的事件处理接口
+ATL 可帮助你具有所需的处理事件的所有三个元素： 实现事件接口、 通知事件源和取消通知事件源。 你将需要采取的精确步骤取决于事件接口和你的应用程序的性能要求的类型。  
+  
+ 实现接口使用 ATL 的最常见方法是：  
+  
+-   直接从自定义接口派生。  
+  
+-   派生自[IDispatchImpl](../atl/reference/idispatchimpl-class.md)双重接口的类型库中所述。  
+  
+-   派生自[IDispEventImpl](../atl/reference/idispeventimpl-class.md)对于调度接口的类型库中所述。  
+  
+-   派生自[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)对于调度接口未描述类型库中或者在你想要通过不在加载运行时类型信息来提高效率。  
+  
 
-ATL帮助您具有用于处理事件所需的全部三个组件的:实现事件接口，建议事件源和unadvising事件源。  您需要采取的准确的步骤确定事件接口的类型和应用程序的性能要求。  
+ 如果你要实现自定义或双重接口，你应通过调用告知事件源[AtlAdvise](reference/connection-point-global-functions.md#atladvise)或[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)。 你将需要跟踪的调用所返回您自己的 cookie。 调用[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)以断开的连接。  
+
   
- 使用ATL实现的接口的最常用方法是:  
+ 如果你要实现调度接口使用`IDispEventImpl`或`IDispEventSimpleImpl`，你应通过调用建议事件源[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)。 调用[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)以断开的连接。  
   
--   直接从派生的自定义接口。  
+ 如果你使用`IDispEventImpl`作为复合控件的基类，接收器图中列出的事件源将建议和 unadvised 使用自动[CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)。  
   
--   从派生类型中描述的双重接口的 [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 库。  
+ `IDispEventImpl`和`IDispEventSimpleImpl`类为你管理 cookie。  
   
--   从派生介绍类型中的调度接口的 [IDispEventImpl](../atl/reference/idispeventimpl-class.md) 库。  
-  
--   从派生类型上不描述的调度接口的 [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) 库时，或者当希望通过不加载该类型来提高效率信息在运行时。  
-  
- 如果实现自定义或双重接口，则应通过调用 [AtlAdvise](../Topic/AtlAdvise.md) 或 [CComPtrBase::Advise](../Topic/CComPtrBase::Advise.md)建议事件源。  您将需要跟踪调用返回的cookie。  调用 [AtlUnadvise](../Topic/AtlUnadvise.md) 中断连接。  
-  
- 使用 `IDispEventImpl` 或 `IDispEventSimpleImpl`，如果实现调度接口，则应通过调用 [IDispEventSimpleImpl::DispEventAdvise](../Topic/IDispEventSimpleImpl::DispEventAdvise.md)建议事件源。  调用 [IDispEventSimpleImpl::DispEventUnadvise](../Topic/IDispEventSimpleImpl::DispEventUnadvise.md) 中断连接。  
-  
- 如果使用 `IDispEventImpl` 为复合控件的基类，在接收图中列出的事件源使用 [CComCompositeControl::AdviseSinkMap](../Topic/CComCompositeControl::AdviseSinkMap.md)会自动建议和轻率的。  
-  
- `IDispEventImpl` 和 `IDispEventSimpleImpl` 选件类管理您的cookie。  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件处理](../atl/event-handling-and-atl.md)
+

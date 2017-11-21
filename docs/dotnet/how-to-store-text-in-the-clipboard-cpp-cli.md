@@ -1,32 +1,31 @@
 ---
-title: "如何：将文本存储在剪贴板中 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪贴板, 存储文本"
-  - "文本, 在剪贴板中存储"
+title: "如何： 将文本存储在剪贴板 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, storing in Clipboard
+- Clipboard, storing text
 ms.assetid: 9996023f-b700-47ad-8ad9-1ba201eaa5a6
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 971d87da7045e079e62d2ab3274ddc35ddbffaea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：将文本存储在剪贴板中 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例使用 <xref:System.Windows.Forms> 命名空间中定义的 <xref:System.Windows.Forms.Clipboard> 对象存储字符串。  此对象提供两个成员函数：<xref:System.Windows.Forms.Clipboard.SetDataObject%2A> 和 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>。  通过将派生自 <xref:System.Object> 的任何对象发送给 <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>，可将数据存储在剪贴板中。  
+# <a name="how-to-store-text-in-the-clipboard-ccli"></a>如何：将文本存储在剪贴板中 (C++/CLI)
+下面的代码示例使用<xref:System.Windows.Forms.Clipboard>中定义的对象<xref:System.Windows.Forms>命名空间来存储字符串。 此对象提供两个成员函数：<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>和<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>。 数据存储在剪贴板上，通过发送从派生的任何对象<xref:System.Object>到<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // store_clipboard.cpp  
@@ -53,7 +52,7 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## 请参阅  
- [如何：从剪贴板中检索文本](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)   
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [如何： 检索剪贴板中的文本 (C + + /cli CLI)](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)   
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

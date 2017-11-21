@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- ppltasks/concurrency::task_options
-dev_langs:
-- C++
+f1_keywords: ppltasks/concurrency::task_options
+dev_langs: C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 9b0d7d245ae204fd59715c8142a836adbb63c10a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0bacd04cb1662e8fffecbb5b1b6c12b430c25b9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options 类（并发运行时）
 表示可用于创建任务的选项  
@@ -51,13 +33,13 @@ class task_options;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[task_options:: task_options 构造函数 （并发运行时）](#ctor)|已重载。 任务创建选项的默认列表|  
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[task_options:: get_cancellation_token 方法 （并发运行时）](#get_cancellation_token)|返回取消标记|  
 |[task_options:: get_continuation_context 方法 （并发运行时）](#get_continuation_context)|返回持续上下文|  
@@ -71,7 +53,7 @@ class task_options;
  `task_options`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** ppltasks.h  
+ **标头：** ppltasks.h  
   
  **命名空间：** 并发  
   
@@ -178,5 +160,4 @@ task_options(
  `_TaskOptions`  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace](concurrency-namespace.md)
-
+ [并发命名空间](concurrency-namespace.md)

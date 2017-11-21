@@ -1,29 +1,27 @@
 ---
-title: "使用没有 () 的函数名不产生代码 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "函数 [C++], 没有括号"
+title: "使用函数名称，没有 （） 不产生代码 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 79f360bffa4938098b4b37dd2260596c70669d12
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 使用没有 () 的函数名不产生代码
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-当使用在程序中声明并且没有括号的函数名时，编译器不产生代码。  因为编译器计算函数地址，所以不论函数是否有参数，都会出现这样情况；然而，由于不存在函数调用运算符“\(\)”，所以没有调用。  该结果类似于下面这样：  
+# <a name="using-function-name-without--produces-no-code"></a>使用没有 () 的函数名不产生代码
+当使用在程序中声明的函数名称时不带括号时，编译器不生成代码。 无论该函数使用参数，因为编译器将计算的函数地址; 将发生这种情况但是，因为不存在的函数调用运算符"（）"，则不进行调用。 此结果是类似于以下：  
   
 ```  
 // compile with /Wall to generate a warning  
@@ -31,9 +29,9 @@ int a;
 a;      // no code generated here either  
 ```  
   
- 在 Visual C\+\+ 中，甚至使用警告等级 4 也不生成诊断输出。  不发出警告；不产生代码。  
+ 在 Visual c + +，甚至使用警告等级 4 不生成诊断输出。 会不发出任何警告;会不生成任何代码。  
   
- 下面的代码示例没有错误地正确编译（有警告）和链接，但是在 `funcn( )` 引用中不产生代码。  为使这正确工作，添加函数调用运算符“\(\)”。  
+ 下面的示例代码 （伴有警告） 编译和链接正确且没有错误，但是没有产生代码引用到`funcn( )`。 为此正常工作，添加函数调用运算符"（）"。  
   
 ```  
 #include <stdio.h>  
@@ -49,5 +47,5 @@ void funcn() {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [优化代码](../../build/reference/optimizing-your-code.md)

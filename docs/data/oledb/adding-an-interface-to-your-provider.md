@@ -1,30 +1,29 @@
 ---
-title: "将接口添加到提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序模板, 对象接口"
+title: "将接口添加到你的提供商 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a9a5a383e32a4fa5cb626dee499d5b2262abe37c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 将接口添加到提供程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-确定要将接口添加到哪个对象（通常是“OLE DB 提供程序向导”创建的数据源、行集合、命令或会话对象）。  需要将接口添加到的对象可能是提供程序当前不支持的对象。  这种情况下，运行“ATL OLE DB 提供程序向导”创建对象。  右击“类视图”视图中的项目，从“添加”菜单中单击“添加类”，然后单击“ATL OLE DB 提供程序”。  可能需要将接口代码放在单独的目录中，然后将文件复制到提供程序项目。  
+# <a name="adding-an-interface-to-your-provider"></a>将接口添加到提供程序
+确定你想要将接口添加到 （通常数据源、 行集、 命令或会话对象由 OLE DB 提供程序向导创建） 的对象。 很有可能需要添加到接口的对象是指你的提供商目前不支持。 在这种情况下，运行 ATL OLE DB 提供程序向导来创建对象。 右键单击类视图中的项目，单击**添加类**从**添加**菜单，，然后单击**ATL OLE DB 访问接口**。 你可能想要将接口代码放在一个单独的目录，然后将文件复制到你的提供程序项目。  
   
- 如果创建了支持接口的新类，使对象从该类继承。  例如，可以将 **IRowsetIndexImpl** 类添加到行集合对象：  
+ 如果你创建新的类，以支持该接口，请从类中继承的对象。 例如，可能会将类添加**IRowsetIndexImpl**与行集的对象：  
   
 ```  
 template <class Creator>  
@@ -33,7 +32,7 @@ public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,
    public IRowsetIndexImpl< ... >   
 ```  
   
- 使用 COM\_INTERFACE\_ENTRY 宏将接口添加到对象中的 **COM\_MAP**。  如果没有映射，则创建一个。  例如：  
+ 添加到接口**COM_MAP**使用 COM_INTERFACE_ENTRY 宏的对象中。 如果没有任何映射，创建一个。 例如：  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -41,7 +40,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- 对于行集合对象，链接其父对象的映射以便对象可以委托给父类。  在本例中，将 COM\_INTERFACE\_ENTRY\_CHAIN 宏添加到映射：  
+ 行集对象链的映射的其父对象，以便对象可以委托给的父类。 在此示例中，将添加到映射的 COM_INTERFACE_ENTRY_CHAIN 宏：  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -50,5 +49,5 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

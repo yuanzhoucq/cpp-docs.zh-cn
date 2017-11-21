@@ -1,50 +1,49 @@
 ---
-title: "表达式计算器错误 CXX0036 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0036"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0036"
-  - "CXX0036"
+title: "表达式计算器错误 CXX0036 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0036
+dev_langs: C++
+helpviewer_keywords:
+- CXX0036
+- CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 58d5fa976306c6e8a2545ce852bf3e808bc5b2d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 表达式计算器错误 CXX0036
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-错误的上下文 {...} 规范  
+# <a name="expression-evaluator-error-cxx0036"></a>表达式计算器错误 CXX0036
+错误上下文 {...} specification  
   
- 此消息可由上下文运算符 \(**{}**\) 用法错误中的任何一个错误生成。  
+ 可以通过使用上下文运算符中的多个错误的任何生成此消息 (**{}**)。  
   
--   未正确给定上下文运算符 \(**{}**\) 的语法。  
+-   上下文运算符的语法 (**{}**) 未正确给定。  
   
      上下文运算符的语法是：  
   
-     {*function*,*module*,*dll*}*expression*  
+     {*函数*，*模块*，*dll*}*表达式*  
   
-     该语法指定了 *expression* 的上下文。  该上下文运算符具有与类型转换相同的优先级和用法。  
+     这将指定的上下文*表达式*。 上下文运算符类型强制转换为具有相同的优先级和使用情况。  
   
-     可以省略后面的逗号。  如果 *function*、*module* 或 *dll* 中的任何一个包含逗号，则必须用圆括号将整个名称括起来。  
+     可以省略尾随逗号。 如果任一*函数*，*模块*，或*dll*包含文本逗号，必须将整个名称括在括号中。  
   
--   该函数名拼写不正确，或者在指定模块或动态链接库中不存在。  
+-   函数名称拼写错误，或指定的模块或动态链接库中不存在。  
   
-     因为 C 是区分大小写的语言，所以 *function* 必须完全按照它在源中定义的大小写给定。  
+     C 是区分大小写的语言，因为*函数*必须特别中的正确大小写，因为它在源中定义。  
   
--   未能找到此模块或 DLL。  
+-   找不到模块或 DLL。  
   
-     检查指定模块或 DLL 的全路径名。  
+     请检查指定的模块或 DLL 的完整路径名称。  
   
- 该错误与 CAN0036 相同。
+ 此错误是与 CAN0036 相同。

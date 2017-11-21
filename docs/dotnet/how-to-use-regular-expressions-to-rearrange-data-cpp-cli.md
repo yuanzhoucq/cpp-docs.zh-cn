@@ -1,34 +1,33 @@
 ---
-title: "如何：使用正则表达式重新排列数据 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [C++], 重新排列"
-  - "正则表达式 [C++], 重新排列数据"
+title: "如何： 使用正则表达式重新排列数据 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular expressions [C++], rearranging data
+- data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用正则表达式重新排列数据 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何使用 .NET Framework 正则表达式支持重新排列数据或重新设置数据格式。  下面的代码示例使用 <xref:System.Text.RegularExpressions.Regex> 和 <xref:System.Text.RegularExpressions.Match> 类从字符串中提取第一个名称和最后一个名称，然后按相反顺序显示这些名称元素。  
+# <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>如何：使用正则表达式重新排列数据 (C++/CLI)
+下面的代码示例演示如何使用.NET Framework 正则表达式支持可以重新排列，或重新设置数据格式。 下面的代码示例使用<xref:System.Text.RegularExpressions.Regex>和<xref:System.Text.RegularExpressions.Match>类来从字符串中提取第一个和最后一个名称，然后按相反的顺序显示这些名称元素。  
   
- <xref:System.Text.RegularExpressions.Regex> 类用于构造描述当前数据格式的正则表达式。  假设这两个名称以逗号分隔，并且可以在逗号周围使用任意数量的空白。  然后使用 <xref:System.Text.RegularExpressions.Match> 方法来分析每个字符串。  如果成功，将从 <xref:System.Text.RegularExpressions.Match> 对象中检索第一个和最后一个名称并进行显示。  
+ <xref:System.Text.RegularExpressions.Regex>类用于构造描述当前的数据格式的正则表达式。 这两个名称都被认为用逗号分隔，并且可以使用任意数量的逗号周围的空白区域。 <xref:System.Text.RegularExpressions.Match>方法然后用于分析每个字符串。 如果成功，第一个和最后一个名称检索自<xref:System.Text.RegularExpressions.Match>对象，并显示。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // regex_reorder.cpp  
@@ -66,6 +65,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [.NET Framework 正则表达式](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [.NET Framework 正则表达式](/dotnet/standard/base-types/regular-expressions)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

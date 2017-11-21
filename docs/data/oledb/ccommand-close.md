@@ -1,53 +1,52 @@
 ---
-title: "CCommand::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Close"
-  - "CCommand::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close 方法"
+title: "Ccommand:: Close |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Close
+- CCommand::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51ed32c8c4298198b0d54390151e4a904ebd918d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Close
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-发布与命令关联的访问器 行集。  
+# <a name="ccommandclose"></a>CCommand::Close
+发布与命令关联的访问器行集。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void Close( );  
 ```  
   
-## 备注  
- 命令使用一行集、结果集访问器和 \(可选的\) 参数访问器 \(不同于不支持参数及不需要参数访问器的表\)。  
+## <a name="remarks"></a>备注  
+ 命令使用行集、结果集访问器和（可选的）参数访问器（与不支持参数并且不需要参数访问器的表不同）。  
   
- 当执行命令，还应在命令之后调用 `Close` 和 [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)。  
+ 执行命令时，应请同时调用`Close`和[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)在命令后。  
   
- 在要重复执行同一命令时，您应在调用 `Execute`之前通过调用 `Close` 释放每个结果集访问器。  在序列末尾，应调用 `ReleaseCommand` 释放参数访问器。  另一种常见情形是调用具有输出参数的存储过程。  对于许多提供程序 \(如 SQL Server 的 OLE DB 提供程序\) 输出参数值将不可访问，直到您关闭结果集访问器。  调用 `Close` 关闭返回的行集和结果集访问器，而不是参数访问器，从而允许检索输出参数值。  
+ 当您要重复执行同一命令时，您应通过在调用 `Close` 之前调用 `Execute` 来发布每个结果集访问器。 在序列末尾，应通过调用 `ReleaseCommand` 发布参数访问器。 另一种常见情形是调用具有输出参数的存储过程。 在很多提供程序（如 SQL Server 的 OLE DB 提供程序）上，输出参数值在您关闭结果集访问器前不可访问。 调用 `Close` 以关闭返回的行集和结果集访问器而不返回参数访问器，从而让您检索输出参数值。  
   
-## 示例  
- 下面的示例说明了当重复执行同一命令时如何能够调用 `Close` 和 `ReleaseCommand`.  
+## <a name="example"></a>示例  
+ 以下示例演示在重复执行同一命令时如何调用 `Close` 和 `ReleaseCommand`。  
   
- [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/CPP/ccommand-close_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CCommand 类](../../data/oledb/ccommand-class.md)   
  [CCommand::ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)

@@ -1,41 +1,39 @@
 ---
-title: "为客户重新分发 ODBC 组件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "组件 [C++]"
-  - "组件 [C++], 分发"
-  - "组件 [C++], 重新分发"
-  - "ODBC 管理器"
-  - "ODBC 组件, 重新分发"
-  - "ODBC, 分发组件"
+title: "重新分发 ODBC 组件到你的客户 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC components, redistributing
+- ODBC, distributing components
+- components [C++], distributing
+- ODBC Administrator
+- components [C++]
+- components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 861eceef234b77b96179c51979cb7d1c0d09eeeb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 为客户重新分发 ODBC 组件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果将 ODBC 管理器的功能合并到您的应用程序中，则还必须将运行这些程序的文件分布给您的用户。  这些 ODBC 文件驻留在 Visual C\+\+ 光盘的 \\OS\\System 目录下。  在同一目录下的 Redistrb.wri 文件和许可协议包含可重新分布的 ODBC 文件列表。  
+# <a name="redistributing-odbc-components-to-your-customers"></a>为客户重新分发 ODBC 组件
+如果你将 ODBC 管理员程序的功能合并到你的应用程序，则还必须分配到你的用户运行这些程序的文件。 这些 ODBC 文件驻留在 Visual c + + CD-ROM 的 \OS\System 目录。 Redistrb.wri 文件和许可协议位于同一目录中的包含你可以重新分发 ODBC 文件的列表。  
   
- 请参考该文档以获取有关您计划附带的任何 ODBC 驱动程序的信息。  您需要确定附带哪些 DLL 和其他文件。  
+ 请查阅你打算传送任何 ODBC 驱动程序的文档。 你需要确定哪些 Dll 和其他文件交付。 你还应阅读[到你的客户重新分发 ODBC 组件](../../data/odbc/redistributing-odbc-components-to-your-customers.md)，其中解释了如何重新分发 ODBC 组件。  
   
- 还应该阅读[安装数据库支持](../../data/installing-database-support-mfc-atl.md)（它提供有关 ODBC 组件和驱动器的信息）和[重新发布控件](../../data/ado-rdo/redistributing-controls.md)（它解释如何重新发布 ActiveX 控件）。  
+ 此外，你需要在大多数情况下包括其他文件。 Odbccr32.dll 是 ODBC 游标库。 此库提供 1 级驱动程序的向前和向后滚动功能。 它还提供了支持快照功能。 有关 ODBC 游标库的详细信息，请参阅[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
   
- 除此之外，多数情况下还需要包括一个文件。  Odbccr32.dll 是 ODBC 游标库。  该库赋予 1 级驱动程序前滚和后滚的功能。  它还提供了支持快照的能力。  有关 ODBC 游标库的更多信息，请参见 [ODBC：ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
-  
- 下列主题提供有关通过数据库类使用 ODBC 的更多信息：  
+ 以下主题提供有关使用 ODBC 数据库类使用的详细信息：  
   
 -   [ODBC：ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
@@ -43,6 +41,6 @@ caps.handback.revision: 7
   
 -   [ODBC：直接调用 ODBC API 函数](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## 请参阅  
- [ODBC 基础](../../data/odbc/odbc-basics.md)   
+## <a name="see-also"></a>另请参阅  
+ [ODBC 基础知识](../../data/odbc/odbc-basics.md)   
  [ODBC 管理器](../../data/odbc/odbc-administrator.md)

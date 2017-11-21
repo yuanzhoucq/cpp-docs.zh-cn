@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- decltype_cpp
-dev_langs:
-- C++
+f1_keywords: decltype_cpp
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], decltype
 - decltype operator
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f07590275ca6e2b65d6f3d58bcea825acc71f73
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="decltype--c"></a>decltype （c + +）
 `decltype` 类型说明符生成指定表达式的类型。 `decltype`连同类型说明符， [auto 关键字](../cpp/auto-cpp.md)，主要对编写模板库的开发人员很有用。 使用 `auto` 和 `decltype` 声明其返回类型取决于其模板参数类型的模板函数。 或者，使用 `auto` 和 `decltype` 声明包装对其他函数的调用，然后返回包装函数的返回类型的模板函数。  
@@ -90,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  以下原型阐述一个替代函数声明的语法。 请注意，`const`和`volatile`限定符，和`throw`[异常规范](../cpp/exception-specifications-throw-cpp.md)都是可选的。 *Function_body*占位符表示指定函数的行为的复合语句。 作为最佳编码做法，*表达式*中的占位符`decltype`语句应与指定的表达式匹配`return`语句，如果有的话，在*function_body*。  
   
- **自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>选择</sub>**易失性**<sub>选择</sub> ** -> ** **decltype (***表达式* **)** **引发**<sub>选择</sub> **{** *function_body***};**  
+ **自动** *function_name* **(** *参数*<sub>选择</sub> **)** **const**<sub>选择</sub>**易失性**<sub>选择</sub>  **->**  **decltype (***表达式* **)** **引发**<sub>选择</sub> **{** *function_body***};**  
   
  在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，此代码示例还使用右值引用和`forward`函数模板来支持*完美转发*。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
@@ -214,4 +210,3 @@ static_assert(test2, "PASS2");
   
  `decltype(auto)`需要 Visual Studio 2015 或更高版本。  
   
-

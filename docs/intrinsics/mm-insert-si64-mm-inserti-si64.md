@@ -1,37 +1,37 @@
 ---
-title: "_mm_insert_si64, _mm_inserti_si64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_inserti_si64"
-  - "_mm_insert_si64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsq 指令"
-  - "_mm_insert_si64 intrinsic"
-  - "_mm_inserti_si64 intrinsic"
+title: "_mm_insert_si64、 _mm_inserti_si64 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _mm_inserti_si64
+- _mm_insert_si64
+dev_langs: C++
+helpviewer_keywords:
+- insertq instruction
+- _mm_insert_si64 intrinsic
+- _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 45a69efa4e2b78009065c218924882af92d6bd1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_insert_si64, _mm_inserti_si64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Microsoft 专用**  
   
- 生成 `insertq` 命令将从其第二个操作数对象插入位设置为其第一个操作数。  
+ 生成`insertq`指令以第二个操作数中的位插入其第一操作数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 __m128i _mm_insert_si64(  
@@ -46,41 +46,41 @@ __m128i _mm_inserti_si64(
 );  
 ```  
   
-#### 参数  
- \[in\]`Source1`  
- 与输入数据的 128 位域在字段中插入其较低的 64 位。  
+#### <a name="parameters"></a>参数  
+ [in] `Source1`  
+ 输入中的数据字段将插入其较低的 64 位一个 128 位字段。  
   
- \[in\]  `Source2`  
- 与数据的 128 位域对其低位的插入。  对于 `_mm_insert_si64`，在其高位还包含字段描述符。  
+ [in]`Source2`  
+ 与要在其低位中插入的数据一个 128 位字段。  有关`_mm_insert_si64`，还包含以其高位为单位的字段描述符。  
   
- \[in\]  `Length`  
- 指定字段的长度插入的整数常数。  
+ [in]`Length`  
+ 一个整数常量，用于指定要插入的字段的长度。  
   
- \[in\]  `Index`  
- 指定字段最低有效位索引要插入数据的整数常数。  
+ [in]`Index`  
+ 一个整数常量，用于指定将向其插入数据的字段的最低有效位的索引。  
   
-## 返回值  
- 较低的 64 位包含原始低 64 位与指定的位域的 `Source1` 的 128 位域中低位 `Source2`替换。  返回值的上限 64 位未定义。  
+## <a name="return-value"></a>返回值  
+ 其较低的 64 位包含原始的低 64 位的 128 位字段`Source1`与指定的位域替换为的低位`Source2`。 高 64 位的返回值是不确定的。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`_mm_insert_si64`|SSE4a|  
 |`_mm_inserti_si64`|SSE4a|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此内部生成 `insertq` 命令将从 `Source2` 插入位设置为 `Source1`。  具有固有的两个版本: `_mm_inserti_si64`，这是立即版本，并且， `_mm_insert_si64` 非立即一个。  每个版本从 Source2 和插入提取特定长度的位域到 Source1 中。  提取的位为最低有效位 Source2。  字段这些位要插入的 Source1 由长度及其最低有效位索引定义。  长度和索引值执行 mod 64，从而 \-1 和 127 被解释为 63。  如果总和 \(减小\) 超过 64 位了索引和 \(降低\) 字段长度，结果是未定义的。  零值字段长度的被解释为 64。  如果字段长度和个索引是两个零， 63:0 位 `Source2` 插入 `Source1`。  如果字段长度为零，但个索引是非零，则结果是未定义的。  
+## <a name="remarks"></a>备注  
+ 此内部函数生成`insertq`指令插入从位`Source2`到`Source1`。 有两个版本的此内部函数： `_mm_inserti_si64`，是即时的版本中，和`_mm_insert_si64`是非快速。  每个版本从 Source2 提取给定长度的位字段，并将其插入 Source1。  提取的位是 Source2 的最低有效位。  这些位将插入字段 Source1 由长度和其最低有效位的索引定义。  长度和索引的值执行求模 64，因此为 63 解释为-1 和 127 之间。 （减少） 位索引和 （减少） 的字段长度的总和大于 64，如果结果不确定。 输入字段长度的零值解释为 64。  如果字段长度和位索引的零个、 bits 63:0`Source2`插入到`Source1`。  如果字段长度为零但位索引为非零，则结果是未定义。  
   
- 在对 \_mm\_insert\_si64 的调用，字段长度在 Source2 位 77:72 和索引包含在位 69:64。  
+ 在 _mm_insert_si64 的调用中，则字段长度包含在 bits 77:72 Source2 和 bits 69:64 中的索引。  
   
- 如果您调用了编译器无法确定是整数常数参数的 `_mm_inserti_si64`，编译器生成代码打包这些值到个 XMM 寄存器和调用 `_mm_insert_si64`。  
+ 如果调用`_mm_inserti_si64`使用编译器无法确定为整数常量的自变量，编译器将生成代码的 XMM 寄存器到包这些值并调用`_mm_insert_si64`。  
   
- 若要确定硬件为 `insertq` 命令支持调用与 `InfoType=0x80000001` 的 `__cpuid` 内部和校验位 6 `CPUInfo[2] (ECX)`。  此位会为 1，则命令支持和 0。  如果运行使用在硬件的固有不支持 `insertq` 命令的代码，结果是不可预知的。  
+ 若要确定的硬件支持`insertq`指令调用`__cpuid`与内部`InfoType=0x80000001`和检查的第 6 位`CPUInfo[2] (ECX)`。 此位将否则如果支持指令，则为 1 和 0。 如果你运行代码使用此内部函数不支持的硬件上`insertq`指令，则结果不可预知。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -118,12 +118,15 @@ main()
 }  
 ```  
   
-  **result1 \= 0xfffffffff3210fff**  
-**result2 \= 0xfffffffff3210fff**  
-**result3 \= 0xfffffffff3210fff**   
-## 特定于 Microsoft 的结尾  
- copyright 2007 年 Advanced Micro 设备，公司着。  保留所有权利。  重现经 Advanced Micro 设备授予，公司。  
+```Output  
+result1 = 0xfffffffff3210fff  
+result2 = 0xfffffffff3210fff  
+result3 = 0xfffffffff3210fff  
+```  
   
-## 请参阅  
- [\_mm\_extract\_si64、\_mm\_extracti\_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
+**结束 Microsoft 专用**  
+ 高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+  
+## <a name="see-also"></a>另请参阅  
+ [_mm_extract_si64、 _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

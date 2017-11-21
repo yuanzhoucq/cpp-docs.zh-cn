@@ -1,32 +1,30 @@
 ---
-title: "SCHEMA_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SCHEMA_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SCHEMA_ENTRY 宏"
+title: "SCHEMA_ENTRY |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SCHEMA_ENTRY
+dev_langs: C++
+helpviewer_keywords: SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0919f2ba6474633d98c73cde758dbe6c81549f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# SCHEMA_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-关联 GUID 与类。  
+# <a name="schemaentry"></a>SCHEMA_ENTRY
+将 GUID 与类相关联。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,34 +34,37 @@ caps.handback.revision: 8
 );   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `guid`  
- 架构行集的 GUID。  用于架构行集及其的 GUID 列表查看 *OLE DB 程序员参考》\) 中的*[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)。  
+ 架构行集 GUID。 请参阅[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)中*OLE DB 程序员参考*有关架构行集和其 Guid 的列表。  
   
  *rowsetClass*  
- 将创建表示架构行集合的类。  
+ 将创建来表示架构行集类。  
   
-## 备注  
- 可以[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 然后查询 GUID 列表的映射，也可以创建一行集合，则赋予它一 GUID。  架构行集 `IDBSchemaRowsetImpl` 创建类似于标准 `CRowsetImpl`派生类，除此之外，它必须提供方法的 **执行** 具有以下签名：  
+## <a name="remarks"></a>备注  
+ [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)然后，可以查询有关的 Guid，列表映射或如果它有一个 GUID，它可以创建一个行集。 架构行集`IDBSchemaRowsetImpl`创建类似于标准`CRowsetImpl`-派生类，但它必须提供**执行**具有以下签名的方法：  
   
- `HRESULT Execute (LONG* pcRowsAffected, ULONG cRestrictions,`  
+```  
+HRESULT Execute (
+    LONG* pcRowsAffected,  
+    ULONG cRestrictions,  
+    const VARIANT* rgRestrictions);  
+```  
   
- `const VARIANT* rgRestrictions)`  
-  
- 此 **执行** 函数填充：，其中填充行集合中的数据。  ATL 项目向导创建，如 *OLE DB 程序员参考》\) 中的*[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 所述，三最初的架构行集合。三个必需的架构 OLE DB 中的每个项目：  
+ 这**执行**函数填充行集的数据。 ATL 项目向导创建中, 所述[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)中*OLE DB 程序员参考*，三个初始的三个必需的 OLE DB 架构的每个项目中的架构行集：  
   
 -   `DBSCHEMA_TABLES`  
   
--   **DBSCHEMA\_COLUMNS**  
+-   **DBSCHEMA_COLUMNS**  
   
--   **DBSCHEMA\_PROVIDER\_TYPES**  
+-   **DBSCHEMA_PROVIDER_TYPES**  
   
- 向导还将架构映射的三个对应的项。  参见 [创建 OLE DB 提供程序模板](../../data/oledb/creating-an-ole-db-provider.md) 有关使用更多向导的信息创建提供程序。  
+ 向导还会在架构映射中添加三个对应的条目。 请参阅[创建 OLE DB 模板提供程序](../../data/oledb/creating-an-ole-db-provider.md)有关使用向导创建提供程序的详细信息。  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)
+ [BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)

@@ -1,51 +1,50 @@
 ---
-title: "2.7.2.5 default | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.5 默认 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c856df07-705c-4ad3-9105-a268dd33e939
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 26dff1f0e8b3b88b4891617a2eef2bb2d82240eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.5 default
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**默认** 子句允许用户影响变量数据共享属性。  **默认** 子句的语法如下所示:  
+# <a name="2725-default"></a>2.7.2.5 default
+**默认**子句允许用户会影响变量的数据共享特性。 语法**默认**子句是，如下所示：  
   
 ```  
 default(shared | none)  
 ```  
   
- ，除非它是 **threadprivate** 或 **cons**\- 限定，的`t`指定 **默认 \(共享\)** 用方括号括在 **共享** 子句中的每个当前可见的变量是等效的。  在没有显式 **默认** 子句时，默认行为是相同的，就象 **默认 \(共享\)** 指定了。  
+ 指定**default(shared)**等效于显式列出在每个当前可见变量**共享**子句，除非它是**threadprivate**或**cons**`t`-限定。 在没有显式**默认**默认行为是相同的子句，如果**default(shared)**指定。  
   
- 指定 **默认 \(无\)** 需要至少一列绑定适用于每对并行构造的词法区域的变量:  
+ 指定**default(none)**需要至少一个以下必须满足每个引用中的并行构造的词法范围的变量：  
   
--   该变量位于包含引用结构化数据共享属性子句显式列表。  
+-   该变量显式列出一个构造，用于包含引用的数据共享特性子句中。  
   
--   变量在并行构造中声明。  
+-   并行构造中声明变量。  
   
--   该变量是 **threadprivate**。  
+-   变量是**threadprivate**。  
   
--   该变量具有 **const**\- 限定类型。  
+-   该变量具有**const**-限定类型。  
   
--   该变量是紧跟在 **为** 或 **并行。** 指令的 **为** 循环的循环控制变量，因此，该变量引用出现在循环内。  
+-   变量是为循环控制变量**为**紧随的循环**为**或**为并行**循环内将出现指令和变量的引用.  
   
- 指定变量在 **firstprivate**， **lastprivate**或一个包含指令的 **减少** 在子句中的上下文导致隐式对该变量。  此类隐式引用也受到列表的要求的限制上面。  
+ 指定一个变量上**firstprivate**， **lastprivate**，或**缩减**封闭指令子句导致为变量的隐式引用封闭上下文。 这种隐式引用也受到上面列出的要求。  
   
- 唯一 **默认** 子句。 **并行** 指令可以指定。  
+ 只有一个**默认**子句可指定在**并行**指令。  
   
- 使用 **专用**、 **firstprivate**、 **lastprivate**、 **减少**和 **共享** 子句，变量的默认数据共享可以重写属性，如演示的由以下示例:  
+ 可以使用替代数据共享特性的变量的默认**私有**， **firstprivate**， **lastprivate**，**缩减**，和**共享**子句，如下面的示例所示：  
   
 ```  
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\  

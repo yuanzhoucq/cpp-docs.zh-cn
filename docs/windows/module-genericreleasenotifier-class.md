@@ -1,29 +1,27 @@
 ---
-title: "Module::GenericReleaseNotifier 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GenericReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GenericReleaseNotifier 类"
+title: "Module:: genericreleasenotifier 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GenericReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: GenericReleaseNotifier class
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b753d1eac4de6b7c6684a33889163344dfefe19f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Module::GenericReleaseNotifier 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 类
 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由 lambda、functor 或 pointer-to-function 指定。  
   
 ## <a name="syntax"></a>语法  
@@ -51,7 +49,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 |名称|描述|  
 |----------|-----------------|  
-|[Module:: genericreleasenotifier:: Invoke 方法](../windows/module-genericreleasenotifier-invoke-method.md)|调用与当前 Module::GenericReleaseNotifier 对象关联的事件处理程序。|  
+|[Module::GenericReleaseNotifier::Invoke 方法](../windows/module-genericreleasenotifier-invoke-method.md)|调用与当前 Module::GenericReleaseNotifier 对象关联的事件处理程序。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
@@ -65,7 +63,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
  `GenericReleaseNotifier`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** module.h  
+ **标头：** module.h  
   
  **命名空间：** Microsoft::WRL
  

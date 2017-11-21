@@ -1,32 +1,30 @@
 ---
-title: "如何：在 C++/CLI 中使用事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件 [C++], 在接口中访问"
+title: "如何： 使用事件中 C + + /cli CLI |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5a2d6a1ae0443b7c1ec66f5ca0d0fa057cf9041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中使用事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文演示如何声明和使用事件函数调用该事件的接口以及实现接口的类和事件处理程序。  
+# <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
+这篇文章演示如何使用声明事件和函数来调用该事件的接口和实现接口的类和事件处理程序。  
   
-## 接口事件  
- 下面的代码示例添加一个事件处理程序，调用事件导致事件处理程序写入其名称到控制台和然后移除事件处理程序。  
+## <a name="interface-events"></a>接口事件  
+ 下面的代码示例添加一个事件处理程序，调用事件-这将导致其名称写入控制台的事件处理程序 —，然后再移除事件处理程序。  
   
 ```  
 // mcppv2_events2.cpp  
@@ -74,11 +72,14 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **EventReceiver::Handler**   
-## 自定义访问器方法  
- 下面的示例演示如何定义事件的行为，在处理程序中添加或移除时，并且，当事件引发时引发。  
+```Output  
+EventReceiver::Handler  
+```  
+  
+## <a name="custom-accessor-methods"></a>自定义访问器方法  
+ 下面的示例演示如何定义某一事件的行为，以及添加或删除，处理程序时引发事件时。  
   
 ```  
 // mcppv2_events6.cpp  
@@ -161,12 +162,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **在 H1 事件处理程序**  
-**在使用参数中接收 1 和 2.2 个事件处理程序 H2**   
-## 重写默认访问添加，移除，并且引发访问器  
- 本示例演示如何覆盖在添加的默认访问，移除和引发事件的方法：  
+```Output  
+In event handler H1  
+In event handler H2 with args 1 and 2.2  
+```  
+  
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>重写默认访问上的添加、 删除和引发访问器  
+ 此示例演示如何重写上添加、 移除和引发事件方法的默认访问权限：  
   
 ```  
 // mcppv2_events3.cpp  
@@ -216,11 +220,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **17**   
-## 大量事件处理程序  
- 事件接收器，或其他客户端代码，可以将一个或多个处理程序添加到事件。  
+```Output  
+17  
+```  
+  
+## <a name="multiple-event-handlers"></a>多个事件处理程序  
+ 事件接收器或任何其他客户端代码，可以将一个或多个处理程序添加到事件。  
   
 ```  
 // mcppv2_events4.cpp  
@@ -289,13 +296,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **单击 \(x\=7，y\=3.14159\)**  
-**DblClick \(s\=System.Char\[\]\)**  
-**DblClickAgain \(s\=System.Char\[\]\)**   
-## 静态事件  
- 下面的示例演示如何定义和使用的静态事件。  
+```Output  
+Click(x=7,y=3.14159)  
+DblClick(s=System.Char[])  
+DblClickAgain(s=System.Char[])  
+```  
+  
+## <a name="static-events"></a>静态事件  
+ 下面的示例演示如何定义和使用静态事件。  
   
 ```  
 // mcppv2_events7.cpp  
@@ -374,14 +384,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **在 H1 事件处理程序**  
-**在使用参数中接收 11 和 11.11 个事件处理程序 H2**  
-**在 H1 事件处理程序**  
-**在使用参数中接收 22 和 22.22 个事件处理程序 H2**   
-## 虚拟事件  
- 此示例实现接口中的虚，托管事件和类：  
+```Output  
+In event handler H1  
+In event handler H2 with args 11 and 11.11  
+In event handler H1  
+In event handler H2 with args 22 and 22.22  
+```  
+  
+## <a name="virtual-events"></a>虚拟事件  
+ 此示例在接口和类中实现虚拟、 托管事件：  
   
 ```  
 // mcppv2_events5.cpp  
@@ -458,10 +471,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **在 H1 处理程序**  
-**在使用参数中接收 1 和 2.2 H2 处理程序** 一个简单的事件不能指定重写或隐藏基类事件。您对每个访问器函数定义必须任何事件的访问器函数，然后指定 `new` 或 `override` 关键字。  
+```Output  
+In handler H1  
+In handler H2 with args 1 and 2.2  
+```  
+  
+ 不能指定的简单事件以重写或隐藏基类事件。  必须定义所有事件访问器函数，然后指定`new`或`override`上每个访问器函数的关键字。  
   
 ```  
 // mcppv2_events5_a.cpp  
@@ -493,8 +510,8 @@ ref struct C : B {
 };  
 ```  
   
-## 抽象事件  
- 下面的示例显示如何实现抽象事件。  
+## <a name="abstract-events"></a>抽象事件  
+ 下面的示例演示如何实现抽象事件。  
   
 ```  
 // mcppv2_events10.cpp  
@@ -570,12 +587,15 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **hi**  
-**Hello 从 Event2**   
-## 引发在其他程序集中定义的事件  
- 事件和事件处理程序在程序集中定义并由其他程序集使用。  
+```Output  
+hi  
+hello from Event2  
+```  
+  
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引发在其他程序集中定义的事件  
+ 可以在一个程序集中定义并由另一个程序集的事件和事件处理程序。  
   
 ```  
 // mcppv2_events8.cpp  
@@ -620,9 +640,12 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **hello**  
-**hello**   
-## 请参阅  
- [event](../windows/event-cpp-component-extensions.md)
+```Output  
+hello  
+hello  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [事件](../windows/event-cpp-component-extensions.md)

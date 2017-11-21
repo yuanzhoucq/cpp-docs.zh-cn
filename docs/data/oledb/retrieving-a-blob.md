@@ -1,32 +1,32 @@
 ---
-title: "检索 BLOB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB（二进制大对象）, 检索"
-  - "OLE DB, BLOB（二进制大对象）"
-  - "检索 BLOB"
+title: "检索 BLOB |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- retrieving BLOBs
+- BLOB (binary large object), retrieving
+- OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac10d34fbb5e0cc6320d6c7f8ff1a52efc36f1b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 检索 BLOB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以用各种方法检索二进制大对象 \(BLOB\)。  可以使用 **DBTYPE\_BYTES** 将 BLOB 作为一个字节序列来检索，也可以使用一个接口，如 `ISequentialStream`。  有关更多信息，请参见“OLE DB 程序员参考”中的 [BLOBS 和 OLE 对象](https://msdn.microsoft.com/en-us/library/ms711511.aspx)。  
+# <a name="retrieving-a-blob"></a>检索 BLOB
+你可以检索以各种方式二进制大型对象 (BLOB)。 你可以使用**DBTYPE_BYTES**检索为一个字节序列的 BLOB 或使用类似的界面`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程序员参考*。  
   
- 以下代码显示如何使用 `ISequentialStream` 检索 BLOB。  [BLOB\_ENTRY](../../data/oledb/blob-entry.md) 宏使您可以指定该接口以及用于该接口的标志。  打开表后，代码在 `ISequentialStream` 上重复调用 **Read** 以便从 BLOB 中读取字节。  代码调用 **Release** 以便在调用 `MoveNext` 获取下一个记录之前释放接口指针。  
+ 下面的代码演示如何检索 BLOB 使用`ISequentialStream`。 宏[BLOB_ENTRY](../../data/oledb/blob-entry.md)允许你指定的接口和接口使用的标志。 后打开表，代码调用**读取**重复在`ISequentialStream`从 BLOB 中读取字节。 该代码调用**版本**若要释放之前调用的接口指针`MoveNext`以获取下一条记录。  
   
 ```  
 class CCategories  
@@ -55,8 +55,8 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- 有关处理 BLOB 数据的宏的更多信息，请参见 [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)中的“列映射宏”。  
+ 有关处理 BLOB 数据的宏的详细信息，请参阅"列映射宏"中[宏和全局函数 OLE DB 使用者模板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)   
  [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

@@ -1,30 +1,28 @@
 ---
-title: "EventSource::InvokeAll 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeAll 方法"
+title: "Eventsource:: Invokeall 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 279d40bf8da171547e27313c4f1a9a3578d93be2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# EventSource::InvokeAll 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-调用与当前关联的每个事件处理程序 [EventSource](../windows/eventsource-class.md) 对象使用指定的参数类型和参数。  
+# <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
+调用与当前关联的每个事件处理程序[EventSource](../windows/eventsource-class.md)对象使用指定的自变量类型和参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -244,7 +242,7 @@ void InvokeAll(
  第九个事件处理程序自变量。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** event.h  
+ **标头：** event.h  
   
  **命名空间：** Microsoft::WRL
  

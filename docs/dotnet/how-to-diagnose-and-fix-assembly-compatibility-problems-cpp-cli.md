@@ -1,53 +1,52 @@
 ---
-title: "如何：诊断和修复程序集兼容性问题 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "兼容性, 程序集之间"
-  - "异常, 诊断异常行为"
-  - "版本"
-  - "版本, 诊断冲突"
+title: "如何： 诊断和修复程序集兼容性问题 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：诊断和修复程序集兼容性问题 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此主题说明编译时引用的程序集版本与运行时引用的程序集版本不匹配时可能发生的问题，以及如何避免该问题。  
+# <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>如何：诊断和修复程序集兼容性问题 (C++/CLI)
+本主题介绍在编译时引用程序集的版本不匹配在运行时，引用的程序集的版本时可能发生以及如何避免此问题。  
   
- 编译程序集时，可能使用 `#using` 语法引用其他程序集。  在编译过程中，这些程序集由编译器访问。  来自这些程序集的信息用于进行优化决策。  
+ 程序集编译时，可能使用引用其他程序集`#using`语法。 在编译期间，由编译器访问这些程序集。 从这些程序集的信息用于优化决策。  
   
- 然而，如果更改并重新编译了被引用的程序集，而没有重新编译依赖它的引用程序集，则这些程序集可能不再是兼容的。  起初有效的优化决策对于新的程序集版本来说可能是不正确的。  这些不兼容性可能导致各种运行时错误。  在这种情况下，将不产生任何特定异常。  在运行时报告失败的方式取决于导致问题的代码更改的性质。  
+ 但是，如果引用的程序集是更改而重新编译，并且不重新编译依赖于它的引用程序集，这些程序集可能不是兼容。 已在上均有效的优化决策首先可能不正确与新的程序集版本。 由于这些不兼容性可能会发生各种运行时错误。 没有在这种情况下不会产生任何特定异常。 在运行时报告失败的方式取决于导致问题的代码更改的性质。  
   
- 只要为产品的已发布版本重新生成了整个应用程序，这些错误在您最终的生产代码中应该不会成为问题。  公开发布的程序集应使用正式版本号标记，这将确保避免这些问题。  有关详细信息，请参阅[程序集版本控制](../Topic/Assembly%20Versioning.md)。  
+ 只要会为你的产品的发布版本重新生成整个应用程序，这些错误不应为最终的生产代码中的问题。 公开发布的程序集应带有正式版本号，这将确保避免这些问题。 有关详细信息，请参阅[程序集版本控制](/dotnet/framework/app-domains/assembly-versioning)。  
   
-### 诊断和修复不兼容性错误  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>诊断和解决不兼容性错误  
   
-1.  如果遇到在引用其他程序集的代码中发生运行时异常或其他错误条件，并且找不出其他原因，则您可能正在使用过期的程序集。  
+1.  如果您遇到运行时异常或引用另一个程序集的代码中出现其他错误情况并且没有其他标识的原因，你可能要处理的过期的程序集。  
   
-2.  首先，隔离并再现异常或其他错误条件。  过期异常导致的问题应该是可再现的。  
+2.  首先，隔离并重现异常或其他错误条件。 由于过时异常发生的问题，应可重现。  
   
-3.  检查您的应用程序中引用的所有程序集的时间戳。  
+3.  检查在你的应用程序中引用任何程序集的时间戳。  
   
-4.  如果所有被引用的程序集的时间戳晚于您的应用程序的最后一次编译的时间戳，则您的应用程序已过期。  如果发生这种情况，请使用最新的程序集重新编译您的应用程序，并且进行所有必要的代码更改。  
+4.  如果任何引用程序集的时间戳晚于应用程序的最后一个编译的时间戳，你的应用程序已过期。 如果发生这种情况，重新编译你的应用程序与最新程序集，并进行所需的任何代码更改。  
   
-5.  重新运行应用程序，执行再现问题的步骤并确认没有出现异常。  
+5.  重新运行应用程序中，执行的步骤，再现该问题，并验证异常不会发生。  
   
-## 示例  
- 下面的程序通过降低方法的可访问性，并在不重新编译的情况下尝试从其他程序集访问该方法来演示此问题。  首先尝试编译 `changeaccess.cpp`。  它是将发生更改的被引用的程序集。  然后编译 `referencing.cpp`。  编译成功。  现在，降低被调用的方法的可访问性。  使用 `/DCHANGE_ACCESS` 标志重新编译 `changeaccess.cpp`。  这使方法成为受保护方法而不是私有方法，所以能在更大范围内合法调用它。  在不重新编译 `referencing.exe` 的情况下，重新运行应用程序。  将导致异常 <xref:System.MethodAccessException>。  
+## <a name="example"></a>示例  
+ 以下程序演示了该问题，减少的方法的可访问性，尝试访问无需重新编译中另一个程序集的方法。 请尝试编译`changeaccess.cpp`第一个。 这是所引用的程序集，这将更改。 然后编译`referencing.cpp`。 编译成功。 现在，减少所调用的方法的可访问性。 重新编译`changeaccess.cpp`标志`/DCHANGE_ACCESS`。 因此，可以调用它，再从法律上讲，这使得了受保护，而不是私有的方法。 无需重新编译`referencing.exe`，重新运行应用程序。 异常<xref:System.MethodAccessException>将导致。  
   
 ```  
 // changeaccess.cpp  
@@ -100,6 +99,6 @@ int main() {
   
 ```  
   
-## 请参阅  
- [\#using 指令](../preprocessor/hash-using-directive-cpp.md)   
- [托管类型](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [#using 指令](../preprocessor/hash-using-directive-cpp.md)   
+ [托管类型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

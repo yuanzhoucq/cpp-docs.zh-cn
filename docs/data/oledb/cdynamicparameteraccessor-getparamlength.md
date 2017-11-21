@@ -1,36 +1,35 @@
 ---
-title: "CDynamicParameterAccessor::GetParamLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::GetParamLength"
-  - "ATL.CDynamicParameterAccessor.GetParamLength"
-  - "CDynamicParameterAccessor.GetParamLength"
-  - "CDynamicParameterAccessor::GetParamLength"
-  - "GetParamLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamLength 方法"
+title: "Cdynamicparameteraccessor:: Getparamlength |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::GetParamLength
+- ATL.CDynamicParameterAccessor.GetParamLength
+- CDynamicParameterAccessor.GetParamLength
+- CDynamicParameterAccessor::GetParamLength
+- GetParamLength
+dev_langs: C++
+helpviewer_keywords: GetParamLength method
 ms.assetid: 04d76931-911a-4915-9c2c-ad585a9f3854
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 765e46cb0697f9cf230211b233d93556e661aa54
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::GetParamLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicparameteraccessorgetparamlength"></a>CDynamicParameterAccessor::GetParamLength
 检索存储在缓冲区中的指定参数的长度。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,23 +37,23 @@ caps.handback.revision: 8
    DBORDINAL nParam,  
    DBLENGTH* pLength  
 );  
-DBLENGTH* GetParamLength(   
-   DBORDINAL nParam    
+DBLENGTH* GetParamLength(   
+   DBORDINAL nParam    
 ) const throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nParam`  
- \[in\] 参数数目 \(偏离 1\)。  为返回值保留参数 0 。  参数编号是基于其用 SQL 或存储过程调用的参数的索引。  有关示例，请参见[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)。  
+ [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关示例。  
   
  `pLength`  
- \[out\] 至长度变量的指针中指定参数的字节。  
+ [out] 指向包含指定参数的长度（以字节为单位）的变量的指针。  
   
-## 备注  
- 第一种替代方法将返回上成功上失败的 **true** 或 **false**。  对包含指定的参数的长度的第二个重写点。  
+## <a name="remarks"></a>备注  
+ 第一重写返回**true**成功或**false**失败。 第二个重写指向包含参数的长度的内存。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)

@@ -1,35 +1,33 @@
 ---
-title: "编译器警告（等级 1）C4047 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4047"
+title: "编译器警告 （等级 1） C4047 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4047
+dev_langs: C++
+helpviewer_keywords: C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fafa1878b62b2e010f2f80541c454082b07e6059
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 1）C4047
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“operator”:“identifier1”与“identifier2”的间接寻址级别不同  
+# <a name="compiler-warning-level-1-c4047"></a>编译器警告 （等级 1） C4047
+“运算符”:“identifier1”与“identifier2”的间接级别不同  
   
- 指针可指向变量（一级间接寻址），指向另一个指向变量的指针（二级间接寻址）等。  
+ 指针可以指向的变量 （一级间接寻址） 给另一个指针指向变量 （两个级别都的间接寻址下），依次类推。  
   
-## 示例  
- 下面的示例生成 C4047：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C4047:  
   
 ```  
 // C4047.c  
@@ -47,8 +45,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例生成 C4047：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C4047:  
   
 ```  
 // C4047b.c  

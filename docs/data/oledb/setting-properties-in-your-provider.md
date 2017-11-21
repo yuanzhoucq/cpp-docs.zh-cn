@@ -1,59 +1,59 @@
 ---
-title: "在提供程序中设置属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序, 属性"
-  - "属性 [C++], OLE DB 提供程序"
+title: "提供程序中设置属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80b82e1fb69200f45716b2ad62a44160862f7d08
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 在提供程序中设置属性
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-查找所需属性的属性组和属性 ID。  有关更多信息，请参见“OLE DB Programmer's Reference”（《OLE DB 程序员参考》）中的 [OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)。  
+# <a name="setting-properties-in-your-provider"></a>在提供程序中设置属性
+查找所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*。  
   
- 在由向导生成的提供程序代码中，查找与属性组相对应的属性映射。  属性组的名称通常与对象的名称相对应。  命令和行集合属性可在命令或行集合中找到；数据源和初始化属性可在数据源对象中找到。  
+ 在由向导生成提供程序代码中，找到的属性组相对应的属性映射。 属性组的名称通常对应于对象的名称。 在命令或行集; 找不到命令和行集属性在数据源对象中找不到数据源和初始化属性。  
   
- 在属性映射中，添加 [PROPERTY\_INFO\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md) 宏。  PROPERTY\_INFO\_ENTRY\_EX 使用四个参数：  
+ 在属性映射中，添加[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)宏。 PROPERTY_INFO_ENTRY_EX 采用四个参数：  
   
--   与属性相对应的属性 ID。  必须将头七个字符 \("DBPROP\_"\) 从属性名的前面移除。  例如，如果要添加 **DBPROP\_MAXROWS**，将 `MAXROWS` 作为第一个元素传递。  如果这是自定义属性，传递完整的 GUID 名（例如，`DBMYPROP_MYPROPERTY`）。  
+-   对您的属性相对应的属性 ID。 从属性名称开头，必须删除的前七个字符 ("DBPROP_")。 例如，如果你想要添加**DBPROP_MAXROWS**，传递`MAXROWS`为第一个元素。 如果这是自定义属性，传递的完整的 GUID 名称 (例如， `DBMYPROP_MYPROPERTY`)。  
   
--   属性的 Variant 类型（在《OLE DB 程序员参考》中的 [OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中）。  输入与数据类型相对应的 **VT\_** 类型（如 `VT_BOOL` 或 `VT_I2`）。  
+-   变体类型的属性 (在[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*)。 输入**VT_**类型 (如`VT_BOOL`或`VT_I2`) 与数据类型相对应。  
   
--   指示属性是否可读和可写及其所属的组的标志。  例如，以下代码指示属于行集合组的读\/写属性：  
+-   标志以指示属性是否读取和写入以及它所属的组。 例如，下面的代码指示属于行集组读/写属性：  
   
     ```  
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE  
     ```  
   
--   属性的基值。  例如，这对 Boolean 类型可能是 **VARIANT\_FALSE**，对 integer 类型可能是零。  除非被更改，属性将具有该值。  
+-   属性的基值。 这可能是**VARIANT_FALSE**键入一个布尔值或零的整数类型，例如。 除非被更改，则该属性具有此值。  
   
     > [!NOTE]
-    >  一些属性被连接或“链接”到其他属性，如书签或更新。  当使用者将一个属性设置为 true 时，另一个属性也可以设置。  OLE DB 提供程序模板通过 [CUtlProps::OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md) 方法支持此操作。  
+    >  连接或链接到其他属性，如书签或更新某些属性。 当使用者将一个属性设置为 true 时，也可以设置另一个属性。 OLE DB 提供程序模板支持此方法通过[cutlprops:: Onpropertychanged](../../data/oledb/cutlprops-onpropertychanged.md)。  
   
-## Microsoft OLE DB 提供程序忽略的属性  
- Microsoft OLE DB 提供程序忽略下面的 OLE DB 属性：  
+## <a name="properties-ignored-by-microsoft-ole-db-providers"></a>忽略的 Microsoft OLE DB 提供程序的属性  
+ Microsoft OLE DB 提供程序忽略以下的 OLE DB 属性：  
   
--   **DBPROP\_MAXROWS** 仅适用于只读提供程序（即，DBPROP\_IRowsetChange 和 DBPROP\_IRowsetUpdate 为假的提供程序）；否则不支持此属性。  
+-   **DBPROP_MAXROWS**仅适用于只读提供程序 （即，其中 DBPROP_IRowsetChange 和 DBPROP_IRowsetUpdate 均为 false）; 否则不支持此属性。  
   
--   忽略 **DBPROP\_MAXPENDINGROWS**；提供程序指定自己的限制。  
+-   **DBPROP_MAXPENDINGROWS**将被忽略; 提供程序指定其自己的限制。  
   
--   忽略 **DBPROP\_MAXOPENROWS**；提供程序指定自己的限制。  
+-   **DBPROP_MAXOPENROWS**将被忽略; 提供程序指定其自己的限制。  
   
--   忽略 **DBPROP\_CANHOLDROWS**；提供程序指定自己的限制。  
+-   **DBPROP_CANHOLDROWS**将被忽略; 提供程序指定其自己的限制。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

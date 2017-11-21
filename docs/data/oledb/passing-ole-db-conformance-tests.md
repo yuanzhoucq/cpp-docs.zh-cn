@@ -1,42 +1,42 @@
 ---
-title: "通过 OLE DB 一致性测试 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "一致性测试"
-  - "一致性测试 [OLE DB]"
-  - "OLE DB 提供程序, 测试"
-  - "测试提供程序"
-  - "测试, OLE DB 提供程序"
+title: "传递 OLE DB 一致性测试 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- conformance testing
+- conformance testing [OLE DB]
+- OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 通过 OLE DB 一致性测试
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-为了使提供程序更加一致，Data Access SDK 提供了一套 OLE DB 一致性测试。  这些测试检查提供程序的所有方面，并使您可以有理由确信提供程序将按预期的那样运行。  在 Microsoft Data Access SDK 上可以找到 OLE DB 一致性测试。  本节集中讨论应该为通过一致性测试做些什么。  有关运行 OLE DB 一致性测试的信息，请参见 SDK。  
+# <a name="passing-ole-db-conformance-tests"></a>通过 OLE DB 一致性测试
+为了使提供程序更为一致，数据访问 SDK 提供了一组 OLE DB 一致性测试。 这些测试检查你的提供商的所有方面，并为你提供合理你提供程序按预期方式运行的保证。 您可以在 Microsoft 数据访问 SDK 中找到 OLE DB 一致性测试。 本部分重点介绍应完成通过一致性测试任务。 有关运行 OLE DB 一致性测试的信息，请参阅 SDK。  
   
-## 运行一致性测试  
- 在 Visual C\+\+ 6.0 中，OLE DB 提供程序模板添加了若干允许检查值和属性的挂钩函数。  这些函数中的大多数是为响应一致性测试添加的。  
+## <a name="running-the-conformance-tests"></a>运行一致性测试  
+ 在 Visual c + + 6.0 中，OLE DB 提供程序模板添加了大量挂钩函数，以允许你检查值和属性。 一致性测试响应中添加了其中的大多数功能。  
   
 > [!NOTE]
->  需要添加若干验证函数以使提供程序通过 OLE DB 一致性测试。  
+>  你需要添加多个验证函数，以使提供程序通过 OLE DB 一致性测试。  
   
- 该提供程序要求两个验证例程。  第一个例程 `CRowsetImpl::ValidateCommandID` 是行集合类的组成部分。  它在行集合的创建期间被提供程序模板调用。  示例使用该例程通知使用者它不支持索引。  第一个调用是对 `CRowsetImpl::ValidateCommandID` 的调用（注意提供程序使用[提供程序的书签支持](../../data/oledb/provider-support-for-bookmarks.md)中在接口映射中为 `CMyProviderRowset` 添加的 **\_RowsetBaseClass** typedef，因此不必键入那一长行模板参数）。  下一步，如果索引参数不为 **NULL**，则返回 **DB\_E\_NOINDEX**（这指示使用者希望使用索引）。  有关命令 ID 的更多信息，请参见 OLE DB 规范并查找 **IOpenRowset::OpenRowset**。  
+ 此提供程序需要两个验证例程。 第一个例程， `CRowsetImpl::ValidateCommandID`，是行集类的一部分。 它是由提供程序模板调用的行集创建过程。 此示例使用此例程来告知使用者，它不支持索引。 第一次调用是到`CRowsetImpl::ValidateCommandID`(请注意，提供程序使用**_RowsetBaseClass** typedef 的接口映射中添加`CMyProviderRowset`中[用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)，因此你还没有到类型模板自变量长的行）。 接下来，返回**DB_E_NOINDEX**如果索引参数不是**NULL** （这指示使用者想要在我们使用索引）。 有关命令 Id 的详细信息，请参阅 OLE DB 规范，并查找**IOpenRowset::OpenRowset**。  
   
- 以下代码是 **ValidateCommandID** 验证例程：  
+ 下面的代码是**ValidateCommandID**验证例程：  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -56,30 +56,30 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }  
 ```  
   
- 每当有人更改 **DBPROPSET\_ROWSET** 组上的属性时，提供程序模板都调用 `OnPropertyChanged` 方法。  如果要处理其他组的属性，则将它们添加到适当的对象（即 **DBPROPSET\_SESSION** 检查在 `CMyProviderSession` 类中进行）。  
+ 提供程序模板调用`OnPropertyChanged`方法每当有人上更改属性**DBPROPSET_ROWSET**组。 如果你想要处理的其他组的属性，你将它们添加到适当的对象 (即， **DBPROPSET_SESSION**检查进入`CMyProviderSession`类)。  
   
- 代码首先检查属性是否被链接到另一个属性。  如果属性正在被链接，它将 **DBPROP\_BOOKMARKS** 属性设置为 True。  OLE DB 规范的附录 C 包含有关属性的信息。  此信息也告诉您属性是否被链接到另一个属性。  
+ 代码首先进行检查，以查看是否属性链接到另一个。 如果正在链接属性，它将设置**DBPROP_BOOKMARKS**属性为 True。 附录 C 的 OLE DB 规范包含有关属性的信息。 此信息还告诉您是否属性链接到另一个。  
   
- 还可能需要在代码中添加 `IsValidValue` 例程。  模板在尝试设置属性时调用 `IsValidValue`。  如果在设置属性值时需要额外的处理，重写此方法。  对于每个属性集可以拥有这些方法之一。  
+ 你可能还想要添加`IsValidValue`例程到你的代码。 模板调用`IsValidValue`尝试设置属性时。 如果需要额外的处理设置的属性值时，将重写此方法。 你可以为每个属性设置这些方法之一。  
   
-## 线程问题  
- 默认情况下，“ATL OLE DB 提供程序向导”中的“OLE DB 提供程序向导”生成使提供程序在单元模式中运行的代码。  如果尝试对此代码运行一致性测试，一开始就会失败。  这是因为 Ltm.exe 这个用于运行 OLE DB 一致性测试的工具默认为自由线程。  出于性能和易用性方面的考虑，“OLE DB 提供程序向导”代码默认为单元模式。  
+## <a name="threading-issues"></a>线程处理问题  
+ 默认情况下，OLE DB 提供程序中的向导 ATL OLE DB 提供程序向导生成要在单元模型中运行的提供程序的代码。 如果你尝试使用一致性测试运行此代码，一开始就会失败。 这是因为 Ltm.exe，该工具用于运行 OLE DB 一致性测试，默认为自由线程的。 OLE DB 提供程序向导代码将默认为单元模型的性能和易用性。  
   
- 若要纠正此问题，可以更改 LTM 或更改提供程序。  
+ 若要更正此问题，可以更改 LTM 或更改提供程序。  
   
-#### 将 LTM 改为在单元线程模式中运行  
+#### <a name="to-change-ltm-to-run-in-apartment-threaded-mode"></a>LTM 改为运行在单元线程模式  
   
-1.  在 LTM 主菜单上，单击“工具”，再单击**“选项”**。  
+1.  LTM 主菜单上，单击**工具**，然后单击**选项**。  
   
-2.  在“常规”选项卡上，将线程模式从“自由线程”更改为“单元线程”。  
+2.  上**常规**选项卡上，更改从的线程模型**自由线程**到**Apartment Threaded**。  
   
- 将提供程序改为在自由线程模式中运行：  
+ 若要更改你的提供商在可用线程模式下运行：  
   
--   在提供程序项目中，搜索 `CComSingleThreadModel` 的所有实例并用 `CComMultiThreadModel` 替换；CComMultiThreadModel 应位于数据源、会话和行集合头中。  
+-   在提供程序项目中，搜索的所有实例`CComSingleThreadModel`并将其替换`CComMultiThreadModel`，这应会在数据源、 会话和行集标头中。  
   
--   在 .rgs 文件中，将线程模式从“单元”更改为“两者”。  
+-   在.rgs 文件中，将更改从的线程模型**单元**到**同时**。  
   
--   遵循关于自由线程编程的正确编程规则（即锁定写入）。  
+-   遵循正确编程编程规则关于自由线程 （即，锁定写入）。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

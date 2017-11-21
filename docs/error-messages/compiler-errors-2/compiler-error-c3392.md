@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3392
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3392
+f1_keywords: C3392
+dev_langs: C++
+helpviewer_keywords: C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: ca0d37c75c61e1280c0f13ef6a26cd4ab920d1d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 12ed6dbcc7351926d51df4aa9e3397f3bb598f10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3392"></a>编译器错误 C3392
 “type_arg”: 对于泛型“generic_type”，泛型参数“param”的类型变量无效，它必须具有公共无参数构造函数  
@@ -47,7 +27,7 @@ ms.lasthandoff: 02/24/2017
  泛型类型实例化错误。 检查类型定义。 有关详细信息，请参阅[泛型](../../windows/generics-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>示例  
-下面的示例使用 C# 来创建包含具有创作在 C + 的泛型类型时，不支持某些约束的泛型类型的组件 + CLI。 有关详细信息，请参阅[类型参数的约束](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters)。  
+下面的示例使用 C# 来创建包含具有 C + 中创建泛型类型时，不支持某些约束的泛型类型的组件 + CLI。 有关详细信息，请参阅[类型参数的约束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。  
   
 ```cs  
 // C3392.cs  

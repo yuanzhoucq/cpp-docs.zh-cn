@@ -1,30 +1,29 @@
 ---
-title: "C 运行时错误 R6002 到 R6035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c.errors"
-dev_langs: 
-  - "C++"
+title: "C 运行时错误 R6002 到 R6035 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: c.errors
+dev_langs: C++
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 868b73152c90fbccaf79374dbb8c8af07795b197
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# C 运行时错误 R6002 到 R6035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本部分是应用加载或运行时，对 C 运行时库 \(CRT\) 可能会生成的错误的引用。 这些错误指明了应用代码中存在 bug，或者运行时库不能处理的某种清况（如内存不足）。 如果不对应用进行编码，以防止出现造成该错误的情况，则应用的最终用户可能会看到这些错误。  
+# <a name="c-runtime-errors-r6002-through-r6035"></a>C 运行时错误 R6002 到 R6035
+本部分是应用加载或运行时，对 C 运行时库 (CRT) 可能会生成的错误的引用。 这些错误指明了应用代码中存在 bug，或者运行时库不能处理的某种清况（如内存不足）。 如果不对应用进行编码，以防止出现造成该错误的情况，则应用的最终用户可能会看到这些错误。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [C 运行时错误 R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md)  
   
  [C 运行时错误 R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md)  
@@ -55,5 +54,5 @@ caps.handback.revision: 12
   
  [C 运行时错误 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)  
   
-## 请参阅  
- [C\/C\+\+ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+## <a name="see-also"></a>另请参阅  
+ [C/C++ 生成错误](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - improper_scheduler_detach
 - CONCRT/concurrency::improper_scheduler_detach
 - CONCRT/concurrency::improper_scheduler_detach::improper_scheduler_detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- improper_scheduler_detach class
+dev_langs: C++
+helpviewer_keywords: improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 0975354279c2a7e35524890498d9d7ebab1c18d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 81d4f0169c598c9321166ae952e1f594202781d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach 类
 此类描述在尚未附加到任何使用 `Scheduler` 对象的 `Attach` 方法的计划程序的上下文中调用 `CurrentScheduler::Detach` 方法时引发的异常。  
@@ -65,7 +47,7 @@ class improper_scheduler_detach : public std::exception;
  `improper_scheduler_detach`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -86,4 +68,3 @@ improper_scheduler_detach() throw();
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [Scheduler 类](scheduler-class.md)
-

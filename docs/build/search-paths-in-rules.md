@@ -1,40 +1,40 @@
 ---
-title: "规则中的搜索路径 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE 中的推理规则"
-  - "规则, 推理"
-  - "NMAKE 推理规则中的搜索路径"
+title: "规则中的搜索路径 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search paths in NMAKE inference rules
+- inference rules in NMAKE
+- rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 808ec39bafd6ad5c7982f63055ba92fccff7a285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 规则中的搜索路径
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="search-paths-in-rules"></a>规则中的搜索路径
 ```  
 {frompath}.fromext{topath}.toext:  
    commands  
 ```  
   
-## 备注  
- 只有当依赖项中指定的路径与推理规则路径完全匹配时，推理规则才应用于依赖项。  在 *frompath* 中指定依赖项的路径，在 *topath* 中指定目标的目录；不允许有空格。  为每个扩展名只指定一个路径。  一个扩展名的路径需要另一个扩展名的路径。  若要指定当前目录，请使用句点 \(.\) 或空的大括号 \({ }\)。  宏可以表示 *frompath* 和 *topath*；在预处理期间调用。  
+## <a name="remarks"></a>备注  
+ 推理规则适用于依赖项，仅当完全指定依赖项中的路径与匹配的推理规则路径。 指定在依赖项的目录*frompath*和中的目标的 directory *topath*; 不允许有空格。 指定每个扩展，只有一条路径。 上一个扩展的路径需要在其他路径。 若要指定当前目录，请使用句点 （.） 或空大括号 （{}）。 宏可以表示*frompath*和*topath*; 在预处理过程中调用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 {dbi\}.cpp{$(ODIR)}.obj::  
@@ -65,5 +65,5 @@ caps.handback.revision: 7
         $(CC) $(CFLAGS) $<  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义规则](../build/defining-a-rule.md)

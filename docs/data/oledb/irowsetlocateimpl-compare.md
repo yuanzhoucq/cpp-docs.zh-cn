@@ -1,35 +1,34 @@
 ---
-title: "IRowsetLocateImpl::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetLocateImpl.Compare"
-  - "IRowsetLocateImpl::Compare"
-  - "IRowsetLocateImpl.Compare"
-  - "ATL::IRowsetLocateImpl::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "“比较”方法"
+title: "Irowsetlocateimpl:: Compare |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetLocateImpl.Compare
+- IRowsetLocateImpl::Compare
+- IRowsetLocateImpl.Compare
+- ATL::IRowsetLocateImpl::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: 6f84052c-c68c-480a-982f-03748faa7d5d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2dba219ef2b2e0747d800d45950217e220ab1449
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-比较两个书签。  
+# <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
+比较两个的书签。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -43,24 +42,24 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
- 有关更多信息，请参见 [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) in the *OLE DB Programmer's Reference*。  
+#### <a name="parameters"></a>参数  
+ 请参阅[IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx)中*OLE DB 程序员参考*。  
   
-## 备注  
- 书签之一可以是标准 OLE DB 定义的 [标准书签](https://msdn.microsoft.com/en-us/library/ms712954.aspx) \(**DBBMK\_FIRST**、**DBBMK\_LAST**或 **DBBMK\_INVALID**\)。  `pComparison` 中返回的值指示两个书签之间的关系：  
+## <a name="remarks"></a>备注  
+ 任一书签可以是一种标准 OLE DB 定义[标准书签](https://msdn.microsoft.com/en-us/library/ms712954.aspx)(**DBBMK_FIRST**， **DBBMK_LAST**，或**DBBMK_INVALID**)。 返回的值`pComparison`指示两个的书签之间的关系：  
   
--   **DBCOMPARE\_LT** \(`cbBookmark1` 是 `cbBookmark2`之前。\)  
+-   **DBCOMPARE_LT** (`cbBookmark1`早`cbBookmark2`。)  
   
--   **DBCOMPARE\_EQ** \(`cbBookmark1` 与 `cbBookmark2`相等。\)  
+-   **DBCOMPARE_EQ** (`cbBookmark1`等同于`cbBookmark2`。)  
   
--   **DBCOMPARE\_GT** `cbBookmark1` \(位于 `cbBookmark2`之后。\)  
+-   **DBCOMPARE_GT** (`cbBookmark1`后，将`cbBookmark2`。)  
   
--   **DBCOMPARE\_NE** \(书签不相等和排序。\)  
+-   **DBCOMPARE_NE** （书签是相同或者未排序）。  
   
--   **DBCOMPARE\_NOTCOMPARABLE** \(书签不能比较。\)  
+-   **DBCOMPARE_NOTCOMPARABLE** （无法相比书签）。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRowsetLocateImpl 类](../../data/oledb/irowsetlocateimpl-class.md)

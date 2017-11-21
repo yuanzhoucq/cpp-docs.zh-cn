@@ -1,34 +1,33 @@
 ---
-title: "IErrorRecordsImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IErrorRecordsImpl"
-  - "ATL.IErrorRecordsImpl"
-  - "IErrorRecordsImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IErrorRecordsImpl 类"
+title: "IErrorRecordsImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IErrorRecordsImpl
+- ATL.IErrorRecordsImpl
+- IErrorRecordsImpl
+dev_langs: C++
+helpviewer_keywords: IErrorRecordsImpl class
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IErrorRecordsImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-实现 OLE DB 接口，[IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) 日志添加到并检索记录数据成员 \([m\_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)\) 类型 **CAtlArray\<**`RecordClass`**\>**。  
+# <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
+实现 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)接口，添加到的记录并从数据成员中检索的记录 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 类型的**CAtlArray <** `RecordClass`**>**.  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -38,45 +37,45 @@ template <
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 从 `IErrorRecordsImpl`派生的类。  
+ 从派生的类`IErrorRecordsImpl`。  
   
  `RecordClass`  
- 显示 OLE DB 错误对象的类。  
+ 一个类，表示 OLE DB 对象时出错。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
-  
-|||  
-|-|-|  
-|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|从错误的记录获取错误说明字符串。|  
-|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|从错误的记录获取错误 GUID。|  
-|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|从错误的记录获取帮助上下文 ID。|  
-|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|从错误的记录获取帮助文件的完整路径名。|  
-|[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|从错误的记录获取错误源代码。|  
-  
-### 接口方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|添加记录到 OLE DB 错误对象。|  
-|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|返回有关错误的基本信息，如返回代码并提供程序特定错误号。|  
-|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|返回指针对自定义错误对象的接口。|  
-|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|返回在中指定的记录的接口指针。[IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx)|  
-|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|错误返回参数。|  
-|[GetRecordCount](../Topic/CDaoRecordset::GetRecordCount.md)|返回的记录数。OLE DB 记录对象的。|  
+|[GetErrorDescriptionString](../../data/oledb/ierrorrecordsimpl-geterrordescriptionstring.md)|获取从错误记录的错误描述字符串。|  
+|[GetErrorGUID](../../data/oledb/ierrorrecordsimpl-geterrorguid.md)|获取从错误记录错误 GUID。|  
+|[GetErrorHelpContext](../../data/oledb/ierrorrecordsimpl-geterrorhelpcontext.md)|从错误记录中获取的帮助上下文 ID。|  
+|[GetErrorHelpFile](../../data/oledb/ierrorrecordsimpl-geterrorhelpfile.md)|从错误记录中获取的帮助文件的完整路径名。|  
+|[GetErrorSource](../../data/oledb/ierrorrecordsimpl-geterrorsource.md)|获取从错误记录错误的源代码。|  
   
-### 数据成员  
+### <a name="interface-methods"></a>接口方法  
   
 |||  
 |-|-|  
-|[m\_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|记录一个错误。|  
+|[AddErrorRecord](../../data/oledb/ierrorrecordsimpl-adderrorrecord.md)|将记录添加到 OLE DB 错误对象。|  
+|[GetBasicErrorInfo](../../data/oledb/cdberrorinfo-getbasicerrorinfo.md)|返回有关错误，如返回代码和提供程序特定的错误数的基本信息。|  
+|[GetCustomErrorObject](../../data/oledb/cdberrorinfo-getcustomerrorobject.md)|返回一个指向接口上的自定义错误对象。|  
+|[GetErrorInfo](../../data/oledb/cdberrorinfo-geterrorinfo.md)|返回[IErrorInfo](https://msdn.microsoft.com/en-us/library/ms718112.aspx)上指定的记录的接口指针。|  
+|[GetErrorParameters](../../data/oledb/cdberrorinfo-geterrorparameters.md)|返回的错误参数。|  
+|[GetRecordCount](../../mfc/reference/cdaorecordset-class.md#getrecordcount)|在 OLE DB 记录对象中返回记录的数。|  
   
-## 要求  
- **页眉：**atldb.h  
+### <a name="data-members"></a>数据成员  
   
-## 请参阅  
+|||  
+|-|-|  
+|[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|错误记录的数组。|  
+  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
+  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

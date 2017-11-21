@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::pointer_to_unary
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::pointer_to_unary
+dev_langs: C++
 helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 9495bb988c8273967eefa35eb1ec89da753a4deb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c809687243285778d68f9f35b42d3d25d4aa7bcf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function 类
 将一元函数指针转换为自适应一元函数。  
@@ -66,7 +62,6 @@ public:
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

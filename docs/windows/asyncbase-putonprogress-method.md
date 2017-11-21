@@ -1,32 +1,30 @@
 ---
-title: "AsyncBase::PutOnProgress 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::PutOnProgress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PutOnProgress 方法"
+title: "Asyncbase:: Putonprogress 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::PutOnProgress
+dev_langs: C++
+helpviewer_keywords: PutOnProgress method
 ms.assetid: 1f5f180e-eb5a-4afe-ac16-69dbf36f0383
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4486e3d0bcf929445d4f2e98779ea5339512299b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# AsyncBase::PutOnProgress 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-设置完成事件处理程序的地址为指定值。  
+# <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress 方法
+进度事件处理程序的地址设置为指定的值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHOD(  
@@ -34,17 +32,17 @@ STDMETHOD(
 )(TProgress* progressHandler);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `progressHandler`  
- 发展事件处理程序中设置的地址。  
+ 进度事件处理程序设置为地址。  
   
-## 返回值  
- S\_OK，如果成功；否则，E\_ILLEGAL\_METHOD\_CALL。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
   
-## 要求  
- **页眉：**async.h  
+## <a name="requirements"></a>要求  
+ **标头：** async.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [AsyncBase 类](../windows/asyncbase-class.md)

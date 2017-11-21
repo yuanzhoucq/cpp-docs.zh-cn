@@ -1,33 +1,30 @@
 ---
-title: "@stack | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@stack symbol"
+title: "@stack|Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@stack'
+dev_langs: C++
+helpviewer_keywords: '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1c573070dfe8b06f5789abd598e7685e2ab679ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# @stack
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-最近的堆栈或堆栈的更 DGROUP 堆栈 \(文本宏\)。  
+# <a name="stack"></a>@stack
+有关附近堆栈或远堆栈 （文本宏） 的堆栈的 DGROUP。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,5 +32,5 @@ manager: "ghogen"
   
 ```  
   
-## 请参阅  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [符号参考](../../assembler/masm/symbols-reference.md)

@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_constructible
+f1_keywords: type_traits/std::is_constructible
+dev_langs: C++
+helpviewer_keywords: is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: f103b5a822faee69101c346f596aa2742a71cf99
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b89f074cdb81024a847da3c7c77389e6a73f80d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isconstructible-class"></a>is_constructible 类
 测试使用指定参数类型时是否可构造类型。  
@@ -54,7 +50,6 @@ struct is_constructible;
   
 ## <a name="see-also"></a>另请参阅  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::push (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::push"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push 成员 [STL/CLR]"
+title: "priority_queue:: push (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::push
+dev_langs: C++
+helpviewer_keywords: push member [STL/CLR]
 ms.assetid: 317d3feb-0688-4658-866b-a26cae060354
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d6f0a938a8f2fb6031ffb731c812ca8645efd20b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::push (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-添加一个新元素。  
+# <a name="priorityqueuepush-stlclr"></a>priority_queue::push (STL/CLR)
+添加新元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void push(value_type val);  
 ```  
   
-## 备注  
- 成员函数插入值为`val` 的元素到受控序列中，并对受控序列重新排序以保持堆的特性。  使用该示例将另一个元素添加到队列中。  
+## <a name="remarks"></a>备注  
+ 成员函数将插入具有值的元素`val`到受控的序列，并对受控的序列中维护的堆专业重新排序。 用于将另一个元素添加到队列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_priority_queue_push.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a、b、c、\+、\=**   
-## 要求  
- **标头:** \<cliext\/queue\>  
+```Output  
+c a b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::pop](../dotnet/priority-queue-pop-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)

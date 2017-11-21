@@ -1,36 +1,32 @@
 ---
-title: "编译器警告（等级 1）C4346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4346"
+title: "编译器警告 （等级 1） C4346 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4346
+dev_langs: C++
+helpviewer_keywords: C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 17e4644901d127bf11637bc24ea155072f83e03c
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/31/2017
 ---
-# 编译器警告（等级 1）C4346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“name”: 依赖名称不是类型  
+# <a name="compiler-warning-level-1-c4346"></a>编译器警告（等级 1）C4346
+name： 依赖名称不是类型  
   
- 如果依赖名称将被视为一个类型，则 [typename](../../cpp/typename.md) 关键字是必需的。  这是在 Visual C\+\+ .NET 2003 编译器中进行的重大更改，以便符合 ISO C\+\+ 标准。  
+ [Typename](../../cpp/typename.md)依赖名称是否被视为一种类型，则需要关键字。 对于 Visual c + + 的所有版本的工作都方式相同的代码，添加`typename`到声明。  
   
- 为使代码在 Visual C\+\+ 的所有版本中以同样方式工作，请将 `typename` 添加到声明中。  
-  
- 下面的示例生成 C4346：  
+ 下面的示例生成 C4346:  
   
 ```  
 // C4346.cpp  
@@ -43,7 +39,7 @@ struct C {
 };  
 ```  
   
- 下面的示例显示 **typename** 关键字是必需的其他示例：  
+ 下面的示例显示了其他示例其中**typename**则需要使用关键字：  
   
 ```  
 // C4346b.cpp  

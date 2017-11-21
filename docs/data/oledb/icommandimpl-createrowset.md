@@ -1,34 +1,33 @@
 ---
-title: "ICommandImpl::CreateRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::CreateRowset"
-  - "ICommandImpl.CreateRowset"
-  - "CreateRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRowset 方法"
+title: "Icommandimpl:: Createrowset |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::CreateRowset
+- ICommandImpl.CreateRowset
+- CreateRowset
+dev_langs: C++
+helpviewer_keywords: CreateRowset method
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 510f222972b8d9306f7b248799679f0dd499288a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::CreateRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-调用 [执行](../../data/oledb/icommandimpl-execute.md) 创建单个行集合。  
+# <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
+由调用[执行](../../data/oledb/icommandimpl-execute.md)创建单个行集。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -45,38 +44,38 @@ HRESULT CreateRowset(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `RowsetClass`  
- 表示用户的行集合类的模板类的成员。  通常会通过向导产生。  
+ 模板类成员表示用户的行集类。 通常由向导生成。  
   
  `pUnkOuter`  
- \[in\] 给控制 **IUnknown** 接口的指针作为聚合的一部分，行集，则创建；否则，该列为空。  
+ [in]指向控制**IUnknown**接口如果正在聚合的一部分创建的行集; 否则，它为 null。  
   
  `riid`  
- \[in\] 对应于 `ICommand::Execute`的 `riid`。  
+ [in]对应于`riid`中`ICommand::Execute`。  
   
  `pParams`  
- \[in\/out\] 对应于 `ICommand::Execute`的 `pParams`。  
+ [输入/输出]对应于`pParams`中`ICommand::Execute`。  
   
  `pcRowsAffected`  
- 对应于 `pcRowsAffected`，在 `ICommand::Execute`中。  
+ 对应于`pcRowsAffected`中`ICommand::Execute`。  
   
  `ppRowset`  
- \[in\/out\] 对应于 `ICommand::Execute`的 `ppRowset`。  
+ [输入/输出]对应于`ppRowset`中`ICommand::Execute`。  
   
  `pRowsetObj`  
- \[out\] 指向行集合对象的指针。  通常不使用此参数，但是如果在传递到COM 对象之前必须对行集合进行更多的工作，它可以被使用。   `pRowsetObj` 的生存期由 `ppRowset`绑定。  
+ [out]指向一个行集对象的指针。 通常不使用此参数，但如果必须将其传递到 COM 对象之前行集上执行更多的工作，可以使用它。 生存期`pRowsetObj`受`ppRowset`。  
   
-## 返回值  
- 标准 `HRESULT` 值。  有关典型值的列表，请参加`ICommand::Execute`。  
+## <a name="return-value"></a>返回值  
+ 标准 `HRESULT` 值。 请参阅`ICommand::Execute`有关的典型值列表。  
   
-## 备注  
- 创建多行集，或提供您自己创建的不同的行条件，不同的位置调用 `CreateRowset`。**执行**的内部。  
+## <a name="remarks"></a>备注  
+ 若要创建多个行集，或提供你自己创建不同的行集的条件，将对不同调用`CreateRowset`中**执行**。  
   
- 参加 [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) ，在 *OLE DB Programmer's Reference.*中。  
+ 请参阅[ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx)中*OLE DB 程序员参考。*  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ICommandImpl 类](../../data/oledb/icommandimpl-class.md)

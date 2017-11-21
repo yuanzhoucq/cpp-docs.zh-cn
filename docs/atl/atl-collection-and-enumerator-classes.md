@@ -1,40 +1,41 @@
 ---
-title: "ATL Collection and Enumerator Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "集合类, ATL"
-  - "枚举数, ATL 类"
+title: "ATL 集合和枚举器类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerators, ATL classes
+- collection classes, ATL
 ms.assetid: 6818db73-7094-48d8-a0ca-18147beec362
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5fe6a018668f40c632e0ff980499afb7e60de8ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Collection and Enumerator Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL提供以下选件类帮助您实现集合和枚举数。  
+# <a name="atl-collection-and-enumerator-classes"></a>ATL 集合和枚举器类
+ATL 提供的以下类，可帮助你实现集合和枚举数。  
   
-|类|说明|  
-|-------|--------|  
+|类|描述|  
+|-----------|-----------------|  
 |[ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)|集合接口实现|  
-|[IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)|枚举器接口实现\(假定在一个STL兼容容器存储的数据\)|  
-|[CComEnumImpl](../atl/reference/ccomenumimpl-class.md)|枚举器接口实现\(假定在数组中存储的数据\)|  
-|[CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)|enumerator对象实现\(使用 `IEnumOnSTLImpl`\)|  
-|[CComEnum](../atl/reference/ccomenum-class.md)|enumerator对象实现\(使用 `CComEnumImpl`\)|  
-|[\_Copy](../atl/atl-copy-policy-classes.md)|复制策略类选件|  
-|[\_CopyInterface](../atl/atl-copy-policy-classes.md)|复制策略类选件|  
-|[CAdapt](../atl/reference/cadapt-class.md)|适配器选件类\(隐藏 **operator &** 允许 `CComPtr`、在STL容器要存储的 `CComQIPtr`和 `CComBSTR` \)|  
+|[IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)|枚举器接口的实现 （假定兼容的 c + + 标准库容器中存储的数据）|  
+|[CComEnumImpl](../atl/reference/ccomenumimpl-class.md)|枚举器接口的实现 （假设存储在数组中的数据）|  
+|[CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)|枚举器对象实现 (使用`IEnumOnSTLImpl`)|  
+|[CComEnum](../atl/reference/ccomenum-class.md)|枚举器对象实现 (使用`CComEnumImpl`)|  
+|[_Copy](../atl/atl-copy-policy-classes.md)|复制策略类|  
+|[_CopyInterface](../atl/atl-copy-policy-classes.md)|复制策略类|  
+|[CAdapt](../atl/reference/cadapt-class.md)|适配器类 (隐藏**运算符 （& a)**允许`CComPtr`， `CComQIPtr`，和`CComBSTR`要存储在 c + + 标准库容器中)|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [集合和枚举数](../atl/atl-collections-and-enumerators.md)
+

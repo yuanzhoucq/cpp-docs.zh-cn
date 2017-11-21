@@ -1,58 +1,56 @@
 ---
-title: "list::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 成员 [STL/CLR]"
+title: "list:: erase (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 78705058-1e83-441d-b267-d4fb56451c0b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0cd17daf073485f0e2aebaa7bb7d1594eeeec4cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listerase-stlclr"></a>list::erase (STL/CLR)
 移除指定位置处的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### 参数  
- first  
- 清除的范围开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要清除范围的起点。  
   
  last  
- 清除的范围末尾。  
+ 要清除范围的末尾。  
   
- where  
+ 其中  
  要清除的元素。  
   
-## 备注  
- 第一个成员函数中移除`where`指向的控件序列元素 。  使用其删除一个元素。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数将移除 `where` 所指向的受控序列的元素。 用于删除单个元素。  
   
- 第二个成员中移除函数控制元素在序列的范围的 `[``first``,` `last``)`。  您移除它使用零个或更多连续的元素。  
+ 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 用于删除零个或多个由连续的元素。  
   
- 前两个成员函数返回指定保持在所有移除元素外的第一个元素中的迭代器，或者 [list::end](../dotnet/list-end-stl-clr.md)`()`，如果不存在这样的元素。  
+ 这两个成员函数返回一个迭代器，它指定已移除，任何元素之外保留的第一个元素或[list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()`如果此类元素不存在。  
   
- 当清除元素时，元素副本数是线性的中元素的数量。抹除的结尾和序列之间的接近结束的。\(当在序列中的任一端删除一个或多个元素，元素副本不发生。\)  
+ 当清除元素，元素副本的数目呈线性擦除末尾和最近序列末尾之间的元素的数目。 （当清除序列的任意一端的一个或多个元素，没有元素副本会发生。）  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_erase.cpp   
@@ -92,16 +90,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\= b\)**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)

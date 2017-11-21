@@ -1,52 +1,53 @@
 ---
-title: "Editing Control Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], undoing changes"
-  - "controls [C++], editing properties"
-  - "dialog box controls, editing properties"
+title: "编辑控件属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], undoing changes
+- controls [C++], editing properties
+- dialog box controls, editing properties
 ms.assetid: 9bdae21d-6dec-4344-a197-2ca4fc46d040
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d69f7f22b2bf3e51e2afa2ed53b04aeefe6a59e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Editing Control Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 编辑控件的属性  
+# <a name="editing-control-properties"></a>编辑控件属性
+### <a name="to-edit-the-properties-of-a-control-or-controls"></a>若要编辑的控件或控件属性  
   
-1.  在对话框中，选择要修改的控件。  
+1.  在对话框中，选择你想要修改的控件。  
   
     > [!NOTE]
-    >  如果选择多个控件，则只能编辑所选控件的共同属性。  
+    >  如果你选择多个控件，可以编辑仅对所选控件通用的属性。  
   
-2.  在[“属性”窗口](../Topic/Properties%20Window.md)中，更改控件的属性。  
+2.  在[属性窗口](/visualstudio/ide/reference/properties-window)，更改你的控件的属性。  
   
     > [!NOTE]
-    >  将按钮、单选按钮或复选框控件的 **Bitmap** 属性设置为 **True** 后，将为控件实现样式 BS\_BITMAP。  有关更多信息，请参见[按钮样式](../mfc/reference/button-styles.md)。  有关将位图与控件相关联的示例，请参见 [CButton::SetBitmap](../Topic/CButton::SetBitmap.md)。  在对话框资源编辑器中时，位图不会出现在控件上。  
+    >  当你将设置**位图**按钮、 单选按钮或复选框控件等于属性**True**，BS_BITMAP 实现为您的控件的样式。 有关详细信息，请参阅[按钮样式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 将位图与控件关联的示例，请参阅[CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 在对话框的资源编辑器时，位图不会出现在控件上。  
   
-### 撤消对控件属性的更改  
+### <a name="to-undo-changes-to-the-properties-of-a-control"></a>若要撤消对控件的属性更改  
   
-1.  确保控件在对话框编辑器中具有焦点。  
+1.  请确保在控件有焦点在对话框编辑器中。  
   
-2.  从“编辑”菜单中选择“撤消”（如果焦点不在控件上，“撤消”命令将不可用）。  
+2.  选择**撤消**从**编辑**菜单 (如果焦点在控件上，而不是**撤消**命令都将不可用)。  
   
- 有关将资源添加到托管项目的信息，请参见“NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅 [演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
  要求  
   
  Win32  
   
-## 请参阅  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>另请参阅  
+ [对话框中的控件](../windows/controls-in-dialog-boxes.md)
+

@@ -1,46 +1,43 @@
 ---
-title: "pair::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成员 [STL/CLR]"
+title: "pair::operator = (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: b6228037-914e-4efa-8491-65dbb0e93f61
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa722f53c9ad76c32486d493db6d37e70ce12879
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# pair::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-替换存储对的值。  
+# <a name="pairoperator-stlclr"></a>pair::operator= (STL/CLR)
+替换存储的值对。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);  
 ```  
   
-#### 参数  
- right  
- 对复制的。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 要复制的对。  
   
-## 备注  
- 运算符将 `right` 对该对象的成员，然后返回 `*this`。  使用它用存储对的副本替换存储的值对 `right`中的值。  
+## <a name="remarks"></a>备注  
+ 成员运算符副本`right`到对象，然后返回`*this`。 用于使用存储对中值的副本替换存储的值对的`right`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_pair_operator_as.cpp   
@@ -61,12 +58,15 @@ int main()
   
 ```  
   
-  **\[x，3\]**  
-**\[x，3\]**   
-## 要求  
- **页眉：** \<\/cliext 实用工具\>  
+```Output  
+[x, 3]  
+[x, 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/实用工具 >  
   
-## 请参阅  
- [pair](../dotnet/pair-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [pair (STL/CLR)](../dotnet/pair-stl-clr.md)

@@ -1,37 +1,37 @@
 ---
-title: "CAtlServiceModuleT::Start Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CServiceModule.Start"
-  - "CServiceModule::Start"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Start 方法"
+title: "CAtlServiceModuleT::Start 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CServiceModule.Start
+- CServiceModule::Start
+dev_langs: C++
+helpviewer_keywords: Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3eb7009e8092184effad5e1874297c8c04b213e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CAtlServiceModuleT::Start Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在服务控制时，**\_tWinMain** 调用 **CAtlServiceModuleT::WinMain**，然后调用 `CAtlServiceModuleT::Start`。  
+# <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start 函数
+当运行时服务时， **_tWinMain**调用**CAtlServiceModuleT::WinMain**，从而又会调用`CAtlServiceModuleT::Start`。  
   
- `CAtlServiceModuleT::Start` 设置数组映射每个服务将其启动功能的 **SERVICE\_TABLE\_ENTRY** 结构。  此数组随后传递给Win32 API函数，[StartServiceCtrlDispatcher](http://msdn.microsoft.com/library/windows/desktop/ms686324)。  理论上，一EXE可以处理多项服务，并且该数组可以具有多个 **SERVICE\_TABLE\_ENTRY** 结构。  目前，但是，ATL生成的服务只支持EXE每一服务。  因此，该数组包含服务名和 **\_ServiceMain** 作为启动功能的条目。  **\_ServiceMain** 是调用非静态成员函数 `CAtlServiceModuleT`，`ServiceMain`的静态成员函数。  
+ `CAtlServiceModuleT::Start`设置的数组**SERVICE_TABLE_ENTRY**映射到其启动函数的每个服务的结构。 此数组然后传递给 Win32 API 函数， [StartServiceCtrlDispatcher](http://msdn.microsoft.com/library/windows/desktop/ms686324)。 从理论上讲，一个 EXE 可处理多个服务和该数组可能具有多个**SERVICE_TABLE_ENTRY**结构。 目前，但是，ATL 生成的服务支持每个 EXE 仅一个服务。 因此，数组具有单个条目，其中包含服务名称和**_ServiceMain**作为启动函数。 **_ServiceMain**是静态成员函数的`CAtlServiceModuleT`调用非静态成员函数， `ServiceMain`。  
   
 > [!NOTE]
->  **StartServiceCtrlDispatcher** 的未连接到服务控制管理器\(SCM\)可能意味着程序不作为服务运行。  这种情况下，过程直接调用 `CAtlServiceModuleT::Run`，以便程序可以运行作为本地服务器。  有关运行程序的更多信息作为本地服务器，请参见 [调试提示](../atl/debugging-tips.md)。  
+>  失败的**StartServiceCtrlDispatcher**连接到服务控制管理器 (SCM) 可能意味着不作为服务运行程序。 在这种情况下，在程序调用`CAtlServiceModuleT::Run`直接以便为本地服务器可以运行该程序。 有关为本地服务器中运行程序的详细信息，请参阅[进行调试的提示](../atl/debugging-tips.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [服务](../atl/atl-services.md)   
- [CAtlServiceModuleT::Start](../Topic/CAtlServiceModuleT::Start.md)
+ [CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
+

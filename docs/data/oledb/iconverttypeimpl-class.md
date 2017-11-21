@@ -1,36 +1,35 @@
 ---
-title: "IConvertTypeImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IConvertTypeImpl<T>"
-  - "IConvertTypeImpl"
-  - "ATL.IConvertTypeImpl"
-  - "ATL::IConvertTypeImpl"
-  - "ATL::IConvertTypeImpl<T>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IConvertTypeImpl 类"
+title: "IConvertTypeImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IConvertTypeImpl<T>
+- IConvertTypeImpl
+- ATL.IConvertTypeImpl
+- ATL::IConvertTypeImpl
+- ATL::IConvertTypeImpl<T>
+dev_langs: C++
+helpviewer_keywords: IConvertTypeImpl class
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 293d5d02b9515db7356eb839ced8dc1d006daafb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IConvertTypeImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-提供[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)接口的实现。  
+# <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
+提供的实现[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <class T>  
@@ -38,24 +37,24 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类是从`IConvertTypeImpl` 中派生的。  
+ 你的类，派生自`IConvertTypeImpl`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 接口方法  
+### <a name="interface-methods"></a>接口方法  
   
 |||  
 |-|-|  
-|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|提供有关类型转换的状态信息命令或对行集合。|  
+|[CanConvert](../../data/oledb/iconverttypeimpl-canconvert.md)|命令或行集上，为提供的可用性的类型转换的信息。|  
   
-## 备注  
- 此接口是必须是命令索引、行集合和行集合。  通过委托转换 OLE DB 提供的对象实现**IConvertTypeImpl** 接口。  
+## <a name="remarks"></a>备注  
+ 此接口是必需的对于命令、 行集和索引行集。 **IConvertTypeImpl**通过委派由 OLE DB 提供的转换对象到实现该接口。  
   
-## 要求  
- **头文件:** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

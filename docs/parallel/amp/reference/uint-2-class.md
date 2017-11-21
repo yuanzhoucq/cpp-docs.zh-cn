@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,34 +33,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: fdb24ae59933cc926064a6a5a9335e8734079995
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint2-class"></a>uint_2 类
 表示两个无符号整数的短矢量。  
@@ -105,19 +87,19 @@ class uint_2;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |uint_2::operator-||  
 |uint_2::operator %=||  
-|uint_2::operator < =||  
+|uint_2::operator & =||  
 |uint_2::operator * =||  
-|uint_2::operator / =||  
+|/ = uint_2::operator 的||  
 |uint_2::operator ^ =||  
-|uint_2::operator | =||  
+|uint_2::operator &#124; =||  
 |uint_2::operator ~||  
 |uint_2::operator + +||  
 |uint_2::operator + =||  
-|uint_2::operator\<=||  
+|uint_2::operator <\<=||  
 |uint_2::operator =||  
 |uint_2::operator =||  
 |uint_2::operator >> =||  
@@ -145,7 +127,7 @@ class uint_2;
  `uint_2`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -220,4 +202,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>另请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,23 +12,21 @@ f1_keywords:
 - ATLCTL/ATL::CFirePropNotifyEvent
 - ATLCTL/ATL::CFirePropNotifyEvent::FireOnChanged
 - ATLCTL/ATL::CFirePropNotifyEvent::FireOnRequestEdit
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sinks, notifying of ATL events
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 4bcc9926974f9a61e951c15bca9af168eadab435
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1fb22263b877aaff3e30e56efff2a005bc024f2e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 类
 此类提供方法通知控件属性更改有关的容器的接收器。  
@@ -104,4 +101,3 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

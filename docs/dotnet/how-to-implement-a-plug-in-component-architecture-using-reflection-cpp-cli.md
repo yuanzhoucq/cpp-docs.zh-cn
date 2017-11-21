@@ -1,39 +1,38 @@
 ---
-title: "如何：使用反射实现插件组件体系结构 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "插件 [C++]"
-  - "反射 [C++], 插件"
+title: "实现插件体系结构 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d959702a7de8df9d90ca6dd855725901543dc92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用反射实现插件组件体系结构 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何使用反射来实现简单的“插件”结构。  首先列出的是应用程序，然后列出的是插件。  应用程序是多文档窗体，使用在插件 DLL（作为命令行参数提供）中找到的任何基于窗体的类填充其本身。  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>如何：使用反射实现插件组件体系结构 (C++/CLI)
+下面的代码示例演示使用反射可以实现一个简单的"插件"体系结构。 第一个列表应用程序，且第二个插件。 应用程序是填充本身使用作为命令行自变量提供该插件 DLL 中任何基于窗体的类的多个文档窗体。  
   
- 应用程序尝试使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法来加载提供的程序集。  如果成功，则将使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> 方法枚举该程序集中的类型。  然后使用 <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> 方法检查每种类型的兼容性。  在此示例中，在提供的程序集中找到的类必须从 <xref:System.Windows.Forms.Form> 类中派生以便限定为插件。  
+ 应用程序尝试加载使用提供程序集<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>方法。 如果成功，在程序集中的类型枚举使用<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>方法。 每种类型会检查兼容性使用<xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>方法。 在此示例中，在提供的程序集中找到的类必须派生自<xref:System.Windows.Forms.Form>类才会被视为插件。  
   
- 然后将使用 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 方法实例化兼容的类，该方法将 <xref:System.Type> 作为参数接受，并返回指向新实例的指针。  然后将每个新实例附加到窗体并进行显示。  
+ 使用然后实例化兼容类<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>方法，它接受<xref:System.Type>作为自变量并将指针返回到的新实例。 然后，每个新的实例已连接到该窗体，并显示。  
   
- 请注意，<xref:System.Reflection.Assembly.Load%2A> 方法不接受包含文件扩展名的程序集名称。  应用程序中的主函数剪裁掉任何提供的扩展名，因此下面的代码示例可在其中任何一种情况下工作。  
+ 请注意，<xref:System.Reflection.Assembly.Load%2A>方法不接受包括文件扩展名的程序集名称。 应用程序中的主函数修剪任何提供的扩展，因此下面的代码示例在任一情况下工作。  
   
-## 示例  
- 以下代码定义接受插件的应用程序。  程序集名称必须作为第一个参数提供。  此程序集应至少包含一个公共 <xref:System.Windows.Forms.Form> 派生类型。  
+## <a name="example"></a>示例  
+ 下面的代码定义的应用程序接受插件。程序集名称必须作为第一个自变量提供。 此程序集应包含至少一个公共<xref:System.Windows.Forms.Form>派生类型。  
   
 ```  
 // plugin_application.cpp  
@@ -77,8 +76,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 以下代码定义了从 <xref:System.Windows.Forms.Form> 派生的三个类。  将生成的程序集名称传递到前面列表中的可执行文件时，尽管在编译时这三个类都不为宿主应用程序所知，但它们中的每一个类都将被发现并被实例化。  
+## <a name="example"></a>示例  
+ 下面的代码定义三个类派生自<xref:System.Windows.Forms.Form>。 当生成的程序集名称的名称传递到前面列表中的可执行文件时，这三个类的每个将发现并实例化，它们是所有未知的主机应用程序在编译时的情况下。  
   
 ```  
 // plugin_assembly.cpp  
@@ -128,5 +127,5 @@ protected:
 };  
 ```  
   
-## 请参阅  
- [反射](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [反射 (C++/CLI)](../dotnet/reflection-cpp-cli.md)

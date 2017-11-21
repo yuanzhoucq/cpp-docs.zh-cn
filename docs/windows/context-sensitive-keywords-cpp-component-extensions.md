@@ -1,80 +1,77 @@
 ---
-title: "上下文相关的关键字（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "internal_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "上下文相关的关键字"
+title: "上下文相关的关键字 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: internal_CPP
+dev_langs: C++
+helpviewer_keywords: context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 上下文相关的关键字（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*区分上下文关键字*是一些语言元素，这些元素只有在特定上下文中才能识别出来。  在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
+# <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
+*上下文相关的关键字*是只能在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
   
-## 所有运行时  
+## <a name="all-runtimes"></a>所有运行时  
  **备注**  
   
  下面是区上下文关键字的列表：  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [delegate](../windows/delegate-cpp-component-extensions.md)  
+-   [委托](../windows/delegate-cpp-component-extensions.md)  
   
--   [event](../windows/event-cpp-component-extensions.md)  
+-   [事件](../windows/event-cpp-component-extensions.md)  
   
 -   [finally](../dotnet/finally.md)  
   
--   [for each，in](../dotnet/for-each-in.md)  
+-   [for each, in](../dotnet/for-each-in.md)  
   
 -   [initonly](../dotnet/initonly-cpp-cli.md)  
   
--   `internal`（请参见[成员可见性](../misc/member-visibility.md)）  
+-   `internal`   
   
--   [literal](../windows/literal-cpp-component-extensions.md)  
+-   [文本](../windows/literal-cpp-component-extensions.md)  
   
--   [override](../windows/override-cpp-component-extensions.md)  
+-   [替代](../windows/override-cpp-component-extensions.md)  
   
--   [property](../windows/property-cpp-component-extensions.md)  
+-   [属性](../windows/property-cpp-component-extensions.md)  
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`（[泛型](../windows/generics-cpp-component-extensions.md) 的一部分）  
+-   `where`(属于[泛型](../windows/generics-cpp-component-extensions.md))  
   
- 出于可读性的目的，您可能要限制区分上下文关键字作为用户定义符号的使用。  
+ 出于可读性目的，你可能想要限制区分上下文关键字作为用户定义符号的使用。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
  （此功能没有特定于平台的备注。）  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
  （此功能没有特定于平台的备注。）  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
  下面的代码示例显示，在合适的上下文中，`property` 区分上下文关键字可用来定义属性和变量。  
@@ -102,6 +99,9 @@ int main() {
   
  **输出**  
   
-  **100**   
-## 请参阅  
+```Output  
+100  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

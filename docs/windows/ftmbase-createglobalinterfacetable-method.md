@@ -1,32 +1,30 @@
 ---
-title: "FtmBase::CreateGlobalInterfaceTable 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateGlobalInterfaceTable 方法"
+title: "Ftmbase:: Createglobalinterfacetable 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::CreateGlobalInterfaceTable
+dev_langs: C++
+helpviewer_keywords: CreateGlobalInterfaceTable method
 ms.assetid: bb82a0c5-22b9-4844-9204-7922033d8b07
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d206e581166fb2bd685e6d4755d56e6d189656c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase::CreateGlobalInterfaceTable 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-创建全局表 \(GIT\) 接口。  
+# <a name="ftmbasecreateglobalinterfacetable-method"></a>FtmBase::CreateGlobalInterfaceTable 方法
+可以创建全局接口表 (GIT)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 static HRESULT CreateGlobalInterfaceTable(  
@@ -34,20 +32,20 @@ static HRESULT CreateGlobalInterfaceTable(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `git`  
- 该操作完成，对全局表接口的指针。  
+ 此操作完成后，指向全局接口表的指针。  
   
-## 返回值  
- S\_OK，如果成功；否则，一错误的 HRESULT。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## 备注  
- 有关更多信息，请参见“COM 连接”COM 引用”主题的副主题中的“IGlobalInterfaceTable”主题 MSDN Library。  
+## <a name="remarks"></a>备注  
+ 有关详细信息，请参阅 MSDN 库中"COM 引用"主题的"COM 接口"子主题中的"IGlobalInterfaceTable"主题。  
   
-## 要求  
- **页眉：**ftm.h  
+## <a name="requirements"></a>要求  
+ **标头：** ftm.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [FtmBase 类](../windows/ftmbase-class.md)

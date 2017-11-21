@@ -4,49 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlbase/ATL::AtlFreeMarshalStream
+- atlbase/ATL::AtlMarshalPtrInProc
+- atlbase/ATL::AtlUnmarshalPtr
+dev_langs: C++
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: dd4b8d50ec69974b7b2af29438b1657e1ce592b4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9692e326dc8256c29373b72181517925d729da87
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="marshaling-global-functions"></a>封送处理全局函数
-这些函数提供支持封送处理和封送数据转换为接口指针。  
+# <a name="marshaling-global-functions"></a>封送处理的全局函数
+这些函数提供有关封送处理和封送数据转换为接口指针的支持。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能用于应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
   
 |||  
 |-|-|  
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|释放封送数据和`IStream`指针。|  
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|创建新的流对象，并将封送指定的接口指针。|  
-|[AtlUnmarshalPtr](#atlunmarshalptr)|将流的封送数据转换为一个接口指针。|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|将流的封送数据转换为的接口指针。|  
+
+## <a name="requirements"></a>要求：
+**标头：** atlbase.h
   
 ##  <a name="atlfreemarshalstream"></a>AtlFreeMarshalStream  
  释放流中的封送数据，然后释放流指针。  
@@ -57,7 +47,7 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
   
 ### <a name="parameters"></a>参数  
  `pStream`  
- [in]一个指向`IStream`上用于封送处理的流接口。  
+ [in]指向的指针`IStream`流用于封送的接口。  
   
 ### <a name="example"></a>示例  
   请参阅示例[AtlMarshalPtrInProc](#atlmarshalptrinproc)。  
@@ -80,20 +70,20 @@ HRESULT AtlMarshalPtrInProc(
  [in]正封送的接口的 GUID。  
   
  `ppStream`  
- [out]一个指向`IStream`上新的流对象用于封送的接口。  
+ [out]指向的指针`IStream`上新的流对象用于封送的接口。  
   
 ### <a name="return-value"></a>返回值  
  一个标准的 HRESULT 值。  
   
 ### <a name="remarks"></a>备注  
- **MSHLFLAGS_TABLESTRONG**以便可以将鼠标指针封送到多个流设置标志。 指针也可以取消封送多次。  
+ **MSHLFLAGS_TABLESTRONG**以便可以将指针封送到多个流设置标志。 指针也可以取消封送多次。  
   
- 如果封送处理将失败，则释放流指针。  
+ 如果封送处理失败，则释放流指针。  
   
- `AtlMarshalPtrInProc`仅可在进程内对象的指针。  
+ `AtlMarshalPtrInProc`仅可指向进程内对象的指针上使用。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM&#50;](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
   
 ##  <a name="atlunmarshalptr"></a>AtlUnmarshalPtr  
  将流的封送数据转换为可由客户端使用的接口指针。  
@@ -123,4 +113,3 @@ HRESULT AtlUnmarshalPtr(
   
 ## <a name="see-also"></a>另请参阅  
  [函数](../../atl/reference/atl-functions.md)
-

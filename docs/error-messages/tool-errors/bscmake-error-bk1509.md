@@ -1,39 +1,37 @@
 ---
-title: "BSCMAKE 错误 BK1509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1509"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1509"
+title: "BSCMAKE 错误 BK1509 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK1509
+dev_langs: C++
+helpviewer_keywords: BK1509
 ms.assetid: 53df7037-1913-4b63-b425-c0bf44081792
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f661152774c8d5313a294e243a0f5a0083b4e114
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE 错误 BK1509
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bscmake-error-bk1509"></a>BSCMAKE 错误 BK1509
 堆空间不足  
   
- BSCMAKE 内存不足（包括虚拟内存）。  
+ BSCMAKE 耗尽了内存，包括虚拟内存。  
   
-### 通过使用下面可能的解决方案进行修复  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复  
   
 1.  释放一些磁盘空间。  
   
-2.  增加交换文件大小。  
+2.  增加交换文件的大小。  
   
-3.  增加 Windows 交换文件大小。  
+3.  增加 Windows 交换文件的大小。  
   
-4.  使用 \/Ei 或 \/Es 消除一些输入文件或使用 \/Em 消除宏体以减小 BSCMAKE 所需内存。
+4.  减少的内存使用 /Ei BSCMAKE 要求或者 /Es 以消除一些输入文件或 /Em 以消除宏正文。

@@ -1,34 +1,32 @@
 ---
-title: "如何：在 C++/CLI 中使用 safe_cast | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "safe_cast 关键字 [C++], 向上转换"
+title: "如何： 使用 safe_cast 中 C + + /cli CLI |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7b15eddc8aa7454d98122b92ffc03c07a315390
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中使用 safe_cast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文演示如何在 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 应用程序使用safe\_cast。  有关 [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]的 safe\_cast 信息，请参见 [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)。  
+# <a name="how-to-use-safecast-in-ccli"></a>如何：在 C++/CLI 中使用 safe_cast
+这篇文章演示如何将使用 safe_cast 中 C + + /cli CLI 应用程序。 有关在 safe_cast [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]，请参阅[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
   
-## 向上转换  
- 向上转换是从派生的类型到它基类之一的转换。  此转换是安全的，不需要显式强制转换表示形式。  下面的示例显示如何执行向上转换，使用 `safe_cast`，且不包含它。  
+## <a name="upcasting"></a>向上转换  
+ 向上转换是从派生类型强制转换为其基类，这些类之一。 此强制转换是安全的并且不需要显式强制转换表示法。 下面的示例演示如何使用执行向上转换，`safe_cast`和不使用它。  
   
-```  
+```cpp  
 // safe_upcast.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,14 +66,17 @@ int main() {
 }  
 ```  
   
-  **在 C::Test**  
-**在B::Test**  
-**在 C::Test**  
-**在B::Test**   
-## 向下转换  
- 向下转换是从基类到从基类派生的类转换。向下转换是安全的，仅当在运行时寻址的对象实际上正在寻址派生类对象。与 `static_cast`不同，如果转换失败，`safe_cast` 将执行动态检查并引发 <xref:System.InvalidCastException>。  
-  
+```Output  
+in C::Test  
+in B::Test2  
+in C::Test  
+in B::Test2  
 ```  
+  
+## <a name="downcasting"></a>向下转换  
+ 向下转换是从基类强制转换为派生自的基类的类。  向下转换是仅当在运行时发送的对象实际上寻址派生的类对象安全的。  与不同`static_cast`，`safe_cast`执行动态检查，并引发<xref:System.InvalidCastException>如果转换失败。  
+  
+```cpp  
 // safe_downcast.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -118,13 +119,16 @@ int main() {
 }  
 ```  
   
-  **在C::Test\(\)**  
-**在C::Test\(\)**  
-**在 B::Test2\(\)**   
-## 用户定义的转换safe\_cast。  
- 下面的示例演示如何使用 `safe_cast` 调用用户定义的转换。  
-  
+```Output  
+in C::Test()  
+in C::Test()  
+in B::Test2()  
 ```  
+  
+## <a name="safecast-with-user-defined-conversions"></a>使用用户定义的转换的 safe_cast  
+ 下一个示例演示如何使用`safe_cast`来调用用户定义的转换。  
+  
+```cpp  
 // safe_cast_udc.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -170,16 +174,20 @@ int main() {
 }  
 ```  
   
-  **在运算符R^\(V& v**  
-**在运算符V^\(R^ r\)**   
-## safe\_cast 和装箱操作  
- **装箱**  
-  
- 装箱定义为编译器注入的，用户定义的转换。因此，可以使用 `safe_cast` 使 CLR 堆上的装箱值。  
-  
- 下面的示例演示带简单和用户定义的值类型的装箱。`safe_cast` 将在本机堆栈上的值类型变量装箱，以便分配给在垃圾回收堆的变量。  
-  
+```Output  
+in operator R^(V& v  
+in operator V^(R^ r)  
 ```  
+  
+## <a name="safecast-and-boxing-operations"></a>safe_cast 和装箱操作  
+  
+### <a name="boxing"></a>装箱  
+  
+ 装箱被指编译器插入、 用户定义的转换。  因此，你可以使用`safe_cast`进行装箱 CLR 堆上的某个值。  
+  
+ 下面的示例演示具有简单和用户定义的值类型装箱。  A`safe_cast`框是本机的堆栈，以便它可以分配给垃圾回收堆上的变量的值类型变量。  
+  
+```cpp  
 // safe_cast_boxing.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -203,9 +211,9 @@ int main() {
 }  
 ```  
   
- 下面的示例表示装箱在`safe_cast` 操作中具有在用户定义转换之上的优先级。  
+ 下一个示例演示装箱通过中的用户定义的转换具有优先级`safe_cast`操作。  
   
-```  
+```cpp  
 // safe_cast_boxing_2.cpp  
 // compile with: /clr  
 static bool fRetval = true;  
@@ -236,13 +244,13 @@ int main() {
 }  
 ```  
   
- **取消装箱**  
+### <a name="unboxing"></a>取消装箱  
   
- 取消装箱定义为编译器注入的，用户定义的转换。因此，可以使用 `safe_cast` 使 CLR 堆上的值从箱子中取出。  
+ 取消装箱被指编译器插入、 用户定义的转换。  因此，你可以使用`safe_cast`要取消装箱 CLR 堆上的某个值。  
   
- 取消装箱是用户定义转换，但是，不同于装箱，取消装箱是限制级的，必须由 `static_cast`、C 样式转换或 `safe_cast`执行；取消装箱无法隐式执行。  
+ 取消装箱是用户定义的转换，但必须与装箱，不同取消装箱是显式 — 也就是说，它必须由执行`static_cast`、 C 样式强制转换，或`safe_cast`; 不能隐式执行取消装箱。  
   
-```  
+```cpp  
 // safe_cast_unboxing.cpp  
 // compile with: /clr  
 int main() {  
@@ -251,9 +259,9 @@ int main() {
 }  
 ```  
   
- 下面的示例显示具有值类型和原类型的取消装箱。  
+ 下面的示例演示取消装箱值类型和基元类型。  
   
-```  
+```cpp  
 // safe_cast_unboxing_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -297,10 +305,10 @@ int main() {
 }  
 ```  
   
-## safe\_cast 和泛型类型  
- 下面的示例演示如何使用 `safe_cast` 执行向下转换与泛型类型。  
+## <a name="safecast-and-generic-types"></a>safe_cast 和泛型类型  
+ 下一个示例演示如何使用`safe_cast`执行使用泛型类型的向下。  
   
-```  
+```cpp  
 // safe_cast_generic_types.cpp  
 // compile with: /clr  
 interface struct I {};  
@@ -325,5 +333,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)
+## <a name="see-also"></a>另请参阅  
+ [safe_cast](../windows/safe-cast-cpp-component-extensions.md)

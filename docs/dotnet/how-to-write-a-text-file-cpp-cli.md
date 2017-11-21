@@ -1,34 +1,33 @@
 ---
-title: "如何：编写文本文件 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件 [C++], 文本"
-  - "文本文件, 在 C++ 中写入"
+title: "如何： 编写文本文件 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], text
+- text files, writing in C++
 ms.assetid: 39ecdba6-84e0-485c-a202-84cf6d7b8d4a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 080b4fcfb005d0d04c10ad5c0a6f4d1c7a49fe0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：编写文本文件 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何创建一个文本文件并使用 <xref:System.IO.StreamWriter> 类向其写入文本，该类在 <xref:System.IO> 命名空间中定义。  <xref:System.IO.StreamWriter> 构造函数获取要创建的文件的名称。  如果存在，则覆盖该文件（除非向第二个 <xref:System.IO.StringWriter> 构造函数参数传递了 True）。  
+# <a name="how-to-write-a-text-file-ccli"></a>如何：编写文本文件 (C++/CLI)
+下面的代码示例演示如何创建一个文本文件并将文本写入它使用<xref:System.IO.StreamWriter>类，该类中定义<xref:System.IO>命名空间。 <xref:System.IO.StreamWriter>构造函数采用要创建的文件的名称。 如果该文件存在，则覆盖 (除非您传递 True 为第二个<xref:System.IO.StringWriter>构造函数自变量)。  
   
- 然后使用 <xref:System.IO.StreamWriter.Write%2A> 和 <xref:System.IO.TextWriter.WriteLine%2A> 函数填充该文件。  
+ 然后使用归档文件<xref:System.IO.StreamWriter.Write%2A>和<xref:System.IO.TextWriter.WriteLine%2A>函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // text_write.cpp  
@@ -54,6 +53,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [文件和流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [文件和流 I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

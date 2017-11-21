@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CW2WEX::CW2WEX
 - ATLCONV/ATL::CW2WEX::m_psz
 - ATLCONV/ATL::CW2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2WEX class
+dev_langs: C++
+helpviewer_keywords: CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 61dbd4e59671ef2a17ba53eff4e864c43f3575b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cw2wex-class"></a>CW2WEX 类
 此类由字符串转换宏`CW2TEX`和`CT2WEX`，和 typedef `CW2W`。  
@@ -65,7 +47,7 @@ class CW2WEX
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CW2WEX::CW2WEX](#cw2wex)|构造函数。|  
 |[CW2WEX:: ~ CW2WEX](#dtor)|析构函数。|  
@@ -92,13 +74,13 @@ class CW2WEX
   
  默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。  
   
- 在此类基于以下宏︰  
+ 在此类基于以下宏：  
   
 - `CW2TEX`  
   
 - `CT2WEX`  
   
- 以下 typedef 基于此类︰  
+ 以下 typedef 基于此类：  
   
 - `CW2W`  
   
@@ -108,7 +90,7 @@ class CW2WEX
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlconv.h  
+ **标头：** atlconv.h  
   
 ##  <a name="cw2wex"></a>CW2WEX::CW2WEX  
  构造函数。  
@@ -169,4 +151,3 @@ operator LPWSTR() const throw();
  [CW2AEX 类](../../atl/reference/cw2aex-class.md)   
  [CW2CWEX 类](../../atl/reference/cw2cwex-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

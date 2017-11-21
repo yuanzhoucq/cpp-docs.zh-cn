@@ -1,32 +1,30 @@
 ---
-title: "list::unique (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique 成员 [STL/CLR]"
+title: "list:: unique (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::unique
+dev_langs: C++
+helpviewer_keywords: unique member [STL/CLR]
 ms.assetid: c3a29e4e-0ec1-4472-b050-7a9511037132
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca78fcc1de8b579a647dd9080dc64db0fde54e9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# list::unique (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除通过指定测试的相邻元素。  
+# <a name="listunique-stlclr"></a>list::unique (STL/CLR)
+删除通过了指定测试的相邻元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void unique();  
@@ -34,16 +32,16 @@ template<typename Pred2>
     void unique(Pred2 pred);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  pred  
- 比较器的元素对。  
+ 用于元素对比较器。  
   
-## 备注  
- 第一个成员函数。控制序列 \(取消\) 移除比较等于其前面的元素中的每个元素。\-\-如果元素在 `X` 元素的 `Y` 和 `X == Y`成员函数，则移除 `Y`。  将它删除除的相邻元素的每个 subsequence 副本相等比较。  注意控制排序，如果序列，如 [list::sort](../dotnet/list-sort-stl-clr.md)`()`，通过调用成员函数仅保留元素唯一值。\(该名称\)。  
+## <a name="remarks"></a>备注  
+ 从受控序列 （擦除） 中移除第一个成员函数将进行比较的每个元素等于其前面的元素-如果元素`X`元素前面`Y`和`X == Y`，成员函数删除`Y`。 你使用它删除的每个的相邻元素的子序列的所有只保留一个副本该比较等。 请注意，如果受控的序列进行排序，如通过调用[list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`，成员函数将只有元素留下唯一值。 （由此而得名）。  
   
- 第二个成员函数行为与第一个相同，不同之处在于，它将删除每个元素都紧跟在元素的 `pred``(X, Y)``X` 的 `Y`。  将它删除除的相邻元素的每个 subsequence 副本满足某一谓词函数或委托指定。  注意，如果序列顺序控制，例如通过调用 `sort(``pred``)`，使成员函数没有等效排序与任何其他元素的元素。  
+ 第二个成员函数行为与第一个相同，只不过它会删除每个元素`Y`以下元素`X`为其`pred(X, Y)`。 用于删除的每个满足谓词的函数或你指定的委托的相邻元素的子序列的所有只保留一个副本。 请注意，如果受控的序列进行排序，如通过调用`sort(pred)`，成员函数离开没有等效的顺序与任何其他元素的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_unique.cpp   
@@ -81,16 +79,19 @@ int main()
   
 ```  
   
-  **为 c**  
- **a b c**  
- **。**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+a a b c  
+a b c  
+a a  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [list:: remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)   
+ [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)

@@ -1,78 +1,78 @@
 ---
-title: "生成导入库和导出文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLibrarianTool.ModuleDefinitionFile"
-  - "VC.Project.VCLibrarianTool.ExportNamedFunctions"
-  - "VC.Project.VCLibrarianTool.GenerateDebug"
-  - "VC.Project.VCLibrarianTool.ForceSymbolReferences"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".lib 文件"
-  - "/DEF 库管理器选项"
-  - "/EXPORT 库管理器选项"
-  - "/INCLUDE 库管理器选项"
-  - "/OUT 库管理器选项"
-  - "DEF 库管理器选项"
-  - "-DEF 库管理器选项"
-  - "EXP 文件"
-  - "EXPORT 库管理器选项"
-  - "-EXPORT 库管理器选项"
-  - "导出数据"
-  - "导出数据, 导出 (.exp) 文件"
-  - "导入库, 生成"
-  - "INCLUDE 库管理器选项"
-  - "-INCLUDE 库管理器选项"
-  - "OUT 库管理器选项"
-  - "-OUT 库管理器选项"
+title: "生成导入库和导出文件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLibrarianTool.ModuleDefinitionFile
+- VC.Project.VCLibrarianTool.ExportNamedFunctions
+- VC.Project.VCLibrarianTool.GenerateDebug
+- VC.Project.VCLibrarianTool.ForceSymbolReferences
+dev_langs: C++
+helpviewer_keywords:
+- OUT library manager option
+- INCLUDE library manager option
+- /DEF library manager option
+- exporting data
+- import libraries, building
+- -INCLUDE library manager option
+- /OUT library manager option
+- DEF library manager option
+- -DEF library manager option
+- -OUT library manager option
+- /INCLUDE library manager option
+- -EXPORT library manager option
+- exporting data, export (.exp) files
+- /EXPORT library manager option
+- EXPORT library manager option
+- .lib files
+- EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05368937505ff77674bb6b176ceb0e14f55384e3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 生成导入库和导出文件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-若要生成导入库和导出文件，请使用下列语法：  
+# <a name="building-an-import-library-and-export-file"></a>生成导入库和导出文件
+若要生成导入库和导出文件，请使用以下语法：  
   
 ```  
 LIB /DEF[:deffile] [options] [objfiles] [libraries]  
 ```  
   
- 若指定了 \/DEF，则 LIB 从 LIB 命令中传递的导出规范创建输出文件。  有三种指定导出的方法，按照建议的使用顺序依次为：  
+ 当指定 /DEF 时，LIB 从 LIB 命令中传递的导出规范创建输出文件。 有三种方法，用于指定导出，建议使用的顺序依次列出：  
   
-1.  *objfiles* 或 *libraries* 之一中的 **\_\_declspec\(dllexport\)** 定义  
+1.  A **__declspec （dllexport)**之一定义*objfiles*或*库*  
   
-2.  LIB 命令行中的 \/EXPORT:*name* 规范  
+2.  /EXPORT 规范：*名称*LIB 命令行上  
   
-3.  `deffile` 的 **EXPORTS** 语句中的定义  
+3.  中的定义**导出**中的语句`deffile`  
   
- 这些方法与链接导出程序时用来指定导出的方法相同。  程序可使用一种以上的方法。  与在 LINK 命令中一样，在 LIB 命令的命令文件中也可以指定 LIB 命令的各部分（如多个 *objfiles* 或 \/EXPORT 规范）。  
+ 这些是你用于链接的导出程序时，指定导出的相同方法。 程序可以使用多个方法。 你可以指定部分的 LIB 命令 (如多个*objfiles*或 /EXPORT 规范) 在 LIB 命令中的命令文件，就像你可以在 LINK 命令中。  
   
- 下列选项适用于生成导入库和导出文件：  
+ 以下选项适用于生成导入库和导出文件：  
   
- \/OUT:*import*  
- 重写正在创建的 *import* 库的默认输出文件名。  未指定 \/OUT 时，默认名称是 LIB 命令中第一个对象文件或库的基文件名和扩展名 .lib。  导出文件的基文件名和导入库相同，扩展名是 .exp。  
+ / 输入输出：*导入*  
+ 重写的默认输出文件名*导入*正在创建的库。 如果未指定 /OUT，默认名称是第一个对象文件或库中 LIB 命令和扩展名的基名称。 lib。 导出文件有相同的基名称作为导入库和扩展。 exp。  
   
- \/EXPORT:*entryname*\[\=*internalname*\]\[,@`ordinal`\[,**NONAME**\]\]\[,**DATA**\]  
- 从程序中导出函数，以允许其他程序调用该函数。  也可导出数据（使用 **DATA** 关键字）。  通常在 DLL 中定义导出。  
+ / 导出： *entryname*[= *internalname*] [，@ `ordinal`[， **NONAME**]] [，**数据**]  
+ 从程序，以允许其他程序调用该函数导出函数。 你还可以导出数据 (使用**数据**关键字)。 通常在 DLL 中定义导出。  
   
- *entryname* 是将由调用程序使用的函数名或数据项名。  或者，可将 *internalname* 指定为定义程序中的已知函数；默认情况下，*internalname* 与 *entryname* 相同。  `ordinal` 在 1 到 65,535 的范围内指定导出表中的索引；如果没有指定 `ordinal`，LIB 将分配一个。  **NONAME** 关键字只将函数导出为序号，没有 *entryname*。  **DATA** 关键字用于导出纯数据对象。  
+ *Entryname*是函数或数据项的名称，因为它是用于调用程序。 或者，可以指定*internalname*已知定义的程序中; 默认情况下，该函数作为*internalname*相同*entryname*。 `ordinal`到的导出表中 1 到 65535; 范围内指定索引，如果不指定`ordinal`，LIB 将分配一个。 **NONAME**关键字仅作为是执行序号，导出该函数不带*entryname*。 **数据**关键字用来导出仅包含数据的对象。  
   
- \/INCLUDE:`symbol`  
- 将指定符号添加到符号表中。  此选项对强制使用本来不会包括在内的库对象很有用。  
+ / 包括：`symbol`  
+ 将指定的符号添加到符号表。 此选项可用于强制库对象，否则不会包含的使用。  
   
- 请注意，如果您在预备步骤中创建了导入库，则在创建 .dll 之前，生成 .dll 时必须传递生成导入库时所传递的同一组对象文件。  
+ 请注意，是否创建.dll 之前，可以在初步步骤中，创建你导入的库，你必须传递同一套对象文件时，生成.dll 为通过生成导入库时。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用导入库和导出文件](../../build/reference/working-with-import-libraries-and-export-files.md)

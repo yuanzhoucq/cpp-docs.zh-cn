@@ -1,33 +1,32 @@
 ---
-title: "strict_gs_check | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "strict_gs_check"
-  - "strict_gs_check_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strict_gs_check 杂注"
+title: "strict_gs_check |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- strict_gs_check
+- strict_gs_check_CPP
+dev_langs: C++
+helpviewer_keywords: strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7824572b093358343fa8469126b26f631f103bbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# strict_gs_check
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="strictgscheck"></a>strict_gs_check
 此杂注提供了增强的安全检查。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma strict_gs_check([push,] on )   
@@ -35,17 +34,17 @@ caps.handback.revision: 9
 #pragma strict_gs_check(pop)  
 ```  
   
-## 备注  
- 指示编译器在函数堆栈中插入随机 Cookie 以帮助检测基于堆栈的缓冲区溢出的某些类别。  默认情况下，\/GS（缓冲区安全检查）编译器选项不会为所有函数插入 Cookie。  有关详细信息，请参阅 [\/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。  
+## <a name="remarks"></a>备注  
+ 指示编译器在函数堆栈中插入随机 Cookie 以帮助检测基于堆栈的缓冲区溢出的某些类别。 默认情况下，/GS（缓冲区安全检查）编译器选项不会为所有函数插入 Cookie。 有关详细信息，请参阅 [/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。  
   
- 您必须使用 \/GS（缓冲区安全检查）进行编译才能启用 strict\_gs\_check。  
+ 您必须使用 /GS（缓冲区安全检查）进行编译才能启用 strict_gs_check。  
   
- 请在公开给可能有害的数据的代码模块中使用此杂注。  此杂注攻击性非常强，应用于可能不需要此防御的函数，但它为了最大程度降低其对生成的应用程序的性能的影响而进行优化。  
+ 请在公开给可能有害的数据的代码模块中使用此杂注。 此杂注攻击性非常强，应用于可能不需要此防御的函数，但它为了最大程度降低其对生成的应用程序的性能的影响而进行优化。  
   
- 即使您使用此杂注，也应尽可能写入安全的代码。  即，确保您的代码没有缓冲区溢出。strict\_gs\_check 可保护您的应用程序不发生确实保留在代码中的缓冲区溢出。  
+ 即使您使用此杂注，也应尽可能写入安全的代码。 也就是说，请确保你的代码具有没有缓冲区溢出。 strict_gs_check 可能从你的代码中仍存在的缓冲区溢出保护你的应用程序。  
   
-## 示例  
- 在以下代码中，缓冲区溢出出现在我们将数组复制到本地数组时。  使用 \/GS 编译此代码时，不会在堆栈中插入任何 Cookie，因为数组数据类型为指针。  添加 strict\_gs\_check 杂注会将堆栈 Cookie 强制插入函数堆栈。  
+## <a name="example"></a>示例  
+ 在以下代码中，缓冲区溢出出现在我们将数组复制到本地数组时。 使用 /GS 编译此代码时，不会在堆栈中插入任何 Cookie，因为数组数据类型为指针。 添加 strict_gs_check 杂注会将堆栈 Cookie 强制插入函数堆栈。  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -73,6 +72,6 @@ void ** ReverseArray(void **pData,
   
 ```  
   
-## 请参阅  
- [Pragma 指令和 \_\_Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [\/GS（缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)
+## <a name="see-also"></a>另请参阅  
+ [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)

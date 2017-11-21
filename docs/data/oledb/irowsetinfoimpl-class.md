@@ -1,65 +1,64 @@
 ---
-title: "IRowsetInfoImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetInfoImpl"
-  - "IRowsetInfoImpl"
-  - "ATL::IRowsetInfoImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetInfoImpl 类"
+title: "IRowsetInfoImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetInfoImpl
+- IRowsetInfoImpl
+- ATL::IRowsetInfoImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d34fdaa37901d8bdce3dce312d674024a84ad0e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetInfoImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-提供了 [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) 接口的实现。  
+# <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
+提供的实现[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE IRowsetInfoImpl :   
-   public IRowsetInfo,    
+   public IRowsetInfo,    
    public CUtlProps<PropClass>  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类是从`IRowsetInfoImpl` 中派生的。  
+ 你的类，派生自`IRowsetInfoImpl`。  
   
  `PropClass`  
- 该用户可定义的属性类默认为 `T`。  
+ 默认为可由用户定义的属性类`T`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 接口方法  
+### <a name="interface-methods"></a>接口方法  
   
 |||  
 |-|-|  
-|[获得属性](../../data/oledb/irowsetinfoimpl-getproperties.md)|返回行集合支持的所有属性的当前设置。|  
-|[GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|返回指向对其应用书签或章节的行集合的接口指针。|  
-|[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|返回对象（命令或会话）上用于创建此行集合的接口指针。|  
+|[GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)|返回行集所支持的所有属性的当前设置。|  
+|[GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)|到书签所应用到的行集返回的接口指针。|  
+|[GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)|返回创建下一个行集合的对象 （命令或会话） 上的接口指针。|  
   
-## 备注  
- 对行集合所必须的接口。  实现该命令类使用 [属性集映射](../../data/oledb/begin-propset-map.md)定义的行集合属性。  虽然使用命令行集合类将类的属性设置为，行集的供应与其运行时属性自己的复制，由命令，则会话或对象时创建。  
+## <a name="remarks"></a>备注  
+ 行集上的必需接口。 此类通过实现行集属性[属性集映射](../../data/oledb/begin-propset-map.md)命令类中定义。 若要使用命令类的属性集，将显示行集类，尽管命令或会话对象创建时其自己的副本运行时属性时，提供行集。  
   
-## 要求  
- **头文件：**altdb.h  
+## <a name="requirements"></a>要求  
+ **标头：** altdb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

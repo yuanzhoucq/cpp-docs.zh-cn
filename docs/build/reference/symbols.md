@@ -1,44 +1,43 @@
 ---
-title: "/SYMBOLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/symbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SYMBOLS dumpbin 选项"
-  - "公共符号"
-  - "符号表"
-  - "SYMBOLS dumpbin 选项"
-  - "-SYMBOLS dumpbin 选项"
-  - "symbols, 显示 COFF 符号表"
-  - "symbols, 转储"
+title: "-SYMBOLS |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /symbols
+dev_langs: C++
+helpviewer_keywords:
+- symbols, dumping
+- public symbols
+- symbols, displaying COFF symbol table
+- symbol tables
+- SYMBOLS dumpbin option
+- /SYMBOLS dumpbin option
+- -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 360f26de5043eae7f5cdb4688612f95b96be8fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /SYMBOLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="symbols"></a>/SYMBOLS
 ```  
 /SYMBOLS  
 ```  
   
- 此选项显示 COFF 符号表。  符号表存在于所有对象文件中。  而对于图像文件，只有当它是与 \/DEBUG 链接的时，它才包含 COFF 符号表。  
+ 此选项显示 COFF 符号表。 对象的所有文件中存在符号表。 仅当使用 /DEBUG 链接，COFF 符号表将显示在图像文件。  
   
- 下面是关于 \/SYMBOLS 输出的说明。  通过查阅 winnt.h（IMAGE\_SYMBOL 和 IMAGE\_AUX\_SYMBOL）或 COFF 文档，可找到有关 \/SYMBOLS 输出含义的附加信息。  
+ 下面是输出的 /SYMBOLS 的说明。 可以通过查看在 winnt.h （IMAGE_SYMBOL 和 IMAGE_AUX_SYMBOL） 或 COFF 文档中找到含义的 /SYMBOLS 输出的其他信息。  
   
- 假设有下列示例转储：  
+ 给定下面的示例转储：  
   
 ```  
 Dump of file main.obj  
@@ -63,18 +62,18 @@ Summary
       23 .text  
 ```  
   
-## 备注  
- 对于以符号号码开头的行，下列说明描述了含有与用户相关的信息的列：  
+## <a name="remarks"></a>备注  
+ 符号数字，开头的行的以下说明，说明了具有与用户相关的信息的列：  
   
--   开头的 3 位数字是符号索引\/号码。  
+-   第一个三位数字是符号编号。  
   
--   如果第三列包含 SECT*x*，则符号在对象文件的那一节中定义。  但如果出现 UNDEF，则它不在那个对象中定义并且必须在其他地方被解析。  
+-   如果第三个列包含 SECT*x*，在对象文件的那一节中定义符号。 但如果 UNDEF 出现，它不在该对象中定义，因此必须在其他位置解决。  
   
--   第五列 \(Static, External\) 说明符号是否只在那个对象的内部可见，或者是否是公共的（外部可见）。  静态符号 \_sym 不会链接到公共符号 \_sym；这些符号是名为 \_sym 的函数的两种不同实例。  
+-   第五列 （静态、 外部） 指示符号是否可见仅在该对象，或者它是否是公共 (可见外部)。 静态符号 _sym 不会链接到公共符号 _sym;这些将是名为 _sym 的函数的两个不同的实例。  
   
- 编号行中的最后一列是符号名（修饰名和未修饰名）。  
+ 编号行中的最后一列是符号名称，同时修饰和未修饰名。  
   
- 只有 [\/HEADERS](../../build/reference/headers.md) DUMPBIN 选项可用于由 [\/GL](../../build/reference/gl-whole-program-optimization.md) 编译器选项产生的文件。  
+ 仅[/HEADERS](../../build/reference/headers.md) DUMPBIN 选项是可供产生的文件的使用[/GL](../../build/reference/gl-whole-program-optimization.md)编译器选项。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [DUMPBIN 选项](../../build/reference/dumpbin-options.md)

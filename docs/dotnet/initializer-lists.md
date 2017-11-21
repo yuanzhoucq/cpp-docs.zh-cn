@@ -1,31 +1,30 @@
 ---
-title: "初始值设定项列表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "初始值设定项列表"
+title: "初始值设定项列表 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: initializer lists
 ms.assetid: b3e53442-9809-4105-9226-ae845bd20cae
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99d62f1aec8cf06fff5de98f4681ddc67c3a9e71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 初始值设定项列表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-现在会在调用基类构造函数之前调用构造函数中的初始值设定项列表。  
+# <a name="initializer-lists"></a>初始值设定项列表
+在构造函数中的初始值设定项列表现在称为先于基类构造函数中。  
   
-## 备注  
- 在 Visual C\+\+ 2005 之前，使用 C\+\+ 托管扩展进行编译时会在调用初始值设定项列表之前调用基类构造函数。  现在使用 **\/clr** 进行编译时则会先调用初始值设定项列表。  
+## <a name="remarks"></a>备注  
+ 在 Visual c + + 2005 中之前, 的基类构造函数时，调用在初始值设定项列表之前使用 Managed Extensions for c + + 编译。 现在，使用编译时**/clr**，都会首先调用初始值设定项列表。  
   
-## 请参阅  
- [常规语言更改](../dotnet/general-language-changes-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [常规语言更改 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

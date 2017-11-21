@@ -1,39 +1,37 @@
 ---
-title: "编译器错误 C3533 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3533"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3533"
+title: "编译器错误 C3533 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3533
+dev_langs: C++
+helpviewer_keywords: C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b519a08080edb8dda37760bd826224657365afae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器错误 C3533
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“type”: 参数不能是包含“auto”的类型  
+# <a name="compiler-error-c3533"></a>编译器错误 C3533
+type: 参数不能具有包含 auto 的类型  
   
- 如果默认 [\/Zc:auto](../../build/reference/zc-auto-deduce-variable-type.md) 编译器选项有效，则不能使用 `auto` 关键字声明方法或模板参数。  
+ 方法或模板的参数不能用声明`auto`关键字如果默认值[/zc: auto](../../build/reference/zc-auto-deduce-variable-type.md)编译器选项将生效。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  从参数声明中移除 `auto` 关键字。  
+1.  删除`auto`从参数声明的关键字。  
   
-## 示例  
- 下面的示例会产生 C3535，因为它使用 `auto` 关键字声明函数参数，并使用 **\/Zc:auto** 进行编译。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3535，因为它声明的函数参数`auto`关键字和它进行编译的**/zc: auto**。  
   
 ```  
 // C3533a.cpp  
@@ -41,8 +39,8 @@ caps.handback.revision: 6
 void f(auto j){} // C3533  
 ```  
   
-## 示例  
- 下面的示例会产生 C3535，因为它使用 `auto` 关键字声明模板参数，并使用 **\/Zc:auto** 进行编译。  
+## <a name="example"></a>示例  
+ 下面的示例会产生 C3535，因为它声明的模板参数`auto`关键字和它进行编译的**/zc: auto**。  
   
 ```  
 // C3533b.cpp  
@@ -50,6 +48,6 @@ void f(auto j){} // C3533
 template<auto T> class C{}; // C3533  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)   
- [\/Zc:auto（推导变量类型）](../../build/reference/zc-auto-deduce-variable-type.md)
+ [/Zc: auto （推导变量类型）](../../build/reference/zc-auto-deduce-variable-type.md)

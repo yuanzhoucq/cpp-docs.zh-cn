@@ -1,68 +1,68 @@
 ---
-title: "/Fo（对象文件名） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Fo"
-  - "VC.Project.VCCLCompilerTool.ObjectFile"
-  - "VC.Project.VCCLWCECompilerTool.ObjectFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fo 编译器选项 [C++]"
-  - "Fo 编译器选项 [C++]"
-  - "-Fo 编译器选项 [C++]"
-  - "对象文件, 命名"
+title: "-Fo （对象文件名） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /Fo
+- VC.Project.VCCLCompilerTool.ObjectFile
+- VC.Project.VCCLWCECompilerTool.ObjectFile
+dev_langs: C++
+helpviewer_keywords:
+- Fo compiler option [C++]
+- object files, naming
+- /Fo compiler option [C++]
+- -Fo compiler option [C++]
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ba311166de220cc19403fd9d5eb10ae84bffb58e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /Fo（对象文件名）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-此选项指定要使用的对象 \(.obj\) 文件名或目录而不使用默认设置。  
+# <a name="fo-object-file-name"></a>/Fo（对象文件名）
+指定对象 (.obj) 文件的名称或要使用的目录，而不是默认目录。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Fopathname  
 ```  
   
-## 备注  
- 如果不使用此选项，对象文件将使用源文件的基名称和 .obj 扩展名。  可以使用任何所需名称和扩展名，但建议按约定使用 .obj。  
+## <a name="remarks"></a>备注  
+ 如果不使用此选项，该对象文件将使用的源文件和.obj 扩展名的基名称。 你可以使用任何名称和所需的扩展，但建议的约定是使用。 obj。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“输出文件”**属性页。  
+3.  单击“输出文件”  属性页。  
   
-4.  修改**“对象文件名”**属性。在开发环境中，对象文件必须具有 .obj 的扩展名。  
+4.  修改**对象文件名**属性。  在开发环境中中的对象文件必须具有的扩展。 obj。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ObjectFile%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ObjectFile%2A>。  
   
-## 示例  
- 下列命令行在驱动器 B 上的现有目录 \\OBJECT 中创建名为 THIS.obj 的对象文件。  
+## <a name="example"></a>示例  
+ 下面的命令行创建对象文件中的现有目录，\OBJECT，驱动器 B.上名为 THIS.obj  
   
 ```  
 CL /FoB:\OBJECT\ THIS.C  
 ```  
   
-## 请参阅  
- [输出文件 \(\/F\) 选项](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>另请参阅  
+ [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [指定路径名](../../build/reference/specifying-the-pathname.md)

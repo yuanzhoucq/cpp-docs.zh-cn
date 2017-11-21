@@ -1,36 +1,35 @@
 ---
-title: "IRowsetUpdateImpl::GetPendingRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl::GetPendingRows"
-  - "GetPendingRows"
-  - "IRowsetUpdateImpl.GetPendingRows"
-  - "ATL::IRowsetUpdateImpl::GetPendingRows"
-  - "ATL.IRowsetUpdateImpl.GetPendingRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetPendingRows 方法"
+title: "Irowsetupdateimpl:: Getpendingrows |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl::GetPendingRows
+- GetPendingRows
+- IRowsetUpdateImpl.GetPendingRows
+- ATL::IRowsetUpdateImpl::GetPendingRows
+- ATL.IRowsetUpdateImpl.GetPendingRows
+dev_langs: C++
+helpviewer_keywords: GetPendingRows method
 ms.assetid: 2d1ef748-da6d-4184-98dc-096427358dfd
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ee25e0e67ecb90178e1df1c54ac6db1fb718cbe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::GetPendingRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-返回有挂起的更改的行列表。  
+# <a name="irowsetupdateimplgetpendingrows"></a>IRowsetUpdateImpl::GetPendingRows
+返回具有挂起的更改的行的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -43,17 +42,17 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `hReserved`  
- \[in\] 对应于 [IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)的 `hChapter` 参数。  
+ [in]对应于`hChapter`中的参数[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)。  
   
- 有关其他参数，请参阅*OLE DB 程序员参考手册*中的[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)。  
+ 其他参数，请参阅[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)中*OLE DB 程序员参考*。  
   
-## 备注  
- 有关更多信息，请参见*OLE DB 程序员参考手册*中的[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)。  
+## <a name="remarks"></a>备注  
+ 有关详细信息，请参阅[IRowsetUpdate::GetPendingRows](https://msdn.microsoft.com/en-us/library/ms719626.aspx)中*OLE DB 程序员参考*。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)

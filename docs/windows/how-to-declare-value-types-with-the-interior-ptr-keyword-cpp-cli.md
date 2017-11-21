@@ -1,40 +1,39 @@
 ---
-title: "如何：用 interior_ptr 关键字声明值类型 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr 关键字"
-  - "值类型, 声明"
+title: "如何： 用 interior_ptr 关键字声明值类型 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df675ca7168157c5ffa9529ab630b2100abda11a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 `interior_ptr` 的值类型。  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
+`interior_ptr` 可以与值类型一起使用。  
   
 > [!IMPORTANT]
->  此语言功能支持使用 **\/clr** 编译器选项，但是，不受 **\/ZW** 编译器选项。  
+>  通过支持此语言功能**/clr**编译器选项，但不是**/ZW**编译器选项。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 下面的 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 示例演示如何使用值类型的 `interior_ptr`。  
+### <a name="description"></a>描述  
+ 以下 C + + /cli CLI 示例演示如何使用`interior_ptr`使用值类型。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +63,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 1  
@@ -75,14 +74,14 @@ int main() {
 3  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 在值类型指针，`this` 的计算结果为 interior\_ptr。  
+### <a name="description"></a>描述  
+ 在值类型中，`this` 指针的计算结果为 interior_ptr。  
   
- 在值类型 `V`的非静态成员函数体中，`this` 的值是对象地址调用函数类型为 `interior_ptr<V>` 的表达式。  
+ 在值类型 `V` 的非静态成员函数体中，`this` 是类型 `interior_ptr<V>` 的表达式，后者的值是函数调用的对象地址。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +95,14 @@ value struct V {
 };  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 下面的示例演示了如何使用 address\-of 包含静态成员的运算符。  
+### <a name="description"></a>描述  
+ 下面的示例演示了如何将 address-of 运算符与静态成员一起使用。  
   
- 静态 Visual C\+\+ 类型成员的地址为本机指针。静态值类型成员的地址是托管指针，因为值类型成员在运行时堆分配，并且可由垃圾回收器移动。  
+ 静态 Visual C++ 类型成员的地址产生本机指针。  静态值类型成员的地址是托管指针，因为值类型成员在运行时堆上分配，并且可由垃圾回收器移动。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +128,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 22  
@@ -137,5 +136,5 @@ int main() {
 hello  
 ```  
   
-## 请参阅  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

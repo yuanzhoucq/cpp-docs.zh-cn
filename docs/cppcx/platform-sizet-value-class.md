@@ -1,49 +1,66 @@
 ---
-title: "Platform::SizeT 值类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::SizeT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::SizeT 结构"
+title: "Platform:: sizet 值类 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/PlatformSizeT::SizeT constructor
+dev_langs: C++
+helpviewer_keywords: Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 18001661b0862f19e3c002f4c4e60efdf68c9e30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::SizeT 值类
+# <a name="platformsizet-value-class"></a>Platform::SizeT 值类
 表示对象大小。 SizeT 是无符号数据类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 public ref class SizeT sealed : ValueType  
 ```  
   
-## 成员  
+### <a name="members"></a>成员  
   
-|成员|说明|  
-|--------|--------|  
-|[SizeT::SizeT 构造函数](../cppcx/sizet-sizet-constructor.md)|使用指定的值初始化类的新实例。|  
+|成员|描述|  
+|------------|-----------------|  
+|[SizeT::SizeT 构造函数](#ctor)|使用指定的值初始化类的新实例。|  
   
-## 要求  
- **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>要求  
+ **支持的最低客户端：** Windows 8  
   
- **支持的最低服务器版本：** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **支持的最低服务器：** Windows Server 2012  
   
- **命名空间：**Platform  
+ **命名空间：** Platform  
   
- **元数据：**platform.winmd  
+ **元数据：** platform.winmd  
+
+ ## <a name="ctor"></a>Sizet:: Sizet 构造函数
+使用指定值初始化 SizeT 的新实例。  
   
-## 请参阅  
- [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)
+### <a name="syntax"></a>语法  
+  
+```cpp  
+SizeT( uint32 value1 );   SizeT( void* value2 );  
+```  
+  
+### <a name="parameters"></a>参数  
+ value1  
+ 32 位无符号值。  
+  
+ value2  
+ 指向 32 位无符号值的指针。  
+  
+  
+## <a name="see-also"></a>另请参阅  
+ [平台命名空间](../cppcx/platform-namespace-c-cx.md)

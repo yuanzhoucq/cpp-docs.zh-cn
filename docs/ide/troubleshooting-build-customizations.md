@@ -1,48 +1,48 @@
 ---
-title: "生成自定义项疑难解答 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "生成事件 [C++], 疑难解答"
-  - "生成步骤 [C++], 疑难解答"
-  - "builds [C++], 生成事件"
-  - "builds [C++], 疑难解答"
-  - "自定义生成步骤 [C++], 疑难解答"
-  - "事件 [C++], 生成"
-  - "疑难解答 [C++], 生成"
+title: "故障排除生成自定义项 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- build events [C++], troubleshooting
+- builds [C++], build events
+- troubleshooting [C++], builds
+- build steps [C++], troubleshooting
+- events [C++], build
+- builds [C++], troubleshooting
+- custom build steps [C++], troubleshooting
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 91067753fcb02dd88165e406dc5c0a39183e5d33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 生成自定义项疑难解答
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果自定义生成步骤或事件没有像预期的那样表现，您可以执行一些操作，以了解发生了什么问题。  
+# <a name="troubleshooting-build-customizations"></a>生成自定义项疑难解答
+如果您的自定义生成步骤或事件没有按预期表现，，有几种方法你可以以了解发生了什么问题。  
   
--   确保自定义生成步骤生成的文件与声明为输出的文件匹配。  
+-   请确保你的自定义生成步骤生成的文件匹配声明作为输出的文件。  
   
--   如果自定义生成步骤生成的任何文件是其他生成步骤（自定义或非自定义）的输入或依赖项，则确保将这些文件添加到项目中。  并确保使用那些文件的工具在自定义生成步骤之后才会执行。  
+-   如果你自定义生成步骤生成的任何文件都输入或依赖关系的其他生成步骤 （自定义或其他方式），请确保这些文件将添加到你的项目。 并确保使用这些文件的工具执行后自定义生成步骤。  
   
--   要显示自定义生成步骤实际是如何操作的，需要将 `@echo on` 添加为第一个命令。  生成事件和生成步骤都放入临时 .bat 文件中，并在生成项目时运行。  因此，您可以添加错误检查至生成事件或生成步骤命令。  
+-   若要显示自定义生成步骤实际如何操作，请添加`@echo on`作为第一个命令。 临时.bat 文件中放置和运行时生成项目时生成事件和生成步骤。 因此，你可以添加错误检查到生成事件，或生成步骤命令。  
   
--   检查中间文件目录中的生成日志，查看实际执行的是什么操作。  **MSBuild** 宏表达式 **$\(IntDir\)\\$\(MSBuildProjectName\).log** 表示的内部版本记录的路径和名称。  
+-   检查以查看实际执行的内容的中间文件目录中的生成日志。 通过所表示的路径和名称生成日志**MSBuild**宏表达式**$ （intdir)\\$(MSBuildProjectName).log**。  
   
--   修改项目设置以便收集的信息量多于生成日志中的默认信息量。  在**“工具”**菜单上，单击**“选项”**。  在**“选项”**对话框中单击**“项目和解决方案”**节点，然后单击**“生成并运行”**节点。  然后在**“MSBuild 项目生成日志文件详细信息”**框中，单击**“详细”**。  
+-   修改你的项目设置以收集多个默认中生成日志信息的量。 在 **“工具”** 菜单上，单击 **“选项”**。 在**选项**对话框中，单击**项目和解决方案**节点，然后单击**生成并运行**节点。 然后，在**MSBuild 项目生成日志文件详细信息**框中，单击**Detailed**。  
   
--   验证您正在使用的任何文件名或目录宏的值。  可以单独回显宏，或者将 `copy %0 command.bat` 添加到自定义生成步骤的开始处，该命令将自定义生成步骤的命令复制到所有宏都已展开的 command.bat 中。  
+-   验证文件正在使用的名称或目录宏的任何值。 你可以单独回显宏，也可以添加`copy %0 command.bat`到自定义生成步骤开始时，请中，这将复制到 command.bat 的自定义生成步骤的命令使用所有扩展的宏。  
   
--   单独运行自定义生成步骤和生成事件，以检查它们的行为。  
+-   运行自定义生成步骤和生成事件，单独以检查它们的行为。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)

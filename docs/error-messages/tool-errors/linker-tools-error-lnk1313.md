@@ -1,34 +1,32 @@
 ---
-title: "链接器工具错误 LNK1313 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1313"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1313"
+title: "链接器工具错误 LNK1313 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1313
+dev_langs: C++
+helpviewer_keywords: LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b051cff464a7aa7736b8ff7ac9f9e1a33731832
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器工具错误 LNK1313
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-检测到 ijw\/native 模块；不能与纯模块链接  
+# <a name="linker-tools-error-lnk1313"></a>链接器工具错误 LNK1313
+检测到 ijw/native 模块；不能与纯模块链接  
   
- Visual C\+\+ 的当前版本不支持将本机或混合托管\/本机.obj 文件与用 **\/clr:pure** 编译的 .obj 文件进行链接。  
+ Visual c + + 的当前版本不支持将本机或混合托管/本机.obj 文件与编译的.obj 文件链接**/clr: pure**。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // LNK1313.cpp  
@@ -37,7 +35,7 @@ caps.handback.revision: 7
 int main() {}  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // LNK1313_b.cpp  
@@ -46,7 +44,7 @@ int main() {}
 void test(){}  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例将生成 LNK1313。  
   
 ```  

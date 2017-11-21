@@ -1,57 +1,55 @@
 ---
-title: "__writecr4 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_writecr4"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_writecr4 内部函数"
+title: "__writecr4 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _writecr4
+dev_langs: C++
+helpviewer_keywords: _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9d12529be223420992413bcdcd4812dd0d78a5ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __writecr4
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="writecr4"></a>__writecr4
 **Microsoft 专用**  
   
- 写入 CR4 寄存器值 `Data` 。  
+ 将值`Data`CR4 注册。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void writecr4(   
-   unsigned __int64 Data   
+void writecr4(   
+   unsigned __int64 Data   
 );  
 ```  
   
-#### 参数  
- \[in\] `Data`  
- 写入的值设置为 CR4 注册。  
+#### <a name="parameters"></a>参数  
+ [in] `Data`  
+ 要写入的 CR4 寄存器的值。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__writecr4`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__writecr4`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此内部只有在内核模式，并且，实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 此内部函数只在内核模式下可用，例程只能用作内部函数。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

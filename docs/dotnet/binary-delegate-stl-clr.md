@@ -1,32 +1,30 @@
 ---
-title: "binary_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_delegate 函数 [STL/CLR]"
+title: "binary_delegate (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate
+dev_langs: C++
+helpviewer_keywords: binary_delegate function [STL/CLR]
 ms.assetid: 52a9291a-e354-4b9e-a035-78dac1179ec5
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 46faf7218486d6c1016a15ab832a902a0b76009a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# binary_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-genereic 类描述一委托参数。  使用该指定委托根据其参数和返回类型。  
+# <a name="binarydelegate-stlclr"></a>binary_delegate (STL/CLR)
+Genereic 类描述两个参数的委托。 使用它指定根据其自变量和返回类型的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 generic<typename Arg1,  
@@ -35,26 +33,26 @@ generic<typename Arg1,
     delegate Result binary_delegate(Arg1, Arg2);  
 ```  
   
-#### 参数  
- Arg1  
+#### <a name="parameters"></a>参数  
+ arg1  
  第一个参数的类型。  
   
- Arg2  
- 第二个参数的类型为 。  
+ arg2  
+ 第二个参数的类型。  
   
  结果  
- 返回类型 。  
+ 返回类型。  
   
-## 备注  
- 委托 genereic 描述两参数函数。  
+## <a name="remarks"></a>备注  
+ Genereic 委托介绍了两个参数的函数。  
   
- 请注意：  
+ 请注意，对于：  
   
  `binary_delegate<int, int, int> Fun1;`  
   
  `binary_delegate<int, int, int> Fun2;`  
   
- `Fun1` 和 `Fun2` 类型是同义词，那么，当进行针对：  
+ 类型`Fun1`和`Fun2`是同义词，而为：  
   
  `delegate int Fun1(int, int);`  
   
@@ -62,7 +60,7 @@ generic<typename Arg1,
   
  它们不是同一类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_binary_delegate.cpp   
@@ -91,15 +89,18 @@ int main()
   
 ```  
   
-  **比较\(L'a', L'a'\) \= False**  
-**比较 \(L'a，L'b\) \= true**  
-**比较\(L'b', L'a'\) \= False**   
-## 要求  
- **Header:** \<cliext\/functional\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

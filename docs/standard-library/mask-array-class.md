@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- valarray/std::mask_array
-dev_langs:
-- C++
-helpviewer_keywords:
-- mask_array class
+f1_keywords: valarray/std::mask_array
+dev_langs: C++
+helpviewer_keywords: mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 2dfc6705d9d042b9a12ab84cb314d49cddc855a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 882091956f9d9c5985e3bfacfe015ff81e84ac6c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="maskarray-class"></a>mask_array 类
 一个内部的辅助模板类，该类通过提供子集阵列之间的操作来支持作为父级 valarray（使用布尔表达式指定）的子集的对象。  
@@ -88,5 +83,4 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

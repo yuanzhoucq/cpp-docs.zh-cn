@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __if_not_exists_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __if_not_exists keyword [C++]
+f1_keywords: __if_not_exists_cpp
+dev_langs: C++
+helpviewer_keywords: __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5eff74bd6405d7ec63b3cc8fbea968df984fddb8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5bd11ed833b54082d7ea2a394bdd4cad3c3e1321
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 语句
 `__if_not_exists` 语句测试指定的标识符是否存在。 如果该标识符不存在，则执行指定的语句块。  

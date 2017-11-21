@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 构造函数是一种可初始化其类的实例的成员函数。 构造函数具有与类相同的名称，没有返回值。 构造函数可以具有任意数量的参数，类可以具有任意数量的重载构造函数。 构造函数可以具有任何可访问性（公共、受保护或私有）。 如果未定义任何构造函数，则编译器会生成不采用任何参数的默认构造函数；可以通过将默认构造函数声明为已删除来重写此行为。  
@@ -613,7 +610,7 @@ class Derived : T {
   
  编译器生成的复制构造函数将设置新的对象，并对要复制的对象的内容按成员复制。 如果基类或成员构造函数存在，则将调用它们；否则将执行按位复制。  
   
- 如果类的所有基类和成员类`type`具有复制构造函数接受**const**参数，则编译器生成的复制构造函数接受单个参数的类型**const** `type`**&**. 否则，编译器生成的复制构造函数将接受类型的单个参数`type` ** & **。  
+ 如果类的所有基类和成员类`type`具有复制构造函数接受**const**参数，则编译器生成的复制构造函数接受单个参数的类型**const** `type`**&**. 否则，编译器生成的复制构造函数将接受类型的单个参数`type`  **&** 。  
   
  你可以使用构造函数初始化**const**或`volatile`对象，但构造函数本身不能声明为**const**或`volatile`。 构造函数的唯一合法存储类是**内联**; 使用任何其他存储类修饰符，包括`__declspec`关键字，具有一个构造函数会导致编译器错误。  
   
@@ -699,4 +696,3 @@ int main()
   
  `Base::Base` 调用函数 `f`，该函数是一个虚函数。 通常，将调用 `Derived::f`，因为对象 `d` 属于类型 `Derived`。 由于 `Base::Base` 函数是构造函数，因此该对象不属于 `Derived` 类型，并且将调用 `Base::f`。  
   
-

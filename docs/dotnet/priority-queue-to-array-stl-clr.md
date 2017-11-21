@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成员 [STL/CLR]"
+title: "priority_queue::to_array (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: f686494c-a943-4d3c-b419-0305a5716ae6
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3221542787629cef649db6faccb896feae2af5d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制控件序列到新数组。  
+# <a name="priorityqueuetoarray-stlclr"></a>priority_queue::to_array (STL/CLR)
+受控的序列复制到新数组。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## 备注  
- 成员函数返回一控制序列的数组。  使用它包含控制的序列复制以数组形式。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回包含受控的序列的数组。 用于获取受控序列中数组形式的副本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_priority_queue_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **a bc d c。**  
- **c b**   
-## 要求  
- **页眉：** \<\/cliext 队列\>  
+```Output  
+d c b a  
+c a b  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)

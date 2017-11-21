@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file translation [C++], about file translation
 - translation [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
 C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的每个文件按以下概念顺序进行翻译（实际顺序遵循“似同”规则：必须进行翻译，就似同已执行这些步骤一样）：  
@@ -57,7 +54,7 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
   
 -   一个预定义的宏， **__cplusplus**，仅为 c + + 定义。 请参阅[预定义的宏](../preprocessor/predefined-macros.md)中*预处理器参考*有关详细信息。  
   
--   C 预处理器无法识别 c + + 运算符： **。\***， ** -> \* **，和`::`。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)和[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。  
+-   C 预处理器无法识别 c + + 运算符： **。\***，  **-> \*** ，和`::`。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)和[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。  
   
 ## <a name="see-also"></a>另请参阅  
  [词法约定](../cpp/lexical-conventions.md)

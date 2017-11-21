@@ -1,72 +1,72 @@
 ---
-title: "支持架构行集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 使用者模板, 架构行集合"
-  - "OLE DB 提供程序, 架构行集合"
-  - "OLE DB, 架构行集合"
-  - "架构行集合"
+title: "支持架构行集合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- schema rowsets
+- OLE DB consumer templates, schema rowsets
+- OLE DB providers, schema rowsets
+- OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 支持架构行集合
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-架构行集合允许使用者获得有关数据存储区的信息，而不必知道它的基础结构或架构。  例如，数据存储区可以使表组织成用户定义的层次结构，因此除了通过读取，没有其他方法可以确保得到架构的知识。（作为另一个示例，注意 Visual C\+\+ 向导使用架构行集合生成使用者的访问器。）为了使使用者可以这样做，提供程序的会话对象公开 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 接口上的方法。  在 Visual C\+\+ 应用程序中，使用 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 类实现 **IDBSchemaRowset**。  
+# <a name="supporting-schema-rowsets"></a>支持架构行集
+架构行集允许使用者无需知道其基础结构或架构中获取有关数据存储区的信息。 例如，数据存储区可能包含表组成用户定义的层次结构，因此将无法通过阅读确保除架构的知识的方式。 （作为另一个示例，请注意，Visual c + + 向导使用架构行集生成使用者的访问器。）若要允许使用者便可以执行此操作，提供程序的会话对象公开的方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)接口。 在 Visual c + + 应用程序，你使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)类，以实现**IDBSchemaRowset**。  
   
- `IDBSchemaRowsetImpl` 支持以下方法：  
+ `IDBSchemaRowsetImpl`支持以下方法：  
   
--   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) 检查架构行集合限制的有效性。  
+-   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md)检查针对架构行集的限制的有效性。  
   
--   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) 为模板参数指定的对象实现 COM 对象 creator 函数。  
+-   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)实现 COM 对象创建者函数由模板参数指定的对象。  
   
--   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 指定在特定架构行集合上支持哪些限制。  
+-   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)指定在特定架构行集支持哪些限制。  
   
--   [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) 返回架构行集合（从接口继承）。  
+-   [Idbschemarowset::](../../data/oledb/idbschemarowsetimpl-getrowset.md)返回架构行集 （从接口继承）。  
   
--   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) 返回可由 `IDBSchemaRowsetImpl::GetRowset`（从接口继承）访问的架构行集合列表。  
+-   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)返回架构行集的列表可通过访问`IDBSchemaRowsetImpl::GetRowset`（从接口继承）。  
   
-## “ATL OLE DB 提供程序向导”支持  
- “ATL OLE DB 提供程序向导”在会话头文件中创建三个架构类：  
+## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB 提供程序向导支持  
+ ATL OLE DB 提供程序向导创建会话标头文件中的三个架构类：  
   
--   **C** *ShortName* **SessionTRSchemaRowset**  
+-   **C** *短名称* **SessionTRSchemaRowset**  
   
--   **C** *ShortName* **SessionColSchemaRowset**  
+-   **C** *短名称* **SessionColSchemaRowset**  
   
--   **C** *ShortName* **SessionPTSchemaRowset**  
+-   **C** *短名称* **SessionPTSchemaRowset**  
   
- 这些类响应使用者对架构信息的请求；注意 OLE DB 规范要求支持这三个架构行集合：  
+ 这些类响应的使用者请求架构信息;请注意，OLE DB 规范需要支持这些三个架构行集：  
   
--   **C** *ShortName* **SessionTRSchemaRowset** 处理表信息（`DBSCHEMA_TABLES` 架构行集合）请求。  
+-   **C** *短名称* **SessionTRSchemaRowset**处理表信息的请求 (`DBSCHEMA_TABLES`架构行集)。  
   
--   **C** *ShortName* **SessionColSchemaRowset** 处理列信息（**DBSCHEMA\_COLUMNS** 架构行集合）请求。  向导为这些类提供了示例实现，这些实现为 DOS 提供程序返回架构信息。  
+-   **C** *短名称* **SessionColSchemaRowset**处理列信息的请求 ( **DBSCHEMA_COLUMNS**架构行集)。 向导提供了这些类，该类返回 DOS 提供程序的架构信息的示例实现。  
   
--   **C** *ShortName* **SessionPTSchemaRowset** 处理有关提供程序类型的架构信息（**DBSCHEMA\_PROVIDER\_TYPES** 架构行集合）请求。  向导提供的默认实现返回 `S_OK`。  
+-   **C** *短名称* **SessionPTSchemaRowset**处理有关提供程序类型的架构信息的请求 ( **DBSCHEMA_PROVIDER_TYPES**架构行集）。 向导提供的默认实现返回`S_OK`。  
   
- 可以自定义这些类以处理适合提供程序的架构信息：  
+ 你可以自定义这些类以处理适合于你的提供商的架构信息：  
   
--   在 **C***ShortName***SessionTRSchemaRowset** 中，必须填写目录、表和说明字段（**trData.m\_szType**、**trData.m\_szTable** 和 **trData.m\_szDesc**）。  向导生成的示例仅使用一行（表）。  其他提供程序可以返回多个表。  
+-   在**C***短名称***SessionTRSchemaRowset**，必须填写目录、 表和描述字段 (**trData.m_szType**，**trData.m_szTable**，和**trData.m_szDesc**)。 该向导生成的示例使用只有一个行 （表）。 其他提供程序可能会返回多个表。  
   
--   在 **C***ShortName***SessionColSchemaRowset** 中，将表的名称作为 **DBID** 传递。  
+-   在**C***短名称***SessionColSchemaRowset**，你将为表的名称传递给**DBID**。  
   
-## 设置限制  
- 架构行集合支持中的一个重要概念是设置限制，通过使用 `SetRestrictions` 来完成。  限制允许使用者只获取匹配行（例如，查找表“MyTable”中的所有列）。  限制是可选的，如果不支持任何限制（默认），则总是返回所有数据。  有关确实支持限制的提供程序示例，请参见 [UpdatePV](http://msdn.microsoft.com/zh-cn/c8bed873-223c-4a7d-af55-f90138c6f38f) 示例。  
+## <a name="setting-restrictions"></a>设置限制  
+ 架构行集支持中的一个重要概念设置限制，您执行此操作使用`SetRestrictions`。 限制允许使用者只提取匹配行（例如，查找表“MyTable”中的所有列）。 限制是可选的，如果不支持任何限制（默认设置），则始终返回所有数据。 有关支持限制的提供程序的示例，请参阅[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)示例。  
   
-## 设置架构映射  
- 设置像 UpdatePV 的 Session.h 中的这个架构映射：  
+## <a name="setting-up-the-schema-map"></a>设置架构映射  
+ 设置在中 UpdatePV Session.h 诸如此类架构映射：  
   
 ```  
 BEGIN_SCHEMA_MAP(CUpdateSession)  
@@ -76,9 +76,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()  
 ```  
   
- 若要支持 **IDBSchemaRowset**，则必须支持 `DBSCHEMA_TABLES`、**DBSCHEMA\_COLUMNS** 和 **DBSCHEMA\_PROVIDER\_TYPES**。  可以酌情添加附加的架构行集合。  
+ 若要支持**IDBSchemaRowset**，你必须支持`DBSCHEMA_TABLES`， **DBSCHEMA_COLUMNS**，和**DBSCHEMA_PROVIDER_TYPES**。 你可以自行添加其他架构行集。  
   
- 用 `Execute` 方法声明架构行集合类，如 UpdatePV 中的 `CUpdateSessionTRSchemaRowset`：  
+ 声明具有的架构行集类`Execute`如方法`CUpdateSessionTRSchemaRowset`UpdatePV 中：  
   
 ```  
 class CUpdateSessionTRSchemaRowset :   
@@ -90,32 +90,32 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)  
 ```  
   
- 注意 `CUpdateSession` 从 `IDBSchemaRowsetImpl` 继承，所以它具有全部限制处理方法。  使用 `CSchemaRowsetImpl`，声明三个子类（在上面的架构映射中列出）：`CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset` 和 `CUpdateSessionPTSchemaRowset`。  这些子类中的每一个都具有处理各自的一组限制（搜索判据）的 `Execute` 方法。  每个 `Execute` 方法比较 `cRestrictions` 和 `rgRestrictions` 参数的值。  请参见 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 中这些参数的说明。  
+ 请注意，`CUpdateSession`继承自`IDBSchemaRowsetImpl`，所以它可以处理的方法的所有限制。 使用`CSchemaRowsetImpl`，声明三个被子类 （在上面的架构映射中列出）： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 每个这些子类别都有`Execute`处理其各自的一组限制 （搜索条件） 的方法。 每个`Execute`方法比较的值`cRestrictions`和`rgRestrictions`参数。 请参阅中的这些参数的说明[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。  
   
- 有关哪些限制与特定架构行集合相对应的更多信息，请参考架构行集合 GUID 表，该表在 [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] 的 *OLE DB 程序员参考*中的 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 中。  
+ 有关哪些限制对应于特定架构行集的详细信息，请查阅上的架构行集 Guid 表中[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)中*OLE DB 程序员参考*中Windows SDK。  
   
- 例如，如果支持 `DBSCHEMA_TABLES` 上的 **TABLE\_NAME** 限制，则执行以下操作：  
+ 例如，如果你支持**TABLE_NAME**限制`DBSCHEMA_TABLES`，你将执行以下操作：  
   
- 首先，查看 `DBSCHEMA_TABLES`，可看到它支持四个限制（按顺序）。  
+ 首先，查找`DBSCHEMA_TABLES`和发现该解决方案支持四个限制 （按顺序）。  
   
-|架构行集合限制|限制值|  
-|-------------|---------|  
-|**TABLE\_CATALOG**|0x1（二进制 1）|  
-|**TABLE\_SCHEMA**|0x2（二进制 10）|  
-|**TABLE\_NAME**|0x4（二进制 100）|  
-|**TABLE\_TYPE**|0x8（二进制 1000）|  
+|架构行集限制|限制值|  
+|-------------------------------|-----------------------|  
+|**TABLE_CATALOG**|0x1 (二进制 1)|  
+|**TABLE_SCHEMA**|0x2 (二进制 10)|  
+|**TABLE_NAME**|0x4 (二进制 100)|  
+|**TABLE_TYPE**|0x8 （二进制 1000 个）|  
   
- 下一步，注意每个限制各有一位。  因为希望只支持 **TABLE\_NAME**，所以在 `rgRestrictions` 元素中返回 0x4。  如果支持 **TABLE\_CATALOG** 和 **TABLE\_NAME**，将返回 0x5（二进制 101）。  
+ 接下来，请注意，没有为每个限制的一位。 因为你想要支持**TABLE_NAME**仅，将返回在 0x4`rgRestrictions`元素。 如果你支持**TABLE_CATALOG**和**TABLE_NAME**，将返回 0x5 (二进制 101)。  
   
- 默认情况下，实现对任何请求都返回 0（不支持任何限制）。  UpdatePV 是确实支持限制的提供程序示例。  
+ 默认情况下，实现返回的 0 （不支持任何限制） 的任何请求。 UpdatePV 是提供程序支持限制的一个示例。  
   
-### 示例  
- 此代码取自 [UpdatePV](http://msdn.microsoft.com/zh-cn/c8bed873-223c-4a7d-af55-f90138c6f38f) 示例。  UpdatePv 支持三个必需的架构行集合：`DBSCHEMA_TABLES`、**DBSCHEMA\_COLUMNS** 和 **DBSCHEMA\_PROVIDER\_TYPES**。  作为如何在提供程序中实现架构支持的示例，本主题将带领您一步步实现 **DBSCHEMA\_TABLE** 行集合。  
+### <a name="example"></a>示例  
+ 此代码摘自[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)示例。 UpdatePv 支持三个要求的架构行集： `DBSCHEMA_TABLES`， **DBSCHEMA_COLUMNS**，和**DBSCHEMA_PROVIDER_TYPES**。 作为示例，了解如何在你的提供程序中实现架构支持，此主题将指导你完成实现**DBSCHEMA_TABLE**行集。  
   
 > [!NOTE]
->  代码示例可能与此处列出的不同；此代码示例应视为较新版本。  
+>  示例代码可能会与不同列出的内容此处;你应将示例代码视为多最新版本。  
   
- 添加架构支持的第一步是确定打算支持哪些限制。  若要确定哪些限制可用于架构行集合，请查看 OLE DB 规范中的 **IDBSchemaRowset** 定义。  按照主定义，可看到一个表，其中包含架构行集合名称、限制的数目和限制列。  选择要支持的架构行集合，并记下限制的数目和限制列。  例如，`DBSCHEMA_TABLES` 支持四个限制（**TABLE\_CATALOG**、**TABLE\_SCHEMA**、**TABLE\_NAME** 和 **TABLE\_TYPE**）：  
+ 添加架构支持的第一步是确定想要支持哪些限制。 若要确定哪些限制可用于架构行集，查看 OLE DB 规范的定义**IDBSchemaRowset**。 以下是主定义，你将看到包含架构行集名称、 限制数目和限制列的表。 选择你想要支持并记下的限制和限制列数的架构行集。 例如，`DBSCHEMA_TABLES`支持四个限制 (**TABLE_CATALOG**， **TABLE_SCHEMA**， **TABLE_NAME**，和**TABLE_TYPE**):  
   
 ```  
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,   
@@ -134,25 +134,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }  
 ```  
   
- 位表示每个限制列。  如果希望支持限制（即可以通过它查询），将此位设置为 1。  如果不希望支持限制，将此位设置为零。  从以上代码行，UpdatePV 在 `DBSCHEMA_TABLES` 行集合上支持 **TABLE\_NAME** 和 **TABLE\_TYPE** 限制。  这些是第三个（位掩码 100）和第四个（位掩码 1000）限制。  因此，UpdatePv 的位掩码是 1100（或 0x0C）：  
+ 一个位表示每个限制列。 如果你想要支持限制 （即，可以通过它查询），将该位设置为 1。 如果不希望支持限制，则将该位设置为零。 在上面的代码行，UpdatePV 支持**TABLE_NAME**和**TABLE_TYPE**限制`DBSCHEMA_TABLES`行集。 这些是第三个 （位掩码 100） 和第四个 （位掩码 1000年） 限制。 因此，UpdatePv 的位掩码是 1100年 （或 0x0C）：  
   
 ```  
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))  
     rgRestrictions[l] = 0x0C;  
 ```  
   
- 以下 `Execute` 函数类似于常规行集合中的同名函数。  有三个参数：`pcRowsAffected`、`cRestrictions` 和 `rgRestrictions`。  `pcRowsAffected` 变量是提供程序可以在架构行集合中返回行计数的输出参数。  `cRestrictions` 参数是包含使用者传递给提供程序的限制数的输入参数。  `rgRestrictions` 参数是包含限制值的 **VARIANT** 值数组。  
+ 以下`Execute`函数是正则行集相似。 你有三个自变量： `pcRowsAffected`， `cRestrictions`，和`rgRestrictions`。 `pcRowsAffected`变量是输出参数，提供程序可以在架构行集返回的行的计数。 `cRestrictions`参数是输入的参数包含传递给提供程序使用者的限制数目。 `rgRestrictions`参数是数组的**VARIANT**包含限制值的值。  
   
 ```  
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,   
                 const VARIANT* rgRestrictions)  
 ```  
   
- `cRestrictions` 变量基于架构行集合的总限制数，与提供程序是否支持它们无关。  UpdatePv 支持两个限制（第三个和第四个），所以此代码只查找一个大于或等于 3 的 `cRestrictions` 值。  
+ `cRestrictions`变量根据总数的限制的架构行集，而无论提供程序是否支持它们。 因为 UpdatePv 支持两个限制 （第三和第四个），此代码仅查找`cRestrictions`值大于或等于 3。  
   
- **TABLE\_NAME** 限制的值存储在 `rgRestrictions[2]` 中（从零开始的数组中的第三个限制同样是 2）。  需要检查限制不是 `VT_EMPTY` 以实际支持它。  注意 **VT\_NULL** 不等于 `VT_EMPTY`。  **VT\_NULL** 指定有效的限制值。  
+ 值**TABLE_NAME**限制存储在`rgRestrictions[2]`（同样，从零开始的数组中的第三个限制为 2）。 你需要检查的限制不是`VT_EMPTY`以实际支持它。 请注意， **VT_NULL**是否不等于`VT_EMPTY`。 **VT_NULL**指定一个有效限制值。  
   
- 表名的 UpdatePv 定义是文本文件的完全限定路径名。  解压缩限制值然后尝试打开文件以确保文件确实存在。  如果文件不存在，返回 `S_OK`。  这看起来可能有点缓慢，但代码真正通知使用者的是没有受指定名称支持的表。  返回 `S_OK` 表示代码被正确执行。  
+ 表名的 UpdatePv 定义是到文本文件的完全限定的路径名称。 提取的限制值，然后尝试打开该文件以确保该文件确实实际存在。 如果文件不存在，则返回`S_OK`。 这看起来可能有点缓慢但哪些代码真正通知使用者是由指定的名称没有任何支持的表。 `S_OK`返回表示代码是否正确执行。  
   
 ```  
 USES_CONVERSION;  
@@ -189,7 +189,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }  
 ```  
   
- 支持第四个限制 \(**TABLE\_TYPE**\) 类似于第三个限制。  检查值不是 `VT_EMPTY`。  该限制只返回表类型 **TABLE**。  若要确定 `DBSCHEMA_TABLES` 的有效值，请在 **TABLES** 行集合节中的《OLE DB 程序员参考》的附录 B 中查找。  
+ 支持的第四个限制 (**TABLE_TYPE**) 类似于第三个限制。 检查值是否不`VT_EMPTY`。 此限制仅返回表类型，**表**。 若要确定的有效值`DBSCHEMA_TABLES`，查看的附录 B *OLE DB 程序员参考*中**表**行集部分。  
   
 ```  
 // TABLE_TYPE restriction:  
@@ -208,7 +208,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }  
 ```  
   
- 这是实际为行集合创建行项的地方。  变量 `trData` 与 OLE DB 提供程序模板中定义的结构 **CTABLESRow** 相对应。  **CTABLESRow** 与 OLE DB 规范附录 B 中的 **TABLES** 行集合定义相对应。  因为一次只支持一个表，所以只需添加一行。  
+ 这是实际创建的行集的行条目。 变量`trData`对应于**CTABLESRow**，OLE DB 提供程序模板中定义的结构。 **CTABLESRow**对应于**表**附录 B 中的 OLE DB 规范的行集定义。 你只有一个要添加，因为一次只能支持一个表的行。  
   
 ```  
 // Bring over the data:  
@@ -217,7 +217,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   
- UpdatePV 只设置三列：**TABLE\_NAME**、**TABLE\_TYPE** 和 **DESCRIPTION**。  应记下为之返回信息的列，因为在实现 `GetDBStatus` 时需要此信息：  
+ 只有三个列都设置 UpdatePV: **TABLE_NAME**， **TABLE_TYPE**，和**说明**。 你应记下为其返回的信息的列，因为在实现时，你需要此信息`GetDBStatus`:  
   
 ```  
     _ATLTRY  
@@ -235,7 +235,7 @@ wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 }  
 ```  
   
- `GetDBStatus` 函数对于架构行集合的正确操作非常重要。  由于不为 **TABLES** 行集合中的每个列都返回数据，因此需要指定为哪些列返回数据，不为哪些列返回数据。  
+ `GetDBStatus`函数对于的架构行集的正确操作十分重要。 因为不返回数据中每个列**表**行集，你需要指定哪些列你返回的数据，并不希望这样做。  
   
 ```  
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)  
@@ -256,13 +256,13 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }  
 ```  
   
- 因为 `Execute` 函数为 **TABLES** 行集合中的 **TABLE\_NAME**、**TABLE\_TYPE** 和 **DESCRIPTION** 字段返回数据，可以在 OLE DB 规范附录 B 中查找并确定（通过从上到下计数）它们是序号 3、4 和 6。  对于那些列中的每一个列，都返回 **DBSTATUS\_S\_OK**。  对于所有其他列，返回 **DBSTATUS\_S\_ISNULL**。  返回此状态很重要，因为使用者可能不理解返回的值为 **NULL** 还是其他什么值。  同样注意 **NULL** 不等效于空。  
+ 因为你`Execute`函数返回数据**TABLE_NAME**， **TABLE_TYPE**，和**说明**字段从**表**行集，你可以在附录 B 的 OLE DB 规范中查找和确定 （通过倒计时从顶部），它们是序号 3、 4 和 6。 对于每个这些列，返回**DBSTATUS_S_OK**。 对于所有其他列，返回**是 DBSTATUS_S_ISNULL**。 务必返回此状态，因为使用者可能无法理解，则返回值是**NULL**还是其他内容。 同样，请注意， **NULL**不等同于为空。  
   
- 有关 OLE DB 架构行集合接口的更多信息，请参见“OLE DB Programmer's Reference”（OLE DB 程序员参考）中的 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) 接口。  
+ 有关 OLE DB 架构行集接口的详细信息，请参阅[IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) OLE DB 程序员参考中的接口。  
   
- 有关使用者如何才能使用 **IDBSchemaRowset** 方法的信息，请参见[用架构行集合获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。  
+ 有关如何使用使用者信息**IDBSchemaRowset**方法，请参阅[用架构行集合获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。  
   
- 有关支持架构行集合的提供程序示例，请参见 [UpdatePV](http://msdn.microsoft.com/zh-cn/c8bed873-223c-4a7d-af55-f90138c6f38f) 示例。  
+ 有关支持架构行集的提供程序的示例，请参阅[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)示例。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

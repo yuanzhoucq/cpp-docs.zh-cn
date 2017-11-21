@@ -1,54 +1,54 @@
 ---
-title: "gcnew | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "gcnew"
-  - "ref new"
-  - "gcnew_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gcnew 关键字 [C++]"
+title: "ref new、 gcnew （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- gcnew
+- ref new
+- gcnew_cpp
+dev_langs: C++
+helpviewer_keywords:
+- ref new keyword (C++)
+- gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cabe15639d75a1dfe7c41463ea9b95332f6dafa3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# gcnew
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`ref new` 聚合关键字分配在对象无法访问时进行垃圾回收以及返回已分配对象的句柄 \([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)\) 的类型的实例。  
+# <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew（C++ 组件扩展）
+`ref new`聚合关键字分配进行垃圾回收时在对象变为不可访问，并返回的句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到分配的对象。  
   
-## 所有运行时  
+## <a name="all-runtimes"></a>所有运行时  
  `ref new` 分配的类型的实例的内存会自动释放。  
   
  如果无法分配内存，则 `ref new` 操作会引发 `OutOfMemoryException`。  
   
- 有关如何分配和释放本机 C\+\+ 类型的内存的详细信息，请参阅 [new 和 delete 运算符](../cpp/new-and-delete-operators.md)。  
+ 有关如何分配和释放本机 c + + 类型的内存的详细信息，请参阅[新和 delete 运算符](../cpp/new-and-delete-operators.md)。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- 使用 `ref new` 可为要自动管理其生存期的 Windows 运行时对象分配内存。  对象会在其引用计数变为零（这会在引用的最后一个副本超出范围之后发生）时自动释放。  有关详细信息，请参阅 [Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
+## <a name="windows-runtime"></a>Windows 运行时  
+ 使用 `ref new` 可为要自动管理其生存期的 Windows 运行时对象分配内存。 对象会在其引用计数变为零（这会在引用的最后一个副本超出范围之后发生）时自动释放。 有关详细信息，请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  托管类型（引用或值类型）的内存由 `gcnew` 分配，使用垃圾回收进行释放。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
  下面的示例使用 `gcnew` 分配 Message 对象。  
@@ -91,6 +91,9 @@ int main()
   
  **输出**  
   
-  **32**   
-## 请参阅  
+```Output  
+32  
+```  
+  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

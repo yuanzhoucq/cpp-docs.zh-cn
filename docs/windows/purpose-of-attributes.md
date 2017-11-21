@@ -1,38 +1,37 @@
 ---
-title: "Purpose of Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], about attributes"
+title: "特性用途 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: attributes [C++], about attributes
 ms.assetid: 3aff8bfa-a2a3-4fcb-a2c6-1d96a2b4c68d
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3feb2d9d72fbfcda7237ed0889158b1ee4f2a844
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Purpose of Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-属性超出方向 C\+\+ 当前不可能，但不会中断该语言的经典结构。  属性允许提供程序 \(单独的 DLL\) 动态扩展语言功能。  属性的主要目的是为了简化生成 COM 组件，除了增加组件开发人员的工作效率级别之外。  特性可应用到几乎所有 C\+\+ 构造，如类、数据成员或成员函数。  下面是该新技术提供的优点突出显示:  
+# <a name="purpose-of-attributes"></a>特性用途
+属性扩展的 c + + 在不是当前可能的方向而不会破坏语言的经典结构。 属性允许提供程序 (单独的 Dll) 来动态扩展语言功能。 属性的主要目的是简化的 COM 组件，除了提高组件开发人员的工作效率级别创作。 特性可以应用到几乎任何 c + + 构造，如类、 数据成员或成员函数。 下面是这种新技术所提供的优势突出显示：  
   
--   显示一个熟悉和简单的调用约定。  
+-   公开熟悉且简单的调用约定。  
   
--   插入的使用代码，不同，宏，由调试器识别。  
+-   使用插入的代码，这不同于宏，则调试器所识别。  
   
--   允许从基类的简单的派生，而不需要谨记沉重的实现详细信息。  
+-   允许从基类不需要繁琐的实现详细信息的情况下轻松派生。  
   
--   但也使用属性替换 COM 组件所需的大量 IDL 代码。  
+-   替换大量的 IDL 代码所需的少数简洁属性的 COM 组件。  
   
- 例如，实现泛型 ATL 类的简单事件接收器，可以将 [event\_receiver](../windows/event-receiver.md) 特性应用于特定类 \(如 `CMyReceiver`。  **event\_receiver** 属性由 Visual C\+\+ 编译器然后生成，插入适当的代码添加到对象文件中。  
+ 例如，若要实现泛型的 ATL 类的简单事件接收器，可以应用[event_receiver](../windows/event-receiver.md)属性为特定的类，如`CMyReceiver`。 **Event_receiver**属性然后编译 Visual c + + 编译器将适当的代码插入到对象文件。  
   
 ```  
 [event_receiver(com)]  
@@ -43,7 +42,7 @@ class CMyReceiver
 }  
 ```  
   
- 然后可以设置 **CMyReceiver** 方法 `handler1` 和 `handler2` 处理事件 \(使用内部函数 [\_\_hook](../cpp/hook.md)\) 从事件源，使用 [event\_source](../windows/event-source.md)，可以创建一个。  
+ 你可以然后设置**CMyReceiver**方法`handler1`和`handler2`来处理事件 (使用内部函数[__hook](../cpp/hook.md)) 从事件源，你可以创建使用[event_source](../windows/event-source.md)。  
   
-## 请参阅  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>另请参阅  
+ [概念](../windows/attributed-programming-concepts.md)

@@ -1,47 +1,45 @@
 ---
-title: "omp_get_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_nested OpenMP function"
+title: "omp_get_nested |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_nested
+dev_langs: C++
+helpviewer_keywords: omp_get_nested OpenMP function
 ms.assetid: e9784847-516e-40d3-89f7-b8b6898d8667
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d67008fde4d8d3093c33bfc9389004ce3b339db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# omp_get_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-返回一个值嵌套并行是否启用。  
+# <a name="ompgetnested"></a>omp_get_nested
+返回一个值，该值指示是否启用了嵌套并行度。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int omp_get_nested( );  
 ```  
   
-## 返回值  
- 非零，则嵌套并行有效。  
+## <a name="return-value"></a>返回值  
+ 如果不为零，启用了嵌套并行机制。  
   
-## 备注  
- 嵌套并行指定与 [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) 和 [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md)。  
+## <a name="remarks"></a>备注  
+ 使用指定嵌套的并行[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)和[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)。  
   
- 有关更多信息，请参见 [3.1.10 omp\_get\_nested Function](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)。  
+ 有关详细信息，请参阅[3.1.10 omp_get_nested 函数](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)。  
   
-## 示例  
- 有关使用示例 `omp_get_nested`参见 [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) 。  
+## <a name="example"></a>示例  
+ 请参阅[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)有关的使用示例`omp_get_nested`。  
   
-## 请参阅  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>另请参阅  
+ [函数](../../../parallel/openmp/reference/openmp-functions.md)

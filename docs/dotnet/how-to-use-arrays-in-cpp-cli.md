@@ -1,34 +1,32 @@
 ---
-title: "如何：在 C++/CLI 中使用数组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 单维"
+title: "如何： 使用数组中 C + + /cli CLI |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8867d6a2a7871d1785e1a1fdbeb9856de4bd9904
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中使用数组
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文介绍 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]如何使用数组。  
+# <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用数组
+本文介绍如何将使用数组中 C + + /cli CLI。  
   
-## 一维数组  
- 下面的示例演示如何创建单维数组的引用、值和本机指针类型。  它还演示如何从函数返回的单维数组以及如何传递一维数组作为参数传递给函数。  
+## <a name="single-dimension-arrays"></a>一维数组  
+ 下面的示例演示如何创建一维数组的引用、 值和本机指针类型。 它还显示如何从函数返回一个一维数组，以及如何将一维数组作为自变量传递给函数。  
   
-```  
+```cpp  
 // mcppv2_sdarrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -138,25 +136,31 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine("MyStruct1[{0}] = {1}", i, MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**MyClass1\[0\] \= 20**  
-**MyClass1\[1\] \= 21**  
-**MyClass2\[0\] \= 30**  
-**MyClass2\[1\] \= 31**  
-**MyClass2\[0\] \= 32**  
-**MyClass2\[1\] \= 33**  
-**MyStruct1\[0\] \= 40**  
-**MyStruct1\[1\] \= 41** 下一个示例显示如何对一维托管数组初始化的聚合。  
+IntArray[0] = 10  
+IntArray[1] = 11  
   
+MyClass1[0] = 20  
+MyClass1[1] = 21  
+  
+MyClass2[0] = 30  
+MyClass2[1] = 31  
+  
+MyClass2[0] = 32  
+MyClass2[1] = 33  
+  
+MyStruct1[0] = 40  
+MyStruct1[1] = 41  
 ```  
+  
+ 下一步的示例演示如何在一维托管数组上执行聚合初始化。  
+  
+```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,21 +197,23 @@ int main() {
    array<N*>^ native1 = gcnew array<N*>{new N(0), new N(1), new N(2)};  
    array<N*>^ native2 = {new N(0), new N(1), new N(2)};  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0, 0] = 0  
+MyClass0[0, 1] = 0  
+MyClass0[1, 0] = 1  
+MyClass0[1, 1] = 1  
   
-  **MyClass0\[0, 0\] \= 0**  
-**MyClass0\[0, 1\] \= 0**  
-**MyClass0\[1, 0\] \= 1**  
-**MyClass0\[1, 1\] \= 1**  
-**IntArray\[0, 0\] \= 10**  
-**IntArray\[0, 1\] \= 10**  
-**IntArray\[1, 0\] \= 11**  
-**IntArray\[1, 1\] \= 11** 此示例演示如何在多维托管数组上执行聚合初始化：  
-  
+IntArray[0, 0] = 10  
+IntArray[0, 1] = 10  
+IntArray[1, 0] = 11  
+IntArray[1, 1] = 11  
 ```  
+  
+ 此示例演示如何在多维度托管数组上执行聚合初始化：  
+  
+```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -249,10 +255,10 @@ int main() {
 }  
 ```  
   
-## 交错数组  
- 本节演示如何创建一维托管数组引用、值和本机指针类型。  它还演示如何从函数返回托管数组的单维数组以及如何传递作为参数的一维数组给函数。  
+## <a name="jagged-arrays"></a>交错数组  
+ 本部分演示如何创建托管数组的引用、 值和本机指针类型的一维数组。 它还显示如何从函数返回托管数组的一维数组以及如何将一维数组作为自变量传递给函数。  
   
-```  
+```cpp  
 // mcppv2_array_of_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -330,23 +336,26 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine(MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**IntArray\[1\] \= 11**  
-**40**  
-**41** 下面的示例显示如何执行交错数组的聚合初始化。  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
   
+40  
+41  
 ```  
+  
+ 下面的示例演示如何执行与交错数组的聚合初始化。  
+  
+```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -431,25 +440,28 @@ int main() {
       Console::WriteLine();  
    }  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**\[ 1 2 \]**  
-**\[ 3 4 5 \]**  
-**\[ 0 1 \]**  
-**\[ 2 3 4 \]**  
-**\[ a b c d e f \]**  
-**\[ g h \]**   
-## 托管数组作为模板类型参数  
- 此示例演示如何使用托管数组作为模板的参数：  
+[ 1 2 ]  
+[ 3 4 5 ]  
   
+[ 0 1 ]  
+[ 2 3 4 ]  
+  
+[ a b c d e f ]  
+[ g h ]  
 ```  
+  
+## <a name="managed-arrays-as-template-type-parameters"></a>托管数组用作模板类型参数  
+ 此示例演示如何使用托管的数组作为参数传递给模板：  
+  
+```cpp  
 // mcppv2_template_type_params.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -469,16 +481,16 @@ int main() {
    retval += larr->Length - 10;  
    Console::WriteLine("Return Code: {0}", retval);  
 }  
-  
 ```  
   
- **Output**  
-  
-  **返回代码:0**   
-## 托管数组的类型定义  
- 此示例演示如何使托管数组的类型定义:  
-  
+```Output  
+Return Code: 0  
 ```  
+  
+## <a name="typedefs-for-managed-arrays"></a>托管数组的 typedef  
+ 此示例演示如何使托管数组的 typedef:  
+  
+```cpp  
 // mcppv2_typedef_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -489,15 +501,14 @@ typedef array<array<G^>^> jagged_array;
 int main() {  
    jagged_array ^ MyArr = gcnew jagged_array (10);  
 }  
-  
 ```  
   
-## 对数组进行排序  
- 与标准 C\+\+ 数组不同，托管数组从继承于常见的行为的基类数组中隐式继承。  示例是 `Sort` 方法，该方法可用于指定所有数组的项。  
+## <a name="sorting-arrays"></a>对数组进行排序  
+ 标准 c + + 与数组不同，托管的数组隐式从它们从其继承常见行为数组基类派生。 一个示例是`Sort`方法，可用于任何数组中的项进行排序。  
   
- 对于包含的基本内部类型的数组，可调用 `Sort` 方法。  当要排序某些复杂类型时，可以重写排序标准，也必须重写。  在这种情况下，数组元素类型必须实现[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
+ 对于包含基本的内部类型的数组，你可以调用`Sort`方法。 你可以重写的排序条件，并且此操作是必需时要进行排序的复杂类型数组。 在这种情况下，数组元素类型必须实现[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
   
-```  
+```cpp  
 // array_sort.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -508,15 +519,14 @@ int main() {
    for (int i=0; i < a->Length; i++)  
       Console::Write("{0} ", a[i] );  
 }  
-  
 ```  
   
-## 使用自定义条件排序数组  
- 若要对包含基本的内部类型的数组排序，可调用 `Array::Sort` 方法。  但是，要对包含复杂类型或重写默认排序条件的数组排序，请重写[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>使用自定义的条件对数组进行排序  
+ 若要对包含基本的内部类型的数组进行排序，只需调用`Array::Sort`方法。 不过，若要包含复杂类型或若要重写默认排序条件，请重写的排序数组[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
   
- 在下面的示例中，名为 `Element` 的结构从 <xref:System.IComparable>派生，并提供使用计算两个整数作为排序条件的 <xref:System.IComparable.CompareTo%2A> 方法。  
+ 在下面的示例中，一个名为`Element`派生自<xref:System.IComparable>，并已写入到提供<xref:System.IComparable.CompareTo%2A>用作排序条件的两个整数的平均值的方法。  
   
-```  
+```cpp  
 using namespace System;  
   
 value struct Element : public IComparable {  
@@ -558,10 +568,10 @@ int main() {
 }  
 ```  
   
-## 数组协方差  
- 具备直接或间接基类 B 的特定引用类 D，数组类型 D 可分配给类型 B 的数组变量。  
+## <a name="array-covariance"></a>数组协方差  
+ 给定引用类 D 直接或间接基类的类 B，D 类型的数组可以分配给数组变量的类型 b。  
   
-```  
+```cpp  
 // clr_array_covariance.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -572,11 +582,11 @@ int main() {
 }  
 ```  
   
- 对数组的元素的分配与数组的动态类型的分配兼容。  不兼容类型的数组元素的分配将导致抛出 `System::ArrayTypeMismatchException`。  
+ 向数组元素赋值应是赋值兼容与动态类型的数组。 向具有不兼容的类型的数组元素赋值会导致`System::ArrayTypeMismatchException`引发。  
   
- "数组协方差"不适用于某些值类类型的数组。  例如，Int32 数组无法转换为 Object^ 数组，使用装箱技术也不行。  
+ 数组协方差不适用于值类类型的数组。 例如，Int32 数组无法转换为对象 ^ 数组，甚至不通过使用装箱。  
   
-```  
+```cpp  
 // clr_array_covariance2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -609,5 +619,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [数组](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>另请参阅  
+ [阵列](../windows/arrays-cpp-component-extensions.md)

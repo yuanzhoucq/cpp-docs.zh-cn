@@ -1,39 +1,38 @@
 ---
-title: "调用内联程序集内的 C++ 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 关键字 [C++], 调用函数"
-  - "函数调用, C++ 函数"
-  - "函数调用, 在内联程序集中"
-  - "函数 [C++], 在内联程序集中调用"
-  - "内联程序集, 调用函数"
-  - "Visual C++, 函数"
+title: "在内联汇编程序内调用 c + + 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], calling in inline assembly
+- function calls, C++ functions
+- function calls, in inline assembly
+- Visual C++, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0c91829eac3247255d8fe3cb966a61fca5319f94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 调用内联程序集内的 C++ 函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 专用  
- `__asm` 块只能调用未重载的全局 C\+\+ 函数。  如果调用重载的全局 C\+\+ 函数或 C\+\+ 成员函数，则编译器会发出错误。  
+# <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C++ 函数
+## <a name="microsoft-specific"></a>Microsoft 专用  
+ `__asm` 块只能调用未重载的全局 C++ 函数。 如果调用重载的全局 C++ 函数或 C++ 成员函数，则编译器会发出错误。  
   
- 您还可以调用使用 **extern "C"** 链接声明的任何函数。  由于所有标准头文件都声明库函数具有 **extern "C"** 链接，这将允许 C\+\+ 程序中的 `__asm` 块调用 C 库函数。  
+ 你还可以调用使用声明的任何函数**extern"C"**链接。 这允许`__asm`调用 C 库函数，因为所有标准标头文件都声明库函数具有 c + + 程序中的块**extern"C"**链接。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [内联汇编程序](../../assembler/inline/inline-assembler.md)

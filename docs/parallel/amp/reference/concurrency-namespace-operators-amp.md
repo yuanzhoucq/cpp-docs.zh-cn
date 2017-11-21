@@ -6,19 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>并发命名空间运算符 (AMP)
 ||||  
@@ -42,13 +40,13 @@ bool operator== (
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
- 一个元组进行比较。  
+ 要比较的元组之一。  
   
  `_Rhs`  
- 一个元组进行比较。  
+ 要比较的元组之一。  
   
 ### <a name="return-value"></a>返回值  
  `true`如果元组相等，则否则为`false`。  
@@ -68,13 +66,13 @@ bool operator!= (
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
- 一个元组进行比较。  
+ 要比较的元组之一。  
   
  `_Rhs`  
- 一个元组进行比较。  
+ 要比较的元组之一。  
   
 ### <a name="return-value"></a>返回值  
  `true`如果元组是否不相等;否则为`false`。  
@@ -113,7 +111,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
  要添加的参数之一。  
@@ -122,11 +120,11 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
  要添加的参数之一。  
   
 ### <a name="return-value"></a>返回值  
- 在指定的参数 component-wise 之和。  
+ 指定的参数 component-wise 总和。  
   
 ##  <a name="operator-"></a>operator-   
 
- 计算指定的参数之间的 component-wise 差异。  
+ 计算指定的自变量之间的 component-wise 差。  
   
 ```  
 template <
@@ -158,7 +156,7 @@ _Tuple_type<_Rank>   operator-(
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
  要从进行减法运算的参数。  
@@ -167,7 +165,7 @@ _Tuple_type<_Rank>   operator-(
  要减去的参数。  
   
 ### <a name="return-value"></a>返回值  
- 在指定的参数之间的 component-wise 差异。  
+ 指定的自变量之间的 component-wise 差异。  
   
 ##  <a name="operator_star"></a>  operator*   
 
@@ -194,7 +192,7 @@ _Tuple_type<_Rank>   operator*(
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
  要相乘的元组之一。  
@@ -203,7 +201,7 @@ _Tuple_type<_Rank>   operator*(
  要相乘的元组之一。  
   
 ### <a name="return-value"></a>返回值  
- 在指定的参数 component-wise 产品。  
+ 指定的参数 component-wise 积。  
   
 
 ##  <a name="operator_div"></a>  operator/   
@@ -230,7 +228,7 @@ _Tuple_type<_Rank>   operator/(
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
  要作为被除数元组。  
@@ -239,11 +237,11 @@ _Tuple_type<_Rank>   operator/(
  要作为除数元组。  
   
 ### <a name="return-value"></a>返回值  
- 在指定的参数 component-wise 商。  
+ Component-wise 相除后的商指定的参数。  
   
 ##  <a name="operator_mod"></a>operator%   
 
- 计算的第二个指定的参数的第一个指定参数的模数。  
+ 计算由第二个指定的自变量的第一个指定参数的模数。  
   
 ```  
 template <
@@ -266,17 +264,16 @@ _Tuple_type<_Rank>   operator%(
   
 ### <a name="parameters"></a>参数  
  `_Rank`  
- 元组参数的秩。  
+ 元组自变量的秩。  
   
  `_Lhs`  
- 从该元组计算取模。  
+ 此元组从其计算取模。  
   
  `_Rhs`  
  取模由元组，到。  
   
 ### <a name="return-value"></a>返回值  
- 第一个指定的参数取模第二个指定的参数的结果。  
+ 第一个指定的自变量取模第二个指定的自变量的结果。  
   
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace-cpp-amp.md)
-

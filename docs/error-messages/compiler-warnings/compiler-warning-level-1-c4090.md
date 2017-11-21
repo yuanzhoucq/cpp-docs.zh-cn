@@ -1,38 +1,36 @@
 ---
-title: "编译器警告（等级 1）C4090 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4090"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4090"
+title: "编译器警告 （等级 1） C4090 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4090
+dev_langs: C++
+helpviewer_keywords: C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b508e27d72454568e26d2f1d173b05c8a65c250
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 1）C4090
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“operation”: 不同的“modifier”限定符  
+# <a name="compiler-warning-level-1-c4090"></a>编译器警告 （等级 1） C4090
+operation： 不同的 modifier 限定符  
   
- 操作中所使用的变量用指定的修饰符定义，该修饰符防止其在未受编译器检测的情况下被修改。  编译表达式时不进行修改。  
+ 使用指定修饰符，防止它被修改不检测由编译器定义是在操作中使用的变量。 编译表达式时不进行修改。  
   
- 将指向 **const** 或 `volatile` 项的指针赋值给未声明为指向 **const** 或 `volatile` 的指针时，将导致出现此警告。  
+ 时指向的指针，则可能引发此警告**const**或`volatile`项分配给未声明为指向指针**const**或`volatile`。  
   
- 该警告针对 C 程序发出。  在 C\+\+ 程序中，编译器发出错误：[C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。  
+ 对于 C 程序发出此警告。 在 c + + 程序中，编译器会发出错误： [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。  
   
- 下面的示例生成 C4090：  
+ 下面的示例生成 C4090:  
   
 ```  
 // C4090.c  

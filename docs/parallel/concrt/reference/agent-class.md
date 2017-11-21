@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,36 +20,18 @@ f1_keywords:
 - AGENTS/concurrency::agent::wait_for_one
 - AGENTS/concurrency::agent::done
 - AGENTS/concurrency::agent::run
-dev_langs:
-- C++
-helpviewer_keywords:
-- agent class
+dev_langs: C++
+helpviewer_keywords: agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1e6e23e742137bffd9035ecf69ecc32d199ca0c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: f3bcd353def1f42269a851c39a1c96e451caa577
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="agent-class"></a>agent 类
 旨在用作所有独立代理的基类的类。 用于对其他代理隐藏状态并通过消息传递进行交互。  
@@ -75,12 +56,12 @@ class agent;
 |名称|描述|  
 |----------|-----------------|  
 |[取消](#cancel)|将代理移从`agent_created`或`agent_runnable`状态到`agent_canceled`状态。|  
-|[start](#start)|将从代理移`agent_created`状态进入`agent_runnable`状态，并且执行对其进行安排。|  
-|[status](#status)|来自代理的状态信息的同步源。|  
-|[status_port](#status_port)|来自代理的状态信息异步源。|  
-|[等待](#wait)|等待代理完成其任务。|  
+|[start](#start)|将从代理移`agent_created`状态`agent_runnable`状态，并且计划执行。|  
+|[status](#status)|从代理的状态信息的同步源。|  
+|[status_port](#status_port)|从代理的状态信息的一种异步来源。|  
+|[等待](#wait)|等待代理为了完成其任务。|  
 |[wait_for_all](#wait_for_all)|等待所有指定的代理来完成其任务。|  
-|[wait_for_one](#wait_for_one)|等待指定的代理完成其任务之一。|  
+|[wait_for_one](#wait_for_one)|等待任何一种指定的代理，为了完成其任务。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
@@ -114,13 +95,13 @@ agent(ScheduleGroup& _PGroup);
   
 ### <a name="parameters"></a>参数  
  `_PScheduler`  
- `Scheduler`对象，在计划的执行任务的代理。  
+ `Scheduler`对象内执行任务的代理计划。  
   
  `_PGroup`  
- `ScheduleGroup`对象，在计划的执行任务的代理。 所用 `Scheduler` 对象由该计划组提示。  
+ `ScheduleGroup`对象内执行任务的代理计划。 所用 `Scheduler` 对象由该计划组提示。  
   
 ### <a name="remarks"></a>备注  
- 如果未指定，则运行时将使用默认计划程序`_PScheduler`或`_PGroup`参数。  
+ 如果未指定，运行时将使用默认计划程序`_PScheduler`或`_PGroup`参数。  
   
 ##  <a name="dtor"></a>~ 代理 
 
@@ -131,7 +112,7 @@ virtual ~agent();
 ```  
   
 ### <a name="remarks"></a>备注  
- 它是错误销毁不处于终止状态的代理 (或者`agent_done`或`agent_canceled`)。 这可以避免等待代理到达终止状态的析构函数中的类，该类继承`agent`类。  
+ 它是错误销毁不处于终止状态的代理 (请`agent_done`或`agent_canceled`)。 通过等待代理到达终止状态的析构函数中的继承自的类，这可以避免`agent`类。  
   
 ##  <a name="cancel"></a>取消 
 
@@ -142,7 +123,7 @@ bool cancel();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果代理已被取消，`false`否则为。 如果它已经启动了运行或已完成，代理不能取消。  
+ `true`如果代理已取消，`false`否则为。 无法取消代理，如果它已经启动了运行或已完成。  
   
 ##  <a name="done"></a>完成 
 
@@ -153,10 +134,10 @@ bool done();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果代理移动到`agent_done`状态，`false`否则为。 已取消的代理不能移动到`agent_done`状态。  
+ `true`如果代理移动到`agent_done`状态，`false`否则为。 已取消的代理不能移到`agent_done`状态。  
   
 ### <a name="remarks"></a>备注  
- 此方法应调用的末尾`run`方法，当您知道您的代理执行完成。  
+ 应该在末尾调用此方法`run`方法，当你知道你的代理执行时完成。  
   
 ##  <a name="run"></a>运行 
 
@@ -167,33 +148,33 @@ virtual void run() = 0;
 ```  
   
 ### <a name="remarks"></a>备注  
- 代理状态将更改为`agent_started`右键之前调用此方法。 该方法应调用`done`的代理上的相应的状态，然后再返回，并且可能不会引发任何异常。  
+ 代理状态将更改为`agent_started`右键之前调用此方法。 该方法应调用`done`的代理上的相应的状态之前返回，并且可能不会引发任何异常。  
   
 ##  <a name="start"></a>启动 
 
- 将从代理移`agent_created`状态进入`agent_runnable`状态，并且执行对其进行安排。  
+ 将从代理移`agent_created`状态`agent_runnable`状态，并且计划执行。  
   
 ```
 bool start();
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果代理是否正确，启动`false`否则为。 无法启动代理程序已被取消。  
+ `true`如果正确，启动代理`false`否则为。 已取消的代理无法启动。  
   
 ##  <a name="status"></a>状态 
 
- 来自代理的状态信息的同步源。  
+ 从代理的状态信息的同步源。  
   
 ```
 agent_status status();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回的代理的当前状态。 请注意在返回后无法更改此返回的状态。  
+ 返回的代理的当前状态。 请注意，在返回后立即中无法更改此返回的状态。  
   
 ##  <a name="status_port"></a>status_port 
 
- 来自代理的状态信息异步源。  
+ 从代理的状态信息的一种异步来源。  
   
 ```
 ISource<agent_status>* status_port();
@@ -204,7 +185,7 @@ ISource<agent_status>* status_port();
   
 ##  <a name="wait"></a>等待 
 
- 等待代理完成其任务。  
+ 等待代理为了完成其任务。  
   
 ```
 static agent_status __cdecl wait(
@@ -214,7 +195,7 @@ static agent_status __cdecl wait(
   
 ### <a name="parameters"></a>参数  
  `_PAgent`  
- 指向要等待的代理的指针。  
+ 指向要等待的时间的代理的指针。  
   
  `_Timeout`  
  若要等待，以毫秒为单位最长时间。  
@@ -225,7 +206,7 @@ static agent_status __cdecl wait(
 ### <a name="remarks"></a>备注  
  代理任务完成时代理进入`agent_canceled`或`agent_done`状态。  
   
- 如果该参数`_Timeout`常数以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)代理已完成其任务之前，指定的时间内过期时引发。  
+ 如果参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间量过期代理完成其任务之前，将引发。  
   
 ##  <a name="wait_for_all"></a>wait_for_all 
 
@@ -241,13 +222,13 @@ static void __cdecl wait_for_all(
   
 ### <a name="parameters"></a>参数  
  `count`  
- 代理指针数组中存在数目`_PAgents`。  
+ 数组中出现代理指针数目`_PAgents`。  
   
  `_PAgents`  
- 指向要等待的代理的指针的数组。  
+ 指向要等待的时间的代理的指针的数组。  
   
  `_PStatus`  
- 指向数组的代理状态的指针。 该方法返回时，每个状态值将表示相应的代理的状态。  
+ 指向代理状态的数组的指针。 此方法返回时，每个状态值将表示相应的代理的状态。  
   
  `_Timeout`  
  若要等待，以毫秒为单位最长时间。  
@@ -255,11 +236,11 @@ static void __cdecl wait_for_all(
 ### <a name="remarks"></a>备注  
  代理任务完成时代理进入`agent_canceled`或`agent_done`状态。  
   
- 如果该参数`_Timeout`常数以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)代理已完成其任务之前，指定的时间内过期时引发。  
+ 如果参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间量过期代理完成其任务之前，将引发。  
   
 ##  <a name="wait_for_one"></a>wait_for_one 
 
- 等待指定的代理完成其任务之一。  
+ 等待任何一种指定的代理，为了完成其任务。  
   
 ```
 static void __cdecl wait_for_one(
@@ -272,16 +253,16 @@ static void __cdecl wait_for_one(
   
 ### <a name="parameters"></a>参数  
  `count`  
- 代理指针数组中存在数目`_PAgents`。  
+ 数组中出现代理指针数目`_PAgents`。  
   
  `_PAgents`  
- 指向要等待的代理的指针的数组。  
+ 指向要等待的时间的代理的指针的数组。  
   
  `_Status`  
- 对放置的代理状态的变量的引用。  
+ 对在其中放置的代理状态的变量的引用。  
   
  `_Index`  
- 对将放置代理索引的变量的引用。  
+ 对在其中放置的代理索引变量的引用。  
   
  `_Timeout`  
  若要等待，以毫秒为单位最长时间。  
@@ -289,8 +270,7 @@ static void __cdecl wait_for_one(
 ### <a name="remarks"></a>备注  
  代理任务完成时代理进入`agent_canceled`或`agent_done`状态。  
   
- 如果该参数`_Timeout`常数以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)代理已完成其任务之前，指定的时间内过期时引发。  
+ 如果参数`_Timeout`具有常量以外的值`COOPERATIVE_TIMEOUT_INFINITE`，异常[operation_timed_out](operation-timed-out-class.md)如果指定的时间量过期代理完成其任务之前，将引发。  
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-

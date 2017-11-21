@@ -1,34 +1,33 @@
 ---
-title: "CAccessorRowset::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "CAccessorRowset.GetColumnInfo"
-  - "CAccessorRowset::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo 方法"
+title: "Caccessorrowset:: Getcolumninfo |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- CAccessorRowset.GetColumnInfo
+- CAccessorRowset::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 8ade2388-3c58-43cd-8ed6-499ee0531291
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f982c516ef6c85ae2650bb26e2a7e1cdf28b7be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorRowset::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-从已打开的行集合获取列信息。  
+# <a name="caccessorrowsetgetcolumninfo"></a>CAccessorRowset::GetColumnInfo
+从打开的行集中获取列信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -43,19 +42,19 @@ HRESULT GetColumnInfo(
 );  
 ```  
   
-#### 参数  
- 有关更多信息，请参见 [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)（在 *OLE DB 程序员参考* 中）。  
+#### <a name="parameters"></a>参数  
+ 请参阅[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程序员参考*。  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- 用户必须释放返回的列信息属性和字符串缓冲区。  使用 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 并需要覆盖绑定时，请使用此方法的第二个版本中。  
+## <a name="remarks"></a>备注  
+ 返回的列信息和字符串缓冲区，用户必须释放。 使用此方法的第二个版本，当你使用[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)和需要重写绑定。  
   
- 有关更多信息，请参见 [OLE DB 程序员参考](https://msdn.microsoft.com/en-us/library/ms722704.aspx)（在  中）。  
+ 有关详细信息，请参阅[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程序员参考*。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CAccessorRowset 类](../../data/oledb/caccessorrowset-class.md)

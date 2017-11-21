@@ -1,64 +1,62 @@
 ---
-title: "__mulh | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__mulh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__mulh 内部函数"
+title: "__mulh |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __mulh
+dev_langs: C++
+helpviewer_keywords: __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 76fd85d99a1c38540700b75cd44cf4e0c576729c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __mulh
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mulh"></a>__mulh
 **Microsoft 专用**  
   
- 返回两个 64 位有符号整数的乘积的高 64 位。  
+ 返回两个 64 位有符号整数的产品的高 64 位。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-__int64 __mulh(   
-   __int64 a,   
-   __int64 b   
+__int64 __mulh(   
+   __int64 a,   
+   __int64 b   
 );  
 ```  
   
-#### 参数  
- \[in\] `a`  
- 要相乘的第一个数字。  
+#### <a name="parameters"></a>参数  
+ [in] `a`  
+ 要相乘的第一个数。  
   
- \[in\] `b`  
- 要相乘的第二个数字。  
+ [in] `b`  
+ 要相乘的第二个数。  
   
-## 返回值  
- 乘法的 128 位结果的高 64 位。  
+## <a name="return-value"></a>返回值  
+ 128 位乘法运算结果的高 64 位。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // mulh.cpp  
@@ -81,8 +79,11 @@ int main()
 }  
 ```  
   
-  **0xfffffffffffffff \* 0xf0000000 \= 0xeffffffffffffff10000000**   
-## 特定于 Microsoft 的结尾  
+```Output  
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

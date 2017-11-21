@@ -1,44 +1,44 @@
 ---
-title: "Compiler Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe compiler, attributes"
-  - "attributes [C++], compiler"
+title: "编译器特性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- cl.exe compiler, attributes
+- attributes [C++], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 72c8ee6a0d3b5a61e5fb60236269f89055a56a9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Compiler Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-编译器特性提供各种功能。  
+# <a name="compiler-attributes"></a>编译器特性
+编译器特性提供了各种功能。  
   
-|特性|说明|  
-|--------|--------|  
-|[emitidl](../windows/emitidl.md)|确定所有后续 IDL 特性是否在生成的 .idl 文件进行处理和放置。|  
-|[event\_receiver](../windows/event-receiver.md)|创建一个事件接收器。|  
-|[event\_source](../windows/event-source.md)|创建一个事件源。|  
-|[export](../windows/export.md)|在 .idl 文件中创建一个数据结构将。|  
-|[implements](../windows/implements-cpp.md)|指定强制为 IDL coclass 的成员的调度接口。|  
-|[importidl](../windows/importidl.md)|插入指定的 .idl 文件添加到生成的 .idl 文件中。|  
-|[importlib](../windows/importlib.md)|使已编译到另一个类型库可用于该类型创建库的类型。|  
-|[includelib](../windows/includelib-cpp.md)|导致在生成的 .idl 文件将包含的 .idl 或 .h 文件。|  
-|[library\_block](../windows/library-block.md)|放在 .idl 文件的库中的构造块。|  
-|[no\_injected\_text](../windows/no-injected-text.md)|由于属性使用，以防止编译器插入代码。|  
-|[satype](../windows/satype.md)|指定 **SAFEARRAY**的数据类型。|  
-|[version](../windows/version-cpp.md)|标识接口或类中的多个版本的特定版本。|  
+|特性|描述|  
+|---------------|-----------------|  
+|[emitidl](../windows/emitidl.md)|确定是否将处理并放置在生成的.idl 文件中所有后续的 IDL 特性。|  
+|[event_receiver](../windows/event-receiver.md)|创建事件接收器。|  
+|[event_source](../windows/event-source.md)|创建事件源。|  
+|[export](../windows/export.md)|会导致数据结构，用于放置在.idl 文件。|  
+|[实现](../windows/implements-cpp.md)|指定强制 IDL 组件类的成员的调度接口。|  
+|[importidl](../windows/importidl.md)|将指定的.idl 文件插入到生成的.idl 文件中。|  
+|[importlib](../windows/importlib.md)|使已编译到另一个类型库中的类型可供所创建的类型库使用。|  
+|[includelib](../windows/includelib-cpp.md)|导致要包含在生成的.idl 文件的.idl 或.h 文件。|  
+|[library_block](../windows/library-block.md)|将.idl 文件的库块中的构造。|  
+|[no_injected_text](../windows/no-injected-text.md)|阻止编译器将注入代码作为特性，请使用结果。|  
+|[satype](../windows/satype.md)|指定的数据类型**SAFEARRAY**。|  
+|[version](../windows/version-cpp.md)|标识的接口或类的多个版本之间的特定版本。|  
   
-## 请参阅  
- [Attributes by Group](../windows/attributes-by-group.md)
+## <a name="see-also"></a>另请参阅  
+ [按组分的特性](../windows/attributes-by-group.md)

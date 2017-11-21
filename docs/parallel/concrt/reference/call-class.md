@@ -1,11 +1,10 @@
 ---
-title: "调用类 |Microsoft 文档"
+title: "call 类 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs:
-- C++
-helpviewer_keywords:
-- call class
+dev_langs: C++
+helpviewer_keywords: call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: b1c629355db7f2e77ef0854a52c86848adb70c6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="call-class"></a>call 类
 `call` 消息块是多源、有序的 `target_block`，可以在接收消息时调用指定函数。  
@@ -59,28 +41,28 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 #### <a name="parameters"></a>参数  
  `T`  
- 传播到此块的消息的负载类型。  
+ 消息的负载类型传播到此块。  
   
  `_FunctorType`  
- 该块可以接受的函数的签名。  
+ 此块可以接受的函数的签名。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[调用](#ctor)|已重载。 构造`call`消息块。|  
 |[~ call 析构函数](#dtor)|销毁`call`消息块。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|执行输入消息中调用函数。|  
 |[process_message](#process_message)|处理一条消息，已接受此`call`消息块。|  
-|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法时由源块调用。|  
-|[send_message](#send_message)|以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法时由源块调用。|  
+|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法，调用由源块时。|  
+|[send_message](#send_message)|以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法，调用由源块时。|  
 |[supports_anonymous_source](#supports_anonymous_source)|重写 `supports_anonymous_source` 方法，以指示该块可以接受由未链接的源为其提供的消息。 (重写[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>备注  
@@ -145,9 +127,9 @@ call(
 ### <a name="remarks"></a>备注  
  如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。  
   
- 类型`_Call_method`是具有签名的伪函数`void (T const &)`其调用此`call`消息块来处理消息。  
+ 类型`_Call_method`是具有签名的涵子`void (T const &)`其调用由此`call`处理一条消息的消息块。  
   
- 类型`filter_method`是具有签名的伪函数`bool (T const &)`其调用此`call`消息块，以确定它是否应接受提供的消息。  
+ 类型`filter_method`是具有签名的涵子`bool (T const &)`其调用由此`call`消息块，以确定它是否应接受提供的消息。  
   
 ##  <a name="dtor"></a>~ 调用 
 
@@ -182,7 +164,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- 以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法时由源块调用。  
+ 以异步方式从将消息传递`ISource`至此块`call`消息块。 由调用`propagate`方法，调用由源块时。  
   
 ```
 virtual message_status propagate_message(
@@ -198,11 +180,11 @@ virtual message_status propagate_message(
  指向提供消息的源块的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+ A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
 ##  <a name="send_message"></a>send_message 
 
- 以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法时由源块调用。  
+ 以同步方式从将消息传递`ISource`至此块`call`消息块。 由调用`send`方法，调用由源块时。  
   
 ```
 virtual message_status send_message(
@@ -218,7 +200,7 @@ virtual message_status send_message(
  指向提供消息的源块的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+ A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
 ##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
@@ -234,4 +216,3 @@ virtual bool supports_anonymous_source();
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [transformer 类](transformer-class.md)
-

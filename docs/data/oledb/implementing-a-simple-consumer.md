@@ -1,50 +1,50 @@
 ---
-title: "实现简单使用者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "客户端, 创建"
-  - "OLE DB 使用者, 实现"
+title: "实现简单使用者 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- clients, creating
+- OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7dc97c0e64558f066250a54098f7316ac8b33076
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 实现简单使用者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的主题显示如何编辑由“MFC 应用程序向导”和“ATL OLE DB 使用者向导”所创建的文件以创建简单的使用者。  此示例包括以下部分：  
+# <a name="implementing-a-simple-consumer"></a>实现简单使用者
+以下主题说明如何编辑由 MFC 应用程序向导和 ATL OLE DB 使用者向导创建简单使用者创建的文件。 此示例具有以下部分：  
   
--   “用使用者检索数据”说明如何实现从数据库表中逐行读取所有数据的使用者中的代码。  
+-   "检索数据与使用者"演示如何在从数据库表中读取所有数据，表中的使用者中实现代码。  
   
--   “将书签支持添加到使用者”说明如何将书签支持添加到使用者。  
+-   "添加到使用者的书签支持"演示如何将书签支持添加到使用者。  
   
--   “将 XML 支持添加到使用者”说明如何修改使用者代码以将检索到的行集合数据作为 XML 数据输出。  
+-   "将 XML 支持添加到使用者"演示如何修改输出以 XML 数据形式检索到的行集数据的使用者代码。  
   
 > [!NOTE]
->  可以使用本节中所描述的使用者应用程序来测试 MyProv 和 Provider 提供程序示例。  
+>  在本部分中所述使用者应用程序可用于测试在 MyProv 和提供程序的示例提供程序。  
   
 > [!NOTE]
->  若要生成使用者应用程序来测试 MyProv（[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)中所描述的同一提供程序），则必须包含书签支持（如“将书签支持添加到使用者”中所描述）。  
+>  若要生成使用者应用程序来测试 MyProv (相同的提供程序中所述[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md))，"将书签支持添加到使用者。"中所述，必须包括书签支持  
   
 > [!NOTE]
->  若要生成使用者应用程序来测试 Provider，则忽略书签支持（如“将书签支持添加到使用者”中所描述）并且跳到“将 XML 支持添加到使用者”。  
+>  若要生成一个使用者应用程序来测试提供程序，在"添加书签支持向使用者"中所述的书签支持省略并跳到"添加到使用者的 XML 支持"。  
   
-## 用使用者检索数据  
+## <a name="retrieving-data-with-the-consumer"></a>与使用者中检索数据  
   
-#### 修改控制台应用程序以使用 OLE DB 使用者  
+#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改此控制台应用程序使用 OLE DB 使用者  
   
-1.  在 MyCons.cpp 中，通过插入如下所示的粗体文本来更改主代码：  
+1.  MyCons.cpp 中的方法是插入粗体文本，如下所示更改主代码：  
   
     ```  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -54,37 +54,37 @@ caps.handback.revision: 7
     ...  
     int main(int argc, char* argv[])  
     {  
-       HRESULT hr = CoInitialize(NULL);        // Instantiate rowset    CProducts rs;        hr = rs.OpenAll();    ATLASSERT( SUCCEEDED( hr ) );    hr = rs.MoveFirst();        // Iterate through the rowset    while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )    {       // Print out the column information for each row       printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",              rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );       hr = rs.MoveNext();    }        rs.Close();    rs.ReleaseCommand();        CoUninitialize();  
+       HRESULT hr = CoInitialize(NULL);   // Instantiate rowset   CProducts rs;   hr = rs.OpenAll();   ATLASSERT( SUCCEEDED( hr ) );   hr = rs.MoveFirst();   // Iterate through the rowset   while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )   {      // Print out the column information for each row      printf("Product ID: %d, Name: %s, Unit Price: %d, Quantity per Unit: %d, Units in Stock %d, Reorder Level %d\n",             rs.m_ProductID, rs.m_ProductName, rs.m_UnitPrice, rs.m_QuantityPerUnit, rs.m_UnitsInStock, rs.m_ReorderLevel );      hr = rs.MoveNext();   }   rs.Close();   rs.ReleaseCommand();   CoUninitialize();  
   
        return 0;  
     }  
     ```  
   
-## 将书签支持添加到使用者  
- 书签是一个唯一标识表中的行的列。  它通常是键列，但不总是这样；它是提供程序特定的。  本节说明如何添加书签支持。  若要添加书签支持，需要在用户记录类中执行下面的操作：  
+## <a name="adding-bookmark-support-to-the-consumer"></a>将书签支持添加到使用者  
+ 书签是唯一标识表中的行的列。 它通常是键列，但并非总是;它是特定于提供程序。 本部分演示如何添加书签的支持。 若要执行此操作，需要执行以下操作，用户记录类中：  
   
--   实例化书签。  它们是 [CBookmark](../../data/oledb/cbookmark-class.md) 类型的对象。  
+-   实例化书签。 这些是类型的对象[CBookmark](../../data/oledb/cbookmark-class.md)。  
   
--   通过设置 **DBPROP\_IRowsetLocate** 属性从提供程序中请求书签列。  
+-   从提供程序请求书签列，通过设置**DBPROP_IRowsetLocate**属性。  
   
--   使用 [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md) 宏向列映射添加一个书签项。  
+-   通过将书签条目添加到列映射[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)宏。  
   
- 上面的步骤提供书签支持和要使用的书签对象。  此代码示例将演示书签，如下所示：  
+ 前面的步骤为你提供书签支持与要使用的书签对象。 此代码示例演示一个书签，如下所示：  
   
--   打开要编写的文件。  
+-   打开文件以进行写入。  
   
--   将行集合数据逐行输出到文件。  
+-   输出文件的行集数据行的行。  
   
--   通过调用 [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md) 将行集合游标移动到书签。  
+-   将行集光标移到的书签，通过调用[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)。  
   
--   输出由书签标记的行，将其追加到文件的结尾。  
+-   输出了书签的行，将其追加到文件末尾。  
   
 > [!NOTE]
->  如果使用此使用者应用程序来测试 Provider 提供程序应用程序示例，则忽略本节中所描述的书签支持。  
+>  如果使用此使用者应用程序来测试提供程序示例提供程序应用程序，将支持本节中所述的书签。  
   
-#### 实例化书签  
+#### <a name="to-instantiate-the-bookmark"></a>若要实例化书签  
   
-1.  访问器需要包含一个 [CBookmark](../../data/oledb/cbookmark-class.md) 类型的对象。  `nSize` 参数以字节为单位指定书签缓冲区的大小（通常，对于 32 位平台为 4，对于 64 位平台为 8）。  将下面的声明添加到用户记录类中的列数据成员：  
+1.  访问器需要包含类型的对象[CBookmark](../../data/oledb/cbookmark-class.md)。 `nSize`参数指定书签缓冲区的大小，以字节为单位 (通常为 32 位平台的 4) 和 64 位平台为 8。 将以下声明添加到用户记录类中的列数据成员：  
   
     ```  
     //////////////////////////////////////////////////////////////////////  
@@ -97,9 +97,9 @@ caps.handback.revision: 7
        ...  
     ```  
   
-#### 从提供程序中请求书签列  
+#### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要从提供程序请求书签列  
   
-1.  在用户记录类的 `GetRowsetProperties` 方法中添加下面的代码：  
+1.  添加下面的代码`GetRowsetProperties`在用户记录类的方法：  
   
     ```  
     // Set the DBPROP_IRowsetLocate property.  
@@ -107,13 +107,13 @@ caps.handback.revision: 7
     {  
        pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
        pPropSet->AddProperty(DBPROP_CANSCROLLBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
-       // Add DBPROP_IRowsetLocate property to support bookmarks    pPropSet->AddProperty(DBPROP_IRowsetLocate, true);  
+       // Add DBPROP_IRowsetLocate property to support bookmarks   pPropSet->AddProperty(DBPROP_IRowsetLocate, true);  
     }  
     ```  
   
-#### 将书签项添加到列映射  
+#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>将书签条目添加到列映射  
   
-1.  将下面的项添加到用户记录类中的列映射：  
+1.  将以下条目添加到用户记录类中的列映射：  
   
     ```  
     // Set a bookmark entry in the column map.  
@@ -125,9 +125,9 @@ caps.handback.revision: 7
     END_COLUMN_MAP()  
     ```  
   
-#### 在主代码中使用书签  
+#### <a name="to-use-a-bookmark-in-your-main-code"></a>要在主代码中使用书签  
   
-1.  在以前创建的控制台应用程序的 MyCons.cpp 文件中，将主代码更改为如下所示的样子。  若要使用书签，则主代码需要实例化自己的书签对象 \(`myBookmark`\)；此书签不同于访问器中的书签 \(`m_bookmark`\)。  
+1.  在 MyCons.cpp 文件从以前创建的控制台应用程序中，更改主代码以读取，如下所示。 若要使用书签，主要的代码需要进行实例化其自己的书签对象 (`myBookmark`); 这是从访问器中的不同书签 (`m_bookmark`)。  
   
     ```  
     ///////////////////////////////////////////////////////////////////////  
@@ -196,22 +196,22 @@ caps.handback.revision: 7
     }  
     ```  
   
- 有关书签的更多信息，请参见[使用书签](../../data/oledb/using-bookmarks.md)。  在[更新行集合](../../data/oledb/updating-rowsets.md)中也显示书签的示例。  
+ 有关书签的详细信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。 中显示了示例的书签[更新行集合](../../data/oledb/updating-rowsets.md)。  
   
-## 将 XML 支持添加到使用者  
- 如[访问 XML 数据](../../data/oledb/accessing-xml-data.md)中所讨论的，有两种从数据源中检索 XML 数据的方法：使用 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 或使用 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。  此示例使用 `CStreamRowset`，它更有效，但是要求在执行此应用程序示例的计算机上运行 SQL Server 2000。  
+## <a name="adding-xml-support-to-the-consumer"></a>将 XML 支持添加到使用者  
+ 中所述[访问 XML 数据](../../data/oledb/accessing-xml-data.md)，有两种方法来从数据源中检索 XML 数据： 使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md)或使用[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。 此示例使用`CStreamRowset`，这是更高效，但要求你具有在其执行此示例应用程序在计算机上运行的 SQL Server 2000。  
   
-#### 修改命令类以从 CStreamRowset 继承  
+#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>若要修改命令类，以从 CStreamRowset 继承  
   
-1.  在以前创建的使用者应用程序中，更改 `CCommand` 声明以将 `CStreamRowset` 指定为行集合类，如下所示：  
+1.  在以前创建的使用者的应用程序的情况下，更改你`CCommand`声明，以指定`CStreamRowset`作为行集类，如下所示：  
   
     ```  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### 修改主代码以检索并输出 XML 数据  
+#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>要修改主要的代码，以检索和输出的 XML 数据  
   
-1.  在以前创建的控制台应用程序的 MyCons.cpp 文件中，将主代码更改为如下所示的样子：  
+1.  在 MyCons.cpp 文件从以前创建的控制台应用程序中，更改主代码以读取，如下所示：  
   
     ```  
     ///////////////////////////////////////////////////////////////////////  
@@ -266,5 +266,5 @@ caps.handback.revision: 7
     }  
     ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

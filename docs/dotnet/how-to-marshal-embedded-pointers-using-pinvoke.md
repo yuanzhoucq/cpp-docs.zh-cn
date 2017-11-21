@@ -1,41 +1,41 @@
 ---
-title: "如何：使用 PInvoke 封送嵌入式指针 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据封送处理 [C++], 嵌入式指针"
-  - "嵌入式指针 [C++]"
-  - "互操作 [C++], 嵌入式指针"
-  - "封送处理 [C++], 嵌入式指针"
-  - "平台调用 [C++], 嵌入式指针"
+title: "如何： 封送嵌入式指针使用 PInvoke |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- embedded pointers [C++]
+- interop [C++], embedded pointers
+- platform invoke [C++], embedded pointers
+- marshaling [C++], embedded pointers
+- data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8f6716a11919c300dc3153ca678767503a35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 PInvoke 封送嵌入式指针
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用平台调用 \(P\/Invoke\) 功能，可以从托管代码调用在非托管 DLL 中实现的函数。  如果 DLL 的源代码不可用，P\/Invoke 就是进行交互操作的唯一选择。  但是，与其他 .NET 语言不同，Visual C\+\+ 提供了一种替代 P\/Invoke 的方法。  有关更多信息，请参见[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)和[如何：使用 C\+\+ 互操作封送嵌入式指针](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送嵌入式指针
+可以使用平台调用 (P/Invoke) 的功能的托管代码中调用在非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项来进行互操作。 但是，不同于其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)和[How to： 封送嵌入式指针使用 c + + 互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
-## 示例  
- 向本机代码传递结构时要求创建一个数据布局与本机结构等效的托管结构。  但是，包含指针的结构需要进行特殊处理。  对于本机结构中的每个嵌入的指针，结构的托管版本应包含 <xref:System.IntPtr> 类型的一个实例。  而且，用于这些实例的内存必须使用 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>、<xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> 和 <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> 方法来显式分配、初始化和释放。  
+## <a name="example"></a>示例  
+ 将结构传递给本机代码，则需要创建等效的数据布局到本机结构的托管的结构。 但是，包含指针的结构需要特殊处理。 对于本机结构中每个嵌入的指针，该结构的托管的版本应该包含的实例<xref:System.IntPtr>类型。 此外，内存为必须显式分配这些实例，初始化，并释放使用<xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>， <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>，和<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>方法。  
   
- 下面的代码由一个非托管模块和一个托管模块组成。  非托管模块是一个 DLL，它定义一个接受包含指针且名为 ListString 的结构的函数，以及一个名为 TakesListStruct 的函数。  托管模块是一个命令行应用程序，它导入 TakesListStruct 函数并定义名为 MListStruct 的结构，该结构与本机 ListStruct 等效，区别在于 double\* 由 <xref:System.IntPtr> 实例来表示。  调用 TakesListStruct 之前，主函数将分配并初始化此字段引用的内存。  
+ 下面的代码由非托管和的托管的模块组成。 非托管的模块是一个 DLL，它定义接受一个称为包含的指针的 ListString 结构的函数和一个名为 TakesListStruct 函数。 托管的模块是一个命令行应用程序以便导入 TakesListStruct 函数和定义结构调用 MListStruct，它等效于本机 ListStruct，只不过使用表示双 *<xref:System.IntPtr>实例。 在调用 TakesListStruct 之前, 的主函数分配和初始化此字段引用的内存。  
   
- 该托管模块使用 \/clr 进行编译，但 \/clr:pure 也适用。  
+ 托管的模块编译 /clr，但 /clr: pure 工作原理以及。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
-```  
+```cpp  
 // TraditionalDll6.cpp  
 // compile with: /EHsc /LD  
 #include <stdio.h>  
@@ -65,7 +65,7 @@ void TakesListStruct(ListStruct list) {
 }  
 ```  
   
-```  
+```cpp  
 // EmbeddedPointerMarshalling.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -107,7 +107,7 @@ int main() {
 }  
 ```  
   
- 请注意，使用传统的 \#include 指令不会向托管代码公开 DLL 的任何部分。  实际上，仅在运行时访问 DLL，所以在编译时将检测不到使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 导入的函数所存在的问题。  
+ 请注意，对使用传统的托管代码公开的 DLL 没有一部分 #include 指令。 事实上，DLL 在运行时访问仅，因此问题与函数导入具有<xref:System.Runtime.InteropServices.DllImportAttribute>将不会在编译时检测。  
   
-## 请参阅  
- [在 C\+\+ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>另请参阅  
+ [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

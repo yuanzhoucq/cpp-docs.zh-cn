@@ -1,57 +1,56 @@
 ---
-title: "如何：将清单嵌入到 C/C++ 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "嵌入清单"
-  - "生成文件, 更新至嵌入清单"
-  - "清单 [C++]"
+title: "如何： 将 C/c + + 应用程序清单嵌入 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- embedding manifests
+- makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3bc7646dab51b9a1fdd73b23d1f58c7b474c363e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：将清单嵌入到 C/C++ 应用程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建议 C\/C\+\+ 应用程序（或库）将其清单嵌入最终的二进制文件中，因为这可以确保运行时行为在多数情况下正确无误。  默认情况下，当 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 从源文件生成项目时，会尝试嵌入清单；有关更多信息，请参见 [Visual Studio 中的清单生成](../build/manifest-generation-in-visual-studio.md)。  但是，如果应用程序是通过使用 nmake 生成的，则需要更改现有的生成文件。  本节演示了如何更改现有的生成文件，以便将清单自动嵌入最终二进制文件中。  
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：将清单嵌入到 C/C++ 应用程序
+建议的 C/c + + 应用程序 （或库） 具有其清单嵌入到最终二进制文件，因为这可保证在大多数情况下正确运行时行为。 默认情况下，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]尝试将清单嵌入在构建源文件一个项目时，请参阅[Visual Studio 中的清单生成](../build/manifest-generation-in-visual-studio.md)有关详细信息。 但是，如果使用 nmake 生成应用程序，则必须对现有的生成文件的一些更改。 本部分演示如何更改现有的生成文件，以便自动将嵌入最终二进制文件中的清单。  
   
-## 两种方法  
- 有两种方法可将清单嵌入应用程序或库中。  
+## <a name="two-approaches"></a>两种方法  
+ 有两个方法可将嵌入在应用程序或库内的清单。  
   
--   如果不执行增量生成，可以将如下命令行用作后期生成步骤来直接嵌入清单：  
+-   如果你不进行增量生成可以直接将嵌入清单作为生成后步骤中使用类似于以下命令行：  
   
-     **mt.exe –manifest MyApp.exe.manifest \-outputresource:MyApp.exe;1**  
+     **mt.exe-清单 MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      或  
   
-     **mt.exe –manifest MyLibrary.dll.manifest \-outputresource:MyLibrary.dll;2**  
+     **mt.exe-清单 MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     （1 表示 EXE，2 表示 DLL。）  
+     (EXE、 dll 2 1)。  
   
--   如果要执行增量生成，若直接按此处介绍的方法编辑资源，将会禁用增量生成并导致完全重新生成；因此，应采取其他方法：  
+-   如果你正在增量生成，直接编辑资源，如下所示将禁用增量生成，并且导致完全重新生成;因此应采取不同的方法：  
   
-    -   链接二进制文件以生成 MyApp.exe 清单文件。  
+    -   将二进制文件来生成 MyApp.exe.manifest 文件的链接。  
   
-    -   将清单转换为资源文件。  
+    -   将清单转换到的资源文件。  
   
-    -   以增量方式重新链接，将清单资源嵌入二进制文件中。  
+    -   重新链接 （增量） 的清单资源嵌入二进制文件。  
   
- 下面的示例说明如何更改生成文件以将两种方法相结合。  
+ 下面的示例演示如何更改生成文件以合并这两种技术。  
   
-## 生成文件（更改前）  
- 请看 MyApp.exe 的 nmake 脚本，它是一个很简单的仅由一个文件生成的应用程序：  
+## <a name="makefiles-before"></a>（之前） 的生成文件  
+ MyApp.exe，从一个文件构建的简单应用程序，请考虑 nmake 脚本：  
   
 ```  
 # build MyApp.exe  
@@ -71,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- 如果此脚本不经更改便在 Visual C\+\+ 上运行，它将成功创建 MyApp.exe。  它还将创建外部清单文件 MyApp.exe.manifest，操作系统会使用此外部清单文件在运行时加载依赖程序集。  
+ 如果运行此脚本使用 Visual c + + 不变，它已成功创建 MyApp.exe。 它还创建了外部清单文件 MyApp.exe.manifest，以供操作系统加载在运行时的依赖程序集。  
   
- MyLibrary.dll 的 nmake 脚本与之很相似：  
+ MyLibrary.dll nmake 脚本看起来很相似：  
   
 ```  
 # build MyLibrary.dll  
@@ -96,8 +95,8 @@ clean :
     del MyLibrary.obj MyLibrary.dll  
 ```  
   
-## 生成文件（更改后）  
- 若要使用嵌入的清单来执行生成，则必须对原始生成文件进行四处小改动。  对于 MyApp.exe 生成文件：  
+## <a name="makefiles-after"></a>生成文件 （之后）  
+ 若要使用嵌入的清单，你必须对原始的生成文件进行四个小型更改。 为 MyApp.exe 生成文件：  
   
 ```  
 # build MyApp.exe  
@@ -127,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- 对于 MyLibrary.dll 生成文件：  
+ 为 MyLibrary.dll 生成文件：  
   
 ```  
 # build MyLibrary.dll  
@@ -160,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- 生成文件现在包含两个执行实际工作的文件，它们是 makefile.inc 和 makefile.targ.inc。  
+ 生成文件现在包括执行实际工作、 makefile.inc 和 makefile.targ.inc 的两个文件。  
   
- 创建 makefile.inc，然后将以下内容复制到该文件中：  
+ 创建 makefile.inc 并将以下内容复制到其中：  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -233,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- 现在，创建 makefile.targ.inc，然后将以下内容复制到该文件中：  
+ 现在创建 makefile.targ.inc 并将以下内容复制到其中：  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  
@@ -260,5 +259,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## 请参阅  
- [了解 C\/C\+\+ 程序的清单生成](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>另请参阅  
+ [了解 C/C++ 程序的清单生成](../build/understanding-manifest-generation-for-c-cpp-programs.md)

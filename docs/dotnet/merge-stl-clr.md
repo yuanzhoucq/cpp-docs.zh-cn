@@ -1,32 +1,30 @@
 ---
-title: "merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "merge 函数 [STL/CLR]"
+title: "merge (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::merge
+dev_langs: C++
+helpviewer_keywords: merge function [STL/CLR]
 ms.assetid: e42d3396-63a4-438a-964d-83e90405102e
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c290e9c96db022019a68e29147a1716c71cb38a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-合并两个排序的源区的所有元素放入单个，排序的目标范围，排序的标准可能是按二进制谓词指定。  
+# <a name="merge-stlclr"></a>merge (STL/CLR)
+将两个排序的源范围中的所有元素合并为一个排序的目标范围，其中排序条件可通过二元谓词指定。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
@@ -37,13 +35,13 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest, _Pr _Pred);  
 ```  
   
-## 备注  
- 此函数行为与 STL `merge`函数相同。  有关详细信息，请参阅[合并](../Topic/merge.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`merge`。 有关详细信息，请参阅[合并](../standard-library/algorithm-functions.md#merge)。  
   
-## 要求  
- **页眉：** \<\/cliext 算法\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/算法 >  
   
- **命名空间：** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,69 +1,68 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stosd 指令"
-  - "rep stosd 指令"
-  - "__stosd 内部函数"
+title: "__stosd |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a489531113ce17cee28414a07662114e58a61341
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stosd"></a>__stosd
 **Microsoft 专用**  
   
- 生成存储字符串命令 \(`rep stosd`\)。  
+ 生成一个存储字符串指令 (`rep stosd`)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### 参数  
- \[out\] `Dest`  
+#### <a name="parameters"></a>参数  
+ [out] `Dest`  
  操作的目标。  
   
- \[in\] `Data`  
+ [in] `Data`  
  要存储的数据。  
   
- \[in\] `Count`  
- 双字块的长度写入的。  
+ [in] `Count`  
+ 双字写入的块的长度。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__stosd`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 结果为双字 `Data` 将写入 `Count` 双字块在 `Dest`点的对内存位置中。  
+## <a name="remarks"></a>备注  
+ 结果是，双字`Data`写入到的块`Count`双字数组中的内存位置的指向`Dest`。  
   
- 此实例只能用作内部。  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // stosd.c  
@@ -88,8 +87,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## 特定于 Microsoft 的结尾  
+```Output  
+0 99999 99999 0  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

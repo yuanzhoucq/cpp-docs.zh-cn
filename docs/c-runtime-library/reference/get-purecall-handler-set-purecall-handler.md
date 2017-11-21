@@ -1,60 +1,60 @@
 ---
-title: "_get_purecall_handler _set_purecall_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_purecall_handler"
-  - "_set_purecall_handler_m"
-  - "_get_purecall_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_purecall_handler"
-  - "_set_purecall_handler_m"
-  - "set_purecall_handler_m"
-  - "set_purecall_handler"
-  - "stdlib/_set_purecall_handler"
-  - "stdlib/_get_purecall_handler"
-  - "_get_purecall_handler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_purecall_handler 函数"
-  - "set_purecall_handler 函数"
-  - "purecall_handler"
-  - "set_purecall_handler_m 函数"
-  - "_purecall_handler"
-  - "_set_purecall_handler_m 函数"
-  - "_get_purecall_handler 函数"
+title: "_get_purecall_handler、_set_purecall_handler | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_purecall_handler
+- _set_purecall_handler_m
+- _get_purecall_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _set_purecall_handler
+- _set_purecall_handler_m
+- set_purecall_handler_m
+- set_purecall_handler
+- stdlib/_set_purecall_handler
+- stdlib/_get_purecall_handler
+- _get_purecall_handler
+dev_langs: C++
+helpviewer_keywords:
+- _set_purecall_handler function
+- set_purecall_handler function
+- purecall_handler
+- set_purecall_handler_m function
+- _purecall_handler
+- _set_purecall_handler_m function
+- _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b32cf4e20be739f712cb9c0b0e0c8d3b0f0792ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# _get_purecall_handler _set_purecall_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler、_set_purecall_handler
 获取或设置纯虚函数调用的错误处理程序。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef void (__cdecl* _purecall_handler)(void);  
@@ -66,31 +66,31 @@ _purecall_handler __cdecl _set_purecall_handler(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `function`  
- 要在调用纯虚函数时调用的函数。`_purecall_handler` 函数必须具有 void 返回类型。  
+ 要在调用纯虚函数时调用的函数。 `_purecall_handler` 函数必须具有 void 返回类型。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  之前的 `_purecall_handler`。 如果之前的处理程序不存在，则返回 `nullptr`。  
   
-## 备注  
- `_get_purecall_handler` 和 `_set_purecall_handler` 函数特定于 Microsoft 的且仅适用于 c \+ \+ 代码。  
+## <a name="remarks"></a>备注  
+ `_get_purecall_handler` 和 `_set_purecall_handler` 函数特定于 Microsoft 且仅适用于 C++ 代码。  
   
- 对一个纯虚函数的调用是一个错误，因为它不具有实现。 默认情况下，编译器将生成代码来调用错误处理程序函数，当调用纯虚函数时，这将终止该程序。 您可以安装纯虚函数调用，以将其进行调试或报告的数据捕获您自己错误处理程序函数。 若要使用您自己的错误处理程序，创建一个具有函数 `_purecall_handler` 签名，然后使用 `_set_purecall_handler` 以使其当前处理程序。  
+ 对纯虚拟函数的调用出错，因为它没有实现。 默认情况下，在调用纯虚函数时，编译器将生成代码来调用错误处理程序函数，这将终止该程序。 可以安装自己的错误处理程序进行纯虚拟函数调用，以捕获这些调用用于调试和报告目的。 若要使用自己的错误处理程序，请创建一个具有 `_purecall_handler` 签名的函数，然后使用 `_set_purecall_handler` 使其成为当前处理程序。  
   
- 因为只有一个 `_purecall_handler` 为每个进程，当您调用 `_set_purecall_handler` 立即会影响所有线程。 任一线程上的最后一个调用方将设置该处理程序。  
+ 因为每个进程只有一个 `_purecall_handler`，在调用 `_set_purecall_handler` 时，它立即会影响所有线程。 任一线程上的最后一个调用方将设置该处理程序。  
   
- 若要还原默认行为，请调用 `_set_purecall_handler` 使用 `nullptr` 参数。  
+ 若要还原默认行为，请使用 `nullptr` 参数调用 `_set_purecall_handler`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
 |例程|必需的标头|  
-|--------|-----------|  
-|`_get_purecall_handler`, `_set_purecall_handler`|\< cstdlib \> 或 \< stdlib.h \>|  
+|-------------|---------------------|  
+|`_get_purecall_handler`, `_set_purecall_handler`|\<cstdlib> 或 \<stdlib.h>|  
   
  有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // _set_purecall_handler.cpp  
@@ -136,9 +136,9 @@ int _tmain(int argc, _TCHAR* argv[])
 ```  
   
 ```Output  
-在 _purecall_handler 中。  
+In _purecall_handler.  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [错误处理](../../c-runtime-library/error-handling-crt.md)   
- [\_purecall](../../c-runtime-library/reference/purecall.md)
+ [_purecall](../../c-runtime-library/reference/purecall.md)

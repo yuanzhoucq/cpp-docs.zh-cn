@@ -1,36 +1,36 @@
 ---
-title: "/MANIFESTUAC（将 UAC 信息嵌入到清单中） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.UACUIAccess"
-  - "VC.Project.VCLinkerTool.UACExecutionLevel"
-  - "VC.Project.VCLinkerTool.EnableUAC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MANIFESTUAC 链接器选项"
-  - "MANIFESTUAC 链接器选项"
-  - "-MANIFESTUAC 链接器选项"
+title: "-MANIFESTUAC （将 UAC 信息嵌入在清单中） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.UACUIAccess
+- VC.Project.VCLinkerTool.UACExecutionLevel
+- VC.Project.VCLinkerTool.EnableUAC
+dev_langs: C++
+helpviewer_keywords:
+- /MANIFESTUAC linker option
+- MANIFESTUAC linker option
+- -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 979c93226adc49677581a22e2357ad7a65c581b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFESTUAC（将 UAC 信息嵌入到清单中）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定是否将用户帐户控制 \(UAC\) 信息嵌入到程序清单中。  
+# <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC（将 UAC 信息嵌入到清单中）
+指定是否将用户帐户控制 (UAC) 信息嵌入到程序清单中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /MANIFESTUAC  
@@ -40,49 +40,49 @@ caps.handback.revision: 12
 /MANIFESTUAC:uiAccess=_uiAccess  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `fragment`  
- 一个字符串，它包含 `level` 和 `uiAccess` 值。  有关更多信息，请参见本主题中后面的“备注”部分。  
+ 一个字符串，包含`level`和`uiAccess`值。 有关详细信息，请参阅本主题后面的备注一节。  
   
  `_level`  
- asInvoker、highestAvailable 或 requireAdministrator 之一。  默认为 asInvoker。  有关更多信息，请参见本主题中后面的“备注”部分。  
+ 之一*asInvoker*， *highestAvailable*，或*requireAdministrator*。 默认值为 asInvoker。 有关详细信息，请参阅本主题后面的备注一节。  
   
  `_uiAccess`  
- 如果您希望应用程序绕过用户界面保护级别并将输入引导到桌面上的更高权限窗口，则为 `true`；否则为 `false`。  默认为 `false`。  仅针对用户界面辅助功能应用程序设置为 `true`。  
+ 如果您希望应用程序绕过用户界面保护级别并将输入引导到桌面上的更高权限窗口，则为 `true`；否则为 `false`。 默认为 `false`。 设置为`true`仅对用户界面可访问性应用程序。  
   
-## 备注  
- 如果您在命令行上指定多个 \/MANIFESTUAC 选项，则最后输入的选项优先级最高。  
+## <a name="remarks"></a>备注  
+ 如果指定多个 /MANIFESTUAC 选项在命令行上的，输入的最后一个优先。  
   
- \/MANIFESTUAC:level 的选项包括：  
+ /MANIFESTUAC:level 的选项如下所示：  
   
--   `asInvoker`：应用程序将使用与启动它的进程相同的权限运行。  可通过选择**“以管理员身份运行”**将应用程序提升为更高权限。  
+-   `asInvoker`： 应用程序将使用与启动它的过程相同的权限运行。 将应用程序可以通过选择提升到更高的权限级别**以管理员身份运行**。  
   
--   highestAvailable：应用程序将使用可能的最高权限级别运行。  如果启动该应用程序的用户为管理员组的一个成员，则此选项与 requireAdministrator 相同。  如果可用的最高权限级别高于打开进程的级别，则系统将提示提供凭据。  
+-   最高可用性： 应用程序将使用它可以最高权限级别运行。 如果启动应用程序的用户是 Administrators 组的成员，此选项等同于 requireAdministrator。 如果最高的可用权限级别高于打开进程的级别，系统将提示输入凭据。  
   
--   requireAdministrator：应用程序将使用管理员权限运行。  启动该应用程序的用户必须是管理员组的一个成员。  如果打开进程未使用管理权限运行，则系统将提示提供凭据。  
+-   requireAdministrator： 应用程序将使用管理员权限运行。 启动应用程序的用户必须是 Administrators 组的成员。 如果打开过程未使用管理权限运行，系统将提示输入凭据。  
   
- 您可以通过使用 \/MANIFESTUAC:fragment 选项在一个步骤中指定 level 和 uiAccess 值。  代码片段的格式必须是：  
+ 通过使用 /MANIFESTUAC:fragment 选项，可以在一个步骤中指定的级别和 uiAccess 值。 片段必须采用以下形式：  
   
 ```  
 "level=[ asInvoker | highestAvailable | requireAdministrator ] uiAccess=[ true | false ]"  
 ```  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  展开**“配置属性”**节点。  
+2.  展开**配置属性**节点。  
   
-3.  展开**“链接器”**节点。  
+3.  展开**链接器**节点。  
   
-4.  选择**“清单文件”**属性页。  
+4.  选择**清单文件**属性页。  
   
-5.  修改**“启用用户帐户控制\(UAC\)”**、**“UAC 执行级别”**和**“UAC 绕过 UI 保护”**属性。  
+5.  修改**启用用户帐户控制 (UAC)**， **UAC 执行级别**，和**UAC 绕过 UI 保护**属性。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
-1.  请参见 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>、<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>。  
+1.  请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>、<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

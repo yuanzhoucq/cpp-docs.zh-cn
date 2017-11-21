@@ -1,32 +1,30 @@
 ---
-title: "call_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.call_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_as attribute"
+title: "call_as |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.call_as
+dev_langs: C++
+helpviewer_keywords: call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ce0123f6f06d47d920ed55a1460944393960ff6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# call_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使 [本地](../windows/local-cpp.md) 函数映射到远程功能，这样，当该远程函数调用时，将更新本地函数调用。  
+# <a name="callas"></a>call_as
+使[本地](../windows/local-cpp.md)函数映射到远程函数，以便远程函数调用时，调用本地函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 参数  
- *Function — 函数*  
- 要调用的本地函数，当远程函数调用。  
+#### <a name="parameters"></a>参数  
+ *函数*  
+ 你想要调用远程函数时要调用的本地函数。  
   
-## 备注  
- **call\_as** C\+\+ 特性具有与 [call\_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Call_as** c + + 属性具有相同的功能[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 特性。  
   
-## 示例  
- 下面的代码演示如何使用 **call\_as** 映射一个不可远程控制的功能 \(**f1**\) 为一个可远程处理功能 \(**Remf1**\):  
+## <a name="example"></a>示例  
+ 下面的代码演示如何使用**call_as**映射不可远程控制函数 (**f1**) 为可远程处理函数 (**Remf1**):  
   
 ```  
 // cpp_attr_ref_call_as.cpp  
@@ -57,21 +55,20 @@ __interface IMInterface {
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|接口方法|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
+ [本地](../windows/local-cpp.md)   

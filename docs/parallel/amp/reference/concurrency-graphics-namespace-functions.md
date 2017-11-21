@@ -9,18 +9,17 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 4277b01f702807435132cd92785aefe7f3ab30f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 命名空间函数
 |||  
@@ -28,7 +27,7 @@ ms.lasthandoff: 03/17/2017
 |[copy](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>copy 函数 (concurrency:: graphics Namespace)  
- 将源纹理复制到目标缓冲区中，或将源缓冲区复制到目标缓冲区。 此函数的常规形式`copy(src, dest)`。  
+ 将源纹理复制到目标缓冲区中，或将源缓冲区复制到目标缓冲区。 此函数的常规形式是`copy(src, dest)`。  
   
 ```  
 template <
@@ -147,7 +146,7 @@ void copy (
  目标对象的类型。  
   
  `_Dst_offset`  
- 从此处开始复制目标中的偏移量。  
+ 中的偏移量从此处开始复制目标。  
   
  `InputIterator`  
  输入 interator 的类型。  
@@ -156,7 +155,7 @@ void copy (
  输出迭代器的类型。  
   
  `_Src`  
- 若要复制的对象。  
+ 若要要复制的对象。  
   
  `_Src_byte_size`  
  源中的字节数。  
@@ -165,16 +164,16 @@ void copy (
  源对象的类型。  
   
  `_Src_offset`  
- 从此处开始复制的源中的偏移量。  
+ 中的偏移量从此处开始复制源。  
   
  `first`  
- 到源容器开始迭代器。  
+ 到源容器经过开头的迭代器。  
   
  `last`  
- 到源容器的迭代器结束。  
+ 到源容器结束迭代器。  
   
 ##  <a name="copy_async"></a>copy_async 函数 (concurrency:: graphics Namespace)  
- 以异步方式将源纹理复制到目标缓冲区中，或将源缓冲区复制到目标缓冲区，然后返回[completion_future](completion-future-class.md)可以等待的对象。 在快捷键上运行代码时，无法复制数据。 此函数的常规形式`copy(src, dest)`。  
+ 以异步方式将源纹理复制到目标缓冲区中，或将源缓冲区复制到目标缓冲区，然后返回[completion_future](completion-future-class.md)可以等待的对象。 在加速器上运行代码时，无法将复制数据。 此函数的常规形式是`copy(src, dest)`。  
   
 ```  
 template<
@@ -289,7 +288,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  目标对象的类型。  
   
  `_Dst_offset`  
- 从此处开始复制目标中的偏移量。  
+ 中的偏移量从此处开始复制目标。  
   
  `InputIterator`  
  输入 interator 的类型。  
@@ -298,7 +297,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  输出迭代器的类型。  
   
  `_Src`  
- 若要复制的对象。  
+ 若要要复制的对象。  
   
  `_Src_byte_size`  
  源中的字节数。  
@@ -307,19 +306,18 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  源对象的类型。  
   
  `_Src_offset`  
- 从此处开始复制的源中的偏移量。  
+ 中的偏移量从此处开始复制源。  
   
  `first`  
- 到源容器开始迭代器。  
+ 到源容器经过开头的迭代器。  
   
  `last`  
- 到源容器的迭代器结束。  
+ 到源容器结束迭代器。  
 
 ## <a name="requirements"></a>要求  
- **标头︰** amp_graphics.h  
+ **标头：** amp_graphics.h  
   
  **Namespace:** concurrency:: graphics 
 
 ## <a name="see-also"></a>另请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

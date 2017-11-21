@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr::CComHeapPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComHeapPtr class
+dev_langs: C++
+helpviewer_keywords: CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 0e5196a98b8fd76b2e7e791fd2cd9549099a1cc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: d851e2c6fb4892bd65cf26ea747a6b99a8006cee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 类
-智能指针类，用于管理堆指针。  
+用于管理堆指针的智能指针类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,18 +36,18 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
   
 #### <a name="parameters"></a>参数  
  `T`  
- 要存储在堆上的对象类型。  
+ 要存储在堆的对象类型。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|构造函数。|  
   
 ## <a name="remarks"></a>备注  
- `CComHeapPtr`派生自`CHeapPtr`，但使用[CComAllocator](../../atl/reference/ccomallocator-class.md)以使用 COM 例程分配内存。 请参阅[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)可用的方法。  
+ `CComHeapPtr`派生自`CHeapPtr`，但使用[CComAllocator](../../atl/reference/ccomallocator-class.md)分配使用 COM 例程的内存。 请参阅[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)可用的方法。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -75,7 +57,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
  `CComHeapPtr`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
   
 ##  <a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr  
  构造函数。  
@@ -97,4 +79,3 @@ explicit CComHeapPtr(T* pData) throw();
  [CHeapPtrBase 类](../../atl/reference/cheapptrbase-class.md)   
  [CComAllocator 类](../../atl/reference/ccomallocator-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

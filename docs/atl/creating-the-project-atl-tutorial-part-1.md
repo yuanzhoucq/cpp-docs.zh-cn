@@ -1,76 +1,77 @@
 ---
-title: "创建项目（ATL 教程，第 1 部分） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "创建项目 (ATL 教程，第 1 部分) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d10aa6a3f7220103ae6a3b9e57b9b3c42cd8739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 创建项目（ATL 教程，第 1 部分）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本教程通过创建 ActiveX 对象公开多边形的一个非 ATL 项目布局的过程。  对象包括允许用户的选项卡更改组成多边形和代码的边数刷新显示。  
+# <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
+本教程将指导你逐步完成创建用于显示多边形 ActiveX 对象的非特性化 ATL 项目。 对象包括允许用户的选项，若要更改组成的多边形和代码以刷新显示的边数。  
   
 > [!NOTE]
->  ATL 和 MFC 在 Visual Studio 学习版通常不受支持。  
+>  ATL 和 MFC 不通常支持 Visual Studio Express 版本。  
   
 > [!NOTE]
->  本教程中创建源代码和 POLYGON 示例相同。  如果要避免手动输入源代码，可以下载它从 [POLYGON 示例摘要](../top/visual-cpp-samples.md)。  然后可以引用多边形源代码，当您通过本教程中工作，或使用它检查您的项目的错误。  
+>  本教程将创建与多边形的示例相同的源代码。 如果你想要避免手动输入的源代码，您可以下载它从[多边形示例抽象](../visual-cpp-samples.md)。 在你完成本教程中，或将其用于自己的项目中的错误检查，然后可以引用多边形源代码。  
   
-### 使用 ATL 项目向导，若要创建初始 ATL 项目  
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>若要创建使用 ATL 项目向导的初始 ATL 项目  
   
-1.  在 Visual Studio 开发环境中，在 **文件** 菜单中单击 **新建**，然后单击 **项目**。  
+1.  在 Visual Studio 开发环境中，单击**新建**上**文件**菜单，，然后单击**项目**。  
   
-2.  单击 **Visual C\+\+ 项目** 文件夹并选择 **ATL 项目**。  
+2.  单击**Visual c + + 项目**文件夹，然后选择**ATL 项目**。  
   
-3.  键入 `Polygon` 作为项目名称。  
+3.  类型`Polygon`作为项目名称。  
   
-     源代码的位置通常将默认为" my documents\\Visual Studio 项目，因此，一个新文件夹将自动创建。  
+     源代码的位置通常将默认为 My Documents\Visual Studio 项目中，并将自动创建一个新文件夹。  
   
-4.  单击 **确定** 和 ATL 项目向导"打开。  
+4.  单击**确定**和 ATL 项目向导将打开。  
   
-5.  单击查看选项的 **应用程序设置** 可用。  
+5.  单击**应用程序设置**若要查看可用的选项。  
   
-6.  当您创建控件，因此，控件必须是进程内服务器，保留 **应用程序类型** 作为 DLL。  
+6.  在创建控件和控件必须为进程内服务器时，将保留**应用程序类型**为 DLL。  
   
-7.  保留其他选项在默认值，然后单击 **完成**。  
+7.  在其默认值，保留其他选项，然后单击**完成**。  
   
- ATL 项目向导将生成多个文件创建项目。  通过展开多边形对象查看在解决方案资源管理器中这些文件。  文件下面列出。  
+ ATL 项目向导将通过生成多个文件创建项目。 通过展开多边形对象，可以在解决方案资源管理器中查看这些文件。 下面列出了这些文件。  
   
 |文件|描述|  
-|--------|--------|  
-|Polygon.cpp|包含 `DllMain`、`DllCanUnloadNow`、`DllGetClassObject`、`DllRegisterServer`和 `DllUnregisterServer`的实现。  它包含对象映射，是 ATL 对象列表在项目中。  这最初为空。|  
-|Polygon.def|此模块定义文件提供链接器提供有关您的 DLL 需要的导出的信息。|  
-|Polygon.idl|接口定义语言 \(idl\) 文件，描述接口特定于您的对象。|  
-|Polygon.rgs|此注册表脚本包含注册的程序的 DLL 信息。|  
-|Polygon.rc|资源文件，最初包含项目名称的版本信息和一个字符串。|  
-|Resource.h|资源文件的头文件。|  
-|Polygonps.def|此模块定义文件提供链接器提供有关该代理需要的导出的信息，并的存根 \(stub\) 代码跨单元的支持调用。|  
-|stdafx.cpp|将 `#include` ATL 实现文件中的文件。|  
-|stdafx.h|将 `#include` ATL 标头文件的文件。|  
+|----------|-----------------|  
+|Polygon.cpp|包含的实现`DllMain`， `DllCanUnloadNow`， `DllGetClassObject`， `DllRegisterServer`，和`DllUnregisterServer`。 此外包含在对象映射，这是你的项目中的 ATL 对象的列表。 这是初始值为空值。|  
+|Polygon.def|此模块定义文件提供有关所需的 DLL 导出的信息链接器。|  
+|Polygon.idl|接口定义语言文件，其中介绍了特定于你的对象的接口。|  
+|Polygon.rgs|此注册表脚本包含注册程序的 DLL 的信息。|  
+|Polygon.rc|资源文件，其中最初包含版本信息和包含的项目名称的字符串。|  
+|Resource.h|资源文件的标头文件。|  
+|Polygonps.def|此模块定义文件提供有关支持跨单元调用导出所需的代理和存根代码的信息链接器。|  
+|stdafx.cpp|将文件`#include`ATL 实现文件。|  
+|stdafx.h|将文件`#include`ATL 标头文件。|  
   
-1.  在解决方案资源管理器中，右击 `Polygon` 项目。  
+1.  在解决方案资源管理器，右键单击`Polygon`项目。  
   
-2.  在快捷菜单上，单击 **属性**。  
+2.  在快捷菜单上，单击**属性**。  
   
-3.  单击 **链接器**。  更改 **每用户重定向** 选项为。  
+3.  单击**链接器**。 更改**每 UserRedirection**选项设为**是**。  
   
-4.  单击**“确定”**。  
+4.  单击“确定”。  
   
- 在下一步，您将添加一个控件添加到项目中。  
+ 在下一步的步骤中，你将在你的项目中添加控件。  
   
- [在到步骤 2](../atl/adding-a-control-atl-tutorial-part-2.md)  
+ [步骤 2 到](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
+

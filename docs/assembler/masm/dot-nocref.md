@@ -1,41 +1,38 @@
 ---
-title: ".NOCREF | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".NOCREF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NOCREF directive"
+title: ".NOCREF |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .NOCREF
+dev_langs: C++
+helpviewer_keywords: .NOCREF directive
 ms.assetid: 696a6a71-7e88-4b60-8550-7857d772ed20
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 98194aef9fd6da0420a0eb2d9242f83bd659c04f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# .NOCREF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-禁止显示列表在符号表和浏览器文件的符号。  
+# <a name="nocref"></a>.NOCREF
+禁止显示符号表和浏览器文件中的符号的列表。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 .NOCREF [[name[[, name]]...]]  
 ```  
   
-## 备注  
- 如果名称指定，则只能被禁止。  和 [.XCREF](../../assembler/masm/dot-xcref.md)相同。  
+## <a name="remarks"></a>备注  
+ 如果已指定了名称，则禁止仅给定名称。 与相同[。XCREF](../../assembler/masm/dot-xcref.md)。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

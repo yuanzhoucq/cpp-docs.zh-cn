@@ -1,54 +1,53 @@
 ---
-title: "com::ptr 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "com::ptr"
-  - "msclr::com::ptr"
-  - "msclr.com.ptr"
-  - "com.ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr 类"
+title: "com:: ptr 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- com::ptr
+- msclr::com::ptr
+- msclr.com.ptr
+- com.ptr
+dev_langs: C++
+helpviewer_keywords: ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc7dbfdd5ca20ab330a0c4dd855593b6c91fb953
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# com::ptr 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可用作类的 CLR 成员的 COM 对象的包装。其析构函数调用时，也会自动包装 COM 对象生存期管理，在释放所有对象自己的引用。  类似于 [CComPtr Class](../atl/reference/ccomptr-class.md)。  
+# <a name="comptr-class"></a>com::ptr 类
+可用作 CLR 类的成员的 COM 对象的包装器。  该包装器还可自动执行 COM 对象的生存期管理，并在调用对象的析构函数时释放对象上所有拥有的引用。 类似于[CComPtr 类](../atl/reference/ccomptr-class.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _interface_type>  
 ref class ptr;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_interface_type`  
- COM 接口  
+ COM 接口。  
   
-## 备注  
- `com::ptr` 还用于本地变量，各功能简化 COM 和自动化任务生存期管理。  
+## <a name="remarks"></a>备注  
+ `com::ptr` 还可用作局部函数变量，用来简化各种 COM 任务和自动执行生成期管理。  
   
- `com::ptr` 不能直接使用作为函数参数；使用 [% \(跟踪引用\)](../windows/tracking-reference-operator-cpp-component-extensions.md) 或 [对象句柄运算符 \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)。  
+ A`com::ptr`不能直接作为函数参数; 使用[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)或[对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)相反。  
   
- `com::ptr` 无法从函数直接返回；使用的句柄。  
+ `com::ptr` 无法直接从函数返回；请改用句柄。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。调用类结果的公共方法调用中对包含的 `IXMLDOMDocument` 对象。示例创建了一个 XML 文档的实例，并使用一些简单的 XML，然后执行节点数简化的结构。分析的文档树的 XML 输出到控制台。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  调用类的公共方法将导致调用 `IXMLDOMDocument` 对象。  本示例创建一个 XML 文档实例，并使用一些简单 XML 填充它，然后在分析过的文档树中执行简化的节点浏览以将 XML 输出到控制台。  
   
 ```  
 // comptr.cpp  
@@ -158,12 +157,15 @@ int main() {
 }  
 ```  
   
-  **\<Word wordpersnickety\>\<\/\>**   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **Namespace** msclr::com  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\com\ptr.h >  
   
-## 请参阅  
- [C\+\+ 支持库](../dotnet/cpp-support-library.md)   
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>另请参阅  
+ [C + + 支持库](../dotnet/cpp-support-library.md)   
  [ptr 成员](../dotnet/ptr-members.md)

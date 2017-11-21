@@ -1,56 +1,56 @@
 ---
-title: "Aligning Groups of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], aligning"
+title: "对齐控件组 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1aa48fe2288418468e2ba89b2e4cdb18563254c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Aligning Groups of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-以下过程显示如何对齐控件组。  
+# <a name="aligning-groups-of-controls"></a>对齐控件组
+以下过程演示如何对齐控件组。  
   
-### 对齐控件组  
+### <a name="to-align-groups-of-controls"></a>若要对齐控件组  
   
-1.  [选定控件](../mfc/selecting-multiple-controls.md)，而这些控件需要对齐。  在执行对齐或大小调整命令前，务必首先选定要设为主导控件的控件或将其设置为主导控件。  
+1.  [选择的控件](../windows/selecting-multiple-controls.md)你想要对齐。 请务必选择你想要首先主导控件的控件或将其设置为执行对齐或大小调整命令前的主导控件。  
   
-     控件组的最终位置取决于主导控件的位置。  有关选定主导控件的更多信息，请参见[指定主导控件](../mfc/specifying-the-dominant-control.md)。  
+     控件组的最后一个位置取决于主导控件的位置。 有关选择主导控件的详细信息，请参阅[指定主导控件](../windows/specifying-the-dominant-control.md)。  
   
-2.  从“格式”菜单中选择“对齐”，然后选择以下对齐方式之一：  
+2.  从**格式**菜单上，选择**Align**，然后选择以下的对齐方式之一：  
   
-    -   “左对齐”：将选定控件沿它们的左边对齐。  
+    -   **左对齐**： 将所选的控件沿其左对齐。  
   
-    -   “居中对齐”：将选定控件沿它们的中心点水平对齐。  
+    -   **中心**： 将所选的控件水平沿它们的中心点。  
   
-    -   “右对齐”：将选定控件沿它们的右边对齐。  
+    -   **权限**： 将所选的控件沿它们的右边。  
   
-    -   “顶端对齐”：将选定控件沿它们的顶边对齐。  
+    -   **顶部**： 将所选的控件沿上边缘对齐。  
   
-    -   “中间对齐”：将选定控件沿它们的中心点垂直对齐。  
+    -   **中间对齐**： 将所选的控件垂直沿其中间点。  
   
-    -   “底部对齐”：将选定控件沿它们的底边对齐。  
+    -   **底部**： 将所选的控件沿其下边缘对齐。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  要求  
   
  Win32  
   
-## 请参阅  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>另请参阅  
+ [对话框上的控件排列](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
+

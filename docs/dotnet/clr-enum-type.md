@@ -1,32 +1,32 @@
 ---
-title: "CLR 枚举类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum class 关键字 [C++]"
-  - "enum struct 关键字 [C++]"
-  - "范围, CLR 枚举的"
+title: "CLR 枚举类型 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scope, of CLR enum
+- enum struct keyword [C++]
+- enum class keyword [C++]
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 154904eb201f39852b57f253b97fba864084381a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CLR 枚举类型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，枚举的声明和行为发生了更改。  
+# <a name="clr-enum-type"></a>CLR 枚举类型
+声明和行为的枚举已从更改托管扩展的 c + + 为 Visual c + +。  
   
- 托管扩展的枚举声明以 `__value` 关键字开头。  其目的是将本机枚举与从 `System::ValueType` 派生的 CLR 枚举区分开来，同时建议一个类似功能。  例如：  
+ 托管扩展枚举声明前都附有`__value`关键字。 本指南旨在从该类派生自的 CLR 枚举区分本机枚举`System::ValueType`，同时建议类似的功能。 例如：  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -36,7 +36,7 @@ public __value enum e2 : unsigned short  {
 };  
 ```  
   
- 新语法解决区分本机枚举和 CLR 枚举问题的方法是：强调后者的类性质而非其值类型根。  同样，丢弃了 `__value` 关键字，而由空格分隔的关键字对 `enum class` 替换。  这对引用、值和接口类的声明提供了对称的成对关键字：  
+ 新语法中解决的问题区分本机和 CLR 枚举了通过强调后者而不是其值类型根的类特性。 在这种情况下，`__value`关键字将被丢弃，替换为空格分隔的关键字对`enum class`。 这提供了配对的关键字对称的引用、 值和接口类的声明：  
   
 ```  
 enum class ec;  
@@ -45,7 +45,7 @@ ref class rc;
 interface class ic;  
 ```  
   
- 枚举对 `e1` 和 `e2` 的转换在新语法中如下所示：  
+ 枚举对翻译`e1`和`e2`的新语法中将如下所示：  
   
 ```  
 enum class e1 { fail, pass };  
@@ -55,20 +55,20 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- 除此语法的稍微更改外，CLR 枚举的行为在许多方面发生了更改：  
+ 除了此小语法更改后，CLR 枚举类型的行为已更改多种方式：  
   
--   不再支持 CLR 枚举的前向声明。  没有映射。  而简单地将其标记为编译时错误。  
+-   不再支持的 CLR 枚举的前向声明。 没有映射。 它只被标记编译时错误。  
   
 ```  
 __value enum status; // Managed Extensions: ok  
 enum class status;   // new syntax: error  
 ```  
   
--   内置算术类型和 `Object` 类层次结构之间的重载决策在这两种语言版本中相反！  它的副作用是 CLR 枚举不再隐式转换为算术类型。  
+-   内置算术类型之间的重载解决方案和`Object`类层次结构中的两个语言版本相反 ！ 作为其副作用是，CLR 枚举将不再隐式转换为算术类型。  
   
--   在新的语法中，CLR 枚举保持其自身范围，而在托管扩展中则不是这样。  以前，枚举数在枚举的包含范围内可见。  现在，枚举数封装在枚举的范围内。  
+-   在新语法中，CLR 枚举维护自己的作用域，不是这种情况在托管扩展。 以前，枚举器可在枚举包含作用域内可见。 现在，枚举的作用域内封装了枚举数。  
   
-## CLR 枚举是一种对象  
+## <a name="clr-enums-are-a-kind-of-object"></a>CLR 枚举是一个类型的对象  
  考虑以下代码片断：  
   
 ```  
@@ -85,32 +85,32 @@ int main()
 }  
 ```  
   
- 对本机 C\+\+ 程序员来说，调用哪个重载的 `f()` 的实例的问题的通常回答是：调用 `f(int)` 的实例。  枚举是符号整数常数，并且它参与此情况下优先级高的标准整数提升。实际上，在托管扩展中，它是调用解析到的实例。  这导致了许多疑问 — 不是当我们在本机 C\+\+ 框架中使用枚举时，而是在我们需要它们与现有 BCL（基类库）交互时，其中 `Enum` 是从 `Object` 间接派生的类。  在 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 语言设计中，调用的 `f()` 的实例是 `f(Object^)` 的实例。  
+ 为本机 c + + 程序员，自然问题答案的重载的哪个实例`f()`调用是`f(int)`。 枚举是符号的整型常量，并且它参与标准的整型提升，这种情况下优先。  但实际上在托管扩展中此调用将解析的实例。 不是当我们使用本机 c + + 在框架中的但在我们需要它们与现有的 BCL （基类库） 框架进行交互时，这会导致意外的发生的许多其中`Enum`派生的类间接从`Object`。 在 Visual c + + 语言设计中，实例`f()`调用是`f(Object^)`。  
   
- [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 选择强制执行此操作的方式是不支持 CLR 枚举类型和算术类型之间的隐式转换。  这意味着 CLR 枚举类型的对象向算术类型的任何分配都需要显式强制转换。  例如，假设  
+ Visual c + + 已选来强制执行此方法是不支持 CLR 枚举类型和算术类型之间的隐式转换。 这意味着任何分配到算术类型的 CLR 枚举类型的对象，将需要显式强制转换。 因此，例如，给定  
   
 ```  
 void f( int );  
 ```  
   
- 作为一个非重载方法，在托管扩展中，调用  
+ 作为非重载方法，在托管扩展中，调用  
   
 ```  
 f( rslt ); // ok: Managed Extensions; error: new syntax  
 ```  
   
- 是可以的，并且 `rslt` 内包含的值隐式转换为一个整数值。  在 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 中，此调用无法编译。  若要正确地转换它，必须插入一个转换运算符：  
+ 确定，且内包含的值`rslt`隐式转换为一个整数值。 在 Visual c + + 中，此调用将无法编译。 若要正确地转换它，我们必须插入转换运算符：  
   
 ```  
 f( safe_cast<int>( rslt )); // ok: new syntax  
 ```  
   
-## CLR 枚举类型的范围  
- C 和 C\+\+ 语言的差别之一是 C\+\+ 中增加了结构功能内的范围。  在 C 中，结构仅是一个不支持接口或关联范围的数据聚合。  这在当时是一个相当基本的更改，对原先使用 C 语言的新 C\+\+ 用户来说是一个有争议的问题。  本机枚举和 CLR 枚举之间的关系是类似的。  
+## <a name="the-scope-of-the-clr-enum-type"></a>CLR 枚举类型的作用域  
+ C 和 c + + 语言之间的更改之一是结构设施内的作用域的 c + + 中添加。 在 C 中，结构是只是不支持的接口或关联的作用域的聚合数据。 这是相当多的彻底更改时，对于来自 C 语言的许多新 c + + 用户有争议的问题。 本机和 CLR 枚举之间的关系是类似的。  
   
- 在托管扩展中，为了模拟不存在本机枚举内的范围，曾尝试为 CLR 枚举的枚举数定义弱插入名称。  这并没有证明是成功的。  问题是它导致枚举数溢出到全局命名空间中，从而难于管理名称冲突。  在新语法中，我们在支持 CLR 枚举内的范围方面与其他 CLR 语言保持一致。  
+ 在托管扩展中，尝试定义 CLR 枚举的枚举器的弱插入的名称，以便模拟不存在的范围内本机枚举。 这并没有证明是成功。 问题是，这会导致枚举器溢出到全局命名空间，从而导致难以管理名称冲突。 在新语法中，我们具有匹配到支持在 CLR 枚举的作用域中的其他 CLR 语言。  
   
- 这意味着新语法无法识别 CLR 枚举的枚举数的任何非限定使用。  让我们看一个具体的示例。  
+ 这意味着 CLR 枚举的枚举器的任何非限定的使用将不识别新的语法。 我们来看一个实际示例。  
   
 ```  
 // Managed Extensions supporting weak injection  
@@ -132,7 +132,7 @@ public:
    XDCMake() {  
       optionList = new ListDictionary;  
   
-      // here are the problems …  
+      // here are the problems...  
       optionList->Add(S"?", __box(OPTION_USAGE)); // (1)  
       optionList->Add(S"help", __box(OPTION_USAGE)); // (2)  
   
@@ -143,7 +143,7 @@ public:
 };  
 ```  
   
- 为了编译源代码，需要将枚举数名称的三个非限定使用（`(1)`、`(2)` 和 `(3)`）分别限定在新语法的转换中。  以下是原始源代码的一个正确转换：  
+ 每三个非限定使用的枚举器名称 (`(1)`， `(2)`，和`(3)`) 将需要限定在编译的源代码的顺序中的新语法的转换。 下面是原始源代码中的一个正确转换：  
   
 ```  
 ref class XDCMake {  
@@ -171,12 +171,12 @@ public:
 };  
 ```  
   
- 这会更改本机枚举和 CLR 枚举之间的设计策略。  由于在 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 中 CLR 枚举保持关联范围，对类中枚举的声明进行封装既没必要又效率低下。  这个用法随着贝尔实验室的 cfront 2.0 不断发展，也用来解决全局命名污染的问题。  
+ 这会更改本机和 CLR 枚举之间的设计策略。 与维护关联的作用域中 Visual c + + CLR 枚举，它是没有必要，也不有效地封装在类中枚举的声明。 此习惯用法改进 cfront 2.0 钟形 Laboratories 时间附近还以解决全局名称污染问题。  
   
- 在由贝尔实验室的 Jerry Schwarz 发布的新 iostream 库的原始 beta 版中，Jerry 没有封装为该库定义的所有关联枚举以及公共枚举数（如 `read`、`write`、`append` 等），使用户几乎不可能编译自已的现有代码。  一种解决方案是重整名称，如 `io_read`、`io_write`等。第二种解决方案是通过将范围添加到枚举来修改语言，但这在当时是不切实际的。  （折中的解决方案是：封装类或类层次结构中的枚举，其中标记名和枚举的枚举数将填充封闭类范围。）也就是说，至少最初将枚举放置在类中的动机是不理性的，但是却对全局命名空间污染问题作了实际的响应。  
+ 在原始 beta 版本中的新 iostream 库通过在钟形 Laboratories 杰儿 Schwarz，杰儿未封装有关库，例如常见的枚举器定义的所有关联的枚举`read`， `write`， `append`，依次类推进行几乎不可能进行编译现有代码的用户。 一种解决方案将一直都是重整名称，如`io_read`， `io_write`，等等。第二个解决方案将一直都是通过将范围添加到枚举，修改的语言，但这不是可行下时。 折中的解决方案是封装在类中，枚举或类层次结构，其中的标记名称和枚举的枚举器填充封闭类范围。）也就是说，动机是针对将在类中，枚举放置至少最初不是理论，但对全局命名空间污染问题的实际响应。  
   
- 有了 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 枚举，封装类中的枚举不再有任何明显的好处。  事实上，如果查看 `System` 命名空间，您将看到枚举、类和接口都存在于相同的声明空间中。  
+ 与 Visual c + + 枚举中，已不再封装类内部枚举任何明显的好处。 实际上，如果你看一下`System`命名空间，你将看到该枚举、 类和接口都存在同一声明空间。  
   
-## 请参阅  
- [值类型及其行为 \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [enum class](../windows/enum-class-cpp-component-extensions.md)
+## <a name="see-also"></a>另请参阅  
+ [值类型和它们的行为 (C + + /cli CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [枚举类](../windows/enum-class-cpp-component-extensions.md)

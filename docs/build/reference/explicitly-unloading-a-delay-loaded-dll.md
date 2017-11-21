@@ -1,35 +1,35 @@
 ---
-title: "显式卸载延迟加载的 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAY:UNLOAD 链接器选项"
-  - "__FUnloadDelayLoadedDLL2"
-  - "DELAY:UNLOAD 链接器选项"
-  - "DLL 的延迟加载, 卸载"
+title: "显式卸载延迟加载的 DLL |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /DELAY:UNLOAD linker option
+- DELAY:UNLOAD linker option
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 显式卸载延迟加载的 DLL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[\/delay](../../build/reference/delay-delay-load-import-settings.md):unload 链接器选项使您能够卸载被延迟加载的 DLL。  默认情况下，当代码卸载 DLL 时（使用 \/delay:unload 和 **\_\_FUnloadDelayLoadedDLL2**），延迟加载的导入将保留在导入地址表 \(IAT\) 中。  但是，如果您在链接器命令行上使用 \/delay:unload，Helper 函数将支持显式卸载 DLL，将 IAT 重置为其原始格式；当前无效的指针将被覆盖。  IAT 是 [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) 中的一个字段，它包含原始 IAT 副本（如果存在）的地址。  
+# <a name="explicitly-unloading-a-delay-loaded-dll"></a>显式卸载延迟加载的 DLL
+[/延迟](../../build/reference/delay-delay-load-import-settings.md): unload 链接器选项允许您卸载已被延迟加载的 DLL。 默认情况下，当你的代码卸载 DLL (使用 /delay: unload 和**__FUnloadDelayLoadedDLL2**)，在导入地址表 (IAT) 中保留的延迟加载导入。 但是，如果你使用 /delay: unload 链接器命令行上，则 helper 函数将支持显式卸载 DLL，正在 IAT 重置为其原始格式;现在无效指针将被覆盖。 IAT 是中的字段[ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md)包含原始 IAT 的副本的地址 （如果存在）。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD  
@@ -56,14 +56,14 @@ int main()
 }  
 ```  
   
-### 注释  
- 关于卸载延迟加载的 DLL 的重要说明：  
+### <a name="comments"></a>注释  
+ 卸载延迟加载的 DLL 的重要说明：  
   
--   在文件 \\VC7\\INCLUDE\\DELAYHLP.CPP 中可以找到 **\_\_FUnloadDelayLoadedDLL2** 函数的实现。  
+-   你可以找到的实现**__FUnloadDelayLoadedDLL2**文件中的函数 \VC7\INCLUDE\DELAYHLP。CPP。  
   
--   **\_\_FUnloadDelayLoadedDLL2** 函数的名称参数必须与导入库中所包含的名称参数完全匹配，包括大小写匹配，该字符串也显示在映像中的导入表中。  可以用 [DUMPBIN \/DEPENDENTS](../../build/reference/dependents.md) 查看导入库中的内容。  如果匹配时不需要区分大小写，可更新 **\_\_FUnloadDelayLoadedDLL2** 以使用其中一个 CRT 字符串函数或 Windows API 调用。  
+-   Name 参数**__FUnloadDelayLoadedDLL2**函数必须完全匹配 （包括用例） 导入库包含的内容 （即字符串也在映像中导入表中）。 你可以查看的导入库的内容[DUMPBIN /DEPENDENTS](../../build/reference/dependents.md)。 如果需要不区分大小写的字符串匹配，则可以更新**__FUnloadDelayLoadedDLL2**若要使用 CRT 字符串函数或 Windows API 调用之一。  
   
- 有关更多信息，请参见[卸载延迟加载的 DLL](../../build/reference/unloading-a-delay-loaded-dll.md)。  
+ 请参阅[卸载延迟加载的 DLL](../../build/reference/unloading-a-delay-loaded-dll.md)有关详细信息。  
   
-## 请参阅  
- [链接器的延迟加载 DLL 支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+## <a name="see-also"></a>另请参阅  
+ [延迟加载 DLL 的链接器支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)

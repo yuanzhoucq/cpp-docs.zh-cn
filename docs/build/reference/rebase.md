@@ -1,48 +1,47 @@
 ---
-title: "/REBASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/rebase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/REBASE editbin 选项 [C++]"
-  - "基址 [C++]"
-  - "DLL [C++], 链接"
-  - "可执行文件 [C++], 基址"
-  - "REBASE editbin 选项"
-  - "-REBASE editbin 选项"
+title: "-REBASE |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /rebase
+dev_langs: C++
+helpviewer_keywords:
+- base addresses [C++]
+- -REBASE editbin option
+- REBASE editbin option
+- DLLs [C++], linking
+- executable files [C++], base address
+- /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /REBASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rebase"></a>/REBASE
 ```  
 /REBASE[:modifiers]  
 ```  
   
-## 备注  
- 此选项设置指定文件的基址。  根据四舍五入到最接近的 64 KB 的各文件大小，EDITBIN 在连续地址空间内分配新基址。  有关基址的详细信息，请参见[基址](../../build/reference/base-base-address.md) \(\/BASE\) 链接器选项。  
+## <a name="remarks"></a>备注  
+ 此选项设置为指定的文件的基址。 EDITBIN 将分配新的基址，在连续的地址空间根据大小的最接近的 64 KB 向上舍入为每个文件中。 有关基址的详细信息，请参阅[基址](../../build/reference/base-base-address.md)（/ 基） 链接器选项。  
   
- 在 EDITBIN 命令行上的 *files* 参数中，以程序的可执行文件和 DLL 的基址设置顺序指定它们。  也可以指定一个或多个 *modifiers*，每个用逗号 \(**,**\) 分隔：  
+ 指定的程序的可执行文件和 Dll 中的*文件*它们是以数据为基础的顺序在 EDITBIN 命令行上的自变量。 你可以选择指定一个或多个*修饰符*，每个用逗号分隔 (**，**):  
   
 |修饰符|操作|  
-|---------|--------|  
-|BASE**\=***address*|为重新分配文件基址提供起始地址。  用十进制或 C 语言表示法指定 *address*。  如果没有指定 BASE，则默认的起始基址为 0x400000。  如果使用了 DOWN，则必须指定 BASE，*address* 设置基址范围的结束地址。|  
-|BASEFILE|创建名为 COFFBASE.TXT 的文件，此文件是采用 LINK 的 \/BASE 选项所需格式的文本文件。|  
-|向下键|通知 EDITBIN 从结束地址开始向下重新分配基址。  文件按指定的顺序重新分配，第一个文件位于地址范围的结束地址下面最可能的地址。  BASE 必须和 DOWN 一起使用以确保有足够的地址空间用于设置文件基址。  若要确定指定文件所需的地址空间，请在文件上运行带 \/REBASE 的 EDITBIN，并将 64 KB 添加到显示的总大小中。|  
+|--------------|------------|  
+|基本**=***地址*|提供起始地址重新分配到的文件的基址。 指定*地址*以十进制或 C 语言表示法。 如果未指定基的默认开始基址为 0x400000。 必须指定如果 DOWN 为使用的基，和*地址*设置基址的范围的末尾。|  
+|BASEFILE|创建一个名为 COFFBASE 文件。TXT、 其是按链接列出的预期格式的文本文件/基本选项。|  
+|向下|告知 EDITBIN 若要重新分配基址向下的从结束地址。 指定与位于以下地址范围的末尾的最高可能地址中的第一个文件的顺序重新分配文件。 必须使用向下使用基，以确保足够的地址空间使这些文件。 若要确定由指定的文件所需的地址空间，文件运行使用 /REBASE EDITBIN 和将 64 KB 添加到显示的总大小。|  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

@@ -1,53 +1,52 @@
 ---
-title: "LINK 命令文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令文件 [C++]"
-  - "命令文件 [C++], LINK"
-  - "LINK 工具 [C++]"
-  - "LINK 工具 [C++], 命令行语法"
-  - "语法, LINK 命令文件"
-  - "文本文件, 将参数传递到 LINK"
+title: "LINK 命令文件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- syntax, LINK command files
+- command files [C++]
+- LINK tool [C++]
+- text files, passing arguments to LINK
+- LINK tool [C++], command-line syntax
+- command files [C++], LINK
 ms.assetid: 7154511c-32b9-4e5b-a515-3922fa9de48e
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b6543cbb54dc982b1e55be8c0c554a429410b78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# LINK 命令文件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以用命令文件的形式将命令行参数传递给 LINK。  要将命令文件指定到链接器，可使用下列语法：  
+# <a name="link-command-files"></a>LINK 命令文件
+可以将命令行自变量传递到命令文件形式的链接。 若要指定到链接器命令文件，请使用以下语法：  
   
 ```  
 LINK @commandfile  
 ```  
   
- `commandfile` 是文本文件的名称。  在 @ 符和文件名之间不允许有空格或制表符。  不存在默认扩展名；必须指定完整的文件名，包括任何扩展名。  不能使用通配符。  可使用文件名指定绝对路径或相对路径。  LINK 不使用环境变量搜索文件。  
+ `commandfile`是文本文件的名称。 之间允许有空格或制表符 at 符号 (@) 和文件名。 不存在默认扩展;您必须指定完整的文件名，包括任何扩展。 不能使用通配符。 你可以使用文件名指定的绝对或相对路径。 链接不使用环境变量来搜索该文件。  
   
- 在命令文件中，可用空格或制表符（像在命令行上一样）和换行符分隔参数。  
+ 在命令文件中，自变量可由分隔空格或制表符 （在命令行中） 和由换行符。  
   
- 可在命令文件中指定所有或部分命令行。  可在 LINK 命令中使用多个命令文件。  LINK 接受命令文件输入，如同它是在命令行中的那个位置指定的一样。  命令文件不能嵌套。  LINK 回显命令文件的内容，除非指定了 [\/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md) 选项。  
+ 可以在命令文件中指定的命令行全部或部分。 你可以使用多个 LINK 命令中的命令文件。 LINK 接受命令文件输入，如同它在命令行上的位置中指定。 不能嵌套命令文件。 链接将回显命令文件的内容，除非[/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)指定选项。  
   
-## 示例  
- 下列生成 DLL 的命令传递不同命令文件中的对象文件和库的名称，并将第三个命令文件用于 \/EXPORTS 选项的指定：  
+## <a name="example"></a>示例  
+ 以下命令以生成 DLL 在单独的命令文件中传递的对象文件和库的名称，并将第三个命令文件用于 /EXPORTS 选项：  
   
 ```  
 link /dll @objlist.txt @liblist.txt @exports.txt  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

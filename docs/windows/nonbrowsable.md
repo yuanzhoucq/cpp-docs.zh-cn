@@ -1,32 +1,30 @@
 ---
-title: "nonbrowsable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.nonbrowsable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nonbrowsable attribute"
+title: "nonbrowsable |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.nonbrowsable
+dev_langs: C++
+helpviewer_keywords: nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e4b5cd632f3d84af72c59cc647128f93eb829670
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# nonbrowsable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示接口成员在属性浏览器不应显示。  
+# <a name="nonbrowsable"></a>nonbrowsable
+指示接口成员不应显示在属性浏览器中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,10 +32,10 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **nonbrowsable** C\+\+ 特性具有与 [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Nonbrowsable** c + + 属性具有相同的功能[nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL 特性。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_nonbrowsable.cpp  
@@ -53,20 +51,19 @@ __interface IMyI
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|接口方法|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   

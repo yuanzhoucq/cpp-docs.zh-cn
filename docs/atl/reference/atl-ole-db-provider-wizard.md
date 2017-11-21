@@ -4,50 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.provider.overview
+dev_langs: C++
 helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: a28a47d9af89470c63903ccc338c680361b1cada
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 170f10d06112969d9147c37b20572f0888140d0a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供程序向导
 此向导将创建构成的 OLE DB 提供程序的类。  
   
 ## <a name="remarks"></a>备注  
- 开头[!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)]，通过此向导生成的注册脚本将注册其 COM 组件**HKEY_CURRENT_USER**而不是**HKEY_LOCAL_MACHINE**。 若要修改此行为，请设置**为所有用户注册组件**ATL 向导的选项。  
+ 从 Visual Studio 2008 开始，通过此向导生成的注册脚本将注册其 COM 组件**HKEY_CURRENT_USER**而不是**HKEY_LOCAL_MACHINE**。 若要修改此行为，请设置**为所有用户注册组件**ATL 向导的选项。  
   
- 下表介绍 ATL OLE DB 提供程序向导的选项︰  
+ 下表介绍 ATL OLE DB 提供程序向导的选项：  
   
  **短名称**  
  键入要创建的提供程序的短名称。 自动填充向导中的其他编辑框，将基于你在此处键入。 如果你想，你可以编辑其他名称框。  
@@ -95,5 +77,4 @@ ms.lasthandoff: 04/04/2017
   
 ## <a name="see-also"></a>另请参阅  
  [ATL OLE DB 访问接口](../../atl/reference/adding-an-atl-ole-db-provider.md)
-
 

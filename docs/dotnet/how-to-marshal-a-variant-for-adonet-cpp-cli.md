@@ -1,38 +1,37 @@
 ---
-title: "如何：为 ADO.NET 封送 VARIANT (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], 封送处理 VARIANT 类型"
-  - "VARIANT"
-  - "VARIANT, 封送处理"
+title: "如何： 为 ADO.NET 封送 VARIANT (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- VARIANT, marshaling
+- ADO.NET [C++], marshaling VARIANT types
+- VARIANT
 ms.assetid: 67a180a7-5691-48ab-8d85-7f75a68dde91
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 166116f54882048f3cd763b2f61e6b4fd56e5357
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：为 ADO.NET 封送 VARIANT (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-说明如何将本机 `VARIANT` 添加到数据库，以及如何将 <xref:System.Object?displayProperty=fullName> 从数据库封送到本机 `VARIANT`。  
+# <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>如何：为 ADO.NET 封送 VARIANT (C++/CLI)
+演示如何将添加一个本机`VARIANT`到数据库，以及如何封送<xref:System.Object?displayProperty=fullName>从为本机数据库`VARIANT`。  
   
-## 示例  
- 在此示例中，创建了 DatabaseClass 类以和 ADO.NET <xref:System.Data.DataTable> 对象进行交互。  请注意，此类是本机 C\+\+ `class`（与 `ref class` 或 `value class` 相比较）。  这是必要的，因为我们要从本机代码使用此类，而在本机代码中无法使用托管类型。  此类将被编译为以 CLR 为目标，如类声明前面的 `#pragma managed` 指令所指示的一样。  有关此指令的更多信息，请参见 [managed、unmanaged](../preprocessor/managed-unmanaged.md)。  
+## <a name="example"></a>示例  
+ 在此示例中，类 DatabaseClass 创建与 ADO.NET 交互<xref:System.Data.DataTable>对象。 请注意，此类是本机 c + + `class` (相比`ref class`或`value class`)。 这是必需的因为我们想要使用此类从本机代码，并且不能在本机代码中使用托管的类型。 此类将编译为面向 CLR，是由`#pragma managed`类声明前面的指令。 此指令的详细信息，请参阅[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。  
   
- 请注意 DatabaseClass 类的私有成员：`gcroot<DataTable ^> table`。  由于本机类型无法包含托管类型，`gcroot` 关键字是必要的。  有关 `gcroot` 的更多信息，请参见 [如何：使用本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。  
+ 请注意 DatabaseClass 类的私有成员： `gcroot<DataTable ^> table`。 本机类型不能包含托管的类型，因为`gcroot`关键字是必需的。 有关详细信息`gcroot`，请参阅[如何： 在本机类型中声明处理](../dotnet/how-to-declare-handles-in-native-types.md)。  
   
- 此示例中的其余代码是本机 C\+\+ 代码，如 `main` 前面的 `#pragma unmanaged` 指令所指示的一样。  在此示例中，我们将要创建 DatabaseClass 的一个新实例并调用其方法，以创建一个表并在表中填充一些行。  请注意，正在将本机 `VARIANT` 类型作为数据库列 ObjectCol 进行传递。  在 DatabaseClass 内，已使用 <xref:System.Runtime.InteropServices?displayProperty=fullName> 命名空间中的封送功能将这些 `VARIANT` 类型封送到了托管对象。  具体地说，方法 <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> 用于将 `VARIANT` 封送到 <xref:System.Object>，而方法 <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> 用于将 <xref:System.Object> 封送到 `VARIANT`。  
+ 此示例中的代码的其余部分是本机 c + + 代码中，是由`#pragma unmanaged`指令前面`main`。 在此示例中，我们要创建 DatabaseClass 的新实例和调用其方法来创建一个表并填充表中的一些行。 请注意该本机`VARIANT`类型是否正在传送作为 ObjectCol 的数据库列的值。 内部 DatabaseClass，这些`VARIANT`类型进行封送到托管对象使用的封送处理功能在中找到<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空间。 具体而言，该方法<xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A>用于封送`VARIANT`到<xref:System.Object>，和方法<xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A>用于封送<xref:System.Object>到`VARIANT`。  
   
 ```  
 // adonet_marshal_variant.cpp  
@@ -150,22 +149,25 @@ int main()
 }  
 ```  
   
-  **ObjectCol: This is a BSTR in a VARIANT.**  
-**ObjectCol: 42**   
-## 编译代码  
+```Output  
+ObjectCol: This is a BSTR in a VARIANT.  
+ObjectCol: 42  
+```  
   
--   若要从命令行编译代码，请将该代码示例保存到名为 adonet\_marshal\_variant.cpp 的文件中，并输入以下语句：  
+## <a name="compiling-the-code"></a>编译代码  
+  
+-   若要从命令行中编译代码，将代码示例保存在名为 adonet_marshal_variant.cpp 的文件，然后输入以下语句：  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp  
     ```  
   
-## .NET Framework 安全性  
- 有关涉及 ADO.NET 安全问题的信息，请参见 [保证 ADO.NET 应用程序的安全](../Topic/Securing%20ADO.NET%20Applications.md)。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 有关涉及 ADO.NET 的安全问题的信息，请参阅[保护 ADO.NET 应用程序](/dotnet/framework/data/adonet/securing-ado-net-applications)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:System.Runtime.InteropServices>   
- [数据访问](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/zh-cn/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [使用 ADO.NET 访问数据 (C + + /cli CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [互操作性](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
  [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

@@ -1,47 +1,45 @@
 ---
-title: "Using IDispEventSimpleImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventSimpleImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDispEventSimpleImpl class, using"
+title: "使用 IDispEventSimpleImpl (ATL) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventSimpleImpl
+dev_langs: C++
+helpviewer_keywords: IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1118a119039d5bd3c58619fc957008b365c72d07
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Using IDispEventSimpleImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在使用 `IDispEventSimpleImpl` 处理事件时，您需要:  
+# <a name="using-idispeventsimpleimpl"></a>使用 IDispEventSimpleImpl
+使用时`IDispEventSimpleImpl`来处理事件，你将需要：  
   
--   从 [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)派生您的选件类。  
+-   派生您的类从[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)。  
   
--   添加 [事件接收器映射](../Topic/BEGIN_SINK_MAP.md) 到您的选件类。  
+-   将事件接收器映射添加到你的类。  
   
--   定义描述操作的 [\_ATL\_FUNC\_INFO](../atl/reference/atl-func-info-structure.md) 结构。  
+-   定义[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)结构描述的事件。  
   
--   使用 [SINK\_ENTRY\_INFO](../Topic/SINK_ENTRY_INFO.md) 宏，将项添加到事件接收器映射。  
+-   将条目添加到事件接收器映射使用[SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)宏。  
   
--   执行方法您对处理感兴趣。  
+-   实现你感兴趣处理的方法。  
   
--   建议和unadvise事件源。  
+-   通知和取消通知的事件源。  
   
-## 示例  
- 在下面的示例显示了您处理 **DocumentChange** 事件如何通过运行的 **Application** 对象激发的。  此事件定义为 **ApplicationEvents** 调度接口的方法。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何处理**DocumentChange**由 Word 的激发的事件**应用程序**对象。 此事件指一种方法上**ApplicationEvents**调度接口。  
   
- 此示例是从 [ATLEventHandling示例](../top/visual-cpp-samples.md)。  
+ 此示例摘自[ATLEventHandling 示例](../visual-cpp-samples.md)。  
   
  `[`  
   
@@ -71,20 +69,21 @@ caps.handback.revision: 7
   
  `};`  
   
- 该示例使用 `#import` 从生成的类型库所需的标头文件。  如果要使用Word的其他版本的此示例，必须指定正确的mso dll文件。  例如，Office 2000提供mso9.dll，而Office XP提供mso.dll。  此代码从stdafx.h简化:  
+ 该示例使用`#import`从 Word 的类型库生成必需的标头文件。 如果你想要使用此示例与其他版本的 Word，则必须指定正确的 mso dll 文件。 例如，Office 2000 提供 mso9.dll 并 OfficeXP 提供 mso.dll。 此代码是从 stdafx.h 简化了：  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/CPP/using-idispeventsimpleimpl_1.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- 从类型用于此示例实际的库的所有信息是Word **Application** 对象和 **ApplicationEvents** 接口的IID的CLSID。  此信息只使用在编译时。  
+ 此示例中实际使用的类型库中的唯一信息是单词的 CLSID**应用程序**对象和接口的 IID **ApplicationEvents**接口。 仅在编译时使用此信息。  
   
- 下面的代码显示Simple.h。  相关代码按注释说明:  
+ 下面的代码将显示在 Simple.h。 通过注释记录了相关的代码：  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/CPP/using-idispeventsimpleimpl_2.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]  
   
- 下面的代码是从Simple.cpp:  
+ 下面的代码是从 Simple.cpp:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/CPP/using-idispeventsimpleimpl_3.cpp)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [事件处理](../atl/event-handling-and-atl.md)   
- [ATLEventHandling示例](../top/visual-cpp-samples.md)
+ [ATLEventHandling 示例](../visual-cpp-samples.md)
+

@@ -1,51 +1,51 @@
 ---
-title: "/GF（消除重复的字符串） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.StringPooling"
-  - "VC.Project.VCCLWCECompilerTool.StringPooling"
-  - "/gf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GF 编译器选项 [C++]"
-  - "重复字符串"
-  - "“消除重复字符串”编译器选项 [C++]"
-  - "GF 编译器选项 [C++]"
-  - "-GF 编译器选项 [C++]"
-  - "池字符串编译器选项 [C++]"
-  - "字符串 [C++], 池"
+title: "-GF （消除重复的字符串） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.StringPooling
+- VC.Project.VCCLWCECompilerTool.StringPooling
+- /gf
+dev_langs: C++
+helpviewer_keywords:
+- duplicate strings
+- Eliminate Duplicate Strings compiler option [C++]
+- pooling strings compiler option [C++]
+- -GF compiler option [C++]
+- /GF compiler option [C++]
+- GF compiler option [C++]
+- strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0aea115254157ae01292511f25e05a10b6366dff
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /GF（消除重复的字符串）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-启用编译器在程序映像和执行时的内存中创建相同字符串的一个副本。  这是一种优化，被称为“字符串池”，可用于创建较小的程序。  
+# <a name="gf-eliminate-duplicate-strings"></a>/GF（消除重复的字符串）
+使编译器能够在执行过程中的程序映像和内存中创建的相同字符串的单个副本。 这是一种优化方式调用*字符串池*，它可以创建较小的程序。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /GF  
 ```  
   
-## 备注  
- 如果使用 **\/GF**，操作系统将不交换内存的字符串部分，并可从映像文件读回字符串。  
+## <a name="remarks"></a>备注  
+ 如果你使用**/GF**，操作系统不交换的内存的字符串部分和可以读回从图像文件的字符串。  
   
- **\/GF** 将字符串汇集为只读字符串。  如果尝试在 **\/GF** 下修改字符串，则会发生应用程序错误。  
+ **/GF**池以只读方式的字符串。 如果你尝试在下修改字符串**/GF**，发生应用程序错误。  
   
- 字符串池允许将作为指向多个缓冲区的多个指针用作指向单个缓冲区的多个指针。  在下列代码中，`s` 和 `t` 用相同字符串初始化。  字符串池使它们指向相同的内存：  
+ 字符串池允许用作多个缓冲区的多个指针是指向单个缓冲区的多个指针。 在下面的代码中，`s`和`t`使用相同的字符串初始化。 字符串池使它们指向相同的内存：  
   
 ```  
 char *s = "This is a character buffer";  
@@ -53,27 +53,27 @@ char *t = "This is a character buffer";
 ```  
   
 > [!NOTE]
->  用于“编辑并继续”的 [\/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) 选项会自动设置 **\/GF** 选项。  
+>  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)选项，用于编辑并继续，将自动设置**/GF**选项。  
   
 > [!NOTE]
->  **\/GF** 编译器选项为每个唯一的字符串创建一个可寻址的节。  默认情况下，一个对象文件最多可包含 65,536 个可寻址的节。  如果您的程序包含的字符串超过 65536 个，则请使用 [\/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) 编译器选项创建更多节。  
+>  **/GF**编译器选项会创建每个唯一字符串的可寻址节。 并且默认情况下，对象文件可以包含最多 65536 可寻址节。 如果你的程序包含多个 65,536 字符串，使用[/bigobj 进行编译](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)编译器选项来创建多个部分。  
   
- 在使用 [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) 或 **\/O2** 时，**\/GF** 有效。  
+ **/GF**有效时[/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或**/O2**使用。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“代码生成”**属性页。  
+3.  单击**代码生成**属性页。  
   
-4.  修改**“启用字符串池”**属性。  
+4.  修改**启用字符串池**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

@@ -1,48 +1,46 @@
 ---
-title: "编译器警告（等级 4）C4571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4571"
+title: "编译器警告 （等级 4） C4571 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4571
+dev_langs: C++
+helpviewer_keywords: C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 293a3ffa2ddb14292b33ed222f18ca6f8dc6faec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 4）C4571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-信息: 自 Visual C\+\+ 7.1 之后，catch\(...\) 语义发生了变化；不再捕获结构化的异常\(SEH\)  
+# <a name="compiler-warning-level-4-c4571"></a>编译器警告（等级 4）C4571
+自 Visual c + + 7.1; 以来更改的信息： 之后语义不再捕获结构化的异常 (SEH)  
   
- 使用 **\/EHs** 编译时，将针对每个 catch\(...\) 块生成 C4571。  
+ 使用编译时 C4571 为每个之后块生成**/EHs**。  
   
- 使用 **\/EHs** 编译时，catch\(...\) 块将不捕获结构化异常（例如，被零除、null 指针）；catch\(...\) 块仅捕获显式引发的 C\+\+ 异常。有关详细信息，请参阅[异常处理](../../cpp/exception-handling-in-visual-cpp.md)。  
+ 使用编译时**/EHs**，之后块将不会捕获结构化的异常 （除以零，null 指针，例如）; 之后块仅捕获显式引发，而 c + + 异常。  有关详细信息，请参阅[异常处理](../../cpp/exception-handling-in-visual-cpp.md)。  
   
- 默认情况下关闭此警告。打开此警告可确保在使用 **\/EHs** 编译时，catch \(...\) 块不会捕获结构化异常。有关更多信息，请参见[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。  打开此警告以确保与编译时**/EHs** catch （...） 块不想要捕获结构化的异常。  请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
   
- 可以通过以下方式之一来解决 C4571，  
+ 您可以通过以下方式之一解决 C4571  
   
--   如果仍希望 catch\(...\) 块捕获结构化异常，请使用 **\/EHa** 进行编译。  
+-   使用编译**/EHa**你仍然想要你之后块来捕获结构化的异常。  
   
--   如果不希望 catch\(...\) 块捕获结构化异常，但是仍希望使用 catch\(...\) 块，请不要启用 C4571。仍然可以使用结构化异常处理关键字（**\_\_try**、**\_\_except** 和 **\_\_finally**）来捕获结构化异常。但要记住，在使用 **\/EHs** 编译时，只有在引发 C\+\+ 异常而不是发生 SEH 异常时才调用析构函数。  
+-   如果您不希望你使用块来捕获结构化的异常，但你仍想要使用之后块，则不要启用 C4571。  你仍可以捕获使用结构化的异常处理关键字的结构化的异常 (**__try**， **__except**，和**__finally**)。  但请记住，编译时**/EHs** SEH 异常时发生不引发 c + + 异常时，将仅调用析构函数。  
   
--   用特定 C\+\+ 异常的 catch 块代替 catch\(...\) 块，并可以选择在 C\+\+ 异常处理处添加结构化异常处理（**\_\_try**、**\_\_except** 和 **\_\_finally**）。有关更多信息，请参见[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md)。  
+-   将替换为特定的 c + + 异常的 catch 块之后块和 （可选） 添加结构化的异常处理围绕 c + + 异常处理 (**__try**， **__except**，和**___identifier**)。  请参阅[结构化异常处理 （C/c + +）](../../cpp/structured-exception-handling-c-cpp.md)有关详细信息。  
   
- 有关更多信息，请参见[\/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)。  
+ 请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md)有关详细信息。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4571。  
   
 ```  

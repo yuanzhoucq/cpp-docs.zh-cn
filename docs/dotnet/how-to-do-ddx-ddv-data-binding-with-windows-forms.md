@@ -1,42 +1,42 @@
 ---
-title: "如何：使用 Windows 窗体执行 DDX/DDV 数据绑定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC [C++], 承载 Windows 窗体控件"
-  - "Windows 窗体 [C++], MFC 支持"
+title: "如何： 执行 DDX DDV 数据绑定 Windows 窗体 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], hosting a Windows Forms Control
+- Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d339be4d907e0cfaaea1e80830b3fe77b1cc09b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 Windows 窗体执行 DDX/DDV 数据绑定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[DDX\_ManagedControl](../Topic/DDX_ManagedControl.md) 会调用 [CWinFormsControl::CreateManagedControl](../Topic/CWinFormsControl::CreateManagedControl.md) 来创建与资源控件 ID 匹配的控件。  如果（在向导生成的代码中）将 `DDX_ManagedControl` 用于 `CWinFormsControl` 控件，则不应该对同一控件显式调用 `CreateManagedControl`。  
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows 窗体执行 DDX/DDV 数据绑定
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)调用[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)创建控件匹配资源控件 id。 如果你使用`DDX_ManagedControl`为`CWinFormsControl`控件 （在向导生成的代码），不应调用`CreateManagedControl`显式为同一个控件。  
   
- 在 [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md) 中调用 `DDX_ManagedControl` 可以根据资源 ID 来创建控件。  对于数据交换，不需要对 Windows 窗体控件使用 DDX\/DDV 函数。  可以在对话框（或视图）类的 `DoDataExchange` 方法中插入代码以访问托管控件的属性，如下例所示。  
+ 调用`DDX_ManagedControl`中[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)从资源 Id 创建控件。 对于数据交换，不需要使用 Windows 窗体控件与 DDX/DDV 函数。 相反，你可以将代码来访问托管控件中的属性放置`DoDataExchange`对话框 （或视图） 类，如以下示例所示的方法。  
   
- 下面的示例演示如何将本机 C\+\+ 字符串绑定到 .NET 用户控件。  
+ 下面的示例演示如何将本机 c + + 字符串绑定到.NET 用户控件。  
   
-## 示例  
- 下面的示例为 MFC 字符串 `m_str` 与 .NET 用户控件的用户定义的 `NameText` 属性进行 DDX\/DDV 数据绑定。  
+## <a name="example"></a>示例  
+ 以下是 MFC 字符串的 DDX/DDV 数据绑定的示例`m_str`与用户定义`NameText`.NET 用户控件的属性。  
   
- 当 [CDialog::OnInitDialog](../Topic/CDialog::OnInitDialog.md) 第一次调用 `CMyDlg::DoDataExchange` 时创建该控件，因此，引用 `m_UserControl` 的任何代码都必须在 `DDX_ManagedControl` 调用之后。  
+ 当创建该控件[CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)调用`CMyDlg::DoDataExchange`第一次，因此任何代码引用`m_UserControl`必须后`DDX_ManagedControl`调用。  
   
- 可以在从[如何：创建用户控件并将它承载在对话框中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)中创建的 MFC01 应用程序中实现此代码。  
+ 你可以在中创建的 MFC01 应用程序中实现此代码[如何： 在对话框中创建用户控件并承载](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)。  
   
- 将以下代码放在 CMFC01Dlg 的声明中：  
+ 将下面的代码放在 CMFC01Dlg 的声明：  
   
 ```  
 class CMFC01Dlg : public CDialog  
@@ -46,8 +46,8 @@ class CMFC01Dlg : public CDialog
 };  
 ```  
   
-## 示例  
- 将以下代码放在 CMFC01Dlg 的实现中：  
+## <a name="example"></a>示例  
+ 将下面的代码放在 CMFC01Dlg 的实现：  
   
 ```  
 void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)  
@@ -64,10 +64,10 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 }  
 ```  
   
-## 示例  
- 现在，我们将为“确定”按钮的单击添加处理程序方法。  单击**“资源视图”**选项卡。  在“资源视图”中，双击 `IDD_MFC01_DIALOG`。  对话框资源将显示在“资源编辑器”中。  然后双击“确定”按钮。  
+## <a name="example"></a>示例  
+ 现在我们将添加确定按钮的单击处理程序方法。 单击**资源视图**选项卡。在资源视图中，双击`IDD_MFC01_DIALOG`。 对话框资源将显示在资源编辑器中。 然后双击确定按钮...  
   
- 按如下方式定义处理程序。  
+ 按以下方式定义处理程序。  
   
 ```  
 void CMFC01Dlg::OnBnClickedOk()  
@@ -77,16 +77,16 @@ void CMFC01Dlg::OnBnClickedOk()
 }  
 ```  
   
-## 示例  
- 并将下行添加到 BOOL CMFC01Dlg::OnInitDialog\(\) 的实现中。  
+## <a name="example"></a>示例  
+ 并将以下行添加到 BOOL CMFC01Dlg::OnInitDialog() 的实现。  
   
 ```  
 m_MyControl.GetControl()->textBox1->Text = "hello";  
 ```  
   
- 现在可以生成并运行应用程序。  请注意，当应用程序关闭时，文本框中的任何文本将显示在弹出消息框中。  
+ 你现在可以生成并运行应用程序。 请注意，在文本框中的任何文本将显示在弹出消息框中中，应用程序关闭时。  
   
-## 请参阅  
- [CWinFormsControl Class](../mfc/reference/cwinformscontrol-class.md)   
- [DDX\_ManagedControl](../Topic/DDX_ManagedControl.md)   
- [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md)
+## <a name="see-also"></a>另请参阅  
+ [CWinFormsControl 类](../mfc/reference/cwinformscontrol-class.md)   
+ [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)   
+ [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-f1_keywords:
-- vc.atl.structures
-dev_langs:
-- C++
+f1_keywords: vc.atl.structures
+dev_langs: C++
 helpviewer_keywords:
 - ATL, structures
 - structures, ATL
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-structures"></a>ATL 结构
 
@@ -72,4 +68,3 @@ ms.lasthandoff: 10/09/2017
   
  [ATL 类](../../atl/reference/atl-classes.md)  
  提供在按字母顺序组织的类的参考资料。
-

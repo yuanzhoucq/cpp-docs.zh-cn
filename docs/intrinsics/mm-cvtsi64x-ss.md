@@ -1,67 +1,66 @@
 ---
-title: "_mm_cvtsi64x_ss | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtsi64x_ss"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtsi2ss 指令"
-  - "_mm_cvtsi64x_ss 内部函数"
+title: "_mm_cvtsi64x_ss |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtsi64x_ss
+dev_langs: C++
+helpviewer_keywords:
+- cvtsi2ss instruction
+- _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aecb28648e32e099d2381fa49b1b7f5a42618543
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtsi64x_ss
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 专用**  
   
- 生成转换 64 位整数的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] extended 版本为标量单精度浮点值 \(`cvtsi2ss`\) 命令。  
+ 生成[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]扩展的版本为标量单精度浮点值将转换的 64 位整数 (`cvtsi2ss`) 指令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-__m128 _mm_cvtsi64x_ss(   
-   __m128 a,   
-   __int64 b   
+__m128 _mm_cvtsi64x_ss(   
+   __m128 a,   
+   __int64 b   
 );  
 ```  
   
-#### 参数  
- \[in\] `a`  
- 包含四个单精度浮点值的 `__m128` 结构。  
+#### <a name="parameters"></a>参数  
+ [in] `a`  
+ `__m128`结构，它包含四个单精度浮点值。  
   
- \[in\] `b`  
- 要转换的 64 位整数转换为浮点值。  
+ [in] `b`  
+ 要转换为浮点值 64 位整数。  
   
-## 返回值  
- 第一个浮点值是转换的结果的 `__m128` 结构。  其他三个值从 `a`原样复制。  
+## <a name="return-value"></a>返回值  
+ `__m128`结构其第一个浮点值转换的结果。 其他三个值均将原样从复制`a`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`_mm_cvtsi64x_ss`|x64|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- `__m128` 结构表示一个 XMM 寄存器，因此，此内部允许从系统内存的值 `b` 将 XMM 寄存器。  
+## <a name="remarks"></a>备注  
+ `__m128`结构表示的 XMM 寄存器，因此此内部函数，则允许此值`b`从系统内存移动到 XMM 注册。  
   
- 此实例只能用作内部。  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // _mm_cvtsi64x_ss.cpp  
@@ -89,9 +88,12 @@ int main()
 }  
 ```  
   
-  **54.000000 0.000000 0.000000 0.000000**   
-## 关闭 Microsoft 特定  
+```Output  
+54.000000 0.000000 0.000000 0.000000  
+```  
   
-## 请参阅  
- [\_\_m128](../cpp/m128.md)   
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>另请参阅  
+ [__m128](../cpp/m128.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

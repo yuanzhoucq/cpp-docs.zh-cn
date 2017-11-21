@@ -1,51 +1,50 @@
 ---
-title: "用户定义的特性（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自定义特性, 扩展元数据"
-  - "元数据, 扩展"
+title: "用户定义的属性 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- metadata, extending
+- custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b7c96ff7be36ac90560d36c3c0989379eea24777
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 用户定义的特性（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-自定义特性可扩展接口的元数据、类、结构、方法、参数或枚举。  
+# <a name="user-defined-attributes--c-component-extensions"></a>用户定义的特性（C++ 组件扩展）
+自定义属性使您能够扩展接口、 类或结构、 方法、 参数或枚举的元数据。  
   
-## 所有运行时  
- 所有运行时支持自定义特性。  
+## <a name="all-runtimes"></a>所有运行时  
+ 所有运行时支持自定义属性。  
   
-## Windows Runtime — Windows 运行时  
- C\+\+\/CX 特性只支持属性，但未特性化构造函数或方法。  
+## <a name="windows-runtime"></a>Windows 运行时  
+ C + + /cli CX 属性支持只有属性，但不是属性构造函数或方法。  
   
-### 备注  
+### <a name="remarks"></a>备注  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/ZW**  
   
-## 公共语言运行时  
- 自定义特性可扩展宿主元素的元数据。  有关详细信息，请参阅[特性](../Topic/Extending%20Metadata%20Using%20Attributes.md)。  
+## <a name="common-language-runtime"></a>公共语言运行时  
+ 自定义特性使你可以扩展托管元素的元数据。 有关更多信息，请参阅[特性](/dotnet/standard/attributes/index)。  
   
-### 备注  
- 本主题和语法存在的信息会取代在 [attribute](../windows/attribute.md)存在的信息。  
+### <a name="remarks"></a>备注  
+ 信息和本主题提供的语法旨在取代中提供的信息[属性](../windows/attribute.md)。  
   
- 通过定义类型并使 <xref:System.Attribute> 类型的基类和选项应用 <xref:System.AttributeUsageAttribute> 特性定义自定义属性。  
+ 你可以定义的自定义特性定义类型，而使<xref:System.Attribute>基类类型和 （可选） 应用<xref:System.AttributeUsageAttribute>属性。  
   
- 例如，在 Microsoft Transaction Server \(MTS\) 1.0，与事务的行为，同步，负载平衡，依此类推通过自定义类型库 GUID 指定的插入使用 ODL 自定义属性。  因此，服务器 MTS 的客户可能通过读取类型库确定其属性。  在 .NET Framework 中，类型库的元数据，模拟是，并 ODL 自定义属性的模拟是自定义属性。  另外，读取类型库类似于使用类型上的反射。  
+ 例如，在 Microsoft Transaction Server (MTS) 1.0，相关的行为时会事务，同步时，负载平衡，并通过插入类型库，通过使用 ODL 自定义特性的自定义 Guid 指定等等。 因此，MTS 服务器的客户端无法通过读取类型库确定其特征。 在.NET Framework 中，类型库的模拟元数据，且 ODL 自定义特性的模拟自定义属性。 此外，读取类型库是类似于对类型使用反射。  
   
  有关详细信息，请参阅  
   
@@ -53,15 +52,15 @@ manager: "ghogen"
   
 -   [特性参数类型](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- 有关对 Visual C\+\+ 项目中的程序集进行签名的信息，请参见[强名称程序集（程序集签名）](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
+ 有关 Visual c + + 中的签名程序集的信息，请参阅[强名称程序集 （程序集签名） (C + + /cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 下面的示例显示您可以如何定义特性：  
+ 下面的示例演示如何定义自定义特性。  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -80,7 +79,7 @@ ref class MyClass {};
   
  **示例**  
   
- 下面的示例演示自定义属性一些重要功能。  例如，下面的示例演示自定义特性的常见用法：实例化自己可以描述对客户端的服务器。  
+ 下面的示例演示自定义特性的一些重要功能。 例如，此示例演示常见的自定义特性用法： 实例化完全可以向客户端描述本身的服务器。  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -155,20 +154,29 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **服务优先级别 \= 0**  
- **服务访问编写为 \= Write**  
- **服务优先级别 \= 3**  
- **服务访问编写为 \= Write**  
- **服务优先级别 \= 1**  
- **服务访问 \= 读取** **示例**  
+```Output  
+Service Priority = 0  
   
- Object^ 类型替换不同的数据类型。  下面的示例定义带有参数数组 Object^ 为的自定义属性。  
+Service Access = Write  
   
- 特性参数必须是一个编译时常数；在许多情况下，它们应是常量文本。  
+Service Priority = 3  
   
- 参见 [typeid](../windows/typeid-cpp-component-extensions.md) 有关如何返回值信息的自定义属性的 System::Type 块。  
+Service Access = Write  
+  
+Service Priority = 1  
+  
+Service Access = Read  
+```  
+  
+ **示例**  
+  
+ 对象 ^ 类型替换的 variant 数据类型。 下面的示例定义采用对象的数组的自定义特性 ^ 作为参数。  
+  
+ 特性自变量必须是编译时常量;在大多数情况下，它们应该是常量文字。  
+  
+ 请参阅[typeid](../windows/typeid-cpp-component-extensions.md)有关如何从自定义特性块中返回的 system:: type 值的信息。  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -188,7 +196,7 @@ public ref class SomeClass {};
   
  **示例**  
   
- 运行时需要自定义属性类的公共部分必须是可序列化的。在创作自定义属性时，自定义特性的命名参数被限制为编译时常数。\(请考虑它作为位序列追加到元数据的类的布局。\)  
+ 运行时要求自定义特性类的公共部分必须是可序列化。  当编写自定义属性，自定义特性的命名自变量被限制为编译时常量。  （将它视为追加到你的元数据中的类布局的位序列。）  
   
 ```cpp  
 // extending_metadata_f.cpp  
@@ -207,5 +215,5 @@ ref struct A : Attribute {
 ref struct B {};  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

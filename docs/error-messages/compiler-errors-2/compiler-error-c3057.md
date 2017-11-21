@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3057
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3057
+f1_keywords: C3057
+dev_langs: C++
+helpviewer_keywords: C3057
 ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 424c4dfb224b3d0778f80148aaac11e11c9ff440
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3057"></a>编译器错误 C3057
 “symbol”：当前不支持“threadprivate”符号的动态初始化  

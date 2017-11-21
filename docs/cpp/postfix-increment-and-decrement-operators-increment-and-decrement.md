@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cbf22e57abaefc7b14be9c4eab404f7c20cb9359
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>后缀增量和减量运算符：++ 和 --
 ## <a name="syntax"></a>语法  
@@ -55,7 +52,7 @@ i++;
   
  当后缀运算符应用于函数参数时，在参数的值传递给函数之前，不能保证该值是递增还是递减。  有关详细信息，请参阅 C++ 标准中的 1.9.17 节。  
   
- 将后缀递增运算符应用于指向类型的对象的数组的指针**长**实际上会将添加四个指针的内部表示。 此行为会导致指针，这以前称为* n *th 元素的数组，来指代 (*n*+ 1) 个元素。  
+ 将后缀递增运算符应用于指向类型的对象的数组的指针**长**实际上会将添加四个指针的内部表示。 此行为会导致指针，这以前称为 *n* th 元素的数组，来指代 (*n*+ 1) 个元素。  
   
  后缀递增运算符和后缀递减运算符的操作数必须是可修改 (不**const**) 的算法或指针类型的左值。 结果的类型是相同的*后缀表达式*，但它不再是左值。  
   

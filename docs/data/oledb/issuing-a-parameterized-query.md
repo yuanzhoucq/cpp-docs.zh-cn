@@ -1,28 +1,27 @@
 ---
-title: "发出参数化查询 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "参数查询, 使用 CCommand 类运行"
+title: "发出参数化的查询 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 发出参数化查询
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例发出一个简单的参数化查询，该查询将从 Microsoft Access 数据库中的一个表中检索 age 字段值大于 30 的记录。  若要支持此参数，用户记录必须具有一个附加的映射。  以下 ATL 项目中的代码使用 `CCommand` 类，而不是前面的示例[遍历简单行集合](../../data/oledb/traversing-a-simple-rowset.md)中所使用的 `CTable` 类。  
+# <a name="issuing-a-parameterized-query"></a>发出参数化查询
+下面的示例发出简单参数化的查询从 Microsoft Access 数据库的表中检索具有年龄字段 （这是大于 30） 的记录。 若要支持此参数，用户记录必须具有一个附加的映射。 下面的代码中，在 ATL 项目中，使用`CCommand`类而不是`CTable`使用在前面的示例中，类[遍历简单行集合](../../data/oledb/traversing-a-simple-rowset.md)。  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 用户记录 `CArtists` 类似于：  
+ 用户记录中， `CArtists`，如下所示：  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

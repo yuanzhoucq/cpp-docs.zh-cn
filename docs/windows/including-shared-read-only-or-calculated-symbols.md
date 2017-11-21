@@ -1,40 +1,39 @@
 ---
-title: "Including Shared (Read-Only) or Calculated Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.shared.calculated"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "symbols, read-only"
-  - "symbols, shared"
-  - "symbols, calculated"
-  - "read-only symbols"
-  - "symbol directives"
-  - "calculated symbols"
-  - "shared symbols"
+title: "包括共享 （只读） 或计算符号 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.shared.calculated
+dev_langs: C++
+helpviewer_keywords:
+- symbols, read-only
+- symbols, shared
+- symbols, calculated
+- read-only symbols
+- symbol directives
+- calculated symbols
+- shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fefc31c6ac9eb1f66c2fb6481bd7bb63171a8a8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Including Shared (Read-Only) or Calculated Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。  随后，你可以使用[“资源包括”对话框](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。  
+# <a name="including-shared-read-only-or-calculated-symbols"></a>包含共享（只读）或计算符号
+开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。 随后，你可以使用[资源包括对话框中](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。  
   
  可能要使用只读符号定义的原因之一是用于计划在多个项目之间共享的符号文件。  
   
- 当现有资源包含的符号定义使用表达式而不是简单整数来定义符号值时，也可以使用包含的符号文件。  例如:  
+ 当现有资源包含的符号定义使用表达式而不是简单整数来定义符号值时，也可以使用包含的符号文件。 例如:  
   
 ```  
 #define   IDC_CONTROL1 2100  
@@ -52,21 +51,21 @@ caps.handback.revision: 8
 > [!NOTE]
 >  如果需要字符串或数值表达式，则不会计算表达式。  
   
-### 在资源文件包含共享（只读）符号  
+### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>在资源文件包含共享（只读）符号  
   
-1.  在[“资源视图”](../windows/resource-view-window.md)中，右键单击 .rc 文件，然后从快捷菜单中选择[“资源包括”](../windows/resource-includes-dialog-box.md)。  
+1.  在[资源视图](../windows/resource-view-window.md)，右键单击.rc 文件，然后选择[资源包括](../windows/resource-includes-dialog-box.md)从快捷菜单。  
   
     > [!NOTE]
-    >  如果你的项目尚未包含 .rc 文件，请参阅[创建新资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
+    >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在**“只读符号指令”**框中，使用 **\#include** 编译器指令指定要在其中保留只读符号的文件。  
+2.  在**只读符号指令**框中，使用**#include**编译器指令以指定想要保留只读符号的文件。  
   
      请勿调用文件 Resource.h，因为这是通常由主符号头文件使用的文件名。  
   
     > [!NOTE]
-    >  **重要事项** 在“只读符号指令”框中输入的内容会完全按照输入包含在资源文件中。  请确保输入的内容不包含任何拼写或语法错误。  
+    >  **重要**完全按您键入你在只读符号指令框中键入包含在资源文件。 请确保输入的内容不包含任何拼写或语法错误。  
   
-     使用**“只读符号指令”**框可仅包含具有符号定义的文件。  请勿包含资源定义；否则，在保存文件时会创建重复的资源定义。  
+     使用**只读符号指令**框，以包括具有仅限符号定义的文件。 请勿包含资源定义；否则，在保存文件时会创建重复的资源定义。  
   
 3.  将符号置于指定的文件中。  
   
@@ -74,14 +73,14 @@ caps.handback.revision: 8
   
 4.  单击“确定”。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。 有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+
   
  要求  
   
  Win32  
   
-## 请参阅  
- [Symbol Name Restrictions](../windows/symbol-name-restrictions.md)   
- [Symbol Value Restrictions](../windows/symbol-value-restrictions.md)   
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>另请参阅  
+ [符号名限制](../windows/symbol-name-restrictions.md)   
+ [符号值限制](../windows/symbol-value-restrictions.md)   
+ [预定义的符号 Id](../windows/predefined-symbol-ids.md)   
+ [符号：资源标识符](../windows/symbols-resource-identifiers.md)

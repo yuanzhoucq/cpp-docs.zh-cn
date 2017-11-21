@@ -1,50 +1,48 @@
 ---
-title: "not1 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not1 函数 [STL/CLR]"
+title: "not1 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not1
+dev_langs: C++
+helpviewer_keywords: not1 function [STL/CLR]
 ms.assetid: a50cd819-10de-4d81-84da-8a34c5414a43
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c35f0b9df04ca9f8d6ed142567158decc9170ac8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# not1 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-生成 functor 的 `unary_negate`。  
+# <a name="not1-stlclr"></a>not1 (STL/CLR)
+生成`unary_negate`函子的。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
-## Template Parameters  
- Fun  
- 函数对象的类型。  
+## <a name="template-parameters"></a>模板参数  
+ 有趣  
+ 函子的类型。  
   
-## 函数参数  
- functor  
- 包装的 functor。  
+## <a name="function-parameters"></a>函数参数  
+ 函子  
+ 包装函数。  
   
-## 备注  
- 第三个模板函数返回 [unary\_negate](../dotnet/unary-negate-stl-clr.md)`<``Fun``>(functor)`。  使用它作为一种简便方法包装在提供其逻辑非的 functor 的一个参数 functor。  
+## <a name="remarks"></a>备注  
+ 模板函数返回[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`。 您将其用作将单自变量函子包装在提供其逻辑非函子的简便方法。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_not1.cpp   
@@ -86,13 +84,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [unary\_negate](../dotnet/unary-negate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)

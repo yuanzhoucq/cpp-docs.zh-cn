@@ -1,50 +1,50 @@
 ---
-title: "点指令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE 中的点指令"
-  - "NMAKE 程序, 点指令"
+title: "点指令 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, dot directives
+- dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f53eaabb2c58d349273288c670da33445feaaea1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 点指令
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在描述块之外的行首指定点指令。  点指令以一个句点 \( .\) 开头，后跟一个冒号 \(:\)。  允许使用空格或制表符。  点指令名区分大小写并且应为大写。  
+# <a name="dot-directives"></a>点指令
+指定描述块，在行的开头之外的点指令。 点指令以句点开头 (。 ) 后, 跟一个冒号 （:）。 允许使用空格和选项卡。 点指令名称区分大小写并且应为大写。  
   
 |指令|用途|  
-|--------|--------|  
-|**.IGNORE :**|忽略从指定该指令的位置到生成文件末尾之间，由命令返回的非零退出代码。  默认情况下，如果命令返回非零退出代码，NMAKE 将暂停。  若要还原错误检查，请使用 **\!CMDSWITCHES**。  若要忽略单个命令的退出代码，请使用短划线 \(\-\) 修饰符。  若要忽略整个文件的退出代码，请使用 \/I 选项。|  
-|**.PRECIOUS :** *targets*|若更新 *targets* 的命令暂停，则将其保留在磁盘上；若命令通过删除文件处理中断，则该指令无效。  用一或多个空格或制表符分隔目标名称。  默认情况下，如果通过使用 Ctrl\+C 或 Ctrl\+Break 组合键中断生成，NMAKE 将删除目标。  **.PRECIOUS** 的每一次使用都应用于整个生成文件；多次指定是累计的。|  
-|**.SILENT :**|取消从指定该指令的位置到生成文件末尾之间的已执行命令的显示。  默认情况下，NMAKE 显示它调用的命令。  若要还原回显，请使用 **\!CMDSWITCHES**。  若要取消单个命令的回显，请使用 **@** 修饰符。  若要取消整个文件的回显，请使用 \/S 选项。|  
-|**.SUFFIXES :** `list`|列出推理规则匹配的扩展名；预定义包括以下扩展名：.exe .obj .asm .c .cpp .cxx .bas .cbl .for .pas .res .rc .f .f90|  
+|---------------|-------------|  
+|**.忽略：**|将忽略由命令，从指定的生成文件的末尾的位置返回非零退出代码。 默认情况下，如果 NMAKE 将暂停命令返回非零退出代码。 若要还原错误检查，请使用**！CMDSWITCHES**。 若要忽略为单个命令的退出代码，请使用短划线 （-） 修饰符。 若要忽略对整个文件的退出代码，请使用 / 我。|  
+|**.宝贵：** *目标*|保留*目标*磁盘上如果暂停命令来更新它们; 如果不起作用命令处理中断通过删除的文件。 用一个或多个空格或制表符分隔的目标名称。 默认情况下，NMAKE 删除目标，如果生成中断按 CTRL + C 或 CTRL + BREAK。 每次使用**。宝贵**适用于整个生成文件; 多个规范是累积。|  
+|**.无提示：**|取消显示执行命令，从指定的生成文件的末尾的位置。 默认情况下，NMAKE 显示它调用的命令。 若要还原回显，请使用**！CMDSWITCHES**。 若要取消回显的单个命令，请使用 **@** 修饰符。 若要取消整个文件的回显，请使用 /s 选项。|  
+|**.后缀：**`list`|列出推理规则匹配; 的扩展预定义以包括以下扩展：.exe.obj.asm.c.cpp.cxx.bas.cbl。 对于.pas.res.rc.f.f90|  
   
- 若要更改 **.SUFFIXES** 列表顺序或指定新列表，请清除此列表并指定新的设置。  若要清除此列表，请不要在冒号后指定扩展名：  
+ 若要更改**。后缀**列表顺序，或若要指定新列表，请清除列表中，并指定新的设置。 若要清除列表中，指定位于冒号后没有扩展：  
   
 ```  
 .SUFFIXES :  
 ```  
   
- 若要将其他后缀添加到列表的末尾，请指定  
+ 若要将其他后缀添加到列表的末尾，指定  
   
 ```  
 .SUFFIXES : suffixlist  
 ```  
   
- 其中 *suffixlist* 是附加后缀的列表，由一或多个空格或制表符分隔。  若要查看 **.SUFFIXES** 的当前设置，请运行选项为 \/P 的 NMAKE。  
+ 其中*suffixlist*是其他后缀，用一个或多个空格或制表符分隔的列表。 若要查看的当前设置**。后缀**，使用 /P.运行 NMAKE  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [NMAKE 参考](../build/nmake-reference.md)

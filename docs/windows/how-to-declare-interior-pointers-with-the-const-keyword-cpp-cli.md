@@ -1,34 +1,32 @@
 ---
-title: "如何：用 const 关键字声明内部指针 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "指针, 内部"
+title: "如何： 声明内部指针用 const 关键字 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db90a74bc73c548dcc3cca71cf3631bd9499ac27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：用 const 关键字声明内部指针 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-以下例子表示如何使用`const`声明一个内部指针。  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：用 const 关键字声明内部指针 (C++/CLI)
+下面的示例演示如何使用`const`内部指针的声明中。  
   
 > [!IMPORTANT]
->  此语言功能支持使用 **\/clr** 编译器选项，但是，不受 **\/ZW** 编译器选项。  
+>  通过支持此语言功能**/clr**编译器选项，但不是**/ZW**编译器选项。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +85,5 @@ int main() {
 };  
 ```  
   
-## 请参阅  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>另请参阅  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

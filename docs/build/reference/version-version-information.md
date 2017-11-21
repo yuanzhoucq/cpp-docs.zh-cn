@@ -1,67 +1,67 @@
 ---
-title: "/VERSION（版本信息） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.Version"
-  - "/version"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/VERSION 链接器选项"
-  - "“版本信息”链接器选项"
-  - "VERSION 链接器选项"
-  - "-VERSION 链接器选项"
-  - "版本号, 在 .exe 中指定"
+title: "版本 （版本信息） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.Version
+- /version
+dev_langs: C++
+helpviewer_keywords:
+- -VERSION linker option
+- Version Information linker option
+- version numbers, specifying in .exe
+- /VERSION linker option
+- VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6a0792a3895aac2887e635cb300f8ba9fde67e97
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /VERSION（版本信息）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="version-version-information"></a>/VERSION（版本信息）
 ```  
 /VERSION:major[.minor]  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中：  
   
- *major* 和 *minor*  
- 希望 .exe 或 .dll 文件头中包含的版本号。  
+ *主要*和*次要*  
+ 所需的.exe 或.dll 文件的标头中的版本号。  
   
-## 备注  
- \/VERSION 选项告知链接器将版本号置于 .exe 或 .dll 文件头中。  使用 DUMPBIN [\/HEADERS](../../build/reference/headers.md) 查看 OPTIONAL HEADER VALUES 的图像版本字段，以查看 \/VERSION 的效果。  
+## <a name="remarks"></a>备注  
+ /VERSION 选项通知链接器将版本号.exe 或.dll 文件的标头中。 使用 DUMPBIN [/HEADERS](../../build/reference/headers.md)才能看到该映像版本字段的可选的标头值，以查看 /VERSION 的效果。  
   
- *major* 和 *minor* 参数为 0 到 65,535 范围之间的十进制数。  默认值为版本 0.0。  
+ *主要*和*次要*自变量为十进制数字 0 到 65535 的范围。 默认值为 0.0 版。  
   
- 用 \/VERSION 指定的信息不影响在 Windows 文件资源管理器中查看应用程序属性时所显示的应用程序的版本信息。  该版本信息来自用于生成应用程序的资源文件。  有关更多信息，请参见[版本信息编辑器](../../mfc/version-information-editor.md)。  
+ 使用 /VERSION 指定的信息不影响您在文件资源管理器中查看应用程序属性时为应用程序显示的版本信息。 该版本信息来自资源文件，用于生成应用程序。 请参阅[版本信息编辑器](../../windows/version-information-editor.md)有关详细信息。  
   
- 另一种插入版本号的方法是用 [VERSION](../../build/reference/version-c-cpp.md) 模块定义语句。  
+ 要插入的版本号的另一个方法是使用[版本](../../build/reference/version-c-cpp.md)模块定义语句。  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击“链接器”文件夹。  
+2.  单击**链接器**文件夹。  
   
-3.  单击**“常规”**属性页。  
+3.  单击**常规**属性页。  
   
-4.  修改**“版本”**属性。  
+4.  修改**版本**属性。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

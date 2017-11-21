@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3190
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3190
+f1_keywords: C3190
+dev_langs: C++
+helpviewer_keywords: C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 29d85c8a58b20c5a3c4492c56a66591e1509f2c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3190"></a>编译器错误 C3190
 实例，并且它提供的模板自变量不是 type 的任何成员函数的显式实例化  

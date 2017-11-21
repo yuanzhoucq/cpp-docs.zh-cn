@@ -1,91 +1,91 @@
 ---
-title: "CKeyColumns，CKeyColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szConstraintCatalog"
-  - "m_nColumnPropID"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "COLUMN_GUID"
-  - "CKeyColumnInfo"
-  - "CONSTRAINT_NAME"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "m_szConstraintSchema"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "CKeyColumns"
-  - "m_szTableName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-  - "m_szConstraintName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CKeyColumnInfo 参数类"
-  - "CKeyColumns typedef 类"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_nOrdinalPosition"
-  - "m_szColumnName"
-  - "m_szConstraintCatalog"
-  - "m_szConstraintName"
-  - "m_szConstraintSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "ORDINAL_POSITION"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CKeyColumns，CKeyColumnInfo |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szConstraintCatalog
+- m_nColumnPropID
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- COLUMN_GUID
+- CKeyColumnInfo
+- CONSTRAINT_NAME
+- m_szColumnName
+- m_szTableCatalog
+- m_szConstraintSchema
+- COLUMN_PROPID
+- m_guidColumn
+- CKeyColumns
+- m_szTableName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+- m_szConstraintName
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- ORDINAL_POSITION
+- m_szConstraintCatalog
+- CONSTRAINT_CATALOG
+- m_szTableSchema
+- TABLE_CATALOG
+- CKeyColumnInfo parameter class
+- TABLE_NAME
+- CONSTRAINT_NAME
+- m_nOrdinalPosition
+- m_nColumnPropID
+- CONSTRAINT_SCHEMA
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szTableCatalog
+- m_szConstraintName
+- CKeyColumns typedef class
+- m_szTableName
+- m_szConstraintSchema
+- COLUMN_GUID
+- m_guidColumn
 ms.assetid: 40525a4f-a9cf-4e9f-886d-8a6ddd18a3d6
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 65112e8daab1923f296d65637cd67ce93ee22cc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CKeyColumns，CKeyColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-typedef 类调用 **CKeyColumns** 实现其参数类的 **CKeyColumnInfo**。  
+# <a name="ckeycolumns-ckeycolumninfo"></a>CKeyColumns，CKeyColumnInfo
+调用 typedef 类**CKeyColumns**来实现其参数类**CKeyColumnInfo**。  
   
-## 备注  
- 参见 [架构行集合类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 中使用 typedef 类的更多信息。  
+## <a name="remarks"></a>备注  
+ 请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)有关使用 typedef 类的详细信息。  
   
- 此类标识列，定义目录中，约束作为键由特定用户。  
+ 此类标识的列，定义在目录中，由给定用户约束为键。  
   
- 下表列出了类数据成员及其对应的 OLE DB 行。  有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [KEY\_COLUMN\_USAGE 行集](https://msdn.microsoft.com/en-us/library/ms712990.aspx)。  
+ 下表列出了类数据成员及其对应的 OLE DB 列。 请参阅[KEY_COLUMN_USAGE 行集](https://msdn.microsoft.com/en-us/library/ms712990.aspx)中*OLE DB 程序员参考*有关的架构和列的详细信息。  
   
 |数据成员|OLE DB 列|  
-|----------|--------------|  
-|m\_szConstraintCatalog|CONSTRAINT\_CATALOG|  
-|m\_szConstraintSchema|CONSTRAINT\_SCHEMA|  
-|m\_szConstraintName|CONSTRAINT\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
+|------------------|--------------------|  
+|m_szConstraintCatalog|CONSTRAINT_CATALOG|  
+|m_szConstraintSchema|CONSTRAINT_SCHEMA|  
+|m_szConstraintName|CONSTRAINT_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
   
-## 要求  
- **头文件：**atldbsch.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldbsch.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CRestrictions 类](../../data/oledb/crestrictions-class.md)

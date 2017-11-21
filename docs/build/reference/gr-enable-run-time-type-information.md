@@ -1,64 +1,64 @@
 ---
-title: "/GR（启用运行时类型信息） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gr"
-  - "VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo"
-  - "VC.Project.VCCLCompilerTool.RuntimeTypeInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gr 编译器选项 [C++]"
-  - "启用运行时类型信息编译器选项 [C++]"
-  - "Gr 编译器选项 [C++]"
-  - "-Gr 编译器选项 [C++]"
-  - "RTTI 编译器选项"
+title: "-GR （启用运行时类型信息） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gr
+- VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
+- VC.Project.VCCLCompilerTool.RuntimeTypeInfo
+dev_langs: C++
+helpviewer_keywords:
+- -Gr compiler option [C++]
+- Gr compiler option [C++]
+- RTTI compiler option
+- /Gr compiler option [C++]
+- enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3420af666ac4b9dca648b780ae99e794265515bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /GR（启用运行时类型信息）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="gr-enable-run-time-type-information"></a>/GR（启用运行时类型信息）
 添加代码以在运行时检查对象类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /GR[-]  
 ```  
   
-## 备注  
- 当 **\/GR** 启用时，编译器将定义 `_CPPRTTI` 预处理器宏。  默认情况下，**\/GR** 处于打开状态。  **\/GR\-** 将禁用运行时类型信息。  
+## <a name="remarks"></a>备注  
+ 当**/GR**处于打开状态，编译器会定义`_CPPRTTI`预处理器宏。 默认情况下， **/GR**上。 **/GR-**禁用运行时类型信息。  
   
- 如果编译器无法在代码中静态解析对象类型，则使用 **\/GR**。  当代码使用 [dynamic\_cast 运算符](../../cpp/dynamic-cast-operator.md) 或 [typeid](../../cpp/typeid-operator.md) 时，通常需要 **\/GR** 选项。  但是，**\/GR** 会导致映像的 .rdata 节增大。  如果您的代码不使用 **dynamic\_cast** 或 **typeid**，则使用 **\/GR\-** 可能会生成较小的映像。  
+ 使用**/GR**如果编译器无法以静态方式解决代码中的对象类型。 你通常需要**/GR**选项时你的代码使用[dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)或[typeid](../../cpp/typeid-operator.md)。 但是， **/GR**会增加你的映像的.rdata 部分的大小。 如果你的代码不使用**dynamic_cast**或**typeid**， **/GR-**可能会产生较小的图像。  
   
- 有关运行时类型检查的更多信息，请参见“C\+\+ 语言参考”中的[运行时类型信息](../../cpp/run-time-type-information.md)。  
+ 有关运行时类型检查的详细信息，请参阅[运行时类型信息](../../cpp/run-time-type-information.md)中*c + + 语言参考*。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“语言”**属性页。  
+3.  单击**语言**属性页。  
   
-4.  修改**“启用运行时类型信息”**属性。  
+4.  修改**启用运行时类型信息**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

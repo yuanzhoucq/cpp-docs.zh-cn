@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,34 +18,18 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_priority_queue class
+dev_langs: C++
+helpviewer_keywords: concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 95b52911135513b0b1e4d84509c80ed3262c1765
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d6789bd74924912361b3045d112c91ec6dcaedbe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 类
 `concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板自变量提供的涵子确定。  
@@ -66,16 +49,16 @@ template <typename T,
  要存储在优先级队列中的元素的数据类型。  
   
  `_Compare`  
- 可将两个元素的值作为排序键进行比较以确定其在优先级队列中相对顺序的函数对象的类型。 此参数为可选自变量，默认值是二元谓词 `less<``T``>`。  
+ 可将两个元素的值作为排序键进行比较以确定其在优先级队列中相对顺序的函数对象的类型。 此参数为可选自变量，默认值是二元谓词 `less<T>`。  
   
  `_Ax`  
- 一种表示存储的分配器对象的类型，该分配器对象封装有关并发优先级队列的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<``T``>`。  
+ 一种表示存储的分配器对象的类型，该分配器对象封装有关并发优先级队列的内存分配和解除分配的详细信息。 此参数为可选参数，默认值为 `allocator<T>`。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |`allocator_type`|一种表示适用于并发优先级队列的分配器类的类型。|  
 |`const_reference`|一种表示存储在并发优先级队列中类型的一个元素的常量引用的类型。|  
@@ -91,21 +74,21 @@ template <typename T,
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[clear](#clear)|清除并发优先级中的所有元素。 此方法不是并发安全的。|  
+|[clear](#clear)|清除并发优先级中的所有元素。 此方法不是并发安全。|  
 |[empty](#empty)|测试在调用此方法时并发优先级队列是否为空。 此方法是并发安全的。|  
 |[get_allocator](#get_allocator)|返回用于构造并发优先级队列的分配器的副本。 此方法是并发安全的。|  
 |[push](#push)|已重载。 在并发优先级队列中添加一个元素。 此方法是并发安全的。|  
 |[size](#size)|返回并发优先级队列中元素的数量。 此方法是并发安全的。|  
-|[swap](#swap)|交换两个并发优先级队列中的内容。 此方法不是并发安全的。|  
+|[swap](#swap)|交换两个并发优先级队列中的内容。 此方法不是并发安全。|  
 |[try_pop](#try_pop)|如果队列非空，移除并返回队列中优先级最高的元素。 此方法是并发安全的。|  
   
 ### <a name="public-operators"></a>公共运算符  
   
 |名称|描述|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|已重载。 另一种内容分配`concurrent_priority_queue`对象传递给它。 此方法不是并发安全的。|  
+|[operator=](#operator_eq)|已重载。 将分配的另一个内容`concurrent_priority_queue`于此对象。 此方法不是并发安全。|  
   
 ## <a name="remarks"></a>备注  
  有关详细信息`concurrent_priority_queue`类，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -114,20 +97,20 @@ template <typename T,
  `concurrent_priority_queue`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** concurrent_priority_queue.h  
+ **标头：** concurrent_priority_queue.h  
   
  **命名空间：** 并发  
   
 ##  <a name="clear"></a>清除 
 
- 清除并发优先级中的所有元素。 此方法不是并发安全的。  
+ 清除并发优先级中的所有元素。 此方法不是并发安全。  
   
 ```
 void clear();
 ```  
   
 ### <a name="remarks"></a>备注  
- `clear`不是并发安全的。 您必须确保在调用此方法时，没有其他线程在调用在并发优先级队列的方法。 `clear`不会释放内存。  
+ `clear`不是并发安全。 你必须确保在调用此方法时，没有其他线程所调用上并发优先级队列的方法。 `clear`不会释放内存。  
   
 ##  <a name="ctor"></a>concurrent_priority_queue 
 
@@ -181,17 +164,17 @@ concurrent_priority_queue(
  要从中复制或移动元素的源 `concurrent_priority_queue` 对象。  
   
 ### <a name="remarks"></a>备注  
- 所有构造函数都会存储一个分配器对象`_Al`并初始化优先级队列。  
+ 所有构造函数都会存储一个分配器对象`_Al`和初始化优先级队列。  
   
- 第一个构造函数指定空的初始优先级队列，并 （可选） 指定分配器。  
+ 第一个构造函数指定空的初始优先级队列，并 （可选） 指定的分配器。  
   
- 第二个构造函数指定一个优先级队列的初始容量与`_Init_capacity`和 （可选） 指定分配器。  
+ 第二个构造函数指定优先级队列的初始容量`_Init_capacity`和 （可选） 指定的分配器。  
   
- 第三个构造函数指定由迭代器范围提供的值 [ `_Begin`， `_End`) 和 （可选） 指定分配器。  
+ 第三个构造函数指定值提供的迭代器范围 [ `_Begin`， `_End`) 和 （可选） 指定的分配器。  
   
- 第四个和第五个构造函数指定的副本优先级队列`_Src`。  
+ 第四个和第五个构造函数指定优先级队列一份`_Src`。  
   
- 第六、 七个构造函数指定的优先级队列移动`_Src`。  
+ 第六个和第七个构造函数指定的优先级队列移动`_Src`。  
   
 ##  <a name="empty"></a>为空 
 
@@ -202,7 +185,7 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果已调用函数，时刻优先级队列为空`false`否则为。  
+ `true`如果已调用函数，此时优先级队列为空`false`否则为。  
   
 ##  <a name="get_allocator"></a>get_allocator 
 
@@ -217,7 +200,7 @@ allocator_type get_allocator() const;
   
 ##  <a name="operator_eq"></a>运算符 = 
 
- 另一种内容分配`concurrent_priority_queue`对象传递给它。 此方法不是并发安全的。  
+ 将分配的另一个内容`concurrent_priority_queue`于此对象。 此方法不是并发安全。  
   
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -230,7 +213,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
  源 `concurrent_priority_queue` 对象。  
   
 ### <a name="return-value"></a>返回值  
- 参考这`concurrent_priority_queue`对象。  
+ 对此引用`concurrent_priority_queue`对象。  
   
 ##  <a name="push"></a>推送 
 
@@ -258,11 +241,11 @@ size_type size() const;
  在此元素的数目`concurrent_priority_queue`对象。  
   
 ### <a name="remarks"></a>备注  
- 保证返回的大小将由对函数的调用添加的所有元素包含`push`。 但是，它可能不反映挂起的并发操作的结果。  
+ 返回的大小保证将通过对函数的调用添加的所有元素都包含`push`。 但是，它可能不反映挂起的并发操作的结果。  
   
 ##  <a name="swap"></a>交换 
 
- 交换两个并发优先级队列中的内容。 此方法不是并发安全的。  
+ 交换两个并发优先级队列中的内容。 此方法不是并发安全。  
   
 ```
 void swap(concurrent_priority_queue& _Queue);
@@ -282,15 +265,14 @@ bool try_pop(reference _Elem);
   
 ### <a name="parameters"></a>参数  
  `_Elem`  
- 对队列是否为非空，将使用最高的优先级元素，填充的变量的引用。  
+ 对非空队列是否将使用最高的优先级元素，填充的变量的引用。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果已弹出一个值，`false`否则为。  
+ `true`如果弹出一个值，已`false`否则为。  
   
 ## <a name="see-also"></a>另请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
-
 
 
 

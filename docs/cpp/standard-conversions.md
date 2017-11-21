@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="standard-conversions"></a>标准转换
 C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -80,11 +77,11 @@ long_num2 = int_num * long_num2;
   
  值保留提升和保留符号的提升通常会生成相同的结果。 但是，如果提升的对象是以下项之一，它们可能生成不同的结果：  
   
--   操作数** / **， `%`， `/=`， `%=`， ** < **， ** \< = **，** > **，或**>=**  
+-   操作数 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或**>=**  
   
      这些运算符依赖于用于确定结果的符号。 因此，当值保留和符号保留提升应用于这些操作数时，它们将生成不同的结果。  
   
--   左的操作数** >> **或**>>=**  
+-   左的操作数 **>>** 或**>>=**  
   
      当执行移位运算时，这些运算符会区别对待有符号的数量和无符号的数量。 对于有符号的数量，将数量右移会导致符号位传播到空出的位位置。 对于无符号的数量，空出的位位置将由零填充。  
   
@@ -253,12 +250,12 @@ int main()
  指针 `pA` 的类型为 `A *`，它可解释为“指向类型 `A` 的对象的指针”。 成员`bObject``(`如`BComponent`和`BMemberFunc`) 是唯一的键入`B`并且因此无法访问通过`pA`。 `pA` 指针只允许访问类 `A` 中定义的对象的那些特性（成员函数和数据）。  
   
 ### <a name="pointer-to-function"></a>指向函数的指针  
- 指向函数的指针可以转换为类型**void \* **，如果类型**void \* **足够大，以容纳该指针。  
+ 指向函数的指针可以转换为类型**void \*** ，如果类型**void \*** 足够大，以容纳该指针。  
   
 ### <a name="pointer-to-void"></a>指向 void 的指针  
  指向 `void` 类型的指针可以转换为指向其他任何类型的指针，但仅适合于显式类型转换（与在 C 中的情况不同）。 (请参阅[带显式类型转换的表达式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)有关类型强制转换的详细信息。)指向任何类型的指针可以隐式转换为指向类型 `void` 的指针。指向类型的不完整对象的指针可以转换为指向 `void`（隐式）和 back（显式）的指针。 此类转换的结果与原始指针的值相等。 对象被视为是不完整的（如果已声明对象），但未提供足够多的可用信息，无法确定其大小或基类。  
   
- 指向不是任何对象的指针**const**或`volatile`可以隐式转换为类型的指针**void \* **。  
+ 指向不是任何对象的指针**const**或`volatile`可以隐式转换为类型的指针**void \*** 。  
   
 ### <a name="const-and-volatile-pointers"></a>固定和可变指针  
  C + + 未提供的标准转换**const**或`volatile`类型设置为不是一种**const**或`volatile`。 但是，任何类型的转换都可以用显式类型强制转换指定（包括不安全的转换）。  

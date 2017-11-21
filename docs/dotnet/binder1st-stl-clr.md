@@ -1,32 +1,30 @@
 ---
-title: "binder1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st 函数 [STL/CLR]"
+title: "binder1st (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae786f50700d59c5f4a24ed0ec7de1c11718f352
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# binder1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-描述模板类，那么，当调用返回，其存储的两个参数 functor 调用及其存储的第一个参数提供的第二和参数的一个参数 functor。  在其存储函数对象期间使用它来指定一个函数对象。  
+# <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
+此模板类描述一个自变量函子的当调用，返回其存储的第一个参数而提供的第二个自变量调用其存储两个参数函子。 使用它指定根据其存储的函子的函数对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Fun>  
@@ -49,35 +47,35 @@ public:
     };  
 ```  
   
-#### 参数  
- Fun  
- 存储函数对象的类型。  
+#### <a name="parameters"></a>参数  
+ 有趣  
+ 存储函子的类型。  
   
-## 成员函数  
+## <a name="member-functions"></a>成员函数  
   
-|类型定义|说明|  
-|----------|--------|  
-|委托类型|泛型委托的类型。|  
-|第一个参数类型|第一个参数的函数对象类型。|  
-|结果类型|仿函数结果的类型 。|  
-|第二个参数类型|第二个参数的类型函数对象。|  
-|stored\_function\_type|函数对象的类型。|  
+|类型定义|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委托的类型。|  
+|first_argument_type|函子的第一个自变量的类型。|  
+|result_type|函子结果的类型。|  
+|second_argument_type|函子的第二个自变量的类型。|  
+|stored_function_type|函子的类型。|  
   
-|成员|说明|  
-|--------|--------|  
-|binder1st|构造仿函数。|  
+|成员|描述|  
+|------------|-----------------|  
+|binder1st|构造函数。|  
   
-|运算符|说明|  
-|---------|--------|  
-|operator\(\)|计算所需函数数量。|  
-|运算符 delegate\_type^\(\)|转换仿函数为委托。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|operator()|计算所需的函数。|  
+|运算符 delegate_type^()|强制转换为委托的函子。|  
   
-## 备注  
- 描述模板类存储两参数 functor 和第一参数的一个参数 functor。  它定义成员运算符 `operator()`，这样，当对象为调用函数时，将只返回调用存储和使用的第一个参数提供的第二个参数的存储 functor 的结果。  
+## <a name="remarks"></a>备注  
+ 此模板类描述存储两个参数函子和的第一个参数的单自变量伪函数。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回调用存储的第一个参数而提供的第二个自变量的存储函子的结果。  
   
- 也可以传递对象作为类型为 `delegate_type^` 的函数参数，并将相应地转换。  
+ 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_binder1st.cpp   
@@ -120,13 +118,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [bind1st](../dotnet/bind1st-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)

@@ -1,60 +1,66 @@
 ---
-title: "如何：创建使用特定计划程序策略的代理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "计划程序策略, 代理 [并发运行时]"
-  - "创建使用特定策略的代理 [并发运行时]"
+title: "如何： 创建使用特定计划程序策略的代理 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scheduler policies, agents [Concurrency Runtime]
+- creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4004b7bc206b099a945aa70b5976b421fc3c547d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：创建使用特定计划程序策略的代理
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-代理是以异步方式与其他组件一起解决更大的计算任务的应用程序组件。  代理通常具有已设置的生命周期并且会维护状态。  
+# <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>如何：创建使用特定计划程序策略的代理
+代理是以异步方式与其他组件以解决更大的计算任务将应用程序组件。 代理通常具有设定的生命周期，并保持状态。  
   
- 每个代理都可能具有独特的应用程序要求。  例如，启用用户交互（检索输入或显示输出）的代理在访问计算资源时可能需要较高的优先级别。  利用计划程序策略，可以控制计划程序在管理任务时使用的策略。  本主题演示如何创建使用特定计划程序策略的代理。  
+ 每个代理都有唯一的应用程序需求。 例如，使用户交互 （检索输入或显示输出） 的代理可能需要更高优先级访问的计算资源。 计划程序策略让你能够控制计划程序将使用在管理任务的策略。 本主题演示如何创建使用特定计划程序策略的代理。  
   
- 有关将自定义计划程序策略与异步消息块一起使用的基本示例，请参见[如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。  
+ 有关自定义计划程序策略与异步消息块一起使用的基本示例，请参阅[如何： 指定特定计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。  
   
- 本主题使用异步代理库中的功能（如代理、消息块和消息传递函数）执行工作。  有关异步代理库的更多信息，请参见[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)。  
+ 本主题使用通过异步代理库，如代理、 消息块和消息传递函数的功能来执行工作。 有关异步代理库的详细信息，请参阅[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)。  
   
-## 示例  
- 下面的示例定义了派生自 [concurrency::agent](../../parallel/concrt/reference/agent-class.md) 的两个类：`permutor` 和 `printer`。  `permutor` 类计算给定输入字符串的所有排列。  `printer` 类将进度消息打印到控制台。  `permutor` 类执行可能会使用所有可用计算资源的计算密集型操作。  `printer` 类必须及时打印每条进度消息才会有用。  
+## <a name="example"></a>示例  
+ 下面的示例定义两个类派生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md):`permutor`和`printer`。 `permutor`类计算所有排列给定的输入字符串。 `printer`类打印到控制台的进度消息。 `permutor`类执行一个计算密集型操作，从而可能会使用所有可用的计算资源。 若要很有用，`printer`类必须及时打印每个进度消息。  
   
- 为了向 `printer` 类提供对计算资源的公平访问权，此示例使用[如何：管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)中描述的步骤创建了一个具有自定义策略的计划程序实例。  自定义策略将线程优先级别指定为最高优先级别类。  
+ 若要提供`printer`类对计算资源的公平访问，此示例使用中所述的步骤[如何： 管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)若要创建的自定义策略的计划程序实例。 自定义策略指定的线程优先级是最高的优先级类。  
   
- 为了说明使用具有自定义策略的计划程序的好处，此示例将整个任务执行两次。  此示例首先使用默认计划程序安排这两项任务，  然后使用默认计划程序安排 `permutor` 对象，并使用具有自定义策略的计划程序安排 `printer` 对象。  
+ 为了说明使用的计划程序的自定义策略的好处，此示例对整个任务执行两次。 该示例首先使用默认计划程序计划这两项任务。 示例然后使用默认计划程序来计划`permutor`对象，并且具有计划的自定义策略的计划程序`printer`对象。  
   
- [!code-cpp[concrt-permute-strings#1](../../parallel/concrt/codesnippet/CPP/how-to-create-agents-that-use-specific-scheduler-policies_1.cpp)]  
+ [!code-cpp[concrt-permute-strings#1](../../parallel/concrt/codesnippet/cpp/how-to-create-agents-that-use-specific-scheduler-policies_1.cpp)]  
   
- 该示例产生下面的输出。  
+ 本示例生成以下输出。  
   
-  **默认计划程序：**  
-**计算“葡萄柚”的所有排列…**  
-**100% 完成...**  
-**使用更高优先级别的上下文：**  
-**计算“葡萄柚”的所有排列…**  
-**100% 完成...** 虽然这两组任务产生的结果相同，但使用自定义策略的版本可使 `printer` 对象能够按照提升的优先级别运行，以使其行为的响应能力更强。  
+```Output  
+With default scheduler:  
+Computing all permutations of 'Grapefruit'...  
+100% complete...  
+ 
+With higher context priority:  
+Computing all permutations of 'Grapefruit'...  
+100% complete...  
+```  
   
-## 编译代码  
- 复制代码示例，并将此代码粘贴到 Visual Studio项目中或一个名为  `permute-strings.cpp` 的文件中，然后在 Visual Studio命令提示符窗口中运行以下命令。  
+ 尽管这两组任务会产生相同的结果，使用自定义策略的版本使`printer`运行在提升的优先级别，以便它响应能力更强的行为的对象。  
   
- **cl.exe \/EHsc permute\-strings.cpp**  
+## <a name="compiling-the-code"></a>编译代码  
+ 复制代码示例并将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`permute-strings.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
-## 请参阅  
+ **cl.exe /EHsc permute strings.cpp**  
+  
+## <a name="see-also"></a>另请参阅  
  [计划程序策略](../../parallel/concrt/scheduler-policies.md)   
  [异步代理](../../parallel/concrt/asynchronous-agents.md)   
  
+

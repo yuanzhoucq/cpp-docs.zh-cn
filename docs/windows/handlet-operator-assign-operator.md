@@ -1,33 +1,30 @@
 ---
-title: "HandleT::operator= 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 运算符"
+title: "Handlet:: Operator = 运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 9e42dcca-30fa-4e8b-8954-802fd64a5595
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5c71e29fa31c89c030b74843a9d776923fed6789
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# HandleT::operator= 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将指定的 HandleT 对象的值设置为当前 HandleT 对象。  
+# <a name="handletoperator-operator"></a>HandleT::operator= 运算符
+将指定的 HandleT 对象的值移到当前的 HandleT 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 HandleT& operator=(  
@@ -35,20 +32,20 @@ HandleT& operator=(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `h`  
- 对图柄的左值引用。  
+ 右值引用的句柄。  
   
-## 返回值  
- 对当前HandleT对象的指针引用。  
+## <a name="return-value"></a>返回值  
+ 对当前的 HandleT 对象的引用。  
   
-## 备注  
- 此操作无效参数指定的 HandleT 对象 `h`。  
+## <a name="remarks"></a>备注  
+ 此操作将使失效参数指定的 HandleT 对象`h`。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>要求  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [HandleT 类](../windows/handlet-class.md)

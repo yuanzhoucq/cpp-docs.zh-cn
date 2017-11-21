@@ -9,19 +9,17 @@ ms.topic: article
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-- concrt/concurrency:[operator&amp;&amp
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 322c95da1774cb0b1d621a46c74125f435ebfbc4
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 54c37f3262c6750bad4330780a4db09f2eef9d49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空间运算符
 ||||  
@@ -30,7 +28,7 @@ ms.lasthandoff: 03/17/2017
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>运算符 | |运算符  
+##  <a name="operator_lor"></a>运算符 &#124; &#124;运算符  
  创建将在作为自变量提供的任一任务成功完成时成功完成的任务。  
   
 ```  
@@ -152,9 +150,9 @@ inline bool operator== (
  `true`如果运算符左侧的并发向量等于运算符; 右侧的并发向量否则为`false`。  
   
 ### <a name="remarks"></a>备注  
- 两个并发向量相等，如果它们具有相同数量的元素，并且它们各自的元素具有相同的值。 否则，它们不相等。  
+ 两个并发向量相等，如果它们都有相同的元素数并且它们各自的元素具有相同的值。 否则，它们不相等。  
   
- 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_neq"></a>运算符 ！ = 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。  
@@ -186,9 +184,9 @@ inline bool operator!= (
  `true`如果并发向量是否不相等;`false`如果并发向量相等。  
   
 ### <a name="remarks"></a>备注  
- 两个并发向量相等，如果它们具有相同数量的元素，并且它们各自的元素具有相同的值。 否则，它们不相等。  
+ 两个并发向量相等，如果它们都有相同的元素数并且它们各自的元素具有相同的值。 否则，它们不相等。  
   
- 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_lt"></a>运算符&lt;运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否小于右侧的 `concurrent_vector` 对象。  
@@ -222,7 +220,7 @@ inline bool operator<(
 ### <a name="remarks"></a>备注  
  此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_lt_eq"></a>运算符&lt;= 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否小于或等于右侧的 `concurrent_vector` 对象。  
@@ -256,7 +254,7 @@ inline bool operator<= (
 ### <a name="remarks"></a>备注  
  此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_gt"></a>运算符&gt;运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否大于右侧的 `concurrent_vector` 对象。  
@@ -290,7 +288,7 @@ inline bool operator>(
 ### <a name="remarks"></a>备注  
  此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
 ##  <a name="operator_gt_eq"></a>运算符&gt;= 运算符  
  测试运算符左侧的 `concurrent_vector` 对象是否大于或等于右侧的 `concurrent_vector` 对象。  
@@ -324,8 +322,7 @@ inline bool operator>= (
 ### <a name="remarks"></a>备注  
  此运算符的行为等同于为等效的运算符`vector`类`std`命名空间。  
   
- 此方法不是并发安全相对于其他方法，可以修改的并发向量任一`_A`或`_B`。  
+ 此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-

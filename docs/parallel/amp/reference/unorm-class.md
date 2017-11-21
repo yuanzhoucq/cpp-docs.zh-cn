@@ -4,45 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - unorm
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5aa633b67bcd5b313faa475d911300635d727f5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unorm-class"></a>unorm 类
-表示 unorm 数。 每个元素是一个浮点数，范围内的 [0.0 f，1.0 f]。  
+表示 unorm 数字。 每个元素都浮点数的 [0.0 f，1.0 f] 范围内。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +36,7 @@ class unorm;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[unorm 构造函数](#ctor)|已重载。 默认构造函数。 初始化为 0.0f。|  
   
@@ -65,7 +47,7 @@ class unorm;
 |unorm::operator-||  
 |unorm::operator float|转换运算符。 将 unorm 数字转换为浮点值。|  
 |unorm::operator * =||  
-|unorm::operator / =||  
+|/ = unorm::operator 的||  
 |unorm::operator + +||  
 |unorm::operator + =||  
 |unorm::operator =||  
@@ -75,7 +57,7 @@ class unorm;
  `unorm`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -128,4 +110,3 @@ inline explicit unorm(
   
 ## <a name="see-also"></a>另请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

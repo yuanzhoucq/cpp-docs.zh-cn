@@ -1,32 +1,30 @@
 ---
-title: "entry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "entry attribute"
+title: "条目 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.entry
+dev_langs: C++
+helpviewer_keywords: entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d586e2ceaeb922d5f9f96aaa175a5e33ad6ed64
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# entry
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定一个导出函数或在一个模块的常数传递标识在 DLL 入口点。  
+# <a name="entry"></a>entry
+通过标识 DLL 中的入口点，在模块中指定导出的函数或常量。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,29 +33,28 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `id`  
- 的 ID 入口点。  
+ 入口点的 ID。  
   
-## 备注  
- **项** C\+\+ 特性具有与 [项](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **条目**c + + 属性具有相同的功能[条目](http://msdn.microsoft.com/library/windows/desktop/aa366815)MIDL 特性。  
   
-## 示例  
- 为 [idl\_module](../windows/idl-module.md) 参见示例为 **项**的示例使用。  
+## <a name="example"></a>示例  
+ 请参阅示例[idl_module](../windows/idl-module.md)的示例使用**条目**。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`idl_module` 特性|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   

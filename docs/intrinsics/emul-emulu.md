@@ -1,38 +1,38 @@
 ---
-title: "__emul, __emulu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__emulu_cpp"
-  - "__emul"
-  - "__emul_cpp"
-  - "__emulu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__emul 内部函数"
-  - "__emulu 内部函数"
+title: "__emul、 __emulu |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __emulu_cpp
+- __emul
+- __emul_cpp
+- __emulu
+dev_langs: C++
+helpviewer_keywords:
+- __emul intrinsic
+- __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d41c645ee08dab91eeee66d1f96cb9b8aff8178a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __emul, __emulu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft 专用**  
   
- 执行相乘该溢出 32 位整数可以保存。  
+ 执行乘法运算溢出可以容纳的 32 位整数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 __int64 __emul(  
@@ -45,31 +45,31 @@ unsigned __int64 __emulu(
 );  
 ```  
   
-#### 参数  
- \[in\] `a`  
- 乘法的第一个整型操作数。  
+#### <a name="parameters"></a>参数  
+ [in] `a`  
+ 乘法第一个整数操作数。  
   
- \[in\] `b`  
- 乘法的第二个整型操作数。  
+ [in] `b`  
+ 乘法第二个整数操作数。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  乘法的结果。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__emul`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`__emulu`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- `__emul` 采用两个 32 位有符号值并返回相乘的结果作为一个 64 位有符号整数值。  
+## <a name="remarks"></a>备注  
+ `__emul`采用两个 32 位有符号的值和返回作为 64 位有符号的整数值相乘的结果。  
   
- `__emulu` 采用两个 32 位无符号整数值并返回相乘的结果作为一个 64 位无符号整数值。  
+ `__emulu`采用两个 32 位无符号的整数值并返回作为 64 位无符号的整数值相乘的结果。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // emul.cpp  
@@ -101,14 +101,14 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 -268435456 * 2 = -536870912  
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-### 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

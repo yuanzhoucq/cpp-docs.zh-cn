@@ -1,70 +1,61 @@
 ---
-title: "HString::Operator!= 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator!="
-dev_langs: 
-  - "C++"
+title: "Hstring:: Operator ！ = 运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator!=
+dev_langs: C++
 ms.assetid: dcdd2aca-e7d6-4bf1-b2de-03efbb430a93
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9f7042b7ade41fe20d003a50e2d44360f2d74754
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# HString::Operator!= 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringoperator-operator"></a>HString::Operator!= 运算符
 指示两个参数是否不相等。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
+inline bool operator!=( const HString& lhs,   
+                        const HString& rhs) throw()  
   
-   inline bool operator!=(  
-                  const HString& lhs,   
-                  const HString& rhs) throw()  
+inline bool operator!=( const HStringReference& lhs,   
+                        const HString& rhs) throw()  
   
-inline bool operator!=(  
-                  const HStringReference& lhs,   
-                  const HString& rhs) throw()  
+inline bool operator!=( const HString& lhs,   
+                        const HStringReference& rhs) throw()  
   
-inline bool operator!=(  
-                  const HString& lhs,   
-                  const HStringReference& rhs) throw()  
+inline bool operator!=( const HSTRING& lhs,   
+                        const HString& rhs) throw()  
   
-inline bool operator!=(  
-                  const HSTRING& lhs,   
-                  const HString& rhs) throw()  
-  
-inline bool operator!=(  
-                  const HString& lhs,   
-                  const HSTRING& rhs) throw()  
-  
+inline bool operator!=( const HString& lhs,   
+                        const HSTRING& rhs) throw()  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `lhs`  
- 要比较的第一个参数。  `lhs` 可以是 HStringReference 对象或 HSTRING 句柄。  
+ 要比较的第一个参数。 `lhs`可以是 HString 或 HStringReference 对象或 HSTRING 句柄。  
   
  `rhs`  
- 要比较的第二个参数。`rhs` 可以是 HStringReference 对象或 HSTRING 句柄。  
+ 要比较的第二个参数。`rhs` 可以是 HString 或 HStringReference 对象或 HSTRING 句柄。  
   
-## 返回值  
- 如果 `lhs` 和 `rhs` 参数相等，则为 `true`；否则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果`lhs`和`rhs`参数不相等; 否则为`false`。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>要求  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [HString 类](../windows/hstring-class.md)

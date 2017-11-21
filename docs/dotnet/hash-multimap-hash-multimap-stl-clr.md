@@ -1,32 +1,30 @@
 ---
-title: "hash_multimap::hash_multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hash_multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multimap 成员 [STL/CLR]"
+title: "hash_multimap:: hash_multimap (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hash_multimap
+dev_langs: C++
+helpviewer_keywords: hash_multimap member [STL/CLR]
 ms.assetid: a1d576a7-5dc7-4ad9-abef-ee7a13caaec3
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d09f0fd54625d5f6df87305771991c65340309f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hash_multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimaphashmultimap-stlclr"></a>hash_multimap::hash_multimap (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 hash_multimap();  
@@ -49,104 +47,90 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### 参数  
- first  
- 插入范围的开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要插入的范围开始处。  
   
  hashfn  
- 映射到键的哈希函数存储桶。  
+ 哈希与存储桶的映射键的函数。  
   
  last  
- 插入范围的末尾。  
+ 要插入的范围的末尾。  
   
  pred  
- 排序规则序列的谓词。  
+ 排序受控序列的谓词。  
   
- right  
+ 右  
  要插入的对象或范围。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `hash_multimap();`  
   
- 初始化控制序列没有元素，并且默认排序谓词使用默认 `key_compare()`和哈希函数。  使用它来指定空的初始序列，使用控制默认排序和哈希函数。  
+ 使用默认的排序谓词初始化受控的序列不包含任何元素， `key_compare()`，并使用默认哈希运算。 用于指定空的初始受控的序列，使用默认的排序谓词和哈希函数。  
   
  构造函数：  
   
  `explicit hash_multimap(key_compare^ pred);`  
   
- 初始化控制序列没有元素，并且排序谓词使用默认 `pred`和哈希函数。  使用它来指定空的初始序列，使用控制指定排序和默认的哈希函数。  
+ 初始化受控的序列不包含任何元素，与排序的谓词`pred`，并使用默认哈希运算。 用于指定空的初始受控的序列，使用指定的排序谓词和默认哈希函数。  
   
  构造函数：  
   
  `hash_multimap(key_compare^ pred, hasher^ hashfn);`  
   
- 初始化控制序列没有元素，并且排序谓词使用 `pred`和哈希函数`hashfn`。  使用它来指定空的初始序列，使用控制指定排序和哈希函数。  
+ 初始化受控的序列不包含任何元素，与排序的谓词`pred`，并使用哈希运算`hashfn`。 用于指定空的初始受控的序列，使用指定的排序谓词和哈希函数。  
   
  构造函数：  
   
  `hash_multimap(hash_multimap<Key, Mapped>% right);`  
   
- 初始化控制序列，使用序列 `[``right``.`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``.`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`，使用默认排序谓词，和默认哈希函数。  可以使用它来指定初始化的控制序列，该序列是由该hash\_multimap对象`right`控制序列的副本并使用默认的排序谓词和哈希函数。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)、 排序谓词，默认值和默认哈希函数。 用于指定是由 hash_multimap 对象控制的序列的副本的初始受控的序列`right`、 与的默认排序谓词和哈希函数。  
   
  构造函数：  
   
  `hash_multimap(hash_multimap<Key, Mapped>^ right);`  
   
- 初始化控制序列，使用序列 `[``right``->`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``->`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`，使用默认排序谓词，和默认哈希函数。  可以使用它来指定初始化的控制序列，该序列是由该hash\_multimap对象`right`控制序列的副本并使用默认的排序谓词和哈希函数。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)、 排序谓词，默认值和默认哈希函数。 用于指定是由 hash_multimap 对象控制的序列的副本的初始受控的序列`right`、 与的默认排序谓词和哈希函数。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last);`  
   
- `hash_multimap(InIter first, InIter last);`  
-  
- 初始化控制序列，使用序列 `[``first``,` `last``)`，使用默认排序谓词，和默认哈希函数。  使用会使控制序列复制另一个序列，其中包含默认排序谓词和哈希函数中。  
+ 初始化受控的序列与序列 [`first`， `last`)、 排序谓词，默认值和默认哈希函数。 你可以使用它以使用默认的排序谓词和哈希函数使受控的序列的另一个序列，副本。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- 初始化控制序列，使用序列 `[``first``,` `last``)`，使用排序谓词 `pred`，和默认哈希函数。  使用会使控制序列复制另一个序列，其中包含指定排序谓词和默认哈希函数中。  
+ 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`，并使用默认哈希运算。 你可以使用它以使另一个序列，使用指定的排序谓词和默认哈希函数的副本的受控的序列。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- 初始化控制序列，使用序列 `[``first``,` `last``)`,使用排序谓词 `pred`, 和指定哈希函数`hashfn`.  使用会使控制序列复制另一个序列，其中包含指定排序谓词和哈希函数中。  
+ 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`，并使用哈希运算`hashfn`。 你可以使用它以使另一个序列，使用指定的排序谓词和哈希函数的副本的受控的序列。  
   
  构造函数：  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化控制序列的枚举数指定的 `right`序列，并默认排序谓词和具有默认哈希函数。  使用它来为控制序列创建一个另一个由枚举器指定的序列副本，其中包含默认排序谓词和哈希函数。  
+ 初始化与枚举器指定序列的受控的序列`right`、 排序谓词，默认值和默认哈希函数。 你可以使用它来使一个枚举器，使用默认的排序谓词和哈希函数所描述的另一个序列的副本的受控的序列。  
   
  构造函数：  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
-  
- 初始化控制序列的枚举数指定的 `right`序列，并默认排序谓词`pred`和具有默认哈希函数。  使用它来为控制序列创建一个另一个由枚举器指定的序列副本，其中包含指定排序谓词和默认哈希函数。  
+ 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`，并使用默认哈希运算。 你可以使用它以使所描述的枚举，使用指定排序谓词和默认哈希的函数的另一个序列的副本的受控的序列。  
   
  构造函数：  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `key_compare^ pred, hasher^ hashfn);`  
+ 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`，并使用哈希运算`hashfn`。 你可以使用它以使所描述的枚举，使用指定的排序谓词和哈希函数的另一个序列的副本的受控的序列。  
   
- 初始化控制序列的枚举数指定的 `right`序列，并排序谓词`pred`和具认哈希函数`hashfn`。  使用它来为控制序列创建一个另一个由枚举器指定的序列副本，其中包含指定排序谓词和哈希函数。  
-  
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_construct.cpp   
@@ -258,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
   
- **命名空间:** cliext  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::generic\_container](../dotnet/hash-multimap-generic-container-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::generic_container (STL/CLR)](../dotnet/hash-multimap-generic-container-stl-clr.md)   
+ [hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

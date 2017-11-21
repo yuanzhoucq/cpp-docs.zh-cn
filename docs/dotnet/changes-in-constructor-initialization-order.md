@@ -1,49 +1,48 @@
 ---
-title: "以构造函数初始化顺序进行更改 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "构造函数, C++"
+title: "构造函数初始化顺序中的更改 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bdcfea2339bfe7aac93192e88a6ec39ce919c596
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 以构造函数初始化顺序进行更改
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，类构造函数的初始化顺序已经发生变化。  
+# <a name="changes-in-constructor-initialization-order"></a>以构造函数初始化顺序进行更改
+类构造函数初始化顺序已从托管扩展中的 c + + 更改为 Visual c + +。  
   
-## 构造函数初始化顺序的比较  
- 在 C\+\+ 托管扩展中，构造函数的初始化是按以下顺序进行的：  
+## <a name="comparison-of-constructor-initialization-order"></a>构造函数初始化顺序的比较  
+ 在 c + + 托管扩展中，构造函数初始化按下列顺序发生：  
   
-1.  如果存在基类的构造函数则调用该构造函数。  
+1.  构造函数的基类，如果有的话，进行调用。  
   
-2.  计算该类的初始化列表。  
+2.  计算类的初始化列表。  
   
-3.  执行类构造函数的代码正文。  
+3.  执行类构造函数的代码体。  
   
- 此执行顺序与本机 C\+\+ 编程遵守相同的约定。  新 Visual C\+\+ 语言规定了 CLR 类的执行顺序，如下所示：  
+ 执行此顺序遵循相同的约定，如下所示本机 c + + 编程。 新的 Visual c + + 语言规定了 CLR 类的以下执行顺序：  
   
-1.  计算该类的初始化列表。  
+1.  计算类的初始化列表。  
   
-2.  如果存在基类的构造函数则调用该构造函数。  
+2.  构造函数的基类，如果有的话，进行调用。  
   
-3.  执行类构造函数的代码正文。  
+3.  执行类构造函数的代码体。  
   
- 请注意，此更改仅适用于 CLR 类，[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 中的本机类仍遵守以前的约定。  在这两种情况下，这些规则将向上层叠，贯穿给定类的整个层次结构链。  
+ 请注意此更改仅适用于 CLR 类;Visual c + + 中的本机类仍遵循以前的约定。 在这两种情况下，这些规则将向上层叠整个的给定类的整个层次结构链。  
   
- 请考虑以下使用 C\+\+ 托管扩展的代码示例：  
+ 请考虑下面的代码示例使用 c + + 托管扩展：  
   
 ```  
 __gc class A  
@@ -68,15 +67,15 @@ private:
 };  
 ```  
   
- 按照上述的构函数初始化顺序，在构造类 `B` 的新实例，我们应看到如下的执行顺序：  
+ 按照上述构造函数初始化顺序，我们应看到以下顺序执行时新的类的实例`B`构造：  
   
-1.  调用基类 `A` 的构造函数。  将 `_n` 成员初始化为 `1`。  
+1.  基本类的构造函数`A`调用。 `_n`成员初始化为`1`。  
   
-2.  计算类 `B` 的初始化列表。  将 `_m` 成员初始化为 `1`。  
+2.  类的初始化列表`B`计算。 `_m`成员初始化为`1`。  
   
-3.  执行类 `B` 的代码正文。  
+3.  类的代码正文`B`执行。  
   
- 现在请考虑以新 Visual C\+\+ 语法表示的相同代码：  
+ 现在考虑新的 Visual c + + 语法中相同的代码：  
   
 ```  
 ref class A  
@@ -101,20 +100,20 @@ private:
 };  
 ```  
   
- 按照新语法构造的类 `B` 的新实例的执行顺序如下：  
+ 在将新的执行顺序类的实例`B`按照新构造语法是：  
   
-1.  计算类 `B` 的初始化列表。  将 `_m` 成员初始化为 `0`（`0` 是 `_m` 类成员的未初始化值）。  
+1.  类的初始化列表`B`计算。 `_m`成员初始化为`0`(`0`是未初始化的值`_m`类成员)。  
   
-2.  调用基类 `A` 的构造函数。  将 `_n` 成员初始化为 `1`。  
+2.  基本类的构造函数`A`调用。 `_n`成员初始化为`1`。  
   
-3.  执行类 `B` 的代码正文。  
+3.  类的代码正文`B`执行。  
   
- 请注意，对于这些代码示例，相似的语法产生了不同的结果。  类 `B` 的构造函数依赖于基类 `A` 的值来初始化其成员。  但并未调用类 `A` 的构造函数。  如果需要分配内存或资源才能在基类构造函数中生成继承类，则此种依赖关系将是非常危险的。  
+ 请注意相似的语法生成相同的结果，这些代码示例。 类的构造函数`B`取决于基的类中的值`A`来初始化其成员。 但是，类的构造函数`A`尚未调用。 继承的类取决于基类构造函数中发生将内存或资源分配时，这种相关性会特别危险。  
   
-## 从 C\+\+ 托管扩展到 Visual C\+\+ 2010 意味着什么  
- 在许多情况下，对类构造函数执行顺序的更改应对程序员透明，因为基类不了解继承类的行为。  但是，如这些代码示例所阐释的，如果继承类的初始化列表依赖于来自基类成员的值，则继承类的构造函数将受到很大影响。  在将 C\+\+ 托管扩展代码转换为使用新的语法时，请考虑将这种构造移到类构造函数体内，在这里，可保证这种构造在最后执行。  
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>哪些这意味着从 Managed Extensions for c + + 转到 Visual c + + 2010年  
+ 在许多情况下基类，这些类还包含继承的类没有概念，所以应该是行为的透明的程序员对类的构造函数的执行顺序的更改。 但是，如以下代码示例所示，继承类的构造函数时可能会极大地影响其初始化列表取决于基类成员的值。 移动时你的代码从 Managed Extensions for c + + 到新的语法，考虑将这类构造移动到的类构造函数，正文其中保证执行上一次发生。  
   
-## 请参阅  
- [托管类型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
+## <a name="see-also"></a>另请参阅  
+ [托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
  [构造函数](../cpp/constructors-cpp.md)   
- [构造函数初始值设定项](../misc/constructor-initializers.md)
+ 

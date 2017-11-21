@@ -1,37 +1,35 @@
 ---
-title: "BSCMAKE 如何生成 .Bsc 文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "浏览信息文件 (.bsc), 生成"
+title: "BSCMAKE 如何生成。Bsc 文件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: adc340a30fcf0292c3dc7fa0e595d488b4046431
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# BSCMAKE 如何生成 .Bsc 文件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE 用它最有效的方式生成或重新生成 .bsc 文件。  为了避免潜在的问题，了解生成过程是很重要的。  
+# <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE 如何生成 .Bsc 文件
+BSCMAKE 生成或重新生成，以最高效的方式，它可以在.bsc 文件。 若要避免潜在问题，务必了解生成过程。  
   
- 当 BSCMAKE 生成浏览信息文件时，它将 .sbr 文件截断为零长度。  在同一文件后面的生成过程中，零长度（或空）的 .sbr 文件通知 BSCMAKE 该 .sbr 文件没有新的信息可提供。  它使 BSCMAKE 获知不需要更新那部分文件，增量编译就足够了。  在每个生成过程中（除非已指定 \/n 选项），BSCMAKE 首先通过只使用那些已更改的 .sbr 文件来尝试增量更新文件。  
+ 当 BSCMAKE 生成浏览信息文件时，它将截断为零长度的.sbr 文件。 在同一文件的后续生成，期间长度为零 （或空） 的.sbr 文件告诉 BSCMAKE.sbr 文件有以使任何新发布内容。 它可让 BSCMAKE 知道不需要的文件的该部分更新和增量生成就够用了。 在每次生成过程 （除非指定了 /n 选项），BSCMAKE 第一次尝试使用已更改那些.sbr 文件以增量方式更新文件。  
   
- BSCMAKE 查找具有用 \/o 选项指定的名称的 .bsc 文件。  如果未指定 \/o，BSCMAKE 则查找具有第一个 .sbr 文件的基名称和 .bsc 扩展名的文件。  如果此文件存在，BSCMAKE 只使用提供信息的 .sbr 文件来执行浏览信息文件的增量编译。  如果此文件不存在，BSCMAKE 则使用所有 .sbr 文件执行完全编译。  编译规则如下：  
+ BSCMAKE 查找.bsc 文件具有与 /o 选项指定的名称。 如果未指定 /o，BSCMAKE 查找具有的基名称的第一个的.sbr 文件且扩展名为.bsc 文件。 如果该文件存在，则 BSCMAKE 执行使用仅将相关的.sbr 文件的浏览信息文件的增量生成。 如果文件不存在，则 BSCMAKE 执行完全生成使用所有的.sbr 文件。 对于生成的规则如下所示：  
   
--   若要使完全编译成功，所有指定的 .sbr 文件都必须存在并且都必须未截断。  如果某个 .sbr 文件被截断，则在运行 BSCMAKE 前必须重新生成此文件（通过重新编译或汇编）。  
+-   若要成功执行完整生成、 所有指定.sbr 文件必须存在并且不会被截断。 如果被截断的.sbr 文件，你必须重新生成 （通过重新编译或汇编） 之前运行 BSCMAKE。  
   
--   若要使增量编译成功，.bsc 文件必须存在。  所有提供信息的 .sbr 文件（甚至空文件）都必须存在并且都必须在 BSCMAKE 命令行指定。  如果从命令行省略某个 .sbr 文件，则 BSCMAKE 将从此文件中移除其提供的信息。  
+-   若要成功执行为增量生成，必须存在.bsc 文件。 所有相关的.sbr 文件，即使空文件，必须存在并且必须 BSCMAKE 命令行上指定。 如果省略的.sbr 文件从命令行，BSCMAKE 从文件中删除它的贡献。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [生成 .Bsc 文件](../../build/reference/building-a-dot-bsc-file.md)

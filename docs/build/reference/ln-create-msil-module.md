@@ -1,61 +1,60 @@
 ---
-title: "/LN（创建 MSIL 模块） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/LN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LN 编译器选项 [C++]"
-  - "-LN 编译器选项 [C++]"
+title: "-LN （创建 MSIL 模块） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /LN
+dev_langs: C++
+helpviewer_keywords:
+- -LN compiler option [C++]
+- /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 807fd762ab2780b70a395f62efbc72945228b1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /LN（创建 MSIL 模块）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定程序集清单不应插入到输出文件中。  
+# <a name="ln-create-msil-module"></a>/LN（创建 MSIL 模块）
+指定不应将程序集清单插入输出文件中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /LN  
 ```  
   
-## 备注  
- 默认情况下，**\/LN** 无效（将程序集清单插入到输出文件中）。  
+## <a name="remarks"></a>备注  
+ 默认情况下， **/LN**不起作用 （程序集清单插入到输出文件中）。  
   
- 当使用 **\/LN** 时，必须同时使用 [\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md) 选项之一。  
+ 当**/LN**使用时，之一[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)还必须使用选项。  
   
- 清单中不具有程序集元数据的托管程序称作模块。  如果用 [\/c（在不链接的情况下进行编译）](../../build/reference/c-compile-without-linking.md) 和 **\/LN** 进行编译，请在链接器阶段指定 [\/NOASSEMBLY（创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md) 以创建输出文件。  
+ 在清单中没有程序集元数据的托管的程序称为模块。 如果使用编译[（编译而无需链接） 的 /c](../../build/reference/c-compile-without-linking.md)和**/LN**，指定[/NOASSEMBLY （创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md)中来创建输出文件的链接器阶段。  
   
- 如果希望采用基于组件的方法来生成程序集，则可能需要创建模块。即，可以创作类型并将其编译进模块中。然后，您可以从一个或多个模块生成程序集。有关从模块创建程序集的更多信息，请参见 [用作链接器输入的 .netmodule 文件](../../build/reference/netmodule-files-as-linker-input.md) 或 [Al.exe（程序集链接器）](../Topic/Al.exe%20\(Assembly%20Linker\).md)。  
+ 你可能想要创建模块，如果你想要采用的基于组件的方法来生成程序集。  也就是说，可以创建类型，并将它们编译到模块。  然后，你可以从一个或多个模块生成的程序集。  从模块创建程序集的详细信息，请参阅[用作链接器输入的.netmodule 文件](../../build/reference/netmodule-files-as-linker-input.md)或[Al.exe （程序集链接器）](/dotnet/framework/tools/al-exe-assembly-linker)。  
   
- 代码模块的默认文件扩展名为 .netmodule。  
+ 模块的默认文件扩展名为 .netmodule。  
   
- 在 Visual C\+\+ 2005 之前的 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 版本中，使用 **\/clr:noAssembly** 创建模块。  
+ 在[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]Visual c + + 2005年之前的版本中，与创建模块**/clr:noAssembly**。  
   
- Visual C\+\+ 链接器接受 .netmodule 文件，因为输入和链接器生成的输出文件是程序集还是 .netmodule 不在输入到链接器的运行时关联任何 .netmodules。有关详细信息，请参阅[用作链接器输入的 .netmodule 文件](../../build/reference/netmodule-files-as-linker-input.md)。  
+ Visual C++ 链接器接受 .netmodule 文件作为输入，链接器生成的输出文件将是与输入到链接器的任何 .netmodule 没有运行时依赖关系的程序集或 .netmodule。  有关详细信息，请参阅 [用作链接器输入的 .netmodule 文件](../../build/reference/netmodule-files-as-linker-input.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
--   在链接器阶段指定 [\/NOASSEMBLY（创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md) 以创建输出文件。  
+-   指定[/NOASSEMBLY （创建 MSIL 模块）](../../build/reference/noassembly-create-a-msil-module.md)中来创建输出文件的链接器阶段。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
 -   不能以编程方式更改此编译器选项。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

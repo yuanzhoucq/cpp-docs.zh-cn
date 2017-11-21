@@ -1,32 +1,31 @@
 ---
-title: "如何：检索 Windows 版本 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows [C++], 使用 Visual C++ 检索版本"
-  - "Windows [C++], 版本"
+title: "如何： 检索 Windows 版本 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], version
+- Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 65e2c342b1c7be86035955cf2d22fde838c0c3ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：检索 Windows 版本 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何检索当前操作系统的平台和版本信息。  此信息存储在 <xref:System.Environment.OSVersion%2A?displayProperty=fullName> 属性中，由粗略描述 Windows 版本的枚举和包含操作系统实际版本的 <xref:System.Environment.Version%2A> 对象组成。  
+# <a name="how-to-retrieve-the-windows-version-ccli"></a>如何：检索 Windows 版本 (C++/CLI)
+下面的代码示例演示如何检索当前操作系统的平台和版本信息。 此信息存储在<xref:System.Environment.OSVersion%2A?displayProperty=fullName>属性组成从广义上讲描述的 Windows 版本的枚举和<xref:System.Environment.Version%2A>对象，其中包含实际版本的操作系统。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // os_ver.cpp  
@@ -64,6 +63,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

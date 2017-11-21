@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- container classes
+dev_langs: C++
+helpviewer_keywords: container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 2d8485f7fa62f2aaf3d3e6be920620aaf14fd7ca
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 97f8d1a0e6e84fe7ce509d7654e7f0d72eae3e36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sample-container-members"></a>示例容器成员
 > [!NOTE]
@@ -72,4 +54,3 @@ ms.lasthandoff: 02/24/2017
 |[rend](../standard-library/container-class-rend.md)|该成员函数返回一个反向访问迭代器，其指向序列的第一个元素（或刚超出空序列末尾位置）并指示反向序列的末尾。|  
 |[size](../standard-library/container-class-size.md)|返回受控序列的长度，在常量时间内不考虑受控序列的长度。|  
 |[swap](../standard-library/container-class-swap.md)
-

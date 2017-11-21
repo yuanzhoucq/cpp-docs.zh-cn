@@ -1,32 +1,30 @@
 ---
-title: "licensed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.licensed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "licensed attribute"
+title: "授权 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.licensed
+dev_langs: C++
+helpviewer_keywords: licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 36d04d47f65e0a37bb5d4807480a4f898d42039a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# licensed
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示其适用的 COM 对象授权，使用 **IClassFactory2**，并且必须实例化。  
+# <a name="licensed"></a>licensed
+指示它所应用于的 COM 对象授予许可，并且必须使用实例化**IClassFactory2**。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,10 +32,10 @@ caps.handback.revision: 11
   
 ```  
   
-## 备注  
- **允许** C\+\+ 特性具有与 [允许](http://msdn.microsoft.com/library/windows/desktop/aa367070) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **许可**c + + 属性具有相同的功能[许可](http://msdn.microsoft.com/library/windows/desktop/aa367070)MIDL 特性。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_licensed.cpp  
@@ -58,20 +56,19 @@ public:
 [module(name="MyLibrary", version="1.0", helpstring="My Library Block")];  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
-|**可重复**|否|  
+|**适用对象**|**class**， `struct`|  
+|**可重复**|No|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [类特性](../windows/class-attributes.md)   

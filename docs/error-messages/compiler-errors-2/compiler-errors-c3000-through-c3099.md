@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -44,19 +43,17 @@ helpviewer_keywords:
 - C3092
 - C3093
 - C3098
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>编译器错误 C3000 通过 C3099
 文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。  
@@ -168,4 +165,3 @@ ms.lasthandoff: 10/10/2017
 |[编译器错误 C3097](compiler-error-c3097.md)|*属性*： 特性必须与作用域程序集: 或模块:|  
 |编译器错误 C3098|*标识符*： 属性有任何用户定义的构造函数|  
 |[编译器错误 C3099](compiler-error-c3099.md)|*关键字*： 使用 [system:: attributeusageattribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] 用于托管/WinRT 特性|  
-

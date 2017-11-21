@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -17,30 +15,15 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5b5ffafb841fcb883dc66880933e8d123256e575
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c660170872662a72a8f4f48b6d6ee81ed0d2b8d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="algorithms"></a>算法
 算法是 C++ 标准库的基础部分。 算法不与容器本身一起使用，而与迭代器一起使用。 因此，大多数（如果不是全部）C++ 标准库容器都可以使用相同的算法。 本部分讨论 C++ 标准库算法的约定和术语。  
@@ -48,11 +31,11 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>备注  
  算法模板函数的说明使用几个速记短语：  
   
--   短语“in the range [*A*, *B*)”表示从 *A* 开始到 *B*（不包括 B）的零个或多个离散值的序列。仅当可以从* A 到达 *B* 时，范围有效；*可将 *A* 存储在对象 *N* (*N* = *A*) 中，零次或多次递增该对象 (++*N*)，使该对象在递增有限次数后等于 *B* (N == B*)。*  
+-   短语“in the range [*A*, *B*)”表示从 *A* 开始到 *B*（不包括 B）的零个或多个离散值的序列。仅当可以从 *A 到达 *B* 时，范围有效；*可将 *A* 存储在对象 *N* (*N* = *A*) 中，零次或多次递增该对象 (++*N*)，使该对象在递增有限次数后等于 *B* (N == B*)。*  
   
 -   短语“each *N* in the range [*A*, *B*)”表示 *N* 以值 *A* 开始并递增零次或多次，直至等于值 *B*。*N* == *B* 的情况不在范围内。  
   
--   短语“the lowest value of *N* in the range [*A*, *B*) such that *X*”表示确定范围 [*A*, *B*) 中的每个 *N* 是否满足条件 *X*，直到满足条件* X*。  
+-   短语“the lowest value of *N* in the range [*A*, *B*) such that *X*”表示确定范围 [*A*, *B*) 中的每个 *N* 是否满足条件 *X*，直到满足条件 *X*。  
   
 -   短语“the highest value of *N* in the range [*A*, *B*) such that *X*”表示确定范围 [*A*, *B*) 中的每个 *N* 是否满足 *X*。 每次满足条件 *X*，该函数即在 `K` 中存储 *N* 的一个副本。 如果发生此类存储，则该函数将 *N* 的最终值（等于 *B*）替换为值 `K`。 但是，对于双向或随机访问迭代器，这也可以是意味着 *N* 从范围内的最高值开始在范围内递减，直到满足条件 *X*。  
   
@@ -79,5 +62,4 @@ ms.lasthandoff: 02/24/2017
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -1,60 +1,59 @@
 ---
-title: "“颜色”窗口（图标的图像编辑器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.colorswindow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "图像编辑器 [C++]，调色板"
-  - "调色板"
-  - "颜色 [C++]，图像"
-  - "图像编辑器 [C++]，“颜色”窗口"
-  - "屏幕颜色选择器"
-  - "调色板，图像编辑器"
-  - "“颜色”窗口"
-  - "颜色 [C++]，反转"
-  - "颜色 [C++]"
-  - "颜色指示符"
+title: "颜色窗口 （图标的图像编辑器） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.colorswindow
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], Colors Palette
+- Colors Palette
+- colors [C++], image
+- Image editor [C++], Colors window
+- Screen-Color Selector
+- Colors Palette, Image editor
+- Colors window
+- colors [C++], inverting
+- colors [C++]
+- Color Indicator
 ms.assetid: 1d9b6c16-bf1d-4488-a19b-5d6fe601846a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 48fb12f9aa96084f74a8a6f33d5e0f71d0d2b6bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “颜色”窗口（图标的图像编辑器）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="colors-window-image-editor-for-icons"></a>“颜色”窗口（图标的图像编辑器）
 “颜色”窗口有两部分：  
   
-1.  “颜色调色板”是一个颜色示例阵列，表示可以使用的颜色。  当使用图形工具时，可以单击这些示例以选择前景色和背景色。  
+1.  “颜色调色板”是一个颜色示例阵列，表示可以使用的颜色。 当使用图形工具时，可以单击这些示例以选择前景色和背景色。  
   
 2.  “颜色指示器”显示前景色和背景色以及屏幕和反色的选择器。  
   
-     ![“颜色”窗口](../windows/media/vccolorswindow.gif "vcColorsWindow")  
+     ![颜色窗口](../windows/media/vccolorswindow.gif "vcColorsWindow")  
 “颜色”窗口  
   
 > [!NOTE]
->  **“屏幕颜色”**和**“反色”**工具仅可用于图标和光标。  
+>  **屏幕颜色**和**反色**工具属性仅适用于图标和光标。  
   
- 可以将“颜色”窗口与[“图像编辑器”工具栏](../mfc/toolbar-image-editor-for-icons.md)配合使用。  
+ 你可以使用颜色窗口[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。 有关手动将资源文件添加到托管项目、访问资源、显示静态资源以及将资源字符串分配给属性的信息，请参阅[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+
   
-## 要求  
+## <a name="requirements"></a>要求  
  无  
   
-## 请参阅  
- [显示或隐藏“颜色”窗口](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
- [Creating Transparent or Inverse Regions in Device Images](../mfc/creating-transparent-or-inverse-regions-in-device-images.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [“自定义颜色选择器”对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>另请参阅  
+ [显示或隐藏颜色窗口](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
+ [在设备图像中创建透明或反转区域](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
+ [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [自定义颜色选择器对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)

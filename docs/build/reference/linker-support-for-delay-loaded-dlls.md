@@ -1,44 +1,43 @@
 ---
-title: "链接器的延迟加载 DLL 支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 的延迟加载, 链接器支持"
+title: "链接器延迟加载 Dll 的支持 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 链接器的延迟加载 DLL 支持
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 链接器现在支持 DLL 的延迟加载。  这使您不必再用 [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] 函数 **LoadLibrary** 和 **GetProcAddress** 来实现 DLL 延迟加载。  
+# <a name="linker-support-for-delay-loaded-dlls"></a>链接器的延迟加载 DLL 支持
+Visual c + + 链接器现在支持 Dll 的延迟的加载。 这使您需要使用 Windows SDK 函数**LoadLibrary**和**GetProcAddress**来实现延迟加载的 DLL。  
   
- 在 Visual C\+\+ 6.0 版之前，在运行时加载 DLL 的唯一办法是使用 **LoadLibrary** 和 **GetProcAddress** 函数；当使用操作系统的可执行文件或 DLL 被加载之后，操作系统才加载 DLL。  
+ 在 Visual c + + 6.0 中之前, 在运行时加载 DLL 的唯一方法是通过使用**LoadLibrary**和**GetProcAddress**; 操作系统将加载 DLL 时可执行文件或 DLL 使用已加载。  
   
- 从 Visual C\+\+ 6.0 开始，与 DLL 静态链接时，链接器提供了一些选项，将 DLL 的加载延迟到程序调用该 DLL 中的函数时才进行。  
+ 从开始 Visual c + + 6.0 中，静态链接的 DLL 时，链接器提供了选项延迟加载 DLL，直到该程序调用该 DLL 中的函数。  
   
- 应用程序可以使用具有 Helper 函数的 [\/DELAYLOAD（延迟加载导入）](../../build/reference/delayload-delay-load-import.md)链接器选项延迟加载 DLL（Visual C\+\+ 提供的默认实现）。  Helper 函数将在运行时通过调用 **LoadLibrary** 和 **GetProcAddress** 为您加载 DLL。  
+ 应用程序可以延迟加载 DLL 使用[/DELAYLOAD （延迟加载导入）](../../build/reference/delayload-delay-load-import.md)与帮助器函数 （Visual c + + 提供的默认实现） 的链接器选项。 Helper 函数将加载的 DLL 在运行时通过调用**LoadLibrary**和**GetProcAddress**为你。  
   
- 在下列情况下，应考虑延迟加载 DLL：  
+ 你应考虑延迟加载 DLL，如果：  
   
--   程序可能不调用 DLL 中的函数。  
+-   你的程序不可能在 DLL 中调用的函数。  
   
--   可能直到程序执行后期才调用 DLL 中的函数。  
+-   DLL 中的函数可能不会调用直到较晚的程序的执行。  
   
- 可在 .EXE 或 .DLL 项目生成过程中指定延迟加载 DLL。  延迟加载一个或多个 DLL 的 DLL 项目本身不应调用 Dllmain 中的延迟加载入口点。  
+ 可以在下列任一工具的生成过程中指定 DLL 的延迟的加载。EXE 或。DLL 项目。 答:。延迟的一个或多个 Dll 加载的 DLL 项目不应本身调用延迟加载的入口点位于 Dllmain 中。  
   
- 下列主题描述延迟加载 DLL：  
+ 以下主题介绍延迟加载 Dll:  
   
 -   [指定要延迟加载的 DLL](../../build/reference/specifying-dlls-to-delay-load.md)  
   
@@ -54,10 +53,10 @@ Visual C\+\+ 链接器现在支持 DLL 的延迟加载。  这使您不必再用
   
 -   [延迟加载 DLL 的约束](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [了解 Helper 函数](http://msdn.microsoft.com/zh-cn/6279c12c-d908-4967-b0b3-cabfc3e91d3d)  
+-   [了解 Helper 函数](understanding-the-helper-function.md)  
   
--   [开发您自己的 Helper 函数](../../build/reference/developing-your-own-helper-function.md)  
+-   [开发自己的 Helper 函数](../../build/reference/developing-your-own-helper-function.md)  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>另请参阅  
+ [Visual c + + 中的 Dll](../../build/dlls-in-visual-cpp.md)   
  [链接](../../build/reference/linking.md)

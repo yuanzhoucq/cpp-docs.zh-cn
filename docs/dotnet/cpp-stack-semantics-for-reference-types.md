@@ -1,67 +1,65 @@
 ---
-title: "参考类型的 C++ 堆栈语义 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引用类型, C++ 堆栈语义"
+title: "对于引用类型的 c + + 堆栈语义 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 参考类型的 C++ 堆栈语义
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 Visual C\+\+ 2005 之前，引用类型的实例只能用`new` 运算符来创建，对象被创建在垃圾回收堆上。  但是现在，您可以用相同的语法，在栈上创建本机的引用类型实例。  因此，您无需使用 [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 创建引用类型的对象。  此外，当对象超出范围时，编译器调用对象的析构函数。  
+# <a name="c-stack-semantics-for-reference-types"></a>参考类型的 C++ 堆栈语义
+在 Visual C++ 2005 之前，只能使用 `new` 运算符来创建引用类型的实例（这会在垃圾回收堆上创建对象）。 但是现在，您可以使用用来在堆栈上创建本机类型的实例的相同语法创建引用类型的实例。 因此，不需要使用[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)以创建一个引用类型的对象。 此外，当对象超出范围时，编译器将调用对象的析构函数。  
   
-## 备注  
- 当您使用堆栈语义创建引用类型实例时，编译器会在垃圾回收堆上内部地创建实例。 \(使用 `gcnew`\)。  
+## <a name="remarks"></a>备注  
+ 当您使用堆栈语义创建引用类型的实例时，编译器内部会在垃圾回收堆上创建实例（使用 `gcnew`）。  
   
- 当函数的签名或返回类型包括一个按值引用的类型的实例时，则函数会因为需要特殊处理而被标记（使用modreq）。  此特殊处理当前仅由 Visual C\+\+ 客户端提供；其他语言当前不支持用堆栈语义创建出来的引用类型的函数或数据。  
+ 当函数的签名或返回类型包括一个按值引用类型的实例时，会在元数据中将此函数标记为需要特殊处理（使用 modreq）。 此特殊处理当前仅由 Visual C++ 客户端提供；其他语言当前不支持使用借助堆栈语义创建的引用类型的使用函数或数据。  
   
- 其中一个使用`gcnew` （动态分配）堆栈语义的原因是，某些类型可能没有析构函数。  此外，如果在函数签名中使用堆栈语义来创建引用类型，无法让您的函数在除Visual C\+\+ 之外的语言上使用。  
+ 使用 `gcnew`（动态分配）而不是堆栈语义的一个原因是此类型是否有析构函数。 此外，如果您希望由 Visual C++ 之外的语言使用您的函数，则无法使用在函数签名中借助堆栈语义创建的引用类型。  
   
- 编译器将不会为引用类型生成复制构造函数。  因此，如果在签名中定义的函数使用了按值引用的类型，您必须为引用类型定义一个复制构造函数。  引用类型的复制构造函数具有以下形式的签名：`R(R%){}`。  
+ 编译器将不会为引用类型生成复制构造函数。 因此，如果在签名中定义了使用按值引用类型的函数，则必须为该引用类型定义一个复制构造函数。 引用类型的复制构造函数具有以下形式的签名：`R(R%){}`。  
   
- 编译器不会为引用类型生成默认的赋值运算符。  赋值运算符允许您用堆栈语义创建一个对象，并且其可以由现有的由堆栈语义创建出的对象初始化。  引用类型的赋值运算符都有以下形式的签名：`void operator=( R% ){}`。  
+ 编译器不会为引用类型生成默认的赋值运算符。 赋值运算符允许您使用堆栈语义创建一个对象，并且借助使用堆栈语义创建的现有对象对其进行初始化。 引用类型的赋值运算符具有以下形式的签名：`void operator=( R% ){}`。  
   
- 如果类型的析构函数释放重要资源和使用堆栈语义的引用类型时，不需要显式调用析构函数 \(或调用 `delete`。\)  有关引用在类型的析构函数的详细信息，请参见 [Visual C\+\+ 中的析构函数和终结器](../misc/destructors-and-finalizers-in-visual-cpp.md)。  
+ 如果您的类型的析构函数释放重要资源并且您将堆栈语义用于引用类型，则不需要显式调用析构函数（或调用 `delete`）。 引用类型中的析构函数的详细信息，请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
   
- 编译器生成的赋值运算符将遵循标准 C\+\+规范与以下这些额外规定：  
+ 编译器生成的赋值运算符将遵循标准的 C++ 规则以及以下额外规则：  
   
--   任何类型为句柄引用类型的非静态数据成员都是被浅表复制（与对待指针类型的非静态数据成员一样）。  
+-   任何类型为指向引用类型的句柄的非静态数据成员都将被浅表复制（处理方式与类型为指针的非静态数据成员一样）。  
   
--   任何类型是值类型的非静态数据成员都将被浅表复制。  
+-   任何类型为值类型的非静态数据成员都将被浅表复制。  
   
--   任何类型为引用类型的实例的非静态数据成员将调用引用类型的复制构造函数。  
+-   任何类型为引用类型的实例的非静态数据成员都将调用引用类型的复制构造函数。  
   
- 编译器还提供 `%` 一元运算符用于将使用堆栈语义创建的引用类型的实例变为其基础句柄类型。  
+ 编译器还提供 `%` 一元运算符，以将使用堆栈语义创建的引用类型的实例转换为其基础句柄类型。  
   
- 堆栈语义不可用于以下的引用类型：  
+ 以下引用类型不可与堆栈语义一起使用：  
   
--   [委托](../windows/delegate-cpp-component-extensions.md)  
+-   [委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)  
   
--   [数组](../windows/arrays-cpp-component-extensions.md)  
+-   [阵列](../windows/arrays-cpp-component-extensions.md)  
   
 -   <xref:System.String>  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 下面的代码示例展示了如何用堆栈语义声明一个引用类型的实例，赋值运算符函数和复制构造函数如何工作，以及如何使用现有的堆栈语义创建的引用类型来初始化跟踪引用。  
+### <a name="description"></a>描述  
+ 以下代码示例演示了如何使用堆栈语义声明引用类型的实例，赋值运算符和复制构造函数如何工作，以及如何借助使用堆栈语义创建的引用类型来初始化跟踪引用。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // stack_semantics_for_reference_types.cpp  
@@ -109,7 +107,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 98  
@@ -119,5 +117,5 @@ int main() {
 13  
 ```  
   
-## 请参阅  
- [类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)
+## <a name="see-also"></a>另请参阅  
+ [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)

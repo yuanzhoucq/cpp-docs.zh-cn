@@ -1,32 +1,30 @@
 ---
-title: "library_block | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.library_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "library_block attribute"
+title: "library_block |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.library_block
+dev_langs: C++
+helpviewer_keywords: library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e0255002a8235f4e8a36d4b43df520d6e26865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# library_block
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 IDL 库中的构造块。  
+# <a name="libraryblock"></a>library_block
+将放置在该 IDL 库块内的构造。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 10
   
 ```  
   
-## 备注  
- 当您将在库中的构造块，确保它将传递给类型库，无论其是否引用。  默认情况下， [coclass](../windows/coclass.md)、 [dispinterface](../windows/dispinterface.md)和 [idl\_module](../windows/idl-module.md) 属性修改的构造仅在库中放置块。  
+## <a name="remarks"></a>备注  
+ 当你将放在库块内的构造时，你确保，它将传递到类型库，而不考虑是否引用它。 默认情况下，唯一的构造将修改通过[组件类](../windows/coclass.md)，[调度接口](../windows/dispinterface.md)，和[idl_module](../windows/idl-module.md)的库块中放置的属性。  
   
-## 示例  
- 在下面的代码中，自定义接口放置在库中块。  
+## <a name="example"></a>示例  
+ 在下面的代码中，自定义接口被放置到的库块。  
   
 ```  
 // cpp_attr_ref_library_block.cpp  
@@ -51,20 +49,19 @@ __interface IMyInterface {
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|任何位置|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [编译器特性](../windows/compiler-attributes.md)   
+ [独立特性](../windows/stand-alone-attributes.md)   

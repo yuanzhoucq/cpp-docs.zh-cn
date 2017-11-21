@@ -1,32 +1,30 @@
 ---
-title: "appobject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.appobject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appobject attribute"
+title: "appobject |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.appobject
+dev_langs: C++
+helpviewer_keywords: appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dbdf0ac568990ca2702e81ceef1aae564f3d1be3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# appobject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-标识 coclass 为应用程序对象，与完整的 .exe 应用程序，并指示 coclass 的功能和特性是全局可用本 [类型库](../mfc/automation-clients-using-type-libraries.md)。  
+# <a name="appobject"></a>appobject
+标识为应用程序对象，这些关联与完整.exe 应用程序，并指示是否在此全局提供的函数和属性组件类组件类[类型库](../mfc/automation-clients-using-type-libraries.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 10
   
 ```  
   
-## 备注  
- **appobject** C\+\+ 特性具有与 [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Appobject** c + + 属性具有相同的功能[appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 特性。  
   
-## 示例  
- 下面的代码演示包含 **appobject**的属性后的简单类定义块:  
+## <a name="example"></a>示例  
+ 下面的代码演示前面要加特性块，其中包含一个简单的类定义**appobject**:  
   
 ```  
 // cpp_attr_ref_appobject.cpp  
@@ -55,21 +53,20 @@ class A : public ICustom {
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
-|**可重复**|否|  
+|**适用对象**|**class**， `struct`|  
+|**可重复**|No|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   

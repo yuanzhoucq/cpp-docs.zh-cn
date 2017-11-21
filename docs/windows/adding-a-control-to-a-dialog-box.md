@@ -1,56 +1,56 @@
 ---
-title: "将控件添加到对话框 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "对话框, 将控件添加到"
-  - "对话框控件, 添加到对话框"
-  - "控件 [C++], 添加到对话框"
+title: "将控件添加到对话框 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.dialog
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, adding controls to
+- dialog box controls, adding to dialog boxes
+- controls [C++], adding to dialog boxes
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 021b655312419f52fc120c3d86f2dcc79790739f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 将控件添加到对话框
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 将控件添加到对话框  
+# <a name="adding-a-control-to-a-dialog-box"></a>将控件添加到对话框
+### <a name="to-add-a-control-to-a-dialog-box"></a>将控件添加到对话框  
   
-1.  确保对话框选项卡式窗口是编辑器框架中的当前文档。 如果对话框不是当前文档，则你不会在“工具箱”中看到“对话框编辑器选项卡”。  
+1.  确保对话框选项卡式窗口是编辑器框架中的当前文档。 如果对话框不是当前文档，则你不会在“工具箱”  中看到“对话框编辑器选项卡” 。  
   
-2.  在[工具箱窗口](../Topic/Toolbox.md)的[对话框编辑器选项卡](../mfc/dialog-editor-tab-toolbox.md)上，选择所需的控件，然后：  
+2.  在 [工具箱窗口](../windows/dialog-editor-tab-toolbox.md) 的 [对话框编辑器选项卡](/visualstudio/ide/reference/toolbox)上，选择所需的控件，然后：  
   
-    -   单击对话框中想要放置控件的位置。 控件在你单击的位置出现。 有关信息，请参阅[添加多个控件](../mfc/adding-multiple-controls.md)。  
+    -   单击对话框中想要放置控件的位置。 控件在你单击的位置出现。 有关信息，请参阅 [添加多个控件](../windows/adding-multiple-controls.md)。  
   
-         \- 或 \-  
+         \- 或 -  
   
-    -   将控件从“工具箱”窗口拖放到对话框上的该位置。 有关详细信息，请参阅[添加控件时调整其大小](../mfc/sizing-a-control-while-you-add-it.md)。  
+    -   将控件从“工具箱”窗口拖放到对话框上的该位置。 有关详细信息，请参阅 [添加控件时调整其大小](../windows/sizing-a-control-while-you-add-it.md)。  
   
-         \- 或 \-  
+         \- 或 -  
   
     -   双击“工具箱”窗口（显示在对话框中）中的控件，然后将控件重新定位到所选位置。  
   
- 有关“工具箱”窗口中提供的控件类型的信息，请参阅[“工具箱”窗口 \-\>“对话框编辑器”选项卡](../mfc/dialog-editor-tab-toolbox.md)。  
+ 有关“工具箱”窗口中提供的控件类型的信息，请参阅 [“工具箱”窗口 -&gt;“对话框编辑器”选项卡](../windows/dialog-editor-tab-toolbox.md)。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南”[](../Topic/Resources%20in%20Desktop%20Apps.md)中的*应用程序中的资源*。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  要求  
   
  Win32  
   
-## 请参阅  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
+## <a name="see-also"></a>另请参阅  
+ [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
+ [添加事件处理程序对话框控件](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)
+

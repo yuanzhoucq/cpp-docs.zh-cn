@@ -1,32 +1,30 @@
 ---
-title: "如何：在 C++/CLI 中定义和使用枚举 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum 类, 指定基本类型"
+title: "如何： 定义和使用枚举在 C + + /cli CLI |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f4243400f20ae30fe1a2bc3826f052eb534297b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中定义和使用枚举
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题讨论在 C\+\+\/CLI 枚举。  
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定义和使用枚举
+本主题讨论枚举在 C + + /cli CLI。  
   
-## 指定枚举的基础类型  
- 默认情况下，枚举的基础类型为 `int`。但是，可指定类型将签名或 `int`、`short`、`long`、`__int32`或 `__int64`类未签名的窗体。还可以使用 `char`。  
+## <a name="specifying-the-underlying-type-of-an-enum"></a>指定枚举的基础类型  
+ 默认情况下，枚举的基础类型是`int`。  但是，可以指定的类型是带符号或无符号形式的`int`， `short`， `long`， `__int32`，或`__int64`。  你还可以使用`char`。  
   
 ```  
 // mcppv2_enum_3.cpp  
@@ -47,14 +45,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **The**  
-**0**  
-**1**  
-**2**   
-## 如何在托管和标准枚举之间转换  
- 不是枚举和整型之间的标准转换；需要转换。  
+```Output  
+sun  
+0  
+1  
+2  
+```  
+  
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>如何托管和标准枚举之间转换  
+ 枚举和整型类型; 之间没有标准转换强制转换是必需的。  
   
 ```  
 // mcppv2_enum_4.cpp  
@@ -74,26 +75,29 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **并 day2 是相同的。**   
-## 运算符和枚举  
- 下列运算符均有效在 C\+\+\/CLI 的枚举：  
+```Output  
+a and day2 are the same  
+```  
+  
+## <a name="operators-and-enums"></a>运算符和枚举  
+ 以下运算符在上都有效枚举在 C + + /cli CLI:  
   
 |运算符|  
-|---------|  
-|\=\= \!\= \< \> \<\= \>\=|  
-|\+ \-|  
+|--------------|  
+|== != \< > \<= >=|  
+|+ -|  
 |&#124; ^ & ~|  
-|\+\+ \-\-|  
+|++ --|  
 |sizeof|  
   
- 运算符&#124;^ & &#124; C\/C\+\+\-\-为枚举仅定义与基础整数类型，不包括 bool。两个操作数必须都是枚举类型。  
+ 运算符 &#124;^ & ~ + +-仅为枚举定义与基础类型，不包括 bool 的整型。  两个操作数必须是枚举类型。  
   
- 编译器不执行静态或动态的枚举检查操作的结果；操作可能会导致枚举的枚举数的值不在有效范围内。  
+ 编译器将不对执行静态或动态检查结果的枚举操作;操作可能会导致不中枚举的有效枚举器的范围的值。  
   
 > [!NOTE]
->  比在 C\+\+\/CLI 托管枚举类显著的不同 C\+\+11 介绍枚举类输入非托管代码。  具体而言，C\+\+11 枚举类类型不支持与托管枚举类输入 C\+\+\/CLI 的运算符，并且，C\+\+\/CLI 源代码必须提供的枚举声明类的可访问性说明符以与非托管 \(\) 声明类 C\+\+11 枚举区分它们。  有关枚举的更多信息，C\+\+\/CX 在 C\+\+\/CLI 类，而且，C\+\+11，请参见 [enum class](../windows/enum-class-cpp-component-extensions.md)。  
+>  C + + 11 引入了枚举类类型在非托管代码中的是明显不同于托管的枚举类，在 C + + /cli CLI。 具体而言，C + + 11 枚举类类型不支持与托管的枚举类类型相同的运算符在 C + + /cli CLI 和 C + + /cli CLI 源代码必须提供在托管枚举可访问性说明符类声明以将它们与非托管 （c + + 区分开来11） 枚举类声明。 有关枚举类，在 C + + /cli CLI，C + + /CX 中，以及 C + + 11 中，请参阅[枚举类](../windows/enum-class-cpp-component-extensions.md)。  
   
 ```  
 // mcppv2_enum_5.cpp  
@@ -128,10 +132,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **4**  
-**1**  
-**True**   
-## 请参阅  
- [enum class](../windows/enum-class-cpp-component-extensions.md)
+```Output  
+4  
+1  
+True  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [枚举类](../windows/enum-class-cpp-component-extensions.md)

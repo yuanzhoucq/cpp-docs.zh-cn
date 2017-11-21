@@ -1,33 +1,33 @@
 ---
-title: "使用 OLE DB 记录视图 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleDBRecordView 类, 概述"
-  - "MFC, 记录视图"
-  - "OLE DB 记录视图"
-  - "OLE DB, 记录视图"
-  - "记录视图, 记录视图对象"
-  - "行集合, 记录视图"
+title: "使用 OLE DB 记录视图 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB record views
+- COleDBRecordView class, overview
+- rowsets, record views
+- record views, record view objects
+- OLE DB, record views
+- MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c4e57f320c8b207e7b1c8721ab25744cd1f128bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 OLE DB 记录视图
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果要在 MFC 应用程序中显示 OLE DB 行集合数据，则应使用 MFC 类 [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)。  从 `COleDBRecordView` 中创建的记录视图对象使您可以在 MFC 控件中显示数据库记录。  记录视图是一个对话框窗体视图，该视图直接与从 `CRowset` 模板类创建的 OLE DB 行集合对象相连接。  获取此行集合对象的句柄很简单：  
+# <a name="using-ole-db-record-views"></a>使用 OLE DB 记录视图
+如果你想要在 MFC 应用程序中显示 OLE DB 行集数据，则应使用 MFC 类[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)。 从创建记录视图对象`COleDBRecordView`使你可以在 MFC 控件中显示数据库记录。 记录视图是直接连接到从创建的 OLE DB 行集对象的对话框窗体视图`CRowset`模板类。 获取行集对象的句柄很简单：  
   
 ```  
 COleDBRecordView myRecordView;  
@@ -36,10 +36,10 @@ COleDBRecordView myRecordView;
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- 此视图在对话框的控件中显示 `CRowset` 对象的字段。  `COleDBRecordView` 对象使用对话框数据交换 \(DDX\) 和 `CRowset` 内置的导航功能（**MoveFirst**、`MoveNext`、`MovePrev` 和 `MoveLast`）来自动实现窗体上的控件和行集合的字段之间的数据移动。  `COleDBRecordView` 跟踪行集合中用户的位置以便于记录视图能够更新用户界面并提供 [OnMove](../Topic/COleDBRecordView::OnMove.md) 方法用于在移至另一记录前更新当前记录。  
+ 视图显示的字段`CRowset`对话框的控件中的对象。 `COleDBRecordView`对象使用对话框数据交换 (DDX) 和导航功能内置于`CRowset`(**MoveFirst**， `MoveNext`， `MovePrev`，和`MoveLast`) 以自动进行的数据移动之间在窗体和行集的字段的控件。 `COleDBRecordView`将跟踪的行集中的用户的位置，以便记录视图可以更新用户界面并提供[OnMove](../../mfc/reference/coledbrecordview-class.md#onmove)再转移到另一个更新当前记录方法。  
   
- 可以将 DDX 功能与 **COleDbRecordView** 一起使用，以便直接从数据库记录集中获取数据，并在对话框控件中显示它。  应将 **DDX\_\*** 方法（如 `DDX_Text`）而不是 **DDX\_Field\*** 函数（如 `DDX_FieldText`）与 **COleDbRecordView** 一起使用。  
+ 您可以使用与的 DDX 函数**COleDbRecordView**直接从数据库记录集获取数据并将其显示在对话框控件。 应使用**DDX_\*** 方法 (如`DDX_Text`)，而不**DDX_Field\*** 函数 (如`DDX_FieldText`) 与**COleDbRecordView**.  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)   
- [COleDBRecordView Class](../../mfc/reference/coledbrecordview-class.md)
+ [COleDBRecordView 类](../../mfc/reference/coledbrecordview-class.md)

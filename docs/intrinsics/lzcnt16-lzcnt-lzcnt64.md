@@ -1,42 +1,42 @@
 ---
-title: "__lzcnt16、__lzcnt、__lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt 内部函数"
-  - "lzcnt 指令"
-  - "lzcnt16 内部函数"
-  - "lzcnt 内部函数"
-  - "__lzcnt16 内部函数"
-  - "lzcnt64 内部函数"
-  - "__lzcnt64 内部函数"
+title: "__lzcnt16、 __lzcnt、 __lzcnt64 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 983d8ff684887ba670e81bf6561d2f47022ff744
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __lzcnt16、__lzcnt、__lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 **Microsoft 专用**  
   
- 计数前导零的数目 16\-， 32\- 或 64 字节整数。  
+ 计数数前导零在 16 位、 32 位或 64 位整数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned short __lzcnt16(  
@@ -50,29 +50,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### 参数  
- \[in\] `value`  
- 浏览的 16\-， 32\- 或 64 位无符号整数带前导零。  
+#### <a name="parameters"></a>参数  
+ [in] `value`  
+ 16 位、 32 或 64 位无符号的整数，以扫描前导零。  
   
-## 返回值  
- 前导零的位数在 `value` 参数的。  如果 `value` 为零，则返回值是输入操作数 \(16， 32 或 64\) 的范围。  如果最高有效位 `value` 是一个，返回值为零。  
+## <a name="return-value"></a>返回值  
+ 前导零位数中的数`value`参数。 如果`value`为零，则返回值是输入操作数 （16、 32 或 64） 的大小。 如果最高有效位`value`为 1，返回值为零。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__lzcnt16`|高级二进制处理|  
-|`__lzcnt`|高级二进制处理|  
-|`__lzcnt64`|高级二进制处理在 64 位模式下。|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD： 高级的位操作 (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD： 高级的位操作 (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD： 在 64 位模式下高级位操作 (ABM)。<br /><br /> Intel: Haswell|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 这些内部每个生成 `lzcnt` 命令。  `lzcnt` 命令返回值的大小与其参数的大小。  在 32 位模式下不 64 位通用寄存器，因此不能 64 位 `lzcnt`。  
+## <a name="remarks"></a>备注  
+ 每个这些内部函数生成`lzcnt`指令。  值的大小，`lzcnt`指令返回其自变量的大小相同。  在 32 位模式下有任何 64 位通用寄存器，因此不是 64 位`lzcnt`。  
   
- 若要确定硬件为`lzcnt` 命令支持调用与 `InfoType=0x80000001` 的 `__cpuid` 内部和校验位 5 `CPUInfo[2] (ECX)`。  此位会为 1，则命令支持和 0。  如果运行使用在硬件的固有不支持`lzcnt` 命令的代码，结果是不可预知的。  
+ 若要确定的硬件支持`lzcnt`指令调用`__cpuid`与内部`InfoType=0x80000001`和检查的 5 位`CPUInfo[2] (ECX)`。 此位将否则如果支持指令，则为 1 和 0。 如果你运行代码使用此内部函数不支持的硬件上`lzcnt`指令，则结果不可预知。  
   
-## 示例  
+ 不支持的 Intel 处理器上`lzcnt`指令字节编码为执行指令， `bsr` （位扫描反向）。 如果代码可移植性考虑，请考虑使用`_BitScanReverse`内部相反。 有关详细信息，请参阅[_BitScanReverse、 _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。  
+  
+## <a name="example"></a>示例  
   
 ```  
 // Compile this test with: /EHsc  
@@ -100,15 +102,18 @@ int main()
   
 ```  
   
-  **\_\_lzcnt16 \(0x0\) \= 16**  
- **\_\_lzcnt16 \(0xff\) \= 8**  
- **\_\_lzcnt16 \(0xffff\) \= 0**  
- **\_\_lzcnt \(0x0\) \= 32**  
- **\_\_lzcnt \(0xff\) \= 24**  
- **\_\_lzcnt \(0xffff\) \= 16**  
- **\_\_lzcnt \(0xffffffff\) \= 0**   
-## 特定于 Microsoft 的结尾  
- copyright 2007 年 Advanced Micro 设备，公司着。  保留所有权利。  重现经 Advanced Micro 设备授予，公司。  
+```Output  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+ 本部分内容是高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

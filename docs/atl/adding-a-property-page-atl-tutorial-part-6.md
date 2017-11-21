@@ -1,154 +1,155 @@
 ---
-title: "添加属性页（ATL 教程，第 6 部分） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "添加属性页 (ATL 教程，第 6) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 90023486dd8e34195b2dd9f8a788f3f76235d407
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 添加属性页（ATL 教程，第 6 部分）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-属性页实现为单独的COM对象，从而使它们如果需要共享。  在此步骤中，您将执行以下任务来添加属性页到控件:  
+# <a name="adding-a-property-page-atl-tutorial-part-6"></a>添加属性页（ATL 教程，第 6 部分）
+属性页是作为单独的 COM 对象，允许它们在需要时共享实现的。 在此步骤中，您将执行以下任务以添加到控件的属性页：  
   
 -   创建属性页资源  
   
--   添加代码以创建和管理属性页  
+-   添加代码以创建和管理的属性页  
   
--   添加属性页到控件  
+-   向控件添加的属性页  
   
-## 创建属性页资源  
- 若要添加属性页到控件，请使用ATL添加选件类向导。  
+## <a name="creating-the-property-page-resource"></a>创建属性页资源  
+ 若要向控件中添加属性页，使用 ATL 添加类向导。  
   
-#### 添加属性页  
+#### <a name="to-add-a-property-page"></a>要添加属性页  
   
-1.  在解决方案资源管理器中，右击多边形。  
+1.  在解决方案资源管理器，右键单击多边形。  
   
-2.  在快捷菜单上，单击“添加”，然后单击“添加类”。  
+2.  在快捷菜单上，单击**添加**，然后单击**添加类**。  
   
-3.  从模板、选择 **ATL属性页** 然后单击 **添加**列表。  
+3.  从模板列表中，选择**ATL 属性页**单击**添加**。  
   
-4.  当ATL属性页向导后，输入 `PolyProp` 作为 **short** 名称。  
+4.  ATL 属性页向导出现时，输入`PolyProp`作为**短**名称。  
   
-5.  单击 **字符串** 打开 **字符串** 页并进入 **&Polygon** 作为 **前缀**。  
+5.  单击**字符串**以打开**字符串**页上，然后输入**& 多边形**作为**标题**。  
   
-     属性页的 **前缀** 会出现在该页的选项卡的字符串。  **文档字符串** 是属性框架在状态行或工具提示使用中的说明。  请注意标准属性框架当前不使用此字符串，因此，可以将其保留为默认内容。  当时不会生成 **帮助文件**，因此，请移除该文本框的项。  
+     **标题**的属性页是显示在该页面的选项卡的字符串。 **文档字符串**是属性框架使用放入状态行或工具提示中的说明。 请注意，标准属性框架当前不使用此字符串中，因此你可以将它保留为默认内容。 你将不会生成**帮助文件**目前，因此请删除该文本框中的条目。  
   
-6.  单击 **完成**，因此，属性页将会创建对象。  
+6.  单击**完成**，将创建的属性页对象。  
   
- 下列三个文件创建的:  
+ 创建以下三个文件：  
   
-|文件|说明|  
-|--------|--------|  
-|PolyProp.h|包含C\+\+选件类 `CPolyProp`，实现属性页。|  
-|PolyProp.cpp|包括PolyProp.h文件。|  
-|PolyProp.rgs|该注册表的脚本注册属性页对象。|  
+|文件|描述|  
+|----------|-----------------|  
+|PolyProp.h|包含 c + + 类`CPolyProp`，它实现的属性页。|  
+|PolyProp.cpp|包括 PolyProp.h 文件。|  
+|PolyProp.rgs|注册表脚本注册的属性页对象。|  
   
- 以下代码更改也组成:  
+ 此外进行了以下的代码更改：  
   
--   新的属性页中添加到Polygon.cpp的对象项映射。  
+-   新的属性页添加到 Polygon.cpp 中的对象项映射。  
   
--   `PolyProp` 选件类添加到Polygon.idl文件。  
+-   `PolyProp`类添加到 Polygon.idl 文件。  
   
--   新的注册表脚本文件PolyProp.rgs添加到项目资源。  
+-   新的注册表脚本文件 PolyProp.rgs 添加到项目资源。  
   
 -   对话框模板添加到属性页的项目资源。  
   
--   您指定的属性字符串添加到资源字符串表。  
+-   你指定的属性字符串添加到资源字符串表中。  
   
- 现在添加字段要显示在属性页。  
+ 现在，添加你想要在属性页上显示的字段。  
   
-#### 将字段添加到属性页  
+#### <a name="to-add-fields-to-the-property-page"></a>将字段添加到属性页  
   
-1.  在解决方案资源管理器中，双击Polygon.rc资源文件。  这将打开资源视图。  
+1.  在解决方案资源管理器中，双击 Polygon.rc 资源文件。 这将打开资源视图。  
   
-2.  在"资源视图"中，展开对话框节点并双击IDD\_POLYPROP。  注意显示的对话框为空\(告诉您插入您的控件在此处的标签。  
+2.  在资源视图中，展开对话框节点，然后双击 IDD_POLYPROP。 请注意显示的对话框中为空除外，告诉你在此处插入控件的标签。  
   
-3.  选择该标签并更改它通过修改在 **属性** 窗口的 **声明** 文本 `端:`。  
+3.  选择该标签并将其更改为读取`Sides:`通过更改**标题**中文**属性**窗口。  
   
-4.  调整标签框，使其适合文本的大小。  
+4.  调整大小标签框中，以便它非常适合的文本大小。  
   
-5.  在标签的右侧从工具箱拖动的编辑控件。  
+5.  将编辑控件从工具箱拖到标签的右侧。  
   
-6.  最后，使用"属性"窗口中，将编辑控件的 **ID** 到 `IDC_SIDES`。  
+6.  最后，更改**ID**编辑控件的`IDC_SIDES`使用属性窗口。  
   
- 这是创建属性页资源处理。  
+ 这将完成创建属性页资源的过程。  
   
-## 添加代码以创建和管理属性页  
- 您已经创建了属性页资源，需要编写实现代码。  
+## <a name="adding-code-to-create-and-manage-the-property-page"></a>添加代码以创建和管理的属性页  
+ 既然你已经创建属性页资源，你需要编写的实现代码。  
   
- 首先，那么，当 **适用** 按钮时，请使 `CPolyProp` 选件类设置边数在对象的。  
+ 首先，启用`CPolyProp`类在你的对象中设置的边数时**应用**按下按钮。  
   
-#### 若要修改应用请函数设置边数  
+#### <a name="to-modify-the-apply-function-to-set-the-number-of-sides"></a>若要修改应用函数以设置的边数  
   
-1.  用下面的代码替换该PolyProp.h的 `Apply` 功能:  
+1.  替换`Apply`中 PolyProp.h 函数替换为以下代码：  
   
-     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_1.h)]  
+     [!code-cpp[NVC_ATL_Windowing#58](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_1.h)]  
   
- 属性页可以包含多个客户端每个附加到它，因此，`Apply` 函数循环并对每个客户端的 `put_Sides` 具有从编辑框中检索的值的。  使用 [CComQIPtr](../atl/reference/ccomqiptr-class.md) 选件类，以针对每个对象的 `QueryInterface` 从 **IUnknown** 接口的 `IPolyCtl` 接口\(存储在 `m_ppUnk` 数组）。  
+ 属性页中可以有多个客户端连接到它一次，因此`Apply`函数循环，调用`put_Sides`从编辑框中检索值的每个客户端。 你使用[CComQIPtr](../atl/reference/ccomqiptr-class.md)类，后者将执行`QueryInterface`要获取每个对象`IPolyCtl`接口从**IUnknown**接口 (存储在`m_ppUnk`数组)。  
   
- 现在代码检查设置 `Sides` 属性的实际工作。  如果它失败，代码显示了从 **IErrorInfo** 接口的消息框错误详细信息。  通常，容器请求对象 **ISupportErrorInfo** 接口并将调用 `InterfaceSupportsErrorInfo`，确定对象是否支持将错误信息。  可以跳过此任务。  
+ 现在，代码检查该设置`Sides`实际工作的属性。 如果失败，代码将显示一个消息框，显示错误详细信息从**IErrorInfo**接口。 通常，容器请求的对象**ISupportErrorInfo**接口并调用`InterfaceSupportsErrorInfo`第一个，以确定对象是否支持设置错误信息。 你可以跳过此任务。  
   
- [CComPtr](../atl/reference/ccomptr-class.md) 通过自动处理计数的引用帮助您，因此，您不需要调用接口中的 `Release`。  `CComBSTR` 帮助您 `BSTR` 的处理，因此，您不必执行最终 `SysFreeString` 调用。  也可以使用之一执行各种字符串转换选件类，因此，如果必要，可以转换 `BSTR` \(所以 `USES_CONVERSION` 宏是在函数的开始）。  
+ [CComPtr](../atl/reference/ccomptr-class.md)可帮助你通过自动处理引用计数，因此不需要调用`Release`接口上。 `CComBSTR`可帮助你与`BSTR`处理，因此不需要执行最终`SysFreeString`调用。 你还使用一个不同的字符串转换类，以便可以转换`BSTR`如有必要 (正因如此`USES_CONVERSION`宏位于函数的开始)。  
   
- 您还需要设置属性页的错误的标志指示应启用 **适用** 按钮。  当用户更改在 **端** 的值编辑框，则会出现此错误。  
+ 你还需要设置属性页的已更新标志以指示**应用**应启用按钮。 发生这种情况是当用户更改中的值**边**编辑框。  
   
-#### 处理应用按钮  
+#### <a name="to-handle-the-apply-button"></a>若要处理应用按钮  
   
-1.  在选件类视图中，右击CPolyProp然后单击 **属性** 在快捷菜单上。  
+1.  在类视图中，右键单击 CPolyProp，然后单击**属性**快捷菜单上。  
   
-2.  在"属性"窗口中，单击 **事件** 图标。  
+2.  在属性窗口中，单击**事件**图标。  
   
-3.  展开事件的 `IDC_SIDES` 节点列表。  
+3.  展开`IDC_SIDES`节点在事件列表中。  
   
-4.  选择的 `EN_CHANGE`，然后从下拉菜单在右侧，单击 **\<Add\> OnEnChangeSides**。  `OnEnChangeSides` 处理程序声明将添加到Polyprop.h和处理程序实现。Polyprop.cpp。  
+4.  选择`EN_CHANGE`，然后从右侧的下拉列表菜单，单击**\<添加 > OnEnChangeSides**。 `OnEnChangeSides`处理程序声明将添加到 Polyprop.h 和到 Polyprop.cpp 的处理程序实现。  
   
- 接下来，您将修改处理程序。  
+ 接下来，您将修改该处理程序。  
   
-#### 修改OnEnChangeSides方法  
+#### <a name="to-modify-the-onenchangesides-method"></a>若要修改的 OnEnChangeSides 方法  
   
-1.  将Polyprop.cpp的以下代码添加到 `OnEnChangeSides` 方法\(删除任何代码向导将其中\):  
+1.  将以下代码添加到 Polyprop.cpp 中`OnEnChangeSides`（删除向导放置在那里的任何代码） 的方法：  
   
-     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- 当 **WM\_COMMAND** 发送与 `IDC_SIDES` 控件，的 **EN\_CHANGE** 通知`OnEnChangeSides` 将调用。  `OnEnChangeSides` 然后调用 `SetDirty`，并将指示属性页的 `TRUE` 现在有错误，并且应启用 **适用** 按钮。  
+ `OnEnChangeSides`时将会调用**WM_COMMAND**消息不会发送**EN_CHANGE**通知`IDC_SIDES`控件。 `OnEnChangeSides`然后调用`SetDirty`并将传递`TRUE`以指示该属性页现在是脏和**应用**应启用按钮。  
   
-## 添加属性页到控件  
- ATL添加选件类向导，并ATL属性页向导不会自动添加属性页添加到您的控件，因为可以项目中有多个控件。  您需要将项添加到控件的属性映射。  
+## <a name="adding-the-property-page-to-the-control"></a>向控件添加的属性页  
+ ATL 添加类向导和 ATL 属性页向导不属性页控件为你将自动添加到，因为你的项目中可能有多个控件。 你将需要将条目添加到控件的属性映射。  
   
-#### 添加属性页  
+#### <a name="to-add-the-property-page"></a>若要添加的属性页  
   
-1.  打开PolyCtl.h并将此行。属性映射:  
+1.  打开 PolyCtl.h 并将以下行添加到属性映射：  
   
-     [!code-cpp[NVC_ATL_Windowing#60](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_3.h)]  
+     [!code-cpp[NVC_ATL_Windowing#60](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_3.h)]  
   
- 控件的属性映射现在如下所示:  
+ 控件的属性映射现在如下所示：  
   
- [!code-cpp[NVC_ATL_Windowing#61](../atl/codesnippet/CPP/adding-a-property-page-atl-tutorial-part-6_4.h)]  
+ [!code-cpp[NVC_ATL_Windowing#61](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_4.h)]  
   
- 可以增加了您的属性页CLSID的一 `PROP_PAGE` 宏，但是，如果您使用 `PROP_ENTRY` 宏所示，`Sides` 属性值还保存，当控件保存时。  
+ 无法添加`PROP_PAGE`通过属性页，但如果你将 CLSID 宏`PROP_ENTRY`宏如所示，`Sides`保存该控件时，也将保存属性值。  
   
- 对宏的三个参数是属性声明、属性的DISPID和具有此操作的属性页的CLSID。  这是有用的，则，例如，则填充控件。Visual Basic并设置边数在设计时。  由于边数保存，那么，当您重新加载Visual Basic项目，将还原边数。  
+ 该宏的三个参数是属性说明，该属性的 DISPID 和对其具有属性的属性页的 CLSID。 如果加载到 Visual Basic 控件和在设计时设置的边数等，这非常有用。 由于保存的边数，在重新加载 Visual Basic 项目时，将还原的边数。  
   
-## 生成并测试控件  
- 现在将生成控件并粘贴到中的ActiveX控件测试容器。  在测试容器中，在 **编辑** 菜单上，单击 **PolyCtl选件类对象**。  属性页;单击 **多边形** 选项。  
+## <a name="building-and-testing-the-control"></a>生成和测试控件  
+ 现在，生成该控件并将其插入到 ActiveX 控件测试容器。 在测试容器中，在**编辑**菜单上，单击**PolyCtl 类对象**。 属性页出现后;单击**多边形**选项卡。  
   
- **适用** 按钮最初禁用。  开始键入在 **端** 框中的值，并 **适用** 按钮将变为启用。  在完成输入值后，单击 **适用** 按钮。  控件显示更改和 **适用** 按钮再次被禁用。  输入无效的值的尝试。  您将看到消息框包含该错误说明您从 `put_Sides` 功能集。  
+ **应用**按钮最初处于禁用状态。 开始键入中的值**边**框和**应用**按钮将变成启用状态。 输入的值之后，请单击**应用**按钮。 控件显示更改，与**应用**按钮再次禁用。 请尝试输入无效值。 你将看到一个包含你设置从错误描述消息框`put_Sides`函数。  
   
- 接下来，在网页中放置到的控件。  
+ 接下来，你会将您在网页上的控件。  
   
- [返回第5步](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [在到步骤7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [返回到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124;[到步骤 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
+

@@ -1,30 +1,29 @@
 ---
-title: "HString::MakeReference 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::MakeReference"
-dev_langs: 
-  - "C++"
+title: "Hstring:: Makereference 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::MakeReference
+dev_langs: C++
 ms.assetid: 9e1fd2b2-66ad-4a50-b647-a20ab10e522f
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 026b036e3a4dad0fb88600cb64ac3da892eba2b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# HString::MakeReference 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringmakereference-method"></a>HString::MakeReference 方法
 从指定的字符串参数创建 HStringReference 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<unsigned int sizeDest>  
@@ -37,23 +36,23 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `sizeDest`  
  指定目标 HStringReference 缓冲区大小的模板参数。  
   
  `str`  
- 对字符串的引用。  
+ 对宽字符串的引用。  
   
  `len`  
- 使用参数的 `str` 缓冲区的最大长度此操作。  如果 `len` 参数没有指定，使用整个 `str` 参数。  
+ 要在此操作中使用的 `str` 参数缓冲区的最大长度。 如果 `len` 参数未指定，则将使用整个 `str` 参数。  
   
-## 返回值  
- 值与指定的 `str` 参数的 HStringReference 对象。  
+## <a name="return-value"></a>返回值  
+ 一个 HStringReference 对象，其值是与指定相同`str`参数。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>要求  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [HString 类](../windows/hstring-class.md)

@@ -19,18 +19,17 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a30b1c8a9949ab00259dc3335bb842ffc80a0f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-constants"></a>并发命名空间常量
 ||||  
@@ -58,7 +57,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类别的事件不由并发运行时的当前触发。  
+ 这种类别的事件不由并发运行时的当前激发。  
   
 ##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
  并发运行时的 ETW 提供程序 GUID。  
@@ -84,7 +83,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类别的事件不由并发运行时的当前触发。  
+ 这种类别的事件不由并发运行时的当前激发。  
   
 ##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
  指示等待永远不应超时的值。  
@@ -124,7 +123,7 @@ const __declspec(selectany) GUID LockEventGuid =
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类别的事件不由并发运行时的当前触发。  
+ 这种类别的事件不由并发运行时的当前激发。  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
  策略键 `MinConcurrency` 和 `MaxConcurrency` 的特殊值。 默认值为没有其他约束的计算机上的硬件线程数。  
@@ -166,7 +165,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类别的事件不由并发运行时的当前触发。  
+ 这种类别的事件不由并发运行时的当前激发。  
   
 ##  <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
  类别 GUID，描述由与计划组直接相关的并发运行时激发的 ETW 事件。  
@@ -177,7 +176,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 ```  
   
 ### <a name="remarks"></a>备注  
- 此类别的事件不由并发运行时的当前触发。  
+ 这种类别的事件不由并发运行时的当前激发。  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  
  类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。  
@@ -197,4 +196,3 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-

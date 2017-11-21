@@ -1,32 +1,30 @@
 ---
-title: "ComPtr::CopyTo 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::CopyTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CopyTo 方法"
+title: "Comptr:: Copyto 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::CopyTo
+dev_langs: C++
+helpviewer_keywords: CopyTo method
 ms.assetid: 8801bc49-6db4-4393-a55f-a701ae3b8718
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 184abddec5099eff20f75531fe240886841e9814
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::CopyTo 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制当前或指定接口与此 ComPtr 对指定的指针。  
+# <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
+副本与指定的指针到此 ComPtr 关联的当前或指定的接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 HRESULT CopyTo(  
@@ -46,30 +44,30 @@ HRESULT CopyTo(
 ) const;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `U`  
  类型名称。  
   
  `ptr`  
- 该操作完成，对请求接口的指针。  
+ 此操作完成后，指向所请求的接口的指针。  
   
  `riid`  
- 是一个ID接口。  
+ 接口 ID。  
   
-## 返回值  
- S\_OK，如果成功；否则，一个 HRESULT 隐式 QueryInterface 操作失败的原因。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则则为 S_OK否则为指示隐式 QueryInterface 操作失败的原因的 HRESULT。  
   
-## 备注  
- 第一个函数返回指针的复制到与此接口 ComPtr。  此函数始终返回 S\_OK。  
+## <a name="remarks"></a>备注  
+ 第一个函数返回与此 ComPtr 关联的接口的指针的副本。 此函数始终返回，则为 S_OK。  
   
- 第二个函数对接口的 QueryInterface 操作与 `riid` 参数指定的接口 ComPtr 此。  
+ 第二个函数执行上与指定的接口此 ComPtr 关联的接口的 QueryInterface 操作`riid`参数。  
   
- 第三个函数对接口的 QueryInterface 操作与 `U` 参数的基础接口的此 ComPtr。  
+ 第三个函数将执行与此 ComPtr 的基础接口关联的接口 QueryInterface 操作`U`参数。  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>要求  
+ **标头：** client.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ComPtr 类](../windows/comptr-class.md)

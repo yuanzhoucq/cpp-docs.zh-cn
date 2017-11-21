@@ -1,36 +1,36 @@
 ---
-title: "ODBC 和数据库类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据库类 [C++], ODBC"
-  - "MFC [C++], ODBC 和"
-  - "ODBC API 函数 [C++]"
-  - "ODBC 类 [C++], MFC 数据库类"
+title: "ODBC 和数据库类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- database classes [C++], ODBC
+- ODBC API functions [C++]
+- ODBC classes [C++], MFC database classes
+- MFC [C++], ODBC and
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cf4d5dae14a59cc8b4c6d17ff118cdde59c28af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ODBC 和数据库类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-MFC ODBC 数据库类封装了 ODBC API 函数调用，您通常在 [CDatabase](../../mfc/reference/cdatabase-class.md) 和 [CRecordset](../../mfc/reference/crecordset-class.md) 类的成员函数中要用到这些函数调用。  例如，复杂的 ODBC 调用序列、返回记录到存储位置的绑定、错误情况的处理以及数据库类为您管理的其他操作。  因此，您使用相当简单的类接口就可通过记录集对象处理记录。  
+# <a name="odbc-and-the-database-classes"></a>ODBC 和数据库类
+MFC ODBC 数据库类封装你将通常自行进行在成员中的函数的 ODBC API 函数调用[CDatabase](../../mfc/reference/cdatabase-class.md)和[CRecordset](../../mfc/reference/crecordset-class.md)类。 例如，复杂 ODBC 调用序列、 返回的记录到存储位置、 处理错误情况，以及其他操作的绑定是为你管理的数据库类。 因此，你可以使用相当简单的类接口来操作通过记录集对象的记录。  
   
 > [!NOTE]
->  通过 MFC ODBC 类（如本主题所述）或通过 MFC 数据访问对象 \(DAO\) 类，都可以访问 ODBC 数据源。  
+>  ODBC 数据源是通过 MFC ODBC 类，如本主题中所述，或通过 MFC 数据访问对象 (DAO) 类访问。  
   
- 尽管数据库类封装了 ODBC 功能，但它们不提供一对一的 ODBC API 函数映射。  数据库类提供更高级的抽象，模仿在 Microsoft Access 和 Microsoft Visual Basic 中找到的数据访问对象。  有关更多信息，请参见[什么是 MFC 数据库编程模型？](../../data/what-is-the-mfc-database-programming-model-q.md)  
+ 尽管数据库类封装 ODBC 功能，但它们不提供 ODBC API 函数的一对一映射。 数据库类提供更高级别的抽象，建模后找到 Microsoft Access 和 Microsoft Visual Basic 中的数据访问对象。 有关详细信息，请参阅[ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 基础](../../data/odbc/odbc-basics.md)

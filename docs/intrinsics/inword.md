@@ -1,36 +1,36 @@
 ---
-title: "__inword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__indword_cpp"
-  - "__indword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "in 指令"
-  - "__inword 内部函数"
+title: "__inword |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __indword_cpp
+- __indword
+dev_langs: C++
+helpviewer_keywords:
+- in instruction
+- __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e200842aa3ab9802a756cdc47b86dd0545d6afa8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __inword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inword"></a>__inword
 **Microsoft 专用**  
   
- 使用 `in` 命令，读取从指定端口的数据。  
+ 从指定的端口使用读取数据`in`指令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned short __inword(  
@@ -38,25 +38,25 @@ unsigned short __inword(
 );  
 ```  
   
-#### 参数  
- \[in\] `Port`  
- 读取的端口。  
+#### <a name="parameters"></a>参数  
+ [in] `Port`  
+ 要读取的端口。  
   
-## 返回值  
- 读取数据的单词。  
+## <a name="return-value"></a>返回值  
+ 读取的数据的单词。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__inword`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__inword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 此例程仅可用作内部函数。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

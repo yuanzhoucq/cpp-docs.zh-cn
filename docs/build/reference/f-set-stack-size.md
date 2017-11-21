@@ -1,70 +1,69 @@
 ---
-title: "/F（设置堆栈大小） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/F 编译器选项 [C++]"
-  - "F 编译器选项 [C++]"
-  - "-F 编译器选项 [C++]"
-  - "设置堆栈大小编译器选项"
-  - "堆栈, 设置大小"
+title: "-F （设置堆栈大小） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /f
+dev_langs: C++
+helpviewer_keywords:
+- set stack size compiler option
+- F compiler option [C++]
+- -F compiler option [C++]
+- /F compiler option [C++]
+- stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b75c5c014dfcfa2e90a507d2948c573632e650a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /F（设置堆栈大小）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-设置程序堆栈大小（以字节为单位）。  
+# <a name="f-set-stack-size"></a>/F（设置堆栈大小）
+以字节为单位设置程序堆栈大小。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /F number  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>参数  
  `number`  
- 堆栈大小（以字节为单位）。  
+ 堆栈大小 （字节）。  
   
-## 备注  
- 如果不使用此选项，堆栈大小默认为 1 MB。  `number` 参数可以用十进制或 C 语言表示法表示。  参数的范围可以在 1 到链接器接受的最大堆栈大小之间。  链接器将指定值向上舍入为最接近的 4 个字节。  **\/F** 和 `number` 之间的空格可选的。  
+## <a name="remarks"></a>备注  
+ 如果不使用此选项的堆栈大小默认为 1 MB。 `number`自变量可以是以十进制或 C 语言表示法。 参数可以介于 1 到链接器接受的最大堆栈大小。 链接器将指定的值与最接近的 4 个字节向上舍入。 之间的空间**/F**和`number`是可选的。  
   
- 如果程序获得堆栈溢出消息，则可能需要增加堆栈大小。  
+ 你可能需要增加的堆栈大小，如果你的程序获取堆栈溢出消息。  
   
- 也可通过下列内容设置堆栈大小：  
+ 此外可以设置堆栈大小：  
   
--   使用 **\/STACK** 链接器选项。  有关详细信息，请参阅[\/STACK](../../build/reference/stack.md)。  
+-   使用**/堆栈**链接器选项。 有关详细信息，请参阅[/堆栈](../../build/reference/stack.md)。  
   
--   对 .exe 文件使用 EDITBIN。  有关详细信息，请参阅[EDITBIN 参考](../../build/reference/editbin-reference.md)。  
+-   使用 EDITBIN 的.exe 文件。 有关详细信息，请参阅[EDITBIN 参考](../../build/reference/editbin-reference.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“命令行”**属性页。  
+3.  点击“命令行”  属性页。  
   
-4.  在**“附加选项”**框中键入编译器选项。  
+4.  在 **“附加选项”** 框中键入编译器选项。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

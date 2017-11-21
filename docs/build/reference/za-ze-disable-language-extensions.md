@@ -1,79 +1,78 @@
 ---
-title: "/Za、/Ze（禁用语言扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions"
-  - "/za"
-  - "/ze"
-  - "VC.Project.VCCLCompilerTool.DisableLanguageExtensions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Za 编译器选项 [C++]"
-  - "/Ze 编译器选项 [C++]"
-  - "“禁用语言扩展”编译器选项"
-  - "启用语言扩展"
-  - "语言扩展"
-  - "语言扩展, 在编译器中禁用"
-  - "Za 编译器选项 [C++]"
-  - "-Za 编译器选项 [C++]"
-  - "Ze 编译器选项 [C++]"
-  - "-Ze 编译器选项 [C++]"
+title: "-Za，-Ze （禁用语言扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
+- /za
+- /ze
+- VC.Project.VCCLCompilerTool.DisableLanguageExtensions
+dev_langs: C++
+helpviewer_keywords:
+- -Za compiler option [C++]
+- Za compiler option [C++]
+- language extensions, disabling in compiler
+- -Ze compiler option [C++]
+- language extensions
+- enable language extensions
+- /Za compiler option [C++]
+- /Ze compiler option [C++]
+- Disable Language Extensions compiler option
+- Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1e1d0c5f76c0eb71b631ef9bffbc1e60e5ceb069
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /Za、/Ze（禁用语言扩展）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/Za** 编译器选项为与 ANSI C 或 ANSI C\+\+ 不兼容的语言构造发出错误。  默认的 **\/Ze** 编译器选项启用 Microsoft 扩展。  
+# <a name="za-ze-disable-language-extensions"></a>/Za、/Ze（禁用语言扩展）
+**/Za**编译器选项将发出错误对与 ANSI C89 或 ISO C + + 11 不兼容的语言构造。 **/Ze**编译器选项，这将在上，默认情况下，将启用 Microsoft 扩展。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Za  
 /Ze  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
   
 > [!NOTE]
->  **\/Ze** 选项已弃用。  有关详细信息，请参阅[Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/zh-cn/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce)。  
+>  **/Ze**选项已弃用，因为其行为是在默认情况下。 我们建议你使用[/Zc （一致性）](../../build/reference/zc-conformance.md)编译器选项来控制特定的语言扩展功能。 不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**主题中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 编译器提供许多在 ANSI C 或 ANSI C\+\+ 标准中指定的那些功能以外的功能。  这些功能统称为 C 和 C\+\+ 的 Microsoft 扩展。  这些扩展在指定 **\/Ze** 选项时可用，而在指定 **\/Za** 选项时不可用。  有关更多信息，请参见[Microsoft C 和 C\+\+ 扩展](../../build/reference/microsoft-extensions-to-c-and-cpp.md)。  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]编译器提供了大量的 ANSI C89、 ISO C99 或 ISO c + + 标准中指定的之外的功能。 这些功能统称为 Microsoft 扩展到 C 和 c + +。 这些扩展时，将按默认情况下，提供的并且不可用**/Za**指定选项。 有关特定扩展的详细信息，请参阅[Microsoft C 和 c + + 扩展](../../build/reference/microsoft-extensions-to-c-and-cpp.md)。  
   
- 如果打算将程序移植到其他环境，请禁用语言扩展。  编译器将扩展关键字视为简单标识符，禁用其他 Microsoft 扩展，并且自动定义 C 程序的 `__STDC__` 预定义宏。  
+ 我们建议你禁用语言扩展，通过指定**/Za**选项如果你打算将程序移植到其他环境。 当**/Za**指定，编译器将 Microsoft 扩展关键字作为简单标识符，禁用的其他 Microsoft 扩展，并自动定义`__STDC__`C 程序的预定义的宏。  
   
- 与 **\/Za** 一起使用的其他编译器选项可能会影响编译器确保 ANSI 一致性的方式。  例如，**\/Za** 和 [\/fp（指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md) 一起使用可能导致意外的行为。  
+ 与使用其他编译器选项**/Za**可能会影响编译器确保标准一致性的方式。 例如， **/Za**和[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)可能导致不符合的浮点类型提升行为 ISO C99 或 C + + 11 标准。  
   
- 有关用 **\/Za** 获得标准行为的方式，请参见 [\/Zc](../../build/reference/zc-conformance.md) 编译器选项。  
+ 有关指定特定的标准符合的行为设置方法，请参阅[/Zc](../../build/reference/zc-conformance.md)编译器选项。  
   
- 有关 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 一致性问题的更多信息，请参见 [Visual C\+\+ 中的兼容性和合规性问题](../../misc/compatibility-and-compliance-issues-in-visual-cpp.md)。  
+ 有关一致性问题的详细信息[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  在导航窗格中，选择**配置属性**， **C/c + +**，**语言**。  
   
-3.  单击**“语言”**属性页。  
+3.  修改**禁用语言扩展**属性。  
   
-4.  修改**“禁用语言扩展”**属性。  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
-### 以编程方式设置此编译器选项  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>。  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>。  
-  
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
- [设置编译器选项](../../build/reference/setting-compiler-options.md)
+ [设置编译器选项](../../build/reference/setting-compiler-options.md)   
+ [/Zc （一致性）](../../build/reference/zc-conformance.md)

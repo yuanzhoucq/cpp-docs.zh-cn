@@ -1,34 +1,32 @@
 ---
-title: "如何：在 C++/CLI 中使用跟踪引用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLR 类型, 按引用传递"
+title: "如何： 使用跟踪引用在 C + + /cli CLI |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中使用跟踪引用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文演示如何通过引用使用跟踪引用 \(%\)。[!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 会将公共语言运行时 \(CLR\) \(CLR\) 类型。  
+# <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用跟踪引用
+这篇文章演示如何使用跟踪引用 （%） 中 C + + /cli CLI 来用引用方式传递公共语言运行时 (CLR) 类型。  
   
-## 将 CLR 类型引用  
- 下面的示例显示如何通过引用传递使用 CLR 类型的跟踪引用。  
+## <a name="to-pass-clr-types-by-reference"></a>若要通过引用传递 CLR 类型  
+ 下面的示例演示如何使用跟踪引用按引用传递 CLR 类型。  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **邮政编码 \=\= 20100** 下一个示例演示将跟踪引用返回的地址与 [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)的，并显示如何通过修改跟踪引用和访问数据。  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ 下一个示例演示该采用的地址的跟踪引用返回[interior_ptr (C + + /cli CLI)](../windows/interior-ptr-cpp-cli.md)，并演示如何修改和通过跟踪引用访问数据。  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor:R \(int\)**  
-**ctor:N \(int i\)**   
-## 跟踪引用和内部指针  
- 下面的代码示例演示一，可以转换。跟踪引用和内部指针之间。  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>跟踪引用和内部指针  
+ 下面的代码示例显示，你可以跟踪引用和内部指针之间进行转换。  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor:R \(int\)**  
-**ctor:N \(int i\)**   
-## 跟踪引用和值类型  
- 本示例遍历指向值类型的跟踪引用显示简单的、装箱：  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- 下面的示例演示，可以跟踪引用和本机引用为值类型。  
+## <a name="tracking-references-and-value-types"></a>跟踪引用和值类型  
+ 此示例演示通过对值类型的跟踪引用的简单装箱：  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ 下一个示例显示，你可以跟踪引用和值类型到本机引用。  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **13**  
-**13**  
-**13** 下面的示例表示，则可以将值类型和本机类型。使用跟踪引用。  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ 下面的示例演示你可以使用跟踪引用、 值类型和本机类型。  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **4**  
-**4**  
-**5**  
-**5** 此示例演示，可以绑定到值类型的跟踪引用在垃圾回收堆：  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ 此示例演示可以将对值类型的跟踪引用绑定垃圾回收堆上：  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **原始 Hyper\-V:2，跟踪引用的、装箱：1**  
-**跟踪引用的、装箱：3**  
-**装箱的新副本 v:1**  
-**原始 Hyper\-V:4，给最初装箱的 V 句柄的引用：1**   
-## 该模板函数采用本机、值或引用参数  
- 通过在模板函数签名的跟踪引用，确保函数只能由类型本机参数，CLR 或 CLR 引用值调用。  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>模板函数采用本机、 值或引用参数  
+ 通过在模板函数的签名中使用跟踪引用，可以确保可以通过其类型是本机的参数、 CLR 值或 CLR 引用才能调用该函数。  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **% T**  
-**% T**  
-**T &**   
-## 请参阅  
- [% \(跟踪引用\)](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>另请参阅  
+ [跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)

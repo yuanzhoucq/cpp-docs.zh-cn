@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - CONCRT/concurrency::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error
 - CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_resource_allocation_error class
+dev_langs: C++
+helpviewer_keywords: scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 84f32bb6192057c9d5872147cc8ef0bd2c13b349
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 334712def2fbd458b648b02cbfab05e202cc0e1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 类
 此类描述因未能在并发运行时中获取关键资源而引发的异常。  
@@ -56,7 +38,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[scheduler_resource_allocation_error](#ctor)|已重载。 构造 `scheduler_resource_allocation_error` 对象。|  
   
@@ -67,7 +49,7 @@ class scheduler_resource_allocation_error : public std::exception;
 |[get_error_code](#get_error_code)|返回导致异常的错误代码。|  
   
 ## <a name="remarks"></a>备注  
- 对从并发运行时中的操作系统调用失败时，通常将引发此异常。 通常从调用 Win32 方法 `GetLastError` 返回的错误代码将转换为类型 `HRESULT` 的值，并且可以使用 `get_error_code` 方法检索。  
+ 对操作系统与并发运行时中的调用失败时，通常会引发此异常。 通常从调用 Win32 方法 `GetLastError` 返回的错误代码将转换为类型 `HRESULT` 的值，并且可以使用 `get_error_code` 方法检索。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -75,7 +57,7 @@ class scheduler_resource_allocation_error : public std::exception;
  `scheduler_resource_allocation_error`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -112,4 +94,3 @@ explicit _CRTIMP scheduler_resource_allocation_error(
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-

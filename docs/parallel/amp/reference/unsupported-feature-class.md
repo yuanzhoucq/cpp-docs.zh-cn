@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - unsupported_feature
 - AMPRT/unsupported_feature
 - AMPRT/Concurrency::unsupported_feature
-dev_langs:
-- C++
-helpviewer_keywords:
-- unsupported_feature class
+dev_langs: C++
+helpviewer_keywords: unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 191678e0802696e7200945f96dc1f2bbd379cf57
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 2d9a85d0ca9b6ff952d6f7ae6420bedfabea5289
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature 类
-使用不受支持的功能时引发的异常。  
+使用不支持的功能时引发的异常。  
   
 ## <a name="syntax"></a>语法  
   
@@ -88,10 +70,9 @@ unsupported_feature() throw();
  `unsupported_feature` 对象。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amprt.h  
+ **标头：** amprt.h  
   
  **命名空间：** 并发  
   
 ## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
-
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,109 +1,107 @@
 ---
-title: "2.3 parallel Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.3 parallel 构造 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb1d43207e7276aadac32e38a43cfa4ae47b9186
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 2.3 parallel Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的指令定义并行区域，是程序的区域将由多个线程并行执行。  这是开始并行执行的基本构造。  
+# <a name="23-parallel-construct"></a>2.3 parallel 构造
+下面的指令定义并行区域，这是由多个线程并行执行的程序的区域。 这是启动并行执行的基本构造。  
   
 ```  
-#pragma omp parallel [clause[ [, ]clause] ...] new-line  
-   structured-block  
+#pragma omp parallel [clause[ [, ]clause] ...] new-line   structured-block  
 ```  
   
- *子句* 为下列之一:  
+ *子句*是以下之一：  
   
- **\(如果**标量*表达式***\)**  
+ **如果 (** *标量表达式* **)**  
   
- **\(专用** *变量列表* **\)**  
+ **私有 (** *变量列表* **)**  
   
- **\(firstprivate** *变量列表* **\)**  
+ **firstprivate (** *变量列表* **)**  
   
- **默认 \(共享&#124;任何内容\)**  
+ **默认值 (共享 &#124; 无)**  
   
- **共享 \(** *变量列表* **\)**  
+ **共享 (** *变量列表* **)**  
   
- **\(copyin** *变量列表* **\)**  
+ **copyin (** *变量列表* **)**  
   
- **\(减少** *运算符* **:**  *变量列表* **\)**  
+ **减少 (** *运算符* **:***变量列表* **)**   
   
- **\(num\_threads**整数*表达式***\)**  
+ **num_threads (** *整数表达式* **)**  
   
- 当线程遇到并行构造时，线程团队创建，如果以下情况之一为真时:  
+ 当线程遇到并行构造时，如果以下情况之一，则创建一个团队的线程：  
   
--   **如果** 子句不存在。  
+-   不**如果**子句不存在。  
   
--   **如果** 表达式计算为一个非零值。  
+-   **如果**表达式的计算结果为非零值。  
   
- 此线程成为团队的主线程，与线程号的 0，并且，团队的所有线程，包括主线程，并行执行该区域。  如果 **如果** 表达式的值为零，序列化该区域。  
+ 此线程即成为主线程的团队，线程次数 0，并在团队中，包括主线程中，所有线程并行都执行区域。 如果值**如果**表达式为零，序列化的区域。  
   
- 若要确定请求的线程数，以下规则按顺序将考虑。  满足条件的第一个规则进行应用:  
+ 若要确定请求的线程数，将顺序视为以下规则。 将应用满足其条件的第一个规则：  
   
-1.  如果 **num\_threads** 子句存在，则整数表达式的值是请求的线程的数量。  
+1.  如果**num_threads**子句不存在，则整数表达式的值是请求的线程数。  
   
-2.  如果 **omp\_set\_num\_threads** 库函数调用，则参数的值在最近执行的调用为请求线程的数量。  
+2.  如果**omp_set_num_threads**已调用库函数，则最近执行的调用中的自变量的值是请求的线程数。  
   
-3.  如果环境变量 **OMP\_NUM\_THREADS** 定义，则此环境变量的值是请求的线程的数量。  
+3.  如果环境变量**OMP_NUM_THREADS**定义，则此环境变量的值是请求的线程数。  
   
-4.  如果未使用上面的方法没有，则请求的线程的数目实现中定义。  
+4.  如果使用了任何上述两种方法，请求的线程数是实现定义。  
   
- 如果 **num\_threads** 子句存在则取代 **omp\_set\_num\_threads** 库函数或它所应用的 **OMP\_NUM\_THREADS** 环境变量只需要的线程的数目并行区域。  后续并行区域不影响的受它。  
+ 如果**num_threads**子句不存在，则它会取代通过请求的线程数**omp_set_num_threads**库函数或**OMP_NUM_THREADS**仅为应用于的并行区域的的环境变量。 后续的并行区域不受它。  
   
- 还执行并行区域线程的数目由线程数动态调整是否启用。  如果动态调整处于禁用状态，则线程的请求数会执行并行区域。  动态调整则活动线程的请求数是可以执行并行区域线程的最大数目。  
+ 执行并行区域的线程数还取决于启用动态调整的线程数。 如果禁用了动态调整，请求的线程数将执行并行区域。 如果启用了动态调整请求的线程数是最大可能执行并行区域的线程数。  
   
- 如果并行区域遇到，当线程数动态调整禁用了，并且，并行区域请求的线程的数目超过该数字为由运行时系统可以提供，程序的行为实现中定义。  实现可能，例如，中断程序的执行，也可以序列化并行区域。  
+ 如果禁用了动态调整的线程数，并且并行区域为请求的线程数超过的运行时系统可以提供最数目时遇到并行区域，则该程序的行为是实现定义。 实现可能会例如，中断执行程序，或者它可能将并行区域的序列化。  
   
- **omp\_set\_dynamic** 库函数和 **OMP\_DYNAMIC** 环境变量可用于启用和禁用线程数动态调整。  
+ **Omp_set_dynamic**库函数和**OMP_DYNAMIC**环境变量可用来启用和禁用动态调整的线程数。  
   
- 实际承载线程的实际处理器数在任何给定时间实现中定义。  一旦创建，线程数。团队保持不变为该并行区域的持续时间。  它可以显式更改用户或自动则运行时系统从并行区域到另一个。  
+ 在任何给定时间实际托管线程的物理处理器的数目是实现定义的。 创建后，团队中的线程数保持不变的持续时间内的该并行区域。 可以由用户显式或从一个并行区域到另一个运行时系统会自动对其进行更改。  
   
- 在并行区域的动态区域中包含的语句由每个线程执行，因此，每个线程可以执行与其他线程不同语句的路径。  在并行区域以外的词法区域遇到的指令引用孤立的指令。  
+ 在并行区域的动态范围内包含的语句执行的每个线程，并且每个线程可以执行不同于其他线程的语句的路径。 遇到外部并行区域的词法范围的指令称为孤立的指令。  
   
- 具有一个暗含的关卡在并行区域末端。  团队只主线程继续执行在并行区域末端。  
+ 没有在并行区域末尾隐含的屏障。 只有团队的主线程继续执行并行区域的末尾。  
   
- 如果在执行并行区域的团队的线程遇到另一个并行构造，它创建新的团队，因此，它成为该新团队重要信息。  序列化默认情况下嵌套并行区域。  因此，在默认情况下，嵌套并行区域由团队执行中对一个线程。  使用 c 运行库函数 **omp\_set\_nested** 或环境变量 **OMP\_NESTED**，默认行为能更改。  但是，执行嵌套并行区域线程数。团队的实现中定义。  
+ 如果团队执行并行区域中的线程遇到其他并行构造，它会创建一个新的团队，然后它会成为该新团队的主机。 默认情况下，嵌套并行区域进行序列化。 因此，默认情况下，嵌套并行区域执行由团队组成一个线程。 通过使用运行时库函数中的默认行为可能会发生更改**omp_set_nested**或环境变量**OMP_NESTED**。 但是，执行嵌套并行区域在团队中的线程数为实现定义。  
   
- 为 **并行** 指令的限制如下所示:  
+ 限制到**并行**指令如下所示：  
   
--   最多一 **如果** 子句可以在指令。  
+-   最多一个**如果**子句可以在指令上出现。  
   
--   ，如果表达式或 **num\_threads** 表达式时，它是否未指定的中的任何副作用。  
+-   它是未指定任何是否端效果置于 if 表达式或**num_threads**出现表达式。  
   
--   **引发** 是在并行区域内必须导致执行在还原结构化同一个中的动态区域阻止，因此，必须引发异常的同一线程将其捕获。  
+-   A**引发**执行内并行区域必须导致继续在相同的结构化块的动态范围内执行，并且它必须被捕获相同的线程引发异常。  
   
--   唯一 **num\_threads** 子句可以在指令。  **num\_threads** 表达式在并行区域的上下文之外进行计算，然后必须计算为正整数值。  
+-   只有一个**num_threads**子句可以在指令上出现。 **Num_threads**上下文之外的并行区域中，计算表达式，并计算结果必须为正整数值。  
   
--   **如果** 和 **num\_threads** 子句的计算顺序是未指定的。  
+-   计算顺序**如果**和**num_threads**子句未指定。  
   
-## 交叉引用:  
+## <a name="cross-references"></a>交叉引用：  
   
--   **专用**、 **firstprivate**、 **默认**、 **共享**、 **copyin**和 **减少** 子句，请参见中的第 25 页的 [第2.7.2部分](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 。  
+-   **私有**， **firstprivate**，**默认**，**共享**， **copyin**，和**缩减**子句，请参阅[部分 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)第 25 页上。  
   
--   **OMP\_NUM\_THREADS** 环境变量，在第 48 页的 [第4.2部分](../../parallel/openmp/4-2-omp-num-threads.md) 。  
+-   **OMP_NUM_THREADS**环境变量，[部分 4.2](../../parallel/openmp/4-2-omp-num-threads.md)第 48 页。  
   
--   **omp\_set\_dynamic** 库函数，请参见中的第 39 页的 [第3.1.7部分](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 。  
+-   **omp_set_dynamic**库函数，请参阅[部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上。  
   
--   **OMP\_DYNAMIC** 环境变量，请参见中的第 49 页的 [第4.3部分](../../parallel/openmp/4-3-omp-dynamic.md) 。  
+-   **OMP_DYNAMIC**环境变量，请参阅[部分 4.3](../../parallel/openmp/4-3-omp-dynamic.md)页 49 上。  
   
--   **omp\_set\_nested** 功能，请参见中的第 40 页的 [第3.1.9部分](../../parallel/openmp/3-1-9-omp-set-nested-function.md) 。  
+-   **omp_set_nested**函数中，请参阅[部分 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) 40 页上。  
   
--   **OMP\_NESTED** 环境变量，请参见中的第 49 页的 [第4.4部分](../../parallel/openmp/4-4-omp-nested.md) 。  
+-   **OMP_NESTED**环境变量，请参阅[部分 4.4](../../parallel/openmp/4-4-omp-nested.md)页 49 上。  
   
--   **omp\_set\_num\_threads** 库函数，请参见中的第 36 页的 [第3.1.1部分](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 。
+-   **omp_set_num_threads**库函数，请参阅[部分 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)页 36 上。

@@ -1,58 +1,57 @@
 ---
-title: "__rdtsc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtsc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__rdtsc 内部函数"
-  - "rdtsc 指令"
-  - "读取时间戳计数器指令"
+title: "__rdtsc |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtsc
+dev_langs: C++
+helpviewer_keywords:
+- __rdtsc intrinsic
+- rdtsc instruction
+- Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fa161bcc1845ab058773ca8ebdecfb5233235e54
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# __rdtsc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rdtsc"></a>__rdtsc
 **Microsoft 专用**  
   
- 生成 `rdtsc` 命令，返回处理器时间戳。  处理器时间戳记录时钟周期数从最后一个默认值。  
+ 生成`rdtsc`指令，返回的处理器时间戳。 处理器时间戳记录上次重置后的时钟周期数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned __int64 __rdtsc();  
 ```  
   
-## 返回值  
- 表示滴答计数的 64 位无符号整数。  
+## <a name="return-value"></a>返回值  
+ 一个 64 位无符号的整型，表示滴答计数。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__rdtsc`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此实例仅可用作内部。  
+## <a name="remarks"></a>备注  
+ 此例程是仅用作内部函数。  
   
- TSC 值的解释在硬件的此生成的与在 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]的早期版本。  请参见硬件准则有关更多信息。  
+ 在这一代的硬件 TSC 值的解释不同于在早期版本的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。 请参阅硬件手册，以获得详细信息。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // rdtsc.cpp  
@@ -70,8 +69,11 @@ int main()
 }  
 ```  
   
-  **3363423610155519 滴答**   
-## 特定于 Microsoft 的结尾  
+```Output  
+3363423610155519 ticks  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>另请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

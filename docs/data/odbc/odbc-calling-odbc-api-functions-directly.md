@@ -1,55 +1,56 @@
 ---
-title: "ODBC：直接调用 ODBC API 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API [C++], 调用"
-  - "目录函数 (ODBC)"
-  - "目录函数 (ODBC), 调用"
-  - "直接 ODBC API 调用"
-  - "ODBC [C++], API 函数"
-  - "ODBC [C++], 目录函数"
-  - "ODBC API 函数 [C++]"
-  - "ODBC API 函数 [C++], 调用"
-  - "ODBC 类 [C++], 与 ODBC API 的比较"
+title: "ODBC： 直接调用 ODBC API 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC API functions [C++], calling
+- ODBC [C++], catalog functions
+- ODBC API functions [C++]
+- APIs [C++], calling
+- ODBC classes [C++], vs. ODBC API
+- direct ODBC API calls
+- catalog functions (ODBC)
+- catalog functions (ODBC), calling
+- ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b7304d83eca004952eb65ed6c5d16e4ce816bb56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ODBC：直接调用 ODBC API 函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-数据库类提供的到[数据源](../../data/odbc/data-source-odbc.md)的接口比 ODBC 提供的更为简单。  因此，这些类不封装全部的 ODBC API。  对于这些类的功能以外的任何功能，都必须直接调用 ODBC API 函数。  例如，您必须直接调用 ODBC 目录函数（**::SQLColumns**、**::SQLProcedures**、**::SQLTables** 和其他一些函数）。  
+# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接调用 ODBC API 函数
+数据库类为提供更简单的接口[数据源](../../data/odbc/data-source-odbc.md)比 ODBC。 因此，类不封装所有 ODBC API。 对于任何类的功能以外的功能，必须直接调用 ODBC API 函数。 例如，你必须调用 ODBC 目录函数 (**:: SQLColumns**， **:: SQLProcedures**， **:: SQLTables**，等) 直接。  
   
 > [!NOTE]
->  通过 MFC ODBC 类（如本主题所述）或通过 MFC 数据访问对象 \(DAO\) 类，都可以访问 ODBC 数据源。  
+>  ODBC 数据源是通过 MFC ODBC 类，如本主题中所述，或通过 MFC 数据访问对象 (DAO) 类访问。  
   
- 若要直接调用 ODBC API 函数，必须采取的步骤和在无框架情况下调用所采取的步骤相同。  这些步骤是：  
+ 若要调用 ODBC API 函数直接，必须采取步骤和在无框架情况下的调用采取的步骤相同。 这些步骤：  
   
--   为调用返回的任何结果分配存储空间。  
+-   将存储分配为该调用将返回任何结果。  
   
--   根据函数的参数签名，传递 ODBC **HDBC** 或 **HSTMT** 句柄。  使用 [AFXGetHENV](../Topic/AfxGetHENV.md) 宏检索 ODBC 句柄。  
+-   将传递一个 ODBC **HDBC**或**HSTMT**处理，具体取决于该函数的参数签名。 使用[AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv)宏来检索 ODBC 句柄。  
   
-     因为成员变量 **CDatabase::m\_hdbc** 和 **CRecordset::m\_hstmt** 是可用的，所以不需要您亲自分配和初始化这些变量。  
+     成员变量**CDatabase::m_hdbc**和**CRecordset::m_hstmt**都可用，因此不需要分配和初始化这些自己。  
   
--   也许还要调用其他的 ODBC 函数为主调用做准备或者跟在主调用之后。  
+-   可能是调用其他 ODBC 函数，来准备或执行主调用后续操作。  
   
--   调用完成后，解除分配存储空间。  
+-   完成后，取消分配存储空间。  
   
- 有关这些步骤的更多信息，请参见 MSDN 文档中的[开放式数据库连接 \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK。  
+ 有关这些步骤的详细信息，请参阅[开放式数据库连接 (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) MSDN 文档中的 SDK。  
   
- 除这些步骤之外，您需要采取另外一些步骤检查函数返回值，确保您的程序不是在等待完成一个异步调用等。  可以通过使用 `AFX_SQL_ASYNC` 和 `AFX_SQL_SYNC` 宏简化最后的这些步骤。  有关更多信息，请参见《MFC 参考》中的[宏和全局](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md)。  
+ 除了这些步骤，需要执行额外的步骤来检查函数返回值，请确保你的程序未等待的异步调用完成后，依次类推。 你可以通过使用来简化这些最后一个步骤`AFX_SQL_ASYNC`和`AFX_SQL_SYNC`宏。 有关详细信息，请参阅[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 参考*。  
+
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ODBC 基础](../../data/odbc/odbc-basics.md)

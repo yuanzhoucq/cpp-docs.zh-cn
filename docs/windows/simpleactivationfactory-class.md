@@ -1,32 +1,30 @@
 ---
-title: "SimpleActivationFactory 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleActivationFactory 类"
+title: "SimpleActivationFactory 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory
+dev_langs: C++
+helpviewer_keywords: SimpleActivationFactory class
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3c56d03b74080ae65f84ffbad8c4dd2092be1082
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# SimpleActivationFactory 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-提供基本机制创建 Windows 运行时还是经典 COM 基类。  
+# <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 类
+提供创建 Windows 运行时或经典 COM 基类的基础机制。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -35,28 +33,28 @@ template<
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `Base`  
- （基类）  
+ 基类。  
   
-## 备注  
- 此类必须具有默认构造函数。  
+## <a name="remarks"></a>备注  
+ 基类必须提供一个默认构造函数。  
   
- 下面的代码示例演示如何使用带有 [SimpleActivationFactory](../windows/activatableclass-macros.md) 宏的 SimpleClassFactory。  
+ 下面的代码示例演示如何使用与 SimpleActivationFactory [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏。  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[SimpleActivationFactory::ActivateInstance 方法](../windows/simpleactivationfactory-activateinstance-method.md)|创建指定接口的实例。|  
-|[SimpleActivationFactory::GetRuntimeClassName 方法](../windows/simpleactivationfactory-getruntimeclassname-method.md)|获取类实例的运行时类名 `Base` 类模板参数指定的。|  
-|[SimpleActivationFactory::GetTrustLevel 方法](../windows/simpleactivationfactory-gettrustlevel-method.md)|类获取实例的信任级别。`Base` 类模板参数指定的。|  
+|名称|描述|  
+|----------|-----------------|  
+|[SimpleActivationFactory::ActivateInstance 方法](../windows/simpleactivationfactory-activateinstance-method.md)|创建指定的接口的实例。|  
+|[SimpleActivationFactory::GetRuntimeClassName 方法](../windows/simpleactivationfactory-getruntimeclassname-method.md)|获取指定的类的实例的运行时类名称`Base`类模板参数。|  
+|[SimpleActivationFactory::GetTrustLevel 方法](../windows/simpleactivationfactory-gettrustlevel-method.md)|获取指定的类的实例的信任级别`Base`类模板参数。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  
   
  `ChainInterfaces`  
@@ -79,10 +77,10 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
  `SimpleActivationFactory`  
   
-## 要求  
- **标头:** module.h  
+## <a name="requirements"></a>要求  
+ **标头：** module.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>另请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

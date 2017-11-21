@@ -1,68 +1,68 @@
 ---
-title: "Attribute Programming FAQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributed programming"
-  - "attributes [C++], frequently asked questions"
-  - "FAQs (frequently asked questions), attributed programming [C++]"
+title: "特性编程常见问题 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- attributed programming
+- attributes [C++], frequently asked questions
+- FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c61ced7e0931f1dba46a7a6b760755f799d29b6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Attribute Programming FAQ
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题回答以下常见问题:  
+# <a name="attribute-programming-faq"></a>特性编程常见问题
+本主题回答下列常见问题：  
   
--   [什么是 HRESULT?](#vcconattributeprogrammmingfaqanchor1)  
+-   [HRESULT 是什么？](#vcconattributeprogrammmingfaqanchor1)  
   
--   [我当必须为特性指定参数名称?](#vcconattributeprogrammmingfaqanchor2)  
+-   [何时具有指定属性的参数名称](#vcconattributeprogrammmingfaqanchor2)  
   
--   [我是否能将注释在特性块?](#vcconattributeprogrammmingfaqanchor3)  
+-   [可以在特性块中使用注释？](#vcconattributeprogrammmingfaqanchor3)  
   
--   [属性与继承交互?](#vcconattributeprogrammmingfaqanchor4)  
+-   [属性如何与继承交互？](#vcconattributeprogrammmingfaqanchor4)  
   
--   [如何使用属性在一个非 ATL 项目?](#vcconattributeprogrammmingfaqanchor5)  
+-   [如何在非特性化 ATL 项目中使用属性？](#vcconattributeprogrammmingfaqanchor5)  
   
--   [如何使用 .idl 文件在一个特性化项目中?](#vcconattributeprogrammmingfaqanchor6)  
+-   [如何使用特性化项目中的.idl 文件？](#vcconattributeprogrammmingfaqanchor6)  
   
--   [我是否能修改属性插入的代码?](#vcconattributeprogrammmingfaqanchor7)  
+-   [可以修改由属性插入的代码？](#vcconattributeprogrammmingfaqanchor7)  
   
--   [如何前向声明特性化的界面?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
+-   [如何向前声明特性化的接口？](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
   
--   [我是否能将在从还可以使用属性的类派生的类的属性?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
+-   [可以从还使用属性的类派生的类上使用属性？](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> 什么是 HRESULT?  
- `HRESULT` 由属性和 ATL 通常一个简单的数据类型，因为返回值通常。  下表描述了各种值。  多个值在头文件包含 winerror.h。  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a>HRESULT 是什么？  
+ `HRESULT`是通常由作为返回值特性和 ATL 通常以简单数据类型。 下表介绍各种值。 标头文件 winerror.h 中包含多个值。  
   
-|名称|说明|值|  
-|--------|--------|-------|  
-|S\_OK|成功的操作|0x00000000|  
-|E\_UNEXPECTED|意外的失败|0x8000FFFF|  
-|E\_NOTIMPL|未实现|0x80004001|  
-|E\_OUTOFMEMORY|未能分配必要的内存|0x8007000E|  
-|E\_INVALIDARG|一个或多个无效的参数|0x80070057|  
-|E\_NOINTERFACE|不支持这样的接口|0x80004002|  
-|E\_POINTER|无效的指针|0x80004003|  
-|E\_HANDLE|无效处理|0x80070006|  
-|E\_ABORT|中止的操作|0x80004004|  
-|E\_FAIL|未指定的失败|0x80004005|  
-|E\_ACCESSDENIED|泛型拒绝访问错误|0x80070005|  
+|名称|描述|值|  
+|----------|-----------------|-----------|  
+|S_OK|操作成功|0x00000000|  
+|E_UNEXPECTED|意外的失败|: 0x8000FFFF|  
+|E_NOTIMPL|未实现|0x80004001|  
+|E_OUTOFMEMORY|无法分配必要的内存|已用完 0x8007000E|  
+|E_INVALIDARG|一个或多个参数是无效|0x80070057|  
+|E_NOINTERFACE|不支持此接口|0x80004002|  
+|E_POINTER|无效的指针|0x80004003|  
+|E_HANDLE|无效句柄|0x80070006|  
+|E_ABORT|操作中止|0x80004004|  
+|E_FAIL|未指定的失败|0x80004005|  
+|E_ACCESSDENIED|常规拒绝访问错误|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 我当必须为特性指定参数名称?  
- 在大多数情况下，因此，如果属性具有一个参数，该参数名为。  此名称，在插入属性。代码时，不需要。  例如， [可聚集的](../windows/aggregatable.md) 属性的使用:  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a>何时具有指定属性的参数名称  
+ 在大多数情况下，如果属性具有单个参数，该参数的名称为。 如果在你的代码中插入该属性，则不需要此名称。 例如，下面的用法的[聚合](../windows/aggregatable.md)属性：  
   
 ```  
 [coclass, aggregatable(value=allowed)]  
@@ -72,7 +72,7 @@ class CMyClass
 };  
 ```  
   
- 是同一如下所示:  
+ 正是相同：  
   
 ```  
 [coclass, aggregatable(allowed)]  
@@ -82,26 +82,26 @@ class CMyClass
 };  
 ```  
   
- 但是，下面的特性具有唯一，未命名参数:  
+ 但是，以下属性具有单一的未命名参数：  
   
 ||||  
 |-|-|-|  
-|[call\_as](../windows/call-as.md)|[case](../windows/case-cpp.md)|[cpp\_quote](../windows/cpp-quote.md)|  
+|[call_as](../windows/call-as.md)|[case](../windows/case-cpp.md)|[cpp_quote](../windows/cpp-quote.md)|  
 |[default](../windows/default-cpp.md)|[defaultvalue](../windows/defaultvalue.md)|[defaultvtable](../windows/defaultvtable.md)|  
-|[emitidl](../windows/emitidl.md)|[项](../windows/entry.md)|[first\_is](../windows/first-is.md)|  
+|[emitidl](../windows/emitidl.md)|[entry](../windows/entry.md)|[first_is](../windows/first-is.md)|  
 |[helpcontext](../windows/helpcontext.md)|[helpfile](../windows/helpfile.md)|[helpstring](../windows/helpstring.md)|  
 |[helpstringcontext](../windows/helpstringcontext.md)|[helpstringdll](../windows/helpstringdll.md)|[id](../windows/id.md)|  
-|[iid\_is](../windows/iid-is.md)|[import](../windows/import.md)|[importlib](../windows/importlib.md)|  
-|[包含](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last\_is](../windows/last-is.md)|  
-|[length\_is](../windows/length-is.md)|[max\_is](../windows/max-is.md)|[no\_injected\_text](../windows/no-injected-text.md)|  
-|[pointer\_default](../windows/pointer-default.md)|[说明](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size\_is](../windows/size-is.md)|[source](../windows/source-cpp.md)|[switch\_is](../windows/switch-is.md)|  
-|[switch\_type](../windows/switch-type.md)|[transmit\_as](../windows/transmit-as.md)|[wire\_marshal](../windows/wire-marshal.md)|  
+|[iid_is](../windows/iid-is.md)|[import](../windows/import.md)|[importlib](../windows/importlib.md)|  
+|[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
+|[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
+|[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
+|[size_is](../windows/size-is.md)|[源](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 我是否能将注释在特性块?  
- 可以使用单行，并在属性中的多行注释块。  但是，不能使用注释任何一个样式位于备用参数的括号内于属性。  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a>可以在特性块中使用注释？  
+ 你可以使用特性块中的单行和多行注释。 但是，不能使用两种样式中的属性中保存的参数的括号内的注释。  
   
- 下面这样:  
+ 以下被允许:  
   
 ```  
 [ coclass,  
@@ -111,7 +111,7 @@ class CMyClass
 ]  
 ```  
   
- 以下要求:  
+ 不允许以下：  
   
 ```  
 [ coclass,  
@@ -120,19 +120,19 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 属性与继承交互?  
- 可继承从其他类的特性化和非特性化类，它们可能已特性化。  ，在属性提供转换其代码后，派生的结果从特性化的类与从派生该类。  属性不传递给派生类通过 C\+\+ 继承。  属性提供程序只转换代码在其特性两旁。  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a>属性如何与继承交互？  
+ 你可以从其他类，该类可能本身被归因或不继承特性化和非特性化类。 从特性化的类派生的结果是相同的属性提供程序已转换其代码后从该类派生。 属性不会传输到派生通过 c + + 继承的类。 属性提供程序仅转换邻近及其属性的代码。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 如何使用属性在一个非 ATL 项目?  
- 您可能有一个非 ATL 项目，具有 .idl 文件，因此，您可以首先添加特性化的对象。  在这种情况下，使用添加类向导的代码。  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a>如何在非特性化 ATL 项目中使用属性？  
+ 你可能必须具有.idl 文件，一个非特性化的 ATL 项目，并且你可能想要开始添加特性化的对象。 在这种情况下，使用添加类向导提供的代码。  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 如何使用 .idl 文件在一个特性化项目中?  
- 您可能会在该 ATL 特性化的项目中使用的 .idl 文件。  在这种情况下，您在项目中使用 [importidl](../windows/importidl.md) 属性，生成 .idl 文件添加到 .h 文件 \(请参见在项目的 " 属性页 " 对话框的 [MIDL 属性页](../ide/midl-property-pages.md) \)，然后包括 .h 文件。  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a>如何使用特性化项目中的.idl 文件？  
+ 你可能具有你想要使用特性化 ATL 项目中的.idl 文件。 在这种情况下，将使用[importidl](../windows/importidl.md)特性，编译的.h 文件的.idl 文件 (请参阅[MIDL 属性页](../ide/midl-property-pages.md)项目的属性页对话框中)，然后将.h 文件包含在你的项目.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 我是否能修改属性插入的代码?  
- 某些特性插入代码添加到项目中。  使用 [\/Fx](../build/reference/fx-merge-injected-code.md) 编译器选项，您可以查看插入的代码。  复制代码从注入的文件并将其粘贴到源代码也是可能的。  这使您得以修改属性的行为。  但是，您可能必须修改代码的其他部分。  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a>可以修改由属性插入的代码？  
+ 某些特性将代码注入到你的项目。 你可以通过查看插入的代码[/Fx](../build/reference/fx-merge-injected-code.md)编译器选项。 还有可能从插入文件复制代码并将其粘贴到你的源代码。 这样，您可以修改该属性的行为。 但是，你可能需要修改你的代码以及其他部分。  
   
- 下面的示例是复制插入的代码的结果到源代码文件:  
+ 下面的示例是将插入的代码复制到一个源代码文件的结果：  
   
 ```  
 // attr_injected.cpp  
@@ -252,11 +252,11 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 如何前向声明特性化的界面?  
- 如果您使用前向声明特性化的接口，必须将同一特性应用于接口实际声明的前向声明。  您还必须将 [export](../windows/export.md) 特性应用于该前向声明。  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>如何向前声明特性化的接口？  
+ 如果想要使前向声明的属性化接口，必须将相同的属性应用到适用于实际接口声明前向声明。 你还必须应用[导出](../windows/export.md)属性设为前向声明。  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 我是否能将在从还可以使用属性的类派生的类的属性?  
- 不，在从还可以使用属性的类派生的类的属性不受支持。  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>可以从还使用属性的类派生的类上使用属性？  
+ 否，不支持从还使用属性的类派生的类上使用属性。  
   
-## 请参阅  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>另请参阅  
+ [概念](../windows/attributed-programming-concepts.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3206
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3206
+f1_keywords: C3206
+dev_langs: C++
+helpviewer_keywords: C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 4faf775e3a3a179e49f013b21a948c49a4f89f74
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 600ea77821fc457a631f96d48b2416f958dce667
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-error-c3206"></a>编译器错误 C3206
 “function”：“param”的类型参数无效，缺少对类类型“typename”上的类型参数列表  
@@ -96,11 +91,8 @@ int main() {
 }  
 ```  
   
- 此错误还可能来自于用于 Visual C++ .NET 2003 的编译器一致性工作，其中不允许类模板作为类型参数。  
-  
- 不允许类模板作为模板类型参数。 这在 Visual C++ .NET 2003 中有效，但它是无效的 C++。  
-  
- 下面的示例在 Visual C++ .NET 2002 中编译，但在 Visual C++ .NET 2003 中将失败：  
+ 
+ 不允许类模板作为模板类型参数。 下面的示例引发 C3206:  
   
 ```  
 // C3206e.cpp  
@@ -134,7 +126,7 @@ int main() {
 }  
 ```  
   
- 如果模板模板参数是必需的，那么针对在 Visual C++ .NET 2003 和 Visual C++ .NET 2002 版本中都有效的错误的解决方法就需要你在采用模板模板参数的模板类中包装该函数：  
+ 如果模板模板参数是必需的然后必须采用模板模板参数的模板类中包装该函数：  
   
 ```  
 // C3206g.cpp  

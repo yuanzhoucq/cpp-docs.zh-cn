@@ -1,69 +1,66 @@
 ---
-title: "implements (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements attribute"
+title: "实现 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements
+dev_langs: C++
+helpviewer_keywords: implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44e1ec9a00f1de2ab07d7b2a916d274a9cddce2e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# implements (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定强制为 IDL coclass 的成员的调度接口。  
+# <a name="implements-c"></a>implements (C++)
+指定强制 IDL 组件类的成员的调度接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      [ implements(   
+      [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  **接口**  
- 逗号分隔将为 IDL coclass 的成员的列表接口。  指定的单个接口简写方法是 **实现 \(***interface\_name***\)**。  
+ 以逗号分隔的接口的将是 IDL 组件类的成员的列表。 针对指定单个接口的速记方法是**实现 (***interface_name***)**。  
   
  **调度接口**  
- 逗号分隔将为 IDL coclass 的成员的列表调度接口。  指定唯一的调度接口简写方法是 **实现 \(调度接口** *\= dispinterface\_name***\)**。  
+ 以逗号分隔将是 IDL 组件类的成员的调度接口的列表。 针对指定单个调度接口的速记方法是**实现 (调度接口** *= dispinterface_name***)**。  
   
-## 备注  
- 默认情况下，为 coclass 的基类仅的 COM 接口在 IDL coclass 添加。  **实现** 可以强制其他接口是 IDL coclass 成员。  
+## <a name="remarks"></a>备注  
+ 默认情况下，只有 COM 的接口的组件类的基类被添加在 IDL 组件类。 **实现**允许你强制 IDL 组件类成员其他接口。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
+|**适用对象**|**class**， `struct`|  
 |**可重复**|是|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 示例  
- 下面的示例在三部分:.idl 文件及其关联的 .h 文件和 c. C\+\+ 文件。  
+## <a name="example"></a>示例  
+ 下面的示例分为三个部分：.idl 文件和其关联的.h 文件和 c + + 文件。  
   
- 假定下列 .idl 文件，则编译器将可用。  
+ 假定以下的.idl 文件将可供编译器。  
   
 ```  
 // attr_implements.idl  
@@ -112,8 +109,8 @@ library odod
 }  
 ```  
   
-## 示例  
- 因此以下 .h 文件，还需要供编译器。  
+## <a name="example"></a>示例  
+ 以及下面的.h 文件，还需要可供编译器。  
   
 ```  
 // attr_implements.h  
@@ -429,8 +426,8 @@ CBar;
 #endif  
 ```  
   
-## 示例  
- 在下面的过程中，不实现， IBar1、 IBar2 和 ISna 不会在生成的 IDL 的 coclass。  
+## <a name="example"></a>示例  
+ 在下面的程序，而无需实现 IBar1、 IBar2 和 ISna 不会在生成的 IDL 中的组件类。  
   
 ```  
 // attr_implements.cpp  
@@ -551,7 +548,6 @@ public:
 };  
 ```  
   
-## 请参阅  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [编译器特性](../windows/compiler-attributes.md)   
+ [类特性](../windows/class-attributes.md)   

@@ -1,61 +1,59 @@
 ---
-title: "文本 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "literal"
-  - "literal_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文本关键字 [C++]"
+title: "文本 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- literal
+- literal_cpp
+dev_langs: C++
+helpviewer_keywords: literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d13c8b081f3bcc3efbf20be3c31e2601baa6ca02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 文本 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-变量 \(数据成员\) 指示的，因为在 **\/clr** 编译中的 `literal` 是 `static const` 本机项变量。  
+# <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
+（数据成员） 的变量标记为`literal`中**/clr**编译为等同的本机`static const`变量。  
   
-## 所有平台  
+## <a name="all-platforms"></a>所有平台  
  **备注**  
   
- （无适用于所有运行时的语言功能的备注。）  
+ （此语言功能没有适用于所有运行时的备注。）  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
- \(此语言功能没有只适用于 Windows 运行时的备注。）  
+ (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/ZW**  
   
-## 公共语言运行时  
+## <a name="common-language-runtime"></a>公共语言运行时  
   
-## 备注  
- 在声明和值必须为常量整型、枚举或字符串类型，被标记为 `literal`的数据成员必须被初始化。  从初始化表达式类型的转换为的常量静态数据成员的类型不能需要用户定义的转换。  
+## <a name="remarks"></a>备注  
+ 数据成员标记为`literal`声明时必须初始化和值必须为常量整型、 枚举类型或字符串类型。 从初始化表达式类型转换为静态常量数据成员类型时，不能使用用户定义的转换。  
   
- 内存没有为运行时中的文本字段分配；编译器只将其在元数据中的类的值插入。  
+ 没有在运行时为文本字段分配内存；编译器只将其值插入该类的元数据中。  
   
- 变量被标记的 `static const` 不是可用在元数据到其他编译器。  
+ 元数据中标记为 `static const` 的变量不可用于其他编译器。  
   
- 有关更多信息，请参见[Static](../misc/static-cpp.md)和[const](../cpp/const-cpp.md)。  
+ 有关详细信息，请参阅[静态](../cpp/storage-classes-cpp.md)和[const](../cpp/const-cpp.md)。  
   
- `literal` 是上下文相关的关键字。  有关更多信息，请参见[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ `literal` 是上下文相关的关键字。 请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)有关详细信息。  
   
-## 示例  
- 此示例演示，`literal` 变量表示 `static`。  
+## <a name="example"></a>示例  
+ 此示例显示，`literal` 变量表示 `static`。  
   
 ```  
 // mcppv2_literal.cpp  
@@ -69,8 +67,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例演示元数据显示文本影响：  
+## <a name="example"></a>示例  
+ 下面的示例演示了对元数据的文本影响：  
   
 ```  
 // mcppv2_literal2.cpp  
@@ -81,7 +79,7 @@ public ref struct A {
 };  
 ```  
   
- 注意在元数据中的 `sc` 和 `lit`的差异：`modopt` 指令应用于 `sc`，这意味着它可能由其他编译器忽略。  
+ 注意 `sc` 和 `lit` 在元数据上的区别：`modopt` 指令应用于 `sc`，表示其他编译器会将其忽略。  
   
 ```  
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
@@ -91,8 +89,8 @@ public ref struct A {
 .field public static literal int32 lit = int32(0x0000000A)  
 ```  
   
-## 示例  
- 下例，编写 C\#，引用上一示例中创建的元数据并显示 `literal` 和 `static const` 变量影响：  
+## <a name="example"></a>示例  
+ 下面的示例使用 C# 编写，引用上一示例中创建的元数据并显示 `literal` 和 `static const` 变量的影响：  
   
 ```  
 // mcppv2_literal3.cs  
@@ -123,8 +121,8 @@ class B {
 }  
 ```  
   
-## 要求  
- 编译器选项：**\/clr**  
+## <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

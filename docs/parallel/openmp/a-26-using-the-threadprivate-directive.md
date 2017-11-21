@@ -1,27 +1,26 @@
 ---
-title: "A.26   Using the threadprivate Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用 threadprivate 指令 A.26 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6eda76c2-c4f1-4208-a900-e0ea98a53eca
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f6c24a3c00dad6e196d015518071978884260c93
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# A.26   Using the threadprivate Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例演示如何使用 `threadprivate` 指令 \(在第 23 页\) 的[第2.7.1部分](../../parallel/openmp/2-7-1-threadprivate-directive.md) 为每个线程提供单独的计数器。  
+# <a name="a26---using-the-threadprivate-directive"></a>A.26   使用 threadprivate 指令
+下面的示例演示如何使用`threadprivate`指令 ([部分 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) 23 页上) 为每个线程提供单独的计数器。  
   
  **示例 1:**  
   

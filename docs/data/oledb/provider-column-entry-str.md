@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_STR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_STR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_STR 宏"
+title: "PROVIDER_COLUMN_ENTRY_STR |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_STR
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_STR macro
 ms.assetid: f1c27dd6-9ab8-4821-8685-d4dd15e76e88
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f26311d3f84c28983a9d53985dbdde16f2c47cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_STR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示提供程序所支持的特定列。  
+# <a name="providercolumnentrystr"></a>PROVIDER_COLUMN_ENTRY_STR
+表示提供程序支持的特定列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,26 +33,26 @@ name
 , ordinal, member )  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *name*  
- \[in\] 列名。  
+ [in]列名称。  
   
  `ordinal`  
- \[in\] 列数。  除非将列是书签列，列数无法为 0。  
+ [in] 列号。 除非列是书签列，列数必须不为 0。  
   
  `member`  
- \[in\] 在存储数据的数据类的成员变量。  
+ [in]将数据存储的数据类中的成员变量。  
   
-## 备注  
- 当列，假定是 [DBTYPE\_STR](https://msdn.microsoft.com/en-us/library/ms711251.aspx)数据时，请使用此宏。  
+## <a name="remarks"></a>备注  
+ 使用此宏时列数据被假定为[DBTYPE_STR](https://msdn.microsoft.com/en-us/library/ms711251.aspx)。  
   
-## 示例  
- 参见 [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md)。  
+## <a name="example"></a>示例  
+ 请参阅[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>要求  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   

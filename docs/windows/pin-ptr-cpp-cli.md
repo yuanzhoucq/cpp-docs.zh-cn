@@ -1,53 +1,52 @@
 ---
-title: "pin_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "pin_ptr_cpp"
-  - "stdcli::language::pin_ptr"
-  - "pin_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pin_ptr 关键字 [C++]"
-  - "钉住指针"
+title: "pin_ptr (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- pin_ptr_cpp
+- stdcli::language::pin_ptr
+- pin_ptr
+dev_langs: C++
+helpviewer_keywords:
+- pinning pointers
+- pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 28
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "28"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c72149aa023723f4524ac22252f6778494341f44
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# pin_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-声明 *钉住指针*，仅使用在公共语言运行时。  
+# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+声明*钉住指针*，其只能与公共语言运行时一起使用。  
   
-## 所有运行时  
- （无适用于所有运行时的语言功能的备注。）  
+## <a name="all-runtimes"></a>所有运行时  
+ （此语言功能没有适用于所有运行时的备注。）  
   
-## Windows Runtime — Windows 运行时  
- \(此功能在 Windows 语言运行时不受支持。\)  
+## <a name="windows-runtime"></a>Windows 运行时  
+ （此语言功能不支持在 Windows 运行时中。）  
   
-## 公共语言运行时  
- 一个 *钉住指针* 是防止您的对象移动将在垃圾回收堆的内部指针。  也就是说钉住指针的值不是由公共语言运行时更改。  当向非托管函数传递托管类的地址时，这很有用，因为在解析非托管函数调用的过程中，该地址不会意外更改。  
+## <a name="common-language-runtime"></a>公共语言运行时  
+ A*钉住指针*可防止该对象的内部指针指向在垃圾回收堆上移动。 也就是说，公共语言运行时不会更改钉住指针的值。 这是必需的当您将托管类的地址传递到非托管函数中的地址不会意外更改在解析非托管的函数调用的过程。  
   
-### 语法  
+### <a name="syntax"></a>语法  
   
 ```cpp  
-[cli::]pin_ptr<cv_qualifier type> var = &initializer;  
+[cli::]pin_ptr<cv_qualifiertype>var = &initializer;  
 ```  
   
-### 参数  
- *cv\_qualifier*  
- `const` 或 `volatile` 限定符。  默认情况下，钉住指针是 `volatile`。  为冗余，而不是错误声明钉住指针 `volatile`。  
+### <a name="parameters"></a>参数  
+ *cv_qualifier*  
+ `const`或`volatile`限定符。 默认情况下，钉住指针是`volatile`。 但不是声明钉住指针是错误多余`volatile`。  
   
  *type*  
  `initializer` 的类型。  
@@ -56,52 +55,52 @@ manager: "ghogen"
  `pin_ptr` 变量的名称。  
   
  *initializer*  
- 引用类型元素，托管数组，或者任何其他的成员可以分配给本机指针的对象。  
+ 可以分配给本机指针的引用类型、托管数组的元素或者任何其他对象的成员。  
   
-### 备注  
- `pin_ptr` 表示本机指针的功能扩展。  因此，可以分配给本机指针的任何也可以分配给 `pin_ptr`。  内部指针允许运行同一组操作与本机指针，其中包括比较和指针算法。  
+### <a name="remarks"></a>备注  
+ A`pin_ptr`表示本机指针的功能的超集。 因此，可以分配给本机指针的任何内容还可以分配到`pin_ptr`。 内部指针允许执行与本机指针相同的操作，其中包括比较和指针算法。  
   
- 托管类的对象或子对象可以固定，在垃圾回收过程情况下公共语言运行时不会移动。  使用此的基本用法是传递指向托管数据为托管函数调用的一个实参。  在回收周期期间，运行时将检查创建的元数据。因此不移动指向的钉住指针的项。  
+ 对象或子对象的托管类可以固定，在这种情况下公共语言运行时不会移动它在垃圾回收期间。 主要用途是将指针传递给托管数据作为实际参数的非托管的函数调用。 在出现集合周期中，运行时将检查为钉住指针创建的元数据，并将不会移动它指向的项。  
   
- 固定对象还固定字段；其值即或基元值类型字段。  但是，声明的字段跟踪句柄 \(`%`\) 不使用锁定。  
+ 固定对象还钉住其值字段中;也就是说，基元的字段或值类型。 但是，通过跟踪句柄声明的字段 (`%`) 不固定。  
   
- 固定在宿主的对象定义的子对象的固定整个对象的效果。  
+ 钉住在托管对象中定义的子对象具有固定整个对象的效果。  
   
- 如果固定指针重新分配到新值，以前的实例指向不再将该表视为锁定。  
+ 如果重新分配钉住指针以指向新值，指向上一个实例就不再被视为固定。  
   
- 对象固定，仅当它的 `pin_ptr` 指向它。  对象不再被锁定，则其固定指针超出范围，或者设置为 [nullptr](../windows/nullptr-cpp-component-extensions.md)。  在 `pin_ptr` 超出范围之后，固定对象在堆可以移动被垃圾回收器回收。  仍然指向对象的任何本机指针不会更新，并间接引用其中一个可能引发一不可恢复的异常。  
+ 固定对象仅而`pin_ptr`指向了它。 对象不再固定时其固定指针超出范围，或设置为[nullptr](../windows/nullptr-cpp-component-extensions.md)。 后`pin_ptr`超出范围，已固定的对象可以通过垃圾回收器堆中移动。 将不会更新任何仍指向对象的本机指针，并取消引用至少其中一个可能会产生不可恢复的异常。  
   
- 如果对对象的固定指针 \(指向所有钉住指针超出了范围，重新分配到其他对象的点或分配 [nullptr](../windows/nullptr-cpp-component-extensions.md)\)，不保证对象不锁定。  
+ 如果没有钉住指针指向的对象 (所有的固定指针超出作用域、 以及重新分配为指向其他对象，或已分配[nullptr](../windows/nullptr-cpp-component-extensions.md))，该对象保证不固定。  
   
- 钉住指针可以指向句柄引用、值类型或装箱类型的托管类型的句柄、成员或托管数组的元素。  它不能指向引用类型。  
+ 钉住指针可以指向引用句柄、 值类型或装箱的类型句柄、 托管类型的成员或托管数组的元素。 它不能指向引用类型。  
   
- 将指向本机 `pin_ptr` 对象的地址导致未定义的行为。  
+ 采用的地址`pin_ptr`指向本机对象会导致未定义的行为。  
   
- 钉住指针只能声明作为堆栈上的非静态局部变量。  
+ 钉住指针只能声明为非静态局部变量堆栈上。  
   
- 无法使用钉住指针所示：  
+ 不能用作钉住指针：  
   
 -   函数参数  
   
--   作为函数的返回类型。  
+-   函数的返回类型  
   
--   类成员的声明  
+-   类的成员  
   
--   目标的类型约束。  
+-   强制转换的目标类型。  
   
- `pin_ptr` 是`cli`命名空间中的类型。  有关详细信息，请参阅[Platform、default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)。  
+ `pin_ptr`处于`cli`命名空间。 有关详细信息，请参阅[平台、 default 和 cli 命名空间](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)。  
   
- 有关智能指针的更多信息，请参见 [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)。  
+ 有关内部指针的详细信息，请参阅[interior_ptr (C + + /cli CLI)](../windows/interior-ptr-cpp-cli.md)。  
   
- 有关生成控制器的更多信息，请参阅[如何：钉住指针和数组](../windows/how-to-pin-pointers-and-arrays.md)和[如何：声明钉住指针和值类型](../windows/how-to-declare-pinning-pointers-and-value-types.md)。  
+ 有关钉住指针的详细信息，请参阅[How to: Pin 指针和数组](../windows/how-to-pin-pointers-and-arrays.md)和[如何： 声明钉住指针和值类型](../windows/how-to-declare-pinning-pointers-and-value-types.md)。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 下面的示例约束使用 `pin_ptr` 数组的第一个元素的位置。  
+ 下面的示例使用`pin_ptr`来约束的数组的第一个元素的位置。  
   
 ```  
 // pin_ptr_1.cpp  
@@ -147,11 +146,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **45** **示例**  
+```Output  
+45  
+```  
   
- 下面的示例表示内部指针转换为钉住的指针，并且，类型为返回 address\-of 运算符 \(`&`\) 是内部指针，当操作数在托管堆时。  
+ **示例**  
+  
+ 下面的示例演示内部指针可转换为钉住指针和返回类型的 address-of 运算符 (`&`) 是一个内部指针，如果操作数是托管堆上。  
   
 ```  
 // pin_ptr_2.cpp  
@@ -181,11 +184,15 @@ int main() {
 };  
 ```  
   
- **Output**  
+ **输出**  
   
- **1** **示例**  
+```Output  
+1  
+```  
   
- 下面的示例演示，钉住的指针转换为另一种类型。  
+ **示例**  
+  
+ 下面的示例演示钉住指针可转换为另一种类型。  
   
 ```  
 // pin_ptr_3.cpp  
@@ -209,7 +216,9 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
- **8**   
-**255**
+```Output  
+8  
+255  
+```

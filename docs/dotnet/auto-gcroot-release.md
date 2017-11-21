@@ -1,44 +1,43 @@
 ---
-title: "auto_gcroot::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::release"
-  - "auto_gcroot::release"
-  - "auto_gcroot.release"
-  - "msclr.auto_gcroot.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "release 方法"
+title: "auto_gcroot::release |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::release
+- auto_gcroot::release
+- auto_gcroot.release
+- msclr.auto_gcroot.release
+dev_langs: C++
+helpviewer_keywords: release method
 ms.assetid: 40b253f0-154e-4d79-80a4-ff13199c3ff0
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8c1c6134f1d92bad3dcf60e6253818a85f1b88b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-释放从 `auto_gcroot` 托管的对象。  
+# <a name="autogcrootrelease"></a>auto_gcroot::release
+释放该对象从`auto_gcroot`管理。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 _element_type release();  
 ```  
   
-## 返回值  
- 释放的对象。  
+## <a name="return-value"></a>返回值  
+ 发布的对象。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_gcroot_release.cpp  
@@ -81,16 +80,19 @@ int main()
 }  
 ```  
   
-  **ClassA 构造函数：首先**  
-**ClassA 构造函数：第二步**  
-**在 ClassA 析构函数：第二步**  
-**从第一个A开始。**  
-**done**   
-## 要求  
- **头文件** \<msclr\\auto\_gcroot.h\>  
+```Output  
+ClassA constructor: first  
+ClassA constructor: second  
+ClassA destructor: second  
+Hello from first A!  
+done  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_gcroot Members](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

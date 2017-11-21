@@ -1,32 +1,30 @@
 ---
-title: "FtmBase::MarshalInterface 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::MarshalInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MarshalInterface 方法"
+title: "Ftmbase:: Marshalinterface 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::MarshalInterface
+dev_langs: C++
+helpviewer_keywords: MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b6bd889a20c2c31de8e5fb6d11990fc2579ef2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase::MarshalInterface 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-写入流中需要数据的初始化放到某客户端进程的代理对象。  
+# <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface 方法
+初始化代理对象某些客户端过程中的所需的数据将写入流。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHODIMP MarshalInterface(  
@@ -39,46 +37,46 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pStm`  
- 对在封送处理期间将使用流的指针。  
+ 指向要封送处理期间使用的流指针。  
   
  `riid`  
- 解封送对的接口标识符的引用。  必须从接口派生 IUnknown 此接口。  
+ 对要封送的接口标识符的引用。 此接口必须派生自 IUnknown 接口。  
   
  `pv`  
- 要封送处理的接口指针的指针；，如果调用方不具有指向所需接口，可以为空。  
+ 指向要封送处理; 的接口指针如果调用方不具有到所需的接口指针，则可以为 NULL。  
   
  `dwDestContext`  
- 指定接口将封送对象的上下文。  
+ 其中将是取消封送指定的接口的目标上下文。  
   
  指定一个或多个 MSHCTX 枚举值。  
   
- 目前， 分离收处理会出现在当前进程中 \(MSHCTX\_INPROC\) 的另一个单元或在计算机上其他进程和当前进程 \(MSHCTX\_LOCAL\) 相同。  
+ 在当前进程 (MSHCTX_INPROC) 的另一单元，或者在当前进程 (MSHCTX_LOCAL) 所在的计算机上的另一个进程中，会发生取消封送。  
   
  `pvDestContext`  
  留待将来使用；必须为零。  
   
  `mshlflags`  
- 标志指示封送的数据都将传输回客户端进程 \- 的典型情况或写入全局表，它可能由多客户端检索。  
+ 指定是否要封送处理数据的传输回客户端进程-典型用例 — 或写入全局表，其中它可以通过多个客户端检索。  
   
-## 返回值  
- S\_OK  
- 接口指针封送。成功  
+## <a name="return-value"></a>返回值  
+ S_OK  
+ 已成功封送的接口指针。  
   
- E\_NOINTERFACE  
+ E_NOINTERFACE  
  不支持指定的接口。  
   
- STG\_E\_MEDIUMFULL  
+ STG_E_MEDIUMFULL  
  流已满。  
   
- E\_FAIL  
+ E_FAIL  
  操作失败。  
   
-## 要求  
- **页眉：**ftm.h  
+## <a name="requirements"></a>要求  
+ **标头：** ftm.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [FtmBase 类](../windows/ftmbase-class.md)
