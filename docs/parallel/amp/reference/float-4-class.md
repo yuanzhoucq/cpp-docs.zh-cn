@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: cfaf6e784779557fcdad630a6e6b339e5ea65614
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 73e88c378a88200a4276b9cdbbab8e828ff403b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="float4-class"></a>float_4 类
-表示四个浮点型值的短矢量。  
+表示短矢量的四个浮点数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -321,7 +304,7 @@ class float_4;
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[float_4 构造函数](#ctor)|已重载。 默认构造函数，将初始化为 0 的所有元素。|  
   
@@ -473,7 +456,7 @@ class float_4;
 |float_4::operator-||  
 |float_4::operator-||  
 |float_4::operator * =||  
-|float_4::operator / =||  
+|/ = float_4::operator 的||  
 |float_4::operator + +||  
 |float_4::operator + =||  
 |float_4::operator =||  
@@ -622,7 +605,7 @@ class float_4;
  `float_4`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -705,4 +688,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>另请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

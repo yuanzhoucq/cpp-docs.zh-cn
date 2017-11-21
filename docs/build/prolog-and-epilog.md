@@ -1,32 +1,32 @@
 ---
-title: "保护现场和恢复现场 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Prolog 和 Epilog |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 保护现场和恢复现场
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-每个分配堆栈空间、调用其他函数、保存非易失寄存器或使用异常处理的函数必须具有 Prolog，Prolog 的地址限制在与各自的函数表项关联的展开数据中予以说明（请参见 [异常处理 \(x64\)](../build/exception-handling-x64.md)）。  Prolog 将执行以下操作：必要时将参数寄存器保存在其内部地址中；将非易失寄存器推入堆栈；为局部变量和临时变量分配堆栈的固定部分；（可选）建立帧指针。  关联的展开数据必须描述 Prolog 的操作，必须提供撤消 Prolog 代码的影响所需的信息。  
+# <a name="prolog-and-epilog"></a>保护现场和恢复现场
+每个分配堆栈空间的函数，调用其他函数将保存非易失寄存器，或使用异常处理必须具有的 prolog 中的相应函数表项与关联的展开数据描述其地址限制 (请参阅[异常处理 (x64)](../build/exception-handling-x64.md))。 Prolog 将保存在其内部地址寄存器必要情况下，在堆栈上推送非易失寄存器的参数、 局部变量和临时变量，为分配堆栈的固定的部分和 （可选） 建立帧指针。 关联的展开数据必须描述序言的操作，必须提供必需撤消了 prolog 代码的作用的信息。  
   
- 如果堆栈中的固定分配超过一页（即大于 4096 字节），则该堆栈分配的范围可能超过一个虚拟内存页，因此在实际分配之前必须检查分配情况。  为此，提供了一个特殊的例程，该例程可从 Prolog 调用，并且不会损坏任何参数寄存器。  
+ 如果堆栈中的固定的分配是多个页 (即，大于 4096 个字节)，则堆栈分配无法跨越多个虚拟内存页，并且有可能，因此，分配必须实际分配之前检查。 出于此目的被提供特殊的例程，可从序言调用与这不会销毁任何参数寄存器。  
   
- 保存非易失寄存器的首选方法是：在进行固定堆栈分配之前将这些寄存器移入堆栈。  如果在保存非易失寄存器之前执行了固定堆栈分配，则很可能需要 32 位位移以便对保存的寄存器区域进行寻址（据说寄存器的压栈操作与移动操作一样快，并且在可预见的未来一段时间内都应该是这样，尽管压栈操作之间存在隐含的相关性）。  可按任何顺序保存非易失寄存器。  但是，在 Prolog 中第一次使用非易失寄存器时必须对其进行保存。  
+ 保存非易失寄存器的首选的方法是将它们移到之前固定的堆栈分配堆栈。 如果固定的堆栈分配都已执行之前已保存的非易失性寄存器，则最有可能 32 位偏移量将地址需要保存注册区域 （据说，寄存器推送移动一样快并且应保留用于讲解可预见未来而不考虑推送之间的隐式依赖关系）。 可以按任意顺序保存非易失寄存器。 但是，在序言中非易失寄存器首次使用必须将其保存。  
   
- 典型的 Prolog 代码可以为：  
+ 可能的典型 prolog 代码：  
   
 ```  
 mov       [RSP + 8], RCX  
@@ -38,9 +38,9 @@ lea      R13, 128[RSP]
 ...  
 ```  
   
- 此 Prolog 执行以下操作：将参数寄存器 RCX 存储在其标识位置；保存非易失寄存器 R13、R14、R15；分配堆栈帧的固定部分；建立帧指针，该指针将 128 字节地址指向固定分配区域。  使用偏移量以后，便可以通过单字节偏移量对多个固定分配区域进行寻址。  
+ 此 prolog 在其主位置中存储的参数寄存器 RCX、 保存非易失寄存器 R13 R15、 分配该堆栈帧的固定的部分和建立点到固定的分配区域的 128 个字节的帧指针。 使用偏移量允许多个固定的分配区域单字节偏移量进行寻址。  
   
- 如果固定分配大小大于或等于一页内存，则在修改 RSP 之前必须调用 helper 函数。  此 \_\_chkstk helper 函数负责探测待分配的堆栈范围，以确保对堆栈进行正确的扩展。  在这种情况下，前面的 Prolog 示例应变为：  
+ 如果固定的分配大小大于或等于一页的内存，则必须修改 RSP 之前调用 helper 函数。 此帮助器，__chkstk，负责探测将要分配堆栈范围，以确保已正确展开堆栈。 在这种情况下，系统将改为到前面的 prolog 示例：  
   
 ```  
 mov       [RSP + 8], RCX  
@@ -54,13 +54,13 @@ lea      R13, 128[RSP]
 ...  
 ```  
   
- 除了 R10、R11 和条件代码以外，此 \_\_chkstk helper 函数不会修改任何寄存器。  特别是，此函数将返回未更改的 RAX，并且不会修改所有非易失寄存器和参数传递寄存器。  
+ __Chkstk 帮助程序将不会修改任何寄存器 R10、 R11、 和的条件代码以外。 具体而言，它将返回 RAX 保持不变，并保留所有非易失寄存器和自变量传递寄存器不做任何修改。  
   
- Epilog 代码位于函数的每个出口。  通常只有一个 Prolog，但可以有多个 Epilog。  Epilog 代码执行以下操作：必要时将堆栈修整为其固定分配大小；释放固定堆栈分配；从堆栈中弹出非易失寄存器的保存值以还原这些寄存器；返回。  
+ 在每个退出时的函数存在 epilog 代码。 尽管通常只有一个 prolog，但是可以有许多 epilog。 Epilog 代码将堆栈修整为其固定的分配大小 （如果有必要）、 释放固定的堆栈分配、 通过弹出堆栈上，从其已保存的值还原非易失寄存器和返回。  
   
- 对于展开代码，Epilog 代码必须遵守一组严格的规则，以便通过异常和中断进行可靠的展开。  这样可以减少所需的展开数据量，因为描述每个 Epilog 不需要额外数据。  通过向前扫描整个代码流以标识 Epilog，展开代码可以确定 Epilog 正在执行。  
+ Epilog 代码必须可靠地通过异常和中断的展开到遵循一组严格的规则的展开代码。 这可减少的数量展开所需，数据，因为描述每个 epilog 所不需的任何额外数据。 相反的展开代码可以确定 epilog，正在执行的向前扫描整个来标识 epilog 代码流。  
   
- 如果函数中没有使用任何帧指针，则 Epilog 必须首先释放堆栈的固定部分，弹出非易失寄存器，然后将控制返回调用函数。  例如，  
+ 如果在中不使用任何帧指针函数，然后 epilog 必须首先释放堆栈的固定的部分、 弹出，非易失寄存器，和控件返回到调用的函数。 例如，  
   
 ```  
 add      RSP, fixed-allocation-size  
@@ -70,7 +70,7 @@ pop      R15
 ret  
 ```  
   
- 如果函数中使用了帧指针，则在执行 Epilog 之前必须将堆栈修整为其固定分配。  这在技术上不属于 Epilog。  例如，下面的 Epilog 可用于撤消前面使用的 Prolog：  
+ 如果在函数中使用帧指针，则必须为其固定分配的 epilog 执行之前修整堆栈。 这是从技术上讲不属于 epilog。 例如，以下 epilog 无法用于撤消以前使用 prolog:  
   
 ```  
 lea      RSP, -128[R13]  
@@ -82,21 +82,21 @@ pop      R15
 ret  
 ```  
   
- 在实际应用中，使用帧指针时，没有必要分两个步骤调整 RSP，因此应改用以下 Epilog：  
+ 在实践中，当使用帧指针时，没有在两个步骤中，调整 RSP，因此将改用以下 epilog 充分的理由：  
   
 ```  
-lea      RSP, fixed-allocation-size – 128[R13]  
+lea      RSP, fixed-allocation-size - 128[R13]  
 pop      R13  
 pop      R14  
 pop      R15  
 ret  
 ```  
   
- 以上是 Epilog 的唯一合法形式。  它必须由 `add RSP,constant` 或 `lea RSP,constant[FPReg]` 组成，后跟一系列零或多个 8 字节寄存器 pop、一个 return 或一个 jmp。  （Epilog 中只允许 jmp 语句的子集。  仅限于具有 ModRM 内存引用的 jmp 类，其中 ModRM mod 字段值为 00。  在 ModRM mod 字段值为 01 或 10 的 Epilog 中禁止使用 jmp。  有关允许使用的 ModRM 引用的更多信息，请参见“AMD x86\-64 Architecture Programmer’s Manual Volume 3: General Purpose and System Instructions”（AMD x86\-64 结构程序员手册第 3 卷：通用指令和系统指令）中的表 A\-15。）  不能出现其他代码。  特别是，不能在 Epilog 内进行调度，包括加载返回值。  
+ 这些是 epilog 的唯一合法窗体。 它必须包含其中任何`add RSP,constant`或`lea RSP,constant[FPReg]`后, 跟零个或多个 8 字节注册 pop 和退货或 jmp 一系列。 （仅 jmp 语句的子集是 epilog 中允许的。 这些 jmps ModRM 内存引用使用的以独占方式是类的，其中 ModRM mod 字段值 00。 禁止在使用 ModRM mod 字段值 01 或 10 epilog jmps 的使用。 请参阅表 A-15 AMD x86-64 体系结构程序员手动卷 3 中： 通用寄存器和系统的说明，有关详细信息允许 ModRM 引用。)。 没有其他代码可以出现。 具体而言，执行任何操作可以计划内 epilog，包括返回值的加载。  
   
- 请注意，未使用帧指针时，Epilog 必须使用 `add RSP,constant` 释放堆栈的固定部分，  而不能使用 `lea RSP,constant[RSP]`。  由于此限制，在搜索 Epilog 时展开代码具有较少的识别模式。  
+ 请注意，当不使用帧指针时，必须使用 epilog`add RSP,constant`以释放堆栈的固定的部分。 它可能不会使用`lea RSP,constant[RSP]`相反。 因此的展开代码具有较少的模式来识别在搜索 epilog 时存在此限制。  
   
- 通过遵守这些规则，展开代码便可以确定某个 Epilog 当前正在执行，并可以模拟该 Epilog 其余部分的执行，从而允许重新创建调用函数的上下文。  
+ 遵循这些规则，以确定当前正在执行 epilog 并模拟 epilog 以便重新创建的调用函数的上下文的剩余部分执行的展开代码。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [x64 软件约定](../build/x64-software-conventions.md)

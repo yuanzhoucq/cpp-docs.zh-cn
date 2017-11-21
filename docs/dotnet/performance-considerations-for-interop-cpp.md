@@ -1,65 +1,64 @@
 ---
-title: "互操作的性能注意事项 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 编译器选项 [C++], 互操作性能注意事项"
-  - "互操作 [C++], 性能注意事项"
-  - "互操作性 [C++], 性能注意事项"
-  - "混合程序集 [C++], 性能注意事项"
-  - "平台调用 [C++], 互操作性"
+title: "互操作 （c + +） 的性能注意事项 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /clr compiler option [C++], interop performance considerations
+- platform invoke [C++], interoperability
+- interop [C++], performance consideraitons
+- mixed assemblies [C++], performance considerations
+- interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc5e22350036b9f13ee8800cad8394133ba7abd1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 互操作的性能注意事项 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题提供一些准则，用于减少运行时托管\/非托管 Interop 转换对性能的影响。  
+# <a name="performance-considerations-for-interop-c"></a>互操作的性能注意事项 (C++)
+本主题提供减少托管/非托管互操作转换对运行时性能的影响的指南。  
   
- Visual C\+\+ 不仅支持与其他 .NET 语言（如 Visual Basic 和 C\#）相同的互操作性机制 \(P\/Invoke\)，而且还提供特定于 Visual C\+\+ 的 Interop 支持 \(C\+\+ Interop\)。  对于性能甚为关键的应用程序而言，重要的是要了解每种 Interop 技术的性能含义。  
+ Visual c + + 支持 Visual Basic 和 C# (P/Invoke) 等其他.NET 语言为相同的互操作性机制，但它还提供特定于 Visual c + + （c + + 互操作） 的互操作支持。 对于性能关键的应用程序，务必了解每个互操作方法的性能影响。  
   
- 无论使用哪种 Interop 技术，托管函数每次调用非托管函数（反之亦然）时，都需要特殊的转换序列（称为形式转换）。  这些形式转换由 Visual C\+\+ 编译器自动插入，但是请务必谨记，就性能而言，这些转换的开销可能会很大。  
+ 无论使用的互操作方法，特殊的转换序列，调用 thunk，所需每次托管的函数调用非托管的函数，反之亦然。 由 Visual c + + 编译器，自动插入这些 thunk，但务必请记住，累积，这些转换可能会产生很大影响性能。  
   
-## 减少转换  
- 避免或减少 Interop 形式转换成本的一种方法是重构尽可能减少托管\/非托管转换时所涉及的接口。  通过定向到常用接口可以大大提高性能，这些接口经常跨托管\/非托管边界进行调用。  例如，在紧凑循环中调用非托管函数的托管函数就是一个不错的重构候选对象。  如果循环本身被移动到非托管一侧，或者如果创建代替非托管调用的托管调用（或许将数据在托管一侧排队，然后在循环后立即将数据封送到非托管 API），则可以大大减少转换次数。  
+## <a name="reducing-transitions"></a>减少转换  
+ 若要避免或减少的互操作的 thunk 的成本的一种方法是重构涉及尽量减少托管/非托管的转换的接口。 可以通过定向聊天式界面，是指那些涉及跨托管/非托管边界频繁调用进行极大地提高性能。 托管调用的函数，非托管的函数在紧凑循环，例如，是的良好候选重构。 如果循环本身移动到非托管端，或者如果一个托管的替代方法创建非托管的调用 （可能是在托管端上的队列数据，然后封送到非托管 API 在一次循环后） 的转换数可以减少登录ificantly。  
   
-## P\/Invoke 与 C\+\+ Interop  
- 对于 .NET 语言（如 Visual Basic 和 C\#）而言，规定的用于与本机组件交互的方法为 P\/Invoke。  由于 P\/Invoke 受 .NET Framework 支持，因此 Visual C\+\+ 也对其提供支持，不过 Visual C\+\+ 还提供自己的互操作性支持，这称为 C\+\+ Interop。  C\+\+ Interop 优于 P\/Invoke，因为 P\/Invoke 不具有类型安全性。  这样，错误将主要在运行时报告，但是与 P\/Invoke 相比，C\+\+ Interop 的性能也相对更好。  
+## <a name="pinvoke-vs-c-interop"></a>P/Invoke vs。C++ 互操作  
+ 对于.NET 语言，例如 Visual Basic 和 C# 中，与本机组件互操作性的规定的方法是 P/Invoke。 因为.NET Framework 支持 P/Invoke，则 Visual c + + 支持，但 Visual c + + 还提供其自己的互操作性的支持，这被称为 c + + 互操作。 C + + 互操作通过 P/Invoke 中都是首选的因为 P/Invoke 不是类型安全。 因此，在运行时，主要报告错误，但 c + + 互操作还具有通过 P/Invoke 的性能优势。  
   
- 托管函数每次调用非托管函数时，这两种技术都要求执行以下几项操作：  
+ 这两种方法需要发生每当托管的函数调用非托管的函数的几种方法：  
   
--   将函数调用参数从 CLR 封送到本机类型。  
+-   函数调用自变量进行封送从 CLR 到本机类型。  
   
--   执行托管到非托管形式转换。  
+-   执行托管到非托管的转换 （thunk）。  
   
--   调用非托管函数（使用参数的本机版本）。  
+-   非托管的函数调用 （使用参数的本机版本）。  
   
--   执行非托管到托管形式转换。  
+-   执行非托管到托管的转换 （thunk）。  
   
--   将返回类型及任何“out”或“in,out”参数从本机类型封送到 CLR 类型。  
+-   返回类型和任何"out"或"中，out"参数进行封送从本机到 CLR 类型。  
   
- 托管\/非托管形式转换是 Interop 正常工作所必需的，但是所需的数据封送处理取决于涉及到的数据类型、函数签名以及使用数据的方式。  
+ 托管/非托管 thunk 是必需的互操作正常工作所，但是所需的数据封送处理取决于涉及的数据类型、 函数签名，以及如何使用数据。  
   
- C\+\+ Interop 执行的数据封送处理可能是最简单的封送形式：仅采用按位方式跨托管\/非托管边界复制参数；而根本不执行任何转换。  对于 P\/Invoke，仅在所有参数都为简单的可直接复制到本机结构中的类型时才能这样做。  否则，如果参数被标记为“out”或“in,out”，则 P\/Invoke 将执行非常可靠的步骤，将每个托管参数转换为相应的本机类型，反之亦然。  
+ 由 c + + 互操作执行数据封送处理是最简单的可能形式： 跨托管/非托管边界方式按位; 只需复制参数在所有不执行任何转换。 对于 P/Invoke，这是仅当所有参数都是简单的则为 true 通用类型。 否则，将 P/Invoke 执行十分可靠的步骤将每个托管的参数转换为相应的本机类型，并且，反之亦然，这样如果自变量均被标记为"out"或"中，out"。  
   
- 换句话说，C\+\+ Interop 使用的可能是最快的数据封送处理方法，而 P\/Invoke 使用的则是最可靠的方法。  这意味着，默认情况下，C\+\+ Interop（采用 C\+\+ 典型的方式）提供最佳性能，而程序员负责解决此行为不安全或不适宜的情况。  
+ 换而言之，c + + 互操作使用的封送处理数据，最快的可能的方法，而 P/Invoke 使用最可靠的方法。 也就是说，c + + 互操作 （在典型的 c + + 的方式） 默认情况下，提供最佳性能，程序员负责寻址情况下此行为不安全或不适合的情况。  
   
- 因此，C\+\+ Interop 要求必须显式提供数据封送处理，但优点是，在考虑了给定数据性质的情况下，程序员可以自由决定哪种情况适宜以及如何使用数据封送处理。  此外，尽管可以在一定程度上通过自定义来修改 P\/Invoke 数据封送处理的行为，但是 C\+\+ Interop 允许在逐个调用的基础上自定义数据封送处理。  这对于 P\/Invoke 来说是不可能的。  
+ 因此，c + + 互操作要求必须显式提供数据封送处理但的优点是程序员可以自由地确定什么是适当的情况下，数据的性质，因此它是要使用。 此外，尽管的 P/Invoke 数据封送处理行为可以修改在程度的自定义，c + + 互操作允许数据封送处理调用的基础上可自定义。 这不是，可以使用 P/Invoke。  
   
- 有关 C\+\+ Interop 的更多信息，请参见[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+ 有关 c + + 互操作的详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)

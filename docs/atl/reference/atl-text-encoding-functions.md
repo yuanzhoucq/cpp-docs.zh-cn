@@ -5,14 +5,37 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: 3
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a7d4572f34a88192723c574e1b749947f76d819a
-ms.lasthandoff: 03/31/2017
-
+caps.latest.revision: "3"
+ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文本编码函数
 这些函数支持文本编码和解码。
@@ -44,7 +67,7 @@ ms.lasthandoff: 03/31/2017
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。|
 
 ## <a name="requirements"></a>要求  
- **标头︰** atlenc.h  
+ **标头：** atlenc.h  
  
 ## <a name="atlgethexvalue"></a>AtlGetHexValue
 调用此函数可获取十六进制数字的数值。  
@@ -77,10 +100,10 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ## <a name="example"></a>示例  
  应按以下方式调用的函数。  
   
- [!code-cpp[NVC_ATL_Utilities # 95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
   
 ### <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
 
 ## <a name="atlhexdecode"></a>AtlHexDecode
 对数据的以前调用已按十六进制文本，如中编码的字符串进行解码[AtlHexEncode](#atlhexencode)。  
@@ -302,7 +325,7 @@ inline int EscapeXML(
  以字符为单位的转换的字符串长度。  
   
 ### <a name="remarks"></a>备注  
- 此函数执行的可能转换表所示︰  
+ 此函数执行的可能转换表所示：  
   
 |源|目标|  
 |------------|-----------------|  

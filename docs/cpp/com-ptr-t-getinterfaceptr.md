@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_ptr_t::GetInterfacePtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- GetInterfacePtr method [C++]
+f1_keywords: _com_ptr_t::GetInterfacePtr
+dev_langs: C++
+helpviewer_keywords: GetInterfacePtr method [C++]
 ms.assetid: 55e3e2c7-c939-48b5-a905-4b9cbefeea7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 74155de4cce5f5393b2b8039874f0e4f5efe9f8d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2d15bcec2527b15f70e2b7a5e5e38ddcd98e77bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 **Microsoft 专用**  

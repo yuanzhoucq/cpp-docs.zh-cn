@@ -1,33 +1,30 @@
 ---
-title: "operator&lt;= (set) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= 成员 [STL/CLR]"
+title: "运算符&lt;= (set) (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: acb5997b-cdc1-44d6-80c1-e20b01b4db02
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1ef470f5944cf6a61abfdb6131d7b44cdef7a09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt;= (set) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-列表小于或等于比较。  
+# <a name="operatorlt-set-stlclr"></a>运算符&lt;= (set) (STL/CLR)
+小于或等于列表比较。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Key>  
@@ -35,17 +32,17 @@ template<typename Key>
         set<Key>% right);  
 ```  
   
-#### 参数  
- left  
- 比较左边的容器。  
+#### <a name="parameters"></a>参数  
+ 左  
+ 要比较的左容器。  
   
- right  
- 比较右边的容器。  
+ 右  
+ 要比较的右容器。  
   
-## 备注  
- 运算符函数返回 `!(``right` `<` `left``)`。  当一个个元素地比较两种多集时，您可以用它测试 `left` 是否在 `right` 之后排序。  
+## <a name="remarks"></a>备注  
+ 运算符函数返回`!(right < left)`。 用于测试是否`left`未进行排序之后`right`当两个集是元素的比较的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_set_operator_le.cpp   
@@ -85,19 +82,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \<\= \[a b c\] 为True**  
-**\[a b d\] \<\= \[a b c\] 为 false**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [集合](../dotnet/set-stl-clr.md)   
- [operator\=\= \(set\)](../dotnet/operator-equality-set-stl-clr.md)   
- [operator\!\= \(set\)](../dotnet/operator-inequality-set-stl-clr.md)   
- [operator\< \(set\)](../dotnet/operator-less-than-set-stl-clr.md)   
- [operator\>\= \(set\)](../dotnet/operator-greater-or-equal-set-stl-clr.md)   
- [operator\> \(set\)](../dotnet/operator-greater-than-set-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [运算符 = = (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)   
+ [运算符 ！ = (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)   
+ [运算符\<(set) (STL/CLR)](../dotnet/operator-less-than-set-stl-clr.md)   
+ [运算符 > = (set) (STL/CLR)](../dotnet/operator-greater-or-equal-set-stl-clr.md)   
+ [operator> (set) (STL/CLR)](../dotnet/operator-greater-than-set-stl-clr.md)

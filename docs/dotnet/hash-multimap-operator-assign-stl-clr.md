@@ -1,46 +1,43 @@
 ---
-title: "hash_multimap::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成员 [STL/CLR]"
+title: "hash_multimap::operator = (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: f4c1a961-e8af-44f3-b61c-83d4dda3b403
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4a35ad615893ced83ba9efe89f157abd3f489d4d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-控件替换序列。  
+# <a name="hashmultimapoperator-stlclr"></a>hash_multimap::operator= (STL/CLR)
+替换受控序列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);  
 ```  
   
-#### 参数  
- right  
- 复制的容器。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 用于复制的容器。  
   
-## 备注  
- 运算符将 `right` 对该对象的成员，然后返回 `*this`。  使用它将控制的序列复制在 `right`中替换控件序列。  
+## <a name="remarks"></a>备注  
+ 成员运算符副本`right`到对象，然后返回`*this`。 用它将受控序列替换为 `right` 中的受控序列的副本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_operator_as.cpp   
@@ -72,12 +69,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **页眉：** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- struct_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- struct constructors
+f1_keywords: struct_cpp
+dev_langs: C++
+helpviewer_keywords: struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4918adb779a620afd4a0c1e4ef64ef9892de1ba8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 9911977a16b83584f54c70c03585f40927e0781a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="struct-c"></a>struct (C++)
 `struct` 关键字定义结构类型和/或结构类型的变量。  
@@ -116,4 +111,3 @@ int main() {
 // my_cell.character = 1  
 ```  
   
-

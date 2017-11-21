@@ -1,42 +1,40 @@
 ---
-title: "Basic Mechanics of Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], inserting in code"
-  - "attributes [C++], about attributes"
+title: "特性的基本机制 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], inserting in code
+- attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ebf81d5bfb20f151cc8f405fb8346b66451f77e2
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/31/2017
 ---
-# Basic Mechanics of Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可通过三种方式插入属性添加到项目中。  首先，您手动可以插入到源代码中。  接下来，您可以将它们使用对象的属性网格在项目。  最后，使用不同的向导，您可以插入记录。  有关使用 " 属性 " 窗口和各个向导的更多信息，请参见 [创建和管理 Visual C\+\+ 项目](../ide/creating-and-managing-visual-cpp-projects.md)。  
+# <a name="basic-mechanics-of-attributes"></a>特性的基本机制
+有三种方法要插入到你的项目的属性。 首先，你可以将它们手动插入你的源代码。 其次，你可以将它们插入项目中使用对象的属性网格。 最后，你可以将它们插入使用各种向导。 使用属性窗口和各种向导的详细信息，请参阅[创建和管理 Visual c + + 项目](../ide/creating-and-managing-visual-cpp-projects.md)。  
   
- 启动从 Visual C\+\+ .NET 中，编译器识别属性显示在源文件中并可以在编译时动态地分析和验证它们。  
+ 为之前，当生成项目时，编译器分析每个 c + + 源代码文件，生成的对象文件。 但是，当编译器遇到属性，它分析并语法验证。 然后，编译器动态调用要插入代码，或在编译时进行其他修改的属性提供程序。 提供程序的实现根据属性的类型而有所不同。 例如，由 Atlprov.dll 实现与 ATL 相关的属性。  
   
- ，在中，，在项目生成前，编译器分析每个 C\+\+ 源文件，生成对象文件。  但是，在中，当编译器遇到属性时，它将分析和语法上可以通过验证。  编译器动态然后调用属性提供程序插入代码或进行其他修改在编译时。  该提供程序的实现基于属性的类型不同。  例如， ATL 相关的属性。 Atlprov.dll 实现。  
+ 下图演示了编译器和属性提供程序之间的关系。  
   
- 下图演示编译器和属性提供程序之间的关系。  
-  
- ![组件特性通信](../windows/media/vccompattrcomm.png "vcCompAttrComm")  
+ ![组件特性通信](../windows/media/vccompattrcomm.gif "vcCompAttrComm")  
   
 > [!NOTE]
->  特性用法不修改源文件的内容。  在调试会话期间，只有当生成的特性代码可见为。  此外，对于在项目中的每个源文件，您可以生成显示属性替换的结果的文本文件。  有关此过程的更多信息，请参见 [\/Fx \(将插入的代码\)](../build/reference/fx-merge-injected-code.md) 和 [调试注入的代码](../Topic/How%20to:%20Debug%20Injected%20Code.md)。  
+>  特性用法不会更改源文件的内容。 生成的特性代码是可见的唯一时间是在调试会话期间。 此外，对于每个项目中的源文件，可以生成一个文本文件，显示的属性替换结果。 有关此过程的详细信息，请参阅[/Fx （合并插入的代码）](../build/reference/fx-merge-injected-code.md)和[调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。  
   
- 象大多数 C\+\+ 构造，属性具有定义它们正确使用的设置属性。  这将在每个特性的属性上下文表中引用属性的上下文和解决参考主题。  例如， [coclass](../windows/coclass.md) 特性只能应用于现有的类或结构，与 [cpp\_quote](../windows/cpp-quote.md) 属性相反，可以任意位置在 c. C\+\+ 源文件中插入。  
+ 大多数 c + + 构造，如属性具有定义其正确的使用情况的一组特征。 这被称为的属性的上下文，并在每个属性参考主题的特性上下文表中针对。 例如，[组件类](../windows/coclass.md)属性仅到现有的类或结构，而不是应用[cpp_quote](../windows/cpp-quote.md)属性，它可以插入 c + + 源代码文件中的任何位置。  
   
-## 请参阅  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>另请参阅  
+ [概念](../windows/attributed-programming-concepts.md)

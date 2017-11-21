@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,21 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="malloc"></a>malloc
 分配内存块。  
@@ -72,7 +53,7 @@ void *malloc(
  要分配的字节数。  
   
 ## <a name="return-value"></a>返回值  
- `malloc` 返回指向已分配空间的 void 指针；如果可用内存不足，则返回 `NULL`。 若要返回指向类型而非 `void` 的指针，请在返回值上使用类型转换。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。 （在 Visual C++ 中，基本对齐是 `double` 或 8 个字节所需的对齐。 在针对 64 位平台的代码中，是 16 个字节。）使用 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 为具有更大对齐要求的对象分配存储空间。例如，SSE 类型 [__m128](../../cpp/m128.md) 和 `__m256`，及使用 `__declspec(align(``n``))`（其中 `n` 大于 8）声明的类型。 如果 `size` 为 0，则 `malloc` 在堆中分配零长度的项并向该项返回有效的指针。 即使请求的内存量较小，也要始终检查 `malloc` 的返回值。  
+ `malloc` 返回指向已分配空间的 void 指针；如果可用内存不足，则返回 `NULL`。 若要返回指向类型而非 `void` 的指针，请在返回值上使用类型转换。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。 （在 Visual C++ 中，基本对齐是 `double` 或 8 个字节所需的对齐。 在针对 64 位平台的代码中，是 16 个字节。）使用 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 为具有更大对齐要求的对象分配存储空间。例如，SSE 类型 [__m128](../../cpp/m128.md) 和 `__m256`，及使用 `__declspec(align( n ))`（其中 `n` 大于 8）声明的类型。 如果 `size` 为 0，则 `malloc` 在堆中分配零长度的项并向该项返回有效的指针。 即使请求的内存量较小，也要始终检查 `malloc` 的返回值。  
   
 ## <a name="remarks"></a>备注  
  `malloc` 函数分配至少为 `size` 个字节的内存块。 由于对齐和维护信息所需的空间，该块可能大于 `size` 个字节。  
@@ -154,4 +135,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

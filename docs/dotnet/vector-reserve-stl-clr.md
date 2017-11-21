@@ -1,45 +1,43 @@
 ---
-title: "vector::reserve (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::reserve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reserve 成员 [STL/CLR]"
+title: "vector:: reserve (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::reserve
+dev_langs: C++
+helpviewer_keywords: reserve member [STL/CLR]
 ms.assetid: d1d5ede9-9628-4b55-95ec-f087a57205f2
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3e84ba7b9d59e1c15c2d01ecc7cc73eab9209c34
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# vector::reserve (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-确保容器的最小的增加容量。  
+# <a name="vectorreserve-stlclr"></a>vector::reserve (STL/CLR)
+可确保容器的最小增长容量。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void reserve(size_type count);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  count  
- 容器的新最小的容量。  
+ 新的容器的最小容量。  
   
-## 备注  
- 成员函数 `capacity()` 从此确保至少返回了 `count`。  确保使用该容器不需要重新分配控制序列的存储，直到发展为指定的范围。  
+## <a name="remarks"></a>备注  
+ 成员函数可确保`capacity()`之后返回至少`count`。 你可以使用它来确保，容器需要不重新分配存储受控序列直到它已发展为指定的大小。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_reserve.cpp   
@@ -70,18 +68,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**capacity\(\) \= 4，好为 True**  
-**capacity\(\) \= 9，好为 True**   
-## 说明  
- 注意实际容量可能与显示的值不同，只要为，此处 `ok` 的所有报告。  
+```Output  
+ a b c  
+capacity() = 4, ok = True  
+capacity() = 9, ok = True  
+```  
   
-## 要求  
- **页眉：** \<cliext\/矢量\>  
+## <a name="description"></a>描述  
+ 请注意，实际的容量可能不同于此处显示的值，这么长时间为全部`ok`测试报告 true。  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::capacity](../dotnet/vector-capacity-stl-clr.md)   
- [vector::resize](../dotnet/vector-resize-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)   
+ [vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)

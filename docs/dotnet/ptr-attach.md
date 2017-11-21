@@ -1,35 +1,34 @@
 ---
-title: "ptr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::com::ptr::Attach"
-  - "ptr::Attach"
-  - "ptr.Attach"
-  - "msclr.com.ptr.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach 方法"
+title: "ptr::Attach |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::com::ptr::Attach
+- ptr::Attach
+- ptr.Attach
+- msclr.com.ptr.Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 81d930de-cb2a-4c30-9bd6-94d65942c47a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a776a19d3b06fce5c7355ba512693d63e529d3b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将 COM 对象添加到 `com::ptr`。  
+# <a name="ptrattach"></a>ptr::Attach
+将附加到 COM 对象`com::ptr`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void Attach(  
@@ -37,20 +36,20 @@ void Attach(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_right`  
- 指向附加的 COM 接口指针。  
+ 要附加的 COM 接口指针。  
   
-## 异常  
- 如果 `com::ptr` 已经拥有对 COM 对象的一个引用，则 `Attach` 将抛出 <xref:System.InvalidOperationException>。  
+## <a name="exceptions"></a>异常  
+ 如果`com::ptr`已拥有对 COM 对象的引用`Attach`引发<xref:System.InvalidOperationException>。  
   
-## 备注  
- 通过调用 `Attach` 对引用 COM 对象，但它的调用方不释放对的引用。  
+## <a name="remarks"></a>备注  
+ 调用`Attach`引用的 COM 对象，但不会释放对它的调用方的引用。  
   
- 将 `NULL` 设置为 `Attach` 会导致未采取的操作。  
+ 传递`NULL`到`Attach`不导致任何操作。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  在之前属于自己的对象中 `ReplaceDocument` 成员函数先调用 `Release` 并调用 `Attach` 附加一个新文档对象。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `ReplaceDocument`成员函数首先调用`Release`上任何以前拥有对象，然后调用`Attach`要附加新的文档对象。  
   
 ```  
 // comptr_attach.cpp  
@@ -124,12 +123,12 @@ int main() {
 }  
 ```  
   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)   
+ [ptr::operator =](../dotnet/ptr-operator-assign.md)   
  [ptr::Release](../dotnet/ptr-release.md)

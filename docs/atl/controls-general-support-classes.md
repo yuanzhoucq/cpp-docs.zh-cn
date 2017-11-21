@@ -1,47 +1,47 @@
 ---
-title: "Controls: General Support Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.controls"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控件 [ATL]"
-  - "general support classes"
+title: "ATL 控件： 常规支持类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.controls
+dev_langs: C++
+helpviewer_keywords:
+- controls [ATL]
+- general support classes
 ms.assetid: cf73f1d2-7542-48e3-b8c8-9d3abf29f85b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5d969481874762c5eefeb805d954ffad6114033e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Controls: General Support Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="controls-general-support-classes"></a>控件： 常规支持类
+下面的类为 ATL 控件提供常规支持：  
+  
+-   [CComControl](../atl/reference/ccomcontrol-class.md)包含至关重要 ATL 控件的帮助器函数和数据成员。  
+  
+-   [IOleControlImpl](../atl/reference/iolecontrolimpl-class.md)提供所需控件的方法。  
+  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md)的某个控件一起提供的主体的方法，通过该容器进行通信。 管理激活和停用的就地控件。  
+  
+-   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md)将合并到一个调用以帮助避免的延迟加载控件时的容器的初始化。  
+  
+-   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md)提供否则为不活动的控件的最小鼠标交互。  
+  
+## <a name="sample-program"></a>示例程序  
+ [ATLFire](../visual-cpp-samples.md)  
+  
+## <a name="related-articles"></a>相关文章  
+ [ATL 教程](../atl/active-template-library-atl-tutorial.md)  
+  
+## <a name="see-also"></a>另请参阅  
+ [类概述](../atl/atl-class-overview.md)
 
-下面选件类提供常规为ATL控件支持的:  
-  
--   [CComControl](../atl/reference/ccomcontrol-class.md) 包括帮助器为ATL控件至关重要的函数和数据成员。  
-  
--   [IOleControlImpl](../atl/reference/iolecontrolimpl-class.md) 提供方法所需的控件。  
-  
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) 提供容器与控件进行通信的主方法。  管理就地控件的激活和停用。  
-  
--   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) 将初始化为一个调用帮助容器避免延迟，在加载控件。  
-  
--   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) 为一个否则非活动控件提供最小鼠标交互。  
-  
-## 示例程序  
- [ATLFire](../top/visual-cpp-samples.md)  
-  
-## 相关文章  
- [ATL教程](../atl/active-template-library-atl-tutorial.md)  
-  
-## 请参阅  
- [Class Overview](../atl/atl-class-overview.md)

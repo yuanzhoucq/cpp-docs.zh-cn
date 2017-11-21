@@ -1,35 +1,34 @@
 ---
-title: "String Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "String editor"
-  - "string tables"
-  - "string tables, String editor"
-  - "string editing"
-  - "string editing, string tables"
-  - "resource editors, String editor"
-  - "strings [C++], editing"
+title: "字符串编辑器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string.F1
+dev_langs: C++
+helpviewer_keywords:
+- String editor
+- string tables
+- string tables, String editor
+- string editing
+- string editing, string tables
+- resource editors, String editor
+- strings [C++], editing
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a84ee72d44a7c7ba694df023ad50258513b40bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# String Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="string-editor"></a>字符串编辑器
 字符串表是 Windows 资源，其中包含应用程序的所有字符串的 ID、值和标题的列表。 例如，状态栏提示位于字符串表中。  
   
  开发应用程序时，可以具有多个字符串表 — 每种语言或条件使用一个。 但是，可执行模块只有一个字符串表。 如果将表放入不同 DLL 中，则正在运行的应用程序可以引用多个字符串表。  
@@ -38,27 +37,28 @@ caps.handback.revision: 11
   
  使用字符串编辑器可以：  
   
--   [搜索一个或多个字符串](../mfc/finding-a-string.md)。  
+-   [搜索一个或多个字符串](../windows/finding-a-string.md)。  
   
--   快速向字符串表中[插入新条目](../mfc/adding-or-deleting-a-string.md)。  
+-   快速向字符串表中 [插入新条目](../windows/adding-or-deleting-a-string.md) 。  
   
--   [在资源文件之间移动字符串](../mfc/moving-a-string-from-one-resource-file-to-another.md)  
+-   [在资源文件之间移动字符串](../windows/moving-a-string-from-one-resource-file-to-another.md)  
   
--   [对 ID、值和标题属性使用就地编辑](../mfc/changing-the-properties-of-a-string.md)并立即查看更改。  
+-   [对 ID、值和标题属性使用就地编辑](../windows/changing-the-properties-of-a-string.md) 并立即查看更改。  
   
--   [更改多个字符串的标题属性](../mfc/changing-the-caption-property-of-multiple-strings.md)  
+-   [更改多个字符串的标题属性](../windows/changing-the-caption-property-of-multiple-strings.md)  
   
--   [为字符串添加格式设置或特殊字符](../mfc/adding-formatting-or-special-characters-to-a-string.md)  
+-   [为字符串添加格式设置或特殊字符](../windows/adding-formatting-or-special-characters-to-a-string.md)  
   
     > [!NOTE]
     >  Windows 不允许创建空字符串表。 如果创建的字符串表中没有任何条目，则它在保存资源文件时会自动删除。  
   
- 有关将资源添加到托管项目（以公共语言运行时为目标的项目）的信息，请参阅“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目 （那些针对公共语言运行时） 的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅 [演练：本地化 Windows 窗体](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  Win32  
   
-## 请参阅  
- [Resource Editors](../mfc/resource-editors.md)   
+## <a name="see-also"></a>另请参阅  
+ [资源编辑器](../windows/resource-editors.md)   
  [字符串](http://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)   
- [关于字符串](http://msdn.microsoft.com/library/windows/desktop/ms647465.aspx)
+ [有关字符串](http://msdn.microsoft.com/library/windows/desktop/ms647465.aspx)
+

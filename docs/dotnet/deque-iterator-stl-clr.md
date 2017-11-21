@@ -1,41 +1,39 @@
 ---
-title: "deque::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "迭代器成员 [STL/CLR]"
+title: "deque:: iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: 3529e793-5d56-4cb2-898d-fdedb90b5c0c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d6a7893264604eacb2486b823473dde1dafcd050
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# deque::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeiterator-stlclr"></a>deque::iterator (STL/CLR)
 受控序列的迭代器的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## 备注  
- 描述类型可以作双向迭代数，为控制序列未指定的 `T1` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 此类型描述未指定类型的对象`T1`，可用作受控序列的随机访问迭代器。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_iterator.cpp   
@@ -66,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **x b c**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+a b c  
+x b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::const\_iterator](../dotnet/deque-const-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)

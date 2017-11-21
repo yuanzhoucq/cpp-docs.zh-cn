@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 类
 此类表示智能指针对象在使用矢量 new 和 delete 运算符。  
@@ -75,7 +57,7 @@ class CAutoVectorPtr
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAutoVectorPtr::Allocate](#allocate)|调用此方法来分配所需的指向的对象的数组的内存`CAutoVectorPtr`。|  
 |[CAutoVectorPtr::Attach](#attach)|调用此方法需要现有指针的所有权。|  
@@ -91,18 +73,18 @@ class CAutoVectorPtr
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CAutoVectorPtr::m_p](#m_p)|指针数据成员变量。|  
   
 ## <a name="remarks"></a>备注  
- 此类提供用于创建和管理智能指针，这将有助于防止内存泄漏，通过它不再处于作用域时自动释放资源的方法。 `CAutoVectorPtr`类似于`CAutoPtr`、 唯一的区别是，`CAutoVectorPtr`使用[向量新 &#91; &#93;](../../standard-library/new-operators.md#op_new_arr)和[矢量删除 &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr)分配和释放内存而不是 c + +**新**和**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。  
+ 此类提供用于创建和管理智能指针，这将有助于防止内存泄漏，通过它不再处于作用域时自动释放资源的方法。 `CAutoVectorPtr`类似于`CAutoPtr`、 唯一的区别是，`CAutoVectorPtr`使用[向量新 &#91; &#93;](../../standard-library/new-operators.md#op_new_arr)和[矢量删除 &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr)分配和释放内存而不是c + +**新**和**删除**运算符。 请参阅[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合类`CAutoVectorPtr`所需。  
 
   
  请参阅[CAutoPtr](../../atl/reference/cautoptr-class.md)有关使用智能指针类的示例。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+ **标头：** atlbase.h  
   
 ##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
  调用此方法来分配所需的指向的对象的数组的内存`CAutoVectorPtr`。  
@@ -226,4 +208,3 @@ operator T*() const throw();
 ## <a name="see-also"></a>另请参阅  
  [CAutoPtr 类](../../atl/reference/cautoptr-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

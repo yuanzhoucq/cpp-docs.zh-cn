@@ -4,47 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::AtlGetDacl
+- atlsecurity/ATL::AtlSetDacl
+- atlsecurity/ATL::AtlGetGroupSid
+- atlsecurity/ATL::AtlSetGroupSid
+- atlsecurity/ATL::AtlGetOwnerSid
+- atlsecurity/ATL::AtlSetOwnerSid
+- atlsecurity/ATL::AtlGetSacl
+- atlsecurity/ATL::AtlSetSacl
+- atlsecurity/ATL::AtlGetSecurityDescriptor
+dev_langs: C++
 helpviewer_keywords:
 - SIDs [C++], modifying SID objects
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d60eb8f3fbb782deadc89a3d9c3e3c44974d849c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="security-global-functions"></a>安全全局函数
 这些函数为修改 SID 和 ACL 对象提供支持。  
   
 > [!IMPORTANT]
->  下表中列出的函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表中列出的函数不能在 Windows 运行时中执行的应用程序。  
   
 |||  
 |-|-|  
@@ -59,13 +52,13 @@ ms.lasthandoff: 04/04/2017
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|调用此函数可检索给定对象的安全说明符。|  
 
 ## <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlgetdacl"></a>AtlGetDacl  
  调用此函数可检索指定对象的自由访问控制列表 (DACL) 信息。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlGetDacl(
@@ -94,7 +87,7 @@ inline bool AtlGetDacl(
  调用此函数可设置指定对象的自由访问控制列表 (DACL) 信息。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlSetDacl(
@@ -123,13 +116,13 @@ inline bool AtlSetDacl(
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误`hObject`是无效的或者如果`dwInheritanceFlowControl`不是三个允许的值之一。  
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
  调用此函数可检索对象的组安全标识符 (SID)。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlGetGroupSid(
@@ -152,13 +145,13 @@ inline bool AtlGetGroupSid(
  如果成功，则返回 true；如果失败，则返回 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
  调用此函数可设置对象的组安全标识符 (SID)。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlSetGroupSid(
@@ -181,13 +174,13 @@ inline bool AtlSetGroupSid(
  如果成功，则返回 true；如果失败，则返回 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
  调用此函数可检索对象的所有者安全标识符 (SID)。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -210,13 +203,13 @@ inline bool AtlGetOwnerSid(
  如果成功，则返回 true；如果失败，则返回 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
  调用此函数可设置对象的所有者安全标识符 (SID)。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -239,13 +232,13 @@ inline bool AtlSetOwnerSid(
  如果成功，则返回 true；如果失败，则返回 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlgetsacl"></a>AtlGetSacl  
  调用此函数可检索指定对象的系统访问控制列表 (SACL) 信息。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlGetSacl(
@@ -275,13 +268,13 @@ inline bool AtlGetSacl(
  如果`AtlGetSacl`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlsetsacl"></a>AtlSetSacl  
  调用此函数可设置指定对象的系统访问控制列表 (SACL) 信息。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlSetSacl(
@@ -317,13 +310,13 @@ inline bool AtlSetSacl(
  如果`AtlSetSacl`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
 
 ##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
  调用此函数可检索给定对象的安全说明符。  
   
 > [!IMPORTANT]
->  此函数不能在应用程序中执行[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函数不能在 Windows 运行时中执行的应用程序。  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -359,8 +352,7 @@ inline bool AtlGetSecurityDescriptor(
  如果`AtlGetSecurityDescriptor`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
 ### <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h 
+ **标头：** atlsecurity.h 
    
 ## <a name="see-also"></a>另请参阅  
  [函数](../../atl/reference/atl-functions.md)
-

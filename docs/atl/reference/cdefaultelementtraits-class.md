@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CDefaultElementTraits
 - atlcoll/ATL::CDefaultElementTraits
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultElementTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 1ddb59d2ac448725de719423d1634f00e568d2c9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits 类
 此类提供的集合类的默认方法和函数。  
@@ -53,4 +49,3 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
   
 ## <a name="see-also"></a>另请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

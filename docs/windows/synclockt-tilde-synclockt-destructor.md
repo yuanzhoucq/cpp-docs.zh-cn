@@ -1,47 +1,44 @@
 ---
-title: "SyncLockT::~SyncLockT 析构函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~SyncLockT, 析构函数"
+title: "SyncLockT:: ~ SyncLockT 析构函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT
+dev_langs: C++
+helpviewer_keywords: ~SyncLockT, destructor
 ms.assetid: 9e14870d-017d-45fe-a3dc-cd86b6fa1c3a
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5ee4a5b46d1a8f990469767bc95b39897889150e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockT::~SyncLockT 析构函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT 析构函数
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 ~SyncLockT();  
 ```  
   
-## 备注  
- 初始化SyncLockT类的实例。  
+## <a name="remarks"></a>备注  
+ 取消初始化 SyncLockT 类的实例。  
   
- 该析构函数来解除锁定当前 SyncLockT 实例。  
+ 此析构函数也解除对当前的 SyncLockT 实例。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>要求  
+ **标头：** corewrappers.h  
   
- Microsoft::WRL::Wrappers::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [SyncLockT 类](../windows/synclockt-class.md)

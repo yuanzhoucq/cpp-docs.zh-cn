@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,33 +26,17 @@ f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 43fa7fbd1251df25a7b6f87a3c009603febd2eed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: ebb7c268f5f721fce3ce4d6aee4175cd2484fb05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 从流中读取格式化数据。 提供这些函数的更多安全版本；请参阅 [vfscanf_s、vfwscanf_s](../../c-runtime-library/reference/vfscanf-s-vfwscanf-s.md)。  

@@ -1,32 +1,32 @@
 ---
-title: "如何：将标准字符串转换为 System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "标准 C++ 库, 将字符串转换为 System::String"
-  - "字符串转换 [C++], 标准 C++ 库字符串"
-  - "字符串 [C++], 转换"
+title: "如何： 将标准字符串转换为 system:: string |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting strings to System::String
+- string conversion [C++], C++ Standard Library string
+- strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eca51cbafdb858b511facfaee5ff4dd55786c856
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：将标准字符串转换为 System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此主题介绍如何将标准 C\+\+ 库字符串 \([\<string\>](../standard-library/string.md)\) 转换为 <xref:System.String>。  
+# <a name="how-to-convert-standard-string-to-systemstring"></a>如何：将标准字符串转换为 System::String
+本主题演示如何将 c + + 标准库字符串 ([\<字符串 >](../standard-library/string.md)) 到<xref:System.String>。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // convert_standard_string_to_system_string.cpp  
@@ -48,8 +48,11 @@ int main() {
 }  
 ```  
   
-  **测试**  
-**测试**  
-**测试**   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+test  
+test  
+test  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

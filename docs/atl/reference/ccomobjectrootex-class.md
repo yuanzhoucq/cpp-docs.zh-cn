@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,18 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 此类提供方法以处理对象的非聚合和聚合对象的引用计数管理。  
@@ -111,9 +92,9 @@ class CComObjectRootEx : public CComObjectRootBase
   
  实现的 COM 服务器的类必须继承自`CComObjectRootEx`或[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)。  
   
- 如果你的类定义指定[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)宏，ATL 创建的实例**CComPolyObject\<CYourClass 1>**时**IClassFactory::CreateInstance**调用。 在创建期间，会检查未知的外部对象的值。 如果它是**NULL**， **IUnknown**为非聚合对象实现。 如果不是未知的外部对象**NULL**， **IUnknown**为聚合对象实现。  
+ 如果你的类定义指定[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)宏，ATL 创建的实例**CComPolyObject\<CYourClass >**时**IClassFactory::CreateInstance**调用。 在创建期间，会检查未知的外部对象的值。 如果它是**NULL**， **IUnknown**为非聚合对象实现。 如果不是未知的外部对象**NULL**， **IUnknown**为聚合对象实现。  
   
- 如果你的类并不指定`DECLARE_POLY_AGGREGATABLE`宏，ATL 创建的实例**CAggComObject\<CYourClass 1>**聚合的对象或实例的**CComObject\<CYourClass 1>**非聚合对象。  
+ 如果你的类并不指定`DECLARE_POLY_AGGREGATABLE`宏，ATL 创建的实例**CAggComObject\<CYourClass >**聚合的对象或实例的**CComObject\<CYourClass>**非聚合对象。  
   
  使用的优点`CComPolyObject`是，你可以避免同时`CComAggObject`和`CComObject`处理聚合和非聚合情况你模块中。 单个`CComPolyObject`对象处理这两种情况。 因此，只有一份 vtable 和函数的一个副本存在于你的模块。 如果你 vtable 很大，这会显著降低模块大小。 但是，如果你 vtable 很小，则使用`CComPolyObject`由于未经过优化聚合或非聚合对象，可能会导致稍大一些的模块大小允许进行`CComAggObject`和`CComObject`。  
   
@@ -122,7 +103,7 @@ class CComObjectRootEx : public CComObjectRootBase
  如果你的对象未聚合， **IUnknown**由实现`CComObject`或`CComPolyObject`。 在这种情况下，调用`QueryInterface`， `AddRef`，和**版本**委派给`CComObjectRootEx`的`InternalQueryInterface`， `InternalAddRef`，和`InternalRelease`执行实际的操作。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+ **标头：** atlcom.h  
   
 ##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
  构造函数初始化为 0 的引用计数。  
@@ -144,7 +125,7 @@ HRESULT FinalConstruct();
 ### <a name="remarks"></a>备注  
  默认情况下，`CComObjectRootEx::FinalConstruct`只返回`S_OK`。  
   
- 有个执行中的初始化优点`FinalConstruct`而不是你的类的构造函数︰  
+ 有个执行中的初始化优点`FinalConstruct`而不是你的类的构造函数：  
   
 -   无法从构造函数，返回状态代码，但你可以返回`HRESULT`通过`FinalConstruct`的返回值。 当使用 ATL 提供的标准类工厂在创建你的类的对象时，此返回值将传播回 COM 客户端可以向他们提供详细的错误信息。  
   
@@ -157,11 +138,11 @@ HRESULT FinalConstruct();
 ### <a name="example"></a>示例  
  通常情况下，重写此方法在派生自类`CComObjectRootEx`创建任何聚合对象。 例如:   
   
- [!code-cpp[NVC_ATL_COM #40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  如果构造失败，你可以返回错误。 你还可以使用宏[DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct)从正在保护你的外部对象删除如果在创建期间，内部聚合的对象递增引用计数然后递减的计数为 0。  
   
- 下面是创建聚合的典型方式︰  
+ 下面是创建聚合的典型方式：  
   
 -   添加**IUnknown**指向您的类对象，并将其初始化为**NULL**构造函数中。  
   
@@ -259,7 +240,7 @@ long m_dwRef;
 ```  
   
 ### <a name="remarks"></a>备注  
- 与`m_pOuterUnknown`、 并集的一部分︰  
+ 与`m_pOuterUnknown`、 并集的一部分：  
   
  `union`  
   
@@ -271,7 +252,7 @@ long m_dwRef;
   
  `};`  
   
- 如果对象不会聚合，访问引用计数`AddRef`和**版本**中存储`m_dwRef`。 如果对象进行了聚合，指向未知的外部对象的指针存储在[m_pOuterUnknown](#m_pouterunknown)。  
+ 如果对象不会聚合，访问引用计数`AddRef`和**版本**存储在`m_dwRef`。 如果对象进行了聚合，指向未知的外部对象的指针存储在[m_pOuterUnknown](#m_pouterunknown)。  
   
 ##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
  访问的内存的四个字节的联合的一部分。  
@@ -282,7 +263,7 @@ IUnknown*
 ```     
   
 ### <a name="remarks"></a>备注  
- 与`m_dwRef`、 并集的一部分︰  
+ 与`m_dwRef`、 并集的一部分：  
   
  `union`  
   
@@ -310,10 +291,10 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>备注  
  值`bStarting`参数指示是否模块正在初始化或终止。 默认实现`ObjectMain`不执行任何操作，但可以在您初始化或清理你想要为该类分配的资源的类中重写此函数。 请注意，`ObjectMain`在请求的类的任何实例之前调用。  
   
- `ObjectMain`从调用 DLL 的入口点的入口点函数可以执行的操作的类型而受限制。 有关这些限制的详细信息，请参阅[运行时库行为](../../build/run-time-library-behavior.md)和[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)。  
+ `ObjectMain`从调用 DLL 的入口点的入口点函数可以执行的操作的类型而受限制。 有关这些限制的详细信息，请参阅[Dll 和 Visual c + + 运行库行为](../../build/run-time-library-behavior.md)和[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  递增未知聚合的外部对象的引用计数。  
@@ -369,4 +350,3 @@ void Unlock();
  [CComObject 类](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

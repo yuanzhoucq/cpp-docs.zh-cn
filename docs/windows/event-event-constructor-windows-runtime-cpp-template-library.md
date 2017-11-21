@@ -1,31 +1,29 @@
 ---
-title: "Event::Event 构造函数（Windows 运行时 C++ 模板库） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Event::Event"
-dev_langs: 
-  - "C++"
+title: "Event:: event 构造函数 （Windows 运行时 c + + 模板库） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Event::Event
+dev_langs: C++
 ms.assetid: 21495297-9612-4095-9256-16e168cc0021
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 88fafd4bb345d8e70f84aa87c04592e91703b5c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Event::Event 构造函数（Windows 运行时 C++ 模板库）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="eventevent-constructor-windows-runtime-c-template-library"></a>Event::Event 构造函数（Windows 运行时 C++ 模板库）
 初始化 Event 类的新实例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 explicit Event(  
@@ -36,14 +34,14 @@ WRL_NOTHROW Event(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `h`  
- 事件的句柄。  默认情况下，`h` 初始化为 `nullptr`。  
+ 事件的句柄。 默认情况下，`h` 初始化为 `nullptr`。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>要求  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
- [Event 类（Windows 运行时 C\+\+ 模板库）](../windows/event-class-windows-runtime-cpp-template-library.md)
+## <a name="see-also"></a>另请参阅  
+ [Event 类（Windows 运行时 C++ 模板库）](../windows/event-class-windows-runtime-cpp-template-library.md)

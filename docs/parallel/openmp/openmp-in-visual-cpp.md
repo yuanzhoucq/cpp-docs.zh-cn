@@ -1,48 +1,47 @@
 ---
-title: "OpenMP in Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenMP in Visual C++"
-  - "explicit parallelization"
-  - "explicit parallelization, OpenMP in Visual C++"
+title: "Visual c + + 中的 OpenMP |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OpenMP in Visual C++
+- explicit parallelization
+- explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df7c1681daf0f0ccae7d6307b2f6c000c01a313c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP in Visual C++
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OpenMP C 和 C\+\+ 应用程序结口可以有效地使用多个处理器的编写应用程序。  Visual C\+\+ 支持 OpenMP 2.0 标准。  
+# <a name="openmp-in-visual-c"></a>Visual C++ 中的 OpenMP
+OpenMP C 和 c + + 应用程序接口，可以编写的应用程序有效地使用多个处理器。 Visual c + + 支持 OpenMP 2.0 标准。  
   
-## 本节内容  
- [Directives](../../parallel/openmp/reference/openmp-directives.md)  
- 提供指向用于 OpenMP API 的指令。  
+## <a name="in-this-section"></a>本节内容  
+ [指令](../../parallel/openmp/reference/openmp-directives.md)  
+ 提供指向 OpenMP API 中使用的指令。  
   
- [Clauses](../../parallel/openmp/reference/openmp-clauses.md)  
- 提供指向用于 OpenMP API 的子句。  
+ [子句](../../parallel/openmp/reference/openmp-clauses.md)  
+ 提供指向 OpenMP API 中使用的子句。  
   
- [Library Reference](../../parallel/openmp/reference/openmp-library-reference.md)  
- 提供指向用于 OpenMP API 的构造。  
+ [库参考](../../parallel/openmp/reference/openmp-library-reference.md)  
+ 提供指向 OpenMP API 中使用的构造。  
   
- [C and C\+\+ Application Program Interface](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)  
- 讨论 OpenMP C 和 C\+\+ API，如从 OpenMP 体系结构评审委员会的 2.0 版规范中。  
+ [C 和 c + + 应用程序接口](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)  
+ 讨论 OpenMP C 和 c + + API，从 OpenMP 体系结构审阅委员会版本 2.0 规范中所述。  
   
-## 相关章节  
- [\/openmp（启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)  
- 导致编译器处理 `#pragma omp`。  
+## <a name="related-sections"></a>相关章节  
+ [/openmp （启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)  
+ 使编译器处理`#pragma omp`。  
   
- [预定义的宏](../../preprocessor/predefined-macros.md)  
- 将预定义的 ANSI C 和 C\+\+ Microsoft 实现宏。  请参见 \_OPENMP 宏。
+ [预定义宏](../../preprocessor/predefined-macros.md)  
+ 命名的预定义的 ANSI C 和 Microsoft c + + 实现宏。 请参阅 _OPENMP 宏。

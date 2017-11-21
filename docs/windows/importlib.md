@@ -1,49 +1,47 @@
 ---
-title: "importlib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importlib attribute"
+title: "importlib |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importlib
+dev_langs: C++
+helpviewer_keywords: importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 27c74785f56d7cb339eff25a645191ece1e14b32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# importlib
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="importlib"></a>importlib
 使已编译到另一个类型库中的类型可供所创建的类型库使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-        [ importlib(  
+      [ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### 参数  
- *tlb\_file*  
+#### <a name="parameters"></a>参数  
+ *tlb_file*  
  要导入当前项目类型库中的 .tlb 文件的名称（用引号引起来）。  
   
-## 备注  
- **importlib** C\+\+ 特性使 `importlib` 语句放置在生成的 .idl 文件的库块中。  **importlib** 特性具有与 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 特性相同的功能。  
+## <a name="remarks"></a>备注  
+ **Importlib** c + + 特性将导致`importlib`语句放置在生成的.idl 文件的库块中。 **Importlib**属性具有相同的功能[importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 特性。  
   
-## 示例  
- 下面的代码演示如何使用 **importlib** 的示例：  
+## <a name="example"></a>示例  
+ 下面的代码演示如何使用的示例**importlib**:  
   
 ```  
 // cpp_attr_ref_importlib.cpp  
@@ -52,9 +50,9 @@ caps.handback.revision: 11
 [importlib("importlib.tlb")];  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 特性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -63,12 +61,12 @@ caps.handback.revision: 11
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关详细信息，请参见[特性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>另请参阅  
+ [编译器特性](../windows/compiler-attributes.md)   
+ [独立特性](../windows/stand-alone-attributes.md)   
+ [导入](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [include](../windows/include-cpp.md)   
+ [包括](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

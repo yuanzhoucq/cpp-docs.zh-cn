@@ -1,54 +1,54 @@
 ---
-title: "测试只读提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序, 调用"
-  - "OLE DB 提供程序, 测试"
-  - "测试提供程序"
-  - "测试, OLE DB 提供程序"
+title: "测试只读提供程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- OLE DB providers, calling
+- OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad2cf102902f62d03d4027c16b7d81b255b85875
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 测试只读提供程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-为测试提供程序，需要一个使用者。  如果使用者可以与提供程序配合使用，它将很有帮助。  OLE DB 使用者模板是围绕 OLE DB 的瘦包装，并与提供程序 COM 对象配合使用。  因为使用者模板附带了源，所以用它们调试提供程序很容易。  使用者模板也是开发使用者应用程序的非常小且快速的方法。  
+# <a name="testing-the-read-only-provider"></a>测试只读提供程序
+若要测试提供程序，你需要使用者。 如果使用者可以与相匹配的提供程序，它可以帮助。 OLE DB 使用者模板不 OLE DB 的精简包装，并与提供程序的 COM 对象匹配。 因为源附带的使用者模板，可以很轻松地调试具有它们的提供程序。 使用者模板也是开发使用者应用程序的非常小且快速方法。  
   
- 本主题中的示例为测试使用者创建默认的“MFC 应用程序向导”应用程序。  测试应用程序是添加了 OLE DB 使用者模板代码的简单对话框。  
+ 本主题中的示例为测试使用者创建默认 MFC 应用程序向导应用程序。 测试应用程序是一条包含添加的 OLE DB 使用者模板代码的简单对话框。  
   
-### 创建测试应用程序  
+### <a name="to-create-the-test-application"></a>若要创建测试应用程序  
   
-1.  在**“文件”**菜单上单击**“新建”**，再单击**“项目”**。  
+1.  在 **“文件”** 菜单上，单击 **“新建”**，然后单击 **“项目”**。  
   
-2.  在“项目类型”窗格中，选择**“Visual C\+\+ 项目”**文件夹。  在“模板”窗格中，选择**“MFC 应用程序”**。  
+2.  在项目类型窗格中，选择**Visual c + + 项目**文件夹。 在模板窗格中，选择**MFC 应用程序**。  
   
-3.  对于项目名称，输入 **TestProv** 再单击**“确定”**。  
+3.  项目名称，输入**TestProv**，然后单击**确定**。  
   
-     即会出现“MFC 应用程序向导”。  
+     MFC 应用程序向导出现。  
   
-4.  在**“应用程序类型”**页中选择“基于对话框”。  
+4.  上**应用程序类型**页上，选择**基于对话框**。  
   
-5.  在**“高级功能”**页中选择“自动化”，再单击“完成”。  
+5.  上**高级功能**页上，选择**自动化**，然后单击**完成**。  
   
 > [!NOTE]
->  如果在 **CTestProvApp::InitInstance** 中添加 **CoInitialize**，应用程序不要求自动化支持。  
+>  如果你添加该应用程序不需要自动化支持**CoInitialize**中**CTestProvApp::InitInstance**。  
   
- 通过在“资源视图”中选择 TestProv 对话框 \(IDD\_TESTPROV\_DIALOG\)，可以查看并编辑它。  将两个列表框（行集合中的每个字符串各有一个）放在对话框中。  当列表框被选定时按 Alt\+Enter 键，单击“样式”选项卡并清除“排序”复选框，以关闭两个列表框的排序属性。  另外，将“运行”按钮放在对话框中以获取文件。  已完成的“TestProv”对话框应该有两个列表框，分别标记为“String 1”和“String 2”；它还应有**“确定”**、“取消”和“运行”按钮。  
+ 你可以查看和编辑 TestProv 对话框中 (IDD_TESTPROV_DIALOG) 通过在资源视图中选择它。 将两个列表框中，一个用于在行集中，每个字符串放在对话框中。 关闭排序属性的同时按 ALT + Enter 选中的列表框后，单击列表框**样式**选项卡，然后清除**排序**复选框。 另外，放置**运行**按钮在对话框中，以获取文件。 完成的 TestProv 对话框中应具有两个分别; 标记为"字符串 1"和"字符串 2"的列表框它还具有**确定**，**取消**，和**运行**按钮。  
   
- 打开对话框类的头文件（在此例中为 TestProvDlg.h）。  将以下代码添加到头文件中（在任何类声明的外部）：  
+ 打开对话框类 （在此案例 TestProvDlg.h) 的标头文件。 将以下代码添加到标头文件 （在外部的任何类声明）：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -69,9 +69,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- 代码表示定义哪些列将在行集合中的用户记录。  当客户端调用 **IAccessor::CreateAccessor** 时，它使用这些项指定要绑定的列。  OLE DB 使用者模板还允许动态绑定列。  COLUMN\_ENTRY 宏是 PROVIDER\_COLUMN\_ENTRY 宏的客户端版本。  两个 COLUMN\_ENTRY 宏指定两个字符串的序号、类型、长度和数据成员。  
+ 该代码表示定义列将包含在行集中的用户记录。 当客户端调用**IAccessor::CreateAccessor**，它使用这些条目来指定要绑定的列。 OLE DB 使用者模板还允许你要动态绑定列。 COLUMN_ENTRY 宏是 PROVIDER_COLUMN_ENTRY 宏的客户端版本。 两个 COLUMN_ENTRY 宏指定序号、 类型、 长度和数据成员的两个字符串。  
   
- 按住 Ctrl 键并双击“运行”按钮，为“运行”按钮添加处理函数。  将以下代码放在函数中：  
+ 添加的处理程序函数**运行**按住 ctrl 键并双击按钮**运行**按钮。 在函数中将以下代码：  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -100,7 +100,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- `CCommand`、`CDataSource` 和 `CSession` 类都属于 OLE DB 使用者模板。  每个类模仿提供程序中的一个 COM 对象。  `CCommand` 对象将头文件中声明的 `CProvider` 类作为模板参数使用。  `CProvider` 参数表示用于访问来自提供程序的数据的绑定。  以下是数据源、会话和命令的 `Open` 代码：  
+ `CCommand`， `CDataSource`，和`CSession`所有属于 OLE DB 使用者模板的类。 每个类模仿提供程序中的 COM 对象。 `CCommand`对象采用`CProvider`在标头文件中，作为模板参数声明的类。 `CProvider`参数表示用于从提供程序访问数据的绑定。 下面是`Open`数据源、 会话和命令的代码：  
   
 ```  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -113,13 +113,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- 打开每个类的行创建提供程序中的每个 COM 对象。  若要定位提供程序，请使用提供程序的 ProgID。  可以从系统注册表中获取 ProgID，或者在 MyProvider.rgs 文件中查找（打开提供程序的目录并搜索 ProgID 项）。  
+ 要打开的每个类中的行创建提供程序中的每个 COM 对象。 若要查找提供程序，请使用提供程序的 ProgID。 你可以从系统注册表或通过查找 MyProvider.rgs 文件来获取 ProgID （打开提供程序的目录并搜索 ProgID 密钥）。  
   
- MyProv 示例中包括 myData.txt 文件。  若要创建自己的文件，请使用编辑器并键入偶数个字符串，在每个字符串之间按 Enter 键。  如果移动文件，请更改路径名。  
+ 附带 MyProv 示例 MyData.txt 文件了。 若要创建你自己的文件，请使用编辑器，并键入偶数数目的字符串，每个字符串之间按 enter 键。 如果移动文件，请更改的路径名称。  
   
- 将字符串“c:\\\\samples\\\\myprov\\\\myData.txt”传递到 `table.Open` 行中。  如果进入并单步执行 `Open` 调用，您将看到该字符串被传递给提供程序中的 `SetCommandText` 方法。  注意 `ICommandText::Execute` 方法使用了该字符串。  
+ 传入的字符串"c:\\\samples\\\myprov\\\MyData.txt"中`table.Open`行。 如果单步执行`Open`调用，你将看到此字符串传递给`SetCommandText`提供程序中的方法。 请注意，`ICommandText::Execute`方法使用该字符串。  
   
- 若要提取数据，请对表调用 `MoveNext`。  `MoveNext` 调用 **IRowset::GetNextRows**、`GetRowCount` 和 `GetData` 函数。  当没有更多的行时（即行集合中的当前位置大于 `GetRowCount`），循环终止：  
+ 若要提取的数据，调用`MoveNext`表上。 `MoveNext`调用**irowset:: Getnextrows**， `GetRowCount`，和`GetData`函数。 当有更多的行时 (即，在行集中当前位置大于`GetRowCount`)，循环将终止：  
   
 ```  
 while (table.MoveNext() == S_OK)  
@@ -129,9 +129,9 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- 注意当没有更多的行时，提供程序返回 **DB\_S\_ENDOFROWSET**。  **DB\_S\_ENDOFROWSET** 值不是错误。  应该总是对照 `S_OK` 进行检查以取消数据获取循环并且不使用 SUCCEEDED 宏。  
+ 请注意，当存在更多的行时，提供程序将返回**DB_S_ENDOFROWSET**。 **DB_S_ENDOFROWSET**值不是一个错误。 你应始终检查针对`S_OK`若要取消数据提取循环并不使用 SUCCEEDED 宏。  
   
- 现在应该能够生成和测试程序。  
+ 你现在应能够生成并测试该程序。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)

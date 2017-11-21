@@ -1,42 +1,43 @@
 ---
-title: "Creating an Aggregated Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregate objects [C++], 创建"
-  - "aggregation [C++], creating aggregated objects"
+title: "创建聚合的对象 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- aggregation [C++], creating aggregated objects
+- aggregate objects [C++], creating
 ms.assetid: fc29d7aa-fd53-4276-9c2f-37379f71b179
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5446e4eb279e961ba59b5fd0b3713a7f976cef5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Creating an Aggregated Object
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-摘要委托 **IUnknown** 调用，并提供指向外部对象的 **IUnknown** 对内部对象。  
+# <a name="creating-an-aggregated-object"></a>创建聚合的对象
+聚合委托**IUnknown**调用，提供指向外部对象的指针**IUnknown**内部对象。  
   
-### 创建聚合的对象  
+### <a name="to-create-an-aggregated-object"></a>若要创建聚合的对象  
   
-1.  添加一 **IUnknown** 指向您的选件类对象并将其初始化为在构造函数中 **NULL**。  
+1.  添加**IUnknown**指向您的类对象，并将其初始化为**NULL**构造函数中。  
   
-2.  重写创建聚合的 [FinalConstruct](../Topic/CComObjectRootEx::FinalConstruct.md)。  
+2.  重写[FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct)创建聚合。  
   
-3.  使用 **IUnknown** 指针，定义在步骤1中，作为第二个参数指定 [COM\_INTERFACE\_ENTRY\_AGGREGATE](../Topic/COM_INTERFACE_ENTRY_AGGREGATE.md) 宏。  
+3.  使用**IUnknown**指针，在步骤 1 中定义的第二个参数为[COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate)宏。  
   
-4.  重写释放 **IUnknown** 指针的 [FinalRelease](../Topic/CComObjectRootEx::FinalRelease.md)。  
+4.  重写[FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease)释放**IUnknown**指针。  
   
 > [!NOTE]
->  在 `FinalConstruct`期间，如果要从聚合的对象使用和释放一个接口，应将 [DECLARE\_PROTECT\_FINAL\_CONSTRUCT](../Topic/DECLARE_PROTECT_FINAL_CONSTRUCT.md) 宏到您的选件类对象的定义。  
+>  如果使用的虚拟机和模板，发布期间的聚合对象中的接口。 `FinalConstruct`，应添加[DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct)到你的类对象的定义的宏。  
   
-## 请参阅  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)
+## <a name="see-also"></a>另请参阅  
+ [ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)
+

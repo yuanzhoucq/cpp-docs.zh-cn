@@ -1,36 +1,35 @@
 ---
-title: "queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/queue> 标头 [STL/CLR]"
-  - "<queue> 标头 [STL/CLR]"
-  - "Queue 类 [STL/CLR]"
+title: "队列 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue
+dev_langs: C++
+helpviewer_keywords:
+- <queue> header [STL/CLR]
+- queue class [STL/CLR]
+- <cliext/queue> header [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e55cb83461ed1a0229babf98c384b74de357aeb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此模板类描述用于先进先出访问的变长有序元素的对象。  使用容器适配器 `queue` 管理基础容器作为级队列。  
+# <a name="queue-stlclr"></a>queue (STL/CLR)
+此模板类描述控制元素的长短序列，可先入先出访问的对象。 使用容器适配器`queue`来管理为队列的基础容器。  
   
- 在下面的解释中，`GValue` 与 `Value` 相同，除非后者是 ref （引用）类型，在这种情况下，它是 `Value^`。  同样，`GContainer` 与 `Container` 相同，除非后者是 ref 类型，在这种情况下，它是 `Container^`。  
+ 在下面，描述`GValue`相同`Value`后者为 ref 类型，除非在这种情况下很`Value^`。 同样，`GContainer`相同`Container`后者为 ref 类型，除非在这种情况下很`Container^`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Value,  
@@ -42,73 +41,73 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  值  
  受控序列中的元素的类型。  
   
  容器  
  基础容器的类型。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-|类型定义|说明|  
-|----------|--------|  
-|[queue::const\_reference](../dotnet/queue-const-reference-stl-clr.md)|元素的常量引用的类型。|  
-|[queue::container\_type](../dotnet/queue-container-type-stl-clr.md)|基础容器的类型。|  
-|[queue::difference\_type](../dotnet/queue-difference-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
-|[queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)|泛型接口的容器适配器类型。|  
-|[queue::generic\_value](../dotnet/queue-generic-value-stl-clr.md)|容器适配器的泛型接口的元素的类型。|  
-|[queue::reference](../dotnet/queue-reference-stl-clr.md)|元素的引用的类型。|  
-|[queue::size\_type](../dotnet/queue-size-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
-|[queue::value\_type](../dotnet/queue-value-type-stl-clr.md)|元素的类型。|  
+|类型定义|描述|  
+|---------------------|-----------------|  
+|[queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|元素的常量引用的类型。|  
+|[queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|基础容器的类型。|  
+|[queue::difference_type (STL/CLR)](../dotnet/queue-difference-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
+|[queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)|容器适配器泛型接口的类型。|  
+|[queue::generic_value (STL/CLR)](../dotnet/queue-generic-value-stl-clr.md)|容器适配器的泛型接口的元素的类型。|  
+|[queue::reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)|元素的引用的类型。|  
+|[queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
+|[queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|元素的类型。|  
   
-|成员函数|说明|  
-|----------|--------|  
-|[queue::assign](../dotnet/queue-assign-stl-clr.md)|替换任何元素。|  
-|[queue::back](../dotnet/queue-back-stl-clr.md)|访问最后一个元素。|  
-|[queue::empty](../dotnet/queue-empty-stl-clr.md)|测试元素是否存在。|  
-|[queue::front](../dotnet/queue-front-stl-clr.md)|访问第一个元素。|  
-|[queue::get\_container](../dotnet/queue-get-container-stl-clr.md)|访问基础容器。|  
-|[queue::pop](../dotnet/queue-pop-stl-clr.md)|移除第一个元素。|  
-|[queue::push](../dotnet/queue-push-stl-clr.md)|添加新的末尾元素。|  
-|[queue::queue](../dotnet/queue-queue-stl-clr.md)|构造容器对象。|  
-|[queue::size](../dotnet/queue-size-stl-clr.md)|计算元素的数量。|  
-|[queue::to\_array](../dotnet/queue-to-array-stl-clr.md)|复制控制序列到新数组。|  
+|成员函数|描述|  
+|---------------------|-----------------|  
+|[queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|替换所有元素。|  
+|[queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|访问最后一个元素。|  
+|[queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)|测试元素是否存在。|  
+|[queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)|访问第一个元素。|  
+|[queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)|访问基础的容器。|  
+|[queue::pop (STL/CLR)](../dotnet/queue-pop-stl-clr.md)|移除的第一个元素。|  
+|[queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)|添加新的最后一个元素。|  
+|[queue::queue (STL/CLR)](../dotnet/queue-queue-stl-clr.md)|构造容器对象。|  
+|[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|对元素数进行计数。|  
+|[queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|受控的序列复制到新数组。|  
   
-|Property|说明|  
-|--------------|--------|  
-|[queue::back\_item](../dotnet/queue-back-item-stl-clr.md)|访问最后一个元素。|  
-|[queue::front\_item](../dotnet/queue-front-item-stl-clr.md)|访问第一个元素。|  
+|属性|描述|  
+|--------------|-----------------|  
+|[queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|访问最后一个元素。|  
+|[queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|访问第一个元素。|  
   
-|运算符|说明|  
-|---------|--------|  
-|[queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)|替换控件序列。|  
-|[operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)|确定 `queue` 对象是否等与不等于另一 `queue` 对象。|  
-|[operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)|确定 `queue` 对象是否小于另一 `queue` 对象。|  
-|[operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|确定一个 `queue` 对象是否小于或等于另一个`queue`对象。|  
-|[operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)|确定 `queue` 对象是否等于另一 `queue` 对象。|  
-|[operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)|确定 `queue` 对象是否大于另一 `queue` 对象。|  
-|[operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|确定一个 `queue` 对象是否大于或等于另一个`queue`对象。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|[queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|替换受控序列。|  
+|[operator!= (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|确定如果`queue`对象是否不等于另一个`queue`对象。|  
+|[operator< (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)|确定如果`queue`对象是否小于另一个`queue`对象。|  
+|[operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|确定如果`queue`对象是否小于或等于另一个`queue`对象。|  
+|[operator== (queue) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)|确定如果`queue`对象是否等于另一个`queue`对象。|  
+|[operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)|确定如果`queue`对象是否大于另一个`queue`对象。|  
+|[operator>= (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|确定如果`queue`对象是否大于或等于另一个`queue`对象。|  
   
-## 接口  
+## <a name="interfaces"></a>接口  
   
-|接口|说明|  
-|--------|--------|  
+|接口|描述|  
+|---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
-|IQueue\<Value, Container\>|维护泛型容器适配器。|  
+|IQueue\<值、 容器 >|维护泛型容器适配器。|  
   
-## 备注  
- 对象为它控制的序列分配和释放存储，通过基础容器 `Container` 类型，其存储了 `Value` 元素和成长的需求。  对象限制推入第一个元素和最后弹出元素的访问，实现一先进先出初始队列 \(也称为 FIFO 队列或简称为队列\)。  
+## <a name="remarks"></a>备注  
+ 对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 对象限制的访问权限只将推送的第一个元素并弹出的最后一个元素，实现第一个在先进先出队列 （也称为 FIFO 队列或只需队列）。  
   
-## 要求  
- **标头:** \<cliext\/queue\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [stack](../dotnet/stack-stl-clr.md)   
- [向量](../dotnet/vector-stl-clr.md)   
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [堆栈 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

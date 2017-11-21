@@ -1,69 +1,70 @@
 ---
-title: "Drawing Lines or Closed Figures (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "closed figures, drawing"
-  - "lines [C++], painting"
-  - "lines [C++], drawing"
-  - "Image editor [C++], drawing lines"
-  - "shapes, drawing"
+title: "绘制线条或闭合的图形 （图标的图像编辑器） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- closed figures, drawing
+- lines [C++], painting
+- lines [C++], drawing
+- Image editor [C++], drawing lines
+- shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 26898e98826e88fdf91978361ff2794ab25d6267
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Drawing Lines or Closed Figures (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用于绘制线条和闭合图形的图像编辑器工具都以同样的方式工作：将插入点放在一个点处，然后再拖动到另一个点。  对于线条，这些点为端点。  对于闭合图形，这些点为该图形的边框的对角点。  
+# <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>绘制线条或闭合图形（图标的图像编辑器）
+图像编辑器工具用于绘制线条和所有闭合的图形工作方式相同： 你将插入点放在某个时间点并将其拖到另一个。 对于行，这些点是终结点。 为闭合图形，这些点是对角边界图的矩形。  
   
- 线条以由当前画笔选定内容确定的宽度绘制，空心图形以由当前宽度选定内容确定的宽度绘制。  对于线条和所有的图形（包括空心的和实心的），如果按下鼠标左键就用当前前景色绘制，如果按下鼠标右键则以当前背景色绘制。  
+ 行由当前画笔选定内容宽度中绘制空心的图形绘制，以由当前的宽度所选内容宽度。 行和所有的图形，同时确定框架，并填写，绘制或当前的背景色中的当前前景色如果按鼠标左键，如果您按下鼠标右键按钮。  
   
-### 绘制线条  
+### <a name="to-draw-a-line"></a>若要绘制线条  
   
-1.  在[“图像编辑器”工具栏](../mfc/toolbar-image-editor-for-icons.md)上（或从“工具”命令 \-\>“图像”菜单），单击“线条”工具。  
+1.  上[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)(或从**映像**菜单上，**工具**命令)，单击**行**工具。  
   
-2.  如有必要，请选择颜色和画笔：  
+2.  如有必要，选择颜色和画笔：  
   
-    -   在[调色板](../windows/colors-window-image-editor-for-icons.md)中，单击鼠标左键以选择前景色或单击鼠标右键以选择背景色。  
+    -   在[调色板](../windows/colors-window-image-editor-for-icons.md)，单击鼠标左键以选择前景色或鼠标右键按钮以选择背景色。  
   
-    -   在[选项选择器](../mfc/toolbar-image-editor-for-icons.md)中，单击表示要使用的画笔的形状。  
+    -   在[选项选择器](../windows/toolbar-image-editor-for-icons.md)，单击表示你想要使用的画笔的形状。  
   
-3.  将指针放在线条的起点。  
+3.  将指针放在行的起始点。  
   
-4.  拖动到线条的终点。  
+4.  将拖到行的终结点。  
   
-### 绘制闭合图形  
+### <a name="to-draw-a-closed-figure"></a>若要绘制闭合的图形  
   
-1.  在“图像编辑器”工具栏上（或从“工具”命令 \-\>“图像”菜单），单击“封闭图绘制”工具。  
+1.  上**图像编辑器**工具栏 (或从**映像**菜单上，**工具**命令)，单击**封闭图绘制**工具。  
   
-     “封闭图绘制”工具按照它们各自按钮上的指示创建图形。  
+     **封闭图绘制**工具按照其各自的按钮上的指示创建图形。  
   
-2.  如有必要，请选择颜色和线条宽度。  
+2.  如有必要，选择颜色和线条宽度。  
   
-3.  将指针移动到要在其中绘制图形的矩形区域的一角。  
+3.  将指针移动到你要在其中绘制图的矩形区域的一个角。  
   
-4.  将指针拖动到对角。  
+4.  将指针拖到对角。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  要求  
   
  无  
   
-## 请参阅  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>另请参阅  
+ [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)   
+ [处理颜色](../windows/working-with-color-image-editor-for-icons.md)
+

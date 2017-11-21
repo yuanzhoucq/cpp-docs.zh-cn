@@ -1,33 +1,30 @@
 ---
-title: "uuid (C++ Attributes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uuid attribute"
+title: "uuid （c + + 特性） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.uuid
+dev_langs: C++
+helpviewer_keywords: uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b2a4c4ce8023901eb901555519c38c2fa07500dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# uuid (C++ Attributes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-为类或接口指定唯一 ID。  
+# <a name="uuid-c-attributes"></a>uuid（C++ 特性）
+指定为类或接口的唯一 ID。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,39 +33,38 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *uuid*  
- 128 位，唯一标识符。  
+ 128 位的唯一标识符。  
   
-## 备注  
- 如果接口的定义或类不指定 `uuid` C\+\+ 特性，则 Visual C\+\+ 编译器将提供一。  当指定 `uuid`时，必须包含引号。  
+## <a name="remarks"></a>备注  
+ 如果未指定的接口或类定义`uuid`c + + 属性，则 Visual c + + 编译器将提供一个。 当指定`uuid`，必须包括引号。  
   
- 如果未指定 `uuid`，则编译器在计算机上生成接口或类相同的 GUID 具有相同名称具有不同特性的项目。  
+ 如果不指定`uuid`，则编译器将在一台计算机上的不同的属性项目中生成的 GUID 相同的接口或具有相同名称的类。  
   
- 可以使用 Uuidgen.exe 或 Guidgen.exe 生成拥有唯一 ID。  \(运行这些工具、在菜单中单击 **开始** 然后单击 **运行** 之一。  然后输入所需的工具的名称。\)  
+ 你可以使用 Uuidgen.exe 或 Guidgen.exe 生成你自己唯一的 Id。 (若要运行这些工具之一，请单击**启动**单击**运行**菜单上。 然后输入所需的工具的名称。）  
   
- 当在不使用 ATL 项目，指定 `uuid` 属性是否与指定 [uuid](../cpp/uuid-cpp.md) \_\_declspec 修饰符。  若要检索类的 `uuid` ，可以使用 [\_\_uuidof](../cpp/uuidof-operator.md)  
+ 也不使用 ATL 项目中使用时，指定`uuid`属性等同于指定[uuid](../cpp/uuid-cpp.md) __declspec 修饰符。 若要检索`uuid`的类，可以使用[__uuidof](../cpp/uuidof-operator.md)  
   
-## 示例  
- 请参见 [可绑定](../windows/bindable.md) 示例为 `uuid`的示例使用。  
+## <a name="example"></a>示例  
+ 请参阅[可绑定](../windows/bindable.md)更大的示例的示例使用`uuid`。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`， `interface`， **联合**， `enum`|  
-|**可重复**|否|  
+|**适用对象**|**类**， `struct`， `interface`，**联合**，`enum`|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

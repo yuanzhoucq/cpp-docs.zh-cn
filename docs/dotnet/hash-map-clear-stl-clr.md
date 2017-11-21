@@ -1,41 +1,39 @@
 ---
-title: "hash_map::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 成员 [STL/CLR]"
+title: "hash_map:: clear (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: a2782336-f130-4e27-923e-7dd43c542d30
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 27fc4f214a3f96f1821abbac223757f8c7ab5ad5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除所有元素。  
+# <a name="hashmapclear-stlclr"></a>hash_map::clear (STL/CLR)
+删除所有元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void clear();  
 ```  
   
-## 备注  
- 成员函数中有效调用 [hash\_map::erase](../dotnet/hash-map-erase-stl-clr.md)[hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)[hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`(` `(),` `())`。  用以确保控制序列为空。  
+## <a name="remarks"></a>备注  
+ 成员函数可有效地调用[hash_map:: erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map:: begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`())`. 你可以使用它来确保受控的序列为空。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_clear.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\]**  
-**size\(\) \= 0**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::erase](../dotnet/hash-map-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)

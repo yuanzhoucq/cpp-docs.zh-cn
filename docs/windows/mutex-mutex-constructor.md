@@ -1,29 +1,27 @@
 ---
-title: "Mutex::Mutex 构造函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Mutex::Mutex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Mutex, 构造函数"
+title: "Mutex:: mutex 构造函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Mutex::Mutex
+dev_langs: C++
+helpviewer_keywords: Mutex, constructor
 ms.assetid: 504afcdc-775a-4c98-a06f-4fb4663eba3f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2a0187c26f8f0a170881d0b683cb462a0a24b81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Mutex::Mutex 构造函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mutexmutex-constructor"></a>Mutex::Mutex 构造函数
 初始化 Mutex 类的新实例。  
   
 ## <a name="syntax"></a>语法  
@@ -46,7 +44,7 @@ Mutex(
  第一个构造函数通过指定句柄初始化 Mutex 对象。 第二个构造函数通过指定句柄初始化 Mutex 对象，然后将 mutex 的所有权移至当前 Mutex 对象。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** corewrappers.h  
+ **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers
  

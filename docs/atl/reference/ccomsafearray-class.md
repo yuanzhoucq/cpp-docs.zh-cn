@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,18 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 5bfa67654bf86fdaadc9ef77c0d462b9796140d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 类
 此类是 **SAFEARRAY** 结构的包装器。  
@@ -88,14 +69,14 @@ class CComSafeArray
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComSafeArray::Add](#add)|将一个或多个元素或 **SAFEARRAY** 结构添加到 `CComSafeArray`。|  
 |[CComSafeArray::Attach](#attach)|将 **SAFEARRAY** 结构附加到 `CComSafeArray` 对象。|  
 |[CComSafeArray::CopyFrom](#copyfrom)|将 **SAFEARRAY** 结构的内容复制到 `CComSafeArray` 对象中。|  
 |[CComSafeArray::CopyTo](#copyto)|创建 `CComSafeArray` 对象的副本。|  
-|[Ccomsafearray:: Create](#create)|创建一个 `CComSafeArray` 对象。|  
-|[Ccomsafearray:: Destroy](#destroy)|销毁 `CComSafeArray` 对象。|  
+|[CComSafeArray::Create](#create)|创建一个 `CComSafeArray` 对象。|  
+|[CComSafeArray::Destroy](#destroy)|销毁 `CComSafeArray` 对象。|  
 |[CComSafeArray::Detach](#detach)|从 **对象拆离** SAFEARRAY `CComSafeArray` 。|  
 |[CComSafeArray::GetAt](#getat)|从一维数组中检索单个元素。|  
 |[CComSafeArray::GetCount](#getcount)|返回数组中的元素数目。|  
@@ -112,7 +93,7 @@ class CComSafeArray
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|将值转换为 **SAFEARRAY** 指针。|  
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|从数组中检索元素。|  
@@ -121,18 +102,18 @@ class CComSafeArray
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComSafeArray::m_psa](#m_psa)|此数据成员保留 **SAFEARRAY** 结构的地址。|  
   
 ## <a name="remarks"></a>备注  
- `CComSafeArray`提供的包装[SAFEARRAY 数据类型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)类，从而可以简单地创建和管理一维数组和多维数组几乎所有支持 VARIANT 的类型。  
+ `CComSafeArray` 为 [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) 类提供包装器，从而可以轻松地创建并管理几乎所有支持 VARIANT 的类型的一维数组和多维数组。  
   
  `CComSafeArray` 可简化数组在进程之间的传递，此外还可以对照上限和下限检查数组索引值，从而提供额外的安全性。  
   
  `CComSafeArray` 的下限可以从任何用户定义值开始；但是，通过 C++ 访问的数组应该使用下限 0。 Visual Basic 等其他语言可以使用其他边界值（例如，-10 到 10）。  
   
- 使用[ccomsafearray:: Create](#create)创建`CComSafeArray`对象，和[ccomsafearray:: Destroy](#destroy)可将其删除。  
+ 使用 [CComSafeArray::Create](#create) 可以创建 `CComSafeArray` 对象，使用 [CComSafeArray::Destroy](#destroy) 可将其删除。  
   
  `CComSafeArray` 可以包含以下 VARIANT 数据类型子集：  
   
@@ -158,7 +139,7 @@ class CComSafeArray
  **标头：** atlsafe.h  
   
 ## <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  将一个或多个元素或 **SAFEARRAY** 结构添加到 `CComSafeArray`。  
@@ -292,7 +273,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>备注  
  此方法将内容复制`CComSafeArray`对象插入**SAFEARRAY**结构。  
   
-##  <a name="create"></a>Ccomsafearray:: Create  
+##  <a name="create"></a>  CComSafeArray::Create  
  创建一个 `CComSafeArray`。  
   
 ```
@@ -319,7 +300,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>备注  
  A`CComSafeArray`对象可以创建从现有**SAFEARRAYBOUND**结构和数目的维度，或者按指定的元素数，在使用数组和下限。 如果数组为从 Visual c + + 中访问，下限应为 0。 其他语言可能允许其他值下限 （例如，如-10 到 10 范围的元素的 Visual 基本支持阵列）。  
   
-##  <a name="destroy"></a>Ccomsafearray:: Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  销毁 `CComSafeArray` 对象。  
   
 ```
@@ -421,7 +402,7 @@ VARTYPE GetType() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 返回存储在数组中，这可能是任何以下类型的数据类型︰  
+ 返回存储在数组中，这可能是任何以下类型的数据类型：  
   
 |VARTYPE|说明|  
 |-------------|-----------------|  
@@ -606,8 +587,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  `bCopy`考虑标志时类型的元素`BSTR`或**VARIANT**添加到数组。 默认值**TRUE**可确保当该元素添加到数组的数据创建一个新副本。  
   
 ## <a name="see-also"></a>另请参阅  
- [SAFEARRAY 数据类型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [Ccomsafearray:: Create](#create)   
  [Ccomsafearray:: Destroy](#destroy)   
  [类概述](../../atl/atl-class-overview.md)
-

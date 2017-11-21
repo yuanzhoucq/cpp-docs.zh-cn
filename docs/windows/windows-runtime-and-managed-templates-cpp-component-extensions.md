@@ -1,51 +1,49 @@
 ---
-title: "Windows 运行时和托管模板（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "模板, 用 CLR 类型"
+title: "Windows 运行时和托管的模板 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ace505bf8c9da090a3b871dfd06573a7ce1d6400
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Windows 运行时和托管模板（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用不同的模板类型参数，可以定义运行时模板 Windows 或公共语言运行时 \(CLR\) 类型的原型，然后实例化该类型的变体。  
+# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 运行时和托管模板（C++ 组件扩展）
+使用模板可以定义 Windows 运行时或公共语言运行时类型的原型，然后使用不同模板类型参数实例化该类型的变体。  
   
-## 所有运行时  
- 您可以依据值或引用类型的模板。有关创建自定义配置类型的更多信息，请参见[类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)。  
+## <a name="all-runtimes"></a>所有运行时  
+ 您可以依据值类型或引用类型创建模板。  有关创建值或引用类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
- 有关部署项目模板的更多信息，请参见[类模板](../cpp/class-templates.md)。  
+ 有关标准 c + + 类模板的详细信息，请参阅[类模板](../cpp/class-templates.md)。  
   
-## Windows Runtime — Windows 运行时  
- \(此语言功能没有只适用于 Windows 运行时的备注。）  
+## <a name="windows-runtime"></a>Windows 运行时  
+ (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/ZW**  
   
-## 公共语言运行时  
- 有一些限制托管代码创建类类型的模板，如以下代码示例中演示。  
+## <a name="common-language-runtime"></a>公共语言运行时  
+ 根据托管类型创建类模板会有一些限制，如以下代码示例所示。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>要求  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 实例化与宿主的类型模板参数的泛型类型是可行的，但是，无法实例化泛型类型模板参数的托管模板。这是因为，泛型类型在运行时解析。有关详细信息，请参阅[型和模板](../windows/generics-and-templates-visual-cpp.md)。  
+ 使用托管类型模板参数实例化泛型类型是可行的，但是无法使用泛型类型模板参数实例化托管模板。  这是因为泛型类型在运行时解析。  有关详细信息，请参阅[泛型和模板 （Visual c + +）](../windows/generics-and-templates-visual-cpp.md)。  
   
 ```cpp  
 // managed_templates.cpp  
@@ -69,7 +67,7 @@ ref class R {
   
  **示例**  
   
- 泛型类型或函数中托管模板不能嵌套。  
+ 泛型类型或函数不能嵌套在托管模板中。  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -82,7 +80,7 @@ template<class T> public ref class R {
   
  **示例**  
   
- 不能访问包含在 C\+\+\/CLI 语言语法中引用的程序集中定义的模板，但是，您可以使用反射。如果模板进行实例化，其在元数据中未发出。如果模板实例化，因此，只有引用的成员函数将出现在元数据中。  
+ 不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。  如果模板未实例化，则元数据中不会发出该模板。  如果模板已实例化，则元数据中仅显示引用的成员函数。  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -114,7 +112,7 @@ int main() {
   
  **示例**  
   
- 可以更改一类的托管修饰符在部分专用化或类模板的显式专用化的。  
+ 可以在类模板的部分专用化或显式专用化中更改类的托管修饰符。  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -142,5 +140,5 @@ class A <int> {};
   
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

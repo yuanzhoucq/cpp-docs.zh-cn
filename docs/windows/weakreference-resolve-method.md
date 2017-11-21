@@ -1,32 +1,30 @@
 ---
-title: "WeakReference::Resolve 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::Resolve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Resolve 方法"
+title: "Weakreference:: Resolve 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::Resolve
+dev_langs: C++
+helpviewer_keywords: Resolve method
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9dc2eef072e64d38b96afd045bae6a9b23d59d94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# WeakReference::Resolve 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="weakreferenceresolve-method"></a>WeakReference::Resolve 方法
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,29 +34,29 @@ STDMETHOD(Resolve)
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `riid`  
- 是一个ID接口。  
+ 接口 ID。  
   
  `ppvObject`  
- 该操作完成，强烈当前的引用复制，则强引用计数是非零值。  
+ 此操作完成后，一份当前的强引用如果强引用计数不为零。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
   
--   S\_OK，如果该操作成功和强引用计数为零。  `ppvObject` 参数设置为 `nullptr`。  
+-   如果此操作成功，强引用计数为零，则为 S_OK。 `ppvObject` 参数设置为 `nullptr`。  
   
--   S\_OK，如果该操作成功和强引用计数为非零。  `ppvObject` 参数设置为强引用。  
+-   如果此操作成功，强引用计数不为零，则为 S_OK。 `ppvObject`参数设置为强引用。  
   
--   否则，此 HRESULT 指示原因的此操作失败。  
+-   否则为指示的原因的 HRESULT 此操作失败。  
   
-## 备注  
- 则强引用计数是非零，将指定的强引用指向当前的值。  
+## <a name="remarks"></a>备注  
+ 如果强引用计数不为零，请将指定的指针设置为当前的强引用值。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>要求  
+ **标头：** implements.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
- [WeakReference 类](../windows/weakreference-class1.md)   
+## <a name="see-also"></a>另请参阅  
+ [WeakReference Class1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

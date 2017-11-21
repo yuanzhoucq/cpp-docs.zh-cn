@@ -1,34 +1,31 @@
 ---
-title: "ComPtrRef::operator!= 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator!="
-dev_langs: 
-  - "C++"
+title: "Comptrref:: Operator ！ = 运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator!=
+dev_langs: C++
 ms.assetid: ab3093cc-6fbd-4039-890a-6df1cde992b6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a61ed97ffd3caad6d254d3258711a7b45ad3c0dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRef::operator!= 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!= 运算符
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
-  
 bool operator!=(  
    const Details::ComPtrRef<ComPtr<T>>& a,  
    const Details::ComPtrRef<ComPtr<U>>& b  
@@ -55,28 +52,28 @@ bool operator!=(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `a`  
- 获取 ComPtrRef对象的引用。  
+ ComPtrRef 对象的引用。  
   
  `b`  
- 对另一个 ComPtrRef 对象的引用或是指向匿名对象 \(`void*`\)。  
+ 对另一个 ComPtrRef 对象或指向的匿名对象的指针的引用 (`void*`)。  
   
-## 返回值  
- 如果 `a` 对象不等于的 `b`对象，第一个运算符为 `true` ;否则，返回 `false`。  
+## <a name="return-value"></a>返回值  
+ 第一个运算符生成`true`如果对象`a`不等于对象`b`; 否则为`false`。  
   
- 如果 `a` 对象不等于 `nullptr`，将第二和第三个运算符为 `true` ;否则，返回 `false`。  
+ 第二个和第三个运算符生成`true`如果对象`a`是否不等于`nullptr`; 否则为`false`。  
   
- 如果对象的 `a` 不相等的 `b`对象，第四、第五和运算符以生成 `true` ;否则，返回 `false`。  
+ 第四个和第五个运算符生成`true`如果对象`a`不等于对象`b`; 否则为`false`。  
   
-## 备注  
- 指示两个ComPtrRef对象是否不相等。  
+## <a name="remarks"></a>备注  
+ 指示两个 ComPtrRef 对象是否不相等。  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>要求  
+ **标头：** client.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)   
+## <a name="see-also"></a>另请参阅  
+ [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef 类](../windows/comptrref-class.md)

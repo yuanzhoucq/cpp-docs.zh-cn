@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator!=
-- random/std::binomial_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::binomial_distribution [C++]
 - std::binomial_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 55d3590ce7dab5330989171efcf704f27274a595
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ae3889c06ddc69e81ae5e144c70d68d7dc34c3ce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 类
 生成二项式分布。  
@@ -296,7 +292,6 @@ struct param_type {
   
 ## <a name="see-also"></a>另请参阅  
  [\<random>](../standard-library/random.md)
-
 
 
 

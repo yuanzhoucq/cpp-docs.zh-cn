@@ -1,52 +1,51 @@
 ---
-title: "ptr::GetInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::GetInterface"
-  - "msclr::com::ptr::GetInterface"
-  - "GetInterface"
-  - "msclr.com.ptr.GetInterface"
-  - "ptr.GetInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInterface 方法"
+title: "ptr::GetInterface |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::GetInterface
+- msclr::com::ptr::GetInterface
+- GetInterface
+- msclr.com.ptr.GetInterface
+- ptr.GetInterface
+dev_langs: C++
+helpviewer_keywords: GetInterface method
 ms.assetid: d85553ec-fb88-4fd6-9df2-ddcaa8b2dc70
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a86741e9047694dda61e306afb164dc2cc2bbf98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::GetInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-返回指向您自己的 COM 对象。  
+# <a name="ptrgetinterface"></a>ptr::GetInterface
+返回指向拥有的 COM 对象的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 _interface_type * GetInterface();  
 ```  
   
-## 返回值  
- 为拥有的 COM 对象的指针。  
+## <a name="return-value"></a>返回值  
+ 指向拥有的 COM 对象的指针。  
   
-## 异常  
- 在内部，`QueryInterface` 对自己的 COM 对象，并且所有错误 `HRESULT` 转换到异常的 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
+## <a name="exceptions"></a>异常  
+ 在内部，`QueryInterface`上拥有的 COM 对象和任何错误调用`HRESULT`转换为通过异常<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
-## 备注  
- `com::ptr` 添加对 COM 对象的引用。代表调用方调用并保留其对 COM 对象的引用。  调用方必须最终发布对返回对象的引用或是将不销毁它。  
+## <a name="remarks"></a>备注  
+ `com::ptr`上代表调用方添加对 COM 对象的引用，并同样将它自己的引用保持对 COM 对象。 调用方最终必须释放对返回的对象的引用，或将永远不会被销毁。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有 `IXMLDOMDocument` 对象中保存 CLR 类。  `GetDocument` 成员函数返回指向由 `GetInterface` 使用 COM 对象。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `GetDocument`成员函数使用`GetInterface`以返回到 COM 对象的指针。  
   
 ```  
 // comptr_getinterface.cpp  
@@ -162,12 +161,15 @@ int main() {
 }  
 ```  
   
-  **\<Word wordpersnickety\>\<\/\>**   
-## 要求  
- **头文件** \<msclr \\ \\ ptr.h com\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **命名空间** msclr::com  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\com\ptr.h >  
   
-## 请参阅  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>另请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::QueryInterface](../dotnet/ptr-queryinterface.md)

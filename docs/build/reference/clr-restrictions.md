@@ -1,107 +1,106 @@
 ---
-title: "/clr 限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 编译器选项 [C++], 限制"
+title: "-clr 限制 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b5113abbf63fdb7ab87363e5344806d6eb34e0dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /clr 限制
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-请注意下列对使用 **\/clr** 的限制：  
+# <a name="clr-restrictions"></a>/clr 限制
+请注意以下限制的使用**/clr**:  
   
--   在结构化异常处理程序中，当使用 **\/clr** 进行编译时，存在对使用 `_alloca` 的限制。  有关更多信息，请参见 [\_alloca](../../c-runtime-library/reference/alloca.md)。  
+-   在结构化的异常处理程序中，有的使用限制`_alloca`编译时**/clr**。 有关详细信息，请参阅[_alloca](../../c-runtime-library/reference/alloca.md)。  
   
--   用 **\/clr** 时，使用运行时错误检查无效。  有关更多信息，请参见[运行时错误检查](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md)。  
+-   运行时错误检查的使用是不与有效**/clr**。 有关详细信息，请参阅[如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)。  
   
--   当 **\/clr** 用于编译仅使用标准 C\+\+ 语法的程序时，下列原则适用于内联程序集的使用：  
+-   当**/clr**是用于编译仅使用标准 c + + 语法的程序，以下准则适用于内联程序集的使用：  
   
-    -   如果内联程序集代码假定有关本机堆栈布局、当前函数外部的调用约定或其他有关计算机的低级别信息的知识，则如果将该知识应用于托管函数的堆栈帧，则此内联程序集代码可能失败。  包含内联程序集代码的函数被生成为非托管函数，就像它们放在不使用 **\/clr** 编译的单独模块中一样。  
+    -   假定的本机堆栈布局的知识的内联程序集代码，调用当前函数或其他低级别的有关计算机的信息的外部的约定如果可能会失败知识应用于托管函数的堆栈帧。 包含内联程序集代码的函数将生成为非托管函数，就像它们已放置在单独模块而无需编译**/clr**。  
   
-    -   传递复制构造函数参数的函数中的内联程序集代码不受支持。  
+    -   不支持内联程序集代码中传递复制构造函数参数的函数。  
   
--   不能从用 **\/clr** 编译的程序调用 [vprintf 函数](../../c-runtime-library/vprintf-functions.md)。  
+-   [Vprintf 函数](../../c-runtime-library/vprintf-functions.md)从编译的程序不能调用**/clr**。  
   
--   [naked](../../cpp/naked-cpp.md) [\_\_declspec](../../cpp/declspec.md) 修饰符在 \/clr 下被忽略。  
+-   [裸](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md)修饰符忽略在 /clr 下。  
   
--   [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) 设置的转换器函数将只影响非托管代码中的 Catch。  有关更多信息，请参见[异常处理](../../windows/exception-handling-cpp-component-extensions.md)。  
+-   通过设置的转换器函数[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)将影响仅非托管代码中的 catch 语句。 请参阅[异常处理](../../windows/exception-handling-cpp-component-extensions.md)有关详细信息。  
   
--   在 **\/clr** 下不允许比较函数指针。  
+-   在不允许的函数指针比较**/clr**。  
   
--   在 **\/clr** 下不允许使用未完全保持原型的函数。  
+-   在不允许使用未完全保持原型的函数**/clr**。  
   
--   **\/clr** 不支持下列编译器选项：  
+-   不支持以下编译器选项**/clr**:  
   
-    -   **\/EHsc** 和 **\/EHs** \(**\/clr** 意味着 **\/EHa**（请参见 [\/EH（异常处理模型）](../../build/reference/eh-exception-handling-model.md)）  
+    -   **/ EHsc**和**/EHs** (**/clr**意味着**/EHa** (请参阅[/EH （异常处理模型）](../../build/reference/eh-exception-handling-model.md))  
   
-    -   **\/fp:strict** 和 **\/fp:except**（请参见 [\/fp（指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md)）  
+    -   **/fp: strict**和**/fp： 除**(请参阅[/fp （指定浮点行为）](../../build/reference/fp-specify-floating-point-behavior.md))  
   
-    -   [\/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
+    -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
-    -   [\/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
+    -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
-    -   [\/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
+    -   [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
   
-    -   [\/RTC](../../build/reference/rtc-run-time-error-checks.md)  
+    -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
-    -   **\/ZI**  
+    -   **/ZI**  
   
--   不支持 `_STATIC_CPPLIB` 预处理器定义 \(`/D_STATIC_CPPLIB`\) 和 **\/clr** 或 **\/clr:pure** 编译器选项的组合。  这是因为此定义会使您的应用程序与静态多线程标准 C\+\+ 库链接，而此库不受支持。  有关更多信息，请参见主题[\/MD、\/MT、\/LD（使用运行库）](../../build/reference/md-mt-ld-use-run-time-library.md)。  
+-   组合`_STATIC_CPPLIB`预处理器定义 (`/D_STATIC_CPPLIB`) 和**/clr**或**/clr: pure**编译器选项不支持。 这是因为此定义会使你的应用程序与静态多线程 c + + 标准库链接，这不受支持。 有关详细信息，请参阅[/MD、 /MT、 /LD （使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)主题。  
   
--   **\/clr:safe** 或 **\/clr:pure** 不支持 [\/J](../../build/reference/j-default-char-type-is-unsigned.md)。  
+-   [/J](../../build/reference/j-default-char-type-is-unsigned.md)不支持**/clr: safe**或**/clr: pure**。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
--   纯模式编译 \(**\/clr:pure**\) 不支持 ATL 和 MFC 库。  如果您还使用 **\/MD** 或 **\/MDd** 进行编译，则可以将 **\/clr:pure** 与标准 C\+\+ 库和 CRT 一起使用。  
+-   纯模式下编译不支持 ATL 和 MFC 库 (**/clr: pure**)。 你可以使用**/clr: pure**使用 c + + 标准库和 CRT 如果还使用进行编译**/MD**或**/MDd**。  
   
--   当 **\/Zi** 与 **\/clr** 一起使用时，存在性能的含义。  有关更多信息，请参见 [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
+-   使用时**/Zi**与**/clr**，但会性能产生影响。 有关详细信息，请参阅[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
   
--   如果将宽字符传递给 .NET Framework 输出例程，但没有同时指定 [\/Zc:wchar\_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 或没有将字符强制转换为 `__wchar_t`，将导致输出显示为 `unsigned short int`。  例如：  
+-   将宽字符传递到.NET Framework 而无需还指定输出例程[/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)或不带强制转换为字符`__wchar_t`将显示为输出`unsigned short int`。 例如:   
   
     ```  
     Console::WriteLine(L' ')              // Will output 32.  
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   在用 **\/clr** 编译时将忽略 [\/GS](../../build/reference/gs-buffer-security-check.md)，除非函数在 `#pragma` [非托管](../../preprocessor/managed-unmanaged.md)下面，或者函数必须编译到本机（在这种情况下，编译器将生成警告 C4793，而默认情况下该警告是关闭的）。  
+-   [/GS](../../build/reference/gs-buffer-security-check.md)与编译时将忽略**/clr**，除非函数是在`#pragma`[非托管](../../preprocessor/managed-unmanaged.md)或如果该函数必须编译为本机，在这种情况下编译器将生成警告 C4793，默认情况下处于关闭状态。  
   
--   有关托管应用程序的函数签名要求，请参见 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md)。  
+-   请参阅[/ENTRY](../../build/reference/entry-entry-point-symbol.md)托管应用程序的函数签名要求。  
   
--   用 **\/openmp** 和 **\/clr** 编译的应用程序只能在单个 appdomain 进程中运行。有关更多信息，请参见[\/openmp（启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)。  
+-   使用编译的应用程序**/openmp**和**/clr**仅在单个 appdomain 进程中运行。  请参阅[/openmp （启用 OpenMP 2.0 支持）](../../build/reference/openmp-enable-openmp-2-0-support.md)有关详细信息。  
   
--   采用数量不固定的参数的函数 \(varargs\) 将作为本机函数生成。  可变参数位置中的任何托管数据类型都将被封送为本机类型。  请注意，<xref:System.String?displayProperty=fullName> 类型实际上是宽字符字符串，但它们被封送为单字节字符字符串。  因此，如果 printf 说明符是 %S \(wchar\_t\*\)，它将改为封送为 %s 字符串。  
+-   采用数量可变的参数 (varargs) 的函数将生成为本机函数中。 变量自变量位置中的任何托管的数据类型将封送到本机类型中。 请注意，<xref:System.String?displayProperty=fullName>类型都是实际的宽字符字符串，但它们被封送到单字节字符字符串。 因此如果 printf 说明符 %S （wchar_t *），它将封送处理为 %s 字符串相反。  
   
--   使用 va\_arg 宏时，用 **\/clr:pure** 编译可能会获得意外的结果。有关详细信息，请参阅[va\_arg、va\_copy、va\_end、va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  
+-   当使用 va_arg 宏，使用编译时，你可能会收到意外的结果**/clr: pure**。  有关详细信息，请参阅[va_arg、 va_copy、 va_end、 va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  
   
--   如果您的应用程序将 [va\_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 类型的参数传递给声明为采用[参数的变量数量](../../misc/variable-argument-lists.md)的函数，并且使用 **\/clr:pure** 编译应用程序，则 CLR 将引发 <xref:System.NotSupportedException>。  如果改用 **\/clr** ，受影响的功能被编译为本机代码，并正确执行。  如果使用 **\/clr:safe**，则发出错误诊断。  
+-   如果你的应用程序传递的类型自变量[va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)函数声明为采用数目可变的参数，并且你的应用程序可以编译使用**/clr: pure**，CLR 将引发<xref:System.NotSupportedException>。 如果**/clr**使用相反，受影响的函数编译为本机代码，并正确执行。 如果**/clr: safe**是使用，则会发出诊断错误。  
   
--   不应从托管代码调用任何浏览堆栈以获取参数信息（函数变量）的函数；P\/Invoke 层使这些信息处于堆栈的较低位置。例如，不要使用 **\/clr** 编译代理\/存根。  
+-   你不应调用，从托管代码，检查堆栈来获取参数信息 （函数参数），则任何函数P/Invoke 层会导致该信息来进一步入堆栈。  例如，不编译代理/存根 （stub） 与**/clr**。  
   
--   函数将尽可能编译为托管代码，但并非所有 C\+\+ 构造都可转换为托管代码。这取决于具体函数。  如果函数的任何部分都无法转换为托管代码，则整个函数将转换为本机代码。  下列情况会阻止编译器生成托管代码。  
+-   函数将编译为托管代码，只要有可能，但不是所有 c + + 构造可以转换为托管代码。  函数通过函数地作出此决定。 如果函数的任何部分不能转换为托管代码中，将转换整个函数为本机代码。 以下情况下阻止编译器生成托管的代码。  
   
-    -   编译器生成的 thunk 或 helper 函数。  对于通过函数指针的任何函数调用（包括虚函数调用），将生成本机 thunk。  
+    -   编译器生成的 thunk 或帮助器函数。 对于通过函数指针，其中包括虚拟函数的调用任何函数调用将生成本机 thunk。  
   
-    -   调用 `setjmp` 或 `longjmp` 的函数。  
+    -   函数该调用`setjmp`或`longjmp`。  
   
-    -   使用特定内部例程直接操作计算机资源的函数。  例如，使用 `__enable` 和 `__disable`、`_ReturnAddress` 和 `_AddressOfReturnAddress` 或多媒体内部例程都将生成本机代码。  
+    -   使用某些内部函数的例程来直接操作计算机资源的函数。 例如，使用`__enable`和`__disable`，`_ReturnAddress`和`_AddressOfReturnAddress`，或多媒体内部函数将在本机代码中的所有结果。  
   
-    -   跟在 `#pragma unmanaged` 指令后面的函数。（请注意，也支持反向的 `#pragma managed`。）  
+    -   后面的函数`#pragma unmanaged`指令。 (请注意，逆， `#pragma managed`，也支持。)  
   
-    -   包含引用对齐类型（即使用 `__declspec(align(...))` 声明的类型）的函数。  
+    -   包含对引用的函数对齐类型，即，声明类型使用`__declspec(align(...))`。  
   
--   不能将 [编译器 COM 支持](../../cpp/compiler-com-support.md) 类与 **\/clr:pure** 或 **\/clr:safe** 一起使用。  
+-   不能使用[编译器 COM 支持](../../cpp/compiler-com-support.md)类与**/clr: pure**或**/clr: safe**。  
   
-## 请参阅  
- [\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
+## <a name="see-also"></a>另请参阅  
+ [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)

@@ -1,48 +1,49 @@
 ---
-title: "Creating Registrar Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 注册表"
-  - "registrar scripts [ATL]"
-  - "脚本编写, registry scripting"
-  - "脚本, 创建"
-  - "脚本, Registrar scripts"
+title: "创建 ATL 注册器脚本 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- scripts, Registrar scripts
+- scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Creating Registrar Scripts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-注册器脚本提供数据驱动的，而不是API开始，到系统注册表的访问。  因为它只接受在脚本中用行将该密钥添加到注册表，数据驱动的访问是通常更为高效。  
+# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+注册器脚本提供对系统注册表的数据驱动的而不是驱动 API 访问。 数据驱动的访问是通常更高效，因为它采用一个脚本来向注册表添加项只能将一个或两个行。  
   
- [ATL控件向导](../atl/reference/atl-control-wizard.md) 自动为您生成COM服务器的controllers脚本。  可以找到在.rgs文件的此脚本与对象关联的。  
+ [ATL 控件向导](../atl/reference/atl-control-wizard.md)自动生成用于您的 COM 服务器的注册器脚本。 你可以在与你的对象关联的.rgs 文件中找到此脚本。  
   
- ATL控制器的脚本引擎处理您的管理员脚本在运行时。  在服务器上安装过程中，ATL自动调用脚本引擎。  
+ ATL 注册机构的脚本引擎处理在运行时的注册器脚本。 ATL 在服务器安装过程会自动调用脚本引擎。  
   
- 本文包含以下主题与管理员脚本有关:  
+ 本文介绍如何注册器脚本相关的以下主题：  
   
--   [了解的Backus Nauer窗体\(BNF\)语法](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
+-   [了解巴科斯范式 (BNF) 语法](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
   
 -   [了解分析树](../atl/understanding-parse-trees.md)  
   
 -   [注册表脚本示例](../atl/registry-scripting-examples.md)  
   
--   [使用可替换参数\(控制器的预处理器\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+-   [使用可替换参数（注册器预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
   
 -   [调用脚本](../atl/invoking-scripts.md)  
   
-## 请参阅  
- [注册表组件（注册器）](../atl/atl-registry-component-registrar.md)
+## <a name="see-also"></a>另请参阅  
+ [注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
+

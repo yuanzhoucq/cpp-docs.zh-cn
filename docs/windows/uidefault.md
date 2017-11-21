@@ -1,32 +1,30 @@
 ---
-title: "uidefault | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.uidefault"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uidefault attribute"
+title: "uidefault |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.uidefault
+dev_langs: C++
+helpviewer_keywords: uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cfc3f647963eca028b665fdd81029a2f500e9ddd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# uidefault
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示该类型信息成员是显示的默认成员。用户界面。  
+# <a name="uidefault"></a>uidefault
+表示类型信息成员以在用户界面中显示的默认成员。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **uidefault** C\+\+ 特性具有与 [uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Uidefault** c + + 属性具有相同的功能[uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL 特性。  
   
-## 示例  
- 下面的代码演示 **uidefault**示例:  
+## <a name="example"></a>示例  
+ 下面的代码演示的示例**uidefault**:  
   
 ```  
 // cpp_attr_ref_uidefault.cpp  
@@ -57,20 +55,19 @@ __interface ICustom{
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|接口方法|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   

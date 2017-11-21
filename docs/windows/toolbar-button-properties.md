@@ -1,48 +1,49 @@
 ---
-title: "Toolbar Button Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size, toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "status bars, active toolbar button text"
-  - "command IDs, toolbar buttons"
-  - "width, toolbar buttons"
+title: "工具栏按钮属性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- size, toolbar buttons
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- status bars, active toolbar button text
+- command IDs, toolbar buttons
+- width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 98c78922ee3987bf459f01a62253e9835ad3e377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Toolbar Button Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-工具栏按钮的属性包括：  
+# <a name="toolbar-button-properties"></a>工具栏按钮属性
+工具栏按钮的属性是：  
   
-|属性|说明|  
-|--------|--------|  
-|**ID**|定义按钮的 ID。  下拉列表提供通用 **ID** 名。|  
-|**宽度**|设置按钮的宽度。  推荐使用 16 像素。|  
-|**高度**|设置按钮的高度。  注意，一个按钮的高度更改工具栏上所有按钮的高度。  推荐使用 15 像素。|  
-|**提示**|定义状态栏中显示的消息。  添加 \\n 和名称将会向工具栏按钮添加工具提示。  有关更多信息，请参见[创建工具提示](../mfc/creating-a-tool-tip-for-a-toolbar-button.md)。|  
+|属性|描述|  
+|--------------|-----------------|  
+|**ID**|定义按钮的 ID。 下拉列表提供了常见**ID**名称。|  
+|**宽度**|设置按钮的宽度。 建议 16 个像素。|  
+|**高度**|设置按钮的高度。 请注意，一个按钮的高度更改的工具栏上的所有按钮的高度。 推荐使用 15 像素。|  
+|**提示**|定义状态栏中显示的消息。 添加 \n 和名称添加到该工具栏按钮的工具提示。 有关详细信息，请参阅[创建工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|  
   
- **“宽度”**和**“高度”**应用于所有按钮。  用于创建工具栏的位图的最大宽度为 2048。  因此，如果按钮宽度设置为 512，则只能有四个按钮，如果按钮宽度设置为 513，则只能有三个按钮。  
+ **宽度**和**高度**应用于所有按钮。 用于创建工具栏位图具有的最大宽度为 2048年。 因此，如果将按钮宽度设置为 512，则可以只需四个按钮，并将宽度设置为 513，只能有三个按钮。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  MFC 或 ATL  
   
-## 请参阅  
- [Changing the Properties of a Toolbar Button](../mfc/changing-the-properties-of-a-toolbar-button.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>另请参阅  
+ [更改工具栏按钮的属性](../windows/changing-the-properties-of-a-toolbar-button.md)   
+ [工具栏编辑器](../windows/toolbar-editor.md)
+

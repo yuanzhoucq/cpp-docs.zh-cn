@@ -1,32 +1,30 @@
 ---
-title: "VerifyInheritanceHelper 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInheritanceHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VerifyInheritanceHelper 结构"
+title: "VerifyInheritanceHelper 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+dev_langs: C++
+helpviewer_keywords: VerifyInheritanceHelper structure
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 926ed226b67ae510647d2523e4992f6ee3c79a5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# VerifyInheritanceHelper 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 结构
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -40,31 +38,31 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `I`  
- 一个类型。  
+ 一种类型。  
   
  `Base`  
- 另一个类型。  
+ 另一种类型。  
   
-## 备注  
- 测试一个接口如果从另一个接口派生。  
+## <a name="remarks"></a>备注  
+ 测试是否一个接口派生自另一个接口。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|测试当前模板参数指定两的接口并确定一个接口如果从其他派生。|  
+|名称|描述|  
+|----------|-----------------|  
+|[VerifyInheritanceHelper::Verify 方法](../windows/verifyinheritancehelper-verify-method.md)|测试当前的模板参数指定的两个接口，并确定是否将一个接口派生自另。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `VerifyInheritanceHelper`  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>要求  
+ **标头：** implements.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

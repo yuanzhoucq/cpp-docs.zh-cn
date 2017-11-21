@@ -1,42 +1,40 @@
 ---
-title: "deque::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator 成员 [STL/CLR]"
+title: "deque::generic_iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 865d1ec3-e660-4d18-9ff7-2302a3e74d49
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 377201df92b972c8e9c5042ace32f590450f05b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# deque::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-与容器的泛型接口一起使用的迭代器的类型。  
+# <a name="dequegenericiterator-stlclr"></a>deque::generic_iterator (STL/CLR)
+与容器的泛型接口使用的迭代器类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerRandomAccessIterator<generic_value> generic_iterator;  
 ```  
   
-## 备注  
- 此类型描述了一个泛型迭代器，此迭代器可以与模板类的泛型接口一同使用。  
+## <a name="remarks"></a>备注  
+ 该类型描述此模板容器类可与泛型接口中使用的泛型迭代器。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_generic_iterator.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a a c**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::generic\_container](../dotnet/deque-generic-container-stl-clr.md)   
- [deque::generic\_reverse\_iterator](../dotnet/deque-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
+ [deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_current_locale
+apiname: _get_current_locale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,38 +25,22 @@ f1_keywords:
 - get_current_locale
 - __get_current_locale
 - _get_current_locale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - get_current_locale function
 - _get_current_locale function
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e2f14ad541750967d63a50c13ec82a9ed57fce05
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3af5897dbc723ecf4d2ee7d7f4766a32eb3127aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getcurrentlocale"></a>_get_current_locale
 获取表示当前区域设置的区域设置对象。  
@@ -83,7 +65,7 @@ _locale_t _get_current_locale(void);
 |-------------|---------------------|  
 |`_get_current_locale`|\<locale.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   

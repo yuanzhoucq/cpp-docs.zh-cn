@@ -1,67 +1,67 @@
 ---
-title: "事务：事务如何影响更新 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CommitTrans 方法"
-  - "ODBC 记录集, 事务"
-  - "Rollback 方法, ODBC 事务"
-  - "事务, 回滚"
-  - "事务, 更新记录集"
+title: "事务： 事务如何影响更新 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- transactions, updating recordsets
+- ODBC recordsets, transactions
+- transactions, rolling back
+- CommitTrans method
+- Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 事务：事务如何影响更新 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在事务处理期间，对[数据源](../../data/odbc/data-source-odbc.md)的更新是通过使用编辑缓冲区管理的，方法与在事务外部使用的方法相同。  记录集的字段数据成员共同作为包含当前记录的编辑缓冲区。在 `AddNew` 或 **Edit** 期间，记录集暂时备份当前记录。  在 **Delete** 操作期间，当前记录不备份在事务内。  有关编辑缓冲区以及更新如何存储当前记录的更多信息，请参见 [记录集：记录集如何更新记录 \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  
+# <a name="transaction-how-transactions-affect-updates-odbc"></a>事务：事务如何影响更新 (ODBC)
+更新到[数据源](../../data/odbc/data-source-odbc.md)通过编辑缓冲区 （在事务外部使用的相同方法） 使用的事务处理期间管理。 记录集的字段数据成员共同作为包含当前记录，记录集备份临时期间编辑缓冲区`AddNew`或**编辑**。 期间**删除**操作，当前记录不会备份在事务中。 有关编辑缓冲区以及如何更新存储的当前记录的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  
   
 > [!NOTE]
->  如果已实现批量取行，则不能调用 `AddNew`、**Edit** 或 **Delete**。  必须写自己的函数来执行对数据源的更新。  有关批量取行的更多信息，请参见[记录集：批量获取记录 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  如果你已实现批量行提取，则无法调用`AddNew`，**编辑**，或**删除**。 你必须改为编写您自己的函数，对数据源执行更新。 有关批量行提取的详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 在事务处理期间，不能提交或回滚 `AddNew`、**Edit** 和 **Delete** 操作。  **CommitTrans** 和 **Rollback** 的影响可能会导致当前记录不能还原到编辑缓冲区中。  若要确保当前记录正确还原，了解 `CDatabase` 的 **CommitTrans** 和 **Rollback** 成员函数如何处理 `CRecordset` 的更新函数是很重要的。  
+ 在事务处理，过程`AddNew`，**编辑**，和**删除**可以提交或回滚操作。 效果**CommitTrans**和**回滚**可能会导致不会还原到编辑缓冲区中的当前记录。 若要确保正确还原当前记录，务必要了解如何**CommitTrans**和**回滚**的成员函数`CDatabase`适用于更新函数`CRecordset`.  
   
-##  <a name="_core_how_committrans_affects_updates"></a> CommitTrans 如何影响更新  
- 下表解释了 **CommitTrans** 对事务的影响。  
+##  <a name="_core_how_committrans_affects_updates"></a>CommitTrans 如何影响更新  
+ 下表说明带来的影响**CommitTrans**对中的事务。  
   
-### CommitTrans 如何影响更新  
+### <a name="how-committrans-affects-updates"></a>CommitTrans 如何影响更新  
   
-|Operation|数据源的状态|  
-|---------------|------------|  
-|`AddNew` 并 **Update**，然后 **CommitTrans**。|向数据源添加新记录。|  
-|`AddNew`（无 **Update**），然后 **CommitTrans**。|新记录丢失。  记录不会被添加到数据源。|  
-|**Edit** 并 **Update**，然后 **CommitTrans**。|向数据源提交编辑。|  
-|**Edit**（无 **Update**），然后 **CommitTrans**|对记录的编辑丢失。  记录在数据源上保持不变。|  
-|**Delete**，然后 **CommitTrans**|从数据源中删除记录。|  
+|操作|数据源的状态|  
+|---------------|---------------------------|  
+|`AddNew`和**更新**，，然后**CommitTrans**|新的记录添加到数据源。|  
+|`AddNew`(而无需**更新**)，然后**CommitTrans**|新的记录都将丢失。 不会添加到数据源的记录。|  
+|**编辑**和**更新**，，然后**CommitTrans**|提交到数据源的编辑。|  
+|**编辑**(而无需**更新**)，然后**CommitTrans**|对记录的编辑都将丢失。 记录在数据源上保持不变。|  
+|**删除**然后**CommitTrans**|从数据源中删除的记录。|  
   
-##  <a name="_core_how_rollback_affects_updates"></a> Rollback 如何影响事务  
- 下表解释了 **Rollback** 对事务的影响。  
+##  <a name="_core_how_rollback_affects_updates"></a>如何回滚影响事务  
+ 下表说明带来的影响**回滚**对中的事务。  
   
-### Rollback 如何影响事务  
+### <a name="how-rollback-affects-transactions"></a>如何回滚影响事务  
   
-|Operation|当前记录的状态|您还必须|数据源的状态|  
-|---------------|-------------|----------|------------|  
-|`AddNew` 并 **Update**，然后 **Rollback**|暂时存储当前记录的内容，以便为新记录腾出空位。  新记录输入到编辑缓冲区中。  在调用 **Update** 之后，当前记录还原到编辑缓冲区中。||撤消由 **Update** 对数据源进行的添加。|  
-|`AddNew`（无 **Update**），然后 **Rollback**|暂时存储当前记录的内容，以便为新记录腾出空位。  编辑缓冲区包含新记录。|再次调用 `AddNew` 将编辑缓冲区还原到一个空的新记录。  或调用 **Move**\(0\) 将旧值还原到编辑缓冲区中。|因为未调用 **Update**，不对数据源进行更改。|  
-|**Edit** 并 **Update**，然后 **Rollback**|暂时存储当前记录的未编辑版本。  对编辑缓冲区的内容进行编辑。  在调用 **Update** 之后，仍然暂时存储记录的未编辑版本。|*Dynaset*：滚过当前记录然后回滚，将记录的未编辑版本还原到编辑缓冲区中。<br /><br /> *Snapshot*：调用 **Requery** 从数据源刷新记录集。|撤消由 **Update** 对数据源进行的更改。|  
-|**Edit**（无 **Update**），然后 **Rollback**|暂时存储当前记录的未编辑版本。  对编辑缓冲区的内容进行编辑。|再次调用 **Edit** 将记录的未编辑版本还原到编辑缓冲区中。|因为未调用 **Update**，不对数据源进行更改。|  
-|**Delete**，然后 **Rollback**|删除当前记录的内容。|调用 **Requery** 从数据源还原当前记录的内容。|撤消从数据源进行的数据删除。|  
+|操作|当前记录的状态|此外必须|数据源的状态|  
+|---------------|------------------------------|-------------------|---------------------------|  
+|`AddNew`和**更新**，然后**回滚**|暂时存储的当前记录的内容以释放空间用于新记录。 编辑缓冲区输入新的记录。 后**更新**调用时，当前记录还原为编辑缓冲区。||添加到数据源所做的**更新**已逆转。|  
+|`AddNew`(而无需**更新**)，然后**回滚**|暂时存储的当前记录的内容以释放空间用于新记录。 编辑缓冲区包含新的记录。|调用`AddNew`再次将还原到一个空的新记录的编辑缓冲区。 或调用**移动**(0) 可还原到编辑缓冲区的旧值。|因为**更新**未调用，不没有对数据源进行任何更改。|  
+|**编辑**和**更新**，然后**回滚**|临时存储的当前记录的原样的版本。 对编辑缓冲区的内容进行编辑。 后**更新**调用时，未编辑的记录的版本仍临时存储。|*动态集*： 滚过当前的记录，然后回来，以便还原到编辑缓冲区原样的版本的记录。<br /><br /> *快照*： 调用**Requery**刷新数据源的记录集。|到数据源所做的更改**更新**进行了互换。|  
+|**编辑**(而无需**更新**)，然后**回滚**|临时存储的当前记录的原样的版本。 对编辑缓冲区的内容进行编辑。|调用**编辑**以还原到编辑缓冲区原样的版本的记录。|因为**更新**未调用，不没有对数据源进行任何更改。|  
+|**删除**然后**回滚**|删除当前记录的内容。|调用**Requery**从数据源中还原当前记录的内容。|删除数据源的数据将被反转。|  
   
-## 请参阅  
- [事务 \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [事务 \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [事务：在记录集中执行事务 \(ODBC\)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>另请参阅  
+ [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [事务： 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
+ [CDatabase 类](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset 类](../../mfc/reference/crecordset-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "transmit_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.transmit_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transmit_as attribute"
+title: "transmit_as |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.transmit_as
+dev_langs: C++
+helpviewer_keywords: transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74ad65479af91abfd75e1459163737a8a4183deb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# transmit_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示编译器关联客户端和服务器应用程序操作的一个存在的类型，使用一个传输的类型。  
+# <a name="transmitas"></a>transmit_as
+指示编译器将客户端和服务器应用程序操作，提供的类型与传输类型关联。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `type`  
- 指定传输是在客户端和服务器之间的数据类型。  
+ 指定客户端和服务器之间传输的数据类型。  
   
-## 备注  
- **transmit\_as** C\+\+ 特性具有与 [transmit\_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Transmit_as** c + + 属性具有相同的功能[transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 特性。  
   
-## 示例  
- 下面的代码演示 **transmit\_as** 属性的用法:  
+## <a name="example"></a>示例  
+ 下面的代码演示使用**transmit_as**属性：  
   
 ```  
 // cpp_attr_ref_transmit_as.cpp  
@@ -73,21 +71,20 @@ struct _TREE_NODE_TYPE * right;
 [transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`typedef`|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

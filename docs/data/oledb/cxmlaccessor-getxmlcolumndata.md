@@ -1,53 +1,52 @@
 ---
-title: "CXMLAccessor::GetXMLColumnData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CXMLAccessor.GetXMLColumnData"
-  - "CXMLAccessor::GetXMLColumnData"
-  - "CXMLAccessor.GetXMLColumnData"
-  - "ATL::CXMLAccessor::GetXMLColumnData"
-  - "GetXMLColumnData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLColumnData 方法"
+title: "Cxmlaccessor:: Getxmlcolumndata |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+dev_langs: C++
+helpviewer_keywords: GetXMLColumnData method
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0e0d34a9e726912cd631972091df65157de061d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CXMLAccessor::GetXMLColumnData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-按列检索表的列信息，XML 格式的字符串数据。  
+# <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
+按列中检索作为 XML 格式的字符串数据的表的列类型信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT GetXMLColumnData(   
-   CSimpleStringW& strOutput    
+      HRESULT GetXMLColumnData(   
+   CSimpleStringW& strOutput    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `strOutput`  
- \[out\] 为包含列信息的字符串缓冲区的引用中检索。  字符串格式的 XML 符合数据存储区的列名匹配的标记名称。  
+ [out]对包含要检索的列类型信息的字符串缓冲区的引用。 使用与数据存储区的列名称匹配的 XML 标记名称格式化字符串。  
   
-## 返回值  
- 标准`HRESULT` 值之一。  
+## <a name="return-value"></a>返回值  
+ 一个标准`HRESULT`值。  
   
-## 备注  
- 下面演示列信息在 XML 格式。  `type` 指定列的数据类型。  注意数据类型基于数据库的 OLE DB 数据类型，而不是访问的那些。  
+## <a name="remarks"></a>备注  
+ 下图显示如何在 XML 中设置的列类型信息的格式。 `type`指定列的数据类型。 请注意，数据类型基于 OLE DB 数据类型，不是那些正在访问的数据库的类型。  
   
  `<columninfo>`  
   
@@ -55,8 +54,8 @@ caps.handback.revision: 9
   
  `</columninfo>`  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CXMLAccessor 类](../../data/oledb/cxmlaccessor-class.md)

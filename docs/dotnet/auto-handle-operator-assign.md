@@ -1,36 +1,34 @@
 ---
-title: "auto_handle::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::operator="
-  - "msclr.auto_handle.operator="
-  - "msclr::auto_handle::operator="
-  - "auto_handle.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator="
+title: "auto_handle::operator = |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::operator=
+- msclr.auto_handle.operator=
+- msclr::auto_handle::operator=
+- auto_handle.operator=
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator=
 ms.assetid: 503ca172-e766-4a78-af98-36fd48c931ee
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 49b05ad1fe25c7e5e99c02fdb0af3a554b324f42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator"></a>auto_handle::operator=
 赋值运算符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 auto_handle<_element_type> % operator=(  
@@ -42,14 +40,14 @@ auto_handle<_element_type> % operator=(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_right`  
- 将分配为当前 `auto_handle`的 `auto_handle`。  
+ `auto_handle`要分配给当前`auto_handle`。  
   
-## 返回值  
- 当前 `auto_handle`，现在是 `_right`。  
+## <a name="return-value"></a>返回值  
+ 当前`auto_handle`、 现在拥有`_right`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_handle_op_assign.cpp  
@@ -99,18 +97,21 @@ int main()
 }  
 ```  
   
-  **在 ClassA 构造函数：首先**  
-**从第一个A开始。**  
-**在 ClassA 构造函数：秒**  
-**Hello 从第二 B\!**  
-**在 ClassA 析构函数：首先**  
-**Hello 从第二 A\!**  
-**done**  
-**在 ClassA 析构函数：秒**   
-## 要求  
- **头文件** \<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+Hello from second B!  
+in ClassA destructor: first  
+Hello from second A!  
+done  
+in ClassA destructor: second  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_handle 成员](../dotnet/auto-handle-members.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_handle 成员](../dotnet/auto-handle-members.md)

@@ -1,124 +1,126 @@
 ---
-title: "演练：使用任务和 XML HTTP 请求进行连接 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "连接到 Web 服务, Windows 应用商店应用 [C++]"
-  - "IXMLHTTPRequest2 和任务, 示例"
-  - "IXHR2 和任务, 示例"
+title: "演练： 使用任务和 XML HTTP 请求进行连接 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connecting to web services, Windows Store apps [C++]
+- IXMLHTTPRequest2 and tasks, example
+- IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f309673b5f0362657434bf3160d1062fdefe881
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 演练：使用任务和 XML HTTP 请求进行连接
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-演示如何将 [IXMLHTTPRequest2](http://msdn.microsoft.com/zh-cn/bbc11c4a-aecf-4d6d-8275-3e852e309908) 和 [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/zh-cn/aa4b3f4c-6e28-458b-be25-6cce8865fc71) 接口与任务结合使用，以将 HTTP GET 和 POST 请求发送至 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用中的 Web 服务。  整合 `IXMLHTTPRequest2` 的任务， 您能够组合其他任务来写代码。  例如，作为任务的一部分，链可以使用下载任务。  工作的时间时，下载任务还可以响应。  
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
+此示例演示如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)接口与任务以将 HTTP GET 和 POST 请求发送到中的 web 服务[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，您可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。  
   
 > [!TIP]
->  还可以使用 C\+\+ 其他 SDK 从 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app 使用 C\+\+ app 或从桌面 C\+\+ 应用程序执行 HTTP 请求。  有关更多信息，请参见 [C\+\+ REST SDK \(Codename "Casablanca"\)](../../top/cpp-rest-sdk-codename-casablanca.md)。  
+>  还可以使用 C++ REST SDK 从使用 C++ 应用程序的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序或桌面 C++ 应用程序来执行 HTTP 请求。 有关详细信息，请参阅[c + + REST SDK (Codename"Casablanca")](https://github.com/Microsoft/cpprestsdk)。  
   
- 有关任务的更多信息，请参见 [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  有关如何在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 中使用媒体文件的详细信息，请参阅[Asynchronous programming in C\+\+](http://msdn.microsoft.com/zh-cn/512700b7-7863-44cc-93a2-366938052f31)和[用 C\+\+ 为 Windows 应用商店应用程序创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
+ 有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 有关如何使用中的任务的详细信息[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用，请参阅[c + + 中的异步编程](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)和[创建 Windows 应用商店应用的 c + + 中的异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
   
- 文档第一个演示如何创建 `HttpRequest` 及其支持的选件类。  然后演示如何使用 C\+\+ 和 XAML 从 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app 使用此类。  
+ 本文档首先演示如何创建 `HttpRequest` 及其支持类。 然后演示如何从使用 C++ 和 XAML 的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用此类。  
   
- 对于使用的更完整示例 `HttpReader` 选件类中描述的文档，请参见 [在 JavaScript 和 C\+\+ 中开发 Windows 应用商店应用程序 Bing 地图行程优化器](../Topic/Developing%20Bing%20Maps%20Trip%20Optimizer,%20a%20Windows%20Store%20app%20in%20JavaScript%20and%20C++.md)。  有关使用其中`IXMLHTTPRequest2`许多特性的示例但没有使用任务，请参见 [Quickstart: Connecting using XML HTTP Request \(IXMLHTTPRequest2\)](http://msdn.microsoft.com/zh-cn/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)。  
+ 有关的更完整示例，使用`HttpReader`类描述在此文档中，请参阅[开发必应地图行程优化器，以 JavaScript 和 c + + Windows 应用商店应用](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30)。 有关其他示例，使用`IXMLHTTPRequest2`但不使用任务，请参阅[快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)。  
   
 > [!TIP]
->  `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是建议用于 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app 的接口。  还可以满足此示例用于桌面应用程序。  
+>  `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是建议在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用的接口。 还可以调整此示例，以用于桌面应用程序。  
   
-## 系统必备  
+## <a name="prerequisites"></a>先决条件  
   
-## 定义 HttpRequest、HttpRequestBuffersCallback 和 HttpRequestStringCallback 类  
- 当您使用 `IXMLHTTPRequest2` 接口创建在 HTTP 时的 web 请求，则实现 `IXMLHTTPRequest2Callback` 接口接收服务器答复和响应到其他活动。  此示例定义 `HttpRequest` 选件类创建 web 请求和 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 选件类处理响应。  `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 选件类支持 `HttpRequest` 选件类；您只能使用从应用程序代码的 `HttpRequest` 选件类一起使用。  
+## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>定义 HttpRequest、HttpRequestBuffersCallback 和 HttpRequestStringCallback 类  
+ 当您使用 `IXMLHTTPRequest2` 接口通过 HTTP 创建 Web 请求时，可以实现 `IXMLHTTPRequest2Callback` 接口来接收服务器响应并对其他事件做出响应。 此示例定义了 `HttpRequest` 类来创建 Web 请求，并定义了 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类来处理响应。 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类支持 `HttpRequest` 类；在应用程序代码中您只能使用 `HttpRequest` 类。  
   
- `GetAsync`，`HttpRequest` 选件类的 `PostAsync` 方法可以启动 HTTP GET 和 POST 操作，分别。  这些方法使用 `HttpRequestStringCallback` 选件类读取服务器响应以字符串。  `SendAsync` 和 `ReadAsync` 方法允许您对区块的流用内容。  上述每种方法返回 [concurrency::task](../../parallel/concrt/reference/task-class-concurrency-runtime.md) 表示运算。  `GetAsync` 和 `PostAsync` 方法产生 `task<std::wstring>` 值，`wstring` 部件表示该服务器的响应。  `SendAsync` 和 `ReadAsync` 方法产生 `task<void>` 值；这些任务完成，当完成发送和读取操作。  
+ `GetAsync` 类的 `PostAsync` 和 `HttpRequest` 方法可以使您分别启动 HTTP GET 和 POST 操作。 这些方法使用 `HttpRequestStringCallback` 类以便将服务器响应作为字符串读取。 `SendAsync` 和 `ReadAsync` 方法使您能够对区块中的大型内容进行流式处理。 这些方法均返回[concurrency:: task](../../parallel/concrt/reference/task-class.md)以表示操作。 `GetAsync` 和 `PostAsync` 方法将产生 `task<std::wstring>` 值，值中的 `wstring` 部分表示服务器的响应。 `SendAsync` 和 `ReadAsync` 方法将产生 `task<void>` 值；当发送和读取操作完成后这些任务将会完成。  
   
- 因为`IXMLHTTPRequest2`接口异步操作，该示例使用[concurrency::task\_completion\_event](../../parallel/concrt/reference/task-completion-event-class.md)创建完成回调对象完成或取消下载操作后的任务。  `HttpRequest` 选件类创建从此任务的基于任务的延续设置最终结果。  `HttpRequest` 选件类使用基于任务的延续确保延续任务运行，即使前面的任务会导致错误或取消。  有关延续的更多信息，请参见 [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 因为`IXMLHTTPRequest2`接口是异步操作，此示例使用[concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)创建回调对象完成或取消下载操作后完成的任务。 `HttpRequest` 类从此任务创建基于任务的延续以设置最终结果。 `HttpRequest` 类使用基于任务的延续来确保，即使在前面的任务产生错误或取消的情况下，延续任务也会运行。 有关基于任务的延续的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
- 若要支持取消，`HttpRequest`、`HttpRequestBuffersCallback`和 `HttpRequestStringCallback` 选件类使用取消标记。  `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 选件类使用 [concurrency::cancellation\_token::register\_callback](../Topic/cancellation_token::register_callback%20Method.md) 方法使任务完成事件时响应取消。  此移除回调中止下载。  有关取消操作的更多信息，请参见 [取消](../../parallel/concrt/cancellation-in-the-ppl.md)。  
+ 若要支持取消，`HttpRequest`、`HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类将使用取消标记。 `HttpRequestBuffersCallback`和`HttpRequestStringCallback`类使用[concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback)方法，以使任务完成事件能够响应取消。 此取消回调将中止下载。 有关取消的详细信息，请参阅[取消](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
   
-#### 定义 HttpRequest 类  
+#### <a name="to-define-the-httprequest-class"></a>定义 HttpRequest 类  
   
-1.  使用 Visual C\+\+ “空白应用程序 \(XAML\)” 模板创建空白 XAML 应用程序项目。  此示例将项目命名为`UsingIXMLHTTPRequest2`。  
+1.  使用 Visual c + +**空白应用 (XAML)**模板来创建一个空白 XAML 应用程序项目。 此示例将项目命名为 `UsingIXMLHTTPRequest2`。  
   
-2.  向项目添加名为 HttpRequest.h 和源文件名为 HttpRequest.cpp 的一个标头文件。  
+2.  在项目中添加一个名为 HttpRequest.h 的标头文件和一个名为 HttpRequest.cpp 的源文件。  
   
-3.  在 pch.h，添加以下代码：  
+3.  在 pch.h 中，添加此代码：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#1](concrt-using-IXMLHTTPRequest2#1)]  
+     [!code-cpp[concrt-using-ixhr2#1](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_1.h)]  
   
-4.  在 HttpRequest.h，添加以下代码：  
+4.  在 HttpRequest.h 中，添加此代码：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#2](concrt-using-IXMLHTTPRequest2#2)]  
+     [!code-cpp[concrt-using-ixhr2#2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_2.h)]  
   
-5.  在 HttpRequest.h，添加以下代码：  
+5.  在 HttpRequest.cpp 中，添加此代码：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#3](concrt-using-IXMLHTTPRequest2#3)]  
+     [!code-cpp[concrt-using-ixhr2#3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_3.cpp)]  
   
-## 在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用 HttpRequest 类  
- 本节中 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app 演示如何使用 `HttpRequest` 选件类。  该应用程序提供定义了一个 URL 资源的框中，输入，并执行获取和发布操作的命令按钮并取消当前操作的按钮命令。  
+## <a name="using-the-httprequest-class-in-a-includewin8appnamelongbuildincludeswin8appnamelongmdmd-app"></a>在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用 HttpRequest 类  
+ 本节演示在 `HttpRequest` 应用程序中如何使用 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 类。 应用程序会提供一个输入框，该输入框定义了一个 URL 资源、用于执行 GET 和 POST 操作的按钮命令和用于取消当前操作的按钮命令。  
   
-#### 使用 HttpRequest 类  
+#### <a name="to-use-the-httprequest-class"></a>使用 HttpRequest 类  
   
-1.  在 MainPage.xaml，如下所示请定义元素 [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)。  
+1.  在 MainPage.xaml 中，定义[StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx)元素，如下所示。  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A1](concrt-using-IXMLHTTPRequest2#A1)]  
+     [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
-2.  在 MainPage.xaml.h，请将此 `#include` 指令：  
+2.  在 MainPage.xaml.h 中，添加此 `#include` 指令：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A2](concrt-using-IXMLHTTPRequest2#A2)]  
+     [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]  
   
-3.  在 MainPage.xaml.h，请将这些 `private` 成员变量。`MainPage` 选件类：  
+3.  在 MainPage.xaml.h 中，将这些 `private` 成员变量添加到 `MainPage` 类中：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A3](concrt-using-IXMLHTTPRequest2#A3)]  
+     [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]  
   
-4.  在 MainPage.xaml.h，声明 `private` 方法 `ProcessHttpRequest`:  
+4.  在 MainPage.xaml.h 中，声明 `private` 方法 `ProcessHttpRequest`：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A4](concrt-using-IXMLHTTPRequest2#A4)]  
+     [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]  
   
-5.  在 MainPage.xaml.cpp，请将这些 `using` 语句：  
+5.  在 MainPage.xaml.cpp 中，添加这些 `using` 语句：  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A5](concrt-using-IXMLHTTPRequest2#A5)]  
+     [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]  
   
-6.  在 MainPage.xaml.cpp，请实现 `GetButton_Click`，`PostButton_Click`，并且，`MainPage` 的 `CancelButton_Click` 方法类别。  
+6.  在 MainPage.xaml.cpp 中，实现 `GetButton_Click` 类的 `PostButton_Click`、`CancelButton_Click` 和 `MainPage` 方法。  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A6](concrt-using-IXMLHTTPRequest2#A6)]  
+     [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]  
   
     > [!TIP]
-    >  如果您的应用程序不需要取消支持，通过 [concurrency::cancellation\_token::none](../Topic/cancellation_token::none%20Method.md) 到 `HttpRequest::GetAsync` 和 `HttpRequest::PostAsync` 方法。  
+
+
+    >  如果你的应用程序不需要取消支持，将传递[concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none)到`HttpRequest::GetAsync`和`HttpRequest::PostAsync`方法。  
+
+
   
-7.  在 MainPage.xaml.cpp，请执行 `MainPage::ProcessHttpRequest` 方法。  
+7.  在 MainPage.xaml.cpp 中，实现 `MainPage::ProcessHttpRequest` 方法。  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A7](concrt-using-IXMLHTTPRequest2#A7)]  
+     [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]  
   
-8.  在项目属性，在 “链接器”下，“输入”，指定 `shcore.lib` 和 `msxml6.lib`。  
+8.  在项目属性中，在**链接器**，**输入**，指定`shcore.lib`和`msxml6.lib`。  
   
- 这是运行的应用程序：  
+ 这是正在运行的应用程序：  
   
- ![运行的 Windows 应用商店应用](../../parallel/concrt/media/concrt_usingixhr2.png "ConcRT\_UsingIXHR2")  
+ ![正在运行的 Windows 应用商店应用](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
-## 后续步骤  
+## <a name="next-steps"></a>后续步骤  
  [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
- [取消](../../parallel/concrt/cancellation-in-the-ppl.md)   
- [Asynchronous programming in C\+\+](http://msdn.microsoft.com/zh-cn/512700b7-7863-44cc-93a2-366938052f31)   
- [用 C\+\+ 为 Windows 应用商店应用程序创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Quickstart: Connecting using XML HTTP Request \(IXMLHTTPRequest2\)](http://msdn.microsoft.com/zh-cn/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
- [task 类（并发运行时）](../../parallel/concrt/reference/task-class-concurrency-runtime.md)   
- [task\_completion\_event 类](../../parallel/concrt/reference/task-completion-event-class.md)   
- [IXMLHTTPRequest2](http://msdn.microsoft.com/zh-cn/bbc11c4a-aecf-4d6d-8275-3e852e309908)   
- [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/zh-cn/aa4b3f4c-6e28-458b-be25-6cce8865fc71)
+ [PPL 中的取消](cancellation-in-the-ppl.md)   
+ [C + + 中的异步编程](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   
+ [在 c + + 为 Windows 应用商店应用创建异步操作](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [快速入门： 使用 XML HTTP 请求 (IXMLHTTPRequest2) 进行连接](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [task 类 （并发运行时）](../../parallel/concrt/reference/task-class.md)   
+ [task_completion_event 类](../../parallel/concrt/reference/task-completion-event-class.md)

@@ -1,46 +1,45 @@
 ---
-title: "auto_handle::operator auto_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_handle.operator auto_handle"
-  - "operator auto_handle"
-  - "msclr::auto_handle::operator auto_handle"
-  - "auto_handle.operator auto_handle"
-  - "auto_handle::operator auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "运算符 auto_handle"
+title: "auto_handle::operator auto_handle |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_handle.operator auto_handle
+- operator auto_handle
+- msclr::auto_handle::operator auto_handle
+- auto_handle.operator auto_handle
+- auto_handle::operator auto_handle
+dev_langs: C++
+helpviewer_keywords: operator auto_handle
 ms.assetid: 2f8b35d1-2783-4d91-b6fb-eae551270fb8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3577cb74ef151953ae12d0524c539e247af02bbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在`auto_handle` 和兼容类型之间的类型转换操作。  
+# <a name="autohandleoperator-autohandle"></a>auto_handle::operator auto_handle
+之间的类型强制转换运算符`auto_handle`和兼容的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename _other_type>  
 operator auto_handle<_other_type>();  
 ```  
   
-## 返回值  
- 当前 `auto_handle` 类型转换为 `auto_handle<_other_type>`。  
+## <a name="return-value"></a>返回值  
+ 当前`auto_handle`强制转换为`auto_handle<_other_type>`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_auto_handle_op_auto_handle.cpp  
@@ -77,12 +76,15 @@ int main() {
 }  
 ```  
   
-  **从第一个B开始。**  
-**从第一个A开始。**   
-## 要求  
- **头文件** \<msclr\\auto\_handle.h\>  
+```Output  
+Hello from first B!  
+Hello from first A!  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头文件** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
- [auto\_handle 成员](../dotnet/auto-handle-members.md)
+## <a name="see-also"></a>另请参阅  
+ [auto_handle 成员](../dotnet/auto-handle-members.md)

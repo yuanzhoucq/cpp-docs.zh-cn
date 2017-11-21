@@ -1,32 +1,30 @@
 ---
-title: "vi_progid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.vi_progid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vi_progid attribute"
+title: "vi_progid |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.vi_progid
+dev_langs: C++
+helpviewer_keywords: vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f5a7560a05e670f8e6d0b04eea614be80db2ba93
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# vi_progid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定 ProgID 的一个版本中立性窗体。  
+# <a name="viprogid"></a>vi_progid
+指定独立于版本的窗体的 ProgID。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,40 +33,39 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *name*  
- 表示对象的版本中立性 ProgID。  
+ 表示的对象独立于版本的 ProgID。  
   
- Progid 存在 \(CLSID\) 中使用的一个可读的版本类标识符标识 COM\/ActiveX 对象。  
+ Progid 提供用于标识 COM/ActiveX 对象的类标识符 (CLSID) 的用户可读的版本。  
   
-## 备注  
- **vi\_progid** C\+\+ 特性可以为 COM 对象指定一版本中立性 ProgID。  ProgID 具有以下形式 *name1.name2.version*。  一版本中立性 ProgID 没有一个 *版本*。  指定 **progid** 和 **vi\_progid** 属性在 coclass 是可能的。  如果未指定 **vi\_progid**，版本中立性 ProgID 是 [progid](../windows/progid.md) 属性指定的值。  
+## <a name="remarks"></a>备注  
+ **Vi_progid** c + + 属性允许您指定的 COM 对象独立于版本的 ProgID。 ProgID 形式具有窗体*name1.name2.version*。 独立于版本的 ProgID 没有*版本*。 可以同时指定两个**progid**和**vi_progid**为组件类的属性。 如果不指定**vi_progid**，独立于版本的 ProgID 是指定的值[progid](../windows/progid.md)属性。  
   
- **vi\_progid** 提示 **coclass** 属性，即，因此，如果指定 **vi\_progid**，它是内容并指定 **coclass** 和 **vi\_progid** 属性相同。  
+ **vi_progid**意味着**组件类**特性，也就是说，如果你指定**vi_progid**，它是与指定的相同步**组件类**和**vi_progid**属性。  
   
- **vi\_progid** 特性使类自动注册以指定的名称。  生成的 .idl 文件不会显示 ProgID 值。  
+ **Vi_progid**属性将导致一个类，以指定的名称下自动注册。 生成的.idl 文件将不显示 ProgID 的值。  
   
- 在 ATL 项目，因此，如果 [coclass](../windows/coclass.md) 属性存在， **GetVersionIndependentProgID** 函数使用指定的 ProgID \(插入 **coclass** 属性\)。  
+ 在 ATL 项目中，如果[组件类](../windows/coclass.md)属性也存在，使用指定的 ProgID **GetVersionIndependentProgID**函数 (由插入**组件类**属性）。  
   
-## 示例  
- 请参见 [coclass](../windows/coclass.md) 示例为 **vi\_progid**的示例使用。  
+## <a name="example"></a>示例  
+ 请参阅[组件类](../windows/coclass.md)更大的示例的示例使用**vi_progid**。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
-|**可重复**|否|  
+|**适用对象**|**class**， `struct`|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [ProgID Key](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [ProgID 密钥](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

@@ -1,41 +1,39 @@
 ---
-title: "deque::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引用成员 [STL/CLR]"
+title: "deque:: reference (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 059f023b-f60c-451b-8944-162cc14ca862
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e91745857158666ca85f2d1c11ba3e3d266f23e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# deque::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequereference-stlclr"></a>deque::reference (STL/CLR)
 元素的引用的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## 备注  
- 此类型描述了一个对元素的引用。  
+## <a name="remarks"></a>备注  
+ 该类型描述元素的引用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_reference.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **A B C**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+a b c  
+A B C  
+```  
+  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::const\_reference](../dotnet/deque-const-reference-stl-clr.md)   
- [deque::value\_type](../dotnet/deque-value-type-stl-clr.md)
+## <a name="see-also"></a>另请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)   
+ [deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)

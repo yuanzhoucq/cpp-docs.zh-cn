@@ -1,41 +1,39 @@
 ---
-title: "queue::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container 成员 [STL/CLR]"
+title: "queue::get_container (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: d87e7433-a352-4bea-8041-1ffc03287436
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1badd817ab433a8bf6ca24d488a7ee8823005c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# queue::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-访问基础容器。  
+# <a name="queuegetcontainer-stlclr"></a>queue::get_container (STL/CLR)
+访问基础的容器。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 container_type^ get_container();  
 ```  
   
-## 备注  
- 成员函数返回基础容器。  使用它绕过容器包装施加的限制。  
+## <a name="remarks"></a>备注  
+ 成员函数返回基础的容器。 你可以使用它来绕过容器包装施加的限制。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_queue_get_container.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 要求  
- **页眉：** \<\/cliext 队列\>  
+```Output  
+a b c  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::container\_type](../dotnet/queue-container-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)

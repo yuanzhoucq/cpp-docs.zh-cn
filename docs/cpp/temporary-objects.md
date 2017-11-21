@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2f1e30ce63374a3b8fddb52f7d2afa3f219287d4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="temporary-objects"></a>临时对象
 在某些情况下，编译器需要创建临时对象。 可能会出于下列原因创建这些临时对象：  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/25/2017
 |表达式计算的结果|将在表达式语句末尾（即，分号处）或 `for`、`if`、`while`、`do` 和 `switch` 语句的控制表达式的末尾销毁作为表达式计算结果创建的所有临时项。|  
 |初始化 `const` 引用|如果初始值设定项不是与所初始化引用相同类型的左值，则将用初始化表达式创建和初始化基础对象类型的临时项。 此临时对象将在其绑定到的引用对象销毁后立即销毁。|  
   
-

@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 成员 [STL/CLR]"
+title: "collection_adapter::size_type (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 3a0270cd-02ec-422f-85e2-577c71871057
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 183ef6fa3219f4f20e8791a01cd133ac1ea4b9f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-两个元素间的带符号距离的类型。  
+# <a name="collectionadaptersizetype-stlclr"></a>collection_adapter::size_type (STL/CLR)
+两个元素之间的带符号距离的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 备注  
- 类型描述了一个非负元素的计数。  
+## <a name="remarks"></a>备注  
+ 该类型描述非负元素计数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_collection_adapter_size_type.cpp   
@@ -62,12 +60,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**size\(\) \= 6**   
-## 要求  
- **标头:** \<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+size() = 6  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/适配器 >  
   
-## 请参阅  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator!=
-- random/std::uniform_int_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::uniform_int_distribution [C++]
 - std::uniform_int_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 693e9a21687c56a060bf3b4224050162a6937f9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 1b428e560a51c37037244596804f075e42d4c8eb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 类
 在包含起始值和结束值的输出范围中生成均匀的（每个值的概率都均等）整数分布。  
@@ -245,7 +241,6 @@ struct param_type {
   
 ## <a name="see-also"></a>另请参阅  
  [\<random>](../standard-library/random.md)
-
 
 
 

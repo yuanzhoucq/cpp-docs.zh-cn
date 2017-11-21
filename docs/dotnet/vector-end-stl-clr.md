@@ -1,41 +1,39 @@
 ---
-title: "vector::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 成员 [STL/CLR]"
+title: "vector:: end (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 21fcaf1b-7f14-4dc4-a312-fa30e631ea0d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e78c21dee78b4cd5528d581972bcc690072b591c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# vector::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorend-stlclr"></a>vector::end (STL/CLR)
 指定受控序列的末尾。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator end();  
 ```  
   
-## 备注  
- 该成员函数返回一个随机访问迭代器，指向刚刚超越控制序列的末尾。  用于获取一个迭代器，该迭代器指定受控序列的 `current` 末尾，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回一个随机访问迭代器，它指向刚超出受控序列的末尾。 用于获取指定的迭代器`current`末尾受控的序列中，但其状态可以更改，如果更改了受控序列的长度。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_end.cpp   
@@ -71,17 +69,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**  
- **a x y**   
-## 要求  
- **标头:** \<cliext\/vector\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::back](../dotnet/vector-back-stl-clr.md)   
- [vector::back\_item](../dotnet/vector-back-item-stl-clr.md)   
- [vector::begin](../dotnet/vector-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: back (STL/CLR)](../dotnet/vector-back-stl-clr.md)   
+ [vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   
+ [vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)

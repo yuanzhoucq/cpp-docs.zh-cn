@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _bstr_t::Detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- Detach method [C++]
+f1_keywords: _bstr_t::Detach
+dev_langs: C++
+helpviewer_keywords: Detach method [C++]
 ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2bdc40741ab10ac180742a1e310285290daa08c6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 6d6a8120edb32a1000fd5eec1c1c9372d7c068e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Microsoft 专用**  

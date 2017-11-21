@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - tempnam_dbg
 - _tempnam_dbg
 - _wtempnam_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file names [C++], creating temporary
 - tempnam_dbg function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 6d1c4013dcfcbc6049957978316398566c60089b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg、_wtempnam_dbg
 使用 `malloc, _malloc_dbg` 的调试版本的 [_tempnam、_wtempnam、tmpnam、_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) 的函数版本。  
@@ -106,7 +89,7 @@ wchar_t *_wtempnam_dbg(
  如果发生失败，则每个函数均返回一个指向生成的名称的指针或 `NULL`。 如果在 TMP 环境变量和 `dir` 参数中指定的目录名称无效，则可能发生失败。  
   
 > [!NOTE]
-> 对于由  `free` 和 `free_dbg` 分配的指针，必须调用 `_tempnam_dbg`（或 `_wtempnam_dbg`）。  
+>  对于由 `free` 和 `free_dbg` 分配的指针，必须调用 `_tempnam_dbg`（或 `_wtempnam_dbg`）。  
   
 ## <a name="remarks"></a>备注  
  `_tempnam_dbg`和`_wtempnam_dbg`函数相等`_tempnam`和`_wtempnam`只不过，当`_DEBUG`是定义，这些函数将使用的调试版本`malloc`和`_malloc_dbg`来分配内存，如果`NULL`作为第一个参数传递。 有关详细信息，请参阅 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  

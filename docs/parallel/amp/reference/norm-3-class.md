@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,36 +77,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_yx
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: ca5d8270f04240f99fa6735ea8235c2e077dfa01
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 92d2567a3f4754413c51c75b1c18b0a031e343d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="norm3-class"></a>norm_3 类
-表示正常的三个数字的短矢量。  
+表示三个正常数字短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -177,7 +160,7 @@ class norm_3;
 |norm_3::operator-||  
 |norm_3::operator-||  
 |norm_3::operator * =||  
-|norm_3::operator / =||  
+|/ = norm_3::operator 的||  
 |norm_3::operator + +||  
 |norm_3::operator + =||  
 |norm_3::operator =||  
@@ -228,7 +211,7 @@ class norm_3;
  `norm_3`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
 
@@ -305,4 +288,3 @@ static const int size = 3;
  
 ## <a name="see-also"></a>另请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

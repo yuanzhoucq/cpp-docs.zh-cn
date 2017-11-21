@@ -1,27 +1,26 @@
 ---
-title: "A.24   Example of the private Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Private 子句 A.24 示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f90a5b49-81ff-4746-ae03-37bbd33f6c08
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f0690f06ac51288605ae4bdd7f12b977f77cf58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# A.24   Example of the private Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`private` 子句 \(在第 25 页\) 的[第2.7.2.1部分](../../parallel/openmp/2-7-2-1-private.md) 并行区域仅实际上是为该区域的词法区域，则不会为该区域的动态区域。  因此，在下面的示例，在 `for` 循环中的变量 *的* 所有使用该实例 *f* 引用 *的*私有副本，，而实例 *g 的* 一种用法引用全局 *a。*  
+# <a name="a24---example-of-the-private-clause"></a>A.24   private 子句的示例
+`private`子句 ([部分 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)第 25 页上) 的并行区域仅会影响区域的词法范围，不能为区域的动态范围。  因此，在下面的示例中，使用该变量的任何内`for`例程中的循环*f*的私有副本是指，而在使用情况例程*g*引用全局。  
   
 ```  
 int a;  

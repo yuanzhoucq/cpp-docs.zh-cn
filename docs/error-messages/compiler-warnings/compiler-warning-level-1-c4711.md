@@ -1,35 +1,33 @@
 ---
-title: "编译器警告（等级 1）C4711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4711"
+title: "编译器警告 （等级 1） C4711 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4711
+dev_langs: C++
+helpviewer_keywords: C4711
 ms.assetid: 270506ab-fead-4328-b714-2978113be238
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0747f4345b36dc1b8e9f0dda97f6981b243405df
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 编译器警告（等级 1）C4711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4711"></a>编译器警告（等级 1）C4711
 为内联展开选定了函数“function”  
   
- 虽然给定函数未标记为内联，但编译器在该函数上执行了内联。  
+ 编译器在上执行给定的函数，尽管它未标记为内联。  
   
- 如果指定了 [\/Ob2](../../build/reference/ob-inline-function-expansion.md)，则启用 C4711。  
+ 如果启用 C4711 [/Ob2](../../build/reference/ob-inline-function-expansion.md)指定。  
   
- 内联由编译器自行执行。  此警告是信息式的。  
+ 在由编译器自行执行内联。 此警告为信息性。  
   
- 默认情况下关闭此警告。  若要启用警告，请使用 [\#pragma warning](../../preprocessor/warning.md)。  有关更多信息，请参见[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
+ 默认情况下，此警告处于关闭状态。 若要启用警告，请使用[#pragma 警告](../../preprocessor/warning.md)。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。

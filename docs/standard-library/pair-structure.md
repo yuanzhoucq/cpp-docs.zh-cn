@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- utility/std::pair
-dev_langs:
-- C++
-helpviewer_keywords:
-- pair class
+f1_keywords: utility/std::pair
+dev_langs: C++
+helpviewer_keywords: pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a9d49e1da961c7eff940ddffdbfcd9a9a01326bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e8884eb598002d6dbf3e4bc310d163658afc249b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pair-structure"></a>pair 结构
 一种结构，该结构提供了将两个对象视为单个对象的的功能。  
@@ -170,7 +165,6 @@ The element with a key value of
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

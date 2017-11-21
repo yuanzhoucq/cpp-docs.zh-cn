@@ -1,101 +1,88 @@
 ---
-title: "开放式数据库连接 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据访问 [C++], ODBC"
-  - "数据库 [C++], ODBC"
-  - "ODBC [C++]"
+title: "开放式数据库连接 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC [C++]
+- databases [C++], ODBC
+- data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa72d261a0b41375ccc6d9bd7da027f78a2e3b55
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 开放式数据库连接 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft 基础类 \(MFC\) 库为使用开放式数据库连接 \(ODBC\) 的编程提供各种类。  
+# <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
+Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 从 Visual Studio 2015 和 SQL Server 2012 ODBC 开始是连接到 SQL 数据源的首选的方法。
   
- 有关使用 ODBC API 而不使用 MFC 的更多信息，请参见 MSDN 中的[开放式数据库连接 \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK。  
+ 有关使用无需 MFC ODBC API 的详细信息，请参阅[开放式数据库连接 (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) MSDN 中的 SDK。  
   
-## 有关 MFC 数据库支持的常见问题  
   
--   [使用 DAO 和 ODBC 可以访问哪些数据源？](../../data/what-data-sources-can-i-access-with-dao-and-odbc-q.md)  
+## <a name="in-this-section"></a>本节内容  
   
--   [使用类时，是否可以直接调用 DAO 或 ODBC API？](../../data/can-i-call-dao-or-odbc-directly-q.md)  
+-   [ODBC](odbc-basics.md)-开放式数据库连接标准和 API  
   
--   [提供了哪些 ODBC 驱动程序？](../../data/odbc/odbc-driver-list.md)  
+-   [哪些 MFC 支持提供](odbc-and-mfc.md)对于 ODBC 编程  
   
--   [默认情况下将安装哪些 ODBC 驱动程序？](../../data/installing-mfc-database-support.md)  
+-   [ODBC 驱动程序都可用](odbc-driver-list.md)  
   
-## 本节内容  
+-   [连接到 ODBC 数据源](data-source-managing-connections-odbc.md)  
   
--   [ODBC](../../data/odbc/odbc-basics.md) — 开放式数据库连接标准和 API  
+-   [记录字段交换 (RFX)](record-field-exchange-rfx.md)数据库和记录集对象之间  
   
--   针对 ODBC 编程[提供了哪些 MFC 支持](../../data/odbc/odbc-and-mfc.md)  
+-   [ODBC 记录集](recordset-odbc.md)  
   
--   [有哪些可用的 ODBC 驱动程序](../../data/odbc/odbc-driver-list.md)  
+-   [SQL](sql.md)适用于 ODBC  
   
--   [安装 MFC ODBC 支持](../../data/installing-mfc-database-support.md)  
+-   [数据库事务](transaction-odbc.md)  
   
--   [使用 DAO 还是 ODBC？](../../data/should-i-use-dao-or-odbc-q.md)  
+-   [确定 ODBC 数据源的架构](data-source-determining-the-schema-of-the-data-source-odbc.md)在运行时  
   
--   [连接 ODBC 数据源](../../data/odbc/data-source-managing-connections-odbc.md)  
+-   [以编程方式配置 ODBC 数据源](data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   数据库和记录集对象之间的[记录字段交换 \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [以编程方式在 ODBC 数据源中创建表](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [ODBC 记录集](../../data/odbc/recordset-odbc.md)  
+-   [批量提取记录](recordset-fetching-records-in-bulk-odbc.md)  
   
--   ODBC 的 [SQL](../../data/odbc/sql.md)。  
+-   [自定义我记录集的 SQL 语句](sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [数据库事务](../../data/odbc/transaction-odbc.md)  
+-   [进行直接 SQL 调用](sql-making-direct-sql-calls-odbc.md)  
   
--   在运行时[确定 ODBC 数据源的架构](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
+-   [无需直接调用 ODBC API](odbc-calling-odbc-api-functions-directly.md)  
   
--   [以编程方式配置 ODBC 数据源](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+-   [数据库类如何使用 MFC 文档/视图体系结构工作？](working-with-documents-and-views.md)  
   
--   [以编程方式在 ODBC 数据源中创建表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+-   [ODBC 驱动程序列表](odbc-driver-list.md)  
   
--   [批量获取记录](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)  
+## <a name="odbc-database-tasks"></a>ODBC 数据库任务  
+ 这些任务基于 MFC [ODBC](odbc-basics.md)类。 有关使用无需 MFC ODBC API 的详细信息，请参阅[开放式数据库连接 (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK。  
   
--   [自定义记录集的 SQL 语句](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)  
+-   [安装和开始使用 ODBC](installing-and-getting-started-with-odbc.md)  
   
--   [执行直接 SQL 调用](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
+-   [设计和创建 ODBC 数据库应用程序](design-and-create-an-odbc-database-application.md)  
   
--   [直接调用 ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+-   [通过 ODBC 使用数据库窗体（记录视图）](use-database-forms-record-views-with-odbc.md)  
   
--   [如何结合使用数据库类和 MFC 文档\/视图结构？](../../data/odbc/working-with-documents-and-views.md)  
+-   [使用 ODBC 与其他用户一同工作](use-odbc-to-work-with-other-users.md)  
   
--   [ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)  
+-   [使用 ODBC 数据库连接](work-with-odbc-database-connections.md)  
   
-## ODBC 数据库任务  
- 这些任务都基于 MFC [ODBC](../../data/odbc/odbc-basics.md) 类。  有关使用 ODBC API 而不使用 MFC 的更多信息，请参见[开放式数据库连接 \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK。  
+-   [使用 ODBC 和驱动程序](work-with-odbc-and-drivers.md)  
   
--   [安装并开始使用 ODBC](../../data/odbc/installing-and-getting-started-with-odbc.md)  
+-   [使用 ODBC 游标库](use-the-odbc-cursor-library.md)  
   
--   [设计和创建 ODBC 数据库应用程序](../../data/odbc/design-and-create-an-odbc-database-application.md)  
+-   [使用 MFC ODBC 记录集](use-mfc-odbc-recordsets.md)  
   
--   [通过 ODBC 使用数据库窗体（记录视图）](../../data/odbc/use-database-forms-record-views-with-odbc.md)  
-  
--   [使用 ODBC 与其他用户一同工作](../../data/odbc/use-odbc-to-work-with-other-users.md)  
-  
--   [使用 ODBC 数据库连接](../../data/odbc/work-with-odbc-database-connections.md)  
-  
--   [使用 ODBC 和驱动程序](../../data/odbc/work-with-odbc-and-drivers.md)  
-  
--   [使用 ODBC 游标库](../../data/odbc/use-the-odbc-cursor-library.md)  
-  
--   [使用 MFC ODBC 记录集](../../data/odbc/use-mfc-odbc-recordsets.md)  
-  
-## 请参阅  
- [数据访问编程 \(MFC\/ATL\)](../../data/data-access-programming-mfc-atl.md)
+## <a name="see-also"></a>另请参阅  
+ [数据访问编程 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

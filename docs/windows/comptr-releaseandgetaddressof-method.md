@@ -1,45 +1,43 @@
 ---
-title: "ComPtr::ReleaseAndGetAddressOf 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::ReleaseAndGetAddressOf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseAndGetAddressOf 方法"
+title: "Comptr:: Releaseandgetaddressof 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::ReleaseAndGetAddressOf
+dev_langs: C++
+helpviewer_keywords: ReleaseAndGetAddressOf method
 ms.assetid: 3751dcb4-d50e-432c-89e4-e736be34d434
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6711cc93071c1e260a5d216a6ad21add9c00540
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtr::ReleaseAndGetAddressOf 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-释放接口与此 ComPtr 然后检索 [ptr\_](../windows/comptr-ptr-data-member.md) 数据成员的地址，包含一个指向接口被释放。  
+# <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf 方法
+释放与此 ComPtr 关联的接口，然后检索 [ptr_](../windows/comptr-ptr-data-member.md) 数据成员的地址，其中包含指向已释放接口的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 T** ReleaseAndGetAddressOf();  
 ```  
   
-## 返回值  
- 此 ComPtr 的 [ptr\_](../windows/comptr-ptr-data-member.md) 数据成员的地址。  
+## <a name="return-value"></a>返回值  
+ 地址[ptr_](../windows/comptr-ptr-data-member.md)此 ComPtr 的数据成员。  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>要求  
+ **标头：** client.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [ComPtr 类](../windows/comptr-class.md)   
- [ComPtr::ptr\_ 数据成员](../windows/comptr-ptr-data-member.md)
+ [ComPtr::ptr_ 数据成员](../windows/comptr-ptr-data-member.md)

@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3345
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3345
+f1_keywords: C3345
+dev_langs: C++
+helpviewer_keywords: C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 462e11e6959e7edb2bdda6081f4cabea17996e91
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: ae9a2cc09dfed19874b8c1525e91732f702e6d75
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3345"></a>编译器错误 C3345
 “identifier”：模块名称的标识符无效  

@@ -1,38 +1,37 @@
 ---
-title: "2.7.2.2 firstprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.2 firstprivate |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ece6ff12-2be1-4e4f-866c-d39345fd87b5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac868b33e8a53778faa3fba9724974e4af6ffb90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.2 firstprivate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**firstprivate** 子句提供 **专用** 子句提供的功能的扩展。  **firstprivate** 子句的语法如下所示:  
+# <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
+**Firstprivate**子句提供的提供的功能超集**私有**子句。 语法**firstprivate**子句是，如下所示：  
   
 ```  
 firstprivate(variable-list)  
 ```  
   
- 指定的变量 *变量列表* 包含 **专用** 子句语义，如第 25 页的 [第2.7.2.1部分](../../parallel/openmp/2-7-2-1-private.md) 所述。  该初始化或构造。构造上面的线程的执行发生，就象它已完成一次线程，。  对于并行构造 **firstprivate** 子句，新私有对象的初始值为立即在线程的并行构造之前存在到达其原始对象的值。  对于的工作划分结构化 **firstprivate** 子句，新私有对象中的原始值执行的每个线程执行的工作划分构造是在某个时间点之前存在原始对象的值相同线程遇到的工作划分构造。  此外，对于 C\+\+ 对象，每个线程的新私有对象是原始对象构造的副本。  
+ 中指定的变量*变量列表*具有**私有**子句语义中, 所述[部分 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)第 25 页上。 初始化或构造发生就像它是一次每个线程之前的构造的线程的执行。 有关**firstprivate**并行构造的子句，新的私有对象的初始值是在遇到它的线程的并行构造之前存在的原始对象的值。 有关**firstprivate**工作共享构造上的子句，为每个线程执行的工作共享构造新的私有对象的初始值是时间点之前存在的原始对象的值，在同一线程遇到工作共享构造。 此外，对于 c + + 对象，每个线程的新专用对象是从原始对象构造的副本。  
   
- 为 **firstprivate** 子句的限制如下所示:  
+ 对限制**firstprivate**子句如下所示：  
   
--   在 **firstprivate** 子句中指定的变量不能包含不完整类型或引用类型。  
+-   中指定的变量**firstprivate**子句必须没有不完整类型或引用类型。  
   
--   使用指定的类类型的变量，当 **firstprivate** 必须有一个可访问，明确的复制构造函数。  
+-   具有指定为类类型的变量**firstprivate**必须具有可访问的明确的复制构造函数。  
   
--   在并行区域内是专用或显示 **并行** 指令的 **减少** 子句的变量。 **firstprivate** 子句不能指定在绑定到并行构造的工作划分指令。
+-   变量的是专用的并行区域内或出现在**缩减**子句**并行**指令不能指定**firstprivate**上的子句将绑定到并行构造的工作共享指令。

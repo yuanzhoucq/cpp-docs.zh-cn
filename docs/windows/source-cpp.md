@@ -1,33 +1,30 @@
 ---
-title: "source (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "source attribute"
+title: "源 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.source
+dev_langs: C++
+helpviewer_keywords: source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e807ee5a29a7794880f91e99eec057293ec01b66
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# source (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在类中，指定 COM 对象的源接口的连接点。  在属性或方法，指示成员返回作为事件源的对象或变量。  
+# <a name="source-c"></a>source (C++)
+上一个类，指定连接点的 COM 对象的源接口。 在属性或方法，指示的成员返回的对象或作为源的事件的变体。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,16 +33,16 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `interfaces`  
- 您指定的一个或多个接口何时将源特性应用于类。  此参数，当源应用于属性或方法时，将不使用。  
+ 指定当你将源的一个或多个接口的类属性。 源应用到属性或方法时，不使用此参数。  
   
-## 备注  
- **源** C\+\+ 特性具有与 [源](http://msdn.microsoft.com/library/windows/desktop/aa367166) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **源**c + + 属性具有相同的功能[源](http://msdn.microsoft.com/library/windows/desktop/aa367166)MIDL 特性。  
   
- 可以使用 [默认](../windows/default-cpp.md) 属性为对象指定默认值源接口。  
+ 你可以使用[默认](../windows/default-cpp.md)特性来指定对象的默认源接口。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_source.cpp  
@@ -79,22 +76,21 @@ class NN : public b
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`， `interface`|  
-|**可重复**|否|  
-|**必需的特性**|**coclass** \(在对类或结构\)|  
+|**适用对象**|**类**， `struct`，`interface`|  
+|**可重复**|No|  
+|**必需的特性**|**组件类**（时应用于类或结构）|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _variant_t::_variant_t
-dev_langs:
-- C++
+f1_keywords: _variant_t::_variant_t
+dev_langs: C++
 helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6bd29401970d3beffcac6d29247138aa65d6a338
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 63fbde285ca95660eb048fdc9f95e5bbbaaa6486
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 专用**  
@@ -212,39 +208,39 @@ _variant_t(
   
 -   **_variant_t （)**构造一个空`_variant_t`对象， `VT_EMPTY`。  
   
--   **_variant_t (VARIANT &***varSrc***)**构造`_variant_t`对象的副本**VARIANT**对象。     变体类型将保留。  
+-   **_variant_t (VARIANT &***varSrc***)**构造`_variant_t`对象的副本**VARIANT**对象。 变体类型将保留。  
   
--   **_variant_t (VARIANT\****pVarSrc***)**构造`_variant_t`对象的副本**VARIANT**对象。     变体类型将保留。  
+-   **_variant_t (VARIANT\****pVarSrc***)**构造`_variant_t`对象的副本**VARIANT**对象。 变体类型将保留。  
   
--   **_variant_t (_variant_t （& a)***var_t_Src***)**构造`_variant_t`从另一个对象`_variant_t`对象。     变体类型将保留。  
+-   **_variant_t (_variant_t （& a)***var_t_Src***)**构造`_variant_t`从另一个对象`_variant_t`对象。 变体类型将保留。  
   
--   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)**构造`_variant_t`从现有对象**VARIANT**对象。       如果`fCopy`是**false**、 **VARIANT**对象附加到新的对象，而无需制作的副本。  
+-   **_variant_t (VARIANT &***varSrc* **，bool**`fCopy`**)**构造`_variant_t`从现有对象**VARIANT**对象。 如果`fCopy`是**false**、 **VARIANT**对象附加到新的对象，而无需制作的副本。  
   
--   **_variant_t (短***sSrc* **，VARTYPE**`vtSrc`**= VT_I2)**构造`_variant_t`类型的对象`VT_I2`或`VT_BOOL`从**短**整数值。       任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
+-   **_variant_t (短***sSrc* **，VARTYPE**`vtSrc`**= VT_I2)**构造`_variant_t`类型的对象`VT_I2`或`VT_BOOL`从**短**整数值。 任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
   
--   **_variant_t (长**`lSrc` **，VARTYPE**`vtSrc`**= VT_I4)**构造`_variant_t`类型的对象`VT_I4`， `VT_BOOL`，或`VT_ERROR`从**长**整数值。       任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
+-   **_variant_t (长**`lSrc` **，VARTYPE**`vtSrc`**= VT_I4)**构造`_variant_t`类型的对象`VT_I4`， `VT_BOOL`，或`VT_ERROR`从**长**整数值。 任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
   
--   **_variant_t (float**`fltSrc`**)**构造`_variant_t`类型的对象`VT_R4`从**float**数字值。      
+-   **_variant_t (float**`fltSrc`**)**构造`_variant_t`类型的对象`VT_R4`从**float**数字值。  
   
--   **_variant_t (double** `dblSrc` **，VARTYPE**`vtSrc`**= VT_R8)**构造`_variant_t`类型的对象`VT_R8`或`VT_DATE`从**double**数字值。       任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
+-   **_variant_t (double** `dblSrc` **，VARTYPE**`vtSrc`**= VT_R8)**构造`_variant_t`类型的对象`VT_R8`或`VT_DATE`从**double**数字值。 任何其他**VARTYPE**导致`E_INVALIDARG`错误。  
   
--   **_variant_t (CY （& a)**`cySrc`**)**构造`_variant_t`类型的对象`VT_CY`从**CY**对象。      
+-   **_variant_t (CY （& a)**`cySrc`**)**构造`_variant_t`类型的对象`VT_CY`从**CY**对象。  
   
--   **_variant_t (_bstr_t （& a)**`bstrSrc`**)**构造`_variant_t`类型的对象`VT_BSTR`从`_bstr_t`对象。     分配新的 `BSTR`。  
+-   **_variant_t (_bstr_t （& a)**`bstrSrc`**)**构造`_variant_t`类型的对象`VT_BSTR`从`_bstr_t`对象。 分配新的 `BSTR`。  
   
--   **_variant_t (wchar_t \* ** *wstrSrc***)**构造`_variant_t`类型的对象`VT_BSTR`从 Unicode 字符串。   分配新的 `BSTR`。  
+-   **_variant_t (wchar_t \***  *wstrSrc***)**构造`_variant_t`类型的对象`VT_BSTR`从 Unicode 字符串。 分配新的 `BSTR`。  
   
--   **_variant_t (char\***`strSrc`**)**构造`_variant_t`类型的对象`VT_BSTR`从字符串。     分配新的 `BSTR`。  
+-   **_variant_t (char\***`strSrc`**)**构造`_variant_t`类型的对象`VT_BSTR`从字符串。 分配新的 `BSTR`。  
   
--   **_variant_t (bool**`bSrc`**)**构造`_variant_t`类型的对象`VT_BOOL`从`bool`值。      
+-   **_variant_t (bool**`bSrc`**)**构造`_variant_t`类型的对象`VT_BOOL`从`bool`值。  
   
--   **_variant_t (IUnknown\* ** `pIUknownSrc` **，bool**`fAddRef`**= true)**构造`_variant_t`类型的对象**VT_UNKNOWN**从 COM 接口指针。       如果`fAddRef`是**true**，然后`AddRef`对提供的接口的指针来匹配到调用调用**版本**将发生时`_variant_t`对象被销毁。 它将由您来调用**版本**上提供的接口指针。 如果`fAddRef`是**false**，此构造函数将提供的接口指针的所有权; 不调用**版本**上提供的接口指针。  
+-   **_variant_t (IUnknown\***  `pIUknownSrc` **，bool**`fAddRef`**= true)**构造`_variant_t`类型的对象**VT_UNKNOWN**从 COM 接口指针。 如果`fAddRef`是**true**，然后`AddRef`对提供的接口的指针来匹配到调用调用**版本**将发生时`_variant_t`对象被销毁。 它将由您来调用**版本**上提供的接口指针。 如果`fAddRef`是**false**，此构造函数将提供的接口指针的所有权; 不调用**版本**上提供的接口指针。  
   
--   **_variant_t (IDispatch\* ** `pDispSrc` **，bool**`fAddRef`**= true)**构造`_variant_t`类型的对象**VT_DISPATCH**从 COM 接口指针。       如果`fAddRef`是**true**，然后`AddRef`对提供的接口的指针来匹配到调用调用**版本**将发生时`_variant_t`对象被销毁。 它将由您来调用**版本**上提供的接口指针。 如果**fAddRef**是 false，此构造函数将提供的接口指针的所有权; 不调用**版本**上提供的接口指针。  
+-   **_variant_t (IDispatch\***  `pDispSrc` **，bool**`fAddRef`**= true)**构造`_variant_t`类型的对象**VT_DISPATCH**从 COM 接口指针。 如果`fAddRef`是**true**，然后`AddRef`对提供的接口的指针来匹配到调用调用**版本**将发生时`_variant_t`对象被销毁。 它将由您来调用**版本**上提供的接口指针。 如果**fAddRef**是 false，此构造函数将提供的接口指针的所有权; 不调用**版本**上提供的接口指针。  
   
--   **_variant_t (十进制 （& a)**`decSrc`**)**构造`_variant_t`类型的对象**VT_DECIMAL**从**十进制**值。      
+-   **_variant_t (十进制 （& a)**`decSrc`**)**构造`_variant_t`类型的对象**VT_DECIMAL**从**十进制**值。  
   
--   **_variant_t (字节**`bSrc`**)**构造`_variant_t`类型的对象`VT_UI1`从**字节**值。      
+-   **_variant_t (字节**`bSrc`**)**构造`_variant_t`类型的对象`VT_UI1`从**字节**值。  
   
  **结束 Microsoft 专用**  
   

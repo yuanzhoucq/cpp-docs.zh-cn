@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- template_cpp
-dev_langs:
-- C++
+f1_keywords: template_cpp
+dev_langs: C++
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6ce40029e40906441ebd7c64ff9011a61f26045b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="templates-c"></a>模板 (C++)
 模板是用于在 c + + 中泛型的编程的基础。 作为强类型语言，c + + 需要具有特定类型，显式声明由程序员或由编译器推导的所有变量。 但是，许多数据结构和算法如果查阅无论它们只在运行哪种类型相同。 模板启用您定义的操作的类或函数，并使用户能够指定哪些具体类型这些操作不应处理。  

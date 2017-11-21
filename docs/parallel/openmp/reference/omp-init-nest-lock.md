@@ -1,32 +1,30 @@
 ---
-title: "omp_init_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_nest_lock OpenMP function"
+title: "omp_init_nest_lock |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_nest_lock OpenMP function
 ms.assetid: cf749ec5-de78-4186-9588-ac7c42b02463
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 911fd8069041135f20e8a7924cf5d943abcc2978
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# omp_init_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ompinitnestlock"></a>omp_init_nest_lock
 初始化锁。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void omp_init_nest_lock(  
@@ -34,18 +32,18 @@ void omp_init_nest_lock(
 );  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `lock`  
- 类型 [omp\_nest\_lock\_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)的变量。  
+ 类型的变量的[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)。  
   
-## 备注  
- 嵌套的计数则最初为零。  
+## <a name="remarks"></a>备注  
+ 初始嵌套计数为零。  
   
- 有关更多信息，请参见 [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)。  
+ 有关详细信息，请参阅[3.2.1 omp_init_lock 和 omp_init_nest_lock 函数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_init_nest_lock.cpp  
@@ -82,29 +80,32 @@ int main() {
 }  
 ```  
   
-  **线程 0 \- 启动嵌套锁定的区域**  
-**线程 0 \- 结尾嵌套锁定的区域**  
-**线程 0 \- 启动嵌套锁定的区域**  
-**线程 0 \- 结尾嵌套锁定的区域**  
-**线程 3 \- 启动嵌套锁定的区域**  
-**线程 3 \- 结尾嵌套锁定的区域**  
-**线程 3 \- 启动嵌套锁定的区域**  
-**线程 3 \- 结尾嵌套锁定的区域**  
-**线程 3 \- 启动嵌套锁定的区域**  
-**线程 3 \- 结尾嵌套锁定的区域**  
-**线程 2 \- 启动嵌套锁定的区域**  
-**线程 2 \- 结尾嵌套锁定的区域**  
-**线程 2 \- 启动嵌套锁定的区域**  
-**线程 2 \- 结尾嵌套锁定的区域**  
-**线程 2 \- 启动嵌套锁定的区域**  
-**线程 2 \- 结尾嵌套锁定的区域**  
-**线程 1 \- 启动嵌套锁定的区域**  
-**线程 1 \- 结尾嵌套锁定的区域**  
-**线程 1 \- 启动嵌套锁定的区域**  
-**线程 1 \- 结尾嵌套锁定的区域**  
-**线程 1 \- 启动嵌套锁定的区域**  
-**线程 1 \- 结尾嵌套锁定的区域**  
-**线程 0 \- 启动嵌套锁定的区域**  
-**线程 0 \- 结尾嵌套锁定的区域**   
-## 请参阅  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+```  
+  
+## <a name="see-also"></a>另请参阅  
+ [函数](../../../parallel/openmp/reference/openmp-functions.md)

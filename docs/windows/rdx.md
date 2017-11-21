@@ -1,32 +1,30 @@
 ---
-title: "rdx | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.rdx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdx attribute"
+title: "rdx |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.rdx
+dev_langs: C++
+helpviewer_keywords: rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3384547f1c7648504137004ce90d0c0f41cda77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# rdx
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rdx"></a>rdx
 创建注册表项或修改现有的注册表项。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,36 +35,36 @@ caps.handback.revision: 14
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `key`  
- 将创建或打开的键的名称。  
+ 创建或打开密钥的名称。  
   
- `valuename`\(可选\)  
- 指定要设置的值字段中。  如果具有该名称的值字段不存在于键，添加。  
+ `valuename`（可选）  
+ 指定要设置的值字段。 如果键中不存在具有此名称的值字段，将其添加。  
   
  *regtype*  
- 添加的注册表项的类型。  可为下列值之一: **文本**、 **大小。**、 **二进制**或 `CString`。  
+ 正在添加的注册表项的类型。 可以是以下之一：**文本**， **dword**，**二进制**，或`CString`。  
   
-## 备注  
- **rdx** C\+\+ 特性创建或修改 COM 组件的现有的注册表项。  添加一 BEGIN\_RDX\_MAP 宏到对象实现目标成员。  `RegistryDataExchange`，因为 BEGIN\_RDX\_MAP 宏注入的函数，可用于传输数据在注册表中数据成员之间  
+## <a name="remarks"></a>备注  
+ **Rdx** c + + 属性在创建或修改现有 COM 组件的注册表项。 该属性将 BEGIN_RDX_MAP 宏添加到实现的目标成员的对象。 `RegistryDataExchange`因 BEGIN_RDX_MAP 宏，而插入的函数可以用于注册表和数据成员之间传输数据  
   
- 表示这些中的此属性可与 [coclass](../windows/coclass.md)结合使用、 [progid](../windows/progid.md)或 [vi\_progid](../windows/vi-progid.md) 属性或其他属性。  
+ 此属性可以与结合使用[组件类](../windows/coclass.md)， [progid](../windows/progid.md)，或[vi_progid](../windows/vi-progid.md)属性或意味着其中一种其他属性。  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类** 或 `struct` 成员|  
-|**可重复**|否|  
+|**适用对象**|**类**或`struct`成员|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 示例  
- 下面的代码将名为 MyValue 的注册表项到描述 CMyClass COM 组件的系统。  
+## <a name="example"></a>示例  
+ 以下代码添加到系统描述 CMyClass COM 组件调用 MyValue 注册表项。  
   
 ```  
 // cpp_attr_ref_rdx.cpp  
@@ -87,7 +85,6 @@ public:
 };  
 ```  
   
-## 请参阅  
- [COM Attributes](../windows/com-attributes.md)   
- [registration\_script](../windows/registration-script.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [COM 特性](../windows/com-attributes.md)   
+ [registration_script](../windows/registration-script.md)   

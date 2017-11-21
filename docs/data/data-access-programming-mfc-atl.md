@@ -1,79 +1,44 @@
 ---
-title: "数据访问编程 (MFC/ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [C++], 数据访问技术"
-  - "数据访问 [C++], 数据库的类库"
-  - "数据库 [C++], MFC"
-  - "MFC [C++], 数据访问应用程序"
-  - "OLE DB [C++], 数据访问技术"
+title: "数据访问编程 (MFC ATL) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], data access applications
+- databases [C++], MFC
+- OLE DB [C++], data access technologies
+- data [C++], data access technologies
+- data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6a7d07941e15fad7d1b58560fb6efeb7d41c90d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 数据访问编程 (MFC/ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="data-access-programming-mfcatl"></a>数据访问编程 (MFC/ATL)
+多年来，Visual C ++ 提供了多种处理数据库的方法。 2011 年，Microsoft 宣布将 ODBC 作为从本机代码访问 SQL Server 产品的首选技术。 ODBC 是一个行业标准，通过它可在多个平台与数据源之间获取代码最佳的可移植性。 绝大多数 SQL 数据库和众多 NoSQL 产品都支持 ODBC。 可通过调用低级别 ODBC API、使用 MFC ODBC 包装器类或第三方 C++ 包装器库来直接使用 ODBC。 
 
-Visual C\+\+ 提供了好几种处理数据库的方法。  首选方法就是使用其中一个类库，例如活动模板库 \(ATL\) 或 Microsoft 基础类库 \(MFC\),这种方法可以简化数据库 API 的处理。  
+OLE DB 是基于 COM 规范的低级别、高性能 API，仅在 Windows 上可用。 如果程序正在访问[链接服务器](https://msdn.microsoft.com/library/ms188279.aspx)，请使用 OLE DB。 ATL 提供的 OLE DB 模板可简化自定义 OLE DB 提供程序和使用者的创建。 最新版 OLE DB 随附 SQL Native Client 11 一起提供。  
+
+如果旧版应用程序使用 OLE DB 或通过更高级别的 ADO 接口连接到 SQL Server，且你并未访问链接服务器，则应考虑在不久的将来迁移到 ODBC。 如果不需要跨平台可移植性或最新 SQL Server 功能，可使用用于 ODBC 的 Microsoft OLE DB 提供程序 (MSDASQL)。  MSDASQL 允许在 OLE DB 和 ADO（它在内部使用 OLEDB）上生成的应用程序通过 ODBC 驱动程序访问数据源。 与转换层一样，MSDASQL 也能影响数据库性能。 请通过测试来判断应用程序的受影响程度。 MSDASQL 附带 Windows 操作系统，而 Windows Server 2008 和 Windows Vista SP1 是首个包含此技术 64 位版本的 Windows 版本。
+
+在单个 DLL 中打包 OLE DB 和 ODBC 驱动程序的 SQL Native Client 组件 (SNAC) 已被 ODBC 应用程序弃用。 SNAC 的 SQL Server 2012 版本 (SQLNCLI11.DLL) 随附 SQL Server 2016 一起提供，因为其他 SQL Server 组件都依赖于它。 但是，通过 ODBC 连接到 SQL Server 或 Azure SQL 数据库的新 C++ 应用程序应使用[最新版本的 ODBC 驱动程序](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server)。 有关详细信息，请参阅 [SQL Server Native Client Programming](https://msdn.microsoft.com/en-us/library/ms130892.aspx)（SQL Server Native Client 编程）
+
+如果使用的是 C++/CLI，则可以一如既往地使用 ADO.NET。 有关详细信息，请参阅[使用 ADO.NET 进行数据访问 (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 和[在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)。  
   
-> [!NOTE]
->  本主题包括可用于在 Visual C\+\+ 中进行数据库编程的旧技术。  有关使用 Visual C\+\+ 和 SQL Server 2005 进行数据访问编程的信息，请参阅 [数据访问](../dotnet/data-access-using-adonet-cpp-cli.md)、[在 Visual Studio 中访问数据](../Topic/Accessing%20data%20in%20Visual%20Studio.md) 和 [Creating SQL Server 2005 Objects In Managed Code](http://msdn.microsoft.com/zh-cn/5358a825-e19b-49aa-8214-674ce5fed1da)。  
-  
- 库类支持以下数据访问类型：  
-  
--   ATL 提供 OLE DB 模板和数据库属性。  
-  
--   MFC 提供开放式数据库连接 \(ODBC\)和 ODBC 驱动程序。  
-  
- 这些库提供简化数据库处理的抽象，包括 C\+\+ 的速度、功能和灵活性。  它们可以利用库的应用程序框架整合数据访问工作。  
-  
- 或者，你可以直接从 COM、ODBC 或 DAO 软件开发工具包 \(SDK\) 调用数据库 API 函数。  有关直接用 COM、DAO 或 ODBC API 函数编程的信息，请参阅 COM SDK、DAO SDK 或 ODBC SDK。  
-  
- 如果需要访问数据，无论该数据存储在哪个窗体，都可以使用 ATL OLE DB。  当你没有使用 Microsoft Jet \(.mdb\) 数据库并且想要使用 ODBC API 完成数据源独立性时，使用 MFC ODBC 类。  当希望使用 Microsoft Jet \(.mdb\) 数据库或外部数据库（例如 ODBC 数据源）时，请使用 MFC DAO 类。  
-  
-> [!NOTE]
->  Microsoft 建议使用 OLE DB 或 ODBC 处理新项目。  只有在维护现有应用程序时才能使用 DAO。  
-  
- 除了编写独立数据库应用程序外，通常还可以使用在其他程序类型中作为有效便利存储和检索媒体的数据库。  
-  
-|了解更多信息|请参阅|  
-|------------|---------|  
-|**选择数据库技术**||  
-|ODBC 与  DAO|[使用 DAO 还是 ODBC？](../data/should-i-use-dao-or-odbc-q.md)|  
-|使用 Microsoft 知识库查找由产品支持工程人员编写的数据库主题方面的其他文章。|[Microsoft 知识库](../data/where-can-i-find-microsoft-knowledge-base-articles-on-database-topics-q.md)|  
-|**ATL 数据库支持 \(OLE DB\)**||  
-|OLE DB 编程（概念性主题）|[OLE DB 编程概述](../data/oledb/ole-db-programming-overview.md)|  
-|使用 OLE DB 使用者模板（概念性主题）|[OLE DB 使用者模板](../data/oledb/ole-db-consumer-templates-cpp.md)|  
-|OLE DB 使用者特性|[OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)|  
-|使用 OLE DB 提供程序模板（概念性主题）|[OLE DB 提供程序模板](../data/oledb/ole-db-provider-templates-cpp.md)|  
-|将 OLE DB 使用者添加到 MFC 项目|[创建 OLE DB 使用者](../data/oledb/creating-an-ole-db-consumer.md)|  
-|**MFC 数据库支持（ODBC 和 DAO）**||  
-|DAO 和 ODBC 的概念|[什么是 DAO 和 ODBC？](../data/what-are-dao-and-odbc-q.md)|  
-|MFC 数据库类的使用时间|[何时使用数据库类？](../data/when-should-i-use-the-database-classes-q.md)|  
-|了解 MFC 数据库编程模型|[MFC 数据库编程模型是什么？](../data/what-is-the-mfc-database-programming-model-q.md)。|  
-|在 MFC DAO 类和 MFC ODBC 类之间选择|[我是否应使用 DAO 或 ODBC？](../data/should-i-use-dao-or-odbc-q.md).|  
-|你可以使用 DAO 和 ODBC 访问的数据源|[使用 DAO 和 ODBC 可以访问哪些数据源？](../data/what-data-sources-can-i-access-with-dao-and-odbc-q.md)|  
-|开放式数据库连接 \(ODBC\)|[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)|  
-|是否可以在使用类时直接调用 DAO 或 ODBC API|[是否可以直接调用 DAO 或 ODBC？](../data/can-i-call-dao-or-odbc-directly-q.md)|  
-|提供了哪些 ODBC 驱动程序|[ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)|  
-|数据库类如何处理 MFC 文档\/视图结构|[MFC：结合文档和视图使用数据库类](../data/mfc-using-database-classes-with-documents-and-views.md)|  
-|安装 MFC 数据库支持；默认情况下，Visual C\+\+ 中安装了哪些 ODBC 驱动程序；安装了哪些 ODBC 和 DAO SDK 组件|[安装 MFC 数据库支持](../data/installing-mfc-database-support.md)|  
-|**数据绑定控件（ADO 和 RDO）**||  
-|编写可以使用数据绑定控件的程序|[数据绑定控件（ADO 和 RDO）](../data/ado-rdo/data-bound-controls-ado-and-rdo.md)|  
-|使用 ActiveX 控件绑定的数据|[MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定](../mfc/mfc-activex-controls-using-data-binding-in-an-activex-control.md)|  
-|发行 ActiveX 控件|[MFC ActiveX 控件：发行 ActiveX 控件](../mfc/mfc-activex-controls-distributing-activex-controls.md)|  
-  
-## 请参阅  
- [数据访问](../Topic/Data%20Access%20in%20Visual%20C++.md)
+-   除 ODBC 包装器类之外，MFC 还提供数据访问对象 (DAO) 包装器类，用于连接到 Access 数据库。  但 DAO 已过时。 应升级任何基于 CDaoDatabase 或 CDaoRecordset 的代码。 
+
+有关 Microsoft Windows 上数据访问技术历史记录的详细信息，请参阅 [Microsoft Data Access Components (Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components)。（Microsoft 数据访问组件（维基百科））  
+
+## <a name="see-also"></a>另请参阅  
+ [数据访问](data-access-in-cpp.md) [Microsoft 打开数据库连接 (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) [数据访问技术路线图](https://msdn.microsoft.com/en-us/library/ms810810.aspx)

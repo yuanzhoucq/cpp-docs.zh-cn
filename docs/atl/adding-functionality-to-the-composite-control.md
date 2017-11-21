@@ -1,43 +1,44 @@
 ---
-title: "Adding Functionality to the Composite Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 事件"
-  - "复合控件, 处理事件"
-  - "event handlers [C++], ActiveX 控件"
+title: "将功能添加到复合控件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- event handlers [C++], ActiveX controls
+- composite controls, handling events
+- ActiveX controls [C++], events
 ms.assetid: 98f85681-9564-480d-af38-03f9733fe58b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7282ba7eb80fd30175751bb5234818a5e3cf1431
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Adding Functionality to the Composite Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一旦插入到所需的所有控件到复合控件，下一步中添加新功能。  此新功能通常分为两类:  
+# <a name="adding-functionality-to-the-composite-control"></a>将功能添加到复合控件
+一旦你已将任何必要的控件插入复合控件下, 一步涉及添加新功能。 此新功能通常分为两类：  
   
--   支持附加接口和自定义您的复合控件行为与另外，特定功能。  
+-   支持附加的接口和自定义与附加的特定功能你复合控件的行为。  
   
--   处理从包含的ActiveX控件\(或控件\)的事件。  
+-   处理包含 ActiveX 控件 （或控件） 中的事件。  
   
- 对目标和大小本文，本节的其余部分都关注处理从ActiveX控件的事件。  
+ 目的和本文的讨论范围，此部分的剩余重点在于处理 ActiveX 控件中的事件。  
   
 > [!NOTE]
->  如果需要从Windows控件中处理消息，请参见 [实现窗口](../atl/implementing-a-window.md) 有关消息处理在ATL的更多信息。  
+>  如果你需要以处理来自 Windows 控件的消息，请参阅[实现窗口](../atl/implementing-a-window.md)有关详细信息消息处理在 atl。  
   
- 在插入ActiveX控件后在对话框资源，请右击该控件并单击 **添加事件处理程序**。  选择要处理的事件并单击 **Add and Edit**。  事件处理程序代码将添加到控件的.h文件。  
+ 后将 ActiveX 控件插入对话框资源中，右击该控件，并单击**添加事件处理程序**。 选择你想要处理并单击的事件**添加和编辑**。 事件处理程序代码将添加到控件的.h 文件。  
   
- 有关该复合控件的ActiveX控件连接点会自动连接，并能够通过调用 [CComCompositeControl::AdviseSinkMap](../Topic/CComCompositeControl::AdviseSinkMap.md)。  
+ 复合控件上的 ActiveX 控件的连接点自动连接，并通过调用断开连接[CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [复合控件基础知识](../atl/atl-composite-control-fundamentals.md)
+

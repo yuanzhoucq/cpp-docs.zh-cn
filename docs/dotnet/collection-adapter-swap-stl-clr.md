@@ -1,45 +1,43 @@
 ---
-title: "collection_adapter::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成员 [STL/CLR]"
+title: "collection_adapter::swap (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 778f85bf-c6e3-48ff-bc97-0488f3e8f143
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ef46dd324b2da8ed34298c82245af25ef0ce479b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterswap-stlclr"></a>collection_adapter::swap (STL/CLR)
 交换两个容器的内容。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void swap(collection_adapter<Coll>% right);  
 ```  
   
-#### 参数  
- right  
+#### <a name="parameters"></a>参数  
+ 右  
  要与其交换内容的容器。  
   
-## 备注  
- 成员函数将交换了 `*this` 和 `right`之间的存储 BCL 句柄。  
+## <a name="remarks"></a>备注  
+ 成员函数交换之间的存储的 BCL 句柄`*this`和`right`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_collection_adapter_swap.cpp   
@@ -83,15 +81,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **x x x x x**  
- **x x x x x**  
- **a b c**   
-## 要求  
- **标头:** \<cliext\/adapter\>  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/适配器 >  
   
-## 请参阅  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

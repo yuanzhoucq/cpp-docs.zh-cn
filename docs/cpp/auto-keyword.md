@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- auto_cpp
-dev_langs:
-- C++
+f1_keywords: auto_cpp
+dev_langs: C++
 helpviewer_keywords:
 - automatic storage class [C++], auto keyword
 - auto keyword [C++]
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 21b2155ffd5bb3861202c112bd9552ed36113a02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="auto-keyword"></a>auto 关键字
 `auto` 关键字是声明说明符。 但是，C++ 标准为此关键字定义了初始和修订的含义。 Visual c + + 2010 之前,`auto`关键字声明中的变量*自动*存储类; 即，具有本地生存期的变量。 从 Visual c + + 2010，开始`auto`关键字声明从其声明中的初始化表达式中推导其类型的变量。 [/Zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制的含义`auto`关键字。  

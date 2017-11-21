@@ -1,37 +1,36 @@
 ---
-title: "“打开 &lt;设备&gt; 图像”对话框（图标的图像编辑器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.opendeviceimage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "“打开 <设备> 图像”对话框"
+title: "打开&lt;设备&gt;图像对话框 （图标的图像编辑器） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.opendeviceimage
+dev_langs: C++
+helpviewer_keywords: Open <Device> Image dialog box
 ms.assetid: 27cb60ec-8704-4e58-ab1c-8cc3b34e66be
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7081d1ed4c65afea2aab7eca169782ec227a258b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# “打开 &lt;设备&gt; 图像”对话框（图标的图像编辑器）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用此对话框打开设备图像。  它列出当前资源中的现有设备图像（即作为当前资源一部分的图像）。  
+# <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>打开&lt;设备&gt;图像对话框 （图标的图像编辑器）
+使用此对话框中打开设备图像。 它列出当前资源 （属于当前资源的映像） 中的现有设备图像。  
   
- **当前图像**  
- 列出包括在资源中的图像。  选择要打开的图像类型。  
+ **当前映像**  
+ 列出资源中包含的图像。 选择你想要打开的图像类型。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  无  
   
-## 请参阅  
- [“图像”菜单](../mfc/image-menu-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>另请参阅  
+ [图像菜单](../windows/image-menu-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)
+

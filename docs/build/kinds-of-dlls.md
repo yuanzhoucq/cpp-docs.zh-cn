@@ -1,78 +1,78 @@
 ---
-title: "DLL 类型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], MFC"
-  - "DLL [C++], 类型"
-  - "MFC DLL [C++], 类型"
+title: "类型的 Dll |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC DLLs [C++], types
+- DLLs [C++], types
+- DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f1f2bbc257bbed427766f81175b250909ccb7d04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# DLL 类型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题提供有助于确定要生成的 DLL 类型的信息。  
+# <a name="kinds-of-dlls"></a>DLL 类型
+本主题提供信息来帮助你确定要生成 dll 的类型。  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 可用的不同 DLL 类型  
- 使用 Visual C\+\+ 时，可以用 C 或 C\+\+ 生成不使用 Microsoft 基础类 \(MFC\) 库的 Win32 DLL。  可以用“Win32 应用程序向导”创建非 MFC DLL 项目。  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>不同类型的 Dll 可用  
+ 使用 Visual c + +，您可以构建在 C 或 c + + 中的 Win32 Dll，不使用 Microsoft 基础类 (MFC) 库。 你可以使用 Win32 应用程序向导创建的非 MFC DLL 项目。  
   
- 使用“MFC DLL 向导”时，可以在静态链接库或若干 DLL 中使用 MFC 库本身。  如果 DLL 使用的是 MFC，则 Visual C\+\+ 支持三种不同的 DLL 开发方案：  
+ 在 MFC 库自身可用，则在任一静态链接库或大量使用 MFC DLL 向导 Dll 中。 如果 DLL 使用 MFC，则 Visual c + + 支持三种不同的 DLL 开发方案：  
   
--   生成静态链接 MFC 的规则 DLL  
+-   生成正则表达式 MFC DLL，该服务以静态方式链接 MFC  
   
--   生成动态链接 MFC 的规则 DLL  
+-   生成正则表达式 MFC DLL，该服务动态链接 MFC  
   
--   生成始终动态链接 MFC 的 MFC 扩展 DLL  
+-   哪个生成 MFC 扩展 DLL，始终动态链接 MFC  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
 -   [非 MFC DLL：概述](../build/non-mfc-dlls-overview.md)  
   
--   [静态链接到 MFC 的规则 DLL](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [动态链接到 MFC 的规则 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [扩展 DLL：概述](../build/extension-dlls-overview.md)  
+-   [MFC 扩展 DLL：概述](../build/extension-dlls-overview.md)  
   
--   [要使用的 DLL 类型](#_core_which_kind_of_dll_to_use)  
+-   [哪种类型的 DLL 用于](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a> 确定要使用的 DLL 类型  
- 如果 DLL 不使用 MFC，则使用 Visual C\+\+ 生成非 MFC Win32 DLL。  将 DLL（静态或动态）链接到 MFC 会占用大量磁盘空间和内存。  除非 DLL 确实使用 MFC，否则不要链接到 MFC。  
+##  <a name="_core_which_kind_of_dll_to_use"></a>确定哪种类型的使用的 DLL  
+ 如果您的 DLL 不使用 MFC，使用 Visual c + + 生成非 MFC Win32 DLL。 链接到 MFC 的 DLL，（静态或动态） 需要占用大量磁盘空间和内存。 除非 DLL 实际上使用 MFC，不应链接到 MFC。  
   
- 如果 DLL 要使用 MFC，且将由 MFC 或非 MFC 应用程序使用，则必须生成动态链接到 MFC 的规则 DLL 或静态链接到 MFC 的规则 DLL。  大部分情况下可能需要使用动态链接到 MFC 的规则 DLL，因为这种 DLL 的文件大小要小得多，且使用共享 MFC 版本会节省大量内存。  如果静态链接到 MFC，则由于 DLL 会加载自己的私有 MFC 库代码副本，DLL 的文件大小会较大，且有可能占用额外的内存。  
+ 如果您的 DLL 将使用 MFC，并且将由 MFC 或非 MFC 应用程序，必须生成动态链接到 MFC 的正则 MFC DLL 或静态链接到 MFC 的正则 MFC DLL。 在大多数情况下，你可能想要使用动态链接到 MFC，因为这种 DLL 文件大小要小得多，且会在内存中使用共享的版本的 MFC 节省大量的规则 MFC DLL。 如果静态链接到 MFC，您的 DLL 的文件大小将会更大并可能占用额外内存，因为它将加载其自己的 MFC 库代码的私有副本。  
   
- 生成动态链接到 MFC 的 DLL 要比生成静态链接到 MFC 的 DLL 快，因为前者不需链接 MFC 本身。  在链接器必须压缩调试信息的调试版本中尤其如此。  通过与已经包含调试信息的 DLL 链接，DLL 中将只有很少的调试信息需要压缩。  
+ 生成动态链接到 MFC 的 DLL 速度快比构建静态链接到 MFC，因为它不是链接 MFC 本身所需的 DLL。 这是在调试版本链接器必须在其中压缩的调试信息中尤其如此。 通过链接一个 DLL，它已包含的调试信息，没有调试信息变少，若要在 DLL 内压缩。  
   
- 动态链接到 MFC 的一个缺点是必须用 DLL 发布共享 DLL：Mfcx0.dll 和 Msvcrxx.dll（或类似的文件）。  MFC DLL 可随便重新发布，但仍必须在安装程序中安装 DLL。  另外必须交付 Msvcrxx.dll，它包含程序和 MFC DLL 本身都要使用的 C 运行库。  
+ 动态链接到 MFC 的一个缺点是，你必须将分发共享的 Dll Mfcx0.dll 和 Msvcrxx.dll （或类似的文件） 与您的 DLL。 MFC Dll 是自由地重新发布，但你仍必须将安装 Dll 在你的安装程序。 此外，你必须将发运 Msvcrxx.dll，其中包含你的程序和 MFC Dll 本身使用 C 运行时库。  
   
- 如果 DLL 仅由 MFC 可执行文件使用，则可以选择生成规则 DLL 或扩展 DLL。  如果 DLL 实现从现有 MFC 类派生的可重用类，或如果需要在应用程序和 DLL 之间传递 MFC 派生的对象，则必须生成扩展 DLL。  
+ 如果您的 DLL 将仅由 MFC 可执行文件，可以生成正则 MFC DLL 或 MFC 扩展 DLL 之间选择。 如果您的 DLL 实现可重复使用从现有的 MFC 类派生的类或你需要应用程序和 DLL 之间传递 MFC 派生的对象，则必须生成 MFC 扩展 DLL。  
   
- 如果 DLL 动态链接到 MFC，则可能要用 DLL 重新发布 MFC DLL。  当在多个可执行文件之间共享类库以节省磁盘空间和最小化内存使用时，此结构尤其有用。  
+ 如果您的 DLL 动态链接到 MFC，可能与您的 DLL 重新分发 MFC Dll。 此体系结构很适合用于共享多个可执行文件以节省磁盘空间和最大程度减少内存使用量之间类库。  
   
- 在 4.0 版之前，Visual C\+\+ 仅支持两种使用 MFC 的 DLL 类型：USRDLL 和 AFXDLL。  静态链接到 MFC 的规则 DLL 具有与原来的 USRDLL 相同的特性。  MFC 扩展 DLL 具有与原来的 AFXDLL 相同的特性。  
+ 之前的版本 4.0 中，使用 MFC 的 Dll 的 Visual c + + 仅支持两种： USRDLLs 和 AFXDLLs。 静态链接到 MFC 的规则 MFC Dll 具有以前的 USRDLL 作为相同的特征。 MFC 扩展 Dll 具有以前 AFXDLLs 作为相同的特征。  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
 -   [非 MFC DLL：概述](../build/non-mfc-dlls-overview.md)  
   
--   [静态链接到 MFC 的规则 DLL](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [静态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [动态链接到 MFC 的规则 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [扩展 DLL：概述](../build/extension-dlls-overview.md)  
+-   [MFC 扩展 DLL：概述](../build/extension-dlls-overview.md)  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>另请参阅  
+ [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

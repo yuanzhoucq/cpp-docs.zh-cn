@@ -1,59 +1,59 @@
 ---
-title: "/BASE（基址） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/base"
-  - "VC.Project.VCLinkerTool.BaseAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/BASE 链接器选项"
-  - "@ 符号表示基址"
-  - "根据基址的符号"
-  - "基址 [C++]"
-  - "BASE 链接器选项"
-  - "-BASE 链接器选项"
-  - "DLL [C++], 链接"
-  - "环境变量 [C++], LIB"
-  - "可执行文件 [C++], 基址"
-  - "键地址大小"
-  - "LIB 环境变量"
-  - "程序 [C++], 基址"
-  - "程序 [C++], 禁止重定位"
-  - "分号 [C++], 说明符"
+title: "基于 （基址） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /base
+- VC.Project.VCLinkerTool.BaseAddress
+dev_langs: C++
+helpviewer_keywords:
+- base addresses [C++]
+- programs [C++], preventing relocation
+- semicolon [C++], specifier
+- -BASE linker option
+- key address size
+- environment variables [C++], LIB
+- programs [C++], base address
+- LIB environment variable
+- BASE linker option
+- DLLs [C++], linking
+- /BASE linker option
+- '@ symbol for base address'
+- executable files [C++], base address
+- at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f59837f5c64e694893b941b1fe2e507e1a05938c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# /BASE（基址）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="base-base-address"></a>/BASE（基址）
 ```  
 /BASE:{address[,size] | @filename,key}  
 ```  
   
- \/BASE 选项设置程序的基址，重写 .exe 文件（在 0x400000 处）或 DLL（在 0x10000000 处）的默认位置。  操作系统首先尝试在程序的指定或默认基址加载程序。  如果该基址处没有足够的空间可用，则系统将重定位程序。  若要防止重定位，请使用 [\/FIXED](../../build/reference/fixed-fixed-base-address.md) 选项。  
+ / BASE 选项设置重写的.exe 或 DLL 文件的默认位置，该程序的基址。 .Exe 文件的默认基址是为 32 位映像 0x400000 或 0x140000000 为 64 位映像。 对于 DLL，默认基址是为 32 位映像 0x10000000 或 0x180000000 为 64 位映像。 在操作系统上不支持地址空间布局随机化 (ASLR) 或 /DYNAMICBASE:NO 选项已设置时，操作系统首先尝试加载程序在其指定或默认基址。 如果足够的空间存在不可用，系统将重新定位该程序。 若要防止重定位，请使用[/固定](../../build/reference/fixed-fixed-base-address.md)选项。  
   
- 如果 *address* 不是 64K 的倍数，链接器将发出错误。您可以选择指定程序的大小，以便链接器在程序超过您指定的大小时发出警告。  
+ 如果链接器会发出错误*地址*不是 64k 的倍数。 你可以选择指定程序; 的大小如果程序不能放在你指定的大小，则链接器将发出警告。  
   
- 在命令行上，另一种指定基址的方法是在文件中使用前面有 at 符 \(@\) 的 *filename* 以及 `key`。  *文件名* 是包含程序将使用的所有 DLL 的位置和大小的文本文件。  链接器在指定的路径中查找*文件名*，如果没有指定路径，则在 LIB 环境变量中指定的目录中查找。  *文件名* 中的每一行表示一个 DLL 并具有以下语法：  
+ 在命令行中，另一种方法指定的基址是通过使用基址响应文件。 基址响应文件是包含基址和可选大小将使用你的程序的所有 Dll 和每个基址的唯一文本键的文本文件。 若要通过使用响应文件指定一个基址，使用 at 符号 (@) 的响应文件的名称后跟*filename*后, 跟一个逗号，则`key`在文件中使用的基址的值。 链接器查找*filename*中指定的路径或如果未指定路径，在 LIB 环境变量中指定的目录中。 中的每一行*filename*表示一个 DLL，并具有以下语法：  
   
 ```  
   
-key address [size] ;comment  
+key address [size] ;comment  
 ```  
   
- `key` 是字母数字字符串，不区分大小写。  它通常是 DLL 的名称，但不必非是。  `key` 后跟 C 语言、十六进制或十进制表示法的基址和可选的最大 `size`。  所有三个参数由空格或制表符分隔。  如果指定的 `size` 小于程序所要求的虚拟地址空间，则链接器发出警告。  `comment` 由分号 \(;\) 指定，可以在同一行上，也可以在单独的行上。  链接器忽略从分号到行尾的所有文本。  下面的示例显示这种文件的一部分：  
+ `key`是字母数字字符的字符串和不区分大小写。 它通常是 DLL 的名称，但它不需要。 `key`后跟一个基*地址*中 C 语言、 十六进制或十进制表示法和可选的最大`size`。 所有三个自变量由空格或制表符分隔。 链接器将发出警告，如果指定`size`小于所需的程序的虚拟地址空间。 A`comment`指定由分号 （;），并且可以是在相同或单独的行上。 链接器将忽略所有从分号至行尾的文本。 此示例演示此类文件的一部分：  
   
 ```  
 main   0x00010000    0x08000000    ; for PROJECT.exe  
@@ -61,31 +61,31 @@ one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL  
 ```  
   
- 如果包含这些行的文件名为 DLLS.txt，则下面的示例命令应用此信息：  
+ 如果包含以下行的文件为 dlls.txt，下面的示例命令将应用此信息：  
   
 ```  
 link dlltwo.obj /dll /base:@dlls.txt,two  
 ```  
   
-## 备注  
- 通过分配基址以使 DLL 在地址空间中不重叠，可以减少分页并提高程序性能。  
+## <a name="remarks"></a>备注  
+ 出于安全原因，Microsoft 建议你使用[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)而不是指定基址的可执行文件的选项。 这将生成可执行映像可以是随机重新设定基址在加载时使用地址空间布局随机化 (ASLR) 功能的 Windows。 默认情况下，/DYNAMICBASE 选项处于启用状态。  
   
- 设置基址的另一种方法是在 [NAME](../../build/reference/name-c-cpp.md) 或 [LIBRARY](../../build/reference/library.md) 语句中使用 *BASE* 参数。  将 \/BASE 和 [\/DLL](../../build/reference/dll-build-a-dll.md) 选项连用等效于 **LIBRARY** 语句。  
+ 另一种方法中设置基址是使用*基*中的参数[名称](../../build/reference/name-c-cpp.md)或[库](../../build/reference/library.md)语句。 /BASE 和[/DLL](../../build/reference/dll-build-a-dll.md)选项一起构成了等效于**库**语句。  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击“链接器”文件夹。  
+2.  展开**链接器**文件夹。  
   
-3.  单击**“高级”**属性页。  
+3.  选择**高级**属性页。  
   
-4.  修改“基址”属性。  
+4.  修改**基址**属性。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>。  
+-   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.BaseAddress%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

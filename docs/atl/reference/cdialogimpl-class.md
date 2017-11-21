@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 此类提供用于创建模式或无模式对话框中的方法。  
@@ -108,9 +91,9 @@ template <class T,
  `CDialogImpl`派生自**CDialogImplBaseT**，它又派生自**CWindowImplRoot**。  
   
 > [!NOTE]
->  你的类必须定义**IDD**成员，用于指定对话框模板资源 id。 例如，ATL 项目向导自动将以下行添加到你的类︰  
+>  你的类必须定义**IDD**成员，用于指定对话框模板资源 id。 例如，ATL 项目向导自动将以下行添加到你的类：  
   
- [!code-cpp[NVC_ATL_Windowing # 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  其中`MyDlg`是**短名称**在向导中输入**名称**页。  
   
@@ -119,10 +102,10 @@ template <class T,
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的对话框|[ATL 窗口类](../../atl/atl-window-classes.md)|  
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|  
-|对话框|[对话框](http://msdn.microsoft.com/library/windows/desktop/ms632588)和后续主题中的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|对话框|[对话框](http://msdn.microsoft.com/library/windows/desktop/ms632588)和 Windows SDK 中的后续主题|  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlwin.h  
+ **标头：** atlwin.h  
   
 ##  <a name="create"></a>CDialogImpl::Create  
  创建无模式对话框。  

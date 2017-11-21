@@ -1,32 +1,30 @@
 ---
-title: "HandleT::HandleT 构造函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::HandleT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HandleT, 构造函数"
+title: "Handlet:: Handlet 构造函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::HandleT
+dev_langs: C++
+helpviewer_keywords: HandleT, constructor
 ms.assetid: 4def6891-7e53-46f1-a197-a80e10744dd5
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cca827bb8ba7fa43619a6e61e2c16ffba5e4563
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# HandleT::HandleT 构造函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="handlethandlet-constructor"></a>HandleT::HandleT 构造函数
 初始化 HandleT 类的新实例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 explicit HandleT(  
@@ -39,17 +37,17 @@ HandleT(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `h`  
- 句柄。  
+ 一个句柄。  
   
-## 备注  
- 第一构造函数初始化不是有效的 HandleT 句柄到对象的对象。  第二个构造函数参数创建从 `h`的新 HandleT 对象。  
+## <a name="remarks"></a>备注  
+ 第一个构造函数初始化不是对象的有效句柄的 HandleT 对象。 第二个构造函数根据参数创建一个新的 HandleT 对象`h`。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>要求  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [HandleT 类](../windows/handlet-class.md)

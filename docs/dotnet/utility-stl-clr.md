@@ -1,62 +1,61 @@
 ---
-title: "utility (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/utility>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/utility> 标头 [STL/CLR]"
-  - "<utility> 标头 [STL/CLR]"
-  - "实用工具标头 [STL/CLR]"
+title: "实用工具 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/utility>
+dev_langs: C++
+helpviewer_keywords:
+- <utility> header [STL/CLR]
+- utility header [STL/CLR]
+- <cliext/utility> header [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 93fe57edc4840d7d053ea61598b3da2c7f4ca05a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# utility (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-STL\/CLR 包括标头定义模板类的 `pair` 和若干支持的模板函数的 `<cliext/utility>`。  
+# <a name="utility-stlclr"></a>utility (STL/CLR)
+包括 STL/CLR 标头`<cliext/utility>`定义模板类`pair`和几个支持模板函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #include <utility>  
 ```  
   
-## 声明  
+## <a name="declarations"></a>声明  
   
-|类|说明|  
-|-------|--------|  
-|[pair](../dotnet/pair-stl-clr.md)|将一对元素。|  
+|类|描述|  
+|-----------|-----------------|  
+|[pair (STL/CLR)](../dotnet/pair-stl-clr.md)|包装元素的对。|  
   
-|运算符|说明|  
-|---------|--------|  
-|[operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)|对相等比较。|  
-|[operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)|匹配不相等比较。|  
-|[operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)|匹配与比较少。|  
-|[operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|对小于或等于比较。|  
-|[operator\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)|对大于比较。|  
-|[operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|大于对小于或等于比较。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|[operator== (pair) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)|对相等比较。|  
+|[operator!= (pair) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)|对不相等比较。|  
+|[operator< (pair) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)|对小于比较。|  
+|[运算符\<= （对） (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)|小于或等于配对比较。|  
+|[operator> (pair) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)|对大于比较。|  
+|[operator>= (pair) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)|对大于或等于比较。|  
   
-|功能|说明|  
-|--------|--------|  
-|[make\_pair](../dotnet/make-pair-stl-clr.md)|从一个值对进行对。|  
+|函数|描述|  
+|--------------|-----------------|  
+|[make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)|请从一对值对。|  
   
-## 要求  
- **页眉：** \<\/cliext 实用工具\>  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/实用工具 >  
   
- **命名空间：** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

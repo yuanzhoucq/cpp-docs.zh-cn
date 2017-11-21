@@ -1,33 +1,32 @@
 ---
-title: "CCommand::Create | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Create"
-  - "CCommand::Create"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create 方法 [C++]"
+title: "Ccommand:: Create |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Create
+- CCommand::Create
+dev_langs: C++
+helpviewer_keywords: Create method [C++]
 ms.assetid: e4bede7a-68bd-491a-97f4-89b03d45cd24
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 425e86008b97defe50e2c47e099b3b21c900bc1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Create
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-调用 [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) 创建指定的会话的命令，然后调用 [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) 指定命令文本。  
+# <a name="ccommandcreate"></a>CCommand::Create
+调用[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)为指定的会话中，创建命令然后调用[ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)指定的命令文本。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -43,27 +42,27 @@ HRESULT CCommandBase::Create(
 ) throw ( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `session`  
- \[in\] 的会话创建的命令。  
+ [in]要在其中创建命令会话。  
   
  `wszCommand`  
- \[in\] 为命令字符串的 Unicode 文本的指针。  
+ [in]指向命令字符串的 Unicode 文本的指针。  
   
  `szCommand`  
- \[in\] 为命令字符串 \(ANSI 文本的指针。  
+ [in]指向命令字符串的 ANSI 文本的指针。  
   
  `guidCommand`  
- \[in\] 将分析指定语法和一般规则使提供程序可以使用文本命令的 GUID。  有关方言的说明，请参阅《*OLE DB 程序员参考》\) 中的*[ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)。  
+ [in]分析命令文本中指定的语法和一般规则要使用的提供程序的 GUID。 有关分支的说明，请参阅[ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)中*OLE DB 程序员参考*。  
   
-## 返回值  
- 标准 `HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- **创建** 采用 Unicode 第一个命令字符串。  **创建** 第二个窗体接受 ANSI 命令字符串 \(提供的用于向后兼容现有 ANSI 应用程序\)。  
+## <a name="remarks"></a>备注  
+ 第一种形式的**创建**采用 Unicode 命令字符串。 第二种形式的**创建**采用 ANSI 命令字符串 （为了向后兼容现有的 ANSI 应用程序提供）。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CCommand 类](../../data/oledb/ccommand-class.md)

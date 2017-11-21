@@ -1,32 +1,30 @@
 ---
-title: "wire_marshal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.wire_marshal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wire_marshal attribute"
+title: "wire_marshal |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.wire_marshal
+dev_langs: C++
+helpviewer_keywords: wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa35ba4b49e491ec8529c3067548dd1cde9b1dc1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# wire_marshal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定在传输将使用而不是一个特定的数据类型的数据类型。  
+# <a name="wiremarshal"></a>wire_marshal
+指定将用于传输而不是特定于应用程序的数据类型的数据类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 10
   
 ```  
   
-## 备注  
- **wire\_marshal** C\+\+ 特性具有与 [wire\_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Wire_marshal** c + + 属性具有相同的功能[wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) MIDL 特性。  
   
-## 示例  
- 下面的代码演示 **wire\_marshal**的使用:  
+## <a name="example"></a>示例  
+ 下面的代码演示使用**wire_marshal**:  
   
 ```  
 // cpp_attr_ref_wire_marshal.cpp  
@@ -56,20 +54,19 @@ caps.handback.revision: 10
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;  
 ```  
   
-## 要求  
+## <a name="requirements"></a>要求  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`typedef`|  
-|**可重复**|否|  
+|**可重复**|No|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   

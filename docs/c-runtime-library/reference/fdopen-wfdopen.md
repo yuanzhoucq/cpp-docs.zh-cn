@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3efc15f9d9fa6544ad7af2c3809ee6562b7f36e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: bacc1decd25c5c7291295a9e97eeacb35d55662c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
 将流与以前为低级别 I/O 而打开的文件相关联。  
@@ -124,7 +107,7 @@ FILE *_wfdopen(
  `"a+"`  
  打开以进行读取和追加。 创建文件（如果文件不存在）。  
   
- 使用 `"a"` 或 `"a+"` 访问类型打开文件时，所有写入操作均将在文件末尾进行。 使用 `fseek` 或 `rewind` 可重新定位文件指针，但在执行任何写入操作前，文件指针将始终被移回文件末尾。 因此，无法覆盖现有数据。 指定 `"r+"`、`"w+"` 或 `"a+"` 访问类型时，允许读取和写入（文件将处于打开状态以进行“更新”）。 但是，在读取与写入之间切换时，必须有中间 `fflush`、`fsetpos`、`fseek` 或 `rewind` 操作。 如果需要，可以为 `fsetpos` 或 `fseek` 操作指定当前位置。  
+ 使用 `"a"` 或 `"a+"` 访问类型打开文件时，所有写入操作均将在文件末尾进行。 使用 `fseek` 或 `rewind` 可重新定位文件指针，但在执行任何写入操作前，文件指针将始终被移回文件末尾。因此，无法覆盖现有数据。 指定 `"r+"`、`"w+"` 或 `"a+"` 访问类型时，允许读取和写入（文件将处于打开状态以进行“更新”）。 但是，在读取与写入之间切换时，必须有中间 `fflush`、`fsetpos`、`fseek` 或 `rewind` 操作。 如果需要，可以为 `fsetpos` 或 `fseek` 操作指定当前位置。  
   
  除了以上值之外，还可以在 `mode` 中包含以下字符以指定换行符的转换模式。  
   
@@ -138,7 +121,7 @@ FILE *_wfdopen(
  启用关联 `filename` 的提交标志，以便在调用 `fflush` 或 `_flushall` 时将文件缓冲区的内容直接写入磁盘。  
   
  `n`  
- 将关联 `filename` 的提交标志重置为“no-commit”。 这是默认设置。 如果将程序显式链接到 Commode.obj，它还将重写全局提交标志。 除非将程序显式链接到 Commode.obj，全局提交标志默认为“no-commit”。  
+ 将关联 `filename` 的提交标志重置为“no-commit”。 这是默认设置。 如果将程序显式链接到 Commode.obj，它还将重写全局提交标志。除非将程序显式链接到 Commode.obj，全局提交标志默认为“no-commit”。  
   
  `t`、`c` 和 `n` `mode` 选项是适用于 `fopen` 和 `_fdopen` 的 Microsoft 扩展。 如果要保留 ANSI 可移植性，请不要使用它们。  
   
@@ -149,11 +132,11 @@ FILE *_wfdopen(
 |字符串中的 `mode` 字符|`_open`/`_sopen` 的等效 `oflag` 值|  
 |---------------------------------|---------------------------------------------------|  
 |`a`|`_O_WRONLY &#124; _O_APPEND`（通常为 `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`）|  
-|`a+`|`_O_RDWR &#124; _O_APPEND`（通常为 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT`）|  
+|`a+`|`_O_RDWR &#124; _O_APPEND` （通常为 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` ）|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`（通常为 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`）|  
-|`w+`|`_O_RDWR`（通常为 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`）|  
+|`w`|`_O_WRONLY` （通常为 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`）|  
+|`w+`|`_O_RDWR` （通常为 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`）|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|无|  

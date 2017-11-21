@@ -1,56 +1,55 @@
 ---
-title: "CDynamicAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CDynamicAccessor.AddBindEntry"
-  - "CDynamicAccessor::AddBindEntry"
-  - "ATL.CDynamicAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry 方法"
+title: "Cdynamicaccessor:: Addbindentry |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::AddBindEntry
+- AddBindEntry
+- CDynamicAccessor.AddBindEntry
+- CDynamicAccessor::AddBindEntry
+- ATL.CDynamicAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8f139376-7db3-4193-ba3b-63fe938ffa79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9b11409a7bbff2ef3f9c89f62fd361755d99f5d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-添加输入绑定到输出列。  
+# <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
+将绑定条目添加到输出列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT AddBindEntry(   
-   const DBCOLUMNINFO& info    
+      HRESULT AddBindEntry(   
+   const DBCOLUMNINFO& info    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `info`  
- \[in\] 包含列信息的 **DBCOLUMNINFO** 结构。  请参见“DBCOLUMNINFO 在 *OLE DB 程序员参考》\) 中的*[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) 生成”。  
+ [in]A **DBCOLUMNINFO**结构，它包含列信息。 请参阅中的"DBCOLUMNINFO 结构" [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程序员参考*。  
   
-## 返回值  
- `HRESULT` 标准的值之一。  
+## <a name="return-value"></a>返回值  
+ 一个标准`HRESULT`值。  
   
-## 备注  
- 请使用此方法，重写默认访问函数创建具有 `CDynamicAccessor` \(参见 [如何 Fetch 数据？](../../data/oledb/fetching-data.md)\)。  
+## <a name="remarks"></a>备注  
+ 使用此方法时重写默认访问器使用创建`CDynamicAccessor`(请参阅[How Do I 提取的数据？](../../data/oledb/fetching-data.md))。  
   
-## 要求  
+## <a name="requirements"></a>要求  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)

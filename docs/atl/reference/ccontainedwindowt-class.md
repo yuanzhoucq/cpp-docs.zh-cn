@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,21 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d3f54b8ea828513dfbf25e5af1eeea38751c7c2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 此类实现包含在另一个对象的窗口。  
@@ -119,20 +102,20 @@ class CContainedWindowT : public TBase
 > [!NOTE]
 >  对于任何给定`CContainedWindowT`对象，请调用**创建**或`SubclassWindow`。 不应调用这两种方法对同一对象。  
   
- 当你使用**添加基于控制**选项在 ATL 项目向导中，该向导将自动添加`CContainedWindowT`实现控件的类数据成员。 下面的示例演示如何声明包含的窗口︰  
+ 当你使用**添加基于控制**选项在 ATL 项目向导中，该向导将自动添加`CContainedWindowT`实现控件的类数据成员。 下面的示例演示如何声明包含的窗口：  
   
- [!code-cpp[NVC_ATL_Windowing # 38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing # 39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[NVC_ATL_Windowing # 40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |有关以下内容的详细信息|请参阅|  
 |--------------------------------|---------|  
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的窗口|[ATL 窗口类](../../atl/atl-window-classes.md)|  
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)和后续主题中的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)和 Windows SDK 中的后续主题|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `TBase`  
@@ -140,7 +123,7 @@ class CContainedWindowT : public TBase
  `CContainedWindowT`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlwin.h  
+ **标头：** atlwin.h  
   
 ##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
  构造函数初始化数据成员。  
@@ -170,7 +153,7 @@ CContainedWindowT(
 ### <a name="remarks"></a>备注  
  如果你想要创建新窗口通过[创建](#create)，必须将一个现有的窗口类，用于名称传递给`lpszClassName`参数。 有关示例，请参阅[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)概述。  
   
- 有三个构造函数︰  
+ 有三个构造函数：  
   
 -   带三个自变量的构造函数是一个通常名。  
   
@@ -237,10 +220,10 @@ HWND Create(
  [in]指定的窗口的名称。 默认值是**NULL**。  
   
  `dwStyle`  
- [in]窗口的样式。 默认值是**WS_CHILD |WS_VISIBLE**。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]窗口的样式。 默认值是**WS_CHILD &#124;WS_VISIBLE**。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  `dwExStyle`  
- [in]扩展的窗口样式。 默认值为 0，这意味着无扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]扩展的窗口样式。 默认值为 0，这意味着无扩展的样式。 有关可能的值的列表，请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  `MenuOrID`  
  [in]子窗口，窗口标识符。 对于顶级窗口，窗口的菜单句柄。 默认值是**0U**。  
@@ -450,4 +433,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [类概述](../../atl/atl-class-overview.md)
-

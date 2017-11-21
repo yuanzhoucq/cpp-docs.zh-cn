@@ -1,31 +1,31 @@
 ---
-title: "在快捷键对应表中编辑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "编辑快捷键对应表 [c + +]"
-  - "编辑快捷键对应表中的键盘快捷键 [c + +]"
+title: "在快捷键对应表中编辑 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accelerator tables [C++], editing
+- keyboard shortcuts [C++], editing in an accelerator table
 ms.assetid: 545b650b-4f26-4b20-8431-d942548443bd
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 756c42999edbf859fac0e5008f55f212883f1822
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 在快捷键对应表中编辑
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="editing-in-an-accelerator-table"></a>在快捷键对应表中编辑
 ### <a name="to-edit-in-an-accelerator-table"></a>在快捷键对应表中编辑  
   
-1.  通过双击中对应的图标打开快捷键对应表 [资源视图](../windows/resource-view-window.md)。  
+1.  通过双击图标中的将其打开的快捷键对应表[资源视图](../windows/resource-view-window.md)。  
   
     > [!NOTE]
     >  如果你的项目尚未包含 .rc 文件，请参阅 [创建新的资源脚本文件](../windows/how-to-create-a-resource-script-file.md)。  
@@ -34,20 +34,20 @@ caps.handback.revision: 11
   
 3.  从下拉组合框中进行选择或就地输入以进行更改。  
   
-    -   有关 [ID](Id%20Property.xml), ，从列表或类型以编辑中进行选择。  
+    -   有关[ID](id-property.md)，从选择列表或输入以进行编辑。  
   
-    -   有关 [修饰符](../windows/accelerator-modifier-property.md), ，从列表中进行选择。  
+    -   有关[修饰符](../windows/accelerator-modifier-property.md)，从列表中选择。  
   
-    -   有关 [密钥](../windows/accelerator-key-property.md), ，从列表或类型以编辑中进行选择。  
+    -   有关[密钥](../windows/accelerator-key-property.md)，从选择列表或输入以进行编辑。  
   
-    -   有关 [类型](../windows/accelerator-type-property.md), ，从列表中选择 ASCII 或 VIRTKEY。  
+    -   有关[类型](../windows/accelerator-type-property.md)，从列表中选择 ASCII 或 VIRTKEY。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南” [](../Topic/Resources%20in%20Desktop%20Apps.md) 中的 *应用程序中的资源*  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。*  
   
- **惠?**  
+ **要求**  
   
  Win32  
   
 ## <a name="see-also"></a>另请参阅  
  [编辑快捷键对应表](../windows/editing-accelerator-tables.md)   
- [快捷键编辑器](../mfc/accelerator-editor.md)
+ [快捷键编辑器](../windows/accelerator-editor.md)

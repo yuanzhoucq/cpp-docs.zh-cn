@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::mem_fun_ref_t
-- mem_fun_ref_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- mem_fun_ref_t class
+f1_keywords: xfunctional/std::mem_fun_ref_t
+dev_langs: C++
+helpviewer_keywords: mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: a462fa28f086f2ff0f74e35594dbd651e6d416d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: 4d8df02a8307ecaa912a04ae9eed684575169c19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t 类
 一种适配器类，在使用引用自变量进行初始化的情况下，该类允许将不带任何自变量的 **non_const** 成员函数作为一元函数对象调用。  
@@ -81,7 +61,6 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

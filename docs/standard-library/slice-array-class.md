@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- valarray/std::slice_array
-dev_langs:
-- C++
-helpviewer_keywords:
-- slice_array class
+f1_keywords: valarray/std::slice_array
+dev_langs: C++
+helpviewer_keywords: slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e87631a98e56adda0f7c6eed172546e9f17f45b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 12c40729fa9a848a87f37283277e88392fb04614
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="slicearray-class"></a>slice_array 类
 一个内部的辅助模板类，该类通过提供由 valarray 的切分定义的子集阵列之间的操作来支持切分对象。  
@@ -95,5 +90,4 @@ public:
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

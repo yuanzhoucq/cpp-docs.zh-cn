@@ -1,41 +1,39 @@
 ---
-title: "hash_set::hash_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::hash_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_delegate 成员 [STL/CLR]"
+title: "hash_set::hash_delegate (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::hash_delegate
+dev_langs: C++
+helpviewer_keywords: hash_delegate member [STL/CLR]
 ms.assetid: 34e39d2d-f2ef-4755-9201-3cdb4e41ea56
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 499a855597d29b95fdcda30a05754df5f95f9ad3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::hash_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsethashdelegate-stlclr"></a>hash_set::hash_delegate (STL/CLR)
 查找与指定键匹配的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 hasher^ hash_delegate();  
 ```  
   
-## 备注  
- 成员函数返回委托用于转换一个键值为整数。  使用该哈希键。  
+## <a name="remarks"></a>备注  
+ 成员函数返回该委托用于将密钥值转换为整数。 你可以使用它进行哈希键。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_set_hash_delegate.cpp   
@@ -55,13 +53,16 @@ int main()
   
 ```  
   
-  **hash\(L'a'\) \= 1616896120**  
-**哈希 \(L'b\)\/570892832**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>要求  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::hasher](../dotnet/hash-set-hasher-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>另请参阅  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)

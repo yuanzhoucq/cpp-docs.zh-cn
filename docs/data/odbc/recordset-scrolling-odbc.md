@@ -1,73 +1,73 @@
 ---
-title: "记录集：滚动 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Move 方法（记录集）"
-  - "导航 [C++], 记录集"
-  - "ODBC 记录集, 滚动"
-  - "记录集 [C++], 开始"
-  - "记录集 [C++], 结束"
-  - "记录集 [C++], 移动到记录"
-  - "记录集 [C++], 导航"
-  - "滚动 [C++], 记录集"
+title: "记录集： 滚动 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets [C++], end of
+- recordsets [C++], beginning of
+- navigation [C++], recordsets
+- recordsets [C++], moving to records
+- ODBC recordsets, scrolling
+- recordsets [C++], navigating
+- scrolling [C++], recordsets
+- Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0bb5e426e17c0a91c53abf5393b3c98bef02da14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 记录集：滚动 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-scrolling-odbc"></a>记录集：滚动 (ODBC)
 本主题适用于 MFC ODBC 类。  
   
- 打开记录集后，需要访问记录以显示值、进行计算、生成报表等。  滚动使您得以在记录集中的记录之间移动。  
+ 打开记录集后，你需要访问的记录，以显示值、 进行计算、 生成报告，依次类推。 滚动记录之间移动在记录集中的允许。  
   
  本主题说明：  
   
--   [从一个记录滚动到记录集中另一个记录的方式](#_core_scrolling_from_one_record_to_another)。  
+-   [如何从一个记录滚动到另一个在记录集中](#_core_scrolling_from_one_record_to_another)。  
   
--   [支持滚动和不支持滚动的情形](#_core_when_scrolling_is_supported)。  
+-   [在滚动的情况下是和不支持下](#_core_when_scrolling_is_supported)。  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a> 从一个记录滚动到另一个记录  
- `CRecordset` 类提供 **Move** 成员函数用来在记录集中滚动。  这些函数按行集合移动当前记录。  如果已实现批量取行，则 **Move** 操作按行集合的大小重新定位记录集。  如果尚未实现批量取行，则对 **Move** 函数的调用按逐个记录重新定位记录集。  有关批量取行的更多信息，请参见[记录集：批量获取记录 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+##  <a name="_core_scrolling_from_one_record_to_another"></a>从一个记录滚动到另一个  
+ 类`CRecordset`提供**移动**滚动在记录集中的成员函数。 这些函数按行集移动当前记录。 如果已实现批量行提取，**移动**操作按行集的大小重新定位记录集。 如果你尚未在实现批量行提取，调用**移动**函数记录集按记录重新定位一个每次。 有关批量行提取的详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
 > [!NOTE]
->  通过记录集移动时，不能跳过已删除的记录。  有关更多信息，请参见 [IsDeleted](../Topic/CRecordset::IsDeleted.md) 成员函数。  
+>  当在记录集中移动，不能跳过已删除的记录。 有关详细信息，请参阅[IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted)成员函数。  
   
- 除了 **Move** 函数外，`CRecordset` 还提供用来检查是否已滚动过记录集的结尾或开头的成员函数。  
+ 除了**移动**函数，`CRecordset`提供成员函数检查是否有滚动末尾或记录集中的开头。  
   
- 若要确定在记录集中是否可以滚动，请调用 `CanScroll` 成员函数。  
+ 若要确定是否记录集中可以滚动，调用`CanScroll`成员函数。  
   
-#### 滚动  
+#### <a name="to-scroll"></a>若要向下滚动  
   
-1.  向前滚动一条记录或一个行集合：调用 [MoveNext](../Topic/CRecordset::MoveNext.md) 成员函数。  
+1.  将一个记录或一个行集转发： 调用[MoveNext](../../mfc/reference/crecordset-class.md#movenext)成员函数。  
   
-2.  向后滚动一条记录或一个行集合：调用 [MovePrev](../Topic/CRecordset::MovePrev.md) 成员函数。  
+2.  向后的一条记录或一个行集： 调用[MovePrev](../../mfc/reference/crecordset-class.md#moveprev)成员函数。  
   
-3.  移动到记录集中的第一条记录：调用 [moveFirst](../Topic/CRecordset::MoveFirst.md) 成员函数。  
+3.  在记录集中的第一个记录： 调用[MoveFirst](../../mfc/reference/crecordset-class.md#movefirst)成员函数。  
   
-4.  滚动到记录集中的最后一条记录或最后一个行集合：调用 [MoveLast](../Topic/CRecordset::MoveLast.md) 成员函数。  
+4.  在记录集中的最新记录到或最后一个行集： 调用[MoveLast](../../mfc/reference/crecordset-class.md#movelast)成员函数。  
   
-5.  相对于当前位置的 *N* 条记录：调用 [Move](../Topic/CRecordset::Move.md) 成员函数。  
+5.  *N*相对于当前的位置的记录： 调用[移动](../../mfc/reference/crecordset-class.md#move)成员函数。  
   
-#### 测试是否已到记录集的结尾或开头  
+#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>若要测试的结尾或记录集的开头  
   
-1.  是否已滚过最后一条记录？  调用 [IsEOF](../Topic/CRecordset::IsEOF.md) 成员函数。  
+1.  你具有滚动最后一条记录？ 调用[IsEOF](../../mfc/reference/crecordset-class.md#iseof)成员函数。  
   
-2.  是否已滚出第一条记录（向后移动）？  调用 [IsBOF](../Topic/CRecordset::IsBOF.md) 成员函数。  
+2.  是否已滚 （向后移动） 的第一个记录？ 调用[IsBOF](../../mfc/reference/crecordset-class.md#isbof)成员函数。  
   
- 下面的代码示例使用 `IsBOF` 和 `IsEOF` 检测在任一方向滚动时记录集的限制。  
+ 下面的代码示例使用`IsBOF`和`IsEOF`来检测何时在任一方向滚动的记录集的限制。  
   
 ```  
 // Open a recordset; first record is current  
@@ -95,21 +95,21 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- 如果将记录集定位在最后一条记录之后，则 `IsEOF` 返回一个非零值。  如果将记录集定位在第一条记录之前（所有记录之前），则 `IsBOF` 返回一个非零值。  两种情况下都没有要操作的当前记录。  如果在 `IsBOF` 已为 **TRUE** 时调用 `MovePrev`，或在 `IsEOF` 已为 **TRUE** 时调用 `MoveNext`，则框架引发 `CDBException`。  也可以使用 `IsBOF` 和 `IsEOF` 检查空记录集。  
+ `IsEOF`如果记录集定位最后一条记录，则返回非零值。 `IsBOF`如果记录集定位之前 （在之前的所有记录） 的第一个记录，则返回非零值。 在任一情况下，没有最新的记录上进行操作。 如果调用`MovePrev`时`IsBOF`已**TRUE**或调用`MoveNext`时`IsEOF`已**TRUE**，框架将引发`CDBException`。 你还可以使用`IsBOF`和`IsEOF`检查空的记录集。  
   
- 有关记录集导航的更多信息，请参见 [记录集：书签和绝对位置 \(ODBC\)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
+ 有关记录集导航的详细信息，请参阅[记录集： 书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
   
-##  <a name="_core_when_scrolling_is_supported"></a> 何时支持滚动  
- 正如最初设计的，SQL 只提供向前滚动，而 ODBC 扩展了滚动功能。  滚动的可用支持级别取决于应用程序使用的 ODBC 驱动程序、驱动程序的 ODBC API 一致性级别，以及 ODBC 游标库是否加载到内存中。  有关更多信息，请参见 [ODBC](../../data/odbc/odbc-basics.md) 和 [ODBC：ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
+##  <a name="_core_when_scrolling_is_supported"></a>支持滚动时  
+ 正如最初设计，SQL 提供仅向前滚动，但 ODBC 扩展了滚动功能。 可用的滚动的支持级别取决于使用驱动程序的 ODBC API 一致性级别，你的应用程序的 ODBC 驱动程序和 ODBC 游标库是否已加载到内存。 有关详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)和[ODBC: ODBC 游标库](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
   
 > [!TIP]
->  可以控制是否使用游标库。  请参见 [CDatabase::Open](../Topic/CDatabase::Open.md) 的 `bUseCursorLib` 和 `dwOptions` 参数。  
+>  你可以控制是否使用的是光标库。 请参阅`bUseCursorLib`和`dwOptions`参数[CDatabase::Open](../../mfc/reference/cdatabase-class.md#open)。  
   
 > [!NOTE]
->  与 MFC DAO 类不同，MFC ODBC 类不提供用于定位符合指定条件的下一条记录（或前一条记录）的 **Find** 函数集。  
+>  与 MFC DAO 类中，不同的 MFC ODBC 类不提供一套**查找**函数为查找满足下一步 （或先前） 记录指定的条件。  
   
-## 请参阅  
- [记录集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [CRecordset::CanScroll](../Topic/CRecordset::CanScroll.md)   
- [CRecordset::CheckRowsetError](../Topic/CRecordset::CheckRowsetError.md)   
- [记录集：筛选记录 \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)
+## <a name="see-also"></a>另请参阅  
+ [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)   
+ [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)   
+ [记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

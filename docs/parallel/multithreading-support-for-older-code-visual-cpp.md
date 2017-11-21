@@ -1,64 +1,63 @@
 ---
-title: "针对旧代码的多线程支持 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "并发编程 [C++]"
-  - "多个并发线程"
-  - "多线程"
-  - "多线程处理 [C++]"
-  - "多线程处理 [C++], 关于多线程处理"
-  - "编程 [C++], 多线程"
-  - "线程处理 [C++]"
+title: "针对旧代码 （Visual c + +） 的多线程处理支持 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- threading [C++]
+- multiple threads
+- concurrent programming [C++]
+- programming [C++], multithreaded
+- multithreading [C++], about multithreading
+- multiple concurrent threads
+- multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d949c1ff19be6f3b89673753fdaccc2996bbef36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 针对旧代码的多线程支持 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 使您可以同时运行多个并行执行的线程。  使用多线程处理，可以派生出后台任务、管理同时发生的输入流、管理用户界面，等等。  
+# <a name="multithreading-support-for-older-code-visual-c"></a>针对旧代码的多线程支持 (Visual C++)
+Visual c + + 允许你拥有多个并发线程同时运行的执行。 使用多线程处理，可以派生出后台任务，管理同时发生的输入流，管理用户界面和更多内容。  
   
-## 本节内容  
- [使用 C 和 Win32 进行多线程处理](../parallel/multithreading-with-c-and-win32.md)  
- 为创建 Microsoft Windows 多线程应用程序提供支持  
+## <a name="in-this-section"></a>本节内容  
+ [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)  
+ 提供对使用 Microsoft Windows 创建多线程应用程序支持  
   
- [使用 C\+\+ 和 MFC 进行多线程处理](../parallel/multithreading-with-cpp-and-mfc.md)  
- 描述什么是进程和线程以及 MFC 的多线程处理方法是什么。  
+ [使用 C++ 和 MFC 进行多线程编程](../parallel/multithreading-with-cpp-and-mfc.md)  
+ 描述什么是进程和线程以及 MFC 的方法多线程处理是。  
   
  [多线程和区域设置](../parallel/multithreading-and-locales.md)  
- 讨论在多线程应用程序中使用 C 运行库和标准 C\+\+ 库的区域设置功能时引发的问题。  
+ 讨论在使用 C 运行库和多线程应用程序中的 c + + 标准库的区域设置功能时出现的问题。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [CWinThread](../mfc/reference/cwinthread-class.md)  
  表示应用程序中的执行线程。  
   
  [CSyncObject](../mfc/reference/csyncobject-class.md)  
- 描述一个纯虚类，该类提供 Win32 中的同步对象所共有的功能。  
+ 描述一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。  
   
  [CSemaphore](../mfc/reference/csemaphore-class.md)  
- 表示一个信号量，是一个允许一个或多个进程中的有限多个线程访问一个资源的同步对象。  
+ 表示一个信号量，即允许一个或多个进程访问的资源中有限的数量的线程的同步对象。  
   
  [CMutex](../mfc/reference/cmutex-class.md)  
  表示一个 mutex，是一个允许一个线程以互相排斥的方式访问一个资源的同步对象。  
   
  [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- 表示一个临界区，是一个允许一个线程同时访问一个资源或代码段的同步对象。  
+ 表示关键部分中，这是每次访问资源或代码段的允许一个线程的同步对象。  
   
  [CEvent](../mfc/reference/cevent-class.md)  
- 表示一个事件，是一个允许一个线程通知另一个线程事件已经发生的同步对象。  
+ 表示一个事件，这是一个允许一个线程向已发生事件的另一个线程的同步对象。  
   
  [CMultiLock](../mfc/reference/cmultilock-class.md)  
  表示多线程程序中用于控制对多个资源的访问的访问控制机制。  
@@ -66,5 +65,5 @@ Visual C\+\+ 使您可以同时运行多个并行执行的线程。  使用多�
  [CSingleLock](../mfc/reference/csinglelock-class.md)  
  表示多线程程序中用于控制对一个资源的访问的访问控制机制。  
   
- [\(NOTINBUILD\)Visual C\+\+ Programming Methodologies](http://msdn.microsoft.com/zh-cn/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
- 提供有关下列内容的主题链接：描述有关 Visual C\+\+ 库的概念信息和讨论各种编码技术和方法。
+ [(NOTINBUILD)Visual c + + 编程方法](http://msdn.microsoft.com/en-us/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
+ 提供有关下列内容的主题链接：描述有关 Visual C++ 库的概念信息和讨论各种编码技术和方法。

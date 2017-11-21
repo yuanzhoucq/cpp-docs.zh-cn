@@ -1,45 +1,43 @@
 ---
-title: "生成 C/C++ 并行程序集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "并行应用程序 [C++]"
+title: "生成 C/c + + 端并行程序集 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-caps.latest.revision: 18
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 生成 C/C++ 并行程序集
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[并行程序集](_win32_side_by_side_assemblies)是指应用程序在运行时可使用的资源的集合，如一组 DLL、Windows 类、COM 服务器、类型库或接口。  将 DLL 重新打包到程序集中的主要优点是，应用程序可以同时使用程序集的多个版本，且发布更新时可以为当前已安装的程序集提供服务。  
+# <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
+A[通过并行程序集](http://msdn.microsoft.com/library/windows/desktop/ff951640)是资源的集合-一组 Dll、 windows 类、 COM 服务器、 类型库或接口 — 可用于应用程序在运行时使用。 将 Dll 重新打包程序集的主要优点是，在同一时间应用程序可以使用多个版本的程序集，并且可能对发布更新的当前安装的服务程序集。  
   
- Visual C\+\+ 应用程序可以在它的不同部分使用一个或若干个 DLL。  运行时，会将这些 DLL 加载到主进程并执行所需的代码。  应用程序依赖操作系统来定位所需的 DLL，了解必须加载的其他依赖 DLL，然后将它们与所需的 DLL 一起加载。  在早于 Windows XP、Windows Server 2003 和 Windows Vista 的 Windows 操作系统版本上，操作系统加载程序会在应用程序的本地文件夹或系统路径指定的另一个文件夹中搜索依赖 DLL。  在 Windows XP、Windows Server 2003 和 Windows Vista 上，操作系统加载程序还可以使用[清单](http://msdn.microsoft.com/library/aa375365)文件搜索依赖 DLL，并搜索包含这些 DLL 的并行程序集。  
+ Visual c + + 应用程序可以使用应用程序的不同部分中的一个或多个 Dll。 在运行时，Dll 加载到主进程并执行所需的代码。 应用程序依赖于操作系统以找到所需的 Dll、 了解其他依赖 Dll 已加载，然后与请求的 DLL 中加载它们。 在 Windows 操作系统版本早于 Windows XP、 Windows Server 2003 和 Windows Vista 中，操作系统加载程序搜索的应用程序的本地文件夹或指定的系统路径上的另一个文件夹中的依赖 Dll。 在 Windows XP、 Windows Server 2003 和 Windows Vista 上，操作系统加载程序还可以搜索使用的依赖 Dll[清单](http://msdn.microsoft.com/library/windows/desktop/aa375365)文件然后搜索包含这些 Dll 的并行程序集。  
   
- 默认情况下，在使用 Visual Studio 生成 DLL 时，该 DLL 会有一个作为 RT\_MANIFEST 资源（ID 等于 2）嵌入的[应用程序清单](http://msdn.microsoft.com/library/aa374191)。  正如可执行文件一样，此清单描述该 DLL 在其他程序集中的依赖项。  此处假定此 DLL 不是并行程序集的一部分，且依赖于此 DLL 的应用程序将不会使用应用程序清单加载此 DLL，而是依靠操作系统加载程序在系统路径中查找此 DLL。  
+ 默认情况下，如果 DLL 使用 Visual Studio 中，生成它具有[应用程序清单](http://msdn.microsoft.com/library/windows/desktop/aa374191)作为 RT_MANIFEST 资源嵌入 id 等于 2。 一样可执行文件，此清单说明在其他程序集上的此 DLL 的依赖项。 这假定此 DLL 不是通过并行程序集的一部分，并依赖于此 DLL 的应用程序不会使用应用程序清单来加载它，而是依靠操作系统加载程序的系统路径中查找此 DLL。  
   
 > [!NOTE]
->  对于使用应用程序清单的 DLL 来说，将此清单作为资源（ID 等于 2）嵌入其中是十分重要的。  如果在运行时动态加载此 DLL（例如，使用 [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175) 函数），操作系统加载程序将加载 DLL 的清单中指定的依赖程序集。  在调用 `LoadLibrary` 期间，不会检查 DLL 的外部应用程序清单。  如果未嵌入此清单，则加载程序可能会尝试加载程序集的错误版本，或无法找到依赖程序集。  
+>  务必使用应用程序清单具有 id 等于 2 作为资源嵌入的清单的 DLL。 如果在运行时动态加载该 DLL (例如，使用[LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)函数)，则操作系统加载程序加载 DLL 的清单中指定的依赖程序集。 Dll 的外部应用程序清单不会检查期间`LoadLibrary`调用。 如果未嵌入清单，加载程序可能会尝试加载的程序集不正确版本，或无法找到相关程序集。  
   
- 通过相应的[程序集清单](http://msdn.microsoft.com/library/aa374219)，可以将一个或若干个相关 DLL 重新打包到并行程序集中，该清单用于描述构成此程序集的文件、以及此程序集对于其他并行程序集的依赖性。  
+ 一个或多个相关 Dll 可以重新打包到与相应的并行程序集[程序集清单](http://msdn.microsoft.com/library/windows/desktop/aa374219)，其中描述哪些文件在其他并行的构成程序集，以及该程序集的依赖性程序集。  
   
 > [!NOTE]
->  如果程序集包含一个 DLL，建议将程序集清单作为 ID 等于 1 的资源嵌入到该 DLL 中，并且让私有程序集与该 DLL 同名。  例如，如果该 DLL 的名称为 mylibrary.dll，则清单的 \<assemblyIdentity\>元素中使用的名称特性的值也可以是 mylibrary。  在某些情况下，如果库的扩展名不是 .dll（例如，MFC ActiveX 控件项目会创建 .ocx 库），则可以创建外部程序集清单。  在此情况下，程序集及其清单的名称必须不同于 DLL 的名称（例如，MyAssembly、MyAssembly.manifest 和 mylibrary.ocx）。  但是，仍然建议对这种库重命名，使其扩展名为 .dll，并将清单作为资源嵌入，以减少今后对此程序集的维护成本。  有关操作系统如何搜索私有程序集的更多信息，请参见[程序集搜索顺序](http://msdn.microsoft.com/library/aa374224)。  
+>  如果程序集包含的一个 DLL，它被建议用于程序集将清单嵌入到此 DLL 作为资源 id 等于 1，并为私有程序集提供与 DLL 相同的名称。 例如，如果 DLL 的名称为 mylibrary.dll，名称属性的值中使用\<assemblyIdentity > 清单元素也可以是 mylibrary。 在某些情况下，当库具有非.dll 的扩展名 （例如，MFC ActiveX 控件项目创建.ocx 库） 可以创建一个外部程序集清单。 在这种情况下，程序集和其清单的名称必须不同于 DLL （例如，MyAssembly、 MyAssembly.manifest，和 mylibrary.ocx） 的名称。 但是，仍然被建议重命名这种库以.dll，并将清单嵌入作为资源以减少此程序集的将来的维护成本。 有关操作系统如何搜索私有程序集的详细信息，请参阅[程序集搜索顺序](http://msdn.microsoft.com/library/windows/desktop/aa374224)。  
   
- 此更改允许将相应的 DLL 作为[私有程序集](_win32_private_assemblies)部署到应用程序本地文件夹中，或作为[共享程序集](https://msdn.microsoft.com/en-us/library/aa375996.aspx)部署到 WinSxS 程序集缓存中。  若要使此新程序集在运行时的行为准确无误，必须执行若干步骤；[创建并行程序集指南](http://msdn.microsoft.com/library/aa375155)中描述了这些步骤。  正确编写程序集后，可将此程序集作为共享程序集或私有程序集与依赖于它的应用程序一起进行部署。  将并行程序集作为共享程序集安装时，可以按照[在 Windows XP 上安装 Win32 程序集以实现并行共享](http://msdn.microsoft.com/library/aa369532)中介绍的指南进行操作，也可以使用[合并模块](http://msdn.microsoft.com/library/aa369820)。  将并行程序集作为私有程序集安装时，仅需将相应的 DLL、资源和程序集清单作为安装过程的一部分复制到目标计算机上的应用程序本地文件夹中，这样可确保加载程序在运行时可以找到此程序集（请参见[程序集搜索顺序](http://msdn.microsoft.com/library/aa374224)）。  另一种方法是使用 [Windows Installer](http://msdn.microsoft.com/library/cc185688)，并按照[在 Windows XP 上安装 Win32 程序集以供应用程序专用](http://msdn.microsoft.com/library/aa369534)中介绍的指南进行操作。  
+ 此更改可能允许相应的 Dll 作为部署[私有程序集](http://msdn.microsoft.com/library/windows/desktop/aa370850)在应用程序本地文件夹中或作为[共享程序集](http://msdn.microsoft.com/library/windows/desktop/aa371839)WinSxS 程序集缓存中。 几个步骤需要遵循以便实现正确的运行时行为的此新的程序集;中描述了这些[对创建的并行程序集的准则](http://msdn.microsoft.com/library/windows/desktop/aa375155)。 正确编写程序集后可以部署为任一共享或私有程序集的应用程序依赖于它在一起。 安装时的并行程序集作为共享程序集，可以的按照中介绍的指南[安装 Win32 程序集以在 Windows XP 上的并排显示共享](http://msdn.microsoft.com/library/windows/desktop/aa369532)或使用[的合并模块](http://msdn.microsoft.com/library/windows/desktop/aa369820). 安装时的并行程序集作为私有程序集，你可能只复制相应 DLL、 资源和程序集清单中，作为安装过程的一部分到应用程序本地文件夹的目标计算机上，确保此程序集可以在运行时加载器找到 (请参阅[程序集搜索顺序](http://msdn.microsoft.com/library/windows/desktop/aa374224))。 另一种方法是使用[Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688)然后按照所述的指导[安装 Win32 程序集以在 Windows XP 上的应用程序私用](http://msdn.microsoft.com/library/windows/desktop/aa369534)。  
   
-## 请参阅  
+## <a name="see-also"></a>另请参阅  
  [部署示例](../ide/deployment-examples.md)   
- [生成 C\/C\+\+ 独立应用程序](../build/building-c-cpp-isolated-applications.md)   
- [生成 C\/C\+\+ 独立应用程序和并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+ [生成 C/c + + 独立应用程序](../build/building-c-cpp-isolated-applications.md)   
+ [生成 C/C++ 独立应用程序和并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

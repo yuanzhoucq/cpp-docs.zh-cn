@@ -1,32 +1,30 @@
 ---
-title: "parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel OpenMP directive"
+title: "并行 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: parallel
+dev_langs: C++
+helpviewer_keywords: parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289a4928c9c46f6d758ddc2f30ed864488ab725e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-定义并行区域，是将由多个线程并行执行。  
+# <a name="parallel"></a>parallel
+定义并行区域，这是将由多个线程并行执行的代码。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma omp parallel [clauses]  
@@ -35,14 +33,14 @@ caps.handback.revision: 12
 }  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `clause`（可选）  
- 零或多个子句。  为 **并行**支持子句的列表参见 " 备注 " 节。  
+ 零个或多个子句。  请参阅支持的子句列表的备注部分**并行**。  
   
-## 备注  
- **并行** 指令支持以下 OpenMP 子句:  
+## <a name="remarks"></a>备注  
+ **并行**指令支持以下 OpenMP 子句：  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -52,20 +50,20 @@ caps.handback.revision: 12
   
 -   [if](../../../parallel/openmp/reference/if-openmp.md)  
   
--   [num\_threads](../../../parallel/openmp/reference/num-threads.md)  
+-   [num_threads](../../../parallel/openmp/reference/num-threads.md)  
   
--   [private](../../../parallel/openmp/reference/private-openmp.md)  
+-   [专用](../../../parallel/openmp/reference/private-openmp.md)  
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [共享](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **并行** 也可以用于 [sections](../../../parallel/openmp/reference/sections-openmp.md) 和 [for](../../../parallel/openmp/reference/for-openmp.md) 指令。  
+ **并行**也可以用于[部分](../../../parallel/openmp/reference/sections-openmp.md)和[为](../../../parallel/openmp/reference/for-openmp.md)指令。  
   
- 有关更多信息，请参见 [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md)。  
+ 有关详细信息，请参阅[2.3 parallel 构造](../../../parallel/openmp/2-3-parallel-construct.md)。  
   
-## 示例  
- 下面的示例演示如何设置线程的数量和定义并行区域。  默认情况下，线程的数量与逻辑处理器数相等计算机上的。  例如，因此，如果您具有已启用 hyperthreading 的实际处理器的计算机，则会有两个逻辑处理器，因此，因此，两个线程。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何设置的线程数，并定义并行区域。 默认情况下，线程数等于计算机上的逻辑处理器数。 例如，如果你有具有一个具有已启用超线程的物理处理器的计算机，它将具有两个逻辑处理器和，因此，两个线程。  
   
 ```  
 // omp_parallel.cpp  
@@ -82,12 +80,15 @@ int main() {
 }  
 ```  
   
-  **hello 从线程 0**  
-**hello 从线程 1**  
-**hello 从线程 2**  
-**hello 从线程 3**   
-## 注释  
- 请注意输出顺序在不同的计算机可能会有所不同。  
+```Output  
+Hello from thread 0  
+Hello from thread 1  
+Hello from thread 2  
+Hello from thread 3  
+```  
   
-## 请参阅  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="comment"></a>注释  
+ 请注意，在不同计算机上的输出顺序而异。  
+  
+## <a name="see-also"></a>另请参阅  
+ [指令](../../../parallel/openmp/reference/openmp-directives.md)

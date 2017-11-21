@@ -1,133 +1,133 @@
 ---
-title: "记录集 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "动态记录集"
-  - "动态集"
-  - "只能向前的记录集"
-  - "ODBC 记录集"
-  - "ODBC 记录集, CRecordset 对象"
-  - "记录集, 关于记录集"
-  - "记录集, 创建"
-  - "记录集, 动态集"
-  - "记录集, 快照"
-  - "快照, ODBC 记录集"
+title: "记录集 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, snapshots
+- recordsets, creating
+- dynamic recordsets
+- forward-only recordsets
+- recordsets, dynasets
+- ODBC recordsets, CRecordset objects
+- ODBC recordsets
+- recordsets, about recordsets
+- snapshots, ODBC recordsets
+- dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 668cd4b2f27c2cde18528c0eb2d4d661160c4e4e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# 记录集 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-odbc"></a>记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
   
- [CRecordset](../../mfc/reference/crecordset-class.md) 对象表示从数据源选定的一组记录。  这些记录可以来自：  
+ A [CRecordset](../../mfc/reference/crecordset-class.md)对象表示一组从数据源选择的记录。 记录可以来自：  
   
--   表。  
+-   一个表。  
   
--   查询。  
+-   一个查询。  
   
--   访问一个或多个表的存储过程。  
+-   一个可访问一个或多个表的存储的过程。  
   
- 基于表的记录集示例是“所有客户”，它访问一个“Customer”表。  查询的示例是“Joe Smith 的所有发票”。基于存储过程（有时称为预定义查询）的记录集示例是“所有过期的帐户”，它调用后端数据库中的存储过程。  记录集可以联接两个或更多来自同一数据源的表，但不能联接来自不同数据源的表。  
-  
-> [!NOTE]
->  有关用向导派生记录集类的信息，请参见[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)和 [MFC 应用程序向导的数据库支持](../../mfc/reference/database-support-mfc-application-wizard.md)。  
+ 基于表的记录集的一个示例是"所有客户，"访问 Customer 表。 查询的一个示例是"Joe smith 的所有发票。" 基于存储过程 （有时称为预定义的查询） 的记录集的一个示例是"过期的帐户中，所有"的调用后端数据库中的存储的过程。 记录集可以加入两个或多个表从相同的数据源，但不是来自不同数据源的表。  
   
 > [!NOTE]
->  某些 ODBC 驱动程序支持数据库视图。  从这种意义上说，视图是最初由 SQL `CREATE VIEW` 语句创建的查询。  向导目前不支持视图，但您自己可以通过编码实现该支持。  
+>  有关记录集用派生类向导的信息，请参阅[添加 MFC ODBC 使用者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)和[数据库支持，MFC 应用程序向导](../../mfc/reference/database-support-mfc-application-wizard.md)。  
   
-##  <a name="_core_recordset_capabilities"></a> 记录集功能  
- 所有记录集对象共享下列功能：  
+> [!NOTE]
+>  某些 ODBC 驱动程序支持数据库的视图。 在这个意义上的视图是最初创建与 SQL 的查询`CREATE VIEW`语句。 向导当前不支持视图，但是可能此支持的代码。  
   
--   如果数据源不是只读的，可以指定记录集为[可更新的](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)、[可追加的](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)或只读。  如果记录集是可更新的，只要驱动程序提供适当的锁定支持，就可以选择保守式或开放式[锁定](../../data/odbc/recordset-locking-records-odbc.md)方法。  如果数据源是只读的，则记录集也将是只读的。  
+##  <a name="_core_recordset_capabilities"></a>记录集功能  
+ 所有记录集对象共享的以下功能：  
   
--   可以调用成员函数在选定的记录中 [Scroll](../../data/odbc/recordset-scrolling-odbc.md)。  
+-   如果数据源不是只读的则可以指定记录集为[可更新](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，[可追加](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，或只读的。 如果可更新记录集，你可以选择保守式或开放式[锁定](../../data/odbc/recordset-locking-records-odbc.md)方法，提供驱动程序提供适当的锁定支持。 如果数据源是只读的该记录集将是只读的。  
   
--   可以 [filter](../../data/odbc/recordset-filtering-records-odbc.md) 记录以限制从可用记录中选择的记录。  
+-   可以调用成员函数以[滚动](../../data/odbc/recordset-scrolling-odbc.md)通过选定的记录。  
   
--   可以基于一列或多列按升序或降序对记录进行 [Sort](../../data/odbc/recordset-sorting-records-odbc.md)。  
+-   你可以[筛选器](../../data/odbc/recordset-filtering-records-odbc.md)来限制从这些可用选择哪些记录的记录。  
   
--   可以 [parameterize](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) 记录集以限定运行时记录集的选择。  
+-   你可以[排序](../../data/odbc/recordset-sorting-records-odbc.md)按升序或降序，记录基于一个或多个列。  
   
-##  <a name="_core_snapshots_and_dynasets"></a> 快照和动态集  
- 有两种主要的记录集：[快照](../../data/odbc/snapshot.md)和[动态集](../../data/odbc/dynaset.md)。  两者均由 `CRecordset` 类支持。  每一种都共享所有记录集的通用特性，但同时也以各自的专用方式扩展通用功能。  快照提供数据的静态视图，用于报表和需要数据视图在特定时间存在时的情况。  动态集则用于希望其他用户所做的更新在记录集中可见而同时又不必再次查询或刷新记录集的情况。  快照和动态集可以是可更新的，也可是只读的。  若要反映其他用户添加或删除的记录，请调用 [CRecordset::Requery](../Topic/CRecordset::Requery.md)。  
+-   你可以[参数化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)为限定在运行时的记录集选定的记录集。  
   
- `CRecordset` 还允许两种其他类型的记录集：动态记录集和仅向前记录集。  动态记录集类似于动态集；但动态记录集不用调用 `CRecordset::Requery` 就可以反映添加或删除的任何记录。  基于这个原因，动态记录集在 DBMS 上的处理时间方面通常成本较大，而且许多 ODBC 驱动程序不支持它们。  相比之下，仅向前记录集为不要求更新或向后滚动的记录集提供最有效的数据访问方法。  例如，可以使用仅向前记录集将记录从一个数据源移植到另一个数据源，其中只需按向前的方向在数据间移动。  若要使用仅向前记录集，必须执行下列两个操作：  
+##  <a name="_core_snapshots_and_dynasets"></a>快照和动态集  
+ 有两种主要类型的记录集：[快照](../../data/odbc/snapshot.md)和[动态记录集](../../data/odbc/dynaset.md)。 类支持这两`CRecordset`。 每个共享的公共特性的所有记录集，但每个扩展自己专用的方式的常见功能。 快照提供了静态数据的视图，并且可用于报表和其他情况下，在其中您希望数据的视图在特定时间存在。 当你想要显示的记录集而无需再次查询或刷新记录集由其他用户所做的更新时，动态记录集非常有用。 快照和动态集可以是可更新或只读的。 反映记录添加或删除其他用户，通过调用[CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)。  
   
--   将 **CRecordset::forwardOnly** 选项作为 [Open](../Topic/CRecordset::Open.md) 成员函数的 `nOpenType` 参数传递。  
+ `CRecordset`此外允许两个其他类型的记录集： 动态记录集和只进的记录集。 动态记录集是类似于动态记录集;但是，动态记录集反映添加或删除而不调用任何记录`CRecordset::Requery`。 为此，动态记录集的相对上 DBMS，处理时间通常费用较高和许多的 ODBC 驱动程序不支持它们。 与此相反，仅向前的记录集提供不需要更新或向后滚动的记录集的数据访问的最有效方法。 例如，你可能使用只进的记录集数据在一个数据源之间迁移，其中只需通过在一个向前方向的数据移动。 若要使用只进的记录集，必须执行以下两个操作：  
   
--   在 **Open** 的 `dwOptions` 参数中指定 **CRecordset::readOnly**。  
+-   传递选项**CRecordset::forwardOnly**作为`nOpenType`参数[打开](../../mfc/reference/crecordset-class.md#open)成员函数。  
+  
+-   指定**CRecordset::readOnly**中`dwOptions`参数**打开**。  
   
     > [!NOTE]
-    >  有关 ODBC 驱动程序的动态集支持要求的信息，请参见 [ODBC](../../data/odbc/odbc-basics.md)。  有关 Visual C\+\+ 此版本中包括的 ODBC 驱动程序列表以及有关获取其他驱动程序的信息，请参见 [ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。  
+    >  有关动态集支持的 ODBC 驱动程序要求的信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。 有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表以及有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。  
   
-##  <a name="_core_your_recordsets"></a> 您的记录集  
- 对于希望访问的每一个不同的表、视图或存储过程，通常定义一个从 `CRecordset` 派生的类。（例外情况是数据库联接，其中一个记录集表示来自两个或多个表的列。）当派生记录集类时，启用记录字段交换 \(RFX\) 机制或批量记录字段交换（批量 RFX）机制，这两种机制与对话框数据交换 \(DDX\) 机制相似。  RFX 和“批量 RFX”简化了从数据源向您的记录集传输数据的过程；另外，RFX 还可以将数据从您的记录集传输到数据源。  有关更多信息，请参见[记录字段交换 \(RFX\)](../../data/odbc/record-field-exchange-rfx.md) 和[记录集：批量获取记录 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+##  <a name="_core_your_recordsets"></a>你的记录集  
+ 对于每个非重复表、 视图或你想要访问的存储的过程，您通常定义派生自的类`CRecordset`。 （例外情况是数据库联接，在其中一个记录集所表示的两个或多个表的列）。在派生的记录集类，你启用的记录字段交换 (RFX) 机制或批量记录字段交换 (Bulk RFX) 机制，它类似于对话框数据交换 (DDX) 机制。 RFX 和批量 RFX 简化数据源的数据的传输到记录集;RFX 此外将数据传输从记录集到数据源。 有关详细信息，请参阅[记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 记录集对象提供对所有选定记录的访问权。  使用 `CRecordset` 成员函数（如 `MoveNext` 和 `MovePrev`）在多个选定的记录间滚动。  同时，记录集对象仅表示一个选定的记录，即当前记录。  通过声明与表列或数据库查询产生的记录列相对应的记录集类成员变量，可以检查当前记录的字段。  有关记录集数据成员的信息，请参见[记录集：结构 \(ODBC\)](../../data/odbc/recordset-architecture-odbc.md)。  
+ 记录集对象访问你的所有选定的记录。 通过结合使用的多个所选记录滚动`CRecordset`成员函数，如`MoveNext`和`MovePrev`。 同时，记录集对象将表示只有一个选定的记录，当前记录。 可以通过声明与列的表或从数据库查询产生的记录相对应的类成员变量的记录集来检查当前记录的字段。 有关记录集数据成员的信息，请参阅[记录集： 体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。  
   
- 下列主题解释有关使用记录集对象的详细信息。  这些主题按功能类别和正常的浏览顺序列出，以便可以顺序阅读。  
+ 以下主题介绍使用记录集对象的详细信息。 按功能类别和自然浏览顺序，以便可以顺序阅读会列出的主题。  
   
-### 有关打开、读取和关闭记录集的技巧的主题  
+### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>有关打开、 读取和关闭记录集的机制的主题  
   
--   [记录集：结构 \(ODBC\)](../../data/odbc/recordset-architecture-odbc.md)  
+-   [记录集：体系结构 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)  
   
--   [记录集：声明表的类 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
+-   [记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
   
--   [记录集：创建和关闭记录集 \(ODBC\)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)  
+-   [记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)  
   
--   [记录集：滚动 \(ODBC\)](../../data/odbc/recordset-scrolling-odbc.md)  
+-   [记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)  
   
--   [记录集：书签和绝对位置 \(ODBC\)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)  
+-   [记录集：书签和绝对位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)  
   
--   [记录集：筛选记录 \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)  
+-   [记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)  
   
--   [记录集：对记录排序 \(ODBC\)](../../data/odbc/recordset-sorting-records-odbc.md)  
+-   [记录集：对记录进行排序 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)  
   
--   [记录集：参数化记录集 \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+-   [记录集：参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
-### 有关修改记录集的技巧的主题  
+### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>有关修改记录集的技巧的主题  
   
--   [记录集：添加、更新和删除记录 \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)  
+-   [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)  
   
--   [记录集：锁定记录 \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)  
+-   [记录集：锁定记录 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)  
   
--   [记录集：再次查询记录集 \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
+-   [记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
-### 有关更高级的技术的主题  
+### <a name="topics-about-somewhat-more-advanced-techniques"></a>有关某种程度上的主题更高级的技术  
   
--   [记录集：执行联接 \(ODBC\)](../../data/odbc/recordset-performing-a-join-odbc.md)  
+-   [记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
--   [记录集：为预定义查询声明一个类 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
+-   [记录集：为预定义查询声明一个类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
--   [记录集：动态绑定数据列 \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
+-   [记录集：动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
--   [记录集：批量获取记录 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)  
+-   [记录集：批量提取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)  
   
--   [记录集：处理大数据项 \(ODBC\)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
+-   [记录集：处理大数据项 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
--   [记录集：获取 SUM 及其他聚合结果 \(ODBC\)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
+-   [记录集：获取 SUM 及其他聚合结果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### 有关记录集工作方式的主题  
+### <a name="topics-about-how-recordsets-work"></a>有关记录集的工作原理的主题  
   
--   [记录集：记录集如何选择记录 \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
+-   [记录集：记录集如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
--   [记录集：记录集如何更新记录 \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)  
+-   [记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)  
   
-## 请参阅  
- [开放式数据库连接 \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)   
+## <a name="see-also"></a>另请参阅  
+ [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [MFC ODBC 使用](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
- [事务 \(ODBC\)](../../data/odbc/transaction-odbc.md)
+ [事务 (ODBC)](../../data/odbc/transaction-odbc.md)

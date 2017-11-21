@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,18 @@ f1_keywords:
 - ATLUTIL/ATL::CWorkerThread::Initialize
 - ATLUTIL/ATL::CWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 586e75202bb2b16a0e612eea75d4e2ed6d1bd8d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 此类创建一个工作线程或使用一个现有，等待上一个或多个内核对象句柄，并在其中一个的句柄处于有信号状态时执行指定的客户端函数。  
@@ -101,7 +83,7 @@ class CWorkerThread
   
 2.  调用[CWorkerThread::Initialize](#initialize)。  
   
-3.  调用[CWorkerThread::AddHandle](#addhandle)内核对象和一个指向的实现的句柄与[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。  
+3.  调用[CWorkerThread::AddHandle](#addhandle)与内核对象和指向的实现的句柄[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)。  
   
      - 或 -  
   
@@ -114,7 +96,7 @@ class CWorkerThread
 6.  若要终止线程，调用[CWorkerThread::Shutdown](#shutdown)。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** atlutil.h  
+ **标头：** atlutil.h  
   
 ##  <a name="addhandle"></a>CWorkerThread::AddHandle  
  调用此方法以将可等待对象的句柄添加到工作线程由维护的列表。  
@@ -273,6 +255,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ## <a name="see-also"></a>另请参阅  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [类](../../atl/reference/atl-classes.md)   
- [多线程处理︰ 创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)   
+ [多线程处理： 创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)   
  [IWorkerThreadClient 接口](../../atl/reference/iworkerthreadclient-interface.md)
-

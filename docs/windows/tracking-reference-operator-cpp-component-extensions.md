@@ -1,50 +1,48 @@
 ---
-title: "% (跟踪引用) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "% 跟踪引用 [C++]"
-  - "跟踪引用"
+title: "跟踪引用运算符 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '%'
+dev_langs: C++
+helpviewer_keywords:
+- tracking references
+- '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-caps.latest.revision: 31
-caps.handback.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "31"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 733c99dc4895907ba943f32dc7048ce6cfc01528
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# % (跟踪引用)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-“跟踪引用”\(`%`\) 的行为与普通 C\+\+ 引用 \(`&`\) 相似，区别在于，将对象指定给跟踪引用时，对象的引用计数会递增。  
+# <a name="tracking-reference-operator-c-component-extensions"></a>跟踪引用运算符（C++ 组件扩展）
+A*跟踪引用*(`%`) 表现得像普通的 c + + 参考 (`&`) 只不过当一个对象分配给跟踪引用，该对象的引用计数会递增。  
   
-## 所有平台  
+## <a name="all-platforms"></a>所有平台  
  跟踪引用具有下列特征：  
   
 -   将对象分配给跟踪引用会导致对象的引用计数递增。  
   
--   本机引用 \(&\) 是您取消引用 \* 时的结果。  跟踪引用 \(%\) 是您取消引用 ^ 时的结果。  只要有指向对象的 %，该对象就会一直保留在内存中。  
+-   本机引用 (&) 是您取消引用 * 时的结果。 跟踪引用 (%) 是您取消引用 ^ 时的结果。 只要有指向对象的 %，该对象就会一直保留在内存中。  
   
--   点 \(`.`\) 成员访问运算符用于访问对象的成员。  
+-   点 (`.`) 成员访问运算符用于访问对象的成员。  
   
--   跟踪引用对值类型和句柄 \(`String^`\) 有效。  
+-   跟踪引用对值类型和句柄 (`String^`) 有效。  
   
--   不能为跟踪引用赋 null 值或赋 `nullptr` 值。  根据需要，可以将一个跟踪引用重新分配给另一个有效对象，没有次数限制。  
+-   不能为跟踪引用赋 null 值或赋 `nullptr` 值。 根据需要，可以将一个跟踪引用重新分配给另一个有效对象，没有次数限制。  
   
 -   跟踪引用不能用作一元获取地址运算符。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- 跟踪引用的行为与标准 C\+\+ 引用相似，区别在于，% 是对引用计数的引用。  下面的代码段演示如何在 % 和 ^ 类型之间转换：  
+## <a name="windows-runtime"></a>Windows 运行时  
+ 跟踪引用的行为与标准 C++ 引用相似，区别在于，% 是对引用计数的引用。 下面的代码段演示如何在 % 和 ^ 类型之间转换：  
   
 ```  
 Foo^ spFoo = ref new Foo();  
@@ -69,32 +67,25 @@ ref class Foo sealed {};
     {  
         if (f != nullptr) { UseFooHelper(*f); }  
     }  
-  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- 在 C\+\+\/CLI 中，当你绑定到垃圾回收堆上 CLR 类型的对象时，可以使用句柄的跟踪引用。  
+## <a name="common-language-runtime"></a>公共语言运行时 
+ 在 C++/CLI 中，当你绑定到垃圾回收堆上 CLR 类型的对象时，可以使用句柄的跟踪引用。  
   
  在 CLR 中，只要垃圾回收器移动引用的对象，跟踪引用变量的值就会自动更新。  
   
- 只能在堆栈上声明跟踪引用。  跟踪引用不能成为类的成员。  
+ 只能在堆栈上声明跟踪引用。 跟踪引用不能成为类的成员。  
   
- 不可能对垃圾回收堆上的对象进行本机 C\+\+ 引用。  
+ 不可能对垃圾回收堆上的对象进行本机 C++ 引用。  
   
- 有关 C\+\+\/CLI 中跟踪引用的详细信息，请参阅：  
+ 有关 C++/CLI 中跟踪引用的详细信息，请参阅：  
   
--   [如何：在 C\+\+\/CLI 中使用跟踪引用](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)  
+-   [如何：在 C++/CLI 中使用跟踪引用](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
--   [如何：使用跟踪引用和值类型](../misc/how-to-use-tracking-references-and-value-types.md)  
-  
--   [如何：使用跟踪引用和内部指针](../misc/how-to-use-tracking-references-and-interior-pointers.md)  
-  
--   [如何：编写采用本机、值或引用参数的模板函数](../misc/how-to-write-template-functions-that-take-native-value-or-reference-parameters.md)  
-  
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 下面针对 C\+\+\/CLI 的示例演示如何搭配使用跟踪引用与本机和托管类型。  
+ 下面针对 C++/CLI 的示例演示如何搭配使用跟踪引用与本机和托管类型。  
   
 ```  
 // tracking_reference_1.cpp  
@@ -135,7 +126,7 @@ int main() {
   
  **示例**  
   
- 下面针对 C\+\+\/CLI 的示例演示如何将跟踪引用绑定到数组。  
+ 下面针对 C++/CLI 的示例演示如何将跟踪引用绑定到数组。  
   
 ```  
 // tracking_reference_2.cpp  
@@ -154,5 +145,7 @@ int main() {
   
  **输出**  
   
-  **21**  
- **222**
+```Output  
+21  
+222  
+```

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,22 @@ f1_keywords:
 - valarray/std::gslice::size
 - valarray/std::gslice::start
 - valarray/std::gslice::stride
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::gslice [C++]
 - std::gslice [C++], size
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6928fd3aa902b5ed0ab4e942950af76448e16e5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: bc5a8795d145832a476bb26bdc9928065e09ca64
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="gslice-class"></a>gslice 类
 对多维定义子集 valarray 的 valarray 的公共类。 如果 valarray 视为带任何元素的矩阵，则多维数组中提取切片矢量从多维数组。  
@@ -348,5 +345,4 @@ The strides of vaResult are:
   
 ## <a name="see-also"></a>另请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

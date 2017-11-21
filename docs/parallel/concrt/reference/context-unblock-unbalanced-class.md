@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - context_unblock_unbalanced
 - CONCRT/concurrency::context_unblock_unbalanced
 - CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
-dev_langs:
-- C++
-helpviewer_keywords:
-- context_unblock_unbalanced class
+dev_langs: C++
+helpviewer_keywords: context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 21c26658e347fa35209677e15ddcb48bbe8d1235
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 45121b3dba14e5672333debf364f5aea2e3e3cd5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced 类
 此类描述对 `Context` 对象的 `Block` 和 `Unblock` 方法的调用未恰当配对时引发的异常。  
@@ -60,7 +42,7 @@ class context_unblock_unbalanced : public std::exception;
 |[context_unblock_unbalanced](#ctor)|已重载。 构造 `context_unblock_unbalanced` 对象。|  
   
 ## <a name="remarks"></a>备注  
- 调用`Block`和`Unblock`方法`Context`对象必须始终正确配对。 并发运行时允许执行操作以按任意顺序发生。 例如，调用 `Block` 后可以调用 `Unblock`，反之亦然。 如果，例如，两次调用将引发此异常`Unblock`方法上所做某行中，`Context`不阻止的对象。  
+ 调用`Block`和`Unblock`方法`Context`对象必须始终正确配对。 并发运行时允许按任意顺序发生操作。 例如，调用 `Block` 后可以调用 `Unblock`，反之亦然。 如果，例如，两次调用将引发此异常`Unblock`方法所做在行中，`Context`未被阻止的对象。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `exception`  
@@ -68,7 +50,7 @@ class context_unblock_unbalanced : public std::exception;
  `context_unblock_unbalanced`  
   
 ## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -89,4 +71,3 @@ context_unblock_unbalanced() throw();
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间](concurrency-namespace.md)
-
