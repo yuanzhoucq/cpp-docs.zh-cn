@@ -1,28 +1,25 @@
 ---
-title: "下载、安装和设置 Linux 工作负载 | Microsoft 文档"
+title: "下载、安装和设置 Linux 工作负载 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d2e19ee03483dce82846e7e7bbb0ab103e01203f
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 338f1bd87dbaaf4caf6a788cd45b3d011bbf40f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="download-install-and-setup-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
-## <a name="visual-studio-setup"></a>Visual Studio 安装
+## <a name="visual-studio-setup"></a>Visual Studio 安装程序
 1. 启动 Visual Studio 安装程序并选择“**使用 C++ 的 Linux 开发**”工作负载。
 
    ![用于 Linux 开发的 Visual C++ 扩展](media/linuxworkload.png)
@@ -43,4 +40,3 @@ ms.lasthandoff: 10/09/2017
    `sudo service ssh start`
    
    这将启动该服务并在后台运行它，准备接受连接。
-

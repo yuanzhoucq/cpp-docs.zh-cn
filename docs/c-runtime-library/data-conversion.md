@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.conversions
-dev_langs:
-- C++
+f1_keywords: c.conversions
+dev_langs: C++
 helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
+ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a0d117cd042a685b2a208f96b31e0a8f09c84e83
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/27/2017
 ---
 # <a name="data-conversion"></a>数据转换
 这些例程可将数据从一种形式转换为另一种形式。 通常，这些例程比可能编写的转换执行速度更快。 每个以 `to` 前缀开头的例程都作为函数和宏实现。 请参阅[在函数和宏之间选择](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)，了解关于选择实现的信息。  
@@ -39,6 +35,7 @@ ms.lasthandoff: 10/09/2017
 |[atoi、_atoi_l、_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|将字符串转换为 `int`|  
 |[_atoi64、_atoi64_l、_wtoi64、_wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|将字符串转换为 `__int64`|  
 |[ato、_atol_l、_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|将字符串转换为 `long`|  
+|[c16rtomb、c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|将 UTF-16 或 UTF-32 字符转换为等效多字节字符|  
 |[_ecvt](../c-runtime-library/reference/ecvt.md)、[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|将 `double` 转换为指定长度的字符串|  
 |[_fcvt](../c-runtime-library/reference/fcvt.md)、[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|将 `double` 转换为小数点后具有指定位数的字符串|  
 |[_gcvt](../c-runtime-library/reference/gcvt.md)、[_gcvt_s](../c-runtime-library/reference/gcvt-s.md)|将 `double` 数字转换为字符串；将字符串存储于缓存分区中|  
@@ -52,6 +49,7 @@ ms.lasthandoff: 10/09/2017
 |[_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|将多字节字符转换为 1 字节平假名代码|  
 |[_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)|将多字节字符转换为 1 字节片假名代码|  
 |[_mbctombb、_mbctombb_l](../c-runtime-library/reference/mbctombb-mbctombb-l.md)|将 2 字节多字节字符转换为相应的 1 字节多字节字符|  
+|[mbrtoc16、mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|将多字节字符转换为等效 UTF-16 或 UTF-32 字符|  
 |[mbstowcs、_mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)、[mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|将多字节字符序列转换为对应的宽字符序列|  
 |[mbtowc、_mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|将多字节字符转换为对应的宽字符|  
 |[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|将字符串转换为 `double`|  
