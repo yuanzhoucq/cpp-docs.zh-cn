@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Windows 应用、本机桌面和服务器应用程序、在 Android 和 iOS 以及 Windows 上运行的跨平台库、在 .NET Framework 上运行的托管应用。  
@@ -64,8 +56,7 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  [Visual C++ 的新增功能](what-s-new-for-visual-cpp-in-visual-studio.md)  
  查明 Visual C++ 中的新增功能。  
 
- [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md) 
-了解 Visual Studio 2017 中 C++ 的符合性改进。 
+ [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)了解 Visual Studio 2017 中 C++ 的符合性改进。 
 
  [Visual C++ 语言一致性](visual-cpp-language-conformance.md)  
  Visual C ++ 中按功能列出的一致性状态列表。
@@ -83,7 +74,7 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  有关在 Visual Studio 2017 中移植代码并将项目升级到 Visual C++ 的指南，其中包括将 C++ 代码移植到 Windows 10 和通用 Windows 平台。  
   
  [Visual C++ 团队博客](http://blogs.msdn.com/b/vcblog/)  
- 详细了解 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)] 开发人员发布的新功能和最新信息。  
+ 详细了解 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]开发人员发布的新功能和最新信息。  
   
  [Visual Studio 下载](http://go.microsoft.com/fwlink/?LinkId=235233)  
  下载 Visual C++。  
@@ -97,7 +88,7 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  [Visual C++ 示例](visual-cpp-samples.md)  
  有关示例的信息。  
   
- [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=235296)  
+ [Visual Studio 社区](http://go.microsoft.com/fwlink/?LinkId=235296)  
  查明如何获取帮助、报告 Bug，并提出 Visual Studio 建议。  
   
 ## <a name="writing-applications-in-c"></a>使用 C++ 编写应用程序  
@@ -129,9 +120,9 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  要了解有关如何创建项目、使用源代码文件、链接到库、编译、调试、分析、部署等的信息，请参阅 [IDE 和开发工具](ide/ide-and-tools-for-visual-cpp-development.md)。  
   
 ## <a name="c-language-reference"></a>C++ 语言参考  
- 有关 C++ 语言的信息，请参阅 [C++ 语言参考](cpp/cpp-language-reference.md)。  
+ 有关 C++ 语言的信息，请参阅 [C++ Language Reference](cpp/cpp-language-reference.md)。  
   
- 有关 C++ 预处理器的信息，请参阅 [C/C++ 预处理器参考](preprocessor/c-cpp-preprocessor-reference.md)。  
+ 有关 C++ 预处理器的信息，请参阅 [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md)。  
   
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 库  
  以下各节提供了有关 Visual C++ 中不同 C++ 库的信息。  
@@ -160,7 +151,7 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  公共语言运行时 (CLR) 编程。  
   
- 另请参阅 [STL/CLR](dotnet/stl-clr-library-reference.md) 和 [C++ 支持库](dotnet/cpp-support-library.md)文档。  
+ 另请参阅 [STL/CLR](dotnet/stl-clr-library-reference.md) 和 [C++ Support Library](dotnet/cpp-support-library.md)文档。  
   
 ## <a name="other-c-libraries"></a>其他 Visual C++ 库  
  本节中包含指向未包括在 Visual Studio 中的库的链接，但可以下载该库并将其用于 Visual C++。  
@@ -185,4 +176,3 @@ Visual Studio 2017 编程语言和开发工具有助于开发本机通用 Window
  [C 语言参考](c-language/c-language-reference.md)   
  [C 运行时库参考](c-runtime-library/c-run-time-library-reference.md)   
  [编译器内部函数和程序集语言](intrinsics/compiler-intrinsics-and-assembly-language.md)
-

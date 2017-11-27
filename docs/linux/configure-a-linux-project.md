@@ -1,46 +1,43 @@
 ---
-title: "配置 Linux 项目 |Microsoft 文档"
+title: "在 Visual Studio 中配置 C++ Linux 项目 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 9a3239120ccdbc533c5063c50a523ad84774f81c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
+本主题介绍如何配置 Visual Studio Linux 项目。 有关 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
 ## <a name="general-settings"></a>常规设置
-可以使用 Visual Studio 为 Linux 项目配置各种选项。  若要查看这些选项，请选择“**项目 > 属性**”菜单，或在“**解决方案资源管理器**”中右键单击相应项目，然后从上下文菜单中选择“**属性**”：
+可以使用 Visual Studio 为 Linux 项目配置各种选项。  若要查看这些选项，请选择“项目”>“属性”菜单，或在“解决方案资源管理器”中右键单击相应项目，然后从上下文菜单中选择“属性”。 显示“常规”设置。
 
 ![常规配置](media/settings_general.png)
 
 默认情况下，可执行文件 (.out) 是使用该工具生成的。  若要生成静态或动态库，或使用现有生成文件，请使用“**配置类型**”选项。
 
 ## <a name="remote-settings"></a>远程设置
-若要更改与远程 Linux 计算机相关的设置，请选择“**远程设置**”项：
+要更改有关远程 Linux 计算机的设置，请配置“常规”设置中出现的远程选项：
 
-![远程设置](media/settings_remote.png)
+* 要更改目标 Linux 计算机，请使用“远程生成计算机”这一项。  这可以让你选择之前创建的连接之一。  若要创建新条目，请参阅[连接到远程 Linux 计算机](connect-to-your-remote-linux-computer.md)部分。
 
-* 若要更改目标 Linux 计算机，请使用“**目标计算机**”条目。  这可以让你选择之前创建的连接之一。  若要创建新条目，请参阅[连接到远程 Linux 计算机](connect-to-your-remote-linux-computer.md)部分。
+* “远程生成根目录”确定在远程 Linux 计算机上生成项目的根位置。  除非更改，否则该位置默认为 **~/projects**。
 
-* “**远程根目录**”确定在远程 Linux 计算机上生成项目的根位置。  除非更改，否则该位置默认为 **~/projects**。
+* “远程生成项目目录”是在远程 Linux 计算机上生成此特定项目的位置。  该位置默认为 **$(RemoteRootDir)/$(ProjectName)**，它将扩展到以当前项目命名的目录，在上面设置的根目录下。
 
-* “**远程项目目录**”是在远程 Linux 计算机上生成此特定项目的位置。  该位置默认为 **$(RemoteRootDir)/$(ProjectName)**，它将扩展到以当前项目命名的目录，在上面设置的根目录下。
-
-* 最后，若要更改默认的 C 和 C++ 编译器，或者用于生成项目的链接器和存档程序，请使用“**工具默认**”部分中的相应条目。  可以将这些条目设置为使用 GCC 的某个版本，例如甚至是使用 Clang 编译器。
+> [!NOTE]
+> 要更改默认的 C 和 C++ 编译器，或者用于生成项目的链接器和存档程序，请使用“C/C++”>“常规”部分和“链接器”>“常规”部分中的相应条目。  可以将这些条目设置为使用 GCC 的某个版本，例如甚至是使用 Clang 编译器。
 
 ## <a name="vc-directories"></a>VC++ 目录
 默认情况下，Visual Studio 不包括来自 Linux 计算机的任何系统级包含文件。  例如，Visual Studio 中不存在 **/usr/include** 目录中的项。  如需完整的 [IntelliSense](/visualstudio/ide/using-intellisense) 支持，你需要将这些文件复制到开发计算机上的某个位置，并将 Visual Studio 指向此位置。  一种选择是使用 scp（安全复制）来复制这些文件。  在 Windows 10 上，你可以使用 [Windows 上的 Bash](https://msdn.microsoft.com/commandline/wsl/about) 来运行 scp。  对于之前版本的 Windows，你可以使用类似 [PSCP（PuTTY 安全复制）](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)来操作。
@@ -55,7 +52,7 @@ ms.lasthandoff: 10/09/2017
 
 ![VC++ 目录](media/settings_directories.png)
 
-## <a name="copy-sources"></a>复制源文件
+## <a name="copy-sources"></a>复制源
 进行生成时，将开发 PC 上的源文件复制到 Linux 计算机并在那里进行编译。  默认情况下，Visual Studio 项目中的所有源文件都将复制到上述设置中设置的位置。  但是，也可以将其他源文件添加到此列表，或完全关闭复制源文件，这是生成文件项目的默认值。
 
 * “**要复制的源**”确定将哪些源文件复制到远程计算机。  在默认情况下，**@(SourcesToCopyRemotely)** 默认为项目中的所有源代码文件，但不包含任何资产/资源文件，如映像。
@@ -67,9 +64,13 @@ ms.lasthandoff: 10/09/2017
   `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>生成事件
-由于所有编译都是在远程计算机上进行的，因此，已将数个其他生成事件添加到“项目属性”中的“生成事件”部分。  这些是“**远程预生成事件**”、“**远程预链接事件**”和“**删除生成后事件**”，并且将在此过程中的各个步骤之前或之后在远程计算机上发生。
+由于所有编译都是在远程计算机上进行的，因此，已将数个其他生成事件添加到“项目属性”中的“生成事件”部分。  它们是“远程预生成事件”、“远程预链接事件”和“远程后期生成事件”，将在此过程中的各个步骤之前或之后在远程计算机上发生。
 
 ![生成事件](media/settings_buildevents.png)
 
 ## <a name="see-also"></a>另请参阅
-[使用项目属性](../ide/working-with-project-properties.md)
+[使用项目属性](../ide/working-with-project-properties.md)  
+[C++ 常规属性 (Linux C++)](../linux/prop-pages/general-linux.md)  
+[VC++ 目录 (Linux C++)](../linux/prop-pages/directories-linux.md)  
+[复制源项目属性 (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[生成事件属性 (Linux C++)](../linux/prop-pages/build-events-linux.md)

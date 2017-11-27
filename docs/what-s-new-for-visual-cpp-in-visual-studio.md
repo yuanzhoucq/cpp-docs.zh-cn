@@ -1,39 +1,22 @@
 ---
 title: "Visual Studio 中 Visual C++ 的新增功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 8/2/2017
+ms.date: 11/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
+ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9927726585572f69bdf121c4ed71e8b034fc1ed3
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: b90891be2ca726bb6cdd28d024cda68494e69af4
-ms.openlocfilehash: 9103da7fb4e10553d2558b15a24bc6a894dd1eff
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/15/2017
 ---
-
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新增功能
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 向 Visual C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中的 250 多个 bug 和已报告问题，其中很多是客户通过 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 提交的。 感谢你报告 bug！  有关整个 Visual Studio 中新增功能的详细信息，请访问 中的[新增功能[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/?linkid=834481)。
@@ -61,6 +44,8 @@ ms.lasthandoff: 08/15/2017
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 允许结合使用 /sdl 和 /await。 删除了协同程序的 /RTC 限制。 
 
+Visual Studio 2017 版本 15.5：Visual C++ 编译器支持 75% 的 C++17 功能，包括结构化绑定、`constexpr` lambda、`if constexpr`、内联变量、fold 表达式和将 `noexcept` 添加到类型系统。 这些功能在 /std:c++17 开关下可用。 /permissive- 符合性模式包括对两阶段名称查找的部分支持。 有关详细信息，请参阅 [Visual Studio 2017 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md)。 
+
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen、安全性、诊断和版本控制
 此版本在优化、代码生成、工具集版本控制和诊断方面做出了若干改进。 显著改进包括：  
 
@@ -73,9 +58,14 @@ ms.lasthandoff: 08/15/2017
 
 **Visual Studio 2017 版本 15.3**：对编译器中的诊断进行的其他改进。 有关详细信息，请参阅 [Visual Studio 2017 15.3.0 中的诊断改进](https://blogs.msdn.microsoft.com/vcblog/2017/07/21/diagnostic-improvements-in-vs2017-15-3-0/)。
 
-## <a name="c-libraries"></a>C++ 库
+Visual Studio 2017 版本 15.5：由于生成的代码质量更好，Visual C++ 运行时的性能继续改进。 这意味着可以只是重新编译代码，应用即可更快速地运行。 某些编译器的优化是全新的，例如条件标量存储的矢量化、将 sin(x) 和 cos(x) 调用合并到新的 sincos(x) 中以及从 SSA 优化器中消除多余的说明。 其他编译器优化是对现有功能的改进，例如条件表达式的矢量器启发、更佳的循环优化和浮动最小/最大 codegen。 链接器的新 /OPT:ICF 实现速度更快，可以使链接时间最多加快 9%，并且“增量链接”中有其他性能修复。 有关详细信息，请参阅 [/OPT（优化）](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations)和 [/INCREMENTAL（增量链接）](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally)。
 
-### <a name="standard-library-improvements"></a>标准库改进：
+Visual C++ 支持 Intel AVX-512，包括将 AVX-512 中的新函数引入位宽为 128 和 256 的寄存器的向量长度说明。
+
+通常使用 C++17 模式时，可以使用“/Zc:noexceptTypes-”开关转换到 `noexcept` 的 C++14 版本。 这样可以将源代码更新为符合 C++17，而无需在同时重写所有 `throw()` 代码。 有关详细信息，请参阅[动态异常规范删除和 noexcept](cpp-conformance-improvements-2017.md#noexcept_removal)。
+
+
+## <a name="c-standard-library-improvements"></a>C++ 标准库改进
 
 * 对 basic_string _ITERATOR_DEBUG_LEVEL != 0 诊断进行了小幅改进。 在字符串机制中进行 IDL 检查现在将报告触发该检查的特定行为。 例如，现在会收到“无法取消引用字符串迭代器，因为其已超出范围（例如末尾迭代器）”，而不是“字符串迭代器不可取消引用”。
 * 性能改进：basic_string::find(char) 重载仅调用 traits::find 一次。 以前会将此操作实施为针对长度为 1 的字符串的常规字符串搜索。
@@ -98,17 +88,17 @@ ms.lasthandoff: 08/15/2017
 * 将 std::string/std::wstring 的移动构造函数的性能提升了超过 3 倍
 * 有关标准库改进的完整列表，请参阅 [VS 2017 RTM 中的标准库修复](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/)。
 
-#### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 版本 15.3
+### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 版本 15.3
 
-##### <a name="c17-features"></a>C++17 功能 
-已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Visual C++ 语言一致性](visual-cpp-language-conformance.md)。
+#### <a name="c17-features"></a>C++17 功能 
+已经实现了几个其他的 C++17 功能。 有关详细信息，请参阅 [Visual C++ 语言一致性](cpp-conformance-improvements-2017.md#improvements_153)。
 
-##### <a name="other-new-features"></a>其他新增功能
+#### <a name="other-new-features"></a>其他新增功能
 * 实现了 P0602R0“变体和可选项应传播副本/移动琐碎事项”。
 * 现在，标准库正式允许通过 /GR- 禁用动态 RTTI。 dynamic_pointer_cast() 和 rethrow_if_nested() 本质上需要 dynamic_cast，因此标准库现在将它们在 /GR- 下标记为 =delete。
 * 即使已通过 /GR- 禁用了动态 RTTI，“静态 RTTI”（采用 typeid(SomeType) 形式）仍可用，并为多个标准库组件提供支持。 现在，标准库也支持通过 /D_HAS_STATIC_RTTI=0 禁用此功能。 请注意，这将禁用 std::any、std::function 的 target()、target_type() 和 shared_ptr 的 get_deleter()。
 
-##### <a name="correctness-fixes"></a>正确性修复
+#### <a name="correctness-fixes"></a>正确性修复
 * 现在，标准库容器将其 max_size() 绑定到numeric_limits\<difference_type\>::max() 而不是 size_type 的最大值。这确保来自该容器的迭代器上的 distance() 的结果在 distance() 的返回类型中是可表示的。
 * 修复了缺少的指定 auto_ptr\<void\>。
 * 如果 length 参数不是整数类型，则以前无法编译 meow_n() 算法；现在它们尝试将非整数长度转换为迭代器的 difference_type。
@@ -132,7 +122,7 @@ ms.lasthandoff: 08/15/2017
 * 改进了 std::list 的调试检查。 列表迭代器现在检查 operator->()，而且 list::unique() 现在将迭代器标记为无效。
 * 修复了元组中的 use-allocator 元编程。
 
-##### <a name="performancethroughput-fixes"></a>性能/吞吐量修复
+#### <a name="performancethroughput-fixes"></a>性能/吞吐量修复
 * 解决了与 noexcept 的交互，从而防止将 std::atomic 的实现内联到使用结构化异常处理 (SEH) 的函数中的问题。
 * 更改了标准库的内部 _Deallocate() 函数，以优化为较小的代码，从而允许将其内联到更多的位置。
 * 更改了 std::try_lock() 以使用包扩展，而不是递归。
@@ -155,7 +145,7 @@ ms.lasthandoff: 08/15/2017
 * 修复了在 64 位系统上使用 32 位分配器时的截断警告。
 * 通过重复使用缓冲区（如果可能），在非 POCMA 非等分配器情况下，std::vector 移动赋值现在更高效。
 
-##### <a name="readability-and-other-improvements"></a>可读性和其他改进
+#### <a name="readability-and-other-improvements"></a>可读性和其他改进
 * 标准库现在无条件地使用 C++14 constexpr，而不是有条件定义的宏。
 * 标准库现在内部使用别名模板。
 * 标准库现在内部使用 nullptr，而不是 nullptr_t{}。 （已根除 NULL 的内部使用。 正在逐渐清理 0 作为 null 的内部使用。）
@@ -165,8 +155,59 @@ ms.lasthandoff: 08/15/2017
 * 已将 SFINAE 提取到默认模板参数，与返回类型和函数参数类型相比，这可以减少混乱。
 * \<random\> 中的调试检查现在使用标准库的常用机制，而不是使用将 fputs() 调用到 stderr 的内部函数 _Rng_abort()。 保留此函数的实现以实现二进制兼容性，但在标准库的下一个二进制不兼容版本中已删除。 
 
+### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 版本 15.5
+已按照 C++17 标准添加、弃用或删除多个标准库功能。 有关详细信息，请参阅 [Visual Studio 中 C++ 的符合性改进](cpp-conformance-improvements-2017.md#improvements_155)。
+
+#### <a name="new-experimental-features"></a>新实验性功能
+* 以下并行算法的实验支持：
+  * all_of
+  * any_of
+  * for_each
+  * for_each_n
+  * none_of
+  * reduce
+  * replace
+  * replace_if
+  * sort
+* 添加了以下并行算法的签名，但暂不并行；分析显示仅移动或重新排列元素的并行算法并无益处：
+  * copy
+  * copy_n
+  * fill
+  * fill_n
+  * 移动
+  * reverse
+  * reverse_copy
+  * rotate
+  * rotate_copy
+  * swap_ranges
+
+#### <a name="performance-fixes-and-improvements"></a>性能修复和改进
+* basic_string\<char16_t> 现在加入 basic_string\<wchar_t> 加入的 memcmp/memcpy/etc. 优化。
+* 已暂时避开阻止函数指针被 Visual Studio 2015 Update 3 的“避免复制函数”工作内联公开的优化器限制，从而还原 lower_bound(iter, iter, function pointer) 的性能。
+* 将迭代器解包后再检查顺序，降低了向 includes、set_difference、set_symmetric_difference 和 set_union 的输入执行迭代器调试顺序验证的开销。
+* std::inplace_merge 现在跳过已就位的元素。
+* 构造 std::random_device 不再构造 std::string，然后再销毁它。
+* std::equal 和 std::partition 有跳转线程优化传递，可以免去一次迭代器比较。
+* 当 std::reverse 将指针传递到完全可复制的 T 时，它将分派至一个手写的矢量化实现。
+* 训练了 std::fill、std::equal 和 std::lexicographical_compare 如何分派到 std::byte 和 gsl::byte（以及其他 char-ish enums 和 enum 类）的 memset / memcmp。 请注意，std::copy 分派使用 is_trivially_copyable，因此不需要任何更改。
+* STL 不再包含仅有的行为是使类型不完全易损坏的空大括号析构函数。
+
+#### <a name="correctness-fixes"></a>正确性修复
+* 按标准的要求，std::partition 现在调用谓词 N 次而不是 N + 1 次。
+* 已在 15.5 中修复 15.3 中避免神奇的静态对象的尝试。
+* std::atomic\<T> 不再需要 T 默认可构造。
+* 启用了迭代器调试时，需耗用对数时间的堆算法不再进行“输入实际为堆”的线性时间断言。
+* 现在，仅为 C1XX 保护 __declspec(allocator)，防止出现来自不了解此 declspec 的 Clang 的警告。
+* basic_string::npos 现在可作为编译时常数提供。
+* std::allocator 现在正确处理过度对齐的类型的分配，在 C++17 模式中这些类型的对齐高于 max_align_t（除非由 /Zc:alignedNew- 禁用）。  例如，对于 SSE/AVX 说明，现在将正确对齐采用 16 或 32 字节对齐的对象的矢量。
+
+
+## <a name="other-libraries"></a>其他库
+
 ### <a name="open-source-library-support"></a>开源库支持  
 Vcpkg 是一款开源命令行工具，能极大简化在 Visual Studio 中获取和生成开源 C++ 静态库和 DLLS 的过程。 有关详细信息，请参阅 [vcpkg：用于 C++ 的程序包管理器 ](vcpkg.md)。
+
+**Visual Studio 2017 版本 15.5** 
 
 ### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0  
 CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细信息，请参阅 [CppRestSDK 2.9.0 is available on GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/)（GitHub 上提供了 CppRestSDK 2.9.0）。
@@ -190,8 +231,20 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 * Win32 项目现在位于“新建项目”对话框中的“Windows 桌面”类别下。
 * Windows 控制台和桌面应用程序模板现在可以在不显示向导的情况下创建项目。 现在，在相同的类别下有一个新的 Windows 桌面向导，显示和以前相同的选项。
 
-### <a name="intellisense"></a>Intellisense  
-* 现在默认使用全新的基于 SQLite 的数据库引擎。 这将提高数据库操作（如“转到定义”和“查找所有引用”）的速度，并将极大地缩短初始解决方案分析时间。 设置已移至“工具”>“选项”>“文本编辑器”>“C/C++”>“高级”下（之前位于...“C/C++”>“实验”下）。
+**Visual Studio 2017 版本 15.5**：多种使用 IntelliSense 引擎重构和导航代码的 C++ 操作运行速度更快。 以下数字基于有 3500 个项目的 Visual Studio Chromium 解决方案： 
+|||
+|-|-|
+|功能|性能改进| 
+|重命名|5.3 倍| 
+|更改签名 |4.5 倍| 
+|查找所有引用|4.7 倍| 
+
+ 
+ 
+C++ 现在支持通过“Ctrl+单击”转到定义，使利用鼠标导航到定义更轻松。 Productivity Power Tools 包的结构可视化工具现在也默认包含在产品中。
+
+## <a name="intellisense"></a>IntelliSense  
+现在默认使用全新的基于 SQLite 的数据库引擎。 这将提高数据库操作（如“转到定义”和“查找所有引用”）的速度，并将极大地缩短初始解决方案分析时间。 设置已移至“工具 | 选项 | 文本编辑器 | C/C++ | 高级”（之前位于“...C/C++ | 实验”下）。
 
 * 我们改进了不使用预编译标头的项目和文件的 IntelliSense 性能 - 为当前文件中的标头创建自动预编译标头。
 
@@ -218,8 +271,8 @@ CPPRestSDK（C++ 的跨平台 Web API）已更新到版本 2.9.0。 有关详细
 其中一些功能与其他语言通用，有些则特定于 C++。 有关这些新增功能的详细信息，请参阅[发布 Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)。 
 
 
-### <a name="support-for-non-msbuild-projects-with-open-folder"></a>支持包含“打开文件夹”的非 MSBuild 项目
-Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得新手使用 Visual Studio 变得异常简单，即使你的项目不是基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](ide/non-msbuild-projects.md)。
+## <a name="non-msbuild-projects-with-open-folder"></a>包含“打开文件夹”的非 MSBuild 项目
+Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含源代码的文件夹中进行编码、生成和调试，而无需创建任何解决方案或项目。 这使得使用 Visual Studio 变得更简单，即使你的项目不基于 MSBuild。 使用“打开文件夹”，可获得 Visual Studio 为 MSBuild 所提供的强大代码理解、编辑、生成和调试功能。 有关详细信息，请参阅 [Visual C++ 中的“打开文件夹”项目](ide/non-msbuild-projects.md)。
 
 * 改进了“打开文件夹”体验。 可通过以下 json 文件自定义体验：
   - 使用 CppProperties.json 可自定义 IntelliSense 和浏览体验。
@@ -228,10 +281,10 @@ Visual Studio 2017 引入了“打开文件夹”功能，使得能够在包含�
 
 **Visual Studio 2017 版本15.3**： 
 * 改进了对备用编译器和生成环境（如 MinGW 和 Cygwin）的支持。 有关详细信息，请参阅[将 MinGW 和 Cygwin 与 Visual C++ 和“打开文件夹”结合使用](https://blogs.msdn.microsoft.com/vcblog/2017/07/19/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/)。
-* 添加了支持，以定义“CppProperties.json”和“CMakeSettings.json”中的全局和特定于配置的环境变量。 “launch.vs.json”中定义的调试配置和“tasks.vs.json”中的任务可以使用这些环境变量。
+* 添加了支持，以定义“CppProperties.json”和“CMakeSettings.json”中的全局和特定于配置的环境变量。 “launch.vs.json”中定义的调试配置和“tasks.vs.json”中的任务可以使用这些环境变量。 有关详细信息，请参阅[Customizing your Environment with Visual C++ and Open Folder](https://blogs.msdn.microsoft.com/vcblog/2017/11/02/customizing-your-environment-with-visual-c-and-open-folder/)（使用 Visual C++ 和“打开文件夹”自定义环境）。
 * 改进了对 CMake 的 Ninja 生成器的支持，包括轻松定位 64 位平台的能力。
 
-### <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
+## <a name="cmake-support-via-open-folder"></a>通过“打开文件夹”支持 CMake
 Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情况下使用 CMake 项目。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)。 使用“打开文件夹”打开 CMake 项目时会自动配置用于 C++ 编辑、构建和调试的环境。
 
 * 无需在根文件夹中创建 CppProperties.json 文件，C++ IntelliSense 便可正常工作。 此外，我们增添了一个新的下拉列表，允许用户在分别由 CMake 和 CppProperties.json 文件提供的配置之间轻松切换。
@@ -240,49 +293,65 @@ Visual Studio 2017 支持在不转换为 MSBuild 项目文件 (.vcxproj) 的情�
 
   ![Cmake 打开文件夹](media/cmake_cpp.png "CMake 打开文件夹")
 
-**Visual Studio 2017 版本 15.3**：添加了对 CMake Ninja 生成器的支持。 有关详细信息，请参阅 [Visual Studio 中的 CMake 支持 – 2017 15.3 Preview 2 中的新增功能](https://blogs.msdn.microsoft.com/vcblog/2017/06/14/cmake-support-in-visual-studio-whats-new-in-2017-15-3-preview-2/)。 
+**Visual Studio 2017 版本 15.3**：添加了对 CMake Ninja 生成器的支持。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)。  
 
-## <a name="c-installation-workloads"></a>C++ 安装工作负荷 
+**Visual Studio 2017 版本 15.5**：添加了对导入现有 CMake 缓存的支持。 有关详细信息，请参阅 [Visual C++ 中的 CMake 项目](ide/cmake-tools-for-visual-cpp.md)。  
 
-### <a name="windows-desktop-development-with-c"></a>使用 C++ 的 Windows 桌面开发：  
+## <a name="windows-desktop-development-with-c"></a>使用 C++ 的 Windows 桌面开发  
 现提供原始 C++ 工作流的更细化的安装体验。 我们添加了可选组件，使你能够仅安装所需工具。  请注意，在安装程序用户界面中列出的组件的安装大小的指示并不准确，而且它低估了整个大小。
 
 若要在 C++ 桌面工作负载中成功创建 Win32 项目，则必须安装工具集和 Windows SDK。 安装推荐（选中）的组件“VC++ 2017 v141 工具集（x86、x64）”和“Windows 10 SDK (10.0.14393)”可以确保正常运行。 如果未安装所需工具，将无法成功创建项目，且向导将挂起。
 
-### <a name="linux-development-with-c"></a>使用 C++ 的 Linux 开发：  
+**Visual Studio 2017 版本 15.5**：Visual C++ 生成工具（以前作为单独的产品提供）现在作为工作负荷包括在 Visual Studio 安装程序中。 此工作负荷仅安装生成 C++ 项目所需的工具，而不安装 Visual Studio IDE。 包括 v140 和 v141 工具集。 v141 工具集包含 Visual Studio 2015 版本 15.5 中的最近改进。 有关详细信息，请参阅 [Visual Studio Build Tools now include the VS2017 and VS2015 MSVC Toolsets](https://blogs.msdn.microsoft.com/vcblog/2017/11/02/visual-studio-build-tools-now-include-the-vs2017-and-vs2015-msvc-toolsets/)（Visual Studio 生成工具现在包含 VS2017 和 VS2015 MSVC 工具集）。
+
+## <a name="linux-development-with-c"></a>使用 C++ 的 Linux 开发  
 热门扩展“[用于 Linux 开发的 Visual C++](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e)”现已纳入 Visual Studio。 此安装提供开发和调试运行在 Linux 环境中的 C++ 应用程序所需的一切信息。  
 
 **Visual Studio 2017 版本 15.2**：跨平台代码共享和类型可视化的改进。 有关详细信息，请参阅[跨平台代码共享和类型可视化的 Linux C++ 改进](https://blogs.msdn.microsoft.com/vcblog/2017/05/10/linux-cross-platform-and-type-visualization/)。
 
-### <a name="game-development-with-c"></a>使用 C++ 的游戏开发：  
+**Visual Studio 2017 版本 15.5**：
+1. Linux 工作负荷添加了对 rsync 作为 sftp 的替代方法将文件同步到远程 Linux 计算机的支持。  
+2. 添加了对针对 ARM 微控制器的交叉编译的支持。 要在安装中启用此支持，请选择使用 C++ 工作负荷的 Linux 开发，并选择“嵌入和 IoT 开发”选项。 此操作将 ARM GCC 交叉编译工具和 Make 添加到你的安装。 有关详细信息，请参阅 [ARM GCC Cross Compilation in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/10/23/arm-gcc-cross-compilation-in-visual-studio/)（Visual Studio 中的 ARM GCC 交叉编译）。
+3. 添加了对 CMake 的支持。 现在即可处理现有的 CMake 基本代码，无需将其转换为 Visual Studio 项目。 有关详细信息，请参阅[配置 Linux CMake 项目](linux/cmake-linux-project.md)。
+4. 添加了对运行远程任务的支持。 此功能允许在 Visual Studio 连接管理器定义的远程系统上运行任意命令。 远程任务还提供将文件复制到远程系统的功能。 
+
+
+## <a name="game-development-with-c"></a>使用 C++ 的游戏开发  
 以 DirectX 或 Cocos2d 为后盾，利用 C++ 的强大功能构建专业游戏。  
 
-### <a name="mobile-development-with-c-android-and-ios"></a>使用 C++ 的移动开发（Android 和 iOS）：  
+## <a name="mobile-development-with-c-android-and-ios"></a>使用 C++ 的移动开发（Android 和 iOS）  
 现可利用 Visual Studio 创建和调试面向 Android 和 iOS 的移动应用。  
 
-### <a name="universal-windows-apps"></a>通用 Windows 应用：  
+## <a name="universal-windows-apps"></a>通用 Windows 应用  
 C++ 是通用 Windows 应用工作负荷的可选组件。  当前必须手动完成 C++ 项目的升级。 如果在 Visual Studio 2017 中打开面向 v140 的 UWP 项目，且如果没有安装 Visual Studio 2015，则需要在项目属性页中选择 v141 平台工具集。
 
-## <a name="new-options-for-c-on-universal-windows-platform"></a>通用 Windows 平台上 C++ 的新选项
+## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新选项
 现在，你拥有了为通用 Windows 平台和 Windows 应用商店编写和打包 C++ 应用程序的新选项：可使用 Desktop App Converter 打包现有的桌面应用程序，用于通过 Windows 应用商店部署。 有关详细信息，请参阅 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)（在 Centennial 项目中使用 Visual C++ 运行时）和 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)（使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)）。
 
-在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。
+**Visual Studio 2017 版本 15.5**  
+添加了“Windows 应用程序打包项目”项目模板，支持使用桌面桥打包桌面应用程序。 可在“文件| 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。
 
+在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它使你可以使用任何符合兼容的 C++ 编译器创作和使用 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [GitHub 上提供的 C++/WinR](https://moderncpp.com/)。 
+
+自 [Windows SDK Insider Preview 的 内部版本 17025](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97) 起，C++/WinRT 包含在 Windows SDK 中。 有关详细信息，请参阅 [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)（C++/WinRT 现在包含在 Windows SDK 中）。
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 平台工具集
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 附带的 Clang/C2 工具集现在支持 /bigobj 开关，这对生成大项目来说至关重要。 它还在编译器的前端和后端进行了多项重要的 bug 修复。
 
 ## <a name="c-code-analysis"></a>C++ 代码分析
 
-用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 只需在项目“属性”页的“代码分析扩展”对话框中启动检查器，即会在运行代码分析时包含扩展。 
+用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 只需在项目“属性”页的“代码分析扩展”对话框中启动检查器，即会在运行代码分析时包含扩展。 有关详细信息，请参阅[使用 C++ 核心准则检查器](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 属性页") 
 
-**Visual Studio 2017 版本 15.3**：添加了对与资源管理相关的规则的支持。 有关详细信息，请参阅[使用 C++ 核心准则检查器](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
+**Visual Studio 2017 版本 15.3**：添加了对与资源管理相关的规则的支持。 
+
+**Visual Studio 2017 版本 15.5**：新的 C++ Core Guidelines 检查包含智能指针正确性、全局初始化表达式的正确使用和标记构造（如 `goto` 和错误转换）的使用。  
+15.3 中可能存在的一些警告编号在 15.5 中不再可用。 这些警告被更具体的检查替换。
 
 ## <a name="unit-testing"></a>单元测试
 
-新的 Visual Studio 扩展使用户可以直接在 Visual Studio 中基于 Google Test 和 Boost.Test 运行单元测试。 有关详细信息，请参阅 [C++ 单元测试更新：宣布 Boost.Test 适配器和改进的 Google Test 支持](https://blogs.msdn.microsoft.com/vcblog/2017/08/04/c-unit-testing-updates-announcing-boost-test-adapter-and-improved-google-test-support/)。
+**Visual Studio 2017 版本 15.5**：Google Test Adapter 和 Boost.Test Adapter 现在作为“使用 C++ 的桌面开发”的组件提供，并与“测试资源管理器”集成。 添加了对 Cmake 项目（使用“打开文件夹”）的 CTest 支持，虽然与“测试资源管理器”的完全集成尚不可用。 有关详细信息，请参阅[编写 C/C++ 单元测试](/visualstudio/test/writing-unit-tests-for-c-cpp)。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 图形诊断
 
@@ -304,17 +373,17 @@ Visual Studio 图形诊断是一套工具，用于记录、分析 Direct3D 应�
 
   ![资源历史记录更改](media/resource-history-change.png)
 
-  请注意，如果在捕获帧时启用了完整调用堆栈捕获（“Visual Studio”>“工具”>“选项”>“图形诊断”），则可在你的 Visual Studio 项目中对每个更改事件的上下文进行快速推导和检查。  
+  请注意，如果在捕获帧时启用了完整调用堆栈捕获（“Visual Studio | 工具 | 选项 | 图形诊断”），则可在 Visual Studio 项目中对每个更改事件的上下文进行快速推导和检查。  
 
-* **API 统计信息**：在帧中查看 API 使用情况的高级摘要。 这样可以轻松发现那些你未意识到正在调用的，或调用太多次的调用。 可在 Visual Studio 图形分析器中通过“视图”>“API 统计信息”使用此窗口。
+* **API 统计信息**：在帧中查看 API 使用情况的高级摘要。 这样可以轻松发现那些你未意识到正在调用的，或调用太多次的调用。 可在 Visual Studio 图形分析器中通过“视图 | API 统计信息”使用此窗口。
 
   ![API 统计信息](media/api-stats.png)
 
-* **内存统计信息：**查看驱动程序为你在帧中所创建的资源分配了多少内存。 可在 Visual Studio 图形分析器中通过“视图”>“内存统计信息”使用此窗口。 通过右键单击并选择“全部复制”，可将数据复制到 CSV 文件，以便在电子表格中查看。
+* **内存统计信息：**查看驱动程序为你在帧中所创建的资源分配了多少内存。 可在“Visual Studio 图形分析器”中通过“视图 | 内存统计信息”使用此窗口。 通过右键单击并选择“全部复制”，可将数据复制到 CSV 文件，以便在电子表格中查看。
 
   ![内存统计信息](media/memory-stats.png)
  
-* **框架验证：**新的错误和警告列表提供了一种简单的方式，以导航到基于潜在问题（由 Direct3D 调试层检测）的事件列表。 在 Visual Studio 图形分析器中单击“视图”->“帧验证”，可打开该窗口。 然后单击“运行验证”，以开始分析。 这可能耗费数分钟时间，具体取决于帧的复杂性。
+* **框架验证：**新的错误和警告列表提供了一种简单的方式，以导航到基于潜在问题（由 Direct3D 调试层检测）的事件列表。 在 Visual Studio 图形分析器中单击“视图 | 帧验证”，可打开该窗口。 然后单击“运行验证”，开始分析。 这可能耗费数分钟时间，具体取决于帧的复杂性。
 
   ![帧验证](media/frame-validation.png)
  
@@ -330,6 +399,4 @@ Visual Studio 图形诊断是一套工具，用于记录、分析 Direct3D 应�
 
   ![GPU 视图](media/gpu-view.png) 
 
-
- 
 

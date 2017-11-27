@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,37 +15,19 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 apitype: DLLExport
-f1_keywords:
-- scanf
-dev_langs:
-- C++
-helpviewer_keywords:
-- scanf function, width specification
+f1_keywords: scanf
+dev_langs: C++
+helpviewer_keywords: scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 922405b111404e5a11052fd1aba8d2729e254714
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scanf-width-specification"></a>scanf 宽度规范
 此信息适用于解释 `scanf` 系列函数中的格式字符串，包括 `scanf_s` 等安全版本。 这些函数通常假定将输入流划分为标记序列。 标记通过空白字符（空格、制表符或换行）进行分隔，或者在数值类型的情况下，按无法转换为数值文本的第一个字符所示由数值数据类型的自然末尾进行分隔。 然而，宽度规范可能用于在标记的自然末尾之前停止输入分析。  
@@ -107,7 +88,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  请注意，**%[a-z]** 和 **%[z-a]** 解释为与 **%[abcde...z]** 等同。 这是一个常见的 `scanf` 函数扩展，但请注意，ANSI 标准并不需要此扩展。  
   
 ## <a name="reading-unterminated-strings"></a>读取未终止的字符串  
- 若要在不保存终止空字符 ('\0') 的情况下保存字符串，请使用规范 `%`*n***c**，其中 *n* 是十进制整数。 在这种情况下，**c** 类型字符表示自变量指向字符数组。 接下来的 *n* 字符从输入流读取到指定位置，不附加任何空字符 ('\0')。 如果 *n* 未指定，则其默认值为 1。  
+ 若要在不保存终止空字符 ('\0') 的情况下保存字符串，请使用规范 `%`nc，其中 n 是十进制整数。 在这种情况下，**c** 类型字符表示自变量指向字符数组。 接下来的 n 个字符从输入流读取到指定位置，不附加任何空字符 ('\0')。 如果 n 未指定，则其默认值为 1。  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>当 scanf 停止读取字段时  
  `scanf` 函数逐个字符地扫描每个输入字段。 由于各种原因，可能在达到空格字符之前停止读取特定输入字段：  
