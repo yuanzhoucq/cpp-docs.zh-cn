@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- system_error/std::system_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- system_error class
+f1_keywords: system_error/std::system_error
+dev_langs: C++
+helpviewer_keywords: system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 975fcf228191695e419df2b04bd5578e15924f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 053dc577c884be5ef0878d0caf82107ecaf21239
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="systemerror-class"></a>system_error 类
 表示为报告低级别系统错误而引发的所有异常的基类。  
@@ -54,7 +49,7 @@ const error_code& code() const throw();
 ```  
   
 ## <a name="remarks"></a>备注  
- 由 [](../standard-library/exception-class.md) 类中的 `what` 返回的值根据 `_Message` 和 [error_code](../standard-library/error-code-class.md)（`code` 或 `error_code(_Errval, _Errcat)`）进行构造。  
+ 在类 [异常](../standard-library/exception-class.md) 中返回 `what` 的值是由 `_Message` 和 [error_code](../standard-library/error-code-class.md) 类型（`code`或`error_code(_Errval, _Errcat)`）的存储对象构成的。  
   
  成员函数 `code` 返回存储的 [error_code](../standard-library/error-code-class.md) 对象。  
   
@@ -65,5 +60,4 @@ const error_code& code() const throw();
   
 ## <a name="see-also"></a>另请参阅  
  [<system_error>](../standard-library/system-error.md)
-
 

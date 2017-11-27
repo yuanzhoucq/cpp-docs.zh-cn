@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -44,38 +43,21 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator::supports_double_precision
 - AMPRT/Concurrency::accelerator::supports_limited_double_precision
 - AMPRT/Concurrency::accelerator::version
-dev_langs:
-- C++
-helpviewer_keywords:
-- accelerator class
+dev_langs: C++
+helpviewer_keywords: accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d1e68b3533452ec1e47053086c59654337c995fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 5bdb3d081e9f7f1c2333d8bc577401b95ab0f858
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="accelerator-class"></a>accelerator 类
-加速器是针对数据并行计算进行了优化的硬件功能。 加速器可能是设备连接到 PCIe 总线 （如 GPU)，或者它可能在主 CPU 上设置的扩展的指令。  
+加速器是针对数据并行计算进行了优化的硬件功能。 加速器可能是设备连接到 PCIe 总线 （如 GPU)，也可能是在主要的 CPU 上设置的扩展的指令。  
   
 ## <a name="syntax"></a>语法  
   
@@ -94,24 +76,24 @@ class accelerator;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[create_view](#create_view)|创建并返回`accelerator_view`在此快捷键上的对象。|  
-|[get_all](#get_all)|返回一个向量`accelerator`这些对象表示所有可用的快捷键。|  
-|[get_auto_selection_view](#get_auto_selection_view)|返回自动选取`accelerator_view`。|  
+|[get_all](#get_all)|返回向量的`accelerator`表示所有可用的快捷键的对象。|  
+|[get_auto_selection_view](#get_auto_selection_view)|返回自动选择`accelerator_view`。|  
 |[get_dedicated_memory](#get_dedicated_memory)|返回的专用的内存`accelerator`，以千字节为单位。|  
-|[get_default_cpu_access_type](#get_default_cpu_access_type)|返回的默认[access_type](concurrency-namespace-enums-amp.md#access_type)为在此快捷键上创建的缓冲区。|  
-|[get_default_view](#get_default_view)|返回的默认`accelerator_view`与关联的对象`accelerator`。|  
+|[get_default_cpu_access_type](#get_default_cpu_access_type)|返回默认值[access_type](concurrency-namespace-enums-amp.md#access_type)在此快捷键上创建的缓冲区。|  
+|[get_default_view](#get_default_view)|返回默认值`accelerator_view`与关联的对象`accelerator`。|  
 |[get_description](#get_description)|返回的简短说明`accelerator`设备。|  
-|[get_device_path](#get_device_path)|返回该设备的路径。|  
-|[get_has_display](#get_has_display)|确定是否`accelerator`附加到一个显示器。|  
+|[get_device_path](#get_device_path)|返回设备的路径。|  
+|[get_has_display](#get_has_display)|确定是否`accelerator`附加到的显示器。|  
 |[get_is_debug](#get_is_debug)|确定是否`accelerator`为广泛的错误报告启用了调试层。|  
 |[get_is_emulated](#get_is_emulated)|确定是否`accelerator`被模拟。|  
 |[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|确定是否`accelerator`支持共享内存|  
-|[get_supports_double_precision](#get_supports_double_precision)|确定是否`accelerator`附加到一个显示器。|  
+|[get_supports_double_precision](#get_supports_double_precision)|确定是否`accelerator`附加到的显示器。|  
 |[get_supports_limited_double_precision](#get_supports_limited_double_precision)|确定是否`accelerator`提供有限的双精度算术的支持。|  
 |[get_version](#get_version)|返回的版本`accelerator`。|  
-|[set_default](#set_default)|返回默认快捷键的路径。|  
+|[set_default](#set_default)|返回的默认快捷键的路径。|  
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|设置默认 CPU [access_type](concurrency-namespace-enums-amp.md#access_type)数组和对此进行隐式的内存分配`accelerator`。|  
   
 ### <a name="public-operators"></a>公共运算符  
@@ -119,7 +101,7 @@ class accelerator;
 |名称|描述|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|比较此`accelerator`与另一个对象，并返回`false`如果它们是相同的; 否则，返回`true`。|  
-|[operator=](#operator_eq)|将指定的内容复制`accelerator`对象传递给它。|  
+|[operator=](#operator_eq)|将指定的内容复制`accelerator`于此对象。|  
 |[operator==](#operator_eq_eq)|比较此`accelerator`与另一个对象，并返回`true`如果它们是相同的; 否则，返回`false`。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
@@ -128,35 +110,35 @@ class accelerator;
 |----------|-----------------|  
 |[cpu_accelerator](#cpu_accelerator)|获取一个字符串常数 CPU `accelerator`。|  
 |[dedicated_memory](#dedicated_memory)|获取专用的内存`accelerator`，以千字节为单位。|  
-|[default_accelerator](#default_accelerator)|获取一个字符串常量默认`accelerator`。|  
+|[default_accelerator](#default_accelerator)|获取默认值的字符串常量`accelerator`。|  
 |[default_cpu_access_type](#default_cpu_access_type)|获取或设置默认 CPU [access_type](concurrency-namespace-enums-amp.md#access_type)数组和对此进行隐式的内存分配`accelerator`。|  
 |[default_view](#default_view)|获取默认`accelerator_view`与关联的对象`accelerator`。|  
-|[说明](#description)|获取的简短说明`accelerator`设备。|  
+|[description](#description)|获取的简短说明`accelerator`设备。|  
 |[device_path](#device_path)|获取设备的路径。|  
 |[direct3d_ref](#direct3d_ref)|获取 Direct3D 引用的字符串常量`accelerator`。|  
-|[direct3d_warp](#direct3d_warp)|获取的字符串常量，`accelerator`对象，您可将用于在使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码。|  
-|[has_display](#has_display)|获取一个布尔值，该值指示是否`accelerator`附加到一个显示器。|  
+|[direct3d_warp](#direct3d_warp)|获取的字符串常数`accelerator`对象，你可将用于在使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码。|  
+|[has_display](#has_display)|获取一个布尔值，该值指示是否`accelerator`附加到的显示器。|  
 |[is_debug](#is_debug)|指示是否`accelerator`为广泛的错误报告启用了调试层。|  
 |[is_emulated](#is_emulated)|指示是否`accelerator`被模拟。|  
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|指示是否`accelerator`支持共享内存。|  
 |[supports_double_precision](#supports_double_precision)|指示快捷键是否支持双精度算术。|  
-|[supports_limited_double_precision](#supports_limited_double_precision)|指示快捷键是否限制了对双精度算术的支持。|  
+|[supports_limited_double_precision](#supports_limited_double_precision)|指示快捷键是否提供有限的双精度算术的支持。|  
 |[version](#version)|获取的版本`accelerator`。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `accelerator`  
   
 ## <a name="remarks"></a>备注  
- 加速器是针对数据并行计算进行了优化的硬件功能。 加速器通常是离散的 GPU，但它也可以是虚拟的宿主端实体，如一种变形 （的 CPU 端设备通过 SSE 指令加速） 或 CPU 自身的 DirectX REF 设备。  
+ 加速器是针对数据并行计算进行了优化的硬件功能。 加速器通常离散 GPU，但它也可以是虚拟的主机端实体，如 DirectX REF 设备，一种变形 （的 CPU 端设备加速通过 SSE 指令） 或 CPU 本身。  
   
- 您可以构造`accelerator`通过枚举可用的设备，或通过获取默认的设备、 引用设备或 WARP 设备对象。  
+ 您可以构造`accelerator`对象通过枚举可用的设备，或获取默认设备、 引用设备或 WARP 设备。  
   
 ## <a name="requirements"></a>要求  
- **标头︰** amprt.h  
+ **标头：** amprt.h  
   
  **命名空间：** 并发  
   
-##  <a name="dtor"></a></a> ~ 加速器 
+##  <a name="dtor"></a></a> ~ 快捷键 
 
  销毁`accelerator`对象。  
   
@@ -166,9 +148,9 @@ class accelerator;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="ctor"></a>加速器 
+##  <a name="ctor"></a>快捷键 
 
- 新实例初始化[accelerator 类](accelerator-class.md)。  
+ 初始化的新实例[accelerator 类](accelerator-class.md)。  
   
 ```  
 accelerator();
@@ -185,7 +167,7 @@ accelerator(const accelerator& _Other);
  物理设备的路径。  
   
  `_Other`  
- 若要复制的快捷键。  
+ 要复制的快捷键。  
   
 ##  <a name="cpu_accelerator"></a>cpu_accelerator 
 
@@ -197,7 +179,7 @@ static const wchar_t cpu_accelerator[];
   
 ##  <a name="create_view"></a>create_view 
 
- 使用指定的排队模式，在快捷键上创建并返回一个 `accelerator_view` 对象。 如果未指定排队模式，新`accelerator_view`使用[queuing_mode:: immediate](concurrency-namespace-enums-amp.md#queuing_mode)排队模式。  
+ 使用指定的排队模式，在快捷键上创建并返回一个 `accelerator_view` 对象。 未指定排队模式时，新`accelerator_view`使用[queuing_mode:: immediate](concurrency-namespace-enums-amp.md#queuing_mode)排队模式。  
   
 ```  
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
@@ -220,7 +202,7 @@ __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
   
 ##  <a name="default_accelerator"></a>default_accelerator 
 
- 获取一个字符串常量默认`accelerator`。  
+ 获取默认值的字符串常量`accelerator`。  
   
 ```  
 static const wchar_t default_accelerator[];  
@@ -228,7 +210,7 @@ static const wchar_t default_accelerator[];
   
 ##  <a name="default_cpu_access_type"></a>default_cpu_access_type 
 
- 默认值 cpu [access_type](concurrency-namespace-enums-amp.md#access_type)数组和此内容进行隐式的内存分配`accelerator`。  
+ 默认值 cpu [access_type](concurrency-namespace-enums-amp.md#access_type)数组和隐式的内存分配对此这`accelerator`。  
   
 ```  
 __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;  
@@ -236,7 +218,7 @@ __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_a
   
 ##  <a name="default_view"></a>default_view 
 
- 获取与之关联的默认快捷键视图`accelerator`。  
+ 获取与关联的默认快捷键视图`accelerator`。  
   
 ```  
 __declspec(property(get= get_default_view)) accelerator_view default_view;  
@@ -268,7 +250,7 @@ static const wchar_t direct3d_ref[];
   
 ##  <a name="direct3d_warp"></a>direct3d_warp 
 
- 获取的字符串常量，`accelerator`对象，您可将用于使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码。  
+ 获取的字符串常数`accelerator`对象，你可将用于在使用流式处理 SIMD 扩展 (SSE) 的多核 Cpu 上执行 c + + AMP 代码。  
   
 ```  
 static const wchar_t direct3d_warp[];  
@@ -276,7 +258,7 @@ static const wchar_t direct3d_warp[];
   
 ##  <a name="get_all"></a>get_all 
 
- 返回一个向量`accelerator`这些对象表示所有可用的快捷键。  
+ 返回向量的`accelerator`表示所有可用的快捷键的对象。  
   
 ```  
 static inline std::vector<accelerator> get_all();
@@ -287,7 +269,7 @@ static inline std::vector<accelerator> get_all();
   
 ##  <a name="get_auto_selection_view"></a>get_auto_selection_view 
 
- 返回自动选择 accelerator_view，当指定为用于执行要由运行时自动选择的 parallel_for_each 内核目标 accelerator_view parallel_for_each 目标结果。 用于其他目的，此方法返回 accelerator_view 等同于默认快捷键默认 accelerator_view  
+ 返回自动选择 accelerator_view，当指定为用于执行要由运行时自动选择的 parallel_for_each 内核目标 accelerator_view 中的 parallel_for_each 目标结果。 对于所有其他而言，此方法返回 accelerator_view 是默认快捷键默认 accelerator_view 相同  
   
 ```  
 static accelerator_view __cdecl get_auto_selection_view();
@@ -324,7 +306,7 @@ access_type get_default_cpu_access_type() const;
   
 ##  <a name="get_default_view"></a>get_default_view 
 
- 返回的默认`accelerator_view`与关联的对象`accelerator`。  
+ 返回默认值`accelerator_view`与关联的对象`accelerator`。  
   
 ```  
 accelerator_view get_default_view() const;
@@ -350,7 +332,7 @@ std::wstring get_description() const;
   
 ##  <a name="get_device_path"></a>get_device_path 
 
- 返回快捷键的路径。 该路径在系统上是唯一的。  
+ 返回的快捷键的路径。 该路径在系统上是唯一的。  
   
 ```  
 std::wstring get_device_path() const;
@@ -363,7 +345,7 @@ std::wstring get_device_path() const;
   
 ##  <a name="get_has_display"></a>get_has_display 
 
- 返回一个布尔值，该值指示是否`accelerator`可以输出到显示器。  
+ 返回一个布尔值，该值指示是否`accelerator`可以输出到的显示器。  
   
 ```  
 bool get_has_display() const;
@@ -372,7 +354,7 @@ bool get_has_display() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果`accelerator`可以输出到显示器; 否则为`false`。  
+ `true`如果`accelerator`可以输出为显示; 否则为`false`。  
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
@@ -402,7 +384,7 @@ bool get_is_emulated() const;
   
 ##  <a name="get_supports_cpu_shared_memory"></a>get_supports_cpu_shared_memory 
 
- 返回一个布尔值，该值指示快捷键是否支持内存都可访问，同时通过加速器和 CPU。  
+ 返回一个布尔值，该值指示快捷键是否支持快捷键和 CPU 可访问的内存。  
   
 ```  
 bool get_supports_cpu_shared_memory() const;
@@ -411,11 +393,11 @@ bool get_supports_cpu_shared_memory() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果快捷键支持 CPU 共享内存;否则为`false`。  
+ `true`如果快捷键支持共享的 CPU 内存;否则为`false`。  
   
 ##  <a name="get_supports_double_precision"></a>get_supports_double_precision 
 
- 返回一个布尔值，该值指示是否加速器支持双精度算术，包括融化乘法加法 (FMA)、 除法以及相互之间的强制转换`int`和`double`。  
+ 返回一个布尔值，该值指示是否快捷键支持双精度算术，包括融化乘法加法 (FMA)、 除法以及相互之间的强制转换`int`和`double`。  
   
 ```  
 bool get_supports_double_precision() const;
@@ -454,7 +436,7 @@ unsigned int get_version() const;
   
 ##  <a name="has_display"></a>has_display 
 
- 获取一个布尔值，该值指示是否`accelerator`可以输出到显示器。  
+ 获取一个布尔值，该值指示是否`accelerator`可以输出到的显示器。  
   
 ```  
 __declspec(property(get= get_has_display)) bool has_display;  
@@ -495,7 +477,7 @@ bool operator!= (const accelerator& _Other) const;
   
 ##  <a name="operator_eq"></a>运算符 = 
 
- 将指定的内容复制`accelerator`对象传递给它。  
+ 将指定的内容复制`accelerator`于此对象。  
   
 ```  
 accelerator& operator= (const accelerator& _Other);
@@ -503,10 +485,10 @@ accelerator& operator= (const accelerator& _Other);
   
 ### <a name="parameters"></a>参数  
  `_Other`  
- `accelerator`从其中复制对象。  
+ `accelerator`从中进行复制的对象。  
   
 ### <a name="return-value"></a>返回值  
- 参考这`accelerator`对象。  
+ 对此引用`accelerator`对象。  
   
 ##  <a name="operator_eq_eq"></a>运算符 = = 
 
@@ -527,7 +509,7 @@ bool operator== (const accelerator& _Other) const;
   
 ##  <a name="set_default"></a>set_default 
 
- 设置默认快捷键用于隐式地使用默认快捷键的任何操作。 此方法才会成功运行时所选的默认快捷键具有已中尚未使用隐式使用默认快捷键的操作  
+ 设置要用于任何隐式使用默认快捷键操作的默认快捷键。 如果运行时所选的默认快捷键不已使用隐式使用默认快捷键操作中，此方法才会成功  
   
 ```  
 static inline bool set_default(std::wstring _Path);
@@ -538,11 +520,11 @@ static inline bool set_default(std::wstring _Path);
  指向快捷键的路径。  
   
 ### <a name="return-value"></a>返回值  
- `true`如果调用成功保持设置默认快捷键。 否则为 `false`。  
+ `true`如果调用成功在设置默认快捷键。 否则为 `false`。  
   
 ##  <a name="set_default_cpu_access_type"></a>set_default_cpu_access_type 
 
- 设置默认 cpu access_type array_views 的一部分对此此加速器访问创建在此快捷键上或用于隐式的内存分配的数组。 此方法才会成功。 如果加速器 default_cpu_access_type 尚未被重写此方法的以前调用，并且分配了数组或备份在此快捷键上访问 array_view 执行隐式的内存分配以前未被使用此加速器所选的运行时 default_cpu_access_type。  
+ 设置默认 cpu access_type 数组创建在此快捷键上或隐式的内存分配，因为此快捷键上访问 array_views 的一部分。 如果快捷键 default_cpu_access_type 尚未被重写此方法的以前调用和用于分配一个数组或具有不已用于此快捷键运行时选择 default_cpu_access_type，此方法才会成功备份在此快捷键上访问 array_view 执行隐式的内存分配。  
   
 ```  
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
@@ -553,7 +535,7 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
  要用于在此快捷键上数组/array_view 内存分配默认 cpu access_type。  
   
 ### <a name="return-value"></a>返回值  
- 一个布尔值，该值指示快捷键默认 cpu access_type 已成功设置。  
+ 一个布尔值，该值指示是否已成功将快捷键默认 cpu access_type 的设置。  
   
 ##  <a name="supports_cpu_shared_memory"></a>supports_cpu_shared_memory 
 
@@ -573,7 +555,7 @@ __declspec(property(get= get_supports_double_precision)) bool supports_double_pr
   
 ##  <a name="supports_limited_double_precision"></a>supports_limited_double_precision 
 
- 获取一个布尔值，指示快捷键是否限制了对双精度算术的支持。 如果快捷键仅提供有限的支持，则不支持融化乘法加法 (FMA)、除法以及 `int` 和 `double` 之间的相互转换。  
+ 获取一个布尔值，该值指示快捷键是否提供有限的双精度算术的支持。 如果快捷键仅提供有限的支持，则不支持融化乘法加法 (FMA)、除法以及 `int` 和 `double` 之间的相互转换。  
   
 ```  
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;  
@@ -597,7 +579,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ### <a name="return-value"></a>返回值  
   
-##  <a name="accelerator"></a>加速器 
+##  <a name="accelerator"></a>快捷键 
 
  获取`accelerator`对象[accelerator_view](accelerator-view-class.md)对象。  
   
@@ -607,7 +589,7 @@ __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;
   
 ##  <a name="ctor"></a>accelerator_view 
 
- 新实例初始化[accelerator_view](accelerator-view-class.md)通过复制现有的类`accelerator_view`对象。  
+ 初始化的新实例[accelerator_view](accelerator-view-class.md)通过复制现有的类`accelerator_view`对象。  
   
 ```  
 accelerator_view(const accelerator_view& _Other);
@@ -615,22 +597,22 @@ accelerator_view(const accelerator_view& _Other);
   
 ### <a name="parameters"></a>参数  
  `_Other`  
- `accelerator_view`要从中复制对象。  
+ `accelerator_view`要复制的对象。  
   
 ##  <a name="create_marker"></a>create_marker 
 
- 返回将来能够跟踪对此提交到目前为止的所有命令的完成`accelerator_view`对象。  
+ 返回将来要跟踪的所有命令提交到目前为止至此完成`accelerator_view`对象。  
   
 ```  
 concurrency::completion_future create_marker();
 ```  
   
 ### <a name="return-value"></a>返回值  
- 将来能够跟踪对此提交到目前为止的所有命令的完成`accelerator_view`对象。  
+ 将来要跟踪的所有命令提交到目前为止至此完成`accelerator_view`对象。  
   
 ##  <a name="flush"></a>刷新 
 
- 为排队的所有挂起命令提交[accelerator_view](accelerator-view-class.md)对象传递给快捷键执行。  
+ 提交所有挂起命令排队到[accelerator_view](accelerator-view-class.md)给快捷键执行的对象。  
   
 ```  
 void flush();
@@ -654,7 +636,7 @@ accelerator get_accelerator() const;
   
 ##  <a name="get_is_auto_selection"></a>get_is_auto_selection 
 
- 返回一个布尔值，该值指示是否 accelerator_view 传递给时，运行时将自动选择适当的加速器[parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)。  
+ 返回一个布尔值，该值指示是否 accelerator_view 传递给时，运行时将自动选择相应加速器[parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)。  
   
 ```  
 bool get_is_auto_selection() const;
@@ -663,7 +645,7 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- `true`如果运行时将自动选择适当的加速器;否则为`false`。  
+ `true`如果运行时将自动选择相应加速器;否则为`false`。  
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
@@ -706,7 +688,7 @@ unsigned int get_version() const;
   
 ##  <a name="is_auto_selection"></a>is_auto_selection 
 
- 获取一个布尔值，该值指示是否 accelerator_view 传递给时，运行时将自动选择适当的加速器[parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)。  
+ 获取一个布尔值，该值指示是否 accelerator_view 传递给时，运行时将自动选择相应加速器[parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)。  
   
 ```  
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
@@ -747,7 +729,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
   
 ### <a name="parameters"></a>参数  
  `_Other`  
- `accelerator_view`从其中复制对象。  
+ `accelerator_view`从中进行复制的对象。  
   
 ### <a name="return-value"></a>返回值  
  对修改后的 `accelerator_view` 对象的引用。  
@@ -787,7 +769,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ##  <a name="wait"></a>等待 
 
- 等待所有命令提交给[accelerator_view](accelerator-view-class.md)对象来完成。  
+ 等待提交到的所有命令[accelerator_view](accelerator-view-class.md)对象来完成。  
   
 ```  
 void wait();
@@ -798,4 +780,3 @@ void wait();
   
 ## <a name="see-also"></a>另请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

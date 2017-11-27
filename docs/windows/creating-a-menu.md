@@ -1,60 +1,59 @@
 ---
-title: "Creating a Menu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.menu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mnemonics, associating menu items"
-  - "menus, associating commands with mnemonic keys"
-  - "menus, creating"
+title: "创建菜单 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.menu
+dev_langs: C++
+helpviewer_keywords:
+- mnemonics, associating menu items
+- menus, associating commands with mnemonic keys
+- menus, creating
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 953de61b199acda1b6cf4f9e0d06b1bd1875ab1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Menu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="creating-a-menu"></a>创建菜单
 > [!NOTE]
 >  资源窗口在 Express 版本中不可用。  
   
-### 创建标准菜单  
+### <a name="to-create-a-standard-menu"></a>创建标准菜单  
   
-1.  从**“视图”**菜单单击**“资源视图”**，然后右键单击**“菜单”**标题并选择**“添加资源”**。 选择**“菜单”**。  
+1.  从 **“视图”** 菜单单击 **“资源视图”** ，然后右键单击 **“菜单”** 标题并选择 **“添加资源”**。 选择 **“菜单”**。  
   
-2.  选择菜单栏上的“新建项目”框（包含“请在此处输入”的矩形）。  
+2.  选择菜单栏上的“新建项目”  框（包含“请在此处输入”的矩形）。  
   
-     ![菜单编辑器中的“新建项”框](../Image/vcMenuEditorNewItemBox.gif "vcMenuEditorNewItemBox")  
+     ![菜单编辑器中的新项框](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
 新建项目框  
   
 3.  键入新菜单的名称，例如“文件”。  
   
-     键入的文本将同时出现在菜单编辑器以及[属性窗口](../Topic/Properties%20Window.md)中的“标题”框中。 你可以在任一位置编辑新菜单的属性。  
+     键入的文本将同时出现在 **菜单** 编辑器 以及 **属性窗口** 中的 [“标题”](/visualstudio/ide/reference/properties-window)框中。 你可以在任一位置编辑新菜单的属性。  
   
      为菜单栏上的新菜单指定名称后，新项目框移到右边（允许你添加另一菜单），并且另一个新项目框在第一个菜单下面打开，以便可以向其添加菜单命令。  
   
-     ![展开的“新建项”框](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
+     ![展开新项框](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
 新项目框的焦点在键入菜单名称后转移  
   
     > [!NOTE]
     >  要在菜单栏上创建单项菜单，请将“弹出”属性设置为 False。  
   
- 有关将资源添加到托管项目的信息，请参阅“.NET Framework 开发员指南”[](../Topic/Resources%20in%20Desktop%20Apps.md)中的*应用程序中的资源*。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参阅[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和 [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  **要求**  
   
  Win32  
   
-## 请参阅  
- [Menu Editor](../mfc/menu-editor.md)
+## <a name="see-also"></a>另请参阅  
+ [菜单编辑器](../windows/menu-editor.md)
