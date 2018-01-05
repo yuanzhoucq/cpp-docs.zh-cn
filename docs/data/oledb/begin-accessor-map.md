@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_ACCESSOR_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_ACCESSOR_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_ACCESSOR_MAP 宏"
+title: "BEGIN_ACCESSOR_MAP |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_ACCESSOR_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_ACCESSOR_MAP macro
 ms.assetid: e6d6e3a4-62fa-4e49-8c53-caf8c9d20091
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ff08fd95e9e84d47562a5fafb8bf7be04e41ed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_ACCESSOR_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="beginaccessormap"></a>BEGIN_ACCESSOR_MAP
 标记取值函数映射条目的开始。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,26 +39,69 @@ num
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *x*  
- \[in\] 用户记录类的名称。  
+ [in] 用户记录类的名称。  
   
  *num*  
- \[in\] 此取值函数映射中的取值函数数目。  
+ [in] 此取值函数映射中的取值函数数目。  
   
-## 备注  
- 如果某个行集上有多个取值函数，则需要在开头指定 `BEGIN_ACCESSOR_MAP` 并对每个单独的取值函数使用 `BEGIN_ACCESSOR` 宏。`BEGIN_ACCESSOR` 宏以 `END_ACCESSOR` 宏结束。 取值函数映射以 `END_ACCESSOR_MAP` 宏结束。  
+## <a name="remarks"></a>备注  
+ 如果某个行集上有多个取值函数，则需要在开头指定 `BEGIN_ACCESSOR_MAP` 并对每个单独的取值函数使用 `BEGIN_ACCESSOR` 宏。 `BEGIN_ACCESSOR` 宏以 `END_ACCESSOR` 宏结束。 取值函数映射以 `END_ACCESSOR_MAP` 宏结束。  
   
- 如果在用户记录中只有一个取值函数，则使用宏 [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)。  
+ 如果在用户记录中只有一个取值函数，则使用宏 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)。  
   
-## 示例  
- [!CODE [NVC_OLEDB_Consumer#15](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#15)]  
+## <a name="example"></a>示例  
+
+ ```cpp  
+class CArtistsAccessor
+{
+public:
+// Data Elements
+   TCHAR m_szFirstName[21];
+   TCHAR m_szLastName[31];
+   short m_nAge;
+
+// Output binding map
+BEGIN_ACCESSOR_MAP(CArtistsAccessor, 2)
+   BEGIN_ACCESSOR(0, true)
+      COLUMN_ENTRY(1, m_szFirstName)
+      COLUMN_ENTRY(2, m_szLastName)
+   END_ACCESSOR()
+   BEGIN_ACCESSOR(1, false) // Not an auto accessor
+      COLUMN_ENTRY(3, m_nAge)
+   END_ACCESSOR()
+END_ACCESSOR_MAP()
+
+   HRESULT OpenDataSource()
+   {
+      CDataSource _db;
+      _db.Open();
+      return m_session.Open(_db);
+   }
+
+   void CloseDataSource()
+   {
+      m_session.Close();
+   }
+
+   CSession m_session;
+
+   DEFINE_COMMAND_EX(CArtistsAccessor, L" \
+   SELECT \
+      FirstName, \
+      LastName, \
+      Age \
+      FROM Artists")
+};
+ ```
+
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
- [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)
+## <a name="see-also"></a>请参阅  
+ [宏和全局函数 OLE DB 使用者模板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)

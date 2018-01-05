@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0d986077561357f1a2530f097dc4bfbc78f1413e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d858a940205ab47f1ee07f720a0f8aa1bcaaf42f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 虽然一个 ref 类最多从一个具体基类继承，它可以实现任意数量的接口类。 一个接口类（或接口结构）自身可继承（或需要）多个接口类、可重载其成员函数，也可具有类型参数。  
@@ -97,7 +98,7 @@ ms.lasthandoff: 10/24/2017
   
 -   模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并且可以将模板形参传递*T*给泛型实参*T*。模板化 ref 类的每个实例化本身都是一个 ref 类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   
  [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

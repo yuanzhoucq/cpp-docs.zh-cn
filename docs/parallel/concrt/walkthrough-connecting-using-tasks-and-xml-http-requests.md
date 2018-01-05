@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f309673b5f0362657434bf3160d1062fdefe881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>演练：使用任务和 XML HTTP 请求进行连接
 此示例演示如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)接口与任务以将 HTTP GET 和 POST 请求发送到中的 web 服务[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]应用。 通过将 `IXMLHTTPRequest2` 与任务组合在一起，您可以编写通过其他任务编写的代码。 例如，可以使用下载任务作为任务链的一部分。 工作取消时，下载任务也会响应。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 > [!TIP]
 >  `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是建议在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中使用的接口。 还可以调整此示例，以用于桌面应用程序。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>定义 HttpRequest、HttpRequestBuffersCallback 和 HttpRequestStringCallback 类  
  当您使用 `IXMLHTTPRequest2` 接口通过 HTTP 创建 Web 请求时，可以实现 `IXMLHTTPRequest2Callback` 接口来接收服务器响应并对其他事件做出响应。 此示例定义了 `HttpRequest` 类来创建 Web 请求，并定义了 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类来处理响应。 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 类支持 `HttpRequest` 类；在应用程序代码中您只能使用 `HttpRequest` 类。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [PPL 中的取消](cancellation-in-the-ppl.md)   
  [C + + 中的异步编程](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   

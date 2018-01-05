@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb26f38ece8c098e6f10ba2ec90738787cb20ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>演练：使用 WRL 和 Media Foundation 创建 Windows 应用商店应用程序
 了解如何使用 Windows 运行时 c + + 模板库 (WRL) 创建的通用 Windows 平台应用程序使用[Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  尽管此代码示例很长，但它演示了创建有用的媒体基础转换所需的最低要求。 你可以将它作为自己的自定义转换的起点。 此示例是改编自[媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)、 后者使用媒体扩展，将影响到视频、 视频解码，以及创建生成媒体流的方案处理程序。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   体验[Windows 运行时](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)。  
   
@@ -128,7 +131,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  该示例演示如何从默认网络摄像头逐张捕捉照片。 [媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)更多内容。 它演示如何枚举网络摄像头设备和使用本地方案处理程序，并演示对单张照片和视频流都产生影响的其他媒体效果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Microsoft 媒体基础](http://msdn.microsoft.com/library/windows/apps/ms694197)   
  [媒体扩展示例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

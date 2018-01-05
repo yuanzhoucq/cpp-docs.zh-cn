@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d21a887c29b792b2857d0ee546dbc9722b60a264
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cd7bcade139a07c87983a5687bd57de01f32e58
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enums-ccx"></a>枚举 (C++/CX)
 C + + /cli CX 支持`public enum class`关键字，类似于标准 c + + `scoped  enum`。 当你使用通过 `public enum class` 关键字声明的枚举数时，必须使用枚举标识符确定每个枚举值的范围。  
@@ -43,7 +44,7 @@ C + + /cli CX 支持`public enum class`关键字，类似于标准 c + + `scoped
   
  [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   
  [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

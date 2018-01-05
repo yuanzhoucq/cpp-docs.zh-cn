@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: dee99cf85ff47fe7dbde8bd8bc7f60f708a5ebc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3612421c9089fbb97c0bf256040c8082cad01afc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delegates-ccx"></a>委托 (C++/CX)
 `delegate`关键字用于声明引用类型，后者是标准 c + + 中的函数对象的 Windows 运行时等效项。 委托声明类似于函数声明；它指定被包装的函数必须具有的返回类型和参数类型。 以下是用户定义的委托声明：  
@@ -110,7 +111,7 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]  
   
 > [!WARNING]
->  如果使用捕获“this”指针的 lambda，请确保在退出该 lambda 之前使用 `-=` 运算符显式从事件中取消注册。 有关更多信息，请参见 [Events](../cppcx/events-c-cx.md)。  
+>  如果使用捕获“this”指针的 lambda，请确保在退出该 lambda 之前使用 `-=` 运算符显式从事件中取消注册。 有关详细信息，请参阅[事件](../cppcx/events-c-cx.md)。  
   
 ### <a name="generic-delegates"></a>泛型委托  
  在 C++/CX 中，泛型委托与泛型类声明具有类似的限制。 它们不能声明为公共委托。 你可以声明一个私有或内部泛型委托，然后通过 C++ 来使用它，但 .NET 或 JavaScript 客户端不能使用该委托，因为它没有被发出到 .winmd 元数据中。 下面的示例声明了一个只能通过 C++ 使用的泛型委托：  
@@ -132,7 +133,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
  如果你熟悉 .NET 中的事件处理程序，就会知道建议做法是在激发事件之前创建事件的本地副本。 这样可以避免事件处理程序在调用事件之前被移除，尽管这种情况并不常见。 在 C++/CX 中则不必如此，因为在添加或移除事件处理程序时，将创建一个新的处理程序列表。 有一个 C++ 对象会在事件被调用之前增加处理程序列表上的引用计数，因而可以保证所有处理程序都有效。 但是，这也意味着，如果将事件处理程序从使用它的线程中移除，而发布对象仍在操作其现已过期的列表副本，则仍可能调用该处理程序。 发布对象只有在下次激发事件时才能获得更新的列表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   
  [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空间参考](../cppcx/namespaces-reference-c-cx.md)
