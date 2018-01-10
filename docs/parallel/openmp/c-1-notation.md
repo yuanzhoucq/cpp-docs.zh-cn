@@ -1,36 +1,36 @@
 ---
-title: "C.1 Notation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "C.1 表示法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a23b2631-8096-4bf3-ac23-ba4f4bd7a52a
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9772b2a4b27521c7aa256f9ee7760a4687152b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# C.1 Notation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-语法规则包括名称非终止字符，后跟冒号，后跟在单独的行上的替换选择。  
+# <a name="c1-notation"></a>C.1 表示法
+语法规则包含非-终端，该名称后接冒号，在单独的行上其后替换的替代项。  
   
- 表达式语法术语opt 指示该术语在替换内是可选的。  
+ 语法表达式 termopt 指示术语是可选中替换。  
   
- 表达式语法 *术语optseq*与 *术语顺序*等效于以下附加opt 规则:  
+ 语法的表达式*术语*optseq 相当于*术语 seq*选择具有以下额外规则：  
   
- *术语序列* :  
+ *术语 seq* :  
   
  *术语*  
   
- *术语顺序术语*  
+ *术语 seq 术语*  
   
- *术语序列* ， *术语*
+ *术语 seq* ，*术语*

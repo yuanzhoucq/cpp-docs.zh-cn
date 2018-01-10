@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62c2b658f21552ace07863e8fc93827e60de1c3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f991f8ebf87535de09dc7c3dce5e0f4ca2ee457b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>演练：将控件置于工具栏上
 本主题介绍如何将一个包含 Windows 控件的工具栏按钮添加到工具栏。 在 MFC 中，工具栏按钮必须[CMFCToolBarButton 类](../mfc/reference/cmfctoolbarbutton-class.md)-派生类，例如[CMFCToolBarComboBoxButton 类](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 类](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 类](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 类](../mfc/reference/cmfctoolbarmenubutton-class.md)。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>将 Find 控件添加到“自定义”对话框  
  自定义处理程序中`OnViewCustomize`，调用[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)替换`Find`按钮 (即，具有命令 ID 的按钮`ID_EDIT_FIND)`与`CFindComboButton`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../mfc/hierarchy-chart.md)   
  [类](../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 类](../mfc/reference/cmfctoolbar-class.md)   

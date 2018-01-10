@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75214320f40ad60940ff4713dc80b8d3111378c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指令
 `threadprivate`指令使命名的文件范围、 命名空间范围或静态的块范围变量中指定*变量列表*专用于一个线程。 *变量列表*是不具有不完整类型的变量的以逗号分隔列表。 语法`threadprivate`指令是，如下所示：  

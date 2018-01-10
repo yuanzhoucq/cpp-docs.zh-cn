@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee54b10c4eddb272653615caa7ef7ba62f707622
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5221943ba1591a01ddebe2c261e4197fa18501
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 结构
 `MEASUREITEMSTRUCT`结构通知 Windows 所有者绘制的控件或菜单项的维数。  
@@ -80,10 +81,10 @@ typedef struct tagMEASUREITEMSTRUCT {
   
  这允许 Windows 正确地处理用户与控件交互。 未能填写中的正确成员`MEASUREITEMSTRUCT`结构将导致不正确的操作的控件。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** winuser.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
 

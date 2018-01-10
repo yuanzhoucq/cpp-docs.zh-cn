@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-program"></a>示例程序
 下面的 C 源程序包括两个源文件。 它尽可能在 C 程序中提供一些各种声明和定义的概述。 本书后面的节中描述了如何写入这些声明、定义和初始化，以及如何使用 C 关键字（例如，static 和 `extern`）。 在 C 标头文件 STDIO.H. 中声明 `printf` 函数。  
@@ -82,5 +83,5 @@ int max( int a, int b )          // Note formal parameters are
   
  [生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)中讨论了标识符的生存期和可见性。 有关函数的详细信息，请参阅[函数](../c-language/functions-c.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [源文件和源程序](../c-language/source-files-and-source-programs.md)

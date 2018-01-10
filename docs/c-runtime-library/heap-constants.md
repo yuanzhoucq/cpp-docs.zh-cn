@@ -34,11 +34,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5b529519840df87d829c34cd8bddf123b96754e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2e1a15b371aa4f2997d453e2543123b279ac0df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heap-constants"></a>堆常量
 ## <a name="syntax"></a>语法  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  这些常量提供表示堆状态的返回值。  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_HEAPBADBEGIN`|初始头信息未找到或无效。|  
 |`_HEAPBADNODE`|找到错误节点，或堆已损坏。|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
 |`_HEAPEND`|已成功到达堆的结尾处（仅限 `_heapwalk` 例程）。|  
 |`_HEAPOK`|堆是一致的（仅限 `_heapset` 和 `_heapchk` 例程）。 目前未出现错误；_HEAPINFO 结构包含下一个条目的信息（仅限 `_heapwalk` 例程）。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_heapchk](../c-runtime-library/reference/heapchk.md)   
  [_heapset](../c-runtime-library/heapset.md)   
  [_heapwalk](../c-runtime-library/reference/heapwalk.md)   

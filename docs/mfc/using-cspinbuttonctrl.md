@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbf2e31e178cc444f3980e9b6a8ebe1b1a374235
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd1e652edb3501583624b068c604083f0c5d4165
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cspinbuttonctrl"></a>使用 CSpinButtonCtrl
 *数值调节钮*控件 (也称为*上下*控制) 提供了一对用户可以单击来调整值的箭头。 此值称为*当前位置*。 此位置位于数值调节钮的范围内。 当用户单击向上箭头，位置将朝着最大值移动；当用户单击向下箭头，位置将朝着最小值移动。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [调节按钮成员函数](../mfc/spin-button-member-functions.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

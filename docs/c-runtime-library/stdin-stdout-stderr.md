@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8350cb0cea07298eefb9b3aa54b69a5b9d786d88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7683a0ed1e40a0b65ea3a400c460dcd23ecef2d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 ## <a name="syntax"></a>语法  
@@ -58,6 +59,6 @@ FILE *stderr;
   
  这些指针是常量，无法分配新的值。 `freopen` 函数可用于将流重定向到磁盘文件或其他设备。 操作系统使您可以在命令级别重定向程序的标准输入和输出。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../c-runtime-library/stream-i-o.md)   
  [全局常量](../c-runtime-library/global-constants.md)

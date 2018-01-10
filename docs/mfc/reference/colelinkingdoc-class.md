@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9d02d128a96550cce393fc439ef7fdabcccd293
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 类
 支持链接到所包含的嵌入项的 OLE 容器文档的基类。  
@@ -98,7 +99,7 @@ class COleLinkingDoc : public COleDocument
   
  `COleLinkingDoc`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxole.h  
   
 ##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
@@ -181,7 +182,7 @@ void Revoke();
   
  关闭的命名的文件时，应调用此函数，但通常不需要直接调用它。 `Revoke`为您通过调用`COleLinkingDoc`的实现`OnCloseDocument`， `OnNewDocument`， `OnOpenDocument`，和`OnSaveDocument`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
  [COleDocument 类](../../mfc/reference/coledocument-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

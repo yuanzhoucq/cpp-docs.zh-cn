@@ -36,11 +36,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51d5de22dce0b68c55fc928b1a251b30d9ceed7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59e108f8674b002cdbc5e7ab0b9c1868eea632df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-constants"></a>文件常量
 ## <a name="syntax"></a>语法  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
  `_O_WRONLY`  
  打开文件以仅供写入；如果提供此标志，则无法提供 `_O_RDONLY` 和 `_O_RDWR`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_open、_wopen](../c-runtime-library/reference/open-wopen.md)   
  [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
  [全局常量](../c-runtime-library/global-constants.md)

@@ -83,11 +83,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51fad5e7890ce311e46c07c9505cb889bf252376
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 类
 表示基表或附加表的已存储定义。  
@@ -192,7 +193,7 @@ class CDaoTableDef : public CObject
   
  `CDaoTableDef`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdao.h  
   
 ##  <a name="append"></a>CDaoTableDef::Append  
@@ -271,7 +272,7 @@ virtual void Create(
  `lAttributes`  
  相对应的 tabledef 对象所表示的表的特征的值。 可以使用按位 OR 组合任何以下常量：  
   
-|常量|描述|  
+|返回的常量|描述|  
 |--------------|-----------------|  
 |**dbAttachExclusive**|对于使用 Microsoft Jet 数据库引擎的数据库，指示该表是附加的表打开以供独占使用。|  
 |**dbAttachSavePWD**|对于使用 Microsoft Jet 数据库引擎的数据库，指示的用户 ID 和密码附加表保存的连接信息。|  
@@ -316,7 +317,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbInteger**|2|int|  
 |**dbLong**|4|long|  
 |**dbCurrency**|8|货币 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
-|**dbSingle**|4|浮动|  
+|**dbSingle**|4|float|  
 |**dbDouble**|8|double|  
 |**dbDate**|8|日期/时间 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
 |**dbText**|1 - 255|文本 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
@@ -329,7 +330,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
  `lAttributes`  
  可以使用按位 OR 组合的字段，特征相对应的值。  
   
-|常量|描述|  
+|返回的常量|描述|  
 |--------------|-----------------|  
 |**dbFixedField**|字段大小被固定的 （数字字段的默认值）。|  
 |**dbVariableField**|字段大小是变量 （仅适用于文本字段）。|  
@@ -755,7 +756,7 @@ void SetAttributes(long lAttributes);
  `lAttributes`  
  所代表的表格的特征`CDaoTableDef`对象，并可以是这些常量的总和：  
   
-|常量|描述|  
+|返回的常量|描述|  
 |--------------|-----------------|  
 |**dbAttachExclusive**|对于使用 Microsoft Jet 数据库引擎的数据库，指示该表是附加的表打开以供独占使用。|  
 |**dbAttachSavePWD**|对于使用 Microsoft Jet 数据库引擎的数据库，指示的用户 ID 和密码附加表保存的连接信息。|  
@@ -807,7 +808,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 导出|"HTML 导出;"|" `drive`:\\\ *路径*"|  
 |Text|"文本;"|"驱动器：\\\path"|  
 |ODBC|"ODBC;数据库 = `database`;UID =*用户*;PWD =*密码*;DSN = *datasourcename;*LOGINTIMEOUT =*秒;*"（这可能不是所有服务器的完整连接字符串; 它只是一个示例。 它是非常重要，不能使用参数之间的空间。）|无|  
-|交换|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [配置文件 =*配置文件*;]<br /><br /> [PWD =*密码*;]<br /><br /> [数据库 = `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|  
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [配置文件 =*配置文件*;]<br /><br /> [PWD =*密码*;]<br /><br /> [数据库 = `database`;]"|*"驱动器*:\\\ *路径*\\\ *filename*。MDB"|  
   
 > [!NOTE]
 >  Btrieve 截至 DAO 3.5 不再受支持。  
@@ -890,7 +891,7 @@ void SetValidationText(LPCTSTR lpszValidationText);
   
  有关相关信息，请参阅主题 DAO 帮助中的"有效性文本属性"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDaoDatabase 类](../../mfc/reference/cdaodatabase-class.md)   

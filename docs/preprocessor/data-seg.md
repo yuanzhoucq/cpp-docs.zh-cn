@@ -1,65 +1,66 @@
 ---
-title: "data_seg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "data_seg_CPP"
-  - "vc-pragma.data_seg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "data_seg 杂注"
-  - "杂注, data_seg"
+title: "data_seg |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- data_seg_CPP
+- vc-pragma.data_seg
+dev_langs: C++
+helpviewer_keywords:
+- data_seg pragma
+- pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dbc581e1237b25404b611e24bf8af46af4a166b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# data_seg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dataseg"></a>data_seg
 指定 .obj 文件中用于存储初始化变量的数据段。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## 备注  
- 本主题中的术语“段”和“节”的含义是可互换的。  
+## <a name="remarks"></a>备注  
+ 这些术语的含义*段*和*部分*是可互换的本主题。  
   
- 可使用 [dumpbin](../build/reference/dumpbin-command-line.md) 应用程序查看 OBJ 文件。  .obj 文件中用于存储初始化变量的默认段是 .data。  未初始化的变量被视为初始化为零并且存储在 .bss 中。  
+ 可以使用查看 OBJ 文件[dumpbin](../build/reference/dumpbin-command-line.md)应用程序。 .obj 文件中用于存储初始化变量的默认段是 .data。 未初始化的变量被视为初始化为零并且存储在 .bss 中。  
   
- 不带参数的 **data\_seg** 将段重置为 .data。  
+ **data_seg**不带任何参数将段重置为.data。  
   
- **push**（可选）  
- 将一个记录置于内部编译器堆栈上。  **push** 可具有 *identifier* 和 *segment\-name*。  
+ **推送**（可选）  
+ 将一个记录置于内部编译器堆栈上。 A**推送**可以*标识符*和*段名称*。  
   
- **pop**（可选）  
+ **pop** （可选）  
  从内部编译器堆栈的顶部移除一个记录。  
   
- *identifier*（可选）  
- 当与 **push** 一起使用时，为内部编译器堆栈上的记录指定名称。  当与 **pop** 一起使用时，将从内部堆栈中弹出记录，直到删除 *identifier*；如果未在内部堆栈中找到 *identifier*，则不会弹出任何内容。  
+ *标识符*（可选）  
+ 如果用于**推送**，将名称分配给内部编译器堆栈上的记录。 如果用于**pop**，从之前的内部堆栈中弹出记录*标识符*被删除; 如果*标识符*找不到在内部堆栈上，会弹出任何内容。  
   
- 利用 *identifier*，可使多个记录与一个 **pop** 命令一起弹出。  
+ *标识符*让多个记录有一条弹出**pop**命令。  
   
- *"segment\-name"*（可选）  
- 段的名称。当与 **pop** 一起使用时，将弹出堆栈并且 *segment\-name* 将变为活动的段名称。  
+ *"段名称"*（可选）  
+ 段的名称。 如果用于**pop**，弹出堆栈和*段名称*会成为活动段名称。  
   
- *"segment\-class"* （可选）  
- 包括与 2.0 版之前的 C\+\+ 的兼容性。  它将被忽略。  
+ *"段类"* （可选）  
+ 包括与 2.0 版之前的 C++ 的兼容性。 它将被忽略。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // pragma_directive_data_seg.cpp  
@@ -78,11 +79,11 @@ int main() {
 }  
 ```  
   
- 使用 **data\_seg** 分配的数据不保留有关其位置的任何信息。  
+ 使用分配的数据**data_seg**不会保留有关其位置的任何信息。  
   
- 有关在创建部分时不应使用的名称的列表，请参阅 [\/SECTION](../build/reference/section-specify-section-attributes.md)。  
+ 请参阅[/部分](../build/reference/section-specify-section-attributes.md)的创建部分时不应使用的名称列表。  
   
- 您还可以为常量变量 \([const\_seg](../preprocessor/const-seg.md)\)、未初始化的数据 \([bss\_seg](../preprocessor/bss-seg.md)\) 和函数 \([code\_seg](../preprocessor/code-seg.md)\) 指定部分。  
+ 你还可以指定为常量变量的部分 ([const_seg](../preprocessor/const-seg.md))，未初始化的数据 ([bss_seg](../preprocessor/bss-seg.md))，和函数 ([code_seg](../preprocessor/code-seg.md))。  
   
-## 请参阅  
- [Pragma 指令和 \_\_Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>请参阅  
+ [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 678f5cef343157378f159157906888af517dc74a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60ae6b7f496f86bde91801e486315587fb693436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-parallelfor-loop"></a>如何：编写 parallel_for 循环
 此示例演示如何使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)来计算两个矩阵的乘积。  
@@ -54,7 +55,7 @@ parallel: 1311
   
  **cl.exe /EHsc 并行矩阵 multiply.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行算法](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_for 函数](reference/concurrency-namespace-functions.md#parallel_for)
 

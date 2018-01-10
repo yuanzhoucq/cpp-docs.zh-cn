@@ -1,49 +1,48 @@
 ---
-title: "flush (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Flush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flush OpenMP directive"
+title: "刷新 (OpenMP) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Flush
+dev_langs: C++
+helpviewer_keywords: flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72b69daf431ab9dfd2b5c2ed7cebdc8c5af75847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# flush (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定所有线程的内存同一视图所有共享对象的。  
+# <a name="flush-openmp"></a>flush (OpenMP)
+指定所有线程都具有相同的所有共享对象的内存的视图。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma omp flush [(var)]  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
- `var`（可选）  
- 逗号分隔的对象表示要同步的列表变量。  如果 `var` 未指定，刷新所有内存。  
+ `var` （可选）  
+ 以逗号分隔的表示你想要同步的对象的变量列表。 如果`var`未指定，则刷新所有的内存。  
   
-## 备注  
- **刷新** 指令不支持 OpenMP 子句。  
+## <a name="remarks"></a>备注  
+ **刷新**指令支持没有 OpenMP 子句。  
   
- 有关更多信息，请参见 [2.6.5 flush Directive](../../../parallel/openmp/2-6-5-flush-directive.md)。  
+ 有关详细信息，请参阅[2.6.5 flush 指令](../../../parallel/openmp/2-6-5-flush-directive.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_flush.cpp  
@@ -94,8 +93,11 @@ int main() {
 }  
 ```  
   
-  **线程 0:读取数据**  
-**线程 1:处理数据**  
-**数据 \= 2**   
-## 请参阅  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Thread 0: read data  
+Thread 1: process data  
+data = 2  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [指令](../../../parallel/openmp/reference/openmp-directives.md)

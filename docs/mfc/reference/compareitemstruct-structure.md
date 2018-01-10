@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ae9a4b8ab74ef4bf8b3a6445cf5d7faa8818c5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7903e51a83533c8f2458c4400c64717021a1ccb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 结构
 `COMPAREITEMSTRUCT`结构提供的标识符和排序、 所有者描述列表框或组合框中的两个项的应用程序提供数据。  
@@ -63,10 +64,10 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ## <a name="remarks"></a>备注  
  每当应用程序将新项添加到一个所有者描述的列表框或组合框创建与**CBS_SORT**或**LBS_SORT**样式，Windows 将向所有者发送`WM_COMPAREITEM`消息。 `lParam`消息参数包含的长指针`COMPAREITEMSTRUCT`结构。 接收消息后，所有者比较的两个项，并返回一个值，该值哪一项进行排序之前另。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** winuser.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)
 

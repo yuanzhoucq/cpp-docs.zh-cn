@@ -26,11 +26,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e59acec12c90d101ef385c379c092c7034f1ed0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3b28381b92f4f11e4be99f97a2615a8379274
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dllonexit"></a>__dllonexit
 注册在退出时要调用的例程。  
@@ -64,11 +65,11 @@ _onexit_t __dllonexit(   _onexit_t func,
   
  `_PVFV` 类型定义为 `typedef void (__cdecl *_PVFV)(void)`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|所需文件|  
+|例程所返回的值|所需文件|  
 |-------------|-------------------|  
 |__dllonexit|onexit.c|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d35bc7781b1a57fdc0b8b68c5d4f78046d19134
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785c214ed904d1591c5d532ec9f09d42c93dc2ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm-class"></a>norm 类
 表示范数。 每个元素都浮点数中的范围 [-1.0 f、 1.0 f]。  
@@ -57,7 +58,7 @@ class norm;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `norm`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
@@ -109,5 +110,5 @@ norm(
  `_Other`  
  用于初始化的对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::binary_negate
-- binary_negate
-dev_langs:
-- C++
-helpviewer_keywords:
-- binary_negate class
+f1_keywords: xfunctional/std::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: ae604ad5fcac5bfe827e335330097a902457723d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 458dfaaed7b9f3b9dff1d969f127e8369ec72b47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binarynegate-class"></a>binary_negate 类
 一种模板类，用于提供成员函数，对指定二元函数的返回值进行求反。  
@@ -73,7 +54,7 @@ public:
  二元函数的求反运算。  
   
 ## <a name="remarks"></a>备注  
- 此模板类存储 _ *Func* 二元函数对象的副本。 它将其成员函数 `operator()` 定义为返回 **!**\_ *Func(left, right).*  
+ 此模板类存储 _ *Func* 二元函数对象的副本。 它将其成员函数 `operator()` 定义为返回 **!**\_*Func(left, right).*  
   
  很少直接使用 `binary_negate` 的构造函数。 通常首选 Helper 函数 [not2](../standard-library/functional-functions.md#not2) 来声明和使用 **binary_negator** 适配器谓词。  
   
@@ -140,15 +121,14 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 *\  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<functional>  
   
  std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

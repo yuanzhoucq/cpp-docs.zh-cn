@@ -1,27 +1,27 @@
 ---
-title: "A.8   Specifying Parallel Sections | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "指定并行部分 A.8 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: cf399304-121e-4c07-9829-47e0dbc2ef10
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: db7decc4efb1a3f6bb457623489c84e0ad1ae1f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.8   Specifying Parallel Sections
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在下面的示例中， \(对于第 14 页\) 的 [第2.4.2部分](../../parallel/openmp/2-4-2-sections-construct.md) 函数 *X 轴*、 *Y 轴*和 *Z 轴* 可以同时执行。  第一个 `section` 指令是可选的。  请注意所有 `section` 指令需要显示 `parallel``sections` 构造的词法范围。  
+# <a name="a8---specifying-parallel-sections"></a>A.8   指定并行段
+在下面的示例中，(对于[部分 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md)第 14 页上) 函数*xaxis*， *y 轴*，和*zaxis*可以并发执行。 第一个`section`指令是可选的。  请注意，所有`section`指令需要出现在词法范围内的`parallel sections`构造。  
   
 ```  
 #pragma omp parallel sections  

@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b08bff6bd803d1552861adc52ee08152025f9240
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48ab1428d2c02e51b02977c8457d28e20597cbb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csocketfile-class"></a>CSocketFile 类
 用于通过 Windows 套接字在网络中发送和接收数据的 `CFile` 对象。  
@@ -66,7 +67,7 @@ class CSocketFile : public CFile
   
  `CSocketFile`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxsock.h  
   
 ##  <a name="csocketfile"></a>CSocketFile::CSocketFile  
@@ -97,7 +98,7 @@ explicit CSocketFile(
   
  有关详细信息的使用`CSocketFile`，请参阅文章[Windows 套接字： 使用存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)和[Windows 套接字： 套接字的使用存档示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CFile 类](../../mfc/reference/cfile-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CAsyncSocket 类](../../mfc/reference/casyncsocket-class.md)   

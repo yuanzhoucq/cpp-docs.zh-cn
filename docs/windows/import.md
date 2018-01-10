@@ -1,32 +1,33 @@
 ---
-title: "import | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.import"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "import attribute"
+title: "导入 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.import
+dev_langs: C++
+helpviewer_keywords: import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 011cabb37f388d4be6a9a69f685a7c711f0209a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# import
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定包含要从主 IDL 特性引用定义的另一个 .idl、 .odl 或头文件。  
+# <a name="import"></a>import
+指定包含你想要从主 IDL 中引用的定义的另一个.idl、.odl 或标头文件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,17 +36,17 @@ caps.handback.revision: 9
 ) ];  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `idl_file`  
- 要 .idl 文件的名称导入到当前项目的类型库。  
+ 要导入当前项目的类型库的.idl 文件的名称。  
   
-## 备注  
- **导入** C\+\+ 特性在生成的 .idl 文件错误引起一个 `#import` 语句放置在 `import "docobj.idl"` 语句下面。  **导入** 属性具有与 [导入](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **导入**c + + 特性将导致`#import`语句下面放置`import "docobj.idl"`生成的.idl 文件中的语句。 **导入**属性具有相同的功能[导入](http://msdn.microsoft.com/library/windows/desktop/aa367047)MIDL 特性。  
   
- **导入** 属性只放置已指定的文件添加到将由项目生成的 .idl 文件; **导入** 属性不允许对指定文件所构造从某个项目的源代码。  ，如果 .h 文件，若要调用中指定的文件构造从在项目的源代码，使用 [\#import](../preprocessor/hash-import-directive-cpp.md) 和 `embedded_idl` 属性或您可以将 `idl_file`的 .h 文件。  
+ **导入**属性仅将指定的文件放入将由你的项目; 生成的.idl 文件**导入**属性不允许您从源代码中指定的文件调用构造在你的项目。  若要从项目中的源代码中指定的文件调用构造，请使用[#import](../preprocessor/hash-import-directive-cpp.md)和`embedded_idl`属性也可以将的.h 文件`idl_file`，如果存在的.h 文件。  
   
-## 示例  
- 下面的代码:  
+## <a name="example"></a>示例  
+ 下面的代码：  
   
 ```  
 // cpp_attr_ref_import.cpp  
@@ -54,7 +55,7 @@ caps.handback.revision: 9
 [import(import.idl)];  
 ```  
   
- 导致在生成的 .idl 文件的以下代码:  
+ 产生生成的.idl 文件中的以下代码：  
   
 ```  
 import "docobj.idl";  
@@ -67,9 +68,9 @@ library MyLib {
 ...  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -78,13 +79,12 @@ library MyLib {
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [独立特性](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [包括](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

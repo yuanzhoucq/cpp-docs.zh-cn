@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11fa4acae05c5488ce1d90873ec816744c7e83df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95b4aeaa5c180b7a0aa2af68646f8c85bfa951a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sizeof-operator-c"></a>sizeof 运算符 (C)
 `sizeof` 运算符提供了存储操作数的类型的对象所需的存储空间量（以字节为单位）。 利用此运算符，你可以避免在程序中指定依赖于计算机的数据大小。  
@@ -57,7 +58,7 @@ const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
   
 在此示例中，`strings` 是指向 `char` 的指针的数组。 指针的数目是数组中元素的数目，但是未指定。 通过使用 `sizeof` 运算符计算数组中元素的数目，可以轻松确定指针数目。 **const** 整数值 `string_no` 将初始化为此数字。 由于它是 **const** 值，因此 `string_no` 无法修改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [C 运算符](c-operators.md)  
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   

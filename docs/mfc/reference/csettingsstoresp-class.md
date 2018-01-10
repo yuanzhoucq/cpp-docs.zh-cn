@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30ca86898aa94a2c42f73b2f589c7fc7fc93634
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 类
 `CSettingsStoreSP`类是可用于创建的实例的帮助器类[CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)。  
@@ -55,7 +56,7 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`m_dwUserData`|自定义用户数据存储在`CSettingsStoreSP`对象。 你提供的构造函数中的此数据`CSettingsStoreSP`对象。|  
 |`m_pRegistry`|`CSettingsStore`-派生对象`Create`方法创建。|  
@@ -75,7 +76,7 @@ class CSettingsStoreSP
   
  `CSettingsStoreSP::SetRuntimeClass`使用全局静态变量。 因此，一次只能有一个自定义存储是可用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxsettingsstore.h  
   
 ##  <a name="create"></a>CSettingsStoreSP::Create  
@@ -140,7 +141,7 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ### <a name="remarks"></a>备注  
  你可以使用[CSettingsStoreSP 类](../../mfc/reference/csettingsstoresp-class.md)派生的类`CSettingsStore`。 使用方法`SetRuntimeClass`如果你想要创建自定义类派生自的对象`CSettingsStore`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CSettingsStore 类](../../mfc/reference/csettingsstore-class.md)

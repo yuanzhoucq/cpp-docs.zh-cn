@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8eeadc61c41d37247b08bdc8e3806da6d6200e4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 240b2baf8f3d59465b7b8313197086fec4c13285
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreaded-libraries-performance"></a>多线程库性能
 单线程的 CRT 不再可用。 本主题讨论如何从多线程库中获取最佳性能。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
 -   通过公开 CRT 堆句柄，您可以启用 CRT 堆的 Windows 低分片堆 (LFH)，这将大大改进高度缩放的方案的性能。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

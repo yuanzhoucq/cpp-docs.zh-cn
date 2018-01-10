@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3216724721c57798a9f11a4a095195ca0612163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8960d7093fcc950eb3118115459a414bc0f0fda3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstatusbarctrl"></a>使用 CStatusBarCtrl
 你可以使用状态栏控件 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 来创建反映有关应用程序的状态信息的各种类型的控件窗口。 状态窗口可以分成多个部分，以显示多种类型的信息。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [在 CStatusBarCtrl 对象中使用工具提示](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

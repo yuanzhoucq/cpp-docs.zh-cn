@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d92c5e162541b2b805074740d542a52866c48a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式规范字段：scanf 和 wscanf 函数
 此处的信息适用于整个 `scanf` 函数系列（包括安全版本），并描述了用于告诉 `scanf` 函数如何将输入流（如 `stdin` 的输入流 `scanf`）分析为插入到程序变量中的值。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
  `_s` 函数系列的安全版本（具有 `scanf` 后缀的版本）需要在每个 `c`、`C`、`s`、`S` 或 `[` 类型的参数之后立即传入一个缓冲区大小参数。 有关 `scanf` 系列函数的安全版本的更多信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [scanf 宽度规范](../c-runtime-library/scanf-width-specification.md)   
  [scanf 类型字段字符](../c-runtime-library/scanf-type-field-characters.md)   
  [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cb598a5b0f87080a937218962037d849275d7bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tiles"></a>使用平铺
 可用平铺来最大化你的应用程序加速。 平铺将线程划分为相等的矩形子集或*磁贴*。 如果你使用相应的磁贴大小和平铺的算法，你可以在 c + + AMP 代码中获取更多的加速。 平铺的基本组件包括：  
@@ -335,7 +336,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [tile_static 关键字](../../cpp/tile-static-keyword.md)
 

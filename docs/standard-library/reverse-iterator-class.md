@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 810f50a17dcdef3aac53462ac059a4aedd4343a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 类
 此模板类是迭代器适配器，描述在行为上与随机访问迭代器或双向迭代器类似（只不过方向相反）的反向迭代器对象。 它允许向后遍历范围。  
@@ -95,7 +96,7 @@ class reverse_iterator
 |[operator->](#operator-_gt)|返回指向 `reverse_iterator` 发现的元素的指针。|  
 |[operator[]](#op_at)|返回对于从 `reverse_iterator` 发现的元素偏移指定个位置的元素的引用。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iterator>  
   
  **命名空间：** std  
@@ -189,7 +190,7 @@ typedef RandomIterator iterator_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Iterator`的同义词。  
+ 该类型是模板参数 `Iterator` 的同义词。  
   
 ### <a name="example"></a>示例  
   请参阅 [reverse_iterator::base](#base)，获取关于如何声明和使用 `iterator_type` 的示例。  
@@ -978,7 +979,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

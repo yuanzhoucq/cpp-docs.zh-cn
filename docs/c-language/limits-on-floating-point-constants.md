@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ba0314abe9d70f25dc458abdbbf41f798fff263
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715f337a4c94e65641660b4becbb33d6a151d9ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="limits-on-floating-point-constants"></a>对浮点常量的限制
 **Microsoft 专用**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="limits-on-floating-point-constants"></a>对浮点常量的限制  
   
-|常量|含义|值|  
+|返回的常量|含义|“值”|  
 |--------------|-------------|-----------|  
 |**FLT_DIG**<br />**DBL_DIG**<br />**LDBL_DIG**|位数 q，以便 q 十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6<br />15<br />15|  
 |**FLT_EPSILON**<br />**DBL_EPSILON**<br />**LDBL_EPSILON**|最小正数 x，以便 x + 1.0 不等于 1.0|1.192092896e-07F<br />2.2204460492503131e-016<br />2.2204460492503131e-016|  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 浮点常量](../c-language/c-floating-point-constants.md)

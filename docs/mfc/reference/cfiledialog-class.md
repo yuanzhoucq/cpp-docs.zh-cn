@@ -143,11 +143,12 @@ caps.latest.revision: "47"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dead08eaeb525e626e9c1f02af346b0c3998260
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 611f26b07bc8ebd14fc394437ddda07cb65ab4e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 类
 封装用于文件打开或保存操作的文件的公共对话框。  
@@ -305,7 +306,7 @@ class CFileDialog : public CCommonDialog
   
  `CFileDialog`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdlgs.h  
   
 ##  <a name="addcheckbutton"></a>CFileDialog::AddCheckButton  
@@ -553,7 +554,7 @@ explicit CFileDialog(
   
  指定默认扩展使用`lpszDefExt`可能生成你预期的行为，因为它很少成为可预测有哪些扩展在用户的计算机上具有文件关联。 如果你需要更好地控制追加的默认扩展插件，可以派生您自己的类从`CFileDialog`，并重写`CFileDialog::OnFileNameOK`方法来执行您自己的扩展处理。  
   
- 若要使用户能够选择多个文件，将设置`OFN_ALLOWMULTISELECT`标志你在调用之前[DoModal](#domodal)。 必须提供你自己的文件名称缓冲区来存储返回多个文件名称的列表。 执行此操作通过替换`m_ofn.lpstrFile`指向缓冲区的指针与你已分配之后你构造, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，但你在调用之前`DoModal`。 此外，必须设置`m_ofn.nMaxFile`具有指向的缓冲区中的字符数`m_ofn.lpstrFile`。 如果设置到选定文件的最大数目`n`，必要的缓冲区大小是`n`*(_MAX_PATH + 1) + 1。 例如:   
+ 若要使用户能够选择多个文件，将设置`OFN_ALLOWMULTISELECT`标志你在调用之前[DoModal](#domodal)。 必须提供你自己的文件名称缓冲区来存储返回多个文件名称的列表。 执行此操作通过替换`m_ofn.lpstrFile`指向缓冲区的指针与你已分配之后你构造, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，但你在调用之前`DoModal`。 此外，必须设置`m_ofn.nMaxFile`具有指向的缓冲区中的字符数`m_ofn.lpstrFile`。 如果设置到选定文件的最大数目`n`，必要的缓冲区大小是`n`*(_MAX_PATH + 1) + 1。 例如:  
   
  [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]  
   
@@ -1490,7 +1491,7 @@ void UpdateOFNFromShellDialog();
   
  [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

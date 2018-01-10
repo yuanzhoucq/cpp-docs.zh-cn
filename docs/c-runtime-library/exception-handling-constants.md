@@ -24,14 +24,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a34b4098b04be1c121ed4a70fdbde8de4a57a94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98ff527e9abbb4e80e9a2460cce9ea067b09a557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-constants"></a>异常处理常量
 在执行 try-except 语句的保护部分期间发生异常时，将返回常量 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION` 或 `EXCEPTION_EXECUTE_HANDLER`。 此返回值确定了处理异常的方式。 有关详细信息，请参阅《C++ 语言参考》中的 [try-except 语句](../cpp/try-except-statement.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局常量](../c-runtime-library/global-constants.md)

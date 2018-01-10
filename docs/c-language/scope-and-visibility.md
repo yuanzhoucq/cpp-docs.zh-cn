@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-and-visibility"></a>范围和可见性
 标识符的“可见性”确定其可以引用的程序部分，即其“范围”。 标识符仅在其“范围”包含的程序部分中可见（即可使用），这可能仅限于（按限制增长的顺序）它显示在其中的文件、函数、块或函数原型。 标识符的范围是可使用名称的程序的一部分。 这有时被称为“词法范围”。 有四种范围：函数、文件、块和函数原型。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  [存储类别](../c-language/c-storage-classes.md)中介绍了可使变量在其他源文件中可见的适当声明。 但是，使用 static 存储类说明符在外部级别声明的变量和函数仅在定义它们的源文件中可见。 所有其他函数都是全局可见的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)

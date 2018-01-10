@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d12410aba4f64f54cbbfcc123d842171441192a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95ecbc69dd9cbd86bd7891c79f115442f659ff94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-routines"></a>异常处理例程
 在程序执行期间使用 C++ 异常处理函数从意外事件恢复。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
 |[terminate](../c-runtime-library/reference/terminate-crt.md)|引发异常后在特定情况下自动调用。 `terminate` 函数可调用 `abort` 或使用 `set_terminate` 指定的函数|  
 |[unexpected](../c-runtime-library/reference/unexpected-crt.md)|调用 `terminate` 或使用 `set_unexpected` 指定的函数。 不会在当前 Microsoft C++ 异常处理实现中使用 `unexpected`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

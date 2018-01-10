@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae753f1a483c05843797268641c4cc0c5d64c52a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpreting-more-complex-declarators"></a>解释复杂声明符
 您可以将任何声明符括在圆括号中以指定“复杂声明符”的特殊解释。 复杂声明符是由多个数组、指针或函数修饰符限定的标识符。 您可以将数组、指针和函数修饰符的各种组合应用于单个标识符。 通常 `typedef` 可用来简化声明。 请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。  
@@ -134,5 +135,5 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
   
  此示例演示圆括号的放置如何更改声明的含义。 在此示例中，`var` 是一个五元素指针数组，这些指针指向联合的五元素指针数组。 有关如何使用 `typedef` 避免复杂声明的示例，请参阅 [Typedef 声明](../c-language/typedef-declarations.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明和类型](../c-language/declarations-and-types.md)

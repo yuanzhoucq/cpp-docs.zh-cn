@@ -48,11 +48,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c1ac3ca255818bab745b7aa320ee69922359c14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f52734e26d1965811aded67bc1e1dde6a2c28bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-box-styles"></a>列表框样式
 -   **LBS_DISABLENOSCROLL**列表框中显示一个禁用的垂直滚动条的列表框中不包含足够的项，滚动。 如果不使用此样式，则当列表框未包含足够的项时，将会隐藏滚动条。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/24/2017
   
 -   **LBS_WANTKEYBOARDINPUT**列表框的所有者会收到`WM_VKEYTOITEM`或`WM_CHARTOITEM`消息每当用户按下某个键时的列表框具有输入焦点。 这允许应用程序对键盘输入执行特殊处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 使用的样式](../../mfc/reference/styles-used-by-mfc.md)   
  [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
  [列表框样式](http://msdn.microsoft.com/library/windows/desktop/bb775149)

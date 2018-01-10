@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e88736c6255118141d49fbd85134fffbeaeba6db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 在数据传输中用于从剪贴板、通过拖放或从嵌入 OLE 项检索各种格式的数据。  
@@ -91,7 +92,7 @@ class COleDataObject
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `COleDataObject`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxole.h  
   
 ##  <a name="attach"></a>COleDataObject::Attach  
@@ -308,7 +309,7 @@ void Release();
 ### <a name="remarks"></a>备注  
  `IDataObject`与关联`COleDataObject`通过调用**附加**或`AttachClipboard`显式或框架。 如果`bAutoRelease`参数**附加**是**FALSE**、`IDataObject`对象将不会被释放。 在这种情况下，调用方负责释放`IDataObject`通过调用[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
  [MFC 示例 OCLIENT](../../visual-cpp-samples.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

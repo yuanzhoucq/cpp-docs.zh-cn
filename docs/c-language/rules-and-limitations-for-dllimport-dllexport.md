@@ -17,18 +17,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef178e657a6700bcf6c7a4de2ed985d02df6b9ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 62b012f1ce81ffa30528d027e36b299e9e38d2f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>dllimport/dllexport 的规则和限制
 **Microsoft 专用**  
   
 -   如果声明没有 dllimport 或 `dllexport` 特性的函数，则该函数不被视为 DLL 接口的一部分。 因此，函数的定义必须存在于该模块或同一程序的另一个模块中。 若要使函数成为 DLL 接口的一部分，您必须将其他模块中函数的定义声明为 `dllexport`。 否则，在构建客户端时，将生成链接器错误。  
   
--   如果程序中的单个模块包含同一函数的 dllimport 和 `dllexport` 声明，则 `dllexport` 特性将优先于 dllimport 特性。 但是，会生成编译器警告。 例如:   
+-   如果程序中的单个模块包含同一函数的 dllimport 和 `dllexport` 声明，则 `dllexport` 特性将优先于 dllimport 特性。 但是，会生成编译器警告。 例如:  
   
     ```  
     #define DllImport   __declspec( dllimport )  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
   
     ```  
   
--   由于包含对象声明中的 `dllexport` 特性的程序必须为该对象提供定义，因此您可以利用 `dllexport` 函数的地址初始化全局或局部静态函数指针。 同样，您可以利用 `dllexport` 数据对象的地址初始化全局或局部静态数据指针。 例如:   
+-   由于包含对象声明中的 `dllexport` 特性的程序必须为该对象提供定义，因此您可以利用 `dllexport` 函数的地址初始化全局或局部静态函数指针。 同样，您可以利用 `dllexport` 数据对象的地址初始化全局或局部静态数据指针。 例如:  
   
     ```  
     #define DllImport   __declspec( dllimport )  
@@ -105,5 +106,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DLL 导入和导出函数](../c-language/dll-import-and-export-functions.md)

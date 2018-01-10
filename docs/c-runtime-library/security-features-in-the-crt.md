@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全功能
 许多旧 CRT 函数具有更新、更安全的版本。 如果存在安全函数，则较旧的、安全性更低的版本将标记为已弃用，并且新版本具有 `_s`（“安全”）后缀。  
@@ -93,7 +94,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Format string syntax checking`。 检测到无效字符串，例如，在 `printf` 格式字符串中使用了不正确的类型字段字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参数验证](../c-runtime-library/parameter-validation.md)   
  [安全模板重载](../c-runtime-library/secure-template-overloads.md)   
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

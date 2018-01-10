@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a634d748a0960e0eda56f89bcca66463780f08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf86c854345244eafff80392cdc575d026c61ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-management"></a>时间管理
 使用这些函数获取当前时间并按需对其转换、调整及存储。 当前时间为系统时间。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  在 Visual C++ 2005 之前的 Visual C++ 和 Microsoft C/C++ 的版本中，`time_t` 为 `long int`（32 位），因此无法用于 2038 年 1 月 19 日 3:14:07 UTC 之后的日期。 现在，`time_t` 默认等于 `__time64_t` ，但定义 `_USE_32BIT_TIME_T` 会将 `time_t` 改为 `__time32_t` and forces many time functions 改为 call versions that take the 32-bit `time_t`的版本。 有关详细信息，请参阅[标准类型](../c-runtime-library/standard-types.md)以及文档中对各时间函数的注释。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8771aba4328cef785347712f037ea21c5a46cfad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b8b9166c1beae167f6d31913c3df10a8f57bbef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-compound-assignment"></a>C 复合赋值
 复合赋值运算符将简单赋值运算符与另一个二元运算符相结合。 复合赋值运算符执行其他运算符指定的运算，然后将结果赋给左操作数。 例如，一个复合赋值表达式，如  
@@ -58,5 +59,5 @@ n &= MASK;
   
  在此示例中，对 `n` 和 `MASK` 执行了按位“与”运算，并将结果赋给了 `n`。 使用 [#define](../preprocessor/hash-define-directive-c-cpp.md) 预处理器指令定义了清单常量 `MASK`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 赋值运算符](../c-language/c-assignment-operators.md)

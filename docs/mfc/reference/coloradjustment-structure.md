@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c5f99cbd94ffc1a5549367d8f21ad15a9398acb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4e86010cda3545a6216767c1519bc5b2bccdf43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT 结构
 `COLORADJUSTMENT`结构定义使用 Windows 的颜色调整值`StretchBlt`和**StretchDIBits**函数时`StretchBlt`模式是**半色调**。  
@@ -110,10 +111,10 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  *caRedGreenTint*  
  指定要应用到源对象的红色或绿色浅色调整量。 值必须在 100 到-100 范围内。 正数会调整朝向红色并负数调整朝向绿色。 0 表示未浅色进行调整。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** wingdi.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
 

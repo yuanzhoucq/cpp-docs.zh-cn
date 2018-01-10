@@ -1,51 +1,58 @@
 ---
-title: "如何：编写 parallel_for_each 循环 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "编写 parallel_for_each 循环 [并发运行时]"
-  - "parallel_for_each 函数, 示例"
+title: "如何： 编写 parallel_for_each 循环 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- writing a parallel_for_each loop [Concurrency Runtime]
+- parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 179fa4b055b4743303f5d72ebec851a1d10def93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：编写 parallel_for_each 循环
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本示例演示如何使用 [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) 算法并行计算 [std::array](../../standard-library/array-class-stl.md) 对象中质数的计数。  
+# <a name="how-to-write-a-parallelforeach-loop"></a>如何：编写 parallel_for_each 循环
+此示例演示如何使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)算法来计算内的质数的计数[std:: array](../../standard-library/array-class-stl.md)并行的对象。  
   
-## 示例  
- 下面的示例分两次计算一个数组中质数的计数。  此示例先使用 [std::for\_each](../Topic/for_each.md) 算法按顺序计算该计数，  然后使用 `parallel_for_each` 算法并行执行同一任务。  此示例还会将执行两个计算所需的时间输出到控制台。  
+## <a name="example"></a>示例  
+ 下面的示例计算数组中的质数的计数两次。 该示例首先使用[for_each](../../standard-library/algorithm-functions.md#for_each)算法按顺序计算的计数。 然后该示例使用`parallel_for_each`算法并行执行相同的任务。 示例还控制台输出了进行两种计算所需的时间。  
   
- [!code-cpp[concrt-parallel-count-primes#1](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-each-loop_1.cpp)]  
+ [!code-cpp[concrt-parallel-count-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-each-loop_1.cpp)]  
   
- 下例是四处理器计算机的输出结果。  
+ 以下是具有四个处理器的计算机的输出示例。  
   
-  **序列化版本：**  
-**生成 17984 个质数。**  
-**执行了 6115 毫秒**  
-**并行版本**  
-**生成 17984 个质数。**  
-**执行了 1653 毫秒**   
-## 编译代码  
- 若要编译代码，请复制代码并将其粘贴到Visual Studio 项目中或一个名为`parallel-count-primes.cpp`的文件中，然后在Visual Studio命令提示符窗口中运行以下命令。  
+```Output  
+serial version:  
+found 17984 prime numbers  
+took 6115 ms  
+ 
+parallel version:  
+found 17984 prime numbers  
+took 1653 ms  
+```  
   
- **cl.exe \/EHsc parallel\-count\-primes.cpp**  
+## <a name="compiling-the-code"></a>编译代码  
+ 若要编译代码，将其复制，然后将其粘贴到 Visual Studio 项目中，或将其粘贴在文件中名为`parallel-count-primes.cpp`然后在 Visual Studio 命令提示符窗口中运行以下命令。  
   
-## 可靠编程  
- 此示例传递给 `parallel_for_each` 算法的 lambda 表达式使用 `InterlockedIncrement` 函数来启用循环的并行迭代，以同时增大计数器。  如果使用函数（如 `InterlockedIncrement`）同步对共享资源的访问，则可以展现代码中的性能瓶颈。  可以使用无锁同步机制（如 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) 类）取消对共享资源的同步访问。  有关按此方式使用 `combinable` 类的示例，请参见[如何：使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。  
+ **cl.exe /EHsc 并行计数 primes.cpp**  
   
-## 请参阅  
+## <a name="robust-programming"></a>可靠编程  
+ 此示例传递给 lambda 表达式`parallel_for_each`算法使用`InterlockedIncrement`函数，以使并行用于同时递增计数器的循环迭代。 如果使用函数，如`InterlockedIncrement`若要同步对共享资源的访问，可以提供性能瓶颈在代码中。 你可以使用一种无锁同步机制，例如， [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类中，以消除对共享资源同时访问。 有关示例，使用`combinable`类以这种方式，请参阅[如何： 使用 combinable 提高性能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。  
+  
+## <a name="see-also"></a>请参阅  
  [并行算法](../../parallel/concrt/parallel-algorithms.md)   
- [parallel\_for\_each 函数](../Topic/parallel_for_each%20Function.md)
+ [parallel_for_each 函数](reference/concurrency-namespace-functions.md#parallel_for_each)
+
+

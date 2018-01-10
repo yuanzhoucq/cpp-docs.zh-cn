@@ -1,31 +1,31 @@
 ---
-title: "A.14   Using the flush Directive without a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用不带列表刷新指令 A.14 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.14   Using the flush Directive without a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例 \(对于第 20 页\) 的 [第2.6.5部分](../../parallel/openmp/2-6-5-flush-directive.md) 区分 `flush` 指令的影响共享对象不会从不受影响的共享对象列表:  
+# <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   使用不带列表的 flush 指令
+下面的示例 (对于[部分 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md)第 20 页上) 区分受共享的对象`flush`指令与任何从共享不受影响的对象的列表：  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // omp_flush_without_list.c  

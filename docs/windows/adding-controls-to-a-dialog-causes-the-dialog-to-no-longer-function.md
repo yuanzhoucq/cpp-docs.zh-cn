@@ -1,71 +1,75 @@
 ---
-title: "Adding Controls to a Dialog Causes the Dialog to No Longer Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], troubleshooting"
-  - "common controls, troubleshooting"
-  - "troubleshooting controls"
-  - "dialog boxes, troubleshooting"
-  - "dialog box controls, troubleshooting"
-  - "InitCommonControls"
+title: "向对话框添加控件导致对话框不再工作 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], troubleshooting
+- common controls, troubleshooting
+- troubleshooting controls
+- dialog boxes, troubleshooting
+- dialog box controls, troubleshooting
+- InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Controls to a Dialog Causes the Dialog to No Longer Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将公共控件或 Rich Edit 控件添加到对话框之后，在测试对话框时该控件不出现，或者对话框本身不出现。  
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>向对话框添加控件导致对话框不再工作
+将公共控件或 rich edit 控件添加到对话框中之后, 它时不会显示测试对话框中或对话框本身将不会出现。  
   
- **问题示例**  
+ **问题的示例**  
   
-1.  创建 Win32 项目，修改应用程序设置以创建 Windows 应用程序（不是控制台应用程序）。  
+1.  创建 Win32 项目中，修改应用程序设置，因此你创建 Windows 应用程序 （不是一个控制台应用程序）。  
   
-2.  在[资源视图](../windows/resource-view-window.md)中，双击 .rc 文件。  
+2.  在[资源视图](../windows/resource-view-window.md)，双击.rc 文件。  
   
-3.  在对话框选项下，双击**“关于”**框。  
+3.  在对话框选项中下, 双击**有关**框。  
   
-4.  将一个“IP Address Control”添加到对话框。  
+4.  添加**IP 地址控件**到对话框中。  
   
-5.  保存并“重新生成”。  
+5.  保存和**全部重新生成**。  
   
 6.  执行程序。  
   
-7.  在对话框的**“帮助”**菜单上，单击**“关于”**命令；没有显示任何对话框。  
+7.  在对话框中的**帮助**菜单上，单击**有关**命令; 没有对话框显示框。  
   
- **原因**  
+ **可能的原因**  
   
- 目前，将下列公共控件或 Rich Edit 控件拖放到对话框上时，对话框编辑器不自动在项目中添加代码。  当此问题发生时，Visual Studio 既不提供错误也不进行警告。  必须手动为控件添加代码。  
+ 目前，对话框编辑器不会自动将代码添加到你的项目时将下列公共控件或 rich edit 控件拖放到对话框。 也不 Visual Studio 提供错误或警告时出现此问题。 您必须手动添加控件的代码。  
   
 ||||  
 |-|-|-|  
 |滑块控件|树控件|日期时间选取器|  
-|数值调节钮控件 \(Spin Control\)|选项卡控件|月历|  
-|进度控件|动画控件 \(Animation Control\)|IP 地址控件 \(IP Address Control\)|  
-|热键 \(Hot Key\)|Rich Edit 控件 （Rich Edit Control）|扩展组合框 \(Extended Combo Box\)|  
-|列表控件|Rich Edit 2.0 控件 \(Rich Edit 2.0 Control\)|自定义控件|  
+|数值调节钮控件|选项卡控件|月历|  
+|进度控件|动画控件|IP 地址控件|  
+|热键|Rich Edit 控件|扩展的组合框|  
+|列表控件|Rich Edit 2.0 控件|自定义控件|  
   
-## 公共控件的修复  
- 为了在对话框上使用公共控件，需要在创建对话框之前调用 [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) 或 **AFXInitCommonControls**。  
+## <a name="the-fix-for-common-controls"></a>公共控件的修复  
+ 若要使用公共控件出现在对话框中，你需要调用[InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697)或**AFXInitCommonControls**创建对话框之前。  
   
-## RichEdit 控件的修复  
- 必须为 Rich Edit 控件调用 **LoadLibrary**。  有关更多信息，请参见 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] 中的[对 RichEdit 1.0 控件使用 MFC](../mfc/using-the-richedit-1-0-control-with-mfc.md)、[关于 Rich Edit 控件](http://msdn.microsoft.com/library/windows/desktop/bb787873)，以及 [Rich Edit 控件概述](../mfc/overview-of-the-rich-edit-control.md)。  
+## <a name="the-fix-for-richedit-controls"></a>对 RichEdit 控件的修复  
+ 必须调用**LoadLibrary**为 rich edit 控件。 有关详细信息，请参阅[RichEdit 1.0 控件使用 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)，[有关 Rich Edit 控件](http://msdn.microsoft.com/library/windows/desktop/bb787873)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]，和[格式文本编辑控件的概述](../mfc/overview-of-the-rich-edit-control.md)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## 请参阅  
- [Troubleshooting the Dialog Editor](../mfc/troubleshooting-the-dialog-editor.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>请参阅  
+ [对话框编辑器疑难解答](../windows/troubleshooting-the-dialog-editor.md)   
+ [对话框编辑器](../windows/dialog-editor.md)
+

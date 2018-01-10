@@ -1,32 +1,32 @@
 ---
-title: "B. Stubs for Run-time Library Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "B. 运行时库函数的存根 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# B. Stubs for Run-time Library Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本节提供有关在 OpenMP C 和 C\+\+ API 定义的运行库函数提供存根。  提供存根启用可移植性到不支持 OpenMP C 和 C\+\+ API 的平台。  在这些平台上，必须使用包含这些函数存根的库链接 OpenMP 程序。  存根功能，假设在 OpenMP 程序的指令被忽略。  因此，它们来模拟序列化的语义。  
+# <a name="b-stubs-for-run-time-library-functions"></a>B. 运行时库函数的存根
+本部分提供有关在 OpenMP C 和 c + + API 中定义的运行时库函数存根 （stub）。 存根 （stub） 用于启用到 OpenMP C 和 c + + API 不支持的平台的可移植性。 在这些平台上，必须使用包含这些存根 （stub） 函数的库链接 OpenMP 程序。 存根 （stub） 函数假设 OpenMP 程序中的指令将被忽略。 在这种情况下，它们模拟串行语义。  
   
 > [!NOTE]
->  出现死锁功能的锁变量必须通过这些功能完全访问。  在用户程序不应初始化或修改它。  用户不应对 OpenMP C 和 C\+\+ 实现使用结构的假设根据该模式的实现锁定使用由存根功能。  
+>  将出现在锁定函数的锁定变量必须以独占方式通过这些函数来访问。 它不应初始化或以其他方式修改在用户程序中。 用户不应假设 OpenMP C 和 c + + 实现用于实现基于使用存根 （stub） 函数的方案的锁的机制。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 #include <stdio.h>  

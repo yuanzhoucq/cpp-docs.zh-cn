@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 C + + AMP 包含中的多个 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)可用来访问 Gpu 上的纹理支持的命名空间。 一些常见的情况有：  
@@ -32,7 +33,7 @@ C + + AMP 包含中的多个 Api [concurrency:: graphics](../../parallel/amp/ref
  `norm`和`unorm`类型都是限制的范围的标量类型`float`值; 这称为*钳位*。 这些类型可从其他标量类型显式构造。 在强制转换时，值首先转换为`float`，然后限制到 norm [-1.0，1.0] 或 unorm [0.0，1.0] 允许的各自区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 这些类型和其他内置标量类型之间如定义二元运算符`float`和`int`: +、-，*、 /、 = =、 ！ =、 >， \<，> =、 < =。 此外支持复合赋值运算符: + =、-=、 \*=、 / =。 Norm 类型已定义一元求反运算符 (-)。  
   
 ## <a name="short-vector-library"></a>短矢量库  
- 短矢量库提供了一些功能[向量类型](http://go.microsoft.com/fwlink/p/linkid=248500)，HLSL 中定义，通常会将其用来定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型包括 `double`、`float`、`int`、`norm`、`uint` 和 `unorm`。 下表中显示了这些类型名称。 对于每种类型，同时有一个名称中不含下划线的对应 `typedef`。 有下划线的类型是在[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 没有下划线的类型是在[Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) ，以便它们清楚地分隔同样名为基础类型从如`__int8`和`__int16`。  
+ 短矢量库提供了一些功能[向量类型](http://go.microsoft.com/fwlink/p/?linkid=248500)，HLSL 中定义，通常会将其用来定义纹素。 短矢量是一种可保留 1-4 个相同类型值的数据结构。 支持的类型包括 `double`、`float`、`int`、`norm`、`uint` 和 `unorm`。 下表中显示了这些类型名称。 对于每种类型，同时有一个名称中不含下划线的对应 `typedef`。 有下划线的类型是在[concurrency:: graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 没有下划线的类型是在[Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) ，以便它们清楚地分隔同样名为基础类型从如`__int8`和`__int16`。  
   
 ||长度 2|长度为 3|长度为 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ C + + AMP 包含中的多个 Api [concurrency:: graphics](../../parallel/amp/ref
   
 -   具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。  
   
- `texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[简介中 Direct3D 11 纹理](http://go.microsoft.com/fwlink/p/linkid=248502)。  
+ `texture` 对象的秩可以是 1、2 或 3。 在 `texture` 调用的 lambda 中，`parallel_for_each` 对象只能通过引用来捕获。 纹理存储作为 Direct3D 纹理对象存储在 GPU 中。 有关纹理和纹素在 Direct3D 中的详细信息，请参阅[简介中 Direct3D 11 纹理](http://go.microsoft.com/fwlink/p/?linkid=248502)。  
   
  你所使用的纹素类型可以是图形编程中使用的众多纹理格式中的一种。 例如，RGBA 格式可以使用 32 位，其中，R、G、B 和 A 标量元素各 8 位。 图形卡的纹理硬件可以访问基于格式的各个元素。 例如，如果你使用的是 RGBA 格式，则纹理硬件可以提取每个 8 位组件形成 32 位窗体。 在 C++ AMP 中，你可以设置每个纹理标量元素的位数，以便自动访问代码中的各个标量元素，而不必进行移位。  
   
@@ -278,7 +279,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
  
 ```  
   
- 你可以还从一个纹理使用复制到另一个[texture:: copy_to](reference/texture-class.md#copy_to)方法。 这两个纹理可以位于不同的 accelerator_view 上。 当复制到 `writeonly_texture_view` 对象时，数据将复制到基础 `texture` 对象。 源和目标 `texture` 对象上的每标量元素位数和范围必须相同。 如果不符合这些要求，运行时将引发异常。  
+ 你可以还从一个纹理使用复制到另一个[texture:: copy_to](reference/texture-class.md#copy_to)方法。 这两个纹理可以位于不同的 accelerator_view 上。 当复制到 `writeonly_texture_view` 对象时，数据将复制到基础 `texture` 对象。 源和目标 `texture` 对象上的每标量元素位数和范围必须相同。 如果不符合这些需求，运行时将引发异常。  
 
   
 ## <a name="texture-view-classes"></a>纹理视图类  
@@ -429,9 +430,9 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>互操作性  
 
- C + + AMP 运行时支持之间的互操作性`texture<T,1>`和[ID3D11Texture1D 接口](http://go.microsoft.com/fwlink/p/LinkId=248503)之间`texture<T,2>`和[ID3D11Texture2D 接口](http://go.microsoft.com/fwlink/p/LinkId=255317)，和之间`texture<T,3>`和[ID3D11Texture3D 接口](http://go.microsoft.com/fwlink/p/LinkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和`accelerator_view`对象，并返回`texture`对象。  
+ C + + AMP 运行时支持之间的互操作性`texture<T,1>`和[ID3D11Texture1D 接口](http://go.microsoft.com/fwlink/p/?linkId=248503)之间`texture<T,2>`和[ID3D11Texture2D 接口](http://go.microsoft.com/fwlink/p/?linkId=255317)，和之间`texture<T,3>`和[ID3D11Texture3D 接口](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用`texture`对象，并返回`IUnknown`接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用`IUnknown`接口和`accelerator_view`对象，并返回`texture`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [double_2 类](../../parallel/amp/reference/double-2-class.md)   
  [double_3 类](../../parallel/amp/reference/double-3-class.md)   
  [double_4 类](../../parallel/amp/reference/double-4-class.md)   

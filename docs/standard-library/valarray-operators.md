@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 运算符
 ||||  
@@ -232,7 +259,7 @@ operator&(
  Valarray 的元素的按位与运算的元素指向组合的`left`和`right`。  
   
 ### <a name="remarks"></a>备注  
- 按位运算仅可用于操作 `char` 和 `int` 数据类型中的位和变体，不可用于更复杂的数据类型（如 **float**、**double**、**longdouble** 和 `void``bool` 等）。  
+ 按位运算仅可用于操作 `char` 和 `int` 数据类型中的位和变体，不可用于更复杂的数据类型（如 **float**、**double**、**longdouble**、`void` 和 `bool` 等）。  
   
  按位 **AND** 具有与逻辑 **AND** 相同的事实表，但是按位 AND 适用于单个位级别上的数据类型。 [operator&&](../standard-library/valarray-operators.md#amp) 应用于元素级别，它将所有非零值视为 true，结果是布尔值的 valarray。 相反，按位 **ANDoperator&** 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。  
   
@@ -283,7 +310,7 @@ The element-by-element result of the bitwise operator & is the
 *\  
 ```  
   
-##  <a name="op_amp_amp"></a>operator&amp;&amp;  
+##  <a name="op_amp_amp"></a>  operator&amp;&amp;  
  获取两个大小相等的 valarray 的对应元素之间的或 valarray 和 valarray 元素类型的指定值之间的逻辑 **AND**。  
   
 ```  
@@ -540,7 +567,7 @@ The element-by-element result of the greater than or equal test is the
 *\  
 ```  
   
-##  <a name="op_gt_gt"></a>operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  将 valarray 的每个元素的位以指定数位向右移位，或按由第二个 valarray 指定的元素指向值向右移位。  
   
 ```  
@@ -710,7 +737,7 @@ The element-by-element result of the less-than comparson test is the
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  测试某个 valarray 的元素是否小于或等于某个与其大小相等的 valarray 的元素，或者 valarray 的所有元素都是否都大于等于或小于等于某个指定值。  
   
 ```  
@@ -797,7 +824,7 @@ The element-by-element result of the less than or equal test is the
 *\  
 ```  
   
-##  <a name="op_lt_lt"></a>operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  将 valarray 的每个元素的位以指定数位向左移位，或按由第二个 valarray 指定的元素指向值向左移位。  
   
 ```  
@@ -1331,7 +1358,7 @@ operator^(
  Valarray 的元素的按位的元素指向组合**XOR**操作`left`和`right`。  
   
 ### <a name="remarks"></a>备注  
- 按位运算仅可用于操作 `char` 和 `int` 数据类型中的位和变体，不可用于更复杂的数据类型（如 **float**、**double**、`long double` 和 `void``bool` 等）。  
+ 仅可以使用按位运算来操作中的位`char`和`int`数据类型和变体而不是在**float**， **double**， `long double`， `void`， `bool`或其他，更复杂的数据类型。  
   
  按位异 `OR` ( **XOR**) 具有以下语义：假设有位 b1 和 b2，如果其中恰好有一个位为 true，则 b1 **XOR** b2 为 **true**；如果两个位都为 false 或都为 true，则为 **false**。  
   
@@ -1509,7 +1536,7 @@ operator||(
  Valarray 的元素的类型`bool`和的逻辑或运算的元素指向组合`left`和`right`。  
   
 ### <a name="remarks"></a>备注  
- 逻辑 `OR``operator||`在元素级别上适用，将所有非零值视为 **true**，结果为布尔值的 valarray。 相反，按位版本的 `OR`、[operator|](../standard-library/valarray-operators.md#op_or) 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。  
+ 逻辑`OR``operator||`将上一个元素级别，计数为所有非零值应用**true**，并且结果为布尔值的 valarray。 相反，按位版本的 `OR`、[operator|](../standard-library/valarray-operators.md#op_or) 可产生 0 或 1 以外的值的 valarray，具体取决于按位运算的结果。  
   
 ### <a name="example"></a>示例  
   
@@ -1562,7 +1589,6 @@ The element-by-element result of the logical OR operator|| is the
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<valarray>](../standard-library/valarray.md)
-
 

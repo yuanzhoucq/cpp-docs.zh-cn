@@ -1,28 +1,28 @@
 ---
-title: "2.7 Data Environment | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7 数据环境 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 74e44b3c-e18c-4773-8e78-cd6c4413ae57
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e018a2c1b20bef640852ced913dc90266e733c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7 Data Environment
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本节在并行区域的执行过程中存在一个指令和几个子句控件的数据环境，如下所示:  
+# <a name="27-data-environment"></a>2.7 数据环境
+本节介绍指令和多个子句，用于控制数据环境并行区域，在执行期间，如下所示：  
   
--   \(请参见以下各节\) 提供 **threadprivate** 指令使文件大小、命名空间范围或静态块范围变量本地传递给线程。  
+-   A **threadprivate**指令 （请参阅以下部分） 提供可以使文件范围、 命名空间范围或静态的块范围变量为线程本地。  
   
--   在指令可以指定控制变量共享的属性并行或的工作划分构造的持续时间的子句在第 25 页的 [第2.7.2部分](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 所述。
+-   可在指令以并行或工作共享构造的持续时间内控制变量的共享属性中指定的子句中所述[部分 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)第 25 页上。

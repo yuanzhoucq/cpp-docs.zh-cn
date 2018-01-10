@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a652d4306e01d15d49ae6f931041d3d5dd9909f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 183fd4c76fc8df092c5b7740ff5de2e35b64d682
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070：MFC 窗口类名称
 > [!NOTE]
@@ -50,7 +51,7 @@ Afx:%x:%x:%x:%x:%x
   
  第一个窗体 (`Afx:%x:%x`) 时使用**hCursor**， **hbrBackground**，和**任务栏**全部**NULL**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)   
  [TN020：ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)

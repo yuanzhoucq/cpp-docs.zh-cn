@@ -119,11 +119,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a8b9c9de69f9042f68cc04d435070ade9b24dd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffa5c09f1572200ca7850c8870b7daee9e3e75f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 提供 Windows 组合框功能。  
@@ -265,7 +266,7 @@ class CComboBox : public CWnd
   
  `CComboBox`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="addstring"></a>Ccombobox::  
@@ -330,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="return-value"></a>返回值  
  指示中所述的两个项的相对位置`COMPAREITEMSTRUCT`结构。 它可以是任何以下值：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |- 1|项 2 之前进行排序的第 1 项。|  
 |0|项 1 和 2 的项进行排序相同。|  
@@ -618,7 +619,7 @@ BOOL GetCueBanner(
 ### <a name="return-value"></a>返回值  
  在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含提示横幅文本，如果存在; 否则为`CString`长度为零的对象。  
   
- - 或 -  
+ 或  
   
  在第二个重载中，`true`如果此方法成功; 否则为`false`。  
   
@@ -1289,7 +1290,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `iMinVisible`|指定可见项的最小数目。|  
   
@@ -1348,7 +1349,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 ### <a name="example"></a>示例  
   请参阅示例[CComboBox::GetDroppedState](#getdroppedstate)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CTRLBARS](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

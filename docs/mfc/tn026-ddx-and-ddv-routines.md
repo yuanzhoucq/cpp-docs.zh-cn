@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a12ca508478b04a5485ad3f088009d7cd6b0b48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 例程
 > [!NOTE]
@@ -69,7 +70,7 @@ DDV_Custom(pDX,
   
  对话框数据就是： 中的成员数据**CMyDialog**类。 它不存储在结构或类似的任何内容。  
   
-## <a name="notes"></a>备注  
+## <a name="notes"></a>说明  
  尽管我们中调用此"对话框数据"，所有功能都均可在任何类派生自`CWnd`并都不限于只需对话框。  
   
  在标准 c + + 中的构造函数，通常一个块以与中设置的数据的初始值`//{{AFX_DATA_INIT`和`//}}AFX_DATA_INIT`注释。  
@@ -262,7 +263,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
   
  s = 字符串  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 
