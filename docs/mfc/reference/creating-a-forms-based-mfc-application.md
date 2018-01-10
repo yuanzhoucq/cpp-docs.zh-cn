@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 764721114bb87127c892563211f7fcc85171ea68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>创建基于窗体的 MFC 应用程序
 表单是一个对话框以及让用户访问和可能更改数据的控件。 你可能想要开发应用程序在其中用户选择从所选的窗体。 通常，基于窗体的应用程序允许用户访问窗体通过单击**新建**从**文件**菜单。 基于对话框的应用程序，不允许用户访问**新建**选项**文件**菜单上，也被视为一个基于窗体的应用程序。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [应用程序设计选项](../../mfc/application-design-choices.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
  [窗体视图](../../mfc/form-views-mfc.md)   
  [创建文件资源管理器样式的 MFC 应用程序](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   

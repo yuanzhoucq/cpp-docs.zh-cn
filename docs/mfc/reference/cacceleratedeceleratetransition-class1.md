@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAccelerateDecelerateTransition
 - afxanimationcontroller/CAccelerateDecelerateTransition
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAccelerateDecelerateTransition class [MFC]
+dev_langs: C++
+helpviewer_keywords: CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6251451607a31caad44e8507466c555d39847a1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 10712925645549f637ffea343e5ab6ce4220b5e3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 类
 实现加速-减速转换。  
@@ -69,7 +66,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
  `CAccelerateDecelerateTransition`   
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="cacceleratedeceleratetransition"></a>CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
@@ -140,6 +137,5 @@ UI_ANIMATION_SECONDS m_duration;
 DOUBLE m_finalValue;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

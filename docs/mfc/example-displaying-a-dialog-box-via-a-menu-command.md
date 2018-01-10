@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81cada5fdde3a510bdc26b10d46e48bf017a3a43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2715e1b64c1565d122f6eec012a8a33c2525ac9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例：通过菜单命令显示对话框
 本主题包含的过程，以：  
@@ -101,7 +102,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Q251059： 如何： 提供 MFC 对话框自己窗口类名称  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对话框](../mfc/dialog-boxes.md)   
  [模式和无模式对话框](../mfc/modal-and-modeless-dialog-boxes.md)
 

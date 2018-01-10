@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6789bd74924912361b3045d112c91ec6dcaedbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 类
 `concurrent_priority_queue` 类是允许多个线程并发推送和弹出项的容器。 项按优先级顺序弹出，其中优先级由作为模板自变量提供的涵子确定。  
@@ -96,7 +97,7 @@ template <typename T,
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `concurrent_priority_queue`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concurrent_priority_queue.h  
   
  **命名空间：** 并发  
@@ -270,7 +271,7 @@ bool try_pop(reference _Elem);
 ### <a name="return-value"></a>返回值  
  `true`如果弹出一个值，已`false`否则为。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)
 

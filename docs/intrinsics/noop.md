@@ -1,38 +1,38 @@
 ---
-title: "__noop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__noop_cpp"
-  - "__noop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__noop 关键字 [C++]"
+title: "__noop |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __noop_cpp
+- __noop
+dev_langs: C++
+helpviewer_keywords: __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 348dc23e5ef3744ef1a3f152bf4d4fc5a22d2222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __noop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="noop"></a>__noop
 **Microsoft 专用**  
   
- `__noop` 内部指定应忽略功能，并且参数列表进行分析，但代码没有为参数生成。  能在全局范围使用调试带参数数目可变的功能。  
+ `__noop`内部函数，则指定应忽略的函数和分析自变量列表，但没有代码将生成的自变量。 它被预定在采用数量可变的自变量的全局调试函数中使用。  
   
- 编译器将 `__noop` 内部为 0 在编译时。  
+ 编译器将转换`__noop`内部函数在编译时的 0 到。  
   
-## 示例  
- 下面的代码演示了如何使用 `__noop`。  
+## <a name="example"></a>示例  
+ 下面的代码演示如何使用`__noop`。  
   
 ```  
 // compiler_intrinsics__noop.cpp  
@@ -50,6 +50,6 @@ int main() {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 关键字](../cpp/keywords-cpp.md)
+ [关键字](../cpp/keywords-cpp.md)

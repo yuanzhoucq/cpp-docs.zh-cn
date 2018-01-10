@@ -1,32 +1,33 @@
 ---
-title: "FtmBase::DisconnectObject 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::DisconnectObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DisconnectObject 方法"
+title: "Ftmbase:: Disconnectobject 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::DisconnectObject
+dev_langs: C++
+helpviewer_keywords: DisconnectObject method
 ms.assetid: 33253eec-3a65-4e72-8525-0249245a4790
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dc57bb342f6a9625c968e918b67a7b5e1bbb668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::DisconnectObject 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-优秀释放对对象的任何外部连接。  对象的服务器在关闭之前调用该方法的对象的实现。  
+# <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject 方法
+强制释放对象的所有外部连接。 对象的服务器调用之前的情况下关闭此方法的对象的实现。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHODIMP DisconnectObject(  
@@ -34,17 +35,17 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `dwReserved`  
  留待将来使用；必须为零。  
   
-## 返回值  
- S\_OK，如果成功；否则，一错误的 HRESULT。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## 要求  
- **页眉：**ftm.h  
+## <a name="requirements"></a>惠?  
+ **标头：** ftm.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [FtmBase 类](../windows/ftmbase-class.md)

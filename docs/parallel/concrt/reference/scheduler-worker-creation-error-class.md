@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_worker_creation_error class
+dev_langs: C++
+helpviewer_keywords: scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 93652274432e5ae84bc7336f233f1cdfd278dc00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 类
 此类描述因未能在并发运行时中创建辅助执行上下文而引发的异常。  
@@ -55,7 +38,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[scheduler_worker_creation_error](#ctor)|已重载。 构造 `scheduler_worker_creation_error` 对象。|  
   
@@ -69,8 +52,8 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  `scheduler_worker_creation_error`  
   
-## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+## <a name="requirements"></a>惠?  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -94,6 +77,5 @@ explicit _CRTIMP scheduler_worker_creation_error(
  `_Hresult`  
  `HRESULT`导致异常的错误值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)
-

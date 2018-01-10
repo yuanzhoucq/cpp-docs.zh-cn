@@ -49,11 +49,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a774573a2a42904d89159697dd444db98ddc8243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 类
 `CMFCVisualManagerVS2005`向应用程序提供 Microsoft Visual Studio 2005 外观。  
@@ -110,7 +111,7 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
  [CMFCVisualManagerVS2005](../../mfc/reference/cmfcvisualmanagervs2005-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxvisualmanagervs2005.h  
   
 ##  <a name="getdockingtabsborderssize"></a>CMFCVisualManagerVS2005::GetDockingTabsBordersSize  
@@ -394,7 +395,7 @@ virtual void OnUpdateSystemColors();
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)   

@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 615e2f69a45a17b34b38190ac1c7def1de09d8c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 运算符
 |||||  
@@ -292,9 +290,8 @@ int main()
   
  `c2 == c3: false`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<unordered_set>](../standard-library/unordered-set.md)
-
 
 
 

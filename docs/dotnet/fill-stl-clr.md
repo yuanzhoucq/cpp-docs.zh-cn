@@ -1,45 +1,46 @@
 ---
-title: "fill (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::fill"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fill 函数"
+title: "填充 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::fill
+dev_langs: C++
+helpviewer_keywords: fill function
 ms.assetid: eb67241c-9bb3-497e-bec6-639900c60758
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0003f920b446477b14a8d14c5a704725471e6178
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# fill (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-新分配相同的值设置为在指定的范围内的每个元素。  
+# <a name="fill-stlclr"></a>fill (STL/CLR)
+将相同的新值分配给指定范围中的每个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
     void fill(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 ```  
   
-## 备注  
- 此函数行为与 STL `fill`函数相同。  有关详细信息，请参阅[fill](../Topic/fill.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`fill`。 有关详细信息，请参阅[填充](../standard-library/algorithm-functions.md#fill)。  
   
-## 要求  
- **页眉：** \<\/cliext 算法\>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/算法 >  
   
- **命名空间：** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

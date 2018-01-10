@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ef7e32f56fdff81c7a66a1dfcc6c613201e2f49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通过 OLE DB 一致性测试
 为了使提供程序更为一致，数据访问 SDK 提供了一组 OLE DB 一致性测试。 这些测试检查你的提供商的所有方面，并为你提供合理你提供程序按预期方式运行的保证。 您可以在 Microsoft 数据访问 SDK 中找到 OLE DB 一致性测试。 本部分重点介绍应完成通过一致性测试任务。 有关运行 OLE DB 一致性测试的信息，请参阅 SDK。  
@@ -81,5 +84,5 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
   
 -   遵循正确编程编程规则关于自由线程 （即，锁定写入）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

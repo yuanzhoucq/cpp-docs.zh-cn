@@ -25,11 +25,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f19e255b2c8b63558dfe178ccfd7a23f8992861
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 167947e51ed773f765432148cbe879c926c57d5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-mnemonics-access-keys"></a>定义助记键（访问键）
 通常情况下，键盘用户输入的焦点从一个控件移到另一个在对话框中使用 TAB 键和箭头键。 但是，你可以定义允许用户通过按单个键来选择控件的访问密钥 （助记键或易于记住的名称）。  
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
 2.  中[属性窗口](/visualstudio/ide/reference/properties-window)，请在**标题**属性，键入该控件，键入 and 符的新名称 (**&**) 前面要作为的字母该控件的访问密钥。 例如 `&Radio1`。  
   
-3.  按**输入**。  
+3.  按 **Enter**。  
   
      在显示的标题，以指示访问键，例如，会出现下划线**R**adio1。  
   
@@ -58,12 +61,12 @@ ms.lasthandoff: 10/24/2017
   
 1.  上**格式**菜单上，单击**检查助记键**。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
 

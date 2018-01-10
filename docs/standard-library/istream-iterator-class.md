@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b5fa9a3636b9aa83344b6ae433afefd2c959d31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef5ba7c445325131ad620efcbb6061a0fa49039a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istreamiterator-class"></a>istream_iterator 类
 描述一个输入迭代器对象。 它从输入流中提取 `Type` 类的对象，并通过其存储的、指向 `basic_istream`< `CharType`, `Traits`> 的 `pointer` 类型对象访问此输入流。  
@@ -80,7 +81,7 @@ class istream_iterator
 |[operator->](#operator-_gt)|返回成员的值（如果有）。|  
 |[operator++](#op_add_add)|从输入流提取增量对象，或在递增对象之前复制对象并返回副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iterator>  
   
  **命名空间：** std  
@@ -374,7 +375,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [input_iterator_tag 结构](../standard-library/input-iterator-tag-struct.md)   
  [iterator 结构](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   

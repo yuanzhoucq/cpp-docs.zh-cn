@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8416e7a176c00e5fb3067d1c1cfa447445dab54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用数据绑定
 ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据库中的特定字段的控件属性的数据绑定。 当用户修改了此绑定的属性中的数据时，该控件通知的数据库和请求将更新记录的字段。 控制的成功或失败的请求，然后会通知数据库。  
@@ -137,6 +138,6 @@ ActiveX 控件的功能更强大用途之一是允许要绑定在一起在数据
   
  你现在可以生成项目，将注册控件。 当在对话框中，插入控件**数据字段**和**数据源**属性将已添加且你现在可以选择数据源，并在控件中显示的字段。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
 

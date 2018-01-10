@@ -18,7 +18,7 @@ f1_keywords:
 - exception/std::uncaught_exception
 - exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::current_exception [C++]
@@ -31,12 +31,11 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 616c8d4dd0982f0cd96a3678f6f8595b074f291f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函数
 ||||  
@@ -307,7 +306,6 @@ void unexpected();
 ### <a name="example"></a>示例  
   有关 **unexpected** 的使用示例，请参阅 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<exception>](../standard-library/exception.md)
-
 

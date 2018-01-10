@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a9e3716390f16e319e8dad95f31789fb890b6f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;值&gt;（Visual c + +）
 \<值 > 标记可以描述的属性和属性访问器方法。 请注意，当使用 Visual Studio 集成的开发环境中的代码向导添加属性，它将添加[\<摘要 >](../ide/summary-visual-cpp.md)标记为新的属性。 然后，应手动添加 \<value> 标记，描述属性表示的值。  
@@ -65,5 +66,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

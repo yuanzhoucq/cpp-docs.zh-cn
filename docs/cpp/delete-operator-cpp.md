@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b12d0e20ebb355eb8422784ae0921f693279117
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36da346329341221d43af2ec96aa17be4f819bf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-operator-c"></a>delete 运算符 (C++)
 释放内存块。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- *强制转换表达式*参数必须是指向以前分配给与创建的对象的内存块的指针[new 运算符](../cpp/new-operator-cpp.md)。 **删除**运算符的结果类型为`void`，因此不会返回一个值。 例如:   
+ *强制转换表达式*参数必须是指向以前分配给与创建的对象的内存块的指针[new 运算符](../cpp/new-operator-cpp.md)。 **删除**运算符的结果类型为`void`，因此不会返回一个值。 例如:  
   
 ```  
 CDialog* MyDialog = new CDialog;  
@@ -96,7 +97,7 @@ int main()
   
  对于不是类类型的对象 ([类](../cpp/class-cpp.md)，[结构](../cpp/struct-cpp.md)，或[联合](../cpp/unions.md))，调用全局 delete 运算符。 对于类类型的对象，如果删除表达式以一元范围解析运算符 (::) 开始，则会在全局范围中解析释放函数的名称。 否则，delete 运算符将在释放内存之前为对象调用析构函数（如果指针不为 null）。 可为每个类定义 delete 运算符；如果给定类不存在这种定义，则会调用全局 delete 运算符。 如果删除表达式用于释放其静态对象具有虚拟析构函数的类对象，则将通过对象的动态类型的虚拟析构函数解析释放函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [new 和 delete 运算符](../cpp/new-and-delete-operators.md)   

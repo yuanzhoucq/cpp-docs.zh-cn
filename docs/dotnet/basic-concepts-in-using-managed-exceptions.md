@@ -21,16 +21,19 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 530bf529faa3fc5c08ea850f8ae390e12d49ac14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用托管异常中的基本概念
 本主题讨论托管应用程序中的异常处理。 也就是说，编译应用程序与**/clr**编译器选项。  
   
-## <a name="in-this-topic"></a>主题内容  
+## <a name="in-this-topic"></a>在本主题中  
   
 -   [引发异常下 /clr](#vcconbasicconceptsinusingmanagedexceptionsanchor1)  
   
@@ -150,7 +153,7 @@ In 'catch(MyStruct^ catchException)'
   
 -   但是，如果**捕获**类型子句**SEHException**或任何其基类三思而后，子句将截获异常。 因此，你应将放置任何 catch 子句的 CLR 类型之前先捕获本机 c + + 类型的所有 catch 子句。  
   
- 请注意  
+ 请注意：  
   
 ```  
 catch(Object^)  
@@ -168,7 +171,7 @@ catch(...)
   
  时可以引发或捕捉非托管异常，我们建议你使用[/EHsc](../build/reference/eh-exception-handling-model.md)编译器选项，而不是**/EHs**或**/EHa**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理](../windows/exception-handling-cpp-component-extensions.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)   
  [异常处理](../cpp/exception-handling-in-visual-cpp.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c7098727052ec9ef19614d011ace5981b54ce15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-c"></a>命名空间 (C++)
 命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过使用每个标识符的完全限定的名称，例如访问成员`std::vector<std::string> vec;`，也可通过[using 声明](../cpp/using-declaration.md)单个标识符 (`using std::string`)，或[using 指令](../cpp/namespaces-cpp.md#using_directives)对命名空间中的所有标识符 (`using namespace std;`)。 头文件中的代码应始终使用完全限定的命名空间名称。  
@@ -275,5 +276,5 @@ namespace
   
  这称为未命名或匿名命名空间，当你想要使变量声明其他文件中的代码不可见时很有用 （即为其提供内部链接） 而无需创建命名的命名空间。 同一文件中的所有代码都可以看到未命名的命名空间中的标识符，但这些标识符以及命名空间本身在该文件外部（或更准确地说，在翻译单元外部）不可见。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明和定义](declarations-and-definitions-cpp.md)

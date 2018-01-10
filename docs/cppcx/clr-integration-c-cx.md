@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0220d13f6c378d5081f6043382e7d58888ff3c2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9851a7aa0d1dad84a37504b479c551ffa63bcf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-integration-ccx"></a>CLR 集成 (C++/CX)
 某些 Windows 运行时类型中接收特殊处理在 C + + /cli CX 以及基于公共语言运行时 (CLR) 的语言。 本文讨论一种语言中的几种类型如何映射到另一种语言。 例如，CLR 将 Windows.Foundation.IVector 映射到 System.Collections.IList，将 Windows.Foundation.IMap 映射到 System.Collections.IDictionary，等等。 同样，C + + /cli CX 特别映射诸如 platform:: delegate 和 platform:: string 类型。  
@@ -75,5 +76,5 @@ ms.lasthandoff: 10/24/2017
   
  IReference\<T > 在 Windows 运行时将映射到可以为 Null\<T >.NET 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [与其他语言的互操作性](../cppcx/interoperating-with-other-languages-c-cx.md)

@@ -1,60 +1,63 @@
 ---
-title: "Selecting an Area of an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], image selection"
-  - "Image editor [C++], selecting images"
-  - "images [C++], selecting"
-  - "cursors [C++], selecting areas of"
+title: "选择图像 （图标的图像编辑器） 的区域 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], image selection
+- Image editor [C++], selecting images
+- images [C++], selecting
+- cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3060c47af46a39358ac2e8a7ab5b573f50867869
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Selecting an Area of an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以使用选择工具定义要剪切、复制、清除、调整大小、反转或移动的图像区域。  使用“矩形选择”工具可以定义和选择图像中的矩形区域。  使用“不规则选择”工具可以手工绘制您要选择以执行剪切、复制或其他操作的区域的轮廓。  
+# <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>选择图像的区域（图标的图像编辑器）
+选择工具可用于定义你想要剪切、 复制、 清除、 调整大小、 反转，或移动图像的区域。 与**矩形选择**工具可以定义并选择图像的矩形区域。 与**不规则选择**工具可以绘制你想要选择的剪切、 复制或其他操作的区域的画概述。  
   
 > [!NOTE]
->  请参见[“图像编辑器”工具栏](../mfc/toolbar-image-editor-for-icons.md)中给出的**“矩形选择”**和**“不规则选择”**工具，或查看与**“图像编辑器”**工具栏上的每个按钮相关的“工具”提示。  
+>  请参阅**矩形选择**和**不规则选择**工具显示在[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)或查看与每个按钮上关联的工具提示**图像编辑器**工具栏。  
   
- 还可以从选定内容中创建自定义画笔。  有关更多信息，请参见[创建自定义画笔](../mfc/creating-a-custom-brush-image-editor-for-icons.md)。  
+ 你还可以通过选择创建自定义画笔。 有关详细信息，请参阅[创建自定义画笔](../windows/creating-a-custom-brush-image-editor-for-icons.md)。  
   
-### 选择图像的区域  
+### <a name="to-select-an-area-of-an-image"></a>若要选择的映像的区域  
   
-1.  在“图像编辑器”工具栏上（或从“工具”命令 \-\>“图像”菜单），单击要选择的工具。  
+1.  上**图像编辑器**工具栏 (或从**映像**菜单上，**工具**命令)，单击所需的选择工具。  
   
-2.  将插入点移动到要选择的图像区域的一角。  当插入点位于图像上方时会出现十字型光标。  
+2.  将插入点移动到你想要选择的图像区域的一个角。 插入点位于图像上方时，会显示十字线。  
   
-3.  将插入点拖动到要选择的区域的对角。  矩形显示将选择哪些像素。  矩形内部的所有像素（包括那些矩形下面的像素）都被包括在选定内容中。  
+3.  到想要选择的区域的对角拖动该插入点。 矩形显示将选择哪些像素。 所选内容中包括的矩形，包括那些在矩形内的所有像素。  
   
-4.  释放鼠标按钮。  选定内容边框封闭选定区域。  
+4.  释放鼠标按钮。 选择边框环绕选定的区域。  
   
-### 选择整个图像  
+### <a name="to-select-an-entire-image"></a>若要选择整个图像  
   
-1.  在当前选定内容外部单击图像。  选定内容边框更改焦点并重新包围整个图像。  
+1.  单击当前所选内容外部图像。 选择边框焦点更改，然后再一次包含整个图像。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  无  
   
-## 请参阅  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>请参阅  
+ [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)
+

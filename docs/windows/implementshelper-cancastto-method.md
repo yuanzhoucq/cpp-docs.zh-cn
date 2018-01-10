@@ -1,32 +1,33 @@
 ---
-title: "ImplementsHelper::CanCastTo 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsHelper::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo 方法"
+title: "Implementshelper:: Cancastto 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsHelper::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 9ae6fa17-d0b1-4e31-9ae5-da6ae4026e32
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c52123710c73c9d78dad4f731736654ee2267d2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ImplementsHelper::CanCastTo 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo 方法
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -41,27 +42,27 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `riid`  
- 对接口 ID. 的引用  
+ 引用接口 id。  
   
  `ppv`  
- 如果该操作成功，给接口的指针`riid` 点由 `iid`指定。  
+ 如果此操作成功，通过指定指向接口的指针`riid`或`iid`。  
   
  `iid`  
- 对接口 ID. 的引用  
+ 引用接口 id。  
   
-## 返回值  
- S\_OK，如果成功；否则，一错误的 HRESULT。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## 备注  
- 获取特定接口 ID的指针。  
+## <a name="remarks"></a>备注  
+ 获取一个指针指向指定的接口 id。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ImplementsHelper 结构](../windows/implementshelper-structure.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

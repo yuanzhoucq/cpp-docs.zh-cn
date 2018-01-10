@@ -67,11 +67,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ff47ee9c10693c6dba4dd28323549b81266e6950
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 执行不区分大小写的字符串比较。  
@@ -130,7 +131,7 @@ int _mbsicmp_l(
  发生错误时，`_mbsicmp` 返回 `_NLSCMPERROR`，该返回值是在 \<string.h> 和 \<mbstring.h> 中定义的。  
   
 ## <a name="remarks"></a>备注  
- `_stricmp` 函数在将 `string1` 和 `string2` 的每个字符转换为小写之后按序号对它们进行比较，并返回一个指示它们关系的值。 `_stricmp` 与 `_stricoll` 的不同之处在于 `_stricmp` 比较仅受到会确定字符大小写的 `LC_CTYPE` 影响。 `_stricoll` 函数根据区域设置的 `LC_CTYPE` 和 `LC_COLLATE` 类别来比较字符串，其中该区域设置包括大小写和排序规则顺序。 有关 `LC_COLLATE` 类别的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 和[区域设置类别](../../c-runtime-library/locale-categories.md)。 不带 `_l` 后缀的函数的版本会将当前区域设置用于区域设置相关行为。 带后缀的版本是相同的，只不过它们转而使用传入的区域设置。 如果尚未设置区域设置，则使用 C 区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `_stricmp` 函数在将 `string1` 和 `string2` 的每个字符转换为小写之后按序号对它们进行比较，并返回一个指示它们关系的值。 `_stricmp` 与 `_stricoll` 的不同之处在于 `_stricmp` 比较仅受到会确定字符大小写的 `LC_CTYPE` 影响。 `_stricoll` 函数根据区域设置的 `LC_CTYPE` 和 `LC_COLLATE` 类别来比较字符串，其中该区域设置包括大小写和排序规则顺序。 有关 `LC_COLLATE` 类别的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 和[区域设置类别](../../c-runtime-library/locale-categories.md)。 不带 `_l` 后缀的函数的版本会将当前区域设置用于区域设置相关行为。 带后缀的版本是相同的，只不过它们转而使用传入的区域设置。 如果尚未设置区域设置，则使用 C 区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
 > [!NOTE]
 >  `_stricmp` 与 `_strcmpi` 相等。 它们可以互换使用，但 `_stricmp` 是首选标准。  
@@ -173,15 +174,15 @@ int main() {
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsicmp`|`_stricmp`|`_mbsicmp`|`_wcsicmp`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_stricmp`, `_stricmp_l`|\<string.h>|  
 |`_wcsicmp`, `_wcsicmp_l`|\<string.h> 或 \<wchar.h>|  
 |`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -232,7 +233,7 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [_memicmp、_memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   

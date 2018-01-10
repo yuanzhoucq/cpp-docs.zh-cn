@@ -1,32 +1,33 @@
 ---
-title: "satype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.satype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "satype attribute"
+title: "satype |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.satype
+dev_langs: C++
+helpviewer_keywords: satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d4e083cfd0ee1a72992d3c400c4790f5cd50396
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# satype
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定 **SAFEARRAY** 结构的数据类型。  
+# <a name="satype"></a>satype
+指定的数据类型**SAFEARRAY**结构。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,13 +36,13 @@ caps.handback.revision: 13
 ) ]  
 ```  
   
-#### 参数  
- *data\_type*  
- 参数形式传递给接口方法的 **SAFEARRAY** 数据结构的数据类型。  
+#### <a name="parameters"></a>参数  
+ *data_type*  
+ 数据类型**SAFEARRAY**作为参数传递给接口方法的数据结构。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -50,13 +51,13 @@ caps.handback.revision: 13
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
-## 备注  
- **satype** C\+\+ 特性指定 **SAFEARRAY**的数据类型。  
+## <a name="remarks"></a>备注  
+ **Satype** c + + 特性指定的数据类型**SAFEARRAY**。  
   
 > [!NOTE]
->  间接寻址从在生成的 .idl 文件的 **SAFEARRAY** 指针被删除从它在 .cpp 文件中声明。  
+>  从删除一定程度的间接性**SAFEARRAY**中如何在.cpp 文件中声明的生成的.idl 文件中的指针。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_satype.cpp  
@@ -69,9 +70,8 @@ __interface A {
 };  
 ```  
   
-## 请参阅  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>请参阅  
+ [编译器特性](../windows/compiler-attributes.md)   
+ [Parameter 特性](../windows/parameter-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
  [id](../windows/id.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d51cc4caa7a1018e85cc880cf45894abc861d250
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2dd3778dad837ffe23d17b58b4e579844dc71f40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>如何：接收来自本机 C++ 类的 Windows 窗体事件
 你可以启用本机 c + + 类，以接收从 Windows 窗体控件或其他使用 MFC 宏映射格式的窗体中引发的托管事件回调。 接收视图和对话框中的事件是类似于控件的相同任务。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/24/2017
     }  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)   
  [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)   
  [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)   

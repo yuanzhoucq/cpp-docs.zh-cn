@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3de4444aaeb55ab30ec6ce7e0ebd187c8468f673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64775ad9f44c55529107b50d0695e95e2b9c3a2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overridable-cwinapp-member-functions"></a>可重写 CWinApp 成员函数
 [CWinApp](../mfc/reference/cwinapp-class.md)提供了几项可重写成员函数 (`CWinApp`重写这些成员从类[CWinThread](../mfc/reference/cwinthread-class.md)，从中`CWinApp`派生):  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  唯一一个必须重写的 `CWinApp` 成员函数是 `InitInstance`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWinApp：应用程序类](../mfc/cwinapp-the-application-class.md)

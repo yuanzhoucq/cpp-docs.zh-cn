@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ae0c7a99ca64287c91cb1392f81ac82db103d29d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 提供 ref 类和 ref 结构在 Windows 应用商店应用程序中的通用行为。 所有 ref 类和 ref 结构实例都可以隐式转换为 Platform::Object^，并且可以重写其虚拟 ToString 方法。  
@@ -59,7 +60,7 @@ public ref class Object : Object
   
  `Object`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** vccorlib.h  
   
  **命名空间：** Platform  
@@ -127,7 +128,7 @@ Object::GetType()
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Platform:: type 类](../cppcx/platform-type-class.md)   
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)   
  [类型 System](../cppcx/type-system-c-cx.md
@@ -184,5 +185,5 @@ public:
     };  
 };  
 ```  
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

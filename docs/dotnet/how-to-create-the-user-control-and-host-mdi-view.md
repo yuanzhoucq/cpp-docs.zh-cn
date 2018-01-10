@@ -16,11 +16,14 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 298a08689d6c4aa69d4a52af5fad965e3e353b5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：创建用户控件并承载 MDI 视图
 以下步骤演示如何创建.NET Framework 用户控件创作控件类库 （具体而言，Windows 控件库项目） 中的用户控件，然后将项目编译为程序集。 从 MFC 应用程序使用派生自的类也可以使用控件[CView 类](../mfc/reference/cview-class.md)和[CWinFormsView 类](../mfc/reference/cwinformsview-class.md)。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
      上**文件**菜单上，选择**新建**，然后单击**项目**。 在**Visual c + +**文件夹，选择**MFC 应用程序**。  
   
-     在**名称**框中，输入`MFC02`和更改**解决方案**将设置为**将添加到解决方案**。 单击“确定”。  
+     在**名称**框中，输入`MFC02`和更改**解决方案**将设置为**将添加到解决方案**。 单击 **“确定”**。  
   
      在**MFC 应用程序向导**，接受所有默认值，然后单击**完成**。 这将创建多文档界面 MFC 应用程序。  
   
@@ -109,5 +112,5 @@ ms.lasthandoff: 10/24/2017
   
      上**调试**菜单上，单击**启动而不调试**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以 MFC 视图的形式承载 Windows 窗体用户控件](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

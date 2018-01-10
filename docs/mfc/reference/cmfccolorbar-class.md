@@ -85,11 +85,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 031a26d0b7b461c64bd111d26811ccf4031694c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04dcf7628e45d4c43ffbd5bbcd85132092ca04a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar 类
 `CMFCColorBar`类表示可在文档或应用程序中选择颜色的停靠控件条。  
@@ -153,7 +154,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`m_bInternal`|确定是否处理鼠标事件布尔字段。 此字段时，通常情况下，处理鼠标事件`TRUE`和自定义模式是`FALSE`。|  
 |`m_bIsEnabled`|一个布尔值，该值指示控件是否已启用。|  
@@ -233,7 +234,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
  [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcolorbar.h  
   
 ##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
@@ -381,7 +382,7 @@ void ContextToSize(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `bSquareButtons`|`TRUE`若要指定形状的颜色栏控件上的按钮是正方形;否则为`FALSE`。 默认值为 `TRUE`。|  
 |[in] `bCenterButtons`|`TRUE`若要指定，颜色栏控件按钮的表面上内容居中;否则为`FALSE`。 默认值为 `TRUE`。|  
@@ -475,7 +476,7 @@ static BOOL CreatePalette(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `arColors`|颜色数组。|  
 |[in] `palette`|颜色的调色板。|  
@@ -549,7 +550,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `bVertDock`|`TRUE`若要执行计算的垂直停靠的颜色栏控件;否则，请执行计算的水平停靠的控件。|  
   
@@ -578,7 +579,7 @@ int GetExtraHeight(int nNumColumns) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `nNumColumns`|如果颜色栏控件包含文档颜色，要在文档颜色的网格中显示的列数。 否则，不使用此值。|  
   
@@ -628,7 +629,7 @@ static int InitColors(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pPalette`|调色板对象、 指针或`NULL`。 如果此参数为`NULL`，此方法使用默认调色板的操作系统。|  
 |[in] `arColors`|颜色数组。|  
@@ -672,7 +673,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pButton`|指向驻留在工具栏的控件。|  
   
@@ -735,7 +736,7 @@ CPalette* SelectPalette(CDC* pDC);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pDC`|当前颜色栏控件的父按钮的设备上下文的指针。|  
   
@@ -832,7 +833,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pWndList`|为属性网格控件对象的指针。|  
   
@@ -864,6 +865,6 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ### <a name="remarks"></a>备注  
  此方法可发送`WM_SETMESSAGESTRING`颜色栏控件的所有者的消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

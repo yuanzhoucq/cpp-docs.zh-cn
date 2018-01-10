@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: aef6920b9133280a20cc41344fa707a2cb1cfe97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af74c81186591062214e2a8eb1695a2d177cfc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 Windows 运行时类型可声明 （即，发布） 事件，并在同一组件或其他组件的客户端代码可以订阅这些事件通过将调用的方法相关联*事件处理程序*与事件。 一个事件可以有多个事件处理程序与之关联。 当发布对象引发事件时，将调用所有事件处理程序。 这样，订阅类可在发布者引发事件时执行任何适当的自定义操作。 属于委托类型的事件可指定在所有事件处理程序订阅事件时所需的签名。  
@@ -60,7 +61,7 @@ Windows 运行时类型可声明 （即，发布） 事件，并在同一组件�
   
  事件源对事件接收器调用事件处理程序的顺序不能保证，可能因调用而异。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   
  [委托](../cppcx/delegates-c-cx.md)   
  [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   

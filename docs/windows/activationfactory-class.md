@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactory 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactory 类"
+title: "ActivationFactory 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory
+dev_langs: C++
+helpviewer_keywords: ActivationFactory class
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactory 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="activationfactory-class"></a>ActivationFactory 类
 启用 Windows 运行时将激活的一个或多个类。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -37,47 +38,47 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `I0`  
- 第零个接口。  
+ 第零个接口中。  
   
  `I1`  
- 第一个接口 ID。  
+ 第一个接口。  
   
  `I2`  
- 第二个接口 ID。  
+ 第二个接口。  
   
-## 备注  
- ActivationFactory 为 IActivationFactory 注册接口提供方法和基本功能。  ActivationFactory 还可以提供自为工厂定义实现。  
+## <a name="remarks"></a>备注  
+ ActivationFactory 提供注册方法和 IActivationFactory 接口的基本功能。 ActivationFactory 还使你能够提供的自定义工厂实现。  
   
- 下面的代码片段演示如何使用标记 ActivationFactory。  
+ 下面的代码段以符号方式说明了如何使用 ActivationFactory。  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- 下面的代码片段演示如何使用 [实现](../windows/implements-structure.md) 结构指定多三个接口 ID。  
+ 下面的代码段演示如何使用[实现](../windows/implements-structure.md)结构，以指定超过三个接口 Id。  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
-|[ActivationFactory::ActivationFactory 构造函数](../windows/activationfactory-activationfactory-constructor.md)|初始化类工厂的实例。|  
+|名称|描述|  
+|----------|-----------------|  
+|[ActivationFactory::ActivationFactory 构造函数](../windows/activationfactory-activationfactory-constructor.md)|初始化 ActivationFactory 类。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[ActivationFactory::AddRef 方法](../windows/activationfactory-addref-method.md)|递增ActivationFactory 当前对象的引用计数。|  
-|[ActivationFactory::GetIids 方法](../windows/activationfactory-getiids-method.md)|检索数组实现的接口 ID。|  
-|[ActivationFactory::GetRuntimeClassName 方法](../windows/activationfactory-getruntimeclassname-method.md)|获取当前 ActivationFactory 实例化对象的运行时类名。|  
-|[ActivationFactory::GetTrustLevel 方法](../windows/activationfactory-gettrustlevel-method.md)|获取当前 ActivationFactory 实例化对象的信任级别。|  
-|[ActivationFactory::QueryInterface 方法](../windows/activationfactory-queryinterface-method.md)|检索特定接口的指针。|  
-|[ActivationFactory::Release 方法](../windows/activationfactory-release-method.md)|递减 ActivationFactory 当前对象的引用计数。|  
+|名称|描述|  
+|----------|-----------------|  
+|[ActivationFactory::AddRef 方法](../windows/activationfactory-addref-method.md)|递增当前 ActivationFactory 对象的引用计数。|  
+|[ActivationFactory::GetIids 方法](../windows/activationfactory-getiids-method.md)|检索已实现接口 ID 的数组。|  
+|[ActivationFactory::GetRuntimeClassName 方法](../windows/activationfactory-getruntimeclassname-method.md)|获取当前 ActivationFactory 实例化的对象的运行时类名称。|  
+|[ActivationFactory::GetTrustLevel 方法](../windows/activationfactory-gettrustlevel-method.md)|获取当前 ActivationFactory 实例化的对象的信任级别。|  
+|[ActivationFactory::QueryInterface 方法](../windows/activationfactory-queryinterface-method.md)|检索指向指定接口的指针。|  
+|[ActivationFactory::Release 方法](../windows/activationfactory-release-method.md)|递减引用计数的当前 ActivationFactory 对象。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  
   
  `ChainInterfaces`  
@@ -98,10 +99,10 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
  `ActivationFactory`  
   
-## 要求  
- **标头:** module.h  
+## <a name="requirements"></a>惠?  
+ **标头：** module.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

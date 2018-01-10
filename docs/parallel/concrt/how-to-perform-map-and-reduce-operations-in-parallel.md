@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6648933aa972ec1391afe2d9cecd37b15ad53f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>如何：并行执行映射和减少操作
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
  通常情况下，你只需并行化外部或内部循环。 如果你的文件相对较少并且每个文件中包含的单词很多，则可以并行化内部循环。 如果你的文件相对较多并且每个文件中包含的单词比较少，则可以并行化外部循环。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行算法](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_transform 函数](reference/concurrency-namespace-functions.md#parallel_transform)   
  [parallel_reduce 函数](reference/concurrency-namespace-functions.md#parallel_reduce)   

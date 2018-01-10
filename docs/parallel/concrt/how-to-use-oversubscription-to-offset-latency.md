@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7159d5489459bd32566c8665a5bbf42337fd8837
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1a8f059abffd261de2002ed5d18067c48d74876
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用过度订阅偏移延迟
 过度订阅可提高对某些包含很长的延迟的任务的应用程序的整体效率。 本主题演示如何使用过度订阅抵消延迟所致通过网络连接读取数据。  
@@ -84,7 +85,7 @@ Downloaded 1801040 bytes in 3276 ms.
   
  [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [上下文](../../parallel/concrt/contexts.md)   
  [Context:: oversubscribe 方法](reference/context-class.md#oversubscribe)
 

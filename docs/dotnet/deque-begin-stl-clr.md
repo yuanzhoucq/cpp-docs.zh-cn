@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4943971a82d1a87515a6e2ebc96963adeb49c6d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d2d78679684a36b4c036f6345666a908749a79e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequebegin-stlclr"></a>deque::begin (STL/CLR)
 指定受控序列的开头。  
@@ -75,12 +78,12 @@ int main()
  x y c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md)   
  [deque:: front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   

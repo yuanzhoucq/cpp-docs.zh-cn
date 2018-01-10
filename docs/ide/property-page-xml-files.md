@@ -14,11 +14,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9af178e96b3da8ea839633812128f64190f47d6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-page-xml-rule-files"></a>属性页 XML 规则文件
 通过 VCTargets 文件夹中的 XML 文件，配置在 IDE 中的项目属性页。 确切的路径取决于安装了 Visual Studio 的 edition(s)，和产品语言。 对于 Visual Studio 自 2017 年 1 Enterprise Edition 中，在英语中，路径是`%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`。 XML 文件描述的规则、 类别中，和的各个属性，其数据类型、 默认值的名称和它们将如何显示。 当你在 IDE 中设置属性时，在项目文件中存储的新值。
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/24/2017
 
   f. **DisplayName:**这是在规则节点的属性页 UI 上显示的名称。 此值进行了本地化。 我们创建 DisplayName 规则的子元素，而不是属性 （如名称或 SwitchPrefix） 由于内部本地化工具要求。 从 XAML 的角度来看，两个等效值。 因此，你可以只需将其属性以减少混乱，或将它保留原样。
 
-  g。 **数据源：**这是一个非常重要的属性，指示项目系统的属性值应从该位置从读取和写入和其分组 （如下所述）。 有关 cl.xml，这些值如下：
+  g. **数据源：**这是一个非常重要的属性，指示项目系统的属性值应从该位置从读取和写入和其分组 （如下所述）。 有关 cl.xml，这些值如下：
 
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
@@ -137,9 +138,9 @@ ms.lasthandoff: 10/24/2017
 
    单个属性可以重写其父级规则的数据源。 在这种情况下，该属性的值的位置将不同于其他规则中的属性。
 
-   H。 有未在此处显示的一个规则，如说明、 SupportsFileBatching 等其他特性。 可以通过浏览这些类型的文档获取完整的适用的规则或任何其他元素的属性集。 或者，可以检查中的类型上的公共属性`Microsoft.Build.Framework.XamlTypes`中的命名空间`Microsoft.Build.Framework .dll`程序集。
+   h. 有未在此处显示的一个规则，如说明、 SupportsFileBatching 等其他特性。 可以通过浏览这些类型的文档获取完整的适用的规则或任何其他元素的属性集。 或者，可以检查中的类型上的公共属性`Microsoft.Build.Framework.XamlTypes`中的命名空间`Microsoft.Build.Framework .dll`程序集。
 
-   我。 **DisplayName**， **PageTemplate**，和**顺序**不与 UI 相关的属性都存在于这独立于 UI 的数据模型。 这些属性是几乎可以肯定地用于用来显示属性页的任何 UI。 **DisplayName**和**说明**均存在于 xml 文件中的几乎所有元素的两个属性。 这些是已本地化的仅有两个属性和 （本地化这些字符串将更高版本的文章中所述）。
+   i. **DisplayName**， **PageTemplate**，和**顺序**不与 UI 相关的属性都存在于这独立于 UI 的数据模型。 这些属性是几乎可以肯定地用于用来显示属性页的任何 UI。 **DisplayName**和**说明**均存在于 xml 文件中的几乎所有元素的两个属性。 这些是已本地化的仅有两个属性和 （本地化这些字符串将更高版本的文章中所述）。
 
 2.  **类别：**规则可以具有多个类别。 在 xml 文件中列出的类别的顺序是到 UI 的建议的相同顺序显示的类别。 例如，在 UI 中所示的 C/c + + 节点下的类别的顺序 – 常规、 优化、 预处理器，...  – 与该在 cl.xml 相同。 示例类别如下所示：
 

@@ -1,55 +1,55 @@
 ---
-title: "重新分发 Visual C++ ActiveX 控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控件 [C++], 分发"
-  - "控件 [C++], 重新分发"
+title: "重新分发 Visual c + + ActiveX 控件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], redistributing
+- controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 重新分发 Visual C++ ActiveX 控件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 6.0 提供可在应用程序中使用然后重新发布的 ActiveX 控件。  Visual C\+\+ 中不再包括这些控件。  按照 Visual C\+\+ 6.0 的许可协议，可以与在 Visual C\+\+ 中开发的应用程序一起重新发布这些控件。  
+# <a name="redistributing-visual-c-activex-controls"></a>重新分发 Visual C++ ActiveX 控件
+Visual c + + 6.0 提供可以在你然后重新分发的应用程序中使用的 ActiveX 控件。 Visual c + + 中不再包含这些控件。 每个 Visual c + + 6.0 许可协议，你可以与在 Visual c + + 中开发的应用程序重新发布这些控件。  
   
 > [!NOTE]
->  Microsoft 不再支持 Visual C\+\+ 6.0。  
+>  Microsoft 不再支持 visual c + + 6.0。  
   
- 有关可重新发布的 Visual C\+\+ 6.0 ActiveX 控件的列表，请参见 Visual C\+\+ 6.0 产品 CD 的第一张光盘上的 Common\\Redist\\Redist.txt。  
+ 可再发行 Visual c + + 6.0 ActiveX 控件的列表，请参阅 Visual c + + 6.0 产品 CD 的光盘 1 上的 Common\Redist\Redist.txt。  
   
- 在分发应用程序时，必须（使用 Regsvr32.exe）为 ActiveX 控件安装和注册 .ocx。  此外，应确保目标计算机有下列系统文件的当前版本（星号指出需要注册的文件）：  
+ 当分发应用程序，你必须安装并注册 ActiveX 控件 （使用 Regsvr32.exe）.ocx。 此外，应确保目标计算机具有以下系统文件 （星号指示文件需要注册） 的当前版本：  
   
--   Asycfilt.dll  
+-   asycfilt.dll  
   
--   Comcat.dll \*  
+-   Comcat.dll *  
   
--   Oleaut32.dll \*  
+-   Oleaut32.dll *  
   
--   Olepro32.dll \*  
+-   Olepro32.dll *  
   
--   Stdole2.tlb  
+-   stdole2.tlb  
   
- 如果这些 DLL 在目标系统中不可用，则需要使用为更新相应的操作系统所规定的机制更新它们。  可以从 [http:\/\/windowsupdate.microsoft.com](http://windowsupdate.microsoft.com) 下载 Windows 操作系统的最新 Service Pack。  
+ 如果这些 Dll 不在目标系统上可用，你需要获取这些更新使用所规定的机制用于更新相应的操作系统。 你可以从 Windows 操作系统最新服务包下载[http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com)。  
   
- 如果应用程序使用一个与数据库连接的 ActiveX 控件，则必须在目标系统上安装 Microsoft 数据访问组件 \(MDAC\)。  有关更多信息，请参见[重新发布数据库支持文件](../ide/redistributing-database-support-files.md)。  
+ 如果你的应用程序使用一个连接到数据库的 ActiveX 控件，你必须具有目标系统上安装 Microsoft 数据访问组件 (MDAC)。 有关详细信息，请参阅[重新分发数据库支持文件](../ide/redistributing-database-support-files.md)。  
   
- 在使用与数据库连接的 ActiveX 控件时，还需要复制目标计算机上的数据源名称。  可以用函数（如 `ConfigDSN`）以编程方式来完成此操作。  
+ 在使用连接到数据库的 ActiveX 控件，你还需要复制目标计算机上的数据源名称。 你可以使用执行此操作以编程方式函数如`ConfigDSN`。  
   
- 一些可重新发布的 ActiveX 控件还有附加依赖项。  对于 Visual C\+\+ 6.0 产品 CD 中的 Os\\System 文件夹中的每个 .ocx 文件，还有一个 .dep 文件。  对于要重新发布的每个 .ocx 文件，请在相应的 .dep 文件中查找一个或多个 USES 项。  如果列出了某文件，则必须确保该文件出现在目标计算机上。  直接支持 .ocx 文件的任何 DLL 都需要注册。  （为使 Regsvr32.exe 成功，目标计算机必须首先包含控件静态加载的所有 DLL。）而且，如果作为依赖项列出的 DLL 在 Visual C\+\+ 6.0 CD 中的 Os\\System 文件夹中也有 .dep 文件，则还必须研究该 .dep 文件中的 USES 项。  
+ 某些可再发行的 ActiveX 控件有附加依赖项。 对于 Visual c + + 6.0 产品 CD 上 Os\System 文件夹中每个.ocx 文件，此外还有.dep 文件。 对于每个你想要重新分发的.ocx 文件，查找相应的.dep 文件中的一个或多个使用条目。 如果某个文件列出时，你必须确保该文件是目标计算机上。 任何直接支持.ocx 文件的 Dll，需要注册。 （对于成功的 Regsvr32.exe，目标计算机必须首先包含的所有控件以静态方式加载的 Dll。）此外，如果一个 DLL，它列出为依赖项也具有.dep 文件，Visual c + + 6.0 CD 上的 Os\System 文件夹中，你必须调查该.dep 文件以了解使用条目。  
   
-## 请参阅  
- [重新分发 Visual C\+\+ 文件](../ide/redistributing-visual-cpp-files.md)
+## <a name="see-also"></a>请参阅  
+ [重新分发 Visual C++ 文件](../ide/redistributing-visual-cpp-files.md)

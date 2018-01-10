@@ -18,14 +18,15 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1a8956ec3b17892e5507e4c70c602a2a5b430566
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 721915ca5ebbc75b17771dae0804e94aa360177c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-using-wmain"></a>支持使用 wmain
-Visual c + + 支持定义**wmain**函数并将宽字符参数传递给 Unicode 应用程序。 你将形参声明为**wmain**，使用格式类似于**主要**。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如:   
+Visual c + + 支持定义**wmain**函数并将宽字符参数传递给 Unicode 应用程序。 你将形参声明为**wmain**，使用格式类似于**主要**。 然后可以将宽字符自变量和宽字符环境指针（可选）传递给该程序。 wmain 的 `argv` 和 `envp` 参数为 `wchar_t*` 类型。 例如:  
   
 ```  
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )  
@@ -38,7 +39,7 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
   
  同样，如果程序使用 wmain 函数，则在程序启动时创建宽字符环境并用 `_wenviron` 全局变量指向该环境。 在首次调用上创建 MBCS (ASCII) 环境`_putenv`或`getenv`和指向`_environ`全局变量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [有关 Unicode 的支持](../text/support-for-unicode.md)   
  [Unicode 编程摘要](../text/unicode-programming-summary.md)   
  [WinMain 函数](http://msdn.microsoft.com/library/windows/desktop/ms633559)

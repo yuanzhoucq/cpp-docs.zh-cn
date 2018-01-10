@@ -14,11 +14,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bdcfea2339bfe7aac93192e88a6ec39ce919c596
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changes-in-constructor-initialization-order"></a>以构造函数初始化顺序进行更改
 类构造函数初始化顺序已从托管扩展中的 c + + 更改为 Visual c + +。  
@@ -113,7 +116,7 @@ private:
 ## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>哪些这意味着从 Managed Extensions for c + + 转到 Visual c + + 2010年  
  在许多情况下基类，这些类还包含继承的类没有概念，所以应该是行为的透明的程序员对类的构造函数的执行顺序的更改。 但是，如以下代码示例所示，继承类的构造函数时可能会极大地影响其初始化列表取决于基类成员的值。 移动时你的代码从 Managed Extensions for c + + 到新的语法，考虑将这类构造移动到的类构造函数，正文其中保证执行上一次发生。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
  [构造函数](../cpp/constructors-cpp.md)   
  

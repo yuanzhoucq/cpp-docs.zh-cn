@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36d7d65ea6c36c81654feda020fc05d777ac3d33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d749753e7eaf81284de72314f5f940fd2790962c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 控制直接或相互递归函数调用的内联扩展。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  `inline_recursion` 杂注控制如何扩展递归函数。 如果 `inline_recursion` 处于关闭状态，并且内联函数调用自身（直接或间接），则该函数仅扩展一次。 如果`inline_recursion`处于打开状态，该函数将扩展多次，直到它达到与设置的值[inline_depth](../preprocessor/inline-depth.md)杂注定义的递归函数的默认值`inline_depth`杂注或容量限制.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
  [inline_depth](../preprocessor/inline-depth.md)   
  [/Ob （内联函数扩展）](../build/reference/ob-inline-function-expansion.md)

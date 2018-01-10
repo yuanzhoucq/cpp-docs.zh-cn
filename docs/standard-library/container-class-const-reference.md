@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 84f2d94c665d5d75a8927b2cbf7d4af9a854792f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 287d6d55f8aceb2e713623d854421b49f2cbce2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classconstreference"></a>Container Class::const_reference
 > [!NOTE]
@@ -36,5 +37,5 @@ typedef T3 const_reference;
 ## <a name="remarks"></a>备注  
  此处它被描述为未指定类型 **T3** 的同义词（通常为 **Alloc::const_reference**）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Sample Container 类](../standard-library/sample-container-class.md)

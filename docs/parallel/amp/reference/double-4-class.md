@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::set_xwyz
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7a55f3f39562481ba7a4b189293dfe59891740fe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9a5e0df270914eb469ced57936df2d5bfe617948
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="double4-class"></a>double_4 类
-表示四个双精度型值的短矢量。  
+表示短矢量的四个双精度数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -327,7 +311,7 @@ class double_4;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |double_4::get_w||  
 |double_4::get_wx||  
@@ -473,7 +457,7 @@ class double_4;
 |double_4::operator-||  
 |double_4::operator-||  
 |double_4::operator * =||  
-|double_4::operator / =||  
+|/ = double_4::operator 的||  
 |double_4::operator + +||  
 |double_4::operator + =||  
 |double_4::operator =||  
@@ -481,7 +465,7 @@ class double_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#double_4__size)||  
   
@@ -621,8 +605,8 @@ class double_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `double_4`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -703,6 +687,5 @@ explicit inline double_4(
 static const int size = 4;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

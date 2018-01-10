@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的一般文本映射
 若要简化的代码的全球范围内使用，传输[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]运行时库提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-特定一般文本映射的多种数据类型、 例程和其他对象。 你可以使用这些映射，Tchar.h，编写可以为单字节，多字节，编译的泛型代码中定义或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字符集，具体取决于你使用定义的清单常量`#define`语句。 一般文本映射是[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]不扩展[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]兼容。  
@@ -99,6 +100,6 @@ RetVal = strrev(szString);
   
  因此，你可以编写、 维护和编译的源代码文件以运行与特定于任何字符集三种类型的例程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文本和字符串](../text/text-and-strings-in-visual-cpp.md)   
  [将 TCHAR.H 数据类型用于 _MBCS 代码](../text/using-tchar-h-data-types-with-mbcs-code.md)

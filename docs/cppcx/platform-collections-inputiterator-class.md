@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 15dd1d6ece1af3d561801c497b87f7be4f7d5397
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 类
 在 Windows 运行时中派生的集合提供标准模板库 InputIterator。  
@@ -66,7 +67,7 @@ class InputIterator;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `InputIterator`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** collection.h  
   
  **命名空间：** Platform::Collections  
@@ -170,5 +171,5 @@ bool operator!=(const InputIterator& other) const;
  如果当前 InputIterator 不等于 `true`，则为 `other`；否则为 `false`。   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

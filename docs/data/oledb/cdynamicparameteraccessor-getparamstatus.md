@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 483a6b8aea87d552d1397f70222323fbe8514747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ecee1f92e1b8e5e185e1c193ae52161ab9032df8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicparameteraccessorgetparamstatus"></a>CDynamicParameterAccessor::GetParamStatus
 检索存储在缓冲区中的指定参数的状态。  
@@ -52,8 +55,8 @@ DBSTATUS* GetParamStatus(
 ## <a name="remarks"></a>备注  
  第一重写返回**true**成功或**false**失败。 第二个重写指向包含指定参数的状态的内存。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b95af3e80234cf7f3910fc9a4ef3468ab5d90ba7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 类
 支持 DAO 数据库类使用的 DAO 记录字段交换 (DFX) 例程。  
@@ -78,7 +79,7 @@ class CDaoFieldExchange
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CDaoFieldExchange`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdao.h  
   
 ##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
@@ -152,6 +153,6 @@ void SetFieldType(UINT nFieldType);
   
  一般情况下，字段数据成员或参数数据成员与关联的 DFX 函数调用的每个组前面必须是对的调用`SetFieldType`。 `nFieldType`每个参数`SetFieldType`调用标识的 DFX 函数调用，请按照所表示的数据成员的类型`SetFieldType`调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDaoRecordset 类](../../mfc/reference/cdaorecordset-class.md)

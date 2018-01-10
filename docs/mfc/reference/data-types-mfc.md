@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ce4066da49c70cb604d613e10d3eba841c4b15e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dd12aabee7e7284e2f3d12f81403b9b499e8e68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-types-mfc"></a>数据类型 (MFC)
 本主题列出了 Microsoft 基础类库中最常使用的数据类型。 大部分数据类型与平台软件开发工具包 (SDK) 中的相同，而其他数据类型对于 MFC 是唯一的。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/24/2017
   
 -   **LPCRECT**指向常量 （不可修改） 的 32 位指针`RECT`结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../mfc/class-library-overview.md)   
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

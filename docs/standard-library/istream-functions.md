@@ -14,18 +14,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da4b05286c56bf809914b142a254a311f8655ce9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30bf6fb6bba318d2ab4d150fb242a28e4148083d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 函数
 |||  
 |-|-|  
 |[swap](#istream_swap)|[ws](#ws)|  
   
-##  <a name="istream_swap"></a>swap  
+##  <a name="istream_swap"></a> swap  
  交换两个流对象的元素。  
   
 ```  
@@ -69,6 +70,6 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 ### <a name="example"></a>示例  
   有关使用 `ws` 的示例，请参阅 [operator>>](../standard-library/istream-operators.md#op_gt_gt)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<istream>](../standard-library/istream.md)
 

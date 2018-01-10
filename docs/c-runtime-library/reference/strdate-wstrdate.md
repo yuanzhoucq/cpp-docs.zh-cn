@@ -44,11 +44,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e398363fd12853b06644019201028067cf10f7dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54c7aa7fda123e811f23c2cc4b9e8d81f76966df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 将当前系统日期复制到缓冲区。 这些函数的更安全版本已发布，请参阅 [_strdate_s、_wstrdate_s](../../c-runtime-library/reference/strdate-s-wstrdate-s.md)。  
@@ -84,7 +85,7 @@ wchar_t *_wstrdate(
   
  `_strdate` 函数将当前系统日期复制到 `datestr` 所指向的缓冲区，格式为 `mm`/`dd`/`yy`，其中 `mm` 表示两位数字的月份，`dd` 表示两位数字的日期，`yy` 表示年份的最后两位数字。 例如，字符串 `12/05/99` 表示 1999 年 12 月 5 日。 缓冲区长度必须至少为 9 个字节。  
   
- 如果 `datestr` 是 `NULL` 指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 -1 并将 `errno` 设置为 `EINVAL`。  
+ 如果 `datestr` 是 `NULL` 指针，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则这些函数返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
  `_wstrdate` 是 `_strdate` 的宽字符版本；`_wstrdate` 的参数和返回值都是宽字符字符串。 否则这些函数具有相同行为。  
   
@@ -96,14 +97,14 @@ wchar_t *_wstrdate(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstrdate`|`_strdate`|`_strdate`|`_wstrdate`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_strdate`|\<time.h>|  
 |`_wstrdate`|\<time.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -131,7 +132,7 @@ int main()
 OS date: 04/25/03  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   

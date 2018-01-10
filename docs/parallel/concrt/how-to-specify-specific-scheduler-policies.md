@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ca5172372a9a80c419e9be54b0378f1254f4e6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af30b38a89eb7e4b50c7d31be2d3ba6572843b1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>如何：指定特定的计划程序策略
 计划程序策略让你能够控制计划程序将使用在管理任务的策略。 本主题演示如何使用计划程序策略来提高打印到控制台进度指示器的任务的线程优先级。  
@@ -56,7 +57,7 @@ Scheduler that has a custom policy:
   
  **cl.exe /EHsc 计划程序-policy.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计划程序策略](../../parallel/concrt/scheduler-policies.md)   
  [如何： 管理计划程序实例](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
  [如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

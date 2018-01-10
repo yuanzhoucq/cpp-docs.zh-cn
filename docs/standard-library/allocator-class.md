@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f298085fab156e8aecd0931dc72e358409a979d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>allocator 类
 模板类描述一个对象，用于管理对象类型 **Type** 数组的存储分配和释放。 类 **allocator** 的对象是 C++ 标准库中的多个容器模板类的构造函数中所指定的默认分配器对象。  
@@ -124,7 +125,7 @@ class allocator
 |-|-|  
 |[operator=](#op_eq)|将一个 `allocator` 对象分配给另一个 `allocator` 对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<memory>  
   
  **命名空间：** std  
@@ -1046,6 +1047,6 @@ The modified vector v is:
  ( 150 200 300 400 500 600 700 ).  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

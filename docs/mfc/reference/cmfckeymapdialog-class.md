@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27278d64ab1aef17149a3b4c166cff9c302e29ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 类
 `CMFCKeyMapDialog`类支持将命令映射到键盘上的键的控件。  
@@ -97,7 +98,7 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxkeymapdialog.h  
   
 ##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
@@ -276,7 +277,7 @@ virtual void SetColumnsWidth();
 ### <a name="remarks"></a>备注  
  此方法将内部列表控件的列设置为默认宽度。 首先，计算快捷键键列的宽度。 然后三分之一的其余宽度分配给命令列，剩余的三分之二分配给说明列。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CKeyboardManager 类](../../mfc/reference/ckeyboardmanager-class.md)

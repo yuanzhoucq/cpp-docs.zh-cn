@@ -1,73 +1,77 @@
 ---
-title: "记录集：参数化记录集 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 记录集, 参数化"
-  - "参数化记录集"
-  - "传递参数, 到运行时中的查询"
-  - "记录集, 参数化"
+title: "记录集： 参数化记录集 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parameterizing recordsets
+- ODBC recordsets, parameterizing
+- recordsets, parameterizing
+- passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 记录集：参数化记录集 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>记录集：参数化记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
   
- 有时您可能希望能够使用通过计算得出的或从最终用户获得的信息在运行时选择记录。  记录集参数使您得以实现该目标。  
+ 有时你可能想要能够在运行时，选择记录使用计算得出的或从你的最终用户获得的信息。 记录集参数，可以实现该目标。  
   
  本主题说明：  
   
 -   [参数化记录集的目的](#_core_parameterized_recordsets)。  
   
--   [可能需要参数化记录集的场合和原因](#_core_when_to_use_parameters)。  
+-   [何时和为何你可能想要参数化记录集](#_core_when_to_use_parameters)。  
   
--   [在记录集类中声明参数数据成员的方式](#_core_parameterizing_your_recordset_class)。  
+-   [如何将参数声明记录集类中的数据成员](#_core_parameterizing_your_recordset_class)。  
   
--   [在运行时向记录集传递参数信息的方式](#_core_passing_parameter_values_at_run_time)。  
+-   [如何在运行时将参数信息传递到记录集对象](#_core_passing_parameter_values_at_run_time)。  
   
-##  <a name="_core_parameterized_recordsets"></a> 参数化记录集  
- 参数化记录集使您得以在运行时传递参数信息。  它产生两个重要的影响：  
+##  <a name="_core_parameterized_recordsets"></a>参数化记录集  
+ 参数化记录集，可以通过在运行时的参数信息。 这样做有两个重要的影响：  
   
--   可能加快执行速度。  
+-   它可能会导致更好的执行速度。  
   
--   它使您得以基于设计时不可用的信息（例如，在运行时从用户获得的或通过计算得出的信息）在运行时生成查询。  
+-   它允许你基于在设计时，无法对你的信息，如信息从你的用户获得的或在运行时计算在运行时，生成查询。  
   
- 当您调用 **Open** 运行查询时，记录集使用参数信息来完成其 **SQL SELECT** 语句。  可以参数化任何记录集。  
+ 当调用**打开**若要运行查询，记录集使用参数的信息来完成其**SQL SELECT**语句。 你可以参数化任何记录集。  
   
-##  <a name="_core_when_to_use_parameters"></a> 何时使用参数  
+##  <a name="_core_when_to_use_parameters"></a>何时使用参数  
  参数的典型用途包括：  
   
--   将运行时参数传递到预定义查询。  
+-   将运行时自变量传递给预定义的查询。  
   
-     若要将参数传递到存储过程，则必须在调用 **Open** 时指定一条完整的自定义 ODBC **CALL** 语句（带参数占位符），以便重写记录集的默认 SQL 语句。  有关更多信息，请参见 Class Library Reference（《类库参考》）中的 [CRecordset::Open](../Topic/CRecordset::Open.md)、[SQL：自定义记录集的 SQL 语句 \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md) 和[记录集：声明预定义查询的类 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。  
+     若要将参数传递给存储过程，必须指定完整的自定义 ODBC**调用**语句-用参数占位符 — 当您调用**打开**，重写记录集的默认 SQL 语句。 有关详细信息，请参阅[CRecordset::Open](../../mfc/reference/crecordset-class.md#open)中*类库参考*和[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)和[记录集： 为预定义的查询 (ODBC) 声明一个类](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。  
+
   
--   用不同的参数信息有效地执行大量查询。  
+-   有效地执行大量查询使用不同的参数信息。  
   
-     例如，最终用户每次在学生注册数据库中查阅特定学生的信息时，可以将学生的姓名或 ID 指定为从该用户获得的参数。  然后，当您调用记录集的 **Requery** 成员函数时，查询只选择该学生的记录。  
+     例如，每次你的最终用户查找有关特定学生在学生注册数据库中，你可以指定学生的名称或 ID 作为参数从用户获取。 然后，当调用记录集的**Requery**成员函数时，查询只选择该学生的记录。  
   
-     存储在 **m\_strFilter** 中的记录集的筛选字符串可能类似于：  
+     存储在中的记录集的筛选器字符串**m_strFilter**，可能如下所示：  
   
     ```  
     "StudentID = ?"  
     ```  
   
-     假定您在变量 `strInputID` 中获得学生 ID。  当将参数设置为 `strInputID`（例如，学生 ID 为 100）时，该变量的值即被绑定到用筛选字符串中的“?”表示的参数占位符。  
+     假设你获取变量中的学生 ID `strInputID`。 当将参数设置为`strInputID`（例如，学生 ID 为 100） 的变量的值绑定到由参数占位符"？"筛选器字符串中。  
   
-     如下赋参数值：  
+     分配参数值，如下所示：  
   
     ```  
     strInputID = "100";  
@@ -75,36 +79,36 @@ caps.handback.revision: 10
     m_strParam = strInputID;  
     ```  
   
-     而不要以这种方式设置筛选器字符串：  
+     你不想要设置筛选器字符串这种方式：  
   
     ```  
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted  
                                        // for some drivers  
     ```  
   
-     有关如何在筛选器字符串中正确使用引号的讨论，请参见[记录集：筛选记录 \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)。  
+     有关如何正确使用引号，筛选器字符串的讨论，请参阅[记录集： 筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。  
   
-     每次在记录集中再次查询新学生的 ID 时，此参数值是不同的。  
+     参数值的次均不同，每个新的学生 id requery 记录集  
   
     > [!TIP]
-    >  使用参数比只使用筛选器更有效。  对于参数化记录集，数据库必须只处理一次 SQL **SELECT** 语句。  对于没有参数的已筛选记录集，每次用新的筛选值 **Requery** 时都必须处理 **SELECT** 语句。  
+    >  使用一个参数是只使用筛选器比效率更高。 参数化记录集，数据库必须处理 SQL**选择**语句仅一次。 为不带参数，筛选记录集**选择**必须处理语句在每次时**Requery**使用新的筛选器值。  
   
- 有关筛选器的更多信息，请参见[记录集：筛选记录 \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)。  
+ 有关筛选器的详细信息，请参阅[记录集： 筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a> 参数化记录集类  
+##  <a name="_core_parameterizing_your_recordset_class"></a>参数化记录集类  
   
 > [!NOTE]
->  本节适用于从 `CRecordset` 派生的对象，这些对象中尚未实现批量取行。  如果正在使用批量取行，则实现参数的过程与此相似。  有关更多信息，请参见[记录集：批量获取记录 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  本部分适用于对象派生自`CRecordset`中哪些批量行提取尚未实现。 如果你使用的批量行提取，则实现参数是一个类似的过程。 有关详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 在创建记录集类之前，确定所需的参数、参数的数据类型以及记录集使用参数的方式。  
+ 创建记录集类之前，确定需要哪些参数、 其数据类型是什么，和记录集如何使用它们。  
   
-#### 参数化记录集类  
+#### <a name="to-parameterize-a-recordset-class"></a>若要参数化记录集类  
   
-1.  从“添加类”运行 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)来创建类。  
+1.  运行[MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)从**添加类**创建类。  
   
-2.  指定记录集的列的字段数据成员。  
+2.  指定记录集的列的字段数据的成员。  
   
-3.  当向导将类写入项目的某个文件之后，转到 .h 文件并向类声明手动添加一个或多个参数数据成员。  添加的内容可能类似于下面的示例，快照类的一部分被设计用来回答查询“哪些学生是高年级的？  
+3.  向导会将类写入到你的项目中的文件后，转到的.h 文件，并手动将一个或多个参数数据成员添加到类声明。 添加可能看起来类似下面的示例中，但快照类的一部分设计为回答查询"中有哪些学生年级？"  
   
     ```  
     class CStudentSet : public CRecordset  
@@ -119,43 +123,44 @@ caps.handback.revision: 10
     };  
     ```  
   
-     在向导生成的字段数据成员后面添加参数数据成员。  约定是将字“Param”追加到每一个用户定义的参数名。  
+     向导生成的字段数据成员之后添加你的参数数据成员。 约定是将 word"Param"追加到每个用户定义的参数名称。  
   
-4.  修改 .cpp 文件中的 [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) 成员函数定义。  为已添加到类中的每一个参数数据成员添加 RFX 函数调用。  有关编写 RFX 函数的信息，请参见[记录字段交换：RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。  在参数的 RFX 调用之前单一调用：  
+4.  修改[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp 文件中的成员函数定义。 每个参数数据成员添加到类中添加的 RFX 函数调用。 有关编写 RFX 函数的信息，请参阅[记录字段交换： RFX 的工作机制](../../data/odbc/record-field-exchange-how-rfx-works.md)。 请在前面的参数到一次调用 RFX 调用：  
   
     ```  
     pFX->SetFieldType( CFieldExchange::param );  
     // RFX calls for parameter data members  
     ```  
   
-5.  在记录集类的构造函数中，增加参数 `m_nParams` 的计数。  
+5.  记录集类的构造函数中的参数，计数增加`m_nParams`。  
   
-     有关信息，请参见[记录字段交换：处理向导代码](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)。  
+     有关信息，请参阅[记录字段交换： 处理向导代码](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)。  
   
-6.  在编写创建此类的记录集对象的代码时，在 SQL 语句字符串中所有要替换的参数位置都放置一个“?”（问号）符号。  
+6.  当你编写的代码： 创建此类的记录集对象时，将"？"在您的 SQL 语句字符串中的每个位置，其中一个参数是要替换的 （问号） 符号。  
   
-     运行时，“?”占位符由传递的参数值按顺序填充。  在 [SetFieldType](../Topic/CFieldExchange::SetFieldType.md) 调用后设置的第一个参数数据成员替换 SQL 字符串中的第一个“?”，第二个参数数据成员替换第二个“?”，依此类推。  
+     在运行时，"？"占位符，按顺序填充，则你传递的参数值。 之后的第一个参数数据成员设置[SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)调用将替换第一个"？"在 SQL 字符串的第二个参数数据成员替换第二个"？"，依次类推。  
   
 > [!NOTE]
->  参数顺序很重要：`DoFieldExchange` 函数中参数的 RFX 调用顺序必须与 SQL 字符串中的参数占位符顺序相匹配。  
+>  参数顺序非常重要： RFX 的顺序调用中的参数你`DoFieldExchange`函数必须与你的 SQL 字符串中的参数占位符的顺序一致。  
   
 > [!TIP]
->  很可能使用的字符串是为类的 [m\_strFilter](../Topic/CRecordset::m_strFilter.md) 数据成员指定的字符串（如果有），但某些 ODBC 驱动程序可能允许其他 SQL 子句中的参数。  
+
+>  要使用的最可能的字符串是所指定的字符串 （如果有） 的类的[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)数据成员，但某些 ODBC 驱动程序可能会允许其他 SQL 子句中的参数。  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a> 在运行时传递参数值  
- 必须在调用 **Open**（对于新的记录集对象）或 **Requery**（对于现有对象）之前指定参数值。  
+##  <a name="_core_passing_parameter_values_at_run_time"></a>在运行时传递参数值  
+ 必须指定参数值，然后才能调用**打开**（适用于新的记录集对象） 或**Requery** （对于一个现有）。  
   
-#### 运行时向记录集对象传递参数值  
+#### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>若要在运行时将参数值传递到记录集对象  
   
-1.  构造记录集对象。  
+1.  构造的记录集对象。  
   
-2.  准备一个或多个字符串（如 **m\_strFilter** 字符串），包含 SQL 语句或 SQL 语句的一部分。  将“?”占位符放置到参数信息将要处于的位置。  
+2.  准备一个字符串或字符串，如**m_strFilter**包含 SQL 语句或其中的部分的字符串。 将"？"参数信息所在转的占位符。  
   
-3.  向该对象的每一个参数数据成员赋予一个运行时参数值。  
+3.  将运行时参数值分配到每个参数数据成员的对象。  
   
-4.  调用 **Open** 成员函数（或对于现有记录集调用 **Requery**）。  
+4.  调用**打开**成员函数 (或**Requery**，某个现有记录集)。  
   
- 例如，假定希望用运行时获得的信息为记录集指定筛选字符串。  假定此前已构造了 `CStudentSet` 类的记录集（名为 `rsStudent`s），现在想在其中再次查询某种特定学生信息。  
+ 例如，假设你想要指定你使用在运行时获取的信息的记录集的筛选器字符串。 假定已构造的类的记录集`CStudentSet`前面-调用`rsStudents`-，现在想要再次查询特定种类的学生信息。  
   
 ```  
 // Set up a filter string with   
@@ -174,12 +179,12 @@ if( !rsStudents.Requery( ) )
     return FALSE;  
 ```  
   
- 记录集包含那些记录符合筛选器指定条件的学生的记录，而该筛选器已由运行时参数构造。  在此例中，记录集包含所有高年级学生的记录。  
+ 记录集包含记录这些学生版其记录满足指定筛选器，已由运行时参数构造的条件。 在这种情况下，记录集包含记录所有高级学生版。  
   
 > [!NOTE]
->  必要时，可以使用 [SetParamNull](../Topic/CRecordset::SetParamNull.md) 将参数数据成员的值设置为 Null。  同样，可以使用 [IsFieldNull](../Topic/CRecordset::IsFieldNull.md) 检查参数数据成员是否为 Null。  
+>  如果需要你可以将参数数据成员的值设置为 Null，使用[SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull)。 你可以同样检查参数数据成员是否为 Null，使用[IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)。  
   
-## 请参阅  
- [记录集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [记录集：添加、更新和删除记录 \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
- [记录集：记录集如何选择记录 \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+## <a name="see-also"></a>请参阅  
+ [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [记录集：记录集如何选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

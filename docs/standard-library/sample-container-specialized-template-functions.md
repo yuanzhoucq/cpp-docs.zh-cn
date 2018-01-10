@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9595923c9c2dad6b004915d6b5fec9b096d97495
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddefe5820f2064b19ca6d60091dd023dd8ac483f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsample-containergt-specialized-template-functions"></a>&lt;sample container&gt; 专用化模板函数
 有关 \<sample container> 专用化模板函数的详细信息，请参阅 [\<sample container>](../standard-library/sample-container.md)。

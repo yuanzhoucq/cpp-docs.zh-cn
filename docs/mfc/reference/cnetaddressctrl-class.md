@@ -31,11 +31,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 047032e65f0d1fa7847caae36e10fac4175b5db0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a433d723e15d910674c129b1e62ca82c1de4bb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 `CNetAddressCtrl` 类表示网络地址控件，可使用此控件输入和验证 IPv4、IPv6 与命名的 DNS 地址的格式。  
@@ -95,7 +96,7 @@ class CNetAddressCtrl : public CEdit
   
  `CNetAddressCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmn.h  
   
  此类支持在[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]及更高版本。  
@@ -125,7 +126,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `dwStyle`|要应用于控件的样式按位组合。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
 |[in] `rect`|对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，其中包含的位置和大小的控件。|  
@@ -149,7 +150,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `dwExStyle`|若要应用于控件的扩展样式按位组合 (OR)。 有关详细信息，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函数。|  
 |[in] `dwStyle`|要应用于控件的样式按位组合 (OR)。 有关详细信息，请参阅[编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|  
@@ -220,7 +221,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `dwAddrMask`|网络地址控件可支持的按位组合 (OR) 的标志，用于指定的地址类型。 有关详细信息，请参阅[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
   
@@ -232,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
  此消息时，将调用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)宏，Windows SDK 中介绍。 该宏将发送`NCM_SETALLOWTYPE`消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CNetAddressCtrl 类](../../mfc/reference/cnetaddressctrl-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CEdit 类](../../mfc/reference/cedit-class.md)

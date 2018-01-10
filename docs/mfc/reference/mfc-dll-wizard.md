@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902044e23974b882c52f5cb715d42f0fe1f2f610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 向导
 当 MFC DLL 向导用于创建非 MFC DLL 项目时，可以工作初学者应用程序具有内置功能，如果编译中，将实现的基本功能[DLL](../../build/dlls-in-visual-cpp.md)。 MFC 初学者程序包括 c + + 源文件 (.cpp)、 资源 (.rc) 文件和项目 (.vcxproj) 文件。 在这些初学者文件中生成的代码基于 MFC。 有关详细信息，请参阅中生成的 Visual Studio 中的项目的 Readme.txt 文件的详细信息和[类和函数生成由 MFC DLL 向导](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -45,8 +46,8 @@ ms.lasthandoff: 10/24/2017
   
 -   [初始化 DLL](../../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## <a name="see-also"></a>另请参阅  
- [创建和管理 Visual c + + 项目](../../ide/creating-and-managing-visual-cpp-projects.md)   
+## <a name="see-also"></a>请参阅  
+ [创建和管理 Visual C++ 项目](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [属性页](../../ide/property-pages-visual-cpp.md)   
  [使用项目属性](../../ide/working-with-project-properties.md)   
  [部署应用程序](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)   

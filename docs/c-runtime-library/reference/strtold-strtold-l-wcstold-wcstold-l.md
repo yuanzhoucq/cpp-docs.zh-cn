@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ff8aa3f62a50ae544de61953054bd8906ed5971
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、 wcstold、_wcstold_l
 将字符串转换为长双精度浮点值。  
@@ -97,7 +98,7 @@ long double wcstold_l(
 |`_tcstold`|`strtold`|`strtold`|`wcstold`|  
 |`_tcstold_l`|`_strtold_l`|`_strtold_l`|`_wcstold_l`|  
   
- 当前区域设置的 `LC_NUMERIC` 类别设置确定 `nptr` 中的基数字符的识别。 有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 不带 `_l` 后缀的函数使用当前区域设置；`_strtold_l` 和 `_wcstold_l` 与 `_strtold` 和 `_wcstold` 相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 当前区域设置的 `LC_NUMERIC` 类别设置确定 `nptr` 中的基数字符的识别。 有关详细信息，请参阅 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 不带 `_l` 后缀的函数使用当前区域设置；`_strtold_l` 和 `_wcstold_l` 与 `_strtold` 和 `_wcstold` 相同，只不过它们改用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `endptr` 不为 `NULL`，则在 `endptr` 所指向的位置存储指向字符的指针（该指针停止扫描）。 如果不能执行任何转换（未找到任何有效的数字或指定了无效的基数），则将 `nptr` 的值存储在由 `endptr` 指向的位置。  
   
@@ -107,14 +108,14 @@ long double wcstold_l(
   
  `whitespace` 可能包含被忽略的空格和制表符；`sign` 是加号 (`+`) 或减号 (`-`)；`digits` 是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字可以后跟一个指数，其中包含介绍性字母（`d`、`D`、`e` 或 `E`）和可选的带符号的整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strtold`, `_strtold_l`|\<stdlib.h>|  
 |`wcstold`, `_wcstold_l`|\<stdlib.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -148,7 +149,7 @@ string = 3.1415926535898This stopped it
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

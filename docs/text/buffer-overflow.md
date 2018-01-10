@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c5d5cb06359cb8328347426efbe3618276e1ebf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffer-overflow"></a>缓冲区溢出
 将字符放入缓冲区时，改变字符大小可能会导致问题。 请考虑下面的代码，从字符串的字符复制， `sz`，到缓冲区中， `rgch`:  
@@ -56,11 +57,11 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- 此代码测试可能会发生缓冲区溢出循环中使用的测试`_mbclen`测试指向的当前字符的大小`sz`。 通过调用`_mbsnbcpy`函数，你可以替换中的代码`while`循环一行代码。 例如:   
+ 此代码测试可能会发生缓冲区溢出循环中使用的测试`_mbclen`测试指向的当前字符的大小`sz`。 通过调用`_mbsnbcpy`函数，你可以替换中的代码`while`循环一行代码。 例如:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MBCS 编程提示](../text/mbcs-programming-tips.md)

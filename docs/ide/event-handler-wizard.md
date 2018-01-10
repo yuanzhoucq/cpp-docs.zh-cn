@@ -1,51 +1,50 @@
 ---
-title: "事件处理程序向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.eventhandler.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件处理程序向导 [C++]"
+title: "事件处理程序向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.eventhandler.overview
+dev_langs: C++
+helpviewer_keywords: Event Handler Wizard [C++]
 ms.assetid: af8e1835-94b1-4d9a-b353-c519e011d3a1
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ccb80add8a98b9251a7ccbb5c85bf98b610a22e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 事件处理程序向导
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-该向导向所选的类添加对话框控件的事件处理程序。  如果从[“属性”窗口](../Topic/Properties%20Window.md)添加事件处理程序，则只能将它添加到实现对话框的类。  有关更多信息，请参见[添加对话框控件的事件处理程序](../mfc/adding-event-handlers-for-dialog-box-controls.md)。  
+# <a name="event-handler-wizard"></a>事件处理程序向导
+此向导将一个事件处理程序的对话框控件添加到所选的类。 如果添加事件处理程序从[属性窗口](/visualstudio/ide/reference/properties-window)，可以将其添加到实现对话框中的类。 请参阅[对于对话框控件添加事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)有关详细信息。  
   
- **命令名**  
- 标识选定的控件，将为此控件添加事件处理程序。  此框不可用。  
+ **命令名称**  
+ 标识所选的控件，为其添加事件处理程序。 此框不可用。  
   
  **消息类型**  
- 显示选定控件的当前可能的消息处理程序列表。  
+ 显示为选定控件的当前可能的消息处理程序的列表。  
   
  **函数处理程序名称**  
- 显示为处理事件而添加的函数的名称。  默认情况下，此名称基于消息类型和命令，并带“On”前置。  例如，对于名为 `IDC_BUTTON1` 的按钮，消息类型 `BN_CLICKED` 显示函数处理程序名称 `OnBnClickedButton1`。  
+ 显示添加对事件进行处理的函数的名称。 默认情况下，名称基于消息类型和命令，前面预置"on"。 例如，按钮调用`IDC_BUTTON1`，消息类型`BN_CLICKED`显示函数处理程序名称`OnBnClickedButton1`。  
   
  **类列表**  
- 显示可以向其添加事件处理程序的可用类。  选定对话框的类显示为红色。  
+ 显示可向其中添加事件处理程序的可用类。 所选的对话框中的类显示为红色。  
   
  **处理程序说明**  
- 提供“消息类型”框中的选定项的说明。  此框不可用。  
+ 提供在选定的项的说明**消息类型**框。 此框不可用。  
   
- **添加编辑**  
- 向选定的类或对象添加消息处理程序，然后以新函数打开文本编辑器，以便可以添加控件通知处理程序代码。  
+ **添加和编辑**  
+ 将消息处理程序添加到选定的类或对象，，然后打开文本编辑器到新函数，因此你可以添加控件通知处理程序代码。  
   
  **编辑代码**  
- 以选定的现有函数打开文本编辑器，以便可以添加或编辑控件通知处理程序代码。  
+ 打开文本编辑器中对所选的现有函数，以便你可以添加或编辑控件通知处理程序代码。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [添加事件处理程序](../ide/adding-an-event-handler-visual-cpp.md)

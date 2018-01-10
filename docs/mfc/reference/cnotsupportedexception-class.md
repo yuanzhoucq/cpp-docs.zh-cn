@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55416272671d9c03422fcb74ec03ecc02ed671ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4013b26e3c07d6ec2a729bf9868db48923e35f86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException 类
 表示因请求不支持的功能而引起的异常。  
@@ -55,7 +56,7 @@ class CNotSupportedException : public CSimpleException
   
  `CNotSupportedException`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException  
@@ -68,7 +69,7 @@ CNotSupportedException();
 ### <a name="remarks"></a>备注  
  不直接，使用此构造函数，但而是调用全局函数[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)。 有关异常处理的详细信息，请参阅文章[MFC 中的异常处理](../exception-handling-in-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CException 类](cexception-class.md)   
  [层次结构图](../hierarchy-chart.md)
 

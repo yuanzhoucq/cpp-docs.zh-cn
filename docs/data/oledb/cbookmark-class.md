@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021158981f99661a1b9b694efb094dc329c684ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dba5f98912fc69bac5554a4c6231f77e17e99d98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbookmark-class"></a>CBookmark 类
 在其缓冲区中包含一个书签值。  
@@ -62,9 +65,9 @@ class CBookmark< 0 > : public CBookmarkBase
 ## <a name="remarks"></a>备注  
  **CBookmark\<0 >**模板专用化`CBookmark`; 在运行时动态创建其缓冲区。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

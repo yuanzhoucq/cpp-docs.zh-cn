@@ -1,50 +1,46 @@
 ---
-title: "Visual C++ 语言参考 (C++-CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Visual c + + 语言参考 (C + + /cli CX) |Microsoft 文档"
+ms.custom: 
+ms.date: 09/15/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-caps.latest.revision: 27
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3a0e7cba73d85253db28d719932d02cfb3cdecca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Visual C++ 语言参考 (C++-CX)
-[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 是 C\+\+ 语言的一组扩展，通过这些扩展，可用一种尽可能接近现代 C\+\+ 的惯用语法创建 Windows 应用和 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 组件。 使用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 通过本机代码编写 Windows 应用和组件，而本机代码可与 Visual C\#、Visual Basic、JavaScript 和其他支持 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 的语言轻松交互。 少数情况下需要直接访问原始 COM 接口或非异常代码，在这些情况下可使用 [Windows 运行时 C\+\+ 模板库 \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md)。  
-  
- 新模型代表 Windows 上的下一代本机 C\+\+ 编程。 你可以使用它来创建：  
-  
--   使用 XAML 定义用户界面和使用本机堆栈的 C\+\+ Windows 应用。 有关详细信息，请参阅[在 C\+\+ \(Windows 10\) 中创建一个“hello world”应用](http://msdn.microsoft.com/library/windows/apps/dn996906.aspx)。  
-  
--   可供基于 JavaScript 的 Windows 应用使用的 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 组件。 有关详细信息，请参阅[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/hh441569.aspx)[用 C\+\+ 创建 Windows 运行时组件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
-  
--   Windows DirectX 游戏和图形密集型应用程序。 有关详细信息，请参阅[使用 DirectX 创建简单的通用 Windows 平台 \(UWP\) 游戏](http://msdn.microsoft.com/library/windows/apps/xaml/mt210793.aspx)。  
-  
-## 相关文章  
-  
-|||  
-|-|-|  
-|[快速参考](../cppcx/quick-reference-c-cx.md)|[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 的关键字和运算符表。|  
-|[类型系统](../cppcx/type-system-c-cx.md)|描述基本的 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 类型和编程构造，以及如何利用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 来使用和创建 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]类型。|  
-|[生成应用程序和库](../cppcx/building-apps-and-libraries-c-cx.md)|讨论如何使用 IDE 生成应用程序并链接到静态库和 DLL。|  
-|[与其他语言的互操作性](../cppcx/interoperating-with-other-languages-c-cx.md)|讨论用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 编写的组件如何才能与用 JavaScript、任何托管语言或 [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)]编写的组件一起使用。|  
-|[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)|讨论如何为你创建的组件指定线程处理和封送行为。|  
-|[命名空间参考](../cppcx/namespaces-reference-c-cx.md)|默认命名空间、平台命名空间、Platform::Collections 和相关命名空间的参考文档。|  
-|[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|列出 Windows 运行时应用中不可用的 CRT 函数。|  
-|[如何指导使用 Windows 10 应用](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|提供有关 Windows 10 应用的深入指导以及详细信息的链接。|  
-  
-1.  [C\+\+\/CX \[n\] 的第 0 部分：简介](http://blogs.msdn.com/b/vcblog/archive/2012/08/29/cxxcxpart00anintroduction.aspx)  
-  
-2.  [C\+\+\/CX \[n\] 的第 0 部分：简介](http://blogs.msdn.com/b/vcblog/archive/2012/08/29/cxxcxpart00anintroduction.aspx)  
-  
-3.  [C\+\+\/CX \[n\] 的第 2 部分：带尖角符号的类型](http://blogs.msdn.com/b/vcblog/archive/2012/09/17/cxxcxpart02typesthatwearhats.aspx)  
-  
-4.  [C\+\+\/CX \[n\] 的第 3 部分：正在构造](http://blogs.msdn.com/b/vcblog/archive/2012/10/05/cxxcxpart03underconstruction.aspx)  
-  
-5.  [C\+\+\/CX \[n\] 的第 4 部分：静态成员函数](http://blogs.msdn.com/b/vcblog/archive/2012/10/19/cxxcxpart04staticmemberfunctions.aspx)
+# <a name="visual-c-language-reference-ccx"></a>Visual C++ 语言参考 (C++/CX)
+
+C + + /cli CX 是一套启用的 Windows 应用程序和 Windows 运行时组件尽可能接近现代 c + + 惯用语法创建 c + + 语言扩展。 使用 C + + /cli CX 在与 Visual C#、 Visual Basic 和 JavaScript，轻松地进行交互的本机代码和其他支持 Windows 运行时的语言中编写 Windows 应用程序和组件。 在这些少数情况下需要直接访问原始 COM 接口或非异常代码，你可以使用[Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
+
+新模型代表 Windows 上的下一代本机 C++ 编程。 你可以使用它来创建：
+
+- C + + 通用 Windows 平台 (UWP) 应用程序使用 XAML 定义用户界面和使用本机堆栈。 有关详细信息，请参阅[创建在 c + + (UWP) 的"你好 world"应用](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
+
+- 可供基于 JavaScript 的 Windows 应用的 c + + Windows 运行时组件。 有关详细信息，请参阅[创建 Windows 运行时 c + + 组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+
+- Windows DirectX 游戏和图形密集型应用程序。 有关详细信息，请参阅[使用 DirectX 创建简单的 UWP 游戏](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game)。
+
+## <a name="related-articles"></a>相关文章
+
+|||
+|-|-|
+|[快速参考](../cppcx/quick-reference-c-cx.md)|表的关键字和运算符 C + + /cli CX。|
+|[类型系统](../cppcx/type-system-c-cx.md)|描述基本的 C + + /cli CX 类型和编程构造，以及如何利用 C + + /cli CX 来使用和创建 Windows 运行时类型。|
+|[生成应用程序和库](../cppcx/building-apps-and-libraries-c-cx.md)|讨论如何使用 IDE 生成应用程序并链接到静态库和 DLL。|
+|[与其他语言的互操作性](../cppcx/interoperating-with-other-languages-c-cx.md)|讨论如何组件编写的使用 C + + /cli CX 可用与用 JavaScript 编写的组件，任何托管语言或[!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)]。|
+|[线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)|讨论如何为你创建的组件指定线程处理和封送行为。|
+|[命名空间参考](../cppcx/namespaces-reference-c-cx.md)|默认命名空间、平台命名空间、Platform::Collections 和相关命名空间的参考文档。|
+|[通用 Windows 平台应用中不支持的 CRT 函数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|列出 Windows 运行时应用中不可用的 CRT 函数。|
+|[如何指导使用 Windows 10 应用](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|提供有关 Windows 10 应用的深入指导以及详细信息的链接。|
+|[C + + /cli CX 的第 0 部分\[ n \]： 简介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + /cli CX 的第 1 部分\[ n \]： 简单的类](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + /cli CX 第 2 部分的\[ n \]： 带尖角符号的类型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + /cli CX 的第 3 部分\[ n \]： 正在构造](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + /cli CX 的第 4 部分\[ n \]： 静态成员函数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|介绍性 Visual c + + 博客连载文章在 C + + /cli CX。|

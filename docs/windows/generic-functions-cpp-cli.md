@@ -1,104 +1,104 @@
 ---
-title: "泛型函数 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "函数 [C++], 泛型"
-  - "泛型函数"
-  - "泛型方法"
-  - "泛型 [C++], 函数"
-  - "方法 [C++], 泛型"
+title: "泛型函数 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], generic
+- generic methods
+- generics [C++], functions
+- methods [C++], generic
+- generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 泛型函数 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-是泛型函数声明与类型参数的函数。  在调用中，实际类型来代替使用类型参数。  
+# <a name="generic-functions-ccli"></a>泛型函数 (C++/CLI)
+泛型函数是具有类型参数声明的函数。 当调用，而不是类型参数使用实际类型。  
   
-## 所有平台  
+## <a name="all-platforms"></a>所有平台  
  **备注**  
   
  此功能不适用于所有平台。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 不支持此功能。  
+ 在 Windows 运行时中不支持此功能。  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- 是泛型函数声明与类型参数的函数。  在调用中，实际类型来代替使用类型参数。  
+## <a name="common-language-runtime"></a>公共语言运行时 
+ 泛型函数是具有类型参数声明的函数。 当调用，而不是类型参数使用实际类型。  
   
  **语法**  
   
 ```  
 [attributes] [modifiers]  
-return-type identifier <type-parameter identifier(s)>  
+return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
   
 ([formal-parameters])  
-{  
-   function-body  
-}  
+{function-body}  
 ```  
   
  **参数**  
   
- *attributes*（可选）  
- 附加的声明信息。  有关特性和特性类的更多信息，请参见特性。  
+ *属性*（可选）  
+ 附加的声明信息。 有关特性和特性类的详细信息，请参阅属性。  
   
- *modifiers*（可选）  
- 函数的一个 st 修饰符，如 atic 的。因为虚方法不能是泛型，`virtual` 不允许。  
+ *修饰符*（可选）  
+ 对于函数，如静态修饰符。  `virtual`不允许由于虚方法不能是泛型。  
   
- *return\-type*  
- 由方法返回的类型。  如果返回类型是无效的，不需要返回值。  
+ *返回类型*  
+ 由方法返回的类型。 如果返回类型为 void，没有返回值是必需的。  
   
  *identifier*  
- 函数名。  
+ 函数名称。  
   
- *type\-parameter identifier\(s\)*  
- 逗号分隔的标识符列表。  
+ *类型参数标识符*  
+ 以逗号分隔标识符列表。  
   
- *formal\-parameters*（可选）  
- 参数列表  
+ *正式参数*（可选）  
+ 参数列表。  
   
- *type\-parameter\-constraints\-clauses*  
- 这对能用作类型参数指定类型的限制，以及 [约束](../windows/constraints-on-generic-type-parameters-cpp-cli.md)采用指定的窗体。  
+ *类型形参约束子句*  
+ 这可能用作类型参数的类型上指定限制，并采用中指定格式[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
   
- *function\-body*  
- 方法体可以引用标识符类型参数。  
+ *函数体*  
+ 方法，其可能引用的类型参数标识符的正文。  
   
  **备注**  
   
- 泛型函数是函数声明的泛型类型参数。  它们可能是类或结构独立的方法或函数。  一个泛声明隐式声明在其他的实际类型不同仅替换泛型类型参数的函数系列。  
+ 泛型函数是使用泛型类型参数声明的函数。 它们可能在类或结构或独立的函数中的方法。 单个的泛型声明隐式声明一的系列函数仅在不同的实际类型为泛型类型参数替换存在差异。  
   
- 在 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]，类或结构构造函数都不能声明具有泛型类型参数。  
+ Visual c + + 中不能具有泛型类型参数声明类或结构的构造函数。  
   
- 在调用时，泛型类型参数的实际类型替换。  实际类型在尖括号可以显式指定使用语法类似于模板函数调用。  如果调用，但没有参数类型，编译器将尝试从函数调用中提供参数推断实际类型。  当调用泛型函数时，如果无法从使用的参数推导出预期的类型变量，编译器将报告错误。  
+ 调用时，泛型类型参数替换为实际类型。 实际的类型可能在尖括号使用语法类似于模板函数调用中显式指定。 如果调用不带类型参数，编译器将尝试推导从函数调用中提供的参数的实际类型。 如果不能从所使用的参数中推导预期的类型参数，编译器将报告错误。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例演示泛型函数。  
+ 下面的代码示例演示如何泛型函数。  
   
 ```  
 // generics_generic_function_1.cpp  
@@ -133,7 +133,7 @@ int main() {
   
  **示例**  
   
- 常规函数可重载的签名或 arity，类型参数的数目进行函数上。  此外，在某些类型，只要函数的参数不同，泛型函数可重载同名的非泛型函数。  例如，现在可以自动执行下列任务：  
+ 泛型函数可以基于签名或 arity、 在函数上的类型参数的数目进行重载。 此外，泛型函数可以与非泛型函数具有相同名称的重载，只要函数不同，某些类型参数中。 例如，以下函数可以进行重载：  
   
 ```  
 // generics_generic_function_2.cpp  
@@ -151,7 +151,7 @@ ref struct MyClass {
   
  **示例**  
   
- 下面的示例使用泛功能查找数组中的第一个元素。  它将声明 `MyClass`，从基类 `MyBaseClass`继承。  `MyClass` 包含泛型函数，`MyFunction`，另调用泛型函数，`MyBaseClassFunction`，在基类中。  在 **主函数**，泛型函数，即 `MyFunction`，使用不同类型参数。  
+ 下面的示例使用泛型函数查找数组中的第一个元素。 它声明`MyClass`，它继承自的基类`MyBaseClass`。 `MyClass`包含泛型函数时， `MyFunction`，从而调用另一个泛型函数时，`MyBaseClassFunction`中的基类。 在**主要**，泛型函数时， `MyFunction`，称为使用不同的类型参数。  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -187,10 +187,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **我返回 int 的函数：2003 年**  
- **我的函数返回字符串：Hello\!泛型函数**   
-## 请参阅  
- [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+My function returned an int: 2003  
+My function returned a string: Hello generic functions!  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
  [泛型](../windows/generics-cpp-component-extensions.md)

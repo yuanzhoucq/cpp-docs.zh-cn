@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <tuple>
-dev_langs:
-- C++
-helpviewer_keywords:
-- tuple header
+f1_keywords: <tuple>
+dev_langs: C++
+helpviewer_keywords: tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca10e245c4adf108799896b8dfad2e21c4f3758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b84a2094205e3db7935d5768a3f86ba765487685
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 定义了一个模板 `tuple`它的实例包括不同类型的对象。  
@@ -62,7 +58,6 @@ ms.lasthandoff: 10/03/2017
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|从元素值中生成一个 `tuple`。|  
 |[tie](../standard-library/tuple-functions.md#tie)|从元素引用中生成一个 `tuple`。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<array>](../standard-library/array.md)
-
 

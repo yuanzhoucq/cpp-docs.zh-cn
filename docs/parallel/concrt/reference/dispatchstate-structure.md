@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6997596876f080ea00611af90d05eb4fddd2857
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d58fc12aa31c9d6a72acac6287a425044d42777c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 结构
 `DispatchState` 结构用于将状态传输给 `IExecutionContext::Dispatch` 方法。 它描述了在 `IExecutionContext` 接口上调用 `Dispatch` 方法的情形。  
@@ -55,7 +56,7 @@ struct DispatchState;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `DispatchState`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -88,5 +89,5 @@ unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 unsigned int m_reserved : 31;
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

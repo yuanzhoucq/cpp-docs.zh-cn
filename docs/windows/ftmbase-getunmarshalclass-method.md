@@ -1,32 +1,33 @@
 ---
-title: "FtmBase::GetUnmarshalClass 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetUnmarshalClass 方法"
+title: "Ftmbase:: Getunmarshalclass 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+dev_langs: C++
+helpviewer_keywords: GetUnmarshalClass method
 ms.assetid: 535fc539-5b97-4967-b158-f7568f13d341
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 978379c64f22026f19dd76afa39af08402cebc65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::GetUnmarshalClass 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-获取 COM 用于定位包含对应的代理代码的 DLL 的 CLSID。  COM 加载此 DLL 创建代理未初始化的实例的。  
+# <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
+获取 COM 用来定位 DLL 包含代码的相应的代理的 CLSID。 COM 加载此 DLL 才能创建代理服务器的未初始化的实例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHODIMP GetUnmarshalClass(  
@@ -39,35 +40,35 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `riid`  
- 解封送对的接口标识符的引用。  
+ 对要封送的接口标识符的引用。  
   
  `pv`  
- 要封送处理的接口指针的指针；如果调用方不具有指向所需接口，可以为空。  
+ 指向要封送处理; 接口如果调用方不具有到所需的接口指针，则可以为 NULL。  
   
  `dwDestContext`  
- 指定接口将封送对象的上下文。  
+ 其中将是取消封送指定的接口的目标上下文。  
   
  指定一个或多个 MSHCTX 枚举值。  
   
- 目前，分离收处理会出现在当前进程中 \(MSHCTX\_INPROC\) 的另一个单元或在计算机上其他进程和当前进程 \(MSHCTX\_LOCAL\) 相同。  
+ 在当前进程 (MSHCTX_INPROC) 的另一单元，或在当前进程 (MSHCTX_LOCAL) 所在的计算机上的另一个进程中，会发生取消封送。  
   
  `pvDestContext`  
- 留待将来使用；必须为NULL。  
+ 留待将来使用;必须为 NULL。  
   
  `mshlflags`  
- 如果此操作已完成，将使用的 CLSID 的指针在客户进程的代理。  
+ 此操作完成后，指向要用于在客户端进程中创建代理的 CLSID。  
   
  `pCid`  
   
-## 返回值  
- 如果成功，则为 S\_OK；否则为 S\_FALSE。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则则为 S_OK否则为 S_FALSE。  
   
-## 要求  
- **页眉：**ftm.h  
+## <a name="requirements"></a>惠?  
+ **标头：** ftm.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [FtmBase 类](../windows/ftmbase-class.md)

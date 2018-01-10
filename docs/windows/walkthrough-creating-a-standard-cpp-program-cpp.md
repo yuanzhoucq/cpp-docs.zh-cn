@@ -19,11 +19,14 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b44b8f21f2c8deea7cd6b9c89e87004e088d63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>演练： 创建标准 c + + 程序 （c + +）
 你可以使用 Visual c + + 在 Visual Studio 集成的开发环境 (IDE) 中，若要创建标准 c + + 程序。 按照本演练中的步骤，可以创建一个项目，向项目添加新文件，修改文件以添加 c + + 代码，然后编译并运行程序，通过使用[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  如果需要与标准的符合性，则使用**/Za**编译器选项禁用标准的 Microsoft 扩展。 有关详细信息，请参阅[/Za、 /Ze （禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，你必须了解 C++ 语言的基础知识。  
   
 ### <a name="to-create-a-project-and-add-a-source-file"></a>若要创建一个项目并添加一个源文件  
@@ -77,6 +80,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  **上一步：** [控制台应用程序在 Visual c + +](../windows/console-applications-in-visual-cpp.md)。 **下一步：**[演练： 编译本机 c + + 程序命令行上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

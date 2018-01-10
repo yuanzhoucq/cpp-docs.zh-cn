@@ -1,36 +1,37 @@
 ---
-title: "_InterlockedAddLargeStatistic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedAddLargeStatistic"
-  - "_InterlockedAddLargeStatistic_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_InterlockedAddLargeStatistic 内部函数"
-  - "InterlockedAddLargeStatistic 内部函数"
+title: "_InterlockedAddLargeStatistic |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedAddLargeStatistic
+- _InterlockedAddLargeStatistic_cpp
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedAddLargeStatistic intrinsic
+- InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d9e61abc6ac531fe489465b1d81e167bdde5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedAddLargeStatistic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 **Microsoft 专用**  
   
- 执行第一个操作数是为 64 位值的互锁的添加。  
+ 执行互锁的加法在其中第一个操作数是一个 64 位值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 long _InterlockedAddLargeStatistic(  
@@ -39,31 +40,31 @@ long _InterlockedAddLargeStatistic(
 );  
 ```  
   
-#### 参数  
- \[in, out\] `Addend`  
- 对于第一个操作数的指向添加操作。  该值指向添加的结果替换。  
+#### <a name="parameters"></a>参数  
+ [in, out] `Addend`  
+ 指向添加操作的第一个操作数的指针。 指向的值替换为添加的结果。  
   
- \[in\] `Value`  
- 第二个操作数对象;将的值赋给第一个操作数。  
+ [in] `Value`  
+ 第二个操作数;要添加到第一个操作数的值。  
   
-## 返回值  
- 第二个操作数对象的值。  
+## <a name="return-value"></a>返回值  
+ 第二个操作数的值。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`_InterlockedAddLargeStatistic`|x86|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- ，因为它实现为两个不同锁定的命令，此内部不是原子的。  在另一个线程上发生此内部的执行过程中读取的基本 64 位可能导致读取的不一致的值。  
+## <a name="remarks"></a>备注  
+ 此内部函数不是原子因为它实现两个独立的锁定的说明。 在另一个线程上执行过程中发生此内部函数的原子 64 位读取可能导致不一致所读取的值。  
   
- 此功能的行为就如同读\/写障碍。  有关更多信息，请参见 [\_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
+ 此函数的行为方式如读写屏障。 有关详细信息，请参阅[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
   
-## 关闭 Microsoft 特定  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
  [与 x86 编译器冲突](../build/conflicts-with-the-x86-compiler.md)

@@ -51,11 +51,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 921be1bdcebfabbcca8e07cefc2ee9a0b40f84f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f748630549c0a26a2818bc7c96e5162d7d36ed4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 类
 `CMFCRibbonComboBox`类实现可以将添加到功能区栏、 功能区面板或功能区弹出菜单的组合框控件。  
@@ -70,7 +71,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>构造函数  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|构造 CMFCRibbonComboBox 对象。|  
   
@@ -114,7 +115,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxribboncombobox.h  
   
 ##  <a name="additem"></a>CMFCRibbonComboBox::AddItem  
@@ -394,7 +395,7 @@ void SetDropDownHeight(int nHeight);
 ### <a name="remarks"></a>备注  
  默认高度为 150 像素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonEdit 类](../../mfc/reference/cmfcribbonedit-class.md)

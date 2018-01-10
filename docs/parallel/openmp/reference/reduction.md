@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33c629253db2d891f5e52347db291a3eec00bd03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reduction"></a>reduction
 指定对每个线程都是私有的一个或多个变量是并行区域末尾缩减操作的主题。  
@@ -163,5 +164,5 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the the functions, func1 through func5 succeeded!  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "77"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13830c1533c4a4124a6e77105f3b9daa794c8240
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>适用于运行时平台的组件扩展
 Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。 通过使用 C + + /CX 中，你可以编程通用 Windows 平台应用程序和编译为本机代码的组件。 虽然你可以通过针对 Windows 运行时 COM 接口直接编程来创建通用 Windows 平台应用程序，通过使用 C + + /CX 中，你可以使用构造函数、 异常和其他现代 c + + 编程习语。 若要启用.NET 平台上的托管的执行环境中的 c + + 编程，你可以使用 C + + /cli CLI。  
@@ -43,12 +46,12 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
   
  下表列出了 C++ 语言扩展中的关键字。  
   
-|关键字|区分上下文|用途|参考|  
+|关键字|区分上下文|目标|参考|  
 |-------------|-----------------------|-------------|---------------|  
-|`ref class`<br /><br /> `ref struct`|No|声明类。|[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)|  
-|`value class`<br /><br /> `value struct`|No|声明值类。|[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)|  
-|`interface class`<br /><br /> `interface struct`|No|声明接口。|[接口类](../windows/interface-class-cpp-component-extensions.md)|  
-|`enum class`<br /><br /> `enum struct`|No|声明枚举。|[枚举类](../windows/enum-class-cpp-component-extensions.md)|  
+|`ref class`<br /><br /> `ref struct`|否|声明类。|[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)|  
+|`value class`<br /><br /> `value struct`|否|声明值类。|[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)|  
+|`interface class`<br /><br /> `interface struct`|否|声明接口。|[接口类](../windows/interface-class-cpp-component-extensions.md)|  
+|`enum class`<br /><br /> `enum struct`|否|声明枚举。|[枚举类](../windows/enum-class-cpp-component-extensions.md)|  
 |`property`|是|声明属性。|[属性](../windows/property-cpp-component-extensions.md)|  
 |`delegate`|是|声明委托。|[委托（C++ 组件扩展）](../windows/delegate-cpp-component-extensions.md)|  
 |`event`|是|声明事件。|[事件](../windows/event-cpp-component-extensions.md)|  
@@ -56,40 +59,40 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 ## <a name="override-specifiers"></a>重写说明符  
  可以使用下列关键字来限定派生的替代行为。 虽然 `new` 关键字不是 C++ 的扩展，但仍列于此处，因为它可以在附加上下文中使用。 某些说明符还可用于本机编程。 有关详细信息，请参阅[如何： 在本机编译中声明重写说明符 (C + + /cli CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
   
-|关键字|区分上下文|用途|参考|  
+|关键字|区分上下文|目标|参考|  
 |-------------|-----------------------|-------------|---------------|  
 |`abstract`|是|指示函数或类是抽象的。|[abstract](../windows/abstract-cpp-component-extensions.md)|  
-|`new`|No|指示函数不替代基类版本。|[新 (新 vtable 中的槽）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
+|`new`|否|指示函数不替代基类版本。|[新 (新 vtable 中的槽）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |`override`|是|指示方法必须替代基类版本。|[替代](../windows/override-cpp-component-extensions.md)|  
 |`sealed`|是|防止类用作基类。|[sealed](../windows/sealed-cpp-component-extensions.md)|  
   
 ## <a name="keywords-for-generics"></a>泛型关键字  
  已添加下列关键字来支持泛型类型。 有关详细信息，请参阅[泛型](../windows/generics-cpp-component-extensions.md)。  
   
-|关键字|区分上下文|用途|  
+|关键字|区分上下文|目标|  
 |-------------|-----------------------|-------------|  
-|`generic`|No|声明泛型类型。|  
+|`generic`|否|声明泛型类型。|  
 |`where`|是|指定应用于泛型类型参数的约束。|  
   
 ## <a name="miscellaneous-keywords"></a>杂项关键字  
  C++ 扩展中已添加下列关键字。  
   
-|关键字|区分上下文|用途|参考|  
+|关键字|区分上下文|目标|参考|  
 |-------------|-----------------------|-------------|---------------|  
 |`finally`|是|指示默认异常处理行为。|[异常处理](../windows/exception-handling-cpp-component-extensions.md)|  
-|`for each, in`|No|枚举集合元素。|[for each, in](../dotnet/for-each-in.md)|  
-|`gcnew`|No|分配垃圾回收堆上的类型。 而不是使用 `new` 和 `delete`。|[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|`for each, in`|否|枚举集合元素。|[for each, in](../dotnet/for-each-in.md)|  
+|`gcnew`|否|分配垃圾回收堆上的类型。 而不是使用 `new` 和 `delete`。|[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`ref new`|是|分配 Windows 运行时类型。 而不是使用 `new` 和 `delete`。|[ref new、 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|是|指示只能在声明时或在静态构造函数中初始化成员。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
 |`literal`|是|创建文本变量。|[文本](../windows/literal-cpp-component-extensions.md)|  
-|`nullptr`|No|指示图柄或指针不指向对象。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
+|`nullptr`|否|指示图柄或指针不指向对象。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>模板构造  
  下列语言构造作为模板而非关键字实现。 如果指定**/ZW**编译器选项，它们在定义`lang`命名空间。 如果指定**/clr**编译器选项，它们在定义`cli`命名空间。  
   
-|关键字|用途|参考|  
+|关键字|目标|参考|  
 |-------------|-------------|---------------|  
-|`array`|声明数组。|[阵列](../windows/arrays-cpp-component-extensions.md)|  
+|`array`|声明数组。|[数组](../windows/arrays-cpp-component-extensions.md)|  
 |`interior_ptr`|（仅限 CLR）指向引用类型中的数据。|[interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)|  
 |`pin_ptr`|（仅限 CLR）指向 CLR 引用类型以便暂时抑制垃圾回收系统。|[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)|  
 |`safe_cast`|确定并执行运行时类型的最佳转换方法。|[safe_cast](../windows/safe-cast-cpp-component-extensions.md)|  
@@ -98,7 +101,7 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 ## <a name="declarators"></a>声明符  
  下列类型声明符指示运行时自动管理已分配对象的生存期和删除。  
   
-|运算符|用途|参考|  
+|运算符|目标|参考|  
 |--------------|-------------|---------------|  
 |`^`|声明的对象; 句柄即，不再可用时将自动删除的 Windows 运行时或 CLR 对象的指针。|[对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)|  
 |`%`|声明跟踪引用;即，不再可用时将自动删除的 Windows 运行时或 CLR 对象的引用。|[跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)|  
@@ -130,6 +133,6 @@ Visual C++ 提供多种语言扩展，可帮助你面向运行时平台编程。
 |[#using 指令](../preprocessor/hash-using-directive-cpp.md)|导入外部程序集。|  
 |[XML 文档](../ide/xml-documentation-visual-cpp.md)|使用解释基于 XML 的代码文档[/doc （处理文档注释） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [.NET 编程使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

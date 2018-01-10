@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a73a29a7cdcd20c969680e1dbb69b6a6ede4dbb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledextent-class"></a>tiled_extent 类
 A`tiled_extent`对象是`extent`到一个、 两个或三维磁贴细分的扩展盘区空间的一到三个维度的对象。  
@@ -91,7 +92,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[tile_dim0 常量](#tile_dim0)|将存储的最重要的维度的长度。|  
 |[tile_dim1 常量](#tile_dim1)|将存储的下一步的最重要的维度的长度。|  
@@ -109,7 +110,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  `tiled_extent`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp.h  
   
  **命名空间：** 并发  
@@ -224,5 +225,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 ```  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed5df01f103bb9e73374239e1c47794a127e873
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>记录集：记录集如何选择记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -103,7 +106,7 @@ ms.lasthandoff: 10/24/2017
   
  如果你想要使基于复杂的 SQL 语句的记录集，你需要使用这些自定义项技术的某种组合。 例如，你可能想要使用 SQL 子句和关键字不直接支持的记录集或可能是你要加入多个表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集： 如何记录集更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
  [ODBC 基础知识](../../data/odbc/odbc-basics.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2ff302aa9cc8088b583e0c772d0a7ff7959ab164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 类编写 Internet 客户端应用程序
 每个 Internet 客户端应用程序的基础是 Internet 会话。 MFC 实现 Internet 会话作为类的对象[CInternetSession](../mfc/reference/cinternetsession-class.md)。 通过使用此类，您可以创建一个 Internet 会话或多个同时会话。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [如何编写 HTTP 客户端应用程序](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [用于创建 Internet 客户端应用程序的 MFC 类](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
  [Internet 客户端类的必备条件](../mfc/prerequisites-for-internet-client-classes.md)

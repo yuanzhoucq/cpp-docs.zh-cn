@@ -1,42 +1,41 @@
 ---
-title: "编译器警告（等级 1）C4747 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4747"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4747"
+title: "编译器警告 （等级 1） C4747 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4747
+dev_langs: C++
+helpviewer_keywords: C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 094576ec19582b640ba0d4c57dfa34593177a267
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4747
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-调用托管“entrypoint”: 托管代码可能未运行在加载程序锁下，包括 DLL 入口点和从 DLL 入口点访问到的调用  
+# <a name="compiler-warning-level-1-c4747"></a>编译器警告（等级 1）C4747
+调用托管入口点： 不会在有加载程序锁，包括 DLL 入口点和调用从 DLL 入口点达到运行托管的代码  
   
- 编译器找到编译为 MSIL 的（可能）DLL 入口点。由于加载入口点已编译为 MSIL 的 DLL 时存在一些潜在问题，因此强烈建议不要将 DLL 入口点函数编译为 MSIL。  
+ 编译器发现一个 （可能） 编译为 MSIL 的 DLL 入口点。  由于加载的 DLL 的入口点编译为 MSIL 的潜在问题，你已从编译为 MSIL DLL 入口点函数，强烈建议不要使用。  
   
- 有关更多信息，请参见[混合程序集的初始化](../../dotnet/initialization-of-mixed-assemblies.md)和[链接器工具错误 LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md)。  
+ 有关详细信息，请参阅[初始化混合程序集的](../../dotnet/initialization-of-mixed-assemblies.md)和[链接器工具错误 LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md)。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  不要使用 **\/clr** 编译该模块。  
+1.  对模块进行不编译**/clr**。  
   
-2.  使用 `#pragma unmanaged` 标记入口点函数。  
+2.  将标记与入口点函数`#pragma unmanaged`。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4747。  
   
 ```  

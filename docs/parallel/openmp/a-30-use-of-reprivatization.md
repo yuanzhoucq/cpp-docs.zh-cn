@@ -1,27 +1,27 @@
 ---
-title: "A.30   Use of Reprivatization | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.30 利用 Reprivatization |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 26529090-6c39-40f2-b806-e12374d6b5f8
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1b8a6bedad37e9edd70edd014a9dd8f70143bbe5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.30   Use of Reprivatization
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例演示变量的 reprivatization。  私有变量可重新标记为 `private` 在嵌套的指令。  已对该封闭并行区域不必共享。  
+# <a name="a30---use-of-reprivatization"></a>A.30   重新私有化的使用
+下面的示例演示变量的 reprivatization。 可以标记私有变量`private`再次嵌套指令中。 它们无需在封闭的并行区域中共享。  
   
 ```  
 int i, a;  

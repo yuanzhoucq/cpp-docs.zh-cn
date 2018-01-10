@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 231cc5874ff442d8a7ef8041ab32b656856c9cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 381473ceebe696bce549732de6a738f733161403
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setset-stlclr"></a>set::set (STL/CLR)
 构造容器对象。  
@@ -190,12 +193,12 @@ size() = 0
  a b c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)   
  [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)

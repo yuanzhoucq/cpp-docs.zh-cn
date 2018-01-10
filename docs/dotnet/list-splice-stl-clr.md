@@ -1,32 +1,33 @@
 ---
-title: "list::splice (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::splice"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "splice 成员 [STL/CLR]"
+title: "list:: splice (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::splice
+dev_langs: C++
+helpviewer_keywords: splice member [STL/CLR]
 ms.assetid: ebc424b9-8341-4a88-b101-86d56324f5ac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba4513f8ff7e6ce51a50faacbdbe08c6fca34d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# list::splice (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-节点之间的 Restitch 链接。  
+# <a name="listsplice-stlclr"></a>list::splice (STL/CLR)
+Restitch 节点之间的链接。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void splice(iterator where, list<Value>% right);  
@@ -36,27 +37,27 @@ void splice(iterator where, list<Value>% right,
     iterator first, iterator last);  
 ```  
   
-#### 参数  
- 首先  
- 交错范围的开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要拼接的范围开始处。  
   
  last  
- 接合范围末尾。  
+ 要拼接的范围的末尾。  
   
- right  
- 拼接的容器中。  
+ 右  
+ 要从中进行拼接的容器。  
   
- where  
- 在前面带锯齿的容器。  
+ 其中  
+ Splice 之前容器中的位置。  
   
-## 备注  
- 第一个成员函数插入顺序控制由 `right` 控制在序列的元素之前指向的 `where`。  它从 `right`中移除所有元素。\(无法等于`%``right``this`。\)使用该耦合整个列表到另一个。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数将插入所控制序列`right`指向的受控序列中的元素之前`where`。 它还会删除 `right` 中的所有元素。 (`%right`必须不等于`this`。)你可以使用它要拼接到另一个列表的所有。  
   
- 第二个成员函数中移除元素指向按顺序控制的 `first` 由 `right` 和控制在序列的元素之前插入它指向的 `where`。\(如果 `where` `==` `first` `||` `where` `== ++``first`，则发生更改。\)使用该耦合一个列表的唯一元素到另一个。  
+ 第二个成员函数中移除的元素指向`first`中控制的序列`right`并将其插入之前由指向受控序列中的元素`where`。 (如果`where` `==` `first` `||` `where` `== ++first`，不会发生更改。)你可以使用它要拼接到另一个列表的单一元素。  
   
- 第三个 `[`成员函数插入选定的子范围`first``,` 中的`last`控制`)` 顺序由 `right` 控制在序列的元素之前指向的 `where`。  它还移除从原始顺序控制指定子范围的 `right`。\(如果 `right` `==` `this`，范围 `[``first``,` `last``)` 不包含元素指向的 `where`。\)使用该耦合零个或多个元素 subsequence 从一个列表中为另一个中。  
+ 第三个成员函数将插入指定的子范围 [`first`， `last`) 控制的序列从`right`指向的受控序列中的元素之前`where`。 它还会删除由 `right` 控制的序列中的原始子范围。 (如果`right` `==` `this`，范围 [`first`， `last`) 不能包含指向的元素`where`。)你可以使用它要拼接到另一个列表中的零个或多个元素的子序列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_splice.cpp   
@@ -104,20 +105,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**c1.size\(\) \= 0**  
- **a b c**  
- **a**  
- **为 c**  
- **b c。**  
-**c2.size\(\) \= 0**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+ a b c  
+c1.size() = 0  
+ a b c  
+ a  
+ b c  
+ b c a  
+c2.size() = 0  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [list:: insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)   
+ [list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)

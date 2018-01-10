@@ -1,40 +1,40 @@
 ---
-title: "2.9 Directive Nesting | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.9 指令嵌套 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6565a43c-fd2d-4366-8322-8d75e1b06600
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd3c4f790681b1b044f435c03d185585b565eb62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 2.9 Directive Nesting
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-动态嵌套指令必须遵循下列规则:  
+# <a name="29-directive-nesting"></a>2.9 指令嵌套
+动态嵌套指令必须遵守以下规则：  
   
--   **并行** 指令在另一 **并行** 内部逻辑上动态建立一个新的团队，只能由当前线程组成，因此，除非嵌套并行启用。  
+-   A**并行**动态在另一个指令**并行**逻辑上建立启用新的团队，这组成仅当前线程，除非嵌套并行度。  
   
--   **为**、 **部分**和绑定到同一 **并行** 的 **单个** 指令不允许互相嵌套。  
+-   **有关**，**部分**，和**单个**将绑定到相同的指令**并行**不允许嵌套在每个其他。  
   
--   同名的**重要** 指令不允许互相嵌套。  请注意此限制不满足避免死锁。  
+-   **关键**不允许嵌套在相互具有相同名称的指令。 请注意此限制不足以防止死锁。  
   
--   ，如果指令绑定到 **并行** 和区域相同，**为**、 **部分**和 **单个** 指令在 **重要**、 **排序**和 **母版** 区域的动态区域是不允许的。  
+-   **有关**，**部分**，和**单个**指令不允许使用的动态程度**关键**，**排序**，和**master**如果指令将绑定到相同的区域**并行**作为区域。  
   
--   ，如果指令绑定到 **并行** 和区域相同，**障碍** 指令在 **为**、 **排序**、 **部分**、 **单个**、 **母版**和 **重要** 区域的动态区域是不允许的。  
+-   **屏障**指令不允许使用的动态程度**为**，**排序**，**部分**，**单个**，**master**，和**关键**如果指令将绑定到相同的区域**并行**作为区域。  
   
--   ，如果 **母版** 指令绑定到 **并行** 和的工作划分指令相同，**母版** 指令在 **为**、 **部分**和 **单个** 指令的动态区域是不允许的。  
+-   **主**指令不允许使用的动态程度**为**，**部分**，和**单个**指令如果**master**指令将绑定到相同**并行**作为工作共享指令。  
   
--   ，如果指令绑定到 **并行** 和区域相同，**排序** 指令在 **重要** 区域的动态区域不允许的。  
+-   **排序**指令不允许在动态范围内的**关键**如果指令将绑定到相同的区域**并行**作为区域。  
   
--   任何允许，则动态执行在并行区域中的指令还允许，在执行在并行区域之外。  在动态执行在用户指定的并行区域之外，指令由团队执行组成只能由主线程。
+-   时执行并行区域外，还允许任何时并行区域内动态执行允许的指令。 执行时动态用户指定的并行区域外，通过团队组成只有主线程执行的指令。

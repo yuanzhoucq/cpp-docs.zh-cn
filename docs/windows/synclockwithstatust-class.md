@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1d2cd87c7a77501981904686f0bea0b3c7444e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5b4b007acd6e6b9272a4fc7bb256d302cafeb75c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT 类
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -65,7 +68,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[SyncLockWithStatusT::status_ 数据成员](../windows/synclockwithstatust-status-data-member.md)|根据当前的 SyncLockWithStatusT 对象保留的结果的基础等待锁操作完成后的操作对象。|  
   
@@ -74,10 +77,10 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
  `SyncLockWithStatusT`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Wrappers::Details 命名空间](../windows/microsoft-wrl-wrappers-details-namespace.md)

@@ -1,33 +1,36 @@
 ---
-title: "如何：将非托管资源加载到一个字节数组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "本机资源"
-  - "本机资源, 加载到 Byte 数组中"
-  - "非托管资源, 加载到 Byte 数组中"
+title: "如何： 加载到字节数组的非托管的资源 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native resources, loading into Byte array
+- unmanaged resources, loading into Byte array
+- native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a179934a0a94c552ea7dc81e3f4dbdc5a4458d70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：将非托管资源加载到一个字节数组
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题讨论了向 <xref:System.Byte> 数组中加载非托管资源的几种方法。  
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管资源加载到一个字节数组
+本主题讨论几种方法可以加载到非托管的资源<xref:System.Byte>数组。  
   
-## 示例  
- 如果知道非托管资源的大小，则可以预分配一个 CLR 数组，然后使用指向 CLR 数组的数组块的指针将资源加载到该数组中。  
+## <a name="example"></a>示例  
+ 如果你知道你的非托管资源的大小，可以预分配 CLR 数组并将资源然后加载到使用指向 CLR 数组的数组块的指针的数组。  
   
 ```  
 // load_unmanaged_resources_into_Byte_array.cpp  
@@ -57,9 +60,12 @@ int main() {
 }  
 ```  
   
-  **0123456789**   
-## 示例  
- 此示例演示如何从非托管内存块向托管数组中复制数据。  
+```Output  
+0123456789  
+```  
+  
+## <a name="example"></a>示例  
+ 此示例演示如何将数据从非托管的内存块复制到托管数组。  
   
 ```  
 // load_unmanaged_resources_into_Byte_array_2.cpp  
@@ -78,5 +84,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

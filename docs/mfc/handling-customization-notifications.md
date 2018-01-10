@@ -58,11 +58,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c849fb14b9400711596e36a8d5b5829c233efd45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。  
@@ -195,7 +196,7 @@ Windows 工具栏公共控件有内置的自定义功能，包括一个系统定
   
 -   **TBN_TOOLBARCHANGE** 用户已自定义工具栏控件后发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

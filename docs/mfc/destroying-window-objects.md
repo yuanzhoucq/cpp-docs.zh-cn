@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67d2df7d72de079a0408847c433000a652ac6aaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e7b8b2cf605e0f53418755b65151fd9eb2cff5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destroying-window-objects"></a>销毁窗口对象
 必须格外小心使用你自己的子窗口时用户已完成与窗口销毁 c + + 窗口对象。 如果这些对象不会被销毁，你的应用程序将不会恢复其内存。 幸运的是，框架管理窗口析构，以及创建框架窗口、 视图和对话框。 如果你创建其他 windows，你将负责销毁它们。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [销毁框架窗口](../mfc/destroying-frame-windows.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [窗口对象](../mfc/window-objects.md)
 

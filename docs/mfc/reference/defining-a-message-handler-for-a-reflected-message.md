@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a576ffdc7fcd637873045ee44e3a13a0a9647942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9f5e1c472cdbca177b91851f9b8104094c41047
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>为反射消息定义消息处理程序
 创建新的 MFC 控件类后，你可以为其定义消息处理程序。 反映的消息处理程序允许你的控件类来处理其自己的消息之前父接收此消息。 你可以使用 MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)函数将从控件的消息发送到父窗口。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
 9. 若要编辑或删除消息处理程序，请重复步骤 4 到 7。 单击包含要编辑或删除并单击相应的任务的处理程序名称的单元格。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [将消息映射到函数](../../mfc/reference/mapping-messages-to-functions.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../../ide/adding-a-class-visual-cpp.md)   

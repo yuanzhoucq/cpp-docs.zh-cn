@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: beac8ca095388428986569433f0461a505f2a7e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2964c629ce8a3a83799278ac822b589992b4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>如何：转换使用异常处理的 OpenMP 循环以使用并发运行时
 此示例演示如何将转换 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[为](../../parallel/openmp/reference/for-openmp.md)执行异常处理来使用并发运行时异常处理机制的循环。  
@@ -68,7 +69,7 @@ An error of type 'class std::bad_alloc' occurred.
   
  **cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [并行算法](../../parallel/concrt/parallel-algorithms.md)

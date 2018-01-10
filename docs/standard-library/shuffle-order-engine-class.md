@@ -26,11 +26,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2e8e953d953df96cc145d8752337fa806dfbda7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43de5df2afa0aca7e1634eac0338ae1b49ea9372
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine 类
 通过对从其基引擎中返回的值进行重新排序，生成随机序列。  
@@ -47,7 +48,7 @@ class shuffle_order_engine;
  基引擎类型。  
   
  `K`  
- **表大小**。 缓冲区（表）中的元素数。 **前置条件**：`0 < K`  
+ **表大小**。 缓冲区（表）中的元素数。 **前提条件**：`0 < K`  
   
 ## <a name="members"></a>成员  
   
@@ -61,11 +62,11 @@ class shuffle_order_engine;
 ## <a name="remarks"></a>备注  
  此模板类描述了通过对其基引擎返回的值进行重新排序来产生值的引擎适配器。 每个构造函数都将使用由基引擎返回的 `K` 值填充内部表，请求一个值后，将从该表中选择一个随机元素。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<random>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
 

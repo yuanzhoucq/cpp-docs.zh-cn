@@ -23,11 +23,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7304d83eca004952eb65ed6c5d16e4ce816bb56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接调用 ODBC API 函数
 数据库类为提供更简单的接口[数据源](../../data/odbc/data-source-odbc.md)比 ODBC。 因此，类不封装所有 ODBC API。 对于任何类的功能以外的功能，必须直接调用 ODBC API 函数。 例如，你必须调用 ODBC 目录函数 (**:: SQLColumns**， **:: SQLProcedures**， **:: SQLTables**，等) 直接。  
@@ -52,5 +55,5 @@ ms.lasthandoff: 10/24/2017
  除了这些步骤，需要执行额外的步骤来检查函数返回值，请确保你的程序未等待的异步调用完成后，依次类推。 你可以通过使用来简化这些最后一个步骤`AFX_SQL_ASYNC`和`AFX_SQL_SYNC`宏。 有关详细信息，请参阅[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 参考*。  
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ODBC 基础](../../data/odbc/odbc-basics.md)

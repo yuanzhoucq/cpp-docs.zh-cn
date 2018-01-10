@@ -47,11 +47,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a71ff9fa64f52120cf230e46ed0fcabe8f60ddb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11b28199155c0ac3bd90cda8fb830ea6f8894dde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 A`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。  
@@ -71,7 +72,7 @@ class CJumpList;
 |[CJumpList::CJumpList](#cjumplist)|构造 `CJumpList` 对象。|  
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|销毁 `CJumpList` 对象。|  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|中止生成列表的事务，且不提交。|  
 |[CJumpList::AddDestination](#adddestination)|已重载。 将目标添加到列表。|  
@@ -91,7 +92,7 @@ class CJumpList;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxadv.h  
   
 ##  <a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
@@ -333,5 +334,5 @@ void SetAppID(LPCTSTR strAppID);
  `strAppID`  
  一个字符串，指定应用程序用户模型 id。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

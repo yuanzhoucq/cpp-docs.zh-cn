@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f7b09ed7c4b52b45efee0708f65d8d2f3e24cd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 036da9664c7b61e55e1322f12de3d9c8f72c3f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 定义 C++ 标准库函数，用于帮助构造函数对象（也称为函子）及其绑定程序。 函数对象是用于定义 `operator()` 的类型的对象。 函数对象可以是函数指针，但该对象更常用于存储可在函数调用过程中访问的其他信息。  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/24/2017
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|不允许对可调用对象进行相等性比较。|  
 |[operator!=](../standard-library/functional-operators.md#op_neq)|不允许对可调用对象进行不等性比较。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

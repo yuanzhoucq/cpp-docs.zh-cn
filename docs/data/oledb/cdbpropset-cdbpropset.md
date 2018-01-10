@@ -1,58 +1,60 @@
 ---
-title: "CDBPropSet::CDBPropSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet.CDBPropSet"
-  - "CDBPropSet::CDBPropSet"
-  - "ATL::CDBPropSet::CDBPropSet"
-  - "ATL.CDBPropSet.CDBPropSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropSet 类, 构造函数"
+title: "Cdbpropset:: Cdbpropset |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet.CDBPropSet
+- CDBPropSet::CDBPropSet
+- ATL::CDBPropSet::CDBPropSet
+- ATL.CDBPropSet.CDBPropSet
+dev_langs: C++
+helpviewer_keywords: CDBPropSet class, constructor
 ms.assetid: 02ae5d9e-c067-47ca-8111-a03e86b5626b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 239f6c0a03186736d35b8d082913aeb76cac1d14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropSet::CDBPropSet
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-构造函数。  初始化 **rgProperties**、**cProperties**和 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 结构的 **guidPropertySet** 字段。  
+# <a name="cdbpropsetcdbpropset"></a>CDBPropSet::CDBPropSet
+构造函数。 初始化**rgProperties**， **cProperties**，和**guidPropertySet**字段[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)结构。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
       CDBPropSet(  
    const GUID& guid   
 );  
-CDBPropSet(   
-   const CDBPropSet& propset    
+CDBPropSet(   
+   const CDBPropSet& propset    
 );  
 CDBPropSet( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `guid`  
- \[in\] 用于的 GUID 来初始化 **guidPropertySet** 字段。  
+ [in]用于初始化 GUID **guidPropertySet**字段。  
   
- *propset*  
- \[in\] 复制构造的另一个 `CDBPropSet` 对象。  
+ *属性集*  
+ [in] 复制构造的另一个 `CDBPropSet` 对象。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDBPropSet 类](../../data/oledb/cdbpropset-class.md)   
- [CDBPropSet::SetGUID](../../data/oledb/cdbpropset-setguid.md)   
- [DBPROP Structure](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+ [Cdbpropset:: Setguid](../../data/oledb/cdbpropset-setguid.md)   
+ [需要的 DBPROP 结构](https://msdn.microsoft.com/en-us/library/ms717970.aspx)

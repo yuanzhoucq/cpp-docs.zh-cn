@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddParameterEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CManualAccessor::AddParameterEntry"
-  - "ATL.CManualAccessor.AddParameterEntry"
-  - "CManualAccessor.AddParameterEntry"
-  - "AddParameterEntry"
-  - "ATL::CManualAccessor::AddParameterEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddParameterEntry 方法"
+title: "Cmanualaccessor:: Addparameterentry |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CManualAccessor::AddParameterEntry
+- ATL.CManualAccessor.AddParameterEntry
+- CManualAccessor.AddParameterEntry
+- AddParameterEntry
+- ATL::CManualAccessor::AddParameterEntry
+dev_langs: C++
+helpviewer_keywords: AddParameterEntry method
 ms.assetid: 9048b164-052b-41b1-a861-227fc529e0b5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 66c88bf072cbae6c86949d52ded121dd694c0e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddParameterEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-将参数输入到参数类型结构。  
+# <a name="cmanualaccessoraddparameterentry"></a>CManualAccessor::AddParameterEntry
+将参数项添加到参数项结构。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -45,37 +47,37 @@ caps.handback.revision: 9
 ) throw ( );  
 ```  
   
-#### 参数  
- 请参阅在*OLE DB Programmer's Reference* 中 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
+#### <a name="parameters"></a>参数  
+ 请参阅[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程序员参考*。  
   
  `nOrdinal`  
- \[in\] 参数数目。  
+ [in]参数号。  
   
  `wType`  
- \[in\] 数据类型  
+ [in]数据类型。  
   
  `nColumnSize`  
- \[in\] 列大小 \(以字节为单位\)。  
+ [in]以字节为单位的列大小。  
   
  `pData`  
- \[in\] 到缓冲区中存储的数据的指针。  
+ [in]指向存储在缓冲区中的列数据的指针。  
   
  `pLength`  
- 如果需要的话 \[in\] 为字段长度的指针。  
+ [in]指向字段长度，如果所需的指针。  
   
  `pStatus`  
- \[in\] 绑定到变量的指针到列状态，如果必须。  
+ [in]指向要将绑定到列的状态，如果所需的变量的指针。  
   
  *eParamIO*  
- \[in\] 指定绑定关联的参数是输入、性能或输出参数。  
+ [in]指定绑定与之关联的参数是否是一个输入、 输入/输出，或输出参数。  
   
-## 备注  
- 若要使用此功能，必须首先调用 [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。  
+## <a name="remarks"></a>备注  
+ 若要使用此功能，必须先调用[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)   
- [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)   
- [DBViewer 示例](../../top/visual-cpp-samples.md)
+ [Cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md)   
+ [DBViewer 示例](../../visual-cpp-samples.md)

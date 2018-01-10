@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99df6fac2f3ed6dfe52f94d4d0602ebe78ed1e65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db73bb8c974cd8f65a1cb62058e9b2c6a4334dd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selection-statements-c"></a>选择语句 (C++)
 C + + 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp/switch-statement-cpp.md)，提供有条件地执行代码的部分的方法。  
@@ -29,5 +30,5 @@ C + + 选择语句，[如果](../cpp/if-else-statement-cpp.md)和[切换](../cpp
   
  有关每个语句的语法，请参阅单独的主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ 语句概述](../cpp/overview-of-cpp-statements.md)

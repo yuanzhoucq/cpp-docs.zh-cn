@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0bdaf5b8f6128e9b718b35b7332707a5249b33ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65359e76e036a0d8d33de2de9f6c96c6425d2152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>从 OpenMP 迁移至并发运行时
 并发运行时支持各种编程模型。 这些模型可能会与其他库的模型重叠或对其进行补充。 在此文档部分比较[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)的并发运行，并提供有关如何迁移现有 OpenMP 代码以使用并发运行时的示例。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
  [如何：转换使用缩减变量的 OpenMP 循环以使用并发运行时](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
  给定 OpenMP[并行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[为](../../parallel/openmp/reference/for-openmp.md)使用循环[缩减](../../parallel/openmp/reference/reduction.md)子句，演示如何将其转换为使用并发运行时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发运行时](../../parallel/concrt/concurrency-runtime.md)   
  [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)   
  [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   

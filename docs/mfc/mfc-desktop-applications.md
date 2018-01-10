@@ -20,11 +20,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8bc3b4b2273db0c5b090bf24875daafe7c63ec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5f99270afc1f603b8e5e44a23cd422f96558efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面应用程序
 Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对象的包装器。 虽然此包装器可用于创建极为简单的桌面应用程序，但当你需要开发具有多个控件的更复杂的用户界面时，此包装器将最为有用。 可以使用 MFC 创建带有 Office 样式用户界面的应用程序。  
@@ -95,5 +96,5 @@ Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对�
  [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio.md)  
  提供一些链接，所涉及内容为使用 Visual Studio 调试器纠正应用程序或存储过程中的逻辑错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 和 ATL](mfc-and-atl.md)

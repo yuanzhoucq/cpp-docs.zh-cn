@@ -1,74 +1,76 @@
 ---
-title: "泛型接口 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "泛型接口"
-  - "接口, 泛型 [C++}"
+title: "泛型接口 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic interfaces
+- interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b08ab6585cd4d8c7a4da93273f99d47c0265608c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 泛型接口 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-应用在类类型参数的限制是一些应用键入接口上的参数 \(参见 [泛型类 \(C\+\+\/CLI\)](../windows/generic-classes-cpp-cli.md)\) 相同的。  
+# <a name="generic-interfaces-visual-c"></a>泛型接口 (Visual C++)
+应用于对类类型参数的限制都应用于类型参数在接口上的那些相同 (请参阅[泛型类 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md))。  
   
- 控制函数重载相同在泛型类或泛型接口中的函数的规则。  
+ 控制函数重载的规则都相同的泛型类或泛型接口中的函数。  
   
- 显式实现接口成员构造的接口类型，与包含简单的接口类型的方式一致 \(请参见下面的示例\)。  
+ 显式接口成员的实现以使用 （请参阅下面的示例） 的简单接口类型的相同方式处理构造的接口类型。  
   
- 有关约束的更多信息，请参见 [接口类](../windows/interface-class-cpp-component-extensions.md)。  
+ 在接口上的详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
-## 备注  
- 可选的  特性。  
- 附加的声明信息。  有关特性和特性类的更多信息，请参见特性。  
+## <a name="remarks"></a>备注  
+ *属性*（可选）  
+ 附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
- *类键*  
- **类** 或 **类型名**  
+ *类别键*  
+ **类**或**typename**  
   
  `type-parameter-identifier(s)`  
- 逗号分隔的标识符列表。  
+ 以逗号分隔标识符列表。  
   
  `type-parameter-constraints-clauses`  
- 采用 [约束](../windows/constraints-on-generic-type-parameters-cpp-cli.md)指定的窗体  
+ 中指定的形式[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *可访问性修饰符* \(可选\)  
- 可访问性修饰符（例如  **公用 , 专用**\)。  
+ *可访问性修饰符*（可选）  
+ 可访问性修饰符 (例如**公钥 / 私钥**)。  
   
  *identifier*  
  接口名称。  
   
- *基列表* \(可选\)  
- 包含一个或多个基接口显式列表中以逗号分隔。  
+ *基列表*（可选）  
+ 包含一个或多个显式基接口用逗号分隔的列表。  
   
- *interface\-body*  
+ *接口体内*  
  接口成员的声明。  
   
- *声明* \(可选\)  
+ *声明符*（可选）  
  基于此类型的变量的声明。  
   
-## 示例  
- 下面的示例演示如何声明和实例化泛型接口。  在此示例中，泛型 `IList<ItemType>` 接口声明。  它使用两个泛型类，`List1<ItemType>` 和 `List2<ItemType>`，然后实现不同的实现。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何声明并实例化一个泛型接口。 在示例中，泛型接口`IList<ItemType>`声明。 它由两个泛型类，然后实现`List1<ItemType>`和`List2<ItemType>`，具有不同的实现。  
   
 ```  
 // generic_interface.cpp  
@@ -236,12 +238,15 @@ int main() {
 }  
 ```  
   
-  **链接列表**  
-**List1**  
-**数组表**  
-**List2**   
-## 示例  
- 此示例声明泛型和非泛型两个接口、`IMyGenIface`接口、`IMySpecializedInt` 和 `ImySpecializedString`，这些专用 `IMyGenIface`。  两个专用的接口由以下两个类，`MyIntClass` 和 `MyStringClass`实现。  示例演示如何指定泛型接口，实例化泛型和非泛型接口并调用接口的显式实现的成员。  
+```Output  
+Linked List  
+List1  
+Array List  
+List2  
+```  
+  
+## <a name="example"></a>示例  
+ 此示例声明一个泛型接口， `IMyGenIface`，和两个非泛型接口，`IMySpecializedInt`和`ImySpecializedString`的专用化`IMyGenIface`。 由两个类，然后实现两个专用的接口`MyIntClass`和`MyStringClass`。 该示例演示如何专用化的泛型接口，实例化泛型和非泛型接口，并在接口上调用显式实现的成员。  
   
 ```  
 // generic_interface2.cpp  
@@ -311,7 +316,10 @@ int main() {
 }  
 ```  
   
-  **Integer 字段包含：1234**  
-**字符串字段包含：我的字符串**   
-## 请参阅  
+```Output  
+The integer field contains: 1234  
+The String field contains: My string  
+```  
+  
+## <a name="see-also"></a>请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

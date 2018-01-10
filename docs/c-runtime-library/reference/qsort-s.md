@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- qsort_s
+apiname: qsort_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- qsort_s
-dev_langs:
-- C++
+f1_keywords: qsort_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [C++], sorting
 - quick-sort algorithm
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 执行快速排序。 这是 [qsort](../../c-runtime-library/reference/qsort.md) 版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。  
@@ -114,18 +96,18 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |---------|----------|-------------|---------|-----------|-----------|  
 |`NULL`|任何|任何|任何|任何|`EINVAL`|  
 |任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|any|<= 0|`EINVAL`|  
+|任何|任何|任何|任何|<= 0|`EINVAL`|  
 |任何|任何|`NULL`|任何|任何|`EINVAL`|  
   
  `qsort_s` 具有与 `qsort` 相同的行为，但其具有 `context` 参数并设置了 `errno`。 通过传递 `context` 参数，比较函数可以使用对象指针来访问对象功能或通过元素指针无法访问的其他信息。 添加`context`参数将使得`qsort_s`更为安全，因为`context`可用于避免重新进入 bug 引入使用静态变量要共享的信息提供给`compare`函数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> 和 \<search.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
  **库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
@@ -284,7 +266,7 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [搜索和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
  [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3539
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3539
+f1_keywords: C3539
+dev_langs: C++
+helpviewer_keywords: C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ccfa0b6ca6306de4d1454fa112bd413151450ae0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 03283217be6aabbf216e2e60ad47abfc01a961d6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3539"></a>编译器错误 C3539
 type： 模板自变量不能包含 auto 的类型  
@@ -49,5 +45,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)

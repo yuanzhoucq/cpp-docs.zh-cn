@@ -93,11 +93,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7363aca122d002a3ae77f071287942783ac7fbf2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81b3b8d4c3f25e1c443d5fbcaeddb7b587216d69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 类
 OLE 服务器文档的基类。  
@@ -191,7 +192,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
   
  `COleServerDoc`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxole.h  
   
 ##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
@@ -315,7 +316,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ### <a name="remarks"></a>备注  
  在激活 DocObject 服务器时，返回一个非**NULL**指针显示客户端可以支持 DocObjects。 默认实现返回**NULL**。  
   
- 支持 DocObjects 的文档的典型实现只需将分配一个新`CDocObjectServer`对象并将其返回给调用方。 例如:   
+ 支持 DocObjects 的文档的典型实现只需将分配一个新`CDocObjectServer`对象并将其返回给调用方。 例如:  
   
  [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
   
@@ -579,7 +580,7 @@ virtual HRESULT OnExecOleCmd(
 ### <a name="return-value"></a>返回值  
  返回`S_OK`成功; 否则为如果以下的错误代码之一：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|出现意外的错误|  
 |**E_FAIL**|出现错误|  
@@ -838,7 +839,7 @@ void UpdateAllItems(
   
  此函数将调用`OnUpdate`为每个文档的项除外发送邮件，传递的成员函数`pHint`， `lHint`，和`nDrawAspect`。 使用这些参数将信息传递给有关对文档进行修改的项。 你可以编码信息使用`lHint`或者你可以定义`CObject`-派生类来存储有关修改信息和传递，类使用的对象`pHint`。 重写`OnUpdate`成员函数在你`COleServerItem`-派生类以优化的每个项，具体取决于其演示文稿是否发生了更改随之更新。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
  [COleLinkingDoc 类](../../mfc/reference/colelinkingdoc-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

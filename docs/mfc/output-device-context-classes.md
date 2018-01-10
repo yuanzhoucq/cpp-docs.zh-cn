@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d96c42103f7ed1cbdce9666153f18d2bc6555b1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db7080c263ee6e98d458381d59446263490dfd7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-device-context-classes"></a>输出（设备上下文）类
 这些类封装了不同类型的 Windows 中可用的设备上下文。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 10/24/2017
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
  为打印文件中提供的标准对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

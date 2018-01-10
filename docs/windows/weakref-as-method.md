@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5160cb93d6660eaf990856a58d5b9379e911125e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e18ebeb8c50a4bae35c53fc82f059642a88cef07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakrefas-method"></a>WeakRef::As 方法
 设置指定的 ComPtr 指针参数以表示指定接口。  
@@ -65,10 +68,10 @@ HRESULT As(
   
  从 Windows 10 SDK 开始，如果无法获得弱引用，此方法不再将 WeakRef 实例设置为 `nullptr` ，因此应避免使用检查 `nullptr`的 WeakRef 的错误检查代码。 相反，应检查`ptr`为`nullptr`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WeakRef 类](../windows/weakref-class.md)

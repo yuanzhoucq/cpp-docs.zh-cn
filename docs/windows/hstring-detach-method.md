@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c48acafe67f900de55af1fb7ec23a174fc0cc960
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ae7ac6cd1e21574ad7b65e6e452d48059a3a6b6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringdetach-method"></a>HString::Detach 方法
 解除关联中其基础值的指定的 HString 对象。  
@@ -32,10 +35,10 @@ HSTRING Detach() throw()
 ## <a name="return-value"></a>返回值  
  分离操作启动之前的基础 HString 值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HString 类](../windows/hstring-class.md)

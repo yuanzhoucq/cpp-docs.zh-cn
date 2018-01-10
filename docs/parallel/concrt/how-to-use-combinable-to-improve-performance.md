@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7bd035b74988758142fe9d0fedc43946f35c2d58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dea28bd31812449e34bb481d316070f8f21aaede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>如何：使用 combinable 提高性能
 此示例演示如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)类来计算中的数字的和[std:: array](../../standard-library/array-class-stl.md)质数的对象。 `combinable`类消除共享的状态，从而提高了性能。  
@@ -70,7 +71,7 @@ parallel time: 1638 ms
 ## <a name="robust-programming"></a>可靠编程  
  示例使用映射和化简操作即可生成相同的结果，请参阅[并行算法](../../parallel/concrt/parallel-algorithms.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)   
  [combinable 类](../../parallel/concrt/reference/combinable-class.md)   
  [critical_section 类](../../parallel/concrt/reference/critical-section-class.md)

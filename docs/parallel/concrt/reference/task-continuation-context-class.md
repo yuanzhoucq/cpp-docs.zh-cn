@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48ef4f4646aedf648e3bb9efb572c203d7047378
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 类
 `task_continuation_context` 类可让你指定想要执行延续的位置。 只能从 Windows 应用商店应用使用此类。 对于非 Windows 应用商店应用，任务延续的执行上下文由运行时确定，不可配置。  
@@ -54,7 +55,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  `task_continuation_context`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** ppltasks.h  
   
  **命名空间：** 并发  
@@ -151,5 +152,5 @@ static task_continuation_context use_synchronous_execution();
  如果先行任务已完成时将延续附加，延续运行以同步方式将延续附加上下文。  
   
  
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

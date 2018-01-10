@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6def975ac9de8f069394c822e756e56c227e2f89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae79c521f7edcc055ec6eee5907a6102ebf26134
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true，仅当第一个参数是否不等于第二个。 使用它指定根据其自变量类型的函数对象。  
@@ -120,10 +123,10 @@ int main()
 0 1  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)

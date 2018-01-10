@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cca827bb8ba7fa43619a6e61e2c16ffba5e4563
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b72db4fb44191340b71c8bff26018221650ae34b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT 构造函数
 初始化 HandleT 类的新实例。  
@@ -44,10 +47,10 @@ HandleT(
 ## <a name="remarks"></a>备注  
  第一个构造函数初始化不是对象的有效句柄的 HandleT 对象。 第二个构造函数根据参数创建一个新的 HandleT 对象`h`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HandleT 类](../windows/handlet-class.md)

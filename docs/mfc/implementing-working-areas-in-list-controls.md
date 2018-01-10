@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8376a65a511f2a59342aa59f86a9cd6ecd9768e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cefb8007fd9b73dda4c0e8a99e9ae9daa1bfcc34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>实现列表控件中的工作区域
 默认情况下，列表控件排列标准网格方式中的所有项。 但是，支持另一种方法，工作区，它将列表项矩形分组。 实现工作区域的列表控件的映像，请参阅 Windows SDK 中使用列表视图控件。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

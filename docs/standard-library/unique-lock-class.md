@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6ce74fb7f4238f89fe177013b28536f9b27a95e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8974633a19e6f30f552eac4e5e7c3ec3b104c2ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniquelock-class"></a>unique_lock 类
 表示可进行实例化以创建管理 `mutex` 锁定和解锁的对象的模板。  
@@ -52,7 +53,7 @@ class unique_lock;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[lock](#lock)|阻止调用线程，直到线程获取关联的 `mutex` 的所有权。|  
 |[mutex](#mutex)|检索指向关联的 `mutex` 的存储指针。|  
@@ -74,7 +75,7 @@ class unique_lock;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unique_lock`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<互斥体 >  
   
  **命名空间：** std  
@@ -152,7 +153,7 @@ mutex_type *release() noexcept;
 ### <a name="remarks"></a>备注  
  此方法将存储的 `mutex` 指针的值设为 0，并将内部 `mutex` 所有权标志的值设为 `false`。  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  swap  
  将关联的 `mutex` 和所有权状态与指定对象的互换。  
   
 ```
@@ -299,7 +300,7 @@ void unlock();
   
  否则，此方法将在关联的 `mutex` 上调用 `unlock`，并将内部线程所有权标志设为 `false`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 

@@ -1,34 +1,37 @@
 ---
-title: "接口成员的显式重写 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "虚函数的显式重写"
-  - "函数 [C++], 重写"
-  - "接口成员, 显式重写"
-  - "重写函数"
-  - "虚函数, 显式重写"
+title: "接口成员的显式重写 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding functions
+- interface members, explicit overrides
+- functions [C++], overriding
+- explicit override of virtual function
 ms.assetid: 46f1f536-bf43-4311-9a17-ff2282e528a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85681b2e2aeeb6dbeb6ffdf511827fb1fc1cb029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 接口成员的显式重写
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-声明显式重写类中接口成员的语法已从 Managed Extensions for C\+\+ 更改为 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]。  
+# <a name="explicit-override-of-an-interface-member"></a>接口成员的显式重写
+声明一个类中接口成员的显式重写的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 经常需要在实现接口的类中提供两个接口成员的实例 — 其中一个在通过接口句柄操作类对象时使用，而另一个在通过类接口使用类对象时使用。  例如：  
+ 你通常想要提供两个接口成员的类中实现的接口的一个时通过接口句柄，操作类对象时使用，使用时将使用类对象是通过类接口的一个实例。 例如:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -40,9 +43,9 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- 在托管扩展中，通过用接口名称限定的方法名称来提供接口方法的显式声明来实现此目的。  未限定特定的类的实例。  在此示例中，当通过 `R` 的实例显式调用 `Clone` 时，将消除向下转换其返回值的需要。  
+ 在托管扩展中执行此操作通过用接口的名称限定的方法的名称与提供的接口方法的显式声明。 特定于类的实例是不合格的。 这消除了向下转换需求的返回值`Clone`，在此示例中，通过的实例的显式调用时`R`。  
   
- 在新的语法中，引入了一个通用重写机制代替托管扩展语法。  将重写我们的示例，如下所示：  
+ 在新语法中，常规的重写机制引入了替换的托管扩展语法。 我们的示例将被重写，如下所示：  
   
 ```  
 public ref class R : public ICloneable {  
@@ -55,8 +58,8 @@ public:
 };  
 ```  
   
- 此版本要求在类中为正显式重写的接口成员赋予一个唯一名称。  在此，我提供了一个有些笨拙的 `InterfaceClone` 的名称。  行为仍然相同 — 通过 `ICloneable` 接口的调用将调用重新命名的 `InterfaceClone,`，而通过类型 `R` 的一个对象的调用将调用第二个 `Clone` 实例。  
+ 此修订版本，需要显式重写的接口成员指定类中唯一的名称。 在这里，我已提供的繁琐名称`InterfaceClone`。 行为都是一样的-通过调用`ICloneable`接口调用重命名`InterfaceClone`，而通过类型的对象的调用`R`调用第二个`Clone`实例。  
   
-## 请参阅  
- [类或接口中的成员声明 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+## <a name="see-also"></a>请参阅  
+ [在类或接口中的成员声明 (C + + /cli CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [显式重写](../windows/explicit-overrides-cpp-component-extensions.md)

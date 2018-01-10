@@ -73,11 +73,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaabdbbcab97366aa272e51f57d215b63a0161a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be9752822ee009ceddb735806d36ea3507242951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
 扩展 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 的功能以支持创建选项卡式窗口。  
@@ -158,7 +159,7 @@ class CBaseTabbedPane : public CDockablePane
   
  `CBaseTabbedPane`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxBaseTabbedPane.h  
   
 ##  <a name="addtab"></a>Cbasetabbedpane:: Addtab  
@@ -622,7 +623,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
   
  调用此方法以编程方式切换到自动隐藏模式的选项卡式的窗格。 必须将窗格停靠到主框架窗口 ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider)必须返回到的有效指针[CPaneDivider](../../mfc/reference/cpanedivider-class.md))。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)

@@ -1,78 +1,79 @@
 ---
-title: "SRWLock 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SRWLock 类"
+title: "SRWLock 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock
+dev_langs: C++
+helpviewer_keywords: SRWLock class
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SRWLock 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-表示一亭亭玉立的读取器\/编写器锁。  
+# <a name="srwlock-class"></a>SRWLock 类
+表示精简读取器/编写器锁定。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class SRWLock;  
 ```  
   
-## 备注  
- 一个小的读取器\/编写器锁用于在中同步线程访问对象或资源。  有关详细信息，请参阅《运行时库参考》中的 [Synchronization Functions](http://msdn.microsoft.com/zh-cn/9b6359c2-0113-49b6-83d0-316ad95aba1b) 。  
+## <a name="remarks"></a>备注  
+ 精简读取器/编写器锁用于跨到的对象或资源的线程同步访问。 有关详细信息，请参阅[同步函数](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b)。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|以独占模式访问的对象 SRWLock 的同义词。|  
-|**SyncLockShared**|以共享模式访问的对象 SRWLock 的同义词。|  
+|**SyncLockExclusive**|获取以独占模式的 SRWLock 对象的同义词。|  
+|**SyncLockShared**|获取在共享模式下的 SRWLock 对象的同义词。|  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |[SRWLock::SRWLock 构造函数](../windows/srwlock-srwlock-constructor.md)|初始化 SRWLock 类的新实例。|  
-|[SRWLock::~SRWLock 析构函数](../windows/srwlock-tilde-srwlock-destructor.md)|初始化SRWLock类的实例。|  
+|[SRWLock::~SRWLock 析构函数](../windows/srwlock-tilde-srwlock-destructor.md)|取消初始化 SRWLock 类的实例。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[SRWLock::LockExclusive 方法](../windows/srwlock-lockexclusive-method.md)|获取以独占模式的一 SRWLock 对象。|  
-|[SRWLock::LockShared 方法](../windows/srwlock-lockshared-method.md)|获取以共享模式的一 SRWLock 对象。|  
-|[SRWLock::TryLockExclusive 方法](../windows/srwlock-trylockexclusive-method.md)|尝试获取在独占的图案 SRWLock 对象当前或指定的 SRWLock 对象。|  
-|[SRWLock::TryLockShared 方法](../windows/srwlock-trylockshared-method.md)|尝试获取在共享的图案 SRWLock 对象当前或指定的 SRWLock 对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[SRWLock::LockExclusive 方法](../windows/srwlock-lockexclusive-method.md)|获取以独占模式的 SRWLock 对象。|  
+|[SRWLock::LockShared 方法](../windows/srwlock-lockshared-method.md)|获取在共享模式下的 SRWLock 对象。|  
+|[SRWLock::TryLockExclusive 方法](../windows/srwlock-trylockexclusive-method.md)|尝试获取当前或指定 SRWLock 对象的排他模式的 SRWLock 对象。|  
+|[SRWLock::TryLockShared 方法](../windows/srwlock-trylockshared-method.md)|尝试针对当前或指定 SRWLock 对象获取共享模式的 SRWLock 对象。|  
   
-### 受保护的数据成员  
+### <a name="protected-data-member"></a>受保护的数据成员  
   
-|名称|说明|  
-|--------|--------|  
-|[SRWLock::SRWLock\_ 数据成员](../windows/srwlock-srwlock-data-member.md)|包含当前 SRWLock 对象的锁基础变量。|  
+|name|描述|  
+|----------|-----------------|  
+|[SRWLock::SRWLock_ 数据成员](../windows/srwlock-srwlock-data-member.md)|包含当前 SRWLock 对象的基础锁定变量。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `SRWLock`  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Wrappers 命名空间](../windows/microsoft-wrl-wrappers-namespace.md)

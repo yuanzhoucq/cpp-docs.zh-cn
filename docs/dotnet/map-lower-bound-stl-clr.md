@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5cd5c26d2e2dfc206c04f26e219df7dd91609e29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5106a68fabc9248c8d9342cbcfba7dbe102832f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maplowerbound-stlclr"></a>map::lower_bound (STL/CLR)
 查找与指定的键匹配的范围开始处。  
@@ -78,12 +81,12 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map:: count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
  [map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   

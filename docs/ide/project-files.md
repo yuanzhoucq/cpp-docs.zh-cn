@@ -1,34 +1,35 @@
 ---
-title: "项目文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".vcproj 文件"
-  - "项目文件 [C++], .vcproj 文件格式"
-  - "VCPROJ（Visual C++ 项目文件）格式"
-  - "Visual C++ 项目, 项目文件格式"
+title: "项目文件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .vcproj files
+- Visual C++ projects, project file format
+- VCPROJ (Visual C++ project file) format
+- project files [C++], .vcproj file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ac1b6d01bc454e2bcc7f1c8fd125f9d6ff96c90f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 项目文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 项目文件是文件扩展名为 .vcxproj 的基于 XML 的文件，且该文件包含生成 Visual C\+\+ 项目所需的信息。  
+# <a name="project-files"></a>项目文件
+Visual c + + 项目文件是一个基于 XML 的文件具有.vcxproj 文件扩展名，并且包含生成的 Visual c + + 项目所需的信息。  
   
-## 示例  
- 以下示例 .vcxproj 文件是通过在**“新建项目”**对话框中指定**“Win32 控制台应用程序”**而生成的。  若要处理项目文件，请在命令行中使用 msbuild.exe 工具，或在 [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 中使用**“生成”**命令。（此示例无法处理，因为没有提供所需的源文件和头文件。）有关项目文件中 XML 元素的更多信息，请参见 [项目文件架构参考](../Topic/MSBuild%20Project%20File%20Schema%20Reference.md)。  
+## <a name="example"></a>示例  
+ 下面的示例.vcxproj 文件由指定生成**Win32 控制台应用程序**中**新项目**对话框。 若要处理一个项目文件使用 msbuild.exe 工具在命令行中，或**生成**命令[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]。 （因为未提供所需的源文件和头文件，无法处理此示例。）有关项目文件中的 XML 元素的详细信息，请参阅[项目文件架构引用](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,6 +129,6 @@ Visual C\+\+ 项目文件是文件扩展名为 .vcxproj 的基于 XML 的文件�
 </Project>  
 ```  
   
-## 请参阅  
- [在 Visual Studio 中生成 C\+\+ 项目](../ide/building-cpp-projects-in-visual-studio.md)   
+## <a name="see-also"></a>请参阅  
+ [生成 Visual Studio 中的 c + + 项目](../ide/building-cpp-projects-in-visual-studio.md)   
  [使用项目属性](../ide/working-with-project-properties.md)

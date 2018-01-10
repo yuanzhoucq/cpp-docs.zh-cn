@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9e91bf5bd5c35388646178335ed2ab42c3d1304
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d84888236b81fe862c6a22793e926ebf7df55c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-types-modern-c"></a>值类型（现代 C++）
 C + + 类是由默认值类型。 本主题提供介绍性概述的值类型和与其使用相关的问题。  
@@ -120,7 +121,7 @@ public:
 ## <a name="section"></a>节  
  内容  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 类型系统](../cpp/cpp-type-system-modern-cpp.md)   
  [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 语言参考](../cpp/cpp-language-reference.md)   

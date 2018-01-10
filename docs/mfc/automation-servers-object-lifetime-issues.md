@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18db6e819d2fc51bb725a4f04ea7e2d38f3bd443
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c9fab7af74dee482c5e8dffb327da9c037796fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>自动化服务器：对象生存期问题
 当自动化客户端创建或激活一个 OLE 项时，服务器会向客户端传递一个指向该对象的指针。 客户端建立对通过调用 OLE 函数对象的引用[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。 此引用直到客户端调用实际上是[iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)。 （使用 Microsoft 基础类库类的 OLE 类编写的客户端应用程序不需要执行这些调用；框架也是如此。）OLE 系统和服务器本身可能会建立对对象的引用。 只要对某个对象的外部引用仍然有效，服务器就不应销毁该对象。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
  在 Windows SDK 中，请参阅`IUnknown::AddRef`和`IUnknown::Release`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动化服务器](../mfc/automation-servers.md)   
  [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
 

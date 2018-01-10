@@ -1,35 +1,37 @@
 ---
-title: "如何：使用 Split 方法分析字符串 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "示例 [C++], 字符串"
-  - "分析字符串 [C++]"
-  - "正则表达式 [C++], 分析字符串"
-  - "Split 方法, 分析字符串"
-  - "字符串 [C++], 分析"
+title: "如何： 使用 Split 方法分析字符串 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- Split method, parsing strings
+- strings [C++], parsing
 ms.assetid: d52d2539-5ebb-4716-86b3-07314dd7e4bd
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7494a615d1a253c6617601f38e5d01755c718b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 Split 方法分析字符串 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何使用 <xref:System.String.Split%2A?displayProperty=fullName> 方法从字符串中提取每个字。  首先构造包含多种类型的字描绘器的字符串，然后使用一个描绘器列表调用 <xref:System.String.Split%2A> 来分析该字符串。  然后，分别显示句子中的每个字。  
+# <a name="how-to-parse-strings-using-the-split-method-ccli"></a>如何：使用 Split 方法分析字符串 (C++/CLI)
+下面的代码示例演示如何使用<xref:System.String.Split%2A?displayProperty=fullName>方法从字符串提取每个单词。 包含多个类型的字描绘的字符串进行构造并进行分析通过调用<xref:System.String.Split%2A>描绘的列表。 然后，该句中的每个单词会单独显示。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // regex_split.cpp  
@@ -54,6 +56,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [.NET Framework 正则表达式](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [.NET Framework 正则表达式](/dotnet/standard/base-types/regular-expressions)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

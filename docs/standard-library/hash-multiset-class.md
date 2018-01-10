@@ -97,11 +97,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 019a80bd6752ea1fa974e9f567cde953d8cb2370
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 132ea24bd65ae4bf79922c811c03ef9cc7c13c42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultiset-class"></a>hash_multiset 类
 > [!NOTE]
@@ -169,7 +170,7 @@ class hash_multiset
 |[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `hash_multiset` 元素的引用（用于读取和执行 `const` 操作）。|  
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `hash_multiset` 元素的双向迭代器。|  
 |[difference_type](#difference_type)|一种带符号的整数类型，它提供发现同一 `hash_multiset` 中的元素的两个迭代器之间的差异。|  
-|[iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|  
+|[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multiset` 中任何元素的双向迭代器。|  
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_multiset` 中两个元素的相对顺序。|  
 |[key_type](#key_type)|一种类型，它描述当作为排序键存储为其容量中 `hash_set` 的元素的对象。|  
 |[pointer](#pointer)|一种类型，它提供指向 `hash_multiset` 中的某个元素的指针。|  
@@ -215,7 +216,7 @@ class hash_multiset
 |-|-|  
 |[hash_multiset::operator=](#op_eq)|将 hash_multiset 的元素替换为另一个 hash_multiset 的副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<hash_set>  
   
  **命名空间：** stdext  
@@ -1767,7 +1768,7 @@ hash_multiset& operator=(hash_multiset&& right);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`right`|[hash_multiset](../standard-library/hash-multiset-class.md)，正在复制到 `hash_multiset`。|  
   
 ### <a name="remarks"></a>备注  
@@ -2439,7 +2440,7 @@ int main( )
 The hash_multiset has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

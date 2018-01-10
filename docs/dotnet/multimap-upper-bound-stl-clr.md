@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64d02e102e17abae64367778f9de7ac5d51ca8be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: adcfb64d4bea21e2adf0dab781664e8c05104cbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapupperbound-stlclr"></a>multimap::upper_bound (STL/CLR)
 查找与指定的键匹配的范围末尾。  
@@ -78,12 +81,12 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
  [multimap:: equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   

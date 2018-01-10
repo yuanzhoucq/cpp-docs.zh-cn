@@ -1,46 +1,45 @@
 ---
-title: "single | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Single"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "single OpenMP directive"
+title: "单个 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# single
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-允许您不必指定应在单个线程上执行代码的一部分，主线程。  
+# <a name="single"></a>单个
+允许您指定的代码部分应在单个线程，不一定是主线程上执行。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-#pragma omp single [clauses]   
+#pragma omp single [clauses]   
 {  
    code_block   
 }  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `clause`（可选）  
- 零个或多个子句。  为 **单个**支持子句的列表参见 " 备注 " 节。  
+ 零个或多个子句。 请参阅支持的子句列表的备注部分**单个**。  
   
-## 备注  
- **单个** 指令支持以下 OpenMP 子句:  
+## <a name="remarks"></a>备注  
+ **单个**指令支持以下 OpenMP 子句：  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -48,13 +47,13 @@ caps.handback.revision: 11
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [private](../../../parallel/openmp/reference/private-openmp.md)  
+-   [专用](../../../parallel/openmp/reference/private-openmp.md)  
   
- [master](../../../parallel/openmp/reference/master.md) 指令允许您指定在主线程只应执行代码的一部分。  
+ [Master](../../../parallel/openmp/reference/master.md)指令允许你指定应仅在主线程上执行的代码部分。  
   
- 有关更多信息，请参见 [2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md)。  
+ 有关详细信息，请参阅[2.4.3 单个构造](../../../parallel/openmp/2-4-3-single-construct.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_single.cpp  
@@ -79,9 +78,12 @@ int main() {
 }  
 ```  
   
-  **读取输入**  
-**计算结果**  
-**计算结果**  
-**写入输出**   
-## 请参阅  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+read input  
+compute results  
+compute results  
+write output  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [指令](../../../parallel/openmp/reference/openmp-directives.md)

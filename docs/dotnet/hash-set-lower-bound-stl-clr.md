@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee6c0cbea5a6e4b2d4730de7bb55564bb8200e85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1591f8309efda56305fffddc5faad4f1d54457c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound (STL/CLR)
 查找与指定的键匹配的范围开始处。  
@@ -76,12 +79,12 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set:: count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
  [hash_set:: equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   

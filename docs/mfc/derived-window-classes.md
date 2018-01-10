@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d75a6692eadaa3a080803b9aa69d30e4b384307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-window-classes"></a>派生的窗口类
 你可以创建直接从 windows [CWnd](../mfc/reference/cwnd-class.md)，或其派生新的窗口类`CWnd`。 这是通常在如何创建你自己的自定义 windows。 但是，大多数窗口框架程序中使用而创建的一个`CWnd`-派生 MFC 提供的框架窗口类。  
@@ -67,6 +68,6 @@ ms.lasthandoff: 10/24/2017
   
  [创建 Windows](../mfc/creating-windows.md)讨论创建窗口对象和他们管理的 windows。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [窗口对象](../mfc/window-objects.md)
 

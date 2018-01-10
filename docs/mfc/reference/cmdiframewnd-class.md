@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1968d34302cea355f174c96fb51b5bec3941fcb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 提供 Windows 多文档界面 (MDI) 框架窗口功能，并提供管理窗口的成员。  
@@ -119,7 +120,7 @@ class CMDIFrameWnd : public CFrameWnd
   
 -   MDI 框架窗口还提供了的实现**ID_WINDOW_NEW**，这将创建一个新帧和当前文档的视图。 应用程序可以重写这些默认命令实现，以自定义 MDI 窗口处理。  
   
- 不使用 c + +**删除**运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow` 。 `CFrameWnd`实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。  
+ 不使用 c + +**删除**运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd`实现`PostNcDestroy`销毁窗口时，将删除 c + + 对象。 当用户关闭帧窗口时，默认值`OnClose`处理程序将调用`DestroyWindow`。  
   
  有关详细信息`CMDIFrameWnd`，请参阅[框架窗口](../../mfc/frame-windows.md)。  
   
@@ -134,7 +135,7 @@ class CMDIFrameWnd : public CFrameWnd
   
  `CMDIFrameWnd`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
@@ -412,7 +413,7 @@ void MDITile(int nType);
 ### <a name="example"></a>示例  
  请参阅示例[CMDIFrameWnd::MDICascade](#mdicascade)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MDI](../../visual-cpp-samples.md)   
  [MFC 示例 MDIDOCVW](../../visual-cpp-samples.md)   
  [MFC 示例 SNAPVW](../../visual-cpp-samples.md)   

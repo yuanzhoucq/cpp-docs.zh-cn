@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>编译器警告（等级 1）C4055  
   
 “conversion”：从数据指针“type1”到函数指针“type2”  

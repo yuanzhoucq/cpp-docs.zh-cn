@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97097618ee3f166866daad68190b7c22cca3c16d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7cb0d5d80edd52a85834963d030e35eef96d718
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>如何：将现有 MFC 功能区转换为功能区资源
 功能区资源比手动编码的功能区更直观，且更易于修改和维护。 本主题描述如何将 MFC 项目中手动编码的功能区转换为功能区资源。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 10/24/2017
   
 6.  生成项目并运行程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
 

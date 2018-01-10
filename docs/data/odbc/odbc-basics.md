@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e32ebf60ac77dba6860f3e773c4d6fb122857b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26a1554fec567762810f6bd48c8674ea048ce117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-basics"></a>ODBC 基础
 本主题提供的基础知识的开放式数据库连接 (ODBC):  
@@ -74,5 +77,5 @@ ms.lasthandoff: 10/24/2017
   
  有关此版本的 Visual c + + 中包含的 ODBC 驱动程序的列表以及有关获取其他驱动程序的信息，请参阅[ODBC 驱动程序列表](../../data/odbc/odbc-driver-list.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

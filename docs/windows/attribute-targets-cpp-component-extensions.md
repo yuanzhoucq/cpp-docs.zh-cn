@@ -1,35 +1,36 @@
 ---
-title: "特性目标（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自定义特性目标"
+title: "特性目标 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 特性目标（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="attribute-targets-c-component-extensions"></a>特性目标（C++ 组件扩展）
 特性用法说明符允许指定特性目标。  每个特性定义为应用于特定的语言元素。 例如，某个特征可能定义为仅应用于类和结构。  以下列表演示了自定义属性可以使用的语法元素。 可以结合使用这些值（使用逻辑或）。  
   
- 若要指定特性目标，将传递一个或多个 <xref:System.AttributeTargets> 枚举器 <xref:System.AttributeUsageAttribute> 时定义的属性。  
+ 要指定特性目标，则在定义特性时将一个或多个 <xref:System.AttributeTargets> 枚举数传递到 <xref:System.AttributeUsageAttribute>。  
   
  以下列表显示了有效的特性目标：  
   
--   `All` （适用于所有构造函数）  
+-   `All`（适用于所有构造函数）  
   
     ```  
   
@@ -41,7 +42,7 @@ manager: "ghogen"
   
     ```  
   
--   `Assembly` （适用于一个程序集作为一个整体）  
+-   `Assembly`（适用于一个程序集作为一个整体）  
   
     ```  
   
@@ -53,7 +54,7 @@ manager: "ghogen"
   
     ```  
   
--   `Module` （作为一个整体适用于模块）  
+-   `Module`（作为一个整体应用于模块）  
   
     ```  
   
@@ -311,5 +312,5 @@ ref class MyClass {};
 value struct MyStruct {};  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户定义的特性](../windows/user-defined-attributes-cpp-component-extensions.md)

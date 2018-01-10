@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d3551252d04dc97f6e2b4dd13df61edda576744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 类
 提供用于将 Windows 窗体控件作为 MFC 视图承载的一般功能。  
@@ -52,7 +53,7 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称||  
+|name||  
 |----------|-|  
 |[CWinFormsView::operator 控件 ^](#operator_control)|将类型强制转换为指向 Windows 窗体控件。|  
   
@@ -67,7 +68,7 @@ class CWinFormsView : public CView;
 > [!NOTE]
 >  CWinFormsView 不支持 MFC 拆分器窗口 ( [CSplitterWnd 类](../../mfc/reference/csplitterwnd-class.md))。 当前仅 Windows 窗体拆分器支持控制。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxwinforms.h  
   
 ##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
@@ -114,7 +115,7 @@ operator System::Windows::Forms::Control^() const;
 ### <a name="example"></a>示例  
   请参阅[CWinFormsView::GetControl](#getcontrol)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CWinFormsControl 类](../../mfc/reference/cwinformscontrol-class.md)   
  [CWinFormsDialog 类](../../mfc/reference/cwinformsdialog-class.md)   

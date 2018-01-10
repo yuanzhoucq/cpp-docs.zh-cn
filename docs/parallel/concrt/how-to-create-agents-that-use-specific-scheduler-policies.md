@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4004b7bc206b099a945aa70b5976b421fc3c547d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d465b39e00bee0911fb5b04bbe60af68e1f296c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>如何：创建使用特定计划程序策略的代理
 代理是以异步方式与其他组件以解决更大的计算任务将应用程序组件。 代理通常具有设定的生命周期，并保持状态。  
@@ -59,7 +60,7 @@ Computing all permutations of 'Grapefruit'...
   
  **cl.exe /EHsc permute strings.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计划程序策略](../../parallel/concrt/scheduler-policies.md)   
  [异步代理](../../parallel/concrt/asynchronous-agents.md)   
  

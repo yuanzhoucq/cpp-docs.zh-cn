@@ -11,11 +11,12 @@ ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e765fedb127d07c08622b784018399f3bdfef45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5280b4940c2a52fc6e72b397300040ca4c1ac92e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-signature"></a>更改签名
 **新增功能：**可让你修改函数的参数。
@@ -62,8 +63,8 @@ ms.lasthandoff: 10/24/2017
 
    | 条目 | 描述
    | ----- | ---
-   | **类型**               | 参数的类型 (int、 double、 float 等。)
-   | **Name**               | 参数的名称
+   | **Type**               | 参数的类型 (int、 double、 float 等。)
+   | **名称**               | 参数的名称
    | **可选参数** | 使 （可选） 指定的参数
    | **插入的值**     | 插入到任何调用函数未指定参数的值 (仅对有效**添加**)
    | **默认值**      | 如果调用方不指定一个使用该函数的值 (仅对有效**可选参数**)

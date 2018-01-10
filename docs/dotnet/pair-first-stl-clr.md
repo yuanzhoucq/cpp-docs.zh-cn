@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 034d867b2d02557128ecf4d7ab30338f43ee653e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 33b6183dd78225081c77e5cad06ed707f6bf7abe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pairfirst-stlclr"></a>pair::first (STL/CLR)
 第一个已包装的值。  
@@ -57,12 +60,12 @@ int main()
 [x, 3]  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/实用工具 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对 (STL/CLR)](../dotnet/pair-stl-clr.md)   
  [pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)   
  [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)   

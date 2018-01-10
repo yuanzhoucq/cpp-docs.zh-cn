@@ -1,31 +1,30 @@
 ---
-title: "编译器警告（等级 3）C4192 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4192"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4192"
+title: "编译器警告 （等级 3） C4192 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4192
+dev_langs: C++
+helpviewer_keywords: C4192
 ms.assetid: ea5f91fa-8c96-4f3f-ac42-0c8a86d4e5df
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 022c0e0aac8d231963ddf6d5d3715d55f726a8b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 3）C4192
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-导入类型库“library”时自动排除“name”  
+# <a name="compiler-warning-level-3-c4192"></a>编译器警告 （等级 3） C4192
+自动导入类型库库时排除 name  
   
- `#import` 库包含一个 *name* 项，在 Win32 系统头中也定义了该项。  由于类型库的限制，**IUnknown** 或 GUID 等名称通常在类型库中定义，同时从系统头文件中复制定义。  `#import` 将检测这些项，并且拒绝将这些项合并到 .tlh 和 .tli 头文件中。  
+ A`#import`库包含的项，*名称*，即也在 Win32 系统标头文件中定义。 由于类型库的限制，等名称**IUnknown**或 GUID 通常定义在类型库中，复制从系统标头的定义。 `#import`将检测这些项，并拒绝将它们合并在.tlh 和.tli 标头文件中。  
   
- 若要重写此行为，请使用 `#import` 特性 [no\_auto\_exclude](../../preprocessor/no-auto-exclude.md) 和 [include\(\)](../../preprocessor/include-parens.md)。
+ 若要重写此行为，使用`#import`属性[no_auto_exclude](../../preprocessor/no-auto-exclude.md)和[include （)](../../preprocessor/include-parens.md)。

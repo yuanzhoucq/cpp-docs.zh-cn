@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dae377a89cb3264d8129c7d863d9d922d7bef876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c971a4aebcd0f0a7c0baa59a445059f681f7e8af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachefreelist-class"></a>cache_freelist 类
 定义分配和释放单个大小内存块的[块分配器](../standard-library/allocators-header.md)。  
@@ -62,7 +63,7 @@ class cache_freelist
 |[allocate](#allocate)|分配内存块。|  
 |[deallocate](#deallocate)|从指定位置开始从存储中释放指定数量的的对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<allocators>  
   
  **命名空间：** stdext  
@@ -110,7 +111,7 @@ void deallocate(void* ptr, std::size_t count);
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

@@ -1,76 +1,78 @@
 ---
-title: "Semaphore 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Semaphore"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Semaphore 类"
+title: "信号类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Semaphore
+dev_langs: C++
+helpviewer_keywords: Semaphore class
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Semaphore 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-同步对象表示控件可以支持用户的有限的共享资源。  
+# <a name="semaphore-class"></a>Semaphore 类
+表示控制可支持有限数量用户的共享资源的同步对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
+  
 class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`SyncLock`|支持的同步锁类的同义词。|  
+|名称|描述|  
+|----------|-----------------|  
+|`SyncLock`|支持同步锁的类，同义词。|  
   
-### 公共构造函数  
+### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
-|--------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |[Semaphore::Semaphore 构造函数](../windows/semaphore-semaphore-constructor.md)|初始化 Semaphore 类的新实例。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用签名包含参数的指定的事件处理程序。|  
+|名称|描述|  
+|----------|-----------------|  
+|[InvokeHelper::Invoke 方法](../windows/invokehelper-invoke-method.md)|调用签名包含参数的指定的数目的事件处理程序。|  
   
-### 公共数据成员  
+### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
-|--------|--------|  
-|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|等待直到当前对象，或与指定句柄关联的对象，是在信号的状态或指定的超时间隔已过。|  
+|名称|描述|  
+|----------|-----------------|  
+|[Semaphore::Lock 方法](../windows/semaphore-lock-method.md)|等到当前对象或与指定句柄关联的对象处于终止状态，或者指定的超时间隔已过去。|  
   
-### 公共运算符  
+### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
-|--------|--------|  
-|[Semaphore::operator\= 运算符](../windows/semaphore-operator-assign-operator.md)|将从一个信号量对象的指定处理到当前信号量对象。|  
+|名称|描述|  
+|----------|-----------------|  
+|[Semaphore::operator= 运算符](../windows/semaphore-operator-assign-operator.md)|将指定的句柄从信号量对象移动到当前的信号量对象。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Semaphore`  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- **命名空间：**Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Wrappers 命名空间](../windows/microsoft-wrl-wrappers-namespace.md)

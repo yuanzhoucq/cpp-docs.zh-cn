@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm4-class"></a>unorm_4 类
-表示无符号的四个常规数字的短矢量。  
+表示四个无符号的正常数字短的矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -468,12 +452,12 @@ class unorm_4;
   
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |unorm_4::operator-||  
 |unorm_4::operator-||  
 |unorm_4::operator * =||  
-|unorm_4::operator / =||  
+|/ = unorm_4::operator 的||  
 |unorm_4::operator + +||  
 |unorm_4::operator + =||  
 |unorm_4::operator =||  
@@ -481,13 +465,13 @@ class unorm_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#unorm_4__size)||  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |unorm_4::a||  
 |unorm_4::ab||  
@@ -621,8 +605,8 @@ class unorm_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unorm_4`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -716,6 +700,5 @@ explicit inline unorm_4(
 static const int size = 4;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

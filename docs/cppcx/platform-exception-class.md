@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c2a6ee18779bbd1f54cf33a7b13a60725701c34c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 表示在应用程序执行过程中发生的错误。 自定义异常类不能从 `Platform::Exception`派生。 如果需要自定义异常，可以使用 `Platform::COMException` 并指定应用程序特定的 HRESULT。  
@@ -60,7 +61,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception:: hresult](#hresult)|与异常相对应的 HRESULT。|  
 |[Exception:: message](#message)|描述异常的消息。 此值是只读的，在构造 `Exception` 后不能修改。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -150,5 +151,5 @@ public:property String^ Message;
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)

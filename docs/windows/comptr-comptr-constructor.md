@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b31fdcbad35bc65b2d8ca26ccab69e875c1d3aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f8f6234bf2dff0dab801c982a585dc30e338bb7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr 构造函数
 初始化 ComPtr 类的新实例。 重载提供默认、复制、移动和转换构造函数。  
@@ -79,10 +82,10 @@ WRL_NOTHROW ComPtr(
   
  第六个和第七个构造函数是移动构造函数。 第七个构造函数将对象转换为当前类型的情况下将它移动。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ComPtr 类](../windows/comptr-class.md)

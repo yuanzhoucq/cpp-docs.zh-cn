@@ -1,55 +1,54 @@
 ---
-title: "if (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "if OpenMP clause"
+title: "如果 (OpenMP) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: if
+dev_langs: C++
+helpviewer_keywords: if OpenMP clause
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81952612a80ac74cd4bfca62a1b2d62c910cb8f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# if (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定是否应执行并行循环或序列化的。  
+# <a name="if-openmp"></a>if (OpenMP)
+指定是否应在并行或序列中执行循环。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 if(expression)  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `expression`  
- 的集成表达式，则为; 如果计算结果为 true \(非零\)，在并行区域导致代码并行执行。  如果表达式的计算结果为 false \(0\)，并行区域序列化的执行 \(由单个线程\)。  
+ 一个整数表达式，如果其计算结果为 true （非零），则导致在并行区域来并行执行的代码。 如果表达式的计算结果为 false （零），则并行区域 （通过单个线程） 执行在序列中。  
   
-## 备注  
- `if` 适用于以下指令:  
+## <a name="remarks"></a>备注  
+ `if`适用于以下指令：  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [部分](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 有关更多信息，请参见 [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md)。  
+ 有关详细信息，请参阅[2.3 parallel 构造](../../../parallel/openmp/2-3-parallel-construct.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_if.cpp  
@@ -80,7 +79,10 @@ int main( )
 }  
 ```  
   
-  **val \= 0，序列化**  
-**val \= 2，并行化与 2 线程**   
-## 请参阅  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+val = 0, serialized  
+val = 2, parallelized with 2 threads  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

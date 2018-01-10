@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- locale/std::ctype_base
-- ctype_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- ctype_base class
+f1_keywords: locale/std::ctype_base
+dev_langs: C++
+helpviewer_keywords: ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 74c13251b63018e00490487cb9a45c4bb6d52a21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 83f467f8d06956678795bf97fed60fe9f22c32f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypebase-class"></a>ctype_base 类
 该类用作模板类 [ctype](../standard-library/ctype-class.md) 的 facet 基类。 一种 ctype 类的基类，用于定义枚举类型来分类或测试单个字符或整个范围内的字符。  
@@ -97,16 +78,15 @@ struct ctype_base : public locale::facet
   
 - **graph**（函数 [isgraph](../standard-library/locale-functions.md#isgraph)）  
   
- 通过实现或运算这些常量，可以确定分类组合的特征。 具体来说，**alnum** == ( **alpha**``&#124; **digit**\) and **graph** \=\= \( **alnum**``&#124; **punct**) 始终为 true。  
+ 通过实现或运算这些常量，可以确定分类组合的特征。 具体而言，它是始终为 true， **alnum** = = (**字母**&#124;**数字**\)和**graph** \= \= \( **alnum** &#124;**标点符号**)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

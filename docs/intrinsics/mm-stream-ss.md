@@ -1,35 +1,36 @@
 ---
-title: "_mm_stream_ss | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_ss"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movntss 指令"
-  - "_mm_stream_ss 指令"
+title: "_mm_stream_ss |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_ss
+dev_langs: C++
+helpviewer_keywords:
+- movntss instruction
+- _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b9f4f8334552acde7b8a18fa3d3b6110183234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_stream_ss
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmstreamss"></a>_mm_stream_ss  
+  
 **Microsoft 专用**  
   
- 对内存位置编写 32 位数据没有污染缓存。  
+ 32 位数据而无需污染缓存写入内存位置中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void _mm_stream_ss(  
@@ -38,32 +39,35 @@ void _mm_stream_ss(
 );  
 ```  
   
-#### 参数  
- \[out\] `Dest`  
- 对源数据写入的位置的指针。  
+#### <a name="parameters"></a>参数  
   
- \[in\] `Source`  
- 包含在其底部 32 位将写入的值。 `float` 的 128 位数字。  
+ [out] `Dest`  
+ 指向写入源数据的位置的指针。  
   
-## 返回值  
+ [in] `Source`  
+ 包含一个 128 位数字`float`要写入在其下 32 位值...  
+  
+## <a name="return-value"></a>返回值  
+  
  无。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`_mm_stream_ss`|SSE4a|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此内部生成 `movntss`命令。  若要确定硬件为此命令支持，调用与 `InfoType=0x80000001`的 `__cpuid` 内部和校验位 6 `CPUInfo[2] (ECX)`。  当该指令受支持时，此位为 1，否则为 0。  
+## <a name="remarks"></a>备注  
   
- 如果运行使用在硬件的 `_mm_stream_ss` 内部不支持 `movntss` 命令的代码，结果是不可预知的。  
+此内部函数生成`movntss`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`和检查的第 6 位`CPUInfo[2] (ECX)`。 此位为 1 时该指令受支持和 0 否则。  
   
-## 示例  
+如果运行的代码，使用`_mm_stream_ss`内部函数不支持的硬件上`movntss`指令，则结果不可预知。  
   
-```  
+## <a name="example"></a>示例  
+  
+```cpp  
 // Compile this sample with: /EHsc  
 #include <iostream>  
 #include <intrin.h>  
@@ -86,18 +90,20 @@ int main()
     cout << "f[0] = " << f[0] << ", f[1] = " << f[1] << endl;  
     cout << "f[1] = " << f[1] << ", f[3] = " << f[3] << endl;  
 }  
-  
 ```  
   
-  **f \[0\] \= \-1， f \[1\] \= \-2**  
-**f \[2\] \= \-3， f \[3\] \= 3**   
-## 特定于 Microsoft 的结尾  
- copyright 2007 年 Advanced Micro 设备，公司着。  保留所有权利。  重现经 Advanced Micro 设备授予，公司。  
+```Output  
+f[0] = -1, f[1] = -2  
+f[2] = -3, f[3] = 3  
+```  
   
-## 请参阅  
- [\_mm\_stream\_sd](../intrinsics/mm-stream-sd.md)   
- [\_mm\_stream\_ps](http://msdn.microsoft.com/zh-cn/f7af2f19-c0d4-43c6-b5f6-a658d2b1d869)   
- [\_mm\_store\_ss](http://msdn.microsoft.com/zh-cn/dfeeea35-8faf-4f54-8a9e-6723e226fb08)   
- [\_mm\_sfence](http://msdn.microsoft.com/zh-cn/b6c0d18e-3628-4318-826b-45f66782e870)   
- [Streaming SIMD Extensions that Support the Cache](http://msdn.microsoft.com/zh-cn/8f03493a-d5f5-4457-892e-0b6540494872)   
+**结束 Microsoft 专用**  
+
+高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+  
+## <a name="see-also"></a>请参阅  
+ [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   
+ [_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)   
+ [_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)   
+ [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

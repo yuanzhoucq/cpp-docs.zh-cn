@@ -1,71 +1,71 @@
 ---
-title: "__vmx_vmptrld | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrld"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmptrld 内部函数"
-  - "VMPTRLD 指令"
+title: "__vmx_vmptrld |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrld
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrld intrinsic
+- VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 78c6ba1a4545a03ae7f67821cf649eb936b4ed8a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmptrld
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmptrld"></a>__vmx_vmptrld
 **Microsoft 专用**  
   
- 加载指向当前虚拟设备控制 \(VMCS\)结构从指定的地址。  
+ 从指定的地址加载到当前虚拟机控件结构 (VMCS) 的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-int __vmx_vmptrld(   
-   unsigned __int64 *VmcsPhysicalAddress   
+int __vmx_vmptrld(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### 参数  
- \[in\] \*`VmcsPhysicalAddress`  
- 存储 VMCS 指针的地址。  
+#### <a name="parameters"></a>参数  
+ [in] *`VmcsPhysicalAddress`  
+ 存储 VMCS 指针的位置的地址。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  0  
- 成功的操作。  
+ 操作成功。  
   
  1  
- 操作 failed with 扩展的状态可用于在当前 VMCS 的 `VM-instruction error field` 。  
+ 操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。  
   
  2  
- 操作失败，但没有可用状态。  
+ 操作失败，无可用状态。  
   
-## 备注  
- VMCS 指针是一个 64位物理地址。  
+## <a name="remarks"></a>备注  
+ VMCS 指针是一个 64 位物理地址。  
   
- `__vmx_vmptrld` 功能与 `VMPTRLD` 指令是等效的。  此功能支持宿主的与来宾操作系统及其应用程序的虚拟机监控程序的交互。  有关更多信息，搜索文档， “IA\-32 Intel 体系结构的 Intel 虚拟化技术规范，”在网站单据数字 \-002 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) ， C97063。  
+ `__vmx_vmptrld`函数等同于`VMPTRLD`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrst](../intrinsics/vmx-vmptrst.md)
+ [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

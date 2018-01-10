@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c71e29fa31c89c030b74843a9d776923fed6789
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 68afd6b2a0a1c17cd032d6cea84aefde8c368204
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 运算符
 将指定的 HandleT 对象的值移到当前的 HandleT 对象。  
@@ -42,10 +45,10 @@ HandleT& operator=(
 ## <a name="remarks"></a>备注  
  此操作将使失效参数指定的 HandleT 对象`h`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HandleT 类](../windows/handlet-class.md)

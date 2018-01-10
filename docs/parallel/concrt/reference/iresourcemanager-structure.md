@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca65d1e021bc1710386bf7b448b55378af96f56e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 结构
 并发运行时的资源管理器的接口。 这是计划程序与资源管理器进行通信的接口。  
@@ -64,7 +65,7 @@ struct IResourceManager;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `IResourceManager`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -169,7 +170,7 @@ virtual unsigned int Release() = 0;
 ### <a name="return-value"></a>返回值  
  在生成的引用计数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [ISchedulerProxy 结构](ischedulerproxy-structure.md)   
  [IScheduler 结构](ischeduler-structure.md)

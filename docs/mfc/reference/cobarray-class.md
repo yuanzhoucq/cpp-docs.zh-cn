@@ -53,11 +53,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b932abd77f660214a752fc2a18868f84bd22942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cobarray-class"></a>CObArray 类
 支持 `CObject` 指针数组。  
@@ -132,7 +133,7 @@ class CObArray : public CObject
   
  `CObArray`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcoll.h  
   
 ##  <a name="add"></a>CObArray::Add  
@@ -779,7 +780,7 @@ void SetSize(
 ### <a name="example"></a>示例  
   请参阅示例[CObArray::GetData](#getdata)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CStringArray 类](../../mfc/reference/cstringarray-class.md)   

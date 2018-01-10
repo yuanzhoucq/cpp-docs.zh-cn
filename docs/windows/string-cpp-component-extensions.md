@@ -16,11 +16,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3fb87578a0046a70da9a68ab6a1a08b2d6a9f4d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string--c-component-extensions"></a>String（C++ 组件扩展）
 Visual c + + 编译器支持*字符串*，这是对象，表示为字符序列的文本。 Visual c + + 支持字符串变量，其值是隐式和原义字符，其值是显式的带引号的字符串。  
@@ -46,7 +49,7 @@ using namespace default;
 ### <a name="remarks"></a>备注  
  有关详细信息和有关字符串的示例，请参阅[platform:: string、 std:: wstring 和文字 （平台）](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
@@ -73,7 +76,7 @@ using namespace default;
   
  有关详细信息请参阅[字符串和字符文本](../cpp/string-and-character-literals-cpp.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -283,7 +286,7 @@ System.SByte*
 System.String  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)   
  [字符串和字符文本](../cpp/string-and-character-literals-cpp.md)   
  [/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)

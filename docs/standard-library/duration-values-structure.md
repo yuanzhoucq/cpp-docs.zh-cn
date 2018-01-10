@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 52c88e0b536eba6265e2f968adef8096ea4ab17e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0f06646975d694ab76477a64642c03c20769c54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="durationvalues-structure"></a>duration_values 结构
 为[持续时间](../standard-library/duration-class.md)模板参数 `Rep` 提供指定值。  
@@ -44,7 +45,7 @@ struct duration_values;
 |[min](#min)|静态。 指定类型 `Rep` 的值下限。|  
 |[零](#zero)|静态。 返回 `Rep(0)`。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<chrono >  
   
  **命名空间：**std::chrono  
@@ -85,7 +86,7 @@ static constexpr Rep zero();
 ### <a name="remarks"></a>备注  
  当 `Rep` 是用户定义类型时，返回值必须表示正无穷大。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 

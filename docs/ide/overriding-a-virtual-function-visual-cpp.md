@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85e79cc21d745ad7f57c4c47b784e58359da6ef4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98e77579d511f4c78f0f7835c0b3c1dcea632734
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-a-virtual-function-visual-c"></a>重写虚函数 (Visual C++)
 您可以重写基类从 Visual Studio 中定义的虚拟函数[属性窗口](/visualstudio/ide/reference/properties-window)。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
  若要删除一个替代，单击右侧列中的重写函数名称，然后选择\<删除 >*FuncName*。 函数的代码注释掉。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../ide/adding-a-class-visual-cpp.md)   
  [添加成员函数](../ide/adding-a-member-function-visual-cpp.md)   

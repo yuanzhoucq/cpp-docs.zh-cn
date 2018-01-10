@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21dcb436c58bc3823092ba7c03511bdf04fba9d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf74dc4f0488c3c1b41b8ee55c20610684434ee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; （Visual c + +）
 在方法声明的注释中，应使用 \<param> 标记来描述方法参数之一。  
@@ -60,5 +61,5 @@ public ref class MyClass {
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

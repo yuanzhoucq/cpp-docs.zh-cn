@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 148d4b734f0e2cb56e959f54b99fb89a5efa6669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 类
 存储指向拥有的对象或数组的指针。 此对象/数组仅由 `unique_ptr` 拥有。 `unique_ptr` 被销毁后，此对象/数组也将被销毁。  
@@ -162,7 +163,7 @@ public:
 |`operator*`|成员函数返回 `*stored_ptr`。|  
 |[unique_ptr operator=](#unique_ptr_operator_eq)|将 `unique_ptr`（或 `pointer-type`）的值分配给当前 `unique_ptr`。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<memory>  
   
  **命名空间：** std  
@@ -373,7 +374,7 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ### <a name="remarks"></a>备注  
  析构函数调用 `get_deleter()(stored_ptr)`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<memory>](../standard-library/memory.md)
 
 

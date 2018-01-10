@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0f1cc709bf09d03f211f3123bd47c82bb590348
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 263541d9dc462b067caf763fe969f3809f1daa7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-rebar-control"></a>创建 Rebar 控件
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)在父对象可见之前，应该创建对象。 这将最大限度降低出现绘画问题的可能性。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 6.  调用[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)插入现有子窗口 (如`m_wndReToolBar`) 插入新的 rebar 控件。 将带区插入现有 rebar 控件的详细信息，请参阅[Rebar 控件和带区](../mfc/rebar-controls-and-bands.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

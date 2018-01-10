@@ -17,11 +17,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d13c8b081f3bcc3efbf20be3c31e2601baa6ca02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="literal-c-component-extensions"></a>文本（C++ 组件扩展）
 （数据成员） 的变量标记为`literal`中**/clr**编译为等同的本机`static const`变量。  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
@@ -121,8 +124,8 @@ class B {
 }  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

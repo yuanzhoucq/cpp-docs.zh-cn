@@ -4,41 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 74db2b02426f3322975c695179afed0164b9fe6e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 标准库中的线程安全
 以下线程安全规则应用到标准 C++ 库中的所有类，这也包括 `shared_ptr`，如下所述。  有时提供更强的保证（例如，如下所述的标准 iostream 对象和专门用于多线程的类型，如 [\<atomic>](../standard-library/atomic.md) 中的类型）。  
@@ -58,9 +42,8 @@ ms.lasthandoff: 02/24/2017
 > [!NOTE]
 >  不会将读取流缓冲区视为读取操作。 反而会将它视为写入操作，因为类的状态发生了更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
-
 
 
 

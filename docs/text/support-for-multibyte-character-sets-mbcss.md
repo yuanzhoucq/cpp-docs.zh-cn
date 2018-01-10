@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 19bbcd1030bdc89de2d3e05281786c1d0efa5ad6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>支持多字节字符集 (MBCS)
 多字节字符集 (MBCS) 是一种支持无法用单字节表示的字符集（如日语和中文）的旧方法。 如果要进行新的开发，则应对所有文本字符串（最终用户不会看到的系统字符串也许可以除外）使用 Unicode。 MBCS 是旧技术，不建议用于新开发。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [了解字节宽度可移植性的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文本和字符串](../text/text-and-strings-in-visual-cpp.md)   
  [Visual C++ 中的 MBCS 支持](../text/mbcs-support-in-visual-cpp.md)

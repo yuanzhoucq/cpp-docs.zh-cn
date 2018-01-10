@@ -1,32 +1,33 @@
 ---
-title: "defaultcollelem | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultcollelem"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultcollelem attribute"
+title: "defaultcollelem |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultcollelem
+dev_langs: C++
+helpviewer_keywords: defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 407742e9f56624e77c171beeb0201da37530388d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# defaultcollelem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="defaultcollelem"></a>defaultcollelem
 用于 Visual Basic 代码优化。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **defaultcollelem** C\+\+ 特性具有与 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Defaultcollelem** c + + 属性具有相同的功能[defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL 特性。  
   
-## 示例  
- 使用 **defaultcollelem** 属性，下面的代码演示一个接口方法:  
+## <a name="example"></a>示例  
+ 下面的代码演示接口方法使用**defaultcollelem**属性：  
   
 ```  
 // cpp_attr_ref_defaultcollelem.cpp  
@@ -55,9 +56,9 @@ __interface IMyForm
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -66,9 +67,8 @@ __interface IMyForm
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   

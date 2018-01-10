@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36d04d47f65e0a37bb5d4807480a4f898d42039a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d33e51cf938642f2ff54c48e1ecd22c3f48b71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="licensed"></a>licensed
 指示它所应用于的 COM 对象授予许可，并且必须使用实例化**IClassFactory2**。  
@@ -56,19 +59,19 @@ public:
 [module(name="MyLibrary", version="1.0", helpstring="My Library Block")];  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**class**， `struct`|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|**coclass**|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [类特性](../windows/class-attributes.md)   

@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d880834984b74cd460e82d5608f2e03b31a9e6e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial--c-component-extensions"></a>部分（C++ 组件扩展）
 `partial`关键字允许相同的 ref 类，以编写独立地在不同的文件的不同部分。  
@@ -72,11 +75,11 @@ class-key identifier {
   
  有关如何使用`partial`关键字，请参阅[分部类 (C + + /cli CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
  （此语言功能不适用于公共语言运行时。）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [分部类 (C + + /cli CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

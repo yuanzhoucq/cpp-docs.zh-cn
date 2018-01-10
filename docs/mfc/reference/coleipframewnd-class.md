@@ -23,11 +23,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57faa6f211d754e24f620236823405f82a53fbb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 类
 应用程序就地编辑窗口的基。  
@@ -69,7 +70,7 @@ class COleIPFrameWnd : public CFrameWnd
   
  `COleIPFrameWnd`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxole.h  
   
 ##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
@@ -128,7 +129,7 @@ virtual void RepositionFrame(
 ### <a name="remarks"></a>备注  
  在容器窗口中的控件条布局不同于执行的非 OLE 框架窗口。 非 OLE 框架窗口计算的控件条和从给定的框架窗口大小，如下所示调用其他对象的位置[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 客户端区域是其余后减去控件条和其他对象的空间。 A`COleIPFrameWnd`窗口，另一方面，确定工具栏位置根据给定的工作区。 换而言之， `CFrameWnd::RecalcLayout` "发件人的外部，"起作用，而`COleIPFrameWnd::RepositionFrame`有效"发件人括号外的顺序。"  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 HIERSVR](../../visual-cpp-samples.md)   
  [CFrameWnd 类](../../mfc/reference/cframewnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

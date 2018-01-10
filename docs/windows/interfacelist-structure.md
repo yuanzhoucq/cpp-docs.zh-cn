@@ -1,32 +1,33 @@
 ---
-title: "InterfaceList 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceList 结构"
+title: "InterfaceList 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceList
+dev_langs: C++
+helpviewer_keywords: InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: def0a79556d74616d153a97ee5a0cc9f521944ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceList 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="interfacelist-structure"></a>InterfaceList 结构
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -36,32 +37,32 @@ template <
 struct InterfaceList;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 接口名称；在递归列表的第一个接口。  
+ 接口名称;递归列表中第一个接口。  
   
  `U`  
- 接口名称；在递归列表的剩余的接口。  
+ 接口名称;其余的递归列表中的接口。  
   
-## 备注  
- 用于递归生成接口列表。  
+## <a name="remarks"></a>备注  
+ 用于创建接口的递归列表。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`FirstT`|模板参数 `T`的同义词。|  
-|`RestT`|模板参数 `U`的同义词。|  
+|名称|描述|  
+|----------|-----------------|  
+|`FirstT`|模板参数的同义词`T`。|  
+|`RestT`|模板参数的同义词`U`。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `InterfaceList`  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

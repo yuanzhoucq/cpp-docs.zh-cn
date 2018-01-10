@@ -1,34 +1,36 @@
 ---
-title: "如何：检索文件信息 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FileInfo 类"
-  - "文件 [C++], 检索有关信息"
+title: "如何： 检索文件信息 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], retrieving information about
+- FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0536366e445995d6c4e77d58eb0a48e08207f263
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：检索文件信息 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示 <xref:System.IO.FileInfo> 类。  获取文件名称后，就可以使用此类检索文件信息，例如文件大小、目录、全名、创建日期和时间，以及上次修改的日期和时间。  
+# <a name="how-to-retrieve-file-information-ccli"></a>如何：检索文件信息 (C++/CLI)
+下面的代码示例演示<xref:System.IO.FileInfo>类。 如果必须文件的名称，可以使用此类检索文件如文件大小、 目录、 完整名称，和日期和时间有关的信息的创建和上次修改。  
   
  此代码检索 Notepad.exe 的文件信息。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // file_info.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [文件和流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [文件和流 I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

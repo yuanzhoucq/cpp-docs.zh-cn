@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca38857efff318e1c76aa927254777b398d4ded4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e4eef04b14d865ba2ffb6c8262f8791fa1f8994
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapi-samples"></a>MAPI 示例
 请参见以下演示 Microsoft 消息处理应用程序编程接口 (MAPI) 功能的示例程序：  
@@ -29,6 +30,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [DRAWCLI](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MAPI](../mfc/mapi.md)
 

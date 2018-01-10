@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc91c19661bb8902ff15919d89e745e9966c72c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d3164cfd8a7d78191f2076637b51d96bb45f2293
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>用于记录滚动的命令处理程序（MFC 数据访问）
 [CRecordView](../mfc/reference/crecordview-class.md)类提供了处理以下标准命令的默认命令：  
@@ -39,5 +42,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  确保将这些标准的命令 ID 用于任何与标准记录导航命令关联的用户界面对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

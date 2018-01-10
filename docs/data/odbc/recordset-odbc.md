@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 668cd4b2f27c2cde18528c0eb2d4d661160c4e4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2c5fc714b9c2ff0e1af679edbc3842b86d201fee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-odbc"></a>记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -127,7 +130,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [记录集：记录集如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [MFC ODBC 使用](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [事务 (ODBC)](../../data/odbc/transaction-odbc.md)

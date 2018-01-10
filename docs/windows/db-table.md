@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2d8c7efaa23a8d7169ca41b4bfcb78722d73543
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37dd6fd80a0d18f1b9d93f5299fca797238a509f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbtable"></a>db_table
 将打开一个 OLE DB 表。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   source_name（可选）  
  将 `CSession` 特性应用到其（在其上运行命令）的类的 `db_source` 变量或实例。 请参阅 [db_source](../windows/db-source.md)。  
   
- `hresult`（可选）  
+ `hresult` （可选）  
  标识将接收此数据库命令的 `HRESULT` 的变量。 如果该变量不存在，属性将自动插入。  
   
 ## <a name="remarks"></a>备注  
@@ -72,18 +75,18 @@ class CProducts {
   
  应用程序中使用此属性的示例，请参阅示例[AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409)和[MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**class**， `struct`|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)   

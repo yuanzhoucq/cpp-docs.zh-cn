@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2993
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2993
+f1_keywords: C2993
+dev_langs: C++
+helpviewer_keywords: C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3715e2183c8194fe7bcf2613cbee3a0052588385
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2993"></a>编译器错误 C2993
 identifier： 非类型模板参数 parameter 的非法类型  

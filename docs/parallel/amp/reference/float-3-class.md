@@ -84,11 +84,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 713f3545ea2604db1313abab729ec726cce3cd75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28a26910aae471d237e0f4324f7f837eff0f6240
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="float3-class"></a>float_3 类
 表示短矢量的三个浮点数。  
@@ -169,7 +170,7 @@ class float_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#float_3__size)||  
   
@@ -211,7 +212,7 @@ class float_3;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `float_3`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
@@ -289,5 +290,5 @@ explicit inline float_3(
 static const int size = 3;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

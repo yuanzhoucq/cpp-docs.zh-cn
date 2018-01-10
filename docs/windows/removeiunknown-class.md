@@ -1,30 +1,32 @@
 ---
-title: "RemoveIUnknown 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::RemoveIUnknown"
-dev_langs: 
-  - "C++"
+title: "RemoveIUnknown 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::RemoveIUnknown
+dev_langs: C++
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7b62362004f0528b16ef3dac7cbe601b8b85ce3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RemoveIUnknown 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="removeiunknown-class"></a>RemoveIUnknown 类
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -38,32 +40,32 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类。  
+ 一个类。  
   
-## 备注  
- 对与 `IUnknown`等效。的类型，基于类型，但其 `QueryInterface`、`AddRef`和 `Release` 成员函数。  
+## <a name="remarks"></a>备注  
+ 创建类型的它等效于`IUnknown`-基于的类型，但具有非虚拟`QueryInterface`， `AddRef`，和`Release`成员函数。  
   
- 默认情况下，COM 方法的虚拟 `QueryInterface`、`AddRef`和发布方法。  但是，`ComPtr` 不需要开销虚方法。  `RemoveIUnknown` 通过在 private、其 `QueryInterface`、`AddRef`和 `Release` 方法来消除该系统开销。  
+ 默认情况下，COM 方法提供虚拟`QueryInterface`， `AddRef`，并释放方法。 但是，`ComPtr`不需要的虚方法的开销。 `RemoveIUnknown`通过提供专用的、 非虚拟消除该开销`QueryInterface`， `AddRef`，和`Release`方法。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`ReturnType`|模板参数与 `T` 等效，但类型的同义词具有其由成员。|  
+|名称|描述|  
+|----------|-----------------|  
+|`ReturnType`|等效于模板参数的类型的同义词`T`但具有非虚拟 IUnknown 成员。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `T`  
   
  `RemoveIUnknown`  
   
-## 要求  
- **标头：**client.h  
+## <a name="requirements"></a>惠?  
+ **标头：** client.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

@@ -61,11 +61,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd6322b372a9cfb6ef75875d183d1b3e0a3e79c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 类
 `CMFCRibbonStatusBar`类实现状态栏控件可以显示功能区元素。  
@@ -138,7 +139,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
  [CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxribbonstatusbar.h  
   
 ##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
@@ -471,7 +472,7 @@ void SetInformation(LPCTSTR lpszInfo);
   
  LpszInfo 时`NULL`，状态栏将恢复到常规模式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonBar 类](../../mfc/reference/cmfcribbonbar-class.md)   

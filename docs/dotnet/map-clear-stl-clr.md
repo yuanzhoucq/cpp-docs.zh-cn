@@ -1,41 +1,42 @@
 ---
-title: "map::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 成员 [STL/CLR]"
+title: "map:: clear (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 2a6a01fe-2998-447d-9ae8-6cb6343d0dfa
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0af5d2bc19422c3e28550863d2197ebc5dd5343f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# map::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除所有元素。  
+# <a name="mapclear-stlclr"></a>map::clear (STL/CLR)
+删除所有元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void clear();  
 ```  
   
-## 备注  
- 成员函数中有效调用 [map::erase](../dotnet/map-erase-stl-clr.md)[map::begin](../dotnet/map-begin-stl-clr.md)[map::end](../dotnet/map-end-stl-clr.md)`(` `(),` `())`。  用以确保控制序列为空。  
+## <a name="remarks"></a>备注  
+ 成员函数可有效地调用[map:: erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. 你可以使用它来确保受控的序列为空。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_map_clear.cpp   
@@ -73,15 +74,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\]**  
-**size\(\) \= 0**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [map](../dotnet/map-stl-clr.md)   
- [map::erase](../dotnet/map-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)

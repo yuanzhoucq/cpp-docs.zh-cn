@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebf8d12c7c3b0f9578724fe772f24c0bc8c845ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68089c80528265a4375767d9f0a744cb95cb970b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="const-and-volatile-pointers"></a>固定和可变指针
 [Const](../cpp/const-cpp.md)和[易失性](../cpp/volatile-cpp.md)关键字更改指针的方式。 **Const**关键字指定无法在初始化后修改的指针; 指针将受到保护之后进行修改。  
@@ -133,5 +134,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指针](../cpp/pointers-cpp.md)

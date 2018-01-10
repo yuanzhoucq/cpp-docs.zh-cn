@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,24 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- vector<bool> class
+- std::vector [C++], const_pointer
+- std::vector [C++], const_reference
+- std::vector [C++], pointer
+- std::vector [C++], flip
+- std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
 `vector<bool>` 类是 `bool` 类型元素的[矢量](../standard-library/vector-class.md)的部分专用化。 它包含由专用化使用的基础类型的分配器，此分配器通过每个位存储一个 `bool` 值的方式来提供空间优化。  
@@ -85,7 +73,7 @@ class vector<bool, Allocator>
 |-|-|  
 |[vector\<bool> reference 类](#reference_class)|一种用做代理以模拟 `bool&` 行为的类，其对象可提供对 `vector<bool>` 对象中的元素（一位）的引用。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头**：\<vector>  
   
  **命名空间：** std  
@@ -170,7 +158,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
  在使用 `_ITERATOR_DEBUG_LEVEL` 集进行编译时，如果你尝试访问矢量边界以外的元素，则将发生运行时错误。  有关更多信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
-  此代码示例演示如何正确使用 `vector<bool>::operator[]` 以及两种常见编码错误（已被注释掉）。 这两种编码错误将导致错误，因为无法使用 `vector<bool>::reference` 返回的 `vector<bool>::operator[]` 对象的地址。  
+  此代码示例演示如何正确使用 `vector<bool>::operator[]` 以及两种常见编码错误（已被注释掉）。这两种编码错误将导致错误，因为无法使用 `vector<bool>::reference` 返回的 `vector<bool>::operator[]` 对象的地址。  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd   
@@ -383,8 +371,7 @@ static void swap(
 ### <a name="remarks"></a>备注  
  此重载支持 `vector<bool>` 的特殊代理要求。 [vector](../standard-library/vector-class.md)::swap 的功能与 `vector<bool>::swap()` 的单参数重载相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2eb1c3861b88db25518753c4f9593cef1fdade92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c9bbb5dcc706e08b2b985769248969f9bd23201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wildcard-expansion"></a>通配符扩展
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [main：程序启动](../cpp/main-program-startup.md)

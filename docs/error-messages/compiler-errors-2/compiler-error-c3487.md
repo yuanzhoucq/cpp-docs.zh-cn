@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eb659f2d7971d1dd2ff27c438839336d4744767e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 566f130e3d65826feecc02afae0cc1a7db335efe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3487"></a>编译器错误 C3487
 “返回类型”: 所有返回表达式必须推导为相同类型: 以前为“返回类型”  
@@ -48,5 +49,5 @@ int* test(int* pi) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

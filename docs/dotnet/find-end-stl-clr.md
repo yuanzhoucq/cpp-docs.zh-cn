@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7a758c690d1ddb2cda6d6265b6a65c80bd46322
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a4d1ba6ccc6544c578ad1ce8375d8d4943a6b34c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findend-stlclr"></a>find_end (STL/CLR)
 在范围中查找与指定序列相同的最后一个序列，或在二元谓词指定的意义上等效的最后一个序列。  
@@ -38,10 +41,10 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`find_end`。 有关详细信息，请参阅[find_end](../standard-library/algorithm-functions.md#find_end)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

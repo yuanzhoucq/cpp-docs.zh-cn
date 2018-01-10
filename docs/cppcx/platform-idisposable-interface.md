@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0bc36087532bbac86b5891408fc3e4bea30c0256
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db500bc5a205b97ba49d92356d2e878be3e10caf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable 接口
 用于释放非托管资源。  
@@ -46,7 +47,7 @@ public interface class IDisposable
 |------------|-----------------|  
 |释放|用于释放非托管资源。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  

@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29b161d889aefc55e818a16233212a55bdcb45de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6604ada6dc4d322011a835c03731f6a48be472f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 类
 指定窗口中的控件如何随着用户重设窗口大小而移动和重设大小。  
@@ -75,7 +76,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>嵌套类型  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[Cmfcdynamiclayout:: Movesettings 结构](#movesettings_structure)|封装动态布局中控件的移动数据。|  
 |[Cmfcdynamiclayout:: Sizesettings 结构](#sizesettings_structure)|封装动态布局中控件的大小更改数据。|  
@@ -87,7 +88,7 @@ class CMFCDynamicLayout : public CObject
   
  [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxlayout.h  
   
 ##  <a name="additem"></a>Cmfcdynamiclayout:: Additem  
@@ -367,7 +368,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="parameters"></a>参数  
  `nRatio`  
- 以百分比形式定义在用户调整承载窗口大小时水平调整子控件的程度。  
+ 以百分比形式定义在用户调整承载窗口大小时水平调整子控件的距离。  
   
 ### <a name="return-value"></a>返回值  
  A [SizeSettings](#sizesettings_structure)值，该值封装请求的大小比率。  
@@ -383,7 +384,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="parameters"></a>参数  
  `nXRatio`  
- 以百分比形式定义在用户调整承载窗口大小时水平调整子控件的程度。  
+ 以百分比形式定义在用户调整承载窗口大小时水平调整子控件的距离。  
   
  `nYRatio`  
  以百分比形式定义在用户调整承载窗口大小时垂直调整子控件的距离。  
@@ -461,6 +462,6 @@ static SizeSettings SizeVertical(int nRatio);
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

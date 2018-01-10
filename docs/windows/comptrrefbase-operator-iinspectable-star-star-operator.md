@@ -1,50 +1,54 @@
 ---
-title: "ComPtrRefBase::operator IInspectable** 运算符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator IInspectable** 运算符"
+title: "Comptrrefbase:: Operator IInspectable * * 运算符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+dev_langs: C++
+helpviewer_keywords: operator IInspectable** operator
 ms.assetid: 06ac1051-606c-449b-a566-cac78ca53762
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d83580537a81b1c75f44e32e6aa43b2b014c8373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRefBase::operator IInspectable** 运算符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="comptrrefbaseoperator-iinspectable-operator"></a>ComPtrRefBase::operator IInspectable** 运算符
 
-支持 WRL基础结构，不应在代码中直接使用。  
-  
-## 语法  
-  
-```  
-operator IInspectable**() const;  
-```  
-  
-## 备注  
- 模拟当前数据成员设置为指针对 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 指针对 IInspectable 接口中。  
-  
- 如果当前 ComPtrRefBase 不是源于 IInspectable，错误发出。  
-  
- 只有在 **\_\_WRL\_CLASSIC\_COM\_\_** 中定义，此类转换才可用。  
-  
-## 要求  
- **标头：**client.h  
-  
- Microsoft::WRL::Details**命名空间:**  
-  
-## 请参阅  
- [ComPtrRefBase 类](../windows/comptrrefbase-class.md)   
- [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)
+支持 WRL 基础结构，不应在代码中直接使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+operator IInspectable**() const;
+```
+
+## <a name="remarks"></a>备注
+
+将当前强制转换[ptr_](../windows/comptrrefbase-ptr-data-member.md)对指针到-a-指针-到的数据成员 IInspectable 接口。
+
+如果当前 ComPtrRefBase 不派生自 IInspectable，则会发出错误。
+
+此强制转换为可用才**&#95; &#95;WRL_CLASSIC_COM &#95; &#95;**定义。
+
+## <a name="requirements"></a>惠?
+
+**标头：** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>请参阅
+
+[ComPtrRefBase 类](../windows/comptrrefbase-class.md)   
+[Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

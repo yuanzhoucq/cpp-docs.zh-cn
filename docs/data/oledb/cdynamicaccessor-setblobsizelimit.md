@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::SetBlobSizeLimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::SetBlobSizeLimit"
-  - "SetBlobSizeLimit"
-  - "CDynamicAccessor.SetBlobSizeLimit"
-  - "ATL.CDynamicAccessor.SetBlobSizeLimit"
-  - "ATL::CDynamicAccessor::SetBlobSizeLimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetBlobSizeLimit 方法"
+title: "Cdynamicaccessor:: Setblobsizelimit |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::SetBlobSizeLimit
+- SetBlobSizeLimit
+- CDynamicAccessor.SetBlobSizeLimit
+- ATL.CDynamicAccessor.SetBlobSizeLimit
+- ATL::CDynamicAccessor::SetBlobSizeLimit
+dev_langs: C++
+helpviewer_keywords: SetBlobSizeLimit method
 ms.assetid: fb8cb85d-f841-408e-a344-37895b10993f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e5d683c06283c82e6117893e44def41d09300da0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetBlobSizeLimit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-以字节 BLOB 设置最大大小。  
+# <a name="cdynamicaccessorsetblobsizelimit"></a>CDynamicAccessor::SetBlobSizeLimit
+以字节为单位设置的最大 BLOB 大小。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -39,17 +41,17 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nBlobSize`  
- 指定 BLOB 大小限制。  
+ 指定的 BLOB 大小限制。  
   
-## 备注  
- 以字节设置最大大小 BLOB;数据列大于此值处理 BLOB。  某些提供程序使列中的大的范围 \(如 2 GB\)。  而不是尝试分配的内存范围，则此列通常会尝试将这些接口绑定列作为 blob。  在这样无需分配任何内存，但是，仍然可以读取所有数据，而不会害怕截断的遭到报复。  但是，您可能需要强制 `CDynamicAccessor` 绑定。这些本机数据类型的列大的情形。  为此，请在调用 **打开**之前调用 `SetBlobSizeLimit`。  
+## <a name="remarks"></a>备注  
+ 以字节为单位; 设置的最大 BLOB 大小大于此值的列数据将被视为 BLOB。 某些提供程序 （例如 2 GB) 的列提供了极大的大小。 而不是尝试此大小为列分配内存，你通常会尝试将这些列作为 Blob 绑定。 这样你无需分配所有内存，但你仍可以阅读而不必担心截断的所有数据。 但是，在某些情况的下，在其中你可能想要强制`CDynamicAccessor`若要将大型列中其本机数据类型的绑定。 若要执行此操作，调用`SetBlobSizeLimit`之前调用**打开**。  
   
- 构造函数方法 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 设置最大大小 BLOB 为默认值 8,000 字节。  
+ 构造函数方法[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)设置为默认值为 8000 个字节的最大 BLOB 大小。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93288308f78d719c4b2cad60ac4a95a607726f4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24a66bf9e062e43225827afdbb0bba45511c5f13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC 中的属性表和属性页
 属性表，也称为选项卡对话框中，是一个包含属性页的对话框。 每个属性页基于对话框模板资源，并包含控件。 它被括在页面上在顶部的选项卡。 选项卡命名属性页，并指示其用途。 用户单击要选择一组控件的属性表中的选项卡。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  当你尝试通过使用显示属性表`CPropertySheet::DoModal`，系统可能会产生首次异常。 由于系统尝试更改，则会发生此异常[窗口样式](../mfc/reference/styles-used-by-mfc.md#window-styles)之前创建对象的对象。 有关此异常，以及如何避免它或处理它的详细信息，请参阅[CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性表](../mfc/property-sheets-mfc.md)
 

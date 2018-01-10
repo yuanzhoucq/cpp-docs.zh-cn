@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4e656fa567342dde9ba990bff5b0d8081337385
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 类
 `cancellation_token` 类表示确定某项操作是否已请求取消的功能。 给定的标记可与 `task_group`、`structured_task_group` 或 `task` 关联以实现隐式取消。 它还可为了取消而进行轮询，或可在取消关联的 `cancellation_token_source` 时注册回调。  
@@ -68,7 +69,7 @@ class cancellation_token;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `cancellation_token`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** pplcancellation_token.h  
   
  **命名空间：** 并发  
@@ -189,5 +190,5 @@ template<typename _Function>
 ### <a name="return-value"></a>返回值  
  可在 `cancellation_token_registration` 方法中用于取消注册之前注册的回调并防止进行该回调的 `deregister` 对象。 该方法将引发[invalid_operation](invalid-operation-class.md)异常如果它调用`cancellation_token`使用创建的对象[cancellation_token:: none](#none)方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

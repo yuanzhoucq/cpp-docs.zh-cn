@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95b531d12afc524e27bf36fc5a44d5f555fc9f91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b651c734fbd7098705801aefcaa490293a4d661d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-ids"></a>命令 ID
 命令完全由其单独的命令 ID (编码在**WM_COMMAND**消息)。 此 ID 分配给生成命令的用户界面对象。 通常情况下，分配给的用户界面对象的功能中名为 Id。  
@@ -29,6 +30,6 @@ ms.lasthandoff: 10/24/2017
   
  当你创建自己的菜单在 Visual c + + 菜单编辑器时，它是遵循類別庫一个好办法的命名约定，如图所示`ID_FILE_OPEN`。 [标准命令](../mfc/standard-commands.md)说明由类库所定义的标准命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户界面对象和命令 ID](../mfc/user-interface-objects-and-command-ids.md)
 

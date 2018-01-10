@@ -69,11 +69,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3851cd7deff77c9703a11ee73ee1d9daa020c848
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：标准命令实现
 > [!NOTE]
@@ -492,7 +493,7 @@ ms.lasthandoff: 10/24/2017
   
  如果你选择实现这些指示符，我们建议你使用这些指示器 Id 和维护内你状态栏的指示符的顺序 (即，按以下顺序： EXT、 CAP、 NUM、 SCRL、 改写、 REC)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functions [C++], parameters
 - typedef names, linkage
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], with no linkage
 - function parameters [C++]
 ms.assetid: 7174c500-12d2-4572-8c16-63c27c758fb1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 161698d01e9cc9aeaac8f2b9bdc491343555880d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 13acb94022caf7ad9ddbf2fe94ad2fa95a70dc80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="names-with-no-linkage"></a>名称中不含链接
 没有链接的唯一名称为：  
@@ -114,5 +112,5 @@ void GoodFuncDef( char ch )  // Define GoodFuncDef
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序和链接](../cpp/program-and-linkage-cpp.md)

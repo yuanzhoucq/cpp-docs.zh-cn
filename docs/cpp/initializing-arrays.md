@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13e02dda301059204f6feaa085ce97d1568e74d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42d47f8ba7f7df8285d3c4f685a212c77974b144
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-arrays"></a>初始化数组
 如果类具有构造函数，该类的数组将由构造函数初始化。 如果初始值设定项列表中的项少于数组中的元素，则默认的构造函数将用于剩余元素。 如果没有为类定义默认构造函数，初始值设定项列表必须完整，即数组中的每个元素都必须有一个初始值设定项。  
@@ -52,7 +53,7 @@ int main()
   
  `aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。  
   
- 静态成员数组 (是否**const**或不) 可以在其定义 （类声明的外部） 中初始化。 例如:   
+ 静态成员数组 (是否**const**或不) 可以在其定义 （类声明的外部） 中初始化。 例如:  
   
 ```  
 // initializing_arrays2.cpp  

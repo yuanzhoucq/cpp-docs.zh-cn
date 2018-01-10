@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f4879acaa0f8f5a033f4650c5db58b6ed08ac3a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa984d52ea050d6e17d904cc159ff5c6d3e36a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException 类
 操作中止时引发。  
@@ -35,7 +36,7 @@ public ref class OperationCanceledException : COMException,    IException,    IP
 ### <a name="remarks"></a>备注  
  有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md) 类。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -44,5 +45,5 @@ public ref class OperationCanceledException : COMException,    IException,    IP
   
  **元数据：** platform.winmd  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Platform::COMException 类](../cppcx/platform-comexception-class.md)

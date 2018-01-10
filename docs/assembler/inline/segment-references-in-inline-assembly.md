@@ -1,36 +1,37 @@
 ---
-title: "内联程序集中的段引用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "内联程序集, 寄存器"
-  - "内联程序集, 段引用"
-  - "引用, 内联程序集"
-  - "寄存器"
-  - "寄存器, 内联程序集"
-  - "内联程序集中的段引用"
+title: "段中内联程序集的引用 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- references, inline assembly
+- segment references in inline assembly
+- inline assembly, segment references
+- registers
+- inline assembly, registers
+- registers, inline assembly
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4aff05b82570368038965e57308b0238287586ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 内联程序集中的段引用
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 专用  
- 必须按寄存器而不是按名称引用段（例如，段名 `_TEXT` 是无效的）。  段重写必须显式使用寄存器，就像在 ES:\[BX\] 中一样。  
+# <a name="segment-references-in-inline-assembly"></a>内联程序集中的段引用
+## <a name="microsoft-specific"></a>Microsoft 专用  
+ 必须按寄存器而不是按名称引用段（例如，段名 `_TEXT` 是无效的）。 段重写必须显式使用寄存器，就像在 ES:[BX] 中一样。  
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
- [在 \_\_asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>请参阅  
+ [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ced7bfbb2cedd8cad4353cdbb2d5627864de5ad7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3359b506217d2828207e06341fbf1fe53b3c0719
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 封装日期和时间选取器控件功能。  
@@ -111,7 +112,7 @@ class CDateTimeCtrl : public CWnd
   
  `CDateTimeCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdtctl.h  
   
 ##  <a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
@@ -401,7 +402,7 @@ COLORREF SetMonthCalColor(
  `iColor`  
  `int`值，该值指定月历控件设置的区域。 此值可以是下列其中一项。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |MCSC_BACKGROUND|设置显示不同的月份的背景色。|  
 |MCSC_MONTHBK|设置显示在一个月内的背景色。|  
@@ -456,7 +457,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `dwStyle`|新月份日历在控件样式，这是月日历控件样式的按位组合 (OR)。 有关详细信息，请参阅[月日历控件样式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
   
@@ -531,7 +532,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CMNCTRL1](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

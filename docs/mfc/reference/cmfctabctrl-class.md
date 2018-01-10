@@ -115,11 +115,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6675a7b9130a87be9be36c158e5716cc1afe3d55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1aa415846d8f504ef907bf4e9a041b86062853cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`类提供的选项卡控件的功能。 选项卡控件在其顶部或底部显示具有平面或三维选项卡的可停靠窗口。 选项卡可以显示文本和图像，并可在处于活动状态时更改颜色。  
@@ -202,7 +203,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|防止失去焦点时插入新选项卡并将其启用活动视图。|  
   
@@ -254,7 +255,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
  [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxtabctrl.h  
   
 ##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
@@ -758,7 +759,7 @@ BOOL ModifyTabStyle(Style style);
 ### <a name="remarks"></a>备注  
  值`style`参数可以是以下之一`CMFCTabCtrl::Style`枚举。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |STYLE_3D|显示三维、 矩形具有圆角的选项卡。|  
 |STYLE_3D_ONENOTE|显示三维选项卡具有一个垂直端和一个倾斜的端且，有了圆形角。|  
@@ -960,7 +961,7 @@ void SetResizeMode(ResizeMode resizeMode);
 ### <a name="remarks"></a>备注  
  `resizeMode`参数可以是以下之一`ResizeMode`枚举值。  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |RESIZE_NO|选项卡控件不调整大小。|  
 |RESIZE_VERT|选项卡控件可以调整垂直但不是进行水平大小。|  
@@ -1008,7 +1009,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ### <a name="remarks"></a>备注  
  此方法会影响显示平面选项卡的选项卡控件。 滚动条在同一时间会影响所有选项卡。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   

@@ -1,33 +1,33 @@
 ---
-title: "local (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.local"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "local attribute"
+title: "本地 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.local
+dev_langs: C++
+helpviewer_keywords: local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3543adfe0cb25f7946e6ed6c81c4bd66a7b60324
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# local (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-当在接口头，允许您使用 MIDL 编译器作为页眉生成器。  当在单个函数，即存根未生成一个本地程序。  
+# <a name="local-c"></a>local (C++)
+接口标头中使用时，可以使用作为标头生成器的 MIDL 编译器。 当使用单个函数中，指定为其生成没有存根 （stub） 的本地过程。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,28 +35,27 @@ manager: "ghogen"
   
 ```  
   
-## 备注  
- `local` C\+\+ 特性具有与 [本地](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ `local` C + + 属性具有相同的功能[本地](http://msdn.microsoft.com/library/windows/desktop/aa367071)MIDL 特性。  
   
-## 示例  
- 为的示例演示如何参见 [call\_as](../windows/call-as.md) 使用 `local`。  
+## <a name="example"></a>示例  
+ 请参阅[call_as](../windows/call-as.md)以举例说明如何使用`local`。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|`interface`，接口方法|  
+|**适用对象**|`interface`接口方法|  
 |**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|**dispinterface**|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [call\_as](../windows/call-as.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
+ [call_as](../windows/call-as.md)   

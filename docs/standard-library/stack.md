@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: edce2008e2733e9806dfafc2eb38a15f65651718
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9a3c05e5df8290972c1b94b6576361a9bb3d9c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 定义模板类堆栈和两个支持模板。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[stack 类](../standard-library/stack-class.md)|一种模板容器适配器类，它提供了功能的限制，限制对最近添加到某些基础容器类型的元素的访问。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

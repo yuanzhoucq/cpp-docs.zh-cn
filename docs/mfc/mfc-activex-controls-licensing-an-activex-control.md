@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02df11739582cbfa84361a7c92e0cd7ee1856716
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7b90000279e00c9be8f43ecdb33f8e3dedf6b8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控件：许可 ActiveX 控件
 许可支持，ActiveX 控件的一个可选功能允许你控制能够使用或分发该控件。 (的许可问题的更多讨论，请参阅中的授权问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。)  
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/24/2017
   
  许可问题的更多讨论，请参阅中的授权问题[升级现有 ActiveX 控件](../mfc/upgrading-an-existing-activex-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件向导](../mfc/reference/mfc-activex-control-wizard.md)
 

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5aa633b67bcd5b313faa475d911300635d727f5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffce416bebda4bcc1d5aa0078135aff27bdb7e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm-class"></a>unorm 类
 表示 unorm 数字。 每个元素都浮点数的 [0.0 f，1.0 f] 范围内。  
@@ -56,7 +57,7 @@ class unorm;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `unorm`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
@@ -108,5 +109,5 @@ inline explicit unorm(
  `_Other`  
  用于初始化的标准对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

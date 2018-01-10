@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4335
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4335
+f1_keywords: C4335
+dev_langs: C++
+helpviewer_keywords: C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ea0a981c00a1941c3004ac820edbcbbbf0776c4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: ab7406a9c161d47e431cb0af8183d99eac7bfe86
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4335"></a>编译器警告 C4335
 检测到的 Mac 文件格式： 请将源文件转换为 DOS 或 UNIX 格式  

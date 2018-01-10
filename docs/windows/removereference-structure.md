@@ -1,32 +1,33 @@
 ---
-title: "RemoveReference 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RemoveReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RemoveReference 结构"
+title: "RemoveReference 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RemoveReference
+dev_langs: C++
+helpviewer_keywords: RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4f205d01047a1836eb1e5a056f335a62005a9fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RemoveReference 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="removereference-structure"></a>RemoveReference 结构
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -43,28 +44,28 @@ template<
 struct RemoveReference<T&&>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类。  
+ 一个类。  
   
-## 备注  
- 从指定类模板参数字符引用或 Rvalue 引用字符。  
+## <a name="remarks"></a>备注  
+ 去除从指定的类模板参数的引用或右值引用特性。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |`Type`|类模板参数的同义词。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `RemoveReference`  
   
-## 要求  
- **页眉：**internal.h  
+## <a name="requirements"></a>惠?  
+ **标头：** internal.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

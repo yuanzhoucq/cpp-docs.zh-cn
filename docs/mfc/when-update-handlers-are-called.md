@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b19a01ce06b76b49593adf54fa8af728be2d5c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf2773a2d9e393c783a39e01c75f8efa62796df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-update-handlers-are-called"></a>何时调用更新处理程序
 假设用户在“文件”菜单中单击鼠标，则将生成 `WM_INITMENUPOPUP` 消息。 在菜单下拉以便用户可看到它之前，框架的更新机制将统一更新“文件”菜单中的所有项。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
  菜单初始化在框架中是自动进行的，并且将在应用程序收到 `WM_INITMENUPOPUP` 消息时出现。 在空闲循环期间，框架将通过其为菜单执行的同一方式为按钮更新处理程序搜索命令路由。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何：更新用户界面对象](../mfc/how-to-update-user-interface-objects.md)
 

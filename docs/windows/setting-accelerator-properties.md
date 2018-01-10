@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8a83b155b5e0a350d5c578a8dccfb9040cec3df
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 83eea84c89a9f9873b687333b7454d9f3c9c41b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-accelerator-properties"></a>设置快捷键属性
 你可以在设置快捷键属性[属性窗口](/visualstudio/ide/reference/properties-window)在任何时间。 还可以使用快捷键编辑器修改快捷键对应表中的快捷键属性。 使用“属性”窗口或快捷键编辑器所做的更改具有相同结果：在快捷键对应表中都即时反映编辑情况。  
@@ -41,10 +44,10 @@ ms.lasthandoff: 10/31/2017
   
 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [预定义的快捷键](../windows/predefined-accelerator-keys.md)   
  [资源编辑器](../windows/resource-editors.md)   
  [快捷键编辑器](../windows/accelerator-editor.md)

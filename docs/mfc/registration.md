@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e755ae6b0d6170087af64f7561b310894f0768d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registration"></a>注册
 当用户需要将一个 OLE 项插入应用程序中时，OLE 会显示一个对象类型的列表以供选择。 OLE 从系统注册数据库获取此列表，该数据库包含所有服务器应用程序提供的信息。 当服务器注册自身时，它放入系统注册数据库（注册表）中的项将描述它提供的每种对象类型、文件扩展名、自身的路径以及其他信息。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/24/2017
   
  如果您编写 miniserver，根据定义，它将始终由容器启动。 您仍应分析命令行以检查“/Embedding”选项。 命令行上缺少此选项意味着用户已尝试将 miniserver 作为独立的应用程序启动。 如果发生这种情况，请向系统注册数据库注册此服务器，然后显示一个消息框，通知用户从容器应用程序启动 miniserver。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE](../mfc/ole-in-mfc.md)   
  [服务器](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   

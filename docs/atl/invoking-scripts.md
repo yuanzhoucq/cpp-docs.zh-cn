@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1fc6893b02dccff6bb30d7a20d1a2c1dce9fbb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbf969f601bd90e84bf0ee15ae2ea3dcb392610
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invoking-scripts"></a>调用脚本
 [使用可替换参数 （注册机构的预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)讨论替换地图并提及的注册机构方法**AddReplacement**。 下表中描述了所有和注册机构有八个特定于编写脚本，其他方法。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
   
  方法**FileRegister**和**FileUnregister**非常有用，如果您不希望资源中的脚本，或如果您希望其自己的文件中的脚本。 方法**StringRegister**和**StringUnregister**允许.rgs 文件存储在动态分配的字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建注册器脚本](../atl/creating-registrar-scripts.md)
 

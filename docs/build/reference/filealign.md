@@ -14,11 +14,12 @@ ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f3c47b391235d5ffff8e6efbbf5f865df3bf885
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 753f6c5fade4211654246aec19af60c60706d7ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filealign-align-sections-in-files"></a>/ FILEALIGN （文件中的对齐部分）
 
@@ -51,9 +52,9 @@ ms.lasthandoff: 10/31/2017
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
-- 请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [设置链接器选项](../../build/reference/setting-linker-options.md)   
 [链接器选项](../../build/reference/linker-options.md)

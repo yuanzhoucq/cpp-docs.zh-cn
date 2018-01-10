@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C1037
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1037
+f1_keywords: C1037
+dev_langs: C++
+helpviewer_keywords: C1037
 ms.assetid: 79103bca-ccfb-42e7-aef9-9b90c15b162f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 39dad9377327aba993831bb6680aec7cb7ce79ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c1f358201b36b73e1db41f2f72e1f92deb44f368
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1037"></a>错误 C1037
 无法打开对象文件的文件名  
@@ -41,4 +37,3 @@ ms.lasthandoff: 10/09/2017
   
 4.  一个只读文件具有相同的名称。  
   
- 在 Visual C++ .NET（1300 版本编译器）中，存在一个 Bug：当文件名（或者指向文件名的目录路径）含有 MBCS 字符时，要求正确设置用户区域。 设置系统区域设置是不够的；必须设置用户区域设置以处理 MBCS 字符。

@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::raw_storage_iterator [C++]
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fd68bfc788231ddc954b1f6e8a70d63dbcf02592
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c5fc38aac55311029ca6d1a0f0c1cd0a62f86bb2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 类
 一种所提供的适配器类，使算法能够将它们的结果存储到未初始化的内存中。  
@@ -75,7 +73,7 @@ class raw_storage_iterator
 |[operator=](#op_eq)|用于实现原始存储迭代器表达式 * `i` = `x` 以便在内存中进行存储的赋值运算符。|  
 |[operator++](#op_add_add)|原始存储迭代器的前置递增和后置递增运算符。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<memory>  
   
  **命名空间：** std  
@@ -377,9 +375,8 @@ array 3 = 4
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

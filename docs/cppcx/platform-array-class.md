@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 81a1e90cb331bc559084ce536bc1038ff1f0b5d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 表示可以跨应用程序二进制接口 (ABI) 接收和传递的一维可修改数组。  
@@ -65,7 +66,7 @@ private ref class Array<TArg, 1> :
   
  此类在编译器会自动包括的 vccorlib.h 标头中定义。 它在 Intellisense 中可见，但在“对象浏览器”中不可见，因为它不是在 platform.winmd 中定义的公共类型。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
 
  
@@ -120,6 +121,6 @@ property Array^ Value;
 ### <a name="return-value"></a>返回值  
  当前数组的句柄。  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)   
  [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

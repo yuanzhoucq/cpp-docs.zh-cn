@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::runtime_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- runtime_error class
+f1_keywords: stdexcept/std::runtime_error
+dev_langs: C++
+helpviewer_keywords: runtime_error class
 ms.assetid: 4d0227bf-847b-45a2-a320-2351ebf98368
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1cd520fe51e5db9194d629310f240cf1890c3c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fffdedc184df2de8956341015345bf2f6fb16e80
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeerror-class"></a>runtime_error 类
 此类用作引发报告仅在执行程序时大概可检测的错误的所有异常的基类。  
@@ -72,15 +68,14 @@ Type class std::runtime_error
 *\  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<stdexcept>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [exception 类](../standard-library/exception-class.md)
 
     
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

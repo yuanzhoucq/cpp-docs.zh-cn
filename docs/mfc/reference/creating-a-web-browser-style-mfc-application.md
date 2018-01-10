@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c88ca61fb7dfdfbe90ed3b460c0fe9bc3a045ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>创建 Web 浏览器样式的 MFC 应用程序
 Web 浏览器样式的应用程序可以在本地文件系统中和网络上从 （如 HTML 或活动文档） Internet 或 intranet，以及文件夹访问信息。 通过派生从应用程序的视图类[CHtmlView](../../mfc/reference/chtmlview-class.md)，从而有效 Web 浏览器视图提供 WebBrowser 控件使应用程序。  
@@ -62,7 +63,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
- 您可以使用你自己的替换此站点，或者可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成员函数以打开位于项目的资源脚本作为视图的默认内容一个 HTML 页。 例如:   
+ 您可以使用你自己的替换此站点，或者可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成员函数以打开位于项目的资源脚本作为视图的默认内容一个 HTML 页。 例如:  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -75,7 +76,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MFCIE](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)   
  [使用项目属性](../../ide/working-with-project-properties.md)   

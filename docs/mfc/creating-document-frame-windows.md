@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25780092d11580225bef325c53e99c82263267b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-document-frame-windows"></a>创建文档框架窗口
 [文档/视图创建](../mfc/document-view-creation.md)演示如何[CDocTemplate](../mfc/reference/cdoctemplate-class.md)对象安排创建框架窗口、 文档和视图并将它们连接在一起。 三个[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)自变量`CDocTemplate`构造函数指定框架窗口、 文档和文档模板以响应用户命令，例如文件上的新命令动态创建的视图类菜单或 MDI 窗口菜单上的新建窗口命令。 在它创建视图和文档框架窗口时，文档模板将存储此信息以供将来使用。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [销毁框架窗口](../mfc/destroying-frame-windows.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用框架窗口](../mfc/using-frame-windows.md)
 

@@ -1,67 +1,75 @@
 ---
-title: "_bittestandset, _bittestandset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandset_cpp"
-  - "_bittestandset64_cpp"
-  - "_bittestandset64"
-  - "_bittestandset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_bittestandset intrinsic"
-  - "_bittestandset64 intrinsic"
-  - "bts instruction"
+title: "_bittestandset、 _bittestandset64 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandset_cpp
+- _bittestandset64_cpp
+- _bittestandset64
+- _bittestandset
+dev_langs: C++
+helpviewer_keywords:
+- bts instruction
+- _bittestandset intrinsic
+- _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0a4cdd4940ce5c75f1575b50d2cd411a04d6d31d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# _bittestandset, _bittestandset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandset-bittestandset64"></a>_bittestandset、_bittestandset64
 **Microsoft 专用**  
   
- 生成一个指令，该指令可以检查地址 `a` 的位 `b`，返回其当前值，然后将位设置为 1。  
+ 生成一个指令，该指令可以检查地址 `b` 的位 `a`，返回其当前值，然后将位设置为 1。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-unsigned char _bittestandset(    long *a,    long b ); unsigned char _bittestandset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### 参数  
- \[in, out\] `a`  
+#### <a name="parameters"></a>参数  
+ [in, out] `a`  
  指向要检查的内存的指针。  
   
- \[in\] `b`  
+ [in] `b`  
  要测试的位位置。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  指定位置的位。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
-|----------|----------|  
+|---------------|------------------|  
 |`_bittestandset`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
+## <a name="remarks"></a>备注  
  此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // bittestandset.cpp  
@@ -137,13 +145,16 @@ int main()
 }  
 ```  
   
-  **标记：0x2**  
-**标记：0x6**  
-**标记：0xe**  
-**标记：0x6**  
-**标记：0x4**  
-**标记：0x0**   
-## 结束 Microsoft 专用  
+```Output  
+Flags: 0x2  
+Flags: 0x6  
+Flags: 0xe  
+Flags: 0x6  
+Flags: 0x4  
+Flags: 0x0  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

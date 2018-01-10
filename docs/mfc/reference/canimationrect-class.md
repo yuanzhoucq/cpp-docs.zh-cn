@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationRect [MFC], CAnimationRect
 - CAnimationRect [MFC], AddTransition
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b38b1225dbce3f747efeaa7aa1e5384f7931efe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a3fd5f20fae543583a0307b81a3b7310a300e167
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 类
 实现可对矩形边进行动画处理的矩形功能。  
@@ -109,7 +107,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|表示底层封装的动画变量动画矩形的边界。|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|表示左封装的动画变量动画矩形的边界。|  
@@ -127,7 +125,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
  `CAnimationRect`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>CAnimationRect::AddTransition  
@@ -404,6 +402,5 @@ void SetDefaultValue(const CRect& rect);
 ### <a name="remarks"></a>备注  
  使用此函数将默认值设置为动画对象。 此方法将默认值分配给矩形的边界。 它还重新创建基础 COM 对象，如果已创建。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 为此动画对象，你需要重新启用这些事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

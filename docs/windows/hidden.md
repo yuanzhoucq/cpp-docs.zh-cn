@@ -1,32 +1,33 @@
 ---
-title: "hidden | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.hidden"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hidden attribute"
+title: "隐藏 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.hidden
+dev_langs: C++
+helpviewer_keywords: hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c038eb4869cb3191dd26b5c4ea8e1c6cc182e366
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hidden
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示该项目在面向用户的浏览器存在，但不应显示。  
+# <a name="hidden"></a>隐藏
+指示该项存在，但不是应在面向用户的浏览器中显示。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,28 +35,27 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **隐藏** C\+\+ 特性具有与 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **隐藏**c + + 属性具有相同的功能[隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861)MIDL 特性。  
   
-## 示例  
- 有关示例的 [可绑定](../windows/bindable.md) 参见示例中使用 **隐藏**。  
+## <a name="example"></a>示例  
+ 请参阅示例[可绑定](../windows/bindable.md)以举例说明如何使用**隐藏**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|`interface`， **类**， `struct`，方法，属性|  
+|**适用对象**|`interface`**类**， `struct`，方法、 属性|  
 |**可重复**|否|  
-|**必需的特性**|**coclass** \(当应用于 **类** 或 `struct`\)|  
+|**必需的特性**|**coclass** （应用于 **class** 或 `struct`时）|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   

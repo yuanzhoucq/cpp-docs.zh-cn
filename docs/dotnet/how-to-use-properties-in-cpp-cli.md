@@ -1,35 +1,37 @@
 ---
-title: "如何：在 C++/CLI 中使用属性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "属性 [C++], 简单"
-  - "简单属性"
+title: "如何： 使用属性中 C + + /cli CLI |Microsoft 文档"
+ms.custom: 
+ms.date: 07/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- simple properties
+- properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f1a25d91939119ddda10480ed3bbd4691d06af9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：在 C++/CLI 中使用属性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文在 C\+\+\/CLI 演示如何使用属性。  
+# <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用属性
+这篇文章演示如何使用属性中 C + + /cli CLI。  
   
-## 基本属性  
- 对于基本属性这些该仅分配并检索这些成员无需显式定义 get 和 set 访问函数的专用数据，因为编译器将自动提供它们，同时使这些属性的数据类型。  此代码演示的基本属性：  
+## <a name="basic-properties"></a>基本属性  
+ 基本属性-那些只分配和检索的私有数据成员-无需显式定义 get 和 set 访问器函数，因为编译器自动提供它们在给定只是属性的数据类型。 此代码演示了基本属性：  
   
-```  
+```cpp  
 // SimpleProperties.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -46,13 +48,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **C\# 范围\>为 111**   
-## 静态属性  
- 此代码示例演示如何声明和使用静态属性。静态属性来只访问其类的静态成员。  
-  
+```Output  
+c->Size = 111  
 ```  
+  
+## <a name="static-properties"></a>静态属性  
+ 此代码示例演示如何声明和使用静态属性。  静态属性仅可以访问其类的静态成员。  
+  
+```cpp  
 // mcppv2_property_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,22 +87,21 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **96**  
-**47**   
-## 索引属性  
- 索引属性通常公开使用具有写在下方的运算符，访问数据结构。  
-  
- 如果要使用默认索引属性，则可以引用类名访问数据结构，但是，如果要使用用户定义的和带索引的属性，必须指定属性名访问数据结构。  
-  
- 使用 `this` 指针，有关如何访问默认索引器的信息，请参见 [此指针在值和引用类型中的语义](../misc/semantics-of-the-this-pointer-in-value-and-reference-types.md)。  
-  
- 有关如何使用 C\# 编写的索引数的信息，请参见 [如何：使用 C\# 索引器](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。  
-  
- 此代码示例演示如何使用默认的和用户定义索引的属性：  
-  
+```Output  
+96  
+47  
 ```  
+  
+## <a name="indexed-properties"></a>索引的属性  
+ 索引的属性通常显示使用下标运算符访问的数据结构。  
+  
+ 如果你使用默认索引属性，你可以访问数据结构，只需通过引用类名称，但如果你使用用户定义的索引的属性，则必须指定要访问的数据结构的属性名称。  
+  
+ 有关如何使用用 C# 编写索引器的信息，请参阅[如何： 使用 C# 索引器 (C + + /cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。  
+  
+ 此代码示例演示如何使用默认值和用户定义的索引的属性：  
+  
+```cpp  
 // mcppv2_property_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -155,12 +157,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **\[ 0 1 2 3 4 \]**  
-**\[ 0 2 4 6 8 \]** 使用 `this` 指针，下示例演示如何调用默认索引器。  
-  
+```Output  
+[ 0 1 2 3 4 ]  
+[ 0 2 4 6 8 ]  
 ```  
+  
+ 下一个示例演示如何通过使用调用的默认索引器`this`指针。  
+  
+```cpp  
 // call_default_indexer_through_this_pointer.cpp  
 // compile with: /clr /c  
 value class Position {  
@@ -182,9 +186,9 @@ private:
 };  
 ```  
   
- 此示例演示如何使用 <xref:System.Reflection.DefaultMemberAttribute> 指定默认索引器：  
+ 此示例演示如何使用<xref:System.Reflection.DefaultMemberAttribute>指定的默认索引器：  
   
-```  
+```cpp  
 // specify_default_indexer.cpp  
 // compile with: /LD /clr  
 using namespace System;  
@@ -198,9 +202,9 @@ public ref struct Squares {
 };  
 ```  
   
- 下面的示例使用在前面示例中创建的元数据。  
+ 下一个示例使用在前面的示例中创建的元数据。  
   
-```  
+```cpp  
 // consume_default_indexer.cpp  
 // compile with: /clr  
 #using "specify_default_indexer.dll"  
@@ -210,13 +214,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+9  
+```  
   
- **9**   
-## 虚拟属性  
+## <a name="virtual-properties"></a>虚拟属性  
  此代码示例演示如何声明和使用虚拟属性：  
   
-```  
+```cpp  
 // mcppv2_property_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -255,16 +260,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **93**  
-**43**   
-## 抽象类和封装的属性  
- 虽然和 [abstract](../windows/abstract-cpp-component-extensions.md)[sealed](../windows/sealed-cpp-component-extensions.md) 关键字指定有效的。ECMA C\+\+\/CLI 规范，Visual C\+\+ 编译器的，不能指定这些在常用的属性，也不在一个重要的属性声明。  
-  
- 若要声明一个密封的抽象或属性，在 get 和 set 访问器函数定义必须一个重要属性然后指定 `abstract` 或 `sealed` 关键字。  
-  
+```Output  
+93  
+43  
 ```  
+  
+## <a name="abstract-and-sealed-properties"></a>抽象和密封属性  
+ 尽管[抽象](../windows/abstract-cpp-component-extensions.md)和[密封](../windows/sealed-cpp-component-extensions.md)关键字指定为有效在 ECMA C + + /cli CLI 规范，对于 Visual c + + 编译器，不能指定它们普通属性，也不属性非 trivial 属性的声明。  
+  
+ 若要声明密封的或抽象属性，必须定义非 trivial 属性，然后指定`abstract`或`sealed`关键字为 get 和 set 访问器函数。  
+  
+```cpp  
 // properties_abstract_sealed.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -320,14 +326,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **86**  
-**87**   
-## 多维属性  
- 可以将多维属性定义特性参数的非标准编号的访问器方法。  
-  
+```Output  
+86  
+87  
 ```  
+  
+## <a name="multidimensional-properties"></a>多维属性  
+ 多维属性可用于定义采用非标准数目的参数的属性访问器方法。  
+  
+```cpp  
 // mcppv2_property_5.cpp  
 // compile with: /clr  
 ref class X {  
@@ -363,13 +370,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **1.1**   
-## 重载属性访问器  
- 下面的示例演示如何重载索引属性。  
-  
+```Output  
+1.1  
 ```  
+  
+## <a name="overloading-property-accessors"></a>重载属性访问器  
+ 下面的示例演示如何重载索引的属性。  
+  
+```cpp  
 // mcppv2_property_6.cpp  
 // compile with: /clr  
 ref class X {  
@@ -399,9 +407,10 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+3.4  
+6.8  
+```  
   
-  **3.4**  
-**6.8**   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [属性](../windows/property-cpp-component-extensions.md)

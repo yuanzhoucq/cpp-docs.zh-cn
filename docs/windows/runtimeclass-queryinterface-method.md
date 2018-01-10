@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClass::QueryInterface 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface 方法"
+title: "Runtimeclass:: Queryinterface 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 8f01f4a1-3fa2-4a8e-88c6-03629236cb9f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f1a103ed6b8c71a285f01cec11d900ee36c21b65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass::QueryInterface 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-检索特定接口的指针。  
+# <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface 方法
+检索指向指定的接口 id。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,20 +38,20 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `riid`  
- 是一个ID接口。  
+ 接口 ID。  
   
  `ppvObject`  
- 当此操作完成时,指向接口的指针由 `riid`参数指定。  
+ 此 opereation 完成后，指向由指定的接口的指针`riid`参数。  
   
-## 返回值  
- S\_OK，如果成功；否则，一错误的 HRESULT。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为 S_OK；否则为指示错误的 HRESULT。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [RuntimeClass 类](../windows/runtimeclass-class.md)

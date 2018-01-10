@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45a69efa4e2b78009065c218924882af92d6bd1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f7a2b52c8a41a3689cc668846e038505425aab4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Microsoft 专用**  
@@ -62,7 +63,7 @@ __m128i _mm_inserti_si64(
 ## <a name="return-value"></a>返回值  
  其较低的 64 位包含原始的低 64 位的 128 位字段`Source1`与指定的位域替换为的低位`Source2`。 高 64 位的返回值是不确定的。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -127,6 +128,6 @@ result3 = 0xfffffffff3210fff
 **结束 Microsoft 专用**  
  高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_mm_extract_si64、 _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)
