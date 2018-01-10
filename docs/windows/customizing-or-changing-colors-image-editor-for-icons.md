@@ -26,11 +26,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 822ce325d188eb371427e5245701a653cc159878
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 762c2a9d9814f9780aeae2d8d61d7006bdc9728c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自定义或更改颜色（图标的图像编辑器）
 图像编辑器[调色板](../windows/colors-window-image-editor-for-icons.md)最初显示 16 种标准颜色。 除了显示的颜色，还可创建自己的自定义颜色。 然后，你可以[保存并加载自定义的调色板](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
@@ -51,10 +54,10 @@ ms.lasthandoff: 10/24/2017
   
 
   
- 要求  
+ 惠?  
   
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [处理颜色](../windows/working-with-color-image-editor-for-icons.md)

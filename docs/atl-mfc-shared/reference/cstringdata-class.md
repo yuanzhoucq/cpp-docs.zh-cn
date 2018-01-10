@@ -30,11 +30,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43242e00d50c46b17e97c71ffe5e61e253347879
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringdata-class"></a>CStringData 类
 此类表示字符串对象的数据。  
@@ -91,7 +92,7 @@ struct CStringData
     > [!NOTE]
     >  字符串对象的实际字符缓冲区追加到字符串管理器分配并`CStringData`对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsimpstr.h  
   
 ##  <a name="addref"></a>CStringData::AddRef  
@@ -231,7 +232,7 @@ void Unlock() throw();
   
  开发人员必须确保在不共享的字符串数据时，将使用锁定和解锁。 锁定的一个很好示例所示[LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法`CSimpleStringT`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

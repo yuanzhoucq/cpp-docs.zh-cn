@@ -37,11 +37,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f883aa9f17c8272335a91ebf333e050888be8257
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 930a8ebf26be12bdaa5b596578c28a7b1adcf574
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfind"></a>_lfind
 用于针对指定的键执行线性搜索。 此函数有一个更安全的版本；请参阅 [_lfind_s](../../c-runtime-library/reference/lfind-s.md)。  
@@ -82,13 +83,13 @@ void *_lfind(
   
  此函数验证其参数。 如果 `compare`、`key` 或 `num` 为 `NULL`，或者如果 `base` 为 NULL 且 *`num` 不为零，或者如果 `width` 小于零，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_lfind`|\<search.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -127,7 +128,7 @@ int main( )
 Hello found  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [搜索和排序](../../c-runtime-library/searching-and-sorting.md)   
  [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   

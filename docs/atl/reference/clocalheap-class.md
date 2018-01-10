@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fefd632dbdb7afa24da358459d3b8c43e7c85ea4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5307e0e6e8925bcbbfa7a03d0140c3a5a08baff9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 类
 此类实现[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 本地堆函数。  
@@ -64,7 +65,7 @@ class CLocalHeap : public IAtlMemMgr
   
  `CLocalHeap`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlmem.h  
   
 ##  <a name="allocate"></a>Clocalheap:: Allocate  
@@ -139,7 +140,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
   
  使用实现[LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   
  [CComHeap 类](../../atl/reference/ccomheap-class.md)   
  [CWin32Heap 类](../../atl/reference/cwin32heap-class.md)   

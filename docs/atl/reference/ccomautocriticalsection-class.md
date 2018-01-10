@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39bae0c1a5f78b852a92d10c4bb06fcb96f0e51d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d12abfceeebeb1cac89b510c14d7a9211173406e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 类
 `CComAutoCriticalSection`提供用于获取和释放的关键部分对象所有权方法。  
@@ -55,7 +56,7 @@ class CComAutoCriticalSection : public CComCriticalSection
   
  `CComAutoCriticalSection`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcore.h  
   
 ##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
@@ -78,7 +79,7 @@ CComAutoCriticalSection();
 ### <a name="remarks"></a>备注  
  析构函数调用[DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)，以释放使用的关键部分对象的所有系统资源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComFakeCriticalSection 类](../../atl/reference/ccomfakecriticalsection-class.md)   
  [类概述](../../atl/atl-class-overview.md)   
  [CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95b75930503ba36c398c4d7e7d5ee2f0e20bbf44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="opt-optimizations"></a>/OPT（优化）
 控制 LINK 在生成期间执行的优化。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 /OPT:{LBR | NOLBR}  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  **REF** &#124;**NOREF**  
  **/Opt: ref**消除函数和从未引用; 的数据**/OPT:NOREF**保留函数和从未引用的数据。  
   
@@ -109,6 +110,6 @@ ms.lasthandoff: 10/24/2017
   
 1.  请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> 属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

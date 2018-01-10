@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7282ba7eb80fd30175751bb5234818a5e3cf1431
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dcf3ffa0c3168c2f96a3ad9bed13ab1213f63da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>将功能添加到复合控件
 一旦你已将任何必要的控件插入复合控件下, 一步涉及添加新功能。 此新功能通常分为两类：  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
  复合控件上的 ActiveX 控件的连接点自动连接，并通过调用断开连接[CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复合控件基础知识](../atl/atl-composite-control-fundamentals.md)
 

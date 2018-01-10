@@ -1,42 +1,43 @@
 ---
-title: "deque::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator 成员 [STL/CLR]"
+title: "deque::generic_reverse_iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: e2a837bc-24be-4a99-a0ee-9dc73be97955
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a388245addf978e5bb6504d16ea1685efba4115e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# deque::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一进行反向迭代器的类型用于泛型接口的容器使用的。  
+# <a name="dequegenericreverseiterator-stlclr"></a>deque::generic_reverse_iterator (STL/CLR)
+反向迭代器用于与容器的泛型接口类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value> generic_reverse_iterator;  
 ```  
   
-## 备注  
- 类型描述可以使用泛型接口。此模板容器类的一个泛反向迭代器。  
+## <a name="remarks"></a>备注  
+ 该类型描述一个泛型反向迭代器，此模板容器类可与泛型接口中使用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_generic_reverse_iterator.cpp   
@@ -73,15 +74,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **" c.**   
-## 要求  
- **页眉：** \<cliext\/deque\>  
+```Output  
+a b c  
+a b c  
+a c c  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::generic\_container](../dotnet/deque-generic-container-stl-clr.md)   
- [deque::generic\_value](../dotnet/deque-generic-value-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
+ [deque::generic_value (STL/CLR)](../dotnet/deque-generic-value-stl-clr.md)

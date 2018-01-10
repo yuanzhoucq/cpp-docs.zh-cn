@@ -34,11 +34,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 249fc38a36ee0f3a61b6347b48219154bada7d22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee0657393ec8322889b527c21a36c13b9e032325
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 初始化全局安全 Cookie。  
@@ -59,13 +60,13 @@ void __security_init_cookie(void);
 ## <a name="example"></a>示例  
  请参阅 [C 运行时错误 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md) 中的示例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`__security_init_cookie`|\<process.h>|  
   
- `__security_init_cookie` 是标准 C 运行库的 Microsoft 扩展。 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ `__security_init_cookie` 是标准 C 运行库的 Microsoft 扩展。 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
- [编译器安全检查深入介绍](http://go.microsoft.com/fwlink/?linkid=7260)
+## <a name="see-also"></a>请参阅  
+ [编译器安全检查深入介绍](http://go.microsoft.com/fwlink/p/?linkid=7260)

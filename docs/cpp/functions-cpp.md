@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5794cd9ec0eb5afc879507bcf8942d6481ebca4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>函数 (C++)
 函数是执行某种操作的代码块。 函数可以选择性地定义使调用方可以将实参传递到函数中的输入形参。 函数可以选择性地返回值作为输出。 函数可用于在单个可重用块中封装常用操作（理想情况是使用可清晰地描述函数行为的名称）。 以下函数接受从调用方的两个整数并返回其总和;`a`和`b`是*参数*类型的`int`。  
@@ -183,7 +184,7 @@ long GetTickCount( void );
   
  请注意，尽管指定 `void` 参数是非法（此处所述的除外），但派生自类型 `void` 的类型（如指向 `void` 的指针和 `void` 的数组）可以出现在参数声明列表中的任何位置。  
   
-### <a name="default-arguments"></a>默认参数  
+### <a name="default-arguments"></a>默认自变量  
  函数签名中的最后一个或几个形参可能会分配有默认实参，这意味着调用方可能会在调用函数时省略实参（除非要指定某个其他值）。  
   
 ```  
@@ -392,7 +393,7 @@ int (*myFunction(char* s))(int);
   
  前面的声明与使用上面的 typedef 的声明等效。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数重载](../cpp/function-overloading.md)   
  [具有变量自变量列表的函数](../cpp/functions-with-variable-argument-lists-cpp.md)   
  [显式默认函数和已删除函数](../cpp/explicitly-defaulted-and-deleted-functions.md)   

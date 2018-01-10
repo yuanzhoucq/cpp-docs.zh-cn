@@ -1,32 +1,33 @@
 ---
-title: "idl_module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_module attribute"
+title: "idl_module |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_module
+dev_langs: C++
+helpviewer_keywords: idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f052692686149b247a50c0d89e77797f4f48fab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# idl_module
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 .dll 文件指定入口点。  
+# <a name="idlmodule"></a>idl_module
+指定的.dll 文件中的入口点。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -43,45 +44,45 @@ caps.handback.revision: 11
 function declaration  
 ```  
   
-#### 参数  
- **名称**  
- 一个用户定义的名称将显示在 .idl 文件中的代码块。  
+#### <a name="parameters"></a>参数  
+ **name**  
+ 用户定义的名称，将显示在.idl 文件的代码块。  
   
- **dllname** \(可选\)  
- 包含导出的 .dll 文件。  
+ **dll 名称**（可选）  
+ 包含导出的.dll 文件。  
   
  `uuid`（可选）  
  唯一 ID。  
   
- **helpstring** \(可选\)  
- 用于的字符串\) 描述类型库。  
+ **helpstring** （可选）  
+ 用于描述类型库的字符字符串。  
   
- **helpstringcontext** \(可选\)  
- 帮助主题的 ID。 .hlp 或 .chm 文件的。  
+ **helpstringcontext** （可选）  
+ 帮助主题中的.hlp 或.chm 文件的 ID。  
   
- **helpcontext** \(可选\)  
- 此类型的库中用来帮助 ID。  
+ **helpcontext** （可选）  
+ 该类型库的帮助 ID。  
   
- **隐藏** \(可选\)  
- 防止库中显示的参数。  请参见 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 属性有关更多信息。  
+ **隐藏** （可选）  
+ 一个参数，防止库显示。 更多详细信息，请参阅 [隐藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 特性。  
   
- ***限制***  \(可选\)  
- 库的成员不能随机调用。  请参见 [限制](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 属性有关更多信息。  
+ ***受限***（可选）  
+ 不能任意调用的库的成员。 更多详细信息，请参阅 [受限](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 特性。  
   
  *函数声明*  
- 您将定义的函数。  
+ 你将定义函数。  
   
-## 备注  
- `idl_module` C\+\+ 特性在 .dll 文件允许您指定入口点，允许从 .dll 文件导入。  
+## <a name="remarks"></a>备注  
+ `idl_module` C + + 属性允许您在.dll 文件中，可用于从.dll 文件导入指定的入口点。  
   
- **idl\_module** 属性具有功能类似于 [模块](http://msdn.microsoft.com/library/windows/desktop/aa367099) MIDL 属性。  
+ **Idl_module**属性具有类似于功能[模块](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 特性。  
   
- 可以从可以从 .dll 文件导出通过将 DLL 在库中入口点块 .idl 文件中的 COM 对象导出任何操作。  
+ 你可以从一个 COM 对象，你可以从导出的.dll 文件通过将 DLL 入口点放在.idl 文件的库块中导出任何内容。  
   
- 在两个步骤所需使用 `idl_module` 。  首先，必须定义 name\/DLL 对。  然后，那么，当您使用 `idl_module` 指定入口点时，指定名称和附加的属性。  
+ 你必须使用`idl_module`中两个步骤。 首先，必须定义一个名称/DLL 对。 然后，使用`idl_module`若要指定的入口点，指定的名称和任何其他属性。  
   
-## 示例  
- 下面的代码演示如何使用 `idl_module` 属性:  
+## <a name="example"></a>示例  
+ 下面的代码演示如何使用`idl_module`属性：  
   
 ```  
 // cpp_attr_ref_idl_module.cpp  
@@ -92,9 +93,9 @@ function declaration
 void FuncName(int i);  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -103,10 +104,9 @@ void FuncName(int i);
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [独立特性](../windows/stand-alone-attributes.md)   
  [entry](../windows/entry.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

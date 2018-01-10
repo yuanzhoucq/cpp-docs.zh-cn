@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3644
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3644
+f1_keywords: C3644
+dev_langs: C++
+helpviewer_keywords: C3644
 ms.assetid: 2e3f6c41-3ec5-4a01-82bc-f11b61ebe68e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e13d03f7750a5111d9a8058c94bb6736831d2fde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6d4520b382a955bba04802c523faf866b1bf6e4b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3644"></a>编译器错误 C3644
 function： 无法编译将生成托管的代码的函数  

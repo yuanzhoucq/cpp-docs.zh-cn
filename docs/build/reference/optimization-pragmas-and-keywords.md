@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39dbce247116b434f9083f19ce23607d2212d2c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d6332ef1f223f00bc099fdda8fe4cf6e7b27f21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimization-pragmas-and-keywords"></a>优化杂注和关键字
 几个关键字和使用 C 或 c + + 代码中的杂注会影响优化：  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [register 关键字](../../cpp/storage-classes-cpp.md#register)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [优化代码](../../build/reference/optimizing-your-code.md)

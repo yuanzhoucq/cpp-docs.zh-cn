@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -84,35 +83,19 @@ f1_keywords:
 - ATLCTL/ATL::CComControlBase::m_spDataAdviseHolder
 - ATLCTL/ATL::CComControlBase::m_spInPlaceSite
 - ATLCTL/ATL::CComControlBase::m_spOleAdviseHolder
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComControlBase class
+dev_langs: C++
+helpviewer_keywords: CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7ad253d42c916ec957ef1e6f5067027696103c79
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d6109bfaf29ee26053bc1dcbb5af8f56a0612215
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 类
 此类提供用于创建和管理 ATL 控件的方法。  
@@ -130,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComControlBase::AppearanceType](#appearancetype)|如果重写你`m_nAppearance`常用属性的类型不`short`。|  
   
@@ -150,12 +133,12 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|检查`iVerb`参数由`IOleObjectImpl::DoVerb`导致控件的用户界面来激活并返回**TRUE**。|  
 |[CComControlBase::DoVerbProperties](#doverbproperties)|显示控件的属性页。|  
 |[CComControlBase::FireViewChange](#fireviewchange)|调用此方法可告知要重绘控件的容器或通知控件的视图已更改的已注册的通知接收器。|  
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|检索**DISPID_AMBIENT_APPEARANCE**时，为控件设置的当前外观︰ 0 代表平面和 3d 1。|  
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|检索**DISPID_AMBIENT_APPEARANCE**时，为控件设置的当前外观： 0 代表平面和 3d 1。|  
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|检索**DISPID_AMBIENT_AUTOCLIP**、 一个标志，指示容器是否支持自动剪辑的控件的显示区域。|  
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|检索**DISPID_AMBIENT_BACKCOLOR**，定义的容器的所有控件的环境背景色。|  
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|检索**DISPID_AMBIENT_CHARSET**，对于所有控件，定义由容器设置的环境的字符集。|  
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|检索**DISPID_AMBIENT_CODEPAGE**，对于所有控件，定义由容器设置的环境的字符集。|  
-|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|检索**DISPID_AMBIENT_DISPLAYASDEFAULT**，是一个标志**TRUE**如果容器已标记为默认按钮，此站点中的控件，并因此按钮控件应自行绘制用粗的框架。|  
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|检索**DISPID_AMBIENT_DISPLAYASDEFAULT**，是一个标志**TRUE**如果容器已标记为默认按钮，此站点中的控件和一个按钮控件应因此绘制自行向粗的框架。|  
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|检索**DISPID_AMBIENT_DISPLAYNAME**，容器已提供给控件的名称。|  
 |[CComControlBase::GetAmbientFont](#getambientfont)|检索指向容器的环境`IFont`接口。|  
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|检索指向容器的环境**IFontDisp**调度接口。|  
@@ -169,7 +152,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|检索**DISPID_AMBIENT_SHOWGRABHANDLES**、 一个标志，指示容器是否允许要为其自身活动时显示抓取手柄的控件。|  
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|检索**DISPID_AMBIENT_SHOWHATCHING**、 一个标志，指示容器是否允许控件以将它显示用阴影图案 UI 处于活动状态时。|  
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|检索**DISPID_AMBIENT_SUPPORTSMNEMONICS**、 一个标志，指示容器是否支持键盘助记键。|  
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|检索**DISPID_AMBIENT_TEXTALIGN**，由容器首选的文本对齐方式︰ 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和右对齐的 3。|  
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|检索**DISPID_AMBIENT_TEXTALIGN**，由容器首选的文本对齐方式： 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和右对齐的 3。|  
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|检索**DISPID_AMBIENT_TOPTOBOTTOM**，内容由容器中的显示方向。|  
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|检索**DISPID_AMBIENT_UIDEAD**、 一个标志，指示容器是否想要响应用户界面操作的控件。|  
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|检索**DISPID_AMBIENT_USERMODE**、 一个标志，指示容器是否处于运行模式 ( **TRUE**) 或设计模式 ( **FALSE**)。|  
@@ -227,8 +210,8 @@ class ATL_NO_VTABLE CComControlBase
   
  有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。 有关 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlctl.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlctl.h  
   
 ##  <a name="appearancetype"></a>CComControlBase::AppearanceType  
  如果重写你**m_nAppearance**常用属性的类型不**短**。  
@@ -283,7 +266,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
  仅处理 COM 映射表中的接口。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
 ##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
  检查`iVerb`参数由`IOleObjectImpl::DoVerb`或者激活控件的用户界面 (`iVerb`等于`OLEIVERB_UIACTIVATE`)，定义当用户双击控件执行的操作 (`iVerb`等于`OLEIVERB_PRIMARY`)，显示控件 (`iVerb`等于`OLEIVERB_SHOW`)，或激活控件 (`iVerb`等于**OLEIVERB_INPLACEACTIVATE**)。  
@@ -297,7 +280,7 @@ BOOL DoesVerbActivate(LONG iVerb);
  值，该值指示要执行的操作`DoVerb`。  
   
 ### <a name="return-value"></a>返回值  
- 返回**TRUE**如果`iVerb`等于`OLEIVERB_UIACTIVATE`， `OLEIVERB_PRIMARY`， `OLEIVERB_SHOW`，或**OLEIVERB_INPLACEACTIVATE**; 否则为返回**FALSE**。  
+ 返回**TRUE**如果`iVerb`等于`OLEIVERB_UIACTIVATE`， `OLEIVERB_PRIMARY`， `OLEIVERB_SHOW`，或**OLEIVERB_INPLACEACTIVATE**; 否则为返回**FALSE**.  
   
 ### <a name="remarks"></a>备注  
  你可以重写此方法以定义你自己激活谓词。  
@@ -334,9 +317,9 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
  一个标准的 HRESULT 值。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
   
- [!code-cpp[NVC_ATL_COM #20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
 ##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
  调用此方法可告知要重绘控件的容器或通知控件的视图已更改的已注册的通知接收器。  
@@ -352,10 +335,10 @@ HRESULT FireViewChange();
  如果控件处于活动状态 (控件类数据成员[CComControlBase::m_bInPlaceActive](#m_binplaceactive)是**TRUE**)，通知你想要重新绘制整个控件的容器。 如果控件处于非活动状态，将通知注册控件的建议接收器 (通过控件类数据成员[CComControlBase::m_spAdviseSink](#m_spadvisesink)) 控件的视图已更改。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
 ##  <a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance  
- 检索**DISPID_AMBIENT_APPEARANCE**时，为控件设置的当前外观︰ 0 代表平面和 3d 1。  
+ 检索**DISPID_AMBIENT_APPEARANCE**时，为控件设置的当前外观： 0 代表平面和 3d 1。  
   
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -369,7 +352,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
  一个标准的 HRESULT 值。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
+ [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
 ##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
  检索**DISPID_AMBIENT_AUTOCLIP**、 一个标志，指示容器是否支持自动剪辑的控件的显示区域。  
@@ -428,7 +411,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
 ##  <a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault  
- 检索**DISPID_AMBIENT_DISPLAYASDEFAULT**，是一个标志**TRUE**如果容器已标记为默认按钮，此站点中的控件，并因此按钮控件应自行绘制用粗的框架。  
+ 检索**DISPID_AMBIENT_DISPLAYASDEFAULT**，是一个标志**TRUE**如果容器已标记为默认按钮，此站点中的控件和一个按钮控件应因此绘制自行向粗的框架。  
   
 ```
 HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
@@ -639,7 +622,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
  一个标准的 HRESULT 值。  
   
 ##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
- 检索**DISPID_AMBIENT_TEXTALIGN**，由容器首选的文本对齐方式︰ 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和右对齐的 3。  
+ 检索**DISPID_AMBIENT_TEXTALIGN**，由容器首选的文本对齐方式： 常规对齐 （左数字右，文本） 为 0、 1 表示左对齐、 居中对齐的 2 和右对齐的 3。  
   
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -744,7 +727,7 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 ### <a name="remarks"></a>备注  
  之前激活，此方法检查该控件具有客户端站点、 检查可见，该控件，获取父窗口中的控件的位置。 激活控件后，此方法将激活控件的用户界面，并通知容器以使控件可见。  
   
- 此方法还会检索`IOleInPlaceSite`， **IOleInPlaceSiteEx**，或**IOleInPlaceSiteWindowless**控件的接口指针并将其存储在控件类的数据成员中[CComControlBase::m_spInPlaceSite](#m_spinplacesite)。 控件类数据成员[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)， [CComControlBase::m_bWndLess](#m_bwndless)， [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)，和[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)设置为 true，根据需要。  
+ 此方法还会检索`IOleInPlaceSite`， **IOleInPlaceSiteEx**，或**IOleInPlaceSiteWindowless**控件的接口指针并将它存储在控件类的数据成员[CComControlBase::m_spInPlaceSite](#m_spinplacesite)。 控件类数据成员[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)， [CComControlBase::m_bWndLess](#m_bwndless)， [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)，和[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)设置为 true，根据需要。  
   
 ##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite  
  调用此方法来查询控件所在位置到标识的接口的指针。  
@@ -779,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
- 如果你添加**自动大小**选项[常用属性](../../atl/reference/stock-properties-atl-control-wizard.md)选项卡的 ATL 控件向导，该向导自动在你的控件类中创建此数据成员、 创建 put 和 get 方法冲突的属性，并支持[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)以在属性变化时自动通知容器。  
+ 如果你添加**自动大小**选项[常用属性](../../atl/reference/stock-properties-atl-control-wizard.md)ATL 控件向导，该向导的选项卡自动在你的控件类中创建此数据成员、 创建 put 和 get 方法的属性并支持[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)以在属性变化时自动通知容器。  
   
 ##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
  标志指示`IDataObjectImpl::GetData`和`CComControlBase::GetZoomInfo`应设置从控件大小`m_sizeNatural`而不是从`m_sizeExtent`。  
@@ -831,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
- 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口，具体取决于值`m_bWndLess`和`m_bInPlaceSiteEx`标志。 (数据成员`m_bNegotiatedWnd`必须**TRUE**为`m_spInPlaceSite`指针才能有效。)  
+ 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口，具体取决于的值`m_bWndLess`和`m_bInPlaceSiteEx`标志。 (数据成员`m_bNegotiatedWnd`必须**TRUE**为`m_spInPlaceSite`指针才能有效。)  
   
  如果`m_bWndLess`是**FALSE**和`m_bInPlaceSiteEx`是**TRUE**，`m_spInPlaceSite`是**IOleInPlaceSiteEx**接口指针。 请参阅[m_spInPlaceSite](#m_spinplacesite)显示这些三个数据成员之间的关系的表。  
   
@@ -952,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  若要使用你的控件类中将此数据成员，你必须将其声明为一个数据成员中你的控件类。 你的控件类将从基类继承该数据成员，因为它在基类中的联合内声明。  
   
- 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口，具体取决于值`m_bWndLess`和[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)标志。 (数据成员[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)必须**TRUE**为[CComControlBase::m_spInPlaceSite](#m_spinplacesite)指针才能有效。)  
+ 数据成员`m_spInPlaceSite`指向[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)接口，具体取决于的值`m_bWndLess`和[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)标志。 (数据成员[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)必须**TRUE**为[CComControlBase::m_spInPlaceSite](#m_spinplacesite)指针才能有效。)  
   
  如果`m_bWndLess`是**TRUE**，`m_spInPlaceSite`是**IOleInPlaceSiteWindowless**接口指针。 请参阅[CComControlBase::m_spInPlaceSite](#m_spinplacesite)显示这些数据成员之间的完整关系的表。  
   
@@ -1094,7 +1077,7 @@ CComPtr<IOleInPlaceSiteWindowless>
   
  `m_spInPlaceSite`指针无效才[m_bNegotiatedWnd](#m_bnegotiatedwnd)标志**TRUE**。  
   
- 下表显示如何`m_spInPlaceSite`指针类型取决于[m_bWndLess](#m_bwndless)和[m_bInPlaceSiteEx](#m_binplacesiteex)数据成员标志︰  
+ 下表显示如何`m_spInPlaceSite`指针类型取决于[m_bWndLess](#m_bwndless)和[m_bInPlaceSiteEx](#m_binplacesiteex)数据成员标志：  
   
 |m_spInPlaceSite 类型|m_bWndLess 值|m_bInPlaceSiteEx 值|  
 |---------------------------|-----------------------|-----------------------------|  
@@ -1394,7 +1377,6 @@ void SetDirty(BOOL bDirty);
 ### <a name="remarks"></a>备注  
  **SetDirty(TRUE)**应调用以控制已更改自上次保存后的标志。 值`m_bRequiresSave`使用检索[CComControlBase::GetDirty](#getdirty)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

@@ -1,59 +1,60 @@
 ---
-title: "HANDLETraits 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HANDLETraits 结构"
+title: "HANDLETraits 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+dev_langs: C++
+helpviewer_keywords: HANDLETraits structure
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dabc47a586eaed540757971f7272e5ec4098be09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# HANDLETraits 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-定义处理的常见特性。  
+# <a name="handletraits-structure"></a>HANDLETraits 结构
+定义句柄的共同的特征。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 struct HANDLETraits;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共 Typedef  
+### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
-|--------|--------|  
-|`Type`|是图柄的同义词。|  
+|名称|描述|  
+|----------|-----------------|  
+|`Type`|句柄同义词。|  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
+|名称|描述|  
+|----------|-----------------|  
 |[HANDLETraits::Close 方法](../windows/handletraits-close-method.md)|关闭指定的句柄。|  
-|[HANDLETraits::GetInvalidValue 方法](../windows/handletraits-getinvalidvalue-method.md)|表示无效的句柄。|  
+|[HANDLETraits::GetInvalidValue 方法](../windows/handletraits-getinvalidvalue-method.md)|表示一个无效句柄。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `HANDLETraits`  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- Microsoft::WRL::Wrappers::HandleTraits **命名空间:**  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Wrappers::HandleTraits 命名空间](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

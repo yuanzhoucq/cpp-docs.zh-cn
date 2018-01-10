@@ -1,32 +1,33 @@
 ---
-title: "requires_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.requires_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requires_category attribute"
+title: "requires_category |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.requires_category
+dev_langs: C++
+helpviewer_keywords: requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 677e3c94a5db69dafb66a5cd33749c129cb35afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# requires_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定目标类必需的组件类。  
+# <a name="requirescategory"></a>requires_category
+指定目标类的必需的组件类别。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,17 +36,17 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 参数  
- *requires\_category*  
- 必需的类的 ID。  
+#### <a name="parameters"></a>参数  
+ *requires_category*  
+ 所需的类别 ID。  
   
-## 备注  
- **requires\_category** C\+\+ 特性指定目标类所需的组件类。  有关更多信息，请参见 [REQUIRED\_CATEGORY](../Topic/REQUIRED_CATEGORY.md)。  
+## <a name="remarks"></a>备注  
+ **Requires_category** c + + 特性指定所需的目标类的组件类别。 有关详细信息，请参阅[REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)。  
   
- 此特性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi\_progid](../windows/vi-progid.md) 属性 \(或表示这些中为\) 的其他特性也适用于同一元素。  
+ 此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。  
   
-## 示例  
- 下面的代码要求对象实现控件类。  
+## <a name="example"></a>示例  
+ 下面的代码要求该对象实现的控制类别。  
   
 ```  
 // cpp_attr_ref_requires_category.cpp  
@@ -61,20 +62,19 @@ caps.handback.revision: 10
 class CMyClass {};  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**类**， `struct`|  
+|**适用对象**|**class**， `struct`|  
 |**可重复**|否|  
-|**必需的特性**|一个或多个以下各项: **coclass**、 **progid**或 **vi\_progid**。|  
+|**必需的特性**|以下一个或多个属性： **coclass**、 **progid**或 **vi_progid**。|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [COM Attributes](../windows/com-attributes.md)   
- [implements\_category](../windows/implements-category.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [COM 特性](../windows/com-attributes.md)   
+ [implements_category](../windows/implements-category.md)   

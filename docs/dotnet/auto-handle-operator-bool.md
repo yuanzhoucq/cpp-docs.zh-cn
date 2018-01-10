@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45454de445b0f8304a78e46a098e23173bb9889f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4108baa84028c4168d2c08557b9837fa845facb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 使用的运算符`auto_handle`条件表达式中。  
@@ -70,11 +73,11 @@ s2 is valid
 s2 is now invalid  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto_handle 成员](../dotnet/auto-handle-members.md)   
  [auto_handle::operator!](../dotnet/auto-handle-operator-logical-not.md)

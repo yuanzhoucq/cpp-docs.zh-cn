@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23c403d5e872818345b319ea6786da6b2f42fabc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 987f754ccdf03e5a252feae693a1f7718da1b353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>通过存档存储和加载 CObject
 存储和加载`CObject`s 通过存档需要额外考虑。 在某些情况下，应调用`Serialize`函数的对象，其中`CArchive`对象是参数的`Serialize`调用，而不是使用 **< \<** 或 **>>** 运算符的`CArchive`。 需要牢记的重要事实是， `CArchive`  **>>** 运算符构造`CObject`在内存中基于`CRuntimeClass`以前由存储存档写入到文件的信息。  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/24/2017
   
  总之，如果可序列化类定义一个嵌入**CObjec**t 作为成员，你应该*不*使用`CArchive`  **< \<** 和 **>>** 运算符为该对象，但应调用`Serialize`函数。 此外，如果可序列化类定义的指针`CObject`(或从派生的对象`CObject`) 作为成员，但构造此其他对象在其自己的构造函数，你还应调用`Serialize`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [序列化：对象的序列化](../mfc/serialization-serializing-an-object.md)
 

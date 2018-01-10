@@ -13,16 +13,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0c57e6b8ffb501ea4c6b75429bab88bbe5dc93eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5859f3ebfcb55427e239a0018d539e2f4df13800
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-basic-windows-runtime-component-using-wrl"></a>演练：使用 WRL 创建基本 Windows 运行时组件
 本文档演示如何使用 Windows 运行时 c + + 模板库 (WRL) 来创建基本 Windows 运行时组件。 组件添加两个数字，并且结果为质数时引发事件。 本文档还演示如何使用通过使用 JavaScript 的通用 Windows 平台应用中的组件。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   体验[Windows 运行时](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)。  
   
@@ -115,7 +118,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="next-steps"></a>后续步骤  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 运行时 c + + 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [类库项目模板](../windows/wrl-class-library-project-template.md)   
  [C/c + + 代码分析工具](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 278518ae37a4e76ea4fe0252e3341e54daebe599
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c00a3842db37cc5027809f717ac47bd471dd073f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-command-line"></a>BSCMAKE 命令行
 若要运行 BSCMAKE，使用以下命令行语法：  
@@ -43,5 +44,5 @@ BSCMAKE main.sbr file1.sbr file2.sbr
   
  有关相关信息，请参阅[BSCMAKE 命令文件](../../build/reference/bscmake-command-file-response-file.md)和[BSCMAKE 选项](../../build/reference/bscmake-options.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BSCMAKE 参考](../../build/reference/bscmake-reference.md)

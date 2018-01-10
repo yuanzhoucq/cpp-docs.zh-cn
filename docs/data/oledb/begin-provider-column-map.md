@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PROVIDER_COLUMN_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROVIDER_COLUMN_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROVIDER_COLUMN_MAP 宏"
+title: "BEGIN_PROVIDER_COLUMN_MAP |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROVIDER_COLUMN_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROVIDER_COLUMN_MAP macro
 ms.assetid: 506b8c0f-6be9-4c97-ba81-c4b7f7d428fa
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 05b70429c127927c7b436980f573efedee14707e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PROVIDER_COLUMN_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-标记提供程序列映射项的开始。  
+# <a name="beginprovidercolumnmap"></a>BEGIN_PROVIDER_COLUMN_MAP
+标记提供程序列映射条目的开始。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -36,19 +37,19 @@ theClass
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `theClass`  
- \[in\] 类的名称所属此映射。  
+ [in]此映射所属的类的名称。  
   
-## 示例  
- 这是一个示例提供程序列映射：  
+## <a name="example"></a>示例  
+ 下面是示例提供程序列映射：  
   
- [!CODE [NVC_OLEDB_Provider#4](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#4)]  
+ [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   

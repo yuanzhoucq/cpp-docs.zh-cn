@@ -58,11 +58,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fd0738d1a08eb0c2285f12314770ec1120e7d97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
 
@@ -154,9 +155,9 @@ unsigned char* _mbstok_s(
 
 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 版本的这些功能，而不必`_l`后缀区域设置相关的行为使用当前线程区域设置。 版本与`_l`后缀是相同，只不过它们改用*区域设置*参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`strtok_s`|\<string.h>|
 |`_strtok_s_l`|\<string.h>|
@@ -238,7 +239,7 @@ Tokens:
  tokens  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)  
 [区域设置](../../c-runtime-library/locale.md)  

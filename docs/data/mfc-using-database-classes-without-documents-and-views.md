@@ -28,11 +28,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89c8c1d67a8273b542c088783e4b5121038c9fc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1691d1f90201b25cc53cd07e80626e98c447e66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC：不结合文档和视图使用数据库类
 有时你不可能想要使用的框架的数据库应用程序中的文档/视图体系结构。 本主题说明：  
@@ -119,5 +122,5 @@ CYourNameApp theApp;
   
 -   使用记录集对象，就像在文档或视图的上下文中。 在成员中的应用程序或框架窗口对象的函数创建记录集。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 数据库类](../data/mfc-database-classes-odbc-and-dao.md)

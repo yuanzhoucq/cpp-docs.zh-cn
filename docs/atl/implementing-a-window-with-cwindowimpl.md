@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b21557fce0735f23e89fe1594a7025170f5f7e7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80aca6af847a33fd7217d0ad710c928f6d2ca32e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>实现 CWindowImpl 的窗口
 若要实现一个窗口，从派生类`CWindowImpl`。 在派生类中，声明消息映射和消息处理程序函数。 你现在可以通过三种不同的方式使用您的类：  
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
   
  而不是调用**创建**，调用`SubclassWindow`和它将句柄传递到所需子类化的现有窗口。 一旦对窗口子类化，它将使用`CWindowImpl::WindowProc`（或你重写此方法的函数） 来将消息定向到的消息映射。 若要分离子类化的窗口，从你的对象，调用`UnsubclassWindow`。 然后将还原窗口的原始窗口过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现窗口](../atl/implementing-a-window.md)
 

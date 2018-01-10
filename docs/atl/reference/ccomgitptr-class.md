@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54a1cebd11fbb1d7fffad69fadd5a588c0c1a04d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 类
 此类提供用于处理与接口指针的方法和全局接口表 (GIT)。  
@@ -82,7 +83,7 @@ class CComGITPtr
 > [!NOTE]
 >  全局接口表工具才使用 DCOM 1.1 版的 Windows 95 和更高版本、 Windows 98、 Windows NT 4.0 Service Pack 3 和更高版本和 Windows 2000 上可用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="attach"></a>CComGITPtr::Attach  
@@ -251,7 +252,7 @@ HRESULT Revoke() throw();
 ### <a name="remarks"></a>备注  
  从 GIT 中删除该接口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自由线程封送处理程序](../../atl/atl-and-the-free-threaded-marshaler.md)   
  [跨单元访问接口](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
  [何时使用全局接口表](http://msdn.microsoft.com/library/windows/desktop/ms693729)   

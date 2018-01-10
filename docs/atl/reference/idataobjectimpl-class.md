@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be2fbd11ac875906c9fc4fca4c58d3979f49cc3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 类
 此类提供用于支持统一数据传输和管理连接的方法。  
@@ -85,7 +86,7 @@ class IDataObjectImpl
   
  `IDataObjectImpl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlctl.h  
   
 ##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
@@ -226,5 +227,5 @@ HRESULT SetData(
 ### <a name="remarks"></a>备注  
  请参阅[IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) Windows SDK 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

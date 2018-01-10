@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f59a90828f338d918f753c8ba79236fd7edc1587
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>将项目从混合模式转换为纯中间语言项目
 默认情况下，所有 Visual c + + CLR 项目链接到 C 运行时库。 因此，这些项目被归类为混合模式应用程序，因为它们联合使用面向公共语言运行库 （托管代码） 的本机代码。 在编译时它们被编译到中间语言 (IL)，也称为 Microsoft 中间语言 (MSIL)。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/24/2017
         // #include <tchar.h>  
         ```  
   
-         - 或 -  
+         或  
   
          例如，在 Windows 窗体应用程序：  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 10/24/2017
         // #include <tchar.h>  
         ```  
   
-    6.  为 Windows 窗体中的应用程序，Form1.cpp，注释掉`#include`引用 windows.h 的语句。 例如：  
+    6.  为 Windows 窗体中的应用程序，Form1.cpp，注释掉`#include`引用 windows.h 的语句。 例如:  
   
         ```  
         // #include <windows.h>  
@@ -89,7 +92,7 @@ ms.lasthandoff: 10/24/2017
         |[双精度](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|表示一个双精度浮点数。|  
         |[Guid](https://msdn.microsoft.com/en-us/library/system.guid\(v=vs.140\).aspx)|表示全局唯一标识符 (GUID)。|  
         |[Int16](https://msdn.microsoft.com/en-us/library/system.int16\(v=vs.140\).aspx)|表示 16 位有符号整数。|  
-        |[Int32](https://msdn.microsoft.com/en-us/library/system.int32\(v=vs.140\).aspx)|表示 32 位有符号整数。|  
+        |[Int32](https://msdn.microsoft.com/en-us/library/system.int32\(v=vs.140\).aspx)|表示 32 位带符号整数。|  
         |[Int64](https://msdn.microsoft.com/en-us/library/system.int64\(v=vs.140\).aspx)|表示 64 位有符号整数。|  
         |[IntPtr](https://msdn.microsoft.com/en-us/library/system.intptr\(v=vs.140\).aspx)|用于表示指针或句柄的平台特定类型。|  
         |[SByte](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|表示 8 位有符号整数。|  

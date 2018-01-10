@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,19 @@ f1_keywords:
 - ATLUTIL/ATL::CNoWorkerThread::Initialize
 - ATLUTIL/ATL::CNoWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CNoWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CNoWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 9d5722ece0c85c07445f22d93e4840b9188b246c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 类
 使用此类的自变量作为`MonitorClass`如果你想要禁用动态缓存维护缓存类模板参数。  
@@ -65,7 +62,7 @@ class CNoWorkerThread
   
  此类中的方法的实现不执行任何操作。 始终返回一个 HRESULT 的方法返回 S_OK，并始终返回句柄或线程 ID 的方法的返回 0。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlutil.h  
   
 ##  <a name="addhandle"></a>CNoWorkerThread::AddHandle  
@@ -171,4 +168,3 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
 ### <a name="remarks"></a>备注  
  此类提供的实现没有任何影响。
-

@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e780bda6850ef2096ecaf1dbffeefdb9d11c9f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令行上生成 C/c + + 代码
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 版本而异的实际开始菜单文件夹名称和快捷名称[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]已安装和安装如果你设置一个昵称。 例如，如果你有 Visual Studio 2017 年 1 安装，并且你已为它赋予 15.3 安装昵称，开发人员命令提示符快捷方式名为**VS 2017 (15.3) 的开发人员命令提示符**，名为的文件夹中**Visual Studio 2017**。 
 
-如果已安装[生成 Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=840931)或[Visual c + + 2015年生成工具](http://landinghub.visualstudio.com/visual-cpp-build-tools)版本，可能仅有特定的本机或跨工具开发人员命令提示符选项。 
+如果已安装[生成 Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931)或[Visual c + + 2015年生成工具](http://landinghub.visualstudio.com/visual-cpp-build-tools)版本，可能仅有特定的本机或跨工具开发人员命令提示符选项。 
 
 <a name="developer_command_prompt"></a>
 ## <a name="to-open-a-developer-command-prompt-window"></a>若要打开开发人员命令提示符窗口  
@@ -86,11 +87,11 @@ ms.lasthandoff: 10/24/2017
 |Vcvarsall.bat 体系结构自变量|编译器|主机计算机体系结构|生成输出体系结构|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|x86 32 位本机|x86、x64|x86|  
-|x86\_amd64 或 x86\_x64|x86 跨平台上的 x64|x86、x64|x64|  
+|x86\_amd64 或 x86\_x64|x86 跨平台上的 x64|x86、x64|X64|  
 |x86_arm|x86 跨平台上的 ARM|x86、x64|ARM|  
-|amd64 或 x64|x64 64 位本机编译器|x64|x64|  
-|amd64\_x86 或 x64\_x86|x64 上的 x86 跨|x64|x86|  
-|amd64\_arm 或 x64\_arm|平台 x64 兼容上的 ARM|x64|ARM|  
+|amd64 或 x64|x64 64 位本机编译器|X64|X64|  
+|amd64\_x86 或 x64\_x86|x64 上的 x86 跨|X64|x86|  
+|amd64\_arm 或 x64\_arm|平台 x64 兼容上的 ARM|X64|ARM|  
   
 你可以使用**存储**或**uwp**选项以指定的平台类型，还是两者皆未指定桌面应用程序。 若要指定的 Windows SDK 版本，可以使用一个完整的 Windows 10 SDK 数字，如 10.0.10240.0，或指定 8.1 若要使用 Windows 8.1 SDK。 使用 14.0 指定 Visual Studio 2015 编译器工具集;默认情况下，环境设置为使用 Visual Studio 2017 编译器工具集。
 
@@ -187,6 +188,6 @@ ms.lasthandoff: 10/24/2017
 [C/C++ 生成工具](../build/reference/c-cpp-build-tools.md)  
 提供指向 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中包括的 C/C++ 生成工具的链接。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

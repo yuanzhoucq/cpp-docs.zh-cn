@@ -1,36 +1,38 @@
 ---
-title: "IRowsetCreatorImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetCreatorImpl"
-  - "ATL.IRowsetCreatorImpl"
-  - "ATL::IRowsetCreatorImpl<T>"
-  - "ATL.IRowsetCreatorImpl<T>"
-  - "IRowsetCreatorImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetCreatorImpl 类"
+title: "IRowsetCreatorImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetCreatorImpl
+- ATL.IRowsetCreatorImpl
+- ATL::IRowsetCreatorImpl<T>
+- ATL.IRowsetCreatorImpl<T>
+- IRowsetCreatorImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetCreatorImpl class
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3a1a1c17ad9469ff31b5520ffadb3349f86827ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetCreatorImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`IObjectWithSite` 执行与  **相同，而且支持 OLE DB 属性** DBPROPCANSCROLLBACKWARDS 和 DBPROPCANFETCHBACKWARDS。  
+# <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 类
+执行与相同的功能`IObjectWithSite`但使 OLE DB 属性还**DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template < class T >  
@@ -38,24 +40,24 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
    : public IObjectWithSiteImpl< T >  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 从**IRowsetCreator**派生的设备上下文类。  
+ 从派生的类**IRowsetCreator**。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[SetSite](../../data/oledb/irowsetcreatorimpl-setsite.md)|将包含的行集合对象的站点。|  
+|[SetSite](../../data/oledb/irowsetcreatorimpl-setsite.md)|设置包含行集对象的站点。|  
   
-## 备注  
- 此类从 [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) 继承并重写。[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) 尽管提供程序命令或会话对象创建行集合时，它调用在查找 `IObjectWithSite` 的行集合对象的 `QueryInterface` 并调用传递行集合对象的 **IUnkown** 接口的 `SetSite`，当站点接口。  
+## <a name="remarks"></a>备注  
+ 此类继承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和替代[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 当提供程序命令或会话对象创建一个行集合时，它将调用`QueryInterface`寻找行集对象上`IObjectWithSite`和调用`SetSite`将行集对象传递**IUnkown**作为站点接口的接口。  
   
-## 要求  
- **头文件:** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

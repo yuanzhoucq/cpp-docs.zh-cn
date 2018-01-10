@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: db0ab662735a29e1b37536ebbccf3e94fa056070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 821992a6a0684e965f804729b470075038310ef1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakptr-class"></a>weak_ptr 类
 回绕弱链接指针。  
@@ -111,7 +112,7 @@ public:
 |-|-|  
 |[operator=](#op_eq)|替换所拥有的资源。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<memory>  
   
  **命名空间：** std  
@@ -124,7 +125,7 @@ typedef Ty element_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Ty`的同义词。  
+ 该类型是模板参数 `Ty` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -550,6 +551,6 @@ wp0.expired() == true
 *wp2.lock() == 5  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [shared_ptr 类](../standard-library/shared-ptr-class.md)
 

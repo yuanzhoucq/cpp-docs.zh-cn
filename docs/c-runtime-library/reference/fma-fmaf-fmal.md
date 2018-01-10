@@ -33,37 +33,22 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 59238cf511be936b0d882c2f00320ee7422904e0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 两个值相乘，添加第三个值，然后将结果舍入，由于中间舍入不会丢失任何精度。  
@@ -121,10 +106,10 @@ long double fmal(
 |问题|返回|  
 |-----------|------------|  
 |`x` = INFINITY、`y` = 0 或<br /><br /> `x` = -0、`y` = INFINITY|NaN|  
-|`x` 或 `y` = 确切 ± INFINITY、`z` = 带相反符号的 INFINITY|NaN|  
+|`x`或`y`= 确切 ± 无穷大，`z`符号相反 = 无穷大|NaN|  
 |`x` 或 `y` = NaN|NaN|  
 |非（`x` = 0，`y`= 不定值）和 `z` = NaN<br /><br /> 非（`x`= 不定值，`y`= 0）和 `z` = NaN|NaN|  
-|溢出范围错误|±HUGE_VAL、±HUGE_VALF 或 ±HUGE_VALL|  
+|溢出范围错误|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|  
 |下溢范围错误|舍入后的正确值。|  
   
  按 [_matherr](../../c-runtime-library/reference/matherr.md) 中所指定的报告错误。  
@@ -134,15 +119,15 @@ long double fmal(
   
  此函数计算值就好像它采取了无限精度，然后将最终结果舍入。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  
 |`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [remainder、remainderf、remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)   
  [remquo、remquof、remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)

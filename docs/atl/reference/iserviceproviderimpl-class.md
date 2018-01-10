@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39dbab33f631ab9e0dc2b605169e92b6d12d78a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 类
 此类提供的默认实现`IServiceProvider`接口。  
@@ -62,7 +63,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  `IServiceProviderImpl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
@@ -91,7 +92,7 @@ STDMETHOD(QueryService)(
 |返回值|含义|  
 |------------------|-------------|  
 |S_OK|服务已成功创建或检索。|  
-|E_INVALIDARG|一个或多个参数无效。|  
+|E_INVALIDARG|一个或多个自变量无效。|  
 |E_OUTOFMEMORY|内存不足，无法创建服务。|  
 |E_UNEXPECTED|发生未知错误。|  
 |E_NOINTERFACE|所请求的接口不是此服务的一部分，或者服务未知。|  
@@ -111,5 +112,5 @@ STDMETHOD(QueryService)(
   
  两个不同的服务，如 SID_SMyService 和 SID_SYourService，可以同时指定使用相同的接口，即使接口的实现可能具有共同点之间的两个服务没有任何内容。 此方法有效，因为调用`QueryService`（SID_SMyService，IID_IDispatch） 可以返回不同的对象比`QueryService`（SID_SYourService，IID_IDispatch）。 指定不同的服务标识符时，将不会假定对象标识。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

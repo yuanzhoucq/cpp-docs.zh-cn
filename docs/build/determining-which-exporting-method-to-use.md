@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 013620a6353c281b2d60a8c4f847f57c60e5f10c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7375d4baf31c1564493fd29938ef2ac8ee034f3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-which-exporting-method-to-use"></a>确定要使用的导出方法
 您可以通过两种方法导出函数 - .def 文件或 `__declspec(dllexport)` 关键字。 为了帮助您决定哪种方法更适合您的 DLL，请考虑以下问题：  
@@ -67,5 +68,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [修饰的名](../build/reference/decorated-names.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 DLL 导出](../build/exporting-from-a-dll.md)

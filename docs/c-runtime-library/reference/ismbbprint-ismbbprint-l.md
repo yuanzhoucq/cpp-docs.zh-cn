@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 451128fda38e5733cc9650e4783964d8c8aebfdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2af7888be70a95aed35190b942e55a8a8247abba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint、_ismbbprint_l
 确定指定的多字节字符是否为打印字符。  
@@ -74,17 +75,17 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- 对于 `c`是非零，否则是 0。 `_ismbbprint` 对依赖于区域设置的任何行为使用当前区域设置。 `_ismbbprint_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
+ 对于 `c` 是非零，否则是 0。 `_ismbbprint` 对依赖于区域设置的任何行为使用当前区域设置。 `_ismbbprint_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbbprint`|\<mbctype.h>|  
 |`_ismbbprint_l`|\<mbctype.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
  [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

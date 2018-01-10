@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords: std::chrono [C++], time_point
-ms.openlocfilehash: f669baf6bbe9fa83965c8a3d28d2356291b859f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timepoint-class"></a>time_point 类
 一个 `time_point`，描述表示时间点的类型。 它包含类型为 [duration](../standard-library/duration-class.md) 的对象，用于存储运行时间，因为由模板参数 `Clock` 表示 epoch。  
@@ -69,7 +70,7 @@ class time_point;
 |[time_point::operator+=](#op_add_eq)|将指定的值添加到存储持续时间。|  
 |[time_point::operator-=](#operator-_eq)|从存储的持续时间减去指定的值。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<chrono >  
   
  **命名空间：**std::chrono  
@@ -155,7 +156,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 constexpr duration time_since_epoch() const;
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
 

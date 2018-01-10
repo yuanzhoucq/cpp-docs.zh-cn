@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b64b1dfd342598735124940d01b1bb4939242e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ba42921f1e192c90e302b437b9a7d1b4e5eb34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-linker-options"></a>设置链接器选项
 内部或外部开发环境，可以设置链接器选项。 每个链接器选项的主题讨论如何可以在开发环境中设置它。 请参阅[链接器选项](../../build/reference/linker-options.md)有关的完整列表。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
   
  选项将应用于整个生成;无选项可以应用于特定的输入文件中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
  [链接器选项](../../build/reference/linker-options.md)

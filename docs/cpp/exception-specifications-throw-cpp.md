@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>异常规范 （throw，noexcept） （c + +）
 异常规范是 c + + 语言功能，它指示的异常类型的函数可以传播的程序员的意图。 你可以指定一个函数可能或可能不通过使用中退出的异常*异常规范*。 编译器可以使用此信息来优化对该函数调用和终止程序，如果异常转义函数。 有两种类型的异常规范。 *Noexcept 规范*是 C + + 11 中的新增功能。 它指定的潜在可以转义函数的异常集是否为空。 *动态异常规范*，或`throw(optional_type_list)`规范中，在 C + + 11 中已弃用，并且仅部分 Visual Studio 提供的支持。 此异常规范旨在提供有关可以跳出函数引发哪些异常的摘要信息，但在实践中找到它就会出现问题。 证明确实有一定用处的一个动态异常规范是无条件`throw()`规范。 例如，以下函数声明中：  
@@ -65,7 +66,7 @@ void MyFunction(int i) noexcept;
 |函数|/EHsc|/EHs|/EHa|/EHac|  
 |--------------|------------|-----------|-----------|------------|  
 |没有异常规范的 C++ 函数|是|是|是|是|  
-|使用 c + + 函数`noexcept`， `noexcept(true)`，或`throw()`异常规范|No|No|是|是|  
+|使用 c + + 函数`noexcept`， `noexcept(true)`，或`throw()`异常规范|否|否|是|是|  
 |使用 c + + 函数`noexcept(false)`， `throw(...)`，或`throw(type)`异常规范|是|是|是|是|  
   
 ## <a name="example"></a>示例  
@@ -137,6 +138,6 @@ About to throw 1
 in handler  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [try、throw 和 catch 语句 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)   
  [C++ 异常处理](../cpp/cpp-exception-handling.md)

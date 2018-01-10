@@ -35,11 +35,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2473dcac2d737d8419a90f4f8e7a47939065f3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="read"></a>_read
 
@@ -74,7 +75,7 @@ int _read(
   
 如果 *buffer* 为 **NULL**，则将调用无效的参数处理程序。 如果允许执行继续，则函数将返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
-有关此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+有关此代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
 
@@ -82,13 +83,13 @@ int _read(
   
 如果文件是在文本模式下打开的，则在 `_read` 遇到 CTRL+Z 字符（被视为文件尾指示符）时，读取将终止。 使用 [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md) 可清除文件尾指示符。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_read`|\<io.h>|  
   
-有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>库  
 
@@ -147,7 +148,7 @@ Line two.
 Read 19 bytes from file  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
 [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   

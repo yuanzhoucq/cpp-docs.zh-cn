@@ -1,51 +1,54 @@
 ---
-title: "STL/CLR 容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "容器, STL/CLR"
-  - "STL/CLR, 容器"
+title: "STL/CLR 容器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR, containers
+- containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# STL/CLR 容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-STL\/CLR 库在标准 C\+\+ 库中找到具有相同容器，但在 .NET Framework 的托管环境中运行。  如果您已经熟悉标准模板库 \(STL\) \(STL\)，STL\/CLR 的最佳方式是继续使用已开发的，则代码升级面向公共语言运行时后 \(CLR\) 的技能。  
+# <a name="stlclr-containers"></a>STL/CLR 容器
+STL/CLR 库具有在 c + + 标准库中，找到的相同容器，但它的.NET framework 的托管环境中运行。 如果你已熟悉 c + + 标准库，STL/CLR 是继续使用你已经开发了在升级你的代码以面向公共语言运行时 (CLR) 时的技能的最佳方式。  
   
- 本文档提供的概述STL\/CLR 容器，例如容器元素的要求，您可以插入到容器元素的所有权发出类型与容器中的元素。  在适用地方本机和标准模板库 \(STL\) STL\/CLR 之间差异会提到。  
+ 本文档提供 STL/CLR 中的容器的概述，例如容器元素的需求、可以插入到容器中的元素类型以及容器中的元素的所有权问题。 在适当的情况会提及本机 c + + 标准库与 STL/CLR 之间的差异。  
   
-## 容器元素的要求  
- 所有元素插入 STL 容器必须遵循某些指南。  有关详细信息，请参阅[STL\/CLR 容器元素的要求](../dotnet/requirements-for-stl-clr-container-elements.md)。  
+## <a name="requirements-for-container-elements"></a>容器元素的需求  
+ 插入到 c + + 标准库容器的所有元素必须都遵循某些准则。 有关详细信息，请参阅[STL/CLR 容器元素的需求](../dotnet/requirements-for-stl-clr-container-elements.md)。  
   
-## 有效元素的容器  
- STL\/CLR 容器可容纳元素为两种类型之一：  
+## <a name="valid-container-elements"></a>有效的容器元素  
+ STL/CLR 容器可容纳以下两种元素类型之一：  
   
--   转换为引用类型。  
+-   指向引用类型的句柄。  
   
 -   引用类型。  
   
--   不能装箱的值类型。  
+-   未装箱的值类型。  
   
- 将不能插入装箱值类型到STL\/CLR任何容器。  
+ 您不能将装箱的值类型插入到任何 STL/CLR 容器中。  
   
-### 转换为引用类型。  
- 可以插入句柄引用类型到STL\/CLR 容器。  面向 CLR 在 C\+\+ 的句柄很类似于本机 C\+\+ 的指针。  有关详细信息，请参阅[对象句柄运算符 \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)。  
+### <a name="handles-to-reference-types"></a>指向引用类型的句柄  
+ 您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅[对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)。  
   
-#### 示例  
- 下面的示例演示如何插入句柄到 Employee 对象到 [cliext::set](../dotnet/set-stl-clr.md)。  
+#### <a name="example"></a>示例  
+ 下面的示例演示如何插入到 Employee 对象的句柄[cliext:: set](../dotnet/set-stl-clr.md)。  
   
 ```  
 // cliext_container_valid_reference_handle.cpp  
@@ -59,18 +62,18 @@ using namespace System;
 ref class Employee  
 {  
 public:  
-    // STL containers might require a public constructor, so it  
+    // C++ Standard Library containers might require a public constructor, so it  
     // is a good idea to define one.  
     Employee() :  
         name(nullptr),  
         employeeNumber(0) { }  
   
-    // All STL containers require a public copy constructor.  
+    // All C++ Standard Library containers require a public copy constructor.  
     Employee(const Employee% orig) :  
         name(orig.name),  
         employeeNumber(orig.employeeNumber) { }  
   
-    // All STL containers require a public assignment operator.  
+    // All C++ Standard Library containers require a public assignment operator.  
     Employee% operator=(const Employee% orig)  
     {  
         if (this != %orig)  
@@ -82,7 +85,7 @@ public:
         return *this;  
     }  
   
-    // All STL containers require a public destructor.  
+    // All C++ Standard Library containers require a public destructor.  
     ~Employee() { }  
   
     // Associative containers such as maps and sets  
@@ -134,11 +137,11 @@ int main()
 }  
 ```  
   
-### 引用类型  
- 插入引用类型 \(而不是引用类型的句柄\)到STL\/CLR 容器 也是可能的。  此处的主要差异是，当容器类型引用时，删除析构函数需要调用容器的任何元素。  在容器被引用的类型句柄，这些元素的析构函数将不被调用。  
+### <a name="reference-types"></a>引用类型  
+ 还可以将引用类型（而不是指向引用类型的句柄）插入到 STL/CLR 容器中。 此处的主要差异是，当删除类型引用的容器时，将为容器中的所有元素调用析构函数。 在指向引用类型的句柄的容器中，则不会调用这些元素的析构函数。  
   
-#### 示例  
- 下面的示例说明如何在应用程序中插入Employee对象到`cliext::set`。  
+#### <a name="example"></a>示例  
+ 以下示例演示了如何将 Employee 对象插入到 `cliext::set` 中。  
   
 ```  
 // cliext_container_valid_reference.cpp  
@@ -152,18 +155,18 @@ using namespace System;
 ref class Employee  
 {  
 public:  
-    // STL containers might require a public constructor, so it  
+    // C++ Standard Library containers might require a public constructor, so it  
     // is a good idea to define one.  
     Employee() :  
         name(nullptr),  
         employeeNumber(0) { }  
   
-    // All STL containers require a public copy constructor.  
+    // All C++ Standard Library containers require a public copy constructor.  
     Employee(const Employee% orig) :  
         name(orig.name),  
         employeeNumber(orig.employeeNumber) { }  
   
-    // All STL containers require a public assignment operator.  
+    // All C++ Standard Library containers require a public assignment operator.  
     Employee% operator=(const Employee% orig)  
     {  
         if (this != %orig)  
@@ -175,7 +178,7 @@ public:
         return *this;  
     }  
   
-    // All STL containers require a public destructor.  
+    // All C++ Standard Library containers require a public destructor.  
     ~Employee() { }  
   
     // Associative containers such as maps and sets  
@@ -227,13 +230,13 @@ int main()
 }  
 ```  
   
-### 不能装箱的值类型。  
- 您还可以插入已装箱的值类型到STL\/CLR 容器。  已装箱的值类型 *未装箱* 到引用类型的值类型。  
+### <a name="unboxed-value-types"></a>未装箱的值类型  
+ 您还可以将未装箱的值类型插入到 STL/CLR 容器中。 未装箱的值类型是值类型，尚未*装箱*转换为引用类型。  
   
- 值类型元素可以是任何标准值类型，如 `int`，也可以是一个用户定义的值类型，例如 `value class`。  有关更多信息，请参阅[类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)。  
+ 值类型元素可以是标准值类型之一，如 `int`，也可以是用户定义的值类型，如 `value class`。 有关详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)  
   
-#### 示例  
- 以下示例通过值类型 Employee 类修改第一个示例。  此值然后类型插入 `cliext::set` 正值在第一个示例中。  
+#### <a name="example"></a>示例  
+ 以下示例对第一个示例进行了修改，使 Employee 类成为一个值类型。 然后，将此值类型插入到 `cliext::set` 中，与在第一个示例中一样。  
   
 ```  
 // cliext_container_valid_valuetype.cpp  
@@ -296,17 +299,17 @@ int main()
 }  
 ```  
   
- 如果您尝试插入句柄值类型到容器，[编译器错误 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) 生成。  
+ 如果你尝试将值类型的句柄插入到容器，[编译器错误 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md)生成。  
   
-### 性能和内存问题  
- 在确定使用句柄引用类型或值类型作为容器元素时，您必须考虑多个因素。  如果您决定使用值类型元素的副本，请确保每次将元素粘贴到容器中。  对于小的对象，这应不会成为问题，但是，如果插入的对象很大时，性能可能大大影响。  此外，如果利用值类型，同时存储多种容器的元素是不可能的，因为的每个容器都有其自己的元素副本。  
+### <a name="performance-and-memory-implications"></a>性能和内存含义  
+ 在确定是否使用句柄来引用类型或值类型作为容器元素时，您必须考虑多种因素。 如果您决定使用值类型，请记住，每次将一个元素插入到容器中时，都会生成该元素的副本。 对于小对象，这应该不是问题，但是，如果插入的对象很大，则可能大大影响性能。 此外，如果使用的是值类型，则无法将一个元素同时存储在多个容器中，因为每个容器都有自己的元素副本。  
   
- 如果您决定使用句柄引用类型，性能可能会增加，因为元素副本是不必要的，因为会在容器中插入。  同样，不同的是具有值类型，同一元素可以存在多个容器。  但是，其中如果您决定使用句柄，必须注意确保句柄是否有效，并且确保它引用的对象在程序的其他地方未删除。  
+ 如果您决定使用句柄来引用类型，则可能会改善性能，因为在容器中插入元素时无需生成元素的副本。 此外，与值类型不同的是，同一元素可以存在于多个容器中。 但是，其中如果您决定使用句柄，则必须注意确保句柄有效，且未在程序的其他地方删除它所引用的对象。  
   
-## 使用容器所属权的问题  
- STL\/CLR 在工作的容器上值语义。  在将元素插入到容器时，该副本粘贴元素。  如果要获取与引用的语义，可插入对象的句柄，而不是对象。  
+## <a name="ownership-issues-with-containers"></a>容器的所有权问题  
+ STL/CLR 中的容器处理值语义。 每次将一个元素插入到容器中时，都会插入该元素的副本。 如果要获取类似引用的语义，则可插入指向对象的句柄，而不是对象本身。  
   
- 当您调用或被清除对容器的方法处理对象时，句柄引用的对象不会从内存中释放。  你必须显式删除对象，或者一旦确定不再使用对象请允许垃圾回收器能够释放内存，因为这些对象位于托管堆。  
+ 当您调用句柄对象容器的清除或擦除方法时，不会从内存中释放句柄引用的对象。 您必须显式地删除对象，或者允许垃圾回收器在确定不再使用对象之后立即释放内存，因为这些对象驻留在托管堆上。  
   
-## 请参阅  
- [标准模板库](../misc/standard-template-library.md)
+## <a name="see-also"></a>请参阅  
+ [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

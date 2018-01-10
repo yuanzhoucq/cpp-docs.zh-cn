@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - endthreadex
 - _endthreadex
 - endthread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _endthread function
 - endthread function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5abe2f0aa2f62048fefb2f79614e018fbdb51e08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 终止线程； `_endthread` 终止由 `_beginthread` 创建的线程，  `_endthreadex` 终止由 `_beginthreadex`创建的线程。  
@@ -88,26 +72,26 @@ void _endthreadex(
   
  `_endthread` 会自动关闭线程句柄。 （该行为与 Win32 `ExitThread` API 不同。）因此，使用 `_beginthread` 和 `_endthread` 时，请不要通过调用 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API 来显式关闭线程句柄。  
   
- 与 Win32 `ExitThread` API 相同， `_endthreadex` 不会关闭线程句柄。 因此，当你使用 `_beginthreadex` 和 `_endthreadex`时，必须通过调用 Win32 `CloseHandle` API 来关闭线程句柄。  
+ 与 Win32 `ExitThread` API 相同， `_endthreadex` 不会关闭线程句柄。 因此，当你使用 `_beginthreadex` 和 `_endthreadex` 时，必须通过调用 Win32 `CloseHandle` API 来关闭线程句柄。  
   
 > [!NOTE]
 >  `_endthread` 和 `_endthreadex` 会导致 C++ 析构函数在不会调用的线程中处于挂起状态。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`_endthread`|\<process.h>|  
 |`_endthreadex`|\<process.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>库  
- 仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md) 的多线程版本。  
+ 仅限 [C 运行库](../../c-runtime-library/crt-library-features.md) 的多线程版本。  
   
 ## <a name="example"></a>示例  
  请参阅 [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md)示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_beginthread、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)

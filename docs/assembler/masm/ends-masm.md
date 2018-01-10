@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44bdc2f30e91d0a023175784996e735dffe77fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed6fb7576d4ede937d432037fc2e3cdf0b65f9e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 将标记的末尾段、 结构或联合*名称*以前始于[段](../../assembler/masm/segment.md)，[结构](../../assembler/masm/struct-masm.md)，[联合](../../assembler/masm/union.md)，或简化的线段指令。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
 name ENDS  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

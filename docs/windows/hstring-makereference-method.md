@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 026b036e3a4dad0fb88600cb64ac3da892eba2b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e2eba5756f2c18830c4c8fe7e16f2751ea61ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringmakereference-method"></a>HString::MakeReference 方法
 从指定的字符串参数创建 HStringReference 对象。  
@@ -49,10 +52,10 @@ template<unsigned int sizeDest>
 ## <a name="return-value"></a>返回值  
  一个 HStringReference 对象，其值是与指定相同`str`参数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HString 类](../windows/hstring-class.md)

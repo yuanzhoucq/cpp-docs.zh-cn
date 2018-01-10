@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a848e0b995aa138c68344f80123c94a013d82f73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-verify-instead-of-assert"></a>使用 VERIFY 代替 ASSERT
 假设当您运行 MFC 应用程序的调试版本，没有任何问题。 但是，相同的应用程序的发行版本发生崩溃、 返回不正确的结果，和/或具有某些其他异常行为。  
@@ -81,5 +82,5 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [修复发行版本问题](../../build/reference/fixing-release-build-problems.md)

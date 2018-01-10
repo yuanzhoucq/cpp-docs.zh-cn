@@ -1,46 +1,47 @@
 ---
-title: "链接器命令行语法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LINK 工具 [C++], 命令行语法"
-  - "链接器 [C++], 语法"
-  - "链接器命令行 [C++]"
+title: "链接器命令行语法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], syntax
+- linker command line [C++]
+- LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce42aa031b91d5a4ec21ed14ac7cb47643e1325
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 链接器命令行语法
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-要运行 LINK.EXE，可使用下列命令语法：  
+# <a name="linker-command-line-syntax"></a>链接器命令行语法
+若要运行链接。EXE，使用以下命令语法：  
   
 ```  
 LINK arguments  
 ```  
   
- `arguments` 包括选项和文件名，可按任意顺序指定它。  首先处理选项，然后是文件。  使用一个或多个空格或制表符分隔参数。  
+ `arguments`包括选项和文件名并可以按任意顺序指定。 选项是首先处理，则文件。 使用一个或多个空格或制表符分隔自变量。  
   
 > [!NOTE]
->  您只能从 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 命令提示符处启动此工具。  而不能从系统命令提示符或文件资源管理器中启动此工具。  
+>  你只能从 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 命令提示符启动此工具。 不能从系统命令提示符或从文件资源管理器启动此工具。  
   
- 在命令行上，选项由选项说明符（一个短划线 \(\-\) 或一个正斜杠 \(\/\)）后接该选项的名称组成。  选项名不能缩写。  某些选项带参数，参数在冒号 \(:\) 后指定。  在选项规范中不允许有空格或制表符，但在 \/COMMENT 选项中用引号括起来的字符串中除外。  用十进制或 C 语言表示法指定数值参数。  选项名及其关键字或文件名参数不区分大小写，但用作参数的标识符区分大小写。  
+ 命令行中上, 一个选项选项说明符组成，短划线 （-） 或正斜杠 （/） 后, 接选项的名称。 选项名不能缩写。 某些选项带自变量，冒号 （:） 后指定。 不包含空格或选项卡中所允许的选项规范，除 /COMMENT 选项中带引号的字符串中。 以十进制或 C 语言表示法指定数值自变量。 选项名及其关键字或文件名参数不区分大小写，但作为自变量的标识符区分大小写。  
   
- 要将文件传递给链接器，在命令行上 LINK 命令之后指定文件名。  可以使用文件名指定绝对路径或相对路径，并且可在文件名中使用通配符。  如果忽略了点 \(.\) 和文件扩展名，则 LINK 将在查找文件时假定扩展名为 .obj。  LINK 不根据文件扩展名是什么或是否存在扩展名来判断文件的内容；它通过检查文件来确定文件类型，并据此处理它。  
+ 要传递给链接器文件，请在链接命令后命令行上指定文件名。 你可以使用文件名，指定的绝对或相对路径，并可以在文件名中使用通配符。 如果省略圆点 （.） 和文件扩展名，链接假定.obj 为了查找该文件。 链接不使用文件名扩展或在缺乏来作出假设文件; 内容它会通过检查，确定文件的类型，并相应地对其进行处理。  
   
- link.exe 返回零表示成功（无错误）。否则，链接器将返回使链接停止的错误编号。例如，如果生成 LNK1104，链接器，链接器返回 1104。相应地，在返回错误的最低的错误号由链接器为 1000。返回值具有 128 操作系统或 .config 文件表示配置问题；加载程序未加载或 link.exe c2.dll。  
+ link.exe 将返回零成功 （没有错误）。  否则，链接器返回停止链接的错误号。  例如，如果链接器生成 LNK1104，则链接器将返回 1104年。  相应地，链接器返回的错误的最低错误数目为 1000年。  返回值为 128 表示操作系统或.config 文件; 存在配置问题加载程序不加载 link.exe 或 c2.dll。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

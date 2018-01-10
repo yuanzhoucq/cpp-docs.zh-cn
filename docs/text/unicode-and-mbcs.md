@@ -1,58 +1,58 @@
 ---
-title: "Unicode 和 MBCS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mbcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MBCS [C++], Unicode"
-  - "MFC [C++], 字符集"
-  - "字符集 [C++], 多字节"
-  - "运行时库 [C++], 语言可迁移性"
-  - "字符集 [C++], Unicode"
-  - "Unicode [C++], MFC 和 C 运行时函数"
-  - "多字节字符 [C++]"
-  - "运行时 [C++], 语言可迁移性"
+title: "Unicode 和 MBCS |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mbcs
+dev_langs: C++
+helpviewer_keywords:
+- MBCS [C++], Unicode
+- MFC [C++], character sets
+- character sets [C++], multibyte
+- run-time libraries [C++], language portability
+- character sets [C++], Unicode
+- Unicode [C++], MFC and C run-time functions
+- multibyte characters [C++]
+- runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Unicode 和 MBCS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-为支持国际编程，启用了 Microsoft 基础类库 \(MFC\)、Visual C\+\+ 的 C 运行库和 Visual C\+\+ 开发环境。  它们：  
+# <a name="unicode-and-mbcs"></a>Unicode 和 MBCS
+启用 Microsoft 基础类 (MFC) 库、 Visual c + +、 C 运行时库和 Visual c + + 开发环境以帮助你国际化编程。 它们提供：  
   
--   在 Windows 2000（以前为 Windows NT）上提供对 Unicode 标准的支持。  Unicode 是当前的标准，并且应尽可能使用。  
+-   针对在 Windows 2000 (以前称为 Windows NT) 上 Unicode 标准的支持。 Unicode 是最新的标准，应该尽可能使用它。  
   
-     Unicode 是为所有语言提供足够编码的 16 位字符编码。  所有 ASCII 字符都作为“加宽”字符包含在 Unicode 中。  
+     Unicode 是 16 位字符编码，并为所有语言提供足够的编码。 所有的 ASCII 字符作为扩大字符包含在 Unicode。  
   
     > [!NOTE]
-    >  Windows 95、Windows 98 或 Windows Millennium Edition 上不支持 Unicode 标准。  
+    >  在 Windows 95、 Windows 98 或 Windows Millennium Edition 上不支持 Unicode 标准。  
   
--   在所有平台上，支持称为双字节字符集 \(DBCS\) 的多字节字符集 \(MBCS\) 形式。  
+-   在所有平台上调用双字节字符集 (DBCS) 的一种形式的多字节字符集 (MBCS) 支持。  
   
-     DBCS 字符由一个或两个字节构成。  某些范围的字节留出用作“前导字节”。  前导字节指定由它和后面的“尾字节”构成单个双字节宽字符。  必须清楚哪些字节是前导字节。  在某个多字节字符集内，前导字节位于某个特定范围内，尾字节也一样。  当这两种范围重叠时，可能需要计算上下文以确定某个给定的字节是用作前导字节还是尾字节。  
+     DBCS 字符组成 1 或 2 个字节。 某些范围的字节是为留用用作前导字节。 前导字节指定它和以下的结尾字节构成单个 2 字节宽度字符。 你必须跟踪的哪些字节是前导字节。 在特定的多字节字符集中，前导字节位于某个范围内，尾字节也是如此。 这些范围重叠时，可能需要计算上下文以确定某个给定的字节用作前导字节还是结尾字节。  
   
--   对简化 MBCS 编程的工具提供支持（MBCS 编程用于为国际市场编写的应用程序）。  
+-   支持简化的应用程序为国际市场编写 MBCS 编程的工具。  
   
-     当在支持 MBCS 的 Windows 操作系统版本上运行时，Visual C\+\+ 开发系统（包括集成的源代码编辑器、调试器和命令行工具）完全支持 MBCS。  有关更多信息，请参见 [Visual C\+\+ 中的 MBCS 支持](../text/mbcs-support-in-visual-cpp.md)。  
+     MBCS 支持的版本的 Windows 操作系统的 Visual c + + 开发系统上运行的时间，包括集成的源代码编辑器、 调试器和命令行工具 — 是完全支持 MBCS 的。 有关详细信息，请参阅[Visual c + + 中的 MBCS 支持](../text/mbcs-support-in-visual-cpp.md)。  
   
 > [!NOTE]
->  在本文档中，MBCS 用于描述所有对多字节字符的非 Unicode 支持。  在 Visual C\+\+ 中，MBCS 始终是指 DBCS。  不支持比两个字节宽的字符集。  
+>  在本文档中，MBCS 用于描述的多字节字符的所有非 Unicode 支持。 在 Visual c + +，MBCS 始终意味着 DBCS。 不支持 2 个字节宽的字符集。  
   
- 按照定义，ASCII 字符集是所有多字节字符集的子集。  在许多多字节字符集中，0x00 到 0x7F 范围内的每个字符都与 ASCII 字符集中具有相同值的字符相同。  例如，在 ASCII 和 MBCS 字符串中，单字节 **NULL** 字符（“\\0”）的值都是 0x00 并且指示终止空字符。  
+ 根据定义，ASCII 字符集是多字节字符的所有集的子集。 在许多多字节字符集中，0x00 - 0x7F 范围内的每个字符都与 ASCII 字符集中具有相同值的字符相同。 例如，在 ASCII 和 MBCS 字符字符串，1 字节**NULL**字符 (\0) 的值为 0x00 并指示终止 null 字符。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [文本和字符串](../text/text-and-strings-in-visual-cpp.md)   
  [国际支持](../text/international-enabling.md)

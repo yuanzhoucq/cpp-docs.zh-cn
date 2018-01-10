@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 98194aef9fd6da0420a0eb2d9242f83bd659c04f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dd0b2aae6f067d334be37061a1ed7c28fc15ed7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nocref"></a>.NOCREF
 禁止显示符号表和浏览器文件中的符号的列表。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  如果已指定了名称，则禁止仅给定名称。 与相同[。XCREF](../../assembler/masm/dot-xcref.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

@@ -1,32 +1,31 @@
 ---
-title: "RECORD (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RECORD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RECORD directive"
+title: "记录 (MASM) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RECORD
+dev_langs: C++
+helpviewer_keywords: RECORD directive
 ms.assetid: c83db394-0fe3-468f-813f-13302cdc862d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ee4ea13565c7837180765852d53a75f2f5bfe12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RECORD (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-声明了包含指定的字段的一个记录类型。  *fieldname* 命名字段中，指定了 *宽度* 的位数，并且， *表达式* 为其原始值。  
+# <a name="record-masm"></a>RECORD (MASM)
+声明一包含的指定字段的记录类型。 *fieldname*名称字段，*宽度*指定的位数，和*表达式*提供其初始值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,5 +33,5 @@ caps.handback.revision: 6
 [[, fieldname:width [[= expression]]]]...  
 ```  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

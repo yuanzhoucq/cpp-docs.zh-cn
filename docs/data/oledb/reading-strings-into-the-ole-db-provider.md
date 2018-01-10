@@ -1,37 +1,39 @@
 ---
-title: "将字符串读入 OLE DB 提供程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序, 读入字符串"
+title: "字符串读入 OLE DB 提供程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 将字符串读入 OLE DB 提供程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`RMyProviderRowset::Execute` 函数打开文件并读取字符串。  使用者通过调用 [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx) 将文件名传递给提供程序。  提供程序接收文件名并将其存储在成员变量 `m_szCommandText` 中。  `Execute` 从 `m_szCommandText` 中读取文件名。  如果文件名无效或文件不可用，则 `Execute` 返回错误。  否则，它将打开文件并调用 `fgets` 检索字符串。  对于读取的每一组字符串，`Execute` 都创建用户记录 \(`CAgentMan`\) 的一个实例并将其放在数组中。  
+# <a name="reading-strings-into-the-ole-db-provider"></a>将字符串读入 OLE DB 提供程序
+`RMyProviderRowset::Execute`函数打开文件并读取字符串。 使用者将文件名传递给提供程序，通过调用[ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供程序接收的文件名称，并将其存储在成员变量`m_szCommandText`。 `Execute`读取的文件名称`m_szCommandText`。 如果文件名无效，或者该文件不可用，`Execute`返回错误。 否则，将打开的文件和调用`fgets`以检索字符串。 为每个字符串将其设置的读操作，`Execute`创建的用户记录的实例 (`CAgentMan`) 并将其放到一个数组。  
   
- 如果文件无法打开，`Execute` 必须返回 **DB\_E\_NOTABLE**。  如果它返回的是 **E\_FAIL**，提供程序将不能与许多使用者一起工作，并且不会传递 OLE DB  [测试一致性](../../data/oledb/testing-your-provider.md)。  
+ 如果无法打开该文件，`Execute`必须返回**DB_E_NOTABLE**。 如果它返回**E_FAIL**相反，提供程序不会使用多个使用者和未通过 OLE DB[一致性测试](../../data/oledb/testing-your-provider.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 编辑过的 `Execute` 函数类似于这样：  
+### <a name="description"></a>描述  
+ 编辑`Execute`函数如下所示：  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -105,5 +107,5 @@ public:
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [实现简单的只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)

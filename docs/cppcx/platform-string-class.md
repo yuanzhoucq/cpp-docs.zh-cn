@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 744ec295f7bcb86e3228d8f3c62637ad17c53450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstring-class"></a>Platform::String 类
 用于表示文本的 Unicode 字符的有序集合。 有关详细信息和示例，请参阅[字符串](../cppcx/strings-c-cx.md)。  
@@ -47,7 +48,7 @@ public ref class String sealed : Object,
     IPrintable  
 ```  
   
-## <a name="iterators"></a>迭代器  
+## <a name="iterators"></a>Iterators  
  两个迭代器函数（不是字符串类的成员）可以和 `std::for_each` 模板函数合用来枚举字符串对象中的字符。  
   
 |成员|描述|  
@@ -98,7 +99,7 @@ public ref class String sealed : Object,
 |[String:: operator ！ = 运算符](#operator-inequality)|指示两个指定字符串对象是否具有不同的值。|  
 |[String:: operator < 运算符](#operator-less-than)|指示一个字符串对象的值是否小于第二个字符串对象的值。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -144,7 +145,7 @@ int CompareOrdinal(
 ### <a name="return-value"></a>返回值  
  一个整数，指示两个比较字之间的词法关系。 下表列出可能的返回值。  
   
-|值|条件|  
+|“值”|条件|  
 |-----------|---------------|  
 |-1|`str1` 小于 `str2`。|  
 |0|`str1` 等于 `str2`。|  
@@ -484,5 +485,5 @@ String^ String::ToString()
 ### <a name="return-value"></a>返回值  
  其值与当前字符串相同的字符串对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f952de894cad02638a7f304590562f1846bc003
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd3f641a3ac03705ff7f3765d995d5c40bccda7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延迟加载 DLL 的约束
 导入延迟加载有一些约束。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 -   不支持自定义调用约定（例如在 x86 体系结构上使用条件代码）。 此外，任何平台上都不保存浮点寄存器。 如果自定义 Helper 例程或挂钩例程使用浮点类型，则它们需要在具有浮点参数的寄存器调用约定的计算机上完全保存和恢复浮点状态。 如果在 Help 函数中调用采用数值数据处理器 (NDP) 堆栈上的浮点参数的 CRT 函数，延迟加载 CRT DLL 时请小心谨慎。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [链接器的延迟加载 Dll 支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)   
  [LoadLibrary 函数](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
  [GetModuleHandle 函数](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   

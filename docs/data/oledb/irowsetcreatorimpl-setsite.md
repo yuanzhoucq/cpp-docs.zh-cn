@@ -1,39 +1,41 @@
 ---
-title: "IRowsetCreatorImpl::SetSite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetCreatorImpl.SetSite"
-  - "IRowsetCreatorImpl<T>::SetSite"
-  - "IRowsetCreatorImpl::SetSite"
-  - "SetSite"
-  - "ATL.IRowsetCreatorImpl.SetSite"
-  - "ATL::IRowsetCreatorImpl<T>::SetSite"
-  - "ATL::IRowsetCreatorImpl::SetSite"
-  - "ATL.IRowsetCreatorImpl<T>.SetSite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetSite 方法"
+title: "Irowsetcreatorimpl:: Setsite |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
+dev_langs: C++
+helpviewer_keywords: SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed3f5f0bce2408cd2a4439aac6728f0e00760b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetCreatorImpl::SetSite
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-将包含的行集合对象的站点。  有关更多信息，请参见 [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
+# <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
+设置包含行集对象的站点。 有关详细信息，请参阅[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -42,18 +44,18 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pCreator`  
- \[in\] 用于管理行集合对象的站点的 **IUnknown** 接口指针的指针。  
+ [in]指向**IUnknown**管理行集对象的站点的接口指针。  
   
-## 返回值  
- 标准 `HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- 此外，`IRowsetCreatorImpl::SetSite` 以实现 OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS** 属性。  
+## <a name="remarks"></a>备注  
+ 此外，`IRowsetCreatorImpl::SetSite`使 OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**属性。  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetCreatorImpl 类](../../data/oledb/irowsetcreatorimpl-class.md)

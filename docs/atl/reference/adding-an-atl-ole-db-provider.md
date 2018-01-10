@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE DB, adding ATL OLE DB provider to projects
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7268d1996bbe64d364c2add478509983e7b863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: b71664847041d54d6aa86b1c013627e7ad7029d0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>添加的 ATL OLE DB 提供程序
 使用此向导以向项目中添加的 ATL OLE DB 提供程序。 ATL OLE DB 提供程序由数据源、 会话、 命令和行集类组成。 必须为 ATL COM 应用程序创建项目。  
@@ -41,7 +39,6 @@ ms.lasthandoff: 10/09/2017
   
 4.  单击**完成**关闭向导，将在你项目中插入新创建的 OLE DB 提供程序代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
-
 

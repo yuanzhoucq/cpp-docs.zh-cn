@@ -1,46 +1,46 @@
 ---
-title: "operator= (deque) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成员 [STL/CLR]"
+title: "运算符 = (deque) (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 0851c6e2-29a2-45da-8c5a-e0b2f5357fb6
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 86b4038011be918fe524536f83c96716a6656929
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# operator= (deque) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-替换控件序列。  
+# <a name="operator-deque-stlclr"></a>operator= (deque) (STL/CLR)
+替换受控序列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 deque<Value>% operator=(deque<Value>% right);  
 ```  
   
-#### 参数  
- right  
- 容器复制。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 用于复制的容器。  
   
-## 备注  
- 成员运算符将复制 `right` 给对象，然后返回 `*this`。  你使用它以在 `right`中控制序列的一个副本替换控制序列。  
+## <a name="remarks"></a>备注  
+ 成员运算符副本`right`到对象，然后返回`*this`。 用它将受控序列替换为 `right` 中的受控序列的副本。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_operator_as.cpp   
@@ -70,13 +70,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)

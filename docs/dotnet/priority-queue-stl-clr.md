@@ -1,36 +1,38 @@
 ---
-title: "priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/queue> 标头 [STL/CLR]"
-  - "<queue> 标头 [STL/CLR]"
-  - "priority_queue 类 [STL/CLR]"
+title: "priority_queue (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue
+dev_langs: C++
+helpviewer_keywords:
+- priority_queue class [STL/CLR]
+- <queue> header [STL/CLR]
+- <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此模板类描述用于控制受限访问的变长有序元素序列的对象。  使用容器适配器 `priority_queue` 管理基础容器作为优先级队列。  
+# <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
+此模板类描述控制不同的长度为排序的元素序列，具有有限访问权限的对象。 使用容器适配器`priority_queue`管理作为优先级队列的基础容器。  
   
- 在下面的解释中，`GValue` 与 `Value` 相同，除非后者是 ref （引用）类型，在这种情况下，它是 `Value^`。  同样，`GContainer` 与 `Container` 相同，除非后者是 ref 类型，在这种情况下，它是 `Container^`。  
+ 在下面，描述`GValue`相同`Value`后者为 ref 类型，除非在这种情况下很`Value^`。 同样，`GContainer`相同`Container`后者为 ref 类型，除非在这种情况下很`Container^`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Value,  
@@ -41,90 +43,90 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### 参数  
- 值  
+#### <a name="parameters"></a>参数  
+ “值”  
  受控序列中的元素的类型。  
   
  容器  
  基础容器的类型。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-|类型定义|说明|  
-|----------|--------|  
-|[priority\_queue::const\_reference](../dotnet/priority-queue-const-reference-stl-clr.md)|元素的常量引用的类型。|  
-|[priority\_queue::container\_type](../dotnet/priority-queue-container-type-stl-clr.md)|基础容器的类型。|  
-|[priority\_queue::difference\_type](../dotnet/priority-queue-difference-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
-|[priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)|泛型接口的容器适配器类型。|  
-|[priority\_queue::generic\_value](../dotnet/priority-queue-generic-value-stl-clr.md)|容器适配器的泛型接口的元素的类型。|  
-|[priority\_queue::reference](../dotnet/priority-queue-reference-stl-clr.md)|元素的引用的类型。|  
-|[priority\_queue::size\_type](../dotnet/priority-queue-size-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
-|[priority\_queue::value\_compare](../dotnet/priority-queue-value-compare-stl-clr.md)|两个元素的排序委托。|  
-|[priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)|元素的类型。|  
+|类型定义|描述|  
+|---------------------|-----------------|  
+|[priority_queue::const_reference (STL/CLR)](../dotnet/priority-queue-const-reference-stl-clr.md)|元素的常量引用的类型。|  
+|[priority_queue::container_type (STL/CLR)](../dotnet/priority-queue-container-type-stl-clr.md)|基础容器的类型。|  
+|[priority_queue::difference_type (STL/CLR)](../dotnet/priority-queue-difference-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
+|[priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)|容器适配器泛型接口的类型。|  
+|[priority_queue::generic_value (STL/CLR)](../dotnet/priority-queue-generic-value-stl-clr.md)|容器适配器的泛型接口的元素的类型。|  
+|[priority_queue::reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)|元素的引用的类型。|  
+|[priority_queue::size_type (STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)|两个元素间的带符号距离的类型。|  
+|[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)|用于两个元素的排序委托。|  
+|[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)|元素的类型。|  
   
-|成员函数|说明|  
-|----------|--------|  
-|[priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)|替换任何元素。|  
-|[priority\_queue::empty](../dotnet/priority-queue-empty-stl-clr.md)|测试元素是否存在。|  
-|[priority\_queue::get\_container](../dotnet/priority-queue-get-container-stl-clr.md)|访问基础容器。|  
-|[priority\_queue::pop](../dotnet/priority-queue-pop-stl-clr.md)|移除 hghest 优先级元素。|  
-|[priority\_queue::priority\_queue](../dotnet/priority-queue-priority-queue-stl-clr.md)|构造容器对象。|  
-|[priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)|添加一个新元素。|  
-|[priority\_queue::size](../dotnet/priority-queue-size-stl-clr.md)|计算元素的数量。|  
-|[priority\_queue::top](../dotnet/priority-queue-top-stl-clr.md)|访问要求优先级最高的元素。|  
-|[priority\_queue::to\_array](../dotnet/priority-queue-to-array-stl-clr.md)|复制控制序列到新数组。|  
-|[priority\_queue::value\_comp](../dotnet/priority-queue-value-comp-stl-clr.md)|复制两个元素的排序委托。|  
+|成员函数|描述|  
+|---------------------|-----------------|  
+|[priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|替换所有元素。|  
+|[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|测试元素是否存在。|  
+|[priority_queue::get_container (STL/CLR)](../dotnet/priority-queue-get-container-stl-clr.md)|访问基础的容器。|  
+|[priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)|移除 hghest 优先级的元素。|  
+|[priority_queue::priority_queue (STL/CLR)](../dotnet/priority-queue-priority-queue-stl-clr.md)|构造容器对象。|  
+|[priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)|添加新元素。|  
+|[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)|对元素数进行计数。|  
+|[priority_queue::top (STL/CLR)](../dotnet/priority-queue-top-stl-clr.md)|访问优先级最高的元素。|  
+|[priority_queue::to_array (STL/CLR)](../dotnet/priority-queue-to-array-stl-clr.md)|受控的序列复制到新数组。|  
+|[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|将复制两个元素的排序委托。|  
   
-|Property|说明|  
-|--------------|--------|  
-|[priority\_queue::top\_item](../dotnet/priority-queue-top-item-stl-clr.md)|访问要求优先级最高的元素。|  
+|属性|描述|  
+|--------------|-----------------|  
+|[priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)|访问优先级最高的元素。|  
   
-|运算符|说明|  
-|---------|--------|  
-|[priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)|替换控件序列。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|[priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|替换受控序列。|  
   
-## 接口  
+## <a name="interfaces"></a>接口  
   
-|接口|说明|  
-|--------|--------|  
+|接口|描述|  
+|---------------|-----------------|  
 |<xref:System.ICloneable>|复制对象。|  
-|IPriorityQueue\<Value，容器\>|维护泛型容器适配器。|  
+|IPriorityQueue\<值、 容器 >|维护泛型容器适配器。|  
   
-## 备注  
- 对象为它控制的序列分配和释放存储，通过基础容器 `Container` 类型，其存储了 `Value` 元素和成长的需求。  它以堆形式保持序列排序，并其优先级最高的元素 \(顶部元素\) 可以方便地访问和删除。  对象限制只能推入新元素并弹出优先级最高的元素，实现了优先级队列。  
+## <a name="remarks"></a>备注  
+ 对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 它会保留为堆，与的优先级最高的元素 （顶部元素） 轻松地访问和可移动排序的序列。 对象限制的访问权限将新元素推送和弹出只是优先级最高的元素，实现优先级队列。  
   
- 对象通过调用存储的 [priority\_queue::value\_compare](../dotnet/priority-queue-value-compare-stl-clr.md) 类型的委托对象，对它控制的序列进行排序。  当在构造 priority\_queue 时，您可以指定该存储的委托对象；如果您未指定委托对象，默认比较为 `operator<(value_type, value_type)`。  通过调用成员函数访问该存储区的对象[priority\_queue::value\_comp](../dotnet/priority-queue-value-comp-stl-clr.md)`()`。  
+ 该对象进行排序它通过调用类型的存储的委托对象控制的序列[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)。 在构造 priority_queue; 时，可以指定存储的委托对象如果指定没有委托对象时，默认值是比较`operator<(value_type, value_type)`。 通过调用成员函数来访问此存储的对象[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`。  
   
- 此委托对象必须强加弱序化在 [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md) 类型的值上。  这意味着，任何两键的 `X` 和 `Y`:  
+ 此类委托对象必须对进行严格弱排序类型的值[priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)。 这意味着为任何两个键`X`和`Y`:  
   
- `value_comp()(X, Y)` 返回对每个调用相同的布尔值结果。  
+ `value_comp()(X, Y)`返回相同的布尔值导致每次调用。  
   
- 如果 `value_comp()(X, Y)` 为 true，则 `value_comp()(Y, X)` 必须是错误的。  
+ 如果`value_comp()(X, Y)`为 true，然后`value_comp()(Y, X)`必须是 false。  
   
- 如果 `value_comp()(X, Y)` 为 true，则 `X` 被视为 `Y`之前的排序。  
+ 如果`value_comp()(X, Y)`为 true，然后`X`称为才能进行排序之前`Y`。  
   
- 如果 `!value_comp()(X, Y) && !value_comp()(Y, X)` 为 true，则 `X` 和 `Y` 是具有相同顺序。  
+ 如果`!value_comp()(X, Y) && !value_comp()(Y, X)`为 true，然后`X`和`Y`被认为具有等效顺序。  
   
- 在控制序列中，对优先于`Y` 的所有元素 `X`来说，`key_comp()(Y, X)` 为 false。\(对于默认委托对象，键值从来不会是降序排列。\)  
+ 任何元素`X`，之前`Y`受控序列中中,`key_comp()(Y, X)`为 false。 （对于默认委托对象，密钥永远不会减小值中。）  
   
- 优先级最高的元素为在其他元素之前的未排序的一个元素。  
+ 最高优先级元素，因此是任何其他元素之前不会对其进行排序的元素。  
   
- 因为基础容器保持元素顺序为堆：  
+ 由于基础容器保留为堆排序的元素：  
   
  容器必须支持随机访问迭代器。  
   
- 具有等效的顺序元素可能以与它们推入的顺序不同的顺序弹出。\(排序不是稳定的。\)  
+ 具有等效排序的元素可能按不同顺序弹出，不是它们已推送。 （排序不稳定。）  
   
- 因此，基础容器的候选对象包括 [deque](../dotnet/deque-stl-clr.md) [向量](../dotnet/vector-stl-clr.md)。  
+ 因此，适合基础容器包括[deque (STL/CLR)](../dotnet/deque-stl-clr.md)和[向量 (STL/CLR)](../dotnet/vector-stl-clr.md)。  
   
-## 要求  
- **标头:** \<cliext\/queue\>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/队列 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [stack](../dotnet/stack-stl-clr.md)   
- [向量](../dotnet/vector-stl-clr.md)   
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [堆栈 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

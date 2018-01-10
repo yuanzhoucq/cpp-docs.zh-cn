@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c97e1215ce7380ec917166622e12bcefebd5083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d74854ce4d4e7e0fa2636fe04b01908582754f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>ODBC 安装和入门
 以下主题帮助你安装你需要以开始使用开放式数据库连接 (ODBC) 的组件。  
@@ -31,5 +34,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [重新分发给客户的 ODBC 组件](../../data/odbc/odbc-basics.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

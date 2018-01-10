@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3502a16c0cbbccdfd5d73aafe776d907c9845c1f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>范围 (Visual C++)
 只能在程序的某些区域内使用 C++ 名称。 此区域称为名称的“范围”。 范围决定一个不表示静态范围的对象的名称的“生存期”。 在以下情况下，范围还可决定名称的可见性：调用类构造函数或析构函数时，或初始化范围的局部变量时。 (有关详细信息，请参阅[构造函数](../cpp/constructors-cpp.md)和[析构函数](../cpp/destructors-cpp.md)。)有五种范围：  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/25/2017
   
      在 C++ 中，文件范围也称为命名空间范围。  
   
--   **类范围内使用**类成员的名称具有类范围。 类成员函数可访问只能通过使用成员选择运算符 (**。** 或** -> **) 或指向成员的指针运算符 (**。\***或** -> \* **) 上的对象或指针指向的对象类; 非静态的类成员数据被视为本地给该类的对象。 考虑下列类声明：  
+-   **类范围内使用**类成员的名称具有类范围。 类成员函数可访问只能通过使用成员选择运算符 (**。** 或 **->** ) 或指向成员的指针运算符 (**。\***或 **-> \*** ) 上的对象或指针指向的对象类; 非静态的类成员数据被视为本地给该类的对象。 考虑下列类声明：  
   
     ```  
     class Point  
@@ -158,5 +156,5 @@ Block-scoped i has the value: 5
 File-scoped i has the value: 7  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本概念](../cpp/basic-concepts-cpp.md)

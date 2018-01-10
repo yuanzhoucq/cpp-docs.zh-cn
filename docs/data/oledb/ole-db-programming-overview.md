@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f3d97dda514b3cdb0773adb3d7830e611bca3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 编程概述
 OLE DB 是一种高性能、 基于 COM 的数据库技术。 它提供访问数据而不考虑在其中存储表单的常用方法。 在典型的业务的情况下，有大量的信息存储在企业数据库外部。 索引顺序文件、 个人数据库 （如访问）、 （如 Excel) 的电子表格、 项目规划应用程序 （例如项目），和电子邮件 （如 Outlook)，将文件系统 （如 FAT 或 NTFS） 中找到此信息。 OLE DB，可在同样的方式访问任何类型的数据存储区，只要数据存储区具有的 OLE DB 提供程序。
@@ -33,7 +36,7 @@ OLE DB 是一种高性能、 基于 COM 的数据库技术。 它提供访问数
  基于 COM 规范，OLE DB 定义的分解，并封装的 DBMS 功能的一致、 可重复使用某些部分的接口的可扩展、 可维护的集合。 这些接口定义 DBMS 组件，如行容器、 查询处理器和事务处理协调器，启用的各种信息源的统一事务性访问的边界。  
  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 编程](../../data/oledb/ole-db-programming.md)   
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   

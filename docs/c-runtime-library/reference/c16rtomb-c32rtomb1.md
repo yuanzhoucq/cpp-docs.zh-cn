@@ -39,11 +39,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e9e917719c0b980f3ba46e11456e4a47b2a518ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9eb43d6b225bce002eb2ce5293cb048d3062bcd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 在当前区域设置中将 UTF-16 或 UTF-32 宽字符转换为多字节字符。  
@@ -83,15 +84,15 @@ size_t c32rtomb(
   
  `state` 转换状态对象让你可以后续调用此函数和维持多字节输出字符的位移状态的其他可重启函数。 如果混合使用可重启和非可重启函数，或者如果在可重启函数调用之间调用 `setlocale` ，结果不确定。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`c16rtomb`, `c32rtomb`|C, C++: \<uchar.h>|  
   
  有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

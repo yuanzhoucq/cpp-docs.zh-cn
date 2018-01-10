@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8940a85085d564404a2dd95f8707b9b986047113
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5f43b8fa403aad5b2df6aebf07c1aaf3b0dd191b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>有关 MFC ODBC 类的其他阅读材料
 以下主题进一步说明的概念和本主题中介绍的技术：  
@@ -59,6 +62,6 @@ ms.lasthandoff: 10/24/2017
   
  在*MFC 参考*，请参阅[CDatabase](../../mfc/reference/cdatabase-class.md)， [CRecordset](../../mfc/reference/crecordset-class.md)， [CRecordView](../../mfc/reference/crecordview-class.md)， [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)，和[CDBException](../../mfc/reference/cdbexception-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)   
  [数据访问编程 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

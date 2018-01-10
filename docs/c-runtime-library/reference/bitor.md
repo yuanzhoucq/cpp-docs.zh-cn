@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -24,21 +23,19 @@ f1_keywords:
 - bitor
 - std.bitor
 - std::bitor
-dev_langs:
-- C++
-helpviewer_keywords:
-- bitor function
+dev_langs: C++
+helpviewer_keywords: bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e5696d4e35a23b9be0d42f25eec0fd8d7d1e8302
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 7f840179a2087138ce46c1ec2c9ba16acd20bc70
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitor"></a>bitor
 &#124; 运算符的替代项。  
@@ -80,5 +77,5 @@ int main( )
 3  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iso646.h>

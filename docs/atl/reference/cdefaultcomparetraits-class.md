@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,21 +12,19 @@ f1_keywords:
 - ATLCOLL/ATL::CDefaultCompareTraits
 - ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
 - ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultCompareTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13c8bfd8ac02979f82e205ec86269b7ac40c8b08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 类
 此类提供了默认元素比较函数。  
@@ -57,7 +54,7 @@ class CDefaultCompareTraits
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcoll.h  
   
 ##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
@@ -106,6 +103,5 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 ### <a name="remarks"></a>备注  
  此函数的默认实现使用`==`，  **\<** ，和 **>** 运算符。 对于以外的简单数据类型的对象，此函数可能需要重写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- clock
+apiname: clock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- clock
-dev_langs:
-- C++
+f1_keywords: clock
+dev_langs: C++
 helpviewer_keywords:
 - processor time used, calculating
 - time, calculating processor
@@ -34,30 +30,16 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a226377499df1747a022325b762b3cdfdd35ea6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7e48d06b3170da0ded81473affec957f3eae0e3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clock"></a>clock
 计算调用进程所用的时钟时间。  
@@ -76,13 +58,13 @@ clock_t clock( void );
   
 只要有足够的时间，`clock` 返回的值就可能超过 `clock_t` 的最大正值。 当进程运行更长时间后，`clock` 返回的值始终为 `(clock_t)(-1)`，如 ISO C99 标准 (7.23.2.1) 和 ISO C11 标准 (7.27.2.1) 中所指定的那样。 Microsoft 将 `clock_t` 实现为 `long`，这是一个带符号的 32 位整数，将 `CLOCKS_PER_SEC` 宏定义为 1000。 这样，`clock` 函数的最大返回值为 2147483.647 秒，或大约 24.8 天。 不依赖于运行时间超过此时间的进程中 `clock` 返回的值。 可以使用 64 位 `time` 函数或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) 函数来记录多年进程运行时间。  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`clock`|\<time.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -135,7 +117,7 @@ Done!
 Time to do 600000000 empty loops is 1.354 seconds  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [difftime、_difftime32、_difftime64](../../c-runtime-library/reference/difftime-difftime32-difftime64.md)   
  [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)

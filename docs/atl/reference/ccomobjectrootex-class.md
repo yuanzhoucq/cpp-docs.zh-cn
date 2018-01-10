@@ -30,11 +30,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 此类提供方法以处理对象的非聚合和聚合对象的引用计数管理。  
@@ -102,7 +103,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  如果你的对象未聚合， **IUnknown**由实现`CComObject`或`CComPolyObject`。 在这种情况下，调用`QueryInterface`， `AddRef`，和**版本**委派给`CComObjectRootEx`的`InternalQueryInterface`， `InternalAddRef`，和`InternalRelease`执行实际的操作。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
@@ -136,7 +137,7 @@ HRESULT FinalConstruct();
      但是，`FinalConstruct`立即派生程度最后类完全构造，使你可以调用虚函数，并使用 atl 提供的引用计数实现称为  
   
 ### <a name="example"></a>示例  
- 通常情况下，重写此方法在派生自类`CComObjectRootEx`创建任何聚合对象。 例如:   
+ 通常情况下，重写此方法在派生自类`CComObjectRootEx`创建任何聚合对象。 例如:  
   
  [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
@@ -345,7 +346,7 @@ void Unlock();
   
  如果线程模型是单线程方式，则此方法没有任何影响。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
  [CComObject 类](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   

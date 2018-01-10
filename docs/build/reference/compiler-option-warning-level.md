@@ -69,11 +69,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5504c3d726feda499fb4b63f68d7784291308694
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f38328f94fd68b3b5402d08ddb6d2bd97e3de76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、 /w0 取消显示、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4，/Wall、 /wd，/ 我们 /wo，/Wv，/WX （警告级别）
 指定编译器如何为给定编译生成警告。  
@@ -110,7 +111,7 @@ ms.lasthandoff: 10/24/2017
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|指定要由编译器生成的警告级别。 有效的警告等级范围在 0 到 4:<br /><br /> -   **/ W0**禁止显示所有警告。<br />-   **/W1**显示级别 1 （严重） 的警告。 **/W1**是默认设置。<br />-   **/ W2**显示级别 1 和等级 2 （重要） 的警告。<br />-   **/ W3**显示级别 1、 级别 2 和等级 3 （生产质量） 警告。<br />-   **/W4**显示级别 1，级别 2，以及级别 3 警告，以及所有级别 4 （信息） 的警告，默认情况下关闭不状态。 建议您仅使用此选项来提供链接形式的警告。 但是，对于新项目时，它可能最好使用**/W4**在所有编译; 中，这将确保最大程度地减少可能的硬查找代码缺陷。|  
 |**/ 墙**|显示所有警告显示**/W4**和所有其他警告， **/W4**不包括-例如，默认情况下处于关闭状态的警告。 有关详细信息，请参阅[编译器警告，将关闭默认](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。|  
 |**/Wv**`:version`|禁止显示警告比新的编译器版本中引入`version`。 你可以使用此选项，以确定是否有新的警告时使用较旧版本的编译器，没有收到警告编译的代码中并暂时取消你的生成过程从新的警告时修复它们。 可选参数`version`采用的形式`nn`[。`mm`[.`bbbbb`]] 其中`nn`是主要的版本号，`mm`是可选的次要版本数和`bbbbb`是可选的编译器的版本号。 例如，使用`/Wv:17.00.00000`来禁止显示警告引入 Visual c + + 2012年及更高版本。 默认情况下， **/Wv**使用当前的编译器版本号，并不会出现警告将被抑制。 有关哪些警告所抑制的编译器版本的信息，请参阅[按编译器版本的编译器警告](../..//error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md)。|  
-|**/WX**|将所有的编译器警告视为错误。 对于新项目，它可能是最好使用**/WX**在所有编译; 解决所有警告确保最大程度地减少可能的硬查找代码缺陷。<br /><br /> 链接器还有**/WX**选项。 有关详细信息，请参阅 [/WX（将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)。|  
+|**/WX**|将所有编译器警告视为错误。 对于新项目，它可能是最好使用**/WX**在所有编译; 解决所有警告确保最大程度地减少可能的硬查找代码缺陷。<br /><br /> 链接器还有**/WX**选项。 有关详细信息，请参阅 [/WX（将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)。|  
 |**/w1**`n`<br /><br /> **/w2**`n`<br /><br /> **/w3**`n`<br /><br /> **/w4**`n`|为指定的警告数设置的警告级别`n`。 这允许您设置特定的警告级别时更改该警告的编译器行为。 可以使用这些选项与其他警告选项结合使用，以强制执行自己的编码的警告，而不是默认的 Visual Studio 提供的标准。<br /><br /> 例如，`/w34326`使 C4326 生成为级别 3 警告而不是第 1 级。 如果通过同时使用编译`/w34326`选项和`/W2`选项，警告 C4326 不生成。|  
 |**/wd**`n`|禁止显示由指定的编译器警告`n`。<br /><br /> 例如，`/wd4326`禁止显示编译器警告 C4326。|  
 |**/we**`n`|将指定的编译器警告`n`视为错误。<br /><br /> 例如，`/we4326`导致 C4326 由编译器视为错误的警告编号。|  
@@ -140,6 +141,6 @@ ms.lasthandoff: 10/24/2017
   
 -   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarningLevel%2A>、<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WarnAsError%2A>、<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableSpecificWarnings%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

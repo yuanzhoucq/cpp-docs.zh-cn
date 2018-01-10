@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b0a3a3a10ae2cc18ab83800cc50f25903a3607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd997b25125a48dd6103629e6957843295532901
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetmovenext"></a>CRowset::MoveNext
 将光标移动到下一条记录。  
@@ -64,10 +67,10 @@ HRESULT MoveNext(
   
  否则为 (如果`lSkip`> = 0 和`bForward`= true)，不需要设置任何其他属性。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
  [Crowset:: Movefirst](../../data/oledb/crowset-movefirst.md)   
  [Crowset:: Movetobookmark](../../data/oledb/crowset-movetobookmark.md)   

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b464a77fedf0d996210040b744faea0ee7372ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cc5234f10a16141fd91193d634f0d306886aff71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptroperatoramp-operator"></a>Comptr::&amp;运算符
 释放与此关联的接口`ComPtr`对象，然后检索的地址`ComPtr`对象。  
@@ -38,10 +41,10 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 ## <a name="remarks"></a>备注  
  此方法不同于[comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) ，因为此方法释放的接口指针的引用。 使用`ComPtr::GetAddressOf`如果您要求的接口指针的地址，但不是想要发布该接口。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** client.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ComPtr 类](../windows/comptr-class.md)

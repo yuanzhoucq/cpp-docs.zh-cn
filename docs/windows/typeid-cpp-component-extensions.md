@@ -14,11 +14,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d03fd235e1719ac3179cb91b9db5c1bdcec3fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typeid--c-component-extensions"></a>typeid（C++ 组件扩展）
 获取一个值，该值指示对象的类型。  
@@ -53,7 +56,7 @@ Platform::Type^ type = T::typeid;
 ### <a name="remarks"></a>备注  
  在 C + + /CX 中，typeid 返回[platform:: type](../cppcx/platform-type-class.md)构造中的运行时类型信息。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -81,7 +84,7 @@ type::typeid
   
  `typeid`也适用于本机类型，尽管它仍将返回 system:: type。  若要获取 type_info 结构，请使用[typeid 运算符](../cpp/typeid-operator.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -198,5 +201,5 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

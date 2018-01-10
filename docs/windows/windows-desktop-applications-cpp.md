@@ -1,45 +1,51 @@
 ---
-title: "Windows 桌面应用程序 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vcplatformsdk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows 应用程序 [C++]"
-  - "应用程序 [C++], Windows"
-  - "Visual C++, Windows 应用程序"
-  - "Windows 应用程序 [C++], 关于创建 Windows 应用程序"
+title: "Windows 桌面应用程序 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vcplatformsdk
+dev_langs: C++
+helpviewer_keywords:
+- Windows applications [C++]
+- applications [C++], Windows
+- Visual C++, Windows applications
+- Windows applications [C++], about creating Windows applications
 ms.assetid: be15855a-fa3f-41e9-89cd-41b9484ebfdb
-caps.latest.revision: 15
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3d8e65a62dcac8e97f8f416cd54050a76920afe6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Windows 桌面应用程序 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="windows-desktop-applications-c"></a>Windows 桌面应用程序 (C++)
+本部分讨论如何创建在窗口中运行的 c + + 桌面应用程序。  
+> [!TIP]  
+> 对于 Windows 10 中，你可以使用桌面应用转换器你现有桌面应用程序打包以部署到 Windows 应用商店。 有关详细信息，请参阅 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)（在 Centennial 项目中使用 Visual C++ 运行时）和 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)（使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)）。
+  
+## <a name="prerequisites"></a>系统必备  
+ 这些主题假定你了解 c + + 语言的基础知识。  
+  
+## <a name="in-this-section"></a>本节内容  
+  
+-   [Win32 应用程序向导](../windows/win32-application-wizard.md)  
+  
+-   [演练：创建 Windows 桌面应用程序 (C++)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
+  
+-   [创建空的 Windows 桌面应用程序](../windows/creating-an-empty-windows-desktop-application.md)  
+  
+-   [使用资源文件](../windows/working-with-resource-files.md)  
+  
+## <a name="see-also"></a>请参阅  
+ [Visual Studio 中的 visual c + +](../visual-cpp-in-visual-studio.md)
 
-现在我们学习了 Visual Studio IDE 和命令行应用程序，下面将学习如何创建 Windows 应用程序。  使用 Visual C\+\+，可以通过使用多种不同的技术来创建 Windows 应用程序，如 [Windows API](https://msdn.microsoft.com/en-us/library/cc433218.aspx)（也称为 Win32 API）和 .NET Framework。  
-  
- 在本节中，我们将通过使用 Win32 API 和 .NET Framework 创建两个简单的 Windows 应用程序。  我们还将通过使用 .NET Framework 创建 Windows 窗体控件，最后将通过使用 DirectX 创建一个简单的游戏。  
-  
-## 系统必备  
- 这些主题假定您具备 C\+\+ 语言的基础知识。  
-  
-## 本节内容  
-  
--   [演练：创建 Windows 桌面应用程序 \(C\+\+\)](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)  
-  
--   [有关使用 DirectX 创建游戏的资源 \(C\+\+\)](../windows/resources-for-creating-a-game-using-directx.md)  
-  
-## 请参阅  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/zh-cn/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)

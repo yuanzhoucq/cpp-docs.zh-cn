@@ -1,73 +1,69 @@
 ---
-title: "用作链接器输入的 .Lib 文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.AdditionalDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".lib 文件"
-  - "COFF 文件, 导入库"
-  - "默认库 [C++]"
-  - "默认库 [C++], 链接器输出"
-  - "默认值 [C++], 库"
-  - "导入库, 链接器文件"
-  - "库 [C++], 用作链接器输入的 .lib 文件"
-  - "链接 [C++], OMF 库"
-  - "OMF 库"
+title: ".用作链接器输入 lib 文件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.AdditionalDependencies
+dev_langs: C++
+helpviewer_keywords:
+- OMF libraries
+- linking [C++], OMF libraries
+- import libraries, linker files
+- libraries [C++], .lib files as linker input
+- COFF files, import libraries
+- default libraries [C++], linker output
+- default libraries [C++]
+- defaults [C++], libraries
+- .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 用作链接器输入的 .Lib 文件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LINK 接受 COFF 标准库和 COFF 导入库，这两者通常都具有扩展名 .lib。  标准库包含对象，并用 LIB 工具创建。  导入库包含有关其他程序中导出的信息。当 LINK 生成包含导出的程序时导入库由 LINK 创建，或由 LIB 工具创建。  有关使用 LIB 创建标准库或导入库的信息，请参见 [LIB 参考](../../build/reference/lib-reference.md)。  有关使用 LINK 创建导入库的详细信息，请参见 [\/DLL](../../build/reference/dll-build-a-dll.md) 选项。  
+# <a name="lib-files-as-linker-input"></a>用作链接器输入的 .Lib 文件
+链接接受 COFF 标准库和 COFF 导的入库，这两种通常具有扩展名。 lib。 标准库包含对象，并且通过 LIB 工具创建。 导入库包含有关其他程序中导出的信息和链接通过它生成包含导出的程序时或通过创建 LIB 工具。 有关使用 LIB 创建标准或导入库的信息，请参阅[LIB 引用](../../build/reference/lib-reference.md)。 有关使用链接来创建导入库的详细信息，请参阅[/DLL](../../build/reference/dll-build-a-dll.md)选项。  
   
- 库可以作为文件名参数或默认库指定给 LINK。  LINK 解析外部引用时，首先在命令行上指定的库中搜索，然后在用 [\/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) 选项指定的默认库中搜索，最后在 .obj 文件中指定的默认库中搜索。  如果路径是用库名指定的，则 LINK 在该目录中查找库。  如果没有指定路径，则 LINK 先在运行 LINK 的目录中查找，然后在 LIB 环境变量中指定的任何目录中查找。  
+库链接到指定为文件的名称自变量或默认库。 链接通过在命令行上指定的库中的第一次搜索解析外部引用，然后在指定的默认库与[/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md)选项，且然后默认库名为在.obj 文件中。 如果使用的库名称指定路径，链接查找该目录中的库。 如果未指定路径，则链接查找第一个链接，正在运行的目录中，然后在 LIB 环境变量中指定任何目录中。  
   
-### 在开发环境中添加用作链接器输入的 .lib 文件  
+## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>要添加为在开发环境中的链接器输入的.lib 文件  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击“链接器”文件夹。  
+2.  选择**输入**中的属性页**链接器**文件夹。  
   
-3.  单击“输入”属性页。  
+3.  修改**附加依赖项**要添加的.lib 文件属性。  
   
-4.  修改**“附加依赖项”**属性。  
+## <a name="to-programmatically-add-lib-files-as-linker-input"></a>若要以编程方式添加用作链接器输入的.lib 文件  
   
-### 以编程方式添加用作链接器输入的 .lib 文件  
+-   请参阅[AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx)。  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalDependencies%2A>。  
+## <a name="example"></a>示例  
+下面的示例演示如何生成和使用.lib 文件。 首先，生成的.lib 文件：  
   
-## 示例  
- 下面的示例演示如何生成和使用 .lib 文件：  
-  
-```  
+```cpp  
 // lib_link_input_1.cpp  
-// compile with: /LD  
+// compile by using: cl /LD lib_link_input_1.cpp  
 __declspec(dllexport) int Test() {  
    return 213;  
 }  
 ```  
   
-## 示例  
- 然后：  
+然后，通过使用刚刚创建的.lib 文件编译此示例：  
   
-```  
+```cpp  
 // lib_link_input_2.cpp  
-// compile with: /EHsc lib_link_input_1.lib  
+// compile by using: cl /EHsc lib_link_input_1.lib lib_link_input_2.cpp   
 __declspec(dllimport) int Test();  
 #include <iostream>  
 int main() {  
@@ -75,7 +71,10 @@ int main() {
 }  
 ```  
   
-  **213**   
-## 请参阅  
- [LINK 输入文件](../../build/reference/link-input-files.md)   
+```Output  
+213  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [LINK 输入的文件](../../build/reference/link-input-files.md)   
  [链接器选项](../../build/reference/linker-options.md)

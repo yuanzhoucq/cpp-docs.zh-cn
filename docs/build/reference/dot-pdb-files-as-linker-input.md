@@ -1,33 +1,33 @@
 ---
-title: "用作链接器输入的 .Pdb 文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pdb 文件, 用作链接器输入"
-  - "PDB 文件, 用作链接器输入"
+title: ".用作链接器输入的 Pdb 文件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, as linker input
+- PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5acdc01a58cf0d501be5947cddf710d1b7c6d18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 用作链接器输入的 .Pdb 文件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用 \/Zi 选项编译的对象 \(.obj\) 文件包含程序数据库 \(PDB\) 的名称。  不将对象的 PDB 文件名指定给链接器；如果需要，LINK 使用嵌入的名称查找 PDB。  这同样适用于库中包含的可调试对象；可调试库的 PDB 必须可用于链接器和该库。  
+# <a name="pdb-files-as-linker-input"></a>用作链接器输入的 .Pdb 文件
+对象 (.obj) 文件使用了 /Zi 选项编译包含的程序数据库 (PDB) 的名称。 未指定到链接器; 的对象的 PDB 文件名称链接使用嵌入的名称查找 PDB，如果需要。 这同样适用于可调试库; 中包含的对象可调试库的 PDB 必须可供随同库一起链接器。  
   
- LINK 还使用 PDB 保存 .exe 文件或 .dll 文件的调试信息。  程序的 PDB 既是输出文件也是输入文件，因为 LINK 在重新生成程序时更新 PDB。  
+ 链接还使用 PDB 来保存.exe 文件或.dll 文件的调试信息。 程序的 PDB 是输出文件和输入的文件，因为它重新生成程序时，链接更新 PDB。  
   
-## 请参阅  
- [LINK 输入文件](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>请参阅  
+ [LINK 输入的文件](../../build/reference/link-input-files.md)   
  [链接器选项](../../build/reference/linker-options.md)

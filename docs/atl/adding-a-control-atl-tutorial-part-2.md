@@ -1,115 +1,117 @@
 ---
-title: "添加控件（ATL 教程，第 2 部分） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "添加控件 (ATL 教程，第 2 部分) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 添加控件（ATL 教程，第 2 部分）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在此步骤中，您将添加一个控件添加到项目中，生成控件，然后在网页上测试空间。  
+# <a name="adding-a-control-atl-tutorial-part-2"></a>添加控件（ATL 教程，第 2 部分）
+在此步骤中，将控件添加到你的项目，生成它，并在网页上对其进行测试。  
   
-## 过程  
+## <a name="procedures"></a>过程  
   
-#### 在 ATL 项目中添加一个项目  
+#### <a name="to-add-an-object-to-an-atl-project"></a>将对象添加到 ATL 项目  
   
-1.  在“类视图”中，右击 Polygon 项目。  
+1.  在类视图中，右键单击多边形项目。  
   
-2.  指向快捷菜单上的“添加”，并点击子菜单中的“类”。  
+2.  指向**添加**快捷菜单，然后单击**类**的子菜单中。  
   
-     出现“添加类”对话框。  不同的对象类别列在左侧的树状结构中。  
+     **添加类**对话框随即出现。 在左侧的树状结构列出了不同的对象类别。  
   
-3.  单击“ATL”文件夹。  
+3.  单击**ATL**文件夹。  
   
-4.  从右侧的模板列表中选择“ATL 控件”。  单击**“添加”**。  ATL 控件向导将打开，您可以配置控件。  
+4.  从右侧的模板列表中，选择**ATL 控件**。 单击 **“添加”**。 ATL 控件向导将打开，并且可以配置该控件。  
   
-5.  键入 `PolyCtl` 为短名称，请注意其他字段是自动完成的。  现在还不要单击“完成”，因为您需要做出一些更改。  
+5.  类型`PolyCtl`短名称以及其他字段将自动完成的注意。 不要单击**完成**尚未，因为你必须进行一些更改。  
   
- ATL 控件向导的“名称”页包含以下字段：  
+ ATL 控件向导**名称**页包含以下字段：  
   
 |字段|内容|  
-|--------|--------|  
-|**简称**|输入的控件的名称。|  
-|**类**|创建的 C\+\+ 类名实现控件。|  
-|**.h 文件**|创建用于包含 C\+\+ 类定义的文件。|  
-|**.cpp 文件**|创建用于包含 C\+\+ 类实现的文件。|  
-|**组件类**|该控件的组件类名称。|  
-|**接口**|控件将实现其自定义方法和属性的接口名称。|  
-|**类型**|关于控件的说明。|  
-|**ProgID**|可用于查找控件的 CLSID 的可读名称。|  
+|-----------|--------------|  
+|**短名称**|输入控件的名称。|  
+|**类**|创建实现控件的 c + + 类名称。|  
+|**.h 文件**|创建包含 c + + 类定义的文件。|  
+|**.cpp 文件**|创建包含 c + + 类的实现的文件。|  
+|**组件类**|对于此控件的组件类的名称。|  
+|**Interface**|控件将在其实现其自定义的方法和属性的接口的名称。|  
+|**Type**|该控件的说明。|  
+|**ProgID**|可用于查找控件的 CLSID 可读名称。|  
   
- 您必须在 ATL 控制向导中进行若干额外的设置。  
+ 你必须在 ATL 控件向导进行多个附加设置。  
   
-#### 启用对丰富的错误信息和连接点的支持  
+#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>启用支持丰富的错误信息和连接点  
   
-1.  单击“选项”以打开“选项”页面。  
+1.  单击**选项**以打开**选项**页。  
   
-2.  选择“连接点”复选框。  这将为 IDL 文件的一个输出接口创建支持。  
+2.  选择**连接点**复选框。 这将在 IDL 文件中创建的传出接口的支持。  
   
- 也可让控件可插入，这意味着可将其嵌入支持嵌入对象的应用程序（如 Excel 或 Word）。  
+ 此外可以使控件可插入，但这意味着它可以嵌入到支持嵌入的对象，如 Excel 或 Word 的应用程序。  
   
-#### 使控件可插入  
+#### <a name="to-make-the-control-insertable"></a>若要使控件可插入  
   
-1.  单击“外观”以打开“外观”**Appearance**页面。  
+1.  单击**外观**以打开**外观**页。  
   
-2.  选中“可插入”复选框。  
+2.  选择**可插入**复选框。  
   
- 对象公开的多边形将具有固定的填充颜色，因此，您必须添加 `Fill Color` 常见属性。  
+ 多边形显示由该对象将具有纯色填充颜色，因此你必须添加`Fill Color`常用属性。  
   
-#### 添加“填充颜色”常用属性和创建控件  
+#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>若要添加的填充颜色常用属性，创建控件  
   
-1.  单击“常用属性”以打开“常用属性”页面。  
+1.  单击**常用属性**以打开**常用属性**页。  
   
-2.  在“不受支持”下，向下滚动可能常用属性列表。  双击 `Fill Color` 将其移动到“支持的”列表。  
+2.  下**不支持**，向下滚动可能常用属性的列表。 双击`Fill Color`将其移至**支持**列表。  
   
-3.  这将完成控件选项。  单击“完成”。  
+3.  这将完成该控件的选项。 单击 **“完成”**。  
   
- 向导创建控件时，发生了某些代码更改和文件添加。  创建了以下文件：  
+ 在向导创建控件，将发生多个代码更改和文件添加。 创建以下文件：  
   
 |文件|描述|  
-|--------|--------|  
-|PolyCtl.h|包含 C\+\+ 类 `CPolyCtl`的大部分实现。|  
-|PolyCtl.cpp|包含 `CPolyCtl` 的剩余部分。|  
-|PolyCtl.rgs|包含用来注册控件的注册表脚本的文本文件。|  
-|PolyCtl.htm|包含对新创建的控件的引用的网页。|  
+|----------|-----------------|  
+|PolyCtl.h|包含大多数 c + + 类的实现`CPolyCtl`。|  
+|PolyCtl.cpp|包含的其余部分`CPolyCtl`。|  
+|PolyCtl.rgs|包含用于注册此控件的注册表脚本的文本文件。|  
+|PolyCtl.htm|网页包含对新创建的控件的引用。|  
   
- 该向导还可执行以下代码更改：  
+ 向导还执行以下代码更改：  
   
--   将 `#include` 语句添加到 stdafx.h 和 stdafx.cpp 文件中，以包含支持控件所需的 ATL 文件。  
+-   添加`#include`语句包括 ATL 的 stdafx.h 和 stdafx.cpp 文件所需的支持控件文件。  
   
--   更改 Polygon.idl 使其包含新控件的详细信息。  
+-   Polygon.idl 已更改，以包括新控件的详细信息。  
   
--   将新控件添加到 Polygon.cpp 中的对象映射中。  
+-   到 Polygon.cpp 中的对象映射中添加新控件。  
   
- 现在您可以生成控件以在实际运行中了解它。  
+ 现在你可以生成该控件以查看在操作中。  
   
-## 生成和测试控件  
+## <a name="building-and-testing-the-control"></a>生成和测试控件  
   
-#### 生成并测试控件  
+#### <a name="to-build-and-test-the-control"></a>生成并测试控件  
   
-1.  在“生成”菜单上，单击“生成多边形”。  
+1.  上**生成**菜单上，单击**生成多边形**。  
   
-     控件生成完成后，右击“解决方案资源管理器”中的 PolyCtl.htm 并选择“在浏览器中查看”。  将会显示包含控件的 HTML 网页。  您应该看到具有标题“对象 PolyCtl 的 ATL 8.0 测试页”和文本 **PolyCtl** 的页。  这是您的控件。  
+     完成该控件后生成，右键单击在 PolyCtl.htm**解决方案资源管理器**和选择**用浏览器查看**。 将显示包含控件的 HTML 网页。 你应看到"ATL 对象 PolyCtl 8.0 测试页"的标题和文本页**PolyCtl**。 这是您的控件。  
   
 > [!NOTE]
->  完成本教程时，如果您在无法创建 DLL 该文件时收到错误消息，请关闭 PolyCtl.htm 文件和 Activex 控件测试容器并重新生成解决方案。  如果仍无法创建 DLL，请重新启动计算机或注销（如果使用的是终端服务）。  
+>  完成本教程中，如果你收到一条错误消息不能在其中创建 DLL 文件后，关闭 PolyCtl.htm 文件和 ActiveX 控件测试容器，并再次生成解决方案。 如果您仍无法创建 DLL，重新启动计算机或注销 （如果你使用的终端服务）。  
   
- 然后，您将向控件添加自定义属性。  
+ 接下来，你将向控件添加自定义属性。  
   
- [返回步骤 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [转到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [返回到步骤 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124;[到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
+

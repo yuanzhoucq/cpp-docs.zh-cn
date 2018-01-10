@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab6ea73fc5726771877640268c89edea4d0745a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 68b013f3b1211c42ffc7355df73f47f6520fac1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>记录视图的用户界面更新（MFC 数据访问）
 `CRecordView`提供了默认用户界面更新处理程序为导航命令。 这些处理程序自动启用和禁用用户界面对象 — 菜单项和工具栏按钮。 应用程序向导提供标准菜单并且，如果你选择**可停靠工具栏**选项，一组的所有命令的工具栏按钮。 如果使用 `CRecordView` 创建记录视图类，建议将类似的用户界面对象添加到应用程序。  
@@ -34,6 +37,6 @@ ms.lasthandoff: 10/24/2017
   
 1.  有关使用的信息引用[工具栏编辑器](../windows/toolbar-editor.md)，编辑工具栏资源以便为记录导航命令添加工具栏按钮。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持在记录视图中导航](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)   
  [使用记录视图](../data/using-a-record-view-mfc-data-access.md)

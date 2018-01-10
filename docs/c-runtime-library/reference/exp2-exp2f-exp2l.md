@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 19aeabbda33f4eb2e6b140ab2d887813f155b67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ceff966e289fd3118cdd515fb4fbc288080b0f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 计算 2 提升到指定的值。  
@@ -97,15 +98,15 @@ long double exp2l(
 ## <a name="remarks"></a>备注  
  由于 c + + 允许重载，你可以调用的重载`exp2`采用并返回**float**和**长双精度**类型。 在 C 程序中，`exp2`始终采用并返回**double**。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|C 标头|C++ 标头|  
+|例程所返回的值|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [exp、 expf，资源管理器](../../c-runtime-library/reference/exp-expf.md)   
  [log2、log2f、log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)

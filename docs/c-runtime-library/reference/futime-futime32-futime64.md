@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 03eda993cbc087d5dc39f2c9d0f985ac5db48099
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 204e87183a8df076da8443ee4547825948fb5a2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
 设置打开的文件的修改时间。  
@@ -84,7 +85,7 @@ int _futime64(
   
  `_futime64` 使用 `__utimbuf64` 结构，可以读取和修改日期截至 3000 年 12 月 31 日 23:59:59 UTC 的文件；如果文件日期晚于 2038 年 1 月 18 日 23:59:59 UTC，则对 `_futime32` 的调用失败。 1970 年 1 月 1 日午夜是这些函数的日期范围下限。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|---------------------|  
@@ -92,7 +93,7 @@ int _futime64(
 |`_futime32`|\<sys/utime.h>|\<errno.h>|  
 |`_futime64`|\<sys/utime.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -158,5 +159,5 @@ Volume in drive Z has no label.
 File time modified  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)

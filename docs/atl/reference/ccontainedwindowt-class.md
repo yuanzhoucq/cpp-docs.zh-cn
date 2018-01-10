@@ -33,11 +33,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f54b8ea828513dfbf25e5af1eeea38751c7c2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 类
 此类实现包含在另一个对象的窗口。  
@@ -110,7 +111,7 @@ class CContainedWindowT : public TBase
   
  [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
-|有关以下内容的详细信息|请参阅|  
+|有关以下内容的详细信息|查看|  
 |--------------------------------|---------|  
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的窗口|[ATL 窗口类](../../atl/atl-window-classes.md)|  
@@ -122,7 +123,7 @@ class CContainedWindowT : public TBase
   
  `CContainedWindowT`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
@@ -426,7 +427,7 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="remarks"></a>备注  
  `WindowProc`将定向到由标识消息映射消息[m_dwMsgMapID](#m_dwmsgmapid)。 如有必要，`WindowProc`调用[DefWindowProc](#defwindowproc)为其他消息处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWindow 类](../../atl/reference/cwindow-class.md)   
  [CWindowImpl 类](../../atl/reference/cwindowimpl-class.md)   
  [CMessageMap 类](../../atl/reference/cmessagemap-class.md)   

@@ -1,45 +1,47 @@
 ---
-title: "ATL 注册表组件（注册器） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 注册器"
-  - "ATL, 注册表"
-  - "注册器脚本 [ATL]"
-  - "注册表, 访问"
-  - "注册表, 注册器"
-  - "脚本编写, 注册表脚本"
-  - "脚本, 注册器脚本"
+title: "ATL 注册表组件 （注册器） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- registry, accessing
+- ATL Registrar
+- scripts, Registrar scripts
+- registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 43eff661ff9a72ca72554a87b2177cbe07ad10f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ATL 注册表组件（注册器）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL管理员通过自定义接口提供对系统注册表的优化访问。  管理员自由线程并使静态链接C\+\+客户端的代码。  
+# <a name="atl-registry-component-registrar"></a>ATL 注册表组件（注册器）
+ATL 注册器提供对系统注册表通过自定义接口的优化的访问。 注册机构是自由线程，并且允许静态链接的代码的 c + + 客户端。  
   
 > [!NOTE]
->  ATL控制器的源代码可以在atlmfc \\ include \\ atliface.h找到。  
+>  ATL 注册机构的源代码可以位于 atlmfc\include\atliface.h。  
   
-## 本节内容  
- [创建控制器脚本](../atl/creating-registrar-scripts.md)  
- 为创建控制器脚本的指南。  使用可替换参数并调用脚本，包括在BNF语法的主题，分析树，注册表脚本的示例。  
+## <a name="in-this-section"></a>本节内容  
+ [创建注册器脚本](../atl/creating-registrar-scripts.md)  
+ 创建注册器脚本指南。 包括有关 BNF 语法、 分析树注册表脚本示例，使用可替换参数，并调用脚本的主题。  
   
- [设置静态链接到控制器代码\(仅限C\+\+\)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- 列出步骤设置静态链接到控制器。  
+ [设置注册机构代码 （c + +） 的静态链接](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+ 列出的步骤，若要设置到注册机构的静态链接。  
   
-## 相关章节  
+## <a name="related-sections"></a>相关章节  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 使用活动模板库提供一些链接，指向有关概念性主题有关如何使用进行编程。
+ 提供了关于如何使用 Active Template Library 进行编程的概念性主题的链接。
+

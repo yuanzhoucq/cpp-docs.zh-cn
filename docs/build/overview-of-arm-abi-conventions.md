@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf5ef9c9d9e122b23dc1b39d6e6092168f2c9381
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-arm-abi-conventions"></a>ARM ABI 约定概述
 针对 ARM 上 Windows 处理器编译的代码的应用程序二进制接口 (ABI) 基于标准 ARM EABI。 本文突出显示了 ARM 上的 Windows 与标准之间的主要差异。 有关标准 ARM EABI 的详细信息，请参阅[应用程序二进制接口 (ABI) ARM 体系结构](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)。  
@@ -210,6 +211,6 @@ ms.lasthandoff: 10/24/2017
   
  该计数器为真循环计数器，而非时钟，因此计数频率会随处理器的频率发生变化。 若要测量运行的时钟时间，请使用 `QueryPerformanceCounter`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [常见的 Visual c + + ARM 迁移问题](../build/common-visual-cpp-arm-migration-issues.md)   
  [ARM 异常处理](../build/arm-exception-handling.md)

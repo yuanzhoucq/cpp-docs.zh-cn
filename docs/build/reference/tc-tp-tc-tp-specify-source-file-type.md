@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3b7508bf3ff65e27cab3260577d2831de00eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69ccd08967d386780744fb85476033430127ba3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc、/Tp、/TC、/TP（指定源文件类型）
 **/Tc**选项指定`filename`是 C 源文件，即使它不具有扩展名为.c。 **/Tp**选项指定`filename`是 c + + 源文件，即使它不具有扩展名为.cpp 或.cxx 文件。 选项之间留一个空格和`filename`是可选的。 每个选项指定一个文件;若要指定其他文件，重复使用此选项。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
 /TP  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `filename`  
  C 或 c + + 源文件。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAs%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAs%2A>。  
   
 ## <a name="examples"></a>示例  
  下面的 CL 命令行指定 MAIN.c、 TEST.prg 和 COLLATE.prg 是所有 C 源文件。 CL 将无法识别 PRINT.prg。  
@@ -82,6 +83,6 @@ CL MAIN.C /TcTEST.PRG /TcCOLLATE.PRG PRINT.PRG
 CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

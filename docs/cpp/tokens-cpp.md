@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 349cc44f35a98385cbd186c6991e5a6b39724014
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852165a345b36c2ea07d18334b050d5fcb8f7bc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tokens-c"></a>令牌 （c + +）
 标记是对编译器有用的 C++ 程序的最小元素。 C++ 分析器识别以下类型的标记：标识符、关键字、文本、运算符、标点和其他分隔符。 这些标记流构成一个翻译单元。  
@@ -59,5 +60,5 @@ a = (i++) + j
   
  由于分析器将从输入流创建尽可能长的标记，因此会选择第二个说明，创建标记 `i++`、 `+`和 `j`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)

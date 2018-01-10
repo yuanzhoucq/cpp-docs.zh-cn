@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ee44fcec146ef8a8c68b917020ae52e2300eed5e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 类
 此类实现**IUnknown**聚合或非聚合对象。  
@@ -77,10 +61,10 @@ class CComPolyObject : public IUnknown,
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|对象的引用计数递增 1。|  
-|[CComPolyObject::CreateInstance](#createinstance)|（静态）允许你创建一个新**CComPolyObject** `contained` **>**对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComPolyObject::CreateInstance](#createinstance)|（静态）允许你创建一个新**CComPolyObject <** `contained`  **>** 对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|执行的最终初始化`m_contained`。|  
 |[CComPolyObject::FinalRelease](#finalrelease)|执行的最终析构`m_contained`。|  
 |[CComPolyObject::QueryInterface](#queryinterface)|检索指向所请求的接口的指针。|  
@@ -114,8 +98,8 @@ class CComPolyObject : public IUnknown,
   
  `CComPolyObject`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlcom.h  
   
 ##  <a name="addref"></a>CComPolyObject::AddRef  
  递增上对象的引用计数。  
@@ -154,7 +138,7 @@ CComPolyObject(void* pv);
  释放所有已分配的资源，调用[FinalRelease](#finalrelease)，并减少模块锁计数。  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- 允许你创建一个新**CComPolyObject** `contained` **>**对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 允许你创建一个新**CComPolyObject <** `contained`  **>** 对象而不需要的开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -164,7 +148,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>参数  
  `pp`  
- [out]指向的指针**CComPolyObject** `contained` **>**指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
+ [out]指向的指针**CComPolyObject <** `contained`  **>** 指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
@@ -243,8 +227,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>返回值  
  在调试版本中，**版本**返回一个值，可能是用于诊断或测试。 在非调试版本中，**版本**始终返回 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [类概述](../../atl/atl-class-overview.md)
-

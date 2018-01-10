@@ -18,11 +18,12 @@ caps.latest.revision: "63"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 723410eb8b634e3e01c26b505e619eed7fc371d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>演练：在命令行上编译本机 C++ 程序
 Visual C++ 包括一个命令行 C++ 编译器，可用来创建基本控制台应用、通用 Windows 应用、Windows 应用商店应用和 .NET 组件等的各种程序。  
@@ -31,12 +32,12 @@ Visual C++ 包括一个命令行 C++ 编译器，可用来创建基本控制台�
   
  在此演练中，可使用你自己的 Visual C++ 程序（而非键入显示的程序），也可使用另一个帮助文章中的 Visual C++ 代码示例。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  若要完成本演练，必须安装 Visual Studio 和可选的 Visual c + + 组件中，或 Microsoft Visual c + + 生成工具。  
   
  Visual Studio 是一个功能强大的集成的开发环境，对于许多语言和平台支持齐全编辑器、 资源管理器、 调试器和编译器。 有关这些功能以及如何下载和安装 Visual Studio 中，包括免费 Visual Studio Community 版中，请参阅[VisualStudio.com](https://www.visualstudio.com/)。  
   
- Visual Studio 生成工具安装命令行编译器、 工具和生成 C 和 c + + 程序所需的库。 它非常适用于生成实验室或教室练习，并且安装相对快一点。 若要只安装命令行工具，下载[Visual Studio 生成工具](https://go.microsoft.com/fwlink/?linkid=840931)和运行安装程序。 有关详细信息，请参阅[Visual c + + 生成工具](http://landinghub.visualstudio.com/visual-cpp-build-tools)。  
+ Visual Studio 生成工具安装命令行编译器、 工具和生成 C 和 c + + 程序所需的库。 它非常适用于生成实验室或教室练习，并且安装相对快一点。 若要只安装命令行工具，下载[Visual Studio 生成工具](https://go.microsoft.com/fwlink/p/?linkid=840931)和运行安装程序。 有关详细信息，请参阅[Visual c + + 生成工具](http://landinghub.visualstudio.com/visual-cpp-build-tools)。  
   
  你可以在命令行上生成 C 或 c + + 程序之前，必须验证，安装工具，并且，你可以从命令行访问它们。 Visual c + + 查找工具、 标头和使用的库具有复杂的命令行环境要求。 **不能使用 Visual c + + 中的普通命令提示符窗口**。 幸运的是，Visual c + + 安装可启动具有为命令行生成设置的环境的开发人员命令提示快捷的方式。 遗憾的是，开发人员命令提示符快捷方式和他们的位置的名称是几乎每个版本的 Visual c + + 和在不同版本的 Windows 中不同。 你的第一个演练任务发现右要使用。  
   
@@ -175,7 +176,7 @@ Visual C++ 包括一个命令行 C++ 编译器，可用来创建基本控制台�
   
  Visual c + + 编译器将包含通常符合 ISO C99 标准中，但不严格符合 C 运行库 (CRT)。 在大多数情况下，可移植代码将编译并按预期方式运行。 Visual c + + 不支持某些 CRT 更改在 ISO C11 中。 由 Visual c + + 编译器已弃用某些库函数和 POSIX 函数名称。 支持的函数，但首选的名称已更改。 有关详细信息，请参阅[CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告 （等级 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)   
  [编译器选项](../build/reference/compiler-options.md)

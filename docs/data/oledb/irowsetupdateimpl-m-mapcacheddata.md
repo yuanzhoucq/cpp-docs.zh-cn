@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6007498d85160124484860726d09523b9340bd14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c3b48a309d10d232eb311b66602e61ff727cdef7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetupdateimplmmapcacheddata"></a>IRowsetUpdateImpl::m_mapCachedData
 包含该延迟操作的原始数据的映射。  
@@ -45,8 +48,8 @@ m_mapCachedData;
  `pData`  
  指向要缓存的数据的指针。 类型的数据为*存储*（用户记录类）。 请参阅*存储*中的模板自变量[IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)

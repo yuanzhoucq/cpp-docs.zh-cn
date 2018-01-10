@@ -1,62 +1,64 @@
 ---
-title: "CXMLAccessor 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor"
-  - "CXMLAccessor"
-  - "ATL.CXMLAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CXMLAccessor 类"
+title: "CXMLAccessor 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor
+- CXMLAccessor
+- ATL.CXMLAccessor
+dev_langs: C++
+helpviewer_keywords: CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 96620f287522168cd7b6b78d43163e8c4bb64217
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CXMLAccessor 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以访问数据源以字符串数据，在您不了解数据存储区的架构 \(基础结构\)。  
+# <a name="cxmlaccessor-class"></a>CXMLAccessor 类
+可以在不知道数据存储区的架构 （基础结构） 时，作为字符串数据访问数据源。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
 |[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|检索列信息。|  
-|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|按行检索表的整个内容。|  
+|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|检索行的表的全部内容。|  
   
-## 备注  
- 但是，`CXMLAccessor` 与 `CDynamicStringAccessorW` 的区别在于它从数据存储访问的所有数据都转换为 XML 格式的 \(即带标记的\) 数据。  对于输出特别有用。XML 支持网页。  XML 标记名会尽可能密切地符合数据存储区的列名。  
+## <a name="remarks"></a>备注  
+ 但是，`CXMLAccessor`区别`CDynamicStringAccessorW`，因为它将转换从数据存储为 XML 格式 （有标记） 数据访问的所有数据。 这是非常适合 XML 感知的网页的输出。 XML 标记名称将与数据存储区的列名称尽可能匹配。  
   
- 使用 `CDynamicAccessor` 方法获取列信息。  使用该列信息在运行时动态创建访问器。  
+ 使用`CDynamicAccessor`方法以获取列信息。 此列信息用于在运行时动态创建取值函数。  
   
- 该列信息存储在由此类创建并管理的缓冲区中。  使用 [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)，获取列信息。[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) 或按行获取列数据。  
+ 列信息存储在缓冲区创建和管理此类。 获取列信息使用[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)或通过使用的行获取列数据[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)。  
   
-## 示例  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/CPP/cxmlaccessor-class_1.cpp)]  
+## <a name="example"></a>示例  
+ [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
   
-## 要求  
- **标题**:atldbcli.h  
+## <a name="requirements"></a>惠?  
+ **标头**：atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 类](../../data/oledb/caccessor-class.md)   

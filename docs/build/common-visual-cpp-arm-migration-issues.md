@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 458272a769fd1ce2076b6d80f5b3977a7c2ea7b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39902d953702703a4367be24bf6c1cd011863289
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 迁移的常见问题
 
@@ -111,6 +112,6 @@ Microsoft c + + 编译器支持的两个不同的解释`volatile`可以通过使
   
 X86 和 x64 体系结构中，默认值是**/volatile: ms**由于已创建针对这些体系结构使用的 Microsoft c + + 编译器的软件大部分依赖于它们。 X86 和 x64 程序编译时，你可以指定**/volatile:iso**交换机以帮助避免不必要依赖的传统的可变语义，并将提升可移植性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
-[配置 ARM 处理器的 Visual c + +](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[为 ARM 处理器配置 Visual C++](../build/configuring-programs-for-arm-processors-visual-cpp.md)

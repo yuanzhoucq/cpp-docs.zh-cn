@@ -1,43 +1,45 @@
 ---
-title: "如何:增强与普通性能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "普通 [C++], 性能"
-  - "性能, C++"
-  - "Visual C++, 泛型"
-  - "Visual C++, 性能"
+title: "如何： 通过泛型 （Visual c + +） 提高性能 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- performance, C++
+- Visual C++, performance
+- Visual C++, generics
+- generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d8aad77236e5c1b2cdc8fe5958d87d8c53b8f05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何:增强与普通性能
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-泛型，可以创建根据类型参数的可重用的代码。  类型参数的实际类型将延迟到调用由客户端代码。  有关泛型的更多信息，请参见 [泛型](../windows/generics-cpp-component-extensions.md)。  
+# <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：通过泛型提高性能 (Visual C++)
+采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅[泛型](../windows/generics-cpp-component-extensions.md)。  
   
- 本文讨论泛型如何有助于提高使用收集应用程序的性能。  
+ 本文讨论泛型如何有助于提高使用集合的应用程序的性能。  
   
-## 示例  
- .NET Framework 附带了 <xref:System.Collections?displayProperty=fullName> 命名空间的许多集合类中。  大多数这些集合都在类型为 <xref:System.Object?displayProperty=fullName>的对象。  这允许集合存储任何类型，因为所有 .NET Framework，即使值类型，它从 <xref:System.Object?displayProperty=fullName>派生。  但是，具有两个缺点在此方法。  
+## <a name="example"></a>示例  
+ .NET Framework 在 <xref:System.Collections?displayProperty=fullName> 命名空间中附带了许多集合类。 这些集合大多数作用于 <xref:System.Object?displayProperty=fullName> 类型的对象。 这允许集合存储任何类型，因为 .NET Framework 中的所有类型（甚至是值类型）都派生自 <xref:System.Object?displayProperty=fullName>。 但是，此方法有两个缺点。  
   
- 首先，如果集合存储值类型，如整型，必须在添加到集合之前装箱值和未装箱，该值从集合中检索。  这些是开销大的操作。  
+ 首先，如果集合存储值类型（如整型），值必须在添加到集合之前装箱，然后在从集合中检索时取消装箱。 这些操作开销很大。  
   
- 接下来，无法控制哪些类型可添加到集合。  它完全是合法的加法整数和字符串到同一集合，因此，即使这可能不是所期望的。  因此，为了使代码可以为类型安全，必须检查从集合检索的类型实际上是预期内容的。  
+ 其次，无法控制哪些类型可添加到集合。 将整数和字符串添加到同一集合是完全合法的，即使这可能不是所期望的。 因此，为了使代码的类型安全，必须检查从集合检索的类型确实是预期类型。  
   
- 下面的代码示例在泛型之前显示 .NET Framework 集合的两个主要的缺点。  
+ 下面的代码示例显示了在采用泛型之前 .NET Framework 集合的两个主要缺点。  
   
 ```  
 // perf_pre_generics.cpp  
@@ -81,12 +83,15 @@ int main()
 }  
 ```  
   
-  **弹出字符串：七**  
-**弹出一：7**   
-## 示例  
- 新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间包含在 <xref:System.Collections?displayProperty=fullName> 命名空间中找到的许多相同的集合，但是，修改它们接受泛型类型参数。  这消除非泛型集合两个缺点：值类型装箱和取消装箱和无法指定集合中将存储的类型。  对两个集合的操作相同；而是在它们自己唯一区别在于如何实例化。  
+```Output  
+Popped a String: Seven  
+Popped an int: 7  
+```  
   
- 比较上面编写示例使用泛型集合 <xref:System.Collections.Generic.Stack%601> 的此示例。  在访问最频繁的大型集合，此示例的性能比前一个实例比大。  
+## <a name="example"></a>示例  
+ 新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间包含在 <xref:System.Collections?displayProperty=fullName> 命名空间中找到的许多相同集合，但是它们已经修改以接受泛型类型参数。 这消除了非泛型集合的两个缺点：值类型装箱和取消装箱及无法指定集合中存储的类型。 对两个集合的操作相同；唯一区别在于实例化方式不同。  
+  
+ 比较上述示例与使用泛型 <xref:System.Collections.Generic.Stack%601> 集合的此示例。 在访问频繁的大型集合中，此示例的性能显著高于前一个实例。  
   
 ```  
 // perf_post_generics.cpp  
@@ -124,6 +129,9 @@ int main()
 }  
 ```  
   
-  **14**   
-## 请参阅  
+```Output  
+14  
+```  
+  
+## <a name="see-also"></a>请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

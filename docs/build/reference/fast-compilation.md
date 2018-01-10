@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c67e346c83e2bd2e12d58b5c7ec1bea95a16cba0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 917e098b25865daabc65bf70a01a8539a0d5c79b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fast-compilation"></a>快速编译
 若要提高你编译的速度：  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [创建预编译标头文件](../../build/reference/creating-precompiled-header-files.md)并用[预编译标头选项](../../build/reference/yc-create-precompiled-header-file.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

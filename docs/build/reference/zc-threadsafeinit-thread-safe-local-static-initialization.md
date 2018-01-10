@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e1476369a798228361b89fdef12c94624ca4a70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a03f3ea67c9ecabd6fa68d653a3e1812fb0266cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit （线程安全本地静态初始化）  
 `/Zc:threadSafeInit`编译器选项告知编译器以线程安全的方式，无需手动同步初始化静态本地 （函数范围） 变量。 只有初始化是线程安全的。 使用和修改多个线程的静态本地变量仍必须手动同步。 此选项是在 Visual Studio 2015 中开始提供。 默认情况下，Visual Studio 启用此选项。  
@@ -51,7 +52,7 @@ C + + 11 标准中，块范围变量与静态或线程存储持续时间必须�
 3.  选择**配置属性**， **C/c + +**，**命令行**属性页。
 4.  修改**其他选项**属性以包含`/Zc:threadSafeInit`或`/Zc:threadSafeInit-`，然后选择**确定**。
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [编译器选项](../../build/reference/compiler-options.md)  
 [设置编译器选项](../../build/reference/setting-compiler-options.md)  
 [/Zc （一致性）](../../build/reference/zc-conformance.md)  

@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d07abc5e2579ac0764d32223b4ded15265e827fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44b5528a2d6bedaaaa7ddce582f58042e084b3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>创建发行版本时遇到的常见问题
 在开发期间，你通常将生成，并使用你的项目的调试版本进行测试。 如果你然后生成你的应用程序的发布版本，则可能获得访问冲突。  
@@ -68,6 +69,6 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_optimizations"></a>优化  
  根据某些代码段的性质，优化编译器可能生成意外的代码。 这是最可能的原因的发行版本问题，但有时确实会发生。 一种解决方案，请参阅[优化您的代码](../../build/reference/optimizing-your-code.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [发行版本](../../build/reference/release-builds.md)   
  [修复发行版本问题](../../build/reference/fixing-release-build-problems.md)

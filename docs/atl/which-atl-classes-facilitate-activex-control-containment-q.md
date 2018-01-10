@@ -1,38 +1,39 @@
 ---
-title: "Which ATL Classes Facilitate ActiveX Control Containment? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件容器 [C++], ATL control hosting"
-  - "hosting controls using ATL"
+title: "ATL 类促进 ActiveX 控件包含？ | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- hosting controls using ATL
+- ActiveX control containers [C++], ATL control hosting
 ms.assetid: 803a4605-7f4c-4139-8638-49d8783d31b0
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 880c7bd52476614a4356690aff2fda286e9f3aef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Which ATL Classes Facilitate ActiveX Control Containment?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL的控件承载代码不需要使用任何ATL选件类;可以创建 **"AtlAxWin80"** 窗口并根据需要，使用控件承载API \(有关更多信息，请参见 [什么是控件承载API ATL?](../atl/what-is-the-atl-control-hosting-api-q.md)）。  但是，下面选件类使包容功能更易于使用。  
+# <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL 类促进 ActiveX 控件包含？
+ATL 的控件承载代码不要求你使用任何 ATL 类;你可以只需创建**"AtlAxWin80"**窗口和使用控件承载 API，如有必要 (有关详细信息，请参阅**什么是 ATL 控件承载 API**。 但是，以下类使包含功能使用起来更为简便。  
   
-|类|说明|  
-|-------|--------|  
-|[CAxWindow](../atl/reference/caxwindow-class.md)|包装一 **"AtlAxWin80"** 窗口中，提供创建窗口中，创建控制和\/或控件附加到窗口和检索接口指针在宿主对象。|  
-|[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|包装一 **"AtlAxWinLic80"** 窗口中，提供创建窗口中，创建控件并\/或附加一个授权控件到窗口和检索接口指针在宿主对象。|  
-|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|作为ActiveX基于对话框资源的控件选件类的基类。  此类控件可以包含其他ActiveX控件。|  
-|[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|作为基于对话框资源的对话框选件类的基类。  此对话框可以包含ActiveX控件。|  
-|[CWindow](../atl/reference/cwindow-class.md)|提供方法，[GetDlgControl](../Topic/CWindow::GetDlgControl.md)，将返回在控件的接口指针将承载它的窗口的ID。  此外，`CWindow` 显示的Windows API包装通常使窗口管理更加轻松。|  
+|类|描述|  
+|-----------|-----------------|  
+|[CAxWindow](../atl/reference/caxwindow-class.md)|包装**"AtlAxWin80"**窗口中，提供用于创建窗口，创建控件和/或将控件附加到窗口中，并检索该主机对象上的接口指针的方法。|  
+|[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|包装**"AtlAxWinLic80"**窗口中，提供用于创建窗口，创建控件和/或将授权的控件附加到窗口中，并检索该主机对象上的接口指针的方法。|  
+|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|充当基于对话框资源的 ActiveX 控件类的基类。 此类控件可以包含其他 ActiveX 控件。|  
+|[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|充当基于对话框资源的对话框类的基类。 此类对话框可以包含 ActiveX 控件。|  
+|[CWindow](../atl/reference/cwindow-class.md)|提供一种方法， [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)，这将返回的接口指针上的控件，给定及其主机窗口的 ID。 此外，Windows API 包装公开`CWindow`通常使窗口管理更加轻松。|  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [控件包含常见问题](../atl/atl-control-containment-faq.md)
+

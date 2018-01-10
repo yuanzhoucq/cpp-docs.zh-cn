@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06561a841f9c3fb549da11f08a31680bfb574e97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 73bdf26a107dfd70f5506f27a76d146a354e7107
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandimplcancelexecution"></a>ICommandImpl::CancelExecution
 取消当前的命令执行。  
@@ -37,10 +40,10 @@ HRESULT CancelExecution( );
   
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICommandImpl 类](../../data/oledb/icommandimpl-class.md)   
  [Icommandimpl:: Execute](../../data/oledb/icommandimpl-execute.md)   
  [ICommandImpl::Cancel](../../data/oledb/icommandimpl-cancel.md)

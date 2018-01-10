@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - localtime_s
 - localtime64_s
 - _localtime64_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _localtime64_s function
 - localtime32_s function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 转换时间值并更正本地时区。 这些是具有安全增强功能的 [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 的版本，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
@@ -102,7 +86,7 @@ errno_t _localtime64_s(
 |-----------|------------|------------------|--------------------|---------------------------------------|  
 |`NULL`|任何|`EINVAL`|未修改|是|  
 |非 `NULL`（指向有效内存）|`NULL`|`EINVAL`|所有字段都设置为 -1|是|  
-|非 `NULL`（指向有效内存）|小于 0 或大于 `_MAX__TIME64_T`|`EINVAL`|所有字段都设置为 -1|No|  
+|非 `NULL`（指向有效内存）|小于 0 或大于 `_MAX__TIME64_T`|`EINVAL`|所有字段都设置为 -1|否|  
   
  对于前两种错误条件，都会调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 `EINVAL`。  
   
@@ -116,7 +100,7 @@ errno_t _localtime64_s(
   
  使用 `__time64_t` 结构的 `_localtime64_s` 允许日期最大值表示为 3001 年 1 月 18 日 23:59:59，协调世界时 (UTC)；而 `_localtime32_s` 能表示截至 2038 年 1 月 18 日 23:59:59 之前的日期，UTC。  
   
- `localtime_s` 是计算出 `_localtime64_s` 的内联函数，且 `time_t` 等同于 `__time64_t`。 如果需要强制编译器将 `time_t` 解释为旧的 32 位 `time_t`，你可以定义 `_USE_32BIT_TIME_T`。 执行此操作将导致 `localtime_s` 计算出 `_localtime32_s`。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许此操作。  
+ `localtime_s` 是计算出 `_localtime64_s` 的内联函数，且 `time_t` 等同于 `__time64_t`。 如果需要强制编译器将 `time_t` 解释为旧的 32 位 `time_t`，你可以定义 `_USE_32BIT_TIME_T`。 执行此操作将导致 `localtime_s` 计算出 `_localtime32_s`。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。  
   
  结构类型 [tm](../../c-runtime-library/standard-types.md) 的字段存储以下值，其中每个值为 `int`。  
   
@@ -147,15 +131,15 @@ errno_t _localtime64_s(
  `tm_isdst`  
  如果夏令时生效，则为正值；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负值。 如果设置 `TZ` 环境变量，C 运行时库假设规则适用于美国，以使用该规则实现夏令时 (DST) 的计算。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`localtime_s`|\<time.h>|  
 |`_localtime32_s`|\<time.h>|  
 |`_localtime64_s`|\<time.h>|  
   
- 有关更多兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -213,7 +197,7 @@ int main( void )
 Fri Apr 25 01:19:27 PM  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
@@ -222,4 +206,3 @@ Fri Apr 25 01:19:27 PM
  [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
  [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)   
  [_tzset](../../c-runtime-library/reference/tzset.md)
-

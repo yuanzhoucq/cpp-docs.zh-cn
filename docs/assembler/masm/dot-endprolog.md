@@ -1,42 +1,40 @@
 ---
-title: ".ENDPROLOG | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ENDPROLOG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ENDPROLOG directive"
+title: ".ENDPROLOG |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ENDPROLOG
+dev_langs: C++
+helpviewer_keywords: .ENDPROLOG directive
 ms.assetid: 61a2474c-9527-46e6-9f9d-bc4b42c10f35
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1aea59f175b7913a4f4054392824fe93dc8f18f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# .ENDPROLOG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-通知 Prolog 声明的结尾。  
+# <a name="endprolog"></a>.ENDPROLOG
+用信号通知的序言声明的末尾。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 .ENDPROLOG  
 ```  
   
-## 备注  
- 它是使用任何一个的错误 \(声明在 [PROC](../../assembler/masm/proc.md) 框架和 .ENDPROLOG 之间的界限。  
+## <a name="remarks"></a>备注  
+ 它是在区域之间的外部使用任何序言声明错误[PROC](../../assembler/masm/proc.md)帧和。ENDPROLOG。  
   
- 有关更多信息，请参见 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
+ 有关详细信息，请参阅[x64 (ml64.exe) 的 MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

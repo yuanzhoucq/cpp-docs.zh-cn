@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClassFlags 结构 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClassFlags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClassFlags 结构"
+title: "RuntimeClassFlags 结构 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClassFlags
+dev_langs: C++
+helpviewer_keywords: RuntimeClassFlags structure
 ms.assetid: 7098d605-bd14-4d51-82f4-3def8296a938
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 85eb42c537845d86ce8cf3b1f20db7e9eeffe76f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassFlags 结构
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-包含 [RuntimeClass](../windows/runtimeclass-class.md)的实例的类型。  
+# <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 结构
+包含的实例类型[RuntimeClass](../windows/runtimeclass-class.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -35,25 +36,25 @@ template <
 struct RuntimeClassFlags;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `flags`  
- 一个 [RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md) 值。  
+ A [RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共常量  
+### <a name="public-constants"></a>公共常量  
   
-|名称|说明|  
-|--------|--------|  
-|[RuntimeClassFlags::value 常量](../windows/runtimeclassflags-value-constant.md)|包含 [RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md) 一个值。|  
+|name|描述|  
+|----------|-----------------|  
+|[RuntimeClassFlags::value 常量](../windows/runtimeclassflags-value-constant.md)|包含[RuntimeClassType 枚举](../windows/runtimeclasstype-enumeration.md)值。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `RuntimeClassFlags`  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

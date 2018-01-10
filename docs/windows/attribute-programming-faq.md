@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c61ced7e0931f1dba46a7a6b760755f799d29b6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 本主题回答下列常见问题：  
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a>HRESULT 是什么？  
  `HRESULT`是通常由作为返回值特性和 ATL 通常以简单数据类型。 下表介绍各种值。 标头文件 winerror.h 中包含多个值。  
   
-|名称|描述|值|  
+|name|描述|“值”|  
 |----------|-----------------|-----------|  
 |S_OK|操作成功|0x00000000|  
 |E_UNEXPECTED|意外的失败|: 0x8000FFFF|  
@@ -258,5 +261,5 @@ int main() {}
 ##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>可以从还使用属性的类派生的类上使用属性？  
  否，不支持从还使用属性的类派生的类上使用属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../windows/attributed-programming-concepts.md)

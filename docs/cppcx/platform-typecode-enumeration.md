@@ -1,39 +1,40 @@
 ---
-title: "Platform::TypeCode 枚举 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::TypeCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::TypeCode 枚举"
+title: "Platform:: typecode 枚举 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::TypeCode
+dev_langs: C++
+helpviewer_keywords: Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 353649f63a8e5522329459b1c9f740450818a3af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::TypeCode 枚举
+# <a name="platformtypecode-enumeration"></a>Platform::TypeCode 枚举
 指定表示一个内置类型的数字类别。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 enum class TypeCode {};  
 ```  
   
-## 成员  
+### <a name="members"></a>成员  
   
 |类型代码|描述|  
-|----------|--------|  
+|---------------|-----------------|  
 |Boolean|Platform::Boolean 类型。|  
 |Char16|default::char16 类型。|  
 |DateTime|DateTime 类型。|  
@@ -52,11 +53,11 @@ enum class TypeCode {};
 |UInt64|default::uint64 类型。|  
 |UInt8|default::uint8 类型。|  
   
-## 要求  
- **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>惠?  
+ **支持的最低客户端：** Windows 8  
   
- **支持的最低服务器版本：** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **支持的最低服务器：** Windows Server 2012  
   
- **命名空间：**Platform  
+ **命名空间：** Platform  
   
- **元数据：**platform.winmd
+ **元数据：** platform.winmd

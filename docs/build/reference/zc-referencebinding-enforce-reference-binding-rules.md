@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8334a446c995155fb0632ed135ca9578f6ff881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d3d352394b61f95e083a2e6e6f0d888fe210b37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding （强制实施引用绑定规则）
 当**/Zc:referenceBinding**指定选项，编译器不允许将绑定到一个临时的非常量左值引用。  
@@ -74,7 +75,7 @@ void main() {
   
 4.  修改**其他选项**属性以包含**/Zc:referenceBinding** ，然后选择**确定**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [编译器选项](../../build/reference/compiler-options.md)   
 [设置编译器选项](../../build/reference/setting-compiler-options.md)   
 [/Zc （一致性）](../../build/reference/zc-conformance.md)

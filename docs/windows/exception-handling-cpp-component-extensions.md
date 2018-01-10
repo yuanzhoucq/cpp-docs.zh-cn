@@ -21,11 +21,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa42bfc67a94ed4e25045dc6656651a7b9bd645e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d6f43bd1953cc13189f53d97090d3913a49072ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling--c-component-extensions"></a>异常处理（C++ 组件扩展）
 使用编译的应用程序**/ZW**编译器选项或**/clr**都使用的编译器选项*异常*来在程序执行过程中处理意外的错误。 以下主题讨论 C++/CX 或 C++/CLI 应用程序中的异常处理。  
@@ -53,5 +56,5 @@ ms.lasthandoff: 10/24/2017
  [异常处理](../cpp/exception-handling-in-visual-cpp.md)  
  介绍 C++ 中的异常处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

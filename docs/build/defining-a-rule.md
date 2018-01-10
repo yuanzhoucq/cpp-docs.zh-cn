@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e720613dd4d918b2b697a6ff21a8950f0c5adc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0d6ca616e3685db36d6d24b339a860eab4c6150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-a-rule"></a>定义规则
 *Fromext*表示是依赖文件的扩展和*toext*表示目标文件的扩展名。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
  [规则中的搜索路径](../build/search-paths-in-rules.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [推理规则](../build/inference-rules.md)

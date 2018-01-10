@@ -16,14 +16,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 638132f640fd342a752ec45541275178f6f26692
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e4516c3206a08c2b9ee32aea4bbb669ce4cdf0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini 和 NMAKE
 NMAKE 读取 Tools.ini 之前它读取生成文件，除非使用 /R。 它查找 Tools.ini 首先当前目录中，然后由 INIT 环境变量指定的目录中。 NMAKE 中的设置初始化文件的部分开头`[NMAKE]`并且可以包含任何生成文件的信息。 以数字符号开头的单独的行上指定的注释 （#）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行 NMAKE](../build/running-nmake.md)

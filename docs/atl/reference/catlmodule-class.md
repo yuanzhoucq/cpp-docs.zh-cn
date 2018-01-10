@@ -30,11 +30,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c2c9b9c5eaaa2cf908b2b1ff82bafaa892d1e43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmodule-class"></a>CAtlModule 类
 此类提供由几个 ATL module 类的方法。  
@@ -88,7 +89,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
  `CAtlModule`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
@@ -320,7 +321,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 ### <a name="remarks"></a>备注  
  类似于[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)除`CAtlModule::UpdateRegistryFromResourceS`创建静态链接到 ATL 注册表组件 （注册器）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)   
  [类概述](../../atl/atl-class-overview.md)   
  [Module 类](../../atl/atl-module-classes.md)   
