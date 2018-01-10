@@ -38,30 +38,16 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 计算 1 加上指定值的自然对数。  
@@ -109,26 +95,26 @@ long double log1pl(
 |< -1|nan|INVALID|EDOM|  
 |-inf|nan|INVALID|EDOM|  
 |±SNaN|与输入相同|INVALID||  
-|±QNaN, indefinite|与输入相同|||  
+|±QNaN，无限期|与输入相同|||  
   
  如果 `x` = -1，则将 `errno` 值设置为 ERANGE。 `errno`如果值设置为 EDOM `x` <-1。  
   
 ## <a name="remarks"></a>备注  
  x 接近 0 时 `log1p` 函数比使用 log(`x`+1) 更准确。  
   
- 由于 C++ 支持重载，可以调用采用并返回浮点型和长双精度型的 `log1p` 的重载。 在 C 程序中，`log1p` 始终采用并返回双精度型。  
+ 由于 C++ 支持重载，可以调用采用并返回浮点型和长双精度型的 `log1p` 的重载。 在 C 程序中，`log1p` 始终采用及返回双精度型。  
   
  如果 `x` 是自然数，则此函数返回 (`x`-1) 的阶乘的对数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  
 |`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log2、log2f、log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

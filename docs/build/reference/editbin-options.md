@@ -15,20 +15,21 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a4b30b5fdc3294220b210001cc19a58bdf4b3b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editbin-options"></a>EDITBIN 选项
 EDITBIN 可用于修改对象文件、 可执行文件和动态链接库 (Dll)。 选项指定 EDITBIN 做的更改。  
   
- 选项包括选项说明符，它是短划线 （-） 或正斜杠 （/） 后, 跟选项的名称。 选项名不能缩写。 某些选项带参数，参数在冒号 (:) 后指定。 中的选项规范所允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名及其关键字参数或文件名参数不区分大小写。 例如，-bind 和 /BIND 意义完全相同。  
+ 选项包括选项说明符，它是短划线 （-） 或正斜杠 （/） 后, 跟选项的名称。 选项名不能缩写。 某些选项带参数，参数在冒号 (:) 后指定。 中的选项规范所允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名及其关键字自变量或文件名自变量不区分大小写。 例如，-bind 和 /BIND 意义完全相同。  
   
  EDITBIN 还拥有以下选项：  
   
-|选项|用途|  
+|选项|目标|  
 |------------|-------------|  
 |[/ALLOWBIND](../../build/reference/allowbind.md)|指定一个 DLL 是否可以绑定。|  
 |[/ALLOWISOLATION](../../build/reference/allowisolation.md)|指定 DLL 或可执行文件清单查找行为。|  
@@ -51,6 +52,6 @@ EDITBIN 可用于修改对象文件、 可执行文件和动态链接库 (Dll)�
 |[/TSAWARE](../../build/reference/tsaware.md)|指定应用可在多用户环境中运行。|  
 |[/ 版本](../../build/reference/version.md)|在标头中设置版本号。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C/c + + 生成工具](../../build/reference/c-cpp-build-tools.md)   
  [EDITBIN 参考](../../build/reference/editbin-reference.md)

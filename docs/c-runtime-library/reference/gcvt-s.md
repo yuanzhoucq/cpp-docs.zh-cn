@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 将浮点值转换为字符串。 这是 [_gcvt](../../c-runtime-library/reference/gcvt.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述的安全增强功能。  
@@ -86,8 +87,8 @@ errno_t _gcvt_s(
 |`buffer`|`sizeInBytes`|`value`|`digits`|返回|`buffer` 中的值|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
 |`NULL`|任何|任何|任何|`EINVAL`|未修改。|  
-|非 `NULL`（指向有效内存）|零|any|任何|`EINVAL`|未修改。|  
-|非 `NULL`（指向有效内存）|any|任何|>= `sizeInBytes`|`EINVAL`|未修改。|  
+|非 `NULL`（指向有效内存）|零|任何|任何|`EINVAL`|未修改。|  
+|非 `NULL`（指向有效内存）|任何|任何|>= `sizeInBytes`|`EINVAL`|未修改。|  
   
  **安全问题**  
   
@@ -96,17 +97,17 @@ errno_t _gcvt_s(
 ## <a name="remarks"></a>备注  
  `_gcvt_s` 函数将浮点 `value` 转换为字符串（它包括小数点和可能的登录字节），并将字符串存储在 `buffer` 中。 `buffer` 应足够大以容纳转换后的值加上一个会自动追加的端接空字符。 `_CVTBUFSIZE` 的缓冲区长度足以满足任何浮点值。 如果已使用 `digits` + 1 的缓冲区大小，该函数将不会覆盖缓冲区的末尾，因此请确保为此操作提供足够的缓冲区。 `_gcvt_s` 尝试生成十进制格式的 `digits` 数字。 如果不能，则将生成指数格式的 `digits` 数字。 在转换过程中，可以取消零结尾。  
   
- 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  此函数的调试版本首先使用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -140,7 +141,7 @@ int main()
 Converted value: 1.2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53b2457c87e587b4e1ef13e53bf2dfcdd4800d7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c574040d6004516682379a5e64b87c1b92388ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="special-characters-in-a-makefile"></a>生成文件中的特殊字符
 若要使用 NMAKE 特殊字符作为原义字符，请在它前面添脱字号 (^)。 NMAKE 将忽略位于其他字符之前的插入符号。 特殊字符包括：  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  若要使用美元符号 （$） 用作原义字符命令中，指定两个美元符号 （$$）。 此方法还可在其他情况下其中 ^ $ 工作原理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成文件的内容](../build/contents-of-a-makefile.md)

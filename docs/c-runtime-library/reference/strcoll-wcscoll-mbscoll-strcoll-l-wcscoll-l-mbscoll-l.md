@@ -54,11 +54,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecb29e00a4baa5bd1ad36fe47bade09a8cc7f56f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e65837945b8c28ee0968dbeaded4fbdbf7e79c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 使用当前区域设置或指定的 LC_COLLATE 转换状态类别比较字符串。  
@@ -121,7 +122,7 @@ int _mbscoll_l(
   
  所有这些函数都验证其参数。 如果 `string1` 或 `string2` 为空指针，或如果 `count` 大于 `INT_MAX`，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `_NLSCMPERROR` 并将 `errno` 设置为 `EINVAL`。  
   
- 两个字符串的比较是一个与区域设置相关的操作，因为每个区域设置对排序字符有不同的规则。 这些不带 `_l` 后缀的函数的版本使用当前线程的区域设置实现与该区域设置相关的行为；带有 `_l` 后缀的版本与不带此后缀的相应函数相同，只不过它们使用作为参数传递的区域设置（而不是当前区域设置）。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 两个字符串的比较是一个与区域设置相关的操作，因为每个区域设置对排序字符有不同的规则。 这些不带 `_l` 后缀的函数的版本使用当前线程的区域设置实现与该区域设置相关的行为；带有 `_l` 后缀的版本与不带此后缀的相应函数相同，只不过它们使用作为参数传递的区域设置（而不是当前区域设置）。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
@@ -129,9 +130,9 @@ int _mbscoll_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscoll`|`strcoll`|`_mbscoll`|`wcscoll`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strcoll`|\<string.h>|  
 |`wcscoll`|\<wchar.h>、\<string.h>|  
@@ -141,7 +142,7 @@ int _mbscoll_l(
   
  有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [区域设置](../../c-runtime-library/locale.md)   
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 函数](../../c-runtime-library/strcoll-functions.md)   

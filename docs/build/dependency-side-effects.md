@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d19426a34620cfdd14b426b94757715ca2d1cbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f595099d2a71c948c769adf7f7eafcbc373f3146
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dependency-side-effects"></a>依赖项副作用
 如果使用冒号 （:） 中两个依赖项行中不同的位置，指定目标，如果后行之一显示的命令，NMAKE 将解释依赖项，如同相邻或组合。 它不会调用不具有任何命令，而是假定的依赖关系属于一个描述块和执行的命令与其他依赖项指定的依赖关系的推理规则。 例如，这一组规则：  
@@ -58,5 +59,5 @@ bounce.exe : up.obj
 # invokes an inference rule  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目标](../build/targets.md)

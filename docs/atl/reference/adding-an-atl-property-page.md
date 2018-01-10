@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7c1d7ae11873c2bc47f1bb4a7a2439768e8347b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: abf50e98d32789e357f5e13339ee2fc0a0daa331
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-property-page"></a>添加 ATL 属性页
 若要将活动模板库 (ATL) 属性页添加到你的项目，你的项目必须已创建作为 ATL 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
  一旦你创建的控件属性页，你必须提供[PROP_PAGE](property-map-macros.md#prop_page)控件的属性映射中的条目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性页](../../atl/atl-com-property-pages.md)   
  [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
  [示例：实现属性页](../../atl/example-implementing-a-property-page.md)

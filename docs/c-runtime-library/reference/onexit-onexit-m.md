@@ -41,11 +41,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b376efd87c6ab38f87acea71082fd5bf6bd38b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 476df668657739c9f67ca1323c2c0ce630260110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onexit-onexitm"></a>_onexit、_onexit_m
 注册在退出时要调用的例程。  
@@ -75,13 +76,13 @@ _onexit_t_m _onexit_m(
   
  `_onexit` 是 Microsoft 扩展。 若要获得 ANSI 可移植性，请使用 [atexit](../../c-runtime-library/reference/atexit.md)。 该函数的 `_onexit_m` 版本适用于混合模式。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_onexit`|\<stdlib.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -135,7 +136,7 @@ This is executed first.
 This is executed next.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
  [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   

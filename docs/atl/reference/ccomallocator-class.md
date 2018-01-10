@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1ba2b12110e4c312b84b2a24831687e782cc339
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 类
 此类提供用于管理使用 COM 内存例程的内存的方法。  
@@ -48,7 +49,7 @@ class CComAllocator
 ## <a name="remarks"></a>备注  
  此类由[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)提供 COM 内存分配例程。 对应项类中， [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)，提供使用 CRT 例程的相同方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="allocate"></a>CComAllocator::Allocate  
@@ -102,7 +103,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>备注  
  调整已分配内存的大小。 请参阅[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)有关详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComHeapPtr 类](../../atl/reference/ccomheapptr-class.md)   
  [CCRTAllocator 类](../../atl/reference/ccrtallocator-class.md)   
  [类概述](../../atl/atl-class-overview.md)

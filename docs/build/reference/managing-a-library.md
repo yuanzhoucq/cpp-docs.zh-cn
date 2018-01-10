@@ -51,11 +51,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6ef7f9b1cbeb3aeab28a4c02bce9099aaaf0078d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-a-library"></a>管理库
 默认模式为 LIB 是生成或修改 COFF 对象的库。 LIB 在此模式下运行，如果不指定 /extract، （若要将对象复制到文件中） 或 /DEF （若要生成导入库）。  
@@ -108,5 +109,5 @@ LIB [options...] files...
 > [!NOTE]
 >  无法同时删除成员并将其提取到相同的步骤中的文件。 你必须首先提取成员对象使用 /extract،，然后运行 LIB 再次使用 /REMOVE。 此行为不同于其他 Microsoft 产品中提供 16 位 LIB （对于 OMF 库）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LIB 引用](../../build/reference/lib-reference.md)

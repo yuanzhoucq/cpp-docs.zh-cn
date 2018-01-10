@@ -1,63 +1,64 @@
 ---
-title: "Microsoft C 和 C++ 扩展 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! 运算符, 扩展到 C++"
-  - "!= 运算符"
-  - "& 运算符, C/C++ 的扩展"
-  - "&& 运算符"
-  - "&= 运算符"
-  - "^ 运算符, C/C++ 的扩展"
-  - "^= 运算符, C++ 扩展"
-  - "| 运算符, 扩展"
-  - "|| 运算符"
-  - "|= 运算符"
-  - "~ 运算符, C/C++ 的扩展"
-  - "And 运算符, C/C++ 的扩展"
-  - "and_eq 运算符"
-  - "compl 方法"
-  - "扩展"
-  - "扩展, C 语言"
-  - "iso646.h "
-  - "Microsoft C/C++ 扩展"
-  - "NOT 运算符"
-  - "not_eq 运算符"
-  - "Or 运算符, Microsoft C/C++ 扩展"
-  - "or_eq 运算符"
-  - "Visual C, Microsoft 扩展"
-  - "Visual C++, C/C++ 的扩展"
-  - "异或运算符, Microsoft C/C++ 扩展"
-  - "xor_eq 运算符"
+title: "Microsoft C 和 c + + 扩展 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- or_eq operator
+- ~ operator, extensions to C/C++
+- '& operator, extensions to C/C++'
+- '&= operator'
+- iso646.h header
+- Xor operator, Microsoft extensions to C/C++
+- '!= operator'
+- '! operator, extension to C++'
+- Or operator, Microsoft extensions to C/C++
+- ^ operator, extensions to C/C++
+- ^= operator, C++ extensions
+- xor_eq operator
+- and_eq operator
+- Microsoft extensions to C/C++
+- '|= operator'
+- '|| operator'
+- And operator, extensions to C/C++
+- NOT operator
+- '&& operator'
+- extensions, C language
+- Visual C++, extensions to C/C++
+- '| operator, extensions'
+- not_eq operator
+- Visual C, Microsoft extensions
+- extensions
+- compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Microsoft C 和 C++ 扩展
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 如下扩展 ANSI C 和 ANSI C\+\+ 标准。  
+# <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C 和 C++ 扩展
+Visual C++ 按如下方式扩展 ANSI C 和 ANSI C++ 标准。  
   
-## 关键字  
- 多个关键字被添加。  在 [C\+\+ 关键字](../../cpp/keywords-cpp.md)的列表中，有两个前导下划线的关键字是 Visual C\+\+ 扩展。  
+## <a name="keywords"></a>关键字  
+ 添加了几个关键字。 在列表中[关键字](../../cpp/keywords-cpp.md)，有两个前导下划线的关键字是 Visual c + + 扩展。  
   
-## static const 整型（或枚举）成员的类外定义  
- 在标准 \(**\/Za**\) 下，需要为数据成员做出类外定义，如下所示：  
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>静态 const 整型 （或枚举） 的类定义成员外  
+ 在标准 (**/Za**)，必须为数据成员进行了扩展的类定义，如下所示：  
   
 ```  
-class CMyClass  {  
+  
+      class CMyClass  {  
    static const int max = 5;  
    int m_array[max];  
 }  
@@ -65,18 +66,18 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition  
 ```  
   
- 在 **\/Ze** 下，类外定义对于静态、常量整型和常量枚举数据成员是可选的。  在类中只有静态和常数的整型和枚举可以有初始值设定项；初始化表达式必须是常数表达式。  
+ 下**/Ze**，扩展的类定义是可选的静态、 常量整型和常量的枚举数据成员。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。  
   
- 在多个资源文件的标头文件中提供一个外部类定义时，若要避免错误，请使用 [selectany](../../cpp/selectany.md)。  例如：  
+ 若要扩展的类定义是提供在标头文件和标头文件包含在多个源文件时，请避免错误，请使用[selectany](../../cpp/selectany.md)。 例如:  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
 ```  
   
-## 强制转换  
- C\+\+ 编译器和 C 编译器支持这些非 ANSI 转换：  
+## <a name="casts"></a>强制转换  
+ C++ 编译器和 C 编译器都支持以下类型的非 ANSI 转换：  
   
--   使用非 ANSI 转换产生左值。  例如：  
+-   生成左值的非 ANSI 强制转换。 例如:  
   
     ```  
     char *p;  
@@ -84,15 +85,15 @@ __declspec(selectany) const int CMyClass::max = 5;
     ```  
   
     > [!NOTE]
-    >  此扩展仅适用于 C 语言。  在 C\+\+ 代码中使用下列 ANSI C 标准窗体修改指向不同类型的指针。  
+    >  此扩展仅适用于 C 语言。 您可以在 C++ 代码中使用以下 ANSI C 标准窗体，将指针视为指向其他类型的指针来修改。  
   
-     可用如下方式重写上例，以符合 ANSI C 标准。  
+     可采用如下方式重新编写前面的示例以符合 ANSI C 标准。  
   
     ```  
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   将函数指针以非 ANSI 方式转换为数据指针。  例如：  
+-   函数指针到数据指针的非 ANSI 强制转换。 例如:  
   
     ```  
     int ( * pfunc ) ();   
@@ -100,14 +101,14 @@ __declspec(selectany) const int CMyClass::max = 5;
     pdata = ( int * ) pfunc;  
     ```  
   
-     若要在保持 ANSI 兼容性的同时执行上述转换，必须在将函数指针转换为数据指针前先将其转换为 `uintptr_t`：  
+     若要在保持 ANSI 兼容性的同时执行上述转换，您可以在将函数指针转换为数据指针前将前者强制转换为 `uintptr_t`：  
   
     ```  
     pdata = ( int * ) (uintptr_t) pfunc;  
     ```  
   
-## 变长参数列表  
- C\+\+ 和 C 编译器支持使用指定可变个数参数的函数声明符，其后为提供替换类型的函数定义：  
+## <a name="variable-length-argument-lists"></a>长度可变的自变量列表  
+ C++ 编译器和 C 编译器都支持指定可变数量的自变量并后跟提供类型的函数定义的函数声明符：  
   
 ```  
 void myfunc( int x, ... );  
@@ -115,17 +116,17 @@ void myfunc( int x, char * c )
 { }  
 ```  
   
-## 单行注释  
- C 编译器支持单行注释，它是用两个正斜杠 \(\/\/\) 字符引入的：  
+## <a name="single-line-comments"></a>单行注释  
+ C 编译器支持单行注释，它是使用两个正斜杠 (//) 字符引入的：  
   
 ```  
 // This is a single-line comment.  
 ```  
   
-## 范围  
- C 编译器支持下列与范围相关的功能。  
+## <a name="scope"></a>范围  
+ C 编译器支持以下范围相关功能。  
   
--   将 extern 项重定义为 static：  
+-   为静态的外部项的重定义：  
   
     ```  
     extern int clip();  
@@ -133,7 +134,7 @@ void myfunc( int x, char * c )
     {}  
     ```  
   
--   在同一范围内使用良性的 typedef 重定义：  
+-   良性 typedef 重新定义相同的作用域内的使用：  
   
     ```  
     typedef int INT;  
@@ -153,7 +154,7 @@ void myfunc( int x, char * c )
     }                  //  /Za passes 4 as type int  
     ```  
   
--   用非常数表达式初始化块范围变量的使用：  
+-   用非常量表达式初始化的块范围变量的使用：  
   
     ```  
     int clip( int );  
@@ -172,18 +173,18 @@ void myfunc( int x, char * c )
     }  
     ```  
   
-## 数据声明和定义  
- C 编译器支持下列数据声明和定义功能。  
+## <a name="data-declarations-and-definitions"></a>数据声明和定义  
+ C 编译器支持以下数据声明和定义功能。  
   
--   初始值设定项中的混合字符和字符串常数：  
+-   初始值设定项中的混合的字符和字符串常量：  
   
     ```  
     char arr[5] = {'a', 'b', "cde"};  
     ```  
   
--   除了 **unsigned int** 或 **signed int**外，还有基类型的位域。  
+-   位域不具有基类型**无符号的整数**或**带符号整型**。  
   
--   没有类型的声明：  
+-   没有类型的声明符：  
   
     ```  
     x;  
@@ -193,7 +194,7 @@ void myfunc( int x, char * c )
     }  
     ```  
   
--   未确定大小的数组，作为结构和联合中的最后字段：  
+-   未确定大小的数组，作为结构和联合的最后一个字段：  
   
     ```  
     struct zero  
@@ -203,7 +204,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   未命名（匿名）结构：  
+-   未命名的 （匿名） 结构：  
   
     ```  
     struct  
@@ -213,7 +214,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   未命名（匿名）联合：  
+-   未命名的 （匿名） 联合：  
   
     ```  
     union  
@@ -223,7 +224,7 @@ void myfunc( int x, char * c )
     };  
     ```  
   
--   未命名成员：  
+-   未命名的成员：  
   
     ```  
     struct s  
@@ -233,11 +234,11 @@ void myfunc( int x, char * c )
     }  
     ```  
   
-## 内部浮点函数  
- 当指定**\/Oi** 时，C\+\+ 和 C 编译器支持以内联方式生成  **x86 Specific \>** 和 **END x86 Specific**的 `atan、``atan2、``cos、``exp、``log、``log10、``sin、``sqrt 和` `tan`  函数。  对于 C 编译器，当使用这些内部函数时会丢失 ANSI 一致性，因为它们没有设置 `errno` 变量。  
+## <a name="intrinsic-floating-point-functions"></a>内部函数的浮点函数  
+ C + + 编译器和 C 编译器支持内联生成**x86 特定 >**的`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，和`tan`函数**结束 x86 特定**时**/Oi**指定。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。  
   
-## 将非常数指针参数传递给需要常数指针参数的引用的函数  
- 这是对 C\+\+ 的扩展。  此代码将编译 **\/Ze**:  
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>非 Const 指针将参数传递给函数，需要对 Const 指针参数的引用  
+ 这是 c + + 的扩展。 此代码将编译使用**/Ze**:  
   
 ```  
 typedef   int   T;  
@@ -259,33 +260,33 @@ void func ()
 }  
 ```  
   
-## 未启用 ISO646.H  
- 在 **\/Ze** 下，如果希望使用下列运算符的文本形式，必须包含 iso646.h：  
+## <a name="iso646h-not-enabled"></a>ISO646。H 未启用  
+ 下**/Ze**，你必须包括 646.h，如果你想要使用文本形式的以下运算符：  
   
--   && \(和\)  
+-   && (and)  
   
--   &\= \(和\_平衡\)  
+-   &= (and_eq)  
   
--   & \(位和\)  
+-   & (bitand)  
   
--   &#124; \(bitor\)  
+-   &#124;(bitor)  
   
--   ~ \(compl\)  
+-   ~ (compl)  
   
--   \!\(not\)  
+-   ! (not)  
   
--   \!\= \(not\_eq\)  
+-   ！ = (not_eq)  
   
--   &#124;&#124; \(or\)  
+-   &#124; &#124;（或者）  
   
--   &#124;\= \(or\_eq\)  
+-   &#124; = (or_eq)  
   
--   ^ \(xor\)  
+-   ^ (xor)  
   
--   ^\= \(xor\_eq\)  
+-   ^ = (xor_eq)  
   
-## 字符串的地址具有类型 const char \[\]，而不是 const char \(\*\) \[\]  
- 下面的示例在 **\/Za** 下输出 char const \(\*\)\[4\]，但在 **\/Ze** 下输出 char const \[4\]。  
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字符串文本的地址的类型为 const char []，而不是 const char (*) []  
+ 下面的示例将输出 char const (\*) [4] 下**/Za**，但 char const [4] 下的**/Ze**。  
   
 ```  
 #include <stdio.h>  
@@ -297,7 +298,7 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [\/Za、\/Ze（禁用语言扩展）](../../build/reference/za-ze-disable-language-extensions.md)   
+## <a name="see-also"></a>请参阅  
+ [/Za、 /Ze （禁用语言扩展）](../../build/reference/za-ze-disable-language-extensions.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

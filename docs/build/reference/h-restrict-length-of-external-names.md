@@ -1,67 +1,67 @@
 ---
-title: "/H（限制外部名称长度） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/h"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/H 编译器选项 [C++]"
-  - "外部名称"
-  - "H 编译器选项 [C++]"
-  - "-H 编译器选项 [C++]"
-  - "公共名称长度"
+title: "-H （限制外部名称的长度） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /h
+dev_langs: C++
+helpviewer_keywords:
+- public name length
+- /H compiler option [C++]
+- H compiler option [C++]
+- external names
+- -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d5e862eb8e45d1f2558592c0bb54c1adb9305f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /H（限制外部名称长度）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-限制外部名称的长度。  
+# <a name="h-restrict-length-of-external-names"></a>/H（限制外部名称长度）
+已否决。 限制外部名称的长度。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Hnumber  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>自变量  
  `number`  
- 指定程序中允许的外部名称的最大长度。  
+ 指定外部名称在程序中允许的最大长度。  
   
-## 备注  
- 默认情况下，外部（公共）名称的长度为 2,047 个字符。  对于 C 和 C\+\+ 程序的确如此。  使用 **\/H** 只能减少标识符的最大允许长度，而不能增加其长度。  **\/H** 和 `number` 之间的空格为可选。  
+## <a name="remarks"></a>备注  
+ 默认情况下，外部 （公共） 名称的长度为 2047 个字符。 这适用于 C 和 c + + 程序。 使用**/H**只能减少标识符最大允许长度，而不将其增加。 之间留一个空格**/H**和`number`是可选的。  
   
- 如果程序包含长于 `number` 的外部名称，则忽略多余字符。  如果编译程序时没有用 **\/H** 且某个标识符包含的字符多于 2,047 个，则编译器将生成 [错误 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)。  
+ 如果程序包含外部名称长度超过`number`，会忽略多余字符。 如果在编译而无需程序**/H**且如果标识符包含多个 2047 个字符，则编译器将生成[致命错误 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)。  
   
- 长度限制包括任何编译器创建的前导下划线 \(\_\) 或“at”符 \(@\)。  这些字符是标识符的一部分并占用有效位置。  
+ 对长度的限制包括任何编译器创建的前导下划线 (_) 或 at 符号 (@)。 这些字符是标识符的一部分，并且占用有效位置。  
   
--   编译器将前导下划线 \(\_\) 添加到由 `__cdecl`（默认）和 `__stdcall` 调用约定修饰的名称，将前导“at”符 \(@\) 添加到由 `__fastcall` 调用约定修饰的名称。  
+-   编译器将前导下划线 (_) 添加到由修改名称`__cdecl`（默认值） 和`__stdcall`调用约定和一个前导 at 符号 (@) 修改名称`__fastcall`调用约定。  
   
--   编译器将参数大小信息追加到由 `__fastcall` 和 `__stdcall` 调用约定修饰的名称，将类型信息添加到 C\+\+ 名称。  
+-   编译器将自变量大小信息追加到名称修改`__fastcall`和`__stdcall`调用约定，并将类型信息添加到 c + + 名称。  
   
- 您可能会发现 **\/H** 非常有用：  
+ 你可能会发现**/H**有用：  
   
--   当创建混合语言或可移植程序时。  
+-   当你创建混合语言或可移植程序。  
   
--   当使用限制外部标识符长度的工具时。  
+-   如果你使用具有外部标识符的长度限制类的工具。  
   
--   当希望限制在调试版本中符号使用的空间量时。  
+-   如果想要限制的使用调试版本中的符号的空间量。  
   
- 下面的示例演示如果过度限制标识符长度，则使用 **\/H** 将能如何实际引入错误：  
+ 下面的示例演示如何使用**/H**实际引入错误如果标识符长度，则限制太多：  
   
-```  
+```cpp  
 // compiler_option_H.cpp  
 // compile with: /H5  
 // processor: x86  
@@ -75,26 +75,26 @@ void func1(void) {}
 void func2(void) {}  
 ```  
   
- 使用 **\/H** 选项时还必须小心谨慎，因为存在预定义编译器标识符。  如果最大标识符长度太小，则将无法解析某些预定义标识符以及某些库函数调用。  例如，如果使用 `printf` 函数并在编译时指定 **\/H5** 选项，则将创建 **\_prin** 符号以便引用 `printf`，而在库中将找不到此符号。  
+ 你还必须是使用时请小心**/H**由于预定义的编译器标识符的选项。 如果最大标识符长度太小，某些预定义的标识符将为未解析，以及某些库函数调用。 例如，如果`printf`使用函数和选项**/H5**指定在编译时，符号**_prin**将创建以引用`printf`，这将不会找到和位于库中。  
   
- **\/H** 的使用与 [\/GL（全程序优化）](../../build/reference/gl-whole-program-optimization.md) 不兼容。  
+ 利用**/H**与不兼容[/GL （全程序优化）](../../build/reference/gl-whole-program-optimization.md)。  
   
- 不推荐使用 **\/H**；最大长度限制已经增加，不再需要 **\/H**。有关详细信息，请参阅[Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/zh-cn/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce)。  
+ **/H**选项自 Visual Studio 2005 年以来已弃用; 已增加最大长度限制和**/H**不再需要。 不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“命令行”**属性页。  
+3.  点击“命令行”  属性页。  
   
-4.  在**“附加选项”**框中键入编译器选项。  
+4.  在 **“附加选项”** 框中键入编译器选项。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

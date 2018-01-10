@@ -33,11 +33,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62e734fb1165bf0d4e59f3d964a20056fa7065f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0d305575a2dca1df3084ab413b82d445260a6e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
 返回可由运行时错误检查 (RTC) 检测出的错误总数。 可以将此数字用作 **for** 循环的控件，循环中的每个值都将传递给 [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)。  
@@ -53,9 +54,9 @@ int _RTC_NumErrors( void );
 ## <a name="return-value"></a>返回值  
  一个整数，其值表示可以由 Visual C++ 运行时错误检查检测出的错误总数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_RTC_NumErrors`|\<rtcapi.h>|  
   
@@ -64,6 +65,6 @@ int _RTC_NumErrors( void );
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
  [运行时错误检查](../../c-runtime-library/run-time-error-checking.md)

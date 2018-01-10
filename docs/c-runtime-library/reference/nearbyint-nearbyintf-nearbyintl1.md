@@ -43,11 +43,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d95f92d15dcf4b8baf84b762b994bdb52930346d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 将指定的浮点值舍入为整数，并以浮点格式返回该值。  
@@ -86,8 +87,8 @@ long double nearbyintl(
   
 |问题|返回|  
 |-----------|------------|  
-|`x` = ±INFINITY|±INFINITY，未经修改|  
-|`x` = ±0|±0，未经修改|  
+|`x`= ±INFINITY|±INFINITY 修改|  
+|`x` = ±0|±0 修改|  
 |`x` = NaN|NaN|  
   
  错误不通过 [_matherr](../../c-runtime-library/reference/matherr.md) 报告；具体来说，此函数不报告任何 FE_INEXACT 异常。  
@@ -97,13 +98,13 @@ long double nearbyintl(
   
  因为最大浮点值均为精确的整数，所以此函数本身不会溢出；而输出可能会溢出返回值，具体取决于所使用函数的版本。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  
 |`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

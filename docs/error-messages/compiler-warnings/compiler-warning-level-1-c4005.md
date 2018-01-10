@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4005
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4005
+f1_keywords: C4005
+dev_langs: C++
+helpviewer_keywords: C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cf0c5777cecf89bb0723b30c87dc4c856de0a016
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 21023cf79a2ec25f94dc68cd3a55f722fa8316d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4005"></a>编译器警告 （等级 1） C4005
 identifier： 宏重定义  

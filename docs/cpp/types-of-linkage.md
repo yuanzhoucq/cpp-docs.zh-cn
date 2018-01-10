@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - no linkage
 - linkage [C++], none
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - internal linkage, types of linkage
 - external linkage, linkage types
 ms.assetid: 41326c7f-4602-4bad-a648-697604858ba0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b4d5aca80e7b074c86a1446fabb9852f3b9fe3a9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f71fc6e0d0251db38cd1c3dc1032ba6c71ba3ba4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-linkage"></a>链接的类型
 对象和函数的名称在翻译单元间共享的方式称为链接。 这些名称可具有：  
@@ -54,5 +52,5 @@ ms.lasthandoff: 09/25/2017
   
 -   无链接，在此情况下，它们引用唯一实体。 另一个范围内的相同名称无法引用同一对象。 示例是一个枚举。 （但请注意，可以在无链接的情况下传递指向对象的指针。 这使得该对象在其他翻译单元中可访问。）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序和链接](../cpp/program-and-linkage-cpp.md)

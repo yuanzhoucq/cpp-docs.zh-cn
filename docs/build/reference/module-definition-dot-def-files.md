@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15dbdfcd1074b32e2a707616571484db3ced9d2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-definition-def-files"></a>模块定义 (.Def) 文件
 模块定义 (.def) 文件提供有关导出、 属性和有关要链接的程序的其他信息的信息链接器。 .Def 文件生成 DLL 时最有用。 由于没有[链接器选项](../../build/reference/linker-options.md)，可以使用而不是模块定义语句.def 文件，则通常不需要。 你还可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)作为一种方式指定导出的函数。  
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [保留的字](../../build/reference/reserved-words.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
  [链接器选项](../../build/reference/linker-options.md)  

@@ -1,32 +1,33 @@
 ---
-title: "divides (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::divides"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "divides 函数 [STL/CLR]"
+title: "将划分 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::divides
+dev_langs: C++
+helpviewer_keywords: divides function [STL/CLR]
 ms.assetid: 4c36026a-02ba-475d-af68-854599647f4b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b634b9e0d04575d17936d9dd855dfab4d8f13c16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# divides (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-模板类描述一个函数，当其调用时，返回第一个参数除以第二个参数的值。  根据其参数类型使用它来指定一个函数对象。  
+# <a name="divides-stlclr"></a>divides (STL/CLR)
+此模板类描述某个函数，当调用，返回除以第二个的第一个参数。 使用它指定根据其自变量类型的函数对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  Arg  
- 参数和返回值得类型。  
+ 参数和返回值的类型。  
   
-## 成员函数  
+## <a name="member-functions"></a>成员函数  
   
-|类型定义|说明|  
-|----------|--------|  
-|委托类型|泛型委托的类型。|  
-|第一个参数类型|第一个参数的函数对象类型。|  
-|结果类型|仿函数结果的类型 。|  
-|第二个参数类型|第二个参数的类型函数对象。|  
+|类型定义|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委托的类型。|  
+|first_argument_type|函子的第一个自变量的类型。|  
+|result_type|函子结果的类型。|  
+|second_argument_type|函子的第二个自变量的类型。|  
   
-|成员|说明|  
-|--------|--------|  
-|divides|构造仿函数。|  
+|成员|描述|  
+|------------|-----------------|  
+|divides|构造函数。|  
   
-|运算符|说明|  
-|---------|--------|  
-|operator\(\)|计算所需函数数量。|  
-|运算符 delegate\_type^\(\)|转换仿函数为委托。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|operator()|计算所需的函数。|  
+|运算符 delegate_type^()|强制转换为委托的函子。|  
   
-## 备注  
- 模板类描述带有两个参数的仿函数。  它定义成员运算符 `operator()`，以便在对象作为函数调用时，它返回第一个参数除以第二个参数的值。  
+## <a name="remarks"></a>备注  
+ 此模板类描述两个参数函子。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回第一个参数除以第二个。  
   
- 也可以传递对象作为类型为 `delegate_type^` 的函数参数，并将相应地转换。  
+ 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_divides.cpp   
@@ -116,14 +117,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **2 3**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+4 3  
+2 1  
+2 3  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [modulus](../dotnet/modulus-stl-clr.md)   
- [multiplies](../dotnet/multiplies-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [取模 (STL/CLR)](../dotnet/modulus-stl-clr.md)   
+ [multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)

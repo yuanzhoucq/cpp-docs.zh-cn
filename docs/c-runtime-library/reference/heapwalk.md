@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _heapwalk
+apiname: _heapwalk
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 936ca2f3f4e4f2fb57dd730f5a58927d08d6207f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 87ff27007734f84b93d0ecb36f637ae22f72098b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapwalk"></a>_heapwalk
 遍历堆，并返回与下一个条目有关的信息。  
@@ -86,7 +69,7 @@ int _heapwalk(
  堆已损坏或找到错误节点。  
   
  `_HEAPBADPTR`  
-结构为 `_HEAPINFO` 的  `_pentry` 字段不会将有效指针包含在堆中，否则 `entryinfo` 将为 null 指针。  
+ 结构为 `_HEAPINFO` 的 `_pentry` 字段不会将有效指针包含在堆中，否则 `entryinfo` 将为 null 指针。  
   
  `_HEAPEND`  
  已成功到达堆结尾。  
@@ -115,13 +98,13 @@ int _heapwalk(
   
  此函数验证其参数。 如果 `entryinfo` 是一个 null 指针，则调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `_HEAPBADPTR`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_heapwalk`|\<malloc.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -206,7 +189,7 @@ void heapdump(void)
 OK - end of heap  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   
  [_heapadd](../../c-runtime-library/heapadd.md)   
  [_heapchk](../../c-runtime-library/reference/heapchk.md)   

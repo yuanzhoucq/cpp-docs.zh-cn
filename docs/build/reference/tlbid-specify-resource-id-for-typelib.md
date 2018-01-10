@@ -1,64 +1,65 @@
 ---
-title: "/TLBID（指定类型库的资源 ID） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tlbid"
-  - "VC.Project.VCLinkerTool.TypeLibraryResourceID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".tlb 文件, 指定资源 ID"
-  - "/TLBID 链接器选项"
-  - "tlb 文件, 指定资源 ID"
-  - "TLBID 链接器选项"
-  - "-TLBID 链接器选项"
-  - "类型库, 指定资源 ID"
+title: "-TLBID （指定类型库的资源 ID） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tlbid
+- VC.Project.VCLinkerTool.TypeLibraryResourceID
+dev_langs: C++
+helpviewer_keywords:
+- tlb files, specifying resource ID
+- -TLBID linker option
+- .tlb files, specifying resource ID
+- /TLBID linker option
+- TLBID linker option
+- type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a552edab9f2de646de3b869bf84467924b5db348
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /TLBID（指定类型库的资源 ID）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID（指定类型库的资源 ID）
 ```  
 /TLBID:id  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中：  
   
  `id`  
- 链接器创建的类型库的用户指定值。  它重写值为 1 的默认资源 ID。  
+ 一个用户指定的值，链接器创建类型库。 它重写默认资源 ID 为 1。  
   
-## 备注  
- 当编译使用特性的程序时，链接器将创建类型库。  链接器将把值为 1 的资源 ID 分配给类型库。  
+## <a name="remarks"></a>备注  
+ 在编译时使用特性的程序，链接器将创建类型库。 链接器将分配到类型库的资源 ID 为 1。  
   
- 如果该资源 ID 与现有资源中的一个冲突，则可以用 \/TLBID 指定另一个 ID。  可以传递给 `id` 的值范围是 1 到 65535。  
+ 如果此资源 ID 与某个现有资源的冲突，你可以使用 /TLBID 指定其他 ID。 可以将传递到的值的范围`id`是 1 到 65535。  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击“链接器”文件夹。  
+2.  单击**链接器**文件夹。  
   
-3.  单击“嵌入的 IDL”属性页。  
+3.  单击**嵌入 IDL**属性页。  
   
-4.  修改“类型库资源 ID”属性。  
+4.  修改**类型库资源 ID**属性。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
-1.  请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>。  
+1.  请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TypeLibraryResourceID%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

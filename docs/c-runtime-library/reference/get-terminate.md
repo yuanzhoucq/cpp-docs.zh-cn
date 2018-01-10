@@ -35,11 +35,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 87f0bc967175bd339d8e421d72de8a4f7d369631
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8117e4c35f127c2ea96d76e3fb48a61fb1dfa99f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getterminate"></a>_get_terminate
 返回 `terminate` 将调用的终止例程。  
@@ -53,15 +54,15 @@ terminate_function _get_terminate( void );
 ## <a name="return-value"></a>返回值  
  返回指向 [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md) 注册的函数的指针。 如果尚未设置函数，则返回值可用于还原默认行为；此值可能为 NULL。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_get_terminate`|\<eh.h>|  
   
  有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理例程](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   

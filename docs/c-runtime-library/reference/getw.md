@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d5cf5147f3225c9cd5c6f0c91d60bcaeb75b188
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8850bd13d8aa1ed0412ae93843784cb560be4a0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getw"></a>_getw
 从流中获取整数。  
@@ -59,13 +60,13 @@ int _getw(
 ## <a name="remarks"></a>备注  
  `_getw` 函数从与 `int` 关联的文件中读取类型 `stream` 的下一个二进制值，并递增关联的文件指针（如果有）以指向下一个未读字符。 `_getw` 未对流中的项采用任何特定的对齐方式。 使用 `_getw` 可能导致出现移植问题，因为 `int` 类型的大小和 `int` 类型中的字节顺序因系统而异。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_getw`|\<stdio.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -115,6 +116,6 @@ Line two.
 First data word in file: 0x656e694c  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [_putw](../../c-runtime-library/reference/putw.md)

@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b37db89ca7d9e3facb7de2fbce2dc819cfa03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftell-ftelli64"></a>ftell、_ftelli64
 获取文件指针的当前位置。  
@@ -76,14 +77,14 @@ __int64 _ftelli64(
   
  此函数在执行期间会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 `_ftell_nolock`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|----------------------|  
 |`ftell`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -119,7 +120,7 @@ int main( void )
 Position after trying to read 100 bytes: 100  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   

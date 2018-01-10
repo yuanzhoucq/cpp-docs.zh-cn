@@ -51,11 +51,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c23ba6cc06e06a6c1f6ad43cb7bc833494aaba60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f3430389002b4b68d132b1b524b98cb1f7dea1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 将字符串转换为整数。  
@@ -100,7 +101,7 @@ int _wtoi_l(
   
  A`whitespace`空格或制表符字符，将被忽略; 组成`sign`是加号 （+） 或减号 （-）; 和`digits`是一个或多个数字。  
   
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
@@ -109,7 +110,7 @@ int _wtoi_l(
 |`_tstoi`|`atoi`|`atoi`|`_wtoi`|  
 |`_ttoi`|`atoi`|`atoi`|`_wtoi`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |例程|必需的标头|  
 |--------------|---------------------|  
@@ -163,7 +164,7 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [区域设置](../../c-runtime-library/locale.md)   

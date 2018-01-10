@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b99e318e95644b327f3629658ac5100f08c05d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail、_ismbbtrail_l
 确定一个字节是否为多字节字符的尾随字节。  
@@ -73,9 +74,9 @@ int _ismbbtrail_l(
 ## <a name="remarks"></a>备注  
  `_ismbbtrail` 对与区域设置相关的行为使用当前区域设置。 `_ismbbtrail_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_ismbbtrail`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
 |`_ismbbtrail_l`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
@@ -84,6 +85,6 @@ int _ismbbtrail_l(
   
  有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
  [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

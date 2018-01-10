@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68836230c731130a6bb710d2c29a2f6b1d5f3f8c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52d102f29a015ea077e9ec94a9f1ed63f44f7c1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-exception-handler"></a>编写异常处理程序
 异常处理程序通常用于响应特定错误。 您可以使用异常处理语法筛选出您不知道如何处理的所有异常。 其他异常应该传递到为了查找特定异常而编写的其他处理程序（可能在运行库或操作系统中）。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [对于异常处理程序的限制](../cpp/restrictions-on-exception-handlers.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

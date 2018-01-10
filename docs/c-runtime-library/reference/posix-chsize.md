@@ -28,11 +28,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 065a713e61c4fc1b1b459948a11b68b855591538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 185ca5af184b37bbd47f9519763c37599c497cc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsize"></a>chsize
 此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_chsize](../../c-runtime-library/reference/chsize.md) 或安全性已增强的 [_chsize_s](../../c-runtime-library/reference/chsize-s.md)。

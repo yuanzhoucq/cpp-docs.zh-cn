@@ -14,14 +14,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fea3ed8707e78a5917c6707b14976dedba010f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5277b4f18fb109960d3e45c00a995318ed8b623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="look-up-button"></a>“查找”按钮
 单击**查找**来检索与所输入的系统或模块值相对应的错误消息。 可以以十六进制或十进制 （包括负十进制值） 的形式输入值。 中列出的模块**用于错误搜索的其他模块**还可搜索对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [“值”编辑控件](../../build/reference/value-edit-control.md)

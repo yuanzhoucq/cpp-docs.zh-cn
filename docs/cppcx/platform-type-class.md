@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 260a7f5a8d5a100edd6995c381a79b5552c0744b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c292426b9d04fd5b3d9785224f9b2d48f129f0db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformtype-class"></a>Platform::Type 类
 包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过调用获取[object:: gettype](../cppcx/platform-object-class.md#gettype)任何对象或使用[typeid](../windows/typeid-cpp-component-extensions.md)运算符的类或结构的名称。  
@@ -58,7 +59,7 @@ public ref class Platform::Type :
 |[运算符 Type^](../cppcx/operator-subtracttype-hat.md)|实现从 `Windows::UI::Xaml::Interop::TypeName` 到 `Platform::Type`的转换。|  
 |[运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|实现从 `Platform::Type` 到 `Windows::UI::Xaml::Interop::TypeName`的转换。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -122,5 +123,5 @@ Platform::String^ ToString();
 ### <a name="return-value"></a>返回值  
  作为其元数据中指定类型的名称。    
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)

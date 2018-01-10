@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e72618467666a98bdda5867b23d9ef2ce37319f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd、_wgetcwd
 获取当前工作目录。  
@@ -76,7 +77,7 @@ wchar_t *_wgetcwd(
 ## <a name="return-value"></a>返回值  
  返回指向 `buffer`的指针。 `NULL` 返回值指示错误，并将 `errno` 设置为 `ENOMEM`，指示内存不足，无法分配 `maxlen` 个字节（当将 `NULL` 参数给定为 `buffer`时），或设置为 `ERANGE`，指示该路径长于 `maxlen` 个字符。 如果 `maxlen` 小于或等于零，则此函数调用无效的参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)。  
   
- 有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
  `_getcwd` 函数获取默认驱动器的当前工作目录的完整路径，并将其存储在 `buffer`中。 整数参数 `maxlen` 指定路径的最大长度。 如果路径 （包括终止 null 字符） 的长度超过，则会发生错误`maxlen`。 `buffer` 参数可为 `NULL`；使用 `malloc` 自动分配大小至少为 `maxlen`（仅在必需时超过）的缓冲区，以存储路径。 之后可通过调用 `free` 并向其传递 `_getcwd` 返回值（指向已分配缓冲区的指针）来释放此缓冲区。  
@@ -93,14 +94,14 @@ wchar_t *_wgetcwd(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tgetcwd`|`_getcwd`|`_getcwd`|`_wgetcwd`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_getcwd`|\<direct.h>|  
 |`_wgetcwd`|\<direct.h> 或 \<wchar.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -135,7 +136,7 @@ int main( void )
 C:\Code  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录控制](../../c-runtime-library/directory-control.md)   
  [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_mkdir、_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   

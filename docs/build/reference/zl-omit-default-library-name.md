@@ -1,54 +1,55 @@
 ---
-title: "/Zl（省略默认库名） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zi"
-  - "VC.Project.VCCLCompilerTool.OmitDefaultLibName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zl 编译器选项 [C++]"
-  - "默认库, 省略名称"
-  - "“省略默认库名”编译器选项"
-  - "ZI 编译器选项"
-  - "-Zl 编译器选项 [C++]"
+title: "-Zl （省略默认库名） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zi
+- VC.Project.VCCLCompilerTool.OmitDefaultLibName
+dev_langs: C++
+helpviewer_keywords:
+- -Zl compiler option [C++]
+- ZI compiler option
+- Omit Default Library Name compiler option
+- /Zl compiler option [C++]
+- default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b77b9c1033be1f6144d92b6051118ca85aaaf20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /Zl（省略默认库名）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-省略 .obj 文件中的默认 C 运行库名称。  默认情况下，编译器将库名放入 .obj 文件中，以便使链接器指向正确的库。  
+# <a name="zl-omit-default-library-name"></a>/Zl（省略默认库名）
+省略.obj 文件中的默认 C 运行时库名称。 默认情况下，编译器将库的名称放入 .obj 文件中以将链接器定向到正确的库。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Zl  
 ```  
   
-## 备注  
- 有关默认库的更多信息，请参见[使用运行库](../../build/reference/md-mt-ld-use-run-time-library.md)。  
+## <a name="remarks"></a>备注  
+ 默认库的详细信息，请参阅[使用运行时库](../../build/reference/md-mt-ld-use-run-time-library.md)。  
   
- 可以使用 **\/Zl** 来编译打算放入库中的 .obj 文件。  虽然省略库名只为单个 .obj 文件节省了少量空间，但在包含许多对象模块的库中节省的总空间是很多的。  
+ 你可以使用**/Zl**来编译你打算放入库的.obj 文件。 虽然省略库名称节省仅少量空间来容纳单个.obj 文件，但总保存为无意义的库，其中包含许多对象模块中。  
   
- 此选项为高级选项。  设置此选项将移除应用程序可能需要的某种 C 运行库支持，如果应用程序依赖于此支持，则将导致链接时错误。  如果使用此选项，则必须以其他某种方式提供所需组件。  
+ 此选项是一个高级的选项。 将设置此选项将移除可能要求你的应用程序，从而导致链接时错误，如果你的应用程序依赖于这种支持的某些 C 运行时库支持。 如果使用此选项必须提供所需的组件以某种其他方式。  
   
- 使用[\/NODEFAULTLIB（忽略库）](../../build/reference/nodefaultlib-ignore-libraries.md)使链接器忽略所有 .obj 文件中的库引用。  
+ 使用[/NODEFAULTLIB （忽略库）](../../build/reference/nodefaultlib-ignore-libraries.md)。 若要指示链接器忽略库引用所有.obj 文件中。  
   
- 有关详细信息，请参阅[CRT 库功能](../../c-runtime-library/crt-library-features.md)。  
+ 有关详细信息，请参阅 [ CRT 库功能](../../c-runtime-library/crt-library-features.md)。  
   
- 使用 **\/Zl** 进行编译时，将定义 `_VC_NODEFAULTLIB`。例如：  
+ 使用编译时**/Zl**，`_VC_NODEFAULTLIB`定义。  例如:  
   
 ```  
 // vc_nodefaultlib.cpp  
@@ -62,20 +63,20 @@ void Test() {
 }  
 ```  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“高级”**属性页。  
+3.  单击**高级**属性页。  
   
-4.  修改**“省略默认的库名称”**属性。  
+4.  修改**省略默认库名**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

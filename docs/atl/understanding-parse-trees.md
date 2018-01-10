@@ -1,28 +1,28 @@
 ---
-title: "Understanding Parse Trees | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parse trees"
+title: "ATL 注册机构和分析树 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c8ce648a541f6e0e2d4fac2e6ee19226e41f20ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Understanding Parse Trees
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以定义一个或多个在您的管理员脚本的分析树，每个分析树具有以下形式:  
+# <a name="understanding-parse-trees"></a>了解分析树
+你可以在你注册机构脚本中，其中每个分析树具有以下形式定义一个或多个分析树：  
   
 ```  
 <root key>{<registry expression>}+  
@@ -31,15 +31,15 @@ caps.handback.revision: 7
  其中：  
   
 ```  
-<root key> ::=  HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
-               HKEY_LOCAL_MACHINE | HKEY_USERS |  
-               HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
-               HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-               HKLM | HKU | HKPD | HKDD | HKCC  
+<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
+    HKEY_LOCAL_MACHINE | HKEY_USERS |  
+    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
+    HKEY_CURRENT_CONFIG | HKCR | HKCU |  
+    HKLM | HKU | HKPD | HKDD | HKCC  
 <registry expression> ::= <Add Key> | <Delete Key>  
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
-              [<Key Value>][{< Add Key>}]  
-<Delete Key> ::=  Delete<Key Name>  
+ [<Key Value>][{<Add Key>}]  
+<Delete Key> ::= Delete<Key Name>  
 <Key Name> ::= '<AlphaNumeric>+'  
 <AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
 <Key Value> ::== <Key Type><Key Name>  
@@ -48,24 +48,25 @@ caps.handback.revision: 7
 ```  
   
 > [!NOTE]
->  `HKEY_CLASSES_ROOT` 和 `HKCR` 等效，`HKEY_CURRENT_USER` 和 `HKCU` 等效，等等。  
+> `HKEY_CLASSES_ROOT`和`HKCR`相等，则`HKEY_CURRENT_USER`和`HKCU`等效;、 等。  
   
- 分析树可以添加多个键和子级。\<root key\>。  在这种情况下，将保持子级的处理打开，直到该分析器完成分析其所有子级。  此方法比每次运行有效在唯一键，如下面的示例所示:  
+ 分析树可以添加多个项和子项到\<根密钥 >。 在此情况下，它将保持子项的句柄打开直到分析器完成分析及其所有子项。 这种方法是比一次在同一个密钥操作更高效，如下面的示例中所示：  
   
 ```  
 HKEY_CLASSES_ROOT  
 {  
-   'MyVeryOwnKey'  
-   {  
-      'HasASubKey'  
-      {  
-         'PrettyCool?'  
-      }  
-   }  
+ 'MyVeryOwnKey'  
+ {  
+ 'HasASubKey'  
+ {  
+ 'PrettyCool'  
+ }  
+ }  
 }  
 ```  
   
- 此处，管理员首次打开\(创建\) `HKEY_CLASSES_ROOT\MyVeryOwnKey`。  然后参见 `MyVeryOwnKey` 有一个子级。  而不是关闭键 `MyVeryOwnKey`，管理员保留句柄并打开\(创建\)使用此父处理，`HasASubKey`。  （系统注册表可以更慢，在父句柄不是打开的。）因此，打开 `HKEY_CLASSES_ROOT\MyVeryOwnKey` 然后打开的 `HasASubKey` 和 `MyVeryOwnKey` 作为父比打开的 `MyVeryOwnKey`、结束 `MyVeryOwnKey`然后打开的 `MyVeryOwnKey\HasASubKey`express。  
+ 在这里，注册机构最初打开 （创建） `HKEY_CLASSES_ROOT\MyVeryOwnKey`。 它然后发现`MyVeryOwnKey`具有子项。 而不是关闭的关键`MyVeryOwnKey`，注册机构保留句柄并打开 （创建）`HasASubKey`使用此父句柄。 （系统注册表可能要慢时没有父句柄处于打开状态。）因此，打开`HKEY_CLASSES_ROOT\MyVeryOwnKey`，然后打开`HasASubKey`与`MyVeryOwnKey`快于打开父原样`MyVeryOwnKey`，正在关闭`MyVeryOwnKey`，然后打开`MyVeryOwnKey\HasASubKey`。  
   
-## 请参阅  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>请参阅  
+ [创建注册器脚本](../atl/creating-registrar-scripts.md)
+

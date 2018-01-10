@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - asctime_s
 - _wasctime_s
 - _tasctime_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tasctime_s function
 - _tasctime_s function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4d4b2bf3c4fb4180b6da1d39ca26bfe819971f31
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 30a48101ea2db80f7c8a37434c1fd73c9c535286
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s、_wasctime_s
 将 `tm` 时间结构转换为字符串。 这些函数是 [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -121,7 +105,7 @@ errno_t _wasctime_s(
 ## <a name="remarks"></a>备注  
  `asctime` 函数将存储为结构的时间转换为字符串。 `_tm` 值通常通过调用 `gmtime` 或 `localtime` 获取。 这两个函数都可以用于填充 `tm` 结构，如 TIME.H 中的定义。  
   
-|timeptr 成员|值|  
+|timeptr 成员|“值”|  
 |--------------------|-----------|  
 |`tm_hour`|小时，自午夜 (0-23)|  
 |`tm_isdst`|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|  
@@ -145,11 +129,11 @@ errno_t _wasctime_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
   
- 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`asctime_s`|\<time.h>|  
 |`_wasctime_s`|\<time.h> 或 \<wchar.h>|  
@@ -194,7 +178,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
  [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

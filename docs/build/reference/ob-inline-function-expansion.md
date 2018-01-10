@@ -35,11 +35,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b3baee04a5faad77c81d07a6ebeee39e5ac1d12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob（内联函数展开）
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 
 > /Ob {0 | 1 | 2}
 
-## <a name="arguments"></a>参数
+## <a name="arguments"></a>自变量
 
 **0**  
 禁用内联扩展。 默认情况下，编译器自行对所有函数进行展开通常称为*自动内联*。
@@ -83,9 +84,9 @@ ms.lasthandoff: 10/24/2017
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>。
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [/O 选项 （优化代码）](../../build/reference/o-options-optimize-code.md)  
 [编译器选项](../../build/reference/compiler-options.md)  

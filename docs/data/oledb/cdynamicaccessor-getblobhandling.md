@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::GetBlobHandling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetBlobHandling"
-  - "CDynamicAccessor::GetBlobHandling"
-  - "ATL::CDynamicAccessor::GetBlobHandling"
-  - "GetBlobHandling"
-  - "CDynamicAccessor.GetBlobHandling"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBlobHandling 方法"
+title: "Cdynamicaccessor:: Getblobhandling |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetBlobHandling
+- CDynamicAccessor::GetBlobHandling
+- ATL::CDynamicAccessor::GetBlobHandling
+- GetBlobHandling
+- CDynamicAccessor.GetBlobHandling
+dev_langs: C++
+helpviewer_keywords: GetBlobHandling method
 ms.assetid: bbc6dda6-e132-42a3-980d-24e455cbe456
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: de4ab605d4b0622d555625e71bf0aefd01cb1368
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetBlobHandling
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-检索当前行处理 BLOB 的值。  
+# <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
+检索 BLOB 处理的当前行值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,11 +40,11 @@ const DBBLOBHANDLINGENUM GetBlobHandling( ) const;
   
 ```  
   
-## 备注  
- 返回值处理 BLOB `eBlobHandling` 的设置由 [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。  
+## <a name="remarks"></a>备注  
+ 返回 BLOB 处理值`eBlobHandling`由中设置[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)

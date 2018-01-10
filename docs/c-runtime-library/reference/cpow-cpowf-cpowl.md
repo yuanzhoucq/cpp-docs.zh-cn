@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8888a929380e150ad9f66e2e75caf48ccf89d21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b12c59074585acaf2ec2ce5931ef8001deb1345e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 检索某个数字的指定次幂的值，其中基数和指数为复数。 此函数具有沿负实轴的指数分支切割。  
@@ -85,15 +86,15 @@ _Lcomplex cpowl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用并返回 `cpow` 和 `_Fcomplex` 值的 `_Lcomplex` 重载。 在 C 程序中，`cpow` 始终采用并返回 `_Dcomplex` 值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|C 标头|C++ 标头|  
+|例程所返回的值|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`cpow`,               `cpowf`, `cpowl`|\<complex.h>|\<ccomplex>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cexp、cexpf、cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
  [clog10、clog10f、clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   

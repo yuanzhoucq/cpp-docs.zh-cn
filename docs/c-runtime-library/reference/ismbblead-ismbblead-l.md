@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05367f833fcb10a994bc165ff7c2e0f31b8bdce0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acba6047239ee9c63e05666a4bdc685cf40527c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
 测试字符，以确定它是否是多字节字符的前导字节。  
@@ -85,9 +86,9 @@ int _ismbblead_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_istlead`|始终返回 false|`_ismbblead`|始终返回 false|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_ismbblead`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
 |`_ismbblead_l`|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|  
@@ -96,6 +97,6 @@ int _ismbblead_l(
   
  有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
  [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3a2683fbc259cbac3551840f9ebe6e7c651430bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76172804cc271a740244d06e791db35d534c69e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-your-own-helper-function"></a>开发您自己的 Helper 函数
 你可能想要提供您自己执行基于名称的 DLL 或导入的特定处理例程的版本。 执行此操作的两种方法： 编码你自己的基于提供的代码，或只将挂钩使用前面详细介绍通知挂钩所提供的版本。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
  使用启动处理通知挂钩  
  可能是最简单的方法只需提供对接收通知 dliStartProcessing 上的默认帮助程序相同的值的用户提供通知挂钩函数的新指针。 此时，挂钩函数可以实质上是将成为新的帮助器函数，如成功返回到默认帮助器将绕过默认帮助程序中的所有进一步处理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [延迟加载 DLL 的链接器支持](../../build/reference/linker-support-for-delay-loaded-dlls.md)

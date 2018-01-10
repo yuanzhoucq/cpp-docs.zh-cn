@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b86ec1bf3c47de45eaf9120d8e8f68ac9377db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd（将调试信息放在对象文件中）
 从的预编译标头 (.pch) 文件一起使用时创建完成调试在所有对象文件的信息的进度进行[/Yc](../../build/reference/yc-create-precompiled-header-file.md)和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)选项。 已否决。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
 ## <a name="examples"></a>示例  
  假设你有两个基本文件，F.cpp 和 G.cpp，每个包含这些**#include**语句：  
@@ -87,6 +88,6 @@ CL /YuETC.H /Z7 G.CPP
   
  如果你预编译标头不用编译**/Z7**，你仍然可以在更高版本使用的编译中使用它**/Z7**。 但是，调试信息放在当前的对象文件中，并且函数和预编译标头中定义的类型的本地符号均不可用于调试器。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

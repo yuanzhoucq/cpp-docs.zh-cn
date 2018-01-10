@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 906ab5406fb6ccfb8905c3cf76ae6968ef0979da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f42efd011dfe5938eb455c885c6aa2c458910dfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 指定可执行映像需要的执行环境。  
@@ -71,5 +72,5 @@ ms.lasthandoff: 10/24/2017
   
  有关详细信息，包括的每个子系统的主版本号和次版本号的最小值和默认值，请参阅[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)链接器选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

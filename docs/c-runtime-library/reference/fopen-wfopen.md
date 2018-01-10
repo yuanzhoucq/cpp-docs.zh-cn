@@ -43,11 +43,12 @@ caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5a81cdcba10d65c496a946fb8847fdb09b1ff70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 打开文件。 这些执行附加参数验证并返回错误代码的函数有更安全的版本可用；请参阅 [fopen_s、_wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md)。  
@@ -206,7 +207,7 @@ FILE *_wfopen(
   
  如果你使用 `rb` 模式、不必移植代码、希望读取大文件中的大部分内容或不担心网络性能，你可能还要考虑是否使用内存映射的 Win32 文件方式。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
@@ -326,7 +327,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   

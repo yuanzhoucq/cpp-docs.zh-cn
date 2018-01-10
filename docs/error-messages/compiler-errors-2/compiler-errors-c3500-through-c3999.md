@@ -1,6 +1,6 @@
 ---
 title: "编译器错误 C3500 到 C3999 |Microsoft 文档"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -252,22 +252,22 @@ ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f480eafdf210f623ade26d7b9db783fdb46d8734
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 7a34b3f3fb635cc666b0e9cca079373bb7c5636e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>编译器错误 C3500 到 C3999
 
-文档的此部分中的文章包含有关 Visual C++ 编译器错误的子部分的信息。 可在此处访问信息，或者在 Visual Studio 中的“输出”  窗口中选择错误号，然后选择 F1 键。
+本部分中的文档的文章说明由编译器生成的错误消息的子集。
 
-> [!NOTE]
-> 不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-错误和警告的 MSDN 公共论坛，可能会发现更多帮助。 [Visual c + + 语言](http://go.microsoft.com/fwlink/?LinkId=158195)论坛是有关问题和讨论有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]语言语法和编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/?LinkId=158194)论坛的问题是有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他论坛中未涉及。 你还可能上查找有关错误和警告的帮助[堆栈溢出](http://stackoverflow.com/)。
+## <a name="error-messages"></a>错误消息
 
-|错误|消息|
+|Error|消息|
 |-----------|-------------|
 |[编译器错误 C3500](compiler-error-c3500.md)|无效的 ProgID*progid*|
 |[编译器错误 C3501](compiler-error-c3501.md)|不没有为 ProgID 注册任何 typelib*progid*|

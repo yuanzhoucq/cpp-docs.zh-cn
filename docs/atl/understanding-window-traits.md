@@ -1,47 +1,48 @@
 ---
-title: "Understanding Window Traits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "window traits"
+title: "ATL 窗口特性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fda95e4517d2717a89310a8e49a0c5b337feebcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Understanding Window Traits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-窗口特征选件类出于标准化用于ATL窗口创建该对象的样式提供简单的方法。  窗口特征接受作为模板参数由 [CWindowImpl](../atl/reference/cwindowimpl-class.md) 和其他ATL窗口选件类作为提供默认值。选件类级别的窗口样式方式。  
+# <a name="understanding-window-traits"></a>了解窗口特性
+窗口特性类提供标准化用于创建 ATL 窗口对象的样式的简单方法。 窗口特征接受作为模板参数[CWindowImpl](../atl/reference/cwindowimpl-class.md)和其他 ATL 窗口类作为一种方法提供默认在类级别的窗口样式。  
   
- 如果windows例程的创建者在调用不显式提供样式。[创建](../Topic/CWindowImpl::Create.md)，可以使用特征选件类窗口确保使用正确的样式仍然创建。  您甚至可以确保特定样式为该窗口选件类的所有实例设置，并允许其他样式设置基于每个实例的基类型。  
+ 如果窗口实例的创建者不提供对的调用中显式样式[创建](../atl/reference/cwindowimpl-class.md#create)，你可以使用的特征类以确保仍使用正确的样式创建窗口。 你可以甚至确保某些样式设置为该窗口类的所有实例同时允许其他样式设置基于每个实例。  
   
-## ATL窗口特征模板  
- ATL提供使用自己的模板参数，允许您设置默认样式在编译时的两个窗口特征模板。  
+## <a name="atl-window-traits-templates"></a>ATL 窗口特征模板  
+ ATL 提供了两个窗口特征模板允许你设置在编译时使用其模板参数的默认样式。  
   
-|类|说明|  
-|-------|--------|  
-|[CWinTraits](../atl/reference/cwintraits-class.md)|请使用此模板，当您希望提供默认值将使用的windows样式时，只有当其他样式到 **Create**时的调用中指定。  样式提供在运行时优先于样式在编译时设置。|  
-|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|请使用此选件类，如果您希望指定必须为窗口选件类始终设置的样式时。  样式提供在运行时将与样式位在编译时设置使用或运算符。|  
+|类|描述|  
+|-----------|-----------------|  
+|[CWinTraits](../atl/reference/cwintraits-class.md)|当你想要提供仅在不指定的调用中的任何其他样式时将使用的窗口样式的默认使用此模板**创建**。 提供在运行的时的优先级，通过在设置的样式的样式编译时间。|  
+|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|当你想要指定必须始终设置为窗口类样式时，请使用此类。 在使用按位 OR 运算符的编译时设置的样式与相结合，在运行时提供的样式。|  
   
- 除了这些模板外，ATL为windows样式的常用的组合提供 `CWinTraits` 模板的许多预定义的专用化。  [CWinTraits](../atl/reference/cwintraits-class.md) 参见参考文档有关所有详细信息。  
+ 除了这些模板，ATL 提供了大量预定义专用化`CWinTraits`模板的常用组合的窗口样式。 请参阅[CWinTraits](../atl/reference/cwintraits-class.md)的完整详细信息，请参阅文档。  
   
-## 自定义窗口特征  
- 在专用ATL提供的某模板是不够的，并且需要创建自己的特征选件类的不太可能情况下，您需要创建一个选件类实现的两个静态函数: `GetWndStyle` 和 **GetWndStyleEx**:  
+## <a name="custom-window-traits"></a>自定义窗口特性  
+ 在可能的情况下不理想时该专用 ATL 所提供的模板之一并且你需要创建你自己的特征类，只需创建一个类以实现两个静态函数：`GetWndStyle`和**GetWndStyleEx**:  
   
- [!code-cpp[NVC_ATL_Windowing#68](../atl/codesnippet/CPP/understanding-window-traits_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#68](../atl/codesnippet/cpp/understanding-window-traits_1.h)]  
   
- 这些功能中的每一个都将传递它可以使用生成一个新的值的运行时的某些样式值。  如果窗口特征选件类用作ATL窗口选件类的模板参数，样式值传递给这些静态函数将什么是通过为样式的参数。[创建](../Topic/CWindowImpl::Create.md)。  
+ 其中每个函数将传递某个样式值在运行时它可以用于生成新的样式值。 如果你窗口的特征类用作 ATL 窗口类的模板自变量，则会传递给这些静态函数样式值，任何已作为样式参数传递给[创建](../atl/reference/cwindowimpl-class.md#create)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [窗口类](../atl/atl-window-classes.md)
+

@@ -36,11 +36,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e5f1f82f5d7ae8899d1045280f24c7af405c64b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8c8f651e04a1d68cd27f8321d6a30250c0e6ce1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlfps"></a>_controlfp_s
 获取并设置浮点控制字。 此版本的 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
@@ -116,7 +117,7 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  对于 `_MCW_EM` 掩码，清除掩码将设置异常，这会允许硬件异常；设置它可隐藏异常。 如果出现 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW`，则在执行下一步浮点指令之前，不会引发任何硬盘异常。 若要在 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW` 后立即生成硬件异常，请调用 FWAIT MASM 指令。  
   
-|掩码|十六进制值|常量|十六进制值|  
+|掩码|十六进制值|返回的常量|十六进制值|  
 |----------|---------------|--------------|---------------|  
 |`_MCW_DN` （非常规控制）|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
 |`_MCW_EM`（中断异常掩码）|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
@@ -124,13 +125,13 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
 |`_MCW_RC`舍入控制）|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
 |`_MCW_PC`（精度控制）<br /><br /> （在 ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台上不受支持。）|0x00030000|`_PC_24`（24 位）<br /><br /> `_PC_53`（53 位）<br /><br /> `_PC_64`（64 位）|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_controlfp_s`|\<float.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -183,7 +184,7 @@ Default:  0x9001f
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [_clear87、_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
  [_status87、_statusfp、_statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   

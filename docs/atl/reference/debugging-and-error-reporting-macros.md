@@ -4,39 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告的宏
 这些宏提供有用的调试和跟踪功能。  
@@ -59,7 +49,7 @@ ms.lasthandoff: 03/31/2017
 ```  
   
 ### <a name="remarks"></a>备注  
- 跟踪输出将显示如下所示︰  
+ 跟踪输出将显示如下所示：  
   
  `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`  
   
@@ -71,7 +61,7 @@ ms.lasthandoff: 03/31/2017
   
  跟踪的信息的最后一个部分是对象以及所影响的接口名称`AddRef`或**版本**调用。  
   
- 当服务器关闭时检测到泄漏的任何接口和`_Module.Term`调用将会记录如下︰  
+ 当服务器关闭时检测到泄漏的任何接口和`_Module.Term`调用将会记录如下：  
   
  `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`  
   
@@ -88,7 +78,7 @@ ms.lasthandoff: 03/31/2017
 ```  
   
 ### <a name="remarks"></a>备注  
- 如果调用`QueryInterface`失败，将显示输出窗口︰  
+ 如果调用`QueryInterface`失败，将显示输出窗口：  
   
  *接口名称* - `failed`  
   
@@ -106,8 +96,8 @@ ATLASSERT(booleanExpression);
 ### <a name="remarks"></a>备注  
  在调试版本中，`ATLASSERT`计算结果`booleanExpression`和结果为 false 时，将生成调试报告。  
 
-## <a name="requirements"></a>要求  
- **标头︰** atldef.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldef.h  
     
 ##  <a name="atlensure"></a>ATLENSURE  
  此宏用于验证传递给函数的参数。  
@@ -136,9 +126,9 @@ ATLENSURE_THROW(booleanExpression, hr);
  之间的差异**ATLENSURE**和`ATLASSERT`在于**ATLENSURE**引发版本中的异常以及生成如下所示的调试版本。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
 
 ##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
@@ -156,10 +146,10 @@ ATLTRACENOTIMPL(funcname);
  在发布版本，只需返回**E_NOTIMPL**。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
-## <a name="requirements"></a>要求  
- **标头︰** atltrace.h 
+## <a name="requirements"></a>惠?  
+ **标头：** atltrace.h 
 
 ##  <a name="atltrace"></a>ATLTRACE
  将报告警告输出设备，如调试器窗口中，根据指定的标志和级别。 包括的向后兼容性。  
@@ -239,7 +229,7 @@ ATLTRACE2(
   
 ### <a name="mfc-trace-flags"></a>MFC 跟踪标志  
   
-|MFC 类别|说明|  
+|MFC 类别|描述|  
 |------------------|-----------------|  
 |**traceAppMsg**|一般用途，MFC 消息。 始终建议。|  
 |**traceDumpContext**|从消息[CDumpContext](../../mfc/reference/cdumpcontext-class.md)。|  
@@ -252,15 +242,15 @@ ATLTRACE2(
 |**traceDatabase**|从 MFC 的数据库支持的消息。|  
 |**traceInternet**|从 MFC 的 Internet 支持的消息。|  
   
- 若要声明自定义跟踪类别，声明的全局实例`CTraceCategory`类，如下所示︰  
+ 若要声明自定义跟踪类别，声明的全局实例`CTraceCategory`类，如下所示：  
   
- [!code-cpp[NVC_ATL_Utilities # 109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  类别名称，`MY_CATEGORY`在此示例中，是你可以指定的名称`category`参数。 第一个参数是会在 ATL/MFC 跟踪工具中显示的类别名称。 第二个参数是默认跟踪级别。 此参数是可选的并且默认跟踪级别为 0。  
   
- 若要使用用户定义的类别︰  
+ 若要使用用户定义的类别：  
   
- [!code-cpp[NVC_ATL_Utilities # 110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  若要指定你想要筛选跟踪消息，将这些宏的定义 Stdafx.h 之前插入`#include <atlbase.h>`语句。  
   
@@ -275,9 +265,8 @@ ATLTRACE2(
  **ATLTRACE**和`ATLTRACE2`具有相同的行为， **ATLTRACE**包含是为了向后兼容。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_Utilities # 111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏](../../atl/reference/atl-macros.md)   
  [调试和错误报告全局函数](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

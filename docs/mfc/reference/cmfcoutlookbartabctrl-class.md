@@ -55,11 +55,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19a1c373bc982828bfa26f89955bce684fb7e68c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d38cfd03c9d4fe192b8c1ee7e235140dba382ddb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 在 Microsoft Outlook 中具有 **“导航窗格”** 可视外观的选项卡控件。  
@@ -132,7 +133,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxoutlookbartabctrl.h  
   
 ##  <a name="addcontrol"></a>CMFCOutlookBarTabCtrl::AddControl  
@@ -411,7 +412,7 @@ void SetPageButtonTextAlign(
   
  `uiAlign`可以是以下值之一：  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |TA_LEFT|左的对齐|  
 |TA_CENTER|居中对齐|  
@@ -459,7 +460,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)   

@@ -18,17 +18,18 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 56e275b6c97bf319ab3d2bacb014423e6c0efd20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>导出 C++ 函数以用于 C 语言可执行文件  
   
 如果你具有函数编写 c + + 中，你想要访问从 C 语言的模块，你应声明带 C 链接而不是 c + + 链接的这些函数的 DLL 中。 除非另行指定，则 c + + 编译器将使用 c + + 类型安全命名 （也称为名称修饰） 和 c + + 调用约定，可能很难从 C.调用  
   
-若要指定 C 链接，指定`extern "C"`函数声明。 例如:   
+若要指定 C 链接，指定`extern "C"`函数声明。 例如:  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  
@@ -56,5 +57,5 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
   
 -   [使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 DLL 导出](../build/exporting-from-a-dll.md)

@@ -55,11 +55,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cedbcd404e0f9dd575fe19486e97382e5975196c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e49cec1c34af066d6f30cf70003252f28e2bb8dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 类
 `CMFCColorButton`和[CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)类一起用于实现颜色选取器控件。  
@@ -107,7 +108,7 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`m_bAltColorDlg`|一个布尔值。 如果`TRUE`，框架显示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)颜色对话框中时*其他*单击按钮时，或者如果`FALSE`，系统颜色对话框。 默认值为 `TRUE`。 有关详细信息，请参阅[CMFCColorButton::EnableOtherButton](#enableotherbutton)。|  
 |`m_bAutoSetFocus`|一个布尔值。 如果`TRUE`，框架将焦点设置在颜色菜单上显示的菜单时，或如果`FALSE`，不会更改焦点。 默认值为 `TRUE`。|  
@@ -138,7 +139,7 @@ class CMFCColorButton : public CMFCButton
  [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcolorbutton.h  
   
 ##  <a name="cmfccolorbutton"></a>CMFCColorButton::CMFCColorButton  
@@ -321,7 +322,7 @@ void RebuildPalette(CPalette* pPal);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pPal`|指向逻辑调色板的指针或`NULL`。 如果`NULL`，使用默认系统调色板。|  
   
@@ -433,7 +434,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>备注  
  `UpdateColor`函数当前所选的按钮的颜色更改，并通过发送通知其父级`WM_COMMAND`消息`BN_CLICKED`标准通知。 使用[CMFCColorButton::GetColor](#getcolor)方法来检索所选的颜色。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)   

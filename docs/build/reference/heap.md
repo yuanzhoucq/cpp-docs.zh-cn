@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 709b9a1b57750db4ea8eb13bdaa3d49eed9b7629
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d21fe68d96274eaf42c2b7d58aa025c49f8a6d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heap"></a>/HEAP
 设置堆的大小（以字节为单位）。 此选项仅适用于可执行文件。  
@@ -41,5 +42,5 @@ reserve[,commit]
   
  以十进制或 C 语言十六进制/八进制表示形式指定 `reserve` 和 `commit` 值。 例如，值 1 MB 可指定为十进制的 1048576、十六进制的 0x100000 或八进制的 04000000。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

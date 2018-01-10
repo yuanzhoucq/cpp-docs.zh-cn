@@ -17,14 +17,15 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4186329b164ab3fe6daba12ed3cbbd2008085fb9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 721e466e5d7e77592e66aa3ebacb3ad59eb89bb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-templates"></a>函数模板
-类模板可定义一系列相关类，这些类基于在实例化时传递到类的类型参数。 函数模板类似于类模板，但定义的是一系列函数。 利用函数模板，您可以指定基于相同代码但作用于不同类型或类的函数集。 以下函数模板交换两个项：  
+类模板可定义一系列相关类，这些类基于在实例化时传递到类的类型参数。 函数模板类似于类模板，但定义的是一系列函数。 利用函数模板，你可以指定基于相同代码但作用于不同类型或类的函数集。 以下函数模板交换两个项：  
   
 ```cpp
 // function_templates1.cpp  
@@ -53,7 +54,7 @@ MySwap( j, Hello );      //error
   
  第二个 `MySwap` 调用触发了编译时错误，因为编译器无法生成具有不同类型的参数的 `MySwap` 函数。 如果使用了 void 指针，两个函数调用都将正确编译，但函数在运行时无法正常工作。  
   
- 允许显式指定函数模板的模板参数。 例如：  
+ 允许显式指定函数模板的模板自变量。 例如:  
   
 ```cpp
 // function_templates2.cpp  
@@ -66,7 +67,7 @@ int main(int j) {
   
  当显式指定模板参数时，将对函数自变量执行常规隐式转换以将其转换为对应的函数模板自变量的类型。 在上面的示例中，编译器会将转换`char j`类型`int`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [模板](../cpp/templates-cpp.md)   
  [函数模板实例化](../cpp/function-template-instantiation.md)   
  [显式实例化](../cpp/explicit-instantiation.md)   

@@ -1,132 +1,131 @@
 ---
-title: "LIB 概述 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LIB [C++], modes"
+title: "LIB 概述 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# LIB 概述
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LIB 创建标准库、导入库和导出文件，在生成程序时可将它们与 [LINK](../../build/reference/linker-options.md) 一起使用。  LIB 从命令提示运行。  
+# <a name="overview-of-lib"></a>LIB 概述
+LIB 创建标准库，导入库和导出的文件可与[链接](../../build/reference/linker-options.md)时生成程序。 从命令提示符运行 LIB。  
   
- 可在下列几种模式下使用 LIB：  
+ 在以下模式，可使用 LIB:  
   
 -   [生成或修改 COFF 库](../../build/reference/managing-a-library.md)  
   
--   [将成员对象提取到文件中](../../build/reference/extracting-a-library-member.md)  
+-   [提取到文件的成员对象](../../build/reference/extracting-a-library-member.md)  
   
--   [创建导出文件和导入库](../../build/reference/working-with-import-libraries-and-export-files.md)  
+-   [创建一个导出文件和导入库](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
- 这些模式是互斥的；每次只能以一种模式使用 LIB。  
+ 这些模式是互斥;你可以一次只有一种模式中使用 LIB。  
   
-## Lib 选项  
- 下表列出了 lib.exe 的选项，并提供了可获得更多信息的链接。  
+## <a name="lib-options"></a>Lib 选项  
+ 下表列出了 lib.exe 的详细信息的链接的选项。  
   
- **\/DEF**  
+ **/DEF**  
  创建导入库和导出文件。  
   
- 有关更多信息，请参见[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
+ 有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
   
- **\/ERRORREPORT**  
- 将有关 lib.exe 内部错误的信息发送给 Microsoft。  
+ **/ERRORREPORT**  
+ 向 Microsoft 发送有关 lib.exe 内部错误的信息。  
   
- 有关更多信息，请参见[运行 LIB](../../build/reference/running-lib.md)。  
+ 有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
- **\/EXPORT**  
- 从程序中导出函数。  
+ **/ 导出**  
+ 从你的程序中导出函数。  
   
- 有关更多信息，请参见[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
+ 有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
   
- **\/EXTRACT**  
- 创建一个对象 \(.obj\) 文件，其中包含现有库的一个成员的副本。  
+ **/ 提取**  
+ 创建对象 (.obj) 文件包含的一个成员的现有库的副本。  
   
- 有关更多信息，请参见[提取库成员](../../build/reference/extracting-a-library-member.md)。  
+ 有关详细信息请参阅[提取库成员](../../build/reference/extracting-a-library-member.md)。  
   
- **\/INCLUDE**  
- 将符号添加到符号表中。  
+ **/ 包括**  
+ 将符号添加到符号表。  
   
- 有关更多信息，请参见[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
+ 有关详细信息请参阅[生成导入库和导出文件](../../build/reference/building-an-import-library-and-export-file.md)。  
   
- **\/LIBPATH**  
+ **/LIBPATH**  
  重写环境库路径。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/LIST**  
- 将有关输出库的信息显示到标准输出。  
+ **/ 列表**  
+ 到标准输出中显示有关输出库的信息。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/LTCG**  
- 导致使用链接时代码生成机制生成库。  
+ **/LTCG**  
+ 导致要生成使用的链接时代码生成的库。  
   
- 有关更多信息，请参见[运行 LIB](../../build/reference/running-lib.md)。  
+ 有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
- **\/MACHINE**  
+ **/ 机**  
  指定程序的目标平台。  
   
- 有关更多信息，请参见[运行 LIB](../../build/reference/running-lib.md)。  
+ 有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
- **\/NAME**  
- 当生成导入库时，指定正在为其生成导入库的 DLL 的名称。  
+ **/ 名称**  
+ 在生成导入库时，指定正在为其生成导入库的 dll 的名称。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/NODEFAULTLIB**  
- 在解析外部引用时，从其搜索的库列表中移除一个或多个默认库。  
+ **/NODEFAULTLIB**  
+ 从的解析外部引用时搜索的库的列表中移除一个或多个默认库。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/NOLOGO**  
- 取消显示 LIB 版权信息和版本号，并防止回显命令文件。  
+ **/NOLOGO**  
+ 取消显示 LIB 版权消息和版本，并防止回显的命令文件。  
   
- 有关更多信息，请参见[运行 LIB](../../build/reference/running-lib.md)。  
+ 有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
- **\/OUT**  
+ **/ 输入输出**  
  重写默认输出文件名。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/REMOVE**  
- 忽略来自输出库的对象。  
+ **/ 删除**  
+ 忽略输出库中的对象。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/SUBSYSTEM**  
- 通知操作系统如何运行通过链接到输出库创建的程序。  
+ **/ 子系统**  
+ 通知操作系统如何运行通过链接到此输出库中创建的程序。  
   
- 有关更多信息，请参见[管理库](../../build/reference/managing-a-library.md)。  
+ 有关详细信息请参阅[管理库](../../build/reference/managing-a-library.md)。  
   
- **\/VERBOSE**  
- 显示有关会话进度的详细信息，其中包括所添加的 .obj 文件的名称。  
+ **/VERBOSE**  
+ 显示有关会话，包括所添加的.obj 文件的名称的进度的详细信息。  
   
- 有关更多信息，请参见[运行 LIB](../../build/reference/running-lib.md)。  
+ 有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
- **\/WX**  
+ **/WX**  
  将警告视为错误。  
   
- 有关更多信息，请参见[运行 LIB](../../build/reference/running-lib.md)。  
+ 有关详细信息请参阅[运行 LIB](../../build/reference/running-lib.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [LIB 引用](../../build/reference/lib-reference.md)   
- [LIB 输入文件](../../build/reference/lib-input-files.md)   
+ [LIB 输入的文件](../../build/reference/lib-input-files.md)   
  [LIB 输出文件](../../build/reference/lib-output-files.md)   
  [其他 LIB 输出](../../build/reference/other-lib-output.md)   
  [库结构](../../build/reference/structure-of-a-library.md)

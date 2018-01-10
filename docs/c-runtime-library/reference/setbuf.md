@@ -31,11 +31,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a57e815376414724b2c92977c52a309f86c63b50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b57d77172204c54ac0079beecd920c7fdfab829
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setbuf"></a>setbuf
 控制流缓冲。 此函数已弃用；请改用 [setvbuf](../../c-runtime-library/reference/setvbuf.md)。  
@@ -61,13 +62,13 @@ void setbuf(
   
  `setbuf` 已由新代码的首选例程 [setvbuf](../../c-runtime-library/reference/setvbuf.md) 替换。 保留 `setbuf` 以便与现有代码兼容。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`setbuf`|\<stdio.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -108,7 +109,7 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   

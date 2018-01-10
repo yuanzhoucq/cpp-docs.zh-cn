@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -38,36 +36,22 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3ce182dd28fa5af0fef9c2c51c14fc54aa5af972
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1c470717d48836fd405e98f5fccca222e87a9c33
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 执行命令。  
   
 > [!IMPORTANT]
->  此 API 不能用于在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅 [/ZW 不支持的 CRT 函数](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -85,7 +69,7 @@ int _wsystem(
  要执行的命令。  
   
 ## <a name="return-value"></a>返回值  
- 如果 `command` 为 `NULL`，并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回 0 并将 `errno` 设置为 `ENOENT`。 如果 `command` 不为 `NULL`，则 `system` 返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 指示错误，和`errno`设置为以下值之一︰  
+ 如果 `command` 为 `NULL`，并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回 0 并将 `errno` 设置为 `ENOENT`。 如果 `command` 不为 `NULL`，则 `system` 返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 指示错误，和`errno`设置为以下值之一：  
   
  `E2BIG`  
  自变量列表（与系统相关）太大。  
@@ -114,14 +98,14 @@ int _wsystem(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tsystem`|`system`|`system`|`_wsystem`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`system`|\<process.h> 或 \<stdlib.h>|  
 |`_wsystem`|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  此示例使用 `system` 来键入一个文本文件。  
@@ -151,7 +135,7 @@ Line one.
 Line two.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)   
  [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   

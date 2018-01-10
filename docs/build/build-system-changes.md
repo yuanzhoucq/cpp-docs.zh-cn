@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90266f54dd6972e68abe770bad4ee323eebf46b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-system-changes"></a>有关生成系统的更改
 MSBuild 系统用于生成 Visual C++ 项目。 但是，在 Visual Studio 2008 和早期版本中，使用了 VCBuild 系统。 某些文件类型和依赖 VCBuild 的概念不存在，或在当前系统中以不同方式表示。 本文档讨论当前的生成系统中的差异。  
@@ -73,5 +74,5 @@ Property=<value>;$(MyProperty)
   
  从.vssettings 文件创建的早期版本的 Visual c + + 迁移 VC + + 目录设置。 打开**工具**菜单上，单击**导入和导出设置**，选择**导入选定的环境设置**，然后按照向导中的说明。 当您按或启动 Visual Studio 首次**选择默认环境设置**对话框中，选择**从早期版本迁移合格的设置并将其应用除了默认设置下面所选**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

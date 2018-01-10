@@ -41,11 +41,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8d1d1012040e3dfb1955502e3891dc27ddb689c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb8dc68154c9a1302fe69dd8416309bf377bdd3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="perror-wperror"></a>perror、_wperror
 打印错误消息。  
@@ -83,14 +84,14 @@ void _wperror(
   
  在 Windows 操作系统中，未使用 ERRNO.H 中列出的一些 `errno` 值。 这些值将保留以供 UNIX 操作系统使用。 对于 Windows 操作系统使用的 `errno` 值的列表，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 `perror` 为这些平台未使用的任何 `errno` 值打印一个空字符串。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`perror`|\<stdio.h> 或 \<stdlib.h>|  
 |`_wperror`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
@@ -145,7 +146,7 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   

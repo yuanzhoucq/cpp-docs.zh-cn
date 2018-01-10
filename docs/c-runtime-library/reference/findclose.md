@@ -33,11 +33,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8deae0204a9165ee9ab89036faab3b762c536349
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4747592dbda7a903d5d8a50cebde9ef006ec765d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findclose"></a>_findclose
 关闭指定的搜索句柄并释放关联资源。  
@@ -57,7 +58,7 @@ int _findclose(
 ## <a name="return-value"></a>返回值  
  如果成功，则 `_findclose` 返回 0。 否则，它将返回-1 并将设置`errno`到`ENOENT`，无法找到，该值指示没有更多匹配的文件。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
@@ -65,6 +66,6 @@ int _findclose(
   
  有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统调用](../../c-runtime-library/system-calls.md)   
  [文件名搜索函数](../../c-runtime-library/filename-search-functions.md)

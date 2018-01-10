@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,38 +25,23 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - snap-ins, property pages
 - snap-ins
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 类
 此类提供用于实现管理单元在属性页上对象的方法。  
@@ -93,13 +77,13 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|当前页变为活动状态时，由框架调用。|  
 |[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|由框架调用，当用户单击**回**使用向导类型的属性表时的按钮。|  
 |[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|由框架调用，当用户单击**完成**使用向导类型的属性表时的按钮。|  
-|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|由框架调用，当用户单击`Next`使用向导 type 属性表时的按钮。|  
+|[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|由框架调用，当用户单击`Next`使用向导类型的属性表时的按钮。|  
 |[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|将转发到的属性表的所有页面的当前消息。|  
 |[CSnapInPropertyPageImpl::SetModified](#setmodified)|调用以激活或停用**立即应用**按钮。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE**使用结构`CSnapInPropertyPageImpl`对象。|  
   
@@ -111,8 +95,8 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
  `CSnapInPropertyPageImpl`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlsnap.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlsnap.h  
   
 ##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
  对模式属性表的页面中的数据进行了不可恢复的更改后调用此函数。  
@@ -163,7 +147,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>备注  
  使用此结构在构造之后初始化属性页的外观。  
   
- 此结构，包括其成员的列表的详细信息请参阅[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此结构，包括其成员的列表的详细信息请参阅[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  用户单击时，此成员函数将调用**确定**或**立即应用**按钮。  
@@ -260,7 +244,7 @@ BOOL OnWizardBack();
   
 -   -1 以使页面无法更改。  
   
- 若要跳至以外的下一个页面，返回的对话框中显示的标识符。  
+ 若要跳转到下一步以外的页，请返回对话框中要显示的标识符。  
   
 ### <a name="remarks"></a>备注  
  重写该成员函数以指定用户必须采取时某些操作**回**单击按钮。  
@@ -291,7 +275,7 @@ BOOL OnWizardNext();
   
 -   -1 以使页面无法更改。  
   
- 若要跳至以外的下一个页面，返回的对话框中显示的标识符。  
+ 若要跳转到下一步以外的页，请返回对话框中要显示的标识符。  
   
 ### <a name="remarks"></a>备注  
  重写该成员函数以指定用户必须采取时某些操作`Next`单击按钮。  
@@ -330,6 +314,5 @@ void SetModified(BOOL bChanged = TRUE);
 ### <a name="remarks"></a>备注  
  属性表保留的跟踪的页面的"脏"，它是、 属性页，为其调用了**SetModified (TRUE)**。 **立即应用**将始终启用按钮，如果调用**SetModified (TRUE)**页面之一。 **立即应用**在调用时，将禁用按钮**SetModified (FALSE)**之一的页面，但只有无其他页面"脏"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

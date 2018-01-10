@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3db30aedfd18a34672c19e01e2353f6583b856b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 29211f494c905f3d82ebe3238706b2528dadce0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locking"></a>_locking
 锁定或解锁文件的字节。  
@@ -103,13 +104,13 @@ ms.lasthandoff: 10/24/2017
   
  可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 `_locking` 不会合并相邻区域；如果有两个相邻的锁定区域，每个区域必须单独解锁。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_locking`|\<io.h 1> 和 \<sys/locking.h 1>|\<errno.h>|  
   
- 有关更多兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
@@ -179,7 +180,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
  [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - templates, instantiation
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ecd8f8c893abab10699a0bd43f368356335c6e10
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-instantiation"></a>显式实例化
 你可以使用显式实例化来创建模板化类或函数的实例化，而不用将其实际用于你的代码。 创建库 (.lib) 文件，使用的模板分发时，这很有用，因为未实例化的模板定义未放入对象 (.obj) 文件。  
@@ -45,7 +43,7 @@ template MyStack<int, 6>::MyStack( void );
   
  你可以显式使用实例化函数模板的特定类型参数来重新声明这些中的示例中所示[函数模板实例化](../cpp/function-template-instantiation.md)。  
   
- 你可以使用`extern`关键字以防止自动实例化的成员。 例如：  
+ 你可以使用`extern`关键字以防止自动实例化的成员。 例如:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
@@ -62,5 +60,5 @@ extern template MyStack<int, 6>::MyStack( void );
 > [!NOTE]
 >  `extern`专用化中的关键字仅适用于类主体外部定义的成员函数。 类声明中定义的函数被视为内联函数，并且始终实例化。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数模板](../cpp/function-templates.md)

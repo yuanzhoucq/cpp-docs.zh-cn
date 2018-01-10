@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2561
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2561
+f1_keywords: C2561
+dev_langs: C++
+helpviewer_keywords: C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 604c5b4ce8c8e1b5477d076a061fdf56fdfd9c54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: ce30ffb454deb7bc847e736458295d037826a0ad
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2561"></a>编译器错误 C2561
 identifier： 函数必须返回值  

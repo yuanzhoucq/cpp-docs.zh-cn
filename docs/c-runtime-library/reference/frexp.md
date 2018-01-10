@@ -37,11 +37,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f463ee2e077d4d1cc90e4fe2fc04eeda025bb6a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86152082b081cb93ba264e607b256a2448874af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frexp"></a>frexp
 获取浮点数的尾数和指数。  
@@ -78,13 +79,13 @@ long double frexp(
   
  C++ 允许重载，因此您可以调用 `frexp` 的重载。 在 C 程序中，`frexp` 始终采用一个双精度值和一个整数并返回一个双精度值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`frexp`|\<math.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -111,7 +112,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)   
  [modf、modff、modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

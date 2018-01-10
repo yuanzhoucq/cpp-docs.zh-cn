@@ -1,47 +1,48 @@
 ---
-title: "ptr::~ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.~ptr"
-  - "ptr.~ptr"
-  - "msclr::com.ptr::~ptr"
-  - "~ptr"
-  - "ptr::~ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::~ptr"
+title: "ptr:: ~ ptr |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.~ptr
+- ptr.~ptr
+- msclr::com.ptr::~ptr
+- ~ptr
+- ptr::~ptr
+dev_langs: C++
+helpviewer_keywords: ptr::~ptr
 ms.assetid: 5f644aa5-fe66-4992-a5f8-13ec1292c949
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8eb71e9975f06bfae5fe20c3ccae6d296a47f80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::~ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`com::ptr`析构。  
+# <a name="ptrptr"></a>ptr::~ptr
+因`com::ptr`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 ~ptr();  
 ```  
   
-## 备注  
- 在销毁，它拥有对其 COM 对象的 `com::ptr` 释放所有引用。  假定，不再引用对 COM 对象，COM 对象将被删除，并将已释放其内存。  
+## <a name="remarks"></a>备注  
+ 在析构，`com::ptr`释放它拥有到其 COM 对象的所有引用。 假定没有其他遵守的 COM 对象的引用，将删除的 COM 对象并释放其内存。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。在 `main` 函数，那么，当结构超出 `try` 块的大小，从而调用的基础 `com::ptr` 析构函数，释放对 COM 对象的所有引用，拥有的两个 `XmlDocument` 对象的析构函数调用。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  在`main`函数、 两个`XmlDocument`超出范围时，将调用对象的析构函数`try`块，从而导致基础`com::ptr`被调用的析构函数释放 COM 到所有拥有的引用对象。  
   
 ```  
 // comptr_dtor.cpp  
@@ -102,12 +103,12 @@ int main() {
 }  
 ```  
   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::ptr](../dotnet/ptr-ptr.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)

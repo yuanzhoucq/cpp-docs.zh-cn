@@ -57,11 +57,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ad428851bd89dd2e9efd49a900ccdc28066b246
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40566a3f4f6855da3a7ee7d122357f392d234ff0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 检查多字节字符是字母数字字符、alpha 还是数字字符。  
@@ -116,23 +117,23 @@ int _ismbcdigit_l
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-|例程|测试条件|代码页 932 示例|  
+|例程所返回的值|测试条件|代码页 932 示例|  
 |-------------|--------------------|---------------------------|  
 |`_ismbcalnum,_ismbcalnum_l`|字母数字|当且仅当 `c` 是 ASCII 英文字母的单字节表示形式时返回非零值：请参见 `_ismbcdigit` 和 `_ismbcalpha` 的示例。|  
 |`_ismbcalpha,_ismbcalpha_l`|Alphabetic|当且仅当出现以下情况时返回非零值：`c` 是 ASCII 英文字母的单字节表示形式：0x41<=`c`<=0x5A 或 0x61<=`c`<=0x7A；或是片假名字母的单字节表示形式：0xA6<=`c`<=0xDF。|  
 |`_ismbcdigit,_ismbcdigit`|数字|当且仅当 `c` 是 ASCII 数字 0x30<=`c`<=0x39 的单字节表示形式时返回非零值。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h>|  
 |`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  
 |`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
  [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
  [is、isw 例程](../../c-runtime-library/is-isw-routines.md)   

@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d211a3ab33377b817c23734f01947cde92f8aad7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函数模板的部分排序 (C++)
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 
 4. 对 T1 和 T2 执行相反的过程。
 
-5. 如果一个模板是另一个模板的有效模板参数列表，但反之不成立，则认为第一个模板的专用化程度低于第二个模板。 如果使用的上一个步骤窗体有效自变量对于每个其他两个模板，则它们被视为同等专用化，并不明确的调用导致当你尝试使用它们。
+5. 如果一个模板是另一个模板的有效模板自变量列表，但反之不成立，则认为第一个模板的专用化程度低于第二个模板。 如果使用的上一个步骤窗体有效自变量对于每个其他两个模板，则它们被视为同等专用化，并不明确的调用导致当你尝试使用它们。
 
 6. 使用以下规则：
 
@@ -91,6 +92,6 @@ More specialized function called
 Even more specialized function for const T*  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [函数模板](../cpp/function-templates.md)

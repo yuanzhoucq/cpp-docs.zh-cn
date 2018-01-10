@@ -69,11 +69,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac2b681b605c4485ed87cecebb51afa6261cafff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s、_i64toa_s、_ui64toa_s、_itow_s、_i64tow_s、_ui64tow_s
 将整数转换为字符串。 如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) 具有安全增强功能。  
@@ -152,9 +153,9 @@ errno_t _itow_s(
 |值|buffer|sizeInCharacters|radix|返回|  
 |-----------|------------|----------------------|-----------|------------|  
 |任何|`NULL`|任何|任何|`EINVAL`|  
-|任何|any|<=0|any|`EINVAL`|  
-|任何|any|<= 所需结果字符串的长度|任何|`EINVAL`|  
-|任何|任何|any|`radix` < 2 或 `radix` > 36|`EINVAL`|  
+|任何|任何|<=0|任何|`EINVAL`|  
+|任何|任何|<= 所需结果字符串的长度|任何|`EINVAL`|  
+|任何|任何|任何|`radix` < 2 或 `radix` > 36|`EINVAL`|  
   
  **安全问题**  
   
@@ -163,7 +164,7 @@ errno_t _itow_s(
 ## <a name="remarks"></a>备注  
  除了参数和返回值，`_itoa_s` 函数具有与对应的安全性较低的版本相同的行为。  
   
- 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -175,9 +176,9 @@ errno_t _itow_s(
 |`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|  
 |`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  
@@ -186,7 +187,7 @@ errno_t _itow_s(
 |`_i64tow_s`|\<stdlib.h> 或 \<wchar.h>|  
 |`_ui64tow_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -253,7 +254,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [_ltoa、_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ultoa、_ultow](../../c-runtime-library/reference/ultoa-ultow.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0eb123cca28fdae379b387aaf09d0a200a88287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c83f159882b9ed6fcfe5557c150413303c401dda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu（使用预编译标头文件）
 指示编译器使用当前的编译中的现有预编译标头 (.pch) 文件。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 /Yu[filename]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *filename*  
  标头文件，它包括在源文件使用的名称**#include**预处理器指令。  
   
@@ -101,6 +102,6 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
   
  此命令指定一个名为 MYPCH.pch 的预编译标头文件。 编译器使用其内容以还原的所有标头文件达 myapp.h 预编译的状态。 由编译器进行编译的代码在 MYAPP.h 之后**包括**语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

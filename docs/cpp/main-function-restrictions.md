@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Main
-dev_langs:
-- C++
-helpviewer_keywords:
-- main function, restrictions on using
+f1_keywords: Main
+dev_langs: C++
+helpviewer_keywords: main function, restrictions on using
 ms.assetid: 7b3df731-344b-44a8-850c-11cbcbfbfa83
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 10fe82b0bb7ad700164b05ba466854db7716ba76
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8a94844a0d5636c58a764114ed6f413923d69950
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-restrictions"></a>main 函数限制
 几个限制适用于**主要**并不适用于任何其他 c + + 函数的函数。 **主要**函数：  
@@ -39,5 +35,5 @@ ms.lasthandoff: 09/25/2017
   
 -   无法被调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [main：程序启动](../cpp/main-program-startup.md)

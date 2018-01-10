@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chsize
+apiname: _chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _chsize
-dev_langs:
-- C++
+f1_keywords: _chsize
+dev_langs: C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -34,30 +30,16 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9c48c9978650dc88ff2579a2838faf9bcb02cefa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsize"></a>_chsize
 更改文件大小。 提供此函数的一个更安全的版本；请参阅 [_chsize_s](../../c-runtime-library/reference/chsize-s.md)。  
@@ -79,7 +61,7 @@ int _chsize(
  文件的新长度（以字节为单位）。  
   
 ## <a name="return-value"></a>返回值  
- 如果已成功更改文件大小，则 `_chsize` 返回值 0。 返回值-1 指示错误︰`errno`设置为`EACCES`如果指定的文件被锁定对访问权限，为`EBADF`如果指定的文件是只读的或描述符无效，`ENOSPC`如果没有空间保留在设备上，或`EINVAL`如果`size`小于零。  
+ 如果已成功更改文件大小，则 `_chsize` 返回值 0。 返回值-1 指示错误：`errno`设置为`EACCES`如果指定的文件锁定对访问权限，为`EBADF`如果指定的文件是只读的或描述符无效，`ENOSPC`如果没有剩余空间上的设备或`EINVAL`如果`size`小于零。  
   
  有关这些代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -88,13 +70,13 @@ int _chsize(
   
  此函数验证其参数。 如果 `size` 小于零或 `fd` 是无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_chsize`|\<io.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -136,7 +118,7 @@ Size successfully changed
 File length after:  329678  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
  [_close](../../c-runtime-library/reference/close.md)   
  [_sopen、_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   

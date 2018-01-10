@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,37 +29,22 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0fe8083cfc131f7e8b1f2133943a1c91f614a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 宏、_assert、_wassert
 计算表达式，如果结果为 `false`，则打印诊断消息并中止程序。  
@@ -113,9 +97,9 @@ void _wassert(
   
  当未定义 `assert` 时，C 运行库的发布版本和调试版本中均启用了 `NDEBUG` 宏。 当定义了 `NDEBUG` 时，该宏虽然可用，但不会计算其参数，因而并不起作用。 启用后， `assert` 宏会调用 `_wassert` 用于实现。 其他断言宏 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 和 [_ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 也可用，但它们只有在已定义 [_DEBUG](../../c-runtime-library/debug.md) 宏的情况下以及存在于与 C 运行时库调试版本关联的代码中时才会计算传递给它们的表达式。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`assert`, `_wassert`|\<assert.h>|  
   
@@ -171,7 +155,7 @@ A problem caused the program to stop working correctly. Windows will close the p
   
  如果已安装调试器，请选择“调试”  按钮以启动调试器，或选择“关闭程序”  以退出。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误处理](../../c-runtime-library/error-handling-crt.md)   
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   

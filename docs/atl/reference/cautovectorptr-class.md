@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 类
 此类表示智能指针对象在使用矢量 new 和 delete 运算符。  
@@ -83,7 +84,7 @@ class CAutoVectorPtr
   
  请参阅[CAutoPtr](../../atl/reference/cautoptr-class.md)有关使用智能指针类的示例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
@@ -205,6 +206,6 @@ operator T*() const throw();
 ### <a name="remarks"></a>备注  
  将指针返回到类模板中定义的对象数据类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAutoPtr 类](../../atl/reference/cautoptr-class.md)   
  [类概述](../../atl/atl-class-overview.md)

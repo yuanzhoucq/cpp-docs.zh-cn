@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a1cc6a80609828d084b56ef4f981c9d03de8070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 创建指定相对路径名称的绝对或完整路径名称。  
@@ -107,14 +108,14 @@ wchar_t *_wfullpath(
   
  如果 `absPath` 缓冲区为 `NULL`，`_fullpath` 调用 [malloc](../../c-runtime-library/reference/malloc.md) 来分配缓冲区，并忽略 `maxLength` 参数。 调用方负责视情况解除分配此缓冲区（使用 [free](../../c-runtime-library/reference/free.md)）。 如果 `relPath` 参数指定一个磁盘驱动器，则该驱动器的当前目录结合使用此路径。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`_fullpath`|\<stdlib.h>|  
 |`_wfullpath`|\<stdlib.h> 或 \<wchar.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -151,7 +152,7 @@ Full path is: C:\test
 Full path is: C:\Documents and Settings\user\test  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
  [_getcwd、_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
  [_getdcwd、_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

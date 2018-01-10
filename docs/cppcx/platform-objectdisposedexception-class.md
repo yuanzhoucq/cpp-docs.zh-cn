@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f0892513e5ce4ce10d66efd2c4e1d4999d63ac21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8751940669dd947de8b4dd789aad3e739dd412bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException 类
 对已释放对象执行操作时引发。  
@@ -35,7 +36,7 @@ public ref class ObjectDisposedException : COMException,    IException,    IPrin
 ### <a name="remarks"></a>备注  
  有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -44,5 +45,5 @@ public ref class ObjectDisposedException : COMException,    IException,    IPrin
   
  **元数据：** platform.winmd  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Platform::COMException 类](../cppcx/platform-comexception-class.md)

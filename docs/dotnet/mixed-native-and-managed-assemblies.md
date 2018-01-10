@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c58f69057a7da709ec79c614fe60beef5a203f0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混合（本机和托管）程序集
 混合程序集是可以包含非托管的计算机的说明和 MSIL 指令。 这使他们可以调用和由.NET 组件，同时保留与不完全受管理的组件的兼容性。 使用混合程序集，开发人员可以编写使用混合的托管和非托管功能的应用程序。 这使得混合程序集现有 Visual c + + 应用程序迁移到.NET 平台的理想选择。  
@@ -66,5 +69,5 @@ ms.lasthandoff: 10/24/2017
   
  有关编码准则对于混合程序集的详细信息，请参阅 MSDN 文章"概述的托管/非托管代码互操作性"网址[http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)

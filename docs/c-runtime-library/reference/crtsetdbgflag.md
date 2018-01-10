@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDbgFlag
+apiname: _CrtSetDbgFlag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -35,8 +33,7 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -59,30 +56,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: ef1773e534c08a15f10fe2048a5036a957c6a1f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 检索或修改 **_crtDbgFlag** 标志的状态，以控制调试堆管理器的分配行为（仅限调试版本）。  
@@ -108,7 +91,7 @@ ms.lasthandoff: 03/30/2017
   
  下表列出了 **_crtDbgFlag** 的位域并描述了其行为。 因为设置位将导致诊断输出增加、程序执行速度减慢，因此在默认情况下不会设置这些位（已关闭）。 有关这些位域的详细信息，请参阅[堆状态报告函数](/visualstudio/debugger/crt-debug-heap-details)。  
   
-|位域|默认|说明|  
+|位域|默认|描述|  
 |---------------|-------------|-----------------|  
 |**_CRTDBG_ALLOC_MEM_DF**|打开|打开：启用调试堆分配并使用内存块类型标识符，例如 `_CLIENT_BLOCK`。 关闭：将新的分配添加到堆链接列表，但是将块类型设置为 **_IGNORE_BLOCK**。<br /><br /> 还可以与任何堆频率检查宏组合。|  
 |**_CRTDBG_CHECK_ALWAYS_DF**|关闭|打开：在每次分配和解除分配请求时调用 [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)。 关闭：必须显式调用 `_CrtCheckMemory`。<br /><br /> 设置此标志后，堆频率检查宏不会产生任何影响。|  
@@ -189,13 +172,13 @@ _CrtSetDbgFlag( tmpFlag );
   
  如果 `newFlag` 不是有效值，则此函数调用的参数处理程序无效，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数会将 `errno` 设置为 `EINVAL` 并返回之前的 `_crtDbgFlag` 状态。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_CrtSetDbgFlag`|\<crtdbg.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
@@ -278,7 +261,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)   
  [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
  [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)

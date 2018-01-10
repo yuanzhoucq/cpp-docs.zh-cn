@@ -34,11 +34,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f5cc42ee9aaeccfacf7088f5cc80a3d305169b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 385d6edc77387b724c4e121a9fc01cee1a4d8905
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="querynewmode"></a>_query_new_mode
 返回指示由 `_set_new_mode` 为 `malloc` 设置的新处理程序模式的整数。  
@@ -58,18 +59,18 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  C++ `_query_new_mode` 函数返回一个整数，指示由 [malloc](../../c-runtime-library/reference/malloc.md) 的 C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函数设置的新处理程序模式。 新处理程序模式将指示 `malloc` 是否在分配内存失败时调用由 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 设置的新处理程序例程。 默认情况下，`malloc` 不会在失败时调用新的处理程序例程。 可以使用 `_set_new_mode` 来重写此行为，以便在失败时，`malloc` 调用新的处理程序例程，方法与 **new** 运算符无法分配内存时所执行的操作一样。 有关详细信息，请参阅“C++ 语言参考”中的 [new 和 delete 运算符](../../cpp/new-and-delete-operators.md)的讨论。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_query_new_mode`|\<new.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   

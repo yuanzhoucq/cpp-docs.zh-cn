@@ -1,37 +1,36 @@
 ---
-title: "编译器警告（等级 1）C4906 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4906"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4906"
+title: "编译器警告 （等级 1） C4906 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4906
+dev_langs: C++
+helpviewer_keywords: C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ba4ce917a0ed9b4c900ba39f5ab2d84f02ca44be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4906
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4906"></a>编译器警告（等级 1）C4906
 字符串强制转换为“LPWSTR”  
   
- 编译器检测到不安全转换。  转换成功，但应使用转换例程。  
+ 编译器检测到不安全的强制转换。 该强制转换未成功，但你应使用的转换例程。  
   
- 默认情况下关闭此警告。  有关更多信息，请参见[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
   
-## 示例  
- 下面的示例生成 C4906：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C4906:  
   
 ```  
 // C4906.cpp  

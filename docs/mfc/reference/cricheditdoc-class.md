@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5105a03b4db49eda1c2338cf85414c4bfc0c153d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c427dc034a37bf3b0686b0fd95e62c3b718fbaea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 类
 与[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)，提供 MFC 文档视图体系结构上下文中 rich edit 控件的功能。  
@@ -80,7 +81,7 @@ class CRichEditDoc : public COleServerDoc
   
  `CRichEditDoc`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrich.h  
   
 ##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
@@ -139,7 +140,7 @@ virtual CRichEditView* GetView() const;
 BOOL m_bRTF;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例写字板](../../visual-cpp-samples.md)   
  [COleServerDoc 类](../../mfc/reference/coleserverdoc-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

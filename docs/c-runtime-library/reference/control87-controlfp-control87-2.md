@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - controlfp
 - control87_2
 - _control87_2
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - _control87 function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 25dfd357f0b3385f1e9bdcc4249ad3cf4399e0b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4c6188917737e46807979d5f4a7fec350cb3e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control87-controlfp-control872"></a>_control87、_controlfp、__control87_2
 获取并设置浮点控制字。 `_controlfp` 有一个更安全的版本；请参阅 [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)。  
@@ -155,7 +139,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
   
  对于 `_MCW_EM` 掩码，清除掩码将设置异常，这会允许硬盘异常；设置掩码可隐藏异常。 如果出现 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW`，则在执行下一步浮点指令之前，不会引发任何硬盘异常。 若要在 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW` 后立即生成硬件异常，请调用 `FWAIT` MASM 指令。  
   
-|掩码|十六进制值|常量|十六进制值|  
+|掩码|十六进制值|返回的常量|十六进制值|  
 |----------|---------------|--------------|---------------|  
 |`_MCW_DN` （非常规控制）|0x03000000|`_DN_SAVE`<br /><br /> `_DN_FLUSH`|0x00000000<br /><br /> 0x01000000|  
 |`_MCW_EM`（中断异常掩码）|0x0008001F|`_EM_INVALID`<br /><br /> `_EM_DENORMAL`<br /><br /> `_EM_ZERODIVIDE`<br /><br /> `_EM_OVERFLOW`<br /><br /> `_EM_UNDERFLOW`<br /><br /> `_EM_INEXACT`|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|  
@@ -163,13 +147,13 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 |`_MCW_RC`舍入控制）|0x00000300|`_RC_CHOP`<br /><br /> `_RC_UP`<br /><br /> `_RC_DOWN`<br /><br /> `_RC_NEAR`|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|  
 |`_MCW_PC`（精度控制）<br /><br /> （在 ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台上不受支持。）|0x00030000|`_PC_24`（24 位）<br /><br /> `_PC_53`（53 位）<br /><br /> `_PC_64`（64 位）|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_control87`, `_controlfp`, `_control87_2`|\<float.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -218,7 +202,7 @@ Default:  0x0001
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [_clear87、_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
  [_status87、_statusfp、_statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   

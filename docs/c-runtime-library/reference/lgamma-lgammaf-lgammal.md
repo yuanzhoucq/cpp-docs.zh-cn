@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: afc048d131bd75a9645c045b3bceae90344c07eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4bd91c4dd26582e98f4a6ee9f92ad0293c460433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 确定指定值的伽玛函数绝对值的自然对数。  
@@ -91,23 +92,23 @@ long double lgammal(
 |`x`= 负整数|+INFINITY|  
 |±INFINITY|+INFINITY|  
 |极点错误|+ HUGE_VAL、+ HUGE_VALF，或 + HUGE_VALL|  
-|溢出范围错误|±HUGE_VAL、±HUGE_VALF 或 ±HUGE_VALL|  
+|溢出范围错误|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|  
   
- 按 [_matherr](../../c-runtime-library/reference/matherr.md) 中指定的内容报告错误。  
+ 按 [_matherr](../../c-runtime-library/reference/matherr.md) 中所指定的报告错误。  
   
 ## <a name="remarks"></a>备注  
  由于 C++ 支持重载，可以调用 `lgamma` 重载，以采用并返回浮点型和长双精度型值 。 在 C 程序中，`lgamma` 始终采用并返回双精度型值。  
   
  如果 x 是有理数，则此函数返回 (`x`-1) 的阶乘的对数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|C 标头|C++ 标头|  
 |--------------|--------------|------------------|  
 |`lgamma`,                `lgammaf`,  `lgammal`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [tgamma、tgammaf、tgammal](../../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bcc9926974f9a61e951c15bca9af168eadab435
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9571ad4ba928c208c6c028f6e30cf7c27c196d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 类
 此类提供方法通知控件属性更改有关的容器的接收器。  
@@ -56,7 +57,7 @@ class CFirePropNotifyEvent
   
  有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlctl.h  
   
 ##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
@@ -99,5 +100,5 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>备注  
  此函数可安全地调用即使你的控件不支持连接点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

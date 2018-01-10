@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6d679d634d14f3a762a6ef3d32d2ca4c5d4b6f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
 确定一个字符是否为多字节字符的前导字节。  
@@ -82,16 +83,16 @@ int _isleadbyte_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istleadbyte`|始终返回 false|**_** `isleadbyte`|始终返回 false|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`isleadbyte`|\<ctype.h>|  
-|`_isleadbyte_l`|\<ctype.h 1>|  
+|`_isleadbyte_l`|\<ctype.h>|  
   
  有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

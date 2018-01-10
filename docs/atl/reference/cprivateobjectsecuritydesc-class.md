@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 310ccd778a0d681afad40b7dd67067c9e9af875d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 此类表示私有对象安全描述符对象。  
@@ -71,7 +72,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
  `CPrivateObjectSecurityDesc`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
 ##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
@@ -257,7 +258,7 @@ bool Set(
 ### <a name="remarks"></a>备注  
  第二种方法，这允许指定对象的对象类型 GUID 或控制如何继承 Ace，仅适用于运行 Windows 2000 的系统及更高版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)   

@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.macros
-dev_langs:
-- C++
+f1_keywords: vc.mfc.macros
+dev_langs: C++
 helpviewer_keywords:
 - MFC, global functions and variables
 - MFC, macros
@@ -22,16 +19,16 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 71011177634e92b22cce1bc88a2ee711ad9537ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 宏和全局函数
 Microsoft 基础类库可以分成两个主要部分: （1） 的 MFC 类和 （2） 宏和全局函数。 如果函数或变量不是类的成员，则全局函数或变量。  
@@ -138,9 +135,8 @@ Microsoft 基础类库可以分成两个主要部分: （1） 的 MFC 类和 （
 > [!NOTE]
 >  许多全局函数以前缀"Afx"开头，但一些，例如，对话框数据交换 (DDX) 函数和许多数据库函数，不遵循此约定。 所有全局变量开头"afx"作为前缀。 宏不会启动与任何特定的前缀，但它们用大写字母编写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../mfc/class-library-overview.md)
-
 
 
 

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d43daef2095fb63bd79644c940627754e00e199b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54f2b910062038901578389a9c0a7ab8a2647f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-types"></a>函数类型
 基本上，有两种类型的函数。 需要的堆栈帧的函数称为帧函数。 Leaf 函数调用函数，不需要的堆栈帧。  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  Leaf 函数是指不需要函数表项。 它不能对任何非易失性寄存器，包括 RSP，这意味着它不能调用任何函数或分配堆栈空间进行更改。 它允许它执行的同时保留堆栈对齐。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [堆栈使用](../build/stack-usage.md)

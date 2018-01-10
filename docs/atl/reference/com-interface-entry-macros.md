@@ -28,11 +28,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 281829593087a936f201000faaa42f698344d3b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76352cf2015661bc970b2987b9794f3bf023cc15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 宏  
  这些宏在以便其可以访问通过其 COM 映射到输入对象的接口`QueryInterface`。 COM 映射中的项的顺序有顺序接口将检查匹配**IID**期间`QueryInterface`。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|与相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，只不过对的调用中查询任何 IID 结果`func`。|  
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|返回**E_NOINTERFACE**并终止 COM 映射处理时为查询指定的接口。|  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlcom.h
 
 ## <a name="com_interface_entry"></a>COM_INTERFACE_ENTRY
@@ -81,7 +82,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
-### <a name="requirements"></a>要求
+### <a name="requirements"></a>惠?
 **标头：** atlcom.h
   
 ##  <a name="com_interface_entry2"></a>COM_INTERFACE_ENTRY2  
@@ -306,7 +307,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
   
  [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
   
- 请注意，COM 映射中的第一个输入必须是包含 COM 映射的对象上的接口。 因此，无法启动与你 COM 映射项`COM_INTERFACE_ENTRY_CHAIN`，这将导致产生不同的对象要搜索的点处的 COM 映射其中**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)**将显示在对象的 COM 映射。 如果你想要搜索的另一个对象的 COM 映射首先，添加为一个接口条目**IUnknown**到 COM 图中，然后链接其他对象的 COM 映射。 例如:   
+ 请注意，COM 映射中的第一个输入必须是包含 COM 映射的对象上的接口。 因此，无法启动与你 COM 映射项`COM_INTERFACE_ENTRY_CHAIN`，这将导致产生不同的对象要搜索的点处的 COM 映射其中**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)**将显示在对象的 COM 映射。 如果你想要搜索的另一个对象的 COM 映射首先，添加为一个接口条目**IUnknown**到 COM 图中，然后链接其他对象的 COM 映射。 例如:  
   
  [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
   

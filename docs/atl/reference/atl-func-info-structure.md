@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb7f467d6491f58337177e8f16a580d28cb63e78
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1bbff1fa040454fc8288053938bb439d505b461
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 结构
 包含用于描述在调度接口上的方法或属性的类型信息。  
@@ -65,10 +66,10 @@ struct _ATL_FUNC_INFO {
   
  [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构](../../atl/reference/atl-structures.md)   
  [IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)   
  [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)

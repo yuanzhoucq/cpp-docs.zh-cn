@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a49c732be3c1f378340d00c414acee91e6e62978
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 用于针对指定的键执行线性搜索。 这是一个 [_lfind](../../c-runtime-library/reference/lfind.md) 版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增强功能。  
@@ -89,21 +90,21 @@ void *_lfind_s(
 |---------|----------|-------------|---------|----------|-----------|  
 |`NULL`|任何|任何|任何|任何|`EINVAL`|  
 |任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|any|零|`EINVAL`|  
-|any|任何|`NULL`|一个|任何|`EINVAL`|  
+|任何|任何|任何|任何|零|`EINVAL`|  
+|任何|任何|`NULL`|一个|任何|`EINVAL`|  
   
 ## <a name="remarks"></a>备注  
  `_lfind_s` 函数对 `num` 元素的数组中的值 `key` 执行线性搜索，每个元素为 `width` 字节。 与 `bsearch_s` 不同，`_lfind_s` 不要求对数组进行排序。 参数 `base` 是指向待搜索数组基项的指针。 参数 `compare` 是指向用户提供的例程的指针，它比较两个数组元素，然后返回指定它们关系的值。 `_lfind_s` 在搜索过程中调用一次或多次 `compare` 例程，将 `context` 指针和多个指针传递给每个调用上的两个数组元素。 `compare` 例程必须比较这些元素，然后返回非零值（表示元素不同）或 0（表示元素相同）。  
   
  `_lfind_s` 类似于 `_lfind`，除了添加指向比较函数的参数和函数参数列表的 `context` 指针。 如果搜索的数据结构是对象的一部分，且 `compare` 函数需要访问该对象的成员，则 `context` 指针可能有用。 `compare` 函数可能会将 void 指针转换为适当的对象类型并访问该对象的成员。 添加 `context` 参数将使 `_lfind_s` 更安全，因为其他上下文可用于避免使用静态变量以使数据对 `compare` 函数可用与重新进入 Bug 相关联。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_lfind_s`|\<search.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -185,7 +186,7 @@ int main( )
 weit found  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [搜索和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
  [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   

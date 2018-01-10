@@ -20,11 +20,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32a9502bbb1143e23ee542c1d9fff593925c527a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>强名称程序集（程序集签名）(C++/CLI)
 本主题讨论如何可以对程序集，通常被称为对程序集赋予强名称签名。  
@@ -54,5 +57,5 @@ ms.lasthandoff: 10/24/2017
   
  有关强的程序集的详细信息，请参阅[创建和使用具有强名称程序集](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

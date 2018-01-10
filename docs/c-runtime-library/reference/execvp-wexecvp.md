@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,38 +27,23 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d4d9ab6b20dbc6fcfec849f2ba583483f0a9fb55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 38ab921dc120fc82e05845c62dcc355167ad09c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execvp-wexecvp"></a>_execvp，_wexecvp
 加载和执行新的子进程。  
@@ -90,7 +74,7 @@ intptr_t _wexecvp(
 ## <a name="return-value"></a>返回值  
  如果成功，这些函数不返回到调用进程。 返回值-1 指示错误，在这种情况下`errno`设置全局变量。  
   
-|`errno` 值|说明|  
+|`errno` 值|描述|  
 |-------------------|-----------------|  
 |`E2BIG`|自变量和环境设置所需的空间超过 32 KB。|  
 |`EACCES`|指定的文件具有锁定或共享冲突。|  
@@ -100,26 +84,26 @@ intptr_t _wexecvp(
 |`ENOEXEC`|指定的文件不是可执行文件或者有无效的可执行文件格式。|  
 |`ENOMEM`|没有足够的内存可用于执行更新进程；可用内存损坏；或存在无效的块，指示调用进程未正确分配。|  
   
- 有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
  这些函数中的每个函数都将加载并执行一个新进程，并传递指向命令行参数的指针数组并使用 `PATH` 环境变量查找要执行的文件。  
   
  `_execvp` 函数将验证其参数。 如果 `cmdname` 为空指针，或如果 `argv` 为空指针、指向一个空数组的指针，或者如果数组包含一个空字符串作为第一个实参，则这些函数调用无效的形参处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。 不启动任何进程。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|---------------------|  
 |`_execvp`|\<process.h>|\<errno.h>|  
 |`_wexecvp`|\<process.h> 或 \<wchar.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  请参阅 [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)中的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   

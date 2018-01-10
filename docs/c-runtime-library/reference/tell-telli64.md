@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5609e3e192ab01be6acd7bbdb495b7e58fd3acf2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c65ed3f0829370c0fe7a9f9e6a12a57688a5ca1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tell-telli64"></a>_tell、_telli64
 获取文件指针的位置。  
@@ -87,14 +71,14 @@ __int64 _telli64(
   
  返回值-1l 指示错误。 如果 `handle` 是无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将 `errno` 设置为 `EBADF` 并返回 -1L。  
   
- 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
   
 ## <a name="remarks"></a>备注  
  `_tell` 函数获取与 `handle` 参数关联的文件指针（如果有）的当前位置。 位置将表示为自文件开头起的字节数。 对于 `_telli64` 函数，此值表示为一个 64 位整数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_tell`, `_telli64`|\<io.h>|  
   
@@ -146,7 +130,7 @@ Line two.
 Current file position is: 20  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [ftell、_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
  [_lseek、_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)

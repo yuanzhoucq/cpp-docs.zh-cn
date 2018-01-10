@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a71f69f141e92e7134d6048de67301198a667c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7421ef51c37e3724bdb986321581e6736a62e18b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="precedence-in-macro-definitions"></a>宏定义中的优先级
 如果宏具有多个定义，NMAKE 使用优先级最高的定义。 以下列表显示优先级从高到最低的顺序：  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  使用 /E 会导致从环境变量重写一个同名的生成文件宏继承的宏。 使用**！UNDEF**重写命令行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [定义 NMAKE 宏](../build/defining-an-nmake-macro.md)

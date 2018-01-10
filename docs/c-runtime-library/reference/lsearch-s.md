@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lsearch_s
+apiname: _lsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -37,30 +34,16 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4969a12a821040c007a43248dc15927ee9f6ab40
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 对值执行线性搜索。 [_lsearch](../../c-runtime-library/reference/lsearch.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -100,7 +83,7 @@ void *_lsearch_s(
 ## <a name="return-value"></a>返回值  
  如果找到 `key`，则 `_lsearch_s` 返回指向 `base` 处的与 `key` 匹配的数组元素的指针。 如果未找到 `key`，则 `_lsearch_s` 返回指向数组末尾处的新添加项的指针。  
   
- 如果传递给此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如果传递到此函数的参数无效，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则将 `errno` 设置为 `EINVAL` 并且该函数将返回 `NULL`。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ### <a name="error-conditions"></a>错误条件  
   
@@ -108,8 +91,8 @@ void *_lsearch_s(
 |-----------|------------|---------------|-----------|------------|-------------|  
 |`NULL`|任何|任何|任何|任何|`EINVAL`|  
 |任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|any|零|`EINVAL`|  
-|any|任何|`NULL`|一个|任何|`EINVAL`|  
+|任何|任何|任何|任何|零|`EINVAL`|  
+|任何|任何|`NULL`|一个|任何|`EINVAL`|  
   
 ## <a name="remarks"></a>备注  
  `_lsearch_s` 函数对 `num` 元素的数组中的值 `key` 执行线性搜索，每个元素为 `width` 字节。 与 `bsearch_s` 不同的是，`_lsearch_s` 不要求对数组进行排序。 如果未找到 `key`，则 `_lsearch_s` 将其添加到数组末尾并增加 `num`。  
@@ -118,15 +101,15 @@ void *_lsearch_s(
   
  如果搜索的数据结构是对象的一部分，且 `compare` 函数需要访问该对象的成员，则 `context` 指针可能有用。 例如，`compare` 函数中的代码可将 void 指针转换为适当的对象类型并访问该对象的成员。 添加 `context` 指针将使 `_lsearch_s` 更安全，因为其他上下文可用于避免重新进入 Bug 与使用静态变量以使数据对 `compare` 函数可用相关联。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_lsearch_s`|\<search.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [搜索和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
  [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   

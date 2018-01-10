@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58c342e5e9081d393cdea30e0d668c16f4d81424
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99d1bae16c79d5714cf7ca6488853b9c5d2a6d21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dependents"></a>依赖项
 在依赖项行中，指定零个或多个依赖项之后的冒号 （:） 或双冒号 （:），使用任何有效的文件名或[伪目标](../build/pseudotargets.md)。 用一个或多个空格或制表符分隔多个依赖项。 依赖项不区分大小写。 路径被允许对文件名。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
   
  [依赖项的搜索路径](../build/search-paths-for-dependents.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [描述块](../build/description-blocks.md)

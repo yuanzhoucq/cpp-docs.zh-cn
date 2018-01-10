@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf777c89c78ab844b61138c30a5a9a25ca6b91d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6093db4ac8e0c88dfe6e4b5a5463e5ee8d24349
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-paths-for-dependents"></a>依赖项的搜索路径
 每个依赖项有一个可选的搜索路径，指定，如下所示：  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  NMAKE 中寻找的依赖项首先在当前目录中，然后在指定的顺序的目录。 宏可以指定部分或全部的搜索路径。 将目录名称括在大括号 （{}）;使用分号 （;） 分隔多个目录。 不允许任何空格或制表符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [依赖项](../build/dependents.md)

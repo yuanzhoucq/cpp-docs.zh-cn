@@ -1,64 +1,65 @@
 ---
-title: "相互导入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AFXEXT 预处理器符号"
-  - "AFX_DATA"
-  - "AFX_EXT_CLASS 宏"
-  - "循环导入"
-  - "DLL [C++], 导入"
-  - "可执行文件 [C++], 导入"
-  - "导出 DLL [C++], 相互导入"
-  - "扩展 DLL [C++], 相互导入"
-  - "导入 DLL [C++], 相互导入"
-  - "DLL 相互导入 [C++]"
-  - "相互导入可执行文件 [C++]"
+title: "相互导入 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- mutual DLL imports [C++]
+- AFX_DATA
+- importing DLLs [C++], mutual imports
+- mutually importing executable files [C++]
+- AFX_EXT_CLASS macro
+- circular imports
+- _AFXEXT preprocessor symbol
+- DLLs [C++], importing
+- executable files [C++], importing
+- extension DLLs [C++], mutual imports
+- exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 相互导入
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-当导入是相互的（或循环）时，导出或导入到另一个可执行文件比较复杂。  例如，两个 DLL 相互导入符号，类似于相互递归函数。  
+# <a name="mutual-imports"></a>相互导入
+当导入是相互 （或循环） 时，导出或导入到另一个可执行文件比较复杂。 例如，两个 Dll 导入相互，类似于相互递归函数的符号。  
   
- 相互导入可执行文件（通常是 DLL）的问题是：两个文件中若不先生成一个，就无法生成另一个。  每个生成过程都需要由其他生成过程产生的导入库作为输入。  
+ 相互导入可执行文件 (通常是 Dll) 的问题是都可以生成而不生成其他第一个。 作为输入，每个生成过程需要由其他生成过程产生的导入库。  
   
- 解决方案是使用带 \/DEF 选项的 LIB 实用工具，这将产生导入库但不生成可执行文件。  使用此实用工具可以生成需要的所有导入库，而不论涉及多少 DLL 或依赖项有多复杂。  
+ 解决方案是使用带 /DEF 选项，而不生成可执行文件生成导入库 LIB 实用工具。 使用此实用工具，可以生成你需要的所有导入库涉及无论多少 Dll 或有多复杂依赖关系。  
   
- 处理相互导入的一般解决方案是：  
+ 用于处理相互导入常规解决方法是：  
   
-1.  轮流采用每个 DLL。（可以使用任何顺序，但某些顺序的性能更优化。）如果所有需要的导入库都存在并且都是当前库，则运行 LINK 生成可执行文件 \(DLL\)。  这将产生导入库。  否则，运行 LIB 产生导入库。  
+1.  反过来需要每个 DLL。 （任意顺序是可行的但某些顺序更优。）如果所有所需的导入库存在，并且是最新，运行 LINK 生成的可执行文件 (DLL)。 这将生成导入库。 否则，运行 LIB 生成导入库。  
   
-     运行带 \/DEF 选项的 LIB 生成带 .EXP 扩展名的附加文件。  以后必须使用 .EXP 文件生成可执行文件。  
+     运行 LIB 带 /DEF 选项，将生成具有的其他文件。EXP 扩展。 。EXP 文件必须在稍后用于生成可执行文件。  
   
-2.  使用 LINK 或 LIB 生成了所有导入库后，返回并运行 LINK 以生成上一步中未生成的任何可执行文件。  请注意，必须在 LINK 行上指定相应的 .exp 文件。  
+2.  之后使用链接或 LIB 生成所有导入库，请返回并运行 LINK 生成上一步中没有生成任何可执行文件。 请注意，必须在链接行上指定相应的.exp 文件。  
   
-     如果以前运行了 LIB 实用工具为 DLL1 产生导入库，则 LIB 应该还产生了 DLL1.exp 文件。  生成 DLL1.dll 时，必须使用 DLL1.exp 作为 LINK 的输入。  
+     如果你具有运行 LIB 实用工具前面为 DLL1 生成导入库，LIB 将会产生文件 DLL1.exp 以及。 生成 DLL1.dlll 时，你必须使用 DLL1.exp 作为链接的输入。  
   
- 下面的示例演示如何对两个 DLL（DLL1 和 DLL2）进行互相导入。  步骤 1 在 DLL1 上运行带 \/DEF 选项的 LIB。  步骤 1 产生 DLL1.lib（导入库）和 DLL1.exp。  在步骤 2 中，使用导入库生成 DLL2，DLL2 反过来为 DLL2 的符号产生导入库。  步骤 3 通过使用 DLL1.exp 和 DLL2.lib 作为输入来生成 DLL1。  请注意，DLL2 的 .exp 文件不是必需的，因为 LIB 未用于生成 DLL2 的导入库。  
+ 下图显示了两个相互导入 Dll、 DLL1 和 DLL2 的解决方案。 步骤 1 是运行 LIB，与上 DLL1 的 /DEF 选项集。 步骤 1 生成 DLL1.lib、 导入库和 DLL1.exp。在步骤 2 中，导入库用于生成 DLL2，反过来生成导入库 DLL2 的符号。 步骤 3 生成 DLL1，通过使用 DLL1.exp 和 DLL2.lib 作为输入。 请注意，DLL2 了.exp 文件是不必要因为 LIB 未用于生成 DLL2 的导入库。  
   
- ![通过相互导入链接两个 DLL](../build/media/vc37yj1.png "vc37YJ1")  
+ ![使用相互导入链接两个 Dll](../build/media/vc37yj1.gif "vc37YJ1")  
 用相互导入链接两个 DLL  
   
-## \_AFXEXT 的限制  
- 只要不具有多层扩展 DLL，就可以对扩展 DLL 使用 `_AFXEXT` 预处理器符号。  如果所具有的扩展 DLL 调用或派生自您自己的扩展 DLL 中的类，而您自己的扩展 DLL 又派生自 MFC 类，则必须使用您自己的预处理器符号以避免多义性。  
+## <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
+ 你可以使用`_AFXEXT`MFC 扩展 Dll，只要你没有 MFC 扩展 Dll 的多个层的预处理器符号。 如果你有 MFC 扩展 Dll 可调用或派生自中你自己的 MFC 扩展 Dll，后者又派生自 MFC 类，类必须使用你自己的预处理器符号以避免多义性。  
   
- 问题是，在 Win32 中，必须将任何要从 DLL 导出的数据显式声明为 **\_\_declspec\(dllexport\)**，将任何要从 DLL 导入的数据显式声明为 **\_\_declspec\(dllimport\)**。  当您定义 `_AFXEXT` 时，MFC 头文件确定 **AFX\_EXT\_CLASS** 的定义是正确的。  
+ 问题在于该在 Win32，所以必须显式声明为任何数据**__declspec （dllexport)**如果它是从 DLL，导出和**__declspec （dllimport)**是否要从 DLL 导入它。 在定义`_AFXEXT`，MFC 标头确保**AFX_EXT_CLASS**正确定义。  
   
- 当具有多层时，一个符号（如 **AFX\_EXT\_CLASS**）是不够的，因为扩展 DLL 除了从另一个扩展 DLL 导入其他类外，还可能导出新类。  若要解决此问题，请使用一个特殊的预处理器符号来指示是生成 DLL 本身还是使用 DLL。  例如，假设有两个扩展 DLL：A.dll 和 B.dll。  它们分别在 A.h 和 B.h 中导出一些类。  B.dll 使用 A.dll 中的类。  头文件看上去像下面这样：  
+ 如果你具有多个层、 一个符号如**AFX_EXT_CLASS**是不够的因为 MFC 扩展 DLL 可能会导出新类，以及从另一个 MFC 扩展 DLL 导入其他类。 若要解决此问题，请使用特殊的预处理器符号，该值指示要生成 DLL 本身还是使用该 DLL。 例如，假设两个 MFC 扩展 Dll、 A.dll 和 B.dll。 每个分别导出 A.h 和 B.h 中的某些类。 B.dll 使用 A.dll 类。 标头文件将如下所示：  
   
 ```  
 /* A.H */  
@@ -83,14 +84,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- 生成 A.dll 时，它是用 `/D A_IMPL` 生成的；而生成 B.dll 时，则是用 `/D B_IMPL` 生成的。  通过对每个 DLL 使用不同的符号，在生成 B.dll 时导出 `CExampleB` 而导入 `CExampleA`。  在生成 A.dll 时导出 `CExampleA`，而当它由 B.dll（或某些其他客户端）使用时则被导入。  
+ A.dll 生成时，它用生成`/D A_IMPL`和 B.dll 生成时，它用生成`/D B_IMPL`。 每个 DLL，使用单独的符号`CExampleB`导出和`CExampleA`时生成 B.dll，导入。 `CExampleA`导出时生成 A.dll 和导入由 B.dll （或某些其他客户端）。  
   
- 当使用内置 **AFX\_EXT\_CLASS** 和 `_AFXEXT` 预处理器符号时，是无法完成这种分层的。  上面描述的技术解决此问题的方式与 MFC 本身在生成其 Active 技术、数据库和网络扩展 DLL 时所使用的机制不同。  
+ 使用内置时，无法完成这种类型的分层**AFX_EXT_CLASS**和`_AFXEXT`预处理器符号。 上面所述的技术可解决此问题的机制 MFC 本身使用其 Active 技术、 数据库和网络 MFC 扩展 Dll 进行生成时的方式与在。  
   
-## 不导出整个类  
- 当不导出整个类时，需确保正确导出由 MFC 宏创建的必要数据项。  这可以通过将 `AFX_DATA` 重定义为特定类的宏来完成。  每当不导出整个类的时候，就应进行此操作。  
+## <a name="not-exporting-the-entire-class"></a>不会导出整个类  
+ 当不导出整个类时，你必须确保正确导出由 MFC 宏创建的必需数据项目。 这可以通过重新定义完成`AFX_DATA`对特定类的宏。 每当不导出整个类的时候，你应进行此操作。  
   
- 例如：  
+ 例如:  
   
 ```  
 /* A.H */  
@@ -114,25 +115,25 @@ class CExampleA : public CObject
 #define AFX_DATA  
 ```  
   
-### 你希望做什么？  
+### <a name="what-do-you-want-to-do"></a>你希望做什么？  
   
 -   [从 DLL 导出](../build/exporting-from-a-dll.md)  
   
--   [使用 .DEF 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)  
+-   [从 DLL 使用导出。DEF 文件](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [使用 \_\_declspec\(dllexport\) 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [使用 __declspec （dllexport） 从 DLL 导出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [使用 AFX\_EXT\_CLASS 导出和导入](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [导出和导入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [导出 C\+\+ 函数以用于 C 语言可执行文件](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [导出 C 语言可执行文件中使用的 c + + 函数](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
 -   [确定要使用的导出方法](../build/determining-which-exporting-method-to-use.md)  
   
--   [使用 \_\_declspec\(dllimport\) 导入到应用程序中](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [导入使用 __declspec （dllimport） 的应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
-### 您想进一步了解什么？  
+### <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
--   [LIB 实用工具和 \/DEF 选项](../build/reference/lib-reference.md)  
+-   [LIB 实用工具和 /DEF 选项](../build/reference/lib-reference.md)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [导入和导出](../build/importing-and-exporting.md)

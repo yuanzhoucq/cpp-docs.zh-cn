@@ -47,11 +47,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25207b525ec1c5e4c19d114281a0daff2d38ea1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 确定整数是否表示字母数字字符。  
@@ -96,18 +97,18 @@ int _iswalnum_l(
 |`_istalnum`|`isalnum`|[_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
 |`_istalnum_l`|`_isalnum_l`|`_ismbcalnum_l`|`_iswalnum_l`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`isalnum`|\<ctype.h 1>|  
 |`iswalnum`|\<ctype.h 1> 或 \<wchar.h 1>|  
-|`_isalnum_l`|\<ctype.h 1>|  
+|`_isalnum_l`|\<ctype.h>|  
 |`_iswalnum_l`|\<ctype.h 1> 或 \<wchar.h 1>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [is、isw 例程](../../c-runtime-library/is-isw-routines.md)

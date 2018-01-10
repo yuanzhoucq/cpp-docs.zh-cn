@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08f597a160b3447743646c4cccfc2e05485a47b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：创建和使用 unique_ptr 实例
 A [unique_ptr](../standard-library/unique-ptr-class.md)不共享它的指针。 无法将复制到另一个`unique_ptr`、 按值传递给函数，或需要副本进行任何 c + + 标准库算法中使用。 只能移动 `unique_ptr`。 这意味着，内存资源所有权将转移到另一 `unique_ptr`，并且原始 `unique_ptr` 不再拥有此资源。 我们建议你将对象限制为由一个所有者所有，因为多个所有权会使程序逻辑变得复杂。 因此，您需要为普通的 c + + 对象的智能指针，则使用`unique_ptr`，而当构造`unique_ptr`，使用[make_unique](../standard-library/memory-functions.md#make_unique)帮助器函数。  
@@ -54,6 +55,6 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)不共享它的指针。 
   
  有关更多示例，请参阅[make_unique](../standard-library/memory-functions.md#make_unique)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [智能指针](../cpp/smart-pointers-modern-cpp.md)   
  [make_unique](../standard-library/memory-functions.md#make_unique)

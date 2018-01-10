@@ -4,76 +4,59 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatch
-- No header/ATL::IAxWinAmbientDispatch
-- No header/ATL::get_AllowContextMenu
-- No header/ATL::get_AllowShowUI
-- No header/ATL::get_AllowWindowlessActivation
-- No header/ATL::get_BackColor
-- No header/ATL::get_DisplayAsDefault
-- No header/ATL::get_DocHostDoubleClickFlags
-- No header/ATL::get_DocHostFlags
-- No header/ATL::get_Font
-- No header/ATL::get_ForeColor
-- No header/ATL::get_LocaleID
-- No header/ATL::get_MessageReflect
-- No header/ATL::get_OptionKeyPath
-- No header/ATL::get_ShowGrabHandles
-- No header/ATL::get_ShowHatching
-- No header/ATL::get_UserMode
-- No header/ATL::put_AllowContextMenu
-- No header/ATL::put_AllowShowUI
-- No header/ATL::put_AllowWindowlessActivation
-- No header/ATL::put_BackColor
-- No header/ATL::put_DisplayAsDefault
-- No header/ATL::put_DocHostDoubleClickFlags
-- No header/ATL::put_DocHostFlags
-- No header/ATL::put_Font
-- No header/ATL::put_ForeColor
-- No header/ATL::put_LocaleID
-- No header/ATL::put_MessageReflect
-- No header/ATL::put_OptionKeyPath
-- No header/ATL::put_UserMode
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinAmbientDispatch interface
+- ATLIFACE/ATL::IAxWinAmbientDispatch
+- ATLIFACE/ATL::get_AllowContextMenu
+- ATLIFACE/ATL::get_AllowShowUI
+- ATLIFACE/ATL::get_AllowWindowlessActivation
+- ATLIFACE/ATL::get_BackColor
+- ATLIFACE/ATL::get_DisplayAsDefault
+- ATLIFACE/ATL::get_DocHostDoubleClickFlags
+- ATLIFACE/ATL::get_DocHostFlags
+- ATLIFACE/ATL::get_Font
+- ATLIFACE/ATL::get_ForeColor
+- ATLIFACE/ATL::get_LocaleID
+- ATLIFACE/ATL::get_MessageReflect
+- ATLIFACE/ATL::get_OptionKeyPath
+- ATLIFACE/ATL::get_ShowGrabHandles
+- ATLIFACE/ATL::get_ShowHatching
+- ATLIFACE/ATL::get_UserMode
+- ATLIFACE/ATL::put_AllowContextMenu
+- ATLIFACE/ATL::put_AllowShowUI
+- ATLIFACE/ATL::put_AllowWindowlessActivation
+- ATLIFACE/ATL::put_BackColor
+- ATLIFACE/ATL::put_DisplayAsDefault
+- ATLIFACE/ATL::put_DocHostDoubleClickFlags
+- ATLIFACE/ATL::put_DocHostFlags
+- ATLIFACE/ATL::put_Font
+- ATLIFACE/ATL::put_ForeColor
+- ATLIFACE/ATL::put_LocaleID
+- ATLIFACE/ATL::put_MessageReflect
+- ATLIFACE/ATL::put_OptionKeyPath
+- ATLIFACE/ATL::put_UserMode
+dev_langs: C++
+helpviewer_keywords: IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 3dd34ffec68e4503aebe7b8d0e72ec1f711dca03
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e9d53dc257920e40dbf6a2f360d1289676d121fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 接口
 此接口提供用于指定特征的承载的控件或容器的方法。  
   
 > [!IMPORTANT]
->  该类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -125,7 +108,7 @@ interface IAxWinAmbientDispatch : IDispatch
   
  请参阅[承载 ActiveX 控件使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)有关详细信息。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  此接口的定义可用于多种形式下, 表中所示。  
   
 |定义类型|文件|  
@@ -606,12 +589,11 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ### <a name="remarks"></a>备注  
  ATL 主机对象实现使用`VARIANT_TRUE`作为此属性的默认值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IAxWinAmbientDispatchEx 接口](../../atl/reference/iaxwinambientdispatchex-interface.md)   
  [IAxWinHostWindow 接口](../../atl/reference/iaxwinhostwindow-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

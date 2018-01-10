@@ -1,54 +1,55 @@
 ---
-title: "动态链接到 MFC 的规则 DLL 的模块状态 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], 模块状态"
-  - "MFC DLL [C++], 规则 DLL"
-  - "模块状态 [C++]"
-  - "模块状态 [C++], 规则 DLL 动态链接到"
-  - "规则 DLL [C++], 动态链接到 MFC"
+title: "动态链接到 MFC 的规则的 MFC DLL 的模块状态 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular MFC DLLs [C++], dynamically linked to MFC
+- module states [C++]
+- MFC DLLs [C++], regular MFC DLLs
+- module states [C++], regular MFC DLLs dynamically linked to
+- DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b88f895255c698f04b6988e63b8b75372fa59b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 动态链接到 MFC 的规则 DLL 的模块状态
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果能够将规则 DLL 动态链接到 MFC DLL，就可以进行一些非常复杂的配置。  例如，规则 DLL 和使用它的可执行文件可同时动态链接到 MFC DLL 和任何扩展 DLL。  
+# <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>动态链接到 MFC 的规则的 MFC DLL 的模块状态
+若要动态链接到 MFC DLL 的正则表达式 MFC DLL 的能力使非常复杂的某些配置。 例如，正则 MFC DLL 并使用它的可执行文件可以同时动态链接到 MFC DLL 和任何 MFC 扩展 Dll。  
   
- 此配置会引起一个与 MFC 全局数据（如指向当前 `CWinApp` 对象的指针以及句柄映射）有关的问题。  
+ 此配置会引起问题方面的 MFC 全局数据，如当前指向的指针`CWinApp`对象以及句柄映射。  
   
- 在 MFC 4.0 版之前，此全局数据驻留在 MFC DLL 本身中并由进程中的所有模块共享。  由于每个使用 Win32 DLL 的进程均获取自己的 DLL 数据副本，因此，本方案提供了一种简单的方法来跟踪每个进程的数据。  此外，由于 AFXDLL 模型假定进程中只有一个 `CWinApp` 对象并且仅有一组句柄映射，因此可以在 MFC DLL 本身中跟踪这些项。  
+ MFC 4.0 版之前此全局数据驻留在 MFC DLL 本身，并且在进程中共享的所有模块。 使用 Win32 DLL 的每个进程获取其自己的 DLL 的数据副本，因为此方案提供跟踪每个进程的数据的简单办法。 此外，因为 AFXDLL 模型假定，将有一个`CWinApp`对象和只有一组处理过程中的地图，这些项无法在 MFC DLL 本身中进行跟踪。  
   
- 但具有了将规则 DLL 动态链接到 MFC DLL 的能力后，现在一个进程中可以有两个或更多的 `CWinApp` 对象，以及两组或更多组句柄映射。  这时 MFC 如何跟踪它应使用的对象和句柄映射呢？  
+ 但它具有动态链接到 MFC DLL 的正则 MFC DLL 的功能，它是现在可能有两个或多`CWinApp`对象进程中的 — 和的句柄映射还两个或多个集。 如何未 MFC 跟踪的它应使用哪些功能？  
   
- 解决方案是赋予每个模块（应用程序或规则 DLL）自己的此全局状态信息副本。  这样，对规则 DLL 中 **AfxGetApp** 的调用所返回的指针指向的将是 DLL 中的 `CWinApp` 对象，而不是可执行文件中的该对象。  此 MFC 全局数据的每个模块的副本都称作“模块状态”，详见 [MFC 技术说明 58](../mfc/tn058-mfc-module-state-implementation.md) 中的描述。  
+ 解决方案是为每个模块 （应用程序或常规 MFC DLL） 提供其自己的此全局状态信息副本。 因此，调用**AfxGetApp**常规 MFC DLL 返回一个指向`CWinApp`在 DLL 中，不是可执行文件中的对象。 MFC 全局数据的此每个模块的副本称为模块状态和中所述[MFC 技术说明 58](../mfc/tn058-mfc-module-state-implementation.md)。  
   
- MFC 的通用窗口过程会自动切换到正确的模块状态，因此您无需担心在规则 DLL 中实现的任何消息处理程序中的模块状态。  但当可执行文件调用到规则 DLL 中时，确实需要将当前模块状态显式设置为 DLL 的模块状态。  为此，请在从 DLL 导出的每个函数中使用 **AFX\_MANAGE\_STATE** 宏。  为此，需将下列代码行添加到从 DLL 导出的函数的开始处：  
+ MFC 通用窗口过程会自动切换到正确的模块的状态，因此不需要担心常规 MFC DLL 中实现任何消息处理程序。 但当你可执行文件调用到常规的 MFC DLL 时，需要将当前模块状态显式设置为 DLL 的一个。 若要执行此操作，使用**AFX_MANAGE_STATE**从 DLL 导出的每个函数中的宏。 这可通过将以下代码行添加到从 DLL 导出的函数的开头：  
   
 ```  
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))  
 ```  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
 -   [管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
--   [动态链接到 MFC 的规则 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [动态链接到 MFC 的规则 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [扩展 DLL](../build/extension-dlls-overview.md)  
+-   [MFC 扩展 DLL](../build/extension-dlls-overview.md)  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

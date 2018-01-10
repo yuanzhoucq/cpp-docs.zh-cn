@@ -9,13 +9,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
-- No header/ATL::IAxWinHostWindow
-- No header/ATL::AttachControl
-- No header/ATL::CreateControl
-- No header/ATL::CreateControlEx
-- No header/ATL::QueryControl
-- No header/ATL::SetExternalDispatch
-- No header/ATL::SetExternalUIHandler
+- ATLIFACE/ATL::IAxWinHostWindow
+- ATLIFACE/ATL::AttachControl
+- ATLIFACE/ATL::CreateControl
+- ATLIFACE/ATL::CreateControlEx
+- ATLIFACE/ATL::QueryControl
+- ATLIFACE/ATL::SetExternalDispatch
+- ATLIFACE/ATL::SetExternalUIHandler
 dev_langs: C++
 helpviewer_keywords: IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28fdc1a3a26fc2bb6117c345da3588ff0d2de193
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 接口
 此接口提供用于操作控件和其主机对象的方法。  
@@ -57,7 +58,7 @@ interface IAxWinHostWindow : IUnknown
 ## <a name="remarks"></a>备注  
  此接口公开的 ATL 的 ActiveX 控件承载对象。 对此接口可创建和/或将一个控件附加到该主机对象，接口获得托管的控件，或设置外部的调度接口或 UI 处理程序使用托管 Web 浏览器时调用的方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  此接口的定义是 IDL 或 c + +，可用的如下所示。  
   
 |定义类型|文件|  
@@ -202,7 +203,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="remarks"></a>备注  
  此函数可供查询主机的站点的控件 （如 Web 浏览器控件）`IDocHostUIHandlerDispatch`接口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

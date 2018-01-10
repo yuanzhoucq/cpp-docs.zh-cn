@@ -43,11 +43,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 检查多字节字符是大写还是小写。  
@@ -89,25 +90,25 @@ int _ismbcupper_l(
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-|例程|测试条件|代码页 932 示例|  
+|例程所返回的值|测试条件|代码页 932 示例|  
 |-------------|--------------------|---------------------------|  
 |`_ismbclower`|小写字母|当且仅当 `c` 是 ASCII 小写英文字母 0x61<=`c`<=0x7A 的单字节表示形式时返回非零值。|  
 |`_ismbclower_l`|小写字母|当且仅当 `c` 是 ASCII 小写英文字母 0x61<=`c`<=0x7A 的单字节表示形式时返回非零值。|  
 |`_ismbcupper`|大写字母|当且仅当 `c` 是 ASCII 大写英文字母 0x41<=`c`<=0x5A 的单字节表示形式时返回非零值。|  
 |`_ismbcupper_l`|大写字母|当且仅当 `c` 是 ASCII 大写英文字母 0x41<=`c`<=0x5A 的单字节表示形式时返回非零值。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbclower`|\<mbstring.h>|  
 |`_ismbclower_l`|\<mbstring.h>|  
 |`_ismbcupper`|\<mbstring.h>|  
 |`_ismbcupper_l`|\<mbstring.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
  [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
  [区域设置](../../c-runtime-library/locale.md)   

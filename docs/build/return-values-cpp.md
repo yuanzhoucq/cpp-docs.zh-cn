@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f8ac22790fa6b94dd19ba7d46cf737824e898f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cdd02ab9c30e641ba7389923062f46dbbed534ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-values-c"></a>返回值 (C++)
 可以适合于 64 位的标量返回值通过 RAX 返回，这包括 __m64 类型。 非标量类型包括浮点数、 双精度型值和矢量类型，如[__m128](../cpp/m128.md)， [__m128i](../cpp/m128i.md)， [__m128d](../cpp/m128d.md)在 XMM0 中返回。 返回到 RAX 或 XMM0 中的值的未使用位数的状态未定义。  
@@ -65,5 +66,5 @@ Struct2 func4(int a, double b, int c, float d);
 // callee returns Struct2 result by value in RAX.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调用约定](../build/calling-convention.md)

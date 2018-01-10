@@ -27,11 +27,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49ae87567cd311e271a0ab50d7112a4a8f0c1b4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4db706387387d00d754f2afe74e34e85aecc5199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 C 运行时库使用这些函数来处理传递给 CRT 库函数的非有效参数。 代码也可能会使用这些函数来支持对非有效参数进行默认或自定义处理。
@@ -89,14 +90,14 @@ C 运行时库函数传递非有效参数时，库函数会调用一个*无效�
 
 调用默认处理程序 `_invoke_watson` 时，如果处理器支持 [__fastfail](../../intrinsics/fastfail.md) 操作，那么它将使用 `FAST_FAIL_INVALID_ARG` 参数进行调用并终止进程。 否则，将引发速快速失败异常，该异常可通过所连接的调试器捕获。 如果允许继续该进程，则会通过使用 `STATUS_INVALID_CRUNTIME_PARAMETER` 的异常代码状态调用 Windows `TerminateProcess` 函数使其终止。 
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 |函数|必需的标头|  
 |--------------|------------------|  
 |`_invalid_parameter`, `_invalid_parameter_noinfo`, `_invalid_parameter_noinfo_noreturn`, `_invoke_watson`|\<corecrt.h 1>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handlerr](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)  
  [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)  

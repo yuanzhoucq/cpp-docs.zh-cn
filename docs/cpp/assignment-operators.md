@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - or_eq
 - +=
 - '*='
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - or_eq operator
 - '&= operator'
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 34ed921ed7eb690372f1635ed845271fa7520a86
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-operators"></a>赋值运算符
 ## <a name="syntax"></a>语法  
@@ -205,7 +203,7 @@ B = A;
   
  在 ANSI C 中，赋值表达式的结果不是左值。 因此，合法的 C++ 表达式 `(a += b) += c` 在 C 中是非法的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
  [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 赋值运算符](../c-language/c-assignment-operators.md)

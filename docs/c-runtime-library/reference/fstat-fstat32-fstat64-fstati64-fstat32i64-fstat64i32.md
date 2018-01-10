@@ -60,11 +60,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b148bbda218e5f357d7cd5c771073f2d91b87c4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2993016e9c6b3a4ea7d47ba8071fab1267e483f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 获取有关打开文件的信息。  
@@ -158,7 +159,7 @@ int _fstat64i32(
 |`_fstat32i64`|不受宏定义影响|32 位|64 位|  
 |`_fstat64i32`|不受宏定义影响|64 位|32 位|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
@@ -169,7 +170,7 @@ int _fstat64i32(
 |`_fstat32i64`|\<sys/stat.h> 和 \<sys/types.h>|  
 |`_fstat64i32`|\<sys/stat.h> 和 \<sys/types.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -236,7 +237,7 @@ File size     : 16
 Time modified : Wed May 07 15:25:11 2003  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
  [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   

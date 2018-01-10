@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27e87210bc92554b960469336af591ec5ada485a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 类
 此类提供注册窗口类信息的方法。  
@@ -74,7 +75,7 @@ class CWndClassInfo
   
  默认情况下， [CWindowImpl](../../atl/reference/cwindowimpl-class.md)包括`DECLARE_WND_CLASS`宏创建窗口基于新的窗口类。 DECLARE_WND_CLASS 提供控件的默认样式和背景色。 如果你想要指定的样式和背景色自己，派生您的类从`CWindowImpl`和包括`DECLARE_WND_CLASS_EX`在类定义的宏。  
   
- 如果你想要创建窗口基于现有窗口类，派生您的类从`CWindowImpl`和包括`DECLARE_WND_SUPERCLASS`在类定义的宏。 例如:   
+ 如果你想要创建窗口基于现有窗口类，派生您的类从`CWindowImpl`和包括`DECLARE_WND_SUPERCLASS`在类定义的宏。 例如:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
@@ -82,7 +83,7 @@ class CWndClassInfo
   
  有关使用 ATL 中的窗口的详细信息，请参阅文章[ATL 窗口类](../../atl/atl-window-classes.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="m_atom"></a>CWndClassInfo::m_atom  
@@ -177,6 +178,6 @@ ATOM Register(WNDPROC* pProc);
   
  如果已指定[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏，`Register`注册超类-的窗口类，基于现有类，但使用不同的窗口过程。 在中返回现有窗口类的窗口过程`pProc`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
  [类概述](../../atl/atl-class-overview.md)

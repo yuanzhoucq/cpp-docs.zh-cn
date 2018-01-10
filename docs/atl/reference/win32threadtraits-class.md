@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bbd0d6ce5d5edb4dfa7608f56a362fb9071b5b72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf4fd3ffaf2fc4a035fdecf679ab507ebb557f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 类
 此类提供了 Windows 线程创建函数。 如果线程将不会使用 CRT 函数，请使用此类。  
@@ -58,7 +59,7 @@ class Win32ThreadTraits
   
  线程要使用 CRT 函数，如果使用[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)相反。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="createthread"></a>Win32ThreadTraits::CreateThread  
@@ -101,5 +102,5 @@ static HANDLE CreateThread(
   
  此函数将调用`CreateThread`创建的线程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

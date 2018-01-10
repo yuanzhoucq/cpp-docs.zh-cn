@@ -1,47 +1,48 @@
 ---
-title: "/Zc:rvalueCast（强制实施类型转换规则） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "rvaluecast"
-  - "/Zc:rvalueCast"
-  - "VC.Project.VCCLCompilerTool.EnforceTypeConversionRules"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc 编译器选项 (C++)"
-  - "强制实施类型转换规则"
-  - "rvaluecast"
-  - "Zc 编译器选项 (C++)"
-  - "-Zc 编译器选项 (C++)"
+title: "-Zc: rvalueCast （强制实施类型转换规则） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- rvaluecast
+- /Zc:rvalueCast
+- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
+dev_langs: C++
+helpviewer_keywords:
+- -Zc compiler options (C++)
+- rvaluecast
+- Enforce type conversion rules
+- /Zc compiler options (C++)
+- Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8f4b888dde70708ee10b2d8000ff6380709dc870
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:rvalueCast（强制实施类型转换规则）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定 **\/Zc:rvalueCast** 选项时，编译器将根据 C\+\+11 标准将右值引用类型正确标识为转换操作的结果。  未指定该选项时，编译器行为与 Visual Studio 2012 中的行为相同。  默认情况下，**\/Zc:rvalueCast** 处于关闭状态。  若要在使用转换时符合规范并消除错误，我们建议你使用 **\/Zc:rvalueCast**。  
+# <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast（强制实施类型转换规则）
+当**/zc: rvaluecast**指定选项，编译器会正确标识根据 C + + 11 标准转换运算的结果为右值引用类型。 未指定该选项时，编译器行为与 Visual Studio 2012 中的行为相同。 默认情况下， **/zc: rvaluecast**处于关闭状态。 有关一致性以及消除使用转换中的错误，我们建议你使用**/zc: rvaluecast**。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Zc:rvalueCast[-]  
 ```  
   
-## 备注  
- 如果指定了 **\/Zc:rvalueCast**，则编译器遵循 C\+\+11 标准的 5.4 节，并只将导致非引用类型的转换表达式和导致对非函数类型的右值引用的转换表达式视为右值类型。  或者默认情况下，如果指定了 **\/Zc:rvalueCast\-**，则编译器不符合标准，并且它将所有导致右值引用的转换表达式都视为右值。  
+## <a name="remarks"></a>备注  
+ 如果**/zc: rvaluecast**指定，则编译器遵循 C + + 11 标准的 5.4 节，并将仅强制转换表达式，导致非引用类型的转换导致对非函数类型的右值引用的表达式作为右值类型。 默认情况下，或者如果**/Zc:rvalueCast-**指定，编译器不符合标准，并将所有导致右值引用视为右值的强制转换表达式。  
   
- 如果你将转换表达式作为参数传递到采用右值引用类型的函数，请使用 **\/Zc:rvalueCast**。  当编译器确定的转换表达式类型不正确时，该默认行为会导致编译器错误 [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)。  此示例显示在未指定 \/Zc:rvalueCast 时正确代码中的编译器错误：  
+ 使用**/zc: rvaluecast**如果强制转换表达式作为自变量传递给采用右值引用类型的函数。 默认行为将导致编译器错误[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)编译器错误地确定强制转换表达式的类型。 此示例显示在未指定 /Zc:rvalueCast 时正确代码中的编译器错误：  
   
 ```cpp  
 // Test of /Zc:rvalueCast  
@@ -80,7 +81,7 @@ struct Test1 {
   
 ```  
   
- 在适当情况下，默认编译器行为可能不会报告错误 C2102。  在此示例中，如果在未指定 **\/Zc:rvalueCast** 时采用了由标识转换创建的右值的地址，则编译器不会报告错误：  
+ 在适当情况下，默认编译器行为可能不会报告错误 C2102。 在此示例中，编译器不报告错误时，采用了由标识转换创建的右值的地址如果**/zc: rvaluecast**未指定：  
   
 ```cpp  
 int main() {  
@@ -91,17 +92,17 @@ int main() {
 }  
 ```  
   
- 有关 Visual C\+\+ 中的一致性问题的详细信息，请参阅[非标准行为](../../cpp/nonstandard-behavior.md)。  
+ 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[使用项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  选择 **C\/C\+\+** 文件夹。  
+2.  选择**C/c + +**文件夹。  
   
-3.  选择**“命令行”**属性页。  
+3.  选择**命令行**属性页。  
   
-4.  修改**“附加选项”**属性以包含 **\/Zc:rvalueCast**，然后选择**“确定”**。  
+4.  修改**其他选项**属性以包含**/zc: rvaluecast** ，然后选择**确定**。  
   
-## 请参阅  
- [\/Zc（一致性）](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>请参阅  
+ [/Zc （一致性）](../../build/reference/zc-conformance.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,19 @@ f1_keywords:
 - ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
 - ATLCOLL/ATL::CElementTraitsBase::CopyElements
 - ATLCOLL/ATL::CElementTraitsBase::RelocateElements
-dev_langs:
-- C++
-helpviewer_keywords:
-- CElementTraitsBase class
+dev_langs: C++
+helpviewer_keywords: CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 类
 此类提供默认副本，并移动的集合类的方法。  
@@ -66,7 +63,7 @@ class CElementTraitsBase
   
  有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcoll.h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
@@ -129,6 +126,5 @@ static void RelocateElements(
 ### <a name="remarks"></a>备注  
  此方法调用[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，这对大多数数据类型足够了。 如果要移动的对象包含指向其自己的成员的指针，此方法将需要重写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3638740d4a62e42da71a7b076e636443e0530cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0f4ac9be945802b596505f723b1a9da00356d8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph、_ismbbgraph_l
 确定特定多字节字符是否为图形字符。  
@@ -74,20 +75,20 @@ int _ismbbgraph_l (
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- 对于 `c`是非零，否则是 0。 `_ismbbgraph` 对依赖于区域设置的任何行为使用当前区域设置。 `_ismbbgraph_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
+ 对于 `c` 是非零，否则是 0。 `_ismbbgraph` 对依赖于区域设置的任何行为使用当前区域设置。 `_ismbbgraph_l` 具有相同的效果，只不过它改用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbbgraph`|\<mbctype.h>|  
 |`_ismbbgraph_l`|\<mbctype.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
  [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

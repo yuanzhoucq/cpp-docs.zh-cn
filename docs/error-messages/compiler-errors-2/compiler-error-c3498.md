@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3498
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3498
+f1_keywords: C3498
+dev_langs: C++
+helpviewer_keywords: C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d895c0dc40d94d6a8fcd567173e2d596e68e333
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 0429b9d21829f772596b6d0fd2c51d72b0924e26
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3498"></a>编译器错误 C3498
 var： 无法捕获具有托管的变量或 WinRTtype  
@@ -67,5 +63,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

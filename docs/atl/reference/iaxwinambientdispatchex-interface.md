@@ -9,8 +9,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatchEx
-- No header/ATL::IAxWinAmbientDispatchEx
-- No header/ATL::SetAmbientDispatch
+- ATLIFACE/ATL::IAxWinAmbientDispatchEx
+- ATLIFACE/ATL::SetAmbientDispatch
 dev_langs: C++
 helpviewer_keywords: IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92eed1ce48c4aed1ae535b4ae3751501c432281d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd212417a00335bfc02699cf5e38eeacc6451ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 接口
 此接口实现的托管控件的补充环境属性。  
@@ -55,7 +56,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
   
  请参阅[承载 ActiveX 控件使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)有关详细信息。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  此接口的定义可用于多种形式下, 表中所示。  
   
 |定义类型|文件|  
@@ -81,5 +82,5 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ### <a name="remarks"></a>备注  
  当`SetAmbientDispatch`调用与对新接口指针，此新界面将用于调用任何属性或方法请求的托管的控件中，如果这些属性没有已提供的[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)

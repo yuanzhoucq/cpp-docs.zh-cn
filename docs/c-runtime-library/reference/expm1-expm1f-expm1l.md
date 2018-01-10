@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,37 +28,22 @@ f1_keywords:
 - expm1l
 - expm1
 - expm1f
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - expm1f function
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0ebd79ed048bad988ca8a31f0f2f8d5427b84675
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8fe98cb7002bcdbf428115666e07401f26205733
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1、expm1f、expm1l
 计算以 e 为底的指数减一的值。  
@@ -94,15 +78,15 @@ long double expm1l(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用并返回 `expm1` 和 `float` 值的 `long double` 重载。 在 C 程序中，`expm1` 始终采用并返回 `double`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
  有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [exp2、exp2f、exp2l](http://msdn.microsoft.com/en-us/a7974629-be1e-4196-a562-6624a0732003)   
  [pow、powf、powl](../../c-runtime-library/reference/pow-powf-powl.md)

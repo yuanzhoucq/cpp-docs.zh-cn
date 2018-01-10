@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c330ee2f9d3952068e2a400cd8f6e23103dc20e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a270b26fc0fd9be721ee0656f9f0d14ab579b477
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>记录字段交换：使用 RFX 函数
 本主题说明如何使用构成的主体 RFX 函数调用你`DoFieldExchange`重写。  
@@ -69,7 +72,7 @@ ms.lasthandoff: 10/24/2017
 
  有关详细信息，请参阅 RFX 函数文档下,[宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)中*类库参考*。 有关 c + + 数据类型如何映射到 SQL 数据类型的信息，请参阅 ANSI SQL 数据类型映射到 c + + 数据类型的表中[SQL: SQL 和 c + + 数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [记录字段交换： RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)   
  [记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   

@@ -1,81 +1,83 @@
 ---
-title: "functional (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/functional>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/functional> 标头 [STL/CLR]"
-  - "<functional> 标头 [STL/CLR]"
-  - "功能性函数 [STL/CLR]"
+title: "功能 (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/functional>
+dev_langs: C++
+helpviewer_keywords:
+- <functional> header [STL/CLR]
+- <cliext/functional> header [STL/CLR]
+- functional functions [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8e731767401964045307635a428d7606d628aca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# functional (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-STL\/CLR 包括标头定义许多的模板类的 `<cliext/functional>` 和相关模板函数和委托。  
+# <a name="functional-stlclr"></a>functional (STL/CLR)
+包括 STL/CLR 标头`<cliext/functional>`定义大量的模板类和相关的模板委托和函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #include <functional>  
 ```  
   
-## 声明  
+## <a name="declarations"></a>声明  
   
-|Delegate|说明|  
-|--------------|--------|  
-|[binary\_delegate](../dotnet/binary-delegate-stl-clr.md)|两个委托参数。|  
-|[binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)|返回 `void`的两参数委托。|  
-|[unary\_delegate](../dotnet/unary-delegate-stl-clr.md)|一个委托参数。|  
-|[unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)|返回 `void`的一个参数委托。|  
+|委托|描述|  
+|--------------|-----------------|  
+|[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|两个参数的委托。|  
+|[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|返回两个参数委托`void`。|  
+|[unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)|一个参数的委托。|  
+|[unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)|返回的单自变量委托`void`。|  
   
-|类|说明|  
-|-------|--------|  
-|[binary\_negate](../dotnet/binary-negate-stl-clr.md)|消除两个参数 functor 的 Functor。|  
-|[binder1st](../dotnet/binder1st-stl-clr.md)|绑定第一个参数的 Functor 为两个参数 functor。|  
-|[binder2nd](../dotnet/binder2nd-stl-clr.md)|绑定第二个参数的 Functor 为两个参数 functor。|  
-|[divides](../dotnet/divides-stl-clr.md)|除以functor。|  
-|[equal\_to](../dotnet/equal-to-stl-clr.md)|相等比较 functor。|  
-|[greater](../dotnet/greater-stl-clr.md)|更大比较 functor。|  
-|[greater\_equal](../dotnet/greater-equal-stl-clr.md)|更大或等于比较 functor。|  
-|[less](../dotnet/less-stl-clr.md)|较低比较 functor。|  
-|[less\_equal](../dotnet/less-equal-stl-clr.md)|小于或等于比较 functor。|  
-|[logical\_and](../dotnet/logical-and-stl-clr.md)|逻辑和 functor。|  
-|[logical\_not](../dotnet/logical-not-stl-clr.md)|逻辑非functor。|  
-|[logical\_or](../dotnet/logical-or-stl-clr.md)|逻辑或 functor。|  
-|[minus](../dotnet/minus-stl-clr.md)|加 functor。|  
-|[modulus](../dotnet/modulus-stl-clr.md)|模数 functor。|  
-|[multiplies](../dotnet/multiplies-stl-clr.md)|相乘 functor。|  
-|[negate](../dotnet/negate-stl-clr.md)|返回参数的 Functor 求反。|  
-|[not\_equal\_to](../dotnet/not-equal-to-stl-clr.md)|不相等比较 functor。|  
-|[plus](../dotnet/plus-stl-clr.md)|添加 functor。|  
-|[unary\_negate](../dotnet/unary-negate-stl-clr.md)|消除一个参数 functor 的 Functor。|  
+|类|描述|  
+|-----------|-----------------|  
+|[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)|要求反的两个参数函子的函子。|  
+|[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)|若要将第一个自变量绑定到两个参数函子的函子。|  
+|[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)|若要将第二个参数绑定到两个参数函子的函子。|  
+|[divides (STL/CLR)](../dotnet/divides-stl-clr.md)|将划分函子。|  
+|[equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)|相等比较函子。|  
+|[greater (STL/CLR)](../dotnet/greater-stl-clr.md)|更大的比较函子。|  
+|[greater_equal (STL/CLR)](../dotnet/greater-equal-stl-clr.md)|大于或等于比较函子。|  
+|[less (STL/CLR)](../dotnet/less-stl-clr.md)|小于比较函子。|  
+|[less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)|小于或等于比较函子。|  
+|[logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)|逻辑 AND 函子。|  
+|[logical_not (STL/CLR)](../dotnet/logical-not-stl-clr.md)|逻辑不函子。|  
+|[logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)|逻辑 OR 函子。|  
+|[minus (STL/CLR)](../dotnet/minus-stl-clr.md)|减去函子。|  
+|[modulus (STL/CLR)](../dotnet/modulus-stl-clr.md)|取模函子。|  
+|[multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)|乘函子。|  
+|[negate (STL/CLR)](../dotnet/negate-stl-clr.md)|返回求反后其自变量的函子。|  
+|[not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)|不等于比较函子。|  
+|[plus (STL/CLR)](../dotnet/plus-stl-clr.md)|添加函子。|  
+|[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)|要求反单自变量函子的函子。|  
   
-|功能|说明|  
-|--------|--------|  
-|[bind1st](../dotnet/bind1st-stl-clr.md)|生成第一个参数和仿函数的。|  
-|[bind2nd](../dotnet/bind2nd-stl-clr.md)|生成第二个参数和仿函数的。|  
-|[not1](../dotnet/not1-stl-clr.md)|生成 functor 的一 unary\_negate。|  
-|[not1](../dotnet/not1-stl-clr.md)|生成 functor 的一 binary\_negate。|  
+|函数|描述|  
+|--------------|-----------------|  
+|[bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)|生成自变量和函子的 binder1st。|  
+|[bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)|生成自变量和函子的 binder2nd。|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|生成函子 unary_negate。|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|生成函子 binary_negate。|  
   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<功能 cliext/>  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [STL\/CLR 库](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>请参阅  
+ [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

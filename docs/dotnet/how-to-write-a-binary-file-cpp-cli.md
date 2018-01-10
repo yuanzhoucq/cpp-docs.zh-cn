@@ -1,34 +1,36 @@
 ---
-title: "如何：编写二进制文件 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "二进制文件, 在 C++ 中写入"
-  - "文件 [C++], binary"
+title: "如何： 编写二进制文件 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- binary files, writing in C++
+- files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：编写二进制文件 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何将二进制数据写入文件中。  使用了 <xref:System.IO> 命名空间中的两个类：<xref:System.IO.FileStream> 和 <xref:System.IO.BinaryWriter>。  <xref:System.IO.FileStream> 表示实际文件，而 <xref:System.IO.BinaryWriter> 则提供允许二进制访问的流的接口。  
+# <a name="how-to-write-a-binary-file-ccli"></a>如何：编写二进制文件 (C++/CLI)
+下面的代码示例演示对文件进行写入二进制数据。 两个类从<xref:System.IO>使用命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream>表示实际的文件，而<xref:System.IO.BinaryWriter>允许二进制访问流为接口提供。  
   
- 下面的代码示例写一个包含二进制格式的整数的文件。  可通过 [如何：读取二进制文件](../dotnet/how-to-read-a-binary-file-cpp-cli.md) 中的代码读此文件。  
+ 下面的代码示例将包含整数的二进制格式的文件。 可以使用中的代码读取此文件[如何： 读取二进制文件 (C + + /cli CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // binary_write.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [文件和流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [文件和流 I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

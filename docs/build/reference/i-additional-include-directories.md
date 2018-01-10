@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91868a657e4b537c286378276701915c1e160a77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfbf962a92af22d3e724c592fec6cf812b610dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="i-additional-include-directories"></a>/I（附加包含目录）
 将目录添加到用于搜索包含文件的目录的目录列表。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 /I[ ]directory  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `directory`  
  要添加到的目录列表的目录搜索包含文件。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>。  
   
 ## <a name="example"></a>示例  
  以下命令查找请求的 MAIN.c 按以下顺序包含文件： 包含 MAIN.c，然后在 \INCLUDE 目录中，然后在 \MY\INCLUDE 目录中，和最后的目录中分配给在包括的目录中的第一行环境变量。  
@@ -78,6 +79,6 @@ ms.lasthandoff: 10/24/2017
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

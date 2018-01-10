@@ -1,39 +1,38 @@
 ---
-title: "STUB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "STUB"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STUB .def 文件语句"
+title: "存根 （STUB) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: STUB
+dev_langs: C++
+helpviewer_keywords: STUB .def file statement
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 58430f8211f8859b65103b53d1f98a173c4635ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# STUB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-当用于生成虚拟设备驱动程序 \(VxD\) 的模块定义文件时，STUB 允许指定包含将在 VxD 中使用的 IMAGE\_DOS\_HEADER 结构（在 WINNT.H 中定义）而不是默认头的文件名。  
+# <a name="stub"></a>STUB
+生成虚拟设备驱动程序 (VxD) 的模块定义文件中使用时，允许你指定的文件名称包含 IMAGE_DOS_HEADER 结构结构 （在 WINNT 中定义。H) 用于虚拟设备驱动程序 (VxD)，而不是默认标头。  
   
 ```  
 STUB:filename  
 ```  
   
-## 备注  
- 另一种指定 *filename* 的方法是使用 [\/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) 链接器选项。  
+## <a name="remarks"></a>备注  
+ 另一种方法指定*filename*与[/存根](../../build/reference/stub-ms-dos-stub-file-name.md)链接器选项。  
   
- 在模块定义文件中，STUB 仅在生成 VxD 时有效。  
+ 存根是有效的模块定义文件中仅在生成 VxD 时。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)

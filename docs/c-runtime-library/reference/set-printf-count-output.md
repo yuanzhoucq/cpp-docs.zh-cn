@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_printf_count_output
+apiname: _set_printf_count_output
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,23 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '%n format'
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 64110bb29551e4d99588a794080337284f5f2b6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 8229146184b4d4d0cfbccd60f6c4209356db5f8f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 启用或禁用 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 系列函数中的 `%n` 格式支持。  
@@ -65,13 +62,13 @@ int _set_printf_count_output(
 ## <a name="remarks"></a>备注  
  出于安全考虑，默认情况下，在 `%n` 和其所有变量中禁用对 `printf` 格式说明符的支持。 如果在 `printf` 格式规范中遇到 `%n`，则默认行为是调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 调用`_set_printf_count_output`使用非零自变量将导致`printf`-系列函数解释`%n`中所述[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_set_printf_count_output`|\<stdio.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -100,5 +97,5 @@ int main()
 i = 5  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)

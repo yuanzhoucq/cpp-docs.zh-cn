@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e3b0f986d4bc805a3cac1ec49193f3749f31af9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 028b31044d035def628785969a04c27af4699f65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE（生成经分析检测的生成）
 通过链接器指定 .pgd 文件的生成，以支持按配置优化 (PGO)。  /GENPROFILE 和 /FASTGENPROFILE 使用不同的默认参数。 使用 /GENPROFILE，以在分析期间以精度（而不是速度和内存使用情况）优先。 使用 /FASTGENPROFILE，以更小的内存使用情况和速度（而不是精度）优先。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
   
  指定 /GENPROFILE 或 /FASTGENPROFILE 时，还必须指定 /LTCG。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)   
  [/LTCG （链接时间代码生成）](../../build/reference/ltcg-link-time-code-generation.md)

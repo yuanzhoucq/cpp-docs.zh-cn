@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 35064566c7a6b1c2e5ad468e9b32f58dcba40808
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u（未定义符号）
 **/U**编译器选项可取消指定的预处理器符号。 **/U**编译器选项可取消编译器定义的特定于 Microsoft 的符号。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 /u  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `symbol`  
  若要取消定义预处理器符号。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/24/2017
   
 -   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [/J (默认 char 类型是无符号)](../../build/reference/j-default-char-type-is-unsigned.md)   

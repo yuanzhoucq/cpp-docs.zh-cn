@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e854c87355831980f768fd0027f8ac70d9001a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2c21872c5d6fe6000038a3a2f4fe39451b566dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrict"></a>__restrict
 如**__declspec ([限制](../cpp/restrict.md))**修饰符，`__restrict`关键字指示某个符号是否不在当前范围中的有别名。 `__restrict` 关键字与 `__declspec ( restrict )` 修饰符在下列方面不同：  
@@ -61,5 +62,5 @@ union z {
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)

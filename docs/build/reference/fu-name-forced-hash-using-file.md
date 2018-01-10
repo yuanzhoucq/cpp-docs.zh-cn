@@ -1,68 +1,68 @@
 ---
-title: "/FU（命名强制 #using 文件） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ForcedUsingFiles"
-  - "/FU"
-  - "VC.Project.VCNMakeTool.ForcedUsingAssemblies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FU 编译器选项 [C++]"
-  - "FU 编译器选项 [C++]"
-  - "-FU 编译器选项 [C++]"
+title: "-FU (命名强制 #using 文件) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ForcedUsingFiles
+- /FU
+- VC.Project.VCNMakeTool.ForcedUsingAssemblies
+dev_langs: C++
+helpviewer_keywords:
+- -FU compiler option [C++]
+- FU compiler option [C++]
+- /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 17b62859aaf0c9dc6b3313fbb726602b5b83a82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /FU（命名强制 #using 文件）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-你可以使用一个编译器选项作为在源代码中将文件名传递到 [\#using 指令](../../preprocessor/hash-using-directive-cpp.md) 的另一种方法。  
+# <a name="fu-name-forced-using-file"></a>/FU（命名强制 #using 文件）
+你可以使用作为传递的源文件名的替代方法的编译器选项[#using 指令](../../preprocessor/hash-using-directive-cpp.md)源代码中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /FU file  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>自变量  
  `file`  
  指定要在此编译中引用的元数据文件。  
   
-## 备注  
- \/FU 开关作为文件名。  若要指定多文件，请对每个使用 \/FU。  
+## <a name="remarks"></a>备注  
+ /FU 开关只采用一个文件名。 若要指定多个文件，请对每个文件使用 /FU。  
   
- 如果使用的是 [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] 和引用元数据使用 [友元程序集](../../dotnet/friend-assemblies-cpp.md) 功能，因此不能使用 **\/FU**。  必须引用元数据通过代码使用 `#using`\- 具有 `[as friend]` 特性。  [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] \([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]\) 不支持友元程序集。  
+ 如果你使用[!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)]并引用元数据来使用[友元程序集](../../dotnet/friend-assemblies-cpp.md)功能，不能使用**/FU**。 您必须将 `#using` 与 `[as friend]` 特性一起使用，才能在代码中引用元数据。 [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 中不支持友元程序集。  
   
- 有关如何为公共语言运行时\(CLR\)创建程序集或模块的信息，请参见 [\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  有关如何在[!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]中生成查询的信息，请参见[生成应用程序和库](../Topic/Building%20apps%20and%20libraries%20\(C++-CX\).md)。  
+ 有关如何创建一个程序集或模块为公共语言运行时 (CLR) 的信息，请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。 有关如何生成[!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]，请参阅[生成应用程序和库](../../cppcx/building-apps-and-libraries-c-cx.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  选择 **C\/C\+\+** 文件夹。  
+2.  选择**C/c + +**文件夹。  
   
-3.  选择**“高级”**属性页。  
+3.  选择**高级**属性页。  
   
-4.  修改**“强制 \#using”**属性。  
+4.  修改**强制 #using**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>。  
   
-## 请参阅  
- [输出文件 \(\/F\) 选项](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>请参阅  
+ [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

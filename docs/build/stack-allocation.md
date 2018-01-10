@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 866a5183a50f13472167f912691804a995e90023
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 514b20847f588dab7a5c205be36c1fbd725df17d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-allocation"></a>堆栈分配
 函数的 prolog 负责为本地变量分配堆栈空间，保存的寄存器，堆栈参数，并注册参数。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  当函数 B 调用另一个函数时，寄信人地址的正下方的家庭地址按以 RCX 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [堆栈使用](../build/stack-usage.md)

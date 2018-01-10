@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33e02b645d13c848c9cb9b3a5d082ccf05960433
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4aa81ba41587a183aca921177a62a45229810f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （设置源字符集）
 允许您指定可执行文件的源字符集。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 /source-charset:[IANA_name|.CPID]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  **IANA_name**  
  IANA 定义字符集名称。  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
   
 4.  选择**确定**以保存所做的更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [/execution-charset （设置执行字符集）](../../build/reference/execution-charset-set-execution-character-set.md)   

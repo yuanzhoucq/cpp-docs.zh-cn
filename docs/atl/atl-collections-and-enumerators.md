@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4738e3f5256fe654dd64541dfd021ba2b4fce090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和枚举数
 A`collection`是提供一个允许对一组数据项 （原始数据或其他对象） 的访问接口的 COM 对象。 一个接口，用于提供对一组对象的访问被称为遵循标准*集合接口*。  
@@ -50,6 +51,6 @@ A`collection`是提供一个允许对一组数据项 （原始数据或其他对
  [ATLCollections 示例](../visual-cpp-samples.md)  
  一个示例，演示如何使用`ICollectionOnSTLImpl`和`CComEnumOnSTL`，和自定义复制策略类实现。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)
 
