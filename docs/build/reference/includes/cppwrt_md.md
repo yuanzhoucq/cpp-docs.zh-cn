@@ -1,1 +1,1 @@
-Visual C\+\+ 组件扩展
+Visual C++ 组件扩展

@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 300cab10480adf201bf6bf0b0275bb0f331c2602
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="server-registration-global-functions"></a>服务器注册全局函数
 这些函数提供用于注册和注销在对象映射中的 server 对象的支持。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|若要吊销从 COM 模块的类对象，调用此函数。|  
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|调用此函数可获取的类对象。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
    
 ##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
@@ -171,5 +172,5 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CComModule::GetClassObject](ccommodule-class.md#getclassobject) （在 ATL 7.0 中已过时） 和[CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)

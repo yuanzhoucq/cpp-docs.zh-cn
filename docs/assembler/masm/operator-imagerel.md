@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7abcbbde7b2b0f6150169ee392681bad6bd74ba9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8cc4c78e1bb45da5fa69d5610a7c7812f4abbf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-imagerel"></a>运算符 IMAGEREL
 返回的映像相对偏移量`expression`。  
@@ -39,5 +40,5 @@ IMAGEREL expression
   
  IMAGEREL 时仅使用 COFF 对象发出。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符参考](../../assembler/masm/operators-reference.md)

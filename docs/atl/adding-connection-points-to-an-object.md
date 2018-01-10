@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af5c5c4ee2a794c05443eb3deeccd4792cbfd098
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f63ec5bd9029302192e640e42a3d012df347219d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-connection-points-to-an-object"></a>将连接点添加到对象
 [ATL 教程](../atl/active-template-library-atl-tutorial.md)演示如何创建与连接点支持的控件、 如何添加事件，以及如何实现连接点。 ATL 实现连接点与[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)类。  
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
   
     -   使用**importlib**该类型库的说明。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [连接点](../atl/atl-connection-points.md)
 

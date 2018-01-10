@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 594e6bd026d214e2dd5d12e702d26a5942cfc872
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 082214794b2caa66e8be1127c664e0ffec18a394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 类
 此类提供用于实现线程放入池中，单元模型的 COM 服务器的方法。  
@@ -68,7 +69,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
   
  `CAtlAutoThreadModuleT`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
@@ -84,7 +85,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>备注  
  如果你想要使用不同的方法用于计算的线程数，重写此方法。 默认情况下，线程数取决于处理器的数目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IAtlAutoThreadModule 类](../../atl/reference/iatlautothreadmodule-class.md)   
  [类概述](../../atl/atl-class-overview.md)   
  [IAtlAutoThreadModule 类](../../atl/reference/iatlautothreadmodule-class.md)   

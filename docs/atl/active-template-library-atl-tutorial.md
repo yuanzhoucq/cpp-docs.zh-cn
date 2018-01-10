@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 858534a72dbd7d8f9849f95aa3c6e4bef070dd26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a7737728668adddbf3ca8ed0c41cdbf5e6bb61d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-template-library-atl-tutorial"></a>活动模板库 (ATL) 教程
 ATL 旨在简化创建高效、 灵活、 轻型控件的过程。 本教程将引导你逐步完成创建 ActiveX 控件，演示许多 ATL 和 COM 的基础知识。  
@@ -46,6 +47,6 @@ ATL 旨在简化创建高效、 灵活、 轻型控件的过程。 本教程将�
   
 -   [步骤 7： 将你在网页上的控件放](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)
 

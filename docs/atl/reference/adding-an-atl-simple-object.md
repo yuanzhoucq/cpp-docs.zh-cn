@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f6a32ebf3ab59679ee3f5fff3aabaf6866011e76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e0251e33eb6b6ae2af920181077071c90c61192
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-simple-object"></a>添加 ATL 简单对象
 要向你的项目添加 ATL （活动模板库） 对象，你的项目必须已创建作为 ATL 应用程序或 MFC 应用程序包含 ATL 支持。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 5.  单击**完成**将该对象添加到你的项目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加类](../../ide/adding-a-class-visual-cpp.md)   
  [ATL 项目中添加一个新接口](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
  [将连接点添加到对象](../../atl/adding-connection-points-to-an-object.md)   

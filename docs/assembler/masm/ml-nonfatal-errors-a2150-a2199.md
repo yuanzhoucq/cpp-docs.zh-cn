@@ -13,14 +13,15 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2383941517852970f88c5bd07911334bb6004312
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18e88fc28ef317648988b8f16b5f5f3b677983d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-errors-a2150-a2199"></a>ML 非致命错误 A2150-A2199
 ML 非致命错误有关的详细信息，请参阅[ML 错误信息](../../assembler/masm/ml-error-messages.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ML 非严重错误](../../assembler/masm/ml-nonfatal-errors.md)

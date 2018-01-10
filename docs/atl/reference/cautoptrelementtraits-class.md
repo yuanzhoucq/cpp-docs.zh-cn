@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1b7d09894e7258ab740e09fb45008a4eeb8a3ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffbec269e7bbf750cc3b877aa7a93d1cde74756b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrelementtraits-class"></a>CAutoPtrElementTraits 类
 此类提供方法、 静态函数和有用的 typedef 时创建的智能指针的集合。  
@@ -66,7 +67,7 @@ class CAutoPtrElementTraits
   
  `CAutoPtrElementTraits`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcoll.h  
   
 ##  <a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
@@ -83,6 +84,6 @@ typedef CAutoPtr<T>& INARGTYPE;
 typedef T *& OUTARGTYPE;
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDefaultElementTraits 类](../../atl/reference/cdefaultelementtraits-class.md)   
  [类概述](../../atl/atl-class-overview.md)

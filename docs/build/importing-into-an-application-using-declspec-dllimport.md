@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f16c9f5c96712c311928e0389fec0a1ce1f0dca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>使用 __declspec(dllimport) 导入到应用程序中
 我们称程序使用 DLL 定义的公共符号导入它们。 当创建标头文件，使用你的 Dll，生成的应用程序使用此选项**__declspec （dllimport)**上的公共符号的声明。 关键字**__declspec （dllimport)**工作是否导出与.def 文件或**__declspec （dllexport)**关键字。  
@@ -39,7 +40,7 @@ DllImport void func();
   
  使用**__declspec （dllimport)**在函数声明是可选的但如果你使用此关键字，则编译器将产生更高效的代码。 但是，你必须使用**__declspec （dllimport)**访问 DLL 的公共数据符号和对象的导入可执行文件。 请注意，您的 DLL 的用户仍然需要链接导入库。  
   
- DLL 和客户端应用程序，可以使用相同的标头文件。 若要执行此操作，请使用特殊的预处理器符号，该值指示是否正在生成 DLL 或生成客户端应用程序。 例如：  
+ DLL 和客户端应用程序，可以使用相同的标头文件。 若要执行此操作，请使用特殊的预处理器符号，该值指示是否正在生成 DLL 或生成客户端应用程序。 例如:  
   
 ```  
 #ifdef _EXPORTING  
@@ -62,5 +63,5 @@ class CLASS_DECLSPEC CExampleA : public CObject
   
 -   [相互导入](../build/mutual-imports.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [导入到应用程序中](../build/importing-into-an-application.md)

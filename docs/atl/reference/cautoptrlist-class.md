@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79ca570b8f4534287ae4ec40167de3bc3d947139
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0887b0fdaeeaf498bacdc5eec66981656f34fed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 类
 构造的智能指针的列表时，此类提供有用的方法。  
@@ -60,7 +61,7 @@ class CAutoPtrList :
   
  `CAutoPtrList`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcoll.h  
   
 ##  <a name="cautoptrlist"></a>CAutoPtrList::CAutoPtrList  
@@ -77,7 +78,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ### <a name="remarks"></a>备注  
  块大小是内存的分配需要一个新的元素时量的度量值。 更大的块大小减少到内存分配例程的调用，但使用更多资源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAtlList 类](../../atl/reference/catllist-class.md)   
  [CAutoPtrElementTraits 类](../../atl/reference/cautoptrelementtraits-class.md)   
  [类概述](../../atl/atl-class-overview.md)

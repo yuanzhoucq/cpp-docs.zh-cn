@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45025d4af6f53fa082c3fe162cd940747b0ee10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14f548e52c3771a5927d14253e56c442c39234ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>如何：在 Visual Studio 开发环境中设置 LIB.EXE 选项
 ### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>若要设置 LIB。在 Visual Studio 开发环境中的 EXE 选项  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
   
 4.  根据需要修改属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LIB 引用](../../build/reference/lib-reference.md)

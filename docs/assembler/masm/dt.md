@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dceac47b879fa7e612ebd3a5daac1d32bbbd8c4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d65d40897e7a724f9baca205628238fba528a1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dt"></a>DT
 分配和 （可选） 为每个初始化 10 个字节的存储`initializer`。 此外可作为类型说明符类型是合法的任何位置。 `DT`同义词[TBYTE](../../assembler/masm/tbyte.md)。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/24/2017
 [[name]] DT initializer [[, initializer]]...  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

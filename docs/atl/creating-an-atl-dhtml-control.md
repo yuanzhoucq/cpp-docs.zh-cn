@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7b0c9ad01bf8ffbfbd4c554aec3f3627c8be2fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3854431f9224f56ae5c579ccb6cd8997b68824be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-atl-dhtml-control"></a>创建 ATL DHTML 控件
 ATL 控件向导创建 DHTML 控件的过程进行自动化。 它会生成必需的资源文件，包括包含的示例代码的 HTML 文件。  
@@ -34,6 +35,6 @@ ATL 控件向导创建 DHTML 控件的过程进行自动化。 它会生成必�
   
  你现在可以[测试默认控件](../atl/testing-the-atl-dhtml-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
 

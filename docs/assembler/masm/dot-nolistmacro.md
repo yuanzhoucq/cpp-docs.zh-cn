@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6aa08dc5da30851aad8565fc675a16a0d6dc9fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 018b06d0b46cb929ede78a1c578614f529842915
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 禁止显示的宏展开的列表。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  与相同[。SALL](../../assembler/masm/dot-sall.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

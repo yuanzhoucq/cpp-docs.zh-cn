@@ -1,55 +1,56 @@
 ---
-title: "MFC DLL 命名约定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], 库名"
-  - "DLL [C++], 命名规则"
-  - "库 [C++], MFC DLL 名称"
-  - "MFC DLL [C++], 命名规则"
-  - "MFC 库 [C++], 命名规则"
-  - "命名规则 [C++], MFC DLL"
-  - "共享的 DLL 版本 [C++]"
+title: "MFC Dll 命名约定 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC libraries [C++], naming conventions
+- naming conventions [C++], MFC DLLs
+- MFC DLLs [C++], naming conventions
+- libraries [C++], MFC DLL names
+- shared DLL versions [C++]
+- DLLs [C++], naming conventions
+- DLLs [C++], library names
 ms.assetid: 0db9c3f3-87d3-40e8-8964-250f9d2a2209
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4f7702e9babcc4769136d6deab63b627f8b09bd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# MFC DLL 命名约定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC 中包含的 DLL 和库遵循结构化命名约定。  这使了解应为什么目的使用哪个 DLL 或库变得更容易。  
+# <a name="naming-conventions-for-mfc-dlls"></a>MFC DLL 命名约定
+Dll 和包含在 MFC 库按照结构化的命名约定。 这使得更轻松地确定哪些 DLL 或库你应使用为哪些目的。  
   
- 生成使用这些 DLL 的应用程序或扩展 DLL 所需的导入库与 DLL 具有相同的基名称，但带有 .lib 文件扩展名。  
+ 需生成应用程序或使用这些 Dll 的 MFC 扩展 Dll 导入库拥有与 DLL 相同的基名称，但有.lib 文件扩展名。  
   
-### 共享 DLL 命名约定  
+### <a name="shared-dll-naming-convention"></a>共享的 DLL 命名约定  
   
-|DLL|说明|  
-|---------|--------|  
-|MFCx0.DLL|MFC DLL，ANSI 发布版本|  
-|MFCx0U.DLL|MFC DLL，Unicode 发布版本|  
+|DLL|描述|  
+|---------|-----------------|  
+|MFCx0.DLL|MFC DLL，ANSI 发行版本|  
+|MFCx0U.DLL|MFC DLL，Unicode 发行版本|  
 |MFCx0D.DLL|MFC DLL，ANSI 调试版本|  
 |MFCx0UD.DLL|MFC DLL，Unicode 调试版本|  
   
- 如果动态链接到 MFC 的共享 DLL 版本，则不论该版本来自应用程序还是扩展 DLL，都必须在产品中包括 MFCx0.DLL。  如果应用程序中需要 Unicode 支持，则改为包括 MFCx0U.DLL。  
+ 如果你要动态链接到共享的 DLL 版本的 MFC，，它从应用程序还是从 MFC 扩展 DLL，则必须与你的产品包括 MFCx0.DLL。 如果你的应用程序中需要 Unicode 支持，请改为包括 MFCx0U.DLL。  
   
- 如果将 DLL 静态链接到 MFC，则必须将它与一个静态 MFC 库链接。  这些版本根据 \[N&#124;U\]AFXCW\[D\].LIB 约定进行命名。  有关更多信息，请参见[库命名约定](../mfc/library-naming-conventions.md) \(MFC\) 中的“静态链接库命名约定”表。  
+ 如果您以静态方式链接到 MFC DLL，你必须将其与其中一个静态 MFC 库链接。 根据约定命名这些版本 [N &#124;U] AFXCW [D]。LIB。 有关详细信息，请参阅 》 中表"静态链接库命名约定"[库命名约定](../mfc/library-naming-conventions.md)(MFC)。  
   
- 有关可随应用程序一同发布的 Visual C\+\+ DLL 列表，请参见 Visual Studio 安装目录中的 Redist.txt。  
+ 可以与应用程序分发的 Visual c + + Dll 的列表，请参阅在 Visual Studio 安装中的 Redist.txt。  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
--   [库的命名约定](../mfc/library-naming-conventions.md)  
+-   [库命名约定](../mfc/library-naming-conventions.md)  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

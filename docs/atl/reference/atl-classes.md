@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58b0a6c8baa52acf82bffaacb7dd309b4420f3f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-classes"></a>ATL 类
 活动模板库 (ATL) 包括以下类。 若要按类别查找特定的类，请参阅[ATL 类概述](../../atl/atl-class-overview.md)。  
@@ -221,7 +222,7 @@ ms.lasthandoff: 10/24/2017
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|此自变量适配器类允许任一资源名称 (`LPCTSTR`s) 或资源 Id (**UINT**s) 传递到函数，而无需调用方将 ID 转换为字符串使用**MAKEINTRESOURCE**宏。|atlwin.h|  
 |[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)|此类提供了 Windows 线程创建函数。 如果线程将不会使用 CRT 函数，请使用此类。|atlbase.h|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
  [函数](../../atl/reference/atl-functions.md)   
  [全局变量](../../atl/reference/atl-global-variables.md)   

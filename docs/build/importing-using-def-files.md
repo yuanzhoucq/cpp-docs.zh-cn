@@ -1,32 +1,33 @@
 ---
-title: "使用 DEF 文件导入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def 文件 [C++], 导入"
-  - "def 文件 [C++], 导入"
-  - "dllimport 特性 [C++], DEF 文件"
-  - "DLL [C++], DEF 文件"
-  - "导入 DLL [C++], DEF 文件"
+title: "使用 DEF 文件导入 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- importing DLLs [C++], DEF files
+- def files [C++], importing with
+- .def files [C++], importing with
+- dllimport attribute [C++], DEF files
+- DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ee213f1aa381415444288dbab4473cae6f5fc7b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 DEF 文件导入
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果选择与 .def 文件一起使用 **\_\_declspec\(dllimport\)**，则应更改 .def 文件，用 DATA 取代 CONSTANT，以减少因不正确的编码导致问题的可能性：  
+# <a name="importing-using-def-files"></a>使用 DEF 文件导入
+如果你选择使用**__declspec （dllimport)**和.def 文件，应更改.def 文件以使用代替常量的数据来减少不正确编码会引起问题的可能性：  
   
 ```  
 // project.def  
@@ -35,30 +36,30 @@ EXPORTS
    ulDataInDll   DATA  
 ```  
   
- 下表说明了原因。  
+ 下表说明了为什么。  
   
-|关键字|在导入库中发出|导出|  
-|---------|-------------|--------|  
-|`CONSTANT`|`_imp_ulDataInDll_ulDataInDll`|`_ulDataInDll`|  
+|关键字|发出中的导入库|导出|  
+|-------------|---------------------------------|-------------|  
+|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|  
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|  
   
- 使用 **\_\_declspec\(dllimport\)** 和 CONSTANT，在为允许显式链接而创建的 .lib DLL 导入库中同时列出 `imp` 版本和未修饰名。  使用 **\_\_declspec\(dllimport\)** 和 DATA 列出的只是 `imp` 版本的名称。  
+ 使用**__declspec （dllimport)**和同时列出了常量`imp`版本和.lib DLL 中的未修饰的名称导入创建以允许显式链接的库。 使用**__declspec （dllimport)**和数据列表仅`imp`名称的版本。  
   
- 如果使用 CONSTANT，则可以使用以下任一代码构造访问 `ulDataInDll`：  
+ 如果使用常量时，可以使用以下代码构造任一访问`ulDataInDll`:  
   
 ```  
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/  
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- \- 或 \-  
+ 或  
   
 ```  
 ULONG *ulDataInDll;      /*prototype*/  
 if (*ulDataInDll == 0L)  /*sample code fragment*/  
 ```  
   
- 但是，如果在 .def 文件中使用 DATA，则只有用下面的定义编译的代码才可以访问 `ulDataInDll` 变量：  
+ 但是，如果.def 文件中使用数据，仅使用以下定义编译的代码可以访问变量`ulDataInDll`:  
   
 ```  
 __declspec(dllimport) ULONG ulDataInDll;  
@@ -66,9 +67,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- 使用 CONSTANT 的风险更大，因为如果忘记使用额外级别的间接寻址，则访问的有可能是指向变量的导入地址表的指针，而不是变量本身。  由于导入地址表当前被编译器和链接器设置成了只读，因此这类问题经常表现为访问冲突。  
+ 使用常量的风险更大，因为如果你忘记了使用额外级别的间接寻址，你可能无法访问的导入地址表指向的变量-变量本身。 由于导入地址表当前由只读通过编译器和链接器，此类型的问题可以经常表现为访问冲突。  
   
- 如果当前的 Visual C\+\+ 链接器发现 .def 文件中的 CONSTANT 是导致上述问题的原因，它将发出警告。  使用 CONSTANT 的唯一真正原因是：无法对头文件未在原型上列出 **\_\_declspec\(dllimport\)** 的某对象文件进行重新编译。  
+ 如果它发现.def 文件中的常量来应对这种情况下，当前的 Visual c + + 链接器将发出警告。 使用常量的唯一的真正原因是如果你不能重新编译的头文件中未列出某些对象文件**__declspec （dllimport)**原型上。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [导入到应用程序中](../build/importing-into-an-application.md)

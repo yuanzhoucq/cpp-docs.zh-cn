@@ -1,1 +1,1 @@
-Windows 运行时 C\+\+ 模板库
+Windows 运行时 C++ 模板库

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2566e86e9bc792fad455b293dcf213671ab8ed5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 421c3b89f90210b05133ffccc7bd9e5cb615635f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-types-classes"></a>数据类型类
 以下类包装 c + + 数据类型：  
@@ -32,6 +33,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [CComCurrency](../atl/reference/ccomcurrency-class.md)用于创建和管理包括方法和运算符`CURRENCY`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)
 

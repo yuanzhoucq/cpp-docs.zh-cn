@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a06fe0f7fab05b6b73856fa3f326f1c54d4f55c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ece9858d0be171febaeb52e820e922665ac2a351
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray 类
 构造的 COM 接口指针的数组时，此类提供有用的方法。  
@@ -61,7 +62,7 @@ class CInterfaceArray :
   
  `CInterfaceArray`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcoll.h  
   
 ##  <a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
@@ -74,7 +75,7 @@ CInterfaceArray() throw();
 ### <a name="remarks"></a>备注  
  初始化智能指针数组。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAtlArray 类](../../atl/reference/catlarray-class.md)   
  [CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86e92f86896ac7c5a06b73a68e2d6889d10ea87b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bd8817b325ebb9a9d8899211416dcbecfcd3f79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 类
 构造的 COM 接口指针的列表时，此类提供有用的方法。  
@@ -61,7 +62,7 @@ class CInterfaceList
   
  `CInterfaceList`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcoll.h  
   
 ##  <a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
@@ -78,7 +79,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 ### <a name="remarks"></a>备注  
  块大小是内存的分配需要一个新的元素时量的度量值。 更大的块大小减少到内存分配例程的调用，但使用更多资源。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAtlList 类](../../atl/reference/catllist-class.md)   
  [CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits 类](../../atl/reference/ccomqiptrelementtraits-class.md)   

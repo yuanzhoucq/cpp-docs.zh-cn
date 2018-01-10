@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e9466c2081b7d9622776702d367ccae64a36b4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3ef0cdc45d4f3b84c738e5eec24d76a1f9b7fe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 类
 `CComCurrency` 具有用于创建和管理 CURRENCY 对象的方法和运算符。  
@@ -95,14 +96,14 @@ class CComCurrency
   
  指定的整数和小数部分时**CComCurrency**对象，请记住小数部分是 0 到 9999 范围内的数字。 在处理美元等在小数点后仅采用两个有效位数来表示金额的货币时，这一点非常有用。 即使不显示最后两位数字，也必须将它们考虑在内。  
   
-|值|可能的 CComCurrency 赋值|  
+|“值”|可能的 CComCurrency 赋值|  
 |-----------|---------------------------------------|  
 |$10.50|CComCurrency(10,5000)*或*ccomcurrency （10.50)|  
 |$10.05|Ccomcurrency （10500)*或*ccomcurrency （10.05)|  
   
  值**CY_MIN_FRACTION**， **CY_MAX_FRACTION**，和**CY_SCALE**在 atlcur.h 中定义。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcur.h  
   
 ##  <a name="ccomcurrency"></a>CComCurrency::CComCurrency  
@@ -556,7 +557,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#54](../../atl/codesnippet/cpp/ccomcurrency-class_21.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COleCurrency 类](../../mfc/reference/colecurrency-class.md)   
  [货币](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)   
  [类概述](../../atl/atl-class-overview.md)

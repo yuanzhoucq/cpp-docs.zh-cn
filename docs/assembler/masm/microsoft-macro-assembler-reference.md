@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9df0f039bb9fcf9b157c642025b3f140c26ccc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 宏汇编程序参考
 Microsoft Macro Assembler (MASM) 提供内联程序集的几个的优点。 MASM 包含具有功能，如循环、 算术、 和文本字符串处理的宏语言。 MASM 还可让你更好地控制硬件因为它支持的 386、 486 和 Pentium 处理器的指令集。 通过使用 MASM，你还可以减少时间和内存开销。  
@@ -53,7 +54,7 @@ Microsoft Macro Assembler (MASM) 提供内联程序集的几个的优点。 MASM
  [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
  提供的不同区域的 Visual Studio 和 Visual c + + 文档的链接。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../../intrinsics/compiler-intrinsics.md)   
  [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)   
  [x64 (amd64) 内部函数](../../intrinsics/x64-amd64-intrinsics-list.md)

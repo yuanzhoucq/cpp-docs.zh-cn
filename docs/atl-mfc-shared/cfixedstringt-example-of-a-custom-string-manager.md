@@ -1,68 +1,69 @@
 ---
-title: "CFixedStringT: Example of a Custom String Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFixedStringT class, using a custom string manager"
+title: "CFixedStringT： 示例的自定义字符串 Manager |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CFixedStringT: Example of a Custom String Manager
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT： 示例的自定义字符串管理器
+ATL 库实现的类所使用的自定义字符串管理器的一个示例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)、 调用**那么 CFixedStringMgr**。 `CFixedStringT`派生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)并实现的一部分分配其字符数据字符串`CFixedStringT`对象本身，只要字符串是否小于指定的长度比**t_nChars**模板参数的`CFixedStringT`。 使用此方法，该字符串不需要，堆，除非字符串的长度超过固定的缓冲区的大小。 因为`CFixedStringT`并非总是不使用堆分配其字符串数据，它不能使用**CAtlStringMgr**作为其字符串经理。 它使用自定义字符串管理器 (**那么 CFixedStringMgr**)、 实现[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)接口。 此接口已在[实现的自定义字符串管理器 （高级方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。  
+  
+ 构造函数**那么 CFixedStringMgr**采用三个参数：  
+  
+-   **pData:**指向固定的`CStringData`要使用的结构。  
+  
+-   **nChars:**最大字符数`CStringData`结构可以容纳。  
+  
+-   **pMgr:**指向的指针`IAtlStringMgr`接口的"备份字符串 manager"。  
+  
+ 构造函数存储的值`pData`和**pMgr**在其各自的成员变量 (`m_pData`和**m_pMgr**)。 然后，它设置为零，可用长度等于最大大小固定的缓冲区，以及为-1 的引用计数的缓冲区的长度。 引用计数值指示锁定缓冲区和要使用的此实例**那么 CFixedStringMgr**作为字符串经理。  
+  
+ 将缓冲区标记为锁定可以防止其他`CStringT`中保持到缓冲区的共享的引用的实例。 如果其他`CStringT`允许实例共享就包含缓冲区的缓冲区`CFixedStringT`其他字符串仍已使用缓冲区时要删除。  
+  
+ **那么 CFixedStringMgr**是完整的实现`IAtlStringMgr`接口。 分别讨论了每个方法的实现。  
+  
+## <a name="implementation-of-cfixedstringmgrallocate"></a>CFixedStringMgr::Allocate 的实现  
+ 实现**CFixedStringMgr::Allocate**首先检查字符串的请求的大小是否小于或等于固定的缓冲区的大小 (存储在`m_pData`成员)。 固定的缓冲区是否足够大，**那么 CFixedStringMgr**锁定固定的缓冲区长度为零。 只要增长的字符串长度不固定的缓冲区的大小超出`CStringT`不必重新分配缓冲区。  
+  
+ 如果字符串的请求的大小大于固定的缓冲区**那么 CFixedStringMgr**将请求转发到的备份字符串管理器。 备份字符串 manager 假定用于分配的堆中的缓冲区。 但是，在返回此缓冲区之前**那么 CFixedStringMgr**锁定缓冲区并将使用的指针替换缓冲区的字符串 manager 指针**那么 CFixedStringMgr**对象。 这可确保，尝试重新分配或释放由缓冲区`CStringT`将调入**那么 CFixedStringMgr**。  
+  
+## <a name="implementation-of-cfixedstringmgrreallocate"></a>CFixedStringMgr::ReAllocate 的实现  
+ 实现**CFixedStringMgr::ReAllocate**非常类似于其实现**分配**。  
+  
+ 如果正在进行重新分配的缓冲区是固定的缓冲区，并且请求的缓冲区大小小于固定的缓冲区，不分配是执行的。 但是，如果正在进行重新分配的缓冲区不是固定的缓冲区，它必须与备份管理器分配的缓冲区。 在这种情况下备份管理器用于重新分配缓冲区。  
+  
+ 如果正在进行重新分配的缓冲区是固定的缓冲区，并且新的缓冲区大小太大，以适合固定的缓冲区，**那么 CFixedStringMgr**分配一个新的缓冲区，使用的备份管理器。 固定的缓冲区的内容然后复制到新的缓冲区中。  
+  
+## <a name="implementation-of-cfixedstringmgrfree"></a>CFixedStringMgr::Free 的实现  
+ 实现**CFixedStringMgr::Free**遵循同一模式，为**分配**和`ReAllocate`。 如果正在释放缓冲区已固定的缓冲区，该方法会将其设置为零长度锁定缓冲区。 如果正在释放缓冲区已分配与备份管理器，**那么 CFixedStringMgr**使用备份管理器来释放它。  
+  
+## <a name="implementation-of-cfixedstringmgrclone"></a>CFixedStringMgr::Clone 的实现  
+ 实现**CFixedStringMgr::Clone**始终将指针返回到的备份管理器而不是**那么 CFixedStringMgr**本身。 这是因为每个实例的**那么 CFixedStringMgr**仅可使用的单个实例相关联`CStringT`。 任何其他实例`CStringT`尝试克隆 manager 应改为获取的备份管理器。 这是因为备份管理器支持与他方共享。  
+  
+## <a name="implementation-of-cfixedstringmgrgetnilstring"></a>CFixedStringMgr::GetNilString 的实现  
+ 实现**CFixedStringMgr::GetNilString**返回固定的缓冲区。 由于一对一的对应关系的**那么 CFixedStringMgr**和`CStringT`的给定的实例`CStringT`永远不会一次使用多个缓冲区。 因此，nil 字符串和真实的字符串缓冲区从不需要在同一时间。  
+  
+ 不使用固定的缓冲区时**那么 CFixedStringMgr**可确保它进行初始化长度为零。 这使它可以用作零的字符串。 另一个好处，`nAllocLength`固定的缓冲区的成员始终设置为固定的缓冲区的完整大小。 这意味着，`CStringT`可以增长情况下调用字符串[IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate)，即使零的字符串。  
+  
+## <a name="requirements"></a>惠?  
+ **标头：** cstringt.h  
+  
+## <a name="see-also"></a>请参阅  
+ [使用 CStringT 进行内存管理](../atl-mfc-shared/memory-management-with-cstringt.md)
 
-ATL库实现选件类使用的自定义字符串管理器的示例 [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)，调用 **CFixedStringMgr**。  `CFixedStringT` 从 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 派生并实现将其字符数据作为对象 `CFixedStringT` 一部分的字符串，只要该字符串的 `CFixedStringT`的 **t\_nChars** 模板参数指定的长度是的少。  此方法，除非该字符串的长度在固定缓冲区之外，的大小增大该字符串根本不需要堆。  由于 `CFixedStringT` 并不总是使用堆分配其字符串数据，不能将 **CAtlStringMgr** 作为字符串管理器。  它使用自定义字符串管理器\(**CFixedStringMgr**\)，[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) 实现接口。  此接口。[自定义字符串管理器\(高级方法的实现](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)讨论。  
-  
- **CFixedStringMgr** 的构造函数采用三个参数:  
-  
--   对于内置的 `CStringData` 结构的**pData:** 指针是使用。  
-  
--   **nChars:** `CStringData` 结构可以容纳的最大字符数。  
-  
--   为“备份字符串管理器的 `IAtlStringMgr` 接口的**pMgr:** 指针”。  
-  
- 构造函数在其各自的成员变量存储 `pData` 和 **pMgr** 的值\(`m_pData` 和 **m\_pMgr**\)。  然后设置缓冲区的长度为零，了可用的长度等于内置的缓冲区的最大大小和引用计数为– 1。  引用绑定值指示缓冲区已锁定和使用 **CFixedStringMgr** 此实例作为字符串管理器。  
-  
- 标记缓冲区为锁定阻止其他 `CStringT` 实例保存共享对缓冲区。  如果其他 `CStringT` 实例允许共享缓冲区为 `CFixedStringT` 包含的缓冲区可能需要删除，当其他字符串仍使用缓冲区时。  
-  
- **CFixedStringMgr** 是 `IAtlStringMgr` 接口的完全实现。  每个方法的实现分开讨论。  
-  
-## CFixedStringMgr::Allocate的实现  
- **CFixedStringMgr::Allocate** 的实现首先检查该字符串的请求范围是否小于或等于内置的缓冲区的大小\(存储在 `m_pData` 成员\)。  如果内置的缓冲区足够大，**CFixedStringMgr** 锁定与零长度的内置的缓冲区。  只要字符串长度不在固定缓冲区范围外的增大，`CStringT` 不必重新分配缓冲区。  
-  
- 如果该字符串的请求的大小大于内置的缓冲区 **CFixedStringMgr** 要备份的请求向前字符串管理器。  备份字符串管理器将假定从堆分配缓冲区。  但是，在返回此缓冲区 **CFixedStringMgr** 锁之前缓冲区和使用指针替换缓冲区的字符串管理器指向 **CFixedStringMgr** 对象。  这样可以确保尝试通过 `CStringT` 重新分配或释放缓冲区将调入 **CFixedStringMgr**。  
-  
-## CFixedStringMgr::ReAllocate的实现  
- **CFixedStringMgr::ReAllocate** 的实现类似于其 **Allocate**的实现。  
-  
- 如果重新分配的缓冲区是内置的缓冲区，并请求的缓冲区大小小于内置的缓冲区，发布未完成。  但是，因此，如果缓冲区重新分配的不是内置的缓冲区，它必须是缓冲区随该备份管理器。  在这种情况备份管理器用于重新分配缓冲区。  
-  
- 如果重新分配的缓冲区是固定的缓冲区，并且新的缓冲区大小太大而无法在固定缓冲区之内，使用该备份管理器，**CFixedStringMgr** 分配新的缓冲区。  内置的缓冲区的内容然后将其复制到新的缓冲区。  
-  
-## CFixedStringMgr::Free的实现  
- **CFixedStringMgr::Free** 的实现遵循与 **Allocate** 和 `ReAllocate`相同。  如果已释放的缓冲区是固定的缓冲区，方法将其设置为零的锁定的缓冲区。  如果已释放的缓冲区分配了该备份管理器，**CFixedStringMgr** 使用该备份管理器来释放。  
-  
-## CFixedStringMgr::Clone的实现  
- **CFixedStringMgr::Clone** 的实现始终返回指向该备份管理器而不是 **CFixedStringMgr**。  因为 **CFixedStringMgr** 每个实例只能与 `CStringT`，一个实例发生此错误。  尝试 `CStringT` 任何其他的实例克隆管理器如果捕获该备份管理器。  这是因为，该备份管理器支持共享。  
-  
-## CFixedStringMgr::GetNilString的实现  
- **CFixedStringMgr::GetNilString** 实现返回内置的缓冲区。  由于 **CFixedStringMgr** 和 `CStringT`一对一的通信，`CStringT` 特定实例每次从不使用多个缓冲区。  因此，null字符串和实际字符串缓冲区同时不需要。  
-  
- 每当内置的缓冲区中正在使用中，**CFixedStringMgr** 确保它初始化零。  这使它用作零字符串。  为添加的附加属性，内置的缓冲区的 `nAllocLength` 成员始终设置为内置的缓冲区的完整大小。  即使为null字符串意味着 `CStringT` 可能存在该字符串，而不调用，[IAtlStringMgr::Reallocate](../Topic/IAtlStringMgr::Reallocate.md)。  
-  
-## 要求  
- **Header:** cstringt.h  
-  
-## 请参阅  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

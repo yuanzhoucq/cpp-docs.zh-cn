@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14796948369b92c9137dc7e02a8399910d46997c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 类
 此类提供的方法来标准化时创建的窗口对象使用的样式。  
@@ -65,7 +66,7 @@ class CWinTraitsOR
   
  如果你想要提供默认值，仅当对的调用中不指定任何其他样式时将使用的窗口样式`CWindowImpl::Create`，使用[CWinTraits](../../atl/reference/cwintraits-class.md)相反。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
@@ -96,7 +97,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 ### <a name="return-value"></a>返回值  
  传入的扩展样式的组合`dwExStyle`和默认的指定`t_dwExStyle`，使用逻辑 OR 运算符  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   
  [了解窗口特征](../../atl/understanding-window-traits.md)
 

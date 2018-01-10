@@ -1,1 +1,1 @@
-Windows 软件开发包 \(SDK\)
+Windows 软件开发包 (SDK)

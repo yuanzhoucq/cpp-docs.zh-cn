@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89801ec258ae387683c5bedf74ca447902f8c4d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ccf82e7bb04e893c767619fcba662aca9898e12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-pooling-classes"></a>线程池类
 以下类支持线程池：  
@@ -33,6 +34,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [CComSimpleThreadAllocator](../atl/reference/ccomsimplethreadallocator-class.md)管理 EXE 模块的线程选择。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)
 

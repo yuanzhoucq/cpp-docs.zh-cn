@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ecc87bf670f56a2f56246cf45d2819b7ab7841f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 类
 此类提供正在枚举的项数组中的存储位置的 COM 枚举器接口的实现。  
@@ -104,7 +105,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
  `CComEnumImpl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
@@ -272,7 +273,7 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="remarks"></a>备注  
  如果返回 E_INVALIDARG`celt`为零，则返回 S_FALSE 如果小于`celt`返回元素，否则，返回，则为 S_OK。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IEnumOnSTLImpl 类](../../atl/reference/ienumonstlimpl-class.md)   
  [CComEnum 类](../../atl/reference/ccomenum-class.md)   
  [类概述](../../atl/atl-class-overview.md)

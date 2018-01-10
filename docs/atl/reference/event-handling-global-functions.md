@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 747704bb271c294728832c8ee8108da458c739ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6670ef283d24f57b407ad70693421feae427855f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-global-functions"></a>事件处理全局函数
 此函数提供了一个事件处理程序。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|等待发出对象信号，同时根据需要调度窗口消息。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
 
 ##  <a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop  
@@ -56,5 +57,5 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ### <a name="remarks"></a>备注  
  如果你想要等待的对象的事件发生这种情况，并通知的这种情况，但允许在等待时调度窗口消息，这非常有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: faa791e75817e3845b0f445cc741c88b7461a7c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2073e4fcb365b3beb10d4040c0f54d9f61a0431
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-macros"></a>文件名宏
 文件名宏被预定义为依赖项 （在磁盘上的不完整的文件名规范） 中指定的文件名。 这些宏不需要括在圆括号中时调用;指定仅的 $ 所示。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
 |**F**|基名称和扩展名|  
 |**R**|驱动器、 目录和基名称|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [特殊 NMAKE 宏](../build/special-nmake-macros.md)

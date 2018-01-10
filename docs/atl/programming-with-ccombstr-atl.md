@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d75d2df47f69384ead62712836eee057aed94f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8f496dd73c2d15f8f78ddbdc205f31a8520c674
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-ccombstr-atl"></a>使用 CComBSTR 进行编程 (ATL)
 ATL 类[CComBSTR](../atl/reference/ccombstr-class.md)提供的包装`BSTR`数据类型。 虽然`CComBSTR`是有用的工具，需要注意的几种情况。  
@@ -75,7 +76,7 @@ ATL 类[CComBSTR](../atl/reference/ccombstr-class.md)提供的包装`BSTR`数据
   
  请注意，是否该函数的参数，相同的代码将不导致了泄漏**[中，out]**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)   
  [wstring](../standard-library/basic-string-class.md)   

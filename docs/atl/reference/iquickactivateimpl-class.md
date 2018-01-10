@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c11185314c06e0e576d1832cef62899dd2151538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 类
 此类将合并到一个调用容器的控件初始化。  
@@ -67,7 +68,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
   
  `IQuickActivateImpl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlctl.h  
   
 ##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
@@ -108,6 +109,6 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
   
  请参阅[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) Windows SDK 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
  [类概述](../../atl/atl-class-overview.md)

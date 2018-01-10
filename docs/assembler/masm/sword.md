@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 687d1014a1428c66189a83d7277b43e43588070a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fef3dd66e37ef610b4be82b3421864a17381508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sword"></a>SWORD
 分配和 （可选） 为每个初始化存储的有符号的字 （2 个字节） `initializer`。 此外可作为类型说明符类型是合法的任何位置。  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
 name SWORD initializer [[, initializer]]...  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令引用](../../assembler/masm/directives-reference.md)   
  [WORD](../../assembler/masm/word.md)

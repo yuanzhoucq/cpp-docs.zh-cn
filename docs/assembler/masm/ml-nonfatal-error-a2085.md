@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d93ec58a7f55a2d875cc07dfbddff103b052f98c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f987b775c13b0e477fd5c1d215d556069535a0fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2085"></a>ML 非致命错误 A2085
 **指令或不接受当前 CPU 模式中的注册**  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  例如，32 位寄存器要求[.386](../../assembler/masm/dot-386.md)或更高版本。 控制寄存器如 CR0 需要特权模式下[.386P](../../assembler/masm/dot-386p.md)或更高版本。 此错误也会生成有关**NEAR32**， **FAR32**，和**平面**需要的关键字。**386**或更高版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ML 错误消息](../../assembler/masm/ml-error-messages.md)

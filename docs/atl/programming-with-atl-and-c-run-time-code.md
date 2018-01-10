@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c14b52ef062b2a60815f47adfb2b8d39e6aa31f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>使用 ATL 和 C 运行时代码进行编程
 本部分讨论使用 C 运行时库 (CRT) 与静态或动态链接的好处。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
  [C 运行时库](../c-runtime-library/crt-library-features.md)  
  介绍各种.lib 文件，包括 C 运行时库，并列出其关联的编译器选项和预处理器指令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)
 

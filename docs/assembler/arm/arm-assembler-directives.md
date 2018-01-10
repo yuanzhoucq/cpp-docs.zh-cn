@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM 汇编程序指令
-大多数情况下，Microsoft ARM 汇编程序使用 ARM 程序集语言，这记录在的第 7 章[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/?LinkId=246102)。 但是，某些程序集指令的 Microsoft 实现与不同 ARM 程序集指令。 本文介绍的区别。  
+大多数情况下，Microsoft ARM 汇编程序使用 ARM 程序集语言，这记录在的第 7 章[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 但是，某些程序集指令的 Microsoft 实现与不同 ARM 程序集指令。 本文介绍的区别。  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft 实现的 ARM 程序集指令  
  区域  
  Microsoft ARM 汇编程序支持这些区域属性： 对齐，代码、 CODEALIGN、 数据、 NOINIT、 READONLY、 READWRITE、 THUMB、 ARM。  
   
- 用拇指和臂除外工作如中所述[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/?LinkId=246102)。  
+ 用拇指和臂除外工作如中所述[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。  
   
  在 Microsoft ARM 汇编程序 THUMB 指示代码节包含 Thumb 代码，并且是代码段的默认值。  ARM 指示的部分包含 ARM 代码。  
   
@@ -109,6 +110,6 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  THUMBX  
  中不受支持，因为 Microsoft ARM 汇编程序不支持 Thumb 2EE 指令集。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ARM 汇编程序命令行参考](../../assembler/arm/arm-assembler-command-line-reference.md)   
  [ARM 汇编程序诊断消息](../../assembler/arm/arm-assembler-diagnostic-messages.md)

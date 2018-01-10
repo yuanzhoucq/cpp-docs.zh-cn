@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a85aa23baf294f5f1f4dc2eb49c6004d7633280
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 结构
 使用 atl。 任何项目使用  
@@ -72,10 +73,10 @@ struct _ATL_BASE_MODULE70 {
 ## <a name="remarks"></a>备注  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)指的 typedef `_ATL_BASE_MODULE70`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcore.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构](../../atl/reference/atl-structures.md)
 
 

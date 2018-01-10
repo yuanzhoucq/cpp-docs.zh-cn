@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
 A[通过并行程序集](http://msdn.microsoft.com/library/windows/desktop/ff951640)是资源的集合-一组 Dll、 windows 类、 COM 服务器、 类型库或接口 — 可用于应用程序在运行时使用。 将 Dll 重新打包程序集的主要优点是，在同一时间应用程序可以使用多个版本的程序集，并且可能对发布更新的当前安装的服务程序集。  
@@ -37,7 +38,7 @@ A[通过并行程序集](http://msdn.microsoft.com/library/windows/desktop/ff951
   
  此更改可能允许相应的 Dll 作为部署[私有程序集](http://msdn.microsoft.com/library/windows/desktop/aa370850)在应用程序本地文件夹中或作为[共享程序集](http://msdn.microsoft.com/library/windows/desktop/aa371839)WinSxS 程序集缓存中。 几个步骤需要遵循以便实现正确的运行时行为的此新的程序集;中描述了这些[对创建的并行程序集的准则](http://msdn.microsoft.com/library/windows/desktop/aa375155)。 正确编写程序集后可以部署为任一共享或私有程序集的应用程序依赖于它在一起。 安装时的并行程序集作为共享程序集，可以的按照中介绍的指南[安装 Win32 程序集以在 Windows XP 上的并排显示共享](http://msdn.microsoft.com/library/windows/desktop/aa369532)或使用[的合并模块](http://msdn.microsoft.com/library/windows/desktop/aa369820). 安装时的并行程序集作为私有程序集，你可能只复制相应 DLL、 资源和程序集清单中，作为安装过程的一部分到应用程序本地文件夹的目标计算机上，确保此程序集可以在运行时加载器找到 (请参阅[程序集搜索顺序](http://msdn.microsoft.com/library/windows/desktop/aa374224))。 另一种方法是使用[Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688)然后按照所述的指导[安装 Win32 程序集以在 Windows XP 上的应用程序私用](http://msdn.microsoft.com/library/windows/desktop/aa369534)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [部署示例](../ide/deployment-examples.md)   
  [生成 C/c + + 独立应用程序](../build/building-c-cpp-isolated-applications.md)   
  [生成 C/C++ 独立应用程序和并行程序集](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33b93084a99154aea671c877aae7d80e48485202
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3b55cb078dc5db1f0bf727a10f2a77ebfddd260
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 支持在 ATL 项目
 你可以使用[ATL 项目向导](../../atl/reference/creating-an-atl-project.md)以创建项目对 COM + 1.0 组件的基本支持。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  如果你选择**支持 COM + 1.0**复选框，你还可以选择**支持组件注册机构**。 组件注册机构允许你 COM + 1.0 对象获取组件的列表、 注册组件，或注销组件 （单独或在一次）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
  [使用 ATL 和 C 运行时代码编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)

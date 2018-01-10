@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -51,8 +50,7 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -63,30 +61,16 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f208b2937f2f19d87777b7158e5b765b784bb5d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-class"></a>CImage 类
 `CImage`提供增强的位图支持，包括用于加载和采用 JPEG、 GIF、 BMP 和可移植网络图形 (PNG) 格式保存映像的功能。  
@@ -110,7 +94,7 @@ class CImage
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[Cimage:: Alphablend](#alphablend)|显示具有透明或半透明的像素为单位的位图。|  
 |[CImage::Attach](#attach)|将附加`HBITMAP`到`CImage`对象。 可与非 DIB 部分位图或 DIB 部分位图。|  
@@ -159,7 +143,7 @@ class CImage
 |[CImage::operator HBITMAP](#operator_hbitmap)|返回附加到的 Windows 句柄`CImage`对象。|  
   
 ## <a name="remarks"></a>备注  
- `CImage`采用位图为任一独立于设备的位图 (DIB) 部分，或未;但是，你可以使用[创建](#create)或[CImage::Load](#load)与仅 DIB 部分。 你可以将附加到一个非 DIB 部分位图`CImage`对象使用[附加](#attach)，但不是能在然后使用以下`CImage`支持仅 DIB 部分位图的方法︰  
+ `CImage`采用位图为任一独立于设备的位图 (DIB) 部分，或未;但是，你可以使用[创建](#create)或[CImage::Load](#load)与仅 DIB 部分。 你可以将附加到一个非 DIB 部分位图`CImage`对象使用[附加](#attach)，但不是能在然后使用以下`CImage`支持仅 DIB 部分位图的方法：  
   
 - [GetBits](#getbits)  
   
@@ -195,7 +179,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```  
   
- 当你使用`CImage`在 MFC 项目中，请注意哪些项目中的成员函数需要指向的指针[CBitmap](../../mfc/reference/cbitmap-class.md)对象。 如果你想要使用`CImage`与此类函数，如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，将其传递你`CImage` `HBITMAP`，并使用返回`CBitmap*`。  
+ 当你使用`CImage`在 MFC 项目中，请注意哪些项目中的成员函数需要指向的指针[CBitmap](../../mfc/reference/cbitmap-class.md)对象。 如果你想要使用`CImage`与此类函数，如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，将其传递你`CImage` `HBITMAP`，并使用返回的`CBitmap*`.  
 
   
 ## <a name="example"></a>示例  
@@ -216,7 +200,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
  通过`CImage`，你有权 DIB 部分的实际位。 你可以使用`CImage`你以前使用过的 Win32 HBITMAP 或 DIB 部分任意位置对象。  
   
 > [!NOTE]
->  以下`CImage`方法具有对它们的使用限制︰  
+>  以下`CImage`方法具有对它们的使用限制：  
   
 |方法|限制|  
 |------------|----------------|  
@@ -233,8 +217,8 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 >   
 >  同样，你必须包含`atlimage.h`你包括之前`atlimpl.cpp`。 若要轻松地完成此操作，包括`atlimage.h`中你`stdafx.h`。  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlimage.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlimage.h  
   
 ##  <a name="alphablend"></a>Cimage:: Alphablend  
  显示具有透明或半透明的像素为单位的位图。  
@@ -391,7 +375,7 @@ BOOL BitBlt(
  目标矩形左上角逻辑 y 坐标。  
   
  `dwROP`  
- 要执行的光栅操作。 光栅操作代码定义如何合并的源、 目标和模式的位 （如定义当前所选的画笔） 以形成目标。 请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]有关其他光栅操作代码及其说明的列表。  
+ 要执行的光栅操作。 光栅操作代码定义如何合并的源、 目标和模式的位 （如定义当前所选的画笔） 以形成目标。 请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK for 其他光栅操作代码及其说明的列表中。  
   
  `pointDest`  
  A[点](http://msdn.microsoft.com/library/windows/desktop/dd162805)，该值指示目标矩形左上的角的结构。  
@@ -418,7 +402,7 @@ BOOL BitBlt(
  如果成功，则不为零，否则为零。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 有关详细信息，请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中。  
   
 ##  <a name="cimage"></a>CImage::CImage  
  构造 `CImage` 对象。  
@@ -456,7 +440,7 @@ BOOL Create(
  每个像素在位图中位的数字。 通常 4、 8、 16、 24 个或 32。 可以是 1 单色位图或掩码。  
   
  `dwFlags`  
- 指定是否该位图对象具有 alpha 通道。 可以是零个或多个以下值的组合︰  
+ 指定是否该位图对象具有 alpha 通道。 可以是零个或多个以下值的组合：  
   
 - **createAlphaChannel**如果只能是`nBPP`为 32，和`eCompression`是**BI_RGB**。 如果指定，则创建的映像必须存储在每个像素 （在非字母 32 位映像中未使用） 的第四个字节的每个像素的 alpha （透明度） 值。 在调用时，会自动使用此 alpha 通道[cimage:: Alphablend](#alphablend)。  
   
@@ -497,10 +481,10 @@ BOOL CreateEx(
 - **BI_BITFIELDS**格式为未压缩，颜色表由三个`DWORD`颜色掩码，以指定红色，绿色，组件，则分别和蓝色，每个像素。 这是在与 16 和 32 bpp 位图一起使用时有效。  
   
  *pdwBitfields*  
- 如果仅使用`eCompression`设置为**BI_BITFIELDS**，否则它必须是**NULL**。 指向数组的三个`DWORD`位掩码，指定每个像素的哪些位用于红色，绿色，分别和蓝色颜色，组件。 位域的限制的信息，请参阅[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 如果仅使用`eCompression`设置为**BI_BITFIELDS**，否则它必须是**NULL**。 指向数组的三个`DWORD`位掩码，指定每个像素的哪些位用于红色，绿色，分别和蓝色颜色，组件。 位域的限制的信息，请参阅[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。  
   
  `dwFlags`  
- 指定是否该位图对象具有 alpha 通道。 可以是零个或多个以下值的组合︰  
+ 指定是否该位图对象具有 alpha 通道。 可以是零个或多个以下值的组合：  
   
 - **createAlphaChannel**如果只能是`nBPP`为 32，和`eCompression`是**BI_RGB**。 如果指定，则创建的映像必须存储在每个像素 （在非字母 32 位映像中未使用） 的第四个字节的每个像素的 alpha （透明度） 值。 在调用时，会自动使用此 alpha 通道[cimage:: Alphablend](#alphablend)。  
   
@@ -651,7 +635,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>备注  
  此值确定定义每个像素的比特数和最大颜色数目的位图中。  
   
- 每像素位数通常是 1、 4、 8、 16、 24 个或 32。 请参阅**biBitCount**的成员[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]有关此值的详细信息。  
+ 每像素位数通常是 1、 4、 8、 16、 24 个或 32。 请参阅**biBitCount**的成员[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)有关此值的详细信息的 Windows SDK 中。  
   
 ##  <a name="getcolortable"></a>CImage::GetColorTable  
  从 DIB 部分调色板中的条目范围中检索红色、 绿色、 蓝色 (RGB) 颜色值。  
@@ -704,12 +688,12 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  Guid 数组，且每个元素对应于一个字符串中的文件类型。 中的示例中`pszAllFilesDescription`下面， `aguidFileTypes`[0] 是`GUID_NULL`和剩余的数组值是当前的操作系统支持的图像文件格式。  
   
 > [!NOTE]
->  常量的完整列表，请参阅**图像文件格式常量**中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+>  常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。  
   
  `pszAllFilesDescription`  
  如果此参数不是**NULL**，筛选器字符串将有一个附加的筛选器列表的开头。 此筛选器将具有的当前值`pszAllFilesDescription`有关其说明，并接受列表中的任何其他导出程序支持的任何文件扩展名的文件。  
   
- 例如:   
+ 例如:  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -721,7 +705,7 @@ CImage::GetExporterFilterString(
 
   
  `dwExclude`  
- 指定要从列表中排除的文件类型的位标志的集。 允许的标志包括︰  
+ 指定要从列表中排除的文件类型的位标志的集。 允许的标志包括：  
   
 - **excludeGIF** = 0x01 排除 GIF 文件。  
   
@@ -743,7 +727,7 @@ CImage::GetExporterFilterString(
   
 - **excludeDefaultLoad** = 0 对于负载，默认情况下包含类型的所有文件  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF**来保存，这些文件被排除在默认情况下因为它们通常有特殊要求。  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF**来保存，这些文件被排除在默认情况下因为它们通常有特殊要求。  
   
  `chSeparator`  
  使用图像格式之间的分隔符。 请参阅**备注**有关详细信息。  
@@ -754,15 +738,15 @@ CImage::GetExporterFilterString(
 ### <a name="remarks"></a>备注  
  你可以将生成的格式字符串传递到你 MFC [CFileDialog](../../mfc/reference/cfiledialog-class.md)对象来公开可用的图像的文件扩展名格式在文件另存为对话框中。  
   
- 参数*strExporter*具有格式︰  
+ 参数*strExporter*具有格式：  
   
- 文件 description0 |\*.ext0 | filedescription1 |\*.ext1 |...文件描述*n*|\*。ext *n*||  
+ 文件 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...文件描述 *n* &#124;\*。ext  *n* &#124; &#124;  
   
- 其中 | 由指定的分隔符字符`chSeparator`。 例如:   
+ 其中 &#124; 由指定的分隔符字符`chSeparator`。 例如:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用的默认分隔符 ' |' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给常见的文件保存对话框中，则使用 null 分隔符 \0'。  
+ 使用的默认分隔符 &#124;' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给常见的文件保存对话框中，则使用 null 分隔符 \0'。  
   
 ##  <a name="getheight"></a>CImage::GetHeight  
  检索的高度，以像素为单位的映像。  
@@ -793,12 +777,12 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  Guid 数组，且每个元素对应于一个字符串中的文件类型。 中的示例中`pszAllFilesDescription`下面， `aguidFileTypes`[0] 是`GUID_NULL`与剩余的数组的值为当前的操作系统支持的图像文件格式。  
   
 > [!NOTE]
->  常量的完整列表，请参阅**图像文件格式常量**中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+>  常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。  
   
  `pszAllFilesDescription`  
  如果此参数不是**NULL**，筛选器字符串将有一个附加的筛选器列表的开头。 此筛选器将具有的当前值`pszAllFilesDescription`有关其说明，并接受列表中的任何其他导出程序支持的任何文件扩展名的文件。  
   
- 例如:   
+ 例如:  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -810,7 +794,7 @@ CImage::GetImporterFilterString(
 
   
  `dwExclude`  
- 指定要从列表中排除的文件类型的位标志的集。 允许的标志包括︰  
+ 指定要从列表中排除的文件类型的位标志的集。 允许的标志包括：  
   
 - **excludeGIF** = 0x01 排除 GIF 文件。  
   
@@ -832,7 +816,7 @@ CImage::GetImporterFilterString(
   
 - **excludeDefaultLoad** = 0 对于负载，默认情况下包含类型的所有文件  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF**来保存，这些文件被排除在默认情况下因为它们通常有特殊要求。  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF**来保存，这些文件被排除在默认情况下因为它们通常有特殊要求。  
   
  `chSeparator`  
  使用图像格式之间的分隔符。 请参阅**备注**有关详细信息。  
@@ -840,15 +824,15 @@ CImage::GetImporterFilterString(
 ### <a name="remarks"></a>备注  
  你可以将生成的格式字符串传递到你 MFC [CFileDialog](../../mfc/reference/cfiledialog-class.md)对象来公开可用的图像的文件扩展名格式中**文件打开**对话框。  
   
- 参数*strImporter*具有格式︰  
+ 参数*strImporter*具有格式：  
   
- 文件 description0 |\*.ext0 | filedescription1 |\*.ext1 |...文件描述*n*|\*。ext *n*||  
+ 文件 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...文件描述 *n* &#124;\*。ext  *n* &#124; &#124;  
   
- 其中 | 由指定的分隔符字符`chSeparator`。 例如:   
+ 其中 &#124; 由指定的分隔符字符`chSeparator`。 例如:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用的默认分隔符 ' |' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给一组公共使用的 null 分隔符 \0'**文件打开**对话框。  
+ 使用的默认分隔符 &#124;' 如果将此字符串传递给 MFC`CFileDialog`对象。 如果将此字符串传递给一组公共使用的 null 分隔符 \0'**文件打开**对话框。  
   
 ##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  检索颜色表中的最大项数。  
@@ -951,7 +935,7 @@ bool IsDIBSection() const throw();
  **true**附加的位图是否 DIB 部分。 否则为**false**。  
   
 ### <a name="remarks"></a>备注  
- 如果位图不 DIB 部分，则无法使用以下`CImage`支持仅 DIB 部分位图的方法︰  
+ 如果位图不 DIB 部分，则无法使用以下`CImage`支持仅 DIB 部分位图的方法：  
   
 - [GetBits](#getbits)  
   
@@ -1129,7 +1113,7 @@ BOOL MaskBlt(
  通过指定的掩码位图的垂直像素偏移量`hbmMask`参数。  
   
  `dwROP`  
- 指定该方法使用来控制的源和目标数据的组合的前景色和背景三元光栅操作代码。 后台光栅操作代码存储在此值; 高序位字的高序位字节前景光栅操作代码存储在此值; 高序位字的低序位字节此值的低序位字被忽略，并且应为零。 前景色和背景此方法的上下文中的讨论，请参阅`MaskBlt`中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。 常见的光栅操作代码的列表，请参阅`BitBlt`中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 指定该方法使用来控制的源和目标数据的组合的前景色和背景三元光栅操作代码。 后台光栅操作代码存储在此值; 高序位字的高序位字节前景光栅操作代码存储在此值; 高序位字的低序位字节此值的低序位字被忽略，并且应为零。 前景色和背景此方法的上下文中的讨论，请参阅`MaskBlt`Windows SDK 中。 常见的光栅操作代码的列表，请参阅`BitBlt`Windows SDK 中。  
   
  `rectDest`  
  对引用`RECT`结构，用于标识目标。  
@@ -1220,7 +1204,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>备注  
  如果`hbmMask`标识有效的单色位图， **PlgBit**此位图用于屏蔽颜色数据从源矩形的位。  
   
- 此方法适用于 Windows NT 中，版本 4.0 及更高版本。 请参阅[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]更多详细信息。  
+ 此方法适用于 Windows NT 中，版本 4.0 及更高版本。 请参阅[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)更多详细信息的 Windows SDK 中。  
   
 ##  <a name="releasedc"></a>CImage::ReleaseDC  
  释放设备上下文。  
@@ -1272,7 +1256,7 @@ HRESULT Save(LPCTSTR pszFileName,
 - **ImageFormatGIF** GIF 压缩的映像。  
   
 > [!NOTE]
->  常量的完整列表，请参阅**图像文件格式常量**中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+>  常量的完整列表，请参阅**图像文件格式常量**Windows SDK 中。  
   
 ### <a name="return-value"></a>返回值  
  一个标准 `HRESULT`。  
@@ -1438,7 +1422,7 @@ BOOL StretchBlt(
  逻辑单位，目标矩形的高度。  
   
  `dwROP`  
- 要执行的光栅操作。 光栅操作代码定义如何合并的源、 目标和模式的位 （如定义当前所选的画笔） 以形成目标。 请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]有关其他光栅操作代码及其说明的列表。  
+ 要执行的光栅操作。 光栅操作代码定义如何合并的源、 目标和模式的位 （如定义当前所选的画笔） 以形成目标。 请参阅[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK for 其他光栅操作代码及其说明的列表中。  
   
  `rectDest`  
  对引用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构，用于标识目标。  
@@ -1462,7 +1446,7 @@ BOOL StretchBlt(
  如果成功，则为非 0 否则为 0。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 有关详细信息，请参阅[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK 中。  
   
 ##  <a name="transparentblt"></a>Cimage:: Transparentblt  
  将来自源设备上下文的位图复制到此当前设备上下文中。  
@@ -1575,15 +1559,13 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ```
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MMXSwarm 示例](../../visual-cpp-samples.md)   
  [SimpleImage 示例](../../visual-cpp-samples.md)   
  [独立于设备的位图](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)
- [独立于设备的位图](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
+ [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)[独立于设备的位图](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
-
 
 
 

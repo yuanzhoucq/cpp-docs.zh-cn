@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed5660be9a5559d5f51d0cdb0ec2e5bc185bd0b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02b8586d7df5a521b48bfce61a097ed6ca450196
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL 和自由线程封送拆收器
 ATL 简单对象向导的属性页提供了一个允许你的类以聚合自由线程封送处理程序 (FTM) 的选项。  
@@ -34,7 +35,7 @@ ATL 简单对象向导的属性页提供了一个允许你的类以聚合自由�
   
  使用此选项时，类必须对负责其数据的线程安全性。 此外，聚合自由线程封送处理程序且需要使用从其他对象中获得的接口指针的对象必须采取额外步骤来确保接口正确封送。 这通常涉及到将接口指针存储在全局接口表 (GIT)，每次使用它时从 GIT 获取指针。 ATL 提供类[CComGITPtr](../atl/reference/ccomgitptr-class.md)以帮助你使用存储在 git 中获取的接口指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
  [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   

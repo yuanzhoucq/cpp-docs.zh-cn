@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d10aa6a3f7220103ae6a3b9e57b9b3c42cd8739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>创建项目（ATL 教程，第 1 部分）
 本教程将指导你逐步完成创建用于显示多边形 ActiveX 对象的非特性化 ATL 项目。 对象包括允许用户的选项，若要更改组成的多边形和代码以刷新显示的边数。  
@@ -66,12 +67,12 @@ ms.lasthandoff: 10/24/2017
   
 3.  单击**链接器**。 更改**每 UserRedirection**选项设为**是**。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
  在下一步的步骤中，你将在你的项目中添加控件。  
   
  [步骤 2 到](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
 

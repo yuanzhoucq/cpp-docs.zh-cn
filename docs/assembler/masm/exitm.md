@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f4d20f09b487ac2ed122e11d862af7d436477d3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17aa9878b50671f838a2c4e43ce2bf79000d2d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exitm"></a>EXITM
 终止当前重复或宏块的扩展，并开始下一个语句在块外部的程序集。  
@@ -34,5 +35,5 @@ EXITM [[textitem]]
 ## <a name="remarks"></a>备注  
  在宏函数中， *textitem*返回的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

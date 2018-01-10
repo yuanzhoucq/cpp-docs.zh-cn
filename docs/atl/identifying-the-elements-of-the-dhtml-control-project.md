@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0dfa6a3a2e399ff108bdd97b3dfb9a16b627aefe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>确定 DHTML 控件项目的元素
 大多数 DHTML 控件代码完全这样会为任何 ATL 控件创建。 泛型代码的一个基本的了解，工作通过[ATL 教程](../atl/active-template-library-atl-tutorial.md)，并阅读部分[创建 ATL 项目](../atl/reference/creating-an-atl-project.md)和[ATL COM 对象的基础知识](../atl/fundamentals-of-atl-com-objects.md)。  
@@ -60,6 +61,6 @@ ms.lasthandoff: 10/24/2017
   
  请参阅[创建 ATL DHTML 控件](../atl/creating-an-atl-dhtml-control.md)若要开始构建 DHTML 控件。 请参阅[使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)有关如何访问测试容器的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
 

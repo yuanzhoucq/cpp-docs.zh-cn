@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c335d5146e28d3331fac8b0073a6bd6c7d1def5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7197ce84098961623ea95ccf22a7cec47ac6cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 向导和对话框
 活动模板库 (ATL) 向导生成各种类型的 COM 对象的样板文件代码。 你可以通过打开中的项目的快捷菜单来运行该向导**解决方案资源管理器**并选择**添加**，**类**。  

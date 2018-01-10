@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08d263e07a828fb1b4d485fc6f80be68d52142dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f812b99131d63b87df8dbfd8c9afd5493d0a0140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-contained-windows"></a>使用包含的窗口
 ATL 实现与包含的 windows [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)。 包含的窗口表示消息委托给容器对象而不是其自己的类中处理它们的窗口。  
@@ -42,6 +43,6 @@ ATL 实现与包含的 windows [CContainedWindowT](../atl/reference/ccontainedwi
   
  有关包含的窗口的详细信息，请参阅[SUBEDIT](../visual-cpp-samples.md)示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [窗口类](../atl/atl-window-classes.md)
 

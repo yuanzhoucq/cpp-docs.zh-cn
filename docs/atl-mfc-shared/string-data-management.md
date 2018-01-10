@@ -1,93 +1,94 @@
 ---
-title: "String Data Management | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode, string objects"
+title: "字符串数据管理 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# String Data Management
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+提供多种管理字符串数据:  
+# <a name="string-data-management"></a>字符串数据管理
+Visual c + + 提供多种方式来管理字符串数据：  
   
--   的[字符串操作](../c-runtime-library/string-manipulation-crt.md) 与C样式Null终止的字符串一起使用  
+-   [字符串操作](../c-runtime-library/string-manipulation-crt.md)用于使用 C 样式 null 结尾的字符串  
   
--   托管字符串的Win32 API函数  
+-   用于管理字符串的 Win32 API 函数  
   
--   MFC的选件类 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)，提供灵活，可调整大小的字符串对象  
+-   MFC 的类[CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)，它提供灵活、 可调整大小的字符串对象  
   
--   选件类 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)，提供MFC独立字符串对象与函数和 `CString`相同  
+-   类[CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)，这独立于 MFC 的字符串对象提供与相同的功能`CString`  
   
- 几乎所有程序与字符串处理数据。  MFC的 `CString` 选件类通常是灵活字符串处理的最佳方法。  从7.0版开始，`CString` 可用于MFC或MFC独立程序。  运行库和 `CString` 支持包含多字节（宽）字符的字符串，在 Unicode 或 MBCS 编程。  
+ 几乎所有的程序使用的字符串数据。 MFC 的`CString`类通常是灵活的字符串处理的最佳解决方案。 从版本 7.0，开始`CString`可以在 MFC 或独立于 MFC 的程序中使用。 这两个运行时库和`CString`支持包含多字节 （宽） 字符，如下所示 Unicode 或 MBCS 编程的字符串。  
   
- 本文介绍常规服务选件类库提供与字符串操作。  本文中包含的主题包括:  
+ 本文介绍类库提供了与字符串操作相关的通用服务。 本文中涵盖的主题包括：  
   
--   [Unicode和MBCS提供可移植性](#_core_unicode_and_mbcs_provide_portability)  
+-   [Unicode 和 MBCS 提供可移植性](#_core_unicode_and_mbcs_provide_portability)  
   
--   [CStrings和const char指针](#_core_cstrings_and_const_char_pointers)  
+-   [Cstring 和 const char 指针](#_core_cstrings_and_const_char_pointers)  
   
--   [CString引用计数](#_core_cstring_reference_counting)  
+-   [CString 引用计数](#_core_cstring_reference_counting)  
   
- [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) 选件类提供操作的字符串支持。  要替换和扩展C运行库字符串包通常提供的功能。  `CString` 选件类提供成员函数和运算符处理简化的字符串，类似于在基本找到的接口。  选件类用于构造，分配和比较 **CStrings** 和标准C\+\+字符串数据类型还提供构造函数和运算符。  由于 `CString` 从 `CObject`未派生，可以独立于大多数Microsoft基础选件类库使用 `CString` 对象\(MFC\)。  
+ [CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)类提供了操作字符串的支持。 它旨在替换和扩展通常由 C 运行时库字符串包提供的功能。 `CString`类提供成员函数和简化的字符串处理，类似于 Basic 中的运算符。 此类还提供构造函数和运算符用于构造、 分配，和比较**Cstring**和标准 c + + 字符串数据类型。 因为`CString`不派生自`CObject`，你可以使用`CString`独立于大多数的 Microsoft 基础类库 (MFC) 的对象。  
   
- `CString` 对象在“值语义”。`CString` 对象表示单个值。  思考 `CString` 作为一个实际字符串，不是指向字符串。  
+ `CString`对象遵循"值语义"。 A`CString`对象表示一个唯一值。 想一想`CString`为实际字符串，而不是指向字符串的指针。  
   
- `CString` 对象表示字符数目可变序列。  `CString` 对象可被视为字符数组。  
+ A`CString`对象表示的可变数量的字符序列。 `CString`对象可以看作的字符数组。  
   
-##  <a name="_core_unicode_and_mbcs_provide_portability"></a> Unicode和MBCS提供可移植性  
- MFC 3.0版和更高版本，MFC，包括 `CString`，对Unicode和多字节字符集\(mbcs\)启用。  此支持便于您对您可以为Unicode或ANSI字符创建的编写可携式代码。  若要启用此可移植性，在 `CString` 对象的每个字符类型 **TCHAR**，定义为 `wchar_t`，如果定义了符号 **\_UNICODE**，当您生成应用程序时，或者 `char`，如果没有。  `wchar_t` 字符都为16位。  如果使用符号 **\_MBCS** 生成定义，MBCS启用。  MFC用 **\_MBCS** 符号\(对于NAFX库\)或\(对于UAFX库\)中定义的 **\_UNICODE** 符号生成。  
+##  <a name="_core_unicode_and_mbcs_provide_portability"></a>Unicode 和 MBCS 提供可移植性  
+ MFC 3.0 版及更高版本，MFC，其中包括`CString`，为 Unicode 和多字节字符集 (MBCS) 启用。 此支持，使你更轻松地编写可移植的应用程序可以构建用于 Unicode 或 ANSI 字符。 若要启用此可移植性，在每个字符`CString`对象属于类型**TCHAR**，其定义为`wchar_t`如果您定义符号**_UNICODE**时生成应用程序，或作为`char`如果不是。 A`wchar_t`字符是 16 位宽。 如果用的符号生成启用 MBCS **_MBCS**定义。 MFC 本身生成使用**_MBCS**符号 （对于 NAFX 库中） 或**_UNICODE** （对于 UAFX 库中） 的符号定义。  
   
 > [!NOTE]
->  `CString` 示例中的和字符串中的附带的文章显示为Unicode可移植性正确格式的文本字符串，使用 **\_T** 宏，后者将字符串翻译为窗体:  
+>  `CString`中的示例和伴随文章上字符串显示为 Unicode 可移植性正确设置格式字符串，使用**_T**宏，将转换到窗体的文本字符串：  
   
  `L"literal string"`  
   
 > [!NOTE]
->  哪些编译器将Unicode字符串。  例如，下列代码：  
+>  该编译器将为 Unicode 字符串。 例如，以下代码：  
   
- [!code-cpp[NVC_ATLMFC_Utilities#187](../atl-mfc-shared/codesnippet/CPP/string-data-management_1.cpp)]  
-  
-> [!NOTE]
->  如果 **\_UNICODE** 定义或为ANSI字符串;如果没有，会转换为Unicode字符串。  有关更多信息，请参见中的文章 [Unicode 和多字节字符集 \(MBCS\) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
-  
- `CString` 对象可存储到 **INT\_MAX** \(2,147,483,647\)字符。  **TCHAR** 数据类型用于获取或设置各个字符在 `CString` 对象内。  不同字符数组，`CString` 选件类具有固定内存分配函数。  这允许 `CString` 对象自动增大根据需要\(即不需要考虑其 `CString` 对象以适应较长字符串\)。  
-  
-##  <a name="_core_cstrings_and_const_char_pointers"></a> CStrings和const char指针  
- `CString` 对象也象一个文本C样式字符串\( `PCXSTR`，与 **const char\***，如果不在Unicode下\)。  [CSimpleStringT::operator PCXSTR](../Topic/CSimpleStringT::operator%20PCXSTR.md) 转换运算符允许 `CString` 对象用的指针函数调用的字符随意进行替换。  **CString\( LPCWSTR**`pszSrc`**\)** 构造函数允许字符指针在 `CString` 对象进行替换。  
-  
- 不会尝试折叠 `CString` 对象。  如果您创建包含 `Chicago`的两 `CString` 对象，例如，在 `Chicago` 的字符在两个位置存储。  \(这可能不是真正的MFC的未来版本，因此，您不应依赖于它。\)  
+ [!code-cpp[NVC_ATLMFC_Utilities#187](../atl-mfc-shared/codesnippet/cpp/string-data-management_1.cpp)]  
   
 > [!NOTE]
->  当您直接需要访问 `CString` 为用非常数指向字符的指针时，请使用 [CSimpleStringT::GetBuffer](../Topic/CSimpleStringT::GetBuffer.md) 和 [CSimpleStringT::ReleaseBuffer](../Topic/CSimpleStringT::ReleaseBuffer.md) 成员函数。  
+>  如果将被转换为 Unicode 字符串**_UNICODE**定义或作为一个 ANSI 字符串如果不是。 有关详细信息，请参阅文章[Unicode 和多字节字符集 (MBCS) 支持](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
+  
+ A`CString`对象可存储最多**INT_MAX** (2,147,483,647) 个字符。 **TCHAR**数据类型用于获取或设置单个字符`CString`对象。 与字符数组不同`CString`类具有内置的内存分配功能。 这允许`CString`对象根据需要自动增长 (即，不需要担心增长`CString`对象大小以适应较长的字符串)。  
+  
+##  <a name="_core_cstrings_and_const_char_pointers"></a>Cstring 和 const char 指针  
+ A`CString`对象还可以充当文字的 C 样式字符串 ( `PCXSTR`，这是与相同**const char\*** 如果不是在 Unicode 下的)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)转换运算符允许`CString`自由地将替换为在函数调用中的字符指针的对象。 **CString (LPCWSTR** `pszSrc` **)**构造函数允许要替换的字符指针`CString`对象。  
+  
+ 未尝试折叠`CString`对象。 如果使两个`CString`对象包含`Chicago`，例如中的字符`Chicago`存储在两个位置。 （这可能不为 true 的将来版本的 MFC，因此不应依赖于它。）  
   
 > [!NOTE]
->  使用 [CStringT::AllocSysString](../Topic/CStringT::AllocSysString.md) 和 [CStringT::SetSysString](../Topic/CStringT::SetSysString.md) 成员函数分配和设置用于自动化的 `BSTR` 对象\(以前称为OLE自动化\)。  
+>  使用[CSimpleStringT::GetBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)和[CSimpleStringT::ReleaseBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)成员函数时你需要直接访问`CString`为非常量指向某个字符。  
   
 > [!NOTE]
->  如果可能，请分配到框架中 `CString` 对象而不是在堆。  这节省内存和简化参数传递。  
+>  使用[CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)和[CStringT::SetSysString](../atl-mfc-shared/reference/cstringt-class.md#setsysstring)成员函数以分配和设置`BSTR`在自动化 （以前称为 OLE 自动化） 中使用的对象。  
   
- `CString` 选件类不实现为Microsoft基础类库选件集合选件类，不过，`CString` 对象可能必须存储为元素集合中。  
+> [!NOTE]
+>  如果可能，分配`CString`帧上而不是在堆上的对象。 这样可以节省内存并简化了参数传递。  
   
-##  <a name="_core_cstring_reference_counting"></a> CString引用计数  
- 基于MFC 4.0版，那么，当 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) 复制对象时，MFC会递增引用计数而不是复制数据。  这使得传递参数和返回值 `CString` 对象由更有效的值。  这些操作导致复制构造函数有时不止一次调用。  递增引用计数减少这些常见操作的开销并进行使用 `CString` 一个更构成的选项。  
+ `CString`类未实现为 Microsoft 基础类库集合类，但`CString`对象当然可以存储为集合中的元素。  
   
- 当销毁每个副本，原始对象的引用计数递减。  销毁的原始 `CString` 对象，直到其引用计数减少为零。  
+##  <a name="_core_cstring_reference_counting"></a>CString 引用计数  
+ 从 MFC 4.0 版本后，开始时[CStringT 类](../atl-mfc-shared/reference/cstringt-class.md)复制对象，则 MFC 递增引用计数，而不是将数据复制。 这样，传递参数的值并返回`CString`通过更高效的值的对象。 这些操作会导致复制构造函数以调用，有时多个一次。 递增引用计数降低这些常见的操作的开销并使使用`CString`更具吸引力的选项。  
   
- 可以使用 `CString` 成员函数 [CSimpleStringT::LockBuffer](../Topic/CSimpleStringT::LockBuffer.md)，并禁用或启用的 [CSimpleStringT::UnlockBuffer](../Topic/CSimpleStringT::UnlockBuffer.md) 引用计数。  
+ 由于在销毁了每个副本中的原始对象的引用计数会递减。 原始`CString`只要其引用计数降为零，对象不会被销毁。  
   
-## 请参阅  
+ 你可以使用`CString`成员函数[CSimpleStringT::LockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[CSimpleStringT::UnlockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)禁用或启用引用计数。  
+  
+## <a name="see-also"></a>请参阅  
  [常规 MFC 主题](../mfc/general-mfc-topics.md)
+

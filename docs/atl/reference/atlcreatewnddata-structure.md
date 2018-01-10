@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99fc06e44f24b176482a6ff0b08ceed45b0f4f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 结构
 此结构包含类实例数据中的代码窗口中 atl。  
@@ -49,10 +50,10 @@ ms.lasthandoff: 10/24/2017
  **m_pNext**  
  到下一个指针`_AtlCreateWndData`对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构](../../atl/reference/atl-structures.md)
 
 

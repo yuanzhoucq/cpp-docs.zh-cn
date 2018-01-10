@@ -34,11 +34,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae5a0d527bd503422176fb01f4024d98100ef351
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d721cefd20ae5eb208c74d973069fb9365273d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 活动模板库包括以下 typedef。  
@@ -74,7 +75,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
   
  属于的 ATL 7.0 Module 类的类派生自 _ATL_BASE_MODULE 结构。  有关 ATL Module 类的详细信息，请参阅[COM 模块类](../../atl/com-modules-classes.md)。  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlcore.h
 
 ##  <a name="_atl_com_module"></a>_ATL_COM_MODULE  
@@ -87,7 +88,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ### <a name="remarks"></a>备注  
  使用 ATL 项目使用 COM 功能。 基于[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlbase.h
   
 ##  <a name="_atl_module"></a>_ATL_MODULE  
@@ -96,7 +97,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```   
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;   
 ```  
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** 
   
 ### <a name="remarks"></a>备注  
@@ -113,7 +114,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ### <a name="remarks"></a>备注  
  使用任何 ATL 项目使用窗口化功能。 基于[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlbase.h 
   
 ##  <a name="atl_url_port"></a>ATL_URL_PORT 
@@ -122,7 +123,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 typedef WORD ATL_URL_PORT;
 ```  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlutil.h
 
 ##  <a name="ccomdispatchdriver"></a>CComDispatchDriver  
@@ -131,7 +132,7 @@ typedef WORD ATL_URL_PORT;
 ```   
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;   
 ```  
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlbase.h
   
 ##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
@@ -168,7 +169,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
   
  使用`CComObjectThreadModel`中单个对象类。 使用`CComGlobalsThreadModel`全局可用于您的程序，或者在你想要保护跨多个线程的模块资源的对象中。  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlbase.h
   
 ##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
@@ -205,7 +206,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
   
  使用`CComObjectThreadModel`中单个对象类。 使用`CComGlobalsThreadModel`对象中是全局可用到你的程序，或当你想要保护跨多个线程的模块资源。  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlbase.h
   
 ##  <a name="ccontainedwindow"></a>CContainedWindow  
@@ -215,7 +216,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 typedef CContainedWindowT<CWindow> CContainedWindow;   
 ```  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlwin.h
   
 ### <a name="remarks"></a>备注  
@@ -228,7 +229,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 typedef CPathT<CString> CPath;   
 ```  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlpath.h
   
 ##  <a name="cpatha"></a>CPathA  
@@ -238,7 +239,7 @@ typedef CPathT<CString> CPath;
 typedef CPathT<CStringA> CPathA;   
 ```
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlpath.h  
   
 ##  <a name="cpathw"></a>CPathW  
@@ -247,7 +248,7 @@ typedef CPathT<CStringA> CPathA;
 ```   
 typedef ATL::CPathT<CStringW> CPathW;   
 ```  
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlpath.h
   
 ##  <a name="csimplevalarray"></a>CSimpleValArray  
@@ -262,7 +263,7 @@ typedef ATL::CPathT<CStringW> CPathW;
  `CSimpleValArray`提供用于创建和管理包含简单数据类型的数组。 它是一个简单 #define 的[CSimpleArray](../../atl/reference/csimplearray-class.md)。  
 
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlsimpcoll.h
   
 ##  <a name="lpcurl"></a>LPCURL  
@@ -272,7 +273,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 typedef const CUrl* LPCURL;   
 ```  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlutil.h
 
 ##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
@@ -291,7 +292,7 @@ typedef const CUrl* LPCURL;
 如果当前的项目使用多线程的 CRT，DefaultThreadTraits 被指 CRTThreadTraits。 否则，使用 Win32ThreadTraits。
 
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlbase.h
   
 ##  <a name="lpurl"></a>LPURL  
@@ -301,11 +302,11 @@ typedef const CUrl* LPCURL;
 typedef CUrl* LPURL;   
 ```  
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 **标头：** atlutil.h
 
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
  [函数](../../atl/reference/atl-functions.md)   
  [全局变量](../../atl/reference/atl-global-variables.md)   

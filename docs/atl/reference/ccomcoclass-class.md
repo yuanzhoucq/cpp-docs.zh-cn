@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,36 +14,21 @@ f1_keywords:
 - ATLCOM/ATL::CComCoClass::Error
 - ATLCOM/ATL::CComCoClass::GetObjectCLSID
 - ATLCOM/ATL::CComCoClass::GetObjectDescription
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 967c919bb68890c51be6a0800db90692346e2b7d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 类
 此类提供方法以创建类的实例，并获取其属性。  
@@ -77,18 +61,18 @@ class CComCoClass
 ## <a name="remarks"></a>备注  
  `CComCoClass`提供用于检索对象的 CLSID、 设置错误的信息，以及创建类的实例方法。 在中的任何类注册[对象映射](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f)应派生自`CComCoClass`。  
   
- `CComCoClass`此外定义了你的对象的默认类工厂和聚合模型。 `CComCoClass`使用以下两个宏︰  
+ `CComCoClass`此外定义了你的对象的默认类工厂和聚合模型。 `CComCoClass`使用以下两个宏：  
   
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)声明类工厂为[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)。  
   
 - [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)声明你的对象可以进行聚合。  
   
- 你可以通过在类定义中指定的另一个宏覆盖这些默认值之一。 例如，若要使用[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)而不是`CComClassFactory`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)宏︰  
+ 你可以通过在类定义中指定的另一个宏覆盖这些默认值之一。 例如，若要使用[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)而不是`CComClassFactory`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)宏：  
   
- [!code-cpp[NVC_ATL_COM #2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComCoClass::CreateInstance  
  使用这些`CreateInstance`函数来创建实例的 COM 对象并检索的接口指针，而不使用 COM API。  
@@ -112,7 +96,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out]如果创建成功接收的请求的接口指针的指针变量的地址。  
   
 ### <a name="return-value"></a>返回值  
- 标准 `HRESULT` 值。 请参阅[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关可能的返回值的说明。  
+ 标准 `HRESULT` 值。 请参阅[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)有关可能的返回值的说明 Windows SDK 中。  
   
 ### <a name="remarks"></a>备注  
  典型对象创建; 请使用此函数的第一个重载当你需要将聚合正在创建的对象时，请使用第二个重载。  
@@ -126,7 +110,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 ### <a name="example"></a>示例  
  在下面的示例中，`CDocument`向导生成的 ATL 类派生自`CComCoClass`实现**IDocument**接口。 在对象映射中注册类`OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO`宏，因此客户端不能创建的文档使用实例[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。 `CApplication`是提供一种方法在它自己的 COM 接口来创建文档类的实例之一的组件类。 下面的代码显示如何轻松它创建的文档类使用实例`CreateInstance`成员继承自`CComCoClass`基类。  
   
- [!code-cpp[NVC_ATL_COM #11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
 ##  <a name="error"></a>CComCoClass::Error  
  此静态函数将设置`IErrorInfo`接口，以向客户端提供错误信息。  
@@ -222,14 +206,13 @@ static LPCTSTR WINAPI GetObjectDescription();
  类对象的说明。  
   
 ### <a name="remarks"></a>备注  
- 默认实现返回**NULL**。 你可以使用重写此方法[DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)宏。 例如:   
+ 默认实现返回**NULL**。 你可以使用重写此方法[DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)宏。 例如:  
   
- [!code-cpp[NVC_ATL_COM #12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
  `GetObjectDescription`由调用**IComponentRegistrar::GetComponents**。 **IComponentRegistrar**是自动化接口，您可以注册和取消注册在 DLL 中的各个组件。 当使用 ATL 项目向导创建的组件注册机构对象时，向导将自动执行**IComponentRegistrar**接口。 **IComponentRegistrar**通常由 Microsoft Transaction Server。  
   
  有关 ATL 项目向导的详细信息，请参阅文章[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

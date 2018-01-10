@@ -1,32 +1,31 @@
 ---
-title: "ML Nonfatal Error A2078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2078"
+title: "ML 非致命错误 A2078 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2078
+dev_langs: C++
+helpviewer_keywords: A2078
 ms.assetid: 42ac48fd-ac7f-4e74-a11e-20181d443faf
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 20d7a0752a34b1513bc0bfe5e52d01284d0eb466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**命令不允许更间接寻址**  
+# <a name="ml-nonfatal-error-a2078"></a>ML 非致命错误 A2078
+**指令不允许远处间接寻址**  
   
- 一个条件分支或循环不能采用内存操作数。  必须为其提供相对地址或标签。  
+ 条件跳转或循环不能采用内存操作数。 必须为其提供的相对地址或标签。  
   
-## 请参阅  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>请参阅  
+ [ML 错误消息](../../assembler/masm/ml-error-messages.md)
