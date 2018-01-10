@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2560043bc97c384846696b76d8e38b459ae4a34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9aa685604580423262ab694d1285897cd29eef63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="device-context-global-functions"></a>设备上下文全局函数
 此函数创建对给定的设备的设备上下文。  
@@ -49,8 +50,8 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
   
  如果*hdc*不**NULL**和`ptd`是**NULL**，该函数将返回现有*hdc*。  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
    
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)

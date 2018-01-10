@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b86bd8874e054dc2d2865523e77436e1f8cf6f81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e2d0da431249ef886ceca1e2b7f6cbfc99418dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-c-code-from-dhtml"></a>从 DHTML 调用 c + + 代码
 DHTML 控件可以承载于一个容器，例如测试容器或 Internet 资源管理器。 请参阅[使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)有关如何访问测试容器的信息。  
@@ -47,6 +48,6 @@ DHTML 控件可以承载于一个容器，例如测试容器或 Internet 资源�
   
  请参阅[修改 ATL DHTML 控件](../atl/modifying-the-atl-dhtml-control.md)有关提供你自己的方法的详细信息。 请参阅[确定 DHTML 控件项目元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)有关 HTML 文件的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
 

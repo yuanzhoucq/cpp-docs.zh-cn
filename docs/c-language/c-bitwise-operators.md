@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3be1384c12ece809bd8fc275625efd4acef5a407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a55cbad7606eb5ce204e3363b1d292c787b59740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bitwise-operators"></a>C 按位运算符
 按位运算符执行按位“与”(&)、按位“异或”(^) 和按位“与或”(&#124;) 运算。  
@@ -95,7 +96,7 @@ n = i ^ j;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按位“与”运算符：&](../cpp/bitwise-and-operator-amp.md)   
  [按位“异或”运算符：^](../cpp/bitwise-exclusive-or-operator-hat.md)   
  [按位“与或”运算符：&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

@@ -57,11 +57,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32a8af3120c0a984da88a2a40e979e8b2868cce7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 类
 实现结合了动画情节提要、 动画对象和转换来定义动画的动画组。  
@@ -115,7 +116,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|动画组的唯一标识符。|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|指向此组所属的动画控制器的指针。|  
@@ -126,7 +127,7 @@ class CAnimationGroup;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CAnimationGroup`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
@@ -354,5 +355,5 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ### <a name="remarks"></a>备注  
  将此值设置为 FALSE，仅当分配堆栈上的转换。 默认值为 TRUE，因此它具有强烈建议为使用新的运算符的转换对象分配空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

@@ -109,11 +109,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f22a8ac8c1d20bb6f972b8674c344db7c8a5ce60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca9848ba0ad3f5be1584e299a8a2d2b69f472425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-class"></a>list 类
 C++ 标准库列表类是序列容器的一个模板类，用于将它们的元素保持为线性排列，并允许在序列的任何位置高效插入和删除。 序列存储为双向链接的元素列表，每个包含一些 *Type* 类型的成员。  
@@ -157,7 +158,7 @@ class list
 |[const_reference](#const_reference)|提供对存储于列表中供读取和执行 `const` 操作的 `const` 元素的引用的类型。|  
 |[const_reverse_iterator](#const_reverse_iterator)|提供可读取列表中任何 `const` 元素的双向迭代器的类型。|  
 |[difference_type](#difference_type)|提供引用同一列表中的元素的两个迭代器之间的差异的类型。|  
-|[iterator](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|  
+|[Iterator](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|  
 |[pointer](#pointer)|提供指向列表中元素的指针的类型。|  
 |[reference](#reference)|提供对存储于列表中供读取和执行 `const` 操作的 `const` 元素的引用的类型。|  
 |[reverse_iterator](#reverse_iterator)|提供可读取或修改反向列表中的元素的双向迭代器的类型。|  
@@ -209,7 +210,7 @@ class list
 |-|-|  
 |[list::operator=](#op_eq)|用另一个列表的副本替换列表中的元素。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头**：\<list>  
   
 ##  <a name="allocator_type"></a>list::allocator_type  
@@ -421,7 +422,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>备注  
  由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
+ 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -1236,7 +1237,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
   
  第三个构造函数指定特定数目 (`Count`) 的元素的重复，这些元素具有类 **Type** 的默认值。  
   
- 第四个和第五个构造函数指定 (`Count`) 元素的重复，元素的值为 `Val`。  
+ 第四个和第五个构造函数指定 ( `Count`) 元素的重复，元素的值为 `Val`。  
   
  第六个构造函数指定列表 `Right` 的副本。  
   
@@ -1461,7 +1462,7 @@ list& operator=(list&& right);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`right`|要复制到 `list` 中的 [list](../standard-library/list-class.md)。|  
   
 ### <a name="remarks"></a>备注  
@@ -2528,8 +2529,8 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<list>](../standard-library/list.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

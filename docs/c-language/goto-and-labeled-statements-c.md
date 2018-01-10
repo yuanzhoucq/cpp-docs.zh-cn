@@ -18,17 +18,18 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5bfa5b145f698b1c93c4a494802cd63bbcfb04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea0543a13d16850be4259d2d93f763dd0edcbda3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和标记语句 (C)
 `goto` 语句将控制权转交给一个标签。 给定标签必须位于同一函数中，并且只可以出现在同一函数中的一个语句前面。  
   
 ## <a name="syntax"></a>语法  
- statement：  
+ *statement*：  
  labeled-statement  
   
  jump-statement  
@@ -75,5 +76,5 @@ int main()
   
  在此示例中，当 `goto` 等于 5 时，`stop` 语句将控制权转交给标记为 `i` 的点。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [语句](../c-language/statements-c.md)

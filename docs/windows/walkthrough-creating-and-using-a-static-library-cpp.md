@@ -16,11 +16,14 @@ caps.latest.revision: "38"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97de0b4dba9aa05e34c03077d22f42bb7a2266b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>演练：创建和使用静态库 (C++)
 此分步演练演示如何创建用于 C++ 应用的静态库（.lib 文件）。 使用静态库是重用代码的一种绝佳方式。 你不必在要求功能的每个应用中重新实现同一例程，而只需将其写入静态数据库一次，然后从应用引用它们即可。 从静态库链接的代码成为了应用的一部分，这样你就不必安装另一个文件来使用代码。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [运行应用程序](#BKMK_RunApp)  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要了解 C++ 语言的基础知识。  
   
 ##  <a name="BKMK_CreateLibProject"></a> 创建静态库项目  
@@ -136,6 +139,6 @@ ms.lasthandoff: 10/24/2017
     a / b = 0.0747475  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [演练：创建和使用动态链接库 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)   
  [桌面应用程序 (Visual C++)](../windows/desktop-applications-visual-cpp.md)

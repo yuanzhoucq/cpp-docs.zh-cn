@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 310ac33fa4e34e75273732f715472114bab9650f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="names-add-property-wizard"></a>“添加属性向导”->“名称”
 使用此向导将属性添加到接口。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/24/2017
  **默认属性**  
  MFC 调度仅接口。 将此属性设置为默认值为接口。 接口可具有只有一个默认属性;一旦指定给该接口，添加的任何其他属性的默认属性，则此框不可用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加属性](../ide/adding-a-property-visual-cpp.md)   
  [IDL 特性，添加属性向导](../ide/idl-attributes-add-property-wizard.md)   
  [实现接口](../ide/implementing-an-interface-visual-cpp.md)

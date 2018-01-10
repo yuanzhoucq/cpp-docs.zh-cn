@@ -30,11 +30,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ae382ff8f7a37754951327eafdad0cec2239faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 在程序执行过程中设置的保存错误代码的全局宏，以及用于显示的错误代码的等效字符串。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
   
  下表中的所有 `errno` 值是在 \<errno.h> 中预定义的常量，并且与 UNIX 兼容。 ISO C99 标准中仅指定了 `ERANGE`、`EILSEQ` 和 `EDOM`。  
   
-|常量|系统错误消息|值|  
+|返回的常量|系统错误消息|“值”|  
 |--------------|--------------------------|-----------|  
 |`EPERM`|不允许执行该操作|1|  
 |`ENOENT`|没有此文件或目录|2|  
@@ -108,7 +109,7 @@ ms.lasthandoff: 10/24/2017
 |`EILSEQ`|非法字节序列|42|  
 |`STRUNCATE`|字符串被截断|80|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |全局宏|必需的标头|可选标头|  
 |------------------|---------------------|---------------------|  
@@ -117,7 +118,7 @@ ms.lasthandoff: 10/24/2017
   
  `_doserrno`、`_sys_errlist` 和 `_sys_nerr` 宏是 Microsoft 扩展。 有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局变量](../c-runtime-library/global-variables.md)   
  [errno 常量](../c-runtime-library/errno-constants.md)   
  [perror、_wperror](../c-runtime-library/reference/perror-wperror.md)   

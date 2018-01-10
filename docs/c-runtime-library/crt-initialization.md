@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cdc3bd0d6370848859b16ce30eff6a224d83a60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d472026649bbe1d72a9afba42f224b0b9159258d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 本主题介绍 CRT 如何在本机代码中初始化全局状态。  
@@ -100,5 +101,5 @@ RELOCATIONS #6
   
  CRT 库会使用 `__xc_a` 和 `__xc_z` 来确定全局初始值设定项列表的开头和结尾，原因在于这些设定项在图像加载后在内存中布局的方式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

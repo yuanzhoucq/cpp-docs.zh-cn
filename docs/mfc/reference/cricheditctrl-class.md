@@ -163,11 +163,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ccc21b89b7330eca084dbd740a36ce5e031ff8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03ef5135130590d142e9725e1d064b932cc7ff4d
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 类
 提供 Rich Edit 控件功能。  
@@ -290,7 +291,7 @@ class CRichEditCtrl : public CWnd
   
  `CRichEditCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmn.h  
   
 ##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
@@ -1210,7 +1211,7 @@ int LineLength(int nLine = -1) const;
  指定其长度是要检索的行中的一个字符的字符索引。 如果此参数为-1，返回当前行 （包含脱字号的行） 的长度，不包括任何的长度在所选的行中的文本。 当`LineLength`称为对于单行编辑控件，则忽略此参数。  
   
 ### <a name="return-value"></a>返回值  
- 当`LineLength`称为对于多行编辑控件，返回值是由指定的行的长度 （以字节为单位） `nLine`。 当`LineLength`称为对于单行编辑控件，返回值是编辑控件中的文本的长度 （以字节为单位）。  
+ 当`LineLength`调用用于多个行编辑控件，则返回值是长度 (在`TCHAR`) 由指定的行的`nLine`。  它不包括位于行的末尾处的回车符的字符。 当`LineLength`称为对于单行编辑控件，则返回值是长度 (在`TCHAR`) 的编辑控件中的文本。 如果不大于控件中的字符数，则返回值为零。
   
 ### <a name="remarks"></a>备注  
  使用[LineIndex](#lineindex)成员函数以检索在此给定的行数量的字符索引`CRichEditCtrl`对象。  
@@ -1910,7 +1911,7 @@ BOOL Undo();
 ### <a name="example"></a>示例  
   请参阅示例[CanUndo](#canundo)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例写字板](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

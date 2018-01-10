@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4fad93505a5778c23171b413654624a32e825b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fc671e624b16299db3366885f7bcd38b8518ee5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-qualifiers"></a>类型限定符
 类型限定符为标识符提供两个属性之一。 const 类型限定符将对象声明为不可修改。 `volatile` 类型限定符声明一个项，该项的值可由超出该项所在的程序控制范围的某个项（如并发执行的线程）合理更改。  
@@ -72,5 +73,5 @@ int volatile vint;     /* Volatile integer        */
   
 -   项可以同时为 const 和 `volatile`，在这种情况下，项无法通过其自己的程序进行合理修改，但可以通过某些异步进程进行修改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明和类型](../c-language/declarations-and-types.md)

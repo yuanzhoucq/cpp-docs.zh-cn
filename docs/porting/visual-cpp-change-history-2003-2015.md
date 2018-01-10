@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 更改历史记录（2003 - 2015）
 本文介绍从 Visual Studio 2003 到 Visual Studio 2015 的所有重大更改。在本文中，术语“新行为”或“现在”指 Visual Studio 2015 及更高版本。 术语“旧行为”和“之前”指 Visual Studio 2013 和早期版本。 
@@ -117,7 +118,7 @@ ms.lasthandoff: 10/24/2017
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
+-    **get 和 _getws**  已删除 [get](../c-runtime-library/gets-getws.md) 和 [ _getws](../c-runtime-library/gets-getws.md) 函数。 已从 C11 中的 C 标准库删除 gets 函数，因为其不能安全使用。 _getws 函数是与 gets 等效（但可用于宽字符串）的 Microsoft 扩展。 作为这些函数的替代，请考虑使用 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 和 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 -   **_cgets 和 _cgetws** 已删除 [_cgets](../c-runtime-library/cgets-cgetws.md) 和 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函数。 作为这些函数替代，请考虑使用 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 和 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
@@ -2879,7 +2880,7 @@ C c;
   
     ```  
   
-     若要在代码中查找早期版本将会优化的位置，请将该版本的编译器与 /W3 编译器选项一起使用，并打开警告 4370。 例如：  
+     若要在代码中查找早期版本将会优化的位置，请将该版本的编译器与 /W3 编译器选项一起使用，并打开警告 4370。 例如:  
   
     ```cpp  
     #pragma warning(default:4370)  
@@ -3521,5 +3522,5 @@ C c;
   
 -   现在，编译器会报告无法访问的代码 (C4702)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Visual Studio 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)

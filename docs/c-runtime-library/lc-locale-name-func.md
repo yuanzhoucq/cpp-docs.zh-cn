@@ -25,11 +25,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a60ca29a61d423186c8b53f23aa9e4d2941f8c57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 243fcd75c657125e001e4dc0544e9c315df1bd07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lclocalenamefunc"></a>___lc_locale_name_func
 内部 CRT 函数。 检索线程的当前区域设置名称。  
@@ -48,13 +49,13 @@ wchar_t** ___lc_locale_name_func(void);
   
  内部 CRT 函数特定于实现且会根据每个发行版本发生更改。 不建议在代码中使用它们。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`___lc_locale_name_func`|crt\src\setlocal.h|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   

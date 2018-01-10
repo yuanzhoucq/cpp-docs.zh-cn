@@ -29,11 +29,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 630b8a5160eaa808c12c16ec8dd45a96a621b7bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2aa296c04d81fcdea2000ab8e2dbc1ae5523673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 管理在退出时要调用的例程。  
@@ -74,15 +75,15 @@ int _execute_onexit_table(
   
  `_execute_onexit_table` 函数执行 onexit 函数表中的所有函数，并清除表，然后返回。 在调用 `_execute_onexit_table` 后，表处于无效状态；必须通过调用 `_initialize_onexit_table` 以对其重新初始化后才能再次使用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|  
   
  `_initialize_onexit_table`、`_register_onexit_function` 和 `_execute_onexit_table` 函数是 Microsoft 特定函数。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [atexit](../c-runtime-library/reference/atexit.md)   
  [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

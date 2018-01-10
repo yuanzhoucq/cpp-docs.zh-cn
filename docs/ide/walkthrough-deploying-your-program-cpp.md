@@ -20,18 +20,19 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6cec4d77ec1c5bcc010a061065516ef132ec88c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>演练：部署程序 (C++)
 现在，你已创建你的应用程序通过完成前面相关的演练中，列出了这些[使用适用于 c + + 桌面开发的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)，最后一步是，以便其他用户可以创建安装程序在其计算机上安装的程序。 为此，你需要将新项目添加到现有解决方案。 此新项目输出 setup.exe 文件，该文件将把你的应用程序安装到其他计算机上。  
   
  本演练演示如何使用 Windows Installer 部署应用程序。 你还可以使用 ClickOnce 部署应用程序。 有关详细信息，请参阅 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。 有关部署的详细信息一般情况下，请参阅[部署应用程序、 服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   本演练假定你具备 C++ 语言的基础知识。  
   
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  **上一步：** [演练： 调试项目 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)  
  [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

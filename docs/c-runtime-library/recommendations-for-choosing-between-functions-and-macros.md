@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6e10a2a2991f314d61bd8c2df22b59d7791b6c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>关于选择函数和宏的建议
 大多数 Microsoft 运行库例程都是编译的或汇编的函数，但有些例程是作为宏实现的。 当标头文件声明例程的函数和宏版本时，将优先考虑宏定义，因为它始终显示在函数声明之后。 在调用作为函数和宏实现的例程时，您可以通过两种方法强制编译器使用函数版本：  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/24/2017
   
 -   **类型检查** 在声明函数时，编译器会检查参数类型。 由于你不能声明宏，因此编译器无法检查宏自变量类型；尽管它可以检查传递给宏的自变量的数目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

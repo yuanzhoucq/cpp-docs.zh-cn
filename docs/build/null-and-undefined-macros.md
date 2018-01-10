@@ -1,32 +1,33 @@
 ---
-title: "null 宏和未定义的宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宏, null 和未定义"
-  - "NMAKE 程序, null 宏"
-  - "NMAKE 程序, 未定义的宏"
-  - "NMAKE 中的 Null 宏"
-  - "未定义的宏和 NMAKE"
+title: "Null 和未定义宏 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, undefined macros
+- Null macros in NMAKE
+- macros, null and undefined
+- undefined macros and NMAKE
+- NMAKE program, null macros
 ms.assetid: 1db4611a-1755-4328-b00f-d35365af8b6c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9581b152057655c510f1cbcd4ab29ba8339070b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# null 宏和未定义的宏
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-空宏和未定义的宏都展开为空字符串，但定义为空字符串的宏被视为是在预处理表达式中定义的。  若要将宏定义为空字符串，请不要在命令行或命令文件中的等号 \(\=\) 后面指定除空格或制表符以外的任何字符，并将空字符串或定义引在双引号 \(" "\) 内。  若要取消定义宏，请使用 **\!UNDEF**。有关更多信息，请参见[生成文件预处理指令](../build/makefile-preprocessing-directives.md)。  
+# <a name="null-and-undefined-macros"></a>null 宏和未定义的宏
+Null 和未定义宏会扩展为空字符串，但定义为空字符串的宏被视为预处理表达式中定义。 若要定义为空字符串的宏，请指定任何字符后的命令行或命令文件中的等号 （=） 除外空格或制表符，并将空字符串或定义括在双引号 ("")。 若要取消定义宏，请使用**！UNDEF。** 有关详细信息，请参阅[生成文件预处理指令](../build/makefile-preprocessing-directives.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [定义 NMAKE 宏](../build/defining-an-nmake-macro.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f04acfe9458b8a10142ef7bc12155bc8e2a9a52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5c314fb66a6bd45d1e9ce22b9d88195dce27b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-calls"></a>函数调用
 函数调用是一个用于将控制权和参数（如果有）传递给函数的表达式，格式如下：  
@@ -99,5 +100,5 @@ work( count, lift );
   
  一个参数 `i` 将传递给所调用的参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../c-language/functions-c.md)

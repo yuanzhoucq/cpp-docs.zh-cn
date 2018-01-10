@@ -32,11 +32,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a0ad6631d9171e8fcdc59e13e60eda2cc729c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 自定义格式化 I/O 函数使用的输出格式。  
@@ -66,13 +67,13 @@ unsigned int _set_output_format(
   
  若要启用两位数指数，请使用参数 `_TWO_DIGIT_EXPONENT`调用此函数，如示例中所示。 若要禁用两位数指数，请使用参数 0 调用此函数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_set_output_format`|\<stdio.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -124,6 +125,6 @@ int main()
  1.211E-005  2.306E-112  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)   
  [_get_output_format](../c-runtime-library/get-output-format.md)

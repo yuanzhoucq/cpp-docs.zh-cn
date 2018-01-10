@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04f2871af749091e97ec1731650f998739995781
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-implementing-a-property-page"></a>示例： 实现的属性页
 此示例演示如何生成显示 （并允许您更改） 的属性的属性页[文档类](../mfc/document-classes.md)接口。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="vcconusing_the_atl_object_wizard"></a>添加 ATL 属性页类  
  首先，创建新的 ATL 项目调用 DLL 服务器`ATLPages7`。 现在使用[ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)生成属性页。 为提供的属性页**短名称**的**DocProperties**然后切换到**字符串**页后，可以设置特定于属性页的项，如下面的表中所示。  
   
-|项|值|  
+|项|“值”|  
 |----------|-----------|  
 |标题|TextDocument|  
 |文档字符串|VCUE TextDocument 属性|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 10/24/2017
   
  使用[添加类对话框](../ide/add-class-dialog-box.md)和[ATL 简单对象向导](../atl/reference/atl-simple-object-wizard.md)生成一个新类并使用`Helper`作为其短名称。 创建后，添加一个方法下, 表中所示。  
   
-|项|值|  
+|项|“值”|  
 |----------|-----------|  
 |方法名|`ShowPage`|  
 |参数|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|  
@@ -165,7 +166,7 @@ End Module
   
  当你运行此宏时，则将显示属性页上显示的文件名称和当前处于活动状态的文本文档的只读状态。 文档的只读状态仅反映用于编写到开发环境中; 中的文档的功能它不会影响磁盘上的文件的只读属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性页](../atl/atl-com-property-pages.md)   
  [ATLPages 示例](../visual-cpp-samples.md)
 

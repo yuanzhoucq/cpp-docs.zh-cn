@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17eb8bd65277c5aa97996261fabc74dc668dc10e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 类
 实现 MFC 方法以更新与应用程序的 `IOleCommandTarget`驱动功能相关的用户界面对象的状态。  
@@ -68,7 +69,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdocobj.h  
   
 ##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
@@ -116,7 +117,7 @@ virtual void SetCheck(int nCheck);
  `nCheck`  
  值，该值确定要设置开/关切换的状态命令。 值为：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**1**|将该命令设置为 on。|  
 |**2**|将该命令设置为不确定的;无法确定状态，因为此命令的属性中同时打开和关闭相关的所选内容中的状态。|  
@@ -133,7 +134,7 @@ virtual void SetText(LPCTSTR lpszText);
  `lpszText`  
  指向要与命令一起使用的文本的指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCmdUI 类](../../mfc/reference/ccmdui-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

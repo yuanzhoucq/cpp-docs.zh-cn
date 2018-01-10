@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1581fe5a952d1ea8e78f29e606af5ac148f3b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-relational-and-equality-operators"></a>C 关系和相等运算符
 二元关系运算符和相等运算符将其第一个操作数与其第二个操作数进行比较以测试指定关系的有效性。 如果测试的关系为 true，则关系表达式的结果为 1；如果测试的关系为 false，则关系表达式的结果为 0。 结果的类型为 `int`。  
@@ -104,6 +105,6 @@ enum color { red, white, green } col;
   
  这些语句声明带标记 `col` 的名为 `color` 的枚举变量。 在任何时候，变量可以包含整数值 0、1 或 2，这表示枚举集 `color` 的某个元素：分别为红色、白色或绿色。 如果在执行 if 语句时，`col` 包含 0，则将执行任何依赖 if 的语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关系运算符：\<、>、\<= 和 >=](../cpp/relational-operators-equal-and-equal.md)   
  [相等运算符：== 和 !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

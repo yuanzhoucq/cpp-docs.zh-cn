@@ -161,11 +161,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60913269bf0d3120ebdba60fea912d52d1467853
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07b8049f01d10556bded754ec2aae55581b7cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -319,7 +320,7 @@ class CMFCPropertyGridCtrl : public CWnd
   
  [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxpropertygridctrl.h  
   
 ##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
@@ -991,7 +992,7 @@ CMFCPropertyGridProperty* HitTest(
   
  此方法设置的变量的值`pnArea`参数指向。 下表列出可能的值和相应的区域。  
   
-|值|区域|  
+|“值”|区域|  
 |-----------|----------|  
 |`ClickArea::ClickExpandBox`|属性展开框控件。|  
 |`ClickArea::ClickName`|属性名称。|  
@@ -1146,7 +1147,7 @@ virtual void OnChangeSelection(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pNewSel`|指向新选择的属性。|  
 |[in] `pOldSel`|指向以前选择的属性。|  
@@ -1469,7 +1470,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pProp`|到属性的指针。 未使用此参数。|  
   
@@ -1481,6 +1482,6 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
  如果重写此方法时，返回`TRUE`如果指定的属性数据是否有效。 否则，返回`FALSE`，在这种情况下框架不会更新属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

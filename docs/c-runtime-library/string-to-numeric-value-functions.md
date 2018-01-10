@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11fca1402fbf1d740b06e2eac9632496792f7da0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68586bac573018bceb7dc982625ff6a859d18871
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-to-numeric-value-functions"></a>字符串到数值函数
 -   [strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  **strtod** 系列中的每个函数都可将以空值终止的字符串转换为数值。 下表中列出了可用函数。  
   
-|函数|说明|  
+|函数|描述|  
 |--------------|-----------------|  
 |`strtod`|将字符串转换为双精度浮点值|  
 |`strtol`|将字符串转换为长整型|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/24/2017
   
  `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64` 和 `_wcstoui64` 分别是 `strtod`、`strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64` 的宽字符版本。指向每个宽字符函数的转换结束参数的指针都是一个宽字符串。 否则，每个宽字符函数将与其对应的单字节字符的行为相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../c-runtime-library/data-conversion.md)   
  [区域设置](../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

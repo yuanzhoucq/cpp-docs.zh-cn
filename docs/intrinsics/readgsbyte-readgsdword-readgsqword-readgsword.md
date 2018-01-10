@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10fe156448e62d0d072522a262194a7aba9426cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8eb0cd893553e16bea326e4ccb81c2602fe352b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 **Microsoft 专用**  
@@ -58,7 +59,7 @@ unsigned __int64 __readgsqword(
 ## <a name="return-value"></a>返回值  
  字节、 单词、 双字或四字 （如所示调用的函数的名称） 的内存内容位置`GS:[Offset]`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -74,6 +75,6 @@ unsigned __int64 __readgsqword(
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [__writegsbyte， \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

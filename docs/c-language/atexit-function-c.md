@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fed4acd2ad200b47524801c83be459ac8e07ebc5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdfa6bd17fb9cd584d138f0fbd219b2352a1858e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atexit-function-c"></a>atexit 函数 (C)
 **ANSI 4.10.4.3** 如果参数的值为零、EXIT_SUCCESS 或 EXIT_FAILURE 之外的其他值，则为 `atexit` 函数返回的状态  
   
  如果成功，则 `atexit` 函数返回零；否则返回非零值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [库函数](../c-language/library-functions.md)

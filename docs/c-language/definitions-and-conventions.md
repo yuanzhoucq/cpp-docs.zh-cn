@@ -14,18 +14,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fcb72c4e001a087b49967c64b10974ee41cc49ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02a6cc8ffcb5748544191673de8f07e87449e806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definitions-and-conventions"></a>定义和转换
 终止符是语法定义中的终结点。 不提供其他解决方法。 终止符包括保留字和用户定义的标识符的集。  
   
  非终止符是语法中的占位符并在此语法摘要中的其他位置进行定义。 定义可是递归的。  
   
- 可选组件由带下标的 opt 指示。 例如，  
+ 可选组件由带下标的 opt 指示。 例如，应用于对象的  
   
 ```  
   
@@ -46,5 +47,5 @@ expression <SUB>opt</SUB> }
   
  跟在非终止符之后的冒号 (:) 引入其定义。 替代定义将在单独的行中列出（以单词“one of”开头的情况除外）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 语言语法摘要](../c-language/c-language-syntax-summary.md)

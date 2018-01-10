@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 312451f40b19375dcef9d4a68b2d1bf3f3ae2562
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d0ac05e314f3f8354ba289695afa672b1e28881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：将 MFC 作为 DLL 的一部分使用
 本说明介绍正则 MFC Dll，它允许你使用 MFC 库作为 Windows 动态链接库 (DLL) 的一部分。 此说明假定您已熟悉 Windows DLL 及其生成方式。 有关 MFC 扩展 Dll，使用它可以创建扩展 MFC 库中，请参阅[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。  
@@ -114,7 +115,7 @@ BOOL PromptTraceFlags(TracerData FAR* lpData);
   
  API 使用的结构不是从 MFC 类派生的，是在 API 标头中定义的。 这将降低 DLL 和应用程序之间接口的复杂性并使 DLL 可由 C 程序使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

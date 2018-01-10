@@ -20,11 +20,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cabe15639d75a1dfe7c41463ea9b95332f6dafa3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew（C++ 组件扩展）
 `ref new`聚合关键字分配进行垃圾回收时在对象变为不可访问，并返回的句柄类型的实例 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到分配的对象。  
@@ -39,13 +42,13 @@ ms.lasthandoff: 10/24/2017
 ## <a name="windows-runtime"></a>Windows 运行时  
  使用 `ref new` 可为要自动管理其生存期的 Windows 运行时对象分配内存。 对象会在其引用计数变为零（这会在引用的最后一个副本超出范围之后发生）时自动释放。 有关详细信息，请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
  托管类型（引用或值类型）的内存由 `gcnew` 分配，使用垃圾回收进行释放。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -95,5 +98,5 @@ int main()
 32  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 22aa4cc1bde59234d70803c2e878d3fbf83f499e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e5b755e95e9bbbb78d6ab13cd09732f9c9aee3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections 构造
 **部分**指令标识一个 noniterative 工作共享构造，用于指定要作为被除数线程在团队间的构造的一组。 每个部分由团队中的线程的执行一次。 语法**部分**指令是，如下所示：  

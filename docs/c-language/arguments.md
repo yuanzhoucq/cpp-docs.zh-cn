@@ -20,13 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b043dab2232e9cdfb0eb9fa90a59dab267b4e1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54819766da9ebd002fa4990ca0b9650626b89015
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="arguments"></a>参数
+# <a name="arguments"></a>自变量
 函数调用中的自变量具有此形式：  
   
 ```  
@@ -90,5 +91,5 @@ swap( &x, &y )
   
  编译器对 `swap` 的参数执行类型检查，因为 `swap` 的原型包含每个参数的参数类型。 原型和定义的括号内的标识符可能相同，也可能不同。 重要的一点是，自变量的类型与原型和定义中的这些参数列表相匹配。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数调用](../c-language/function-calls.md)

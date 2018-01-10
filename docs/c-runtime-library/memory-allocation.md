@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdaf9fe5b2d41491683d34ea029a546433cd709d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e419cbd30b523121ae1902b49a25d60c0b9d21eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-allocation"></a>内存分配
 使用这些例程分配、释放和重新分配内存。  
   
 ### <a name="memory-allocation-routines"></a>内存分配例程  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[_alloca](../c-runtime-library/reference/alloca.md)、[_malloca](../c-runtime-library/reference/malloca.md)|从堆栈中分配内存|  
 |[calloc](../c-runtime-library/reference/calloc.md)|为数组分配内存，从而将分配的块中的每个字节初始化为 0|  
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/24/2017
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|在 `new` 运算符失败（无法分配内存）时启用错误处理机制，然后启用 C++ 标准库的编译|  
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|设置 `malloc` 的新处理程序模式|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

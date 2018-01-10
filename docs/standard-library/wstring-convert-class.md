@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - locale/std::wstring_convert::to_bytes
 - locale/std::wstring_convert::converted
 - locale/std::wstring_convert::state
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::cvt [C++], wstring_convert
 - std::wstring_convert [C++], byte_string
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7753e2be6699bc789417d8afe9e9f49e55af7010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 926edb3f3e1a362509b0f57ef2ae930faa7321ac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 类
 模板类 `wstring_convert` 在宽字符串和字节字符串之间执行转换。  
@@ -98,7 +96,7 @@ class wstring_convert
 |[converted](#converted)|返回成功转换数。|  
 |[state](#state)|返回表示转换状态的对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
@@ -138,7 +136,7 @@ wide_string from_bytes(const char* first, const char* last);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`Byte`|要转换的单元素字节序列。|  
 |`ptr`|要转换的以 null 结尾的 C 样式字符序列。|  
@@ -241,4 +239,3 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
   
 ### <a name="remarks"></a>备注  
  第一个构造函数将存储[转换对象](../standard-library/wstring-convert-class.md)中的 Pcvt_arg
-

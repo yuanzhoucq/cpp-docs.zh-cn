@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed56c0c9ab3186200d3cbb47224dedc60adddb2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dbf2d3d269f5df3a028a5c416f8adca015be6dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-other-types"></a>从其他类型的转换
 由于 `enum` 值根据定义属于 `int` 值，因此 `enum` 值的转换目标和源与 `int` 类型的值的相同。 对于 Microsoft C 编译器，整数与 long 相同。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [赋值转换](../c-language/assignment-conversions.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 369ff1b3097e79fa0da50a82647bbf6ac62464e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-statement-c"></a>复合语句 (C)
 复合语句（也称为“块”）通常显示为另一个语句（例如 if 语句）的主体。 [声明和类型](../c-language/declarations-and-types.md)描述可在复合语句的头部出现的声明的格式和含义。  
@@ -60,5 +61,5 @@ if ( i > 0 )
   
  在此示例中，如果 `i` 大于 0，则复合语句内的所有语句将按顺序执行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [语句](../c-language/statements-c.md)

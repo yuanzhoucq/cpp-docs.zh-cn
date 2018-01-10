@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fc5269448ad61bc11409afbb2d6515c17a95864
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee15ab3327ec879856a3e777fb906c01989d63c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tupleelement-class"></a>tuple_element 类
 包装 `tuple` 元素。 专用化包装 `array` 元素和 `pair` 元素。  
@@ -62,7 +63,7 @@ template <class T1, class T2>
 ```  
   
 ### <a name="parameters"></a>参数  
-*索引*  
+*Tuple*  
 指定元素的索引。  
   
 *Tuple*  
@@ -176,9 +177,9 @@ int main() {
  0 1.333  
 ```  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<tuple>  
  **标头：**\<array>（适用于数组专用化）**标头：**\<utility>（适用于对专用化）**命名空间：**std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [tuple ](../standard-library/tuple-class.md)

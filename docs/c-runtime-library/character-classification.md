@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d238acf9bfe55052a1d6dc316f5425774737f9f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c43761189d9241e77faa67ad106f346fb8f92ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-classification"></a>字符分类
 其中的每个例程均针对条件满意度测试指定的单字节字符、宽字符或多字节字符。 （根据定义，0 和 127 之间的 ASCII 字符集是所有多字节字符集的子集。 例如，日语的片假名包括 ASCII 以及非 ASCII 字符。）  
@@ -37,7 +38,7 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
   
 ### <a name="character-classification-routines"></a>字符分类例程  
   
-|例程|字符测试条件|  
+|例程所返回的值|字符测试条件|  
 |-------------|------------------------------|  
 |[isalnum、iswalnum、_isalnum_l、_iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)、[isalnum、iswalnum、_isalnum_l、_iswalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|字母数字|  
 |[_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|字母数字|  
@@ -65,5 +66,5 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
 |[isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|十六进制数|  
 |[_mbclen、mblen、_mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|返回有效的多字节字符的长度；结果取决于当前区域设置的 `LC_CTYPE` 类别设置|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

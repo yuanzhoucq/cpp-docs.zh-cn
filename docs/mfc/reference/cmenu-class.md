@@ -95,11 +95,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b54a2cecf6ae091680582a3997cc8ee9c1c625d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmenu-class"></a>CMenu 类
 封装 Windows `HMENU`。  
@@ -186,7 +187,7 @@ class CMenu : public CObject
   
  `CMenu`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="appendmenu"></a>CMenu::AppendMenu  
@@ -596,7 +597,7 @@ UINT GetDefaultItem(
  *gmdiFlags*  
  值，该值指定该函数搜索菜单项的方式。 此参数可以为 none、 一个，或以下值的组合：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**GMDI_GOINTOPOPUPS**|指定，是否默认项目是指打开一个子菜单，该函数是相应的子菜单以递归方式在其中进行搜索。 如果子菜单中没有默认项，则返回的值标识用于打开子菜单项。<br /><br /> 默认情况下，该函数返回在指定菜单上，不管它是用于打开子菜单项的第一个默认项。|  
 |**GMDI_USEDISABLED**|指定，该函数是返回一个默认项，即使它处于禁用状态。<br /><br /> 默认情况下，该函数将跳过已禁用或显示为灰色的项。|  
@@ -1318,7 +1319,7 @@ BOOL TrackPopupMenuEx(
 ### <a name="remarks"></a>备注  
  浮动的弹出菜单可以出现在屏幕上的任意位置。 创建弹出菜单时处理错误的详细信息，请参阅[TrackPopupMenuEx](http://msdn.microsoft.com/library/windows/desktop/ms648003)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CTRLTEST](../../visual-cpp-samples.md)   
  [MFC 示例 DYNAMENU](../../visual-cpp-samples.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   

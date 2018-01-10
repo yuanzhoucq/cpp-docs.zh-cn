@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 23f56a9ef86a33b99f1014cb2cf18a92bdfbd753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20e812a1eca6e620e0c1847b6ea6a07b871a407d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="32-bit-windows-timedate-formats"></a>32 位 Windows 时间/日期格式
 将无符号整数用作位域，单独存储文件时间和日期。 文件的时间和日期打包如下：  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/24/2017
 |取值范围：|0-119|1-12|1-31|  
 ||（相对于 1980）|||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局常量](../c-runtime-library/global-constants.md)

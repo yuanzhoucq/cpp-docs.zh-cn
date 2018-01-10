@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e30d0664716df0f4cdf7d394d9c9a5fd7e8c798
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b3473d7cd4ec23749f95bd06a1d993abc3209df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-com-spy"></a>迁移指南：COM Spy
 本主题是一系列文章中的第二个主题，它演示将旧版 Visual C++ 项目升级到最新版本 Visual Studio 的过程。 本主题中的示例代码是先前使用 Visual Studio 2005 编译的代码。  
@@ -173,7 +174,7 @@ private void button1_Click(object sender, EventArgs e)
   
  这将顺畅运行，不出现任何问题，且 COM Spy 启用运行并配置为监视 Dog 组件，然后将出现大量显示活动的数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [下一个示例：Spy++](../porting/porting-guide-spy-increment.md)   
  [上一个示例：MFC Scribble](../porting/porting-guide-mfc-scribble.md)

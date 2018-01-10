@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c4f5bc22cf5d1eddbd199cffda0aeb95cc438bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2509f0159b1aefb18a16bd2b2bec7d0e0537ea45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remainders"></a>余数
 **ANSI 3.3.5** 整除的余数的符号  
   
- 余数的符号与被除数的符号相同。 例如，  
+ 余数的符号与被除数的符号相同。 例如，应用于对象的  
   
 ```  
  50 / -6 == -8  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
 -50 %  6 == -2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [整数](../c-language/integers.md)

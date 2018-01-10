@@ -1,32 +1,33 @@
 ---
-title: "ChainInterfaces::FillArrayWithIid 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid 方法"
+title: "Chaininterfaces:: Fillarraywithiid 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: f1ce699c-dfb6-40a9-9ea0-e6703d3cf971
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 02e78ade52de45cfe06ba9d8cddfe0a2362d1bc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ChainInterfaces::FillArrayWithIid 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-存储 `I0` 模板参数定义的接口 ID 到指定的数组中的指定位置设置接口 ID。  
+# <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid 方法
+通过定义的接口 ID 的存储`I0`指定数组中的接口 Id 的指定位置的模板参数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -35,17 +36,17 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `index`  
- 为索引的指针到 `iids` 数组中。  
+ 为到索引值的指针`iids`数组。  
   
  `iids`  
- 测试用例 ID 的数组。  
+ 接口 Id 的数组。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ChainInterfaces 结构](../windows/chaininterfaces-structure.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dc68979d4dc4b79a2b1e6e987f51bebc6d15aa3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d41719c7ff7ce2d7a906395ed65b891e2583bac8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 定义若干类，这些类支持在存储于外部文件中的序列上的 iostreams 操作。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
 |[basic_ifstream](../standard-library/basic-ifstream-class.md)|该模板类描述一个对象，该对象控制从 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区提取元素和编码对象，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|  
 |[basic_ofstream](../standard-library/basic-ofstream-class.md)|该模板类描述一个对象，该对象控制向 [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> 类的流缓冲区插入元素和编码对象，具有 **Elem** 类型的元素，其字符特征由 **Tr** 类确定。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   

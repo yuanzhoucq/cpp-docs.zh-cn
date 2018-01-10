@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e3d7637bfd6247dee79df4716a3e638a49e36cbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da47b4b68a9fd73b3962254121006eff47282336
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo 结构
 `CDaoErrorInfo`结构包含有关为数据访问对象 (DAO) 定义的错误对象信息。  
@@ -62,9 +63,9 @@ struct CDaoErrorInfo
   
  检索的信息[CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)成员函数将存储在`CDaoErrorInfo`结构。 检查[m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)中的数据成员`CDaoException`捕获异常处理程序或调用中的对象`GetErrorInfo`从`CDaoException`显式创建以检查可能有的错误的对象直接调用 DAO 接口过程中出现。 `CDaoErrorInfo`此外定义`Dump`成员函数在调试生成。 你可以使用`Dump`以转储的内容`CDaoErrorInfo`对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdao.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构、 样式、 回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoException 类](../../mfc/reference/cdaoexception-class.md)

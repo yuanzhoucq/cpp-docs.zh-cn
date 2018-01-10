@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b5ce16963e027771bd82a8e2820e0b9ba319806
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e324976d0054cd1b32188b6ebe0f10ab4e1bdd69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integer-types"></a>整型
 根据每个整数常量的值及其表示方式为该常量提供一个类型。 可通过将字母 **l** 或 **L** 追加到任何整数常量的末尾来将该常量强制转换为类型 **long**；可通过将 **u** 或 **U** 追加到该值来将其强制转换为类型 `unsigned`。 小写字母 **l** 会与数字 1 发生混淆，应避免此情况出现。 某些形式的 **long** 整数常量如下所示：  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/24/2017
   
 -   分配给带 **u** 或 **U** 后缀的常量和带 **l** 或 **L** 后缀的常量的类型是 **unsigned long int**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 整数常量](../c-language/c-integer-constants.md)

@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>数据类型常量
 数据类型常量是实现相关的整数数据类型允许的值范围。 下面列出的常数提供了整数数据类型的范围，并在 LIMITS.H 中进行了定义。  
@@ -109,7 +110,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  /J 编译器选项将默认 `char` 类型更改为 `unsigned`。  
   
-|常量|值|含义|  
+|返回的常量|“值”|含义|  
 |--------------|-----------|-------------|  
 |**SCHAR_MAX**|127|最大带符号 `char` 值|  
 |**SCHAR_MIN**|-128|最小带符号 `char` 值|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 10/24/2017
   
  以下常数提供了 **double** 和 **float** 数据类型的范围和其他特性，并在 FLOAT.H 中进行了定义：  
   
-|常量|值|描述|  
+|返回的常量|“值”|描述|  
 |--------------|-----------|-----------------|  
 |**DBL_DIG**|15|精度的小数位数|  
 |**DBL_EPSILON**|2.2204460492503131e-016|最小：1.0+**DBL_EPSILON** !=1.0|  
@@ -158,5 +159,5 @@ ms.lasthandoff: 10/24/2017
 |**FLT_RADIX**|2|指数基数|  
 |**FLT_ROUNDS**|1|加法四舍五入：接近|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局常量](../c-runtime-library/global-constants.md)

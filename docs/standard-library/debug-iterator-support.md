@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
@@ -20,30 +18,16 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
-ms.openlocfilehash: 37f3450fbd320105781fa5398e838d3a8e317879
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 Visual c + + 运行库检测到不正确使用的迭代器，并在运行时断言和显示一个对话框。 若要启用调试迭代器支持，必须使用 c + + 标准库和 C 运行库的调试版本来编译你的程序。 有关详细信息，请参阅 [ CRT 库功能](../c-runtime-library/crt-library-features.md)。 有关如何使用经过检查的迭代器的信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
@@ -212,9 +196,8 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
-
 
 
 

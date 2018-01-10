@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1469209307f5bfc3016a7232095c36f47b38855b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d117aa06f82da1024d11af38cc4277916c6bca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-items-to-the-control"></a>向控件添加项
 若要将项添加到列表控件 ([CListCtrl](../mfc/reference/clistctrl-class.md))，调用多个版本之一[InsertItem](../mfc/reference/clistctrl-class.md#insertitem)成员函数，具体取决于你有哪些信息。 一个版本采用[LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)你准备的结构。 因为 `LV_ITEM` 结构包含很多成员，所以您更容易控制列表控件项的特性。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  有关详细信息，请参阅[添加列表视图项和子项](http://msdn.microsoft.com/library/windows/desktop/bb774736)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

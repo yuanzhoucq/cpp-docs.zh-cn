@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef1788f451597cdc8d3b512f5eede3c3d5abb382
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 214d8ca9c45a3657215833764268794b152bd337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-type-property"></a>快捷键 Type 属性
 快捷键**类型**属性确定是否与快捷键 ID 关联的快捷键组合为虚拟键组合或 ASCII/ANSI 密钥值：  
@@ -32,9 +35,9 @@ ms.lasthandoff: 10/24/2017
     > [!NOTE]
     >  如果你想要的快捷键对应表中输入一个值，并具有值被视为 ASCII/ANSI，只需单击表中的条目的类型，从下拉列表中选择 ASCII。 但是，如果你使用**键入的下一个密钥**命令 (**编辑**菜单) 若要指定的密钥，则必须更改**类型**属性从 VIRTKEY 为 ASCII *之前*中输入密钥的代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置快捷键属性](../windows/setting-accelerator-properties.md)   
  [快捷键编辑器](../windows/accelerator-editor.md)

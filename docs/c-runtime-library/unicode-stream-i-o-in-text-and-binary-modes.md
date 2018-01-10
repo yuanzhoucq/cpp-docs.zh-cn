@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df81013b497c0be939ceb3afd44d8a3e9e28ce18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76e739ae95788448cc655ca18d32aaf1f8a5c90a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>文本和二进制模式下的 Unicode 流 I/O
 当对一个以文本模式（默认方式）打开的文件执行 Unicode 流 I/O 例程（例如 `fwprintf`、`fwscanf`、`fgetwc`、`fputwc`、`fgetws` 或 `fputws`）时，将会发生两种字符转换：  
@@ -34,6 +35,6 @@ ms.lasthandoff: 10/24/2017
   
  但是，当 Unicode 流 I/O 函数以二进制模式运行时，该文件将被假定为 Unicode，并且在输入或输出过程中不会发生 CR-LF 转换或字符转换。 为了对 UNICODE 文本文件正确使用 wcin，请使用 _setmode( _fileno( stdin ), _O_BINARY ); 指令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)   
  [输入和输出](../c-runtime-library/input-and-output.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e36d180223387a322776155e02d69e352ecec853
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d284452e7b6c9983a751117ad6c2290b267c6994
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructing-input-stream-objects"></a>构造输入流对象
 如果只使用 `cin` 对象，则无需构造输入流。 如果使用以下对象，则必须构造输入流：  
@@ -60,6 +61,6 @@ istringstream myString(s);
 myString>> amt; // amt contains 123.45  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输入流](../standard-library/input-streams.md)
 

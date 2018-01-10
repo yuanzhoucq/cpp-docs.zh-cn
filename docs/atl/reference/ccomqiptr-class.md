@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6240b779977f99d362f7fd37ef5526ce08e89bd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr 类
 用于管理 COM 接口指针的智能指针类。  
@@ -65,7 +66,7 @@ class CComQIPtr: public CComPtr<T>
   
  `CComQIPtr`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcomcli.h  
   
 ##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
@@ -110,7 +111,7 @@ T* operator= (IUnknown* lp) throw();
 ### <a name="return-value"></a>返回值  
  将指针返回到更新`CComQIPtr`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
  [CComQIPtr::CComQIPtr](#ccomqiptr)   
  [CComPtrBase 类](../../atl/reference/ccomptrbase-class.md)   

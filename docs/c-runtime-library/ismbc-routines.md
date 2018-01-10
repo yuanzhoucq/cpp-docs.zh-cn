@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbe2879f031f261871676f9e11f0b6f2a0908a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc 例程
 每个 **_ismbc** 例程都针对特定条件测试给定多字节字符 `c`。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
  输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。  
   
-|例程|测试条件|代码页 932 示例|  
+|例程所返回的值|测试条件|代码页 932 示例|  
 |-------------|--------------------|---------------------------|  
 |[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|字母数字|当且仅当 `c` 是 ASCII 英文字母的单字节表示形式时返回非零值：请参见 `_ismbcdigit` 和 `_ismbcalpha` 的示例。|  
 |[_ismbcalpha、_ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabetic|当且仅当出现以下情况时返回非零值：`c` 是 ASCII 英文字母的单字节表示形式：查看 `_ismbcupper` 和 `_ismbclower` 的示例；或是片假名字母的单字节表示形式：0xA6<=`c`<=0xDF。|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
   
  下面的例程特定于代码页 932。  
   
-|例程|测试条件（仅代码页 932）|  
+|例程所返回的值|测试条件（仅代码页 932）|  
 |-------------|-------------------------------------------|  
 |[_ismbchira、_ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|双字节平假名：0x829F<=`c`<=0x82F1。|  
 |[_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|双字节片假名：0x8340<=`c`<=0x8396。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
   
  **END 特定于代码页 932**   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../c-runtime-library/character-classification.md)   
  [is、isw 例程](../c-runtime-library/is-isw-routines.md)   
  [_ismbb 例程](../c-runtime-library/ismbb-routines.md)

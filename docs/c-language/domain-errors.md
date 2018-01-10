@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c34afdb71468d4ecba554a5a1b01768bddc2a517
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbbf3d5f20c7935dbf8d600c2380929e05c0a367
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="domain-errors"></a>域错误
 **ANSI 4.5.1** 发生域错误时数学函数返回的值  
   
  ERRNO.H 文件将域错误常量 `EDOM` 定义为 33。  有关返回值的信息，请参阅引发错误的特定函数的帮助主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [库函数](../c-language/library-functions.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5b7913802df6894697875e90b86286870d32fccc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 228c624c5c752a7c61178b60f8e75817fff62505
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft 专用**  
@@ -49,7 +50,7 @@ unsigned __int64 __shiftright128(
 ## <a name="return-value"></a>返回值  
  结果的低 64 位。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -65,6 +66,6 @@ unsigned __int64 __shiftright128(
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [__shiftleft128](../intrinsics/shiftleft128.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64a74df29062864a03849c4957dbdcc866cf6665
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 676fa9f0eadc49d271fd6fa657659e121eda065b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catstr"></a>CATSTR
 串联文本项。  
@@ -34,5 +35,5 @@ name CATSTR [[textitem1 [[, textitem2]] ...]]
 ## <a name="remarks"></a>备注  
  每个文本项可以是文本字符串，前面是一个常数`%`，或通过宏函数返回的字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

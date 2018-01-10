@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6990539ca6f0bc2956822547e3d41c00c841caf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>将控件置于网页上（ATL 教程，第 7 部分）
 控件现已完成。 若要查看你在实际情况下运行的控件，请将其放在网页上。 定义你的控件时，已创建一个包含控件的 HTML 文件。 打开 PolyCtl.htm 文件从**解决方案资源管理器**，，您可以查看您在网页上的控件。  
@@ -77,6 +78,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  ATL 教程到此结束。 有关 ATL 的详细信息的链接，请参阅[ATL 起始页](../atl/active-template-library-atl-concepts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
 

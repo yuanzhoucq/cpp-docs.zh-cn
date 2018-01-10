@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4876d2b05f7124a12976e87022700f9be660b8fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3a9597ca8807c8ac1a3182b3daa1891a195c39c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-description"></a>自变量说明
 main 和 wmain 函数中的 `argc` 形参是一个整数，用来指定从命令行传递到程序的实参的数量。 由于程序名被视为实参，因此 `argc` 的值至少有一个。  
@@ -41,5 +42,5 @@ main 和 wmain 函数中的 `argc` 形参是一个整数，用来指定从命令
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [main 函数和程序执行](../c-language/main-function-and-program-execution.md)

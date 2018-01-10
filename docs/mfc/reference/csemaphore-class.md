@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0184d013b0a36aeb77bebbba9f6e4ecef47b7f85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 378007ee4ebbb457fb8922d44d063b3bdf05729d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csemaphore-class"></a>CSemaphore 类
 类的对象`CSemaphore`表示一个"信号量"-在一个或多个进程访问资源，并保持当前访问指定的资源的线程数的计数允许有限的数量的线程的同步对象。  
@@ -61,7 +62,7 @@ class CSemaphore : public CSyncObject
   
  `CSemaphore`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxmt.h  
   
 ##  <a name="csemaphore"></a>CSemaphore::CSemaphore  
@@ -94,7 +95,7 @@ CSemaphore(
 > [!IMPORTANT]
 >  在创建后`CSemaphore`对象，请使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以确保，互斥体已不存在。 如果互斥体未意外存在，则可能表示一个恶意进程是占用和可能想要恶意使用互斥体。 在这种情况下，建议的安全意识过程是关闭句柄并继续就像在创建对象时失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CSyncObject 类](../../mfc/reference/csyncobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ 安全性最佳做法
 本文包含有关安全工具和做法的信息。 使用这些工具和做法并不会使应用程序免受攻击，但能降低攻击成功的可能性。  
@@ -87,13 +88,13 @@ ms.lasthandoff: 10/24/2017
   秒
 -   确定应用程序中的潜在安全问题。  
   
- AppVerifier 属于应用程序兼容性工具包，即从可用[应用程序兼容性](http://go.microsoft.com/fwlink/?LinkId=91277)TechNet 网站上。  
+ AppVerifier 属于应用程序兼容性工具包，即从可用[应用程序兼容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 网站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 用户帐户  
  使用属于管理员组的 Windows 用户帐户将使开发人员和引申到的相关客户暴露在安全风险下。 有关详细信息，请参阅[作为用户组的成员运行](running-as-a-member-of-the-users-group.md)和[如何用户帐户控制 (UAC) 会影响应用程序](how-user-account-control-uac-affects-your-application.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Security>   
  [安全性](/dotnet/standard/security/index)   
  [用户帐户控制 (UAC) 如何影响应用程序](how-user-account-control-uac-affects-your-application.md)

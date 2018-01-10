@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 `_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 在某些时间和日期例程中用来调整本地时间。 这些全局变量因安全性更高的函数版本（它们取代了全局变量）而被弃用。  
@@ -62,7 +63,7 @@ extern char *_tzname[2];
 ## <a name="remarks"></a>备注  
  在调用 `_ftime`、`localtime` 或 `_tzset` 时，`_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 的值由 `TZ` 环境变量的值确定。 如果您未显式设置 `TZ` 的值，则 `_tzname[0]` 和 `_tzname[1]` 将分别包含“PST”和“PDT”的默认设置。  时间操作函数（[_tzset](../c-runtime-library/reference/tzset.md)、[_ftime](../c-runtime-library/reference/ftime-ftime32-ftime64.md)，和 [localtime](../c-runtime-library/reference/localtime-localtime32-localtime64.md)）尝试通过在操作系统中查询每个变量的默认值来设置 `_daylight`、`_dstbias` 和 `_timezone` 的值。 下表显示了时区全局变量的值。  
   
-|变量|值|  
+|变量|“值”|  
 |--------------|-----------|  
 |`_daylight`|如果在 `TZ` 中指定或从操作系统确定夏令时 (DST) 时区，则为非零值；否则为 0。 默认值为 1。|  
 |`_dstbias`|夏令时的偏移量。|  
@@ -70,7 +71,7 @@ extern char *_tzname[2];
 |`_tzname[0]`|派生自 `TZ` 环境变量的时区名称。 默认值是“PST”。|  
 |`_tzname[1]`|派生自 `TZ` 环境变量的 DST 时区名称。 默认值为“PDT”（太平洋夏令时）。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局变量](../c-runtime-library/global-variables.md)   
  [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   

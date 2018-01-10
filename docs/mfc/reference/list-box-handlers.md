@@ -26,11 +26,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c8aafcabbf4e0049c2e1834803ecded88ccc53d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: afbfadae49fca6d5e53e24d212237cb172636f6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-box-handlers"></a>列表框处理程序
 下面的映射条目具有相应的函数原型。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 10/24/2017
 |ON_LBN_SELCHANGE ( \<id >， \<f x n >)|afx_msg void f x n （);|  
 |ON_LBN_SETFOCUS ( \<id >， \<f x n >)|afx_msg void f x n （);|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)
 

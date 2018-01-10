@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e7e481f7108b61f9af8d255bffac76f26a90200
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-and-validation"></a>对话框数据交换和验证
 对话框数据交换 (DDX) 是一种在对话框中初始化控件以及按用户收集数据输入的简单方式。 对话框数据验证 (DDV) 是一种在对话框中验证数据输入的简单方式。 若要利用 DDX 和 DDV 在对话框中，使用[添加成员变量向导](../ide/add-member-variable-wizard.md)创建数据成员并设置其数据类型和指定验证规则。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [对话框数据验证](../mfc/dialog-data-validation.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对话框](../mfc/dialog-boxes.md)   
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
 

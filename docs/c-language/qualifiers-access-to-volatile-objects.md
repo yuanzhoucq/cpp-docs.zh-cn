@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 808f1293c9d5d96a2691cf18c087990a16087144
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 488eb8f2c9bbc321595d3e89164ae6633019d36e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>限定符：对可变对象的访问
 **ANSI 3.5.5.3** 构成对具有可变限定类型的对象的访问的内容  
   
  对可变限定类型的任何引用均为访问。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现定义的行为](../c-language/implementation-defined-behavior.md)

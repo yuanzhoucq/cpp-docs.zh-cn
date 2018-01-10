@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed07a18729996097afd588bf084a18593a3946d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstringgt"></a>&lt;字符串&gt;
 定义容器模板类 `basic_string` 和各种支持模板。  
@@ -101,13 +102,13 @@ ms.lasthandoff: 10/24/2017
 |[char_traits<char16_t> 结构](../standard-library/char-traits-char16-t-struct.md)|一个结构，它是模板结构 `char_traits`\<CharType> 对类型 `char16_t` 元素的专用化。|  
 |[char_traits<char32_t> 结构](../standard-library/char-traits-char32-t-struct.md)|一个结构，它是模板结构 `char_traits`\<CharType> 对类型 `char32_t` 元素的专用化。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 - **标头：** \<string>  
   
 - **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

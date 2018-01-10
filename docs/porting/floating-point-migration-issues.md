@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e922872f302e6a6fb00170878a5033ba75e6b8a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59898a5ad6af6728b16163c766f6295c850dc577
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-migration-issues"></a>浮点迁移问题  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
 在大多数情况下，最新的编译器和库中的浮点更改的行为更快和/或更正确。 当 SSE2 指令替换 x87 说明时，你甚至可以看到更优秀的处理器性能。 但是，如果代码必须精确复制较旧编译器的浮点行为，请考虑使用 Visual Studio 本机多重目标功能，并使用较旧的工具集生成受影响的项目。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](use-native-multi-targeting.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
   
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [潜在的升级问题概述 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  

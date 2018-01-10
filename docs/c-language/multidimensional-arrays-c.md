@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbc5ca61d1a45521c67426144ad5991170849230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multidimensional-arrays-c"></a>多维数组 (C)
 下标表达式还可以有多个下标，如下所示：  
@@ -82,5 +83,5 @@ ipp = prop[2];
   
  同样，第二个语句 `prop[2]` 中的表达式 `ipp = prop[2];` 的结果是一个寻址到一个二维数组的指针值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [下标运算符：](../cpp/subscript-operator.md)

@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca454b0087bd9cc1b8ded6f7b2d4ccb201373dc4
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 90f7f9431ddfc2d21a29b35643ee3dff3e34cd6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>多字节字符序列的解释
 Microsoft 运行库中的大多数多字节字符例程可识别与多字节代码页相关的多字节字符序列。 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。  
   
 ### <a name="locale-dependent-multibyte-routines"></a>与区域设置相关的多字节例程  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[_mbclen、mblen、_mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|验证并返回多字节字符中的字节数|  
 |[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|对于多字节字符串：验证字符串中的每个字符；返回字符串的长度。 对于宽字符字符串：返回字符串长度。|  
@@ -37,6 +38,6 @@ Microsoft 运行库中的大多数多字节字符例程可识别与多字节代�
 |[mbrtoc16、mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|将多字节字符转换为等效 UTF-16 或 UTF-32 字符|  
 |[c16rtomb、c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|将 UTF-16 或 UTF-32 字符转换为等效多字节字符|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [国际化](../c-runtime-library/internationalization.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

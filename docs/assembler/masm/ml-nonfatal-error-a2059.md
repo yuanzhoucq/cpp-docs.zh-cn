@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cc40d7fe7aa5ef026f2196d4d3606f0b062a9f56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4ad9f3aef103b9753b45a2416c7f3423ceb7776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2059"></a>ML 非致命错误 A2059
 **强制错误： 字符串等**  
   
  条件错误指令[。ERRIDN](../../assembler/masm/dot-erridn.md)或**。ERRIDNI**用于生成此错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ML 错误消息](../../assembler/masm/ml-error-messages.md)

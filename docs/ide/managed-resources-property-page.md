@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9efcebf81ec98d32a22fa406e9dd42a0d12dc883
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8683c9212a25a5b278405c2d2c31d7fc607d0f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-resources-property-page"></a>“托管资源”属性页
 启用资源编译器的设置。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
  **资源的逻辑名称**  
  指定*逻辑名称*的生成的中间.resources 文件。 逻辑名称是用来加载资源的名称。 如果未不指定任何逻辑名称，则资源 (.resx) 文件名称用作的逻辑名称。  
   
- **输出文件的名称**  
+ **输出文件名**  
  指定的资源 (.resx) 文件分配给最终输出文件的名称。  
   
  **默认的本地化的资源**  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  有关如何访问信息**被管理的资源**属性页中，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 RC （RC 命令行）](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [属性页](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE （嵌入托管的资源）](../build/reference/assemblyresource-embed-a-managed-resource.md)

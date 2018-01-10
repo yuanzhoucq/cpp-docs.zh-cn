@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cae6e69b62252f506136ecf8b7de03b09777ebf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6fe5581721dec428480e3640e4875eda20a09b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="elements-of-c"></a>C 的元素
 本节介绍 C 编程语言的元素，包括用于构造 C 程序的名称、数字和字符。 ANSI C 语法标记这些组件标记。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/24/2017
   
  运算符是指定如何操作值的符号（单个字符和字符组合）。 将每个符号解释为单个单元，称为令牌。 有关详细信息，请参阅[运算符](../c-language/c-operators.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 语言参考](../c-language/c-language-reference.md)

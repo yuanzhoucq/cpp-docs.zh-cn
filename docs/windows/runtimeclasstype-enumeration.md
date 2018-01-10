@@ -1,54 +1,55 @@
 ---
-title: "RuntimeClassType 枚举 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClassType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClassType 枚举"
+title: "RuntimeClassType 枚举 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClassType
+dev_langs: C++
+helpviewer_keywords: RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 26016e8c95807af76484504c491ca1e6e08f8f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassType 枚举
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定[RuntimeClass](../windows/runtimeclass-class.md) 支持的实例类型。  
+# <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 枚举
+指定的一种[RuntimeClass](../windows/runtimeclass-class.md)支持的实例。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 enum RuntimeClassType;  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 值  
+### <a name="values"></a>值  
   
-|名称|说明|  
-|--------|--------|  
-|`ClassicCom`|创建运行时COM类|  
-|`Delegate`|等效于 **ClassicCom**。|  
-|`InhibitFtmBase`|禁用 `FtmBase` 支持，而 `__WRL_CONFIGURATION_LEGACY__` 没有定义。|  
+|名称|描述|  
+|----------|-----------------|  
+|`ClassicCom`|典型的 COM 运行时类。|  
+|`Delegate`|等效于**ClassicCom**。|  
+|`InhibitFtmBase`|禁用`FtmBase`支持的同时，`__WRL_CONFIGURATION_LEGACY__`未定义。|  
 |`InhibitWeakReference`|禁用弱引用支持。|  
-|`WinRt`|[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 类。|  
+|`WinRt`|Windows 运行时类。|  
 |`WinRtClassicComMix`|`WinRt` 和 `ClassicCom` 的组合。|  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

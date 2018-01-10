@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>从带符号整型的转换
 当一个带符号整数转换为一个具有相等或更大大小的无符号整数且该带符号整数的值不为负时，值保持不变。 转换是通过对带符号整数进行符号扩展来实现的。 通过截断高位将带符号整数转换为较短的带符号整数。 结果被解释为无符号值，如此示例中所示。  
@@ -51,7 +52,7 @@ printf_s( "%hu\n", u );  // Prints 65533
 |**char**|**unsigned short**|符号扩展至 **short**；将 **short** 转换为 **unsigned short**|  
 |**char**|**unsigned long**|符号扩展至 **long**；将 **long** 转换为 **unsigned long**|  
 |**char**|**float**|符号扩展至 **long**；将 **long** 转换为 **float**|  
-|**char**|**双精度**|符号扩展至 **long**；将 **long** 转换为 **double**|  
+|**char**|**double**|符号扩展至 **long**；将 **long** 转换为 **double**|  
 |**char**|**long double**|符号扩展至 **long**；将 **long** 转换为 **double**|  
 |**short**|**char**|保留低位字节|  
 |**short**|**long**|符号扩展|  
@@ -59,7 +60,7 @@ printf_s( "%hu\n", u );  // Prints 65533
 |**short**|**unsigned short**|保留位模式；高序位丢失符号位的函数|  
 |**short**|**unsigned long**|符号扩展至 **long**；将 **long** 转换为 **unsigned long**|  
 |**short**|**float**|符号扩展至 **long**；将 **long** 转换为 **float**|  
-|**short**|**双精度**|符号扩展至 **long**；将 **long** 转换为 **double**|  
+|**short**|**double**|符号扩展至 **long**；将 **long** 转换为 **double**|  
 |**short**|**long double**|符号扩展至 **long**；将 **long** 转换为 **double**|  
 |**long**|**char**|保留低位字节|  
 |**long**|**short**|保留低位字|  
@@ -67,7 +68,7 @@ printf_s( "%hu\n", u );  // Prints 65533
 |**long**|**unsigned short**|保留低位字|  
 |**long**|**unsigned long**|保留位模式；高序位丢失符号位的函数|  
 |**long**|**float**|表示为 **float**。 如果不能精确表示 **long**，则某些精度将丢失。|  
-|**long**|**双精度**|表示为 **double**。 如果 **long** 不能精确表示为 **double**，则某些精度将丢失。|  
+|**long**|**double**|表示为 **double**。 如果 **long** 不能精确表示为 **double**，则某些精度将丢失。|  
 |**long**|**long double**|表示为 **double**。 如果 **long** 不能精确表示为 **double**，则某些精度将丢失。|  
   
  1. 所有 **char** 项假定默认情况下 **char** 类型是有符号的。  
@@ -78,5 +79,5 @@ printf_s( "%hu\n", u );  // Prints 65533
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [赋值转换](../c-language/assignment-conversions.md)

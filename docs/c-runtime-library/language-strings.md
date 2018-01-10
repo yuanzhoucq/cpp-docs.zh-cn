@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 和 `_create_locale` 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[区域语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)。 语言字符串可以是支持语言列表的“语言”和“语言名称缩写”列中的任意值。 有关操作系统版本的语言支持的其他信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。   
@@ -28,9 +29,9 @@ C 运行库实现也支持这些语言字符串：
   
 |语言字符串|等效区域设置名称|  
 |---------------------|----------------------------|  
-|american|zh-CN|  
-|american english|zh-CN|  
-|american-english|zh-CN|  
+|american|en-US|  
+|american english|en-US|  
+|american-english|en-US|  
 |australian|en-AU|  
 |belgian|nl-BE|  
 |canadian|en-CA|  
@@ -42,7 +43,7 @@ C 运行库实现也支持这些语言字符串：
 |chinese-singapore|zh-SG|  
 |chinese-traditional|zh-TW|  
 |dutch-belgian|nl-BE|  
-|english-american|zh-CN|  
+|english-american|en-US|  
 |english-aus|en-AU|  
 |english-belize|en-BZ|  
 |english-can|en-CA|  
@@ -53,8 +54,8 @@ C 运行库实现也支持这些语言字符串：
 |english-south africa|en-ZA|  
 |english-trinidad y tobago|en-TT|  
 |english-uk|en-GB|  
-|english-us|zh-CN|  
-|english-usa|zh-CN|  
+|english-us|en-US|  
+|english-usa|en-US|  
 |french-belgian|fr-BE|  
 |french-canadian|fr-CA|  
 |french-luxembourg|fr-LU|  
@@ -65,7 +66,7 @@ C 运行库实现也支持这些语言字符串：
 |german-swiss|de-CH|  
 |irish-english|en-IE|  
 |italian-swiss|it-CH|  
-|norwegian|no|  
+|norwegian|否|  
 |norwegian-bokmal|nb-NO|  
 |norwegian-nynorsk|nn-NO|  
 |portuguese-brazilian|pt-BR|  
@@ -91,10 +92,10 @@ C 运行库实现也支持这些语言字符串：
 |swedish-finland|sv-FI|  
 |swiss|de-CH|  
 |uk|en-GB|  
-|us|zh-CN|  
+|us|en-US|  
 |usa|zh-CN|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [国家/地区字符串 ](../c-runtime-library/country-region-strings.md)  
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   

@@ -1,36 +1,37 @@
 ---
-title: "如何：用内部指针和本机指针重载函数 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用内部和本机指针重载函数, 重载"
+title: "如何： 重载用内部指针和本机指针的函数 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f5f46abca993acb2990c3310e8fefd9ab970b751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：用内部指针和本机指针重载函数 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-函数可重载根据参数类型是内部指针或本机指针。  
+# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>如何：用内部指针和本机指针重载函数 (C++/CLI)
+可以根据参数类型是内部指针还是本机指针重载函数。  
   
 > [!IMPORTANT]
->  此语言功能支持使用 **\/clr** 编译器选项，但是，不受 **\/ZW** 编译器选项。  
+>  通过支持此语言功能**/clr**编译器选项，但不是**/ZW**编译器选项。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // interior_ptr_overload.cpp  
@@ -67,12 +68,12 @@ int main() {
 };  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  
   
-## 请参阅  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>请参阅  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

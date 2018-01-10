@@ -36,11 +36,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ced8ca3ec392caf29cd3cbc41fe462bd24546f26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9315791023b94fe7a2cdc97f1cec632c05ddbd2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 从控制台获取字符串。 提供这些函数的更多安全版本；请参阅 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
@@ -75,7 +76,7 @@ wchar_t *_cgetws(
  数据的存储位置。  
   
 ## <a name="return-value"></a>返回值  
- 在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果 `buffer` 为 `NULL`，这些函数则会调用无效的参数处理程序，如 [Parameter Validation](../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数则返回 `NULL`，并将 `errno` 设置为 `EINVAL`。  
+ 在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果 `buffer` 为 `NULL`，这些函数则会调用无效的参数处理程序，如 [Parameter Validation](../c-runtime-library/parameter-validation.md)。 如果允许继续执行，这些函数则返回 `NULL` ，并将 `errno` 设置为 `EINVAL`。  
   
 ## <a name="remarks"></a>备注  
  这些函数从控制台读取字符构成的字符串，并将该字符串及其长度存储在 `buffer`指向的位置。 `buffer` 参数必须是指向字符数组的指针。 数组的第一个元素 `buffer[0]`必须包含要读取的字符串的最大长度（以字符为单位)。 该数组必须包含足够的元素，以保存该字符串、终止 null 字符 ('\0') 和 2 个其他字节。 此函数会读取字符，直至读取回车符 - 换行符 (CR-LF) 组合或指定的字符数。 字符串以开头 `buffer[2]`进行存储。 如果此函数读取 CR-LF，它会存储 null 字符 ('\0')。 然后，此函数会在第二个数组元素 `buffer[1]`中存储字符串的实际长度。  
@@ -90,14 +91,14 @@ wchar_t *_cgetws(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_cgets`|\<conio.h>|  
 |`_cgetws`|\<conio.h> 或 \<wchar.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -143,6 +144,6 @@ Line Length = 16
 Text = A line of input.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)   
  [_getch、_getwch](../c-runtime-library/reference/getch-getwch.md)

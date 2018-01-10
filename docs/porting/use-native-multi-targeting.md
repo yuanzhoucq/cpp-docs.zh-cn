@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5475a211e3b0c116a7ab51cb7b7b128f5742e0cc
-ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.workload: cplusplus
+ms.openlocfilehash: 12fabf51f9a6d3db89ea544b5c3df1d59a6d5d02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>使用 Visual Studio 中的本机多目标来生成旧项目
 
@@ -82,7 +83,7 @@ Visual Studio 2008 具有自己的专用 C++ 生成系统，名为 VCBuild。 �
 
 安装这些产品后，“属性页”对话框中的“平台工具集”属性下拉列表自动更新为显示可用工具集。 现在，可以使用最新版 Visual Studio 为这些较旧版本的工具集生成项目，而无需对这些旧版本进行转换或升级。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [Visual Studio 2017 中 C++ 的符合性改进](../cpp-conformance-improvements-2017.md)  

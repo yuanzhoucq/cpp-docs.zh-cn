@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29e7d1687946c463a2c486423da8fb9d585a3546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c40f7b236771115d9848abdfccceb0a6e1f8f2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarations-and-types"></a>声明和类型
 本节介绍了变量、函数和类型的声明和初始化。 C 语言包括一组标准的基本数据类型。 您还可以通过基于已定义的类型声明新的类型来添加自己的数据类型（称为“派生类型”）。 本文讨论了以下主题：  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 语言参考](../c-language/c-language-reference.md)

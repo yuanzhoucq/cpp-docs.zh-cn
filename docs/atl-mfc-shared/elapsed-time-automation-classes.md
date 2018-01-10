@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51479f73112ed80ee981f3919fd3941d1eb0c8f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e4cf7fef17499910d9664ab26fa1b07438e7900
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="elapsed-time-automation-classes"></a>运行时间： 自动化类
 此过程演示如何计算两个区别`CTime`对象和 get`CTimeSpan`结果。  
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/24/2017
   
      [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [日期和时间：自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)
 

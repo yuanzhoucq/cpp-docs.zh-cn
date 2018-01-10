@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79efd81177cc3235030600779e70c1e9a2043670
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-spy"></a>迁移指南：Spy++
 此移植案例研究旨在让你了解典型的移植项目、可能遇到的问题类型，以及解决移植问题的一些常用提示和技巧。 这并不是权威的移植指南，因为移植项目的体验很大程度取决于代码的详细信息。  
@@ -686,6 +687,6 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 ## <a name="summary"></a>摘要  
  将 Spy++ 从原始的 Visual C++ 6.0 代码移植到最新的编译器需要花费大约 20 个小时的编码时间，历经一周的过程。 我们跳过了该产品的 8 个版本（从 Visual Studio 6.0 到 Visual Studio 2015）直接升级。 现在，这是所有大小型项目升级的推荐方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [上一个案例研究：COM Spy](../porting/porting-guide-com-spy.md)

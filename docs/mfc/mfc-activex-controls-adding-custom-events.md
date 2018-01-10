@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a93f0354395dee3110749a942e1800581f146fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控件：添加自定义事件
 自定义事件不同于常用事件，因为类自动不激发`COleControl`。 自定义事件识别的某些操作，由控件开发人员，为事件。 自定义事件的事件映射条目由`EVENT_CUSTOM`宏。 以下部分实现使用 ActiveX 控件向导创建 ActiveX 控件项目的自定义事件。  
@@ -136,7 +137,7 @@ ms.lasthandoff: 10/24/2017
   
 7.  调用`FireClick`在代码中的相应位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)   
  [COleControl 类](../mfc/reference/colecontrol-class.md)

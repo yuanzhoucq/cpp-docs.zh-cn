@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 200e50e2a10470e7078d31b35849c82ee9c11fd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da8fba1e5be97c692b08b8e89cf36b4ae6f5ddab
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 类
 生成 Fisher F 分布。  
@@ -98,9 +99,9 @@ public:
   
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
   
- 有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
- 有关 F-分布的详细信息，请参阅 Wolfram MathWorld 文章 [F-分布](http://go.microsoft.com/fwlink/LinkId=400899)。  
+ 有关 F-分布的详细信息，请参阅 Wolfram MathWorld 文章 [F-分布](http://go.microsoft.com/fwlink/p/?linkid=400899)。  
   
 ## <a name="example"></a>示例  
   
@@ -235,7 +236,7 @@ Distribution for 10 samples:
     10: 3.4363333954  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<random>  
   
  **命名空间：** std  
@@ -263,7 +264,7 @@ explicit fisher_f_distribution(const param_type& parm);
   
  第一个构造函数构造一个对象，其存储`m`值保留值*m*并且其存储`n`值保留值 *n* 。  
   
- 第二个构造函数将构造一个从 *parm* 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
+ 第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。  
   
 ##  <a name="param_type"></a>  fisher_f_distribution::param_type  
  存储分布的参数。  
@@ -294,7 +295,7 @@ struct param_type {
   
  在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
 
 

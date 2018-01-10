@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06ff5e8f0d2dc87d26e5fc1db80b70def5bb0fd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae6bad6452e1d119659c8588531c82671d031863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4754"></a>编译器警告（等级 4）C4754
 比较中的算术运算的转换规则意味着无法执行一个分支。  
@@ -102,7 +103,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **请注意**编译器警告中提到的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如：  
+ **请注意**编译器警告中提到的行号是语句的最后一行。 在有关分布到多个行的复杂条件语句的警告消息中，具有行代码缺陷的行可能是所报告的行前面几行的行。 例如:  
   
 ```cpp  
 unsigned long a;  

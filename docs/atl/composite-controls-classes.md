@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 848a2fbf6ef5a20f966093a73eeb22e619650f71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 847c447bf1b412961398acd8a08be27ce3df98b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-controls-classes"></a>复合控件类
 下面的类提供支持，用于创建复合控件  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相关文章  
  [复合控件基础知识](../atl/atl-composite-control-fundamentals.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   
  [复合控件宏](../atl/reference/composite-control-macros.md)   
  [复合控件全局函数](../atl/reference/composite-control-global-functions.md)

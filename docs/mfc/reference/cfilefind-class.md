@@ -67,11 +67,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e12874dcc35c4c98b765aa773d5307d3b35dbe60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfilefind-class"></a>CFileFind 类
 执行本地文件搜索和是为基类[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)，执行 Internet 文件搜索。  
@@ -125,7 +126,7 @@ class CFileFind : public CObject
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|指向 `CAtlTransactionManager` 对象的指针。|  
   
@@ -147,7 +148,7 @@ class CFileFind : public CObject
   
  `CFileFind`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="cfilefind"></a>CFileFind::CFileFind  
@@ -742,7 +743,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCFiles#35](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_5.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFtpFileFind 类](../../mfc/reference/cftpfilefind-class.md)   

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f7f9cfe98e243cb9eaa0252889b61e6c6019d89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1ee6738d55f2a925c510ff342cd289f26bc8669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>单字节和多字节字符集
 ASCII 字符集在 0x00 - 0x7F 范围内定义字符。 还有许多其他字符集（主要是欧洲字符集），它们在 0x00 - 0x7F 范围内定义与 ASCII 字符集相同的字符，还在 0x80 - 0xFF. 范围内定义扩展字符集。 因此，8 位的单字节字符集 (`SBCS`) 足以表示 ASCII 字符集以及许多欧洲语言的字符集。 但是，一些非欧洲语言的字符集（如日本汉字）包含的字符数多于单字节编码方案可表示的字符数，因此需要多字节字符集 (`MBCS`) 编码。  
@@ -33,6 +34,6 @@ ASCII 字符集在 0x00 - 0x7F 范围内定义字符。 还有许多其他字符
   
  多字节字符集可能包括单字节和双字节字符。 因此，多字节字符串可以包含单字节和双字节字符的组合。 两字节多字节字符具有一个前导字节和一个尾字节。 在特定的多字节字符集中，前导字节位于某个范围内，尾字节也是如此。 当这两种范围重叠时，可能需要计算特定上下文以确定某个给定的字节是用作前导字节还是尾字节。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [国际化](../c-runtime-library/internationalization.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38fd3302adb315caca8af6e136fc2d5dcbcd50b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b55928eeac421e2119a77c16c6fd7eb5f787606
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classconstiterator"></a>Container Class::const_iterator
 > [!NOTE]
@@ -36,5 +37,5 @@ typedef T6 const_iterator;
 ## <a name="remarks"></a>备注  
  此处它被描述为未指定类型 **T6** 的同义词。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Sample Container 类](../standard-library/sample-container-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86078a8ff66eadc1cdd6b177ba074abfd1683345
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfd7344b01360df6af3ccf7a153eda3451d2482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setapptype"></a>_set_app_type
 在启动时使用的内部函数告知 CRT，应用属于控制台应用程序还是 GUI 应用。  
@@ -46,7 +47,7 @@ void __cdecl _set_app_type(
  `appType`  
  表示应用程序类型的值。 可能的值为：  
   
-|值|描述|  
+|“值”|描述|  
 |----------------|-----------------|  
 |_crt_unknown_app|未知应用程序类型。|  
 |_crt_console_app|控制台（命令行）应用程序。|  
@@ -55,9 +56,9 @@ void __cdecl _set_app_type(
 ## <a name="remarks"></a>备注  
  通常情况下，不需要调用此函数。 它是在应用中调用 `main` 前执行的 C 运行时启动代码的一部分。
  
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |_set_app_type|process.h|
 

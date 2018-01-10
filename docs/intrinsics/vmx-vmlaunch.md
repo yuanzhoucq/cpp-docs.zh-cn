@@ -1,65 +1,65 @@
 ---
-title: "__vmx_vmlaunch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmlaunch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMLAUNCH 指令"
-  - "__vmx_vmlaunch intrinsic"
+title: "__vmx_vmlaunch |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmlaunch
+dev_langs: C++
+helpviewer_keywords:
+- VMLAUNCH instruction
+- __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 45986af1a63f79e4466227f767fdf96fd1c2cb35
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmlaunch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Microsoft 专用**  
   
- 在 VMX 非根的操作状态将调用应用程序 \(VM 键入\) 使用当前虚拟设备控制结构， \(VMCS\)。  
+ 使用当前虚拟机控件结构 (VMCS) 放置在 VMX 非根操作状态 （输入 VM） 中的调用应用程序。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned char __vmx_vmlaunch(  
    void);  
 ```  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
   
-|值|含义|  
-|-------|--------|  
-|0|成功的操作。|  
-|1|操作 failed with 扩展的状态可用于在当前 VMCS 的 `VM-instruction error field` 。|  
-|2|操作失败，但没有可用状态。|  
+|“值”|含义|  
+|-----------|-------------|  
+|0|操作成功。|  
+|1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
+|2|操作失败，无可用状态。|  
   
-## 备注  
- 使用 [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) 或 [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) 功能，应用程序可以执行 VM 输入操作。  [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) 函数只能用于生成状态是 `Clear`的 VMCS，并且， [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) 函数只能用于生成状态是 `Launched`的 VMCS。  结果，请使用 [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) 功能集 VMCS 的生成状态到 `Clear`，对于第一然后使用 [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) 功能 VM 输入操作，后面的 [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) 功能 VM 输入操作。  
+## <a name="remarks"></a>备注  
+ 应用程序可以通过使用执行 VM 输入操作[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函数可以使用其启动状态的 vmcs `Clear`，和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数可以使用其启动状态的 vmcs `Launched`。 因此，使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函数可设置到 VMCS 的启动状态`Clear`，然后使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函数为你的第一个 VM 输入操作和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)后续 VM 输入操作的函数。  
   
- `__vmx_vmlaunch` 功能与 `VMLAUNCH` 指令是等效的。  此功能支持宿主的与来宾操作系统及其应用程序的虚拟机监控程序的交互。  有关更多信息，搜索文档， “IA\-32 Intel 体系结构的 Intel 虚拟化技术规范，”在网站单据数字 \-002 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) ， C97063。  
+ `__vmx_vmlaunch`函数等同于`VMLAUNCH`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__vmx_vmlaunch`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md)   
- [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md)
+ [__vmx_vmresume](../intrinsics/vmx-vmresume.md)   
+ [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

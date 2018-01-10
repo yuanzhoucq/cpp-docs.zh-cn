@@ -1,32 +1,33 @@
 ---
-title: "helpstringcontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstringcontext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstringcontext attribute [C++]"
+title: "helpstringcontext |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstringcontext
+dev_langs: C++
+helpviewer_keywords: helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3c5492d18085d78e20d6654898a6c66647e3bbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# helpstringcontext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 .hlp 或 .chm 文件指定帮助主题的 ID。  
+# <a name="helpstringcontext"></a>helpstringcontext
+.Hlp 或.chm 文件中指定的帮助主题的 ID。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,14 +36,14 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `contextID`  
- 在帮助文件的 32 位帮助上下文标识符。  
+ 帮助文件中的 32 位帮助上下文标识符。  
   
-## 备注  
- **helpstringcontext** C\+\+ 特性具有与 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Helpstringcontext** c + + 属性具有相同的功能[helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 特性。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_helpstringcontext.cpp  
@@ -61,9 +62,9 @@ __interface IMyI
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -72,12 +73,11 @@ __interface IMyI
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Module — 模块](../windows/module-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
+ [模块](../windows/module-cpp.md)   

@@ -41,11 +41,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d510973a7b7c12185f5cde32a49af3537a436c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c839538b94ff8f80eabed98dbaf16e4009d3e500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-assignment-operators"></a>C 赋值运算符
 赋值操作将右侧操作数的值分配给左侧操作数命名的存储位置。 因此，赋值操作的左侧操作数必须是一个可修改的左值。 在赋值后，赋值表达式具有左操作数的值，但不是左值。  
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/24/2017
   
  在赋值中，右侧值的类型将转换为左侧值的类型，在完成赋值后，该值将存储在左操作数中。 左操作数不得为数组、函数或常量。 [类型转换](../c-language/type-conversions-c.md)中详细介绍了依赖两个类型的特定转换路径。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [赋值运算符](../cpp/assignment-operators.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 454bc2d4fd19568f526881208da77deabbe72087
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1a036a1520a747448c5541f367f0b43711e30b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 应用程序的 ClickOnce 部署
 Visual Studio 提供两种不同技术用于部署 Windows 应用程序： ClickOnce 部署或[Windows Installer](http://msdn.microsoft.com/library/cc185688)部署。  
@@ -47,7 +48,7 @@ Visual Studio 提供两种不同技术用于部署 Windows 应用程序： Click
   
  该技术的更多详细说明，请参阅[ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 ClickOnce 部署的详细示例，请参阅[演练： 手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)   
  [MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)   
  [Makecert.exe（证书创建工具）](https://msdn.microsoft.com/library/windows/desktop/aa386968)   

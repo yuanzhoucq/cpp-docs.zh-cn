@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0a5e8402f396c78ff02cbf5798c638f7b8b7d4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca52bcc3846971af1811551411199785c3d4e102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="-overridables-comment"></a>// Overridables 注释
 MFC 类声明的 `// Overridables` 部分包含您在需要修改基类行为时可在派生类中重写的虚拟函数。 它们的名称通常以“On”开头，但不是绝对必需的。 此处的函数设计为进行重写，并且一般实现或提供某种“回调”或“挂钩”。 通常，这些成员是受保护的。  
@@ -38,7 +39,7 @@ MFC 类声明的 `// Overridables` 部分包含您在需要修改基类行为时
 > [!NOTE]
 >  一般而言，本文中描述的约定也适用于自动化（之前称为“OLE 自动化”）方法和属性。 自动化方法类似于 MFC 操作。 自动化属性类似于 MFC 特性。 自动化事件（受 ActiveX 控件（之前称为“OLE 控件”）支持）类似于 MFC 可重写成员函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
  [注释示例](../mfc/an-example-of-the-comments.md)   
  [/ / Implementation 注释](../mfc/decrement-implementation-comment.md)   

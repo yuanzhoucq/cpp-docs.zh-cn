@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dd7ab170717cb0e20d71ad4e62e2cbc03483fbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e14c2811debfe01f7eb5ae7fc36bebfe0580017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="incomplete-types"></a>不完整类型
 不完整类型是一种用于描述标识符但缺少确定该标识符的大小所需的信息的类型。 “不完整类型”可以是：  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
     }                   /* student structure now completed */  
     ```  
   
--   若要创建不完整的数组类型，请声明数组类型而不指定其重复计数。 例如：  
+-   若要创建不完整的数组类型，请声明数组类型而不指定其重复计数。 例如:  
   
     ```  
     char a[];  /* a has incomplete type */  
@@ -65,5 +66,5 @@ ms.lasthandoff: 10/24/2017
     char a[25]; /* a now has complete type */  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明和类型](../c-language/declarations-and-types.md)

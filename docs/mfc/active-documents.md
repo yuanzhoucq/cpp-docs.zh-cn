@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c535a6d0ecb2d38445f0c7c0629ea874cdb12e3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents"></a>活动文档
 活动文档扩展了 OLE 的复合文档技术。 这些扩展是以管理视图的其他界面的形式提供的，因此对象可在容器中正常运行，并且保持对其显示和打印功能的控制。 此过程使在外部框架（如 Microsoft Office Binder 或 Microsoft Internet Explorer）和本机框架（如产品自己的视区）中显示文档成为可能。  
@@ -105,6 +106,6 @@ interface IOleDocumentView : IUnknown
   
  视图对象也可以是命令目标。 通过实现`IOleCommandTarget`视图可以接收源自容器的用户界面的命令 (如**新建**，**打开**，**另存为**， **打印**上**文件**菜单; 和**复制**，**粘贴**，**撤消**上**编辑**菜单)。 有关详细信息，请参阅[消息处理和命令目标](../mfc/message-handling-and-command-targets.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [活动文档包容](../mfc/active-document-containment.md)
 

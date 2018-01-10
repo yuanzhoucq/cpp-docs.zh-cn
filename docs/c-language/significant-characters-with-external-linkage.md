@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f85349ef67e658ec71b064abf30ea46061dbc021
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c420cf5ca72b18aefb93fb03d82c35b38ec21d03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="significant-characters-with-external-linkage"></a>带有外部链接的重要字符
 **ANSI 3.1.2** 具有外部链接的重要字符的数量  
   
  在使用 Microsoft C 编译的程序中声明为 `extern` 的标识符对 247 个字符是有意义的。 您可使用 /H（限制外部名称的长度）选项将此默认值修改为较小的数字。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)

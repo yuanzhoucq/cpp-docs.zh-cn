@@ -1,64 +1,66 @@
 ---
-title: "Date and Time: Automation Support | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "adding dates"
-  - "自动化, date and time support"
-  - "calculating dates and times"
-  - "计算, 日期和时间"
-  - "COleDateTime class, Automation date/time support"
-  - "COleDateTimeSpan class, Automation date/time support"
-  - "日期, Automation support"
-  - "运行时间, calculating in Automation"
-  - "格式设置 [Visual Studio], 日期"
-  - "格式设置 [Visual Studio], 时间"
-  - "时间 [Visual Studio], Automation support"
+title: "日期和时间： 自动化支持 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- adding dates
+- calculating dates and times
+- formatting [Visual Studio], dates
+- dates, Automation support
+- elapsed time, calculating in Automation
+- COleDateTime class, Automation date/time support
+- COleDateTimeSpan class, Automation date/time support
+- Automation, date and time support
+- formatting [Visual Studio], time
+- calculations, date and time
+- time [Visual Studio], Automation support
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a40a8fe49d9564714c328b657bc0d85d52ad84b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Date and Time: Automation Support
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文介绍如何利用选件类库服务迄今相关的和时间线。  中介绍的过程包括:  
+# <a name="date-and-time-automation-support"></a>日期和时间： 自动化支持
+本文介绍如何利用与日期和时间的管理相关的类库服务。 所述过程包括：  
   
 -   [获取当前时间](../atl-mfc-shared/current-time-automation-classes.md)  
   
 -   [计算经过的时间](../atl-mfc-shared/elapsed-time-automation-classes.md)  
   
--   [设置一个日期\/时间的字符串表示形式](../atl-mfc-shared/formatting-time-automation-classes.md)  
+-   [格式设置的字符串表示形式为日期/时间](../atl-mfc-shared/formatting-time-automation-classes.md)  
   
- [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 选件类提供了一种表示日期和时间信息。  它比 [CTime](../atl-mfc-shared/reference/ctime-class.md) 选件类提供更好的粒度和一个更大的范围。  [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) 选件类表示时间，例如两 `COleDateTime` 对象之间的差异。  
+ [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)类提供一种方法来表示日期和时间信息。 它提供了更细的粒度和更大的范围比[CTime](../atl-mfc-shared/reference/ctime-class.md)类。 [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)类表示经过的时间，如两个区别`COleDateTime`对象。  
   
- `COleDateTime` 和 `COleDateTimeSpan` 选件类旨在使用自动化的 `COleVariant` 选件类。  `COleDateTime` 和 `COleDateTimeSpan` 也很有用在MFC编程的数据库，但是，可以使用它们，只要要操作日期和时间值。  虽然 `COleDateTime` 选件类比 `CTime` 选件类具有值和更好的粒度的一个更大的范围，所以它比 `CTime`需要更多存储每个对象。  当与基础 **DATE** 类型时，还有一些特殊注意事项。  有关更多详细信息参见 [日期类型](../atl-mfc-shared/date-type.md) 在 **DATE**的实现。  
+ `COleDateTime`和`COleDateTimeSpan`类旨在用于`COleVariant`在自动化中使用的类。 `COleDateTime`和`COleDateTimeSpan`还可在 MFC 数据库编程中，但无论何时你想要操作日期和时间值，可以使用它们。 尽管`COleDateTime`类具有更大范围的值和更细的粒度比`CTime`类，它需要更多的存储，每个对象比`CTime`。 也有一些特殊的注意事项使用基础时**日期**类型。 请参阅[日期类型](../atl-mfc-shared/date-type.md)有关详细信息的实现**日期**。  
   
- `COleDateTime` 对象可用来表示在31年一月1日，100和9999之间的日期，十二月。  `COleDateTime` 对象是浮点值，与1毫秒的近似解析。  `COleDateTime` 基于 **DATE** 数据类型，在 [COleDateTime::operator DATE](../Topic/COleDateTime::operator%20DATE.md)下的MFC文档。  **DATE** 的实际实现这些这样的限制。  `COleDateTime` 实现对这些区域便于与选件类一起使用。  
+ `COleDateTime`对象可以用于表示 100，年 1 月 1 日和年 12 月 31 日之间的日期 9999。 `COleDateTime`对象浮点值，使用的近似分辨率为 1 毫秒。 `COleDateTime`基于**日期**下的 MFC 文档中定义的数据类型[COleDateTime::operator 日期](../atl-mfc-shared/reference/coledatetime-class.md#operator_date)。 实际实现**日期**超出这些边界。 `COleDateTime`实现未施加这些边界以方便使用类。  
   
- `COleDateTime` 不支持朱利安日期。  公历假定实时扩展为" 100年一月1日。  
+ `COleDateTime`不支持儒略历日期。 公历假定将扩展后移到 100 年 1 月 1 日。  
   
- `COleDateTime` 忽略夏时制\(DST）。  下面的代码示例比较计算跨DST将日期时间范围的两个方法:一个使用CRT和其他使用 `COleDateTime`。  DST开关，在大多数区域设置，第二周中4月和第三的在十月。  
+ `COleDateTime`将忽略夏令时 (DST)。 下面的代码示例将两种方法可以计算跨越 DST 切换日期的时间范围进行比较： 使用 CRT，和其他使用`COleDateTime`。 DST 切换，在大多数区域设置中的第二个一周内年 4 月和年 10 月的第三。  
   
- 通过标准C类型结构 **tm** 和 `time_t`，第一个方法分别设置两 `CTime` 对象，*time1* 和 *time2*，对4月5日和4月6日。  代码演示 *time1* 和 *time2* 和timespan在它们之间。  
+ 第一种方法中设置两个`CTime`对象， *time1*和*time2*，再到 5 年 4 月和年 4 月 6 分别使用标准的 C 类型结构**tm**和`time_t`. 该代码将显示*time1*和*time2*和它们之间的时间跨度。  
   
- 第二个方法创建两 `COleDateTime` 对象、 `oletime1` 和 `oletime2`，然后将它们对日期和 *time1* 和 *time2相同*。  它显示 `oletime1` 和 `oletime2` 和timespan在它们之间。  
+ 第二种方法创建两个`COleDateTime`对象，`oletime1`和`oletime2`，并将它们设置为同一个日期作为*time1*和*time2*。 它显示`oletime1`和`oletime2`和它们之间的时间跨度。  
   
- CRT正确计算23小时差异。  `COleDateTimeSpan` 计算24小时差异。  
+ CRT 正确地计算 23 个小时的差异。 `COleDateTimeSpan`计算 24 小时的差异。  
   
- 请注意使用 `COleDateTime::Format`，工作区该示例快结束时使用正确显示该日期。  请参见知识库文章“BUG:格式\(“%D”\)表示 `COleDateTime` 和 `COleDateTimeSpan`失败” \(Q167338）。  
+ 请注意，一种解决方法用于快结束时的示例显示使用正常的日期`COleDateTime::Format`。 请参阅知识库文章"BUG: Format("%D") 失败`COleDateTime`和`COleDateTimeSpan`"(Q167338)。  
   
- [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/CPP/date-and-time-automation-support_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]  
   
-## 请参阅  
- [Date and Time](../atl-mfc-shared/date-and-time.md)
+## <a name="see-also"></a>请参阅  
+ [日期和时间](../atl-mfc-shared/date-and-time.md)
+

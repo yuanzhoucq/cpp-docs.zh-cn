@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93e3b33e6e5e9eee52ec08eac32c47bf0ae6213f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e73e7aa3ff62782c6ebd3b5a8728aa05e78b1784
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters"></a>参数
 自变量是通过函数调用传递到函数的值的名称。 形参是函数期望接收的值。 在函数原型中，函数名称后的括号包含函数的参数及其类型的完整列表。 参数声明指定参数中存储的值的类型、大小和标识符。  
@@ -84,5 +85,5 @@ void new( double x, double y, double z )
   
  如果需要，编译器将独立于每个参数和每个自变量执行常用算术转换。 转换后，没有参数短于 `int` 且没有参数具有 float 类型，除非参数类型在原型中显式指定为 float。 这意味着，例如，将参数声明为 `char` 与将其声明为 `int` 的效果相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 函数定义](../c-language/c-function-definitions.md)

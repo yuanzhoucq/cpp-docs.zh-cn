@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4faa6143342d8765fce460a653090152c0b10417
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9768baa53e39f1b3243aba24385d592010c3d81a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-type"></a>返回类型
 函数的返回类型建立由该函数返回的值的大小和类型，并与以下语法中的 type-specifier 相对应：  
@@ -114,5 +115,5 @@ char *smallstr( char s1[], char s2[] )
   
  在调用函数之前，您无需使用 `int` 返回类型声明函数，但建议使用原型，以便启用对参数和返回值的正确类型检查。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 函数定义](../c-language/c-function-definitions.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6bffc721ac685be91531b3d876234de8be2477c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d18ae0818dd839bee0d93bd7194dadcc9abf6627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-checking-crt"></a>类型检查 (CRT)
 编译器对可采用可变数目的自变量的函数执行有限类型检查，如下所示：  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
  编译器会对这些函数的宽字符对等执行相同的有限类型检查。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>to 函数
 每个 **to** 函数及其关联的宏（如果有），将单个字符转换为另一个字符。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  **to** 函数和宏转换如下所示。  
   
-|例程|宏|描述|  
+|例程所返回的值|宏|描述|  
 |-------------|-----------|-----------------|  
 |`__toascii`|`__toascii`|将 `c` 转换为 ASCII 字符|  
 |`tolower`|`tolower`|如适用，将 `c` 转换为小写|  
@@ -119,7 +120,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../c-runtime-library/data-conversion.md)   
  [区域设置](../c-runtime-library/locale.md)   
  [is、isw 例程](../c-runtime-library/is-isw-routines.md)

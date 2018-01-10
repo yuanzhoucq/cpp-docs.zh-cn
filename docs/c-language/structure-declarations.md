@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>结构声明
 “结构声明”用于为类型命名和指定一系列可具有不同类型的变量值（称为结构的“成员”或“字段”）。 可选标识符（称为“标记”）为结构类型命名并可用于结构类型的后续引用。 该结构类型的变量保留该类型定义的整个序列。 C 中的结构类似于其他语言中称为“记录”的类型。  
@@ -136,7 +137,7 @@ struct sample   /* Defines a structure named x */
   
  结构的前两个成员为 `char` 变量和指向 **float** 值的指针。 第三个成员 (`next`) 被声明为指向正在定义的结构类型 (`sample`) 的指针。  
   
- 当不需要命名的标记时，匿名结构很有用。 当一个声明定义了所有结构实例时，就是这种情况。 例如：  
+ 当不需要命名的标记时，匿名结构很有用。 当一个声明定义了所有结构实例时，就是这种情况。 例如:  
   
 ```  
 struct  
@@ -189,5 +190,5 @@ p_s->b = 100;  /* A reference to a field in the s structure */
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明符和变量声明](../c-language/declarators-and-variable-declarations.md)

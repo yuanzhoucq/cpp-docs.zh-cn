@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7288b343563056f6e1daa4f0cb61b43fb263792f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6445f07c8adff13a65bde46cc9e1cefd789b97ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-guide-mfc-scribble"></a>迁移指南：MFC Scribble
 本主题是向你介绍 Visual C++ 项目升级过程的几个主题中的第一个主题，具体升级过程为将在较旧版本的 Visual Studio 中创建的 Visual C++ 项目升级到 Visual Studio 2017。 这些主题通过示例介绍升级过程，从非常简单的项目开始，过渡到稍微更复杂的项目。 在本主题中，我们将完成特定项目 (MFC Scribble) 的升级过程。 它很适合作为对 C++ 项目升级过程的基本介绍。  
@@ -89,6 +90,6 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ## <a name="next-steps"></a>后续步骤  
  Scribble 是一款小巧而简单 Windows 桌面应用程序，且不难转换。 许多小型简单的应用程序都可轻松转换为新版本。  对于具有很多行代码以及可能不符合现代设计标准的较早的旧版代码、多个项目和库、自定义生成步骤的更复杂的应用程序，或对于复杂脚本的自动生成，则需要较长时间进行升级。 继续[下一个示例](../porting/porting-guide-com-spy.md)，即称为 COM Spy 的 ATL/COM 应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [下一个示例：COM Spy](../porting/porting-guide-com-spy.md)

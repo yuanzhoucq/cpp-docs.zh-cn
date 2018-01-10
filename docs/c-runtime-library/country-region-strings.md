@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c250e47688e5fbcb32779d58dd8fe8973cdc96c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 可以将国家和地区字符串与语言字符串结合使用，以便创建 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函数的区域设置规范。 有关各种 Windows 操作系统版本支持的国家/地区名称列表，请参阅[国家语言支持 (NLS) API 参考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)。 在列表中，国家/地区字符串可以是“区域设置 - 语言国家/地区”列中的任何国家/地区值，或“国家或地区名称缩写”列中的任何缩写。 有关 Windows 操作系统（按版本）中的其他语言支持信息，请参阅“[MS-LCID]：Windows 语言代码标识符 (LCID) 参考”中的[附录 A：产品行为](http://msdn.microsoft.com/goglobal/bb896001.aspx)。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 |国家/地区字符串|缩写|等效区域设置名称|  
 |----------------------------|------------------|----------------------------|  
-|america|USA|zh-CN|  
+|america|USA|en-US|  
 |britain|GBR|en-GB|  
 |china|CHN|zh-CN|  
 |czech|CZE|cs-CZ|  
@@ -49,10 +50,10 @@ ms.lasthandoff: 10/24/2017
 |trinidad & tobago|TTO|en-TT|  
 |uk|GBR|en-GB|  
 |united-kingdom|GBR|en-GB|  
-|united-states|USA|zh-CN|  
-|us|USA|zh-CN|  
+|united-states|USA|en-US|  
+|us|USA|en-US|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
  [语言字符串](../c-runtime-library/language-strings.md)   
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   

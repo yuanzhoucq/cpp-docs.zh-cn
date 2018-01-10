@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a68c41793ea96a840a78e76e5b2a222f0b06a583
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df127970c1f05bd4fff5b99a4236be1f45e0203d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-translation-constants"></a>文件翻译常量
 ## <a name="syntax"></a>语法  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  如果在 mode 中未给出 t 或 b，则转换模式由默认模式变量 [_fmode](../c-runtime-library/fmode.md) 定义。 有关使用文本和二进制模式的详细信息，请参阅[文本和二进制模式文件 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdcfd815f520ff5d9e3931945eeb7b3597ec2393
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d712765ea8b7251b07a1cb407cd6bf1f64372da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-third-party-libraries"></a>移植第三方库
 
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
 对于专有的第三方库（非开源），我们建议与该库的提供商联系。 但是，我们想了解你正在使用的所有专有库，以便为你分组，请告知我们你依赖哪个库（可以通过 vcupgrade@microsoft.com 与我们联系）。
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual C++ 移植和升级指南](visual-cpp-porting-and-upgrading-guide.md)

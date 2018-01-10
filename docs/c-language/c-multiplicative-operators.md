@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77b87e796f71258086aadd5aa6da9845de8095c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法运算符
 乘法运算符执行乘法 (\*)、除法 (/) 和余数 (`%`) 运算。  
@@ -101,7 +102,7 @@ n = i % j;
   
  **Microsoft 专用**  
   
- 余数的符号与被除数的符号相同。 例如：  
+ 余数的符号与被除数的符号相同。 例如:  
   
 ```  
 50 % -6 = 2  
@@ -112,5 +113,5 @@ n = i % j;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [乘法运算符和取模运算符](../cpp/multiplicative-operators-and-the-modulus-operator.md)

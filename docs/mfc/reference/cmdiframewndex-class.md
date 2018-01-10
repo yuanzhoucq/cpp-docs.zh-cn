@@ -167,11 +167,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 397572f735fc6392be875c95fd57749e0503b77b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3d5080f86760c997c2036e766db66a5c4215f1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 类
 扩展的功能[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)，Windows 多文档界面 (MDI) 框架窗口。  
@@ -268,7 +269,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|确定停靠窗格是否可以转换为 MDI 子窗口。|  
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|启用或禁用 MDI 子窗口的重绘优化。|  
@@ -294,7 +295,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
  [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxMDIFrameWndEx.h  
   
 ##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout  
@@ -1795,7 +1796,7 @@ virtual void WinHelp(
 ### <a name="remarks"></a>备注  
  此方法将替代[CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)   

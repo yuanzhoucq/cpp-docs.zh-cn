@@ -26,11 +26,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85d2510658bdf534f25ccc3efc29c88da1c93eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715221da8ea960f19e9c4ab0e386afc61c3439fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-and-address-of-operators"></a>间接寻址和 Address-of 运算符
 间接寻址运算符 (\*) 通过指针间接访问一个值。 操作数必须是一个指针值。 操作的结果是操作数所寻址的值；即其操作数指向的地址处的值。 结果的类型是操作数寻址的类型。  
@@ -92,6 +93,6 @@ int  *pround  = &roundup;
   
  一旦声明函数 `roundup`，将声明并初始化指向 `roundup` 的两个指针。 第一个指针为 `proundup`，它仅通过函数名称进行初始化；第二个指针为 `pround`，它在初始化中使用 address-of 运算符。 初始化是等效的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [间接寻址运算符：*](../cpp/indirection-operator-star.md)   
  [Address-of 运算符：&](../cpp/address-of-operator-amp.md)

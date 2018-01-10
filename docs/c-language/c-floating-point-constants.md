@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7bd4bd3e0dc2dcd1388c7e8db5c9fcf209a9b47c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67883acbb2a6d5c0df075c47b7eda0d40a568f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-floating-point-constants"></a>C 浮点常量
 “浮点常量”是表示带符号实数的十进制数字。 带符号实数的表现形式包括整数部分、小数部分和指数。 浮点常量用于表示不可更改的浮点值。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  浮点常量为正数，除非它们的前面有减号 (**-**)。 在这种情况下，减号将视为一元算术求反运算符。 浮点常量包括类型 `float`、`double` 或 `long double`。  
   
- 浮点常量没有 **f**、**F** 或 **l**，或者 **L** 后缀类型为 `double`。 如果后缀是字母 **f** 或 **F**，则该常量类型为 `float`。 如果后缀是字母 **l** 或 **L**，则该常量类型为 `long double`。 例如:   
+ 浮点常量没有 **f**、**F** 或 **l**，或者 **L** 后缀类型为 `double`。 如果后缀是字母 **f** 或 **F**，则该常量类型为 `float`。 如果后缀是字母 **l** 或 **L**，则该常量类型为 `long double`。 例如:  
   
 ```  
 100L  /* Has type long double  */  
@@ -84,5 +85,5 @@ ms.lasthandoff: 10/24/2017
 75e-2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 常量](../c-language/c-constants.md)

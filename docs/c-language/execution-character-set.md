@@ -17,14 +17,15 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc380109f228077e9ee2a928202bf7514a7c2ebd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba264612923e101c63b5ec3503bbfbce426d8bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execution-character-set"></a>执行字符集
 此内容通常指“执行字符集”。 执行字符集不一定与用于编写 C 程序的源字符集相同。 执行字符集包含源字符集中的所有字符以及 null 字符、换行符、退格符、水平制表符、垂直制表符、回车和转义序列。 源和执行字符集在其他实现中可能不同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 字符常量](../c-language/c-character-constants.md)

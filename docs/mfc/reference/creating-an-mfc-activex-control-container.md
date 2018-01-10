@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9ac70acd706237cfeb40e709d2562883263c687
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2054a11365cc6f9db7a5608f0b056d0d85ff117d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>创建 MFC ActiveX 控件容器
 ActiveX 控件容器是一个父程序，提供 ActiveX (以前称为 OLE) 控件运行环境。 你可以创建应用程序能够包含 ActiveX 控件或无需 MFC，但它是可以更轻松地使用 MFC 执行的操作。  
@@ -42,6 +43,6 @@ ActiveX 控件容器是一个父程序，提供 ActiveX (以前称为 OLE) 控�
   
 3.  [MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual C++ 项目类型](../../ide/visual-cpp-project-types.md)
 

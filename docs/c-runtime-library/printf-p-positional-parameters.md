@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83b3630addfe94c438be21ca2470ade01193a997
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 10d48a899b2d2e6ad644c385c2b2116353c20f8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 位置参数
 位置参数可以按要替换到格式字符串中字段的自变量的编号进行指定。 以下位置参数 `printf` 函数可用：  
@@ -72,7 +73,7 @@ _printf_p("%2$s %1$s", "November", "10");
 10 November  
 ```  
   
-与传统的格式字符串不同，位置参数可多次在格式字符串中使用。 例如，  
+与传统的格式字符串不同，位置参数可多次在格式字符串中使用。 例如，应用于对象的  
   
 ```C  
 _printf_p("%1$d times %1$d is %2$d", 10, 100);  
@@ -87,7 +88,7 @@ _printf_p("%1$d times %1$d is %2$d", 10, 100);
 所有自变量都必须在格式字符串中的某个位置至少使用一次。 格式字符串中允许的位置参数的最大数量由 `_ARGMAX` 指定。  
   
 ### <a name="width-and-precision"></a>宽度和精度  
-可以使用 `*n$` 指定位置参数作为宽度或精度说明符，其中 `n` 是参数列表中的宽度或精度参数。 宽度或精度值的位置必须紧跟 \* 符号出现。 例如，  
+可以使用 `*n$` 指定位置参数作为宽度或精度说明符，其中 `n` 是参数列表中的宽度或精度参数。 宽度或精度值的位置必须紧跟 \* 符号出现。 例如，应用于对象的  
   
 ```C  
 _printf_p("%1$*2$s","Hello", 10);  
@@ -152,5 +153,5 @@ ghi abc def
 333.333300 2.22 0.100
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [格式规范语法：printf 和 wprintf 函数](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

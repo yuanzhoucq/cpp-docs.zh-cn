@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e031cf6d142e611c81ae73ee8d201a12acdea529
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
 本主题列出在常见的 MFC 对话框控件使用的标准对话框数据交换 (DDX) 例程。  
@@ -72,7 +73,7 @@ void AFXAPI DDX_CBIndex(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_cbstring"></a>DDX_CBString  
@@ -103,7 +104,7 @@ void AFXAPI DDX_CBString(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
@@ -134,7 +135,7 @@ void AFXAPI DDX_CBStringExact(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_check"></a>DDX_Check  
@@ -162,7 +163,7 @@ void AFXAPI DDX_Check(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_control"></a>DDX_Control  
@@ -190,7 +191,7 @@ void AFXAPI DDX_Control(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
@@ -230,7 +231,7 @@ void AFXAPI DDX_DateTimeCtrl(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
 
    
@@ -262,10 +263,10 @@ void DDX_ManagedControl(
   
  有关详细信息，请参阅[如何： 使用 Windows 窗体执行 DDX/DDV 数据绑定](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。  
    
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxwinforms.h  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
  [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)   
  [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
  
@@ -305,7 +306,7 @@ void AFXAPI DDX_IPAddress(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_lbindex"></a>DDX_LBIndex  
@@ -333,7 +334,7 @@ void AFXAPI DDX_LBIndex(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_lbstring"></a>DDX_LBString  
@@ -366,7 +367,7 @@ void AFXAPI DDX_LBString(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
@@ -399,7 +400,7 @@ void AFXAPI DDX_LBStringExact(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
@@ -436,7 +437,7 @@ void AFXAPI DDX_MonthCalCtrl(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_radio"></a>DDX_Radio  
@@ -466,7 +467,7 @@ void AFXAPI DDX_Radio(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_scroll"></a>DDX_Scroll  
@@ -494,7 +495,7 @@ void AFXAPI DDX_Scroll(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_slider"></a>DDX_Slider  
@@ -522,7 +523,7 @@ void AFXAPI DDX_Slider(
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。 滑块控件有关的信息，请参阅[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
   
 ##  <a name="ddx_text"></a>DDX_Text  
@@ -598,9 +599,9 @@ void AFXAPI DDX_Text(
 ### <a name="remarks"></a>备注  
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxdd_.h  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [标准对话框数据验证例程](../../mfc/reference/standard-dialog-data-validation-routines.md)   
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

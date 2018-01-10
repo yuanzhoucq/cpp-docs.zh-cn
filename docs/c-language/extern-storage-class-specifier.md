@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 448a659afaf7a0251d500da3d9878d30550b9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern 存储类说明符
 使用 `extern` 存储类说明符声明的变量是对名称与在程序的任何源文件的外部级别定义的名称相同的变量的引用。 内部 `extern` 声明用于使外部级别变量定义在块中可见。 除非在外部级别另有声明，否则使用 `extern` 关键字声明的变量仅在声明它的块中可见。  
@@ -82,5 +83,5 @@ void other( void )
   
  变量 `a` 增加了 2，并给出结果 4。 如果在同一程序中再次调用 `other` 函数，则 `a` 的初始值将为 4。 当程序退出然后重新输入声明内部 static 变量的块时，这些变量将保留其值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [内部级别声明的存储类说明符](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

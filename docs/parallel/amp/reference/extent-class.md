@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 22b7a25d0695b7e12a4fbecbf47bbc7feb32148f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extent-class-c-amp"></a>extent 类 (C++ AMP)
 表示向量*N*指定的边界的整数值*N*-具有 0 来源的维空间。 向量中的值是从最高有效订购到最不重要。  
@@ -42,7 +43,7 @@ class extent;
  `_Rank`  
  秩`extent`对象。  
 
- ## <a name="requirements"></a>要求  
+ ## <a name="requirements"></a>惠?  
  **标头：** amp.h  
   
  **命名空间：** 并发  
@@ -82,7 +83,7 @@ class extent;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|获取的秩`extent`对象。|  
   
@@ -372,5 +373,5 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

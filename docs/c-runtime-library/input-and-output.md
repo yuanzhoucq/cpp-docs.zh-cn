@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5c4705ae56f11c1299e512814f8d83a49690a6ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35e97e7bbbc04699e813b6890180512043c4e25d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-and-output"></a>输入和输出
 I/O 函数在文件和设备中读取和写入数据。 文件 I/O 操作在文本模式或二进制模式下进行。 Microsoft 运行库有三种类型的 I/O 函数：  
@@ -38,5 +39,5 @@ I/O 函数在文件和设备中读取和写入数据。 文件 I/O 操作在文�
     > [!NOTE]
     >  由于流函数将进行缓冲而底层函数不会这样，因此这两种类型的函数通常是不兼容的。 若要处理特定文件，请以独占方式使用流函数或底层函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

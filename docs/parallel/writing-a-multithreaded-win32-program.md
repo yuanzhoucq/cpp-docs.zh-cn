@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e431c73b94975904a64b60c7541a2d665267d5b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>编写多线程 Win32 程序
 当你编写具有多个线程的程序时，你必须协调它们的行为和[的程序的资源使用](#_core_sharing_common_resources_between_threads)。 你还必须确保每个线程接收[其自己的堆栈](#_core_thread_stacks)。  
@@ -69,5 +70,5 @@ ReleaseMutex( hIOMutex);
   
  Win32 还提供了线程本地存储 (TLS) 来存储每个线程数据。 有关详细信息，请参阅[线程本地存储 (TLS)](../parallel/thread-local-storage-tls.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)

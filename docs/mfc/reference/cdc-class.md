@@ -413,11 +413,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11ece1ca08fc7f8b02c3f32284a986abc3e8e361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e8424638311cd6fdbe220bfd98bb27409ee670e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdc-class"></a>CDC 类
 定义设备上下文对象的类。  
@@ -683,7 +684,7 @@ class CDC : public CObject
   
  `CDC`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="abortdoc"></a>CDC::AbortDoc  
@@ -2934,7 +2935,7 @@ DWORD GetGlyphOutline(
  `nFormat`  
  指定在其中的功能是返回的信息的格式。 它可以是以下值之一，或 0:  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**GGO_BITMAP**|返回的标志符号位图。 当函数返回时，通过指向的缓冲区`lpBuffer`包含其行在字边界启动一个 1 位每个像素的位图。|  
 |**GGO_NATIVE**|返回在光栅化程序的本机格式，使用设备单元中的曲线数据点。 指定此值，当中指定的任何转换`lpmat2`将被忽略。|  
@@ -5436,7 +5437,7 @@ DWORD SetLayout(DWORD dwLayout);
  `dwLayout`  
  设备上下文布局和位图控制标志。 它可以是以下值的组合。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |LAYOUT_BITMAPORIENTATIONPRESERVED|禁用对调用任何反射[cdc:: bitblt](#bitblt)和[CDC::StretchBlt](#stretchblt)。|  
 |LAYOUT_RTL|设置默认水平布局为从右向左。|  
@@ -5702,7 +5703,7 @@ int SetStretchBltMode(int nStretchMode);
  *nStretchMode*  
  指定的拉伸模式。 它可以是任何以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**BLACKONWHITE**|执行布尔 AND 运算使用的已清除的和现有的像素的颜色值。 如果位图是单色位图，此模式会保留代价白色像素是黑色像素。|  
 |**COLORONCOLOR**|删除像素。 此模式下不尝试保留其信息的情况下删除所有消除了的行的像素为单位。|  
@@ -6360,7 +6361,7 @@ BOOL WidenPath();
 ### <a name="remarks"></a>备注  
  此函数是仅当当前的钢笔为几何钢笔由第二个版本的创建成功`CreatePen`成员函数，或如果使用的第一个版本创建钢笔`CreatePen`和宽度，都采用大于 1 设备单位。 设备上下文必须包含已关闭的路径。 在路径中的任何 Bzier 曲线将转换为直线估算扩大的曲线的序列。 在这种情况下，没有 Bzier 曲线保持后的路径`WidenPath`调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CPaintDC 类](../../mfc/reference/cpaintdc-class.md)   

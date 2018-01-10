@@ -171,18 +171,19 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b80a4b8c947064886d6afa18e9c24d62195a049a
-ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.workload: cplusplus
+ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-types"></a>标准类型
 Microsoft 运行库定义下列标准类型和 typedef。  
   
 ### <a name="fixed-width-integral-types-stdinth"></a>定宽整型类型 (stdint.h)  
   
-|名称|等效内置类型|  
+|name|等效内置类型|  
 |----------|-------------------------------|  
 |int8\_t、uint8\_t|signed char、unsigned char|  
 |int16\_t、uint16\_t|short、unsigned short|  
@@ -262,5 +263,5 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`wctype_t` integer|可表示任何语言字符集的所有字符。|WCHAR.H、<br /><br /> CRTDEFS.H|  
 |`wint_t` integer|可保留任何宽字符或宽文件尾值的数据对象的类型。|WCHAR.H、<br /><br /> CRTDEFS.H|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba591b6bba935ff5ee6669dd0feb62fb9bd05177
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 356d0f0a71feccee953a0b1bd7dc54bc64a0e233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="missing-function-body-or-variable"></a>缺少函数体或变量
 只有函数原型，编译器可以继续未生成错误，但链接器无法解析为地址的调用，因为没有函数代码或变量保留的空间。 在创建链接器必须解析的函数调用之前，不会看到此错误。  
@@ -56,5 +57,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

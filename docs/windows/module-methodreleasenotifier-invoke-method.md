@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 745779ff7e10917371f9beb18eebacd45c56d9cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 141c80bf90be7e9b93d180d429367f18e0edaf33
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulemethodreleasenotifierinvoke-method"></a>Module::MethodReleaseNotifier::Invoke 方法
 调用与当前 module:: methodreleasenotifier 对象相关联的事件处理程序。  
@@ -30,10 +33,10 @@ ms.lasthandoff: 10/24/2017
 void Invoke();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Module::MethodReleaseNotifier 类](../windows/module-methodreleasenotifier-class.md)

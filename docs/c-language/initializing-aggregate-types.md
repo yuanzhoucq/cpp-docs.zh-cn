@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a50d9624c617904144ba9173a5e7fa0ce2064508
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8656d1c9f5f08e8736ee83705ea2daf9031c2446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-aggregate-types"></a>初始化聚合类型
 “聚合”类型是结构、联合或数组类型。 如果聚合类型包含聚合类型的成员，则初始化规则将以递归方式应用。  
@@ -159,5 +160,5 @@ union
   
  在此示例中，将初始化联合变量 `y`。 该联合的第一个元素是数组，因此该初始值设定项是聚合初始值设定项。 初始值设定项列表 `{'1'}` 将值赋给数组的第一行。 由于列表中仅显示一个值，因此，第一列中的元素将初始化为字符 `1`，而该行中的其余两个元素将初始化为值 0（默认值）。 同样，`x` 的第二行的第一个元素将初始化为字符 `4`，而该行中的其余两个元素将初始化为值 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [初始化](../c-language/initialization.md)

@@ -41,11 +41,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8206f239af5ab8be0f20eed0f73b4ad0f1ba7e2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d341aa5af2b16d1a29bc4e3dfe2f97a68b73d6ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="escape-sequences"></a>转义序列
 由反斜杠 (\\) 后接字母或数字组合构成的字符组合称为“转义序列”。 要在字符常量中表示换行符，单引号或某些其他字符，你必须使用转义序列。 转义序列被视为单个字符，因此，它是有效的字符常量。  
@@ -81,12 +82,12 @@ ms.lasthandoff: 10/24/2017
   
  转义序列允许你发送非图形控制字符到显示设备。 例如，ESC 字符 (\033) 通常用作终端或打印机的控制命令的第一个字符。 一些转义序列特定于设备。 例如，垂直制表符和换页符转义序列（\v 和 \f）不会影响屏幕输出，但它们会执行适当的打印机操作。  
   
- 还可以将反斜杠 (\\) 用作继续符。 当换行符（等效于按 RETURN 键）紧接反斜杠时，编译器会忽略反斜杠和换行符并将下一行作为前一行的一部分。 这主要对长于一行的预处理器定义有用。 例如:   
+ 还可以将反斜杠 (\\) 用作继续符。 当换行符（等效于按 RETURN 键）紧接反斜杠时，编译器会忽略反斜杠和换行符并将下一行作为前一行的一部分。 这主要对长于一行的预处理器定义有用。 例如:  
   
 ```  
 #define assert(exp) \  
 ( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 字符常量](../c-language/c-character-constants.md)

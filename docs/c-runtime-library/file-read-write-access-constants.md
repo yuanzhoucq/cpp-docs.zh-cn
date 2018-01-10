@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d32e9da99776bf5e21805ec239c2731cc3d5f21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 789d0ae6b0b9b38312896adf079e7c10dcde7556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-readwrite-access-constants"></a>文件读取/写入访问常量
 ## <a name="syntax"></a>语法  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  指定“r+”、“w+”或“a+”类型时，允许读取和写入（文件将处于打开状态以进行“更新”）。 但是，在读取与写入之间切换时，必须有干预性的 `fflush`、`fsetpos`、`fseek` 或 rewind 操作。 可以为 `fsetpos` 或 `fseek` 操作指定当前位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   

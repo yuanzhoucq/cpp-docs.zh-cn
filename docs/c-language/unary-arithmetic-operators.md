@@ -24,16 +24,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a655523a22c66d4b255d82d071a4efff29e6a6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9741286ba4af5820f8d8eebadfd88d3bb14abaef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unary-arithmetic-operators"></a>一元算术运算符
 下面的列表中讨论了 C 一元加、算术求反、求补和逻辑求反运算符：  
   
-|运算符|说明|  
+|运算符|描述|  
 |--------------|-----------------|  
 |**+**|括号内的表达式前面的一元加运算符强制对包含的运算进行分组。 它用于涉及多个结合的或可交换的二元运算符的表达式。 操作数必须具有算法类型。 结果为操作数的值。 整型操作数将进行整型提升。 结果的类型为提升后的操作数的类型。|  
 |**-**|算术求反运算符生成其操作数的负值（2 的补数）。 操作数必须是整型值或浮点值。 此运算符执行常用算术转换。|  
@@ -65,5 +66,5 @@ if( !(x < y) )
   
  如果 `x` 大于或等于 `y`，则该表达式的结果为 1 (true)。 如果 `x` 小于 `y`，则结果为 0 (false)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)

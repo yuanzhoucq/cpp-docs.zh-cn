@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 101d34c9ed610cb375c0755e7698f45a1b16e935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-does-remote-automation-fit-in"></a>远程自动化的适用条件
 DCOM 在 1996 年发布，仅用于 32 位和 64 位平台。 Microsoft 的 Visual Basic 团队始终将 Visual Basic 视为使用自动化允许其组件通信。 缺少分布式版本严重限制了这些功能在企业环境中的使用，因此，开发 Visual Basic 4.0 Enterprise Edition 的团队决定调查自己的针对 OLE 和 COM 的自动化部件的一系列远程处理组件的创建。 显然，主要目标是确保结果与 DCOM 兼容，并确保在 DCOM 可用时可由它替换结果。 它们随后继续运行以便为 16 位和 32 位 Windows 平台实现远程自动化 (RA)。  
@@ -33,6 +34,6 @@ DCOM 在 1996 年发布，仅用于 32 位和 64 位平台。 Microsoft 的 Visu
   
  为了使用远程自动化而创建的程序和为了使用通过 DCOM 实现的自动化而创建的程序不需要有区别，利用配置实用工具，您可以简化远程自动化和 DCOM 之间的操作切换。 因此，在基础结构到位后，将应用程序从远程自动化升级到 DCOM 并不困难。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [远程自动化提供什么](what-does-remote-automation-provide-q.md)   
  [DCOM 历史记录](../mfc/history-of-dcom.md)

@@ -71,11 +71,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db8a7ee97c414a7775df393d419c7d12d61cdbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7a2b0e1dd95b460d6b6007e79378bc69f1b4ce
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cfile-class"></a>CFile 类
 Microsoft 基础类文件类的基类。  
@@ -137,7 +138,7 @@ class CFile : public CObject
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|指向`CAtlTransactionManager`对象。|  
   
@@ -157,7 +158,7 @@ class CFile : public CObject
   
  `CFile`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="abort"></a>Cfile:: Abort  
@@ -183,7 +184,7 @@ virtual void Abort();
 ```  
 CFile();  
 CFile(CAtlTransactionManager* pTM);  
-  CFile(HANDLE hFile);
+CFile(HANDLE hFile);
 
  
 CFile(
@@ -557,9 +558,9 @@ virtual BOOL Open(
   
 |`pError`|遇到错误|返回值|CFileException 内容|  
 |--------------|------------------------|------------------|----------------------------|  
-|**NULL**|No|**TRUE**|无|  
-|ptr 到`CFileException`|No|**TRUE**|未更改|  
-|**NULL**|是|**FALSE**|无|  
+|**NULL**|否|**TRUE**|不可用|  
+|ptr 到`CFileException`|否|**TRUE**|未更改|  
+|**NULL**|是|**FALSE**|不可用|  
 |ptr 到`CFileException`|是|**FALSE**|初始化来描述错误|  
   
 ### <a name="example"></a>示例  
@@ -670,7 +671,7 @@ UINT nFrom);
 ### <a name="remarks"></a>备注  
  下表列出可能值`nFrom`参数。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CFile::begin`|从文件开头查找。|  
 |`CFile::current`|从文件指针的当前位置向搜索。|  
@@ -829,7 +830,7 @@ virtual void Write(
   
  此外，请参阅示例[CFile::CFile](#cfile)和[CFile::Open](#open)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 DRAWCLI](../../visual-cpp-samples.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

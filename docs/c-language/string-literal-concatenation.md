@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5974e192e32c612fe995cbc736e703f6168a3e8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literal-concatenation"></a>字符串文本串联
 若要形成占用多行的字符串文本，则可以将两个字符串串联起来。 为此，请键入反斜杠，然后按 Return 键。 反斜杠将使编译器忽略以下换行符。 例如，字符串文本  
@@ -44,7 +45,7 @@ ken into two or more pieces."
 "Enter a number between 1 and 100\nOr press Return"  
 ```  
   
- 由于字符串可以在源代码的任何列中开始，而长字符串可以在后面的行的任何列中继续，因此可以放置字符串以增强源代码可读性。 在任一情况下，在输出时，字符串的屏幕表示形式都不受影响。 例如：  
+ 由于字符串可以在源代码的任何列中开始，而长字符串可以在后面的行的任何列中继续，因此可以放置字符串以增强源代码可读性。 在任一情况下，在输出时，字符串的屏幕表示形式都不受影响。 例如:  
   
 ```  
 printf_s ( "This is the first half of the string, "  
@@ -68,5 +69,5 @@ printf_s( "%s" , string ) ;
   
  在翻译阶段 6 中，相邻字符串文本或相邻宽字符串文本的任意序列指定的多字节字符序列被串联为一个多字节字符序列。 因此，不要设计在执行期间允许修改字符串文本的程序。 ANSI C 标准规定，修改字符串的结果是不确定的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 字符串文本](../c-language/c-string-literals.md)

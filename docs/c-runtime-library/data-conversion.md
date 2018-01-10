@@ -17,18 +17,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 11b28793e5e659e3135061e3a6fd410d9b1c9f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-conversion"></a>数据转换
 这些例程可将数据从一种形式转换为另一种形式。 通常，这些例程比可能编写的转换执行速度更快。 每个以 `to` 前缀开头的例程都作为函数和宏实现。 请参阅[在函数和宏之间选择](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)，了解关于选择实现的信息。  
   
 ### <a name="data-conversion-routines"></a>数据转换例程  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|查找整数的绝对值|  
 |[atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为 `float`|  
@@ -69,5 +70,5 @@ ms.lasthandoff: 10/27/2017
 |[_atoi64、_atoi64_l、_wtoi64、_wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|将宽字符字符串转换为 `__int64`|  
 |[ato、_atol_l、_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|将宽字符字符串转换为 `long`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

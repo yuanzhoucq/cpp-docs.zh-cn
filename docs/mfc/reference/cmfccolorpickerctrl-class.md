@@ -51,11 +51,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66e0155adec5b00bbb5e5f090c3944899c5e92d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11c015df63d3032a8616f7f19614376aa966d89b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 类
 `CMFCColorPickerCtrl`类提供用于选择颜色的控件的功能。  
@@ -134,7 +135,7 @@ class CMFCColorPickerCtrl : public CButton
   
  [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcolorpickerctrl.h  
   
 ##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
@@ -412,7 +413,7 @@ void SetType(COLORTYPE colorType);
 ### <a name="remarks"></a>备注  
  若要指定颜色选取器控件类型，请在创建 Windows 控件之前调用此方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)

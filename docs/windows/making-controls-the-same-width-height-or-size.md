@@ -1,50 +1,54 @@
 ---
-title: "Making Controls the Same Width, Height, or Size | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make Same Size command"
-  - "controls [C++], sizing"
+title: "使控件相同的宽度、 高度或大小 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Make Same Size command
+- controls [C++], sizing
 ms.assetid: 94b50613-67e2-497b-a2b6-6d98dccfd345
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6aac3e9249bd6583bc718cba9667bdc2bc9a7ab9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Making Controls the Same Width, Height, or Size
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以根据主导控件的大小来调整一组控件的大小。  也可以[基于标题文本的尺寸调整控件的大小](../mfc/sizing-individual-controls.md)。  
+# <a name="making-controls-the-same-width-height-or-size"></a>使控件具有相同的宽度、高度或大小
+您可以调整大小一的组基于主导控件的大小的控件。 你还可以[调整其标题文本的维度所基于的控件的大小](../windows/sizing-individual-controls.md)。  
   
-### 使控件具有相同的宽度、高度或大小  
+### <a name="to-make-controls-the-same-width-height-or-size"></a>若要使控件相同的宽度、 高度或大小  
   
-1.  [选定控件](../mfc/selecting-multiple-controls.md)，而这些控件是进行调整大小。  
+1.  [选择的控件](../windows/selecting-multiple-controls.md)要调整大小。  
   
-     系列中首先选定的控件为主导控件。  组中控件的最终大小取决于主导控件的大小。  有关选定主导控件的更多信息，请参见[指定主导控件](../mfc/specifying-the-dominant-control.md)。  
+     所选序列中的第一次控件是主导控件。 组中的控件的最终大小取决于主导控件的大小。 有关选择主导控件的详细信息，请参阅[指定主导控件](../windows/specifying-the-dominant-control.md)。  
   
-2.  从“格式”菜单中选择“使大小相同”，然后选择下列命令之一：  
+2.  从**格式**菜单上，选择**使大小相同**，然后选择下列命令之一：  
   
-    -   **高度和宽度**  
+    -   **同时**  
   
     -   **高度**  
   
     -   **宽度**  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  Win32  
   
-## 请参阅  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>请参阅  
+ [在对话框中的控件](../windows/controls-in-dialog-boxes.md)   
  [控件](../mfc/controls-mfc.md)
+

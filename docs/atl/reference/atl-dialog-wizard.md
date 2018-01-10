@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 003cda9f3b0916cb7c86dfce874840268a64dbff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6cdf16b3e82ce69fa06b3eacda8d7b48643fb3c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-dialog-wizard"></a>ATL 对话框向导
 此向导将插入项目 ATL 对话框框对象，派生自[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 对话框中派生自`CAxDialogImpl`可以承载 ActiveX 控件。  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/24/2017
   
  向导不会覆盖文件。 如果选择的名称的现有文件，则单击**完成**，向导会提示您指出类实现是否应追加到文件的内容。 单击**是**要追加文件; 单击**否**返回到向导并指定另一个文件的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 对话框](../../atl/reference/adding-an-atl-dialog-box.md)
 

@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea8f4609be920c03ff718ab79ba5a3693ec7d8e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 13fc476f696bdd2cb17ed58c496c63747db90322
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wrl-class-library-project-template"></a>WRL 类库项目模板
 如果使用 Visual Studio 来编写的 Windows 运行时 c + + 模板库 (WRL) 项目，则将可以通过下载 WRL 类库项目模板极大地简化你的任务。  
@@ -58,5 +61,5 @@ ms.lasthandoff: 10/24/2017
   
 -   名为 module.cpp 的文件，其定义库导出 `DllMain`、`DllCanUnloadNow`、`DllGetActivationFactory` 和 `DllGetClassObject`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 运行时 C++ 模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0255b8fbb46a4a97a9736b7075a71cd8e2afb2d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be0f6863ae1c0d7bd2c30868dbc994d1c0cc04a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="significant-characters-without-external-linkage"></a>没有外部链接的重要字符
 **ANSI 3.1.2** 不具有外部链接的重要字符的数量  
   
  标识符对 247 个字符是有意义的。 编译器不限制可以在标识符中使用的字符数；它只会忽略限制之外的任何字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)

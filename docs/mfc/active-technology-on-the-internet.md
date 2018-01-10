@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 231fc4ec3707fa33cc50a62e45890cfc2090e1d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 163456b044a50bbbbdf5f4ae229723c8730bc369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-technology-on-the-internet"></a>Internet 上的 Active 技术
 Active 技术是一个开放式平台，用来让开发人员为全球性的 Internet 或公司的内部网络（也称为 Intranet）创建激动人心的动态内容和应用程序。 Microsoft 提供的用于 Internet 编程的主要技术如下所述。  
@@ -38,7 +39,7 @@ Active 技术是一个开放式平台，用来让开发人员为全球性的 Int
 ## <a name="html-extensions"></a>HTML 扩展名  
  HTML 扩展名（如对象标记）已添加以支持控件和脚本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)   
  [在 Internet 上的 ActiveX 控件](../mfc/activex-controls-on-the-internet.md)   
  [在 Internet 上的活动文档](../mfc/active-documents-on-the-internet.md)   

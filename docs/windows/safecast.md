@@ -1,32 +1,33 @@
 ---
-title: "SafeCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeCast 函数"
+title: "SafeCast |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeCast
+dev_langs: C++
+helpviewer_keywords: SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4c3c9bb208cc2be2f91d8a464787d3299cd0b386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SafeCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将数字类型转换为另一种类型。  
+# <a name="safecast"></a>SafeCast
+将一种类型到另一种类型的数字的强制转换。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename T, typename U>  
@@ -36,30 +37,30 @@ inline bool SafeCast (
 );  
 ```  
   
-#### 参数  
- \[in\] `From`  
- 要转换的资源号。  此类型必须为 T 类型。  
+#### <a name="parameters"></a>参数  
+ [in] `From`  
+ 要转换的源数。 其类型必须为 T。  
   
- \[out\] `To`  
- 对新数字类型的引用。  此类型必须为 U 类型。  
+ [out] `To`  
+ 对新的数字类型的引用。 其类型必须为 U。  
   
-## 返回值  
- 如果未发生错误，则为`true`；如果出错，则为`false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果没有错误发生;`false`如果发生错误。  
   
-## 备注  
- 此方法为 [SafeInt 库](../windows/safeint-library.md) 的一部分以及一个强制转换操作设计，而不会创建[SafeInt 类](../windows/safeint-class.md) 的实例。  
+## <a name="remarks"></a>备注  
+ 此方法属于[SafeInt 库](../windows/safeint-library.md)，而无需创建的实例专用于单个强制转换操作[SafeInt 类](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  此方法仅当必须保护单个操作时使用。  如果存在多个操作，应该使用 `SafeInt` 类而非调用各个独立函数。  
+>  必须保护单个操作时，仅应使用此方法。 如果存在多个运算，则应使用 `SafeInt` 类而不是调用各个独立函数。  
   
- 有关T 和 U 类型的模板的详细信息，请参阅 [SafeInt 函数](../windows/safeint-functions.md)。  
+ 有关模板类型 T 和 U 的详细信息，请参阅[SafeInt 函数](../windows/safeint-functions.md)。  
   
-## 要求  
- **Header:** safeint.h  
+## <a name="requirements"></a>惠?  
+ **标头：** safeint.h  
   
- **Namespace:** Microsoft::Utilities  
+ **Namespace:** microsoft:: utilities  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [SafeInt 函数](../windows/safeint-functions.md)   
  [SafeInt 库](../windows/safeint-library.md)   
  [SafeInt 类](../windows/safeint-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0d7c3709667b53f03e63463cbfbda997e265c3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-toolbar-control"></a>使用工具栏控件
 此文章介绍了如何访问[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)对象基础[CToolBar](../mfc/reference/ctoolbar-class.md)更好地控制您的工具栏。 这是一个高级的主题。  
@@ -66,6 +67,6 @@ ms.lasthandoff: 10/24/2017
   
  有关使用 Windows 公共控件的常规信息，请参阅[公共控件](http://msdn.microsoft.com/library/windows/desktop/bb775493)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 工具栏实现](../mfc/mfc-toolbar-implementation.md)
 

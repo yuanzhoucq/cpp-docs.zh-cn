@@ -1,44 +1,45 @@
 ---
-title: "SyncLockWithStatusT::status_ 数据成员 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "status_ 数据成员"
+title: "Synclockwithstatust:: Status_ 数据成员 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_
+dev_langs: C++
+helpviewer_keywords: status_ data member
 ms.assetid: 466fa336-b5ff-4d43-8efd-1e87e5fddf88
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 42c8d83e8520bb87c266c9e9705115aaba579563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SyncLockWithStatusT::status_ 数据成员
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_ 数据成员
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 DWORD status_;  
 ```  
   
-## 备注  
- 在基于当前 SyncLockWithStatusT 对象的锁的操作之后保存着基础等待操作的结果。  
+## <a name="remarks"></a>备注  
+ 根据当前的 SyncLockWithStatusT 对象保留的结果的基础等待锁操作完成后的操作对象。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- Microsoft::WRL::Wrappers::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [SyncLockWithStatusT 类](../windows/synclockwithstatust-class.md)

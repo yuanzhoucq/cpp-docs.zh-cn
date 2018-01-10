@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 467a342b612a82532acb04f11b5fa9f36ce9fe82
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-declarations"></a>声明摘要
 `declaration`：  
@@ -238,7 +239,7 @@ ms.lasthandoff: 10/24/2017
   
  `dllexport`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调用约定](../cpp/calling-conventions.md)   
  [短语结构语法](../c-language/phrase-structure-grammar.md)   
  [已过时调用约定](../cpp/obsolete-calling-conventions.md)

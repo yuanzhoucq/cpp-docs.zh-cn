@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d086540d3b8f1475916bf5f8174f98de3c62c810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>如何：对生成文件项目启用 IntelliSense
 IntelliSense 无法正常工作，某些项目设置或编译器选项时，在 Visual c + + 生成文件项目 IDE 操作的设置不正确。 使用此过程来配置 Visual c + + 生成文件项目，以便在生成文件项目都在 Visual Studio 开发环境中打开时，IntelliSense 可用。  
@@ -54,7 +55,7 @@ IntelliSense 无法正常工作，某些项目设置或编译器选项时，在 
   
  下一次你打开你的生成文件项目在 Visual Studio 开发环境中，运行**清理解决方案**命令，然后**生成解决方案**命令生成文件项目。 IntelliSense 会在 IDE 中正常工作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 IntelliSense](/visualstudio/ide/using-intellisense)   
  [NMAKE 参考](../build/nmake-reference.md)   
  [如何：通过现有代码创建 C++ 项目](../ide/how-to-create-a-cpp-project-from-existing-code.md)

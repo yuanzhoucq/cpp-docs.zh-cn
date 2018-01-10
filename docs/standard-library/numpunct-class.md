@@ -41,11 +41,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24ac78fad64877cb789451cd84db4ff5cd27142c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cd59fec5d8b5b2a6a05634242e0506688422f81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numpunct-class"></a>numpunct 类
 一种模板类，用于描述一个对象来充当区域设置 facet，以便描述 `CharType` 类型的序列，后者用于表示与数字和布尔表达式的格式化及标点有关的信息。  
@@ -92,7 +93,7 @@ class numpunct : public locale::facet;
 |[thousands_sep](#thousands_sep)|返回要用作千位分隔符的区域设置特定元素。|  
 |[truename](#truename)|返回要用作值 `true` 的文本表示形式的字符串。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
@@ -432,7 +433,7 @@ French_France.1252 truename true
 French_France.1252 falsename false  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<区域设置>](../standard-library/locale.md)   
  [facet 类](../standard-library/locale-class.md#facet_class)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

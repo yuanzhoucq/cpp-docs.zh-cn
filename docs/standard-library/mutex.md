@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65629b16b03503f70f7c966e19282391c512e4ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 包括：用于定义类 `mutex`、`recursive_mutex`、`timed_mutex` 和 `recursive_timed_mutex` 的标准标头 \<mutex>，模板 `lock_guard` 和 `unique_lock`，以及用于定义互斥代码区域的支持类型和函数。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="classes"></a>类  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[lock_guard 类](../standard-library/lock-guard-class.md)|表示可进行实例化以创建其析构函数解锁 `mutex` 的对象的模板。|  
 |[mutex 类（C++ 标准库）](../standard-library/mutex-class-stl.md)|表示互斥体类型。 使用此类型的对象以在程序内强制实现互相排斥。|  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="structs"></a>结构  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[adopt_lock_t 结构](../standard-library/adopt-lock-t-structure.md)|表示用于定义 `adopt_lock` 的类型。|  
 |[defer_lock_t 结构](../standard-library/defer-lock-t-structure.md)|表示定义用于选择 `unique_lock` 的重载构造函数之一的 `defer_lock` 对象的类型。|  
@@ -84,13 +85,13 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="variables"></a>变量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|表示可传递给 `lock_guard` 和 `unique_lock` 的构造函数，以指示同样传递给该构造函数的互斥体对象已锁定的对象。|  
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数不应锁定同样传递给它的互斥体对象。|  
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数应尝试在不阻止的情况下解锁同样传递给它的 `mutex`。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 
 

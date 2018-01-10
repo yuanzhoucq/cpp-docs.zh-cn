@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>文件处理
 使用这些例程可创建、删除和操作文件以及设置和检查文件访问权限。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  这些例程对文件描述符指定的文件进行操作。  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md)，[_chsize_s](../c-runtime-library/reference/chsize-s.md)|更改文件大小|  
 |[_filelength、_filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|获取文件长度|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
  这些例程对路径或文件名指定的文件进行操作。  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|检查文件权限设置|  
 |[_chmod、_wchmod](../c-runtime-library/reference/chmod-wchmod.md)|更改文件权限设置|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  这些例程打开文件。  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|打开文件并返回指向打开的文件的指针。|  
 |[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|打开具有文件共享的流并返回指向打开的文件的指针。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
   
  这些例程提供一种方法，用于在 `FILE` 结构、文件描述符与 Win32 文件句柄之间更改文件的表示形式。  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|将流与以前为低级别 I/O 而打开的文件相关联，并返回指向打开的流的指针。|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|获取与流关联的文件描述符。|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [CreateNamedPipe](http://msdn.microsoft.com/library/windows/desktop/aa365150.aspx)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)   
  [目录控制](../c-runtime-library/directory-control.md)   
  [系统调用](../c-runtime-library/system-calls.md)

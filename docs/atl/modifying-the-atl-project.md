@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-project"></a>修改 ATL 项目
 此时，您的复合控件项目实现为您的复合控件必要的对象。 下一步是添加任何控件复合控件，将包含和处理任何必要的事件。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  若要处理任何所需的事件从 ActiveX 控件，请参阅[将功能添加到复合控件](../atl/adding-functionality-to-the-composite-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复合控件基础知识](../atl/atl-composite-control-fundamentals.md)   
  [如何：创建资源脚本文件](../windows/how-to-create-a-resource-script-file.md)
 

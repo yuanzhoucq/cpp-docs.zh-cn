@@ -11,11 +11,14 @@ ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e727f4588c425e3a6c94d7ceb09ebc8d494e24cf
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 893194b3e08b56e4abe892033193b167b46dab27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-a-linux-project"></a>配置 Linux 项目
 本主题介绍如何配置 Visual Studio Linux 项目。 有关 CMake Linux 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/15/2017
 
 ![生成事件](media/settings_buildevents.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [使用项目属性](../ide/working-with-project-properties.md)  
 [C++ 常规属性 (Linux C++)](../linux/prop-pages/general-linux.md)  
 [VC++ 目录 (Linux C++)](../linux/prop-pages/directories-linux.md)  

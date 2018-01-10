@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 42237a142226d70b3cff0c07de5ed3daaeda8682
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0285d8395b5a135ac75c40914232ad820f36f00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-and-streams"></a>文件和流
 程序通过读取和写入文件来与目标环境进行通信。 文件可以是：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
  © 1989-2001（由 P.J. Plauger 和 Jim Brodie 撰写）。 保留所有权利。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文本和二进制流](../c-runtime-library/text-and-binary-streams.md)   
  [字节和宽流](../c-runtime-library/byte-and-wide-streams.md)   
  [控制流](../c-runtime-library/controlling-streams.md)   

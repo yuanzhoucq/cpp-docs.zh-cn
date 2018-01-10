@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>控制流
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) 返回 `FILE` 类型的对象的地址。 您可以将此地址用作多个库函数的 `stream` 参数以对打开的文件执行各种操作。 对于字节流，会像通过调用 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。 对于宽流，会像通过调用 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 读取每个字符一样进行所有输入，并且会像通过调用 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 写入每个字符一样进行所有输出。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
  不要修改存储在 `FILE` 对象中或与该对象一起使用的指定文件缓冲区中的任何值。 不能复制 `FILE` 对象，也不能将副本的地址用作库函数的 `stream` 参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件和流](../c-runtime-library/files-and-streams.md)

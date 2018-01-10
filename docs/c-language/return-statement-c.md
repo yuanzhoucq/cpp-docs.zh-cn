@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daff74e0b25c43d89a2a45813e285a2222599a72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-statement-c"></a>return 语句 (C)
 `return` 语句终止函数的执行并返回对调用函数的控制。 紧接在调用之后在调用函数中恢复执行。 `return` 语句还可以将值返回给调用函数。 有关详细信息，请参阅[返回类型](../c-language/return-type.md)。  
@@ -75,5 +76,5 @@ void draw( int i, long long ll )
 i = 2147483647, ll = 4611686014132420609  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [语句](../c-language/statements-c.md)

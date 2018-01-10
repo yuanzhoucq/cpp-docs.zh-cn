@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-and-optional-header-files"></a>必需和可选的头文件
 每个运行时例程的说明包括一个针对该例程的必选和可选包含文件或标头 (.H) 文件的列表。 需包括必需的标头文件以获取此例程的函数声明或由另一个内部调用的例程使用的定义。 通常包括可选标头文件以利用预定义的常量、类型定义或内联宏。 下表列出了可选标头内容的一些示例：  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  运行库标头文件提供 ANSI/ISO C 标准推荐样式的函数声明。 编译器对在其关联的函数声明后发生的任何例程引用执行类型检查。 函数声明对于返回默认的 `int` 类型之外的其他类型的值的例程尤为重要。 未在其声明中指定适当的返回值的例程将由编译器用来返回 `int`，这可能导致出现意外结果。 有关详细信息，请参阅[类型检查](../c-runtime-library/type-checking-crt.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

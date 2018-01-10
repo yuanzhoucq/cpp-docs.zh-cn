@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa4e81164a02774f7f9aa034f2c1a5492233600d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 331e41cd5f333a1f2c628d50e6c4a34a3bc9dd96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-double"></a>类型 double
 双精度类型的双精度值具有 8 个字节。 此格式类似于浮点格式，只不过该格式具有一个 11 位 excess-1023 指数和一个 52 位尾数以及隐含的高顺序 1 位。 此格式为双精度类型提供的范围大约介于 1.7E-308 和 1.7E+308 之间。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本类型的存储](../c-language/storage-of-basic-types.md)

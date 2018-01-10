@@ -11,11 +11,14 @@ ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 31309f961b392cb7548c3114e1af8604ac872cf3
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 8b9eda4c238ae1a3ea3e59d0e5c39ee6b59cff02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-linux-project"></a>新建 Linux 项目
 为 Linux 编码时，可以选择创建 Visual Studio 项目还是 CMake 项目。 本主题介绍如何创建 Visual Studio 项目。 有关 CMake 项目的信息，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
@@ -27,7 +30,7 @@ ms.lasthandoff: 11/15/2017
 
    ![新建 Linux 项目](media/newproject.png)
 
-   | 项目类型 | 说明
+   | 项目类型 | 描述
    | ------------ | ---
    | **Blink (Raspberry)**           | 项目针对 Raspberry Pi 设备，写入示例代码以让 LED 闪烁
    | **控制台应用程序 (Linux)** | 项目针对任何 Linux 计算机，写入示例代码以将文本输出到控制台

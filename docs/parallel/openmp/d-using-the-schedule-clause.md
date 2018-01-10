@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0566157f2dd4d9a278113f2246bd36671e3217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-using-the-schedule-clause"></a>D. 使用计划子句
 并行区域具有至少一个屏障、 在其末尾，并且可能具有在它的其他屏障。 在每个屏障的其他团队成员必须等待到达最后一个线程。 为了尽量减少此等待时间，以便所有线程都到达屏障在了解同一时间应分发共享的工作。 如果某些的共享中包含工作**为**构造，`schedule`子句可用于此目的。  

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f824d9148f45b7744ca2e911c8a83b0074784f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 361085290fa70f4449c122467bce5d33ca1cf29b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 复合控件基础知识
 复合控件是一种 ActiveX 控件可以包含 （类似于对话框） 其他 ActiveX 控件或 Windows 控件。 生成复合控件后，它可以插入任何可以承载 ActiveX 控件的位置。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [生成和测试 ATL 项目](../atl/building-and-testing-the-atl-project.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [复合控件全局函数](../atl/reference/composite-control-global-functions.md)   
  [复合控件宏](../atl/reference/composite-control-macros.md)

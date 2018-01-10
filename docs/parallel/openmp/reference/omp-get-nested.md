@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d67008fde4d8d3093c33bfc9389004ce3b339db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 557625a40707119633adc1d73775b1e66f67efec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompgetnested"></a>omp_get_nested
 返回一个值，该值指示是否启用了嵌套并行度。  
@@ -41,5 +42,5 @@ int omp_get_nested( );
 ## <a name="example"></a>示例  
  请参阅[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)有关的使用示例`omp_get_nested`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../../parallel/openmp/reference/openmp-functions.md)

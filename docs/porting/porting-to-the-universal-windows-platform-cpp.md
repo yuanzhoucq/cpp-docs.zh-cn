@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 *“通用”* 的意思是代码可以在运行 Windows 10 的任何设备上运行，包括桌面、手机、平板电脑和运行 Windows 10 的未来设备。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。  
@@ -112,6 +113,6 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
   
  如果使用 Visual Studio 创建新的通用 Windows 平台项目，则不应看到此错误。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [开发通用 Windows 平台 (UWP) 的应用](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

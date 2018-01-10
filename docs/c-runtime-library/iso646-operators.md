@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3ab92878e17eea7164a965d3d61af01ea7f486d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23c449081a93049113a32bb30e25142493565449
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iso646-operators"></a>ISO646 运算符
 提供某些运算符或标点符号的可读替代项。 标准头 \<iso646.h> 甚至在独立实现中也可用。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
 |[xor](../c-runtime-library/reference/xor.md)|^ 运算符的替代项。|  
 |[xor_eq](../c-runtime-library/reference/xor-eq.md)|^= 运算符的替代项。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [国际化](../c-runtime-library/internationalization.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

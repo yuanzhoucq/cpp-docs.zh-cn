@@ -17,16 +17,17 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec7a363d3aa4601e33e44d15fbb3d667c3a87db4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>演练：调试项目 (C++)
 在本演练中，你将修改程序以修复在测试项目时发现的问题。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   本演练假定你具备 C++ 语言的基础知识。  
   
@@ -63,6 +64,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  **上一步：** [演练： 测试项目 （c + +）](../ide/walkthrough-testing-a-project-cpp.md) &#124;**下一步：**[演练： 部署程序 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

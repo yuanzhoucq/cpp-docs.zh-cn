@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3d453746b9f9af7219f181949ba9958c27a1577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 916a39d284666eebd3398423471991602509e9de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他单一参数输出流操控器
 下面的示例使用了一个 `long` 类型的 `money` 类。 `setpic` 操控器可将格式设置“图片”字符串附加到可由 `money` 类的重载的流插入运算符使用的类。 图片字符串将存储为 `money` 类中的静态变量，而非存储为流类的数据成员，因此无需派生新的输出流类。  
@@ -83,6 +84,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [带自变量的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)
 

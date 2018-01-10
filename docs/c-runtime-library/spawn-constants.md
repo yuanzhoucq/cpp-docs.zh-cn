@@ -31,11 +31,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f5f30cbf6598e4ac8d88652a6a842dcd6209273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 891080cb7740285aba2ac7d9f2542b5604c210bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-constants"></a>spawn 常量
 ## <a name="syntax"></a>语法  
@@ -47,13 +48,13 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  `mode` 参数决定在生成操作前或操作期间由调用进程执行的操作。 `mode` 可能具有以下值：  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_P_OVERLAY`|使用新进程覆盖调用进程，销毁调用进程（与 `_exec` 调用的效果相同）。|  
 |`_P_WAIT`|挂起调用线程，直至执行完新进程（同步 `_spawn`）。|  
 |`_P_NOWAIT`, `_P_NOWAITO`|继续将调用进程与新进程一起执行（异步 `_spawn`）。|  
 |`_P_DETACH`|继续执行调用进程；在无法访问控制台或键盘的后台运行新进程。 针对新进程调用 `_cwait` 将失败。 这是一个异步 `_spawn`。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_spawn、_wspawn 函数](../c-runtime-library/spawn-wspawn-functions.md)   
  [全局常量](../c-runtime-library/global-constants.md)

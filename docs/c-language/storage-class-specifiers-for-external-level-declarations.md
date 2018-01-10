@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部级别声明的存储类说明符
 外部变量是文件范围内的变量。 它们在任何函数的外部定义，并且可能对许多函数可用。 只能在外部级别定义函数，因此不能将其嵌套。 默认情况下，对名称相同的外部变量和函数的所有引用都是对同一对象的引用，这表示它们具有“外部链接”。 （可以使用 static 关键字进行替代。 有关 static 的更多详细信息，请参阅本节后面的信息。）  
@@ -133,5 +134,5 @@ int x = 0;
   
  如果尚未初始化变量 `i`，则会自动将其设置为 0。 在这种情况下，值 1、2 和 3 可能已打印。 有关变量初始化的信息，请参阅[初始化](../c-language/initialization.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 存储类](../c-language/c-storage-classes.md)

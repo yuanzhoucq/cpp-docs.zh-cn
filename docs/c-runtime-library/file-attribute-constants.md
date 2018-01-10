@@ -36,11 +36,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 670f8c109593148076c31bd4957f658607a5d5e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55dc7b0c0c21c8ee149e4be8eb829de29d73aacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-attribute-constants"></a>文件特性常量
 ## <a name="syntax"></a>语法  
@@ -75,6 +76,6 @@ ms.lasthandoff: 10/24/2017
   
  可以使用 OR 运算符 (&#124;) 组合多个常量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件名搜索函数](../c-runtime-library/filename-search-functions.md)   
  [全局常量](../c-runtime-library/global-constants.md)

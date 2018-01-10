@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 数据类型
 仅处理一个多字节字符或多字节字符的一个字节的任何 Microsoft `MBCS` 运行库例程需要一个 `unsigned int` 参数（其中 0x00 <= 字符值 <= 0xFFFF，0x00 <= 字节值 <= 0xFF）。 处理字符串上下文中的多字节的字节或字符的 `MBCS` 例程需要一个用 `unsigned char` 指针表示的多字节字符串。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
   
 3.  使用 TCHAR.H 中“类型安全的”静态链接的库函数。 为此，在命令行上定义常量 `_NO_INLINING`。 这是最慢的方法，但是最能确保类型安全。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [国际化](../c-runtime-library/internationalization.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

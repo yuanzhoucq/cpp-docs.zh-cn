@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b670302683208680fbf1499c26af474c72c3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dd4873d8f9b3a658996bfd057372e8fb29e3478
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commit-to-disk-constants"></a>Commit-To-Disk 常量
 **Microsoft 专用**  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../c-runtime-library/stream-i-o.md)   
  [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   

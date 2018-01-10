@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68c6bd5c910f33a5d9262738a8746f2a4f2c56d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7325cb5cb7be4750507d8694ba8bc5efc3ce8606
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE 后台：实现策略
 根据您的应用程序，添加 OLE 支持有四个可能的实现策略：  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 -   您有一个使用不支持 OLE 的 Microsoft 基础类库 2.0 版或更高版本编写的程序。  
   
-     如前文所述使用 MFC 应用程序向导创建新应用程序，然后将新应用程序中的代码复制并粘贴到您的现有应用程序中。 这对服务器、容器或自动化应用程序都有效。 请参阅 MFC [SCRIBBLE](../visual-cpp-samples.md)示例有关此策略的示例。  
+     如前文所述使用 MFC 应用程序向导创建新应用程序，然后将新应用程序中的代码复制并粘贴到你的现有应用程序中。 这对服务器、容器或自动化应用程序都有效。 请参阅 MFC [SCRIBBLE](../visual-cpp-samples.md)示例有关此策略的示例。  
   
 -   您有一个实现 OLE 1.0 版支持的 Microsoft 基础类库程序。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
  一旦你已决定一个策略，您应该阅读[容器](../mfc/containers.md)或[服务器](../mfc/servers.md)（具体取决于你正在编写的应用程序的类型） 文章或检查示例程序，或者两者。 MFC OLE 示例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)显示如何分别实现容器和服务器的各个方面。 在这些文章中的不同地方，将会提到这些示例中的某些函数作为要讨论的技术的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE 后台](../mfc/ole-background.md)   
  [容器： 实现容器](../mfc/containers-implementing-a-container.md)   
  [服务器： 实现服务器](../mfc/servers-implementing-a-server.md)   

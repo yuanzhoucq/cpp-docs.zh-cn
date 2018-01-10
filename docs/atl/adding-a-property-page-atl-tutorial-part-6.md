@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90023486dd8e34195b2dd9f8a788f3f76235d407
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>添加属性页（ATL 教程，第 6 部分）
 属性页是作为单独的 COM 对象，允许它们在需要时共享实现的。 在此步骤中，您将执行以下任务以添加到控件的属性页：  
@@ -150,6 +151,6 @@ ms.lasthandoff: 10/24/2017
   
  [返回到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124;[到步骤 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
 

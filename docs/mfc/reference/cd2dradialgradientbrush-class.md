@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusY
 - AFXRENDERTARGET/CD2DRadialGradientBrush::m_pRadialGradientBrush
 - AFXRENDERTARGET/CD2DRadialGradientBrush::m_RadialGradientBrushProperties
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], CD2DRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], Attach
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8cdac3e2d2df31840ae90b79755b68d916033990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: f44927e2882e168f1e466deab29b56f32a6c5c9e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 类
 ID2D1RadialGradientBrush 包装器。  
@@ -102,7 +100,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|指向 ID2D1RadialGradientBrush 的指针。|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|中心、 渐变原点偏移量和 x 轴半径和 y 轴半径的画笔的渐变。|  
@@ -118,7 +116,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
  `CD2DRadialGradientBrush`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
@@ -328,6 +326,5 @@ void SetRadiusY(FLOAT radiusY);
  `radiusY`  
  渐变的椭圆 y 轴半径。 此值处于画笔的坐标空间  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

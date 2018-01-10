@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02c1b7de9a8ed5f560a5999af453970785c487f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0899f5f617fd28d121b85183280bd28fe91ee46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="code-pages"></a>代码页
 代码页是一个字符集，可以包括数字、标点符号和其他标志符号。`code page` 不同的语言和区域设置可能使用不同的代码页。 例如，ANSI 代码页 1252 适用于英语和大多数欧洲语言；而 OEM 代码页 932 则适用于日本汉字。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
   
 -   ANSI 定义“C”区域设置以与传统上用来执行 C 程序的区域设置相对应。 “C”区域设置的代码页（“C”代码页）对应于 ASCII 字符集。 例如，在“C”区域设置中，只有对于 0x61 - 0x7A 范围的值，`islower` 才会返回 true。 在另一个区域设置中，`islower` 可能会为这些值或其他值（由该区域设置定义）返回 true。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [国际化](../c-runtime-library/internationalization.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

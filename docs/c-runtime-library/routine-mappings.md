@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>例程映射
 TCHAR.H 中定义了一般文本例程映射。 `_tccpy` 和 `_tclen` 映射到 MBCS 模型中的函数；出于完整性的考虑，它们将映射到 SBCS 和 Unicode 模型中的宏或内联函数。 有关一般文本例程的信息，请参见与相应的 `SBCS`、`_MBCS` 或 `_UNICODE` 相关的例程的帮助主题。  
@@ -270,7 +271,7 @@ TCHAR.H 中定义了一般文本例程映射。 `_tccpy` 和 `_tclen` 映射到 
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [一般文本映射](../c-runtime-library/generic-text-mappings.md)   
  [数据类型映射](../c-runtime-library/data-type-mappings.md)   
  [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)   

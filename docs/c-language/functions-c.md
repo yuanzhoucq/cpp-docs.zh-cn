@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37cfce894d3a08f8429e37f1365e70e8bc4d4d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7935b355042ed7221684fe60a69b5286cd39f00d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>函数 (C)
 函数是 C 中的基本模块单元。函数通常设计为执行一项特定任务且其名称通常会反映该任务。 函数包含声明和语句。 本节描述如何声明、定义和调用 C 函数。 讨论的其他主题包括：  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [参数](../c-language/parameters.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 语言参考](../c-language/c-language-reference.md)

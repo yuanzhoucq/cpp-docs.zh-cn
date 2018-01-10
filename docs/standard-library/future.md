@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e741324e6871846aba8912d53ca9aad5ce1cb739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 包含标准标头 \<future>，以定义模板类和支持模板，它们可简化（可能在单独线程中的）函数运行并检索其结果。 结果可以是由函数返回的值或由函数发出但函数中未捕获的异常。  
@@ -81,13 +82,13 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="enumerations"></a>枚举  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|  
 |[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|  
 |[启动](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 
 

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74e4d0a87976017deda146274947d98a76002004
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fec44138379e3510f353f0fdd99f7a6a1905f9cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-variables"></a>全局变量
 Microsoft C 运行时库提供了以下全局变量或宏。 已弃用几个全局变量或宏，以便使用我们建议的更安全的函数版本，而非全局变量。  
@@ -38,7 +39,7 @@ Microsoft C 运行时库提供了以下全局变量或宏。 已弃用几个全�
 |[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|包含由 character-classification 函数使用的信息。|  
 |[_pgmptr、_wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|已否决。 请改为使用 `_get_pgmptr` 或 `_get_wpgmptr`。<br /><br /> 在程序启动时初始化到该程序的完全限定路径或相对路径、完整程序名或不包含其文件扩展名的程序名，具体取决于调用该程序的方式。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)   
  [全局常量](../c-runtime-library/global-constants.md)   
  [__argc、\__argv、\__wargv](../c-runtime-library/argc-argv-wargv.md)   

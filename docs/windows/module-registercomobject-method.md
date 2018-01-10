@@ -1,29 +1,30 @@
 ---
-title: "Module::RegisterCOMObject 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::RegisterCOMObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RegisterCOMObject 方法"
+title: "Module:: registercomobject 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::RegisterCOMObject
+dev_langs: C++
+helpviewer_keywords: RegisterCOMObject method
 ms.assetid: 59f223dc-03c6-429d-95da-b74b3f73b702
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a2984d5950464385ea47301db356b7364707e667
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Module::RegisterCOMObject 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject 方法
 注册一个或多个 COM 对象，以便其他应用程序可连接到它们。  
   
 ## <a name="syntax"></a>语法  
@@ -62,10 +63,10 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
  注册对象的连接类型由当前 `comflag` 模板参数和 REGCLS 枚举的 REGCLS_SUSPENDED 枚举器结合指定。  
   
-## <a name="requirements"></a>要求  
- **标头︰** module.h  
+## <a name="requirements"></a>惠?  
+ **标头：** module.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [Module 类](../windows/module-class.md)

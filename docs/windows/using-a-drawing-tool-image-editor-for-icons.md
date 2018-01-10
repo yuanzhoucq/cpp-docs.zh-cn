@@ -1,79 +1,82 @@
 ---
-title: "Using a Drawing Tool (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], selecting drawing tools"
-  - "Image editor [C++], toolbar"
-  - "drawing tools"
+title: "使用绘图工具 （图标的图像编辑器） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.drawing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], selecting drawing tools
+- Image editor [C++], toolbar
+- drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a2f6d310bedd3a2a523112d57ece2dcc54fb3fd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Using a Drawing Tool (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-图像编辑器的手工绘制和清除工具都以相同的方式工作：选择工具并且（如有必要）[选择前景和背景颜色](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)以及大小和形状选项。  然后将鼠标指针移到图像并单击或拖动以绘制和清除图像。  
+# <a name="using-a-drawing-tool-image-editor-for-icons"></a>使用绘图工具（图标的图像编辑器）
+图像编辑器的手工绘制和擦除的工具都以相同的方式工作： 选择的工具，如有必要，[选择前景色和背景色](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形状的选项。 然后将指针移到映像并单击或拖动以绘制和擦除。  
   
- 当选择“清除”工具、“画笔”工具或“喷枪”工具时，选项选择器显示该工具的选项。  
+ 当选择**橡皮擦**工具，**画笔**工具，或**喷枪**工具，选项选择器将显示该工具的选项。  
   
 > [!TIP]
->  您可能会发现用绘制工具以背景色进行绘制比使用**“橡皮擦”**工具更为方便。  
+>  而不是使用**橡皮擦**工具，你可能会发现它更方便地在使用一种绘制工具的背景色绘制。  
   
- 可以从“图像编辑器”工具栏或“图像”菜单选择绘制工具。  
+ 你可以从选择绘图工具**图像编辑器**工具栏或**映像**菜单。  
   
-### 从“图像编辑器”工具栏选择和使用绘制工具  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>选择并使用从图像编辑器工具栏上的绘图工具  
   
-1.  在“图像编辑器”工具栏上单击按钮。  
+1.  单击一个按钮**图像编辑器**工具栏。  
   
-    -   当按下鼠标左键时，“清除”工具将当前背景色涂抹在图像上。  
+    -   **橡皮擦**工具绘制在当前的背景色图像上，当你按下鼠标左键时。  
   
-    -   “铅笔”工具以一个像素的固定宽度手工绘制。  
+    -   **铅笔**工具以一个像素的固定宽度手工绘制。  
   
-    -   选项选择器确定“画笔”工具的形状和大小。  
+    -   **选项选择器确定画笔工具的形状和大小**。  
   
-    -   “喷枪”工具围绕画笔的中心随机分布颜色像素。  
+    -   **喷枪**工具随机分布围绕中心画笔的颜色像素。  
   
         > [!TIP]
-        >  当光标悬停在[“图像编辑器”工具栏](../mfc/toolbar-image-editor-for-icons.md)上的按钮上方时会出现工具提示。  这些提示有助于识别这里提到的特定按钮。  
+        >  当你将鼠标悬停光标在按钮上时会出现工具提示[图像编辑器工具栏](../windows/toolbar-image-editor-for-icons.md)。 这些提示将帮助您识别特定此处提及的按钮。  
   
-2.  如有必要，请选择颜色和画笔：  
+2.  如有必要，选择颜色和画笔：  
   
-    -   在[调色板](../windows/colors-window-image-editor-for-icons.md)中，单击鼠标左键以选择前景色或单击鼠标右键以选择背景色。  
+    -   在[调色板](../windows/colors-window-image-editor-for-icons.md)，单击鼠标左键以选择前景色或鼠标右键按钮以选择背景色。  
   
-    -   在[选项选择器](../mfc/toolbar-image-editor-for-icons.md)中，单击表示要使用的画笔的形状。  
+    -   在[选项选择器](../windows/toolbar-image-editor-for-icons.md)，单击表示你想要使用的画笔的形状。  
   
-3.  指向图像上要开始绘制或绘画的位置。  指针将根据选择的工具更改形状。  
+3.  指向你想要开始绘制的图像上绘制的位置。 指针将改变形状，根据你选择工具。  
   
-4.  按下鼠标左键（使用前景色）或鼠标右键（使用背景色）并在绘制时按住不放。  
+4.  按鼠标左键 （适用于的前景色） 或鼠标右键按钮 （针对背景色），并按住它作为你绘图。  
   
-### 从“图像”菜单选择和使用绘制工具  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>若要选择并使用图像菜单中的绘制工具  
   
-1.  单击“图像”菜单并选择“工具”命令。  
+1.  单击**映像**菜单，然后选择**工具**命令。  
   
-2.  在级联子菜单上选择要使用的工具。  
+2.  级联子菜单中，选择你想要使用的工具。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  无  
   
-## 请参阅  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>请参阅  
+ [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)   
+ [处理颜色](../windows/working-with-color-image-editor-for-icons.md)
+

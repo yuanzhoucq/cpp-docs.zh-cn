@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd1a7f406754f8de985ae5273d7104947a7c7631
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dac320a32a555fd6586b6f68545f9bdb17a3cac3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cifmod"></a>_CIfmod
 计算堆栈上前两个值的浮点余数。  
@@ -49,9 +50,9 @@ void __cdecl _CIfmod();
   
  生成的值被将被推送到堆栈顶部。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**x86  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fmod、fmodf](../c-runtime-library/reference/fmod-fmodf.md)

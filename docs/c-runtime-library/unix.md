@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8db5466439b72c4291383913451bcf5a0b415848
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f5155791f4bf12f15fa0c2c53d27fbe515e5af3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unix"></a>UNIX
 如果您计划将程序移植到 UNIX，请遵循以下准则：  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
     > [!NOTE]
     >  在此版本的 Visual C++ 中，已从函数描述中删除 UNIX 兼容性信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [兼容性](../c-runtime-library/compatibility.md)

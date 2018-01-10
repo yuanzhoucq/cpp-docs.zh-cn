@@ -243,11 +243,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9337c6dd384213d086bad2138ba7d426b0b305f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93db9b8d8c56a23254972af29c7381e368766381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 类
 `CMFCRibbonBaseElement`类是你可以将其添加到的所有元素的基类[功能区栏](../../mfc/reference/cmfcribbonbar-class.md)。 功能区元素的示例包括功能区按钮、功能区复选框和功能区组合框。  
@@ -411,7 +412,7 @@ class CMFCRibbonBaseElement : public CObject
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxbaseribbonelement.h  
   
 ##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
@@ -825,7 +826,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="return-value"></a>返回值  
  A`RibbonElementLocation`枚举值。 下表列出可能的值。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|功能区元素不包含在功能区组。|  
 |`RibbonElementSingleInGroup`|功能区元素显示为功能区组中的唯一项目。|  
@@ -1992,6 +1993,6 @@ virtual BOOL HasFocus() const;
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

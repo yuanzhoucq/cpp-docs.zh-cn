@@ -25,11 +25,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75f900560f226557bc160bdf74df4467b0c7aa32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4741e0da471e9b82b4d4a2f436feaae482fbbae0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cxxframehandler"></a>__CxxFrameHandler
 内部 CRT 函数。 由 CRT 用于处理结构化异常帧。  
@@ -63,8 +64,8 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |__CxxFrameHandler|excpt.h，ehdata.h|

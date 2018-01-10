@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b97509fbbfdf0bb169af1dae61e07fa6f4ba31d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0308b4d3531c52b229771629e245af0b772ec5d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-logical-operators"></a>C 逻辑运算符
 逻辑运算符执行逻辑“与”(&&) 和逻辑“或”(`||`) 运算。  
@@ -72,6 +73,6 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  在此示例中，如果 `x` 与 `w`、`y` 或 `z` 相等，则 `printf` 函数的第二个参数的计算结果将为 true，并输出值 1。 否则，它的计算结果将为 false，并打印值 0。 只要其中一个条件的计算结果为 true，计算便会停止。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [逻辑“与”运算符：&&](../cpp/logical-and-operator-amp-amp.md)   
  [逻辑“或”运算符：&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

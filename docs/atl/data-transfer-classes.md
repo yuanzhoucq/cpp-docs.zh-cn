@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4492afe125546a73cbd7dc0851fc3ad275cef763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9faa0a2fdf552821b560c0de767da6639bce7fe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-transfer-classes"></a>数据传输类
 以下类支持各种类型的数据传输：  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md)允许异步名字对象发送和接收异步数据传输到和从你的对象有关的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)
 

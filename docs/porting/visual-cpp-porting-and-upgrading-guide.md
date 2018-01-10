@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升级指南
 本主题提供有关升级 Visual c++ 代码的指南。 它包括获取要编译和在新版本的工具上运行的代码，以及利用新语言和 Visual Studio 功能。 本主题还包括有关将原有应用迁移到更现代的平台的信息。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|说明|  
+|标题|描述|  
 |-----------|-----------------|  
 |[从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|讨论如何使用在早期版本的 Visual C++ 中创建的项目。|  
 |[Visual Studio 2017 RC 中 Visual C++ 的新增功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|从 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具更改|  
@@ -92,5 +93,5 @@ ms.lasthandoff: 10/24/2017
 |[从 UNIX 移植到 Win32](porting-from-unix-to-win32.md)|讨论用于将 UNIX 应用程序迁移到 Windows 的选项。|  
 |[C++/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)|详细演示如何升级 C++ 语法的托管扩展来使用新的语法。 有关详细信息，请参阅[运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual C++](../visual-cpp-in-visual-studio.md)

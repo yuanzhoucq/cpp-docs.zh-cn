@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2aacc778e6df974f364f2be9da72aa46fed8f4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a0c710629b69ffe690767d2d2948ce73631344d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-classes"></a>集合类
 下面的类为数组、 列表、 图、 和也用于帮助进行比较和元素访问的特征方法提供支持。  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相关文章  
  [ATL 集合类](../atl/atl-collection-classes.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   
  [集合类](../atl/atl-collection-classes.md)
 

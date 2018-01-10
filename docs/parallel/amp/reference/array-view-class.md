@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,35 +29,19 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- array_view class
+dev_langs: C++
+helpviewer_keywords: array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e921ae841aa1eade25fdf2ec272039cc41007a9e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>array_view 类
 表示 N 维视图对保存在另一个容器中的数据。  
@@ -97,7 +80,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|内容复制`array_view`到通过调用指定的目标对象`copy(*this, dest)`。|  
 |[data](#data)|将指针返回到原始数据的`array_view`。|  
@@ -124,13 +107,13 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|将存储的秩`array_view`对象。|  
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[extent](#extent)|获取定义 `extent` 对象形状的 `array_view` 对象。|  
 |[source_accelerator_view](#source_accelerator_view)|获取[accelerator_view](accelerator-view-class.md)其中的数据源的`array_view`所在|  
@@ -141,7 +124,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  你可以访问`array_view`对象，其中源数据的位置 （本地） 或不同的快捷键或一致性域上 （远程）。 远程访问对象时，视图复制和根据需要缓存。 除了自动缓存的效果`array_view`对象具有相似的性能配置文件`array`对象。 通过视图访问数据时对小的性能产生负面影响。  
   
- 有三个远程使用方案︰  
+ 有三个远程使用方案：  
   
 -   通过传递到系统内存指针视图[parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)加速器并且在快捷键上访问。  
   
@@ -153,7 +136,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  你必须同步任何多线程的访问相同的数据源。  
   
- 运行时发出有关中的数据缓存的以下保证`array_view`对象︰  
+ 运行时发出有关中的数据缓存的以下保证`array_view`对象：  
   
 -   所有正确同步访问`array`对象和`array_view`对象在其上的按编程顺序遵循串行发生-之前关系。  
   
@@ -170,7 +153,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  `array_view`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp.h  
   
  **命名空间：** 并发  
@@ -842,6 +825,5 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="return-value"></a>返回值  
  `array_view`构造对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

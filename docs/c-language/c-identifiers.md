@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab60d1275925504a746f8b6d01003129fd688673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfe8ab231d6bf4051cc730ff1beb23f93a8f301d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-identifiers"></a>C 标识符
 “Identifiers”或“symbols”是您为程序中的变量、类型、函数和标签提供的名称。 标识符名称在拼写和大小写上必须与任何关键字都不同。 不能将关键词（C 或 Microsoft）用作标识符；将它们保留以用于特殊用途。 通过在变量、类型或函数的声明中指定标识符来创建标识符。 在此示例中，`result` 是整型变量的标识符，`main` 和 `printf` 是函数的标识符名称。  
@@ -107,5 +108,5 @@ LastNum
   
  标识符具有“范围”（在程序中发现标识符的区域）和“链接”（确定其他范围中的同一名称是否引用同一标识符）。 [生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)中介绍了这些主题。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 的元素](../c-language/elements-of-c.md)

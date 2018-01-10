@@ -171,11 +171,12 @@ caps.latest.revision: "40"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36057304130150dbd12cf33f708d1d82cd52e0c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e40f7b601eda828784fb8ebdaf010059c4d9933e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 类
 实现 Windows 弹出菜单功能，并通过添加可拖曳菜单和工具提示等功能进行扩展。
@@ -302,7 +303,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
  `CMFCPopupMenu`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxpopupmenu.h  
   
 ##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
@@ -1373,7 +1374,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ### <a name="remarks"></a>备注  
  当有阴影的弹出菜单重叠动画的图像时，请调用此方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)

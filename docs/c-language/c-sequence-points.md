@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f86bd3feacbabdd11d6c8ec04b4aec96ec2f5e1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9c874c0093b55c44f900e7eab06019d75cb930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-sequence-points"></a>C 序列点
 在连续的“序列点”之间，仅能通过表达式修改一次对象的值。 C 语言定义以下序列点：  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   `return` 语句中的表达式。 完全计算该表达式，并在控制返回调用函数之前完成所有副作用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表达式计算](../c-language/expression-evaluation-c.md)

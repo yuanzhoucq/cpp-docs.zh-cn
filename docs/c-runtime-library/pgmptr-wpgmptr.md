@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21d3ad8d4cbd73c2a1ab99497db2f671196de523
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8bf941f5e020a608817919b2819f2d6be023d89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
 可执行文件的路径。 已弃用；使用 [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 和 [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)。  
@@ -56,7 +57,7 @@ C> hello
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |变量|必需的标头|  
 |--------------|---------------------|  
@@ -82,5 +83,5 @@ int main( void )
   
  您可通过将 `_wpgmptr` 更改为 `%Fs` 并将 `%S` 更改为 `main`，从而使用 `wmain`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局变量](../c-runtime-library/global-variables.md)

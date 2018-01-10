@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89bb772976050c8ebf0b7745aa0541c2de3e2fed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 和 Visual Studio 2017 之间的 C++ 二进制兼容性
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 
 2) 应用程序使用版本号低于用于编译应用程序的工具集的版本号的可再发行库时。 换句话说，如果使用平台工具集 v141 来编译程序，则应用程序使用的任何可再发行库必须使用 v141 或更高版本编译。  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [Visual C++ 更改历史记录](..\porting\visual-cpp-change-history-2003-2015.md)
 

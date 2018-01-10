@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CD2DPointF
 - AFXRENDERTARGET/CD2DPointF
 - AFXRENDERTARGET/CD2DPointF::CD2DPointF
-dev_langs:
-- C++
-helpviewer_keywords:
-- CD2DPointF [MFC], CD2DPointF
+dev_langs: C++
+helpviewer_keywords: CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b369be53d14af49eb112026089226214f0d7d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 98435819aeb0e173074a4794939bee10b00b3233
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF 类
 `D2D1_POINT_2F`的包装器。  
@@ -56,7 +53,7 @@ class CD2DPointF : public D2D1_POINT_2F;
   
  `CD2DPointF`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
@@ -89,6 +86,5 @@ operator CPoint();
 ### <a name="return-value"></a>返回值  
  D2D 点的当前值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

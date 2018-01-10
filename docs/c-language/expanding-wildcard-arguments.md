@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0c1deca52e74241b56c3c152e66a74d652b4829
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f710cc1695579bf1a6f873229c347966888bc745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expanding-wildcard-arguments"></a>扩展通配符自变量
 **Microsoft 专用**  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  默认情况下，命令行参数中不展开通配符。 你可以通过链接 setargv.obj 或 wsetargv.obj 文件将普通参数向量 `argv` 加载例程替换为不展开通配符的版本。 如果程序使用 `main` 函数，请与 setargv.obj 链接。如果程序使用 `wmain` 函数，请与 wsetargv.obj 链接。它们具有等效的行为。  
   
- 若要与 setargv.obj 或 wsetargv.obj 链接，请使用 **/link** 选项。 例如:   
+ 若要与 setargv.obj 或 wsetargv.obj 链接，请使用 **/link** 选项。 例如:  
   
  cl example.c /link setargv.obj  
   
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [链接选项](../c-runtime-library/link-options.md)   
  [main 函数和程序执行](../c-language/main-function-and-program-execution.md)

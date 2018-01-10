@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 0a47e7794dd38169b99711bbc1898083a1c8c149
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ed5930eca492d6793ab08c39b6af8b45a9124c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 类
 表示定时互斥体类型。 此类型的对象用于在程序内通过使用时间限制阻止来强制实现互相排斥。 与 [timed_mutex](../standard-library/timed-mutex-class.md) 类型的对象不同，为 `recursive_timed_mutex` 对象调用锁定方法的效果是有明确定义的。  
@@ -55,7 +56,7 @@ class recursive_timed_mutex;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[lock](#lock)|阻止调用线程，直到线程获取 `mutex` 的所有权。|  
 |[try_lock](#try_lock)|在不阻止的情况下尝试获取 `mutex` 的所有权。|  
@@ -63,7 +64,7 @@ class recursive_timed_mutex;
 |[try_lock_until](#try_lock_until)|尝试获取在指定时间之前有效的 `mutex` 的所有权。|  
 |[unlock](#unlock)|释放 `mutex` 的所有权。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<互斥体 >  
   
  **命名空间：** std  
@@ -158,7 +159,7 @@ void unlock();
   
  如果调用的线程不拥有 `mutex`，则该行为不确定。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 

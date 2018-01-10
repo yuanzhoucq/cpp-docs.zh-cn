@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f326ec0ed43463d0d2ca15103c77bb914a11592
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbb-routines"></a>_ismbb 例程
 使用当前区域设置或指定 LC_CTYPE 转换状态类别，针对特定条件测试给定整数值 `c` 。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
   
  `_ismbb` 系列中的例程按如下所示测试给定整数 `c` 。  
   
-|例程|字节测试条件|  
+|例程所返回的值|字节测试条件|  
 |-------------|-------------------------|  
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
 |[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/24/2017
   
  下表显示组成这些例程测试条件的经过“或”运算的值。 清单常量 `_BLANK`、 `_DIGIT`、 `_LOWER`、 `_PUNCT`和 `_UPPER` 在 Ctype.h 中进行定义。  
   
-|例程|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> 文本|Non-<br /><br /> ASCII<br /><br /> punct|  
+|例程所返回的值|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> 文本|Non-<br /><br /> ASCII<br /><br /> punct|  
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|  
 |`_ismbbalnum`|—|x|x|—|x|x|—|  
 |`_ismbbalpha`|—|—|x|—|x|x|—|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/24/2017
   
  `_ismbb` 例程同时以函数和宏的形式来实现。 若要深入了解如何选择任一实现，请参阅[关于选择函数和宏的建议](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../c-runtime-library/byte-classification.md)   
  [is、isw 例程](../c-runtime-library/is-isw-routines.md)   
  [_mbbtombc、_mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
