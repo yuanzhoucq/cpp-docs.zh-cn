@@ -1,46 +1,48 @@
 ---
-title: "lock::is_locked | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "is_locked"
-  - "msclr::lock::is_locked"
-  - "lock::is_locked"
-  - "msclr::lock.is_locked"
-  - "lock.is_locked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::is_locked"
+title: "lock::is_locked |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- is_locked
+- msclr::lock::is_locked
+- lock::is_locked
+- msclr::lock.is_locked
+- lock.is_locked
+dev_langs: C++
+helpviewer_keywords: lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# lock::is_locked
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示是否持有锁。  
+# <a name="lockislocked"></a>lock::is_locked
+指示是否持有的锁。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 bool is_locked();  
 ```  
   
-## 返回值  
- `true`，如果锁保留，则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果持有的锁，`false`否则为。  
   
-## 示例  
- 此示例使用类的一个实例在多个线程中。类使用自身上的锁将确保对其内部数据的访问权限。每个线程都是一致的。主应用程序线程使用类的同一实例的锁定定期检查任何辅助线程是否仍然存在，并且等待，直到退出所有辅助线程完成它们的任务。  
+## <a name="example"></a>示例  
+ 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
   
 ```  
 // msl_lock_is_locked.cpp  
@@ -115,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **在线程 3，计数器为 0**  
-**在线程 3，计数器为 10**  
-**在线程 5，计数器为 0**  
-**在线程 5，计数器为 10**  
-**在线程 4，计数器为 0**  
-**在线程 4，计数器为 10**  
-**在线程 7，计数器为 0**  
-**在线程 7，计数器为 10**  
-**在线程 6，计数器为 0**  
-**在线程 6，计数器为 10**  
-**所有线程完成。**   
-## 要求  
- **头文件** \<msclr \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **命名空间** msclr  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\lock.h >  
   
-## 请参阅  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>请参阅  
  [锁定成员](../dotnet/lock-members.md)   
  [lock::operator bool](../dotnet/lock-operator-bool.md)

@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- for keyword [C++]
+dev_langs: C++
+helpviewer_keywords: for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6b958bba842a5dfdbe61415c6ad81aab7a8b4110
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>for 语句 (C++)
 重复执行语句，直到条件变为 false。 有关基于范围的 for 语句的信息，请参阅[基于范围的语句 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
@@ -74,7 +71,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` 和 `loop-expression` 可以包含以逗号分隔的多个语句。 例如：  
+ `init-expression` 和 `loop-expression` 可以包含以逗号分隔的多个语句。 例如:  
   
 ```cpp  
 #include <iostream>  
@@ -129,7 +126,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>for 循环和 C++ 标准  
- C++ 标准中提到，`for` 循环中声明的变量将在 `for` 循环结束后超出范围。 例如:   
+ C++ 标准中提到，`for` 循环中声明的变量将在 `for` 循环结束后超出范围。 例如:  
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
@@ -156,7 +153,7 @@ int main(){
   
  这更类似于 `for` 循环中声明的变量的标准行为，后者要求 `for` 循环中声明的变量在循环完毕后超出范围。 在 `for` 循环中声明变量后，编译器会在内部将其提升为 `for` 循环封闭范围中的局部变量，即使存在同名的局部变量也会如此。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [迭代语句](../cpp/iteration-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [while Statement (C++)](../cpp/while-statement-cpp.md) （while 语句 (C++)）  

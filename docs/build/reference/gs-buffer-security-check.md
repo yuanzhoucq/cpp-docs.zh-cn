@@ -25,11 +25,12 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21ebf470372c24a4e1ab5922f1d98c1a434691a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS（缓冲区安全检查）  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="remarks"></a>备注  
   
-**/GS**默认是打开的。 如果您希望应用程序拥有不出现安全漏洞，使用**/GS-**。 有关详细信息**/GS**，请参阅[编译器安全检查在深度](http://go.microsoft.com/fwlink/?linkid=7260)。 有关禁止缓冲区溢出检测的详细信息，请参阅[safebuffers](../../cpp/safebuffers.md)。  
+**/GS**默认是打开的。 如果您希望应用程序拥有不出现安全漏洞，使用**/GS-**。 有关详细信息**/GS**，请参阅[编译器安全检查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)。 有关禁止缓冲区溢出检测的详细信息，请参阅[safebuffers](../../cpp/safebuffers.md)。  
   
 ## <a name="security-checks"></a>安全检查  
   
@@ -136,7 +137,7 @@ struct { int a; int b; };
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>。  
   
 ## <a name="example"></a>示例  
   
@@ -165,7 +166,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
   
 [编译器选项](../../build/reference/compiler-options.md)   
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

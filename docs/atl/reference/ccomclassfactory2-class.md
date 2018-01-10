@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactory2::GetLicInfo
 - ATLCOM/ATL::CComClassFactory2::LockServer
 - ATLCOM/ATL::CComClassFactory2::RequestLicKey
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactory2 class
+dev_langs: C++
+helpviewer_keywords: CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 61026044fb5a4da7bebfe8f369c68af4c37ebf44
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 类
 此类实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口。  
@@ -60,11 +43,11 @@ class CComClassFactory2 : public IClassFactory2,
   
 #### <a name="parameters"></a>参数  
  *许可证*  
- 实现以下静态函数的类︰  
+ 实现以下静态函数的类：  
   
 - **静态 BOOL VerifyLicenseKey (BSTR** `bstr` **);**  
   
-- **静态 BOOL GetLicenseKey (DWORD** `dwReserved` **，BSTR\*** `pBstr` **);**  
+- **静态 BOOL GetLicenseKey (DWORD** `dwReserved` **，BSTR\***  `pBstr` **);**  
   
 - **静态 BOOL IsLicenseValid （);**  
   
@@ -72,7 +55,7 @@ class CComClassFactory2 : public IClassFactory2,
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CComClassFactory2::CreateInstance](#createinstance)|创建指定的 CLSID 的对象。|  
 |[CComClassFactory2::CreateInstanceLic](#createinstancelic)|给定的许可密钥，创建指定的 CLSID 的对象。|  
@@ -83,15 +66,15 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="remarks"></a>备注  
  `CComClassFactory2`实现[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)接口，该扩展的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 **IClassFactory2**控件对象通过许可证的创建。 类工厂执行许可的计算机上可以提供运行时许可证密钥。 此许可证密钥允许应用程序在完整的计算机许可证不存在时实例化对象。  
   
- ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)对象的类定义中的宏。 例如:   
+ ATL 对象通常通过派生自获取类工厂[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 此类包括宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中声明[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)作为默认类工厂。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)对象的类定义中的宏。 例如:  
   
- [!code-cpp[NVC_ATL_COM #2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
- **CMyLicense**的模板参数`CComClassFactory2`，必须实现的静态函数`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。 下面是简单许可证类的一个示例︰  
+ **CMyLicense**的模板参数`CComClassFactory2`，必须实现的静态函数`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。 下面是简单许可证类的一个示例：  
   
- [!code-cpp[NVC_ATL_COM #3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`从这两个派生**CComClassFactory2Base**和*许可证*。 **CComClassFactory2Base**，反过来，派生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel 1>**。  
+ `CComClassFactory2`从这两个派生**CComClassFactory2Base**和*许可证*。 **CComClassFactory2Base**，反过来，派生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CComObjectRootBase`  
@@ -104,8 +87,8 @@ class CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
  创建指定的 CLSID 的对象并检索到此对象的接口指针。  
@@ -223,10 +206,9 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
  调用[GetLicInfo](#getlicinfo)若要检索的值`fRuntimeKeyAvail`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComClassFactoryAutoThread 类](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComClassFactorySingleton 类](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [类概述](../../atl/atl-class-overview.md)
-

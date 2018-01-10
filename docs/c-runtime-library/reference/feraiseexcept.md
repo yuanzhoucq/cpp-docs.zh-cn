@@ -1,48 +1,48 @@
 ---
-title: "feraiseexcept | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feraiseexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "feraiseexcept"
-  - "fenv/feraiseexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "feraiseexcept 函数"
+title: "feraiseexcept | Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: feraiseexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- feraiseexcept
+- fenv/feraiseexcept
+dev_langs: C++
+helpviewer_keywords: feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ab77da8cee422bab618dc8737ad254b65301ffd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# feraiseexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="feraiseexcept"></a>feraiseexcept
 引发指定的浮点异常。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int feraiseexcept(  
@@ -50,40 +50,40 @@ int feraiseexcept(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `excepts`  
- 若要引发浮点异常。  
+ 要引发的浮点异常。  
   
-## 返回值  
- 如果指定的所有异常都提升成功，返回 0。  
+## <a name="return-value"></a>返回值  
+ 如果指定的所有异常都成功引发，则返回 0。  
   
-## 备注  
- `feraiseexcept` 函数尝试引发由指定的浮点异常 `excepts`。`feraiseexcept` 函数支持在 \< v.h \> 中定义这些异常宏︰  
+## <a name="remarks"></a>备注  
+ `feraiseexcept` 函数尝试引发由 `excepts` 指定的浮点异常。   `feraiseexcept` 函数支持 \<fenv.h> 中定义的这些异常宏：  
   
 |异常宏|描述|  
-|---------|--------|  
-|FE\_DIVBYZERO|前面浮点操作; 特性或顾客时出错已创建无穷大值。|  
-|FE\_INEXACT|该函数的分布式要舍入存储之前的浮点运算的结果。|  
-|FE\_INVALID|在前面的浮点操作中发生域错误。|  
-|FE\_OVERFLOW|范围出错;早期的浮点运算结果已太大而无法表示。|  
-|FE\_UNDERFLOW|早期的浮点运算结果已太小而无法表示完整的精度; 在denormal 值的创建。|  
-|FE\_ALLEXCEPT|所有的按位或支持浮点异常。|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|在早期的浮点运算中出现了奇点或极点错误；创建了无限值。|  
+|FE_INEXACT|此函数被强制舍入早期浮点运算的存储结果。|  
+|FE_INVALID|早期浮点运算中发生域错误。|  
+|FE_OVERFLOW|范围出错；早期浮点运算结果过大而无法表示。|  
+|FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|  
+|FE_ALLEXCEPT|所有受支持的浮点异常的按位 OR。|  
   
- `excepts` 参数可能为零，一个异常宏的值，或按位或两个或多个支持的异常宏。 如果指定的异常宏之一是 FE\_OVERFLOW 或 FE\_UNDERFLOW，FE\_INEXACT 异常可能会引发的副作用。  
+ `excepts` 参数可能为零、一个异常宏值，或为两个或多个受支持的异常宏的按位 OR。 如果一个指定的异常宏是 FE_OVERFLOW 或 FE_UNDERFLOW，FE_INEXACT 异常可能会引发副作用。  
   
- 若要使用此功能，必须关闭无法通过使用阻止的访问的浮点优化 `#pragma fenv_access(on)` 指令在调用前。 有关更多信息，请参见[fenv\_access](../../preprocessor/fenv-access.md)。  
+ 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。  
   
- **Microsoft 专用︰** 中指定的异常 `excepts` 按顺序 FE\_INVALID，引发 FE\_DIVBYZERO、 FE\_OVERFLOW、 FE\_UNDERFLOW、 FE\_INEXACT。 但是，FE\_INEXACT 可以引发 FE\_OVERFLOW 或 FE\_UNDERFLOW 引发时，即使在未指定 `excepts`。**结束 Microsoft 专用**  
+ **Microsoft 专用：** `excepts` 中指定的异常按 FE_INVALID、FE_DIVBYZERO、FE_OVERFLOW、FE_UNDERFLOW、FE_INEXACT 顺序引发。 但是，引发 FE_OVERFLOW 或 FE_UNDERFLOW 时可能引发 FE_INEXACT，即使未在 `excepts` 中指定。 **结束 Microsoft 专用**  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|函数|C 标头|C\+\+ 标头|  
-|--------|----------|--------------|  
-|`feraiseexcept`|\<fenv.h\>|\<cfenv\>|  
+|函数|C 标头|C++ 标头|  
+|--------------|--------------|------------------|  
+|`feraiseexcept`|\<fenv.h>|\<cfenv>|  
   
  有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   

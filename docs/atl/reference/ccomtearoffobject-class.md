@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4f6782e2e873e844fa1d2eb7a9c1090d887dac9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80be7d80af5a6c8fa2c47bc0e853020663f2ceae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 类
 此类实现分离式接口。  
@@ -93,7 +94,7 @@ class CComTearOffObject : public Base
   
  `CComTearOffObject`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="addref"></a>CComTearOffObject::AddRef  
@@ -184,6 +185,6 @@ STDMETHOD_ULONG Release();
 ### <a name="return-value"></a>返回值  
  在非调试版本中，始终返回零。 在调试版本中，返回一个值，可能是用于诊断或测试。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComCachedTearOffObject 类](../../atl/reference/ccomcachedtearoffobject-class.md)   
  [类概述](../../atl/atl-class-overview.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc0c5ab0a76d77898b2249f63c699f76b10a628b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ccbf7dab7d39a80efa2b0b0b88b615c55cd9e56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>更改绘图代码（ATL 教程，第 4 部分）
 默认情况下，控件的绘制代码显示的文本和正方形**PolyCtl**。 在此步骤中，你将更改要显示一些更有趣的内容的代码。 涉及以下任务：  
@@ -122,7 +123,7 @@ ms.lasthandoff: 10/24/2017
   
  [返回到步骤 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124;[到步骤 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)   
  [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md)
 

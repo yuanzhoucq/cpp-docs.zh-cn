@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>析构函数 (C++)
 析构函数是成员函数，当对象超出范围或显式调用销毁自动调用`delete`。 析构函数具有相同的名称为类，前面是波形符 (`~`)。 例如，声明 `String` 类的析构函数：`~String()`。 如果未定义析构函数，编译器将提供一个; 默认值对于许多类，这已足够。 你只需以定义自定义的析构函数时，类存储需要要释放的系统资源的句柄或拥有内存的指针指向的目标。
@@ -74,7 +72,7 @@ int main() {
   
  在前面的示例中，析构函数 `String::~String` 使用 `delete` 运算符来动态释放为文本存储分配的空间。  
   
-## <a name="delcaring-destructors"></a>声明析构函数  
+## <a name="declaring-destructors"></a>声明析构函数  
  析构函数是具有与类相同的名称但前面是波形符 (`~`) 的函数  
   
  多个规则管理析构函数的声明。 析构函数：  
@@ -232,4 +230,3 @@ ps->~String();     // Virtual call
 ```  
   
  可以使用对前面显示的析构函数的显式调用的表示法，无论类型是否定义了析构函数。 这允许您进行此类显式调用，而无需了解是否为此类型定义了析构函数。 显式调用析构函数，其中未定义的析构函数无效。  
-

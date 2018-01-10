@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40aa94226b93a42b14dfd23a64e12fff00e22729
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8709274e1b95816dee01b4457993521dde5d5213
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和枚举器接口的设计原则
 有不同的设计依据每种类型的接口的原理：  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
  每种类型的接口扮演不同的角色提供对集合中元素的访问。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [集合和枚举数](../atl/atl-collections-and-enumerators.md)
 

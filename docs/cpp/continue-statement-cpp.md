@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ae5093f26cb46b30cf01d453a51df2585bee534
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e4dd91489bfe22fca875f98110dadcb75def39d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="continue-statement-c"></a>continue 语句 (C++)
 强制控件的传输到的控制表达式的最小封闭[执行](../cpp/do-while-statement-cpp.md)，[为](../cpp/for-statement-cpp.md)，或[时](../cpp/while-statement-cpp.md)循环。  
@@ -66,6 +67,6 @@ before the continue
 after the do loop  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跳转语句](../cpp/jump-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)

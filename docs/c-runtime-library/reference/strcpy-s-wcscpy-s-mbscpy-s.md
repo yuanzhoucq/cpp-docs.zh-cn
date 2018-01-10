@@ -44,11 +44,12 @@ caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e07e4561674c2a75503961d2d43b1566c7a2e080
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a07af46cda1e3ce9c567b12bd83e2d3fd055a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
 复制字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) 具有安全性增强功能。  
@@ -108,8 +109,8 @@ errno_t _mbscpy_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|返回值|`strDestination` 的内容|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|任何|`EINVAL`|未修改|  
-|any|任何|`NULL`|`EINVAL`|`strDestination`[0] 设置为 0|  
+|`NULL`|任何|任何|`EINVAL`|未修改|  
+|任何|任何|`NULL`|`EINVAL`|`strDestination`[0] 设置为 0|  
 |任何|0 或过小|任何|`ERANGE`|`strDestination`[0] 设置为 0|  
   
 ## <a name="remarks"></a>备注  
@@ -121,7 +122,7 @@ errno_t _mbscpy_s(
   
  成功执行时，目标字符串始终以 null 结尾。  
   
- 在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量；并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推断缓冲区长度，从而无需指定大小自变量；并且它们可以自动将较旧、不安全的函数替换为更新、更安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  这些函数的调试版本首先用 0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -131,15 +132,15 @@ errno_t _mbscpy_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscpy_s`|`strcpy_s`|`_mbscpy_s`|`wcscpy_s`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strcpy_s`|\<string.h>|  
 |`wcscpy_s`|\<string.h> 或 \<wchar.h>|  
 |`_mbscpy_s`|\<mbstring.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -172,7 +173,7 @@ int main( void )
 String = Hello world from strcpy_s and strcat_s!  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   

@@ -1,41 +1,42 @@
 ---
-title: "vector::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成员 [STL/CLR]"
+title: "vector:: empty (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: c09fc4a3-bd79-4458-9a36-1d9c82ac36b1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 63aafd2c817da8143512a777feed47feda03c62a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# vector::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-测试元素不存在。  
+# <a name="vectorempty-stlclr"></a>vector::empty (STL/CLR)
+测试元素是否存在。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 bool empty();  
 ```  
   
-## 备注  
- 成员函数返回 true 一个空序列控制。  它与`() == 0`等效。[vector::size](../dotnet/vector-size-stl-clr.md) 您可用它测试矢量是否为空。  
+## <a name="remarks"></a>备注  
+ 对于空受控序列，该成员函数返回 true。 它相当于[vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`。 你可以使用它来测试是否向量为空。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_empty.cpp   
@@ -65,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) 为 True**   
-## 要求  
- **页眉：** \<cliext\/矢量\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::size](../dotnet/vector-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)

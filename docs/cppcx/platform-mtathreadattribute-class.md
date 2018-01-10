@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6c45256272f7d72dd1da6b6486f9358eaf062b8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f99b8ab49579d949081af73e76d4bfcb167e2cb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 类
 指示应用程序的线程处理模型为多线程单元 (MTA)。  
@@ -44,7 +45,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>公共方法  
  MTAThreadAttribute 属性继承自[platform:: object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
@@ -53,7 +54,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Platform`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **元数据：** platform.winmd  
   
  **命名空间：** Platform  
@@ -115,5 +116,5 @@ public:String^ ToString()
 ### <a name="return-value"></a>返回值  
  表示当前对象的字符串。  
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

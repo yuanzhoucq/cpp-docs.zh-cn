@@ -1,32 +1,33 @@
 ---
-title: "list::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 成员 [STL/CLR]"
+title: "list:: assign (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: c5f2b131-d0e1-4188-9d4b-d617280e4032
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e4c5e670b4fca5998a21b8ae3554f31697cb3fac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# list::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-替换任何元素。  
+# <a name="listassign-stlclr"></a>list::assign (STL/CLR)
+替换所有元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,30 +36,30 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  count  
- 插入的元素数。  
+ 要插入的元素数。  
   
- 首先  
- 插入范围的开头。  
+ 第一个  
+ 要插入的范围开始处。  
   
  last  
- 插入的范围末尾。  
+ 要插入的范围的末尾。  
   
- right  
- 插入的枚举。  
+ 右  
+ 要插入的枚举。  
   
  val  
- 插入元素的值。  
+ 要插入的元素的值。  
   
-## 备注  
- 第一个成员函数为 `val`值的 `count` 元素控制的重复替换序列。  使用它填充元素的容器都具有相同的值。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数将受控的序列替换的重复`count`值的元素`val`。 你使用它来填充容器元素与所有具有相同的值。  
   
- 如果 `InIt` 为整数类型，第二个成员函数行为与 `assign((size_type)``first``, (value_type)``last``)`相同。  否则，它会序列 `[``first``,` `last``)`替换序列控制。  使用会使控制序列复制另一个序列。  
+ 如果`InIt`是整数类型，第二个成员函数的行为与相同`assign((size_type)first, (value_type)last)`。 否则，它会替换受控的序列序列 [`first`， `last`)。 你使用它进行控制的序列副本另一个序列。  
   
- 第三个成员函数为枚举数指定的顺序控制 `right`替换序列。  使用会使控制序列描述枚举数的序列复制。  
+ 第三个成员函数与枚举器指定序列替换受控的序列`right`。 你可以使用它来使一个枚举器所描述的序列的副本的受控的序列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_assign.cpp   
@@ -97,14 +98,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **b**  
- **a b c**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d4db358543430b5bba0da93bb3525398b3e675a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9efdcdc0863105f4a07a69c99a30fcd7f7f2ac92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-tokens"></a>C 标记
 在 C 源程序中，编译器识别的基本元素是“标记”。 标记是编译器不会分解为组件元素的源程序文本。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
   
  本节描述的关键字、标识符、常量、字符串文本和运算符是标记的示例。 标点符号（如方括号 ([ ])、大括号 ({ })、圆括号 ( ( ) ) 和逗号 (,) 也是标记。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 的元素](../c-language/elements-of-c.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 586e75202bb2b16a0e612eea75d4e2ed6d1bd8d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 类
 此类创建一个工作线程或使用一个现有，等待上一个或多个内核对象句柄，并在其中一个的句柄处于有信号状态时执行指定的客户端函数。  
@@ -52,7 +53,7 @@ class CWorkerThread
   
 ### <a name="protected-structures"></a>受保护的结构  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
@@ -95,7 +96,7 @@ class CWorkerThread
   
 6.  若要终止线程，调用[CWorkerThread::Shutdown](#shutdown)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlutil.h  
   
 ##  <a name="addhandle"></a>CWorkerThread::AddHandle  
@@ -252,7 +253,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
  请注意，调用**关闭**初始化用一个指针指向另一个对象上`CWorkerThread`对象有影响，并且始终返回，则为 S_OK。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [类](../../atl/reference/atl-classes.md)   
  [多线程处理： 创建辅助线程](../../parallel/multithreading-creating-worker-threads.md)   

@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1f0b531942e281236c65ef9a2e1ad3d3f669bbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc32ab53469b1f125b56343806c7920461c64bf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 类
 `CComMultiThreadModelNoCS`提供线程安全的方法的递增和递减值的变量中，而无需临界区锁定或解锁功能。  
@@ -67,7 +68,7 @@ class CComMultiThreadModelNoCS
   
  除了`ThreadModelNoCS`，`CComMultiThreadModelNoCS`定义`AutoCriticalSection`和`CriticalSection`。 这些后的两个`typedef`名称引用[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)，提供与获取和释放临界区关联的空方法。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
@@ -175,5 +176,5 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ### <a name="example"></a>示例  
  请参阅[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

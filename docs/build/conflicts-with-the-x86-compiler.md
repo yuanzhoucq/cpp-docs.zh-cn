@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1a039b086b806c22e9cfe5ceda907916a7cf5de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b2b9c4cf871e8436a8da34a862d205541e7dc5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>与 x86 编译器冲突
 数据类型都大于 4 个字节不自动对齐在堆栈上时使用 x86 编译器进行编译应用程序。 因为编译器为 4 字节对齐的堆栈，任何大于 4 个字节，例如，64 位整数，不能自动对齐到 8 字节地址 x86 的体系结构。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
  如果需要更为严格的对齐，则使用`__declspec(align(N)) on your variable declarations`。 这将导致编译器动态对齐堆栈，以满足您的规范。 但是，在运行时动态调整堆栈，这种情况可能会导致你的应用程序的执行速度变慢。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型和存储](../build/types-and-storage.md)   
  [align](../cpp/align-cpp.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a723cb785cb8266ff17c351f02f952a5c27062f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
 将指定列数据设置为字符串。  
@@ -61,8 +64,8 @@ HRESULT SetString(
   
  如果`_SECURE_ATL`定义具有非零值，运行时断言失败将生成如果输入`data`字符串的长度超过引用的数据列的最大允许长度。 否则，如果它的长度大于最大允许长度，则将截断的输入的字符串。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicStringAccessor 类](../../data/oledb/cdynamicstringaccessor-class.md)

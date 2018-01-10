@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bc3947dc31c1355a67864e509c28dc3569b488b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cfa27e2d76e546748258a5f6c1af1df9ded28f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-routines-by-category"></a>按类别分的运行时例程
 本节按类别列出并介绍了 Microsoft 运行库例程。 为了方便引用，一些例程已在多个类别中列出。 多字节字符例程和宽字符例程在它们存在的位置按单字节字符副本进行分组。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
 |[搜索和排序](../c-runtime-library/searching-and-sorting.md)|[字符串操作](../c-runtime-library/string-manipulation-crt.md)|  
 |[系统调用](../c-runtime-library/system-calls.md)|[时间管理](../c-runtime-library/time-management.md)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed12541eeb0c85b2d218a7a5f3305413d4dc2ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3499d6583c7d9801aa4c3b12c66196c975b192ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE （包括所有库对象文件）
 Force 链接器包含在静态库链接的可执行文件中的所有对象文件。  
@@ -42,6 +43,6 @@ Visual Studio 2015 Update 2 中引入了 /WHOLEARCHIVE 选项。
 1.  添加到 /WHOLEARCHIVE 选项**其他选项**文本框。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

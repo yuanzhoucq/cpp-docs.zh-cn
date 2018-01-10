@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e608d3b6826eb8bfbcebdec7fdf9891d033b418
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chained-unwind-info-structures"></a>链式展开信息结构
 如果设置 UNW_FLAG_CHAININFO 标志，然后展开信息结构是一个辅助和共享的异常的处理程序/链接的信息地址字段包含主展开信息。 以下代码检索主展开信息，假定`unwindInfo`是具有 UNW_FLAG_CHAININFO 结构标志设置。  
@@ -32,5 +33,5 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
   
  Unwind_info 结构项具有 UNW_FLAG_CHAININFO 设置可以包含其 unwind_info 结构项也具有 UNW_FLAG_CHAININFO 设置 （多个紧缩套装） runtime_function 结构项。 最终，连锁展开指针将到达具有 UNW_FLAG_CHAININFO 清除; 的 unwind_info 结构项目的信息这是指向实际过程入口点的主 unwind_info 结构项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [为异常处理和调试器支持展开数据](../build/unwind-data-for-exception-handling-debugger-support.md)

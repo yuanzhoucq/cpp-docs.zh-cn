@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b42c7717757d3648db368e7d9633162fa87afe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28d43b6a83842373c2fc169ce43022f1912c4e0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse 类
 此类是帮助器[CSimpleArray](../../atl/reference/csimplearray-class.md)类。  
@@ -49,7 +50,7 @@ class CSimpleArrayEqualHelperFalse
 ## <a name="remarks"></a>备注  
  此特征类是对补充`CSimpleArray`类。 It 始终返回 false，和此外，将调用`ATLASSERT`用 false 如果曾引用自变量。 在其中相等性测试未充分定义的情况下，此类允许包含要正确运行的大多数方法，但如依赖于比较的方法定义完善的方式失败元素数组[CSimpleArray::查找](../../atl/reference/csimplearray-class.md#find)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsimpcoll.h  
   
 ##  <a name="isequal"></a>CSimpleArrayEqualHelperFalse::IsEqual  
@@ -65,6 +66,6 @@ static bool IsEqual(const T&, const T&);
 ### <a name="remarks"></a>备注  
  此方法始终返回 false，并且将调用`ATLASSERT`用 false 如果引用自变量。 用途`CSimpleArrayEqualHelperFalse::IsEqual`是强制使用比较时没有充分定义相等性测试，以定义完善的方式失败的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CSimpleArrayEqualHelper 类](../../atl/reference/csimplearrayequalhelper-class.md)   
  [类概述](../../atl/atl-class-overview.md)

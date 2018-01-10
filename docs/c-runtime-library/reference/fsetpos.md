@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 504ab55aadc315dcf06c07a999f2a7d3dfca630b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71dbbf3c56f81b4987fcadb3db98be8d82e70fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fsetpos"></a>fsetpos
 设置流位置指示器。  
@@ -64,17 +65,17 @@ int fsetpos(
 ## <a name="remarks"></a>备注  
  `fsetpos`函数设置的文件位置指示器`stream`为的值`pos`，这在调用中获取`fgetpos`针对`stream`。 该函数清除文件尾指示器和撤消的任何影响[ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md)上`stream`。 在调用 `fsetpos` 后，`stream` 上的下一个操作可能为输入或输出。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`fsetpos`|\<stdio.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  请参阅 [fgetpos](../../c-runtime-library/reference/fgetpos.md) 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)

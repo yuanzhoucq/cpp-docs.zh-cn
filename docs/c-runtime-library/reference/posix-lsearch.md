@@ -28,11 +28,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 48b205c0ed3d44517d0e780b6fb55956b2f823d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bebef7144d9d4646bc915ed039b71da4feef4bb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearch"></a>lsearch
 此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_lsearch](../../c-runtime-library/reference/lsearch.md) 或安全性已增强的 [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)。

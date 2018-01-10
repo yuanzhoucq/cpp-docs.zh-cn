@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33804c3876d378fe8138795b78a26f36a52e3c96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd2f0ff353e1243685c94da0c28f29e810b2a9ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto（推导变量类型）
 **/Zc: auto [-]**编译器选项指示编译器如何使用[auto 关键字](../../cpp/auto-keyword.md)来声明变量。 如果指定默认选项， **/zc: auto**，编译器会将从其初始化表达式声明的变量的类型推导。 如果指定**/Zc:auto-**，编译器会将分配到自动存储类变量。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/24/2017
   
 5.  添加**/zc: auto**或**/Zc:auto-**到**其他选项：**窗格。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [/Zc （一致性）](../../build/reference/zc-conformance.md)   
  [auto 关键字](../../cpp/auto-keyword.md)

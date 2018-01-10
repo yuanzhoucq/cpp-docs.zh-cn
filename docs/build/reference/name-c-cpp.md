@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 46bbbef9df3f68f322196962042039b32b4e0113
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33e81f63e7647cbdbdc89b37ffdcb309b79e9340
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 指定主输出文件的名称。  
@@ -33,5 +34,5 @@ NAME [application][BASE=address]
   
  如果你生成 DLL，名称只会影响 DLL 名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)

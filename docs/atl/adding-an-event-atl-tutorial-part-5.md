@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cef973849a9af88cd952be69ce9d33e7a516d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>添加事件（ATL 教程，第 5 部分）
 在此步骤中，你将添加`ClickIn`和`ClickOut`ATL 控件的事件。 将激发`ClickIn`事件，如果用户单击中的多边形和火灾`ClickOut`如果用户单击之外。 要添加一个事件的任务如下所示：  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
   
 1.  重新生成项目。  
   
-     - 或 -  
+     或  
   
 2.  右键单击解决方案资源管理器中的 Polygon.idl 文件，然后单击**编译**快捷菜单上。  
   
@@ -132,6 +133,6 @@ ms.lasthandoff: 10/24/2017
   
  [返回到步骤 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124;[到步骤 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [教程](../atl/active-template-library-atl-tutorial.md)
 

@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ab69a7dbba33e37d23a880a6a9b36f7ed37d7d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f89c49035e2e48dde8d502b1d61fa33d198f69a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changes-to-conversion-operators"></a>转换运算符的更改
 转换运算符的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
@@ -69,5 +72,5 @@ public:
   
  另一变化是处理单个自变量构造函数，如同它被声明为`explicit`。 这意味着，触发它的调用，以便显式强制转换不需要。 但请注意，是否定义显式转换运算符，它并不单参数构造函数，都会调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

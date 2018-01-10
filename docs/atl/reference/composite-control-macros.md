@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 154c8f30e1d0141af7c0825d5af1208b95881a86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b609801a1716e47b208644be02d4746abf8c288a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-control-macros"></a>复合控件宏
 这些宏定义事件接收器映射和条目。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 |[SINK_ENTRY_INFO](#sink_entry_info)|事件接收器映射的用于手动提供的类型信息进入[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)。|  
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)与 SINK_ENTRY_INFO 类似，但前者将指向 iid 的指针。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
 
 ##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
@@ -154,6 +155,6 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
  前四个宏参数是否为相同[SINK_ENTRY_EX](#sink_entry_ex)宏。 最后一个参数提供事件的类型的信息。 CE ATL 实现 ActiveX 事件接收器仅支持返回类型的值 HRESULT 或从事件处理程序方法; void任何其他返回值不受支持，而且其行为是不确定。  
   
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏](../../atl/reference/atl-macros.md)   
  [复合控件全局函数](../../atl/reference/composite-control-global-functions.md)

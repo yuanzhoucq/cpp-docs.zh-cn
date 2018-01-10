@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f84d80001950938738a56f7c6171cbfd02e2f30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aaf2f9e51a09c06bcf9686142a57017efbe4c85d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
 将所有*文本*之间或为一个注释分隔符与位于同一行上。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
 [[text]] delimiter [[text]]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 03791f920619b98beec3c1bbbd33b45b550eaf7a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 在指定的驱动器上获取当前工作目录的完整路径。  
@@ -109,9 +93,9 @@ wchar_t *_wgetdcwd(
 ## <a name="remarks"></a>备注  
  `_getdcwd` 函数将获取指定驱动器上当前工作目录的完整路径，并将其存储在 `buffer`中。 如果当前工作目录设置为根目录，则字符串以反斜杠 (\\) 结尾。 如果当前工作目录设置为根目录之外的目录，则字符串以该目录的名称结尾，而不是以反斜杠结尾。  
   
- `_wgetdcwd` 是 `_getdcwd`的宽字符版本，并且其 `buffer` 参数和返回值都是宽字符字符串。 除此以外， `_wgetdcwd` 和 `_getdcwd` 的行为完全相同。  
+ `_wgetdcwd` 是 `_getdcwd`的宽字符版本，并且其 `buffer` 参数和返回值都是宽字符字符串。 除此以外，`_wgetdcwd` 和 `_getdcwd` 的行为完全相同。  
   
- 此函数是线程安全的，即使它依赖于本身不是线程安全的 **GetFullPathName**。 但是，如果你的多线程应用程序调用此函数和 **GetFullPathName**，则可以违反线程安全性。 有关详细信息，请转到 [MSDN 库](http://go.microsoft.com/fwlink/?LinkID=150542) ，然后搜索 **GetFullPathName**。  
+ 此函数是线程安全的，即使它依赖于本身不是线程安全的 **GetFullPathName**。 但是，如果你的多线程应用程序调用此函数和 **GetFullPathName**，则可以违反线程安全性。 有关详细信息，请转到 [MSDN 库](http://go.microsoft.com/fwlink/p/?linkid=150542)，然后搜索 **GetFullPathName**。  
   
  具有 `_nolock` 后缀的此函数版本与此函数的行为相同，但它不是线程安全的，并且会受到其他线程的影响。 有关详细信息，请参阅 [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md)。  
   
@@ -123,19 +107,19 @@ wchar_t *_wgetdcwd(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tgetdcwd`|`_getdcwd`|`_getdcwd`|`_wgetdcwd`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_getdcwd`|\<direct.h>|  
 |`_wgetdcwd`|\<direct.h> 或 \<wchar.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  请参见 [_getdrive](../../c-runtime-library/reference/getdrive.md)中的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录控制](../../c-runtime-library/directory-control.md)   
  [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_getcwd、_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   

@@ -41,11 +41,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b63b99f7451d2fbb1a0e4137469a0c4f5b01046
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0702b99990728bdb732654fdd1eacbefa373dda6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp-expf-expl"></a>exp、 expf，资源管理器
 计算指数。  
@@ -89,13 +90,13 @@ long double expl(
 ## <a name="remarks"></a>备注  
  C + + 允许重载，因此您可以调用的重载`exp`采用**float**或**长双精度**自变量。 在 C 程序中，`exp`始终采用并返回**double**。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的 C 标头|必需的 C++ 标头|  
 |--------------|---------------------|---|  
 |`exp`, `expf`|\<math.h>|\<cmath> 或 \<math.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -118,7 +119,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [_CIexp](../../c-runtime-library/ciexp.md)

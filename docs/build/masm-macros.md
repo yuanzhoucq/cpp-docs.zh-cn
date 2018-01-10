@@ -1,44 +1,45 @@
 ---
-title: "MASM 宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "MASM 宏 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 21410432-72fc-4795-bc93-e78123f9f14f
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 043ad96ada12467ce9c2ff39c9e337e0da9d2391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# MASM 宏
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-为了简化 [原始伪操作](../build/raw-pseudo-operations.md) 的使用，在 ksamd64.inc 中定义了一组宏，可以使用这些宏创建典型的过程 Prolog 和 Epilog。  
+# <a name="masm-macros"></a>MASM 宏
+为了简化使用的[原始伪操作](../build/raw-pseudo-operations.md)，有一套 ksamd64.inc，可以用于创建典型过程序言和尾声中定义的宏。  
   
-## 备注  
+## <a name="remarks"></a>备注  
   
 |宏|描述|  
-|-------|--------|  
-|alloc\_stack\(n\)|分配 n 字节堆栈帧（使用“sub rsp, n”），并发出合适的展开信息 \(.allocstack n\)|  
-|save\_reg reg, loc|将非易失寄存器 reg 保存到堆栈的 RSP 偏移量 loc 处，并发出合适的展开信息。  \(.savereg reg, loc\)|  
-|push\_reg reg|将非易失寄存器 reg 推送到堆栈上，并发出合适的展开信息。  \(.pushreg reg\)|  
-|rex\_push\_reg reg|使用 2 个字节驱动器，保存非易失寄存器在堆栈，而发出相应展开信息 \(.pushreg reg\) 应使用方法，如果驱动器是函数的第一命令确保该函数是快捷的 patchable。|  
-|save\_xmm128 reg, loc|将非易失 XMM 寄存器 reg 保存到堆栈的 RSP 偏移量 loc 处，并发出合适的展开信息 \(.savexmm128 reg, loc\)|  
-|set\_frame reg, offset|将帧寄存器 reg 设置为 RSP \+ 偏移量（通过使用 mov 或 lea），并发出合适的展开信息 \(.set\_frame reg, offset\)|  
-|push\_eflags|使用 pushfq 指令推送 eflag，并发出合适的展开信息 \(.alloc\_stack 8\)|  
+|-----------|-----------------|  
+|alloc_stack(n)|分配 （使用子 rsp，n） 的 n 个字节的堆栈帧并发出相应的展开信息 (.allocstack n)|  
+|save_reg reg 本地化|保存在位于 RSP 偏移量 loc 的堆栈上的非易失寄存器 reg 并发出相应的展开信息。 (.savereg reg，loc)|  
+|push_reg reg|将非易失寄存器 reg 推送到堆栈上，并发出相应的展开信息。 (.pushreg reg)|  
+|rex_push_reg reg|使用 2 字节推送到堆栈上保存非易失寄存器并发出相应的展开函数中的第一个指令，以确保函数是热修补推送是否应使用此信息 (.pushreg reg)。|  
+|save_xmm128 reg 本地化|将非易失 XMM 寄存器保存 RSP 偏移量的位置，在堆栈上的注册表并发出相应的展开信息 （.savexmm128 reg、 loc）|  
+|set_frame reg、 偏移量|设置帧寄存器 reg，若要将 RSP + 偏移量 （使用 mov、 或逆转），并发出相应的展开信息 （.set_frame reg、 偏移量）|  
+|push_eflags|推送与 pushfq 指令 eflags 并发出相应的展开信息 (.alloc_stack 8)|  
   
- 此处为示例函数 Prolog，演示了这些宏的正确用法：  
+ 下面是示例函数 prolog 与宏的正确用法：  
   
 ```  
 SkFrame struct   
-Fill    dq ?; fill to 8 mod 16   
+Fill    dq ?; fill to 8 mod 16   
 SavedRdi dq ?; saved register RDI   
 SavedRsi dq ?; saved register RSI   
 SkFrame ends  
@@ -67,5 +68,5 @@ ret
 sample2 ENDP  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [MASM 的展开帮助器](../build/unwind-helpers-for-masm.md)

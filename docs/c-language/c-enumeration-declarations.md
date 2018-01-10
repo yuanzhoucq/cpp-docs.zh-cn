@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-enumeration-declarations"></a>C 枚举声明
 枚举由一组命名整数常量构成。 枚举类型声明提供（可选）枚举标记的名称，并定义命名整数标识符集（称为“枚举集”、“枚举器常量”、“枚举器”或“成员”）。 具有枚举类型的变量存储该类型所定义的枚举集的值之一。  
@@ -156,5 +157,5 @@ if ( match_flag == false )
 enum { yes, no } response;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [枚举](../cpp/enumerations-cpp.md)

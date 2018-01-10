@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::AddBindEntry"
-  - "ATL.CManualAccessor.AddBindEntry"
-  - "CManualAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CManualAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry 方法"
+title: "Cmanualaccessor:: Addbindentry |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14a2fbae8ee29728d145b3ff8d20a02b4000b5a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-添加输入绑定到输出列。  
+# <a name="cmanualaccessoraddbindentry"></a>CManualAccessor::AddBindEntry
+将绑定条目添加到输出列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -44,33 +46,33 @@ caps.handback.revision: 9
 ) throw ( );  
 ```  
   
-#### 参数  
- 请参阅在*OLE DB Programmer's Reference* 中 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
+#### <a name="parameters"></a>参数  
+ 请参阅[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程序员参考*。  
   
  `nOrdinal`  
- \[in\] 列号。  
+ [in]列号。  
   
  `wType`  
- \[in\] 数据类型  
+ [in]数据类型。  
   
  `nColumnSize`  
- \[in\] 列大小 \(以字节为单位\)。  
+ [in]以字节为单位的列大小。  
   
  `pData`  
- \[in\] 到缓冲区中存储的数据的指针。  
+ [in]指向存储在缓冲区中的列数据的指针。  
   
  `pLength`  
- 如果需要的话 \[in\] 为字段长度的指针。  
+ [in]指向字段长度，如果所需的指针。  
   
  `pStatus`  
- \[in\] 绑定到变量的指针到列状态，如果必须。  
+ [in]指向要将绑定到列的状态，如果所需的变量的指针。  
   
-## 备注  
- 若要使用此功能，必须首先调用 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。  您与 `CreateAccessor`中指定的列数无法添加更多项。  
+## <a name="remarks"></a>备注  
+ 若要使用此功能，必须先调用[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 无法添加更多项中指定的列数比`CreateAccessor`。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)   
- [DBViewer 示例](../../top/visual-cpp-samples.md)
+ [DBViewer 示例](../../visual-cpp-samples.md)

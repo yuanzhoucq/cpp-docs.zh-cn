@@ -13,18 +13,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e462fb157f035be275e6d97b9ccb35e136c24d4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a51cab03c1361c178846e8b7f00ba7111dc8d731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimization-in-the-performance-and-diagnostics-hub"></a>性能和诊断中心的按配置文件优化
 性能和诊断中心中的 Visual C++ 插件按配置优化可以简化开发人员的按配置优化体验。 你可以[下载插件](http://go.microsoft.com/fwlink/p/?LinkId=327915)从 Visual Studio 网站。  
   
- 按配置优化 (PGO) 可帮助您创建 x86 和 x64 本机应用的生成版本，同时优化用户与它们之间的交互方式。 PGO 是多步骤的过程：您创建用于分析检测的应用，然后执行“训练”，即您通过常用用户交互方案运行所检测的应用。 您保存捕获的分析数据，然后使用结果引导全程序优化，从而重新生成应用。 尽管您可以在 Visual Studio 或命令行中分别执行这些步骤，但 PGO 插件可以集中并简化这一过程。 PGO 插件可以设置所有必需的选项，指导您完成每个步骤，为您显示分析，然后使用结果配置生成版本，以便优化每个函数的大小或速度。 当您更改代码时，PGO 插件可以让您轻松地重新执行应用训练，并更新生成版本优化数据。  
+ 按配置优化 (PGO) 可帮助您创建 x86 和 x64 本机应用的生成版本，同时优化用户与它们之间的交互方式。 PGO 是多步骤的过程：你创建用于分析检测的应用，然后执行“培训”，即你通过常用用户交互方案运行所检测的应用。 您保存捕获的分析数据，然后使用结果引导全程序优化，从而重新生成应用。 尽管您可以在 Visual Studio 或命令行中分别执行这些步骤，但 PGO 插件可以集中并简化这一过程。 PGO 插件可以设置所有必需的选项，指导您完成每个步骤，为您显示分析，然后使用结果配置生成版本，以便优化每个函数的大小或速度。 当你更改代码时，PGO 插件可以让你轻松地重新执行应用培训，并更新生成版本优化数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你必须[下载 PGO 插件](http://go.microsoft.com/fwlink/p/?LinkId=327915)并将其安装在 Visual Studio 中后，才能在性能和诊断中心中使用。  
   
 ## <a name="walkthrough-using-the-pgo-plug-in-to-optimize-an-app"></a>演练：使用 PGO 插件优化应用  
@@ -92,4 +93,4 @@ ms.lasthandoff: 10/24/2017
   
  ![PGO 输出诊断](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")  
   
- 在开发过程中，如果进行了大量代码更改，则可能需要重新训练您的应用，以便实现最佳优化。 当生成输出报告不到 80% 的函数或指令使用分析数据进行了优化时，建议您重新训练您的应用。
+ 在开发过程中，如果进行了大量代码更改，则可能需要重新训练你的应用，以便实现最佳优化。 当生成输出报告不到 80% 的函数或指令使用分析数据进行了优化时，建议您重新训练您的应用。

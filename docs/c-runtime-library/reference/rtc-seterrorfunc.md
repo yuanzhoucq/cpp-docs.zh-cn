@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa6d2e05668eac7909cb7805c5843ee6584b941f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de71b832af9e6ed2f734f193e49a7c240193edce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 将函数指定为报告运行时错误检查 (RTC) 的处理程序。 此函数已弃用；请改用 `_RTC_SetErrorFuncW` 。  
@@ -60,9 +61,9 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  请勿使用此函数；请改用 `_RTC_SetErrorFuncW`。 仅为后向兼容性保留使用此函数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_RTC_SetErrorFunc`|\<rtcapi.h>|  
   
@@ -71,6 +72,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   
  [运行时错误检查](../../c-runtime-library/run-time-error-checking.md)

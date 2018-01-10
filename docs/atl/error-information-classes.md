@@ -18,17 +18,18 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e8112adf7164dcfdf0baffb6b0531b1ee84e9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da37d9620212f16f920d228278a387701d2dbee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-information-classes"></a>错误信息类
 下面的类指示如何处理错误的信息：  
   
 -   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md)确定对象是否支持[IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)接口。 **IErrorInfo**允许错误信息，以便传播回客户端。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)
 

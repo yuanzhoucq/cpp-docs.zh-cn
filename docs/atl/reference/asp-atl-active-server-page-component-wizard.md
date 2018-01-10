@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2ffa9ed5a25417cfcf46c5b47b55b3eecc2fe27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69d3837cc0996c0e0e0784214cfbfa6744afbf94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP，ATL Active Server Page 组件向导
 使用 ATL Active Server Page 组件向导的此页指定用于处理信息和状态与 ASP 组件相关的可选设置。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 |**应用程序**|提供对内部 Active Server Pages 访问**应用程序**对象。 **应用程序**对象管理在多个 ASP 对象之间共享的状态。|  
 |**服务器**|提供对内部 Active Server Pages 访问**服务器**对象。 **服务器**对象允许你创建其他 ASP 对象。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL Active Server Page 组件向导](../../atl/reference/atl-active-server-page-component-wizard.md)   
  [ATL Active Server Page 组件](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

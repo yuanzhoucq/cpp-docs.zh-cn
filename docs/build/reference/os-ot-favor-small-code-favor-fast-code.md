@@ -1,65 +1,66 @@
 ---
-title: "/Os、/Ot（代码大小优先、代码速度优先） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed"
-  - "/os"
-  - "VC.Project.VCCLCompilerTool.FavorSizeOrSpeed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Os 编译器选项 [C++]"
-  - "/Ot 编译器选项 [C++]"
-  - "快速代码"
-  - "代码速度优先编译器选项 [C++]"
-  - "代码大小优先编译器选项 [C++]"
-  - "Os 编译器选项 [C++]"
-  - "-Os 编译器选项 [C++]"
-  - "Ot 编译器选项 [C++]"
-  - "-Ot 编译器选项 [C++]"
-  - "小型机器代码"
+title: "-Os，-Ot （代码大小优先，快速代码优先） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
+- /os
+- VC.Project.VCCLCompilerTool.FavorSizeOrSpeed
+dev_langs: C++
+helpviewer_keywords:
+- favor fast code compiler option [C++]
+- /Os compiler option [C++]
+- Ot compiler option [C++]
+- /Ot compiler option [C++]
+- small machine code
+- -Ot compiler option [C++]
+- fast code
+- favor small code compiler option [C++]
+- Os compiler option [C++]
+- -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 02ce4b7d5c9617a88450fd90b4ac6c75d41148ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /Os、/Ot（代码大小优先、代码速度优先）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-最小化或最大化 EXE 和 DLL 的大小。  
+# <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot（代码大小优先、代码速度优先）
+最小化或 Exe 和 Dll 的大小，从而最大化。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /Os  
 /Ot  
 ```  
   
-## 备注  
- **\/Os**（代码大小优先）通过指示编译器优选大小而非速度来最小化 EXE 和 DLL 的大小。  编译器可以将许多 C 和 C\+\+ 构造缩小为功能类似的机器码序列。  这些差异有时在大小和速度之间提供了折中。  **\/Os** 和 **\/Ot** 选项允许在二者之间指定一个首选项：  
+## <a name="remarks"></a>备注  
+ **/Os** （倾向于小代码） 通过指示编译器大小优先于速度降至最低的 Exe 和 Dll 的大小。 编译器可以减少到的机器代码的功能上相似序列许多 C 和 c + + 构造。 这些差异有时提供大小和速度的折衷的方案。 **/Os**和**/Ot**选项允许你指定一个首选项：  
   
- **\/Ot**（代码速度优先）通过指示编译器优选速度而非大小来最大化 EXE 和 DLL 的速度。（这是默认设置。）编译器可以将许多 C 和 C\+\+ 构造缩小为功能类似的机器码序列。  这些差异有时在大小和速度之间提供了折衷。  “最大化速度”\([\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)\) 选项隐含 \/Ot 选项。  **\/O2** 选项组合若干个选项以产生速度非常快的代码。  
+ **/Ot** （倾向于快速代码） 指示编译器优选速度而非大小，从而最大化 Exe 和 Dll 的速度。 （这是默认值）。编译器可以减少到的机器代码的功能上相似序列许多 C 和 c + + 构造。 有时，这些差异提供大小和速度的折衷的方案。 /Ot 选项也将暗示最大化速度 ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) 选项。 **/O2**选项组合多个选项以生成非常快的代码。  
   
- 如果使用 **\/Os** 或 **\/Ot**，还必须指定 [\/Og](../../build/reference/og-global-optimizations.md) 以优化代码。  
-  
-> [!NOTE]
->  如果您指定 **\/Ob**、**\/Os** 或 **\/Ot**，则从分析测试运行收集的信息会重写本可以生效的优化。  有关更多信息，请参见[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。  
-  
- **x86 专用**  
-  
- 下面的代码示例说明“代码大小优先”\(**\/Os**\) 选项和“代码速度优先”\(**\/Ot**\) 选项之间的差异：  
+ 如果你使用**/Os**或**/Ot**，则还必须指定[/Og](../../build/reference/og-global-optimizations.md)为优化代码。  
   
 > [!NOTE]
->  下面的内容描述使用 **\/Os** 或 **\/Ot** 时的预期行为。  但是，由于在各版本的编译器行为不相同，因此可能导致对以下代码进行不同的优化。  
+>  通过分析测试运行收集的信息会替代本可以生效如果指定的优化**/Ob**， **/Os**，或**/Ot**。 有关详细信息，[按配置文件优化](../../build/reference/profile-guided-optimizations.md)。  
+  
+ **x86 特定**  
+  
+ 下面的代码示例演示代码大小优先之间的差异 (**/Os**) 选项和代码速度优先 (**/Ot**) 选项：  
+  
+> [!NOTE]
+>  下面介绍的预期的行为，使用时**/Os**或**/Ot**。 但是，编译器行为发行版本可能会导致下面的代码的不同优化。  
   
 ```  
 /* differ.c  
@@ -73,14 +74,14 @@ int differ(int x)
 }  
 ```  
   
- 如下面的机器码片段所示，当出于大小考虑 \(**\/Os**\) 编译 DIFFER.c 时，编译器将返回语句中的乘法表达式显式实现为乘法，以产生短小但较慢的代码序列：  
+ 以下计算机代码的片段中所示，当编译 DIFFER.c 大小 (**/Os**)，该编译器实现乘法表达式将返回语句中的显式作为乘法，以产生短但较慢的代码序列：  
   
 ```  
 mov    eax, DWORD PTR _x$[ebp]  
 imul   eax, 71                  ; 00000047H  
 ```  
   
- 或者，当出于速度考虑 \(**\/Ot**\) 编译 DIFFER.c 时，编译器将返回语句中的乘法表达式实现为一系列移位指令和 `LEA` 指令，以产生执行速度快但较长的代码序列：  
+ 或者，DIFFER.c 编译的速度 (**/Ot**)，该编译器实现乘法为一系列的 shift 将返回语句中的表达式和`LEA`指令，以产生快速但较长的代码序列：  
   
 ```  
 mov    eax, DWORD PTR _x$[ebp]  
@@ -90,23 +91,23 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx  
 ```  
   
- **END x86 Specific**  
+ **结束 x86 特定**  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“优化”**属性页。  
+3.  单击**优化**属性页。  
   
-4.  修改**“优选大小或速度”**属性。  
+4.  修改**优选大小或速度**属性。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>。  
   
-## 请参阅  
- [\/O 选项（优化代码）](../../build/reference/o-options-optimize-code.md)   
+## <a name="see-also"></a>请参阅  
+ [/O 选项 （优化代码）](../../build/reference/o-options-optimize-code.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

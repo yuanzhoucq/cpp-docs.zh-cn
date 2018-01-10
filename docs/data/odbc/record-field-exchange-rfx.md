@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494773de5bd64e66c2031a618d7a8d899215c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-rfx"></a>记录字段交换 (RFX)
 MFC ODBC 数据库类自动执行之间的数据源的数据移动和[记录集](../../data/odbc/recordset-odbc.md)对象。 当你从派生类[CRecordset](../../mfc/reference/crecordset-class.md)并且未使用批量行提取，记录字段交换 (RFX) 机制传输数据。  
@@ -53,7 +56,7 @@ MFC ODBC 数据库类自动执行之间的数据源的数据移动和[记录集]
   
 -   [记录字段交换：RFX 的工作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [MFC ODBC 使用](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   

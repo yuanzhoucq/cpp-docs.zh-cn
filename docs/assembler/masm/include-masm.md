@@ -1,40 +1,39 @@
 ---
-title: "INCLUDE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "INCLUDE directive"
+title: "包括 (MASM) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: include
+dev_langs: C++
+helpviewer_keywords: INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c66b8be1e3625a8830cb23c0898bbb0abdaed121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# INCLUDE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-插入源代码从 *文件名* 给定的源文件添加到当前源文件在程序集内。  
+# <a name="include-masm"></a>INCLUDE (MASM)
+从给定的源文件插入源代码*filename*到程序集在当前的源文件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 INCLUDE filename  
 ```  
   
-## 备注  
- ，如果它包含一个反斜杠，分号，大于号，小于符号、单引号或双引号，在尖括号必须将 *文件名* 。  
+## <a name="remarks"></a>备注  
+ *Filename*必须括在尖括号中，如果它包含一个反斜杠，分号，更高的比符号，较少-比符号、 一个单引号或双引号。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

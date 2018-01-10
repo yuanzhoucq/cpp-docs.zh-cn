@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 34a1c480e63b5e514e1184d5d3220176b9ba6932
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22ca7bec885f20518950626d33f7e3af553d0d52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appcontainer-windows-store-app"></a>/APPCONTAINER（Windows 应用商店应用程序）
 指定链接器是否创建必须在应用程序容器中运行的可执行映像。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/24/2017
   
 5.  在**其他选项**，输入`/APPCONTAINER`或`/APPCONTAINER:NO`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

@@ -17,18 +17,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ec9f0814c976a5ea175e0cd62ab8e57b02f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-support-classes"></a>编译器 COM 支持类
 **Microsoft 专用**  
   
  标准类用于支持某些 COM 类型。 这些类是在从类型库生成的 comdef.h 文件和头文件中定义的。  
   
-|类|用途|  
+|类|目标|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|包装 `BSTR` 类型，以提供有用的运算符和方法。|  
 |[_com_error](../cpp/com-error-class.md)|定义引发的错误对象[_com_raise_error](../cpp/com-raise-error.md)在大多数失败中。|  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器 COM 支持](../cpp/compiler-com-support.md)   
  [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)   
  [C++ 语言参考](../cpp/cpp-language-reference.md)

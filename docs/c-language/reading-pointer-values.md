@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5454c3104d9957216b5d4a9d19c449a1b1a7864b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 080c9083cd7646638805457a30a3d98c1b747681
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reading-pointer-values"></a>读取指针值
 **ANSI 4.9.6.2** `fscanf` 函数中的 %p 转换的输入  
   
  指定 %p 格式字符时，`fscanf` 函数指针从十六进制 ASCII 值转换为正确地址。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [库函数](../c-language/library-functions.md)

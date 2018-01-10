@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6909db6a68a9e637ed0cf8513f49ba306007ce6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>使用可替换参数 (注册机构 &#39; s 预处理器）
 可替换参数允许注册机构的客户端指定运行时数据。 若要执行此操作，注册机构维护替换映射到其中进入你的脚本中的可替换参数与关联的值。 注册机构使运行时的这些项。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/24/2017
 >   
 >  当生成输出 DLL 的项目，ATL 将不添加引号引起来的路径名称到如果**%模块 %**或**%module_raw%**使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建注册器脚本](../atl/creating-registrar-scripts.md)
 

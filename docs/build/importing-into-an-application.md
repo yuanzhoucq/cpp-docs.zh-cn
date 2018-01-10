@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c52ed2188f758ca6b46a6d2ccc880077878d4a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3995aa9a0348f53c91fadb7dffc5fa3549851a94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-into-an-application"></a>导入到应用程序中
 你可以将函数导入应用程序使用两种方法：  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [导入使用 DEF 文件](../build/importing-using-def-files.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [导入和导出](../build/importing-and-exporting.md)

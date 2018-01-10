@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a175705bd5d303187a11bf3e7779669a3a30e483
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>如何：诊断和修复程序集兼容性问题 (C++/CLI)
 本主题介绍在编译时引用程序集的版本不匹配在运行时，引用的程序集的版本时可能发生以及如何避免此问题。  
@@ -99,6 +102,6 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [#using 指令](../preprocessor/hash-using-directive-cpp.md)   
  [托管类型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

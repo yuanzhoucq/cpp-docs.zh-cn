@@ -17,18 +17,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ccd06ab229f5bf6643145c03d8396d48c45a303
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1e39d012f126d44477bcb27f43b0a1119583a7ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 查找所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*。  
   
  下面的示例假定你正在从行集中获取的属性。 使用会话或命令的代码非常相似，但使用不同的接口。  
   
- 创建[CDBPropSet](../../data/oledb/cdbpropset-class.md)对象使用作为构造函数的参数的属性组。 例如:   
+ 创建[CDBPropSet](../../data/oledb/cdbpropset-class.md)对象使用作为构造函数的参数的属性组。 例如:  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -72,5 +75,5 @@ if (pPropSet)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

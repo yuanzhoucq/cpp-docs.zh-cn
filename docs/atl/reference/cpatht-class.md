@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,19 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpatht-class"></a>CPathT 类
 此类表示的路径。  
@@ -108,11 +91,11 @@ class CPathT
 |----------|-----------------|  
 |[CPathT::PCXSTR](#pcxstr)|常量字符串类型。|  
 |[CPathT::PXSTR](#pxstr)|字符串类型。|  
-|[CPathT::XCHAR](#xchar)|一种字符类型。|  
+|[CPathT::XCHAR](#xchar)|一个字符类型。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CPathT::CPathT](#cpatht)|构造函数中的路径。|  
   
@@ -162,9 +145,9 @@ class CPathT
   
 |名称|描述|  
 |----------|-----------------|  
-|[CPathT::operator const StringType.](#operator_const_stringtype_amp)|利用此运算符，要被视为一个字符串的对象。|  
+|[CPathT::operator const StringType （& a)](#operator_const_stringtype_amp)|利用此运算符，要被视为一个字符串的对象。|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|利用此运算符，要被视为一个字符串的对象。|  
-|[CPathT::operator StringType.](#operator_stringtype)|利用此运算符，要被视为一个字符串的对象。|  
+|[CPathT::operator StringType （& a)](#operator_stringtype)|利用此运算符，要被视为一个字符串的对象。|  
 |[CPathT::operator + =](#operator_add_eq)|此运算符将一个字符串追加到路径。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
@@ -174,7 +157,7 @@ class CPathT
 |[CPathT::m_strPath](#m_strpath)|路径。|  
   
 ## <a name="remarks"></a>备注  
- `CPath``CPathA`，和`CPathW`是实例化的`CPathT`定义，如下所示︰  
+ `CPath``CPathA`，和`CPathW`是实例化的`CPathT`定义，如下所示：  
   
  `typedef CPathT< CString > CPath;`  
   
@@ -182,8 +165,8 @@ class CPathT
   
  `typedef CPathT< CStringW > CPathW;`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlpath.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlpath.h  
   
 ##  <a name="addbackslash"></a>CPathT::AddBackslash  
  调用此方法以创建正确的语法的路径的字符串的末尾添加反斜杠。 如果路径已包含尾随反斜杠，则将添加没有反斜杠。  
@@ -791,7 +774,7 @@ void UnquoteSpaces();
  有关详细信息，请参阅[PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。  
   
 ##  <a name="xchar"></a>CPathT::XCHAR  
- 一种字符类型。  
+ 一个字符类型。  
   
 ```
 typedef StringType::XCHAR XCHAR;
@@ -800,6 +783,6 @@ typedef StringType::XCHAR XCHAR;
 ### <a name="remarks"></a>备注  
  `StringType`是模板参数到`CPathT`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../atl/reference/atl-classes.md)   
  [CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)

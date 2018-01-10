@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, pointers
 - class members [C++], pointers to
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 指向成员的指针的声明是指针声明的特例。  使用以下序列来声明它们：  
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/25/2017
   
     -   :: 运算符。  
   
-    -   ** \* **运算符。  
+    -    **\*** 运算符。  
   
     -   可选**const**和/或`volatile`说明符。  
   
@@ -60,9 +58,9 @@ ms.lasthandoff: 09/25/2017
   
     -   可选的初始值设定项：  
   
- ** = **运算符。  
+  **=** 运算符。  
   
- ** & **运算符。  
+  **&** 运算符。  
   
  类的限定名。  
   
@@ -116,9 +114,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 之间的差异**。\***和** -> \* **运算符 （指向成员的指针运算符） 是**。\***运算符选择成员给定的对象或对象引用，而** -> \* **运算符通过指针选择成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
+ 之间的差异**。\***和 **-> \*** 运算符 （指向成员的指针运算符） 是**。\***运算符选择成员给定的对象或对象引用，而 **-> \*** 运算符通过指针选择成员。 (有关这些运算符的详细信息，请参阅[使用指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
- 指向成员的指针运算符的结果是成员的类型-在这种情况下， **char \* **。  
+ 指向成员的指针运算符的结果是成员的类型-在这种情况下， **char \*** 。  
   
  以下代码片段使用指向成员的指针调用成员函数 `GetCaption` 和 `SetCaption`：  
   
@@ -190,5 +188,5 @@ bPtr = &dObject;    // Set pointer to address of dObject.
 Print function for class Derived  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

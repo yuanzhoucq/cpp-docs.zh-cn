@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 655c8e2cc900aa369055e5f1b9975e02c1a8ac88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2f0c028eaf58e828366ae9534ff06b53254e3601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions--mfc-data-access"></a>事务（MFC 数据访问）
 已开发出事务的概念以便根据一系列成功操作处理数据库结果状态的情况。 由于连续性操作可能修改先前操作的结果，因此可能会出现这种情况。 在这种情况下，如果任何一个操作失败，结果状态就有可能不确定。  
@@ -44,5 +47,5 @@ ms.lasthandoff: 10/24/2017
   
  分布式事务是指更新分布式数据的事务，即多个连网计算机系统上的数据。 如果你想要支持分布式系统上的事务，则应使用 ADO.NET 而不是 OLE DB 事务支持。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据访问编程 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

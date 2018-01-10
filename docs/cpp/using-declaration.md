@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e289adeb6eaece5d97c08316f92d4e33190e6233
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6bf39dfdb4f59bcf54ce1ddd5174f1e3a55e3a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-declaration"></a>using 声明
 使用声明将名称引入在其中的声明性区域 using 声明出现。  
@@ -224,7 +225,7 @@ void g() {
  在上例中，`using B::i`语句会导致第二个`int i`中声明`g()`函数。 `using B::f`语句不与冲突`f(char)`正常，因为引入了函数名称`B::f`具有不同的参数类型。  
   
 ## <a name="example"></a>示例  
- 本地函数声明不能将相同的名称和类型作为通过使用声明引入的函数。 例如:   
+ 本地函数声明不能将相同的名称和类型作为通过使用声明引入的函数。 例如:  
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -330,6 +331,6 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命名空间](../cpp/namespaces-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)

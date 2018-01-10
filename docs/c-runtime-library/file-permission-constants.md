@@ -23,11 +23,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aa42ebf645c737ffe2f5db9647a3ba3912669b27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 123b5f14c6d13e7ee7ff41de00816234d6e45fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-permission-constants"></a>文件权限常量
 ## <a name="syntax"></a>语法  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  `pmode` 参数按以下方式指定文件的权限设置。  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_S_IREAD`|允许读取|  
 |`_S_IWRITE`|允许写入|  
@@ -51,13 +52,13 @@ ms.lasthandoff: 10/24/2017
   
  当用作 `pmode` 的 `_umask` 参数时，清单常量将设置权限设置，如下所示。  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_S_IREAD`|不允许写入（文件是只读的）|  
 |`_S_IWRITE`|不允许读取（文件是只写的）|  
 |`_S_IREAD` &#124; `_S_IWRITE`|既不允许读取也不允许写入|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_open、_wopen](../c-runtime-library/reference/open-wopen.md)   
  [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
  [_umask](../c-runtime-library/reference/umask.md)   

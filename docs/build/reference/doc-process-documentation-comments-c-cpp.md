@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 083eb8742308f986e3261711039bbd29a914d97e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8737c0e33d33fe062d9a07f18d9005e58463f5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc（处理文档注释）(C/C++)
 在源代码文件中并创建具有文档注释每个源代码文件的.xdc 文件可让编译器处理文档注释。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 /doc[name]  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `name`  
  编译器将创建到.xdc 文件的名称。 仅当在编译中传递一个.cpp 文件时才有效。  
   
@@ -62,8 +63,8 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
-1.  请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>。  
+1.  请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

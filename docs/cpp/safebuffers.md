@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- safebuffers_cpp
-dev_langs:
-- C++
+f1_keywords: safebuffers_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ceb7d5796002bd54055b74d56a136706890494c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 专用**  
@@ -39,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>备注  
- **/GS**编译器选项使编译器通过插入对堆栈中的安全检查来测试缓冲区溢出。 中介绍了符合安全检查的条件的数据结构的类型[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。 缓冲区溢出检测的详细信息，请参阅[编译器安全检查在深度](http://go.microsoft.com/fwlink/?linkid=7260)MSDN 网站上。  
+ **/GS**编译器选项使编译器通过插入对堆栈中的安全检查来测试缓冲区溢出。 中介绍了符合安全检查的条件的数据结构的类型[/GS （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)。 缓冲区溢出检测的详细信息，请参阅[编译器安全检查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN 网站上。  
   
  专家手动代码评审或外部分析可能确定函数不会出现缓冲区溢出。 在这种情况下，你可以取消安全检查的函数显示通过应用`__declspec(safebuffers)`函数声明的关键字。  
   
@@ -83,7 +80,7 @@ int wmain() {
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [__declspec](../cpp/declspec.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [inline、 __inline、 \__forceinline](inline-functions-cpp.md)   

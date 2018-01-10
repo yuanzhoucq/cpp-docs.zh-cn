@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6782d4935f9547649e49dee2a01f5e9ca3ee6259
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cbb5873ca504cac72489c612e9bb3b4177e2e96b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults 类
 用作模板自变量 (*TMultiple*) 到[CCommand](../../data/oledb/ccommand-class.md)创建的优化的命令时，处理单个结果集。  
@@ -36,9 +39,9 @@ class CNoMultipleResults
 ## <a name="remarks"></a>备注  
  如果你想要处理多个结果集的命令，使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)相反。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __declspec_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __declspec keyword [C++]
+f1_keywords: __declspec_cpp
+dev_langs: C++
+helpviewer_keywords: __declspec keyword [C++]
 ms.assetid: 832db681-e8e1-41ca-b78c-cd9d265cdb87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b29b6243611f1ca59a579869469c803d3735f9df
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0351b5ba8469918dfe52462485ebf36255db56fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declspec"></a>__declspec
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -90,13 +86,13 @@ ms.lasthandoff: 09/25/2017
   
  应将 `__declspec` 关键字放在简单声明的开头。 编译器将在不发出警告的情况下忽略位于声明中的 * 或 & 后面以及变量标识符前面的任何 `__declspec` 关键字。  
   
- 在用户定义的类型声明的开头指定的 `__declspec` 特性适用于该类型的变量。 例如：  
+ 在用户定义的类型声明的开头指定的 `__declspec` 特性适用于该类型的变量。 例如:  
   
 ```  
 __declspec(dllimport) class X {} varX;  
 ```  
   
- 在本例中，此特性应用于 `varX`。 位于 `__declspec` 或 `class` 关键字后的 `struct` 特性适用于用户定义的类型。 例如：  
+ 在本例中，此特性应用于 `varX`。 位于 `__declspec` 或 `class` 关键字后的 `struct` 特性适用于用户定义的类型。 例如:  
   
 ```  
 class __declspec(dllimport) X {};  
@@ -112,7 +108,7 @@ decl-specifier-seq
 declarator-list;  
 ```  
   
- *声明说明符 seq*应包含，除了别的之外的基类型 (例如`int`， `float`、 `typedef`，或类名)，存储类 (例如`static`， `extern`)，或`__declspec`扩展。 *Init 声明符列表*应包含，除了别的之外声明的指针部分。 例如:   
+ *声明说明符 seq*应包含，除了别的之外的基类型 (例如`int`， `float`、 `typedef`，或类名)，存储类 (例如`static`， `extern`)，或`__declspec`扩展。 *Init 声明符列表*应包含，除了别的之外声明的指针部分。 例如:  
   
 ```  
 __declspec(selectany) int * pi1 = 0;   //OK, selectany & int both part of decl-specifier  
@@ -129,6 +125,6 @@ __declspec( thread ) int tls_i = 1;
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   
  [C 扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)

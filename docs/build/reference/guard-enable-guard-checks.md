@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc987f7db1e3a1bce0b73f0c21e875b7c9e5eda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48abdc4f923ed01ecba482b82da897d06fd56dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD（启用防护检查）
 在可执行映像中，为控制流防护检查指定支持。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 3.  在**其他选项**，输入`/GUARD:CF`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [/guard （启用控制流保护）](../../build/reference/guard-enable-control-flow-guard.md)   
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

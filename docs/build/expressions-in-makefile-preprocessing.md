@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 32de1d1eb3262e1fca0a00048a61d3129347cb19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>生成文件预处理中的表达式
 **！如果**或**！ELSE IF** `constantexpression`组成 （采用十进制或 C 语言表示法） 的整数常量、 字符串常量或命令。 使用括号来为组表达式。 表达式使用 C 样式符号长整数算术;数字是在 32 位 2 的补数的形式范围在-2147483648 到 2147483647。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
   
  [在预处理中执行程序](../build/executing-a-program-in-preprocessing.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成文件预处理](../build/makefile-preprocessing.md)

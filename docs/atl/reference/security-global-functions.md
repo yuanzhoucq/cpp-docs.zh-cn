@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d60eb8f3fbb782deadc89a3d9c3e3c44974d849c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-global-functions"></a>安全全局函数
 这些函数为修改 SID 和 ACL 对象提供支持。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 |[AtlSetSacl](#atlsetsacl)|调用此函数可设置指定对象的系统访问控制列表 (SACL) 信息。|  
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|调用此函数可检索给定对象的安全说明符。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlgetdacl"></a>AtlGetDacl  
@@ -115,7 +116,7 @@ inline bool AtlSetDacl(
   
 ### <a name="remarks"></a>备注  
  在调试版本中，如果出现断言错误`hObject`是无效的或者如果`dwInheritanceFlowControl`不是三个允许的值之一。  
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
@@ -144,7 +145,7 @@ inline bool AtlGetGroupSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
@@ -173,7 +174,7 @@ inline bool AtlSetGroupSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
@@ -202,7 +203,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
@@ -231,7 +232,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="return-value"></a>返回值  
  如果成功，则返回 true；如果失败，则返回 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlgetsacl"></a>AtlGetSacl  
@@ -267,7 +268,7 @@ inline bool AtlGetSacl(
 ### <a name="remarks"></a>备注  
  如果`AtlGetSacl`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlsetsacl"></a>AtlSetSacl  
@@ -309,7 +310,7 @@ inline bool AtlSetSacl(
   
  如果`AtlSetSacl`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
 
 ##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
@@ -351,8 +352,8 @@ inline bool AtlGetSecurityDescriptor(
 ### <a name="remarks"></a>备注  
  如果`AtlGetSecurityDescriptor`是多次调用多个不同的对象，它将会更有效地一次调用时使用函数，才能启用 SE_SECURITY_NAME 特权`bRequestNeededPrivileges`设置为 false。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h 
    
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 426109958cf9b34829c23ac0bfd59743f1681e72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f5677392a090a9c894cf4f848d9f74a1504d69c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-dual-interfaces"></a>多个双重接口
 你可能想要将双重接口 （即，vtable 和后期绑定，因此使类可用于脚本语言，以及 c + + 的灵活性） 优点结合起来使用多重继承的技术。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 10/24/2017
   
  这些方法都有潜在的命名空间冲突，以及代码复杂性和可维护性问题。 建议不要创建多个双重接口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [双重接口和 ATL](../atl/dual-interfaces-and-atl.md)
 

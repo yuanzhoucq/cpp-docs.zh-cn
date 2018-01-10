@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54eeffebcc20846666c6ebb6a2951f8d55a5b8c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71fe791e776450d21878144447cf95cdedb34875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improper-access-to-a-union"></a>对联合的不正确的访问
 **ANSI 3.3.2.3** 使用不同类型的成员访问联合对象的成员  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
  例如，声明 float 和 `int` 的联合。 存储一个 float 值，但程序稍后会将该值作为 `int` 进行访问。 在这种情况下，值取决于 float 值的内部存储。 整数值是不可靠的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构、联合、枚举和位域](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -41,11 +41,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e356e6bef6c46bfede3f8337969fd1385cebd66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctime-wasctime"></a>asctime、_wasctime
 将 `tm` 时间结构转换为字符串。 提供这些函数的更多安全版本；请参阅 [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
@@ -73,7 +74,7 @@ wchar_t *_wasctime(
   
  `asctime` 函数将存储为结构的时间转换为字符串。 通常情况下，`timeptr` 值通过调用 `gmtime` 或 `localtime` 获取，这两个函数均返回一个指向 TIME_H 中定义的 `tm` 结构的指针。  
   
-|timeptr 成员|值|  
+|timeptr 成员|“值”|  
 |--------------------|-----------|  
 |`tm_hour`|小时，自午夜 (0-23)|  
 |`tm_isdst`|如果夏令时生效，则为正；如果夏令时不生效，则为 0；如果夏令时状态未知，则为负。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。|  
@@ -99,9 +100,9 @@ wchar_t *_wasctime(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`asctime`|\<time.h>|  
 |`_wasctime`|\<time.h> 或 \<wchar.h>|  
@@ -137,7 +138,7 @@ int main( void )
 Current date and time: Sun Feb 03 11:38:58 2002  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

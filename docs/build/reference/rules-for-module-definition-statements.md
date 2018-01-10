@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50d382b8f6dbb8c6468bba3bcb2d5c65607de99d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-module-definition-statements"></a>模块定义语句的规则
 下面的语法规则应用于.def 文件中的所有语句。 与每个语句描述了适用于特定语句其他规则。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
   
 -   如果字符串自变量与匹配[保留字](../../build/reference/reserved-words.md)，它必须括在双引号 （"）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [模块定义 (.Def) 文件](../../build/reference/module-definition-dot-def-files.md)  

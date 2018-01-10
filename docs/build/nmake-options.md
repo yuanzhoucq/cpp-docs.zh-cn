@@ -14,16 +14,17 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee2e1a1f8b671817e7bc5b61db4c03f5f109ed8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef3b987de737d8300f88690754456b73c946180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nmake-options"></a>NMAKE 选项
 下表描述了 NMAKE 选项。 选项都以斜杠 （/） 或短划线 （-） 和不区分大小写。 使用[！CMDSWITCHES](../build/makefile-preprocessing-directives.md)更改生成文件中或在 Tools.ini 选项设置。  
   
-|选项|用途|  
+|选项|目标|  
 |------------|-------------|  
 |/ A|强制生成的所有计算目标，即使对于的依赖项不过期。 不会强制生成不相关的目标。|  
 |/ B|即使时间戳相等，则强制生成。 建议只用于非常快系统 （解决方法的两个秒或更少）。|  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/24/2017
 |/X`filename`|将发送到 NMAKE 错误输出`filename`而不是标准错误。 空格或选项卡可以在前面`filename`。 若要将错误输出发送到标准输出中，为指定短划线 （-） `filename`。 不会影响到标准错误来自命令的输出。|  
 |/Y|禁用批模式推理规则。 选中此选项后，所有批模式推理规则将被都视为常规推理规则。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行 NMAKE](../build/running-nmake.md)

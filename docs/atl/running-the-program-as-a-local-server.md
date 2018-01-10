@@ -1,29 +1,31 @@
 ---
-title: "Running the Program as a Local Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 服务, running as local servers"
-  - "调试 [ATL], running services as local server"
+title: "为本地服务器中运行程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [ATL], running services as local server
+- ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3e398bfed0174e4ec2a262ea03076ed17881f900
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Running the Program as a Local Server
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果运行程序作为服务不是很方便，可以临时更改注册表，以便程序运行当作普通的本地服务器。  对 `LocalService` 值重命名在您的AppID下为 `_LocalService` 并确保在您的CLSID下的 `LocalServer32` 键正确地设置。  （重命名使用DCOMCNFG指定的说明在您的 `LocalServer32` 键的 `_LocalServer32`。\)中不同计算机上应运行应用程序运行您的程序作为本地服务器需要一些在启动的更多秒，因为对 **StartServiceCtrlDispatcher** 的调用 `CAtlServiceModuleT::Start` 需要几秒钟，以便在失败以前。  
+# <a name="running-the-program-as-a-local-server"></a>为本地服务器中运行程序
+如果作为服务运行程序来说很不方便，可以暂时更改注册表，以便为普通的本地服务器运行该程序时。 简单地重命名`LocalService`下到你 AppID 值`_LocalService`并确保`LocalServer32`正确设置你的 CLSID 下的键。 (请注意，使用 DCOMCNFG 指定你的应用程序，应运行的其他计算机上重命名你`LocalServer32`键，以`_LocalServer32`。)运行程序，如本地服务器上启动需要几详细秒钟，因为调用**StartServiceCtrlDispatcher**中`CAtlServiceModuleT::Start`需要几秒钟就失败。  
   
-## 请参阅  
- [Debugging Tips](../atl/debugging-tips.md)
+## <a name="see-also"></a>请参阅  
+ [调试提示](../atl/debugging-tips.md)
+

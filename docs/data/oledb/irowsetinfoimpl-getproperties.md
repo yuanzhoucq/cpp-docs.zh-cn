@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b66571e08b18f9bf42b35293bef0485f6a154bbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c1b45cc94236d02bd7b7e8174de9752192c7e3c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetinfoimplgetproperties"></a>IRowsetInfoImpl::GetProperties
 返回中的属性的当前设置**DBPROPSET_ROWSET**组。  
@@ -44,10 +47,10 @@ ms.lasthandoff: 10/24/2017
 #### <a name="parameters"></a>参数  
  请参阅[IRowsetInfo::GetProperties](https://msdn.microsoft.com/en-us/library/ms719611.aspx)中*OLE DB 程序员参考*。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetInfoImpl 类](../../data/oledb/irowsetinfoimpl-class.md)   
  [Irowsetinfoimpl:: Getreferencedrowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)   
  [IRowsetInfoImpl::GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)

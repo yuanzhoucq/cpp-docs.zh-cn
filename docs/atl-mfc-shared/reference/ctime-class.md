@@ -36,11 +36,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b341ba3397841c21f7c2c71359b8cd5ccd3e8ae
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 82f3d4bf1d0c705d7712adb092a5f6d965099a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctime-class"></a>CTime 类
 表示绝对时间和日期。  
@@ -108,7 +109,7 @@ class CTime
 > [!NOTE]
 >  `CTime`结构从 MFC 7.1 更改为 MFC 8.0。 如果序列化`CTime`结构使用`operator <<`在 MFC 8.0 或更高版本下，生成的文件不会在较旧版本的 MFC 可读。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atltime.h  
   
 ##  <a name="ctime_comparison_operators"></a>CTime 比较运算符  
@@ -570,7 +571,7 @@ CArchive& Serialize64(CArchive& ar);
 ### <a name="return-value"></a>返回值  
  已更新`CArchive`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [_ftime_s、 _ftime32_s、 _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)   
  [gmtime_s、_gmtime32_s、_gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   

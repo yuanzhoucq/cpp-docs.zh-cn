@@ -16,18 +16,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="temporary-objects"></a>临时对象
 在某些情况下，编译器需要创建临时对象。 可能会出于下列原因创建这些临时对象：  
   
 -   使用一个不同于所初始化的引用的基础类型的类型的初始值设定项初始化 `const` 引用。  
   
--   存储返回用户定义类型的函数的返回值。 仅当您的程序未将返回值复制到对象时，才会创建这些临时内存。 例如：  
+-   存储返回用户定义类型的函数的返回值。 仅当您的程序未将返回值复制到对象时，才会创建这些临时内存。 例如:  
   
     ```  
     UDT Func1();    //  Declare a function that returns a user-defined  

@@ -18,16 +18,17 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 426a0c5a40f3be3effdf4ba8316f6a72a8295965
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 显式链接到 DLL 调用的进程[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)获取 DLL 中导出的函数的地址。 使用返回的函数指针调用 DLL 函数。 **GetProcAddress**使用作为参数的 DLL 模块句柄 (通过以下任一方法返回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 将函数名称和你要调用或函数的导出序号。  
   
- 由于要调用的 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并且会导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建匹配的函数指针的 typedef。 例如:   
+ 由于要调用的 DLL 函数通过指针并且没有任何编译时类型检查，请确保函数的参数正确，以便不超出在堆栈上分配的内存，并且会导致访问冲突。 帮助提供类型安全的一种方法是查看导出的函数的函数原型，并创建匹配的函数指针的 typedef。 例如:  
   
 ```  
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  
@@ -75,5 +76,5 @@ if (hDLL != NULL)
   
 -   [使用 DEF 文件从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

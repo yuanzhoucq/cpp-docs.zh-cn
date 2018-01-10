@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8eb77bc6f99ab6b7d8ca9d51f1a7a8549d8f0c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d49ed2a56738ec784c8a1a2cc3c13239f7317270
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>设置注册机构代码 （c + +） 的静态链接
 C + + 客户端可以创建指向注册机构的代码的静态链接。 静态链接的注册机构的分析器将大约 5 K 添加到发布版本。  
@@ -33,6 +34,6 @@ C + + 客户端可以创建指向注册机构的代码的静态链接。 静态�
   
 2.  重新编译。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
 

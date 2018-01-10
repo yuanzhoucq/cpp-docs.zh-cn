@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: af250c88b7c5443529cf4aa9524f3d2e78413e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4dad9abf8b82cc5c6e876af22a1a2f61a6216ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lseek-lseeki64"></a>_lseek、_lseeki64
 将文件指针移到指定位置。  
@@ -94,14 +95,14 @@ __int64 _lseeki64(
   
  可以使用 `_lseek` 将指针重新定位到文件的任意位置或文件结尾之外。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_lseek`|\<io.h>|  
 |`_lseeki64`|\<io.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
@@ -176,7 +177,7 @@ Position for current position seek = 10
 Position for end of file seek = 57  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_tell、_telli64](../../c-runtime-library/reference/tell-telli64.md)

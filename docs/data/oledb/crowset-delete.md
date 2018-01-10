@@ -1,39 +1,41 @@
 ---
-title: "CRowset::Delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::Delete"
-  - "CRowset.Delete"
-  - "CRowset::Delete"
-  - "ATL.CRowset.Delete"
-  - "ATL::CRowset<TAccessor>::Delete"
-  - "CRowset<TAccessor>.Delete"
-  - "CRowset<TAccessor>::Delete"
-  - "ATL.CRowset<TAccessor>.Delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Delete 方法"
+title: "Crowset:: Delete |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::Delete
+- CRowset.Delete
+- CRowset::Delete
+- ATL.CRowset.Delete
+- ATL::CRowset<TAccessor>::Delete
+- CRowset<TAccessor>.Delete
+- CRowset<TAccessor>::Delete
+- ATL.CRowset<TAccessor>.Delete
+dev_langs: C++
+helpviewer_keywords: Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 525e89bd49a7bf67ac20a2f580241e7ff982c71b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Delete
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-调用从行集合中删除当前行的 [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)。  
+# <a name="crowsetdelete"></a>CRowset::Delete
+调用[IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)从行集中删除当前行。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -41,11 +43,11 @@ HRESULT Delete( ) const throw( );
   
 ```  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)

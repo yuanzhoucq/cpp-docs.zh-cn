@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: bf096ef9849856e9995ff634d7aca26cd7f3f8e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 可以用于通过最少复制操作将字符串数据从 `Platform::String^` 输入参数传递到其他方法的优化类型。  
@@ -60,7 +61,7 @@ class StringReference
 |[Stringreference:: Operator =](#operator-assign)|将 `StringReference` 分配给新 `StringReference` 实例。|  
 |[StringReference::operator()](#operator-call)|将 `StringReference` 转换为 `Platform::String^`。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -201,5 +202,5 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
 
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Platform::StringReference 类](../cppcx/platform-stringreference-class.md)

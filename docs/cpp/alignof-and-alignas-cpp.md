@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf1c32b406c0a315373b379dacab78ea41b5dbf6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a506a3c44c3304e786c41a2eb049939d317778e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
 `alignas` 类型说明符是用于指定变量和用户定义类型的自定义对齐方式的一种可移植的 C++ 标准方法。 `alignof` 运算符也是一种获取指定类型或变量的对齐方式的标准可移植的方法。  
@@ -44,5 +45,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对齐方式](../cpp/alignment-cpp-declarations.md)

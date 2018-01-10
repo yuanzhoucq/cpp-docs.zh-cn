@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e7ca545f3dc3928d0f776f4847c6fdb98846557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e542d2673a7e43e5c2da7dd139e6f149a2042b58
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbulkrowsetmoveprev"></a>CBulkRowset::MovePrev
 移动到的上一行。  
@@ -44,8 +47,8 @@ HRESULT MovePrev( ) throw( );
 ## <a name="return-value"></a>返回值  
  一个标准 `HRESULT`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CBulkRowset 类](../../data/oledb/cbulkrowset-class.md)

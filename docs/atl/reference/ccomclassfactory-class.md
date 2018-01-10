@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 832563b99d33fe56542fcc48a7ca144124c81e53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 类
 此类实现[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)接口。  
@@ -62,7 +63,7 @@ class CComClassFactory
   
 - [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)，它构造单个[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
@@ -104,7 +105,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  调用`LockServer`允许客户端，以便可以快速地创建多个对象保留的类工厂。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [类概述](../../atl/atl-class-overview.md)

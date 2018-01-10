@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 740d1d35781fcea7820bfcb32171b744534b20fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d42d99baf154bc5434f2d771aeaabb71c5502b30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 此类定义一个基于 c + + 标准库集合的 COM 枚举器对象。  
@@ -88,7 +89,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
  `CComEnumOnSTL`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ## <a name="example"></a>示例  
@@ -102,7 +103,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
  此代码将创建`typedef`为`CComEnumOnSTL`公开的向量`CComVariant`通过 s **IEnumVariant**接口。 **CVariantCollection**类只是专用化**CreateSTLEnumerator**要使用此类型的枚举器对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
  [ATLCollections 示例： 演示 ICollectionOnSTLImpl、 CComEnumOnSTL 和自定义的复制策略类](../../visual-cpp-samples.md)   
  [类概述](../../atl/atl-class-overview.md)   

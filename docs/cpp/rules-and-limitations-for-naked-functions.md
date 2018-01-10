@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 827585c5c6695b30c090c95d8c135a4a40b301c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9a007cd18714906b3897004549da83053b42ec3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>裸函数的规则和限制
 ## <a name="microsoft-specific"></a>Microsoft 专用  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 -   `naked`与编译时，将忽略关键字[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
   
--   有关[__fastcall](../cpp/fastcall.md)裸函数，只要对某个寄存器自变量的 C/c + + 代码中的引用，prolog 代码应将存储到该变量的堆栈位置寄存器的值。 例如:   
+-   有关[__fastcall](../cpp/fastcall.md)裸函数，只要对某个寄存器自变量的 C/c + + 代码中的引用，prolog 代码应将存储到该变量的堆栈位置寄存器的值。 例如:  
   
 ```  
 // nkdfastcl.cpp  
@@ -79,5 +80,5 @@ __declspec(naked) int __fastcall  power(int i, int j) {
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Naked 函数调用](../cpp/naked-function-calls.md)

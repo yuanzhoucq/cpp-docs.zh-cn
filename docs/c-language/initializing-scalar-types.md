@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a580a62c8ee8588386ceb92e10a8593881f6e28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3863ea5a6edfd0c7bc605231182a8d5dfc17b9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-scalar-types"></a>初始化标量类型
 初始化标量类型时，assignment-expression 的值将赋给变量。 赋值的转换规则适用。 （有关转换规则的信息，请参阅[类型转换](../c-language/type-conversions-c.md)。）  
@@ -115,5 +116,5 @@ int function( void )
   
  全局变量 `GLOBAL` 是在外部级别声明的，因此它具有全局生存期。 局部变量 `LOCAL` 具有 auto 存储类，并且在执行声明它的函数时只具有一个地址。 因此，不允许尝试使用 `LOCAL` 的地址初始化 static 指针变量 `lp`。 static 指针变量 `gp` 可初始化为 `GLOBAL` 的地址，因为该地址始终相同。 同样，`*rp` 可初始化，因为 `rp` 是局部变量，并且可具有非常量初始值设定项。 每次输入块时，`LOCAL` 都具有新地址，该地址之后将赋给 `rp`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [初始化](../c-language/initialization.md)

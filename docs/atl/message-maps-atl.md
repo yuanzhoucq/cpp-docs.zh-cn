@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 650dcd31e07ef1995f09b0521991d79726b22774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e708fea75c594c7bb9504515c80222ad901c335
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-maps-atl"></a>消息映射 (ATL)
 消息映射将与特定的消息、 命令或通知关联的处理程序函数。 使用 ATL 的[消息映射宏](../atl/reference/message-map-macros-atl.md)，你可以指定一个窗口消息映射。 中的窗口过程`CWindowImpl`， `CDialogImpl`，和`CContainedWindowT`窗口将消息定向到其消息映射。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="alternate-message-maps"></a>替换消息映射  
  最后，ATL 支持备用消息映射，使用声明[ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map)宏。 每个替换消息映射标识唯一的编号，传递给`ALT_MSG_MAP`。 使用备用消息映射，你可以处理的消息的一个映射中的多个窗口。 请注意，默认情况下，`CWindowImpl`不使用备用的消息映射。 若要添加此支持，请重写`WindowProc`方法在你`CWindowImpl`-派生的类和调用`ProcessWindowMessage`与消息映射标识符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现窗口](../atl/implementing-a-window.md)
 

@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ca360ce914fea69163a400df2f9bc00750920e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>记录集：记录集如何更新记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -76,6 +79,6 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_dynasets_and_snapshots"></a>动态集和快照  
  [动态集](../../data/odbc/dynaset.md)当滚动到的记录将刷新记录的内容。 [快照](../../data/odbc/snapshot.md)是静态表示形式的记录，因此除非调用不会刷新记录的内容[Requery](../../mfc/reference/crecordset-class.md#requery)。 若要使用的动态记录集的所有功能，您必须使用符合 ODBC API 支持的正确级别的 ODBC 驱动程序。 有关详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)和[动态集](../../data/odbc/dynaset.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集：AddNew、Edit 和 Delete 的工作方式 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

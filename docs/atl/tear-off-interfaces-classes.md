@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7c94da1fad52999a05f5da1789ccf1b639009db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ea122780f3735980616c8ab6492c58dfb31a3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tear-off-interfaces-classes"></a>分离式接口类
 以下类提供对于分离式接口的支持：  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md)实现**IUnknown** "缓存"分离式接口。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)
 

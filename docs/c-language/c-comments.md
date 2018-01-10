@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78c3e97530198b6685e402237bda5cdaf9a0754a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2962669c6d925931d0e8ff0cbf3796dbbd1b430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-comments"></a>C 注释
 “注释”是一个以正斜杠/星号组合（<b>/\*</b>）开头的字符序列，编译器会将正斜杠/星号组合视为单个空白字符，要不然就忽略它。 注释可以包含可表示字符集中的任意字符组合，包括换行符，但“结束注释”分隔符 (<b>\*/</b>) 除外。 注释可以占用多行，但无法嵌套。  
@@ -89,5 +90,5 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 标记](../c-language/c-tokens.md)

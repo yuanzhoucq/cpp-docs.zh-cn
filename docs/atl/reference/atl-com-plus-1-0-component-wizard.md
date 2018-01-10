@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7d596396ec46aa1f30be00743ab6fe95d49a865
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 使用此向导将对象添加到您的项目，支持 COM + 1.0 服务，包括事务。  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  如果你创建项目使用属性，或在此向导页中的 COM + 1.0 组件使用特性，你不能更改此选项，因为 ATL 不包括`coclass`属性。  
   
- **类型**  
+ **Type**  
  设置会在注册表中显示的对象说明  
   
  **Interface**  
@@ -77,6 +78,6 @@ ms.lasthandoff: 10/24/2017
  **ProgID**  
  设置容器可以使用而不是对象的 CLSID 的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL COM + 1.0 组件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
 

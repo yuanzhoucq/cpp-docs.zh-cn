@@ -32,11 +32,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b49d7bf064d65e9a160311d23b304745f4d1b04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd3b17c3cf74e87b709353a8dd2cd00c5355c7fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacl-class"></a>CAcl 类
 此类是包装器`ACL`（访问控制列表） 结构。  
@@ -107,7 +108,7 @@ class CAcl
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
 ##  <a name="caccessmaskarray"></a>CAcl::CAccessMaskArray  
@@ -356,6 +357,6 @@ void SetNull() throw();
 ### <a name="remarks"></a>备注  
  `CAcl`可以设置为空或为 NULL： 两个状态并不相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)

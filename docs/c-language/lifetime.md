@@ -28,11 +28,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac1e1904ea5b1d7280f614ec65af2be71f862104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ce98025001529313260f62e8f45e85add148c77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lifetime"></a>生存期
 “生存期”是其中存在变量或函数的程序执行的时段。 标识符的存储持续时间决定其生存期。  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/24/2017
   
  如果通过使用特殊库例程（如 `malloc`）创建，则可以根据需要分配内存（动态）。 由于动态内存分配使用库例程，因此它不被视为语言的一部分。 请参阅《运行时库参考》中的 [malloc](../c-runtime-library/reference/malloc.md) 函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)

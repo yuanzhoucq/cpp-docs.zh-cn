@@ -1,56 +1,57 @@
 ---
-title: "导入和导出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport) 关键字 [C++]"
-  - "DLL [C++], 导出自"
-  - "DLL [C++], 导入"
-  - "导出 DLL [C++]"
-  - "导入 DLL [C++]"
+title: "导入和导出 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], importing
+- exporting DLLs [C++]
+- importing DLLs [C++]
+- DLLs [C++], exporting from
+- __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0727002e264f3b0cfe39b763c29fd70725b982
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 导入和导出
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以使用两种方法将公共符号导入到应用程序中或从 DLL 导出函数：  
+# <a name="importing-and-exporting"></a>导入和导出
+你可以将公共符号导入到应用程序或使用两种方法从 DLL 导出函数：  
   
--   生成 DLL 时使用模块定义 \(.def\) 文件  
+-   生成 DLL 时使用的模块定义 (.def) 文件  
   
--   在主应用程序的函数定义中使用关键字 **\_\_declspec\(dllimport\)** 或 **\_\_declspec\(dllexport\)**  
+-   使用关键字**__declspec （dllimport)**或**__declspec （dllexport)**函数定义在主应用程序中  
   
-## 使用 .def 文件  
- 模块定义 \(.def\) 文件是包含一个或多个描述 DLL 各种特性的 Module 语句的文本文件。  如果不使用 **\_\_declspec\(dllimport\)** 或 **\_\_declspec\(dllexport\)** 导出 DLL 函数，则 DLL 需要 .def 文件。  
+## <a name="using-a-def-file"></a>使用.def 文件  
+ 模块定义 (.def) 文件是包含描述的 DLL 的各种属性的一个或多个模块语句的文本文件。 如果不使用**__declspec （dllimport)**或**__declspec （dllexport)**若要导出的 DLL 函数，DLL 要求的.def 文件。  
   
- 可以使用 .def 文件[导入到应用程序中](../build/importing-using-def-files.md)或[从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)。  
+ 你可以使用.def 文件复制到[导入应用程序](../build/importing-using-def-files.md)或[从 DLL 导出](../build/exporting-from-a-dll-using-def-files.md)。  
   
-## 使用 \_\_declspec  
- Visual C\+\+ 用 **\_\_declspec\(dllimport\)** 和 **\_\_declspec\(dllexport\)** 取代以前在 16 位版的 Visual C\+\+ 中使用的 **\_\_export** 关键字。  
+## <a name="using-declspec"></a>使用 __declspec  
+ Visual c + + 使用**__declspec （dllimport)**和**__declspec （dllexport)**替换**__export**以前在 16 位版本的 Visual c + + 中使用的关键字。  
   
- 不使用 **\_\_declspec\(dllimport\)** 也能正确编译代码，但使用它可以使编译器生成更好的代码。  编译器之所以能够生成更好的代码，是因为它可以确定函数是否存在于 DLL 中，这使得编译器可以生成跳过间接寻址级别的代码，而这些代码通常会出现在跨 DLL 边界的函数调用中。  但是，必须使用 **\_\_declspec\(dllimport\)** 才能导入 DLL 中使用的变量。  
+ 不需要使用**__declspec （dllimport)**为你的代码编译正确，但这样做允许编译器生成更好的代码。 编译器将能够生成更好的代码，因为它可以确定函数中是否存在 DLL 或不是，这使编译器能够生成跳过一定程度的间接性通常会出现跨 DLL 边界的函数调用中的代码。 但是，你必须使用**__declspec （dllimport)**导入在 DLL 中使用变量。  
   
- 如果有正确的 .def 文件 EXPORTS 节，则不需要 **\_\_declspec\(dllexport\)**。  添加 **\_\_declspec\(dllexport\)** 是为了提供不使用 .def 文件从 .exe 或 .dll 文件导出函数的简单方法。  
+ 使用正确的.def 文件的导出部分中， **__declspec （dllexport)**不是必需的。 **__declspec （dllexport)**添加了来提供了简便的方法，以从.exe 或.dll 文件中导出函数，而无需使用.def 文件。  
   
- Win32 可移植可执行文件格式旨在最小化为修改导入而必须访问的页数。  为此，它将所有程序的所有导入地址都放在一个称为“导入地址表”的位置。  这使得加载程序在访问这些导入时可以只修改一两页。  
+ Win32 可移植可执行文件格式旨在最大程度减少必须接触修改导入的页面数。 若要执行此操作，它将调用导入地址表的一个位置中的任何程序的所有导入地址。 这样，加载程序以访问这些导入时修改只能将一个或两个页面。  
   
-## 你希望做什么？  
+## <a name="what-do-you-want-to-do"></a>你希望做什么？  
   
--   [导入到应用程序中](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [导入应用程序](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
 -   [从 DLL 导出](../build/exporting-from-a-dll.md)  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

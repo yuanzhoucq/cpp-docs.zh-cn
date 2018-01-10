@@ -1,76 +1,77 @@
 ---
-title: "/GL（全程序优化） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gl"
-  - "VC.Project.VCCLWCECompilerTool.WholeProgramOptimization"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GL 编译器选项 [C++]"
-  - "GL 编译器选项 [C++]"
-  - "-GL 编译器选项 [C++]"
-  - "全程序优化和 C++ 编译器"
+title: "-GL （全程序优化） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gl
+- VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
+dev_langs: C++
+helpviewer_keywords:
+- /GL compiler option [C++]
+- whole program optimizations and C++ compiler
+- -GL compiler option [C++]
+- GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd3a83b59a1b1a0e95dd46ebca57c814c7d680c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /GL（全程序优化）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="gl-whole-program-optimization"></a>/GL（全程序优化）
 启用全程序优化。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /GL[-]  
 ```  
   
-## 备注  
- 全程序优化允许编译器用有关程序中所有模块的信息执行优化。  如果不执行全程序优化，则基于每个模块 \(compiland\) 执行优化。  
+## <a name="remarks"></a>备注  
+ 全程序优化使编译器能够在程序中的所有模块上执行优化的信息。 但不进行全程序优化，对执行优化每个模块 （编译单位）。  
   
- 默认情况下，权全程序优化是关闭的，因此必须显式地启用它。  但是，也可以用 **\/GL\-** 显式地禁用它。  
+ 全程序优化默认处于关闭状态，并且必须显式启用。 但是，还有可能显式禁用它与**/gl-隐式**。  
   
- 使用有关所有模块的信息，编译器能够：  
+ 提供有关的所有模块的信息，编译器可以：  
   
--   跨越函数边界优化寄存器的使用。  
+-   优化跨函数边界使用寄存器。  
   
--   更好地跟踪对全局数据的修改，允许减少加载和存储的数目。  
+-   执行操作更好地跟踪对全局数据，允许加载和存储的数减少的修改。  
   
--   更好地跟踪可能由取消指针引用所修改的项组，减少加载和存储的数目。  
+-   更好地表现的跟踪可能项集的修改通过指针取消引用，减少加载和存储的数字。  
   
--   在模块中内联某个函数，即使该函数在另一个模块中定义。  
+-   即使在另一个模块中定义函数模块中函数进行内联。  
   
- 用 **\/GL** 生成的 .obj 文件将不可用于 [EDITBIN](../../build/reference/editbin-reference.md) 和 [DUMPBIN](../../build/reference/dumpbin-reference.md) 等链接器实用工具。  
+ .obj 文件生成**/GL**将不能对作为此类链接器实用程序[EDITBIN](../../build/reference/editbin-reference.md)和[DUMPBIN](../../build/reference/dumpbin-reference.md)。  
   
- 如果用 **\/GL** 和 [\/c](../../build/reference/c-compile-without-linking.md) 编译程序，应使用 \/LTCG 链接器选项创建输出文件。  
+ 如果编译您的程序与**/GL**和[/c](../../build/reference/c-compile-without-linking.md)，应使用 /LTCG 链接器选项来创建输出文件。  
   
- [\/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) 无法与 **\/GL** 一起使用。  
+ [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)不能与使用**/GL**  
   
- 以后的 Visual C\+\+ 版本可能无法读取用当前版本中的 **\/GL** 生成的文件格式。  不应提供由用 **\/GL** 生成的 .obj 文件组成的 .lib 文件，除非您永远愿意为希望用户使用的所有 Visual C\+\+ 版本提供 .lib 文件的副本。  
+ 使用生成的文件格式**/GL**当前版本中可能无法读取后续版本的 Visual c + +。 不应装运组成.obj 文件与生成的.lib 文件**/GL**除非您愿意为提供的所有版本的 Visual c + + 的.lib 文件副本希望你使用，现在和将来的用户。  
   
- 用 **\/GL** 生成的 .obj 文件和预编译的头文件不应该用于生成 .lib 文件，除非将在生成 **\/GL** .obj 文件的同一计算机上链接此 .lib 文件。  链接时需要 .obj 文件的预编译头文件中的信息。  
+ .obj 文件生成**/GL** ，预编译标头文件不应该用于生成的.lib 文件，除非将生成在同一计算机上链接的.lib 文件**/GL** .obj 文件。 在链接时，将需要从.obj 文件的预编译的头文件的信息。  
   
- 有关优化随和全程序优化限制的更多信息，请参见 [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。**\/GL** 还支持按配置优化可用；参见 \/LTCG。按配置优化进行编译时，如果希望函数按配置优化排序，则必须使用 [\/Gy](../../build/reference/gy-enable-function-level-linking.md) 或隐含使用 \/Gy 的编译器选项进行编译。  
+ 有关可用优化和全程序优化的限制的详细信息，请参阅[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。  **/GL**还使配置文件引导式的优化可用; 请参阅 /LTCG。  在编译的优化，并且如果你希望从按配置优化订购的函数按配置文件时，你必须使用进行编译[/Gy](../../build/reference/gy-enable-function-level-linking.md)或意味着 /Gy 编译器选项。  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  有关如何在开发环境中指定 **\/GL** 的信息，请参见 [\/LTCG（链接时代码生成）](../../build/reference/ltcg-link-time-code-generation.md)。  
+1.  请参阅[/LTCG （链接时间代码生成）](../../build/reference/ltcg-link-time-code-generation.md)有关如何指定**/GL**在开发环境中。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
-1.  请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>。  
+1.  请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

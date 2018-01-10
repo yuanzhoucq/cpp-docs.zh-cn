@@ -1,93 +1,93 @@
 ---
-title: "选项，ATL 控件向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.options"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 控件向导，选项"
+title: "选项，ATL 控件向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.codewiz.class.atl.control.options
+dev_langs: C++
+helpviewer_keywords: ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 60cc90ca5d5c374c223f9fe350d1a6a7357329ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 选项，ATL 控件向导
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在此处插入“搜索结果”摘要。  
+# <a name="options-atl-control-wizard"></a>选项，ATL 控件向导
+在此处插入摘要的"搜索结果"。  
   
- 使用此向导页定义正在创建的控件类型及其包含的接口支持级别。  
+ 向导的此页用于定义要创建的控件的类型，并且它包含的接口支持级别。  
   
-## UIElement 列表  
+## <a name="uielement-list"></a>UIElement 列表  
  **控件类型**  
- 要创建的控件类型。  
+ 你想要创建的控件的种类。  
   
--   **标准控件：ActiveX 控件。**  
+-   **标准控制： ActiveX 控件。**  
   
--   **“复合控件”**：可包含（类似于对话框）其他 ActiveX 控件或 Windows 控件的 ActiveX 控件。  复合控件包含以下内容：  
+-   **复合控件**: ActiveX 控件可以包含 （类似于对话框） 其他 ActiveX 控件或 Windows 控件。 复合控件包括：  
   
-    -   实现复合控件的对话框模板。  
+    -   用于实现复合控件的对话框中的模板。  
   
-    -   调用时自动注册复合控件的自定义资源 REGISTRY。  
+    -   自定义资源，注册表，自动注册复合控件时调用。  
   
-    -   实现复合控件的 C\+\+ 类。  
+    -   实现复合控件的 c + + 类。  
   
-    -   由复合控件公开的 COM 接口。  
+    -   COM 接口中，公开由复合控件。  
   
     -   包含复合控件的 HTML 测试页。  
   
-     默认情况下，此控件将 [CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md) 设置为真，以指示这是一个有窗口的控件。  它实现接收器映射。  有关更多信息，请参见 [支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。  
+     默认情况下，此控件将设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为真，以指示这是有窗口控件。 它可实现接收器映射。 有关详细信息，请参阅[支持 DHTML 控件](../../atl/atl-support-for-dhtml-controls.md)。  
   
--   **DHTML 控件**：ATL DHTML 控件使用 HTML 指定用户界面。  DHTML UI 类包含 COM 映射。  默认情况下，此控件将 [CComControlBase::m\_bWindowOnly](../Topic/CComControlBase::m_bWindowOnly.md) 设置为真，以指示这是一个有窗口的控件。  
+-   **DHTML 控件**: ATL DHTML 控件指定的用户界面，使用 HTML。 DHTML UI 类包含 COM 映射。 默认情况下，此控件将设置[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)为真，以指示这是有窗口控件。  
   
-     有关更多信息，请参见 [Identifying the Elements of the DHTML Control Project](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
+     有关详细信息，请参阅[确定 DHTML 控件项目元素](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
   
- **最小控制**  
- 仅支持大多数容器绝对需要的接口。  可为任何控件类型设置**“最小控制”**：可创建最小标准控件、最小复合控件或最小 DHTML 控件。  
+ **最低限度的控制**  
+ 支持绝对所需的大多数容器中的接口。 你可以设置**最低限度的控制**控件类型的任何： 你可以创建最小的标准控件、 最小的复合控件或最小 DHTML 控件。  
   
- **Aggregation**  
- 为正在创建的控件添加聚合支持。  有关更多信息，请参见 [Aggregation](../../atl/aggregation.md)。  
+ **聚合**  
+ 添加聚合支持你创建的控件。 有关详细信息，请参阅[聚合](../../atl/aggregation.md)。  
   
--   **“是”**：创建可聚合的控件。  
+-   **是**： 创建可聚合的控件。  
   
--   **“否”**：创建不能聚合的控件。  
+-   **不**： 创建不能聚合的控件。  
   
--   **“仅限”**：创建只能通过聚合实例化的控件。  
+-   **仅**： 创建仅可以通过聚合实例化的控件。  
   
- **线程模型**  
- 指定控件使用的线程模型。  
+ **线程处理模型**  
+ 指定由控件使用的线程模型。  
   
--   **“单一”**：控件只在主 COM 线程内运行。  
+-   **单个**： 控件将仅在主 COM 线程中运行。  
   
--   **“单元”**：控件可以在任何单线程单元内创建。  默认值。  
+-   **单元**： 可以在任何单线程单元中创建控件。 默认值。  
   
- **接口**  
- 此控件向容器公开的接口类型。  
+ **Interface**  
+ 此控件可公开到容器的接口的类型。  
   
--   **“双重”**：创建通过 `IDispatch` 和直接通过 VTBL 公开属性和方法的接口。  
+-   **双**： 创建属性和方法通过公开的接口`IDispatch`和直接通过 VTBL。  
   
--   **“自定义”**：创建直接通过 VTBL 公开方法的接口。  
+-   **自定义**： 创建公开直接通过 VTBL 方法的接口。  
   
-     如果选择**“自定义”**，则可以指定控件为**“自动化兼容”**。  如果选择**“自动化兼容”**，则向导在 IDL 中添加接口的 [oleautomation](../../windows/oleautomation.md) 特性，并且接口可由 oleaut32.dll 中的通用封送拆收器封送。  有关更多信息，请参见 [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] 中的[封送处理详细信息](http://msdn.microsoft.com/library/windows/desktop/ms692621)。  
+     如果你选择**自定义**，则你可以指定控件是**自动化兼容**。 如果你选择**自动化兼容**，则该向导将添加[oleautomation](../../windows/oleautomation.md)属性在 IDL，接口和在 oleaut32.dll 通用封送处理程序可以封送的接口。 请参阅[封送处理的详细信息](http://msdn.microsoft.com/library/windows/desktop/ms692621)适用于详细信息的 Windows SDK 中。  
   
-     另外，如果选择“自动化兼容”，则控件中所有方法的所有参数必须与 **VARIANT** 兼容。  
+     此外，如果你选择**自动化兼容**，则该控件中的所有方法的所有参数必须都是**VARIANT**兼容。  
   
  **支持**  
  设置控件的其他杂项支持。  
   
--   **“连接点”**：通过使对象的类从 [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) 派生并允许它公开源接口，为对象启用连接点。  
+-   **连接点**： 使对象的类派生来使你的对象的连接点[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)并允许它公开源接口。  
   
--   **“已授权”**：添加对用于[授权](http://msdn.microsoft.com/library/windows/desktop/ms690543)的控件的支持。  只有客户端计算机有正确的许可证时，才能承载授权控件。  
+-   **许可**： 将支持添加到的控件[许可](http://msdn.microsoft.com/library/windows/desktop/ms690543)。 如果客户端计算机具有正确的许可证，则仅可以承载授权的控件。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 控件向导](../../atl/reference/atl-control-wizard.md)
+

@@ -1,62 +1,63 @@
 ---
-title: "向 ATL 项目添加对象和控件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.ATL.controls"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 控件向导"
-  - "ATL 项目, 添加控件"
-  - "ATL 项目, 添加对象"
-  - "控件 [ATL], 添加到项目"
-  - "对象 [C++], 添加到 ATL 项目"
-  - "向导 [C++], ATL 项目"
+title: "将对象和控件添加到 ATL 项目 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.appwiz.ATL.controls
+dev_langs: C++
+helpviewer_keywords:
+- ATL projects, adding objects
+- wizards [C++], ATL projects
+- ATL projects, adding controls
+- controls [ATL], adding to projects
+- objects [C++], adding to ATL projects
+- ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 向 ATL 项目添加对象和控件
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以使用某个 ATL 代码向导将对象或者控件添加到基于 ATL 或 MFC 的项目。  对于添加的每个 COM 对象或者控件，向导生成 .cpp 和 .h 文件，以及用于基于脚本的注册表支持的 .rgs 文件。  Visual Studio 中有下列可用的 ATL 代码向导：  
+# <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
+你可以使用 ATL 代码向导之一来向基于 ATL 或 MFC 项目添加对象或控件。 对于每个 COM 对象或控件添加，则向导将生成.cpp 和.h 文件，以及基于脚本的注册表支持.rgs file。 以下的 ATL 代码向导是 Visual Studio 中可用：  
   
 ||||  
 |-|-|-|  
 |[ATL 简单对象](../../atl/reference/atl-simple-object-wizard.md)|[ATL 对话框](../../atl/reference/atl-dialog-wizard.md)|[ATL 控件](../../atl/reference/atl-control-wizard.md)|  
 |[ATL 属性页](../../atl/reference/atl-property-page-wizard.md)|[ATL Active Server Page 组件](../../atl/reference/atl-active-server-page-component-wizard.md)|[ATL OLE DB 使用者](../../atl/reference/atl-ole-db-consumer-wizard.md)|  
-|[向 MFC 添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM\+ 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB 提供程序](../../atl/reference/atl-ole-db-provider-wizard.md)|  
+|[向 MFC 添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[ATL COM+ 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[ATL OLE DB 访问接口](../../atl/reference/atl-ole-db-provider-wizard.md)|  
   
 > [!NOTE]
->  在向项目中添加 ATL 对象前，应该在对象的相关帮助主题中查看它的详细信息和要求。  
+>  ATL 对象添加到你的项目之前, 应该检查的详细信息和要求及其相关的帮助主题中的对象。  
   
-### 使用 ATL 控件向导添加对象或者控件  
+### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>若要添加对象或使用 ATL 控件向导的控件  
   
-1.  在“解决方案资源管理器”中，右击项目节点并在快捷菜单上单击“添加”。  单击“添加类”。  
+1.  在解决方案资源管理器，右键单击项目节点，然后单击**添加**从快捷菜单。 单击**添加类**。  
   
-     即会出现[“添加类”](../../ide/add-class-dialog-box.md)对话框。  
+     [添加类](../../ide/add-class-dialog-box.md)对话框随即出现。  
   
-2.  利用在“类别”窗格中选定的 ATL 文件夹，从“模板”窗格中选择要插入的对象。  单击**“打开”**。  出现选定对象的代码向导。  
+2.  与 ATL 文件夹选择在类别窗格中，选择要从模板窗格中插入的对象。 单击**打开**。 所选对象的代码向导将显示。  
   
     > [!NOTE]
-    >  如果要向 MFC 项目中添加 ATL 对象，必须先为现有的项目添加 ATL 支持。  可以遵循[向 MFC 项目添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)中的说明来完成此操作。  
+    >  如果你想要向 MFC 项目添加 ATL 对象，你必须向现有项目添加 ATL 支持。 你可以执行此操作中的说明[向 MFC 项目添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
   
-     或者，如果尝试在不事先添加 ATL 支持的情况下向 MFC 项目添加 ATL 对象，Visual Studio 将提示您指定是否希望为项目添加 ATL 支持。  单击**“是”**为项目添加 ATL 支持并打开选定的 ATL 向导。  
+     或者，如果你尝试向 MFC 项目添加 ATL 对象，而无需以前添加 ATL 支持，Visual Studio 会提示你指定是否希望 ATL 支持添加到你的项目。 单击**是**向项目添加 ATL 支持并打开所选的 ATL 向导。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
- [Visual C\+\+ 项目类型](../../ide/visual-cpp-project-types.md)   
+ [Visual c + + 项目类型](../../ide/visual-cpp-project-types.md)   
  [使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Fundamentals of ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md)   
- [使用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
+ [使用 ATL 和 C 运行时代码编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
+

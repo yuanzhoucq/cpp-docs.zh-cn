@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4e78703a979bb89078d9bb53e0c8093501446d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20d9147b2c1a95d4fc9600935111a9c0c013be21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 生成**UWOP_ALLOC_SMALL**或**UWOP_ALLOC_LARGE**与序言中的当前偏移量的指定大小。  
@@ -70,5 +71,5 @@ text ENDS
 END  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

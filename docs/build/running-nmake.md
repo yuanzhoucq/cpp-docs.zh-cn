@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1d3ff8c58b411d796ceb72876d5728a358e885f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6c39612cf4df47665f7ea3d529b77ee4e70ce8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-nmake"></a>运行 NMAKE
 ## <a name="syntax"></a>语法  
@@ -46,5 +47,5 @@ NMAKE [option...] [macros...] [targets...] [@commandfile...]
   
  [从 NMAKE 退出代码](../build/exit-codes-from-nmake.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [NMAKE 参考](../build/nmake-reference.md)

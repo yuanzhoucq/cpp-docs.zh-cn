@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 此类提供用于创建模式或无模式对话框中的方法。  
@@ -97,14 +98,14 @@ template <class T,
   
  其中`MyDlg`是**短名称**在向导中输入**名称**页。  
   
-|有关以下内容的详细信息|请参阅|  
+|有关以下内容的详细信息|查看|  
 |--------------------------------|---------|  
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的对话框|[ATL 窗口类](../../atl/atl-window-classes.md)|  
 |ATL 项目向导|[创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)|  
 |对话框|[对话框](http://msdn.microsoft.com/library/windows/desktop/ms632588)和 Windows SDK 中的后续主题|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="create"></a>CDialogImpl::Create  
@@ -306,6 +307,6 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="remarks"></a>备注  
  首次调用后`StartDialogProc`，`DialogProc`是设置对话框过程中，并进一步调用转到此处。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [类概述](../../atl/atl-class-overview.md)

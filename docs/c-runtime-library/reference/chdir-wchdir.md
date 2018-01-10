@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _wchdir
 - _tchdir
 - wchdir
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tchdir function
 - _chdir function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 14d6eb678a20d3f3fb0a6250e13005d904aed4b1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6025a7a4f17d1dd461981db255340d3fe9d6c3d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chdir-wchdir"></a>_chdir、_wchdir
 更改当前工作目录。  
@@ -104,14 +88,14 @@ _chdir("c:\\temp");
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_chdir`|\<direct.h>|\<errno.h>|  
 |`_wchdir`|\<direct.h> 或 \<wchar.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -172,7 +156,7 @@ Volume in drive C has no label.
                0 Dir(s)  67,326,029,824 bytes free  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录控制](../../c-runtime-library/directory-control.md)   
  [_mkdir、_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
  [_rmdir、_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   

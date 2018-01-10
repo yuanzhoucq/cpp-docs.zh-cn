@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
-helpviewer_keywords:
-- '&& rvalue reference declarator'
+f1_keywords: '&&'
+dev_langs: C++
+helpviewer_keywords: '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f34c20b380fe1bef5e57de37b4e239e8ba4eadf9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符：&amp;&amp;
 保留对右值表达式的引用。  
@@ -64,7 +60,7 @@ int main()
   
  在 Visual c + + 2010 中之前, 每个调用到`operator+`分配并返回一个新的临时`string`对象 （右值）。 `operator+` 不能将一个字符串追加到另一个字符串，因为它不知道源字符串是左值还是右值。 如果两个源字符串都是左值，则它们可能会在程序中的其他位置引用，因此不能修改。 利用右值引用，可以将 `operator+` 修改为采用右值，而右值不能在程序中的其他位置引用。 因此，`operator+` 现在可将一个字符串追加到另一个字符串。 这可以显著减少 `string` 类必须执行的动态内存分配的数量。 有关详细信息`string`类，请参阅[basic_string 类](../standard-library/basic-string-class.md)。  
   
- 当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual c + + 2005年中名为返回值优化](http://go.microsoft.com/fwlink/?LinkId=131571)。  
+ 当编译器无法使用返回值优化 (RVO) 或命名返回值优化 (NRVO) 时，移动语义也很有用。 在这些情况下，如果类型定义了移动构造函数，则编译器将调用该函数。 有关命名返回值优化的详细信息，请参阅[Visual c + + 2005年中名为返回值优化](http://go.microsoft.com/fwlink/p/?linkid=131571)。  
   
  若要更好地了解移动语义，请考虑将元素插入 `vector` 对象的示例。 如果超出 `vector` 对象的容量，则 `vector` 对象必须为其元素重新分配内存，然后将所有元素复制到其他内存位置，以便为插入的元素腾出空间。 当插入操作复制某个元素时，它将创建一个新元素，调用复制构造函数以将数据从上一个元素复制到新元素，然后销毁上一个元素。 利用移动语义，您可以直接移动对象而不必执行成本高昂的内存分配和复制操作。  
   
@@ -398,7 +394,7 @@ print_type_and_value<string&>(string& t)
   
  此版本的 `print_type_and_value` 函数随后将其参数转发到正确的专用版本的 `S::print` 方法。  
   
- 下表汇总了模板参数类型推导的引用折叠规则：  
+ 下表汇总了模板自变量类型推导的引用折叠规则：  
   
 |||  
 |-|-|  
@@ -413,10 +409,9 @@ print_type_and_value<string&>(string& t)
 ## <a name="summary"></a>摘要  
  右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使您能够编写一个版本的函数，该函数可接受任意参数并将其转发给另一个函数，就像已直接调用其他函数一样。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)   
  [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [移动构造函数和移动赋值运算符 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)   
-

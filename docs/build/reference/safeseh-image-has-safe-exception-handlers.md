@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 430991838245e258a8f1b4bffe16a2f559019901
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH（图像具有安全异常处理程序）
 ```  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  不能将标记的现有二进制为具有安全异常处理程序 （或没有异常处理程序）;必须在生成时添加安全异常处理的信息。  
   
- 链接器的功能将生成安全异常处理程序表依赖于使用 C 运行库的应用程序。 如果与链接[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)并且想要安全异常处理程序表，则需要提供负载配置结构 （如，可以在 loadcfg.c CRT 源文件中找到），它包含为 Visual c + + 定义的所有项。 例如:   
+ 链接器的功能将生成安全异常处理程序表依赖于使用 C 运行库的应用程序。 如果与链接[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)并且想要安全异常处理程序表，则需要提供负载配置结构 （如，可以在 loadcfg.c CRT 源文件中找到），它包含为 Visual c + + 定义的所有项。 例如:  
   
 ```  
 #include <windows.h>  
@@ -116,8 +117,8 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
   
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

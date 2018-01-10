@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3eb7009e8092184effad5e1874297c8c04b213e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d4ee7899cda213bf8d8cfd529fd7609976e20d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start 函数
 当运行时服务时， **_tWinMain**调用**CAtlServiceModuleT::WinMain**，从而又会调用`CAtlServiceModuleT::Start`。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  失败的**StartServiceCtrlDispatcher**连接到服务控制管理器 (SCM) 可能意味着不作为服务运行程序。 在这种情况下，在程序调用`CAtlServiceModuleT::Run`直接以便为本地服务器可以运行该程序。 有关为本地服务器中运行程序的详细信息，请参阅[进行调试的提示](../atl/debugging-tips.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [服务](../atl/atl-services.md)   
  [CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
 

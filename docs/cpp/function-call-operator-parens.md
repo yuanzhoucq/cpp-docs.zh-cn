@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b28aa56905271da3e60cdfc08da855b6b4a23cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa2a61dff4f20c5da7157a8a60700d9a8a10c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-call-operator-"></a>函数调用运算符：()
 Postfix-expression 后跟函数调用运算符**（)**，指定函数调用。  
@@ -182,7 +183,7 @@ int main() {
   
  可以递归方式调用函数。 关于函数声明的详细信息，请参阅[函数](functions-cpp.md)。 提供了相关的材料处于[程序和链接](../cpp/program-and-linkage-cpp.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
  [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [函数调用](../c-language/function-call-c.md)   

@@ -1,31 +1,33 @@
 ---
-title: "如何：使用 for each 循环访问数组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 与每个交互"
+title: "如何： for each 循环访问的阵列 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 437e9134e489d9ca91f95979ad5165798d90cdef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 for each 循环访问数组
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题演示如何对数组使用的不同类型的 [for each，in](../dotnet/for-each-in.md) 关键字。  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>如何：使用 for each 循环访问数组
+本主题演示如何使用[对于每一个，在](../dotnet/for-each-in.md)上不同类型的数组的关键字。  
   
-## 示例  
- 此示例演示如何对的数组 `for each` 引用类型。注意，如果一个维数组的所有维数多为零，`for each` 循环不循环访问数组。  
+## <a name="example"></a>示例  
+ 此示例演示如何使用`for each`上的引用类型的数组。  请注意，如果多维数组的任何维度为零，则`for each`循环将不会循环访问数组。  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +68,18 @@ int main() {
 }  
 ```  
   
-  **0 \= 在 MyClass**  
-**1 \= 在 MyClass**  
-**0 \= 在 MyClass2**  
-**1 \= 在 MyClass2**  
-**2 \= 在 MyClass2**  
-**3 \= 在 MyClass2**   
-## 示例  
- 此示例将循环访问 <xref:System.Collections.ArrayList>中的每种显示，请实现 <xref:System.Collections.IEnumerable>。  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>示例  
+ 此示例演示用于每个遍历<xref:System.Collections.ArrayList>，该类实现<xref:System.Collections.IEnumerable>。  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,9 +101,12 @@ int main() {
 }  
 ```  
   
-  **60**   
-## 示例  
- 此示例演示如何循环访问数组。  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>示例  
+ 此示例演示如何循环访问数组的数组。  
   
 ```  
 // for_each_arrays_3.cpp  
@@ -129,13 +138,17 @@ int main() {
 }  
 ```  
   
-  **IntArray\[0\] \= 10**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**IntArray\[1\] \= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## 请参阅  
- [for each，in](../dotnet/for-each-in.md)
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [for each, in](../dotnet/for-each-in.md)

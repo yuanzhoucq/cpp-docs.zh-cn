@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,19 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectNoLock::AddRef
 - ATLCOM/ATL::CComObjectNoLock::QueryInterface
 - ATLCOM/ATL::CComObjectNoLock::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectNoLock class
+dev_langs: C++
+helpviewer_keywords: CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4a85a238d17fe279359a73d3c740406c15b92c34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 5f37deebe0524ef0198e87a989b79d7a7ef49ede
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 类
 此类实现**IUnknown**的非聚合的对象，但不会不构造函数中的模块锁计数的递增。  
@@ -72,7 +69,7 @@ class CComObjectNoLock : public Base
   
  `CComObjectNoLock`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="addref"></a>CComObjectNoLock::AddRef  
@@ -134,6 +131,5 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>返回值  
  在调试版本中，**版本**返回一个值，可能是用于诊断或测试。 在非调试版本中，**版本**始终返回 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

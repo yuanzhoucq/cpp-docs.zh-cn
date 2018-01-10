@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>标准转换
 C++ 语言定义其基础类型之间的转换。 它还定义指针、引用和指向成员的指针派生类型的转换。 这些转换称为“标准转换”。 (有关类型、 标准类型和派生的类型的详细信息，请参阅[类型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -110,7 +111,7 @@ int main()
   
 ```  
   
- 在前面的示例中，`signed short` `i` 被定义和初始化为负数。 表达式`(u = i)`导致`i`可转换为**无符号短**到赋值前`u`。  
+ 在前面的示例中，`signed short``i` 被定义和初始化为负数。 表达式`(u = i)`导致`i`可转换为**无符号短**到赋值前`u`。  
   
  **无符号转换为签名**  
   
@@ -204,13 +205,13 @@ int main() {
   
 |函数的类型|派生|从<br /><br /> B * 到 A\*合法？|  
 |----------------------|----------------|-------------------------------------------|  
-|外部（非类范围）函数|Private|No|  
-||Protected|No|  
+|外部（非类范围）函数|Private|否|  
+||Protected|否|  
 ||Public|是|  
 |B 成员函数（在 B 范围内）|Private|是|  
 ||Protected|是|  
 ||Public|是|  
-|C 成员函数（在 C 范围内）|Private|No|  
+|C 成员函数（在 C 范围内）|Private|否|  
 ||Protected|是|  
 ||Public|是|  
   
@@ -326,5 +327,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 语言参考](../cpp/cpp-language-reference.md)

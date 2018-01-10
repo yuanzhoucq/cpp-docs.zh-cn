@@ -1,37 +1,40 @@
 ---
-title: "获取数据 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [C++], 获取"
-  - "获取"
-  - "OLE DB 使用者模板 [C++], 获取数据"
-  - "行集合 [C++], 获取"
+title: "提取数据 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 获取数据
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-打开数据源、会话和行集合对象后，就可以获取数据了。  根据所使用的访问器类型，可能需要绑定列。  
+# <a name="fetching-data"></a>提取数据
+打开数据源、 会话和行集对象后，你可以提取数据。 根据你使用的访问器的类型，你可能需要将列绑定。  
   
-### 获取数据  
+### <a name="to-fetch-data"></a>提取数据  
   
-1.  使用适当的 **Open** 命令打开行集合。  
+1.  打开使用相应的行集**打开**命令。  
   
-2.  如果使用的是 `CManualAccessor`，则绑定输出列（如果尚未绑定）。  若要绑定这些列，请调用 `GetColumnInfo`，然后用这些绑定创建访问器，如下面的示例所示：  
+2.  如果你使用`CManualAccessor`，绑定的输出列，如果尚未这样做。 若要将绑定列，请调用`GetColumnInfo`，然后创建使用绑定，访问器，如下面的示例中所示：  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +51,7 @@ caps.handback.revision: 8
     rs.Bind();  
     ```  
   
-3.  编写 `while` 循环以检索数据。  在此循环中，调用 `MoveNext` 以推进游标并根据 S\_OK 测试返回值，如下例所示：  
+3.  编写`while`循环来检索数据。 在循环中，调用`MoveNext`向前移动光标和测试，则为 S_OK，对返回的值，如下面的示例中所示：  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +61,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-4.  在 `while` 循环内部，可以根据访问器类型获取数据。  
+4.  在`while`循环中，你可以根据你的访问器类型提取数据。  
   
-    -   如果使用 [CAccessor](../../data/oledb/caccessor-class.md) 类，则应具有一个包含数据成员的用户记录。  可以使用这些数据成员访问数据，如下例所示：  
+    -   如果你使用[CAccessor](../../data/oledb/caccessor-class.md)类，你应该具有包含数据成员的用户记录。 你可以访问使用这些数据成员，您的数据，如以下示例所示：  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +75,7 @@ caps.handback.revision: 8
         }  
         ```  
   
-    -   如果使用 `CDynamicAccessor` 或 `CDynamicParameterAccessor` 类，可以通过使用访问函数 `GetValue` 和 `GetColumn` 获取数据，如下例所示。  如果想确定所使用的数据类型，请使用 `GetType`。  
+    -   如果你使用`CDynamicAccessor`或`CDynamicParameterAccessor`类，你可以通过使用访问函数提取数据`GetValue`和`GetColumn`，下面的示例中所示。 如果你想要确定数据的类型使用，请使用`GetType`。  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +90,7 @@ caps.handback.revision: 8
         }  
         ```  
   
-    -   如果使用 `CManualAccessor`，则必须指定您自己的数据成员，亲自绑定这些数据成员并直接访问它们，如下例所示：  
+    -   如果你使用`CManualAccessor`，你必须指定你自己的数据成员，将它们绑定你自己，并直接访问它们，如下面的示例中所示：  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +102,5 @@ caps.handback.revision: 8
         }  
         ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

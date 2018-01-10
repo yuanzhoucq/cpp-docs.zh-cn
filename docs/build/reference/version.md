@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7695fa2691a50af3df4f5536d0214a5258828502
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94bd726afcd4477432765b9b44bd18fcbb7bcd80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version"></a>/VERSION
 ```  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  版本的整数部分数字，小数点左侧的部分由`left`。 版本的小数部分在小数点右侧的部分由`right`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

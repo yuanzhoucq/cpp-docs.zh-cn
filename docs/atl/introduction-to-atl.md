@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5acbd7fbeccf89b13be9a1ed6c6084ce4b4b73a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1c84074eae22e4263646abc1623ff96a374c04d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-atl"></a>ATL 简介
 ATL 是活动模板库、 一组基于模板的 c + + 类使用它可以轻松地创建小型、 快速的组件对象模型 (COM) 对象。 它提供了特殊支持密钥 COM 功能包括： 常用的实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)， [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)， [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)，和`IDispatch`; 双重接口;标准的 COM 枚举器接口;连接点;分离式接口;和 ActiveX 控件。  
@@ -35,6 +36,6 @@ ATL 是活动模板库、 一组基于模板的 c + + 类使用它可以轻松�
   
 -   [关于选择 ATL 和 MFC 建议](../atl/recommendations-for-choosing-between-atl-and-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 和 ATL 介绍](../atl/introduction-to-com-and-atl.md)
 

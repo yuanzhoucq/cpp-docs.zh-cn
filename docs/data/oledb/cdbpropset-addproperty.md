@@ -1,122 +1,124 @@
 ---
-title: "CDBPropSet::AddProperty | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet::AddProperty"
-  - "CDBPropSet.AddProperty"
-  - "AddProperty"
-  - "ATL::CDBPropSet::AddProperty"
-  - "ATL.CDBPropSet.AddProperty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddProperty 方法"
+title: "Cdbpropset:: Addproperty |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet::AddProperty
+- CDBPropSet.AddProperty
+- AddProperty
+- ATL::CDBPropSet::AddProperty
+- ATL.CDBPropSet.AddProperty
+dev_langs: C++
+helpviewer_keywords: AddProperty method
 ms.assetid: dc9539d3-1ee4-40f3-9281-2068e6d65e93
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fa9c2d979bc98ebac543f0b17c7afdce2ab5f59b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDBPropSet::AddProperty
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdbpropsetaddproperty"></a>CDBPropSet::AddProperty
 将属性添加到属性集。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      bool AddProperty(   
-   DWORD dwPropertyID,   
-   const VARIANT& var,   
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+      bool AddProperty(   
+   DWORD dwPropertyID,   
+   const VARIANT& var,   
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 ) throw( );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    LPCSTR szValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 ) throw( );  
 bool AddProperty(  
    DWORD dwPropertyID,  
-   LPCWSTR szValue,   
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   LPCWSTR szValue,   
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 ) throw( );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    bool bValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 ) throw( );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    BYTE bValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    short nValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    long nValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    float fltValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    double dblValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 ) throw( );  
 bool AddProperty(  
    DWORD dwPropertyID,  
    CY cyValue,  
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *dwPropertyID*  
- \[in\] 要添加的属性指定的 ID。  用于初始化 `DBPROP` 结构的 **dwPropertyID** 添加到属性集。  
+ [in]要添加的属性 ID。 用于初始化**dwPropertyID**的`DBPROP`添加到属性集的结构。  
   
  `var`  
- \[in\] 用于的变量初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]用于初始化的属性值的一个变体`DBPROP`添加到属性集的结构。  
   
  `szValue`  
- \[in\] 用于字符串初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]用于初始化的属性值的字符串`DBPROP`添加到属性集的结构。  
   
  `bValue`  
- \[in\] 用于的 **BYTE** 或布尔值初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]A**字节**或布尔值用于初始化的属性值`DBPROP`添加到属性集的结构。  
   
  `nValue`  
- \[in\] 用于的整数值初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]用于初始化的属性值的整数值`DBPROP`添加到属性集的结构。  
   
  *fltValue*  
- \[in\] 使用的浮点值初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]用于初始化的属性值的浮点值`DBPROP`添加到属性集的结构。  
   
  `dblValue`  
- \[in\] 用于的双精度浮点值初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]用于初始化的属性值的双精度浮点值`DBPROP`添加到属性集的结构。  
   
  `cyValue`  
- \[in\] 用于的 CY 货币值初始化 `DBPROP` 结构的属性值添加到属性集。  
+ [in]用于初始化的属性值的 CY 货币值`DBPROP`添加到属性集的结构。  
   
-## 返回值  
- **true** 属性，则说明已成功添加元素。  否则为 **false**。  
+## <a name="return-value"></a>返回值  
+ **true**如果已成功添加属性。 否则为**false**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDBPropSet 类](../../data/oledb/cdbpropset-class.md)   
- [DBPROP Structure](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+ [需要的 DBPROP 结构](https://msdn.microsoft.com/en-us/library/ms717970.aspx)

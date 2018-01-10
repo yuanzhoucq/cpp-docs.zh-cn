@@ -46,11 +46,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 747639550e05a0e00daadcbd72d25b31c72a7dd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 根据区域设置特定信息转换字符串。  
@@ -99,7 +100,7 @@ size_t wcsxfrm_l(
  返回转换的字符串的长度（不算结尾的 null 字符）。 如果返回值大于或等于 `count`，则 `strDest` 的内容不可预知。 发生错误时，每个函数将设置 `errno` 并返回 `INT_MAX`。 对于无效字符，`errno` 将设置为 `EILSEQ`。  
   
 ## <a name="remarks"></a>备注  
- `strxfrm` 函数将由 `strSource` 指向的字符串转换为存储在 `strDest` 中新的排序格式。 进行转换并放入到结果字符串中的字符不超过 `count` 指定的字符数（含 null 字符）。 将使用区域设置的 `LC_COLLATE` 类别设置进行转换。 有关 `LC_COLLATE` 的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `strxfrm` 对其与区域设置相关的行为使用当前区域设置；`_strxfrm_l` 与此类似，只不过它使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `strxfrm` 函数将由 `strSource` 指向的字符串转换为存储在 `strDest` 中新的排序格式。 进行转换并放入到结果字符串中的字符不超过 `count` 指定的字符数（含 null 字符）。 将使用区域设置的 `LC_COLLATE` 类别设置进行转换。 有关 `LC_COLLATE` 的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `strxfrm` 对其与区域设置相关的行为使用当前区域设置；`_strxfrm_l` 与此类似，只不过它使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  转换完成之后，使用两个已转换的字符串调用 `strcmp` 产生的结果与对两个原始字符串调用 `strcoll` 产生的结果相同。 与 `strcoll` 和 `stricoll` 一样，`strxfrm` 会根据需要自动处理多字节字符串。  
   
@@ -133,9 +134,9 @@ strncpy( _string1, _string2, _count );
 return( strlen( _string1 ) );  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strxfrm`|\<string.h>|  
 |`wcsxfrm`|\<string.h> 或 \<wchar.h>|  
@@ -144,7 +145,7 @@ return( strlen( _string1 ) );
   
  有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   

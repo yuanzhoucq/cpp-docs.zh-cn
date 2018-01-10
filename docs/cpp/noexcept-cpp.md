@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a45a15fcc2e29a31bc43ab493aa15b58985bf336
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5068c7cf010c128fd7954ddfd356f49158bf6f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 **C + + 11:**指定函数是否可能引发异常。  
@@ -51,5 +52,5 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 异常处理](../cpp/cpp-exception-handling.md)[异常规范 （throw，noexcept）](../cpp/exception-specifications-throw-cpp.md)

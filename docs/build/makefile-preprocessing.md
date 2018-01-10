@@ -1,34 +1,35 @@
 ---
-title: "生成文件预处理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "生成文件, 预处理"
-  - "预处理生成文件"
+title: "生成文件预处理 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessing makefiles
+- makefiles, preprocessing
 ms.assetid: a9185139-97c9-4adb-b4a9-1ec395cce9f8
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f08b1568bd205b02ff2069e096725a7a52730f4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 生成文件预处理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以通过使用预处理指令和表达式控制 NMAKE 会话。  预处理指令可以放置在生成文件或 Tools.ini 文件中。  使用指令可以有条件地处理生成文件，显示错误消息，包括其他生成文件，取消定义宏以及打开或关闭某些选项。  
+# <a name="makefile-preprocessing"></a>生成文件预处理
+你可以通过使用预处理指令和表达式控制 NMAKE 会话。 或 Tools.ini 中生成文件预处理指令可以放置。 Using 指令，可以有条件地处理你的生成文件、 显示错误消息，包括其他生成文件、 取消定义宏，并打开或关闭某些选项。  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
  [生成文件预处理指令](../build/makefile-preprocessing-directives.md)  
   
- [生成文件预处理中的表达式](../build/expressions-in-makefile-preprocessing.md)  
+ [中生成文件预处理表达式](../build/expressions-in-makefile-preprocessing.md)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [NMAKE 参考](../build/nmake-reference.md)

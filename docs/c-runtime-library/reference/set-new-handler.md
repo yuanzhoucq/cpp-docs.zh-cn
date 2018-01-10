@@ -35,11 +35,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ab5d0da21b7034d1a5ab336854b87ae2d2cc429
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 581942f828bb666606b8f176ae3e2bb3454cbf98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 如果 `new` 运算符无法分配内存，则将控制权传输到错误处理机制。  
@@ -104,13 +105,13 @@ _set_new_mode(1)
   
  所有动态链接的 DLL 或可执行文件都有一个 `_set_new_handler` 处理程序；即使您调用 `_set_new_handler`，您的处理程序也可能被另一个处理程序替代，或者将替换由其他 DLL 或可执行文件设置的处理程序。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_set_new_handler`|\<new.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  在此示例中，当分配失败时，控件权将转交给 MyNewHandler。 传递给 MyNewHandler 的参数是请求的字节数。 从 MyNewHandler 返回的值是一个指示是否应重试分配的标志：非零值指示应重试分配，零值指示分配已失败。  
@@ -161,7 +162,7 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   

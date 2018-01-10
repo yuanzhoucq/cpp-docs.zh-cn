@@ -4,49 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.appwiz.ATL.interface
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.ATL.interface
+dev_langs: C++
 helpviewer_keywords:
 - interfaces, adding to ATL objects
 - Implement Interface ATL wizard
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 10b252047a7bae1bbd54e854445dcd90db06a341
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1c07306a660162b23ecaffa4dd239b2538be0295
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 项目中添加一个新接口
 将接口添加到你的对象或控件时，将在该接口创建每个方法的存根处理扩展函数。 在你的对象或控件，可以添加仅将接口当前在现有的类型库中找到。 此外，在其中添加接口的类必须实现[BEGIN_COM_MAP](com-map-macros.md#begin_com_map)宏或如果项目属性化，则它必须`coclass`属性。  
   
- 可以将新接口添加到您在两种方式之一中的控件︰ 手动或在类视图中使用代码向导。  
+ 可以将新接口添加到您在两种方式之一中的控件： 手动或在类视图中使用代码向导。  
   
 ### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>若要在类视图中使用代码向导将接口添加到现有对象或控件  
   
@@ -66,12 +49,11 @@ ms.lasthandoff: 03/31/2017
   
 4.  在接口上实现方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 项目类型](../../ide/visual-cpp-project-types.md)   
  [使用应用程序向导创建桌面项目](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [使用 ATL 和 C 运行时代码编程](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)   
  [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)
-
 

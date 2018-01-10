@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a81475ac461831b13b61f3e37a10b476644cb399
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0070a291f1ab65b4331f66be6cd1cdd4ffe40937
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2063"></a>ML 非致命错误 A2063
 **可以仅为 2 的幂 ALIGN： 表达式**  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  **ALIGN**表达式必须是介于 2 和 256 之间，2 的幂，并且必须小于或等于当前段、 结构或联合的对齐方式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ML 错误消息](../../assembler/masm/ml-error-messages.md)

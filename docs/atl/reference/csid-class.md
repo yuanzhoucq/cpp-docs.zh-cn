@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csid-class"></a>CSid 类
 此类是包装器`SID`（安全标识符） 结构。  
@@ -113,19 +96,19 @@ class CSid
 |[运算符 = =](#operator_eq_eq)|测试相等的两个安全描述符对象|  
 |[运算符 ！ =](#operator_neq)|测试不相等的两个安全描述符对象|  
 |[运算符\<](#operator_lt_)|比较两个安全描述符对象的相对值。|  
-|[运算符 1>](#operator_gt_)|比较两个安全描述符对象的相对值。|  
+|[运算符 >](#operator_gt_)|比较两个安全描述符对象的相对值。|  
 |[运算符\<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|  
-|[运算符 1> =](#operator_gt__eq)|比较两个安全描述符对象的相对值。|  
+|[运算符 > =](#operator_gt__eq)|比较两个安全描述符对象的相对值。|  
   
 ## <a name="remarks"></a>备注  
  `SID`结构是用于唯一标识用户或组的长度可变的结构。  
   
  应用程序不应修改`SID`结构直接，但改为使用此包装类中提供的方法。 另请参阅[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)， [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)， [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)，和[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlsecurity.h  
   
 ##  <a name="accountname"></a>CSid::AccountName  
  返回与关联的帐户的名称`CSid`对象。  
@@ -239,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  返回**true**成功后， **false**失败。  
   
 ### <a name="remarks"></a>备注  
- 请参阅[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有关详细信息。  
+ 请参阅[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)更多详细信息的 Windows SDK 中。  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  返回的长度`CSid`对象。  
@@ -516,7 +499,7 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="return-value"></a>返回值  
  返回存储值描述的状态数据成员的值`CSid`对象。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |SidTypeUser|指示用户`SID`（安全标识符）。|  
 |SidTypeGroup|指示组`SID`。|  
@@ -531,9 +514,8 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="remarks"></a>备注  
  调用[CSid::LoadAccount](#loadaccount)更新`CSid`对象之前调用`SidNameUse`以返回其状态。 `SidNameUse`不会更改对象的状态 (通过调用到**LookupAccountName**或**LookupAccountSid**)，但仅返回的当前状态。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)   
  [运算符](../../atl/reference/atl-operators.md)
-

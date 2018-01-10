@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f3128f3f1c186eb1b667ab8cb456dca0c95aa6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b8ded7bbf4dbe4e4f2ada7054cebab996934316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 类
 此类表示一个智能指针对象。  
@@ -87,7 +88,7 @@ class CAutoPtr
   
  另请参阅[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)和[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)数组或列表的智能指针时需要。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ## <a name="example"></a>示例  
@@ -241,7 +242,7 @@ operator T* () const throw();
 ### <a name="example"></a>示例  
  请参阅中的示例[CAutoPtr 概述](../../atl/reference/cautoptr-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CHeapPtr 类](../../atl/reference/cheapptr-class.md)   
  [CAutoVectorPtr 类](../../atl/reference/cautovectorptr-class.md)   
  [类概述](../../atl/atl-class-overview.md)

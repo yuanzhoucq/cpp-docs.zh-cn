@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40c2349edf1d3296c6a93410163b376a26792429
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c95754f25535bf330d698bffd74140ecf164e95f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 将保存部分或全部当前`context`： 段寄存器假定，基数值、 列表和 cref 标志或处理器/协处理器的值。 `context`可以是**假设**， `RADIX`，**列出**， **CPU**，或**所有**。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
 PUSHCONTEXT context  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

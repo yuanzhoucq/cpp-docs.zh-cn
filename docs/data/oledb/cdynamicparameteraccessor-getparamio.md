@@ -1,69 +1,69 @@
 ---
-title: "CDynamicParameterAccessor::GetParamIO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetParamIO"
-  - "CDynamicParameterAccessor::GetParamIO"
-  - "ATL.CDynamicParameterAccessor.GetParamIO"
-  - "CDynamicParameterAccessor.GetParamIO"
-  - "ATL::CDynamicParameterAccessor::GetParamIO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamIO 方法"
+title: "Cdynamicparameteraccessor:: Getparamio |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetParamIO
+- CDynamicParameterAccessor::GetParamIO
+- ATL.CDynamicParameterAccessor.GetParamIO
+- CDynamicParameterAccessor.GetParamIO
+- ATL::CDynamicParameterAccessor::GetParamIO
+dev_langs: C++
+helpviewer_keywords: GetParamIO method
 ms.assetid: 9c485e39-c67e-4df7-a707-c773019c4d1e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 340153a86584483f61ae4d6dd8a8becefbcd91d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamIO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-确定指定的参数是否输入或输出参数。  
+# <a name="cdynamicparameteraccessorgetparamio"></a>CDynamicParameterAccessor::GetParamIO
+确定指定参数是输入参数还是输出参数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      bool GetParamIO(   
-   DBORDINAL nParam,   
-   DBPARAMIO * pParamIO    
+      bool GetParamIO(   
+   DBORDINAL nParam,   
+   DBPARAMIO * pParamIO    
 ) const throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nParam`  
- \[in\] 参数数目 \(偏离 1\)。  为返回值保留参数 0 。  参数编号是基于其用 SQL 或存储过程调用的参数的索引。  有关示例，请参见[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)。  
+ [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 请参阅[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)有关示例。  
   
  *pParamIO*  
- 将包含 **DBPARAMIO** 类型 \(输入或输出\) 指定的参数变量的指针。  其定义如下：  
+ 指向包含的变量的指针**DBPARAMIO**的指定参数的类型 （输入或输出）。 它定义，如下所示：  
   
- `typedef DWORD DBPARAMIO;`  
+```  
+typedef DWORD DBPARAMIO;  
   
- `enum DBPARAMIOENUM`  
+enum DBPARAMIOENUM {  
+    DBPARAMIO_NOTPARAM   = 0,  
+    DBPARAMIO_INPUT      = 0x1,  
+    DBPARAMIO_OUTPUT     = 0x2  
+};  
+```  
   
- `{   DBPARAMIO_NOTPARAM   = 0,`  
+## <a name="return-value"></a>返回值  
+ 返回**true**成功或**false**失败。  
   
- `DBPARAMIO_INPUT      = 0x1,`  
-  
- `DBPARAMIO_OUTPUT     = 0x2`  
-  
- `};`  
-  
-## 返回值  
- 如果成功，则返回**true**；如果失败，则返回**false**。  
-  
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)

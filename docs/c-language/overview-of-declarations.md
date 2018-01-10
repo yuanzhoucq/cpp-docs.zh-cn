@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarations"></a>声明概述
 “声明”指定一组标识符的解释和特性。 还将导致针对标识符命名的对象或函数保留存储的声明将称为“定义”。 用于变量、函数和类型的 C 声明都具有以下语法：  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  声明可以包含 attribute-seq 中列出的一个或多个可选特性；seq 是序列的缩写。 这些特定于 Microsoft 的特性会执行各种功能（本书中将进行详细介绍）。  
   
- 在变量声明的常规形式中，type-specifier 提供了变量的数据类型。 当类型由 const 或 `volatile` 修改时，type-specifier 可以是复合形式。 `declarator` 可为变量命名，并可能将其修改以用于声明数组类型或指针类型。 例如，  
+ 在变量声明的常规形式中，type-specifier 提供了变量的数据类型。 当类型由 const 或 `volatile` 修改时，type-specifier 可以是复合形式。 `declarator` 可为变量命名，并可能将其修改以用于声明数组类型或指针类型。 例如，应用于对象的  
   
 ```  
 int const *fp;  
@@ -77,7 +78,7 @@ int const *fp;
   
  type-qualifier 终止符有两种：const 和 `volatile`。 这些限定符指定仅在通过左值访问该类型的对象时才相关的类型的其他属性。 有关 const 和 `volatile` 的详细信息，请参阅[类型限定符](../c-language/type-qualifiers.md)。 有关左值的定义，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 语言语法摘要](../c-language/c-language-syntax-summary.md)   
  [声明和类型](../c-language/declarations-and-types.md)   
  [声明摘要](../c-language/summary-of-declarations.md)

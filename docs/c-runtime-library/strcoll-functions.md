@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-functions"></a>strcoll 函数
 每个 `strcoll` 和 `wcscoll` 函数根据当前使用的区域设置代码页的 `LC_COLLATE` 类别设置来比较两个字符串。 每个 `_mbscoll` 函数根据当前使用的多字节代码页比较两个字符串。 在以下情况下使用 `coll` 函数进行字符串比较：当前代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于比较很有用。 使用相应的 `cmp` 函数仅测试字符串相等性。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
  由于 `coll` 函数按字典顺序整理字符串以进行比较，而 `cmp` 函数仅测试字符串对等性，因此 `coll` 函数速度比相应的 `cmp` 版本慢得多。 因此，应仅在以下情况下使用 `coll` 函数：当前代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于字符串比较很有用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [区域设置](../c-runtime-library/locale.md)   
  [字符串操作](../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../c-runtime-library/reference/localeconv.md)   

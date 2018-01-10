@@ -1,31 +1,32 @@
 ---
-title: "卸载延迟加载的 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__FUnloadDelayLoadedDLL2"
-  - "DLL 的延迟加载, 卸载"
+title: "卸载延迟加载的 DLL |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 卸载延迟加载的 DLL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-默认提供的延迟加载 Helper 检查延迟加载描述符，确定是否具有 pUnloadIAT 字段中的原始导入地址表 \(IAT\) 的指针和副本。  如果有，它将列表中的指针保存到导入延迟描述符。  这使得 Helper 函数能够按名称查找 DLL 以支持显式卸载找到的 DLL。  
+# <a name="unloading-a-delay-loaded-dll"></a>卸载延迟加载的 DLL
+默认提供延迟加载 helper 检查以查看的延迟加载描述符 pUnloadIAT 字段中是否具有为指针，原始的导入地址表 (IAT) 的副本。 如果是这样，它会将指针保存到导入延迟描述符列表中。 这使要按名称以支持显式卸载该 DLL 中查找该 DLL 的帮助器函数。  
   
- 下面是与显式卸载延迟加载的 DLL 关联的结构和函数：  
+ 以下是关联的结构和函数的显式卸载延迟加载的 DLL:  
   
 ```  
 //  
@@ -52,11 +53,11 @@ ExternC
 PUnloadInfo __puiHead;  
 ```  
   
- UnloadInfo 结构用一个 C\+\+ 类实现，该类将 **LocalAlloc** 和 **LocalFree** 实现分别用作其 **new** 运算符和 **delete** 运算符。  这些选项保留在列表头为 \_\_puiHead 的标准链接表中。  
+ 使用使用的 c + + 类实现 UnloadInfo 结构**LocalAlloc**和**LocalFree**作为其运算符的实现**新**和运算符**删除**分别。 这些选项将保留在作为列表的开头使用 __puiHead 的标准链接列表。  
   
- 调用 \_\_FUnloadDelayLoadedDLL 将尝试查找在加载的 DLL 列表中提供的名称（要求完全匹配）。  如果找到了，pUnloadIAT 中的 IAT 副本被复制到正在运行的 IAT 的顶端以还原 thunk 指针，并用 **FreeLibrary** 释放库，断开匹配的 **UnloadInfo** 记录与列表的链接并删除该记录，并返回 TRUE。  
+ 调用 __FUnloadDelayLoadedDLL 将尝试查找名称在加载 Dll （完全匹配，则需要） 的列表中提供。 如果找到，则复制中 pUnloadIAT IAT 的副本正在运行的 IAT 要还原的转换 （thunk） 指针的顶部，通过库用来释放**FreeLibrary**，匹配**UnloadInfo**记录为取消链接列表和删除，并返回 TRUE。  
   
- 函数 \_\_FUnloadDelayLoadedDLL2 的参数区分大小写。  例如，应该指定：  
+ 函数 __FUnloadDelayLoadedDLL2 的自变量是区分大小写。 例如，则会指定：  
   
 ```  
 __FUnloadDelayLoadedDLL2("user32.DLL");  
@@ -68,5 +69,5 @@ __FUnloadDelayLoadedDLL2("user32.DLL");
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## 请参阅  
- [Understanding the Helper Function](http://msdn.microsoft.com/zh-cn/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>请参阅  
+ [了解 Helper 函数](understanding-the-helper-function.md)

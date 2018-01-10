@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d18124646f4d4fcb02246234bf74b5870246e7e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87774f0237eb42c4bd2f97185230b3c869688ca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual-interfaces-and-events"></a>双重接口和事件
 可以设计作为一个双的事件接口时，有多种良好的设计原因不要这样做。 基本的原因是事件源将仅触发事件通过 vtable 或`Invoke`，而不是同时。 如果事件源触发作为直接 vtable 方法调用，事件`IDispatch`永远不会使用方法和很明显的接口应已纯 vtable 接口。 如果事件源触发事件时为对的调用`Invoke`将永远不会使用 vtable 方法，它是清除接口应已调度接口。 如果您定义事件接口为双重接口，则你将要求客户端实现将永远不会使用接口的一部分。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
  进一步有原因，若要避免双事件接口;Visual Basic 和 Internet Explorer 都不支持这些选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [双重接口和 ATL](../atl/dual-interfaces-and-atl.md)
 

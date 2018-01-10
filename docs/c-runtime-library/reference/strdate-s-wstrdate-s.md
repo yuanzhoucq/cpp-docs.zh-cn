@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -42,31 +40,16 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5b1701f41b2f66ccbc2601763c09a4db0523c2ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71117aed66d83c2c2ae1651c4de9c91e06a43653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
 将当前系统日期复制到缓冲区。 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [_strdate、_wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md) 具有安全性增强功能。  
@@ -111,7 +94,7 @@ errno_t _wstrdate_s(
 |非 `NULL`（指向有效的缓冲区）|0 < `numberOfElements` < 9|`EINVAL`|空字符串|  
 |非 `NULL`（指向有效的缓冲区）|`numberOfElements` >= 9|0|注解中指定的当前日期格式|  
   
-## <a name="security-issues"></a>安全性问题  
+## <a name="security-issues"></a>安全问题  
  如果 `numberOfElements` 参数大于 9，则为缓冲区传入无效非 `NULL` 值将导致访问冲突。  
   
  传递大于 `buffer` 实际大小的值将导致缓冲区溢出。  
@@ -123,7 +106,7 @@ errno_t _wstrdate_s(
   
  如果 `buffer` 是 `NULL` 指针，或如果 `numberOfElements` 小于 9 个字符，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 -1，且如果缓冲区为 `NULL` 或 `numberOfElements` 小于或等于 0，则将 `errno` 设置为 `EINVAL`，或者如果 `numberOfElements` 小于 9，则将 `errno` 设置为 `ERANGE`。  
   
- 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射：  
   
@@ -131,9 +114,9 @@ errno_t _wstrdate_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tstrdate_s`|`_strdate_s`|`_strdate_s`|`_wstrdate_s`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_strdate`|\<time.h>|  
 |`_wstrdate`|\<time.h> 或 \<wchar.h>|  
@@ -142,7 +125,7 @@ errno_t _wstrdate_s(
 ## <a name="example"></a>示例  
  请参阅 [time](../../c-runtime-library/reference/time-time32-time64.md) 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   

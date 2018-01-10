@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b269ed51cc9a1648de7a52f9c250919c9ef4c1c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5714eab684066e74a6d56144d915460b4312f4c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queryinterface"></a>QueryInterface
 虽然有一个对象可以依据 express 它提供了静态 （它是在实例化之前） 的功能的机制，但基本的 COM 机制是使用**IUnknown**调用方法[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  请注意，必须遵循[引用计数](../atl/reference-counting.md)在所有时间的规则。 如果调用**版本**上以减少为零的引用计数的接口指针，则不应使用该指针试。 有时你可能需要获取对对象的弱引用 （即，你可能想要不递增引用计数的情况下获取指向其接口之一的指针），但它不是可接受，若要执行此操作通过调用`QueryInterface`跟**版本**。 在这种方式中获得的指针无效，不应使用。 这更容易会了然-时[_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces)定义的因此定义此宏是查找引用计数 bug 的有效方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 简介](../atl/introduction-to-com.md)   
  [QueryInterface： 对象中导航](http://msdn.microsoft.com/library/windows/desktop/ms687230)
 

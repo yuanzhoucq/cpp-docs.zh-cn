@@ -71,11 +71,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36c802c5406d4f142e4902ad75a7621f5a23ed70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51777605e24d9bb3ddf6fa7e6b9ad9c332165881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 使用特定于区域设置的信息比较字符串。  
@@ -143,7 +144,7 @@ int _mbsncoll_l(
  其中每个函数都会返回 `_NLSCMPERROR`。 若要使用 `_NLSCMPERROR`，请包括 STRING.h 或 MBSTRING.h。 如果 `_wcsncoll` 或 `string1` 包含排序序列域外部的宽字符代码，则 `string2` 会失败。 发生错误时，`_wcsncoll` 可能会将 `errno` 设置为 `EINVAL`。 若要检查有关调用 `_wcsncoll` 的错误，请将 `errno` 设置为 0，然后在调用 `errno` 后检查 `_wcsncoll`。  
   
 ## <a name="remarks"></a>备注  
- 其中每个函数根据当前使用的代码页对 `count` 和 `string1` 中的前 `string2` 个字符进行区分大小写比较。 仅在以下情况下使用这些函数：代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于字符串比较很有用。 字符集顺序与区域设置相关。 不带 `_l` 后缀的函数版本使用当前区域设置，而带 `_l` 后缀的函数版本使用已传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 其中每个函数根据当前使用的代码页对 `count` 和 `string1` 中的前 `string2` 个字符进行区分大小写比较。 仅在以下情况下使用这些函数：代码页中的字符集顺序和字典字符顺序存在差异，以及此差异对于字符串比较很有用。 字符集顺序与区域设置相关。 不带 `_l` 后缀的函数版本使用当前区域设置，而带 `_l` 后缀的函数版本使用已传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  所有这些函数都验证其参数。 如果 `string1` 或 `string2` 为空指针，或者 `count` 大于 `INT_MAX`，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `_NLSCMPERROR` 并将 `errno` 设置为 `EINVAL`。  
   
@@ -154,9 +155,9 @@ int _mbsncoll_l(
 |`_tcsnccoll`|`_strncoll`|`_mbsncoll`|`_wcsncoll`|  
 |`_tcsncoll`|`_strncoll`|[_mbsnbcoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsncoll`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_strncoll`, `_strncoll_l`|\<string.h>|  
 |`_wcsncoll`, `_wcsncoll_l`|\<wchar.h> 或 \<string.h>|  
@@ -164,7 +165,7 @@ int _mbsncoll_l(
   
  有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [区域设置](../../c-runtime-library/locale.md)   
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 函数](../../c-runtime-library/strcoll-functions.md)   

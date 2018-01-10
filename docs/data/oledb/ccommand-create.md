@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 425e86008b97defe50e2c47e099b3b21c900bc1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f4bbd236c2ec7ae6857ede1ac64f738ca8600774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommandcreate"></a>CCommand::Create
 调用[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)为指定的会话中，创建命令然后调用[ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)指定的命令文本。  
@@ -61,8 +64,8 @@ HRESULT CCommandBase::Create(
 ## <a name="remarks"></a>备注  
  第一种形式的**创建**采用 Unicode 命令字符串。 第二种形式的**创建**采用 ANSI 命令字符串 （为了向后兼容现有的 ANSI 应用程序提供）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCommand 类](../../data/oledb/ccommand-class.md)

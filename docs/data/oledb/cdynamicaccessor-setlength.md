@@ -1,68 +1,70 @@
 ---
-title: "CDynamicAccessor::SetLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::SetLength"
-  - "CDynamicAccessor.SetLength"
-  - "CDynamicAccessor::SetLength"
-  - "ATL.CDynamicAccessor.SetLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetLength 方法"
+title: "Cdynamicaccessor:: Setlength |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::SetLength
+- CDynamicAccessor.SetLength
+- CDynamicAccessor::SetLength
+- ATL.CDynamicAccessor.SetLength
+dev_langs: C++
+helpviewer_keywords: SetLength method
 ms.assetid: 8109ae73-04ec-4a47-be97-ba1e60080384
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a01bd3f22e2a7bd14f2f83e1d7e4c28f3ff9601a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorsetlength"></a>CDynamicAccessor::SetLength
 设置指定列的长度。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      bool SetLength(   
-   DBORDINAL nColumn,   
-   DBLENGTH nLength    
+      bool SetLength(   
+   DBORDINAL nColumn,   
+   DBLENGTH nLength    
 ) throw( );  
-bool SetLength(   
-   const CHAR* pColumnName,   
-   DBLENGTH nLength    
+bool SetLength(   
+   const CHAR* pColumnName,   
+   DBLENGTH nLength    
 ) throw( );  
-bool SetLength(   
-   const WCHAR* pColumnName,   
-   DBLENGTH nLength    
+bool SetLength(   
+   const WCHAR* pColumnName,   
+   DBLENGTH nLength    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nColumn`  
- \[in\] 列号。  列数以 1 开始。  若有的话，值 0 是指书签列。  
+ [in] 列号。 列编号从 1 开始。 值为 0 引用的书签列中，如果有的话。  
   
  `nLength`  
- \[in\]数据列的长度（以字节为单位）。  
+ [in]以字节为单位的列的长度。  
   
  `pColumnName`  
- \[in\] 为包含列名的字符串的指针。  
+ [in] 指向包含列名的字符串的指针。  
   
-## 返回值  
- 如果指定的列长度成功，将返回 **true**。  否则，该函数返回**false**。  
+## <a name="return-value"></a>返回值  
+ 返回**true**如果已成功设置指定的列长度。 否则，此函数返回**false**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::GetLength](../../data/oledb/cdynamicaccessor-getlength.md)

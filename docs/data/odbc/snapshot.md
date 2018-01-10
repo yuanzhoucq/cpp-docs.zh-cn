@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8671ce1eefd73b2b8af506b621258e81cbed9b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c31e08fdda3cef526f46946e45ef956f9ad1adaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="snapshot"></a>快照
 快照是反映数据的静态视图时创建快照时存在的记录集。 当你打开快照，并将移动到的所有记录时，它包含的记录集，直到调用重建快照不会更改其值**Requery**。  
@@ -53,5 +56,5 @@ ms.lasthandoff: 10/24/2017
   
  关于属性快照共享的所有记录集的详细信息，请参阅[记录集 (ODBC)](../../data/odbc/recordset-odbc.md)。 ODBC 和快照，包括 ODBC 游标库，有关详细信息，请参阅[ODBC](../../data/odbc/odbc-basics.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

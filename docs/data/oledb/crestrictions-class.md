@@ -1,34 +1,36 @@
 ---
-title: "CRestrictions 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRestrictions"
-  - "CRestrictions"
-  - "ATL.CRestrictions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRestrictions 类"
+title: "CRestrictions 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRestrictions
+- CRestrictions
+- ATL.CRestrictions
+dev_langs: C++
+helpviewer_keywords: CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 23b01a776a624f0fa463c7071e164b70111b2e8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CRestrictions 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可用于架构行集指定绑定的泛型类。  
+# <a name="crestrictions-class"></a>CRestrictions 类
+泛型类，您可以指定架构行集的限制。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <   
@@ -42,27 +44,27 @@ class CRestrictions : public CSchemaRowset <
 >  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 用于访问器的类。  
+ 访问器使用的类。  
   
  `nRestrictions`  
- 限制列的数量架构行集合中。  
+ 架构行集的限制列数。  
   
  `pguid`  
- 设置为 GUID 的指针的架构。  
+ 指向架构的 GUID 的指针。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[打开](../../data/oledb/crestrictions-open.md)|根据用户提供的限制返回结果集。|  
+|[打开](../../data/oledb/crestrictions-open.md)|返回一个结果集，根据用户提供的限制。|  
   
-## 要求  
- **头文件：**atldbsch.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldbsch.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

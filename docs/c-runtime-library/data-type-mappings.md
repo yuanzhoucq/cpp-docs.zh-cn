@@ -40,11 +40,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 217290399a03174e599117077b27116a86808f7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f52c6e5664292469ef33a88e9d5458c07ec69454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-mappings"></a>数据类型映射
 TCHAR.H 中定义了这些数据类型映射，具体取决于程序中是否定义了常量 `_UNICODE` 或 `_MBCS`。  
@@ -65,7 +66,7 @@ TCHAR.H 中定义了这些数据类型映射，具体取决于程序中是否定
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
 |`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L`（将以下字符或字符串转换为其 Unicode 对应项）|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [一般文本映射](../c-runtime-library/generic-text-mappings.md)   
  [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [例程映射](../c-runtime-library/routine-mappings.md)   

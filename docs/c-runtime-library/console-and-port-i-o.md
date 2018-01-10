@@ -21,18 +21,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>控制台和端口 I/O
 这些例程在控制台或指定端口上读写。 控制台 I/O 例程与流 I/O 或低级 I/O 库例程不兼容。 在执行 I/O 前，不必打开或关闭控制台或端口，因此此类别中没有打开或关闭例程。 在 Windows 操作系统中，来自这些函数的输出始终将定向到控制台，且无法重定向。  
   
 ### <a name="console-and-port-io-routines"></a>控制台和端口 I/O 例程  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)、[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|从控制台读取字符串|  
 |[_cprintf、_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)、[_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|将格式化的数据写入控制台|  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/24/2017
 |[_putch、_putwch](../c-runtime-library/reference/putch-putwch.md)|将字符写入控制台|  
 |[_ungetch、_ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|“取消获取”从控制台读取的最后一个字符，以便让它成为下一个被读取的字符|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输入和输出](../c-runtime-library/input-and-output.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

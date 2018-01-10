@@ -1,112 +1,106 @@
 ---
-title: "ATL 实用程序引用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "ATL 实用程序引用 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ATL 实用程序引用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="atl-utilities-reference"></a>ATL 实用程序引用
+ATL 提供有关操作的窗体中的路径和 Url 的代码[CPathT](../atl/reference/cpatht-class.md)和[CUrl](../atl/reference/curl-class.md)。 线程池， [CThreadPool](../atl/reference/cthreadpool-class.md)，可在你的应用程序。 此代码可以 atlpath.h 和 atlutil.h 中找到。  
+  
+### <a name="classes"></a>类  
+  
+|||  
+|-|-|  
+|[CPathT 类](../atl/reference/cpatht-class.md)|此类表示的路径。|  
+|[CDebugReportHook 类](../atl/reference/cdebugreporthook-class.md)|使用此类将调试报告发送到命名管道。|  
+|[CNonStatelessWorker 类](../atl/reference/cnonstatelessworker-class.md)|从线程池接收请求，并将它们传递到创建和销毁的辅助对象上每个请求。|  
+|[CNoWorkerThread 类](../atl/reference/cnoworkerthread-class.md)|使用此类的自变量作为`MonitorClass`如果你想要禁用动态缓存维护缓存类模板参数。|  
+|[CThreadPool 类](../atl/reference/cthreadpool-class.md)|此类提供处理的工作项队列的辅助线程的池。|  
+|[CUrl 类](../atl/reference/curl-class.md)|此类表示的 URL。 它允许你操纵相互独立地 URL 的每个元素是否分析现有的 URL 字符串或生成一个从零开始的字符串。|  
+|[CWorkerThread 类](../atl/reference/cworkerthread-class.md)|此类创建一个工作线程或使用一个现有，等待上一个或多个内核对象句柄，并在其中一个的句柄处于有信号状态时执行指定的客户端函数。|  
+  
+### <a name="typedefs"></a>Typedef  
+  
+|||  
+|-|-|  
+|[CPath](../atl/reference/atl-typedefs.md#cpath)|专用化[CPathT](../atl/reference/cpatht-class.md)使用`CString`。|  
+|[CPathA](../atl/reference/atl-typedefs.md#cpatha)|专用化[CPathT](../atl/reference/cpatht-class.md)使用`CStringA`。|  
+|[CPathW](../atl/reference/atl-typedefs.md#cpathw)|专用化[CPathT](../atl/reference/cpatht-class.md)使用`CStringW`。|  
+|[ATL_URL_PORT](../atl/reference/atl-typedefs.md#atl_url_port)|使用的类型[CUrl](../atl/reference/curl-class.md)用于指定端口号。|  
+  
+### <a name="enums"></a>枚举  
+  
+|||  
+|-|-|  
+|[ATL_URL_SCHEME](../atl/reference/atl-url-scheme-enum.md)|此枚举的成员为被理解的方案提供常量[CUrl](../atl/reference/curl-class.md)。|  
+  
+### <a name="functions"></a>函数  
+  
+|||  
+|-|-|  
+|[AtlCanonicalizeUrl](../atl/reference/atl-http-utility-functions.md#atlcanonicalizeurl)|调用此函数可对 URL 进行规范化，包括将不安全的字符和空格转换为转义序列。|  
+|[AtlCombineUrl](../atl/reference/atl-http-utility-functions.md#atlcombineurl)|调用此函数可将基 URL 和相对 URL 合并为单个规范 URL。|  
+|[AtlEscapeUrl](../atl/reference/atl-http-utility-functions.md#atlescapeurl)|调用此函数可将所有不安全字符转换为转义序列。|  
+|[AtlGetDefaultUrlPort](../atl/reference/atl-http-utility-functions.md#atlgetdefaulturlport)|调用此函数可获取与特定 internet 协议或方案关联的默认端口号。|  
+|[AtlHexValue](../atl/reference/atl-text-encoding-functions.md#atlhexvalue)|调用此函数可获取十六进制数字的数值。|  
+|[AtlIsUnsafeUrlChar](../atl/reference/atl-http-utility-functions.md#atlisunsafeurlchar)|调用此函数可了解字符在 URL 中能否安全使用。|  
+|[AtlUnescapeUrl](../atl/reference/atl-http-utility-functions.md#atlunescapeurl)|调用此函数可将转义字符转换为其原始值。|  
+|[SystemTimeToHttpDate](../atl/reference/atl-http-utility-functions.md#systemtimetohttpdate)|调用此函数可将系统时间转换为采用适合在 HTTP 标头中使用的格式的字符串。|  
 
-在 [CPathT](../atl/reference/cpatht-class.md) 和 [卷毛](../atl/reference/curl-class.md)形式，ATL提供操作的路径提供代码和URL。  线程池，[CThreadPool](../atl/reference/cthreadpool-class.md)，可用于您的应用程序。  此代码可在atlpath.h和atlutil.h找到。  
+|[ATLPath::AddBackslash](../atl/reference/atl-path-functions.md#addbackslash)|此函数是的重载的包装器[PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561)。 |  
+|[ATLPath::AddExtension](../atl/reference/atl-path-functions.md#addextension)|此函数是的重载的包装器[PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)。 |  
+|[ATLPath::Append](../atl/reference/atl-path-functions.md#append)|此函数是的重载的包装器[PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)。 |  
+|[ATLPath::BuildRoot](../atl/reference/atl-path-functions.md#buildroot)|此函数是的重载的包装器[PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)。 |  
+|[ATLPath::Canonicalize](../atl/reference/atl-path-functions.md#canonicalize)|此函数是的重载的包装器[PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)。 |  
+|[ATLPath::Combine](../atl/reference/atl-path-functions.md#combine)|此函数是的重载的包装器[PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)。 |  
+|[ATLPath::CommonPrefix](../atl/reference/atl-path-functions.md#commonprefix)|此函数是的重载的包装器[PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)。 |  
+|[ATLPath::CompactPath](../atl/reference/atl-path-functions.md#compactpath)|此函数是的重载的包装器[PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)。 |  
+|[ATLPath::CompactPathEx](../atl/reference/atl-path-functions.md#compactpathex)|此函数是的重载的包装器[PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)。 |  
+|[ATLPath::FileExists](../atl/reference/atl-path-functions.md#fileexists)|此函数是的重载的包装器[PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)。 |  
+|[ATLPath::FindExtension](../atl/reference/atl-path-functions.md#findextension)|此函数是的重载的包装器[PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)。 |  
+|[ATLPath::FindFileName](../atl/reference/atl-path-functions.md#findfilename)|此函数是的重载的包装器[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)。 |  
+|[ATLPath::GetDriveNumber](../atl/reference/atl-path-functions.md#getdrivenumber)|此函数是的重载的包装器[PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)。 |  
+|[ATLPath::IsDirectory](../atl/reference/atl-path-functions.md#isdirectory)|此函数是的重载的包装器[PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)。 |  
+|[ATLPath::IsFileSpec](../atl/reference/atl-path-functions.md#isfilespec)|此函数是的重载的包装器[PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)。 |  
+|[ATLPath::IsPrefix](../atl/reference/atl-path-functions.md#isprefix)|此函数是的重载的包装器[PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)。 |  
+|[ATLPath::IsRelative](../atl/reference/atl-path-functions.md#isrelative)|此函数是的重载的包装器[PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)。 |  
+|[ATLPath::IsRoot](../atl/reference/atl-path-functions.md#isroot)|此函数是的重载的包装器[PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)。 |  
+|[ATLPath::IsSameRoot](../atl/reference/atl-path-functions.md#issameroot)|此函数是的重载的包装器[PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)。 |  
+|[ATLPath::IsUNC](../atl/reference/atl-path-functions.md#isunc)|此函数是的重载的包装器[PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)。 |  
+|[ATLPath::IsUNCServer](../atl/reference/atl-path-functions.md#isuncserver)|此函数是的重载的包装器[PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)。 |  
+|[ATLPath::IsUNCServerShare](../atl/reference/atl-path-functions.md#isuncservershare)|此函数是的重载的包装器[PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)。 |  
+|[ATLPath::MakePretty](../atl/reference/atl-path-functions.md#makepretty)|此函数是的重载的包装器[PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)。 |  
+|[ATLPath::MatchSpec](../atl/reference/atl-path-functions.md#matchspec)|此函数是的重载的包装器[PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)。 |  
+|[ATLPath::QuoteSpaces](../atl/reference/atl-path-functions.md#quotespaces)|此函数是的重载的包装器[PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)。 |  
+|[ATLPath::RelativePathTo](../atl/reference/atl-path-functions.md#relativepathto)|此函数是的重载的包装器[PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)。 |  
+|[ATLPath::RemoveArgs](../atl/reference/atl-path-functions.md#removeargs)|此函数是的重载的包装器[PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)。 |  
+|[ATLPath::RemoveBackslash](../atl/reference/atl-path-functions.md#removebackslash)|此函数是的重载的包装器[PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)。 |  
+|[ATLPath::RemoveBlanks](../atl/reference/atl-path-functions.md#removeblanks)|此函数是的重载的包装器[PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)。 |  
+|[ATLPath::RemoveExtension](../atl/reference/atl-path-functions.md#removeextension)|此函数是的重载的包装器[PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)。 |  
+|[ATLPath::RemoveFileSpec](../atl/reference/atl-path-functions.md#removefilespec)|此函数是的重载的包装器[PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)。 |  
+|[ATLPath::RenameExtension](../atl/reference/atl-path-functions.md#renameextension)|此函数是的重载的包装器[PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)。 |  
+|[ATLPath::SkipRoot](../atl/reference/atl-path-functions.md#skiproot)|此函数是的重载的包装器[PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)。 |  
+|[ATLPath::StripPath](../atl/reference/atl-path-functions.md#strippath)|此函数是的重载的包装器[PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)。 |  
+|[ATLPath::StripToRoot](../atl/reference/atl-path-functions.md#striptoroot)|此函数是的重载的包装器[PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)。 |  
+|[ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces)|此函数是的重载的包装器[PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。 |  
   
-### 类  
-  
-|||  
-|-|-|  
-|[CPathT选件类](../atl/reference/cpatht-class.md)|此选件类表示路径。|  
-|[CDebugReportHook选件类](../atl/reference/cdebugreporthook-class.md)|使用此选件类发送调试报告为命名管道。|  
-|[CNonStatelessWorker选件类](../atl/reference/cnonstatelessworker-class.md)|接收来自线程池的请求并传递到在每个请求创建和销毁的辅助对象。|  
-|[CNoWorkerThread选件类](../atl/reference/cnoworkerthread-class.md)|如果想要禁用动态缓存维护，请使用此选件类作为参数。`MonitorClass` 模板参数传递到缓存选件类。|  
-|[CThreadPool选件类](../atl/reference/cthreadpool-class.md)|此选件类提供的辅助线程池处理工作项队列。|  
-|[右选件类](../atl/reference/curl-class.md)|此选件类表示URL。  它是否可以独立于其他操作URL的每个元素分析现有的URL字符串或从头开始生成字符串。|  
-|[CWorkerThread选件类](../atl/reference/cworkerthread-class.md)|当其中一个处理事件信号时，此选件类在一个或多个核心对象处理创建辅助线程或使用现有工作项，等待，并执行一个指定的客户端功能。|  
-  
-### Typedef  
-  
-|||  
-|-|-|  
-|[CPath](../Topic/CPath.md)|[CPathT](../atl/reference/cpatht-class.md) 的专用化使用 `CString`的。|  
-|[CPathA](../Topic/CPathA.md)|[CPathT](../atl/reference/cpatht-class.md) 的专用化使用 `CStringA`的。|  
-|[CPathW](../Topic/CPathW.md)|[CPathT](../atl/reference/cpatht-class.md) 的专用化使用 `CStringW`的。|  
-|[ATL\_URL\_PORT](../Topic/ATL_URL_PORT.md)|[卷毛](../atl/reference/curl-class.md) 使用的类型指定端口号。|  
-  
-### 枚举  
-  
-|||  
-|-|-|  
-|[ATL\_URL\_SCHEME](../Topic/ATL_URL_SCHEME.md)|此枚举的成员为 [卷毛](../atl/reference/curl-class.md)了解架构提供常数。|  
-  
-### 函数  
-  
-|||  
-|-|-|  
-|[AtlCanonicalizeUrl](../Topic/AtlCanonicalizeUrl.md)|调用此函数教规本地化URL，包括转换不安全的字符和空格转换为转义序列。|  
-|[AtlCombineUrl](../Topic/AtlCombineUrl.md)|调用此函数将基URL和相对URL到一个，指定URL。|  
-|[AtlEscapeUrl](../Topic/AtlEscapeUrl.md)|调用此函数将所有不安全的字符转换为转义序列。|  
-|[AtlGetDefaultUrlPort](../Topic/AtlGetDefaultUrlPort.md)|调用此函数获取默认端口号与特定internet协议或模式。|  
-|[AtlHexValue](../Topic/AtlHexValue.md)|调用此函数获取一个十六进制数字的数值。|  
-|[AtlIsUnsafeUrlChar](../Topic/AtlIsUnsafeUrlChar.md)|调用此函数查看字符是否是安全的用于URL。|  
-|[AtlUnescapeUrl](../Topic/AtlUnescapeUrl.md)|调用此函数转换转义字符回其原始值。|  
-|[SystemTimeToHttpDate](../Topic/SystemTimeToHttpDate.md)|调用此函数将系统时间转换为字符串了适当的格式在HTTP标头。|  
-|[ATLPath::AddBackslash](../Topic/ATLPath::AddBackslash.md)|此函数是 [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561)的重载包装。|  
-|[ATLPath::AddExtension](../Topic/ATLPath::AddExtension.md)|此函数是 [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)的重载包装。|  
-|[ATLPath::Append](../Topic/ATLPath::Append.md)|此函数是 [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)的重载包装。|  
-|[ATLPath::BuildRoot](../Topic/ATLPath::BuildRoot.md)|此函数是 [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)的重载包装。|  
-|[ATLPath::Canonicalize](../Topic/ATLPath::Canonicalize.md)|此函数是 [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)的重载包装。|  
-|[ATLPath::Combine](../Topic/ATLPath::Combine.md)|此函数是 [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)的重载包装。|  
-|[ATLPath::CommonPrefix](../Topic/ATLPath::CommonPrefix.md)|此函数是 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)的重载包装。|  
-|[ATLPath::CompactPath](../Topic/ATLPath::CompactPath.md)|此函数是 [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)的重载包装。|  
-|[ATLPath::CompactPathEx](../Topic/ATLPath::CompactPathEx.md)|此函数是 [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)的重载包装。|  
-|[ATLPath::FileExists](../Topic/ATLPath::FileExists.md)|此函数是 [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)的重载包装。|  
-|[ATLPath::FindExtension](../Topic/ATLPath::FindExtension.md)|此函数是 [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)的重载包装。|  
-|[ATLPath::FindFileName](../Topic/ATLPath::FindFileName.md)|此函数是 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)的重载包装。|  
-|[ATLPath::GetDriveNumber](../Topic/ATLPath::GetDriveNumber.md)|此函数是 [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)的重载包装。|  
-|[ATLPath::IsDirectory](../Topic/ATLPath::IsDirectory.md)|此函数是 [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)的重载包装。|  
-|[ATLPath::IsFileSpec](../Topic/ATLPath::IsFileSpec.md)|此函数是 [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)的重载包装。|  
-|[ATLPath::IsPrefix](../Topic/ATLPath::IsPrefix.md)|此函数是 [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)的重载包装。|  
-|[ATLPath::IsRelative](../Topic/ATLPath::IsRelative.md)|此函数是 [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)的重载包装。|  
-|[ATLPath::IsRoot](../Topic/ATLPath::IsRoot.md)|此函数是 [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)的重载包装。|  
-|[ATLPath::IsSameRoot](../Topic/ATLPath::IsSameRoot.md)|此函数是 [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)的重载包装。|  
-|[ATLPath::IsUNC](../Topic/ATLPath::IsUNC.md)|此函数是 [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)的重载包装。|  
-|[ATLPath::IsUNCServer](../Topic/ATLPath::IsUNCServer.md)|此函数是 [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)的重载包装。|  
-|[ATLPath::IsUNCServerShare](../Topic/ATLPath::IsUNCServerShare.md)|此函数是 [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)的重载包装。|  
-|[ATLPath::MakePretty](../Topic/ATLPath::MakePretty.md)|此函数是 [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)的重载包装。|  
-|[ATLPath::MatchSpec](../Topic/ATLPath::MatchSpec.md)|此函数是 [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)的重载包装。|  
-|[ATLPath::QuoteSpaces](../Topic/ATLPath::QuoteSpaces.md)|此函数是 [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)的重载包装。|  
-|[ATLPath::RelativePathTo](../Topic/ATLPath::RelativePathTo.md)|此函数是 [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)的重载包装。|  
-|[ATLPath::RemoveArgs](../Topic/ATLPath::RemoveArgs.md)|此函数是 [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)的重载包装。|  
-|[ATLPath::RemoveBackslash](../Topic/ATLPath::RemoveBackslash.md)|此函数是 [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)的重载包装。|  
-|[ATLPath::RemoveBlanks](../Topic/ATLPath::RemoveBlanks.md)|此函数是 [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)的重载包装。|  
-|[ATLPath::RemoveExtension](../Topic/ATLPath::RemoveExtension.md)|此函数是 [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)的重载包装。|  
-|[ATLPath::RemoveFileSpec](../Topic/ATLPath::RemoveFileSpec.md)|此函数是 [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)的重载包装。|  
-|[ATLPath::RenameExtension](../Topic/ATLPath::RenameExtension.md)|此函数是 [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)的重载包装。|  
-|[ATLPath::SkipRoot](../Topic/ATLPath::SkipRoot.md)|此函数是 [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)的重载包装。|  
-|[ATLPath::StripPath](../Topic/ATLPath::StripPath.md)|此函数是 [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)的重载包装。|  
-|[ATLPath::StripToRoot](../Topic/ATLPath::StripToRoot.md)|此函数是 [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)的重载包装。|  
-|[ATLPath::UnquoteSpaces](../Topic/ATLPath::UnquoteSpaces.md)|此函数是 [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)的重载包装。|  
-  
-### 宏  
-  
-|||  
-|-|-|  
-|[ATL\_URL标志](../Topic/ATL_URL%20Flags.md)|这些标志修改 [AtlEscapeUrl](../Topic/AtlEscapeUrl.md) 和 [AtlCanonicalizeUrl](../Topic/AtlCanonicalizeUrl.md) 行为。|  
-|[ATL\_WORKER\_THREAD\_WAIT](../Topic/ATL_WORKER_THREAD_WAIT.md)|此宏以毫秒为单位定义默认 [CWorkerThread::Shutdown](../Topic/CWorkerThread::Shutdown.md) 将等待辅助线程关闭。|  
-|[ATLS\_DEFAULT\_THREADPOOLSHUTDOWNTIMEOUT](../Topic/ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT.md)|此宏以毫秒为单位定义默认时间 [CThreadPool](../atl/reference/cthreadpool-class.md) 将等待线程关闭。|  
-|[ATLS\_DEFAULT\_THREADSPERPROC](../Topic/ATLS_DEFAULT_THREADSPERPROC.md)|此宏定义线程的默认周期数每个 [CThreadPool](../atl/reference/cthreadpool-class.md)使用的处理器。|  
-  
-## 请参阅  
+
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)
+ [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)

@@ -1,29 +1,30 @@
 ---
-title: "x64 软件约定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Visual C++, x64 调用约定"
-  - "x64 代码约定"
+title: "x64 软件约定 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- x64 coding conventions
+- Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d3b016fb60670dc8674691c52d593b468e597eed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# x64 软件约定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本节描述用于 x86 体系结构的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 64 位扩展的 Visual C\+\+ 调用约定方法。  
+# <a name="x64-software-conventions"></a>x64 软件约定
+本部分介绍 Visual c + + 调用约定方法[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]，为 x86，64 位扩展体系结构。  
   
 -   [x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)  
   
@@ -35,7 +36,7 @@ caps.handback.revision: 13
   
 -   [堆栈使用](../build/stack-usage.md)  
   
--   [保护现场和恢复现场](../build/prolog-and-epilog.md)  
+-   [Prolog 和 Epilog](../build/prolog-and-epilog.md)  
   
 -   [异常处理](../cpp/exception-handling-in-visual-cpp.md)  
   
@@ -43,9 +44,9 @@ caps.handback.revision: 13
   
 -   [图像格式](../build/image-format.md)  
   
- 下面的编译器选项有助于您针对 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 优化应用程序：  
+ 下面的编译器选项可帮助你优化你的应用程序[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [\/favor（针对体系结构详细信息优化）](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor （针对体系结构详细信息优化）](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [调用约定](../cpp/calling-conventions.md)

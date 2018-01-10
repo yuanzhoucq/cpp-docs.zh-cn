@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ab58e3e787afa24114c1bbad2713a7ab2e51a99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465272e2d582c36a16b9a68a165bd6d371055f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-and-assignments"></a>表达式和赋值
 本节描述如何构建表达式以及如何在 C 语言中赋值。 常量、标识符、字符串和函数调用是表达式中操作的所有操作数。 C 语言具有所有常见语言运算符。 本节包括这些运算符以及对 C 或 Microsoft C 唯一的运算符。讨论的主题包括：  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [类型强制转换](../c-language/type-cast-conversions.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 语言参考](../c-language/c-language-reference.md)

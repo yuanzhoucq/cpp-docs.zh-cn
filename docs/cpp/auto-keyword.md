@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21b2155ffd5bb3861202c112bd9552ed36113a02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3508217e7dc333543fa2dbff9cf0643d6faff060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-keyword"></a>auto 关键字
 `auto` 关键字是声明说明符。 但是，C++ 标准为此关键字定义了初始和修订的含义。 Visual c + + 2010 之前,`auto`关键字声明中的变量*自动*存储类; 即，具有本地生存期的变量。 从 Visual c + + 2010，开始`auto`关键字声明从其声明中的初始化表达式中推导其类型的变量。 [/Zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制的含义`auto`关键字。  
@@ -43,5 +44,5 @@ auto declarator initializer;
   
 -   [/Zc: auto （推导变量类型）](../build/reference/zc-auto-deduce-variable-type.md)描述告知编译器的哪些定义编译器选项`auto`关键字来使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)

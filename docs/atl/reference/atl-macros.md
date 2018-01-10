@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 926340e6f221a561a74dce95ad0bff6de2abcb9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b78ca454112d05f75def6969c25669e52a8b3dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-macros"></a>ATL 宏
 若要按类别查找 ATL 宏，请参阅以下主题。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/24/2017
  [Windows 消息宏](../../atl/reference/windows-messages-macros.md)  
  将窗口消息转发。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)   
  [函数](../../atl/reference/atl-functions.md)   

@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5207b7479876cc88941397906646fbd08fa02b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f904d5f03d4c9e74123bc5be43f02178cb2e3d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana、_ismbbkana_l
 测试片假名符号，并且专门用于代码页 932。  
@@ -70,15 +71,15 @@ int _ismbbkana_l(
 ## <a name="return-value"></a>返回值  
  如果整数 `_ismbbkana` 为片假名符号，则 `c` 返回一个非零值，否则返回 0。 `_ismbbkana` 对区域设置相关的字符信息使用当前区域设置。 `_ismbbkana_l` 也是一样，只不过它使用传入的区域设置对象。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbbkana`|\<mbctype.h>|  
 |`_ismbbkana_l`|\<mbctype.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字节分类](../../c-runtime-library/byte-classification.md)   
  [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)

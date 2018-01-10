@@ -28,11 +28,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f5224064158dcbcb277524af21a0059a324fbc5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1153251c08d626d17e87b5cc58dbd9360a21309
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="translation-mode-constants"></a>翻译模式常量
 ## <a name="syntax"></a>语法  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  有关详细信息，请参阅[文本和二进制模式文件 I/O](../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文件转换](../c-runtime-library/file-translation-constants.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_open、_wopen](../c-runtime-library/reference/open-wopen.md)   
  [_pipe](../c-runtime-library/reference/pipe.md)   
  [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   

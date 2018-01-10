@@ -57,11 +57,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78ce5d768dd42c039d3b5b30a2815f72de0c7bfc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33337f0db51e81da06c193cc42cac1e5df085218
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 将字符串转换为 64 位整数。  
@@ -114,7 +115,7 @@ __int64 _wtoi64_l(
   
  `_wtoi64` 与 `_atoi64` 相同，但前者将宽字符串用作参数。  
   
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
@@ -123,7 +124,7 @@ __int64 _wtoi64_l(
 |`_tstoi64`|`_atoi64`|`_atoi64`|`_wtoi64`|  
 |`_ttoi64`|`_atoi64`|`_atoi64`|`_wtoi64`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |例程|必需的标头|  
 |--------------|---------------------|  
@@ -178,7 +179,7 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [区域设置](../../c-runtime-library/locale.md)   

@@ -21,14 +21,17 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 843b7a6e10e7814f4f922297b94b3ffe523dc0ad
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e7d192387131ff0eaa04fc366254d7f78a73dd52
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合程序集的初始化
-在 Visual Studio 2005 中之前, 编译的 Dll 与**/clr**加载时，可能不确定地死锁编译器选项; 此问题被称为混合的 DLL 加载程序锁问题。 已经从混合 DLL 加载进程中消除了几乎所有的不确定性。 但是，还有一些其他情况会导致加载程序锁定发生（肯定会发生这种情况）。 有关此问题的详细信息，请参阅 [MSDN 库](http://go.microsoft.com/fwlink/?linkid=556)中的“Mixed DLL Loading Problem（混合 DLL 加载问题）”。  
+在 Visual Studio 2005 中之前, 编译的 Dll 与**/clr**加载时，可能不确定地死锁编译器选项; 此问题被称为混合的 DLL 加载程序锁问题。 已经从混合 DLL 加载进程中消除了几乎所有的不确定性。 但是，还有一些其他情况会导致加载程序锁定发生（肯定会发生这种情况）。
   
  [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) 中的代码不能访问 CLR。 这意味着 `DllMain` 不应直接或间接调用托管函数；在 `DllMain`中不应声明或实现托管代码；并且在 `DllMain`中不应发生垃圾回收或自动库加载。  
   
@@ -130,7 +133,7 @@ CObject* op = new CObject(arg1, arg2);
   
  为方便用户处理加载程序锁，当两种版本同时出现时，链接器将选择本机实现，而不选择托管实现。  这样可以避免上述问题。  但是，由于编译器中有两个未解决的问题，所以在此发行版中此规则有两种例外情况：  
   
--   对内联函数的调用通过全局静态函数指针来实现。  这种情况特别值得注意，因为虚函数就是通过全局函数指针调用的。  例如，  
+-   对内联函数的调用通过全局静态函数指针来实现。  这种情况特别值得注意，因为虚函数就是通过全局函数指针调用的。  例如，应用于对象的  
   
 ```  
 #include "definesmyObject.h"  
@@ -251,5 +254,5 @@ Module ctor initializing based on global instance of class.
 Test called so linker does not throw away unused object.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)

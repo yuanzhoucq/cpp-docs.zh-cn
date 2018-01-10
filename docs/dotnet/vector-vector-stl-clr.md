@@ -1,32 +1,33 @@
 ---
-title: "vector::vector (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::vector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector 成员 [STL/CLR]"
+title: "vector:: vector (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::vector
+dev_langs: C++
+helpviewer_keywords: vector member [STL/CLR]
 ms.assetid: a0b5e807-1ef2-422b-b772-1f96cd62fb51
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a321e18c9fc921e1d88961b4f282c29917fa7962
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# vector::vector (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorvector-stlclr"></a>vector::vector (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 vector();  
@@ -39,52 +40,52 @@ template<typename InIt>
 vector(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  count  
  要插入的元素数。  
   
- first  
- 插入范围的开头。  
+ 第一个  
+ 要插入的范围开始处。  
   
  last  
- 插入范围的末尾。  
+ 要插入的范围的末尾。  
   
- right  
+ 右  
  要插入的对象或范围。  
   
  val  
  要插入的元素的值。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `vector();`  
   
- 初始化控制序列的元素。  可以使用它来指定空的初始序列控制。  
+ 初始化受控的序列不包含任何元素。 用于指定空的初始受控的序列。  
   
  构造函数：  
   
  `vector(vector<Value>% right);`  
   
- 初始化与序列 `[``right``.``(),` `right``.``())`的控制。序列[vector::end](../dotnet/vector-end-stl-clr.md)[vector::begin](../dotnet/vector-begin-stl-clr.md) 将它指定为复制顺序控制是由向量对象 `right`的初始序列控制。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)。 用于指定的初始受控的序列的向量对象所控制的序列副本`right`。  
   
  构造函数：  
   
  `vector(vector<Value>^ right);`  
   
- 初始化与序列 `[``right``->``(),` `right``->``())`的控制。序列[vector::end](../dotnet/vector-end-stl-clr.md)[vector::begin](../dotnet/vector-begin-stl-clr.md) 将它指定为复制顺序控制是由向量对象 `right`的初始序列控制。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)。 用于指定是由其句柄的向量对象控制的序列的副本的初始受控的序列`right`。  
   
  构造函数：  
   
  `explicit vector(size_type count);`  
   
- 初始化 `count` 的序列元素控制每个使用 `value_type()`值。  使用它填充元素的容器具有的所有默认值。  
+ 初始化受控的序列与`count`元素每个值`value_type()`。 你使用它来填充容器元素与所有具有默认值。  
   
  构造函数：  
   
  `vector(size_type count, value_type val);`  
   
- 初始化 `count` 的序列元素控制每个使用 `val`值。  使用它填充元素的容器具有的所有相同的默认值。  
+ 初始化受控的序列与`count`元素每个值`val`。 你使用它来填充容器元素与所有具有相同的值。  
   
  构造函数：  
   
@@ -92,15 +93,15 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `vector(InIt first, InIt last);`  
   
- 初始化与序列 `[``first``,` `)`的控制。序列`last` 使用会使控制序列复制另一个序列。  
+ 初始化受控的序列与序列 [`first`， `last`)。 你可以使用它以使另一个序列的副本的受控的序列。  
   
  构造函数：  
   
  `vector(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- 初始化枚举数指定的顺序控制序列 `right`。  使用会使控制序列描述枚举器副本另一个序列。  
+ 初始化与枚举器指定序列的受控的序列`right`。 你可以使用它来使一个枚举器所描述的另一个序列的副本的受控的序列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_construct.cpp   
@@ -156,20 +157,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## 要求  
- **标头:** \<cliext\/vector\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::assign](../dotnet/vector-assign-stl-clr.md)   
- [vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)   
- [vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)   
+ [vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)   
+ [vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)

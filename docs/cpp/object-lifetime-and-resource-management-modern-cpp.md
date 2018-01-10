@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0da7872ab6a93b737bf402ded085a4fb18551798
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e2b48630fab9d27bf5db442617a5184bd26de5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>对象生存期和资源管理（现代 C++）
 与托管语言不同，C++ 没有垃圾回收 (GC)，垃圾回收将在程序运行时自动释放不再使用的内存资源。 在 C++ 中，资源管理直接与对象生存期相关。 本文档描述影响 C++ 中对象生存期的因素以及如何管理对象生存期。  
@@ -90,7 +91,7 @@ void functionUsingWidget () {
   
  慎用静态生存期（全局静态、函数全局静态），因为可能出现问题。 当全局对象的构造函数引发异常时，会发生什么情况？ 通常，应用程序的故障出在难以调试的方式。 构造顺序是静态生存期对象的问题，并且不是并发安全的。 不仅对象构造是个问题，析构顺序可能会很复杂，特别是涉及多形性时。 即使对象或变量不是多形性的，并且没有复杂的构造/销毁顺序，仍然存在线程安全并发问题。 在没有线程本地存储、资源锁定和其他特殊预防措施的情况下，多线程应用程序无法安全地修改静态对象的数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)

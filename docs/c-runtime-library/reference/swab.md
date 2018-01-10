@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42515208c2c94e28ee5d6a5fab586d4ab747cc6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swab"></a>_swab
 交换字节。  
@@ -74,12 +75,12 @@ void _swab(
 ## <a name="remarks"></a>备注  
  如果 `n` 值为偶数，`_swab` 函数将从 `n` 复制 `src` 个字节，交换每对相邻的字节，并将结果存储在 `dest` 上。 如果 `n` 为奇数，则 `_swab` 复制并交换 `src` 的前 `n-1` 字节，而并不复制最后一个字节。 `_swab` 函数通常用于准备要传输到使用不同的字节顺序的计算机的二进制数据。  
   
-## <a name="requirements"></a>要求  
-|例程|必需的标头|  
+## <a name="requirements"></a>惠?  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_swab`|C：\<stdlib.h> C++：\<cstdlib> 或 \<stdlib.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
 ```C 
@@ -107,5 +108,5 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)

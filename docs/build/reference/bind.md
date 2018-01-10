@@ -1,44 +1,44 @@
 ---
-title: "/BIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/bind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/BIND editbin 选项"
-  - "BIND editbin 选项"
-  - "-BIND editbin 选项"
-  - "入口点"
-  - "入口点, 地址"
-  - "导入地址表"
+title: "-BIND |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /bind
+dev_langs: C++
+helpviewer_keywords:
+- -BIND editbin option
+- entry points, addresses
+- BIND editbin option
+- entry points
+- /BIND editbin option
+- import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 50f2f1856b4718af8e87728a79511d9b18654efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /BIND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bind"></a>/BIND
 ```  
 /BIND[:PATH=path]  
 ```  
   
-## 备注  
- 此选项在导入地址表中为可执行文件或 DLL 设置入口点地址。  使用此选项可减少程序加载时间。  
+## <a name="remarks"></a>备注  
+ 此选项可执行文件或 DLL 的导入地址表中设置的入口点的地址。 使用此选项以降低程序的加载时间。  
   
- 在 EDITBIN 命令行的 *files* 参数中指定程序的可执行文件和 DLL。  \/BIND 的可选 *path* 参数指定由指定文件使用的 DLL 的位置。  用分号 \(**;**\) 分隔多个目录。  如果没有指定 *path* 参数，则 EDITBIN 将搜索 PATH 环境变量中指定的目录。  如果指定了 *path* 参数，则 EDITBIN 将忽略 PATH 变量。  
+ 指定的程序的可执行文件和 Dll 中的*文件*EDITBIN 命令行上的自变量。 可选*路径*/BIND 自变量指定的位置指定的文件使用的 Dll。 使用分号分隔多个目录 (**;**)。 如果*路径*未指定，则 EDITBIN 搜索在 PATH 环境变量中指定的目录。 如果*路径*EDITBIN 忽略 PATH 变量的指定。  
   
- 默认情况下，程序加载程序在加载程序时设置入口点地址。  此进程所需的时间因程序中引用的 DLL 数和入口点数而异。  如果已经用 \/BIND 修改了程序，并且可执行文件的基址及其 DLL 与已加载的 DLL 不冲突，则操作系统不需要设置这些地址。  如果文件的基址设置得不正确，操作系统将重新定位程序的 DLL 并重新计算入口点地址，而这会增加程序的加载时间。  
+ 默认情况下，程序加载程序加载程序时设置入口点的地址。 此过程所用的时间会有所不同，具体取决于 Dll 的数目和引用在程序中的入口点数目。 如果某个程序修改用 /BIND，并且基址的可执行文件和其 Dll 不与已经加载的 Dll 冲突，则不需要设置这些地址操作系统。 不正确地基于文件的情况下，操作系统将程序的 Dll，并重新计算的入口点地址，这将添加到程序的加载时间。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

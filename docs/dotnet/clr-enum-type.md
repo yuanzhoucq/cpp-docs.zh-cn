@@ -17,16 +17,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 154904eb201f39852b57f253b97fba864084381a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ad82c1d867c511121cd024f2affd5df98b4642bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-enum-type"></a>CLR 枚举类型
 声明和行为的枚举已从更改托管扩展的 c + + 为 Visual c + +。  
   
- 托管扩展枚举声明前都附有`__value`关键字。 本指南旨在从该类派生自的 CLR 枚举区分本机枚举`System::ValueType`，同时建议类似的功能。 例如：  
+ 托管扩展枚举声明前都附有`__value`关键字。 本指南旨在从该类派生自的 CLR 枚举区分本机枚举`System::ValueType`，同时建议类似的功能。 例如:  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -177,6 +180,6 @@ public:
   
  与 Visual c + + 枚举中，已不再封装类内部枚举任何明显的好处。 实际上，如果你看一下`System`命名空间，你将看到该枚举、 类和接口都存在同一声明空间。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [值类型和它们的行为 (C + + /cli CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [枚举类](../windows/enum-class-cpp-component-extensions.md)

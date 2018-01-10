@@ -1,32 +1,33 @@
 ---
-title: "CDynamicStringAccessor 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicStringAccessor 类"
+title: "CDynamicStringAccessor 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CDynamicStringAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6c24e6eaac83d72f8710b039b312f40517fd7e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
 使您可以在不知道数据库架构（数据库的基础结构）的情况下访问数据源。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,30 +35,30 @@ caps.handback.revision: 10
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|恢复检索指定列数据为字符串。|  
-|[设置字符串](../../data/oledb/cdynamicstringaccessor-setstring.md)|设置指定列数据为字符串。|  
+|[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|将指定列数据作为字符串检索。|  
+|[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|将指定列数据设置为字符串。|  
   
-## 备注  
- [](../../data/oledb/cdynamicaccessor-class.md "CDynamicAccessor Class")  `请求数据以由提供程序报告的本机格式，而 CDynamicStringAccessor` 则请求提供程序以字符串数据形式获取在数据存储区中存取的所有数据。  这对于不需要计算数据存储区中的值的简单任务（如显示或打印数据存储区的内容）很有用。  
+## <a name="remarks"></a>备注  
+ 虽然[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)请求中提供程序，报告的本机格式数据`CDynamicStringAccessor`请求提供程序获取访问从数据存储区作为字符串数据的所有数据。 这是对于不需要计算的数据存储，例如显示或打印数据存储区的内容中的值的简单任务特别有用。  
   
- 数据存储区中数据的本机类型并不重要；只要提供程序支持数据转换，它会提供有关字符串格式的数据。  如果提供程序不支持从本机数据类型转换为字符串（不是公共的\)，请求的调用将返回 **DB\_S\_ERRORSOCCURED**成功值，并且，相应列的状态将指示 **DBSTATUS\_E\_CANTCONVERTVALUE**的转换问题。  
+ 数据存储中列数据的本机类型并不重要；只要提供程序可支持数据转换，它就将提供字符串格式的数据。 如果提供程序不支持从本机数据类型转换为字符串 （这是不常见），则请求调用将返回成功值**DB_S_ERRORSOCCURED**，并将相应的列的状态指示转换问题**DBSTATUS_E_CANTCONVERTVALUE**。  
   
- 使用 `CDynamicStringAccessor` 方法获取列信息。  使用该列信息在运行时动态创建访问器。  
+ 使用`CDynamicStringAccessor`方法以获取列信息。 此列信息用于在运行时动态创建取值函数。  
   
- 该列信息存储在由此类创建并管理的缓冲区中。  使用 [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) 从此缓冲区中获取数据，或使用 [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md) 将数据存储到此缓冲区中。  
+ 列信息存储在缓冲区创建和管理此类。 获取数据缓冲区使用[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)，或将其存储到缓冲区使用[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)。  
   
- 讨论并使用有关实例的动态访问器类，请参见 [使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。  
+ 有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。  
   
-## 要求  
- **标头:** atldbcli.h  
+## <a name="requirements"></a>惠?  
+ **标头**：atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 类](../../data/oledb/caccessor-class.md)   

@@ -1,28 +1,29 @@
 ---
-title: "MxCsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "MxCsr |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4f3c229d-0862-4733-acc7-9ed7a0b870ce
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7794cea8906440c0adca94791d08e3ced6af747e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# MxCsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-寄存器状态还包括 MxCsr。  调用约定将此寄存器分为易失部分和非易失部分。  易失部分包含 6 种状态标志 MXCSR\[0:5\]，而寄存器的其余部分 MXCSR\[6:15\] 被视为非易失部分。  
+# <a name="mxcsr"></a>MxCsr
+注册状态还包括 MxCsr。 调用约定易失性的部分和非易失性部分中划分此注册。 易失的部分包含的 6 状态标志，MXCSR [0:5]，而的寄存器，MXCSR [6:15]，其余部分被视为非易失性。  
   
- 在开始执行程序时，非易失部分被设置为下列标准值：  
+ 在程序开始执行时，非易失性的部分被设置为以下的标准值：  
   
 ```  
 MXCSR[6]         : Denormals are zeros - 0  
@@ -31,15 +32,15 @@ MXCSR[13:14]   : Rounding  control - 0 (round to nearest)
 MXCSR[15]      : Flush to zero for masked underflow - 0 (off)  
 ```  
   
- 修改 MXCSR 中任何非易失字段的被调用方在将这些字段返回给其调用方之前必须还原它们。  此外，已修改其中任何字段的调用方在调用被调用方之前必须将它们还原为其标准值，除非依照约定被调用方需要修改后的值。  
+ 修改任何 MXCSR 中的非易失字段被调用方必须返回到其调用方之前对它们进行还原。 此外，已修改这些字段的任何调用方必须将它们还原为其标准的值在调用被调用方，除非依照约定被调用方需要修改后的值之前。  
   
- 对于控制标志的非易失性规则有两个例外：  
+ 有两个例外的非易失的规则的控制标志：  
   
--   在函数中，给定函数的认可目的是修改非易失 MxCsr 标志。  
+-   在函数中的给定的函数有案可稽的目的是修改非易失性 MxCsr 其中标志。  
   
--   如果已经证明，违反这些规则产生的程序（的行为）与未违反这些规则产生的程序（的行为）相同（例如通过分析整个程序）。  
+-   如果已经证明更正这些规则的冲突导致程序行为/意味着其中这些规则未违反，例如，通过全程序分析的程序相同。  
   
- 无法跨函数边界假设 MXCSR 的易失部分的状态，除非在函数的文档中特别说明。  
+ 除非专门函数的文档中所述，可以跨函数边界，MXCSR 的易失性部分的状态不进行任何假设。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [调用约定](../build/calling-convention.md)

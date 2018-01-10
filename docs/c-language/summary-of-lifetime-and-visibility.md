@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee45ec7a2a842cc45c01c0e6f43ab49ba55aa3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 下表是大多数标识符的生存期和可见性特征的摘要。 前三列提供了定义生存期和可见性的特性。 具有前三列提供的特性的标识符具有在第四和第五列中显示的生存期和可见性。 但是，该表未涵盖所有可能的情况。 有关详细信息，请参考[存储类](../c-language/c-storage-classes.md)。  
@@ -73,5 +74,5 @@ int main()  // main function defined at external level
 ### <a name="comments"></a>注释  
  在此示例中，有四个级别的可见性：外部级别和三个块级别。 值将输出到屏幕中，如每个语句后面的注释中所述。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生存期、范围、可见性和链接](../c-language/lifetime-scope-visibility-and-linkage.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39ed1531be553a66f22ac8b93e898a91cf5006e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 407ed0c63dce8e350c24ac5f260876fb6ab47576
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 扩展 Dll： 概述
 MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可重用类的 DLL。 MFC 扩展 Dll 是使用 MFC （也称为 MFC 的共享版本） 的动态链接库版本生成的。 仅 MFC 可执行文件 （应用程序或 MFC 的规则 Dll） 使用共享版本的 MFC 生成可以使用 MFC 扩展 DLL。 MFC 扩展 DLL，可以从 MFC 派生新的自定义类，然后提供此扩展的版本的 MFC 应用程序调用 DLL。  
@@ -52,5 +53,5 @@ MFC 扩展 DLL 是通常实现从现有的 Microsoft 基础类库类派生的可
   
 -   [创建 MFC DLL](../mfc/reference/mfc-dll-wizard.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DLL 的类型](../build/kinds-of-dlls.md)

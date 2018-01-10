@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd09e1566a6f53244d420387870a03b0b34f8fb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4f0a0ee77b13d6e5231d002cb444ac5a7847f3d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 使用者和提供程序
 OLE DB 体系结构使用的模型使用者和提供程序。 使用者发出数据请求。 一个提供程序通过将数据放在以表格格式并将其返回给使用者响应这些请求。 必须提供程序中实现任何使用者可以进行的调用。  
@@ -34,6 +37,6 @@ OLE DB 体系结构使用的模型使用者和提供程序。 使用者发出数
   
  OLE DB 避免条款客户端和服务器，因为这些角色执行不总是有意义，特别是在 n 层的情况。 因为使用者可能是上一层中提供另一个组件的组件，无法调用它的客户端组件会引起混乱。 此外，提供程序有时更像与服务器的数据库驱动程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 编程](../../data/oledb/ole-db-programming.md)   
  [OLE DB 编程概述](../../data/oledb/ole-db-programming-overview.md)

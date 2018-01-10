@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd4d90d50ecfe2514b53df6b0137caa866feeea3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d09e110fd428b13e501647d97a0878df0e9392a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-and-wide-streams"></a>字节和宽流
 字节流将文件视作一个字节序列。 在程序中，字节流是相同的字节序列。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
  在宽流中进行定位会受到与文本流相同的限制。 此外，文件位置指示器可能必须处理依赖于状态的编码。 通常，它包含流内的字节偏移量和 `mbstate_t` 类型的对象。 因此，获取宽流中的文件位置的唯一可靠方法是调用 [fgetpos](../c-runtime-library/reference/fgetpos.md)，并且还原以这种方法获得的位置的唯一可靠方法是调用 [fsetpos](../c-runtime-library/reference/fsetpos.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件和流](../c-runtime-library/files-and-streams.md)   
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

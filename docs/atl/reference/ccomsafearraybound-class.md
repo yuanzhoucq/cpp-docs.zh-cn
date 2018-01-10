@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c52e429804fdc3eb84ca14005bbc65e00603a4c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4de823b4cdb2d7926b2a9d640b2e8f7352e389fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 类
 此类是包装器[SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d)结构。  
@@ -61,7 +62,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
   
  **标头：** atlsafe.h  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsafe.h  
   
 ##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
@@ -171,5 +172,5 @@ LONG SetLowerBound(LONG lLowerBound) throw();
   
  上限取决于元素和下限值的数目。 例如，如果下限为 0 且元素的数目为 10，将自动为 9 设置上限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

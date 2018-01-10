@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94940b15e185866d8f24a20c417e730c52b8502c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>__alignof 运算符
 C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式（以字节为单位）。 为实现最大的可移植性，应使用 alignof 运算符，而不是特定于 Microsoft 的 __alignof 运算符。  
@@ -46,9 +47,9 @@ C++11 引入 `alignof` 运算符，该运算符返回指定类型的对齐方式
 ```  
   
 ## <a name="remarks"></a>备注  
- 例如:   
+ 例如:  
   
-|Expression|值|  
+|表达式|“值”|  
 |----------------|-----------|  
 |**__alignof (char)**|1|  
 |**__alignof （短）**|2|  
@@ -101,6 +102,6 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [关键字](../cpp/keywords-cpp.md)

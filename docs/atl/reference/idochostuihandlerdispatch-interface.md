@@ -4,48 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
 - atlbase/ATL::IDocHostUIHandlerDispatch
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDocHostUIHandlerDispatch interface
+dev_langs: C++
+helpviewer_keywords: IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 8232df949d3bdcbaab16af1802d7275a9a8642f3
-ms.openlocfilehash: a8765f5191ea2101dc20985e8112e3e06ccd6da0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6fbd91deb1d80c49dd403e8e08cc50f5fd8c8ec3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 接口
 一个指向的 Microsoft HTML 分析和呈现引擎接口。  
   
 > [!IMPORTANT]
->  该类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -81,7 +64,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ## <a name="remarks"></a>备注  
  主机可以替换菜单、 工具栏和上下文菜单和所使用的 Microsoft HTML 分析呈现引擎 (MSHTML) 通过实现此接口。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  此接口的定义是 IDL 或 c + +，可用的如下所示。  
   
 |定义类型|文件|  
@@ -89,9 +72,8 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h （也包括在 ATLBase.h）|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
-
 
 
 

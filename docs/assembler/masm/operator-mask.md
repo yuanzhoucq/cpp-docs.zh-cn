@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9a7cb7ca2504e8f8735c67e1e59ba122d3ae59a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24bfd233c0a92ae954a3f5095e680b6e702705b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-mask"></a>运算符 MASK
 返回的位掩码顺序中的位*recordfieldname*或*记录*设置并清除所有其他位。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
 MASK {recordfieldname | record}  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符参考](../../assembler/masm/operators-reference.md)

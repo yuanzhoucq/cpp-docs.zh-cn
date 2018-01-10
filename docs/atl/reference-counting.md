@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be6aff46df500a55665f85f6f462514985885b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-counting"></a>引用计数
 COM 本身不会自动尝试从内存中移除一个对象，当它认为不再使用对象。 相反，该对象的程序员必须删除未使用的对象。 程序员确定是否可以移除一个对象基于引用计数。  
@@ -41,7 +42,7 @@ COM 本身不会自动尝试从内存中移除一个对象，当它认为不再�
 > [!NOTE]
 >  当`CComObject`-派生的对象使用构造**新**运算符，引用计数为 0。 因此，调用`AddRef`必须在成功创建后进行`CComObject`-派生对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [COM 简介](../atl/introduction-to-com.md)   
  [管理通过引用计数对象生存期](http://msdn.microsoft.com/library/windows/desktop/ms687260)
 

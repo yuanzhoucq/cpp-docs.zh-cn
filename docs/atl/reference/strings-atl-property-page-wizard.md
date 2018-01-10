@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5815222954ac34eca1c4ac7797eaca63705ee11d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a03d906fc28896b69023392fbb8de8a0035a2e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strings-atl-property-page-wizard"></a>字符串，ATL 属性页向导
 提供与属性页关联的文本。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
  **帮助文件**  
  设置描述如何使用属性页的帮助文件的名称。 此名称不应包含路径。 当用户按**帮助**，框架将在 CLSID 下的属性页注册表项中 HelpDir 键的值中指定的目录中打开帮助文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 属性页向导](../../atl/reference/atl-property-page-wizard.md)   
  [选项，ATL 属性页向导](../../atl/reference/options-atl-property-page-wizard.md)
 

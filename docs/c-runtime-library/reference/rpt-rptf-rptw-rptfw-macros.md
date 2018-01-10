@@ -97,11 +97,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 宏
 通过生成调试报告跟踪应用程序的进程（仅限调试版本）。 请注意，  *n* 指定中的参数数目`args`和可以是 0、 1、 2、 3、 4 或 5。  
@@ -167,7 +168,7 @@ _RPTFWn(
   
  另外还有其他两个生成调试报告的宏： [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏，但仅在其表达式参数计算结果为 FALSE 时生成报告； [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 宏，与 `_ASSERT` 非常类似，但会在生成的报告中包含失败的表达式。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |宏|必需的标头|  
 |-----------|---------------------|  
@@ -176,7 +177,7 @@ _RPTFWn(
 |`_RPTW` 宏|\<crtdbg.h>|  
 |`_RPTFW` 宏|\<crtdbg.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  仅限 [C 运行时库](../../c-runtime-library/crt-library-features.md)的调试版本。  
@@ -186,5 +187,5 @@ _RPTFWn(
 ## <a name="example"></a>示例  
  请参阅 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主题中的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调试例程](../../c-runtime-library/debug-routines.md)

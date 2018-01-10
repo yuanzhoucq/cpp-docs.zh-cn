@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a81e289f5496393966109cd7b3940e55918cb29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4e53bbed704b0acb1ad613bb05a0653ea305ba2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eof"></a>_eof
 测试文件尾 (EOF)。  
@@ -62,13 +63,13 @@ int _eof(
 ## <a name="remarks"></a>备注  
  `_eof` 函数确定是否已到达与 `fd` 关联的文件的结尾。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|---------------------|  
 |`_eof`|\<io.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -122,7 +123,7 @@ This file contains some text.
 Number of bytes read = 29  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误处理](../../c-runtime-library/error-handling-crt.md)   
  [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   

@@ -17,18 +17,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a76b9505d11f17848232c69650c8e523bad91c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15c52d48359210a21b23caa72afee7e2a3bcd8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binary-operators"></a>二元运算符
 下表显示可重载的运算符的列表。  
   
 ### <a name="redefinable-binary-operators"></a>可重新定义的二进制运算符  
   
-|运算符|名称|  
+|运算符|name|  
 |--------------|----------|  
 |**，**|逗号|  
 |`!=`|不相等|  
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  对二元运算符的返回类型没有限制；但是，大多数用户定义的二元运算符将返回类类型或对类类型的引用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符重载](../cpp/operator-overloading.md)

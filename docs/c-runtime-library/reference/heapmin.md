@@ -37,11 +37,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1318e8d18ddeb5031efdf3066f9fa3020c8e9afd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a43374b9e4453bf1584ffb4d33c6b8b9a1c8acf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapmin"></a>_heapmin
 将未使用的堆内存释放到操作系统。  
@@ -60,15 +61,15 @@ int _heapmin( void );
 ## <a name="remarks"></a>备注  
  `_heapmin` 函数通过将未使用的堆内存释放到操作系统来最小化堆。 如果操作系统不支持`_heapmin`（例如，Windows 98），该函数将返回-1 并将设置`errno`到`ENOSYS`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [内存分配](../../c-runtime-library/memory-allocation.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [_heapadd](../../c-runtime-library/heapadd.md)   
