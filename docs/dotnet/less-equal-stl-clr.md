@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec26c1a09c39c9f7a06b70252b122eb7ff56f2b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f0ecc202e1a83f0f32b0febef488bb1979cccb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lessequal-stlclr"></a>less_equal (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true 仅第一个参数是否小于或等于第二个。 使用它指定根据其自变量类型的函数对象。  
@@ -120,10 +123,10 @@ int main()
 0 1  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [greater (STL/CLR)](../dotnet/greater-stl-clr.md)

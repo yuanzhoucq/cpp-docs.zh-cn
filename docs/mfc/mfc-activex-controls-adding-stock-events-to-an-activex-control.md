@@ -53,11 +53,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e3226618c645a1f96c776a5aef5fbbf55f30bfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控件：向 ActiveX 控件添加常用事件
 常用事件不同于自定义事件，因为它们自动触发由类[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl`包含激发事件导致常见操作的预定义的成员函数。 实现的一些常见操作`COleControl`纳入单-和当时-clicks 上的控件、 键盘事件和更改鼠标按钮的状态。 常用事件的事件映射条目始终前面带有**EVENT_STOCK**前缀。  
@@ -67,11 +68,11 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="stock-events"></a>常用事件  
   
-|Event|触发函数|注释|  
+|事件|触发函数|注释|  
 |-----------|---------------------|--------------|  
 |单击|**void FireClick （)**|当控件捕获鼠标，任何激发**BUTTONUP**接收 （左、 中间，或向右） 的消息，并且在控件上释放按钮。 在此事件之前发生的 stock MouseDown 和 MouseUp 事件。<br /><br /> 事件映射条目： **EVENT_STOCK_CLICK （)**|  
 |DblClick|**void FireDblClick （)**|时，单击与类似但激发**BUTTONDBLCLK**接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_DBLCLICK （)**|  
-|错误|**void FireError (SCODE***scode* **，LPCSTR** `lpszDescription` **，UINT**`nHelpID`**= 0)** |在范围之外的方法调用或属性访问 ActiveX 控件内发生错误时激发。<br /><br /> 事件映射条目： **EVENT_STOCK_ERROREVENT （)**|  
+|Error|**void FireError (SCODE***scode* **，LPCSTR** `lpszDescription` **，UINT**`nHelpID`**= 0)** |在范围之外的方法调用或属性访问 ActiveX 控件内发生错误时激发。<br /><br /> 事件映射条目： **EVENT_STOCK_ERROREVENT （)**|  
 |KeyDown|**void FireKeyDown (短**`nChar` **，short**`nShiftState`**)** |时激发`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYDOWN （)**|  
 |KeyPress|**void FireKeyPress (短\***`pnChar`**)** |时激发`WM_CHAR`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYPRESS （)**|  
 |KeyUp|**void FireKeyUp (短**`nChar` **，short**`nShiftState`**)** |时激发`WM_SYSKEYUP`或`WM_KEYUP`接收消息。<br /><br /> 事件映射条目： **EVENT_STOCK_KEYUP （)**|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 10/24/2017
   
  此行将 KeyPress 事件与其标准的调度 ID 相关联，并允许容器后，可以预计的 KeyPress 事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)   
  [COleControl 类](../mfc/reference/colecontrol-class.md)

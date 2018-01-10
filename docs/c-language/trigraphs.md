@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a480a38411536266c8cd4c23f8b29190550d3444
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d96088102cafe1b3bbdb7222cec33fc313774f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trigraphs"></a>三字符组
 C 源程序的源字符集包含在 7 位 ASCII 字符集中，但它是 ISO 646-1983 固定语言代码集的超集。 三元组序列仅允许使用 ISO（国际标准组织）固定语言代码集编写 C 程序。 三元组是三字符序列（由两个连续问号引入），编译器会将它替换为其相应的标点字符。 可以将 C 源文件中的三元组与不包含某些标点字符的方便图形表示形式的字符集一起使用。  
@@ -71,6 +72,6 @@ printf( "What?\?!\n" );
   
  在此 `printf` 语句中，第二个问号的前面的反斜杠转义符可防止将 `??!` 错误解释为三元组。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [/Zc: trigraphs （Trigraphs 替换）](../build/reference/zc-trigraphs-trigraphs-substitution.md)   
  [C 标识符](../c-language/c-identifiers.md)

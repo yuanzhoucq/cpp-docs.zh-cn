@@ -149,11 +149,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d37edf7f526104fa0bb9333daebeba975e4076d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbb8b5b30f1666735fc4eebca0c1d0b335c1986b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmap-class"></a>unordered_map 类
 此模板类描述用于控制 `std::pair<const Key, Ty>` 类型的变长元素序列的对象。 序列由哈希函数弱排序，哈希函数将此序列分区到称为存储桶的有序序列集中。 在每个存储桶中，比较函数将确定任一元素对是否具有等效顺序。 每个元素存储两个对象，包括一个排序键和一个值。 序列以允许查找、插入和移除任意元素的方式表示，并包含与序列中的元素数量无关的多个操作（常量时间），至少在所有存储桶长度大致相等时如此。 在最坏情况下，当所有元素位于一个存储桶中时，操作数量与序列中的元素数量成比例（线性时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。  
@@ -192,7 +193,7 @@ class unordered_map;
 |[const_reference](#const_reference)|元素的常量引用的类型。|  
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|  
 |[hasher](#hasher)|哈希函数的类型。|  
-|[iterator](#iterator)|受控序列的迭代器的类型。|  
+|[Iterator](#iterator)|受控序列的迭代器的类型。|  
 |[key_equal](#key_equal)|比较函数的类型。|  
 |[key_type](#key_type)|排序键的类型。|  
 |[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|  
@@ -249,7 +250,7 @@ class unordered_map;
   
  对象通过 [unordered_map::allocator_type](#allocator_type) 类型的存储分配器对象为其控制的序列分配并释放存储。 此分配器对象必须与 `allocator` 模板类的对象的外部接口相同。 请注意，分配容器对象时不会复制存储的分配器对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<unordered_map>  
   
  **命名空间：** std  
@@ -262,7 +263,7 @@ typedef Alloc allocator_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Alloc`的同义词。  
+ 该类型是模板参数 `Alloc` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -303,7 +304,7 @@ const Ty& at(const Key& key) const;
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`key`|要查找的键值。|  
   
 ### <a name="return-value"></a>返回值  
@@ -608,7 +609,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>备注  
  由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
+ 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -1228,7 +1229,7 @@ size_type erase(const key_type& Key);
  要移除的元素的关键值。  
   
 ### <a name="return-value"></a>返回值  
- 对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为映射末尾的元素。  
+ 对于前两个成员函数，则为双向迭代器，它指定已删除的任何元素之外留存的第一个元素，如果此类元素不存在，则为 map 末尾的元素。  
   
  对于第三个成员函数，返回已从 unordered_map 中删除的元素数目。  
   
@@ -1375,7 +1376,7 @@ typedef Hash hasher;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Hash`的同义词。  
+ 该类型是模板参数 `Hash` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1564,7 +1565,7 @@ typedef Pred key_equal;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Pred`的同义词。  
+ 该类型是模板参数 `Pred` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1603,7 +1604,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Key`的同义词。  
+ 该类型是模板参数 `Key` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1790,7 +1791,7 @@ typedef Ty mapped_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Ty`的同义词。  
+ 该类型是模板参数 `Ty` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -2790,9 +2791,9 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<unordered_map>](../standard-library/unordered-map.md)   
  [容器](../cpp/containers-modern-cpp.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

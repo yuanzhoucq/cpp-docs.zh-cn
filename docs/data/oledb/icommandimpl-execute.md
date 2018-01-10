@@ -1,33 +1,35 @@
 ---
-title: "ICommandImpl::Execute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::Execute"
-  - "ICommandImpl.Execute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Execute 方法"
+title: "Icommandimpl:: Execute |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::Execute
+- ICommandImpl.Execute
+dev_langs: C++
+helpviewer_keywords: Execute method
 ms.assetid: 033e0d4e-256b-4eed-9215-70e0bebb768c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 965a344b55b6d290f112970ff357f383fefcd630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl::Execute
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-执行命令。  
+# <a name="icommandimplexecute"></a>ICommandImpl::Execute
+执行的命令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -40,17 +42,17 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 参数  
- 参见[ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) ，在 *OLE DB Programmer's Reference.*中。  
+#### <a name="parameters"></a>参数  
+ 请参阅[ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx)中*OLE DB 程序员参考*。  
   
-## 备注  
- 请求的传出接口是从行集合获取此函数创建的对象的接口。  
+## <a name="remarks"></a>备注  
+ 请求的传出接口将获取此函数创建的行集对象的接口。  
   
- **执行** 调用 [CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。  重写默认的实现创建多行集或提供您自己创建的不同的行条件。  
+ **执行**调用[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 重写以创建多个行集或提供你自己的条件创建不同的行集的默认实现。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ICommandImpl 类](../../data/oledb/icommandimpl-class.md)   
  [ICommandImpl::CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77776e174b797bd323aff0a77a2f914b8ac0b0ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a20ff9e120b8e71536be6a989351df74d2e2c2e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>定义带有 dllexport 和 dllimport 的内联 C 函数
 **Microsoft 专用**  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DLL 导入和导出函数](../c-language/dll-import-and-export-functions.md)

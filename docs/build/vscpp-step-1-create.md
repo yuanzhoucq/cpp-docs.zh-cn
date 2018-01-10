@@ -1,8 +1,8 @@
 ---
-title: "步骤 1-创建一个 c + + 控制台应用程序项目 |Microsoft 文档"
+title: "创建 c + + 控制台应用程序项目 |Microsoft 文档"
 description: "安装 Visual c + + 的 Visual Studio 支持"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,23 +11,24 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f75d8fc6ec744038d57bfb7576547c9be84b7551
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: e44d9c097461b118cae72b47dff2ab15757aed64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-c-console-app-project"></a>创建 c + + 控制台应用程序项目
 
 C + + 程序员为常用的起始点"Hello，world ！" 在命令行运行的应用程序。 这是什么你将 Visual Studio 中创建在此步骤。
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>系统必备
 
-- 具有 c + + 工作负荷安装并在计算机上运行与桌面开发的 Visual Studio。 如果未尚未安装，请参阅[步骤 0-Visual Studio 中的安装 c + + 支持](../build/vscpp-step-0-installation.md)。
+- 具有 c + + 工作负荷安装并在计算机上运行与桌面开发的 Visual Studio。 如果未尚未安装，请参阅[Visual Studio 中的安装 c + + 支持](../build/vscpp-step-0-installation.md)。
 
 ## <a name="create-your-app-project"></a>创建应用程序项目
 
-Visual Studio 将使用*项目*来组织一个应用程序的代码和*解决方案*来组织你的项目。 项目包含所有选项、 配置和规则用于生成你的应用，并管理所有项目文件和任何外部文件之间的关系。 若要创建您的应用程序，首先，你将创建新项目和解决方案。
+Visual Studio 使用项目来组织应用的代码，使用解决方案来组织项目。 项目包含所有选项、 配置和规则用于生成你的应用，并管理所有项目文件和任何外部文件之间的关系。 若要创建您的应用程序，首先，你将创建新项目和解决方案。
 
 1. 在 Visual Studio 中，打开**文件**菜单，然后选择**新建 > 项目**以打开**新项目**对话框。
 
@@ -92,7 +93,7 @@ Visual studio 创建新的空代码文件，并将其打开在编辑器窗口中
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [步骤 2： 生成并运行 c + + 项目](vscpp-step-2-build.md)
+> [生成并运行 c + + 项目](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>故障排除指南
 

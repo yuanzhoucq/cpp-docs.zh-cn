@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 13420db99afa801d02306f4dd8af4104ec322bd5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 967f182451c712b46c5f2da545d2fed7ffd59bca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nonstandard-behavior"></a>非标准行为
 以下几节将列出 C++ 的 Visual C++ 实现不遵循 C++ 标准的几处地方。 下面给出的节号引用了 C++ 11 标准 (ISO/IEC 14882:2011(E)) 中的节号。  
@@ -74,7 +72,7 @@ int main() {
 ```  
   
 ## <a name="function-exception-specifiers"></a>函数异常说明符  
- 分析但不使用除 `throw()` 以外的函数异常说明符。 这不符合 ISO C++ 规范的第 15.4 节。 例如:   
+ 分析但不使用除 `throw()` 以外的函数异常说明符。 这不符合 ISO C++ 规范的第 15.4 节。 例如:  
   
 ```cpp  
 void f() throw(int); // parsed but not used  
@@ -84,7 +82,7 @@ void g() throw();    // parsed and used
  有关异常规范的详细信息，请参阅[异常规范](../cpp/exception-specifications-throw-cpp.md)。  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C + + 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual C++ 编译器对 `char` 类型强制实行该约束，但不对 `wchar_t` 类型实行。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的要求。 下面的示例将说明这一点。  
+ C + + 标准声明[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不能对应于一个有效`char_type`值。 Visual C++ 编译器对 `char` 类型强制实行该约束，但不对 `wchar_t` 类型实行。 这不符合 C++ ISO 规范的第 12.1.1 节中表 62 的需求。 下面的示例将说明这一点。  
   
 ```cpp  
 #include <iostream>  

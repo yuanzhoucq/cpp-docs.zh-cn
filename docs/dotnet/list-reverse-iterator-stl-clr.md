@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f502843c1bb97128af22dcfb0e18ee92ef0746fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 27d78fbd1679e025dedd3a6fbbde3631e00a67eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listreverseiterator-stlclr"></a>list::reverse_iterator (STL/CLR)
 受控序列的反向迭代器的类型。  
@@ -69,12 +72,12 @@ c b a
 x b a  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list:: const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)   
  [list:: const_reverse_iterator (STL/CLR)](../dotnet/list-const-reverse-iterator-stl-clr.md)   

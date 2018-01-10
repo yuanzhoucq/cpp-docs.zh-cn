@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01d200e716ce4291350584ac7e2f388cca30cedf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e9a692622d17c24d4d73b7249f70a1593bf61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-validation"></a>参数验证
 大多数安全性增强的 CRT 函数和很多已有的函数都会验证其参数。 这可能包括检指针是否为 NULL、检查整数在有效的范围内或检查枚举该值是否有效。 当发现无效参数时，将执行无效参数处理程序。  
@@ -32,6 +33,6 @@ ms.lasthandoff: 10/24/2017
   
  此行为可以通过使用函数 [_set_invalid_parameter_handler ](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 或 [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 进行更改，将无效参数处理程序设置为你自己的函数。 如果指定的函数未终止应用程序，控制权就会返回至已接收无效参数的函数处。 在 CRT 中，这些函数通常会停止函数执行，向错误代码设置 `errno`，并返回错误代码。 在很多情况下，`errno` 值和返回值都是 `EINVAL`，这指示参数无效。 有时候会返回更具体的错误代码，如作为参数传递的错误的文件指针的 `EBADF`。 有关 `errno` 的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)   
  [CRT 库功能](../c-runtime-library/crt-library-features.md)

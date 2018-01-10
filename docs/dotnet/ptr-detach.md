@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f22ac78545981c79c489a673dbf6eb1c7a24f87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 放弃的 COM 对象，返回一个指向对象的所有权。  
@@ -127,12 +130,12 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件** \<msclr\com\ptr.h >  
   
  **Namespace** msclr:: com  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::Release](../dotnet/ptr-release.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)

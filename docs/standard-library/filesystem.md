@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,21 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-包含标头 \<filesystem>，用于访问操作和检索有关路径、文件和目录的信息的类和函数。  
+包含标头 &lt;filesystem>，用于访问操作和检索有关路径、文件和目录的信息的类和函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -55,11 +39,11 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  截至 Visual Studio 2017 版本，\<experimental/filesystem> 标头尚不是 C++ 标准。 Visual C++ 2017 实现 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的最终稿标准。  
+>  自 Visual Studio 2017，发布\<文件系统 > 标头尚不是 c + + 标准。 Visual C++ 2017 实现 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的最终稿标准。  
   
  此标头支持两大类主机操作系统（即 Microsoft Windows 和 Posix）之一的文件系统。  
   
- 虽然这两种操作系统的大多数功能均相同，但本文档将介绍它们之间存在的差异。 例如：  
+ 虽然这两种操作系统的大多数功能均相同，但本文档将介绍它们之间存在的差异。 例如:  
   
 -   Windows 支持多个根名称，例如 c: 或 \\\network_name。 文件系统由树林组成，每个树都有其自己的根目录（例如 c:\ 或 \\\\network_name\\），且每个树都有其自己的当前目录，用于完善相对路径名（非绝对路径名）。  
   
@@ -73,15 +57,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   类路径的对象以本机形式存储路径名，但支持在此存储形式与多种外部形式之间进行简单转换：  
   
-    -   以 null 结尾的 char 序列，编码为操作系统偏好的形式。  
+-   以 null 结尾的 char 序列，编码为操作系统偏好的形式。  
   
-    -   以 null 结尾的 char 序列，编码为 UTF-8。  
+-   以 null 结尾的 char 序列，编码为 UTF-8。  
   
-    -   以 null 结尾的 wchar_t 序列，编码为操作系统偏好的形式。  
+-   以 null 结尾的 wchar_t 序列，编码为操作系统偏好的形式。  
   
-    -   以 null 结尾的 char16_t 序列，编码为 UTF-16。  
+-   以 null 结尾的 char16_t 序列，编码为 UTF-16。  
   
-    -   以 null 结尾的 char32_t 序列，编码为 UTF-32。  
+-   以 null 结尾的 char32_t 序列，编码为 UTF-32。  
   
  通过使用一个或多个 `codecvt` facet，按需调节这些表示形式之间的相互转换。 如果未指定特定的区域设置对象，则将从全局区域设置获取这些 facet。  
   
@@ -117,7 +101,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="classes"></a>类  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[directory_entry 类](../standard-library/directory-entry-class.md)|描述 `directory_iterator` 或 `recursive_directory_iterator` 返回的对象，并包含路径。|  
 |[directory_iterator 类](../standard-library/directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。|  
@@ -128,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="structs"></a>结构  
   
-|名称|说明|  
+|name|描述|  
 |----------|-----------------|  
 |[space_info 结构](../standard-library/space-info-structure.md)|保存有关卷的信息。|  
   
@@ -140,16 +124,15 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>枚举  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 一起使用的枚举将决定行为。|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 一起使用的枚举将决定行为。|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|为目录迭代器指定选项的枚举。|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|文件类型的枚举。|  
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

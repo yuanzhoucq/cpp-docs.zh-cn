@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4e57f320c8b207e7b1c8721ab25744cd1f128bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 03e88eaafa82e346c720810bf567d867a9cd6096
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ole-db-record-views"></a>使用 OLE DB 记录视图
 如果你想要在 MFC 应用程序中显示 OLE DB 行集数据，则应使用 MFC 类[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)。 从创建记录视图对象`COleDBRecordView`使你可以在 MFC 控件中显示数据库记录。 记录视图是直接连接到从创建的 OLE DB 行集对象的对话框窗体视图`CRowset`模板类。 获取行集对象的句柄很简单：  
@@ -40,6 +43,6 @@ CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();
   
  您可以使用与的 DDX 函数**COleDbRecordView**直接从数据库记录集获取数据并将其显示在对话框控件。 应使用**DDX_\*** 方法 (如`DDX_Text`)，而不**DDX_Field\*** 函数 (如`DDX_FieldText`) 与**COleDbRecordView**.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)   
  [COleDBRecordView 类](../../mfc/reference/coledbrecordview-class.md)

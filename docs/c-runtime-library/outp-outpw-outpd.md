@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac8f0cd386d8fece71f47b5c3d2048bead7cca1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
 按端口、字节 (`_outp`)、字 (`_outpw`) 或双字 (`_outpd`) 输出。  
@@ -92,19 +93,19 @@ unsigned long dataword
   
  由于这些函数可直接写入到 I/O 端口，因此它们无法用于 Windows NT、Windows 2000、Windows XP 和 Windows Server 2003 中的用户代码。 有关在这些操作系统中使用 I/O 端口的信息，请在 MSDN 上搜索“Win32 中的串行通信”。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_outp`|\<conio.h>|  
 |`_outpw`|\<conio.h>|  
 |`_outpd`|\<conio.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控制台和端口 I/O](../c-runtime-library/console-and-port-i-o.md)   
  [_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)

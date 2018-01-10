@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3f215fb2c7e3b86181a01d06b4b88192e7df812d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbd82957b213a88792d7dba8a7e7dc17b8b28bb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 类
 生成包含以等概率分布在每个区间中的等宽区间的离散型整数分布。  
@@ -94,7 +95,7 @@ public:
   
  属性函数 `vector<double> probabilities()` 将返回每个生成的整数的各自概率。  
   
- 有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+ 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -175,7 +176,7 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::    
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<random>  
   
  **命名空间：** std  
@@ -293,7 +294,7 @@ struct param_type {
 ### <a name="remarks"></a>备注  
  此参数包可传递给 `operator()` 以生成返回值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
 
 

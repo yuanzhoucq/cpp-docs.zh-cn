@@ -127,11 +127,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a82079e43a5c4e1bfbcb9bb339663314d4ab2a49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb546ffc35438e19bd5230d6e71db28061109bc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 用于创建使用 HTML 的对话框而不是对话框资源来实现自己的用户界面。  
@@ -239,7 +240,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
  `CDHtmlDialog`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdhtml.h  
   
 ##  <a name="ddx_dhtml_helper_macros"></a>DDX_DHtml 帮助器宏  
@@ -1389,7 +1390,7 @@ STDMETHOD(UpdateUI)(void);
 ### <a name="remarks"></a>备注  
  此成员函数是 CDHtmlDialog 的实现[IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)，如 Windows SDK 中所述。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 DHtmlExplore](../../visual-cpp-samples.md)   
  [DDX_DHtml 帮助器宏](#ddx_dhtml_helper_macros)   
  [层次结构图](../../mfc/hierarchy-chart.md)

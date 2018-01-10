@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd5ab69e0e6621324f04008c34b2a52dcbd20787
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18798941b227a5da4248b7b44179cb99e3c7d5d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simple-variable-declarations"></a>简单变量声明
 简单变量的声明（直接声明符的最简单形式）指定变量的名称和类型。 它还指定变量的存储类和数据类型。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  对于算术、结构、联合、枚举和 void 类型以及由 `typedef` 名称表示的类型，可以在声明中使用简单声明符，因为类型说明符提供了所有类型化信息。 指针、数组和函数类型需要更复杂的声明符。  
   
- 可以使用一系列由逗号 (,) 分隔的标识符来指定同一个声明中的多个变量。 声明中定义的所有变量都具有相同的基类型。 例如：  
+ 可以使用一系列由逗号 (,) 分隔的标识符来指定同一个声明中的多个变量。 声明中定义的所有变量都具有相同的基类型。 例如:  
   
 ```  
 int x, y;        /* Declares two simple variables of type int */  
@@ -63,5 +64,5 @@ unsigned long reply, flag; /* Declares two variables
   
  在此示例中，两个变量（`reply` 和 `flag`）具有 `unsigned long` 类型并包含无符号的整数值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明符和变量声明](../c-language/declarators-and-variable-declarations.md)

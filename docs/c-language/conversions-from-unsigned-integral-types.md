@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>从无符号整型的转换
 通过截断高序位将无符号整数转换为较短的无符号或带符号整数，或者通过零扩展将其转换为一个较长的无符号或带符号整数（请参阅[从无符号整型类型转换](#_clang_table_4..3)表）。  
@@ -54,7 +55,7 @@ printf_s( "%hd\n", j );   // Prints -3
 |`unsigned char`|**unsigned short**|零扩展|  
 |`unsigned char`|`unsigned long`|零扩展|  
 |`unsigned char`|**float**|转换为 long；将 long 转换为 float|  
-|`unsigned char`|**双精度**|转换为 long；将 long 转换为 double|  
+|`unsigned char`|**double**|转换为 long；将 long 转换为 double|  
 |`unsigned char`|`long double`|转换为 long；将 long 转换为 double|  
 |**unsigned short**|`char`|保留低位字节|  
 |**unsigned short**|**short**|保留位模式；高序位将成为符号位|  
@@ -62,7 +63,7 @@ printf_s( "%hd\n", j );   // Prints -3
 |**unsigned short**|`unsigned char`|保留低位字节|  
 |**unsigned short**|`unsigned long`|零扩展|  
 |**unsigned short**|**float**|转换为 long；将 long 转换为 float|  
-|**unsigned short**|**双精度**|转换为 long；将 long 转换为 double|  
+|**unsigned short**|**double**|转换为 long；将 long 转换为 double|  
 |**unsigned short**|`long double`|转换为 long；将 long 转换为 double|  
 |`unsigned long`|`char`|保留低位字节|  
 |`unsigned long`|**short**|保留低位字|  
@@ -70,7 +71,7 @@ printf_s( "%hd\n", j );   // Prints -3
 |`unsigned long`|`unsigned char`|保留低位字节|  
 |`unsigned long`|**unsigned short**|保留低位字|  
 |`unsigned long`|**float**|转换为 long；将 long 转换为 float|  
-|`unsigned long`|**双精度**|直接转换为 double|  
+|`unsigned long`|**double**|直接转换为 double|  
 |`unsigned long`|`long double`|转换为 long；将 long 转换为 double|  
   
  **Microsoft 专用**  
@@ -79,5 +80,5 @@ printf_s( "%hd\n", j );   // Prints -3
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [赋值转换](../c-language/assignment-conversions.md)

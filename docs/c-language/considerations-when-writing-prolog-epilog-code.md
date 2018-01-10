@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021fddcbc63fdfb6faf4c0a3919293046649bab5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01a153011ad0cd571762c6473f6121a55045396c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>编写 Prolog/Epilog 代码时的注意事项
 **Microsoft 专用**  
@@ -53,7 +54,7 @@ ret                          ; Return from function
 ##  <a name="_clang_the___local_size_constant"></a> __LOCAL_SIZE 常量  
  编译器提供常量 __LOCAL_SIZE 以用于函数 prolog 代码的内联汇编程序块。 此常数用于在自定义 prolog 代码中的堆栈帧上为局部变量分配空间。  
   
- 编译器确定 __LOCAL_SIZE 的值。 该值是所有用户定义的局部变量和编译器生成的临时变量的总字节数。 __LOCAL_SIZE 只能用作即时操作数；它不能在表达式中使用。 您不得更改或重新定义此常量的值。 例如:   
+ 编译器确定 __LOCAL_SIZE 的值。 该值是所有用户定义的局部变量和编译器生成的临时变量的总字节数。 __LOCAL_SIZE 只能用作即时操作数；它不能在表达式中使用。 您不得更改或重新定义此常量的值。 例如:  
   
 ```  
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay  
@@ -88,5 +89,5 @@ __declspec ( naked ) func()
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [naked 函数](../c-language/naked-functions.md)

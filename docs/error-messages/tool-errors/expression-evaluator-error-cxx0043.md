@@ -1,32 +1,32 @@
 ---
-title: "表达式计算器错误 CXX0043 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0043"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0043"
-  - "CXX0043"
+title: "表达式计算器错误 CXX0043 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0043
+dev_langs: C++
+helpviewer_keywords:
+- CXX0043
+- CAN0043
 ms.assetid: 5e5d55bb-0f3e-40e6-b3c3-d0dfb701a65c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9fd9866c1d016abebe21b7c970afb202449a7217
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 表达式计算器错误 CXX0043
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在成员函数的范围之外使用了此指针  
+# <a name="expression-evaluator-error-cxx0043"></a>表达式计算器错误 CXX0043
+此指针使用外部的成员函数  
   
- **this** 指针只能用于非静态成员函数。  
+ **这**指针仅用于非静态成员函数。  
   
- 该错误与 CAN0043 相同。
+ 此错误是与 CAN0043 相同。

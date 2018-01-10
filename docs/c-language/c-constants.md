@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8d0a98776f502e4ffc5455f3b49de10e506892c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a9b15ccc789ad370addc21a3b3079d563f7bbb1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constants"></a>C 常量
 “常量”是可以用作程序中的值的数字、字符或字符字符串。 使用常量可表示不能修改的浮点、整数、枚举或字符值。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  常量的特征是具有值和类型。 接下来三节将讨论[浮点](../c-language/c-floating-point-constants.md)、[整数](../c-language/c-integer-constants.md)和[字符常量](../c-language/c-character-constants.md)。 枚举常量将在[枚举声明](../c-language/c-enumeration-declarations.md)中介绍。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 的元素](../c-language/elements-of-c.md)

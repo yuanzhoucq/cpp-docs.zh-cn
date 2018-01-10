@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cab375ac2224ff4c3dfc8f66f84b69a5256f388f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0374ce9c2df09d61a8797190e54ad3abfc9eee6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cicos"></a>_CIcos
 计算堆栈顶部值的余弦值。  
@@ -49,9 +50,9 @@ void __cdecl _CIcos();
   
  生成的值被将被推送到堆栈顶部。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **平台：**x86  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cos、cosf、cosl、cosh、coshf、coshl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)

@@ -16,31 +16,18 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 78fac089c9b21825bfb014fe6f26776bac58bd93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4080fa1bac30ac88edca33f6de32b0a6490f4341
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-platforms-visual-c"></a>支持的平台 (Visual C++)
 
 使用 [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] 生成的应用程序可以面向各种平台，如下所示。  
   
-|操作系统|x86|x64|ARM|  
+|操作系统|x86|X64|ARM|  
 |----------------------|---------|---------|---------|  
 |Windows XP|X*|X*||  
 |[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||  
@@ -63,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 
 有关如何设置目标平台配置的信息，请参阅[如何：针对 64 位 x64 平台配置 Visual C++ 项目](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
 [入门](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)

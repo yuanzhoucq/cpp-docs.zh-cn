@@ -19,11 +19,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cf8d8728a71f268db994efdc60f4be0dc5a65a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e56e225d136fb02445eeeb398937adc075f2dae7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 对特定数据对象执行封送处理，以在托管和本机数据类型之间转换它。  
@@ -73,12 +76,12 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件：** \<msclr\marshal.h >， \<msclr\marshal_windows.h >， \<msclr\marshal_cppstd.h >，或\<msclr\marshal_atl.h >  
   
  **Namespace:** msclr::interop  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_as](../dotnet/marshal-as.md)   
  [marshal_context 类](../dotnet/marshal-context-class.md)

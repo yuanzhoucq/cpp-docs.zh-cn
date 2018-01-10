@@ -1,31 +1,32 @@
 ---
-title: "如何：测试相等性 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "相等, 测试"
+title: "如何： 测试相等性 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: equality, testing for
 ms.assetid: 9115e298-9f75-452d-bdfb-6eeb0fa0b3c6
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 19b573ca0069031cda6d7c8108d51f8bf4fa83ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：测试相等性 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在下面的示例中，将根据处理程序所指对象使用 C\+\+ 托管扩展进行相等测试。  
+# <a name="how-to-test-for-equality-ccli"></a>如何：测试相等性 (C++/CLI)
+在下面的示例中，使用 Managed Extensions for c + + 的相等性测试将基于句柄的引用。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // mcppv2_equality_test.cpp  
@@ -39,12 +40,12 @@ bool Test1() {
 }  
 ```  
   
- 此程序的 IL 演示通过调用 op\_Equality 实现返回值。  
+ 此程序 IL 显示返回的值通过使用 op_Equality 调用实现。  
   
 ```  
 IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,  
                                                                string)  
 ```  
   
-## 请参阅  
- [托管类型](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>请参阅  
+ [托管类型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

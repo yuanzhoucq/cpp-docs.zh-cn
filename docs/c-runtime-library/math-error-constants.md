@@ -34,11 +34,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 003851227d56469436f7c75396803d80052dca15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76313854bc9bb7c9a624836c47d0178978f8befd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="math-error-constants"></a>数学错误常量
 ## <a name="syntax"></a>语法  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
  如下所述，这些错误对应于 MATH.H 中定义的异常类型，并在发生数学错误后由 `_matherr` 函数返回。  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_DOMAIN`|函数的自变量位于函数域的外部。|  
 |`_OVERFLOW`|结果太大而无法在函数的返回类型中表示。|  
@@ -63,6 +64,6 @@ ms.lasthandoff: 10/24/2017
 |`_TLOSS`|发生了有效位完全丢失的情况。|  
 |`_UNDERFLOW`|结果太小而无法表示。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_matherr](../c-runtime-library/reference/matherr.md)   
  [全局常量](../c-runtime-library/global-constants.md)

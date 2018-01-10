@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65d338f642d705fec6f1a45b5e88f05c1ee55cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 442e8958b1d2201d7261242bd9cd90da29a60a62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inheritance-keywords"></a>继承关键字
 **Microsoft 专用**  
@@ -49,7 +50,7 @@ class [__virtual_inheritance] class-name;
  *类名*  
  要声明的类的名称。  
   
- C++ 允许您在类定义前声明指向类成员的指针。 例如:   
+ C++ 允许您在类定义前声明指向类成员的指针。 例如:  
   
 ```  
 class S;  
@@ -85,5 +86,5 @@ int S::*p;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)

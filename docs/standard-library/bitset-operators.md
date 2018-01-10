@@ -12,10 +12,9 @@ f1_keywords:
 - bitset/std::operator&lt;&lt;
 - bitset/std::operator^
 - bitset/std::operator|
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 运算符
 ||||  
@@ -106,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>备注  
  模板函数将 **operator<<** 重载，从而使位组不必先转换为字符串即可写出。 该模板函数有效执行以下操作：  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>示例  
   
@@ -163,7 +162,7 @@ _Istr,
  此模板函数返回字符串 `_Istr`。  
   
 ### <a name="remarks"></a>备注  
- 模板函数将 **operator>>** 重载以在位组 _ *Right* the value bitset( `str`) 中进行存储，其中 `str` 是从 `_Istr` 中提取的 [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 类型的对象。  
+ 模板函数将 **operator>>** 重载以在位组 _ *Right* the value bitset( `str`) 中进行存储，其中 `str` 是从 `_Istr` 中提取的 [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 类型的对象。  
   
  模板函数从 `_Istr` 中提取元素并将其插入位组，直至：  
   
@@ -320,7 +319,6 @@ bitset 2: 0011
 bitset 3: 0111  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<bitset>](../standard-library/bitset.md)
-
 

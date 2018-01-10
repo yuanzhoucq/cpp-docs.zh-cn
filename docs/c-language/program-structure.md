@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c177db4cb44a83492eae2719c0d44b34cd868bb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b9587cd8e681072eeeb90f4a616e522fee6dece
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="program-structure"></a>程序结构
 本节概述了 C 程序和程序执行。 还引入了对于了解 C 程序和组件来说很重要的术语和功能。 讨论的主题包括：  
@@ -38,5 +39,5 @@ ms.lasthandoff: 10/24/2017
   
  由于本节只是为了进行概述，因此讨论的主题仅包含介绍性材料。 有关更详细的解释，请参阅交叉引用信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C# 语言参考](../c-language/c-language-reference.md)

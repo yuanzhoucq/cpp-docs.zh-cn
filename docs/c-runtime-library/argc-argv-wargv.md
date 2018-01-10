@@ -27,11 +27,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbb6e0886844cda7142ee52fcb545e122c38ea8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14e1a7e98e3d152d54c1d7d3d8f47671f71129cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argc-argv-wargv"></a>__argc、__argv、__wargv
 `__argc` 全局变量是传递给程序的命令行参数的数量计数。 `__argv` 是一个指向包含程序参数的单字节字符或多字节字符字符串的数组的指针，`__wargv` 是一个指向包含程序参数的宽字符字符串的数组的指针。 这些全局变量提供了 `main` 或 `wmain` 参数。  
@@ -55,7 +56,7 @@ extern wchar_t ** __wargv;
 |---------------------|---------------------------|-----------------------|  
 |`__targv`|`__argv`|`__wargv`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |全局变量|必需的标头|  
 |---------------------|---------------------|  
@@ -63,7 +64,7 @@ extern wchar_t ** __wargv;
   
  `__argc`、`__argv` 和 `__wargv` 是 Microsoft 扩展。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局变量](../c-runtime-library/global-variables.md)   
  [main：程序启动](../cpp/main-program-startup.md)   
  [使用 wmain 代替 main](../cpp/using-wmain-instead-of-main.md)

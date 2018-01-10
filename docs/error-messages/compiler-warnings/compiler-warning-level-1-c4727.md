@@ -1,47 +1,46 @@
 ---
-title: "编译器警告（等级 1）C4727 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4727"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4727"
+title: "编译器警告 （等级 1） C4727 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4727
+dev_langs: C++
+helpviewer_keywords: C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 813c2ab18cc81c4477ae094e6c2aa771e3135b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4727
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 obj\_file\_1 和 obj\_file\_2 中找到具有相同时间戳的名为 pch\_file 的 PCH。使用第一个 PCH。  
+# <a name="compiler-warning-level-1-c4727"></a>编译器警告（等级 1）C4727
+"PCH 相同的时间戳 obj_file_1 和 obj_file_2 中找到的名为 pch_file。  使用第一个 PCH。  
   
- 如果用 **\/Yc** 编译多个 compiland，并且其中的编译器能够用相同的 .pch 时间戳标记所有的 .obj 文件，将发生 C4727。  
+ 编译与多个编译单位时发生 C4727 **/Yc**，和编译器已可以将标记所有具有相同的.pch 时间戳的.obj 文件。  
   
- 要消除此警告，请用 **\/Yc \/c** 编译一个源文件（创建 pch），并用 **\/Yu \/c** 分别编译其他的源文件（使用 pch），然后再将它们链接到一起。  
+ 若要解决，编译一个源文件**/Yc /c** （创建 pch） 和其他使用单独编译**/Yu /c** （使用 pch），然后将它们链接在一起。  
   
- 因此，如果使用了下面的选项就会生成 C4727：  
+ 因此，如果未以下并生成 C4727:  
   
- **cl \/clr \/GL a.cpp b.cpp c.cpp \/Ycstdafx.h**  
+ **cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**  
   
- 您可改用下面的选项：  
+ 你将执行以下操作改为：  
   
- **cl \/clr \/GL a.cpp \/Ycstdafx.h \/c**  
+ **cl /clr /GL a.cpp /Ycstdafx.h /c**  
   
- **cl \/clr \/GL b.cpp c.cpp \/Yustdafx.h \/link a.obj**  
+ **cl /clr /GL b.cpp c.cpp /Yustdafx.h /link a.obj**  
   
- 有关更多信息，请参见  
+ 有关详细信息，请参见  
   
--   [\/Yc（创建预编译的头文件）](../../build/reference/yc-create-precompiled-header-file.md)  
+-   [/Yc （创建预编译标头文件）](../../build/reference/yc-create-precompiled-header-file.md)  
   
--   [\/Yu（使用预编译的头文件）](../../build/reference/yu-use-precompiled-header-file.md)
+-   [/Yu （使用预编译标头文件）](../../build/reference/yu-use-precompiled-header-file.md)

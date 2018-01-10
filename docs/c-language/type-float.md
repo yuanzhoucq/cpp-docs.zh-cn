@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>float 类型
 浮点数使用 IEEE（电气和电子工程师协会）格式。 浮点类型的单精度值具有 4 个字节，包括一个符号位、一个 8 位 excess-127 二进制指数和一个 23 位尾数。 尾数表示一个介于 1.0 和 2.0 之间的数。 由于尾数的高顺序位始终为 1，因此它不是以数字形式存储的。 此表示形式为 float 类型提供了一个大约在 3.4E-38 和 3.4E+38 之间的范围。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 |类型|有效位|字节数|  
 |----------|------------------------|---------------------|  
-|浮动|6 - 7|4|  
+|float|6 - 7|4|  
 |double|15 - 16|8|  
   
  浮点变量由尾数（包含数字的值）和指数（包含数字的数量级）表示。  
@@ -89,5 +90,5 @@ f_short = f_short * f_long;
 f_longer = f_short * f_short;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本类型的存储](../c-language/storage-of-basic-types.md)

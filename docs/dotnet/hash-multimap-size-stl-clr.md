@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 成员 [STL/CLR]"
+title: "hash_multimap:: size (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 6937c980-5952-48bf-b411-81ab03b2f940
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 64a511798f59ef7329bc398e1b2d2100ae976d47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-计算元素的数量。  
+# <a name="hashmultimapsize-stlclr"></a>hash_multimap::size (STL/CLR)
+对元素数进行计数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_type size();  
 ```  
   
-## 备注  
- 成员函数返回控制序列的长度。  使用其当前确定元素的数目。控制序列。  如果您关注的是序列是否具有非零大小，请参见 [hash\_multimap::empty](../dotnet/hash-multimap-empty-stl-clr.md)`()`。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回受控序列的长度。 用于确定当前受控序列中的元素的数目。 如果你关注的只是序列是否具有非零大小，请参阅[hash_multimap:: empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)`()`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_size.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0之后清除**  
-**size\(\) \= 2 在" 2 "之后**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::empty](../dotnet/hash-multimap-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)

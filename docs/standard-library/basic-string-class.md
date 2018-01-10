@@ -127,11 +127,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c642d592b464b1a6844a8fa2e5f28b2b41467a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75779c073e50b80df717497919e0319612b1edcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstring-class"></a>basic_string 类
 由模板类 `basic_string` 的一个对象控制的序列是标准 C++ 字符串类且通常作为字符串被引用，但不应将它们与以 null 结尾的通用于 C++ 标准库的 C 样式字符串相混淆。 标准 C++ 字符串是一个容器，它可使字符串作为普通类型使用，例如，比较和连接操作、迭代器、C++ 标准库算法以及复制由类分配器管理的内存和使用它进行分配。 如需要将标准 C++ 字符串转换为以 null 结尾的 C 样式字符串，请使用 [basic_string::c_str](#c_str) 成员。  
@@ -169,7 +170,7 @@ class basic_string;
 |[const_reference](#const_reference)|提供对存储于字符串中供读取和执行 `const` 操作的 `const` 元素的引用的类型。|  
 |[const_reverse_iterator](#const_reverse_iterator)|提供可访问字符串中任何 `const` 元素的随机访问迭代器的类型。|  
 |[difference_type](#difference_type)|提供引用同一字符串中的元素的两个迭代器之间的差异的类型。|  
-|[iterator](#iterator)|提供可读取或修改字符串中任何元素的随机访问迭代器的类型。|  
+|[Iterator](#iterator)|提供可读取或修改字符串中任何元素的随机访问迭代器的类型。|  
 |[npos](#npos)|无符号整数值初始化为-1 指示"找不到"或"所有其余字符"搜索功能失败时。|  
 |[pointer](#pointer)|提供指向字符串中或字符数组中字符元素的指针的类型。|  
 |[reference](#reference)|提供对存储在字符串中的元素的引用的类型。|  
@@ -230,14 +231,14 @@ class basic_string;
 |-|-|  
 |[operator+=](#op_add_eq)|向字符串追加字符。|  
 |[operator=](#op_eq)|对字符串的内容赋新的字符值。|  
-|[operator&#91;&#93;](#op_at)|使用字符串中的指定索引提供对字符的引用。|  
+|[operator[]](#op_at)|使用字符串中的指定索引提供对字符的引用。|  
   
 ## <a name="remarks"></a>备注  
  如果要求函数生成的序列长于 [max_size](#max_size) 元素，这个函数将通过引发 [length_error](../standard-library/length-error-class.md) 类型的对象来报告长度错误。  
   
  用于指定受控制序列元素的引用、指针和迭代器在调用了可更改受控制序列的函数后或第一次调用一个非 **const** 成员函数后可能失效。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<string>  
   
  **命名空间：** std  
@@ -4697,7 +4698,7 @@ The character ch1 is: G.
 The character ch2 is: H.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<string>](../standard-library/string.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

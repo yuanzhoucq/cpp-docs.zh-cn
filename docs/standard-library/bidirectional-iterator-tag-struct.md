@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xutility/std::bidirectional_iterator_tag
-- bidirectional_iterator_tag
-dev_langs:
-- C++
+f1_keywords: xutility/std::bidirectional_iterator_tag
+dev_langs: C++
 helpviewer_keywords:
 - bidirectional_iterator_tag class
 - bidirectional_iterator_tag struct
 ms.assetid: 9ac06066-b8ae-44b6-bee4-b05855f6a31a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 33302a822cc36adf7f68d7cce29b678654aabb29
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6ac5f22a22ad64e137a56be964068229a6ed0958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bidirectionaliteratortag-struct"></a>bidirectional_iterator_tag 结构
 提供表示双向迭代器的 **iterator_category** 函数的返回类型的类。  
@@ -59,16 +41,15 @@ struct bidirectional_iterator_tag    : public forward_iterator_tag {};
 ## <a name="example"></a>示例  
  有关如何使用 `bidirectional_iterator_tag` 的示例，请参阅 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iterator>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [forward_iterator_tag 结构](../standard-library/forward-iterator-tag-struct.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

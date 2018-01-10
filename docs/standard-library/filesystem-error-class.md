@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0012a895dbda27ce26d50ae49b3752d13963a89f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a70b489fa3e7a570cf4cd8ea4abf6af583e72a0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filesystemerror-class"></a>filesystem_error 类
 所引发以报告低级系统溢出的全部异常的基类。  
@@ -74,12 +75,12 @@ const char *what() const noexcept;
   
  此成员函数返回指向 NTBS 的指针，最好是由 runtime_error::what()、system_error::what()、mymesg、mypval1.native_string() 和 mypval2.native_string() 组成。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<文件系统 >  
   
  **命名空间：**std::experimental::filesystem  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [system_error 类](../standard-library/system-error-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)   

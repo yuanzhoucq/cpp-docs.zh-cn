@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e9449637887a05c64179c6b9d31712c8becfa87b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71e763e39c3d5e2f1a192e7408ee02758f26e6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapset"></a>_heapset
 检查堆是否符合最小一致性，并将可用项设置为指定值。  
@@ -78,13 +79,13 @@ int _heapset(
   
  `_heapset` 检查堆上的最小一致性，然后将堆的可用项的每个字节设置为 `fill` 值。 此已知值表示堆的哪些内存位置包含可用节点，以及哪些位置包含为了释放内存而无意写入的数据。 如果操作系统不支持 `_heapset`（例如 Windows 98），此函数则返回 `_HEAPOK`，并将 `errno` 设置为 `ENOSYS`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_heapset`|\<malloc.h>|\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -128,7 +129,7 @@ int main( void )
 OK - heap is fine  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [内存分配](../c-runtime-library/memory-allocation.md)   
  [_heapadd](../c-runtime-library/heapadd.md)   
  [_heapchk](../c-runtime-library/reference/heapchk.md)   

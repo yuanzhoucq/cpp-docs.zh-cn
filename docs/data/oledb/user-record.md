@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08b0e369629bc93002ee73a31978ef8d00493f6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 587f10c14a360d2c5bbf447d13a161f985edf5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-record"></a>用户记录
 用户记录提供表示行集列数据的代码和数据结构。 在编译时或在运行时，可以创建用户记录。 当你创建提供程序使用 ATL OLE DB 提供程序向导时，向导将创建如下所示 （假设你指定"MyProvider"的提供程序名称 [短名称]） 的默认用户记录：  
@@ -75,5 +78,5 @@ static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
   
  有关如何重写的更多详细示例`GetColumnInfo`在用户记录中，请参阅[动态确定返回给使用者列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

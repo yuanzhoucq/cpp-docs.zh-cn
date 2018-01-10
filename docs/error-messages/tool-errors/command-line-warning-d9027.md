@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ccdccbc4c6df8f948b44eeaa096cff46824d043
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2769eb5f78cb1d5bdd6749e65429d83b69a2807b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-warning-d9027"></a>命令行警告 D9027
 源文件\<文件名 > 被忽略  
   
  CL.exe 忽略输入的源文件。  
   
- 此警告可能引起 /Fo 选项和带有 /c 选项的命令行上输出文件名之间留一个空格。 例如:   
+ 此警告可能引起 /Fo 选项和带有 /c 选项的命令行上输出文件名之间留一个空格。 例如:  
   
 ```  
 cl /c /Fo output.obj input.c   

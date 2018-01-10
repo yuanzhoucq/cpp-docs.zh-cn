@@ -1,41 +1,42 @@
 ---
-title: "stack::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop 成员 [STL/CLR]"
+title: "stack:: pop (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: b7565385-9e6b-432d-8c71-c62c9c6ad90d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 059e65ff61f478a854364c7c128573f2b3486bd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# stack::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除最后一个元素。  
+# <a name="stackpop-stlclr"></a>stack::pop (STL/CLR)
+移除的最后一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void pop();  
 ```  
   
-## 备注  
- 移除成员函数控制序列中的最后一个元素，必须非空。  使用由元素缩短堆栈在返回。  
+## <a name="remarks"></a>备注  
+ 成员函数删除受控序列，必须为非空的最后一个元素。 你可以使用它来缩短在后面的一个元素的堆栈。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_stack_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **b**   
-## 要求  
- **页眉：** \<\/cliext 堆栈\>  
+```Output  
+a b c  
+a b  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/堆栈 >  
   
-## 请参阅  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::push](../dotnet/stack-push-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [堆栈 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)

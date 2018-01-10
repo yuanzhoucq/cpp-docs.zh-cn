@@ -1942,11 +1942,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de33fd0baf8ffb5ccce5fc5a532413f27a2b42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ecdf6a3e736cfe2876d7ea68a8f113e6b120b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-intrinsics"></a>ARM 内部函数
 Visual C++ 编译器使下面的内部函数在 ARM 架构上可用。 关于 ARM 的详细信息，请参阅[ARM 体系结构参考手册](http://go.microsoft.com/fwlink/p/?LinkId=522049)和[ARM 汇编程序工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 信息中心网站上。  
@@ -2579,7 +2580,7 @@ void _MoveFromCoprocessor64(
   
  [[霓虹灯](#top)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
  [ARM 汇编程序参考](../assembler/arm/arm-assembler-reference.md)   
  [C++ 语言参考](../cpp/cpp-language-reference.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bbb2bb1fc09994c977b0f3f2d3cdf8d927ce2a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5fdba1c603b453a3140675b4ab8783ac3332de6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="range-of-char-values"></a>字符值的范围
 **ANSI 3.2.1.1**：“纯”**char** 的值范围与 **signed char** 或 `unsigned char` 的值范围是否相同  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
  /J 编译器选项将默认值从 **signed** 更改为 `unsigned`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符](../c-language/characters.md)

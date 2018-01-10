@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 166116f54882048f3cd763b2f61e6b4fd56e5357
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 504f9553b85acefa085a7a8d6c85768ff934bab7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>如何：为 ADO.NET 封送 VARIANT (C++/CLI)
 演示如何将添加一个本机`VARIANT`到数据库，以及如何封送<xref:System.Object?displayProperty=fullName>从为本机数据库`VARIANT`。  
@@ -165,7 +168,7 @@ ObjectCol: 42
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  有关涉及 ADO.NET 的安全问题的信息，请参阅[保护 ADO.NET 应用程序](/dotnet/framework/data/adonet/securing-ado-net-applications)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices>   
  [使用 ADO.NET 访问数据 (C + + /cli CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   

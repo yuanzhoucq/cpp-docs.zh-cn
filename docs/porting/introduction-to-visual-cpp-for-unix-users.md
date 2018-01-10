@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 798dc2ca8b6a04203232d9eee52b1f5be5eacdd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ 简介（针对 UNIX 用户）
 
@@ -72,6 +73,6 @@ Microsoft C 和 C++ 编译器提供预编译任何 C 或 C++ 代码（包括内�
 
 有关详细信息，请参阅[从 UNIX 到 Win32 的迁移](../porting/porting-from-unix-to-win32.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

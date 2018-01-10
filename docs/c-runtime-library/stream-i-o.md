@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>流 I/O
 这些函数处理不同大小和格式的数据，从单个字符到大型数据结构都有。 它们还提供缓冲区，这样能提高性能。 流缓冲区的默认大小为 4K。 这些例程会仅影响由运行时库例程创建的缓冲区，对由操作系统创建的缓冲区不起作用。  
   
 ### <a name="stream-io-routines"></a>流 I/O 例程  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md)、 [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除流的错误指示器|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|关闭流|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
 |[getc、getwc](../c-runtime-library/reference/getc-getwc.md)|从流（ `fgetc` 和 `fgetwc`的宏版本）读取字符|  
 |[getchar、getwchar](../c-runtime-library/reference/getc-getwc.md)|从 `stdin` （ `fgetchar` 和 `fgetwchar`的宏版本）读取字符|  
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|返回在 I/O 流级别允许同时打开的文件数。|  
-|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|从 `stdin` 读取行|  
+|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|从 `stdin`读取行|  
 |[_getw](../c-runtime-library/reference/getw.md)|从流读取二进制 `int`|  
 |[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)、[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|将格式化数据写入 `stdout`|  
 |[putc、putwc](../c-runtime-library/reference/putc-putwc.md)|将字符写入流（ `fputc` 和 `fputwc`的宏版本）|  
@@ -103,6 +104,6 @@ ms.lasthandoff: 10/24/2017
   
  只有通过对 `fflush` 或对文件定位函数（`fseek`、 `fsetpos`或 `rewind`）进行干预调用时，输入才能直接跟随输出。 如果输入操作遇到文件末尾，则输出可以在没有对文件定位函数进行干预调用的情况下跟随输入。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输入和输出](../c-runtime-library/input-and-output.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

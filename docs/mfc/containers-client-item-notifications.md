@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03b8833f5c5b05a737541f03b75b0986991debec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f995893f580ef41c27653a30e94d1f106fceb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-client-item-notifications"></a>容器：客户端项通知
 本文讨论 MFC 框架在服务器应用程序修改客户端应用程序的文档中的项时调用的可重写函数。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  如果 OLE 项的位置或大小发生更改的就地编辑过程，必须更新有关项的位置和剪辑矩形的容器的信息，并且服务器必须接收的更改信息。 框架调用`COleClientItem::OnChangeItemPosition`为此目的。 MFC 应用程序向导提供调用基类的函数的替代。 你应编辑应用程序向导为编写的函数你`COleClientItem`-派生类，以使该函数更新你的客户端项对象保留的任何信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [容器](../mfc/containers.md)   
  [容器： 客户端项状态](../mfc/containers-client-item-states.md)   
  [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)

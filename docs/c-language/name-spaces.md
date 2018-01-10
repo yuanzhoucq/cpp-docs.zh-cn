@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>命名空间
 编译器设置“命名空间”来区分用于各种项的标识符。 每个命名空间中的名称必须是唯一的以避免冲突，但相同的名称可出现在多个命名空间中。 这意味着，可以对两个或更多不同的项使用同一个标识符，前提是这些项位于不同的命名空间中。 编译器可以基于程序中标识符的语义上下文来解析引用。  
@@ -62,5 +63,5 @@ struct student {
   
  当 `student` 出现在 `struct` 关键字的后面时，编译器会将其识别为结构标记。 当 `student` 出现在成员选择运算符 (**->** 或 **.**) 的后面时，名称将引用结构成员。 在其他上下文中，`student` 引用结构变量。 但是，建议不要重载标记命名空间，因为它会使含义变得模糊。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序结构](../c-language/program-structure.md)

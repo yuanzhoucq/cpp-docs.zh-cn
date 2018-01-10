@@ -16,16 +16,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63085c4b0848bdf040fa0a0e2cd1af51a1777d61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 690ff46bf8942bb124f374d02a229ace731476ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-signals"></a>默认信号
 **ANSI 4.7.1.1** 调用信号处理程序前未执行 signal (sig, SIG_DFL) 的等效项时，对执行的信号的阻止  
   
  程序开始运行时，信号将设置为其默认状态。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [库函数](../c-language/library-functions.md)

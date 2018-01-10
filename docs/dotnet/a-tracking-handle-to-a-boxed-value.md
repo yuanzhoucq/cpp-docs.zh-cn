@@ -1,48 +1,50 @@
 ---
-title: "装箱值的跟踪句柄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "装箱的值类型, 跟踪句柄"
+title: "装箱值的跟踪句柄 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxed value types, tracking handle to
 ms.assetid: 16c92048-5b74-47d5-8eca-dfea3d38879a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: baae8c5317f1e5c9c5acf5bef26a4b79de281a3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 装箱值的跟踪句柄
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，引用值类型的跟踪句柄的用法发生了更改。  
+# <a name="a-tracking-handle-to-a-boxed-value"></a>装箱值的跟踪句柄
+引用值类型的跟踪句柄的使用情况已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 装箱是 CLR 统一类型系统的特性。  值类型直接包含其状态，而引用类型则是隐式对：命名实体是托管堆上分配的未命名对象的句柄。  例如，值类型到 `Object` 的任何初始化或赋值要求该值类型放在 CLR 堆内（这是发生装箱的映像的位置）— 首先分配关联的内存，然后复制值类型的状态，最后返回此匿名值\/引用混合的地址。  这样，当使用 C\# 编写以下代码时，  
+ 装箱是统一的 CLR 类型系统的特性。 值类型的隐式对引用类型时直接包含它们的状态： 已命名的实体是托管堆上分配的未命名对象的句柄。 任何初始化或赋值值的类型转换为`Object`，例如，要求值类型放置在 CLR 堆-这是发生的映像的装箱它的第一次分配关联的内存，然后复制值类型的状态然后返回此匿名值/引用混合的地址。 因此，当编写以下代码在 C# 中  
   
 ```  
 object o = 1024; // C# implicit boxing  
 ```  
   
- 其好处决不仅仅是代码的简洁性带来的明显性。  C\# 的设计不仅隐藏了后台发生的操作的复杂性，还隐藏了装箱本身的抽象化的复杂性。  另一方面，C\+\+ 托管扩展由于担心导致对效率的错误判断，所以要求用户编写显式指令：  
+ 没有大得多的操作不是由代码的简单性变得非常明显。 C# 的设计隐藏不仅的操作都发生实质上，而且还要的抽象的装箱本身的复杂性。 托管扩展 c + +，另一方面，这会导致效率的 false 意义上，通过要求显式指令将其放置在用户的表面相关：  
   
 ```  
 Object *o = __box( 1024 ); // Managed Extensions explicit boxing  
 ```  
   
- 在 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 中，装箱是隐式的：  
+ 装箱是隐式 Visual c + +:  
   
 ```  
 Object ^o = 1024; // new syntax implicit boxing  
 ```  
   
- `__box` 关键字作为托管扩展中的一项重要服务，在诸如 C\# 和 [!INCLUDE[vbprvb](../Token/vbprvb_md.md)] 的语言的设计中是没有的：它提供词汇和跟踪句柄来直接操作托管堆上的装箱实例。  例如，考虑以下小程序：  
+ `__box`关键字作为一项重要服务内托管扩展中，一个不存在的设计中如 C# 和 Visual Basic 的语言： 它提供的词汇和跟踪句柄来直接操作托管堆上的已装箱的实例。 例如，请考虑以下的小程序：  
   
 ```  
 int main() {  
@@ -59,13 +61,13 @@ int main() {
 }  
 ```  
   
- 为 `WriteLine` 的三个调用生成的基础代码显示访问装箱值类型的值的各种代价（感谢 Yves Dolce 指出这些区别），其中指出的行显示与每个调用关联的系统开销。  
+ 生成的三个调用的基础代码`WriteLine`显示访问装箱值的值的各种成本 （得益于 Yves Dolce 指出这些差异)，键入，其中指出的行显示与每个关联的开销调用。  
   
 ```  
 // Console::WriteLine( S"result :: {0}", result.ToString() ) ;  
 ldstr      "result :: {0}"  
 ldloca.s   result  // ToString overhead  
-call       instance string  [mscorlib]System.Double::ToString()  // ToString overhead  
+call       instance string  [mscorlib]System.Double::ToString()  // ToString overhead  
 call       void [mscorlib]System.Console::WriteLine(string, object)  
   
 // Console::WriteLine( S"result :: {0}", __box(result) ) ;  
@@ -80,9 +82,9 @@ ldloc.0
 call     void [mscorlib]System.Console::WriteLine(string, object)  
 ```  
   
- 将装箱值类型直接传递给 `Console::WriteLine` 可以消除装箱和调用 `ToString()` 的需要。（当然，前面有对 `br` 的初始化装箱，所以除非我们真正使用 `br`，否则将不会获得任何结果。）  
+ 装箱的值类型将直接传递给`Console::WriteLine`消除了装箱和需要调用`ToString()`。 (当然，没有早期装箱初始化`br`，因此不会获得任何除非我们真正`br`工作。  
   
- 在新语法中，对装箱值类型的支持被认为是更佳的并且集成到了类型系统内部，同时保留其功能不变。  例如，下列代码是上述小程序的转换：  
+ 在新语法中，对装箱的值类型的支持时显著更简洁且集成类型系统中保留其功能。 例如，下面是上述的小程序的转换：  
   
 ```  
 int main()  
@@ -98,6 +100,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [值类型及其行为 \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+## <a name="see-also"></a>请参阅  
+ [值类型和它们的行为 (C + + /cli CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [如何：显式请求装箱](../dotnet/how-to-explicitly-request-boxing.md)

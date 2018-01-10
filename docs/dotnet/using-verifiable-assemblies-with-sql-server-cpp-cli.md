@@ -1,41 +1,42 @@
 ---
-title: "结合使用 SQL Server 和可验证的程序集 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "可验证程序集 [C++], 使用 SQL Server"
+title: "使用 SQL Server 可验证程序集 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 结合使用 SQL Server 和可验证的程序集 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-打包为动态链接库 \(DLL\) 的扩展存储过程提供一种方法，通过用 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 开发的函数来扩展 SQL Server 功能。  扩展存储过程实现为 DLL 中的函数。  除函数外，扩展存储过程还可以定义[用户定义类型](../cpp/classes-and-structs-cpp.md)和[聚合函数](http://msdn.microsoft.com/zh-cn/de255454-f45e-4281-81f9-bc61893ac5da)（如 SUM 或 AVG）。  
+# <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
+扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展通过使用 Visual c + + 开发的函数的 SQL Server 功能。 扩展存储的过程实现为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义的类型](../cpp/classes-and-structs-cpp.md)和[聚合函数](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)（如 SUM 或 AVG）。  
   
- 当客户端执行扩展存储过程时，SQL Server 搜索与扩展存储过程关联的 DLL 并加载该 DLL。  SQL Server 在指定的安全上下文下调用并执行所请求的扩展存储过程。  然后，扩展存储过程传递结果集并将参数返回给服务器。  
+ 当客户端执行扩展存储的过程时，SQL Server 中的 dll 的搜索与扩展存储过程并加载 DLL。 SQL Server 调用请求的扩展存储的过程，并在指定的安全上下文下执行它。 扩展存储然后传递结果集，并将参数返回到服务器的过程。  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] 提供了对 Transact\-SQL \(T\-SQL\) 的扩展，以允许将可验证的程序集安装到 SQL Server 中。  SQL Server 权限集指定安全上下文，其具有的安全级别如下：  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]提供对 TRANSACT-SQL (T-SQL) 以便您可以将可验证程序集安装到 SQL Server 扩展。 SQL Server 权限集指定安全上下文中，具有以下级别的安全性：  
   
--   无限制模式：运行代码时风险自负；代码不必是可验证类型安全的。  
+-   不受限制的模式： 在你自己的风险; 运行的代码不必是可验证类型安全代码。  
   
--   安全模式：运行可验证类型安全的代码；使用 \/clr:safe 编译。  
+-   安全模式下： 运行可验证类型安全代码;使用 /clr: safe 编译。  
   
- 安全模式要求执行的程序集是可验证类型安全的。  
+ 安全模式下需要执行的程序集是可验证类型安全。  
   
- 若要创建可验证程序集并将其加载到 SQL Server 中，请使用 Transact\-SQL 命令 CREATE ASSEMBLY 和 DROP ASSEMBLY，如下所示：  
+ 若要创建和可验证的程序集加载到 SQL Server，使用 TRANSACT-SQL 命令创建程序集和 DROP ASSEMBLY，如下所示：  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -43,9 +44,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- PERMISSION\_SET 命令指定安全上下文，其值可以为 UNRESTRICTED、SAFE 或 EXTENDED。  
+ PERMISSION_SET 命令指定安全上下文中，并且可以具有不受限制的、 安全的或扩展的值。  
   
- 此外，还可以使用 CREATE FUNCTION 命令绑定到类中的方法名称：  
+ 此外，你可以使用 CREATE FUNCTION 命令要绑定到类中的方法名称：  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -53,8 +54,8 @@ RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]  
 ```  
   
-## 示例  
- 下面的 SQL 脚本（例如，名为“MyScript.sql”）将程序集加载到 SQL Server 中并使类的方法可用：  
+## <a name="example"></a>示例  
+ 以下 SQL 脚本 (例如，名为"MyScript.sql") 将程序集加载到 SQL Server，并提供一个类的方法：  
   
 ```  
 -- Create assembly without external access  
@@ -78,12 +79,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- SQL 脚本可以在 SQL 查询分析器中以交互方式执行，或在命令行下用 sqlcmd.exe 实用工具执行。  下面的命令行连接到 MyServer，使用默认的数据库和受信任的连接，输入 MyScript.sql，输出 MyResult.txt。  
+ 在 SQL 查询分析器或在命令行使用 sqlcmd.exe 实用程序，可以以交互方式执行 SQL 脚本。 下面的命令行连接到 MyServer、 使用的默认数据库，使用可信的连接，输入 MyScript.sql，并输出 MyResult.txt。  
   
 ```  
-sqlcmd –S MyServer -E –i myScript.sql –o myResult.txt  
+sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
-## 请参阅  
- [如何：迁移到 \/clr:safe](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+## <a name="see-also"></a>请参阅  
+ [如何： 将迁移到 /clr: safe (C + + /cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [类和结构](../cpp/classes-and-structs-cpp.md)

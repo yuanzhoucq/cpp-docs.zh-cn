@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9d91cf582e9ffc6e6236e27d82c0e516214d650
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a209b1ee657d6ae6773ee88c64225a7dc5b4f49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshalas"></a>marshal_as
 此方法将本机和托管环境之间的数据转换。  
@@ -70,11 +73,11 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件：** \<msclr\marshal.h >， \<msclr\marshal_windows.h >， \<msclr\marshal_cppstd.h >，或\<msclr\marshal_atl.h >  
   
  **Namespace:** msclr::interop  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_context 类](../dotnet/marshal-context-class.md)

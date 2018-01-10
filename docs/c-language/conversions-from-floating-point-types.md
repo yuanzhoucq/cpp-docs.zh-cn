@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>从浮点类型的转换
 转换为 double 或 `long double` 的 float 值，或转换为 `long double` 的 double 值不会发生更改。 如果可能，请准确表示转换为 float 值的 double 值。 如果无法准确表示该值，则可能会丢失精度。 如果结果超出范围，则该行为是不确定的。 有关浮点类型的范围，请参阅[浮点常量的限制](../c-language/limits-on-floating-point-constants.md)。  
@@ -44,23 +45,23 @@ ms.lasthandoff: 10/24/2017
 |**float**|**long**|在小数点处截断。 如果结果过大而无法表示为 long，则结果是不确定的。|  
 |**float**|**unsigned short**|转换为 long；将 long 转换为 `unsigned` short|  
 |**float**|`unsigned long`|转换为 long；将 long 转换为 `unsigned` long|  
-|**float**|**双精度**|更改内部表示形式|  
+|**float**|**double**|更改内部表示形式|  
 |**float**|`long double`|更改内部表示形式|  
-|**双精度**|`char`|转换为 float；将 float 转换为 `char`|  
-|**双精度**|**short**|转换为 float；将 float 转换为 short|  
-|**双精度**|**long**|在小数点处截断。 如果结果过大而无法表示为 long，则结果是不确定的。|  
-|**双精度**|**unsigned short**|转换为 long；将 long 转换为 unsigned short|  
+|**double**|`char`|转换为 float；将 float 转换为 `char`|  
+|**double**|**short**|转换为 float；将 float 转换为 short|  
+|**double**|**long**|在小数点处截断。 如果结果过大而无法表示为 long，则结果是不确定的。|  
+|**double**|**unsigned short**|转换为 long；将 long 转换为 unsigned short|  
 |**双精度**|`unsigned long`|转换为 long；将 long 转换为 `unsigned` long|  
-|**双精度**|**float**|表示为 float。 如果 double 值不能正确表示为 float，则会丢失精度。 如果值太大而无法表示为 float，则结果是不确定的。|  
+|**double**|**float**|表示为 float。 如果 double 值不能正确表示为 float，则会丢失精度。 如果值太大而无法表示为 float，则结果是不确定的。|  
 |`long double`|`char`|转换为 float；将 float 转换为 `char`|  
 |`long double`|**short**|转换为 float；将 float 转换为 short|  
 |`long double`|**long**|在小数点处截断。 如果结果过大而无法表示为 long，则结果是不确定的。|  
 |`long double`|**unsigned short**|转换为 long；将 long 转换为 `unsigned` short|  
 |`long double`|`unsigned long`|转换为 long；将 long 转换为 `unsigned` long|  
 |`long double`|**float**|表示为 float。 如果 double 值不能正确表示为 float，则会丢失精度。 如果值太大而无法表示为 float，则结果是不确定的。|  
-|`long double`|**双精度**|long double 值被视为 double。|  
+|`long double`|**double**|long double 值被视为 double。|  
   
  如果要转换的值大于最大正 long 值，则从 float、double 或 `long double` 值到 `unsigned long` 的转换是不准确的。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [赋值转换](../c-language/assignment-conversions.md)

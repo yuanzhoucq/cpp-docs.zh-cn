@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c1596f035da98524238e558ffe23816730aa42b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 861310be7e13c0ca5e656edc4214e59f5dacd659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-limits"></a>C++ 整数限制
 **Microsoft 专用**  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="limits-on-integer-constants"></a>对整数常量的限制  
   
-|**常量**|含义|值|  
+|**常量**|含义|“值”|  
 |------------------|-------------|-----------|  
 |**CHAR_BIT**|不是位域的最小变量中的位数。|8|  
 |**SCHAR_MIN**|**signed char** 类型的变量的最小值。|-128|  
@@ -53,5 +54,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 整数常量](../c-language/c-integer-constants.md)

@@ -29,11 +29,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba68e059224d2d15046730a9ee0058e3114d52ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72bc1e833ddaa72979e25274b7328d8987f62763
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setjmp3"></a>_setjmp3
 内部 CRT 函数。 `setjmp` 函数的新实现。  
@@ -64,8 +65,8 @@ int _setjmp3(
 ## <a name="remarks"></a>备注  
  请不要在 C++ 程序中使用此函数。 它是一个不支持 C++ 的内部函数。 有关如何使用 `setjmp` 的详细信息，请参阅[使用 setjmp/longjmp](../cpp/using-setjmp-longjmp.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [setjmp](../c-runtime-library/reference/setjmp.md)

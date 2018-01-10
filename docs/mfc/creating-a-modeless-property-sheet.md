@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e587c130a06ff30a38138f1e0ecf94e7cdfe1ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4686caf6c414952cd86dfe0c69fcc3be8ee09af9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-modeless-property-sheet"></a>创建无模式属性表
 通常情况下，你创建属性表将模式。 如果使用模式属性表，用户必须使用的应用程序的任何其他部分之前关闭属性表。 本文介绍可用于创建无模式属性表，用户可以保持打开属性表，同时使用的应用程序其他部分的方法。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  有许多可用于确定何时应无模式属性表的设置应用于外部对象的用户界面选项。 一种替代方法，将应用当前的属性页的设置，每当用户更改的任何值。 另一种方法是提供应用按钮，这样用户就可以将它们提交给外部对象之前累积在属性页中的更改。 有关如何处理应用按钮的信息，请参阅文章[处理应用按钮](../mfc/handling-the-apply-button.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性表](../mfc/property-sheets-mfc.md)   
  [交换数据](../mfc/exchanging-data.md)   
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)

@@ -17,18 +17,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fd746124cdfc267267bc5d6803700cca507c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-keywords"></a>C 关键字
 “关键字”是对 C 编译器具有特殊含义的单词。 在翻译的第 7 和第 8 阶段中，标识符不能具有与 C 关键字相同的拼写和大小写。 （请参阅《预处理器参考》中的[翻译阶段](../preprocessor/phases-of-translation.md)的说明；有关标识符的信息，请参阅[标识符](../c-language/c-identifiers.md)。）C 语言使用下列关键字：  
   
 |||||  
 |-|-|-|-|  
-|**auto**|**双精度**|**int**|**struct**|  
+|**auto**|**double**|**int**|**struct**|  
 |**break**|**else**|**long**|**switch**|  
 |**case**|**enum**|**register**|**typedef**|  
 |**char**|**extern**|**return**|**union**|  
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 的元素](../c-language/elements-of-c.md)

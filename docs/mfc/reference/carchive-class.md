@@ -63,11 +63,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa6350a1195a0096160ab1c776009a3ac7a0e0d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cc94e78656c53156b8696b927780f46e939861a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carchive-class"></a>CArchive 类
 可以将复杂的网络的对象保存在仍然存在这些对象在被删除后永久二进制格式 （通常为磁盘存储）。  
@@ -145,7 +146,7 @@ class CArchive
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CArchive`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="abort"></a>CArchive::Abort  
@@ -796,7 +797,7 @@ void WriteString(LPCTSTR lpsz);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFile 类](../../mfc/reference/cfile-class.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   

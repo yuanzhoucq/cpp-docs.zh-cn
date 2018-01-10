@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 864b2d11baf543f35c7bcfb4d23f3c5cf0148455
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72aaeae89a72098a02ac5bf124a53303afe09767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interactive-devices"></a>交互式设备
 **ANSI 2.1.2.3** 构成交互式设备的组件  
   
  Microsoft C 将键盘和显示屏定义为交互式设备。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [环境](../c-language/environment.md)

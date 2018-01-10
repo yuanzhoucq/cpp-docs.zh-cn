@@ -1,38 +1,40 @@
 ---
-title: "如何：使用 C++ 互操作封送数组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数组 [C++], 封送处理"
-  - "C++ 互操作, 数组"
-  - "数据封送处理 [C++], 数组"
-  - "互操作 [C++], 数组"
-  - "封送处理 [C++], 数组"
+title: "如何： 使用 c + + 互操作封送数组 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- arrays [C++], marshaling
+- marshaling [C++], arrays
+- interop [C++], arrays
+- C++ Interop, arrays
+- data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 526a87029f6447183988391c9b7b5a95baa8b8c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 C++ 互操作封送数组
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题演示 Visual C\+\+ 互操作性的一个方面。  有关详细信息，请参阅[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="how-to-marshal-arrays-using-c-interop"></a>如何：使用 C++ 互操作封送数组
+本主题演示 Visual c + + 互操作性的一个的方面。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
- 下面的代码示例使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) \#pragma 指令在同一个文件中实现托管函数和非托管函数，但如果在不同的文件中定义这些函数，则它们将以同样的方式进行交互操作。  不需要使用 [\/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md) 对仅包含非托管函数的文件进行编译。  
+ 下面的代码示例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指令来实现托管和非托管函数中同一文件中，但如果在单独的文件中定义，这些函数互操作方式相同。 仅包含非托管的函数的文件不需要使用编译[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 示例  
- 下面的示例演示如何向非托管函数传递托管数组。  在调用非托管函数之前，托管函数使用 [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) 来取消数组的垃圾回收。  通过向非托管函数提供 GC 堆中的固定指针，可避免制作数组副本的开销。  为了演示非托管函数正在访问 GC 堆内存，该示例修改了数组的内容，而且所做的更改将在托管函数继续控制时得到反映。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何将托管的数组传递给非托管函数。 托管的函数使用[pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md)若要禁止显示之前调用非托管的函数数组的垃圾回收。 通过提供使用固定指针到 GC 堆非托管的函数，可以避免使数组的副本的系统开销。 为了演示，非托管的函数访问 GC 堆内存，它会修改该数组的内容，并且这些更改将反映在托管的函数时继续控件。  
   
 ```  
 // PassArray1.cpp  
@@ -89,8 +91,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例演示如何向托管函数传递非托管数组。  托管函数直接访问数组内存（而不是创建托管数组并复制数组内容），这样，在托管函数重新获得控制时，它所做的更改便可在非托管函数中得到反映。  
+## <a name="example"></a>示例  
+ 下面的示例演示如何向托管函数传递的非托管的数组。 托管的函数访问数组内存直接 （而不是创建托管的数组并将复制的数组内容），它允许托管函数才会反映在非托管函数，当它重新获得控件所做的更改。  
   
 ```  
 // PassArray2.cpp  
@@ -136,5 +138,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

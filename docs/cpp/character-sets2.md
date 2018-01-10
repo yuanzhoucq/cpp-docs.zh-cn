@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9261cf2573a5494a49f2f544772738afcdbbb0c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-sets"></a>字符集
 C++ 程序的文本存储在使用特定字符编码的源文件中。 C++ 标准指定源文件的基本源字符集和已编译文件的基本执行字符集。 Visual C++ 允许在源文件和已编译文件中使用额外一组特定于区域设置的字符。  

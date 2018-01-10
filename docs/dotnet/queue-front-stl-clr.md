@@ -1,41 +1,42 @@
 ---
-title: "queue::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front 成员 [STL/CLR]"
+title: "queue:: front (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: 9d7bb95f-5896-42f7-86fa-004a7a65cc94
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4726377c30300ee1a139b2a596346ea5cdc804f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# queue::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuefront-stlclr"></a>queue::front (STL/CLR)
 访问第一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 reference front();  
 ```  
   
-## 备注  
- 成员函数返回控制到序列中第一个的元素的引用，必须非空。  使用它访问，第一个元素，在您知道存在\)。  
+## <a name="remarks"></a>备注  
+ 成员函数返回对受控序列，必须为非空的第一个元素的引用。 用于访问第一个元素，当你知道它存在。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_queue_front.cpp   
@@ -68,16 +69,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\(\) \= a**  
- **x b c**   
-## 要求  
- **标头:** \<cliext\/queue\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back](../dotnet/queue-back-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue:: back (STL/CLR)](../dotnet/queue-back-stl-clr.md)   
+ [queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

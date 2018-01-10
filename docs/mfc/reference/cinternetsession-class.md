@@ -43,11 +43,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12648a44b30e7e9cc883db6395b1c806cb7d6513
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7aad2f6ce26fd5ca9ed0ec323a8fcb05ac17f7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 类
 创建和初始化一个或多个同时 Internet 会话，并说明与代理服务器的连接（如果需要）。  
@@ -116,7 +117,7 @@ class CInternetSession : public CObject
   
  `CInternetSession`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
   
 ##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
@@ -425,7 +426,7 @@ virtual void OnStatusCallback(
   
  `dwInternetStatus`参数指示正在执行的操作，并确定的内容`lpvStatusInformation`将。 `dwStatusInformationLength`指示中包括的数据的长度`lpvStatusInformation`。 以下状态的值`dwInternetStatus`，如下所示定义：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`INTERNET_STATUS_RESOLVING_NAME`|查找名称中包含的 IP 地址`lpvStatusInformation`。|  
 |`INTERNET_STATUS_NAME_RESOLVED`|已成功找到中包含的名称的 IP 地址`lpvStatusInformation`。|  
@@ -583,7 +584,7 @@ BOOL SetOption(
 ### <a name="return-value"></a>返回值  
  如果该操作成功，值为**TRUE**返回。 如果出现了错误，值为**FALSE**返回。 如果调用失败，Win32 函数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可调用以确定错误的原因。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 类](../../mfc/reference/cinternetconnection-class.md)   

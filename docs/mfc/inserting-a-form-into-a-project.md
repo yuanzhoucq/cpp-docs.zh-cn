@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d07178c3f1d439758113bc91ad64d2a15a31e1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 968c24a4f64b88be6de95f0f1dd98c09eb494a97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inserting-a-form-into-a-project"></a>在项目中插入窗体
 窗体为控件提供一个方便的容器。 只要应用程序支持的 MFC 库，你可以轻松插入到你的应用程序的基于 MFC 的窗体。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/24/2017
   
 3.  创建`OnPrint`成员函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [窗体视图](../mfc/form-views-mfc.md)
 

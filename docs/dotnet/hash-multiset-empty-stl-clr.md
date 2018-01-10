@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成员 [STL/CLR]"
+title: "hash_multiset:: empty (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: e1c738eb-9ac9-426b-88b0-2997c9476001
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8a37241c0cf9e758a6863f9e7bdf24e9f7b9db3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-测试元素不存在。  
+# <a name="hashmultisetempty-stlclr"></a>hash_multiset::empty (STL/CLR)
+测试元素是否存在。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 bool empty();  
 ```  
   
-## 备注  
- 成员函数返回 true 一个空序列控制。  它与`() == 0`等效。[hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md) 使用该测试 hash\_multiset 是否为空。  
+## <a name="remarks"></a>备注  
+ 对于空受控序列，该成员函数返回 true。 它相当于[hash_multiset:: size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`。 用于测试是否 hash_multiset 为空。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_empty.cpp   
@@ -66,16 +67,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) 为 True**   
-## 要求  
- **页眉：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)

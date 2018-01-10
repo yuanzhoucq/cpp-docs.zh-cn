@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d1519ead8d57e350ca0de95ab5db0c9fae14f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0951a930ad5baec5b293aee0fe8e70c0a38a12f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft 专用**  
@@ -47,7 +48,7 @@ unsigned __int64 __ull_rshift(
 ## <a name="return-value"></a>返回值  
  掩码移动`nBit`bits。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -87,7 +88,7 @@ int main()
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [__ll_lshift](../intrinsics/ll-lshift.md)   
  [__ll_rshift](../intrinsics/ll-rshift.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

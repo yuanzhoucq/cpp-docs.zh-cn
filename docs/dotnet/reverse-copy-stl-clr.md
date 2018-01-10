@@ -1,45 +1,46 @@
 ---
-title: "reverse_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::reverse_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_copy 函数 [STL/CLR]"
+title: "reverse_copy (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::reverse_copy
+dev_langs: C++
+helpviewer_keywords: reverse_copy function [STL/CLR]
 ms.assetid: 694e577a-0fa8-44f7-adde-6dd9f45adefd
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 48c0f333636a365e168cb2782e5f02002cd20e80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# reverse_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-反转源范围中元素的顺序，同时将这些元素复制到目标范围  
+# <a name="reversecopy-stlclr"></a>reverse_copy (STL/CLR)
+反转源范围中的元素的顺序，同时将它们复制到目标范围。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _BidIt, class _OutIt> inline  
     _OutIt reverse_copy(_BidIt _First, _BidIt _Last, _OutIt _Dest);  
 ```  
   
-## 备注  
- 此函数行为与 STL `reverse_copy`函数相同。  有关详细信息，请参阅[reverse\_copy](../Topic/reverse_copy.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`reverse_copy`。 有关详细信息，请参阅[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)。  
   
-## 要求  
- **标头:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/算法 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

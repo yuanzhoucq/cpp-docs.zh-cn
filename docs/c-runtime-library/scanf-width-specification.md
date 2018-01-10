@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>scanf 宽度规范
 此信息适用于解释 `scanf` 系列函数中的格式字符串，包括 `scanf_s` 等安全版本。 这些函数通常假定将输入流划分为标记序列。 标记通过空白字符（空格、制表符或换行）进行分隔，或者在数值类型的情况下，按无法转换为数值文本的第一个字符所示由数值数据类型的自然末尾进行分隔。 然而，宽度规范可能用于在标记的自然末尾之前停止输入分析。  
@@ -56,7 +57,7 @@ scanf_s("%20s", str, 21);
   
 |若要指定|使用前缀|及类型说明符|  
 |----------------|----------------|-------------------------|  
-|**双精度**|**l**|**e**、**E**、**f**、**g** 或 **G**|  
+|**double**|**l**|**e**、**E**、**f**、**g** 或 **G**|  
 |**long double**（与 double 相同）|**L**|**e**、**E**、**f**、**g** 或 **G**|  
 |**long int**|**l**|**d**、**i**、**o**、**x** 或 **X**|  
 |**long unsigned int**|**l**|**u**|  
@@ -103,7 +104,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
   
  无论什么原因，当 `scanf` 函数停止读取输入字段时，下一个输入字段都被视为从第一个未读取的字符处开始。 冲突字符（如果有）被视为未读取，且是下一个输入字段的第一个字符或输入流上后续读取操作中的第一个字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
  [格式规范字段：scanf 和 wscanf 函数](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)   

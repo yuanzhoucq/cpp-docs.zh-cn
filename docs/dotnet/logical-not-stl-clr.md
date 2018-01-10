@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 013f559376739584e393f79516b1626cc1fc99f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d27e18d540d9638caf819636a37f243b362d369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
 此模板类描述某个函数，当调用时，返回 true，仅当任一其自变量测试为 false。 使用它指定根据其自变量类型的函数对象。  
@@ -109,10 +112,10 @@ int main()
 0 1  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [negate (STL/CLR)](../dotnet/negate-stl-clr.md)

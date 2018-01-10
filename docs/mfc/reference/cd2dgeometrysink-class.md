@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b070dce706ab1fa63c71ac84b68f36c596b812d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 类
 ID2D1GeometrySink 包装器。  
@@ -100,14 +101,14 @@ class CD2DGeometrySink;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|指向 ID2D1GeometrySink 的指针。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CD2DGeometrySink`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
@@ -307,5 +308,5 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
  `vertexFlags`  
  要应用于新段添加到几何图形接收器的笔画和联接选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

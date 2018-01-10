@@ -11,14 +11,17 @@ ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords: VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: d552ef6bd5106b3db0e30214d8fbc144b9aa00eb
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 586244da6cc8c0a682146caf3ea75bdf72b5824e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>复制源项目属性 (Linux C++)
+
 此属性页上设置的属性适用于项目中所有的文件，除设置了文件级属性的文件外。
 
 属性 | 描述

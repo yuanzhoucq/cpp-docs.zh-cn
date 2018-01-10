@@ -1,36 +1,36 @@
 ---
-title: "__rdtscp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtscp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdtscp 内部函数"
-  - "__rdtscp 内部函数"
-  - "rdtscp 指令"
+title: "__rdtscp |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtscp
+dev_langs: C++
+helpviewer_keywords:
+- rdtscp intrinsic
+- __rdtscp intrinsic
+- rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 972c789e17b2b42e0df7229b94b4f10aaa5ff470
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __rdtscp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rdtscp"></a>__rdtscp
 **Microsoft 专用**  
   
- 生成 `rdtscp` 命令，编写 `TSC_AUX[31:0`out\] 内存，并返回 64 位时间戳计数器 \(`TSC)` 结果。  
+ 生成`rdtscp`指令，写入`TSC_AUX[31:0`] 到内存，并返回 64 位时间戳计数器 (`TSC)`结果。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned __int64 __rdtscp(  
@@ -38,32 +38,32 @@ unsigned __int64 __rdtscp(
 );  
 ```  
   
-#### 参数  
- \[out\] `Aux`  
- 对于将包含有关各个计算机的注册 `TSC_AUX[31:0]`的目录位置的指针。  
+#### <a name="parameters"></a>参数  
+ [out] `Aux`  
+ 将包含特定于计算机的寄存器的内容的位置指针`TSC_AUX[31:0]`。  
   
-## 返回值  
- 64 位无符号整数滴答计数。  
+## <a name="return-value"></a>返回值  
+ 64 位无符号的整数的时钟周期计数。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__rdtscp`|AMD NPT 系列 0Fh 或更高版本|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此内部生成 `rdtscp` 命令。  若要确定硬件为此命令支持，调用与 `InfoType=0x80000001` 的 `__cpuid`内部和校验位 27 `CPUInfo[3] (EDX)`。  此位否则为 1，则命令支持和 0。  如果运行使用在硬件的固有不支持 `rdtscp` 命令的代码，结果是不可预知的。  
+## <a name="remarks"></a>备注  
+ 此内部函数生成`rdtscp`指令。 若要确定此指令的硬件支持，请调用`__cpuid`与内部`InfoType=0x80000001`和检查的位 27 `CPUInfo[3] (EDX)`。 此位为否则如果支持指令，则为 1 和 0。  如果你运行代码使用此内部函数不支持的硬件上`rdtscp`指令，则结果不可预知。  
   
 > [!CAUTION]
->  不同 `rdtsc`， `rdtscp` 是序列化的命令;但是，编译器可以在该内部周围移动代码。  
+>  与不同`rdtsc`，`rdtscp`是序列化的指令; 不过，编译器可以将为解决此代码提供移动内部函数。  
   
- TSC 值的解释在硬件的此生成的与在 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]的早期版本。  请参见硬件准则有关更多信息。  
+ 在这一代的硬件 TSC 值的解释不同于在早期版本的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  请参阅硬件手册，以获得详细信息。  
   
- 值的含义。 `TSC_AUX[31:0]` 的取决于操作系统。  
+ 中的值的含义`TSC_AUX[31:0]`取决于操作系统。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 #include <intrin.h>   
@@ -78,11 +78,14 @@ int main()
 }  
 ```  
   
-  **3363423610155519 滴答**  
-**TSC\_AUX 为 0**   
-## 特定于 Microsoft 的结尾  
- copyright 2007 年 Advanced Micro 设备，公司着。  保留所有权利。  重现经 Advanced Micro 设备授予，公司。  
+```Output  
+3363423610155519 ticks  
+TSC_AUX was 0  
+```  
   
-## 请参阅  
- [\_\_rdtsc](../intrinsics/rdtsc.md)   
+**结束 Microsoft 专用**  
+ 高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
+  
+## <a name="see-also"></a>请参阅  
+ [__rdtsc](../intrinsics/rdtsc.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

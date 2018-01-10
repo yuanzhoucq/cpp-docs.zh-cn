@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa4dda9a8735f0b57dd6dcefa0f16774c006da35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cff2cb402da87cf37d2f63350088ce4256f3b44c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-to-main"></a>要保留的自变量
 **ANSI 2.1.2.2.1**：main 参数的语义  
@@ -42,5 +43,5 @@ int main( int argc, char *argv[], char *envp[] )
   
  参数 **arg** 和 **argv** 是可修改的，并在程序启动与程序终止之间保留最后存储的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [环境](../c-language/environment.md)

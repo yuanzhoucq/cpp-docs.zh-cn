@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80f444e48d786b0543aeb5de64e5659cdca6ff5d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 双重形式转换是指的是托管的上下文调用 Visual c + + 托管函数，并且其中程序执行函数调用以便调用托管的函数调用函数的本机入口点时，你可以遇到的性能下降。 本主题讨论双重形式转换发生的位置以及如何避免来提高性能。  
@@ -143,5 +146,5 @@ int main() {
 after calling struct S  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)

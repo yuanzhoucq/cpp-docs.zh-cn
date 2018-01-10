@@ -4,32 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4165
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4165
+f1_keywords: C4165
+dev_langs: C++
+helpviewer_keywords: C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 9f2007a2f43cd7641979b663c58efb3a8e276246
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e31f0e0440b0c31197ded21464edc9d686c4864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4165"></a>编译器警告 （等级 1） C4165
-“HRESULT”正在转换为“布尔型”；这是否确实是您想要的?  
+要转换为 bool; HRESULT是否确定这是你想得到？  
   
-在使用中的 HRESULT 时[如果](../../cpp/if-else-statement-cpp.md)语句时，HRESULT 将转换为[bool](../../cpp/bool-cpp.md)除非您显式测试作为 HRESULT 的变量。 默认情况下，此警告处于关闭状态。  
+使用中的 HRESULT 时[如果](../../cpp/if-else-statement-cpp.md)语句，HRESULT 将转换为[bool](../../cpp/bool-cpp.md)除非你显式测试作为 HRESULT 的变量。 默认情况下，此警告处于关闭状态。  
   
 ## <a name="example"></a>示例  
 下面的示例生成 C4165  

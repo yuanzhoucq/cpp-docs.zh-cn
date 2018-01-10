@@ -1,51 +1,52 @@
 ---
-title: "如何：通过移除 CRT 库 DLL 上的依赖项来创建部分受信任的应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 编译器选项 [C++], 部分受信任的应用程序"
-  - "互操作 [C++], 部分受信任的应用程序"
-  - "互操作性 [C++], 部分受信任的应用程序"
-  - "混合程序集 [C++], 部分受信任的应用程序"
-  - "msvcm90[d].dll"
-  - "部分受信任的应用程序 [C++]"
+title: "如何： 创建部分受信任的应用程序 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- partially trusted applications [C++]
+- mixed assemblies [C++], partially trusted applications
+- msvcm90[d].dll
+- interoperability [C++], partially trusted applications
+- interop [C++], partially trusted applications
+- /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfef7eacfa9da8c55155f6e7ce43dfdb79e67e91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：通过移除 CRT 库 DLL 上的依赖项来创建部分受信任的应用程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题讨论如何通过使用 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 移除 msvcm90.dll 上的依赖项来创建部分受信任的公共语言运行时应用程序。  
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>如何：通过移除 CRT 库 DLL 上的依赖项来创建部分受信任的应用程序
+本主题讨论如何创建通过移除对 msvcm90.dll 依赖性使用 Visual c + + 的部分受信任公共语言运行时应用程序。  
   
- 用 **\/clr** 生成的 Visual C\+\+ 应用程序将在 msvcm90.dll（它是 C 运行库的一部分）上具有依赖项。  当希望您的应用程序在部分信任的环境中使用时，CLR 将强制对您的 DLL 实施特定的代码访问安全规则。  因此，移除此依赖项是必需的，因为 msvcm90.dll 包含本机代码，并且无法在其上强制实现代码访问安全策略。  
+ 一个与生成的 Visual c + + 应用程序**/clr**将具有依赖关系 msvcm90.dll，这是 C 运行时库的一部分。 如果你想要在部分信任环境中使用的应用程序时，CLR 将强制执行某些代码访问安全性规则对您的 DLL。 因此，将需要删除此依赖关系，因为 msvcm90.dll 包含本机代码，并且不能对其实施代码访问安全性策略。  
   
- 如果您的应用程序不使用 C 运行库的任何功能，并且希望从您的代码中移除此库上的依赖项，则将必须使用 **\/NODEFAULTLIB:msvcmrt.lib** 链接器选项，并且使用 ptrustm.lib 或 ptrustmd.lib 进行链接。  这些库包含用于初始化和非初始化应用程序的对象文件、初始化代码所使用的异常类以及托管异常处理代码。  在这些库之一中进行链接将移除 msvcm90.dll. 上的任何依赖项。  
+ 如果你的应用程序不使用任何 C 运行库的功能，你想要在代码中删除对此库的依赖关系，你将需要使用**/NODEFAULTLIB:msvcmrt.lib**链接器选项和链接ptrustm.lib 或 ptrustmd.lib 中。 这些库包含初始化和取消初始化应用程序的对象文件、 异常类使用的初始化代码和托管异常处理代码。 这些库中的一个链接将删除对 msvcm90.dll 任何依赖关系。  
   
 > [!NOTE]
->  对于使用 ptrust 库的应用程序，程序集非初始化的顺序可能有所不同。  对于普通的应用程序，通常情况下程序集的卸载顺序与其加载顺序相反，但不总是这样。  对于部分信任的应用程序，通常情况下程序集的卸载顺序与其加载顺序相同。  但也不总是这样。  
+>  程序集未初始化的顺序可能与使用 ptrust 库的应用程序不同。 对于普通的应用程序，通常情况程序集卸载顺序相反的顺序，它们已加载的但这不保证。 对于部分信任应用程序，程序集通常情况下卸载它们已加载的相同顺序。 此操作，此外，不保证。  
   
-### 创建部分信任的混合 \(\/clr\) 应用程序  
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>若要创建部分受信任混合 (/ clr) 应用程序  
   
-1.  若要移除 msvcm90.dll, 上的依赖项，必须通过使用 **\/NODEFAULTLIB:msvcmrt.lib** 链接器选项指定链接器不要包含此库。  有关如何使用 Visual Studio 开发环境或编程方法完成此操作的信息，请参见 [\/NODEFAULTLIB（忽略库）](../build/reference/nodefaultlib-ignore-libraries.md)。  
+1.  若要删除对 msvcm90.dll 的依赖关系，必须指定到链接器无法通过使用包括此库**/NODEFAULTLIB:msvcmrt.lib**链接器选项。 有关如何使用 Visual Studio 开发环境执行此操作，或以编程方式，请参阅[/NODEFAULTLIB （忽略库）](../build/reference/nodefaultlib-ignore-libraries.md)。  
   
-2.  将 ptrustm 库之一添加到链接器输入依赖项。  如果正在发布模式下生成应用程序，请使用 ptrustm.lib。  对于调试模式，请使用 ptrustmd.lib。  有关如何使用 Visual Studio 开发环境或编程方法完成此操作的信息，请参见 [用作链接器输入的 .Lib 文件](../build/reference/dot-lib-files-as-linker-input.md)。  
+2.  将其中一个 ptrustm 库添加到链接器输入依赖关系。 如果你在构建你的应用程序在发布模式下，请使用 ptrustm.lib。 对于调试模式下，使用 ptrustmd.lib。 有关如何使用 Visual Studio 开发环境执行此操作，或以编程方式，请参阅[。用作链接器输入 lib 文件](../build/reference/dot-lib-files-as-linker-input.md)。  
   
-## 请参阅  
- [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)   
+## <a name="see-also"></a>请参阅  
+ [混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)   
  [混合程序集的初始化](../dotnet/initialization-of-mixed-assemblies.md)   
  [混合程序集的库支持](../dotnet/library-support-for-mixed-assemblies.md)   
- [\/link（将选项传递到链接器）](../build/reference/link-pass-options-to-linker.md)   
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/zh-cn/bd61be84-c143-409a-a75a-44253724f784)
+ [/link （将选项传递到链接器）](../build/reference/link-pass-options-to-linker.md)   

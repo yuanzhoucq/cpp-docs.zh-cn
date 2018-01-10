@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9abb23be750a4c707b7a2d73ee2650bf3b786731
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 093400e5d98b0b5e0336c2f640ed0937bdb157b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-functions"></a>函数概述
 函数必须具有定义且应具有声明，尽管定义可用作声明（如果声明在调用函数前出现）。 函数定义包含函数主体（调用函数时执行的代码）。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
   
  函数调用将执行控制从正在调用的函数传递到已调用函数。 通过值将参数（如果有）传递给已调用函数。 已调用函数中的 `return` 语句的执行将返回控制，并且可能将一个值返回给正在调用的函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../c-language/functions-c.md)

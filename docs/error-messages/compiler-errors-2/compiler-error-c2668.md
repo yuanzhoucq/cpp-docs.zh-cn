@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2668
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2668
+f1_keywords: C2668
+dev_langs: C++
+helpviewer_keywords: C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e45bff3173013e7a26f9682bb10ec4cc1fda9364
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 48af783aab38f7d314d0b8cf45d876e6a8682030
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2668"></a>编译器错误 C2668
 function： 对重载函数调用不明确  

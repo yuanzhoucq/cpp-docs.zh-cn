@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5c28d23b60f909f0baa44e8f5b80b861a03a589
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fd4132f8d2da22ed2e936c16859eeada40dd8506
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapreverseiterator-stlclr"></a>multimap::reverse_iterator (STL/CLR)
 受控序列的反向迭代器的类型。  
@@ -62,12 +65,12 @@ int main()
 [c 3] [b 2] [a 1]  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: const_iterator (STL/CLR)](../dotnet/multimap-const-iterator-stl-clr.md)   
  [multimap:: const_reverse_iterator (STL/CLR)](../dotnet/multimap-const-reverse-iterator-stl-clr.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 030deda8b46492dba76fb85702fa40f22b0db594
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-adding-other-formats"></a>剪贴板：添加其他格式
 本主题说明如何扩展支持的格式，特别是对于 OLE 支持的列表。 主题[剪贴板： 复制和粘贴数据](../mfc/clipboard-copying-and-pasting-data.md)描述了支持从剪贴板复制和粘贴所需的最小实现。 如果这是所有实现，放到剪贴板上的唯一格式会`CF_METAFILEPICT`， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，并有可能延长`CF_LINKSOURCE`。 大多数应用程序将需要在剪贴板上比这三种的更多格式。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [OLE](../mfc/ole-background.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [剪贴板：使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

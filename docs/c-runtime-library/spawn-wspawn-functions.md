@@ -56,11 +56,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函数
 每个 `_spawn` 函数将创建并执行一个新进程：  
@@ -138,7 +139,7 @@ ms.lasthandoff: 10/24/2017
   
  您可以将参数指针作为不同的参数传递（在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中）或作为指针数组传递（在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中）。 您必须至少将一个参数 `arg0` 或 `argv`[0] 传递到生成进程。 按照约定，此参数是程序的名称，因为您将在命令行上键入该名称。 不同的值不会生成错误。  
   
- 一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
+ 一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn`之后，必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
   
  `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv` *传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 `NULL` 指针，用以标记参数列表的末尾。  
   
@@ -241,7 +242,7 @@ child process output
 from SPAWN!  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../c-runtime-library/process-and-environment-control.md)   
  [abort](../c-runtime-library/reference/abort.md)   
  [atexit](../c-runtime-library/reference/atexit.md)   

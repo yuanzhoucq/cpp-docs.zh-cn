@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e708f1cbb9db3cc546aac172291facfa95acfb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a753216cd8dfe0975d1d92451863b1ee2a88ddd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-streams"></a>输入流
 输入流对象是字节的源。 三个最重要的输入流类分别是 [istream](../standard-library/basic-istream-class.md)、[ifstream](../standard-library/basic-ifstream-class.md) 和 [istringstream](../standard-library/basic-istringstream-class.md)。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/24/2017
   
  [为自己的类重载 >> 运算符](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [iostream 编程](../standard-library/iostream-programming.md)

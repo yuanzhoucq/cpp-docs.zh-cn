@@ -1,32 +1,31 @@
 ---
-title: "编译器警告（等级 4）C4210 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4210"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4210"
+title: "编译器警告 （等级 4） C4210 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4210
+dev_langs: C++
+helpviewer_keywords: C4210
 ms.assetid: f8600adf-dfe2-4022-a37a-3d4997641dfd
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4c75203bdd821612a7cd289e52702e606c41344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 4）C4210
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用了非标准扩展 : 函数给定文件范围  
+# <a name="compiler-warning-level-4-c4210"></a>编译器警告（等级 4）C4210
+使用的非标准扩展： 提供文件范围内函数  
   
- 在默认 Microsoft 扩展 \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\) 下，函数声明有文件范围。  
+ 与默认 Microsoft 扩展 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))，函数声明具有文件范围。  
   
 ```  
 // C4210.c  
@@ -42,4 +41,4 @@ int main()
 }                //  /Za passes 4 as type int  
 ```  
   
- 该扩展可以防止将代码移植到其他编译器。
+ 此扩展可以防止你的代码移植到其他编译器。

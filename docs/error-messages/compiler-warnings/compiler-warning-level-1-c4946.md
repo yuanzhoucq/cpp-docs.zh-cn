@@ -1,36 +1,35 @@
 ---
-title: "编译器警告（等级 1）C4946 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4946"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4946"
+title: "编译器警告 （等级 1） C4946 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4946
+dev_langs: C++
+helpviewer_keywords: C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 800d940c3005762bddf6402a14af4416da4bc50e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4946
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-reinterpret\_cast 在相关类之间使用:“class1”和“class2”  
+# <a name="compiler-warning-level-1-c4946"></a>编译器警告（等级 1）C4946
+reinterpret_cast 在相关类之间使用:“class1”和“class2”  
   
- 不应使用[reinterpret\_cast](../../cpp/reinterpret-cast-operator.md) 在相关类型之间进行转换。  使用 [static\_cast](../../cpp/static-cast-operator.md) 为多态类型，或者，使用 [dynamic\_cast](../../cpp/dynamic-cast-operator.md)。  
+ 不要使用[reinterpret_cast](../../cpp/reinterpret-cast-operator.md)相关类型之间强制转换。 使用[static_cast](../../cpp/static-cast-operator.md)相反，或对于多态类型，使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)。  
   
- 默认情况关闭此警告。  有关更多信息，请参见[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
   
- 以下 STL 代码示例生成 C4946:  
+ 以下代码示例生成 C4946：  
   
 ```  
 // C4946.cpp  

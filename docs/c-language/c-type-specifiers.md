@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78cd6292c97f41cb7e862389113404346da80460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28712275312bf653e082a9f8e32424f26534fb93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-specifiers"></a>C 类型说明符
 声明中的类型说明符定义变量或函数声明的类型。  
@@ -77,7 +78,7 @@ short *ps;
 ps = pi;  /* Now generates warning */  
 ```  
   
- Microsoft C 编译器还生成保留符号的差异警告。 例如：  
+ Microsoft C 编译器还生成保留符号的差异警告。 例如:  
   
 ```  
 signed int *pi;  
@@ -94,5 +95,5 @@ pi = pu;  /* Now generates warning */
   
  可以使用 `typedef` 声明创建附加类型说明符，如 [Typedef 声明](../c-language/typedef-declarations.md)中所述。 有关每个类型的大小的信息，请参阅[基本类型的存储](../c-language/storage-of-basic-types.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明和类型](../c-language/declarations-and-types.md)

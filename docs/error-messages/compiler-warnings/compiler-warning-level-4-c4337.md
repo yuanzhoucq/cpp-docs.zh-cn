@@ -1,34 +1,33 @@
 ---
-title: "编译器警告（等级 4）C4337 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4337"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4337"
+title: "编译器警告 （等级 4） C4337 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4337
+dev_langs: C++
+helpviewer_keywords: C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b620d43e595ca959622cd8fca1396a96718e80df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 4）C4337
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-交叉引用类型库“typelib1”\(在“typelib2”中\)正在自动导入  
+# <a name="compiler-warning-level-4-c4337"></a>编译器警告（等级 4）C4337
+在 typelib2 的交叉引用的类型库 typelib1 是要自动导入  
   
- [\#import 指令](../../preprocessor/hash-import-directive-cpp.md)的 auto\_search 特性导致类型库被隐式导入。  
+ Auto_search 特性[#import 指令](../../preprocessor/hash-import-directive-cpp.md)导致隐式要导入类型库。  
   
- 假设磁盘上有两个使用以下两个文件创建的类型库（用 midl.exe 编译）：  
+ 从以下两个文件 （使用 midl.exe 编译） 创建的磁盘上的给定两个类型库：  
   
 ```  
 // C4337a.idl  
@@ -47,7 +46,7 @@ library C4337aLib
 };  
 ```  
   
- 然后是第二个 .idl 文件，  
+ 然后与第二个.idl 文件  
   
 ```  
 // C4337b.idl  
@@ -67,7 +66,7 @@ library C4337bLib
 };  
 ```  
   
- 下面的示例生成 C4337：  
+ 下面的示例生成 C4337:  
   
 ```  
 // C4337.cpp  

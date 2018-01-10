@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8355dd04376e73618a215fa73160dc1ee64dae2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06d237478a790437eea433d6060c8d7dca977782
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-files-and-source-programs"></a>源文件和源程序
 源程序可以分为一个或多个“源文件”或“翻译单元”。 编译器的输入称为“翻译单元”。  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/24/2017
   
  源文件无需包含可执行语句。 例如，您可能发现将变量的定义放置在一个源文件中，然后在使用这些变量的其他源文件中声明对这些变量的引用会很有用。 必要时，可通过此方法轻松查找和更新定义。 由于相同的原因，常量和宏通常会被归类为称为“包含文件”或“头文件”的独立文件中，可在源文件中将这些文件引用为所需文件。 有关[宏](../preprocessor/macros-c-cpp.md)和[包含文件](../preprocessor/hash-include-directive-c-cpp.md)的详细信息，请参阅《预处理器参考》。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序结构](../c-language/program-structure.md)

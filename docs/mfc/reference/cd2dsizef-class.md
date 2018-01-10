@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,21 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF::CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF::IsNull
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f19063c29c7cbb08fadad4d55724dbbdad3ff58d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a64798f2b89cf43451fffff1ccf18d1981e55b55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 类
 D2D1_SIZE_F 包装器。  
@@ -64,7 +62,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
  [CD2DSizeF](../../mfc/reference/cd2dsizef-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2dsizef"></a>CD2DSizeF::CD2DSizeF  
@@ -111,6 +109,5 @@ operator CSize();
 ### <a name="return-value"></a>返回值  
  D2D 大小的当前值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

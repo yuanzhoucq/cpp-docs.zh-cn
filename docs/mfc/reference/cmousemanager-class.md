@@ -33,11 +33,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e395596ee8decde683c13c12a0c1f2bd33a8cc58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f50b74731089346a9675b5340ba0ea1a0b2879f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 类
 允许用户将不同的命令与特定相关联[CView](../../mfc/reference/cview-class.md)当用户在视图内双击对象。  
@@ -73,7 +74,7 @@ class CMouseManager : public CObject
   
  `CMouseManager`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxmousemanager.h  
   
 ##  <a name="addview"></a>CMouseManager::AddView  
@@ -244,7 +245,7 @@ void SetCommandForDblClk(
   
  如果`uiCmd`设置为 0，指定的视图已不再与命令关联。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)   

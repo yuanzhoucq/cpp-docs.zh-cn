@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 272324af8bf4a0cd26e4763c8346669a4833ccd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0a50137d309c5913d627a065455061123c0e6146
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-list-stlclr"></a>运算符&gt;（列表） (STL/CLR)
 大于比较的列表。  
@@ -88,12 +91,12 @@ int main()
 [a b d] > [a b c] is True  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [运算符 = = （列表） (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
  [运算符 ！ = （列表） (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   

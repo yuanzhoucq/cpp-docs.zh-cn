@@ -1,45 +1,46 @@
 ---
-title: "set::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 成员 [STL/CLR]"
+title: "set:: equal_range (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: f0b20a65-f37a-44b1-a291-09c33c10c355
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5751d6c7c2b0168721ba9134aca654988e880ce1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# set::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-查找数组与指定键的。  
+# <a name="setequalrange-stlclr"></a>set::equal_range (STL/CLR)
+查找与指定键匹配的范围。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### 参数  
- 键  
- 搜索的键值。  
+#### <a name="parameters"></a>参数  
+ 密钥  
+ 要搜索的键值。  
   
-## 备注  
- 成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)[set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)`(``key``),` `(``key``))`。  使用它确定当前与指定键的范围控制元素在序列。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回一对迭代器`cliext::pair<iterator, iterator>(` [set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [set:: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`。 你可以使用它来确定的受控序列中的当前与指定的键匹配的元素范围。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_set_equal_range.cpp   
@@ -75,17 +76,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**equal\_range \(空\) L'x 为 True**  
- **b**   
-## 要求  
- **页眉：** \<cliext\/设置\>  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [集合](../dotnet/set-stl-clr.md)   
- [set::count](../dotnet/set-count-stl-clr.md)   
- [set::find](../dotnet/set-find-stl-clr.md)   
- [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)   
- [set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: count (STL/CLR)](../dotnet/set-count-stl-clr.md)   
+ [set:: find (STL/CLR)](../dotnet/set-find-stl-clr.md)   
+ [set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)   
+ [set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)

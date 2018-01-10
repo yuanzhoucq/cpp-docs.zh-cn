@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c42f6328ce7867c49e240bbcd5946e551b2a5ac6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8172f9723ac5ed0a2db0905e22299595be057804
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 > [!NOTE]
@@ -48,6 +49,6 @@ bool operator==(
 ## <a name="return-value"></a>返回值  
  返回`left.`[大小](../standard-library/container-class-size.md) ` == right.size && equal(left.`[开始](../standard-library/container-class-begin.md)`, left.`[结束](../standard-library/container-class-end.md)`, right.begin)`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<sample container>](../standard-library/sample-container.md)
 

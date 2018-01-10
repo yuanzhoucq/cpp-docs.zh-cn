@@ -29,11 +29,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe45f47520efd0a96dff9b31f18eb267d0058c61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d54a461bece96faeb11f78a1788049abcabbae0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 类
 支持面向流并使用可读文本格式的诊断输出。  
@@ -94,7 +95,7 @@ class CDumpContext
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CDumpContext`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
@@ -250,7 +251,7 @@ void SetDepth(int nNewDepth);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CFile 类](../../mfc/reference/cfile-class.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)

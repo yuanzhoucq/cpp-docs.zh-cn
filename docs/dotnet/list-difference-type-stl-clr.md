@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33d647c4b4a09f5c8e226daefe7b56e4b81a34e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3cc57efaac2273eab44d1e26c123371c74e423f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listdifferencetype-stlclr"></a>list::difference_type (STL/CLR)
 两个元素间的带符号距离的类型。  
@@ -74,11 +77,11 @@ end()-begin() = 3
 begin()-end() = -3  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)

@@ -47,11 +47,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd687a396b6538d73290a305959ba95f6b49c7e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26763a16c4de59f33622ea904ea8aa132fe0d5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 类
 实现基本插值程序。  
@@ -85,7 +86,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|内插的值。|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|内插的速度。|  
@@ -100,7 +101,7 @@ class CCustomInterpolator;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CCustomInterpolator`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator  
@@ -298,5 +299,5 @@ virtual BOOL SetInitialValueAndVelocity(
 ### <a name="return-value"></a>返回值  
  基本实现始终返回 TRUE。 返回 FALSE 从重写实现如果你想要失败事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

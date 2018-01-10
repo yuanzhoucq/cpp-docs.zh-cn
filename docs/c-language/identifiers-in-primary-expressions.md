@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce62a6ad0f0cb36678de0756d77155769393f760
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e507c2b7c05f9ea818f55b10d222592fe0172cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifiers-in-primary-expressions"></a>主要表达式中的标识符
 标识符可具有整数、float、`enum`、`struct`、union、数组、指针或函数类型。 如果已将标识符声明为指定对象（此时为左值）或声明为函数（此时为函数指示符），则它是主函数。 有关左值的定义，请参阅[左值和右值表达式](../c-language/l-value-and-r-value-expressions.md)。  
@@ -27,5 +28,5 @@ ms.lasthandoff: 10/24/2017
   
  声明为函数的标识符表示其值是函数的地址的指针。 该指针为返回指定类型的值的函数寻址。 因此，函数标识符也不能是赋值运算中的左值。 有关详细信息，请参阅[标识符](../c-language/c-identifiers.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 主要表达式](../c-language/c-primary-expressions.md)

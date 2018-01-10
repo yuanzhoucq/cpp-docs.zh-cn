@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2655
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2655
+f1_keywords: C2655
+dev_langs: C++
+helpviewer_keywords: C2655
 ms.assetid: beaefa6e-51b3-4df9-9150-960f3fbf40e0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf0a7e7feab969819eccd6f8a0a8a33d5e4e56e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 2d3c9199979d83c91e4c4d12dec648482c4999b3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2655"></a>编译器错误 C2655
 identifier： 定义或在当前范围内的非法重新声明  

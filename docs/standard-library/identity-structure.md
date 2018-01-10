@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 280ce6a24e1de9d0e7206e7f9e5b0d896d8c6787
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9166383cbe79835cc3790826fc2e617eca22484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identity-structure"></a>identity 结构
 一个将类型定义作为模板参数提供的结构。  
@@ -44,12 +45,12 @@ struct identity {
   
  为与旧版代码兼容，此类还定义了 identity 函数 `operator()`，该函数会返回其参数 `left`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<utility>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<utility>](../standard-library/utility.md)
 
 

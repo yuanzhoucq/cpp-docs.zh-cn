@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbbde719028df2d7b535548f4343b88e2c90efbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4fe280562d4f1278d74ae118712c9167de4b54d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="excepthandler3"></a>_except_handler3
 内部 CRT 函数。 由框架用于查找相应的异常处理程序，以处理当前异常。  
@@ -68,5 +69,5 @@ int _except_handler3(
 ## <a name="remarks"></a>备注  
  如果此方法找到了相应的异常处理程序，则它会将异常传递给该处理程序。 在这种情况下，此方法不会返回到调用它的代码且与返回值无关。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

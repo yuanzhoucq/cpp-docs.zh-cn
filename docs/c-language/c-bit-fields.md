@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ebc62a975e534d89fd99dbb05a65e8d6cb379bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>C 位域
 除了结构或联合的成员的声明符外，结构声明符也可以是指定数目的位，称为“位域”。 其长度从字段名称的声明符到冒号。 位域被解释为整型类型。  
@@ -91,5 +92,5 @@ cccccccb bbbbaaaa
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构声明](../c-language/structure-declarations.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2b511a4b7cbaffb80d9f07a2491a38554682c29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 680d3a97cec7971bf31605997e3ab2afdfae2cdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>生存期、范围、可见性和链接
 若要了解 C 程序的工作方式，您必须了解确定如何在程序中使用变量和函数的规则。 有多个概念对于理解这些规则是至关重要的：  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [链接](../c-language/linkage.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序结构](../c-language/program-structure.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 625a4445aebcb03cce7068c216782326619e3c6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf1ba1273a349f685b70fec6706b566c2b618f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX 控件容器：手动启用 ActiveX 控件包含
 如果您在使用 MFC 应用程序向导生成应用程序时未启用 ActiveX 控件支持，则将必须手动添加此支持。 本文介绍了手动将 ActiveX 控件包含添加到现有 OLE 容器应用程序的过程。 如果事先知道您的 OLE 容器中需要 ActiveX 控件支持，请参阅文章[创建 MFC ActiveX 控件容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。  
@@ -42,6 +43,6 @@ ms.lasthandoff: 10/24/2017
   
  完成这些步骤后，重新生成项目通过单击**生成**上**生成**菜单。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveX 控件容器](../mfc/activex-control-containers.md)
 

@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 变量是指向构成进程环境的多字节字符字符串的指针数组的指针。 此全局变量已弃用，因为出现了更安全的函数版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)，应使用这两个版本来替换此全局变量。 `_environ` 在 Stdlib.h 中声明。  
@@ -82,7 +83,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
   
  因此，在多字节环境中，当“`env_var_z`”的值设置为“`string2`”时，第一次隐式调用 `putenv` 之后“`env_var_z`”的值将为“`string1`”，但此值将在第二次隐式调用 `putenv` 时改写。 因此，Unicode 环境（在 `_wenviron` 中）与多字节环境（在 `_environ` 中）将区分以下这一系列的调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局变量](../c-runtime-library/global-variables.md)   
  [getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)   
  [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   

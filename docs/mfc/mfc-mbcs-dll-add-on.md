@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 810cf210c6ef40121be7905f6519ee9897b3cfb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 176ed47b4d6a799cf53d2a1cea8cb232f1c2c4aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL 加载项
  需要多字节 DLL 来在 Visual Studio 2015 中生成将“字符集”  属性设置为“使用多字节字符集”  或“未设置” 的 MFC 项目。  
@@ -32,6 +33,6 @@ ms.lasthandoff: 10/24/2017
 **Visual Studio 2017**： 一起安装的 DLL**使用 c + + 桌面开发**当你选择的工作负荷**MFC 和 ATL 支持**从**可选组件**窗格。
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 库版本](../mfc/mfc-library-versions.md)
 

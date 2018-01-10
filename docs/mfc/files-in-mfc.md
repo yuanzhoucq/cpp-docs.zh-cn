@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ece4c1b56aeb724c16683a3614d908a7e0caaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d2cd6344f11a9c32ade0fc3241225a8763c18b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-in-mfc"></a>MFC 中的文件
 在 Microsoft 基础类库 (MFC)，类[CFile](../mfc/reference/cfile-class.md)处理常规文件 I/O 操作。 此系列文章介绍如何打开和关闭文件以及如何读取数据并将数据写入文件。 还讨论了文件状态操作。 有关如何使用 MFC 的基于对象的序列化功能作为一种替代方式的读取和写入数据文件中的说明，请参阅文章[序列化](../mfc/serialization-in-mfc.md)。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [存储和加载 Cobject 和 CObject 派生的对象，通过存档](../mfc/storing-and-loading-cobjects-via-an-archive.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../mfc/mfc-concepts.md)   
  [常规 MFC 主题](../mfc/general-mfc-topics.md)   
  [CArchive 类](../mfc/reference/carchive-class.md)   

@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29c6f910ed8d122c71521af87683b9fb32177a1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1e38f3227615a7854abd2d09c641ef9397ef0182
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplerowmirowset"></a>CSimpleRow::m_iRowset
 表示光标的行集的索引。  
@@ -34,9 +37,9 @@ KeyType m_iRowset;
   
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CSimpleRow 类](../../data/oledb/csimplerow-class.md)   
  [CSimpleRow::CSimpleRow](../../data/oledb/csimplerow-csimplerow.md)

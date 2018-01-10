@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c57536aed0c53e8f74ac6031632e60a403e5ce30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-function-definitions"></a>C 函数定义
 函数定义指定函数的名称、函数期望接收的参数的类型和数量以及函数的返回类型。 函数定义还包括带有局部变量的声明的函数体和确定函数行为的语句。  
@@ -111,5 +112,5 @@ ms.lasthandoff: 10/24/2017
   
  [函数特性](../c-language/function-attributes.md)、[存储类](../c-language/storage-class.md)、[返回类型](../c-language/return-type.md)、[参数](../c-language/parameters.md)和[函数体](../c-language/function-body.md)节详细地描述了函数定义的组成部分。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../c-language/functions-c.md)

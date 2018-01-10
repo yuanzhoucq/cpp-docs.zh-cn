@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e84ba7b9d59e1c15c2d01ecc7cc73eab9209c34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c8c5ac474cc2b94baedab64854fec3ca3e0a78a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorreserve-stlclr"></a>vector::reserve (STL/CLR)
 可确保容器的最小增长容量。  
@@ -77,12 +80,12 @@ capacity() = 9, ok = True
 ## <a name="description"></a>描述  
  请注意，实际的容量可能不同于此处显示的值，这么长时间为全部`ok`测试报告 true。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/向量 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector:: capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)   
  [vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)

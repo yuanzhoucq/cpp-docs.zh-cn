@@ -1,31 +1,34 @@
 ---
-title: "修改 RMyProviderRowset 的继承 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "继承 [C++]"
-  - "RMyProviderRowset"
+title: "修改 RMyProviderRowset 的继承 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RMyProviderRowset
+- inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ff6e953bf706e0e8767fe6f97fe1d31b70431d08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 修改 RMyProviderRowset 的继承
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-若要将 `IRowsetLocate` 接口添加到简单只读提供程序示例，请修改 **RMyProviderRowset** 的继承。  开始时，**RMyProviderRowset** 从 `CRowsetImpl` 继承。  需要修改它以从 **CRowsetBaseImpl** 继承。  
+# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>修改 RMyProviderRowset 的继承
+若要添加`IRowsetLocate`接口与简单只读提供程序的示例中，修改的继承**RMyProviderRowset**。 最初， **RMyProviderRowset**继承自`CRowsetImpl`。 你需要修改从继承**CRowsetBaseImpl**。  
   
- 若要执行此操作，请在 MyProviderRS.h 文件中创建新类 `CMyRowsetImpl`：  
+ 若要执行此操作，创建一个新的类， `CMyRowsetImpl`，MyProviderRS.h 中：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -39,7 +42,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
- 现在，在 MyProviderRS.h 中将 COM 接口映射编辑成下面这样：  
+ 现在，编辑中 MyProviderRS.h 要如下所示的 COM 接口映射：  
   
 ```  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -48,17 +51,17 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()  
 ```  
   
- 这将创建通知 `CMyRowsetImpl` 为 `IRowset` 和 `IRowsetLocate` 接口都调用 **QueryInterface** 的 COM 接口映射。  为获取其他行集合类的所有实现，该映射将 `CMyRowsetImpl` 类链接回 OLE DB 模板定义的 **CRowsetBaseImpl** 类；该映射使用 COM\_INTERFACE\_ENTRY\_CHAIN 宏，通知 OLE DB 模板扫描 **CRowsetBaseImpl** 中的 COM 映射以响应 `QueryInterface` 调用。  
+ 这将创建 COM 接口映射中，它告知`CMyRowsetImpl`调用**QueryInterface**两个`IRowset`和`IRowsetLocate`接口。 若要获取所有其他行集的实现类，映射链接`CMyRowsetImpl`类回**CRowsetBaseImpl**类定义由 OLE DB 模板; 地图使用 COM_INTERFACE_ENTRY_CHAIN 宏，它指示OLE DB 模板扫描 COM 映射中**CRowsetBaseImpl**以响应`QueryInterface`调用。  
   
- 最后，通过修改 `RAgentRowset` 从 `CMyRowsetImpl` 继承，将 `RAgentRowset` 链接到 `CMyRowsetBaseImpl`，如下所示：  
+ 最后，链接`RAgentRowset`到`CMyRowsetBaseImpl`通过修改`RAgentRowset`要从其继承`CMyRowsetImpl`、，如下所示：  
   
 ```  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` 现在可以使用 `IRowsetLocate` 接口，同时利用行集合类的其余实现。  
+ `RAgentRowset`现在可以使用`IRowsetLocate`接口，同时利用行集类的实现的其余部分。  
   
- 当这些完成后，可以[动态确定返回给使用者的列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
+ 完成此操作后，你可以[动态确定返回给使用者的列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)

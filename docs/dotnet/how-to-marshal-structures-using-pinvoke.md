@@ -18,11 +18,14 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送结构
 本文档介绍如何本机接受 C 样式字符串可以从提供的一个实例的托管函数调用的函数<xref:System.String>通过使用 P/Invoke。 尽管我们建议你使用 c + + 互操作功能而不是 P/Invoke P/Invoke 提供很少的编译时错误报告，因为不是类型安全和可单调乏味，若要实现，如果非托管的 API 打包为的 DLL，并且源代码不是可用，P/Invoke 是唯一的选项。 否则，请参阅以下文档：  
@@ -140,5 +143,5 @@ int main() {
 [managed] x=50 y=50  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

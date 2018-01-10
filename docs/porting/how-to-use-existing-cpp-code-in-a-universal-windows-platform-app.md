@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10b63f8e7bd7d23e75417e28b45d533832c8426e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>如何：在通用 Windows 平台应用中使用现有 C++ 代码
 要在 UWP 环境中运行桌面程序，最简单的方法或许是使用桌面桥技术。 这包括 Desktop App Converter，它能将现有应用程序打包为 UWP 应用，而无需更改代码。 有关详细信息，请参阅[使用桌面桥将桌面应用引入通用 Windows 平台 (UWP)](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)。
@@ -240,5 +241,5 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 9. 通过从 UWP 应用项目添加对组件的引用来测试该组件，然后添加某些代码来调用你创建的公共 API。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [移植到通用 Windows 平台](../porting/porting-to-the-universal-windows-platform-cpp.md)

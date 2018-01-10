@@ -1,52 +1,53 @@
 ---
-title: "unary_delegate_noreturn (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate_noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate_noreturn 函数 [STL/CLR]"
+title: "unary_delegate_noreturn (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate_noreturn
+dev_langs: C++
+helpviewer_keywords: unary_delegate_noreturn function [STL/CLR]
 ms.assetid: 3c3fb143-f60f-4e28-a66b-690e3a7b2f9b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 901fbb73305be96a6987928c5cf8c015f85781c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# unary_delegate_noreturn (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-genereic 类描述返回 `void`的一参数委托。  使用该指定委托根据其参数类型。  
+# <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
+Genereic 类描述一个自变量委托，可返回`void`。 使用它指定根据其自变量类型的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  Arg  
- 参数类型。  
+ 自变量类型。  
   
-## 备注  
- genereic 描述委托返回 `void`的一参数函数。  
+## <a name="remarks"></a>备注  
+ Genereic 委托描述返回的单自变量函数`void`。  
   
- 请注意：  
+ 请注意，对于：  
   
  `unary_delegare_noreturn<int> Fun1;`  
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- `Fun1` 和 `Fun2` 类型是同义词，那么，当进行针对：  
+ 类型`Fun1`和`Fun2`是同义词，而为：  
   
  `delegate void Fun1(int);`  
   
@@ -54,7 +55,7 @@ generic<typename Arg>
   
  它们不是同一类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_unary_delegate_noreturn.cpp   
@@ -79,14 +80,17 @@ int main()
   
 ```  
   
-  **hash\(a\) \= 5**  
-**hash\(b\) \= 22**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+hash(a) = 5  
+hash(b) = 22  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)

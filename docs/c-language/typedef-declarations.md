@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daffef64ab4c212a9688b05e450f226519869f7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typedef-declarations"></a>Typedef 声明
 typedef 声明是具有作为存储类的 typedef 的声明。 声明符将成为新类型。 您可以使用 typedef 声明为已由 C 定义的类型或您已声明的类型构造更短和更有意义的名称。 利用 Typedef 名称，您可以封装可能会发生更改的实现详细信息。  
@@ -72,7 +73,7 @@ typedef 声明是具有作为存储类的 typedef 的声明。 声明符将成�
   
  请注意，typedef 声明不会创建类型， 而是创建现有类型的同义词或可通过其他方式指定的类型的名称。 当使用 typedef 名称作为类型说明符时，可以将其与特定的类型说明符组合，但不可以将其与其他类型说明符组合。 可接受的修饰符包括 const 和 `volatile`。  
   
- Typedef 名称与普通标识符共享命名空间（有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)）。 因此，程序可以有一个 typedef 名称和一个具有相同名称的本地范围标识符。 例如：  
+ Typedef 名称与普通标识符共享命名空间（有关详细信息，请参阅[命名空间](../c-language/name-spaces.md)）。 因此，程序可以有一个 typedef 名称和一个具有相同名称的本地范围标识符。 例如:  
   
 ```  
 typedef char FlagType;  
@@ -166,6 +167,6 @@ DRAWF box;
 void box( int, int );  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 
 

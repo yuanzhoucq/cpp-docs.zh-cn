@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,37 +40,7 @@ f1_keywords:
 - array/std::array::swap
 - array/std::array::operator=
 - array/std::array::operator[]
-- array/std::array::const_iterator
-- array/std::array::const_pointer
-- array/std::array::const_reference
-- array/std::array::const_reverse_iterator
-- array/std::array::difference_type
-- array/std::array::iterator
-- array/std::array::pointer
-- array/std::array::reference
-- array/std::array::reverse_iterator
-- array/std::array::size_type
-- array/std::array::value_type
-- array/std::array::assign
-- array/std::array::at
-- array/std::array::back
-- array/std::array::begin
-- array/std::array::cbegin
-- array/std::array::cend
-- array/std::array::crbegin
-- array/std::array::crend
-- array/std::array::data
-- array/std::array::empty
-- array/std::array::end
-- array/std::array::fill
-- array/std::array::front
-- array/std::array::max_size
-- array/std::array::rbegin
-- array/std::array::rend
-- array/std::array::size
-- array/std::array::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::array [C++]
 - std::array [C++], const_iterator
@@ -134,16 +103,16 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e5829e7b241fc4669e67f9200f2f3f0b2cf9f2c8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 描述了一个对象，此对象控制类型 `Ty` 的元素的长度序列 `N`。 此序列存储为 `Ty` 的数组，包含在 `array<Ty, N>` 对象中。  
@@ -173,7 +142,7 @@ class array;
 |[const_reference](#const_reference)|元素的常量引用的类型。|  
 |[const_reverse_iterator](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|  
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|  
-|[iterator](#iterator)|受控序列的迭代器的类型。|  
+|[Iterator](#iterator)|受控序列的迭代器的类型。|  
 |[pointer](#pointer)|指向元素的指针的类型。|  
 |[reference](#reference)|元素的引用的类型。|  
 |[reverse_iterator](#reverse_iterator)|受控序列的反向迭代器的类型。|  
@@ -205,12 +174,12 @@ class array;
   
 |||  
 |-|-|  
-|运算符|说明|  
+|运算符|描述|  
 |[array::operator=](#op_eq)|替换受控序列。|  
 |[array::operator[]](#op_at)|访问指定位置处的元素。|  
   
 ## <a name="remarks"></a>备注  
- 此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，  
+ 此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
@@ -218,7 +187,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  创建包含四个整数值的对象 `ai`，分别将前三个元素初始化为值 1、2 和 3，并将第四个元素初始化为 0。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **Header:** \<array>  
   
  **命名空间：** std  
@@ -478,7 +447,7 @@ const_iterator cbegin() const noexcept;
 ### <a name="remarks"></a>备注  
  由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的 (non- `const`) 任何类型的容器。  
+ 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -979,7 +948,7 @@ void fill(const Type& val);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`val`|要插入到数组中的元素的值。|  
   
 ### <a name="remarks"></a>备注  
@@ -1635,7 +1604,7 @@ typedef Ty value_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Ty`的同义词。  
+ 该类型是模板参数 `Ty` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1675,7 +1644,6 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<array>](../standard-library/array.md)
-
 

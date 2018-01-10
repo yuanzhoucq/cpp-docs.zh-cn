@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81a40835fc5122d6384578e1b6e48e81a70db18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75a8e720fa1a3add6dc8017df8b970dfa746f439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 定义了多种模板类，用于描述基于模板类 [codecvt](../standard-library/codecvt-class.md) 的对象。 此对象可用作[区域设置 facet](../standard-library/locale-class.md#facet_class) 来控制 `Elem` 类型的值序列和 `char` 类型的值序列之间的转换。  
@@ -77,12 +78,12 @@ ms.lasthandoff: 10/24/2017
 |[codecvt_utf16](codecvt-utf16-class.md)|表示在编码为 UCS-2 或 UCS-4 的宽字符和编码为 UTF-16LE 或 UTF-16BE 的字节流之间转换的区域设置 facet。|  
 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<codecvt>  
   
  **命名空间：** stdt  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 
 

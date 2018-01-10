@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9aeaa81a6f1192cb2d05ac37c56c95032fa4b398
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 011ea92e24be73aa51e29bab327bfa1ccdf7ed9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties 类
 `D2D1_BRUSH_PROPERTIES`的包装器。  
@@ -55,7 +56,7 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
   
  `CD2DBrushProperties`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2dbrushproperties"></a>CD2DBrushProperties::CD2DBrushProperties  
@@ -85,5 +86,5 @@ CD2DBrushProperties(
 void CommonInit();
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

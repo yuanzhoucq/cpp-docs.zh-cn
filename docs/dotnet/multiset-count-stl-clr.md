@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48bb9059a48d4a9b78a0508b74818264cf7a5e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 149d32a171167d1c75ecbc2f357c2380eb4f4a88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetcount-stlclr"></a>multiset::count (STL/CLR)
 查找与指定键匹配的元素数。  
@@ -72,11 +75,11 @@ count(L'b') = 1
 count(L'C') = 0  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)

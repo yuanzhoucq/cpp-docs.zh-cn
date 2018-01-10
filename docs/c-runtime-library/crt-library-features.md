@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 本主题将介绍各种 .lib 文件，包括 C 运行时库及其关联的编译器选项和预处理器指令。  
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/24/2017
 |LIBCPMTD.LIB|多线程, 静态链接|**/MTd**|_DEBUG, _MT|  
 |MSVCPRTD.LIB|多线程动态链接（MSVCP\<version>D.DLL 的导入库）|**/MDd**|_DEBUG, _MT, _DLL|  
   
- 当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（LIBCMT.LIB、MSVCMRT.LIB、MSVCRT.LIB），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 Visual C++ 自动链接 C++ 标准库。 例如:   
+ 当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（LIBCMT.LIB、MSVCMRT.LIB、MSVCRT.LIB），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 Visual C++ 自动链接 C++ 标准库。 例如:  
   
 ```  
 #include <ios>   
@@ -113,5 +114,5 @@ ms.lasthandoff: 10/24/2017
   
  如果程序使用多个版本的 CRT，则跨 DLL 边界传递某些 CRT 对象（如文件句柄、区域设置和环境变量）时需注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)

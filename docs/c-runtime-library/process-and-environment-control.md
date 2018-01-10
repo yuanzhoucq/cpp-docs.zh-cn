@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>进程和环境控制
 使用进程控制例程启动、停止和管理程序内的进程。 使用环境控制例程获取和更改与操作系统环境有关的信息。  
   
 ### <a name="process-and-environment-control-functions"></a>进程和环境控制函数  
   
-|例程|使用|  
+|例程所返回的值|使用|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|中止进程而无需刷新缓冲区或调用通过 `atexit` 和 `_onexit` 注册的函数|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|测试逻辑错误|  
@@ -85,14 +86,14 @@ ms.lasthandoff: 10/24/2017
   
 |函数|使用 PATH 变量查找文件|参数传递约定|环境设置|  
 |---------------|--------------------------------------|----------------------------------|--------------------------|  
-|`_execl, _spawnl`|No|列表|继承自调用进程|  
-|`_execle, _spawnle`|No|列表|指向作为最后一个参数传递的新进程的环境表|  
+|`_execl, _spawnl`|否|列表|继承自调用进程|  
+|`_execle, _spawnle`|否|列表|指向作为最后一个参数传递的新进程的环境表|  
 |`_execlp, _spawnlp`|是|列表|继承自调用进程|  
 |`_execlpe, _spawnlpe`|是|列表|指向作为最后一个参数传递的新进程的环境表|  
-|`_execv, _spawnv`|No|数组|继承自调用进程|  
-|`_execve, _spawnve`|No|数组|指向作为最后一个参数传递的新进程的环境表|  
+|`_execv, _spawnv`|否|数组|继承自调用进程|  
+|`_execve, _spawnve`|否|数组|指向作为最后一个参数传递的新进程的环境表|  
 |`_execvp, _spawnvp`|是|数组|继承自调用进程|  
 |`_execvpe, _spawnvpe`|是|数组|指向作为最后一个参数传递的新进程的环境表|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)

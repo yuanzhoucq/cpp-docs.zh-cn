@@ -57,11 +57,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f03e2c28612b3418c324c46ecfdf5342c90c30e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71d44aac1ca7a018be7be1b375dd92920af96dba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 类
 定义文档模板基本功能的抽象基类。  
@@ -134,7 +135,7 @@ class CDocTemplate : public CCmdTarget
   
  `CDocTemplate`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="adddocument"></a>CDocTemplate::AddDocument  
@@ -166,7 +167,7 @@ CDocTemplate (
  `nIDResource`  
  指定与文档类型一起使用的资源的 ID。 这可能包括菜单、 图标、 快捷键对应表和字符串资源。  
   
- 字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符作为一个占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[GetDocString](#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如:   
+ 字符串资源包含最多七由 \n 字符分隔的子字符串 （不包括子字符串时，需要将 \n 字符作为一个占位符; 但是，不需要尾随 \n 字符）;这些子字符串描述文档类型。 子字符串的信息，请参阅[GetDocString](#getdocstring)。 在应用程序的资源文件中找到此字符串资源。 例如:  
   
  `// MYCALC.RC`  
   
@@ -569,7 +570,7 @@ void SetPreviewInfo(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CSingleDocTemplate 类](../../mfc/reference/csingledoctemplate-class.md)   

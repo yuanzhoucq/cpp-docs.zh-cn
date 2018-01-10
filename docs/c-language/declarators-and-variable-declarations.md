@@ -17,19 +17,20 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08165d5e6308697ec75a6d03751b26fb626dbb15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarators-and-variable-declarations"></a>声明符和变量声明
 本节的其余部分描述了该列表中汇总的变量类型的声明的形式和含义。 具体来说，其余各节说明如何声明以下内容：  
   
-|变量类型|说明|  
+|变量类型|描述|  
 |----------------------|-----------------|  
 |[简单变量](../c-language/simple-variable-declarations.md)|带整型或浮点型的单值变量|  
-|[阵列](../c-language/array-declarations.md)|由类型相同的一系列元素构成的变量|  
+|[数组](../c-language/array-declarations.md)|由类型相同的一系列元素构成的变量|  
 |[指针](../c-language/pointer-declarations.md)|指向其他变量并包含变量位置（以地址的形式）而不是值的变量|  
 |[枚举变量](../c-language/c-enumeration-declarations.md)|带整型的简单变量，其中包含命名整数常量组中的某个值|  
 |[结构](../c-language/structure-declarations.md)|由一系列可具有不同类型的值构成的变量|  
@@ -93,5 +94,5 @@ int *aptr[10] // Declares an array of 10 pointers
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [声明和类型](../c-language/declarations-and-types.md)

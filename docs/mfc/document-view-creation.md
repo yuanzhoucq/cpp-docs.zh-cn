@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e98f6e4b1b9ecd5848c2701043aa9b0b7dcea7d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6997189f23ea7599dde0a1b19ba9f0ea350378d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documentview-creation"></a>文档/视图创建
 框架提供的实现`New`和**打开**（及其他） 的命令上**文件**菜单。 创建新文档及其关联的视图和框架窗口是应用程序对象、 文档模板、 新建的文档和新创建的框架窗口相互合作的结果。 下表总结了哪些对象创建的内容。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 |文档模板|框架窗口|  
 |框架窗口|视图|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)   
  [文档模板创建](../mfc/document-template-creation.md)   
  [MFC 对象之间的关系](../mfc/relationships-among-mfc-objects.md)   

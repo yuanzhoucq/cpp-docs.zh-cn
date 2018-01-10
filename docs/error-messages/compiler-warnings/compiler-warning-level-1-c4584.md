@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c17d8871d16cd2eec6b46e01d9c1779f3440398
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba427de26d07851c5bf2a2dd3f599c4cbe7afc5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4584"></a>编译器警告（等级 1）C4584
 class1： 已基类的 class3 移基类 class2。  
   
- 你定义的类继承自两个类，其中一个继承自其他。 例如:   
+ 你定义的类继承自两个类，其中一个继承自其他。 例如:  
   
 ```  
 // C4584.cpp  

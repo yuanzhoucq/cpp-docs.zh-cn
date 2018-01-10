@@ -1,34 +1,33 @@
 ---
-title: "编译器警告（等级 1）C4677 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4677"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4677"
+title: "编译器警告 （等级 1） C4677 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4677
+dev_langs: C++
+helpviewer_keywords: C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7af724ad56c3a84ffb8ef48e13d14bee97db14df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4677
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“function”: 非私有成员的签名包含程序集私有类型“private\_type”  
+# <a name="compiler-warning-level-1-c4677"></a>编译器警告（等级 1）C4677
+function： 非私有成员的签名包含程序集私有类型 private_type  
   
- 具有程序集外公共可访问性的类型使用在该程序集外具有私有访问权限的类型。  引用公共程序集类型的组件将无法使用引用程序集私有类型的类型成员。  
+ 具有程序集外部的公共可访问性的类型使用具有程序集外部的私有访问权限的类型。 引用公共程序集类型的组件将不能使用类型成员或成员引用的程序集私有类型。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4677。  
   
 ```  

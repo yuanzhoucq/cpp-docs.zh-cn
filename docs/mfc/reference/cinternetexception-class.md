@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94f75200599c941dbe63a194e6a71d1693e1810e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8caa275af4469d45672125677d960b71212fe3de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetexception-class"></a>CInternetException 类
 表示与 Internet 操作相关的异常条件。  
@@ -65,7 +66,7 @@ class CInternetException : public CException
   
  `CInternetException`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
   
 ##  <a name="cinternetexception"></a>CInternetException::CInternetException  
@@ -104,7 +105,7 @@ DWORD m_dwError;
   
  有关 Win32 错误代码的列表，请参阅[错误代码](http://msdn.microsoft.com/library/windows/desktop/ms681381)。 有关特定于 Internet 的错误消息的列表，请参阅。 这两个主题是 Windows SDK 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CException 类](../../mfc/reference/cexception-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CException 类](../../mfc/reference/cexception-class.md)

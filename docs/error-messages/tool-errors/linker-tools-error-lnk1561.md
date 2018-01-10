@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1561
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1561
+f1_keywords: LNK1561
+dev_langs: C++
+helpviewer_keywords: LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: f918c51e6f4539c020bc59ad28c867f8e2d1ae75
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbd0ca9e932bdb2845ada2f47b569391e943cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1561"></a>链接器工具错误 LNK1561
 必须定义入口点  
   
 找不到链接器*入口点*，要调用你的可执行文件中的初始函数。 默认情况下，链接器查找`main`或`wmain`控制台应用程序，函数`WinMain`或`wWinMain`函数对于 Windows 应用，或`DllMain`需要初始化的 dll。 你可以通过使用指定另一个函数[/ENTRY](../../build/reference/entry-entry-point-symbol.md)链接器选项。  
   
-此错误可以有几个原因︰  
+此错误可以有几个原因：  
 -   你可能不包含要链接的文件列表中定义的入口点的文件。 验证该文件包含入口点函数已链接到你的应用。  
 -   您可能定义了使用错误的函数签名中; 的入口点例如，你可能有拼写错误或用于错误的大小写的函数名称，或未正确指定返回类型或参数类型。  
 -   你可能不指定[/DLL](../../build/reference/dll-build-a-dll.md)选项生成 DLL 时。  
