@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>链接器工具错误 LNK2005
 *符号*对象中已定义  
@@ -49,11 +31,11 @@ ms.lasthandoff: 05/10/2017
   
 ### <a name="possible-causes-and-solutions"></a>可能的原因和解决方案  
   
-通常，此错误意味着破坏了你*单一定义规则*，这允许你跨外部可见的对象或函数的整个可执行文件只有一个定义任何使用的模板、 函数、 类型或对象在给定的对象文件中，而且只有一个定义。  
+通常，此错误意味着破坏了你*单一定义规则*，这允许你跨的整个可执行文件只有一个定义任何使用的模板、 函数、 类型或对象在给定的对象文件中，而且只有一个定义外部可见的对象或函数。  
   
 下面是此错误的一些常见原因。  
   
--   当标头文件定义一个变量时，可能出现此错误。 例如，如果在你项目中，在多个源文件中包含此标头文件，则会出现错误︰  
+-   当标头文件定义一个变量时，可能出现此错误。 例如，如果在你项目中，在多个源文件中包含此标头文件，则会出现错误：  
   
     ```h  
     // LNK2005_global.h  
@@ -62,7 +44,7 @@ ms.lasthandoff: 05/10/2017
   
     可能的解决方案包括：  
   
-    -   声明变量`extern`标头文件中︰ `extern int global_int;`，然后定义并根据需要将其初始化且只有一个源文件中︰ `int global_int = 17;`。 此变量现在是全局，你可以使用任何源文件中通过声明它`extern`，例如，通过包含标头文件。 我们建议变量必须是全局的此解决方案，但良好的软件工程做法最大程度减少全局变量。  
+    -   声明变量`extern`标头文件中： `extern int global_int;`，然后定义并根据需要将其初始化且只有一个源文件中： `int global_int = 17;`。 此变量现在是全局，你可以使用任何源文件中通过声明它`extern`，例如，通过包含标头文件。 我们建议变量必须是全局的此解决方案，但良好的软件工程做法最大程度减少全局变量。  
     
     -   声明变量[静态](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`。 这会限制到当前的对象文件中，定义的作用域，并允许多个对象文件具有其自己的变量的副本。 我们不建议你在由于可能出现的与全局变量的混淆情况下将在标头文件中定义静态变量。 更愿意将静态变量的定义移到使用它们的源文件。  
   
@@ -77,14 +59,14 @@ ms.lasthandoff: 05/10/2017
   
     可能的解决方案包括：  
   
-    -   添加`inline`关键字对函数︰ 
+    -   添加`inline`关键字对函数： 
 
         ```h  
         // LNK2005_func_inline.h  
         inline int sample_function(int k) { return 42 * (k % 167); }  
         ```  
   
-    -   从标头文件中删除函数体并保留只有声明，然后在一个且仅有一个源文件中实现函数︰  
+    -   从标头文件中删除函数体并保留只有声明，然后在一个且仅有一个源文件中实现函数：  
   
         ```h  
         // LNK2005_func_decl.h  
@@ -95,7 +77,7 @@ ms.lasthandoff: 05/10/2017
         // LNK2005_func_impl.cpp  
         int sample_function(int k) { return 42 * (k % 167); }  
         ```  
--   如果在标头文件中定义类声明的外部的成员函数，也可能发生此错误︰  
+-   如果在标头文件中定义类声明的外部的成员函数，也可能发生此错误：  
   
     ```h  
     // LNK2005_member_outside.h  
@@ -118,7 +100,7 @@ ms.lasthandoff: 05/10/2017
   
 -   如果将链接到多个版本的标准库或 CRT，则可能出现此错误。 例如，如果你尝试将同时零售和调试 CRT 库或库中的静态和动态版本或两个不同版本的标准库链接到可执行文件，则此错误，可能被报告多次。 若要解决此问题，请从链接命令中删除每个库的所有只保留一个的副本。 我们不建议您混用零售和调试库或不同版本的库，在同一可执行文件。  
   
-    若要告知链接器命令行上使用库之外的默认值，指定要使用，并且使用的库[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)选项以禁用默认库。 在 IDE 中，添加到项目中以指定要使用，，然后打开的库的引用**属性页**对话框为你的项目，并在**链接器**，**输入**属性页中，设置**忽略所有默认库**，或**忽略特定默认库**属性禁用默认库。   
+    若要告知链接器命令行上使用库之外的默认值，指定要使用，并且使用的库[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)选项以禁用默认库。 在 IDE 中，添加到项目中以指定要使用，，然后打开的库的引用**属性页**对话框为你的项目，并在**链接器**，**输入**属性页上，设置**忽略所有默认库**，或**忽略特定默认库**属性禁用默认库。   
   
 -   如果当你使用混合使用静态和动态库，会出现此错误[/clr](../../build/reference/clr-common-language-runtime-compilation.md)选项。 例如，如果使用的 DLL 中生成可执行文件中的静态 CRT 的该链接可以出现此错误。 若要解决此问题，请使用仅静态库或仅动态库整个可执行文件和生成要在可执行文件中使用任何库。  
   
@@ -128,7 +110,7 @@ ms.lasthandoff: 05/10/2017
   
 -   如果可能发生此错误`extern const`变量被定义两次，并在每个定义中具有不同的值。 若要解决此问题，定义常量的一次，或者使用命名空间或`enum class`来区分常量的定义。  
   
--   Uuid.lib 结合使用与定义 Guid （例如 oledb.lib 和 adsiid.lib） 的其他.lib 文件，可能出现此错误。 例如：  
+-   Uuid.lib 结合使用与定义 Guid （例如 oledb.lib 和 adsiid.lib） 的其他.lib 文件，可能出现此错误。 例如:  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  
@@ -139,12 +121,11 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="additional-information"></a>其他信息  
   
-如果你使用的较旧版本的工具集，请参阅有关此错误的特定原因的详细信息这些知识库文章︰  
+如果你使用的较旧版本的工具集，请参阅有关此错误的特定原因的详细信息这些知识库文章：  
   
 -   [出现 LNK2005 错误，则当以错误的顺序在 Visual c + + 链接的 CRT 库和 MFC 库](https://support.microsoft.com/kb/148652)  
   
--   [修复︰ 全局重载的删除运算符导致 LNK2005](https://support.microsoft.com/kb/140440)  
+-   [修复： 全局重载的删除运算符导致 LNK2005](https://support.microsoft.com/kb/140440)  
   
 -   [在编译 Visual c + + ATL 可执行文件 (.exe) 项目时收到 LNK2005 错误](https://support.microsoft.com/kb/184235)。  
   
-

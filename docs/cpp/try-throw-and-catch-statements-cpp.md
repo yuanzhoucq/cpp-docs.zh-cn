@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
 - try_cpp
 - throw_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - catch keyword [C++]
 - keywords [C++], exception handling
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 89db418a92239460379d1ea41d2d49a8073095c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b100f1ee61b06639e75290fafd01dca6a10a820c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 语句 (C++)
 若要在 C++ 中实现异常处理，你可以使用 `try`、`throw` 和 `catch` 表达式。  
@@ -103,7 +101,7 @@ catch(...) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 异常处理](../cpp/cpp-exception-handling.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [未处理的 c + + 异常](../cpp/unhandled-cpp-exceptions.md)   

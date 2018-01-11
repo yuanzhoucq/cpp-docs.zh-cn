@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a755de47e132b29be1c075fc912392b0f84fba15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4ed9c1bcf47de2326a0ff051054c1a8d99ab690c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultisethasher-stlclr"></a>hash_multiset::hasher (STL/CLR)
 用于密钥的哈希委托。  
@@ -59,11 +62,11 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset::hash_delegate (STL/CLR)](../dotnet/hash-multiset-hash-delegate-stl-clr.md)

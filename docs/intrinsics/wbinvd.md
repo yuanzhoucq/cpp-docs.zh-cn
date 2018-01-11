@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6efbb1388974e74e76c0f4ec88a3ffdcfe2ee6f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96104ceef25fde14ec7517ebb26b828300d01e92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wbinvd"></a>__wbinvd
 **Microsoft 专用**  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 void __wbinvd(void);  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -47,5 +48,5 @@ void __wbinvd(void);
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

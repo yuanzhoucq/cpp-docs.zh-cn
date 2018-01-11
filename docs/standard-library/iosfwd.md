@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 046fb6b682191f40545b95c41cea97bb7802c3e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a86259fc066ff97ed84c3387140180d79b5eebfc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 声明对 iostreams 中使用的数个模板类的向前引用。 所有这些模板类都定义在其他标准标头中。 仅在需要其中一个声明而不是定义时将此标头明确包含在内。  
@@ -134,7 +135,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   

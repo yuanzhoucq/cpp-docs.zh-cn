@@ -13,23 +13,22 @@ f1_keywords:
 - type_traits/std::result_of
 - type_traits/std::result_of_t
 - type_traits/std::result_of::type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::result_of
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 256f24ad40234db2bbc191a50b0d7e05de39c073
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 08e4fc22725962d06bee35ed1adf63e3c9230ced
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resultof-class"></a>result_of 类
 确定可调用类型的返回类型，该可调用类型采用指定参数类型。  
@@ -58,14 +57,13 @@ template<class T>
 ## <a name="remarks"></a>备注  
  使用此模板可在编译时确定 `Fn`(`ArgTypes`) 的结果类型，其中 `Fn` 是可调用类型、对函数的引用或对可调用类型的引用（通过在 `ArgTypes` 中使用类型的参数列表进行调用）。 如果未计算的表达式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 格式正确，则模板类的 `type` 成员为 `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 的结果类型命名。 否则，此模板类不具有任何成员 `type`。 类型 `Fn` 和参数包 `ArgTypes` 中的所有类型必须是完整的类型、`void` 或未知边界数组。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

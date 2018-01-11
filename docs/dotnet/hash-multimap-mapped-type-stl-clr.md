@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 414f2b96e983577c0539eb8c876b787bd5bffab3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 24a5b4d5be8579f4de0e6bcc3479ac82bc324b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapmappedtype-stlclr"></a>hash_multimap::mapped_type (STL/CLR)
 与每个键关联的映射值的类型。  
@@ -31,7 +34,7 @@ typedef Mapped mapped_type;
 ```  
   
 ## <a name="remarks"></a>备注  
- 该类型是模板参数 `Mapped`的同义词。  
+ 该类型是模板参数 `Mapped` 的同义词。  
   
 ## <a name="example"></a>示例  
   
@@ -65,12 +68,12 @@ int main()
 1 2 3  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multimap:: key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)   
  [hash_multimap::value_type (STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

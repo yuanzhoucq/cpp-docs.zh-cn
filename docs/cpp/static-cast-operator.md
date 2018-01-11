@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d04c49076f5189e913c8755a5bce4d7e5c7daf11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staticcast-operator"></a>static_cast 运算符
 将转换*表达式*为的类型*类型 id，*仅根据同时出现在表达式的类型。  
@@ -57,7 +58,7 @@ void f(B* pb, D* pd) {
   
  与此相反[dynamic_cast](../cpp/dynamic-cast-operator.md)，不运行时进行检查上`static_cast`的转换`pb`。 由 `pb` 指向的对象可能不是 `D` 类型的对象，在这种情况下使用 `*pd2` 会是灾难性的。 例如，调用 `D` 类（而非 `B` 类）的成员函数可能会导致访问冲突。  
   
- `dynamic_cast` 和 `static_cast` 运算符可以在整个类层次结构中移动指针。 然而，`static_cast` 完全依赖于转换语句提供的信息，因此可能不安全。 例如：  
+ `dynamic_cast` 和 `static_cast` 运算符可以在整个类层次结构中移动指针。 然而，`static_cast` 完全依赖于转换语句提供的信息，因此可能不安全。 例如:  
   
 ```  
 // static_cast_Operator_2.cpp  
@@ -82,7 +83,7 @@ void f(B* pb) {
   
  该行为也适用于类以外的类型。 例如，`static_cast` 可用于将 int 转换为 `char`。 但是，得到的 `char` 可能没有足够的位来保存整个 `int` 值。 同样，它仍将需要程序员来验证的结果`static_cast`转换是安全。  
   
- `static_cast` 运算符还可用于执行任何隐式转换，包括标准转换和用户定义的转换。 例如：  
+ `static_cast` 运算符还可用于执行任何隐式转换，包括标准转换和用户定义的转换。 例如:  
   
 ```  
 // static_cast_Operator_3.cpp  
@@ -111,6 +112,6 @@ void f() {
   
  由于在一个重定位垃圾回收器顶部执行无检查转换的危险，你只应在确信代码将正常运行的时候，在性能关键代码中使用 `static_cast`。 如果必须使用`static_cast`在发布模式下，替换它[safe_cast](../windows/safe-cast-cpp-component-extensions.md)在调试版本中，以确保成功。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [强制转换运算符](../cpp/casting-operators.md)   
  [关键字](../cpp/keywords-cpp.md)

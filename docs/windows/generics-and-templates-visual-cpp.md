@@ -1,66 +1,68 @@
 ---
-title: "型和模板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "普通 [C++], 使用模板"
-  - "模板, C++"
+title: "泛型和模板 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 型和模板
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-C\# 泛型和 C\+\+ 模板都是用于提供参数化类型支持的语言功能。  但是，它们不同且具有的不同用法。  本主题提供不同类型的概述。  
+# <a name="generics-and-templates-visual-c"></a>泛型和模板 (Visual C++)
+泛型和模板是参数化类型为提供支持这两种语言功能。 但是，它们不同，并且具有不同的用途。 本主题概述了许多差异。  
   
- 有关更多信息，请参见[Windows 运行时和托管模板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)和[模板概述](../Topic/Templates%20Overview.md)。  
+ 有关详细信息，请参阅[Windows 运行时和托管模板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
-## 比较泛型和模板  
- C\+\+ 模板和 C\# 泛型之间的区别 \(C\#\)  
+## <a name="comparing-templates-and-generics"></a>比较模板和泛型  
+ 泛型和 c + + 模板之间的主要差异：  
   
--   泛型是泛型，直到替换类型将重写运行时。  模板在编译时专用，因此仍不是参数化类型在运行时  
+-   泛型是泛型，直到类型在运行时将替换为它们的。 模板是在编译时专用，因此不会在运行时仍参数化的类型  
   
--   公共语言运行时 \(CLR\) 专门支持在 MSIL 的泛型。  由于运行时知道泛型，特定类型可以替换泛型类型上重写，当引用包含泛型类型的程序集。  模板，相反，普通类型解析到在编译时，得到的类型不可以从中特殊化其他程序集。  
+-   公共语言运行时在 MSIL 中专门支持泛型。 因为运行时知道有关泛型，则引用包含泛型类型的程序集时，泛型类型可以替换特定的类型。 模板，与此相反，解析为普通类型在编译时并不可能在其他程序集专用化在产生的类型。  
   
--   具有相同类型参数的两个不同的程序集的专用泛型是同一类型。  具有相同类型参数的两个不同的程序集的专用模板运行时视为不同的类型。  
+-   泛型专业的两个不同的程序集具有相同的类型自变量具有相同的类型。 模板专用化中使用相同的类型自变量被视为由运行时为不同类型的两个不同的程序集。  
   
--   生成泛型用作所有引用类型参数使用的可执行代码单个 \(这不可靠。值类型，具有单个实现每个值类型。\)  JIT 编译器知道使用作为类型参数的泛型并可以优化引用或值类型的代码。  模板为每专用化的独立运行时代码。  
+-   泛型将生成为一段单独的可执行代码时使用 （不能同时运行对于值类型，具有每个值类型的唯一实现） 的所有引用类型参数。 JIT 编译器识别泛型的并且能够优化用作类型参数的引用或值类型的代码。 模板生成每个专用化的单独的运行时代码。  
   
--   C\# 不允许非类型模板参数，如 `template <int i> C {}`。  模板重命名它们。  
+-   泛型不允许非类型模板参数，如`template <int i> C {}`。 模板允许它们。  
   
--   C\# 不支持显式专用化，即特定类型的模板的自定义实现。  模板  
+-   泛型不允许显式专用化 （即，为特定类型的模板的自定义实现）。 模板执行操作。  
   
--   C\# 不支持部分专用化：类型参数子集的自定义实现。  模板  
+-   泛型不允许部分专用化 （的自定义实现子集的类型自变量）。 模板执行操作。  
   
--   C\# 不允许将类型参数用作泛型类型的基类。  模板  
+-   泛型不允许类型参数用作泛型类型的基类。 模板执行操作。  
   
--   模板支持模板模板参数 \(即  `template<template<class T> class X> class MyClass`\)，而泛型不是。  
+-   模板支持模板模板参数 (例如`template<template<class T> class X> class MyClass`)，但不为泛型。  
   
-## 组合泛型和模板  
+## <a name="combining-templates-and-generics"></a>组合模板和泛型  
   
--   在泛型中的基本区别具有生成合并模板和泛型的应用程序的影响。  例如，假定具有一个模板类要创建一般包装用于向该模板为其他语言为泛型。  不能有泛型使然后通过传递到模板类型的参数，该类型参数，因为模板需要具有在编译时，但一般不会解析的类型参数在运行时中  嵌套在泛中的模板不会起作用，因为无法展开模板在能在运行时进行实例化的任意泛型类型的编译时。  
+-   泛型中的基本差异有用于生成结合模板和泛型的应用程序的影响。 例如，假设有一种模板类，你想要创建泛型包装器来公开到其他语言将该模板为泛型。 不能具有泛型 take 然后传递到该模板后，因为模板需要先在编译时，具有该类型参数的类型参数，但泛型不会在运行时解析类型参数。 嵌套泛型中的模板将不起作用是因为没有方法在任意无法在运行时实例化的泛型类型的编译时扩展模板。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 说明  
- 下面的示例同时显示了一个简单的示例模板和泛型。  在此示例中，模板类传递参数的泛型类型。  撤消是不可能的。  
+### <a name="description"></a>描述  
+ 下面的示例演示使用模板和泛型在一起的一个简单的示例。 在此示例中，此模板类将通过其参数传递给泛型类型。 反之不可能。  
   
- 可以使用这个，当您与是本地的。Visual C\+\+ 程序集代码的模板时的现有的常规 API 若要生成，或者，如果需要将参数化添加额外的层到泛型类型，利用泛型不支持模板的某些功能。  
+ 当你想要在现有泛型 API，是对 Visual c + + 程序集，本地的模板代码生成，或当你需要将一层额外的参数化添加到泛型类型，以利用模板不 supporte 的某些功能时，无法使用此习惯用法通过泛型 d。  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // templates_and_generics.cpp  
@@ -95,11 +97,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 F  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05b83a284dcf599890985f1f01d8327ac5ef75e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-operator-c"></a>new 运算符 (C++)
 对象或对象数组分配内存*类型名称*从自由存储和返回非零、 适当类型化指针的对象。  
@@ -122,7 +123,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>示例  
- 如果你使用的放置新形式**新**运算符，具有除了大小自变量的分配，编译器的窗体不支持的放置形式**删除**运算符如果构造函数引发异常。 例如:   
+ 如果你使用的放置新形式**新**运算符，具有除了大小自变量的分配，编译器的窗体不支持的放置形式**删除**运算符如果构造函数引发异常。 例如:  
   
 ```  
 // expre_new_Operator2.cpp  
@@ -196,7 +197,7 @@ int main()
  与函数调用一样，未定义初始化表达式的计算顺序。 此外，您不应指望这些表达式能在执行内存分配前完全计算。 如果内存分配失败和**新**运算符将返回零，可能无法完全计算初始值设定项中的某些表达式。  
   
 ## <a name="lifetime-of-objects-allocated-with-new"></a>使用 new 运算符分配的对象的生存期  
- 对象分配与**新**退出在其中定义的作用域时，将不会销毁运算符。 因为**新**运算符将指针返回到它所分配的对象，因此程序必须定义使用合适的范围，才能访问这些对象的指针。 例如:   
+ 对象分配与**新**退出在其中定义的作用域时，将不会销毁运算符。 因为**新**运算符将指针返回到它所分配的对象，因此程序必须定义使用合适的范围，才能访问这些对象的指针。 例如:  
   
 ```  
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  
@@ -254,7 +255,7 @@ T *TObject =::new TObject;
   
  范围解析运算符 (`::`) 强制使用全局**新**运算符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [新和 delete 运算符](../cpp/new-and-delete-operators.md)

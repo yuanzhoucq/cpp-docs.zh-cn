@@ -15,11 +15,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>上下文相关的关键字（C++ 组件扩展）
 *上下文相关的关键字*是只能在特定上下文中识别的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。  
@@ -60,7 +63,7 @@ ms.lasthandoff: 10/24/2017
   
  （此功能没有特定于平台的备注。）  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -68,7 +71,7 @@ ms.lasthandoff: 10/24/2017
   
  （此功能没有特定于平台的备注。）  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -103,5 +106,5 @@ int main() {
 100  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

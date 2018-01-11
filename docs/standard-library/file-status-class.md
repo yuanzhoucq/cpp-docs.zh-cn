@@ -4,43 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- file_status
-- filesystem/std::experimental::filesystem::v1::file_status
-- filesystem/std::experimental::filesystem::v1::file_status::operator=
-- filesystem/std::experimental::filesystem::v1::file_status::type
-- filesystem/std::experimental::filesystem::v1::file_status::permissions
-dev_langs:
-- C++
+- filesystem/std::experimental::filesystem::file_status
+- filesystem/std::experimental::filesystem::file_status::operator=
+- filesystem/std::experimental::filesystem::file_status::type
+- filesystem/std::experimental::filesystem::file_status::permissions
+dev_langs: C++
 ms.assetid: 9781840e-ad22-44dd-ad79-0fabaa94bac4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1095fbeeceb33fd9dedf0ad1217eab1a052f5ba1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::file_status
+- std::experimental::filesystem::file_status::operator=
+- std::experimental::filesystem::file_status::type
+- std::experimental::filesystem::file_status::permissions
+ms.workload: cplusplus
+ms.openlocfilehash: f76bbbe5c11b5fbd7a7e9cc7ed6a4f9851805f29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filestatus-class"></a>file_status 类
 包装 [file_type](../standard-library/filesystem-enumerations.md#file_type) 和文件 [perms](../standard-library/filesystem-enumerations.md#perms)。  
@@ -94,14 +82,13 @@ void permissions(perms mask) noexcept
   
  使用资源库将文件设置为只读，或删除只读特性。  
   
-## <a name="requirements"></a>要求  
- **标头︰** \<文件系统 >  
+## <a name="requirements"></a>惠?  
+ **标头：** \<文件系统 >  
   
- **Namespace:** std::experimental::filesystem、 std::experimental::filesystem::v1  
+ **Namespace:** std::experimental::filesystem、 std::experimental::filesystem  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [path 类](../standard-library/path-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

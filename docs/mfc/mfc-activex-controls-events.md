@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98be16e8e493592f06aa2e4963f748e32b3f345d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6760f2051542a28e78f5f8f2fa81f6937388d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 控件：事件
 ActiveX 控件使用事件通知控件有事情的容器。 事件的常见示例包括点击控件，输入在控件的状态中使用键盘和更改的数据。 当发生这些操作时，则控件触发事件以提醒容器。  
@@ -56,7 +57,7 @@ ActiveX 控件使用事件通知控件有事情的容器。 事件的常见示�
   
 -   [MFC ActiveX 控件：添加自定义事件](../mfc/mfc-activex-controls-adding-custom-events.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)   
  [COleControl 类](../mfc/reference/colecontrol-class.md)

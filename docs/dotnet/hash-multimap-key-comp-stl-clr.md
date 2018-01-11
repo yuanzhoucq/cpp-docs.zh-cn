@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp 成员 [STL/CLR]"
+title: "hash_multimap:: key_comp (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 221d0bfe-19ad-4c34-9b10-77921be32459
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a5b2de4b6bba15fc271a7eb1ec19bec2efd5f1e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制两个键的排序委托。  
+# <a name="hashmultimapkeycomp-stlclr"></a>hash_multimap::key_comp (STL/CLR)
+将复制为两个键排序的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## 备注  
- 成员函数返回用于对受控序列进行排序的排序委托。  用于对两个键进行比较。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回使用受控的序列进行排序的排序委托。 用于比较两个键。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_key_comp.cpp   
@@ -71,18 +72,22 @@ int main()
   
 ```  
   
-  **比较 \(L'a，L'a\) \= true**  
-**比较 \(L'a，L'b\) \= true**  
-**比较\(L'b', L'a'\) \= False**  
-**比较\(L'a', L'a'\) \= False**  
-**比较\(L'a', L'b'\) \= False**  
-**比较\(L'b', L'a'\) \= True**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **命名空间:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_compare](../dotnet/hash-multimap-key-compare-stl-clr.md)   
- [hash\_multimap::key\_type](../dotnet/hash-multimap-key-type-stl-clr.md)
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)   
+ [hash_multimap::key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)

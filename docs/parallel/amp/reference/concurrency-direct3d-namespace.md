@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 849f430caaaf8dacef53ecedd5dc4897041b624a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空间
 `direct3d`命名空间提供支持 D3D 互操作性的函数。 它使 AMP 代码中的计算 D3D 资源的无缝利用以及允许在 AMP 中创建在 D3D 代码中，而无需创建冗余中间副本的资源的使用。 你可以以增量方式使用 c + + AMP 来加快 DirectX 应用程序的计算密集型部分上和使用 D3D API 从 AMP 计算生成数据。  
@@ -79,10 +80,10 @@ namespace direct3d;
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|比较两个无符号的值，返回的值即更大。|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|比较两个无符号的值，返回这是较小的值。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp.h  
   
  **命名空间：** 并发  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

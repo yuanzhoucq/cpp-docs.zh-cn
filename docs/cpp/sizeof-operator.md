@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sizeof_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- sizeof operator
+f1_keywords: sizeof_cpp
+dev_langs: C++
+helpviewer_keywords: sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 67b699a93880a89e634ac024699ac79a9ea8d3ba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sizeof-operator"></a>sizeof 运算符
 产生与 `char` 类型的大小有关的操作数大小。  
@@ -48,7 +44,7 @@ sizeof  ( type-name )
   
 -   一个表达式。 当用于表达式时，无论是否使用括号都可指定 `sizeof`。 不计算表达式。  
   
- 当 `sizeof` 运算符应用到 `char` 类型的对象时，它将生成 1。 当 `sizeof` 运算符应用到数组时，它将产生该数组的字节总数，而非由数组标识符表示的指针的大小。 若要获取由数组标识符表示的指针的大小，请将其作为参数传递给使用 `sizeof` 的函数。 例如:   
+ 当 `sizeof` 运算符应用到 `char` 类型的对象时，它将生成 1。 当 `sizeof` 运算符应用到数组时，它将产生该数组的字节总数，而非由数组标识符表示的指针的大小。 若要获取由数组标识符表示的指针的大小，请将其作为参数传递给使用 `sizeof` 的函数。 例如:  
   
 ## <a name="example"></a>示例  
   
@@ -114,6 +110,6 @@ The size of the pointer is 4
 sizeof array / sizeof array[0]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [关键字](../cpp/keywords-cpp.md)

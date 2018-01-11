@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- system_error/std::is_error_code_enum
-- is_error_code_enum
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_error_code_enum class
+f1_keywords: system_error/std::is_error_code_enum
+dev_langs: C++
+helpviewer_keywords: is_error_code_enum class
 ms.assetid: cee5be2d-7c20-4cec-a352-1ab8b7d32601
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 65c818260a4da28c3134e7fb9e124993b0200b74
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 56f402c938d3e481e9d859d66f383b5f8886df61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iserrorcodeenum-class"></a>is_error_code_enum 类
 表示测试 [error_code](../standard-library/error-code-class.md) 枚举的类型谓词。  
@@ -56,15 +37,14 @@ class is_error_code_enum;
   
  允许将专用化添加到此类型，以获得用户定义类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<system_error>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)   
  [<system_error>](../standard-library/system-error.md)
-
 
 
 

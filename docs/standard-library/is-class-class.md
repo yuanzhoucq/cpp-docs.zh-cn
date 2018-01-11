@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7f0d348fe11dda5cdc2ae5c0cfc601203de6261a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94c3c96ad9322480a17a30a19ca80bb9460a5513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isclass-class"></a>is_class 类
 测试类型是否为一个类。  
@@ -70,12 +71,12 @@ is_class<trivial> == true
 is_class<int> == false  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_compound 类](../standard-library/is-compound-class.md)   
  [is_union 类](../standard-library/is-union-class.md)

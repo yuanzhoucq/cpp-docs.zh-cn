@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aec90b22bf3423ea93ae3ea5115dfd6b20a14c40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c92933e62f79b22b988099f0d7cbad1f3679888
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outofrange-class"></a>out_of_range 类
 此类用作引发报告无效自变量的所有异常的基类。  
@@ -69,12 +70,12 @@ int main() {
 Caught: invalid string position  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<stdexcept>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [logic_error 类](../standard-library/logic-error-class.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

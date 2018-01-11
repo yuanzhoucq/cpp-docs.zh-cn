@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e1b40b16c3ee349419259ae1e2240e28e3e7e911
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscript-operator"></a>下标运算符：
 ## <a name="syntax"></a>语法  
@@ -50,7 +51,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  **\*((** *e2* **)**  *+*  **(***e1***))**  
   
- 该表达式生成的地址不是*e2*发件人地址的字节*e1*。 相反，缩放地址以生成数组中的下一个对象*e2*。 例如:   
+ 该表达式生成的地址不是*e2*发件人地址的字节*e1*。 相反，缩放地址以生成数组中的下一个对象*e2*。 例如:  
   
 ```  
 double aDbl[2];  
@@ -111,7 +112,7 @@ int main() {
   
  下标运算符是可交换的。 因此，表达式*数组*[*索引*] 和*数组*[*数组*] 保证都是等效只要下标未重载运算符 (请参阅[重载运算符](../cpp/operator-overloading.md))。 第一种形式是最常见的编码做法，但它们都有效。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [后缀表达式](../cpp/postfix-expressions.md)   
  [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [数组](../cpp/arrays-cpp.md)   

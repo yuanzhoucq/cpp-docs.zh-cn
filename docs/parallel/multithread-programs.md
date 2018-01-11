@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: effbb235ef678253f5258d3eb01a3a82292385cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithread-programs"></a>多线程程序
 基本上，线程是执行通过计划的路径。 它也是 Win32 安排执行的最小单位。 线程包含的堆栈的状态以及 CPU 寄存器中，系统计划程序执行列表中的条目。 每个线程共享进程的所有资源。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
   
  进程中的每个线程都独立运行。 除非您使它们相互可见，线程单独执行，而不会意识到进程中的其他线程。 线程共享公共资源，但是，必须使用信号量或另一种方法的进程间通信协调其工作。 有关同步线程的详细信息，请参阅[编写多线程 Win32 程序](../parallel/writing-a-multithreaded-win32-program.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C 和 Win32 进行多线程编程](../parallel/multithreading-with-c-and-win32.md)

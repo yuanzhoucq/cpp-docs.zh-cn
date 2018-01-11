@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d26913c9767f35c131605a8f7abee87396e753a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8a2fc2d8a353b3e1c2200dcacedfaeadcfa95d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iserrorconditionenum-class"></a>is_error_condition_enum 类
 表示测试 [error_condition](../standard-library/error-condition-class.md) 枚举的类型谓词。  
@@ -36,12 +37,12 @@ class is_error_condition_enum;
   
  允许将专用化添加到此类型，以获得用户定义类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<system_error>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)   
  [<system_error>](../standard-library/system-error.md)
 

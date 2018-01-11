@@ -41,11 +41,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e13ef57486a948b8cb702c004ca144d4ec6d2e59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 10738f2236e5ecc4f04edfe21a25d6d5da80a841
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cassertions-cassertioninfo"></a>CAssertions，CAssertionInfo
 调用 typedef 类**CAssertions**来实现其参数类**CAssertionInfo**。  
@@ -66,8 +69,8 @@ ms.lasthandoff: 10/24/2017
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|  
 |m_szDescription|说明|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldbsch.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRestrictions 类](../../data/oledb/crestrictions-class.md)

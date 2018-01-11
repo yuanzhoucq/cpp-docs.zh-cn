@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b823d40d4504be0180c3af3a6fb5359bf86725cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialog-class"></a>CDialog 类
 用于在屏幕上显示对话框的基类。  
@@ -146,7 +147,7 @@ class CDialog : public CWnd
   
  `CDialog`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cdialog"></a>CDialog::CDialog  
@@ -515,7 +516,7 @@ void SetHelpID(UINT nIDR);
  *nIDR*  
  指定区分上下文的帮助 id。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 DLGCBR32](../../visual-cpp-samples.md)   
  [MFC 示例 DLGTEMPL](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

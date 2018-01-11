@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 564ff17037bfa86000329ed66b67a9b9ba76c879
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1db5adaab66fec2b587f7a15005caa3a9374ff12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>记录视图的数据交换（MFC 数据访问）
 当你使用[添加类](../mfc/reference/adding-an-mfc-odbc-consumer.md)将映射到记录集的字段的记录视图的对话框模板资源中的控件，框架将管理在两个方向的数据交换 — 从记录集到控件以及从控件到记录集。 使用 DDX 机制意味着你不必编写代码来回传输数据。  
@@ -37,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
  有关 DDX 的详细信息，请参阅[对话框数据交换和验证](../mfc/dialog-data-exchange-and-validation.md)。 有关 RFX 的详细信息，请参阅[记录字段交换 (RFX)](../data/odbc/record-field-exchange-rfx.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录视图 （MFC 数据访问）](../data/record-views-mfc-data-access.md)   
  [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

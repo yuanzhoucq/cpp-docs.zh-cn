@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fa3efc37b251024feae79343ddfbd51769c7d53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-parent-and-child-items"></a>树控件父项和子项
 树控件中的任意项 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 都具有子项，称为子项目，与之关联的列表。 具有一个或多个子项的项称为“父项”。 子项显示在其父项下，可能指示其是父级的下属。 没有父级的项位于层次结构顶部，称为“根项”。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  子项列表展开后，则将相对于父项缩进。 你可以通过使用设置缩进量[SetIndent](../mfc/reference/ctreectrl-class.md#setindent)成员函数或检索当前量使用[GetIndent](../mfc/reference/ctreectrl-class.md#getindent)成员函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控件](../mfc/controls-mfc.md)
 

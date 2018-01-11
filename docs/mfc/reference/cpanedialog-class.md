@@ -23,11 +23,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 013b40d2d0ef33a440a451b52802e62c7d9a15b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d292a8f3f8fafc88b23d9375d1894e47e1c0a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 类
 `CPaneDialog`类支持一个无模式的可停靠对话框。  
@@ -80,7 +81,7 @@ class CPaneDialog : public CDockablePane
   
  [CPaneDialog](../../mfc/reference/cpanedialog-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxpanedialog.h  
   
 ##  <a name="create"></a>CPaneDialog::Create  
@@ -199,7 +200,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ### <a name="remarks"></a>备注  
  此方法支持[COccManager](../../mfc/reference/coccmanager-class.md)类，该类管理 OLE 控件站点和 ActiveX 控件。 _AFX_OCC_DIALOG_INFO 结构 afxocc.h 标头文件中定义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)   

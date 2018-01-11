@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ad74a5a763c39ce4f2ef765662b8f88ce083732
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommand-class"></a>CCommand 类
 提供设置和执行命令的方法。  
@@ -83,9 +86,9 @@ class CCommand :
   
  请注意，不能将存储过程与 Jet 的 OLE DB 提供程序一起使用，因为该提供程序不支持存储过程（查询字符串中只允许使用常数）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

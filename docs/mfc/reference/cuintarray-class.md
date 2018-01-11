@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b40dfb0204396a62efb4118b39d3adac932267a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cuintarray-class"></a>CUIntArray 类
 支持无符号整数数组。  
@@ -126,10 +127,10 @@ class CUIntArray : public CObject
   
  `CUIntArray`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcoll.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

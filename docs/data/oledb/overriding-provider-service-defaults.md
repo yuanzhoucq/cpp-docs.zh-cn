@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 479f3464db46fda4c566feeaeec2f7fe5384ee87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-provider-service-defaults"></a>重写提供程序服务默认值
 提供程序的注册表值以查找**OLEDB_SERVICES**返回的默认值为[DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx)数据源对象上的初始化属性。  
@@ -37,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  如果注册表项不存在的提供程序，组件管理器将不会聚合该提供程序的对象，并将调用任何服务，即使用户显式请求。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [资源池](https://msdn.microsoft.com/en-us/library/ms713655.aspx)   
  [使用者如何使用资源池](https://msdn.microsoft.com/en-us/library/ms715907.aspx)   
  [提供程序如何有效地使用资源池](https://msdn.microsoft.com/en-us/library/ms714906.aspx)   

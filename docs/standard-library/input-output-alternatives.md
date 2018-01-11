@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: edf17c4524fd42fd0db327aca9de85e9d63eb651
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56b7268083239fbec6b1744e1905e100fc357cc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inputoutput-alternatives"></a>输入/输出替换选项
 Visual C++ 为 I/O 编程提供了多种替代方法：  
@@ -37,6 +38,6 @@ Visual C++ 为 I/O 编程提供了多种替代方法：
   
  可将 iostream 类用于 Microsoft Windows 操作系统。 字符串和文件流无使用限制条件，但字符模型流对象 `cin`、`cout`、`cerr` 和 `clog` 与 Windows 图形用户界面不一致。 也可派生与 Windows 环境直接交互的自定义流类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流的定义](../standard-library/what-a-stream-is.md)
 

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- exception class
+f1_keywords: exception
+dev_langs: C++
+helpviewer_keywords: exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 33e6d0ed3153b31c231790610de1a7c4da1a94ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e9aac8e51764a50cd674c389b370ae0fa1a54415
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-class"></a>exception 类
 该类用作某些表达式和 C++ 标准库所引发的所有异常的基类。  
@@ -53,14 +49,13 @@ class exception {
 ## <a name="example"></a>示例  
  有关从 `exception` 类继承的标准异常类的使用示例，请参阅 [\<stdexcept>](../standard-library/stdexcept.md) 中定义的任意一个类。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<exception>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

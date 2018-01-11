@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce369fee6f9aa69a485383d9c8853bc8d96cc166
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 18959d3743cf10c262aee583a0527cc5c067a806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cenumeratoraccessormszparsename"></a>CEnumeratorAccessor::m_szParseName
 要传递给字符串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)若要获取的数据源或枚举器的名字对象。  
@@ -40,8 +43,8 @@ WCHAR m_szParseName[129];
 ## <a name="remarks"></a>备注  
  请参阅[ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx)中*OLE DB 程序员参考*有关详细信息。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CEnumeratorAccessor 类](../../data/oledb/cenumeratoraccessor-class.md)

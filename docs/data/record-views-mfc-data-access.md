@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38c5d65e89aa4fb76ff96fa82cd52e42475e2353
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e698cad29405fce4b5a0d23e166217502753dc1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-views--mfc-data-access"></a>记录视图（MFC 数据访问）
 本部分仅适用于 MFC ODBC 类。 有关 OLE DB 记录视图的信息，请参阅[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)和[使用 OLE DB 记录视图](../data/oledb/using-ole-db-record-views.md)。  
@@ -54,6 +57,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用记录视图](../data/using-a-record-view-mfc-data-access.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据访问编程 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)   
  [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

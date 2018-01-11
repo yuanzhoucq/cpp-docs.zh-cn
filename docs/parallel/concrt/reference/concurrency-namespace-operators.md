@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54c37f3262c6750bad4330780a4db09f2eef9d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空间运算符
 ||||  
@@ -324,5 +325,5 @@ inline bool operator>= (
   
  此方法不是并发安全相对于其他方法，可以修改并发向量任一`_A`或`_B`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

@@ -1,32 +1,34 @@
 ---
-title: "如何：从剪贴板中检索文本 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪贴板, 检索文本"
-  - "文本, 从剪贴板中检索"
+title: "如何： 检索剪贴板中的文本 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, retrieving from Clipboard
+- Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 255f2fb393ecf2c2748beada4b250b60ca965e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：从剪贴板中检索文本 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 成员函数返回一个指向 <xref:System.Windows.Forms.IDataObject> 接口的指针。  然后可以查询此接口以了解数据格式，以及使用此接口检索实际数据。  
+# <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>如何：从剪贴板中检索文本 (C++/CLI)
+下面的代码示例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成员函数返回一个指向<xref:System.Windows.Forms.IDataObject>接口。 此接口然后可以查询的数据格式，用于检索实际数据。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // read_clipboard.cpp  
@@ -62,6 +64,6 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## 请参阅  
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2d30eb61603d791b49d6aaaca2b65176f5fa2d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 类
 实现活动文档包容。  
@@ -97,7 +98,7 @@ class COleDocObjectItem : public COleClientItem
   
  `COleDocObjectItem`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxole.h  
   
 ##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
@@ -150,7 +151,7 @@ HRESULT ExecCommand(
 ### <a name="return-value"></a>返回值  
  返回`S_OK`如果成功; 否则，返回以下错误代码之一。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|出现意外的错误。|  
 |**E_FAIL**|出现错误。|  
@@ -283,7 +284,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="remarks"></a>备注  
  不会销毁客户端项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MFCBIND](../../visual-cpp-samples.md)   
  [COleClientItem 类](../../mfc/reference/coleclientitem-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

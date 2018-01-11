@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08372f43e87ed17bd8d0c905d40a8d2c289df966
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5eac97bb87103bd72dfd721515baf58324fc851f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>记录字段交换：RFX 的工作方式
 本主题介绍的 RFX 过程。 这是一个高级主题，包括：  
@@ -123,7 +126,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="rfx-deleting-existing-records"></a>RFX： 删除现有记录  
  RFX 时删除记录时，将所有字段都设置为**NULL**提醒一下，删除该记录，你必须将其移走。 不需要任何其他 RFX 序列信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [MFC ODBC 使用](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [宏、 全局函数和全局变量](../../mfc/reference/mfc-macros-and-globals.md)  

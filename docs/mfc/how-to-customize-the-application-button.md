@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a2512c212efe2cba09d23baf1a997de3a98d154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a4a150985bd5c552b361620df87e34511ef8027
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自定义应用程序按钮
 单击应用程序按钮时，将显示命令的菜单。 通常情况下，则菜单包含与文件相关的命令如**打开**，**保存**，**打印**，和**退出**。  
@@ -61,6 +62,6 @@ ms.lasthandoff: 10/24/2017
   
 -   上**功能区编辑器工具栏**，单击**测试功能区**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
 

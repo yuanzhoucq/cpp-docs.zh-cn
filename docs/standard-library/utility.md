@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e89fdf2b1af11b40c13f57b0febd1daa05894ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cbb348ec11c9c4f832c993ad1e4799c8a39aad2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 定义有助于构造和管理对象对的 C++ 标准库类型、函数和运算符，这些项在每次需要将两个对象视为单个对象时都非常有用。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
 |[identity](../standard-library/identity-structure.md)||  
 |[pair](../standard-library/pair-structure.md)|一种类型，它提供了将两个对象视为单个对象的功能。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

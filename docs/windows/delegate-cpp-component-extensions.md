@@ -1,139 +1,138 @@
 ---
-title: "委托（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "delegate_cpp"
-  - "delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delegate 关键字 [C++]"
+title: "委托 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- delegate_cpp
+- delegate
+dev_langs: C++
+helpviewer_keywords: delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 委托（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-声明代表函数指针的一种类型。  
+# <a name="delegate--c-component-extensions"></a>委托（C++ 组件扩展）
+声明表示函数指针的类型。  
   
-## 所有运行时  
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 和公共语言运行时都支持委托。  
+## <a name="all-runtimes"></a>所有运行时  
+ Windows 运行时和公共语言运行时支持委托。  
   
-### 备注  
- `delegate` 是上下文相关的关键字。  有关详细信息，请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+### <a name="remarks"></a>备注  
+ `delegate` 是上下文相关的关键字。 有关详细信息，请参阅[上下文相关的关键字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
- 要在编译时检测该类型是否为委托，请使用 `__is_delegate()` 类型特征。  有关详细信息，请参阅[编译器使用类型特征支持](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 若要在编译时检测类型是否为委托，使用`__is_delegate()`类型特征。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
-## Windows Runtime — Windows 运行时  
- C\+\+\/CX 支持具有以下语法的委托。  
+## <a name="windows-runtime"></a>Windows 运行时  
+ C + + /cli CX 支持使用以下语法的委托。  
   
-### 语法  
+### <a name="syntax"></a>语法  
   
 ```cpp  
+access  
+delegate  
+return-type  
+delegate-type-identifier  
+(  
+[ parameters ]  
+)  
   
-access delegate return-type delegate-type-identifier ([ parameters ])  
 ```  
   
-### 参数  
+### <a name="parameters"></a>参数  
  *access*  
- （可选）委托的可访问性可以是 `public`（默认值）或 `private`。  带 `const` 或 `volatile` 关键字的函数原型也将得到限定。  
+ （可选）委托，委托可以是可访问性`public`（默认值） 或`private`。 函数原型也可以限定与`const`或`volatile`关键字。  
   
- *return\-type*  
- 函数原型的返回类型。  
+ *返回类型*  
+ 函数原型返回类型。  
   
- *delegate\-type\-identifier*  
- 声明的委托类型名称。  
+ *委托类型标识符*  
+ 声明的委托类型的名称。  
   
- *parameters*  
- （可选）函数原型的类型和标识符。  
+ *参数*  
+ （可选）类型和函数原型的标识符。  
   
-### 备注  
- 使用*委托类型标识符delegate\-type\-identifier*声明事件，该事件的原型与委托相同。  有关更多信息，请参见[委托 \(C\+\+\/CX\)](../Topic/Delegates%20\(C++-CX\).md)。  
+### <a name="remarks"></a>备注  
+ 使用*委托类型标识符*声明具有相同的原型作为委派的事件。 有关详细信息，请参阅[委托 (C + + /cli CX)](../cppcx/delegates-c-cx.md)。  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## 公共语言运行时  
- 公共语言运行时支持具有以下语法的委托。  
+## <a name="common-language-runtime"></a>公共语言运行时  
+ 公共语言运行时支持使用以下语法的委托。  
   
-### 语法  
+### <a name="syntax"></a>语法  
   
 ```cpp  
+access  
+delegate  
+function_declaration  
   
-access delegate function_declaration  
 ```  
   
-### 参数  
+### <a name="parameters"></a>参数  
  *access*  
- （可选）程序集外部委托的可访问性可以是公共或私有的。默认为 private。在选件类中，委托可以具有任何可访问性。  
+ （可选）在程序集之外的可访问性可以是委托的公共或私有。  默认值是私有的。  在类中，委托可以有任何可访问性。  
   
- *function\_declaration*  
- 可与委托绑定的函数签名。  委托的返回类型可以是任何托管类型。  考虑到互操作性，建议委托的返回类型是 CLS 类型。  
+ *function_declaration*  
+ 可以绑定到委托的函数签名。 委托的返回类型可以是任何托管的类型。 互操作性原因，建议的委托的返回类型是符合 CLS 类型。  
   
- 要定义一个未绑定的委托，*function\_declarationfunction\_declaration* 中的第一个参数应为对象的 `this` 指针类型。  有关详细信息，请参阅[未绑定的委托](../misc/unbound-delegates.md)。  
+ 若要定义一个未绑定的委托中的第一个参数*function_declaration*的类型应该`this`对象的指针。 
   
-### 备注  
- 委托是多路广播：“函数指针”可绑定到一或多个托管类中的方法。  **委托**关键字以特定方法签名定义多路广播委托类型。  
+### <a name="remarks"></a>备注  
+ 委托是多路广播:"函数指针"可以绑定到托管类中的一个或多个方法。 **委托**关键字定义了具有特定的方法签名的多路广播的委托类型。  
   
- 委托还可绑定到值类方法，例如静态方法。  
+ 此外可以将委托绑定到值类，如的静态方法的方法。  
   
- 委托具有下面的特性：  
+ 委托具有以下特征：  
   
--   它继承自 **System::MulticastDelegate**。  
+-   它继承自**system:: multicastdelegate**。  
   
--   它有一个带两个参数的构造函数：指向托管类或 **NULL** 的指针（绑定到静态方法时）和指定类型的完全限定方法。  
+-   它具有一个采用两个参数的构造函数： 指向托管类的指针或**NULL** （如果要绑定到静态方法） 和指定类型的完全限定的方法。  
   
 -   它具有一个称为 `Invoke` 的方法，其签名与委托的声明签名匹配。  
   
- 调用委托时，将按其附加顺序调用其函数。  
+ 调用委托时，将它们连接的顺序调用其功能。  
   
- 委托的返回值是来自其最后附加的成员函数的返回值。  
+ 委托的返回值是从其最后一个附加的成员函数的返回值。  
   
- 无法重载委托。  
+ 委托不能重载。  
   
- 委托可绑定或不绑定。  
+ 可以绑定或未绑定的委托。  
   
- 实例化一个绑定委托时，第一个参数应为对象引用。委托实例化的第二参数可以是托管类对象方法的地址，或者指向值类型方法的指针。委托实例化的第二参数必须命名带完全类范围语法的方法并应用运算符地址。  
+ 当实例化绑定的委托时，第一个参数应是一个对象引用。  委托实例化第二个参数应是值类型的方法是托管的类对象或指针的方法的地址。   委托实例化第二个参数必须命名具有完整类范围语法的方法，并应用 address-of 运算符。  
   
- 实例化一个未绑定委托时，第一个参数应为托管类对象方法的地址或指向值类型方法的指针。参数必须通过完全类范围语法进行命名并应用运算符地址。  
+ 当实例化未绑定的委托时，第一个参数应是方法的托管的类对象或指向值类型的方法的地址。   自变量必须命名具有完整类范围语法的方法，并应用 address-of 运算符。  
   
- 为静态或全局函数创建委托时，仅需要一个参数：函数（可选，函数的地址）。  
+ 在创建指向静态或全局函数的委托时，只有一个参数是必需： 函数 （（可选） 的函数的地址）。  
   
- 有关委托的更多信息，请参见  
+ 有关委托的更多信息，请参阅  
   
--   [未绑定的委托](../misc/unbound-delegates.md)  
+-   [如何：定义和使用委托 (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
   
--   [如何：定义和使用委托](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
+-   [泛型委托 (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
--   [委托给值类成员](../misc/how-to-associate-delegates-to-members-of-a-value-class.md)  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
--   [未托管的函数的委托](../misc/how-to-associate-delegates-to-unmanaged-functions.md)  
-  
--   [组成的委托](../misc/how-to-compose-delegates.md)  
-  
--   [如何：将委托传递到预期有函数指针的本机函数](../misc/how-to-pass-a-delegate-hat-to-a-native-function-expecting-a-function-pointer.md)  
-  
--   [泛型委托](../windows/generic-delegates-visual-cpp.md)  
-  
-### 要求  
- 编译器选项：**\/clr**  
-  
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 以下示例显示了如何声明、初始化和调用委托。  
+ 下面的示例演示如何声明、 初始化和调用委托。  
   
 ```cpp  
 // mcppv2_delegate.cpp  
@@ -192,12 +191,19 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **在 func1 8 中**  
- **在 func1 9 中**  
- **在 func2 9 中**  
- **在 func2 10 中**  
- **在静态 func3 11 中**   
-## 请参阅  
+```Output  
+in func1 8  
+  
+in func1 9  
+  
+in func2 9  
+  
+in func2 10  
+  
+in static func3 11  
+```  
+  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

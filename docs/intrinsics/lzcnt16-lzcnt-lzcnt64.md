@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 983d8ff684887ba670e81bf6561d2f47022ff744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 **Microsoft 专用**  
@@ -57,7 +58,7 @@ unsigned __int64 __lzcnt64(
 ## <a name="return-value"></a>返回值  
  前导零位数中的数`value`参数。 如果`value`为零，则返回值是输入操作数 （16、 32 或 64） 的大小。 如果最高有效位`value`为 1，返回值为零。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -115,5 +116,5 @@ __lzcnt(0xffffffff) = 0
 **结束 Microsoft 专用**  
  本部分内容是高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

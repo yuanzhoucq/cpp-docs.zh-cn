@@ -42,11 +42,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 13bcb39bd1bdcc24dc6f14d2cecf887c5213c450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20331a08a781937eadbe8984b4f920362efc0961
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -80,7 +81,7 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
   
 每个专用化采用两个同时必须为 `ratio` 的专用化的模板参数。 `type` 的值由关联的逻辑操作确定。  
   
-|名称|`type` 值|  
+|name|`type` 值|  
 |----------|------------------|  
 |`ratio_add`|`R1 + R2`|  
 |`ratio_divide`|`R1 / R2`|  
@@ -116,7 +117,7 @@ typedef ratio<1000000000000000, 1> peta;
 typedef ratio<1000000000000000000, 1> exa;
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 
 

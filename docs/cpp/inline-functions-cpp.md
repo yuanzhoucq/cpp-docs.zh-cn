@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b4d4ad6a2fbfbb30fe5f0b465c8bb70753cd701
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-functions-c"></a>内联函数 (C++)
 类声明的主体中定义的函数是内联函数。  
@@ -215,7 +216,7 @@ int main()
   
 -   与任何其他函数中使用相同的语法，只不过它们包括指定内联函数**内联**函数声明中的关键字。  
   
--   计算一次作为内联函数的自变量传递的表达式。 在某些情况下，作为宏的参数传递的表达式可计算多次。  
+-   计算一次作为内联函数的自变量传递的表达式。 在某些情况下，作为宏的自变量传递的表达式可计算多次。  
   
  下面的示例演示了将小写字母转换为大写字母的宏：  
   
@@ -264,6 +265,6 @@ Sample Input: a
 Sample Output: A  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [noinline](../cpp/noinline.md)   
  [auto_inline](../preprocessor/auto-inline.md)

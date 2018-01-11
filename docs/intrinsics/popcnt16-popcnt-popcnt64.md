@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a73775316391fd90698f35a5d5f1fdd7e00ebe3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45e60a412dc24f685fd375ebc19c109b2bee0e2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 **Microsoft 专用**  
@@ -54,7 +55,7 @@ unsigned __int64 __popcnt64(
 ## <a name="return-value"></a>返回值  
  中的一个比特数`value`参数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -109,5 +110,5 @@ __popcnt(0xffffffff) = 32
 **结束 Microsoft 专用**  
  高级 Micro 设备，inc.版权所有 2007保留所有权利。 重新生成具有高级 Micro 设备，Inc.的权限  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

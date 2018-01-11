@@ -73,11 +73,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 089841b51421567f2faff9d06508feb20a57e15d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96cc8325ce8084d62f05283b424ead222bc55dd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 管理单个用户从登录到注销的已命名并受密码保护的数据库会话。  
@@ -190,7 +191,7 @@ class CDaoWorkspace : public CObject
   
  `CDaoWorkspace`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdao.h  
   
 ##  <a name="append"></a>CDaoWorkspace::Append  
@@ -815,7 +816,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
   
  有关相关信息，请参阅主题 DAO 帮助中的"LoginTimeout 属性"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDaoDatabase 类](../../mfc/reference/cdaodatabase-class.md)   

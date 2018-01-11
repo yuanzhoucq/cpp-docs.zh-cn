@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c9e8336e0ef26c1547d5bc495dfbb3e89e7ee91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 76d7ab2df01e485ffff70120609227b9fbae6ac5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-locking-records-odbc"></a>记录集：锁定记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  相对较少的 ODBC 驱动程序目前支持保守式锁定。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集： 执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)   
  [记录集：添加、更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

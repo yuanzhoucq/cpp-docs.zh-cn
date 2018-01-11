@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4191adb10693ea224a89fb62c09a2299c3a6bee2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8bd42a7da91f984c4cedc4deafc0ab9f4417495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrolling-and-scaling-views"></a>滚动和缩放视图
 MFC 支持的向下滚动和视图视图自动缩放到显示它们的框架窗口的大小。 类`CScrollView`支持这两种类型的视图。  
@@ -54,6 +55,6 @@ MFC 支持的向下滚动和视图视图自动缩放到显示它们的框架窗�
 ##  <a name="_core_scaling_a_view"></a>缩放视图  
  如果你想要自动调整其框架窗口的大小的视图，你可以使用`CScrollView`缩放而不是滚动。 逻辑视图被拉伸或收缩以完全适合窗口的工作区。 缩放后的视图具有任何滚动条。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用视图](../mfc/using-views.md)
 

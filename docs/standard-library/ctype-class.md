@@ -47,11 +47,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10bc57e29383386df63de4cd6f27299a8f9986a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctype-class"></a>ctype 类
 一种提供一个 facet 的类，此 facet 用于对字符进行分类、转换大写和小写以及在本机字符集与区域设置使用的字符集之间进行转换。  
@@ -68,7 +69,7 @@ class ctype : public ctype_base;
  在程序中用于对字符进行编码的类型。  
   
 ## <a name="remarks"></a>备注  
- 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **id** 中存储唯一的正值。对基类 ctype_base 中的嵌套位掩码类型提供了分类条件。  
+ 对于任何区域设置 facet，静态对象 ID 的初始存储值为零。 首次尝试访问其存储值后，将在 **ID** 中存储唯一正值。对基类 ctype_base 中的嵌套位掩码类型提供了分类条件。  
   
  C++ 标准库定义了此模板类的两个显式专用化：  
   
@@ -115,7 +116,7 @@ class ctype : public ctype_base;
 |[toupper](#toupper)|将一个或一些列字符转换为大写。|  
 |[widen](#widen)|将本机字符集中 `char` 类型的字符转换为区域设置使用的 `CharType` 类型的相应字符。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
@@ -806,7 +807,7 @@ Hello everyone!
 Hello everyone!  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<locale>](../standard-library/locale.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

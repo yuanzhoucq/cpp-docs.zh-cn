@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffa7b39962d78476e971750e92569eb14229606b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25f78fb2e2c5700cbb1f7c8dcb093795ce001c13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>如何：使用消息映射交叉引用
 在标记为条目\<f x n >，编写您自己的成员函数为派生[CWnd](../../mfc/reference/cwnd-class.md)类。 将函数命名为您喜欢的任何名称。 其他函数，如 `OnActivate`，是 `CWnd` 类的成员函数。 如果调用这些函数，则会传递消息给 `DefWindowProc` Windows 函数。 要处理 Windows 通知消息，请重写派生类中相应的 `CWnd` 函数。 您的函数应调用基类中的重写函数使基类和 Windows 响应消息。  
@@ -34,6 +35,6 @@ ms.lasthandoff: 10/24/2017
 |“message”和“wNotifyCode”|在 WINDOWS.H 中定义的 Windows 消息 ID。|  
 |nMessageVariable|包含中的返回值的变量名称**RegisterWindowMessage** Windows 函数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)
 

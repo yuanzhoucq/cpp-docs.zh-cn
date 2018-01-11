@@ -1,39 +1,41 @@
 ---
-title: "高级提供程序技术 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序, using"
+title: "高级提供程序技术 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, using
 ms.assetid: 002a9731-7e06-49ac-be50-3cc26aa43759
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 622d50db55843b6c140ba4eee98885ee60180020
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 高级提供程序技术
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-有关高级提供程序技术的更多信息，请参见下列主题：  
+# <a name="advanced-provider-techniques"></a>高级提供程序技术
+有关高级提供程序技术的详细信息，请参阅以下主题：  
   
 -   [支持通知](../../data/oledb/supporting-notifications.md)  
   
--   [支持架构行集合](../../data/oledb/supporting-schema-rowsets.md)  
+-   [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)  
   
--   [提供程序的书签支持](../../data/oledb/provider-support-for-bookmarks.md)  
+-   [用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)  
   
 -   [通过 OLE DB 一致性测试](../../data/oledb/passing-ole-db-conformance-tests.md)  
   
 -   [OLE DB 资源池和服务](../../data/oledb/ole-db-resource-pooling-and-services.md)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板参考](../../data/oledb/ole-db-provider-templates-reference.md)   
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

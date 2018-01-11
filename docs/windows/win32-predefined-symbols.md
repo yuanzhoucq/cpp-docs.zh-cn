@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01aa83fc5d0be468252b8593ee343ff28648d218
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-predefined-symbols"></a>Win32 预定义符号
 在 Win32 标头文件中，定义了这些符号和它们支持标准 Windows 应用程序功能和操作。 这些符号主要用于公共用户界面元素。 当你正在使用资源编辑器中的控件时，这些符号将出现在[属性窗口](/visualstudio/ide/reference/properties-window)与公共控件关联。 例如，如果您的工具栏上应显示应用程序图标，该图标可以为与属性窗口中的符号 IDI_SMALL 相关联。  
@@ -43,9 +46,9 @@ ms.lasthandoff: 10/24/2017
 |IDS_APP_TITLE|字符串： 当前应用程序名称|  
 |IDYES|控制： 对话框中是按钮|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [预定义的符号 Id](../windows/predefined-symbol-ids.md)   
  [符号：资源标识符](../windows/symbols-resource-identifiers.md)

@@ -1,5 +1,5 @@
 ---
-title: "F。 新功能和 2.0 版中的说明 |Microsoft 文档"
+title: "F. 新功能和 2.0 版中的说明 |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,13 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f2d0399925c27e75c465f905f52e7e2ed2ba86f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9a661f183816fec0f7a71c990f1508338100f4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="f-new-features-and-clarifications-in-version-20"></a>F。 新功能和 2.0 版中的说明
+# <a name="f-new-features-and-clarifications-in-version-20"></a>F. 新功能和 2.0 版中的说明
 本附录总结了对从版本 1.0 移动到 2.0 版中的 OpenMP C/c + + 规范的密钥的更改。 以下各项是新功能添加到规范：  
   
 -   OpenMP 指令中允许使用逗号 ([部分 2.1](../../parallel/openmp/2-1-directive-format.md) 7 页上)。  

@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a3229b1cc924c0268bf9a79df53bc18ce2684a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 24619e3a0e707b40590b0ffb37b415629a18b1cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="export"></a>export
 会导致数据结构，用于放置在.idl 文件。  
@@ -55,19 +58,19 @@ struct MyStruct {
 };  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**联合**， `typedef`， `enum`， `struct`，或`interface`|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器特性](../windows/compiler-attributes.md)   
  [Typedef、Enum、Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   

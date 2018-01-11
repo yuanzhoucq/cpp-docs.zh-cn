@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cebff3122ed32a8c166324283a8e18f3b247361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 定义用于报告异常的多个标准类。 这些类构成派生自 [exception](../standard-library/exception-class.md) 类的所有派生层次结构，并包括两种常规类型的异常：逻辑错误和运行时错误。 逻辑错误因程序员错误而引起。 它们派生自基类 logic_error，并且包括：  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 |[runtime_error 类](../standard-library/runtime-error-class.md)|此类用作引发报告仅在执行程序时大概可检测的错误的所有异常的基类。|  
 |[underflow_error 类](../standard-library/underflow-error-class.md)|此类用作引发报告算数下溢的所有异常的基类。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

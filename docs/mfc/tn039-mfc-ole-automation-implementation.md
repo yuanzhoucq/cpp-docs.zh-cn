@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40aeb5a807a918d5942ccd3f13cd085f15a002e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE 自动化实现
 > [!NOTE]
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
 -   从最多衍生的类 (0 相对) 的调度映射的距离  
   
- **DISPID**分为两个部分。 **LOWORD**的**DISPID**包含第一个组件，按自上而下的调度映射的距离。 **HIWORD**包含最多衍生的类之间的距离。 例如:   
+ **DISPID**分为两个部分。 **LOWORD**的**DISPID**包含第一个组件，按自上而下的调度映射的距离。 **HIWORD**包含最多衍生的类之间的距离。 例如:  
   
 ```  
 class CDispPoint : public CCmdTarget  
@@ -183,7 +184,7 @@ property Y    (DISPID)0x00010002
  空间的字符串分隔 VTS_ 每个参数。  
   
 ## <a name="remarks"></a>备注  
- 非常类似`DISP_PROPERTY_EX`宏，此宏定义与单独的 Get 和 Set 成员函数访问的属性。 此宏，但是，可以指定参数列表的属性。 这可用于以某种其他方式实现索引或参数化的属性。 参数将始终放置首先，跟属性的新值。 例如：  
+ 非常类似`DISP_PROPERTY_EX`宏，此宏定义与单独的 Get 和 Set 成员函数访问的属性。 此宏，但是，可以指定参数列表的属性。 这可用于以某种其他方式实现索引或参数化的属性。 参数将始终放置首先，跟属性的新值。 例如:  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -268,7 +269,7 @@ void CMyObject::SetItem(short row,
  空间的字符串分隔 VTS_ 每个参数。  
   
 ## <a name="remarks"></a>备注  
- 这些宏可用于指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由紧后面指定的参数`pszName`参数。 请参阅 AFXDISP。有关这些宏的详细信息的 H。 **_ID**条目必须放置在调度映射的末尾。 其影响自动**DISPID**方式与非相同的生成**_ID**版本宏将 ( **DISPID**s 由位置)。 例如:   
+ 这些宏可用于指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由紧后面指定的参数`pszName`参数。 请参阅 AFXDISP。有关这些宏的详细信息的 H。 **_ID**条目必须放置在调度映射的末尾。 其影响自动**DISPID**方式与非相同的生成**_ID**版本宏将 ( **DISPID**s 由位置)。 例如:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -347,7 +348,7 @@ return NULL;
   
  调度接口返回的此函数无法然后直接使用或附加到`COleDispatchDriver`为类型安全的访问。 如果直接使用，请确保你调用其**版本**成员时通过使用指针 (`COleDispatchDriver`析构函数执行此默认情况下)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

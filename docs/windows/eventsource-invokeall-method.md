@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 279d40bf8da171547e27313c4f1a9a3578d93be2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 45835b6929ae73559c427d374430b64e7ff21a61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
 调用与当前关联的每个事件处理程序[EventSource](../windows/eventsource-class.md)对象使用指定的自变量类型和参数。  
@@ -241,10 +244,10 @@ void InvokeAll(
  `arg9`  
  第九个事件处理程序自变量。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** event.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [EventSource 类](../windows/eventsource-class.md)

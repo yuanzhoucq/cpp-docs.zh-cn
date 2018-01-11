@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e5607fd240c7a97691189b8a3afa5e7c0171e26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-dcom"></a>DCOM 历史记录
 当自动化于早期 1993年问世时，已支持的使用仅在同一台计算机上运行的应用程序之间。 但是，因为它共享 OLE，即，COM （或组件对象模型） 的其余部分所在的同一个基础结构，它始终本来，COM 本身已更新为包括远程处理功能时，它将变得"远程"。 它原来的计划，从纯粹的本地操作转换为分布式操作需要很少或没有更改现有代码。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  [远程自动化提供什么](what-does-remote-automation-provide-q.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [远程自动化](../mfc/remote-automation.md)

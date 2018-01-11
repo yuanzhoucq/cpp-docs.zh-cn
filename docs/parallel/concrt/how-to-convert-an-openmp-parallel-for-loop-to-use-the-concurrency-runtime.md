@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7304b45f59219c529be5c1d430ea3183febd958a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27e07884b4ada54f694136ea2fbca474c9d214d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>如何：转换 OpenMP parallel for 循环以使用并发运行时
 
@@ -59,7 +60,7 @@ found 107254 prime numbers.
   
  **cl.exe /EHsc /openmp concrt-omp-计数-primes.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 OpenMP 迁移至并发运行时](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [并行算法](../../parallel/concrt/parallel-algorithms.md)   
  [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)

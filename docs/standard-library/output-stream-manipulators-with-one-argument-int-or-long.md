@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 418b9e1f982e1bb37559ee35b6953d7d3f198b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c13d6352fcd3b2df26e9585b74e17b549106d19b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>带有一个自变量（int 或 long）的输出流操控器
 iostream 类库提供用于创建参数化操控器的一组宏。 具有单个 `int` 或 `long` 参数的操控器是一种特殊情况。 若要创建接受单个 `int` 或 `long` 参数（如 `setw`）的输出流操控器，则必须使用在 \<iomanip> 中定义的 _Smanip 宏。 此示例定义了向流中插入指定数量的空格的 `fillblank` 操控器：  
@@ -54,6 +55,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [带自变量的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)
 

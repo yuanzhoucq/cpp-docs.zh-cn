@@ -1,50 +1,50 @@
 ---
-title: "从 ActiveX 控件添加类 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控件 [C++], 添加类"
-  - "类 [C++], 创建"
+title: "从 ActiveX 控件 （Visual c + +） 添加类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ActiveX controls [C++], adding classes
+- classes [C++], creating
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f059396c91ddb51247347d10e6c8f79a6c95522f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 从 ActiveX 控件添加类 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用该向导从可用 ActiveX 控件的接口创建 MFC 类。  可以向 [MFC 应用程序](../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md) 或 [MFC ActiveX 控件](../mfc/reference/creating-an-mfc-activex-control.md)中添加 MFC 类。  
+# <a name="adding-a-class-from-an-activex-control-visual-c"></a>从 ActiveX 控件添加类 (Visual C++)
+使用此向导创建 MFC 类时从中可用的 ActiveX 控件的接口。 你可以添加到的 MFC 类[MFC 应用程序](../mfc/reference/creating-an-mfc-application.md)、 [MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)，或[MFC ActiveX 控件](../mfc/reference/creating-an-mfc-activex-control.md)。  
   
 > [!NOTE]
->  不需要创建启用自动化的 MFC 项目，也可以从 ActiveX 控件添加类。  
+>  不需要使用启用 ActiveX 控件中添加类的自动化创建 MFC 项目。  
   
- ActiveX 控件是基于组件对象模型 \(COM\) 的可重用软件组件，它支持广泛的 OLE 功能并可自定义以满足多种软件的需要。  ActiveX 控件旨在用于普通的 ActiveX 控件容器和 Internet 上的万维网页。  
+ ActiveX 控件是基于组件对象模型 (COM) 支持各种各样的 OLE 功能，可以自定义以满足许多软件需求的可重用软件组件。 ActiveX 控件被设计用于在普通的 ActiveX 控件容器和全球通用的网页中 Internet 上。  
   
-### 从 ActiveX 控件添加 MFC 类  
+### <a name="to-add-an-mfc-class-from-an-activex-control"></a>若要从 ActiveX 控件添加的 MFC 类  
   
-1.  在**解决方案资源管理器**或[“类视图”](http://msdn.microsoft.com/zh-cn/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，右击要向其中添加 ActiveX 控件类的项目的名称。  
+1.  在**解决方案资源管理器**或[类视图](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，右键单击你想要添加的 ActiveX 控件类的项目的名称。  
   
-2.  从快捷菜单中单击“添加”，然后单击“添加类”。  
+2.  从快捷菜单中，单击**添加**，然后单击**添加类**。  
   
-3.  在[添加类](../ide/add-class-dialog-box.md)对话框的“模板”窗格中，单击“ActiveX 控件中的 MFC 类”，然后单击“打开”以显示[从 ActiveX 控件向导添加类](../ide/add-class-from-activex-control-wizard.md)。  
+3.  在[添加类](../ide/add-class-dialog-box.md)对话框中，在模板窗格中，单击**ActiveX 控件中的 MFC 类**，然后单击**打开**以显示[从 ActiveX 中添加类向导的控件](../ide/add-class-from-activex-control-wizard.md)。  
   
- 在该向导中，可以在 ActiveX 控件中添加多个接口。  同样，可以在单个向导会话中从多个 ActiveX 控件创建类。  
+ 在向导中，你可以添加多个接口的 ActiveX 控件中。 同样，你可以创建类从多个 ActiveX 控件在单个向导会话中。  
   
- 可以从系统中注册的 ActiveX 控件添加类，也可从位于类型库文件（.tlb、.olb、.dll、.ocx 或 .exe）中的 ActiveX 控件添加类，而无需先在系统中注册这些控件。  有关注册 ActiveX 控件的更多信息，请参见[注册 OLE 控件](../mfc/reference/registering-ole-controls.md)。  
+ 你可以从在你的系统中注册的 ActiveX 控件添加类，也可以从位于类型库文件 （.tlb、.olb、.dll、.ocx 或.exe），注册的情况下第一个系统中的 ActiveX 控件添加类。 请参阅[注册 OLE 控件](../mfc/reference/registering-ole-controls.md)有关注册 ActiveX 控件的详细信息。  
   
- 该向导为从选定的 ActiveX 控件添加的每个接口创建 MFC 类（派生自 [CWnd](../mfc/reference/cwnd-class.md) 或 [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)）。  
+ 该向导创建的 MFC 类，派生自[CWnd](../mfc/reference/cwnd-class.md)或从[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)，为你从所选的 ActiveX 控件添加每个接口。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
- [Introduction to COM and ATL](../atl/introduction-to-com-and-atl.md)
+ [COM 和 ATL 介绍](../atl/introduction-to-com-and-atl.md)

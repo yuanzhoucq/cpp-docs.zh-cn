@@ -1,44 +1,48 @@
 ---
-title: "Editing an Image Outside of a Project (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], editing images"
-  - "images [C++], editing"
+title: "（图标的图像编辑器） 的项目外部编辑图像 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], editing images
+- images [C++], editing
 ms.assetid: ac297b51-95c2-4512-a07f-b5d1596fc61e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c45a813e34aa04ee41487cf6d25a8a7eab152741
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Editing an Image Outside of a Project (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以像在任何图形应用程序中一样，在开发环境中打开并编辑图像。  要对所要处理的图像进行独立编辑，该图像不必是 Visual Studio 项目的一部分。  
+# <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>在项目外部编辑图像（图标的图像编辑器）
+您可以打开并编辑在开发环境中的映像，就像在任何图形应用程序中。 你使用的映像不需要进行独立编辑 Visual Studio 项目的一部分。  
   
-### 打开要独立编辑的位图  
+### <a name="to-open-a-bitmap-for-stand-alone-editing"></a>若要打开以进行独立编辑位图  
   
-1.  从“文件”菜单中单击“打开”。  
+1.  从**文件**菜单上，单击**打开**。  
   
-2.  在**“文件类型”**框中，单击**“所有文件”**。  
+2.  在**文件类型**框中，单击**所有文件**。  
   
-3.  找到并打开要编辑的图像。  
+3.  找到并打开你想要编辑的映像。  
   
- 有关将资源添加到托管项目的信息，请参见“.NET Framework 开发员指南”中的[应用程序中的资源](../Topic/Resources%20in%20Desktop%20Apps.md)。有关手动将资源文件添加到托管项目、访问资源、显示静态资源和将资源字符串分配给属性的信息，请参见[演练：本地化 Windows 窗体](http://msdn.microsoft.com/zh-cn/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  无  
   
-## 请参阅  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>请参阅  
+ [编辑图形资源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [图标的图像编辑器](../windows/image-editor-for-icons.md)
+

@@ -1,32 +1,33 @@
 ---
-title: "ClassFactory::QueryInterface 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface 方法"
+title: "Classfactory:: Queryinterface 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 9593881f-4585-4d70-8ca6-b328918d4d6b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0c4abb408ded66f9768cd1e1476f131b3f82cd30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ClassFactory::QueryInterface 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-检索指向参数指定的接口。  
+# <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface 方法
+检索指向指定参数的接口的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHOD(  
@@ -34,20 +35,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `riid`  
- 是一个ID接口。  
+ 接口 ID。  
   
  `ppvObject`  
- 当此操作完成时，指向接口的指针由 `riid`参数指定。  
+ 此操作完成后，指向指定参数的接口的指针`riid`。  
   
-## 返回值  
- S\_OK，如果成功；描述，否则失败的 HRESULT。  
+## <a name="return-value"></a>返回值  
+ 如果成功，则为 S_OK；否则为描述失败的 HRESULT。  
   
-## 要求  
- **标头:** module.h  
+## <a name="requirements"></a>惠?  
+ **标头：** module.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ClassFactory 类](../windows/classfactory-class.md)

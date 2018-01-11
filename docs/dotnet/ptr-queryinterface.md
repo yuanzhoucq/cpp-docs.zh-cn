@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 890d08e4d18dd98beebb4f90b43788e2a7658589
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
 查询接口拥有的 COM 对象，并将结果附加到另一个`com::ptr`。  
@@ -153,11 +156,11 @@ int main() {
 <#document>persnickety</#document>  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件** \<msclr\com\ptr.h >  
   
  **Namespace** msclr:: com  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

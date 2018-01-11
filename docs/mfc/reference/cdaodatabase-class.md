@@ -69,11 +69,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72946edb68212e09ab93e9d36d2dfa8afd5630e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 类
 表示与数据库的连接，通过此连接可操作数据。  
@@ -163,7 +164,7 @@ class CDaoDatabase : public CObject
   
  `CDaoDatabase`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdao.h  
   
 ##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
@@ -824,7 +825,7 @@ void SetQueryTimeout(short nSeconds);
   
  有关相关信息，请参阅主题 DAO 帮助中的"QueryTimeout 属性"。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDaoWorkspace 类](../../mfc/reference/cdaoworkspace-class.md)   

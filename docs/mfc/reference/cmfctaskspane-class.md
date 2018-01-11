@@ -205,11 +205,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3836482d03c8c8af7b3414e6e890e9cc7a81a844
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbf35669ba71c900a67f98fb9ee303c723546f94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -348,7 +349,7 @@ class CMFCTasksPane : public CDockablePane
   
 1.  将 `CMFCTasksPane` 对象嵌入主框架窗口类。  
   
-2.  处理 `WM_CREATE` 消息时，请调用 `Create` 方法。 你可以使用常规[CControlBar](../../mfc/reference/ccontrolbar-class.md)样式。 有关更多信息，请参见`CControlBar::Create`。  
+2.  处理 `WM_CREATE` 消息时，请调用 `Create` 方法。 你可以使用常规[CControlBar](../../mfc/reference/ccontrolbar-class.md)样式。 有关详细信息，请参阅`CControlBar::Create`。  
   
 3.  调用[cmfctaskspane:: Addgroup](#addgroup)方法来添加不同的组。  
   
@@ -376,7 +377,7 @@ class CMFCTasksPane : public CDockablePane
   
  `CMFCTasksPane`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxTasksPane.h  
   
 ##  <a name="addgroup"></a>Cmfctaskspane:: Addgroup  
@@ -1891,7 +1892,7 @@ virtual void Update();
   
  重写此方法在派生类 framework 刷新任务窗格时执行自定义代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCTasksPaneTaskGroup 类](../../mfc/reference/cmfctaskspanetaskgroup-class.md)   

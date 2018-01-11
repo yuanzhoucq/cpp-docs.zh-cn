@@ -49,11 +49,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00988ef4a0b70561ec3a5687502ddae95508dad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 257b9157059f20d9023abee092c38ad8c1a57167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 类
 在 Microsoft Outlook 2000 或 Outlook 2003 中具有 **“导航窗格”** 可视外观的选项卡式窗格。 `CMFCOutlookBar`对象包含[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象和一系列选项卡。 选项卡可以是[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象或`CWnd`-派生的对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。  
@@ -183,7 +184,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
   
  [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxoutlookbar.h  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
@@ -521,7 +522,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 > [!NOTE]
 >  必须调用此函数之前[CMFCOutlookBar::Create](#create)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)   

@@ -83,11 +83,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 020e74f8c225ee8416c1fc836f560fa1be6bd1fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 395d548e322ffcaed91536a781c7d5d821b6a446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int3-class"></a>int_3 类
 表示三个整数的短矢量。  
@@ -175,7 +176,7 @@ class int_3;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#size)||  
   
@@ -217,7 +218,7 @@ class int_3;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `int_3`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
@@ -282,5 +283,5 @@ explicit inline int_3(
 static const int size = 3;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

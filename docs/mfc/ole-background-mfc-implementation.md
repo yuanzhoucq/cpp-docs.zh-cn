@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40cb73049d7dbb8722b456c3d41ec7538dabdab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 后台：MFC 实现
 由于原始 OLE API 的大小和复杂性，直接调用它来编写 OLE 应用程序会非常耗时。 OLE 的 Microsoft 基础类库实现的目的是减少编写功能齐全、具有 OLE 功能的应用程序所必须进行的工作量。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
  有关 Microsoft Foundation OLE 类如何实现 OLE 接口的详细信息，请参阅 MFC 技术说明[38](../mfc/tn038-mfc-ole-iunknown-implementation.md)， [39](../mfc/tn039-mfc-ole-automation-implementation.md)，和[40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE 后台](../mfc/ole-background.md)   
  [OLE 后台：实现策略](../mfc/ole-background-implementation-strategies.md)
 

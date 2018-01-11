@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 28475df3c5d13d1b90483213173f5343f6b85d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 类
 表示在应用程序执行过程中发生的 COM 错误。 COMException 是一组预定义的标准异常的基类。  
@@ -60,7 +61,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>派生异常  
  下列预定义的异常从 COMException 派生。 它们与 COMException 的区别只在于名称、构造函数的名称和基础 HRESULT 值。  
   
-|名称|基础 HRESULT|描述|  
+|name|基础 HRESULT|描述|  
 |----------|------------------------|-----------------|  
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|  
 |AccessDeniedException|E_ACCESSDENIED|被拒绝访问资源或功能时引发。|  
@@ -76,7 +77,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 |OutOfBoundsException|E_BOUNDS|某个操作尝试在有效范围外访问数据时引发。|  
 |OutOfMemoryException|E_OUTOFMEMORY|没有足够内存来完成操作时引发。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -128,5 +129,5 @@ public:property String^ Message {    String^ get();}
  异常的说明。  
     
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)

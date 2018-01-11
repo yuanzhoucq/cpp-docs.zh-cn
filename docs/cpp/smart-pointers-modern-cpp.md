@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb870adea1e13a9e97ac0cf36f6eb4960e87cf30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 在现代 c + + 编程中，标准库包含*智能指针*、 用于确保程序不存在内存和资源泄漏且是异常安全。  
@@ -117,7 +118,7 @@ ms.lasthandoff: 10/24/2017
  [CAutoPtrList 类](../atl/reference/cautoptrlist-class.md)  
  封装用于操作 `CAutoPtr` 节点列表的方法的类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)   

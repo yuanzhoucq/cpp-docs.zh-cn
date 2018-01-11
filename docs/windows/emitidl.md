@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09174362718c8e8efd30f901394650fbbb5ebf63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 55fc74eef3d2ead7312f7dca46f20c3a1ed7ba91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="emitidl"></a>emitidl
 指定是否所有后续的 IDL 特性进行处理，并在生成的.idl 文件中放入。  
@@ -56,20 +59,20 @@ ms.lasthandoff: 10/24/2017
   
 编译器遇到新的文件，每次**emitidl**隐式设置为**true**。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|任何位置|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [编译器特性](../windows/compiler-attributes.md)   
 [独立特性](../windows/stand-alone-attributes.md)   
 [属性示例](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

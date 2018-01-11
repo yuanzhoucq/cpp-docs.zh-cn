@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cde959d2a2b17bf346a23aca7a7724523b69b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>包含变量自变量列表的函数 （c + +）
 如果函数声明中最后一个成员是省略号 (...)，则函数声明可采用数量可变的自变量。 在这些情况下，C++ 只为显式声明的参数提供类型检查。 即使自变量的数量和类型是可变的，在需要使函数泛化时也可使用变量自变量列表。 函数的系列是一个示例使用变量自变量列表的函数。`printf`*自变量声明列表*  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  **结束 Microsoft 专用**  
   
- 采用数量可变的自变量的函数声明至少需要一个占位符自变量（即使不使用它）。 如果未提供此占位符参数，则无法访问其余参数。  
+ 采用数量可变的自变量的函数声明至少需要一个占位符自变量（即使不使用它）。 如果未提供此占位符自变量，则无法访问其余自变量。  
   
  当 `char` 类型的参数作为变量参数进行传递时，它们将被转换为 `int` 类型。 同样，当类型自变量**float**传递作为变量自变量，它们会转换为类型**double**。 其他类型的参数受常见整型和浮点型提升的限制。 请参阅[标准转换](standard-conversions.md)有关详细信息。  
   

@@ -1,32 +1,31 @@
 ---
-title: "omp_unset_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_unset_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_unset_lock OpenMP function"
+title: "omp_unset_lock |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_unset_lock
+dev_langs: C++
+helpviewer_keywords: omp_unset_lock OpenMP function
 ms.assetid: 68fcb728-040b-4bad-979e-aaecb9097a4e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5dae4888176807ba2d3a3356d71c55eb82f2a55c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# omp_unset_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ompunsetlock"></a>omp_unset_lock
 释放锁。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void omp_unset_lock(  
@@ -34,17 +33,17 @@ void omp_unset_lock(
 );  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `lock`  
- 初始化 [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)，拥有通过线程和执行函数类型 [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md) 的变量。  
+ 类型的变量的[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)初始化与[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)、 所拥有的线程和函数中执行。  
   
-## 备注  
- 有关更多信息，请参见 [3.2.4 omp\_unset\_lock and omp\_unset\_nest\_lock Functions](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。  
+## <a name="remarks"></a>备注  
+ 有关详细信息，请参阅[3.2.4 omp_unset_lock 和 omp_unset_nest_lock 函数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)。  
   
-## 示例  
- 有关使用示例 `omp_unset_lock`参见 [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md) 。  
+## <a name="example"></a>示例  
+ 请参阅[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)有关的使用示例`omp_unset_lock`。  
   
-## 请参阅  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>请参阅  
+ [函数](../../../parallel/openmp/reference/openmp-functions.md)

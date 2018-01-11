@@ -105,11 +105,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b37610531a1c554efa6a8f745730efb8a06e6673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4418f20b267218b761dd6637762df1b420e9ac6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 编辑控件功能。  
@@ -238,7 +239,7 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="canundo"></a>CEdit::CanUndo  
@@ -979,7 +980,7 @@ void SetHighlight(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `ichStart`|要突出显示的文本范围中的第一个字符的从零开始索引。|  
 |[in] `ichEnd`|要突出显示的文本范围中的最后一个字符的从零开始索引。|  
@@ -1243,7 +1244,7 @@ BOOL ShowBalloonTip(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pEditBalloonTip`|指向[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)描述的气球状提示的结构。|  
 |[in] `lpszTitle`|指向包含标题的气球状提示的 Unicode 字符串的指针。|  
@@ -1284,7 +1285,7 @@ BOOL Undo();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CALCDRIV](../../visual-cpp-samples.md)   
  [MFC 示例 CMNCTRL2](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

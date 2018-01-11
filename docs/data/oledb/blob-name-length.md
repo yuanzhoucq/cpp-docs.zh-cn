@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0367d92ecb592f0d974b8083362e2287eda97da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 66037fdb217585096a5251039205eb3e0b208faa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="blobnamelength"></a>BLOB_NAME_LENGTH
 与使用`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`要绑定的二进制大型对象 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 类似于[BLOB_NAME](../../data/oledb/blob-name.md)，只不过此宏还获取以字节为单位的 BLOB 数据列的长度。  
@@ -56,10 +59,10 @@ length )
  *length*  
  [out]BLOB 列 （实际） 长度以字节为单位。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数 OLE DB 使用者模板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   

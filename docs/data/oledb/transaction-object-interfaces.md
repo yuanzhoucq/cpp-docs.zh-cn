@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5731d4d187fa02b0b68c9e4b764bf9aeb1f653dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bcb0c6abf7eac09f3cb3ea260a3a5bbe76410847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-object-interfaces"></a>事务对象接口
 事务对象数据源上定义工作的原子单元，并确定每个这些工作单元之间的关系。 OLE DB 提供程序模板不直接支持此对象 （即，你必须创建您自己的对象）。  
@@ -33,9 +36,9 @@ ms.lasthandoff: 10/24/2017
   
 |接口|是否必需？|实现的 OLE DB 模板？|  
 |---------------|---------------|--------------------------------------|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|强制|No|  
-|[Itransaction::](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|强制|No|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|No|  
+|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|强制|否|  
+|[Itransaction::](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|强制|否|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|否|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

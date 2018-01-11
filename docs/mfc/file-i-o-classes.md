@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d5321c2e4167c38123f57ff8e416e50bc8ac5a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 454e64d67321282030126d2aab023e9f587c1cca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-io-classes"></a>文件 I/O 类
 这些类提供传统的磁盘文件、 内存中文件、 活动流和 Windows 套接字的接口。 所有类派生自`CFile`可以与使用`CArchive`要执行序列化对象。  
@@ -70,6 +71,6 @@ ms.lasthandoff: 10/24/2017
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
  维护最近使用的 (MRU) 文件列表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 792d2f658ed64b44254b5e93b9f2b2bde9eb0a1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c94ed10a0b97820c5a787e4350d39dcf6286fee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 类
 模板类 ostreambuf_iterator 描述一个输出迭代器对象，该对象使用提取 **operator>>** 将连续的字符元素写入输出流。 `ostreambuf_iterator` 与 [ostream_iterator 类](../standard-library/ostream-iterator-class.md)迭代器的不同之处在于，要插入输出流的对象类型为字符而不是泛型类型。  
@@ -81,7 +82,7 @@ template <class CharType = char class Traits = char_traits <CharType>>
 |[operator++](#op_add_add)|一种非功能性递增运算符，可向调用该运算之前所处理的同一对象返回 `ostreambuf_iterator`。|  
 |[operator=](#op_eq)|此运算符会将一个字符插入到关联的流缓冲区。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iterator>  
   
  **命名空间：** std  
@@ -446,7 +447,7 @@ The characters written to the output stream
 *\  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)

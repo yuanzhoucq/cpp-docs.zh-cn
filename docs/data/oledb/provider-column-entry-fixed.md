@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e404e18a072650d89f3987d8e8f0e286240d022a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6362feced77174238a773678de11a781b0729211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providercolumnentryfixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 表示提供程序支持的特定列。  
@@ -52,10 +55,10 @@ name
 ## <a name="example"></a>示例  
  请参阅[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板宏](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   

@@ -1,35 +1,37 @@
 ---
-title: "嵌套在本机类型中的值类型的版本问题 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nogc 类型声明"
-  - "__value 关键字, 嵌套时的问题"
+title: "值类型的版本问题嵌套在本机类型 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 嵌套在本机类型中的值类型的版本问题 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-请考虑用于生成客户端程序集的签名（强名称）程序集组件。  此组件包含一个值类型，该值类型在客户端中用作本机联合、类或数组的成员的类型。  如果此组件的未来版本更改此值类型的大小或布局，则必须重新编译客户端。  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>嵌套在本机类型中的值类型的版本问题 (C++/CLI)
+请考虑用于生成客户端程序集的签名 （强名称） 程序集组件。 组件包含用于在客户端作为类型的本机联合、 类或数组成员的值类型。 如果该组件的将来版本发生更改的大小或值类型的布局，则客户端必须重新编译。  
   
- 使用 [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) \(`sn -k mykey.snk`\) 创建 keyfile。  
+ 创建与 keyfile [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`)。  
   
-## 示例  
- 下面的示例为该组件。  
+## <a name="example"></a>示例  
+ 下面的示例是组件。  
   
 ```  
 // nested_value_types.cpp  
@@ -46,8 +48,8 @@ public value struct S {
 };  
 ```  
   
-## 示例  
- 下面的示例为该客户端：  
+## <a name="example"></a>示例  
+ 此示例是客户端：  
   
 ```  
 // nested_value_types_2.cpp  
@@ -72,7 +74,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 S.i = 5  
@@ -81,8 +83,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### 注释  
- 但是，如果向 nested\_value\_types.cpp 中的 `struct S` 添加另一个成员（例如 `double d;`）,并且在不重新编译客户端的情况下重新编译组件，则结果为未经处理的异常（类型为 <xref:System.IO.FileLoadException?displayProperty=fullName>）。  
+### <a name="comments"></a>注释  
+ 但是，如果添加到另一个成员`struct S`nested_value_types.cpp 中, (例如， `double d;`) 和无需重新编译客户端重新编译该组件，则结果为未经处理的异常 (类型的<xref:System.IO.FileLoadException?displayProperty=fullName>)。  
   
-## 请参阅  
- [托管类型](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>请参阅  
+ [托管类型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

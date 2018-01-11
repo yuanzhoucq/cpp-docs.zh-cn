@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- goto_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- goto keyword [C++]
+f1_keywords: goto_cpp
+dev_langs: C++
+helpviewer_keywords: goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3bdad97f36902762f34816a04a4fc0c5c0c16856
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a002071bdb4e271df525b138647b0544cfe9f3c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-statement-c"></a>goto 语句 (C++)
 `goto` 语句无条件地将控制权转移给由指定的标识符标记的语句。  
@@ -88,6 +84,6 @@ Outer loop executing. i = 3
 Jumped to stop. i = 3  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跳转语句](../cpp/jump-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)

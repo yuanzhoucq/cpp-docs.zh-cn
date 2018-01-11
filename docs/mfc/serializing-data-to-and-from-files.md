@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a0b81c90567bb3cebd9a5e128eb6b76d58ee9b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d28b12e19b302f5576d2cd76c931e0036c208185
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serializing-data-to-and-from-files"></a>针对文件进行数据序列化
 持久性基本理念都是一个对象应该能够编写其成员变量，到持久存储的值指示其当前状态。 以后，可以通过读取，或"反序列化，"对象的状态从持久性存储区重新创建该对象。 此处关键的一点是对象本身负责读取和写入其自己的状态。 因此，对于类为永久，它必须实现的基本序列化操作。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_the_data.92.s_role_in_serialization"></a>在序列化的数据的角色  
  通常情况下，类类型数据应该能够序列化本身。 即时到存档中传递的对象，该对象应了解本身写入存档以及如何从存档读取本身。 MFC 使类可序列化以这种方式提供支持。 如果设计用于定义数据类型的类和你想要序列化该类型的数据时，设计用于序列化。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用文档](../mfc/using-documents.md)
 

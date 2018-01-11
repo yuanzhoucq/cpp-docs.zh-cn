@@ -1,96 +1,103 @@
 ---
-title: "演练：调整现有代码以使用轻量级任务 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "使用轻量级任务 [并发运行时]"
-  - "轻量级任务, 使用 [并发运行时]"
+title: "演练： 调整现有代码以使用轻量级任务 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- using lightweight tasks [Concurrency Runtime]
+- lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a50ad04421d7b4bcdc4a2c98de8f5a57b255c75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 演练：调整现有代码以使用轻量级任务
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>演练：调整现有代码以使用轻量级任务
+本主题演示如何改编现有代码，它使用 Windows API 创建和执行一个线程以使用轻量级任务。  
+  
+ A*轻量级任务*是直接从计划的任务[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)或[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)对象。 当改编现有代码以使用并发运行时的计划功能时，轻量级任务非常有用。  
+  
+## <a name="prerequisites"></a>系统必备  
+ 在开始本演练之前，请阅读主题[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
+  
+## <a name="example"></a>示例  
+  
+### <a name="description"></a>描述  
+ 下面的示例阐释了要创建和执行线程的 Windows api 的典型用法。 此示例使用[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数调用`MyThreadFunction`在单独线程上。  
+  
+### <a name="code"></a>代码  
+ [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
+  
+### <a name="comments"></a>注释  
+ 本示例生成以下输出。  
+  
+```Output  
+Parameters = 50, 100  
+```  
+  
+ 以下步骤演示如何改编代码示例以使用并发运行时执行相同的任务。  
+  
+### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>若要调整该示例以使用轻量级任务  
+  
+1.  添加`#include`标头文件 concrt.h 指令。  
+  
+ [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]  
+  
+2.  添加`using`指令`concurrency`命名空间。  
+  
+ [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]  
+  
+3.  更改的声明`MyThreadFunction`使用`__cdecl`调用约定，并返回`void`。  
+  
+ [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
+  
+4.  修改`MyData`结构以包含[concurrency:: event](../../parallel/concrt/reference/event-class.md)向发出信号，主应用程序任务已完成的对象。  
+  
+ [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
+  
+5.  将对的调用`CreateThread`通过调用[:: scheduletask](reference/currentscheduler-class.md#scheduletask)方法。  
 
-本主题演示如何改编现有代码，从而使用 Windows API 创建并执行一个线程来使用轻量级任务。  
   
- *轻量级任务*是直接根据 [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) 或 [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) 对象计划的任务。  改编现有代码以使用并发运行时的日程排定功能时，轻量级任务很有用。  
+ [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
   
-## 系统必备  
- 在开始本演练之前，请阅读[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)这一主题。  
+
+6.  将对的调用`WaitForSingleObject`通过调用[concurrency::event::wait](reference/event-class.md#wait)方法来等待任务完成。  
+
+ [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
   
-## 示例  
+7.  删除对的调用`CloseHandle`。  
   
-### 说明  
- 下面的示例阐释了使用 Windows API 创建和执行线程的典型方法。  此示例使用 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 函数对单独线程调用 `MyThreadFunction`。  
+8.  更改的定义的签名`MyThreadFunction`以匹配第 3 步。  
   
-### 代码  
- [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
+ [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-### 注释  
- 该示例产生下面的输出。  
+9. 在结束`MyThreadFunction`函数中，调用[concurrency::event::set](reference/event-class.md#set)方法用信号通知到主应用程序任务已完成。  
   
-  **参数 \= 50, 100** 下列步骤演示如何调整代码示例以使用并发运行时执行相同任务。  
+ [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   
-### 调整示例以使用轻量级任务  
+10. 删除`return`语句从`MyThreadFunction`。  
   
-1.  为头文件 concrt.h 添加一个 `#include` 指令。  
+## <a name="example"></a>示例  
   
-     [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]  
+### <a name="description"></a>描述  
+ 下面的已完成的示例演示使用轻量级任务调用的代码`MyThreadFunction`函数。  
   
-2.  为`concurrency`命名空间添加 `using` 指令。  
+### <a name="code"></a>代码  
+ [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]  
   
-     [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]  
+### <a name="comments"></a>注释  
   
-3.  更改 `MyThreadFunction` 的声明以使用 `__cdecl` 调用约定并返回 `void`。  
-  
-     [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
-  
-4.  修改 `MyData` 结构以包括向任务已完成的主应用程序发送信号的 [concurrency::event](../../parallel/concrt/reference/event-class.md) 对象。  
-  
-     [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
-  
-5.  不调用 `CreateThread`，改为调用 [concurrency::CurrentScheduler::ScheduleTask](../Topic/CurrentScheduler::ScheduleTask%20Method.md) 方法。  
-  
-     [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
-  
-6.  不调用 `WaitForSingleObject`，改为调用 [concurrency::event::wait](../Topic/event::wait%20Method.md) 方法以等待任务完成。  
-  
-     [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
-  
-7.  移除对 `CloseHandle` 的调用。  
-  
-8.  更改 `MyThreadFunction` 定义的签名以与步骤 3 匹配。  
-  
-     [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
-  
-9. 在 `MyThreadFunction` 函数的末尾，调用 [concurrency::event::set](../Topic/event::set%20Method.md) 方法以向任务已完成的主应用程序发送信号。  
-  
-     [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
-  
-10. 从 `MyThreadFunction` 中移除 `return` 语句。  
-  
-## 示例  
-  
-### 说明  
- 下面已完成的示例演示了使用轻量级任务调用 `MyThreadFunction` 函数的代码。  
-  
-### 代码  
- [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]  
-  
-### 注释  
-  
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Scheduler 类](../../parallel/concrt/reference/scheduler-class.md)

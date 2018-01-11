@@ -1,92 +1,93 @@
 ---
-title: "预处理器语法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "语法, 预处理器"
-  - "预处理器"
-  - "预处理器, 语法"
+title: "预处理器语法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- grammar, preprocessor
+- preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 预处理器语法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\#define**  *identifier* *token\-string*opt  
+# <a name="preprocessor-grammar"></a>预处理器语法
+**#define***标识符**令牌字符串*选择    
   
- *\#* **define**  *identifier*\[**\(** *identifier*opt**,** *...* **,** *identifier*opt **\)**\] *token\-string*opt  
+ *#***定义***标识符*[**(** *标识符*选择**，** *...* **，** *标识符*选择**)**]*令牌字符串*选择    
   
- **defined\(**  *identifier* **\)**  
+ **定义 (***标识符* **)**   
   
- **defined**  *identifier*  
+ **定义***标识符*   
   
- `#include` **"***path\-spec***"**  
+ `#include`**"***路径规范***"**  
   
- `#include` **\<***path\-spec***\>**  
+ `#include` **\<** *路径规范***>**  
   
- **\#line**  *digit\-sequence*  **"** *filename* **"** opt  
+ **#line***数字序列***"** *filename* **"**选择      
   
- *\#* **undef**  *identifier*  
+ *#***undef***标识符*   
   
- **\#error**  *token\-string*  
+ **#error***令牌字符串*   
   
- **\#pragma**  *token\-string*  
+ **#pragma***令牌字符串*   
   
- *conditional* :  
- *if\-part elif\-parts* opt *else\-part*opt *endif\-line*  
+ *条件*:  
+ *如果一部分 elif 部件*选择*else 部分*选择*endif 行*  
   
- *if\-part* :  
- *if\-linetext*  
+ *如果一部分*:  
+ *如果 linetext*  
   
- *if\-line* :  
- **\#if**  *constant\-expression*  
+ *如果行*:  
+ **#if***常量表达式*   
   
- **\#ifdef**  *identifier*  
+ **#ifdef***标识符*   
   
- **\#ifndef**  *identifier*  
+ **#ifndef***标识符*   
   
- *elif\-parts* :  
- *elif\-line text*  
+ *elif 部件*:  
+ *elif 行文本*  
   
- *elif\-parts elif\-line text*  
+ *elif 部件 elif 行文本*  
   
- *elif\-line* :  
- **\#elif**  *constant\-expression*  
+ *elif 行*:  
+ **#elif***常量表达式*   
   
- *else\-part* :  
- *else\-linetext*  
+ *else 部分*:  
+ *其他 linetext*  
   
- *else\-line* :  
+ *其他行*:  
  `#else`  
   
- *endif\-line* :  
+ *endif 行*:  
  `#endif`  
   
- *digit\-sequence* :  
+ *数字序列*:  
  *digit*  
   
- *digit\-sequence digit*  
+ *digit-sequence digit*  
   
- *digit* : 一个  
+ *数字*： 之一  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *token\-string* :  
+ *令牌字符串*:  
  标记字符串  
   
- *token* :  
- *keyword*  
+ *令牌*:  
+ keyword  
   
  *identifier*  
   
@@ -96,17 +97,17 @@ caps.handback.revision: 7
   
  `punctuator`  
   
- *filename*:  
+ *filename* :  
  合法操作系统文件名  
   
- *path\-spec*:  
+ *路径规范*:  
  合法文件路径  
   
- *text*:  
+ *文本*:  
  文本的任何序列  
   
 > [!NOTE]
->  下列非终止符在附录 A《C\+\+ 语言参考》的[语法摘要](../misc/grammar-summary-cpp.md)中进行了扩展：`constant`、`constant`\-*expression*、*identifier*、*keyword*、`operator` 和 `punctuator`。  
+>  在中扩展以下非终止符[词法约定](../cpp/lexical-conventions.md)部分*c + + 语言参考*: `constant`， `constant` -*表达式*，*标识符*，*关键字*， `operator`，和`punctuator`。  
   
-## 请参阅  
- [语法摘要](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [语法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- extern
-dev_langs:
-- C++
+f1_keywords: extern
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C++], linkage to non-C++ functions
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b17479bfda8dbe009d3b2381afc2d87819811bc5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: db93feb8c8fad13cf8de082858e68b89f93b5323
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-extern-to-specify-linkage"></a>使用 extern 指定链接
 ## <a name="syntax"></a>语法  
@@ -106,7 +103,7 @@ extern "C" char GetChar( void ) {
 extern "C" int errno;  
 ```  
   
- 如果函数有多个链接规范，则它们必须一致；将函数声明为同时具有 C 和 C++ 链接是错误的。 此外，如果一个函数的两个声明出现在一个程序中，并且它们一个有链接规范，另一个没有，则有链接规范的声明必须是第一个。 将为已具有链接规范的函数的所有冗余声明提供第一个声明中指定的链接。 例如:   
+ 如果函数有多个链接规范，则它们必须一致；将函数声明为同时具有 C 和 C++ 链接是错误的。 此外，如果一个函数的两个声明出现在一个程序中，并且它们一个有链接规范，另一个没有，则有链接规范的声明必须是第一个。 将为已具有链接规范的函数的所有冗余声明提供第一个声明中指定的链接。 例如:  
   
 ```  
 extern "C" int CFunc1();  
@@ -123,7 +120,7 @@ extern "C" int CFunc2(); // Error: not the first declaration of
   
  函数和对象显式声明为**静态**复合链接说明符体内 (**{}**) 将被视为静态函数或对象; 链接说明符将被忽略。 其他函数和对象的行为方式就像它们是使用 `extern` 关键字声明的一样。 (请参阅[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)有关的详细信息`extern`关键字。)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   
  [extern 存储类说明符](../c-language/extern-storage-class-specifier.md)   
  [标识符的行为](../c-language/behavior-of-identifiers.md)   

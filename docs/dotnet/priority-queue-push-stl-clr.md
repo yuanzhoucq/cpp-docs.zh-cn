@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6f0a938a8f2fb6031ffb731c812ca8645efd20b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4b88448d1566076841b5f20754d02f3b62428b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuepush-stlclr"></a>priority_queue::push (STL/CLR)
 添加新元素。  
@@ -61,11 +64,11 @@ int main()
 c a b  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [priority_queue::pop (STL/CLR)](../dotnet/priority-queue-pop-stl-clr.md)

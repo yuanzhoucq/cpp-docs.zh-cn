@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c226d59ee3444abb32789d40ccf68a05c535b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6758cce9ab42c0dea490dd8ac9803588edceac5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-list-control-styles"></a>更改列表控件样式
 你可以更改列表控件的窗口样式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何时间在创建之后。 通过更改窗口样式，可以更改该控件使用的视图的类型。 例如，若要模拟资源管理器，可能会提供菜单项或工具栏按钮以切换不同的视图之间的控件： 图标视图、 列表视图中，依次类推。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  悬停时选择工作，你必须还具有**LVS_EX_ONECLICKACTIVATE**或**LVS_EX_TWOCLICKACTIVATE**开启。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

@@ -21,11 +21,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4dc31fc66f28f6fd9a8d9e9bc7122bf2aa7b2b73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4ff5057bed4f6f74511355f4675dd2bc69ad5262
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 OLE DB 模板实现[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 规范中的接口。  
@@ -91,9 +94,9 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
   
 -   另请参阅如何`RUpdateRowset`UpdatePV 示例中使用类  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

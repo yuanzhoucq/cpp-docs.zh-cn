@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c48ee39a9053e098b67367d0c144fbf6e284b9d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nested-class-declarations"></a>嵌套类声明
 可以在一个类的范围内声明另一个类。 这样的类称为“嵌套类”。 嵌套类被视为在封闭类的范围内且可在该范围内使用。 若要从嵌套类的即时封闭范围之外的某个范围引用该类，则必须使用完全限定名。  
@@ -212,5 +213,5 @@ int GetExtendedErrorStatus( char *message )
   
  利用前面的接口，许多类可以通过传递要复制错误消息的内存位置来使用此函数的服务。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类和结构](../cpp/classes-and-structs-cpp.md)

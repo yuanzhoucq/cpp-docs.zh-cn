@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78c5cb9bdd1da0876abacda48000a914c884d25a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 类
 `task_completion_event` 类可让你延迟任务的执行，直到满足条件，或开始一项任务来响应外部事件。  
@@ -70,7 +71,7 @@ class task_completion_event<void>;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `task_completion_event`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** ppltasks.h  
   
  **命名空间：** 并发  
@@ -121,5 +122,5 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 task_completion_event();
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

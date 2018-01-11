@@ -1,39 +1,38 @@
 ---
-title: "链接器工具错误 LNK1237 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1237"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1237"
+title: "链接器工具错误 LNK1237 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1237
+dev_langs: C++
+helpviewer_keywords: LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ee9ec0e197d51f76ff57ef06f5584c55df0a4746
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 链接器工具错误 LNK1237
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在代码生成过程中，编译器引入了使用 \/GL 编译的模块“module”中定义的符号“symbol”的引用  
+# <a name="linker-tools-error-lnk1237"></a>链接器工具错误 LNK1237
+在代码生成期间编译器引入到符号 symbol 模块 module 使用 /GL 进行编译中定义的引用  
   
- 代码生成期间，如果引入的符号稍后将解析为使用 **\/GL** 编译的定义，则编译器不应引入这些符号。  `symbol` 是一种符号，它在引入后将被解析为使用 **\/GL** 编译的定义。  
+ 在代码生成期间编译器应不引入稍后会将其解析为定义编译的符号**/GL**。 `symbol`是一个符号，已引入和更高版本被解析为与编译定义**/GL**。  
   
- 有关详细信息，请参阅[\/GL（全程序优化）](../../build/reference/gl-whole-program-optimization.md)。  
+ 有关详细信息，请参阅 [/GL（全程序优化）](../../build/reference/gl-whole-program-optimization.md)。  
   
- 要解决 LNK1237，请不要使用 **\/GL** 编译符号或使用 [\/INCLUDE（强制符号引用）](../../build/reference/include-force-symbol-references.md) 强制引用符号。  
+ 若要解决 LNK1237，不编译具有符号**/GL**或使用[/INCLUDE （强制符号引用）](../../build/reference/include-force-symbol-references.md)以强制对符号的引用。  
   
-## 示例  
- 下面的示例生成 LNK1237。  若要解决此问题，请不要在 LNK1237\_a.cpp 中初始化该数组以及将 **\/include:\_\_chkstk** 添加到链接命令中。  
+## <a name="example"></a>示例  
+ 下面的示例生成 LNK1237。 若要解决此错误，请不要未初始化的数组中 LNK1237_a.cpp 并添加**/ 包括： __chkstk**到链接命令。  
   
 ```  
 // LNK1237_a.cpp  

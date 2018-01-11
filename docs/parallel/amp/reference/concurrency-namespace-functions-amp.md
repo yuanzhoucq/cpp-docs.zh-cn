@@ -17,18 +17,18 @@ f1_keywords:
 - amp/Concurrency::direct3d_printf
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a976cc06b49b10d5bb8dcecb10e114efdd89faa8
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aeda566ebd10dbd8ee5e5cfdcb4328537b9ba0c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 ||||  
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/24/2017
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each 函数 (c + + AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
   
 ##  <a name="all_memory_fence"></a>all_memory_fence  
- 块中的图块，直到完成所有的内存访问的所有线程执行。 这将确保所有的内存访问会向其他线程在线程图块，并按程序顺序执行。  
+ 完成所有的内存访问之后，才能将磁贴中的所有线程的阻止执行。 这将确保所有的内存访问的线程磁贴中的其他线程对可见，并按编程顺序执行。  
   
 ```  
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -53,14 +53,14 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  一个 `tile_barrier` 对象。  
   
 ##  <a name="amp_uninitialize"></a>amp_uninitialize  
- 取消初始化 c + + AMP 运行时。 它是合法的应用程序生存期内多次调用此函数。 调用调用该函数将任何 c + + AMP API afer 将重新初始化 c + + AMP 运行时。 请注意，您不能在调用此函数使用 c + + AMP 对象这样做将导致未定义的行为。 此外，同时调用此函数和任何其他 AMP Api 是非法的并会导致未定义的行为。  
+ 取消初始化 c + + AMP 运行时。 它是合法应用程序生存期内多次调用此函数。 调用任何调用此函数的 c + + AMP API afer 将重新初始化 c + + AMP 运行时。 请注意非法中对此函数调用中使用 c + + AMP 对象并且这样做将导致未定义的行为。 此外，同时调用此函数和任何其他 AMP Api 是非法的将导致未定义的行为。  
   
 ```  
 void __cdecl amp_uninitialize();
 ```  
   
 ##  <a name="atomic_compare_exchange"></a>atomic_compare_exchange  
- 以原子方式比较存储在内存位置的值中指定与第二个指定的参数的值相等的第一个参数，如果相同的值时，该内存位置处的值更改为第三个指定参数。  
+ 以原子方式比较存储在内存位置的值中指定相等性的第二个指定的自变量的值的第一个参数，如果这些值是相同，在内存位置的值更改为的第三个指定自变量。  
   
 ```  
 inline bool atomic_compare_exchange(
@@ -79,13 +79,13 @@ inline bool atomic_compare_exchange(
   
 ### <a name="parameters"></a>参数  
  `_Dest`  
- 读取的值进行比较的哪一次的位置，并向其新值，如果有的话，是要存储。  
+ 为只读的要进行比较的值的一个位置，且新值，如果有的话，为存储。  
   
  `_Expected_value`  
  从中读取要进行比较的第二个值的位置。  
   
  `value`  
- 要存储到在指定的内存位置的值`_Dest`如果`_Dest`是否等同于`_Expected_value`。  
+ 要存储到中指定的内存位置的值`_Dest`如果`_Dest`等同于`_Expected_value`。  
   
 ### <a name="return-value"></a>返回值  
  如果操作成功，则为 `true`；否则为 `false`。  
@@ -125,7 +125,7 @@ inline float atomic_exchange(
   
 
 ##  <a name="atomic_fetch_add"></a>atomic_fetch_add 函数 (c + + AMP)  
- 以原子方式将值添加到的内存位置的值。  
+ 以原子方式将值添加到内存位置的值。  
   
 ```  
 inline int atomic_fetch_add(
@@ -151,7 +151,7 @@ inline unsigned int atomic_fetch_add(
  内存位置的初始值。  
   
 ##  <a name="atomic_fetch_and"></a>atomic_fetch_and 函数 (c + + AMP)  
- 以原子方式执行一个值和内存位置的值按位与的运算。  
+ 以原子方式执行值和内存位置的值的按位与运算。  
   
 ```  
 inline int atomic_fetch_and(
@@ -195,7 +195,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
  存储在内存位置的原始值。  
   
 ##  <a name="atomic_fetch_inc"></a>atomic_fetch_inc  
- 以原子方式增加存储在指定的内存位置的值。  
+ 以原子方式递增存储在指定的内存位置的值。  
   
 ```  
 inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
@@ -212,7 +212,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
  存储在内存位置的原始值。  
   
 ##  <a name="atomic_fetch_max"></a>atomic_fetch_max  
- 以原子方式计算存储在第一个参数，第二个参数中指定的值中指定的内存位置的值之间的最大值，并将其存储在同一个内存位置。  
+ 以原子方式计算存储在第一个参数和第二个参数中指定的值中指定的内存位置的值之间的最大值，并将其存储在同一内存位置。  
   
 ```  
 inline int atomic_fetch_max(
@@ -229,16 +229,16 @@ inline unsigned int atomic_fetch_max(
   
 ### <a name="parameters"></a>参数  
  `_Dest`  
- 读取的值进行比较的哪一次的位置以及两个值的最大值是要存储。  
+ 为只读的值进行比较的一个位置，且两个值的最大值是要存储。  
   
  `value`  
- 要与指定位置处的值进行比较的值。  
+ 要与位于指定位置处的值进行比较的值。  
   
 ### <a name="return-value"></a>返回值  
- 存储在指定的位置的原始值。  
+ 在指定的位置的位置存储的原始值。  
   
 ##  <a name="atomic_fetch_min"></a>atomic_fetch_min  
- 以原子方式计算存储在第一个参数，第二个参数中指定的值中指定的内存位置的值之间的最小值，并将其存储在同一个内存位置。  
+ 以原子方式计算存储在第一个参数和第二个参数中指定的值中指定的内存位置的值之间的最小值，并将其存储在同一内存位置。  
   
 ```  
 inline int atomic_fetch_min(
@@ -255,13 +255,13 @@ inline unsigned int atomic_fetch_min(
   
 ### <a name="parameters"></a>参数  
  `_Dest`  
- 读取的值进行比较的哪一次的位置以及两个值的最小值是要存储。  
+ 为只读的值进行比较的一个位置，且两个值的最小值是要存储。  
   
  `value`  
- 要与指定位置处的值进行比较的值。  
+ 要与位于指定位置处的值进行比较的值。  
   
 ### <a name="return-value"></a>返回值  
- 存储在指定的位置的原始值。  
+ 在指定的位置的位置存储的原始值。  
   
 ##  <a name="atomic_fetch_or"></a>atomic_fetch_or 函数 (c + + AMP)  
  通过一个值和一个内存位置的值在原子级别执行按位或运算。  
@@ -290,7 +290,7 @@ inline unsigned int atomic_fetch_or(
  内存位置的初始值。  
   
 ##  <a name="atomic_fetch_sub"></a>atomic_fetch_sub 函数 (c + + AMP)  
- 以原子方式中减去的内存位置的值。  
+ 以原子方式减去中的内存位置的一个值。  
   
 ```  
 inline int atomic_fetch_sub(
@@ -316,7 +316,7 @@ inline unsigned int atomic_fetch_sub(
  内存位置的初始值。  
   
 ##  <a name="atomic_fetch_xor"></a>atomic_fetch_xor 函数 (c + + AMP)  
- 以原子方式为 peforms 值和内存位置的按位异或运算。  
+ 以原子方式为 peforms 按位异或运算的一个值和内存位置。  
   
 ```  
 inline int atomic_fetch_xor(
@@ -336,13 +336,13 @@ inline unsigned int atomic_fetch_xor(
  指向该内存位置的指针。  
   
  `value`  
- 要在异或计算中使用的值。  
+ 要在 XOR 计算中使用的值。  
   
 ### <a name="return-value"></a>返回值  
  内存位置的初始值。  
   
 ##  <a name="copy"></a>  copy  
- 将 c + + AMP 对象复制。 满足所有同步数据传输要求。 在快捷键上运行代码时，不能复制数据。 此函数的常规形式`copy(src, dest)`。  
+ 将 c + + AMP 对象复制。 满足所有同步的数据传输要求。 无法将数据复制的加速器上运行代码时。 此函数的常规形式是`copy(src, dest)`。  
   
 ```  
 template <typename value_type, int _Rank>  
@@ -424,7 +424,7 @@ void copy(
  要将复制到的对象。  
   
  `_DestIter`  
- 指向目标处的开始位置的输出迭代器。  
+ 指向目标的开始位置的输出迭代器。  
   
  `InputIterator`  
  输入 interator 的类型。  
@@ -436,19 +436,19 @@ void copy(
  要从复制的对象或要将复制到的对象的秩。  
   
  `_Src`  
- 若要复制的对象。  
+ 若要要复制的对象。  
   
  `_SrcFirst`  
- 到源容器开始迭代器。  
+ 到源容器经过开头的迭代器。  
   
  `_SrcLast`  
- 到源容器的迭代器结束。  
+ 到源容器结束迭代器。  
   
  `value_type`  
  将复制的元素数据类型。  
   
 ##  <a name="copy_async"></a>copy_async  
- 复制 c + + AMP 对象并返回[completion_future](completion-future-class.md)可以等待的对象。 在快捷键上运行代码时，不能复制数据。  此函数的常规形式`copy(src, dest)`。  
+ 将 c + + AMP 对象复制并返回[completion_future](completion-future-class.md)可以等待的对象。 无法将数据复制的加速器上运行代码时。  此函数的常规形式是`copy(src, dest)`。  
   
 ```  
 template <typename value_type, int _Rank>  
@@ -522,7 +522,7 @@ concurrency::completion_future copy_async(
  要将复制到的对象。  
   
  `_DestIter`  
- 指向目标处的开始位置的输出迭代器。  
+ 指向目标的开始位置的输出迭代器。  
   
  `InputIterator`  
  输入 interator 的类型。  
@@ -534,29 +534,29 @@ concurrency::completion_future copy_async(
  要从复制的对象或要将复制到的对象的秩。  
   
  `_Src`  
- 若要复制的对象。  
+ 若要要复制的对象。  
   
  `_SrcFirst`  
- 到源容器开始迭代器。  
+ 到源容器经过开头的迭代器。  
   
  `_SrcLast`  
- 到源容器的迭代器结束。  
+ 到源容器结束迭代器。  
   
  `value_type`  
  将复制的元素数据类型。  
   
 ### <a name="return-value"></a>返回值  
- 一个`future<void>`，可以等待。  
+ A `future<void>` ，可以等待。  
   
 ##  <a name="direct3d_abort"></a>direct3d_abort  
- 用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，它会发出[runtime_exception](runtime-exception-class.md)异常并显示错误消息"参考光栅器︰ 指令命中着色器中止"。  
+ 用 `restrict(amp)` 限制子句中止函数的执行。 当 AMP 运行时检测该调用时，将引发[runtime_exception](runtime-exception-class.md)异常并显示错误消息"参考光栅器： 指令命中着色器中止"。  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
 ##  <a name="direct3d_errorf"></a>direct3d_errorf  
- 打印到 Visual Studio 输出窗口的格式化的字符串。 从同名的函数调用`restrict(amp)`限制子句。 当 AMP 运行时检测该调用时，它会发出[runtime_exception](runtime-exception-class.md)使用相同的格式设置字符串的异常。  
+ 将打印到 Visual Studio 输出窗口的格式化的字符串。 从与函数调用`restrict(amp)`限制子句。 当 AMP 运行时检测该调用时，将引发[runtime_exception](runtime-exception-class.md)具有相同的格式设置字符串的异常。  
   
 ```  
 void direct3d_errorf(
@@ -565,7 +565,7 @@ void direct3d_errorf(
 ```  
   
 ##  <a name="direct3d_printf"></a>direct3d_printf  
- 打印到 Visual Studio 输出窗口的格式化的字符串。 从同名的函数调用`restrict(amp)`限制子句。  
+ 将打印到 Visual Studio 输出窗口的格式化的字符串。 从与函数调用`restrict(amp)`限制子句。  
   
 ```  
 void direct3d_printf(
@@ -574,7 +574,7 @@ void direct3d_printf(
 ```  
   
 ##  <a name="global_memory_fence"></a>global_memory_fence  
- 直到所有全局内存存取平铺中的所有线程的阻止执行已完成。 这可确保全局内存访问中的线程磁贴，其他线程可见，并且按程序顺序执行。  
+ 将磁贴，直到所有全局内存访问中的所有线程的阻止执行已完成。 这将确保全局内存访问的线程磁贴中的其他线程对可见，并按编程顺序执行。  
   
 ```  
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -645,7 +645,7 @@ void parallel_for_each(
  `accelerator_view`对象上运行的并行计算。  
   
  `_Compute_domain`  
- `extent`对象，其中包含用于计算的数据。  
+ `extent`包含计算的数据的对象。  
   
  `_Dim0`  
  维度的`tiled_extent`对象。  
@@ -657,16 +657,16 @@ void parallel_for_each(
  维度的`tiled_extent`对象。  
   
  `_Kernel`  
- 采用类型的参数的 lambda 或函数对象"索引\<_Rank&1;>"，并执行并行计算。  
+ 采用类型的自变量的 lambda 或函数对象"索引\<_Rank >"和执行并行计算。  
   
  `_Kernel_type`  
  Lambda 或函子。  
   
  `_Rank`  
- 此扩展盘区的秩。  
+ 对此盘区进行分级。  
   
 ##  <a name="tile_static_memory_fence"></a>tile_static_memory_fence  
- 将阻止执行平铺中的所有线程，直到所有未完成`tile_static`内存访问已完成。 这样可以确保`tile_static`内存访问会向线程磁贴中的其他线程和访问程序的顺序执行。  
+ 将阻止执行磁贴中的所有线程，直至将所有未完成`tile_static`内存访问已完成。 这样可确保`tile_static`内存访问会向线程磁贴中的其他线程和程序的顺序执行访问。  
   
 ```  
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -676,6 +676,5 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
  `_Barrier`  
  Tile_barrier 对象。  
   
-## <a name="see-also"></a>另请参阅  
- [并发 Namespace (c + + AMP)](concurrency-namespace-cpp-amp.md)
-
+## <a name="see-also"></a>请参阅  
+ [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,27 +1,27 @@
 ---
-title: "A.3   Using Parallel Regions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用并行区域 A.3 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 575216a1-960a-47f7-9c82-7f660291fcfe
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: be3489e924dab7faa50d26c7cb89af67b4034ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.3   Using Parallel Regions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`parallel` 指令 \(在第 8 页\) 的[第2.3部分](../../parallel/openmp/2-3-parallel-construct.md) 可用于粗糙谷物并行程序。  在下面的示例中，每个线程在并行区域决定全局数组工作的 `x` 的哪些部分在中，根据线程数:  
+# <a name="a3---using-parallel-regions"></a>A.3   使用并行区域
+`parallel`指令 ([2.3 节](../../parallel/openmp/2-3-parallel-construct.md)第 8 页上) 可以在粗粒度的并行程序中使用。 在下面的示例中，每个线程在并行区域决定全局数组的哪一部分`x`来处理，基于线程号：  
   
 ```  
 #pragma omp parallel shared(x, npoints) private(iam, np, ipoints)  

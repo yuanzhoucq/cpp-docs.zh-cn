@@ -1,32 +1,33 @@
 ---
-title: "list::list (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "列表成员 [STL/CLR]"
+title: "list:: list (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::list
+dev_langs: C++
+helpviewer_keywords: list member [STL/CLR]
 ms.assetid: 51b58f63-c65a-4d54-b746-0c10635b123b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ae85dbdab7bb1d72862aa315949821ba5cdb830
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# list::list (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listlist-stlclr"></a>list::list (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 list();  
@@ -39,52 +40,53 @@ template<typename InIt>
 list(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 参数  
- count  
+#### <a name="parameters"></a>参数  
+ `count`  
  要插入的元素数。  
   
- first  
- 插入范围的开头。  
+ `first`  
+ 要插入的范围开始处。  
   
- last  
- 插入的范围末尾。  
+ `last`  
+ 要插入的范围的末尾。  
   
- right  
- 要插入的对象或 。  
+ `right`  
+ 要插入的对象或范围。  
   
- val  
+ `val`  
  要插入的元素的值。  
   
-## 备注  
+## <a name="remarks"></a>备注  
+  
  构造函数：  
   
  `list();`  
   
- 初始化控制序列的元素。  可以使用它来指定空的初始序列控制。  
+ 初始化受控的序列不包含任何元素。 用于指定空的初始受控的序列。  
   
  构造函数：  
   
  `list(list<Value>% right);`  
   
- 初始化与序列 `[``right``.``(),` `right``.``())`的控制。序列[list::end](../dotnet/list-end-stl-clr.md)[list::begin](../dotnet/list-begin-stl-clr.md) 将它指定为复制顺序控制是由列表对象 `right`的初始序列控制。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)。 用于指定的初始受控的序列的列表对象所控制的序列副本`right`。  
   
  构造函数：  
   
  `list(list<Value>^ right);`  
   
- 用序列初始化控制序列 `[``right``->`[list::begin](../dotnet/list-begin-stl-clr.md)`(),` `right``->`[list::end](../dotnet/list-end-stl-clr.md)`())`.  将它指定为复制顺序控制是由列表对象 `right`的初始序列控制。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)。 用于指定的初始受控的序列的列表对象的句柄所控制的序列副本`right`。  
   
  构造函数：  
   
  `explicit list(size_type count);`  
   
- 初始化 `count` 的序列元素控制每个使用 `value_type()`值。  使用它填充元素的容器具有的所有默认值。  
+ 初始化受控的序列与`count`元素每个值`value_type()`。 你使用它来填充容器元素与所有具有默认值。  
   
  构造函数：  
   
  `list(size_type count, value_type val);`  
   
- 初始化 `count` 的序列元素控制每个使用 `val`值。  使用它填充元素的容器具有的所有相同的默认值。  
+ 初始化受控的序列与`count`元素每个值`val`。 你使用它来填充容器元素与所有具有相同的值。  
   
  构造函数：  
   
@@ -92,17 +94,17 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list(InIt first, InIt last);`  
   
- 初始化与序列 `[``first``,` `)`的控制。序列`last` 使用会使控制序列复制另一个序列。  
+ 初始化受控的序列与序列 [`first`， `last`)。 你可以使用它以使另一个序列的副本的受控的序列。  
   
  构造函数：  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- 初始化枚举数指定的顺序控制序列 `right`。  使用会使控制序列描述枚举器副本另一个序列。  
+ 初始化与枚举器指定序列的受控的序列`right`。 你可以使用它来使一个枚举器所描述的另一个序列的副本的受控的序列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cliext_list_construct.cpp   
 // compile with: /clr   
 #include <cliext/list>   
@@ -156,20 +158,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [list::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eca51cbafdb858b511facfaee5ff4dd55786c856
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c6a2bc4fb1a73954e182ea192047a7ec6ca20c1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>如何：将标准字符串转换为 System::String
 本主题演示如何将 c + + 标准库字符串 ([\<字符串 >](../standard-library/string.md)) 到<xref:System.String>。  
@@ -54,5 +57,5 @@ test
 test  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

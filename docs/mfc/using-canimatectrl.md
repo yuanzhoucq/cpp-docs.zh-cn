@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2054fcd5ca73263f8d26713c4e6c1e9a59323659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f27fd24c3c4334476c78ba0b59c90cbbb0d51f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-canimatectrl"></a>使用 CAnimateCtrl
 动画控件，由类表示[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)，是一个窗口，显示音频视频交错 (AVI) 格式的剪辑-标准 Windows 视频/音频格式。 AVI 剪辑是一系列位图帧，与电影相似。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [动画控件发送的通知](../mfc/notifications-sent-by-animation-controls.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

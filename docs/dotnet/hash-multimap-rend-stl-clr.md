@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aaf8c1426d5edcf32113f4de87c0443073a24bc3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8dcea5e6036790e2de1a7142b6a887587de159c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimaprend-stlclr"></a>hash_multimap::rend (STL/CLR)
 指定反向受控序列的末尾。  
@@ -73,12 +76,12 @@ int main()
 *--rend() = [a 1]  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multimap:: begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)   
  [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)   

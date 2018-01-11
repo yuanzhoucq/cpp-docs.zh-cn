@@ -1,42 +1,41 @@
 ---
-title: "编译器警告（等级 4）C4256 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4256"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4256"
+title: "编译器警告 （等级 4） C4256 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4256
+dev_langs: C++
+helpviewer_keywords: C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bbaec27948f061cb21eeb432446517d4f9a6b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 4）C4256
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“function”: 带虚拟基的类的构造函数有“...”；调用可能与 Visual C\+\+ 的早期版本不兼容  
+# <a name="compiler-warning-level-4-c4256"></a>编译器警告（等级 4）C4256
+function:...; 已具有虚拟基的类的构造函数调用可能不兼容与旧版本的 Visual c + +  
   
- 可能为不兼容问题。  
+ 可能不兼容。  
   
- 请考虑下面的代码示例。  如果构造函数的定义 S2::S2 \(int i，…\) 编译使用 Visual C\+\+ 编译器版本的在版本 7 之前，使用当前版本，而特定大小写的调用约定更改，但下面的示例进行编译，所以对构造函数的调用 S3 的不会正确工作。  如果两者都是用 Visual C\+\+ 6.0 编译的，调用也不会完全正常工作，除非不为省略号传递任何参数。  
+ 请考虑以下代码示例。 如果定义的构造函数 s2:: S2 (int i，...) 使用的版本 7 之前的, Visual c + + 编译器版本编译但下面的示例使用编译的当前版本，对 S3 的构造函数的调用将无法由于正常工作特殊情况调用约定发生了更改。 如果两者都是使用 Visual C++ 6.0 编译的，该调用也无法完全正常工作，除非不为省略号传递任何参数。  
   
- 若要修复此警告，  
+ 若要修复此警告  
   
-1.  不要在构造函数中使用省略号。  
+1.  请勿在构造函数中使用省略号。  
   
-2.  确保项目中的所有组件都用当前版本（包括任何可以定义或引用该类的库）生成，然后使用 [warning](../../preprocessor/warning.md) 杂注禁用此警告。  
+2.  请确保在其项目中的所有组件都生成与当前版本 （包括任何库，可以定义或引用此类），然后禁用警告使用[警告](../../preprocessor/warning.md)杂注。  
   
- 下面的示例生成 C4256：  
+ 下面的示例生成 C4256:  
   
 ```  
 // C4256.cpp  

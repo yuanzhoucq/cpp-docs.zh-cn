@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b36276a1a4ae64bee40a41cd844b1ad0d38c911a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f88c3eff9c8160a0e322c93dacf6985dc7b8a20b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 使您可以在不知道数据库架构（数据库的基础结构）的情况下访问数据源。  
@@ -67,10 +70,10 @@ class CDynamicAccessor : public CAccessorBase
   
  有关的讨论和使用动态访问器类的示例，请参阅[使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头**：atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 类](../../data/oledb/caccessor-class.md)   

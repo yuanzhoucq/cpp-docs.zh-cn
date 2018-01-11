@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48c8da8fda2cd70676476532b3ed3646285f0782
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce90eb2baf4ce8f6ba0136a9efd503086b686aa6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 类
 提供查找和读取 Gopher 服务器上文件的功能。  
@@ -60,7 +61,7 @@ class CGopherFile : public CInternetFile
   
  `CGopherFile`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
   
 ##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
@@ -95,7 +96,7 @@ CGopherFile(
  当前的 Internet 会话句柄。  
   
  `pstrLocator`  
- 指向用于查找 gopher 服务器的字符串的指针。 请参阅[Gopher 会话](https://msdn.microsoft.com/library/24wz8xze.aspx)有关 gopher 定位符的详细信息。  
+ 指向用于查找 gopher 服务器的字符串的指针。 请参阅[Gopher 会话](cgopherlocator-class.md)有关 gopher 定位符的详细信息。  
   
  *dwLocLen*  
  一个包含中的字节数的 dword 值`pstrLocator`。  
@@ -108,7 +109,7 @@ CGopherFile(
   
  切勿创建`CGopherFile`直接对象。 而应调用[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)以打开 gopher 服务器上的文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2839024df1bd94a4a383acd038392eac6763531c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27e5ebb58056dfd14417adea211daf2c6ac2ddf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 本文介绍常见的图片类型以及如何在 ActiveX 控件中实现该图片类型。 包括以下主题：  
@@ -151,7 +152,7 @@ ms.lasthandoff: 10/24/2017
   
  完成修改后，重新生成项目以整合自定义图片属性的新功能并使用测试容器对新属性进行测试。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 使用字体](../mfc/mfc-activex-controls-using-fonts.md)   
  [MFC ActiveX 控件：属性页](../mfc/mfc-activex-controls-property-pages.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fc49278dbf143d7594f0a46eeb2fd5901a60830
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="define-directive-cc"></a>#define 指令 (C/C++)
 `#define`创建*宏*，这是标识符或参数化的标识符与标记字符串的关联。 在定义宏之后，编译器可用标记字符串替换源文件中标识符的每个匹配项。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
  将用逗号分隔列表中的形参。 列表中的每个名称必须是唯一的，并且列表必须用括号括起。 不能含有空格可以分隔*标识符*和左括号。 使用行串联-放置反斜杠 (`\`) 立即之前换行字符-为多个源行上的长指令。 形参名称的范围扩展到结尾的新行*令牌字符串*。  
   
- 使用第二种语法形式定义宏之后，后面跟有自变量列表的后续文本实例指示一个宏调用。 遵循的实例的实际自变量*标识符*源文件中与匹配在宏定义中对应的形参。 在每个形参*令牌字符串*，前面没有字符串化 (`#`)、 charizing (`#@`)，或标记粘贴 (`##`) 运算符，或不跟`##`运算符，是替换为相应的实际自变量。 实参中的所有宏都将在指令替换形参之前扩展。 (中介绍了运算符[预处理器运算符](../preprocessor/preprocessor-operators.md)。)  
+ 使用第二种语法形式定义宏之后，后面跟有自变量列表的后续文本实例指示一个宏调用。 遵循的实例的实际自变量*标识符*源文件中与匹配在宏定义中对应的形参。 在每个形参*令牌字符串*，前面没有字符串化 (`#`)、 charizing (`#@`)，或标记粘贴 (`##`) 运算符，或不跟`##`运算符，是替换为相应的实际自变量。 实际自变量中的所有宏都将在指令替换形式参数之前展开。 (中介绍了运算符[预处理器运算符](../preprocessor/preprocessor-operators.md)。)  
   
  下面带参数的宏的示例演示了 `#define` 语法的第二种形式：  
   
@@ -121,5 +122,5 @@ var = 80 + 10 * 20;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [预处理器指令](../preprocessor/preprocessor-directives.md)

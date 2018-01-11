@@ -1,41 +1,42 @@
 ---
-title: "hash_map::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp 成员 [STL/CLR]"
+title: "hash_map:: key_comp (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 08bd31cc-3a7c-49a3-ac48-089262b3bd44
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5875eb852d0e2df3dd82fd8a70d1313d3f9cca88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制两个键的排序委托。  
+# <a name="hashmapkeycomp-stlclr"></a>hash_map::key_comp (STL/CLR)
+将复制为两个键排序的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## 备注  
- 成员函数返回用于对受控序列进行排序的排序委托。  用于对两个键进行比较。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回使用受控的序列进行排序的排序委托。 用于比较两个键。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_key_comp.cpp   
@@ -71,18 +72,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= True**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_compare](../dotnet/hash-map-key-compare-stl-clr.md)   
- [hash\_map::key\_type](../dotnet/hash-map-key-type-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)   
+ [hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)

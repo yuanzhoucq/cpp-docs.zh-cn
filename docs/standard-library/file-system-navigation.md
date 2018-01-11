@@ -4,38 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-system-navigation"></a>文件系统导航
 \<filesystem> 标头实现 C++ 文件系统技术规范 ISO/IEC TS 18822:2015（最终稿：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)），并具有可用以编写独立于平台的代码从而实现文件系统导航的类型和函数。 因为它是跨平台的，所以包含与 Windows 系统不相关的 API。 例如，这意味着 `is_fifo(const path&)` 在 Windows 上始终返回 `false` 。   
@@ -231,4 +214,3 @@ Press Enter to exit
 \<filesystem> 标头提供 [directory_iterator](../standard-library/directory-iterator-class.md) 类型以循环访问单个目录，以及提供 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) 类以递归方式循环访问目录及其子目录。 通过向迭代器传递一个 `path` 对象来构造该迭代器之后，该迭代器指向路径中的第一个 directory_entry。 通过调用默认构造函数创建结尾迭代器。  
   
 当循环访问一个目录时，可能会遇到几种类型的项，其中包括但不限于目录、文件、符号链接和套接字文件。 `directory_iterator` 将其项返回为 [directory_entry](../standard-library/directory-entry-class.md) 对象。  
-

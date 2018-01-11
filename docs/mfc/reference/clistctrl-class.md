@@ -275,11 +275,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d12b9cef2aa36aae8e43d6de2d74875808a3cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4d11da722ee9c933e6fbded6d8724db3da47ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistctrl-class"></a>CListCtrl 类
 封装显示一组项的“列表视图控件”功能，每一项均包含一个图标（来自图像列表）和标签。  
@@ -521,7 +522,7 @@ class CListCtrl : public CWnd
   
  `CListCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmn.h  
   
 ##  <a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
@@ -695,7 +696,7 @@ CImageList* CreateDragImage(
  如果成功，则拖动图像列表指向的指针否则为**NULL**。  
   
 ### <a name="remarks"></a>备注  
- `CImageList`对象是永久性的并且你必须删除它完成。 例如:   
+ `CImageList`对象是永久性的并且你必须删除它完成。 例如:  
   
 
 ```cpp  
@@ -1274,7 +1275,7 @@ BOOL GetGroupInfoByIndex(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `iIndex`|组的从零开始索引。|  
 |[out] `pGroup`|指向[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收由指定的组的相关信息的结构`iIndex`参数。<br /><br /> 调用方负责初始化的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。 设置`cbSize`成员的结构、 大小和所用的标志`mask`成员来指定要检索的信息。|  
@@ -1351,7 +1352,7 @@ BOOL GetGroupRect(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `iGroupId`|指定一组。|  
 |[in, out] `lpRect`|指向[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)结构。 如果此方法成功，结构接收由指定的组的矩形坐标`iGroupId`。|  
@@ -1404,7 +1405,7 @@ UINT GetGroupState(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `iGroupId`|组的从零开始索引。|  
 |[in] `dwMask`|指定要检索指定组的状态值的掩码。 有关详细信息，请参阅`mask`的成员[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)结构。|  
@@ -1658,7 +1659,7 @@ BOOL GetItemIndexRect(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pItemIndex`|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子项的父项的结构。<br /><br /> 调用方负责分配和设置的成员[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)结构。 此参数不能为`NULL`。|  
 |[in] `iColumn`|在控件中的列的从零开始索引。|  
@@ -1819,7 +1820,7 @@ BOOL GetItemSpacing(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `fSmall`|为其检索的项间距的视图。 指定`true`小图标视图或`false`图标视图。|  
 |[out] `pnHorzSpacing`|包含项之间的水平间距。|  
@@ -2645,7 +2646,7 @@ BOOL IsItemVisible(int index) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `index`|当前列表视图控件中的项的从零开始索引。|  
   
@@ -2664,7 +2665,7 @@ UINT MapIDToIndex(UINT id) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `id`|项的唯一 ID。|  
   
@@ -2687,7 +2688,7 @@ UINT MapIndexToID(UINT index) const;
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `index`|项的从零开始索引。|  
   
@@ -3494,7 +3495,7 @@ BOOL SetItemIndexState(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pItemIndex`|指向[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)描述项的结构。 调用方负责分配此结构并设置其成员。|  
 |[in] `dwState`|要设置，为项的状态即的按位组合[列表视图项状态](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 到重置，或另一个用于设置状态。|  
@@ -3897,7 +3898,7 @@ BOOL SortItemsEx(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pfnCompare`|应用程序定义比较函数的地址。<br /><br /> 排序操作调用比较函数每次需要确定两个列表项的相对顺序。 比较函数必须不是是任何类的成员的独立函数或类的静态成员。|  
 |[in] `dwData`|应用程序定义的值传递给比较函数。|  
@@ -4027,7 +4028,7 @@ BOOL Update(int nItem);
 ### <a name="example"></a>示例  
   请参阅示例[CListCtrl::GetSelectedCount](#getselectedcount)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 ROWLIST](../../visual-cpp-samples.md)   
  [CWnd 类](cwnd-class.md)   
  [层次结构图](../hierarchy-chart.md)   

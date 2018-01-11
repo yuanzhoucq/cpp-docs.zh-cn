@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be26e2139ab0cf0e31e63331a8e87df8769fe715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1bd1d80f692695c1cbf4ad535d2c5e759e4ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hdrstop"></a>hdrstop
 提供对预编译文件名和编译状态的保存位置的额外控制。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  如果 C 或 c + + 文件包含**hdrstop**杂注用 /Yc 编译时，编译器将保存到杂注位置编译的状态。 不会保存遵循杂注的任何代码的编译状态。  
   
- 使用*filename*命名的编译的状态保存在其中预编译标头文件。 之间留一个空格**hdrstop**和*filename*是可选的。 中指定的文件名称**hdrstop**杂注是一个字符串，并且受任何 C 或 c + + 字符串的约束。 具体来说，您必须将其包含在引号中并使用转义符（反斜杠）来指定目录名称。 例如：  
+ 使用*filename*命名的编译的状态保存在其中预编译标头文件。 之间留一个空格**hdrstop**和*filename*是可选的。 中指定的文件名称**hdrstop**杂注是一个字符串，并且受任何 C 或 c + + 字符串的约束。 具体来说，您必须将其包含在引号中并使用转义符（反斜杠）来指定目录名称。 例如:  
   
 ```  
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
@@ -88,5 +89,5 @@ __inline Disp( char *szToDisplay )   // Define an inline function
   
  在此示例中， **hdrstop**杂注显示后包含了两个文件和已定义内联函数。 最初，这可能是杂注的临时位置。 但请考虑，使用手动预编译选项 /Yc 和 /Yu 与**hdrstop**杂注使你可以预编译整个源文件-甚至是内联代码。 Microsoft 编译器不会只允许您预编译数据声明。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

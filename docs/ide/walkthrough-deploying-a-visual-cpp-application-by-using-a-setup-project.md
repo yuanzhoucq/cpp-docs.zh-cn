@@ -14,16 +14,17 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c567bbebdc9ff891402a0f5e29083eb33ec39188
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbe75f1fd3ceb037e44716156556882f3f6d1cc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>演练：使用安装项目部署 Visual C++ 应用程序
 描述如何使用安装项目部署 Visual c + + 应用程序。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
 -   与计算机[!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)]安装。  
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/24/2017
   
 8.  在没有 Visual c + + 库的第二个计算机上运行安装程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [部署示例](../ide/deployment-examples.md)

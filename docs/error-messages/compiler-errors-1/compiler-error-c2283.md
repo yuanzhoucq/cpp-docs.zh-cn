@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6c3a02fcd88f5bb61e6856ad841883a17718d1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b71e1217c1ee5f25c348ec05069b76a591a0f98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2283"></a>编译器错误 C2283
 “identifier”：未命名的结构上不允许使用纯说明符或抽象重写说明符  

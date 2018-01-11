@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf53177e0d24777a5447c6655e7b801955610168
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-images-from-an-image-list"></a>从图像列表绘制图像
 若要绘制图像，请使用[cimagelist:: Draw](../mfc/reference/cimagelist-class.md#draw)成员函数。 您将指定指向设备上下文对象的指针、要绘制的图像的索引、要在其中绘制图像的设备上下文中的位置以及一组表示绘制样式的标志。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  除 Draw 成员函数，另一个函数， [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)，扩展的能力，以呈现图像。 `DrawIndirect`采用，作为参数， [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)结构。 此结构可用于自定义当前图像的渲染，包括光栅操作 (ROP) 代码的使用。 ROP 代码的详细信息，请参阅[光栅操作代码](http://msdn.microsoft.com/library/windows/desktop/dd162892)和[位图为画笔](http://msdn.microsoft.com/library/windows/desktop/dd183378)Windows SDK 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CImageList](../mfc/using-cimagelist.md)   
  [控件](../mfc/controls-mfc.md)
 

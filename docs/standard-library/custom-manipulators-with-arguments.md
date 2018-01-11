@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5848e4f200f528261a135e38e1898a256433871b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad62906f5ee509bd6f99caca55b0df581e1f629b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-manipulators-with-arguments"></a>带自变量的自定义操控器
 本部分介绍如何使用一个或多个参数创建输出流操控器，以及如何将操控器用于无输出流。  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
  [其他单一参数输出流操控器](../standard-library/other-one-argument-output-stream-manipulators.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [iostream 编程](../standard-library/iostream-programming.md)
 

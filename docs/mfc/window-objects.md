@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f16b71d48bbd44a472c56aa1ad6aa1a1c510b1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15f53db2d0ec6a57261e22c58abd3e5e8423b716
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-objects"></a>窗口对象
 MFC 还提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句柄。 `CWnd` 对象是一个 C++ 窗口对象，与表示一个 Windows 窗口但包含它的 `HWND` 不同。 使用 `CWnd` 可派生您自己的子窗口类，或使用派生自 `CWnd` 的很多 MFC 类之一。 `CWnd` 类是所有窗口的基类，包括框架窗口、对话框、子窗口、控件和控件条（如工具栏）。 更好地理解[c + + 窗口对象和 HWND 之间的关系](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)进行使用 MFC 进行有效的编程非常重要。  
@@ -64,6 +65,6 @@ MFC 还提供类[CWnd](../mfc/reference/cwnd-class.md)封装`HWND`窗口的句�
   
 -   [图形对象](../mfc/graphic-objects.md)： 钢笔、 画笔、 字体、 位图、 调色板、 区域  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows](../mfc/windows.md)
 

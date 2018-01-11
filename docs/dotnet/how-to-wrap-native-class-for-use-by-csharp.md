@@ -1,31 +1,34 @@
 ---
-title: "如何：包装本机类以供 C# 使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类 [C++], Visual C# 和"
-  - "本机代码 [C++], Visual C# 和"
+title: "如何： 包装本机类以供 C# |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native code [C++], Visual C# and
+- classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e206fcfe0c8c4d82276e8c477061fd0522fe5722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：包装本机类以供 C# 使用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本示例说明如何包装本机 C\+\+ 类以便用 C\# 或其他 .NET 语言编写的代码可以使用它。  
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包装本机类以供 C# 使用
+此示例演示如何包装的本机 c + + 类，以便它可供用 C# 中，或其他.NET 语言编写的代码。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // wrap_native_class_for_mgd_consumption.cpp  
@@ -75,5 +78,5 @@ private:
 };  
 ```  
   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

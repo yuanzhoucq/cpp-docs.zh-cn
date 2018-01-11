@@ -1,47 +1,48 @@
 ---
-title: "defaultvalue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvalue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvalue attribute"
+title: "defaultvalue |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvalue
+dev_langs: C++
+helpviewer_keywords: defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb269a4c7e85269096e5df8a56e16bf898348118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# defaultvalue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-允许默认的规范一个类型化可选参数的。  
+# <a name="defaultvalue"></a>defaultvalue
+允许类型化的可选参数的默认值的规范。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
 [ defaultvalue= value ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *值*  
  参数的默认值。  
   
-## 备注  
- **defaultvalue** C\+\+ 特性具有与 [defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Defaultvalue** c + + 属性具有相同的功能[defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 特性。  
   
-## 示例  
- 使用 **defaultvalue** 属性，下面的代码演示一个接口方法:  
+## <a name="example"></a>示例  
+ 下面的代码演示接口方法使用**defaultvalue**属性：  
   
 ```  
 // cpp_attr_ref_defaultvalue.cpp  
@@ -65,9 +66,9 @@ __interface IFireTabCtrl : IDispatch {
       version="1.0", helpstring="ATLFire 1.0 Type Library") ];  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -76,14 +77,13 @@ __interface IFireTabCtrl : IDispatch {
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [输出](../windows/out-cpp.md)   
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [Parameter 特性](../windows/parameter-attributes.md)   
+ [out](../windows/out-cpp.md)   
  [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   
- [pointer\_default](../windows/pointer-default.md)   
+ [pointer_default](../windows/pointer-default.md)   
  [unique](../windows/unique-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a80e5d0815c919eaa1983d07d714cbe314a9916b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 484abaf5344400e03b53038d2c137497c202345f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cctrlview-class"></a>CCtrlView 类
 使文档视图体系结构适应 Windows 98 和 Windows NT 版本 3.51 及更高版本所支持的公共控件。  
@@ -59,7 +60,7 @@ class CCtrlView : public CView
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|包含视图类的默认样式。|  
 |[CCtrlView::m_strClass](#m_strclass)|包含视图类的 Windows 类名称。|  
@@ -78,7 +79,7 @@ class CCtrlView : public CView
   
  `CCtrlView`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
@@ -154,7 +155,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
  更改窗口样式的详细信息，请参阅[更改 MFC 创建的窗口样式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CView 类](../../mfc/reference/cview-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CTreeView 类](../../mfc/reference/ctreeview-class.md)   

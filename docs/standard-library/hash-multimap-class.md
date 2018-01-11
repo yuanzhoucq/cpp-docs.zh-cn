@@ -97,11 +97,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a91949cc8bd5a53d1a01835dd0880e92715cec9
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 类
 > [!NOTE]
@@ -179,7 +180,7 @@ class hash_multimap
 |[const_reference](#const_reference)|一种类型，此类型提供对存储在 `const` 中的 `hash_multimap` 元素的引用（用于读取和执行 `const` 操作）。|  
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取 `const` 中的任何 `hash_multimap` 元素的双向迭代器。|  
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_multimap` 中迭代器指向的元素间范围内的元素数量。|  
-|[iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multimap` 中任何元素的双向迭代器。|  
+|[Iterator](#iterator)|一种类型，它提供可读取或修改 `hash_multimap` 中任何元素的双向迭代器。|  
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_multimap` 中两个元素的相对顺序。|  
 |[key_type](#key_type)|一种类型，此类型描述组成 `hash_multimap` 中每个元素的排序键对象。|  
 |[mapped_type](#mapped_type)|一种类型，此类型表示存储在 `hash_multimap` 中的数据类型。|  
@@ -225,7 +226,7 @@ class hash_multimap
 |-|-|  
 |[hash_multimap::operator=](#op_eq)|将一个 `hash_multimap` 中的元素替换为另一 `hash_multimap` 副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<hash_map>  
   
  **命名空间：** stdext  
@@ -1614,7 +1615,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
   
  若要取消引用指向 hash_multimap 中元素的 **iterator**`Iter`，请使用 **->** 运算符。  
   
- 若要访问元素的键值，请使用 `Iter` -> **first**，其等同于 (\* `Iter`)。 **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **first**。  
+ 若要访问元素的键值，请使用 `Iter` -> **first**，其作用与 (\* `Iter`). **first** 相同。 若要访问元素的映射值，请使用 `Iter` -> **second**，其作用与 (\* `Iter`). **first** 相同。  
   
  **iterator** 类型可用于修改元素的值。  
   
@@ -2595,7 +2596,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

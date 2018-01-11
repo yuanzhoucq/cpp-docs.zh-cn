@@ -20,14 +20,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b47af70aa2f9bd4bb8b4ea7a5a9b8591164b5e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 931ec9cb5d7e756d47a24c0c2b30b8686cd0fd4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="symbols-resource-identifiers"></a>符号：资源标识符
-符号是由两部分组成的资源标识符 (ID)：一个文本字符串（符号名）与一个整数值（符号值）映射。 例如：  
+符号是由两部分组成的资源标识符 (ID)：一个文本字符串（符号名）与一个整数值（符号值）映射。 例如:  
   
 ```  
 IDC_EDITNAME = 5100  
@@ -64,12 +67,12 @@ IDC_EDITNAME = 5100
   
 - [查看预定义的符号 ID](../windows/predefined-symbol-ids.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [如何： 搜索资源中的符号](../windows/how-to-search-for-symbols-in-resources.md)   
  [资源编辑器](../windows/resource-editors.md)   
  [资源文件](../windows/resource-files-visual-studio.md)

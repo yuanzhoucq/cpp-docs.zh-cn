@@ -18,17 +18,18 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>存储类 (C++)  
   
 A*存储类*在上下文中的 c + + 变量声明是控制对象的生存期、 链接和内存位置的类型说明符。 给定对象只能有一个存储类。 除非使用 `extern`、`static` 或 `thread_local` 说明符另行指定，否则在块中定义的变量具有自动存储。 自动对象和变量不具有链接；它们对于块外部的代码是不可见的。  
   
-**注意**  
+**备注**  
   
 1.  [可变](../cpp/mutable-data-members-cpp.md)关键字可视为存储类说明符。 但是，它只存在于类定义的成员列表中。  
   
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 需要注意的事项`thread_local`说明符：  
+
+- Dll 中的动态初始化的线程本地变量可能未正确初始化所有调用线程上。 有关详细信息，请参阅[线程](thread.md)。
   
 -  `thread_local`说明符可以与组合`static`或`extern`。  
   
 -  你可以将应用`thread_local`仅于数据声明和定义;`thread_local`不能用于函数声明或定义。  
-  
--  使用`thread_local`可能会影响[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)DLL 导入。 
-  
--  在 XP 系统上`thread_local`如果 DLL 使用可能无法正常运行`thread_local`数据和它通过动态加载`LoadLibrary`。  
   
 -  只能在具有静态存储持续时间的数据项上指定 `thread_local`。 这包括全局数据对象 (同时`static`和`extern`)，本地静态对象和类的静态数据成员。 任何本地变量声明`thread_local`是隐式静态，如果没有任何其他存储类提供; 换而言之，在块范围`thread_local`等效于`thread_local static`。 
   
@@ -322,6 +321,6 @@ Destroying: Static I3
   
 - 最后，静态局部变量（如 `I3`）在程序持续时间内保留其值，但在程序终止时将被销毁。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
   
  [声明和定义](../cpp/declarations-and-definitions-cpp.md)

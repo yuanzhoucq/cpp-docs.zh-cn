@@ -1,56 +1,57 @@
 ---
-title: "aggregates | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.aggregates"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregates 特性"
-  - "聚合 [C++]"
-  - "聚合对象 [C++], aggregates 属性"
-  - "聚合 [C++]"
+title: "聚合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.aggregates
+dev_langs: C++
+helpviewer_keywords:
+- aggregates attribute
+- aggregation [C++]
+- aggregate objects [C++], aggregates attribute
+- aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3fc74f10e0b5900030d48b37d1918de8807d152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# aggregates
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="aggregates"></a>aggregates
 指示对象聚合由 CLSID 指定的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-[ aggregates(  
-clsid,  
-variable_name  
+      [ aggregates(  
+   clsid,  
+   variable_name  
 ) ]  
-  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `clsid`  
  指定可聚合对象的 CLSID。  
   
  `variable_name`  
- 要插入的变量的名称。 此变量包含所聚合的对象的 **IUnknown**。  
+ 要插入的变量的名称。 此变量包含所聚合的对象的 **IUnknown** 。  
   
-## 备注  
- 应用于对象时，**aggregates** C\+\+ 属性会为所聚合的对象（由 `clsid` 指定）实现外部包装器。  
+## <a name="remarks"></a>备注  
+ 应用于对象时， **aggregates** C++ 属性会为所聚合的对象（由 `clsid`指定）实现外部包装器。  
   
- 此属性要求 [coclass](../windows/coclass.md)、[progid](../windows/progid.md) 或 [vi\_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 **progid**，则也会应用 **vi\_progid** 和 **coclass**。  
+ 此属性要求 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 **progid** ，则也会应用 **vi_progid** 和 **coclass** 。  
   
  **ATL 项目**  
   
@@ -60,9 +61,9 @@ variable_name
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(_m_spAttrXXX, clsid)  
 ```  
   
- 其次，还会添加 [DECLARE\_GET\_CONTROLLING\_UNKNOWN](../Topic/DECLARE_GET_CONTROLLING_UNKNOWN.md) 宏。  
+ 其次，还会添加 [DECLARE_GET_CONTROLLING_UNKNOWN](../atl/reference/aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) 宏。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_aggregates.cpp  
@@ -89,24 +90,24 @@ struct CObject : IObject
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 特性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
-|**适用对象**|**class**，`struct`|  
+|**适用对象**|**class**， `struct`|  
 |**可重复**|是|  
-|**必需的特性**|以下一个或多个属性：**coclass**、**progid** 或 **vi\_progid**。|  
+|**必需的特性**|以下一个或多个属性： **coclass**、 **progid**或 **vi_progid**。|  
 |**无效的特性**|无|  
   
- 有关特性上下文的详细信息，请参见[特性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>请参阅  
+ [COM 特性](../windows/com-attributes.md)   
+ [类特性](../windows/class-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [可聚合](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
- [COM\_INTERFACE\_ENTRY\_AUTOAGGREGATE\_BLIND](../Topic/COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [聚合](http://msdn.microsoft.com/library/windows/desktop/aa366721)   
+ [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)   
+ 

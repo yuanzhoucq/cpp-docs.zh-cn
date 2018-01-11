@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f3686241737921576e5e79bbd55ecba06251b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c777e672354d257ce8923c8ee0974860fdcbe8c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-data-types"></a>OpenMP 数据类型
 提供 OpenMP API 中使用的数据类型的链接。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
 |[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|一种保存锁、 锁是否可用或如果一个线程拥有锁的状态。|  
 |[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|一种保存有关锁的信息的以下部分之一： 是否锁定，并且可线程的标识的拥有锁和嵌套的计数。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [库参考](../../../parallel/openmp/reference/openmp-library-reference.md)

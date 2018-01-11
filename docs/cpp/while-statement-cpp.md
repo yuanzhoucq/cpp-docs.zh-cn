@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4b076a1679bec8de9407d253d233e96060aaef4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="while-statement-c"></a>While 语句 (C++)
 执行*语句*重复直到*表达式*计算结果为零。  
@@ -70,7 +71,7 @@ int main()
   
  终止条件在循环的顶部。 如果不有任何尾随下划线，则循环将永远不会执行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [迭代语句](../cpp/iteration-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [do-while 语句 (C++)](../cpp/do-while-statement-cpp.md)   

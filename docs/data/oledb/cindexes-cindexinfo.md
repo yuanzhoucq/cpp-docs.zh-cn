@@ -96,11 +96,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 928593dad87ba12affe4d54aa2d69075e5a480ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c051e233c15959f71d57fa6eef1e398257b6d51f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cindexes-cindexinfo"></a>CIndexes，CIndexInfo
 调用 typedef 类**CIndexes**来实现其参数类**CIndexInfo**。  
@@ -139,8 +142,8 @@ ms.lasthandoff: 10/24/2017
 |m_nPages|PAGES|  
 |m_szFilterCondition|FILTER_CONDITION|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldbsch.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRestrictions 类](../../data/oledb/crestrictions-class.md)

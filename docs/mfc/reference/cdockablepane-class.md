@@ -143,11 +143,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3072e4504fc70e75888607d4f263b39532f69b51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb32fc827c576830def3901389d400450b79f5ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 实现可在停靠站点停靠或包含在选项卡式窗格中的窗格。  
@@ -248,7 +249,7 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|指定是否禁用自动隐藏动画的可停靠的窗格。|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|在窗格中，在自动隐藏模式下时，请确定窗格的行为。|  
@@ -314,7 +315,7 @@ class CDockablePane : public CPane
   
  [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxDockablePane.h  
   
 ##  <a name="attachtotabwnd"></a>Cdockablepane:: Attachtotabwnd  
@@ -627,7 +628,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ### <a name="remarks"></a>备注  
  `dwAlignment`可以是任何以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|框架窗口的工作区顶部停靠窗格。|  
 |`CBRS_ALIGN_BOTTOM`|框架窗口的工作区底部停靠窗格。|  
@@ -735,7 +736,7 @@ virtual BOOL DockPaneContainer(
 ### <a name="remarks"></a>备注  
  `dwAlignment`可以是任何以下值：  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|容器正在停靠到窗格的顶部。|  
 |`CBRS_ALIGN_BOTTOM`|容器正在停靠到窗格的底部。|  
@@ -1493,7 +1494,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
   
  销毁它们之前，框架自动中窗格取消停靠。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPane 类](../../mfc/reference/cpane-class.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28e6d025d6c2aa485b5687117d64afeb7e402a79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: eebbc955a0b44b686986e5bd1e753ec8809a3a1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：调用 Windows 窗体控件的属性和方法
 因为[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)返回一个指向<xref:System.Windows.Forms.Control?displayProperty=fullName>，并不是指向`WindowsControlLibrary1::UserControl1`，则最好添加用户控件类型的成员并将其在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 现在你可以调用方法和属性使用`m_ViewControl`。  
@@ -57,5 +60,5 @@ ms.lasthandoff: 10/24/2017
   
      请注意，现在初始化文本框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以 MFC 视图的形式承载 Windows 窗体用户控件](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

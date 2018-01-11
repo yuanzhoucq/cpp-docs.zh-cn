@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 26e55c8a675ada3fd2e88976bc9d9a51cfa8b751
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6f0310324afcbde112623959c4dc3b11155fed1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3888"></a>编译器错误 C3888
 “name”：C++/CLI 不支持与此 literal 数据成员关联的常量表达式  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/24/2017
   
 1.  检查声明的 literal 数据成员是否是支持的类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [名称](../../windows/literal-cpp-component-extensions.md)

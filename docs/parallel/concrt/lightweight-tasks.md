@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b9caa028d7f870ecdd6c67503c6bc9448cff1d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 010f5fd443271bec1d28b6760f0c17f4e17d803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lightweight-tasks"></a>轻量级任务
 本文档介绍并发运行时中的轻量任务的角色。 A*轻量级任务*是直接从计划的任务`concurrency::Scheduler`或`concurrency::ScheduleGroup`对象。 轻量级任务类似于对 Windows API 提供的函数[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函数。 因此，轻量级任务非常有用，当改编现有代码以使用并发运行时的计划功能时。 并发运行时本身使用轻量任务来计划异步代理和之间异步消息块发送消息。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>示例  
  有关演示如何改编现有代码以使用轻量级任务示例，请参阅[演练： 调整现有代码，以便使用轻量级任务](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [演练：调整现有代码以使用轻量级任务](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
 

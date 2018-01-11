@@ -1,48 +1,51 @@
 ---
-title: "如何：使用 PInvoke 封送函数指针 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据封送处理 [C++], 回调和委托"
-  - "互操作 [C++], 回调和委托"
-  - "封送处理 [C++], 回调和委托"
-  - "平台调用 [C++], 回调和委托"
+title: "如何： 使用 PInvoke 封送函数指针 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- interop [C++], callbacks and delegates
+- platform invoke [C++], callbacks and delegates
+- marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 PInvoke 封送函数指针
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明在使用 .NET Framework P\/Invoke 功能与非托管函数进行交互操作时，如何使用托管委托取代函数指针。  但由于 P\/Invoke 几乎不提供编译时错误报告，不是类型安全的，实现起来也很单调，Visual C\+\+ 程序员最好转而使用 C\+\+ Interop 功能（如果可能）。  当将非托管 API 打包为 DLL，而源代码又不可用时，P\/Invoke 就成为唯一的选择。  另请参见下列主题：  
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送函数指针
+本主题说明如何将托管的委托时与进行互操作非托管函数使用.NET Framework P/Invoke 功能可用于代替函数指针。 但是，Visual c + + 程序员是建议 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈实现的。 如果非托管的 API 打包为的 DLL 的源代码不可用，P/Invoke 是唯一的选项。 否则，请参阅以下主题：  
   
--   [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [如何：使用 C\+\+ 互操作封送回调和委托](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送回调和委托](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
- 可以使用托管委托取代本机函数指针来从托管代码中调用以函数指针作为参数的非托管 API。  编译器自动将委托作为函数指针封送给非托管函数，并插入必要的托管\/非托管转换代码。  
+ 需要函数指针，如下图所可以从代替本机函数指针的托管委托的托管代码调用自变量的非托管的 Api。 编译器自动封送到非托管函数作为函数指针的委托，并将插入的代码需要托管/非托管的转换。  
   
-## 示例  
- 下面的代码由一个非托管模块和一个托管模块组成。  非托管模块是一个 DLL，它定义名为 TakesCallback 并接受函数指针的函数。  此地址用于执行该函数。  
+## <a name="example"></a>示例  
+ 下面的代码由非托管和的托管的模块组成。 非托管的模块是一个 DLL，它定义一个名为 TakesCallback 接受函数指针的函数。 此地址用于执行该函数。  
   
- 托管模块定义将作为函数指针封送给本机代码的委托，并使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 特性向托管代码公开本机 TakesCallback 函数。  在主函数中，将创建该委托的一个实例并传递给 TakesCallback 函数。  该程序输出说明此函数由本机 TakesCallback 函数执行。  
+ 托管的模块定义一个委托，封送到本机代码作为函数指针并使用<xref:System.Runtime.InteropServices.DllImportAttribute>属性公开给托管代码的本机 TakesCallback 函数。 在主函数中，委托的一个实例是创建并传递给 TakesCallback 函数。 程序输出演示此函数获取执行者本机 TakesCallback 函数。  
   
- 托管函数取消托管委托的垃圾回收，以阻止 .NET Framework 垃圾回收在本机函数执行时重新定位委托。  
+ 托管的函数取消阻止从本机函数执行时重新定位该委托的.NET Framework 垃圾回收的托管委托的垃圾回收。  
   
- 该托管模块使用 \/clr 进行编译，但 \/clr:pure 也适用。  
+ 托管的模块编译 /clr，但 /clr: pure 工作原理以及。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
-```  
+```cpp  
 // TraditionalDll5.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -66,7 +69,7 @@ int TakesCallback(CALLBACK fp, int n) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalDelegate.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -94,7 +97,7 @@ int main() {
 }  
 ```  
   
- 请注意，使用传统的 \#include 指令不会向托管代码公开 DLL 的任何部分。  实际上，仅在运行时访问 DLL，所以在编译时将检测不到使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 导入的函数所存在的问题。  
+ 请注意，对使用传统的托管代码公开的 DLL 没有一部分 #include 指令。 事实上，DLL 在运行时访问仅，因此问题与函数导入具有<xref:System.Runtime.InteropServices.DllImportAttribute>将不会在编译时检测。  
   
-## 请参阅  
- [在 C\+\+ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>请参阅  
+ [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63143532c5f5ad770c6234a24fbedf1b478ba143
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 该向导创建一个类以包含一行数据;在这种情况下，调用`CMyProviderWindowsFile`。 下面的代码的`CMyProviderWindowsFile`是生成的向导并通过使用列出目录中的所有文件**WIN32_FIND_DATA**结构。 `CMyProviderWindowsFile`继承自**WIN32_FIND_DATA**结构：  
@@ -83,5 +86,5 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
   
  该方法将创建的每个文件 （对应于行） 的一个项，并将其放入**m_rgRowData**数据成员。 `CRowsetImpl`类定义**m_rgRowData**数据成员。 此数组中的数据表示整个表，并在整个模板。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)

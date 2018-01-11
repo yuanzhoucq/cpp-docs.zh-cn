@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce56bc4839ff7f284a9c8c9bd96331742459fd00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff208af8bb89dbcb7df00b37ce542a5adae5fa23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>“从现有代码文件创建新项目”向导 ->“指定发布配置设置”
 从现有代码文件创建新项目向导的此页用于指定发布配置项目设置。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
  指定新项目的调试配置的输出文件的目录路径。 启用此选项时**使用外部生成系统**中选择选项**指定项目设置**页。  
   
  **预处理器定义 (/ D)**  
- 定义新项目的预处理器符号。 有关详细信息，请参阅 [/D（预处理器定义）](../build/reference/d-preprocessor-definitions.md)。  
+ 定义新项目的预处理器符号。 有关详细信息，请参阅 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。  
   
  **包括搜索路径 (/ 我)**  
  指定要添加到的编译器将搜索的目录列表若要解析的文件引用传递到新项目中的预处理器指令的目录路径。 有关详细信息，请参阅 [/I（附加包含目录）](../build/reference/i-additional-include-directories.md)。  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/24/2017
  **强制使用.NET 程序集 (/ FU)**  
  指定要处理在生成新项目时的.NET 程序集。 有关详细信息，请参阅 [/FU（命名强制 #using 文件）](../build/reference/fu-name-forced-hash-using-file.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指定项目设置，“从现有代码文件创建新项目”向导](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

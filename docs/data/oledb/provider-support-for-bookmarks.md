@@ -1,42 +1,45 @@
 ---
-title: "用于书签的提供程序支持 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "书签, OLE DB"
-  - "IRowsetLocate 类"
-  - "IRowsetLocate 类, 用于书签的提供程序支持"
-  - "OLE DB 提供程序模板, 书签"
-  - "OLE DB 提供程序, 书签支持"
+title: "用于书签的提供程序支持 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IRowsetLocate class, provider support for bookmarks
+- OLE DB provider templates, bookmarks
+- bookmarks, OLE DB
+- IRowsetLocate class
+- OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 用于书签的提供程序支持
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主题中的示例将 `IRowsetLocate` 接口添加到 `CMyProviderRowset` 类。  几乎在所有情况下，都通过向现有 COM 对象添加接口开始。  然后可以通过从使用者模板添加更多的调用来测试它。  该示例演示如何：  
+# <a name="provider-support-for-bookmarks"></a>用于书签的提供程序支持
+本主题中的示例将添加`IRowsetLocate`接口`CMyProviderRowset`类。 在几乎所有情况下，你首先将接口添加到现有的 COM 对象。 你随后可以测试它通过从使用者模板中添加更多调用。 此示例演示如何：  
   
--   向提供程序添加接口。  
+-   将接口添加到提供程序。  
   
--   动态确定返回给使用者的列。  
+-   动态确定要返回给使用者的列。  
   
--   添加书签支持。  
+-   添加书签的支持。  
   
- `IRowsetLocate` 接口从 `IRowset` 接口继承。  若要添加 `IRowsetLocate` 接口，请从 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md) 继承 `CMyProviderRowset`。  
+ `IRowsetLocate` 接口继承自 `IRowset` 接口。 若要添加`IRowsetLocate`接口、 继承`CMyProviderRowset`从[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)。  
   
- 添加 `IRowsetLocate` 接口与大多数接口有点差异。  为了使 VTABLE 排成行，OLE DB 提供程序模板具有处理导出接口的模板参数。  以下代码显示新继承列表：  
+ 添加`IRowsetLocate`接口是从大多数接口稍有不同。 若要向上 OLE DB 的 Vtable 行提供程序模板必须模板参数，以处理派生的接口。 下面的代码演示了新的继承列表：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,9 +52,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
 ```  
   
- 第四、第五和第六个参数都已添加。  此示例使用第四和第五个参数的默认值，但指定 `IRowsetLocateImpl` 为第六个参数。  `IRowsetLocateImpl` 是 OLE DB 模板类，它带有两个模板参数：这些参数将 `IRowsetLocate` 接口挂钩到 `CMyProviderRowset` 类。  对于大多数接口的添加，可以跳过这一步并移动到下一步。  只有 `IRowsetLocate` 和 `IRowsetScroll` 接口需要用这种方法处理。  
+ 第 4 个、 第五个和第六个参数都已添加。 此示例使用默认值，第四个和第五个参数但指定`IRowsetLocateImpl`作为第六个参数。 `IRowsetLocateImpl`是一个采用两个模板参数的 OLE DB 模板类： 这些挂钩`IRowsetLocate`接口`CMyProviderRowset`类。 若要添加大多数接口，可以跳过此步骤，并将其迁移到下一步。 仅`IRowsetLocate`和`IRowsetScroll`接口需要在这种方式中处理。  
   
- 然后需要通知 `CMyProviderRowset` 为 `IRowsetLocate` 接口调用 `QueryInterface`。  将行 `COM_INTERFACE_ENTRY(IRowsetLocate)` 添加到映射。  `CMyProviderRowset` 的接口映射应如下面的代码所示：  
+ 然后需要告诉`CMyProviderRowset`调用`QueryInterface`为`IRowsetLocate`接口。 将行添加`COM_INTERFACE_ENTRY(IRowsetLocate)`到映射。 接口映射`CMyProviderRowset`应显示下面的代码中所示：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -65,11 +68,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- 还需要将映射挂钩到 `CRowsetImpl` 类中。  添加 COM\_INTERFACE\_ENTRY\_CHAIN 宏，以便挂钩到 `CRowsetImpl` 映射。  还创建一个名为 `RowsetBaseClass` 的 typedef，它由继承信息组成。  此 typedef 为任意值并可以被忽略。  
+ 你还需要将挂接到你的代码图`CRowsetImpl`类。 添加 COM_INTERFACE_ENTRY_CHAIN 宏中中将挂钩`CRowsetImpl`映射。 此外，创建名为的 typedef`RowsetBaseClass`包含的继承信息。 此 typedef 是任意参数并可以忽略。  
   
- 最后，处理 **IColumnsInfo::GetColumnsInfo** 调用。  通常使用 PROVIDER\_COLUMN\_ENTRY 宏进行此操作。  但使用者可能想要使用书签。  必须能够根据使用者是否要求书签来更改提供程序返回的列。  
+ 最后，处理**IColumnsInfo::GetColumnsInfo**调用。 你通常应使用 PROVIDER_COLUMN_ENTRY 宏来执行此操作。 但是，使用者可能想要使用书签。 你必须能够更改该提供程序返回，具体取决于使用者是否要求书签的列。  
   
- 若要处理 **IColumnsInfo::GetColumnsInfo** 调用，请删除 `CTextData` 类中的 **PROVIDER\_COLUMN** 映射。  PROVIDER\_COLUMN\_MAP 宏定义函数 `GetColumnInfo`。  需要定义您自己的 `GetColumnInfo` 函数。  函数声明应该是类似于这样：  
+ 若要处理**IColumnsInfo::GetColumnsInfo**调用，删除**PROVIDER_COLUMN**映射中`CTextData`类。 PROVIDER_COLUMN_MAP 宏定义了一个函数`GetColumnInfo`。 你需要定义自己`GetColumnInfo`函数。 函数声明应如下所示：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -87,7 +90,7 @@ class CTextData
 };  
 ```  
   
- 然后在 MyProviderRS.cpp 文件中实现 `GetColumnInfo` 函数，如下所示：  
+ 然后，实现`GetColumnInfo`函数 MyProviderRS.cpp 文件中，如下所示：  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -158,11 +161,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo` 首先检查是否设置了名为 **DBPROP\_IRowsetLocate** 的属性。  OLE DB 对行集合对象的每个可选接口都具有属性。  如果使用者要使用这些可选接口中的一个，它将属性设置为真。  提供程序然后可以检查该属性并根据它采取特殊的操作。  
+ `GetColumnInfo`第一个检查以确定属性是否调用**DBPROP_IRowsetLocate**设置。 OLE DB 具有每个关闭的行集对象的可选接口属性。 如果使用者想要使用这些可选接口之一，但它会将属性设置为 true。 然后，该提供程序可以检查此属性，并采取基于它的特殊操作。  
   
- 在实现中，通过使用指向命令对象的指针获取属性。  `pThis` 指针表示行集合或命令类。  因为这里使用模板，所以必须将此作为 `void` 指针传入，否则代码将不能编译。  
+ 在你实现中，通过使用命令对象的指针获取的属性。 `pThis`指针表示的行集或命令类。 由于你在此处使用模板，你必须将此作为传入`void`的指针或代码不编译。  
   
- 指定静态数组以包含列信息。  如果使用者不想要书签列，则数组中的一项是多余的。  可以动态分配该数组，但需要确保适当销毁它。  本例定义并使用 ADD\_COLUMN\_ENTRY 和 ADD\_COLUMN\_ENTRY\_EX 宏将信息插入到该数组中。  可以将这些宏添加到 MyProviderRS.H 文件，如以下代码所示：  
+ 指定要包含的列信息的静态数组。 如果使用者不希望书签列，数组中的一项被多余。 您可以动态地分配此数组，但你需要确保正确地销毁它。 此示例定义，并使用宏 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 将信息插入到数组。 可以将宏添加到 MyProviderRS.H 文件中的以下代码所示：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -193,7 +196,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- 为了在使用者中测试代码，需要对 `OnRun` 处理函数做几个更改。  对该函数的第一个更改是添加将属性添加到属性集的代码。  此代码将 **DBPROP\_IRowsetLocate** 属性设置为真，从而通知提供程序您想要书签列。  `OnRun` 处理函数代码应类似于这样：  
+ 若要测试的代码在使用者，你需要进行一些更改到`OnRun`处理程序。 对函数的第一个更改是你添加代码以将属性添加到属性集。 该代码设置**DBPROP_IRowsetLocate**属性为 true，因此告知提供程序所需的书签列。 `OnRun`处理程序代码应如下显示：  
   
 ```  
 //////////////////////////////////////////////////////////////////////  
@@ -244,9 +247,9 @@ void CTestProvDlg::OnRun()
 }  
 ```  
   
- while 循环包含在 `IRowsetLocate` 接口中调用 `Compare` 方法的代码。  您拥有的代码应该总是传递，因为比较的是完全相同的书签。  另外在临时变量中存储一个书签，以便可以在 while 循环完成后用该书签调用使用者模板中的 `MoveToBookmark` 函数。  `MoveToBookmark` 函数调用 `IRowsetLocate` 中的 `GetRowsAt` 方法。  
+ While 循环包含用于调用代码`Compare`中的方法`IRowsetLocate`接口。 因为要比较完全相同的书签，应始终传递你拥有的代码。 此外，在临时变量中存储一个书签，以便你可以使用它段时间后循环完成调用`MoveToBookmark`的使用者模板中的函数。 `MoveToBookmark`函数调用`GetRowsAt`中的方法`IRowsetLocate`。  
   
- 还需要更新使用者中的用户记录。  在类中添加一项以处理书签和 **COLUMN\_MAP** 中的项：  
+ 你还需要更新使用者中的用户记录。 在要处理书签和中的条目的类中添加一个条目**COLUMN_MAP**:  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -271,7 +274,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- 更新了代码后，应该能够用 `IRowsetLocate` 接口生成和执行提供程序。  
+ 已更新代码，你应该能够构建和执行提供程序与`IRowsetLocate`接口。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

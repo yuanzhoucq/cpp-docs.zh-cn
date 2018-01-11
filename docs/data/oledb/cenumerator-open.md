@@ -1,64 +1,66 @@
 ---
-title: "CEnumerator::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CEnumerator.Open"
-  - "CEnumerator::Open"
-  - "ATL::CEnumerator::Open"
-  - "CEnumerator.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open 方法"
+title: "Cenumerator:: Open |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CEnumerator.Open
+- CEnumerator::Open
+- ATL::CEnumerator::Open
+- CEnumerator.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: b22821a0-257a-4543-ad0c-2649d4ac092e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3a5c35b3806e04f20417c7053248d1a098456403
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CEnumerator::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-绑定该枚举器的名字对象，因此，如果指定一个回调方法\)，然后通过调用 [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx)枚举器检索的行集合。  
+# <a name="cenumeratoropen"></a>CEnumerator::Open
+将名字对象绑定枚举器，如果其中一个指定，则通过调用检索枚举器的行集[ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT Open(   
-   LPMONIKER pMoniker    
+      HRESULT Open(   
+   LPMONIKER pMoniker    
 ) throw( );  
-HRESULT Open(   
-   const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR    
+HRESULT Open(   
+   const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR    
 ) throw( );  
-HRESULT Open(   
-   const CEnumerator& enumerator    
+HRESULT Open(   
+   const CEnumerator& enumerator    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pMoniker`  
- \[in\] 对命名对象的指针在枚举器的。  
+ [in]指向一个枚举器的名字对象的指针。  
   
  *pClsid*  
- \[in\] 对枚举器的 **CLSID** 的指针。  
+ [in]指向的指针**CLSID**的枚举数。  
   
  `enumerator`  
- \[in\] 对枚举器的引用。  
+ [in]对一个枚举器的引用。  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CEnumerator 类](../../data/oledb/cenumerator-class.md)

@@ -1,33 +1,33 @@
 ---
-title: "range (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range attribute"
+title: "范围 （c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.range
+dev_langs: C++
+helpviewer_keywords: range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b95b1bfd093a12bca5398c266d6a7c8236140105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# range (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-为值设置在运行时的参数或字段指定允许值的大小。  
+# <a name="range-c"></a>range (C++)
+指定自变量或在运行时设置其值的字段的允许值的范围。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -37,17 +37,17 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 参数  
- *低*  
- 低值范围。  
+#### <a name="parameters"></a>参数  
+ *low*  
+ 低范围值。  
   
- *高*  
- 上限值。  
+ *high*  
+ 高范围值中。  
   
-## 备注  
- **范围** C\+\+ 特性具有与 [范围](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **范围**c + + 属性具有相同的功能[范围](http://msdn.microsoft.com/library/windows/desktop/aa367151)MIDL 特性。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_range.cpp  
@@ -63,9 +63,9 @@ __interface ICustom {
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -74,11 +74,10 @@ __interface ICustom {
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
+ [Parameter 特性](../windows/parameter-attributes.md)   
+ [数据成员特性](../windows/data-member-attributes.md)   

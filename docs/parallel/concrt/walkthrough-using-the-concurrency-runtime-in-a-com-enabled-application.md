@@ -16,16 +16,17 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f92deaad44deea9b3f7cc521a3cf9bc7924a08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 676601259e7f1a682a57430198d24bdbc744a360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>演练：在启用 COM 的应用程序中使用并发运行时
 本文档演示如何在使用组件对象模型 (COM) 的应用程序中使用并发运行时。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
  在开始本演练之前，请阅读以下文档：  
   
 - [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
@@ -156,7 +157,7 @@ fib(12) = 144
   
  **cl.exe /EHsc 并行 scripts.cpp /link ole32.lib**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [并行算法](../../parallel/concrt/parallel-algorithms.md)   

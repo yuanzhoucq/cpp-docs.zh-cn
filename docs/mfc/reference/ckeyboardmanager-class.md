@@ -41,11 +41,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af9b48e1a7106cb1b6078b8b40283004c8d87102
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7547887b4ad34ecbbea32516eaf76b6f4d1ab25d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 类
 管理主框架窗口和子框架窗口的快捷键表。  
@@ -97,7 +98,7 @@ class CKeyboardManager : public CObject
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxkeyboardmanager.h  
   
 ##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
@@ -167,7 +168,7 @@ static BOOL __stdcall IsKeyHandled(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `nKey`|要检查的键。|  
 |[in] `fVirt`|指定的快捷键的行为。 有关可能的值的列表，请参阅[加速结构](http://msdn.microsoft.com/library/windows/desktop/ms646340)。|  
 |[in] `pWndFrame`|框架窗口。 此方法可确定是否在此帧中处理的快捷键。|  
@@ -190,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `nChar`|此方法检查的字符。|  
   
 ### <a name="return-value"></a>返回值  
@@ -344,7 +345,7 @@ BOOL UpdateAccelTable(
 ### <a name="remarks"></a>备注  
  此函数用于具有多个框架窗口对象的新键盘快捷键替换现有的快捷方式表。 函数会收到作为参数，以获取连接到给定的文档模板的所有框架窗口对象的访问权限的文档模板。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)   

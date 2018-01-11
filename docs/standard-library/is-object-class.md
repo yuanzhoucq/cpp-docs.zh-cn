@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dac551353180a823ffff00f8db82d6ec3dde4dd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cc5ca9fa0deda974f4e64827b129904041b9286
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isobject-class"></a>is_object 类
 测试类型是否为对象类型。  
@@ -84,11 +85,11 @@ is_object<float()> == false
 is_object<void> == false  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_function 类](../standard-library/is-function-class.md)

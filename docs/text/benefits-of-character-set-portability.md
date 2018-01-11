@@ -1,36 +1,37 @@
 ---
-title: "字符集可迁移性的好处 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字符集 [C++], 优点"
-  - "可迁移性 [C++], 字符集"
+title: "字符的好处设置可移植性 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- character sets [C++], benefits
+- portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 554137352c0a8f7275a051e4026020fce25edbb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 字符集可迁移性的好处
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-即使目前不打算国际化应用程序，也可以从使用 MFC 和 C 运行时可移植性功能中获益：  
+# <a name="benefits-of-character-set-portability"></a>字符集可迁移性的好处
+你可以从使用 MFC 和 C 运行时可移植性功能，即使你不当前打算国际化应用程序受益：  
   
--   编写可移植代码使基本代码更灵活。  以后可以很容易地将代码移动到 Unicode 或 MBCS。  
+-   移植编码使代码基更灵活。 你可以稍后将其移轻松地为 Unicode 或 MBCS。  
   
--   使用 Unicode 能提高用于 Windows 2000 的应用程序的效率。  由于 Windows 2000 使用 Unicode，因此与操作系统之间传递的非 Unicode 字符串必须进行转换，这会增加系统开销。  
+-   使用 Unicode 使 Windows 2000 的应用程序更高效。 由于 Windows 2000 使用 Unicode，必须转换传递到和从操作系统的非 Unicode 字符串，这可能会产生开销。  
   
--   使用 MBCS 使您得以在 Windows 2000 以外的 Win32 平台（如 Windows 95 或 Windows 98）上支持国际市场。  
+-   使用 MBCS，可在 Windows 2000，如 Windows 95 或 Windows 98 以外的 Win32 平台上支持国际市场。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [支持 Unicode](../text/support-for-unicode.md)

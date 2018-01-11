@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d067798f981e86edea1b83557925c41e8f8a3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07cac11754a8b5f242c38d5fd45d4c7f0707d69a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft 专用**  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 void __debugbreak();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|Header|  
 |---------------|------------------|------------|  
@@ -48,7 +49,7 @@ void __debugbreak();
 > [!NOTE]
 >  使用编译时**/clr**，函数包含`__debugbreak`将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。  
   
- 例如:   
+ 例如:  
   
 ```  
 main() {  
@@ -72,6 +73,6 @@ main() {
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
  [关键字](../cpp/keywords-cpp.md)

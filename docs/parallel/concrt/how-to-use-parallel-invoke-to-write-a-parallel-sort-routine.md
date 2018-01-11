@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96ef9bde4895cfc35ae5858e913389b51829d864
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>如何：使用 parallel_invoke 来编写并行排序例程
 本文档介绍如何使用[parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke)算法提高双调排序算法的性能。 双调排序算法以递归方式将输入的序列划分为较小排序分区。 双调排序算法可以并行运行，因为每个分区操作独立于所有其他操作。  
@@ -105,7 +106,7 @@ parallel time: 1248
   
  与任何并行算法，我们建议你分析和优化根据你的代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [parallel_invoke 函数](reference/concurrency-namespace-functions.md#parallel_invoke)
 

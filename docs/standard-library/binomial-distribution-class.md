@@ -37,11 +37,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d3590ce7dab5330989171efcf704f27274a595
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 类
 生成二项式分布。  
@@ -101,9 +102,9 @@ public:
   
 `operator()` 成员函数将根据 URNG 引擎，从当前参数包或指定参数包返回下一个生成的值。
   
-有关分布类及其成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。  
+若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
-有关二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[二项式分步](http://go.microsoft.com/fwlink/LinkId=398469)。  
+有关二项式分布离散型概率函数的详细信息，请参阅 Wolfram MathWorld 文章[二项式分步](http://go.microsoft.com/fwlink/p/?linkid=398469)。  
   
 ## <a name="example"></a>示例  
   
@@ -230,7 +231,7 @@ Histogram for 100 samples:
     21 :  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **标头：**\<random>  
   
 **命名空间：** std  
@@ -290,7 +291,7 @@ struct param_type {
   
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<random>](../standard-library/random.md)
 
 

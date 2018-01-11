@@ -29,11 +29,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e014db9e50e831f60f37e54df8c3433aa5abefad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f07e3783de7efe4e279a4f8d69563349cb72a362
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 类
 ID2D1BitmapRenderTarget 包装器。  
@@ -69,7 +70,7 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|指向 ID2D1BitmapRenderTarget 对象的指针。|  
   
@@ -80,7 +81,7 @@ class CBitmapRenderTarget : public CRenderTarget;
   
  `CBitmapRenderTarget` 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="attach"></a>CBitmapRenderTarget::Attach  
@@ -152,5 +153,5 @@ operator ID2D1BitmapRenderTarget*();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1BitmapRenderTarget 接口或如果尚未初始化对象的 NULL 指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

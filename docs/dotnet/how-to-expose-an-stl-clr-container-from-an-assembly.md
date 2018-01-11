@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b47e59e5b0c14bc0014140da67d226d62fad02ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 84505edf0877a5ae20d28906dde7f4c709574034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>如何：公开程序集中的 STL/CLR 容器
 STL/CLR 容器，如`list`和`map`作为模板 ref 类实现。 因为在编译时实例化 c + + 模板，具有相同的签名，但位于不同的程序集的两个模板类将是实际不同类型。 这意味着不能跨程序集边界用于模板类。  
@@ -175,5 +178,5 @@ cliext::vector contents:
 20  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)

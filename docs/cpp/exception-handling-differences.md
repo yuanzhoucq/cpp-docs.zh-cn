@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>异常处理差异
 结构化异常处理和 C++ 异常处理的主要区别在于 C++ 异常处理模式处理的是多个类型，而 C 结构化异常处理模式处理的是一个类型（具体而言就是 `unsigned int`）的异常。 即，C 异常由无符号整数值标识，而 C++ 异常由数据类型标识。 当 C 中引发了异常时，每个可能的处理程序都将执行筛选器来检查 C 异常上下文并确定是接受该异常、将其传递给其他处理程序还是忽略它。 当 C++ 中引发了异常时，该异常可以是任何类型。  
@@ -68,7 +69,7 @@ Caught a C exception.
 ```  
   
 ##  <a name="_core_c_exception_wrapper_class"></a>C 异常包装器类  
- 可在类似上面的简单示例中，捕获 C 异常只能由省略号 (**...**)**捕获**处理程序。 有关类型或异常性质的信息不传递给该处理程序。 尽管此方法有效，但在某些情况下，您可能需要定义两个异常处理模式之间的转换，以便让每个 C 异常与一个特定类关联。 为此，您可以定义 C 异常“包装器”类，可以使用该类或从中进行派生以将特定类类型特性化为 C 异常。 通过这样做，可以由 c + + 处理每个 C 异常**捕获**处理程序单独比在前面的示例。  
+ 可在类似上面的简单示例中，捕获 C 异常只能由省略号 (**...**)**捕获**处理程序。 有关类型或异常性质的信息不传递给该处理程序。 尽管此方法有效，但在某些情况下，你可能需要定义两个异常处理模式之间的转换，以便让每个 C 异常与一个特定类关联。 为此，您可以定义 C 异常“包装器”类，可以使用该类或从中进行派生以将特定类类型特性化为 C 异常。 通过这样做，可以由 c + + 处理每个 C 异常**捕获**处理程序单独比在前面的示例。  
   
  您的包装器类可能有一个接口，该接口包含一些成员函数，用来确定异常的值以及访问 C 异常模型提供的扩展异常上下文信息。 您可能还希望定义一个默认构造函数、一个接受 `unsigned int` 参数（用来提供基础 C 异常表示形式）的构造函数和一个按位复制构造函数。 下面是 C 异常包装器类的一个可能的实现：  
   
@@ -150,5 +151,5 @@ Caught a __try exception with SE_Exception.
 nSE = 0xc0000094  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [混合使用 C（结构化）和 C++ 异常](../cpp/mixing-c-structured-and-cpp-exceptions.md)

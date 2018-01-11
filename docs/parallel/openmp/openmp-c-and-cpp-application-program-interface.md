@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d807d8e9b3ef7012ac574cf8bcccb152b2c5d26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c2b2b3a71ac37ea7dfeeea777a2b576aaf069
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP C 和 C++ 应用程序接口
 讨论 OpenMP C 和 c + + API，从 OpenMP 体系结构审阅委员会版本 2.0 规范中所述。  
@@ -28,6 +29,6 @@ ms.lasthandoff: 10/24/2017
   
  授予权限以复制而不费所有或此材料的一部分，提供 OpenMP 体系结构审阅委员会版权声明和本文档的标题显示。 请注意是复制是由 OpenMP 体系结构评审板的权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)   
  [内容](../../parallel/openmp/contents.md)

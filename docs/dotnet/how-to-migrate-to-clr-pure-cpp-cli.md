@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebff4ae1ac304ee0af073de49f4ee988922247d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>如何：迁移到 /clr:pure (C++/CLI)
 本主题讨论了将迁移到纯 MSIL 使用时可能出现的问题**/clr: pure** (请参阅[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)有关详细信息)。 本主题假定正在迁移的代码当前编译为混合程序集使用**/clr**选项，因为纯 MSIL 从非托管代码的迁移路径不是一个直接。 对于非托管代码，请参阅[如何： 迁移到 /clr](../dotnet/how-to-migrate-to-clr.md)然后再尝试将迁移到纯 MSIL。  
@@ -54,5 +57,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="linking-limitations"></a>链接限制  
  Visual c + + 链接器将不尝试链接混合和纯 OBJ 文件，因为存储作用域和调用约定不相同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

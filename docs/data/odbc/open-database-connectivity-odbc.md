@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa72d261a0b41375ccc6d9bd7da027f78a2e3b55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 28fe1e6237b424c35e70bbd8240ddb3c8189e283
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-connectivity-odbc"></a>开放式数据库连接 (ODBC)
 Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行编程时所需的类。 从 Visual Studio 2015 和 SQL Server 2012 ODBC 开始是连接到 SQL 数据源的首选的方法。
@@ -84,5 +87,5 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
   
 -   [使用 MFC ODBC 记录集](use-mfc-odbc-recordsets.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据访问编程 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

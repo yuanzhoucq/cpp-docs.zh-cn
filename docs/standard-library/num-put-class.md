@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3870564e7374d4e3faba9bc2055f04e9d2f4b63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f93a5536b73c5d62a95ff076e40304204071d83f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numput-class"></a>num_put 类
 一种模板类，用于描述一个对象来充当区域设置 facet，以便控制数值向 `CharType` 类序列的转换。  
@@ -72,7 +73,7 @@ class num_put : public locale::facet;
 |[do_put](#do_put)|一种虚拟函数，通过调用此函数可将数字转换为 `CharType` 序列以表示针对给定区域设置而设置格式的数字。|  
 |[put](#put)|将数字转换为 `CharType` 序列以表示针对给定区域设置而设置格式的数字。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
@@ -441,7 +442,7 @@ The thousands separator is: .
 num_put( ) = 1.000,67  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<区域设置>](../standard-library/locale.md)   
  [facet 类](../standard-library/locale-class.md#facet_class)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

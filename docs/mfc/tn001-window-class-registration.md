@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8278a1dd22a242834fd4559c580820ae6e69e21d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn001-window-class-registration"></a>TN001：窗口类注册
 本说明介绍注册这两个特殊的 MFC 例程[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es 所需的 Microsoft Windows。 特定`WNDCLASS`讨论使用 MFC 和 Windows 的属性。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
  如果你子类或超类 Windows 控件 (例如， [CButton](../mfc/reference/cbutton-class.md)) 然后，你的类自动获取`WNDCLASS`提供在 Windows 中执行该控件的属性。  
   
 ## <a name="the-afxregisterwndclass-function"></a>AfxRegisterWndClass 函数  
- MFC 提供的帮助器函数注册窗口类。 给定的一组特性 （窗口类样式、 光标、 背景画笔和图标），将生成一个综合的名称，并且生成的窗口类注册。 例如，  
+ MFC 提供的帮助器函数注册窗口类。 给定的一组特性 （窗口类样式、 光标、 背景画笔和图标），将生成一个综合的名称，并且生成的窗口类注册。 例如，应用于对象的  
   
 ```  
 const char* AfxRegisterWndClass(UINT nClassStyle,
@@ -108,7 +109,7 @@ pWnd->Create(strWndClass, ...);
   
  务必使用`AfxRegisterClass`(或`AfxRegisterWndClass`) 在 Win32 DLL 中。 Win32 自动注销注册的一个 DLL，以便该 DLL 而终止时，必须显式注销类的类。 通过使用`AfxRegisterClass`而不是`RegisterClass`这会为你自动处理。 `AfxRegisterClass`维护的唯一类的列表由您的 DLL 注册和将自动注销该 DLL 终止时。 当你使用`RegisterClass`在 DLL，你必须确保该 DLL 而终止时的情况下，所有类都都可以取消注册 (在你[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)函数)。 如果不这样做可能会导致`RegisterClass`另一个客户端应用程序尝试使用您的 DLL 时意外失败。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 485d37c06624ae5ee534480b8f16bb94dad6d94f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 12ab065f0635996f495efca4853d829259242170
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支持在记录视图中导航（MFC 数据访问）
 本主题说明如何支持在记录间移动你[CRecordView](../mfc/reference/crecordview-class.md)类，包括有关的信息：  
@@ -30,6 +33,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [用户界面更新处理程序滚动](../data/user-interface-updating-for-record-views-mfc-data-access.md)命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录视图 （MFC 数据访问）](../data/record-views-mfc-data-access.md)   
  [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

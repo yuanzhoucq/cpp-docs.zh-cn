@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 053ca6e357c0fdbe691e0683b51903ddaf1e581e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e6a646f10704b40add9aed8c5a3ba58ce15140e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsourceeventsource-constructor"></a>EventSource::EventSource 构造函数
 初始化 EventSource 类的新实例。  
@@ -30,10 +33,10 @@ ms.lasthandoff: 10/24/2017
 EventSource();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** event.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [EventSource 类](../windows/eventsource-class.md)

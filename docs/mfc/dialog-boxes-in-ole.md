@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38f32a1a64c461daae0bd04fd7c79b399107cf9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的对话框
 在用户运行 OLE 启用应用程序，可以在应用程序时才能执行的操作需要从用户的信息的时间。 MFC OLE 类提供了许多的对话框，以收集所需的信息。 本主题列出由 OLE 对话框的任务和显示这些对话框所需的类。 OLE 对话框和用于自定义其行为的结构的详细信息，请参阅[MFC 参考](../mfc/mfc-desktop-applications.md)。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
  *服务器忙或服务器未响应*  
  当用户尝试激活某个项，并且服务器当前无法处理该请求，通常是由于服务器正在使用另一个用户或任务时，将显示服务器忙对话框。 如果服务器未在所有响应对激活请求，将显示服务器未响应对话框。 显示这些对话框显示通过`COleMessageFilter`根据 OLE 接口的实现， **IMessageFilter**，用户可以决定是否要再次尝试激活请求。 使用[COleBusyDialog](../mfc/reference/colebusydialog-class.md)类来显示此对话框。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对话框](../mfc/dialog-boxes.md)   
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)   
  [OLE](../mfc/ole-in-mfc.md)

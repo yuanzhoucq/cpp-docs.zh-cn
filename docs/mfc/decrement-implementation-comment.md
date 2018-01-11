@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cff3a793adbc7cc7940898ef12ddf6ddef38a614
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437b091b2237c7219a0afeee46d78164751e6d3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="-implementation-comment"></a>// Implementation 注释
 `// Implementation` 节是任何 MFC 类声明的最重要的部分。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  您可以在 `// Implementation` 注释的上面或下面找到剩余类型的注释。 在任一情况下，这些注释都描述在其下面声明的类型的成员。 如果这些注释出现在 `// Implementation` 注释下面，则应假设成员在将来版本的 MFC 中可能会更改。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
  [注释示例](../mfc/an-example-of-the-comments.md)   
  [/ / Constructors 注释](../mfc/decrement-constructors-comment.md)   

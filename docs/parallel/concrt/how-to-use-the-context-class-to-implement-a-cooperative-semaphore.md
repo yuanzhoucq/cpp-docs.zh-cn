@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ed1df44a1aebea4111a74230c2dde67873ccfda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03884d69877053976fdaf04e507c4c1c4214026e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>如何：使用上下文类实现协作信号量
 本主题演示如何使用 concurrency::Context 类实现协作信号量类。  
@@ -92,7 +93,7 @@ In loop iteration 4...
   
  [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [上下文](../../parallel/concrt/contexts.md)   
  [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)
 

@@ -1,41 +1,42 @@
 ---
-title: "deque::pop_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::pop_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_back 成员 [STL/CLR]"
+title: "deque:: pop_back (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::pop_back
+dev_langs: C++
+helpviewer_keywords: pop_back member [STL/CLR]
 ms.assetid: 528d2c89-104c-45f7-8f05-41fe217ee37c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4f2657de9f3186a9ec9732f5403552311438beda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# deque::pop_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除最后的元素。  
+# <a name="dequepopback-stlclr"></a>deque::pop_back (STL/CLR)
+移除的最后一个元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void pop_back();  
 ```  
   
-## 备注  
- 移除成员函数控制序列中的最后一个元素，该元素绑定非空。  使用由的元素 deque 缩写在后面。  
+## <a name="remarks"></a>备注  
+ 成员函数删除受控序列，必须为非空的最后一个元素。 你可以使用它来缩短 deque 在后面的一个元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_pop_back.cpp   
@@ -64,15 +65,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+a b c  
+a b  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_back](../dotnet/deque-push-back-stl-clr.md)   
- [deque::push\_front](../dotnet/deque-push-front-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque:: push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)   
+ [deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)

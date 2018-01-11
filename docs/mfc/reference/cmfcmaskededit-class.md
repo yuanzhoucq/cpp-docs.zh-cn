@@ -35,11 +35,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b0a00db89d930555b083d57a9d1ed54daf0564c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0ada987b3226d901c3bf01236c2a593c2e36f51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 类
 `CMFCMaskedEdit`类支持掩码的编辑控件，将验证用户输入掩码并显示根据模板验证的结果。  
@@ -111,7 +112,7 @@ class CMFCMaskedEdit : public CEdit
   
  [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxmaskededit.h  
   
 ##  <a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
@@ -306,7 +307,7 @@ void SetWindowText(LPCTSTR lpszString);
   
  此方法重新定义了[CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CEdit 类](../../mfc/reference/cedit-class.md)

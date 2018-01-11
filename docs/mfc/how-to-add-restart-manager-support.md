@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e86ca1959ce22370e47bca508602d5efa35cd4f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-restart-manager-support"></a>如何：添加重新启动管理器支持
 重新启动管理器是添加到用于 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 的 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]的一项功能。 如果发生意外关闭或重启，重新启动管理器将为你的应用程序添加支持。 重新启动管理器的行为取决于应用程序的类型。 如果你的应用程序是文档编辑器，则重新启动管理器让应用程序能够自动保存任何打开文档的状态和内容，并在意外关闭后重启应用程序。 如果你的应用程序不是文档编辑器，则重新启动管理器将重启该应用程序，但无法默认保存应用程序的状态。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
   
 6.  编译并运行应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDataRecoveryHandler 类](../mfc/reference/cdatarecoveryhandler-class.md)   
  [CWinApp::m_dwRestartManagerSupportFlags](../mfc/reference/cwinapp-class.md#m_dwrestartmanagersupportflags)   
  [CWinApp 类](../mfc/reference/cwinapp-class.md)   

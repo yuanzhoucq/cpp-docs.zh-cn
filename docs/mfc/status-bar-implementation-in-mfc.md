@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad340de74193bedbe817f1cd5bb5cc29b3417195
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d81982e23f100fe75d6cc5769cd19359bfaa6f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC 中的状态栏实现
 A [CStatusBar](../mfc/reference/cstatusbar-class.md)对象是具有一行文本输出窗格的控件条。 输出窗格通常用作消息行和状态指示器。 示例包括简短解释选定的菜单命令的菜单帮助消息行和指示器显示 SCROLL LOCK、 NUM LOCK 和其他键的状态。  
@@ -58,6 +59,6 @@ A [CStatusBar](../mfc/reference/cstatusbar-class.md)对象是具有一行文本�
   
 -   [工具栏 （MFC 工具栏实现）](../mfc/mfc-toolbar-implementation.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [状态栏](../mfc/status-bars.md)
 

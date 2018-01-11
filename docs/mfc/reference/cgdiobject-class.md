@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed1c892dbd7cef4cee8281f63657144dc8dae10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 类
 为各种 Windows 图形设备接口 (GDI) 对象（如位图、区域、画笔、笔、调色板和字体）提供基类。  
@@ -103,7 +104,7 @@ class CGdiObject : public CObject
   
  `CGdiObject`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="attach"></a>CGdiObject::Attach  
@@ -247,7 +248,7 @@ UINT GetObjectType() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 对象，如果成功，则的类型否则为 0。 该值可以为以下项之一：  
+ 对象，如果成功，则的类型否则为 0。 值可以是下列任一值：  
   
 - **OBJ_BITMAP**位图  
   
@@ -350,7 +351,7 @@ BOOL UnrealizeObject();
   
  `UnrealizeObject`函数不应使用与常用的对象。 `UnrealizeObject`每当设置新的画笔源时，必须调用函数 (通过[CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg)函数)。 `UnrealizeObject`必须不为当前所选的画笔或当前所选的任何的调色板显示上下文中调用函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CBitmap 类](../../mfc/reference/cbitmap-class.md)   
  [CBrush 类](../../mfc/reference/cbrush-class.md)   

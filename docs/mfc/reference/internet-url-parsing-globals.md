@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b30ecd8a8a508842d0edf9af8c4b3736728ca735
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局函数和帮助器
 当某个客户端发送查询到 Internet 服务器时，您可以使用 URL 分析全局变量之一提取有关此客户端的信息。 帮助器函数提供其他 internet 功能。
@@ -116,7 +117,7 @@ BOOL AFXAPI AfxParseURL(
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxinet.h  
   
 ##  <a name="afxparseurlex"></a>AfxParseURLEx  
@@ -189,7 +190,7 @@ BOOL AFXAPI AfxParseURLEx(
  `dwFlags`  
  控制如何分析的 URL 的标志。 可以是以下值的组合：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**ICU_DECODE**|将 %xx 转义序列转换为字符。|  
 |**ICU_NO_ENCODE**|不会转换不安全的字符进行转义序列。|  
@@ -208,10 +209,10 @@ BOOL AFXAPI AfxParseURLEx(
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxinet.h  
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
  
 ## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
@@ -260,10 +261,10 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
    
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
@@ -287,10 +288,10 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  若要调用此函数，你的项目必须包括 AFXINET。H。  
    
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
    
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [CInternetException 类](cinternetexception-class.md)   
  [引发](#throw)

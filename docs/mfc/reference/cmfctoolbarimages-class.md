@@ -151,11 +151,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c317390f804e90ed2faf4302ab0a46d783dd49ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b557a56b1d525941c96b9a6a96fd367b64afcaf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 类
 工具栏上的图像。 `CMFCToolBarImages`类管理从应用程序资源或从文件加载的工具栏图像。  
@@ -251,7 +252,7 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`如果禁用了真彩色 alpha 混合 （32 位颜色）。|  
   
@@ -269,7 +270,7 @@ class CMFCToolBarImages : public CObject
   
  `CMFCToolBarImages`   
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxtoolbarimages.h  
   
 ##  <a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors  
@@ -1298,7 +1299,7 @@ BOOL SmoothResize(double dblImageScale);
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CObject 类](../../mfc/reference/cobject-class.md)   

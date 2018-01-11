@@ -1,67 +1,67 @@
 ---
-title: "__outdwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outdwordstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "outsb 指令"
-  - "__outdwordstring 内部函数"
-  - "rep outsd 指令"
+title: "__outdwordstring |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outdwordstring
+dev_langs: C++
+helpviewer_keywords:
+- outsd instruction
+- __outdwordstring intrinsic
+- rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb8e882812bf7709e53ce936de67435aec578012
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __outdwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="outdwordstring"></a>__outdwordstring
 **Microsoft 专用**  
   
- 生成 `rep outsd`命令，将开始在 `Buffer` I\/O 端口的 `Count` 双字指定由 `Port`。  
+ 生成`rep outsd`指令，这将发送`Count`双字数组开始`Buffer`出指定的 I/O 端口`Port`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __outdwordstring(   
-   unsigned short Port,   
-   unsigned long* Buffer,   
-   unsigned long Count   
+void __outdwordstring(   
+   unsigned short Port,   
+   unsigned long* Buffer,   
+   unsigned long Count   
 );  
 ```  
   
-#### 参数  
- \[in\] `Port`  
- 发送数据的端口。  
+#### <a name="parameters"></a>参数  
+ [in] `Port`  
+ 要将数据发送到的端口。  
   
- \[in\] `Buffer`  
- 对于将发出指定端口的数据的指针。  
+ [in] `Buffer`  
+ 指向要指定的端口发送的数据的指针。  
   
- \[in\] `Count`  
- 发送的双字数。  
+ [in] `Count`  
+ 双字数组发送的数。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__outdwordstring`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__outdwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 此例程仅可用作内部函数。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bee2614d479ec54bf9d49c92deb336eee05d285
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd40c2b78c12cff4b3904348c86dff1c7c3da0b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4396"></a>编译器警告（等级 2）C4396
 “name”：友元声明引用函数模板的专用化时，无法使用内联说明符  

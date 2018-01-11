@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6051502e81593bdb13f32d7904f912cc6f294cef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a40132e793bc444547eefefa70ed3b146cafadc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lengthis"></a>length_is
 指定要传输的数组元素的数目。  
@@ -43,20 +46,20 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>示例  
  请参阅[first_is](../windows/first-is.md)有关如何指定数组的一部分的示例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|字段中`struct`或**联合**、 接口参数、 接口方法|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 特性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Parameter 特性](../windows/parameter-attributes.md)   

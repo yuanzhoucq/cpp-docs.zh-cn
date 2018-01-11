@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 425a93ff12aad138ff2c539765f9afeeb2f22756
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e66f5bdf70997c541c4fa7f0c0f05599a25d2c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size 类
 描述 [max 类](../standard-library/allocators-header.md) 对象，该对象将 [freelist](../standard-library/freelist-class.md) 对象限制为与已分配的内存块数大致成比例的最大长度。  
@@ -58,7 +59,7 @@ class max_variable_size
 |[released](#released)|逐量减小空闲列表上内存块的计数。|  
 |[saved](#saved)|逐量增加空闲列表上内存块的计数。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<allocators>  
   
  **命名空间：** stdext  
@@ -72,7 +73,7 @@ void allocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`_Nx`|增量值。|  
   
@@ -88,7 +89,7 @@ void deallocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`_Nx`|增量值。|  
   
@@ -138,7 +139,7 @@ void saved();
 ### <a name="remarks"></a>备注  
  此成员函数逐量增加存储值 `_Nblocks`。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

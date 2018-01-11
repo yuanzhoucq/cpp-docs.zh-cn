@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- chrono/std::operator modulo
+f1_keywords: chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: bcd1813ec127b7b5243d61e015bb8bec444cf9cb
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 运算符
 ||||  
@@ -210,7 +208,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
   
  第二个和第三个函数将返回 `time_point` 对象，该对象表示从时间点 `Time` 由 `Dur` 时间间隔取代的时间点。  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a>operator&lt;  
  确定一个 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象是否小于另一个 `duration` 或 `time_point` 对象。  
   
 ```  
@@ -263,7 +261,7 @@ constexpr bool operator<=(
 ### <a name="return-value"></a>返回值  
  每个函数均返回 `!(Right < Left)`。  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>operator==  
  确定两个 `duration` 对象是否表示相同长度的时间间隔，或两个 `time_point` 对象是否表示相同的时间点。  
   
 ```  
@@ -290,7 +288,7 @@ constexpr bool operator==(
   
  如果 `Left` 和 `Right` 表示相同时间点，则第二个函数将返回 `true`。 否则，该函数返回 `false`。  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a>operator&gt;  
  确定一个 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 对象是否大于另一个 `duration` 或 `time_point` 对象。  
   
 ```  
@@ -375,7 +373,6 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
   
  第二个函数返回一个值，该值表示 `Left` 取模 `Right`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<chrono>](../standard-library/chrono.md)
-
 

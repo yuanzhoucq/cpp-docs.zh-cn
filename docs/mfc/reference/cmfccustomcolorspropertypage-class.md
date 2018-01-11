@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 633d8648cf204b726f46e753c67991b81df5b0cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7dac4260c69e4d2bbf9c74965e73f6961dd6ad6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 类
 表示可以在颜色对话框中选择自定义颜色的属性页。  
@@ -72,7 +73,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
   
  [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcustomcolorspropertypage.h  
   
 ##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
@@ -89,7 +90,7 @@ void Setup(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `R`|RGB 值红色组件。|  
 |[in] `G`|个 RGB 值的绿色部分。|  
 |[in] `B`|蓝色分量的 RGB 值。|  
@@ -97,7 +98,7 @@ void Setup(
 ### <a name="remarks"></a>备注  
  此方法将更新当前 RGB 和关联的 HLS （色调、 亮度和饱和度） 颜色值的属性页。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)方法框架初始化颜色对话框中或用户按下鼠标左键时调用此方法。 有关详细信息`CMFCColorDialog`，请参阅[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)   

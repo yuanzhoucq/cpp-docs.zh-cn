@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 838990a8f3e9f0bb3b10177da20cdef56ad58d1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c07f94cd1fba2ab23681791a7514143844093be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable 类
 测试是否可以在赋值时复制类型。  
@@ -38,12 +39,12 @@ struct is_copy_assignable;
 ## <a name="remarks"></a>备注  
  如果类型 `Ty` 是具有复制赋值运算符的类，则类型谓词的实例为 true；否则为 false。 等效于 is_assignable\<Ty&, const Ty&>。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
 
 

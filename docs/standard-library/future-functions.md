@@ -13,7 +13,7 @@ f1_keywords:
 - future/std::make_error_condition
 - future/std::swap
 ms.assetid: 1e3acc1e-736a-42dc-ade2-b2fe69aa96bc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::async [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 6ce0ef5ebc19ed9861c4eeb3dd9b3605ff3383b3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函数
 ||||  
@@ -114,7 +113,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 ### <a name="return-value"></a>返回值  
  `error_condition(static_cast<int>(Errno), future_category());`  
   
-##  <a name="swap"></a>swap  
+##  <a name="swap"></a>  swap  
  将一个 `promise` 对象的关联异步状态与另一对象的关联异步状态交换。  
   
 ```
@@ -132,9 +131,8 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
  `Right`  
  正确的 `promise` 对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<future>](../standard-library/future.md)
-
 
 
 

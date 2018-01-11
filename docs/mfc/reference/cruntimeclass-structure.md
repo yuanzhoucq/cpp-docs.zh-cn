@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db4820fa1496bbedebba8392ab0947cfafdf03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 结构
 每个类派生自`CObject`与关联`CRuntimeClass`结构，它可用于获取有关一个对象或其基本类在运行时的信息。  
@@ -67,7 +68,7 @@ struct CRuntimeClass
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CRuntimeClass`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="createobject"></a>CRuntimeClass::CreateObject  
@@ -191,7 +192,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>示例  
   请参阅示例[IsDerivedFrom](#isderivedfrom)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)   
  [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)   

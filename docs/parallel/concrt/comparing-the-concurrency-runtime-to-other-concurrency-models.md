@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a20df7ed057c11f8d8879e1373cc7466982d871b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>将并发运行时与其他并发模型进行比较
 本文档介绍了并发运行时与其他技术在功能和编程模型上的区别。 通过了解并发运行时与其他编程模型各自优点的比较，你可以选择最能满足应用程序要求的技术。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/24/2017
   
  [[返回页首](#top)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发运行时](../../parallel/concrt/concurrency-runtime.md)     
  [概述](../../parallel/concrt/asynchronous-message-blocks.md)   
  [并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   

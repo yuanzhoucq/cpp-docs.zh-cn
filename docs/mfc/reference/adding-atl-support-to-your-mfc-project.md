@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bbf9a47761d016f3a9e935d70956d936d1cc180a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92a4e9096cf72f6556c8ceb36e12cdff97139712
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>向 MFC 项目添加 ATL 支持
 如果你已创建基于 MFC 的应用程序，然后你可以添加支持的活动模板库 (ATL) 轻松地通过运行向 MFC 项目向导的添加 ATL 支持。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
  有关添加 ATL 支持 MFC 项目的代码更改的详细信息，请参阅[详细信息的 ATL 支持添加 ATL 向导](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加类](../../ide/adding-a-class-visual-cpp.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加成员函数](../../ide/adding-a-member-function-visual-cpp.md)   

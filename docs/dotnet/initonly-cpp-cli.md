@@ -1,32 +1,33 @@
 ---
-title: "initonly (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "initonly_cpp"
-  - "initonly"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "initonly 特性 [C++]"
+title: "initonly (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- initonly_cpp
+- initonly
+dev_langs: C++
+helpviewer_keywords: initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a238453c7879cab29f0fa058b654841f0c4786cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# initonly (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**initonly** 是一个区分上下文关键字变量赋值可以只在作为声明的一部分或在同一类的静态构造函数。  
+# <a name="initonly-ccli"></a>initonly (C++/CLI)
+**initonly**是仅为一部分声明的或者在同一个类的静态构造函数则会出现上下文相关的关键字，该值指示该变量赋值。  
   
  下面的示例演示如何使用 `initionly`：  
   
@@ -46,5 +47,5 @@ ref struct Y1 {
 };  
 ```  
   
-## 请参阅  
- [类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)
+## <a name="see-also"></a>请参阅  
+ [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)

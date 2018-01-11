@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ab1066d9a1f56906fcbecca968da07b12a126c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5febdc019f5e575f685e4e93c892b7f5e777b776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-simple-consumer"></a>创建简单使用者
 使用 ATL 项目向导和 ATL OLE DB 使用者向导生成 OLE DB 模板使用者。  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
 2.  在项目类型窗格中，单击**Visual c + + 项目**文件夹，，然后单击**Win32 项目**在模板窗格中的图标。 在**名称**框中，例如，输入你的项目的名称**MyCons**。  
   
-3.  单击“确定”。  
+3.  单击 **“确定”**。  
   
      将出现 Win32 项目向导。  
   
@@ -78,7 +81,7 @@ ms.lasthandoff: 10/24/2017
   
 6.  使用树控件选择表、 视图或存储的过程。 此过程中，为了从 Northwind 数据库中选择产品表。  
   
-7.  单击“确定”。 此操作将返回到 ATL OLE DB 使用者向导。  
+7.  单击 **“确定”**。 此操作将返回到 ATL OLE DB 使用者向导。  
   
 8.  在向导完成的名称`Class`和**.h 文件**基于名称的表、 视图或存储你选择的过程。 如果你想，你可以编辑这些名称。  
   
@@ -106,5 +109,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  此行禁止使用者应用程序进行编译，提醒您检查硬编码密码的连接字符串。 在检查你的连接字符串之后, 你可以删除此代码行。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

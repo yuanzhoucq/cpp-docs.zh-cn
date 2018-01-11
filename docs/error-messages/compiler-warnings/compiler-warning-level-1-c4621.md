@@ -1,34 +1,33 @@
 ---
-title: "编译器警告（等级 1）C4621 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4621"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4621"
+title: "编译器警告 （等级 1） C4621 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4621
+dev_langs: C++
+helpviewer_keywords: C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9a72c787597748fc08a7ee64f845b5a30cec7535
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4621
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-未找到类型“type”的“operator \-\-”的后缀形式，使用前缀形式  
+# <a name="compiler-warning-level-1-c4621"></a>编译器警告（等级 1）C4621
+operator-找到类型 type，以使用前缀形式中没有任何后缀窗体  
   
- 没有为该给定类型定义后缀减量运算符。  编译器使用了重载的前缀运算符。  
+ 为给定的类型定义没有后缀递减运算符。 编译器使用了重载的前缀运算符。  
   
- 通过定义后缀 `--` 运算符可以避免此警告。  按照以下所示创建 `--` 运算符的两参数版本：  
+ 可以通过定义后缀避免此警告`--`运算符。 创建的两个参数版本`--`运算符如下所示：  
   
 ```  
 // C4621.cpp  

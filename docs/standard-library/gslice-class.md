@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6928fd3aa902b5ed0ab4e942950af76448e16e5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52170e08d3118b5eb0ef7bb1e34edbe29b3d38f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gslice-class"></a>gslice 类
 对多维定义子集 valarray 的 valarray 的公共类。 如果 valarray 视为带任何元素的矩阵，则多维数组中提取切片矢量从多维数组。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
 |[start](#start)|查找 `valarray` 的泛切片的起始索引。|  
 |[stride](#stride)|查找在 `valarray` 中的泛切片元素之间的距离。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<valarray>  
   
  **命名空间：** std  
@@ -343,6 +344,6 @@ The strides of vaResult are:
  vaGSlice.stride ( ) = ( 7 4 ).  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

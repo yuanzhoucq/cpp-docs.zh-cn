@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - vtprintf_p
 - _vtprintf_p
 - _vprintf_p
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _vtprintf_p_l function
 - _vtprintf_p function
@@ -53,30 +51,16 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bcf46edc032856c7fa6b74d928cd08c04dcfac26
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a33f7c8f834e9e1e67a5322d15494423bf10190e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l
 使用指向参数列表的指针编写格式化输出，并且能够指定参数的使用顺序。  
@@ -114,7 +98,7 @@ int _vwprintf_p_l(
  `locale`  
  要使用的区域设置。  
   
- 有关详细信息，请参阅[格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 有关更多信息，请参见 [格式规范](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="return-value"></a>返回值  
  `_vprintf_p` 和 `_vwprintf_p` 返回写入的字符数，不包括终止的 null 字符；如果发生输出错误，则返回负值。  
@@ -138,9 +122,9 @@ int _vwprintf_p_l(
 |`_vtprintf_p`|`_vprintf_p`|`_vprintf_p`|`_vwprintf_p`|  
 |`_vtprintf_p_l`|`_vprintf_p_l`|`_vprintf_p_l`|`_vwprintf_p_l`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|----------------------|  
 |`_vprintf_p`, `_vprintf_p_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
 |`_vwprintf_p`, `_vwprintf_p_l`|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
@@ -149,7 +133,7 @@ int _vwprintf_p_l(
   
  控制台在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用程序中不受支持。 与控制台 `stdin`、`stdout` 和 `stderr` 关联的标准流句柄必须重定向，然后 C 运行时函数才可以在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函数](../../c-runtime-library/vprintf-functions.md)   
  [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   

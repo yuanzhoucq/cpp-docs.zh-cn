@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7be8bbf011964411431d754afa058763e70e3265
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consumer-wizard-generated-methods"></a>使用者向导生成的方法
 ATL OLE DB 使用者向导和 MFC 应用程序向导生成的你应注意某些函数。 请注意，某些方法实现以不同方式在特性化项目中，因此有几条注意事项;下面介绍了每个用例。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。  
@@ -163,5 +166,5 @@ void CloseDataSource();
 ## <a name="remarks"></a>备注  
  向导定义的方法`OpenDataSource`和`CloseDataSource`;`OpenDataSource`调用[cdatasource:: Openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

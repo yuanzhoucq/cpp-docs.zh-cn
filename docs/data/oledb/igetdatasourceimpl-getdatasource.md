@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58dd4fc6e4a7cbe245d8ea1ec5841f5983354f5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 850cdd40124566fad0bc71d70e0fc2e4f1317de9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="igetdatasourceimplgetdatasource"></a>IGetDataSourceImpl::GetDataSource
 返回创建了会话的数据源对象上的接口指针。  
@@ -43,8 +46,8 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  如果你需要访问数据源对象中的属性很有用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IGetDataSourceImpl 类](../../data/oledb/igetdatasourceimpl-class.md)

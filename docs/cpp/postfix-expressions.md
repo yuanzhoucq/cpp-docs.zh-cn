@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31d818eb056643b30a28bd3cc88946ee58d62c7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-expressions"></a>后缀表达式
 后缀表达式包含主表达式或者其中的后缀运算符跟在主表达式之后的表达式。 下表列出了后缀运算符。  
@@ -72,9 +73,9 @@ simple-type-name ( expression-list )
   
  当调用函数时，将执行以下任务：  
   
--   计算所有实参（调用方提供的参数）。 没有计算这些参数的隐含顺序，但所有参数都会计算，并且所有副作用都会在进入该函数前完成。  
+-   计算所有自变量（调用方提供的自变量）。 没有计算这些参数的隐含顺序，但所有参数都会计算，并且所有副作用都会在进入该函数前完成。  
   
--   使用每个形参在表达式列表中对应的实参来初始化该形参。 （形参是在函数头中声明并在函数体中使用的参数。）转换就像是通过初始化完成的一样 - 标准的和用户定义的转换在将实参转换为正确的类型时执行。 以下代码从概念上演示了所执行的初始化：  
+-   使用每个形参在表达式列表中对应的实参来初始化该形参。 （形参是在函数头中声明并在函数体中使用的参数。）转换就像是通过初始化完成的一样 - 标准的和用户定义的转换在将自变量转换为正确的类型时执行。 以下代码从概念上演示了所执行的初始化：  
   
     ```  
     void Func( int i ); // Function prototype  
@@ -199,5 +200,5 @@ world!
 good morning, sunshine.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表达式类型](../cpp/types-of-expressions.md)

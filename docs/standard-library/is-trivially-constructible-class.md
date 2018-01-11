@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c123f01504a986c14b3b24af99f6df1abb7b8216
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a01ee89c1bb07ab0ca3c9c54161b7d9a3097be3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible 类
 测试使用指定参数类型时类型是否为普通构造类型。  
@@ -43,12 +44,12 @@ struct is_trivially_constructible;
 ## <a name="remarks"></a>备注  
  如果通过使用 `Args` 中的参数类型可普通构造类型 `T`，则类型谓词的实例为 true；否则为 false。 如果变量定义 `T t(std::declval<Args>()...);` 格式正确且已知其不会调用任何重要的操作，则类型 `T` 为普通构造类型。 `T` 和 `Args` 中的所有类型都必须是完整类型、`void` 或具有未知边界的数组。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
 
 

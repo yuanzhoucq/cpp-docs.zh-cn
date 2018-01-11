@@ -1,62 +1,64 @@
 ---
-title: "消息传递函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "消息传递函数"
+title: "消息传递函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 消息传递函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-异步代理库提供了一些函数，这些函数使您可以在组件之间传递消息。  
+# <a name="message-passing-functions"></a>消息传递函数
+异步代理库提供使你将组件间的消息传递的多个函数。  
   
- 这些消息传递函数与各种消息块类型一起使用。  有关并发运行时所定义的消息块类型的更多信息，请参见[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 这些消息传递函数用于各种消息块类型。 有关由并发运行时定义的消息块类型的详细信息，请参阅[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。  
   
-##  <a name="top"></a> 各节内容  
- 本主题描述以下消息传递函数：  
+##  <a name="top"></a> 部分  
+ 本主题介绍了以下的消息传递函数：  
   
--   [send 和 asend](#send)  
+-   [发送和 asend](#send)  
   
--   [receive 和 try\_receive](#receive)  
+-   [接收和 try_receive](#receive)  
   
 -   [示例](#examples)  
   
-##  <a name="send"></a> send 和 asend  
- [concurrency::send](../Topic/send%20Function.md) 函数可将消息同步发送到指定目标，[concurrency::asend](../Topic/asend%20Function.md) 函数可将消息异步发送到指定目标。  在目标指示它将最终接受或拒绝消息之前，`send` 和 `asend` 函数都将一直等待。  
+##  <a name="send"></a>发送和 asend  
+
+ [Concurrency:: send](reference/concurrency-namespace-functions.md#send)函数将消息同步发送到指定的目标和[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函数将消息异步发送到指定的目标。 同时`send`和`asend`函数等待，直到目标指示它最终将接受或拒绝消息。  
   
- `send` 函数等到目标接受或拒绝消息后才会返回。  如果已发送消息，则 `send` 函数将返回 `true`，否则将返回 `false`。  因为 `send` 函数以同步方式工作，所以 `send` 函数会先等待目标接收消息，然后才会返回。  
+ `send`函数等待，直到目标接受或拒绝消息时，才会返回。 `send`函数返回`true`如果消息传递和`false`否则为。 因为`send`同步，工作函数`send`函数等待返回之前接收消息的目标。  
   
- 相反，`asend` 函数在返回之前不会等待目标接受或拒绝消息。  相反，当目标接受消息并且最终将采用该消息时，`asend` 函数会返回 `true`。  否则，`asend` 将返回 `false`，以指示目标拒绝了消息或者目标延迟决定是否采用消息。  
+ 相反，`asend`函数不会等待要接受或拒绝该消息返回之前的目标。 相反，`asend`函数返回`true`如果目标接受消息，并且最终将采用。 否则为`asend`返回`false`来指示目标已被拒绝消息或推迟是否使该消息的决定。  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="receive"></a> receive 和 try\_receive  
- [concurrency::receive](../Topic/receive%20Function.md) 和 [concurrency::try\_receive](../Topic/try_receive%20Function.md) 函数从给定的源读取数据。  `receive` 函数将等待数据可用，而 `try_receive` 函数将立即返回。  
+##  <a name="receive"></a>接收和 try_receive  
+
+ [Concurrency:: receive](reference/concurrency-namespace-functions.md#receive)和[concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive)函数从给定的源读取数据。 `receive`函数等待数据变得可用，而`try_receive`函数将立即返回。  
   
- 如果必须具有数据才能继续，请使用 `receive` 函数。  如果不必阻止当前上下文，或者不必具有数据便可继续，请使用 `try_receive` 函数。  
+ 使用`receive`时必须具有数据以继续正常工作。 使用`try_receive`如果你不能阻止当前上下文或不需要具有数据以继续正常工作。  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-##  <a name="examples"></a> 示例  
- 有关使用 `send`、`asend` 和 `receive` 函数的示例，请参见以下主题：  
+##  <a name="examples"></a>示例  
+ 有关示例，请使用`send`和`asend`，和`receive`函数，请参阅以下主题：  
   
 -   [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [如何：实现各种制造者\-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+-   [如何：实现各种制造者-使用者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
   
 -   [如何：为 call 和 transformer 类提供工作函数](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
   
@@ -68,12 +70,14 @@ caps.handback.revision: 22
   
 -   [如何：使用消息块筛选器](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
- \[[Top](#top)\]  
+ [[返回页首](#top)]  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
  [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)   
- [send 函数](../Topic/send%20Function.md)   
- [asend 函数](../Topic/asend%20Function.md)   
- [receive 函数](../Topic/receive%20Function.md)   
- [try\_receive 函数](../Topic/try_receive%20Function.md)
+ [send 函数](reference/concurrency-namespace-functions.md#send)   
+ [asend 函数](reference/concurrency-namespace-functions.md#asend)   
+ [receive 函数](reference/concurrency-namespace-functions.md#receive)   
+ [try_receive 函数](reference/concurrency-namespace-functions.md#try_receive)
+
+

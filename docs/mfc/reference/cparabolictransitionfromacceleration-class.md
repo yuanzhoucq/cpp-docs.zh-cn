@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb4ac9cb8ad6921297a99cad79a2b83c7f142b25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 219d8e153501334a3de02aa12153e05a4345b215
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 类
 封装抛物线加速转换。  
@@ -74,7 +75,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
   
  [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
@@ -134,5 +135,5 @@ DOUBLE m_dblFinalValue;
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

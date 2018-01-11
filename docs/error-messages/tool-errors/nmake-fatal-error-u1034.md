@@ -1,29 +1,28 @@
 ---
-title: "NMAKE 错误 U1034 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1034"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1034"
+title: "NMAKE 错误 U1034 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1034
+dev_langs: C++
+helpviewer_keywords: U1034
 ms.assetid: 27e678c2-23e2-4247-87f7-66493784af33
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61290723cd8ad3764b52454713c2df5f16a93f73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE 错误 U1034
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-语法错误 : 缺少分隔符  
+# <a name="nmake-fatal-error-u1034"></a>NMAKE 错误 U1034
+语法错误： 缺少分隔符  
   
- 缺少分隔目标与从属项的冒号 \(**:**\)。
+ 冒号 (**:**) 分隔目标和依赖项缺少了。

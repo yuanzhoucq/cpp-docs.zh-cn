@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbb6b32fbd34794c13d2f4b7dc75e242464bc7b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0fc48c9a3651e8c5a6609886862c2f73c5707638
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="factorycache-structure"></a>FactoryCache 结构
 支持的 Windows 运行时 c + + 模板库基础结构，不宜在代码中直接使用。  
@@ -45,10 +48,10 @@ struct FactoryCache;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `FactoryCache`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4947
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4947
+f1_keywords: C4947
+dev_langs: C++
+helpviewer_keywords: C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 08eb5385924ee4a01a942274b8c4ec10060b12c4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e24b2ec34c81152088bf2e9cee73237dfa43b41b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4947"></a>编译器警告（等级 1）C4947
 “type_or_member”：标记为过时  
   
-成员或类型被标记为过时的<xref:System.ObsoleteAttribute>类。</xref:System.ObsoleteAttribute>  
+使用 <xref:System.ObsoleteAttribute> 类将成员或类型标记为过时。  
   
 ## <a name="example"></a>示例  
 以下示例生成 C4947：  

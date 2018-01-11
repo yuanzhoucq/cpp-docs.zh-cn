@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0598b131305684e9134a223fd599a8b642bf6da7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3c9502c720b0f443ace3cfe637fb4826281ecf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wininet-basics"></a>WinInet 基础知识
 你可以使用 WinInet 添加 FTP 支持，以下载并上载来自你的应用程序中的文件。 您可以重写[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)并用`dwContext`参数来搜索和下载文件，向用户提供进度信息。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_display_progress_information_while_transferring_files"></a>传输文件时显示进度信息  
  例如，如果您编写的应用程序创建一个读取文件的 FTP 服务器与连接和与 HTTP 服务器以获取网页又连接，你将具有`CInternetSession`对象、 两个`CInternetConnection`对象 (一个将**CFtpSession**和另一个将是**CHttpSession**)，和两个`CInternetFile`对象 （一个用于每个连接）。 如果你使用的默认值`dwContext`参数，你将不能区分`OnStatusCallback`指示 FTP 连接和指示 HTTP 连接的进度调用的进度的调用。 如果指定`dwContext`ID，你可以更高版本测试是否在`OnStatusCallback`，你将知道哪些操作生成回调。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)   
  [Win32 Internet 扩展 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 

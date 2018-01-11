@@ -1,66 +1,65 @@
 ---
-title: "实现接口向导 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.impl.interface.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "实现接口向导 [C++]"
+title: "实现接口向导 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.impl.interface.overview
+dev_langs: C++
+helpviewer_keywords: Implement Interface Wizard [C++]
 ms.assetid: 947c329e-0815-4ca7-835e-c41dfeb75f9e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 实现接口向导
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-该向导实现 COM 对象的接口。  Visual Studio 和 Windows 附带的 COM 库中包含了许多接口的实现。  当创建对象的实例时，接口实现与该对象关联并提供该对象所提供的服务。  
+# <a name="implement-interface-wizard"></a>实现接口向导
+此向导实现 COM 对象的接口。 适用于 Visual Studio 和 Windows 的 COM 库中包括多个接口的实现。 时将创建该对象的实例，并且它提供服务，该对象所提供的接口实现与对象相关联。  
   
- 有关接口和实现的论述，请参见 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] 中的[接口和接口实现](http://msdn.microsoft.com/library/windows/desktop/ms694356)。  
+ 接口和实现的讨论，请参阅[接口和接口实现](http://msdn.microsoft.com/library/windows/desktop/ms694356)Windows SDK 中。  
   
  **实现接口的位置**  
- 指定类型库的位置，将从该位置创建接口。  
+ 指定从中创建接口的类型库的位置。  
   
-|选项|说明|  
-|--------|--------|  
+|选项|描述|  
+|------------|-----------------|  
 |**Project**|类型库是项目的一部分。|  
-|**注册表**|类型库已在系统中注册。  已注册的类型库在“可用的类型库”中列出。|  
-|**文件**|类型库不一定在系统中注册，但包含在文件中。  必须在“位置”中提供文件的位置。|  
+|**Registry**|在系统中注册的类型库。 已注册的类型库中列出**可用的类型库**。|  
+|**文件**|类型库不一定在系统中注册，但包含在文件中。 必须提供文件的位置中**位置**。|  
   
  **可用的类型库**  
- 显示包含可以实现的接口定义的可用类型库。  如果单击“实现接口的位置”下的“文件”，则该框不可更改。  
+ 显示包含可以实现的接口定义的可用类型库。 如果你单击**文件**下**实现接口的位置**，此框不可更改。  
   
  **位置**  
- 显示“可用的类型库”列表中当前选定的类型库的位置。  如果选择“实现接口的位置”下的“文件”，则单击省略号按钮可定位包含要使用的类型库的文件。  
+ 显示的类型库中当前选定位置**可用的类型库**列表。 如果你选择**文件**下**实现接口的位置**，单击省略号按钮以找到包含要使用的类型库的文件。  
   
  **接口**  
- 显示定义包含在“可用的类型库”框中当前选定的类型库中的接口。  
+ 显示其定义中当前选定的类型库中包含的接口**可用的类型库**框。  
   
 > [!NOTE]
->  与选定对象已实现的那些接口具有相同名称的接口不显示在“接口”框中。  
+>  接口具有相同的名称，那些已由所选对象不显示在**接口**框。  
   
-|传输按钮|说明|  
-|----------|--------|  
-|**\>**|将“接口”列表中当前选定的接口名称添加到“实现接口”列表。|  
-|**\>\>**|将“接口”列表中可用的所有接口名称添加到“实现接口”列表。|  
-|**\<**|移除“实现接口”列表中当前选定的接口名称。|  
-|**\<\<**|移除“实现接口”列表中当前列出的所有接口名称。|  
+|传输按钮|描述|  
+|---------------------|-----------------|  
+|**>**|将添加到**实现接口**列表中当前选定的接口名称**接口**列表。|  
+|**>>**|将添加到**实现接口**列表中可用的所有接口名称**接口**都列表。|  
+|**<**|移除中当前选定的接口名称**实现接口**列表。|  
+|**<\<**|删除的所有接口名称中当前列出**实现接口**列表。|  
   
  **实现接口**  
- 显示已选定在对象上实现的接口名称。  
+ 显示您已选择在你的对象上实现的接口的名称。  
   
 > [!NOTE]
->  如果包括从 `IDispatch` 派生的多个接口，或者尝试实现从类上的另一个现有接口派生的接口，则必须消除 COM\_MAP 项的歧义。  有关更多信息，请参见 [COM\_INTERFACE\_ENTRY2](../Topic/COM_INTERFACE_ENTRY2.md)。  
+>  如果包含派生自的多个接口`IDispatch`，或如果您尝试实现一个接口，从已在你的类，另一个接口派生，则你必须区分 COM_MAP 项。 请参阅[COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2)有关详细信息。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [实现接口](../ide/implementing-an-interface-visual-cpp.md)

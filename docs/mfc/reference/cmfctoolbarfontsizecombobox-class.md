@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0218d084dca2920cbf88a4cbfffa8215443be004
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ba8dde4142cff3606cc2b5ad1861096637f68c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 类
 包含使用户能够选择字体大小的组合框控件的工具栏按钮。  
@@ -77,7 +78,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
@@ -125,7 +126,7 @@ void SetTwipSize(int nSize);
 ### <a name="remarks"></a>备注  
  你可以通过调用更高版本检索以前的有效字号[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)   

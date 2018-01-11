@@ -1,34 +1,33 @@
 ---
-title: "链接器工具错误 LNK1107 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1107"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1107"
+title: "链接器工具错误 LNK1107 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1107
+dev_langs: C++
+helpviewer_keywords: LNK1107
 ms.assetid: a37a893d-5efa-4eba-8f40-6c5518b4b9d0
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fae412de31163aa1b5248af43227042cd04563ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 链接器工具错误 LNK1107
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-文件无效或损坏: 无法在 location 读取  
+# <a name="linker-tools-error-lnk1107"></a>链接器工具错误 LNK1107
+无效或已损坏的文件： 无法读取位置  
   
- 工具未能读取文件。  重新创建文件。  
+ 该工具无法读取文件。 重新创建该文件。  
   
- LNK1107 也发生，如果尝试通过模块 \(.dll 或 .netmodule 扩展名创建的或链接器\); [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)[\/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) .obj 文件传递。  
+ 如果您试图将传递一个模块，也可能发生 LNK1107 (使用创建的.dll 或.netmodule 扩展名[/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md)或[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)) 到链接器; 改为传递.obj 文件。  
   
  如果编译下面的示例：  
   
@@ -41,4 +40,4 @@ public:
 };  
 ```  
   
- 然后在命令行上指定 **link LNK1107.dll**，将得到 LNK1107 错误。若要解决该错误，请改为指定 **link LNK1107.obj**。
+ 然后指定**链接 LNK1107.dll**在命令行中，你将获取 LNK1107。  若要解决此错误，请指定**链接 LNK1107.obj**相反。

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f37610aa77cb17fa574444cec43465ffc5ba3498
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8c593121846c3eace21c16d00013af1bd46f54fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm2-class"></a>norm_2 类
-表示两个常规数字的短矢量。  
+表示两个普通数字短矢量。  
   
 ## <a name="syntax"></a>语法  
   
@@ -109,7 +93,7 @@ class norm_2;
 |norm_2::operator-||  
 |norm_2::operator-||  
 |norm_2::operator * =||  
-|norm_2::operator / =||  
+|/ = norm_2::operator 的||  
 |norm_2::operator + +||  
 |norm_2::operator + =||  
 |norm_2::operator =||  
@@ -117,7 +101,7 @@ class norm_2;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#norm_2__size)||  
   
@@ -137,8 +121,8 @@ class norm_2;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `norm_2`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_short_vectors.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -228,6 +212,5 @@ explicit inline norm_2(
 static const int size = 2;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5c60fd4ff47745e5209023783b74f52a319065d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c648e32865f73bda5f896f26c495184f964c41d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 此文章介绍了提供在 Microsoft 基础类库 (MFC) 以允许对象之间保持不变的序列化机制运行的程序。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  文章[序列化： 序列化 vs。数据库输入/输出](../mfc/serialization-serialization-vs-database-input-output.md)描述当序列化是一种适当的输入/输出技术，数据库应用程序中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../mfc/mfc-concepts.md)   
  [常规 MFC 主题](../mfc/general-mfc-topics.md)   
  [CArchive 类](../mfc/reference/carchive-class.md)   

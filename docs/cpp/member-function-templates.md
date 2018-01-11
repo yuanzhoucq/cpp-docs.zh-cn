@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- function templates, member functions
+dev_langs: C++
+helpviewer_keywords: function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: bba7b35c08fbc171ddbb4c572285c0aed2f58a3b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f6d16c94eb9d88f8e000f3830477fbf420acf8b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-function-templates"></a>成员函数模板
 
@@ -71,8 +68,6 @@ int main()
 ```  
   
 ## <a name="example"></a>示例
-
- 此外，在 Visual Studio.NET 2003年及更高版本，也可在类的外部定义成员模板。  
   
 ```cpp
 // defining_member_templates_outside_class.cpp  
@@ -100,7 +95,7 @@ int main()
   
  当使用与基类虚函数相同的名称进行声明时，成员模板函数不能是虚函数并且不能从基类重写虚函数。  
   
- Visual c + +.NET 2003 中引入了支持模板化用户定义的转换。 以下示例按照以下标准中的规定在 Visual C++ .NET 2003 中运行。  
+下面的示例演示的模板化用户定义的转换：  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -120,7 +115,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [函数模板](../cpp/function-templates.md)
-

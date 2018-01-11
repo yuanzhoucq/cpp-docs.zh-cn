@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb13e31df1b30c775d1e961f09b10163d06b1ea7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27046704975bf8f5e28f12acbfa72e860660fdbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-limitations-with-earlier-operating-systems"></a>早期操作系统中的 CImage 限制
 很多 `CImage` 函数仅适用于较新的 Windows 版本：Windows 95/98、Windows NT 4.0 或 Windows 2000。 本文介绍某些方法的版本限制。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
  如果你的应用程序时将 _WIN32_WINNT 设置为等于 0x0500 的值或更高版本进行编译**绘制**将处理自动在运行 Windows 2000 或 Windows 98 及更高版本的系统上的透明度。 它也适用，但不支持透明度错误，使用 Windows NT 4.0 和 Windows 95;但是，你必须使用**/delayload**延迟 msimg32 加载。LIB，如上文所述的`AlphaBlend`和`TransparentBlt`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CImage 类](../atl-mfc-shared/reference/cimage-class.md)

@@ -25,11 +25,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65eef3ef17e46e86a302b614b88413c97b045616
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eed9acf533939d305e42478bb87307bc0a055d3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aligning-controls-on-a-guide"></a>在参考线上对齐控件
 当控件移，并参考线对齐控件 （如果不有任何控件的指南以前对齐），参考线对齐控件的尺寸控点。 当移动参考线时，会对齐到它的控件以及移动。 如果移动其中一个指南，对齐到多个指南的控件的大小。  
@@ -52,13 +55,13 @@ ms.lasthandoff: 10/24/2017
   
 2.  在[参考线设置对话框中](../windows/guide-settings-dialog-box.md)中**网格间距**字段中，指定新的宽度和高度 Dlu。  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
- 要求  
+ 惠?  
   
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对话框编辑器状态 （参考线和网格）](../windows/dialog-editor-states-guides-and-grids.md)   
  [对话框中的控件](../windows/controls-in-dialog-boxes.md)
 

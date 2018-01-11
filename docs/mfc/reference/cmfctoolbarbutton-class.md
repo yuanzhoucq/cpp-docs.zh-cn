@@ -171,11 +171,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b834b46a9a899b9b5ae7cce0d399593588ff2d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aaf355d15679bdb30b7561fe28dd6f927688ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 类
 提供为工具栏按钮功能。  
@@ -269,7 +270,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|指定是否在按钮上显示图像。|  
 |[CMFCToolBarButton::m_bText](#m_btext)|指定是否在按钮上显示的文本标签。|  
@@ -304,7 +305,7 @@ class CMFCToolBarButton : public CObject
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxtoolbarbutton.h  
   
 ##  <a name="canbedropped"></a>CMFCToolBarButton::CanBeDropped  
@@ -1528,7 +1529,7 @@ void Show(BOOL bShow);
   
  此方法调用[CMFCToolBarButton::OnShow](#onshow)后它将更新该按钮的可见性状态的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)   

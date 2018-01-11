@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_trivially_copy_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_copy_assignable
+f1_keywords: type_traits/std::is_trivially_copy_assignable
+dev_langs: C++
+helpviewer_keywords: is_trivially_copy_assignable
 ms.assetid: 7410133e-f367-493f-92a7-e34e3ec5e879
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 477b0c513817860aac40a01d921cec50293b54ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 0f8aad09e3ed083b9ffdd2199c9a9ab6462b840b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable 类
 测试类型是否具有普通复制赋值运算符。  
@@ -45,14 +41,13 @@ struct is_trivially_copy_assignable;
   
  如果类 `T` 的赋值构造函数为隐式提供，则为普通类，类 `T` 不具有虚拟函数，类 `T` 不具有虚拟基，类类型的所有非静态数据成员的类都具有普通赋值运算符，且类的类型数组的所有非静态数据成员的类具有普通赋值运算符。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

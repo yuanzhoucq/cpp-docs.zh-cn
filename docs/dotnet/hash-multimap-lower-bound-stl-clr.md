@@ -1,45 +1,46 @@
 ---
-title: "hash_multimap::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 成员 [STL/CLR]"
+title: "hash_multimap:: lower_bound (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: c61091ef-8364-4447-bdd2-a402cbc05f05
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7b60c5eca8c6f743307cacf4fe439a451427712
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-查找与指定的键范围的开头。  
+# <a name="hashmultimaplowerbound-stlclr"></a>hash_multimap::lower_bound (STL/CLR)
+查找与指定的键匹配的范围开始处。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### 参数  
- 键  
- 搜索的键值。  
+#### <a name="parameters"></a>参数  
+ 密钥  
+ 要搜索的键值。  
   
-## 备注  
- 成员函数确定。散列为存储桶与 `key` 相同并且具有相同订单给 `key`的控制序列中的第一个 `X` 元素。  如果不存在此类元素，则返回`()`; [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)否则它返回将 `X`的迭代器。  使用其当前找到的元素序列的开头与指定的键在控制序列。  
+## <a name="remarks"></a>备注  
+ 成员函数将确定第一个元素`X`作为相同的存储桶进行哈希处理到受控序列中`key`和具有等效顺序到`key`。 如果此类元素不存在，它将返回[hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; 否则它将返回指定的迭代器`X`。 用于当前与指定的键匹配的控制序列中查找的元素序列的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_lower_bound.cpp   
@@ -73,18 +74,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**lower\_bound\(L'x'\)\=\=end\(\) 为 True**  
-**\*lower\_bound \(\=\) L'a \[一个 1\]**  
-**\*lower\_bound \(\=\) L'b \[b 2\]**   
-## 要求  
- **页眉：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = [a 1]  
+*lower_bound(L'b') = [b 2]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::count](../dotnet/hash-multimap-count-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)   
- [hash\_multimap::find](../dotnet/hash-multimap-find-stl-clr.md)   
- [hash\_multimap::upper\_bound](../dotnet/hash-multimap-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)   
+ [hash_multimap:: equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)   
+ [hash_multimap:: find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)   
+ [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)

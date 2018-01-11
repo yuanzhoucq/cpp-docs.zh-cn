@@ -1,27 +1,27 @@
 ---
-title: "A.25   Examples of the copyprivate Data Attribute Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Copyprivate 数据属性子句的 A.25 示例 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cdf7598e00bab72966fe79454567b0a59dcbaae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.25   Examples of the copyprivate Data Attribute Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**示例 1:** `copyprivate` 子句 \(在第 32 页\) 的[第2.7.2.8部分](../../parallel/openmp/2-7-2-8-copyprivate.md) 可用于广播个线程访问的值直接对私有变量的所有实例在其他线程上。  
+# <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   copyprivate 数据特性子句示例
+**示例 1:** `copyprivate`子句 ([部分 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在页上 32) 可以用于广播获取通过单个线程直接到其他线程中的私有变量的所有实例的值。  
   
 ```  
 float x, y;  
@@ -41,9 +41,9 @@ void init( )
 }  
 ```  
   
- 如果实例 *init* 从一个序列化的区域调用，其行为不受指令的显示效果。  在对 *get\_values* 实例的调用由一个线程后执行了，线程不保留直到 *中*指定的私有对象的构造， *b*， *x*，因此，所有的 *y* 线程变为定义与读取的值。  
+ 如果例程*init*称为从串行区域中，其行为不受指令的存在。 在调用后*get_values*例程已由一个线程中执行，无需对线程离开之前指定的私有对象的构造， *b*， *x*，和*y*中所有线程变得定义为具有读取的值。  
   
- 与上面\) 的**示例 2:** ，假定必须由特定线程上执行读取的，指出主线程。  在这种情况下， `copyprivate` 子句不能用于直接执行广播的，但是，它可用于提供对临时共享对象。  
+ **示例 2:**与前面的示例中，假设必须由特定线程，即主线程执行读取。 在这种情况下，`copyprivate`子句不能用于执行广播直接，但它可以用于提供对共享的临时对象的访问。  
   
 ```  
 float read_next( )   
@@ -74,7 +74,7 @@ float read_next( )
 }  
 ```  
   
- **示例 3:** 假定锁定对象数在并行区域内所需的无法轻松确定中输入之前。  `copyprivate` 子句来提供对该并行区域中分配的共享锁定对象。  
+ **示例 3:**假设之前输入中的并行区域内所需的锁对象的数目不能方便地确定。 `copyprivate`子句可以用于提供对该并行区域内分配的共享的锁对象的访问。  
   
 ```  
 #include <omp.h>  

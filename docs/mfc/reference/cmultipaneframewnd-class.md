@@ -91,11 +91,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e1099d7d19ec27c55442ce6a0eff61486346466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed8ccb584b9bf750e1f17da9ce3e0bf71058abbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 类
 `CMultiPaneFrameWnd`类扩展[CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)。 它可支持多个窗格。 而不是控件条的单个嵌入句柄`CMultiPaneFrameWnd`包含[CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)对象，它使用户能够将一个停靠`CMultiPaneFrameWnd`到另一个、 动态地创建多个浮点，选项卡式windows。  
@@ -177,7 +178,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
  [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxMultiPaneFrameWnd.h  
   
 ##  <a name="addpane"></a>CMultiPaneFrameWnd::AddPane  
@@ -654,7 +655,7 @@ virtual void StoreRecentTabRelatedInfo(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPaneFrameWnd 类](../../mfc/reference/cpaneframewnd-class.md)

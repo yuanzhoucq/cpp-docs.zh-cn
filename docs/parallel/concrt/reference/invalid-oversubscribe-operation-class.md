@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_oversubscribe_operation
 - CONCRT/concurrency::invalid_oversubscribe_operation
 - CONCRT/concurrency::invalid_oversubscribe_operation::invalid_oversubscribe_operation
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_oversubscribe_operation class
+dev_langs: C++
+helpviewer_keywords: invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 9263fd2bf7d4cfa3b1b8542b8a0bf8d2a3969326
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 92a5d9ec48c4a3ffa933de50bf0d84a6c37349c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation 类
 此类描述在先前没有对 `Context::Oversubscribe` 方法进行调用（`_BeginOversubscription` 参数设置为 `true`）的情况下，调用 `Context::Oversubscribe` 方法（`_BeginOversubscription` 参数设置为 `false`）时引发的异常。  
@@ -64,8 +47,8 @@ class invalid_oversubscribe_operation : public std::exception;
   
  `invalid_oversubscribe_operation`  
   
-## <a name="requirements"></a>要求  
- **标头︰** concrt.h  
+## <a name="requirements"></a>惠?  
+ **标头：** concrt.h  
   
  **命名空间：** 并发  
   
@@ -84,6 +67,5 @@ invalid_oversubscribe_operation() throw();
  `_Message`  
  错误的描述性消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)
-

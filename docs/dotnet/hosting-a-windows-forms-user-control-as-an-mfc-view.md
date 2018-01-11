@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a8ee337c6e647f88fc4ef8730f100681c37a170
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>以 MFC 视图的形式承载 Windows 窗体用户控件
 MFC 使用 CWinFormsView 类承载 Windows 窗体用户控件在 MFC 视图。 MFC Windows 窗体视图是 ActiveX 控件。 用户控件的本机视图子级作为托管且占用整个工作区的本机视图。  
@@ -39,6 +42,6 @@ MFC 使用 CWinFormsView 类承载 Windows 窗体用户控件在 MFC 视图。 M
   
  [如何：调用 Windows 窗体控件的属性和方法](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 MFC 中使用 Windows 窗体用户控件](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
  [如何：创作复合控件](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

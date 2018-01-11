@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::geometric_distribution::param_type::p
 - random/std::geometric_distribution::param_type::operator==
 - random/std::geometric_distribution::param_type::operator!=
-- random/std::geometric_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::geometric_distribution [C++]
 - std::geometric_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 23ab208a32b193c8cf30eefd9382ac253e2518d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 21665d4ef570f7451e3c1f9739eafaf067659541
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 类
 生成几何分布。  
@@ -102,7 +99,7 @@ public:
   
 若要深入了解分布类及其成员，请参阅 [\<random>](../standard-library/random.md)。  
   
-有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[几何分布](http://go.microsoft.com/fwlink/LinkId=400529)。  
+有关卡方分布的详细信息，请参阅 Wolfram MathWorld 文章[几何分布](http://go.microsoft.com/fwlink/p/?linkid=400529)。  
   
 ## <a name="example"></a>示例  
   
@@ -212,7 +209,7 @@ Distribution for 100 samples:
    35 :
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
 **标头：**\<random>  
   
 **命名空间：** std  
@@ -265,8 +262,7 @@ right
   
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [\<random>](../standard-library/random.md)
-
 
 

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 092aa684cace186e3aa5ad443e6f419f10d68160
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 96bf73de31733fb10eba0156de90b5d0f196b4ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventtargetarraybegin-method"></a>EventTargetArray::Begin 方法
 支持 WRL 基础结构，不应在代码中直接使用。  
@@ -36,11 +39,11 @@ ComPtr<IUnknown>* Begin();
 ## <a name="remarks"></a>备注  
  获取事件处理程序在内部数组的第一个元素的地址。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** event.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EventTargetArray 类](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

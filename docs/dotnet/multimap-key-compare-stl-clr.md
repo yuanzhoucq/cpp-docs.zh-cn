@@ -1,42 +1,43 @@
 ---
-title: "multimap::key_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::key_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_compare 成员 [STL/CLR]"
+title: "multimap:: key_compare (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::key_compare
+dev_langs: C++
+helpviewer_keywords: key_compare member [STL/CLR]
 ms.assetid: a6b04cfa-fef9-44dc-a328-1208fd01899f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c40004bf1c413301c2e2fe77beb8a3553e6ba572
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::key_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-两个键的排序委托。  
+# <a name="multimapkeycompare-stlclr"></a>multimap::key_compare (STL/CLR)
+两个键的排序的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
-## 备注  
- 类型确定其排序关键字变量委托的同义词。  
+## <a name="remarks"></a>备注  
+ 类型为委托来决定其密钥的自变量的顺序的同义词。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multimap_key_compare.cpp   
@@ -72,19 +73,23 @@ int main()
   
 ```  
   
-  **比较\(L'a', L'a'\) \= False**  
-**比较 \(L'a，L'b\) \= true**  
-**比较\(L'b', L'a'\) \= False**  
-**比较\(L'a', L'a'\) \= False**  
-**比较\(L'a', L'b'\) \= False**  
-**比较\(L'b', L'a'\) \= True**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **命名空间:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## 请参阅  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_comp](../dotnet/multimap-key-comp-stl-clr.md)   
- [multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md)   
- [multimap::value\_compare](../dotnet/multimap-value-compare-stl-clr.md)
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/映射 >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)   
+ [multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)   
+ [multimap::value_compare (STL/CLR)](../dotnet/multimap-value-compare-stl-clr.md)

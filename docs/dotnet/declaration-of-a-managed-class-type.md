@@ -1,44 +1,47 @@
 ---
-title: "托管类类型的声明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__gc 类型"
-  - "__value 关键字"
-  - "class 关键字 [C++], CLR"
-  - "类 [C++], 托管"
-  - "interface class 关键字"
-  - "托管类"
-  - "ref 关键字 [C++]"
-  - "value 关键字 [C++]"
-  - "值类型, 声明"
+title: "托管的类类型的声明 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __gc types
+- classes [C++], managed
+- class keyword [C++], CLR
+- __value keyword
+- value types, declaring
+- value keyword [C++]
+- managed classes
+- interface class keyword
+- ref keyword [C++]
 ms.assetid: 16de9c94-91d7-492f-8ac7-f0729cc627e9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c9e9aba6d2a0485a94385be5b8712d7552261ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 托管类类型的声明
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，声明引用类类型的方式已更改。  
+# <a name="declaration-of-a-managed-class-type"></a>托管类类型的声明
+声明托管扩展中更改 c + + 为 Visual c + + 引用类类型的方法。  
   
- 在托管扩展中，引用类类型以 `__gc` 关键字开头。  在新语法中，`__gc` 关键字由两个带空格的关键字之一取代：`ref class` 或 `ref struct`。  选择 `struct` 或 `class` 表示在类型主体的初始未标记部分中声明的其成员的默认访问级别是公共的（对于 `struct`）还是私有的（对于 `class`）。  
+ 在托管扩展中，引用类类型开头为`__gc`关键字。 在新语法中，`__gc`关键字替换为两个空格分隔关键字之一：`ref class`或`ref struct`。 所选的`struct`或`class`指示公共 (有关`struct`) 或私有 (有关`class`) 类型的代码体的初始未标记节中声明其成员的默认访问级别。  
   
- 同样，在托管扩展中，值类类型以 `__value` 关键字开头。  在新语法中，`__value` 关键字由两个带空格的关键字之一取代：`value class` 或 `value struct`。  
+ 同样，在托管扩展中，值类类型开头为`__value`关键字。 在新语法中，`__value`关键字替换为两个空格分隔关键字之一：`value class`或`value struct`。  
   
- 在托管扩展中，接口类型由关键字 `__interface` 指出。  在新语法中，它由 `interface class` 取代。  
+ 接口类型，在托管扩展中，但使用关键字指定`__interface`。 在新语法中，这将替换`interface class`。  
   
- 例如，以下是托管扩展中的类声明：  
+ 例如，以下类声明在托管扩展中：  
   
 ```  
 public __gc class Block {};     // reference class  
@@ -46,7 +49,7 @@ public __value class Vector {}; // value class
 public __interface IFooBar {};  // interface class  
 ```  
   
- 其使用新语法的等效声明如下所示：  
+ 在新语法中的等效声明，如下所示：  
   
 ```  
 public ref class Block {};         // reference class  
@@ -54,43 +57,43 @@ public value class Vector {};      // value class
 public interface class IFooBar {}; // interface class  
 ```  
   
-## 指定类为抽象类  
- 在托管扩展中，您将关键字 `__abstract` 放在 `class` 关键字的前面（在 `__gc` 之前或之后），以指示该类是不完整的并且无法在程序中创建该类的对象：  
+## <a name="specifying-the-class-as-abstract"></a>指定为抽象类  
+ 在托管扩展中，你可以放置关键字`__abstract`之前`class`关键字 (之前或之后`__gc`) 以指示该类是不完整，且不能在程序中创建类的对象：  
   
 ```  
 public __gc __abstract class Shape {};  
 public __gc __abstract class Shape2D: public Shape {};  
 ```  
   
- 在新语法中，指定 `abstract` 上下文关键字在类名之后，并且在类主体、基类派生列表或分号之前。  
+ 在新语法中，你指定`abstract`以下类名，并且类主体、 基类派生列表中或分号之前的上下文关键字。  
   
 ```  
 public ref class Shape abstract {};  
 public ref class Shape2D abstract : public Shape{};  
 ```  
   
- 当然，语义的含义没有更改。  
+ 当然，语义含义不会改变。  
   
-## 指定类为密封类  
- 在托管扩展中，您将关键字 `__sealed` 放在 `class` 关键字的前面（在 `__gc` 之前或之后），以指示该类的对象无法从其他位置继承：  
+## <a name="specifying-the-class-as-sealed"></a>指定类为密封类  
+ 在托管扩展中，你可以放置关键字`__sealed`之前`class`关键字 (之前或之后`__gc`) 以指示，不能从继承类的对象：  
   
 ```  
 public __gc __sealed class String {};  
 ```  
   
- 在新语法中，指定 `sealed` 上下文关键字在类名之后，并且在类主体、基类派生列表或分号之前。  
+ 在新语法中，你指定`sealed`以下类名，并且类主体、 基类派生列表中或分号之前的上下文关键字。  
   
- 您可以既派生类又密封类。  例如，`String` 类是从 `Object` 隐式派生的。  密封类的好处是：它支持静态解析（即在编译时）通过密封的引用类对象的所有虚函数调用。  这是因为 `sealed` 说明符保证 `String` 跟踪句柄不能引用随后的派生类，该派生类可能提供正被调用的虚方法的一个重写实例。  下面是一个用新语法表示的密封类的示例：  
+ 可以派生一个类和密封它。 例如，`String`类隐式派生自`Object`。 密封类的好处是它支持的静态分辨率 (即，在编译时) 的所有虚函数调用通过密封的引用类对象。 这是因为`sealed`说明符可保证`String`跟踪句柄不能随后派生类可能会提供正在调用的虚拟方法重写实例的引用。 下面是新语法中的密封类的一个示例：  
   
 ```  
 public ref class String sealed {};  
 ```  
   
- 还可以指定类既为抽象类又为密封类 — 这是指示静态类的一个特殊情况。  它在 CLR 文档中进行了描述，如下所示：  
+ 一个还可以指定一个类这两个抽象和密封-这是一个指示静态类的特殊情况。 这是文档中所述 CLR，如下所示：  
   
- “既是 `abstract` 又是 `sealed` 的类型应仅有静态成员，并且它起到其他语言中称为命名空间的作用。”  
+ "的类型，它是同时`abstract`和`sealed`应具有仅静态成员，并用作什么某些语言中调用一个命名空间。"  
   
- 例如，以下是使用托管扩展语法的抽象密封类的声明：  
+ 例如，下面是使用托管扩展语法抽象密封类的声明：  
   
 ```  
 public __gc __sealed __abstract class State {  
@@ -103,7 +106,7 @@ private:
 };  
 ```  
   
- 而以下是转为使用新语法的此声明：  
+ 而以下是此声明转换为新的语法：  
   
 ```  
 public ref class State abstract sealed {  
@@ -116,23 +119,23 @@ private:
 };  
 ```  
   
-## CLR 继承：指定基类  
- 在 CLR 对象模型下，仅支持公共单一继承。  但是，托管扩展保留了在指定私有派生时不使用访问关键字的基类的 ISO\-C\+\+ 默认解释。  这意味着每个 CLR 继承声明为了重写默认解释而必须提供 `public` 关键字。  
+## <a name="clr-inheritance-specifying-the-base-class"></a>CLR 继承： 指定的基类  
+ 在 CLR 对象模式下支持仅公共单一继承。 但是，托管扩展保留而无需访问关键字作为指定私有派生的基类的 ISO c + + 默认解释。 这意味着，每个 CLR 继承声明必须提供`public`关键字来重写的默认解释。  
   
 ```  
 // Managed Extensions: error: defaults to private derivation  
 __gc class Derived : Base {};  
 ```  
   
- 在新语法定义中，缺少访问关键字表示 CLR 继承定义中存在公共派生。  因此，`public` 访问关键字现在为可选。  尽管这不需要对 C\+\+ 托管扩展代码进行任何修改，但出于完整性的考虑，我还是在这里列出了此更改。  
+ 在新的语法定义中，没有访问关键字指示 CLR 继承定义中的公共派生。 因此，`public`访问关键字现在是可选的。 尽管这不要求 c + + 代码的托管扩展的任何修改，我将列出出于完整性考虑此更改。  
   
 ```  
 // New syntax: ok: defaults to public derivation  
 ref class Derived : Base{};  
 ```  
   
-## 请参阅  
- [托管类型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)   
+## <a name="see-also"></a>请参阅  
+ [托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
+ [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)   
  [abstract](../windows/abstract-cpp-component-extensions.md)   
  [sealed](../windows/sealed-cpp-component-extensions.md)

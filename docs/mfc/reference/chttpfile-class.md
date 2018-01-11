@@ -37,11 +37,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 603d20c7083a65dac8944c7891d36702043aa6ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e9af23bb74ba8e96f29a5b7cc4139d2932df8c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chttpfile-class"></a>CHttpFile 类
 提供请求和读取 HTTP 服务器上文件的功能。  
@@ -90,7 +91,7 @@ class CHttpFile : public CInternetFile
   
  `CHttpFile`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxinet.h  
   
 ##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
@@ -298,7 +299,7 @@ BOOL QueryInfo(
  对引用[CString](../../atl-mfc-shared/reference/cstringt-class.md)接收返回的信息的对象。  
   
  `dwIndex`  
- 一个索引值。 请参阅`lpdwIndex`。  
+ 一个索引值。 请参阅 `lpdwIndex`。  
   
  *pSysTime*  
  一个指向 Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)结构。  
@@ -488,7 +489,7 @@ BOOL SendRequestEx(
   
  [!code-cpp[NVC_MFCWinInet#9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)   

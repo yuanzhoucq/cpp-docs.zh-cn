@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f0690f06ac51288605ae4bdd7f12b977f77cf58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e0abd7aa296a16e54e2ec5e5ce7b2c49a93c45e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24   private 子句的示例
 `private`子句 ([部分 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)第 25 页上) 的并行区域仅会影响区域的词法范围，不能为区域的动态范围。  因此，在下面的示例中，使用该变量的任何内`for`例程中的循环*f*的私有副本是指，而在使用情况例程*g*引用全局。  

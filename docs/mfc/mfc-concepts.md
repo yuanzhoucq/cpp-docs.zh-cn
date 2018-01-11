@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 748b28288df33ab61674dc0cf4044db28c263d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d949486867200c0349d52805a94b6cddf48d357f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-concepts"></a>MFC 概念
 本部分提供概念性和基于任务的主题来帮助你使用 Microsoft 基础类 (MFC) 库编程。  

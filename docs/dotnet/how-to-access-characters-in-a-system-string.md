@@ -1,37 +1,40 @@
 ---
-title: "如何：访问 System::String 中的字符 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字符 [C++], 在 System::String 中访问"
-  - "示例 [C++], 字符串"
-  - "字符串 [C++], 访问字符"
+title: "如何： 访问 system:: string 中的字符 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：访问 System::String 中的字符
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以访问 <xref:System.String> 对象的字符，以实现对接受 `wchar_t*` 字符串的非托管函数的高性能调用。  该方法将生成指向 <xref:System.String> 对象的第一个字符的内部指针。  可直接操作此指针，也可以将其固定然后再传递给需要普通 `wchar_t` 字符串的函数。  
+# <a name="how-to-access-characters-in-a-systemstring"></a>如何：访问 System::String 中的字符
+你可以访问的字符<xref:System.String>对象到非托管的高性能调用函数采用`wchar_t*`字符串。 该方法生成的第一个字符的内部指针<xref:System.String>对象。 此指针可以直接操作或固定和传递给需要一个普通函数`wchar_t`字符串。  
   
-## 示例  
- `PtrToStringChars` 返回 <xref:System.Char>，后者是一个内部指针（也称为 `byref`）。  因此，将对它进行垃圾回收。  除非要将此指针传递给本机函数，否则不必固定它。  
+## <a name="example"></a>示例  
+ `PtrToStringChars`返回<xref:System.Char>，这是内部指针 (也称为`byref`)。 在这种情况下，它是进行垃圾回收。 你无需将固定此指针，除非你要将其传递给本机函数。  
   
- 考虑下列代码。由于 `ppchar` 是内部指针，因此不需要进行固定，并且如果垃圾回收器移动该指针所指向的字符串，则它也将更新 `ppchar`。  不使用 [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)，代码将正常运行，并且不会因为固定而对性能造成影响。  
+ 考虑下列代码。  因为不需要固定`ppchar`内部指针，并且如果垃圾回收器移动它指向的字符串，它也将更新`ppchar`。 而无需[pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md)，代码将工作，并且不具有潜在的性能问题所致固定。  
   
- 如果要将 `ppchar`  传递给本机函数，则它必须是固定指针；垃圾回收器将不能更新非托管堆栈帧上的任何指针。  
+ 如果你通过`ppchar`给本机函数，则它必须是钉住指针; 垃圾回收器将不能更新任何指针的非托管的堆栈帧上。  
   
 ```  
 // PtrToStringChars.cpp  
@@ -49,9 +52,12 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## 示例  
- 此示例演示需要固定的情况。  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>示例  
+ 此示例显示了需要固定的位置。  
   
 ```  
 // PtrToStringChars_2.cpp  
@@ -74,9 +80,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## 示例  
- 内部指针具有本机 C\+\+ 指针的所有属性。  例如，可以使用它来浏览链接数据结构，并且只使用一个指针便可执行插入和删除操作：  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>示例  
+ 内部指针具有本机 c + + 指针的所有的属性。 例如，你可以使用它来指导的链接的数据结构并执行插入和删除只使用一个指针：  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -98,5 +107,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

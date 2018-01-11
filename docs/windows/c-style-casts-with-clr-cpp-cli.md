@@ -1,48 +1,49 @@
 ---
-title: "C 风格的强制转换和 /clr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C 风格的强制转换和 /clr"
+title: "与 clr 的 C 样式强制转换 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e529a40f8eb876791f49559d3970696fdece489d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# C 风格的强制转换和 /clr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="c-style-casts-with-clr-ccli"></a>C 风格的强制转换和 /clr (C++/CLI)
 以下主题仅适用于公共语言运行时。  
   
- 在使用与 CLR 类型，编译器尝试映射转换为 C 样式的顺序列出的，其中的一种转换：  
+ 当与 CLR 类型一起使用，编译器将尝试映射 C 样式强制转换为一个强制转换下列，按以下顺序：  
   
-1.  const\_cast  
+1.  const_cast  
   
-2.  safe\_cast  
+2.  safe_cast  
   
-3.  safe\_cast 以及 const\_cast  
+3.  safe_cast 加上 const_cast  
   
-4.  static\_cast  
+4.  static_cast  
   
-5.  static\_cast 以及 const\_cast  
+5.  static_cast 加上 const_cast  
   
- 如果转换都没有有效，上面列出，因此，如果表达式的类型和对象类型都是 CLR 引用类型，C 样式为运行时检查 \(castclass MSIL 指令转换\) 的映射。  否则，C. 式转换考虑无效编译器问题和错误。  
+ 如果强制转换上面列出的所有均有效，以及如果表达式的类型和目标类型是 CLR 引用类型，C 样式强制转换将映射到运行时检查 （castclass MSIL 指令）。 否则为 C 样式强制转换将被视为无效，编译器会发出错误。  
   
-## 备注  
- 不建议用 C 式转换。  当用编译时，请使用 [\/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)[safe\_cast](../windows/safe-cast-cpp-component-extensions.md)。  
+## <a name="remarks"></a>备注  
+ 不建议 C 样式强制转换。 使用编译时[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)，使用[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
   
- 下面的示例演示映射到 C. `const_cast`的样式转换。  
+ 下面的示例演示 C 样式强制转换映射到`const_cast`。  
   
 ```  
 // cstyle_casts_1.cpp  
@@ -56,7 +57,7 @@ int main() {
 }  
 ```  
   
- 下面的示例演示映射到 C. `safe_cast`的样式转换。  
+ 下面的示例演示 C 样式强制转换映射到`safe_cast`。  
   
 ```  
 // cstyle_casts_2.cpp  
@@ -68,7 +69,7 @@ int main() {
 }  
 ```  
   
- 下面的示例演示映射到 C. `safe_cast` plus `const_cast`的样式转换。  
+ 下面的示例演示 C 样式强制转换映射到`safe_cast`加上`const_cast`。  
   
 ```  
 // cstyle_casts_3.cpp  
@@ -89,7 +90,7 @@ int main() {
 }  
 ```  
   
- 下面的示例演示映射到 C. `static_cast`的样式转换。  
+ 下面的示例演示 C 样式强制转换映射到`static_cast`。  
   
 ```  
 // cstyle_casts_4.cpp  
@@ -110,7 +111,7 @@ int main() {
 }  
 ```  
   
- 下面的示例演示映射到 C. `static_cast` plus `const_cast`的样式转换。  
+ 下面的示例演示 C 样式强制转换映射到`static_cast`加上`const_cast`。  
   
 ```  
 // cstyle_casts_5.cpp  
@@ -131,7 +132,7 @@ int main() {
 }  
 ```  
   
- 下面的示例演示映射到 C. 运行时检查的项转换。  
+ 下面的示例演示 C 样式强制转换映射到运行时检查。  
   
 ```  
 // cstyle_casts_6.cpp  
@@ -152,7 +153,7 @@ int main() {
 }  
 ```  
   
- 下面的示例演示一种无效 C 样式转换，会导致编译器发出错误。  
+ 下面的示例显示无效 C 样式强制转换，这将导致编译器发出错误。  
   
 ```  
 // cstyle_casts_7.cpp  
@@ -164,8 +165,8 @@ int main() {
 }  
 ```  
   
-## 要求  
- 编译器选项：**\/clr**  
+## <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

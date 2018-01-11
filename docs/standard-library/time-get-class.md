@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeget-class"></a>time_get 类
 此模板类描述可用作区域设置 facet 的对象，此对象用于控制 `CharType` 类型序列到时间值的转换。  
@@ -108,7 +109,7 @@ class time_get : public time_base;
 |[get_weekday](#get_weekday)|分析作为周日期名称的字符串。|  
 |[get_year](#get_year)|分析作为年份名称的字符串。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
@@ -996,7 +997,7 @@ explicit time_get(size_t refs = 0);
   
  构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`) 初始化其基对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<locale>](../standard-library/locale.md)   
  [time_base 类](../standard-library/time-base-class.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

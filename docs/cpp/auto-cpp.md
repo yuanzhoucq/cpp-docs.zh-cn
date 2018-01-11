@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66c4b9b5e9ef5226e1d2bb0a5fbaee296817c22d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6721aa5860f23025b8b6c762cc7e5f4d6178228d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-c"></a>自动 （c + +）
 从其初始化表达式中推导声明的变量的类型。  
@@ -217,7 +218,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto 关键字](../cpp/auto-keyword.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [/Zc: auto （推导变量类型）](../build/reference/zc-auto-deduce-variable-type.md)   

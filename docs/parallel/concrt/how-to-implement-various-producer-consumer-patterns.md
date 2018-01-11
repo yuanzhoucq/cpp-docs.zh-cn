@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4daf7005eabee7f6cf74144c08c8d8d8aabef232
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0efafe17cd524c241e709d3c3c59233a130cdf95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>如何：实现各种制造者-使用者模式
 本主题介绍如何在你的应用程序中实现制造者-使用者模式。 在此模式下，制造者向消息块发送消息，使用者从该块读取消息。  
@@ -70,7 +71,7 @@ Current quote is 25.89.
   
  **cl.exe /EHsc 制造者-consumer.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)   
  [异步代理](../../parallel/concrt/asynchronous-agents.md)   
  [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)   

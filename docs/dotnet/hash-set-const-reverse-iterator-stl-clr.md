@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 24671a6cb24356bf39b5c16704a6d634a5346751
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 115c189893e998a98c5f695fb579d52e3f5ccd60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetconstreverseiterator-stlclr"></a>hash_set::const_reverse_iterator (STL/CLR)
 受控序列的常量反向迭代器的类型...  
@@ -62,11 +65,11 @@ int main()
 c b a  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::reverse_iterator (STL/CLR)](../dotnet/hash-set-reverse-iterator-stl-clr.md)

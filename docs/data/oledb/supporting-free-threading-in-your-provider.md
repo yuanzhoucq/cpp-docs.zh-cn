@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d062a17fd71d53451aa8de3aa7d498f8a5ec68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14bd61bc4f319a50abdbf76d7f6e60e511e57312
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>在提供程序中支持自由线程处理
 所有 OLE DB 提供程序类都是线程安全的并相应地设置注册表项。 它是性能的一个好办法支持自由线程处理有助于提供高级别的在多用户情况下。 为了帮助保持你的提供商线程安全，必须验证你的代码被正确模块。 无论何时编写或存储数据，你必须阻止与临界区的访问权限。  
@@ -50,5 +53,5 @@ HRESULT MyObject::MyMethod(void)
   
  你还必须验证你替代任何方法 (如`Execute`) 都是线程安全。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

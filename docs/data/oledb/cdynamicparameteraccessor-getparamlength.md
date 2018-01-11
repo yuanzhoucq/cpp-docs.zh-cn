@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 765e46cb0697f9cf230211b233d93556e661aa54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1fe89c4734102cbd9f5928642092f2bca41db0dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicparameteraccessorgetparamlength"></a>CDynamicParameterAccessor::GetParamLength
 检索存储在缓冲区中的指定参数的长度。  
@@ -52,8 +55,8 @@ DBLENGTH* GetParamLength(
 ## <a name="remarks"></a>备注  
  第一重写返回**true**成功或**false**失败。 第二个重写指向包含参数的长度的内存。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicParameterAccessor 类](../../data/oledb/cdynamicparameteraccessor-class.md)

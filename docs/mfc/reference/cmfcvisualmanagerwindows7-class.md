@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c225e5f34b92e9a6e29c3cb15168376a04cdc425
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96168e569ff2207e43663f50989eb0686d3d52a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 类
 `CMFCVisualManagerWindows7` ，应用程序的外观[!INCLUDE[win7](../../build/includes/win7_md.md)]应用程序。  
@@ -119,7 +120,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  `CMFCVisualManagerWindows7`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxvisualmanagerwindows7.h  
   
 ##  <a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
@@ -191,7 +192,7 @@ virtual void OnFillMenuImageRect(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)   

@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 56f73aec78af0fe34d8c3881911a6ae1d7f26501
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>如何：检索自启动以来经过的时间 (C++/CLI)
 下面的代码示例演示如何确定滴答计数，或启动 Windows 后经过的毫秒数。 此值存储在<xref:System.Environment.TickCount%2A?displayProperty=fullName>成员，因为它是一个 32 位值，将重置为零大约每 24.9 天。  
@@ -53,6 +56,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

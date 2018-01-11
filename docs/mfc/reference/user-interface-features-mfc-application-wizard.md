@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78bc0d034c7f4e3b5c34596ee83de1b68d8d9173
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 应用程序向导的用户界面功能
 本主题说明了可用于指定你的应用程序的外观的选项。 用户界面功能可用于你的项目取决于应用程序中指定的类型[应用程序类型、 MFC 应用程序向导](../../mfc/reference/application-type-mfc-application-wizard.md)MFC 应用程序向导页。 例如，如果你创建单文档界面应用程序，则无法添加子框架样式。  
@@ -64,6 +65,6 @@ ms.lasthandoff: 10/24/2017
  **对话框的标题**  
  有关[CDialog 类](../../mfc/reference/cdialog-class.md)-基于应用程序，此标题显示在对话框中的标题栏中。 若要编辑此字段，必须首先选择**基于对话框**选项下**应用程序类型**。 有关详细信息，请参阅[应用程序类型、 MFC 应用程序向导](../../mfc/reference/application-type-mfc-application-wizard.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 应用程序向导](../../mfc/reference/mfc-application-wizard.md)
 

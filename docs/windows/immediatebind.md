@@ -1,32 +1,33 @@
 ---
-title: "immediatebind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.immediatebind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "immediatebind attribute"
+title: "immediatebind |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.immediatebind
+dev_langs: C++
+helpviewer_keywords: immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 31dddbbb205715e46de5d3382923ef4d73261b53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# immediatebind
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示该数据库将立即得到通知到数据对象属性的任何更改。  
+# <a name="immediatebind"></a>immediatebind
+指示数据库将立即收到通知的数据绑定对象的属性的所有更改。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,15 +35,15 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- **immediatebind** C\+\+ 特性具有与 [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Immediatebind** c + + 属性具有相同的功能[immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) MIDL 特性。  
   
-## 示例  
- 为的示例演示如何参见 [可绑定](../windows/bindable.md) 使用 **immediatebind**。  
+## <a name="example"></a>示例  
+ 请参阅[可绑定](../windows/bindable.md)以举例说明如何使用**immediatebind**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -51,12 +52,11 @@ caps.handback.revision: 9
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

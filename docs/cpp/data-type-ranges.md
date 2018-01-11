@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>数据类型范围
 Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。  
@@ -98,7 +99,7 @@ Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。
 |long long|8|无（与 __int64 等效）|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|  
 |unsigned long long|8|无（与无符号的 __int64 等效）|0 到 18,446,744,073,709,551,615|  
 |enum|varies|无| |  
-|浮动|4|无|3.4E +/- 38（7 位数）|  
+|float|4|无|3.4E +/- 38（7 位数）|  
 |double|8|无|1.7E +/- 308（15 位数）|  
 |long double|与 double 相同|无|与 double 相同|  
 |wchar_t|2|__wchar_t|0 到 65,535|  
@@ -115,6 +116,6 @@ Visual C++ 32 位和 64 位编译器可识别本文后面的表中的类型。
   
  枚举类型的范围因语言上下文和指定的编译器标志而异。 有关详细信息，请参阅 [C 枚举声明](../c-language/c-enumeration-declarations.md) 和 [枚举](../cpp/enumerations-cpp.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   
  [基本类型](../cpp/fundamental-types-cpp.md)

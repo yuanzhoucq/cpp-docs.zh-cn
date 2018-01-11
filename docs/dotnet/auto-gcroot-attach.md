@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 776d504af3f2b657629604323670fd59d0bb18c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c244e9fde20498c5d688dbebbc2c35294164cf11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 附加`auto_gcroot`到的对象。  
@@ -118,12 +121,12 @@ Hello from fourth A!
 in ClassA destructor:fourth  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::release](../dotnet/auto-gcroot-release.md)

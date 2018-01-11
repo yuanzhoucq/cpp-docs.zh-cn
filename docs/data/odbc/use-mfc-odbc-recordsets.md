@@ -1,67 +1,70 @@
 ---
-title: "使用 MFC ODBC 记录集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 记录集"
-  - "记录集, MFC ODBC"
+title: "使用 MFC ODBC 记录集 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, MFC ODBC
+- ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0644d1c08b73442f07585c359f29dfeeee886d84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 MFC ODBC 记录集
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-这些主题讲解如何通过 MFC 使用 ODBC 记录集。  
+# <a name="use-mfc-odbc-recordsets"></a>使用 MFC ODBC 记录集
+这些主题说明如何使用通过 MFC ODBC 记录集。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
   
-### 常规记录集任务  
+### <a name="general-recordset-tasks"></a>记录集的常规任务  
   
 -   [选择 ODBC 记录集类型](../../data/odbc/recordset-odbc.md)  
   
 -   [再次查询记录集](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [为表声明记录集类](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
+-   [声明表的记录集类](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
   
--   [为预定义查询声明记录集类](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
+-   [声明预定义的查询的记录集类](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
-### 记录集设计和实现  
+### <a name="recordset-design-and-implementation"></a>记录集的设计和实现  
   
--   [了解记录字段交换 \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [了解有关记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [在数据库和记录对象之间交换数据](../../data/odbc/record-field-exchange-using-rfx.md)  
+-   [数据库和记录集对象之间交换数据](../../data/odbc/record-field-exchange-using-rfx.md)  
   
--   [自定义由向导产生的记录集代码](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
+-   [自定义向导所生成的记录集代码](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
   
--   [使用记录字段交换 \(RFX\) 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
+-   [使用记录字段交换 (RFX) 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
   
-### 记录集的性能和便利  
+### <a name="recordset-performance-and-convenience"></a>记录集的性能和方便性  
   
--   [在记录集中批量添加记录](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+-   [记录的记录集的批量添加记录](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
--   [在记录集中筛选记录](../../data/odbc/recordset-filtering-records-odbc.md)  
+-   [在记录集中的筛选器记录](../../data/odbc/recordset-filtering-records-odbc.md)  
   
-### 记录集操作  
+### <a name="recordset-operations"></a>记录集操作  
   
--   [在记录集中批量添加记录](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+-   [记录的记录集的批量添加记录](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
 -   [再次查询记录集](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [在记录集中筛选记录](../../data/odbc/recordset-filtering-records-odbc.md)  
+-   [在记录集中的筛选器记录](../../data/odbc/recordset-filtering-records-odbc.md)  
   
--   [对记录集中的记录排序](../../data/odbc/recordset-sorting-records-odbc.md)  
+-   [在记录集中对记录进行排序](../../data/odbc/recordset-sorting-records-odbc.md)  
   
 -   [参数化记录集](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
@@ -69,21 +72,21 @@ caps.handback.revision: 8
   
 -   [执行与记录集的联接](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
--   [锁定记录集中的记录](../../data/odbc/recordset-locking-records-odbc.md)  
+-   [锁定记录集中的记录集](../../data/odbc/recordset-locking-records-odbc.md)  
   
--   [在记录集中使用大数据项](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
+-   [使用较大的数据在记录集中的项](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
--   [获取记录集的 SUM 和其他聚合结果](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
+-   [获取 Sum 及其他聚合结果在记录集中](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### 记录集选择和 SQL  
+### <a name="recordset-selection-and-sql"></a>记录集选择和 SQL  
   
 -   [从 ODBC 数据源选择记录](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
--   [为记录集自定义 SQL 字符串](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)  
+-   [自定义记录集的 SQL 字符串](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
-### 记录集的动态绑定  
+### <a name="dynamic-binding-of-recordsets"></a>动态绑定的记录集  
   
--   [在运行时动态绑定记录集中的数据列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
+-   [在运行时动态在记录集中绑定数据列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
-## 请参阅  
- [开放式数据库连接 \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>请参阅  
+ [开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bdda622f27dab68e50e58c02ce31c97266ab86f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 912262c4f1ba85c181bb30ee5d6f38a0defe5d5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 类
 实现将常规 `COleDocument` 服务器接入完整 DocObject 服务器所需的其他 OLE 接口： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
@@ -84,7 +85,7 @@ class CDocObjectServer : public CCmdTarget
   
  `CDocObjectServer`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdocob.h  
   
 ##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
@@ -163,7 +164,7 @@ virtual void OnSaveViewState(CArchive& ar);
   
  你可以使用`OnSaveViewState`来存储持久性信息特定于你的视图状态。 如果你重写`OnSaveViewState`存储信息，你将想要重写`OnApplyViewState`读取该信息并将其应用于您的视图中，新激活时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDocObjectServerItem 类](../../mfc/reference/cdocobjectserveritem-class.md)

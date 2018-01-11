@@ -125,11 +125,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46ca0fbb4b076fe8cf9dab4d986da487b16cc976
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a52a2add3306aaf684f9a48a06d1add229205233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 类
 ID2D1RenderTarget 包装器。  
@@ -217,7 +218,7 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|指向 CD2DResource 对象的指针的列表。|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|指向 ID2D1RenderTarget 对象的指针。|  
@@ -228,7 +229,7 @@ class CRenderTarget : public CObject;
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="_dtorcrendertarget"></a>CRenderTarget:: ~ CRenderTarget  
@@ -1044,5 +1045,5 @@ BOOL VerifyResource(CD2DResource* pResource);
 ### <a name="return-value"></a>返回值  
  TRUE 是对象如果有效，则为否则为 FALSE。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

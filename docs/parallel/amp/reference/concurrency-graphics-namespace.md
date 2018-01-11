@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空间
 图形命名空间提供的类型和用于图形编程的函数。  
@@ -45,7 +46,7 @@ namespace graphics;
   
 ### <a name="enumerations"></a>枚举  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[address_mode 枚举](concurrency-graphics-namespace-enums.md#address_mode)。|指定地址模式支持纹理采样。|  
 |[filter_mode 枚举](concurrency-graphics-namespace-enums.md#filter_mode)|指定支持纹理采样的筛选器模式。|  
@@ -86,10 +87,10 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|已重载。 将源纹理的内容复制到目标主机缓冲区。|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|已重载。 以异步方式将源纹理的内容复制到目标主机缓冲区。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_graphics.h  
   
  **命名空间：** 并发  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)

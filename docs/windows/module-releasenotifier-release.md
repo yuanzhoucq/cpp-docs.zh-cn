@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d4caad9c3604cb90761f0cec56c2542ac469f53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 555d3168a14538aa106a76e76286f627a6401bf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
 如果对象是使用 `true` 的参数构造的，则删除当前 Module::ReleaseNotifier 对象。  
@@ -29,10 +32,10 @@ ms.lasthandoff: 10/24/2017
 void Release() throw();  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Module::ReleaseNotifier 类](../windows/module-releasenotifier-class.md)

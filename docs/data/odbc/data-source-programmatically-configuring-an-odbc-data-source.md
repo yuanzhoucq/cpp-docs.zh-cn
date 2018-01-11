@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd401acedbdfd8928ab3b2b085ce02595bdaa13b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>数据源：以编程方式配置 ODBC 数据源
 本主题说明如何以编程方式配置开放式数据库连接 (ODBC) 数据源名称。 这可以灵活地访问数据而不强制用户显式使用 ODBC 管理器或其他程序以指定数据源的名称。  
@@ -115,9 +118,9 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 3.  选择的驱动程序名称。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
  ODBC 管理器在显示时用于创建该特定的驱动程序的新数据源的信息，请单击**帮助**。 这将打开该特定的驱动程序，其中通常包含有关使用驱动程序的重要信息的帮助文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)

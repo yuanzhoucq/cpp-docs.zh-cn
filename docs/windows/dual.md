@@ -1,32 +1,33 @@
 ---
-title: "dual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dual attribute"
+title: "双 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dual
+dev_langs: C++
+helpviewer_keywords: dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e5ea633ca0d6e9f654e5462f8cebded18d9b9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# dual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 .idl 文件中放置一个接口该接口。  
+# <a name="dual"></a>dual
+将接口置于.idl 文件中作为双重接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 备注  
- 当 **双** C\+\+ 特性前面接口时，它将在生成的 .idl 文件错误引起接口放置在库中块。  
+## <a name="remarks"></a>备注  
+ 当**双重**c + + 特性之前接口，这会导致要放置在生成的.idl 文件中的库块内部的接口。  
   
-## 示例  
- 下面的代码是特性块在接口定义之前使用 **双** :  
+## <a name="example"></a>示例  
+ 下面的代码是使用特性块**双重**接口定义的前面：  
   
 ```  
 // cpp_attr_ref_dual.cpp  
@@ -72,9 +73,9 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -83,13 +84,12 @@ __interface IStatic : IDispatch
 |**必需的特性**|无|  
 |**无效的特性**|**dispinterface**|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [custom](../windows/custom-cpp.md)   
- [dispinterface](../windows/dispinterface.md)   
- [object](../windows/object-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [按用法分的特性](../windows/attributes-by-usage.md)   
+ [自定义](../windows/custom-cpp.md)   
+ [调度接口](../windows/dispinterface.md)   
+ [对象](../windows/object-cpp.md)   
+ [__interface](../cpp/interface.md)   

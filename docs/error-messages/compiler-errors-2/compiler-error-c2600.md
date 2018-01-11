@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2600
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2600
+f1_keywords: C2600
+dev_langs: C++
+helpviewer_keywords: C2600
 ms.assetid: cce11943-ea01-4bee-a7b0-b67d24ec6493
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 407598a68df37aa130ce26e4f02e98de975ab527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 1fe5383e17212b21c11394c6b987e92aacbe637e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2600"></a>编译器错误 C2600
 function： 不能定义 （必须在声明类第一次） 的编译器生成的特殊成员函数  

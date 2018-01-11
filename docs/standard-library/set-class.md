@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-class"></a>set 类
 C++ 标准库容器类集用于存储和检索集合中的数据，此集合中包含的元素值是唯一的，并且用作数据自动排序所依据的键值。 不能直接更改集中元素的值。 必须先删除旧值，才能插入具有新值的元素。  
@@ -166,7 +167,7 @@ class set
 |[const_reference](#const_reference)|一种类型，此类型提供对存储在集中的 `const` 元素的引用（用于读取和执行 `const` 操作）。|  
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，此类型提供可读取集中的任何 `const` 元素的双向迭代器。|  
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示集中迭代器指向的元素间范围内的元素数量。|  
-|[iterator](#iterator)|一种类型，此类型提供可读取或修改集中的任何元素的双向迭代器。|  
+|[Iterator](#iterator)|一种类型，此类型提供可读取或修改集中的任何元素的双向迭代器。|  
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定集中两个元素的相对顺序。|  
 |[key_type](#key_type)|此类型描述当作为排序键时存储为集中元素的对象。|  
 |[pointer](#pointer)|一种类型，此类型提供指向集中元素的指针。|  
@@ -212,7 +213,7 @@ class set
 |-|-|  
 |[operator=](#op_eq)|将一个集中的元素替换为另一个集的副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<set>  
   
  **命名空间：** std  
@@ -301,7 +302,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>备注  
  由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。  
   
- 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在该示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的任何类型的可修改（非 `const`）的容器。  
+ 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将 `Container` 视为支持 `begin()` 和 `cbegin()` 的可修改的任何类型的（非- `const`）容器。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -2375,9 +2376,9 @@ int main( )
 The set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<set>](../standard-library/set.md)   
  [容器](../cpp/containers-modern-cpp.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

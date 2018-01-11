@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1c05eed9e49a24ed17beeec8ffeb54ecdad5474a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd092d58605bdc9980e90d9d769246278a1bd0ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformenum-class"></a>Platform::Enum 类
 一个值类，表示一组命名常量。  
@@ -36,7 +37,7 @@ public class Enum
 ### <a name="remarks"></a>备注  
  使用 [public enum class](../windows/enum-class-cpp-component-extensions.md) 关键字创建枚举。 不要显式使用 Platform::Enum 类型。 有关更多信息，请参见 [枚举](../cppcx/enums-c-cx.md)中定义的接口的私有 C++ 特定实现。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -45,5 +46,5 @@ public class Enum
   
  **元数据：** platform.winmd  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台命名空间](../cppcx/platform-namespace-c-cx.md)

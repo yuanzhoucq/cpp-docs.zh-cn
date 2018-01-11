@@ -1,67 +1,69 @@
 ---
-title: "CDBErrorInfo::GetErrorRecords | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBErrorInfo.GetErrorRecords"
-  - "ATL.CDBErrorInfo.GetErrorRecords"
-  - "ATL::CDBErrorInfo::GetErrorRecords"
-  - "GetErrorRecords"
-  - "CDBErrorInfo::GetErrorRecords"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorRecords 方法"
+title: "Cdberrorinfo:: Geterrorrecords |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBErrorInfo.GetErrorRecords
+- ATL.CDBErrorInfo.GetErrorRecords
+- ATL::CDBErrorInfo::GetErrorRecords
+- GetErrorRecords
+- CDBErrorInfo::GetErrorRecords
+dev_langs: C++
+helpviewer_keywords: GetErrorRecords method
 ms.assetid: 07746774-bcca-4833-8f55-a619e9777c17
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 560477035eee06e80b56b428e3c11d8c91f2b749
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDBErrorInfo::GetErrorRecords
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-获取指定的对象的错误的记录。  
+# <a name="cdberrorinfogeterrorrecords"></a>CDBErrorInfo::GetErrorRecords
+获取指定对象的错误记录。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT GetErrorRecords(   
-   IUnknown* pUnk,   
-   const IID& iid,   
-   ULONG* pcRecords    
+      HRESULT GetErrorRecords(   
+   IUnknown* pUnk,   
+   const IID& iid,   
+   ULONG* pcRecords    
 ) throw( );  
-HRESULT GetErrorRecords(   
-   ULONG* pcRecords    
+HRESULT GetErrorRecords(   
+   ULONG* pcRecords    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *pUnk*  
- \[in\] 连接到来获得错误记录的对象。  
+ [in]要为其获取错误记录对象的接口。  
   
  `iid`  
- \[in\] 接口的 IID 与错误。  
+ [in]与错误关联的接口的 IID。  
   
  *pcRecords*  
- \[out\] 对 \(基于\) 计数的指针错误的记录。  
+ [out]（从 1 开始） 的错误记录计数指向的指针。  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- 使用函数的第一个形式您是否希望签请连接获取错误信息。  否则，使用第二种形式。  
+## <a name="remarks"></a>备注  
+ 如果你想要检查哪个接口，获取从的错误信息，请使用该函数的第一种形式。 否则，请使用第二种形式。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDBErrorInfo 类](../../data/oledb/cdberrorinfo-class.md)

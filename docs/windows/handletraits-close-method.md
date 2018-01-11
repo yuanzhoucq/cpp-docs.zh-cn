@@ -1,32 +1,33 @@
 ---
-title: "HANDLETraits::Close 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close 方法"
+title: "Handletraits:: Close 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 3c631a7c-ccce-472a-b1da-aab8fa815c13
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9af70c2bc7b4c0829e7455d6389359618afb7232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# HANDLETraits::Close 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="handletraitsclose-method"></a>HANDLETraits::Close 方法
 关闭指定的句柄。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 inline static bool Close(  
@@ -34,17 +35,17 @@ inline static bool Close(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `h`  
- 关闭的句柄。  
+ 要关闭的句柄。  
   
-## 返回值  
- **true**，如果处理 `h` 成功关闭；否则，返回 **false**。  
+## <a name="return-value"></a>返回值  
+ **true**如果处理`h`关闭成功; 否则为**false**。  
   
-## 要求  
- **标头：**corewrappers.h  
+## <a name="requirements"></a>惠?  
+ **标头：** corewrappers.h  
   
- Microsoft::WRL::Wrappers::HandleTraits **命名空间:**  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [HANDLETraits 结构](../windows/handletraits-structure.md)

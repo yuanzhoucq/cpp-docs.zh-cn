@@ -1,32 +1,35 @@
 ---
-title: "遍历简单行集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "访问器 [C++], 行集合"
-  - "数据访问 [C++], 行集合"
-  - "OLE DB 使用者 [C++], 数据库特性"
-  - "行集合 [C++], 访问"
-  - "简单行集合"
+title: "遍历简单行集合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], rowsets
+- rowsets [C++], accessing
+- simple rowsets
+- OLE DB consumers [C++], database attributes
+- accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9f792e7a65a55cb63fb275d4d606a743e00a0e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 遍历简单行集合
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例显示一种不涉及命令的快速而简便的数据库访问方法。  以下 ATL 项目中的使用者代码使用用于 ODBC 的 Microsoft OLE DB 提供程序从 Microsoft Access 数据库中称为 *Artists* 的表中检索记录。  此代码根据用户记录类 `CArtists` 用访问器创建 [CTable](../../data/oledb/ctable-class.md) 表对象。  它打开一个连接，在此连接上打开会话，然后在此会话上打开表。  
+# <a name="traversing-a-simple-rowset"></a>遍历简单行集合
+下面的示例演示不涉及命令的快速而简便的数据库访问。 下面的使用者代码，在 ATL 项目中，从名为的表中检索记录*艺术家*Microsoft Access 数据库使用 Microsoft OLE DB Provider for ODBC。 该代码创建[CTable](../../data/oledb/ctable-class.md)使用访问器的表对象基于用户记录类`CArtists`。 打开连接，打开连接上, 一个会话，并在会话上打开表。  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- 用户记录 `CArtists` 类似于：  
+ 用户记录中， `CArtists`，如下所示：  
   
 ```  
 class CArtists  
@@ -70,5 +73,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

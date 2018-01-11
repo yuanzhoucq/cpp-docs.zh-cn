@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ceebaf35c9e6bb2c5be9b8b1a33f5f943e25274
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a78e7b9fd8f9c67f14a4bb51088866785d372cca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>处理扩展组合框控件中的通知消息
 当用户与扩展组合框进行交互时，控件 (`CComboBoxEx`) 会将通知消息发送到其父窗口（通常是一个视图或对话框对象）。 如果您要在响应中做些什么，请处理这些消息。 例如，当用户激活下拉列表或单击该控件的编辑框时，将发送 **CBEN_BEGINEDIT** 通知。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 -   **CBEN_INSERTITEM** 在控件中插入新项后发送。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CComboBoxEx](../mfc/using-ccomboboxex.md)   
  [控件](../mfc/controls-mfc.md)
 

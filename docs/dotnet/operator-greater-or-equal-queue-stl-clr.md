@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cba51a22d5e9f5656dad7480d5c6d28f6d4ca271
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 11adea15776b4f1291e4d460416654cf42c640ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-queue-stlclr"></a>运算符&gt;= （队列） (STL/CLR)
 队列大于以下值或相等比较。  
@@ -90,12 +93,12 @@ int main()
 [a b c] >= [a b d] is False  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [运算符 = = （队列） (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
  [运算符 ！ = （队列） (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ec28ce5e577fe4d1e766934095d22a7e64a6a3da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 594acadeedad06e9720180c38bd0bcd657391879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-indices"></a>字节索引
 使用以下提示：  
@@ -43,6 +44,6 @@ ms.lasthandoff: 10/24/2017
   
      它正确地索引前导字节，因此到`character`。 `_mbclen`函数将确定字符 （1 或 2 字节） 的大小。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MBCS 编程提示](../text/mbcs-programming-tips.md)   
  [字符串中的最后一个字符](../text/last-character-in-a-string.md)

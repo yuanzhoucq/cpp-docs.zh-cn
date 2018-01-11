@@ -1,32 +1,33 @@
 ---
-title: "Make 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Make"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make 函数"
+title: "Make 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Make
+dev_langs: C++
+helpviewer_keywords: Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aac2a50e3c50941d607dea32c9f7c9eecde8e589
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Make 函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-初始化指定的 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]。  使用此函数实例化在同一模块中定义的组件。  
+# <a name="make-function"></a>Make 函数
+初始化指定的 Windows 运行时类。 使用此函数来实例化同一个模块中定义的组件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -170,74 +171,74 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 从 `WRL::RuntimeClass`中继承的用户指定的类。  
+ 用户指定的类，该类继承`WRL::RuntimeClass`。  
   
  `TArg1`  
- 传递给指定的运行时类参数 1 的类型。  
+ 传递到指定的运行时类的参数 1 的类型。  
   
  `TArg2`  
- 传递给指定的运行时类参数 2 的类型。  
+ 传递到指定的运行时类的参数 2 的类型。  
   
  `TArg3`  
- 传递给指定的运行时类参数 3 的类型。  
+ 传递到指定的运行时类的参数 3 的类型。  
   
  `TArg4`  
- 传递给指定的运行时类参数 4 的类型。  
+ 传递到指定的运行时类的参数 4 的类型。  
   
  `TArg5`  
- 传递给指定的运行时类参数 5 的类型。  
+ 传递到指定的运行时类的参数 5 的类型。  
   
  `TArg6`  
- 传递给指定的运行时类参数 6 的类型。  
+ 传递到指定的运行时类的参数 6 的类型。  
   
  `TArg7`  
- 传递给指定的运行时类参数 7 的类型。  
+ 参数 7 传递给指定的运行时类的类型。  
   
  `TArg8`  
- 传递给指定的运行时类参数 8 的类型。  
+ 参数 8 传递给指定的运行时类的类型。  
   
  `TArg9`  
- 传递给指定的运行时类参数 9 的类型。  
+ 传递到指定的运行时类的参数 9 的类型。  
   
  `arg1`  
- 传递给指定的运行时类参数的类型。  
+ 传递到指定的运行时类的参数 1。  
   
  `arg2`  
- 传递给参数4的运行时类参数的类型。  
+ 传递到指定的运行时类的参数 2。  
   
  `arg3`  
- 传递给参数4的运行时类参数的类型。  
+ 参数传递到指定的运行时类 3。  
   
  `arg4`  
- 传递给参数4的运行时类参数的类型。  
+ 参数传递到指定的运行时类 4。  
   
  `arg5`  
- 传递给指参数5运行时类参数的类型。  
+ 参数传递到指定的运行时类 5。  
   
  `arg6`  
- 传递给参数6的运行时类参数的类型。  
+ 参数传递到指定的运行时类 6。  
   
  `arg7`  
- 传递给的运行时类参数的类型。  
+ 参数传递到指定的运行时类 7。  
   
  `arg8`  
- 传递给指定的运行时类参数的类型。  
+ 参数传递到指定的运行时类 8。  
   
  `arg9`  
- 传递给参数9的运行时类参数的类型。  
+ 参数传递到指定的运行时类 9。  
   
-## 返回值  
- 如果成功；`ComPtr<T>` 对象，否则，返回 `nullptr`。  
+## <a name="return-value"></a>返回值  
+ A`ComPtr<T>`对象成功; 否则为如果`nullptr`。  
   
-## 备注  
- 参见 [如何：直接实例化 WRL 组件](../windows/how-to-instantiate-wrl-components-directly.md) 理解差异此函数\) 和 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)之间和的示例。  
+## <a name="remarks"></a>备注  
+ 请参阅[如何： 直接实例化 WRL 组件](../windows/how-to-instantiate-wrl-components-directly.md)若要了解此函数之间的差异和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)，和示例。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

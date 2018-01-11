@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90b37372123031026017e23c683a5a65555577ca
-ms.sourcegitcommit: b3ffb717e2af6ca8072b56bf4aa96b3afff73414
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
 *函数对象*（也称 *函子*）是实现 operator() 的任何类型。 此运算符被称为 *调用运算符* （有时称为 *应用程序运算符*）。 C++ 标准库主要使用函数对象作为容器和算法内的排序条件。  
@@ -70,6 +71,6 @@ ForwardIterator remove_if(
   
  `remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果是 `true`，则从迭代器 `first` 和 `last` 正在访问的容器中删除元素。 你可以使用在 `pred` 参数的 [\<functional>](../standard-library/functional.md) 标头中声明的任何函数对象，也可以自行创建。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

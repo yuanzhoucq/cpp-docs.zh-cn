@@ -14,11 +14,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ace505bf8c9da090a3b871dfd06573a7ce1d6400
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 运行时和托管模板（C++ 组件扩展）
 使用模板可以定义 Windows 运行时或公共语言运行时类型的原型，然后使用不同模板类型参数实例化该类型的变体。  
@@ -31,13 +34,13 @@ ms.lasthandoff: 10/24/2017
 ## <a name="windows-runtime"></a>Windows 运行时  
  (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时  
  根据托管类型创建类模板会有一些限制，如以下代码示例所示。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -140,5 +143,5 @@ class A <int> {};
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

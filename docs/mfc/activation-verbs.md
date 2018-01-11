@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e528697c27d03131245e94e795119611314c8921
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2a443f4ce65dcc7e9460bd016638aa5069e7e6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activation-verbs"></a>激活：谓词
 此文章介绍了 OLE 中的角色主和辅助动词扮演[激活](../mfc/activation-cpp.md)。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
  Windows 注册数据库中列出了服务器应用程序支持的谓词。 如果服务器应用程序使用 Microsoft 基础类库编写的它将自动注册所有谓词时该服务器已启动。 如果没有，您应在服务器应用程序的初始化阶段期间注册它们。 有关详细信息，请参阅文章[注册](../mfc/registration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [激活](../mfc/activation-cpp.md)   
  [容器](../mfc/containers.md)   
  [服务器](../mfc/servers.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d20a8ffdfa84c56c4716df31a8f4c3951566cead
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9af0f0f36c3d504d2b2d28338738e413703af1ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequebackitem-stlclr"></a>deque::back_item (STL/CLR)
 访问最后一个元素。  
@@ -71,12 +74,12 @@ back_item = c
  a b x  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque:: back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
  [deque:: front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   

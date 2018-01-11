@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c"></a>数组 (C++)
 数组是类似对象的集合。 数组最简单的用例是矢量，可以按以下序列声明矢量：  
@@ -91,7 +92,7 @@ int i2[5][7];
  ![一个多 &#45;的概念布局; 的二维数组](../cpp/media/vc38rc1.gif "vc38RC1")  
 多维数组的概念性布局  
   
- 在声明的具有初始值设定项列表的多维数组中 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如:   
+ 在声明的具有初始值设定项列表的多维数组中 (如中所述[初始值设定项](../cpp/initializers.md))，可以省略指定第一个维度的边界的常数表达式。 例如:  
   
 ```  
 // arrays2.cpp  
@@ -176,5 +177,5 @@ The minimum cost to Market 3 is: 17.29
 ## <a name="comments"></a>注释  
  编写函数 `FindMinToMkt`，以便添加不需要更改任何代码而仅需重新编译的新工厂。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

@@ -1,52 +1,52 @@
 ---
-title: "__vmx_off | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_off"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMXOFF 指令"
-  - "__vmx_off 内部函数"
+title: "__vmx_off |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_off
+dev_langs: C++
+helpviewer_keywords:
+- VMXOFF instruction
+- __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fcd5f3065e3d388e0b671c048bbffc81a11d3ce5
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_off
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxoff"></a>__vmx_off
 **Microsoft 专用**  
   
- 停用虚拟机在该处理器的扩展 \(VMX\) 运算。  
+ 停用处理器中的虚拟机扩展 (VMX) 操作。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __vmx_off();  
 ```  
   
-## 备注  
- `__vmx_off` 功能与 `VMXOFF` 指令是等效的。  此功能支持宿主的与来宾操作系统及其应用程序的虚拟机监控程序的交互。  有关更多信息，搜索文档， “IA\-32 Intel 体系结构的 Intel 虚拟化技术规范，”在网站单据数字 \-002 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) ， C97063。  
+## <a name="remarks"></a>备注  
+ `__vmx_off`函数等同于`VMXOFF`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__vmx_off`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__vmx_off`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

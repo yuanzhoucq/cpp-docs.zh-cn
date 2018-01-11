@@ -12,14 +12,13 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 683d3f5848ab86a9a80c25a09ac110b2abb2f5e2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedef
 ||||  
@@ -94,9 +93,8 @@ basic_string<wchar_t> wstr(L"");
 > [!NOTE]
 >  `wchar_t` 的大小是由实现定义的。 如果你的代码的大小取决于 `wchar_t`，请检查你平台的实现（例如，使用 `sizeof(wchar_t)`）。 如果需要保证宽度在所有平台上一致的字符串字符类型，请使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<string>](../standard-library/string.md)
-
 
 
 

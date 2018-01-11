@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b9b9df3203b580f21b27d7b4a27fb806b3ae7e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b27f3bcb7358b3ea05907df1a4372c107538dfb4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typeid-operator"></a>typeid 运算符
 ## <a name="syntax"></a>语法  
@@ -46,7 +47,7 @@ typeid( expression )
   
 -   带下标的指针（即 [ ]）。 （请注意，通常情况下，将下标与指向多态类型的指针一起使用不安全。）  
   
- 如果*表达式*指向基类类型，但该对象的实际类型是派生自该基类， **type_info**引用派生的类为结果。 *表达式*必须指向多态类型 （具有虚函数的类）。 否则，结果是**type_info**中引用的静态类*表达式*。 此外，必须取消引用指针以使用它指向的对象。 如果未取消引用指针，则结果将为**type_info**指针，它不指向。 例如:   
+ 如果*表达式*指向基类类型，但该对象的实际类型是派生自该基类， **type_info**引用派生的类为结果。 *表达式*必须指向多态类型 （具有虚函数的类）。 否则，结果是**type_info**中引用的静态类*表达式*。 此外，必须取消引用指针以使用它指向的对象。 如果未取消引用指针，则结果将为**type_info**指针，它不指向。 例如:  
   
 ```  
 // expre_typeid_Operator.cpp  
@@ -100,6 +101,6 @@ T max( T arg1, T arg2 ) {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时类型信息](../cpp/run-time-type-information.md)   
  [关键字](../cpp/keywords-cpp.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81886c605c012f54377f1dbf356873000dc3359a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7ac83113623ccfad62e3c75abf45b2c2e73cc48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner 类
 `auto_partitioner` 类表示 `parallel_for`、`parallel_for_each` 和 `parallel_transform` 用于对其循环访问的范围进行分区的默认方法。 此分区方法使用范围窃取进行负载平衡以及按循环访问取消。  
@@ -45,7 +46,7 @@ class auto_partitioner;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `auto_partitioner`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** ppl.h  
   
  **命名空间：** 并发  
@@ -66,5 +67,5 @@ class auto_partitioner;
 auto_partitioner();
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发命名空间](concurrency-namespace.md)

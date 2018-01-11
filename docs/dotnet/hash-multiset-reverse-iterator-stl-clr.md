@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator 成员 [STL/CLR]"
+title: "hash_multiset:: reverse_iterator (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: a988adca-8fd7-4678-9edc-041555a3561d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4ea20f7eb6b3adee6602b8292ab2320c8988f1fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-受控序列的反转迭代器的类型。  
+# <a name="hashmultisetreverseiterator-stlclr"></a>hash_multiset::reverse_iterator (STL/CLR)
+受控序列的反向迭代器的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## 备注  
- 类型描述可以为控制序列作为反转迭代器的未指定的 `T3` 类型的对象。  
+## <a name="remarks"></a>备注  
+ 该类型描述了可充当受控序列的反向迭代器的未指定类型 `T3` 的对象。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_reverse_iterator.cpp   
@@ -60,14 +61,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+c b a  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::const\_iterator](../dotnet/hash-multiset-const-iterator-stl-clr.md)   
- [hash\_multiset::const\_reverse\_iterator](../dotnet/hash-multiset-const-reverse-iterator-stl-clr.md)   
- [hash\_multiset::iterator](../dotnet/hash-multiset-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: const_iterator (STL/CLR)](../dotnet/hash-multiset-const-iterator-stl-clr.md)   
+ [hash_multiset:: const_reverse_iterator (STL/CLR)](../dotnet/hash-multiset-const-reverse-iterator-stl-clr.md)   
+ [hash_multiset::iterator (STL/CLR)](../dotnet/hash-multiset-iterator-stl-clr.md)

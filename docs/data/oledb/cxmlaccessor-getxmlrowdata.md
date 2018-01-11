@@ -1,57 +1,59 @@
 ---
-title: "CXMLAccessor::GetXMLRowData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor::GetXMLRowData"
-  - "ATL.CXMLAccessor.GetXMLRowData"
-  - "CXMLAccessor::GetXMLRowData"
-  - "CXMLAccessor.GetXMLRowData"
-  - "GetXMLRowData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLRowData 方法"
+title: "Cxmlaccessor:: Getxmlrowdata |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor::GetXMLRowData
+- ATL.CXMLAccessor.GetXMLRowData
+- CXMLAccessor::GetXMLRowData
+- CXMLAccessor.GetXMLRowData
+- GetXMLRowData
+dev_langs: C++
+helpviewer_keywords: GetXMLRowData method
 ms.assetid: 156b66e3-42fd-491c-8943-38cf5e36f687
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1cfd67065b267f01704bb0658b89d9bab2186100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CXMLAccessor::GetXMLRowData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-按行检索表的整个内容，如XML 格式的字符串数据。  
+# <a name="cxmlaccessorgetxmlrowdata"></a>CXMLAccessor::GetXMLRowData
+按行作为 XML 格式的字符串数据中检索表的全部内容。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT GetXMLRowData(   
-   CSimpleStringW& strOutput,   
-   bool bAppend = false    
+      HRESULT GetXMLRowData(   
+   CSimpleStringW& strOutput,   
+   bool bAppend = false    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `strOutput`  
- \[out\] 缓冲包含检索表数据的引用。  数据格式化为字符串数据使用与数据存储区列名匹配的XML标记名称。  
+ [out]对包含要检索的表数据的缓冲区的引用。 数据将格式化为字符串数据的数据存储区的列名称匹配的 XML 标记名称。  
   
  *bAppend*  
- \[in\] 布尔值指定是否追加字符串到输出数据的末尾。  
+ [in]一个布尔值，指定是否要将字符串追加到输出数据的末尾。  
   
-## 返回值  
- 标准`HRESULT` 值之一。  
+## <a name="return-value"></a>返回值  
+ 一个标准`HRESULT`值。  
   
-## 备注  
- 以下显示行数据如何在 XML 格式化。  下面的`DATA` 表示行数据。  使用移动方法移动到所需行。  
+## <a name="remarks"></a>备注  
+ 下图显示如何在 XML 中设置行数据的格式。 `DATA`下面表示行数据。 使用 move 方法移至所需的一行。  
   
  `<row>`  
   
@@ -59,8 +61,8 @@ caps.handback.revision: 9
   
  `</row>`  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CXMLAccessor 类](../../data/oledb/cxmlaccessor-class.md)

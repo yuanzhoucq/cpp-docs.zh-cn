@@ -1,32 +1,34 @@
 ---
-title: "泛型委托 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "委托, 泛型 [C++]"
-  - "泛型委托"
+title: "泛型委托 （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic delegates
+- delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2511034af4399c983b8114ec01a86e3290bd2a8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 泛型委托 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-你能够使用具有泛型类型参数的委托。  有关委托的更多信息，请参见[委托](../windows/delegate-cpp-component-extensions.md)。  
+# <a name="generic-delegates-visual-c"></a>泛型委托 (Visual C++)
+你可以使用具有委托的泛型类型参数。 有关委托的更多信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 [attributes]   
@@ -36,30 +38,30 @@ generic < [class | typename] type-parameter-identifiers >
 ([formal-parameters]);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `attributes`（可选）  
- 附加的声明信息。  有关特性和特性类的更多信息，请参见特性。  
+ 附加的声明信息。 有关特性和特性类的详细信息，请参阅“特性”。  
   
- *类型参数标识符*,  
- 标识符逗号分隔列表类型参数的数组。  
+ *类型的参数的标识符*  
+ 类型参数标识符的逗号分隔列表。  
   
  `type-parameter-constraints-clauses`  
- 采用 [约束](../windows/constraints-on-generic-type-parameters-cpp-cli.md)指定的窗体  
+ 中指定的形式[泛型类型参数的约束 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *可访问性修饰符* \(可选\)  
- 可访问性修饰符（例如  **public**， `private`\)。  
+ *可访问性修饰符*（可选）  
+ 可访问性修饰符 (例如**公共**， `private`)。  
   
  *结果类型*  
  委托的返回类型。  
   
  *identifier*  
- 委托的名称。  
+ 该委托的名称。  
   
- *可选参数*（选项）。  
+ *正式参数*（可选）  
  委托的参数列表。  
   
-## 示例  
- 委托的类型参数指定在创建委托对象的点。  委托和方法与它必须有相同的签名。  下面的示例显示了事件委托声明。  
+## <a name="example"></a>示例  
+ 委托类型参数在创建委托对象时指定。 与其相关联的委托和方法必须有相同的签名。 下面是泛型委托声明的示例。  
   
 ```  
 // generics_generic_delegate1.cpp  
@@ -68,14 +70,14 @@ generic < class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例显示：  
   
--   不能使用为其他的构造类型相同的委托对象。  创建不同类型的变体委托对象。  
+-   不能使用具有不同构造类型的相同委托对象。 针对不同类型创建不同的委托对象。  
   
--   委托可以与命名方法关联。  
+-   泛型委托可以与泛型方法相关联。  
   
--   当调用泛型方法时，无需指定类型变量，编译器尝试推断调用的类型参数。  
+-   当调用泛型方法而不指定类型参数时，编译器会尝试推断调用的类型参数。  
   
 ```  
 // generics_generic_delegate2.cpp  
@@ -111,8 +113,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例声明一个泛型委托 `GenDelegate<ItemType>`，将其实例化然后给使用类型参数 `ItemType`的 `MyMethod` 方法。  委托 \(整型和双精度型\) 的两个实例创建并调用。  
+## <a name="example"></a>示例  
+ 以下示例声明泛型委托 `GenDelegate<ItemType>`，然后将其与使用类型参数 `MyMethod` 的方法 `ItemType` 相关联。 创建并调用委托的两个实例（整型和双精度型）。  
   
 ```  
 // generics_generic_delegate.cpp  
@@ -162,7 +164,10 @@ int main() {
 }  
 ```  
   
-  **调用整数委托：i \= 123，j \= 123**  
-**调用两个委托：m \= 0.123，n \= 0.123**   
-## 请参阅  
+```Output  
+Invoking the integer delegate: i = 123, j = 123  
+Invoking the double delegate: m = 0.123, n = 0.123  
+```  
+  
+## <a name="see-also"></a>请参阅  
  [泛型](../windows/generics-cpp-component-extensions.md)

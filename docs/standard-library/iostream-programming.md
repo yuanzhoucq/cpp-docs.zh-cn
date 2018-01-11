@@ -28,11 +28,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c817ab67fecb1479971d729977ad55d6b3e506fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4492f590c1be5604fcd630c41cdf79ce21e8b76f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iostream-programming"></a>iostream 编程
 本部分提供了 iostream 类的[概述](../standard-library/what-a-stream-is.md)，并介绍了 [output streams](../standard-library/output-streams.md)、[input streams](../standard-library/input-streams.md) 和 [input/output streams](../standard-library/input-output-streams.md)。 本部门末尾提供了有关高级 iostream 编程的信息。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
   
  [带自变量的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库](../standard-library/cpp-standard-library-reference.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)
 

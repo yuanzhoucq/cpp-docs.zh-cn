@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 572221b7232e25984d78ec903f8d13b9e08ba06b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 200a3ad664008b9a9217eb4331d43e6f7ffd124c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handletattach-method"></a>HandleT::Attach 方法
 将指定的句柄与当前的 HandleT 对象相关联。  
@@ -36,10 +39,10 @@ void Attach(
  `h`  
  一个句柄。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [HandleT 类](../windows/handlet-class.md)

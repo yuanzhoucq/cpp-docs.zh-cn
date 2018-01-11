@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a4dde55c1e019c89565f236d729a55997311cfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4c182dc8ca6fe5bad6b765be171a63306017e7c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetconstiterator-stlclr"></a>hash_set::const_iterator (STL/CLR)
 受控序列的常量迭代器的类型。  
@@ -62,11 +65,11 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)

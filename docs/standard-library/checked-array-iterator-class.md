@@ -4,48 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - iterator/checked_array_iterator
-- checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
 - iterator/stdext::checked_array_iterator::pointer
 - iterator/stdext::checked_array_iterator::reference
 - iterator/stdext::checked_array_iterator::base
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- checked_array_iterator, syntax
-- checked_array_iterator class
-- checked_array_iterator
+- stdext::checked_array_iterator [C++], difference_type
+- stdext::checked_array_iterator [C++], pointer
+- stdext::checked_array_iterator [C++], reference
+- stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a53cc2a5bb7bd50e41e9e01d3953465706554017
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 类
 通过 `checked_array_iterator` 类，可以将数组或指针转换为经检查的迭代器。 使用此类作为原始指针或数组的包装器（使用 [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) 函数）可以有针对性地提供检查并管理未经检查的指针警告，无需从全局静默处理这些警告。 如有必要，可以使用此类的未经检查版本 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。  
@@ -200,9 +184,9 @@ int main()
 |[operator+](#op_add)|将偏移量添加到迭代器，并返回在新偏移位置处发现插入元素的新 `checked_array_iterator`。|  
 |[operator-=](#operator-_eq)|从 `checked_array_iterator` 递减指定偏移量。|  
 |[operator-](#operator-)|从迭代器递减偏移量，并返回在新偏移位置处发现插入元素的新 `checked_array_iterator`。|  
-|[operator&#91;&#93;](#op_at)|返回对于从 `checked_array_iterator` 发现的元素偏移指定个位置的元素的引用。|  
+|[operator[]](#op_at)|返回对于从 `checked_array_iterator` 发现的元素偏移指定个位置的元素的引用。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iterator>  
   
  **命名空间：** stdext  
@@ -215,7 +199,7 @@ _Iterator base() const;
 ```  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -271,7 +255,7 @@ checked_array_iterator(
  （可选）数组中用于初始化迭代器的元素。  默认情况下，将迭代器初始化为数组中的第一个元素。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -335,7 +319,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
  作为检查相等性依据的 `checked_array_iterator`。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -388,7 +372,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
  作为检查不相等性依据的 `checked_array_iterator`。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -441,7 +425,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
  作为检查不相等性依据的 `checked_array_iterator`。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -496,7 +480,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [checked_array_iterator:: operator&lt;](#op_lt)。  
   
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ##  <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=  
  测试运算符左侧的 `checked_array_iterator` 是否小于或等于右侧的 `checked_array_iterator`。  
@@ -512,7 +496,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [checked_array_iterator::operator&gt;=](#op_gt_eq)。  
   
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ##  <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=  
  测试运算符左侧的 `checked_array_iterator` 是否大于或等于右侧的 `checked_array_iterator`。  
@@ -526,7 +510,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
  要针对其进行比较的 `checked_array_iterator`。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -578,7 +562,7 @@ reference operator*() const;
  由 `checked_array_iterator` 寻址的元素的值。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -638,7 +622,7 @@ pointer operator->() const;
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [checked_array_iterator::pointer](#pointer)。  
   
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ##  <a name="op_add_add"></a>  checked_array_iterator::operator++  
  将 `checked_array_iterator` 递增到下一元素。  
@@ -653,7 +637,7 @@ checked_array_iterator<_Iterator> operator++(int);
  第一个运算符返回前置递增的 `checked_array_iterator`，而第二个运算符为后置递增运算符，返回递增的 `checked_array_iterator` 的副本。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -698,7 +682,7 @@ checked_array_iterator<_Iterator> operator--(int);
  第一个运算符返回前置递减的 `checked_array_iterator`，而第二个运算符为后置递减运算符，返回递减的 `checked_array_iterator` 的副本。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -745,7 +729,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
  由 `checked_array_iterator` 寻址的元素的引用。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -789,7 +773,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
  寻址偏移元素的 `checked_array_iterator`。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -833,7 +817,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
  由 `checked_array_iterator` 寻址的元素的引用。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -882,7 +866,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [checked_array_iterator:: operator-](#operator-)。  
   
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ##  <a name="op_at"></a>  checked_array_iterator::operator[]  
  返回对于从 `checked_array_iterator` 发现的元素偏移指定个位置的元素的引用。  
@@ -899,7 +883,7 @@ reference operator[](difference_type _Off) const;
  对元素偏移量的引用。  
   
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ### <a name="example"></a>示例  
   
@@ -940,7 +924,7 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [checked_array_iterator::operator*](#op_star)。  
   
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
 ##  <a name="reference"></a>  checked_array_iterator::reference  
  一种类型，此类型提供对 `checked_array_iterator` 所发现元素的引用。  
@@ -952,12 +936,11 @@ typedef typename iterator_traits<_Iterator>::reference reference;
 ### <a name="remarks"></a>备注  
  有关代码示例，请参阅 [checked_array_iterator:: operator []](#op_at)。  
   
- 有关详细信息，请参阅[已检查的迭代器](../standard-library/checked-iterators.md)。  
+ 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -1,34 +1,36 @@
 ---
-title: "如何：使用正则表达式提取数据字段 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据 [C++], 从字符串中提取"
-  - "格式化的字符串 [C++]"
-  - "正则表达式 [C++], 提取数据字段"
-  - "字符串 [C++], 提取数据"
+title: "如何： 使用正则表达式提取数据字段 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], extracting data from
+- formatted strings [C++]
+- regular expressions [C++], extracting data fields
+- data [C++], extracting from strings
 ms.assetid: b581d9b6-630e-48fa-94fe-20b0f7b89b06
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a82afb894b31dcbee88c7ecdf0720ef198c866b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用正则表达式提取数据字段 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何使用正则表达式从格式化字符串中提取数据。  下面的代码示例使用 <xref:System.Text.RegularExpressions.Regex> 类指定与电子邮件地址对应的模式。  此模式包括可用于检索每个电子邮件地址的用户和主机名部分的字段标识符。  <xref:System.Text.RegularExpressions.Match> 类用于执行实际的模式匹配。  如果给定的电子邮件地址有效，则将提取并显示用户名和主机名。  
+# <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>如何：使用正则表达式提取数据字段 (C++/CLI)
+下面的代码示例演示如何将正则表达式来从格式化字符串中提取数据。 下面的代码示例使用<xref:System.Text.RegularExpressions.Regex>类来指定对应于电子邮件地址的模式。 此模式包括字段标识符，可以用于检索的用户和主机名部分的每个电子邮件地址。 <xref:System.Text.RegularExpressions.Match>类用于执行实际的模式匹配。 如果给定的电子邮件地址是否有效，用户名称和主机名的提取和显示。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // Regex_extract.cpp  
@@ -71,6 +73,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [.NET Framework 正则表达式](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [.NET Framework 正则表达式](/dotnet/standard/base-types/regular-expressions)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

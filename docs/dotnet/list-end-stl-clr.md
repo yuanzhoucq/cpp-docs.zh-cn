@@ -1,41 +1,42 @@
 ---
-title: "list::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 成员 [STL/CLR]"
+title: "list:: end (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: c3444164-2c6e-4cbd-8765-1ce7d30fc43e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1525d116a391fca2dab676528706d831f435f8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# list::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listend-stlclr"></a>list::end (STL/CLR)
 指定受控序列的末尾。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator end();  
 ```  
   
-## 备注  
- 成员函数返回序列仅控制。结束点的随机访问迭代器。  使用该控制获取指定序列的结尾的迭代器；，如果控制更改序列的长度，其状态不会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回一个随机访问迭代器，它指向刚超出受控序列的末尾。 用于获取指定的受控序列中; 末尾的迭代器其状态不更改如果更改了受控序列的长度。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_end.cpp   
@@ -71,17 +72,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) 为 c**  
- **个 x \- Y**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::begin](../dotnet/list-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)

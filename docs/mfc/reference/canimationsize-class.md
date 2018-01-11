@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationSize::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cxValue
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cyValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationSize [MFC], CAnimationSize
 - CAnimationSize [MFC], AddTransition
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 418bba617261ee11322a3d5a83ba07b197c83427
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 类
 实现可对大小对象的维度进行动画处理的大小对象功能。  
@@ -89,7 +87,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|封装的动画变量表示动画大小的宽度。|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|封装的动画变量表示动画大小的高度。|  
@@ -104,7 +102,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>CAnimationSize::AddTransition  
@@ -280,6 +278,5 @@ void SetDefaultValue(const CSize& szDefault);
 ### <a name="remarks"></a>备注  
  使用此函数将默认值设置为动画对象。 此方法将默认值分配给动画大小的宽度和高度。 它还重新创建基础 COM 对象，如果已创建。 如果你订阅事件 （ValueChanged 或 IntegerValueChanged） 为此动画对象，你需要重新启用这些事件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

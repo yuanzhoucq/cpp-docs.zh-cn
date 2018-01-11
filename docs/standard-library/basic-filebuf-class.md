@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ffc7f3e830d9caccf3428b2d9d3b70253d8d3b18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c5ec1881695c80c8f493ac2a2848d0349f430aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 类
 描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与外部文件中存储的元素序列之间的来回传输进行控制的流缓冲区。  
@@ -233,7 +234,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[uflow](../standard-library/basic-streambuf-class.md#uflow)|受保护虚函数从输入流中提取当前元素。|  
 |[underflow](#underflow)|受保护虚函数从输入流中提取当前元素。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<fstream>  
   
  **命名空间：** std  
@@ -544,7 +545,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
  指定指针位置的模式。 默认允许修改读取和写入位置。  
   
 ### <a name="return-value"></a>返回值  
- 如果文件指针 **fp** 为 null 指针，则函数将失败。 否则，它尝试通过调用 `fsetpos`( **fp**, **&fposn**) 更改流位置，其中 **fposn** 是存储在 `pos` 中的对象 `fpos_t`。 如果该函数成功，则该函数将返回 `pos`。 否则，返回一个无效的流位置。 若要确定流位置是否无效，请比较返回值与 `pos_type(off_type(-1))`。  
+ 如果文件指针 **fp** 为 null 指针，则函数将失败。 否则，它尝试通过调用 `fsetpos`( **fp**, **&fposn**) 更改流位置，其中 **fposn** 是存储在 `pos` 中的对象 `fpos_t`。 如果该函数成功，则该函数将返回 `pos`。 否则，返回一个无效的流位置。 若要确定流位置是否有效，请比较返回值和 `pos_type(off_type(-1))`。  
   
 ### <a name="remarks"></a>备注  
  受保护虚拟成员函数尝试更改受控流的当前位置。 对于类 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 的对象，流位置可以通过类型 `fpos_t` 的对象表示，它存储偏移量以及分析宽流所需的任何状态信息。 如果偏移量为零，则将指定流的第一个元素。 （类型为 `pos_type` 的对象存储至少一个 `fpos_t` 对象。）  
@@ -620,7 +621,7 @@ virtual int_type underflow();
   
 -   它可以读取类型的一个或多个元素`char`，像是通过以下形式的连续调用`fgetc`(**fp**)，并将其转换到的元素**ch**类型的**Elem**通过使用文件转换方面预计完成成本调用**fac.in**根据需要。 如果任何读取或转换失败，该函数不会成功。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<fstream>](../standard-library/fstream.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   

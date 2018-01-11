@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 结构
 通过 short_vector_traits 可检索基础矢量长度和短的矢量类型或标量类型的标量类型  
@@ -103,14 +104,14 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[short_vector_traits:: size 常量](#size)||  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `short_vector_traits`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
@@ -127,5 +128,5 @@ short_vector_traits();
 static int const size = 1;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58f44b4b71da32278a2f623229fb2084fa7af336
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad36b249e601e15e25f32ef1ef7e6d5a28874cf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-messages-to-functions"></a>将消息映射到函数
 属性窗口，可将消息处理程序 （MFC 用户界面类的成员函数） 绑定到你的应用程序资源生成的消息。 它们使用[MFC 消息映射](../../mfc/messages-and-commands-in-the-framework.md)以创建绑定。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
   
  若要删除消息处理程序，请双击右列中的处理程序，然后选择\<删除 >*HandlerName*。 函数的代码注释掉。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 消息处理程序](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../../ide/adding-a-class-visual-cpp.md)   

@@ -249,11 +249,12 @@ caps.latest.revision: "41"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59032e700fe81c3343959252bc28433b0f6ae460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dd8f70ffd2568f509b8b12be2167579c4ec4475
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 实现选项卡式窗口的基本功能。  
@@ -393,7 +394,7 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|指定是通过单击鼠标左键还是单击鼠标右键来选择选项卡。|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|指定是否自动销毁选项卡中包含的窗格。|  
@@ -423,7 +424,7 @@ class CMFCBaseTabCtrl : public CWnd
   
  [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxbasetabctrl.h  
   
 ##  <a name="addicon"></a>CMFCBaseTabCtrl::AddIcon  
@@ -2178,7 +2179,7 @@ virtual void SwapTabs(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCTabCtrl 类](../../mfc/reference/cmfctabctrl-class.md)   

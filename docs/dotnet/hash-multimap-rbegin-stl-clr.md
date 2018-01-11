@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin 成员 [STL/CLR]"
+title: "hash_multimap:: rbegin (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: f5ce0614-3c73-4cec-9fa2-efadf0fd36c7
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 272bb6caaf747a05277004e58ca67eaa9db8f652
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定反转的受控序列的开头。  
+# <a name="hashmultimaprbegin-stlclr"></a>hash_multimap::rbegin (STL/CLR)
+指定反向受控序列的开头。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## 备注  
- 指定控件成员函数返回序列中的最后一个元素，或进行反向迭代器对象一个空序列的开头之外。  因此，它指定反向序列的 `beginning`。  用于获取一个迭代器，该迭代器指定相反顺序的受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回指定的受控序列，或刚超出空序列的开头的最后一个元素的反向迭代器。 因此，它指定`beginning`反向序列。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改按逆序的受控的序列，但其状态的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_rbegin.cpp   
@@ -67,16 +68,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**\*rbegin\(\) \= \[c 3\]**  
-**\*\+\+rbegin\(\) \= \[b 2\]**   
-## 要求  
- **页眉：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)   
- [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)   
- [hash\_multimap::rend](../dotnet/hash-multimap-rend-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md)   
+ [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)   
+ [hash_multimap::rend (STL/CLR)](../dotnet/hash-multimap-rend-stl-clr.md)

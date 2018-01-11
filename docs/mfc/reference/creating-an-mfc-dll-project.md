@@ -19,17 +19,18 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a0f18e4be45d3728e96e8183e82385f555832e17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a7c040188db5caf46c0d58720320088967b59ea6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-mfc-dll-project"></a>创建 MFC DLL 项目
 MFC DLL 是作为共享库的多个应用程序可同时使用的函数的二进制文件。 创建非 MFC DLL 项目的最简单方法是使用 MFC DLL 向导。  
   
 > [!NOTE]
->  在 IDE 中的功能的外观可以依赖于你现用的设置或版本，并可能会与不同帮助中的描述。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  在 IDE 中的功能的外观可以依赖于你现用的设置或版本，并可能会与不同帮助中的描述。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅 [在 Visual Studio 中自定义开发设置](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要创建 MFC DLL 项目使用 MFC DLL 向导  
   
@@ -46,7 +47,7 @@ MFC DLL 是作为共享库的多个应用程序可同时使用的函数的二进
   
  你的项目创建后，你可以查看在解决方案资源管理器中创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[Visual c + + 项目创建的文件类型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Visual c + + 项目类型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [属性页](../../ide/property-pages-visual-cpp.md)   

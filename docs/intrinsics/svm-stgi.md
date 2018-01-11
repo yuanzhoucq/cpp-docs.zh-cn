@@ -1,55 +1,55 @@
 ---
-title: "__svm_stgi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_stgi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_stgi 内部函数"
-  - "STGI 指令"
+title: "__svm_stgi |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_stgi
+dev_langs: C++
+helpviewer_keywords:
+- __svm_stgi intrinsic
+- STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94e386827ae747fb3289354ba380d390756359ff
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# __svm_stgi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="svmstgi"></a>__svm_stgi
 **Microsoft 专用**  
   
  设置全局中断标志。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __svm_stgi(void);  
 ```  
   
-## 备注  
- `__svm_stgi` 功能与 `STGI` 指令是等效的。  全局中断标志确定微处理器是否忽略，延迟或处理中断由于诸如 I\/O 完成、硬件温度警报或调试异常。  
+## <a name="remarks"></a>备注  
+ `__svm_stgi`函数等同于`STGI`计算机指令。 全局中断标志确定微处理器忽略、 推迟，或处理中断遇到 I/O 完成时，硬件温度警报或调试异常等事件。  
   
- 此功能支持宿主的与来宾操作系统及其应用程序的虚拟机监控程序的交互。  有关更多信息，搜索文档， “AMD64 体系结构程序员的手动数量 2:系统编程，”在网站单据数字 24593，版本 3.11 [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746) 中，。  
+ 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"AMD64 体系结构程序员手动卷 2： 系统编程中，"在文档数 24593，修订 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站点。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__svm_stgi`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__svm_stgi`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_clgi](../intrinsics/svm-clgi.md)
+ [__svm_clgi](../intrinsics/svm-clgi.md)

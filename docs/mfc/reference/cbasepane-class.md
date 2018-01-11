@@ -177,11 +177,12 @@ caps.latest.revision: "43"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81a832d9473c9d5912e42dd4dc81db2d10bd4aea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c077f18fb9536e615685455e7bfc6fd896c0cc81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasepane-class"></a>CBasePane 类
 MFC 中的所有窗格的基类。  
@@ -361,7 +362,7 @@ class CBasePane : public CWnd
   
  [CBasePane](../../mfc/reference/cbasepane-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxbasepane.h  
   
 ##  <a name="accnotifyobjectfocusevent"></a>CBasePane::AccNotifyObjectFocusEvent  
@@ -939,7 +940,7 @@ virtual DWORD GetCurrentAlignment() const;
 ### <a name="return-value"></a>返回值  
  控件条的当前对齐方式。 下表显示可能的值：  
   
-|值|对齐方式|  
+|“值”|对齐方式|  
 |-----------|---------------|  
 |`CBRS_ALIGN_LEFT`|左对齐方式。|  
 |`CBRS_ALIGN_RIGHT`|右对齐方式。|  
@@ -1655,7 +1656,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
   
  下表显示的可能值`dwAlignment`:  
   
-|值|对齐方式|  
+|“值”|对齐方式|  
 |-----------|---------------|  
 |`CBRS_ALIGN_LEFT`|左对齐方式。|  
 |`CBRS_ALIGN_RIGHT`|右对齐方式。|  
@@ -1780,7 +1781,7 @@ virtual void UndockPane(BOOL bDelay=FALSE);
   
  如果你想要继续使用此窗格中，调用[cbasepane:: Dockpane](#dockpane)或[CBasePane::FloatPane](#floatpane)之前调用此方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPane](../../mfc/reference/cbasepane-class.md)   

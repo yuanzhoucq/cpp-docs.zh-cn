@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ca9e8547149ae36722c40e146392085e6ccf08e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 846b3cfd4d5abe6d0eb76cfb12840f094564c926
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-sorting-records-odbc"></a>记录集：对记录进行排序 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -68,7 +71,7 @@ rsStudent.Open( );
 > [!NOTE]
 >  如果你选择覆盖通过传递到你自己 SQL 字符串的记录集的默认 SQL 字符串**打开**，如果你自定义字符串具有未设置排序**ORDER BY**子句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集： 参数化记录集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
  [记录集：筛选记录 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

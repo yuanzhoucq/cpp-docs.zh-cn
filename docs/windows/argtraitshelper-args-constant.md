@@ -1,45 +1,46 @@
 ---
-title: "ArgTraitsHelper::args 常量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraitsHelper::args"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "args 常量"
+title: "Argtraitshelper:: Args 常量 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraitsHelper::args
+dev_langs: C++
+helpviewer_keywords: args constant
 ms.assetid: 1c0efa32-c072-43e3-bbd9-a3f6aec069a2
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4d0d80dc085320f2647202af6782e0d69456a2df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ArgTraitsHelper::args 常量
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支持 WRL基础结构，不应在代码中直接使用。  
+# <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args 常量
+支持 WRL 基础结构，不应在代码中直接使用。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 static const int args = Traits::args;  
 ```  
   
-## 备注  
- 帮助 [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) 数数目参数数量。委托调用接口的方法。  
+## <a name="remarks"></a>备注  
+ 可帮助[argtraitshelper:: Args](../windows/argtraitshelper-args-constant.md)上调用方法的委托接口中保留的参数数目的计数。  
   
-## 要求  
- **标头：**event.h  
+## <a name="requirements"></a>惠?  
+ **标头：** event.h  
   
- Microsoft::WRL::Details**命名空间:**  
+ **Namespace:** Microsoft::WRL::Details  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ArgTraitsHelper 结构](../windows/argtraitshelper-structure.md)   
  [Microsoft::WRL::Details 命名空间](../windows/microsoft-wrl-details-namespace.md)

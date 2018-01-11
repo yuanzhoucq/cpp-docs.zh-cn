@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aba82dd5e70f3202512b728df2dbcb6f45600c69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 727b0032687ed22692f07f9b5e9e5fe8b2813071
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl 类
 `CMFCShellTreeCtrl`类扩展[CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)通过显示 Shell 项的层次结构的功能。  
@@ -87,7 +88,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
   
  `CMFCShellTreeCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxshelltreeCtrl.h  
   
 ## <a name="example"></a>示例  
@@ -272,7 +273,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
   
  使用方法[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)检索`CMFCShellListCtrl`与关联`CMFCShellTreeCtrl`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CTreeCtrl 类](../../mfc/reference/ctreectrl-class.md)   

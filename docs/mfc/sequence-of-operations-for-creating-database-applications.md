@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58939d60401af9061288fa5a9b61c25b6278aec8
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: f3403807e38f59abc68bf93f510476951c5ec8ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>用于创建数据库应用程序的操作顺序
 下表显示你的角色和框架的角色中编写数据库应用程序。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 |...或创建显式[CDatabase](../mfc/reference/cdatabase-class.md)你想要打开每个数据库在代码中。|基础记录集对象上的数据库对象。|数据源为接口提供的数据库对象。|  
 |动态绑定到记录集的数据列。|ODBC，在添加到你派生的记录集类，以管理绑定的代码。 请参阅文章[记录集： 动态绑定数据列 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基于框架生成](../mfc/building-on-the-framework.md)   
  [用于生成 MFC 应用程序的操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
  [用于创建 OLE 应用程序的操作顺序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   

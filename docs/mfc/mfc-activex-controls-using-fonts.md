@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae3c6586153403e3c82078d4f7559ae89767f40a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 如果 ActiveX 控件显示文本，你可以允许控制用户通过更改字体属性更改的文本外观。 字体属性作为字体对象实现，并可以是两种类型之一： 常用或自定义。 常用字体属性是可以使用添加属性向导添加的 preimplemented 的字体属性。 自定义字体属性不 preimplemented 并控件开发人员确定属性的行为和使用情况。  
@@ -233,7 +234,7 @@ ms.lasthandoff: 10/24/2017
   
  到你的项目进行了这些更改后，重新生成项目，并使用测试容器测试该接口。 请参阅 [使用测试容器测试属性和事件](../mfc/testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 在 ActiveX 控件中使用图片](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
  [MFC ActiveX 控件：使用常用属性页](../mfc/mfc-activex-controls-using-stock-property-pages.md)

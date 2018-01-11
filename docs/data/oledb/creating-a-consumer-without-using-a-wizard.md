@@ -1,32 +1,34 @@
 ---
-title: "不使用向导创建使用者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 使用者, 创建"
+title: "不使用向导创建使用者 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b31f1ad51d9015c491439650060ab3cefaf3270b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 不使用向导创建使用者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例假定您向现有的 ATL 项目中添加 OLE DB 使用者支持。  如果要向 MFC 应用程序中添加 OLE DB 使用者支持，应运行“MFC 应用程序向导”，该向导创建所有必要的支持并调用执行此应用程序所需的 MFC 例程。  
+# <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
+下面的示例假定 OLE DB 使用者支持添加到现有的 ATL 项目。 如果你想要将 OLE DB 使用者支持添加到 MFC 应用程序，应运行 MFC 应用程序向导，也不能创建所有支持必要时，将调用执行应用程序所需的 MFC 例程。  
   
- 不使用“ATL OLE DB 使用者向导”添加 OLE DB 使用者支持：  
+ 若要添加 OLE DB 使用者支持而不使用 ATL OLE DB 使用者向导：  
   
--   在 Stdafx.h 文件中，追加下面的 `#include` 语句：  
+-   在 Stdafx.h 文件中，追加以下`#include`语句：  
   
     ```  
     #include <atlbase.h>  
@@ -34,14 +36,14 @@ caps.handback.revision: 7
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- 使用者通常以编程方式执行以下操作序列：  
+ 以编程方式，使用者通常会执行以下操作序列：  
   
--   创建将列绑定到局部变量的用户记录类。  在此示例中，`CMyTableNameAccessor` 是用户记录类（请参见[用户记录](../../data/oledb/user-records.md)）。  此类包含列映射和参数映射。  在用户记录类中，为在列映射中指定的每个字段声明数据成员；对于这些数据成员中的每一个，还声明一个状态数据成员和一个长度数据成员。  有关更多信息，请参见 [向导生成的访问器中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
+-   创建一个将列绑定到本地变量的用户记录类。 在此示例中，`CMyTableNameAccessor`是用户记录类 (请参阅[用户记录](../../data/oledb/user-records.md))。 此类包含的列映射和参数映射。 声明中指定列映射; 中的每个字段的用户记录类的数据成员对于每个这些数据成员，还声明状态数据成员和长度数据成员。 有关详细信息，请参阅[向导生成的访问器中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
   
     > [!NOTE]
-    >  如果您编写自己的使用者，则数据变量必须位于状态变量与长度变量之前。  
+    >  如果您编写自己的使用者，则数据变量必须早的状态和长度的变量。  
   
--   实例化一个数据源和一个会话。  决定要使用的访问器和行集合的类型，然后使用 [CCommand](../../data/oledb/ccommand-class.md) 或 [CTable](../../data/oledb/ctable-class.md) 实例化一个行集合：  
+-   实例化的数据源和会话。 决定哪种类型的访问器和行集使用，然后实例化行集使用[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md):  
   
     ```  
     CDataSource ds;  
@@ -49,15 +51,15 @@ caps.handback.revision: 7
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor> >  
     ```  
   
--   调用 **CoInitialize** 以初始化 COM。  这通常是在主代码中调用的。  例如：  
+-   调用**CoInitialize**以初始化 com。 这通常称为主要代码中。 例如:  
   
     ```  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   调用 [CDataSource::Open](../../data/oledb/cdatasource-open.md) 或它的一个变体。  
+-   调用[cdatasource:: Open](../../data/oledb/cdatasource-open.md)或其变体之一。  
   
--   打开一个到数据源的连接，打开会话，然后打开并初始化行集合（如果是命令，还执行它）：  
+-   打开与数据源的连接、 打开会话，并打开和初始化行集 （和如果某个命令，也执行它）：  
   
     ```  
     hr = ds.Open();  
@@ -65,11 +67,11 @@ caps.handback.revision: 7
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   还可以根据需要使用 `CDBPropSet::AddProperty` 设置行集合属性，并且将它们作为参数传递给 `rs.Open`。  有关如何完成此操作的示例，请参见 [使用者向导生成的方法](../../data/oledb/consumer-wizard-generated-methods.md)中的“GetRowsetProperties”。  
+-   使用的 （可选） 设置行集属性`CDBPropSet::AddProperty`并将它们传递作为参数传递给`rs.Open`。 有关如何完成此操作的示例，请参阅中的 GetRowsetProperties[使用者向导生成方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
   
--   现在可以使用该行集合检索\/操作数据。  
+-   你现在可以使用行集检索/处理的数据。  
   
--   当完成应用程序时，关闭连接、会话和行集合：  
+-   完成你的应用程序后，关闭连接、 会话和行集：  
   
     ```  
     rs.Close();  
@@ -77,13 +79,13 @@ caps.handback.revision: 7
     ds.Close();  
     ```  
   
-     如果使用的是命令，则可能要在 **Close** 之后调用 `ReleaseCommand`。  [CCommand::Close](../../data/oledb/ccommand-close.md) 中的代码示例说明如何调用 **Close** 和 `ReleaseCommand`。  
+     如果你使用的是命令，你可能想要调用`ReleaseCommand`后**关闭**。 中的代码示例[ccommand:: Close](../../data/oledb/ccommand-close.md)演示如何调用**关闭**和`ReleaseCommand`。  
   
--   调用 **CoUnInitialize** 以取消初始化 COM。  这通常是在主代码中调用的。  
+-   调用**CoUnInitialize**取消初始化 com。 这通常称为主要代码中。  
   
     ```  
     CoUninitialize();  
     ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer.md)

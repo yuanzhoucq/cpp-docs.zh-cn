@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- lambda expressions [C++], examples
+dev_langs: C++
+helpviewer_keywords: lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 29a2c80bbd586ecf495269dad84f2b42440c41cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 表达式的示例
 本文演示如何在你的程序中使用 lambda 表达式。 有关 lambda 表达式的概述，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。 有关 lambda 表达式结构的详细信息，请参阅[Lambda 表达式语法](../cpp/lambda-expression-syntax.md)。  
@@ -109,7 +106,7 @@ int main()
  [[本文内容](#top)]  
   
 ##  <a name="callingLambdaExpressions"></a>调用 Lambda 表达式  
- 你可以立即调用 lambda 表达式，如下面的代码片段所示。 第二个代码段演示如何 lambda 作为参数传递到 c + + 标准库算法如`find_if`。  
+ 你可以立即调用 Lambda 表达式，如下面的代码片段所示。 第二个代码段演示如何 lambda 作为参数传递到 c + + 标准库算法如`find_if`。  
   
 ### <a name="example-1"></a>示例 1  
  以下示例声明的 lambda 表达式将返回两个整数的总和并使用参数 `5` 和 `4` 立即调用该表达式：  
@@ -522,7 +519,7 @@ Hello!
   
  [[本文内容](#top)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)   
  [Lambda 表达式语法](../cpp/lambda-expression-syntax.md)   
  [自动](../cpp/auto-cpp.md)   

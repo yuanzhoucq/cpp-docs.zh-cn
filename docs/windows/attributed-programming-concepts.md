@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31a55b2413dceb2738522f755c7a27cd10c19872
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2e5477d91d50ab239732adf3521a2bf07d92a1c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributed-programming-concepts"></a>特性化编程概念
 Visual c + + 包括多个可帮助你在程序中使用属性的材料。 属性，Visual c + + 中的新功能用于简化 COM 编程和.NET Framework 公共语言运行时开发。 当您在源文件中包含属性时，编译器将适用于提供程序动态链接库 (DLL)，用于插入代码或修改生成的对象文件中的代码。 有帮助的.idl 文件、 接口、 类型库和其他 COM 元素创建的属性。 在集成的开发环境 (IDE) 中，通过向导并通过属性窗口被支持属性。  

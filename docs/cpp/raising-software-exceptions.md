@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b19503d60629011621ef320b46325e17a217804c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 系统不会将某些最常见的程序错误源标记为异常。 例如，如果你尝试分配内存块，但没有足够的内存，则运行时或 API 函数不会引发异常，但会返回一个错误代码。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  WINERROR.H 文件显示异常代码的格式。 若要确保不定义与现有异常代码发生冲突的代码，请将第三个最高有效位设置为 1。 应设置四个最高有效位，如下表所示。  
   
-|位|建议的二进制设置|描述|  
+|Bits|建议的二进制设置|描述|  
 |----------|--------------------------------|-----------------|  
 |31-30|11|这两个位描述代码的基本状态：11 = 错误，00 = 成功，01 = 信息性，10 = 警告。|  
 |29|1|客户端位。 为用户定义的代码将其设置为 1。|  
@@ -70,7 +71,7 @@ if (lpstr == NULL)
   
  如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 请参阅[RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)函数中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]有关详细信息。  
   
- 在异常处理筛选器中，你随后可以测试已定义的代码。 例如:   
+ 在异常处理筛选器中，你随后可以测试已定义的代码。 例如:  
   
 ```  
 __try {  
@@ -80,6 +81,6 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编写异常处理程序](../cpp/writing-an-exception-handler.md)   
  [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

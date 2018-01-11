@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba6d85437845e924dcc3c7d36005b20fef280b13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a925de05d301d213d67bb699af47d0453478ffc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 类
 表示基本转换。  
@@ -104,7 +105,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|指定是否已将转换添加到情节提要。|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|将存储到指定的结束过渡的关键帧的指针。|  
@@ -121,7 +122,7 @@ class CBaseTransition : public CObject;
   
  `CBaseTransition`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="_dtorcbasetransition"></a>CBaseTransition:: ~ CBaseTransition  
@@ -378,5 +379,5 @@ enum TRANSITION_TYPE;
 ### <a name="remarks"></a>备注  
  转换类型的特定转换构造函数中设置。 例如，CSinusoidalTransitionFromRange 将其类型设置为 SINUSOIDAL_FROM_RANGE。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

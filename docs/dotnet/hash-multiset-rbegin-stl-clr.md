@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 898c7e25482f1a1984e7093ac5a77c0b98ec2799
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba6880567d5380f95fc3400f02d01c5da21ec938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultisetrbegin-stlclr"></a>hash_multiset::rbegin (STL/CLR)
 指定反向受控序列的开头。  
@@ -68,12 +71,12 @@ int main()
 *++rbegin() = b  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset:: begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)   
  [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)   

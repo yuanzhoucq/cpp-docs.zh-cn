@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -48,30 +46,16 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 92bed9443eba34dc0298d28c53d34543ee52d935
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b7b85ce742cb39dcb9333a4eae5959e38c4ec50a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat、wcscat、_mbscat
 追加字符串。 这些函数的更安全版本已发布，请参阅 [strcat_s、wcscat_s、_mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)。  
@@ -129,7 +113,7 @@ unsigned char *_mbscat(
   
  `wcscat` 和 `_mbscat` 分别是 `strcat` 的宽字符及多字节字符版本。 `wcscat` 的参数和返回值是宽字符字符串；而 `_mbscat` 的则是多字节字符字符串。 否则这三个函数否则具有相同行为。  
   
- 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
@@ -137,20 +121,20 @@ unsigned char *_mbscat(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscat`|`strcat`|`_mbscat`|`wcscat`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strcat`|\<string.h>|  
 |`wcscat`|\<string.h> 或 \<wchar.h>|  
 |`_mbscat`|\<mbstring.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  请参阅 [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
  [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   

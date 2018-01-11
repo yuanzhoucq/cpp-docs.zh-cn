@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad2cf102902f62d03d4027c16b7d81b255b85875
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-the-read-only-provider"></a>测试只读提供程序
 若要测试提供程序，你需要使用者。 如果使用者可以与相匹配的提供程序，它可以帮助。 OLE DB 使用者模板不 OLE DB 的精简包装，并与提供程序的 COM 对象匹配。 因为源附带的使用者模板，可以很轻松地调试具有它们的提供程序。 使用者模板也是开发使用者应用程序的非常小且快速方法。  
@@ -133,5 +136,5 @@ while (table.MoveNext() == S_OK)
   
  你现在应能够生成并测试该程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)

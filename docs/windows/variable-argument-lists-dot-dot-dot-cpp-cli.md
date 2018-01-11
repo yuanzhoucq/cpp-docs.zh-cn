@@ -1,39 +1,41 @@
 ---
-title: "变量参数列表 (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "参数数组"
-  - "变量参数列表"
+title: "变量自变量列表 （...）(C + + /CLI CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b78b244a93bea0c669c37b5df32ec7146f7ac3b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 变量参数列表 (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此示例演示了如何在 Visual C\+\+ 中使用 `...` 语法实现参数数目可变的功能。  
+# <a name="variable-argument-lists--ccli"></a>变量自变量列表 (...) (C++/CLI)
+此示例演示如何使用`...`Visual c + +，以实现具有可变数量的自变量的函数的语法。  
   
 > [!NOTE]
->  本主题与 C\+\+\/CLI 相关。  有关使用 ISO 标准 C\+\+ 中 `...` 的信息，请参阅 [省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md) 和 [省略号和默认自变量](../misc/ellipses-and-default-arguments.md)。  
+>  本主题适用于 C + + /cli CLI。 有关使用信息`...`ISO 标准 c + + 中，请参阅[省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)和省略号和默认自变量中[后缀表达式](../cpp/postfix-expressions.md)。  
   
- 使用 `...` 参数必须是参数列表中位于最后面的参数。  
+ 使用参数`...`必须是参数列表中的最后一个参数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-### 代码  
+### <a name="code"></a>代码  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +56,14 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>输出  
   
 ```  
 3  
 ```  
   
-## 代码示例  
- 以下示例演示如何从 C\# 调用采用参数数目可变的 Visual C\+\+ 功能。  
+## <a name="code-example"></a>代码示例  
+ 下面的示例演示如何从 C# 调用采用数目可变的参数的 Visual c + + 函数。  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +76,9 @@ public:
 };  
 ```  
   
- 例如，可以从 C\# 或 Visual Basic 调用函数 `f`，就好像它是一个可以采用可变数目参数的函数。  
+ 该函数`f`可以从调用 C# 或 Visual Basic 中，例如，像它是可以采用数量可变的自变量的函数。  
   
- 在 C\# 中，传递给 `ParamArray` 参数的参数可以由可变数量的参数调用。  以下代码示例在 C\# 中。  
+ 在 C# 中，自变量传递给`ParamArray`参数可以由数目可变的参数。 下面的代码示例采用 C#。  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +95,7 @@ public class X {
 }  
 ```  
   
- 调用 Visual C\+\+ 中的 `f` 可以通过一个初始化数组或一个变长数组。  
+ 调用`f`Visual c + + 中可以传递初始化的数组或可变长度数组。  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +113,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [数组](../windows/arrays-cpp-component-extensions.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82795e3494267f953875136bb29c701c93dbc934
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 结构
 工作计划程序的抽象的接口，该工作计划程序希望并发运行时的资源管理器向其传递用户模式计划 (UMS) 线程。 资源管理器使用此接口与 UMS 线程计划程序进行通信。 `IUMSScheduler` 接口继承自 `IScheduler` 接口。  
@@ -53,7 +54,7 @@ struct IUMSScheduler : public IScheduler;
   
  `IUMSScheduler`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -72,7 +73,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ### <a name="remarks"></a>备注  
  资源管理器将调用此方法在指定计划程序已请求资源的初始分配后，它想 UMS 线程计划程序上。 计划程序可以使用`IUMSCompletionList`接口来确定当 UMS 线程代理已解除阻塞。 它才可访问此接口从在分配给 UMS 调度程序的虚拟处理器根上运行的线程代理。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler 结构](ischeduler-structure.md)   

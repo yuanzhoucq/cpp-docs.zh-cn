@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc9a81639da3bcd4aa7ba866f5efb5da39163818
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5ece51c952cacb629a2d0ce2fdecc104a54c7cf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashsetequalrange-stlclr"></a>hash_set::equal_range (STL/CLR)
 查找与指定键匹配的范围。  
@@ -79,12 +82,12 @@ equal_range(L'x') empty = True
  b  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set:: count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
  [hash_set:: find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   

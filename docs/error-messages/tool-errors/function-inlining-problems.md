@@ -1,37 +1,38 @@
 ---
-title: "函数内联问题 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Ob1 C++ 编译器选项"
-  - "/Ob2 C++ 编译器选项"
-  - "函数内联问题"
-  - "内联函数, 问题"
-  - "-Ob1 C++ 编译器选项"
-  - "-Ob2 C++ 编译器选项"
+title: "函数内联问题 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- /Ob1 C++ compiler option
+- inline functions, problems
+- -Ob1 C++ compiler option
+- /Ob2 C++ compiler option
+- -Ob2 C++ compiler option
+- function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 函数内联问题
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果使用函数内联，必须：  
+# <a name="function-inlining-problems"></a>函数内联问题
+如果你使用的内联的函数，您必须：  
   
--   在包括的头文件中实现内联函数。  
+-   具有你包括头文件中实现的内联函数。  
   
--   在头文件中打开内联。  
+-   具有内联打开标头文件中。  
   
 ```  
 // LNK2019_function_inline.cpp  
@@ -63,11 +64,11 @@ int main() {
 }  
 ```  
   
- 如果使用 `#pragma inline_depth` 编译器指令，请确保设置了大于或等于 2 的值。  值为零将关闭内联。  同时确保使用 **\/Ob1** 或 **\/Ob2** 编译器选项。  
+ 如果你使用`#pragma inline_depth`编译器指令，请确保你已设置的值为 2 或更高版本。 值为 0 会关闭内联。 此外请确保你使用**/Ob1**或**/Ob2**编译器选项。  
   
- 在不同模块上混合内联和非内联编译选项有时会导致问题。  如果创建 C\+\+ 库时打开了函数内联（[\/Ob1](../../build/reference/ob-inline-function-expansion.md) 或 [\/Ob2](../../build/reference/ob-inline-function-expansion.md)），但描述函数的相应头文件的内联是关闭的（没有选项），将得到错误 LNK2001。  函数不从头文件内联到代码中，但由于它们不在库文件中，因此没有解析引用的地址。  
+ 混合在不同模块上的内联和非内联编译选项有时会导致问题。 如果使用函数内联开启创建 c + + 库 ([/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)) 但描述函数的相应标头文件具有内联关闭 （未选项），你将收到错误 LNK2001。 函数不会获得与内联到代码从标头文件中，但因为它们不在库文件中没有任何地址来解析引用。  
   
- 同样，如果项目使用函数内联，但在 .cpp 文件（而非头文件）中定义函数，也会得到 LNK2019。  头文件包含在任何被认为合适的位置，但只有在 .cpp 文件通过编译器时函数才内联；因此当函数用于其他模块时，链接器将函数看成无法解析的外部对象。  
+ 同样，使用函数内联的项目尚未定义的函数的.cpp 文件中而不是在标头文件还将获得 LNK2019。 标头文件是包含其他任何位置都有必要，但函数仅是内联时.cpp 文件传递编译器;因此，链接器将视为未解析的外部对象时在其他模块中使用的函数。  
   
 ```  
 // LNK2019_FIP.h  
@@ -76,7 +77,7 @@ struct testclass {
 };  
 ```  
   
- 然后，  
+ 然后  
   
 ```  
 // LNK2019_FIP.cpp  
@@ -85,7 +86,7 @@ struct testclass {
 inline void testclass::PublicStatMemFunc1(void) {}  
 ```  
   
- 然后，  
+ 然后  
   
 ```  
 // LNK2019_FIP_2.cpp  
@@ -100,5 +101,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

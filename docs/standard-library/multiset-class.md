@@ -97,11 +97,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba5b35c7bff46369236bf9be719e351d10a8900d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-class"></a>multiset 类
 C++ 标准库多重集合类用于存储和检索集合中的数据，此集合中包含的元素值无需唯一，并且用作数据自动排序所依据的键值。 不能直接更改多重集合中元素的键值。 必须先删除旧值，才能插入具有新值的元素。  
@@ -166,7 +167,7 @@ class multiset
 |[const_reference](#const_reference)|对存储在 `const` 中的 `multiset` 元素的引用（用于读取和执行 `const` 操作）的 typedef。|  
 |[const_reverse_iterator](#const_reverse_iterator)|可读取 `const` 中任何 `multiset` 元素的双向迭代器的 typedef。|  
 |[difference_type](#difference_type)|`multiset` 中迭代器指向的元素间范围内元素数量的有符号整数 typedef。|  
-|[iterator](#iterator)|可读取或修改 `multiset` 中任何元素的双向迭代器的 typedef。|  
+|[Iterator](#iterator)|可读取或修改 `multiset` 中任何元素的双向迭代器的 typedef。|  
 |[key_compare](#key_compare)|可比较两个键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|  
 |[key_type](#key_type)|可比较两个排序键以确定 `multiset` 中两个元素的相对顺序的函数对象的 typedef。|  
 |[pointer](#pointer)|指向 `multiset` 中的元素的指针的 typedef。|  
@@ -212,7 +213,7 @@ class multiset
 |-|-|  
 |[operator=](#op_eq)|将一个 `multiset` 中的元素替换为另一 `multiset` 副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<set>  
   
  **命名空间：** std  
@@ -676,7 +677,7 @@ iterator emplace(Args&&... args);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`args`|用于构造要插入到多重集中的元素的转发参数。|  
   
 ### <a name="return-value"></a>返回值  
@@ -743,7 +744,7 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`args`|用于构造要插入到多重集中的元素的转发参数。|  
 |`where`|开始搜索正确插入点的位置。 （如果该点紧贴在 `where` 之前，则插入可能发生在分期常量时间内而非对数时间内。)|  
   
@@ -1505,7 +1506,7 @@ multiset (
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |`Al`|要用于此多重集对象的存储分配器类，默认为 `Allocator`。|  
 |`Comp`|用于对多重集中元素排序的 `const Compare` 类型比较函数，默认为 `Compare`。|  
 |`Right`|所构造多重集要作为副本的多重集。|  
@@ -2208,9 +2209,9 @@ int main( )
 The multiset has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<set> 成员](http://msdn.microsoft.com/en-us/0c2d57c0-173f-4204-b579-c5f06aad8b95)   
  [容器](../cpp/containers-modern-cpp.md)   
- [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
 

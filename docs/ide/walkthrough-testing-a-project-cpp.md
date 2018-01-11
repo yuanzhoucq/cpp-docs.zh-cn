@@ -17,18 +17,19 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be54f9b0d82b2c860c12dfcdeeb2c44c9c67547c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-testing-a-project-c"></a>演练：测试项目 (C++)
 在调试模式下运行程序时，可以使用断点来暂停程序，以检查变量和对象的状态。  
   
  在本演练中，你将监视其值的变量，在程序运行并推导的值是不是您预期的原因。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>系统必备  
   
 -   本演练假定你具备 C++ 语言的基础知识。  
   
@@ -67,6 +68,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>后续步骤  
  **上一步：** [演练： 生成项目 （c + +）](../ide/walkthrough-building-a-project-cpp.md) &#124;**下一步：**[演练： 调试项目 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 语言参考](../cpp/cpp-language-reference.md)   
  [生成 C/C++ 程序](../build/building-c-cpp-programs.md)

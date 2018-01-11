@@ -1,33 +1,35 @@
 ---
-title: "CRowsetImpl::NameFromDBID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl.NameFromDBID"
-  - "CRowsetImpl::NameFromDBID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NameFromDBID 方法"
+title: "Crowsetimpl:: Namefromdbid |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl.NameFromDBID
+- CRowsetImpl::NameFromDBID
+dev_langs: C++
+helpviewer_keywords: NameFromDBID method
 ms.assetid: 6aa5b074-90c7-4434-adfd-c64c13e76c78
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: afe16dfefa719760c998c25cc107ba99caacff84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::NameFromDBID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-从 **DBID** 的字符串并将它传递的 `bstr`。  
+# <a name="crowsetimplnamefromdbid"></a>CRowsetImpl::NameFromDBID
+从字符串中提取**DBID**和将其复制到`bstr`中传递。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,24 +40,24 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *pDBID*  
- \[in\] 该提取字符串 **DBID** 的指针。  
+ [in]指向的指针**DBID**要从中提取字符串。  
   
  `bstr`  
- \[in\] 将 **DBID** 字符串的副本的 [CComBSTR](../../atl/reference/ccombstr-class.md) 引用。  
+ [in]A [CComBSTR](../../atl/reference/ccombstr-class.md)参照来放置一份**DBID**字符串。  
   
  `bIndex`  
- \[in\] **true**，**DBID**;如果索引 **false** 表，则 **DBID**。  
+ [in]**true**如果索引**DBID**;**false**如果表**DBID**。  
   
-## 返回值  
- 标准版`HRESULT`。  根据 **DBID** 是否是表或索引 \(表示 `bIndex`\) 方法，将返回 **DB\_E\_NOINDEX** 或 **DB\_E\_NOTABLE**。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。 具体取决于是否**DBID**是表或索引 (由表示`bIndex`)，该方法将任一返回**DB_E_NOINDEX**或**DB_E_NOTABLE**。  
   
-## 备注  
- 此方法由和 [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)的 `CRowsetImpl` 实现调用。  
+## <a name="remarks"></a>备注  
+ 调用此方法`CRowsetImpl`的实现[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)和[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowsetImpl 类](../../data/oledb/crowsetimpl-class.md)

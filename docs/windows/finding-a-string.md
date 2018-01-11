@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ff71ed7662e2a1713cbf6c3053fa044e78a3b1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a66b5dd34aa21a2a0791ecbc71bfd4abcc90c4fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="finding-a-string"></a>查找字符串
 你可以搜索字符串表中的一个或多个字符串，然后使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)与**在文件中查找**命令 (**编辑**菜单) 查找字符串的所有实例模式相匹配。  
@@ -50,6 +53,6 @@ ms.lasthandoff: 10/24/2017
   
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串编辑器](../windows/string-editor.md)   
 

@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac4e4a0e9454567be98e4534614c725df70368ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cf1e8eba11063f7f2e46f836cd2ef84cc70dfe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>“从现有代码文件创建新项目”向导 ->“指定项目设置”
 从现有代码文件创建新项目向导的此页用于指定：  
@@ -71,6 +72,6 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  当**使用外部生成系统**选项已选中，则 IDE 不会生成新项目中，因此 /D，/ 我、 /FI、 /AI 或 /FU 选项不需要的编译。 但是，这些选项必须正确设置使 IntelliSense 正常工作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指定调试配置设置、 从现有代码文件向导创建新项目](../ide/specify-debug-configuration-settings.md)   
  [指定发布配置设置，“从现有代码文件创建新项目”向导](../ide/specify-release-configuration.md)

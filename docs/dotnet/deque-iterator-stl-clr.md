@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6a7893264604eacb2486b823473dde1dafcd050
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 263862aa76e8e913de7650b10bbfc6dc2914ed0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeiterator-stlclr"></a>deque::iterator (STL/CLR)
 受控序列的迭代器的类型。  
@@ -69,11 +72,11 @@ a b c
 x b c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/q u e >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)

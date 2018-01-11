@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2ffbcf504b6b4a7af210b970bcc0f7d4f7e4876c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea3b7e0348cb21aa4338293f7cc1119e380f92dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tree-controls"></a>使用树控件
 树控件的典型用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循以下模式：  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
 -   完成该控件后，请确保正确地销毁。 如果树控件位于对话框中，或如果它是视图，它与`CTreeCtrl`将自动销毁对象。 否则，您需要确保正确地销毁控件和 `CTreeCtrl` 对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控件](../mfc/controls-mfc.md)
 

@@ -51,11 +51,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8b8624d65e6bee9aacb8ac1f8d7ec9537e5e9c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2684de5c72dcc755c2a75e2553eed509ce76533
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 类
 `CMFCPropertySheet` 类支持每个属性页由页选项卡、工具栏按钮、树控件节点或列表项表示的属性表。  
@@ -140,7 +141,7 @@ class CMFCPropertySheet : public CPropertySheet
   
  [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxpropertysheet.h  
   
 ##  <a name="addpage"></a>Cmfcpropertysheet:: Addpage  
@@ -462,7 +463,7 @@ void SetLook(
   
  下表列出了可以中指定的枚举值`look`参数。  
   
-|值|描述|  
+|“值”|描述|  
 |-----------|-----------------|  
 |`CMFCPropertySheet::PropSheetLook_Tabs`|（默认值）显示每个属性页的选项卡。 选项卡显示在属性表的顶部，并具有堆积，如果有更多选项卡不是单个行中放不下。|  
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|显示样式的 Microsoft Outlook 栏中，属性表左侧的导航按钮、 列表。 在列表中的每个按钮对应于属性页。 如果没有更多按钮而不能显示在列表的可见区域中，框架将显示滚动箭头。|  
@@ -470,7 +471,7 @@ void SetLook(
 |`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|在每个属性页的 Microsoft OneNote 样式显示选项卡。 框架显示属性表顶部的选项卡和滚动箭头是否存在比的更多选项卡可容纳在单个行。|  
 |`CMFCPropertySheet::PropSheetLook_List`|显示属性表左侧的列表。 每个列表项对应于属性页。 如果有多个列表项超过可容纳的可见区域的列表，则框架显示滚动箭头。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertyPage 类](../../mfc/reference/cmfcpropertypage-class.md)   

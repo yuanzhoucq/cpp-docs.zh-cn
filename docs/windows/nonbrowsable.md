@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4b5cd632f3d84af72c59cc647128f93eb829670
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 279d6e80fe100fbbd41e54c4a13640e3046cf73c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 指示接口成员不应显示在属性浏览器中。  
@@ -51,19 +54,19 @@ __interface IMyI
 };  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|接口方法|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [方法特性](../windows/method-attributes.md)   

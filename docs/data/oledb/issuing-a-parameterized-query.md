@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issuing-a-parameterized-query"></a>发出参数化查询
 下面的示例发出简单参数化的查询从 Microsoft Access 数据库的表中检索具有年龄字段 （这是大于 30） 的记录。 若要支持此参数，用户记录必须具有一个附加的映射。 下面的代码中，在 ATL 项目中，使用`CCommand`类而不是`CTable`使用在前面的示例中，类[遍历简单行集合](../../data/oledb/traversing-a-simple-rowset.md)。  
@@ -75,5 +78,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

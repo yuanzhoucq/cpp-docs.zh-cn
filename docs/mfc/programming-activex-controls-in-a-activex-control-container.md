@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b159e41a27254f44d9a9868012237875cc24d4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 控件容器：对 ActiveX 控件容器中的 ActiveX 控件编程
 本文介绍了用于访问公开过程[方法](../mfc/mfc-activex-controls-methods.md)和[属性](../mfc/mfc-activex-controls-properties.md)的嵌入 ActiveX 控件。 基本上，你将执行下列步骤：  
@@ -96,6 +97,6 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveX 控件容器](../mfc/activex-control-containers.md)
 

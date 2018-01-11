@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 452debf30eec9f5ca5eacd562302a578e0d0138a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>自定义工具栏控件的外观
 类`CToolBarCtrl`提供许多影响外观 （和，有时，行为） 的工具栏对象的样式。 通过设置来修改工具栏对象`dwCtrlStyle`参数`CToolBarCtrl::Create`(或`CToolBar::CreateEx`) 成员函数，首次创建工具栏控件时。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
   
  工具栏样式和扩展的样式的完整列表，请参阅[工具栏控件和按钮样式](http://msdn.microsoft.com/library/windows/desktop/bb760439)和[工具栏扩展样式](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

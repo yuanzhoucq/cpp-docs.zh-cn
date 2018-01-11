@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>使用项目属性
 生成项目所需的所有信息作为在 IDE 中的都公开*属性*。 此信息包括应用程序名称、 扩展名 （如 DLL、 LIB、 EXE）、 编译器选项、 链接器选项、 调试器设置、 自定义生成步骤和许多其他操作。 通常情况下，使用*属性页*(**项目 &#124;属性**) 查看和修改这些属性。 
@@ -263,5 +264,5 @@ ms.lasthandoff: 10/24/2017
 <Import Project==" C:\sources\my_target.targets"" />
 ```  
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建和管理 Visual c + + 项目](../ide/creating-and-managing-visual-cpp-projects.md) [.vcxproj 和.props 文件结构](vcxproj-file-structure.md)[属性页 XML 文件](property-page-xml-files.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 462c6ef597a4b1a07e289ccbc805f9af69d95d69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e8f99f3d0e2b9f2edc6b8a1c59819b97b1fa6ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ready-to-use-list-classes"></a>随时可用的列表类
 下列类是随时可用的列表类。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/24/2017
  [CStringList](../mfc/reference/cstringlist-class.md)  
  在链接列表中存储 `CString` 对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

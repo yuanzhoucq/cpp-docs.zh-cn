@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 类
 描述一个对象，该对象可控制从 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 类的流缓冲区提取元素和编码对象，其中 `Elem` 类型的元素的字符特征由 `Tr` 类确定。  
@@ -111,7 +112,7 @@ This is the contents of basic_ifstream_class.txt.
 |-|-|  
 |[operator=](#op_eq)|分配此流对象的内容。 这是一种移动赋值，所涉及的 `rvalue` 不会留下副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<fstream>  
   
  **命名空间：** std  
@@ -200,7 +201,7 @@ bool is_open() const;
  如果文件处于打开状态，则为 **true**，否则为 **false**。  
   
 ### <a name="remarks"></a>备注  
- 此成员函数返回 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。  
+ 成员函数将返回[rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open)。  
   
 ### <a name="example"></a>示例  
   有关如何使用 `is_open` 的示例，请参阅 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)。  
@@ -288,7 +289,7 @@ void swap(basic_ifstream& right);
 ### <a name="remarks"></a>备注  
  此成员函数将此对象的内容与 `right` 的内容进行交换。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)

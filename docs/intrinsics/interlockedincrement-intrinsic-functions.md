@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6185aee179febe77fa9f5b47793e4becd253e504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64866df8d2c0927e35a62b188e1f320cdd0bb2e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 内部函数
 **Microsoft 专用**  
@@ -114,9 +115,9 @@ __int64 _InterlockedIncrement64_nf(
 ## <a name="return-value"></a>返回值  
  返回值是生成的递增值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|内部函数|体系结构|标头|  
+|内部函数|体系结构|Header|  
 |---------------|------------------|------------|  
 |`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h >|  
@@ -139,7 +140,7 @@ __int64 _InterlockedIncrement64_nf(
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [与 x86 编译器冲突](../build/conflicts-with-the-x86-compiler.md)

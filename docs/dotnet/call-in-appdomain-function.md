@@ -1,32 +1,33 @@
 ---
-title: "call_in_appdomain 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "call_in_appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_in_appdomain 函数"
+title: "call_in_appdomain 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: call_in_appdomain
+dev_langs: C++
+helpviewer_keywords: call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 10fc96a2fee5195db97b9a3a8ac3341ea5c3a444
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# call_in_appdomain 函数
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-执行指定的应用程序域中的函数。  
+# <a name="callinappdomain-function"></a>call_in_appdomain 函数
+在指定的应用程序域中执行的函数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <typename ArgType1, ...typename ArgTypeN>  
@@ -47,26 +48,26 @@ RetType call_in_appdomain(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `appdomainId`  
- \(的调用的函数。  
+ 在其中调用该函数 appdomain。  
   
  `voidFunc`  
- 向 N 带有参数的 `void` 函数的指针 \(0 \<\= " \<\= 15\)。  
+ 指向`void`采用 N 参数的函数 (0 < = N < = 15)。  
   
  `nonvoidFunc`  
- 向 N 带有参数的 `void` 函数的指针 \(0 \<\= " \<\= 15\)。  
+ 指向非`void`采用 N 参数的函数 (0 < = N < = 15)。  
   
  `arg1...argN`  
- 传递零到 15 个参数设置为 `voidFunc` 或 `nonvoidFunc`。另一个生成。  
+ 0 到 15 个参数传递给`voidFunc`或`nonvoidFunc`其他 appdomain 中。  
   
-## 返回值  
- 实现 `voidFunc` 或 `nonvoidFunc` 的结果是在指定的应用程序域。  
+## <a name="return-value"></a>返回值  
+ 执行的结果`voidFunc`或`nonvoidFunc`指定的应用程序域中。  
   
-## 备注  
- 传递到 `call_in_appdomain` 函数的参数无法为 CLR 类型。  
+## <a name="remarks"></a>备注  
+ 函数的参数传递给`call_in_appdomain`不得 CLR 类型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // msl_call_in_appdomain.cpp  
@@ -112,7 +113,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 default appdomain: msl_call_in_appdomain.exe  
@@ -121,7 +122,7 @@ default appdomain id = 1
 appDomain1 id = 2  
 ```  
   
-## 要求  
- **Header file** \<msclr\\appdomain.h\>  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\appdomain.h >  
   
  **Namespace** msclr

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca6ee4a44ea9e126be16b785b9ae52c7a852bc5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pair-stlclr"></a>pair (STL/CLR)
 此模板类描述一个包装成对的值的对象。  
@@ -63,10 +66,10 @@ template<typename Value1,
 ## <a name="remarks"></a>备注  
  此对象存储值的对。 你使用此模板类将两个值合并到单个对象。 请注意， `cliext::pair` （此处所述） 存储仅托管类型; 若要存储的成对的非托管类型，请使用`std::pair`中声明`<utility>`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/实用工具 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [make_pair (STL/CLR)](../dotnet/make-pair-stl-clr.md)

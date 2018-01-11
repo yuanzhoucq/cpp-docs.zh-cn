@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6e686160a0ac49bac10e576570970d4afcb2eba3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eced2be2f5ccc29be5f9ac936dfeae9f4cdb03a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outword"></a>__outword
 **Microsoft 专用**  
@@ -44,7 +45,7 @@ void __outword(
  [in] `Data`  
  要发送的数据。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -57,5 +58,5 @@ void __outword(
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

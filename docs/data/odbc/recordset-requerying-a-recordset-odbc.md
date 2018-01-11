@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5cf85c4fc124388e723654a1f3a97e13237fe6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>记录集：再次查询记录集 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -61,7 +64,7 @@ ms.lasthandoff: 10/24/2017
   
  如果**Requery**调用将失败，你可以重试调用; 否则，你的应用程序应正常终止。 调用**Requery**或**打开**多种原因导致的任何可能会失败。 可能发生网络错误;或者，在调用期间发布的现有数据后但在之前获取新的数据，另一个用户可能获得独占访问权;或者无法删除记录集所依赖的表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集： 动态绑定数据列 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
  [记录集：创建和关闭记录集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

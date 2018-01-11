@@ -1,35 +1,37 @@
 ---
-title: "CRestrictions::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRestrictions.Open"
-  - "ATL::CRestrictions::Open"
-  - "ATL.CRestrictions.Open"
-  - "CRestrictions::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open 方法"
+title: "Crestrictions:: Open |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bbb0b175a6fa5a6cf93b4fe107884d5bb84f2487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CRestrictions::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-根据用户提供的限制返回结果集。  
+# <a name="crestrictionsopen"></a>CRestrictions::Open
+返回一个结果集，根据用户提供的限制。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -46,27 +48,27 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `session`  
- \[in\] 指定用于的现有会话对象连接到数据源。  
+ [in]指定用于连接到数据源的现有会话对象。  
   
  *lpszParam*  
- \[in\] 在架构行集指定限制。  
+ [in]架构行集上指定的限制。  
   
  `bBind`  
- \[in\] 指定是否自动绑定列映射。  默认是 **true**，导致命令自动绑定。  设置 `bBind` 为 **false** 以阻止命令的自动绑定，以便手动绑定。\(OLAP 用户对手动绑定特别感兴趣。\)  
+ [in]指定是否自动绑定列映射。 默认值是**true**，这将导致产生要自动绑定的列映射。 设置`bBind`到**false**阻止自动绑定列映射，以便你可以手动绑定。 （手动绑定是 OLAP 用户的特别感兴趣。）  
   
-## 返回值  
- 标准`HRESULT` 值之一。  
+## <a name="return-value"></a>返回值  
+ 一个标准`HRESULT`值。  
   
-## 备注  
- 在架构行集可以指定最多七限制。  
+## <a name="remarks"></a>备注  
+ 架构行集上，可以指定最多七个限制。  
   
- 获取有关每个架构行集，所定义限制的信息请参见 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)。  
+ 请参阅[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)有关每个架构行集上定义的限制信息。  
   
-## 要求  
- **头文件：**atldbsch.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldbsch.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CRestrictions 类](../../data/oledb/crestrictions-class.md)   
  [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

@@ -83,11 +83,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 734097d8fffcbe21f17b68432d6233a03b11a28a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a235b88b676f7cf643a878e9a06408c87b20bcba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 `CMFCStatusBar`类实现类似于状态栏`CStatusBar`类。 但是， `CMFCStatusBar` 类具有 `CStatusBar` 类未提供的功能，例如显示图像、动画和进度栏的功能，以及对鼠标双击作出响应的功能。 
@@ -184,7 +185,7 @@ class CMFCStatusBar : public CPane
   
  [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxstatusbar.h  
   
 ##  <a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
@@ -773,7 +774,7 @@ void SetTipText(
  [in] `pszTipText`  
  新的工具提示文本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPane 类](../../mfc/reference/cpane-class.md)   

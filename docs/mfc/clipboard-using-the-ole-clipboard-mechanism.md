@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68f6c53c091063ab79078fb4a512638263b814bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4996c6559ad20141fb84ed37e87fd1551e89a77b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>剪贴板：使用 OLE 剪贴板机制
 OLE 使用标准格式和一些 OLE 特定格式通过剪贴板传输数据。  
@@ -52,6 +53,6 @@ OLE 使用标准格式和一些 OLE 特定格式通过剪贴板传输数据。
   
 -   [OLE 数据对象和数据源以及统一数据传输](../mfc/data-objects-and-data-sources-ole.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [剪贴板](../mfc/clipboard.md)
 

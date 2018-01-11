@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a07e596531957294be304efb6a95cc05ce75aec4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4708d45defe151b85ad132621838f1648aebc457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>按字母顺序列出的内部函数
 以下各部分介绍了部分或所有体系架构中可用的特定于 Microsoft 的内部函数。 其他受支持的内部函数由处理器制造商在标题文件或其网站上提供。 请参阅[ARM 内部函数](../intrinsics/arm-intrinsics.md)， [x86 内部函数](../intrinsics/x86-intrinsics-list.md)，和[x64 内部函数](../intrinsics/x64-amd64-intrinsics-list.md)有关制造商文档的链接的部分。 具有为其实现的内部函数的 C 运行时库 (CRT) 函数未在此处; 介绍这些函数均记录在[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)。  
@@ -282,5 +283,5 @@ ms.lasthandoff: 10/24/2017
   
  [__writemsr](../intrinsics/writemsr.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

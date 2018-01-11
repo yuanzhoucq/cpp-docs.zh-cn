@@ -67,11 +67,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73b8adbff021a179f3bd3185fa85ee18c84a441a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 689d538c03a35175040663aedb7bd6130aae10fd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 类
 `CDrawingManager`类实现复杂的绘图算法。  
@@ -128,7 +129,7 @@ class CDrawingManager : public CObject
  [CObject](../../mfc/reference/cobject-class.md)  
  `CDrawingManager`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdrawmanager.h  
   
 ##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
@@ -159,7 +160,7 @@ static HBITMAP __stdcall CreateBitmap_32(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `size`|A [CSize](../../atl-mfc-shared/reference/csize-class.md)参数可指示位图的大小。|  
 |[out] `pBits`|指向接收 DIB 的位置的数据指针的位值。|  
 |`bitmap`|指向的原始位图的句柄|  
@@ -286,7 +287,7 @@ void DrawLineA(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `x1`|行的开始位置 x 坐标。|  
 |[in] `y1`|Y 坐标的一行开始。|  
 |[in] `x2`|行的结束位置的 x 坐标。|  
@@ -576,7 +577,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
  RGB 颜色的表示形式 HLS 提供。  
   
 ### <a name="remarks"></a>备注  
- 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/linkid=119126)。  
+ 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
   
  此方法与`CDrawingManager::HLStoRGB_TWO`方法执行相同的操作，但需要不同的值`H`参数。 在此方法，`H`是圆的百分比。 在`CDrawingManager::HLStoRGB_TWO`方法，`H`是介于 0 至 360，这两者都代表红色度值。 例如，对于`HLStoRGB_ONE`，0.25 的一个值`H`等效于值为 90 与`HLStoRGB_TWO`。  
   
@@ -604,7 +605,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
  RGB 颜色的表示形式 HLS 提供。  
   
 ### <a name="remarks"></a>备注  
- 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/linkid=119126)。  
+ 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
   
  此方法与[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法执行相同的操作，但需要不同的值`H`参数。 在此方法，`H`是介于 0 至 360，这两者都代表红色度值。 在[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法，`H`是圆的百分比。 例如，对于`HLStoRGB_ONE`，0.25 的一个值`H`等效于值为 90 与`HLStoRGB_TWO`。  
   
@@ -622,7 +623,7 @@ static COLORREF __stdcall HSVtoRGB(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `H`|0 至 360 之间的数字，指示颜色色调。|  
 |[in] `S`|介于 0 和 1 之间的数字表示的颜色饱和度。|  
 |[in] `V`|介于 0 和 1 之间的数字表示颜色的值。|  
@@ -631,7 +632,7 @@ static COLORREF __stdcall HSVtoRGB(
  RGB 颜色的表示形式 HSV 提供。  
   
 ### <a name="remarks"></a>备注  
- 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/linkid=119126)。  
+ 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
   
 ##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  将一个色调值转换为红色、 绿色还是蓝色组件。  
@@ -793,14 +794,14 @@ static void __stdcall RGBtoHSL(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `rgb`|RGB 值中的颜色。|  
 |[out] `H`|指向一个双精度值，该方法将颜色色调在其中存储的指针。|  
 |[out] `S`|指向一个双精度值，该方法将颜色饱和度在其中存储的指针。|  
 |[out] `L`|指向一个双精度值，该方法将颜色亮度在其中存储的指针。|  
   
 ### <a name="remarks"></a>备注  
- 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/linkid=119126)。  
+ 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
   
  返回的值为`H`表示为介于 0 和 1 其中 0 和 1 代表红色之间的小数部分。 返回的值`S`和`L`是介于 0 和 1 之间的数字。  
   
@@ -829,7 +830,7 @@ static void __stdcall RGBtoHSV(
  指向此方法将生成的颜色的值存储的其中一个双精度值的指针。  
   
 ### <a name="remarks"></a>备注  
- 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/linkid=119126)。  
+ 一种颜色可以表示为 HSV （色调、 饱和度和值）、 HSL （色调、 饱和度和亮度） 或 RGB （红色、 绿色和蓝色）。 有关不同的表示形式的颜色的详细信息，请参阅[颜色](http://go.microsoft.com/fwlink/p/?linkid=119126)。  
   
  返回的值为`H`是 0 至 360 之间的数字 0 至 360 其中指示红色。 返回值为`S`和`V`是介于 0 和 1 之间的数字。  
   
@@ -895,7 +896,7 @@ static void __stdcall SetPixel(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `pBits`|指向位图的位值的指针。|  
 |[in] `cx`|总位图的宽度。|  
 |[in] `cy`|总位图的高度。|  
@@ -919,7 +920,7 @@ static COLORREF __stdcall SmartMixColors(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `color1`|要组合的第一个颜色。|  
 |[in] `color2`|要组合的第二个颜色。|  
 |[in] `dblLumRatio`|新颜色亮度率。 `SmartMixColors`在确定最终颜色之前乘以此比率的混合颜色亮度。|  
@@ -956,6 +957,6 @@ void DrawRotated(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)

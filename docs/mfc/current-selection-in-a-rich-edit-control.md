@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b41b99ca515cb91c097cb20c3ef0cd0e5dccb64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5f0d9332d1118809ae3d62c187ec848ec95ffbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 控件中的当前选定内容
 用户可以选择 rich edit 控件中的文本 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 通过使用鼠标或键盘。 当前所选内容的所选的字符范围或选定的插入点，如果没有字符的位置。 应用程序可以获取有关当前所选内容的信息、 设置当前所选内容、 确定在当前选择会有所变化，以及显示或隐藏所选内容突出显示。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  可以在多用户环境中搜索 rich edit 控件中的字符串，通过使用[FindText](../mfc/reference/cricheditctrl-class.md#findtext)成员函数[FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909)结构使用此函数使用指定的搜索和要搜索的字符串的文本范围。 你还可以搜索是否区分大小写指定此类选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-file-translation"></a>文件转换概述
 C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的每个文件按以下概念顺序进行翻译（实际顺序遵循“似同”规则：必须进行翻译，就似同已执行这些步骤一样）：  
@@ -33,7 +34,7 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
   
 2.  预处理。 此翻译阶段将引入引用的辅助源文件`#include`指令，处理"stringizing"和"字符化"指令，并执行标记粘贴和宏扩展 (请参阅[预处理器指令](../preprocessor/preprocessor-directives.md)在*预处理器参考*有关详细信息)。 预处理阶段的结果是一系列共同用于定义“翻译单元”的标记。  
   
-     预处理器指令总是以数字符号开头 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如：  
+     预处理器指令总是以数字符号开头 (**#**) 字符 （即，在行上的第一个非空白字符必须是数字符号）。 一个给定行上只能出现一个预处理器指令。 例如:  
   
     ```  
     #include <iostream>  // Include text of iostream in   
@@ -56,5 +57,5 @@ C++ 程序（如 C 程序）由一个或多个文件组成。 这些文件中的
   
 -   C 预处理器无法识别 c + + 运算符： **。\***，  **-> \*** ，和`::`。 请参阅[运算符](../cpp/cpp-built-in-operators-precedence-and-associativity.md)和[表达式](../cpp/expressions-cpp.md)，有关运算符的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)

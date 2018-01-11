@@ -1,63 +1,63 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__segmentlimit 内部函数"
-  - "lsl 指令"
+title: "__segmentlimit |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7c93923a3fdbb2a5e62163b41c83be30d0a54e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="segmentlimit"></a>__segmentlimit
 **Microsoft 专用**  
   
- 生成 `lsl` \(加载段限制\) 命令。  
+ 生成`lsl`（负载段限制） 指令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### 参数  
- \[in\] `a`  
- 指定段选择器中的常数。  
+#### <a name="parameters"></a>参数  
+ [in] `a`  
+ 一个指定段选择器的常数。  
   
-## 返回值  
- `a,`指定时间段选择器的段限制，在该有效并显示在当前权限级别条件下。  
+## <a name="return-value"></a>返回值  
+ 通过指定的段选择器的段限制`a`，前提是选择器在当前的权限级别是有效的并且可见。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__segmentlimit`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 如果段限制不能检索，此命令失败。  在失败时，此命令清除 ZF 标志，并返回值是不确定的。  
+## <a name="remarks"></a>备注  
+ 如果不能检索段限制，此指令将失败。 在失败时，此指令清除 ZF 标志和返回值是不确定。  
   
- 此实例只能用作内部。  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 #include <stdio.h>  
@@ -104,10 +104,14 @@ int main(void)
 }  
 ```  
   
-  **以前:段限制 \=0xbaadbabe eflags \=0x0**  
-**后面:段限制 \=0xffffffff eflags \=0x256 eflags.zf \= 设置**  
-**成功！  已更改 sl**    
-## 特定于 Microsoft 的结尾  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## 请参阅  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

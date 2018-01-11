@@ -18,11 +18,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45fc41430fbbf04f8b1b56fe6355fb0b81f8e1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>类和结构（C++ 组件扩展）
 声明类或结构其*对象生存期*自动进行管理。 当对象不再可访问或超出范围时，Visual C++ 会自动放弃分配给对象的内存。  
@@ -103,7 +106,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  使用 `value class` 或 `value struct` 关键字声明对象时，不会监督声明的对象的对象生存期。 该对象如同任何其他标准 C++ 类或结构一样。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
@@ -120,8 +123,8 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
  `value class`和`value struct`关键字告知编译器的已分配的类或结构的值是传递给函数或存储在成员。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

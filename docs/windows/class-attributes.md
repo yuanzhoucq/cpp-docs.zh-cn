@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d6883774f6deeae2d8c372b68362c743d206eb9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-attributes"></a>类特性
 下列属性适用于[类](../cpp/class-cpp.md)c + + 关键字。  
@@ -62,5 +65,5 @@ ms.lasthandoff: 10/24/2017
 |[version](../windows/version-cpp.md)|标识的类的多个版本之间的特定版本。|  
 |[vi_progid](../windows/vi-progid.md)|指定独立于版本的窗体的 ProgID。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按用法分的特性](../windows/attributes-by-usage.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1115af5eb7726138a1954f832ec2761a47667e44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locales-and-code-pages"></a>区域设置和代码页
 将区域设置 ID 反映本地的约定和语言特定的地理区域。 可能有一个以上的国家/地区说某种特定的语言，例如，巴西和葡萄牙都说葡萄牙语。 反之，一个国家/地区可能有一种以上的官方语言。 例如，加拿大有两种语言： 英语和法语。 因此，加拿大有两个不同的区域设置： 加拿大英语和加拿大法语。 一些与区域设置相关的类别包括日期的格式设置和货币值的显示格式。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/24/2017
   
  C 运行时函数`setlocale`设置、 更改或查询部分或全部当前程序区域设置信息。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)例程是宽字符版本的`setlocale`; 的自变量和返回值`_wsetlocale`是宽字符字符串。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [字符集可迁移性的好处](../text/benefits-of-character-set-portability.md)

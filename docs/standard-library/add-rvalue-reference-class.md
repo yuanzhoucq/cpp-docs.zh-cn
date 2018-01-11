@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::add_rvalue_reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- add_rvalue_reference Class
+f1_keywords: type_traits/std::add_rvalue_reference
+dev_langs: C++
+helpviewer_keywords: add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 605e428c0712a657b7b3d0df35558a61c6dbc54a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ba7959b602a18ab4072dfb84238e95077337be3d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference 类
 如果模板参数是对象或函数类型，则创建模板参数的右值引用类型。 否则，由于引用折叠的语义，类型与模板参数相同。  
@@ -78,11 +74,10 @@ All static_assert tests of add_rvalue_reference passed.
 */  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  标头：< type_traits > 命名空间：std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)   
  [add_lvalue_reference 类](../standard-library/add-lvalue-reference-class.md)   
  [is_rvalue_reference 类](../standard-library/is-rvalue-reference-class.md)
-

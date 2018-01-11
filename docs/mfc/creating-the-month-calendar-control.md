@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ad088f67431af58a81dc06d5b0f3352a844299e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f55960177fa8bc9a31ebfd16b4dbc6aeaba3ee38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-month-calendar-control"></a>创建月历控件
 月历控件的创建方式取决于您将在对话框中使用此控件还是将在非对话框窗口中创建此控件。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
 2.  调用控件的[创建](../mfc/reference/cmonthcalctrl-class.md#create)成员函数，可能在[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)中进行，父窗口的[OnCreate](../mfc/reference/cwnd-class.md#oncreate)处理程序函数 （如果您是将控件子类化）。 设置控件的样式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

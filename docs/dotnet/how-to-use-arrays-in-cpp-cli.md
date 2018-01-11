@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8867d6a2a7871d1785e1a1fdbeb9856de4bd9904
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b061437cfe34ee0ec9c00242bf0e62b1e7426f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用数组
 本文介绍如何将使用数组中 C + + /cli CLI。  
@@ -619,5 +622,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>请参阅  
+ [数组](../windows/arrays-cpp-component-extensions.md)

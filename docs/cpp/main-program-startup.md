@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b08b5108d609deca2eed94a05d4eb01d09f10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-program-startup"></a>main：程序启动
 一个名为的特殊函数`main`是所有 C 和 c + + 程序的执行的起始点。 如果您要编写遵循 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 编程模型的代码，则可使用 `wmain`（它是 `main` 的宽字符版本）。  
@@ -66,7 +67,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 **结束 Microsoft 专用**  
  `argc` 和 `argv` 的类型由语言定义。 名称 `argc`、`argv` 和 `envp` 是传统的，但编译器不需要这些名称。 有关详细信息及示例，请参阅[自变量定义](../cpp/argument-definitions.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [关键字](../cpp/keywords-cpp.md)   
  [使用 wmain 代替 main](../cpp/using-wmain-instead-of-main.md)   
  [main 函数限制](../cpp/main-function-restrictions.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 181dcba15098f7cd75eec083ab977969bde622ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 你可以随意使用常规 C 样式数组或[std:: array](../standard-library/array-class-stl.md)在 C + + /cli CX 程序 (尽管[std:: vector](../standard-library/vector-class.md)通常是更好的选择)，但在元数据中发布任何 API 中，你必须将 C 样式数组转换或矢量到[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)具体取决于如何使用的类型。 [Platform::Array](../cppcx/platform-array-class.md) 类型既不像 [std::vector](../standard-library/vector-class.md)那样高效也不像它那样功能强大，因此，一般原则是，应避免在对数组元素执行大量操作的内部代码中使用该类型。  
@@ -91,7 +92,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="avoid-exposing-an-array-as-a-property"></a>避免将数组公开为属性  
  通常，应避免将 `Platform::Array` 类型公开为 ref 类中的属性，因为将返回整个数组，即使在客户端代码仅尝试访问单个元素时也是如此。 当需要将序列容器公开为公共 ref 类的属性时， [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 是更好的选择。 在私有或内部 API 中（未发布到元数据），请考虑使用标准 C++ 容器（如 [std::vector](../standard-library/vector-class.md)）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类型系统](../cppcx/type-system-c-cx.md)   
  [Visual c + + 语言参考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空间参考](../cppcx/namespaces-reference-c-cx.md)

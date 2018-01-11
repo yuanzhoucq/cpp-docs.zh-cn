@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>如何：监视文件系统更改 (C++/CLI)
 下面的代码示例使用<xref:System.IO.FileSystemWatcher>以注册事件对应于正在创建，已更改、 删除或重命名的文件。 而不是定期轮询更改文件的目录，你可以使用<xref:System.IO.FileSystemWatcher>类激发事件时检测到更改。  
@@ -90,7 +93,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [System.IO 命名空间](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
  [文件和流 I-O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

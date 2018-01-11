@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9996088d9aa45fb518354e8d9d7c34e8fca5674
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea6714958331c7562d248170d7fd45f4b78c4860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moduleincrementobjectcount-method"></a>Module::IncrementObjectCount 方法
 递增模块所跟踪对象的数量。  
@@ -33,10 +36,10 @@ virtual long IncrementObjectCount();
 ## <a name="return-value"></a>返回值  
  递增操作之前的计数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [Module 类](../windows/module-class.md)

@@ -1,41 +1,42 @@
 ---
-title: "list::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin 成员 [STL/CLR]"
+title: "list:: begin (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: 3431467b-951a-498a-af8d-50f631da1646
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a98c73ae1bd89b4c963b3f65df86c0df5ac4574b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# list::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listbegin-stlclr"></a>list::begin (STL/CLR)
 指定受控序列的开头。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator begin();  
 ```  
   
-## 备注  
- 成员函数返回一个随机访问迭代器，指定受控序列的第一个元素，或刚好在空序列的末尾之外。  用于获取一个迭代器，该迭代器指定受控序列的 `current` 开头，但如果受控序列的长度发生更改，则该迭代器的状态也会发生更改。  
+## <a name="remarks"></a>备注  
+ 成员函数返回指定第一个元素的受控序列，或刚超出空序列末尾的随机访问迭代器。 用于获取指定的迭代器`current`如果受控序列的长度发生更改，可以更改的受控的序列中，但其状态的开头。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_begin.cpp   
@@ -70,17 +71,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= b**  
- **x y c**   
-## 要求  
- **标头:** \<cliext\/list\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::end](../dotnet/list-end-stl-clr.md)   
- [list::front](../dotnet/list-front-stl-clr.md)   
- [list::front\_item](../dotnet/list-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)   
+ [list:: front (STL/CLR)](../dotnet/list-front-stl-clr.md)   
+ [list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)

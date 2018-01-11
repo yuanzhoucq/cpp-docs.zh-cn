@@ -1,42 +1,44 @@
 ---
-title: "Attribute Contexts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], contexts"
+title: "特性上下文 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: attributes [C++], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Contexts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用四个基本的字段， C\+\+ 特性可以描述:该目标。可以应用到 \(**适用于**\)，因此，如果与其他属性 \(**无效的特性**\) 的它们是可重复的或非 \(**可重复**\)，所需的显示其他属性 \(**必需的特性**\) 和不兼容。  这些字段在每个属性的一个附表中列出参考主题。  上述每个字段下述。  
+# <a name="attribute-contexts"></a>特性上下文
+可以使用四个基本字段描述 c + + 特性： 它们可以应用到的目标 (**适用于**)，如果它们是可重复的还是不 (**可重复**)，则需要其他特性 (是否存在**必需的属性**)，并与其他属性不兼容 (**无效的特性**)。 这些字段在每个属性的参考主题的相关表中列出。 下面描述了每个这些字段。  
   
-## 适用于  
- 此字段描述是指定属性的合法的目标的其他 C\+\+ 语言元素。  例如，因此，如果属性。 **适用于** 字段指定 “类”，则指示特性只能应用于合法的 C\+\+ 类。  如果将特性应用于类的成员函数，语法就会发生错误。  
+## <a name="applies-to"></a>适用于  
+ 此字段描述是指定的属性的合法目标的不同 c + + 语言元素。 例如，如果属性中指定"类"**适用于**字段，这指示该属性可以只能应用于合法的 c + + 类。 如果该属性应用于类的成员函数，则会导致语法错误。  
   
- 有关更多信息，请参见 [由用法的属性](../windows/attributes-by-usage.md)。  
+ 有关详细信息，请参阅[按用法分的特性](../windows/attributes-by-usage.md)。  
   
-## 可重复  
- 此字段指示属性是否可重复应用于同一目标。  大多数属性不是可重复的。  
+## <a name="repeatable"></a>可重复  
+ 此字段，指出是否该属性可以重复应用于相同的目标。 大部分属性不是可重复的。  
   
-## 必需的特性  
- 此字段列出了需要存在的其他属性 \(即应用于同一目标\) 以便指定的属性正常工作。  具有此字段的所有项属性极为少见。  
+## <a name="required-attributes"></a>必需的特性  
+ 此字段列出了需要其他特性存在指定的属性才能正常工作 （即，应用到相同目标）。 它是常见的属性以包含此字段的任何条目。  
   
-## 无效的特性  
- 此字段列表与指定的属性不兼容的其他属性。  具有此字段的所有项属性极为少见。  
+## <a name="invalid-attributes"></a>无效的特性  
+ 此字段会列出与指定的属性不兼容的其他特性。 它是常见的属性以包含此字段的任何条目。  
   
-## 请参阅  
- [C\+\+ Attributes Reference](../windows/cpp-attributes-reference.md)
+## <a name="see-also"></a>请参阅  
+ [C++ 特性参考](../windows/cpp-attributes-reference.md)

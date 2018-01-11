@@ -17,11 +17,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f4a679b6945c98d591d3fbd64a6934ea17b0e88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7b935aabeb048d955941a41f6a50735897a53009
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abstract--c-component-extensions"></a>abstract（C++ 组件扩展）
 `abstract` 关键字声明以下两者之一：  
@@ -57,12 +60,12 @@ virtualreturn-typemember-function-identifier() abstract ;
 ## <a name="windows-runtime"></a>Windows 运行时  
  有关详细信息，请参阅[Ref 类和结构](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ## <a name="common-language-runtime"></a>公共语言运行时 
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -114,5 +117,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

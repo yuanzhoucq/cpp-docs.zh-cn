@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>CButton 类
 提供 Windows 按钮控件功能。  
@@ -189,7 +190,7 @@ class CButton : public CWnd
   
  `CButton`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cbutton"></a>CButton::CButton  
@@ -308,7 +309,7 @@ int GetCheck() const;
 ### <a name="return-value"></a>返回值  
  按钮控件中的返回值创建与**BS_AUTOCHECKBOX**， **BS_AUTORADIOBUTTON**， **BS_AUTO3STATE**， **BS_CHECKBOX**， **BS_RADIOBUTTON**，或**BS_3STATE**样式是以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**BST_UNCHECKED**|按钮状态为未选中状态。|  
 |**BST_CHECKED**|将检查按钮状态。|  
@@ -400,7 +401,7 @@ BOOL GetNote(
 ### <a name="return-value"></a>返回值  
  在第一个重载中， [CString](../../atl-mfc-shared/using-cstring.md)对象，其中包含与当前的命令链接控件关联的注释文本。  
   
- - 或 -  
+ 或  
   
  在第二个重载中，`true`如果此方法成功; 否则为`false`。  
   
@@ -527,7 +528,7 @@ UINT GetState() const;
 ### <a name="return-value"></a>返回值  
  包含指示按钮控件的当前状态的值的组合的位字段。 下表列出可能的值。  
   
-|按钮状态|值|描述|  
+|按钮状态|“值”|描述|  
 |------------------|-----------|-----------------|  
 |`BST_UNCHECKED`|0x0000|初始状态。|  
 |`BST_CHECKED`|从 0x0001|已选中按钮控件。|  
@@ -630,7 +631,7 @@ void SetCheck(int nCheck);
  `nCheck`  
  指定的复选状态。 此参数可以是以下项之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |**BST_UNCHECKED**|将按钮状态设置为未选中状态。|  
 |**BST_CHECKED**|将按钮状态，检查设置。|  
@@ -685,7 +686,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `fDropDown`|`true`若要设置`BST_DROPDOWNPUSHED`状态; 否则为`false`。|  
   
@@ -716,7 +717,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `fElevationRequired`|`true`若要设置`elevation required`状态; 否则为`false`。|  
   
@@ -724,7 +725,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
  如果此方法成功，则为 `true`；否则为 `false`。  
   
 ### <a name="remarks"></a>备注  
- 如果按钮或命令的链接控件需要提升的安全权限来执行操作，将控件设置为`elevation required`状态。 随后，Windows 将显示用户帐户控制 (UAC) 防火墙图标在控件上。 详细信息，请参阅"用户帐户控制"在[MSDN](http://go.microsoft.com/fwlink/linkid=18507)。  
+ 如果按钮或命令的链接控件需要提升的安全权限来执行操作，将控件设置为`elevation required`状态。 随后，Windows 将显示用户帐户控制 (UAC) 防火墙图标在控件上。 详细信息，请参阅"用户帐户控制"在[MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)。  
   
  此方法可发送[BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979)消息，Windows SDK 中介绍。  
   
@@ -788,7 +789,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `lpszNote`|为设置为命令链接控件的注释文本的 Unicode 字符串的指针。|  
   
@@ -819,7 +820,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `chGlyph`|指定要使用作为拆分按钮下拉箭头的标志符号的字符。|  
   
@@ -842,7 +843,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pSplitImageList`|指向[CImageList](../../mfc/reference/cimagelist-class.md)要分配给当前的拆分按钮控件。|  
   
@@ -863,7 +864,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pInfo`|指向[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构，它定义当前拆分按钮控件。|  
   
@@ -894,7 +895,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `pSize`|指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)描述边界的矩形的结构。|  
   
@@ -927,7 +928,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `uSplitStyle`|拆分按钮样式按位组合。 有关详细信息，请参阅`uSplitStyle`的成员[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)结构。|  
   
@@ -987,7 +988,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ### <a name="remarks"></a>备注  
  此成员函数模拟的功能**BCM_SETTEXTMARGIN**消息中所述[按钮](http://msdn.microsoft.com/library/windows/desktop/bb775943)的 Windows sdk 的部分。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   

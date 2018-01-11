@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14939c7c39d207e686bcccf786dcabf93e809059
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b69d4f3cf8f5065cbae2708dace20de3b1f63f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 `_ITERATOR_DEBUG_LEVEL` 宏控制是否启用[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。 该宏取代并合并了较旧的宏 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 的功能。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/24/2017
 // ...
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [经过检查的迭代器](../standard-library/checked-iterators.md)   
 [调试迭代器支持](../standard-library/debug-iterator-support.md)   
 [安全库：C++ 标准库](../standard-library/safe-libraries-cpp-standard-library.md)

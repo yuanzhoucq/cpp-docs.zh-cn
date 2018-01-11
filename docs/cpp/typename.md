@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- typename_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- typename template specifier
+f1_keywords: typename_cpp
+dev_langs: C++
+helpviewer_keywords: typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a276d13172b675cc6856e726cd7139e36fa97d41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typename"></a>typename
 在模板定义中，提供对编译器的提示未知的标识符是一种类型。 在模板参数列表中，用于指定类型参数。  
@@ -71,6 +67,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [模板](../cpp/templates-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)

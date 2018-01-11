@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b7a9e35bb356d0f3ebfd870105c0b8217d7f658
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 23526911a2d9e723455a7d846bdaafb2dbefd45a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 运算符
 分配 （移动） 指定互斥体对象转换为当前的 Mutex 对象。  
@@ -42,10 +45,10 @@ Mutex& operator=(
 ## <a name="remarks"></a>备注  
  有关详细信息，请参阅**移动语义**部分[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [Mutex 类](../windows/mutex-class1.md)

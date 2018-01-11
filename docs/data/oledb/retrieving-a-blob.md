@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac10d34fbb5e0cc6320d6c7f8ff1a52efc36f1b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 36ffc4fca7859b49067517e1085e1d854f733e24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-a-blob"></a>检索 BLOB
 你可以检索以各种方式二进制大型对象 (BLOB)。 你可以使用**DBTYPE_BYTES**检索为一个字节序列的 BLOB 或使用类似的界面`ISequentialStream`。 有关详细信息，请参阅[BLOB 和 OLE 对象](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程序员参考*。  
@@ -57,6 +60,6 @@ while (categories.MoveNext() == S_OK)
   
  有关处理 BLOB 数据的宏的详细信息，请参阅"列映射宏"中[宏和全局函数 OLE DB 使用者模板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)   
  [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

@@ -1,64 +1,72 @@
 ---
-title: "_rotl8, _rotl16 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_rotl8"
-  - "_rotl16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_rotl16 intrinsic"
-  - "_rotl8 intrinsic"
+title: "_rotl8、 _rotl16 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _rotl8
+- _rotl16
+dev_langs: C++
+helpviewer_keywords:
+- _rotl8 intrinsic
+- _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 49def56fe4a04e495033b9823e1da8735c6e0319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# _rotl8, _rotl16
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rotl8-rotl16"></a>_rotl8、_rotl16
 **Microsoft 专用**  
   
- 通过指定的位位置数将输入值旋转到最高有效位 \(MSB\) 左侧。  
+ 通过指定的位位置数将输入值旋转到最高有效位 (MSB) 左侧。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-unsigned char _rotl8(     unsigned char value,     unsigned char shift  ); unsigned short _rotl16(     unsigned short value,     unsigned char shift  );  
+unsigned char _rotl8(   
+   unsigned char value,   
+   unsigned char shift   
+);  
+unsigned short _rotl16(   
+   unsigned short value,   
+   unsigned char shift   
+);  
 ```  
   
-#### 参数  
- \[in\] `value`  
+#### <a name="parameters"></a>参数  
+ [in] `value`  
  要旋转的值。  
   
- \[in\] `shift`  
+ [in] `shift`  
  要旋转的位的数。  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
  旋转的值。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
-|----------|----------|  
+|---------------|------------------|  
 |`_rotl8`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_rotl16`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
+## <a name="remarks"></a>备注  
  不像左移操作，当执行向左旋转时，离开高端的高序位将移动到最低有效位位置。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // rotl.cpp  
@@ -85,17 +93,20 @@ int main()
 }  
 ```  
   
-  **将 0x41 向左旋转 0 位得到 0x41**  
-**将 0x41 向左旋转 1 位得到 0x82**  
-**将 0x41 向左旋转 2 位得到 0x5**  
-**将 0x41 向左旋转 3 位得到 0xa**  
-**将 0x41 向左旋转 4 位得到 0x14**  
-**将 0x41 向左旋转 5 位得到 0x28**  
-**将 0x41 向左旋转 6 位得到 0x50**  
-**将 0x41 向左旋转 7 位得到 0xa0**  
-**将 unsigned short 0x12 向左旋转 10 位得到 0x4800**   
-## 结束 Microsoft 专用  
+```Output  
+Rotating 0x41 left by 0 bits gives 0x41  
+Rotating 0x41 left by 1 bits gives 0x82  
+Rotating 0x41 left by 2 bits gives 0x5  
+Rotating 0x41 left by 3 bits gives 0xa  
+Rotating 0x41 left by 4 bits gives 0x14  
+Rotating 0x41 left by 5 bits gives 0x28  
+Rotating 0x41 left by 6 bits gives 0x50  
+Rotating 0x41 left by 7 bits gives 0xa0  
+Rotating unsigned short 0x12 left by 10 bits gives 0x4800  
+```  
   
-## 请参阅  
- [\_rotr8, \_rotr16](../intrinsics/rotr8-rotr16.md)   
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>请参阅  
+ [_rotr8、 _rotr16](../intrinsics/rotr8-rotr16.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

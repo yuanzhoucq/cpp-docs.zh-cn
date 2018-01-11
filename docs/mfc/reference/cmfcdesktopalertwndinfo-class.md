@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5771f092ec99020128e8d4ba5feba72e6ec0635c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f257575abbf405177b2524c4c803c0b3d250187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 类
 `CMFCDesktopAlertWndInfo`类用于[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)。 它指定在桌面警报窗口弹出时显示的控件。  
@@ -56,7 +57,7 @@ class CMFCDesktopAlertWndInfo
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|显示的图标的句柄。|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|在桌面警报窗口上提供一个链接与关联的命令 ID。|  
@@ -82,7 +83,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxDesktopAlertDialog.h  
   
 ##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
@@ -137,7 +138,7 @@ CString m_strURL;
 ### <a name="remarks"></a>备注  
  当用户单击该链接时，该命令，其[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)命令 ID 将发送到弹出窗口的所有者。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)   

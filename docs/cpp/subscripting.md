@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80173fd16bc13f4951cd85930e742947079f14fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51199a2276246b047916e0c5c1ced12fd0ee0bf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscripting"></a>下标
 下标运算符 (**[]**)，如函数调用运算符，被视为二元运算符。 下标运算符必须是采用单个自变量的非静态成员函数。 此自变量可以是任何类型，并指定所需的数组下标。  
@@ -102,5 +103,5 @@ Element: [10] = 10
   
  请注意，函数 `operator[]` 将返回引用类型。 这会使它成为左值，从而使您可以在赋值运算符的任何一侧使用下标表达式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符重载](../cpp/operator-overloading.md)

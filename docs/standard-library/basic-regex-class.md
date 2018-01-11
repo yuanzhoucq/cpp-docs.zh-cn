@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59ead4cce14828c2b416f3d4770f90db61e7d659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27557cdbd251a123f914609ac81c1dc1834e44f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicregex-class"></a>basic_regex 类
 包装正则表达式。  
@@ -105,7 +106,7 @@ class basic_regex {
   
  这些成员函数还使用参数 `flags` 指定用于解释正则表达式的各个选项以及 `RXtraits` 类型描述的选项。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<regex 1>  
   
  **命名空间：** std  
@@ -1211,7 +1212,7 @@ typedef Elem value_type;
 ```  
   
 ### <a name="remarks"></a>备注  
- 该类型是模板参数 `Elem`的同义词。  
+ 该类型是模板参数 `Elem` 的同义词。  
   
 ### <a name="example"></a>示例  
   
@@ -1298,7 +1299,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<regex>](../standard-library/regex.md)   
  [regex_match](../standard-library/regex-functions.md#regex_match)   
  [regex_search](../standard-library/regex-functions.md#regex_search)   

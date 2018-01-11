@@ -29,11 +29,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 280e7c43f4541e393a828d7eeed34e72f82a0689
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2334ebd75d3a941c453950a6a99adfd99e6b1555
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 类
 模板类 istreambuf_iterator 描述输入迭代器对象，此对象可从输入流缓冲区（通过它存储的对象访问）提取指向 `basic_streambuf`\< **CharType**, **Traits**> 的类型指针的字符元素。  
@@ -88,7 +89,7 @@ class istreambuf_iterator
 |[operator++](#op_add_add)|返回输入流中的下一字符或者在递增对象前复制对象并返回副本。|  
 |[operator->](#operator-_gt)|返回成员的值（如果有）。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<iterator>  
   
  **命名空间：** std  
@@ -419,7 +420,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [iterator 结构](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

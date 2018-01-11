@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bed81cc8b212b6deef13cc0c6fed013b854fb4ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4590724bfc34d0ed9136e74e85b09db6a805c50c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>将同步数据结构与 Windows API 进行比较
 本主题比较由并发运行时与所提供的 Windows API 提供的同步数据结构的行为。  
@@ -36,10 +37,10 @@ ms.lasthandoff: 10/24/2017
 |功能|`reader_writer_lock`|SRW 锁|  
 |-------------|--------------------------|--------------|  
 |非可重入|是|是|  
-|可以将提升到编写器 （升级支持） 的读取器|No|No|  
-|可以降级到读取器 （降级支持） 的编写器|No|No|  
-|写入首选项锁|是|No|  
-|编写器的先进先出访问|是|No|  
+|可以将提升到编写器 （升级支持） 的读取器|否|否|  
+|可以降级到读取器 （降级支持） 的编写器|否|否|  
+|写入首选项锁|是|否|  
+|编写器的先进先出访问|是|否|  
   
  有关 SRW 锁的详细信息，请参阅[精简读取器/编写器 (SRW) 锁](http://msdn.microsoft.com/library/windows/desktop/aa904937)平台 SDK 中。  
   
@@ -88,5 +89,5 @@ Windows event:
   
  有关任务的详细信息，请参阅[任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)

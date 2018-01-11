@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccbda062d28cdbdaafcbae68793b6583f31a3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>在线程之间传输异常
 Visual c + + 支持*传输异常*从到另一个线程。 通过传输异常，你可以在一个线程中捕获异常，然后使该异常看似是在另一个线程中引发的。 例如，你可以使用该功能编写多线程应用程序，其中主线程将处理其辅助线程引发的所有异常。 传输异常对创建并行编程库或系统的开发人员最有用处。 若要实现传输异常，Visual c + + 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)类型和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函数。  
@@ -249,10 +250,10 @@ exception_ptr 0: Caught an invalid_argument exception.
 exception_ptr 1: Caught a  myException exception.  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<exception>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH （异常处理模型）](../build/reference/eh-exception-handling-model.md)   
  [/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)

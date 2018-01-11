@@ -1,27 +1,27 @@
 ---
-title: "A.11   Specifying a Fixed Number of Threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "指定固定的数量的线程的 A.11 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1d06b142-4c35-44b8-994b-20f2aed5462b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72c8aca2b90f021771ba9f9fc8a86d784ffe24a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.11   Specifying a Fixed Number of Threads
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-某些程序依赖线程的内置，预先指定数量的正确执行。  由于设置为线程数动态调整的默认实现中定义，此类程序可以选择关闭动态线程功能和显式设置线程的数目确保可移植性。  下面的示例演示如何使用 `omp_set_dynamic` \(在第 39 页\) 的[第3.1.7部分](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 和 `omp_set_num_threads` \(在第 36 页\) 的[第3.1.1部分](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) :  
+# <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   指定固定数目的线程
+某些程序依赖于固定、 预先指定的正确执行的线程数。  由于线程数的动态调整的默认设置是实现定义，此类程序可以选择关闭动态线程功能和设置显式要确保可移植性的线程数。 下面的示例演示如何执行此操作使用`omp_set_dynamic`([部分 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)页 39 上)，和`omp_set_num_threads`([部分 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)在页上 36):  
   
 ```  
 omp_set_dynamic(0);  
@@ -36,6 +36,6 @@ omp_set_num_threads(16);
 }  
 ```  
   
- 在此示例中，时，才能由 16 个线程，执行程序正确执行。  如果实现不能支持 16 个线程，此示例行为实现中定义。  
+ 在此示例中，程序才会执行正确由 16 线程执行。 如果实现是不能够支持 16 线程，此示例的行为是实现定义的。  
   
- 请注意执行并行区域的线程数保持不变在并行区域内，无论动态线程设置，。  动态线程 framework 确定线程数在并行区域的开始使用并使该常数为该区域的持续时间。
+ 请注意，在并行区域，而不考虑动态的线程数设置过程中执行并行区域的线程数量保持不变。 动态线程机制确定要在并行区域开始时使用的线程数，并使它为区域的持续时间常量。

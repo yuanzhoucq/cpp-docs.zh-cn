@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6681f8f47895d94935f9fbbb3d93d379a82f7eb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63987b4e1427f12925b55fa3570d80b9e3a4686d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="helpfile"></a>helpfile
 设置类型库的帮助文件的名称。  
@@ -43,20 +46,20 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>示例  
  请参阅示例[模块](../windows/module-cpp.md)以举例说明如何使用**helpfile**。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`interface``typedef`，**类**，方法、 属性|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
  有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDL 特性](../windows/idl-attributes.md)   
  [接口特性](../windows/interface-attributes.md)   
  [类特性](../windows/class-attributes.md)   

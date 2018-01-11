@@ -42,11 +42,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1b5518d1eb784888f1c894797e8d9959b400172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68a11d88c4b6cb0c5235d54ac9d0333126f39765
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wm-message-handlers-d---e"></a>WM_ 消息处理程序：D - E
 下面左侧的映射条目对应于右侧的函数原型：  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
 |ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)（CDC *）;|  
 |ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)（);|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)   
  [WM_ 消息的处理程序](../../mfc/reference/handlers-for-wm-messages.md)
 

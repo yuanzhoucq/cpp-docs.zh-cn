@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84b05f0ac4270e19eee14f1a16683d82d082cda1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f0fe8a0087c6f1d1d1ac90f2d379dd812d6dcdf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>“自定义图像”对话框（图标的图像编辑器）
 可以使用自定义大小和颜色数创建新的映像。
@@ -32,9 +35,9 @@ ms.lasthandoff: 10/24/2017
  **颜色**  
  在此处为你选择的自定义图像的颜色数： 2、 16 或 256。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [新\<设备 > 图像类型对话框](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
  [图标的图像编辑器](../windows/image-editor-for-icons.md)

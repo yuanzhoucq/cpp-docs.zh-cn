@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::bucket_count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::bucket_count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bucket_count 成员 [STL/CLR]"
+title: "hash_multimap::bucket_count (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::bucket_count
+dev_langs: C++
+helpviewer_keywords: bucket_count member [STL/CLR]
 ms.assetid: 63b7e08e-16fb-42e5-b592-d1fd29c47637
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7fba9f5744ce5374218cfe9783a8bfa3afe56b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::bucket_count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-统计存储桶数。  
+# <a name="hashmultimapbucketcount-stlclr"></a>hash_multimap::bucket_count (STL/CLR)
+对存储桶的数量进行计数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 int bucket_count();  
 ```  
   
-## 备注  
- 成员函数返回存储桶的当前数目。  使用哈希来决定表的大小。  
+## <a name="remarks"></a>备注  
+ 成员函数返回存储桶的当前数量。 用于确定哈希表的大小。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multimap_bucket_count.cpp   
@@ -81,22 +82,27 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **命名空间:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## 请参阅  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::load\_factor](../dotnet/hash-multimap-load-factor-stl-clr.md)   
- [hash\_multimap::max\_load\_factor](../dotnet/hash-multimap-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::load_factor (STL/CLR)](../dotnet/hash-multimap-load-factor-stl-clr.md)   
+ [hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md)

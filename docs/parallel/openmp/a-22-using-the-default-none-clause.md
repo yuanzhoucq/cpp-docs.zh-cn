@@ -1,27 +1,27 @@
 ---
-title: "A.22   Using the default(none) Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用 default(none) 子句 A.22 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a3fa4e62-1e92-4896-ae3f-be268067d917
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a889866d214e6139cdb2b615e60002706c4e4972
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# A.22   Using the default(none) Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下面的示例区分受从那些的 `default(none)` 子句的影响不是的变量:  
+# <a name="a22---using-the-defaultnone-clause"></a>A.22   使用 default(none) 子句
+下面的示例将区分开来的会影响变量`default(none)`子句不从：  
   
 ```  
 // openmp_using_clausedefault.c  
@@ -56,4 +56,4 @@ void fun(int a) {
 }  
 ```  
   
- 有关 `default` 子句的更多信息，请参见在第 28 页的 [第2.7.2.5部分](../../parallel/openmp/2-7-2-5-default.md) 。
+ 有关详细信息`default`子句，请参阅[部分 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md)第 28 页上。

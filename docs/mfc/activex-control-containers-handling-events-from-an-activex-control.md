@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b73fd6d6dbebe764960a7a20c00ddb91aa0b24f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控件容器：处理 ActiveX 控件中的事件
 本文讨论如何使用属性窗口在 ActiveX 控件容器中安装 ActiveX 控件的事件处理程序。 使用事件处理程序接收通知 （从控件） 的某些事件，并在响应中执行某些操作。 此通知称为"触发"事件。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 10/24/2017
   
 6.  双击从类视图跳转到事件处理程序代码中实现的新处理程序函数 (。CPP） 文件中的`CContainerDlg`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ActiveX 控件容器](../mfc/activex-control-containers.md)
 

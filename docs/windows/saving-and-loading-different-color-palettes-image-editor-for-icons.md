@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86105734a4ade50b8c3e568100dda468a891beb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7ef7200300eb4809496bfa342e9bab645f4c40e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>保存和加载不同的调色板（图标的图像编辑器）
 可以保存并加载包含调色板[自定义颜色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。 （默认情况下，启动 Visual Studio 时，会自动加载最近使用的调色板。）  
@@ -48,10 +51,10 @@ ms.lasthandoff: 10/24/2017
   
 
   
- 要求  
+ 惠?  
   
  无  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [快捷键](../windows/accelerator-keys-image-editor-for-icons.md)   
  [处理颜色](../windows/working-with-color-image-editor-for-icons.md)

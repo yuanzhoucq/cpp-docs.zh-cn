@@ -15,21 +15,19 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 46d469b2e9befbc1effbb4b34e47f5cd7dc4f3f4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 运算符
 ||||  
@@ -38,7 +36,7 @@ ms.lasthandoff: 10/03/2017
 |[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a>operator!=  
  测试两个复数是否不相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```  
@@ -405,7 +403,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>operator-  
  将两个复数相减，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```   
@@ -717,7 +715,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>operator==  
  测试两个复数是否相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。  
   
 ```  
@@ -910,7 +908,6 @@ int main( )
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [\<complex>](../standard-library/complex.md)
-
 

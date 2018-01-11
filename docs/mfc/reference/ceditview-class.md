@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38b8389418657499d43263399f1a05b3a0326c84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceditview-class"></a>CEditView 类
 视图类的类型，提供 Windows 编辑控件功能并可用于实现简单的文本编辑器功能。  
@@ -149,7 +150,7 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxext.h  
   
 ##  <a name="ceditview"></a>CEditView::CEditView  
@@ -448,7 +449,7 @@ void UnlockBuffer() const;
 ### <a name="remarks"></a>备注  
  调用`UnlockBuffer`使用返回的指针完后[LockBuffer](#lockbuffer)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 SUPERPAD](../../visual-cpp-samples.md)   
  [CCtrlView 类](../../mfc/reference/cctrlview-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

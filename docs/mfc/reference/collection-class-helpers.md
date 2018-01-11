@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3d6baf4ba1622a9a9b54dcb25ed42eae89c86a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-class-helpers"></a>集合类帮助器
 集合类`CMap`， `CList`，和`CArray`模板化的全局帮助器函数用于比较、 复制和序列化元素等目的。 作为基于类的实现的一部分`CMap`， `CList`，和`CArray`，与为地图、 列表或数组中存储的数据类型而定制的版本，必须重写这些函数根据需要。 有关如何重写帮助器函数如`SerializeElements`，请参阅文章[集合： 如何生成类型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 请注意， **ConstructElements**和**DestructElements**已弃用。  
@@ -75,7 +76,7 @@ CompareElements(
   
  C + + 语言定义的比较运算符 ( `==`) 对于简单类型 ( `char`， `int`， **float**，依次类推)，但不定义类和结构的比较运算符。 如果你想要使用`CompareElements`或若要实例化一个使用它的集合类，必须定义比较运算符，或重载`CompareElements`版本，返回适当的值。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
    **标头：** afxtempl.h   
   
 ##  <a name="copyelements"></a>CopyElements  
@@ -107,7 +108,7 @@ void AFXAPI CopyElements(
   
  有关实现此函数及其他帮助器函数的信息，请参阅文章[集合： 如何生成类型安全集合](../how-to-make-a-type-safe-collection.md)。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxtempl.h  
   
 ##  <a name="dumpelements"></a>DumpElements  
@@ -140,7 +141,7 @@ void  AFXAPI DumpElements(
  默认实现不执行任何操作。 如果你的集合的元素派生自`CObject`，重写通常将循环访问集合的元素，调用`Dump`中打开每个元素。  
   
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxtempl.h  
   
 ##  <a name="hashkey"></a>HashKey  
@@ -176,7 +177,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxtempl.h 
   
 ##  <a name="serializeelements"></a>SerializeElements  
@@ -208,10 +209,10 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="example"></a>示例  
  请参阅文章中的示例[集合： 如何生成类型安全集合](../how-to-make-a-type-safe-collection.md)。  
  
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
   **标头**afxtempl.h 
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [宏和全局函数](mfc-macros-and-globals.md)   
  [CMap 类](cmap-class.md)   
  [CList 类](clist-class.md)   

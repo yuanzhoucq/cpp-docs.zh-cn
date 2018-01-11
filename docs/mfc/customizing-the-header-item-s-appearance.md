@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 494372aa3e6dcc418a6ffdacbb7b06635a010310
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>自定义标头项 &#39; s 外观
 通过设置*dwStyle*参数首次创建标题控件 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create))，你可以定义的外观和行为的标头项或标头控件本身。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
  有关这些属性的详细信息，请参阅[项](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。 有关将项添加到标题控件的信息，请参阅[将项添加到标头控件](../mfc/adding-items-to-the-header-control.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

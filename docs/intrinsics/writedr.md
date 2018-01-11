@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e5a87f7339481378c3a7fb6af7201dd13a3ede59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e58523995bfe3bb47d915e161a937149bcf4f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writedr"></a>__writedr
 将指定的值写入指定的调试寄存器。  
@@ -41,7 +42,7 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 ## <a name="remarks"></a>备注  
  这些内部函数仅在内核模式下适用而例程只能用作内部函数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
@@ -51,6 +52,6 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
  [__readdr](../intrinsics/readdr.md)

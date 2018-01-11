@@ -1,49 +1,48 @@
 ---
-title: "copyprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "copyprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copyprivate OpenMP clause"
+title: "copyprivate |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ecbfa14b40a219d626293eff9fb602673bc194a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# copyprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定应该在所有线程共享一个或多个变量。  
+# <a name="copyprivate"></a>copyprivate
+将指定应所有线程间共享一个或多个变量。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 copyprivate(var)  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `var`  
- 对共享的一个或多个变量。  如果多于变量中指定，用逗号分隔变量名称。  
+ 若要共享的一个或多个变量。 如果指定多个变量，则请用逗号分隔变量名。  
   
-## 备注  
- `copyprivate` 适用于 [single](../../../parallel/openmp/reference/single.md) 指令。  
+## <a name="remarks"></a>备注  
+ `copyprivate`适用于[单个](../../../parallel/openmp/reference/single.md)指令。  
   
- 有关更多信息，请参见 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。  
+ 有关详细信息，请参阅[2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_copyprivate.cpp  
@@ -92,19 +91,22 @@ int main() {
 }  
 ```  
   
-  **调用从一个线程的 CopyPrivate**  
-**值为 1.001000，线程 \= 0**  
-**值为 1.002000，线程 \= 0**  
-**值为 1.003000，线程 \= 0**  
-**值为 1.004000，线程 \= 0**  
-**调用从并行区域的 CopyPrivate**  
-**值为 1.005000，线程 \= 0**  
-**值为 1.005000，线程 \= 1**  
-**值为 1.006000，线程 \= 0**  
-**值为 1.006000，线程 \= 1**  
-**值为 1.007000，线程 \= 0**  
-**值为 1.007000，线程 \= 1**  
-**值为 1.008000，线程 \= 0**  
-**值为 1.008000，线程 \= 1**   
-## 请参阅  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+call CopyPrivate from a single thread  
+Value = 1.001000, thread = 0  
+Value = 1.002000, thread = 0  
+Value = 1.003000, thread = 0  
+Value = 1.004000, thread = 0  
+call CopyPrivate from a parallel region  
+Value = 1.005000, thread = 0  
+Value = 1.005000, thread = 1  
+Value = 1.006000, thread = 0  
+Value = 1.006000, thread = 1  
+Value = 1.007000, thread = 0  
+Value = 1.007000, thread = 1  
+Value = 1.008000, thread = 0  
+Value = 1.008000, thread = 1  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

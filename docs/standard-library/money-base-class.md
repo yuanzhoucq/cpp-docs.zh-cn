@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmon/std::money_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- money_base class
+f1_keywords: xlocmon/std::money_base
+dev_langs: C++
+helpviewer_keywords: money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b3243807c407fa4deeb30b8f35aa6f7acb13707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b9c41737288a4d323057b42f809dcbf4a3f2ff2c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneybase-class"></a>money_base 类
 此类会描述常用于所有模板类 [moneypunct](../standard-library/moneypunct-class.md) 专用化的枚举和结构。  
@@ -49,14 +45,13 @@ struct pattern
   
 - **value** - 用于匹配或生成货币值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<locale>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

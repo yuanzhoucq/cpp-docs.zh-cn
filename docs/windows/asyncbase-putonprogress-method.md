@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4486e3d0bcf929445d4f2e98779ea5339512299b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25479de837c157871d7757b6948d6cd581d56ace
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress 方法
 进度事件处理程序的地址设置为指定的值。  
@@ -39,10 +42,10 @@ STDMETHOD(
 ## <a name="return-value"></a>返回值  
  如果成功，则则为 S_OK否则为 E_ILLEGAL_METHOD_CALL。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** async.h  
   
  **命名空间：** Microsoft::WRL  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AsyncBase 类](../windows/asyncbase-class.md)

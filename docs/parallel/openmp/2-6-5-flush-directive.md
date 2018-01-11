@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1911efe811545c13e62ab9f917ddfc284af35b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush 指令
 **刷新**指令，是否显式或隐式，指定在其实现需要确保团队中的所有线程都具有一个一致的 （在下面指定） 中某些对象视图的"跨线程"序列点内存。 这意味着在完成前面的计算的表达式引用这些对象并随后的计算尚未开始。 例如，编译器必须还原对象的值从寄存器到内存中，并硬件可能需要刷新到内存写入缓冲区并重新加载内存中的对象的值。  

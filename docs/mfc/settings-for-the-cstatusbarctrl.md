@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7065d234fa9d57d1a4b3f97f38464b530b0561f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814c12b13333d589cb568c5c637f0fa34956847e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl 的设置
 默认位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)状态窗口是父窗口的底部，但你可以指定`CCS_TOP`样式让其出现在父窗口工作区的顶部。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  通过调用检索状态窗口边框的宽度[GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders)。 此成员函数包含指向三元素数组（将收到水平边框、垂直边框和矩形之间的边框的宽度）的指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

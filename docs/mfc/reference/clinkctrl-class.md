@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 类
 提供 Windows 公共 SysLink 控件的功能。  
@@ -102,7 +103,7 @@ class CLinkCtrl : public CWnd
   
  `CLinkCtrl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmn.h  
   
 ##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>参数  
  `lpszLinkMarkup`  
- 指向包含要显示的文本标记的以零结尾的字符串的指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)中[MSDN 库](http://go.microsoft.com/fwlink/linkid=556)。  
+ 指向包含要显示的文本标记的以零结尾的字符串的指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
   
  `dwStyle`  
  指定链接控件的样式。 应用控件样式的任意组合。 请参阅[公共控件样式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中`Windows SDK`有关详细信息。  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>参数  
  `lpszLinkMarkup`  
- 指向包含要显示的文本标记的以零结尾的字符串的指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)中[MSDN 库](http://go.microsoft.com/fwlink/linkid=556)。  
+ 指向包含要显示的文本标记的以零结尾的字符串的指针。 有关详细信息，请参阅主题中的"标记和链接访问"部分[SysLink 控件概述](http://msdn.microsoft.com/library/windows/desktop/bb760706)。  
   
  `dwExStyle`  
  指定链接控件的扩展的样式。 扩展窗口样式的列表，请参阅`dwExStyle`参数[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
@@ -235,7 +236,7 @@ int GetIdealSize(
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |[in] `cxMaxWidth`|该链接，以像素为单位的最大宽度。|  
 |[out 一个] *`pSize`|指向 Windows[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)结构。 此方法返回时，`cy`的成员`SIZE`结构包含由指定的链接文本宽度的理想链接文本高度`cxMaxWidth`。 `cx`结构中的成员包含实际需要的链接文本宽度。|  
@@ -467,6 +468,6 @@ BOOL SetItemUrl(
 ### <a name="remarks"></a>备注  
  设置由指定的链接控件项的 URL。 有关详细信息，请参阅 Win32 消息[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK 中。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)

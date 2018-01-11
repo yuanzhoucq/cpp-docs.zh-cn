@@ -1,46 +1,47 @@
 ---
-title: "语言关键字 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "关键字 [C++]"
+title: "语言关键字 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: keywords [C++]
 ms.assetid: 021013b2-70ac-4df9-aa77-4af1c67a1a67
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1107ad45feaae470ed2a7481f80bb17c389042d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 语言关键字 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，有几个语言关键字已发生更改。  
+# <a name="language-keywords-ccli"></a>语言关键字 (C++/CLI)
+从托管扩展的 c + + 更改，为 Visual c + + 的多个语言关键字。  
   
- 在新的 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 语法中，从所有关键字中移除了作为前缀的双下划线（有一个例外：仍保留 `__identifier`）。  例如，属性现在被声明为 `property`，而不是 `__property`。  
+ 在新的 Visual c + + 语法中，双下划线删除与所有关键字的前缀 (有一个例外：`__identifier`保留)。 例如，现在某个属性声明为`property`，而不`__property`。  
   
- 在托管扩展中使用双下划线前缀，主要有两个原因：  
+ 没有在托管扩展中使用双下划线前缀的两个主要的原因：  
   
--   它是提供 ISO\-C\+\+ 标准的本地扩展的一致方法。  托管扩展设计的一个主要目标是不引入与标准语言不兼容的内容，例如新关键字和新标记。  从很大程度上说，正是这个原因，促成了对托管引用类型的对象的声明使用指针语法的选择。  
+-   它是 ISO c + + 标准提供本地扩展符合的方法。 托管扩展设计的主要目标是不引入不兼容内容的标准语言，如新的关键字和令牌。 在很大程度，推动的托管的引用类型的对象的声明的指针语法的选择，正是这个原因。  
   
--   使用双下划线，除了它的一致性方面外，还可以合理地保证不会破坏语言用户的现有基本代码。  这是托管扩展设计的第二个主要目标。  
+-   使用双下划线，除了它符合的方面外, 也是合理地保证不会破坏现有基本代码的语言的用户。 这是托管扩展设计的第二个主要目标。  
   
- 尽管移除了双下划线，但 Microsoft 仍然会保证一致性。  但是，对 CLR 动态对象模型的支持代表一种新的功能强大的程序设计范例。  对此新设计规范的支持要求其自身要有高级别的关键字和标记。  在对新范例进行集成并支持标准语言的同时，我们在努力提供此新范例的一流表达式。  新的语法设计可为这两个完全不同的对象模型提供一流的程序设计体验。  
+ 而不考虑删除双下划线，Microsoft 仍致力于保持一致。 但是，支持的 CLR 动态对象模型表示新且功能强大的编程范例。 这一新模式的支持，需要其自己的高级关键字和令牌。 我们都致力于提供此新的范例集成并支持标准语言时的第一类表达式。 新的语法设计提供这两种不同的对象模型的第一类编程体验。  
   
- 同样，我们也关心尽可能提高这些新语言关键字的非侵害性。  这已通过使用上下文关键字和空格分隔的关键字来实现。  在了解实际的新语言语法之前，让我们先来搞清楚这两种特殊关键字的风格。  
+ 同样，我们非常关心最大化这些新语言关键字的非入侵性性质。 此操作具有使用上下文和空格分隔的关键字的使用已完成。 我们将看看实际的新语言语法之前，让我们尝试这些两种特殊关键字风格的有意义。  
   
- 上下文关键字在特定的程序上下文中有特殊的含义。  例如，在常规程序内，将 `sealed` 视为普通标识符。  但是，当它出现在托管引用类类型的声明部分中时，将其视为该类声明的上下文中的关键字。  这会尽量减轻在语言中引入新关键字可能造成的侵害性影响，我们感觉这对具有现有基本代码的用户来说非常重要。  同时，它使得使用新功能的用户可以获得附加语言功能的一流体验 — 这正是托管扩展所缺少的。  有关如何使用 `sealed` 的示例，请参见[托管类类型的声明](../dotnet/declaration-of-a-managed-class-type.md)。  
+ 上下文关键字具有特定程序上下文中的具有特殊含义。 在常规程序，例如，`sealed`视为一个普通的标识符。 但是，托管的引用类类型的声明部分中时，它被视为该类声明的上下文中的关键字。 这将大大减少内容引入在语言中，一个新的关键字的潜在侵入性影响，我们认为的与现有的基本代码的用户非常重要。 同时，它允许使用新功能的用户获得其他语言功能-正是，可以使用托管扩展的一流体验。 有关如何的示例`sealed`使用请参阅[托管类类型的声明](../dotnet/declaration-of-a-managed-class-type.md)。  
   
- 空格分隔的关键字（如 `value class`）是上下文关键字的一种特例。  它用由空格分隔的上下文修饰符对现有关键字配对。  对被视为一个单独的单元，而不是两个单独的关键字。  
+ 空格分隔的关键字，如`value class`，是一种特殊情况的上下文关键字。 它用以空格分隔的上下文修饰符对现有的关键字。 对被视为单个单元，而不是两个单独的关键字。  
   
-## 请参阅  
- [C\+\+\/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)   
+## <a name="see-also"></a>请参阅  
+ [C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)   
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

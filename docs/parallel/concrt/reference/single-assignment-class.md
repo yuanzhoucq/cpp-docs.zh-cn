@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,34 +22,19 @@ f1_keywords:
 - AGENTS/concurrency::single_assignment::reserve_message
 - AGENTS/concurrency::single_assignment::resume_propagation
 - AGENTS/concurrency::single_assignment::send_message
-dev_langs:
-- C++
-helpviewer_keywords:
-- single_assignment class
+dev_langs: C++
+helpviewer_keywords: single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7bf9e5060a8a6ecb02440b5ff244667d6fd4ffa4
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 74d0dee7acb511add4b695506c0491368413e17b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singleassignment-class"></a>single_assignment 类
 `single_assignment` 消息块是多目标、多源、有序的 `propagator_block`，能够存储单个一次写入的 `message`。  
@@ -64,13 +48,13 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 #### <a name="parameters"></a>参数  
  `T`  
- 消息的负载类型存储和传播缓冲区。  
+ 消息存储和传播的缓冲区的负载类型。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[single_assignment](#ctor)|已重载。 构造`single_assignment`消息块。|  
 |[~ single_assignment 析构函数](#dtor)|销毁`single_assignment`消息块。|  
@@ -79,25 +63,25 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 |名称|描述|  
 |----------|-----------------|  
-|[has_value](#has_value)|检查是否这`single_assignment`消息块时尚值初始化。|  
-|[值](#value)|获取当前存储在消息的负载的引用`single_assignment`消息块。|  
+|[has_value](#has_value)|检查是否这`single_assignment`尚未已使用值初始化了消息块。|  
+|[值](#value)|获取存储在消息的当前负载的引用`single_assignment`消息块。|  
   
 ### <a name="protected-methods"></a>受保护的方法  
   
 |名称|描述|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|接受提供的这一条消息`single_assignment`消息块，将该消息的副本返回到调用方。|  
-|[consume_message](#consume_message)|使用以前提供的消息`single_assignment`并由该目标，将该消息的副本返回到调用方保留。|  
-|[link_target_notification](#link_target_notification)|回调，以通知新的目标已链接到此`single_assignment`消息块。|  
-|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`propagate`方法时由源块调用。|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|位置`message``_PMessage`在此`single_assignment`消息块和它提供给所有链接的目标。|  
+|[accept_message](#accept_message)|接受一条消息，已提供此`single_assignment`消息块，返回到调用方的消息的副本。|  
+|[consume_message](#consume_message)|使用以前提供的消息`single_assignment`并由目标，将消息的消息副本返还给调用方保留。|  
+|[link_target_notification](#link_target_notification)|通知新的目标已链接到此回调`single_assignment`消息块。|  
+|[propagate_message](#propagate_message)|以异步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`propagate`方法，调用由源块时。|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|位置`message _PMessage`在此`single_assignment`消息块和它提供给所有链接的目标。|  
 |[release_message](#release_message)|释放以前的消息保留。 (重写[source_block:: release_message](source-block-class.md#release_message)。)|  
 |[reserve_message](#reserve_message)|保留以前提供的这一条消息`single_assignment`消息块。 (重写[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
-|[resume_propagation](#resume_propagation)|在释放了保留后，请恢复传播。 (重写[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
-|[send_message](#send_message)|以同步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`send`方法时由源块调用。|  
+|[resume_propagation](#resume_propagation)|释放保留后恢复传播。 (重写[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
+|[send_message](#send_message)|以同步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`send`方法，调用由源块时。|  
   
 ## <a name="remarks"></a>备注  
- 一个`single_assignment`消息块传播到每个目标其消息的副本。  
+ A`single_assignment`消息块传播到每个目标其消息的副本。  
   
  有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。  
   
@@ -112,14 +96,14 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  `single_assignment`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
   
 ##  <a name="accept_message"></a>accept_message 
 
- 接受提供的这一条消息`single_assignment`消息块，将该消息的副本返回到调用方。  
+ 接受一条消息，已提供此`single_assignment`消息块，返回到调用方的消息的副本。  
   
 ```
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
@@ -130,14 +114,14 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
  `runtime_object_identity`的提供`message`对象。  
   
 ### <a name="return-value"></a>返回值  
- 一个指向`message`对象时调用方现在具有的所有权。  
+ 指向的指针`message`对象调用方现在具有的所有权。  
   
 ### <a name="remarks"></a>备注  
- `single_assignment`消息传递块返回到其目标，将消息副本，而不是将当前持有的消息的所有权。  
+ `single_assignment`消息传送到其目标，消息的块返回副本，而不是将当前持有的消息的所有权转让。  
   
 ##  <a name="consume_message"></a>consume_message 
 
- 使用以前提供的消息`single_assignment`并由该目标，将该消息的副本返回到调用方保留。  
+ 使用以前提供的消息`single_assignment`并由目标，将消息的消息副本返还给调用方保留。  
   
 ```
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
@@ -148,14 +132,14 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
  `runtime_object_identity`的`message`对象正在使用。  
   
 ### <a name="return-value"></a>返回值  
- 一个指向`message`对象时调用方现在具有的所有权。  
+ 指向的指针`message`对象调用方现在具有的所有权。  
   
 ### <a name="remarks"></a>备注  
- 类似于`accept`，但通过调用前面始终`reserve`。  
+ 类似于`accept`，但始终通过调用前面`reserve`。  
   
 ##  <a name="has_value"></a>has_value 
 
- 检查是否这`single_assignment`消息块时尚值初始化。  
+ 检查是否这`single_assignment`尚未已使用值初始化了消息块。  
   
 ```
 bool has_value() const;
@@ -166,7 +150,7 @@ bool has_value() const;
   
 ##  <a name="link_target_notification"></a>link_target_notification 
 
- 回调，以通知新的目标已链接到此`single_assignment`消息块。  
+ 通知新的目标已链接到此回调`single_assignment`消息块。  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
@@ -178,7 +162,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- 以异步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`propagate`方法时由源块调用。  
+ 以异步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`propagate`方法，调用由源块时。  
   
 ```
 virtual message_status propagate_message(
@@ -194,7 +178,7 @@ virtual message_status propagate_message(
  指向提供消息的源块的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+ A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
 ##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
@@ -206,7 +190,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
   
 ### <a name="parameters"></a>参数  
  `_PMessage`  
- 一个指向`message`此`single_assignment`消息块取得了的所有权。  
+ 指向的指针`message`此`single_assignment`消息块已获得的所有权。  
   
 ##  <a name="release_message"></a>release_message 
 
@@ -230,17 +214,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
   
 ### <a name="parameters"></a>参数  
  `_MsgId`  
- `runtime_object_identity`的`message`对象所保留。  
+ `runtime_object_identity`的`message`对象被保留。  
   
 ### <a name="return-value"></a>返回值  
  `true`如果消息已成功保留，`false`否则为。  
   
 ### <a name="remarks"></a>备注  
- 之后`reserve`调用时，如果它返回`true`、 任一`consume`或`release`必须调用来获取或释放消息的所有权。  
+ 后`reserve`调用时，如果它返回`true`，`consume`或`release`必须调用来获取或释放消息的所有权。  
   
 ##  <a name="resume_propagation"></a>resume_propagation 
 
- 在释放了保留后，请恢复传播。  
+ 释放保留后恢复传播。  
   
 ```
 virtual void resume_propagation();
@@ -248,7 +232,7 @@ virtual void resume_propagation();
   
 ##  <a name="send_message"></a>send_message 
 
- 以同步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`send`方法时由源块调用。  
+ 以同步方式从将消息传递`ISource`至此块`single_assignment`消息块。 由调用`send`方法，调用由源块时。  
   
 ```
 virtual message_status send_message(
@@ -264,7 +248,7 @@ virtual message_status send_message(
  指向提供消息的源块的指针。  
   
 ### <a name="return-value"></a>返回值  
- 一个[message_status](concurrency-namespace-enums.md)的目标决定如何处理该消息指示。  
+ A [message_status](concurrency-namespace-enums.md)目标决定如何处理消息的指示。  
   
 ##  <a name="ctor"></a>single_assignment 
 
@@ -304,7 +288,7 @@ single_assignment(
 ### <a name="remarks"></a>备注  
  如果未指定 `_PScheduler` 或 `_PScheduleGroup` 函数，运行时将使用默认的计划程序。  
   
- 类型`filter_method`是具有签名的伪函数`bool (T const &)`其调用此`single_assignment`消息块，以确定它是否应接受提供的消息。  
+ 类型`filter_method`是具有签名的涵子`bool (T const &)`其调用由此`single_assignment`消息块，以确定它是否应接受提供的消息。  
   
 ##  <a name="dtor"></a>~ single_assignment 
 
@@ -316,7 +300,7 @@ single_assignment(
   
 ##  <a name="value"></a>值 
 
- 获取当前存储在消息的负载的引用`single_assignment`消息块。  
+ 获取存储在消息的当前负载的引用`single_assignment`消息块。  
   
 ```
 T const& value();
@@ -328,9 +312,8 @@ T const& value();
 ### <a name="remarks"></a>备注  
  此方法将等待消息到达时，如果没有消息将当前存储在`single_assignment`消息块。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [overwrite_buffer 类](overwrite-buffer-class.md)   
  [unbounded_buffer 类](unbounded-buffer-class.md)
-
 

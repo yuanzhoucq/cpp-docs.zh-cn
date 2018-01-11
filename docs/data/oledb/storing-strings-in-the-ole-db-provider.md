@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>将字符串存储在 OLE DB 提供程序中
 MyProviderRS.h，ATL OLE DB 提供程序向导创建默认用户记录调用`CWindowsFile`。 若要处理这两个字符串，请修改`CWindowsFile`或添加您自己的用户记录，如下面的代码中所示：  
@@ -54,5 +57,5 @@ END_PROVIDER_COLUMN_MAP()
   
  当你成功地测试你的提供商时，你可能想要通过实现其他接口增强其功能。 一个示例所示[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [实现简单的只读提供程序](../../data/oledb/implementing-the-simple-read-only-provider.md)

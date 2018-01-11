@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- cl.exe compiler, limits for language constructs
+dev_langs: C++
+helpviewer_keywords: cl.exe compiler, limits for language constructs
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 986a158ea74e56a0e52c1ffff77f83b8ede71ef5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cf668ddfa1c2d7e62ca10963827056f9661b83f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-limits"></a>编译器限制
 C++ 标准建议对各种语言构造施加限制。 下面是 Visual C++ 编译器不会在其中实施建议的限制的情况的列表。 第一个数字是 ISO C++ 11 标准（INCITS/ISO/IEC 14882-2011[2012]，附件 B）中建立的限制，而第二个数字是由 Visual C++ 实现的限制：  
@@ -45,5 +42,5 @@ C++ 标准建议对各种语言构造施加限制。 下面是 Visual C++ 编译
   
 -   模板声明的 c + + 标准中的模板自变量： 1024，Visual c + + 编译器： 2046年。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [非标准行为](../cpp/nonstandard-behavior.md)

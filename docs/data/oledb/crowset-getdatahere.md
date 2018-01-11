@@ -24,11 +24,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5c6cfb07a430de48cb706980c1d8c6eb1b8a61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7429ec4b451536d3271432d3822de04ecae7dd87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetgetdatahere"></a>CRowset::GetDataHere
 从当前行中检索数据并将其放到指定的缓冲区。  
@@ -56,9 +59,9 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  有关如何使用此函数的示例，请参阅[MultiRead 的示例](../../visual-cpp-samples.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
  [CRowset::GetData](../../data/oledb/crowset-getdata.md)

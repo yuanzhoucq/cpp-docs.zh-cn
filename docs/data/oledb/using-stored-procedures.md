@@ -1,48 +1,51 @@
 ---
-title: "使用存储过程 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供程序模板, 存储过程"
-  - "OLE DB, 存储过程"
-  - "存储过程, 关于存储过程"
-  - "存储过程, OLE DB"
-  - "存储过程, Visual C++"
+title: "使用存储的过程 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, Visual C++
+- stored procedures, about stored procedures
+- OLE DB provider templates, stored procedures
+- stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 093cbd3d2ae101bbc06c45a920f8a2c108eb3bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 使用存储过程
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-存储过程是存储在数据库中的可执行对象。  调用存储过程类似于调用 SQL 命令。  在数据源上使用存储过程（而不是在客户端应用程序中执行或准备语句）可以提供若干个优点，其中包括：更高的性能、较低的网络系统开销以及改善的一致性和准确性。  
+# <a name="using-stored-procedures"></a>使用存储过程
+存储的过程是在数据库中存储的可执行对象。 调用存储的过程是类似于调用 SQL 命令。 在数据源 （而不是执行或准备客户端应用程序中的语句） 上使用存储的过程可以提供几个好处，包括更高的性能，减少的网络开销，以及改进的一致性和准确性。  
   
- 存储过程可以具有任意个（包括 0 个）输入或输出参数，并可以传递一个返回值。  您可以将参数值硬编码为特定数据值，也可以使用参数标记（问号“?”）。  
+ 存储的过程可以具有任意数量的 （包括零） 输入或输出参数，并且可以通过返回的值。 可以将参数值硬编码为特定数据值，也可以使用参数标记 (问号？)。  
   
 > [!NOTE]
->  使用 Visual C\+\+ 创建的 CLR SQL Server 存储过程必须用 **\/clr:safe** 编译器选项进行编译。  
+>  必须使用编译使用 Visual c + + 创建的存储的过程的 CLR SQL Server **/clr: safe**编译器选项。  
   
- 用于 SQL Server 的 OLE DB 提供程序 \(SQLOLEDB\) 支持以下由存储过程用来返回数据的机制：  
+ OLE DB 访问接口为 SQL Server (SQLOLEDB) 支持以下存储过程用于返回数据的机制：  
   
--   过程中的每一条 SELECT 语句都生成一个结果集。  
+-   在过程中的每个 SELECT 语句生成的结果集。  
   
--   过程可以通过输出参数返回数据。  
+-   该过程可以返回通过输出参数的数据。  
   
--   过程可以具有整数返回代码。  
+-   该过程可以返回代码的整数。  
   
 > [!NOTE]
->  不能将存储过程与 Jet 的 OLE DB 提供程序一起使用，因为该提供程序不支持存储过程；查询字符串中只允许使用常数。  
+>  你无法使用存储的过程的 OLE DB 访问接口为 Jet 因为该提供程序不支持存储的过程;查询字符串中允许使用仅常量。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

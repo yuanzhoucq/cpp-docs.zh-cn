@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92881b4c6bab1deaf35ba11e10dbea318194bd05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa4b2ae42175e2d4fc2ddb3317ef76b6b4dec8d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spin-button-styles"></a>调节按钮样式
 数值调节钮的设置的许多 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) 由样式控制。 你可以设置使用的以下样式**属性**在对话框编辑器的窗口。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
 -   **箭头键**导致数值调节钮递增或递减位置按向上键和向下箭头键时。 与关联`UDS_ARROWKEYS`样式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CSpinButtonCtrl](../mfc/using-cspinbuttonctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

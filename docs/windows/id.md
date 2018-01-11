@@ -1,32 +1,33 @@
 ---
-title: "id | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "id attribute"
+title: "id |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.id
+dev_langs: C++
+helpviewer_keywords: id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9225a87f32c3c7bf42ca5fc7de98dd0ab8f12639
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# id
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用于成员函数 \(一个属性或将方法指定 `dispid` 参数，在接口或调度接口\)。  
+# <a name="id"></a>id
+指定`dispid`（属性或方法，在接口或调度接口） 的成员函数的参数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,19 +36,19 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `dispid`  
- 接口方法的调度 ID。  
+ 接口方法调度 ID。  
   
-## 备注  
- **id** C\+\+ 特性具有与 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Id** c + + 属性具有相同的功能[id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL 特性。  
   
-## 示例  
- 有关示例的 [可绑定](../windows/bindable.md) 参见示例中使用 **id**。  
+## <a name="example"></a>示例  
+ 请参阅示例[可绑定](../windows/bindable.md)以举例说明如何使用**id**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -56,13 +57,12 @@ caps.handback.revision: 9
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [defaultvalue](../windows/defaultvalue.md)   
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [方法特性](../windows/method-attributes.md)   
+ [数据成员特性](../windows/data-member-attributes.md)   
+ [默认值](../windows/defaultvalue.md)   
  [in](../windows/in-cpp.md)   
- [输出](../windows/out-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [out](../windows/out-cpp.md)   

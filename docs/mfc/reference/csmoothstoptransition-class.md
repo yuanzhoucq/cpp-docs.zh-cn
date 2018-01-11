@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaaa1ba7058047f8ce5c570be7ef68d64b0a5c15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50753ab65b960ac590c3f859133adf9da903aeda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 类
 封装平稳停止转换。  
@@ -71,7 +72,7 @@ class CSmoothStopTransition : public CBaseTransition;
   
  [CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxanimationcontroller.h  
   
 ##  <a name="create"></a>CSmoothStopTransition::Create  
@@ -120,5 +121,5 @@ DOUBLE m_dblFinalValue;
 UI_ANIMATION_SECONDS m_maximumDuration;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

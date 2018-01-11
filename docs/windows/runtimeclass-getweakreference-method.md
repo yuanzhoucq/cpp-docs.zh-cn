@@ -1,32 +1,33 @@
 ---
-title: "RuntimeClass::GetWeakReference 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetWeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetWeakReference 方法"
+title: "Runtimeclass:: Getweakreference 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetWeakReference
+dev_langs: C++
+helpviewer_keywords: GetWeakReference method
 ms.assetid: 26656ace-7f20-4364-87c9-4a75dd30912e
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ba87fe5097f9aff52b54770c1d438be2be425259
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass::GetWeakReference 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一个指向当前 RuntimeClass 对象使用弱引用对象。  
+# <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference 方法
+获取当前 RuntimeClass 对象的弱引用对象的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `weakReference`  
- 该操作完成，对一弱引用对象的指针。  
+ 此操作完成后，指向弱引用对象的指针。  
   
-## 返回值  
- 始终是 S\_OK。  
+## <a name="return-value"></a>返回值  
+ 始终 S_OK。  
   
-## 要求  
- **头文件：**implements.h  
+## <a name="requirements"></a>惠?  
+ **标头：** implements.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [RuntimeClass 类](../windows/runtimeclass-class.md)

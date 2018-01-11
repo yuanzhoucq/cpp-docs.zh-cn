@@ -279,11 +279,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db3a6a9674792840639340162c09a67851ae68d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa890cf7fc41160b91d77a564328f8f674a11c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int4-class"></a>int_4 类
 表示短矢量的四个整数。  
@@ -471,7 +472,7 @@ class int_4;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[大小常量](#int_4__size)||  
   
@@ -611,7 +612,7 @@ class int_4;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `int_4`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** amp_short_vectors.h  
   
  **Namespace:** concurrency:: graphics  
@@ -693,5 +694,5 @@ explicit inline int_4(
 static const int size = 4;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

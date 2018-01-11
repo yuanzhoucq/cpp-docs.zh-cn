@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67ab87fc25c24b152ee2ca2a405b62f30721da8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fbcaee978d6fdf0041510a9c06cf9f901426e81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isconvertible-class"></a>is_convertible 类
 测试一种类型是否可转换为另一种类型。  
@@ -76,11 +77,11 @@ is_convertible<trivial, trivial> == true
 is_convertible<char, int> == true  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<type_traits>  
   
  **命名空间：** std  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_base_of 类](../standard-library/is-base-of-class.md)

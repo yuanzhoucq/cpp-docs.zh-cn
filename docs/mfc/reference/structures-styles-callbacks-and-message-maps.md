@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.structures
-dev_langs:
-- C++
+f1_keywords: vc.mfc.structures
+dev_langs: C++
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c341f208d9aa54e60568b066f462db65b9172394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>结构、样式、回调和消息映射
 本节记录 Microsoft 基础类库和 MFC 消息映射使用的结构、样式和回调函数。  
@@ -51,7 +48,6 @@ ms.lasthandoff: 10/09/2017
   
  [MFC 示例](../../visual-cpp-samples.md)  
  提供指向演示如何使用 MFC 库的示例的链接。
-
 
 
 

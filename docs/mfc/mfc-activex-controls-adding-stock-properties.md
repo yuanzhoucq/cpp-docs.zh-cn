@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6523e5758e96c140b05f8416ba886a1e8636cc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed6fec6c878fe505b18a39df1200117f4b426878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控件：添加常用属性
 常用属性不同于自定义属性，因为它们已实现由类`COleControl`。 `COleControl`包含控件中支持通用属性的预定义的成员函数。 一些常见属性包括控件的标题和前景色和背景颜色。 有关其他常用属性的信息，请参阅[Stock 属性支持添加属性向导](#_core_stock_properties_supported_by_classwizard)本文后续部分中。 常用属性的调度映射条目始终为前缀的**DISP_STOCKPROP**。  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/24/2017
 |**字体**|**DISP_STOCKPROP_FONT （)**|请参阅文章[MFC ActiveX 控件： 使用字体](../mfc/mfc-activex-controls-using-fonts.md)的用法。|  
 |`ForeColor`|**DISP_STOCKPROP_FORECOLOR （)**|通过调用可访问的值`GetForeColor`。|  
 |**hWnd**|**DISP_STOCKPROP_HWND （)**|值的可访问性`m_hWnd`。|  
-|**“文本”**|**DISP_STOCKPROP_TEXT （)**|通过调用可访问的值`InternalGetText`。 此属性是相同**标题**，属性名称除外。|  
+|**文本**|**DISP_STOCKPROP_TEXT （)**|通过调用可访问的值`InternalGetText`。 此属性是相同**标题**，属性名称除外。|  
 |**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState 的可访问性的值或`GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a>常用属性和通知  
@@ -104,7 +105,7 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件： 属性](../mfc/mfc-activex-controls-properties.md)   
  [MFC ActiveX 控件： 方法](../mfc/mfc-activex-controls-methods.md)   
