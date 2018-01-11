@@ -32,11 +32,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7745054066a928c414360a215605cf343971ddf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d17f49535078261669841ea502c6af821aa5e29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>更改 MFC 创建的窗口的样式
 它的版本中`WinMain`函数，MFC 为您注册若干标准窗口类。 由于你通常不编辑 MFC 的`WinMain`，，函数使您可以以后你无法更改 MFC 默认窗口样式。 此文章介绍了如何更改现有应用程序中的此类的预先注册的窗口类的样式。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/24/2017
  以下讨论介绍 SDI 用例和[MDI 用例](#_core_the_mdi_case)。  
   
 ##  <a name="_core_the_sdi_case"></a>SDI 用例  
- 在单文档界面 (SDI) 应用程序中，框架的默认窗口样式是的组合**WS_OVERLAPPEDWINDOW**和**FWS_ADDTOTITLE**样式。 **FWS_ADDTOTITLE**是一种特定于 MFC 的型，它指示要添加到窗口的标题的文档标题的框架。 若要更改窗口特性 SDI 应用程序中的，重写`PreCreateWindow`函数中你的类派生自`CFrameWnd`(其中的应用程序向导名称`CMainFrame`)。 例如:   
+ 在单文档界面 (SDI) 应用程序中，框架的默认窗口样式是的组合**WS_OVERLAPPEDWINDOW**和**FWS_ADDTOTITLE**样式。 **FWS_ADDTOTITLE**是一种特定于 MFC 的型，它指示要添加到窗口的标题的文档标题的框架。 若要更改窗口特性 SDI 应用程序中的，重写`PreCreateWindow`函数中你的类派生自`CFrameWnd`(其中的应用程序向导名称`CMainFrame`)。 例如:  
   
  [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_the_mdi_case"></a>MDI 用例  
  稍有更多工作需要更改处于多文档界面 (MDI) 应用程序的子窗口的窗口样式。 默认情况下使用应用程序向导创建的 MDI 应用程序使用默认值[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)在 MFC 中定义的类。 若要更改的 MDI 子窗口的窗口样式，必须派生新类从`CMDIChildWnd`，并将所有引用`CMDIChildWnd`项目中包含对新的类的引用。 最有可能，对的唯一引用`CMDIChildWnd`应用程序中位于应用程序的`InitInstance`成员函数。  
   
- 在 MDI 应用程序中使用的默认窗口样式是的组合**WS_CHILD**， **WS_OVERLAPPEDWINDOW**，和**FWS_ADDTOTITLE**样式。 若要更改 MDI 应用程序的子窗口的窗口特性，重写[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)函数中你的类派生自`CMDIChildWnd`。 例如:   
+ 在 MDI 应用程序中使用的默认窗口样式是的组合**WS_CHILD**， **WS_OVERLAPPEDWINDOW**，和**FWS_ADDTOTITLE**样式。 若要更改 MDI 应用程序的子窗口的窗口特性，重写[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)函数中你的类派生自`CMDIChildWnd`。 例如:  
   
  [!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]  
   
@@ -85,6 +86,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [窗口样式](http://msdn.microsoft.com/library/windows/desktop/ms632600)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架窗口样式](../mfc/frame-window-styles-cpp.md)
 

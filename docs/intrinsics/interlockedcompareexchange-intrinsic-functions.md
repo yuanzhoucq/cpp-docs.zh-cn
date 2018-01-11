@@ -59,11 +59,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce9c8f3fb5a53ed19ddbb07e7e75b197c05f0fd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6a29141e233e7e95cc35e6229e9bd37237cf1d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 内部函数
 **Microsoft 专用**  
@@ -198,7 +199,7 @@ __int64 _InterlockedCompareExchange64_rel(
 ## <a name="return-value"></a>返回值  
  返回值是 `Destination` 指针的初始值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|标头|  
 |---------------|------------------|------------|  
@@ -438,7 +439,7 @@ int main(
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
  [_InterlockedCompareExchangePointer 内部函数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
