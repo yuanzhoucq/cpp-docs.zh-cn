@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decltype--c"></a>decltype （c + +）
 `decltype` 类型说明符生成指定表达式的类型。 `decltype`连同类型说明符， [auto 关键字](../cpp/auto-cpp.md)，主要对编写模板库的开发人员很有用。 使用 `auto` 和 `decltype` 声明其返回类型取决于其模板参数类型的模板函数。 或者，使用 `auto` 和 `decltype` 声明包装对其他函数的调用，然后返回包装函数的返回类型的模板函数。  
@@ -104,7 +105,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>Decltype 和转发函数 (C++11)  
- 转发函数包装对其他函数的调用。 请考虑将其参数或包含这些参数的表达式的结果转发到其他函数的函数模板。 此外，转发函数返回调用其他函数的结果。 在此方案中，转发函数的返回类型应与包装函数的返回类型相同。  
+ 转发函数包装对其他函数的调用。 请考虑将其自变量或包含这些自变量的表达式的结果转发到其他函数的函数模板。 此外，转发函数返回调用其他函数的结果。 在此方案中，转发函数的返回类型应与包装函数的返回类型相同。  
   
  在此方案中，没有 `decltype` 类型说明符，您无法编写适当的类型表达式。 `decltype` 类型说明符将启用泛型转发函数，因为该说明符不会丢失有关函数是否返回引用类型的必需信息。 有关转发函数的代码示例，请参阅上面的 `myFunc` 模板函数示例。  
   
@@ -205,7 +206,7 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  Visual C++ 2010 或更高版本。  
   
  `decltype(auto)`需要 Visual Studio 2015 或更高版本。  

@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23d93972bf077febe8497ad539ccd62ea372a384
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bda8be9d3cc939e95ccfe68397eef259dd3a2f4
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 C + + AMP (c + + Accelerated Massive Parallelism) 通过利用通常显示为在离散图形卡的图形处理单元 (GPU) 的数据并行硬件加速执行 c + + 代码。 C + + AMP 编程模型包括支持多维数组，索引，内存传输和平铺。 它还包括数学函数库。 你可以使用 c + + AMP 语言扩展来控制如何数据移动 CPU 到 GPU 和备份。  
@@ -46,9 +47,9 @@ C + + AMP (c + + Accelerated Massive Parallelism) 通过利用通常显示为在
  [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)  
   
 ## <a name="other-resources"></a>其他资源  
- [在本机代码的博客中的并行编程](http://go.microsoft.com/fwlink/p/linkid=238472)  
+ [在本机代码的博客中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=238472)  
   
- [下载的 c + + AMP 示例项目](http://go.microsoft.com/fwlink/p/linkid=248508)  
+ [下载的 c + + AMP 示例项目](http://go.microsoft.com/fwlink/p/?linkid=248508)  
   
- [分析 c + + AMP 代码使用并发可视化工具](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)
+ [分析 c + + AMP 代码使用并发可视化工具](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
 

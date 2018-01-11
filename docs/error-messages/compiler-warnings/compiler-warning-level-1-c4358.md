@@ -1,34 +1,33 @@
 ---
-title: "编译器警告（等级 1）C4358 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4358"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4358"
+title: "编译器警告 （等级 1） C4358 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4358
+dev_langs: C++
+helpviewer_keywords: C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e006bed5e805118c394b9107aa5eb91660aa542
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4358
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“operator”: 组合委托的返回类型不是“void”；返回值没有定义  
+# <a name="compiler-warning-level-1-c4358"></a>编译器警告（等级 1）C4358
+operator： 返回组合的委托的类型不是 void;返回的值是未定义  
   
- 组合了两个委托，返回值不是 void。  如果组合两个具有非 void 返回值的委托，则使用委托的返回值时编译器将不能正确赋值。  
+ 两个委托已合并和返回值不是 void。 如果具有非 void 返回值的两个委托结合起来时，编译器不能使用的委托的返回值进行正确分配。  
   
- 下面的示例生成 C4358：  
+ 下面的示例生成 C4358:  
   
 ```  
 // C4358.cpp  

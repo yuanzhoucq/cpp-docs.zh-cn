@@ -1,32 +1,33 @@
 ---
-title: "list::merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "merge 成员 [STL/CLR]"
+title: "list:: merge (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::merge
+dev_langs: C++
+helpviewer_keywords: merge member [STL/CLR]
 ms.assetid: f8e93cd3-bd08-4086-859b-08a2899cc9a6
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0fdf7ee26bdb465e8a86109a4450353c4dc642a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# list::merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-合并两个有序受控序列。  
+# <a name="listmerge-stlclr"></a>list::merge (STL/CLR)
+合并两个有序受控的序列。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void merge(list<Value>% right);  
@@ -34,21 +35,21 @@ template<typename Pred2>
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  pred  
- 比较器的元素对。  
+ 用于元素对比较器。  
   
- right  
- 合并的容器。  
+ 右  
+ 要合并到的容器。  
   
-## 备注  
- 第一个成员函数。移除所有元素顺序控制由 `right` 并插入它们控制在序列。  必须由 `operator<` 前面两个序列排序\-\-，当通过的任何序列，继续元素不能减小。值。  产生的序列。`operator<`还顺序。  使用该成员函数还将两个序列该增值到该的增值序列。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数通过控制的序列中移除所有元素`right`并将它们插入受控序列中。 这两个序列必须以前按排序`operator<`-元素必须不能减少值中完成任一序列。 此外按所产生的序列`operator<`。 此成员函数用于将合并的值增加到一个序列，其中值也会递增的两个序列。  
   
- 第二个成员函数行为与第一个相同，不同之处在于，`pred` 排序序列。\-\- `pred`的`(X, Y)` 必须是错误的。按照序列的 `Y` 元素的所有 `X` 元素。  使用将谓词函数进行排序的两个序列或委托指定。  
+ 第二个成员函数行为与第一个相同，只不过按排序序列`pred`  --  `pred(X, Y)`对于任何元素必须是 false`X`后面元素`Y`序列中。 你可以使用它来合并两个序列排序通过谓词函数或你指定的委托。  
   
- 两个函数以稳定的组合\-\-对原始序列中的元素控制在生成的控制序列不会撤消。  此外，如果，一对在生成的序列的元素控制 `X` 和 `Y` 具有相同订单\-\- `!(X < Y) && !(X < Y)` \-\-原始序列的元素控制在自的元素之前出现顺序控制的 `right`。  
+ 同时函数执行稳定合并--没有对任一原始的受控序列中的元素将被反转生成受控序列中。 此外，如果的元素对`X`和`Y`生成受控序列中具有等效顺序- `!(X < Y) && !(X < Y)` -从原始的受控序列的元素在所控制的序列中元素的前面显示`right`.  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_list_merge.cpp   
@@ -107,20 +108,23 @@ int main()
   
 ```  
   
-  **" e.**  
- **a bc d f**  
- **a b c d e f**  
-**c2.size\(\) \= 0**  
- **e.c。**  
- **f\-e 的 c d b。**  
- **f\-e 的 c d、b 和 c**  
-**c1.size\(\) \= 0**   
-## 要求  
- **页眉：** \<\/cliext 列表\>  
+```Output  
+ a c e  
+ b d f  
+ a b c d e f  
+c2.size() = 0  
+ e c a  
+ f e d c b a  
+ f e e d c c b a a  
+c1.size() = 0  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/列表 >  
   
-## 请参阅  
- [list](../dotnet/list-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)   
+ [list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)

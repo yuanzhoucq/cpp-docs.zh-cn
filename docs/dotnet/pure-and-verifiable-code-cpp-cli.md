@@ -28,11 +28,14 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ec68a6179cd74020638aa895028942bc76e21f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7bcaabb9f0a696a5eb7b01c4bd78757681e4e6a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>纯代码和可验证代码 (C++/CLI)
 对于.NET 编程，Visual c + + 支持三种不同类型的组件和应用程序创建： 混合、 纯代码和可验证。 这三个可通过[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)编译器选项。  
@@ -107,5 +110,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  没有一个编码方案，将通过编译器，但这将导致无法验证的程序集： 调用通过使用范围解析运算符的对象实例的虚拟函数。  例如：`MyObj -> A::VirtualFunction();`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

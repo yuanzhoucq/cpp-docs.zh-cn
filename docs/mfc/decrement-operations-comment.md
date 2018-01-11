@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63b3d7a313f0f725444ba77612d8b53280393640
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53d2470e0be0ca314da8486d74d8fc618e134c35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="-operations-comment"></a>// Operations 注释
 `// Operations`的 MFC 类声明的部分包含你可以调用要使其执行操作或执行的操作 （执行操作） 的对象的成员函数。 这些函数是通常非**const**因为它们通常具有副作用。 它们可能是虚方法或非虚拟具体取决于类的需求。 通常情况下，这些成员是公共的。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  与属性一样，可以进一步细分操作。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 MFC 源文件](../mfc/using-the-mfc-source-files.md)   
  [注释示例](../mfc/an-example-of-the-comments.md)   
  [/ / Implementation 注释](../mfc/decrement-implementation-comment.md)   

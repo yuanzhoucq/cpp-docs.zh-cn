@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43101507218ebc2ab938ee23a12bc2524af81d85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9d6698941c0660cb7a2bf72f68621ad049640373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetmultiset-stlclr"></a>multiset::multiset (STL/CLR)
 构造容器对象。  
@@ -190,12 +193,12 @@ size() = 0
  a b c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)   
  [multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)

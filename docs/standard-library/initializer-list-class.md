@@ -23,11 +23,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: 271ba1705dd48e11f1613e778b2d3bd41df7bba6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df79acefbd5482238b2ce59885bdb06af128c9b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializerlist-class"></a>initializer_list 类
 提供访问元素数组的权限，其中数组的每个成员均具有指定的类型。  
@@ -41,7 +42,7 @@ class initializer_list
   
 #### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`Type`|要在 `initializer_list` 中存储的元素数据类型。|  
 
@@ -80,7 +81,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 |[end](#end)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|  
 |[size](#size)|返回 `initializer_list` 中的元素数量。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<initializer_list>  
   
  **命名空间：** std  
@@ -117,7 +118,7 @@ initializer_list(const InputIterator First, const InputIterator Last);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`First`|要复制的范围元素中的第一个元素的位置。|  
 |`Last`|要复制的元素范围以外的第一个元素的位置。|  
@@ -200,6 +201,6 @@ constexpr size_t size() const noexcept;
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<forward_list>](../standard-library/forward-list.md)
 

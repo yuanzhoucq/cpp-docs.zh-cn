@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af24c461d579ee784487697cc376d9e8f0816643
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c737557d503ca7e0959d159a0818f1ca78280ea2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-data-with-document-data-variables"></a>使用文档数据变量管理数据
 实现文档的数据为您的文档类的成员变量。 例如，Scribble 程序声明类型的数据成员`CObList`-存储指向的链接的列表`CObject`对象。 此列表用于存储的构成画线条图形的点数组。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
  如果频繁的数据传输需要直接访问，或你想要使用的文档类的非公共成员，你可能想要使视图类 （在 c + + 条款） 的文档类的友元。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用文档](../mfc/using-documents.md)
 

@@ -1,31 +1,33 @@
 ---
-title: "如何：使用 for each 循环访问泛型集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "泛型集合, 循环访问"
+title: "如何： for each 循环访问泛型集合与 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: generic collection, iterating over
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed9d92c4d6123d1c9c8f92814272ae5a77184102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 for each 循环访问泛型集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[泛型](../windows/generics-cpp-component-extensions.md) Visual C\+\+ 功能允许您创建泛型集合。  
+# <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>如何：使用 for each 循环访问泛型集合
+[泛型](../windows/generics-cpp-component-extensions.md)Visual c + + 的功能可用于创建泛型集合。  
   
-## 示例  
- 此示例演示如何使用简单的泛值类型集合的 `for each`。  
+## <a name="example"></a>示例  
+ 本示例演示如何将 `for each` 用于简单的泛型值类型集合。  
   
 ```  
 // for_each_generics.cpp  
@@ -92,8 +94,11 @@ int main() {
 }  
 ```  
   
-  **10**  
-**20**  
-**30**   
-## 请参阅  
- [for each，in](../dotnet/for-each-in.md)
+```Output  
+10  
+20  
+30  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [for each, in](../dotnet/for-each-in.md)

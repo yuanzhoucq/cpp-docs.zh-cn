@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fefc31c6ac9eb1f66c2fb6481bd7bb63171a8a8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共享（只读）或计算符号
 开发环境首次读取由其他应用程序创建的资源文件时，会将所有包含的头文件都标记为只读。 随后，你可以使用[资源包括对话框中](../windows/resource-includes-dialog-box.md)添加其他只读符号头文件。  
@@ -71,15 +74,15 @@ ms.lasthandoff: 10/24/2017
   
      采用这种方式包含的文件中的符号会在每次打开资源文件时进行计算，但是在保存文件时不会在磁盘上替换它们。  
   
-4.  单击“确定”。  
+4.  单击 **“确定”**。  
   
 
   
- 要求  
+ 惠?  
   
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [符号名限制](../windows/symbol-name-restrictions.md)   
  [符号值限制](../windows/symbol-value-restrictions.md)   
  [预定义的符号 Id](../windows/predefined-symbol-ids.md)   

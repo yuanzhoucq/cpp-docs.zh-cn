@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2664
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2664
+f1_keywords: C2664
+dev_langs: C++
+helpviewer_keywords: C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b35cc8e9935ba476854cce92918def7134198da2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 933ef66a4f4fabea46c3f1ebaede1ea51429141c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2664"></a>编译器错误 C2664
 “函数”: 无法将自变量 n 从“类型 1”转换为“类型 2”  
@@ -37,7 +33,7 @@ ms.lasthandoff: 10/10/2017
   
  若要修复 C2664，请执行以下操作  
   
--   再次检查给定函数的原型，并改正错误信息中指出的参数。  
+-   再次检查给定函数的原型，并改正错误信息中指出的自变量。  
   
 -   如果需要的话，提供显式转换。  
   

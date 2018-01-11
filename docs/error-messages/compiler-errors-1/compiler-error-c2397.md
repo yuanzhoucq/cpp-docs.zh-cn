@@ -6,31 +6,30 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2397
-dev_langs:
-- C++
+f1_keywords: C2397
+dev_langs: C++
 ms.assetid: b418cf5a-d50d-4a6c-98a7-994ae35046d1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 31f2b548fd13bc7702d44ef4a6d5dc5c34a5eb3c
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 315d375524884ec987fea747b1d3c20f2ad56173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2397"></a>编译器错误 C2397
-从 type_1 转换到 type_2 所需收缩转换  
+从 type_1 类型到 type_2 转换需要收缩转换  
   
  使用统一初始化时找到的隐式收缩转换。  
   
- C 语言允许隐式收缩转换赋值和初始化，并且 c + + 遵循一种花色，即使意外收缩是太多的代码错误的原因。 若要使代码更安全，c + + 标准要求的初始化列表中的收缩转换发生时诊断消息。 Visual c + + 中诊断是在 Visual Studio 2015 中使用统一初始化支持的语法开头编译器错误 C2397。 编译器将生成[编译器警告 （等级 1） C4838](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md)时使用列表或 Visual Studio 2013 支持聚合初始化语法。  
+ C 语言允许在分配和初始化，隐式收缩转换和 c + + 遵循适合，即使意外收缩是许多代码错误的原因。 若要使代码更加安全，标准 c + + 需要收缩转换发生在初始化列表中时诊断消息。 在 Visual c + +，诊断是编译器错误 C2397 在 Visual Studio 2015 中使用统一安装支持的语法开头时。 编译器将生成[编译器警告 （等级 1） C4838](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md)时使用的列表或支持的 Visual Studio 2013 的聚合初始化语法。  
   
- 当您知道可能转换后的值的范围可以在目标中容纳不下时，收缩转换可以是没有问题。 在这种情况下，您知道个以上的编译器会完成。 如果您有意进行收缩转换，在您的意图明确使用静态强制转换。 否则，此错误消息几乎总是指示在代码中出现了 bug。 您可以通过确保您初始化的对象具有足够大以处理输入的类型，从而解决它。  
+ 当你知道目标中可以容纳该值可能的转换后的值范围时，可以认为可以收缩转换。 在这种情况下，你知道个以上的编译器执行的操作。 如果你有意进行收缩转换，你的意图显式使用进行静态强制转换。 否则，此错误消息几乎始终表示在代码中出现了 bug。 可以通过确保你初始化的对象具有足够大以处理输入的类型，从而修复此错误。  
   
- 下面的示例生成 C2397 并演示一种方法，以修复此错误︰  
+ 下面的示例生成 C2397，并演示修复此错误的一种方法：  
   
 ```  
 // C2397.cpp -- C++ narrowing conversion diagnostics  

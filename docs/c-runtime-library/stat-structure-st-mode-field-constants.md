@@ -46,11 +46,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eb6277eea45aec64c285c3e2780d65be0224ce11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d5502a563c674818626627a5161e7051682f258
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-structure-stmode-field-constants"></a>_stat 结构 st_mode 字段常量
 ## <a name="syntax"></a>语法  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  下面描述了位掩码常量：  
   
-|常量|含义|  
+|返回的常量|含义|  
 |--------------|-------------|  
 |`_S_IFMT`|文件类型掩码|  
 |`_S_IFDIR`|目录|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/24/2017
 |`_S_IWRITE`|写入权限，所有者|  
 |`_S_IEXEC`|执行/搜索权限，所有者|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_stat、_wstat 函数](../c-runtime-library/reference/stat-functions.md)   
  [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [标准类型](../c-runtime-library/standard-types.md)   

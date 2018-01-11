@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8829d8a59de8fd6586ba52a943d51959a5f3f030
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5f00a59d455067d9eb3b9ed46fe16b14c545b455
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapsize-stlclr"></a>map::size (STL/CLR)
 对元素数进行计数。  
@@ -72,11 +75,11 @@ size() = 0 after clearing
 size() = 2 after adding 2  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f5ba9776b27ec98967f64d3c2bfb114c62c36fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc439bd64327ad48f98de8eef380a792e54b8c4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream 类
 描述了一个对象，该对象控制从 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 类的流缓冲区中提取元素和编码对象的操作。  
@@ -80,13 +81,13 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|  
 |[operator=](#op_eq)|将值从对象参数赋给此 `basic_istringstream` 对象。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<sstream>  
   
  **命名空间：** std  
   
 ##  <a name="allocator_type"></a>  basic_istringstream::allocator_type  
- 该类型是模板参数 `Alloc`的同义词。  
+ 该类型是模板参数 `Alloc` 的同义词。  
   
 ```  
 typedef Alloc allocator_type;  
@@ -191,7 +192,7 @@ void swap(basic_istringstream& right);
 ### <a name="remarks"></a>备注  
  成员函数将交换此对象的值和 `right` 的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 编程](../standard-library/iostream-programming.md)   
  [iostreams 约定](../standard-library/iostreams-conventions.md)

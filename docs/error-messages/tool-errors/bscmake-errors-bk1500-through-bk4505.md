@@ -1,23 +1,27 @@
 ---
-title: "BSCMAKE 错误 BK1500 到 BK4505 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "BSCMAKE 错误 BK1500 到 BK4505 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4808ff1f1edbeb3cce9a6e1ffb5669f4e186817a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# BSCMAKE 错误 BK1500 到 BK4505
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="bscmake-errors-bk1500-through-bk4505"></a>BSCMAKE 错误 BK1500 到 BK4505
 
-该节是生成工具所产生错误的参考。  若要获得特定错误信息的相关帮助，请在“输出”窗口中的错误号上单击鼠标并按 F1 键，或者在“索引”的“查找”框中键入错误号。
+本部分是错误的引用，生成 BSCMAKE 警告的生成工具。
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb4a4f378d1446e722404a76a19d592a9eed0e20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6d848b9bc541c74d6820932335542707c12263e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandimplgetdbsession"></a>ICommandImpl::GetDBSession
 返回到创建该命令的会话中的接口指针。  
@@ -43,8 +46,8 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  用于从会话中检索属性。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ICommandImpl 类](../../data/oledb/icommandimpl-class.md)

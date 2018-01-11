@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46061c55bdf0bc8e6eb16a093fc8023c04939fa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c1f146df2dd4f97affdaf1c3107d1b00bfd86876
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp：应用程序类
 MFC 中的主应用程序类将封装 Windows 操作系统的应用程序的初始化、运行和终止。 基于框架生成的应用程序必须有且只有一个对象的类派生自[CWinApp](../mfc/reference/cwinapp-class.md)。 创建窗口之前将构造此对象。  
@@ -45,7 +46,7 @@ MFC 中的主应用程序类将封装 Windows 操作系统的应用程序的初�
 > [!NOTE]
 >  名称中所示**粗体**本文档中指示由 Microsoft 基础类库和 Visual c + + 提供的元素。 以 `monospaced` 类型显示的名称表示您创建或重写的元素。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [常规 MFC 主题](../mfc/general-mfc-topics.md)   
  [CWinApp 和 MFC 应用程序向导](../mfc/cwinapp-and-the-mfc-application-wizard.md)   
  [可重写 CWinApp 成员函数](../mfc/overridable-cwinapp-member-functions.md)   

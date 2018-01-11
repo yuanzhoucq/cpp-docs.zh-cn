@@ -1,36 +1,35 @@
 ---
-title: "编译器警告（等级 2）C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+title: "编译器警告 （等级 2） C4250 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d92a337e3ded4b958bb9d1dbb7359d21f28d619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 2）C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“class1”: 通过域控制继承“class2::member”  
+# <a name="compiler-warning-level-2-c4250"></a>编译器警告（等级 2）C4250
+class1： 继承 class2::member 通过域控制  
   
- 两个或更多的成员同名。  `class2` 中的成员是继承的成员，因为该类是包含该成员的其他类的基类。  
+ 两个或多个成员具有相同的名称。 中的一个`class2`因为它是包含此成员的其他类的基类继承。  
   
- 若要禁止 C4250，请使用 [警告](../../preprocessor/warning.md) 杂注。  
+ 若要禁止 C4250，请使用[警告](../../preprocessor/warning.md)杂注。  
   
- 因为虚拟基类在多个派生类间共享，因此派生类中的名称决定基类中的名称。  例如，假定存在以下类层次结构，在菱形内有两个继承 func 的定义：通过弱类继承的 vbc::func\(\) 实例和通过主导类继承的 dominant::func\(\)。  通过菱形类对象继承的非限定 func\(\) 调用始终调用 dominate::func\(\) 实例。如果弱类要引入 func\(\) 实例，这两个定义都不起主控作用，而调用则被标记为不明确。  
+ 虚拟基类多个派生类之间共享的因为派生类中的名称可控制在基类中的名称。 例如，给定以下类层次结构，有两个定义的在菱形中继承的 func： 通过弱的类中和大多数:: func() 通过主导类 vbc::func() 实例。 通过菱形类对象，func() 的非限定的调用始终调用主要:: func() 实例。  如果弱类引入 func() 的实例，既不定义将控制，并调用将会被标记为不明确。  
   
 ```  
 // C4250.cpp  
@@ -54,7 +53,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4250。  
   
 ```  
@@ -86,8 +85,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 此示例演示更为复杂的情况。  下面的示例生成 C4250。  
+## <a name="example"></a>示例  
+ 此示例演示更复杂的情况。 下面的示例生成 C4250。  
   
 ```  
 // C4250_c.cpp  

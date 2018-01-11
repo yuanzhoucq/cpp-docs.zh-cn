@@ -4,42 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: ffeaf473155d0a24bd0e1b14c4191d276bed5190
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f03b62e045fe0130f981d55767c756df89bca9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="iterators"></a>迭代器
+# <a name="iterators"></a>Iterators
 迭代器是一个对象，可以循环访问 C++ 标准库容器中的元素，并提供对各个元素的访问。 C++ 标准库容器全都提供迭代器，以便算法可以采用标准方式访问其元素，而不必考虑用于存储元素的容器类型。  
   
  可以通过使用成员和全局函数（如 begin() 和 end()）以及运算符（如 ++ 和 -- ）向前或向后移动，来显式使用迭代器。 还可以通过范围 for 循环或（对于某些迭代器类型）下标运算符 []，来隐式使用迭代器。  
@@ -121,10 +105,9 @@ forward iterator
 > [!NOTE]
 >  可以使用范围 for 循环来避免显式使用迭代器。 有关详细信息，请参阅[循环（现代 C++）](http://msdn.microsoft.com/en-us/b1b2779c-750e-4576-a514-a84178eae9da)。  
   
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 现在提供经过检查的迭代器和调试迭代器，以确保不会覆盖容器的边界。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。  
+ Visual c + + 现在提供了检查迭代器和调试迭代器，以确保不会覆盖你的容器的界限。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)   
  [C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

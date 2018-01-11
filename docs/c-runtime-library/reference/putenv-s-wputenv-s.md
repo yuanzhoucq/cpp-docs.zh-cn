@@ -41,11 +41,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e3e23b45eb96faf88924323850550feaa1fbf34f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7d55736daf6652ecbde6b0d16256ccebc206bb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s、_wputenv_s
 创建、修改或删除环境变量。 这些是安全性增强的 [_putenv、_wputenv](../../c-runtime-library/reference/putenv-wputenv.md) 版本，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
@@ -105,19 +106,19 @@ errno_t _wputenv_s(
 > [!NOTE]
 >  `_putenv_s` 和 `_getenv_s` 系列的函数不是线程安全函数。 当 `_getenv_s` 修改字符串时，`_putenv_s` 会返回字符串指针，从而导致随机失败。 确保对这些函数的调用同步。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_putenv_s`|\<stdlib.h>|  
 |`_wputenv_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  有关说明如何使用 `_putenv_s` 的示例，请参阅 [getenv_s、_wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
  [_searchenv、_wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)

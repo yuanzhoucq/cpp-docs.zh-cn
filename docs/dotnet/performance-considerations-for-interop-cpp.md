@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc5e22350036b9f13ee8800cad8394133ba7abd1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 25d098ebb52809a36735f71eecedcc4c2a186225
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="performance-considerations-for-interop-c"></a>互操作的性能注意事项 (C++)
 本主题提供减少托管/非托管互操作转换对运行时性能的影响的指南。  
@@ -60,5 +63,5 @@ ms.lasthandoff: 10/24/2017
   
  有关 c + + 互操作的详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)

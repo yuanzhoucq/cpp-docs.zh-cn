@@ -1,32 +1,33 @@
 ---
-title: "bind2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind2nd 函数 [STL/CLR]"
+title: "bind2nd (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind2nd
+dev_langs: C++
+helpviewer_keywords: bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3617cb917012a48398c6c9f530c2419aa8ea195b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# bind2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-生成参数和仿函数 的 `binder2nd`。  
+# <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
+生成`binder2nd`有关自变量，以及函子。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Fun,  
@@ -35,24 +36,24 @@ template<typename Fun,
         Arg right);  
 ```  
   
-## Template Parameters  
+## <a name="template-parameters"></a>模板参数  
  Arg  
- 参数类型。  
+ 自变量类型。  
   
- Fun  
- 函数对象的类型。  
+ 有趣  
+ 函子的类型。  
   
-## 函数参数  
- functor  
- 包装的 functor。  
+## <a name="function-parameters"></a>函数参数  
+ 函子  
+ 包装函数。  
   
- right  
+ 右  
  要包装的第二个参数。  
   
-## 备注  
- 模板函数返回  [binder2nd](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`。  使用它作为一种简便方法包装两参数的仿函数及在一个一参数的仿函数的第一个参数调用它的第二个参数。  
+## <a name="remarks"></a>备注  
+ 模板函数返回[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`。 你将它用作一种简便方式将两个参数函子和其第二个自变量包装在使用第一个参数调用它的单自变量伪函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_bind2nd.cpp   
@@ -95,13 +96,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [binder2nd](../dotnet/binder2nd-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)

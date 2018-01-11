@@ -17,15 +17,16 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd9a752a0cb24dab5d81ac2f52e6315280668f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3b545fda37dd56f31c641bd58015bd6ea9e2494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-classes"></a>OLE DB 类
 MFC 中的 OLE DB 支持当前包括类[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)。 `COleDBRecordView`显示控件，通过直接连接到的窗体视图中数据库记录[CRowset](../data/oledb/crowset-class.md)对象。 有关 OLE DB 使用者模板的详细信息，请参阅[列表的 OLE DB 使用者模板](../data/oledb/ole-db-consumer-templates-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

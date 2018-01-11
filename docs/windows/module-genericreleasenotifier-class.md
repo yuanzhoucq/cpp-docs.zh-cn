@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b753d1eac4de6b7c6684a33889163344dfefe19f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c87205d1d52c8273ac7eea55fcc5385810349f1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 类
 在释放当前模块中的最后一个对象时调用事件处理程序。 事件处理程序由 lambda、functor 或 pointer-to-function 指定。  
@@ -53,7 +56,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[Module::GenericReleaseNotifier::callback_ 数据成员](../windows/module-genericreleasenotifier-callback-data-member.md)|包含与当前 Module::GenericReleaseNotifier 对象关联的 lambda、functor 或 pointer-to-function 事件处理程序。|  
   
@@ -62,10 +65,10 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
  `GenericReleaseNotifier`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** module.h  
   
  **命名空间：** Microsoft::WRL
  
- ## <a name="see-also"></a>另请参阅
+ ## <a name="see-also"></a>请参阅
  [Module 类](../windows/module-class.md)

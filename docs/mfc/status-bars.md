@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a6e0b879efa1d96f3f379cc9aa3292a117609fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9f79fe4def397346e3f44c6dbf50b2583888e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-bars"></a>状态栏
 状态栏，应用程序向用户显示消息和有用信息但不会中断用户的工作的一个位置。 通常显示在窗口底部，状态栏具有"窗格，"包括"指示器"和"消息行"。 指示器提供 SCROLL LOCK 之类的内容的状态，指示宏录制启用上，依次类推。 状态栏上的消息行可以显示有关程序状态或使用鼠标指向用户是工具栏按钮或菜单项的信息。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [在状态栏中显示命令信息](../mfc/how-to-display-command-information-in-the-status-bar.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)

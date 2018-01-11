@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a164bd7d07fac68de5b2e8fb4b49fa4e399c7cb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 19f4f248a7fdca0d89df9c8becad69876bf6ac7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>设计和创建记录视图（MFC 数据访问）
 你可以创建记录视图类与[MFC 应用程序向导](../mfc/reference/database-support-mfc-application-wizard.md)。 如果使用应用程序向导，则可以创建记录视图类并为其创建对话框模板资源（无控件）。 必须使用 Visual C++ 对话框编辑器将控件添加到对话框模板资源。 另一方面，如果你使用**添加类**，你必须首先创建对话框模板资源在对话框编辑器，然后才创建记录视图类。  
@@ -50,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [记录视图： 填充列表框从第二个记录集](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录视图 （MFC 数据访问）](../data/record-views-mfc-data-access.md)   
  [记录集 (ODBC)](../data/odbc/recordset-odbc.md)   
  [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

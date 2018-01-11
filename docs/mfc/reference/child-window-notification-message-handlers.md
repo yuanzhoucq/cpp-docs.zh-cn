@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad91fe5a9f2afc89b642be642bf14eaed13e3009
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f56f02bd845efdeb59a2b68604098c637ccd45c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="child-window-notification-message-handlers"></a>子窗口通知消息处理程序
 有五种类别的子窗口通知消息：  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
 |[编辑控件处理程序](../../mfc/reference/edit-control-handlers.md)|编辑控件通知代码的处理程序。|  
 |[列表框处理程序](../../mfc/reference/list-box-handlers.md)|列表框通知代码的处理程序。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)
 

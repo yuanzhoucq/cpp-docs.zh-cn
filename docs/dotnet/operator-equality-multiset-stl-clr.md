@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85c75880e0e7e8eb1e72949b88d01cf11c13514c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 114905ff52a6f2774faf2358d4b97fc56d8fcc03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-multiset-stlclr"></a>operator== (multiset) (STL/CLR)
 列表相等比较。  
@@ -89,12 +92,12 @@ int main()
 [a b c] == [a b d] is False  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [运算符 ！ = (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)   
  [运算符\<(multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)   

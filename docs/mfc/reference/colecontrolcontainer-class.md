@@ -83,11 +83,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6206c47416ebbc304cb99c273a882001d684e94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d04faa904eba416b290515e5e6773ac6ef9837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 类
 充当 ActiveX 控件的控件容器。  
@@ -160,7 +161,7 @@ class COleControlContainer : public CCmdTarget
   
  `COleControlContainer`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxocc.h  
   
 ##  <a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite  
@@ -742,7 +743,7 @@ virtual void SetDlgItemText(
  `lpszString`  
  指向控件的文本指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [COleControlSite 类](../../mfc/reference/colecontrolsite-class.md)   

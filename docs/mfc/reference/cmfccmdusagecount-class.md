@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 718f373d51c9b8dfd12e1d3559c3a9078600a54a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0db24894777170d2860ba8d1639fd44e3893732a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 类
 跟踪 Windows 消息，如当用户从菜单选择项的使用计数。  
@@ -73,7 +74,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|名称|描述|  
+|name|描述|  
 |`m_CmdUsage`|A`CMap`将命令映射到其使用情况计数的对象。|  
 |`m_nMinUsagePercentage`|要频繁使用的命令小使用率百分比。|  
 |`m_nStartCount`|用于确定此对象是否具有收集跟踪数据的最小量起始计数器。|  
@@ -89,7 +90,7 @@ class CMFCCmdUsageCount : public CObject
   
  [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmdusagecount.h  
   
 ##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
@@ -103,7 +104,7 @@ void AddCmd(UINT uiCmd);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `uiCmd`|指定要递增的命令计数器。|  
   
 ### <a name="remarks"></a>备注  
@@ -128,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `uiCmd`|要检索命令计数器的 ID。|  
   
 ### <a name="return-value"></a>返回值  
@@ -160,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `uiCmd`|指定要检查的命令。|  
   
 ### <a name="return-value"></a>返回值  
@@ -192,7 +193,7 @@ virtual void Serialize(CArchive& ar);
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `ar`|A`CArchive`要序列化来自或附加到对象。|  
   
 ### <a name="remarks"></a>备注  
@@ -213,7 +214,7 @@ static BOOL __stdcall SetOptions(
   
 |||  
 |-|-|  
-|参数|说明|  
+|参数|描述|  
 |[in] `nStartCount`|所有跟踪命令新初始计数。|  
 |[in] `nMinUsagePercentage`|新的小使用率百分比。|  
   
@@ -225,7 +226,7 @@ static BOOL __stdcall SetOptions(
   
  在调试版本中，此方法将生成断言失败如果`nMinUsagePercentage`参数为大于或等于 100。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)

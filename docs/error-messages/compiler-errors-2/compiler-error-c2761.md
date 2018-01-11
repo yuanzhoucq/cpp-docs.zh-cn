@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2761
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2761
+f1_keywords: C2761
+dev_langs: C++
+helpviewer_keywords: C2761
 ms.assetid: 38c79a05-b56d-485b-820f-95e8c0cb926f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 978ec4af1371f06ac5577f3dde66f6e7b62d0e4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7670c3fa67579c218024dfd3f1f585ad57cf37e5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2761"></a>编译器错误 C2761
 function： 不允许的成员函数重新声明  

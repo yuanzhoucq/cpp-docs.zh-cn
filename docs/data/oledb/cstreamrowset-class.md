@@ -1,76 +1,78 @@
 ---
-title: "CStreamRowset 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CStreamRowset<TAccessor>"
-  - "ATL::CStreamRowset"
-  - "CStreamRowset"
-  - "ATL.CStreamRowset<TAccessor>"
-  - "ATL.CStreamRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStreamRowset 类"
+title: "CStreamRowset 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CStreamRowset<TAccessor>
+- ATL::CStreamRowset
+- CStreamRowset
+- ATL.CStreamRowset<TAccessor>
+- ATL.CStreamRowset
+dev_langs: C++
+helpviewer_keywords: CStreamRowset class
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 32c4aa20f805ee141918e7c073709ec33b4d29ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CStreamRowset 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用 `CCommand` 或 `CTable`。  
+# <a name="cstreamrowset-class"></a>CStreamRowset 类
+在中使用`CCommand`或`CTable`声明。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CStreamRowset  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `TAccessor`  
- 一个访问器类  
+ 一个访问器类。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|构造函数。  实例化和初始化 `CStreamRowset` 对象。|  
-|[关闭](../../data/oledb/cstreamrowset-close.md)|释放类中的接口指针。[ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx)|  
+|[CStreamRowset](../../data/oledb/cstreamrowset-cstreamrowset.md)|构造函数。 实例化和初始化`CStreamRowset`对象。|  
+|[关闭](../../data/oledb/cstreamrowset-close.md)|版本[ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx)类中的接口指针。|  
   
-## 备注  
- 例如使用 `CStreamRowset` 在 `CCommand` 或 `CTable` 中，声明：  
+## <a name="remarks"></a>备注  
+ 使用`CStreamRowset`中你`CCommand`或`CTable`声明，例如：  
   
- [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/CPP/cstreamrowset-class_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
   
  或  
   
- [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/CPP/cstreamrowset-class_2.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute` 返回一个 `ISequentialStream` 指针，该指针存储在 `m_spStream`中。  然后，您可以使用 **Read** 方法检索 XML 格式的（Unicode 字符串）数据。  例如：  
+ `ICommand::Execute`返回`ISequentialStream`指针，它存储在`m_spStream`。 然后，你使用**读取**方法来检索 XML 格式 （Unicode 字符串） 的数据。 例如:  
   
- [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/CPP/cstreamrowset-class_3.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   
- SQL Server 2000 执行 XML 格式化，并将行集合的所有列和所有行作为一个 XML 字符串返回。  
+ SQL Server 2000 执行 XML 格式，并将返回所有列和行集作为一个 XML 字符串的所有行。  
   
 > [!NOTE]
->  此功能仅适用于 SQL Server 2000 一起使用。  
+>  此功能仅适用于 SQL Server 2000。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

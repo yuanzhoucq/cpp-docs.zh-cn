@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f9c6347768075ebd382dce87d1933796644bf61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d93f8e43c933e9c8054e798c11754cc48bf54a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="methods-of-creating-a-toolbar"></a>创建工具栏的方法
 MFC 提供用于创建工具栏的两个类： [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) （其包装 Windows 公共控件 API）。 `CToolBar`提供的所有功能的工具栏公共控件，并它为你; 处理许多必需的常用控制设置和结构但是，生成可执行文件通常将大于使用创建的`CToolBarCtrl`。  
@@ -39,7 +40,7 @@ MFC 提供用于创建工具栏的两个类： [CToolBar](../mfc/reference/ctool
   
  任何一种方法将可使用工具栏控件的成员函数。 当您调用 `CToolBar::GetToolBarCtrl` 时，它将返回对 `CToolBarCtrl` 对象的引用，以便您可以使用成员函数集。 请参阅[CToolBar](../mfc/reference/ctoolbar-class.md)有关构造和创建工具栏使用信息`CToolBar`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

@@ -14,14 +14,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e32b681edc6c6b4c0187d5d0ec89ff609e52858d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bc9371fcddad5f76f1474832a8d69188b60583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>函数模板调用的重载解析
-函数模板可以重载具有相同名称的非模板函数。 在此方案中，首先通过使用模板参数推理来解析函数调用，以便使用唯一的专用化来实例化函数模板。 如果模板参数推理失败，则考虑其他函数重载来解析调用。 这些其他重载（也称为候选集）包括非模板函数和其他实例化的函数模板。 如果模板自变量推理成功，则遵循重载决策的规则，将生成的函数与其他函数进行比较以确定最佳匹配。 有关详细信息，请参阅[函数重载](function-overloading.md)。  
+函数模板可以重载具有相同名称的非模板函数。 在此方案中，首先通过使用模板自变量推理来解析函数调用，以便使用唯一的专用化来实例化函数模板。 如果模板自变量推理失败，则考虑其他函数重载来解析调用。 这些其他重载（也称为候选集）包括非模板函数和其他实例化的函数模板。 如果模板自变量推理成功，则遵循重载决策的规则，将生成的函数与其他函数进行比较以确定最佳匹配。 有关详细信息，请参阅[函数重载](function-overloading.md)。  
   
 ## <a name="example"></a>示例
 
@@ -88,7 +89,7 @@ int main()
 void f(T1, T2)  
 ```  
   
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [名称解析](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   

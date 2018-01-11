@@ -1,33 +1,33 @@
 ---
-title: "operator&lt; (stack) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator< 成员 [STL/CLR]"
+title: "运算符&lt;（堆栈） (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 77f8dd42-89d1-4ce1-a7ec-04c3a45dd3ee
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5146a1cfd6c7140ba63b1e9e1756c843325222e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt; (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-栈的小于比较  
+# <a name="operatorlt-stack-stlclr"></a>运算符&lt;（堆栈） (STL/CLR)
+堆栈小于比较。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### 参数  
- left  
- 比较左边的容器。  
+#### <a name="parameters"></a>参数  
+ 左  
+ 要比较的左容器。  
   
- right  
- 比较右边的容器。  
+ 右  
+ 要比较的右容器。  
   
-## 备注  
- 如果运算符函数返回 TRUE，最低位置的`i`，其中，`!(``right``[i] <` `left``[i])` 是正确的，`left``[i] <` `right``[i]`。  否则，返回`left``->`[stack::size](../dotnet/stack-size-stl-clr.md)`() <` `right``->size()`，当2个栈按元素比较时，您可以用它测试`left`是否在`right`之前排序。  
+## <a name="remarks"></a>备注  
+ 运算符函数返回 true 当对于最低的位置`i`为其`!(right[i] < left[i])`很还 true， `left[i] < right[i]`。 否则，它将返回`left->` [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()`用于测试是否`left`进行排序之前`right`的两个堆栈何时比较的元素的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_stack_operator_lt.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \< \[a b c\] 为 False**  
-**\[a b c\] \< \[a b d\] 为 True**   
-## 要求  
- **标头:** \<cliext\/stack\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/堆栈 >  
   
-## 请参阅  
- [stack](../dotnet/stack-stl-clr.md)   
- [operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)   
- [operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)   
- [operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
- [operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)   
- [operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [堆栈 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [运算符 = = （堆栈） (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)   
+ [运算符 ！ = （堆栈） (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)   
+ [运算符 > = （堆栈） (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
+ [运算符 > （堆栈） (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

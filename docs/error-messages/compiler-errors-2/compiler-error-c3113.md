@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3113
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3113
+f1_keywords: C3113
+dev_langs: C++
+helpviewer_keywords: C3113
 ms.assetid: 3afdc668-b29e-474e-9ea3-aa027d42db7c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8f13f0c2f7956e0e9cd57c003c3e9eb77052bc2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 53d13466368ce1b9e473c2c2fce1c96f3d9a0f81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3113"></a>编译器错误 C3113
 结构不能为模板/泛型  

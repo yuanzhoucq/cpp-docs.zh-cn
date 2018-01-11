@@ -1,44 +1,43 @@
 ---
-title: "编译器警告（等级 1）C4789 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4789"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4789"
+title: "编译器警告 (等级 1) C4789 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4789
+dev_langs: C++
+helpviewer_keywords: C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fde48ccbcf3a4ddec6884ac9e0c259739954772
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4789
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-缓冲区“identifier”\(大小为 N 字节\)将溢出；M 字节将在偏移 L 时开始写入  
+# <a name="compiler-warning-level-1-c4789"></a>编译器警告（等级 1）C4789
+缓冲区“identifier”(大小为 N 字节)将溢出；M 字节将在偏移 L 时开始写入  
   
- 在使用特定 C 运行时 \(CRT\) 函数、传递参数以及执行赋值时针对缓冲区溢出进行警告，以便在编译时知道数据大小。  此警告针对那些可能会避开典型数据大小不匹配检测的情况。  
+ 在使用特定 C 运行时 (CRT) 函数、传递参数以及执行赋值时针对缓冲区溢出进行警告，以便在编译时知道数据大小。 此警告针对那些可能会避开典型数据大小不匹配检测的情况。  
   
- 将编译时已知其长度的数据复制并放入其大小在编译时已知太小、无法容纳数据的数据块时，会出现该警告。  必须通过使用以下 CRT 函数之一的内部形式完成复制：  
+ 将编译时已知其长度的数据复制并放入其大小在编译时已知太小、无法容纳数据的数据块时，会出现该警告。 必须通过使用以下 CRT 函数之一的内部形式完成复制：  
   
 -   [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)  
   
 -   [memset](../../c-runtime-library/reference/memset-wmemset.md)  
   
--   [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)、[wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)  
+-   [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)， [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)  
   
  当使用强制转换使参数数据类型不匹配时，也会出现警告，然后尝试从左值引用进行复制赋值。  
   
- Visual C\+\+ 可能会对不曾执行的代码路径生成此警告。  可以使用 `#pragma` 临时禁用该警告，如此示例中所示：  
+ Visual C++ 可能会对不曾执行的代码路径生成此警告。 可以使用 `#pragma` 临时禁用该警告，如此示例中所示：  
   
  `#pragma(push)`  
   
@@ -48,9 +47,9 @@ caps.handback.revision: 18
   
  `#pragma(pop)`  
   
- 这可防止 Visual C\+\+ 对该特定代码块生成警告。  `#pragma(push)` 会在 `#pragma warning(disable: 4789)` 更改现有状态之前保留该状态。  `#pragma(pop)` 会还原压入的状态，并移除 `#pragma warning(disable:4789)` 的效果。  有关 C\+\+ 预处理器指令 `#pragma` 的详细信息，请参阅[警告](../../preprocessor/warning.md)以及 [Pragma 指令和 \_\_Pragma 关键字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。  
+ 这可防止 Visual C++ 对该特定代码块生成警告。 `#pragma(push)` 会在 `#pragma warning(disable: 4789)` 更改现有状态之前保留该状态。 `#pragma(pop)` 会还原压入的状态，并移除 `#pragma warning(disable:4789)` 的效果。 有关 c + + 预处理器指令的详细信息`#pragma`，请参阅[警告](../../preprocessor/warning.md)和[杂注指令和 __Pragma 关键字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例生成 C4789。  
   
 ```  
@@ -73,7 +72,7 @@ int main()
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  以下示例也生成 C4789。  
   
 ```  

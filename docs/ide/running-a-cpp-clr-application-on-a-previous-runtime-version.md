@@ -1,46 +1,46 @@
 ---
-title: "在以前版本的运行时上运行 C++ /clr 应用程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "app.config 文件, 指定的运行时版本"
-  - "应用程序部署 [C++], 指定的运行时版本"
-  - "应用程序 [C++], 指定的运行时版本"
-  - "向后兼容性 [C++], 指定的运行时版本"
-  - "公共语言运行时 [C++], 指定的版本"
-  - "兼容性 [C++], 指定的运行时版本"
-  - "部署应用程序 [C++], 指定的运行时版本"
-  - "版本 [C++]"
+title: "在以前的运行时版本上运行的 c + + clr 应用程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- applications [C++], runtime version specified
+- versions [C++]
+- app.config files, runtime version specified
+- compatibility [C++], runtime version specified
+- backward compatibility [C++], runtime version specified
+- application deployment [C++], runtime version specified
+- common language runtime [C++], version specified
+- deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1f64c0dc31be260332d4d79e8fa38d63bbf6357c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 在以前版本的运行时上运行 C++ /clr 应用程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-除非另行说明，否则 Visual C\+\+ .NET framework 应用程序在编译器用于生成应用程序的公共语言运行时 \(CLR\) 版本生成运行。  但是，为某个版本的运行时在其他版本中生成运行提供了所需功能的 .exe 应用程序是可能的。  
+# <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在以前版本的运行时上运行 C++ /clr 应用程序
+除非另行指定，生成的 c + +.NET Framework 应用程序以在编译器用于生成应用程序的公共语言运行时 (CLR) 版本上运行。 但是，很可能为提供所需的功能的任何其他版本上运行的运行时的一个版本生成的.exe 应用程序。  
   
- 为此，请提供在 `supportedRuntime` 标记包含运行时版本信息的一个 app.config 文件。  
+ 若要完成此操作，提供一个包含中的运行时版本信息的 app.config 文件`supportedRuntime`标记。  
   
- 运行时，app.config 文件必须具有以下形式 *filename.ext*.config 的名称，其中 *filename.ext* 是启动应用程序的可执行文件的名称，因此，它必须在与可执行文件相同。  例如，因此，如果您的应用程序名为 TestApp.exe，app.config 文件将命名为 TestApp.exe.config。  
+ 在运行时，app.config 文件必须具有窗体的名称*文件名.ext*.config，其中*文件名.ext*是启动了应用程序的可执行文件的名称，并且它必须是所在的目录可执行文件。 例如，如果你的应用程序名为 TestApp.exe，app.config 文件将被命名为 TestApp.exe.config。  
   
- 如果指定了多个运行时版本和应用程序在具有多个安装的运行时版本的计算机上运行，应用程序使用在设置文件指定以及安装的第一个版本。  
+ 如果指定多个运行时版本，并且具有多个安装的运行时版本的计算机上运行应用程序，应用程序将使用指定的配置文件中且已安装的第一个版本。  
   
- 有关更多信息，请参见[How to: Configure an App to Target a .NET Framework Version](http://msdn.microsoft.com/zh-cn/5247b307-89ca-417b-8dd0-e8f9bd2f4717)。  
+ 有关详细信息，请参阅[如何： 配置应用以面向.NET Framework 版本](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)。  
   
- 若要在 CLR 版本 1.0 或 1.1 版中运行，由 Visual C\+\+ 编译器生成的应用程序必须使用 [\/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md)生成。  
+ 在版本 1.0 或 1.1 版的 CLR，由 Visual c + + 生成的应用程序上运行编译器必须编译使用[/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [部署桌面应用程序](../ide/deploying-native-desktop-applications-visual-cpp.md)

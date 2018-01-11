@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2e2ac7ad7b103b5c1da790b61f560c758d9d124
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 099cb340f821f04c3a5f84ccef7e3e9649482cd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 安装 `terminate` 将调用的自身的终止例程。  
@@ -72,18 +73,18 @@ typedef void ( *terminate_function )( );
   
  存在适用于所有动态链接的 DLL 或 EXE 的单个 `set_terminate` 处理程序；即使你调用 `set_terminate`，你的处理程序也可能会替换为另一个处理程序，或者你也要使用另一个 DLL 或 EXE 替换处理程序集。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`set_terminate`|\<eh.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  请参阅 [terminate](../../c-runtime-library/reference/terminate-crt.md) 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理例程](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [_get_terminate](../../c-runtime-library/reference/get-terminate.md)   

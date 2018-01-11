@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebf81d5bfb20f151cc8f405fb8346b66451f77e2
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-mechanics-of-attributes"></a>特性的基本机制
 有三种方法要插入到你的项目的属性。 首先，你可以将它们手动插入你的源代码。 其次，你可以将它们插入项目中使用对象的属性网格。 最后，你可以将它们插入使用各种向导。 使用属性窗口和各种向导的详细信息，请参阅[创建和管理 Visual c + + 项目](../ide/creating-and-managing-visual-cpp-projects.md)。  
@@ -36,5 +39,5 @@ ms.lasthandoff: 10/31/2017
   
  大多数 c + + 构造，如属性具有定义其正确的使用情况的一组特征。 这被称为的属性的上下文，并在每个属性参考主题的特性上下文表中针对。 例如，[组件类](../windows/coclass.md)属性仅到现有的类或结构，而不是应用[cpp_quote](../windows/cpp-quote.md)属性，它可以插入 c + + 源代码文件中的任何位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../windows/attributed-programming-concepts.md)

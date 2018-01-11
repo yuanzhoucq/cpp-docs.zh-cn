@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b8d8bcd21128b6d2d78d936e68f60040a75496c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e27b737a76b30e7193a9afb7797a20951294032e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 组件的本地化
 > [!NOTE]
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="localizing-your-components-resources"></a>本地化组件的资源  
  本地化应用程序或 DLL 涉及将这些资源替换为与目标语言匹配的资源。 对于您自己的资源，此操作比较简单：在资源编辑器中编辑资源并生成您的应用程序。 如果你的代码编写正确将字符串或你希望本地化硬编码为 c + + 源代码的文本不所有本地化都可以只需通过修改资源。 事实上，你可以以某种方式实现你的组件，使它们都提供甚至不涉及生成原始代码的本地化版本。 这种方法更复杂，但很值得，并且这是为 MFC 本身选择的机制。 也可以通过将 EXE 或 DLL 文件加载到资源编辑器并直接编辑资源来本地化应用程序。 如有可能，每当您生成新版本的应用程序时，它都会要求重新应用那些更改。  
   
- 避免这种情况的一个方法是在单独的 DLL（有时称为附属 DLL）中放置所有资源。 此 DLL 随后在运行时以动态方式加载，资源将从此 DLL 加载而不是从包含您的所有代码的主模块加载。 MFC 直接支持此方法。 请考虑一个名为 MYAPP.EXE 的应用程序；它可以将所有资源放在一个名为 MYRES.DLL 的 DLL 中。 在应用程序的 `InitInstance` 中，它将执行以下代码以加载该 DLL 并使 MFC 从该位置加载资源：  
+ 避免这种情况的一个方法是在单独的 DLL（有时称为附属 DLL）中放置所有资源。 此 DLL 随后在运行时以动态方式加载，资源将从此 DLL 加载而不是从包含你的所有代码的主模块加载。 MFC 直接支持此方法。 请考虑一个名为 MYAPP.EXE 的应用程序；它可以将所有资源放在一个名为 MYRES.DLL 的 DLL 中。 在应用程序的 `InitInstance` 中，它将执行以下代码以加载该 DLL 并使 MFC 从该位置加载资源：  
   
 ```  
 CMyApp::InitInstance()  
@@ -78,7 +79,7 @@ CMyApp::InitInstance()
   
  最简单最安全的方法是将本地化的 MFC 资源包含在您的应用程序或 DLL 本身（或其附属 DLL，如果正在使用）中。 这将恰当地避免安装 MFC7xLOC.DLL 的问题。 为此，请遵循前面给出的静态情况的同一指示（将 RC 命令行正确设置为指向本地化资源)，只不过您还必须删除 AppWizard 添加的 `/D_AFXDLL` 定义。 定义 `/D_AFXDLL` 后，AFXRES.H（和其他 MFC RC 文件）实际上不会定义任何资源（因为它们将从 MFC DLL 拉取）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

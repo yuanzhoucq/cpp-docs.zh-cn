@@ -16,11 +16,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42406e1736068ccd83ed957cacdc07a5129204a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 696e7684eb91abbf41e3f7a2e1df20b6fa7e5c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows 窗体/MFC 编程差异
 中的主题[在 MFC 中使用 Windows 窗体用户控件](../dotnet/using-a-windows-form-user-control-in-mfc.md)描述 Windows 窗体的 MFC 支持。 如果你不熟悉.NET Framework 或 MFC 编程，本主题提供有关编程两者之间的差异的背景信息。  
@@ -63,6 +66,6 @@ ms.lasthandoff: 10/24/2017
   
      MFC 具有更新机制的命令。 因此，活动视图或文档是负责的 UI 元素 （例如，启用或禁用菜单项或工具按钮，以及选中状态） 的状态。 Windows 窗体具有一个命令更新机制无等效项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 MFC 中使用 Windows 窗体用户控件](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
  [Windows 窗体演练](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)

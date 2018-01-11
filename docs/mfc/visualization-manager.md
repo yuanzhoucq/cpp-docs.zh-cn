@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6f516f52e20acec0feeea434d1812eea217e03c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 654ffc0f3fb4c33f153f3389442486ffa86b74a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visualization-manager"></a>可视化管理器
 可视化管理器是控制整个应用程序的外观的对象。 它充当一个类可以放置所有绘图代码应用程序。 MFC 库包含多个视觉管理器。 如果你想要创建你的应用程序的自定义视图，你还可以创建你自己的视觉管理器。 下图显示相同的应用程序时启用不同的视觉管理器：  
@@ -81,6 +82,6 @@ break;
 } 
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)   
  [CMFCVisualManager 类](../mfc/reference/cmfcvisualmanager-class.md)

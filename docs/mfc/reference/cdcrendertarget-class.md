@@ -31,11 +31,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68ab290c70b4e7811753c4aa6fbb6e8e28414a03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 502c9d7cedf782c6ce23ebaf22d30c9b0e5e7409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 类
 ID2D1DCRenderTarget 包装器。  
@@ -72,7 +73,7 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|指向 ID2D1DCRenderTarget 对象的指针。|  
   
@@ -83,7 +84,7 @@ class CDCRenderTarget : public CRenderTarget;
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="attach"></a>CDCRenderTarget::Attach  
@@ -174,5 +175,5 @@ operator ID2D1DCRenderTarget*();
 ### <a name="return-value"></a>返回值  
  指向 ID2D1DCRenderTarget 接口或如果尚未初始化对象的 NULL 指针。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

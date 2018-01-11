@@ -16,11 +16,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 516a59eb801ad216071d46414b7478a40329f5ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 06d0c01cd6d6acaed78276db90f16a57abf7dc88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-attributes-c"></a>自定义特性 (C++)
 自定义特性是允许用户扩展元数据的强类型化的技术。 本主题说明如何使用特性： 指定参数和目标。  
@@ -31,6 +34,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [属性](../windows/attribute.md)（已弃用的语法）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性](../windows/attribute.md)   
  [自定义特性 (C++)](../windows/custom-attributes-cpp.md)

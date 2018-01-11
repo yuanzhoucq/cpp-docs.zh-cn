@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 396d462b76b1aaa2fac5d0fdf2d0b89e581085e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8629268e838fb6e3ad25a8b62a4ff8bf334799e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse 类
 `D2D1_ELLIPSE` 的包装器。  
@@ -46,7 +47,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
   
  `CD2DEllipse`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse  
@@ -76,5 +77,5 @@ CD2DEllipse(
  `sizeRadius`  
  X 轴半径和 Y 轴半径的椭圆。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)

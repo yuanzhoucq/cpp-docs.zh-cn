@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1fc852bf2becb429c5931341cfd426bc7c877ae
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dao-classes"></a>DAO 类
 这些类可与其他应用程序框架类以便轻松访问使用相同的数据库引擎作为 Microsoft Visual Basic 和 Microsoft Access 的数据访问对象 (DAO) 数据库。 DAO 类还可以访问各种数据库为其开放式数据库连接 (ODBC) 驱动程序都可用。  
@@ -68,6 +69,6 @@ ms.lasthandoff: 10/31/2017
  [COleVariant](../mfc/reference/colevariant-class.md)  
  OLE 自动化类型的包装**VARIANT**。 中的数据**VARIANT**可用多种格式存储。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

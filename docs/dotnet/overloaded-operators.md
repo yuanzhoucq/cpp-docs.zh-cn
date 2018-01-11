@@ -16,16 +16,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21d006aabc83af2021bb2b6d8bfa6a35588de12f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overloaded-operators"></a>重载运算符
 运算符重载已显著从更改托管扩展的 c + + 为 Visual c + +。  
   
- 个示例中，而不是使用本机引用类型的声明中`operator+`语法中，你显式将写出的运算符的基础的内部名称在这种情况下， `op_Addition`。 此外，运算符的调用必须显式调用通过该名称时，这样会排除运算符重载的两个主要优点: （a） 的直观的语法，并将新的类型与现有类型的混合 （b） 的功能。 例如：  
+ 个示例中，而不是使用本机引用类型的声明中`operator+`语法中，你显式将写出的运算符的基础的内部名称在这种情况下， `op_Addition`。 此外，运算符的调用必须显式调用通过该名称时，这样会排除运算符重载的两个主要优点: （a） 的直观的语法，并将新的类型与现有类型的混合 （b） 的功能。 例如:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -79,5 +82,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

@@ -1,35 +1,37 @@
 ---
-title: "更改概要 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "更改概要 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 更改概要 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此概要给出一些示例，说明 C\+\+ 托管扩展与 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 语言的某些不同。  有关更多信息，请访问每个项附带的链接。  
+# <a name="outline-of-changes-ccli"></a>更改概要 (C++/CLI)
+此大纲显示你的一些示例的某些更改托管扩展中的语言为 c + + 实现 Visual c + +。 访问附带有关详细信息的每个项的链接。  
   
-## 没有双下划线的关键字  
- 移除了所有关键字前面的双下划线，仅有一个例外。  这样，`__value` 变为 `value`，而 `__interface` 变为 `interface` 等等。  若要防止用户代码中关键字与标识符之间的冲突，请首先将关键字视为上下文。  
+## <a name="no-double-underscore-keywords"></a>没有双下划线关键字  
+ 所有关键字的前面的双下划线已删除，但有一个例外。 因此，`__value`变得`value`，和`__interface`变得`interface`，依次类推。 若要防止用户代码中的标识符和关键字之间的名称不冲突，关键字的主要处理上下文。  
   
- 有关更多信息，请参见[语言关键字 \(C\+\+\/CLI\)](../dotnet/language-keywords-cpp-cli.md)。  
+ 请参阅[语言关键字 (C + + /cli CLI)](../dotnet/language-keywords-cpp-cli.md)有关详细信息。  
   
-## 类声明  
- 托管扩展语法：  
+## <a name="class-declarations"></a>类声明  
+ 托管的扩展语法：  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -39,7 +41,7 @@ __gc __abstract class Shape {};                // abstract class
 __gc __sealed class Shape2D : public Shape {}; // derived class  
 ```  
   
- 新语法：  
+ 新的语法：  
   
 ```  
 ref class Block {};                // reference class  
@@ -49,10 +51,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- 有关更多信息，请参见[托管类型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)。  
+ 请参阅[托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)有关详细信息。  
   
-## 对象声明  
- 托管扩展语法：  
+## <a name="object-declaration"></a>对象声明  
+ 托管的扩展语法：  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -64,7 +66,7 @@ private:
 };  
 ```  
   
- 新语法：  
+ 新的语法：  
   
 ```  
 public ref class Form1 : System::Windows::Forms::Form {  
@@ -75,10 +77,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- 有关更多信息，请参见[CLR 引用类对象的声明](../dotnet/declaration-of-a-clr-reference-class-object.md)。  
+ 请参阅[CLR 引用类对象的声明](../dotnet/declaration-of-a-clr-reference-class-object.md)有关详细信息。  
   
-### 托管堆分配  
- 托管扩展语法：  
+### <a name="managed-heap-allocation"></a>托管的堆分配  
+ 托管的扩展语法：  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -86,7 +88,7 @@ int *pi1 = new int;           // native heap
 Int32 *pi2 = new Int32;       // managed heap  
 ```  
   
- 新语法：  
+ 新的语法：  
   
 ```  
 Button^ button1 = gcnew Button;        // managed heap  
@@ -94,10 +96,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- 有关更多信息，请参见[CLR 引用类对象的声明](../dotnet/declaration-of-a-clr-reference-class-object.md)。  
+ 请参阅[CLR 引用类对象的声明](../dotnet/declaration-of-a-clr-reference-class-object.md)有关详细信息。  
   
-### 对不存在的对象的跟踪引用  
- 托管扩展语法：  
+### <a name="a-tracking-reference-to-no-object"></a>对没有任何对象的跟踪引用  
+ 托管的扩展语法：  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -107,7 +109,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 新语法：  
+ 新的语法：  
   
 ```  
 // Incorrect Translation  
@@ -123,15 +125,15 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- 有关更多信息，请参见[CLR 引用类对象的声明](../dotnet/declaration-of-a-clr-reference-class-object.md)。  
+ 请参阅[CLR 引用类对象的声明](../dotnet/declaration-of-a-clr-reference-class-object.md)有关详细信息。  
   
-## 数组声明  
- CLR 数组经过了重新设计。  它类似于 stl `vector` 模板集合，但映射到基础 `System::Array` 类 — 也就是说，它不是模板实现。  
+## <a name="array-declaration"></a>数组声明  
+ CLR 数组已经过重新设计。 它是类似于 stl`vector`模板集合，但映射到基础`System::Array`类-即，它不是模板实现。  
   
- 有关更多信息，请参见[CLR 数组的声明](../dotnet/declaration-of-a-clr-array.md)。  
+ 请参阅[CLR 数组的声明](../dotnet/declaration-of-a-clr-array.md)有关详细信息。  
   
-### 数组作为参数  
- 托管扩展数组语法：  
+### <a name="array-as-parameter"></a>作为参数的数组  
+ 托管的扩展数组语法：  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
@@ -145,8 +147,8 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### 数组作为返回类型  
- 托管扩展数组语法：  
+### <a name="array-as-return-type"></a>用作返回类型的数组  
+ 托管的扩展数组语法：  
   
 ```  
 Int32 f() [];   
@@ -160,8 +162,8 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
-### 局部 CLR 数组的简略初始化  
- 托管扩展数组语法：  
+### <a name="shorthand-initialization-of-local-clr-array"></a>速记初始化本地 CLR 数组，数组  
+ 托管的扩展数组语法：  
   
 ```  
 int GetArray() __gc[] {  
@@ -184,8 +186,8 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### 显式 CLR 数组声明  
- 托管扩展数组语法：  
+### <a name="explicit-clr-array-declaration"></a>显式 CLR 数组声明  
+ 托管的扩展数组语法：  
   
 ```  
 Object* myArray[] = new Object*[2];  
@@ -199,7 +201,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- 语言的新功能：显式数组初始化遵循 gcnew  
+ 语言： 遵循 gcnew 的显式数组初始化  
   
 ```  
 // explicit initialization list follow gcnew   
@@ -208,8 +210,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## 标量属性  
- 托管扩展属性语法：  
+## <a name="scalar-properties"></a>标量属性  
+ 托管的扩展属性语法：  
   
 ```  
 public __gc __sealed class Vector {  
@@ -221,7 +223,7 @@ public:
 };  
 ```  
   
- 新属性语法：  
+ 新的属性语法：  
   
 ```  
 public ref class Vector sealed {   
@@ -232,11 +234,11 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
- 语言的新功能：trivial 属性  
+ 语言： 普通属性  
   
 ```  
 public ref class Vector sealed {   
@@ -247,10 +249,10 @@ public:
 };  
 ```  
   
- 有关更多信息，请参见[属性声明](../dotnet/property-declaration.md)。  
+ 请参阅[属性声明](../dotnet/property-declaration.md)有关详细信息。  
   
-## 索引属性  
- 托管扩展索引属性语法：  
+## <a name="indexed-properties"></a>索引属性  
+ 托管的扩展编入索引的属性语法：  
   
 ```  
 public __gc class Matrix {  
@@ -262,7 +264,7 @@ public:
 };  
 ```  
   
- 新索引属性语法：  
+ 新的索引的属性语法：  
   
 ```  
 public ref class Matrix {  
@@ -276,7 +278,7 @@ public:
 };  
 ```  
   
- 语言的新功能：类级索引属性  
+ 语言： 类级索引的属性  
   
 ```  
 public ref class Matrix {  
@@ -296,10 +298,10 @@ public:
 };  
 ```  
   
- 有关更多信息，请参见[属性索引声明](../dotnet/property-index-declaration.md)。  
+ 请参阅[属性索引声明](../dotnet/property-index-declaration.md)有关详细信息。  
   
-## 重载运算符  
- 托管扩展运算符重载语法：  
+## <a name="overloaded-operators"></a>重载运算符  
+ 托管的扩展运算符重载语法：  
   
 ```  
 public __gc __sealed class Vector {  
@@ -342,10 +344,10 @@ int main() {
 }  
 ```  
   
- 有关更多信息，请参见[重载运算符](../dotnet/overloaded-operators.md)。  
+ 请参阅[重载运算符](../dotnet/overloaded-operators.md)有关详细信息。  
   
-## 转换运算符  
- 托管扩展转换运算符语法：  
+## <a name="conversion-operators"></a>转换运算符  
+ 托管的扩展转换运算符语法：  
   
 ```  
 __gc struct MyDouble {  
@@ -366,10 +368,10 @@ public:
 };  
 ```  
   
- 有关更多信息，请参见[转换运算符的更改](../dotnet/changes-to-conversion-operators.md)。  
+ 请参阅[更改为转换运算符](../dotnet/changes-to-conversion-operators.md)有关详细信息。  
   
-## 接口成员的显式重写  
- 托管扩展显式重写语法：  
+## <a name="explicit-override-of-an-interface-member"></a>接口成员的显式重写  
+ 托管的扩展显式重写语法：  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -381,7 +383,7 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- 新显式重写语法：  
+ 新的显式重写语法：  
   
 ```  
 public ref class R : public ICloneable {  
@@ -393,10 +395,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- 有关更多信息，请参见[接口成员的显式重写](../dotnet/explicit-override-of-an-interface-member.md)。  
+ 请参阅[接口成员的显式重写](../dotnet/explicit-override-of-an-interface-member.md)有关详细信息。  
   
-## 私有虚函数  
- 托管扩展私有虚函数语法：  
+## <a name="private-virtual-functions"></a>私有虚函数  
+ 托管的扩展私有虚函数语法：  
   
 ```  
 __gc class Base {  
@@ -412,7 +414,7 @@ public:
 };  
 ```  
   
- 新私有虚函数语法  
+ 新的私有虚函数语法  
   
 ```  
 ref class Base {  
@@ -428,10 +430,10 @@ public:
 };  
 ```  
   
- 有关更多信息，请参见[私有虚函数](../dotnet/private-virtual-functions.md)。  
+ 请参阅[私有虚拟函数](../dotnet/private-virtual-functions.md)有关详细信息。  
   
-## CLR 枚举类型  
- 托管扩展枚举语法：  
+## <a name="clr-enum-type"></a>CLR 枚举类型  
+ 托管的扩展枚举语法：  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -451,33 +453,33 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- 除此语法的稍微更改外，CLR 枚举的行为在许多方面发生了更改：  
+ 除了此小语法更改后，CLR 枚举类型的行为已更改多种方式：  
   
--   不再支持 CLR 枚举的前向声明。  
+-   不再支持的 CLR 枚举的前向声明。  
   
--   内置算术类型和对象类层次结构之间的重载决策在托管扩展和 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之间是相反的。  它的副作用是 CLR 枚举不再隐式转换为算术类型。  
+-   内置算术类型的对象类层次结构之间的重载解决方案中托管扩展和 Visual c + + 之间相反。 作为其副作用是，CLR 枚举将不再隐式转换为算术类型。  
   
--   在新的语法中，CLR 枚举保持其自身范围，而在托管扩展中则不是这样。  以前，枚举数在枚举的包含范围内可见；现在，枚举数被封装在枚举的范围内。  
+-   在新语法中，CLR 枚举维护自己的作用域，不是这种情况在托管扩展。 以前，枚举器是在枚举，则包含作用域内可见现在，枚举器枚举的作用域内封装。  
   
- 有关更多信息，请参见[CLR 枚举类型](../dotnet/clr-enum-type.md)。  
+ 请参阅[CLR 枚举类型](../dotnet/clr-enum-type.md)有关详细信息。  
   
-## 移除 \_\_box 关键字  
- 托管扩展装箱语法：  
+## <a name="removal-of-box-keyword"></a>__Box 关键字中删除  
+ 装箱语法的托管的扩展：  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
 ```  
   
- 新装箱语法：  
+ 新的装箱语法：  
   
 ```  
 Object ^o = 1024; // implicit boxing  
 ```  
   
- 有关更多信息，请参见[装箱值的跟踪句柄](../dotnet/a-tracking-handle-to-a-boxed-value.md)。  
+ 请参阅[装箱值的跟踪句柄](../dotnet/a-tracking-handle-to-a-boxed-value.md)有关详细信息。  
   
-## 钉住指针  
- 托管扩展钉住指针语法：  
+## <a name="pinning-pointer"></a>钉住指针  
+ 钉住指针语法的托管的扩展：  
   
 ```  
 __gc struct H { int j; };  
@@ -488,7 +490,7 @@ int main() {
 };  
 ```  
   
- 新的钉住指针语法：  
+ 新钉住指针语法：  
   
 ```  
 ref struct H { int j; };  
@@ -499,26 +501,27 @@ int main() {
 }  
 ```  
   
- 有关更多信息，请参见[值类型语义](../dotnet/value-type-semantics.md)。  
+ 请参阅[值类型语义](../dotnet/value-type-semantics.md)有关详细信息。  
   
-## \_\_typeof 关键字变为 typeid  
- 托管扩展 typeof 语法：  
+## <a name="typeof-keyword-becomes-typeid"></a>__typeof 关键字将成为 typeid  
+ 托管的扩展 typeof 语法：  
   
 ```  
 Array* myIntArray =   
    Array::CreateInstance( __typeof(Int32), 5 );  
 ```  
   
- 新 typeid 语法：  
+ 新的 typeid 语法：  
   
 ```  
 Array^ myIntArray =   
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- 有关更多信息，请参见[typeof 转到 T::typeid](../dotnet/typeof-goes-to-t-typeid.md)。  
+ 请参阅[typeof 转到 t:: typeid](../dotnet/typeof-goes-to-t-typeid.md)有关详细信息。  
   
-## 请参阅  
- [C\+\+\/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](http://msdn.microsoft.com/zh-cn/edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
+## <a name="see-also"></a>请参阅  
+ [C + + /cli 迁移入门](../dotnet/cpp-cli-migration-primer.md)   
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+
+

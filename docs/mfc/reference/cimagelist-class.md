@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07065470a7dda56650224bc794579a5038c9b643
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dae44f60c61222659304bea4ee811999d50280b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimagelist-class"></a>CImageList 类
 提供 Windows 公共图像列表控件的功能。  
@@ -169,7 +170,7 @@ class CImageList : public CObject
   
  `CImageList`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxcmn.h  
   
 ##  <a name="add"></a>CImageList::Add  
@@ -286,7 +287,7 @@ BOOL Copy(
  `uFlags`  
  用于指定进行的复制操作的类型的位标志值。 此参数可以是以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`ILCF_MOVE`|源映像复制到目标图像的索引。 此操作导致给定图像的多个实例。 默认为 `ILCF_MOVE`。|  
 |`ILCF_SWAP`|源和目标图像交换图像列表内的位置。|  
@@ -347,7 +348,7 @@ BOOL Create(CImageList* pImageList);
  `nFlags`  
  指定要创建的映像列表的类型。 此参数可以是以下值的组合，但它可以包括只有其中一个`ILC_COLOR`值。  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`ILC_COLOR`|使用默认行为，如果没有其他`ILC_COLOR`* 指定标志。 通常，默认值是`ILC_COLOR4`; 但对于旧版本显示驱动程序，默认值是`ILC_COLORDDB`。|  
 |`ILC_COLOR4`|使用 4 位 （16 颜色） 独立于设备的位图 (DIB) 部分作为位图的图像列表。|  
@@ -549,7 +550,7 @@ BOOL Draw(
  `nStyle`  
  指定的绘制样式的标志。 它可以是一个或多个这些值：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`ILD_BLEND25`**ILD_FOCUS**|绘制图像，混合系统突出显示颜色的 25%。 如果图像列表不包含掩码，则此值无效。|  
 |`ILD_BLEND50`**ILD_SELECTED**， **ILD_BLEND**|绘制图像，混合 50%，而系统突出显示颜色。 如果图像列表不包含掩码，则此值无效。|  
@@ -662,7 +663,7 @@ BOOL DrawIndirect(
  *rgbBack*  
  图像背景色，默认情况下的`CLR_DEFAULT`。 此参数可以为应用程序定义的 RGB 值或以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`CLR_DEFAULT`|默认背景色。 使用图像列表的背景色绘制图像。|  
 |`CLR_NONE`|没有背景色。 透明地绘制图像。|  
@@ -670,7 +671,7 @@ BOOL DrawIndirect(
  *rgbFore*  
  默认情况下映像前景色， `CLR_DEFAULT`。 此参数可以为应用程序定义的 RGB 值或以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |`CLR_DEFAULT`|默认前景色。 使用作为的前景色的系统突出显示颜色绘制图像。|  
 |`CLR_NONE`|无 blend 颜色。 图像是与目标设备上下文的颜色混合。|  
@@ -1062,7 +1063,7 @@ BOOL Write(CArchive* pArchive);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CImageList#17](../../mfc/reference/codesnippet/cpp/cimagelist-class_23.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CListCtrl 类](../../mfc/reference/clistctrl-class.md)   

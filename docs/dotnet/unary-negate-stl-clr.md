@@ -1,32 +1,33 @@
 ---
-title: "unary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate 函数 [STL/CLR]"
+title: "unary_negate (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_negate
+dev_langs: C++
+helpviewer_keywords: unary_negate function [STL/CLR]
 ms.assetid: 83bbdd86-199c-4451-9f70-72f9ade2264a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60e7a38ede07a3cf3b1c21b1c5fe26e9f588f2f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# unary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-描述模板类表示当调用一个函数对象，返回，其存储一个参数函数对象的逻辑“非”。  在其存储函数对象期间使用它来指定一个函数对象。  
+# <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
+此模板类描述某个函数，当调用，返回的逻辑不其存储的单自变量函子。 使用它指定根据其存储的函子的函数对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Fun>  
@@ -48,33 +49,33 @@ public:
     };  
 ```  
   
-#### 参数  
- Fun  
- 存储函数对象的类型。  
+#### <a name="parameters"></a>参数  
+ 有趣  
+ 存储函子的类型。  
   
-## 成员函数  
+## <a name="member-functions"></a>成员函数  
   
-|类型定义|说明|  
-|----------|--------|  
-|类型变量|仿函数参数的类型。|  
-|委托类型|泛型委托的类型。|  
-|结果类型|仿函数结果的类型 。|  
+|类型定义|描述|  
+|---------------------|-----------------|  
+|argument_type|伪函数自变量的类型。|  
+|delegate_type|泛型委托的类型。|  
+|result_type|函子结果的类型。|  
   
-|成员|说明|  
-|--------|--------|  
-|unary\_negate|构造仿函数。|  
+|成员|描述|  
+|------------|-----------------|  
+|unary_negate|构造函数。|  
   
-|运算符|说明|  
-|---------|--------|  
-|operator\(\)|计算所需函数数量。|  
-|委托类型^|转换仿函数为委托。|  
+|运算符|描述|  
+|--------------|-----------------|  
+|operator()|计算所需的函数。|  
+|delegate_type ^|强制转换为委托的函子。|  
   
-## 备注  
- 模板类表示一个含有一个参数的函数对象，该函数对象存储另一个含有一个参数函数对象。  它定义成员运算符 `operator()`，这样，当对象作为函数被调用时，它返回调用参数的存储函数对象的逻辑“非”。  
+## <a name="remarks"></a>备注  
+ 此模板类描述存储另一个单自变量函子的单自变量伪函数。 它定义了成员运算符`operator()`以便为函数调用时对象，它将返回逻辑的存储函子的不使用参数调用。  
   
- 也可以传递对象作为类型为 `delegate_type^` 的函数参数，并将相应地转换。  
+ 你还可以作为其类型函数自变量传递对象`delegate_type^`和它将会相应地进行转换。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_unary_negate.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## 要求  
- **头文件:** \<cliext\/functional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<功能 cliext/>  
   
-## 请参阅  
- [not1](../dotnet/not1-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

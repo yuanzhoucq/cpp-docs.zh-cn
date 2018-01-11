@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7635595adedf961c014bf8792316ca4943dc84a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-and-program-execution"></a>main 函数和程序执行
 每个 C 程序都有必须命名为 main 的主函数。 如果你的代码遵循 Unicode 编程模型，则可以使用 main 的宽字符版本 wmain。 main 函数充当程序执行的起点。 它通常通过将调用定向到程序中的其他函数来控制程序执行。 尽管程序可以因为各种原因在程序的其他点上终止，但它通常在 main 的结尾处停止执行。 有时，当检测到某一错误时，您可能希望强制终止程序。 为此，请使用 exit 函数。 有关使用 [exit](../c-runtime-library/reference/exit-exit-exit.md) 函数的信息和示例，请参阅*《运行时库参考》*。  
@@ -44,5 +45,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
   
  有关 main 的宽字符版本的说明，请参阅[使用 wmain](../c-language/using-wmain.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [main：程序启动](../cpp/main-program-startup.md)

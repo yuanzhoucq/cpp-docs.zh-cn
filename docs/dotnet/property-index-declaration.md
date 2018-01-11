@@ -1,33 +1,36 @@
 ---
-title: "属性索引声明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "默认索引器"
-  - "默认值, 索引器"
-  - "索引属性, C++"
-  - "索引器"
+title: "属性索引声明 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- indexers
+- default indexers
+- defaults, indexers
+- indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 属性索引声明
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，用于声明索引属性的语法已发生了更改。  
+# <a name="property-index-declaration"></a>属性索引声明
+声明索引的属性的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 索引属性的托管扩展语言支持的两个主要的缺点是：其一是无法提供类级下标；也就是说，要求为所有的索引属性赋予一个名称，因此，例如，无法提供可直接应用于 `Vector` 或 `Matrix` 类对象的托管下标运算符。  另一个不太重要的缺点是难以区分属性和索引属性 — 参数的数目是唯一的指示。  最后，索引属性遇到与非索引属性相同的问题 — 不将访问器视为一个原子单元，而将其分隔为各个方法。例如：  
+ 索引属性的托管扩展语言支持的两个主要的缺点是，无法提供类级别下标;即，所有索引的属性所需为指定的名称，并因此没有任何方法，例如，可提供一种托管的下标运算符，可以直接应用于`Vector`或`Matrix`类对象。 另一个不太重要的缺点是，很直观地难区分属性和索引属性，即参数的数目是唯一的指示。 最后，从与非索引化属性的相同问题的索引的属性会受到影响-访问器将不视为一个原子单元，而分为各个方法。  例如:  
   
 ```  
 public __gc class Vector;  
@@ -43,7 +46,7 @@ public:
 };  
 ```  
   
- 如此处所示，仅通过附加参数指定两个或单个维索引来区分索引器。  在新语法中，通过在索引器的名称后跟括号 \(\[,\]\) 指示每个索引的数目和类型来区分索引器：  
+ 正如您可以在此处看到，仅按照附加的参数来指定了两个或单个进行区分索引器维索引。 在新语法中，索引器进行区分的括号 （[、]） 以下索引器的名称，并指示每个索引的类型和数量：  
   
 ```  
 public ref class Vector {};  
@@ -64,7 +67,7 @@ public:
 };  
 ```  
   
- 要在新的语法中指示可直接应用于类对象的类级索引器，请重复使用 `default` 来代替显式名称。  例如：  
+ 若要指示可以直接应用到类的新语法中的对象的类级别索引器`default`关键字重用来代替显式名称。 例如:  
   
 ```  
 public ref class Matrix {  
@@ -74,10 +77,10 @@ private:
 public:  
    // ok: class level indexer now  
    //  
-   //     Matrix mat …  
+   //     Matrix mat;  
    //     mat[ 0, 0 ] = 1;   
    //  
-   // invokes the set accessor of the default indexer …  
+   // invokes the set accessor of the default indexer  
   
    property float default [int,int] {  
       float get( int r, int c );  
@@ -91,10 +94,10 @@ public:
 };  
 ```  
   
- 在新的语法中，指定默认索引属性时保留了以下两个名称：`get_Item` 和 `set_Item`。  这是因为生成了默认索引属性的基础名称。  
+ 在新语法中，当默认索引指定属性时，保留两个以下名称：`get_Item`和`set_Item`。 这是因为这些是生成的默认索引属性的基础名称。  
   
- 请注意，不存在与简单属性语法相似的简单索引语法。  
+ 请注意，没有任何简单索引的语法类似于简单的属性语法。  
   
-## 请参阅  
- [类或接口中的成员声明 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [如何：使用索引属性](../misc/how-to-use-indexed-properties.md)
+## <a name="see-also"></a>请参阅  
+ [类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ 

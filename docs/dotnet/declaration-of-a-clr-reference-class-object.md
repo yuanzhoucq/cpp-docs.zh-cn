@@ -1,31 +1,34 @@
 ---
-title: "CLR 引用类对象的声明 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引用类型, CLR"
-  - "类型 [C++], 引用类型"
+title: "CLR 引用类对象的声明 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- types [C++], reference types
+- reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CLR 引用类对象的声明
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从 C\+\+ 托管扩展到 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)]，声明和实例化引用类类型的对象的语法已发生更改。  
+# <a name="declaration-of-a-clr-reference-class-object"></a>CLR 引用类对象的声明
+用于声明并实例化的引用类类型对象的语法已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 在托管扩展中，通过使用 ISO\-C\+\+ 指针语法，选择在星型 \(`*`\) 的左侧使用 `__gc` 关键字，可声明引用类类型对象。  例如，下面是使用托管扩展语法的各种引用类类型对象声明：  
+ 在托管扩展中，通过可选地使用与 ISO c + + 指针语法，声明一个引用类类型对象`__gc`星型左侧的关键字 (`*`)。 例如，以下是引用的各种下的托管扩展语法的类类型对象声明：  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -45,15 +48,15 @@ private:
 };  
 ```  
   
- 在新语法下，引用类类型对象是使用新的声明标记 \(`^`\) 声明的，该标记正式名称为“跟踪句柄”，非正式名称为“帽子符”。（“跟踪”这一形容词表示引用类型位于 CLR 堆内，因此在垃圾回收堆压缩期间可透明地移动位置。）  跟踪句柄在运行时透明地更新。  [值类型语义](../dotnet/value-type-semantics.md) 中讨论了两个类似的概念：“跟踪引用”\(`%`\) 和“内部指针”\(`interior_ptr<>`\)。  
+ 通过使用新的声明性令牌在新语法中，声明一个引用类类型对象 (`^`) 称为正式*跟踪句柄*和非正式名称为*hat*。 （跟踪形容词意味着引用类型位于 CLR 堆，因此在垃圾回收堆压缩期间可以透明地移动位置。 在运行时以透明方式更新的跟踪句柄。 两个类似的概念是*跟踪引用*(`%`)，和*内部指针*(`interior_ptr<>`) 中讨论了[值类型语义](../dotnet/value-type-semantics.md)。  
   
- 在重用 ISO\-C\+\+ 指针语法中取消声明语法的主要原因如下：  
+ 若要移动的 ISO c + + 指针语法在重用的声明性语法的主要原因如下所示：  
   
--   使用指针语法后，将不允许重载运算符直接应用于引用对象。  人们不得不使用运算符的内部名称（如 `rV1->op_Addition(rV2)`）而不能使用更为直观的 `rV1+rV2` 来调用运算符。  
+-   如何使用指针语法不允许直接应用于引用对象的重载的运算符。 相反，其中一个必须通过使用其内部的名称，如调用运算符`rV1->op_Addition(rV2)`而不是使用更为直观`rV1+rV2`。  
   
--   对于在垃圾回收的堆上存储的对象，不允许使用诸如强制转换和指针算法等多个指针操作。  跟踪句柄的概念更好地表现了 CLR 引用类型的本质。  
+-   大量的指针操作，例如强制转换和指针算术的不允许的对象存储在垃圾回收堆中。 更好的跟踪句柄的概念捕获 CLR 引用类型的性质。  
   
- 对于跟踪句柄，没有必要也不支持使用 `__gc` 修饰符。  对象本身的使用未更改；它仍通过指针成员选择运算符 \(`->`\) 来访问成员。  例如，下面是转为使用新语法的上述托管扩展代码示例：  
+ `__gc`跟踪句柄上的修饰符，没有必要，也不支持。 使用对象本身不会更改;它仍通过指针成员选择运算符访问成员 (`->`)。 例如，下面是前面的托管扩展代码示例转换为新的语法：  
   
 ```  
 public ref class Form1: public System::Windows::Forms::Form {  
@@ -72,8 +75,8 @@ private:
 };  
 ```  
   
-## CLR 堆上对象的动态分配  
- 在托管扩展中，存在要在本机堆和托管堆之间分配的两个 `new` 表达式，这种存在很大程度上是透明的。  在几乎所有实例中，编译器均可使用上下文来确定是否从本机或托管堆分配内存。  例如，  
+## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>CLR 堆上的对象的动态分配  
+ 在托管扩展中，存在两个`new`表达式以本机和托管堆之间分配了很大程度上透明。 在几乎所有情况下，因此编译器将能够使用上下文来确定是否从本机或托管堆分配内存。 例如，应用于对象的  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  
@@ -81,7 +84,7 @@ int *pi1 = new int;           // OK: native heap
 Int32 *pi2 = new Int32;       // OK: managed heap  
 ```  
   
- 如果您不想进行上下文堆分配，则可使用 `__gc` 或 `__nogc` 关键字为编译器提供指导。  在新语法中，`gcnew` 关键字的引入使这两个 new 表达式各自的特性变为显式的。  例如，上述三个声明在新语法中如下所示：  
+ 如果你不想上下文的堆分配，无法直接使用编译器`__gc`或`__nogc`关键字。 在新语法中，两个新的表达式的单独性质变为显式的引入`gcnew`关键字。 例如，以前的三个声明的新语法中如下所示：  
   
 ```  
 Button^ button1 = gcnew Button;        // OK: managed heap  
@@ -89,7 +92,7 @@ int * pi1 = new int;                   // OK: native heap
 Int32^ pi2 = gcnew Int32; // OK: managed heap  
 ```  
   
- 下面是在前面的部分中声明的 `Form1` 成员的托管扩展初始化：  
+ 下面是托管扩展初始化`Form1`上一节中声明的成员：  
   
 ```  
 void InitializeComponent() {  
@@ -102,7 +105,7 @@ void InitializeComponent() {
 }  
 ```  
   
- 下面是重新强制转换为新语法的相同的初始化。  请注意，当引用类型是 `gcnew` 表达式的目标时，不需要帽子。  
+ 下面是强制转换为的新语法的同一个初始化。 请注意，乘幂号不需要为该引用类型时的目标`gcnew`表达式。  
   
 ```  
 void InitializeComponent() {  
@@ -115,8 +118,8 @@ void InitializeComponent() {
 }  
 ```  
   
-## 对不存在的对象的跟踪引用  
- 在新语法中，`0` 不再代表 null 地址，而被视为一个整型数据，`1`、`10` 或 `100` 也是如此。  新的特殊标记代表用来跟踪引用的 null 值。  例如，在托管扩展中，我们初始化一个引用类型来寻址 null 对象，如下所示：  
+## <a name="a-tracking-reference-to-no-object"></a>对没有任何对象的跟踪引用  
+ 在新语法中，`0`不再表示 null 地址而被视为一个整数，与相同`1`， `10`，或`100`。 新的特殊标记表示的跟踪引用的 null 值。 例如，在托管扩展中，我们初始化引用类型来寻址没有对象，如下所示：  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -126,7 +129,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 在新语法中，值类型到 `Object` 的任何初始化或分配将导致该值类型的隐式装箱。  在新语法中，`obj` 和 `obj2` 都初始化为寻址的、装箱的 Int32 对象，它们分别包含值 0 和 1。  例如：  
+ 在新语法中，任何初始化或将值类型到`Object`导致该值类型的隐式装箱。 在新语法中，同时`obj`和`obj2`都初始化为寻址分别包含值 0 和 1，装箱的 Int32 对象。 例如:  
   
 ```  
 // causes the implicit boxing of both 0 and 1  
@@ -134,7 +137,7 @@ Object ^ obj = 0;
 Object ^ obj2 = 1;  
 ```  
   
- 因此，为了执行显式初始化、分配以及将跟踪句柄与 null 进行比较，请使用新的关键字 `nullptr`。原始示例的正确修订如下所示：  
+ 因此，若要执行显式初始化、 分配和跟踪句柄为 null 的比较，使用新的关键字`nullptr`。  正确版本的原始示例如下所示：  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -144,7 +147,7 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- 这在一定程度上增加了将现有代码移植到新语法中的复杂性。  例如，请考虑以下值类声明：  
+ 这将增加复杂性某种程度上将现有代码移植到新的语法。 例如，考虑下面的值类声明：  
   
 ```  
 __value struct Holder {  
@@ -163,7 +166,7 @@ private:
 };  
 ```  
   
- 这里 `args` 和 `env` 都是 CLR 引用类型。  在转换为新语法时，构造函数中这两个成员到 `0` 的初始化无法保持不变。  相反，它们必须更改为 `nullptr`：  
+ 在这里，同时`args`和`env`是 CLR 引用类型。 到这两个成员的初始化`0`的构造函数中不能保持在转换为新的语法不变。 相反，它们必须更改为`nullptr`:  
   
 ```  
 value struct Holder {  
@@ -183,7 +186,7 @@ private:
 };  
 ```  
   
- 同样，对于将这些成员与 `0` 进行比较的测试，也必须更改为将成员与 `nullptr` 进行比较。  下面是托管扩展语法：  
+ 同样，对于这些成员进行比较它们为测试`0`必须也将更改为比较成员与`nullptr`。 以下是托管扩展语法：  
   
 ```  
 Sexpr * Loop (Sexpr* input) {  
@@ -205,7 +208,7 @@ Sexpr * Loop (Sexpr* input) {
 }  
 ```  
   
- 这是修订后的结果，将所有 `0` 实例都替换为了 `nullptr`。  转换工具对此转换帮助很大，它几乎自动转换了所有匹配项，包括 `NULL` 宏的使用。  
+ 下面是修订版本，替换每个`0`实例与`nullptr`。 转换工具通过自动执行许多情况下的可帮助在此转换，如果不是所有匹配项，包括使用`NULL`宏。  
   
 ```  
 Sexpr ^ Loop (Sexpr^ input) {  
@@ -227,18 +230,18 @@ Sexpr ^ Loop (Sexpr^ input) {
 }  
 ```  
   
- `nullptr` 转换为任何指针或跟踪句柄类型，但不提升到整型。  例如，在下列一组初始化中，`nullptr` 只在作为开头两行的初始值时才是有效的。  
+ `nullptr`转换为任何指针或跟踪句柄类型，但不是提升为整数类型。 例如，在下列一组的初始化，`nullptr`仅作为前两个的初始值是有效的。  
   
 ```  
 // OK: we set obj and pstr to refer to no object  
 Object^ obj = nullptr;  
 char*   pstr = nullptr; // 0 would also work here  
   
-// Error: no conversion of nullptr to 0 …  
+// Error: no conversion of nullptr to 0  
 int ival = nullptr;  
 ```  
   
- 同样给定一组重载方法，如下所示：  
+ 同样，给定一组重载的方法如下所示：  
   
 ```  
 void f( Object^ ); // (1)  
@@ -246,26 +249,26 @@ void f( char* );   // (2)
 void f( int );     // (3)  
 ```  
   
- 使用 `nullptr` 文本的调用，如下所示，  
+ 调用与`nullptr`文本，如下所示，  
   
 ```  
 // Error: ambiguous: matches (1) and (2)  
 f(  nullptr );  
 ```  
   
- 是不明确的，因为 `nullptr` 与跟踪句柄和指针都匹配，并且没有指定两个项中的首选项。（这种情况下，需要显式强制转换来消除歧义。）  
+ 不明确，因为`nullptr`匹配的跟踪句柄和一个指针，并且没有授予通过另一种类型没有首选项。 （这种情况下需要显式强制转换来消除歧义。）  
   
- 使用 `0` 的调用与实例 \(3\) 完全匹配：  
+ 调用与`0`完全匹配项实例 (3):  
   
 ```  
 // OK: matches (3)  
 f( 0 );  
 ```  
   
- 因为 `0` 属于 integer 类型。  假设 `f(int)` 不存在，该调用将通过标准转换与 `f(char*)` 明确地匹配。  匹配规则指定精确匹配优先于标准转换。  没有精确匹配时，值类型的标准转换优先于隐式装箱。  这就是不存在多义性的原因。  
+ 因为`0`是 integer 类型。 已`f(int)`不存在，请调用将明确地匹配`f(char*)`通过标准转换。 匹配规则赋予通过标准转换的完全匹配的优先级别。 在没有完全匹配的情况下，标准转换是优先于值类型隐式装箱。 正因为如此没有歧义。  
   
-## 请参阅  
- [托管类型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)   
- [对象句柄运算符 \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
+## <a name="see-also"></a>请参阅  
+ [托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
+ [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [对象句柄运算符 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
  [nullptr](../windows/nullptr-cpp-component-extensions.md)

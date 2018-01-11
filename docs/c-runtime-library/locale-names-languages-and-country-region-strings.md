@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 54a309b75d5e6b1773b7dd9bb294a1538397fd05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f98014ae0a610c1618e971cd833523ff9535b6ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>区域设置名称、语言和国家/地区字符串
 `setlocale` 和 `_create_locale` 函数的 *locale* 参数可使用 Windows NLS API 支持的区域设置名称、语言、国家/地区代码和代码页设置。 *locale* 参数采取以下格式：  
@@ -58,7 +59,7 @@ _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)   
  [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   

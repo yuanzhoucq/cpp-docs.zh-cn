@@ -1,33 +1,32 @@
 ---
-title: "NMAKE 错误 U1095 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1095"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1095"
+title: "NMAKE 错误 U1095 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1095
+dev_langs: C++
+helpviewer_keywords: U1095
 ms.assetid: a392582b-06db-4568-9c13-450293a4fbda
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81d93635c50b304a5a2df027691470093d23bdbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE 错误 U1095
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-扩展命令行“commandline”太长  
+# <a name="nmake-fatal-error-u1095"></a>NMAKE 错误 U1095
+扩展的命令行命令行太长  
   
- 宏展开之后，给定的命令行超过操作系统命令行长度的限制。  
+ 宏展开之后，给定的命令行超出上的操作系统的命令行的长度限制。  
   
- MS\-DOS 允许一个命令行上最多有 128 个字符。  
+ MS-DOS 命令行上允许最多为 128 个字符。  
   
- 如果命令用于可从文件中接受命令行输入的程序，则更改该命令并从磁盘上的文件或内联文件中提供输入。  例如，LINK 和 LIB 从响应文件中接受输入。
+ 如果该命令是可以接受命令行输入文件中的程序，更改此命令，并从磁盘上的文件或内联文件提供输入。 例如，链接和 LIB 接受输入是从响应文件。

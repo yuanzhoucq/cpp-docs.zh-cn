@@ -1,54 +1,55 @@
 ---
-title: "链接器工具错误 LNK2038 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2038"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2038"
-ms.assetid: b8d0fb35-eee6-4f52-b3c4-239cb4f65656
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+title: "链接器工具错误 LNK2038 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/15/2017
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2038
+dev_langs: C++
+helpviewer_keywords: LNK2038
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13f65f403cac43551b787abab15713fb9ffab618
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 链接器工具错误 LNK2038
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-tools-error-lnk2038"></a>链接器工具错误 LNK2038
 
-检测到 '\<name\>'不匹配：'\<value 1\>' 值与\<filename.obj\>中的 '\<value 2\>' 值不匹配  
-  
- 链接器检测到符号不匹配。  此错误指示应用不同部分的，包括库或其他应用程序链接于使用符号的冲突定义的对象代码。  [检测不匹配](../../preprocessor/detect-mismatch.md) 编译指示用于定义符号和检测这些冲突的值。  
-  
-### 更正此错误  
-  
--   当项目的对象文件已过时，可能会发生此错误。  在尝试该错误的其他解决方案之前，应执行清理生成确保对象文件是当前文件。  
-  
--   Visual Studio 定义以下符号防止链接不兼容的代码，这可能导致运行时错误或其他意外行为。  
-  
-     `_MSC_VER`  
-     指示用于构造应用程序或库的 Visual C\+\+ 编译器的主版本号和次版本号。  代码编译使用 Visual C\+\+ 编译器的一个版本，它与使用具有不同的主版本号和次版本号版本编译的代码不兼容。  有关更多信息，请参见[预定义的宏](../../preprocessor/predefined-macros.md)中的 `_MSC_VER`。  
-  
-     如果链接的库与您使用的 Visual C\+\+ 编译器版本不兼容，您无法获取或生成库的兼容版本。可以使用编译器早期版本生成项目，更改项目的 **平台工具集** 属性。  有关详细信息，请参阅[如何：修改目标框架和平台工具集](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)。  
-  
-     `_ITERATOR_DEBUG_LEVEL`  
-     指示在 C\+\+ 标准库中启用的安全级别和调试功能。  这些功能可以更改特定的 C\+\+ 标准库对象的表示，从而使它们与使用不同的安全性和调试功能的功能不兼容。  有关详细信息，请参阅[\_ITERATOR\_DEBUG\_LEVEL](../../standard-library/iterator-debug-level.md)。  
-  
-     `RuntimeLibrary`  
-     指示应用程序或库使用的 C\+\+ 标准库和 C 运行时版本。  代码使用 C\+\+ 标准库或 C 运行时的一个版本，它与使用不同版本的代码不兼容。  有关详细信息，请参阅[\/MD、\/MT、\/LD（使用运行库）](../../build/reference/md-mt-ld-use-run-time-library.md)。  
-  
-     `_PPLTASKS_WITH_WINRT`  
-     指示使用[Parallel Patterns Library \(PPL\)](../../parallel/concrt/parallel-patterns-library-ppl.md) 的代码链接到使用不同设置编译的用于[\/ZW](../../build/reference/zw-windows-runtime-compilation.md) 编译器选项的对象。\(**\/ZW** 支持 C\+\+\/CX。\)使用或依赖于 PPL 的代码必须使用相同的**\/ZW** 在应用程序静止时使用的设置编译。  
-  
-     确保这些符号的值是一致的，在 Visual Studio 解决方案的项目中，它们与应用程序链接的代码和库是一致的。  
-  
-## 请参阅  
- [链接器工具错误和警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+> 有关检测到不匹配*名称*： 值*value_1*不匹配值*value_2*中*.o b j*
+
+链接器检测到符号不匹配。 此错误指示不同部分的应用程序，包括库或其他对象代码的应用程序链接，使用冲突的符号定义。 [检测到不匹配](../../preprocessor/detect-mismatch.md)杂注用于定义此类符号和检测其冲突值。
+
+## <a name="possible-causes-and-solutions"></a>可能的原因和解决方案
+
+当项目中的对象文件过时，可能会发生此错误。 在对此错误尝试其他解决方案之前，应执行清理生成以确保对象文件是最新的。
+
+Visual Studio 定义以下符号以防止链接不兼容的代码，这种代码可能导致运行时错误或其他意外行为。
+
+- `_MSC_VER`  
+   指示用于构造应用程序或库的 Visual C++ 编译器的主版本号和次版本号。 使用 Visual C++ 编译器编译的代码与使用具有不同的主版本号和次版本号的版本编译的代码不兼容。 有关详细信息，请参阅`_MSC_VER`中[预定义的宏](../../preprocessor/predefined-macros.md)。
+
+   如果要链接到与你使用的并且无法获取或生成兼容版本的库的 Visual c + + 编译器的版本不兼容的库，可以使用早期版本的编译器来生成你的项目： 更改<c1/1>平台工具集**项目到更早版本的工具集的属性。 有关详细信息，请参阅[如何： 修改目标框架和平台工具集](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
+
+- `_ITERATOR_DEBUG_LEVEL`  
+   指示在 C++ 标准库中启用的安全和调试功能的级别。 这些功能可更改某些 C++ 标准库对象的表示方式，从而使它们与使用不同的安全和调试功能的 C++ 标准库对象不兼容。 有关详细信息，请参阅 [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)。
+
+- `RuntimeLibrary`  
+   指示应用程序或库使用的 C++ 标准库和 C 运行时的版本。 使用一个 C++ 标准库或 C 运行时版本的代码与使用另一个版本的代码的不兼容。 有关详细信息，请参阅 [/MD、/MT、/LD（使用运行时库）](../../build/reference/md-mt-ld-use-run-time-library.md)。
+
+- `_PPLTASKS_WITH_WINRT`  
+   指示使用该代码[并行模式库 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)链接到对象使用的其他设置编译的[/ZW](../../build/reference/zw-windows-runtime-compilation.md)编译器选项。 (**/ZW**支持 C + + /cli CX。)使用或依赖于 PPL 的代码必须使用相同的编译**/ZW**在其余应用程序中使用的设置。
+
+请确保这些符号的值在 Visual Studio 解决方案中的所有项目中是一致的，并确保这些值与应用程序链接到的代码和库是一致的。
+
+## <a name="third-party-library-issues-and-vcpkg"></a>第三方库问题和 Vcpkg
+
+如果你尝试将第三方库配置为生成的一部分时，你会看到此错误，请考虑使用[Vcpkg](../../vcpkg.md)，Visual c + + 包管理器中，若要安装和构建的库。 大型以及不断增长的 Vcpkg 支持[的第三方库列表](https://github.com/Microsoft/vcpkg/tree/master/ports)，并将设置所有配置属性和所需的成功生成你的项目的一部分的依赖项。 有关详细信息，请参阅相关[Visual c + + 博客](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)文章。
+
+## <a name="see-also"></a>请参阅
+
+[链接器工具错误和警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

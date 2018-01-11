@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +12,7 @@ f1_keywords:
 - m_bPreMultiplyCheck
 - CMFCRibbonPanelMenuBar.IsCategoryPopup
 - CMFCCustomizeMenuButton.SetSiblingsButton
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - UpdateTabs method [MFC]
 - Start method [MFC]
@@ -316,16 +314,16 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c571a86aaa93a6712cb57ebff5ccd275c73bd4af
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-classes"></a>内部类
 在 MFC 中内部使用以下类。 为了保持完整性，本节将说明这些内部类，但这些内部类不在代码中直接使用。  
@@ -421,7 +419,6 @@ ms.lasthandoff: 10/09/2017
 |`CVSListBoxEditCtrl Class`|通过显示打开一个对话框中的小按钮扩展标准列表框编辑控件。|  
 |`CVSToolsListBox Class`|通过提供其他按钮来添加、 删除和列表框中移动项扩展标准列表框控件。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 桌面应用程序](../../mfc/mfc-desktop-applications.md)
-
 

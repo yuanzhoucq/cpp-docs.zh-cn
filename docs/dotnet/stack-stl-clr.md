@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dad00eecc05b8b3020dcf024b297b4b090317ee4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 此模板类描述控制变长元素序列的最后一个单元中先进先出访问的对象。 使用容器适配器`stack`管理作为推堆栈的基础容器。  
@@ -42,7 +45,7 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 值  
+ “值”  
  受控序列中的元素的类型。  
   
  容器  
@@ -97,12 +100,12 @@ template<typename Value,
 ## <a name="remarks"></a>备注  
  对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 对象限制的访问权限推送和弹出只是最后一个的元素实现的上一次在先进先出队列 （也称为后进先出队列或堆栈）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/堆栈 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   

@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp 成员 [STL/CLR]"
+title: "hash_multiset:: key_comp (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: b9653dd2-20f3-4ef3-875f-265749839ba6
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f57c9f93990be4a78c3b67a706d89f908a68ec0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制两个键的委托。  
+# <a name="hashmultisetkeycomp-stlclr"></a>hash_multiset::key_comp (STL/CLR)
+将复制为两个键排序的委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## 备注  
- 成员函数返回 Orders 的委托用于控制对的序列。  用于对两个键进行比较。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回使用受控的序列进行排序的排序委托。 用于比较两个键。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_key_comp.cpp   
@@ -71,18 +72,22 @@ int main()
   
 ```  
   
-  **比较 \(L'a，L'a\) \= true**  
-**比较 \(L'a，L'b\) \= true**  
-**比较 \(L'b，L'a \= false\)**  
-**比较 \(L'a，L'a \= false\)**  
-**比较 \(L'a，L'b \= false\)**  
-**比较 \(L'b，L'a\) \= true**   
-## 要求  
- **页眉：** \<cliext\/hash\_set\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **命名空间：** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::key\_compare](../dotnet/hash-multiset-key-compare-stl-clr.md)   
- [hash\_multiset::key\_type](../dotnet/hash-multiset-key-type-stl-clr.md)
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_set >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)   
+ [hash_multiset::key_type (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bdf58555a995b5be0c5726f3136afc8eafd64bfc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5f7950a951a3d6821954e74ee91ea929b88a98b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchn-stlclr"></a>search_n (STL/CLR)
 在范围中搜索具有特定值或按二元谓词的指定与此值相关的指定数量的元素。  
@@ -38,10 +41,10 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`search_n`。 有关详细信息，请参阅[search_n](../standard-library/algorithm-functions.md#search_n)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

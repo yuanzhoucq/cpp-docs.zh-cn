@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ab054ceefa51ab944e2d048996e25559b0c86ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5797d644ec13ed89bad3ddcda23be109df067b03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3535"></a>编译器错误 C3535
 无法推导出的类型 type1 从 type2  
@@ -72,6 +73,6 @@ A x;
 auto *p = x;  // C3535  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto 关键字](../../cpp/auto-keyword.md)   
  [基本类型](../../cpp/fundamental-types-cpp.md)

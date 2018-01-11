@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a1c0ced45fc7f9c4e51a5dbe8a888c030a6b957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-file-processing"></a>.Xml 文件处理
 编译器为代码（已标记以生成文档）中的每个构造生成一个 ID 字符串。 有关详细信息，请参阅[建议标记文档注释](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。 ID 字符串唯一标识构造。 处理的.xml 文件的程序可使用的 ID 字符串以确定将应用文档的相应.NET Framework 元数据或反射项目。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
   
 -   为转换运算符，该方法的返回值被编码为 ~ 跟返回类型，如前面编码。  
   
--   对于泛型类型，类型名称后跟反勾号，然后是指示泛型类型参数数量的一个数字。  例如，  
+-   对于泛型类型，类型名称后跟反勾号，然后是指示泛型类型参数数量的一个数字。  例如，应用于对象的  
   
     ```  
     <member name="T:MyClass`2">  
@@ -185,5 +186,5 @@ namespace N {
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

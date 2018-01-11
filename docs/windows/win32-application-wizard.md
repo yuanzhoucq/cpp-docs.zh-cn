@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f24f2c9629d79b6d3ced25b89f1d61f633ade7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c97caee74e1ae918924632802c155b23fffe0527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-application-wizard"></a>Win32 应用程序向导
 Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的项目（在下表中的标题列出）。 在每种情况下，你都可以指定适合于打开项目类型的其他选项。 下表指示了每个应用程序类型可用的选项。  
@@ -29,10 +32,10 @@ Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的
 |支持级别|控制台应用程序|可执行 (Windows) 应用程序|动态链接库|静态库|  
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|  
 |**空项目**|是|是|是|否|  
-|**导出符号**|否|No|是|否|  
-|**预编译头**|否|No|No|是|  
-|**ATL 支持**|是|No|No|否|  
-|**MFC 支持**|是|No|No|是|  
+|**导出符号**|否|否|是|否|  
+|**预编译头**|否|否|否|是|  
+|**ATL 支持**|是|No|否|否|  
+|**MFC 支持**|是|No|否|是|  
   
 ## <a name="overview"></a>概述  
  此向导页描述你正在创建的 Win32 应用程序的当前项目设置。 默认设置了以下选项：  
@@ -56,6 +59,6 @@ Visual C++ Win32 应用程序向导，可以创建四种类型中任意一种的
   
  可在 **解决方案资源管理器**中查看你通过向导为项目创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的更多信息，请参见 [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建空的 Windows 桌面应用程序](../windows/creating-an-empty-windows-desktop-application.md)   
  [Visual C++ 项目类型](../ide/visual-cpp-project-types.md)

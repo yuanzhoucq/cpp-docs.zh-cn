@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04fb17130f82c4b34b461f9d4fe0880b1363d3c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4fcda1d1c288e6fe8d6a3dfafea287e79ab6738f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 比字符串指针提前一个字符。  
@@ -95,7 +96,7 @@ unsigned char *_mbsinc_l(
  其中每个例程都将返回一个指向紧跟 `current` 的字符的指针。  
   
 ## <a name="remarks"></a>备注  
- `_mbsinc` 函数将返回一个指向紧跟 `current` 的多字节字符的第一个字节的指针。 `_mbsinc` 根据当前正在使用的[多字节代码页](../../c-runtime-library/code-pages.md)来识别多字节字符序列；`_mbsinc_l` 是相同的，只不过它使用传递的区域设置参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `_mbsinc` 函数将返回一个指向紧跟 `current` 的多字节字符的第一个字节的指针。 `_mbsinc` 根据当前正在使用的[多字节代码页](../../c-runtime-library/code-pages.md)来识别多字节字符序列；`_mbsinc_l` 是相同的，只不过它使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  如果已定义 `_tcsinc`，则在 Tchar.h 中定义的一般文本函数 `_mbsinc` 将映射到 `_MBCS`；如果已定义 `_wcsinc`，则将映射到 `_UNICODE`。 否则，`_tcsinc` 将映射到 `_strinc`。 `_strinc` 和 `_wcsinc` 是 `_mbsinc` 的单字节字符和宽字符版本。 仅为此映射提供 `_strinc` 和 `_wcsinc`，否则不应该使用它们。 有关详细信息，请参阅[使用一般文本映射](../../c-runtime-library/using-generic-text-mappings.md)和[一般文本映射](../../c-runtime-library/generic-text-mappings.md)。  
   
@@ -104,9 +105,9 @@ unsigned char *_mbsinc_l(
 > [!IMPORTANT]
 >  这些函数可能容易受到的缓冲区溢出的威胁。 缓冲区溢出可以用于系统攻击，因为它们可能使权限的提升不能确保。 有关详细信息，请参阅 [避免缓冲区溢出](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_mbsinc`|\<mbstring.h>|  
 |`_mbsinc_l`|\<mbstring.h>|  
@@ -115,7 +116,7 @@ unsigned char *_mbsinc_l(
   
  有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [_strdec、_wcsdec、_mbsdec、_mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
  [_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   

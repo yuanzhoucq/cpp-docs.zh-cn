@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6035"></a>C 运行时错误 R6035
 函数依赖于该安全 cookie 处于活动状态时，Microsoft Visual c + + 运行时库，错误 R6035-此应用程序中的模块正在初始化的模块的全局安全 cookie。  调用 __security_init_cookie 更早版本。  
@@ -75,5 +76,5 @@ void DllEntryHelper() {
 > [!NOTE]
 >  错误消息 R6035 仅通过 x86 生成调试 CRT，并仅为结构化的异常处理，但条件错误在所有平台上以及为各种形式的异常处理，例如 c + + EH。  
   
-## <a name="see-also"></a>另请参阅  
- [编译器安全检查深入介绍](http://go.microsoft.com/fwlink/?linkid=7260)
+## <a name="see-also"></a>请参阅  
+ [编译器安全检查深入介绍](http://go.microsoft.com/fwlink/p/?linkid=7260)

@@ -42,11 +42,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d508c70ca1a4c44e2b51dfd85b6f85700c111a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s、wcscat_s、_mbscat_s
 追加字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) 具有安全性增强功能。  
@@ -106,8 +107,8 @@ errno_t _mbscat_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|返回值|`strDestination` 的内容|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` 或未终止|any|任何|`EINVAL`|未修改|  
-|any|任何|`NULL`|`EINVAL`|`strDestination`[0] 设置为 0|  
+|`NULL` 或未终止|任何|任何|`EINVAL`|未修改|  
+|任何|任何|`NULL`|`EINVAL`|`strDestination`[0] 设置为 0|  
 |任何|0 或过小|任何|`ERANGE`|`strDestination`[0] 设置为 0|  
   
 ## <a name="remarks"></a>备注  
@@ -126,7 +127,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  如果 `strDestination` 是空指针或以 null 终止，或如果 `strSource` 是 `NULL` 指针，亦或是如果目标字符串过小，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 `EINVAL` 并将 `errno` 设置为 `EINVAL`。  
   
- 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -136,20 +137,20 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscat_s`|`strcat_s`|`_mbscat_s`|`wcscat_s`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strcat_s`|\<string.h>|  
 |`wcscat_s`|\<string.h> 或 \<wchar.h>|  
 |`_mbscat_s`|\<mbstring.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  请参阅 [strcpy_s、wcscpy_s、_mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) 中的代码示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
  [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   

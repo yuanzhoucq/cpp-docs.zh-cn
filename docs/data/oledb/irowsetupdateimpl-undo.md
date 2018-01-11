@@ -1,35 +1,37 @@
 ---
-title: "IRowsetUpdateImpl::Undo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetUpdateImpl.Undo"
-  - "ATL::IRowsetUpdateImpl::Undo"
-  - "IRowsetUpdateImpl::Undo"
-  - "IRowsetUpdateImpl.Undo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Undo 方法"
+title: "Irowsetupdateimpl:: Undo |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetUpdateImpl.Undo
+- ATL::IRowsetUpdateImpl::Undo
+- IRowsetUpdateImpl::Undo
+- IRowsetUpdateImpl.Undo
+dev_langs: C++
+helpviewer_keywords: Undo method
 ms.assetid: f3dc7764-050c-4322-9b2f-9ca772a0fb88
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 329a6141ca01678c341ef3890fb0e563a7299915
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetUpdateImpl::Undo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-撤消对行的所有更改，因为最后获取或更新。  
+# <a name="irowsetupdateimplundo"></a>IRowsetUpdateImpl::Undo
+自上次提取或更新以来撤消对行的任何更改。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -43,20 +45,20 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `hReserved`  
- \[in\] 对应于 [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)的 `hChapter` 参数。  
+ [in]对应于`hChapter`中的参数[IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)。  
   
  *pcRowsUndone*  
- \[out\] 对应于 [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)的 `pcRows` 参数。  
+ [out]对应于`pcRows`中的参数[IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)。  
   
  *prgRowsUndone*  
- \[in\] 对应于 [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)*prgRows* 的参数。  
+ [in]对应于*prgRows*中的参数[IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)。  
   
- 有关其他参数，请参阅《*OLE DB 程序员参考》\) 中的*[IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)。  
+ 其他参数，请参阅[IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)中*OLE DB 程序员参考*。  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)

@@ -1,94 +1,96 @@
 ---
-title: "编译器支持类型特征（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class 关键字 [C++]"
-  - "__is_pod 关键字 [C++]"
-  - "__is_delegate 关键字 [C++]"
-  - "__is_value_class 关键字 [C++]"
-  - "__has_copy 关键字 [C++]"
-  - "__has_nothrow_copy 关键字 [C++]"
-  - "__is_interface_class 关键字 [C++]"
-  - "__is_sealed 关键字 [C++]"
-  - "__is_convertible_to 关键字 [C++]"
-  - "__is_ref_class 关键字 [C++]"
-  - "__has_trivial_copy 关键字 [C++]"
-  - "__has_user_destructor 关键字 [C++]"
-  - "__is_abstract 关键字 [C++]"
-  - "__is_empty 关键字 [C++]"
-  - "__has_trivial_assign 关键字 [C++]"
-  - "__has_nothrow_constructor 关键字 [C++]"
-  - "__is_ref_array 关键字 [C++]"
-  - "__is_base_of 关键字 [C++]"
-  - "__has_nothrow_assign 关键字 [C++]"
-  - "__has_virtual_destructor 关键字 [C++]"
-  - "__has_finalizer 关键字 [C++]"
-  - "__is_union 关键字 [C++]"
-  - "__has_assign 关键字 [C++]"
-  - "__has_trivial_destructor 关键字 [C++]"
-  - "__is_polymorphic 关键字 [C++]"
-  - "__is_enum 关键字 [C++]"
-  - "__is_simple_value_class 关键字 [C++]"
-  - "__has_trivial_constructor 关键字 [C++]"
+title: "编译器支持类型特征 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器支持类型特征（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-编译器支持 *键入特征*, ，这表明在编译时类型的各项特征。  
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>编译器支持类型特征（C++ 组件扩展）
+编译器支持*键入特征*，这指示在编译时类型的各种特征。  
   
 ## <a name="all-runtimes"></a>所有运行时  
  **备注**  
   
  类型特征对编写库的编程人员尤其有用。  
   
- 以下列表包含编译器支持类型特征。 如果未满足类型特征的名称所指定的条件，则所有类型特征将返回 `false`。  
+ 以下列表包含支持的编译器类型特征。 如果未满足类型特征的名称所指定的条件，则所有类型特征将返回 `false`。  
   
- (在以下列表中，代码示例都将仅在写 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]。 但除非另外声明，否则相应的类型特征在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中也受支持。 术语“平台类型”是指 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 类型或公共语言运行时类型中任一个。）  
+ (在以下列表中，编写代码示例仅在 C + + /cli CLI。 但除非另外声明，否则相应的类型特征在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中也受支持。 "术语平台类型"是指 Windows 运行时类型或公共语言运行时类型。）  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +126,7 @@ manager: "ghogen"
   
 -   `__has_finalizer(` `type` `)`  
   
-     （在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不受支持。）如果 CLR 类型有终结器，则返回 true。 请参阅 [析构函数和终结器中 Visual c + +](../misc/destructors-and-finalizers-in-visual-cpp.md) 有关详细信息。  
+     （在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不受支持。）如果 CLR 类型有终结器，则返回 true。 请参阅[析构函数和终结器中如何： 定义和使用类和结构 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)有关详细信息。  
   
     ```  
   
@@ -302,9 +304,9 @@ manager: "ghogen"
   
 -   `__is_abstract(` `type` `)`  
   
-     如果类型为抽象类型，则返回 true。 本机抽象类型的详细信息，请参阅 [抽象](../windows/abstract-cpp-component-extensions.md)。  
+     如果类型为抽象类型，则返回 true。 有关本机抽象类型的详细信息，请参阅[抽象](../windows/abstract-cpp-component-extensions.md)。  
   
-     `__is_abstract` 也适用于平台类型。 具有至少一个成员的接口为抽象类型，就像是具有至少一个抽象成员的引用类型。 有关抽象的平台类型的详细信息，请参阅 [抽象类](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` 也适用于平台类型。 具有至少一个成员的接口为抽象类型，就像是具有至少一个抽象成员的引用类型。 有关抽象平台类型的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -325,7 +327,7 @@ manager: "ghogen"
   
      如果第一种类型是第二种类型的基类，或如果这两种类型相同，则返回 true。  
   
-     `__is_base_of` 也适用于平台类型。 例如，它将返回 true，如果第一个类型为 [接口类](../windows/interface-class-cpp-component-extensions.md) 和第二个类型实现的接口。  
+     `__is_base_of` 也适用于平台类型。 例如，它将返回 true，如果第一个类型为[接口类](../windows/interface-class-cpp-component-extensions.md)和第二种类型实现接口。  
   
     ```  
   
@@ -382,7 +384,7 @@ manager: "ghogen"
   
 -   `__is_delegate(` `type` `)`  
   
-     如果 `type` 是一个委托，则返回 true。 有关详细信息，请参阅 [委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
+     如果 `type` 是一个委托，则返回 true。 有关详细信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
   
     ```  
   
@@ -437,7 +439,7 @@ manager: "ghogen"
   
 -   `__is_interface_class(` `type` `)`  
   
-     如果已传递一个平台接口，则返回 true。 有关详细信息，请参阅 [接口类](../windows/interface-class-cpp-component-extensions.md)。  
+     如果已传递一个平台接口，则返回 true。 有关详细信息，请参阅[接口类](../windows/interface-class-cpp-component-extensions.md)。  
   
     ```  
   
@@ -489,7 +491,7 @@ manager: "ghogen"
   
 -   `__is_ref_array(` `type` `)`  
   
-     如果已传递一个平台数组，则返回 true。 有关详细信息，请参阅 [数组](../windows/arrays-cpp-component-extensions.md)。  
+     如果已传递一个平台数组，则返回 true。 有关详细信息，请参阅[数组](../windows/arrays-cpp-component-extensions.md)。  
   
     ```  
   
@@ -503,7 +505,7 @@ manager: "ghogen"
   
 -   `__is_ref_class(` `type` `)`  
   
-     如果已传递一个引用类，则返回 true。 用户定义的引用类型的详细信息，请参阅 [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果已传递一个引用类，则返回 true。 用户定义的引用类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
   
@@ -518,7 +520,7 @@ manager: "ghogen"
   
 -   `__is_sealed(` `type` `)`  
   
-     如果已传递一个标记为密封的平台或本机类型，则返回 true。 有关详细信息，请参阅 [密封](../windows/sealed-cpp-component-extensions.md)。  
+     如果已传递一个标记为密封的平台或本机类型，则返回 true。 有关详细信息，请参阅[密封](../windows/sealed-cpp-component-extensions.md)。  
   
     ```  
   
@@ -531,7 +533,7 @@ manager: "ghogen"
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     如果已传递一个不包含对垃圾回收堆的引用的值类型，则返回 true。 用户定义的值类型的详细信息，请参阅 [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果已传递一个不包含对垃圾回收堆的引用的值类型，则返回 true。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
   
@@ -570,7 +572,7 @@ manager: "ghogen"
   
 -   `__is_value_class(` `type` `)`  
   
-     如果已传递一个值类型，则返回 true。 用户定义的值类型的详细信息，请参阅 [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果已传递一个值类型，则返回 true。 用户定义的值类型的详细信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
   
@@ -582,26 +584,26 @@ manager: "ghogen"
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
-  `__has_finalizer(`*类型*`)` 不支持类型特征，因为此平台不支持终结器。  
+ `__has_finalizer(`*类型*`)`不支持类型特征，因为此平台不支持终结器。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
  （此功能没有特定于平台的备注。）  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例演示如何使用类模板来公开的编译器类型特性 **/clr** 编译。 有关详细信息，请参阅 [Windows 运行时和托管模板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
+ 下面的代码示例演示如何使用类模板来公开有关的编译器类型特征**/clr**编译。 有关详细信息，请参阅[Windows 运行时和托管模板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
 ```  
 // compiler_type_traits.cpp  
@@ -629,5 +631,5 @@ int main () {
 R is a ref class  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>请参阅  
+ [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46326050e25e62ab05eae44a3c96dbd82fa75e35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f4f0891575f82744925f7658fb18a116b89203ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::~auto_gcroot
 `auto_gcroot`析构函数。  
@@ -73,12 +76,12 @@ ClassA destructor
 done  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto_gcroot 成员](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::release](../dotnet/auto-gcroot-release.md)   
  [auto_gcroot::auto_gcroot](../dotnet/auto-gcroot-auto-gcroot.md)

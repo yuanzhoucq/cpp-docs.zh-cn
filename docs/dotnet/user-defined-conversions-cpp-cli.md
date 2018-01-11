@@ -1,36 +1,37 @@
 ---
-title: "用户定义的转换 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用户定义的转换 [C++]"
+title: "用户定义的转换 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 329461338579dc0787c6e3d208abac89ec762004
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 用户定义的转换 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-当某个类型在转换为值类型或引用类型的引用或实例时，本节讨论用户定义的转换 \(UDC\)。  
+# <a name="user-defined-conversions-ccli"></a>用户定义的转换 (C++/CLI)
+本部分讨论用户定义的转换 (UDC) 中转换的类型之一时引用或值类型或引用类型的实例。  
   
-## 隐式转换和显式转换  
- 用户定义的转换是隐式转换或显式的。转换，不会导致信息丢失，UDC 应是隐式的。  否则应定义显式 UDC。  
+## <a name="implicit-and-explicit-conversions"></a>隐式和显式转换  
+ 用户定义的转换可以是隐式或显式。  UDC 应是隐式的如果转换不会导致信息丢失。 否则应定义显式 UDC。  
   
- 本机类的构造函数只能用于转换引用或值类型对本机类。  
+ 本机类的构造函数可用来将引用或值类型转换为本机类。  
   
- 有关指针转换的更多信息，请参见[装箱](../windows/boxing-cpp-component-extensions.md) 和 [标准转换](../cpp/standard-conversions.md)。  
+ 有关转换的详细信息，请参阅[装箱](../windows/boxing-cpp-component-extensions.md)和[标准转换](../cpp/standard-conversions.md)。  
   
 ```  
 // mcpp_User_Defined_Conversions.cpp  
@@ -78,28 +79,31 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **在 N::N**  
-**在 N::N**   
-## 转换自运算符  
- 转换从运算符创建运算符从其他某类对象定义类的对象。  
+```Output  
+in N::N  
+in N::N  
+```  
   
- 标准 C\+\+ 转换不从运算符支持；标准 C\+\+ 使用构造函数。为此  但是，在中，如果使用 CLR 类型时，Visual C\+\+ 为调用提供语法支持转换从运算符。  
+## <a name="convert-from-operators"></a>转换自运算符  
+ 转换自运算符从某个其他类的对象创建在其中定义运算符的类的对象。  
   
- 与其他符合 CLS 的语言兼容，则要好可能需要将特定类的每个用户定义元的构造函数具有转换对应从运算符。  
+ 标准 c + + 不支持转换自运算符;标准 c + + 实现此目的使用构造函数。 但是，使用 CLR 类型时，Visual c + + 调用转换自运算符提供语法支持。  
   
- 转换自运算符  
+ 若要很好地与其他符合 cls 的语言进行互操作，你可能希望使用相应的转换自运算符包装给定类每个用户定义的一元构造函数。  
   
--   将定义为静态函数。  
+ 转换自运算符：  
   
--   可能为隐式 \(对于不丢失精度如短对 int\) 的转换或显式的，如果可能，都有精度时丢失。  
+-   应将定义为静态函数。  
   
--   将返回一类的对象。  
+-   可以是 （对于不会丢失精度如 short int 的转换） 隐式或显式转换时可能发生精度损失。  
   
--   将会获得“从”类型作为唯一的参数类型。  
+-   应返回的包含类的对象。  
   
- 下面的示例演示一个隐式和显式转换“从”，用户定义的转换运算符。\(UDC\)  
+-   应具有唯一的参数类型为"从"类型。  
+  
+ 下面的示例演示一个隐式和显式"转换自"、 用户定义的转换 (UDC) 运算符。  
   
 ```  
 // clr_udc_convert_from.cpp  
@@ -138,14 +142,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **in 运算符**  
-**构造函数中**  
-**10**  
-**1**   
-## 转换为运算符  
- 转换对运算符将转换运算符定义对其他对象的类的对象。  下面的示例演示一个隐式转换，对，用户定义的转换运算符：  
+```Output  
+in operator  
+in constructor  
+10  
+1  
+```  
+  
+## <a name="convert-to-operators"></a>转换为运算符  
+ 转换为运算符转换在其中定义了此运算符与某些其他对象的类的对象。 下面的示例演示隐式的转换为，用户定义的转换运算符：  
   
 ```  
 // clr_udc_convert_to.cpp  
@@ -169,9 +176,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **10** 显式用户定义转换对转换运算符。在某方面可能会丢失数据的转换为相应的。  若要调用显式转换对运算符，必须使用强制转换。  
+```Output  
+10  
+```  
+  
+ 显式用户定义转换为转换运算符是适用于可能会丢失在某种程度的数据的转换。 若要调用的显式转换为运算符，必须使用强制转换。  
   
 ```  
 // clr_udc_convert_to_2.cpp  
@@ -194,12 +205,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **10.3**  
-**10**   
-## 转换泛型类  
- 可以转换泛型类为 T。  
+```Output  
+10.3  
+10  
+```  
+  
+## <a name="to-convert-generic-classes"></a>要转换泛型类  
+ 可以将一个泛型类转换为 t。  
   
 ```  
 // clr_udc_generics.cpp  
@@ -225,9 +239,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **True** 转换的构造函数采用类型并使用它创建一个对象。转换的构造函数只调用直接初始化；转换不会转换构造函数。  默认情况下，变换将构造函数为 CLR 类型是显式的。  
+```Output  
+True  
+```  
+  
+ 转换构造函数接受一个，并使用它来创建对象。  使用直接初始化; 仅调用转换构造函数强制转换将不会调用转换构造函数。 默认情况下，转换构造函数是 CLR 类型显式的。  
   
 ```  
 // clr_udc_converting_constructors.cpp  
@@ -256,10 +274,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **5**  
-**R** 在此代码示例，隐式的静态转换函数执行和显式转换相同构造函数。  
+```Output  
+5  
+R  
+```  
+  
+ 在此代码示例中，静态的隐式转换函数执行同样的操作在作为显式转换构造函数。  
   
 ```  
 public value struct V {  
@@ -295,11 +317,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **13**  
-**12**  
-**500**  
-**2000**   
-## 请参阅  
- [类和结构 \(托管\)](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+13  
+12  
+500  
+2000  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)

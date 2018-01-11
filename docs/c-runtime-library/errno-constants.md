@@ -52,11 +52,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fdfb4477b4de30221a0e89db02cd45178b70db0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98cc4c3afa245c55344454d4c96ea22d70905e0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-constants"></a>errno 常量
 ## <a name="syntax"></a>语法  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>备注  
- errno 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。  
+ **errno** 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。  
   
  ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供定义都可用于 32 位 Windows 操作系统。 ERRNO.H 中的某些值的存在是为了保持与 UNIX 系列操作系统的兼容性。  
   
@@ -217,5 +218,5 @@ ms.lasthandoff: 10/24/2017
 #define EXDEV [cross device link]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [全局常量](../c-runtime-library/global-constants.md)

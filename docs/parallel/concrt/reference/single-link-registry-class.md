@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18e0ebe846a8ee0bf583ad342e43959e4996cd87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 类
 `single_link_registry` 对象是仅管理单个源块或目标块的 `network_link_registry`。  
@@ -67,7 +68,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
  `single_link_registry`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** agents.h  
   
  **命名空间：** 并发  
@@ -161,6 +162,6 @@ virtual ~single_link_registry();
 ### <a name="remarks"></a>备注  
  该方法将引发[invalid_operation](invalid-operation-class.md)异常如果调用之前删除链接。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [multi_link_registry 类](multi-link-registry-class.md)

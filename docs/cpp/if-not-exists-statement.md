@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bd11ed833b54082d7ea2a394bdd4cad3c3e1321
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2342354528811f415a9c9aeb819e2c0e7cec6646
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 语句
 `__if_not_exists` 语句测试指定的标识符是否存在。 如果该标识符不存在，则执行指定的语句块。  
@@ -57,7 +58,7 @@ statements
 ## <a name="example"></a>示例  
  有关如何使用的示例`__if_not_exists`，请参阅[__if_exists 语句](../cpp/if-exists-statement.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择语句](../cpp/selection-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
  [__if_exists 语句](../cpp/if-exists-statement.md)

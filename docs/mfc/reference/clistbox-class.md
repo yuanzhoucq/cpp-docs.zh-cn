@@ -113,11 +113,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df627cbd062d2347539c0db26580360d80c3dd9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecf574deed95fca6a96e8e5a5c1d1e0bebed1854
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistbox-class"></a>CListBox 类
 提供 Windows 列表框功能。  
@@ -242,7 +243,7 @@ class CListBox : public CWnd
   
  `CListBox`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="addstring"></a>CListBox::AddString  
@@ -331,7 +332,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="return-value"></a>返回值  
  指示中所述的两个项的相对位置[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)结构。 它可能是以下值之一：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |-1|项 2 之前进行排序的第 1 项。|  
 |0|项 1 和 2 的项进行排序相同。|  
@@ -450,7 +451,7 @@ int Dir(
  `attr`  
  可以是任意组合的`enum`值中所述**CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus)，或以下值的任意组合：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |0x0000|可以读取或写入到文件。|  
 |从 0x0001|可以从读取但不是会写入到文件。|  
@@ -1333,7 +1334,7 @@ virtual int VKeyToItem(
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 CTRLTEST](../../visual-cpp-samples.md)   
  [CWnd 类](../../mfc/reference/cwnd-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

@@ -29,11 +29,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b135937adfe9b1e30747c35883692be54ba77e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1aacd22af0b2e0e14a3c1203a42e067b1f339c71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 类
 `CMFCAcceleratorKeyAssignCtrl`类扩展[CEdit 类](../../mfc/reference/cedit-class.md)以支持额外的系统按钮，如 ALT、 CONTROL 和 SHIFT。  
@@ -83,7 +84,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
   
  `CMFCAcceleratorKeyAssignCtrl`   
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxacceleratorkeyassignctrl.h  
   
 ##  <a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
@@ -154,7 +155,7 @@ void ResetKey();
 ### <a name="remarks"></a>备注  
  该函数将清除编辑控件文本。 这包括用户按下任何快捷键。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CMFCAcceleratorKey 类](../../mfc/reference/cmfcacceleratorkey-class.md)

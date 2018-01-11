@@ -1,49 +1,51 @@
 ---
-title: "lock::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "operator bool"
-  - "msclr.lock.operator bool"
-  - "lock.operator bool"
-  - "msclr::lock::operator bool"
-  - "lock::operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::operator bool"
+title: "lock::operator bool |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- operator bool
+- msclr.lock.operator bool
+- lock.operator bool
+- msclr::lock::operator bool
+- lock::operator bool
+dev_langs: C++
+helpviewer_keywords: lock::operator bool
 ms.assetid: 007f0372-f812-4f1e-ba43-2584bd96eb11
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1156576abd9a8fe98270ee6a8edb864793d127fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# lock::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在条件表达式中，使用运算符 `lock` 。  
+# <a name="lockoperator-bool"></a>lock::operator bool
+使用的运算符`lock`条件表达式中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 operator bool();  
 ```  
   
-## 返回值  
- `true`，如果锁保留，则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果持有的锁，`false`否则为。  
   
-## 备注  
- 比 `bool` 安全的此运算符实际上转换为 `_detail_class::_safe_bool`，因为它无法转换为整型。  
+## <a name="remarks"></a>备注  
+ 此运算符实际将转换为`_detail_class::_safe_bool`即比更安全`bool`因为它不能转换为整型。  
   
-## 示例  
- 此示例使用在多个线程中类的一个实例。类使用自身上的锁确保每个线程对其内部数据的访问权限都是一致的。主应用程序线程使用类的同一实例的锁定定期检查任何辅助线程是否仍然存在，并且等待，直到退出所有辅助线程完成它们的任务。  
+## <a name="example"></a>示例  
+ 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
   
 ```  
 // msl_lock_op_bool.cpp  
@@ -118,22 +120,25 @@ int main() {
 }  
 ```  
   
-  **在线程 3，Counter \= 0**  
-**在线程 3 ，Counter \= 10**  
-**在线程 5 ，Counter \= 0**  
-**在线程 5 ，Counter \= 10**  
-**在线程 7 ，Counter \= 0**  
-**在线程 7 ，Counter \= 10**  
-**在线程 4 ，Counter \= 0**  
-**在线程 4 ，Counter \= 10**  
-**在线程 6 ，Counter \= 0**  
-**在线程 6 ，Counter \= 10**  
-**所有线程完成。**   
-## 要求  
- **Header file** \<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [锁定成员](../dotnet/lock-members.md)   
- [lock::is\_locked](../dotnet/lock-is-locked.md)
+ [lock::is_locked](../dotnet/lock-is-locked.md)

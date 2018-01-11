@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aecb28648e32e099d2381fa49b1b7f5a42618543
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a567b33e55092e7e8e0361faa0ce54b2498827a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 专用**  
@@ -47,11 +48,11 @@ __m128 _mm_cvtsi64x_ss(
 ## <a name="return-value"></a>返回值  
  `__m128`结构其第一个浮点值转换的结果。 其他三个值均将原样从复制`a`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
 |---------------|------------------|  
-|`_mm_cvtsi64x_ss`|x64|  
+|`_mm_cvtsi64x_ss`|X64|  
   
  **标头文件** \<intrin.h >  
   
@@ -94,6 +95,6 @@ int main()
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [__m128](../cpp/m128.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

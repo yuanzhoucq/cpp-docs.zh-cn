@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9fc47721ba5cecc8ca9f61f89ecedebaed18ae4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36dc3c25d5f8bbd37ebfaa3458c07f6948492817
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-statements-blocks"></a>复合语句（块）
 复合语句包含零个或多个语句括在大括号中 (**{}**)。 可以在任何期望语句出现的位置使用复合语句。 复合语句通常称为“块”。  
@@ -53,5 +54,5 @@ else
 > [!NOTE]
 >  由于声明是一条语句，因此声明可以是中的语句之一*语句列表*。 因此，复合语句内声明的名称（而不是显式声明为静态的名称）具有局部范围和（对于对象）生存期。 请参阅[作用域](../cpp/scope-visual-cpp.md)有关处理带局部范围的名称的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ 语句概述](../cpp/overview-of-cpp-statements.md)

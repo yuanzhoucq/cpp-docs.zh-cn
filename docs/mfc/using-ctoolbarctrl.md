@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c15def4acc3daad2cb0739da0f53e2a9871d172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctoolbarctrl"></a>使用 CToolBarCtrl
 你可以使用工具栏控件 ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) 若要创建包含按钮和可选空间的控件窗口。 工具栏控件窗口中的每个按钮都将在用户选择它时向父窗口发送一条命令消息。 通常，工具栏中的按钮对应于应用程序菜单项，为用户另外提供了一种更直接的方式来访问应用程序命令。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [自定义工具栏控件的外观](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [控件](../mfc/controls-mfc.md)
 

@@ -16,16 +16,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9302f9031aa9d9e3717ddb2cbe991ec412440b4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literal"></a>字符串
 字符串文本处理已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 在 c + + 语言设计托管扩展中，托管的字符串文本已由对字符串添加前缀与指示`S`。 例如:   
+ 在 c + + 语言设计托管扩展中，托管的字符串文本已由对字符串添加前缀与指示`S`。 例如:  
   
 ```  
 String *ps1 = "hello";  
@@ -50,13 +53,13 @@ stloc.0
   
  这与可用于只需记住 （或学习） 是文字字符串的前缀显著节省`S`。 在新语法中，字符串文本的处理进行透明的由使用的上下文。 `S`不再需要指定。  
   
- 情况下在其中我们需要显式直接与一个解释或另一个编译器？ 在这些情况下，我们将应用的显式转换。 例如：  
+ 情况下在其中我们需要显式直接与一个解释或另一个编译器？ 在这些情况下，我们将应用的显式转换。 例如:  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- 此外，字符串文本现在匹配`String`使用简单的转换，而不是标准转换。 虽然这不可能看起来像得多更改的重载的函数集包括分辨率`String`和`const char*`作为竞争的正式参数。 一次解析为的分辨率`const char*`实例现在已标记为不明确。 例如：  
+ 此外，字符串文本现在匹配`String`使用简单的转换，而不是标准转换。 虽然这不可能看起来像得多更改的重载的函数集包括分辨率`String`和`const char*`作为竞争的正式参数。 一次解析为的分辨率`const char*`实例现在已标记为不明确。 例如:  
   
 ```  
 ref struct R {  
@@ -110,6 +113,6 @@ int main () {
   
  编译器将调用标记为不明确的因此，所需要的转换`const char[4]`到`String^`也是通过普通转换完全匹配。 这是新的语言版本中引入了更改。 这就是为什么调用现在已标记为不明确。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [常规语言更改 (C + + /cli CLI)](../dotnet/general-language-changes-cpp-cli.md)   
  [字符串](../windows/string-cpp-component-extensions.md)

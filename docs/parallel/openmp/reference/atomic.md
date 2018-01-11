@@ -1,48 +1,47 @@
 ---
-title: "atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atomic OpenMP directive"
+title: "原子 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: atomic
+dev_langs: C++
+helpviewer_keywords: atomic OpenMP directive
 ms.assetid: 275e0338-cf2f-4525-97b5-696250000df7
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1e3d190504a0e4caab864c637d7053836b01f88f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# atomic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定将更新基本的内存位置。  
+# <a name="atomic"></a>Atomic — 原子
+指定将以原子方式更新的内存位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma omp atomic  
    expression  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `expression`  
- 包含要防止多个编写的左值内存位置的语句。  有关法律 word 窗体的更多信息，请参见 OpenMP 规范。  
+ 你想要防止多次写入包含其内存位置的左值的语句。 有关合法表达式窗体的详细信息，请参阅 OpenMP 规范。  
   
-## 备注  
- `atomic` 指令不支持 OpenMP 子句。  
+## <a name="remarks"></a>备注  
+ `atomic`指令支持没有 OpenMP 子句。  
   
- 有关更多信息，请参见 [2.6.4 atomic Construct](../../../parallel/openmp/2-6-4-atomic-construct.md)。  
+ 有关详细信息，请参阅[2.6.4 atomic 构造](../../../parallel/openmp/2-6-4-atomic-construct.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_atomic.cpp  
@@ -63,6 +62,9 @@ int main() {
 }  
 ```  
   
-  **线程的数量:10**   
-## 请参阅  
+```Output  
+Number of threads: 10  
+```  
+  
+## <a name="see-also"></a>请参阅  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

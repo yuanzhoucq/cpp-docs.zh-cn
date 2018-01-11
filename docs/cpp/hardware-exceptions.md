@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a130e60403c9570d647955a6ad2d86f2ba49d1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36272def7cf37d53e219011bef0e5151628d2299
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-exceptions"></a>硬件异常
 操作系统识别的大多数标准异常是硬件上定义的异常。 Windows 可识别少数低级别的软件异常，但这些异常通常最好通过操作系统进行处理。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
   
  上表中列出的很多异常应由调试器、操作系统或其他低级别代码处理。 您的代码不应处理这些错误（整数和浮点错误除外）。 因此，您通常应使用异常处理筛选器来忽略异常（计算结果为 0）。 否则，您可能阻止低级别机制进行适当的响应。 但是，可以采取适当的预防措施，通过这些低级别错误的潜在影响针对[编写终止处理程序](../cpp/writing-a-termination-handler.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编写异常处理程序](../cpp/writing-an-exception-handler.md)   
  [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

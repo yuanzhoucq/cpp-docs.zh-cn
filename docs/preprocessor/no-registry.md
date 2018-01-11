@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 347cdd89a8d8c3014a02708c91df3292275f4e3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d2b4b34a4ebf266f4ae8062bb2fff0f80060a22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noregistry"></a>no_registry
 `no_registry` 告知编译器不在寄存器中搜索使用 `#import` 导入的类型库。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
  `no_registry`如果你想要导入交叉引用的类型库，而没有在注册表中查找文件的旧版本的编译器的风险，很有用。  `no_registry`也是有用的如果未注册类型库。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [#import 属性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指令](../preprocessor/hash-import-directive-cpp.md)

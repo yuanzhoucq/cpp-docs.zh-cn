@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7872e01516ea7420533cccf0398164d50603dded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>align (C++)
 在 Visual Studio 2015 及更高版本，使用 C + + 11 标准`alignas`说明符来控制对齐效果。 有关详细信息，请参阅[对齐](../cpp/alignment-cpp-declarations.md)。  
@@ -245,7 +246,7 @@ struct S {
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [__declspec](../cpp/declspec.md)   
  [ARM ABI 约定概述](../build/overview-of-arm-abi-conventions.md)   
  [x64 调用约定概述](../build/overview-of-x64-calling-conventions.md)

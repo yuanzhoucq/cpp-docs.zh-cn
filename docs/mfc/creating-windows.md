@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83985689a2e696e82aae57348ab61263c0f888da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3563395020919c59acbd94bfc8653d349090ff96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-windows"></a>创建窗口
 框架自动创建框架程序中的大部分所需的窗口。 [文档/视图创建](../mfc/document-view-creation.md)演示了框架如何创建与文档和视图的框架窗口。 但是对于特殊用途可以创建你自己的 windows — 包括您自己的框架窗口或视图的子窗口-除了提供框架的窗口。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用窗口对象](../mfc/working-with-window-objects.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [窗口对象](../mfc/window-objects.md)
 

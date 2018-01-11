@@ -91,11 +91,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eba062342aeb0ecc6e9818d7da9eead94b81a9af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forwardlist-class"></a>forward_list 类
 描述用于控制变长元素序列的对象。 序列存储为节点的单向链接列表，其中每个节点都包含 `Type` 类型的成员。  
@@ -184,7 +185,7 @@ class forward_list
 |-|-|  
 |[operator=](#op_eq)|将转发列表的元素替换为另一个转发列表的副本。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<forward_list>  
   
  **命名空间：** std  
@@ -437,7 +438,7 @@ iterator erase_after(const_iterator first, const_iterator last);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`Where`|目标转发列表中擦除元素的位置。|  
 |`first`|要擦除范围的起始处。|  
@@ -599,7 +600,7 @@ void merge(forward_list& right, Predicate comp);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`right`|要从其开始合并的转发列表。|  
 |`comp`|用于对元素进行排序的比较函数对象。|  
@@ -624,7 +625,7 @@ forward_list& operator=(forward_list&& right);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`right`|要复制到转发列表的转发列表。|  
 |`IList`|一个用括号括起来的初始化表达式列表，其行为类似于类型 `Type` 的元素的序列。|  
@@ -711,7 +712,7 @@ void remove_if(Predicate pred);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`pred`|一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。|  
   
@@ -768,7 +769,7 @@ void sort(Predicate pred);
   
 ### <a name="parameters"></a>参数  
   
-|参数|说明|  
+|参数|描述|  
 |---------------|-----------------|  
 |`pred`|排序谓词。|  
   
@@ -920,7 +921,7 @@ void swap(forward_list& right);
 |`right`|提供要交换的元素的转发列表。|  
   
 ### <a name="remarks"></a>备注  
- 成员函数交换 `*this` 和 `right` 之间的受控序列。 如果 `get_allocator() ==  right.get_allocator()`，它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
+ 成员函数交换 `*this` 和 `right`之间的受控序列。 如果 `get_allocator() ==  right.get_allocator()`，它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。  
   
 ##  <a name="unique"></a>  forward_list::unique  
  删除来自每个连续的相等元素组的第一个元素之外的所有元素。  
@@ -956,6 +957,6 @@ typedef typename Allocator::value_type value_type;
 ### <a name="remarks"></a>备注  
  该类型是模板参数 _ `Ty` 的同义词。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [<forward_list>](../standard-library/forward-list.md)
 

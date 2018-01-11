@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30e597a9d8587128e4de1b2bb80db15143620821
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5bdc0204c538f476c791657d8b29a28b7baedd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-styles-c"></a>框架窗口样式 (C++)
 获取与框架的框架窗口适用于大多数程序，但你可以通过使用高级的函数来获得更大的灵活性[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)和 MFC 全局函数[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow`是的成员函数`CWnd`。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [窗口样式](../mfc/reference/styles-used-by-mfc.md#window-styles)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架窗口](../mfc/frame-windows.md)
 

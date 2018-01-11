@@ -14,11 +14,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73a397664d5e5a9074731b6eac879fe965580f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-operators-ccli"></a>用户定义的运算符 (C++/CLI)
 托管类型的用户定义运算符可用作静态成员或实例成员，或者在全局范围内使用。 但是，使用除 Visual C++ 之外的语言编写的客户端通过元数据仅可以访问静态运算符。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/24/2017
 |>=|二进制|  
 |>>|二进制|  
 |^|二进制|  
-|false|一元|  
+|False|一元|  
 |true|一元|  
 |&#124;|二进制|  
 |&#124;&#124;|二进制|  
@@ -170,5 +173,5 @@ int main() {
 30  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)

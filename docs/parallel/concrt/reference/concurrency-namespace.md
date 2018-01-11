@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,35 +23,19 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
-helpviewer_keywords:
-- Concurrency namespace
+dev_langs: C++
+helpviewer_keywords: Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2e5a153359b2696b281a25794a85b5c676f179ce
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空间
 `Concurrency` 命名空间提供可让你访问 C++ 的并发运行和并发编程框架的类和函数。 有关详细信息，请参阅[并发运行时](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -67,9 +50,9 @@ namespace concurrency;
   
 ### <a name="namespaces"></a>命名空间  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[concurrency::extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
+|[concurrency:: extensibility Namespace](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
 ### <a name="typedefs"></a>Typedef  
   
@@ -98,8 +81,8 @@ namespace concurrency;
 |[concurrent_queue 类](concurrent-queue-class.md)|`concurrent_queue` 类是允许对其元素进行先进先出访问的序列容器类。 它支持一组有限的并发安全操作，例如 `push` 和 `try_pop`。|  
 |[concurrent_unordered_map 类](concurrent-unordered-map-class.md)|`concurrent_unordered_map` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|  
 |[concurrent_unordered_multimap 类](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` 类是控制 `std::pair<const K, _Element_type>` 类型元素的长短不一序列的并发安全容器。 序列以支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作的方式表示。|  
-|[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`类是并发安全的容器，用于控制的不同长序列的元素类型 k。支持并发安全的方式表示该序列追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
-|[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set`类是并发安全的容器，用于控制的不同长序列的元素类型 k。支持并发安全的方式表示该序列追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
+|[concurrent_unordered_multiset 类](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`类是并发安全容器，用于控制变长元素序列的类型 k。序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
+|[concurrent_unordered_set 类](concurrent-unordered-set-class.md)|`concurrent_unordered_set`类是并发安全容器，用于控制变长元素序列的类型 k。序列表示方式支持并发安全追加、 元素访问、 迭代器访问和迭代器遍历操作。|  
 |[concurrent_vector 类](concurrent-vector-class.md)|`concurrent_vector` 类是允许对任意元素进行随机访问的序列容器类。 它支持并发安全追加、元素访问、迭代器访问和迭代器遍历操作。|  
 |[Context 类](context-class.md)|表示执行上下文的抽象。|  
 |[context_self_unblock 类](context-self-unblock-class.md)|此类描述从同一上下文调用 `Context` 对象的 `Unblock` 方法时引发的异常。 这将指示给定上下文解除阻止自身的尝试。|  
@@ -186,22 +169,22 @@ namespace concurrency;
   
 ### <a name="enumerations"></a>枚举  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效状态。|  
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理库提供的跟踪功能进行跟踪的事件的类型|  
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|可以使用并发运行时提供的跟踪功能进行跟踪的事件的类型。|  
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|事件类型的跟踪标志|  
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|上下文位于其中的关键区域的类型。|  
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|由 `DynamicProgressFeedback` 策略用于描述重新平衡计划程序资源的依据是从计划程序收集的统计信息，还是通过对 `IVirtualProcessorRoot` 接口上的 `Activate` 和 `Deactivate` 方法进行调用以进出空闲状态的虚拟处理器。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` 消息块的类型。|  
 |[message_status](concurrency-namespace-enums.md#message_status)|`message` 对象的内容到块的有效响应。|  
 |[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述计划程序行为各个方面的策略键。 每个策略元素由一个键值对描述。 有关计划程序策略和它们的影响计划程序的详细信息，请参阅[任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|  
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|由 `SchedulerKind` 策略用于描述应由计划程序用于基础执行上下文的线程的类型。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|由 `SchedulingProtocol` 策略用于描述将哪个计划算法用于计划程序。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|用于表示线程代理在执行另一个线程代理的协作上下文切换时所处的状态。|  
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|描述 `task_group` 或 `structured_task_group` 对象的执行状态。 此类型的值是由很多等待安排到一个任务组中的任务完成的方法返回的。|  
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|由 `WinRTInitialization` 策略用于描述，对于在 Windows 8 或更高版本的操作系统上运行的应用程序，是否以及如何在计划程序的线程上初始化 Windows 运行时。 有关可用的计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|由 `WinRTInitialization` 策略用于描述，对于在 Windows 8 或更高版本的操作系统上运行的应用程序，是否以及如何在计划程序的线程上初始化 Windows 运行时。 有关可用计划程序策略的详细信息，请参阅[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|  
   
 ### <a name="functions"></a>函数  
   
@@ -252,7 +235,7 @@ namespace concurrency;
   
 ### <a name="operators"></a>运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------| 
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|测试运算符左侧的 `concurrent_vector` 对象是否不等于右侧的 `concurrent_vector` 对象。|  
 |[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|已重载。 创建一个任务，在作为自变量提供的两个任务成功完成后，此任务将成功完成。|  
@@ -265,7 +248,7 @@ namespace concurrency;
   
 ### <a name="constants"></a>常量  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|类别 GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})，描述并发运行时中由代理库激发的 ETW 事件。|  
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|类别 GUID，描述由与日常任务或任务直接相关的并发运行时激发的 ETW 事件。|  
@@ -286,10 +269,9 @@ namespace concurrency;
 |[SchedulerEventGuid](concurrency-namespace-constants1.md#schedulereventguid)|类别 GUID，描述由与计划程序活动直接相关的并发运行时激发的 ETW 事件。|  
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|类别 GUID，描述由与虚拟处理器直接相关的并发运行时激发的 ETW 事件。|  
   
-## <a name="requirements"></a>要求  
- **标头︰** agents.h、 concrt.h，concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h  
+## <a name="requirements"></a>惠?  
+ **标头：** agents.h、 concrt.h、 concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [参考](reference-concurrency-runtime.md)
-
 

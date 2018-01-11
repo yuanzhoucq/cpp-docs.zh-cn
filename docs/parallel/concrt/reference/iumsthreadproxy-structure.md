@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 87ac2a36c83e6b05e671c0110b054325d53fc887
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9d9b200db84ddbf25e514e1432fa0915d5ee383
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 结构
 执行线程的抽象。 如果想要计划程序获得用户模式计划 (UMS) 线程，则将计划程序策略元素 `SchedulerKind` 的值设置为 `UmsThreadDefault`，并实现 `IUMSScheduler` 接口。 UMS 线程仅在具有 Windows 7 或更高版本的 64 位操作系统上受到支持。  
@@ -54,7 +55,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  `IUMSThreadProxy`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** concrtrm.h  
   
  **命名空间：** 并发  
@@ -112,6 +113,6 @@ virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ### <a name="return-value"></a>返回值  
  线程代理所处的关键区域的类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [并发 Namespace](concurrency-namespace.md)   
  [IUMSScheduler 结构](iumsscheduler-structure.md)

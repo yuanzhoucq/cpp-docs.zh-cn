@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 04/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4471
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4471
+f1_keywords: C4471
+dev_langs: C++
+helpviewer_keywords: C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: fc0ddb07ec768804be61185211bbac0ee6fbf2b6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7429a458c90c30fdf57b985cda88ca85c6d29c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4471"></a>编译器警告 （等级 4） C4471
-*枚举*︰ 未区分范围的枚举的前向声明必须具有基础类型 (假定为 int)  
+*枚举*： 未区分范围的枚举的前向声明必须具有基础类型 (假定为 int)  
   
 未区分范围的枚举的前向声明找的基础类型不带说明符。 默认情况下，Visual c + + 假定`int`是枚举的基础类型。 如果使用不同类型是在枚举定义中，例如，如果指定了不同的显式类型，或不同的类型隐式设置初始值设定项，这会导致问题。 您可能还必须可移植性问题;其他编译器不会假定`int`是枚举的基础类型。  
   
@@ -70,7 +52,7 @@ enum Example;    // C4471
 ```  
   
 ## <a name="example"></a>示例  
-在 C + + 11 中，你可以添加显式类型，对未区分范围的枚举和其前向声明。 仅当复杂的标头包含逻辑禁止使用而不是前向声明的定义，我们建议此解决方案。 此解决方案可能会导致了维护问题︰ 如果更改用于枚举定义的基础类型，则还必须更改所有前向声明以匹配，或可能在你代码中有无提示的错误。 可以将前向声明放入标头文件，以尽量减少此问题。  
+在 C + + 11 中，你可以添加显式类型，对未区分范围的枚举和其前向声明。 仅当复杂标头包含逻辑禁止使用而不是前向声明的定义，我们建议此解决方案。 此解决方案可能会导致了维护问题： 如果更改用于枚举定义的基础类型，则还必须更改所有前向声明以匹配，或可能在你代码中有无提示的错误。 可以将前向声明放入标头文件，以尽量减少此问题。  
   
 ```cpp  
 // C4471c.cpp
@@ -113,4 +95,3 @@ enum class Example { item = 0 };
 // ...
 ```  
   
-

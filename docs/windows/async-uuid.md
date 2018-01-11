@@ -1,32 +1,33 @@
 ---
-title: "async_uuid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.async_uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "async_uuid attribute"
+title: "async_uuid |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.async_uuid
+dev_langs: C++
+helpviewer_keywords: async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9c3d9fc9afb7a6f65be8ace5fec085db9bd92191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# async_uuid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定处理 MIDL 编译器定义 COM 接口的同步和异步版本的 UUID。  
+# <a name="asyncuuid"></a>async_uuid
+指定指示 MIDL 编译器定义的 COM 接口的同步和异步版本的 UUID。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,14 +36,14 @@ caps.handback.revision: 10
 )]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *uuid*  
- 标识接口的版本的 UUID。  
+ 一个标识接口的版本的 UUID。  
   
-## 备注  
- **async\_uuid** C\+\+ 特性具有与 [async\_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Async_uuid** c + + 属性具有相同的功能[async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 特性。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cpp_attr_ref_async_uuid.cpp  
@@ -56,20 +57,19 @@ __interface ICustom {
 };  
 ```  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|`interface`|  
 |**可重复**|否|  
 |**必需的特性**|无|  
-|**无效的特性**|**双**， **dispinterface**|  
+|**无效的特性**|**双**，**调度接口**|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   

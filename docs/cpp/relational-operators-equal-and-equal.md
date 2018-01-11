@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <
 - '>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '> operator'
 - less than operator
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 56eead68e733a3950915af2227cbeb0a1bfabbd4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 28d7cf77f9bea05a9220aea3d4006f64899b84ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>关系运算符： &lt;， &gt;， &lt;=、 和&gt;=
 ## <a name="syntax"></a>语法  
@@ -102,7 +100,7 @@ int main() {
   
  如果两个指针指向同一数组的元素或指向超出数组末尾 1 的元素，则指向带较高下标的对象的指针会更高。 仅当指针引用同一数组中的对象或超出数组末尾 1 的位置时，才能保证指针比较有效。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)   
  [C + + 内置运算符、 优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 关系和相等运算符](../c-language/c-relational-and-equality-operators.md)

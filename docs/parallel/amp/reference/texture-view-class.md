@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,36 +19,21 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>texture_view 类
-提供了读取访问权限和对纹理写访问权限。 `texture_view`仅能用于读取其值类型的纹理`int`， `unsigned int`，或`float`具有默认值 32 位 bpse。 若要读取其他纹理格式，使用`texture_view<const value_type, _Rank>`。  
+提供为纹理的写访问权限和读取访问权限。 `texture_view`仅用于读取其值类型的纹理`int`， `unsigned int`，或`float`具有默认值 32 位 bpse。 若要读取其他纹理格式，使用`texture_view<const value_type, _Rank>`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,11 +61,11 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|`value_type`|纹理聚合中元素的类型。|  
-|`coordinates_type`|一种用来指定在纹素的坐标`texture_view`— 也就是说， `short_vector` ，具有相同的排名为所具有的值类型的关联纹理`float`。|  
-|`gather_return_type`|返回类型，用于收集操作-即，级别 4 `short_vector` ，包含四个同构颜色组件中收集的采样的四个纹素值。|  
+|`value_type`|纹理聚合中的元素的类型。|  
+|`coordinates_type`|一种用于指定在纹素的坐标`texture_view`— 即`short_vector`，具有相同的排名为所具有的值类型的关联纹理`float`。|  
+|`gather_return_type`|返回类型，用于收集操作-即，级别 4`short_vector`包含四个同构颜色组件收集从采样的四个纹素值。|  
   
 ### <a name="public-constructors"></a>公共构造函数  
   
@@ -94,12 +78,12 @@ class texture_view<const value_type, _Rank>
   
 |名称|描述|  
 |----------|-----------------|  
-|[gather_alpha](#gather_alpha)|已重载。 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的 alpha (w) 组件。|  
-|[gather_blue](#gather_blue)|已重载。 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的蓝色 (z) 组件。|  
-|[gather_green](#gather_green)|已重载。 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的绿色 (y) 组件。|  
-|[gather_red](#gather_red)|已重载。 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的红色 (x) 组件。|  
+|[gather_alpha](#gather_alpha)|已重载。 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的字母 (w) 组件。|  
+|[gather_blue](#gather_blue)|已重载。 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的蓝色 (z) 组件。|  
+|[gather_green](#gather_green)|已重载。 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的绿色 (y) 组件。|  
+|[gather_red](#gather_red)|已重载。 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的红色 (x) 组件。|  
 |[get](#get)|已重载。 按索引获取此元素的值。|  
-|[示例](#sample)|已重载。 通过使用指定的采样配置示例在指定的坐标和详细程度的纹理。|  
+|[示例](#sample)|已重载。 使用指定的采样配置示例在指定的坐标和的详细信息级别的纹理。|  
 |[set](#set)|按索引设置元素的值。|  
   
 ### <a name="public-operators"></a>公共运算符  
@@ -112,17 +96,17 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
-|[value_type](#value_type)|中的元素的值类型`texture_view`。|  
+|[value_type](#value_type)|元素的值类型`texture_view`。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `_Texture_base`  
   
  `texture_view`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_graphics.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_graphics.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -175,7 +159,7 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>参数  
  `_Src`  
  [1，2]构造函数  
- `texture`在其上的可写`texture_view`创建。  
+ `texture`在其上可写`texture_view`创建。  
   
  [3，4]构造函数  
  `texture`在其上不可写入`texture_view`创建。  
@@ -184,21 +168,21 @@ texture_view(// [7] copy constructor
  [5] 复制构造函数  
  可写的源`texture_view`。  
   
- [6、 7]复制构造函数  
+ [6，7]复制构造函数  
  非可写的源`texture_view`。  
   
  `_Mipmap_level`  
- 源上的特定 mipmap 级别`texture`此可写`texture_view`将绑定到。 默认值为 0，它表示最高级别 （最详细） mip 级别。  
+ 源上的特定 mipmap 级别`texture`此可写`texture_view`将绑定到。 默认值为 0，它表示顶级 （最详细） mip 级别。  
   
  `_Most_detailed_mip`  
- Top 的视图中，相对于指定的级别 （最详细） mip 级别`texture_view`对象。  
+ 排名靠前的视图中，相对于指定的级别 （最详细） mip 级别`texture_view`对象。  
   
  `_Mip_levels`  
  可通过访问 mipmap 级别数`texture_view`。  
   
 ##  <a name="gather_red"></a>gather_red 
 
- 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的红色 (x) 组件。  
+ 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的红色 (x) 组件。  
   
 ```  
 const gather_return_type gather_red(
@@ -215,20 +199,20 @@ const gather_return_type gather_red(
   
 ### <a name="parameters"></a>参数  
  `_Address_mode`  
- 若要使用的寻址模式到示例`texture_view`。 地址模式是为所有维度相同的。  
+ 要使用的地址模式示例`texture_view`。 对于所有维度相同的寻址模式。  
   
  `_Sampler`  
- 要使用的采样器配置到示例`texture_view`。  
+ 要使用的采样器配置示例`texture_view`。  
   
  `_Coord`  
- 要采用从示例的坐标。 小数部分的坐标值用于示例纹素之间插值。  
+ 要采用从示例的坐标。 小数部分组成的坐标值用于之间示例纹素插值。  
   
 ### <a name="return-value"></a>返回值  
- 级别 4 短矢量包含 4 的红色 (x) 组件的抽样纹素值。  
+ 级别 4 短矢量包含 4 的红色 (x) 部分采样纹素值。  
   
 ##  <a name="gather_green"></a>gather_green 
 
- 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的绿色 (y) 组件。  
+ 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的绿色 (y) 组件。  
   
 ```  
 const gather_return_type gather_green(
@@ -245,20 +229,20 @@ const gather_return_type gather_green(
   
 ### <a name="parameters"></a>参数  
  `_Address_mode`  
- 若要使用的寻址模式到示例`texture_view`。 地址模式是为所有维度相同的。  
+ 要使用的地址模式示例`texture_view`。 对于所有维度相同的寻址模式。  
   
  `_Sampler`  
- 要使用的采样器配置到示例`texture_view`。  
+ 要使用的采样器配置示例`texture_view`。  
   
  `_Coord`  
- 要采用从示例的坐标。 小数部分的坐标值用于示例纹素之间插值。  
+ 要采用从示例的坐标。 小数部分组成的坐标值用于之间示例纹素插值。  
   
 ### <a name="return-value"></a>返回值  
- 级别 4 短矢量包含 4 的绿色 (y) 组件的抽样纹素值。  
+ 级别 4 短矢量包含 4 的绿色 (y) 部分采样纹素值。  
   
 ##  <a name="gather_blue"></a>gather_blue 
 
- 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的蓝色 (z) 组件。  
+ 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的蓝色 (z) 组件。  
   
 ```  
 const gather_return_type gather_blue(
@@ -275,20 +259,20 @@ const gather_return_type gather_blue(
   
 ### <a name="parameters"></a>参数  
  `_Address_mode`  
- 若要使用的寻址模式到示例`texture_view`。 地址模式是为所有维度相同的。  
+ 要使用的地址模式示例`texture_view`。 对于所有维度相同的寻址模式。  
   
  `_Sampler`  
- 要使用的采样器配置到示例`texture_view`。  
+ 要使用的采样器配置示例`texture_view`。  
   
  `_Coord`  
- 要采用从示例的坐标。 小数部分的坐标值用于示例纹素之间插值。  
+ 要采用从示例的坐标。 小数部分组成的坐标值用于之间示例纹素插值。  
   
 ### <a name="return-value"></a>返回值  
- 级别 4 短矢量包含 4 的红色 (x) 组件的抽样纹素值。  
+ 级别 4 短矢量包含 4 的红色 (x) 部分采样纹素值。  
   
 ##  <a name="gather_alpha"></a>gather_alpha 
 
- 通过使用指定的采样配置示例指定坐标处的纹理，并返回四个样本的纹素的 alpha (w) 组件。  
+ 使用指定的采样配置示例指定坐标处的纹理，并返回四个抽样纹素的字母 (w) 组件。  
   
 ```  
 const gather_return_type gather_alpha(
@@ -305,16 +289,16 @@ const gather_return_type gather_alpha(
   
 ### <a name="parameters"></a>参数  
  `_Address_mode`  
- 若要使用的寻址模式到示例`texture_view`。 地址模式是为所有维度相同的。  
+ 要使用的地址模式示例`texture_view`。 对于所有维度相同的寻址模式。  
   
  `_Sampler`  
- 要使用的采样器配置到示例`texture_view`。  
+ 要使用的采样器配置示例`texture_view`。  
   
  `_Coord`  
- 要采用从示例的坐标。 小数部分的坐标值用于示例纹素之间插值。  
+ 要采用从示例的坐标。 小数部分组成的坐标值用于之间示例纹素插值。  
   
 ### <a name="return-value"></a>返回值  
- 级别 4 短矢量包含 alpha (w) 4 的组件采样纹素值。  
+ 级别 4 短矢量包含字母 (w) 组件的 4 采样纹素值。  
   
 ##  <a name="get"></a>获取 
 
@@ -332,17 +316,17 @@ value_type get(
   
 ### <a name="parameters"></a>参数  
  `_Index`  
- 若要获取，可能是多维的元素的索引。  
+ 要获取，可能是多维的元素的索引。  
   
  `_Mip_level`  
- 我们应从其获取值 mipmap 级别。 默认值 0 表示最详细的 mipmap 级别。  
+ 我们应从中获取的值 mipmap 级别。 默认值 0 表示最详细的 mipmap 级别。  
   
 ### <a name="return-value"></a>返回值  
  元素的值。  
   
 ##  <a name="operator_eq"></a>运算符 = 
 
- 将分配为指定的同一个纹理视图`texture_view`至此`texture_view`实例。  
+ 将分配为指定的相同纹理视图`texture_view`至此`texture_view`实例。  
   
 ```  
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor  
@@ -366,7 +350,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
  不可写`texture_view`对象。  
   
 ### <a name="return-value"></a>返回值  
- 参考这`texture_view`实例。  
+ 对此引用`texture_view`实例。  
   
 ##  <a name="operator_at"></a>operator] 
 
@@ -387,13 +371,13 @@ value_type operator[] (int _I0) const restrict(amp);
   
 ### <a name="parameters"></a>参数  
  `_Index`  
- 索引中，可能是多维度。  
+ 索引中，可能是多维。  
   
  `_I0`  
  一维索引。  
   
 ### <a name="return-value"></a>返回值  
- 按索引元素值`_Index`。  
+ 按索引的元素值`_Index`。  
   
 ##  <a name="operator_call"></a>operator （) 
 
@@ -439,23 +423,23 @@ value_type operator() (
   
 ### <a name="parameters"></a>参数  
  `_Index`  
- 索引中，可能是多维度。  
+ 索引中，可能是多维。  
   
  `_I0`  
- 索引的最有效的组件。  
+ 索引的最高有效组件。  
   
  `_I1`  
- 索引的下一步-到-最高有效的组件。  
+ 索引的下一步-到-最高有效组件。  
   
  `_I2`  
- 索引的最重要的组件。  
+ 索引的最低有效组件。  
   
 ### <a name="return-value"></a>返回值  
- 按索引元素值`_Index`。  
+ 按索引的元素值`_Index`。  
   
 ##  <a name="sample"></a>示例 
 
- 通过使用指定的采样配置示例在指定的坐标和详细程度的纹理。  
+ 使用指定的采样配置示例在指定的坐标和的详细信息级别的纹理。  
   
 ```  
 value_type sample(
@@ -475,26 +459,26 @@ value_type sample(
   
 ### <a name="parameters"></a>参数  
  `_Filter_mode`  
- 要使用采集 texture_view 的筛选器模式。 筛选器模式是相同的最小化、 最大化和 mipmap 筛选器。  
+ 要使用示例 texture_view 的筛选器模式。 筛选器模式是最小化、 最大化，和 mipmap 筛选器相同的。  
   
  `_Address_mode`  
- 若要使用采集 texture_view 寻址模式。 地址模式是为所有维度相同的。  
+ 要用于示例 texture_view 寻址模式。 对于所有维度相同的寻址模式。  
   
  `_Sampler`  
- 要使用采集 texture_view 的采样器配置。  
+ 要使用示例 texture_view 的采样器配置。  
   
  `_Coord`  
- 要采用从示例的坐标。 小数部分的坐标值用于纹素值之间内插。  
+ 要采用从示例的坐标。 小数部分组成的坐标值用于纹素值之间插入。  
   
  `_Level_of_detail`  
- 值指定要从取样的 mipmap 级别。 小数部分值用于两个 mipmap 级别之间插值。 详细信息的默认级别是 0，它表示最详细的 mip 级别。  
+ 值指定要从示例的 mipmap 级别。 小数部分的值用于两个 mipmap 级别之间插值。 默认级别的详细信息是 0，它表示最详细的 mip 级别。  
   
 ### <a name="return-value"></a>返回值  
- 内插的样本值。  
+ 内插的示例值中。  
   
 ##  <a name="set"></a>设置 
 
- 设置为指定值的指定索引处的元素的值。  
+ 设置为指定的值的指定索引处的元素的值。  
   
 ```  
 void set(
@@ -504,19 +488,18 @@ void set(
   
 ### <a name="parameters"></a>参数  
  `_Index`  
- 若要设置，可能是多维的元素的索引。  
+ 要设置，可能是多维的元素的索引。  
   
  `value`  
- 要设置为该元素的值。  
+ 要将元素设置为的值。  
   
 ##  <a name="value_type"></a>value_type 
 
- Texture_view 的元素的值类型。  
+ Texture_view 元素的值类型。  
   
 ```  
 typedef typename const value_type value_type;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

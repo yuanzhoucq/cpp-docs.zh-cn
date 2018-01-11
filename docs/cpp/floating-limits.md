@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ranges, floating-point constants
 - floating-point constants, limits
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - floating-point numbers [C++]
 - floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a19ed24e7765c9b0042831fc2eda9df937be42b3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 449356b7bce3f17862919e90d7fc7e72b2d57df6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-limits"></a>浮点限制
 **Microsoft 专用**  
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/25/2017
   
 ### <a name="limits-on-floating-point-constants"></a>对浮点常量的限制  
   
-|常量|含义|值|  
+|返回的常量|含义|“值”|  
 |--------------|-------------|-----------|  
 |FLT_DIG DBL_DIG LDBL_DIG|位数 q，以便 q 十进制数的浮点数可以被舍入到浮点表示形式并返回，而不会丢失精度。|6 15 15|  
 |FLT_EPSILON DBL_EPSILON LDBL_EPSILON|最小正数 x，以便 x + 1.0 不等于 1.0。|1.192092896e-07F 2.2204460492503131e-016 2.2204460492503131e-016|  
@@ -57,5 +55,5 @@ ms.lasthandoff: 09/25/2017
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [整数限制](../cpp/integer-limits.md)

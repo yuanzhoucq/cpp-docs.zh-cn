@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d339be4d907e0cfaaea1e80830b3fe77b1cc09b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9996fd10bad8578bd70739aa10b863bcea7f3c18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows 窗体执行 DDX/DDV 数据绑定
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)调用[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)创建控件匹配资源控件 id。 如果你使用`DDX_ManagedControl`为`CWinFormsControl`控件 （在向导生成的代码），不应调用`CreateManagedControl`显式为同一个控件。  
@@ -86,7 +89,7 @@ m_MyControl.GetControl()->textBox1->Text = "hello";
   
  你现在可以生成并运行应用程序。 请注意，在文本框中的任何文本将显示在弹出消息框中中，应用程序关闭时。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CWinFormsControl 类](../mfc/reference/cwinformscontrol-class.md)   
  [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)   
  [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c22164fdc2bd8236b6f4819609175c80bd472abf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc923e8c638f51720aaffbb8c26aaa65bb230731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="low-level-io"></a>低级别 I/O
 这些函数将为低于流 I/O 提供的操作的低级别操作直接调用操作系统。 低级别输入和输出调用不会缓冲数据或设置数据格式。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  `_dup` 和 `_dup2` 通常用于将预定义文件描述符与其他文件关联。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输入和输出](../c-runtime-library/input-and-output.md)   
  [按类别分的运行时例程](../c-runtime-library/run-time-routines-by-category.md)   
  [系统调用](../c-runtime-library/system-calls.md)
