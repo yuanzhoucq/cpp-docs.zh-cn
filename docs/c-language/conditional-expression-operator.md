@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e8c9b14ece9f3af56be11909679592cfe5ca2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acfb89584de60c41d17c532b389099b815d0fb3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conditional-expression-operator"></a>条件表达式运算符
 C 具有一个三元运算符：conditional-expression 运算符 (? :)。  
@@ -76,5 +77,5 @@ int y;
   
  在此示例中，声明两个函数（`f1` 和 `f2`）和两个变量（`x` 和 `y`）。 如果两个变量具有相同的值，则稍后在程序中将调用函数 `f1`。 否则，将调用 `f2`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [条件运算符：? :](../cpp/conditional-operator-q.md)

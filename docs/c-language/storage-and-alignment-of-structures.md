@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9c09137da32c7ef9d42f0302087379af922652f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-and-alignment-of-structures"></a>结构的存储和对齐
 **Microsoft 专用**  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  每个数据对象均具有一个 alignment-requirement。 对于结构，需求是其成员中的最大者。 为每个对象分配一个 offset，以便  
   
- offset `%` alignment-requirement `==` 0  
+ *offset* `%` *alignment-requirement* `==` 0  
   
  如果整型的大小相同，并且下一个位域适合当前分配单元而未跨位域的常见对齐需求所强加的边界，则将相邻位域打包到相同的 1 字节、2 字节或 4 字节分配单元中。  
   
@@ -49,5 +50,5 @@ min( n, sizeof( item ) )
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构声明](../c-language/structure-declarations.md)

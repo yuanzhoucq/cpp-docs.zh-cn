@@ -11,21 +11,21 @@ ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCConfiguration.OutputDirectory
-- VC.Project.VCConfiguration.IntermediateDirectory
-- VC.Project.VCConfiguration.ConfigurationType
-- VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: 9507ab2ed54d8160afdd8071b0779b51d6802bef
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: afebfa3585f780ea54961804174e8e763f51f34f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="makefile-project-properties-linux-c"></a>生成文件项目属性 (Linux C++)
-以下时 Linux 生成文件项目中可用属性的部分列表。 许多生成文件项目属性等于 
+
+以下时 Linux 生成文件项目中可用属性的部分列表。 许多生成文件项目属性与 Linux C++ 控制台应用程序项目属性相同。
 
 ## <a name="general"></a>常规
+
 属性 | 描述 | 选项
 --- | ---| ---
 输出目录 | 指定输出文件目录的相对路径；可以包含环境变量。
@@ -37,14 +37,17 @@ ms.lasthandoff: 10/31/2017
 远程生成项目目录 | 指定远程计算机或设备上项目的目录路径。
 
 ## <a name="debugging"></a>调试
+
 请参阅[调试属性 (Linux C++)](debugging-linux.md)
 
 ## <a name="copy-sources"></a>复制源文件
+
 请参阅[复制源项目属性 (Linux C++)](copy-sources-project.md)。
 
 ## <a name="build-events"></a>生成事件
 
-### <a name="pre-build-event"></a>预先生成事件
+### <a name="pre-build-event"></a>预生成事件
+
 属性 | 描述
 --- | ---
 命令行 | 指定让预生成事件工具运行的命令行。
@@ -53,26 +56,36 @@ ms.lasthandoff: 10/31/2017
 要复制的其他文件 | 指定要复制到远程系统的其他文件。 根据需要，可使用类似 fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2 的语法以本地到远程的映射对形式提供列表，其中可将本地文件复制到远程系统的指定远程位置。
 
 ### <a name="post-build-event"></a>后期生成事件
-命令行 | 指定使后期生成事件工具运行的命令行。
-说明 | 指定让后期生成事件工具显示的说明。
+
+属性 | 描述
+--- | ---
+命令行 | 指定让后期生成事件工具运行的命令行。
+描述 | 指定让后期生成事件工具显示的说明。
 在生成中使用 | 指定是否将该生成事件从当前配置的生成中排除。
 要复制的其他文件 | 指定要复制到远程系统的其他文件。 根据需要，可使用类似 fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2 的语法以本地到远程的映射对形式提供列表，其中可将本地文件复制到远程系统的指定远程位置。
 
 ### <a name="remote-pre-build-event"></a>远程预先生成事件
-命令行 | 指定供预先生成事件工具在远程系统上运行的命令行。
-说明 | 指定使预生成事件工具显示的说明。
+
+属性 | 描述
+--- | ---
+命令行 | 指定让预生成事件工具在远程系统上运行的命令行。
+描述 | 指定让预生成事件工具显示的说明。
 在生成中使用 | 指定是否将该生成事件从当前配置的生成中排除。
-要复制的其他文件 | 指定要从远程系统复制的其他文件。 （可选）可使用类似 fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2 的语法将列表提供为远程到本地映射对，其中可将远程文件复制到本地计算机的指定位置。
+要复制的其他文件 | 指定要从远程系统复制的其他文件。 根据需要，可使用类似 fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2 的语法以远程到本地的映射对形式提供列表，其中可将远程文件复制到本地计算机的指定位置。
 
 ### <a name="remote-post-build-event"></a>远程后期生成事件
-命令行 | 指定供后期生成事件工具在远程系统上运行的命令行。
-说明 | 指定让后期生成事件工具显示的说明。
+
+属性 | 描述
+--- | ---
+命令行 | 指定让后期生成事件工具在远程系统上运行的命令行。
+描述 | 指定让后期生成事件工具显示的说明。
 在生成中使用 | 指定是否将该生成事件从当前配置的生成中排除。
-要复制的其他文件 | 指定要从远程系统复制的其他文件。 （可选）可使用类似 fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2 的语法将列表提供为远程到本地映射对，其中可将远程文件复制到本地计算机的指定位置。
+要复制的其他文件 | 指定要从远程系统复制的其他文件。 根据需要，可使用类似 fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2 的语法以远程到本地的映射对形式提供列表，其中可将远程文件复制到本地计算机的指定位置。
 
 ## <a name="cc"></a>C/C++
 
 ### <a name="intellisense"></a>IntelliSense
+
 可在项目或文件级别设置 IntelliSense 属性，提供 IntelliSense 引擎的一些线索。 它们不影响编译。
 
 属性 | 描述
@@ -84,6 +97,7 @@ ms.lasthandoff: 10/31/2017
 附加选项 | 指定分析 C++ 文件时 Intellisense 使用的附加编译器开关。
 
 ### <a name="build"></a>生成
+
 属性 | 描述
 --- | ---
 “生成”命令行 | 指定用于运行“生成”命令的命令行。
@@ -91,10 +105,10 @@ ms.lasthandoff: 10/31/2017
 “清除”命令行 | 指定用于运行“清除”命令的命令行。
 
 ### <a name="remote-build"></a>远程生成
+
 属性 | 描述
 --- | ---
 “生成”命令行 | 指定用于运行“生成”命令的命令行。 这在远程系统上执行。
 “全部重新生成”命令行 | 指定用于运行“全部重新生成”命令的命令行。 这在远程系统上执行。
 “清除”命令行 | 指定用于运行“清除”命令的命令行。 这在远程系统上执行。
 输出 | 指定远程系统上由远程生成所生成的输出。
-

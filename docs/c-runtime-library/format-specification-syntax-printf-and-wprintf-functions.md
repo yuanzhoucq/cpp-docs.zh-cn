@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式规范语法：printf 和 wprintf 函数
 
@@ -79,17 +80,17 @@ ms.lasthandoff: 10/24/2017
 |**F**|浮点|与 **f** 格式相同，只不过 infinity 和 nan 输出为大写形式。|
 |**g**|浮点|有符号的值将显示为 **f** 或 **e** 格式，取其中对于给定的值和精度更为精简一个。 仅当值的指数小于 -4 或大于等于 *precision* 参数时，才使用 **e** 格式。 截去尾随零，仅当后跟一个或多个数字时，才会显示小数点。|
 |**G**|浮点|与 **g** 格式相同，只不过指数由 **E** 引入，而不是由 **e** 引入（如果适用）。|
-|**a**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0x*h.hhhh*__p±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用小写字母），*dd* 是一位指数或多位指数。 精度指定此点后的数字位数。|
-|**A**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用大写字母），*dd* 是一位指数或多位指数。 精度指定此点后的数字位数。|
+|**a**|浮点|有符号的十六进制双精度浮点值，形式为 [−]0x*h.hhhh*__p±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用小写字母），*dd* 是一位或多位指数。 精度指定此点后的数字位数。|
+|**A**|浮点|有符号的十六进制双精度浮点值，形式为 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾数的十六进制数（使用大写字母），*dd* 是一位或多位指数。 精度指定此点后的数字位数。|
 |**n**|指向整数的指针|目前成功写入流或缓冲区的字符数。 此值存储在地址作为自变量的整数中。 可通过参数大小规范前缀控制指向的整数的大小。 n 说明符默认为禁用；请参阅重要的安全说明了解相关信息。|
 |**p**|指针类型|将自变量显示为十六进制数中的地址。|
-|**s**|字符串|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
-|**S**|字符串|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|
+|**秒**|String|与 `printf` 函数一起使用时，指定单字节或多字节字符串；与 `wprintf` 函数一起使用时，指定宽字符字符串。 将于第一个空字符之前或达到精度值时显示字符。|
+|**S**|String|与 `printf` 函数一起使用时，指定宽字符字符串；与 `wprintf` 函数一起使用时，指定单字节或多字节字符串。 将于第一个空字符之前或达到精度值时显示字符。|
 |**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 结构|将 [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) 或 [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 结构的地址作为参数传递时，会显示包含在由结构的 `Buffer` 字段指向的缓冲区中的字符串。 使用 **w** 的大小修饰符前缀指定 `UNICODE_STRING` 参数，例如 `%wZ`。 结构的 `Length` 字段必须设置为字符串的长度（以字节为单位）。 结构的 `MaximumLength` 字段必须设置为缓冲区的长度（以字节为单位）。<br /><br /> 通常情况下，**Z** 类型字符仅在使用转换规范的驱动程序调试函数（如 `dbgPrint` 和 `kdPrint`）中使用。|
 
 从 Visual Studio 2015 开始，如果对应浮点转换说明符（**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**）的参数为无穷大、不定或 NaN，格式化的输出则符合 C99 标准。 下表列出了格式化的输出：
 
-|值|输出|
+|“值”|输出|
 |-----------|------------|
 |infinity|`inf`|
 |静默 NaN|`nan`|
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/24/2017
 
 在 Visual Studio 2015 之前，CRT 使用一种不同的非标准格式作为无穷大、不定和 NaN 值的输出：
 
-|值|输出|
+|“值”|输出|
 |-----------|------------|
 |+ 无穷|`1.#INF` 随机数字|
 |- 无穷|`-1.#INF` 随机数字|
@@ -215,7 +216,7 @@ ms.lasthandoff: 10/24/2017
 > **Microsoft 专用**  
 > **I**（大写的 i）、**I32**、**I64** 和 **w** 参数大小修饰符前缀是 Microsoft 扩展，且不符合 ISO C。 h 前缀（在与 `char` 类型的数据一起使用时）和 l（小写 L）前缀（在与 `double` 类型的数据一起使用时）是 Microsoft 扩展。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  

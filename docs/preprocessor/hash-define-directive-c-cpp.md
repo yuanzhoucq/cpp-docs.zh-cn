@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"define-directive-cc--microsoft-docs\"></a>定义指令 （C/c + +） |Microsoft 文档"
+title: "#定义指令 （C/c + +） |Microsoft 文档"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

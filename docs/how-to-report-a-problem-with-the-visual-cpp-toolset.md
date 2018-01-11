@@ -1,23 +1,22 @@
 ---
 title: "如何使用 Visual C++ 工具集报告问题 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何使用 Visual C++ 工具集报告问题
 
@@ -29,9 +28,9 @@ ms.lasthandoff: 11/15/2017
 
 - [如何准备报告](#prepare)，以及一篇优秀报告应包含哪些内容。
 
-- [发送报告的方式](#send)，以及如何让其与众不同。
-
 - [如何生成重现](#generate)，以及不同类型的重现。
+
+- [发送报告的方式](#send)，以及如何让其与众不同。
 
 无论对我们，还是对和你一样的其他开发者而言，你的报告都十分重要。 谢谢你帮助我们改进 Visual C++！
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 11/15/2017
 
 - 对所遇到问题的详细描述。
 
-- 一份“重现” - 用于演示问题的源代码。
+- 一份“重现”：用于演示问题的源代码。
 
 阅读以继续了解更多关于我们所需的特定信息，以及在何处可以找到它们的详细信息。
 
@@ -94,7 +93,7 @@ cl : Command line error D8003 : missing source filename
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>报告命令行的内容
 
-1. 找到并打开 **CL.command.1.tlog** 文件。 默认情况下，此文件位于 \\...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog。
+1. 找到并打开 **CL.command.1.tlog** 文件。 默认情况下，此文件位于 \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog。
 
    可在此文件中找到源代码文件的名称，其后是用于编译它们的命令行参数（每个分占一行）。
 
@@ -221,50 +220,13 @@ CONTEXT:
 
 对于这种类型的故障，如果使用的是链接时间代码生成 (LTCG)，请提供[链接重现](#link-repros)，如果不是，请提供[预处理过的重现](#preprocessed-repros)。 LTCG 由 cl.exe 的 `/GL` 命令行参数启用。
 
-## <a name="send"></a>发送报告的方式
-
-向我们提交报告的方式有多种。 可以使用 Visual Studio 内置的[报告问题工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或者给我们发送电子邮件。 提交报告的最佳方式取决于你遇到的问题类型、希望与调查报告的工程师互动的方式、以及是要跟踪其进度还是与社区共享报告。
-
-> [!NOTE]
-> 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft Visual Studio 产品系列隐私声明](https://www.visualstudio.com/dn948229)。
-
-### <a name="send-an-email"></a>发送电子邮件
-
-发送电子邮件是将报告直接发送到 Visual C++ 团队的另一种方式；可以通过 [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com) 与我们联系。
-
-如果选择通过电子邮件发送报告，可采用以下模板作为电子邮件的正文。 如果电子邮件正文中未包括源代码或其他文件，请不要忘记将其附加在电子邮件中。
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>使用“报告问题”工具
-
-Visual Studio 用户可以使用 Visual Studio 中的“报告问题”工具报告各种问题，操作简单，只需几次单击即可完成。 该工具提供了一个简单的表单，你可以使用它来指定所遇问题的详细信息，然后在不离开 IED 的情况下提交报告。
-
-对于本文中所讨论的工具集问题而言，通过“报告问题”工具提交报告并不常见，然而，如果它适合你，那么也不失为一个选择。
-
-> [!TIP]
-> 对于可能在 Visual Studio 中遇到的、与工具集无关的问题（例如 UI 问题、损坏的 IDE 功能或常规故障），“报告问题”工具可能是最佳之选，因为它具有屏幕截图功能，可以记录导致问题的 UI 操作。 请勿以发送电子邮件至 compilercrash@microsoft.com 的方式报告其他类型的错误。
-
 ## <a name="generate"></a> 生成重现
 
-重现是一个完整的自包含代码示例，用于演示所报告的问题。 重现**并非**一个代码片段 - 它必须是生成和运行的完整示例（你所报告的问题产生的错误除外）。 它应包含全部必需的 #include 指令，即使对标准标头亦是如此。
+重现是一个完整的自包含代码示例，用于演示所报告的问题。 重现并非一个代码片段；它必须是生成和运行的完整示例（你所报告的问题产生的错误除外）。 它应包含全部必需的 #include 指令，即使对标准标头亦是如此。
 
 此外，好的重新应是
 
-- **最小的。** 重现应尽可能最小，但仍能准确演示所遇到的问题。 重现无需复杂或真实 - 以简单扼要的重现为佳。 它们无需包含可运行的计数器示例代码，但在用于说明时亦可包含；只有导致问题的示例代码才是必需的。
+- **最小的。** 重现应尽可能最小，但仍能准确演示所遇到的问题。 重现无需复杂或真实；以简单扼要的重现为佳。 它们无需包含可运行的计数器示例代码，但在用于说明时亦可包含；只有导致问题的示例代码才是必需的。
 
 - **自包含。** 重现应避免不需要的依赖项。 如果无需第三方库就可重现，请直接重现。 如果无需任何库代码就可重现（可使用 `std::out` 和`printf()`），请直接重现。 尽可能减少我们需要考虑的有利于解决问题的代码量，这对我们而言极为有用。
 
@@ -330,3 +292,51 @@ Visual Studio 用户可以使用 Visual Studio 中的“报告问题”工具报
 如果无法将问题减少到单个源文件或预处理过的重现，且此问题无需链接重现，我们可以调查 IDE 项目。 项目内的代码应仍保持最小，本文档中的所有指导仍然适用。
 
 将重现创建为一个最小的 IDE 项目，再将整个目录结构压缩成 .zip 文件或其他相似文件，并将其附加到报告。
+
+## <a name="send"></a>发送报告的方式
+
+向我们提交报告的方式有多种。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可随附电子邮件发送报告，但首选前两种方法。 所选方法取决于你希望与调查报告的工程师互动的方式，以及是要跟踪其进度还是与社区共享报告。
+
+> [!NOTE]
+> 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft Visual Studio 产品系列隐私声明](https://www.visualstudio.com/dn948229)。
+
+### <a name="use-the-report-a-problem-tool"></a>使用“报告问题”工具
+
+Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告各种问题，单击几下即可完成。 该工具提供了一个简单的表单，你可以使用它来指定所遇问题的详细信息，然后在不离开 IED 的情况下提交报告。
+
+可在 IDE 中使用“报告问题”工具快速而轻松地报告问题。 可选择“快速启动”搜索框旁边的“发送反馈”图标，从标题栏中进行访问，也可通过“帮助” > “发送反馈” > “报告问题”在菜单栏上找到它。
+
+选择报告问题时，请首先在开发者社区中搜索是否有类似的问题。 如果有人之前已报告过你的问题，可投票赞成该主题并添加其他细节评论。 如果找不到类似问题，请在“Visual Studio 反馈”对话框底部选择“报告新问题”按钮，再按照步骤报告你的问题。
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>使用“Visual Studio 开发者社区”页面
+
+还可使用“Visual Studio 开发者社区”页面轻松报告问题并查找有关 Visual Studio 以及 C++ 编译器、工具和库的解决方案。 可使用 [Visual Studio 问题](https://developercommunity.visualstudio.com/spaces/8/index.html)页面报告有关 IDE 或安装的问题。 有关 C++ 编译器、链接器及其他工具和库的相关问题，请使用 [C++ 问题](https://developercommunity.visualstudio.com/spaces/62/index.html)页面。
+
+在每页顶部附近的“开发者社区”横幅中有一个搜索框，可用于查找报告了与你问题相似的问题的帖子或主题。 你可能发现现有主题中已存在解决方案或与你问题相关的其他有用信息。 如果有人之前已报告过相同问题，请投票赞成该主题并进行评论，而不是创建新的问题报告。
+
+如果之前无人报告你的问题，请选择“开发者社区”页面上搜索框附近的“报告问题”按钮。 系统可能要求你登录 Visual Studio 帐户并同意开发者社区应用访问你的个人资料。 登录后，将直接转到可报告问题的页面。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
+
+### <a name="send-an-email"></a>发送电子邮件
+
+还可使用电子邮件将报告直接发送给 Visual C++ 团队。 可通过 [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com) 联系我们。仅在其他两种方法均不可用时才使用此方法，因为相对于使用“报告问题”工具或网页向开发者社区报告问题，并未如此紧密地跟踪电子邮件，且评论和解决方案对其他 Visual Studio 用户不可见。
+
+如果选择通过电子邮件发送报告，可采用以下模板作为电子邮件的正文。 如果电子邮件正文中未包括源代码或其他文件，请不要忘记将其附加在电子邮件中。
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> 对于可能在 Visual Studio 中遇到的、与工具集无关的问题（例如 UI 问题、损坏的 IDE 功能或常规故障），“报告问题”工具可能是最佳之选，因为它具有屏幕截图功能，可以记录导致问题的 UI 操作。 请勿以发送电子邮件至 compilercrash@microsoft.com 的方式报告其他类型的错误。
+

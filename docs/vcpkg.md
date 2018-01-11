@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：用于 Windows 的程序包管理器 
 vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上第三方库的购置与安装。 如果项目要使用第三方库，建议通过 vcpkg 来安装它们。 vcpkg 同时支持开源和专有库。 已测试 vcpkg 公共目录中所有库与 Visual Studio 2015 及 Visual Studio 2017 的兼容性。 截至 2017 年 5 月，目录中已有超过 238 个库，并且 C++ 社区正在此基础上持续添加更多库。
@@ -28,7 +29,7 @@ vcpkg 是一种命令行程序包管理器，可极大简化 Windows 上第三�
 
 如果在端口集合中使用专用库创建 vcpkg 克隆，则可以添加一个端口来下载预生成二进制文件和标头，并编写一个 portfile.cmake 文件，轻松将上述文件复制到所需的地方。
 
-[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。*
+[1] 注意：某些专有库不具有这些源。在这些情况下，vcpkg 将下载可兼容预生成二进制文件。
 
 ## <a name="installation"></a>安装
 从 GitHub (https://github.com/Microsoft/vcpkg) 克隆 vcpkg 存储库。 可凭喜好下载到任意文件夹位置。
@@ -107,14 +108,16 @@ zlib:x86-windows        1.2.11   A compression library
 公共目录始终与最新版本的库保持一致。 要判断哪个本地库已过期，请使用 `vcpkg update`。 当准备好将端口集合更新到最新版本的公共目录时，仅需对 github 存储库执行 Git 拉取操作，或创建一个新克隆（如有需要可保留旧克隆）。
 
 ### <a name="contribute-new-libraries"></a>发布新库
-可以在自己的专用端口集合中添加任意库。 为公共目录建议一个新库， 
-
+可以在自己的专用端口集合中添加任意库。 要建议适合公共目录的新库，请在 [GitHub vcpkg 问题页](https://github.com/Microsoft/vcpkg/issues)上打开一个问题。
 
 ### <a name="remove-a-library"></a>删除库
 键入 `vcpkg remove` 可删除已安装的库。 如果存在任何依赖于它的库，则系统将提示通过 `--recurse` 重新运行命令，如执行此操作，则下游的所有库都将被删除。
 
 ### <a name="customize-vcpkg"></a>自定义 vcpkg
 可凭自身喜好随意修改 vcpkg 的克隆。 可创建多个 vcpkg 克隆，修改每个克隆中的端口文件，使其包含特定版本的库或指定命令行参数。 例如在某企业中，某组的开发者可能正在使用拥有某一依赖项集的软件，而其他组可能拥有不同的集。 可设置两个 vcpkg 克隆并对其进行修改，以便根据需要来下载不同版本的库和编译开关等。 
+
+### <a name="uninstall-vcpkg"></a>卸载 vcpkg
+只需删除目录。 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 文件夹层次结构
 所有 vcpkg 功能和数据都是完全自包含在单独目录层次结构中的，这称为“实例”。 没有注册表设置或环境变量。 可以在计算机上设置任意数量的 vcpkg 实例，它们彼此互不干扰。 

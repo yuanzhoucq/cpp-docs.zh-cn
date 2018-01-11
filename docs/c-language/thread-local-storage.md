@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>线程本地存储
 **Microsoft 专用**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  在声明静态绑定线程本地变量时，必须遵守这些准则：  
   
--   __declspec(thread) 的使用可能会影响 DLL 导入的[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)。  
+-   仅在引发 DLL 加载的线程上和已在进程中运行的线程上初始化具有动态初始化的线程局部变量。 有关详细信息，请参阅[线程](../cpp/thread.md)。  
   
 -   您只能将 thread 特性应用于数据声明和定义。 它不能用于函数声明或定义。 例如，下面的代码生成一个编译器错误：  
   
@@ -101,5 +102,5 @@ __declspec( thread ) int tls_i = 1;
   
  **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 扩展的存储类特性](../c-language/c-extended-storage-class-attributes.md)

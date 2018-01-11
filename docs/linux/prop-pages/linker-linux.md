@@ -11,36 +11,19 @@ ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCLinkerTool.OutputFile
-- VC.Project.VCLinkerTool.ShowProgress
-- VC.Project.VCLinkerTool.Version
-- VC.Project.VCLinkerTool.VerboseOutput
-- VC.Project.VCLinkerTool.UnresolvedReferences
-- VC.Project.VCLinkerTool.OptimizeForMemory
-- VC.Project.VCLinkerTool.SharedLibrarySearchPath
-- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
-- VC.Project.VCLinkerTool.ForceSymbolReferences
-- VC.Project.VCLinkerTool.LibraryDependencies
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.GenerateMapFile
-- VC.Project.VCLinkerTool.Relocation
-- VC.Project.VCLinkerTool.FunctionBinding
-- VC.Project.VCLinkerTool.NoExecStackRequired
-- VC.Project.WholeArchive
-- VC.Project.AdditionalOptionsPage
-- VC.Project.VCLinkerTool.AdditionalDependencies
-ms.openlocfilehash: 963d73e73e42930f0245c0fef443da27bf451bc6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 5396021410ec04baa8eb1218c676919a322ac978
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="linker-properties-linux-c"></a>链接器属性 (Linux C++)
 
 ## <a name="general"></a>常规
+
 属性 | 描述 | 选项
 --- | ---| ---
 输出文件 | 该选项可重写链接器创建的程序的默认名称和位置。 (-o)
@@ -59,6 +42,7 @@ ms.lasthandoff: 10/31/2017
 复制输出 | 指定是否要将生成输出文件从远程系统复制到本地计算机。
 
 ## <a name="input"></a>输入
+
 属性 | 描述 | 选项
 --- | ---| ---
 忽略特定默认库 | 指定一个或多个要忽略的默认库的名称。 （--exclude-libs lib、lib）
@@ -68,21 +52,17 @@ ms.lasthandoff: 10/31/2017
 附加依赖项 | 指定要添加到链接命令行的附加项。
 
 ## <a name="debugging"></a>调试
+
 属性 | 描述 | 选项
 --- | ---| ---
 调试程序符号信息 | 输出文件中的调试程序符号信息。 | 全部包含<br>仅忽略调试程序符号信息<br>忽略所有符号信息<br>
 映射文件名 | “映射”选项通知链接器使用用户指定的名称创建映射文件。 (-Map=)
 
 ## <a name="advanced"></a>高级
+
 属性 | 描述 | 选项
 --- | ---| ---
 重定位之后将变量标记为只读 | 此选项在重定位之后将变量标记为只读。
 启用即时函数绑定 | 此选项标记用于即时函数绑定的对象。
 不需要可执行堆栈 | 此选项将输出标记为不需要可执行堆栈。
 整个存档 | 整个存档使用来自源和其他依赖项的所有代码。
-
-
-## <a name="additional-options"></a>附加选项
-
-
-

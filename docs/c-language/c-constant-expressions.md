@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>C 常量表达式
 常量表达式将在编译时而不是运行时计算，并且可在可使用常量的任何位置使用。 常量表达式的计算结果必须是位于该类型的可表示值范围内的常量。 常量表达式的操作数可以是整数常量、字符常量、浮点常量、枚举常量、类型强制转换、`sizeof` 表达式和其他常量表达式。  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/24/2017
   
  预处理器指令中使用的常量表达式受其他限制的约束。 因此，它们被称为“受限制的常量表达式”。 受限制的常量表达式不能包含 `sizeof` 表达式、枚举常量、到任何类型的类型强制转换或浮点类型常量。 但它可包含特殊常量表达式 `defined (`identifier`)`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [操作数和表达式](../c-language/operands-and-expressions.md)
