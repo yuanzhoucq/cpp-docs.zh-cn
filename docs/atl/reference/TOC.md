@@ -243,7 +243,6 @@
 ## [窗口类宏](window-class-macros.md)
 ## [Windows 消息宏](windows-messages-macros.md)
 # [ATL 全局变量](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [ATL 向导和对话框](atl-wizards-and-dialog-boxes.md)
 ## [应用程序设置，ATL 项目向导](application-settings-atl-project-wizard.md)
 ## [ATL Active Server Page 组件向导，ASP](asp-atl-active-server-page-component-wizard.md)

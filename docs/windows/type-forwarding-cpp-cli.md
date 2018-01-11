@@ -1,103 +1,104 @@
 ---
-title: "类型转发 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "类型转发, Visual C++"
+title: "类型转发 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: type forwarding, Visual C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6898c011a4e2e907cd745ccb206b0e0f0b37e78f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 类型转发 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*类型转发* 可以将从一个程序集 \(程序集 A\) 的类型到另一个程序集 \(程序集 B\)，这样中，重新编译使用程序集 A. 的客户端是不必要的。  
+# <a name="type-forwarding-ccli"></a>类型转发 (C++/CLI)
+*类型转发*允许你将移动一种类型从一个程序集 （程序集 A） 到另一个程序集 （程序集 B），以便不需要重新编译使用程序集 A.的客户端  
   
-## 所有平台  
- 此功能在中任何没有运行时支持。  
+## <a name="all-platforms"></a>所有平台  
+ 所有运行时不支持此功能。  
   
-## Windows Runtime — Windows 运行时  
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 不支持此功能。  
+## <a name="windows-runtime"></a>Windows 运行时  
+ 在 Windows 运行时中不支持此功能。  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## 公共语言运行时  
- 下面的代码示例演示如何在 MDI 中使用控件。  
+## <a name="common-language-runtime"></a>公共语言运行时  
+ 下面的代码示例演示如何使用类型转发。  
   
-### 语法  
+### <a name="syntax"></a>语法  
   
 ```  
 #using "new.dll"  
 [assembly:TypeForwardedTo(type::typeid)];  
 ```  
   
-### 参数  
+### <a name="parameters"></a>参数  
  `new`  
- 将类型定义的程序集。  
+ 要向其中移动类型定义的程序集。  
   
  `type`  
- 要移动到另一个程序集中的类型定义。  
+ 要移动到另一个程序集其定义的类型。  
   
-### 备注  
- 在和客户端应用程序使用组件 \(程序集\) 之后计时器，可以使用类型转发将从组件 \(程序集\) 的类型的另一程序集 \(和任何其他组件，提供更新的程序集需要\)，并且，客户端应用程序将运行，而未经重新编译。  
+### <a name="remarks"></a>备注  
+ 后一个组件 （程序集） 附带，客户端应用程序使用，你可以使用类型转发若要从组件 （程序集） 的类型移到另一个程序集，请提供更新的组件 （和所需的任何其他程序集） 和客户端应用程序仍将没有正在重新编译正常进行。  
   
- 传输组件的类型仅适用于引用由现有的应用程序。  当重新生成应用程序时，必须在应用程序的任何类型相应的程序集引用。  
+ 类型转发仅适用于引用的现有应用程序的组件。 当你重新生成应用程序时，必须使用应用程序中的所有类型的适当的程序集引用。  
   
- 在传输类型 \(从程序集 A 的类型\)，则必须添加该类型的 `TypeForwardedTo` 特性，以及程序集引用。  所引用的程序集必须包含以下操作之一：  
+ （A 类型） 将类型转发从程序集，则必须将添加`TypeForwardedTo`该类型，以及程序集引用的属性。 引用的程序集必须包含以下项之一：  
   
--   A. 类型的定义。  
+-   类型 a 定义  
   
--   类型中的一个 `TypeForwardedTo` 特性，以及程序集引用。  
+-   A`TypeForwardedTo`类型 A，以及程序集引用的属性。  
   
- 可以正向包括类型的示例：  
+ 可以将其转发的类型的示例包括：  
   
--   ref classes  
+-   ref 类  
   
--   value classes  
+-   值类  
   
 -   枚举  
   
 -   接口  
   
- 不可以将以下类型：  
+ 不能转发以下类型：  
   
 -   泛型类型  
   
--   本机类型。  
+-   本机类型  
   
--   嵌套类型 \(如果要转发嵌套类型，应该将封闭的类型\)  
+-   嵌套类型 （如果你想要转发的嵌套的类型，应转发封闭类型）  
   
- 您可以将类型转换采用任何语言编写的程序集面向公共语言运行时。  
+ 可以将类型转发到任何面向公共语言运行时的语言编写的程序集。  
   
- 因此，用于生成 A.dll，如果程序集的源代码文件包含一个类型定义 \(`ref class MyClass`\) 以及要将该类型定义移到程序集时，您将：  
+ 因此，如果用于生成程序集 A.dll 源代码文件包含的类型定义 (`ref class MyClass`)，并且希望将该类型移到程序集 B.dll 的定义，你将：  
   
-1.  移动 `MyClass` 类型定义移到用于的源代码文件生成 B.dll。  
+1.  移动`MyClass`类型对用于生成 B.dll 源代码文件的定义。  
   
-2.  生成 B.dll 程序集  
+2.  生成程序集 B.dll  
   
-3.  删除使用的源代码中 `MyClass` 类型定义生成 A.dll，然后用以下代码替换它：  
+3.  删除`MyClass`类型从源代码中用于生成 A.dll，并将其替换为以下定义：  
   
     ```  
     #using "B.dll"  
     [assembly:TypeForwardedTo(MyClass::typeid)];  
     ```  
   
-4.  生成 A.dll 任务程序集。  
+4.  生成程序集 A.dll。  
   
-5.  使用 A.dll，而不必重新编译该客户端应用程序。  
+5.  无需重新编译客户端应用程序使用 A.dll。  
   
-### 要求  
- 编译器选项：**\/clr**
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**

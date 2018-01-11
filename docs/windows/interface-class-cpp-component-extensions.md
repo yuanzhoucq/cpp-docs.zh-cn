@@ -1,98 +1,100 @@
 ---
-title: "接口类（C++ 组件扩展） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "interface_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interface class 关键字"
-  - "interface struct 关键字"
+title: "接口类 （c + + 组件扩展） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: interface_CPP
+dev_langs: C++
+helpviewer_keywords:
+- interface class keyword
+- interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 30
-caps.handback.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 接口类（C++ 组件扩展）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-声明接口。 有关托管接口的信息，请参阅[接口类](../cpp/interface.md)。  
+# <a name="interface-class--c-component-extensions"></a>接口类（C++ 组件扩展）
+声明接口。  在本机接口上的信息，请参阅[__interface](../cpp/interface.md)。  
   
-## 所有运行时  
+## <a name="all-runtimes"></a>所有运行时  
  **语法**  
   
 ```  
   
-        interface_access interface class  name :  inherit_access base_interface {};  
-interface_access interface struct name :  inherit_access base_interface {};  
+interface_access  
+interface class  
+ name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
  **参数**  
   
- *interface\_access*  
- 一个接口的可访问性在程序集之外的。可能的值为 **public** 和 `private` （`private` 是默认的）。嵌套的接口不能有 *interface\_access* 说明符。  
+ *interface_access*  
+ 程序集之外的接口的可访问性。  可能的值为**公共**和`private`。  默认为 `private`。  嵌套的接口不能具有*interface_access*说明符。  
   
  *name*  
- 接口名。  
+ 接口的名称。  
   
- *inherit\_access*  
- *base\_interface* 可访问性。基本接口中唯一允许的可访问性为 `public` \(默认值\)。  
+ *inherit_access*  
+ 可访问性*base_interface*。  唯一允许可访问性基接口为`public`（默认值）。  
   
- *base\_interface*（可选）  
- 接口的一个基接口。*name*  
+ *base_interface* （可选）  
+ 接口的基接口*名称*。  
   
  **备注**  
   
- **interface struct** 与 **接口类**等效。  
+ **接口结构**等效于**接口类**。  
   
- 接口可以包含函数、事件和属性的声明。所有接口成员具有公共可访问性。  接口也可以包含静态数据成员、函数、事件和属性，并且，这些静态成员在接口必须定义。  
+ 接口可以包含声明的函数、 事件和属性的声明。  所有接口成员都具有公共可访问性。 接口还可以包含静态数据成员、 函数、 事件和属性，并且必须在接口中定义这些静态成员。  
   
- Interfaces 定义类所能实现如何。  接口不是类，而类仅能实现接口。  当类中定义接口中声明的函数，则函数实现，未被重写。  因此，该名称包含不查找接口成员。  
+ 接口定义可能如何实现一个类。 接口不是类和类只能实现接口。 当一个类定义在接口中声明的函数时，该函数实现，不重写。 因此，名称查找不包括接口成员。  
   
- 继承自接口的类必须实现接口成员。  当实现接口 *时名称* 还必须在 `base_interface` 中实现接口会列出。  
+ 类或派生自接口的结构必须实现该接口的所有成员。 在实现接口时*名称*还必须实现中的在接口`base_interface`列表。  
   
- 有关详细信息，请参阅：  
+ 有关详细信息，请参见:  
   
 -   [接口静态构造函数](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
   
--   [泛型接口 \(Visual C\+\+\)](../windows/generic-interfaces-visual-cpp.md)  
+-   [泛型接口 (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- 有关其他 CLR 类型的信息，请参见 [类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
+ 有关其他 CLR 类型的信息，请参阅[类和结构](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
- 可以检测编译时类型是否与 `__is_interface_class(``type``)`的接口。  有关详细信息，请参阅[编译器使用类型特征支持](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 你可以在编译时检测类型是否与接口`__is_interface_class(type)`。 有关详细信息，请参阅[编译器支持类型特征](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
- 在开发环境中，您可通过高亮关键字，获取这些关键字的 F1 帮助（例如 `interface class`）。  
+ 在开发环境中，你可以获取的 F1 帮助上这些关键字通过突出显示关键字 (`interface class`，例如)，然后按 F1。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
- \(此语言功能没有只适用于 Windows 运行时的备注。）  
+ (此语言功能没有只适用于 Windows 运行时的备注。）  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
  （此语言功能没有只适用于公共运行时的备注。）  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-### 示例  
+### <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例演示对接口如何定义时钟函数的行为。  
+ 下面的代码示例演示如何接口可以定义 clock 函数的行为。  
   
 ```  
 // mcppv2_interface_class.cpp  
@@ -184,16 +186,25 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **在Function\_3**  
- **在Function\_2**  
- **在Function\_1**  
- **8**  
- **OnClick:7，3.14159**  
- **在Function\_1** **示例**  
+```Output  
+in Function_3  
   
- 下面的代码示例演示两种方法来实现具有多个在接口声明相同的签名的函数，类的位置使用这些接口。  
+in Function_2  
+  
+in Function_1  
+  
+8  
+  
+OnClick: 7, 3.14159  
+  
+in Function_1  
+```  
+  
+ **示例**  
+  
+ 下面的代码示例演示两种方式使用相同的签名声明在多个接口和类其中使用这些接口实现函数。  
   
 ```  
 // mcppv2_interface_class_2.cpp  
@@ -218,5 +229,5 @@ ref struct R : I, J {
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

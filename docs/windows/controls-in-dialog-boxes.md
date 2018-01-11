@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 314bd0fb81c3ff33f268cea4f3f9f2786cbe3c68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 02ca3523de9341c14d2e2a9837ba84f5625a3379
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controls-in-dialog-boxes"></a>对话框中的控件
 你可以将控件添加到对话框框中使用[对话框编辑器选项卡](../windows/dialog-editor-tab-toolbox.md)中[工具箱窗口](/visualstudio/ide/reference/toolbox)，从而使你可以选择所需控件并将其拖到对话框。 默认情况下，工具箱窗口设置为自动隐藏。 它显示为你的解决方案的左边距上的选项卡打开对话框编辑器时的不同而不同。 但是，通过单击，到位收回工具箱窗口**自动隐藏**窗口右上角的按钮。 有关如何控制此窗口的行为的详细信息，请参阅[窗口管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
@@ -54,12 +57,12 @@ ms.lasthandoff: 10/24/2017
   
 -   [指定对话框的位置和大小](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 有关将资源添加到托管项目的信息，请参阅[桌面应用中的资源](/dotnet/framework/resources/index)中*.NET Framework 开发指南。* 有关手动将资源文件添加到托管项目、 访问资源、 显示静态资源和将资源字符串分配给属性的信息，请参阅[对于桌面应用程序创建资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和本地化的资源在托管应用中的信息，请参阅[Globalizing 和本地化的.NET Framework 应用程序](/dotnet/standard/globalization-localization/index)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  Win32  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加事件处理程序对话框控件](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [对话框控件和变量类型](../ide/dialog-box-controls-and-variable-types.md)   
  [对话框编辑器](../windows/dialog-editor.md)

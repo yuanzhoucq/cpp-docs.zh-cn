@@ -1,32 +1,33 @@
 ---
-title: "pointer_default | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pointer_default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointer_default attribute"
+title: "pointer_default |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pointer_default
+dev_langs: C++
+helpviewer_keywords: pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b55bf95c7abdffe8dd0a0e0071d86f06baad344e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# pointer_default
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-为所有指针指定默认指针属性，但出现在参数列表的顶部指针。  
+# <a name="pointerdefault"></a>pointer_default
+指定所有的指针，除顶级出现在参数列表的指针的指针默认属性。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -35,19 +36,19 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *值*  
- 描述指针类型的值: **PTR**、 `ref`或 **单个**。  
+ 一个值，描述指针类型： **ptr**， `ref`，或**唯一**。  
   
-## 备注  
- **pointer\_default** C\+\+ 特性具有与 [pointer\_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL 属性相同。  
+## <a name="remarks"></a>备注  
+ **Pointer_default** c + + 属性具有相同的功能[pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL 特性。  
   
-## 示例  
- 为 [defaultvalue](../windows/defaultvalue.md) 参见示例为 **pointer\_default**的示例使用。  
+## <a name="example"></a>示例  
+ 请参阅示例[defaultvalue](../windows/defaultvalue.md)的示例使用**pointer_default**。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-### 属性上下文  
+### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
@@ -56,9 +57,8 @@ caps.handback.revision: 9
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
- 有关属性上下文的更多信息，请参见 [属性上下文](../windows/attribute-contexts.md)。  
+ 有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## 请参阅  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-cn/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>请参阅  
+ [IDL 特性](../windows/idl-attributes.md)   
+ [接口特性](../windows/interface-attributes.md)   

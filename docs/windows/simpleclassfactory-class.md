@@ -1,32 +1,33 @@
 ---
-title: "SimpleClassFactory 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleClassFactory 类"
+title: "SimpleClassFactory 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleClassFactory
+dev_langs: C++
+helpviewer_keywords: SimpleClassFactory class
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 840862915e90accbab254f5a9003446471608a2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SimpleClassFactory 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-提供基本机制创建基类。  
+# <a name="simpleclassfactory-class"></a>SimpleClassFactory 类
+提供创建基类的基本机制。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<  
@@ -35,26 +36,26 @@ template<
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `Base`  
- （基类）  
+ 基类。  
   
-## 备注  
- 此类必须具有默认构造函数。  
+## <a name="remarks"></a>备注  
+ 基类必须提供一个默认构造函数。  
   
- 下面的代码示例演示如何使用带有 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) 宏的 SimpleClassFactory。  
+ 下面的代码示例演示如何使用与 SimpleClassFactory [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)宏。  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 公共方法  
+### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
-|--------|--------|  
-|[SimpleClassFactory::CreateInstance 方法](../windows/simpleclassfactory-createinstance-method.md)|创建指定接口的实例。|  
+|名称|描述|  
+|----------|-----------------|  
+|[SimpleClassFactory::CreateInstance 方法](../windows/simpleclassfactory-createinstance-method.md)|创建指定的接口的实例。|  
   
-## 继承层次结构  
+## <a name="inheritance-hierarchy"></a>继承层次结构  
  `I0`  
   
  `ChainInterfaces`  
@@ -77,10 +78,10 @@ class SimpleClassFactory : public ClassFactory<>;
   
  `SimpleClassFactory`  
   
-## 要求  
- **标头:** module.h  
+## <a name="requirements"></a>惠?  
+ **标头：** module.h  
   
- **命名空间:** Microsoft::WRL  
+ **命名空间：** Microsoft::WRL  
   
-## 请参阅  
- [Microsoft::WRL 命名空间](../windows/microsoft-wrl-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft::WRL Namespace](../windows/microsoft-wrl-namespace.md)

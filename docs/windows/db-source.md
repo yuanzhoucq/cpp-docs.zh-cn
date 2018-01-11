@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89f07745d2a9f0f832f42c512e0671b4114a80c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 18c4a4af3f8df4e3af5f6aae8f6643db553c7373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbsource"></a>db_source
 创建与数据源的连接。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   名称（可选）  
  当你使用`db_source`类、*名称*是具有的数据源对象的一个实例`db_source`特性应用于它 （请参阅示例 1）。 当你使用`db_source`在方法实现中，内联*名称*是一个变量 （本地到方法），可用来访问数据源 （请参见示例 2）。 请将此传递*名称*到`source_name`参数**db_command**要与命令关联的数据源。  
   
- `hresult`（可选）  
+ `hresult` （可选）  
  标识将接收此数据库命令的 `HRESULT` 的变量。 如果该变量不存在，属性将自动插入。  
   
 ## <a name="remarks"></a>备注  
@@ -75,18 +78,18 @@ ms.lasthandoff: 10/24/2017
 class CMyCommand {};  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 ### <a name="attribute-context"></a>特性上下文  
   
 |||  
 |-|-|  
 |**适用对象**|**类**、 `struct`、成员、方法、本地|  
-|**可重复**|No|  
+|**可重复**|否|  
 |**必需的特性**|无|  
 |**无效的特性**|无|  
   
  有关特性上下文的详细信息，请参见 [特性上下文](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者特性](../windows/ole-db-consumer-attributes.md)   

@@ -18,11 +18,14 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf02b1c8aa84688df5ef29f4c5e69fa818b31904
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast（C++ 组件扩展）
 如果成功，则 `safe_cast` 操作以指定类型的形式返回指定表达式；否则引发 `InvalidCastException`。  
@@ -69,7 +72,7 @@ expression
 ### <a name="remarks"></a>备注  
  `safe_cast`引发`InvalidCastException`如果无法转换*表达式*到由指定的类型*类型 id*。若要捕获`InvalidCastException`，指定[/EH （异常处理模型）](../build/reference/eh-exception-handling-model.md)编译器选项，并使用 try/catch 语句。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/ZW**  
   
 ### <a name="examples"></a>示例  
@@ -149,7 +152,7 @@ expression
   
 -   [如何：在 C++/CLI 中使用 safe_cast](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  编译器选项： **/clr**  
   
 ### <a name="examples"></a>示例  
@@ -187,5 +190,5 @@ int main() {
 Caught expected exception  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)
