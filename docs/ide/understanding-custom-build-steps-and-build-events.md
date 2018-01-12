@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b724190fc409d14a0bffdbc63b369b9643f321c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9abb7ff0b9a39656999e7a53b476056f7a5b1558
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自定义生成步骤和生成事件
 在 Visual c + + 开发环境中，有三种基本方法来自定义生成过程：  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/24/2017
   
  `custom build step on the project`和`post-build event`运行所有其他生成后按顺序处理完成。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成 Visual Studio 中的 c + + 项目](../ide/building-cpp-projects-in-visual-studio.md)   
  [用于生成命令和属性的公共宏](../ide/common-macros-for-build-commands-and-properties.md)   
  [工具生成顺序对话框](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

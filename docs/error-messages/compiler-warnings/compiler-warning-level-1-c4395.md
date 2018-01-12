@@ -1,34 +1,33 @@
 ---
-title: "编译器警告（等级 1）C4395 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4395"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4395"
+title: "编译器警告 （等级 1） C4395 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4395
+dev_langs: C++
+helpviewer_keywords: C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4befed8df0b9fe9960db1060150b238c0707d8f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4395
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“function”: 将在 initonly 数据成员“member”的副本上调用成员函数  
+# <a name="compiler-warning-level-1-c4395"></a>编译器警告（等级 1）C4395
+function： 成员函数将调用上一份 initonly 数据成员 member  
   
- 在 [initonly](../../dotnet/initonly-cpp-cli.md) 数据成员上调用了成员函数。C4395 警告：**initonly** 数据成员无法由函数修改。  
+ 成员函数上调用了[initonly (C + + /cli CLI)](../../dotnet/initonly-cpp-cli.md)数据成员。  C4395 警告**initonly**数据成员不能由函数修改。  
   
- 下面的示例生成 C4395：  
+ 下面的示例生成 C4395:  
   
 ```  
 // C4395.cpp  

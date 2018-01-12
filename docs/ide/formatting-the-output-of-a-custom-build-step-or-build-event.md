@@ -1,61 +1,62 @@
 ---
-title: "设置自定义生成步骤或生成事件输出的格式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "生成事件 [C++], 输出格式"
-  - "生成步骤 [C++], 输出格式"
-  - "builds [C++], 生成事件"
-  - "builds [C++], 自定义生成步骤"
-  - "自定义生成步骤 [C++], 输出格式"
-  - "事件 [C++], 生成"
+title: "格式化输出的自定义生成步骤或生成事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- builds [C++], build events
+- custom build steps [C++], output format
+- events [C++], build
+- build events [C++], output format
+- build steps [C++], output format
+- builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53720e93c7d45f1eaeb0e62749194720373bee1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 设置自定义生成步骤或生成事件输出的格式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果正确设置了自定义生成步骤或生成事件输出的格式，则会给用户带来以下利益：  
+# <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>设置自定义生成步骤或生成事件输出的格式
+如果自定义生成步骤或生成事件的输出的格式正确，用户将获得以下优势：  
   
--   在**“输出”**窗口中对警告和错误计数。  
+-   警告和错误中将计入**输出**窗口。  
   
--   输出出现在**“任务列表”**窗口中。  
+-   输出显示在**任务列表**窗口。  
   
--   在**“输出”**窗口中单击输出将显示适当的主题。  
+-   单击中的输出**输出**窗口显示的相应主题。  
   
--   在**“任务列表”**或**“输出”**窗口中启用 F1 操作。  
+-   在启用 F1 操作**任务列表**窗口或**输出**窗口。  
   
- 输出的格式应该为：  
+ 输出的格式应为：  
   
- {*filename* \(*line\#* \[, *column\#*\]\) &#124; *toolname*} **:**  
+ {*filename* (*行 #* [，*列 #*]) &#124;*toolname*} **:**  
   
- \[*any text*\] {**error** &#124; **warning**} *code\#\#\#\#***:** *localizable string*  
+ [*任何文本*] {**错误**&#124;**警告**}*代码 # # #***:***可本地化的字符串*  
   
- \[ *any text* \]  
+ [*任何文本*]  
   
  其中：  
   
--   {*a* &#124; *b*} 是 *a*或者 *b*的一个选项。  
+-   { &#124;*b*} 是其中任何一个选择或*b*。  
   
--   \[`ccc`\] 为可选字符串或参数。  
+-   [`ccc`] 是可选的字符串或参数。  
   
- 例如：  
+ 例如:  
   
- C:\\*sourcefile.cpp*\(134\) : error C2143: syntax error : missing ';' before '}'  
+ C:\\*sourcefile.cpp*(134): 错误 C2143： 语法错误： 缺少; 之前}  
   
- 链接：错误 LNK1104:无法打开文件 '*somelib.lib*"  
+ 链接： 致命错误 LNK1104： 无法打开文件*somelib.lib*  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)

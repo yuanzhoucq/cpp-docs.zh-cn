@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2797
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2797
+f1_keywords: C2797
+dev_langs: C++
+helpviewer_keywords: C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c8fd31905eb92db8ad2e3af941772584f6f64ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 09c5a26a1a7bb594419d2db211f86074d01da84e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2797"></a>编译器错误 C2797
 （已过时）未实现成员初始值设定项列表或非静态数据成员初始值设定项内部的列表初始化。  

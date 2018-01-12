@@ -1,40 +1,39 @@
 ---
-title: "链接器工具错误 LNK2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2020"
+title: "链接器工具错误 LNK2020 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2020
+dev_langs: C++
+helpviewer_keywords: LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 394cafe23851df5320a78a4e165a90422fc305de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 链接器工具错误 LNK2020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-无法解析的标记“token”  
+# <a name="linker-tools-error-lnk2020"></a>链接器工具错误 LNK2020
+无法解析的标记 token  
   
- 与未定义的外部错误类似，不同的是引用是通过元数据。  必须在元数据中定义所有函数和数据。  
+ 类似于未定义的外部错误，只不过引用是通过元数据。 在元数据，必须定义所有函数和数据。  
   
- 解决方案是：  
+ 若要解决：  
   
--   定义缺少的函数或数据，或者  
+-   定义缺少的函数或数据，或  
   
--   包括已在其中定义缺少的函数或数据的对象文件或库。  
+-   包括的对象文件或在其中缺少的函数或数据已定义的库。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 LNK2020。  
   
 ```  
@@ -52,8 +51,8 @@ ref struct B {
 };  
 ```  
   
-## 示例  
- 如果创建托管模板类型的变量，也将发生 LNK2020，但同时不实例化该类型。  
+## <a name="example"></a>示例  
+ 如果你创建的变量的一种托管的模板类型，但不是还实例化类型，也会发生 LNK2020。  
   
  下面的示例生成 LNK2020。  
   

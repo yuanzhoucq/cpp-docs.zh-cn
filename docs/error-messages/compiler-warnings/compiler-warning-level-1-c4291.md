@@ -1,38 +1,37 @@
 ---
-title: "编译器警告（等级 1）C4291 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4291"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4291"
+title: "编译器警告 （等级 1） C4291 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4291
+dev_langs: C++
+helpviewer_keywords: C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a1c03e12805c35ce04322a7ffb4d48499a9a9f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4291
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“declaration”: 未找到匹配的 delete 运算符；如果初始化引发异常，则不会释放内存  
+# <a name="compiler-warning-level-1-c4291"></a>编译器警告（等级 1）C4291
+declaration： 找到了; 不匹配运算符 delete如果初始化引发异常，不会释放内存  
   
- 在没有放置 [delete](../../cpp/delete-operator-cpp.md) 的情况下放置 [new](../../cpp/new-operator-cpp.md)。  
+ 放置[新](../../cpp/new-operator-cpp.md)使用其中没有任何放置[删除](../../cpp/delete-operator-cpp.md)。  
   
- 在用 **new** 运算符为对象分配内存时，会调用此对象的构造函数。  如果构造函数引发异常，则应释放为对象分配的任何内存。  除非存在与 **new** 运算符匹配的 **delete** 运算符函数，否则不会发生这种情况。  
+ 当为具有运算符的对象分配内存**新**，该对象的构造函数中调用。 如果构造函数引发了异常，应释放已为对象分配任何内存。 这不会发生，除非运算符**删除**函数存在匹配运算符**新**。  
   
- 如果使用不带任何额外参数的 **new** 运算符，并用 [\/GX](../../build/reference/gx-enable-exception-handling.md)、[\/EHs](../../build/reference/eh-exception-handling-model.md) 或 \/EHa 选项进行编译以启用异常处理，则当构造函数引发异常时，编译器将生成调用 **delete** 运算符的代码。  
+ 如果使用运算符**新**不带任何额外自变量与编译[/GX](../../build/reference/gx-enable-exception-handling.md)， [/EHs](../../build/reference/eh-exception-handling-model.md)，或 /EHa 选项启用异常处理，编译器将生成代码调用运算符**删除**在构造函数引发异常。  
   
- 如果使用 **new** 运算符的放置形式（除了带分配大小还带参数的形式），并且对象的构造函数引发异常，编译器仍将生成调用 **delete** 运算符的代码；但只有当存在与分配内存的 **new** 运算符的放置形式匹配的 **delete** 运算符的放置形式时，编译器才会这样做。  例如：  
+ 如果你使用的放置形式**新**运算符 （带参数的形式除了大小的分配） 和对象的构造函数引发了异常，则编译器仍将生成代码来调用运算符**删除**; 但它仅会如果运算符的放置形式**删除**存在匹配运算符的放置形式**新**分配内存。 例如:  
   
 ```  
 // C4291.cpp  
@@ -83,7 +82,7 @@ int main(void)
 }  
 ```  
   
- 上面的示例生成警告 C4291，因为未定义与 **new** 运算符的放置形式匹配的 **delete** 运算符的放置形式。  若要解决此问题，请在 **main** 上面插入以下代码。  注意，除第一个参数外，所有重载 **delete** 运算符函数参数均与重载 **new** 运算符函数参数匹配。  
+ 上面的示例生成警告 C4291，因为没有的运算符的放置形式**删除**已定义匹配运算符的放置形式**新**。 若要解决此问题，插入以下代码上述**主要**。 请注意，所有重载运算符**删除**函数参数与匹配的重载运算符**新**，除第一个参数。  
   
 ```  
 void operator delete(void* pMem, char* pszFilename, int nLine)  

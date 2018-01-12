@@ -1,51 +1,51 @@
 ---
-title: "&lt;code&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "<code>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<code> C++ XML 标记"
-  - "code C++ XML 标记"
+title: "&lt;代码&gt;（Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- <code>
+dev_langs: C++
+helpviewer_keywords:
+- <code> C++ XML tag
+- code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 863ad36def9b32269ff4b1a0c131f46e67189a45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;code&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<code\> 标记为您提供了一种指示一个或多个行为代码。  
+# <a name="ltcodegt-visual-c"></a>&lt;代码&gt;（Visual c + +）
+\<代码 > 标记提供了一个或多个行指示为代码的方法。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 <code>content</code>  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `content`  
- 希望将其标记为代码的文本。  
+ 要标记为代码的文本。  
   
-## 备注  
- 应使用标记 [\<c\>](../ide/c-visual-cpp.md) 指示文本的部分代码。  
+## <a name="remarks"></a>备注  
+ 使用[ \<c >](../ide/c-visual-cpp.md)以指示的部分文本应标记为代码。  
   
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
+ 使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
-## 示例  
- 有关如何使用 \<code\> 标记的示例，请参见 [\<example\>](../ide/example-visual-cpp.md) 主题。  
+## <a name="example"></a>示例  
+ 有关如何使用 \<code> 标记的示例，请参阅 [\<example>](../ide/example-visual-cpp.md) 主题。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

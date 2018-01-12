@@ -1,37 +1,38 @@
 ---
-title: "__cpuid, __cpuidex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__cpuid_cpp"
-  - "__cpuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__cpuid intrinsic"
-  - "cpuid instruction"
-  - "cpuid intrinsic"
+title: "__cpuid、 __cpuidex |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __cpuid_cpp
+- __cpuid
+dev_langs: C++
+helpviewer_keywords:
+- __cpuid intrinsic
+- cpuid instruction
+- cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-caps.latest.revision: 38
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
+caps.latest.revision: "38"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc20732fa9a79765f4cd56e53ddd990a4d1ea1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __cpuid, __cpuidex
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cpuid-cpuidex"></a>__cpuid、__cpuidex
 **Microsoft 专用**  
   
- 生成可在 x86 和 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 上使用的 `cpuid` 指令。  本指令可查询处理器，以获取有关支持的功能和 CPU 类型的信息。  
+ 生成可在 x86 和 `cpuid` 上使用的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 指令。 本指令可查询处理器，以获取有关支持的功能和 CPU 类型的信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __cpuid(  
@@ -46,42 +47,42 @@ void __cpuidex(
 );  
 ```  
   
-#### 参数  
- \[out\] `cpuInfo`  
+#### <a name="parameters"></a>参数  
+ [out] `cpuInfo`  
  四个整数的数组，包含在 EAX、EBX、ECX 和 EDX 中返回的有关 CPU 支持的功能的信息。  
   
- \[in\] `function_id`  
+ [in] `function_id`  
  在 EAX 中传递的指定要检索的信息的代码。  
   
- \[in\] `subfunction_id`  
+ [in] `subfunction_id`  
  在 ECX 中传递的指定要检索的信息的附加代码。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
 |内部函数|体系结构|  
-|----------|----------|  
+|---------------|------------------|  
 |`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此内部函数将存储由 `cpuInfo` 中的 `cpuid` 指令返回的支持功能和 CPU 信息，使用 EAX、EBX、ECX 和 EDX 寄存器值（按照这个顺序）填充的四个 32 位整数的数组。  返回的信息具有不同含义，具体取决于作为 `function_id` 参数传递的值。  随 `function_id` 的多个值返回的信息与处理器相关。  
+## <a name="remarks"></a>备注  
+ 此内部函数将存储由 `cpuid` 中的 `cpuInfo` 指令返回的支持功能和 CPU 信息，使用 EAX、EBX、ECX 和 EDX 寄存器值（按照这个顺序）填充的四个 32 位整数的数组。 返回的信息具有不同含义，具体取决于作为 `function_id` 参数传递的值。 随 `function_id` 的多个值返回的信息与处理器相关。  
   
- `__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。  `__cpuidex` 内部函数可在 ECX 寄存器生成 `cpuid` 指令之前，将其值设置为 `subfunction_id`。  这使你能够收集有关该处理器的其他信息。  
+ `__cpuid` 内部函数将在调用 `cpuid` 指令前清除 ECX 寄存器。 `__cpuidex` 内部函数可在 ECX 寄存器生成 `subfunction_id` 指令之前，将其值设置为 `cpuid`。 这使你能够收集有关该处理器的其他信息。  
   
- 有关要使用的特定参数以及由 Intel 处理器上的这些内部函数返回的值的详细信息，请参阅 `cpuid` 指令文档，其位于 [Intel 64 and IA\-32 Architectures Software Developers Manual Volume 2:Instruction Set Reference](http://go.microsoft.com/fwlink/p/?LinkID=510021)（Intel 64 和 IA32 体系结构软件开发人员手册第 2 卷：指令集参考）和[Intel Architecture Instruction Set Extensions Programming Reference](http://go.microsoft.com/fwlink/p/?LinkID=506627)（Intel 体系结构指令集扩展编程参考）。  对于在 EAX 和 ECX 中传递的 `function_id` 和 `subfunction_id` 参数，Intel 文档将使用术语“leaf”和“subleaf”。  
+ 有关使用与这些内部函数返回在 Intel 处理器上的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[Intel 64 和 ia-32 体系结构软件开发人员手册卷 2： 指令集引用](http://go.microsoft.com/fwlink/p/?LinkID=510021)和[Intel 体系结构指令集扩展编程参考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 对于在 EAX 和 ECX 中传递的 `function_id` 和 `subfunction_id` 参数，Intel 文档将使用术语“leaf”和“subleaf”。  
   
- 有关 AMD 处理器上要使用的特定参数和这些内部函数所返回的值的详细信息，请参阅 `cpuid` 指令文档，其位于 [AMD64 Architecture Programmer's Manual Volume 3:General\-Purpose and System Instructions](http://go.microsoft.com/fwlink/p/?LinkId=510023)（AMD64 体系结构编程人员手册第 3 卷：通用和系统指令）和 [Revision Guides](http://go.microsoft.com/fwlink/p/?LinkId=510023)（修订指南），了解特定处理器系列。  对于在 EAX 和 ECX 中传递的 `function_id` 和 `subfunction_id` 参数，AMD 文档将使用术语“function number”和“subfunction number”。  
+ 有关使用与这些内部函数返回在 AMD 处理器上的值的特定参数的详细信息，请参阅的文档`cpuid`中的指令[AMD64 体系结构程序员手册，第三卷：通用和系统说明](http://go.microsoft.com/fwlink/p/?LinkId=510023)并在[修订指南](http://go.microsoft.com/fwlink/p/?LinkId=510023)为特定的处理器系列。 对于在 EAX 和 ECX 中传递的 `function_id` 和 `subfunction_id` 参数，AMD 文档将使用术语“function number”和“subfunction number”。  
   
- 当 `function_id` 参数为 0 时，`cpuInfo[0]` 将返回由处理器支持的最高可用非扩展 `function_id`。  处理器制造商在 `cpuInfo[1]`、`cpuInfo[2]` 和 cpuInfo\[3\] 中进行编码。  
+ 当 `function_id` 参数为 0 时，`cpuInfo[0]` 将返回由处理器支持的最高可用非扩展 `function_id`。 处理器制造商在 `cpuInfo[1]`、`cpuInfo[2]` 和 cpuInfo[3] 中进行编码。  
   
- 支持在返回更高的 function\_id 值的 `cpuInfo` 结果中编码特定指令集扩展和 CPU 功能。  有关详细信息，请参阅上述链接的手册和以下示例代码。  
+ 支持在返回更高的 function_id 值的 `cpuInfo` 结果中编码特定指令集扩展和 CPU 功能。 有关详细信息，请参阅上述链接的手册和以下示例代码。  
   
- 某些处理器支持扩展函数 CPUID 信息。  如果支持此操作，则 0x80000000 中的 `function_id` 值可用于返回信息。  若要确定允许的有意义的最大值，请将 `function_id` 设置为 0x80000000。  支持扩展功能的 `function_id` 的最大值将被写入 `cpuInfo[0]`。  
+ 某些处理器支持扩展函数 CPUID 信息。 如果支持此操作，则 0x80000000 中的 `function_id` 值可用于返回信息。 若要确定允许的有意义的最大值，请将 `function_id` 设置为 0x80000000。 支持扩展功能的 `function_id` 的最大值将被写入 `cpuInfo[0]`。  
   
-## 示例  
- 此示例显示了通过 `__cpuid` 和 `__cpuidex` 内部函数提供的一些信息。  此应用列出了受当前处理器支持的指令集扩展。  此输出显示了特定处理器的可能结果。  
+## <a name="example"></a>示例  
+ 此示例显示了通过 `__cpuid` 和 `__cpuidex` 内部函数提供的一些信息。 此应用列出了受当前处理器支持的指令集扩展。 此输出显示了特定处理器的可能结果。  
   
 ```  
 // InstructionSet.cpp   
@@ -346,60 +347,64 @@ int main()
 }  
 ```  
   
-  **GenuineIntel**  
-**Intel\(R\) Core\(TM\) i5\-2500 CPU @ 3.30GHz**  
-**不支持 3DNOW**  
-**不支持 3DNOWEXT**  
-**不支持 ABM**  
-**不支持 ADX**  
-**支持 AES**  
-**支持 AVX**  
-**不支持 AVX2**  
-**不支持 AVX512CD**  
-**不支持 AVX512ER**  
-**不支持 AVX512F**  
-**不支持 AVX512PF**  
-**不支持 BMI1**  
-**不支持 BMI2**  
-**支持 CLFSH**  
-**支持 CMPXCHG16B**  
-**支持 CX8**  
-**不支持 ERMS**  
-**不支持 F16C**  
-**不支持 FMA**  
-**不支持 FSGSBASE**  
-**支持 FXSR**  
-**不支持 HLE**  
-**不支持 INVPCID**  
-**支持 LAHF**  
-**不支持 LZCNT**  
-**支持 MMX**  
-**不支持 MMXEXT**  
-**不支持 MONITOR**  
-**不支持 MOVBE**  
-**支持 MSR**  
-**支持 OSXSAVE**  
-**支持 PCLMULQDQ**  
-**支持 POPCNT**  
-**不支持 PREFETCHWT1**  
-**不支持 RDRAND**  
-**不支持 RDSEED**  
-**支持 RDTSCP**  
-**不支持 RTM**  
-**支持 SEP**  
-**不支持 SHA**  
-**支持 SSE**  
-**支持 SSE2**  
-**支持 SSE3**  
-**支持 SSE4.1**  
-**支持 SSE4.2**  
-**不支持 SSE4a**  
-**支持 SSSE3**  
-**支持 SYSCALL**  
-**不支持 TBM**  
-**不支持 XOP**  
-**支持 XSAVE**   
-## 结束 Microsoft 专用  
+```Output  
+GenuineIntel  
+        Intel(R) Core(TM) i5-2500 CPU @ 3.30GHz  
+3DNOW not supported  
+3DNOWEXT not supported  
+ABM not supported  
+ADX not supported  
+AES supported  
+AVX supported  
+AVX2 not supported  
+AVX512CD not supported  
+AVX512ER not supported  
+AVX512F not supported  
+AVX512PF not supported  
+BMI1 not supported  
+BMI2 not supported  
+CLFSH supported  
+CMPXCHG16B supported  
+CX8 supported  
+ERMS not supported  
+F16C not supported  
+FMA not supported  
+FSGSBASE not supported  
+FXSR supported  
+HLE not supported  
+INVPCID not supported  
+LAHF supported  
+LZCNT not supported  
+MMX supported  
+MMXEXT not supported  
+MONITOR not supported  
+MOVBE not supported  
+MSR supported  
+OSXSAVE supported  
+PCLMULQDQ supported  
+POPCNT supported  
+PREFETCHWT1 not supported  
+RDRAND not supported  
+RDSEED not supported  
+RDTSCP supported  
+RTM not supported  
+SEP supported  
+SHA not supported  
+SSE supported  
+SSE2 supported  
+SSE3 supported  
+SSE4.1 supported  
+SSE4.2 supported  
+SSE4a not supported  
+SSSE3 supported  
+SYSCALL supported  
+TBM not supported  
+XOP not supported  
+XSAVE supported  
   
-## 请参阅  
+```  
+  
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

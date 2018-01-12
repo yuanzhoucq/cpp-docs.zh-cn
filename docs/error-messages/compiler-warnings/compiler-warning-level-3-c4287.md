@@ -1,37 +1,36 @@
 ---
-title: "编译器警告（等级 3）C4287 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4287"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4287"
+title: "编译器警告 （等级 3） C4287 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4287
+dev_langs: C++
+helpviewer_keywords: C4287
 ms.assetid: 1bf3bff8-6402-4d06-95ba-431678a790a7
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 853ead3a00c28affec82f8569704437f39e194f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 3）C4287
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“operator”: 无符号\/负常数不匹配  
+# <a name="compiler-warning-level-3-c4287"></a>编译器警告（等级 3）C4287
+operator： 无符号/负常量不匹配  
   
- 在有负数的运算中使用了无符号变量。  
+ 在使用负数操作中使用了无符号的变量。  
   
- 默认情况下关闭此警告。  有关更多信息，请参见[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
   
-## 示例  
- 下面的示例生成 C4287：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C4287:  
   
 ```  
 // C4287.cpp  

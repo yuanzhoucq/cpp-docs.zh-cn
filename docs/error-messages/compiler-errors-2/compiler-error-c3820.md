@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: af22e9278988f92b73dc30d688c0f39642574483
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4564de89d4c3ce9d0448fc4df49f1edeb250cdfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3820"></a>编译器错误 C3820
 “name”: 初始值设定项必须是托管的  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
 1.  指定托管初始值设定项方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [初始值设定项](../../cpp/initializers.md)   
  [附加启动注意事项](../../cpp/additional-startup-considerations.md)

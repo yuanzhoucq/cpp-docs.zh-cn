@@ -17,11 +17,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7aacc70a74b7c7fccb66a0a8363a261f4a8f1ba3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 项目中添加引用
 程序调用到其他二进制文件（如 DLL、Windows 运行时组件、扩展 SDK、COM 组件和 .NET 程序集）中的 API 的情况非常普遍。 程序找到其他此类库的方式取决于项目的类型，以及二进制文件的类型。  
@@ -117,9 +118,9 @@ ms.lasthandoff: 10/24/2017
  **强名称**  
  如果所引用程序集具有强名称，则为 `true`。 强名称程序集的版本是唯一的。  
   
- **版本**  
+ **Version**  
  显示所引用的程序集的版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)   
  [使用项目属性](../ide/working-with-project-properties.md)

@@ -1,36 +1,35 @@
 ---
-title: "编译器警告（等级 1）C4288 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4288"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4288"
+title: "编译器警告 （等级 1） C4288 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4288
+dev_langs: C++
+helpviewer_keywords: C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a10a7573df5986ed20475b34208a1e0f301d9bb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4288
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用了非标准扩展 :“var”: 在 For 循环中声明的循环控制变量用在了 For 循环范围外；它与外部范围内的声明冲突  
+# <a name="compiler-warning-level-1-c4288"></a>编译器警告（等级 1）C4288
+使用的非标准扩展: var： 在 for 循环中声明的循环控制变量用在 for 循环范围中; 外它与外层作用域中的声明冲突  
   
- 当用 [\/Ze](../../build/reference/za-ze-disable-language-extensions.md) 和 **\/Zc:forscope\-** 编译时，在 [for](../../cpp/for-statement-cpp.md) 循环范围之后使用了 **for** 循环中声明的变量。  C\+\+ 语言的 Microsoft 扩展允许该变量保留在范围中，并且 C4288 提醒您不使用第一个声明的变量。  
+ 使用编译时[/Ze](../../build/reference/za-ze-disable-language-extensions.md)和**/zc: forscope-**中, 声明的变量**为**之后使用循环已[为](../../cpp/for-statement-cpp.md)-循环作用域。 C + + 语言的 Microsoft 扩展允许此变量，以保持在范围内，并且 C4288 提醒您未使用的变量的第一个声明。  
   
- 有关如何用 \/Ze 指定 **for** 循环中的 Microsoft 扩展的信息，请参见 [\/Zc:forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)。  
+ 请参阅[/zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)有关如何指定中的 Microsoft 扩展**为**使用 /Ze 循环。  
   
- 下面的示例生成 C4288：  
+ 下面的示例生成 C4288:  
   
 ```  
 // C4288.cpp  

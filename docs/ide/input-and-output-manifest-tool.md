@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6042a480eef506af736ad958643288efa67402d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>输入和输出，清单工具，配置属性&lt;Projectname&gt;属性页对话框
 使用此对话框中指定的输入和输出选项[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
  使用**/清单**选项以指定的清单工具将处理的其他清单文件或合并的完整路径。 完整路径由分号分隔。  
   
  **输入的资源清单**  
- 使用**/inputresource**选项以指定类型 RT_MANIFEST，其输入到该清单工具的资源的完整路径。 可以通过指定的资源 ID 遵循的路径 例如:   
+ 使用**/inputresource**选项以指定类型 RT_MANIFEST，其输入到该清单工具的资源的完整路径。 可以通过指定的资源 ID 遵循的路径 例如:  
   
  `dll_with_manifest.dll;#1`  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
  **启用 DPI 感知**  
  指定是否 DPI 感知应用程序。 默认情况下，设置是**是**对于 MFC 项目和**否**否则为因为 DPI 感知内置了只有 MFC 项目。 你可以重写将设置改为**是**如果添加代码来处理采用不同 DPI 设置。 模糊或如果你将其设置为 dpi 时它不是小型，可能会出现你的应用程序。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)   
  [清单工具属性页](../ide/manifest-tool-property-pages.md)   
  [使用项目属性](../ide/working-with-project-properties.md)   

@@ -1,34 +1,33 @@
 ---
-title: "编译器警告（等级 3）C4535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4535"
+title: "编译器警告 （等级 3） C4535 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4535
+dev_langs: C++
+helpviewer_keywords: C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a6079066a29d7d22430e8707d6548d8a4d53d231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 3）C4535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-调用 \_set\_se\_translator\(\) 需要 \/EHa  
+# <a name="compiler-warning-level-3-c4535"></a>编译器警告（等级 3）C4535
+调用 _set_se_translator() 需要 /EHa  
   
- 使用 [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) 需要 [\/EHa](../../build/reference/eh-exception-handling-model.md) 编译器选项而不是 **\/EHs**。  
+ 使用[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)需要[/EHa](../../build/reference/eh-exception-handling-model.md)编译器选项和 not **/EHs**。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4535。  
   
 ```  

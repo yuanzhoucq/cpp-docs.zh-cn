@@ -1,40 +1,39 @@
 ---
-title: "编译器警告（等级 1）C4142 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4142"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4142"
+title: "编译器警告 （等级 1） C4142 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4142
+dev_langs: C++
+helpviewer_keywords: C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 73d3ad63aaf040b83622720040adf3a291d354e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4142
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-类型的良性重定义  
+# <a name="compiler-warning-level-1-c4142"></a>编译器警告 （等级 1） C4142
+良性重定义的类型  
   
- 重新定义类型的方式对生成的代码没有任何影响。  
+ 一种类型中不起作用对已生成代码的方式重新定义。  
   
- 通过检查下面的可能原因进行修复：  
+ 通过检查以下可能的原因进行修复：  
   
--   派生类的成员函数与相应的基类成员函数有不同的返回类型。  
+-   派生类的成员函数具有不同的返回类型从相应的成员函数的基类。  
   
--   使用不同语法重新定义用 `typedef` 命令定义的类型。  
+-   与定义的类型`typedef`命令重新定义使用不同的语法。  
   
- 下面的示例生成 C4142：  
+ 下面的示例生成 C4142:  
   
 ```  
 // C4142.c  

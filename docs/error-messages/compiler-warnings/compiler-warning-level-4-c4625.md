@@ -1,36 +1,35 @@
 ---
-title: "编译器警告（等级 4）C4625 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4625"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4625"
+title: "编译器警告 （等级 4） C4625 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4625
+dev_langs: C++
+helpviewer_keywords: C4625
 ms.assetid: 4cc99e50-846c-4784-97da-48b977067851
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d2dbe1e112b386895091446b706b0ed3bd7a3453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 4）C4625
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4625"></a>编译器警告（等级 4）C4625
 “derived class”: 未能生成复制构造函数，因为基类复制构造函数不可访问或已被删除  
   
- 复制构造函数已删除或在基类中不可访问，因此并未为派生类生成。  复制此类型的对象的任何尝试都将导致编译器错误。  
+ 复制构造函数已删除或在基类中不可访问，因此并未为派生类生成。 复制此类型的对象的任何尝试都将导致编译器错误。  
   
- 默认情况下，此警告处于关闭状态。  请参阅[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)了解详细信息。  
+ 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 C4625，并演示如何修复此错误。  
   
 ```  

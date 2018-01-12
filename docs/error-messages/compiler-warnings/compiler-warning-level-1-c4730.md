@@ -1,36 +1,35 @@
 ---
-title: "编译器警告（等级 1）C4730 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4730"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4730"
+title: "编译器警告 (等级 1) C4730 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4730
+dev_langs: C++
+helpviewer_keywords: C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 334c53b030097dc822451b0e555a51c90e70d904
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4730
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“main”: 混合使用 \_m64 和浮点表达式可能导致错误的代码  
+# <a name="compiler-warning-level-1-c4730"></a>编译器警告（等级 1）C4730
+main： 混合 _m64 和浮点表达式可能会导致代码不正确  
   
- 函数使用 [\_\_m64](../../cpp/m64.md) 和 **float**\/**double** 类型。  由于 MMX 和浮点寄存器共享相同的物理寄存器空间（不能同时使用），在同一函数中使用 `__m64` 和 **float**\/**double** 类型会导致数据损坏，可能引起异常。  
+ 函数使用[__m64](../../cpp/m64.md)和**float**/**double**类型。 因为的 MMX 和浮点寄存器共享相同的物理寄存器空间 （不能同时使用），使用`__m64`和**float**/**double**中相同的类型函数可以导致数据损坏，可能会导致异常。  
   
- 若要在同一函数中安全地使用 `__m64` 和浮点类型，使用其中一种类型的每个指令应该用内部 **\_m\_empty\(\)**（适用于 MMX）或 **\_m\_femms\(\)**（适用于 3DNow\!™）进行分隔。  
+ 要安全地使用`__m64`类型和相同的函数中的浮点类型，都使用一种类型的每个指令应该用隔开**_m_empty** （适用于 MMX) 或**_m_femms** （适用于 3DNow ！)内部函数。  
   
- 下面的示例生成 C4730：  
+ 下面的示例生成 C4730:  
   
 ```  
 // C4730.cpp  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4368
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4368
+f1_keywords: C4368
+dev_langs: C++
+helpviewer_keywords: C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9694eb05a2d14ff8dac49c0e9a3cb29dcf52bbac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6fd66d8fb6d30a960c659345910242ec5a1a2e11
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4368"></a>编译器警告 C4368
 不能定义为托管的 type 的成员 member： 不支持混合的类型  

@@ -1,31 +1,30 @@
 ---
-title: "编译器警告（等级 1）C4420 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4420"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4420"
+title: "编译器警告 （等级 1） C4420 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4420
+dev_langs: C++
+helpviewer_keywords: C4420
 ms.assetid: 44a37754-7ddd-4764-a5f7-d33e05c20091
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9a57803cb584f5ee54ad5533366e6aadc85d1acf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4420
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“operator”: 运算符不可用，改用“operator”；可能会危及运行时检查的安全性  
+# <a name="compiler-warning-level-1-c4420"></a>编译器警告（等级 1）C4420
+operator： 运算符不可用，改为; 使用 operator运行时检查可能已泄露  
   
- 当使用 [\/RTCv](../../build/reference/rtc-run-time-error-checks.md)（向量 new\/delete 检查）且未找到任何向量形式时，生成此警告。  在这种情况下使用非向量形式。  
+ 当你使用时，会生成此警告[/RTCv](../../build/reference/rtc-run-time-error-checks.md) （矢量检查新/删除） 并且在发现没有向量形式。 在这种情况下，使用非向量窗体。  
   
- 为了使 \/RTCv 正确工作，编译器应总是调用 [new](../../cpp/new-operator-cpp.md) \/[delete](../../cpp/delete-operator-cpp.md) 的向量形式（如果使用向量语法）。
+ 为了使 /RTCv 正常工作，编译器应始终调用矢量形式的[新](../../cpp/new-operator-cpp.md)/[删除](../../cpp/delete-operator-cpp.md)如果时使用的矢量语法。

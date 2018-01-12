@@ -1,47 +1,46 @@
 ---
-title: "链接器工具警告 LNK4248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4248"
+title: "链接器工具警告 LNK4248 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4248
+dev_langs: C++
+helpviewer_keywords: LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 01053ddbbb0c7d234f6b465392f5bbe991ea329c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 链接器工具警告 LNK4248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-‘type’的 typeref 标记 \(token\) 无法解析；映像可能无法运行  
+# <a name="linker-tools-warning-lnk4248"></a>链接器工具警告 LNK4248
+对于 type; 的未解析的 typeref 标记 （令牌）图像可能无法运行  
   
- 在 MSIL 元数据中不存在类型的定义。  
+ 一种类型在 MSIL 元数据中没有一个定义。  
   
- 在 MSIL 模块中引用类型时，如果 MSIL 模块链接到包含某类型的定义的本机模块，但 MSIL 模块中却只有该类型的前向声明（使用 **\/clr** 编译），便可能出现 LNK4248 警告。  
+ 仅 MSIL 模块中的类型的前向声明时，可能出现 lnk4248 警告 (与编译**/clr**)、 在 MSIL 模块中，引用类型和 MSIL 模块链接到包含具有定义的本机模块类型。  
   
- 在这种情况下，链接器将在 MSIL 元数据中提供本机类型定义，这可规定正确的行为。  
+ 在此情况下，链接器将提供 MSIL 元数据中的本机类型定义，这可以提供正确的行为。  
   
- 但是，如果前向类型声明为 CLR 类型，链接器的本机类型定义则可能不正确。  
+ 但是，如果转发类型声明为 CLR 类型，则链接器的本机类型定义可能不正确  
   
- 有关详细信息，请参阅[\/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 有关详细信息，请参阅 [/clr（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
-### 更正此错误  
+### <a name="to-correct-this-error"></a>更正此错误  
   
-1.  在 MSIL 模块中提供类型定义。  
+1.  提供的 MSIL 模块中的类型定义。  
   
-## 示例  
- 下面的示例生成 LNK4248。  定义要解析的结构 A。  
+## <a name="example"></a>示例  
+ 下面的示例生成 LNK4248。 定义结构 A 若要解决。  
   
 ```  
 // LNK4248.cpp  
@@ -55,8 +54,8 @@ int main() {
 }  
 ```  
   
-## 示例  
- 下面的示例具有类型的前向定义。  
+## <a name="example"></a>示例  
+ 下面的示例已转发的类型的定义。  
   
 ```  
 // LNK4248_2.cpp  
@@ -71,7 +70,7 @@ int main() {
 }  
 ```  
   
-## 示例  
+## <a name="example"></a>示例  
  下面的示例生成 LNK4248。  
   
 ```  

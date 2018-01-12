@@ -1,32 +1,31 @@
 ---
-title: "编译器警告（等级 1）C4624 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4624"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4624"
+title: "编译器警告 （等级 1） C4624 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4624
+dev_langs: C++
+helpviewer_keywords: C4624
 ms.assetid: 14f61769-d92e-482b-9515-debd87b30a66
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a3acf93e1609b6a53f6654afb83a51bad49da84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4624
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4624"></a>编译器警告（等级 1）C4624
 “derived class”：析构函数隐式定义为已删除，因为基类析构函数不可访问或已删除  
   
- 基类中的析构函数不可访问或已删除，因而没有为派生类生成析构函数。  任何在堆栈上创建此类型对象的尝试都将导致编译器错误。  
+ 基类中的析构函数不可访问或已删除，因而没有为派生类生成析构函数。 任何在堆栈上创建此类型对象的尝试都将导致编译器错误。  
   
  下面的示例生成 C4624，并演示如何修复此错误：  
   

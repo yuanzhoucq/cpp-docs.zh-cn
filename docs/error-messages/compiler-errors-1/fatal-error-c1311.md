@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9aeb63e041ddfe26a8fc47afc838f2f5c3ce35d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0d798ea53ebbbfe850b77b4b8176b35e2040ed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1311"></a>错误 C1311
 COFF 格式无法以静态方式初始化 var 具有数字字节的地址  

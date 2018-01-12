@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6e8d3c9ff44a436688accfe267141390d23c0eb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2330d49f817012fc2e0381a0991f709ada74ea32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1189"></a>错误 C1189
 \#错误： 用户提供错误消息  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/24/2017
   
 -   使用**高级**中的属性页**MIDL**要删除的属性页文件夹**/ 可靠**开关，然后指定**/no_robust**切换。 有关详细信息，请参阅[MIDL 属性页： 高级](../../ide/midl-property-pages-advanced.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [#define 指令 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

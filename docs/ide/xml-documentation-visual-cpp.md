@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5b9968ad652e5ab6ef4dd29eb3c6ccc6da7493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-documentation-visual-c"></a>XML 文档 (Visual C++)
 Visual c + +，你可以在你将处理到一个.xml 文件的源代码中添加注释。 然后，此文件可以是在你的代码中创建的类的文档的进程的输入。  
@@ -40,7 +41,7 @@ Visual c + +，你可以在你将处理到一个.xml 文件的源代码中添加
   
  有关创建带有文档注释的.xml 文件的详细信息，请参阅以下主题。  
   
-|有关信息|请参阅|  
+|有关以下内容的信息|查看|  
 |---------------------------|---------|  
 |要使用的编译器选项|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
 |标记可用于提供通常使用文档中的功能|[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
@@ -51,5 +52,5 @@ Visual c + +，你可以在你将处理到一个.xml 文件的源代码中添加
   
  如果你需要在的文档注释的文本中放置 XML 特殊字符，必须使用 XML 实体或 CDATA 节。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

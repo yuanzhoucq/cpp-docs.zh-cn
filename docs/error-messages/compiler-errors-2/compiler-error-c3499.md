@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f9f6ad123e111239cbd2c2d1ff2bd886b587b60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 141d21be57d1aaa6957bbb9fe2d1ac5c0139076a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3499"></a>编译器错误 C3499
 已指定返回类型为 void 的 lambda 无法返回值  
@@ -65,5 +66,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

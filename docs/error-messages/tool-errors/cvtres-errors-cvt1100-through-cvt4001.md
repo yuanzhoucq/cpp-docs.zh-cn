@@ -1,7 +1,7 @@
 ---
 title: "CVTRES 错误 CVT1100 到 CVT4001 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -14,11 +14,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7333e4602419d9b8697d924139863dedf4f4fc85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c83bd98e881604c4256b24a4091a01452296457c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cvtres-errors-cvt1100-through-cvt4001"></a>CVTRES 错误 CVT1100 到 CVT4001
-该节是生成工具所生成错误的参考。 若要获取有关特定错误消息的帮助，请输出窗口中的错误号上单击鼠标并按 F1，或键入错误号**查找**框中的索引。
+
+本部分是错误的引用，生成 CVTRES 警告的生成工具。
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

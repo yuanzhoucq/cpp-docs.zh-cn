@@ -1,65 +1,65 @@
 ---
-title: "在 Visual Studio 中生成 C++ 项目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "builds [C++], 关于 Visual Studio 中的生成"
-  - "项目 [C++], 生成"
-  - "Visual C++ 项目, 生成"
+title: "生成 Visual Studio 中的 c + + 项目 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++ projects, building
+- projects [C++], building
+- builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 在 Visual Studio 中生成 C++ 项目
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 Visual Studio 集成开发环境 \(IDE\) 中，可通过多种方式生成整个解决方案或只在其中生成一个项目。  还可以修改生成设置并指定自定义生成步骤，以使你的部署过程更加高效。  
+# <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中生成 C++ 项目
+在 Visual Studio 集成开发环境 (IDE) 中，可通过多种方式生成整个解决方案或只在其中生成一个项目。 还可以修改生成设置并指定自定义生成步骤，以使你的部署过程更加高效。  
   
- 若要生成可在 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 中打开并可在**“解决方案资源管理器”**中选择的解决方案，你可以执行以下操作：  
+ 若要构建一个解决方案，是 Visual Studio 中打开和中选定**解决方案资源管理器**，你可以：  
   
--   在菜单栏上，依次选择**“生成”**、**“生成解决方案”**。  
+-   在菜单栏上，依次选择 **“生成”**、 **“生成解决方案”**。  
   
--   或者，在**“解决方案资源管理器”**中，打开解决方案的快捷菜单，然后选择**“生成解决方案”**。  
+-   或者，在**解决方案资源管理器**，打开解决方案的快捷菜单，然后选择**生成解决方案**。  
   
--   或者，按 F7。  （这是 C\/C\+\+ 开发设置的默认键盘快捷方式。）  
+-   或者，按 F7。 （这是 C/C++ 开发设置的默认键盘快捷方式。）  
   
--   或者，在[命令窗口](../Topic/Command%20Window.md)（在菜单栏上，依次选择**“视图”**、**“其他窗口”**、**“命令窗口”**）中，输入 `Build.BuildSolution`。  
+-   或者，在[命令窗口](/visualstudio/ide/reference/command-window)(在菜单栏上，选择**视图**，**其他窗口**，**命令窗口**)，输入`Build.BuildSolution`。  
   
--   或者，在[“快速启动”](../Topic/Quick%20Launch,%20Environment,%20Options%20Dialog%20Box.md)框中，输入 `build build solution`。  
+-   或者，在[快速启动](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)框中，输入`build build solution`。  
   
- 若要生成可在**“解决方案资源管理器”**中选择的项目，你可以执行以下操作：  
+ 生成项目中的所选**解决方案资源管理器**，你可以：  
   
--   在菜单栏上，依次选择**“生成”**、**“生成 \<项目名称\>”**。  
+-   在菜单栏上，选择**生成**，**生成\<项目名称 >**。  
   
--   或者，在**“解决方案资源管理器”**中，打开项目的快捷菜单，然后选择**“生成”**。  
+-   或者，在**解决方案资源管理器**，打开项目的快捷菜单，然后选择**生成**。  
   
--   或者，在“命令窗口”（在菜单栏上，依次选择**“视图”**、**“其他窗口”**、**“命令窗口”**）中，输入 `Build.BuildOnlyProject`。  
+-   或者，在命令窗口 (在菜单栏上，选择**视图**，**其他窗口**，**命令窗口**)，输入`Build.BuildOnlyProject`。  
   
--   或者，在“快速启动”框中，输入 `build project only build only <project name>`。  
+-   或者，在快速启动框中，输入`build project only build only <project name>`。  
   
- 在 Visual Studio 中生成 Visual C\+\+ 应用程序时，可以在项目的“属性页”对话框中修改许多生成设置。  有关如何设置项目属性的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
+ 在 Visual Studio 中生成 Visual C++ 应用程序时，可以在项目的“属性页”对话框中修改许多生成设置。 有关如何设置项目属性的信息，请参阅[使用项目属性](../ide/working-with-project-properties.md)。  
   
- 有关如何使用 IDE 来创建、生成和调试 C\+\+ 项目的示例，请参阅[演练：通过 C\+\+ 了解 Visual Studio IDE](../Topic/Getting%20Started%20with%20C++%20in%20Visual%20Studio.md)。  有关如何使用 IDE 来生成 C\+\+\/CLR 项目的示例，请参阅[演练：在 Visual Studio 中编译面向 CLR 的 C\+\+ 程序](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。  有关如何使用 IDE 来创建 Windows 运行时应用的示例，请参阅[创建你的第一个使用 C\+\+ 的 Windows 运行时应用](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
+ 有关如何使用 IDE 来创建、 生成和调试 c + + 项目的示例，请参阅[演练： 浏览具有 c + + 的 Visual Studio IDE](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 有关如何使用 IDE 来生成的 C + + CLR 项目，请参阅[演练： 编译面向 Visual Studio 中的 CLR 的 c + + 程序](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 有关如何使用 IDE 来创建 Windows 运行时应用的示例，请参阅[创建第一个 Windows 运行时应用使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
   
  若要阅读有关如何生成、修改生成设置和指定自定义生成步骤的详细信息，请参阅以下文章。  
   
-## 本节内容  
+## <a name="in-this-section"></a>本节内容  
  [了解自定义生成步骤和生成事件](../ide/understanding-custom-build-steps-and-build-events.md)  
  介绍如何在集成开发环境中自定义生成过程。  
   
- [用于生成命令和属性的宏](../ide/common-macros-for-build-commands-and-properties.md)  
+ [用于生成命令和属性的常用宏](../ide/common-macros-for-build-commands-and-properties.md)  
  列出在接受字符串的情况下可使用的宏。  
   
  [生成外部项目](../ide/building-external-projects.md)  
@@ -68,24 +68,24 @@ manager: "ghogen"
  [项目文件](../ide/project-files.md)  
  展示 .vcxproj 文件的 XML 结构。  
   
-## 相关章节  
- [VC\+\+ Directories, Projects, Options Dialog Box](http://msdn.microsoft.com/zh-cn/e027448b-c811-4c3d-8531-4325ad3f6e02)  
- 探讨如何在生成期间修改可执行文件（包括文件、库文件和源代码文件）的搜索路径。  
+## <a name="related-sections"></a>相关章节  
+ [VC + + 目录，项目中，选项对话框](vcpp-directories-property-page.md)  
+ （仅限 MSBuild 项目）讨论如何修改可执行文件的搜索路径，在生成期间包括文件、 库文件和源代码文件。  
   
- [在 Visual Studio 中构建应用程序](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)  
+ [编译和生成](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  提供有关在 Visual Studio 中生成的信息。  
   
- [生成 C\/C\+\+ 程序](../build/building-c-cpp-programs.md)  
- 提供描述如下内容的主题链接：从命令行或从 Visual Studio 集成开发环境生成程序。  
+ [生成 C/C++ 程序](../build/building-c-cpp-programs.md)  
+ 提供一些链接，它们指向描述如何从命令行或 Visual Studio 的集成开发环境构建程序的主题。  
   
- [C\/C\+\+ 生成参考](../build/reference/c-cpp-building-reference.md)  
- 提供指向采用 C\+\+ 生成程序的概述、编译器和链接器选项以及其他生成工具的链接。  
+ [C/C++ 生成参考](../build/reference/c-cpp-building-reference.md)  
+ 提供指向采用 C++ 生成程序的概述、编译器和链接器选项以及其他生成工具的链接。  
   
- [从 Visual C\+\+ 早期版本升级项目](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- 提供指向涉及有关将 Visual C\+\+ 6.0 和更高版本项目升级至 Visual C\+\+ .NET 的问题的主题的链接。  
+ [从 Visual C++ 早期版本升级项目](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+ 提供到包含将 c + + 项目升级到较新版本的编译器工具集的问题的主题的链接。  
   
- [Porting and Upgrading Programs](http://msdn.microsoft.com/zh-cn/c36c44b3-5a9b-4bb4-9b7a-469aa770ed00)  
- 提供有关移植应用程序的详细信息并探讨生成文件。  
+[Visual C++ 移植和升级指南](../porting/visual-cpp-porting-and-upgrading-guide.md)  
+  有关如何升级在 Visual Studio 的早期版本中创建的 c + + 应用程序以及如何将应用程序使用工具而非 Visual Studio 创建的迁移的详细的信息。  
   
-## 请参阅  
- [Roadmap for Windows Store apps using C\+\+](http://msdn.microsoft.com/zh-cn/0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)
+## <a name="see-also"></a>请参阅  
+ [使用 c + + 的 Windows 应用商店应用的路线图](http://msdn.microsoft.com/en-us/0b71e4a4-5d8a-4a20-b2ec-e40062675ec1)

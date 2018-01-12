@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bf594f6c6a647ee930b173d58bed91e0ced778e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5367e5a083f9556327abd004e22ac3daff34dfb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-data-generator-tool-property-page"></a>“XML 数据生成器工具”属性页
 **XML 数据生成器工具**时将数据集添加到项目属性页将变为可用。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  有关如何以编程方式访问此对象的成员的信息，请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)

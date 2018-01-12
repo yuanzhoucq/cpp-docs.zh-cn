@@ -4,50 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2813
+dev_langs: C++
+helpviewer_keywords: C2813
 ms.assetid: 6cf2135f-7b82-42d1-909a-5e864308a09c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fc5f5437751abf6bcb11299e8484a199275db970
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3cc6ac0e287894dc2202814c55dac37569650f5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2813"></a>编译器错误 C2813
 \#导入不支持 /mp  
   
- 如果在编译器命令中指定，则会发出 C2813 **/MP**编译器选项，并且编译，以及一个或多个文件的两个或多个文件包含[#import](../../preprocessor/hash-import-directive-cpp.md)预处理器指令。 [#Import](../../preprocessor/hash-import-directive-cpp.md)指令从指定的类型库中的类型生成 c + + 类，然后将这些类写入两个标头文件。 [#Import](../../preprocessor/hash-import-directive-cpp.md)指令不支持，因为如果多个编译单元导入相同的类型库，当用户尝试同时写入相同的标头文件，这些单元产生冲突。  
+ 如果在编译器命令中指定 **/MP** 编译器选项以及两个或更多文件进行编译，并且其中一个或多个文件包含[#import](../../preprocessor/hash-import-directive-cpp.md) 预处理器指令，则会发出 C2813。 [#import](../../preprocessor/hash-import-directive-cpp.md) 指令从指定类型库中的类型生成 C++ 类，然后将这些类写入两个头文件。 不支持 [#import](../../preprocessor/hash-import-directive-cpp.md) 指令，因为如果多个编译单元导入相同类型库，则这些单元在同时尝试写入相同头文件时会产生冲突。  
   
- 此编译器错误和**/MP**编译器选项是中的新增[!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)]。  
+ 此编译器错误和**/MP**编译器选项是 Visual Studio 2008 中新增功能。  
   
 ## <a name="example"></a>示例  
- 下面的示例生成 C2813。 “compile with:”注释中的命令行向编译器指示使用 **/MP** 和 **/c** 编译器选项编译多个文件。 至少一个文件包含[#import](../../preprocessor/hash-import-directive-cpp.md)指令。 为了测试此示例，我们对相同文件使用了两次。  
+ 下面的示例生成 C2813。 “compile with:”注释中的命令行向编译器指示使用 **/MP** 和 **/c** 编译器选项编译多个文件。 其中至少有一个文件包含 [#import](../../preprocessor/hash-import-directive-cpp.md) 指令。 为了测试此示例，我们对相同文件使用了两次。  
   
 ```  
 // C2813.cpp  

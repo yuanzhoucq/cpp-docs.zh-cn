@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20b7f6a918bc8da215f0de33d0a4989250e28d64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd2c5bc238c9858e204d0a96729aa722dac18a9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-warning-d9035"></a>命令行警告 D9035
 选项 option 已弃用，将在未来版本中删除  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  指定的选项仍正常工作，但应更新现在你的生成配置。 因此，你的项目是更有可能时升级编译器继续生成。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [命令行警告 D9036](../../error-messages/tool-errors/command-line-warning-d9036.md)

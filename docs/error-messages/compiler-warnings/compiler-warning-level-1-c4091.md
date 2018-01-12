@@ -1,35 +1,34 @@
 ---
-title: "编译器警告（等级 1）C4091 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4091"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4091"
+title: "编译器警告 （等级 1） C4091 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4091
+dev_langs: C++
+helpviewer_keywords: C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9be40d65b657a7ac34fb105a2b1b16c702e4922c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 1）C4091
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“keyword”: 没有声明变量时忽略“type”的左侧  
+# <a name="compiler-warning-level-1-c4091"></a>编译器警告 （等级 1） C4091
+keyword： 未不声明任何变量时忽略左侧的 type  
   
- 编译器检测到用户可能要声明一个变量，但是编译器无法声明该变量。  
+ 编译器检测到的情况： 用户可能想要声明的变量，但编译器无法将该变量声明。  
   
-## 示例  
- 用户定义的类型声明开始处的 `__declspec` 特性适用于该类型的变量。  C4091 指示未声明任何变量。  下面的示例生成 C4091。  
+## <a name="example"></a>示例  
+ A`__declspec`开头的用户定义的类型声明的特性应用于该类型的变量。 C4091 指示未声明任何变量。 下面的示例生成 C4091。  
   
 ```  
 // C4091.cpp  
@@ -44,8 +43,8 @@ __declspec(dllimport) class X2 {} varX;
 class __declspec(dllimport) X3 {};  
 ```  
   
-## 示例  
- 如果标识符是 typedef，则它不能同时是变量名称。  下面的示例生成 C4091。  
+## <a name="example"></a>示例  
+ 如果标识符是的 typedef，它还不能为变量的名称。 下面的示例生成 C4091。  
   
 ```  
 // C4091_b.cpp  

@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4459
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4459
+f1_keywords: C4459
+dev_langs: C++
+helpviewer_keywords: C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 87550474065639f6e1c7521ebfe76792d748ce9b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 47380915dd18387fa3cc2af54d42a3777aab3f5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4459"></a>编译器警告 （等级 4） C4459
   
@@ -63,7 +45,7 @@ int main() {
 } 
 ```  
   
-若要解决此问题的一种方法是创建您全局函数的命名空间，但不是使用`using`指令置于该命名空间的范围内，因此所有引用都必须都使用明确限定名︰  
+若要解决此问题的一种方法是创建您全局函数的命名空间，但不是使用`using`指令置于该命名空间的范围内，因此所有引用都必须都使用明确限定名：  
   
 ```cpp  
 // C4459_namespace.cpp
@@ -78,4 +60,3 @@ int main() {
     globals::global_or_local = 3;
 } 
 ```  
-

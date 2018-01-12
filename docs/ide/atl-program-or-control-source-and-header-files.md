@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2700d55e5d45f67e35f852122525aeae252f01ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a13a4c6ddb74a6f63b5da1171a3d4360199b508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL 程序或控件的源文件和头文件
 ATL 项目在 Visual Studio 中，根据你为创建的项目选择的选项创建时创建以下文件。  
@@ -33,7 +34,7 @@ ATL 项目在 Visual Studio 中，根据你为创建的项目选择的选项创�
 |StdAfx.cpp|包括 StdAfx.h 和 Atlimpl.cpp 文件。|  
 |StdAfx.h|包括 ATL 标头文件。|  
   
-## <a name="see-also"></a>另请参阅  
- [为 Visual c + + 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)   
+## <a name="see-also"></a>请参阅  
+ [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)   
  [MFC 程序或控件的源文件和头文件](../ide/mfc-program-or-control-source-and-header-files.md)   
  [CLR 项目](../ide/files-created-for-clr-projects.md)

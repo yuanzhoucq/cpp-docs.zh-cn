@@ -1,37 +1,36 @@
 ---
-title: "编译器警告（等级 4）C4668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4668"
+title: "编译器警告 （等级 4） C4668 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4668
+dev_langs: C++
+helpviewer_keywords: C4668
 ms.assetid: c6585460-bc4a-4a15-9242-4cbfce53c961
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c8cd54cbc252bf86fdc974fd0e5a87e44d5c853e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 4）C4668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4668"></a>编译器警告（等级 4）C4668
 没有将“symbol”定义为预处理器宏，用“0”替换“directives”  
   
- 未定义的符号与预处理器指令一起使用。  符号将计算为假。  若要定义符号，您可以使用 [\#define directive](../../preprocessor/hash-define-directive-c-cpp.md) 或 [\/D](../../build/reference/d-preprocessor-definitions.md) 编译器选项。  
+ 未定义的符号所用预处理器指令。 符号将计算结果为 false。 若要定义符号，你可以使用[#define 指令](../../preprocessor/hash-define-directive-c-cpp.md)或[/D](../../build/reference/d-preprocessor-definitions.md)编译器选项。  
   
- 默认情况下关闭此警告。  有关更多信息，请参见[默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 默认情况下，此警告处于关闭状态。 请参阅 [默认情况下处于关闭状态的编译器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 了解详细信息。  
   
-## 示例  
- 下面的示例生成 C4668：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C4668:  
   
 ```  
 // C4668.cpp  

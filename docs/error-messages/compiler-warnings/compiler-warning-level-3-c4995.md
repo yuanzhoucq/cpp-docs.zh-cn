@@ -1,35 +1,34 @@
 ---
-title: "编译器警告（等级 3）C4995 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4995"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4995"
+title: "编译器警告 （等级 3） C4995 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4995
+dev_langs: C++
+helpviewer_keywords: C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c8bf04670f8899209a42e2cc8d20420d522ef4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 编译器警告（等级 3）C4995
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-“function”: 名称被标记为 \#pragma deprecated  
+# <a name="compiler-warning-level-3-c4995"></a>编译器警告 （等级 3） C4995
+function： 名称被标记为弃用 #pragma  
   
- 编译器遇到了标记有杂注 [deprecated](../../preprocessor/deprecated-c-cpp.md) 的函数。  在未来版本中可能不再支持此函数。  可以用 [warning](../../preprocessor/warning.md) 杂注关闭此警告（如下例所示）。  
+ 编译器遇到标记有杂注的函数[弃用](../../preprocessor/deprecated-c-cpp.md)。 在未来版本中可能不再支持此函数。 你可以关闭此警告与[警告](../../preprocessor/warning.md)杂注 （例所示）。  
   
-## 示例  
- 下面的示例生成 C4995：  
+## <a name="example"></a>示例  
+ 下面的示例生成 C4995:  
   
 ```  
 // C4995.cpp  

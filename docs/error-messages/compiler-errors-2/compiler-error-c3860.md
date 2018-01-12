@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3860
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3860
+f1_keywords: C3860
+dev_langs: C++
+helpviewer_keywords: C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b7229392e763450e658fc26762751c732bf743bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3860"></a>编译器错误 C3860
 类类型名称后面的类型自变量列表必须列表中使用类型参数列表的顺序的参数  
