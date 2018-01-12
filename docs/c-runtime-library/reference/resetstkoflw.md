@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _resetstkoflw
+apiname: _resetstkoflw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,24 +23,23 @@ apitype: DLLExport
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - resetstkoflw function
 - stack overflow
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5bebef156656ba3618c216ad8266e1baf5dd7f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 82041367fe6cf320138d52b905f1eff7d3d54d3b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 从堆栈溢出恢复。  
@@ -108,13 +105,13 @@ int _resetstkoflw ( void );
   
  将不会捕获结构化的异常处理`STATUS_STACK_OVERFLOW`异常时应用程序编译与`/clr`(请参阅[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md))。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_resetstkoflw`|\<malloc.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
  **库：** [CRT 库功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
@@ -315,5 +312,5 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_alloca](../../c-runtime-library/reference/alloca.md)

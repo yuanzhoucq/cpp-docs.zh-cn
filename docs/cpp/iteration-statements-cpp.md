@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f81ffa2e6b8f1dc07e409b737f76cb8e6aca5258
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c06ae1c043551bbb4ed6469ab3f87d1ed86fd92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteration-statements-c"></a>迭代语句 (C++)
 根据一些循环终止条件，迭代语句会导致语句（或复合语句）被执行零次或多次。 当这些语句是复合语句时，它们的顺序执行，除非任一[中断](../cpp/break-statement-cpp.md)语句或[继续](../cpp/continue-statement-cpp.md)遇到语句。  
@@ -31,12 +32,12 @@ ms.lasthandoff: 10/24/2017
   
 |语句|计算位置|初始化|递增|  
 |---------------|------------------|--------------------|---------------|  
-|`while`|循环的顶部|No|No|  
-|**do**|循环的底部|No|No|  
+|`while`|循环的顶部|否|否|  
+|**do**|循环的底部|否|否|  
 |**for**|循环的顶部|是|是|  
 |**基于范围的 for**|循环的顶部|是|是|  
   
  迭代语句的语句部分不能为声明。 但是，它可以是包含声明的复合语句。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ 语句概述](../cpp/overview-of-cpp-statements.md)

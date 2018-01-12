@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1134ef0c0c9854d76ff2c87b3650ec6e91e54180
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 专用**  
@@ -38,9 +39,9 @@ return-type __stdcall function-name[(argument-list)]
   
 |元素|实现|  
 |-------------|--------------------|  
-|参数传递顺序|从右到左。|  
+|自变量传递顺序|从右到左。|  
 |参数传递约定|按值，除非传递指针或引用类型。|  
-|堆栈维护职责|调用的函数从堆栈中弹出自己的参数。|  
+|堆栈维护职责|调用的函数从堆栈中弹出自己的自变量。|  
 |名称修饰约定|下划线 (_) 是名称的前缀。 名称后跟后面是参数列表中的字节数（采用十进制）的符号 (@)。 因此，声明为 `int func( int a, double b )` 的函数按如下所示进行修饰：`_func@12`|  
 |大小写转换约定|无|  
   
@@ -80,6 +81,6 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自变量传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)   
  [关键字](../cpp/keywords-cpp.md)

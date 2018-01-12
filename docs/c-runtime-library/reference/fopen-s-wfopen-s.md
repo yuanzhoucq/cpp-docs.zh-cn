@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 168d1cd797f9f7d6080f2da7aefeb8859c7f2232
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 打开文件。 这些版本的 [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md) 具有安全增强功能，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)所述。  
@@ -102,9 +86,9 @@ errno_t _wfopen_s(
   
 |`pFile`|`filename`|`mode`|返回值|`pFile` 的内容|  
 |-------------|----------------|------------|------------------|------------------------|  
-|`NULL`|any|任何|`EINVAL`|未更改|  
-|any|`NULL`|任何|`EINVAL`|未更改|  
-|any|any|NULL|`EINVAL`|未更改|  
+|`NULL`|任何|任何|`EINVAL`|未更改|  
+|任何|`NULL`|任何|`EINVAL`|未更改|  
+|任何|任何|NULL|`EINVAL`|未更改|  
   
 ## <a name="remarks"></a>备注  
  通过 `fopen_s` 和 `_wfopen_s` 打开的文件不可共享。 如果要求文件可共享，请将 [_fsopen、_wfsopen](../../c-runtime-library/reference/fsopen-wfsopen.md) 与相应的共享模式常量（例如用于读/写共享的 `_SH_DENYNO`）一起使用。  
@@ -218,11 +202,11 @@ errno_t _wfopen_s(
 |模式字符串中的字符|`_open`/`_sopen` 的等效 `oflag` 值|  
 |-------------------------------|----------------------------------------------------|  
 |`a`|`_O_WRONLY &#124; _O_APPEND`（通常为 `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`）|  
-|`a+`|`_O_RDWR &#124; _O_APPEND`（通常为 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT`）|  
+|`a+`|`_O_RDWR &#124; _O_APPEND` （通常为 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` ）|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`（通常为 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`）|  
-|`w+`|`_O_RDWR`（通常为 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`）|  
+|`w`|`_O_WRONLY` （通常为 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`）|  
+|`w+`|`_O_RDWR` （通常为 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`）|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|无|  
@@ -237,14 +221,14 @@ errno_t _wfopen_s(
   
  如果使用 `rb` 模式，则无需移植代码，并且预计将读取大量文件以及/或者不关心网络性能，内存映射的 Win32 文件可能也是一个选项。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
@@ -315,7 +299,7 @@ The file 'data2' was opened
 Number of files closed by _fcloseall: 1  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   

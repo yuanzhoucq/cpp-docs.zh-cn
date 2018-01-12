@@ -1,38 +1,40 @@
 ---
-title: "使用 for each 循环访问 STL 集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DTL 集合, 循环访问"
+title: "使用 for each 循环访问 c + + 标准库集合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a4ce2de13380895f1f313559abeb87e4cd65db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 for each 循环访问 STL 集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`for each` 关键字可用于循环访问标准 C\+\+ 库 \(STL 集合\)。  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>使用 for each 循环访问 c + + 标准库集合
+`for each`关键字可用于循环访问 c + + 标准库集合。  
   
-## 所有平台  
+## <a name="all-platforms"></a>所有平台  
  **备注**  
   
- 也称为 STL 集合是 *容器*。  有关详细信息，请参阅[STL 容器](../standard-library/stl-containers.md)。  
+ C + + 标准库集合是也称为*容器*。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。  
   
-## 示例  
+## <a name="examples"></a>示例  
  **示例**  
   
- 下面的代码示例使用 `for each` 循环访问 [\< 映射 \>](../standard-library/map.md)。  
+ 下面的代码示例使用`for each`要循环访问[\<映射 >](../standard-library/map.md)。  
   
 ```  
 // for_each_stl.cpp  
@@ -72,11 +74,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **使用 30 天的月份 \= 4** **示例**  
+```Output  
+Months with 30 days = 4  
+```  
   
- 下面的代码示例用于 STL 容器中的迭代变量使用常数引用 \(`const&`\)。  可以使用引用 \(`&`\) 声明为可以为 *T*类型`&`的任何集合的迭代变量。  
+ **示例**  
+  
+ 下面的代码示例使用的常量引用 (`const&`) 于与 c + + 标准库容器的迭代变量。 你可以使用的引用 (`&`) 上可以声明为任何的类型集合的迭代变量作为*T*`&`。  
   
 ```  
 // for_each_stl_2.cpp  
@@ -100,25 +106,28 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **输出**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+```Output  
+retval: 60  
+```  
+  
+## <a name="windows-runtime"></a>Windows 运行时  
  **备注**  
   
- （此功能没有特定于平台的备注。）  
+ 有关于此功能没有特定于平台的备注。  
   
-### 要求  
- 编译器选项：**\/ZW**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>公共语言运行时 
  **备注**  
   
- （此功能没有特定于平台的备注。）  
+ 有关于此功能没有特定于平台的备注。  
   
-### 要求  
- 编译器选项：**\/clr**  
+### <a name="requirements"></a>惠?  
+ 编译器选项： **/clr**  
   
-## 请参阅  
- [for each，in](../dotnet/for-each-in.md)   
+## <a name="see-also"></a>请参阅  
+ [对于每一个，在](../dotnet/for-each-in.md)   
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

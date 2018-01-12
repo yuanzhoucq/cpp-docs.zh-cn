@@ -1,91 +1,93 @@
 ---
-title: "CRowset::FindNextRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset.FindNextRow"
-  - "CRowset<TAccessor>.FindNextRow"
-  - "ATL::CRowset::FindNextRow"
-  - "CRowset::FindNextRow"
-  - "CRowset<TAccessor>::FindNextRow"
-  - "CRowset.FindNextRow"
-  - "ATL.CRowset<TAccessor>.FindNextRow"
-  - "ATL::CRowset<TAccessor>::FindNextRow"
-  - "FindNextRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FindNextRow 方法"
+title: "Crowset:: Findnextrow |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset.FindNextRow
+- CRowset<TAccessor>.FindNextRow
+- ATL::CRowset::FindNextRow
+- CRowset::FindNextRow
+- CRowset<TAccessor>::FindNextRow
+- CRowset.FindNextRow
+- ATL.CRowset<TAccessor>.FindNextRow
+- ATL::CRowset<TAccessor>::FindNextRow
+- FindNextRow
+dev_langs: C++
+helpviewer_keywords: FindNextRow method
 ms.assetid: 36484df9-3625-4f15-bf69-db73a8d91c55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 08dd2a80040c4affb89b19dfff3b22103b4e9547
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::FindNextRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在指定后的书签，查找下一匹配行。  
+# <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
+查找指定的书签之后的下一步的匹配行。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      HRESULT FindNextRow(   
-   DBCOMPAREOP op,   
-   BYTE* pData,   
-   DBTYPE wType,   
-   DBLENGTH nLength,   
-   BYTE bPrecision,   
-   BYTE bScale,   
-   BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL    
+      HRESULT FindNextRow(   
+   DBCOMPAREOP op,   
+   BYTE* pData,   
+   DBTYPE wType,   
+   DBLENGTH nLength,   
+   BYTE bPrecision,   
+   BYTE bScale,   
+   BOOL bSkipCurrent = TRUE,   
+   CBookmarkBase* pBookmark = NULL    
 ) throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `op`  
- \[in\] 使用操作在比较行值。  有关值，请参见 [IRowsetFind::FindNextRow](https://msdn.microsoft.com/en-us/library/ms723091.aspx)。  
+ [in]要在比较行值中使用的操作。 值，请参阅[IRowsetFind::FindNextRow](https://msdn.microsoft.com/en-us/library/ms723091.aspx)。  
   
  `pData`  
- \[in\] 将匹配的值的指针。  
+ [in]指向要匹配的值的指针。  
   
  `wType`  
- \[in\] 指示缓冲区部分的值的数据类型。  有关类型指示器的信息，请参见在 *OLE DB 程序员参考中的*[数据类型](https://msdn.microsoft.com/en-us/library/ms723969.aspx) [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]指示缓冲区的值部分的数据类型。 有关类型指示器的信息，请参阅[数据类型](https://msdn.microsoft.com/en-us/library/ms723969.aspx)中*OLE DB 程序员参考*Windows SDK 中。  
   
  `nLength`  
- \[in\] 长度，以字节为数据值分配的，使用者数据结构。  有关详细信息，请参见 **cbMaxLen** 中显示的 [DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx) 中 *OLE DB 程序员参考*。  
+ [in]使用者数据结构分配数据值的长度，以字节为单位。 有关详细信息，请参阅说明**cbMaxLen**中[DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程序员参考。*  
   
  `bPrecision`  
- \[in\] 使用的最大值精度，则获取数据时。  只有在 `wType` 为 `DBTYPE_NUMERIC`时使用。  有关详细信息，请参阅《*OLE DB 程序员参考》\) 中的*[涉及 DBTYPE\_NUMERIC 或 DBTYPE\_DECIMAL 的转换](https://msdn.microsoft.com/en-us/library/ms719714.aspx)。  
+ [in]在获取数据使用最大精度。 使用仅当`wType`是`DBTYPE_NUMERIC`。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx)中*OLE DB 程序员参考*。  
   
  `bScale`  
- \[in\] 使用的缩放，在获取数据时。  只有在 `wType` 为 `DBTYPE_NUMERIC` 或 **DBTYPE\_DECIMAL**使用。  有关详细信息，请参阅《*OLE DB 程序员参考》\) 中的*[涉及 DBTYPE\_NUMERIC 或 DBTYPE\_DECIMAL 的转换](https://msdn.microsoft.com/en-us/library/ms719714.aspx)。  
+ [in]获取数据时使用的小数位数。 使用仅当`wType`是`DBTYPE_NUMERIC`或**DBTYPE_DECIMAL**。 有关详细信息，请参阅[转换涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx)中*OLE DB 程序员参考*。  
   
  *bSkipCurrent*  
- \[in\] 行数从开始搜索的书签的。  
+ [in]从该处开始搜索书签的行数。  
   
  `pBookmark`  
- \[in\] 起始位置的书签。  
+ [in]要开始搜索位置的书签。  
   
-## 返回值  
- 标准版`HRESULT`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。  
   
-## 备注  
- 此方法要求可选接口 **IRowsetFind**，因此所有的提供程序可能不支持；如果是这样，方法返回 **E\_NOINTERFACE**。  还必须设置**DBPROP\_IRowsetFind**为`VARIANT_TRUE` 在对包含行集合中的 **打开** 表或命令。  
+## <a name="remarks"></a>备注  
+ 此方法要求的可选接口**IRowsetFind**，这可能不支持对所有提供程序，如果出现这种情况，该方法返回**E_NOINTERFACE**。 你还必须设置**DBPROP_IRowsetFind**到`VARIANT_TRUE`之前调用**打开**对表或命令，其中包含行集。  
   
- 有关用法信息的使用者中书签，请参见 [使用书签](../../data/oledb/using-bookmarks.md)。  
+ 在使用者中使用书签的信息，请参阅[使用书签](../../data/oledb/using-bookmarks.md)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
- [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx)
+ [DBBINDING 结构](https://msdn.microsoft.com/en-us/library/ms716845.aspx)

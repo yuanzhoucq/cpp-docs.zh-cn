@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81fdd3069f6e8deeca616c85542a76d89c20202d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 03d64715f3bdfb6028fdb039451d4b4b004a059e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>你在使用记录视图中的角色（MFC 数据访问）
 下表介绍了要处理记录集通常必须执行的操作以及框架的用途。  
@@ -40,6 +43,6 @@ ms.lasthandoff: 10/24/2017
   
  基于窗体的编程只是处理数据库的一种方法。 有关使用某些其他用户界面或没有用户界面的应用程序的信息，请参阅[MFC： 结合文档和视图使用数据库类](../data/mfc-using-database-classes-with-documents-and-views.md)和[MFC： 使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md). 有关显示数据库记录的其他方法，请参阅类[CListView](../mfc/reference/clistview-class.md)和[CTreeView](../mfc/reference/ctreeview-class.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录视图 （MFC 数据访问）](../data/record-views-mfc-data-access.md)   
  [ODBC 驱动程序列表](../data/odbc/odbc-driver-list.md)

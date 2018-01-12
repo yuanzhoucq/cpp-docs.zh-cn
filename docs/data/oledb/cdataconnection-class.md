@@ -1,74 +1,76 @@
 ---
-title: "CDataConnection 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataConnection"
-  - "ATL.CDataConnection"
-  - "CDataConnection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataConnection 类"
+title: "CDataConnection 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataConnection
+- ATL.CDataConnection
+- CDataConnection
+dev_langs: C++
+helpviewer_keywords: CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdataconnection-class"></a>CDataConnection 类
 管理与数据源的连接。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CDataConnection  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
-  
-|||  
-|-|-|  
-|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|构造函数。  实例化和初始化 `CDataConnection` 对象。|  
-|[复制](../../data/oledb/cdataconnection-copy.md)|创建现有数据连接的副本。|  
-|[打开](../../data/oledb/cdataconnection-open.md)|使用初始化字符串打开与数据源的连接。|  
-|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|开始当前连接的新会话。|  
-  
-### 运算符  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[运算符 BOOL](../../data/oledb/cdataconnection-operator-bool.md)|确定当前是否举行会话。|  
-|[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|确定当前是否举行会话。|  
-|[运算符 CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|返回对创建的 `CDataSource` 容器的引用。|  
-|[运算符 CDataSource\*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|返回包含的`CDataSource` 对象的指针。|  
-|[运算符 CSession&&](../../data/oledb/cdataconnection-operator-csession-amp.md)|返回对创建的 `CSession` 容器的引用。|  
-|[运算符 CSession\*](../../data/oledb/cdataconnection-operator-csession-star.md)|返回包含的`CSession` 对象的指针。|  
+|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|构造函数。 实例化和初始化`CDataConnection`对象。|  
+|[复制](../../data/oledb/cdataconnection-copy.md)|创建现有的数据连接的副本。|  
+|[打开](../../data/oledb/cdataconnection-open.md)|打开使用初始化字符串的数据源的连接。|  
+|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|打开当前连接上的新会话。|  
   
-## 备注  
- `CDataConnection` 是创建客户端的一种有用类封装，因为它需要所需完成，则连接到数据源后 \(数据源和会话\) 和某些工作  
+### <a name="operators"></a>运算符  
   
- 如果没有 `CDataConnection`，您必须创建一个 `CDataSource` 对象，则调用其方法 [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) [CSession](../../data/oledb/csession-class.md)，然后创建对象的实例，调用其方法 [CCommand](../../data/oledb/ccommand-class.md) [打开](../../data/oledb/csession-open.md)，然后创建对象并调用其方法。**打开**\*  
+|||  
+|-|-|  
+|[BOOL 运算符](../../data/oledb/cdataconnection-operator-bool.md)|确定当前会话是否为打开。|  
+|[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|确定当前会话是否为打开。|  
+|[CDataSource 运算符 （& a)](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|返回所包含的引用`CDataSource`对象。|  
+|[运算符 CDataSource *](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|返回指向包含的 `CDataSource` 对象的指针。|  
+|[运算符 CSession （& a)](../../data/oledb/cdataconnection-operator-csession-amp.md)|返回所包含的引用`CSession`对象。|  
+|[运算符 CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|返回指向包含的 `CSession` 对象的指针。|  
   
- `CDataConnection`，需要创建连接对象，只传递它初始化字符串，然后使用将打开命令的该连接。  如果上重复使用计划到数据库的连接时，最好保持连接打开，因此，`CDataConnection` 提供了一种简便方式执行此操作。  
+## <a name="remarks"></a>备注  
+ `CDataConnection`是用于创建客户端，因为它封装必要的对象 （数据源和会话） 和一些操作，你需要连接到数据源时执行操作的有用类  
+  
+ 而无需`CDataConnection`，你必须创建`CDataSource`对象，请调用其[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)方法，然后创建的一个实例[CSession](../../data/oledb/csession-class.md)对象，请调用其[打开](../../data/oledb/csession-open.md)方法，然后创建[CCommand](../../data/oledb/ccommand-class.md)对象并调用其**打开*** 方法。  
+  
+ 与`CDataConnection`，只需创建连接对象，将其传递初始化字符串，然后使用该连接打开命令。 如果你打算反复使用数据库的连接，则使连接保持打开，一个好办法和`CDataConnection`提供一种简便方式做到这一点。  
   
 > [!NOTE]
->  如果您创建需要处理多个会话的数据库应用程序，需要将使用 [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。  
+>  如果要创建的数据库应用程序需要处理多个会话，你将需要使用[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

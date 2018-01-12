@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eab712aabf524b0fb577fffd6302e54341fe905b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 28291b62ec3ce9e6e4a70d4bd7d723b45be3bc0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queuevaluetype-stlclr"></a>queue::value_type (STL/CLR)
 元素的类型。  
@@ -31,7 +34,7 @@ typedef Value value_type;
 ```  
   
 ## <a name="remarks"></a>备注  
- 该类型是模板参数 `Value`的同义词。  
+ 该类型是模板参数 `Value` 的同义词。  
   
 ## <a name="example"></a>示例  
   
@@ -65,12 +68,12 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [队列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)   
  [queue::reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)

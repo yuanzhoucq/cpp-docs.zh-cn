@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c65647d2e4bd6107b53d4980b4c243af1b4cf3bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91d97658436e2d5563c70765da5c3c98e1cbeed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>如何：为 ADO.NET 封送 ANSI 字符串 (C++/CLI)
 演示如何添加本机字符串 (`char *`) 到数据库，以及如何封送<xref:System.String?displayProperty=fullName>从数据库到本机的字符串。  
@@ -150,7 +153,7 @@ StringCol: This is string 2.
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  有关涉及 ADO.NET 的安全问题的信息，请参阅[保护 ADO.NET 应用程序](/dotnet/framework/data/adonet/securing-ado-net-applications)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Runtime.InteropServices>   
  [使用 ADO.NET 访问数据 (C + + /cli CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   

@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 424ac220f4879d60b78d9a4daef065dc167fe8d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d1166885f4d21b7e41a33efc93b1b537f1385b5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autogcroot"></a>auto_gcroot
 定义 `auto_gcroot` 类和 `swap` 函数。  
@@ -37,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
  [swap 函数 (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++ 支持库](../dotnet/cpp-support-library.md)

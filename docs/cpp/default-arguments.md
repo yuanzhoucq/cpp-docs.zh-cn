@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - function declarators
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 88c341abab34595da58d435be28f50e86cb47403
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-arguments"></a>默认自变量
 在许多情况下，函数具有不常使用的自变量，因为使用默认值便已足够。 为了解决此问题，默认自变量工具允许为函数仅指定在给定调用中有意义的自变量。 若要阐明这个概念，请考虑在提供的示例[函数重载](../cpp/function-overloading.md)。  
@@ -93,7 +91,7 @@ print( d, 0 ); // Override default argument to achieve other
   
  使用默认参数时，请注意以下几点：  
   
--   默认参数仅在其中省略了尾随参数的函数调用中使用 - 它们必须是最后的参数。 因此，以下代码是非法的：  
+-   默认自变量仅在其中省略了尾随自变量的函数调用中使用 - 它们必须是最后的自变量。 因此，以下代码是非法的：  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
@@ -116,13 +114,13 @@ print( d, 0 ); // Override default argument to achieve other
   
      此代码的问题在于定义中的函数声明重新定义了 `prec` 的默认参数。  
   
--   以后的声明可添加额外的默认参数。  
+-   以后的声明可添加额外的默认自变量。  
   
--   可为指向函数的指针提供默认参数。 例如:   
+-   可为指向函数的指针提供默认参数。 例如:  
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  

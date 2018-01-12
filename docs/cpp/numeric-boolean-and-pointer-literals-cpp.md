@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>数值、 布尔和指针文本 （c + +）
 文本是一种直接表示值的程序元素。 本文介绍整数、浮点、布尔和指针类型的文本。 有关字符串和字符文本的信息，请参阅[字符串和字符文本 （c + +）](../cpp/string-and-character-literals-cpp.md)。 你还可以定义基于任何这些类别中; 你自己的文本有关详细信息请参阅[用户定义文本 （c + +）](../cpp/user-defined-literals-cpp.md)  
@@ -45,7 +46,7 @@ MyClass* mc = nullptr;      // pointer literal
   
  如果没有前缀或后缀，编译器将为整型文本值赋予 `int` 类型（32 位），前提是该值符合该类型，否则将赋予 `long long` 类型（64 位）。  
   
- 要指定十进制整型文本，请以非零数字作为规范的开头。 例如：  
+ 要指定十进制整型文本，请以非零数字作为规范的开头。 例如:  
   
 ```  
 int i = 157;   // Decimal literal  
@@ -55,21 +56,21 @@ int m = 36'000'000  // digit separators make large values more readable
 int   
 ```  
   
- 要指定八进制整型文本，请以 0 作为规范的开头，后跟 0 到 7 之间的一系列数字。 在指定八进制文本时，使用数字 8 和 9 是错误做法。 例如：  
+ 要指定八进制整型文本，请以 0 作为规范的开头，后跟 0 到 7 之间的一系列数字。 在指定八进制文本时，使用数字 8 和 9 是错误做法。 例如:  
   
 ```  
 int i = 0377;   // Octal literal  
 int j = 0397;        // Error: 9 is not an octal digit  
 ```  
   
- 要指定十六进制整型文本，请以 `0x` 或 `0X` 作为规范的开头（“x”的大小写形式并不重要），后跟 `0` 到 `9` 以及 `a`（或 `A`）到 `f`（或 `F`）之间的一系列数字。 十六进制数字 `a`（或 `A`）到 `f`（或 `F`）表示介于 10 和 15 之间的值。 例如:   
+ 要指定十六进制整型文本，请以 `0x` 或 `0X` 作为规范的开头（“x”的大小写形式并不重要），后跟 `0` 到 `9` 以及 `a`（或 `A`）到 `f`（或 `F`）之间的一系列数字。 十六进制数字 `a`（或 `A`）到 `f`（或 `F`）表示介于 10 和 15 之间的值。 例如:  
   
 ```  
 int i = 0x3fff;   // Hexadecimal literal  
 int j = 0X3FFF;        // Equal to i  
 ```  
   
- 若要指定无符号的类型，请使用**u**或**U**后缀。 若要指定长类型，请使用**l**或**L**后缀。 要指定 64 位整型类型，请使用 LL 或 ll 后缀。 虽然仍支持 i64 后缀，但应避免使用，因为它特定于 Microsoft 且不可移植。 例如:   
+ 若要指定无符号的类型，请使用**u**或**U**后缀。 若要指定长类型，请使用**l**或**L**后缀。 要指定 64 位整型类型，请使用 LL 或 ll 后缀。 虽然仍支持 i64 后缀，但应避免使用，因为它特定于 Microsoft 且不可移植。 例如:  
   
 ```  
 unsigned val_1 = 328u;             // Unsigned value  
@@ -145,7 +146,7 @@ if (num < 100)
   
  在上一个示例中，使用能够传达明确含义的命名常量可能会更好，例如“MAXIMUM_ERROR_THRESHOLD”。 如果最终用户看到返回值“成功”，则使用可以存储在文件单一位置中的命名字符串常量可能会更好，它可以在该位置本地化为其他语言。 使用命名常量可帮助你自己和其他人了解代码的含义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [词法约定](../cpp/lexical-conventions.md)   
  [C + + 字符串文本](../cpp/string-and-character-literals-cpp.md)   
  [C + + 用户定义的文本](../cpp/user-defined-literals-cpp.md)

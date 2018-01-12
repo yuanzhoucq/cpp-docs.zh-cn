@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_error class
+f1_keywords: _com_error
+dev_langs: C++
+helpviewer_keywords: _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 670be1988adb3ef5afa9113b9988ceafb249801f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerror-class"></a>_com_error 类
 **Microsoft 专用**  
@@ -55,7 +51,7 @@ ms.lasthandoff: 09/25/2017
   
 |||  
 |-|-|  
-|[描述](../cpp/com-error-description.md)|调用`IErrorInfo::GetDescription`函数。|  
+|[说明](../cpp/com-error-description.md)|调用`IErrorInfo::GetDescription`函数。|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|调用`IErrorInfo::GetHelpContext`函数。|  
 |[HelpFile](../cpp/com-error-helpfile.md)|调用`IErrorInfo::GetHelpFile`函数|  
 |[Source](../cpp/com-error-source.md)|调用`IErrorInfo::GetSource`函数。|  
@@ -76,11 +72,11 @@ ms.lasthandoff: 09/25/2017
   
 **结束 Microsoft 专用**  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** comdef.h  
   
  `Lib:`对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)   
  [IErrorInfo 接口](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

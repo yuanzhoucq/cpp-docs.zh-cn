@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 30589266bc4f9b2c083de5ccd82af5bec02cd4ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 实现 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)接口，添加到的记录并从数据成员中检索的记录 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 类型的**CAtlArray <** `RecordClass`**>**.  
@@ -73,9 +76,9 @@ class IErrorRecordsImpl : public IErrorRecords
 |-|-|  
 |[m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)|错误记录的数组。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

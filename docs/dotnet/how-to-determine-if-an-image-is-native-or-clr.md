@@ -1,36 +1,39 @@
 ---
-title: "如何：确定映像为本机映像还是 CLR 映像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 编译器选项 [C++], 在编译中检测使用"
-  - "公共语言运行时, /clr 编译器选项"
-  - "公共语言运行时, 映像测试"
-  - "图像 [C++], CLR 验证"
+title: "如何： 确定映像是否本机或 CLR |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- common language runtime, image testing
+- images [C++], CLR verification
+- /clr compiler option [C++], detecting use in compilation
+- common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b4b652be03aeb0c147ee39b141bd2df932af055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：确定映像为本机映像还是 CLR 映像
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-确定某个映像是否是为公共语言运行时生成的一种方法是使用 **dumpbin** [\/CLRHEADER](../build/reference/clrheader.md)。  
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：确定映像为本机映像还是 CLR 映像
+一种方法来确定是使用公共语言运行时是否生成映像**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。  
   
- 还可以通过编程方式检查某个映像是否是为公共语言运行时生成的。  有关详细信息，请参阅[如何：检测 \/clr 编译](../dotnet/how-to-detect-clr-compilation.md)。  
+ 你可以以编程方式检查是否为公共语言运行时生成的映像。 有关详细信息，请参阅[如何： 检测 /clr 编译](../dotnet/how-to-detect-clr-compilation.md)。  
   
-## 示例  
- 下面的示例确定映像是否生成为针对某个公共语言运行时来运行。  
+## <a name="example"></a>示例  
+ 下面的示例确定是否生成的映像在公共语言运行时上运行。  
   
 ```  
 // detect_image_type.cpp  
@@ -88,5 +91,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>请参阅  
+ [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

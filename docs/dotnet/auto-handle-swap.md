@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b28f90b845d7c0ae43f150cc3949329c61d371ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5b0a92773cbeae8e37cd2b2978ab51bcbfda7de1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autohandleswap"></a>auto_handle::swap
 交换对象与另一个`auto_handle`。  
@@ -67,11 +70,11 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头文件** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [auto_handle 成员](../dotnet/auto-handle-members.md)   
  [swap 函数 (auto_handle)](../dotnet/swap-function-auto-handle.md)

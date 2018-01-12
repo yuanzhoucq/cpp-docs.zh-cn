@@ -1,60 +1,61 @@
 ---
-title: "deque::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 成员 [STL/CLR]"
+title: "deque:: erase (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 831fbc2b-604f-446b-88bc-b37531304c33
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7cd061a112be18a0a8e3f2e2531db8fa0940e48c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# deque::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeerase-stlclr"></a>deque::erase (STL/CLR)
 移除指定位置处的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### 参数  
- first  
- 清除的范围开头。  
+#### <a name="parameters"></a>参数  
+ `first`  
+ 要清除范围的起点。  
   
- last  
- 清除的范围末尾。  
+ `last`  
+ 要清除范围的末尾。  
   
- where  
+ `where`  
  要清除的元素。  
   
-## 备注  
- 第一个成员函数中移除`where`指向的控件序列元素 。  使用其删除一个元素。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数将移除 `where` 所指向的受控序列的元素。 用于删除单个元素。  
   
- 第二个成员中移除函数控制元素在序列的范围的 `[``first``,` `last``)`。  您移除它使用零个或更多连续的元素。  
+ 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 用于删除零个或多个由连续的元素。  
   
- 前两个成员函数返回指定保持在所有移除元素外的第一个元素中的迭代器，或者 [deque::end](../dotnet/deque-end-stl-clr.md)`()`，如果不存在这样的元素。  
+ 这两个成员函数返回一个迭代器，它指定已移除，任何元素之外保留的第一个元素或[deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md) `()`如果此类元素不存在。  
   
- 当清除元素时，元素副本数是线性的中元素的数量。抹除的结尾和序列之间的接近结束的。\(当在序列中的任一端删除一个或多个元素，元素副本不发生。\)  
+ 当清除元素，元素副本的数目呈线性擦除末尾和最近序列末尾之间的元素的数目。 （当清除序列的任意一端的一个或多个元素，没有元素副本会发生。）  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cliext_deque_erase.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -92,16 +93,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\= b\)**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::clear](../dotnet/deque-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)

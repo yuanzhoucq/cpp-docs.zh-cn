@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - subscript operator [C++], interpretation of
 - arrays [C++], subscripting
 - interpreting subscript operators [C++]
 - operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1a83ff6aea4380688d3b6298b93e04caab1dbb7f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpretation-of-subscript-operator"></a>下标运算符的解释
 与其他运算符，下标运算符相似 (**[]**) 可以由用户重新定义。 如果没有重载下标运算符，下标运算符的默认行为是使用以下方法组合数组名称和下标：  
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/25/2017
   
  **((**   
  ***阵列名称*) + （**   
- ***下标*1***max*2 * \* max*3*....max 表示*n) ** + ***下标*2 * \* max*3*....max 表示*n)。   。 。 *+**下标*n))  
+ ***下标*1***max*2  *\* max*3*....max 表示*n)  **+** *下标*2  *\* max*3*....max 表示*n)。 . . *+**下标*n))  
   
-## <a name="see-also"></a>另请参阅  
- [阵列](../cpp/arrays-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [数组](../cpp/arrays-cpp.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2bca897bb349b032224639e6b5196582e7feff4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5a6081faf7034c158c53e36f930a3057168808a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listsize-stlclr"></a>list::size (STL/CLR)
 对元素数进行计数。  
@@ -73,11 +76,11 @@ size() = 0 after clearing
 size() = 2 after adding 2  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)

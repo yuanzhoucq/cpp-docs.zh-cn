@@ -37,11 +37,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6664c7109b96896a09f131fc142426144047bf68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5e38d9a8df63fd4c2880fda7becec545c9584a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ldexp"></a>ldexp
 将浮点数乘以二的整数幂。  
@@ -86,13 +87,13 @@ long double ldexpl(
 ## <a name="remarks"></a>备注  
  由于 C++ 允许重载，因此你可以调用采用 `ldexp` 或 `float` 类型的 `long double` 重载。 在 C 程序中，`ldexp` 始终采用 `double` 和 `int` 并返回 `double`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|C 标头|C++ 标头|  
+|例程所返回的值|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`ldexp`, `ldexpf`, `ldexpl`|\<math.h>|\<cmath>|  
   
- 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -118,7 +119,7 @@ int main( void )
 4.0 times two to the power of 3 is 32.0  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [modf、modff、modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

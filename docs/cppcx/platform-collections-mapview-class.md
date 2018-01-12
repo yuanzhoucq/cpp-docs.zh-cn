@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 349dbfd081301e8bf3661c8a6cf18766adaaf238
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 将一个只读视图表示为一个 映射，这是键值对的集合。  
@@ -74,7 +75,7 @@ ref class MapView sealed;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `MapView`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** collection.h  
   
  **命名空间：** Platform::Collections  
@@ -216,5 +217,5 @@ void Split(
 ### <a name="remarks"></a>备注  
  此方法为非操作性的，它不执行任何操作。  
     
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

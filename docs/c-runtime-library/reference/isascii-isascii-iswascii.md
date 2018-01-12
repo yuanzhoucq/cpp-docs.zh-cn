@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f321411fca27d22540d4dc63c56774522b04a5e
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3858955a1409842d80439401d6c689c06f6c86f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -89,16 +90,16 @@ int iswascii(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_istascii`|`__isascii`|`__isascii`|`iswascii`|
 
-## <a name="requirements"></a>要求
+## <a name="requirements"></a>惠?
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`isascii`, `__isascii`|C：\<ctype.h><br /><br /> C++：\<cctype> 或 \<ctype.h>|
 |`iswascii`|C：\<wctype.h 1>、\<ctype.h 1>，或 \<wchar.h 1><br /><br /> C++：\<cwctype 1>、\<cctype 1>、\<wctype.h 1>、\<ctype.h 1>，或 \<wchar.h 1>|
 
 `isascii`、`__isascii` 和 `iswascii` 函数是 Microsoft 的特定函数。 有关其他兼容性信息，请参见“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)   
 [区域设置](../../c-runtime-library/locale.md)   

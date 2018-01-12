@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d34fdaa37901d8bdce3dce312d674024a84ad0e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cba03cfdda0b7a55c8f4719d5340566ee5dc6050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
 提供的实现[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)接口。  
@@ -56,9 +59,9 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ## <a name="remarks"></a>备注  
  行集上的必需接口。 此类通过实现行集属性[属性集映射](../../data/oledb/begin-propset-map.md)命令类中定义。 若要使用命令类的属性集，将显示行集类，尽管命令或会话对象创建时其自己的副本运行时属性时，提供行集。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** altdb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

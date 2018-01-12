@@ -50,11 +50,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d14c4fd98a9191e8a92d3f24dc24c19de2433e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 获取系统错误信息（`strerror_s`、 `_wcserror_s`）或打印用户提供的错误消息（`_strerror_s`、`__wcserror_s`）。 如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述，这些版本的 [strerror、_strerror、_wcserror、\__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) 具有安全性增强功能。  
@@ -124,8 +125,8 @@ errno_t __wcserror_s(
   
 |`buffer`|`numberOfElements`|`strErrMsg`|`buffer` 的内容|  
 |--------------|------------------------|-----------------|--------------------------|  
-|`NULL`|any|any|无|  
-|any|0|any|未修改|  
+|`NULL`|任何|任何|不可用|  
+|任何|0|任何|未修改|  
   
 ## <a name="remarks"></a>备注  
  `strerror_s` 函数将 `errnum` 映射到错误消息字符串，并返回 `buffer` 中的字符串。 `_strerror_s` 不采用错误编号；它使用 `errno` 的当前值来确定适当的消息。 实际上，`strerror_s` 和 `_strerror_s` 都不会打印该消息：若要打印消息，需要调用输出函数，例如 [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)：  
@@ -150,7 +151,7 @@ if (( _access( "datafile",2 )) == -1 )
   
  `_strerror_s``_wcserror_s`，和`__wcserror_s`不是 ANSI 定义的一部分而是改为 Microsoft 扩展。 请不要在需要可移植性的位置使用它们；若要获得 ANSI 兼容性，请改用 `strerror_s`。  
   
- 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  这些函数的调试版本首先用 0xFD 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -160,19 +161,19 @@ if (( _access( "datafile",2 )) == -1 )
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcserror_s`|`strerror_s`|`strerror_s`|`_wcserror_s`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strerror_s`, `_strerror_s`|\<string.h>|  
 |`_wcserror_s`, `__wcserror_s`|\<string.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  请参阅 [perror](../../c-runtime-library/reference/perror-wperror.md) 示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   

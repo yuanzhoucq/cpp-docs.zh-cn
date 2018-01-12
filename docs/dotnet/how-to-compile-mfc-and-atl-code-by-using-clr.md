@@ -23,11 +23,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77e28bcd53d5f497edbbff938f428322a9400fee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f03e324cf4f88d47232cba5e15ec65181af91feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>如何：使用 /clr 编译 MFC 和 ATL 代码
 本主题讨论如何将现有的 MFC 和 ATL 程序，以面向公共语言运行时编译。  
@@ -86,5 +89,5 @@ ms.lasthandoff: 10/24/2017
   
 3.  对于包含 DllMain 和任何内容的文件，它调用，在**解决方案资源管理器**，右键单击该文件，然后单击**属性**。 下**配置属性**，展开的节点旁边**C/c + +**和选择**常规**。 在右窗格中，在**项目默认值**，将其设置**具有公共语言运行时支持的编译**到**无公共语言运行库支持**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,54 +1,55 @@
 ---
-title: "make_collection (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_collection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_collection 函数 [STL/CLR]"
+title: "make_collection (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_collection
+dev_langs: C++
+helpviewer_keywords: make_collection function [STL/CLR]
 ms.assetid: c25fb0cb-ebd8-4198-a565-bad28d32ee19
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 718483b6d95e1eb1eb67f66d2b9c18a8e17cae20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# make_collection (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-从一个迭代器对执行 `range_adapter`。  
+# <a name="makecollection-stlclr"></a>make_collection (STL/CLR)
+请`range_adapter`从迭代器对。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<typename Iter>  
     range_adapter<Iter> make_collection(Iter first, Iter last);  
 ```  
   
-#### 参数  
- Iter  
- 包装的迭代器的类型。  
+#### <a name="parameters"></a>参数  
+ `Iter`  
+ 已包装的迭代器的类型。  
   
- 首先  
- 包装的第一个迭代器。  
+ `first`  
+ 要包装的第一个迭代器。  
   
- last  
- 包装的第二个迭代器。  
+ `last`  
+ 要包装的第二个迭代器。  
   
-## 备注  
- 模板函数返回 `gcnew range_adapter<Iter>(``first``,` `last``)`。  使用它从一个对 `range_adapter`对象`<Iter>` 迭代器。  
+## <a name="remarks"></a>备注  
+ 此模板函数返回 `gcnew range_adapter<Iter>(first, last)`。 使用它来构造`range_adapter<Iter>`从一对迭代器的对象。  
   
-## 示例  
+## <a name="example"></a>示例  
   
-```  
+```cpp  
 // cliext_make_collection.cpp   
 // compile with: /clr   
 #include <cliext/adapter>   
@@ -91,15 +92,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**计数为 3**  
-**IsSynchronized \= false**  
-**不是 SyncRoot nullptr 为 True**  
- **&#124;为 c&#124;**   
-## 要求  
- **页眉：** \<\/cliext 适配器\>  
+```Output  
+ a b c  
+Count = 3  
+IsSynchronized = False  
+SyncRoot not nullptr = True  
+ | a b c |  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/适配器 >  
   
-## 请参阅  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

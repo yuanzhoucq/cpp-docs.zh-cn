@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,22 @@ f1_keywords:
 - remainderf
 - remainder
 - remainderl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - remainderf
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bfd25184e2542c8f1f3c4e1e975397685328b64b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a0da3e4a6e785b73ebf2bfb8a529581d52dcfe2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 计算两个浮点值的商的余数（四舍五入到最接近的整数值）。  
@@ -106,13 +89,13 @@ long double remainderl(
   
  由于 C++ 允许重载，因此你可以调用采用并返回 `remainder` 或 `float` 值的 `long double` 重载。 在 C 程序中，`remainder` 始终采用两个双精度型值并返回一个双精度值。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`remainder`, `remainderf`, `remainderl`|\<math.h>|  
   
- 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -136,7 +119,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   

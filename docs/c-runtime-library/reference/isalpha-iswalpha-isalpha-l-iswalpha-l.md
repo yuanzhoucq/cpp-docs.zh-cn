@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e93b18a5fc29f74ba9ea9fb990d4a7a0715872b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 确定整数是否表示字母字符。  
@@ -98,18 +99,18 @@ int _iswalpha_l(
 |`_istalpha`|`isalpha`|`_ismbcalpha`|`iswalpha`|  
 |`_istalpha_l`|`_isalpha_l`|`_ismbcalpha_l`|`_iswalpha_l`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`isalpha`|\<ctype.h 1>|  
 |`iswalpha`|\<ctype.h 1> 或 \<wchar.h 1>|  
-|`_isalpha_l`|\<ctype.h 1>|  
+|`_isalpha_l`|\<ctype.h>|  
 |`_iswalpha_l`|\<ctype.h 1> 或 \<wchar.h 1>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [is、isw 例程](../../c-runtime-library/is-isw-routines.md)

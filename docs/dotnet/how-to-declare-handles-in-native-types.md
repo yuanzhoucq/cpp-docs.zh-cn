@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7507a0c941fa651f55fdf462b9d832cfd929632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>如何：使用本机类型声明句柄
 不能声明中本机类型的句柄类型。 vcclr.h 提供类型安全包装模板`gcroot`从 c + + 堆引用 CLR 对象。 此模板允许您在本机类型中嵌入虚拟句柄并将它视为它是基础类型。 在大多数情况下，你可以使用`gcroot`对象作为嵌入类型使用，而不需要任何转换。 但是，对于[对于每一个，在](../dotnet/for-each-in.md)，你必须使用`static_cast`来检索基础的托管的引用。  
@@ -117,5 +120,5 @@ int main() {
 String in V: Hello  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -40,11 +40,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44e5773920d42c9b37e24a11b015adccc8e1be8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c819f62f36966363f32eb16b7af758de274d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 将一个宽字符转换为相应的多字节字符。 [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) 的一个版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -92,7 +93,7 @@ errno_t _wctomb_s_l(
 |--------------|-------------------|------------------|-----------------|  
 |`NULL`|>0|`EINVAL`|未修改|  
 |任何|>`INT_MAX`|`EINVAL`|未修改|  
-|any|过小|`EINVAL`|未修改|  
+|任何|过小|`EINVAL`|未修改|  
   
  如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 `wctomb` 返回 `EINVAL`，并将 `errno` 设置为 `EINVAL`。  
   
@@ -101,16 +102,16 @@ errno_t _wctomb_s_l(
   
  如果 `wctomb_s` 将宽字符转换为多字节字符，则会将宽字符的字节数（始终不大于 `MB_CUR_MAX`）放入 `pRetValue` 指向的整数。 如果 `wchar` 为宽字符 null 字符 (L'\0')，`wctomb_s` 会将 1 填充到 `pRetValue`。 如果目标指针 `mbchar` 为 NULL，`wctomb_s` 会将 0 放入 `pRetValue`。 如果转换不在当前区域设置，可能`wctomb_s`-1 放`pRetValue`。  
   
- `wctomb_s` 将当前区域设置用于与区域设置相关的信息；`_wctomb_s_l` 也是一样，只不过它使用传入的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `wctomb_s` 将当前区域设置用于与区域设置相关的信息；`_wctomb_s_l` 也是一样，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`wctomb_s`|\<stdlib.h>|  
 |`_wctomb_s_l`|\<stdlib.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  本程序演示 `wctomb` 函数的行为。  
@@ -139,7 +140,7 @@ Convert a wide character:
    Multibyte character: a  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   

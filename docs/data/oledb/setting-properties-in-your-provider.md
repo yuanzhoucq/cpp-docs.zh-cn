@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80b82e1fb69200f45716b2ad62a44160862f7d08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1da48eb2439b94f326380b9991ea63d548131628
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供程序中设置属性
 查找所需的属性的属性组和属性 ID。 有关详细信息，请参阅[OLE DB 属性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程序员参考*。  
@@ -55,5 +58,5 @@ ms.lasthandoff: 10/24/2017
   
 -   **DBPROP_CANHOLDROWS**将被忽略; 提供程序指定其自己的限制。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

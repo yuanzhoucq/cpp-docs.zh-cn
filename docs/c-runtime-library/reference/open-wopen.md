@@ -42,11 +42,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2362db1db1686bcf87cb171b3f29da48226d54b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-wopen"></a>_open、_wopen
 打开文件。 已弃用这些函数，因为提供了更安全的版本；请参阅 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -147,8 +148,7 @@ int _wopen(
  打开文件并将其长度截断为零；该文件必须具有写入权限。 无法使用 `_O_RDONLY` 进行指定。 结合使用 `_O_TRUNC` 和 `_O_CREAT` 来打开现有文件或创建文件。  
   
 > [!NOTE]
->  
-          `_O_TRUNC` 标志会损坏指定文件的内容。  
+>  `_O_TRUNC` 标志会损坏指定文件的内容。  
   
  `_O_WRONLY`  
  打开文件以仅只写。 无法使用 `_O_RDONLY` 或 `_O_RDWR` 进行指定。  
@@ -187,14 +187,14 @@ int _wopen(
   
  如果为 `pmode` 指定一个值，而非 `_S_IREAD` 和 `_S_IWRITE` 的某种组合（即使它会在另一个操作系统中指定有效的 `pmode`），或指定除了允许的 `oflag` 值以外的任意值，则该函数将在调试模式下生成断言并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 -1 并将 `errno` 设置为 `EINVAL`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_open`|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|  
 |`_wopen`|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|  
   
- `_open` 和 `_wopen` 是 Microsoft 扩展。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ `_open` 和 `_wopen` 是 Microsoft 扩展。 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
@@ -247,7 +247,7 @@ Open succeeded on input file
 Open succeeded on output file  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_close](../../c-runtime-library/reference/close.md)   

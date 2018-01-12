@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82e9a4d904f28f528dbc9ed6871d9cd350d36014
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7ce46b8db587337b7a9c98279efd4b89ffa8f9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 将 Win32 异常（C 结构的异常）处理为 C++ 类型的异常。  
@@ -78,9 +79,9 @@ typedef void (*_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS
   
  在从托管代码（使用 /clr 编译的）或混合的本机和托管代码中使用 `_set_se_translator` 时，请注意转换器仅影响本机代码中生成的异常。 托管代码中生成的任何托管异常（例如，在引发 `System::Exception` 时）都不会通过转换器函数进行传送。 使用 Win32 函数 `RaiseException` 的托管代码中引发的异常或由系统异常（如被零除异常）引发的异常将通过转换器传送。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_set_se_translator`|\<eh.h>|  
   
@@ -202,7 +203,7 @@ Translating the structured exception to a C++ exception.
 Caught CMyException.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理例程](../../c-runtime-library/exception-handling-routines.md)   
  [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
  [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   

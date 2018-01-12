@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3475ae25a6c11dbbbead1de4fb4f3180e2e24f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>类或接口中的成员声明 (C++/CLI)
 声明属性和运算符的已经过广泛改写从托管扩展的 c + + 到 Visual c + +，隐藏在托管扩展的设计中公开的基础实现详细信息。 还修改了事件声明。  
@@ -55,5 +58,5 @@ ms.lasthandoff: 10/24/2017
  [静态 Const Int 链接不再是文本的](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
  讨论的方式更改`static const`链接整型成员以及如何显式声明使用新常量`literal`关键字。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C++/CLI 迁移入门](../dotnet/cpp-cli-migration-primer.md)

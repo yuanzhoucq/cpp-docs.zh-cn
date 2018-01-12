@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8009d587007e618bfecf46911c5b30486cf1aba4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43be9c8a2339bb47d598304145a8c34f391b11c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>数据源：以编程方式在 ODBC 数据源中创建表
 本主题说明如何创建表以获取你的数据源，使用`ExecuteSQL`类的成员函数`CDatabase`，将该函数传递一个字符串，包含**CREATE TABLE** SQL 语句。  
@@ -41,5 +44,5 @@ myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",
 > [!NOTE]
 >  中指定的字段类型**CREATE TABLE** SQL 语句可能会因你使用的 ODBC 驱动程序。 Microsoft Query 程序 （随 Visual c + + 1.5） 是一种方法发现可用的数据源的字段类型。 在 Microsoft 查询中，单击**文件**，单击**表定义**，从数据源，选择一个表并查看中显示的类型**类型**组合框。 SQL 语法也存在是为了创建索引。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据源 (ODBC)](../../data/odbc/data-source-odbc.md)

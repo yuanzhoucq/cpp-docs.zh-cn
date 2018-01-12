@@ -33,11 +33,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 63c45f6466b6a47d92b5dd82d5d5b43fb09d94d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 585d2a295bedb8b0ba49a893d5089bc682a1debd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="max"></a>__max
 返回两个值中的较大者。  
@@ -64,15 +65,15 @@ type __max(
 ## <a name="remarks"></a>备注  
  `__max` 宏会将两个值进行比较并返回其中的较大者。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`__max`|\<stdlib.h>|  
   
 ## <a name="example"></a>示例  
  有关详细信息，请参阅 [__min](../../c-runtime-library/reference/min.md) 中的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [__min](../../c-runtime-library/reference/min.md)

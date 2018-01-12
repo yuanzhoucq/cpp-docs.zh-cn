@@ -1,39 +1,39 @@
 ---
-title: "如何：使用 C# 索引器 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, 索引器"
-  - "索引器, 使用 C#"
+title: "如何： 使用 C# 索引器 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ed069e1f9d7effa686cd572bd505a41dcf60c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 C# 索引器 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 不包含索引器；而是包含索引属性。  若要使用 C\# 索引器，请如同索引器是索引属性那样访问它。  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>如何：使用 C# 索引器 (C++/CLI)
+Visual c + + 不包含索引器;它具有已编制索引属性。 若要使用 C# 索引器，请访问索引器，就像它是索引的属性。  
   
- 有关索引器的更多信息，请参见：  
+ 有关索引器的详细信息，请参阅：  
   
--   [索引器](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [索引器](/dotnet/csharp/programming-guide/indexers/index)  
   
--   [如何：使用索引属性](../misc/how-to-use-indexed-properties.md)  
-  
-## 示例  
- 下面的 C\# 程序定义了一个索引器。  
+## <a name="example"></a>示例  
+ 下面的 C# 程序定义索引器。  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +71,8 @@ public class MainClass {
 */  
 ```  
   
-## 示例  
- 此 Visual C\+\+ 程序使用该索引器。  
+## <a name="example"></a>示例  
+ 此 Visual c + + 程序使用该索引器。  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +88,19 @@ int main() {
 }  
 ```  
   
-  **Element \#0 \= 21**  
-**Element \#1 \= 0**  
-**Element \#2 \= 0**  
-**Element \#3 \= 0**  
-**Element \#4 \= 0**  
-**Element \#5 \= 0**  
-**Element \#6 \= 0**  
-**Element \#7 \= 0**  
-**Element \#8 \= 0**  
-**Element \#9 \= 0**  
-**Element \#10 \= 0**   
-## 请参阅  
- [与其他 .NET 语言的互操作性](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [与其他 .NET 语言的互操作性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

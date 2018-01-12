@@ -1,60 +1,62 @@
 ---
-title: "IGetDataSourceImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IGetDataSourceImpl"
-  - "ATL.IGetDataSourceImpl<T>"
-  - "ATL.IGetDataSourceImpl"
-  - "ATL::IGetDataSourceImpl"
-  - "ATL::IGetDataSourceImpl<T>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IGetDataSourceImpl 类"
+title: "IGetDataSourceImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IGetDataSourceImpl
+- ATL.IGetDataSourceImpl<T>
+- ATL.IGetDataSourceImpl
+- ATL::IGetDataSourceImpl
+- ATL::IGetDataSourceImpl<T>
+dev_langs: C++
+helpviewer_keywords: IGetDataSourceImpl class
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c83ab71b7b19d410dd0157f3400ebc1a58a63916
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# IGetDataSourceImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-提供对象的实现。[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)  
+# <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 类
+提供的实现[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <class T>  
 class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 类，从 `IGetDataSourceImpl`中派生。  
+ 你的类，派生自`IGetDataSourceImpl`。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 接口方法  
+### <a name="interface-methods"></a>接口方法  
   
 |||  
 |-|-|  
-|[GetDataSource](../../data/oledb/igetdatasourceimpl-getdatasource.md)|返回在创建会话的数据源对象的接口指针。|  
+|[GetDataSource](../../data/oledb/igetdatasourceimpl-getdatasource.md)|返回创建了会话的数据源对象上的接口指针。|  
   
-## 备注  
- 这是在会话的强制接口获取的接口指针。数据源对象。  
+## <a name="remarks"></a>备注  
+ 这在获取数据源对象的接口指针的会话上是必需的接口。  
   
-## 要求  
- **页眉：**atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

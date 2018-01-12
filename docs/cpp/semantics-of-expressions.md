@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 09b65ee050e856c4dcecba269c46a08c8d2d7fb5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semantics-of-expressions"></a>表达式的语义
 表达式根据其运算符的优先级和分组来计算。 ([运算符优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[词法约定](../cpp/lexical-conventions.md)，显示的关系 c + + 运算符对表达式实施。)  
@@ -108,7 +106,7 @@ func( i, ++i );
   
 -   逗号运算符的左操作数。 完全计算逗号运算符的左操作数，并在继续之前完成所有副作用。 始终计算逗号运算符的两个操作数。  
   
--   函数调用运算符。 计算函数调用表达式以及函数的所有参数（包括默认参数），并在进入函数之前完成所有副作用。 在参数或函数调用表达式之间没有指定的计算顺序。  
+-   函数调用运算符。 计算函数调用表达式以及函数的所有自变量（包括默认自变量），并在进入函数之前完成所有副作用。 在参数或函数调用表达式之间没有指定的计算顺序。  
   
 -   条件运算符的第一个操作数。 完全计算条件运算符的第一个操作数，并在继续之前完成所有副作用。  
   
@@ -124,5 +122,5 @@ func( i, ++i );
   
 -   return 语句中的表达式。 完全计算该表达式，并在控制权返回到调用函数之前完成所有副作用。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [表达式](../cpp/expressions-cpp.md)

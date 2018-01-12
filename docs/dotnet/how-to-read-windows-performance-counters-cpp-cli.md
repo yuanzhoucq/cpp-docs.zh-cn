@@ -1,42 +1,44 @@
 ---
-title: "如何：读取 Windows 性能计数器 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "计数器, 读取 Windows 性能计数器"
-  - "性能"
-  - "性能计数器"
-  - "性能计数器, 读取 Windows 性能计数器"
-  - "性能监视"
-  - "性能监视, Windows 性能计数器"
-  - "性能, 计数器"
+title: "如何： 读取 Windows 性能计数器 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：读取 Windows 性能计数器 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-有些应用程序和 Windows 子系统通过 Windows 性能系统公开性能数据。  可以使用 <xref:System.Diagnostics.PerformanceCounterCategory> 和 <xref:System.Diagnostics.PerformanceCounter> 类（这些类驻留在 <xref:System.Diagnostics?displayProperty=fullName> 命名空间中）来访问这些计数器。  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>如何：读取 Windows 性能计数器 (C++/CLI)
+某些应用程序和 Windows 子系统公开通过 Windows 性能系统的性能数据。 可以使用访问这些计数器<xref:System.Diagnostics.PerformanceCounterCategory>和<xref:System.Diagnostics.PerformanceCounter>类，该类位于<xref:System.Diagnostics?displayProperty=fullName>命名空间。  
   
- 下面的代码示例使用这些类检索并显示 Windows 负责更新的计数器，此计数器将指示处理器处于繁忙状态的时间百分比。  
+ 下面的代码示例使用这些类以检索并显示更新的 Windows，以指示处理器处于繁忙状态的时间的百分比的计数器。  
   
 > [!NOTE]
->  此示例需要管理权限才能在 Windows Vista 上运行。  
+>  此示例需要在 Windows Vista 上运行的管理员特权。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // processor_timer.cpp  
@@ -125,7 +127,7 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [Introduction to Monitoring Performance](http://msdn.microsoft.com/zh-cn/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [监视性能的简介](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

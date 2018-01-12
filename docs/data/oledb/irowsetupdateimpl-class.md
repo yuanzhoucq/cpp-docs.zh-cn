@@ -1,36 +1,39 @@
 ---
-title: "IRowsetUpdateImpl 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl"
-  - "ATL.IRowsetUpdateImpl"
-  - "ATL::IRowsetUpdateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetUpdateImpl 类"
-  - "提供程序, 可更新的"
-  - "可更新提供程序, 延迟的更新"
+title: "IRowsetUpdateImpl 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl
+- ATL.IRowsetUpdateImpl
+- ATL::IRowsetUpdateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, updatable
+- IRowsetUpdateImpl class
+- updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetUpdateImpl 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) 接口的 OLE DB 模板实现。  
+# <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
+OLE DB 模板实现[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)接口。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template <  
@@ -49,70 +52,70 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 >  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `T`  
- 从 `IRowsetUpdateImpl`派生的类。  
+ 从派生的类`IRowsetUpdateImpl`。  
   
  `Storage`  
- 用户记录。  
+ 用户记录中。  
   
  `UpdateArray`  
- 包含更新的数组行集缓存数据。  
+ 包含用于更新行集的缓存的数据的数组。  
   
  `RowClass`  
- **HROW**的单元格。  
+ 存储单位**HROW**。  
   
  `MapClass`  
- 提供程序\) 占用的任何行句柄的单元格。  
+ 提供程序持有的所有行句柄存储单元。  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 接口方法 \(用于 IRowsetChange\)  
-  
-|||  
-|-|-|  
-|[SetData](../../data/oledb/irowsetupdateimpl-setdata.md)|将在一列或多列中可接受的数据值。|  
-  
-### 接口方法 \(用于 IRowsetUpdate\)  
+### <a name="interface-methods-used-with-irowsetchange"></a>（与 IRowsetChange 一起使用） 的接口方法  
   
 |||  
 |-|-|  
-|[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|从数据源获取数据传输到新，或者获取忽略挂起的更改。|  
-|[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|返回行列表与挂起的更改。|  
-|[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|返回中指定的行状态。|  
-|[撤消](../../data/oledb/irowsetupdateimpl-undo.md)|撤消对行的所有更改，因为最后获取或更新。|  
-|[更新](../../data/oledb/irowsetupdateimpl-update.md)|传输进行的任何更改。行，因为最后获取或更新。|  
+|[SetData](../../data/oledb/irowsetupdateimpl-setdata.md)|设置一个或多个列中的数据值。|  
   
-### 实现回调方法 \(\)  
+### <a name="interface-methods-used-with-irowsetupdate"></a>（与 IRowsetUpdate 一起使用） 的接口方法  
   
 |||  
 |-|-|  
-|[IsUpdateAllowed](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|用于检查安全性，完整性，方法允许在更新之前。|  
+|[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|获取最近传输到或从忽略挂起的更改的数据源中获取的数据。|  
+|[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|返回具有挂起的更改的行的列表。|  
+|[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|返回指定的行的状态。|  
+|[撤消](../../data/oledb/irowsetupdateimpl-undo.md)|自上次提取或更新以来撤消对行的任何更改。|  
+|[更新](../../data/oledb/irowsetupdateimpl-update.md)|传输自上次提取或更新后对行进行任何更改。|  
   
-### 数据成员  
+### <a name="implementation-methods-callback"></a>实现方法 （回调）  
   
 |||  
 |-|-|  
-|[m\_mapCachedData](../../data/oledb/irowsetupdateimpl-m-mapcacheddata.md)|包含原始数据。延迟的操作。|  
+|[IsUpdateAllowed](../../data/oledb/irowsetupdateimpl-isupdateallowed.md)|用于为安全起见，完整性，依次类推之前允许更新检查。|  
   
-## 备注  
- 因为中描述的内容还存在应用此处，应先阅读和理解 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)的文档。  还应读取 `OLE``DB`上设置的`Programmer's``Reference` 数据的章节 6。  
+### <a name="data-members"></a>数据成员  
   
- `IRowsetUpdateImpl` 实现 OLE DB 接口，`IRowsetUpdate` 使使用者延迟将 `IRowsetChange` 更改传输到数据源。和传输之前撤消更改。  
+|||  
+|-|-|  
+|[m_mapCachedData](../../data/oledb/irowsetupdateimpl-m-mapcacheddata.md)|包含原始数据延迟的操作。|  
+  
+## <a name="remarks"></a>备注  
+ 你应首先阅读并理解的文档[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)，这是因为存在所述的所有内容也适用此处。 你还应阅读的第 6 章*OLE DB 程序员参考*上设置数据。  
+  
+ `IRowsetUpdateImpl`实现 OLE DB`IRowsetUpdate`接口，可使用者延迟所做的更改传输`IRowsetChange`到数据源，并撤消在传输之前的更改。  
   
 > [!IMPORTANT]
->  强烈建议您在尝试实现提供程序读取下列文档：  
+>  强烈建议你阅读以下文档后，再尝试实现你的提供商：  
   
 -   [创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md)  
   
--   `OLE` `DB` `Programmer's` `Reference`的章节6  
+-   第 6 章*OLE DB 程序员参考*  
   
--   另请参见 `RUpdateRowset` 类如何在 UpdatePV 示例  
+-   另请参阅如何`RUpdateRowset`UpdatePV 示例中使用类  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   
  [创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md)

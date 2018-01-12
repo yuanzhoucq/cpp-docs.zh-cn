@@ -1,44 +1,46 @@
 ---
-title: "default::(type_name)::GetHashCode 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Object::GetHashCode"
-dev_langs: 
-  - "C++"
+title: "默认值:: (type_name):: GetHashCode 方法 |Microsoft 文档"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Object::GetHashCode
+dev_langs: C++
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 067ead44f000aae8999c0815191089f081edaa67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# default::(type_name)::GetHashCode 方法
+# <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode 方法
 返回此实例的哈希代码。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```cpp  
 public:int GetHashCode()  
 ```  
   
-## 返回值  
+### <a name="return-value"></a>返回值  
  此实例的哈希代码。  
   
-## 要求  
- **支持的最低客户端版本：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>惠?  
+ **支持的最低客户端：** Windows 8  
   
- **支持的最低服务器版本：** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **支持的最低服务器：** Windows Server 2012  
   
- **命名空间：**默认  
+ **命名空间：** 默认  
   
- **标头：**vccorlib.h  
+ **标头：** vccorlib.h  
   
-## 请参阅  
- [default 命名空间](../cppcx/default-namespace.md)
+## <a name="see-also"></a>请参阅  
+ [默认命名空间](../cppcx/default-namespace.md)

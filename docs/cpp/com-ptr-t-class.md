@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d395b6981e167bf759e0e26577dca962632a22c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 类
 **Microsoft 专用**  
   
  `_com_ptr_t` 对象封装 COM 接口指针，被称为“智能”指针。 此模板类管理资源分配和释放函数调用通过**IUnknown**成员函数： `QueryInterface`， `AddRef`，和**版本**。  
   
- 智能指针通常由提供的 typedef 定义引用**_COM_SMARTPTR_TYPEDEF**宏。 此宏采用接口名称和 IID，并利用接口名称与后缀 `_com_ptr_t` 声明 `Ptr` 的专用化。 例如:   
+ 智能指针通常由提供的 typedef 定义引用**_COM_SMARTPTR_TYPEDEF**宏。 此宏采用接口名称和 IID，并利用接口名称与后缀 `_com_ptr_t` 声明 `Ptr` 的专用化。 例如:  
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
@@ -65,10 +66,10 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 **结束 Microsoft 专用**  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** comip.h 声明  
   
  **Lib:**对 comsuppw.lib 或 comsuppwd.lib (请参阅[/zc: wchar_t （wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)有关详细信息)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

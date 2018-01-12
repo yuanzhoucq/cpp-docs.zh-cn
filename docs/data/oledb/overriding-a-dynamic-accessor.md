@@ -1,32 +1,35 @@
 ---
-title: "重写动态访问器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "访问器 [C++], dynamic"
-  - "动态访问器"
-  - "重写, 动态访问器"
+title: "重写动态访问器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e06e1d5b0a5aa34116456c342f9cec233edcb6a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 重写动态访问器
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-当使用动态访问器如 `CDynamicAccessor` 时，命令 **Open** 方法将根据已打开的行集合的列信息自动为您创建访问器。  可以重写该动态访问器以精确控制列的绑定方式。  
+# <a name="overriding-a-dynamic-accessor"></a>重写动态访问器
+当使用动态访问器如`CDynamicAccessor`，该命令**打开**方法创建一个访问器自动根据打开行集的列信息。 您可以重写动态访问器可控制完全列的绑定方式。  
   
- 若要重写动态访问器，请将 **false** 作为最后一个参数传递到 `CCommand::Open` 方法。  这将防止 **Open** 自动创建访问器。  然后可以调用 `GetColumnInfo`，并为要绑定的每一列调用 `AddBindEntry`。  以下代码显示如何执行此操作：  
+ 若要重写动态访问器，请将传递**false**到的最后一个参数作为`CCommand::Open`方法。 这可以防止**打开**从自动创建一个访问器。 然后，你可以调用`GetColumnInfo`并调用`AddBindEntry`为每个你想要绑定的列。 下面的代码演示如何执行此操作：  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +79,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)

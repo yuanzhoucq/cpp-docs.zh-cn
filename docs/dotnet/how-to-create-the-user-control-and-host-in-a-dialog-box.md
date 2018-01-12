@@ -16,11 +16,14 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf0372029a6f6f3c2e2d3030d9e04ddcf6483f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>如何：创建用户控件并将它承载在对话框中
 这篇文章中的步骤假定你要创建基于对话框的 ([CDialog 类](../mfc/reference/cdialog-class.md)) Microsoft 基础类 (MFC) 项目，但你还可以添加对 Windows 窗体控件的支持到一个现有的 MFC 对话框。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
      在 **文件** 菜单上，单击 **新建** ，然后单击 **项目**。 在**Visual c + +**文件夹，选择**MFC 应用程序**。  
   
-     在“名称”框中键入 `MFC01`。 解决方案将设置更改为**将添加到解决方案**。 单击“确定”。  
+     在“名称”框中键入 `MFC01`。 解决方案将设置更改为**将添加到解决方案**。 单击 **“确定”**。  
   
      在**MFC 应用程序向导**，对于应用程序类型，选择**基于对话框**。 接受其余的默认设置，然后单击**完成**。 这将创建的 MFC 应用程序在 MFC 对话框。  
   
@@ -123,5 +126,5 @@ ms.lasthandoff: 10/24/2017
   
      上**调试**菜单上，单击**启动而不调试**。 MFC 对话框中应显示 Windows 窗体控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [在 MFC 对话框中承载 Windows 窗体用户控件](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

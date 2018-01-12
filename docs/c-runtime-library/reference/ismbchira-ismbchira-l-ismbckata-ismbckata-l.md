@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0e257ac4a1998e75fc47e719df2163d49654c71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c696603c7012a1ee95c118a12d45c2fc9132cfcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 **代码页 932 特定函数**  
@@ -97,7 +98,7 @@ int _ismbckata_l(
   
  这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-|例程|测试条件（仅代码页 932）|  
+|例程所返回的值|测试条件（仅代码页 932）|  
 |-------------|-------------------------------------------|  
 |`_ismbchira`|双字节平假名：0x829F<=`c`<=0x82F1。|  
 |`_ismbchira_l`|双字节平假名：0x829F<=`c`<=0x82F1。|  
@@ -106,18 +107,18 @@ int _ismbckata_l(
   
  **END 特定于代码页 932**   
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbchira`|\<mbstring.h>|  
 |`_ismbchira_l`|\<mbstring.h>|  
 |`_ismbckata`|\<mbstring.h>|  
 |`_ismbckata_l`|\<mbstring.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
  [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
  [is、isw 例程](../../c-runtime-library/is-isw-routines.md)   

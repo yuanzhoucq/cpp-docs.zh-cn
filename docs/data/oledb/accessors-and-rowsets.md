@@ -28,11 +28,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0514524c3f96791c05b3d3ae33b8196deb7e554
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessors-and-rowsets"></a>访问器和行集合
 若要设置和检索数据，OLE DB 模板使用访问器和行集通过[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)类。 此类可以处理不同类型的多个访问器。  
@@ -59,11 +62,11 @@ ms.lasthandoff: 10/24/2017
   
 |访问器类型|动态|句柄 params|缓冲区|多个访问器|  
 |-------------------|-------------|--------------------|------------|------------------------|  
-|`CAccessor`|No|是|用户|是|  
-|`CDynamicAccessor`|是|No|OLE DB 模板|No|  
-|`CDynamicParameterAccessor`|是|是|OLE DB 模板|No|  
-|`CDynamicStringAccessor[A,W]`|是|No|OLE DB 模板|No|  
-|`CManualAccessor`|是|是|用户|是|  
+|`CAccessor`|否|是|“用户”|是|  
+|`CDynamicAccessor`|是|否|OLE DB 模板|否|  
+|`CDynamicParameterAccessor`|是|是|OLE DB 模板|否|  
+|`CDynamicStringAccessor[A,W]`|是|否|OLE DB 模板|否|  
+|`CManualAccessor`|是|是|“用户”|是|  
   
 ## <a name="rowset-types"></a>行集合类型  
  OLE DB 模板支持三种类型的行集 （请参阅前图所示）： 单一行集 (由实现[CRowset](../../data/oledb/crowset-class.md))，大容量行集 (由实现[CBulkRowset](../../data/oledb/cbulkrowset-class.md))，和数组 （实现的行集通过[CArrayRowset](../../data/oledb/carrayrowset-class.md))。 单个行处理时的单个行集提取`MoveNext`调用。 大容量行集可以提取多个行句柄。 数组行集是可以使用数组语法访问的行集。  
@@ -75,5 +78,5 @@ ms.lasthandoff: 10/24/2017
   
  [架构行集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)执行不访问数据中的数据存储，但改为访问有关数据存储区，称为元数据信息。 在数据库结构在编译时未知，并且必须在运行时获取的情况下，通常使用架构行集合。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

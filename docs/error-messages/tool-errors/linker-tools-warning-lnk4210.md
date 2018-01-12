@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 31d416638b00a5d517fe49526b49ef130a2e9d31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4e2d596527b60735b42fb4edfff6f36d0be808d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4210"></a>链接器工具警告 LNK4210  
   
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   如果你的项目使用 /ENTRY，生成和 /ENTRY 以外传递函数`_DllMainCRTStartup`，该函数必须调用`_CRT_INIT`初始化 CRT。 如果 DLL 使用 /GS、 需要静态初始值设定项，或在 MFC 或 ATL 代码的上下文中调用此单独的调用是不够的。 请参阅[Dll 和 Visual c + + 运行库行为](../../build/run-time-library-behavior.md)有关详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)

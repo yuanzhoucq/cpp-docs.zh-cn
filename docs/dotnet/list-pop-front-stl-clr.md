@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa9df1ea52b525d00aa77478f6fcbe1f3e29b29c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4122e485075ae5c6586fd92a4cae3a04fa08431a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listpopfront-stlclr"></a>list::pop_front (STL/CLR)
 移除的第一个元素。  
@@ -67,12 +70,12 @@ a b c
 b c  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/列表 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list:: pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
  [list:: push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)   

@@ -59,11 +59,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3baca7feae2b45c7761e46daa4adeb7a0968580
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1871879a1a2b3c5737fd44946c4b95c8b0777f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 比较高达两个字符串指定数量的字符。  
@@ -125,11 +126,11 @@ int _mbsncmp_l(
 ## <a name="remarks"></a>备注  
  `strncmp` 函数对 `count` 和 `string1` 中最多前 `string2` 个字符执行序号比较，并返回一个指示子字符串之间关系的值。 `strncmp` 是 `_strnicmp` 的区分大小写版本。 `wcsncmp` 和 `_mbsncmp` 是 `_wcsnicmp` 和 `_mbsnicmp` 的一个区分大小写的版本。  
   
- `wcsncmp` 和 `_mbsncmp` 分别是 `strncmp` 的宽字符及多字节字符版本。 `wcsncmp` 的参数是宽字符字符串；而 `_mbsncmp` 的则是多字节字符字符串。 `_mbsncmp` 根据多字节代码页识别多字节字符序列，并在发生错误时返回 `_NLSCMPERROR`。  
+ `wcsncmp` 和 `_mbsncmp` 是 `strncmp` 的宽字符和多字节字符版本。 `wcsncmp` 的参数是宽字符字符串；而 `_mbsncmp` 的则是多字节字符字符串。 `_mbsncmp` 根据多字节代码页识别多字节字符序列，并在发生错误时返回 `_NLSCMPERROR`。  
   
  此外，`_mbsncmp` 和 `_mbsncmp_l` 验证参数。 如果 `string1` 或 `string2` 是 null 指针，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则 `_mbsncmp` 和 `_mbsncmp_l` 返回 `_NLSCMPERROR`，并将 `errno` 设置为 `EINVAL`。 `strncmp` 和 `wcsncmp` 不会验证其参数。 否则这些函数具有相同行为。  
   
- `_mbsncmp` 和 `_mbsncmp_l` 的比较行为受到区域设置的 `LC_CTYPE` 类别设置的设置影响。 这会控制对多字节字符的前导和尾随字节的检测。 有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `_mbsncmp` 函数对与区域设置相关的行为使用当前区域设置。 `_mbsncmp_l` 函数完全相同，只不过它转而使用 `locale` 参数。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。 如果区域设置是单字节的，则这些函数的行为等同于 `strncmp`。  
+ `_mbsncmp` 和 `_mbsncmp_l` 的比较行为受到区域设置的 `LC_CTYPE` 类别设置的设置影响。 这会控制对多字节字符的前导和尾随字节的检测。 有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `_mbsncmp` 函数对与区域设置相关的行为使用当前区域设置。 `_mbsncmp_l` 函数完全相同，只不过它转而使用 `locale` 参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。 如果区域设置是单字节的，则这些函数的行为等同于 `strncmp`。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射  
   
@@ -140,15 +141,15 @@ int _mbsncmp_l(
 |`_tccmp`|映射到宏或内联函数|`_mbsncmp`|映射到宏或内联函数|  
 |**不适用**|**不适用**|`_mbsncmp_l`|**不适用**|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strncmp`|\<string.h>|  
 |`wcsncmp`|\<string.h> 或 \<wchar.h>|  
 |`_mbsncmp`, `_mbsncmp_l`|\<mbstring.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -199,7 +200,7 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

@@ -43,11 +43,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec9c46f1a6d52a8769e5db454d44baf9ec9d8a8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 格式化时间字符串。  
@@ -120,7 +121,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- `format` 参数由一个或多个代码组成；比如在 `printf` 中，格式化代码前面带有百分号 (`%`)。 不以开头的字符`%`复制不变以`strDest`。 当前区域设置的 `LC_TIME` 分类会影响 `strftime` 的输出格式。 （有关 `LC_TIME` 的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)）。没有 `_l` 后缀的函数使用当前设置的区域设置。 这些带有 `_l` 后缀的函数的版本相同，只不过它们将区域设置用作参数并使用它，而不是使用当前设置的区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ `format` 参数由一个或多个代码组成；比如在 `printf` 中，格式化代码前面带有百分号 (`%`)。 不以开头的字符`%`复制不变以`strDest`。 当前区域设置的 `LC_TIME` 分类会影响 `strftime` 的输出格式。 （有关 `LC_TIME` 的详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)）。没有 `_l` 后缀的函数使用当前设置的区域设置。 这些带有 `_l` 后缀的函数的版本相同，只不过它们将区域设置用作参数并使用它，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  `strftime` 的格式化代码如下所示：  
   
@@ -199,21 +200,21 @@ size_t _wcsftime_l(
 |`%#x`|长的日期表示形式，适用于当前区域设置。 例如：“1995 年 3 月 14 日，星期二”。|  
 |`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|请删除前导零（如果存在）。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strftime`|\<time.h>|  
 |`wcsftime`|\<time.h> 或 \<wchar.h>|  
 |`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<time.h> 或 \<wchar.h>|  
   
- 有关其他兼容性信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  请参阅 [time](../../c-runtime-library/reference/time-time32-time64.md) 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [区域设置](../../c-runtime-library/locale.md)   
  [时间管理](../../c-runtime-library/time-management.md)   
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   

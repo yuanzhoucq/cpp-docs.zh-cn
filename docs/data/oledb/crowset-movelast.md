@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a84fd6027ef147bbbe52e8ffee5d3c7b21efd38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d57885232fb10f302aeb36c6c074e7a88f0fb67b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetmovelast"></a>CRowset::MoveLast
 将光标移到的最后一行。  
@@ -49,10 +52,10 @@ HRESULT MoveLast( ) throw( );
   
  此方法要求你设置**DBPROP_CANSCROLLBACKWARDS**到`VARIANT_TRUE`之前调用**打开**对表或命令，其中包含行集。 (为了提高性能，你可能还要设置**DBPROP_QUICKRESTART**到`VARIANT_TRUE`。)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
  [Crowset:: Movenext](../../data/oledb/crowset-movenext.md)   
  [Irowset:: Restartposition](https://msdn.microsoft.com/en-us/library/ms712877.aspx)   

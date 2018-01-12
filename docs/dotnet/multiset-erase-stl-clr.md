@@ -1,32 +1,33 @@
 ---
-title: "multiset::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 成员 [STL/CLR]"
+title: "multiset:: erase (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 3ff9fe2d-bf43-446a-bd3f-74550313a1d2
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e31d88345ea483c2abe5492b5b94122e86665cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multiseterase-stlclr"></a>multiset::erase (STL/CLR)
 移除指定位置处的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +35,29 @@ iterator erase(iterator first, iterator last);
 size_type erase(key_type key)  
 ```  
   
-#### 参数  
- first  
- 清除的范围开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要清除范围的起点。  
   
- 键  
- 要清除的键值。  
+ 密钥  
+ 要擦除的密钥值。  
   
  last  
- 清除的范围末尾。  
+ 要清除范围的末尾。  
   
- where  
+ 其中  
  要清除的元素。  
   
-## 备注  
- 第一移除成员函数控制序列的元素由 `where`指向，并返回指定保持了元素外的第一个元素。移除的迭代器，或者 [multiset::end](../dotnet/multiset-end-stl-clr.md)`()`，如果不存在这样的元素。  使用其删除一个元素。  
+## <a name="remarks"></a>备注  
+ 第一个成员函数删除指向的受控序列的元素`where`，并返回指定已移除的元素之外保留的第一个元素的迭代器或[multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`如果此类元素不存在。 用于删除单个元素。  
   
- 第二个成员中移除函数控制元素在序列的范围的 `[``first``,` `last``)`，并返回指定保持超过所有元素外的第一个元素。移除的迭代器，或 `end()`，如果不存在这样的元素。  您移除它使用零个或更多连续的元素。  
+ 第二个成员函数范围中移除受控序列的元素 [`first`， `last`)，并返回指定已移除，任何元素之外保留的第一个元素的迭代器或`end()`如果没有此类元素存在... 用于删除零个或多个由连续的元素。  
   
- 第三个成员函数移除键有等效排序到 `key`控件序列的所有元素，并返回元素的数目的计数中移除。  使用它、移除和计数与指定键的所有元素。  
+ 第三个成员函数删除其键具有等效顺序受控任何的序列元素到`key`，并返回已移除的元素数的计数。 你可以使用它删除，用来计数与指定的键匹配的所有元素。  
   
- 每个元素需要消除时间比例元素数为底的对数控制在序列中。  
+ 每个元素擦除需要受控序列中的元素数的对数成正比的时间。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_multiset_erase.cpp   
@@ -97,16 +98,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\)\= b**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## 要求  
- **标头:** \<cliext\/set\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/set >  
   
-## 请参阅  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::clear](../dotnet/multiset-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [多集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)

@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d81cd7e569cd2baa8ab50b1904fa3ac15b36d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>thread
 
 **Microsoft 专用**  
-**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C + + 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)存储类说明符。
+**线程**扩展的存储类修饰符用于声明线程本地变量。 对于可移植等效的 C + + 11 及更高版本，使用[thread_local](../cpp/storage-classes-cpp.md#thread_local)对于可移植代码的存储类说明符。 在 Windows 上**thread_local**通过实现**__declspec （thread)**。
 
 ## <a name="syntax"></a>语法
 
@@ -46,13 +47,18 @@ __declspec( thread ) declarator
 __declspec( thread ) int tls_i = 1;  
 ```
 
-在声明线程本地对象和变量时必须遵守下列准则：
+动态加载库中使用线程本地变量，需要注意的因素可能会导致不会正确初始化线程本地变量：
+
+1) 如果函数调用 （包括构造函数） 在初始化变量时，此函数将仅调用线程导致二进制/DLL 以加载到进程中，以及二进制/DLL 已加载后启动这些线程。 为已在运行时已加载该 DLL 的其他任何线程不调用初始化函数。 动态初始化永远不会获取消息如果线程启动时，DLL 不在过程上 DLL_THREAD_ATTACH，DllMain 调用，但该 DLL 时发生。 
+
+2) 使用常量的值以静态方式初始化线程本地变量通常在所有线程上正确初始化。 但是，自 2017 年 12 月起时会出现已知的一致性问题凭此 constexpr 变量接收的 Microsoft c + + 编译器中动态而不是静态初始化。  
+  
+   注意： 这两个这些问题被需要修复在将来的编译器的更新。
+
+
+此外，在声明线程本地对象和变量时必须遵守下列准则：
 
 - 你可以将应用**线程**属性仅为类和数据声明和定义;**线程**不能用于函数声明或定义。
-
-- 使用**线程**属性可能会干扰[延迟加载](../build/reference/linker-support-for-delay-loaded-dlls.md)DLL 导入。
-
-- 在 XP 系统上**线程**如果 DLL 使用 __declspec （thread） 数据，并且它通过 LoadLibrary 动态加载可能无法正常工作。
 
 - 你可以指定**线程**只能在具有静态存储持续时间的数据项上的属性。 这包括全局数据对象 (同时**静态**和**extern**)，本地静态对象和类的静态数据成员。 你不能声明自动数据对象与**线程**属性。
 
@@ -77,7 +83,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- 标准 C 允许使用涉及引用自身的表达式初始化对象或变量，但只适用于非静态范围的对象。 虽然 C++ 通常允许使用涉及引用自身的表达式动态初始化对象，但是不允许将这种类型的初始化用于线程本地对象。 例如: 
+- 标准 C 允许使用涉及引用自身的表达式初始化对象或变量，但只适用于非静态范围的对象。 虽然 C++ 通常允许使用涉及引用自身的表达式动态初始化对象，但是不允许将这种类型的初始化用于线程本地对象。 例如:
 
     ```cpp
     // declspec_thread_3.cpp
@@ -91,7 +97,7 @@ __declspec( thread ) int tls_i = 1;
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [__declspec](../cpp/declspec.md)  
 [关键字](../cpp/keywords-cpp.md)  

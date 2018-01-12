@@ -1,32 +1,33 @@
 ---
-title: "pair::pair (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pair 成员 [STL/CLR]"
+title: "pair::pair (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::pair
+dev_langs: C++
+helpviewer_keywords: pair member [STL/CLR]
 ms.assetid: 188035f3-bd37-4b46-96dd-5ceb9a16df79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6b2382161ae1a4acf8cb79f017a39daf51826b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# pair::pair (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-构造一对对象。  
+# <a name="pairpair-stlclr"></a>pair::pair (STL/CLR)
+构造 pair 对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 pair();  
@@ -35,40 +36,40 @@ pair(pair<Coll>^ right);
 pair(Value1 val1, Value2 val2);  
 ```  
   
-#### 参数  
- right  
- 存储对。  
+#### <a name="parameters"></a>参数  
+ 右  
+ 要存储对。  
   
  val1  
- 存储第一个值。  
+ 要存储的第一个值。  
   
  val2  
- 存储第二个值。  
+ 要存储的第二个值。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `pair();`  
   
- 初始化默认构造值的存储对。  
+ 初始化使用默认构造值的存储的对。  
   
  构造函数：  
   
  `pair(pair<Value1, Value2>% right);`  
   
- 使用 `right`初始化`.`[pair::first](../dotnet/pair-first-stl-clr.md) 和 `right``.`[pair::second](../dotnet/pair-second-stl-clr.md)的存储对。  
+ 初始化带的存储的对`right.` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)和`right.` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。  
   
  `pair(pair<Value1, Value2>^ right);`  
   
- 使用 `right`初始化`->`[pair::first](../dotnet/pair-first-stl-clr.md) 和 `right``>`[pair::second](../dotnet/pair-second-stl-clr.md)的存储对。  
+ 初始化带的存储的对`right->` [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)和`right>` [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)。  
   
  构造函数：  
   
  `pair(Value1 val1, Value2 val2);`  
   
- 初始化 `val1` 和 `val2`的存储对。  
+ 初始化与带的存储的对`val1`和`val2`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_pair_construct.cpp   
@@ -99,14 +100,17 @@ int main()
   
 ```  
   
-  **\[\\0, 0\]**  
-**\[x, 3\]**  
-**\[x, 3\]**  
-**\[x, 3\]**   
-## 要求  
- **标头:** \<cliext\/utility\>  
+```Output  
+[\0, 0]  
+[x, 3]  
+[x, 3]  
+[x, 3]  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/实用工具 >  
   
-## 请参阅  
- [pair](../dotnet/pair-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [pair (STL/CLR)](../dotnet/pair-stl-clr.md)

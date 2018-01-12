@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44e708420162235164355a25e5ec8f8714b4fbf0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5fa22fb3045bb8ec96c21cd8e92288989bbab798
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isessionpropertiesimplgetproperties"></a>ISessionPropertiesImpl::GetProperties
 返回的列表中的属性**DBPROPSET_SESSION**当前会话设置的属性组。  
@@ -42,9 +45,9 @@ ms.lasthandoff: 10/24/2017
 #### <a name="parameters"></a>参数  
  请参阅[ISessionProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms723643.aspx)中*OLE DB 程序员参考*。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ISessionPropertiesImpl 类](../../data/oledb/isessionpropertiesimpl-class.md)   
  [ISessionPropertiesImpl::SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)

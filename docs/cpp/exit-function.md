@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Exit
-dev_langs:
-- C++
-helpviewer_keywords:
-- exit function
+f1_keywords: Exit
+dev_langs: C++
+helpviewer_keywords: exit function
 ms.assetid: 26ce439f-81e2-431c-9ff8-a09a96f32127
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 240636bf7b6f10421c5d4ebd202a5fb3473a819d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b9e0d6a7f903d4af39698b2d98c005cbf64515eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exit-function"></a>exit 函数
 **退出**在标准包含文件 STDLIB 中声明的函数。H、 终止 c + + 程序。  
@@ -38,5 +34,5 @@ ms.lasthandoff: 09/25/2017
   
  有关详细信息，请参阅[退出](../c-runtime-library/reference/exit-exit-exit.md)中*运行时库参考*。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [程序终止](../cpp/program-termination.md)

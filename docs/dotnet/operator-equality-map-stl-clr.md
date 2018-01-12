@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c4504056574ab16ecc26ba84499c4d92851d2ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f15172d7ece8ba171e28d0f9d417428369d622e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-map-stlclr"></a>operator== (map) (STL/CLR)
 列表相等比较。  
@@ -90,12 +93,12 @@ int main()
 [a b c] == [a b d] is False  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [运算符 ！ = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
  [运算符\<(map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   

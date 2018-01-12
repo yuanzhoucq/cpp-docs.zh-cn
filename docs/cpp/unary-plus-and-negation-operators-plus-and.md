@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37436e2f2c534051747e5f561144ad19abea30ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12aba6e13f10d05c8559439427d2d28bcdad089d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元加号和非运算符：+ 和 -
 ## <a name="syntax"></a>语法  
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="microsoft-specific"></a>Microsoft 专用  
  通过从 2^n 中减去操作数的值来执行无符号数量的一元求反运算，其中 n 是给定的无符号类型的对象的位数。 （Microsoft C++ 运行于利用 2 的补数算法的处理器上。 在其他处理器上，负数的算法可以不同。）  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)   
  [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

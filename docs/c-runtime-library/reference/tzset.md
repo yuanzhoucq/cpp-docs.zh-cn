@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _tzset
+apiname: _tzset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _tzset
-dev_langs:
-- C++
+f1_keywords: _tzset
+dev_langs: C++
 helpviewer_keywords:
 - _tzset function
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f103da7ca67721f6c654c593746b9427954c6930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tzset"></a>_tzset
 设置时间环境变量。  
@@ -72,7 +54,7 @@ void _tzset( void );
 ## <a name="remarks"></a>备注  
  `_tzset` 函数使用环境变量 `TZ` 的当前设置将值分配到三个全局变量： `_daylight`、 `_timezone`和 `_tzname`。 [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函数使用这些变量以便将协调世界时 (UTC) 更正为本地时间，而 `time` 函数使用这些变量以从系统时间计算 UTC。 使用以下语法设置 `TZ` 环境变量：  
   
- `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:mm`[`:ss`] ][`dzn`]  
   
  `tzn`  
  三个字母时区名称，如 PST。 必须指定从本地时间到 UTC 的正确偏移量。  
@@ -104,7 +86,7 @@ set TZ=GST-1GDT
   
  基于 `TZ` 环境变量值，调用 `_daylight`时将以下值分配给全局变量 `_timezone`、 `_tzname` 和 `_tzset` ：  
   
-|全局变量|说明|默认值|  
+|全局变量|描述|默认值|  
 |---------------------|-----------------|-------------------|  
 |`_daylight`|如果在 `TZ` 设置中指定了夏令时区域则为非零值；否则为 0。|1|  
 |`_timezone`|UTC 和当地时间之间的差异（以秒为单位）。|28800（28800 秒等于 8 小时）|  
@@ -113,13 +95,13 @@ set TZ=GST-1GDT
   
  前表中显示的 `_daylight` 和 `_tzname` 数组默认值对应于“PST8PDT”。 如果 DST 区域在 `TZ` 环境变量中省略，则 `_daylight` 的值为 0，并且 `_ftime`、 `gmtime`和 `localtime` 函数将对其 DST 标志返回 0。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_tzset`|\<time.h>|  
   
- 有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -156,7 +138,7 @@ _timezone = 28800
 _tzname[0] = Pacific Standard Time  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

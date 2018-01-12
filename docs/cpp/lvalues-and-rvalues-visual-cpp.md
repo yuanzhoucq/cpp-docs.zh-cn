@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34513ba6799b1f70d16867571d38185420fa3576
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e06dca827d6b5cb5d457a2eda6aa143bb5d0fe5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左值和右值 （Visual c + +）
 每个 c + + 表达式有一个类型，并且属于*值类别*。 值类别是在创建、 复制和表达式求值期间移动临时对象时，编译器必须遵循的规则的基础。 
@@ -76,7 +77,7 @@ int main()
   
  条款*左值*和*右值*通常用于在引用对象引用时。 有关引用的详细信息，请参阅[左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)和[右值引用声明符： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基本概念](../cpp/basic-concepts-cpp.md)   
  [左值引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)   
  [规则引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

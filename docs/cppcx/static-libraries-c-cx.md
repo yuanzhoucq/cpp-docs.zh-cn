@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 5f86d24c693cfcd5eecf8b37f0e4567c9c7af3a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-libraries-ccx"></a>静态库 (C++/CX)
 在通用 Windows 平台应用程序中使用的静态库可包含 ISO 标准 c + + 代码，包括 STL 类型，同时还未排除的通用 Windows 平台应用程序平台的 Win32 api 的调用。 静态库使用 Windows 运行时组件，并可能创建具有某些限制的 Windows 运行时组件。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  仅当静态库不生成在库自身之外被使用的 Windows 运行时组件，你可以放心地忽略该警告。 如果该库不使用其定义的组件，则链接器可通过优化去除实现，即使公共元数据包含类型信息，情况也不例外。 这意味着，静态库中的公共组件将进行编译，但不会在运行时激活。 为此，必须在动态链接库 (DLL) 中实现供其他组件或应用程序使用任何 Windows 运行时组件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [线程处理和封送处理](../cppcx/threading-and-marshaling-c-cx.md)

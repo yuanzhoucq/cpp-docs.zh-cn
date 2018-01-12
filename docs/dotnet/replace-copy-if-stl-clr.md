@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e144636c5d1ce1a4ae7776ccedf675d5db473d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ce24d602eb5ba24cee4d196c19e1e70cb38ae207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replacecopyif-stlclr"></a>replace_copy_if (STL/CLR)
 检查源范围中的每个元素，并替换满足指定谓词的元素，同时将结果复制到新的目标范围。  
@@ -35,10 +38,10 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`replace_copy_if`。 有关详细信息，请参阅[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

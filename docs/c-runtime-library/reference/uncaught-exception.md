@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __uncaught_exception
+apiname: __uncaught_exception
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- __uncaught_exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- __uncaught_exception
+f1_keywords: __uncaught_exception
+dev_langs: C++
+helpviewer_keywords: __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25d2e84bb6d336b2e530b833252b2b4a05dce4e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 2b43a6b08087dcaeeda7959eaadbee9c250f4de9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 指示是否已引发一个或多个异常，但是 [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) 语句的相应 `catch` 块尚未对其进行处理。  
@@ -55,11 +50,11 @@ bool __uncaught_exception(
   
 ## <a name="remarks"></a>备注  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |__uncaught_exception|eh.h|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [try、throw 和 catch 语句 (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)

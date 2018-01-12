@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fc44e8f844a11a608d12be1e6daa8d8bba2a3a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43ded324227878b44f997e6539e060145ad0fb66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="range-based-for-statement-c"></a>基于范围的 for 语句 (C++)
 对 `statement` 中的每个元素按顺序重复执行 `expression`。  
@@ -119,7 +120,7 @@ int main()
   
 -   对于任何其他内容，使用依赖于参数的查找 `begin()` 和 `end()`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动](../cpp/auto-cpp.md)   
  [迭代语句](../cpp/iteration-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   

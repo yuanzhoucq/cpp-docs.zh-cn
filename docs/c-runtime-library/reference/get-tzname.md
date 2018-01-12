@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1b5f7db562dc0173cda49212425b237a44c0610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettzname"></a>_get_tzname
 检索时区名称或夏令时标准时区名称 (DST) 的字符串表示形式。  
@@ -77,10 +78,10 @@ errno_t _get_tzname(
 |`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|返回值|`timeZoneName` 的内容|  
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |TZ 名称的大小|`NULL`|0|0 或 1|0|未修改|  
-|TZ 名称的大小|any|> 0|0 或 1|0|TZ 名称|  
+|TZ 名称的大小|任何|> 0|0 或 1|0|TZ 名称|  
 |未修改|`NULL`|> 0|任何|`EINVAL`|未修改|  
-|未修改|any|零|任何|`EINVAL`|未修改|  
-|未修改|any|> 0|> 1|`EINVAL`|未修改|  
+|未修改|任何|零|任何|`EINVAL`|未修改|  
+|未修改|任何|> 0|> 1|`EINVAL`|未修改|  
   
 ## <a name="remarks"></a>备注  
  `_get_tzname` 函数根据索引值检索 `timeZoneName` 地址中的时区名称或夏令时标准时区名称 (DST) 的字符串表示形式，并检索 `pReturnValue` 中字符串的大小。 如果 `timeZoneName` 为 `NULL` 且 `sizeInBytes` 为零，`pReturnValue` 中仅返回任一时区的字符串大小（以字节为单位）。 标准时区的索引值必须为 0，夏令时标准时区的索引值必须为 1；索引的任何其他值都具有不确定的结果。  
@@ -95,15 +96,15 @@ errno_t _get_tzname(
   
  除非在运行时显式更改值，默认值分别为 "PST" 和 "PDT"。  这些字符数组的大小由 `TZNAME_MAX` 值控制。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_get_tzname`|\<time.h>|  
   
- 有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关详细信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [时间管理](../../c-runtime-library/time-management.md)   
  [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   

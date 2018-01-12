@@ -1,35 +1,37 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock 构造函数"
+title: "lock::lock |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-构造 `lock` 对象，可以选择等待获取锁不总是，在经过指定的时间。  
+# <a name="locklock"></a>lock::lock
+构造`lock`对象，可以选择等待一定的时间，或者不是在所有永久，获取锁。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class T> lock(  
@@ -49,27 +51,27 @@ template<class T> lock(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_object`  
  要锁定的对象。  
   
  `_timeout`  
- 超时值 \(以毫秒为或 <xref:System.TimeSpan>。  
+ 超时值以毫秒为单位或作为<xref:System.TimeSpan>。  
   
-## 异常  
- 如果锁获取不会超时之前，会引发 <xref:System.ApplicationException>。  
+## <a name="exceptions"></a>异常  
+ 引发<xref:System.ApplicationException>如果获取锁超时前不会发生。  
   
-## 备注  
- 构造函数的第三窗体尝试获取对 `_object` 的锁在指定的超时时间 \(或 <xref:System.Threading.Timeout.Infinite> 中，如果未在中指定\)。  
+## <a name="remarks"></a>备注  
+ 前三个窗体的构造函数尝试上获取锁`_object`指定的超时时间段内 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
   
- 构造函数的第四窗体不获取对 `_object`的锁。  `lock_later` 是 [lock\_when 枚举](../dotnet/lock-when-enum.md)的成员。  使用 [lock::acquire](../dotnet/lock-acquire.md) 或 [lock::try\_acquire](../dotnet/lock-try-acquire.md) 在这种情况下获取锁。  
+ 第四个形式的构造函数不会在获取锁`_object`。 `lock_later`为属于[lock_when 枚举](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在这种情况下获取锁。  
   
- 当调用析构函数，锁将自动释放。  
+ 当调用的析构函数时，将自动释放锁。  
   
- `_object` 不能为 <xref:System.Threading.ReaderWriterLock>。如果它为，编译器错误。  
+ `_object` 不能为 <xref:System.Threading.ReaderWriterLock>。  如果是，将导致编译器错误。  
   
-## 示例  
- 此示例使用类的一个实例在多个线程中。类使用自身上的锁将确保对其内部数据的访问权限。每个线程都是一致的。主应用程序线程使用类的同一实例的锁定定期检查任何辅助线程是否仍然存在，并且等待，直到退出所有辅助线程完成它们的任务。  
+## <a name="example"></a>示例  
+ 此示例跨多个线程使用单个类的实例。  类本身上使用锁，以确保对其内部数据的访问是为每个线程一致。  主应用程序线程使用同一类的实例上的锁来定期检查以查看任何工作线程仍然存在，并且等待退出之前所有的工作线程已完成其任务。  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +145,27 @@ int main() {
 }  
 ```  
   
-  **在线程 3，计数器为 0**  
-**在线程 3，计数器为 10**  
-**在线程 5，计数器为 0**  
-**在线程 5，计数器为 10**  
-**在线程 7，计数器为 0**  
-**在线程 7，计数器为 10**  
-**在线程 4，计数器为 0**  
-**在线程 4，计数器为 10**  
-**在线程 6，计数器为 0**  
-**在线程 6，计数器为 10**  
-**所有线程完成。**   
-## 要求  
- **头文件** \<msclr \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **命名空间** msclr  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\lock.h >  
   
-## 请参阅  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>请参阅  
  [锁定成员](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
+ [锁:: ~ 锁](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

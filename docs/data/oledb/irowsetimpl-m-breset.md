@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4323d92398ea4d47410a2b5a3aad08972628634d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4cd9840b37157aed050bb71d48a275efd2849035
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplmbreset"></a>IRowsetImpl::m_bReset
 一个位标志，用于确定是否行集上定义的光标位置。  
@@ -40,8 +43,8 @@ unsigned m_bReset:1;
 ## <a name="remarks"></a>备注  
  如果使用者调用[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)与一个负数`lOffset`或*cRows*和`m_bReset`为 true，`GetNextRows`将移到行集结尾。 如果`m_bReset`为 false，使用者接收符合 OLE DB 规范中的错误代码。 `m_bReset`标志获取设置为**true**首先创建行集的是，当使用者调用[irowsetimpl:: Restartposition](../../data/oledb/irowsetimpl-restartposition.md)。 获取设置为**false**当调用`GetNextRows`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetImpl 类](../../data/oledb/irowsetimpl-class.md)

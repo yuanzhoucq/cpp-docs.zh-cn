@@ -27,11 +27,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a704a4904683d2b1a448e9f5f327723b7681c96b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC：ODBC 游标库
 本主题介绍 ODBC 游标库，并说明如何使用它。 有关详细信息，请参见:  
@@ -73,5 +76,5 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_using_the_cursor_library"></a>使用的是光标库  
  当你连接到数据源-通过调用[CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex)或[CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) -你可以指定是否为数据源使用的是光标库。 如果要在该数据源上创建快照，指定**CDatabase::useCursorLib**选项`dwOptions`参数`OpenEx`或指定**TRUE**为**bUseCursorLib**参数**打开**(默认值是**TRUE**)。 如果你的 ODBC 驱动程序支持动态记录集，并且你想要打开数据源上的动态记录集，则不要使用游标库 （它会屏蔽需要动态集的某些驱动程序功能）。 在这种情况下，未指定**CDatabase::useCursorLib**中`OpenEx`或指定**FALSE**为**bUseCursorLib**中的参数**打开**.  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ODBC 基础](../../data/odbc/odbc-basics.md)

@@ -1,41 +1,42 @@
 ---
-title: "hash_map::mapped_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapped_type 成员 [STL/CLR]"
+title: "hash_map:: mapped_type (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: 00c8738f-7dd9-418d-9566-a2e05fd7e7f6
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0d0c0c35b28f05e2ec60673c48f736f92473122d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::mapped_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapmappedtype-stlclr"></a>hash_map::mapped_type (STL/CLR)
 与每个键关联的映射值的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef Mapped mapped_type;  
 ```  
   
-## 备注  
- 表示模板参数的 `Mapped`同义词。  
+## <a name="remarks"></a>备注  
+ 该类型是模板参数 `Mapped` 的同义词。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_mapped_type.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **1 2 3**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+1 2 3  
+```  
+  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_compare](../dotnet/hash-map-key-compare-stl-clr.md)   
- [hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)   
+ [hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

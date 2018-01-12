@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1ca125f72815a16c2b6ba74da35fa56b9bd066c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e51e523540e14905bef17edd52205c4d2102afa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：创建和使用共享 weak_ptr 实例
 有时对象必须存储用于访问的基础对象的方法`shared_ptr`而不会导致要递增的引用计数。 当之间的循环引用时，通常情况下，出现这种情况`shared_ptr`实例。  
@@ -35,5 +36,5 @@ Creating Controller0Creating Controller1Creating Controller2Creating Controller3
   
  进行试验，修改向量`others`要`vector<shared_ptr<Controller>>`，然后在输出中，记下，在没有析构函数进行调用时`TestRun`返回。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [智能指针](../cpp/smart-pointers-modern-cpp.md)

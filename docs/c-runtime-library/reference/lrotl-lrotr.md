@@ -42,11 +42,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25577b776c5a3caf0c47c3cf56a88b7de58392bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92dd4ea8251a0131fa9b7224aa5ea0aa021584fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lrotl-lrotr"></a>_lrotl、_lrotr
 将位向左 (`_lrotl`) 或向右 (`_lrotr`) 旋转。  
@@ -78,9 +79,9 @@ unsigned long _lrotr(
 ## <a name="remarks"></a>备注  
  `_lrotl` 和 `_lrotr` 函数通过 `shift` 位旋转 *value*。 `_lrotl` 将值向左旋转。 `_lrotr` 将值向右旋转。 两个函数将旋转的位从 *value* 的一端移到另一端。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_lrotl`|\<stdlib.h>|  
 |`_lrotr`|\<stdlib.h>|  
@@ -116,6 +117,6 @@ int main( void )
 0xfac35791 rotated right four times is 0x1fac3579  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [浮点支持](../../c-runtime-library/floating-point-support.md)   
  [_rotl、_rotl64、_rotr、_rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)

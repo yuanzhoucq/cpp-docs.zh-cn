@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d185112e6c3506ab48566d2b94256fda132f13f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1fb24f111fc3ad10b788deec286a0052ce822970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-operations-ccli"></a>Windows 操作 (C++/CLI)
 演示如何使用各种特定于 Windows 的任务[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]。  
@@ -57,5 +60,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-sections"></a>相关章节  
  <xref:System.Environment>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

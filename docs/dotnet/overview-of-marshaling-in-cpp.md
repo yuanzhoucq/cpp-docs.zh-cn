@@ -20,11 +20,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 384c8bac652e16a4f66a82ee7e4dbb5cc92fd32b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中的封送处理概述
 在混合模式下，你有时必须封你本机和托管类型之间的数据。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]引入的封送处理库来帮助你封送，并将数据转换的简单方式。  
@@ -69,6 +72,6 @@ ms.lasthandoff: 10/24/2017
   
  在早期版本中，你无法封送数据使用[平台调用](/dotnet/framework/interop/consuming-unmanaged-dll-functions)。 有关详细信息`PInvoke`，请参阅[从托管代码调用本机函数](../dotnet/calling-native-functions-from-managed-code.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C + + 支持库](../dotnet/cpp-support-library.md)   
  [如何：扩展封送处理库](../dotnet/how-to-extend-the-marshaling-library.md)

@@ -1,32 +1,33 @@
 ---
-title: "lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 函数 [STL/CLR]"
+title: "lower_bound (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound function [STL/CLR]
 ms.assetid: 841b70b5-1f54-4ecf-8faa-7dda32a24c54
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2e4cbe940ce9eaaa99725a3d252a0275c4fa84e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在排序的范围中查找其值小于或等效于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。  
+# <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
+查找第一个元素的位置在排序的范围的值小于或等效指定值，其中可通过二元谓词指定的排序条件。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -36,13 +37,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## 备注  
- 此函数行为与 STL `lower_bound`函数相同。  有关详细信息，请参阅[lower\_bound](../Topic/lower_bound.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`lower_bound`。 有关详细信息，请参阅[lower_bound](../standard-library/algorithm-functions.md#lower_bound)。  
   
-## 要求  
- **标头:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/算法 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

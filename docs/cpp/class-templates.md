@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: f9e94e2b656262eff46cd75014e90110ab20dc43
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-templates"></a>类模板
 本主题介绍特定于 c + + 类模板的规则。  
@@ -62,7 +60,7 @@ int main()
 }  
 ```  
   
- 请注意，就像任何模板类成员函数一样，类的构造函数成员函数的定义包含模板参数列表两次。  
+ 请注意，就像任何模板类成员函数一样，类的构造函数成员函数的定义包含模板自变量列表两次。  
   
  成员函数可以是函数模板，并指定附加参数，如下面的示例所示。  
   
@@ -447,6 +445,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [模板](../cpp/templates-cpp.md)
-

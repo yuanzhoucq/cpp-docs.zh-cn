@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad1cf9ea26db3d2bb111090520ccc2dc0930438c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 92ef64ebb9cd9891ad08ef2b2ad3e68b158be38c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetaddrefrows"></a>CRowset::AddRefRows
 调用[irowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx)以增加 （1) 的引用计数与当前行句柄。  
@@ -47,9 +50,9 @@ HRESULT AddRefRows( ) throw( );
 ## <a name="remarks"></a>备注  
  此方法递增当前行句柄的引用的计数。 调用[ReleaseRows](../../data/oledb/crowset-releaserows.md)以减少的计数。 Move 方法返回的行都具有一个引用计数。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowset 类](../../data/oledb/crowset-class.md)   
  [CRowset::ReleaseRows](../../data/oledb/crowset-releaserows.md)

@@ -18,16 +18,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6685edbe2e6e4805cadb38ada55624eaec2a7ce8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b407bc469a345706f99cf5bad578f678e652a4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="private-virtual-functions"></a>私有虚函数
 在派生类中处理私有虚函数的方式已从托管扩展中的 c + + 更改为 Visual c + +。  
   
- 在托管扩展中，虚函数的访问级别不会不会限制可在派生类中重写的功能。 在新语法中，虚函数不能重写基类虚函数，它能访问它。 例如：  
+ 在托管扩展中，虚函数的访问级别不会不会限制可在派生类中重写的功能。 在新语法中，虚函数不能重写基类虚函数，它能访问它。 例如:  
   
 ```  
 __gc class MyBaseClass {  
@@ -59,6 +62,6 @@ public:
   
  请注意，没有显式`virtual`关键字在基的类中，在新语法中，将生成警告消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类或接口中的成员声明 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  

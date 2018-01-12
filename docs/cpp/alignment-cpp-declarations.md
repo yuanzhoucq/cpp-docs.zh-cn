@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1326a0813e0d4092a7033e3e995336ac1f29056
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment-c-declarations"></a>对齐方式（C++ 声明）
 C + + 的低级功能之一是能够指定内存中对象的精确对齐方式，以最大限度利用特定的硬件体系结构。 默认情况下，编译器根据其大小值来对齐类和结构成员：bool 和 char 都对齐一个 1 字节边界、短整型两个字节、整型四个字节，长整型、双精度型和长双精度型八个字节。 在大多数情况下，你永远无需注意对齐方式，因为默认对齐方式已经是最佳的。 但是，在某些情况下，你可以通过指定数据结构的自定义对齐方式获得显著的性能提升或节约内存。 在 Visual Studio 2015 之前，可以使用 Microsoft 专用关键字 __alignof 和 declspec(alignas) 来指定大于默认值的对齐方式。 从 Visual Studio 2015 开始，应使用 C + + 11 标准关键字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)获得最大代码可移植性。 新关键字实质上以与 Microsoft 专用扩展相同的方式运行，这些扩展的文档也适用于这些新关键字。 请参阅[__alignof 运算符](../cpp/alignof-operator.md)和[对齐](../cpp/align-cpp.md)有关详细信息。 C + + 标准不指定小于目标平台中，默认的编译器的边界上对齐，因此仍需要使用 Microsoft #pragma 的装箱行为[包](../preprocessor/pack.md)在这种情况下。  
@@ -102,5 +103,5 @@ adr offset   element
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据结构对齐方式](http://en.wikipedia.org/wiki/Data_structure_alignment)

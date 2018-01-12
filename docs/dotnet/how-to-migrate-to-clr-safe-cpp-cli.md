@@ -18,11 +18,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e653c477864f4e8676da8125ce9e75df37188e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>如何：迁移到 /clr:safe (C++/CLI)
 Visual c + + 可以通过使用生成可验证组件**/clr: safe**，这将导致编译器生成错误的每个非可验证代码构造。  
@@ -50,7 +53,7 @@ Visual c + + 可以通过使用生成可验证组件**/clr: safe**，这将导�
   
 -   如果生成 EXE，一个主函数不能因此声明任何参数，<xref:System.Environment.GetCommandLineArgs%2A>必须用于检索命令行自变量。  
   
--   在非虚拟调用虚函数。 例如：  
+-   在非虚拟调用虚函数。 例如:  
   
     ```  
     // not_verifiable.cpp  
@@ -79,5 +82,5 @@ Visual c + + 可以通过使用生成可验证组件**/clr: safe**，这将导�
   
 -   [__try](../cpp/try-except-statement.md)和`__except`  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [纯代码和可验证代码 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

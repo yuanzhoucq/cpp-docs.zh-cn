@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21f3fda51f9df72d9af78a03783771e74fbf3370
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：向 Windows 窗体控件添加命令传送
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)将命令和更新命令 UI 消息路由到用户控件，以允许其处理 MFC 命令 （例如，帧菜单项和工具栏按钮）。  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/24/2017
   
      选择添加菜单选项。 请注意，调用.dll 文件中的方法。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [作为 MFC 视图承载 Windows 窗体用户控件](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
  [ICommandSource 接口](../mfc/reference/icommandsource-interface.md)   
  [ICommandTarget 接口](../mfc/reference/icommandtarget-interface.md)   

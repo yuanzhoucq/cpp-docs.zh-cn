@@ -1,32 +1,33 @@
 ---
-title: "map::map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "map 成员 [STL/CLR]"
+title: "map:: map (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::map
+dev_langs: C++
+helpviewer_keywords: map member [STL/CLR]
 ms.assetid: c91f699a-4742-4859-b2b3-c2a01a750bea
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 320c3c4223996826fe1e7b3104540baddd82da5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# map::map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapmap-stlclr"></a>map::map (STL/CLR)
 构造容器对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 map();  
@@ -43,79 +44,71 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### 参数  
- 首先  
- 插入范围的开头。  
+#### <a name="parameters"></a>参数  
+ 第一个  
+ 要插入的范围开始处。  
   
  last  
- 插入的范围末尾。  
+ 要插入的范围的末尾。  
   
  pred  
- 排序规则序列的谓词。  
+ 排序受控序列的谓词。  
   
- right  
- 插入的对象或值范围。  
+ 右  
+ 要插入的对象或范围。  
   
-## 备注  
+## <a name="remarks"></a>备注  
  构造函数：  
   
  `map();`  
   
- 初始化控制序列没有元素，并且默认排序 `key_compare()`谓词。  使用它来指定空的初始序列，以控制默认排序谓词中。  
+ 使用默认的排序谓词初始化受控的序列不包含任何元素， `key_compare()`。 用于指定空的初始受控的序列，使用默认的排序谓词。  
   
  构造函数：  
   
  `explicit map(key_compare^ pred);`  
   
- 初始化控制序列没有元素，与顺序 `pred`的谓词。  使用该指定一个空控件，使用初始序列指定顺序匹配的谓词。  
+ 初始化受控的序列不包含任何元素，与排序的谓词`pred`。 用于指定空的初始受控的序列，通过指定排序的谓词。  
   
  构造函数：  
   
  `map(map<Key, Mapped>% right);`  
   
- 初始化与序列 `[``right``.``(),` `right``.`中的[map::end](../dotnet/map-end-stl-clr.md)[map::begin](../dotnet/map-begin-stl-clr.md)并且默认`())`的序列顺序控制，谓词。  使用指定它是顺序控制由映射复制对象 `right`的初始序列，以控制默认排序谓词中。  
+ 初始化受控的序列与序列 [`right.begin()`， `right.end()`)，使用默认的排序谓词。 用于指定是由地图对象控制的序列的副本的初始受控的序列`right`，使用默认的排序谓词。  
   
  构造函数：  
   
  `map(map<Key, Mapped>^ right);`  
   
- 初始化与序列 `[``right``->``(),` `right``->`中的[map::end](../dotnet/map-end-stl-clr.md)[map::begin](../dotnet/map-begin-stl-clr.md)并且默认`())`的序列顺序控制，谓词。  使用指定它是顺序控制由映射复制对象 `right`的初始序列，以控制默认排序谓词中。  
+ 初始化受控的序列与序列 [`right->begin()`， `right->end()`)，使用默认的排序谓词。 用于指定是由地图对象控制的序列的副本的初始受控的序列`right`，使用默认的排序谓词。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last);`  
   
- `map(InIter first, InIter last);`  
-  
- 初始化与序列 `[``first``,` 并默认`last`的`)`的序列顺序控制，谓词。  使用会使控制序列复制另一个序列，其中包含默认排序谓词中。  
+ 初始化受控的序列与序列 [`first`， `last`)，使用默认的排序谓词。 你可以使用它以使用默认的排序谓词使受控的序列的另一个序列，副本。  
   
  构造函数：  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- `map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- 初始化与序列 `[``first``,` 。排序的谓词 `pred``last``)`的控制，序列。  使用会使控制序列复制其他序列，具有指定顺序的谓词。  
+ 初始化受控的序列与序列 [`first`， `last`)，与排序的谓词`pred`。 你可以使用它以使另一个序列，使用指定的排序谓词的副本的受控的序列。  
   
  构造函数：  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化时使用其默认的枚举数指定的顺序控制 `right`序列排序，谓词。  使用会使控制枚举数的序列描述复制另一个序列，其中包含默认排序谓词。  
+ 初始化与枚举器指定序列的受控的序列`right`，使用默认的排序谓词。 你可以使用它来使一个枚举器，使用默认的排序谓词所描述的另一个序列的副本的受控的序列。  
   
  构造函数：  
   
- `map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 初始化与枚举器指定序列的受控的序列`right`，与排序的谓词`pred`。 你可以使用它来使受控的序列的枚举，通过指定排序的谓词所描述的另一个序列的副本。  
   
- 初始化具有排序谓词的 `pred`枚举数指定的顺序控制序列，`right`。  使用会使控制枚举数的序列描述复制其他序列，具有指定顺序的谓词的。  
+## <a name="example"></a>示例  
   
-## 示例  
-  
-```  
+```cpp  
 // cliext_map_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -189,22 +182,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 要求  
- **页眉：** \<\/cliext 映射\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::operator\=](../dotnet/map-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)

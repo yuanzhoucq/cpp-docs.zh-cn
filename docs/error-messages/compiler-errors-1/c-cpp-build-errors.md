@@ -1,7 +1,7 @@
 ---
 title: "C/c + + 生成错误 |Microsoft 文档"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -311,24 +311,20 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>C/C++ 生成错误
-本节文档中的文章介绍生成工具所生成的错误消息。 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 编译器和生成工具可报告多种类型的错误和警告。 发现错误或警告后，生成工具可做出有关代码意图的假设并尝试继续，所以此时可能会报告更多问题。 如果工具做出错误假设，则后续错误或警告可能不适于你的项目。 纠正项目中的问题时，请始终先纠正报告的第一个错误或警告，然后在通常情况下重新生成。  
-  
- 若要获取 Visual Studio 中的特定错误消息的帮助，请选择中的错误号**输出**窗口，并按 F1 键打开 MSDN 页上该错误的。 在 MSDN 中，还可搜索有关错误的文章，或在导航窗格中浏览各类错误的列表。  
-  
-> [!NOTE]
->  不是每个[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]错误或警告记录在 MSDN 中。 在许多情况下，诊断消息将提供的所有可用信息。 如果你认为某个错误消息需要更多说明，请通知我们。 你可以在此页上，使用反馈表单或转到 Visual Studio 中的菜单栏，然后选择**帮助**，**报告 Bug**，或可以在提交建议或 bug 报表[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- 错误和警告的 MSDN 公共论坛，可能会发现更多帮助。 [Visual c + + 语言](http://go.microsoft.com/fwlink/?LinkId=158195)论坛是有关问题和讨论有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]语言语法和编译器。 [Visual c + + 常规](http://go.microsoft.com/fwlink/?LinkId=158194)论坛的问题是有关[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他论坛中未涉及。 你还可能上查找有关错误和警告的帮助[堆栈溢出](http://stackoverflow.com/)。  
-  
- 有关的其他资源的链接[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]，请参阅[Visual c + + 帮助和社区](../../visual-cpp-help-and-community.md)。  
-  
-## <a name="see-also"></a>另请参阅  
- [C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
- [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)
+
+本部分中的文档的文章说明诊断错误消息和生成工具生成的警告消息。
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>请参阅
+
+[C/C++ 生成参考](../../build/reference/c-cpp-building-reference.md)   
+[在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)

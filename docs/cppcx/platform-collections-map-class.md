@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 3cf7cec405170a1bb1ee02cfd076c78c43524c74
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3893f7213bc2b154851a5d2481070d0d43724bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 表示一个 *映射*，它是键值对的集合。  
@@ -97,13 +98,13 @@ ref class Map sealed;
   
 |||  
 |-|-|  
-|名称|描述|  
+|name|描述|  
 |[Map:: mapchanged](#mapchanged-event.md)`event`|当映射更改时发生。|  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Map`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** collection.h  
   
  **命名空间：** Platform::Collections  
@@ -292,6 +293,6 @@ virtual property unsigned int Size;
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)   
  [C + + 创建 Windows 运行时组件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)

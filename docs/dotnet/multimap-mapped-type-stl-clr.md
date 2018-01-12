@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8c958f1a115bef2b342aded4c8ea7dd2f088e17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a4495be59c741e3ea3f43e2c14fffcb6ee3c7453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapmappedtype-stlclr"></a>multimap::mapped_type (STL/CLR)
 与每个键关联的映射值的类型。  
@@ -31,7 +34,7 @@ typedef Mapped mapped_type;
 ```  
   
 ## <a name="remarks"></a>备注  
- 该类型是模板参数 `Mapped`的同义词。  
+ 该类型是模板参数 `Mapped` 的同义词。  
   
 ## <a name="example"></a>示例  
   
@@ -65,12 +68,12 @@ int main()
 1 2 3  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
  [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

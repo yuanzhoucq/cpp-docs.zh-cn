@@ -1,31 +1,34 @@
 ---
-title: "动态确定返回给使用者的列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "书签 [C++], 动态确定列"
-  - "动态确定列 [C++]"
+title: "动态确定列返回给使用者 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 动态确定返回给使用者的列
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-PROVIDER\_COLUMN\_ENTRY 宏通常处理 **IColumnsInfo::GetColumnsInfo** 调用。  但是，由于使用者可能选择使用书签，因此提供程序必须能够根据使用者是否要求书签来更改返回的列。  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>动态确定返回给使用者的列
+PROVIDER_COLUMN_ENTRY 宏通常处理**IColumnsInfo::GetColumnsInfo**调用。 但是，使用者可能选择使用书签，因为提供程序必须能够更改根据使用者是否要求书签返回的列。  
   
- 若要处理 **IColumnsInfo::GetColumnsInfo** 调用，请从 MyProviderRS.h 中的 `CAgentMan` 用户记录中删除 PROVIDER\_COLUMN\_MAP（它定义函数 `GetColumnInfo`），并用自己的 `GetColumnInfo` 函数定义替换它：  
+ 若要处理**IColumnsInfo::GetColumnsInfo**调用，删除 PROVIDER_COLUMN_MAP，定义了一个函数`GetColumnInfo`，从`CAgentMan`用户 MyProviderRS.h 中记录并将其替换为你自己的定义`GetColumnInfo`函数：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -48,11 +51,11 @@ public:
 };  
 ```  
   
- 下一步，在 MyProviderRS.cpp 中实现 `GetColumnInfo` 函数，如以下代码所示。  
+ 接下来，实现`GetColumnInfo`函数中 MyProviderRS.cpp，如下面的代码中所示。  
   
- `GetColumnInfo` 首先检查 OLE DB 属性 **DBPROP\_BOOKMARKS** 是否已设置。  为获取该属性，`GetColumnInfo` 使用指向行集合对象的指针 \(`pRowset`\)。  `pThis` 指针表示创建行集合的类，它是存储属性映射的类。  `GetColumnInfo` 将 `pThis` 指针的类型转换为 `RMyProviderRowset` 指针。  
+ `GetColumnInfo`首先检查是否 OLE DB 属性**DBPROP_BOOKMARKS**设置。 要获取其属性，`GetColumnInfo`使用指针 (`pRowset`) 到行集对象。 `pThis`指针表示创建行集，它是类的属性映射的存储位置的类。 `GetColumnInfo`类型强制转换`pThis`指向`RMyProviderRowset`指针。  
   
- 为了检查 DBPROP\_BOOKMARKS属性，`GetColumnInfo` 将使用 `IRowsetInfo` 接口，您可以通过在 `pRowset` 接口上调用 `QueryInterface` 来获取该接口。  另一种选择是，可以改用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) 方法。  
+ 若要检查**DBPROP_BOOKMARKS**属性，`GetColumnInfo`使用`IRowsetInfo`接口，你可以通过调用获取`QueryInterface`上`pRowset`接口。 作为替代方法，你可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法相反。  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -113,7 +116,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- 本例使用静态数组包含列信息。  如果使用者不想要书签列，数组中的某一项不使用。  为处理该信息，创建两个数组宏：ADD\_COLUMN\_ENTRY 和 ADD\_COLUMN\_ENTRY\_EX。  ADD\_COLUMN\_ENTRY\_EX 使用一个额外的参数 `flags`，如果指定书签列就需要此参数。  
+ 此示例使用静态数组以包含的列信息。 如果使用者不希望书签列，则不使用数组中的一个条目。 若要处理的信息，请创建两个数组宏： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 采用了额外的参数， `flags`，也就是说，当你指定的书签列时才需要。  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -146,7 +149,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- 在 `GetColumnInfo` 函数中，书签宏这样使用：  
+ 在`GetColumnInfo`函数，书签宏使用如下：  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -154,7 +157,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- 现在可以编译并运行增强的提供程序。  若要测试提供程序，请修改测试使用者，详见[实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)。  对提供程序运行测试使用者。  在**“测试使用者”**对话框中单击**“运行”**按钮时，验证测试使用者是否从提供程序中检索到正确的字符串。  
+ 你现在可以编译并运行增强的提供程序。 若要测试提供程序，修改测试使用者中所述[实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)。 使用提供程序运行测试使用者。 验证测试使用者从提供程序检索到正确的字符串时您单击**运行**按钮**测试使用者**对话框。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)

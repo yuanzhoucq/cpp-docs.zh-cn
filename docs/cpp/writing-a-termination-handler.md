@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4a90c28f9bb2a681e88463dfd6bd9d3ff0a1d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9d4099a7f40acf0b5bfcc89f1c95cb880683b86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-a-termination-handler"></a>编写终止处理程序
 与异常处理程序不同，无论代码的受保护块是否已正常终止，终止处理程序总是会执行。 终止处理程序的唯一用途应该是确保无论代码的节如何完成执行，内存、句柄和文件等资源都能正确关闭。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [对于终止处理程序的限制](../cpp/restrictions-on-termination-handlers.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [结构化异常处理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

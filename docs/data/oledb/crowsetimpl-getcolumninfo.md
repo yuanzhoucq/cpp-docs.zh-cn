@@ -1,34 +1,36 @@
 ---
-title: "CRowsetImpl::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "CRowsetImpl.GetColumnInfo"
-  - "CRowsetImpl::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo 方法"
+title: "Crowsetimpl:: Getcolumninfo |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- CRowsetImpl.GetColumnInfo
+- CRowsetImpl::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 9ef76525-f996-4c6f-81b9-68eb260350ef
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: acfc7e4afa0036c6f6e66aaef65305fc05ef6d14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="crowsetimplgetcolumninfo"></a>CRowsetImpl::GetColumnInfo
 检索特定客户端请求的列信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,27 +40,27 @@ caps.handback.revision: 11
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `pv`  
- \[in\] 给用户的 `CRowsetImpl` 派生类的指针。  
+ [in]对用户的指针`CRowsetImpl`派生类。  
   
  `pcCols`  
- \[in\] 指针 \(输出\) 设置为列数返回。  
+ [in]返回列的指针 （输出） 的数字。  
   
-## 返回值  
- 对静态 **ATLCOLUMNINFO** 结构的指针。  
+## <a name="return-value"></a>返回值  
+ 指向静态**ATLCOLUMNINFO**结构。  
   
-## 备注  
- 此方法是一项高级重写。  
+## <a name="remarks"></a>备注  
+ 此方法是高级的替代。  
   
- 此方法由多个基类实现调用检索特定客户端请求的列信息。  通常，此方法将调用 `IColumnsInfoImpl`。  如果重写此方法，您必须在 `CRowsetImpl`中放置方法派生类的版本。  由于方法在非 templatized 类可能放置，必须将 `pv` 设置为适当的 `CRowsetImpl`派生类。  
+ 若要为特定的客户端请求检索列信息的多个基实现类调用此方法。 通常情况下，将调用此方法`IColumnsInfoImpl`。 如果你重写此方法，则必须放在方法中的版本你`CRowsetImpl`-派生类。 由于该方法可能会放置在非模板化类中，你必须更改`pv`到相应`CRowsetImpl`-派生类。  
   
- 下面的示例演示使用 **GetColumnInfo's** 条件。  在本示例中，**CMyRowset** 是 `CRowsetImpl`派生类。  若要重写此类的所有实例的 `GetColumnInfo` 中，将以下方法在 **CMyRowset** 类定义：  
+ 下面的示例演示**GetColumnInfo 的**使用情况。 在此示例中， **CMyRowset**是`CRowsetImpl`-派生类。 若要重写`GetColumnInfo`对于此类的所有实例，请将中的以下方法**CMyRowset**类定义：  
   
- [!CODE [NVC_OLEDB_Provider#1](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Provider#1)]  
+ [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowsetImpl 类](../../data/oledb/crowsetimpl-class.md)

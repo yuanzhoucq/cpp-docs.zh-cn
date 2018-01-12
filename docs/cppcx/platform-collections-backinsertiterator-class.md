@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 197c0c8dc7de6dca562d961635706a51fff992c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 表示一个迭代器，它插入而非重写元素到有序集合的后端。  
@@ -58,7 +59,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `BackInsertIterator`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** collection.h  
   
  **命名空间：** Platform::Collections  
@@ -134,5 +135,5 @@ BackInsertIterator operator++(int);
  但是，此运算符不会实际修改 BackInsertIterator， 而是返回对未经修改的当前迭代器的引用。 这是相同的行为[运算符 *](#dereference-operator)。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

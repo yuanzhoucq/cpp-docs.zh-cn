@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1c329d3c75685fc30097e42345cb36311345f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d9632dd2bb740974e62b13522f365dcb9480a56b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapclear-stlclr"></a>multimap::clear (STL/CLR)
 删除所有元素。  
@@ -78,11 +81,11 @@ size() = 0
 size() = 0  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多重映射 (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md)

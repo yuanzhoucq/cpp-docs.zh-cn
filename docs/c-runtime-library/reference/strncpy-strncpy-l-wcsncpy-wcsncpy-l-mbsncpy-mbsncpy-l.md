@@ -72,11 +72,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 29d91de13d5fba6402018fa96f2bd5946db04936
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd0bd262dea70d7d78e90b4b0433166a763e4290
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 将一个字符串的字符复制到另一个字符串。 这些函数的更安全版本已经发布；请参阅 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。  
@@ -187,7 +188,7 @@ unsigned char *_mbsncpy_l(
   
  `wcsncpy` 和 `_mbsncpy` 分别是 `strncpy` 的宽字符及多字节字符版本。 `wcsncpy` 和 `_mbsncpy` 的参数和返回值将相应变化。 否则这六个函数具有相同行为。  
   
- 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅[区域设置](../../c-runtime-library/locale.md)。  
+ 这些带有 `_l` 后缀的函数的版本相同，只不过它们使用传递区域设置而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
  在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
@@ -201,9 +202,9 @@ unsigned char *_mbsncpy_l(
 > [!NOTE]
 >  `_strncpy_l` 和 `_wcsncpy_l` 没有区域设置依赖项，它们只是为了 `_tcsncpy_l` 提供的，不能直接调用。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`strncpy`|\<string.h>|  
 |`wcsncpy`|\<string.h> 或 \<wchar.h>|  
@@ -279,7 +280,7 @@ Buffer overrun: s = 'ars.' (should be 'test')
   
  自动变量的布局和错误检测以及代码保护的级别可能随更改的编辑器设置而改变。 此示例在内置其他编译环境或使用其他编译器选项时可能会有不同的结果。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

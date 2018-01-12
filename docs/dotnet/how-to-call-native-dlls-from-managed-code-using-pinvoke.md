@@ -1,38 +1,41 @@
 ---
-title: "如何：使用 PInvoke 从托管代码调用本机 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据封送处理 [C++], 调用本机 DLL"
-  - "互操作 [C++], 调用本机 DLL"
-  - "封送处理 [C++], 调用本机 DLL"
-  - "平台调用 [C++], 调用本机 DLL"
+title: "如何： 使用 PInvoke 从托管代码调用本机 Dll |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke [C++], calling native DLLs
+- interop [C++], calling native DLLs
+- marshaling [C++], calling native DLLs
+- data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d22f493a582b6ef09615f94c7b321a7cc535e5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 PInvoke 从托管代码调用本机 DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用平台调用 \(P\/Invoke\) 功能，可以从托管代码调用在非托管 DLL 中实现的函数。  如果 DLL 的源代码不可用，P\/Invoke 就是进行交互操作的唯一选择。  但是，与其他 .NET 语言不同，Visual C\+\+ 提供了一种替代 P\/Invoke 的方法。  有关详细信息，请参阅[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 从托管代码调用本机 DLL
+可以使用平台调用 (P/Invoke) 的功能的托管代码中调用在非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项来进行互操作。 但是，不同于其他.NET 语言，Visual c + + 提供 P/Invoke 的替代方法。 有关详细信息，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
-## 示例  
- 下面的代码示例使用 Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) 函数检索屏幕的当前分辨率（以像素为单位）。  
+## <a name="example"></a>示例  
+ 下面的代码示例使用 Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385)函数以检索屏幕以像素为单位的当前分辨率。  
   
- 对于仅将内部类型用作参数和返回值的函数而言，并不需要其他操作。  其他数据类型（如函数指针、数组和结构）需要一些附加特性以确保进行正确的数据封送处理。  
+ 对于只使用内部类型作为自变量和返回值的函数，任何额外工作不是必需的。 其他数据类型，如函数指针、 数组和结构，需要确保正确地执行数据封送处理的其他属性。  
   
- 对值类的静态成员进行 P\/Invoke 声明使其不存在于全局命名空间中是个好做法（尽管并不要求），如此示例所示。  
+ 尽管这不是必需的但是很好的做法，若要使 P/Invoke 声明的值类的静态成员，以便它们不存在于全局命名空间，在此示例中所示。  
   
 ```  
 // pinvoke_basic.cpp  
@@ -59,5 +62,5 @@ int main() {
 }  
 ```  
   
-## 请参阅  
- [在 C\+\+ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>请参阅  
+ [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

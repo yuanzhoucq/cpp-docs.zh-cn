@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 00ae3e193f3f7114d3d271f7a928dbb5c10c176c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 084e7536f787fb162491c2e3b33620c3e4014dd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException 类
 当强制转换或显式转换无效时引发。  
@@ -35,7 +36,7 @@ public ref class InvalidCastException : COMException,    IException,    IPrintab
 ### <a name="remarks"></a>备注  
  有关更多信息，请参见 [COMException](../cppcx/platform-comexception-class.md) 类。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **支持的最低客户端：** Windows 8  
   
  **支持的最低服务器：** Windows Server 2012  
@@ -44,5 +45,5 @@ public ref class InvalidCastException : COMException,    IException,    IPrintab
   
  **元数据：** platform.winmd  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Platform::COMException 类](../cppcx/platform-comexception-class.md)

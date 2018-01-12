@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3075e2ea1c2511f959d7f4a6bfc620361c76e16c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 10987b351ebc34b7b17963e17047e32ee0d9bc5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>递增和递减运算符重载 (C++)
 由于递增和递减运算符各有两个变量，因此它们属于一个特殊类别：  
@@ -135,5 +136,5 @@ int main()
   
  除显式调用之外，没有针对使用递增或递减运算符来传递这些值的语法，如前面的代码所示。 实现此功能的更直接的方法是重载加法/赋值运算符 (`+=`)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符重载](../cpp/operator-overloading.md)

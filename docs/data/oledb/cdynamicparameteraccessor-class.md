@@ -1,42 +1,44 @@
 ---
-title: "CDynamicParameterAccessor 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicParameterAccessor"
-  - "ATL::CDynamicParameterAccessor"
-  - "CDynamicParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicParameterAccessor 类"
+title: "CDynamicParameterAccessor 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicParameterAccessor
+- ATL::CDynamicParameterAccessor
+- CDynamicParameterAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicParameterAccessor class
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b0c2590866db418f1652ebd1a46c0465ccb99086
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor 类
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-类似于 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，但通过调用 [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) 接口获取要调用的参数信息。  
+# <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 类
+类似于 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) ，但通过调用 [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) 接口获取要调用的参数信息。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 class CDynamicParameterAccessor : public CDynamicAccessor  
 ```  
   
-## 成员  
+## <a name="members"></a>成员  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
@@ -54,17 +56,17 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](../../data/oledb/cdynamicparameteraccessor-setparamstatus.md)|设置存储在缓冲区中的指定参数的状态。|  
 |[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)|设置存储在缓冲区中的指定参数的字符串数据。|  
   
-## 备注  
+## <a name="remarks"></a>备注  
  访问接口必须支持 `ICommandWithParameters` 以便使用者使用此类。  
   
- 参数信息存储在由此类创建和管理的缓冲区中。 通过使用 [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 和 [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md) 从缓冲区中获取参数数据。  
+ 参数信息存储在由此类创建和管理的缓冲区中。 通过使用 [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 和 [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)从缓冲区中获取参数数据。  
   
- 有关演示如何使用此类执行 SQL Server 存储过程并获取输出参数值的示例，请参阅知识库文章 Q058860“如何：使用 CDynamicParameterAccessor 执行存储过程”。 知识库文章位于 MSDN 库的 Visual Studio 文档或 [http:\/\/support.microsoft.com\/](http://support.microsoft.com) 中。  
+ 有关演示如何使用此类执行 SQL Server 存储过程并获取输出参数值的示例，请参阅知识库文章 Q058860“如何：使用 CDynamicParameterAccessor 执行存储过程”。 知识库文章位于 MSDN 库的 Visual Studio 文档或 [http://support.microsoft.com/](http://support.microsoft.com)中。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头**：atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 类](../../data/oledb/caccessor-class.md)   

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a38ad6e8fcb36b5e7c601b416b214d9e2f98ff60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d0c413c721ba524e53ee59cb26da11ad2c11cfee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetimplmstrindextext"></a>CRowsetImpl::m_strIndexText
 包含行集的初始索引。  
@@ -34,10 +37,10 @@ CComBSTR CRowsetBaseImpl::m_strIndexText;
   
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CRowsetImpl 类](../../data/oledb/crowsetimpl-class.md)   
  [Crowsetimpl:: M_strcommandtext](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
  [Crowsetimpl:: M_rgrowdata](../../data/oledb/crowsetimpl-m-rgrowdata.md)   

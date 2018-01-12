@@ -25,11 +25,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b63e864b519dd55eedf96d525a25897c81f16ac0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6d3e2286c10d83b25576474692b5a7faeb9bb332
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC：结合文档和视图使用数据库类
 你可以使用 MFC 数据库类具有或不使用文档/视图体系结构。 本主题重点介绍使用结合文档和视图的数据库。 它还说明了：  
@@ -77,5 +80,5 @@ ms.lasthandoff: 10/24/2017
   
  你可能不想要在所有使用文档和视图。 在这种情况下，请参阅[MFC： 使用数据库类不结合文档和视图](../data/mfc-using-database-classes-without-documents-and-views.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 数据库类 (.../ data/mfc-database-classes-odbc-and-dao.md）

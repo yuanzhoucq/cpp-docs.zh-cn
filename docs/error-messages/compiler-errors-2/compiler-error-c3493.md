@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3493
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3493
+f1_keywords: C3493
+dev_langs: C++
+helpviewer_keywords: C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8094b3b03f06dcc799b6bdfeea2b57399f92b852
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: d2336caee3cf2eac6ee748bf40c8cd3f8bf871c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3493"></a>编译器错误 C3493
 无法隐式捕获“var”，因为尚未指定默认捕获模式  
@@ -63,5 +59,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

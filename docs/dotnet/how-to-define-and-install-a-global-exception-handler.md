@@ -1,32 +1,34 @@
 ---
-title: "如何：定义和安装全局异常处理程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "处理程序, 全局"
+title: "如何： 定义和安装全局异常处理程序 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1d9b1125fc54ecbd75fc49b36498a99f5e86f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：定义和安装全局异常处理程序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何能捕获未经处理的异常。  示例窗体中，按下，执行空引用的一个按钮，会导致引发异常。  该功能表示典型失败的代码。  发生的异常由主函数安装的应用程序异常处理程序捕获。  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定义和安装全局异常处理程序
+下面的代码示例演示如何未经处理的异常可以捕获。 该示例窗体包含一个按钮，按下时，执行会导致异常引发空引用。 此功能表示典型代码失败。 生成的异常由安装的主要功能的应用程序级异常处理程序捕获。  
   
- 这通过委托绑定完成到 <xref:System.Windows.Forms.Application.ThreadException> 事件。  在这种情况下，后续异常然后发送到 `App::OnUnhandled` 方法。  
+ 这通过绑定到委托实现<xref:System.Windows.Forms.Application.ThreadException>事件。 在这种情况下，并发的异常随后会发送到`App::OnUnhandled`方法。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +82,5 @@ int main()
 }  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理](../windows/exception-handling-cpp-component-extensions.md)

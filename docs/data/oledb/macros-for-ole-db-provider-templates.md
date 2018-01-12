@@ -1,71 +1,73 @@
 ---
-title: "OLE DB 提供程序模板宏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宏, OLE DB 提供程序模板"
-  - "OLE DB 提供程序模板宏"
-  - "OLE DB 提供程序模板, 宏"
-  - "提供程序模板宏 (OLE DB)"
+title: "OLE DB 提供程序模板宏 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB provider templates, macros
+- macros, OLE DB Provider Templates
+- Provider Template macros (OLE DB)
+- OLE DB Provider Template macros
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2a61e8156b39b9f0afec477f541920570d4af823
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# OLE DB 提供程序模板宏
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 提供程序模板宏提供按照以下类别的功能：  
+# <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供程序模板宏
+OLE DB 模板 Provider 宏，可以按以下类别的功能：  
   
-### 属性 集合 映射 宏命令  
+### <a name="property-set-map-macros"></a>属性设置映射宏  
   
 |||  
 |-|-|  
-|[BEGIN\_PROPERTY\_SET](../../data/oledb/begin-property-set.md)|标记的属性开头。|  
-|[BEGIN\_PROPERTY\_SET\_EX](../../data/oledb/begin-property-set-ex.md)|标记的属性开头。|  
-|[BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md)|标记在提供程序的范围外，可以隐藏或定义属性集的开头。|  
-|[CHAIN\_PROPERTY\_SET](../../data/oledb/chain-property-set.md)|链接的属性组。|  
-|[END\_PROPERTY\_SET](../../data/oledb/end-property-set.md)|标记的属性结尾。|  
-|[END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md)|标记的属性集合映射结尾。|  
-|[PROPERTY\_INFO\_ENTRY](../../data/oledb/property-info-entry.md)|将属性设置的特定属性设置为默认值。|  
-|[PROPERTY\_INFO\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md)|将属性设置的特定属性为您提供的值。  并将标志和选项。|  
-|[PROPERTY\_INFO\_ENTRY\_VALUE](../../data/oledb/property-info-entry-value.md)|将属性设置的特定属性为您提供的值。|  
+|[BEGIN_PROPERTY_SET](../../data/oledb/begin-property-set.md)|标记属性集的开始。|  
+|[BEGIN_PROPERTY_SET_EX](../../data/oledb/begin-property-set-ex.md)|标记属性集的开始。|  
+|[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)|属性的开头设置的标记可以隐藏或定义的提供程序的作用域之外。|  
+|[CHAIN_PROPERTY_SET](../../data/oledb/chain-property-set.md)|链接在一起属性组。|  
+|[END_PROPERTY_SET](../../data/oledb/end-property-set.md)|将标记属性集的末尾。|  
+|[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)|将标记属性集映射的末尾。|  
+|[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)|中的属性设置为默认值设置的特定属性。|  
+|[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)|中的属性设置为你提供的值设置的特定属性。 另外，可以设置标志和选项。|  
+|[PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)|中的属性设置为你提供的值设置的特定属性。|  
   
-### 列映射宏  
-  
-|||  
-|-|-|  
-|[BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md)|标记提供程序列映射项的开始。|  
-|[END\_PROVIDER\_COLUMN\_MAP](../../data/oledb/end-provider-column-map.md)|标记提供程序列映射项的结尾。|  
-|[PROVIDER\_COLUMN\_ENTRY](../../data/oledb/provider-column-entry.md)|表示提供程序所支持的特定列。|  
-|[PROVIDER\_COLUMN\_ENTRY\_GN](../../data/oledb/provider-column-entry-gn.md)|表示提供程序所支持的特定列。  可以指定列的大小、数据类型、精度、小数位数和架构行集的 GUID。|  
-|[PROVIDER\_COLUMN\_ENTRY\_FIXED](../../data/oledb/provider-column-entry-fixed.md)|表示提供程序所支持的特定列。  可以指定列的数据类型。|  
-|[PROVIDER\_COLUMN\_ENTRY\_LENGTH](../../data/oledb/provider-column-entry-length.md)|表示提供程序所支持的特定列。  可以指定列的大小。|  
-|[PROVIDER\_COLUMN\_ENTRY\_STR](../../data/oledb/provider-column-entry-str.md)|表示提供程序所支持的特定列。  假定为是字符串。|  
-|[PROVIDER\_COLUMN\_ENTRY\_TYPE\_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|表示提供程序所支持的特定列。  就像 PROVIDER\_COLUMN\_ENTRY\_LENGTH，而且可以指定列的数据类型和大小。|  
-|[PROVIDER\_COLUMN\_ENTRY\_WSTR](../../data/oledb/provider-column-entry-wstr.md)|表示提供程序所支持的特定列。  假定为是一个 Unicode 字符串。|  
-  
-### 架构行集宏  
+### <a name="column-map-macros"></a>列映射宏  
   
 |||  
 |-|-|  
-|[BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)|标记架构映射的开头。|  
-|[SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)|将一个GUID与一个类关联起来。|  
-|[END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)|标记架构映射的结尾。|  
+|[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)|标记提供程序列映射条目的开始。|  
+|[END_PROVIDER_COLUMN_MAP](../../data/oledb/end-provider-column-map.md)|标记提供程序列映射条目的末尾。|  
+|[PROVIDER_COLUMN_ENTRY](../../data/oledb/provider-column-entry.md)|表示提供程序支持的特定列。|  
+|[PROVIDER_COLUMN_ENTRY_GN](../../data/oledb/provider-column-entry-gn.md)|表示提供程序支持的特定列。 你可以指定列的大小、 数据类型、 精度、 小数位数和架构行集 GUID。|  
+|[PROVIDER_COLUMN_ENTRY_FIXED](../../data/oledb/provider-column-entry-fixed.md)|表示提供程序支持的特定列。 你可以指定列数据类型。|  
+|[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)|表示提供程序支持的特定列。 你可以指定的列大小。|  
+|[PROVIDER_COLUMN_ENTRY_STR](../../data/oledb/provider-column-entry-str.md)|表示提供程序支持的特定列。 它假定列类型为字符串。|  
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|表示提供程序支持的特定列。 像 PROVIDER_COLUMN_ENTRY_LENGTH，但也可以指定列的数据类型，以及大小。|  
+|[PROVIDER_COLUMN_ENTRY_WSTR](../../data/oledb/provider-column-entry-wstr.md)|表示提供程序支持的特定列。 它假定列类型是 Unicode 字符字符串。|  
   
-## 请参阅  
+### <a name="schema-rowset-macros"></a>架构行集宏  
+  
+|||  
+|-|-|  
+|[BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)|标记架构映射的开始。|  
+|[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|将 GUID 与类相关联。|  
+|[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|将标记架构映射的末尾。|  
+  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   
  [创建 OLE DB 提供程序](../../data/oledb/creating-an-ole-db-provider.md)   

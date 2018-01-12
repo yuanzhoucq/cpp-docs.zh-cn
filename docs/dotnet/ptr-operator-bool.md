@@ -1,51 +1,53 @@
 ---
-title: "ptr::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::operator bool"
-  - "ptr.operator bool"
-  - "operator bool"
-  - "msclr::com::ptr::operator bool"
-  - "msclr.com.ptr.operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator bool"
+title: "ptr::operator bool |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::operator bool
+- ptr.operator bool
+- operator bool
+- msclr::com::ptr::operator bool
+- msclr.com.ptr.operator bool
+dev_langs: C++
+helpviewer_keywords: ptr::operator bool
 ms.assetid: 31123377-6ecd-4cef-9b75-3db3996fbcd1
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5aaec44d5b8f2e8b43a94fa5d0e8b4250ac7bf49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在条件表达式中，使用运算符 `com::ptr` 。  
+# <a name="ptroperator-bool"></a>ptr::operator bool
+使用的运算符`com::ptr`条件表达式中。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 operator bool();  
 ```  
   
-## 返回值  
- 如果指定的对象有效，则为 `true`；否则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果拥有的 COM 对象有效，则为`false`否则为。  
   
-## 备注  
- 如果其不是`nullptr`，那么所持有的COM 对象是有效的。  
+## <a name="remarks"></a>备注  
+ 拥有的 COM 对象是如果它不是有效`nullptr`。  
   
- 比 `bool` 安全的此运算符实际上转换为 `_detail_class::_safe_bool`，因为它无法转换为整型。  
+ 此运算符实际将转换为`_detail_class::_safe_bool`即比更安全`bool`因为它不能转换为整型。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  在创建新文档对象后， 成员函数`CreateInstance` 使用 `operator bool`来判定其是否有效，然后将其写到控制台 。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `CreateInstance`成员函数使用`operator bool`后创建新的文档对象，以确定它是否有效以及是否将写入控制台。  
   
 ```  
 // comptr_op_bool.cpp  
@@ -92,12 +94,15 @@ int main() {
 }  
 ```  
   
-  **创建DOM 文档。**   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+```Output  
+DOM Document created.  
+```  
   
- **Namespace** msclr::com  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\com\ptr.h >  
   
-## 请参阅  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
- [ptr::operator\!](../dotnet/ptr-operator-logical-not.md)
+ [ptr::operator!](../dotnet/ptr-operator-logical-not.md)

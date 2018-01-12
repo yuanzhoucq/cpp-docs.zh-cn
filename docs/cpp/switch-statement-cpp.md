@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
 - switch_cpp
 - case_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - switch keyword [C++]
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5e05299d88cadfafb9ccb7523aac33096b90d46b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switch-statement-c"></a>switch 语句 (C++)
 允许根据整型表达式的值在多个代码段中进行选择。  
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/25/2017
 |没有一个常量匹配中的常量**用例**标签;**默认**标签不存在。|控制转移到其中**默认**标签。|  
 |没有一个常量匹配中的常量**用例**标签;**默认**标签不存在。|控制将转移到 `switch` 语句之后的语句。|  
   
- 如果找到匹配的表达式，则控件不会妨碍后续**用例**或**默认**标签。 [中断](../cpp/break-statement-cpp.md)语句用于停止执行并将控制权转交给之后的语句`switch`语句。 而无需**中断**语句、 从匹配的每个语句**用例**到末尾的标签`switch`，包括**默认**，执行。 例如:   
+ 如果找到匹配的表达式，则控件不会妨碍后续**用例**或**默认**标签。 [中断](../cpp/break-statement-cpp.md)语句用于停止执行并将控制权转交给之后的语句`switch`语句。 而无需**中断**语句、 从匹配的每个语句**用例**到末尾的标签`switch`，包括**默认**，执行。 例如:  
   
 ```  
 // switch_statement1.cpp  
@@ -130,7 +128,7 @@ int main()
         };
 ```
 
- `switch` 语句的内部块可以包含带有初始化的定义，前提是可以访问到它们 - 即，所有可能的执行路径都不会绕过它们。 使用这些声明引入的名称具有局部范围。 例如：  
+ `switch` 语句的内部块可以包含带有初始化的定义，前提是可以访问到它们 - 即，所有可能的执行路径都不会绕过它们。 使用这些声明引入的名称具有局部范围。 例如:  
   
 ```cpp  
 // switch_statement2.cpp  
@@ -175,7 +173,7 @@ int main(int argc, char *argv[])
   
 **结束 Microsoft 专用**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [选择语句](../cpp/selection-statements-cpp.md)   
  [关键字](../cpp/keywords-cpp.md)   
  

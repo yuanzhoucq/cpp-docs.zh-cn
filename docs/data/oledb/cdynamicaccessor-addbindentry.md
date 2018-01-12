@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b11409a7bbff2ef3f9c89f62fd361755d99f5d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 910418d83358817e7b0975507b6797c87cab514a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
 将绑定条目添加到输出列。  
@@ -48,8 +51,8 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  使用此方法时重写默认访问器使用创建`CDynamicAccessor`(请参阅[How Do I 提取的数据？](../../data/oledb/fetching-data.md))。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)

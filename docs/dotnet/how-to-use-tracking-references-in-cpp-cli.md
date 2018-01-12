@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1774484414ba40ce36730004e84da5f75752a284
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用跟踪引用
 这篇文章演示如何使用跟踪引用 （%） 中 C + + /cli CLI 来用引用方式传递公共语言运行时 (CLR) 类型。  
@@ -345,5 +348,5 @@ T %
 T &  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [跟踪引用运算符](../windows/tracking-reference-operator-cpp-component-extensions.md)

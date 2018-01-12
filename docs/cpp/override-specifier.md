@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- override Identifier
+dev_langs: C++
+helpviewer_keywords: override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 677a6a0e0107f3ed0d0dc402f36e9d6dd4505c7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override-specifier"></a>override 说明符
 您可使用 `override` 关键字来指定在基类中重写虚函数的成员函数。  
@@ -94,7 +91,7 @@ class DerivedClass: public BaseClass
   
  若要指定函数不能重写并且类不能被继承，请使用[最终](../cpp/final-specifier.md)关键字。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [final 说明符](../cpp/final-specifier.md)   
  [关键字](../cpp/keywords-cpp.md)   
  

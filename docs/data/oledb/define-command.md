@@ -1,35 +1,36 @@
 ---
-title: "DEFINE_COMMAND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEFINE_COMMAND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DEFINE_COMMAND 宏"
+title: "DEFINE_COMMAND |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DEFINE_COMMAND
+dev_langs: C++
+helpviewer_keywords: DEFINE_COMMAND macro
 ms.assetid: 9d724968-e242-413c-9a13-e7175fccf9b1
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd2acfee6bb0f28acc774774e446e9efd4a5637b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# DEFINE_COMMAND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定要用于创建该行集合，并使用 [CCommand](../../data/oledb/ccommand-class.md) 类中的命令。  接受与指定的应用程序类型的某些字符串类型 \(ANSI 或 Unicode。\)  
+# <a name="definecommand"></a>DEFINE_COMMAND
+指定将用于创建行集时使用的命令[CCommand](../../data/oledb/ccommand-class.md)类。 接受仅与指定的应用程序类型 （ANSI 或 Unicode） 匹配的字符串类型。  
   
 > [!NOTE]
->  建议您改用 [DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md) 而不是 `DEFINE_COMMAND`。  
+>  建议你使用[DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md)而不是`DEFINE_COMMAND`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -41,23 +42,23 @@ szCommand
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  *x*  
- \[in\] 用户记录（命令）类的名称。  
+ [in]用户记录 （命令） 类的名称。  
   
  `szCommand`  
- \[in\] 将用于为行集合，并使用 [CCommand](../../data/oledb/ccommand-class.md)中的命令字符串。  
+ [in]将用于创建行集时使用的命令字符串[CCommand](../../data/oledb/ccommand-class.md)。  
   
-## 备注  
- 您所指定的命令字符串将使用为默认，如果您在 [CCommand::Open](../../data/oledb/ccommand-open.md) 方法不指定命令文本。  
+## <a name="remarks"></a>备注  
+ 你指定的命令字符串将用作默认值，如果不指定中的命令文本[ccommand:: Open](../../data/oledb/ccommand-open.md)方法。  
   
- 此宏接受 ANSI 字符串，如果生成应用程序，为 ANSI 或 Unicode 字符串，则应用程序生成为 Unicode。  建议您改用 [DEFINE\_COMMAND\_EX](../../data/oledb/define-command-ex.md) 而不是 `DEFINE_COMMAND`，因为前面接受，Unicode 字符串，而 ANSI 或 Unicode，应用程序类型。  
+ 如果生成为 Unicode 应用程序，此宏会接受 ANSI 字符串如果生成你的应用程序为 ANSI 或 Unicode 字符串。 建议你使用[DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md)而不是`DEFINE_COMMAND`，因为前者接受 Unicode 字符串，而不考虑 ANSI 或 Unicode 应用程序类型。  
   
-## 示例  
- 参见 [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md)。  
+## <a name="example"></a>示例  
+ 请参阅[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

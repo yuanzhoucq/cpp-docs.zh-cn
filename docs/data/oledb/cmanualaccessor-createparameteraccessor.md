@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94fbe6e0a7e44e861c3a0cb0039860e47a27ad3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ef1fc30c9188395d90171a250b96d116c2913aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmanualaccessorcreateparameteraccessor"></a>CManualAccessor::CreateParameterAccessor
 参数绑定结构分配内存和初始化参数数据成员。  
@@ -56,10 +59,10 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  您必须调用之前调用此函数[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CManualAccessor 类](../../data/oledb/cmanualaccessor-class.md)   
  [Cmanualaccessor:: Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)   
  [CManualAccessor::AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)

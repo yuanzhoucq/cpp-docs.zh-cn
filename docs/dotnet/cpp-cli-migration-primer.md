@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5861a4931a1241a213157b94ca189c6b95f0fb6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1dcbb3b54cbde323cda0856ca68b2281d669cb7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 迁移入门
 这是你的 Visual c + + 程序将从移动 Managed Extensions for c + + 到 Visual c + + 的指南。 有关语法的更改的清单摘要，请参阅[(NOTINBUILD) c + + 语法升级清单的托管扩展](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)。  
@@ -49,6 +52,6 @@ ms.lasthandoff: 10/24/2017
  [常规语言更改 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)  
  语义的详细信息更改，例如强制转换表示法的支持字符串文本的行为和更改语义之间 ISO c + + 和 C + + /cli CLI。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [混合 （本机和托管） 程序集](../dotnet/mixed-native-and-managed-assemblies.md)   
  [适用于运行时平台的组件扩展](../windows/component-extensions-for-runtime-platforms.md)

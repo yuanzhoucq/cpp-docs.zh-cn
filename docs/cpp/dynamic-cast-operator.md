@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- dynamic_cast_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- dynamic_cast keyword [C++]
+f1_keywords: dynamic_cast_cpp
+dev_langs: C++
+helpviewer_keywords: dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3137207566a6df16c420493afa93269540de2bae
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 运算符
 将转换该操作数`expression`类型的对象到`type-id`。  
@@ -47,7 +43,7 @@ dynamic_cast < type-id > ( expression )
   
 -   `dynamic_cast`将不再引发异常时`type-id`是值类型，与在运行时失败的强制转换为内部指针。  现在，该强制转换将返回 0 的指针值而不是引发。  
   
- 如果`type-id`是指向一个明确访问直接或间接基类的`expression`，指向类型的唯一的子对象的指针`type-id`结果。 例如：  
+ 如果`type-id`是指向一个明确访问直接或间接基类的`expression`，指向类型的唯一的子对象的指针`type-id`结果。 例如:  
   
 ```  
 // dynamic_cast_1.cpp  
@@ -66,7 +62,7 @@ void f(D* pd) {
   
  这种类型的转换称为"向上转换"，因为它将类层次结构，向上的指针移到派生自的类派生类。 向上转换是隐式转换。  
   
- 如果`type-id`是 void * 进行运行时检查以确定的实际类型`expression`。 结果是指向完整对象的指针`expression`。 例如：  
+ 如果`type-id`是 void * 进行运行时检查以确定的实际类型`expression`。 结果是指向完整对象的指针`expression`。 例如:  
   
 ```  
 // dynamic_cast_2.cpp  
@@ -87,7 +83,7 @@ void f() {
   
  如果`type-id`不是 void * 进行运行时检查以查看如果指向的对象通过`expression`可以转换为指向类型`type-id`。  
   
- 如果的一种`expression`是基类的一种`type-id`，进行运行时检查以查看是否`expression`实际指向的类型的完整对象`type-id`。 如果这是真的，结果是指向整个对象的类型的`type-id`。 例如：  
+ 如果的一种`expression`是基类的一种`type-id`，进行运行时检查以查看是否`expression`实际指向的类型的完整对象`type-id`。 如果这是真的，结果是指向整个对象的类型的`type-id`。 例如:  
   
 ```  
 // dynamic_cast_3.cpp  
@@ -136,7 +132,7 @@ int main() {
  ![类层次结构显示多重继承的](../cpp/media/vc39011.gif "vc39011")  
 显示多继承的类层次结构  
   
- 指向类型的对象的指针`D`能够安全地转换为`B`或`C`。 但是，如果`D`被强制转换为指向`A`对象，哪个实例`A`将导致？ 这将导致不明确的强制转换错误。 若要获取解决此问题，你可以执行两个明确的强制转换。 例如：  
+ 指向类型的对象的指针`D`能够安全地转换为`B`或`C`。 但是，如果`D`被强制转换为指向`A`对象，哪个实例`A`将导致？ 这将导致不明确的强制转换错误。 若要获取解决此问题，你可以执行两个明确的强制转换。 例如:  
   
 ```  
 // dynamic_cast_4.cpp  
@@ -164,7 +160,7 @@ void f() {
  ![类层次结构显示重复基类的](../cpp/media/vc39013.gif "vc39013")  
 显示重复基类的类层次结构  
   
- 给定类型的对象`E`和一个指向`D`子对象，若要从导航`D`到最左边的子对象`A`子对象，可以进行三个转换。 你可以执行`dynamic_cast`从转换`D`指向`E`指针，则转换 (或者`dynamic_cast`或隐式转换) 从`E`到`B`，和最后一个从隐式转换`B`到`A`。 例如：  
+ 给定类型的对象`E`和一个指向`D`子对象，若要从导航`D`到最左边的子对象`A`子对象，可以进行三个转换。 你可以执行`dynamic_cast`从转换`D`指向`E`指针，则转换 (或者`dynamic_cast`或隐式转换) 从`E`到`B`，和最后一个从隐式转换`B`到`A`。 例如:  
   
 ```  
 // dynamic_cast_5.cpp  
@@ -184,7 +180,7 @@ void f(D* pd) {
   
  `dynamic_cast`运算符还可以用于执行"交叉 cast"。 使用相同的类层次结构，它可强制是指针，例如，转换从`B`到的子对象`D`子对象，前提是完整的对象属于类型`E`。  
   
- 考虑跨强制转换时，它是实际可用来执行从指向的指针转换`D`的指针到最左侧`A`仅使用两个步骤中的子对象。 你可以执行强制转换从跨`D`到`B`，然后从隐式转换`B`到`A`。 例如：  
+ 考虑跨强制转换时，它是实际可用来执行从指向的指针转换`D`的指针到最左侧`A`仅使用两个步骤中的子对象。 你可以执行强制转换从跨`D`到`B`，然后从隐式转换`B`到`A`。 例如:  
   
 ```  
 // dynamic_cast_6.cpp  
@@ -203,7 +199,7 @@ void f(D* pd) {
   
  一个 null 指针值转换为的目标类型的 null 指针值`dynamic_cast`。  
   
- 当你使用`dynamic_cast < type-id > ( expression )`，如果`expression`无法安全地转换为类型`type-id`，运行时检查导致转换失败。 例如：  
+ 当你使用`dynamic_cast < type-id > ( expression )`，如果`expression`无法安全地转换为类型`type-id`，运行时检查导致转换失败。 例如:  
   
 ```  
 // dynamic_cast_7.cpp  
@@ -299,6 +295,6 @@ in GlobalTest
 Can't cast to C  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [强制转换运算符](../cpp/casting-operators.md)   
  [关键字](../cpp/keywords-cpp.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - _tfsopen
 - _wfsopen
 - _fsopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, streams
 - fsopen function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c53bdd4bdd5d6707e6da15def20b6375dcf6e0dd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0233734a829aa091615bb7feff0970e6912d7199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen、_wfsopen
 打开具有文件共享的流。  
@@ -118,7 +102,7 @@ FILE *_wfsopen(
   
  使用 `"w"` 和 `"w+"` 类型时要小心，因为它们可能会破坏现有文件。  
   
- 使用 `"a"` 或 `"a+"` 访问类型打开文件时，所有写入操作均将在文件末尾进行。 使用 `fseek` 或 `rewind` 可重新定位文件指针，但在执行任何写入操作前，文件指针将始终被移回文件末尾。 因此，无法覆盖现有数据。 指定 `"r+"`、`"w+"` 或 `"a+"` 访问类型时，允许读取和写入（文件将处于打开状态以进行更新）。 但是，在读取与写入之间切换时，必须有中间 [fsetpos](../../c-runtime-library/reference/fsetpos.md)、[fseek](../../c-runtime-library/reference/fseek-fseeki64.md) 或 [rewind](../../c-runtime-library/reference/rewind.md) 操作。 如果需要的话，可以为 `fsetpos` 或 `fseek` 操作指定当前位置。 除了以上值之外，可以在 `mode` 中包含以下字符之一以指定换行符和文件管理的转换模式。  
+ 使用 `"a"` 或 `"a+"` 访问类型打开文件时，所有写入操作均将在文件末尾进行。 使用 `fseek` 或 `rewind` 可重新定位文件指针，但在执行任何写入操作前，文件指针将始终被移回文件末尾。因此，无法覆盖现有数据。 指定 `"r+"`、`"w+"` 或 `"a+"` 访问类型时，允许读取和写入（文件将处于打开状态以进行更新）。 但是，在读取与写入之间切换时，必须有中间 [fsetpos](../../c-runtime-library/reference/fsetpos.md)、[fseek](../../c-runtime-library/reference/fseek-fseeki64.md) 或 [rewind](../../c-runtime-library/reference/rewind.md) 操作。 如果需要的话，可以为 `fsetpos` 或 `fseek` 操作指定当前位置。 除了以上值之外，可以在 `mode` 中包含以下字符之一以指定换行符和文件管理的转换模式。  
   
 |术语|定义|  
 |----------|----------------|  
@@ -147,7 +131,7 @@ FILE *_wfsopen(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tfsopen`|`_fsopen`|`_fsopen`|`_wfsopen`|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|可选标头|  
 |--------------|---------------------|----------------------|  
@@ -186,7 +170,7 @@ int main( void )
 No one else in the network can write to this file until we are done.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   

@@ -1,33 +1,35 @@
 ---
-title: "如何：检索当前用户名 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "当前用户名"
-  - "用户名, 检索"
-  - "UserName 字符串"
+title: "如何： 检索当前用户名 (C + + /cli CLI) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- current user names
+- user names, retrieving
+- UserName string
 ms.assetid: 91679571-d029-41f5-b657-1460c81c608a
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1532647327c039994a1d09ee8b7eacc2c341f88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：检索当前用户名 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下面的代码示例演示如何检索当前用户名（已登录到 Windows 的用户的名称）。  该名称存储在 <xref:System.Environment.UserName%2A> 字符串（在 <xref:System.Environment> 命名空间中定义）中。  
+# <a name="how-to-retrieve-the-current-username-ccli"></a>如何：检索当前用户名 (C++/CLI)
+下面的代码示例演示如何检索当前用户名 （登录到 Windows 用户的名称）。 名称存储在<xref:System.Environment.UserName%2A>中定义的字符串<xref:System.Environment>命名空间。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // username.cpp  
@@ -41,6 +43,6 @@ int main()
 }  
 ```  
   
-## 请参阅  
- [Windows 操作](../dotnet/windows-operations-cpp-cli.md)   
- [使用 C\+\+\/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>请参阅  
+ [Windows 操作 (C + + /cli CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

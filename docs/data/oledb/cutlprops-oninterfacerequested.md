@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 860870628d8558ad252657c06d90f195fd707eb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c458eaf7c1e41ade5d29fa020bacfebb2b278e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
 处理请求的可选接口，使用者调用方法时对象之一上创建接口。  
@@ -56,8 +59,8 @@ ms.lasthandoff: 10/24/2017
   
  如果你想要处理其他界面，重写此函数在您的数据源、 会话、 命令或行集类到进程函数中。 重写应经历正常的集获取属性接口，以确保，设置属性也将设置任何链接的属性 (请参阅[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md))。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CUtlProps 类](../../data/oledb/cutlprops-class.md)

@@ -1,41 +1,42 @@
 ---
-title: "deque::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 成员 [STL/CLR]"
+title: "deque:: clear (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 1d9a3d11-b3fa-43a7-a508-7a05cbcd91bf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 74ab0cb7bc84a5d6959989bacd52509d6eb639ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# deque::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除所有元素。  
+# <a name="dequeclear-stlclr"></a>deque::clear (STL/CLR)
+删除所有元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void clear();  
 ```  
   
-## 备注  
- 成员函数中有效调用 [deque::erase](../dotnet/deque-erase-stl-clr.md)[deque::begin](../dotnet/deque-begin-stl-clr.md)[deque::end](../dotnet/deque-end-stl-clr.md)`(` `(),` `())`。  用以确保控制序列为空。  
+## <a name="remarks"></a>备注  
+ 成员函数可有效地调用[deque:: erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md) `(` [deque:: begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) `(),` [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md) `())`. 你可以使用它来确保受控的序列为空。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_deque_clear.cpp   
@@ -72,15 +73,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **a b**  
-**size\(\) \= 0**   
-## 要求  
- **标头:** \<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/q u e >  
   
-## 请参阅  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::erase](../dotnet/deque-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)

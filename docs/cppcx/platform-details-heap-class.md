@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: fac35b4e8de19a7ba56a27f79399e7c972c09556
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77758fb197221cc7411b804ad729435a32886a0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetailsheap-class"></a>Platform::Details::Heap 类
 此类仅供内部使用，不用于开发。  
@@ -37,10 +38,10 @@ ref class Heap sealed;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Platform`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **元数据：** platform.winmd  
   
  **命名空间：** Platform::Details  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

@@ -1,48 +1,50 @@
 ---
-title: "IDBInitializeImpl::Uninitialize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBInitializeImpl.Uninitialize"
-  - "Uninitialize"
-  - "IDBInitializeImpl::Uninitialize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Uninitialize 方法"
+title: "Idbinitializeimpl:: Uninitialize |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBInitializeImpl.Uninitialize
+- Uninitialize
+- IDBInitializeImpl::Uninitialize
+dev_langs: C++
+helpviewer_keywords: Uninitialize method
 ms.assetid: ba37fc74-f84e-40b0-abb6-41bddd505269
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4ad85aab3209365265ea83cce0e73c181d5bdec7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# IDBInitializeImpl::Uninitialize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-中未初始化状态将数据源对象通过释放资源 \(如支持内部属性。  
+# <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
+位置数据通过释放内部资源的属性支持如源中未初始化状态的对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      STDMETHOD(Uninitialize)(   
-   void    
+      STDMETHOD(Uninitialize)(   
+   void    
 );  
 ```  
   
-## 备注  
- 参阅《*OLE DB 程序员参考》\) 中的*[IDBInitialize::Uninitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx)。  
+## <a name="remarks"></a>备注  
+ 请参阅[IDBInitialize::Uninitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx)中*OLE DB 程序员参考*。  
   
-## 要求  
- **页眉：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [IDBInitializeImpl 类](../../data/oledb/idbinitializeimpl-class.md)   
  [IDBInitializeImpl::Initialize](../../data/oledb/idbinitializeimpl-initialize.md)

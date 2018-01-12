@@ -34,11 +34,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 13609bbe4dae9b493b8467fd0ac9fe7d1437fa83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8edad860ffcfb03043f03299d0d722c1b435b6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pclose"></a>_pclose
 等待新命令处理器并关闭关联管道上的流。  
@@ -67,18 +68,18 @@ FILE *stream
 ## <a name="remarks"></a>备注  
  `_pclose` 函数查找由相关联的 `_popen` 调用启动的命令处理器 (Cmd.exe) 的进程 ID，在新命令处理器上执行 [_cwait](../../c-runtime-library/reference/cwait.md) 调用，并关闭相关管道上的流。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_pclose`|\<stdio.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>库  
  [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_pipe](../../c-runtime-library/reference/pipe.md)   
  [_popen、_wpopen](../../c-runtime-library/reference/popen-wpopen.md)

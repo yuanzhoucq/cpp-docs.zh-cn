@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 732238e3c0754731dcf7caf10ad1d6a140490cd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b17a2bdcfee80b027423c24a7a430095eed6297d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
 生成`binder1st`有关自变量，以及函子。  
@@ -35,7 +38,7 @@ template<typename Fun,
   
 ## <a name="template-parameters"></a>模板参数  
  Arg  
- 参数类型。  
+ 自变量类型。  
   
  有趣  
  函子的类型。  
@@ -44,7 +47,7 @@ template<typename Fun,
  函子  
  包装函数。  
   
- left  
+ 左  
  要包装的第一个参数。  
   
 ## <a name="remarks"></a>备注  
@@ -99,10 +102,10 @@ int main()
 -1 0  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)

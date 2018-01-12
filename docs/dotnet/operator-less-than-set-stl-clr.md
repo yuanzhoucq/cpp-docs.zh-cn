@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0c290eecaef9be1ef4ffa222c14905a934e4373
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5ba01bbe0660286a54b0bc685a9dc85bdcd3e7b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-set-stlclr"></a>运算符&lt;(set) (STL/CLR)
 列表小于比较。  
@@ -89,12 +92,12 @@ int main()
 [a b c] < [a b d] is True  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [运算符 = = (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)   
  [运算符 ！ = (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)   

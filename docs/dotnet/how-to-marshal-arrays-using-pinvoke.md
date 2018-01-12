@@ -1,42 +1,45 @@
 ---
-title: "如何：使用 PInvoke 封送数组 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据封送处理 [C++], 数组"
-  - "互操作 [C++], 数组"
-  - "封送处理 [C++], 数组"
-  - "平台调用 [C++], 数组"
+title: "如何： 使用 PInvoke 封送数组 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], arrays
+- platform invoke [C++], arrays
+- interop [C++], arrays
+- data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 PInvoke 封送数组
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明如何使用 CLR 字符串类型 <xref:System.String> 调用接受 C 样式字符串的本机函数（通过使用 .NET Framework 平台调用支持）。  Visual C\+\+ 程序员最好转而使用 C\+\+ Interop 功能（如果可能），因为 P\/Invoke 几乎不提供编译时错误报告，不是类型安全的，实现起来也很单调。  当将非托管 API 打包为 DLL，而源代码又不可用时，P\/Invoke 就成为了唯一的选择（另请参见[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)）。  
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送数组
+本主题说明如何本机接受 C 样式字符串可以使用的 CLR 字符串类型来调用的函数<xref:System.String>使用.NET Framework 平台调用支持。 Visual c + + 程序员人员最好 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈来实现。 如果非托管的 API 打包为的 DLL 的源代码不可用，P/Invoke 是唯一的选项 (否则，请参阅[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。  
   
-## 示例  
- 由于本机数组和托管数组在内存中以不同的方式布局，因此在跨托管\/非托管边界成功传递这些数组时需要进行转换或封送处理。  本主题演示如何将简单 \(blitable\) 项数组传递给托管代码中的本机函数。  
+## <a name="example"></a>示例  
+ 由于本机和托管数组中列出了不同内存，跨托管/非托管边界成功传递它们需要转换，或封送处理。 本主题演示了如何简单 (blitable) 项的数组可以将传递给本机函数从托管代码。  
   
- 对于托管\/非托管数据封送处理，通常将 <xref:System.Runtime.InteropServices.DllImportAttribute> 特性用于为将要使用的每个本机函数创建托管入口点。  在使用采用数组作为参数的函数时，还必须使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性为编译器指定对数据进行封送处理的方式。  在下面的示例中，使用 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举指示托管数组将被封送为 C 样式的数组。  
+ 为 true 的托管/非托管数据封送处理一般情况下，如<xref:System.Runtime.InteropServices.DllImportAttribute>属性用于创建将使用每个本机函数的托管的入口点。 在采用数组作为自变量，函数的情况下<xref:System.Runtime.InteropServices.MarshalAsAttribute>必须也使用属性来指定到编译器的数据将封送。 在下面的示例中，<xref:System.Runtime.InteropServices.UnmanagedType>枚举用于指示托管的数组将作为 C 样式数组封送。  
   
- 下面的代码由一个非托管模块和一个托管模块组成。  非托管模块是一个 DLL，用于定义接受整数数组的函数。  第二个模块是一个托管命令行应用程序（该应用程序导入此函数，但以托管数组的方式定义此函数），并使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性指定调用时应该将数组转换为本机数组。  
+ 下面的代码由非托管和的托管的模块组成。 非托管的模块是一个 DLL，它定义接受整数的数组的函数。 第二个模块是一个托管的命令行应用程序导入此函数，但定义根据托管数组，并使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>特性以指定应将数组转换为本机数组时调用。  
   
- 该托管模块使用 \/clr 进行编译，但 \/clr:pure 也适用。  
+ 托管的模块编译 /clr，但 /clr: pure 工作原理以及。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。  
   
-```  
+```cpp  
 // TraditionalDll4.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -59,7 +62,7 @@ void TakesAnArray(int len, int a[]) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalBlitArray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
- 请注意，DLL 中的任何部分都不会通过传统的 \#include 指令向托管代码公开。  实际上，由于 DLL 仅在运行时进行访问，因此编译时不会检测到使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 导入的函数的相关问题。  
+ 请注意该 DLL 没有部分对通过传统的托管代码公开 #include 指令。 事实上，因为仅在运行时访问该 DLL 时，问题与函数导入与<xref:System.Runtime.InteropServices.DllImportAttribute>将不会在编译时检测。  
   
-## 请参阅  
- [在 C\+\+ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>请参阅  
+ [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

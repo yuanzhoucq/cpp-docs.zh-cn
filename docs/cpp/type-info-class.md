@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_info
-dev_langs:
-- C++
+f1_keywords: type_info
+dev_langs: C++
 helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b87dec1f3d3a04d984c3bbd96344ebcb0a163f19
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9cd5a1844bfeec798ee25a3cb8e65efd019e65e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typeinfo-class"></a>type_info 类
 **Type_info**类描述编译器在程序中生成的类型信息。 此类的对象可以有效存储指向类型的名称的指针。 **Type_info**类还可存储适合比较是否相等的两个类型或比较其排列顺序的编码的值。 类型的编码规则和排列顺序是未指定的，并且可能因程序而异。  
@@ -53,12 +50,11 @@ public:
   
  类型的排列顺序与继承关系之间没有关联。 使用**type_info**成员函数来确定类型的排序顺序。 不能保证， **type_info**将生成不同的程序或甚至不同运行同一程序中相同的结果。 这种方式， **type_info**类似于地址的**(&)**运算符。  
   
- **Type_info:: name**成员函数将返回**const char\* **以 null 结尾的字符串表示的用户可读名称的类型。 将缓存所指向的内存，应该从不直接释放它。  
+ **Type_info:: name**成员函数将返回**const char\*** 以 null 结尾的字符串表示的用户可读名称的类型。 将缓存所指向的内存，应该从不直接释放它。  
   
- **Type_info:: raw_name**成员函数将返回**const char\* **以 null 结尾的字符串表示的修饰的名称的对象类型。 该名称实际上以其修饰的形式存储以节省空间。 因此，此函数是比快**type_info:: name**因为它不需要取消修饰名称。 返回的字符串**type_info:: raw_name**函数是比较操作中有用，但不是可读。 如果你需要的用户可读的字符串，使用**type_info:: name**函数。  
+ **Type_info:: raw_name**成员函数将返回**const char\*** 以 null 结尾的字符串表示的修饰的名称的对象类型。 该名称实际上以其修饰的形式存储以节省空间。 因此，此函数是比快**type_info:: name**因为它不需要取消修饰名称。 返回的字符串**type_info:: raw_name**函数是比较操作中有用，但不是可读。 如果你需要的用户可读的字符串，使用**type_info:: name**函数。  
   
  为多态类才生成类型信息[/GR （启用运行时类型信息）](../build/reference/gr-enable-run-time-type-information.md)指定编译器选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运行时类型信息](../cpp/run-time-type-information.md)
-

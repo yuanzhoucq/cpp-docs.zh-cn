@@ -20,11 +20,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 54e4b7621879252b14fa0fe71c837439da147df5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1c2b8c38d672b6bd3ecd0fcafb54a9b6e723202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 类
 指示应用程序的线程模型是单线程单元 (STA)。  
@@ -46,7 +47,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>公共方法  
  STAThreadAttribute 属性继承自[platform:: object 类](../cppcx/platform-object-class.md)。 STAThreadAttribute 还会重载或具有以下成员：  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|确定指定的对象是否等于当前对象。|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|返回此实例的哈希代码。|  
@@ -55,7 +56,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `Platform`  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** collection.h  
   
  **命名空间：** Platform  
@@ -119,5 +120,5 @@ public:String^ ToString()
   
 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [平台 Namespace](platform-namespace-c-cx.md)

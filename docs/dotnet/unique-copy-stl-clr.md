@@ -1,32 +1,33 @@
 ---
-title: "unique_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unique_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique_copy 函数 [STL/CLR]"
+title: "unique_copy (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unique_copy
+dev_langs: C++
+helpviewer_keywords: unique_copy function [STL/CLR]
 ms.assetid: 37aa5b06-42c5-420d-94c5-00f00ad26471
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ca88897a16a78dcb0f331f2ce56db29ab692a3c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# unique_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 将源范围中的元素复制到目标范围，彼此相邻的重复元素除外。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -36,13 +37,13 @@ template<class _InIt, class _OutIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## 备注  
- 此函数行为与 STL `unique_copy`函数相同。  有关详细信息，请参阅[unique\_copy](../Topic/unique_copy.md)。  
+## <a name="remarks"></a>备注  
+ 此函数的行为与 c + + 标准库函数相同`unique_copy`。 有关详细信息，请参阅[unique_copy](../standard-library/algorithm-functions.md#unique_copy)。  
   
-## 要求  
- **标头:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/算法 >  
   
- **命名空间:** cliext  
+ **Namespace:** cliext  
   
-## 请参阅  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>请参阅  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

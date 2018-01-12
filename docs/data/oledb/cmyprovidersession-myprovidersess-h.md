@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderSession (MyProviderSess.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidersession"
-  - ""myprovidersess.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MyProviderSess.H 中的 CMyProviderSession 类"
-  - "OLE DB 提供程序, 向导生成的文件"
+title: "CMyProviderSession (MyProviderSess.H) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidersession
+- myprovidersess.h
+dev_langs: C++
+helpviewer_keywords:
+- CMyProviderSession class in MyProviderSess.H
+- OLE DB providers, wizard-generated files
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3cf8a75a416f03fed1ae7e0deb9118b3c40ea5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderSession (MyProviderSess.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-MyProviderSess.H 包含 OLE DB 会话对象的声明和实现。  数据源对象创建会话对象，表示使用者和提供程序之间的对话。  可以为一个数据源打开多个同时会话。  `CMyProviderSession` 的继承列表如下：  
+# <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
+MyProviderSess.H 包含的声明和实现 OLE DB 会话对象。 数据源对象创建会话对象，表示使用者和提供程序之间的对话。 多个同时会话可以打开一个数据源。 继承列表`CMyProviderSession`遵循：  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -42,11 +44,11 @@ class ATL_NO_VTABLE CMyProviderSession :
    public IDBCreateCommandImpl<CMyProviderSession, CMyProviderCommand>  
 ```  
   
- 会话对象从 **IGetDataSource**、`IOpenRowset`、**ISessionProperties** 和 **IDBCreateCommand** 继承。  **IGetDataSource** 接口允许会话检索创建它的数据源。  如果需要从创建的数据源获取属性或数据源可以提供的其他信息，这很有用。  **ISessionProperties** 接口处理会话的所有属性。  `IOpenRowset` 和 **IDBCreateCommand** 接口用于做数据库工作。  如果提供程序支持命令，它将实现 **IDBCreateCommand** 接口。  它用于创建可以执行命令的命令对象。  提供程序总是实现 `IOpenRowset` 对象。  它用于从提供程序生成简单行集合。  它是来自提供程序的默认行集合（例如，`"select * from mytable"`）。  
+ 会话对象继承自**IGetDataSource**， `IOpenRowset`， **ISessionProperties**，和**IDBCreateCommand**。 **IGetDataSource**接口允许会话来检索数据源创建它。 这是你需要从你创建的数据源或数据源可以提供其他信息中获取属性的情况下很有用。 **ISessionProperties**接口处理会话的所有属性。 `IOpenRowset`和**IDBCreateCommand**接口用于执行数据库的工作。 如果提供程序支持命令，它实现**IDBCreateCommand**接口。 它用于创建可执行命令的命令对象。 提供程序始终实现`IOpenRowset`对象。 它用于从提供程序生成简单行集合。 默认行集 (例如， `"select * from mytable"`) 从提供程序。  
   
- 向导还生成三个会话类：`CMyProviderSessionColSchema`、`CMyProviderSessionPTSchema` 和 `CMyProviderSessionTRSchema`。  这些会话用于架构行集合。  架构行集合允许提供程序将元数据返回给使用者，而使用者不必执行查询或获取数据。  获取元数据可以比发现提供程序功能快得多。  
+ 向导还会生成三个会话类： `CMyProviderSessionColSchema`， `CMyProviderSessionPTSchema`，和`CMyProviderSessionTRSchema`。 这些会话用于架构行集。 架构行集允许要返回给使用者的元数据，而无需执行查询或提取的数据使用者的提供程序。 提取元数据可以是比发现提供程序功能要快得多。  
   
- OLE DB 规范要求实现 **IDBSchemaRowset** 接口的提供程序支持三种架构行集合类型：**DBSCHEMA\_COLUMNS**、**DBSCHEMA\_PROVIDER\_TYPES** 和 `DBSCHEMA_TABLES`。  向导为每个架构行集合生成实现。  向导生成的每个类都包含 `Execute` 方法。  在此 `Execute` 方法中，可以向提供程序返回有关支持哪些表、列和数据类型的数据。  此数据通常在编译时是已知的。  
+ OLE DB 规范要求的提供程序实现**IDBSchemaRowset**接口支持三个架构行集类型： **DBSCHEMA_COLUMNS**， **DBSCHEMA_PROVIDER_TYPES**，和`DBSCHEMA_TABLES`。 向导将生成为每个架构行集的实现。 向导生成的每个类包含`Execute`方法。 在此`Execute`方法，你可以向有关哪些表、 列和数据类型支持的提供程序返回数据。 此数据通常是在编译时已知的。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)

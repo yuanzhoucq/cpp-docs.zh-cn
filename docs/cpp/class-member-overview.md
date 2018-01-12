@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>类成员概述
 类或结构由其成员组成。 类的工作由其成员函数执行。 它所维持的状态存储在其数据成员中。 成员初始化的通过构造函数和清理工作，如释放的内存和释放资源可通过析构函数。 在 C++ 11 和更高版本中，数据成员可以（并且通常应该）在声明时初始化。  
@@ -174,5 +175,5 @@ int CanInit2::j = i;
 > [!NOTE]
 >  类名 `CanInit2` 的前面必须有 `i` 以指定所定义的 `i` 是类 `CanInit2` 的成员。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类和结构](../cpp/classes-and-structs-cpp.md)

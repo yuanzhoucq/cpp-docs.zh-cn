@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2261f5c2b843f607f8f0906764aee833c6a100f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>范围规则摘要
 名称的使用在其范围内必须是明确的（直至确定重载的点）。 如果名称表示一个函数，则该函数的参数的数目和类型必须明确。 如果名称保持明确，[成员访问](../cpp/member-access-control-cpp.md)应用规则。  
@@ -76,5 +77,5 @@ ms.lasthandoff: 10/24/2017
   
  默认参数位于它们作为默认值的参数的范围内，如前面两段中所述。 但是，它们无法访问局部变量或非静态类成员。 默认参数的计算时间是函数调用时，但计算位置是在函数声明的原始范围内。 因此，成员函数的默认参数始终在类范围中计算。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [继承](../cpp/inheritance-cpp.md)

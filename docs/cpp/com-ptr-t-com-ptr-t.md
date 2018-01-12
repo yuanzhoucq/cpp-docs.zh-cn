@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_ptr_t::_com_ptr_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_ptr_t method [C++]
+f1_keywords: _com_ptr_t::_com_ptr_t
+dev_langs: C++
+helpviewer_keywords: _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 99aeb2eb5eff192c24b1f309e7cb62a08213a867
-ms.contentlocale: zh-cn
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0e9aef6064c5a92851be009a3f00b345613904b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 专用**  
@@ -173,5 +169,5 @@ explicit _com_ptr_t(
  `pOuter`  
  未知的外部对象[聚合](http://msdn.microsoft.com/library/windows/desktop/ms686558)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

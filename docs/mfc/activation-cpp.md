@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 678d8dbed5d8ba659a6c0a33752f28b3e2d2c61b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activation-c"></a>Activation (C++)
 此文章介绍了在可视编辑 OLE 项中激活的角色。 用户具有在容器文档中嵌入 OLE 项后，它可能需要使用。 若要执行此操作，用户，请双击项，其激活。 激活的最常见活动正在编辑。 多个当前 OLE 项，以进行编辑，激活时导致在当前的框架窗口，若要更改以反映属于服务器应用程序创建项的菜单和工具栏。 此行为，已知为就地激活，允许用户无需离开容器文档窗口中编辑复合文档中的任何嵌入的项。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  当用户双击它，嵌入项会发生什么情况取决于为项定义的谓词。 有关信息，请参阅[激活： 谓词](../mfc/activation-verbs.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE](../mfc/ole-in-mfc.md)   
  [容器](../mfc/containers.md)   
  [服务器](../mfc/servers.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 329e59f97bd804351ea209d666d512485c8f9c66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b6d6e8b41e67c9f33d643a2f64c7bdf2d2251eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-filtering-records-odbc"></a>记录集：筛选记录 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -96,7 +99,7 @@ m_strFilter = "StudentID = 100";   // incorrect for some drivers
 > [!NOTE]
 >  如果你选择覆盖通过传递到你自己 SQL 字符串的记录集的默认 SQL 字符串**打开**，你不应设置筛选器，如果你自定义字符串具有**其中**子句。 有关重写默认的 sql 语句的详细信息，请参阅[SQL： 自定义您记录集的 SQL 语句 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集： 对记录 (ODBC) 进行排序](../../data/odbc/recordset-sorting-records-odbc.md)   
  [记录集： 如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   

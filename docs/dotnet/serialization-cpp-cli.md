@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57ec673e945d0db14ce8fee0d477d7aeb2a9e238
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6efd56655cb5b262eab7d7f14c197e11466fb8bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
 序列化 （的过程中存储的对象或成员在永久介质状态） 的托管类 （包括单个字段或属性） 受<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>类。  
@@ -57,5 +60,5 @@ private:
 ### <a name="comments"></a>注释  
  请注意，可以使用其"短名称"引用这两个属性 (**Serializable**和**所以**)。 这做进一步的解释在[应用特性](/dotnet/standard/attributes/applying-attributes)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

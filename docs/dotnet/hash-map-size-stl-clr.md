@@ -1,41 +1,42 @@
 ---
-title: "hash_map::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 成员 [STL/CLR]"
+title: "hash_map:: size (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 5eb91502-1b11-4703-b473-eb609c181b74
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e5e07965ec9ba8e876f4141f28a653cb74433862
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-计算元素的数量。  
+# <a name="hashmapsize-stlclr"></a>hash_map::size (STL/CLR)
+对元素数进行计数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_type size();  
 ```  
   
-## 备注  
- 成员函数返回控制序列的函数。  使用其当前确定元素的数目。控制序列。  如果您关注的是序列是否具有非零大小，请参见 [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)`()`。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回受控序列的长度。 用于确定当前受控序列中的元素的数目。 如果你关注的只是序列是否具有非零大小，请参阅[hash_map:: empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_map_size.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0之后清除**  
-**size\(\) \= 2 在" 2 "之后**   
-## 要求  
- **标头:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_map >  
   
-## 请参阅  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)

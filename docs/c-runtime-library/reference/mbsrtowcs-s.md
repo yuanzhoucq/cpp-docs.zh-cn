@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,20 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b701362fd8ed19575f5de34f998bc8fd4f7e6de1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 将当前区域设置中的多字节字符字符串转换为宽字符字符串表示形式。 这是 [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) 版本，具有 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全增强功能。  
@@ -124,33 +105,33 @@ errno_t mbsrtowcs_s(
   
  如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，则 `mbsrtowcs_s` 会根据目标缓冲区的容量尽量多地转换字符串，同时仍然为 null 终止符留下空间。  
   
- 如果 `mbsrtowcs_s` 成功转换源字符串，则会将经转换的字符串和 null 终止符的宽字符大小置于 `*``pReturnValue` 中，前提是 `pReturnValue` 不是空指针。 即使 `wcstr` 参数为 null 指针并且由你确定所需的缓冲区大小，也会发生这种情况。 请注意，如果 `wcstr` 为 null 指针，则忽略 `count`。  
+ 如果 `mbsrtowcs_s` 成功转换源字符串，则会将经转换的字符串和 null 终止符的宽字符大小置于 `*pReturnValue` 中，前提是 `pReturnValue` 不是空指针。 即使 `wcstr` 参数为 null 指针并且由你确定所需的缓冲区大小，也会发生这种情况。 请注意，如果 `wcstr` 为 null 指针，则忽略 `count`。  
   
  如果 `wcstr` 不是 null 指针，则在转换因到达终止 null 字符而停止时，`mbstr` 指向的指针对象将分配到一个 null 指针。 否则，它将分配到紧跟已转换出的最后一个多字节字符的地址（若有）。 这将允许调用后续函数以在此调用停止的位置重新调用转换。  
   
  如果 `mbstate` 为 null 指针，则将使用库内部 `mbstate_t` 转换状态静态对象。 由于此内部静态对象不是线程安全的，建议传递你自己的 `mbstate` 值。  
   
- 如果 `mbsrtowcs_s` 遇到在当前区域设置中无效的多字节字符，它会将 -1 放到 `*``pReturnValue` 中，将目标缓冲区 `wcstr` 设置为空字符串，将 `errno` 设置为 `EILSEQ`，并返回 `EILSEQ`。  
+ 如果 `mbsrtowcs_s` 遇到在当前区域设置中无效的多字节字符，它会将 -1 放到 `*pReturnValue` 中，将目标缓冲区 `wcstr` 设置为空字符串，将 `errno` 设置为 `EILSEQ`，并返回 `EILSEQ`。  
   
- 如果 `mbstr` 和 `wcstr` 指向的序列重叠，则 `mbsrtowcs_s` 的行为没有定义。 `mbsrtowcs_s` 受到当前区域设置中 LC_TYPE 类别的影响。  
+ 如果 `mbstr` 和 `wcstr` 指向的序列重叠，则 `mbsrtowcs_s` 的行为没有定义。 `mbsrtowcs_s` 会受到当前区域设置中 LC_TYPE 类别 的影响。  
   
 > [!IMPORTANT]
 >  确保 `wcstr` 和 `mbstr` 未重叠，并且 `count` 正确反映了要转换的多字节字符的数量。  
   
  `mbsrtowcs_s` 函数的可重启性不同于 [mbstowcs_s、_mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)。 转换状态存储在 `mbstate` 中，以便后续调用相同的或其他可重启函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用 `mbsrlen`（而非 `mbslen`）的后续调用，则应用程序应使用 `mbsrtowcs_s`，而不是 `mbstowcs_s.`。  
   
- 在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推导出缓冲区长度(不再需要指定大小自变量)，并且它们可以通过使用更新、更安全的对应函数来自动替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，模板重载简化了这些函数的使用；重载可以自动推导出缓冲区长度(不再需要指定大小自变量)，并且它们可以通过使用更新、更安全的对应函数来自动替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="exceptions"></a>异常  
  只要 `mbsrtowcs_s` 函数正在执行且 `mbstate` 参数不是 null 指针，当前线程中的函数都不调用 `setlocale` 时，此函数就是多线程安全的。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`mbsrtowcs_s`|\<wchar.h>|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据转换](../../c-runtime-library/data-conversion.md)   
  [区域设置](../../c-runtime-library/locale.md)   
  [多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

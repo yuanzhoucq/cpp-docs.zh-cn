@@ -1,49 +1,50 @@
 ---
-title: "ptr::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::operator!"
-  - "msclr::com::ptr::operator!"
-  - "ptr.operator!"
-  - "msclr.com.ptr.operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator!"
+title: ptr::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::operator!
+- msclr::com::ptr::operator!
+- ptr.operator!
+- msclr.com.ptr.operator!
+dev_langs: C++
+helpviewer_keywords: ptr::operator!
 ms.assetid: 7f4101dc-2045-42e7-abb1-6a30e17147f2
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d3ef67f9ef6128560d8bb6fef9d0d6fd75d08aca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-确定自己的运算符的 COM 对象是否无效。  
+# <a name="ptroperator"></a>ptr::operator!
+若要确定是否拥有的 COM 对象无效的运算符。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 bool operator!();  
 ```  
   
-## 返回值  
- 如果指定的对象无效，则为 `true`；否则为 `false`。  
+## <a name="return-value"></a>返回值  
+ `true`如果拥有的 COM 对象是无效的;`false`否则为。  
   
-## 备注  
- 如果其不是`nullptr`，那么所持有的COM 对象是有效的。  
+## <a name="remarks"></a>备注  
+ 拥有的 COM 对象是如果它不是有效`nullptr`。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。`CreateInstance` 成员函数使用 `operator!` 对象确定文档是否已拥有和只创建新的实例，如果对象无效。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `CreateInstance`成员函数使用`operator!`以确定是否已拥有，文档对象，以及无效的对象是否仅创建的新实例。  
   
 ```  
 // comptr_op_not.cpp  
@@ -90,12 +91,15 @@ int main() {
 }  
 ```  
   
-  **创建DOM 文档。**   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+```Output  
+DOM Document created.  
+```  
   
- **Namespace** msclr::com  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\com\ptr.h >  
   
-## 请参阅  
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::operator bool](../dotnet/ptr-operator-bool.md)

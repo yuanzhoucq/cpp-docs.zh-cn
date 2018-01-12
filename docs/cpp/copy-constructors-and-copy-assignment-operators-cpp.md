@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b84bb6f0558b58bd83819fbef7e8e9e9c392bd94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>复制构造函数和复制赋值运算符 (C++)
 > [!NOTE]
@@ -60,9 +61,9 @@ b = a;
   
 -   通过通过复制构造函数。   
   
- 如果不声明复制构造函数，编译器将为你生成 member-wise 复制构造函数。  如果不声明复制赋值运算符，编译器将为你生成 member-wise 复制赋值运算符。 声明复制构造函数不会取消编译器生成的复制赋值运算符，反之亦然。 如果实现上述其中一项，建议您还实现另一项以使代码的含义变得明确。  
+ 如果不声明复制构造函数，编译器将为你生成 member-wise 复制构造函数。  如果不声明复制赋值运算符，编译器将为你生成 member-wise 复制赋值运算符。 声明复制构造函数不会取消编译器生成的复制赋值运算符，反之亦然。 如果实现上述其中一项，建议你还实现另一项以使代码的含义变得明确。  
    
- 复制构造函数采用类型的自变量*类名***&**，其中*类名*是为其定义构造函数的类的名称。 例如:   
+ 复制构造函数采用类型的自变量*类名***&**，其中*类名*是为其定义构造函数的类的名称。 例如:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  

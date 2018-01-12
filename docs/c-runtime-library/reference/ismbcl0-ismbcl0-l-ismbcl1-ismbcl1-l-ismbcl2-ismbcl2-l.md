@@ -59,11 +59,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25472150345de54898e21bb63e869a74e22e905b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f30d9a89ce8d596db953aa41a3334a47503bdbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 **代码页 932 特定函数**，使用当前区域设置或指定的 LC_CTYPE 转换状态类别。  
@@ -112,7 +113,7 @@ int _ismbcl2_l(
   
  输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 `_l` 后缀的函数的版本使用为该区域设置相关的行为的当前区域设置；带有 `_l` 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。  
   
-|例程|测试条件（仅代码页 932）|  
+|例程所返回的值|测试条件（仅代码页 932）|  
 |-------------|-------------------------------------------|  
 |`_ismbcl0`|JIS 非日本汉字：0x8140<=`c`<=0x889E。|  
 |`_ismbcl0_l`|JIS 非日本汉字：0x8140<=`c`<=0x889E。|  
@@ -125,9 +126,9 @@ int _ismbcl2_l(
   
  **END 特定于代码页 932**   
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|  
+|例程所返回的值|必需的标头|  
 |-------------|---------------------|  
 |`_ismbcl0`|\<mbstring.h>|  
 |`_ismbcl0_l`|\<mbstring.h>|  
@@ -136,9 +137,9 @@ int _ismbcl2_l(
 |`_ismbcl2`|\<mbstring.h>|  
 |`_ismbcl2_l`|\<mbstring.h>|  
   
- 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [字符分类](../../c-runtime-library/character-classification.md)   
  [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)   
  [is、isw 例程](../../c-runtime-library/is-isw-routines.md)
