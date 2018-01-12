@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 04/25/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2280
-helpviewer_keywords:
-- C2280
-dev_langs:
-- C++
+f1_keywords: C2280
+helpviewer_keywords: C2280
+dev_langs: C++
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 10bfe6701c6f2465bcc37e4fadf71c796664b59e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: af19f0a0c347ab0f898a3a3d72b8cca5cb07dad8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2280"></a>编译器错误 C2280  
   
