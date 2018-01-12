@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e90281b3202303fa95e44684f8250259d0d653
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 48dd657d4cf1b315b29fda881b949dea29204f24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-and-mfc"></a>ODBC 和 MFC
 > [!NOTE]
@@ -47,5 +50,5 @@ ms.lasthandoff: 10/24/2017
   
  基于 ODBC 的 MFC 数据库类旨在提供对任何数据库所在的 ODBC 驱动程序有可用的访问权限。 因为这些类使用 ODBC，你的应用程序可以访问在许多不同的数据格式和不同的本地/远程配置的数据。 无需编写专用代码来处理不同的数据库管理系统 (Dbms)。 只要你的用户具有合适的 ODBC 驱动程序他们想要访问的数据，它们可以使用你的程序来操作存储在那里的表中的数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开放式数据库连接 (ODBC)](open-database-connectivity-odbc.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e55cb83461ed1a0229babf98c384b74de357aeb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d5b91a2556a93f3cd74a24ea57306d70f2cbdb41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 此模板类描述控制元素的长短序列，可先入先出访问的对象。 使用容器适配器`queue`来管理为队列的基础容器。  
@@ -42,7 +45,7 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>参数  
- 值  
+ “值”  
  受控序列中的元素的类型。  
   
  容器  
@@ -99,12 +102,12 @@ template<typename Value,
 ## <a name="remarks"></a>备注  
  对象分配和释放它通过的基础的容器，类型的控制的序列的存储`Container`，存储`Value`元素和根据需要增长。 对象限制的访问权限只将推送的第一个元素并弹出的最后一个元素，实现第一个在先进先出队列 （也称为 FIFO 队列或只需队列）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [列表 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   

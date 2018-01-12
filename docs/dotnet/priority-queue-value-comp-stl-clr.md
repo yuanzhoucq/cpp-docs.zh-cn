@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_comp 成员 [STL/CLR]"
+title: "priority_queue::value_comp (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: af28e541-087d-4837-9ff0-cd36d4cfc57a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 57c663d8fd9786e296533150bbdbfd21faf079ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-复制两个元素的排序委托。  
+# <a name="priorityqueuevaluecomp-stlclr"></a>priority_queue::value_comp (STL/CLR)
+将复制两个元素的排序委托。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## 备注  
- 成员函数返回用于对受控序列进行排序的排序委托。  用于对两个值进行比较。  
+## <a name="remarks"></a>备注  
+ 成员函数将返回使用受控的序列进行排序的排序委托。 用于比较两个值。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_priority_queue_value_comp.cpp   
@@ -71,18 +72,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## 要求  
- **标头:** \<cliext\/queue\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **命名空间:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## 请参阅  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::value\_compare](../dotnet/priority-queue-value-compare-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/队列 >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)   
+ [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

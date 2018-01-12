@@ -1,32 +1,33 @@
 ---
-title: "vector::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container 成员 [STL/CLR]"
+title: "vector::generic_container (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: f291493f-dbdd-4240-935e-ce7432b59872
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f358fe0dffa0be848514bc741b57b88766b9d248
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# vector::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-泛型接口的类型容器中。  
+# <a name="vectorgenericcontainer-stlclr"></a>vector::generic_container (STL/CLR)
+容器的泛型接口的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## 备注  
- 类型说明了此模板容器类的泛型接口。  
+## <a name="remarks"></a>备注  
+ 该类型描述此模板容器类的泛型接口。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_vector_generic_container.cpp   
@@ -81,18 +82,21 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **b c d**  
- **b 和 c d**   
-## 要求  
- **页眉：** \<cliext\/矢量\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/向量 >  
   
-## 请参阅  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
  <xref:Microsoft.VisualC.StlClr.IVector%601>   
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)   
- [vector::generic\_reverse\_iterator](../dotnet/vector-generic-reverse-iterator-stl-clr.md)   
- [vector::generic\_value](../dotnet/vector-generic-value-stl-clr.md)
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)   
+ [vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)   
+ [vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)

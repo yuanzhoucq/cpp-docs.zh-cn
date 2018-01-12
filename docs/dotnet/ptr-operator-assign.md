@@ -1,36 +1,37 @@
 ---
-title: "ptr::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.operator="
-  - "msclr.com.ptr.operator="
-  - "msclr::com::ptr::operator="
-  - "ptr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: "ptr::operator = |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.operator=
+- msclr.com.ptr.operator=
+- msclr::com::ptr::operator=
+- ptr::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 58619910-46c0-4db8-b183-c811b23b2df1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e58d177a8d12970ec5c4b9d1b8b86405f153bdc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-将 COM 对象添加到 `com::ptr`。  
+# <a name="ptroperator"></a>ptr::operator=
+将附加到 COM 对象`com::ptr`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 ptr<_interface_type> % operator=(  
@@ -38,23 +39,23 @@ ptr<_interface_type> % operator=(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `_right`  
- 指向附加的 COM 接口指针。  
+ 要附加的 COM 接口指针。  
   
-## 返回值  
- 在 `com::ptr` 上的跟踪引用。  
+## <a name="return-value"></a>返回值  
+ 跟踪引用上的`com::ptr`。  
   
-## 异常  
- 如果 `com::ptr` 已经拥有对 COM 对象的一个引用，则 `operator=` 将抛出 <xref:System.InvalidOperationException>。  
+## <a name="exceptions"></a>异常  
+ 如果`com::ptr`已拥有对 COM 对象的引用`operator=`引发<xref:System.InvalidOperationException>。  
   
-## 备注  
- 分配一个 COM 对象给 一个 `com::ptr` 引用 COM 对象，但不释放调用者的引用。  
+## <a name="remarks"></a>备注  
+ 分配到 COM 对象`com::ptr`引用的 COM 对象，但不会释放对它的调用方的引用。  
   
- 此运算符与 `Attach` 作用相同。  
+ 此运算符的相同的效果`Attach`。  
   
-## 示例  
- 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。在之前属于自己的对象中 `ReplaceDocument` 成员函数先调用 `Release` 并使用 `operator=` 附加一个新文档对象。  
+## <a name="example"></a>示例  
+ 本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。  `ReplaceDocument`成员函数首先调用`Release`上任何以前拥有对象，然后使用`operator=`要附加新的文档对象。  
   
 ```  
 // comptr_op_assign.cpp  
@@ -128,12 +129,12 @@ int main() {
 }  
 ```  
   
-## 要求  
- **Header file** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>惠?  
+ **标头文件** \<msclr\com\ptr.h >  
   
- **Namespace** msclr::com  
+ **Namespace** msclr:: com  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [ptr 成员](../dotnet/ptr-members.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)   

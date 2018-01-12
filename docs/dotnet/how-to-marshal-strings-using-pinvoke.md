@@ -1,40 +1,43 @@
 ---
-title: "如何：使用 PInvoke 封送处理字符串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "数据封送处理 [C++], 字符串"
-  - "互操作 [C++], 字符串"
-  - "封送处理 [C++], 字符串"
-  - "平台调用 [C++], 字符串"
+title: "如何： 使用 PInvoke 封送字符串 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- data marshaling [C++], strings
+- platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 PInvoke 封送处理字符串
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明如何使用 CLR 字符串类型 System::String（它使用 .NET Framework 平台调用支持）调用可接受 C 样式字符串的本机函数。  Visual C\+\+ 程序员最好转而使用 C\+\+ Interop 功能（如果可能），因为 P\/Invoke 几乎不提供编译时错误报告，不是类型安全的，实现起来也很单调。  如果将非托管 API 打包为 DLL，并且源代码不可用，则 P\/Invoke 是唯一的选择，但还请参见[使用 C\+\+ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送处理字符串
+本主题说明如何本机接受 C 样式字符串可以使用的 CLR 字符串来调用的函数键入 system:: string 使用.NET Framework 平台调用支持。 Visual c + + 程序员人员最好 （如果可能） 改为使用 c + + 互操作功能，因为 P/Invoke 提供很少的编译时错误报告，不是类型安全和可能乏善可陈来实现。 如果非托管的 API 打包为一个 DLL，并且源代码不可用，P/Invoke 是唯一的选项中，但否则看到[使用 c + + 互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
- 托管和非托管字符串在内存中布局不同，因此从托管函数向非托管函数传递字符串时需要使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性来指示编译器插入所需的转换机制，以正确且安全地封送字符串数据。  
+ 托管和非托管字符串中列出了不同内存，因此传递字符串从托管代码流向非托管函数要求<xref:System.Runtime.InteropServices.MarshalAsAttribute>属性来指示编译器将插入封送字符串数据的所需的转换机制正确且安全地。  
   
- 对于只使用内部数据类型的函数，则使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 声明进入本机函数的托管入口点，但对于传递字符串，则不将这些入口点定义为接受 C 样式字符串，而是改用 <xref:System.String> 类型的句柄。  这将提示编译器插入用于执行所需转换的代码。  对于接受字符串的非托管函数中的每个函数参数，应使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性来指示应将 String 对象作为 C 样式字符串封送至本机函数。  
+ 与只使用内部数据类型，函数一样<xref:System.Runtime.InteropServices.DllImportAttribute>用于声明托管的入口点到本机函数中，但对于传递字符串，而不是这些入口点定义为采用 C 样式字符串的句柄<xref:System.String>类型可以改用。 这将提示编译器将插入代码来执行所需的转换。 对于接受一个字符串，非托管函数中的每个函数参数<xref:System.Runtime.InteropServices.MarshalAsAttribute>属性应该用于指示的字符串对象，应封送到的本机功能与 C 样式字符串。  
   
-## 示例  
- 下面的代码由非托管模块和托管模块组成。  非托管模块是一个 DLL，它定义名为 TakesAString 并以 char\* 形式接受 C 样式 ANSI 字符串的函数。  托管模块是一个命令行应用程序，它导入 TakesAString 函数，但将其定义为接受托管的 System.String 而不接受 char\*。  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 特性用于指示调用 TakesAString 时应如何封送托管字符串。  
+## <a name="example"></a>示例  
+ 下面的代码由非托管模块和托管的模块组成。 非托管的模块是一个 DLL，它定义一个名为 TakesAString 接受的 char * 窗体中的 C 样式 ANSI 字符串的函数。 托管的模块是一个命令行应用程序，将导入 TakesAString 函数，但定义为采用托管的 System.String 而不是 char\*。 <xref:System.Runtime.InteropServices.MarshalAsAttribute>特性用于指示如何的托管的字符串应封送调用 TakesAString 时。  
   
- 该托管模块使用 \/clr 进行编译，但 \/clr:pure 也适用。  
+ 托管的模块编译 /clr，但 /clr: pure 工作原理以及。  
   
 ```  
 // TraditionalDll2.cpp  
@@ -82,9 +85,9 @@ int main() {
 }  
 ```  
   
- 此技术将引起在非托管堆上构造字符串的副本，所以本机函数对字符串所做的更改将不会在字符串的托管副本中得到反映。  
+ 此方法将使得要在非托管堆上构造，以便由本机函数对字符串所做的更改不会反映在托管副本的字符串的字符串的副本。  
   
- 请注意，DLL 的任何部分都不通过传统的 \#include 指令向托管代码公开。  实际上，只在运行时访问 DLL，所以在编译时无法检测到使用 `DllImport` 导入的函数所存在的问题。  
+ 请注意该 DLL 没有部分对通过传统的托管代码公开 #include 指令。 事实上，DLL 在运行时访问仅，因此问题与函数导入具有`DllImport`将不会在编译时检测。  
   
-## 请参阅  
- [在 C\+\+ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>请参阅  
+ [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

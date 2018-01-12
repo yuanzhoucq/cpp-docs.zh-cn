@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d901b6674c19cda5a2cc9da2826c9523280b58c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6b4f451fa408f2f6470281206e5de3670d069b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 类
 提供架构行集的实现。  
@@ -63,10 +66,10 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
   
  有关架构行集的详细信息，请参阅 [OLE DB 程序员参考](https://msdn.microsoft.com/en-us/library/ms712921.aspx) 中的 *架构行集*。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IDBSchemaRowsetImpl 类成员](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)

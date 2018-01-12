@@ -1,35 +1,37 @@
 ---
-title: "CDynamicAccessor::CDynamicAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::CDynamicAccessor"
-  - "ATL::CDynamicAccessor::CDynamicAccessor"
-  - "ATL.CDynamicAccessor.CDynamicAccessor"
-  - "CDynamicAccessor.CDynamicAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicAccessor 类, 构造函数"
+title: "Cdynamicaccessor:: Cdynamicaccessor |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::CDynamicAccessor
+- ATL::CDynamicAccessor::CDynamicAccessor
+- ATL.CDynamicAccessor.CDynamicAccessor
+- CDynamicAccessor.CDynamicAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicAccessor class, constructor
 ms.assetid: bf40fe81-2c85-473e-9075-51ad9b060b39
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3f063652b95cc5e778d7e1ffcbc809b9425f5425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::CDynamicAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-实例化和初始化 `CDynamicAccessor` 对象。  
+# <a name="cdynamicaccessorcdynamicaccessor"></a>CDynamicAccessor::CDynamicAccessor
+实例化和初始化`CDynamicAccessor`对象。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -39,20 +41,20 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `eBlobHandling`  
- 指定二进制大对象 \(BLOB\) \(BLOB\) 数据进行处理。  默认值为 **DBBLOBHANDLING\_DEFAULT**。  为 **DBBLOBHANDLINGENUM** 值的说明参见 [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。  
+ 指定如何处理二进制大型对象 (BLOB) 数据。 默认值是**DBBLOBHANDLING_DEFAULT**。 请参阅[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)有关的说明**DBBLOBHANDLINGENUM**值。  
   
  `nBlobSize`  
- 最大大小 BLOB 在字节；内处理 BLOB 数据值的列。  默认值为 8,000。  参见 [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)。有关详细信息。  
+ 最大 BLOB 大小（以字节为单位）；该值之上的列数据被视为 BLOB。 默认值为 8000。 请参阅[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)有关详细信息。  
   
-## 备注  
- 如果使用构造函数初始化 `CDynamicAccessor` 对象，可以指定如何将它绑定 blob。  Blob 还可包含二进制数据，如图形大相同或编译的代码。  默认行为是将列超过 8,000 字节作为 Blob 尝试将其绑定到 `ISequentialStream` 对象。  但是，可以指定其他值是 BLOB 大小。  
+## <a name="remarks"></a>备注  
+ 如果你使用此构造函数初始化`CDynamicAccessor`对象，你可以指定如何，它将绑定 Blob。 Blob 可以包含如图形，声音，或已编译代码的二进制数据。 默认行为是视为 Blob 列超过 8000 个字节，并尝试将其绑定到`ISequentialStream`对象。 但是，你可以指定不同的值的 BLOB 大小。  
   
- 也可以指定限定为 `CDynamicAccessor` 处理 BLOB 数据的列数据：它可以处理 BLOB 数据的默认方式；它可以跳过 \(不 BLOB 数据；绑定\) 也可以将提供程序分配内存的 BLOB 数据。  
+ 你还可以指定如何`CDynamicAccessor`处理称为 BLOB 数据的列数据： 它可以处理的默认方式中的 BLOB 数据; 它可以跳过 （不会绑定） BLOB 数据; 也可以将 BLOB 数据绑定中提供程序分配的内存。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43616dbc6bf0cd0eca6493d4f474ce20d02b8e2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b4fbc196f9e4ca14ee8d8e744da380e08ec4d8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorresize-stlclr"></a>vector::resize (STL/CLR)
 更改元素的数目。  
@@ -79,12 +82,12 @@ size() = 0
  x x x x x  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/向量 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector:: clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)   
  [vector:: erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)   

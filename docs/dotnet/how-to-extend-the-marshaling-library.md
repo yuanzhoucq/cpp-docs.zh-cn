@@ -1,50 +1,52 @@
 ---
-title: "如何：扩展封送处理库 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "封送处理库, 扩展"
+title: "如何： 扩展封送处理库 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ee919e1faa37959d25e8e42581c8cde80d640337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：扩展封送处理库
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明如何扩展封送处理库，从而在数据类型之间提供更多转换。  用户可以为库当前不支持的任何数据转换扩展封送处理库。  
+# <a name="how-to-extend-the-marshaling-library"></a>如何：扩展封送处理库
+本主题说明如何扩展封送处理库，从而提供更多数据类型之间转换。 用户可以扩展当前不支持库的任何数据转换的封送处理库。  
   
- 可以通过两种方式之一扩展封送处理库 — 既可以使用也可以不使用 [marshal\_context 类](../dotnet/marshal-context-class.md)。  请查看 [C\+\+ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)主题，确定新转换是否需要上下文。  
+ 你可以扩展中两种方式的使用或不之一的封送处理库[marshal_context 类](../dotnet/marshal-context-class.md)。 查看[概述的封送处理在 c + +](../dotnet/overview-of-marshaling-in-cpp.md)主题，以确定新转换是否需要上下文。  
   
- 在这两种情况下，首先需要为新封送处理转换创建一个文件。  这样做是为了保留标准封送处理库文件的完整性。  如果需要将一个项目导入到另一台计算机或转到另一程序员，则必须将新的封送处理文件与项目的其余部分一起复制。  通过这种方式，可以保证接收项目的用户接收新转换，并且不必修改任何库文件。  
+ 在这两种情况下，您首先创建新的封送处理转换的文件。 这样做是为了保持标准封送处理库文件的完整性。 如果你想要移植到另一台计算机或另一个程序员的项目，你必须将复制与项目的其余部分一起新的封送处理文件。 这种方式，用户将获得项目会保证接收的新转换，并将不需要进行修改的任何库文件。  
   
-### 使用不需要上下文的转换扩展封送处理库  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>若要扩展封送处理库不需要上下文的转换  
   
-1.  创建一个文件来存储新的封送处理函数，例如，MyMarshal.h。  
+1.  创建一个文件来存储新的封送处理功能，例如，MyMarshal.h。  
   
-2.  包括以下一个或多个封送库文件：  
+2.  包括一个或多个封送库文件：  
   
-    -   用于基类型的 marshal.h。  
+    -   marshal.h 个基类型。  
   
-    -   用于 Windows 数据类型的 marshal\_windows.h。  
+    -   windows 数据类型的 marshal_windows.h。  
   
-    -   用于 STL 数据类型的 marshal\_cppstd.h。  
+    -   对于 c + + 标准库数据类型的 marshal_cppstd.h。  
   
-    -   用于 ATL 数据类型的 marshal\_atl.h。  
+    -   marshal_atl.h ATL 数据类型。  
   
-3.  使用这些步骤末尾的代码编写转换函数。  在此代码中，TO 是要转换到的类型，FROM 是要从中转换的类型，`from` 是要转换的参数。  
+3.  在这些步骤的末尾使用代码编写的转换函数。 在此代码中，是要将转换为的类型，FROM 是要从，转换的类型和`from`是要转换的参数。  
   
-4.  使用代码替换关于转换逻辑的注释，将 `from` 参数转换为 TO 类型的一个对象，并返回被转换的对象。  
+4.  将关于转换逻辑的注释替换为要转换的代码`from`到收件人的对象的参数类型和返回被转换的对象。  
   
 ```  
 namespace msclr {  
@@ -57,29 +59,29 @@ namespace msclr {
 }  
 ```  
   
-### 使用需要上下文的转换扩展封送处理库  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>若要扩展封送处理库需要上下文的转换  
   
-1.  创建一个文件来存储新的封送处理函数，例如，MyMarshal.h  
+1.  创建一个文件来存储新的封送处理功能，例如，MyMarshal.h  
   
-2.  包括以下一个或多个封送库文件：  
+2.  包括一个或多个封送库文件：  
   
-    -   用于基类型的 marshal.h。  
+    -   marshal.h 个基类型。  
   
-    -   用于 Windows 数据类型的 marshal\_windows.h。  
+    -   windows 数据类型的 marshal_windows.h。  
   
-    -   用于 STL 数据类型的 marshal\_cppstd.h。  
+    -   对于 c + + 标准库数据类型的 marshal_cppstd.h。  
   
-    -   用于 ATL 数据类型的 marshal\_atl.h。  
+    -   marshal_atl.h ATL 数据类型。  
   
-3.  使用这些步骤末尾的代码编写转换函数。  在此代码中，TO 是要转换到的类型，FROM 是要从中转换的类型，`toObject` 是存储结果的指针，`fromObject` 是要转换的参数。  
+3.  在这些步骤的末尾使用代码编写的转换函数。 在此代码中，是要将转换为的类型，FROM 是要从，转换的类型`toObject`是要在其中存储结果，指针和`fromObject`是要转换的参数。  
   
-4.  使用代码替换关于初始化的注释，将 `toPtr` 初始化为适当的空值。  例如，如果是指针，则将其设置为 `NULL`。  
+4.  将有关正在使用代码以初始化初始化注释`toPtr`为适当的空值。 例如，如果它是一个指针，将其设置为`NULL`。  
   
-5.  使用将 `from` 参数转换为 *TO* 类型的一个对象代码替换关于转换逻辑的注释。  此被转换的对象将存储在 `toPtr` 中。  
+5.  将关于转换逻辑的注释替换为要转换的代码`from`参数转换的对象*收件人*类型。 此转换后的对象将存储在`toPtr`。  
   
-6.  使用代码替换关于设置 `toObject` 的注释，将 `toObject` 设置为被转换的对象。  
+6.  将有关设置注释`toObject`替换为用于设置代码`toObject`对你已转换的对象。  
   
-7.  使用代码替换关于清理本机资源的注释，以释放由 `toPtr` 分配的任何内存。  如果 `toPtr` 使用 `new` 分配了内存，请使用 `delete` 释放内存。  
+7.  替换关于清理代码以释放分配任何内存使用的本机资源的注释`toPtr`。 如果`toPtr`通过使用分配的内存`new`，使用`delete`可释放的内存。  
   
 ```  
 namespace msclr {  
@@ -110,8 +112,8 @@ namespace msclr {
 }   
 ```  
   
-## 示例  
- 以下示例将使用不需要上下文的转换来扩展封送处理库。  在此示例中，代码将员工信息从本机数据类型转换为托管数据类型。  
+## <a name="example"></a>示例  
+ 下面的示例扩展的封送处理库不需要上下文的转换。 在此示例中，代码将转换的员工信息从本机数据类型为托管的数据类型。  
   
 ```  
 // MyMarshalNoContext.cpp  
@@ -163,13 +165,16 @@ int main() {
 }  
 ```  
   
- 在上一示例中，`marshal_as` 函数返回被转换数据的句柄。  这样做是为了防止创建数据的另一个副本。  直接返回变量将产生与之相关的不必要的性能开销。  
+ 在前面的示例中，`marshal_as`函数返回转换的数据的句柄。 这样做是为了防止创建数据的额外副本。 直接返回该变量将具有不必要的性能成本与之关联。  
   
-  **Managed name: Jeff Smith**  
-**Managed address: 123 Main Street**  
-**Managed zip code: 98111**   
-## 示例  
- 下面的示例将员工信息从托管数据类型转换为本机数据类型。  此转换需要封送处理上下文。  
+```Output  
+Managed name: Jeff Smith  
+Managed address: 123 Main Street  
+Managed zip code: 98111  
+```  
+  
+## <a name="example"></a>示例  
+ 下面的示例将员工信息从托管的数据类型转换为本机数据类型。 此转换需要封送处理的上下文。  
   
 ```  
 // MyMarshalContext.cpp  
@@ -263,8 +268,11 @@ int main() {
 }  
 ```  
   
-  **Native name: Jeff Smith**  
-**Native address: 123 Main Street**  
-**Native zip code: 98111**   
-## 请参阅  
- [C\+\+ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)
+```Output  
+Native name: Jeff Smith  
+Native address: 123 Main Street  
+Native zip code: 98111  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [C++ 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)

@@ -1,58 +1,60 @@
 ---
-title: "CDynamicAccessor::GetColumnType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetColumnType"
-  - "CDynamicAccessor::GetColumnType"
-  - "GetColumnType"
-  - "CDynamicAccessor.GetColumnType"
-  - "ATL::CDynamicAccessor::GetColumnType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnType 方法"
+title: "Cdynamicaccessor:: Getcolumntype |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetColumnType
+- CDynamicAccessor::GetColumnType
+- GetColumnType
+- CDynamicAccessor.GetColumnType
+- ATL::CDynamicAccessor::GetColumnType
+dev_langs: C++
+helpviewer_keywords: GetColumnType method
 ms.assetid: ac96a2e9-6049-4eb5-9718-9f5f5446b74e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dedacd68de5a254d138326a4030511685ab0da2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetColumnType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetcolumntype"></a>CDynamicAccessor::GetColumnType
 检索指定列的数据类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
-      bool GetColumnType(   
-   DBORDINAL nColumn,   
-   DBTYPE* pType    
+      bool GetColumnType(   
+   DBORDINAL nColumn,   
+   DBTYPE* pType    
 ) const throw( );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `nColumn`  
- \[in\] 列号。  列数以 1 开始。  若有的话，值 0 是指书签列。  
+ [in] 列号。 列编号从 1 开始。 值为 0 引用的书签列中，如果有的话。  
   
  `pType`  
- \[out\] 一个指向列中的值类型的指针。  
+ [out]指向指定列的数据类型的指针。  
   
-## 返回值  
- 如果成功，则返回**true**；如果失败，则返回**false**。  
+## <a name="return-value"></a>返回值  
+ 返回**true**成功或**false**失败。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)   
  [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)

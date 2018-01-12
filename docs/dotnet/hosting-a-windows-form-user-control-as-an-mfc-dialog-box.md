@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50b1b3c6fb425885c7d48975a3815951454f3bf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>以 MFC 对话框的形式承载 Windows 窗体用户控件
 MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，以便可以承载 Windows 窗体用户控件 (<xref:System.Windows.Forms.UserControl>) 在模式或无模式的 MFC 对话框中。 `CWinFormsDialog`派生自 MFC 类[CDialog](../mfc/reference/cdialog-class.md)，因此可以作为模式或无模式启动对话框。  
@@ -44,7 +47,7 @@ MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-clas
   
      在**解决方案资源管理器**，右键单击**MFC03**项目节点，然后选择**属性**。 **属性页**对话框随即出现。  
   
-     在**属性页**对话框中，在**配置属性**树控件中，选择**常规**，然后在**项目默认值**部分中，设置**公共语言运行时支持**到**公共语言运行时支持 (/ clr)**。 单击“确定”。  
+     在**属性页**对话框中，在**配置属性**树控件中，选择**常规**，然后在**项目默认值**部分中，设置**公共语言运行时支持**到**公共语言运行时支持 (/ clr)**。 单击 **“确定”**。  
   
 3.  添加对.NET 控件的引用。  
   
@@ -142,6 +145,6 @@ MFC 提供一种模板类[CWinFormsDialog](../mfc/reference/cwinformsdialog-clas
   
 16. 生成并运行该项目。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  <xref:System.Windows.Forms.UserControl?displayProperty=fullName>   
  [在 MFC 中使用 Windows 窗体用户控件](../dotnet/using-a-windows-form-user-control-in-mfc.md)

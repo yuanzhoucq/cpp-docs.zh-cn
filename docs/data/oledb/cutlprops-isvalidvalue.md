@@ -1,34 +1,36 @@
 ---
-title: "CUtlProps::IsValidValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps::IsValidValue"
-  - "CUtlProps.IsValidValue"
-  - "IsValidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsValidValue 方法"
+title: "Cutlprops:: Isvalidvalue |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CUtlProps::IsValidValue
+- CUtlProps.IsValidValue
+- IsValidValue
+dev_langs: C++
+helpviewer_keywords: IsValidValue method
 ms.assetid: 1164556e-8d98-429c-a396-fc9a699e0e97
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 06193b8c560c5ac6006698813222e698a98bccc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::IsValidValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-用于在设置属性前验证值。  
+# <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
+用于设置属性之前验证值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,21 +40,21 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `iCurSet`  
- 索引属性设置数组中；如果只有一个属性设置则为零。  
+ 属性集数组中; 中的索引如果只有一个属性集，则为零。  
   
  `pDBProp`  
- 在 [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) 结构中的属性 ID 和新值。  
+ 属性 ID 和中的新值[需要的 DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)结构。  
   
-## 返回值  
- 标准版`HRESULT`。  默认返回值为 `S_OK`。  
+## <a name="return-value"></a>返回值  
+ 一个标准 `HRESULT`。 默认返回值为`S_OK`。  
   
-## 备注  
- 如果含有任何想要运行在要设置属性的值上的验证运行时，应重写此函数。  例如，可以验证**DBPROP\_AUTH\_PASSWORD** 的密码表确定有效值。  
+## <a name="remarks"></a>备注  
+ 如果你有任何你想要运行上一个值，你将用于设置属性的验证例程，应重写此函数。 例如，无法验证**DBPROP_AUTH_PASSWORD**针对密码表来确定有效的值。  
   
-## 要求  
- **头文件：** atldb.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atldb.h  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [CUtlProps 类](../../data/oledb/cutlprops-class.md)

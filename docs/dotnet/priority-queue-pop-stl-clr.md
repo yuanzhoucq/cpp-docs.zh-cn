@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop 成员 [STL/CLR]"
+title: "priority_queue:: pop (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: d363b3f1-247b-466a-a300-c5918b0dfd4e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6894a4acff991b069f7c5b587fd8a90c5a3a40ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除 proirity 最高的元素。  
+# <a name="priorityqueuepop-stlclr"></a>priority_queue::pop (STL/CLR)
+移除的最高 proirity 元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void pop();  
 ```  
   
-## 备注  
- 移除成员函数控制序列的优先级最高的元素，必须非空。  使用由元素结合在队列返回。  
+## <a name="remarks"></a>备注  
+ 成员函数删除受控序列，必须为非空的优先级最高的元素。 你可以使用它将在后面的一个元素缩短队列。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_priority_queue_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **c b**  
- **为 b**   
-## 要求  
- **页眉：** \<\/cliext 队列\>  
+```Output  
+c a b  
+b a  
+```  
   
- **命名空间：** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/队列 >  
   
-## 请参阅  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::push](../dotnet/priority-queue-push-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::push (STL/CLR)](../dotnet/priority-queue-push-stl-clr.md)

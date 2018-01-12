@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3d3b24ffce579d3a74706ca9a238059ed8eb08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ece75eeb539dff60b29396e3076cd2465571453a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
 返回所需的大多数使用者的列元数据。  
@@ -60,8 +63,8 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  请参阅[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程序员参考*有关数据类型信息**DBORDINAL**， **DBCOLUMNINFO**，和**OLECHAR**。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** atldbcli.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicAccessor 类](../../data/oledb/cdynamicaccessor-class.md)

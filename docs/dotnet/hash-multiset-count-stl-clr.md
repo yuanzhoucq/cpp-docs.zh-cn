@@ -1,45 +1,46 @@
 ---
-title: "hash_multiset::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count 成员 [STL/CLR]"
+title: "hash_multiset:: count (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: 2b31e6b6-3f2c-4042-a06d-90d3074aad43
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ec9c982f61e5ec5cf5e67f1096ae6d6183975f32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetcount-stlclr"></a>hash_multiset::count (STL/CLR)
 查找与指定键匹配的元素数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### 参数  
- 键  
+#### <a name="parameters"></a>参数  
+ 密钥  
  要搜索的键值。  
   
-## 备注  
- 成员函数返回具有与 `key`相同订单的控制在序列中的元素的数目。  用于确定受控序列中当前与指定键匹配的元素数。  
+## <a name="remarks"></a>备注  
+ 成员函数返回拥有等效顺序与控制序列中的元素数目`key`。 你可以使用它来确定当前受控序列中与指定的键匹配的元素的数目。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_multiset_count.cpp   
@@ -67,15 +68,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**计数 \(L'A\)\/0**  
-**计数 \(L'b\)\/1**  
-**计数 \(L'C\)\/0**   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)

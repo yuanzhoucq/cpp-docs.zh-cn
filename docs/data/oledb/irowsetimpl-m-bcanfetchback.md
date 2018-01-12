@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09440f8453fe0ee13297c600b148927bacafc5da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7ba8cacdb172158f2afdb5574dd58e2db7e922bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimplmbcanfetchback"></a>IRowsetImpl::m_bCanFetchBack
 指示提供程序是否支持向后提取。  
@@ -40,9 +43,9 @@ unsigned m_bCanFetchBack:1;
 ## <a name="remarks"></a>备注  
  链接至**DBPROP_CANFETCHBACKWARDS**中的属性**DBPROPSET_ROWSET**组。 提供程序必须支持**DBPROP_CANFETCHBACKWARDS**为**m_bCanFetchBackwards**为 true。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [IRowsetImpl 类](../../data/oledb/irowsetimpl-class.md)   
  [IRowsetImpl::m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)

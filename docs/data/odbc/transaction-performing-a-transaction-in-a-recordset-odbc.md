@@ -1,41 +1,43 @@
 ---
-title: "事务：在记录集中执行事务 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事务, 更新记录集"
+title: "事务： 在记录集 (ODBC) 执行事务 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd412549c86c3ca8ddc004016183b64248bdf292
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 事务：在记录集中执行事务 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主题说明如何在记录集中执行事务。  
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>事务：在记录集中执行事务 (ODBC)
+本主题介绍了如何在记录集中执行事务。  
   
 > [!NOTE]
->  只支持一个事务级别，不能嵌套事务。  
+>  仅支持一个级别的事务是;你无法嵌套事务。  
   
-#### 在记录集中执行事务  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>在记录集中执行事务  
   
-1.  调用 `CDatabase` 对象的 **BeginTrans** 成员函数。  
+1.  调用`CDatabase`对象的**BeginTrans**成员函数。  
   
-2.  如果尚未实现批量取行，可多次调用同一数据库一个或多个记录集对象的 **AddNew\/Update**、**Edit\/Update** 和 **Delete** 成员函数。  有关更多信息，请参见 [记录集：添加、更新和删除记录 \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。  如果已实现批量取行，则必须写自己的函数来更新数据源。  
+2.  如果你不具有实现批量行提取，调用**AddNew/更新**，**编辑/更新**，和**删除**的相同的一个或多个记录集对象的成员函数根据需要多次的数据库。 有关详细信息，请参阅[记录集： 添加、 更新和删除记录 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果已实现批量行提取，则必须编写您自己的函数，更新数据源。  
   
-3.  最后，调用 `CDatabase` 对象的 **CommitTrans** 成员函数。  如果其中的一个更新中出现错误，或者决定取消更改，请调用 **Rollback** 成员函数。  
+3.  最后，调用`CDatabase`对象的**CommitTrans**成员函数。 如果错误发生的一个更新中，或你决定取消所做的更改，调用其**回滚**成员函数。  
   
- 下面的示例使用两个记录集从学校注册数据库中删除一个学生的登记，将该学生从所登记的所有课程中删除。  由于两个记录集中的 **Delete** 调用都必须成功，因此需要一个事务。  该示例假定存在 `m_dbStudentReg`、一个已连接到数据源的 `CDatabase` 类型的成员变量以及记录集类 `CEnrollmentSet` 和 `CStudentSet`。  `strStudentID` 变量包含从用户获得的一个值。  
+ 下面的示例使用两个记录集从学校注册数据库，将该学生从在其中注册学生的所有类删除学生的注册。 因为**删除**调用这两个记录集内的必须成功，则需要使用事务。 该示例假定存在`m_dbStudentReg`，类型的成员变量`CDatabase`已连接到数据源和记录集类`CEnrollmentSet`和`CStudentSet`。 `strStudentID`变量包含从用户获取的值。  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -88,10 +90,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  未经调用 **CommitTrans** 或 **Rollback** 就再次调用 **BeginTrans** 是错误的。  
+>  调用**BeginTrans**试情况下调用**CommitTrans**或**回滚**时出错。  
   
-## 请参阅  
- [事务 \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [事务：事务如何影响更新 \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>请参阅  
+ [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [事务： 事务如何影响更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [CDatabase 类](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset 类](../../mfc/reference/crecordset-class.md)

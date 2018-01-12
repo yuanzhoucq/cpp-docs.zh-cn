@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b3500c90455c7f180f16eae3c56433f57d0492
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d3d9ddba2039c1b4445bdb8d4ee77e9a68d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 资源池和服务
 若要很好地与 OLE DB 池，或使用任何 OLE DB 服务，你的提供程序必须支持的所有对象的聚合。 这是任何 OLE DB 1.5 或更高版本的提供程序的要求。 这非常重要利用服务。 不能共用提供程序不支持聚合并提供没有其他服务。  
@@ -37,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
  最后，除非它实现池发生级别自动事务登记通常无法运行。 提供程序本身支持自动事务登记应支持通过公开禁用此登记**DBPROP_INIT_OLEDBSERVICES**属性和禁用登记，如果**DBPROPVAL_OS_TXNENLISTMENT**取消选择。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

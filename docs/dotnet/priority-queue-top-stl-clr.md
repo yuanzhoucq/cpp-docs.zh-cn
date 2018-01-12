@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db32b4e3a9b744940c2467176e23d986ef9df23c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c1614d1babb06aa3b36b6932fd23c1f2700a3ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueuetop-stlclr"></a>priority_queue::top (STL/CLR)
 访问优先级最高的元素。  
@@ -72,11 +75,11 @@ top() = c
  x a b  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/队列 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)

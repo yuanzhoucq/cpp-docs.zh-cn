@@ -1,66 +1,68 @@
 ---
-title: "使用 C++ 互操作（隐式 PInvoke） | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET [C++], 从 C++ 本机迁移"
-  - "能直接复制到本机结构中的类型 [C++]"
-  - "C++ COM 互操作"
-  - "C++ 互操作"
-  - "C++, 互操作"
-  - "COM 接口 [C++]"
-  - "数据封送处理 [C++], C++ 互操作功能"
-  - "示例 [C++], 互操作性"
-  - "隐式平台调用"
-  - "互操作 [C++], 功能"
-  - "互操作性 [C++]"
-  - "互操作性 [C++], 隐式 PInvoke"
-  - "封送处理 [C++], C++ 互操作功能"
-  - "平台调用 [C++], 示例"
-  - "平台调用 [C++], implicit"
-  - "迁移 [C++], C++ 本机到 .NET"
-  - "类型 [C++], 能直接复制到本机结构中"
+title: "使用 c + + 互操作 (隐式 PInvoke) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- blittable types [C++]
+- platform invoke [C++], implicit
+- interop [C++], features
+- data marshaling [C++], C++ Interop features
+- porting [C++], C++ native to .NET
+- COM interfaces [C++]
+- implicit platform invoke
+- examples [C++], interoperability
+- types [C++], blittable
+- marshaling [C++], C++ Interop features
+- platform invoke [C++], examples
+- interoperability [C++]
+- C++ Interop
+- interoperability [C++], Implicit PInvoke
+- C++, interop
+- C++ COM Interop
+- .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 C++ 互操作（隐式 PInvoke）
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-与其他 .NET 语言不同，Visual C\+\+ 支持互操作性，允许托管代码和非托管代码存在于同一个应用程序中，甚至存在于同一个文件中（使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) 杂注）。  Visual C\+\+ 开发人员可以通过此功能将 .NET 功能集成到现有 Visual C\+\+ 应用程序中，而不会干扰该应用程序的其余部分。  
+# <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ 互操作（隐式 PInvoke）
+Visual c + + 不同于其他.NET 语言，具有在同一应用程序和甚至同一文件中允许存在托管和非托管代码的互操作性支持 (与[managed、 unmanaged](../preprocessor/managed-unmanaged.md)杂注)。 这允许 Visual c + + 开发人员将.NET 功能集成到现有 Visual c + + 应用程序，而不影响应用程序的其余部分。  
   
- 还可以使用 [dllexport、dllimport](../cpp/dllexport-dllimport.md) 从托管模块中调用非托管函数。  
+ 你还可以调用非托管的函数从托管编译单位使用[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。  
   
- 如果不需要指定封送函数参数的方式或显式调用 DllImportAttribute 时指定的任何其他详细信息，则隐式 PInvoke 非常有用。  
+ 当您不需要指定如何将封送函数参数，或任何可在显式调用 DllImportAttribute 时指定的其他详细信息时，隐式 PInvoke 非常有用。  
   
- Visual C\+\+ 为托管函数和非托管函数提供了两种交互操作方式：  
+ Visual c + + 提供托管和非托管函数进行互操作的两种的方法：  
   
--   [在 C\+\+ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
+-   [在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)  
   
- 显式 PInvoke 受 .NET Framework 支持并且可用于大多数 .NET 语言。  但是顾名思义，C\+\+ Interop 特定于 Visual C\+\+。  
+ 显式 PInvoke 支持由.NET Framework，以及在大多数.NET 语言中可用。 但正如其名，c + + 互操作是特定于 Visual c + +。  
   
-## C\+\+ Interop  
- 推荐使用 C\+\+ Interop 而不是显式 PInvoke，因为 C\+\+ Interop 提供更好的类型安全性，通常实现起来比较有趣，更为常用（如果修改非托管 API），并且可能会实现显式 PInvoke 不可能实现的性能增强。  但是，如果非托管源代码不可用或使用 **\/clr:safe** 进行编译，则不可能使用 C\+\+ Interop（有关更多信息，请参见 [纯代码和可验证代码](../dotnet/pure-and-verifiable-code-cpp-cli.md)）。  
+## <a name="c-interop"></a>C++ 互操作  
+ C + + 互操作是通过显式 PInvoke 建议，因为它提供更好地类型安全单调乏味通常较低，来实现，是多 forgiving 如果非托管的 API 将修改，并使性能增强功能可能不适用于显式PInvoke。 但是，c + + 互操作不可能未提供的非托管的源代码时，或使用编译时**/clr: safe**。 **/clr:pure** 和 **/clr:safe** 编译器选项在 Visual Studio 2015 中已弃用。 有关信息，请参阅[纯代码和可验证代码 (C + + /cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   
-## C\+\+ COM 互操作  
- 在与 COM 组件进行交互操作方面，Visual C\+\+ 支持的互操作性功能与其他 .NET 语言相比具有特别的优势。  C\+\+ Interop 不受限于 .NET Framework [Tlbimp.exe（类型库导入程序）](../Topic/Tlbimp.exe%20\(Type%20Library%20Importer\).md) 限制（如对数据类型的有限支持和强制公开每个 COM 接口的每个成员），而是允许随意访问 COM 组件，而且不需要单独的互操作程序集。  有关详细信息，请参阅[Using COM from .NET](http://msdn.microsoft.com/zh-cn/03976661-6278-4227-a6c1-3b3315502c15)。  
+## <a name="c-com-interop"></a>C++ COM 互操作  
+ 当涉及到与 COM 组件进行互操作时，Visual c + + 支持的互操作性功能提供其他.NET 语言有特定的优势。 而不会限定的.NET framework 的限制[Tlbimp.exe （类型库导入程序）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，如对数据类型以及强制公开的每个 COM 接口的每个成员的有限支持，c + + 互操作允许 COM要访问在组件将和不需要单独的互操作程序集。 有关详细信息，请参阅[通过.NET 使用 COM](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15)。  
   
-## 可直接复制到本机结构中的类型  
- 对于使用简单内部类型（请参见 [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](../Topic/Blittable%20and%20Non-Blittable%20Types.md)）的非托管 API 而言，无需特殊编码，因为这些数据类型在内存中具有相同的表示形式，但是更复杂的数据类型需要显式数据封送处理。  有关示例，请参见[如何：使用 PInvoke 从托管代码调用本机 DLL](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。  
+## <a name="blittable-types"></a>通用类型  
+ 有关使用简单、 内部函数的类型的非托管 Api (请参阅[本机结构中和非 Blittable 类型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，无需进行特殊编码是必需的因为这些数据类型具有相同的表示在内存中，但需要更复杂的数据类型显式数据封送处理。 有关示例，请参阅[如何： 从托管代码使用 PInvoke 调用本机 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // vcmcppv2_impl_dllimp.cpp  
@@ -85,29 +87,32 @@ int main() {
 }  
 ```  
   
-  **开始提示音**  
-**已完成**   
-## 本节内容  
+```Output  
+Begin beep  
+Done  
+```  
   
--   [如何：使用 C\+\+ 互操作封送 ANSI 字符串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+## <a name="in-this-section"></a>本节内容  
   
--   [如何：使用 C\+\+ 互操作封送 Unicode 字符串](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送 ANSI 字符串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ 互操作封送 COM 字符串](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送 Unicode 字符串](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ 互操作封送结构](../dotnet/how-to-marshal-structures-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送 COM 字符串](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ 互操作封送数组](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送结构](../dotnet/how-to-marshal-structures-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ 互操作封送回调和委托](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送数组](../dotnet/how-to-marshal-arrays-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ 互操作封送嵌入式指针](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
+-   [如何：使用 C++ 互操作封送回调和委托](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+  
+-   [如何：使用 C++ 互操作封送嵌入式指针](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)  
   
 -   [如何：访问 System::String 中的字符](../dotnet/how-to-access-characters-in-a-system-string.md)  
   
--   [如何：将 char \* 字符串转换为 System::Byte 数组](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
+-   [如何：将 char * 字符串转换为 System::Byte 数组](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)  
   
--   [如何：将 System::String 转换为 wchar\_t\* 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)  
+-   [如何： 将 system:: string 转换为 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)  
   
 -   [如何：将 System::String 转换为标准字符串](../dotnet/how-to-convert-system-string-to-standard-string.md)  
   
@@ -127,19 +132,19 @@ int main() {
   
 -   [如何：在非托管内存中保存对象引用](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)  
   
--   [如何：检测 \/clr 编译](../dotnet/how-to-detect-clr-compilation.md)  
+-   [如何： 检测 /clr 编译](../dotnet/how-to-detect-clr-compilation.md)  
   
--   [如何：在 System::Guid 与 \_GUID 之间进行转换](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
+-   [如何：在 System::Guid 与 _GUID 之间进行转换](../dotnet/how-to-convert-between-system-guid-and-guid.md)  
   
 -   [如何：指定 out 参数](../dotnet/how-to-specify-an-out-parameter.md)  
   
--   [如何：在 \/clr 编译中使用本机类型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)  
+-   [如何： 在 /clr 编译中使用本机类型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)  
   
 -   [如何：使用本机类型声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)  
   
--   [如何：包装本机类以供 C\# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
+-   [如何：包装本机类以供 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)  
   
- 有关在互操作方案中使用委托的信息，请参见 [委托](../windows/delegate-cpp-component-extensions.md)。  
+ 有关在互操作方案中使用委托的信息，请参阅[委托 （c + + 组件扩展）](../windows/delegate-cpp-component-extensions.md)。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [从托管代码调用本机函数](../dotnet/calling-native-functions-from-managed-code.md)

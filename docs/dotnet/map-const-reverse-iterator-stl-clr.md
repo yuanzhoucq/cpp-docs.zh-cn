@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e572d44bd2eb8051bc9ef09f0b97170f07c060c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ea55945736a73e9d7391e1d97383b1ad0487c6af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapconstreverseiterator-stlclr"></a>map::const_reverse_iterator (STL/CLR)
 受控序列的常量反向迭代器的类型...  
@@ -62,11 +65,11 @@ int main()
 [c 3] [b 2] [a 1]  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/映射 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)

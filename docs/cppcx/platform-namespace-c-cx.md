@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 850156c2db7e57a357b1fa68337753ebd37db30d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d434d687eca53deb4cad41615fcfd676836dda5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-namespace-ccx"></a>Platform 命名空间 (C++/CX)
 包含与 Windows 运行时兼容的内置类型。  
@@ -110,7 +111,7 @@ using namespace Platform;
 |[Platform::SizeT 值类](../cppcx/platform-sizet-value-class.md)|用于表示对象大小的无符号数据类型。|  
 |[Platform::UIntPtr 值类](../cppcx/platform-uintptr-value-class.md)|其大小适合平台（32 位或 64 位）的无符号指针。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Platform:: collections Namespace](../cppcx/platform-collections-namespace.md)   
  [Platform::Runtime::CompilerServices Namespace](../cppcx/platform-runtime-compilerservices-namespace.md)   
  [Platform::Runtime::InteropServices Namespace](../cppcx/platform-runtime-interopservices-namespace.md)   

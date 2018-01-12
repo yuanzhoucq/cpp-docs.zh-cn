@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7996e368abff6d82c346ff58eb19d2d53ff208d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 37633be692ab2670d2bff359927711db7cd787c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minelement-stlclr"></a>min_element (STL/CLR)
 在指定范围中查找最小元素的第一个匹配项，其中排序条件可通过二元谓词指定。  
@@ -36,10 +39,10 @@ template<class _FwdIt, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`min_element`。 有关详细信息，请参阅[min_element](../standard-library/algorithm-functions.md#min_element)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

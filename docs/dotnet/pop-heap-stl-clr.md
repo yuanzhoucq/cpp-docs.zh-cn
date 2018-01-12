@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf4f3e94035af0ce12ddcfabdee21459918a039c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a125eecf32808057f12c4e081e3f73cdde12f736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="popheap-stlclr"></a>pop_heap (STL/CLR)
 移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。  
@@ -36,10 +39,10 @@ template<class _RanIt, class _Pr> inline
 ## <a name="remarks"></a>备注  
  此函数的行为与 c + + 标准库函数相同`pop_heap`。 有关详细信息，请参阅[pop_heap](../standard-library/algorithm-functions.md#pop_heap)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<cliext/算法 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

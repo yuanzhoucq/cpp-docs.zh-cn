@@ -1,45 +1,46 @@
 ---
-title: "hash_set::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find 成员 [STL/CLR]"
+title: "hash_set:: find (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 758b7438-ef15-4af0-8001-a1126d5e9a9e
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7d666824a5269eef901716dcb47d7cd2f9cf134a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetfind-stlclr"></a>hash_set::find (STL/CLR)
 查找与指定键匹配的元素。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### 参数  
- 键  
+#### <a name="parameters"></a>参数  
+ 密钥  
  要搜索的键值。  
   
-## 备注  
- 如果在控制序列的一个元素至少具有等效排序，使用 `key`成员函数返回指定这些元素之一的迭代器；否则返回`()`。[hash\_set::end](../dotnet/hash-set-end-stl-clr.md) 使用它定位当前在控制序列中的一个元素，与指定键匹配。  
+## <a name="remarks"></a>备注  
+ 如果受控序列中的至少一个元素具有等效顺序与`key`，成员函数将返回指定这些元素之一的迭代器; 否则它将返回[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`. 用于定位指定的键相匹配的受控序列中当前的元素。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_hash_set_find.cpp   
@@ -70,20 +71,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**查找 A \= false**  
-**查找b \= b**  
-**查找 C \= False**   
-## 说明  
- 请注意 `find` 不能保证它找到的若干元素。  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## 要求  
- **标头:** \<cliext\/hash\_set\>  
+## <a name="description"></a>描述  
+ 请注意，`find`不保证其找到的多个元素。  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/hash_set >  
   
-## 请参阅  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)   
+ [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

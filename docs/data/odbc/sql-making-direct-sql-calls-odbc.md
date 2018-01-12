@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cac2844c64bf2157a9984a29b8885434eb07b811
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4c5debd5017c2c9c9cad240f831fdf6e02be98ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL：进行直接 SQL 调用 (ODBC)
 本主题说明：  
@@ -43,5 +46,5 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_making_direct_sql_function_calls"></a>进行直接 SQL 函数调用  
  你可以直接执行 SQL 调用使用[CDatabase 类](../../mfc/reference/cdatabase-class.md)对象。 设置你的 SQL 语句字符串 (通常在`CString`) 并将其传递到[CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)成员函数你`CDatabase`对象。 如果你使用 ODBC 函数调用发送一条 SQL 语句通常返回的记录，记录将被忽略。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL](../../data/odbc/sql.md)

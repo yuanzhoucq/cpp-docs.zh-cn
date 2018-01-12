@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2390a474e289ea41fd676759d12b92e8a22e462a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 类
 提供标准 OLE DB 行集实现，而无需许多实现接口的多个继承。  
@@ -93,5 +96,5 @@ class CRowsetImpl :
   
  若要实现的任何`CRowsetImpl`-派生**执行**方法，你必须填充内部的数据缓冲区 ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md))。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h

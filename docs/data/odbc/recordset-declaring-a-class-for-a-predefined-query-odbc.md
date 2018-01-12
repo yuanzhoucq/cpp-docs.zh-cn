@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d5fdb93880ec29343d38acba7d7d42caf155214
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ecdc146610fe20dcc007d6b1223d7108e1ee595
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：为预定义查询声明一个类 (ODBC)
 本主题适用于 MFC ODBC 类。  
@@ -62,7 +65,7 @@ ms.lasthandoff: 10/24/2017
   
 4.  手动添加为新的字段数据成员的初始化过程中，在记录集类构造函数。  
   
-     你还必须递增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)数据成员。 向导会将写入初始化，但它仅涵盖它为您添加的字段数据成员。 例如：  
+     你还必须递增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)数据成员。 向导会将写入初始化，但它仅涵盖它为您添加的字段数据成员。 例如:  
   
     ```  
     m_nFields += 6;  
@@ -159,7 +162,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 > [!TIP]
 >  你可能想要处理来自存储过程的返回值 （输出参数）。 有关详细信息及示例，请参阅[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [记录集： 再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
  [记录集： 声明表 (ODBC) 类](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   

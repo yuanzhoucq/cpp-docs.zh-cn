@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2139
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2139
+f1_keywords: C2139
+dev_langs: C++
+helpviewer_keywords: C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81c1b41a452068d572169d670f2a288f92f93142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 4cbd836061fc87be1ab1be8bfab395132cfc03e8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2139"></a>编译器错误 C2139
 type： 未定义的类不允许作为编译器内部类型特征特征的自变量  

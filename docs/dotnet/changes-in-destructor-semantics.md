@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9b97bd94793887f6d443d18914c2155597bec5d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changes-in-destructor-semantics"></a>析构函数语义的更改
 类析构函数语义具有显著从更改托管扩展的 c + + 为 Visual c + +。  
@@ -163,7 +166,7 @@ void f() {
  实际上，在新语法中，析构函数再次与成对出现，构造函数为自动获取/释放机制取决于本地对象的生存期。  
   
 ## <a name="declaring-an-explicit-finalize"></a>声明显式终止  
- 在新语法中，如我们所见，析构函数合成到`Dispose`方法。 这意味着，析构函数不显式调用时，垃圾回收器在终止过程，将不像以前那样寻找一个关联`Finalize`对象的方法。 若要支持析构和终止，我们引入了一种特殊的语法提供终结器。 例如:   
+ 在新语法中，如我们所见，析构函数合成到`Dispose`方法。 这意味着，析构函数不显式调用时，垃圾回收器在终止过程，将不像以前那样寻找一个关联`Finalize`对象的方法。 若要支持析构和终止，我们引入了一种特殊的语法提供终结器。 例如:  
   
 ```  
 public ref class R {  
@@ -195,6 +198,6 @@ public:
   
  在将你的代码从托管扩展迁移到新的语法，您可能缺少执行此转换。 如果应用程序依赖在某种程度上相关联的终止方法的执行，应用程序的行为将以无提示方式不同于你预期。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [托管类型 (C + + /cli CL)](../dotnet/managed-types-cpp-cl.md)   
  [析构函数和终结器中如何： 定义和使用类和结构 (C + + /cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)

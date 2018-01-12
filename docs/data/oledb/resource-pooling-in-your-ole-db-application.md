@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a11fe27fad42e7a27e55a8b4f494980aa9f708a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9d094b3545978aa042ba5a6d308a09369b238e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 应用程序中的资源池
 若要充分利用你的应用程序中的池，你必须确保 OLE DB 服务都通过获取数据源通过调用**IDataInitialize**或**IDBPromptInitialize**。 如果直接使用`CoCreateInstance`调用提供程序基于提供程序的 CLSID，调用任何 OLE DB 服务。  
@@ -35,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  最后，因为 ADO 自动将使用 OLE DB 服务，你可以使用 ADO 建立的连接和池和登记操作自动发生。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 资源池和服务](../../data/oledb/ole-db-resource-pooling-and-services.md)

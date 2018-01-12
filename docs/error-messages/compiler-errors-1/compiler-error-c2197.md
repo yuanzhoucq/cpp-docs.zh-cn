@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2197
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2197
+f1_keywords: C2197
+dev_langs: C++
+helpviewer_keywords: C2197
 ms.assetid: 6dd5a6ec-bc80-41b9-a4ac-46f80eaca42d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8c33f8db9d5996f4cce84051b6a26b77f8ea94b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 3b2f3482a8f66098d42389234924fee9238b7ed0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2197"></a>编译器错误 C2197
 “function”: 用于调用的参数太多  

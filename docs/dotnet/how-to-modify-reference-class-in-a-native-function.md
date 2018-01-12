@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 955de592b5e065164f16a4f78c9faaaffcdd3efb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改本机函数中的引用类
 你可以将具有 CLR 数组的引用类传递给本机函数中，并修改类，使用 PInvoke 服务。  
@@ -95,5 +98,5 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)

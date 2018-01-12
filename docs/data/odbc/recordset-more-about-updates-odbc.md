@@ -1,111 +1,114 @@
 ---
-title: "记录集：有关更新的更多信息 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "多用户环境, 记录集的更新"
-  - "ODBC 记录集, 更新"
-  - "记录, 更新"
-  - "记录集, 更新"
-  - "滚动, 记录集的更新"
-  - "事务, 更新记录集"
-  - "更新记录集"
+title: "记录集： 有关详细信息更新 (ODBC) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, updating
+- transactions, updating recordsets
+- ODBC recordsets, updating
+- multiuser environments, updates to recordsets
+- scrolling, updates to recordsets
+- updating recordsets
+- recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ad9042c4001fc1a0e0c8c8d19e5ac53b6312875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 记录集：有关更新的更多信息 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="recordset-more-about-updates-odbc"></a>记录集：有关更新的更多信息 (ODBC)
 本主题适用于 MFC ODBC 类。  
   
  本主题说明：  
   
--   [其他操作（如事务）对更新的影响](#_core_how_transactions_affect_updates)。  
+-   [其他操作，例如事务如何影响更新](#_core_how_transactions_affect_updates)。  
   
--   [您的更新与其他用户的更新](#_core_your_updates_and_the_updates_of_other_users)。  
+-   [你更新和其他用户的那些](#_core_your_updates_and_the_updates_of_other_users)。  
   
--   [有关更新与删除成员函数的更多内容](#_core_more_about_update_and_delete)。  
+-   [有关更新和删除成员函数的详细信息](#_core_more_about_update_and_delete)。  
   
 > [!NOTE]
->  本主题适用于从 `CRecordset` 派生的对象，这些对象中尚未实现批量取行。  如果已实现批量取行，则某些信息将不适用。  例如，不可调用 `AddNew`、**Edit**、**Delete** 及 **Update** 成员函数；但可执行事务。  有关批量取行的更多信息，请参见[记录集：批量获取记录 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  本主题适用于派生自`CRecordset`中哪些批量行提取尚未实现。 如果你已实现批量行提取的某些信息不适用。 例如，不能调用`AddNew`，**编辑**，**删除**，和**更新**成员函数; 但是，你可以执行事务。 有关批量行提取的详细信息，请参阅[记录集： 批量获取记录 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="_core_how_other_operations_affect_updates"></a> 其他操作如何影响更新  
- 更新受更新时有效的事务的影响，如完成事务之前关闭记录集和完成事务之前滚动都会影响更新。  
+##  <a name="_core_how_other_operations_affect_updates"></a>其他操作如何影响更新  
+ 更新受事务实际上在的更新时，如完成事务之前关闭记录集和完成事务之前滚动。  
   
-###  <a name="_core_how_transactions_affect_updates"></a> 事务如何影响更新  
- 除了解 `AddNew`、**Edit** 及 **Delete** 的工作方式外，了解 [CDatabase](../../mfc/reference/cdatabase-class.md) 的 **BeginTrans**、**CommitTrans** 和 **Rollback** 成员函数如何处理 [CRecordset](../../mfc/reference/crecordset-class.md) 的更新函数也很重要。  
+###  <a name="_core_how_transactions_affect_updates"></a>事务如何影响更新  
+ 超出了解如何`AddNew`，**编辑**，和**删除**工作，务必要了解如何**BeginTrans**， **CommitTrans**，和**回滚**的成员函数[CDatabase](../../mfc/reference/cdatabase-class.md)适用于的更新函数[CRecordset](../../mfc/reference/crecordset-class.md)。  
   
- 默认情况下，调用 **Update** 后立即对 `AddNew` 与 **Edit** 进行调用将影响数据源。  **Delete** 调用立即生效。  但可建立一个事务并对这些调用执行批处理。  提交更新后更新才成为永久性的。  如果改变主意，可回滚事务而不是提交事务。  
+ 默认情况下，调用到`AddNew`和**编辑**影响的数据源立即当调用**更新**。 **删除**调用会立即生效。 但你可以建立事务和执行此类调用一个批处理。 直到您提交这些更新不是永久的。 如果你改变主意，可以回滚而不是中提交事务。  
   
- 有关事务的更多信息，请参见[事务 \(ODBC\)](../../data/odbc/transaction-odbc.md)。  
+ 有关事务的详细信息，请参阅[事务 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> 关闭记录集如何影响更新  
- 在事务正在进行时（尚未调用 [CDatabase::CommitTrans](../Topic/CDatabase::CommitTrans.md) 或 [CDatabase::Rollback](../Topic/CDatabase::Rollback.md)），如果关闭记录集或其关联的 `CDatabase` 对象，则事务将自动回滚（除非数据库后端是 Microsoft Jet 数据库引擎）。  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a>关闭记录集如何影响更新  
+ 如果关闭记录集，或其关联`CDatabase`对象，具有正在进行的事务 (不调用了[CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans)或[CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback))，回滚事务自动 （除非数据库后端是 Microsoft Jet 数据库引擎） 备份。  
   
 > [!CAUTION]
->  如果正在使用 Microsoft Jet 数据库引擎，则在显式事务提交或回滚之前，关闭显式事务中的记录集不会导致释放任何已修改的行和已放置的锁定。  建议始终在显式 Jet 事务的内部或外部打开与关闭记录集。  
+>  如果你正在使用 Microsoft Jet 数据库引擎，关闭显式事务中的记录集不会导致释放任何已修改的行或直到显式事务是提交还是回滚放置的锁。 建议该你始终同时打开和关闭记录集的内部或外部的显式事务，Jet。  
   
-###  <a name="_core_how_scrolling_affects_updates"></a> 滚动如何影响更新  
- 在记录集中[记录集：滚动 \(ODBC\)](../../data/odbc/recordset-scrolling-odbc.md) 时，编辑缓冲区由每个新的当前记录填充（不先存储前一条记录）。  滚动跳过以前已删除的记录。  如果在 `AddNew` 或 **Edit** 调用之后未首先调用 **Update**、**CommitTrans** 或 **Rollback** 便进行滚动，则新的记录进入编辑缓冲区时将丢失任何更改（不发出警告）。  编辑缓冲区由滚至它的记录填充，已存储的记录被释放，数据源中未发生更改。  这种情况适用于 `AddNew` 与 **Edit**。  
+###  <a name="_core_how_scrolling_affects_updates"></a>滚动如何影响更新  
+ 当你[记录集： 滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)在记录集中，编辑缓冲区充满 （不先存储前上一记录） 的每个新的当前记录。 滚动跳过以前删除的记录。 如果您向后滚动`AddNew`或**编辑**调用而不调用**更新**， **CommitTrans**，或**回滚**第一个，任何更改是一条新记录导入编辑缓冲区 （具有到你的任何警告） 丢失。 编辑缓冲区填充与滚动到的记录、 已存储的记录将被释放，和数据源中未发生更改。 这同时适用于`AddNew`和**编辑**。  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> 您的更新与其他用户的更新  
- 当您使用记录集更新数据时，您的更新将影响其他用户。  同样，其他用户在您的记录集的生存期内所做的更新也将影响您。  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a>你更新和其他用户更新  
+ 当你使用记录集来更新数据时，更新会影响其他用户。 同样，其他用户的记录集的生存期内的更新会影响你。  
   
- 在多用户环境中，其他用户可打开包含某些与您在您的记录集中选择的记录相同的记录集。  检索之前对记录所做的更改将在您的记录集中得到反映。  动态集在您每次滚至一个记录时检索该记录，因此动态集可在您每次滚至记录时反映更改。  快照在您第一次滚至一个记录时检索该记录，因此快照只能反映在您初次滚至该记录之前发生的更改。  
+ 在多用户环境中，其他用户可以打开记录集包含某些选择了记录集中的记录相同。 对你检索之前记录的更改将反映在你的记录集。 动态集检索记录滚动到每个时间，因为动态记录集反映到一条记录滚动，则每次更改。 快照检索记录以便快照反映仅发生之前你最初滚动到的记录这些更改滚动到它，第一次。  
   
- 除非您再次查询，否则在您打开记录集之后由其他用户添加的记录不会显示在您的记录集中。  如果您的记录集是动态集，则当您滚至受影响的记录时，其他用户对现有记录的编辑在您的动态集中可见。  如果您的记录集是快照，则在您再次查询快照时所做的编辑才可见。  如果想在您的快照中查看其他用户添加或删除的记录，或在您的动态集中查看其他用户添加的记录，则调用 [CRecordset::Requery](../Topic/CRecordset::Requery.md) 重新生成该记录集。（请注意，其他用户的删除在您的动态集中可见。）您也可以调用 **Requery** 查看您添加的记录，但不能查看您的删除。  
+ 打开记录集之后，由其他用户添加的记录不会记录集中除非重新执行查询。 如果记录集是动态集，编辑由其他用户的现有记录是否显示在你的动态集中时滚动到受影响的记录。 如果你记录集是快照，编辑之前再次查询快照不会出现。 如果你想要看到记录添加或删除快照或在你的动态集中，其他用户添加的记录中的其他用户调用[CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)重新生成的记录集。 （请注意，其他用户删除显示在您的动态集中。）您也可以调用**Requery**以查看记录添加，但不是以查看您的删除。  
   
 > [!TIP]
->  若要同时强制缓存整个快照，请在打开快照后立即调用 `MoveLast`。  然后调用 **MoveFirst** 开始处理记录。  `MoveLast` 等效于滚遍所有记录，但它同时检索所有记录。  但请注意，这可能会降低性能且可能不适用于某些驱动程序。  
+>  若要强制的快照一次整个缓存，请调用`MoveLast`立即打开快照后。 然后调用**MoveFirst**若要开始使用记录。 `MoveLast`等效于滚动通过所有记录，但它在一次检索它们。 但请注意，这可能会降低性能并且可能不需要为某些驱动程序。  
   
- 您的更新对其他用户的影响与其他用户的更新对您的影响相似。  
+ 对其他用户的影响的更新都类似于对您的影响。  
   
-##  <a name="_core_more_about_update_and_delete"></a> 有关更新与删除的更多内容  
- 本节为帮助您使用 **Update** 与 **Delete** 提供其他信息。  
+##  <a name="_core_more_about_update_and_delete"></a>有关更新和删除的详细信息  
+ 本部分提供其他信息以帮助你使用的**更新**和**删除**。  
   
-### 更新成功与失败  
- 如果 **Update** 成功，则 `AddNew` 或 **Edit** 模式结束。  若要再次开始 `AddNew` 或 **Edit** 模式，请调用 `AddNew` 或 **Edit**。  
+### <a name="update-success-and-failure"></a>更新成功和失败  
+ 如果**更新**成功，`AddNew`或**编辑**模式结束。 若要开始`AddNew`或**编辑**再次模式，请调用`AddNew`或**编辑**。  
   
- 如果 **Update** 失败（返回 **FALSE** 或引发异常），则保持 `AddNew` 或 **Edit** 模式，具体取决于您最后调用的函数。  这时可执行下列操作之一：  
+ 如果**更新**失败 (返回**FALSE**或引发异常)，将仍处于`AddNew`或**编辑**模式，具体取决于哪个函数最后调用。 然后，您可以执行以下任一操作：  
   
--   修改字段数据成员并再次调用 **Update**。  
+-   修改字段数据成员，并重试**更新**试。  
   
--   调用 `AddNew` 将字段数据成员重置为 Null，设置字段数据成员的值，然后再次调用 **Update**。  
+-   调用`AddNew`重置为 Null 的字段数据成员，设置字段数据成员的值，然后调用**更新**试。  
   
--   调用 **Edit** 重新加载第一次调用 `AddNew` 或 **Edit** 之前就已在记录集中的值，然后设置字段数据成员的值，之后再次调用 **Update**。  在 **Update** 调用成功之后（在 `AddNew` 调用后进行的调用除外），字段数据成员将保留其新值。  
+-   调用**编辑**重新加载的值对的第一个调用之前的记录集的`AddNew`或**编辑**，设置字段数据成员的值，然后调用**更新**试。 成功后**更新**调用 (除非后`AddNew`调用)，字段数据成员保留其新值。  
   
--   调用 **Move**（包括带 **AFX\_MOVE\_REFRESH** 参数的 **Move** 或 0），它刷新所有更改并结束任何有效的 `AddNew` 或 **Edit** 模式。  
+-   调用**移动**(包括**移动**其中参数**AFX_MOVE_REFRESH**，则为 0)，它会刷新任何更改并结束任何`AddNew`或**编辑**有效的模式。  
   
-### 更新与删除  
- 本节适用于 **Update** 与 **Delete**。  
+### <a name="update-and-delete"></a>更新和删除  
+ 本部分适用于**更新**和**删除**。  
   
- 在 **Update** 或 **Delete** 操作中，一条且只有一条记录应被更新。  该记录是当前记录，它与记录集的字段中的数据值相对应。  如果因为某些原因没有记录受影响或多个记录受影响，则将引发包含下列某一 **RETCODE** 值的异常：  
+ 上**更新**或**删除**操作，应更新且只有一个记录。 该记录是当前记录，它对应于记录集的字段中的数据值。 如果由于某种原因不会影响多个记录或记录不会受到影响，将引发异常，包含以下项之一**某一 RETCODE**值：  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED**  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**  
   
- 这些异常引发时，您保持在调用 **Update** 或 **Delete** 时所处的 `AddNew` 或 **Edit** 状态。  以下是您将看到这些异常的最为常见的情景。  您最有可能看到：  
+ 当引发这些异常时，将仍处于`AddNew`或**编辑**你调用时所处状态**更新**或**删除**。 以下是最常见的方案将在其中看到这些异常。 你最有可能看到：  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED** 当您正在使用开放式锁定模式，且另一个用户修改了记录，所采用的方式妨碍了框架标识要更新或删除的正确记录时。  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED**时你正在使用乐观锁定模式和其他用户进行了修改以一种阻止 framework 标识正确的记录，若要更新或删除的记录。  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED** 当您正在更新的表没有主键或唯一索引，且您在记录集中没有足够的列唯一标识表行时。  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**当你要更新的表具有没有主键或唯一索引和你没有足够多的列中为唯一标识表行的记录集。  
   
-## 请参阅  
- [记录集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [记录集：记录集如何选择记录 \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [记录字段交换 \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
+## <a name="see-also"></a>请参阅  
+ [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [记录集： 如何记录集选择记录 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [记录字段交换 (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [SQL](../../data/odbc/sql.md)   
  [异常：数据库异常](../../mfc/exceptions-database-exceptions.md)

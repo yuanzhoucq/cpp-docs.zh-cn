@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 237bf8bee11234939d93c5af0aa0114f9379cd3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b22c435952602afe96a7f310b931bda8a5bbb13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 此模板类描述一个自变量函子的当调用，则返回存储其使用提供的第一个自变量和其存储的第二个自变量调用的两个参数函子。 使用它指定根据其存储的函子的函数对象。  
@@ -124,10 +127,10 @@ int main()
 0 -1  
 ```  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<功能 cliext/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)

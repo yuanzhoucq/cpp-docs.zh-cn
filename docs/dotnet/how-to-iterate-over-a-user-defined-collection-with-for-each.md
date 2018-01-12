@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 297d11731a16ecbe69793f2a29944470206acc18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2d0c4c714cb9cf605de5cf42cf922a74d09146c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>如何：使用 for each 循环访问用户定义集合
 若要是一个类成为托管集合，它需要一个可向枚举器类或接口返回句柄的非私有 GetEnumerator 函数。  枚举器类必须包含非静态 MoveNext 函数和 Current 属性的声明。  
@@ -102,5 +105,5 @@ int main() {
 Return Code: 0  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [for each, in](../dotnet/for-each-in.md)

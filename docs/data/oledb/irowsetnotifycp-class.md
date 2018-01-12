@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d110b3bc304664681532ae7511a9e886a05058b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bae872c90a6df76e3efc1fce1aab6e77bc8fd313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 类
 实现连接点接口的提供程序站点[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。  
@@ -70,10 +73,10 @@ class IRowsetNotifyCP :
   
  有关实现通知的详细信息，请参阅"支持通知"[创建可更新提供程序](../../data/oledb/creating-an-updatable-provider.md)。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atldb.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)   
  [通知 (COM)](http://msdn.microsoft.com/library/windows/desktop/ms678433)   

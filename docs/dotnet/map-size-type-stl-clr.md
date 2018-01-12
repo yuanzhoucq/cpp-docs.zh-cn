@@ -1,41 +1,42 @@
 ---
-title: "map::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 成员 [STL/CLR]"
+title: "map:: size_type (STL/CLR) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 6204685d-caf8-4d9e-9359-0768c74e2e6d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d64e7706778bc913444423a8a141347831cc5fb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# map::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-两个元素间的带符号距离的类型。  
+# <a name="mapsizetype-stlclr"></a>map::size_type (STL/CLR)
+两个元素之间的带符号距离的类型。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 备注  
- 类型描述了一个非负元素的计数。  
+## <a name="remarks"></a>备注  
+ 该类型描述非负元素计数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // cliext_map_size_type.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**end\(\)\-begin\(\) \= 3**   
-## 要求  
- **标头:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
   
- **命名空间:** cliext  
+## <a name="requirements"></a>惠?  
+ **标头：** \<cliext/映射 >  
   
-## 请参阅  
- [map](../dotnet/map-stl-clr.md)   
- [map::empty](../dotnet/map-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>请参阅  
+ [映射 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)

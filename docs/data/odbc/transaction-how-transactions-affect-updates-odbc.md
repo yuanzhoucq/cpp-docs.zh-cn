@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59eb8aecbf2dd2138c8a0469d71364b55fd82774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>事务：事务如何影响更新 (ODBC)
 更新到[数据源](../../data/odbc/data-source-odbc.md)通过编辑缓冲区 （在事务外部使用的相同方法） 使用的事务处理期间管理。 记录集的字段数据成员共同作为包含当前记录，记录集备份临时期间编辑缓冲区`AddNew`或**编辑**。 期间**删除**操作，当前记录不会备份在事务中。 有关编辑缓冲区以及如何更新存储的当前记录的详细信息，请参阅[记录集： 如何更新记录 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 10/24/2017
 |**编辑**(而无需**更新**)，然后**回滚**|临时存储的当前记录的原样的版本。 对编辑缓冲区的内容进行编辑。|调用**编辑**以还原到编辑缓冲区原样的版本的记录。|因为**更新**未调用，不没有对数据源进行任何更改。|  
 |**删除**然后**回滚**|删除当前记录的内容。|调用**Requery**从数据源中还原当前记录的内容。|删除数据源的数据将被反转。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
  [事务 (ODBC)](../../data/odbc/transaction-odbc.md)   
  [事务： 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
