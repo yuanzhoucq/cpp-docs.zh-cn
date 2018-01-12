@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36b20340da6cae933acb0650b3e073e3835a0204
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f73f89745f797658029eac2331d1764af4c065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>“从现有代码文件创建新项目”向导 ->“指定项目位置和源文件”
 从现有代码文件创建新项目向导的此页用于指定：  
@@ -61,4 +62,4 @@ ms.lasthandoff: 10/24/2017
  指定该向导将添加到新项目基于给定的文件扩展名的文件的类型。 文件扩展名前面加上星号通配符，和由分号分隔的文件扩展名的列表中。  
   
  **在解决方案资源管理器中显示所有文件**  
- 指定在新项目在解决方案资源管理器窗口中是可见且显示中的所有文件。 默认情况下启用此选项。
+ 指定在新项目在解决方案资源管理器窗口中是可见且显示中的所有文件。 默认情况下会启用此选项。

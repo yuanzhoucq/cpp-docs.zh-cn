@@ -1,41 +1,42 @@
 ---
-title: "__incfsbyte, __incfsword, __incfsdword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incfsword"
-  - "__incfsbyte_cpp"
-  - "__incfsbyte"
-  - "__incfsdword"
-  - "__incfsword_cpp"
-  - "__incfsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incfsword 内部函数"
-  - "__incfsdword 内部函数"
-  - "__incfsbyte 内部函数"
+title: "__incfsbyte、 __incfsword、 __incfsdword |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incfsword
+- __incfsbyte_cpp
+- __incfsbyte
+- __incfsdword
+- __incfsword_cpp
+- __incfsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incfsword intrinsic
+- __incfsdword intrinsic
+- __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 541d92916c6a093d6eb8a60c30f5355f74a3b3c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __incfsbyte, __incfsword, __incfsdword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Microsoft 专用**  
   
- 添加一个。该值在指定了偏移量的内存位置相对于 `FS` 段开头。  
+ 指定相对于开始的偏移量的内存位置添加一个为值`FS`段。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void __incfsbyte(   
@@ -49,25 +50,25 @@ void __incfsdword(
 );  
 ```  
   
-#### 参数  
- \[in\] `Offset`  
- 从最初 `FS`的偏移量。  
+#### <a name="parameters"></a>参数  
+ [in] `Offset`  
+ 从开始处的偏移量`FS`。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__incfsbyte`|x86|  
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
-## 备注  
- 这些内部只有在内核模式，并且，实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 这些内部函数只有在内核模式下可用，例程都仅可用作内部函数。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
- [\_\_addfsbyte, \_\_addfsword, \_\_addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [\_\_readfsbyte、\_\_readfsdword、\_\_readfsqword、\_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+## <a name="see-also"></a>请参阅  
+ [__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
+ [__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [__writefsbyte， \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

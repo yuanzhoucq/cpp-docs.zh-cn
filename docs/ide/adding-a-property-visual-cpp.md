@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8cc313fd677d56e00c883bf1c32d8154edcce8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33fc8c3b5528c0ced4e0d402aec48791b7fbcb9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-a-property-visual-c"></a>添加属性 (Visual C++)
 你可以使用[添加属性向导](../ide/names-add-property-wizard.md)添加到你的项目中的接口的方法。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
 -   对于 MFC 调度接口，如果你选择**成员变量**作为实现类型时，一个方法和变量添加到实现该接口的类。 如果你选择**Get/Set 方法**作为实现类型中，两种方法添加到实现该接口的类。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 COM 接口](../ide/creating-a-com-interface-visual-cpp.md)   
  [编辑 COM 接口](../ide/editing-a-com-interface.md)   
  [组件对象模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)   

@@ -1,63 +1,63 @@
 ---
-title: "__writemsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writemsr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "编写模型特定注册指令"
-  - "wrmsr 指令"
-  - "__writemsr 内部函数"
+title: "__writemsr |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writemsr
+dev_langs: C++
+helpviewer_keywords:
+- Write Model Specific Register instruction
+- wrmsr instruction
+- __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9a4b60fcc303afcb0c645561009279dd9fced8db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __writemsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="writemsr"></a>__writemsr
 **Microsoft 专用**  
   
- 生成写入样式特定的寄存器 \(`wrmsr`\) 命令。  
+ 生成模型特定注册写入 (`wrmsr`) 指令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
+void __writemsr(   
+   unsigned long Register,   
+   unsigned __int64 Value   
 );  
 ```  
   
-#### 参数  
- \[in\] `Register`  
- 样式特定的注册。  
+#### <a name="parameters"></a>参数  
+ [in] `Register`  
+ 模型特定寄存器。  
   
- \[in\] `Value`  
+ [in] `Value`  
  要写入的值。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__writemsr`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 此功能只能在内核模式，因此，此实例只能用作内部。  
+## <a name="remarks"></a>备注  
+ 此函数只能在内核模式下，此例程仅可用作内部函数。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c674bc7711de8a7991ad6906d62a768f9360e6b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 097ae6d1486292d7dcc62dd4191e16f57e6f0a3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 资源是向用户提供信息的界面元素。 位图、 图标、 工具栏和光标是所有资源。 一些资源可以操作以执行操作时，例如从菜单中选择或在对话框中输入的数据。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
 |Toolbar.bmp|*Projname*\res|资源文件|表示应用程序或工具栏或调色板中的控件的位图文件。 该位图包含项目的资源文件中。 在中构造的初始工具栏和状态栏**CMainFrame**类。|  
 |ribbon.mfcribbon ms|*Projname*\res|资源文件|包含用于定义功能区中的按钮、 控件和特性的 XML 代码的资源文件。 有关详细信息，请参阅 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [为 Visual C++ 项目创建的文件类型](../ide/file-types-created-for-visual-cpp-projects.md)

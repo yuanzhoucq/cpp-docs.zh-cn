@@ -1,87 +1,88 @@
 ---
-title: "__writefsbyte, __writefsdword, __writefsqword, __writefsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writefsword"
-  - "__writefsbyte"
-  - "__writefsqword"
-  - "__writefsdword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "writefsbyte 内部函数"
-  - "__writefsword 内部函数"
-  - "writefsqword 内部函数"
-  - "writefsdword 内部函数"
-  - "__writefsdword 内部函数"
-  - "__writefsqword 内部函数"
-  - "__writefsbyte 内部函数"
-  - "writefsword 内部函数"
+title: "__writefsbyte、 __writefsdword、 __writefsqword、 __writefsword |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __writefsword
+- __writefsbyte
+- __writefsqword
+- __writefsdword
+dev_langs: C++
+helpviewer_keywords:
+- writefsbyte intrinsic
+- __writefsword intrinsic
+- writefsqword intrinsic
+- writefsdword intrinsic
+- __writefsdword intrinsic
+- __writefsqword intrinsic
+- __writefsbyte intrinsic
+- writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cf3324d45193ce19ae1e46d9f02268f43afc51b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __writefsbyte, __writefsdword, __writefsqword, __writefsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Microsoft 专用**  
   
- 可补偿的指定位置写入内存相对 FS 段开头。  
+ 将内存写入到指定的偏移量相对于 FS 段的开始的位置。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __writefsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
+void __writefsbyte(   
+   unsigned long Offset,   
+   unsigned char Data   
 );  
-void __writefsword(   
-   unsigned long Offset,   
-   unsigned short Data   
+void __writefsword(   
+   unsigned long Offset,   
+   unsigned short Data   
 );  
-void __writefsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
+void __writefsdword(   
+   unsigned long Offset,   
+   unsigned long Data   
 );  
-void __writefsqword(   
-   unsigned long Offset,   
-   unsigned __int64 Data   
+void __writefsqword(   
+   unsigned long Offset,   
+   unsigned __int64 Data   
 );  
 ```  
   
-#### 参数  
- \[in\] `Offset`  
- 从最初 FS 的偏移量写入。  
+#### <a name="parameters"></a>参数  
+ [in] `Offset`  
+ 从 FS 要写入的开头的偏移量。  
   
- \[in\] `Data`  
+ [in] `Data`  
  要写入的值。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__writefsbyte`|x86|  
 |`__writefsword`|x86|  
 |`__writefsdword`|x86|  
 |`__writefsqword`|x86|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 这些实例仅可用作内部。  
+## <a name="remarks"></a>备注  
+ 这些例程只能用作内部函数不可用。  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
- [\_\_readfsbyte、\_\_readfsdword、\_\_readfsqword、\_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+## <a name="see-also"></a>请参阅  
+ [__readfsbyte， \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

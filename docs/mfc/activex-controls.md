@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ba7ed48245485f1d6db2e6ccdf0104fde8aa0a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 42b6ac9f664387ce2380d808cb970f83181eb756
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-controls"></a>ActiveX 控件
 在 Visual C++ 中，您可以使用 MFC 或 ATL 创建 ActiveX 控件。  
@@ -27,5 +28,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [ATL](../atl/active-template-library-atl-concepts.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)

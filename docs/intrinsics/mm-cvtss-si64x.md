@@ -1,63 +1,63 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si 指令"
-  - "_mm_cvtss_si64x 指令"
+title: "_mm_cvtss_si64x |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f55ecac0a9f6318b5d60a372003e548ce41c713
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft 专用**  
   
- 生成转换标量单倍精度浮点数的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] extended 版本为 64 位整数 \(`cvtss2si`\) 命令。  
+ 生成[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]扩展的版本将转换标量单精度浮点数为 64 位整数 (`cvtss2si`) 指令。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### 参数  
- \[in\] `value`  
- 包含浮动 point 值的 `__m128` 结构。  
+#### <a name="parameters"></a>参数  
+ [in] `value`  
+ `__m128`结构，它包含浮点的值。  
   
-## 返回值  
- 一个 64 位整数，第一个浮点值转换的结果为整数。  
+## <a name="return-value"></a>返回值  
+ 64 位整数，为整数的第一个浮点值的转换的结果。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 结构值的第一个元素转换为整数并返回。  在 MXCSR 的舍入的控件位用于确定该轮的行为。  默认舍入模式是在周围最靠近，舍入为偶数，如果该小数部分为 0.5。  由于 `__m128` 结构表示 XMM 寄存器，此内部来自个 XMM 寄存器和写入的值到系统内存。  
+## <a name="remarks"></a>备注  
+ 转换为整数的结构值的第一个元素，并将其返回。 在 MXCSR 舍入的控制位用于确定舍入的行为。 舍入模式默认值为舍入到最接近，舍入到偶数如果的小数部分为 0.5。 因为`__m128`结构表示的 XMM 寄存器，此内部操作将从 XMM 寄存器的值，并将其写入系统内存。  
   
- 此实例只能用作内部。  
+ 此例程仅可用作内部函数。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +87,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## 关闭 Microsoft 特定  
+```Output  
+101  
+```  
   
-## 请参阅  
- [\_\_m128d](../cpp/m128d.md)   
+**结束 Microsoft 专用**  
+  
+## <a name="see-also"></a>请参阅  
+ [__m128d](../cpp/m128d.md)   
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)

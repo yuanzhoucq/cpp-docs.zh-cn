@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97b92735bba9445b7fd5d0ee2a303468ff199846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-class-from-activex-control-wizard"></a>从 ActiveX 控件添加类向导
 使用此向导将从可用的 ActiveX 控件中添加的 MFC 类。 该向导创建从所选的 ActiveX 控件添加每个接口的类。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
 |选项|描述|  
 |------------|-----------------|  
-|**注册表**|在系统中注册的类型库。 已注册的类型库中列出**可用 ActiveX 控件**。|  
+|**Registry**|在系统中注册的类型库。 已注册的类型库中列出**可用 ActiveX 控件**。|  
 |**文件**|类型库不一定在系统中注册，但包含在文件中。 必须提供文件的位置中**位置**。|  
   
  **可用的 ActiveX 控件**  
@@ -72,6 +73,6 @@ ms.lasthandoff: 10/24/2017
   
  向导不会覆盖文件。 如果选择的名称的现有文件，则单击**完成**，向导会提示您指出类实现是否应追加到文件的内容。 单击**是**要追加文件; 单击**否**返回到向导并指定另一个文件的名称。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 ActiveX 控件添加类](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   
  [自动化客户端：使用类型库](../mfc/automation-clients-using-type-libraries.md)

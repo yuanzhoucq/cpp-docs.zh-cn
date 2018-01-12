@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50fcd1e22847030680c6e5b7f07711ef4ebb55dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2668a8334192d4de199f1c42a648b74add1ca5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-classes-windows"></a>框架窗口类 (Windows)
 框架窗口是框架应用程序或应用程序的一部分的窗口。 框架窗口通常包含其他窗口，如视图、 工具栏和状态栏。 情况下`CMDIFrameWnd`，它们可能包含`CMDIChildWnd`间接对象。  
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/24/2017
  [CMenu](../mfc/reference/cmenu-class.md)  
  封装`HMENU`到应用程序的菜单栏和弹出菜单的句柄。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

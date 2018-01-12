@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04f49395959ec3b62f20716ddfb4ba7f4d89032d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed2d8cd6c852a15c4190c16c049e29577b754ce7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控件：使用常用属性页
 本文讨论了常用属性页可用于 ActiveX 控件和如何使用它们。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
 > [!TIP]
 >  如果你的常用属性页不可见 （请参阅上一注释），通过对该 DLL 从命令行中使用的完整路径名称运行 RegSvr32.exe 注册 DLL。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控件：添加常用属性](../mfc/mfc-activex-controls-adding-stock-properties.md)
 

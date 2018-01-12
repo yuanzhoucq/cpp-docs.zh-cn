@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 172a9c2dd7f2af941c9b0ae5d2600d2717d15b1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9a5380bf335a13bbf7b2f54840c9d1160187167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-handler-visual-c"></a>添加事件处理程序 (Visual C++)
 从资源编辑器中，你可以添加一个新的事件处理程序，或编辑现有事件处理程序，对话框框控件使用[事件处理程序向导](../ide/event-handler-wizard.md)。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
  或者，你可以将添加事件处理程序从[属性窗口](/visualstudio/ide/reference/properties-window)。 请参阅[对于对话框控件添加事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)有关详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用代码向导添加功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [添加类](../ide/adding-a-class-visual-cpp.md)   
  [添加成员变量](../ide/adding-a-member-variable-visual-cpp.md)   

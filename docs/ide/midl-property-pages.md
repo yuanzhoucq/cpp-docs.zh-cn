@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d78b47ded0e27a1708886b0c1531d6be3807511
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 61bf005ca65948ea347fb6fed71db108628402b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="midl-property-pages"></a>“MIDL”属性页
 **MIDL**节点包含几个属性页。 若要访问属性页， 右键单击.idl 文件**解决方案资源管理器**。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  有关如何以编程方式访问 C++ 项目的 MIDL 选项的详细信息，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)

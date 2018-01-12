@@ -1,48 +1,48 @@
 ---
-title: "&lt;example&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<example>"
-  - "example"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<example> C++ XML 标记"
-  - "example C++ XML 标记"
+title: "&lt;示例&gt;（Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <example>
+- example
+dev_langs: C++
+helpviewer_keywords:
+- <example> C++ XML tag
+- example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 939c14d0a0e04ad8970dea7da7888a94bb4de08f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;example&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 \<example\> 标记可以指定使用方法或其他库成员的示例。  通常，这也会涉及到 [\<code\>](../ide/code-visual-cpp.md) 标记的使用。  
+# <a name="ltexamplegt-visual-c"></a>&lt;示例&gt;（Visual c + +）
+借助 \<example> 标记，可以指定如何使用方法或其他库成员的示例。 通常情况下，这将涉及使用[\<代码 >](../ide/code-visual-cpp.md)标记。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 <example>description</example>  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `description`  
  代码示例的说明。  
   
-## 备注  
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
+## <a name="remarks"></a>备注  
+ 使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // xml_example_tag.cpp  
@@ -69,5 +69,5 @@ public:
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

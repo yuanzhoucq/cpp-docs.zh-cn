@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d6cd4359cfe4700f7decf0ec54686a4b70a183
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc09dafc0f07bc16a11dd255419440b6464456c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>“XML 文档生成器工具”属性页
 XML 文档生成器工具属性页公开 xdcmake.exe 的功能。 xdcmake.exe.xdc 会文件合并到一个.xml 文件时你的源代码包含文档注释和[/doc （处理文档注释） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)指定，则。 请参阅[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)有关将文档注释添加到源代码的信息。  
@@ -44,6 +45,6 @@ XML 文档生成器工具属性页公开 xdcmake.exe 的功能。 xdcmake.exe.xd
  **文档库依赖项**  
  如果你的项目在解决方案中的.lib 项目上具有依赖关系，你可以为当前项目的.xml 文件处理.lib 项目中的.xdc 文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性页](../ide/property-pages-visual-cpp.md)   
  [属性页](../ide/property-pages-visual-cpp.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3833763394eda3ad64f1c72b80bee4d76785d5a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27b1c59c952b022c7382db7d6b2dcb660cca2e9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="closing-files"></a>关闭文件
 像往常在 I/O 操作中一样，完成文件后，您必须关闭它。  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
  如果分配[CFile](../mfc/reference/cfile-class.md)帧上的对象 (如所示的示例所示[打开文件](../mfc/opening-files.md))，此对象将自动关闭，然后在超出范围时销毁。 请注意，删除 `CFile` 对象不会删除文件系统中的物理文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件](../mfc/files-in-mfc.md)
 

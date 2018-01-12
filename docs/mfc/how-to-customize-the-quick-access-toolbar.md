@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f26a6e7e39ddc2f7de1339283fe92e51ff9a808c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f67d46640a1a4fadc6750ca34b05910902679440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自定义快速访问工具栏
 快速访问工具栏 (QAT) 是一个可自定义的工具栏，其中包含一组显示在“应用程序”按钮旁边或类别选项卡下面的命令。 下图显示了一个典型的快速访问工具栏。  
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/24/2017
   
 -   上**功能区编辑器工具栏**，单击**测试功能区**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [功能区设计器 (MFC)](../mfc/ribbon-designer-mfc.md)
 

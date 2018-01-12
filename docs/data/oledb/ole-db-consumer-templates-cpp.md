@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a38c2edeffbdd2c37e69ce0886c24ca0d2f0b68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 使用者模板 (C++)
 OLE DB 使用者模板支持 OLE DB 2.6 版规范。 （OLE DB 使用者模板针对 OLE DB 2.6 进行测试，但该模板并非支持规范中的每个接口。）使用者模板最小化实现 OLE DB 使用者所必须编写的代码的量。 该模板提供：  
@@ -64,7 +67,7 @@ OLE DB 使用者模板支持 OLE DB 2.6 版规范。 （OLE DB 使用者模板�
   
 -   [常见的 OLE DB 使用者方案（示例）](../../data/oledb/working-with-ole-db-consumer-templates.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE DB 编程](../../data/oledb/ole-db-programming.md)   
  [数据访问](../data-access-in-cpp.md)   
  [OLE DB SDK 文档](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   

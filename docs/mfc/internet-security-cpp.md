@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 879078481cde75841cf180329ef67a6badfa4b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a44e528e871d784c432730799c44ac91af465be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-security-c"></a>Internet 安全性 (C++)
 代码安全性是一个主要问题对于开发人员和 Internet 应用程序的用户。 有风险： 恶意代码、 被篡改的代码和代码未知的站点或作者。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
  在第一种情况，你可以信任应用程序不会执行任何损害，而您信任的源的应用程序。 在第二个数字签名用于验证真实性。 数字签名是用来标识和提供有关代码的发布者详细信息的行业标准。 其技术基于标准，包括 RSA 和 X.509。 浏览器通常允许用户选择他们想要下载并运行未知来源的代码。  
   
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC Internet 编程任务](../mfc/mfc-internet-programming-tasks.md)   
  [MFC Internet 编程基础知识](../mfc/mfc-internet-programming-basics.md)
 

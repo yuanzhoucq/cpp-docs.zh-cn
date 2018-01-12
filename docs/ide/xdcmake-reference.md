@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad0744da891c93dab44c980ed10aa4213a4dddb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xdcmake-reference"></a>XDCMake 参考
 xdcmake.exe 是一个程序，将.xdc 文件编译为一个.xml 文件。 如果使用编译的源代码，创建.xdc 文件由 Visual c + + 编译器为每个源代码文件[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)和源代码文件时包含带有 XML 标记的文档注释。  
@@ -59,5 +60,5 @@ xdcmake.exe 是一个程序，将.xdc 文件编译为一个.xml 文件。 如果
   
  请参阅[建议的文档注释标记](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)有关将文档注释添加到源代码文件的详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

@@ -1,48 +1,48 @@
 ---
-title: "&lt;paramref&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "paramref"
-  - "<paramref>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<paramref> C++ XML 标记"
-  - "paramref C++ XML 标记"
+title: "&lt;paramref&gt; （Visual c + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- paramref
+- <paramref>
+dev_langs: C++
+helpviewer_keywords:
+- paramref C++ XML tag
+- <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 591aaaff84fa347e2753e2dc3899bb7f6900a5f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;paramref&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<paramref\> 标记为您提供了一种指示单词是参数。  .xml 文件可以处理设置此参数以某种不同的方法。  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; （Visual c + +）
+\<Paramref > 标记为你提供了一种方法，以指示词为参数。 可以处理的.xml 文件以设置此参数的格式以不同的方式。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 <paramref name="name"/>  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `name`  
- 要引用的参数名。  名称括在单引号或双引号。  如果它没有找到 `name`，编译器会发出警告。  
+ 要引用的参数的名称。  将名称括在单引号或双引号中。  如果编译器没有找到 `name`，它会发出警告。  
   
-## 备注  
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
+## <a name="remarks"></a>备注  
+ 使用 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // xml_paramref_tag.cpp  
@@ -57,5 +57,5 @@ public ref class MyClass {
 };  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [XML 文档](../ide/xml-documentation-visual-cpp.md)

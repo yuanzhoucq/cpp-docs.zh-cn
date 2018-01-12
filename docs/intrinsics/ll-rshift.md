@@ -1,36 +1,37 @@
 ---
-title: "__ll_rshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_rshift_cpp"
-  - "__ll_rshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__ll_rshift 内部函数"
-  - "ll_rshift 内部函数"
+title: "__ll_rshift |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_rshift_cpp
+- __ll_rshift
+dev_langs: C++
+helpviewer_keywords:
+- __ll_rshift intrinsic
+- ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c0bb658051a4eab579e2c0d2fbb4d6bd525381b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# __ll_rshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="llrshift"></a>__ll_rshift
 **Microsoft 专用**  
   
- 转换第一个参数指定的 64 位值在第二个参数指定许多的位的右侧。  
+ 第二个参数所指定的位数右移右侧的第一个参数指定的 64 位值。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 __int64 __ll_rshift(  
@@ -39,28 +40,28 @@ __int64 __ll_rshift(
 );  
 ```  
   
-#### 参数  
- \[in\] `Mask`  
- 转换为 64 位整数值。  
+#### <a name="parameters"></a>参数  
+ [in] `Mask`  
+ 要移动到了右边的 64 位整数值。  
   
- \[in\] `nBit`  
- 位转换的，在 x86 的素模 64 和 32 的数字在 x64 的。  
+ [in] `nBit`  
+ 要移位，模 64，在 x64 上和取模 x86 上的 32 位的数。  
   
-## 返回值  
- `nBit` 转换位掩码。  
+## <a name="return-value"></a>返回值  
+ 掩码移动`nBit`bits。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__ll_rshift`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 备注  
- 如果第二个参数大于 64 在 x64 \(32 在 x86\)，该数字。采用 \(32 在 x86\) 确定的位数的模数值 64 转换。  `ll` 前缀指示这是在 `long long`的操作，另一个名称。 `__int64`， 64 位带符号整型。  
+## <a name="remarks"></a>备注  
+ 如果第二个参数大于 64 x64 (32 x86 上) 上，该数字执行模 64 (在 x86 32) 来确定要位移的位数数。 `ll`前缀指示这是一个操作上`long long`、 另一名称`__int64`，64 位有符号的整型。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // ll_rshift.cpp  
@@ -84,7 +85,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>输出  
   
 ```  
 ffffffffffffff00  
@@ -93,11 +94,11 @@ fffffffffffffff0
  - 10  
 ```  
   
- 请注意，如果使用了 `_ull_rshift` ，该错误地转换的值的如果将为零，因此，该希望的结果不会获取在负值。  
+ **请注意**如果`_ull_rshift`已被使用，向右移动值 MSB 已经是零，因此所需的结果将不具有已获取对于负值。  
   
-### 关闭 Microsoft 特定  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)
+ [__ll_lshift](../intrinsics/ll-lshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)
