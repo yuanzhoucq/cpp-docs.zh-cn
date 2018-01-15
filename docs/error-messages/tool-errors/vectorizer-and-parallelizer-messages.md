@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -14,36 +13,21 @@ f1_keywords:
 - C5021
 - C5001
 - C5012
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5c466510a00079f04ee5871b41364fff552ecf70
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>矢量化程序和并行化程序消息
-你可以使用 Visual c + + 编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)以输出原因代码及有关其活动的信息性消息。 本文说明原因代码和消息。  
+你可以使用 Visual c + + 编译器选项[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)设置[自动并行化和自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)到输出原因代码和有关其活动的信息性消息。 本文说明原因代码和消息。  
   
 -   [信息性消息](#BKMK_InformationalMessages)  
   
@@ -1004,10 +988,10 @@ void code_1505(int *A, int *B)
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动并行化和自动向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [本机代码中的并行编程](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [本机代码中的并行编程](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop （)](../../preprocessor/loop.md)   
  [/Q 选项 （低级别操作）](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-report （自动并行化程序报告等级）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/Qvec-report （自动向量化报告等级）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+ [/Qvec-report（自动矢量化程序报告等级）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

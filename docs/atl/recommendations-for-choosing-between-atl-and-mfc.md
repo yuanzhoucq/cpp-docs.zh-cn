@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d912c6cd997c23b9623d20a104327fb6e4701494
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 079784f1fed84ae073767a4a0b622d3fdbf7384b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL 和 MFC 之间进行选择的建议
 在开发时组件和应用程序，你可以选择两种方法之间-ATL 和 MFC （Microsoft 基础类库）。  
@@ -34,6 +35,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="using-atl-in-an-mfc-project"></a>在 MFC 项目中使用 ATL  
  你可以添加对现有 MFC 项目中使用 ATL，通过运行向导支持。 有关详细信息，请参阅[向 MFC 项目添加 ATL 支持](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 简介](../atl/introduction-to-atl.md)
 

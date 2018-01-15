@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 657483c85c8b2f03d4a78e76cdc28a5dfff496e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32413fe7939b5e5d5d3d41bf32a923dd308f0395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccmdui-class"></a>CCmdUI 类
 只能在使用`ON_UPDATE_COMMAND_UI`中的处理程序`CCmdTarget`-派生类。  
@@ -98,7 +99,7 @@ class CCmdUI
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CCmdUI`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
@@ -213,7 +214,7 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MDI](../../visual-cpp-samples.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CCmdTarget 类](../../mfc/reference/ccmdtarget-class.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37ce02b9493c47a2c93d9e54e14f73b5c980317d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4e565b1e2c20abf31919774d7bc6eb34f4c5f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cadapt-class"></a>CAdapt 类
 此模板用于包装一些类，这些类将 address-of 运算符重新定义为返回对象地址之外的内容。  
@@ -76,7 +77,7 @@ class CAdapt
   
  通常，当你要将 `CAdapt`、`CComBSTR`、`CComPtr` 或 `CComQIPtr` 对象存储在容器样式类中时，你将使用 `_com_ptr_t`。 在大多数情况下，若要支持 C++ 标准，这对于 C++11 标准库容器必需的，但 C++11 标准库容器会自动处理已重载 `operator&()` 的类型。 通过在内部使用的标准库实现这[std::addressof](../../standard-library/memory-functions.md#addressof)若要获取的对象的真实地址。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcomcli.h  
   
 ##  <a name="cadapt"></a>CAdapt::CAdapt  
@@ -173,5 +174,5 @@ bool operator== (const T& rSrc) const;
 ### <a name="return-value"></a>返回值  
  之间的比较结果`m_T`和`rSrc`。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

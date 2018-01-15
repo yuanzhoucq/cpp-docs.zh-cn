@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <allocators>
-dev_langs:
-- C++
-helpviewer_keywords:
-- allocators header
+f1_keywords: <allocators>
+dev_langs: C++
+helpviewer_keywords: allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b87e52294ccd61cd349ed6a85eca6760ace2c473
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cf6f722eaa4f71a808ec416aa7646c7fe4de2689
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 定义多个模板，帮助为基于节点的容器分配和释放内存块。  
@@ -170,14 +166,13 @@ ms.lasthandoff: 10/03/2017
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|描述为每个线程提供单独的缓存对象的同步筛选器。|  
 |[sync_shared](../standard-library/sync-shared-class.md)|介绍同步筛选器，它使用互斥体来控制对所有分配器共享的缓存对象的访问。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：**\<allocators>  
   
  **命名空间：** stdext  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c178cb10c6f14d257e9c03b499ea8f2fa01eddf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 650924898532e352df30d7e8173620b974f30138
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT 类
 此类表示对 DLL 的模块。  
@@ -78,7 +79,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
   
  `CAtlDllModuleT`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="catldllmodulet"></a>CAtlDllModuleT::CAtlDllModuleT  
@@ -202,7 +203,7 @@ HRESULT GetClassObject(
 ### <a name="remarks"></a>备注  
  调用此方法[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)和包含是为了向后兼容。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAtlModuleT 类](../../atl/reference/catlmodulet-class.md)   
  [CAtlExeModuleT 类](../../atl/reference/catlexemodulet-class.md)   
  [类概述](../../atl/atl-class-overview.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dca7c6bc7c423018959a9ff38b5c54fa43f06c5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68cd21e21c14a34122f1b26345fab767728ac6a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs。CReBarCtrl
 MFC 提供了两个类来创建 rebar: [CReBar](../mfc/reference/crebar-class.md)和[CReBarCtrl](../mfc/reference/crebarctrl-class.md) （其包装 Windows 公共控件 API）。 **CReBar**提供所有 rebar 公共控件的功能，和它为你处理的许多所需的常用控制设置和结构。  
@@ -42,7 +43,7 @@ MFC 提供了两个类来创建 rebar: [CReBar](../mfc/reference/crebar-class.md
   
  任一方法都将为您提供对 rebar 控制的成员函数的访问权限。 当您调用 `CReBar::GetReBarCtrl` 时，它将返回对 `CReBarCtrl` 对象的引用，以便您可以使用成员函数集。 请参阅[CReBar](../mfc/reference/crebar-class.md)有关构造和创建 rebar 使用信息**CReBar**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控件](../mfc/controls-mfc.md)
 

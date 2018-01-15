@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55469ffe0c5473ddda7007655e6f85b4d5822f0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2e4916e0f563c4034dc27be1e3d911f42a65319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理计划程序实例
 计划程序实例，可以将特定的计划策略与各种类型的工作负荷相关联。 本主题包含两个基本示例，演示如何创建和管理计划程序实例。  
@@ -83,7 +84,7 @@ Current scheduler id: 0
   
  **cl.exe /EHsc 计划程序-instance.cpp**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计划程序实例](../../parallel/concrt/scheduler-instances.md)   
  [如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
 

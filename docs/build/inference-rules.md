@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c833a4833bfc670a58796700efd4f885fe3ee560
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 932aad860cd2b78208857ca7b028e35cd96d481e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inference-rules"></a>推理规则
 推理规则提供命令来更新目标，并可以推断目标的依赖项。 推理规则中的扩展匹配单个目标并具有相同的基名称的依赖。 推理规则是用户定义的或预定义的;可以重新定义预定义的规则。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
  [推理规则中的优先级](../build/precedence-in-inference-rules.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [NMAKE 参考](../build/nmake-reference.md)

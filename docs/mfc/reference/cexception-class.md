@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15037544b3344f5d43ebaa34fb35b431da581593
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cexception-class"></a>CException 类
 Microsoft 基础类库中所有异常的基类。  
@@ -87,7 +88,7 @@ class AFX_NOVTABLE CException : public CObject
   
  `CException`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="cexception"></a>CException::CException  
@@ -222,10 +223,10 @@ else
 }
 ```
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](cobject-class.md)   
  [层次结构图](../hierarchy-chart.md)   
  [异常处理](exception-processing.md)   
- [如何： 创建我自己的自定义异常类](http://go.microsoft.com/fwlink/linkid=128045)
+ [如何： 创建我自己的自定义异常类](http://go.microsoft.com/fwlink/p/?linkid=128045)
 
 

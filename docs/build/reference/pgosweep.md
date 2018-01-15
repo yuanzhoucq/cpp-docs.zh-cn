@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c703bc68a36dd21c837e62738d9d2c2631502a0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78ae6c36011e3c10359988cf2c501514d1bcf70a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pgosweep"></a>pgosweep
 使用按配置优化以从正在运行的程序的所有配置文件数据写入到对应的.pgc 文件。  
@@ -60,5 +61,5 @@ pgosweep myapp.exe myapp!1.pgc
   
  在此示例中，`pgosweep`写入 myapp!1.pgc myapp.exe 的当前配置文件信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用于按配置文件手动优化的工具](../../build/reference/tools-for-manual-profile-guided-optimization.md)

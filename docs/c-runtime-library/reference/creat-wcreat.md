@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 新建文件。 `_creat` 和 `_wcreat` 已弃用；请改用 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -101,7 +84,7 @@ int _wcreat(
   
  如果 `filename` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些功能将 `errno` 设置为 `EINVAL` 并返回 -1。  
   
- 有关这些代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>备注  
  `_creat` 函数创建一个新文件或打开并截断现有文件。 `_wcreat` 是 `_creat` 的宽字符版本；`filename` 的 `_wcreat` 参数是宽字符字符串。 除此以外，`_wcreat` 和 `_creat` 的行为完全相同。  
@@ -114,7 +97,7 @@ int _wcreat(
   
  如果由 `filename` 指定的文件不存在，则创建具有给定权限设置的新文件并将其打开以供写入。 如果该文件已存在，且其权限设置允许写入，则 `_creat` 将文件长度截断为 0、销毁以前的内容并将其打开以供写入。 权限设置 `pmode` 仅适用于新创建的文件。 新文件第一次关闭后收到指定的权限设置。 整数表达式 `pmode` 包含在 SYS\Stat.h 中定义的 `_S_IWRITE` 和 `_S_IREAD` 清单常量中的一个或两个。 当给定这两个常量时，将使用按位 `OR` 运算符连接它们 ( **&#124;** )。 `pmode` 参数可设置为下列值之一。  
   
-|值|定义|  
+|“值”|定义|  
 |-----------|----------------|  
 |`_S_IWRITE`|允许写入。|  
 |`_S_IREAD`|允许读取。|  
@@ -124,14 +107,14 @@ int _wcreat(
   
  在设置这些权限之前，`_creat` 会将当前文件权限掩码应用到 `pmode`（请参阅 [_umask](../../c-runtime-library/reference/umask.md)）。 `_creat` 主要用于与以前的库的兼容性。 在 `oflag` 参数中使用 `_O_CREAT` 和 `_O_TRUNC` 对 `_open` 进行的调用等同于 `_creat` 并且是新代码的优先选择。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|必需的标头|可选标头|  
+|例程所返回的值|必需的标头|可选标头|  
 |-------------|---------------------|---------------------|  
 |`_creat`|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
 |`_wcreat`|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
   
@@ -168,7 +151,7 @@ int main( void )
 Created data file.  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [低级别 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_chsize](../../c-runtime-library/reference/chsize.md)   

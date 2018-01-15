@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,21 +16,19 @@ f1_keywords:
 - ATLSOCKET/ATL::CSocketAddr::FindINET6Addr
 - ATLSOCKET/ATL::CSocketAddr::GetAddrInfo
 - ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSocketAddr class
+dev_langs: C++
+helpviewer_keywords: CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 33e82acc7b246c1c28eb991c49010f811420094b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 类
 此类提供用于将主机名转换为主机地址，支持 IPv4 和 IPV6 格式的方法。  
@@ -67,7 +64,7 @@ class CSocketAddr
   
  此类支持这两个 IPv4 andIPv6 网络地址。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsocket.h  
   
 ##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
@@ -211,8 +208,7 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>返回值  
- 指向一个或多个链接列表`addrinfo`包含有关主机的响应信息的结构。 有关详细信息`addrinfo`结构，请参阅中的"addrinfo"文章[MSDN 库](http://go.microsoft.com/fwlink/linkid=556)  
+ 指向一个或多个链接列表`addrinfo`包含有关主机的响应信息的结构。 有关详细信息，请参阅[addrinfo 结构](https://msdn.microsoft.com/library/windows/desktop/ms737530)。
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

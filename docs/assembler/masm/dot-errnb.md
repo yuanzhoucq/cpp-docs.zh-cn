@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d04aa9a237e973235e8d02ffc54228e7d0a12a9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2711c3bdd3336b039b66f22914eef97a1f2051f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errnb"></a>.ERRNB
 如果将生成错误*textitem*不为空。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
 .ERRNB <textitem> [[, message]]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

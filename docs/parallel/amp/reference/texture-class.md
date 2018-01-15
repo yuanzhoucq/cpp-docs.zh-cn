@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,33 +22,18 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7aee3b5135e486474132f455ddceaf86980d3be9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="texture-class"></a>texture 类
 纹理是一种数据聚合上`accelerator_view`范围域中。 它是变量，一个用于扩展盘区域中的每个元素的集合。 每个变量包含 c + + 基元类型相对应的值 ( `unsigned int`， `int`， `float`， `double`)，为标量类型 ( `norm`，或`unorm`)，或短矢量类型。  
@@ -86,7 +70,7 @@ class texture;
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|副本`texture`对象到目标，通过执行操作的深层副本。|  
 |[data](#data)|CPU 指针返回到此纹理的原始数据。|  
@@ -106,13 +90,13 @@ class texture;
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[rank 常量](#rank)|获取的秩`texture`对象。|  
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[associated_accelerator_view](#associated_accelerator_view)|获取[accelerator_view](accelerator-view-class.md) ，它是要复制到此纹理的首选的目标。|  
 |[depth_pitch](#depth_pitch)|获取在 CPU 上过渡三维纹理中每个深度扇区之间的字节数。|  
@@ -123,8 +107,8 @@ class texture;
   
  `texture`  
   
-## <a name="requirements"></a>要求  
- **标头︰** amp_graphics.h  
+## <a name="requirements"></a>惠?  
+ **标头：** amp_graphics.h  
   
  **Namespace:** concurrency:: graphics  
   
@@ -632,6 +616,5 @@ texture(
  `_Rank`  
  部分中的秩。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
-

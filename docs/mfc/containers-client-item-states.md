@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1048cdce98be99b13d306e9ff36eb75b30e43cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-client-item-states"></a>容器：客户端项状态
 此文章介绍了在其生存期内，通过传递客户端项的不同状态。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
  当已就地激活项时，它将传递，通常仅简要，通过活动状态。 然后，它将输入 UI 活动状态，其菜单、 工具栏和与容器的其他用户界面组件，服务器已合并。 这些用户界面组件的状态区分 UI 活动状态从活动状态。 否则，活动状态类似于 UI 活动状态。 如果服务器支持撤消，则需要服务器来保留 OLE 项的撤消状态信息，直到它达到加载或打开状态。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [容器](../mfc/containers.md)   
  [激活](../mfc/activation-cpp.md)   
  [容器： 客户端项通知](../mfc/containers-client-item-notifications.md)   

@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/24/2017
 |BASEFILE|创建一个名为 COFFBASE 文件。TXT、 其是按链接列出的预期格式的文本文件/基本选项。|  
 |向下|告知 EDITBIN 若要重新分配基址向下的从结束地址。 指定与位于以下地址范围的末尾的最高可能地址中的第一个文件的顺序重新分配文件。 必须使用向下使用基，以确保足够的地址空间使这些文件。 若要确定由指定的文件所需的地址空间，文件运行使用 /REBASE EDITBIN 和将 64 KB 添加到显示的总大小。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

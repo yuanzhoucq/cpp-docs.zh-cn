@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 26c4d5be1d8d470dec23f4aaf89861e771bd4bee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8fddfa7fb7d84840d3e042a8b2544adf94f5050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="else"></a>.ELSE
 ## <a name="syntax"></a>语法  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  请参阅[。如果](../../assembler/masm/dot-if.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令参考](../../assembler/masm/directives-reference.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5483b6eff89b95a29d2f348347a02b7664e75e7b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0114d2ce60eba1d92b4cfd52d003532bd9ced097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2wex-class"></a>CA2WEX 类
 此类由字符串转换宏`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
@@ -93,7 +94,7 @@ class CA2WEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlconv.h  
   
 ##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
@@ -148,7 +149,7 @@ operator LPWSTR() const throw();
 ### <a name="return-value"></a>返回值  
  返回文本字符串作为类型**LPWSTR。**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
  [CW2AEX 类](../../atl/reference/cw2aex-class.md)   

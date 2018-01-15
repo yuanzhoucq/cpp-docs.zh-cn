@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a55de241bb017fc1b1ed528d70bffd1cd4f047b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 504698f266c7876ea520d50155a70899c9560b2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-control-handler"></a>GenericControl 处理程序
 下面的映射条目对应于函数原型。  
@@ -32,6 +33,6 @@ ms.lasthandoff: 10/24/2017
 |---------------|------------------------|  
 |ON_CONTROL ( \<wNotifyCode >， \<id >， \<f x n >)|afx_msg void f x n （);|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [消息映射](../../mfc/reference/message-maps-mfc.md)
 

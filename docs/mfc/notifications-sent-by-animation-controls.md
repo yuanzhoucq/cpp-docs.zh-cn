@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f26078ce389de09b38d0e69f8e90e2096bc3efd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c57a33bf4b13397d4f296ef4e5aa8e137c2d3594
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notifications-sent-by-animation-controls"></a>动画控件发送的通知
 动画控件 ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 发送两个不同类型的通知消息。 通知发送的窗体[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)消息。  
   
  [ACN_START](http://msdn.microsoft.com/library/windows/desktop/bb761891)消息在动画控件已开始播放剪辑时发送。 [ACN_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893)消息在动画控件已完成或停止播放剪辑时发送。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用 CAnimateCtrl](../mfc/using-canimatectrl.md)   
  [控件](../mfc/controls-mfc.md)
 

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-passing"></a>参数传递
 在寄存器中传递的前四个整数参数。 整数值在 RCX、 RDX、 R8 和 R9 中传递 （按从左到右的顺序）。 自变量 5 和更高版本在堆栈上传递。 所有自变量是右对齐，寄存器中。 这样为了使被调用方可以忽略的寄存器高位，如果需要并且可以访问仅需的寄存器的部分。  
@@ -68,5 +69,5 @@ func4(__m64 a, _m128 b, struct c, float d);
 // a in RCX, ptr to b in RDX, ptr to c in R8, d in XMM3  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [调用约定](../build/calling-convention.md)

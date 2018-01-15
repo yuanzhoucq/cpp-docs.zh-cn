@@ -1,42 +1,43 @@
 ---
-title: "Avoidance of Heap Contention | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "heap contention"
+title: "避免堆争用 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Avoidance of Heap Contention
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="avoidance-of-heap-contention"></a>避免堆争用
+MFC 和 ATL 提供的默认字符串经理都在全局堆之上的简单包装器。 此全局堆是完全线程安全的这意味着多个线程可以分配和释放从它同时不会损坏堆的内存。 若要帮助提供线程安全性，堆必须序列化到其自身的访问。 这通常被实现的关键部分或类似的锁定机制。 两个线程尝试同时访问堆，每当一个线程阻止，直到完成其他线程的请求。 对于许多应用程序，这种情况很少发生，并且堆的锁定机制的性能影响可以忽略不计。 但是，对于应用程序经常从多个线程访问堆堆的锁争用会导致更慢速度如果它是单线程方式 （甚至在具有多个 Cpu 的计算机） 上运行该应用程序。  
+  
+ 应用程序使用[CStringT](../atl-mfc-shared/reference/cstringt-class.md)特别容易出现堆争用因为对操作`CStringT`经常需要的对象的字符串缓冲区重新分配。  
+  
+ 减轻堆争用线程之间的一种方法是为每个线程分配专用的线程本地堆中的字符串。 只要将字符串分配与仅在该线程中使用特定线程的分配器，分配器不需要是线程安全。  
+  
+## <a name="example"></a>示例  
+ 下面的示例阐释了分配自己专用的非线程安全堆，以供该线程上的字符串的线程过程：  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/cpp/avoidance-of-heap-contention_1.cpp)]  
+  
+## <a name="comments"></a>注释  
+ 无法使用此相同的线程过程运行多个线程，但由于每个线程都有自己的堆没有在线程之间没有任何争用。 此外，每个堆都不是线程安全的事实使性能明显提升，即使只是一份线程正在运行。 这是不使用成本高昂的联锁的操作以防止并发访问堆的结果。  
+  
+ 有关更复杂的线程过程，则可能很方便存储线程本地存储 (TLS) 槽中的线程的字符串管理器指向的指针。 这允许其他函数调用的线程的过程以访问线程的字符串管理器。  
+  
+## <a name="see-also"></a>请参阅  
+ [使用 CStringT 进行内存管理](../atl-mfc-shared/memory-management-with-cstringt.md)
 
-MFC和ATL提供的默认字符串管理器是简单的包装在全局堆的顶部。  此全局堆是完全线程安全的，这意味着多个线程可以从同时分配和释放内存，而无需堆损坏。  为了帮助提供线程安全，堆必须序列化对自身进行访问。  这通常是通过一个临界区或类似的闭锁器。  每当两个线程同时尝试访问堆，一个线程阻塞，直至其他线程的请求完成。  对于许多应用程序，此情况极少发生，但堆的闭锁器的性能影响可忽略的。  但是，对于应用程序访问从多个线程争用的堆的堆上的锁可能会经常导致应用程序运行慢，则单线程的\(即使在具有多个CPU的计算机）。  
-  
- 使用 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 的应用程序特别容易受到堆争用，因为在 `CStringT` 对象的操作通常需要字符串缓冲区的重新发布。  
-  
- 一种缓解线程之间的堆争用具有每个线程从私钥将字符串，线程本地堆。  只要字符串随特定线程的分配器该线程仅使用，该赋值程序不需要是线程安全的。  
-  
-## 示例  
- 下面的示例演示分配自己的私有非线程安全的堆为该线程的字符串使用的线程过程:  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#182](../atl-mfc-shared/codesnippet/CPP/avoidance-of-heap-contention_1.cpp)]  
-  
-## 注释  
- 多个线程可以运行使用这个线程过程，但，因为每个线程具有自己的堆不在线程之间的争用。  此外，该条件每个堆都不是线程安全的对性能的增加，即使线程的一个副本运行。  这是堆的结果不使用昂贵联锁操作可防止同时访问。  
-  
- 对于一个更复杂的线程过程，存储指向线程的字符串管理器在线程本地存储\(TLS\)槽可能很方便。  这允许线程过程调用的其他函数访问线程的字符串管理器。  
-  
-## 请参阅  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

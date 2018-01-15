@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d21e3e2a9e530772419a269ea5e95e5daf35e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csyncobject-class"></a>CSyncObject 类
 一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。  
@@ -77,7 +78,7 @@ class CSyncObject : public CObject
   
  `CSyncObject`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxmt.h  
   
 ##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
@@ -151,7 +152,7 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ### <a name="remarks"></a>备注  
  两个参数的声明始终的默认实现返回**TRUE**。 调用此函数以释放拥有由调用线程的同步对象访问权限。 第二个声明进行同步的对象，如允许的受控资源的多个访问的信号量。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)
 

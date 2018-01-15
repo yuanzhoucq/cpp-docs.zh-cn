@@ -27,11 +27,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f9dd09983a7b8cb781e26a6a3ed049d82d03632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 这些函数提供用于加载和注册类型库的支持。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|检索是否应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|  
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|设置是否应用程序将注册表访问重定向**HKEY_CURRENT_USER** ( **HKCU**) 节点。|  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlbase.h
 
 ## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
@@ -84,7 +85,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
   
  重定向不是全局设置。 仅 MFC 和 ATL 框架受此注册表重定向。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
 
  ## <a name="afxregcreatekey"></a>AfxRegCreateKey
@@ -112,7 +113,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="return-value"></a>返回值  
  如果函数成功，则返回值是 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。  
 
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxpriv.h  
 
 ## <a name="afxregdeletekey"></a>AfxRegDeleteKey
@@ -137,7 +138,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 ### <a name="return-value"></a>返回值  
  如果函数成功，则返回值是 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxpriv.h  
 
 ## <a name="afxregisterpreviewhandler"></a>
@@ -159,7 +160,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
  `lpszFilterExt`  
  指定注册到此处理程序的文件扩展名。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxdisp.h   
 
 ##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
@@ -182,7 +183,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
   
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)和[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlbase.h
 
  ## <a name="afxregopenkey"></a>AfxRegOpenKey
@@ -210,7 +211,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="return-value"></a>返回值  
  如果函数成功，则返回值是 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxpriv.h  
 
 ## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
@@ -244,7 +245,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="return-value"></a>返回值  
  如果函数成功，则返回值是 ERROR_SUCCESS。 如果函数失败，返回值是在 Winerror.h 中定义一个非零错误代码。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxpriv.h  
 
  ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
@@ -260,7 +261,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
  `lpszCLSID`  
  指定要注销的处理程序的 CLSID。  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** afxdisp.h  
 
 ## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
@@ -283,7 +284,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
  默认情况下不启用注册表重定向。 如果启用此选项，注册表访问重定向到**HKEY_CURRENT_USER\Software\Classes**。  
   
  重定向不是全局设置。 仅 MFC 和 ATL 框架受此注册表重定向。  
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
 
 ##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
@@ -308,7 +309,7 @@ ATLAPI AtlUnRegisterTypeLib(
   
 ### <a name="remarks"></a>备注  
  利用此帮助器函数[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)和[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlbase.h
 
 ##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
@@ -386,10 +387,10 @@ HRESULT RegistryDataExchange(
 |eWriteToReg|将数据写入到注册表。|  
 |eDeleteFromReg|从注册表中删除密钥。|  
   
-### <a name="requirements"></a>要求  
+### <a name="requirements"></a>惠?  
  **标头：** atlbase.h
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](atl-functions.md)[注册表数据交换宏](registry-data-exchange-macros.md)
 
 

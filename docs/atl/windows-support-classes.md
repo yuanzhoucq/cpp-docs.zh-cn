@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96ca4417cea6b4bdd1107d3f5d7b4ea9d85269e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 308f9deada47998c2f639d01ea5b9fdc9d04faa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-support-classes"></a>Windows 支持类
 下面的类提供适用于 windows 的支持：  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  [ATL 教程](../atl/active-template-library-atl-tutorial.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   
  [消息映射宏](../atl/reference/message-map-macros-atl.md)   
  [窗口类宏](../atl/reference/window-class-macros.md)

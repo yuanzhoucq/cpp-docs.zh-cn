@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,37 +37,22 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CSimpleStringT::StringLength
 - ATLSIMPSTR/ATL::CSimpleStringT::Truncate
 - ATLSIMPSTR/ATL::CSimpleStringT::UnlockBuffer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, CSimpleStringT
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0b60a7b5c58c33ed4d8be67e1de603ef5f711742
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: acbf4753bb29b8f28cac9fe4fb6ceff72ceda8a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 类
 此类表示`CSimpleStringT`对象。  
@@ -138,7 +122,7 @@ class CSimpleStringT
 
 ### <a name="public-operators"></a>公共运算符  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接访问存储在字符`CSimpleStringT`对象作为 C 样式字符串。|  
 |[CSimpleStringT::operator\[\]](#operator_at)|返回位于给定位置的字符-运算符替换`GetAt`。|  
@@ -148,8 +132,8 @@ class CSimpleStringT
 ### <a name="remarks"></a>备注  
  `CSimpleStringT`是由 Visual c + + 支持各种字符串类的基类。 它提供对的字符串对象和基本缓冲区操作的内存管理的最小支持。 有关更高级的字符串对象，请参阅[CStringT 类](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
-### <a name="requirements"></a>要求  
- **标头︰** atlsimpstr.h  
+### <a name="requirements"></a>惠?  
+ **标头：** atlsimpstr.h  
 
 
 ## <a name="append"></a>CSimpleStringT::Append
@@ -321,7 +305,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 void Empty() throw();  
 ```  
 ### <a name="remarks"></a>备注  
- 有关详细信息，请参阅[字符串︰ CString 异常清理](../cstring-exception-cleanup.md)。  
+ 有关详细信息，请参阅[字符串： CString 异常清理](../cstring-exception-cleanup.md)。  
   
 ### <a name="example"></a>示例  
  以下示例演示了 `CSimpleStringT::Empty` 的用法。  
@@ -369,7 +353,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
 ```
   
 ### <a name="remarks"></a>备注  
- 此示例的输出如下所示︰  
+ 此示例的输出如下所示：  
   
  `Alloc length is 1031, String length is 1024`  
   
@@ -486,7 +470,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  如果您跟踪的字符串长度自己，不对不追加终止 null 字符。 当你通过使用释放缓冲区，必须指定最终的字符串长度`ReleaseBuffer`。 如果在调用时，不要追加终止 null 字符`ReleaseBuffer`，将为-1 （默认值） 传递到长度`ReleaseBuffer`，和`ReleaseBuffer`将执行`strlen`上要确定其长度的缓冲区。  
   
- 有关引用计数的详细信息，请参阅以下文章︰  
+ 有关引用计数的详细信息，请参阅以下文章：  
   
 - [管理通过引用计数对象生存期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中。 
   
@@ -601,7 +585,7 @@ PXSTR LockBuffer();
  指向的指针`CSimpleStringT`对象或以 null 结尾的字符串。  
   
 ### <a name="remarks"></a>备注  
- 调用此方法以锁定的缓冲区`CSimpleStringT`对象。 通过调用`LockBuffer`，使用引用计数为-1 创建字符串的副本。 当引用计数值为-1 时，缓冲区中的字符串被视为处于"锁定"状态。 当处于锁定状态时，字符串在两种方法进行保护︰  
+ 调用此方法以锁定的缓冲区`CSimpleStringT`对象。 通过调用`LockBuffer`，使用引用计数为-1 创建字符串的副本。 当引用计数值为-1 时，缓冲区中的字符串被视为处于"锁定"状态。 当处于锁定状态时，字符串在两种方法进行保护：  
   
 -   没有其他字符串可以获取在锁定的字符串中，对数据的引用，即使该字符串分配给锁定的字符串。  
   
@@ -614,7 +598,7 @@ PXSTR LockBuffer();
 > [!NOTE]
 >  如果调用[GetBuffer](#getbuffer)上锁定的缓冲区和你设置`GetBuffer`参数`nMinBufferLength`为大于当前的缓冲区的长度，则将失去缓冲区锁。 此类调用`GetBuffer`销毁当前缓冲区，其替换为所请求的大小的缓冲区并将引用计数重置为零。  
   
- 有关引用计数的详细信息，请参阅以下文章︰  
+ 有关引用计数的详细信息，请参阅以下文章：  
   
 - [管理通过引用计数对象生存期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中  
   
@@ -1067,6 +1051,6 @@ void UnlockBuffer() throw();
 ### <a name="remarks"></a>备注  
  调用此方法以销毁`CSimpleStringT`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

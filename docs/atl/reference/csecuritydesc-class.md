@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,35 +37,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityDesc class
+dev_langs: C++
+helpviewer_keywords: CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 334081ba67c3b034c4b8170b095fcd77d712dda6
-ms.contentlocale: zh-cn
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 类
 此类是包装器**SECURITY_DESCRIPTOR**结构。  
@@ -132,10 +115,10 @@ class CSecurityDesc
   
  应用程序不应修改**SECURITY_DESCRIPTOR**结构直接，，而不是应会使用提供的类方法。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlsecurity.h  
   
 ##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
  构造函数。  
@@ -620,9 +603,9 @@ bool ToString(
 ### <a name="remarks"></a>备注  
  字符串格式的安全描述符后，它可以更轻松地存储或传输。 使用`CSecurityDesc::FromString`方法将字符串转换回安全描述符。  
   
- `si`参数可以包含以下 SECURITY_INFORMATION 标志︰  
+ `si`参数可以包含以下 SECURITY_INFORMATION 标志：  
   
-|值|含义|  
+|“值”|含义|  
 |-----------|-------------|  
 |OWNER_SECURITY_INFORMATION|包括的所有者。|  
 |GROUP_SECURITY_INFORMATION|包括的主要组。|  
@@ -631,13 +614,12 @@ bool ToString(
   
  如果 DACL，则 NULL 和 SE_DACL_PRESENT 控件位设置输入的安全描述符中，该方法将失败。  
   
- 如果 DACL 为 NULL，而输入的安全描述符中未设置 SE_DACL_PRESENT 控件位，生成的安全描述符字符串没有 d︰ 组件。 请参阅[安全描述符字符串格式](http://msdn.microsoft.com/library/windows/desktop/aa379570)有关详细信息。  
+ 如果 DACL 为 NULL，而输入的安全描述符中未设置 SE_DACL_PRESENT 控件位，生成的安全描述符字符串没有 d： 组件。 请参阅[安全描述符字符串格式](http://msdn.microsoft.com/library/windows/desktop/aa379570)有关详细信息。  
   
  此方法仅可用 Windows 2000 和更高版本，因为它调用[ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)
-

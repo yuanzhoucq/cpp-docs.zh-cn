@@ -57,11 +57,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 445b5edcbd13c31aa299ad93713da40c25081533
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54b8f0fc8c58ea70a1499104e28a0e0a09bd4fee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reflected-window-message-ids"></a>反射窗口消息 ID
 一种快速创建 ActiveX 控件或其他专用控件的方法是子类化窗口。 有关详细信息，请参阅[MFC ActiveX 控件： 子类化 Windows 控件](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  如果控件在 Win32 系统上运行，有几种类型的**WM_CTLCOLOR\*** 它可能会收到的消息。 有关详细信息，请参阅**WM_CTLCOLORBTN**， **WM_CTLCOLORDLG**， **WM_CTLCOLOREDIT**， **WM_CTLCOLORLISTBOX**， **WM_CTLCOLORMSGBOX**， **WM_CTLCOLORSCROLLBAR**， **WM_CTLCOLORSTATIC**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件： 子类化 Windows 控件](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
  [TN062：Windows 控件的消息反射](../mfc/tn062-message-reflection-for-windows-controls.md)
 

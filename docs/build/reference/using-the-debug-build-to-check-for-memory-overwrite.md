@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8fc223a1e4e1162ce99bb3275152c49828aa99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用调试版本检查内存改写
 若要使用调试版本检查内存改写，首先必须重新生成用于调试的项目。 然后，请转到你的应用程序一开始`InitInstance`函数，并添加以下行：  
@@ -35,7 +36,7 @@ afxMemDF |= checkAlwaysMemDF;
 Damage Occurred! Block=0x5533  
 ```  
   
- 如果你看到以下消息之一，你需要单步执行代码以确定发生损坏的位置。 若要隔离内存改写发生位置更确切地说，你可以显式调用`AfxCheckMemory`自己。 例如：  
+ 如果你看到以下消息之一，你需要单步执行代码以确定发生损坏的位置。 若要隔离内存改写发生位置更确切地说，你可以显式调用`AfxCheckMemory`自己。 例如:  
   
 ```  
 ASSERT(AfxCheckMemory());  
@@ -47,5 +48,5 @@ ASSERT(AfxCheckMemory());
   
  根据你的应用程序的性质，可能会发现`afxMemDF`导致你的程序运行得太慢甚至测试。 `afxMemDF`变量会导致`AfxCheckMemory`为到新的每个调用调用和删除。 在这种情况下，你应散点图对你自己调用`AfxCheckMemory`（），如上所示，然后重试隔离内存覆盖这种方式。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [修复发行版本问题](../../build/reference/fixing-release-build-problems.md)

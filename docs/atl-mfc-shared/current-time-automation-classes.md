@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30794f1cd6dbe90abb9929f5b01cb4ea2c196a95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3031d6ff22daf996ef2ab6fccff61fac313773a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-time-automation-classes"></a>当前时间： 自动化类
 下面的过程演示如何创建`COleDateTime`对象并将其初始化与当前时间。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/24/2017
   
      [!code-cpp[NVC_ATLMFC_Utilities#177](../atl-mfc-shared/codesnippet/cpp/current-time-automation-classes_1.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [日期和时间：自动化支持](../atl-mfc-shared/date-and-time-automation-support.md)
 

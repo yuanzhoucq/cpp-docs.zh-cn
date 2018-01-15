@@ -13,11 +13,12 @@ ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf32d38e05da75772ae817c686b154eaed0f69ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6149962694f9ff60a27645d014389d5b3467b7b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-alphabetical-function-reference"></a>CRT 按字母顺序的函数参考
 C 运行时 (CRT) 库参考文档由例程按字母顺序进行排列。 若要基于功能性查找 CRT 例程，请参阅[按类别划分的运行时例程](../../c-runtime-library/run-time-routines-by-category.md)。  
@@ -3484,5 +3485,5 @@ C 运行时 (CRT) 库参考文档由例程按字母顺序进行排列。 若要�
   
  [yn](../../c-runtime-library/reference/y0-y1-yn.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [C 运行时库参考](../../c-runtime-library/c-run-time-library-reference.md)

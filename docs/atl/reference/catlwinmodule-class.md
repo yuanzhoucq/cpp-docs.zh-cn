@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59f555f129548b3ced008b61364fa4a9900e062d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 类
 此类为 ATL 窗口化组件提供支持。  
@@ -62,7 +63,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
   
  `CAtlWinModule`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
@@ -112,7 +113,7 @@ void* ExtractCreateWndData();
 ### <a name="return-value"></a>返回值  
  返回一个指向`_AtlCreateWndData`与之前添加的结构[CAtlWinModule::AddCreateWndData](#addcreatewnddata)，或如果没有对象，则可为 NULL。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
  [类概述](../../atl/atl-class-overview.md)   
  [Module 类](../../atl/atl-module-classes.md)

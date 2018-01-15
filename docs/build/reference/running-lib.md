@@ -1,96 +1,97 @@
 ---
-title: "运行 LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLibrarianTool.TargetMachine"
-  - "Lib"
-  - "VC.Project.VCLibrarianTool.PrintProgress"
-  - "VC.Project.VCLibrarianTool.SuppressStartupBanner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ 命令文件"
-  - "/MACHINE 目标平台选项"
-  - "/NOLOGO 库管理器选项"
-  - "/VERBOSE 库管理器选项"
-  - "冒号命令文件"
-  - "命令文件"
-  - "命令文件, LIB"
-  - "短划线选项说明符"
-  - "正斜杠 (/) 选项说明符"
-  - "LIB [C++], 运行 LIB"
-  - "MACHINE 目标平台选项"
-  - "-MACHINE 目标平台选项"
-  - "NOLOGO 库管理器选项"
-  - "-NOLOGO 库管理器选项"
-  - "分号, 命令文件"
-  - "斜杠 (/)"
-  - "VERBOSE 库管理器选项"
-  - "-VERBOSE 库管理器选项"
+title: "运行 LIB |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLibrarianTool.TargetMachine
+- Lib
+- VC.Project.VCLibrarianTool.PrintProgress
+- VC.Project.VCLibrarianTool.SuppressStartupBanner
+dev_langs: C++
+helpviewer_keywords:
+- -MACHINE target platform option
+- command files, LIB
+- MACHINE target platform option
+- colon command files
+- VERBOSE library manager option
+- /NOLOGO library manager option
+- dash option specifier
+- /MACHINE target platform option
+- forward slash option specifier
+- -NOLOGO library manager option
+- LIB [C++], running LIB
+- -VERBOSE library manager option
+- /VERBOSE library manager option
+- command files
+- NOLOGO library manager option
+- slash (/)
+- semicolon, command files
+- / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a487bb6f6ffd740f6479916c5115bf95d568655
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 运行 LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可使用各种命令行选项来控制 LIB。  
+# <a name="running-lib"></a>运行 LIB
+来控制 LIB，可以使用各种命令行选项。  
   
-## LIB 命令行  
- 若要运行 LIB，请键入命令 `lib`，后跟用 LIB 执行的任务的选项和文件名。  LIB 也接受命令文件中的命令行输入，详见下节中的说明。  LIB 不使用环境变量。  
+## <a name="lib-command-line"></a>LIB 命令行  
+ 若要运行 LIB，键入命令`lib`跟选项和任务的文件名称使用 LIB 执行。 LIB 还接受以下部分所述的命令文件中的命令行输入。 LIB 不使用环境变量。  
   
 > [!NOTE]
->  如果您习惯于使用 LINK32.exe 和 LIB32.exe 工具（随 Windows NT 的 Microsoft Win32 软件开发工具包一起提供），您可能一直在使用 `link32 -lib` 命令或 `lib32` 命令来管理库及创建导入库。  请务必更改您的生成文件和批处理文件以改用 `lib` 命令。  
+>  如果您习惯于 LINK32.exe 和 LIB32.exe 工具提供与 Microsoft Win32 软件开发工具包的 Windows NT 中，您可能一直使用这两个命令`link32 -lib`或命令`lib32`管理库和创建导入库。 请务必更改你的生成文件和批处理文件使用`lib`命令。  
   
-## LIB 命令文件  
- 可使用下列语法在命令文件中将命令行参数传递给 LIB：  
+## <a name="lib-command-files"></a>LIB 命令文件  
+ 可以将命令行自变量传递到命令文件使用以下语法中的 LIB:  
   
 ```  
 LIB @commandfile  
 ```  
   
- `commandfile` 文件是文本文件。  在 @ 符和文件名之间不允许有空格和制表符。  不存在默认扩展名；必须指定完整的文件名，包括任何扩展名。  不能使用通配符。  可使用文件名指定绝对路径或相对路径。  
+ 文件`commandfile`是一个文本文件。 之间允许有空格或制表符 at 符号 (@) 和文件名称。 不存在默认扩展;必须指定完整的文件名，包括任何扩展。 不能使用通配符。 你可以使用的文件名称指定的绝对或相对路径。  
   
- 与在命令行上一样，在命令文件中也可以使用空格或制表符分隔参数；也可以用换行符分隔参数。  使用分号 \(;\) 标记注释。  LIB 忽略从分号到行尾的所有文本。  
+ 在命令文件中，自变量可以由空格或分隔选项卡上，因为它们可以在命令行中;它们还可以由换行符分隔。 使用分号 （;） 来标记注释。 LIB 忽略从分号到行的末尾的所有文本。  
   
- 在命令文件中可指定所有命令行或部分命令行，并且在 LIB 命令中可使用一个以上的命令文件。  LIB 接受命令文件输入，如同它是在命令行中的那个位置指定的一样。  命令文件不能嵌套。  LIB 回显命令文件的内容（除非使用了 \/NOLOGO 选项）。  
+ 你可以在命令文件中，指定所有或命令行的一部分，并且可以使用多个 LIB 命令中的命令文件。 LIB 接受命令文件输入，如同它在命令行上的位置中指定。 不能嵌套命令文件。 LIB 回显命令文件的内容，除非使用 /NOLOGO 选项。  
   
-## 使用 LIB 选项  
- 选项由选项说明符（短划线 \(–\) 或正斜杠 \(\/\)）后跟选项的名称组成。  选项名不能缩写。  某些选项带参数，参数在冒号 \(:\) 后指定。  在选项规范内不允许有空格或制表符。  使用一个或多个空格或制表符来分隔命令行中的选项规范。  选项名及其关键字或文件名参数不区分大小写，但用作参数的标识符区分大小写。  LIB 按照命令行和命令文件中指定的顺序处理选项。  如果某个选项带多个不同的参数，则要处理的最后一个参数优先。  
+## <a name="using-lib-options"></a>使用 LIB 选项  
+ 选项包括选项说明符，它是短划线 （-） 或正斜杠 （/） 后, 跟选项的名称。 选项名不能缩写。 某些选项带自变量，冒号 （:） 后指定。 中的选项规范所允许空格或制表符。 使用一个或多个空格或制表符分隔命令行上的选项规范。 选项名称，而其关键字或文件的名称自变量不区分大小写，但使用作为自变量标识符都是区分大小写。 LIB 处理在命令行上指定的顺序和命令文件中的选项。 一个选项重复使用不同的自变量，如果要处理的最后一个优先。  
   
  下列选项适用于所有的 LIB 模式：  
   
- \/ERRORREPORT \[NONE &#124; PROMPT &#124; QUEUE &#124; SEND\]  
- 如果 lib.exe 在运行时失败，则可使用 \/ERRORREPORT 将有关这些内部错误的信息发送给 Microsoft。  
+ /ERRORREPORT [无 &#124;提示符 &#124;队列 &#124;发送]  
+ 如果 lib.exe 在运行时失败，你可以使用 /ERRORREPORT 信息向 Microsoft 发送有关这些内部错误。  
   
- 有关 \/ERRORREPORT 的更多信息，请参见 [\/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。  
+ /ERRORREPORT 有关的详细信息，请参阅[/errorReport （报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)。  
   
- \/LTCG  
- 导致使用链接时代码生成机制生成库。有关更多信息，请参见 [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。  
+ /clr  
+ 导致要生成使用的链接时代码生成的库。  有关详细信息，请参阅[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)。  
   
- \/MACHINE  
- 指定程序的目标平台。  通常情况下，不需要指定 \/MACHINE。  LIB 从 .obj 文件中推断出计算机类型。  但是，在某些情况下，LIB 因不能确定计算机类型而发出错误信息。  如果发生了此类错误，请指定 \/MACHINE。  在 \/EXTRACT 模式下，此模式只用于验证。  在命令行中使用 `lib /?`  来查看可用的计算机类型。  
+ /MACHINE  
+ 指定程序的目标平台。 通常情况下，你不必指定 /MACHINE。 LIB 机从推断类型的.obj 文件。 但是，在某些情况下，LIB 无法确定计算机类型并发出错误消息。 如果发生此类错误，则指定 /MACHINE。 在 /extract، 模式下，此选项适用于仅验证。 使用`lib /?`在命令行来查看可用的计算机类型。  
   
- \/NOLOGO  
- 取消显示 LIB 版权信息和版本号，并防止回显命令文件。  
+ /NOLOGO  
+ 取消显示 LIB 版权消息和版本，并防止回显的命令文件。  
   
- \/VERBOSE  
- 显示有关会话进度的详细信息，其中包括所添加的 .obj 文件的名称。  该信息发送到标准输出，并可重定向到文件。  
+ /VERBOSE  
+ 显示有关会话，包括所添加的.obj 文件的名称的进度的详细信息。 信息被发送到标准输出，并可重定向到文件。  
   
- \/WX\[:NO\]  
- 将警告视为错误。  有关更多信息，请参见[\/WX（将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)。  
+ /WX [: NO]  
+ 将警告视为错误。 请参阅[/WX （将链接器警告视为错误）](../../build/reference/wx-treat-linker-warnings-as-errors.md)有关详细信息。  
   
- 其他选项只适用于特定的 LIB 模式。  在描述每种模式的节中对这些选项进行了讨论。  
+ 其他选项仅适用于特定的 LIB 模式。 描述每种模式节中讨论了这些选项。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [LIB 引用](../../build/reference/lib-reference.md)

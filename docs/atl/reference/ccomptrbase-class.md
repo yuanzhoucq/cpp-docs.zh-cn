@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,21 +20,19 @@ f1_keywords:
 - ATLCOMCLI/ATL::CComPtrBase::Release
 - ATLCOMCLI/ATL::CComPtrBase::SetSite
 - ATLCOMCLI/ATL::CComPtrBase::p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtrBase class
+dev_langs: C++
+helpviewer_keywords: CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f0d9b4d49a7568df905a595e2cf6494b2b98706d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 类
 此类为使用基于 COM 的内存例程的智能指针类提供基础。  
@@ -94,7 +91,7 @@ class CComPtrBase
 ## <a name="remarks"></a>备注  
  此类为其他智能指针，如使用 COM 内存管理例程，该对话框提供了基础[CComQIPtr](../../atl/reference/ccomqiptr-class.md)和[CComPtr](../../atl/reference/ccomptr-class.md)。 派生的类中添加自己的构造函数和运算符，但是在提供的方法依赖于`CComPtrBase`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcomcli.h  
   
 ##  <a name="advise"></a>CComPtrBase::Advise  
@@ -373,6 +370,5 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="remarks"></a>备注  
  此方法调用[AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

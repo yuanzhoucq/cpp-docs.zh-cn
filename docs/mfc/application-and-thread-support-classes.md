@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2859687c72a674f496e039a4f4b32795cfa4604d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-and-thread-support-classes"></a>应用程序和线程支持类
 每个应用程序具有一个且仅有一个应用程序对象;此对象协调正在运行的程序中的其他对象，并从派生`CWinApp`。  
@@ -76,6 +77,6 @@ ms.lasthandoff: 10/24/2017
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
  维护最近使用的 (MRU) 文件列表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../mfc/class-library-overview.md)
 

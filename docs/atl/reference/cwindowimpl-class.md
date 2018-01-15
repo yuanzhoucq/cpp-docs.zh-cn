@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,42 +20,27 @@ f1_keywords:
 - ATLWIN/ATL::GetWndClassInfo
 - ATLWIN/ATL::WindowProc
 - ATLWIN/ATL::m_pfnSuperWindowProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e9145c3c91eb9507f6383e8971325e5eaab53c3c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa14c3ae6c083cbf440d8b5b94fcb3754bd6fff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 类
 提供创建或子类化窗口的方法。  
   
 > [!IMPORTANT]
->  该类及其成员无法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中执行的应用程序中使用。  
+>  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -110,9 +94,9 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="remarks"></a>备注  
  你可以使用`CWindowImpl`创建窗口或子类现有的窗口。 `CWindowImpl`窗口过程使用消息映射来将消息定向到相应的处理程序。  
   
- `CWindowImpl::Create`创建一个窗口，基于由管理的窗口类信息[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。 `CWindowImpl`包含[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏，这意味着`CWndClassInfo`注册新的窗口类。 如果你想超类现有窗口类，派生您的类从`CWindowImpl`和包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在这种情况下，`CWndClassInfo` 将注册基于现有类的窗口类，但使用 `CWindowImpl::WindowProc`。 例如:   
+ `CWindowImpl::Create`创建一个窗口，基于由管理的窗口类信息[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。 `CWindowImpl`包含[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)宏，这意味着`CWndClassInfo`注册新的窗口类。 如果你想超类现有窗口类，派生您的类从`CWindowImpl`和包括[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏。 在这种情况下，`CWndClassInfo` 将注册基于现有类的窗口类，但使用 `CWindowImpl::WindowProc`。 例如:  
   
- [!code-cpp[NVC_ATL_Windowing # 43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
 >  由于 `CWndClassInfo` 只管理一个窗口类的信息，所以通过 `CWindowImpl` 实例创建的每个窗口都基于同一个窗口类。  
@@ -128,7 +112,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl`派生自**CWindowImplBaseT**，它派生自**CWindowImplRoot**，它派生自**TBase**和[CMessageMap](../../atl/reference/cmessagemap-class.md)。  
   
-|有关以下内容的详细信息|请参阅|  
+|有关以下内容的详细信息|查看|  
 |--------------------------------|---------|  
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的窗口|[ATL 窗口类](../../atl/atl-window-classes.md)|  
@@ -145,8 +129,8 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlwin.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlwin.h  
   
 ##  <a name="create"></a>CWindowImpl::Create  
  创建基于新的窗口类的窗口。  
@@ -173,10 +157,10 @@ HWND Create(
  [in]指定的窗口的名称。 默认值是**NULL**。  
   
  `dwStyle`  
- [in]窗口的样式。 此值被合并在一起对窗口提供的特征类的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]窗口的样式。 此值被合并在一起对窗口提供的特征类的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  `dwExStyle`  
- [in]扩展的窗口样式。 此值被合并在一起对窗口提供的特征类的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]扩展的窗口样式。 此值被合并在一起对窗口提供的特征类的样式。 默认值为特征提供了类样式的完全控制。 有关可能的值的列表，请参阅[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  `MenuOrID`  
  [in]子窗口，窗口标识符。 对于顶级窗口，窗口的菜单句柄。 默认值是**0U**。  
@@ -357,7 +341,7 @@ static LRESULT CALLBACK WindowProc(
  消息处理的结果。  
   
 ### <a name="remarks"></a>备注  
- `WindowProc`使用默认消息映射 (使用声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) 若要将消息定向到相应的处理程序。 如有必要，`WindowProc`调用[DefWindowProc](#defwindowproc)为其他消息处理。 如果未处理最后一条消息，`WindowProc`执行下列任务︰  
+ `WindowProc`使用默认消息映射 (使用声明[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) 若要将消息定向到相应的处理程序。 如有必要，`WindowProc`调用[DefWindowProc](#defwindowproc)为其他消息处理。 如果未处理最后一条消息，`WindowProc`执行下列任务：  
   
 -   执行 unsubclassing 如果窗口已 unsubclassed。  
   
@@ -367,8 +351,7 @@ static LRESULT CALLBACK WindowProc(
   
  您可以重写`WindowProc`提供不同的机制，用于处理消息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

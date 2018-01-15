@@ -1,107 +1,108 @@
 ---
-title: "Implementing an STL-Based Collection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICollectionOnSTLImpl interface"
+title: "实现 c + + 标准库基于集合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Implementing an STL-Based Collection
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL提供 `ICollectionOnSTLImpl` 接口使您可以快速实现标准模板库\(STL\) \-在对象的基于集合接口。  若要了解本选件类的工作方式，使用此选件类实现一个只读集合面向的自动化客户端中通过简单示例\(见下\)将工作。  
+# <a name="implementing-a-c-standard-library-based-collection"></a>实现 c + + 标准库基于集合
+ATL 提供`ICollectionOnSTLImpl`使您能够快速在你的对象上实施基于 c + + 标准库的集合接口的接口。 若要了解此类的工作原理，您将使用通过简单的示例 （见下面），使用此类实现旨在自动化客户端的只读集合。  
   
- 代码示例是从 [ATLCollections示例](../top/visual-cpp-samples.md)。  
+ 代码示例摘自[ATLCollections 示例](../visual-cpp-samples.md)。  
   
- 若要完成此过程，您需要:  
+ 若要完成此过程，你将：  
   
 -   [生成新的简单对象](#vccongenerating_an_object)。  
   
--   生成的接口的[编辑IDL文件](#vcconedit_the_idl)。  
+-   [编辑 IDL 文件](#vcconedit_the_idl)生成的接口。  
   
--   描述如何存储集合项，以及如何的[创建五个typedef](#vcconstorage_and_exposure_typedefs) 将在客户端通过COM接口。  
+-   [创建五个 typedef](#vcconstorage_and_exposure_typedefs)描述的收集项的存储方式以及如何向客户端通过 COM 接口公开。  
   
--   [创建复制策略选件类的两typedef](#vcconcopy_classes)。  
+-   [创建策略类的两个副本 typedef](#vcconcopy_classes)。  
   
--   [创建枚举数和集合实现的typedef](#vcconenumeration_and_collection)。  
+-   [创建枚举器和集合实现的 typedef](#vcconenumeration_and_collection)。  
   
--   [编辑向导生成的C\+\+代码使用集合typedef](#vcconedit_the_generated_code)。  
+-   [编辑向导生成的 c + + 代码才能使用集合 typedef](#vcconedit_the_generated_code)。  
   
--   [添加代码以填充集合](#vcconpopulate_the_collection)。  
+-   [添加代码以在集合中填入](#vcconpopulate_the_collection)。  
   
-##  <a name="vccongenerating_an_object"></a> 生成新的简单对象  
- 创建新项目，确保清除在应用程序设置下面的属性框。  使用ATL添加选件类对话框并添加简单对象向导生成调用 `Words`的简单对象。  确保调用 `IWords` 自己的生成。  生成的选件类的对象将用于表示字\(即字符串\)的集合。  
+##  <a name="vccongenerating_an_object"></a>生成新的简单对象  
+ 创建新项目，确保清除应用程序设置下的属性框。 使用 ATL 添加类对话框中，添加简单对象向导来生成一个简单的对象调用`Words`。 请确保双重接口调用`IWords`生成。 生成的类的对象将用于表示词 （即字符串） 的集合。  
   
-##  <a name="vcconedit_the_idl"></a> 编辑IDL文件  
- 现在，打开IDL文件并添加必要的三个属性将 `IWords` 变成只读集合接口，如下所示:  
+##  <a name="vcconedit_the_idl"></a>编辑 IDL 文件  
+ 现在，打开 IDL 文件并添加打开所需的三个属性`IWords`到只读集合接口，如下所示：  
   
- [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/CPP/implementing-an-stl-based-collection_1.idl)]  
+ [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]  
   
- 这是旨在的只读集合接口的标准窗体考虑了自动化客户端。  此接口定义计算的注释对应于下面注释:  
+ 这是设计时牢记的自动化客户端的只读集合接口的标准窗体。 此接口定义中的编号的注释对应于下面的注释：  
   
-1.  集合接口通过 **IDispatch::Invoke**通常是双重接口的，因为自动化客户端访问 `_NewEnum` 属性。  但是，自动化客户端通过vtable访问剩余方法，因此，双重接口否则最好是调度接口。  
+1.  因为自动化客户端访问，集合接口是通常双重`_NewEnum`属性通过**idispatch:: Invoke**。 但是，自动化客户端可以访问通过 vtable，其余的方法，因此双重接口要优于调度接口。  
   
-2.  如果一个双重接口或调度接口不是扩展在运行时\(也就是说您不会通过 **IDispatch::Invoke**提供额外的方法或属性\)，应将 **nonextensible** 特性应用于定义。  此特性允许自动化客户端执行完整的代码验证在编译时。  在这种情况下，接口不应扩展的。  
+2.  如果双重接口或调度接口不会将扩展在运行时 (即，不会提供额外的方法或属性通过**idispatch:: Invoke**)，则应该应用**nonextensible**属性设为你的定义。 此属性允许自动化客户端执行完整的代码在编译时的验证。 在这种情况下，不应扩展接口。  
   
-3.  如果您希望自动化客户端可以使用此属性，正确的DISPID非常重要。  （请注意只有在 **DISPID\_NEWENUM**的一个下划线。）  
+3.  如果你希望自动化客户端能够使用此属性很重要的正确的 DISPID。 (请注意，没有中的只有一个下划线**DISPID_NEWENUM**。)  
   
-4.  可以提供任何值作为 **Item** 属性的DISPID。  但是，**Item** 通常使用 **DISPID\_VALUE** 使其成为默认属性集合。  这允许自动化客户端引用该属性，而无需显式命名为。  
+4.  你可以提供任何值的 DISPID 作为**项**属性。 但是，**项**通常使用**DISPID_VALUE**以使其集合的默认属性。 这允许自动化客户端不显式命名的情况下引用的属性。  
   
-5.  用于 **Item** 属性的返回值的数据类型是存储在集合中的项的类型，就COM客户端而言。  接口返回字符串，因此，应使用标准COM字符串类型，`BSTR`。  您不久，将看到您在不同的布局以在内部存储数据。  
+5.  用于的返回值的数据类型**项**属性是存储在集合中，就 COM 客户端所关注的项的类型。 接口返回的字符串，因此，应使用标准的 COM 字符串类型， `BSTR`。 你可以将数据存储在不同的格式内部很快就会看到如。  
   
-6.  用于 **Count** 属性的DISPID的值完全是任意的。  如果没有此属性的标准DISPID。  
+6.  用于的 DISPID 值**计数**属性是完全任意。 为此属性没有标准 DISPID。  
   
-##  <a name="vcconstorage_and_exposure_typedefs"></a> 创建存储和风险的Typedef  
- 对于集合接口中定义，您需要决定如何将存储数据，因此，数据如何通过枚举器将显示。  
+##  <a name="vcconstorage_and_exposure_typedefs"></a>为存储和公开创建 Typedefs  
+ 集合接口定义后，你需要决定将存储数据的方式，以及如何将枚举器通过公开数据。  
   
- 在许多的typedef形式，这些问题的答案可以提供，可以在标头文件顶部附近您新创建的选件类中添加:  
+ 可以在大量的 typedef，你可以为你新创建的类添加标头文件的顶部附近的窗体中提供这些问题的答案：  
   
- [!code-cpp[NVC_ATL_COM#25](../atl/codesnippet/CPP/implementing-an-stl-based-collection_2.h)]  
+ [!code-cpp[NVC_ATL_COM#25](../atl/codesnippet/cpp/implementing-an-stl-based-collection_2.h)]  
   
- 在这种情况下，将将数据存储为 **std::string**s. **std::vector**。  **std::vector** 是的行为与托管数组的STL容器选件类。  **std::string** 是标准C\+\+库的字符串选件类。  这些选件类便于与字符串一起使用的集合。  
+ 在这种情况下，你将在其中存储数据作为**std:: vector**的**std:: string**s。 **std:: vector**是表现得像托管数组的 c + + 标准库容器类。 **std:: string**是 c + + 标准库的字符串类。 这些类使其易于使用的字符串的集合。  
   
- 因为Visual Basic支持此接口的成功很重要，`_NewEnum` 属性返回的枚举数必须支持 **IEnumVARIANT** 接口。  这是Visual Basic了解的唯一枚举器接口。  
+ Visual Basic 支持对此接口的成功至关重要，因为返回的枚举数`_NewEnum`属性必须支持**IEnumVARIANT**接口。 这是 Visual Basic 被理解的唯一枚举器接口。  
   
-##  <a name="vcconcopy_classes"></a> 创建复制策略选件类的Typedef  
- 您创建已在目前的typedef提供需要创建副本选件类的进一步typedef将由枚举数和集合使用的所有信息:  
+##  <a name="vcconcopy_classes"></a>为复制策略类创建 Typedefs  
+ 到目前为止创建的 typedef 提供你需要创建更多的枚举器和集合将使用的复制类的 typedef 的所有信息：  
   
- [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/CPP/implementing-an-stl-based-collection_3.h)]  
+ [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]  
   
- 在此示例中，您在VCUE\_Copy.h和VCUE\_CopyString.h可以使用中定义的自定义 `GenericCopy` 选件类从 [ATLCollections](../top/visual-cpp-samples.md) 示例。  在其他代码可以使用此选件类，但是，您可能需要定义 `GenericCopy` 的进一步专用化支持用于收集的数据类型。  有关更多信息，请参见 [ATL复制策略类选件](../atl/atl-copy-policy-classes.md)。  
+ 在此示例中，你可以使用自定义`GenericCopy`VCUE_Copy.h 和从 VCUE_CopyString.h 中定义的类[ATLCollections](../visual-cpp-samples.md)示例。 你可以在其他代码中，使用此类，但你可能需要进一步定义的专用化`GenericCopy`以支持您自己的集合中使用的数据类型。 有关详细信息，请参阅[ATL 复制策略类](../atl/atl-copy-policy-classes.md)。  
   
-##  <a name="vcconenumeration_and_collection"></a> 创建枚举和集合的Typedef  
- 在typedef形式，现在需要所有模板的参数专用此情况的 `CComEnumOnSTL` 和 `ICollectionOnSTLImpl` 选件类提供的。  为了简化使用专用化，请再创建两个函数如下所示:  
+##  <a name="vcconenumeration_and_collection"></a>为枚举和集合创建 Typedefs  
+ 现在所有模板参数需要专用化`CComEnumOnSTL`和`ICollectionOnSTLImpl`typedef 的形式提供了这种情况下的类。 若要简化的使用的专用化，创建两个详细 typedef 如下所示：  
   
- [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/CPP/implementing-an-stl-based-collection_4.h)]  
+ [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]  
   
- 现在 `CollectionType` 是实现前面定义的 `IWords` 接口 `ICollectionOnSTLImpl` 的专用化的同义词并提供支持 **IEnumVARIANT**的枚举器。  
+ 现在`CollectionType`是专用化的同义词`ICollectionOnSTLImpl`实现`IWords`接口前面定义和提供的枚举器支持的**IEnumVARIANT**。  
   
-##  <a name="vcconedit_the_generated_code"></a> 编辑向导生成的代码  
- 现在必须从 `CollectionType` typedef表示的接口实现派生 `CWords` 而不是 `IWords`，如下所示:  
+##  <a name="vcconedit_the_generated_code"></a>编辑由向导生成的代码  
+ 现在必须派生`CWords`从所表示的接口实现`CollectionType`typedef 而非`IWords`，如下所示：  
   
- [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/CPP/implementing-an-stl-based-collection_5.h)]  
+ [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]  
   
-##  <a name="vcconpopulate_the_collection"></a> 添加代码以填充集合  
- 剩下的唯一事情是用数据填充矢量。  在此简单示例中，可以添加几个单词到构造函数的集合选件class ":  
+##  <a name="vcconpopulate_the_collection"></a>添加代码以填充的集合  
+ 保持的唯一操作是填充具有数据的向量。 在此简单示例中，你可以将几个字添加到类的构造函数中的集合：  
   
- [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/CPP/implementing-an-stl-based-collection_6.h)]  
+ [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]  
   
- 现在，可以测试与所选的客户端代码。  
+ 现在，你可以使用所选的客户端来测试代码。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [集合和枚举数](../atl/atl-collections-and-enumerators.md)   
- [ATLCollections示例](../top/visual-cpp-samples.md)   
- [ATL Copy Policy Classes](../atl/atl-copy-policy-classes.md)
+ [ATLCollections 示例](../visual-cpp-samples.md)   
+ [ATL 复制策略类](../atl/atl-copy-policy-classes.md)
+

@@ -17,11 +17,12 @@ ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36c1baec22ce0804b4271718dd9495c4213941b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20715b48413a705aa2338e7e37538171e4141cad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS （将添加到 PDB 的 Natvis）
   
@@ -50,7 +51,7 @@ PDB 文件不通过使用创建时，LINK 忽略 /NATVIS [/调试](../../build/r
   
 -   此选项没有编程等效。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
   
 [在 Visual Studio 调试器中创建本机对象的自定义视图](/visualstudio/debugger/create-custom-views-of-native-objects)  
 [设置链接器选项](../../build/reference/setting-linker-options.md)  

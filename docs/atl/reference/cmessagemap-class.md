@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d60befb61e86c2ba8abc18a6eca1578df87b777f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 类
 此类允许对象的消息映射要由另一个对象的访问。  
@@ -58,7 +59,7 @@ class ATL_NO_VTABLE CMessageMap
   
  有关消息映射的详细信息，请参阅[消息映射](../../atl/message-maps-atl.md)本文"ATL 窗口类。"  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
@@ -99,7 +100,7 @@ virtual BOOL ProcessWindowMessage(
 ### <a name="remarks"></a>备注  
  由窗口过程的调用[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)对象或对象的动态链接到消息映射。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CDynamicChain 类](../../atl/reference/cdynamicchain-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   

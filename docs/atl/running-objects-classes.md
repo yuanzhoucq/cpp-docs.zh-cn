@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a62df236672d8efd6cc464041273c47f7952144
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cea13d73fca1fcc8576c55881bbf9a6af7108a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-objects-classes"></a>正在运行的对象类
 下面的类为运行对象提供支持：  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相关文章  
  [ATL 教程](../atl/active-template-library-atl-tutorial.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)
 

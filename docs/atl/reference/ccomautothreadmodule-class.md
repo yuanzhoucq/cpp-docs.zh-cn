@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,39 +19,24 @@ f1_keywords:
 - ATLBASE/ATL::m_Allocator
 - ATLBASE/ATL::m_nThreads
 - ATLBASE/ATL::m_pApartments
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 094d10069b854d122e835f7d12f9ef095775db2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 类
-ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 > [!IMPORTANT]
 >  此类及其成员无法在 Windows 运行时中执行的应用中使用。  
@@ -100,9 +84,9 @@ class CComAutoThreadModule : public CComModule
   
  派生您的模块从`CComAutoThreadModule`如果想要在多个单元中创建对象。 你还必须包括[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)中对象的类定义，以指定宏[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)作为类工厂。  
   
- 默认情况下，ATL COM 应用程序向导 （ATL 项目向导 Visual Studio.NET 中） 将派生您的模块从`CComModule`。 若要使用`CComAutoThreadModule`，修改的类定义。 例如：  
+ 默认情况下，ATL COM 应用程序向导 （ATL 项目向导 Visual Studio.NET 中） 将派生您的模块从`CComModule`。 若要使用`CComAutoThreadModule`，修改的类定义。 例如:  
   
- [!code-cpp[NVC_ATL_AxHost # 2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -119,11 +103,11 @@ class CComAutoThreadModule : public CComModule
   
  `CComAutoThreadModule`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlbase.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlbase.h  
   
 ##  <a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT CreateInstance(
@@ -149,7 +133,7 @@ HRESULT CreateInstance(
  选择一个线程，然后在关联的单元内创建一个对象。  
   
 ##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 DWORD dwThreadID;
@@ -159,7 +143,7 @@ DWORD dwThreadID;
  包含当前线程的标识符。  
   
 ##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 static int GetDefaultThreads();
@@ -172,7 +156,7 @@ static int GetDefaultThreads();
  此静态函数动态计算最大为 EXE 模块，基于的处理器数量的线程数。 默认情况下，此返回值传递给[Init](#init)方法来创建多个线程。  
   
 ##  <a name="init"></a>CComAutoThreadModule::Init  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 HRESULT Init(
@@ -199,7 +183,7 @@ HRESULT Init(
  初始化数据成员并创建由指定的线程数`nThreads`。  
   
 ##  <a name="lock"></a>CComAutoThreadModule::Lock  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 LONG Lock();
@@ -212,7 +196,7 @@ LONG Lock();
  在模块和当前线程的锁计数上执行原子递增。 `CComAutoThreadModule`使用的模块锁计数来确定任何客户端是否正在访问该模块。 用于统计目的使用当前线程上的锁计数。  
   
 ##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 ThreadAllocator  m_Allocator;
@@ -222,7 +206,7 @@ ThreadAllocator  m_Allocator;
  管理线程选择的对象。 默认情况下，`ThreadAllocator`类模板参数是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。  
   
 ##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 int m_nThreads;
@@ -232,7 +216,7 @@ int m_nThreads;
  包含 EXE 模块中的线程的数。 当[Init](#init)调用时，`m_nThreads`设置为`nThreads`参数值。 每个线程关联的单元由[CComApartment](../../atl/reference/ccomapartment-class.md)对象。  
   
 ##  <a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 CComApartment* m_pApartments;
@@ -242,7 +226,7 @@ CComApartment* m_pApartments;
  指向数组的[CComApartment](../../atl/reference/ccomapartment-class.md)对象，其中每个管理模块中的某个单元。 数组中元素的数目取决于[m_nThreads](#m_nthreads)成员。  
   
 ##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
- ATL 7.0 截至`CComAutoThreadModule`已过时︰ 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
+ ATL 7.0 截至`CComAutoThreadModule`已过时： 请参阅[ATL Module 类](../../atl/atl-module-classes.md)有关详细信息。  
   
 ```
 LONG Unlock();
@@ -256,7 +240,6 @@ LONG Unlock();
   
  当模块锁计数达到零时，模块可以被卸载。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   
  [Module 类](../../atl/atl-module-classes.md)
-

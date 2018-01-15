@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac484e58b585a09eff40d1b058e44dad6b8d394c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34c0b46d8a7d89ca46dc4361fe85469bd64e538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown 实现类
 下面的类实现**IUnknown**及相关方法：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相关文章  
  [ATL COM 对象基础知识](../atl/fundamentals-of-atl-com-objects.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   
  [聚合和类工厂宏](../atl/reference/aggregation-and-class-factory-macros.md)   
  [COM 映射宏](../atl/reference/com-map-macros.md)   

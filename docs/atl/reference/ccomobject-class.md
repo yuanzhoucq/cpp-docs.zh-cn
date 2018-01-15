@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLCOM/ATL::CComObject::CreateInstance
 - ATLCOM/ATL::CComObject::QueryInterface
 - ATLCOM/ATL::CComObject::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObject class
+dev_langs: C++
+helpviewer_keywords: CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobject-class"></a>CComObject 类
 此类实现**IUnknown**非聚合对象。  
@@ -88,8 +71,8 @@ class CComObject : public Base
   
  `CComObject`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlcom.h  
   
 ##  <a name="addref"></a>CComObject::AddRef  
  递增上对象的引用计数。  
@@ -109,7 +92,7 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>参数  
- **void\***  
+ \*void  
  [in]未使用此未命名的参数。 它位于与其他对称性**CCom***XXX*`Object`*XXX*构造函数。  
   
 ### <a name="remarks"></a>备注  
@@ -129,7 +112,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- 此静态函数使你可以创建一个新**CComObject** `Base` **>**对象，而无需开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此静态函数使你可以创建一个新**CComObject <** `Base`  **>** 对象，而无需开销[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -137,7 +120,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>参数  
  `pp`  
- [out]指向的指针**CComObject** `Base` **>**指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
+ [out]指向的指针**CComObject <** `Base`  **>** 指针。 如果`CreateInstance`不成功，`pp`设置为**NULL**。  
   
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
@@ -145,12 +128,12 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ### <a name="remarks"></a>备注  
  返回的对象具有引用计数为零，因此调用`AddRef`立即，然后使用**版本**以完成后释放对象指针上的引用。  
   
- 如果不执行需要直接访问的对象，但仍想要创建一个新的对象，而无需的开销`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)相反。  
+ 如果不执行需要直接访问的对象，但仍想要创建一个新的对象，而无需开销`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)相反。  
   
 ### <a name="example"></a>示例  
- [!code-cpp[NVC_ATL_COM #38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  检索指向所请求的接口的指针。  
@@ -184,10 +167,9 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>返回值  
  此函数返回的对象上的新递减引用计数。 在调试版本中，返回的值可能是用于诊断或测试。 在非调试版本中，**版本**始终返回 0。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)   
  [CComPolyObject 类](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [类概述](../../atl/atl-class-overview.md)
-

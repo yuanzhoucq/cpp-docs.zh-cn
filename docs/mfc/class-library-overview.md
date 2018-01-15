@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 014e1792a3431fee8dad673d17afdb84ef620936
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-library-overview"></a>类库概述
 本概述分类并介绍在 Microsoft 基础类库 (MFC) 版本 9.0 的类。 MFC，集合在一起中的类构成的应用程序框架-为 Windows API 编写的应用程序的框架。 你的编程任务是特定于你的应用程序的代码中填充。  
@@ -125,6 +126,6 @@ ms.lasthandoff: 10/24/2017
   
  除了本概述中列出的类，MFC 库包含大量的全局函数、 全局变量和宏。 没有概述和详细的列表，这些主题中[MFC 宏和全局函数](../mfc/reference/mfc-macros-and-globals.md)，这遵循到 MFC 类按字母顺序的参考。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 桌面应用程序](../mfc/mfc-desktop-applications.md)
 

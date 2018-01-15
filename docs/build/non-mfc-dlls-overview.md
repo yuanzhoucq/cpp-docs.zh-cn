@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ccd5f54464fa9b685df40a808166658a49af6f6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce755f88e8a9efaaacd456206d599dd5db75443
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概述
 非 MFC DLL 是在内部，不使用 MFC 的 DLL，可以由 MFC 或非 MFC 可执行文件调用 DLL 中导出的函数。 函数通常被导出从非 MFC DLL 使用标准的 C 接口。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [MFC 扩展 DLL：概述](../build/extension-dlls-overview.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DLL 的类型](../build/kinds-of-dlls.md)

@@ -1,60 +1,60 @@
 ---
-title: "/GZ（启用堆栈帧运行时错误检查） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gz"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GZ 编译器选项 [C++]"
-  - "调试版本, 捕捉版本生成错误"
-  - "GZ 编译器选项 [C++]"
-  - "-GZ 编译器选项 [C++]"
-  - "发行版本错误"
+title: "-GZ (启用堆栈帧运行时错误检查) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /gz
+dev_langs: C++
+helpviewer_keywords:
+- -GZ compiler option [C++]
+- release-build errors
+- /GZ compiler option [C++]
+- GZ compiler option [C++]
+- debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 621878aacaf2a1b36ed0014451ada504d8a24556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /GZ（启用堆栈帧运行时错误检查）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-执行与 [\/RTC（运行时错误检查）](../../build/reference/rtc-run-time-error-checks.md) 选项相同的操作。  已否决。  
+# <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ（启用堆栈帧运行时错误检查）
+执行相同的操作[/RTC （运行时错误检查）](../../build/reference/rtc-run-time-error-checks.md)选项。 已否决。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 /GZ  
 ```  
   
-## 备注  
- **\/GZ** 仅用于非优化的 \([\/Od（禁用（调试））](../../build/reference/od-disable-debug.md)\) 生成。  
+## <a name="remarks"></a>备注  
+ **/GZ**仅供非优化使用 ([/Od （禁用 （调试））](../../build/reference/od-disable-debug.md)) 生成。  
   
- **\/GZ** 已弃用；请改用 [\/RTC（运行时错误检查）](../../build/reference/rtc-run-time-error-checks.md)。  有关详细信息，请参阅[Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/zh-cn/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce)。  
+ **/GZ**自 Visual Studio 2005; 起弃用使用[/RTC （运行时错误检查）](../../build/reference/rtc-run-time-error-checks.md)相反。 不推荐使用的编译器选项的列表，请参阅**已弃用并删除的编译器选项**中[按类别列出的编译器选项](../../build/reference/compiler-options-listed-by-category.md)。  
   
-### 在 Visual Studio 开发环境中设置此编译器选项  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  单击**“C\/C\+\+”**文件夹。  
+2.  单击 **“C/C++”** 文件夹。  
   
-3.  单击**“命令行”**属性页。  
+3.  点击“命令行”  属性页。  
   
-4.  在**“附加选项”**框中键入编译器选项。  
+4.  在 **“附加选项”** 框中键入编译器选项。  
   
-### 以编程方式设置此编译器选项  
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

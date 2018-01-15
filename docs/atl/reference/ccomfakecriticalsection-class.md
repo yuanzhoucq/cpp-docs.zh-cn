@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,19 @@ f1_keywords:
 - ATLCORE/ATL::CComFakeCriticalSection::Lock
 - ATLCORE/ATL::CComFakeCriticalSection::Term
 - ATLCORE/ATL::CComFakeCriticalSection::Unlock
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComFakeCriticalSection class
+dev_langs: C++
+helpviewer_keywords: CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b9f7b3b56193100d21ef7aebaba0ab6d9ecfd5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 类
 此类提供相同的方法为[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)但未提供关键部分。  
@@ -56,7 +53,7 @@ class CComFakeCriticalSection
   
  通常情况下，使用`CComFakeCriticalSection`通过`typedef`命名，为`AutoCriticalSection`或`CriticalSection`。 使用时[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，这两种`typedef`名称引用`CComFakeCriticalSection`。 使用时[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，它们引用[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`分别。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcore.h  
   
 ##  <a name="init"></a>CComFakeCriticalSection::Init  
@@ -99,6 +96,5 @@ HRESULT Unlock() throw();
 ### <a name="return-value"></a>返回值  
  返回，则为 S_OK。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2a57fd92183c60e245ecdd1ba237da74c9e575b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>用架构行集合获取元数据
 有时需要不必打开行集合即可获得有关提供程序、行集合、表、列或其他数据库信息的信息。 有关数据库结构的数据被称为元数据，可以通过多种不同的方法来检索元数据。 一种方法是使用架构行集合。  
@@ -59,7 +62,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  [CRestrictions](../../data/oledb/crestrictions-class.md)类提供了限制支持。 创建架构行集的实例后，调用[crestrictions:: Open](../../data/oledb/crestrictions-open.md)。 此方法返回基于所指定限制的结果集。  
   
- 若要指定限制，请参阅[附录 b： 架构行集](http://go.microsoft.com/fwlink/?linkid=64681)并查找你使用的行集。 例如， **CColumns**对应于[列行集](http://go.microsoft.com/fwlink/?linkid=64682); 该主题列出了 COLUMNS 行集合中的限制列： TABLE_CATALOG、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 必须遵循此顺序来指定你的限制。  
+ 若要指定限制，请参阅[附录 b： 架构行集](http://go.microsoft.com/fwlink/p/?linkid=64681)并查找你使用的行集。 例如， **CColumns**对应于[列行集](http://go.microsoft.com/fwlink/p/?linkid=64682); 该主题列出了 COLUMNS 行集合中的限制列： TABLE_CATALOG、 TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 必须遵循此顺序来指定你的限制。  
   
  因此，例如，如果你想要限制的表名，注意 TABLE_NAME 是第三个限制列，，然后调用**打开**，所需的表名指定为第三个限制参数，如以下示例所示。  
   
@@ -89,11 +92,11 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  有关架构行集的引用，typedef 类中提供的 OLE DB 模板 (请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   
- 有关 OLE DB 架构行集合，包括限制列的详细信息请参阅[附录 b： 架构行集](http://go.microsoft.com/fwlink/?linkid=64681)OLE DB 程序员参考中。  
+ 有关 OLE DB 架构行集合，包括限制列的详细信息请参阅[附录 b： 架构行集](http://go.microsoft.com/fwlink/p/?linkid=64681)OLE DB 程序员参考中。  
   
  有关如何使用架构行集类的更复杂的示例，请参阅[CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)和[DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)示例。  
   
  有关架构行集提供程序支持的信息，请参阅[支持架构行集](../../data/oledb/supporting-schema-rowsets.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用访问器](../../data/oledb/using-accessors.md)

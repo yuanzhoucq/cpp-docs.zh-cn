@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f03d3f2bb10fa6b12cb046fd77f45a2bc6153064
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2412ab15317604e1d6cccc5535226d429d8ba6b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-the-pathname"></a>指定路径名
 每个输出文件选项接受*路径名*自变量可以指定的位置和输出文件的名称。 自变量可以包括驱动器名称、 目录和文件名称。 不允许有空格选项和自变量之间。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 |设备名称|表示|  
 |-----------------|----------------|  
 |AUX|辅助设备|  
-|CON|Console|  
+|CON|控制台|  
 |PRN|打印机|  
 |NUL|Null 设备 （创建任何文件）|  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
 CL /FmPRN HELLO.CPP  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [输出文件 (/ F) 选项](../../build/reference/output-file-f-options.md)   
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

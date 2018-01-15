@@ -1,34 +1,36 @@
 ---
-title: "Aggregation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregate objects [C++]"
-  - "aggregation [C++]"
+title: "聚合 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- aggregation [C++]
+- aggregate objects [C++]
 ms.assetid: 7125bb8e-b269-4b50-9bba-295b467a54cc
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8dbb0332bc7e55464e5b8af9d0b57e236f23dc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Aggregation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="aggregation"></a>聚合
+有对象的实现者希望充分利用预构建的另一个对象提供的服务的时间。 此外，它想要此第二个对象，以显示为第一个自然一部分。 COM 达到这两个目标通过包容和聚合。  
+  
+ 聚合意味着在包含的 （外部） 对象作为其创建过程的一部分创建包含 （内部） 对象的接口的内部对象公开的外部。 对象允许对自身或不是可聚合。 如果是，它必须遵循特定的规则的聚合来正常工作。  
+  
+ 主要原因是，所有**IUnknown**上包含的对象的方法调用必须委托到包含的对象。  
+  
+## <a name="see-also"></a>请参阅  
+ [COM 简介](../atl/introduction-to-com.md)   
+ [重复使用对象](http://msdn.microsoft.com/library/windows/desktop/ms678443)
 
-有时，当对象的实现者希望利用另一个提供的服务，生成对象。  此外，所需第二个对象显示为自然部分的第一。  通过COM包容和摘要实现这两个目标。  
-  
- 摘要意味着包含的\(外部\)对象创建包含\(内部\)对象作为其创建过程的一部分，并且内部对象的接口由外部显示。  对象使自身可聚集的。  如果是，则它必须遵循摘要的某些规则正常工作。  
-  
- 首先，所有 **IUnknown** 方案中包含的对象调用必须委托给包含的对象。  
-  
-## 请参阅  
- [COM 介绍](../atl/introduction-to-com.md)   
- [Reusing Objects](http://msdn.microsoft.com/library/windows/desktop/ms678443)

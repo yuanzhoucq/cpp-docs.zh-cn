@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5113abbf63fdb7ab87363e5344806d6eb34e0dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 请注意以下限制的使用**/clr**:  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
 -   使用时**/Zi**与**/clr**，但会性能产生影响。 有关详细信息，请参阅[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
   
--   将宽字符传递到.NET Framework 而无需还指定输出例程[/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)或不带强制转换为字符`__wchar_t`将显示为输出`unsigned short int`。 例如:   
+-   将宽字符传递到.NET Framework 而无需还指定输出例程[/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)或不带强制转换为字符`__wchar_t`将显示为输出`unsigned short int`。 例如:  
   
     ```  
     Console::WriteLine(L' ')              // Will output 32.  
@@ -102,5 +103,5 @@ ms.lasthandoff: 10/24/2017
   
 -   不能使用[编译器 COM 支持](../../cpp/compiler-com-support.md)类与**/clr: pure**或**/clr: safe**。  
   
-## <a name="see-also"></a>另请参阅  
- [/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
+## <a name="see-also"></a>请参阅  
+ [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)

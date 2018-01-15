@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4200f084ecfe441b0d17df0d71ebc03fcde081cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67be1947b3fa08c26d659838922ce42a905167a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-ole-exceptions"></a>异常：OLE 异常
 OLE 中处理异常的技术和工具与处理其他异常的技术和工具是相同的。 异常处理的详细信息，请参阅文章[c + + 异常处理](../cpp/cpp-exception-handling.md)。  
@@ -50,6 +51,6 @@ OLE 中处理异常的技术和工具与处理其他异常的技术和工具是�
   
  两个全局函数对应于两个 OLE 异常类： [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception)和[AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception)。 可使用它们分别引发一般 OLE 异常和 OLE 调度异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理](../mfc/exception-handling-in-mfc.md)
 

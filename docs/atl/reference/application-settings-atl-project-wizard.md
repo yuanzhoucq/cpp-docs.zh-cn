@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 312c2b879f19e670d9737bfa530e0cc2a35bfe58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12b7e383716d7cfa330bdfdebe21c33550669cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-atl-project-wizard"></a>应用程序设置，ATL 项目向导
 使用**应用程序设置**ATL 项目向导设计并将基本功能添加到新的 ATL 项目页。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 -   **支持组件注册机构**如果 ATL 项目包含对 COM + 1.0 组件的支持，则可以设置此选项。 组件注册机构允许你 COM + 1.0 对象获取组件的列表、 注册组件，或注销组件 （单独或在一次）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL 项目向导](../../atl/reference/atl-project-wizard.md)   
  [创建 ATL 项目](../../atl/reference/creating-an-atl-project.md)   
  [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)

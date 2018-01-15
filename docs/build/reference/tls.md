@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da65c67a38d9517ed2671fcea69a583b9ba65d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5adf246e343a16abebdc584589e9633b195444ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tls"></a>/TLS
 显示从可执行文件的 IMAGE_TLS_DIRECTORY 结构。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
   
  IMAGE_TLS_DIRECTORY 在 winnt.h 中定义。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [DUMPBIN 选项](../../build/reference/dumpbin-options.md)

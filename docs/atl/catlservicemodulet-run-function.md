@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 383b054314982a0828d51083a904ccb2f7ddb5d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ff3efe9298b7a2c11e7f83ef58640b2947519b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run 函数
 **运行**包含对的调用`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 后调用，`PreMessageLoop`首先将存储服务的线程 id。 服务将使用此 ID 来关闭它自己通过发送**WM_QUIT**消息使用 Win32 API 函数， [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  后指定安全，以便新客户端可以连接到该程序是向 COM 注册对象。 最后，程序将告知服务控制管理器 (SCM)，它正在运行，并且程序将进入具有消息循环。 程序保持运行，直到它在服务关闭时将退出的消息发送。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [服务](../atl/atl-services.md)   
  [CSecurityDesc 类](../atl/reference/csecuritydesc-class.md)   
  [CSid 类](../atl/reference/csid-class.md)   

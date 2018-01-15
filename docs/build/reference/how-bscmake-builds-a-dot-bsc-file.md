@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: adc340a30fcf0292c3dc7fa0e595d488b4046431
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE 如何生成 .Bsc 文件
 BSCMAKE 生成或重新生成，以最高效的方式，它可以在.bsc 文件。 若要避免潜在问题，务必了解生成过程。  
@@ -31,5 +32,5 @@ BSCMAKE 生成或重新生成，以最高效的方式，它可以在.bsc 文件�
   
 -   若要成功执行为增量生成，必须存在.bsc 文件。 所有相关的.sbr 文件，即使空文件，必须存在并且必须 BSCMAKE 命令行上指定。 如果省略的.sbr 文件从命令行，BSCMAKE 从文件中删除它的贡献。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成 .Bsc 文件](../../build/reference/building-a-dot-bsc-file.md)

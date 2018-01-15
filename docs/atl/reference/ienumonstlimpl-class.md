@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,21 +18,19 @@ f1_keywords:
 - ATLCOM/ATL::IEnumOnSTLImpl::m_iter
 - ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
 - ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
-dev_langs:
-- C++
-helpviewer_keywords:
-- IEnumOnSTLImpl class
+dev_langs: C++
+helpviewer_keywords: IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 98fb3d4562abc75f1023201a5bb7939275bb173f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 类
 此类定义一个基于 c + + 标准库集合的枚举器接口。  
@@ -97,7 +94,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
  `IEnumOnSTLImpl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="init"></a>IEnumOnSTLImpl::Init  
@@ -212,6 +209,5 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="return-value"></a>返回值  
  标准 `HRESULT` 值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

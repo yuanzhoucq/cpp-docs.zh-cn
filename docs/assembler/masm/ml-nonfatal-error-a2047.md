@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eee50203818ad94edb3d020973c6c33959d2475e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36b6fed096b6285b56864cc6ea61ff529b57e605
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2047"></a>ML 非致命错误 A2047
 **空 (null) 的字符串**  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  对于有效的字符串，它必须包含 1-255 个字符。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ML 错误消息](../../assembler/masm/ml-error-messages.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,37 +14,22 @@ f1_keywords:
 - ATLCOM/ATL::IProvideClassInfo2Impl::GetClassInfo
 - ATLCOM/ATL::IProvideClassInfo2Impl::GetGUID
 - ATLCOM/ATL::IProvideClassInfo2Impl::_tih
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - IProvideClassInfo2Impl class
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 0d3bed0f625e396b63ada19ded02ba9ad3b697b0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6fe466608acaecfaf6219b6d15d27e0611ac2511
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 类
 此类提供的默认实现[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)和[IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)方法。  
@@ -63,28 +47,28 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 #### <a name="parameters"></a>参数  
  *pcoclsid*  
- 指向 coclass' 标识符的指针。  
+ 指向组件类的标识符的指针。  
   
  *psrcid*  
- 一个指向 coclass' 默认的传出调度接口的标识符。  
+ 指向传出调度接口的组件类的默认值的标识符的指针。  
   
  `plibid`  
- 一个指向包含接口的信息的类型库的 LIBID。 默认情况下，传递服务器级类型库。  
+ 指向包含接口的信息的类型库的 LIBID 的指针。 默认情况下，传递服务器级类型库。  
   
  `wMajor`  
- 类型库的主要版本。 默认值为 1。  
+ 类型库的主版本。 默认值为 1。  
   
  `wMinor`  
- 类型库的次要版本。 默认值为 0。  
+ 类型库的次版本。 默认值为 0。  
   
  `tihclass`  
- 用于管理 coclass' 类型的信息的类。 默认值为 `CComTypeInfoHolder`。  
+ 用于管理组件类的类型信息的类。 默认值为 `CComTypeInfoHolder`。  
   
 ## <a name="members"></a>成员  
   
 ### <a name="constructors"></a>构造函数  
   
-|名称|说明|  
+|name|描述|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|构造函数。|  
   
@@ -92,17 +76,17 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 |名称|描述|  
 |----------|-----------------|  
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|检索**ITypeInfo**与 coclass' 的类型信息的指针。|  
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|检索**ITypeInfo**指向组件类的类型信息。|  
 |[IProvideClassInfo2Impl::GetGUID](#getguid)|检索对象的传出调度接口的 GUID。|  
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|说明|  
+|name|描述|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::_tih](#_tih)|管理组件类的类型信息。|  
   
 ## <a name="remarks"></a>备注  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)接口扩展[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)通过添加`GetGUID`方法。 此方法允许客户端检索对象的传出接口 IID 为其默认事件集。 类`IProvideClassInfo2Impl`提供的默认实现**IProvideClassInfo**和`IProvideClassInfo2`方法。  
+ [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764)接口扩展[IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303)通过添加`GetGUID`方法。 此方法允许客户端以检索对象的传出接口 IID 为其默认事件集。 类`IProvideClassInfo2Impl`提供的默认实现**IProvideClassInfo**和`IProvideClassInfo2`方法。  
   
  `IProvideClassInfo2Impl`包含类型的静态成员`CComTypeInfoHolder`管理组件类的类型信息。  
   
@@ -111,18 +95,18 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
  `IProvideClassInfo2Impl`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlcom.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlcom.h  
   
 ##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
- 检索`ITypeInfo`与 coclass' 的类型信息的指针。  
+ 检索`ITypeInfo`指向组件类的类型信息。  
   
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 请参阅[IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) Windows SDK 中。  
   
 ##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
  检索对象的传出调度接口的 GUID。  
@@ -134,7 +118,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>备注  
- 请参阅[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 请参阅[IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) Windows SDK 中。  
   
 ##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  构造函数。  
@@ -147,7 +131,7 @@ IProvideClassInfo2Impl();
  调用`AddRef`上[_tih](#_tih)成员。 析构函数调用**版本**。  
   
 ##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
- 此静态数据成员是类模板参数的一个实例`tihclass`，它们的默认值是`CComTypeInfoHolder`。  
+ 此静态数据成员是类模板参数的一个实例`tihclass`，后者的默认设置是`CComTypeInfoHolder`。  
   
 ```
 static  tihclass
@@ -157,6 +141,5 @@ static  tihclass
 ### <a name="remarks"></a>备注  
  `_tih`管理组件类的类型信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

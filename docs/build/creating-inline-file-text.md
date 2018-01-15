@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 174160657e5494f5566fd0828815b3c0f1b3d601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dcc27a303e9d03d2e899a76703bcfae5abfd0c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-inline-file-text"></a>创建内联文件文本
 内联文件可以是临时的还是永久。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  临时文件的会话期间存在，并可以由其他命令重复使用。 指定**保留**右尖括号 NMAKE 会话中; 后保留文件后未命名的文件将保留在磁盘上生成的文件名。 指定**NOKEEP**或 nothing 为临时文件。 **保留**和**NOKEEP**不区分大小写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [生成文件中的内联文件](../build/inline-files-in-a-makefile.md)

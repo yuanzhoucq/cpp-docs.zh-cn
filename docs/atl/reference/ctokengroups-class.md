@@ -26,11 +26,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6c08f9105d51112f1261a79bd5b96341b5504f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6f0e8e2f63d5765e0e888c7a98cea77c862e241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 类
 此类是包装器**TOKEN_GROUPS**结构。  
@@ -80,7 +81,7 @@ class CTokenGroups
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
 ##  <a name="add"></a>CTokenGroups::Add  
@@ -247,7 +248,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 ### <a name="remarks"></a>备注  
  将强制转换为指向的值[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)结构。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
  [CSid 类](../../atl/reference/csid-class.md)   
  [类概述](../../atl/atl-class-overview.md)   

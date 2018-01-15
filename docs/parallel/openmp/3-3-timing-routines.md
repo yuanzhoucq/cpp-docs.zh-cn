@@ -1,28 +1,28 @@
 ---
-title: "3.3 Timing Routines | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.3 计时例程 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 21060d64-cbe8-4e38-8718-3a68d6a57be3
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05f9e7c8eedbf1803e1bfbc3c744c5d8b9c9fd99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 3.3 Timing Routines
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本节中介绍的函数支持一个可移植的墙时钟计时器:  
+# <a name="33-timing-routines"></a>3.3 计时例程
+本部分中描述的功能支持的可移植的时钟计时器：  
   
--   `omp_get_wtime` 函数返回 " 墙时钟时间。  
+-   `omp_get_wtime`函数将返回已用的时钟时间。  
   
--   `omp_get_wtick` 函数返回连续的时钟计时周期之间的秒。
+-   `omp_get_wtick`函数返回连续时钟计时周期之间的秒。

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DResource::ReCreate
 - AFXRENDERTARGET/CD2DResource::m_bIsAutoDestroy
 - AFXRENDERTARGET/CD2DResource::m_pParentTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DResource [MFC], CD2DResource
 - CD2DResource [MFC], Create
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2cc6b80803cbddcbd05655a8f9620c102aef3e9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: b292bf680a146d730554c56c60df9a649b670ba3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 类
 提供了一个界面，用于创建和管理 D2D 资源，例如画笔、 层和文本一个抽象类。  
@@ -77,7 +75,7 @@ class CD2DResource : public CObject;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|资源将为 destoyed 所有者 (CRenderTarget)|  
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|指向父 CRenderTarget）|  
@@ -87,7 +85,7 @@ class CD2DResource : public CObject;
   
  `CD2DResource`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
@@ -182,6 +180,5 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>返回值  
  如果该方法成功，则返回，则为 S_OK。 否则，它返回一个 HRESULT 错误代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类](../../mfc/reference/mfc-classes.md)
-

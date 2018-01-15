@@ -1,32 +1,31 @@
 ---
-title: "ALIAS (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Alias"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALIAS directive"
+title: "别名 (MASM) |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Alias
+dev_langs: C++
+helpviewer_keywords: ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59dc4fd5481b22e69153c68e94a81b2887118ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ALIAS (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**别名** 指令创建一个替代名称。功能。  这使您可以创建多个名称函数或创建允许链接器的库 \(link.exe\) 映射早期功能到新功能。  
+# <a name="alias-masm"></a>ALIAS (MASM)
+**别名**指令创建的函数的备用名称。  这样可以创建多个名称对于函数，或创建允许链接器 (LINK.exe) 以将旧的函数映射到新函数的库。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -38,12 +37,12 @@ actual-name
   
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
  `actual-name`  
- 函数或过程的实际名称。  需要尖括号。  
+ 函数或过程的实际名称。  角度括号是必需的。  
   
  `alias`  
- 备用项或别名。  需要尖括号。  
+ 备用或别名的名称。  角度括号是必需的。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

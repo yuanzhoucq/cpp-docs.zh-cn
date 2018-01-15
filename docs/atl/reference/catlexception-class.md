@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0a22b1918f255290ae6b47604aa57ef484a9527
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0af7fa5a0bc78043e0eac204255f30ab1b9672c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlexception-class"></a>CAtlException 类
 此类定义 ATL 异常。  
@@ -59,7 +60,7 @@ class CAtlException
   
  一般情况下，将调用`AtlThrow`而不是创建`CAtlException`直接对象。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlexcept.h  
   
 ##  <a name="catlexception"></a>CAtlException::CAtlException  
@@ -91,6 +92,6 @@ HRESULT m_hr;
 ### <a name="remarks"></a>备注  
  数据成员的存储的错误条件。 HRESULT 值由构造函数中，设置[CAtlException::CAtlException](#catlexception)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [类概述](../../atl/atl-class-overview.md)

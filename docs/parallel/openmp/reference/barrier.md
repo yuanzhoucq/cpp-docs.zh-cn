@@ -1,44 +1,43 @@
 ---
-title: "barrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "barrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barrier OpenMP directive"
+title: "屏障 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: barrier
+dev_langs: C++
+helpviewer_keywords: barrier OpenMP directive
 ms.assetid: 5c73ad4f-c768-443a-8f9e-4fd8bc2253c7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d1e8076ecef41cf60bf34a0622ee53afb05910b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# barrier
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-同步团队的所有线程;所有线程暂停在关卡，，直到所有线程执行关卡。  
+# <a name="barrier"></a>barrier
+同步所有线程在一个组;所有线程在屏障，都暂停，直到所有线程都执行屏障。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 #pragma omp barrier  
 ```  
   
-## 备注  
- `barrier` 指令不支持 OpenMP 子句。  
+## <a name="remarks"></a>备注  
+ `barrier`指令支持没有 OpenMP 子句。  
   
- 有关更多信息，请参见 [2.6.3 barrier Directive](../../../parallel/openmp/2-6-3-barrier-directive.md)。  
+ 有关详细信息，请参阅[2.6.3 barrier 指令](../../../parallel/openmp/2-6-3-barrier-directive.md)。  
   
-## 示例  
- 有关此示例演示如何使用 `barrier`，请参见 [master](../../../parallel/openmp/reference/master.md)。  
+## <a name="example"></a>示例  
+ 有关如何使用的示例`barrier`，请参阅[master](../../../parallel/openmp/reference/master.md)。  
   
-## 请参阅  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="see-also"></a>请参阅  
+ [指令](../../../parallel/openmp/reference/openmp-directives.md)

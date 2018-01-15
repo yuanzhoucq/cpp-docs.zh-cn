@@ -1,34 +1,35 @@
 ---
-title: "调用内联程序集内的 C++ 函数 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 关键字 [C++], 调用函数"
-  - "函数调用, C++ 函数"
-  - "函数调用, 在内联程序集中"
-  - "函数 [C++], 在内联程序集中调用"
-  - "内联程序集, 调用函数"
-  - "Visual C++, 函数"
+title: "在内联汇编程序内调用 C 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- function calls, C functions
+- function calls, in inline assembly
+- functions [C], calling in inline assembly
+- Visual C, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d337e7a276318d6a1d39087b6809e3f62838cad8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 调用内联程序集内的 C 函数
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 专用  
- `__asm` 块可以调用 C 函数（包括 C 库例程）。  以下示例调用 `printf` 库例程：  
+# <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C 函数
+## <a name="microsoft-specific"></a>Microsoft 专用  
+ `__asm` 块可以调用 C 函数（包括 C 库例程）。 以下示例调用 `printf` 库例程：  
   
 ```  
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
@@ -58,7 +59,7 @@ int main( void )
 }  
 ```  
   
- 由于函数参数在堆栈上传递，因此仅需在调用函数之前推入所需参数（前面示例中的字符串指针）。  参数以相反顺序被推动，因此可按所需顺序结束堆栈。  模拟 C 语句  
+ 由于函数参数在堆栈上传递，因此仅需在调用函数之前推入所需参数（前面示例中的字符串指针）。 参数以相反顺序被推动，因此可按所需顺序结束堆栈。 模拟 C 语句  
   
 ```  
 printf( format, hello, world );  
@@ -68,5 +69,5 @@ printf( format, hello, world );
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [内联汇编程序](../../assembler/inline/inline-assembler.md)

@@ -1,47 +1,49 @@
 ---
-title: "Linking to the CRT in Your ATL Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DllMainCRTStartup"
-  - "wWinMainCRTStartup"
-  - "WinMainCRTStartup"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, C Run-Time library (CRT)"
-  - "CRT, linking with ATL"
-  - "DllMainCRTStartup method"
-  - "WinMainCRTStartup method"
-  - "wWinMainCRTStartup method"
+title: "将链接到 ATL 项目中的 CRT |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DllMainCRTStartup
+- wWinMainCRTStartup
+- WinMainCRTStartup
+dev_langs: C++
+helpviewer_keywords:
+- CRT, linking with ATL
+- WinMainCRTStartup method
+- DllMainCRTStartup method
+- wWinMainCRTStartup method
+- ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 631426fece3960303d67d8929e99c404beaab998
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# Linking to the CRT in Your ATL Project
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="linking-to-the-crt-in-your-atl-project"></a>链接到 CRT 的内容在 ATL 项目
+[C 运行时库](../c-runtime-library/crt-library-features.md)(CRT) 提供可以使编程更容易在 ATL 开发过程中的许多有用的功能。 所有 ATL 项目都链接到 CRT 库。 你可以看到的优点和缺点的链接中的方法[优点和缺点为链接到 CRT 方法使用](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)。  
+  
+## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>链接到 CRT 的内容在程序映像上的效果  
+ 如果你静态链接到 CRT 的内容，CRT 中的代码放置在可执行映像，并且不需要具有在系统运行你的映像上存在 CRT DLL。 如果动态链接到 CRT 的内容，对 CRT DLL 中的代码的引用都将置于你的映像，但不是代码本身。 为了使您的映像以给定的系统上运行，CRT DLL 必须在该系统上存在。 甚至当动态链接到 CRT 的内容，你可能会发现某些代码可以静态链接 (例如， **DllMainCRTStartup**)。  
+  
+ 当链接你的映像时，你显式或隐式指定操作系统加载映像后将调入的入口点。 默认入口点是 dll， **DllMainCRTStartup**。 对于 EXE，它是**WinMainCRTStartup**。 你可以重写的默认方式 /ENTRY 链接器选项。 CRT 提供了有关实现**DllMainCRTStartup**， **WinMainCRTStartup**，和**wWinMainCRTStartup** （Unicode 入口点的 EXE）。 这些 CRT 提供入口点调用全局对象上的构造函数并初始化某些 CRT 函数使用其他数据结构。 此启动代码将大约 25 K 添加到你的映像，如果它以静态方式链接。 如果动态链接，大部分代码是在 DLL 中，因此图像的大小保持很小。  
+  
+ 有关详细信息，请参阅链接器主题[/ENTRY （入口点符号）](../build/reference/entry-entry-point-symbol.md)。  
+  
+## <a name="optimization-options"></a>优化选项  
+ 使用链接器选项 /opt: nowin98 可以进一步减少 10k，通过默认 ATL 控件的 expense 在增加加载 Windows 98 系统上的时间。 链接选项的详细信息，请参阅[/OPT （优化）](../build/reference/opt-optimizations.md)。  
+  
+## <a name="see-also"></a>请参阅  
+ [使用 ATL 和 C 运行时代码编程](../atl/programming-with-atl-and-c-run-time-code.md)   
+ [DLL 和 Visual C++ 运行时库行为](../build/run-time-library-behavior.md)
 
-[C运行库](../c-runtime-library/crt-library-features.md) \(crt\)提供在ATL开发过程中，可以通过编程变得更容易的许多有用的功能。  所有ATL项目链接到CRT库。  您可以查看链接在 [使用的方法的优点和权衡若要链接到CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)的方法的优点和缺点。  
-  
-## 链接的效果CRT到您的程序图像  
- 如果使用CRT静态链接，从CRT的代码在可执行图像放置，不需要具有CRT DLL在运行您的图形系统。  如果使用CRT动态链接，在您的图像，但是，不是代码对CRT DLL的代码放置。  为了将图像可以运行在特定系统，CRT DLL必须存在该系统。  即使您使用CRT动态链接，您可能会发现一些代码可以静态链接\(例如，**DllMainCRTStartup**）。  
-  
- 当您链接到的图像时，您显式或隐式指定入口点操作系统将调用在加载图像之后。  为DLL，默认入口点是 **DllMainCRTStartup**。  对于EXE，它是 **WinMainCRTStartup**。  您可以重写与\/ENTRY链接器选项的默认值。  CRT为 **DllMainCRTStartup**提供的实现，**WinMainCRTStartup**和 **wWinMainCRTStartup** \(Unicode为EXE入口点）。  这些CRT提供的入口点调用全局对象的构造函数并初始化某些CRT函数使用的其他数据结构。  则，静态链接到此启动代码添加有关25K到您的图像。  如果该动态链接，大多数代码在DLL，因此，您的图像大小保持小。  
-  
- 有关更多信息，请参见链接器主题 [\/ENTRY \(将入口点符号\)](../build/reference/entry-entry-point-symbol.md)。  
-  
-## 优化选项  
- 使用链接器选项\/OPT: NOWIN98能由10K进一步减少默认ATL控件，从而牺牲在Windows 98系统的增强加载时间。  有关链接选项的更多信息，请参见 [\/OPT \(优化\)](../build/reference/opt-optimizations.md)。  
-  
-## 请参阅  
- [使用 ATL 和 C 运行时代码进行编程](../atl/programming-with-atl-and-c-run-time-code.md)   
- [运行库行为](../build/run-time-library-behavior.md)

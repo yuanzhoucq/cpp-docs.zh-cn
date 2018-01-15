@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4e30b024b6a83a7ea2069386cff3166ce518faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 类
 在单行中显示等待光标，在你执行较长操作时，此光标通常显示为一个沙漏。  
@@ -72,7 +73,7 @@ class CWaitCursor
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  `CWaitCursor`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ## <a name="example"></a>示例  
@@ -113,13 +114,13 @@ void Restore();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)   
  [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)   
  [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)   
  [CWinApp::DoWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)   
- [I： 如何更改鼠标光标位于 Microsoft 基础类应用程序](http://go.microsoft.com/fwlink/linkid=128044)
+ [I： 如何更改鼠标光标位于 Microsoft 基础类应用程序](http://go.microsoft.com/fwlink/p/?linkid=128044)
 
 
 

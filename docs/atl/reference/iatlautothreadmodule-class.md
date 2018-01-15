@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: afee3671afb6e306e07839d93ad7ece8d3409fa8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5def34c8a8c6f5f26fe17c9aeea24e3ad95925eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule 类
 此类表示的接口`CreateInstance`方法。  
@@ -38,8 +39,8 @@ __interface IAtlAutoThreadModule
 ## <a name="remarks"></a>备注  
  类[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)派生自`IAtlAutoThreadModule`，使用它来提供用于创建对象和检索的接口指针的代码。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

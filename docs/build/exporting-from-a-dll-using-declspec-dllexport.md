@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 967b3a737893ac6f891ab6fbbc73de08b1084d67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 从 DLL 导出
 Microsoft 引入**__export** Visual c + + 允许编译器自动生成的导出名称并将其放在.lib 文件中的 16 位编译器版本中。 此.lib 文件随后可静态.lib 一样将其与 DLL 链接。  
@@ -36,7 +37,7 @@ Microsoft 引入**__export** Visual c + + 允许编译器自动生成的导出�
   
  许多导出指令，如仅在.def 文件中，可以进行序号、 NONAME 和私有，并且没有办法可以指定不使用.def 文件的这些属性。 但是，使用**__declspec （dllexport)**除了使用.def 文件不会导致生成错误。  
   
- 若要导出的函数， **__declspec （dllexport)**关键字必须出现左侧的调用约定关键字，如果指定一个关键字。 例如:   
+ 若要导出的函数， **__declspec （dllexport)**关键字必须出现左侧的调用约定关键字，如果指定一个关键字。 例如:  
   
 ```  
 __declspec(dllexport) void __cdecl Function1(void);  
@@ -89,5 +90,5 @@ class __declspec(dllexport) CExampleExport : public CObject
   
 -   [相互导入](../build/mutual-imports.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [从 DLL 导出](../build/exporting-from-a-dll.md)

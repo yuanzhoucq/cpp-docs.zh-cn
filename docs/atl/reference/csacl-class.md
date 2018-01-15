@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSacl class
+dev_langs: C++
+helpviewer_keywords: CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: bd9ef9932938cfe5ec65965b3a40116da7f43b90
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csacl-class"></a>CSacl 类
 此类是 SACL （系统访问控制列表） 结构的包装器。  
@@ -69,7 +52,7 @@ class CSacl : public CAcl
   
 ### <a name="public-methods"></a>公共方法  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CSacl::AddAuditAce](#addauditace)|将审核访问控制项 (ACE) 添加到`CSacl`对象。|  
 |[CSacl::GetAceCount](#getacecount)|返回中访问控制项 (Ace) 数目`CSacl`对象。|  
@@ -85,19 +68,19 @@ class CSacl : public CAcl
 ## <a name="remarks"></a>备注  
  SACL 包含指定类型的域控制器的安全事件日志中生成审核记录的访问尝试次数的访问控制项 (Ace)。 请注意 SACL 生成日志项仅在访问尝试发生的域控制器上，而非包含对象的副本的每个域控制器。  
   
- 若要设置或检索对象的安全描述符中的 SACL，必须在请求的线程的访问令牌中启用 SE_SECURITY_NAME 特权。 管理员组默认情况下，授予此特权，它可授予其他用户或组。 具有此权限授予不是，只需︰ 可以执行特权所定义的操作之前，特权必须在安全访问令牌中启用才能生效。 此模型，仅为特定系统操作，启用，然后禁用在不再需要时特权。 请参阅[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)有关的启用 SE_SECURITY_NAME 示例。  
+ 若要设置或检索对象的安全描述符中的 SACL，必须在请求的线程的访问令牌中启用 SE_SECURITY_NAME 特权。 管理员组默认情况下，授予此特权，它可授予其他用户或组。 具有此权限授予不是，只需： 可以执行特权所定义的操作之前，特权必须在安全访问令牌中启用才能生效。 此模型，仅为特定系统操作，启用，然后禁用在不再需要时特权。 请参阅[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)有关的启用 SE_SECURITY_NAME 示例。  
   
  使用提供要添加、 删除、 创建和删除从 Ace 的类方法**SACL**对象。 另请参阅[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)。  
   
- 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [CAcl](../../atl/reference/cacl-class.md)  
   
  `CSacl`  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlsecurity.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlsecurity.h  
   
 ##  <a name="addauditace"></a>CSacl::AddAuditAce  
  将审核访问控制项 (ACE) 添加到`CSacl`对象。  
@@ -223,10 +206,9 @@ void RemoveAllAces() throw();
 ### <a name="remarks"></a>备注  
  删除每个**ACE**结构 （如果有）`CSacl`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAcl 类](../../atl/reference/cacl-class.md)   
  [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [类概述](../../atl/atl-class-overview.md)   
  [安全全局函数](../../atl/reference/security-global-functions.md)
-

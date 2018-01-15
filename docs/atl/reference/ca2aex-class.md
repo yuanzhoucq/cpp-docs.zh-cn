@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CA2AEX::CA2AEX
 - ATLCONV/ATL::CA2AEX::m_psz
 - ATLCONV/ATL::CA2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2AEX class
+dev_langs: C++
+helpviewer_keywords: CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 979e06cbb4386f61f6490342f16d48739be55e95
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2aex-class"></a>CA2AEX 类
 此类由字符串转换宏`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。  
@@ -78,7 +61,7 @@ class CA2AEX
   
 ### <a name="public-data-members"></a>公共数据成员  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |[CA2AEX::m_psz](#m_psz)|将源字符串存储数据成员。|  
 |[CA2AEX::m_szBuffer](#m_szbuffer)|静态缓冲区，用于存储已转换的字符串。|  
@@ -92,13 +75,13 @@ class CA2AEX
   
  默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。  
   
- 在此类基于以下宏︰  
+ 在此类基于以下宏：  
   
 - `CA2TEX`  
   
 - `CT2AEX`  
   
- 以下 typedef 取决于此类︰  
+ 以下 typedef 基于此类：  
   
 - **CA2A**  
   
@@ -107,8 +90,8 @@ class CA2AEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlconv.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlconv.h  
   
 ##  <a name="ca2aex"></a>CA2AEX::CA2AEX  
  构造函数。  
@@ -162,7 +145,7 @@ operator LPSTR() const throw();
 ### <a name="return-value"></a>返回值  
  返回文本字符串作为类型**LPSTR**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
  [CA2WEX 类](../../atl/reference/ca2wex-class.md)   
  [CW2AEX 类](../../atl/reference/cw2aex-class.md)   

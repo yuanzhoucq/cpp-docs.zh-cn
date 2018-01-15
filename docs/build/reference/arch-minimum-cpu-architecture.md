@@ -20,11 +20,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0677ca5b2eaf10b753f129078c96aacc11326eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25aa27e65c6cd9b7a928ac7d6ba65b079b3b811f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch（最小 CPU 体系结构）
 体系结构选项指定代码生成的体系结构。 选择要使用的基本硬件体系结构以查看该目标平台的 /arch 选项。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [/arch (ARM)](../../build/reference/arch-arm.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

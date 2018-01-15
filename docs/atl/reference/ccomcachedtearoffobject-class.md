@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2d8f1c7308946e7c125cbc3450b328e52236823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 类
 此类实现[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)分离式接口。  
@@ -91,7 +92,7 @@ public CComObjectRootEx<contained
   
  `CComCachedTearOffObject`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
@@ -190,7 +191,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>返回值  
  在非调试版本中，始终返回 0。 在调试版本中，返回一个值，可能是用于诊断或测试。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComTearOffObject 类](../../atl/reference/ccomtearoffobject-class.md)   
  [CComObjectRootEx 类](../../atl/reference/ccomobjectrootex-class.md)   
  [类概述](../../atl/atl-class-overview.md)

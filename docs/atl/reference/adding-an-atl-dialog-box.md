@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74eb8615a3dcda140713c9ecab8ab9a3400bf0bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d8c9969f4747c6c3fa2a39b7b0452f6ac54c9d58
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-dialog-box"></a>添加一个 ATL 对话框
 要向你的项目添加 ATL 对话框，你的项目必须包括 ATL 支持的 MFC 项目或者 ATL 项目中。 你可以使用[ATL 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 应用程序，或[ATL 对象添加到 MFC 应用程序](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)实现为 MFC 应用程序的 ATL 支持。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
  有关详细信息，请参阅[实现对话框](../../atl/implementing-a-dialog-box.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [添加类](../../ide/adding-a-class-visual-cpp.md)   
  [窗口类](../../atl/atl-window-classes.md)   
  [消息映射](../../atl/message-maps-atl.md)

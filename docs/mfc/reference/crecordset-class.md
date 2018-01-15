@@ -141,11 +141,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef856814b931f50359356e25ee8386a8e0a9c3b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2375739fe4d8442d4ecb7a1514641d45de4a8be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecordset-class"></a>CRecordset 类
 表示从数据源选择的一组记录。  
@@ -264,7 +265,7 @@ class CRecordset : public CObject
   
  `CRecordset`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdb.h  
   
 ##  <a name="addnew"></a>CRecordset::AddNew  
@@ -1779,7 +1780,7 @@ virtual BOOL Update();
 ### <a name="example"></a>示例  
  请参阅文章[事务： 在记录集 (ODBC) 执行事务](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CDatabase 类](../../mfc/reference/cdatabase-class.md)   

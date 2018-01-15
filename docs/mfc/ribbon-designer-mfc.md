@@ -17,14 +17,15 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0076f9ce0bcf4787f4e848fbcb0d34ae8968f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ribbon-designer-mfc"></a>功能区设计器 (MFC)
-功能区设计器可用于在 MFC 应用程序中创建和自定义功能区。 功能区是一种将命令整理成逻辑组的用户界面 (UI) 元素。 这些组显示在窗口顶部条带中的独立选项卡上。 功能区取代了菜单栏和工具栏。 功能区可以显著提高应用程序的可用性。 有关详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/linkid=129233)。 下图展示了一个功能区。  
+功能区设计器可用于在 MFC 应用程序中创建和自定义功能区。 功能区是一种将命令整理成逻辑组的用户界面 (UI) 元素。 这些组显示在窗口顶部条带中的独立选项卡上。 功能区取代了菜单栏和工具栏。 功能区可以显著提高应用程序的可用性。 有关详细信息，请参阅[功能区](http://go.microsoft.com/fwlink/p/?linkid=129233)。 下图展示了一个功能区。  
   
  ![MFC 功能区资源控件](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   
@@ -113,7 +114,7 @@ ms.lasthandoff: 10/24/2017
   
 - **功能区元素：**面板中的控件，例如，按钮和组合框。 若要查看功能区上可以承载各种控件，请参阅[RibbonGadgets 示例： 功能区小工具应用程序](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [用户界面元素](../mfc/user-interface-elements-mfc.md)   
  [使用资源文件](../windows/working-with-resource-files.md)
 

@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f45a4fc1d69cf0caefb08a7a408ecc836d092851
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdacl-class"></a>CDacl 类
 此类是 DACL （自由访问控制列表） 结构的包装器。  
@@ -80,7 +81,7 @@ class CDacl : public CAcl
   
  `CDacl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
 ##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
@@ -247,7 +248,7 @@ void RemoveAllAces() throw();
 ### <a name="remarks"></a>备注  
  删除每个**ACE** （访问控制项） 结构 （如果有） 中的`CDacl`对象。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全示例](../../visual-cpp-samples.md)   
  [CAcl 类](../../atl/reference/cacl-class.md)   
  [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   

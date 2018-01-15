@@ -1,31 +1,29 @@
 ---
-title: ".LALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LALL directive"
+title: ".LALL |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LALL
+dev_langs: C++
+helpviewer_keywords: .LALL directive
 ms.assetid: 23d7baf0-6a68-44d9-a980-33100a977fc6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b059ff15a0d98d2b0c47948f9f43fc394710b6fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# .LALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## 语法  
+# <a name="lall"></a>.LALL
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -33,8 +31,8 @@ manager: "ghogen"
   
 ```  
   
-## 备注  
- [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md)参见。  
+## <a name="remarks"></a>备注  
+ 请参阅[。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。  
   
-## 请参阅  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>请参阅  
+ [指令参考](../../assembler/masm/directives-reference.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 CAtlTransactionManager 类提供包装到内核事务管理器 (KTM) 函数。  
@@ -85,7 +86,7 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|`TRUE`如果支持这种回退;`FALSE`否则为。|  
 |[m_hTransaction](#m_htransaction)|事务句柄。|  
@@ -95,7 +96,7 @@ class CAtlTransactionManager;
 ## <a name="inheritance-hierarchy"></a>继承层次结构  
  [ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atltransactionmanager.h  
   
 ##  <a name="dtor"></a>~ CAtlTransactionManager  
@@ -466,10 +467,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  文件或目录的名称。  
   
  `dwAttributes`  
- 要为文件设置的文件属性。 有关详细信息，请参阅[SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699)。  
+ 要为文件设置的文件属性。 有关详细信息，请参阅[SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699)。  
   
 ### <a name="remarks"></a>备注  
  此包装调用`SetFileAttributesTransacted`函数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)

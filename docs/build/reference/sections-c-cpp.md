@@ -1,73 +1,71 @@
 ---
-title: "SECTIONS (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SECTIONS .def 文件语句"
+title: "部分 （C/C + +） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SECTIONS
+dev_langs: C++
+helpviewer_keywords: SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# SECTIONS (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-引入了一个由一个或多个 `definitions`（关于项目输出文件各节的访问说明符）组成的节。  
+# <a name="sections-cc"></a>SECTIONS (C/C++)
+引入了一个或多个部分`definitions`是对你的项目的输出文件中的分区的访问说明符。  
   
 ```  
 SECTIONS  
 definitions  
 ```  
   
-## 备注  
- 每个定义必须在单独一行上。  `SECTIONS` 关键字可以在第一个定义所在的同一行或前一行上。  .def 文件可以包含一个或多个 `SECTIONS` 语句。  
+## <a name="remarks"></a>备注  
+ 每个定义必须在单独一行上。 `SECTIONS`关键字可以在同一行的第一个定义或前一行上。 .Def 文件可以包含一个或多`SECTIONS`语句。  
   
- 该 `SECTIONS` 语句为图像文件中的一节或多节设置特性，并可用于重写每种节类型的默认特性。  
+ 这`SECTIONS`语句中图像文件，一个或多个部分的设置属性，并可以用于重写每种类型的部分将默认属性。  
   
- `definitions` 的格式为：  
+ 格式`definitions`是：  
   
  `.section_name specifier`  
   
- 此处，`.section_name` 为程序图像中的节名， `specifier`为下列一个或多个访问修饰符：  
+ 其中`.section_name`是你的程序映像中的节的名称和`specifier`是一个或多个以下访问修饰符：  
   
-|修饰符|说明|  
-|---------|--------|  
-|`EXECUTE`|节是可执行的|  
-|`READ`|允许对数据进行读取操作|  
-|`SHARED`|在所有加载图像的进程中共享节|  
+|修饰符|描述|  
+|--------------|-----------------|  
+|`EXECUTE`|部分是可执行文件|  
+|`READ`|允许对数据进行读的操作|  
+|`SHARED`|加载图像的所有进程之间共享该节|  
 |`WRITE`|允许对数据进行写操作|  
   
- 用空格分开修饰符名。  例如：  
+ 请用空格分隔说明符名称。 例如:  
   
 ```  
 SECTIONS  
 .rdata READ WRITE  
 ```  
   
- `SECTIONS` 标记部分 `definitions` 列表的开头。  每个 `definition` 必须处于单独的一行。  `SECTIONS` 关键字可以和第一个 `definition` 关键字在同一行或在前一行。  .def 文件可以包含一个或多个 `SECTIONS` 语句。  `SEGMENTS` 关键字作为 `SECTIONS` 的同义词受到支持。  
+ `SECTIONS`标记的部分列表的开始`definitions`。 每个`definition`必须在单独一行上。 `SECTIONS`关键字可以出现在与第一个相同的行上`definition`或在前面的行上。 .Def 文件可以包含一个或多`SECTIONS`语句。 `SEGMENTS`关键字支持的同义词`SECTIONS`。  
   
- Visual C\+\+ 的早期版本支持：  
+ 支持较旧版本的 Visual c + +:  
   
 ```  
 section [CLASS 'classname'] specifier  
 ```  
   
- 出于兼容性考虑，支持 `CLASS` 关键字，但忽略了它。  
+ `CLASS`支持的兼容性，但忽略了关键字。  
   
- 另一种指定节特性的方法是使用 [\/SECTION](../../build/reference/section-specify-section-attributes.md) 选项。  
+ 指定节特性等效方法是使用[/部分](../../build/reference/section-specify-section-attributes.md)选项。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [模块定义语句的规则](../../build/reference/rules-for-module-definition-statements.md)

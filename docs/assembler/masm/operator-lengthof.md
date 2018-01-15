@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 499fbfa32e08a75d6d078d94402b3251433ea5e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5d825bed384baf36f948c60ce04f443687f3417
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-lengthof"></a>运算符 LENGTHOF
 返回数据中的对象数*变量*。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
 LENGTHOF variable  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [运算符参考](../../assembler/masm/operators-reference.md)

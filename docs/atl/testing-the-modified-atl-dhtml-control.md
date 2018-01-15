@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84b9aa9ffb04b807cba07fdd3577622f62f6ab45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5ecb8526ec82e0f2d18c5306a94dd7f0160803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>测试修改后的 ATL DHTML 控件
 试用新控件，以了解它如何现在工作。  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/24/2017
   
  若要了解有关各个元素和构成的 ATL DHTML 控件文件的详细信息，请参阅[确定 DHTML 控件项目元素](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [支持 DHTML 控件](../atl/atl-support-for-dhtml-controls.md)
 

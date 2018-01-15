@@ -1,33 +1,34 @@
 ---
-title: "在 __asm 块中使用汇编语言 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 关键字 [C++], 汇编语言"
-  - "汇编语言 [C++]"
-  - "汇编语言 [C++], 功能"
+title: "在 __asm 块中使用程序集语言 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembly language [C++], features
+- assembly language [C++]
+- __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 07a7e50c040ec52fe79cba25ca4c1e29ac05bd8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 在 __asm 块中使用汇编语言
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 专用  
- 内联汇编程序与其他汇编程序有许多共性。  例如，它接受 MASM 中合法的任何表达式。  本节描述了汇编语言功能在 `__asm` 块中的用法。  
+# <a name="using-assembly-language-in-asm-blocks"></a>在 __asm 块中使用汇编语言
+## <a name="microsoft-specific"></a>Microsoft 专用  
+ 内联汇编程序与其他汇编程序有许多共性。 例如，它接受 MASM 中合法的任何表达式。 本节描述了汇编语言功能在 `__asm` 块中的用法。  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
   
 -   [内联程序集的指令集](../../assembler/inline/instruction-set-for-inline-assembly.md)  
   
@@ -45,7 +46,7 @@ caps.handback.revision: 8
   
 -   [汇编语言注释](../../assembler/inline/assembly-language-comments.md)  
   
--   [\_emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)  
+-   [_Emit Pseudoinstruction](../../assembler/inline/emit-pseudoinstruction.md)  
   
 -   [内联程序集的调试和列表](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)  
   
@@ -53,5 +54,5 @@ caps.handback.revision: 8
   
  **结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [内联汇编程序](../../assembler/inline/inline-assembler.md)

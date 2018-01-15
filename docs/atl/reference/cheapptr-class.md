@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 506dac565ef30c44c553301c6669e416a7dd5f8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 类
 用于管理堆指针的智能指针类。  
@@ -75,7 +76,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
   
  `CHeapPtr`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcore.h  
   
 ##  <a name="allocate"></a>CHeapPtr::Allocate  
@@ -152,7 +153,7 @@ bool Reallocate(size_t nElements) throw();
 ### <a name="example"></a>示例  
  [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CHeapPtrBase 类](../../atl/reference/cheapptrbase-class.md)   
  [CCRTAllocator 类](../../atl/reference/ccrtallocator-class.md)   
  [类概述](../../atl/atl-class-overview.md)

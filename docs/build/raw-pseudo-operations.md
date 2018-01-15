@@ -1,41 +1,42 @@
 ---
-title: "原始伪操作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "原始伪操作 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52ce7fb4455f87001bcfe87e1368ed0c09cda6b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 原始伪操作
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="raw-pseudo-operations"></a>原始伪操作
 本主题列出了伪操作。  
   
-## 备注  
+## <a name="remarks"></a>备注  
   
 |伪操作|描述|  
-|---------|--------|  
-|PROC FRAME \[:ehandler\]|导致 MASM 为函数的结构化异常处理展开行为在 .pdata 中生成函数表项并在 .xdata 中生成展开信息。  如果提供 ehandler，则此进程将作为语言特定处理程序输入到 .xdata 中。<br /><br /> 使用 FRAME 特性时，其后必须跟 .ENDPROLOG 指令。  如果函数是叶函数（如在 [函数类型](../build/function-types.md) 中定义的那样），则不需要 FRAME 特性，就像不需要这些伪操作的剩余部分一样。|  
-|.PUSHREG reg|使用 Prolog 中的当前偏移量为指定的寄存器号生成 UWOP\_PUSH\_NONVOL 展开代码项。<br /><br /> 这只能用于非易失的整数寄存器。  对于易失寄存器的推送操作，请改用 .ALLOCSTACK 8|  
-|.SETFRAME reg, offset|使用指定的寄存器和偏移量填写展开信息中的帧寄存器字段和偏移量。  偏移量必须是 16 的倍数，且小于或等于 240。  此指令还使用当前 Prolog 偏移量为指定的寄存器生成 UWOP\_SET\_FPREG 展开代码项。|  
-|.ALLOCSTACK size|为 Prolog 中的当前偏移量生成指定大小的 UWOP\_ALLOC\_SMALL 或 UWOP\_ALLOC\_LARGE。<br /><br /> 大小操作数必须为 8 的倍数。|  
-|.SAVEREG reg, offset|使用当前 Prolog 偏移量为指定的寄存器和偏移量生成 UWOP\_SAVE\_NONVOL 或 UWOP\_SAVE\_NONVOL\_FAR 展开代码项。  MASM 将选择最有效的编码。<br /><br /> 偏移量必须为正数，且为 8 的倍数。  偏移量与过程框架的基有关（该框架通常位于 RSP 中）或与不成比例的帧指针（如果使用帧指针）有关。|  
-|.SAVEXMM128 reg, offset|使用当前 Prolog 偏移量为指定的 XMM 寄存器和偏移量生成 UWOP\_SAVE\_XMM128 或 UWOP\_SAVE\_XMM128\_FAR 展开代码项。  MASM 将选择最有效的编码。<br /><br /> 偏移量必须为正数，且为 16 的倍数。  偏移量与过程框架的基有关（该框架通常位于 RSP 中）或与不成比例的帧指针（如果使用帧指针）有关。|  
-|.PUSHFRAME \[code\]|生成 UWOP\_PUSH\_MACHFRAME 展开代码项。  如果指定可选代码，则向展开代码项提供的修饰符为 1。  否则该修饰符为 0。|  
-|.ENDPROLOG|通知 Prolog 声明的结尾。  必须出现在函数的前 255 个字节中。|  
+|----------------------|-----------------|  
+|PROC 帧 [: ehandler]|原因 MASM 以生成一个函数表中的.pdata 项和展开.xdata 中的信息的函数的结构化异常处理展开行为。  如果存在 ehandler，则此进程被进入.xdata 语言特定的处理程序。<br /><br /> 当使用帧属性时，它后面必须跟。ENDPROLOG 指令。  如果该函数使用 leaf 函数 (中定义[函数类型](../build/function-types.md)) 帧属性是不必要的因为这些伪操作的剩余部分。|  
+|.PUSHREG reg|生成使用当前在序言中偏移量的指定的寄存器号 UWOP_PUSH_NONVOL 展开代码条目。<br /><br /> 这应仅用于非易失性的整数寄存器。  对于易失寄存器的推送操作，使用。ALLOCSTACK 8，改为|  
+|.SETFRAME reg、 偏移量|填写帧中使用指定的寄存器和偏移量的展开信息寄存器字段和偏移量。 偏移量必须为 16 的倍数且小于或等于 240。 此指令还会生成指定使用当前的序言偏移量的寄存器的 UWOP_SET_FPREG 展开代码项。|  
+|.ALLOCSTACK 大小|在序言中将生成 UWOP_ALLOC_SMALL 或具有指定大小的当前偏移量为 UWOP_ALLOC_LARGE。<br /><br /> 大小操作数必须是 8 的倍数。|  
+|.SAVEREG reg、 偏移量|生成 UWOP_SAVE_NONVOL 或指定的寄存器和使用的当前序言偏移量的偏移量的 UWOP_SAVE_NONVOL_FAR 展开代码条目。 MASM 将选择最有效的编码。<br /><br /> 偏移量必须为正数，且是 8 的倍数。  偏移量是相对于基过程的框架，其中通常处于 RSP，或者，如果使用帧指针，不成比例的帧指针。|  
+|.SAVEXMM128 reg、 偏移量|生成 UWOP_SAVE_XMM128 或指定的 XMM 寄存器和使用的当前序言偏移量的偏移量的 UWOP_SAVE_XMM128_FAR 展开代码条目。 MASM 将选择最有效的编码。<br /><br /> 偏移量必须为正数、 且为 16 的倍数。  偏移量是相对于基过程的框架，其中通常处于 RSP，或者，如果使用帧指针，不成比例的帧指针。|  
+|.PUSHFRAME [代码]|生成 UWOP_PUSH_MACHFRAME 展开代码项。 如果指定可选的代码，则展开代码项提供的修饰符为 1。 否则修饰符为 0。|  
+|.ENDPROLOG|用信号通知的序言声明的末尾。  必须出现在函数前 255 个字节。|  
   
- 以下是正确使用多数操作码的示例函数 Prolog：  
+ 下面是示例函数 prolog 与大部分操作码的正确用法：  
   
 ```  
 sample PROC FRAME     
@@ -84,5 +85,5 @@ ret
 sample ENDP  
 ```  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [MASM 的展开帮助器](../build/unwind-helpers-for-masm.md)

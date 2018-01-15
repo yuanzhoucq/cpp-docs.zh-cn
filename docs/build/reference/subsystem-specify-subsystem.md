@@ -1,34 +1,35 @@
 ---
-title: "/SUBSYSTEM（指定子系统） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/subsystem"
-  - "VC.Project.VCLinkerTool.SubSystem"
-  - "VC.Project.VCLinkerTool.SubSystemVersion"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SUBSYSTEM 链接器选项"
-  - "SUBSYSTEM 链接器选项"
-  - "-SUBSYSTEM 链接器选项"
-  - "子系统规范"
+title: "-SUBSYSTEM （指定子系统） |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /subsystem
+- VC.Project.VCLinkerTool.SubSystem
+- VC.Project.VCLinkerTool.SubSystemVersion
+dev_langs: C++
+helpviewer_keywords:
+- /SUBSYSTEM linker option
+- SUBSYSTEM linker option
+- -SUBSYSTEM linker option
+- subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# /SUBSYSTEM（指定子系统）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM（指定子系统）
 ```  
 /SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|  
             EFI_BOOT_SERVICE_DRIVER|EFI_ROM|EFI_RUNTIME_DRIVER|NATIVE|  
@@ -36,58 +37,58 @@ caps.handback.revision: 25
             [,major[.minor]]  
 ```  
   
- BOOT\_APPLICATION  
- 运行 Windows 启动环境的应用程序。  有关启动应用程序的更多信息，请参见[关于 BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)。  
+ BOOT_APPLICATION  
+ 在 Windows 启动环境中运行的应用程序。 有关启动应用程序的详细信息，请参阅[关于 BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639)。  
   
  CONSOLE  
- Win32 字符模式应用程序。  操作系统为各种控制台应用程序提供控制台。  如果为本机代码定义了 `main` 或 `wmain`，为托管代码定义了 `int main(array<String ^> ^)`，或者完全使用 `/clr:safe` 构建应用程序，则 CONSOLE 是默认值。  
+ Win32 字符模式应用程序。 操作系统提供为控制台应用程序提供控制台。 如果`main`或`wmain`为本机代码中，定义`int main(array<String ^> ^)`定义对于托管代码，或你生成应用程序完全使用`/clr:safe`，控制台是默认设置。  
   
  可扩展固件接口  
- EFI\_\* 子系统。  有关更多信息，请参见 EFI 规范。  例如，请参见 Intel 网站。  最低和默认版本都是 1.0。  
+ EFI_ * 子系统。 请参阅 EFI 规范的详细信息。 有关示例，请参阅 Intel 网站。 最小和默认版本为 1.0。  
   
  NATIVE  
- Windows NT 内核模式驱动程序。  此选项通常是为 Windows 系统组件保留的。  如果指定 [\/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md)，则 NATIVE 为默认值。  
+ Windows NT 的内核模式驱动程序。 此选项通常为 Windows 系统组件保留。 如果[/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md)指定，则本机是默认设置。  
   
  POSIX  
- 与 Windows NT 中的 POSIX 子系统一起运行的应用程序。  
+ 使用 Windows NT 中的 POSIX 子系统运行的应用程序。  
   
- WINDOWS  
- 应用程序不需要控制台，原因很可能是它会创建自己的窗口来与用户进行交互。  如果为本机代码定义了 `WinMain` 或 `wWinMain`，或为托管代码定义了 `WinMain(HISTANCE *, HINSTANCE *, char *, int)` 或 `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`，则 WINDOWS 是默认值。  
+ 窗口  
+ 应用程序不需要控制台中，因为它可以创建其自己的与用户交互的窗口。 如果`WinMain`或`wWinMain`定义对于本机代码，或`WinMain(HISTANCE *, HINSTANCE *, char *, int)`或`wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`定义托管代码中，对于 WINDOWS 是默认值。  
   
- `Major` 和 `minor`（可选）  
- 指定所需的子系统的最低版本。  参数是介于 0 至 65,535 范围内的十进制数。  有关更多信息，请参见"备注"。  版本号没有上限。  
+ `Major`和`minor`（可选）  
+ 指定的子系统的最低所需的版本。 这些参数是十进制数字 0 到 65535 范围内。 请参阅有关详细信息备注。 为版本号没有上限。  
   
-## 备注  
- \/SUBSYSTEM 选项为可执行文件指定环境。  
+## <a name="remarks"></a>备注  
+ /SUBSYSTEM 选项指定的可执行文件的环境。  
   
- 子系统的选择会影响链接器将选择的入口点符号（即入口点函数）。  
+ 子系统的选择会影响的入口点符号 （或入口点函数） 链接器将选择。  
   
- 子系统的可选最低与默认 `major` 和 `minor` 版本号如下。  
+ 可选的最小值和默认`major`和`minor`的子系统版本号包括，如下所示。  
   
-|Subsystem|最低|默认|  
-|---------------|--------|--------|  
-|BOOT\_APPLICATION|1.0|1.0|  
-|CONSOLE|5.01 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|6.00 \(x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|  
-|WINDOWS|5.01 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|6.00 \(x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|  
-|NATIVE \(with DRIVER:WDM\)|1.00 \(x86\) 1.10 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM\)|1.00 \(x86\) 1.10 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM\)|  
-|NATIVE \(without \/DRIVER:WDM\)|4.00 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|4.00 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|  
+|子系统|最低|默认|  
+|---------------|-------------|-------------|  
+|BOOT_APPLICATION|1.0|1.0|  
+|CONSOLE|(x86) 5.01 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|窗口|(x86) 5.01 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|本机 （带驱动程序： WDM)|(x86) 1.00 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]，ARM)|(x86) 1.00 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]，ARM)|  
+|本机 （不带 /DRIVER:WDM)|(x86) 4.00 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|(x86) 4.00 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
-|EFI\_APPLICATION、EFI\_BOOT\_SERVICE\_DRIVER、EFI\_ROM, EFI\_RUNTIME\_DRIVER|1.0|1.0|  
+|EFI_APPLICATION，EFI_BOOT_SERVICE_DRIVER，EFI_ROM EFI_RUNTIME_DRIVER|1.0|1.0|  
   
-### 在 Visual Studio 开发环境中设置此链接器选项  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项  
   
-1.  打开项目的**“属性页”**对话框。  有关详细信息，请参见[设置 Visual C\+\+ 项目属性](../../ide/working-with-project-properties.md)。  
+1.  打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置 Visual c + + 项目属性](../../ide/working-with-project-properties.md)。  
   
-2.  选择 Linker 文件夹。  
+2.  选择链接器文件夹。  
   
-3.  选择“系统”属性页。  
+3.  选择**系统**属性页。  
   
-4.  修改 `SubSystem` 属性。  
+4.  修改`SubSystem`属性。  
   
-### 以编程方式设置此链接器选项  
+### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

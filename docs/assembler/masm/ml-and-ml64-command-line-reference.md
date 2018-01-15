@@ -64,11 +64,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0cc09c716e8867c03147a28e6c0eb7d4fc844937
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a7a2a5baadab38283b621cb2f6ae99b36fe0a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令行参考
 汇编，并链接一个或多个程序集语言源文件。 命令行选项是区分大小写。  
@@ -157,6 +158,6 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |ML|指定默认命令行选项。|  
 |TMP|指定临时文件的路径。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ML 错误消息](../../assembler/masm/ml-error-messages.md)   
  [Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

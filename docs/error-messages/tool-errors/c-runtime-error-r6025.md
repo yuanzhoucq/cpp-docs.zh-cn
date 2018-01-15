@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06fd7aa6458a3c7e89d80146ec20a0e3f7587b4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfb7413cd6fd8dca976d668763fab678bb5c9ebf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6025"></a>C 运行时错误 R6025
 纯虚函数调用  
@@ -39,4 +40,4 @@ ms.lasthandoff: 10/24/2017
   
  通过调用中通过指针创建的强制转换为的类型派生的类，但实际指针到基类的抽象基类的虚函数导致此错误。 这会时发生从强制转换**void\*** 的指针到类时**void\*** 基本类的构造过程中创建了。  
   
- 有关详细信息，请参阅[Microsoft 支持](http://go.microsoft.com/fwlink/?LinkId=75220)网站。
+ 有关详细信息，请参阅[Microsoft 支持](http://go.microsoft.com/fwlink/p/?linkid=75220)网站。

@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a028c2458b0a5085a1f46bf31f377e6ed9e4d346
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2dce8e219c2a64ecc6e9b307533ecc0ea11d2792
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping 类
 此类表示一个内存映射的文件，将转换运算符添加到的方法[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。  
@@ -56,7 +57,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
  `CAtlFileMapping`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlfile.h  
   
 ##  <a name="operator_t_star"></a>CAtlFileMapping::operator T *  
@@ -72,6 +73,6 @@ operator T*() const throw();
 ### <a name="remarks"></a>备注  
  调用[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)和重新解释为返回的指针`T`  **\*** 其中*T*是用作模板的类型此类参数。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CAtlFileMappingBase 类](../../atl/reference/catlfilemappingbase-class.md)   
  [类概述](../../atl/atl-class-overview.md)

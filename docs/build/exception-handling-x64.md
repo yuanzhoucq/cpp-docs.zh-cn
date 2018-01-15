@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c6f24a6fbb4d1b1cfff871a8568d4e08b1582d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f104f6772cdd1c778c166e27d697146c1280444a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-x64"></a>异常处理 (x64)
 本部分讨论结构化的异常处理和 c + + 异常处理行为上[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  有关详细信息，请参阅[异常处理](../cpp/exception-handling-in-visual-cpp.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x64 软件约定](../build/x64-software-conventions.md)

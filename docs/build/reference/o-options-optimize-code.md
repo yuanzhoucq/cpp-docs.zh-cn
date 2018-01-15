@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58f8aeda2570fef394b5a47d49c5dda090d8e1ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7da04384d0c4ea00c2eaaedbcf0ec770e216289
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="o-options-optimize-code"></a>/O 选项（优化代码）
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 
 你可以组合多个**/O**到单个选项语句的选项。 例如， **/Odi**相同**/Od /Oi**。 某些选项相互排斥，导致编译器错误，如果将一起使用。 请参阅个人**/O**有关详细信息的选项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器选项](../../build/reference/compiler-options.md)   
 [设置编译器选项](../../build/reference/setting-compiler-options.md)

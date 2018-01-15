@@ -42,11 +42,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f0b2e084e27b951676fddfb20b53d5f74944089e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ecf7f9bb38cdd844514001126a98bced67617e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 检索一个整数，以表示指定值以 2 为底的无偏差指数。  
@@ -88,24 +89,24 @@ int ilogbl(
 |输入|结果|  
 |-----------|------------|  
 |±0|FP_ILOGB0|  
-|±inf, ±nan, indefinite|FP_ILOGBNAN|  
+|±inf，±nan，无限期|FP_ILOGBNAN|  
   
  按 [_matherr](../../c-runtime-library/reference/matherr.md) 中指定的内容报告错误。  
   
 ## <a name="remarks"></a>备注  
- 由于 C++ 支持重载，可以调用 `ilogb` 重载，以采用并返回浮点型和长双精度型值 。 在 C 程序中，`ilogb` 始终采用并返回双精度型值。  
+ 由于 C++ 支持重载，可以调用 `ilogb` 重载，以采用并返回浮点型和长双精度型值 。 在 C 程序中，`ilogb` 始终采用及返回双精度型。  
   
  调用此函数相当于调用等效 `logb` 函数，然后将返回值转换为 `int`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
-|例程|C 标头|C++ 标头|  
+|例程所返回的值|C 标头|C++ 标头|  
 |-------------|--------------|------------------|  
 |`ilogb`,                `ilogbf`,  `ilogbl`|\<math.h>|\<cmath>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按字母顺序的函数参考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [logb, logbf, logbl, _logb, _logbf](../../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)

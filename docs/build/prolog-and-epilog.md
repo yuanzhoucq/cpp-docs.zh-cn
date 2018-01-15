@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>保护现场和恢复现场
 每个分配堆栈空间的函数，调用其他函数将保存非易失寄存器，或使用异常处理必须具有的 prolog 中的相应函数表项与关联的展开数据描述其地址限制 (请参阅[异常处理 (x64)](../build/exception-handling-x64.md))。 Prolog 将保存在其内部地址寄存器必要情况下，在堆栈上推送非易失寄存器的参数、 局部变量和临时变量，为分配堆栈的固定的部分和 （可选） 建立帧指针。 关联的展开数据必须描述序言的操作，必须提供必需撤消了 prolog 代码的作用的信息。  
@@ -60,7 +61,7 @@ lea      R13, 128[RSP]
   
  Epilog 代码必须可靠地通过异常和中断的展开到遵循一组严格的规则的展开代码。 这可减少的数量展开所需，数据，因为描述每个 epilog 所不需的任何额外数据。 相反的展开代码可以确定 epilog，正在执行的向前扫描整个来标识 epilog 代码流。  
   
- 如果在中不使用任何帧指针函数，然后 epilog 必须首先释放堆栈的固定的部分、 弹出，非易失寄存器，和控件返回到调用的函数。 例如，  
+ 如果在中不使用任何帧指针函数，然后 epilog 必须首先释放堆栈的固定的部分、 弹出，非易失寄存器，和控件返回到调用的函数。 例如，应用于对象的  
   
 ```  
 add      RSP, fixed-allocation-size  
@@ -98,5 +99,5 @@ ret
   
  遵循这些规则，以确定当前正在执行 epilog 并模拟 epilog 以便重新创建的调用函数的上下文的剩余部分执行的展开代码。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [x64 软件约定](../build/x64-software-conventions.md)

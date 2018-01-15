@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea0d0a3be8bdd87322958306cdaa3d581923739d
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: ba01a980aa24a3ff695479edd08e88d9ea538dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-environment-variables"></a>CL 环境变量
 
@@ -68,7 +69,7 @@ CL 工具使用以下环境变量:
 
 > CL FILE1。C FILE2。C 文件 3。OBJ
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [设置编译器选项](../../build/reference/setting-compiler-options.md)   
 [编译器选项](../../build/reference/compiler-options.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed254b49c61f873e1d85fd0600c371c03ac246a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd58ba8ce15bb26b4e5b768baedbf8ddfe829f2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chandle-class"></a>CHandle 类
 此类提供用于创建和使用句柄对象的方法。  
@@ -73,7 +74,7 @@ class CHandle
 > [!NOTE]
 >  某些 API 函数将使用作为空或无效的句柄，NULL，而其他人使用 INVALID_HANDLE_VALUE。 `CHandle`仅使用 NULL，将为 INVALID_HANDLE_VALUE 视为实际句柄。 如果调用可返回 INVALID_HANDLE_VALUE API，则应检查该值之前调用[CHandle::Attach](#attach)或将其传递给`CHandle`构造函数，并改为将传递 NULL。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="attach"></a>CHandle::Attach  
@@ -173,5 +174,5 @@ operator HANDLE() const throw();
 ### <a name="remarks"></a>备注  
  返回中存储的值[CHandle::m_h](#m_h)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

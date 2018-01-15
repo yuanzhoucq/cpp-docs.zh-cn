@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CRTThreadTraits
 - ATLBASE/ATL::CRTThreadTraits
 - ATLBASE/ATL::CRTThreadTraits::CreateThread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRTThreadTraits class
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d6fbe71ff23db8dba431b9d46d71fc6c924fbc5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: f6265f6c53133abbe8cd96b67bbbeb7657c98b26
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 类
 此类提供了 CRT 线程创建函数。 如果线程将使用的 CRT 函数，请使用此类。  
@@ -61,7 +59,7 @@ class CRTThreadTraits
   
  如果未将使用线程的 CRT 函数，使用[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)相反。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
@@ -104,6 +102,5 @@ static HANDLE CreateThread(
   
  此函数将调用[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)创建的线程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)
-

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 704bcbb81939ecb721b5b119f8c02a6409c2b82a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4701b0ae9f71099febb1a239cea6285fb0a7b229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>将 Windows 消息映射到您的类
 如果你需要处理 Windows 消息对话框中，重写适当的处理程序函数。 为此，请使用属性窗口[将消息映射](../mfc/reference/mapping-messages-to-functions.md)到对话框类。 这写入消息映射项为每个消息，并将消息处理程序成员函数添加到类。 使用 Visual c + + 源代码编辑器在消息处理程序中编写代码。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [经常添加的成员函数](../mfc/commonly-added-member-functions.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对话框](../mfc/dialog-boxes.md)   
  [对话框的生命周期](../mfc/life-cycle-of-a-dialog-box.md)
 

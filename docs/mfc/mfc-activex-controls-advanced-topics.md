@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 043c3307ed2729740cf973119264eb21d62a7a2b
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 本文介绍如何与相关的开发 ActiveX 控件的高级的主题。 这些方法包括：  
@@ -109,7 +110,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="activex-control-error-codes"></a>ActiveX 控件错误代码  
   
-|错误|描述|  
+|Error|描述|  
 |-----------|-----------------|  
 |**CTL_E_ILLEGALFUNCTIONCALL**|非法函数调用|  
 |**CTL_E_OVERFLOW**|溢出|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 10/31/2017
 |**CTL_E_SEARCHTEXTNOTFOUND**|未找到搜索文本|  
 |**CTL_E_REPLACEMENTSTOOLONG**|替换内容太长|  
   
- 如有必要，使用**CUSTOM_CTL_SCODE**宏来定义一个标准的代码未涵盖的条件的自定义错误代码。 为此宏参数应为介于 1000年之间的整数和 32767 之间 （含）。 例如:   
+ 如有必要，使用**CUSTOM_CTL_SCODE**宏来定义一个标准的代码未涵盖的条件的自定义错误代码。 为此宏参数应为介于 1000年之间的整数和 32767 之间 （含）。 例如:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -174,12 +175,12 @@ ms.lasthandoff: 10/31/2017
   
 -   使用添加成员变量向导选择**控制变量**，然后选择控件的 id。 输入一个成员变量名称并选择控件的包装类作为**控件类型**。  
   
-     - 或 -  
+     或  
   
 -   为对话框项声明的局部变量和子类。 插入如下所示的代码 (`CMyCtrl`是包装器类，`IDC_MYCTRL1`是控件的 ID):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
 

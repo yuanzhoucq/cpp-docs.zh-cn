@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d44d1f5f9a9d37bd38f441820dd75cb9a4b92df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-servers"></a>自动化服务器
 利用自动化，您的应用程序可以操作在其他应用程序中实现的对象，或者公开对象以便让它们能够被操作。 自动化服务器是可编程对象 （称为自动化对象） 公开到其他应用程序的应用程序 (称为[自动化客户端](../mfc/automation-clients.md))。 自动化服务器有时称为自动化组件。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [详细了解类 COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [自动化](../mfc/automation.md)   
  [MFC 应用程序向导](../mfc/reference/mfc-application-wizard.md)
 

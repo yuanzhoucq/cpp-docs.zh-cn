@@ -27,11 +27,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a7d7b14d67a127fadd8199f9cf9e1e209b8eea7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 类
 此类提供实现的复合控件所需的方法。  
@@ -103,7 +104,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
  `CComCompositeControl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlctl.h  
   
 ##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
@@ -248,7 +249,7 @@ HRESULT SetBackgroundColorFromAmbient();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CComControl 类](../../atl/reference/ccomcontrol-class.md)   
  [复合控件基础知识](../../atl/atl-composite-control-fundamentals.md)   
  [类概述](../../atl/atl-class-overview.md)

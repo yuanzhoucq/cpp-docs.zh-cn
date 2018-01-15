@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f22256f7e471fd30753db36ba53059b2588e0da8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 386e28631d20721f22eb2b778ffbe2e1d4b1824d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cformview-class"></a>CFormView 类
 用于窗体视图的基类。  
@@ -72,7 +73,7 @@ class CFormView : public CScrollView
   
  `CFormView`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxext.h  
   
 ##  <a name="cformview"></a>CFormView::CFormView  
@@ -113,7 +114,7 @@ BOOL IsInitDlgCompleted() const;
 ### <a name="return-value"></a>返回值  
  如果已完成了此对话框的初始化函数，则为 true。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 SNAPVW](../../visual-cpp-samples.md)   
  [MFC 示例 VIEWEX](../../visual-cpp-samples.md)   
  [CScrollView 类](../../mfc/reference/cscrollview-class.md)   

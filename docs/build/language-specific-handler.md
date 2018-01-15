@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3f9e548dc3c9262349fc05bd6bea19290b57ad94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-specific-handler"></a>特定于语言的处理程序
 语言特定的处理程序的相对地址中不存在 UNWIND_INFO 只要设置了 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER 的标志。 如前一部分中所述，语言特定的处理程序称为作为一部分的异常处理程序搜索或展开代码的一部分。 它具有以下原型：  
@@ -68,5 +69,5 @@ typedef struct _DISPATCHER_CONTEXT {
   
  **HandlerData**指向此函数的特定于语言的处理程序数据。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异常处理 (x64)](../build/exception-handling-x64.md)

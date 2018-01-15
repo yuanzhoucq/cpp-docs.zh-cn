@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92ea41b61d38689c4a5d3bb81550f7e53cc46076
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f11a5361f25d08010735ee612b9296f888ed8933
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-support-classes"></a>注册表支持类
 下面的类提供注册表支持：  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相关文章  
  [ATL 注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../atl/atl-class-overview.md)   
  [注册表宏](../atl/reference/registry-macros.md)
 

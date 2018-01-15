@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcb1b2307ccb16e7b842e221c48c0f2a99b31db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-scripting-examples"></a>注册表脚本示例
 本主题中的脚本示例演示如何将密钥添加到系统注册表，注册注册机构 COM 服务器，并指定多个分析树。  
@@ -117,6 +118,6 @@ HKEY_CURRENT_USER
 > [!NOTE]
 >  在注册机构脚本中，4 K 是令牌的最大大小。 （令牌是在语法中任何可识别的元素。）在以前的脚本示例中， `HKCR`， `HKEY_CURRENT_USER`， `'MyVeryOwnKey'`，和`'HowGoesIt'`既是所有标记。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建注册器脚本](../atl/creating-registrar-scripts.md)
 

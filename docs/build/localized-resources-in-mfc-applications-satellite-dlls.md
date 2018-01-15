@@ -1,65 +1,66 @@
 ---
-title: "MFC 应用程序中的本地化资源：附属 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], 本地化 MFC"
-  - "本地化 [C++], MFC 资源"
-  - "本地化资源 [C++]"
-  - "MFC DLL [C++], 本地化"
-  - "多语言支持 [C++]"
-  - "纯资源 DLL [C++]"
-  - "纯资源 DLL [C++], MFC 应用程序"
-  - "资源 [MFC], 本地化"
-  - "附属 DLL [C++]"
+title: "MFC 应用程序中的本地化资源： 附属 Dll |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multiple language support [C++]
+- localization [C++], MFC resources
+- localized resources [C++]
+- MFC DLLs [C++], localizing
+- DLLs [C++], localizing MFC
+- resources [MFC], localizing
+- resource-only DLLs [C++]
+- resource-only DLLs [C++], MFC applications
+- satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba1c8d52796ae9251a79df9600be80612db33e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# MFC 应用程序中的本地化资源：附属 DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC 7.0 及更高版本提供对附属 DLL 的增强支持，该功能有助于创建针对多种语言进行本地化的应用程序。  附属 DLL 是一个[纯资源 DLL](../build/creating-a-resource-only-dll.md)，它包含应用程序的针对特定语言进行本地化的资源。  当应用程序开始执行时，MFC 自动加载最适合于环境的本地化资源。  例如，可能有一个具有英语语言资源的应用程序，该应用程序还有两个附属 DLL，其中一个包含资源的法语译本，另一个包含资源的德语译本。  当该应用程序在英语语言系统上运行时，它使用英语资源。  如果在法语系统上运行，则它使用法语资源；如果在德语系统上运行，则使用德语资源。  
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 应用程序中的本地化资源：附属 DLL
+MFC 7.0 和更高版本提供对附属 Dll，该功能有助于创建针对多个语言进行本地化的应用程序的增强的支持。 附属 DLL 是[纯资源 DLL](../build/creating-a-resource-only-dll.md) ，其中包含针对特定语言进行本地化的应用程序的资源。 当应用程序开始执行时，MFC 将自动加载已本地化的资源最适合于环境。 例如，你可以使用两个附属 Dll，一个包含你的资源和另一个包含德语翻译的法语翻译的英语资源的应用程序。 当在英语语言的系统上运行应用程序时，它会使用英语资源。 如果在法语系统上运行，它将使用的法语资源;如果德语的系统上运行，则使用德语的资源。  
   
- 为了支持 MFC 应用程序中的本地化资源，MFC 尝试加载一个附属 DLL，它包含本地化为特定语言的资源。  附属 DLL 被命名为 *ApplicationNameXXX*.dll，其中 *ApplicationName* 是使用 MFC 的 .exe 或 .dll 的名称，而 *XXX* 是资源语言的由三个字母组成的代码（例如，“ENU”或“DEU”）。  
+ 为了支持本地化的资源在 MFC 应用程序，MFC 尝试加载附属 DLL 包含资源本地化为特定语言。 附属 Dll 名为*ApplicationNameXXX*.dll，其中*ApplicationName*是.exe 或.dll 使用 MFC 的名称和*XXX*是语言的三个字母代码资源 （例如，ENU 或 DEU）。  
   
- MFC 尝试按顺序加载下列每种语言的资源 DLL，当找到一个时停止：  
+ MFC 将尝试为每个顺序情况下，在找到时停止以下语言加载资源 DLL:  
   
-1.  （仅适用于 Windows 2000 或更高版本）当前用户的默认用户界面语言，该语言从 GetUserDefaultUILanguage\(\) Win32 API 返回。  
+1.  (Windows 2000 或更高版本)当前用户的默认用户界面语言，如从 GetUserDefaultUILanguage() Win32 API 返回。  
   
-2.  （仅适用于 Windows 2000 或更高版本）当前用户的默认用户界面语言，没有任何特定的次语言（也就是说，ENC \[加拿大英语\] 变为 ENU \[美国  英语\]）。  
+2.  (Windows 2000 或更高版本)当前用户的默认用户界面语言，没有任何特定次语言 （即，ENC [加拿大英语] 将成为 ENU [美国英语]）。  
   
-3.  系统的默认用户界面语言。  在 Windows 2000 或更高版本上，这是从 GetSystemDefaultUILanguage\(\) API 返回的语言。  在其他平台上，这是操作系统本身的语言。  
+3.  系统的默认用户界面语言。 Windows 2000 或更高版本，则将它返回从 GetSystemDefaultUILanguage() API。 在其他平台上，这是本身的操作系统的语言。  
   
-4.  系统的默认用户界面语言，没有任何特定的次语言。  
+4.  系统的默认用户界面语言，没有任何特定次语言。  
   
-5.  具有 3 字母代码 LOC 的“虚设”语言。  
+5.  使用 3 个字母代码 loc。 的假语言  
   
- 如果 MFC 未找到任何附属 DLL，则它使用包含在应用程序本身中的任何资源。  
+ 如果 MFC 未找到任何附属 Dll，它使用任何资源包含在应用程序本身。  
   
- 作为示例，假设应用程序 LangExample.exe 使用 MFC 并且正在 Windows 2000 多用户界面系统上运行；系统的用户界面语言是 ENU \[美国  英语\] 并且当前用户的用户界面语言设置为 FRC \[加拿大法语\]。  MFC 将按下面的顺序查找下面的 DLL：  
+ 例如，假设应用 LangExample.exe 程序使用 MFC，以及在 Windows 2000 上运行多个用户界面系统;系统 UI 语言是 ENU [美国英语] 和当前用户的 UI 语言设置为 FRC [加拿大法语]。 MFC 查找以下 Dll 按以下顺序：  
   
-1.  LangExampleFRC.dll（用户的用户界面语言）。  
+1.  LangExampleFRC.dll （用户的 UI 语言）。  
   
-2.  LangExampleFRA.dll（用户的用户界面语言，不带次语言；在此示例中为法语（法国））。  
+2.  LangExampleFRA.dll （没有次语言，在此示例中法语 （法国） 的用户的用户界面语言。  
   
-3.  LangExampleENU.dll（系统的用户界面语言）。  
+3.  LangExampleENU.dll （系统的 UI 语言）。  
   
 4.  LangExampleLOC.dll。  
   
- 如果没找到这些 DLL 中的任何一个，则 MFC 使用 LangExample.exe 中的资源。  
+ 如果没有这些 Dll 会发现，MFC 在 LangExample.exe 中使用的资源。  
   
-## 请参阅  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>请参阅  
+ [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
  [TN057：MFC 组件的本地化](../mfc/tn057-localization-of-mfc-components.md)

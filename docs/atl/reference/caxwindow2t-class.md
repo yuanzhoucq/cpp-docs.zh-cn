@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f4d10fa1e70eee029f9ecca5118a010c3972cc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12b7c8c66a092a92ef7fce25ce283f5145d9f910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 类
 此类提供用于操作的窗口，承载 ActiveX 控件，并还具有对承载许可的 ActiveX 控件支持的方法。  
@@ -88,7 +89,7 @@ template <class TBase = CWindow>
   
  `CAxWindow2T`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T  
@@ -207,6 +208,6 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
  `hWnd`  
  现有的窗口句柄。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)   
  [控件包含常见问题](../../atl/atl-control-containment-faq.md)

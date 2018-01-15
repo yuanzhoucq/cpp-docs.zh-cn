@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _free_locale
+apiname: _free_locale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,38 +25,23 @@ f1_keywords:
 - __free_locale
 - free_locale
 - _free_locale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __free_locale function
 - free_locale function
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c3582f51b4a66f33cf0926b12cbeccfc1f621c48
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fa4ee4f7be53898f38218b83f14c7579cc3206dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freelocale"></a>_free_locale
 释放区域设置对象。  
@@ -80,14 +63,14 @@ void _free_locale(
   
  已弃用此函数之前的名称 `__free_locale`（带两个前导下划线）。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |`Routine`|必需的标头|  
 |---------------|---------------------|  
 |`_free_locale`|\<locale.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_get_current_locale](../../c-runtime-library/reference/get-current-locale.md)   
  [_create_locale、_wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)

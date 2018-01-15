@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords: std::chrono [C++], duration
-ms.openlocfilehash: 70dc3b3b21961946a73f73e44ae3bed7c283bd4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duration-class"></a>duration 类
 描述保存“*时间间隔*”（即两个时间点之间的运行时间）的类型。  
@@ -48,7 +49,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 ### <a name="public-typedefs"></a>公共 Typedef  
   
-|名称|说明|  
+|名称|描述|  
 |----------|-----------------|  
 |duration::period Typedef|表示模板参数 `Period` 的同义词。|  
 |duration::rep Typedef|表示模板参数 `Rep` 的同义词。|  
@@ -82,7 +83,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[duration::operator+=](#op_add_eq)|将存储的计时周期计数加上指定的 `duration` 对象的计时周期计数。|  
 |[duration::operator-=](#operator-_eq)|从存储的计时周期计数减去指定的 `duration` 对象的计时周期计数。|  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** \<chrono >  
   
  **命名空间：**std::chrono  
@@ -292,7 +293,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 ### <a name="remarks"></a>备注  
  第一个成员函数将减少存储的滴答计数取模 Div 并返回 *this。 第二个成员函数将减少存储的计时周期计数取模 Div.count() 并返回 \*this。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [头文件引用](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [duration_values 结构](../standard-library/duration-values-structure.md)

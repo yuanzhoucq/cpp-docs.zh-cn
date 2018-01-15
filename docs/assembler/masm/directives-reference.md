@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7493121bb4565e70c1638599496e4072fc527481
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1d90c4fc585e4a20b7f973025c1cef970e6ea7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="directives-reference"></a>指令参考
 **x64**  
@@ -157,7 +158,7 @@ ms.lasthandoff: 10/24/2017
 |[.FARDATA](../../assembler/masm/dot-fardata.md)|[.FARDATA?](../../assembler/masm/dot-fardata-q.md)|[.MODEL](../../assembler/masm/dot-model.md)|  
 |[.STACK](../../assembler/masm/dot-stack.md)|[.STARTUP](../../assembler/masm/dot-startup.md)||  
   
-### <a name="string"></a>字符串  
+### <a name="string"></a>String  
   
 |||  
 |-|-|  
@@ -171,5 +172,5 @@ ms.lasthandoff: 10/24/2017
 |[结束](../../assembler/masm/ends-masm.md)|[记录](../../assembler/masm/record-masm.md)|[结构](../../assembler/masm/struct-masm.md)|  
 |[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

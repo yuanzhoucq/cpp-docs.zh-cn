@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a0792a3895aac2887e635cb300f8ba9fde67e97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aeb8d2845c5e8daa931e354b149fc1c35b37fbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-version-information"></a>/VERSION（版本信息）
 ```  
@@ -60,8 +61,8 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Version%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8a0d0e240e1c830763b5b7781fb3a1e536d4672
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 类
 此类实现的 COM 服务器模块。  
@@ -65,7 +66,7 @@ class CAtlComModule : public _ATL_COM_MODULE
   
  `CAtlComModule`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
   
 ##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
@@ -166,6 +167,6 @@ HRESULT UnRegisterTypeLib();
 ### <a name="return-value"></a>返回值  
  返回成功，则为 S_OK 或失败的错误 HRESULT。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
  [类概述](../../atl/atl-class-overview.md)

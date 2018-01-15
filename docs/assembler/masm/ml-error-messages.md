@@ -1,38 +1,37 @@
 ---
-title: "ML Error Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.errors.ml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MASM (Microsoft Macro Assembler), ML error messages"
+title: "ML 错误消息 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.errors.ml
+dev_langs: C++
+helpviewer_keywords: MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa5933c9c676b76ebe342ffa848e7b40926da08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ML Error Messages
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-MASM 元素生成的错误消息分为三类:  
+# <a name="ml-error-messages"></a>ML 错误消息
+MASM 组件生成的错误消息分为三个类别：  
   
--   **错误。**这些指示防止实用工具完成其正常进程的一个严重问题。  
+-   **致命错误。** 这些警报表示严重问题，以防止该实用工具完成其正常的过程。  
   
--   **非致命错误。**实用工具可以完成其过程。  如果，其结果不能为所需的脚本。  
+-   **非致命错误。** 实用程序可能完成其进程。 如果是这样，其结果是不可能是所需的那个。  
   
--   **警告。**这些消息指示可以防止它们结果所需的行为。  
+-   **警告。** 这些邮件表示可能会阻止你获取所需的结果的条件。  
   
- 所有错误消息采用以下形式:  
+ 所有的错误消息采用以下形式：  
   
 ```  
   
@@ -42,22 +41,22 @@ Utility: Filename (Line) : [Error_type} (Code): Message_text
  其中：  
   
  `Utility`  
- 发送错误消息的过程。  
+ 发送错误消息中的程序。  
   
  *文件名*  
- 包含该错误的环境的文件。  
+ 包含生成时出现错误条件的文件。  
   
  *Line*  
- 大致行的错误状态存在的位置。  
+ 在错误条件存在大致行。  
   
- *Error\_type*  
- 错误，错误或警告。  
+ *Error_type*  
+ 致命错误、 错误或警告。  
   
  *代码*  
- 单个 5 \- 6 位数或错误代码。  
+ 唯一的 5 或 6 位错误代码。  
   
  `Message_text`  
- 错误条件的简短、大纲显示。  
+ 短期和常规错误条件的说明。  
   
-## 请参阅  
- [Microsoft Macro Assembler Reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+## <a name="see-also"></a>请参阅  
+ [Microsoft 宏汇编程序参考](../../assembler/masm/microsoft-macro-assembler-reference.md)

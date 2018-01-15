@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: baab49fb4eb49f872a8d285f1d8f08ccda569a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1343c037f87aee609de2b082cb87f7f1f2832221
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc （启用全局调整大小的释放函数）  
 `/Zc:sizedDealloc`编译器选项告知编译器优先调用全局`operator delete`或`operator delete[]`函数具有第二个参数的类型的`size_t`时可用的对象的大小。 这些函数可能使用`size_t`参数来优化性能的释放函数。   
@@ -50,7 +51,7 @@ C + + 14 标准更改编译器的行为。 在定义全局`operator delete`和`o
 3.  选择**配置属性**， **C/c + +**，**命令行**属性页。  
 4.  修改**其他选项**属性以包含`/Zc:sizedDealloc`或`/Zc:sizedDealloc-`，然后选择**确定**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [编译器选项](../../build/reference/compiler-options.md)  
 [设置编译器选项](../../build/reference/setting-compiler-options.md)  
-[/Zc （一致性）](../../build/reference/zc-conformance.md)  
+[/Zc（一致性）](../../build/reference/zc-conformance.md)  

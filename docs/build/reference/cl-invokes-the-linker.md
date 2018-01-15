@@ -1,69 +1,69 @@
 ---
-title: "CL 调用链接器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 编译器 [C++], 编译而不链接"
-  - "cl.exe 编译器 [C++], 控制链接器"
-  - "编译源代码 [C++], 不链接"
-  - "从编译器调用链接器"
-  - "LINK 工具 [C++], 从 CL 编译器调用"
+title: "CL 调用链接器 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords:
+- compiling source code [C++], without linking
+- invoking linker from the compiler
+- LINK tool [C++], invoking from CL compiler
+- cl.exe compiler [C++], compiling without linking
+- cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# CL 调用链接器
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-除非使用 \/c 选项，否则 CL 在编译之后将自动调用链接器。  CL 向链接器传递在编译期间创建的 .obj 文件的名称，以及在命令行上指定的任何其他文件的名称。  链接器使用在 LINK 环境变量中列出的选项。  可以使用 \/link 选项在 CL 命令行上指定链接器选项。  \/link 选项后面的选项重写 LINK 环境变量中的选项。  下表中的选项取消链接。  
+# <a name="cl-invokes-the-linker"></a>CL 调用链接器
+CL 编译除非使用 /c 选项后会自动调用链接器。 CL 将在编译期间创建的.obj 文件的名称和命令行上指定的任何其他文件的名称传递到链接器。 链接器使用 LINK 环境变量中列出的选项。 /Link 选项可用于指定 CL 命令行上的链接器选项。 /Link 选项后跟的选项将替代 LINK 环境变量中。 下表中的选项禁止显示链接。  
   
-|选项|说明|  
-|--------|--------|  
-|\/c|编译但不链接|  
-|\/E、\/EP、\/P|预处理但不编译或链接|  
-|\/Zg|生成函数原型|  
-|\/Zs|检查语法|  
+|选项|描述|  
+|------------|-----------------|  
+|/c|编译但不链接|  
+|/ / E、 /EP，P|预处理而无需编译或链接|  
+|/Zg|生成函数原型|  
+|/Zs|请检查语法|  
   
- 有关链接的更详细的信息，请参见[链接器选项](../../build/reference/linker-options.md)。  
+ 有关链接的更多详细信息，请参阅[链接器选项](../../build/reference/linker-options.md)。  
   
-## 示例  
- 假设您正在编译三个 C 源文件：MAIN.c、MOD1.c 和 MOD2.c。  每个文件包括对在不同文件中定义的函数的调用：  
+## <a name="example"></a>示例  
+ 假定您正在编译三个 C 源文件： MAIN.c、 MOD1.c 和 MOD2.c。 每个文件包括对在不同文件中定义的函数的调用：  
   
--   MAIN.c 调用 MOD1.c 中的函数 `func1` 和 MOD2.c 中的函数 `func2`。  
+-   MAIN.c 调用函数`func1`MOD1.c 和函数中`func2`MOD2.c 中。  
   
--   MOD1.c 调用标准库函数 `printf_s` 和 `scanf_s`。  
+-   MOD1.c 调用标准库函数`printf_s`和`scanf_s`。  
   
--   MOD2.c 调用名为 `myline` 和 `mycircle` 的图形函数，这些函数是在名为 MYGRAPH.lib 的库中定义的。  
+-   MOD2.c 调用名为的图形函数`myline`和`mycircle`，这在一个名为 MYGRAPH.lib 库中定义。  
   
- 要生成此程序，使用下列命令行进行编译：  
+ 若要生成此程序，请使用下面的命令行编译：  
   
 ```  
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib  
 ```  
   
- CL 先编译 C 源文件，然后创建对象文件 MAIN.obj、MOD1.obj 和 MOD2.obj。  编译器将标准库的名称放在每个 .obj 文件中。  有关更详细的信息，请参见[使用运行库](../../build/reference/md-mt-ld-use-run-time-library.md)。  
+ CL 首先编译 C 源代码文件，并创建对象文件 MAIN.obj、 MOD1.obj 和 MOD2.obj。在每个.obj 文件，编译器将标准库的名称。 有关更多详细信息，请参阅[使用运行时库](../../build/reference/md-mt-ld-use-run-time-library.md)。  
   
- CL 将 .obj 文件的名称和名称 MYGRAPH.lib 一起传递给链接器。  链接器解析外部引用，如下所示：  
+ CL 将的.obj 文件，以及 MYGRAPH.lib 的名称的名称传递给链接器。 链接器解析外部引用，如下所示：  
   
-1.  在 MAIN.obj 中，使用 MOD1.obj 中的定义解析对 `func1` 的引用；使用 MOD2.obj 中的定义解析对 `func2` 的引用。  
+1.  在 MAIN.obj，对引用`func1`MOD1.obj; 在使用定义程序解析对引用`func2`得到解决在 MOD2.obj 中使用的定义。  
   
-2.  在 MOD1.obj 中，使用链接器找到的、在 MOD1.obj 内命名的库中的定义解析对 `printf_s` 和 `scanf_s` 的引用。  
+2.  在 MOD1.obj，对引用`printf_s`和`scanf_s`MOD1.obj 中名为链接器查找库中使用定义解析。  
   
-3.  在 MOD2.obj 中，使用 MYGRAPH.lib 中的定义解析对 `myline` 和 `mycircle` 的引用。  
+3.  在 MOD2.obj，对引用`myline`和`mycircle`MYGRAPH.lib 在使用定义解析。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)

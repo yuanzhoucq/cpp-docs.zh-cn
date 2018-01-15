@@ -1,37 +1,37 @@
 ---
-title: "用于按配置文件优化的环境变量 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "按配置文件优化, 环境变量"
+title: "按配置优化的环境变量 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 745c1b0c0bc522f54913d48adf58e7d7783208ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 用于按配置文件优化的环境变量
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本节包含有关一些环境变量的信息，这些环境变量影响用 \/LTCG:PGI 创建的映像的测试方案。  
+# <a name="environment-variables-for-profile-guided-optimizations"></a>用于按配置文件优化的环境变量
+本部分包含有关影响用 /ltcg: pgi 创建的映像上的测试方案的环境变量的信息。  
   
-## 备注  
- 有三个环境变量会影响按配置文件优化的测试方案：  
+## <a name="remarks"></a>备注  
+ 有三个影响按配置优化的测试方案的环境变量：  
   
 -   [PogoSafeMode](../../build/reference/pogosafemode.md)  
   
--   [VCPROFILE\_ALLOC\_SCALE](../../build/reference/vcprofile-alloc-scale.md)  
+-   [VCPROFILE_ALLOC_SCALE](../../build/reference/vcprofile-alloc-scale.md)  
   
--   [VCPROFILE\_PATH](../../build/reference/vcprofile-path.md)  
+-   [VCPROFILE_PATH](../../build/reference/vcprofile-path.md)  
   
-## 请参阅  
- [用于按配置文件优化的工具](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+## <a name="see-also"></a>请参阅  
+ [用于按配置文件手动优化的工具](../../build/reference/tools-for-manual-profile-guided-optimization.md)

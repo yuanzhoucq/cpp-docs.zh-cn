@@ -1,45 +1,45 @@
 ---
-title: "生成文件中的命令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令, 生成文件"
+title: "生成文件中的命令 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 生成文件中的命令
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果依赖项已过期，则描述块或推理规则指定要运行的命令块。  NMAKE 在运行命令之前显示每个命令，除非使用了 \/S 选项、**.SILENT**、**\!CMDSWITCHES** 或 @。  如果描述块后面没有紧跟命令块，NMAKE 将查找匹配的推理规则。  
+# <a name="commands-in-a-makefile"></a>生成文件中的命令
+描述块或推理规则指定的命令在依赖项已过期时要运行的块。 NMAKE 每个命令将在之前显示运行它，除非 /s 选项、 **。无提示**， **！CMDSWITCHES**，或使用 @。 如果描述块不跟命令块，NMAKE 查找匹配的推理规则。  
   
- 命令块包含一个或多个命令，每个命令位于各自的命令行上。  在依赖项（或规则）和命令块之间不能出现空行。  但是可以出现只包含空格或制表符的行；该行被解释为空命令，并且不出现错误。  命令行之间允许有空行。  
+ 命令块包含一个或多个命令，在其对应行的每个命令。 依赖项或规则和命令块之间可以显示没有空白的行。 但是，可以显示包含仅空格或制表符的行;此行将被解释为一个空的命令，且不发生错误。 允许命令行之间有空行。  
   
- 命令行以一个或多个空格或制表符开始。  后面紧有换行符的反斜杠 \( \\ \) 在命令中被解释为空格；在行尾使用反斜杠继续下一行命令。  如果反斜杠后紧跟有其他任何字符（包括空格或制表符），则 NMAKE 按原义解释反斜杠。  
+ 命令行开始用一个或多个空格或制表符。 反斜杠 (\) 后跟一个换行符字符解释为命令; 空格在行的末尾使用反斜杠以继续到下一步的行的命令。 NMAKE 按原义解释反斜杠如果任何其他字符，包括空格或制表符后, 跟反斜杠。  
   
- 无论后面是否紧跟有命令块，前面带分号 \(;\) 的命令可以出现在依赖项行上或推理规则中：  
+ 命令前面由分号 （;） 是否紧跟命令块可以出现在依赖关系行或推理规则：  
   
 ```  
 project.obj : project.c project.h ; cl /c project.c  
 ```  
   
-## 您想进一步了解什么？  
+## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？  
  [命令修饰符](../build/command-modifiers.md)  
   
  [文件名部分语法](../build/filename-parts-syntax.md)  
   
  [生成文件中的内联文件](../build/inline-files-in-a-makefile.md)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [NMAKE 参考](../build/nmake-reference.md)

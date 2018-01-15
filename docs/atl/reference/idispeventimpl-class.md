@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c51a305d1b858aaa31a9bf700e825848ba3eb563
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f052ddf0194cf28a0845ae51b9503841ca880912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 类
 此类提供的实现`IDispatch`方法。  
@@ -122,7 +123,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
  `IDispEventImpl`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlcom.h  
   
 ##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
@@ -228,7 +229,7 @@ typedef tihclass _tihclass;
 ### <a name="remarks"></a>备注  
  默认情况下，类是`CComTypeInfoHolder`。 `CComTypeInfoHolder`管理类的类型信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [_ATL_FUNC_INFO 结构](../../atl/reference/atl-func-info-structure.md)   
  [IDispatchImpl 类](../../atl/reference/idispatchimpl-class.md)   
  [IDispEventSimpleImpl 类](../../atl/reference/idispeventsimpleimpl-class.md)   

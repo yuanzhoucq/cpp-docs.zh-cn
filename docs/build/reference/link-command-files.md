@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b6543cbb54dc982b1e55be8c0c554a429410b78
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e585fb8fa11d4e3ffe8eff842baacb05f109754c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-command-files"></a>LINK 命令文件
 可以将命令行自变量传递到命令文件形式的链接。 若要指定到链接器命令文件，请使用以下语法：  
@@ -47,6 +48,6 @@ LINK @commandfile
 link /dll @objlist.txt @liblist.txt @exports.txt  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

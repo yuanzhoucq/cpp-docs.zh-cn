@@ -95,11 +95,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec11a626ef7553a658dfb7384def736039be5179
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bf7b8a7cae6a03906a1424b626bde19012dcbb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider 类
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -168,7 +169,7 @@ class CPaneDivider : public CBasePane
   
 ### <a name="data-members"></a>数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|指定以像素为单位的应用程序中的所有窗格分隔条的默认宽度。|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|有关运行时类信息包含指向`CPaneDivider`-派生对象。|  
@@ -192,7 +193,7 @@ class CPaneDivider : public CBasePane
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPaneDivider](../../mfc/reference/cpanedivider-class.md)  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxPaneDivider.h  
   
 ##  <a name="setautohidemode"></a>CPaneDivider::SetAutoHideMode  
@@ -741,7 +742,7 @@ void StoreRecentTabRelatedInfo(
   
 ### <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [类](../../mfc/reference/mfc-classes.md)   
  [CPaneContainerManager 类](../../mfc/reference/cpanecontainermanager-class.md)   

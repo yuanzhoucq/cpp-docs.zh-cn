@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8959c30a5c1b65687d51e127781b82cccf0cce5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exported-dll-function-entry-points"></a>导出的 DLL 函数入口点
 对于 DLL 的导出函数，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)宏来从 DLL 模块切换到调用应用程序的 DLL 时保持适当的全局状态。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/24/2017
   
  `AFX_MANAGE_STATE` 不需要放置到 DLL 中的每个函数中。 例如，`InitInstance` 可由应用程序中的 MFC 代码调用，而无需 `AFX_MANAGE_STATE`，因为 MFC 会在 `InitInstance` 之前自动切换模块状态，然后在 `InitInstance` 返回之后将其切换回来。 上述情况同样适用于所有消息映射处理程序。 常规 MFC Dll 实际上有一个特殊的主窗口过程，在路由任何消息之前自动切换模块状态。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理 MFC 模块的状态数据](../mfc/managing-the-state-data-of-mfc-modules.md)
 

@@ -28,11 +28,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6f9bd7613254bfd0fd4aaef239b5e848ae87b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 用于创建对话框框中，以及用于创建、 承载和授权 ActiveX 控件，则这些函数提供支持。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
 |[AtlAxWinTerm](#atlaxwinterm)|取消初始化 AxWin 对象的宿主代码。|  
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|返回有关的默认源接口的对象的信息。|  
 
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlhost.h  
 
 ##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
@@ -500,6 +501,6 @@ ATLAPI AtlGetObjectSourceInterface(
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)   
  [复合控件宏](../../atl/reference/composite-control-macros.md)

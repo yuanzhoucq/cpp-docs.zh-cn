@@ -62,11 +62,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e217f73afcf00d5569f731d86c726ae3191ffa93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 类
 此类是访问令牌的包装。  
@@ -143,7 +144,7 @@ class CAccessToken
   
  有关 Windows 中的访问控制模型的简介，请参阅[访问控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsecurity.h  
   
 ##  <a name="attach"></a>CAccessToken::Attach  
@@ -1034,7 +1035,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>备注  
  主要组是用于在此访问令牌有效期间创建的新对象的默认组。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ATLSecurity 示例](../../visual-cpp-samples.md)   
  [访问令牌](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
  [类概述](../../atl/atl-class-overview.md)

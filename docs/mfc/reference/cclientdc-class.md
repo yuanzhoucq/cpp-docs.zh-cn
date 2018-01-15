@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e88f9b789a87eac5af56c27d156cf2e00929d5fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a92fb471ee30e725cd97bff6cbda8d551c0bc859
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cclientdc-class"></a>CClientDC 类
 负责调用 Windows 函数[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在构造时和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在析构时。  
@@ -46,7 +47,7 @@ class CClientDC : public CDC
   
 ### <a name="protected-data-members"></a>受保护的数据成员  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CClientDC::m_hWnd](#m_hwnd)|`HWND`此窗口的`CClientDC`有效。|  
   
@@ -62,7 +63,7 @@ class CClientDC : public CDC
   
  `CClientDC`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头:** afxwin.h  
   
 ##  <a name="cclientdc"></a>CClientDC::CClientDC  
@@ -97,7 +98,7 @@ HWND m_hWnd;
 ### <a name="example"></a>示例  
   请参阅示例[CClientDC::CClientDC](#cclientdc)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC 示例 MDI](../../visual-cpp-samples.md)   
  [CDC 类](../../mfc/reference/cdc-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   

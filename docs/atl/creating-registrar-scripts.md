@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 注册器脚本提供对系统注册表的数据驱动的而不是驱动 API 访问。 数据驱动的访问是通常更高效，因为它采用一个脚本来向注册表添加项只能将一个或两个行。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [调用脚本](../atl/invoking-scripts.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [注册表组件 （注册器）](../atl/atl-registry-component-registrar.md)
 

@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1dab85041f63afd3904bc026bdf2a4d94b5301
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46a17a6594db6c59148042f6e8c6cc72c7068dc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控件：优化
 此文章介绍了可用于优化 ActiveX 控件的更好的性能的技术。  
@@ -71,6 +72,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [优化控件绘制](../mfc/optimizing-control-drawing.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MFC ActiveX 控件](../mfc/mfc-activex-controls.md)
 

@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 711ddfb76ea9e8be2420ea9a9a31af4cfb5f6c93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 数据库类（OLE DB 模板）
 Microsoft 提供了多个 OLE DB，一组提供对各种信息源和格式中的数据的统一访问的 COM 接口的实现。  OLE DB 正式不推荐使用;本文档适用于开发人员而维护旧代码。 新的应用程序应使用 ODBC 连接到 SQL 数据源。
@@ -38,9 +41,9 @@ Microsoft 提供了多个 OLE DB，一组提供对各种信息源和格式中的
   
  MFC 库包含一个类，请注意[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)，在控件中显示数据库记录。 视图是直接连接到窗体视图`CRowset`对象，并显示字段的`CRowset`对话框模板的控件中的对象。  
   
- 有关详细信息，请参阅[OLE DB 编程](../data/oledb/ole-db-programming.md)和[OLE DB 程序员指南](http://go.microsoft.com/fwlink/?linkid=121548)。  
+ 有关详细信息，请参阅[OLE DB 编程](../data/oledb/ole-db-programming.md)和[OLE DB 程序员指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [创建 OLE DB 使用者](../data/oledb/creating-an-ole-db-consumer.md)   
  [创建 OLE DB 提供程序](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB 使用者模板参考](../data/oledb/ole-db-consumer-templates-reference.md)   

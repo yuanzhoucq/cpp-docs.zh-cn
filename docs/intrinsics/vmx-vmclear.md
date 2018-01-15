@@ -1,35 +1,35 @@
 ---
-title: "__vmx_vmclear | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmclear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMCLEAR 指令"
-  - "__vmx_vmclear 内部函数"
+title: "__vmx_vmclear |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmclear
+dev_langs: C++
+helpviewer_keywords:
+- VMCLEAR instruction
+- __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: af15108bfa2bce0af3f442d5fdd6dceddbd6cca9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmclear
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 专用**  
   
- 初始化指定的虚拟计算机控制结构 \(VMCS\)并将其生成状态到 `Clear`。  
+ 初始化指定的虚拟机控件结构 (VMCS) 并将其启动状态设置为`Clear`。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 unsigned char __vmx_vmclear(  
@@ -37,36 +37,36 @@ unsigned char __vmx_vmclear(
 );  
 ```  
   
-#### 参数  
+#### <a name="parameters"></a>参数  
   
-|Parameter|说明|  
-|---------------|--------|  
-|\[in\] `VmcsPhysicalAddress`|对包含 VMCS 物理地址清除的 64 位内存位置的指针。|  
+|参数|描述|  
+|---------------|-----------------|  
+|[in] `VmcsPhysicalAddress`|指向包含 VMCS 清除的物理地址的 64 位内存位置的指针。|  
   
-## 返回值  
+## <a name="return-value"></a>返回值  
   
-|值|含义|  
-|-------|--------|  
-|0|成功的操作。|  
-|1|失败的操作以扩展的状态可用于在当前 VMCS 的 `VM-instruction error field` 。|  
-|2|操作失败，但没有可用状态。|  
+|“值”|含义|  
+|-----------|-------------|  
+|0|操作成功。|  
+|1|操作失败，当前 VMCS 的 `VM-instruction error field` 中提供了扩展状态。|  
+|2|操作失败，无可用状态。|  
   
-## 备注  
- 使用 [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) 或 [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) 功能，应用程序可以执行 VM 输入操作。  [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) 函数只能用于生成状态是 `Clear`的 VMCS，并且， [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) 函数只能用于生成状态是 `Launched`的 VMCS。  结果，请使用 [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) 功能集 VMCS 的生成状态到 `Clear`。  对于第一使用 [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) 功能 VM 输入操作，后面的 [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) 功能 VM 输入操作。  
+## <a name="remarks"></a>备注  
+ 应用程序可以通过使用执行 VM 输入操作[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函数可以使用其启动状态的 vmcs `Clear`，和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函数可以使用其启动状态的 vmcs `Launched`。 因此，使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函数可设置到 VMCS 的启动状态`Clear`。 使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)为第一个 VM 输入操作的函数和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)后续 VM 输入操作的函数。  
   
- `__vmx_vmclear` 功能与 `VMCLEAR` 指令是等效的。  此功能支持宿主的与来宾操作系统及其应用程序的虚拟机监控程序的交互。  有关更多信息，搜索文档， “IA\-32 Intel 体系结构的 Intel 虚拟化技术规范，”在网站单据数字 \-002 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) ， C97063。  
+ `__vmx_vmclear`函数等同于`VMCLEAR`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
+|内部函数|体系结构|  
+|---------------|------------------|  
 |`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
- [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md)
+ [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40d78e9246d0bb682d63ae094f96123dd4b883e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 635e2b1406e9919425a396b6f49fe8eb6efd81eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-cc"></a>异常 (C/C++)
 遇到故障时，可以引发两个异常代码：  
@@ -52,5 +53,5 @@ ms.lasthandoff: 10/24/2017
   
  请参阅[结构和常量定义](../../build/reference/structure-and-constant-definitions.md)有关详细信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误处理和通知](../../build/reference/error-handling-and-notification.md)

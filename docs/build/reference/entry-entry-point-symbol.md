@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6daafeba4376cdab679d7e93dce0605fae97a98e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY（入口点符号）
 ```  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  默认情况下，起始地址是从 C 运行时库函数名称。 链接器选择它的程序属性根据下表中所示。  
   
-|函数名|默认值为|  
+|功能名称|默认值为|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (或**wmainCRTStartup**)|使用 /SUBSYSTEM:CONSOLE; 的应用程序调用`main`(或`wmain`)|  
 |**WinMainCRTStartup** (或**wWinMainCRTStartup**)|使用 /SUBSYSTEM 的应用程序：**WINDOWS**; 调用`WinMain`(或`wWinMain`)，其必须定义为使用`__stdcall`|  
@@ -71,8 +72,8 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [设置链接器选项](../../build/reference/setting-linker-options.md)   
  [链接器选项](../../build/reference/linker-options.md)

@@ -1,67 +1,69 @@
 ---
-title: "ATL Module 类 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, module 类"
-  - "CComModule 类, 更改了什么"
-  - "module 类"
+title: "ATL Module 类 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComModule class, what's changed
+- ATL, module classes
+- module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b254edfe75cfcdaee7ab15351f7c05c3d163e301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# ATL Module 类
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主题讨论的新增ATL 7.0的模块选件类。  
+# <a name="atl-module-classes"></a>ATL Module 类
+本主题讨论了在 ATL 7.0 中新的模块类。  
   
-## CComModule替换选件类  
- ATL的早期版本使用的 `CComModule`。  在ATL 7.0，`CComModule` 函数中几选件类替换为:  
+## <a name="ccommodule-replacement-classes"></a>CComModule 替换类  
+ 使用 ATL 的早期版本`CComModule`。 ATL 7.0 中`CComModule`功能取代由几个类：  
   
--   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) 包含使用ATL的大多数应用程序需要的信息。  包含模块和资源例程的HINSTANCE。  
+-   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md)包含所需的大多数应用程序使用 atl。 信息 包含 HINSTANCE 的模块和资源实例。  
   
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) 在ATL包含COM选件类需要的信息。  
+-   [CAtlComModule](../atl/reference/catlcommodule-class.md)包含所需的 atl。 中的 COM 类信息  
   
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) 在ATL包含多窗口选件类需要的信息。  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md)包含所需的 atl。 中的窗口类信息  
   
--   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) 包含为接口调试支持。  
+-   [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md)包含接口调试的支持。  
   
--   [CAtlModule](../atl/reference/catlmodule-class.md) 下面 `CAtlModule`派生类自定义在特定应用程序类型包含所需的信息。  这些选件类的大多数成员可以重写:  
+-   [CAtlModule](../atl/reference/catlmodule-class.md)以下`CAtlModule`-自定义派生的类以包含在特定应用程序类型所需信息。 可以重写这些类中的大多数成员：  
   
-    -   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) 在DLL应用程序使用了。  用于标准导出的代码。  
+    -   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) DLL 的应用中使用。 为标准的导出提供代码。  
   
-    -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) 是EXE应用程序使用了。  提供在EXE所需的代码。  
+    -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) EXE 应用程序中使用。 提供在 EXE 所需代码。  
   
-    -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) 提供支持创建Windows NT和Windows 2000 service。  
+    -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md)提供创建 Windows NT 和 Windows 2000 服务支持。  
   
- `CComModule` 备向后兼容可用。  
+ `CComModule`是仍可用于向后兼容性。  
   
-## 分配CComModule功能的原因  
- `CComModule` 的函数分配到下列原因的若干新的选件类:  
+## <a name="reasons-for-distributing-ccommodule-functionality"></a>分发 CComModule 功能的原因  
+ 功能`CComModule`已分发到多个新类，原因如下：  
   
--   使 `CComModule` 的功能更新。  
+-   进行中的功能`CComModule`粒度。  
   
-     用于COM，多窗口，接口调试支持，因此，应用程序特定的\(DLL或EXE\)功能现在是单独选件类。  
+     对 COM、 窗口、 接口调试和应用程序特定 （DLL 或 EXE） 功能的支持现已在单独的类。  
   
--   将自动声明这些模块中的每一的全局实例个。  
+-   自动声明每个这些模块的全局的实例。  
   
-     必需的模块选件类的全局实例链接到项目中。  
+     所需的模块类的全局实例链接到项目中。  
   
--   移除调用Init和术语方法必要性。  
+-   删除不必通过调用 Init 和术语方法。  
   
-     Init和术语方法将构造函数和析构函数模块选件类的;不再需要调用Init和术语。  
+     Init 和术语方法为模块的类; 已移到构造函数和析构函数不再需要调用 Init 和术语。  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [Class Overview](../atl/atl-class-overview.md)
+ [类概述](../atl/atl-class-overview.md)
+

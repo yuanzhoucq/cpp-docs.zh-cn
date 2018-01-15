@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd0f4b448de3fcaabe33822c0d8b1ee834260609
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a97809fefdc0a5e6e7d90e7b62bbee83f28bfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-encoding-reference"></a>ATL 编码引用
 在常见的 Internet 标准，如进行 uuencode 十六进制、 范围和 UTF8 编码支持在 atlenc.h 中找到的代码。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 |[进行 UUEncode](reference/atl-text-encoding-functions.md#uuencode)|调用此函数可对某些数据进行 uuencode。|  
 |[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)
 

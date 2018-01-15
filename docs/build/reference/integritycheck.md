@@ -1,41 +1,38 @@
 ---
-title: "/INTEGRITYCHECK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/INTEGRITYCHECK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/INTEGRITYCHECK editbin 选项"
-  - "INTEGRITYCHECK editbin 选项"
-  - "-INTEGRITYCHECK editbin 选项"
-ms.assetid: 2a293705-4396-421b-a5a5-693b4b867a85
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+title: "/INTEGRITYCHECK |Microsoft 文档"
+ms.custom: 
+ms.date: 12/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /INTEGRITYCHECK
+dev_langs: C++
+helpviewer_keywords:
+- -INTEGRITYCHECK editbin options
+- /INTEGRITYCHECK editbin options
+- INTEGRITYCHECK editbin options
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 99caec18162a7506b8b7a467eb7374b6fe4a38d9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# /INTEGRITYCHECK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="integritycheck"></a>/INTEGRITYCHECK
 
-指定二进制图像的数字签名在加载时必须进行检查。  
-  
-```  
-  
-/INTEGRITYCHECK[:NO]  
-  
-```  
-  
-## 备注  
- 在 DLL 文件或可执行文件的标头中，此选项可设置标志，以设置要求内存管理器先检查数字签名然后再在 Windows 中加载图像。  Windows Vista 之前的各个 Windows 版本忽略此标志。  建议在所有的设备驱动程序中，必须为实现核心架构代码的 64 位 DLL 设置此选项。  有关详细信息，请参见 MSDN 网站上的 [Kernel\-Mode Code Signing Walkthrough](http://go.microsoft.com/fwlink/?linkid=237093)（内核模式代码签名演练）。  
-  
-## 请参阅  
- [EDITBIN 选项](../../build/reference/editbin-options.md)
+指定必须在加载时检查数字签名的二进制映像。
+
+> **/INTEGRITYCHECK**[**： 否**]
+
+## <a name="remarks"></a>备注
+
+中的 DLL 文件或可执行文件的标头，此选项设置一个标志，需要通过要加载的映像在 Windows 中的内存管理器进行数字签名检查。 Windows Vista 之前的 Windows 版本忽略此标志。 必须为实现内核模式代码中，并且建议对所有设备驱动程序的 64 位 Dll 设置此选项。 有关详细信息，请参阅[内核模式代码签名需求](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-)。
+
+## <a name="see-also"></a>请参阅
+
+[EDITBIN 选项](../../build/reference/editbin-options.md)  

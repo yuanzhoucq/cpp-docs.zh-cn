@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cac5ba6baf821e7e9450ec01e7851edf625b8bd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91ffb9bd0645cab51e4140697c41e5b715380fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 ```  
@@ -41,14 +42,14 @@ ms.lasthandoff: 10/24/2017
 |---------------|-------------|  
 |c|代码|  
 |d|可丢弃|  
-|e|可执行文件|  
+|E|可执行文件|  
 |i|初始化的数据|  
 |k|缓存的虚拟内存|  
 |m|链接删除|  
 |o|链接信息|  
 |p|虚拟内存分页|  
-|r|read|  
-|s|共享|  
+|r|读取|  
+|秒|共享|  
 |u|未初始化的数据|  
 |w|写入|  
   
@@ -62,10 +63,10 @@ ms.lasthandoff: 10/24/2017
 |8|8|  
 |p|16|  
 |t|32|  
-|s|64|  
+|秒|64|  
 |x|不对齐|  
   
  指定`attributes`和*对齐*作为字符串的任何空格的字符。 这些字符不区分大小写。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 198151cbc97625db6d14c4f98af06d6a7d48c0c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8df7f6c1dbd9987a9f83ed5b33a4c97fd90fec7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 类
 此类提供的自动资源清理`GetBuffer`和`ReleaseBuffer`调用在现有`CStringT`对象。  
@@ -81,7 +82,7 @@ class CStrBufT
   
 ### <a name="public-constants"></a>公共常量  
   
-|名称|描述|  
+|name|描述|  
 |----------|-----------------|  
 |[CStrBufT::AUTO_LENGTH](#auto_length)|自动确定字符串中发布的新长度。|  
 |[CStrBufT::SET_LENGTH](#set_length)|在 GetBuffer 时设置的字符串对象的长度|  
@@ -91,7 +92,7 @@ class CStrBufT
   
  为帮助器类，主要是设计`CStrBufT`提供便利的方法，让开发人员而无需担心如何使用一个字符串对象的字符缓冲区或何时调用`ReleaseBuffer`。 这可能是因为包装器对象超出范围自然发生异常或多个正在退出代码路径;导致其析构函数释放的字符串资源。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlsimpstr.h  
   
 ##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
@@ -210,7 +211,7 @@ typedef CSimpleStringT<TCharType> StringType;
 ### <a name="remarks"></a>备注  
  **TCharType**是用于专用化类模板的字符类型。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

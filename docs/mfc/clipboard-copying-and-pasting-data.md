@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27305572c31bebdf2530aa96b4af29b709f6b1b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪贴板：复制和粘贴数据
 本主题介绍实现到复制和粘贴剪贴板中 OLE 应用程序所需的最小工作量。 建议你阅读[数据对象和数据源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)在继续之前的主题。  
@@ -75,6 +76,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [OLE](../mfc/ole-background.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [剪贴板：使用 OLE 剪贴板机制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

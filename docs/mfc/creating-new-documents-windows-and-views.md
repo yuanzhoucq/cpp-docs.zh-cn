@@ -35,11 +35,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5bf77d2d14e8dda2f1eb02ac35d0ccaf81a8617
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01837b079ba08ea2961b141549476da11a481a0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-new-documents-windows-and-views"></a>创建新文档、窗口和视图
 下列各图概述了文档、视图和框架窗口的创建过程。 其他关注参与对象的文章将提供更多详细信息。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/24/2017
   
  在大多数情况下，您的重写应调用基类版本。 有关详细信息，请参阅类的命名的成员函数[CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)， [CFrameWnd](../mfc/reference/cframewnd-class.md)，和[CWinApp](../mfc/reference/cwinapp-class.md) MFC 中库参考。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文档模板和文档/视图创建过程](../mfc/document-templates-and-the-document-view-creation-process.md)   
  [文档模板创建](../mfc/document-template-creation.md)   
  [文档/视图创建](../mfc/document-view-creation.md)   

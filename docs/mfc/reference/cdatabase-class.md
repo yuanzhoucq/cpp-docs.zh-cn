@@ -61,11 +61,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efeb16478d78648bb813d0e25a53380ec305d5ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 表示与数据源的连接，通过此连接可操作数据源。  
@@ -130,7 +131,7 @@ class CDatabase : public CObject
   
  `CDatabase`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afxdb.h  
   
 ##  <a name="begintrans"></a>CDatabase::BeginTrans  
@@ -574,7 +575,7 @@ void SetQueryTimeout(DWORD dwSeconds);
   
  查询超时的默认值为 15 秒。 并非所有数据源都支持的功能，以设置查询超时值。 如果你设置查询超时值为 0，则会发生无超时;与数据源的通信可能会停止响应。 在开发过程中，此行为可能会有用。 如果数据源不支持超时，将获得跟踪输出，但不是异常。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CObject 类](../../mfc/reference/cobject-class.md)   
  [层次结构图](../../mfc/hierarchy-chart.md)   
  [CRecordset 类](../../mfc/reference/crecordset-class.md)

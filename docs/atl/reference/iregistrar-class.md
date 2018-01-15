@@ -24,11 +24,12 @@ ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f79815d873a7c9f5f8c5f0397248f54776a7c20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 接口
 此接口在 atliface.h 中定义并由内部 CAtlModule 成员函数如[UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)。   
@@ -58,7 +59,7 @@ typedef interface IRegistrar IRegistrar;
   
 
  
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlifase.h  
   
 ##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz 
@@ -139,7 +140,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0; 
 ```  
  
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用可替换参数（注册器预处理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [类概述](../../atl/atl-class-overview.md)   
  [Module 类](../../atl/atl-module-classes.md)   

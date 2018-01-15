@@ -1,32 +1,31 @@
 ---
-title: "omp_set_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_nested OpenMP function"
+title: "omp_set_nested |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f08fec246b5df4b5a6dc965917e0a6438b58042f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-使嵌套并行。  
+# <a name="ompsetnested"></a>omp_set_nested
+启用嵌套并行度。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void omp_set_nested(  
@@ -34,24 +33,24 @@ void omp_set_nested(
 );  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `val`  
- 如果非零，启用嵌套并行。  如果零，禁用嵌套并行。  
+ 如果不为零，使嵌套的并行度。 如果为零，则禁用嵌套并行度。  
   
-## 备注  
- OMP 嵌套并行可打开与 `omp_set_nested`，或者通过设置 [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md) 环境变量。  
+## <a name="remarks"></a>备注  
+ OMP 嵌套并行可以与开启`omp_set_nested`，或通过设置[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)环境变量。  
   
- 设置 `omp_set_nested` 的将重写设置 `OMP_NESTED` 环境变量。  
+ 有关设置`omp_set_nested`将替代的设置`OMP_NESTED`环境变量。  
   
- 当启用，环境变量可以中断一否则操作的过程，因为线程数成指数增加，如果嵌套并行区域时。  例如递归 6 计时与 OMP 线程数设置为 4 的功能需要 4,096 \(4 到 6 的次幂\) 线程应用程序的性能会通常，会降低，如果线程的数量超出处理器的数目。  此操作的一个例外是 I\/O 绑定应用程序。  
+ 启用时，环境变量可以中断程序否则为操作，因为的线程数以指数级增加嵌套并行区域时。  例如 6 次，并将设置为 4 的 OMP 线程数 recurses 需要 4096 (4 的 6 次幂) 的函数线程一般情况下，你的应用程序的性能，如果线程数超过处理器的数目将会降低。 一个例外将 I/O 绑定应用程序。  
   
- 使用 [omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md) 显示当前设置 `omp_set_nested`。  
+ 使用[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)要显示的当前设置`omp_set_nested`。  
   
- 有关更多信息，请参见 [3.1.9 omp\_set\_nested Function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。  
+ 有关详细信息，请参阅[3.1.9 omp_set_nested 函数](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_set_nested.cpp  
@@ -72,7 +71,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## 请参阅  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [函数](../../../parallel/openmp/reference/openmp-functions.md)

@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 98d965b6a8e12e2f27d1544bec07357c28c3b7ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b830dfd7b0a9dace46336f8f02da14fc268daf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fwrite"></a>fwrite
 将数据写入流。  
@@ -74,18 +75,18 @@ size_t fwrite(
   
  因为此函数会锁定调用线程，因此它是线程安全的。 有关非锁定版本，请参阅 `_fwrite_nolock`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`fwrite`|\<stdio.h>|  
   
- 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>示例  
  请参阅 [fread](../../c-runtime-library/reference/fread.md) 示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [流 I/O](../../c-runtime-library/stream-i-o.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)   
  [fread](../../c-runtime-library/reference/fread.md)   

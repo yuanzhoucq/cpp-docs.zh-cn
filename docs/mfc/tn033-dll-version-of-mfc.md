@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb1fb4094e5a54f82aa6aeebffe576965838cf7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 本说明介绍如何将 MFCxx.DLL 和 MFCxxD.DLL （其中 x 是 MFC 版本号） 共享动态链接库用于 MFC 应用程序和 MFC 扩展 Dll。 有关 MFC 的规则 Dll 的详细信息，请参阅[使用 MFC 作为 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。  
@@ -141,7 +142,7 @@ ms.lasthandoff: 10/24/2017
   
  为了执行此操作必须确保每个成员函数被标记为导入或导出根据。 这需要特殊的声明： **__declspec （dllexport)**和**__declspec （dllimport)**。 当客户端应用程序使用你的类时，你希望它们声明为**__declspec （dllimport)**。 当生成 MFC 扩展 DLL 本身时，它们应被声明为**__declspec （dllexport)**。 此外，函数必须实际导出，以便客户端程序在加载时将绑定到它们。  
   
- 若要导出整个类，使用**AFX_EXT_CLASS**类定义中。 由框架作为定义此宏**__declspec （dllexport)**时**_AFXDLL**和`_AFXEXT`定义，但定义为**__declspec （dllimport)**时`_AFXEXT`未定义。 `_AFXEXT`生成 MFC 扩展 DLL 时仅定义按上文所述，。 例如:   
+ 若要导出整个类，使用**AFX_EXT_CLASS**类定义中。 由框架作为定义此宏**__declspec （dllexport)**时**_AFXDLL**和`_AFXEXT`定义，但定义为**__declspec （dllimport)**时`_AFXEXT`未定义。 `_AFXEXT`生成 MFC 扩展 DLL 时仅定义按上文所述，。 例如:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -151,7 +152,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 ### <a name="not-exporting-the-entire-class"></a>不会导出整个类  
  有时你可能想要导出只是你的类的个别必要成员。 例如，如果要导出`CDialog`-派生类中，你可能只需导出构造函数和`DoModal`调用。 你可以导出使用 DLL 的这些成员。DEF 文件，但你还可以使用**AFX_EXT_CLASS**得多您需要将导出单个成员上一样。  
   
- 例如:   
+ 例如:  
   
 ```  
 class CExampleDialog : public CDialog  
@@ -187,7 +188,7 @@ protected: \
   
  如上所述， **AFX_EXT_CLASS**已在这种方式中定义。 你只需重新定义`AFX_DATA`会作为相同**AFX_EXT_CLASS**解决你的类定义。  
   
- 例如:   
+ 例如:  
   
 ```  
 #undef  AFX_DATA  
@@ -253,7 +254,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ### <a name="not-exporting-the-entire-class"></a>不会导出整个类  
  同样，你将需要不导出整个类时要特别小心。 你必须确保正确导出由 MFC 宏创建的必需数据项目。 这可以通过重新定义**AFX_DATA**对特定类的宏。 每当不导出整个类的时候，你应进行此操作。  
   
- 例如：  
+ 例如:  
   
 ```  
 // A.H  
@@ -473,7 +474,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  此的所有方法都是功能的什么我们可以打包大量的版本都才大约 800 KB，而无需破坏多执行或加载速度的 MFCxx.DLL 中。 MFCxx.DLL 已经是更大的 100k 此方法尚未使用。 这也使得可以在末尾添加其他入口点。DEF 文件以允许简单版本控制而不会影响按序号导出的速度和大小的效率。 MFC 类库中的主要版本修订将更改库名称。 也就是说，MFC30。DLL 是包含 3.0 版的 MFC 类库的可再发行组件 DLL。 此 DLL，升级在假设的 MFC 3.1 中，假设 DLL 将被命名为 MFC31。DLL 相反。 同样，如果你修改以生成 MFC DLL 的自定义版本的 MFC 源代码，使用不同的名称 （，最好是一个无需在名称中的"MFC"）。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [按编号列出的技术说明](../mfc/technical-notes-by-number.md)   
  [按类别列出的技术说明](../mfc/technical-notes-by-category.md)
 

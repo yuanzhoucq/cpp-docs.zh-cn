@@ -26,11 +26,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>字符串和字符文本 （c + +）
 C++ 支持各种字符串和字符类型，并提供表示每种类型的文本值的方法。 在源代码中，使用字符集表示字符和字符串文本的内容。 通用字符名称和转义字符允许你仅使用基本源字符集表示任何字符串。 原始字符串使你可以避免使用转义字符，可以用于表示所有类型的字符串。 你还可以创建 std::string 文本，而无需执行额外的构造或转换步骤。  
@@ -111,7 +112,7 @@ int main()
 ###  <a name="bkmk_Escape"></a> 转义序列  
  有三种类型的转义序列：简单、八进制和十六进制。 转义序列可以是以下任一项：  
   
-|值|转义序列|值|转义序列|  
+|值|转义序列|“值”|转义序列|  
 |-----------|---------------------|-----------|---------------------|  
 |换行符|\n|反斜杠|\\\|  
 |水平制表符|\t|问号|? 或 \\?|  
@@ -152,14 +153,14 @@ char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- 八进制转义序列包含一个反斜杠，后跟最多 3 个八进制数字的序列。 对于将包含超过三位数字的八进制转义序列，其行为被视为三位数八进制序列，之后的数字被视为字符，这可能导致令人惊讶的结果。 例如：  
+ 八进制转义序列包含一个反斜杠，后跟最多 3 个八进制数字的序列。 对于将包含超过三位数字的八进制转义序列，其行为被视为三位数八进制序列，之后的数字被视为字符，这可能导致令人惊讶的结果。 例如:  
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- 对于将包含非八进制字符的转义序列，其求值结果为全部由八进制字符组成的八进制序列，后跟剩余字符。 例如：  
+ 对于将包含非八进制字符的转义序列，其求值结果为全部由八进制字符组成的八进制序列，后跟剩余字符。 例如:  
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>原始字符串 (C++11)  
- 原始字符串文本是一个以 null 结尾的数组-任何字符类型-包含任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章： [关于 C++11 的 Bjarne Stroustrup 常见问题](http://go.microsoft.com/fwlink/?LinkId=401172)。  
+ 原始字符串文本是一个以 null 结尾的数组-任何字符类型-包含任何图形字符，包括双引号 （"）、 反斜杠 (\\)，或换行字符。 原始字符串通常用于使用字符类的正则表达式，还用于 HTML 字符串和 XML 字符串。 有关示例，请参阅以下文章：[关于 C + + 11 的 Bjarne Stroustrup 常见问题](http://go.microsoft.com/fwlink/p/?linkid=401172)。  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -398,7 +399,7 @@ const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Character Sets](../cpp/character-sets2.md)   
  [数值、 布尔和指针文本](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [用户定义的文本](../cpp/user-defined-literals-cpp.md)

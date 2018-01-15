@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a78f6e4c7cdb5dbd25354d93d9bafc2892098c7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e0d60eed00abc60c09e03838a113c424d8f173a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>使用导入库和导出文件
 你可以使用 LIB /DEF 选项创建导入库和导出文件。 要生成一个包含的程序导出文件的链接使用导出 （通常动态链接库 (DLL)），并使用导入库解析其他程序中对这些导出的引用。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  但是时 DLL 将导出到它也从中导入的程序，, 是否直接或间接，你必须使用 LIB 创建导入库之一。 当 LIB 创建导入库时，它还会创建一个导出文件。 链接的一个 Dll 时，必须使用导出文件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [LIB 引用](../../build/reference/lib-reference.md)

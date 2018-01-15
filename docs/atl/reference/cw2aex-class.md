@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CW2AEX::CW2AEX
 - ATLCONV/ATL::CW2AEX::m_psz
 - ATLCONV/ATL::CW2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2AEX class
+dev_langs: C++
+helpviewer_keywords: CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2aex-class"></a>CW2AEX 类
 此类由字符串转换宏`CT2AEX`， `CW2TEX`， `CW2CTEX`，和`CT2CAEX`，和 typedef **CW2A**。  
@@ -92,7 +75,7 @@ class CW2AEX
   
  默认情况下，情况下，ATL 转换类和宏使用当前线程的 ANSI 代码页进行转换。 如果你想要重写特定转换的该行为，请将代码页指定为类的构造函数的第二个参数。  
   
- 在此类基于以下宏︰  
+ 在此类基于以下宏：  
   
 - `CT2AEX`  
   
@@ -102,7 +85,7 @@ class CW2AEX
   
 - `CT2CAEX`  
   
- 以下 typedef 基于此类︰  
+ 以下 typedef 基于此类：  
   
 - **CW2A**  
   
@@ -111,8 +94,8 @@ class CW2AEX
 ## <a name="example"></a>示例  
  请参阅[ATL 和 MFC 字符串转换宏](string-conversion-macros.md)有关使用这些字符串转换宏的示例。  
   
-## <a name="requirements"></a>要求  
- **标头︰** atlconv.h  
+## <a name="requirements"></a>惠?  
+ **标头：** atlconv.h  
   
 ##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  构造函数。  
@@ -127,7 +110,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  要转换的文本字符串。  
   
  `nCodePage`  
- 用来执行转换的代码页。 请参阅对每个代码页参数讨论[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]函数[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)有关详细信息。  
+ 用来执行转换的代码页。 请参阅 Windows SDK 函数的代码页参数讨论[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)有关详细信息。  
   
 ### <a name="remarks"></a>备注  
  分配在转换过程中使用的缓冲区。  
@@ -166,11 +149,10 @@ operator LPSTR() const throw();
 ### <a name="return-value"></a>返回值  
  返回文本字符串作为类型**LPSTR。**  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CA2AEX 类](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX 类](../../atl/reference/ca2caex-class.md)   
  [CA2WEX 类](../../atl/reference/ca2wex-class.md)   
  [CW2CWEX 类](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 类](../../atl/reference/cw2wex-class.md)   
  [类概述](../../atl/atl-class-overview.md)
-

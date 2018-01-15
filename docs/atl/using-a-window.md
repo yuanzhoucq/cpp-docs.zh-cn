@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e4cc64dd524615c003619466f66f4bf92ab62f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2be573e10190b385274de9afab498c77a094550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-window"></a>使用窗口
 类[CWindow](../atl/reference/cwindow-class.md)允许你使用一个窗口。 将连接到的窗口后`CWindow`对象，然后，你可以调用`CWindow`操作窗口的方法。 `CWindow`此外包含`HWND`运算符以转换`CWindow`对象传递给`HWND`。 因此可以传递`CWindow`向需要一个窗口的句柄的任何函数对象。 您可以轻松地混用`CWindow`的方法调用和 Win32 函数调用，而不创建任何临时对象。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
  除了使用`CWindow`直接，你可以从它派生以将数据或代码添加到你的类。 ATL 本身派生三个类从`CWindow`: [CWindowImpl](../atl/implementing-a-window.md)， [CDialogImpl](../atl/implementing-a-dialog-box.md)，和[CContainedWindowT](../atl/using-contained-windows.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [窗口类](../atl/atl-window-classes.md)
 

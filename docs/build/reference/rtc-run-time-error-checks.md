@@ -36,11 +36,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53581ad182a451adf3dde28ba463985ab82dd34e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8699a96dcd7c04bc1b2707e964afb4b68068147e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC（运行时错误检查）
 用于启用和禁用运行时错误检查功能，结合[runtime_checks](../../preprocessor/runtime-checks.md)杂注。  
@@ -54,14 +55,14 @@ ms.lasthandoff: 10/24/2017
 /RTCu  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  `1`  
  等效的**/RTC**`su`。  
   
  `c`  
  报表值时被分配给较小的数据类型和数据丢失的结果。 例如，如果类型的值`short 0x101`分配给类型的变量的`char`。  
   
- 此选项将报告打算在其中你截断，例如，如果您希望的第一个八位的情况下`int`作为返回`char`。 因为**/RTC** `c`导致运行时错误，如果赋值而丢失任何信息，你可以关闭需要避免运行时错误的结果的信息来屏蔽**/RTC** `c`. 例如:   
+ 此选项将报告打算在其中你截断，例如，如果您希望的第一个八位的情况下`int`作为返回`char`。 因为**/RTC** `c`导致运行时错误，如果赋值而丢失任何信息，你可以关闭需要避免运行时错误的结果的信息来屏蔽**/RTC** `c`. 例如:  
   
 ```  
 #include <crtdbg.h>  
@@ -124,7 +125,7 @@ c = a;  // No run-time error with /RTCu
   
 -   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A> 属性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)   
  [如何：使用本机运行时检查](/visualstudio/debugger/how-to-use-native-run-time-checks)

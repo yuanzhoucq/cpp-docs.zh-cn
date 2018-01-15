@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be9c19ecb5da71b4925b1e979e4d3de69df193db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1b906a49d7da7ed8505252a1759d7ea00fcda1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-handlers"></a>消息处理程序
 在 MFC 中，专用*处理程序*函数处理每个单独的消息。 消息处理程序函数是类的成员函数。 本文档使用的词汇*消息处理程序成员函数*，*消息处理程序函数*，*消息处理程序*，和*处理程序*互换。 某些类型的消息处理程序也称为“命令处理程序”。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/24/2017
   
  您可以使用 Microsoft Visual C++ 和 MFC 的所有工具编写处理程序。 所有类的列表，请参阅[类库概述](../mfc/class-library-overview.md)中*MFC 参考*。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架中的消息和命令](../mfc/messages-and-commands-in-the-framework.md)
 

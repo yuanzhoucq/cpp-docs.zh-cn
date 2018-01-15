@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ef6563166c658506a33ffa21da285207fbf5275
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 类
 此类提供的包装**CreateWindow**和**CreateWindowEx**。  
@@ -60,7 +61,7 @@ class _U_MENUorID
   
  类定义两个构造函数重载： 一种方法接受**UINT**参数，而另接受`HMENU`自变量。 **UINT**自变量只是强制转换为`HMENU`中构造函数，并在类的单个数据成员中存储的结果[m_hMenu](#_u_menuorid__m_hmenu)。 自变量`HMENU`构造函数存储直接进行转换。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlwin.h  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
@@ -88,5 +89,5 @@ _U_MENUorID(HMENU hMenu);
 ### <a name="remarks"></a>备注  
  自变量`HMENU`构造函数存储直接进行转换。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [类概述](../../atl/atl-class-overview.md)

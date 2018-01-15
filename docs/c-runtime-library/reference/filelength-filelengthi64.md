@@ -40,11 +40,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e455fd53bcbf981cccd5b75b44738070eb614d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 635338ed1cc314fda94be55c2802d9ec666b42f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filelength-filelengthi64"></a>_filelength、_filelengthi64
 获取文件的长度。  
@@ -67,19 +68,19 @@ __int64 _filelengthi64(
 ## <a name="return-value"></a>返回值  
  `_filelength` 和 `_filelengthi64` 返回与 `fd` 关联的目标文件的文件长度（以字节为单位）。 如果 `fd` 是一个无效文件说明符，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，这两个函数将返回-1l 以指示错误，并设置`errno`到`EBADF`。  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
   
 |函数|必需的标头|  
 |--------------|---------------------|  
 |`_filelength`|\<io.h>|  
 |`_filelengthi64`|\<io.h>|  
   
- 有关兼容性的详细信息，请参阅“简介”中的[兼容性](../../c-runtime-library/compatibility.md)。  
+ 有关更多兼容性信息，请参见“简介”中的 [兼容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>示例  
  请参见 [_chsize](../../c-runtime-library/reference/chsize.md) 的示例。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [文件处理](../../c-runtime-library/file-handling.md)   
  [_chsize](../../c-runtime-library/reference/chsize.md)   
  [_fileno](../../c-runtime-library/reference/fileno.md)   

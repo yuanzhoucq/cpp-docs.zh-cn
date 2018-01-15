@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe58203bb6f9b5e8aa2c793ac5f4f21a5819df85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e43e1fb1c52413eaae05dcbe8331b1d48dd7e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-implementing-a-container"></a>容器：实现容器
 本文总结了实现容器的过程，向您指出了提供有关实现容器的更多详细介绍的其他文章。 它还列出了您可能需要实现的一些可选 OLE 功能以及描述这些功能的文章。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/24/2017
   
      有关详细信息，请参阅[容器： 高级功能](../mfc/containers-advanced-features.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [容器](../mfc/containers.md)   
  [容器：客户端项](../mfc/containers-client-items.md)
 

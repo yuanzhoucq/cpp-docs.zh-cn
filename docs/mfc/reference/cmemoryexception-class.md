@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13130321dd26612b2bbd24457e02e09ce5fe1ec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18947e40aefd2820816abd419440ff929feca2a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException 类
 表示内存不足异常条件。  
@@ -55,7 +56,7 @@ class CMemoryException : public CSimpleException
   
  `CMemoryException`  
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** afx.h  
   
 ##  <a name="cmemoryexception"></a>CMemoryException::CMemoryException  
@@ -68,7 +69,7 @@ CMemoryException();
 ### <a name="remarks"></a>备注  
  不直接，使用此构造函数，但而是调用全局函数[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 此全局函数可以在内存不足的情况下成功，因为它构造之前分配的内存中的异常对象。 有关异常处理的详细信息，请参阅文章[异常](../exception-handling-in-mfc.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CException 类](cexception-class.md)   
  [层次结构图](../hierarchy-chart.md)
 

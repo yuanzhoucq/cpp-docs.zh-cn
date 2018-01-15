@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c4aec5679ae7a880bd5305037e880de9ff7d93a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-event-handling-summary"></a>ATL 事件处理摘要
 通常情况下，处理 COM 事件是一个相对较简单的过程。 有三个主要步骤：  
@@ -34,10 +35,10 @@ ms.lasthandoff: 10/24/2017
   
 |派生自|适用于接口类型|需要实现所有方法 *|在运行时需要类型库|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
-|接口|Vtable|是|No|  
+|接口|Vtable|是|否|  
 |[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|双|是|是|  
-|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|调度接口|No|是|  
-|[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|调度接口|No|No|  
+|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|调度接口|否|是|  
+|[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|调度接口|否|否|  
   
  \*使用 ATL 支持类时，你永远不会要求实现**IUnknown**或`IDispatch`方法手动。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|复合控件中的 ActiveX 控件 |否 |`CComCompositeControl::AdviseSinkMap`建议所有条目在事件都接收器映射。 相同的函数取消通知项。 自动调用此方法`CComCompositeControl`类。 |  
 |[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|在对话框中的 ActiveX 控件 |否 |`CAxDialogImpl::AdviseSinkMap`建议和取消通知对话框资源中的所有 ActiveX 控件。 这会为你自动完成。 |  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [事件处理](../atl/event-handling-and-atl.md)   
  [支持 IDispEventImpl](../atl/supporting-idispeventimpl.md)
 

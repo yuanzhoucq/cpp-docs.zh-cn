@@ -1,58 +1,70 @@
 ---
-title: "/ERRORREPORT（报告内部链接器错误） | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ERRORREPORT"
-  - "VC.Project.VCLinkerTool.ErrorReporting"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ERRORREPORT 链接器选项"
-  - "ERRORREPORT 链接器选项"
-  - "-ERRORREPORT 链接器选项"
+title: "-ERRORREPORT （报告内部链接器错误） |Microsoft 文档"
+ms.custom: 
+ms.date: 12/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ERRORREPORT
+- VC.Project.VCLinkerTool.ErrorReporting
+dev_langs: C++
+helpviewer_keywords:
+- /ERRORREPORT linker option
+- ERRORREPORT linker option
+- -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6ddf65ed2a17dae2d86b0dc4582f1d3158328898
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# /ERRORREPORT（报告内部链接器错误）
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT（报告内部链接器错误）
 
-```  
-/errorReport:[ none | prompt | queue | send ]  
-```  
-  
-## 备注  
- 允许您将内部编译器错误 \(ICE\) 信息直接提供给 Microsoft。  
-  
- 选项 **\/errorReport:send** 尝试自动发送错误信息到 Microsoft，但成功与否取决于注册表设置。  有关在注册表中如何设置相应值的更多信息，请参见 MSDN 网站上 [How to Turn on Automatic Error Reporting in Visual Studio 2008 Command\-line Tools（如何在 Visual Studio 2008 的命令行工具中打开自动错误报告）](http://go.microsoft.com/fwlink/?LinkID=184695)。  
-  
-### 在 Visual Studio 开发环境中设置此编译器选项  
-  
-1.  打开此项目的**“属性页”**对话框。  有关详细信息，请参阅[如何：打开项目属性页](../../misc/how-to-open-project-property-pages.md)。  
-  
-2.  单击**“配置属性”**文件夹。  
-  
-3.  单击**“链接器”**文件夹。  
-  
-4.  单击**“高级”**属性页。  
-  
-5.  修改**“错误报告”**属性。  
-  
-### 以编程方式设置此编译器选项  
-  
--   请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>。  
-  
-## 请参阅  
- [\/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)   
- [设置链接器选项](../../build/reference/setting-linker-options.md)   
- [链接器选项](../../build/reference/linker-options.md)
+> **/errorreport:**[**无** | **提示符** | **队列** | **发送**]
+
+## <a name="arguments"></a>自变量
+
+**none**  
+不收集有关内部编译器错误的报告，或不向 Microsoft 发送报告。
+
+**提示**  
+当您收到内部编译器错误时，提示您发送报告。 **提示符**在开发环境中编译应用程序是默认设置。
+
+**queue**  
+将错误报告排入队列。 当使用管理员特权登录时，将显示一个窗口，以便您可以记录中被记录的上次报告任何失败 （你不会提示发送故障报告一次以上每隔三天）。 **队列**时在命令提示符下编译的应用程序是默认设置。
+
+**发送**  
+如果报表通过 Windows 错误报告服务设置自动向 Microsoft 发送报告内部编译器错误。
+
+## <a name="remarks"></a>备注
+
+**/ERRORREPORT**选项允许您直接向 Microsoft 提供内部编译器错误 (ICE) 信息。
+
+选项**/errorreport:send**自动将错误信息发送给 Microsoft，如果启用了 Windows 错误报告服务设置。
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../../ide/working-with-project-properties.md)。
+
+1. 打开**配置属性** > **链接器** > **高级**属性页。
+
+1. 修改**错误报告**属性。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ErrorReporting%2A>。
+
+## <a name="see-also"></a>请参阅
+
+[/errorReport（报告内部编译器错误）](../../build/reference/errorreport-report-internal-compiler-errors.md)  
+[设置链接器选项](../../build/reference/setting-linker-options.md)  
+[链接器选项](../../build/reference/linker-options.md)  

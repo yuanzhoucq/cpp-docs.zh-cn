@@ -1,61 +1,61 @@
 ---
-title: "__vmx_vmptrst | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrst"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmptrst 指令"
-  - "VMPTRST 指令"
+title: "__vmx_vmptrst |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrst
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrst intrinsic
+- VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 176d8fe48e5719c345ab39135468edf324eeeaa5
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmptrst
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Microsoft 专用**  
   
- 存储指向当前虚拟设备控制 \(VMCS\)结构在指定的地址。  
+ 将存储指向指定地址处的当前虚拟机控件结构 (VMCS) 的指针。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
-void __vmx_vmptrst(   
-   unsigned __int64 *VmcsPhysicalAddress   
+void __vmx_vmptrst(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### 参数  
- \[in\] \*`VmcsPhysicalAddress`  
- 存储当前 VMCS 指针的地址。  
+#### <a name="parameters"></a>参数  
+ [in] *`VmcsPhysicalAddress`  
+ 存储当前 VMCS 指针的位置的地址。  
   
-## 备注  
- VMCS 指针是一个 64位物理地址。  
+## <a name="remarks"></a>备注  
+ VMCS 指针是一个 64 位物理地址。  
   
- `__vmx_vmptrst` 功能与 `VMPTRST` 指令是等效的。  此功能支持宿主的与来宾操作系统及其应用程序的虚拟机监控程序的交互。  有关更多信息，搜索文档， “IA\-32 Intel 体系结构的 Intel 虚拟化技术规范，”在网站单据数字 \-002 [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) ， C97063。  
+ `__vmx_vmptrst`函数等同于`VMPTRST`计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，搜索文档中，"Intel 虚拟化技术规范为 ia-32 Intel 体系结构，"在文档编号 C97063-002， [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站点。  
   
-## 要求  
+## <a name="requirements"></a>惠?  
   
-|内部|体系结构|  
-|--------|----------|  
-|`__vmx_vmptrst`|x86， [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|内部函数|体系结构|  
+|---------------|------------------|  
+|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **头文件** \<intrin.h\>  
+ **标头文件** \<intrin.h >  
   
-## 特定于 Microsoft 的结尾  
+**结束 Microsoft 专用**  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器内部函数](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrld](../intrinsics/vmx-vmptrld.md)
+ [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

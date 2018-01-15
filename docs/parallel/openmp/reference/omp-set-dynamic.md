@@ -1,32 +1,31 @@
 ---
-title: "omp_set_dynamic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_dynamic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_dynamic OpenMP function"
+title: "omp_set_dynamic |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_dynamic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指示线程的数目可用在后续并行区域可以在运行时调整。  
+# <a name="ompsetdynamic"></a>omp_set_dynamic
+指示运行时可以进行调整了后续并行区域中的可用线程数。  
   
-## 语法  
+## <a name="syntax"></a>语法  
   
 ```  
 void omp_set_dynamic(  
@@ -34,22 +33,22 @@ void omp_set_dynamic(
 );  
 ```  
   
-## 备注  
+## <a name="remarks"></a>备注  
  其中，  
   
  `val`  
- 一个值线程数可用在后续并行区域是否可以在运行时调整。  如果非零，则运行时会调整线程数，因此，如果零，运行时不会动态调整线程的数量。  
+ 一个值，该值指示是否可以由运行时调整后续并行区域中的可用线程数。  如果不为零，运行时可以调整的线程数，如果为零，则运行时将不会动态调整线程的数。  
   
-## 备注  
- 线程数不超过 [OMP\_NUM\_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)集由 [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) 或值。  
+## <a name="remarks"></a>备注  
+ 线程数将永远不会超过所设置的值[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)。  
   
- 使用 [omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) 显示当前设置 `omp_set_dynamic`。  
+ 使用[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)要显示的当前设置`omp_set_dynamic`。  
   
- 设置 `omp_set_dynamic` 的将重写设置 [OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) 环境变量。  
+ 有关设置`omp_set_dynamic`将替代的设置[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)环境变量。  
   
- 有关更多信息，请参见 [3.1.7 omp\_set\_dynamic Function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。  
+ 有关详细信息，请参阅[3.1.7 omp_set_dynamic 函数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)。  
   
-## 示例  
+## <a name="example"></a>示例  
   
 ```  
 // omp_set_dynamic.cpp  
@@ -70,7 +69,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**1**   
-## 请参阅  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>请参阅  
+ [函数](../../../parallel/openmp/reference/openmp-functions.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bb0a3973b140e452d3cb1198c5a98ca2caf61a1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ba0295d73e51e28fbdd953d7d9a3a2ae5131c27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 指定清单查找的行为。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  当对可执行文件禁用隔离时，Windows 加载程序不会尝试为新创建的进程查找应用程序清单。 新的进程没有默认激活上下文，即使当在可执行文件本身中的清单，或者如果没有清单，其名称*可执行文件名称*。 exe.manifest。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)   
  [/ALLOWISOLATION （清单查找）](../../build/reference/allowisolation-manifest-lookup.md)   
  [清单文件引用](http://msdn.microsoft.com/library/aa375632.aspx)

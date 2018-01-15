@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f58c671860f1e02f28f4b5a406d290df2479e2d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c733c02a3855c02803be242a6bfc8ddd13abd75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inserting-a-composite-control"></a>插入复合控件
 **添加类**对话框中，可插入到项目中的 ATL 对象。 通过右键单击解决方案资源管理器，指向中的项目名称来访问此对话框**添加**，然后单击**添加类**。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
  将创建一个默认的 HTML 页面查看控件。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复合控件基础知识](../atl/atl-composite-control-fundamentals.md)
 

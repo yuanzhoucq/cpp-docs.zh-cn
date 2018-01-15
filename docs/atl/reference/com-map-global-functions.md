@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a5c73f99d8d31ad500b232d371bf55072dd567a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7a0a02e46906ae8d3b6c62b8cc1b9147d396966
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-map-global-functions"></a>COM 映射全局函数
 这些函数提供支持 COM 映射**IUnknown**实现。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|生成高效的代码，用于比较针对接口**IUnknown**。|  
 
   
-## <a name="requirements"></a>要求  
+## <a name="requirements"></a>惠?  
  **标头：** atlbase.h  
 
 ##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
@@ -79,6 +80,6 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
  *rguid1*  
  [in]要进行比较的 GUID **IID_IUnknown**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [函数](../../atl/reference/atl-functions.md)   
  [COM 映射宏](../../atl/reference/com-map-macros.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64cbd487020360004af2858cbb345f4e4b4ec5aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68cdcb1253eca6eb168aab0b846bd7a49daa6fd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tsaware"></a>/TSAWARE
 ```  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  /TSAWARE EDITBIN 实用工具选项，可修改的程序映像相同的方式，就像你在使用[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)链接器选项。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [EDITBIN 选项](../../build/reference/editbin-options.md)

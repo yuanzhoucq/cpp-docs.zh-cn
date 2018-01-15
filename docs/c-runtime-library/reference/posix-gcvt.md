@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- gcvt
+apiname: gcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- gcvt
-dev_langs:
-- C++
-helpviewer_keywords:
-- gcvt function
+f1_keywords: gcvt
+dev_langs: C++
+helpviewer_keywords: gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9dd70156dba452b08519c455ce0d3925221ea9f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: b6a5006f14cfb7f44e416e69f7a05b2e5f8eb3a1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvt"></a>gcvt
 此 POSIX 函数已弃用。 请改用符合 ISO C++ 的 [_gcvt](../../c-runtime-library/reference/gcvt.md) 或安全性已增强的 [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)。

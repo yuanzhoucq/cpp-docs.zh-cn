@@ -1,47 +1,47 @@
 ---
-title: "3.1.7 omp_set_dynamic Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/03/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.7 omp_set_dynamic 函数 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1fba961b-b82c-4a1e-ab0f-e4be826e50ab
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 87cdd627dd01697fa3d3718a2dc769f4017630a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.7 omp_set_dynamic Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**omp\_set\_dynamic** 功能启用或禁用线程数动态调整可用于并行区域的执行。  格式如下所示：  
+# <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 函数
+**Omp_set_dynamic**函数启用或禁用动态调整可用的并行区域执行的线程数。 格式如下所示：  
   
 ```  
 #include <omp.h>  
 void omp_set_dynamic(int dynamic_threads);  
 ```  
   
- 如果 *dynamic\_threads* 计算为非零值，对于执行后续并行区域使用线程的数目可能由种运行时环境自动调整以最佳利用系统资源。  因此，用户指定的线程的数目最大线程计数。  线程数在执行并行区域的团队保持固定为该并行区域的持续时间以及由 **omp\_get\_num\_threads** 函数报告。  
+ 如果*dynamic_threads*计算结果可能由运行时环境，以最大程度利用系统资源为非零值，用于执行后续的并行区域的线程数会自动调整。 因此，由用户指定的线程数是最大线程计数。 执行并行区域团队中的线程数该并行区域的持续时间内保持固定，并由报告**omp_get_num_threads**函数。  
   
- 如果 *dynamic\_threads* 计算结果为 0，动态调整被禁用。  
+ 如果*dynamic_threads*计算结果为 0，禁用动态调整。  
   
- 该函数具有中描述的效果顶部，在调用从 **omp\_in\_parallel** 函数返回零程序的一部分。  如果从 **omp\_in\_parallel** 函数返回非零值程序的一部分调用，此功能的行为未定义。  
+ 此函数具有从一部分的程序中调用时，上面所述的效果其中**omp_in_parallel**函数将返回零。 如果它从一部分的程序调用其中**omp_in_parallel**函数将返回一个非零值，此函数的行为是不确定。  
   
- 为 **omp\_set\_dynamic** 的调用在 **OMP\_DYNAMIC** 环境变量的优先级。  
+ 调用**omp_set_dynamic**的优先级高于**OMP_DYNAMIC**环境变量。  
   
- 线程的动态调整的默认实现中定义。  因此，依赖于线程的特定数字正确执行的用户代码应显式禁用动态线程。  不需要实现能够动态地调整线程数，但是，要求他们提供接口以便支持在所有平台上的可移植性。  
+ 线程动态调整默认值为实现定义。 因此，取决于特定数量的正确的执行线程的用户代码应显式禁用动态线程。 实现不需要使你能够动态调整的线程数，但需要它们来提供接口以支持跨所有平台进行移植。  
   
-## 交叉引用:  
+## <a name="cross-references"></a>交叉引用：  
   
--   **omp\_get\_num\_threads** 功能，请参见中的第 37 页的 [第3.1.2部分](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 。  
+-   **omp_get_num_threads**函数中，请参阅[部分 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)在页上 37。  
   
--   **OMP\_DYNAMIC** 环境变量，请参见中的第 49 页的 [第4.3部分](../../parallel/openmp/4-3-omp-dynamic.md) 。  
+-   **OMP_DYNAMIC**环境变量，请参阅[部分 4.3](../../parallel/openmp/4-3-omp-dynamic.md)页 49 上。  
   
--   **omp\_in\_parallel** 功能，请参见中的第 38 页的 [第3.1.6部分](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) 。
+-   **omp_in_parallel**函数中，请参阅[部分 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)在第 38 页上。

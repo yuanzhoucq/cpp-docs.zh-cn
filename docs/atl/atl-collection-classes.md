@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24b0fbdc5ab68319704fb59746862384198f232b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collection-classes"></a>ATL 集合类
 ATL 提供用于存储和访问数据的许多类。 你决定使用哪个类取决于多种因素，包括：  
@@ -65,7 +66,7 @@ ATL 提供用于存储和访问数据的许多类。 你决定使用哪个类取
 ## <a name="specialized-collection-classes"></a>专用的集合类  
  此外为管理的内存指针和接口指针提供了更多专用的集合类：  
   
-|类|用途|  
+|类|目标|  
 |-----------|-------------|  
 |[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|构造的智能指针的数组时，请提供有用的方法。|  
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|构造的智能指针的列表时提供有用的方法。|  
@@ -89,10 +90,10 @@ ATL 提供用于存储和访问数据的许多类。 你决定使用哪个类取
   
 |形状|Ordered|编制索引|插入<br /><br /> 元素|搜索<br /><br /> 指定的元素|重复<br /><br /> 元素|  
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|  
-|列表|是|No|快速 （常量时间）|慢速 o （n)|是|  
+|列表|是|否|快速 （常量时间）|慢速 o （n)|是|  
 |数组|是|根据 int （常量时间）|如果在插入结束时，在哪个 case 常量时间内除慢速 o （n)|慢速 o （n)|是|  
-|映射|No|由参数 （常量时间）|快速 （常量时间）|快速 （常量时间）|否（键）是（值）|  
-|红色黑色映射|是 （由参数）|由参数 O (日志 n)|快速 O (日志 n)|快速 O (日志 n)|No|  
+|映射|否|由参数 （常量时间）|快速 （常量时间）|快速 （常量时间）|否（键）是（值）|  
+|红色黑色映射|是 （由参数）|由参数 O (日志 n)|快速 O (日志 n)|快速 O (日志 n)|否|  
 |红色黑色多重映射|是 （由参数）|由参数 O(log n) （每个键的多个值）|快速 O (日志 n)|快速 O (日志 n)|是 （每个键的多个值）|  
   
 ## <a name="using-ctraits-objects"></a>使用 CTraits 对象  
@@ -125,7 +126,7 @@ ATL 提供用于存储和访问数据的许多类。 你决定使用哪个类取
   
 -   [选框示例](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [集合类](../atl/collection-classes.md)
 

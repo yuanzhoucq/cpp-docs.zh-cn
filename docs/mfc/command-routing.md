@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622853951c9119bb2a32e9e624966bf77579b557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing"></a>命令传送
 你使用命令的职责限于在命令及其处理程序函数间建立消息映射连接，也是你使用“属性”窗口的任务。 还必须编写大部分命令处理程序。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="_core_standard_command_route"></a> 标准命令传送  
   
-|当此类型的对象收到命令时。 。 。|它给自身和其他命令目标对象一个机会以此顺序处理命令：|  
+|当此类型的对象收到命令时。 . .|它给自身和其他命令目标对象一个机会以此顺序处理命令：|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
 |MDI 框架窗口 (`CMDIFrameWnd`)|1.活动`CMDIChildWnd`<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|  
 |文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1.活动视图<br />2.此框架窗口<br />3.应用程序 (`CWinApp`对象)|  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/24/2017
   
  如果前述表第二列中带编号的项提到其他对象（例如文档），请参见第一列中相应的项。 例如，当你在第二列中看到视图将命令转发到其文档，则参阅第一列中的“文档”项了解进一步的传送。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [框架如何调用处理程序](../mfc/how-the-framework-calls-a-handler.md)
 

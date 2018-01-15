@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6ffb3a3c3421d4a37cabe24f6a8dea64da4c32c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da1301b39ee12ef6a0ed38f8b035b0708017b211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dword"></a>DWORD
 分配和 （可选） 初始化双字 （4 个字节） 存储的每个`initializer`。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>备注  
  此外可作为类型说明符类型是合法的任何位置。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [指令引用](../../assembler/masm/directives-reference.md)   
  [SDWORD](../../assembler/masm/sdword.md)   
  [DD](../../assembler/masm/dd.md)

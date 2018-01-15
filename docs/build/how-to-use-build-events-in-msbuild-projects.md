@@ -1,53 +1,52 @@
 ---
-title: "如何：在 MSBuild 项目中使用生成事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "msbuild.cpp.howto.usebuildevents"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "msbuild (c++), 如何：在项目中使用生成事件"
+title: "如何： 在 MSBuild 项目中使用生成事件 |Microsoft 文档"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: msbuild.cpp.howto.usebuildevents
+dev_langs: C++
+helpviewer_keywords: 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：在 MSBuild 项目中使用生成事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-生成事件是 [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 在生成过程中的特定阶段执行的命令。  *预先生成* 事件发生在生成开始前；*预链接* 事件发生在链接步骤开始前； *后期生成* 事件发生在生成成功结束之后。  只有当关联的生成步骤发生，生成事件发生。  例如，如果链接步骤未运行，则不会发生预链接事件。  
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
+生成事件是一个命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]在生成过程中的特定阶段执行。 *预生成*事件发生在生成开始前;*预链接*事件发生在链接步骤开始; 之前和*后期生成*事件发生在生成后已成功结束。 仅当关联的生成步骤发生时，生成事件才会发生。 例如，如果链接步骤未运行，也不会发生 pre-link 事件。  
   
- 在项目定义组中，这三个生成事件中的每一个生成事件都由所执行的命令元素 \(`<Command>`\) 和 **MSBuild** 该执行生成事件时所显示的消息元素 \(`<Message>`\) 来表示。  每个元素都是可选的，如果您多次指定同一元素，则最后一次优先。  
+ 每三个生成事件命令元素表示项定义组中 (`<Command>`) 执行和消息元素 (`<Message>`)，它是显示时**MSBuild**执行生成事件。 每个元素是可选的并且如果多次指定相同的元素，最后一个匹配项优先。  
   
- 可以在属性组中指定可选的“在生成中使用”元素（`<`*build\-event***UseInBuild**`>`），以指明是否执行生成事件。  “在生成中使用”元素的内容值为 `true` 或 `false`。  默认情况下，除非生成事件的对应“在生成中使用”元素设置为 `false`，否则将执行该生成事件。  
+ 一个可选*在生成中使用*元素 (`<`*生成事件***UseInBuild**`>`) 可以在属性组，以指示中指定是否执行生成事件。 内容的价值*在生成中使用*元素可以是`true`或`false`。 默认情况下，除非执行生成事件其对应*在生成中使用*元素设置为`false`。  
   
- 下表列出了每个生成事件 XML 元素：  
+ 下表列出每个生成事件 XML 元素：  
   
-|XML 元素|说明|  
-|------------|--------|  
-|`PreBuildEvent`|此事件在生成开始之前执行。|  
-|`PreLinkEvent`|此事件在链接步骤开始之前执行。|  
-|`PostBuildEvent`|此事件在生成完成后执行。|  
+|XML 元素|描述|  
+|-----------------|-----------------|  
+|`PreBuildEvent`|生成开始之前，将执行此事件。|  
+|`PreLinkEvent`|此事件链接步骤开始之前执行。|  
+|`PostBuildEvent`|在生成完成之后，将执行此事件。|  
   
- 下表列出了每个“在生成中使用”元素：  
+ 下表列出了每一个*在生成中使用*元素：  
   
-|XML 元素|说明|  
-|------------|--------|  
-|`PreBuildEventUseInBuild`|指定是否执行预先生成事件。|  
-|`PreLinkEventUseInBuild`|指定是否执行预链接事件。|  
-|`PostBuildEventUseInBuild`|指定是否执行后期生成事件。|  
+|XML 元素|描述|  
+|-----------------|-----------------|  
+|`PreBuildEventUseInBuild`|指定是否执行*预生成*事件。|  
+|`PreLinkEventUseInBuild`|指定是否执行*预链接*事件。|  
+|`PostBuildEventUseInBuild`|指定是否执行*后期生成*事件。|  
   
-## 示例  
- 以下示例可添加到在[演练：使用 MSBuild 创建 Visual C\+\+ 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)中创建的 myproject.vcxproj 文件的 Project 元素内。  预先生成事件生成 main.cpp 的副本；预链接事件生成 main.obj 的副本；后期生成事件生成 myproject.exe 的副本。  如果项目是使用发布配置生成的，则执行生成事件。  如果项目是使用调试配置生成的，则不执行生成事件。  
+## <a name="example"></a>示例  
+ 可以在中创建的 myproject.vcxproj 文件的项目元素内部添加下面的示例[演练： 使用 MSBuild 创建 Visual c + + 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*预生成*事件使 main.cpp 的副本;*预链接*事件使 main.obj; 的副本和*后期生成*事件都提供了一份 myproject.exe。 如果使用发布配置生成项目时，才执行生成事件。 如果使用的调试配置生成项目时，不会执行生成事件。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -78,6 +77,6 @@ caps.handback.revision: 23
 </PropertyGroup>  
 ```  
   
-## 请参阅  
- [MSBuild \(Visual C\+\+\)](../build/msbuild-visual-cpp.md)   
- [演练：使用 MSBuild 创建 Visual C\+\+ 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+## <a name="see-also"></a>请参阅  
+ [MSBuild （Visual c + +）](../build/msbuild-visual-cpp.md)   
+ [演练：使用 MSBuild 创建 Visual C++ 项目](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
