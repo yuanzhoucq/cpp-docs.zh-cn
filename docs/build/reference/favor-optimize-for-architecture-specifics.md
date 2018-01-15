@@ -17,11 +17,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58b57183d7976d024a8a9d960f1f56ab438abff9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f9ec5882cb1535f089250bc467c795263132d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor（针对体系结构详细信息优化）
 **/favor:** `option`生成针对特定体系结构或针对 AMD 和 Intel 体系结构中的微体系结构的特性进行优化的代码。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Intel64 体系结构以前称为扩展内存 64 技术和相应的编译器选项已**/favor:EM64T**。  
   
- 有关如何为 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]架构编程的信息，请参阅[ x64软件约定](../../build/x64-software-conventions.md)。  
+ 有关如何为[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]架构编程的信息，请参阅[ x64软件约定](../../build/x64-software-conventions.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -62,8 +63,8 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项  
   
--   请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
+-   请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [编译器选项](../../build/reference/compiler-options.md)   
  [设置编译器选项](../../build/reference/setting-compiler-options.md)
